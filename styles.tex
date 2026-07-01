@@ -1,0 +1,763 @@
+% ==============================================================================
+% 1. 基础设置与字体
+% ==============================================================================
+\usepackage{xeCJK}
+\xeCJKsetup{
+    PunctStyle=kaiming,                  % 开明式：句末标点始终压缩为半角，腾出更多空间
+    CheckSingle=true                     % 避免段末单字独占一行
+}
+\tolerance=1000                          % 提高断行容忍度，允许稍松的行以避免标点溢出到下一行
+\emergencystretch=3em                    % 加大紧急伸缩量
+\setCJKmainfont{SimSun}[
+    BoldFont = SimHei,
+    ItalicFont = KaiTi
+]
+\setmainfont{Times New Roman}
+
+% 全局段落设置：无缩进，无段间距，正文行距
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\renewcommand{\baselinestretch}{1.5}
+
+% 单字不成行、单行不成页
+\makeatletter
+\newcommand{\examwidoworphanrules}{%
+    \clubpenalty=10000%
+    \widowpenalty=10000%
+    \displaywidowpenalty=10000%
+    \brokenpenalty=10000%
+    \@clubpenalty=10000%
+}
+\makeatother
+\examwidoworphanrules
+\AtBeginDocument{\examwidoworphanrules}
+\raggedbottom
+
+% ==============================================================================
+% 2. 章节标题样式 (试卷结构)
+% ==============================================================================
+\ctexset {
+    chapter = {
+        pagestyle = headings,
+        break = \clearpage,      % 关键：每一章(每一份试卷)强制换页
+        numbering = false,       % 关键：不显示“第一章”字样，仅显示标题
+        format = \bfseries\zihao{3}\centering,  % 三号字
+        beforeskip = 0em,
+        afterskip = 0em,
+    },
+    section = {
+        format = \bfseries\zihao{-4}, % 小四号字并加粗
+        number = \chinese{section}、,  % 格式：一、
+        indent = 0pt,
+        aftername = \hspace{0pt},
+        beforeskip = 0.5em,
+        afterskip = 0.5em,
+    },
+}
+
+\usepackage{etoolbox}
+\pretocmd{\chapter}{\problembodyend\setcounter{probnum}{0}\setcounter{section}{0}}{}{}
+\pretocmd{\section}{\problembodyend}{}{}
+\makeatletter
+\patchcmd{\tableofcontents}
+  {\@starttoc{toc}}
+  {%
+    \begingroup
+      \normalfont
+      \zihao{-4}\selectfont
+      \setlength{\columnsep}{1.8em}%
+      \setlength{\columnseprule}{0.8pt}%
+      \begin{multicols*}{2}\@starttoc{toc}\end{multicols*}%
+    \endgroup
+  }
+  {}{}
+\renewcommand*\l@part[2]{%
+  \addpenalty{-\@highpenalty}%
+  \vskip 0.8em \@plus\p@
+  \begingroup
+    \parindent \z@
+    \rightskip \z@
+    \parfillskip \z@
+    \centering\normalfont #1\par
+  \endgroup
+}
+\renewcommand*\l@chapter[2]{%
+  \ifnum \c@tocdepth >\m@ne
+    \addpenalty{\@secpenalty}%
+    \addvspace{0pt}%
+    \begingroup
+      \parindent \z@
+      \rightskip \@pnumwidth
+      \parfillskip -\@pnumwidth
+      \leavevmode
+      #1\nobreak\leaders\hbox{$\m@th \mkern 2mu.\mkern 2mu$}\hfill\nobreak
+      \hb@xt@\@pnumwidth{\hss #2}\par
+    \endgroup
+  \fi
+}
+\makeatother
+
+% 正文小四号字
+\AtBeginDocument{\zihao{-4}}
+
+\newcommand{\examspecialsection}[1]{%
+    \problembodyend
+    \par
+    \medskip
+    \begin{center}
+    \bfseries\zihao{-4}#1
+    \end{center}
+    \setcounter{section}{0}%
+    \medskip
+}
+\newcommand{\additionalproblemsection}{\examspecialsection{附加题}}
+\newcommand{\referenceproblemsection}{\examspecialsection{参考题}}
+\newcommand{\optionalproblemsection}{\examspecialsection{选作题}}
+
+% ==============================================================================
+% 3. 宏包加载 (精简版)
+% ==============================================================================
+\usepackage{geometry}
+\usepackage{needspace}
+\geometry{a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm}
+\newcommand{\examneedlines}[1][2]{\Needspace{#1\baselineskip}}
+\newif\ifexampageflexused
+\AddToHook{shipout/after}{\global\exampageflexusedfalse}
+\newcommand{\examavoidshortpage}{%
+    \ifexampageflexused\else
+        \global\exampageflexusedtrue
+        \relax
+    \fi
+}
+
+% 单栏排版；目录页局部使用 multicol
+\usepackage{multicol}
+
+% 数学相关
+\usepackage{amsmath, amssymb, amsthm, bm} 
+\usepackage{unicode-math}                 
+\setmathfont{TeX Gyre Termes Math}
+% 希腊字母使用 STIX 字体 (MathType 风格，正体)
+\setmathfont{STIX}[
+    range = {up/{Greek,greek}, it/{Greek,greek}, bfup/{Greek,greek}, bfit/{Greek,greek}}
+]
+
+% 大运算符和空集使用 Latin Modern Math (LaTeX 默认风格)
+\setmathfont{Latin Modern Math}[
+    range = {\sum, \prod, \coprod, \int, \iint, \iiint, \iiiint, \oint, \bigcup, \bigcap, \bigsqcup, \bigvee, \bigwedge, \bigoplus, \bigotimes, \bigodot}
+]
+\let\emptyset\varnothing
+
+\setmathfont{Asana Math}[
+    range = {\varnothing}
+]
+
+\allowdisplaybreaks                       
+
+% cases 行距与正文节奏保持一致；amsmath 的 cases 内部会重设 \arraystretch，
+% 所以直接重定义内部入口，避免外层 hook 被覆盖。
+\makeatletter
+\def\env@cases{%
+  \let\@ifnextchar\new@ifnextchar
+  \left\lbrace
+  \def\arraystretch{0.9}%
+  \array{@{}l@{\quad}l@{}}%
+}
+\makeatother
+
+% 图形与表格
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{xparse}
+\let\examoriginalsection\section
+\RenewDocumentCommand{\section}{s o m}{%
+    \IfBooleanTF{#1}{%
+        \IfValueTF{#2}{\examoriginalsection*[#2]{#3}}{\examoriginalsection*{#3}}%
+    }{%
+        \ifstrequal{#3}{附加题}{%
+            \additionalproblemsection
+        }{%
+            \ifstrequal{#3}{参考题}{%
+                \referenceproblemsection
+            }{%
+                \ifstrequal{#3}{选作题}{%
+                    \optionalproblemsection
+                }{%
+                    \IfValueTF{#2}{\examoriginalsection[#2]{#3}}{\examoriginalsection{#3}}%
+                }%
+            }%
+        }%
+    }%
+}
+\usepackage{tikz}                         
+\usetikzlibrary{arrows.meta, calc, intersections, positioning, shapes.geometric}
+\usepackage{wrapfig}
+% 调整 wrapfigure 与正文的间距
+\setlength{\intextsep}{0pt}  % 纵向：图片上下的间距
+% \columnsep（横向：图片与侧边文字的间距）已在上方 multicol 区域统一设为 1.5em
+\usepackage{array, tabularray, multirow}  
+\usepackage{caption}
+
+% --- 接管 \includegraphics：找不到文件时显示占位框而非报错 ---
+\let\originalincludegraphics\includegraphics
+\renewcommand{\includegraphics}[2][]{%
+    \problemconsumeinlineblockprefix
+    \IfFileExists{#2}{%
+        \originalincludegraphics[#1]{#2}%
+    }{%
+        \setlength{\fboxsep}{4pt}%
+        \fbox{%
+            \begin{minipage}[c][4em][c]{0.8\linewidth}%
+                \centering\color{gray}\small 图片未找到：{\ttfamily\detokenize{#2}}%
+            \end{minipage}%
+        }%
+    }%
+}
+
+\ExplSyntaxOn
+\bool_new:N \l__bitmap_solution_caption_bool
+\tl_new:N \l__bitmap_solution_caption_tl
+
+\cs_new_protected:Npn \__bitmap_prepare_caption:n #1
+{
+    \bool_set_false:N \l__bitmap_solution_caption_bool
+    \tl_clear:N \l__bitmap_solution_caption_tl
+    \regex_extract_once:nnNT { q([0-9]+)_solution_fig([0-9]+)\.(?:tex|png|jpg|jpeg)$ } {#1} \l_tmpa_seq
+    {
+        \bool_set_true:N \l__bitmap_solution_caption_bool
+        \tl_set:Nx \l__bitmap_solution_caption_tl
+        {第\seq_item:Nn \l_tmpa_seq {2}题解析图\seq_item:Nn \l_tmpa_seq {3}}
+    }
+}
+\NewDocumentCommand{\bitmappreparecaption}{m}
+{
+    \__bitmap_prepare_caption:n {#1}
+}
+\NewDocumentCommand{\bitmapinsertcaption}{}
+{
+    \bool_if:NTF \l__bitmap_solution_caption_bool
+        {\captionof*{figure}{\tl_use:N \l__bitmap_solution_caption_tl}}
+        {\captionof{figure}{}}
+}
+\NewDocumentCommand{\bitmapcaptiontext}{m}
+{
+    \bitmappreparecaption{#1}
+    \bool_if:NTF \l__bitmap_solution_caption_bool
+        {\tl_use:N \l__bitmap_solution_caption_tl}
+        {第\theprobnum 题图}
+}
+\ExplSyntaxOff
+
+\newcommand{\bitmapinclude}[2][]{%
+    \begingroup
+    \adjustbox{max width=\linewidth,max totalheight=4.8cm,#1}{\includegraphics{#2}}%
+    \endgroup
+}
+
+\newcommand{\bitmapfigure}[2][]{%
+    \begingroup
+    \bitmappreparecaption{#2}%
+    \begin{center}
+    \bitmapinclude[#1]{#2}
+    \bitmapinsertcaption
+    \end{center}
+    \endgroup
+}
+
+\NewDocumentCommand{\bitmapinlinefigure}{O{0.42\linewidth} O{} m}
+{%
+    \begingroup
+    \bitmappreparecaption{#3}%
+    \makebox[#1][c]{%
+        \vtop{%
+            \hsize=#1\relax
+            \centering
+            \bitmapinclude[#2]{#3}\par
+            \small \bitmapcaptiontext{#3}\par
+        }%
+    }%
+    \endgroup
+}
+
+% 列表与枚举
+\usepackage{enumitem}
+\AtBeginEnvironment{center}{\problemcenterstart}
+\AfterEndEnvironment{center}{\problemcenterend}
+\AtBeginEnvironment{tabular}{\problemconsumeinlineblockprefix}
+
+% 盒子宏包 (用于答案)
+\usepackage[most]{tcolorbox}
+
+\usepackage{ulem}
+\newcommand{\fillinblank}{\mbox{\ttfamily\_\_\_\_\_\_\_\_}}
+
+% ==============================================================================
+% 4. 核心命令：题目、选项
+% ==============================================================================
+
+% --- A. 题目计数器 ---
+% 绑定到 chapter，每次新试卷(chapter)自动重置为 0
+% 注意：虽然 chapter 设置了 numbering=false，但计数器依然在后台运作
+\newcounter{probnum}[chapter]
+\newlength{\problembodyindent}
+\setlength{\problembodyindent}{1.5em}
+\newif\ifproblembodyactive
+\newif\ifproblemfirstparagraph
+\newif\ifproblemheadpending
+
+\newcommand{\problemresetlayout}{%
+    \leftskip=0pt\relax
+    \hangindent=0pt\relax
+    \hangafter=1\relax
+    \parshape=0\relax
+}
+
+\newcommand{\problemheadbox}{%
+    \makebox[\problembodyindent][l]{\textbf{\theprobnum.}}%
+}
+
+\newcommand{\problemheadprefix}{%
+    \textbf{\theprobnum.}\hspace{0.5em}%
+}
+\newcommand{\problemoriginallabel}{}%
+
+\newcommand{\problembodyfinish}{%
+    \ifhmode\par\fi
+    \global\problembodyactivefalse
+    \global\problemfirstparagraphfalse
+    \global\problemheadpendingfalse
+    \everypar{}%
+    \problemresetlayout
+}
+\let\problembodyend\problembodyfinish
+
+\newcommand{\problemliststart}{%
+    \ifproblembodyactive
+        \ifhmode\unskip\par\fi
+        \ifproblemheadpending
+            \global\problemfirstparagraphfalse
+            \let\problemoriginallabel\makelabel
+            \def\makelabel##1{%
+                \ifproblemheadpending
+                    \global\problemheadpendingfalse
+                    \llap{\problemheadprefix}%
+                \fi
+                \problemoriginallabel{##1}%
+            }%
+        \fi
+    \fi
+}
+
+\newcommand{\problemblockstart}{%
+    \ifproblembodyactive
+        \ifhmode\unskip\par\fi
+        \ifproblemheadpending
+            \global\problemheadpendingfalse
+            \global\problemfirstparagraphfalse
+            \llap{\problemheadprefix}%
+        \fi
+    \fi
+}
+
+\newcommand{\problemconsumeinlineblockprefix}{%
+    \ifproblemheadpending
+        \global\problemheadpendingfalse
+        \leavevmode\llap{\problemheadprefix}%
+    \fi
+}
+
+\newcommand{\problemcenterstart}{%
+    \ifproblembodyactive
+        \ifhmode\unskip\par\fi
+        \ifproblemheadpending
+            \global\problemfirstparagraphfalse
+            \linewidth=\dimexpr\linewidth-\problembodyindent\relax
+            \hsize=\linewidth
+        \fi
+    \fi
+}
+
+\newcommand{\problemcenterend}{%
+    \ifproblembodyactive
+        \global\everypar{\problemcontinuationpar}%
+    \fi
+}
+
+\makeatletter
+\patchcmd{\@endparenv}
+  {\addpenalty\@endparpenalty\addvspace\@topsepadd\@endpetrue}
+  {\addpenalty\@endparpenalty\addvspace\@topsepadd%
+   \ifproblembodyactive
+     \global\@endpefalse
+     \global\everypar{\problemcontinuationpar}%
+   \else
+     \@endpetrue
+   \fi}
+  {}{}
+\makeatother
+
+\newcommand{\problemcontinuationpar}{%
+    \ifproblembodyactive
+        \ifproblemfirstparagraph
+            \leftskip=0pt\relax
+            \hangindent=\problembodyindent
+            \hangafter=1
+            \parshape=0\relax
+            \ifproblemheadpending
+                \problemheadbox
+                \global\problemheadpendingfalse
+            \fi
+            \global\problemfirstparagraphfalse
+        \else
+            \leftskip=\problembodyindent\relax
+            \hangindent=0pt\relax
+            \hangafter=1\relax
+            \parshape=0\relax
+        \fi
+    \fi
+}
+
+% --- B. 题目命令 \problem ---
+\newcommand{\problem}{%
+    \problembodyfinish
+    \examavoidshortpage
+    \examneedlines[1]%
+    \stepcounter{probnum}%
+    \global\problembodyactivetrue
+    \global\problemfirstparagraphtrue
+    \global\problemheadpendingtrue
+    \everypar{\problemcontinuationpar}%
+    \ignorespaces%
+}
+\let\endproblem\problembodyfinish
+
+% --- C. 智能选项 \choices ---
+\newcommand{\choiceentry}[2]{%
+    \hangindent=1.8em\hangafter=1\noindent\textbf{#1.}~#2%
+}
+
+\newcommand{\choicecell}[3]{%
+    \parbox[t]{#1}{\raggedright\textbf{#2.}~#3}%
+}
+
+\newdimen\examchoicewidth
+\newdimen\examchoicewidthA
+\newdimen\examchoicewidthB
+\newdimen\examchoicewidthC
+\newdimen\examchoicewidthD
+\newdimen\examchoicemaxwidth
+
+\newcommand{\choices}[4]{%
+    \problembodyend
+    \par\nopagebreak
+    \examneedlines[2]%
+    \vspace{4pt}
+    \begingroup
+    \setlength{\leftskip}{\problembodyindent}
+    \examchoicewidth=\dimexpr\linewidth-\problembodyindent\relax
+    \settowidth{\examchoicewidthA}{\textbf{A.}~#1}
+    \settowidth{\examchoicewidthB}{\textbf{B.}~#2}
+    \settowidth{\examchoicewidthC}{\textbf{C.}~#3}
+    \settowidth{\examchoicewidthD}{\textbf{D.}~#4}
+    \examchoicemaxwidth=\examchoicewidthA
+    \ifdim\examchoicewidthB>\examchoicemaxwidth \examchoicemaxwidth=\examchoicewidthB \fi
+    \ifdim\examchoicewidthC>\examchoicemaxwidth \examchoicemaxwidth=\examchoicewidthC \fi
+    \ifdim\examchoicewidthD>\examchoicemaxwidth \examchoicemaxwidth=\examchoicewidthD \fi
+    \addtolength{\examchoicemaxwidth}{2em}
+
+    \vspace{-0.2em}\noindent
+    \ifdim\examchoicemaxwidth<0.22\examchoicewidth
+        \choicecell{\dimexpr0.22\examchoicewidth\relax}{A}{#1}\hfill
+        \choicecell{\dimexpr0.22\examchoicewidth\relax}{B}{#2}\hfill
+        \choicecell{\dimexpr0.22\examchoicewidth\relax}{C}{#3}\hfill
+        \choicecell{\dimexpr0.22\examchoicewidth\relax}{D}{#4}%
+    \else
+        \ifdim\examchoicemaxwidth<0.47\examchoicewidth
+            \choicecell{\dimexpr0.47\examchoicewidth\relax}{A}{#1}\hfill
+            \choicecell{\dimexpr0.47\examchoicewidth\relax}{B}{#2}\par
+            \vspace{0.2em}
+            \choicecell{\dimexpr0.47\examchoicewidth\relax}{C}{#3}\hfill
+            \choicecell{\dimexpr0.47\examchoicewidth\relax}{D}{#4}%
+        \else
+            \choiceentry{A}{#1}\par
+            \choiceentry{B}{#2}\par
+            \choiceentry{C}{#3}\par
+            \choiceentry{D}{#4}%
+        \fi
+    \fi
+    \par
+    \endgroup
+}
+
+% ==============================================================================
+% 5. 答案控制系统 (框式设计)
+% ==============================================================================
+\newif\ifshowanswer 
+\showanswertrue     % 【默认开启】
+
+% 定义答案盒子的样式
+\tcbset{
+    examanswer/.style={
+        enhanced jigsaw,
+        breakable,             % 允许跨栏
+        colback=gray!5,        % 极淡的灰色背景
+        colframe=gray!40,      % 边框颜色
+        boxrule=0.5pt,         % 细边框
+        arc=1mm,               % 轻微圆角
+        left=3pt,right=2pt, top=1pt, bottom=1pt,
+        before skip=0.3em,
+        after skip=0.3em,
+        before upper={\examwidoworphanrules\setlength{\parindent}{2em}\tolerance=3200\emergencystretch=8em\setlength{\jot}{4pt}\lineskiplimit=3pt\lineskip=4pt\selectfont},
+        fontupper=\zihao{-4},
+    }
+}
+
+% 答案/解析环境；旧命令写法 \answer{...}、\solution{...} 继续兼容。
+\newbox\examhiddenanswerbox
+\newcommand{\answerbegin}{%
+    \problembodyend
+    \ifshowanswer
+        \examneedlines[3]%
+        \begin{tcolorbox}[examanswer]
+            \textbf{【答案】}\ignorespaces
+    \else
+        \setbox\examhiddenanswerbox=\vbox\bgroup\hsize=\linewidth
+    \fi
+}
+\newcommand{\answerend}{%
+    \ifshowanswer
+        \end{tcolorbox}
+    \else
+        \egroup
+    \fi
+}
+\NewDocumentCommand{\answer}{+g}{%
+    \IfNoValueTF{#1}{\answerbegin}{\answerbegin #1\answerend}%
+}
+\let\endanswer\answerend
+
+\newcommand{\solutionbegin}{%
+    \problembodyend
+    \ifshowanswer
+        \examneedlines[3]%
+        \begin{tcolorbox}[examanswer]
+            \textbf{【解析】}\ignorespaces
+    \else
+        \setbox\examhiddenanswerbox=\vbox\bgroup\hsize=\linewidth
+    \fi
+}
+\newcommand{\solutionend}{%
+    \ifshowanswer
+        \end{tcolorbox}
+    \else
+        \egroup
+    \fi
+}
+\NewDocumentCommand{\solution}{+g}{%
+    \IfNoValueTF{#1}{\solutionbegin}{\solutionbegin #1\solutionend}%
+}
+\let\endsolution\solutionend
+
+% ==============================================================================
+% 5.1 解析区行间公式归一化宏
+% ==============================================================================
+\NewDocumentCommand{\examdisplaymath}{+m}{%
+    \[
+    #1
+    \]
+}
+\NewDocumentCommand{\examdisplayaligned}{o +m}{%
+    \[
+    \IfValueTF{#1}{\begin{aligned}[#1]}{\begin{aligned}}
+    #2
+    \end{aligned}
+    \]
+}
+\NewDocumentCommand{\examdisplaycases}{+m +m}{%
+    \[
+    #1\begin{cases}
+    #2
+    \end{cases}
+    \]
+}
+\NewDocumentCommand{\examdisplayarray}{+m m +m +m}{%
+    \[
+    #1\begin{array}{#2}
+    #3
+    \end{array}#4
+    \]
+}
+\NewDocumentCommand{\examdisplaychain}{+m}{%
+    \begin{align*}
+    #1
+    \end{align*}
+}
+
+% ==============================================================================
+% 6. 图表标题定制 (第X题图)
+% ==============================================================================
+\DeclareCaptionLabelFormat{examfig}{第\theprobnum 题图}
+\DeclareCaptionLabelFormat{examtab}{第\theprobnum 题表}
+
+\captionsetup[figure]{
+    labelformat=examfig, 
+    labelsep=none,       
+    font=small
+}
+\captionsetup[table]{
+    labelformat=examtab, 
+    labelsep=none,
+    font=small
+}
+
+% ==============================================================================
+% 7. 辅助符号与工具
+% ==============================================================================
+\renewcommand{\thefootnote}{\circled{\arabic{footnote}}}
+\newcommand{\circled}[2][]{\tikz[baseline=(char.base)]
+    {\node[shape=circle,draw,inner sep=0.8pt](char){\small #2};}}
+
+\newcommand{\R}{\symbfup{R}}
+\newcommand{\Z}{\symbfup{Z}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\Pr}{P}
+\renewcommand{\d}{\text{d}}
+\renewcommand{\i}{\text{i}}
+\newcommand{\e}{\text{e}}
+\newcommand{\degree}{^\circ}
+\newcommand{\bs}[1]{\symbfit{#1}} 
+\let\oldfrac\frac
+\renewcommand{\frac}[2]{%
+    \mathchoice
+        {\dfrac{#1}{#2}}                             % 1. Display style (行间公式时) -> 使用大分式
+        {\dfrac{#1}{#2}}                             % 2. Text style (行内公式时) -> 强制使用大分式
+        {\oldfrac{\scriptstyle #1}{\scriptstyle #2}} % 3. Script style (指数、上下标) -> 强制分子分母维持 scriptstyle
+        {\oldfrac{\scriptscriptstyle #1}{\scriptscriptstyle #2}} % 4. Scriptscript style (更深层的下标) -> 恢复默认小分式
+}
+
+% 大运算符在行内公式中默认使用显示模式的格式（类似 \frac 的处理）
+\makeatletter
+% 辅助宏：sum 类大运算符（\mathchoice 控制大小，\limits 控制极限位置）
+\newcommand{\make@display@bigop}[2]{% #1=备份命令, #2=原命令
+  \renewcommand{#2}{\mathop{%
+    \mathchoice
+        {#1}%                              % 1. Display style -> 保持原样（已经是大符号）
+        {\displaystyle #1}%                % 2. Text style (行内公式) -> 强制大符号
+        {#1}%                              % 3. Script style (指数、上下标) -> 保持原样
+        {#1}%                              % 4. Scriptscript style -> 保持原样
+  }\limits}}
+% 辅助宏：积分类大运算符（同理，但用 \nolimits 保持极限在侧边）
+\newcommand{\make@display@bigint}[2]{% #1=备份命令, #2=原命令
+  \renewcommand{#2}{\mathop{%
+    \mathchoice
+        {#1}%                              % 1. Display style -> 保持原样
+        {\displaystyle #1}%                % 2. Text style (行内公式) -> 强制大符号
+        {#1}%                              % 3. Script style -> 保持原样
+        {#1}%                              % 4. Scriptscript style -> 保持原样
+  }\nolimits}}
+\makeatother
+
+% \let\oldlim\lim
+% \renewcommand{\lim}{\oldlim\limits}
+
+\newcommand{\myarc}[1]{\overset{\frown}{#1}}
+
+\SetEnumitemKey{examhang}{%
+    nosep,
+    align=left,
+    before=\problemliststart,
+    itemindent=0pt,
+    listparindent=0pt,
+    parsep=0pt,
+    topsep=0pt,
+    partopsep=0pt
+}
+
+\setlist[enumerate,1]{ % 仅针对第一层级
+    examhang,
+    label=（\arabic*）,
+    left=\problembodyindent,
+    labelsep=0.5em,
+    widest*=9
+}
+\setlist[enumerate,2]{
+    examhang,
+    label=（\roman*）,
+    % left=2.5em\relax,
+    labelsep=0.5em,
+    widest*=8
+}
+
+\newlist{circlelist}{enumerate}{1}
+\setlist[circlelist,1]{
+    examhang,
+    label=\circled{\arabic*},
+    left=\problembodyindent,
+    labelsep=0.5em,
+    widest*=9
+}
+
+% 修改公式与前后文的紧凑度
+\makeatletter
+\g@addto@macro\normalsize{
+    % --- 控制行间公式 (Display Math) ---
+	\setlength\abovedisplayskip{0.25em plus 0.5em minus 0.25em}
+	\setlength\belowdisplayskip{0.25em plus 0.5em minus 0.25em}
+	\setlength\abovedisplayshortskip{0em plus 2pt minus 0pt}
+	\setlength\belowdisplayshortskip{0em plus 2pt minus 0pt}
+
+    % --- 控制行内公式 (Inline Math) 的避让机制 ---
+    % 设置阈值：当两行间距小于 1pt 时触发避让
+    \setlength\lineskiplimit{3pt} 
+    % 设置避让间距：触发后强制留出 3pt 的缝隙，防止重叠
+    \setlength\lineskip{3pt}
+}
+\makeatother
+
+\makeatletter
+\AtBeginDocument{
+    % 处理 pi 为正体
+    \let\oldpi\pi
+    \renewcommand{\pi}{\symup\oldpi}
+
+    % 组合数统一改成高中记号 C_n^m；无论源码使用 \binom / \dbinom / \tbinom，
+    % 成稿都输出同一套样式。
+    \RenewDocumentCommand{\binom}{m m}{\mathrm C_{#1}^{#2}}
+    \RenewDocumentCommand{\dbinom}{m m}{\mathrm C_{#1}^{#2}}
+    \RenewDocumentCommand{\tbinom}{m m}{\mathrm C_{#1}^{#2}}
+    
+    % 处理 nabla：不带 ^2 时加粗，带 ^2 时（Laplacian）保持原样
+    \let\oldnabla\nabla
+    \RenewDocumentCommand{\nabla}{e{^}}{%
+        \IfValueTF{#1}{% 有上标
+            \ifstrequal{#1}{2}{% 上标是 2
+                \oldnabla^{#1}%
+            }{% 上标不是 2
+                \symbf{\oldnabla}^{#1}%
+            }%
+        }{% 无上标
+            \symbf{\oldnabla}%
+        }%
+    }
+
+    % --- 大运算符：在 \AtBeginDocument 中重定义，确保在 unicode-math 之后 ---
+    % sum 类
+    \let\oldsum\sum             \make@display@bigop{\oldsum}{\sum}
+    \let\oldprod\prod           \make@display@bigop{\oldprod}{\prod}
+    \let\oldcoprod\coprod       \make@display@bigop{\oldcoprod}{\coprod}
+    \let\oldbigcup\bigcup       \make@display@bigop{\oldbigcup}{\bigcup}
+    \let\oldbigcap\bigcap       \make@display@bigop{\oldbigcap}{\bigcap}
+    \let\oldbigsqcup\bigsqcup   \make@display@bigop{\oldbigsqcup}{\bigsqcup}
+    \let\oldbigvee\bigvee       \make@display@bigop{\oldbigvee}{\bigvee}
+    \let\oldbigwedge\bigwedge   \make@display@bigop{\oldbigwedge}{\bigwedge}
+    \let\oldbigoplus\bigoplus   \make@display@bigop{\oldbigoplus}{\bigoplus}
+    \let\oldbigotimes\bigotimes \make@display@bigop{\oldbigotimes}{\bigotimes}
+    \let\oldbigodot\bigodot     \make@display@bigop{\oldbigodot}{\bigodot}
+    % 积分类
+    \let\oldint\int             \make@display@bigint{\oldint}{\int}
+    \let\oldiint\iint           \make@display@bigint{\oldiint}{\iint}
+    \let\oldiiint\iiint         \make@display@bigint{\oldiiint}{\iiint}
+    \let\oldiiiint\iiiint       \make@display@bigint{\oldiiiint}{\iiiint}
+    \let\oldoint\oint           \make@display@bigint{\oldoint}{\oint}
+}
+\makeatother

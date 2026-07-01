@@ -1,0 +1,354 @@
+\chapter{1958年云南卷}
+
+\setcounter{probnum}{0}
+
+\begin{problem}
+解方程 \( \left( \log_{X}\sqrt{5} \right)^{2} + \log_{X}5 - \frac{5}{4} = 0 \)
+
+\end{problem}
+
+\begin{solution}
+解：原方程即
+\[
+\frac{1}{4}\left( \log_{X}5 \right)^{2} + \log_{X}5 - \frac{5}{4} = 0
+\]
+即
+\[
+\left( \log_{X}5 - 1 \right)\left( \log_{X}5 + 5 \right) = 0
+\]
+当 \( \log_{X}5 - 1 = 0 \) 时，\( \log_{X}5 = 1 \)，所以 \( X_{1} = 5 \).
+
+又当 \( \log_{X}5 + 5 = 0 \) 时，\( \log_{X}5 = -5 \)，所以 \( X^{-5} = 5 \)，\( X^{5} = \frac{1}{5} \). 故
+\[
+X_{2} = \sqrt[5]{\frac{1}{5}} = \frac{\sqrt[5]{625}}{5}
+\]
+代入原方程检验，两个根均适合. 故 \( X_{1} = 5 \)，\( X_{2} = \frac{\sqrt[5]{625}}{5} \).
+\end{solution}
+
+\begin{problem}
+求 \( (1+X) + (1+X)^{2} + \cdots + (1+X)^{10} \) 式中 \( X^{8} \) 项的系数（不必求出其它各项的系数）
+
+\end{problem}
+
+\begin{solution}
+解：原式十项中，只有后三项才有含 \( X^{8} \) 的项. 由二项式定理通项公式，
+
+在 \( (1+X)^{8} \) 中，\( X^{8} \) 的系数为 \( 1 \).
+
+在 \( (1+X)^{9} \) 中，\( X^{8} \) 的系数为 \( \mathrm C_{9}^{8} = \mathrm C_{9}^{1} = 9 \).
+
+在 \( (1+X)^{10} \) 中，\( X^{8} \) 的系数为
+\[
+\mathrm C_{10}^{8} = \mathrm C_{10}^{2} = \frac{10\times 9}{1\times 2} = 45
+\]
+故原式中 \( X^{8} \) 的系数为 \( 1 + 9 + 45 = 55 \).
+\end{solution}
+
+\begin{problem}
+求圆锥曲线 \( 2x^{2} - 8xy - 4y^{2} - 4y + 1 = 0 \) 之焦点及准线
+
+\end{problem}
+
+\begin{solution}
+解：因 \( A = 2 \)，\( B = -8 \)，\( C = -4 \). 判别式
+\[
+\Delta = B^{2} - 4AC = \left( -8 \right)^{2} - 4\times 2\times \left( -4 \right) = 64 + 32 = 96 > 0
+\]
+故图形为双曲线型，先移轴，后转轴.
+
+令 \( x = x' + a \)，\( y = y' + b \) 代入原方程式得
+\[
+2\left( x' + a \right)^{2} - 8\left( x' + a \right)\left( y' + b \right) - 4\left( y' + b \right)^{2} - 4\left( y' + b \right) + 1 = 0
+\]
+即
+\[
+2x'^{2} - 8x'y' - 4y'^{2} + \left( 4a - 8b \right)x' - \left( 8a + 8b + 4 \right)y' + \left( 2a^{2} - 8ab - 4b^{2} - 4b + 1 \right) = 0 \tag{1}
+\]
+消去一次项，解方程组
+\[
+\begin{cases}
+4a - 8b = 0\\
+8a + 8b + 4 = 0
+\end{cases}
+\]
+得
+\[
+\begin{cases}
+a = -\frac{1}{3}\\
+b = -\frac{1}{6}
+\end{cases}
+\]
+代入 \( (1) \) 式得
+\[
+2x'^{2} - 8x'y' - 4y'^{2} + \left[ 2\left( -\frac{1}{3} \right)^{2} - 8\left( -\frac{1}{3} \right)\left( -\frac{1}{6} \right) - 4\left( -\frac{1}{6} \right)^{2} - 4\left( -\frac{1}{6} \right) + 1 \right] = 0
+\]
+化简得
+\[
+3x'^{2} - 12x'y' - 6y'^{2} + 2 = 0 \tag{2}
+\]
+在 \( (2) \) 式中，\( A \ne C \)，且 \( A = 3 \)，\( C = -6 \)，\( B = -12 \). 因此
+\[
+\tan 2\theta = \frac{B}{A-C} = \frac{-12}{3 - \left( -6 \right)} = -\frac{4}{3}
+\]
+又
+ \( \cos 2\theta = -\frac{3}{5} \). 因为 \( \cos 2\theta = 1 - 2\sin^{2}\theta \)，所以
+\[
+\sin\theta = \sqrt{\frac{1 - \cos 2\theta}{2}} = \sqrt{\frac{1 - \left( -\frac{3}{5} \right)}{2}} = \sqrt{\frac{4}{5}} = \frac{2}{\sqrt{5}}
+\]
+从而 \( \cos\theta = \sqrt{1 - \sin^{2}\theta} = \sqrt{\frac{1}{5}} = \frac{1}{\sqrt{5}} \).
+
+\bitmapfigure[max width=0.22\linewidth,max totalheight=3.4cm]{img/1958/yunnan/q3_solution_fig1.png}
+
+由转轴公式 \( x' = x''\cos\theta - y''\sin\theta \)，\( y' = x''\sin\theta + y''\cos\theta \).
+
+代入得 \( x' = \frac{x'' - 2y''}{\sqrt{5}} \)，\( y' = \frac{2x'' + y''}{\sqrt{5}} \).
+代入 \( (2) \) 式得
+\[
+3\left( \frac{x'' - 2y''}{\sqrt{5}} \right)^{2} - 12\left( \frac{x'' - 2y''}{\sqrt{5}} \right)\left( \frac{2x'' + y''}{\sqrt{5}} \right) - 6\left( \frac{2x'' + y''}{\sqrt{5}} \right)^{2} + 2 = 0
+\]
+化简得
+\[
+9x''^{2} - 6y''^{2} = 2
+\]
+也就是
+\[
+\frac{x''^{2}}{2/9} - \frac{y''^{2}}{1/3} = 1 \tag{3}
+\]
+
+\bitmapfigure[max width=0.52\linewidth,max totalheight=4.8cm]{img/1958/yunnan/q3_solution_fig2.png}
+
+在 \( (3) \) 式中，\( a = \frac{\sqrt{2}}{3} \)，\( b = \frac{1}{\sqrt{3}} = \frac{\sqrt{3}}{3} \). 因此
+\[
+c = \sqrt{a^{2} + b^{2}} = \sqrt{\frac{2}{9} + \frac{1}{3}} = \frac{\sqrt{5}}{3}
+\]
+在 \( x''oy'' \) 坐标系中，双曲线的焦点为 \( F\left( \frac{\sqrt{5}}{3},0 \right) \)，\( F'\left( -\frac{\sqrt{5}}{3},0 \right) \). 渐近线方程为
+\[
+y'' = \pm \frac{b}{a}x'' = \pm \frac{\sqrt{6}}{2}x''
+\]
+即
+\[
+\begin{cases}
+\sqrt{6}x'' - 2y'' = 0\\
+\sqrt{6}x'' + 2y'' = 0
+\end{cases}
+\]
+\end{solution}
+
+\begin{problem}
+求圆锥曲线 \( X^{2} + y^{2} = 49 \) 及 \( X^{2} + y^{2} - 20y + 91 = 0 \) 之公切线
+
+\end{problem}
+
+\begin{solution}
+解：设所求公切线为 \( y = kx + b \)，即 \( kx - y + b = 0 \). 因前一方程的图象以原点为圆心，半径为 \( 7 \) 的圆，后一方程可改写为
+\[
+X^{2} + \left( y^{2} - 20y + 10^{2} \right) = 9
+\]
+即
+\[
+X^{2} + \left( y - 10 \right)^{2} = 3^{2}
+\]
+这是以 \( \left( 0,10 \right) \) 为圆心，半径为 \( 3 \) 的圆.
+
+\bitmapfigure[max width=0.28\linewidth,max totalheight=4.8cm]{img/1958/yunnan/q4_solution_fig1.png}
+
+由切线到圆心的距离等于半径，于是有
+\[
+7 = \frac{|k\times 0 - 1\times 0 + b|}{\sqrt{k^{2} + \left( -1 \right)^{2}}} = \frac{|b|}{\sqrt{k^{2} + 1}} \tag{1}
+\]
+\[
+3 = \frac{|k\times 0 - 1\times 10 + b|}{\sqrt{k^{2} + \left( -1 \right)^{2}}} = \frac{|-10 + b|}{\sqrt{k^{2} + 1}} \tag{2}
+\]
+将 \( (1) \)、\( (2) \) 式联立，\( (1) \) 式去分母，两边平方得
+\[
+49\left( k^{2} + 1 \right) = b^{2} \tag{3}
+\]
+\( (2) \) 式去分母，两边平方得
+\[
+9\left( k^{2} + 1 \right) = b^{2} - 20b + 100 \tag{4}
+\]
+\( (4)\times 49 - (3)\times 9 \)，得
+\[
+49\left( b^{2} - 20b + 100 \right) - 9b^{2} = 0
+\]
+化简得
+\[
+2b^{2} - 49b + 245 = 0
+\]
+于是
+\[
+b = \frac{49 \pm \sqrt{49^{2} - 4\times 2\times 245}}{4} = \frac{49 \pm \sqrt{441}}{4} = \frac{49 \pm 21}{4}
+\]
+故 \( b = \frac{35}{2} \) 和 \( 7 \).
+当 \( b = \frac{35}{2} \) 时，代入 \( (3) \) 式得
+\[
+49\left( k^{2} + 1 \right) = \left( \frac{35}{2} \right)^{2}
+\]
+所以
+\[
+k^{2} = \frac{21}{4}
+\]
+即
+\[
+k = \pm \frac{\sqrt{21}}{2}
+\]
+又当 \( b = 7 \) 时，代入 \( (3) \) 式得
+\[
+49\left( k^{2} + 1 \right) = 7^{2}
+\]
+所以
+\[
+k = 0
+\]
+故方程组 \( (1) \) 与 \( (2) \) 的解为
+\[
+\begin{cases}
+b = \frac{35}{2}\\
+k = \frac{\sqrt{21}}{2}
+\end{cases}
+\]
+\[
+\begin{cases}
+b = \frac{35}{2}\\
+k = -\frac{\sqrt{21}}{2}
+\end{cases}
+\]
+\[
+\begin{cases}
+b = 7\\
+k = 0
+\end{cases}
+\]
+于是所求切线方程为 \( y = 7 \)（内公切线），以及
+\[
+\begin{cases}
+y = \frac{\sqrt{21}}{2}x + \frac{35}{2}\\
+y = -\frac{\sqrt{21}}{2}x + \frac{35}{2}
+\end{cases}
+\]
+或
+\[
+\begin{cases}
+\sqrt{21}x - 2y + 35 = 0\\
+\sqrt{21}x + 2y - 35 = 0
+\end{cases}
+\]
+（外公切线）.
+\end{solution}
+
+\begin{problem}
+设一四面体为一平面所截，若截面是平行四边形，则此截面平行于四面体的两条棱
+
+\end{problem}
+
+\begin{solution}
+证：假设四面体 \( ABCD \) 为一平面所截，其截面 \( EFGH \) 为一平行四边形.
+
+\bitmapfigure[max width=0.30\linewidth,max totalheight=4.2cm]{img/1958/yunnan/q5_solution_fig1.png}
+
+因为 \( EF // HG \)，而 \( HG \) 在平面 \( BCD \) 内，所以 \( EF // \) 平面 \( BCD \). 又过直线 \( EF \) 且与平面 \( BCD \) 相交的平面 \( AEF \) 与平面 \( BCD \) 的交线是 \( BC \)，因此 \( EF // BC \). 从而平面 \( EFGH // BC \).
+
+同理可证平面 \( EFGH // AD \).
+\end{solution}
+
+\begin{problem}
+设三角形 \( ABC \) 中，\( \angle A \) 的外角平分线与 \( BC \) 边之延长线相交于 \( D \)，与外接圆周相交于 \( E \)，则 \( AB\cdot AC = AE\cdot AD \)
+
+\end{problem}
+
+\begin{solution}
+证：连接 \( BE \).
+
+\bitmapfigure[max width=0.42\linewidth,max totalheight=3.2cm]{img/1958/yunnan/q6_solution_fig1.png}
+
+因为 \( \angle BAE = \angle DAF \)，又 \( \angle CAD = \angle DAF \)，所以 \( \angle BAE = \angle CAD \).
+
+因为四边形 \( ACBE \) 内接于圆，所以 \( \angle AEB + \angle ACB = 180^\circ \). 但 \( \angle ACB + \angle ACD = 180^\circ \)，所以 \( \angle AEB = \angle ACD \). 由此 \( \triangle ABE \sim \triangle ADC \).
+
+因此 \( \frac{AB}{AE} = \frac{AD}{AC} \)，故 \( AB\cdot AC = AE\cdot AD \).
+\end{solution}
+
+\begin{problem}
+设有互相外切的二圆的半径各为 \( a \) 与 \( b \)（\( a > b \)），作此二圆的两外公切线，设其夹角为 \( A \)，证明：\( \sin A = \frac{4\left( a-b \right)\sqrt{ab}}{\left( a+b \right)^{2}} \)
+
+\end{problem}
+
+\begin{solution}
+证：
+
+\bitmapfigure[max width=0.52\linewidth,max totalheight=3.2cm]{img/1958/yunnan/q7_solution_fig1.png}
+
+在直角三角形 \( O_{1}DO_{2} \) 中，
+\[
+DO_{2} = \sqrt{O_{1}O_{2}^{2} - O_{1}D^{2}} = \sqrt{\left( a+b \right)^{2} - \left( a-b \right)^{2}} = \sqrt{4ab} = 2\sqrt{ab}
+\]
+又 \( \sin \frac{A}{2} = \frac{a-b}{a+b} \)，\( \cos \frac{A}{2} = \frac{2\sqrt{ab}}{a+b} \). 因而
+\[
+\sin A = 2\sin \frac{A}{2}\cos \frac{A}{2} = 2\times \frac{a-b}{a+b}\times \frac{2\sqrt{ab}}{a+b} = \frac{4\left( a-b \right)\sqrt{ab}}{\left( a+b \right)^{2}}
+\]
+\end{solution}
+
+\begin{problem}
+在三角形 \( ABC \) 中，\( r \) 与 \( R \) 分别为其内切圆与外接圆的半径，求证：\( r = 4R\sin \frac{A}{2}\sin \frac{B}{2}\sin \frac{C}{2} \)
+
+\end{problem}
+
+\begin{solution}
+证：设 \( \odot O \) 为 \( \triangle ABC \) 之内切圆，\( D \) 为 \( AB \) 边上的切点，连接 \( OA \)、\( OB \)、\( OD \)，则 \( OD \perp AB \)，\( OD = r \).
+
+\bitmapfigure[max width=0.28\linewidth,max totalheight=4.2cm]{img/1958/yunnan/q8_solution_fig1.png}
+
+在直角三角形 \( AOD \) 中，
+\[
+\operatorname{ctg}\frac{A}{2} = \frac{AD}{OD}
+\]
+所以
+\[
+AD = r\operatorname{ctg}\frac{A}{2} \tag{1}
+\]
+又在直角三角形 \( BOD \) 中，
+\[
+\operatorname{ctg}\frac{B}{2} = \frac{BD}{OD}
+\]
+所以
+\[
+BD = r\operatorname{ctg}\frac{B}{2} \tag{2}
+\]
+由 \( (1) + (2) \) 得
+\[
+c = AB = AD + BD = r\operatorname{ctg}\frac{A}{2} + r\operatorname{ctg}\frac{B}{2}
+\]
+\[
+= \left( \frac{\cos \frac{A}{2}}{\sin \frac{A}{2}} + \frac{\cos \frac{B}{2}}{\sin \frac{B}{2}} \right)r
+\]
+\[
+= \left( \frac{\sin \frac{B}{2}\cos \frac{A}{2} + \sin \frac{A}{2}\cos \frac{B}{2}}{\sin \frac{A}{2}\sin \frac{B}{2}} \right)r
+\]
+\[
+= r\frac{\sin \frac{A+B}{2}}{\sin \frac{A}{2}\sin \frac{B}{2}} \tag{3}
+\]
+因为 \( A + B + C = 180^\circ \)，所以
+\[
+\frac{A+B}{2} = 90^\circ - \frac{C}{2} \tag{4}
+\]
+以 \( (4) \) 代入 \( (3) \) 得
+\[
+c = r\frac{\sin \left( 90^\circ - \frac{C}{2} \right)}{\sin \frac{A}{2}\sin \frac{B}{2}} = r\frac{\cos \frac{C}{2}}{\sin \frac{A}{2}\sin \frac{B}{2}} \tag{5}
+\]
+由正弦定理知
+\[
+\frac{c}{\sin C} = 2R
+\]
+所以
+\[
+c = 2R\sin C = 2R\sin 2\left( \frac{C}{2} \right) = 4R\sin \frac{C}{2}\cos \frac{C}{2} \tag{6}
+\]
+以 \( (6) \) 代入 \( (5) \) 得
+\[
+4R\sin \frac{C}{2}\cos \frac{C}{2} = r\frac{\cos \frac{C}{2}}{\sin \frac{A}{2}\sin \frac{B}{2}}
+\]
+化简得
+\[
+r = 4R\sin \frac{A}{2}\sin \frac{B}{2}\sin \frac{C}{2}
+\]
+\end{solution}
