@@ -143,7 +143,7 @@ D
     {\(y = \sin 2x\)}
     {\(y = \cos \frac{x}{2}\)}
     {\(y = \sin 2x + \cos 2x\)}
-    {\(y = \frac{1 - \operatorname{tg}^2 x}{1 + \operatorname{tg}^2 x}\)}
+    {\(y = \frac{1 - \tan^2 x}{1 + \tan^2 x}\)}
 
 \end{problem}
 
@@ -264,7 +264,7 @@ z = \frac{(1 - 4\i)(1 + \i) + 2 + 4\i}{3 + 4\i}
 = \frac{7 + \i}{3 + 4\i}
 = 1 - \i.
 \]
-于是 \(w = z + a\i = 1 + (a - 1)\i\). 由 \(|w| \leqslant \sqrt{2}\) 得 \(\sqrt{1 + (a - 1)^2} \leqslant \sqrt{2}\)，所以 \(0 \leqslant a \leqslant 2\). 又 \(\operatorname{tg}\theta = a - 1\)，故 \(-1 \leqslant \operatorname{tg}\theta \leqslant 1\). 因此 \(\theta\) 的取值范围是 \(\left[0,\frac{\pi}{4}\right] \cup \left[\frac{7\pi}{4},2\pi\right)\).
+于是 \(w = z + a\i = 1 + (a - 1)\i\). 由 \(|w| \leqslant \sqrt{2}\) 得 \(\sqrt{1 + (a - 1)^2} \leqslant \sqrt{2}\)，所以 \(0 \leqslant a \leqslant 2\). 又 \(\tan\theta = a - 1\)，故 \(-1 \leqslant \tan\theta \leqslant 1\). 因此 \(\theta\) 的取值范围是 \(\left[0,\frac{\pi}{4}\right] \cup \left[\frac{7\pi}{4},2\pi\right)\).
 \end{solution}
 
 \begin{problem}
@@ -281,7 +281,13 @@ z = \frac{(1 - 4\i)(1 + \i) + 2 + 4\i}{3 + 4\i}
 \end{solution}
 
 \begin{problem}
-如图，圆锥的轴截面为等腰直角三角形 \(SAB\)，\(Q\) 为底面圆周上一点. （1）如果 \(QB\) 的中点为 \(C\)，\(OH \perp SC\)，求证 \(OH \perp\) 平面 \(SBQ\)；（2）如果 \(\angle AOQ = 60^{\circ}\)，\(QB = 2\sqrt{3}\)，求此圆锥的体积；（3）如果二面角 \(A-SB-Q\) 的大小为 \(\operatorname{arctg} \frac{\sqrt{6}}{3}\)，求 \(\angle AOQ\) 的大小.
+如图，圆锥的轴截面为等腰直角三角形 \(SAB\)，\(Q\) 为底面圆周上一点.
+
+\begin{enumerate}
+\item 如果 \(QB\) 的中点为 \(C\)，\(OH \perp SC\)，求证 \(OH \perp\) 平面 \(SBQ\)；
+\item 如果 \(\angle AOQ = 60^{\circ}\)，\(QB = 2\sqrt{3}\)，求此圆锥的体积；
+\item 如果二面角 \(A-SB-Q\) 的大小为 \(\arctan \frac{\sqrt{6}}{3}\)，求 \(\angle AOQ\) 的大小.
+\end{enumerate}
 
 \bitmapfigure[max width=0.58\linewidth,max totalheight=4.8cm]{img/1992/shanghai/q24_fig1.png}
 
@@ -292,41 +298,80 @@ z = \frac{(1 - 4\i)(1 + \i) + 2 + 4\i}{3 + 4\i}
 
 （2）连接 \(AQ\). 因为 \(Q\) 为圆周上一点，\(AB\) 为直径，所以 \(AQ \perp QB\). 在 \(\mathrm{Rt}\triangle AQB\) 中，\(AB = \frac{2\sqrt{3}}{\cos 30^{\circ}} = 4\). 又因为 \(\triangle SAB\) 是等腰直角三角形，所以 \(SO = \frac{1}{2}AB = 2\). 故圆锥体积 \(V = \frac{1}{3}\pi \cdot OA^2 \cdot SO = \frac{8}{3}\pi\).
 
-（3）过 \(Q\) 作 \(QM \perp AB\)，垂足为 \(M\). 因平面 \(SAB \perp\) 平面 \(ABQ\)，故 \(QM \perp\) 平面 \(SAB\). 再过 \(M\) 作 \(MP \perp SB\)，垂足为 \(P\)，连接 \(PQ\)，则由三垂线定理可得 \(QP \perp SB\). 因此 \(\angle MPQ\) 是二面角 \(A-SB-Q\) 的平面角，故 \(\angle MPQ = \operatorname{arctg} \frac{\sqrt{6}}{3}\). 设圆锥底面半径为 \(R\)，\(\angle AOQ = \alpha\). 在 \(\mathrm{Rt}\triangle OMQ\) 中，\(QM = R\sin \alpha\)，\(OM = R\cos \alpha\). 在 \(\mathrm{Rt}\triangle MPB\) 中，\(\angle PBM = 45^{\circ}\)，且 \(MB = R(1 + \cos \alpha)\)，故 \(MP = \frac{\sqrt{2}}{2}R(1 + \cos \alpha)\). 于是 \(\frac{R\sin \alpha}{\frac{\sqrt{2}}{2}R(1 + \cos \alpha)} = \frac{\sqrt{6}}{3}\)，即 \(\frac{\sin \alpha}{1 + \cos \alpha} = \frac{\sqrt{3}}{3}\). 因此 \(\operatorname{tg}\frac{\alpha}{2} = \frac{\sqrt{3}}{3}\)，所以 \(\angle AOQ = 60^{\circ}\).
+（3）过 \(Q\) 作 \(QM \perp AB\)，垂足为 \(M\). 因平面 \(SAB \perp\) 平面 \(ABQ\)，故 \(QM \perp\) 平面 \(SAB\). 再过 \(M\) 作 \(MP \perp SB\)，垂足为 \(P\)，连接 \(PQ\)，则由三垂线定理可得 \(QP \perp SB\). 因此 \(\angle MPQ\) 是二面角 \(A-SB-Q\) 的平面角，故 \(\angle MPQ = \arctan \frac{\sqrt{6}}{3}\). 设圆锥底面半径为 \(R\)，\(\angle AOQ = \alpha\). 在 \(\mathrm{Rt}\triangle OMQ\) 中，\(QM = R\sin \alpha\)，\(OM = R\cos \alpha\). 在 \(\mathrm{Rt}\triangle MPB\) 中，\(\angle PBM = 45^{\circ}\)，且 \(MB = R(1 + \cos \alpha)\)，故 \(MP = \frac{\sqrt{2}}{2}R(1 + \cos \alpha)\). 于是 \(\frac{R\sin \alpha}{\frac{\sqrt{2}}{2}R(1 + \cos \alpha)} = \frac{\sqrt{6}}{3}\)，即 \(\frac{\sin \alpha}{1 + \cos \alpha} = \frac{\sqrt{3}}{3}\). 因此 \(\tan\frac{\alpha}{2} = \frac{\sqrt{3}}{3}\)，所以 \(\angle AOQ = 60^{\circ}\).
 \end{solution}
 
 \begin{problem}
-已知数列 \(\{a_n\}\)，\(a_n > 0\)（\(n \in \N\)），它的前 \(n\) 项的和记为 \(S_n\). （1）如果 \(\{a_n\}\) 是一个首项为 \(a\)，公比为 \(q\)（\(0 < q \leqslant 1\)）的等比数列，且 \(G_n = a_1^2 + a_2^2 + \cdots + a_n^2\)（\(n \in \N\)），求 \(\displaystyle\lim_{n \to \infty} \frac{S_n}{G_n}\)；（2）如果 \(S_1^2, S_2^2, \cdots, S_n^2, \cdots\) 是一个首项为 3，公差为 1 的等差数列，试比较 \(S_n\) 与 \(3na_n\)（\(n \in \N\)）的大小.
+已知数列 \(\{a_n\}\)，\(a_n > 0\)（\(n \in \N\)），它的前 \(n\) 项的和记为 \(S_n\).
+
+\begin{enumerate}
+\item 如果 \(\{a_n\}\) 是一个首项为 \(a\)，公比为 \(q\)（\(0 < q \leqslant 1\)）的等比数列，且 \(G_n = a_1^2 + a_2^2 + \cdots + a_n^2\)（\(n \in \N\)），求 \(\displaystyle\lim_{n \to \infty} \frac{S_n}{G_n}\)；
+\item 如果 \(S_1^2, S_2^2, \cdots, S_n^2, \cdots\) 是一个首项为 3，公差为 1 的等差数列，试比较 \(S_n\) 与 \(3na_n\)（\(n \in \N\)）的大小.
+\end{enumerate}
 
 \end{problem}
 
 \begin{solution}
-（1）当 \(q = 1\) 时，\(S_n = na\)，\(G_n = na^2\)，所以 \(\lim_{n \to \infty} \frac{S_n}{G_n} = \frac{1}{a}\). 当 \(0 < q < 1\) 时，\(\lim_{n \to \infty} S_n = \frac{a}{1 - q}\). 又因为 \(\{a_n^2\}\) 是首项为 \(a^2\)、公比为 \(q^2\) 的等比数列，所以 \(\lim_{n \to \infty} G_n = \frac{a^2}{1 - q^2}\). 因此 \(\lim_{n \to \infty} \frac{S_n}{G_n} = \frac{1 + q}{a}\). 综上，
+（1）[解一] 当 \(q = 1\) 时，\(S_n = na\)，\(G_n = na^2\). 因为 \(a \neq 0\)，所以 \(\lim_{n \to \infty} \frac{S_n}{G_n} = \frac{1}{a}\). 当 \(0 < q < 1\) 时，
+\[
+\lim_{n \to \infty} S_n = \frac{a}{1 - q}.
+\]
+因为 \(\frac{a_n^2}{a_{n-1}^2} = q^2 < 1\)，所以 \(\{a_n^2\}\) 是首项为 \(a^2\)、公比为 \(q^2\) 的等比数列，
+\[
+\lim_{n \to \infty} G_n = \frac{a^2}{1 - q^2}.
+\]
+所以 \(\lim_{n \to \infty} \frac{S_n}{G_n} = \frac{\lim_{n \to \infty} S_n}{\lim_{n \to \infty} G_n} = \frac{1 + q}{a}\). 综上，
 \[
 \lim_{n \to \infty} \frac{S_n}{G_n}
 =
 \left\{
 \begin{array}{ll}
-\frac{1}{a}, & q = 1, \\
+\frac{1}{a}, & q = 1. \\
 \frac{1 + q}{a}, & 0 < q < 1.
 \end{array}
 \right.
 \]
 
-（2）由题意知 \(S_1^2 = 3\)，\(S_n^2 = 3 + (n - 1) = n + 2\). 因为 \(S_n > 0\)，所以 \(S_n = \sqrt{n + 2}\). 当 \(n \geqslant 2\) 时，\(a_n = S_n - S_{n - 1} = \sqrt{n + 2} - \sqrt{n + 1}\). 于是
+[解二] 当 \(q = 1\) 时，同解一得
 \[
-S_n - 3na_n = \sqrt{n + 2} - 3n\left(\sqrt{n + 2} - \sqrt{n + 1}\right)
-= 3n\sqrt{n + 1} - (3n - 1)\sqrt{n + 2}.
+\lim_{n \to \infty} \frac{S_n}{G_n} = \frac{1}{a}.
 \]
-比较两边平方，得
+当 \(0 < q < 1\) 时，\(S_n = \frac{a(1 - q^n)}{1 - q}\). 同解一得 \(\{a_n^2\}\) 是首项为 \(a^2\)、公比为 \(q^2\) 的等比数列，
 \[
-\left(3n\sqrt{n + 1}\right)^2 - \left[(3n - 1)\sqrt{n + 2}\right]^2
-= -3n^2 + 11n - 2
-= -3\left(n - \frac{11 - \sqrt{97}}{6}\right)\left(n - \frac{11 + \sqrt{97}}{6}\right).
+\lim_{n \to \infty} G_n = \frac{a^2(1 - q^{2n})}{1 - q^2}.
 \]
-因此，当 \(n = 2,3\) 时，\(S_n > 3na_n\)；当 \(n \geqslant 4\) 时，\(S_n < 3na_n\). 另由 \(S_1 = \sqrt{3} < 3a_1\)，知当 \(n = 1\) 时也有 \(S_n < 3na_n\).
+\[
+\lim_{n \to \infty} \frac{S_n}{G_n} = \lim_{n \to \infty} \frac{1 + q}{a(1 + q^n)} = \frac{1 + q}{a}.
+\]
+结论同解一.
 
-综上，当 \(n = 1\) 及 \(n \geqslant 4\) 时，\(S_n < 3na_n\)；当 \(n = 2,3\) 时，\(S_n > 3na_n\).
+（2）由题设知 \(S_1 = a_1 = \sqrt{3}\).
+\[
+S_n^2 = 3 + (n - 1) = n + 2 \quad (n \in \N).
+\]
+因为 \(S_n > 0\)，所以 \(S_n = \sqrt{n + 2}\).
+\[
+a_n = S_n - S_{n - 1} = \sqrt{n + 2} - \sqrt{n + 1} \quad (n \geqslant 2).
+\]
+当 \(n = 1\) 时，\(S_1 < 3a_1\).
+当 \(n \geqslant 2\) 时，
+\[
+\begin{array}{l}
+S_n - 3na_n = \sqrt{n + 2} - 3n\left(\sqrt{n + 2} - \sqrt{n + 1}\right)\\
+= 3n\sqrt{n + 1} - (3n - 1)\sqrt{n + 2}.
+\end{array}
+\]
+由 \((3n\sqrt{n + 1})^2 - \left[(3n - 1)\sqrt{n + 2}\right]^2\)
+\[
+= -3n^2 + 11n - 2
+\]
+\[
+= -3\left(n - \frac{11 - \sqrt{97}}{6}\right)\left(n - \frac{11 + \sqrt{97}}{6}\right),
+\]
+可得当 \(n = 2,3\) 时，\(S_n > 3na_n\)；当 \(n \geqslant 4 (n \in \N)\) 时，\(S_n < 3na_n\).
+综上所述，得
+当 \(n = 1\) 及 \(n \geqslant 4 (n \in \N)\) 时，\(S_n < 3na_n\).
+当 \(n = 2,3\) 时，\(S_n > 3na_n\).
 \end{solution}
 
 \begin{problem}
@@ -337,24 +382,83 @@ S_n - 3na_n = \sqrt{n + 2} - 3n\left(\sqrt{n + 2} - \sqrt{n + 1}\right)
 \end{problem}
 
 \begin{solution}
-因为 \((1 - a^2)x^2 + a^2y^2 - a^2 = 0\) 是双曲线，所以 \(1 - a^2 < 0\)，从而可化为 \(y^2 - \frac{x^2}{a^2 - 1} = 1\). 其渐近线斜率为 \(\pm \frac{\sqrt{a^2 - 1}}{a}\). 由题意，\(\frac{\sqrt{3}}{2} \leqslant \frac{\sqrt{a^2 - 1}}{a} \leqslant \frac{2\sqrt{2}}{3}\)，故 \(4 \leqslant a^2 \leqslant 9\)，即 \(a \in [2,3]\).
-
-把 \(y = -x\) 代入双曲线方程，得 \(P(-a,a)\). 双曲线上半支顶点为 \(A(0,1)\). 以 \(A(0,1)\) 为焦点、\(M(0,m)\) 为顶点的开口向下抛物线方程为 \(x^2 = -4(m - 1)(y - m)\). 因为 \(P(-a,a)\) 在抛物线上，所以 \(a^2 = -4(m - 1)(a - m)\)，即 \(m^2 - (1 + a)m + \left(a - \frac{a^2}{4}\right) = 0\). 由抛物线顶点位置知 \(m > a\)，故
+[解一] 因为 \((1 - a^2)x^2 + a^2y^2 - a^2 = 0\) 是双曲线，所以 \(1 - a^2 < 0\)，从而它可化为
+\[
+y^2 - \frac{x^2}{a^2 - 1} = 1.
+\]
+双曲线的两条渐近线的斜率为 \(\pm \frac{\sqrt{a^2 - 1}}{a}\). 于是 \(\frac{\sqrt{3}}{2} \leqslant \frac{\sqrt{a^2 - 1}}{a} \leqslant \frac{2\sqrt{2}}{3}\)，即 \(4 \leqslant a^2 \leqslant 9\)，又由 \(a > 0\) 得 \(a\) 的取值范围是 \([2,3]\).
+把 \(y = -x\) 代入双曲线方程，得点 \(P\) 的坐标为 \((-a,a)\).
+双曲线上半支的顶点为 \(A(0,1)\).
+以 \(A(0,1)\) 为焦点，\(M(0,m)\) 为顶点的开口向下的抛物线方程为
+\[
+x^2 = -4(m - 1)(y - m).
+\]
+因为 \(P(-a,a)\) 在抛物线上，所以
+\[
+a^2 = -4(m - 1)(a - m). \tag{①}
+\]
+即 \(m^2 - (1 + a)m + \left(a - \frac{a^2}{4}\right) = 0\). 解得
+\[
+m = \frac{1}{2}\left(1 + a \pm \sqrt{1 - 2a + 2a^2}\right),
+\]
+根据题设抛物线的顶点位置，由①可知 \(m > 1, m > a\)，所以 \(m > \frac{1 + a}{2}\).
+因此只取
 \[
 m = \frac{1}{2}\left(1 + a + \sqrt{1 - 2a + 2a^2}\right).
 \]
-于是直线 \(PM\) 的斜率
+直线 \(PM\) 的斜率为
 \[
-k = \frac{m - a}{a}
-= \frac{1}{2a}\left(1 - a + \sqrt{1 - 2a + 2a^2}\right).
+\begin{array}{l}
+k = \frac{m - a}{0 - (-a)}\\
+= \frac{1}{2a}\left(1 - a + \sqrt{1 - 2a + 2a^2}\right). \tag{②}
+\end{array}
 \]
-令 \(u = \frac{1}{a}\)，则
+在②中，令 \(u = \frac{1}{a}\)，有
 \[
 k = \frac{1}{2}\left(u - 1 + \sqrt{u^2 - 2u + 2}\right)
 = \frac{1}{2}\left[\sqrt{(1 - u)^2 + 1} - (1 - u)\right].
 \]
-在 \(a \in [2,3]\) 上，\(u\) 递减，\(1 - u\) 递增，从而 \(k\) 递减. 因此当 \(a = 2\) 时，\(k\) 取得最大值
+在 \([2,3]\) 上，\(u\) 是减函数，\(1 - u\) 是增函数。由 \(1 - u > 0\)，可知 \((1 - u)^3\) 也是增函数，从而 \(k\) 在 \([2,3]\) 上是减函数. 故当 \(a = 2\) 时，\(k\) 取得最大值
 \[
 k_{\max} = \frac{\sqrt{5} - 1}{4}.
 \]
+
+[解二] 同解一得双曲线方程为
+\[
+y^2 - \frac{x^2}{a^2 - 1} = 1.
+\]
+\(a\) 的取值范围为 \([2,3]\)，
+点 \(P\) 的坐标为 \((-a,a)\).
+以 \(A\) 为焦点，\(M\) 为顶点的开口向下的抛物线方程为
+\[
+x^2 = -4(m - 1)(y - m).
+\]
+\[
+a^2 = -4(m - 1)(a - m). \tag{①}
+\]
+\[
+k = \frac{m - a}{a}. \tag{②}
+\]
+由②得 \(m = ka + a\)，代入①得
+\[
+a^2 = 4(ka + a - 1)ka.
+\]
+因为 \(a \neq 0\)，所以
+\[
+(4k^2 + 4k - 1)a = 4k.
+\]
+根据题设抛物线顶点的位置，由①可知 \(m > a\)，所以 \(k > 0\). 因此
+\[
+4k^2 + 4k - 1 > 0.
+\]
+这样 \(a = 4k/(4k^2 + 4k - 1)\).
+由 \(a\) 的取值范围，得
+\[
+2 \leqslant \frac{4k}{4k^2 + 4k - 1} \leqslant 3. \tag{③}
+\]
+由 \(4k^2 + 4k - 1 > 0\)，得 \(k > \frac{\sqrt{2} - 1}{2}\). 于是，可由③解得
+\[
+\frac{\sqrt{13} - 2}{6} \leqslant k \leqslant \frac{\sqrt{5} - 1}{4}.
+\]
+因此 \(k_{\max} = \frac{\sqrt{5} - 1}{4}\).
 \end{solution}

@@ -1,5 +1,12 @@
 \chapter{1977年山东B卷}
 
+\providecommand{\shandongproblabel}[1]{%
+  \renewcommand{\problemheadprefix}{\textbf{#1}\hspace{0.5em}}%
+  \renewcommand{\problemheadbox}{\makebox[\problembodyindent][l]{\textbf{#1}}}%
+}
+
+\section{解下列各题}
+
 \begin{problem}
 \(\sqrt{\left( -a \right)^2}=?\)
 
@@ -16,7 +23,7 @@ a & \text{（\(a\geqslant 0\)）},\\
 \end{solution}
 
 \begin{problem}
-\(\log_{\frac{1}{2}}\left[ \left( 1-\cos^2\frac{\pi}{6} \right)\left( \operatorname{ctg}\frac{\pi}{4} \right)^{-2} \right]=?\)
+\(\log_{\frac{1}{2}}\left[ \left( 1-\cos^2\frac{\pi}{6} \right)\left( \cot\frac{\pi}{4} \right)^{-2} \right]=?\)
 
 \end{problem}
 
@@ -74,9 +81,9 @@ a & \text{（\(a\geqslant 0\)）},\\
 \begin{solution}
 \bitmapfigure[max width=6.0cm,max totalheight=3.8cm]{img/1977/shandong_b/q7_solution_fig1.png}
 
-因为 \(AB:AD=2:1\)，\(AM=\frac{1}{2}AB\)，所以 \(AM=AD\). 所以 \(\angle ADM=\angle AMD\). 又因为 \(AB//DC\)，且 \(A\)、\(M\)、\(B\) 三点共线，所以 \(\angle AMD=\angle MDC\). 因此 \(\angle MDC=\frac{1}{2}\angle ADC\).
+因为 \(AB:AD=2:1\)，\(AM=\frac{1}{2}AB\)，所以 \(AM=AD\). 所以 \(\angle ADM=\angle AMD\). 又因为 \(AB\parallel DC\)，且 \(A\)、\(M\)、\(B\) 三点共线，所以 \(\angle AMD=\angle MDC\). 因此 \(\angle MDC=\frac{1}{2}\angle ADC\).
 
-又因为 \(M\) 为 \(AB\) 的中点，所以 \(MB=AM\). 而平行四边形 \(ABCD\) 中 \(AD=BC\)，又已知 \(AM=AD\)，所以 \(MB=BC\). 因此 \(\triangle MBC\) 为等腰三角形，\(\angle BMC=\angle MCB\). 又因为 \(MB//DC\)，所以 \(\angle BMC=\angle MCD\). 因此 \(\angle BCD=\angle MCB+\angle MCD=2\angle MCD\)，即 \(\angle MCD=\frac{1}{2}\angle BCD\).
+又因为 \(M\) 为 \(AB\) 的中点，所以 \(MB=AM\). 而平行四边形 \(ABCD\) 中 \(AD=BC\)，又已知 \(AM=AD\)，所以 \(MB=BC\). 因此 \(\triangle MBC\) 为等腰三角形，\(\angle BMC=\angle MCB\). 又因为 \(MB\parallel DC\)，所以 \(\angle BMC=\angle MCD\). 因此 \(\angle BCD=\angle MCB+\angle MCD=2\angle MCD\)，即 \(\angle MCD=\frac{1}{2}\angle BCD\).
 
 \[
 \angle MDC+\angle MCD=\frac{1}{2}\left( \angle ADC+\angle BCD \right)=\frac{1}{2}\pi=\frac{\pi}{2}
@@ -93,14 +100,63 @@ a & \text{（\(a\geqslant 0\)）},\\
 \begin{solution}
 因为方程有两个不相等的实数根，所以 \(b^2-4ac>0\)，即
 \[
-1-\frac{\sin\alpha}{\cos\alpha}=1-\operatorname{tg}\alpha>0
+1-\frac{\sin\alpha}{\cos\alpha}=1-\tan\alpha>0
 \]
-亦即 \(\operatorname{tg}\alpha<1\). 因此 \(0<\alpha<\frac{\pi}{4}\) 时，方程有两个不相等的实数根.
+亦即 \(\tan\alpha<1\). 因此 \(0<\alpha<\frac{\pi}{4}\) 时，方程有两个不相等的实数根.
 
 \[
-x=\frac{-1\pm\sqrt{1-\operatorname{tg}\alpha}}{\sin\alpha}
+x=\frac{-1\pm\sqrt{1-\tan\alpha}}{\sin\alpha}
 \]
 \end{solution}
+
+\section{参考题}
+
+\begingroup
+\shandongproblabel{一、}
+\begin{problem}
+求极限：\(\lim_{x\to 0}\frac{\ln(1+x)}{x}\).
+
+\end{problem}
+
+\begin{solution}
+\[
+\lim_{x\to 0}\frac{\ln(1+x)}{x}
+=\lim_{x\to 0}\frac{[\ln(1+x)]'}{x'}
+=\lim_{x\to 0}\frac{1}{1+x}
+=1.
+\]
+\end{solution}
+\endgroup
+
+\begingroup
+\shandongproblabel{二、}
+\begin{problem}
+用定积分求抛物线 \(y^2=4x\) 与 \(x^2=4y\) 所围成的曲边形面积.
+
+\end{problem}
+
+\begin{solution}
+\begin{center}
+\includegraphics[page=6,trim=8.3cm 7.8cm 3.9cm 15.2cm,clip,width=5.0cm]{source/普通高考/1977/1977山东B.pdf}
+\end{center}
+
+设曲边形面积为 \(S\). 解方程组
+\[
+\begin{cases}
+y^2=4x,\\
+x^2=4y.
+\end{cases}
+\]
+得两交点的横坐标 \(x=0\) 与 \(x=4\).
+
+\[
+S=\int_0^4 2\sqrt{x}\,\mathrm{d}x-\int_0^4 \frac{1}{4}x^2\,\mathrm{d}x
+=\left. \frac{4}{3}x^{\frac{3}{2}} \right|_0^4-\left. \frac{1}{12}x^3 \right|_0^4
+=\frac{32}{3}-\frac{16}{3}
+=\frac{16}{3}.
+\]
+\end{solution}
+\endgroup
 
 \begin{problem}
 试比较等底等高的正四棱锥和正圆锥的侧面积，看哪个的侧面积较小.

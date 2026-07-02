@@ -182,13 +182,13 @@ y=x^2-4x+3=\left( x-2 \right)^2-1.
 \end{problem}
 
 \begin{solution}
-已知：四边形 \( ABCD \) 是梯形，\( DC // AB \)，\( AC \) 和 \( BD \) 是对角线，且 \( AC=BD \).
+已知：四边形 \( ABCD \) 是梯形，\( DC \parallel AB \)，\( AC \) 和 \( BD \) 是对角线，且 \( AC=BD \).
 
 求证：\( AD=BC \).
 
 证法一：作 \( CE \perp AB \)，\( DF \perp AB \)，\( E \) 和 \( F \) 是垂足.
 
-因为 \( DC // AB \)，所以 \( CE=DF \).
+因为 \( DC \parallel AB \)，所以 \( CE=DF \).
 
 在直角三角形 \( ACE \) 和 \( BDF \) 中，因为 \( CE=DF \)，\( AC=BD \)，所以 \( \triangle ACE\cong \triangle BDF \).
 
@@ -200,7 +200,7 @@ y=x^2-4x+3=\left( x-2 \right)^2-1.
 
 \bitmapfigure[max width=6.0cm,max totalheight=4.6cm]{img/1977/liaoning/q9_solution_fig1.png}
 
-证法二：作 \( CE // DB \)，交 \( AB \) 的延长线于 \( E \). 又 \( DC // BE \)，则四边形 \( BECD \) 是平行四边形.
+证法二：作 \( CE \parallel DB \)，交 \( AB \) 的延长线于 \( E \). 又 \( DC \parallel BE \)，则四边形 \( BECD \) 是平行四边形.
 
 所以 \( EC=BD \).
 
@@ -220,7 +220,7 @@ y=x^2-4x+3=\left( x-2 \right)^2-1.
 
 证法三：设 \( AC \)、\( BD \) 交于 \( O \) 点.
 
-因为 \( DC // AB \)，所以 \( \angle 1=\angle 2 \)，\( \angle 3=\angle 4 \).
+因为 \( DC \parallel AB \)，所以 \( \angle 1=\angle 2 \)，\( \angle 3=\angle 4 \).
 
 所以 \( \triangle AOB\sim \triangle COD \).
 
@@ -250,26 +250,26 @@ y=x^2-4x+3=\left( x-2 \right)^2-1.
 \end{solution}
 
 \begin{problem}
-\( \alpha \) 是多少度时，方程 \( 2x^2+2\sqrt{2}\,x+\operatorname{tg}\alpha=0 \) 有两个相等的实数根？（\( 0^\circ\leqslant \alpha<360^\circ \)）
+\( \alpha \) 是多少度时，方程 \( 2x^2+2\sqrt{2}\,x+\tan \alpha=0 \) 有两个相等的实数根？（\( 0^\circ\leqslant \alpha<360^\circ \)）
 
 \end{problem}
 
 \begin{solution}
 要使一元二次方程有两个相等的实数根，必须 \( b^2-4ac=0 \).
 
-这里，\( a=2 \)，\( b=2\sqrt{2} \)，\( c=\operatorname{tg}\alpha \).
+这里，\( a=2 \)，\( b=2\sqrt{2} \)，\( c=\tan \alpha \).
 
 \[
-\left( 2\sqrt{2} \right)^2-4\times 2\times \operatorname{tg}\alpha=0.
+\left( 2\sqrt{2} \right)^2-4\times 2\times \tan \alpha=0.
 \]
 
 \[
-\operatorname{tg}\alpha=1.
+\tan \alpha=1.
 \]
 
 因为 \( 0^\circ\leqslant \alpha<360^\circ \)，所以 \( \alpha=45^\circ \) 或 \( \alpha=225^\circ \).
 
-即 \( \alpha=45^\circ \) 或 \( \alpha=225^\circ \) 时，方程 \( 2x^2+2\sqrt{2}\,x+\operatorname{tg}\alpha=0 \) 有两个相等的实数根.
+即 \( \alpha=45^\circ \) 或 \( \alpha=225^\circ \) 时，方程 \( 2x^2+2\sqrt{2}\,x+\tan \alpha=0 \) 有两个相等的实数根.
 \end{solution}
 
 \begin{problem}
@@ -418,7 +418,7 @@ BC=9\times \frac{2}{3}=6\text{（海里）}.
 答：（同解法一）
 \end{solution}
 
-\section{参考题}
+\referenceproblemsection
 
 \begin{problem}
 某生产队要建造一个已知体积为 \( V \) 的有盖圆柱形氨水池，问这个氨水池的高 \( h \) 和底面半径 \( r \) 取多大时，用料最省？
@@ -486,8 +486,20 @@ r=\frac{\sqrt[3]{4\pi^2V}}{2\pi},
 即高和底面直径相等时，用料最省.
 \end{solution}
 
-\IfFileExists{content/1977/liaoning_q13.tex}{%
-  \input{content/1977/liaoning_q13.tex}%
-}{%
-  \input{../content/1977/liaoning_q13.tex}%
-}
+\begin{problem}
+求 \( y=\sin x \)（\( x \) 在 \( [0,\pi] \) 上）与 \( x \) 轴所围成的图形的面积.
+
+\end{problem}
+
+\begin{solution}
+因为 \( x \) 在 \( [0,\pi] \) 上，\( \sin x\geqslant 0 \)，所以所求图形的面积是：
+
+\[
+\begin{aligned}
+S&=\int_{0}^{\pi} \sin x\mathrm{d}x,\\
+&=[-\cos x]_{0}^{\pi},\\
+&=-\cos \pi-(-\cos 0),\\
+&=1-(-1)=2.
+\end{aligned}
+\]
+\end{solution}
