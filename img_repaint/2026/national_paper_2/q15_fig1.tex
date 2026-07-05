@@ -1,0 +1,43 @@
+\begin{tikzpicture}[baseline=(current bounding box.center),line cap=round,line join=round]
+    % 题干：频率分布直方图。组距为 10 天。
+    % 各组频率依次为 0.005, 0.01, 0.02, 0.025, 0.015, 0.015, 0.005, 0.005，
+    % 对应区间 [345,355), [355,365), [365,375), [375,385), [385,395), [395,405), [405,415), [415,425).
+    \begin{axis}[
+        width=8.8cm,
+        height=4.75cm,
+        xmin=0,
+        xmax=9.45,
+        ymin=-0.0015,
+        ymax=0.0285,
+        axis lines=left,
+        axis line style={->,thick},
+        clip=false,
+        xtick={1,2,3,4,5,6,7,8,9},
+        xticklabels={345,355,365,375,385,395,405,415,425},
+        ytick={0,0.005,0.01,0.015,0.02,0.025},
+        yticklabels={0,0.005,0.01,0.015,0.02,0.025},
+        tick style={draw=none},
+        tick label style={font=\scriptsize},
+        scaled y ticks=false,
+        ymajorgrids=true,
+        grid style={densely dotted,gray!65},
+        xlabel={},
+        ylabel={},
+        enlargelimits=false,
+    ]
+        \path[draw=black,fill=white,line width=0.45pt] (axis cs:1,0) rectangle (axis cs:2,0.005);
+        \path[draw=black,fill=white,line width=0.45pt] (axis cs:2,0) rectangle (axis cs:3,0.01);
+        \path[draw=black,fill=white,line width=0.45pt] (axis cs:3,0) rectangle (axis cs:4,0.02);
+        \path[draw=black,fill=white,line width=0.45pt] (axis cs:4,0) rectangle (axis cs:5,0.025);
+        \path[draw=black,fill=white,line width=0.45pt] (axis cs:5,0) rectangle (axis cs:6,0.015);
+        \path[draw=black,fill=white,line width=0.45pt] (axis cs:6,0) rectangle (axis cs:7,0.015);
+        \path[draw=black,fill=white,line width=0.45pt] (axis cs:7,0) rectangle (axis cs:8,0.005);
+        \path[draw=black,fill=white,line width=0.45pt] (axis cs:8,0) rectangle (axis cs:9,0.005);
+
+        \node[anchor=south west,font=\scriptsize,align=left] at (axis description cs:0.015,0.81) {频率\\组距};
+        \node[anchor=west,font=\scriptsize] at (axis cs:9.18,-0.00025) {时间/天};
+
+        % 轴断裂记号：对应原图左侧的“波折”。
+        \draw[thick] (axis cs:0.18,0.00038) -- (axis cs:0.30,-0.00036) -- (axis cs:0.42,0.00038) -- (axis cs:0.54,-0.00036);
+    \end{axis}
+\end{tikzpicture}
