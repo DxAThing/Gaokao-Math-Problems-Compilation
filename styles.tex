@@ -715,6 +715,24 @@
     widest*=1
 }
 
+\newenvironment{optionlist}{%
+    \begin{list}{}{%
+        \setlength{\labelwidth}{1.5em}%
+        \setlength{\labelsep}{0.25em}%
+        \setlength{\leftmargin}{\dimexpr\problembodyindent+\labelwidth+\labelsep\relax}%
+        \setlength{\itemindent}{0pt}%
+        \setlength{\listparindent}{0pt}%
+        \setlength{\topsep}{0pt}%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\parsep}{0pt}%
+        \setlength{\itemsep}{0.2em}%
+        \renewcommand{\makelabel}[1]{\hss\llap{##1}}%
+    }%
+    \problemliststart
+}{%
+    \end{list}%
+}
+
 % 修改公式与前后文的紧凑度
 \makeatletter
 \g@addto@macro\normalsize{
