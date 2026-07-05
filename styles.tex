@@ -254,6 +254,12 @@
     \endgroup
 }
 
+\newcommand{\texinclude}[2][]{%
+    \begingroup
+    \adjustbox{max width=\linewidth,max totalheight=4.8cm,#1}{\input{#2}}%
+    \endgroup
+}
+
 \newcommand{\bitmapfigure}[2][]{%
     \begingroup
     \bitmappreparecaption{#2}%
@@ -262,6 +268,12 @@
     \bitmapinsertcaption
     \end{center}
     \endgroup
+}
+
+\newcommand{\texfigure}[2][]{%
+    \begin{center}
+    \texinclude[#1]{#2}
+    \end{center}
 }
 
 \NewDocumentCommand{\bitmapinlinefigure}{O{0.42\linewidth} O{} m}
@@ -671,7 +683,7 @@
 
 \SetEnumitemKey{examhang}{%
     nosep,
-    align=right,
+    align=left,
     before=\problemliststart,
     labelindent=\problembodyindent,
     leftmargin=\dimexpr\problembodyindent+\labelwidth+\labelsep\relax,
@@ -697,40 +709,15 @@
     widest*=1
 }
 
-\newlist{romanlist}{enumerate}{1}
-\setlist[romanlist,1]{
-    examhang,
-    label=（\roman*）,
-    labelsep=0em,
-    widest*=1
-}
-
 \newlist{circlelist}{enumerate}{1}
 \setlist[circlelist,1]{
     examhang,
     label=\circled{\arabic*},
     labelsep=0em,
+    labelindent=0pt,
     labelwidth=1em,
-    leftmargin=\dimexpr\problembodyindent+\labelwidth+\labelsep\relax,
+    leftmargin=\dimexpr\labelwidth+\labelsep\relax,
     widest*=1
-}
-
-\newenvironment{optionlist}{%
-    \begin{list}{}{%
-        \setlength{\labelwidth}{1.5em}%
-        \setlength{\labelsep}{0.25em}%
-        \setlength{\leftmargin}{\dimexpr\problembodyindent+\labelwidth+\labelsep\relax}%
-        \setlength{\itemindent}{0pt}%
-        \setlength{\listparindent}{0pt}%
-        \setlength{\topsep}{0pt}%
-        \setlength{\partopsep}{0pt}%
-        \setlength{\parsep}{0pt}%
-        \setlength{\itemsep}{0.2em}%
-        \renewcommand{\makelabel}[1]{\hss\llap{##1}}%
-    }%
-    \problemliststart
-}{%
-    \end{list}%
 }
 
 % 修改公式与前后文的紧凑度

@@ -114,27 +114,7 @@
 
 \begin{problem}
 如果执行如图所示的程序框图，输入 x = 4.5，则输出的数 i =\fillinblank{}.
-\begin{center}
-\begin{tikzpicture}[node distance=7mm and 18mm,>=Stealth]
-    \node[draw,rounded corners=3pt,inner sep=3pt] (start) {开始};
-    \node[draw,below=of start,inner sep=3pt] (input) {输入 \(x\)};
-    \node[draw,below=of input,inner sep=3pt] (init) {\(i = 1\)};
-    \node[draw,below=of init,inner sep=3pt] (sub) {\(x = x - 1\)};
-    \node[draw,diamond,aspect=2.2,below=of sub,inner sep=1pt] (cond) {\(x < 1?\)};
-    \node[draw,below=of cond,inner sep=3pt] (out) {输出 \(i\)};
-    \node[draw,rounded corners=3pt,below=of out,inner sep=3pt] (end) {结束};
-    \node[draw,right=18mm of sub,inner sep=3pt] (add) {\(i = i + 1\)};
-
-    \draw[->] (start) -- (input);
-    \draw[->] (input) -- (init);
-    \draw[->] (init) -- (sub);
-    \draw[->] (sub) -- (cond);
-    \draw[->] (cond) -- node[left] {是} (out);
-    \draw[->] (out) -- (end);
-    \draw[->] (cond.east) -- node[above] {否} (add.south);
-    \draw[->] (add.north) |- (sub.east);
-\end{tikzpicture}
-\end{center}
+\texfigure[max width=0.65\linewidth,max totalheight=8.0cm]{img_repaint/2012/hunan_liberal/q14_fig1.tex}
 \end{problem}
 
 \begin{problem}
@@ -175,19 +155,7 @@
 \begin{problem}
 已知函数 \( f(x) = A \sin (\omega x + \varphi) \left( x \in \R, \omega > 0, 0 < \varphi < \frac{\pi}{2} \right) \) 的部分图象如图所示.
 
-\begin{center}
-\begin{tikzpicture}[x=1.55cm,y=1.15cm,baseline=(current bounding box.north)]
-    \draw[->] (-0.15,0) -- (3.1,0) node[right] {\(x\)};
-    \draw[->] (0,-2.05) -- (0,2.05) node[above] {\(y\)};
-    \node[below left] at (0,0) {\(O\)};
-    \draw (-0.08,1) -- (0.08,1) node[left=4pt] {\(1\)};
-    \draw (1.08,0) -- (1.08,-0.08) node[below=2pt] {\(\frac{5\pi}{12}\)};
-    \draw (2.55,0) -- (2.55,-0.08) node[below=2pt] {\(\frac{11\pi}{12}\)};
-    \draw[smooth,thick] plot coordinates {
-        (0,1) (0.35,1.72) (0.95,0.1) (1.55,\(-1.8\)) (2.22,\(-0.05\)) (2.82,1.05)
-    };
-\end{tikzpicture}
-\end{center}
+\texfigure[max width=0.58\linewidth,max totalheight=4.8cm]{img_repaint/2012/hunan_liberal/q18_fig1.tex}
 
 \begin{enumerate}[label={（\arabic*）},itemsep=0.2em]
 \item 求函数 \( f(x) \) 的解析式；

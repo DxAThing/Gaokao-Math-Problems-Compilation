@@ -1,0 +1,12 @@
+\begin{tikzpicture}[x=0.42cm,y=0.18cm,baseline]
+    \draw[->] (0,0) -- (8.7,0) node[right] {得分};
+    \draw[->] (0,0) -- (0,11.2) node[above] {频数};
+    \foreach \y in {2,3,6,10} {
+        \draw[dashed,gray!70] (0,\y) -- (8.3,\y);
+        \draw (-0.12,\y) -- (0.12,\y) node[left=4pt] {\small \y};
+    }
+    \foreach \x/\lab/\h in {0.5/3/2,1.5/4/3,2.5/5/10,3.5/6/6,4.5/7/3,5.5/8/2,6.5/9/2,7.5/10/1} {
+        \draw (\x,0) rectangle ++(0.8,\h);
+        \node[below] at (\x+0.4,0) {\small \lab};
+    }
+\end{tikzpicture}

@@ -1,0 +1,19 @@
+\begin{tikzpicture}[node distance=7mm and 18mm,>=Stealth]
+    \node[draw,rounded corners=3pt,inner sep=3pt] (start) {开始};
+    \node[draw,below=of start,inner sep=3pt] (input) {输入 \(x\)};
+    \node[draw,below=of input,inner sep=3pt] (init) {\(i = 1\)};
+    \node[draw,below=of init,inner sep=3pt] (sub) {\(x = x - 1\)};
+    \node[draw,diamond,aspect=2.2,below=of sub,inner sep=1pt] (cond) {\(x < 1?\)};
+    \node[draw,below=of cond,inner sep=3pt] (out) {输出 \(i\)};
+    \node[draw,rounded corners=3pt,below=of out,inner sep=3pt] (end) {结束};
+    \node[draw,right=18mm of sub,inner sep=3pt] (add) {\(i = i + 1\)};
+
+    \draw[->] (start) -- (input);
+    \draw[->] (input) -- (init);
+    \draw[->] (init) -- (sub);
+    \draw[->] (sub) -- (cond);
+    \draw[->] (cond) -- node[left] {是} (out);
+    \draw[->] (out) -- (end);
+    \draw[->] (cond.east) -- node[above] {否} (add.south);
+    \draw[->] (add.north) |- (sub.east);
+\end{tikzpicture}
