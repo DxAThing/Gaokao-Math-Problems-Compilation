@@ -1,43 +1,84 @@
-\begin{tikzpicture}[baseline=(current bounding box.center),line cap=round,line join=round]
-    % 题干：频率分布直方图。组距为 10 天。
-    % 各组频率依次为 0.005, 0.01, 0.02, 0.025, 0.015, 0.015, 0.005, 0.005，
-    % 对应区间 [345,355), [355,365), [365,375), [375,385), [385,395), [395,405), [405,415), [415,425).
-    \begin{axis}[
-        width=8.8cm,
-        height=4.75cm,
-        xmin=0,
-        xmax=9.45,
-        ymin=-0.0015,
-        ymax=0.0285,
-        axis lines=left,
-        axis line style={->,thick},
-        clip=false,
-        xtick={1,2,3,4,5,6,7,8,9},
-        xticklabels={345,355,365,375,385,395,405,415,425},
-        ytick={0,0.005,0.01,0.015,0.02,0.025},
-        yticklabels={0,0.005,0.01,0.015,0.02,0.025},
-        tick style={draw=none},
-        tick label style={font=\scriptsize},
-        scaled y ticks=false,
-        ymajorgrids=true,
-        grid style={densely dotted,gray!65},
-        xlabel={},
-        ylabel={},
-        enlargelimits=false,
-    ]
-        \path[draw=black,fill=white,line width=0.45pt] (axis cs:1,0) rectangle (axis cs:2,0.005);
-        \path[draw=black,fill=white,line width=0.45pt] (axis cs:2,0) rectangle (axis cs:3,0.01);
-        \path[draw=black,fill=white,line width=0.45pt] (axis cs:3,0) rectangle (axis cs:4,0.02);
-        \path[draw=black,fill=white,line width=0.45pt] (axis cs:4,0) rectangle (axis cs:5,0.025);
-        \path[draw=black,fill=white,line width=0.45pt] (axis cs:5,0) rectangle (axis cs:6,0.015);
-        \path[draw=black,fill=white,line width=0.45pt] (axis cs:6,0) rectangle (axis cs:7,0.015);
-        \path[draw=black,fill=white,line width=0.45pt] (axis cs:7,0) rectangle (axis cs:8,0.005);
-        \path[draw=black,fill=white,line width=0.45pt] (axis cs:8,0) rectangle (axis cs:9,0.005);
+% original_pdf: source/普通高考/2026/2026全国2(辽宁,重庆,海南,吉林,黑龙江,山西,云南,广西,甘肃,贵州,新疆,四川,内蒙古,陕西,青海,宁夏,西藏).pdf
+% page: 2
+% evidence: tmp/national2_pages/page-2.png rendered from the original PDF at 180dpi; q15 crop box x1=115,y1=1140,x2=634,y2=1388 on the no-grid page image; grid check via tmp/crop_grid/national2_page2_grid100.png with 100px major grid and 50px fine grid; final original-side comparison crop: tmp/redraw_2026_full_rework/national_paper_2/q15_orig_crop3.png
+% elements: x-axis break, y-axis, 8 histogram bars, y reference lines at 0.005 steps, x ticks 345..425, y ticks 0.005..0.025, origin O, labels 频率/组距 and 时间/天
+% relations: bin widths all 10天; bar heights from original histogram and solution are 0.005, 0.010, 0.020, 0.025, 0.015, 0.015, 0.005, 0.005 for [345,355), [355,365), [365,375), [375,385), [385,395), [395,405), [405,415), [415,425)
+% solid segments: bar outlines, axis arrows, x-axis break stroke
+% dashed segments: horizontal guides at y=0.005,0.010,0.015,0.020,0.025
+% labels: y-label sits above-left of the axis as two lines, x-label sits right of the last tick, tick labels stay below/left of axes and do not touch bars
+\begin{tikzpicture}[baseline]
+\begin{axis}[
+    width=12.2cm,
+    height=6.3cm,
+    axis lines=none,
+    clip=false,
+    xmin=340,
+    xmax=431.5,
+    ymin=-0.003,
+    ymax=0.028,
+    ticks=none,
+]
+    \draw[dashed,line width=0.6pt] (axis cs:340,0.005) -- (axis cs:425,0.005);
+    \draw[dashed,line width=0.6pt] (axis cs:340,0.010) -- (axis cs:425,0.010);
+    \draw[dashed,line width=0.6pt] (axis cs:340,0.015) -- (axis cs:425,0.015);
+    \draw[dashed,line width=0.6pt] (axis cs:340,0.020) -- (axis cs:425,0.020);
+    \draw[dashed,line width=0.6pt] (axis cs:340,0.025) -- (axis cs:425,0.025);
 
-        \node[anchor=south west,font=\scriptsize,align=left] at (axis description cs:0.015,0.81) {频率\\组距};
-        \node[anchor=west,font=\scriptsize] at (axis cs:9.18,-0.00025) {时间/天};
+    \addplot[
+        ybar interval,
+        draw=black,
+        fill=white,
+        line width=0.75pt,
+    ] coordinates {
+        (345,0.005)
+        (355,0.010)
+        (365,0.020)
+        (375,0.025)
+        (385,0.015)
+        (395,0.015)
+        (405,0.005)
+        (415,0.005)
+        (425,0.000)
+    };
 
-        % 轴断裂记号：对应原图左侧的“波折”。
-        \draw[thick] (axis cs:0.18,0.00038) -- (axis cs:0.30,-0.00036) -- (axis cs:0.42,0.00038) -- (axis cs:0.54,-0.00036);
-    \end{axis}
+    \draw[->,line width=0.8pt] (axis cs:340,0) -- (axis cs:430.5,0);
+    \draw[->,line width=0.8pt] (axis cs:340,0) -- (axis cs:340,0.0275);
+
+    \fill[white] (axis cs:341.0,-0.0017) -- (axis cs:342.4,0.0010) -- (axis cs:343.8,-0.0017) -- (axis cs:345.2,0.0010) -- (axis cs:346.6,-0.0017) -- cycle;
+    \draw[line width=0.8pt] (axis cs:341.0,-0.0017) -- (axis cs:342.4,0.0010) -- (axis cs:343.8,-0.0017) -- (axis cs:345.2,0.0010) -- (axis cs:346.6,-0.0017);
+
+    \node[anchor=south west,inner sep=0pt,font=\small] at (axis cs:341.2,0.0258) {\shortstack{频率\\组距}};
+    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:427.0,-0.0011) {时间/天};
+    \node[anchor=north east,inner sep=0pt,font=\small] at (axis cs:340,0) {$O$};
+
+    \draw[line width=0.5pt] (axis cs:345,0) -- (axis cs:345,-0.0008);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:345,-0.0010) {345};
+    \draw[line width=0.5pt] (axis cs:355,0) -- (axis cs:355,-0.0008);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:355,-0.0010) {355};
+    \draw[line width=0.5pt] (axis cs:365,0) -- (axis cs:365,-0.0008);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:365,-0.0010) {365};
+    \draw[line width=0.5pt] (axis cs:375,0) -- (axis cs:375,-0.0008);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:375,-0.0010) {375};
+    \draw[line width=0.5pt] (axis cs:385,0) -- (axis cs:385,-0.0008);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:385,-0.0010) {385};
+    \draw[line width=0.5pt] (axis cs:395,0) -- (axis cs:395,-0.0008);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:395,-0.0010) {395};
+    \draw[line width=0.5pt] (axis cs:405,0) -- (axis cs:405,-0.0008);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:405,-0.0010) {405};
+    \draw[line width=0.5pt] (axis cs:415,0) -- (axis cs:415,-0.0008);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:415,-0.0010) {415};
+    \draw[line width=0.5pt] (axis cs:425,0) -- (axis cs:425,-0.0008);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:425,-0.0010) {425};
+
+    \draw[line width=0.5pt] (axis cs:340,0.005) -- (axis cs:339.2,0.005);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:339.0,0.005) {0.005};
+    \draw[line width=0.5pt] (axis cs:340,0.010) -- (axis cs:339.2,0.010);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:339.0,0.010) {0.010};
+    \draw[line width=0.5pt] (axis cs:340,0.015) -- (axis cs:339.2,0.015);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:339.0,0.015) {0.015};
+    \draw[line width=0.5pt] (axis cs:340,0.020) -- (axis cs:339.2,0.020);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:339.0,0.020) {0.020};
+    \draw[line width=0.5pt] (axis cs:340,0.025) -- (axis cs:339.2,0.025);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:339.0,0.025) {0.025};
+\end{axis}
 \end{tikzpicture}
