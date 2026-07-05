@@ -671,7 +671,7 @@
 
 \SetEnumitemKey{examhang}{%
     nosep,
-    align=left,
+    align=right,
     before=\problemliststart,
     labelindent=\problembodyindent,
     leftmargin=\dimexpr\problembodyindent+\labelwidth+\labelsep\relax,
@@ -686,7 +686,7 @@
     examhang,
     label=（\arabic*）,
     labelsep=0em,
-    widest*=9
+    widest*=1
 }
 \setlist[enumerate,2]{
     examhang,
@@ -694,7 +694,15 @@
     labelsep=0em,
     labelindent=0pt,
     leftmargin=\dimexpr\labelwidth+\labelsep\relax,
-    widest*=2
+    widest*=1
+}
+
+\newlist{romanlist}{enumerate}{1}
+\setlist[romanlist,1]{
+    examhang,
+    label=（\roman*）,
+    labelsep=0em,
+    widest*=1
 }
 
 \newlist{circlelist}{enumerate}{1}
@@ -702,7 +710,9 @@
     examhang,
     label=\circled{\arabic*},
     labelsep=0em,
-    widest*=9
+    labelwidth=1em,
+    leftmargin=\dimexpr\problembodyindent+\labelwidth+\labelsep\relax,
+    widest*=1
 }
 
 % 修改公式与前后文的紧凑度
