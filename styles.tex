@@ -134,8 +134,8 @@
 \usepackage{multicol}
 
 % 数学相关
-\usepackage{amsmath, amssymb, amsthm, bm} 
-\usepackage{unicode-math}                 
+\usepackage{amsmath, amssymb, amsthm, bm}
+\usepackage{unicode-math}
 \setmathfont{TeX Gyre Termes Math}
 % 希腊字母使用 STIX 字体 (MathType 风格，正体)
 \setmathfont{STIX}[
@@ -152,7 +152,7 @@
     range = {\varnothing}
 ]
 
-\allowdisplaybreaks                       
+\allowdisplaybreaks
 
 % cases 行距与正文节奏保持一致；amsmath 的 cases 内部会重设 \arraystretch，
 % 所以直接重定义内部入口，避免外层 hook 被覆盖。
@@ -189,13 +189,13 @@
         }%
     }%
 }
-\usepackage{tikz}                         
+\usepackage{tikz}
 \usetikzlibrary{arrows.meta, calc, intersections, positioning, shapes.geometric}
 \usepackage{wrapfig}
 % 调整 wrapfigure 与正文的间距
 \setlength{\intextsep}{0pt}  % 纵向：图片上下的间距
 % \columnsep（横向：图片与侧边文字的间距）已在上方 multicol 区域统一设为 1.5em
-\usepackage{array, tabularray, multirow}  
+\usepackage{array, tabularray, multirow}
 \usepackage{caption}
 
 % --- 接管 \includegraphics：找不到文件时显示占位框而非报错 ---
@@ -289,7 +289,14 @@
 \usepackage[most]{tcolorbox}
 
 \usepackage{ulem}
-\newcommand{\fillinblank}{\mbox{\ttfamily\_\_\_\_\_\_\_\_}}
+\newcommand{\examblankrule}{\rule[-0.2ex]{5em}{0.4pt}}
+\newcommand{\fillinblank}{%
+    \ifmmode
+        \mathord{\text{\examblankrule}}%
+    \else
+        \unskip\nobreak\examblankrule%
+    \fi
+}
 
 % ==============================================================================
 % 4. 核心命令：题目、选项
@@ -492,7 +499,7 @@
 % ==============================================================================
 % 5. 答案控制系统 (框式设计)
 % ==============================================================================
-\newif\ifshowanswer 
+\newif\ifshowanswer
 \showanswertrue     % 【默认开启】
 
 % 定义答案盒子的样式
@@ -600,12 +607,12 @@
 \DeclareCaptionLabelFormat{examtab}{第\theprobnum 题表}
 
 \captionsetup[figure]{
-    labelformat=examfig, 
-    labelsep=none,       
+    labelformat=examfig,
+    labelsep=none,
     font=small
 }
 \captionsetup[table]{
-    labelformat=examtab, 
+    labelformat=examtab,
     labelsep=none,
     font=small
 }
@@ -625,7 +632,7 @@
 \renewcommand{\i}{\text{i}}
 \newcommand{\e}{\text{e}}
 \newcommand{\degree}{^\circ}
-\newcommand{\bs}[1]{\symbfit{#1}} 
+\newcommand{\bs}[1]{\symbfit{#1}}
 \let\oldfrac\frac
 \renewcommand{\frac}[2]{%
     \mathchoice
@@ -666,7 +673,8 @@
     nosep,
     align=left,
     before=\problemliststart,
-    leftmargin=\dimexpr\labelwidth+\labelsep\relax,
+    labelindent=\problembodyindent,
+    leftmargin=\dimexpr\problembodyindent+\labelwidth+\labelsep\relax,
     itemindent=0pt,
     listparindent=0pt,
     parsep=0pt,
@@ -677,21 +685,23 @@
 \setlist[enumerate,1]{ % 仅针对第一层级
     examhang,
     label=（\arabic*）,
-    labelsep=0.2em,
+    labelsep=0em,
     widest*=9
 }
 \setlist[enumerate,2]{
     examhang,
     label=（\roman*）,
-    labelsep=0.2em,
-    widest*=8
+    labelsep=0em,
+    labelindent=0pt,
+    leftmargin=\dimexpr\labelwidth+\labelsep\relax,
+    widest*=2
 }
 
 \newlist{circlelist}{enumerate}{1}
 \setlist[circlelist,1]{
     examhang,
     label=\circled{\arabic*},
-    labelsep=0.2em,
+    labelsep=0em,
     widest*=9
 }
 
@@ -706,7 +716,7 @@
 
     % --- 控制行内公式 (Inline Math) 的避让机制 ---
     % 设置阈值：当两行间距小于 1pt 时触发避让
-    \setlength\lineskiplimit{3pt} 
+    \setlength\lineskiplimit{3pt}
     % 设置避让间距：触发后强制留出 3pt 的缝隙，防止重叠
     \setlength\lineskip{3pt}
 }
@@ -723,7 +733,7 @@
     \RenewDocumentCommand{\binom}{m m}{\mathrm C_{#1}^{#2}}
     \RenewDocumentCommand{\dbinom}{m m}{\mathrm C_{#1}^{#2}}
     \RenewDocumentCommand{\tbinom}{m m}{\mathrm C_{#1}^{#2}}
-    
+
     % 处理 nabla：不带 ^2 时加粗，带 ^2 时（Laplacian）保持原样
     \let\oldnabla\nabla
     \RenewDocumentCommand{\nabla}{e{^}}{%
