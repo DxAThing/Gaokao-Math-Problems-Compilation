@@ -709,16 +709,94 @@
     widest*=1
 }
 
-\newlist{circlelist}{enumerate}{1}
-\setlist[circlelist,1]{
-    examhang,
-    label=\circled{\arabic*},
-    labelsep=0em,
-    labelindent=0pt,
-    labelwidth=1em,
-    leftmargin=\dimexpr\labelwidth+\labelsep\relax,
-    widest*=1
-}
+% ==============================================================================
+% circlelist：智能多选题选项环境
+%   对齐：标签（圈号）在左边距，正文缩进 \problembodyindent
+%   布局：自动测量每条宽度，决定水平排列 / 双列 / 竖排
+% ==============================================================================
+\ExplSyntaxOn
+\seq_new:N \g__circle_items_seq
+\int_new:N \g__circle_count_int
+\dim_new:N \g__circle_maxwidth_dim
+\dim_new:N \g__circle_availwidth_dim
+\box_new:N \g__circle_measure_box
+
+\NewDocumentEnvironment{circlelist}{O{} +b}{
+  \par\nopagebreak
+  \examneedlines[2]
+  \vspace{4pt}
+  % 按 \item 拆分 body
+  \regex_split:nnN { \c{item}\s* } { #2 } \l_tmpa_seq
+  \seq_pop_left:NN \l_tmpa_seq \l_tmpa_tl
+  \seq_gclear:N \g__circle_items_seq
+  \seq_map_inline:Nn \l_tmpa_seq {
+    \tl_set:Nn \l_tmpa_tl { ##1 }
+    \tl_trim_spaces:N \l_tmpa_tl
+    \seq_gput_right:NV \g__circle_items_seq \l_tmpa_tl
+  }
+  \int_gset:Nn \g__circle_count_int { \seq_count:N \g__circle_items_seq }
+  \int_compare:nNnF { \g__circle_count_int } = { 0 } {
+    % 测量每条宽度
+    \dim_gzero:N \g__circle_maxwidth_dim
+    \int_step_inline:nn { \g__circle_count_int } {
+      \hbox_set:Nn \g__circle_measure_box {
+        \circled{##1}~\seq_item:Nn \g__circle_items_seq { ##1 }
+      }
+      \dim_gset:Nn \g__circle_maxwidth_dim {
+        \dim_max:nn { \g__circle_maxwidth_dim } { \box_wd:N \g__circle_measure_box }
+      }
+    }
+    \dim_gadd:Nn \g__circle_maxwidth_dim { 1em }
+    \dim_set:Nn \g__circle_availwidth_dim { \linewidth - \problembodyindent }
+    \group_begin:
+    \setlength{\leftskip}{\problembodyindent}
+    \setlength{\parindent}{0pt}
+    \dim_compare:nNnTF
+      { \g__circle_maxwidth_dim * \g__circle_count_int }
+      < { \g__circle_availwidth_dim }
+    {
+      % 全部在一行
+      \dim_set:Nn \l_tmpa_dim { \g__circle_availwidth_dim / \g__circle_count_int }
+      \int_step_inline:nn { \g__circle_count_int } {
+        \makebox[\l_tmpa_dim][l]{
+          \circled{##1}~\seq_item:Nn \g__circle_items_seq { ##1 }
+        }
+      }
+    }{
+      \dim_compare:nNnTF
+        { \g__circle_maxwidth_dim * 2 }
+        < { \g__circle_availwidth_dim }
+      {
+        % 每行两个
+        \dim_set:Nn \l_tmpa_dim { ( \g__circle_availwidth_dim - 1em ) / 2 }
+        \int_zero:N \l_tmpa_int
+        \int_step_inline:nn { \g__circle_count_int } {
+          \int_incr:N \l_tmpa_int
+          \makebox[\l_tmpa_dim][l]{
+            \circled{##1}~\seq_item:Nn \g__circle_items_seq { ##1 }
+          }
+          \int_compare:nNnTF { \l_tmpa_int } = { 2 } {
+            \par\vspace{0.2em}
+            \int_zero:N \l_tmpa_int
+          }{
+            \hfill
+          }
+        }
+        \int_compare:nNnF { \l_tmpa_int } = { 0 } { \par }
+      }{
+        % 竖排
+        \int_step_inline:nn { \g__circle_count_int } {
+          \hangindent=1.8em\hangafter=1\noindent
+          \circled{##1}~\seq_item:Nn \g__circle_items_seq { ##1 }
+          \par
+        }
+      }
+    }
+    \group_end:
+  }
+  \par
+}{}
+\ExplSyntaxOff
 
 % 修改公式与前后文的紧凑度
 \makeatletter
