@@ -56,19 +56,25 @@
 }
 
 \usepackage{etoolbox}
-\pretocmd{\chapter}{\problembodyend\setcounter{probnum}{0}\setcounter{section}{0}}{}{}
+% tall-page 布尔开关：\tallpagetrue（默认）/ \tallpagefalse
+\newif\iftallpage
+\tallpagetrue
+\pretocmd{\chapter}{%
+    \problembodyend
+    \setcounter{probnum}{0}%
+    \setcounter{section}{0}%
+    \iftallpage
+        \pdfpageheight=550cm\relax
+        \setlength{\textheight}{546cm}%
+        \vsize=\textheight\relax
+    \fi
+}{}{}
 \pretocmd{\section}{\problembodyend}{}{}
 \makeatletter
 \patchcmd{\tableofcontents}
   {\@starttoc{toc}}
   {%
-    \begingroup
-      \normalfont
-      \zihao{-4}\selectfont
-      \setlength{\columnsep}{1.8em}%
-      \setlength{\columnseprule}{0.8pt}%
-      \begin{multicols*}{2}\@starttoc{toc}\end{multicols*}%
-    \endgroup
+\@starttoc{toc}
   }
   {}{}
 \renewcommand*\l@part[2]{%
@@ -464,6 +470,7 @@
 \newdimen\examchoicewidthB
 \newdimen\examchoicewidthC
 \newdimen\examchoicewidthD
+\newdimen\examchoicewidthE
 \newdimen\examchoicemaxwidth
 
 \newcommand{\choices}[4]{%
@@ -504,6 +511,67 @@
             \choiceentry{D}{#4}%
         \fi
     \fi
+    \par
+    \endgroup
+}
+
+% --- D. 五选项 choicesfive ---
+% 排布：5*1行 > 3+2 > 2+2+1 > 竖排
+% 对齐规则：D/E 对齐第一行的 A/B（3+2 时），E 对齐 A（2+2+1 时）
+\newcommand{\choicesfive}[5]{%
+    \problembodyend
+    \par\nopagebreak
+    \examneedlines[2]%
+    \vspace{4pt}
+    \begingroup
+    \setlength{\leftskip}{\problembodyindent}
+    \examchoicewidth=\dimexpr\linewidth-\problembodyindent\relax
+    \settowidth{\examchoicewidthA}{\textbf{A.}~#1}
+    \settowidth{\examchoicewidthB}{\textbf{B.}~#2}
+    \settowidth{\examchoicewidthC}{\textbf{C.}~#3}
+    \settowidth{\examchoicewidthD}{\textbf{D.}~#4}
+    \settowidth{\examchoicewidthE}{\textbf{E.}~#5}
+    \examchoicemaxwidth=\examchoicewidthA
+    \ifdim\examchoicewidthB>\examchoicemaxwidth \examchoicemaxwidth=\examchoicewidthB \fi
+    \ifdim\examchoicewidthC>\examchoicemaxwidth \examchoicemaxwidth=\examchoicewidthC \fi
+    \ifdim\examchoicewidthD>\examchoicemaxwidth \examchoicemaxwidth=\examchoicewidthD \fi
+    \ifdim\examchoicewidthE>\examchoicemaxwidth \examchoicemaxwidth=\examchoicewidthE \fi
+    \addtolength{\examchoicemaxwidth}{2em}
+    \vspace{-0.2em}\noindent
+    % 5 per row
+    \ifdim\examchoicemaxwidth<0.18\examchoicewidth
+        \choicecell{\dimexpr0.18\examchoicewidth\relax}{A}{#1}\hfill
+        \choicecell{\dimexpr0.18\examchoicewidth\relax}{B}{#2}\hfill
+        \choicecell{\dimexpr0.18\examchoicewidth\relax}{C}{#3}\hfill
+        \choicecell{\dimexpr0.18\examchoicewidth\relax}{D}{#4}\hfill
+        \choicecell{\dimexpr0.18\examchoicewidth\relax}{E}{#5}%
+    \else
+    % 3+2: row1=A/B/C, row2=D/E (D对齐A, E对齐B)
+    \ifdim\examchoicemaxwidth<0.30\examchoicewidth
+        \choicecell{\dimexpr0.30\examchoicewidth\relax}{A}{#1}\hfill
+        \choicecell{\dimexpr0.30\examchoicewidth\relax}{B}{#2}\hfill
+        \choicecell{\dimexpr0.30\examchoicewidth\relax}{C}{#3}\par
+        \vspace{0.2em}
+        \choicecell{\dimexpr0.30\examchoicewidth\relax}{D}{#4}\hfill
+        \choicecell{\dimexpr0.30\examchoicewidth\relax}{E}{#5}%
+    \else
+    % 2+2+1: row1=A/B, row2=C/D, row3=E (E对齐A)
+    \ifdim\examchoicemaxwidth<0.47\examchoicewidth
+        \choicecell{\dimexpr0.47\examchoicewidth\relax}{A}{#1}\hfill
+        \choicecell{\dimexpr0.47\examchoicewidth\relax}{B}{#2}\par
+        \vspace{0.2em}
+        \choicecell{\dimexpr0.47\examchoicewidth\relax}{C}{#3}\hfill
+        \choicecell{\dimexpr0.47\examchoicewidth\relax}{D}{#4}\par
+        \vspace{0.2em}
+        \choiceentry{E}{#5}%
+    \else
+    % vertical
+        \choiceentry{A}{#1}\par
+        \choiceentry{B}{#2}\par
+        \choiceentry{C}{#3}\par
+        \choiceentry{D}{#4}\par
+        \choiceentry{E}{#5}%
+    \fi\fi\fi
     \par
     \endgroup
 }
