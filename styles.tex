@@ -74,7 +74,17 @@
 \patchcmd{\tableofcontents}
   {\@starttoc{toc}}
   {%
-\@starttoc{toc}
+    \iftallpage
+      \@starttoc{toc}%
+    \else
+      \begingroup
+        \normalfont
+        \zihao{-4}\selectfont
+        \setlength{\columnsep}{1.8em}%
+        \setlength{\columnseprule}{0.8pt}%
+        \begin{multicols}{2}\@starttoc{toc}\end{multicols}%
+      \endgroup
+    \fi
   }
   {}{}
 \renewcommand*\l@part[2]{%
