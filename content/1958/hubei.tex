@@ -22,19 +22,9 @@ s_n=1+2x+3x^{2}+4x^{3}+\cdots+(n-1)x^{n-2}+nx^{n-1} \tag{1}
 \[
 xs_n=x+2x^{2}+3x^{3}+4x^{4}+\cdots+(n-2)x^{n-2}+(n-1)x^{n-1}+nx^{n} \tag{2}
 \]
-由式 \((1)\) 减式 \((2)\) 得
-\[
-s_n-xs_n=\left( 1+x+x^{2}+x^{3}+\cdots+x^{n-2}+x^{n-1} \right)-nx^{n}
-\]
-上式右边括号中是一个等比数列，首项为 \(1\)，公比为 \(x\)，末项为 \(x^{n-1}\)，由等比数列求和公式得
-\[
-(1-x)s_n=\frac{1-x\left( x^{n-1} \right)}{1-x}-nx^{n}
-\]
-\[
-s_n=\frac{1-x^{n}}{(1-x)^{2}}-\frac{nx^{n}}{1-x}
-\]
+由式 \circled{1} 减式 \circled{2} 得 \(s_n-xs_n=\left( 1+x+x^{2}+x^{3}+\cdots+x^{n-2}+x^{n-1} \right)-nx^{n}\). 上式右边括号中是一个等比数列，首项为 \(1\)，公比为 \(x\)，末项为 \(x^{n-1}\)，由等比数列求和公式得 \((1-x)s_n=\frac{1-x\left( x^{n-1} \right)}{1-x}-nx^{n}\)，所以 \(s_n=\frac{1-x^{n}}{(1-x)^{2}}-\frac{nx^{n}}{1-x}\).
 
-（3）当 \(x=1\) 时，以上求和公式中分母为 \(0\)，公式无意义，由式 \((2)\) 得
+（3）当 \(x=1\) 时，以上求和公式中分母为 \(0\)，公式无意义，由式 \circled{2} 得
 \[
 S_n=1+2+3+4+\cdots+(n-2)+(n-1)+n
 \]
@@ -62,7 +52,6 @@ S_n=1+2+3+4+\cdots+(n-2)+(n-1)+n
 令 \(\log_x\sqrt{5}=y\)，则 \(\log_x 5\sqrt{5}=\log_x(\sqrt{5})^{3}=3y\).
 于是原方程变为 \(y^{2}+3y+\frac{5}{4}=0\)，即 \(4y^{2}+12y+5=0\)，因式分解得 \((2y+1)(2y+5)=0\).
 故 \(y=-\frac{1}{2}\) 或 \(y=-\frac{5}{2}\).
-
 于是所求的解是 \(x=\frac{1}{5}\) 和 \(x=\frac{1}{\sqrt[5]{5}}\).
 \end{solution}
 
@@ -85,7 +74,6 @@ S_n=1+2+3+4+\cdots+(n-2)+(n-1)+n
 若圆心和中点 \(D\) 不重合，则 \(AD\perp BC\)，故 \(AD\) 为 \(BC\) 的中垂线，因此 \(AB=AC\)，这时 \(\triangle ABC\) 是等腰三角形.
 
 （2）三角解法：
-
 设 \(D\) 为 \(BC\) 边的中点，则 \(BD=DC\).
 
 \bitmapfigure[max width=0.34\linewidth,max totalheight=4.8cm]{img/1958/hubei/q4_fig2.png}
@@ -132,42 +120,27 @@ S_n=1+2+3+4+\cdots+(n-2)+(n-1)+n
 \end{solution}
 
 \begin{problem}
-如 \(\alpha^{2}+b^{2}=7\alpha b\)，求证 \(\lg\left( \frac{\alpha+b}{3} \right)=\frac{1}{2}\left( \lg\alpha+\lg b \right)\).
+如 \(a^{2}+b^{2}=7a b\)，求证 \(\lg\left( \frac{a+b}{3} \right)=\frac{1}{2}\left( \lg a+\lg b \right)\).
 
 \end{problem}
 
 \begin{solution}
-因为 \(\alpha^{2}+2\alpha b+b^{2}=9\alpha b\)，即 \(\left( \alpha+b \right)^{2}=9\alpha b\)，
-所以 \(\alpha+b=3\sqrt{\alpha b}\). 因为 \(\alpha>0\)，\(b>0\)，所以取正号. 即 \(\frac{\alpha+b}{3}=\sqrt{\alpha b}\). 取对数得 \(\lg\frac{\alpha+b}{3}=\frac{1}{2}\lg(\alpha b)\)，即 \(\lg\bigl(\frac{\alpha+b}{3}\bigr)=\frac{1}{2}(\lg\alpha+\lg b)\).
+因为 \(a^{2}+2a b+b^{2}=9a b\)，即 \(\left( a+b \right)^{2}=9a b\)，
+所以 \(a+b=3\sqrt{a b}\). 因为 \(a>0\)，\(b>0\)，所以取正号. 即 \(\frac{a+b}{3}=\sqrt{a b}\). 取对数得 \(\lg\frac{a+b}{3}=\frac{1}{2}\lg(a b)\)，即 \(\lg\bigl(\frac{a+b}{3}\bigr)=\frac{1}{2}(\lg a+\lg b)\).
 \end{solution}
 
 \begin{problem}
-已知方程式 \(x^{3}+Px^{2}+qx+\gamma=0\) 的三根 \(\alpha\)，\(b\)，\(c\) 成调合级数，求 \(\alpha\)，\(b\)，\(c\).
+已知方程式 \(x^{3}+Px^{2}+qx+\gamma=0\) 的三根 \(a\)，\(b\)，\(c\) 成调合级数（即 \(\frac{1}{a}-\frac{1}{b}=\frac{1}{b}-\frac{1}{c}\) ），求 \(a\)，\(b\)，\(c\).
 
 \end{problem}
 
 \begin{solution}
-已知
-\[
-\alpha+b+c=-p \tag{1}
-\]
-\[
-\alpha b+bc+c\alpha=q \tag{2}
-\]
-\[
-\alpha bc=-\gamma \tag{3}
-\]
-又
-\[
-\frac{1}{\alpha}-\frac{1}{b}=\frac{1}{b}-\frac{1}{c} \tag{4}
-\]
-从 \((4)\)，\((3)\) 知
-\[
-b=\frac{2c\alpha}{\alpha+c}=\frac{q-c\alpha}{\alpha+c}
-\]
-故 \(2c\alpha=q-c\alpha\).
-
-即 \(q=3c\alpha\). 代入 \((3)\) 得 \(\frac{bq}{3}=-\gamma\)，即 \(b=-\frac{3\gamma}{q}\). 于是 \(\alpha+c=-p-b=\frac{3\gamma-qp}{q}\).
-但由 \((4)\)，\(c=\frac{q}{3\alpha}\). 代入得 \(3q\alpha^{2}-3(pq-3\gamma)+q^{2}=0\).
-解得 \(\alpha\). 代入 \(c=\frac{q}{3\alpha}\) 即得 \(c\).
+已知 \(a+b+c=-p\)，\(a b+bc+ca=q\)，\(a bc=-\gamma\)，又
+\(\frac{1}{a}-\frac{1}{b}=\frac{1}{b}-\frac{1}{c}\). 从 \(a bc=-\gamma\) 和
+\(\frac{1}{a}-\frac{1}{b}=\frac{1}{b}-\frac{1}{c}\) 知
+\(b=\frac{2ca}{a+c}=\frac{q-ca}{a+c}\).
+故 \(2ca=q-ca\).
+即 \(q=3ca\). 代入 \(a bc=-\gamma\) 得 \(\frac{bq}{3}=-\gamma\)，即 \(b=-\frac{3\gamma}{q}\). 于是 \(a+c=-p-b=\frac{3\gamma-qp}{q}\).
+但由 \(\frac{1}{a}-\frac{1}{b}=\frac{1}{b}-\frac{1}{c}\)，\(c=\frac{q}{3a}\). 代入得 \(3qa^{2}-3(pq-3\gamma)+q^{2}=0\).
+解得 \(a\). 代入 \(c=\frac{q}{3a}\) 即得 \(c\).
 \end{solution}

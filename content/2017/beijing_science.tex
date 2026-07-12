@@ -329,7 +329,6 @@ D
 （1）设 \(AC\) 与 \(BD\) 交于点 \(E\)，连接 \(ME\). 因为 \(PD//\) 平面 \(MAC\)，且平面 \(MAC\cap\) 平面 \(PBD=ME\)，所以 \(PD//ME\). 又因为 \(ABCD\) 是正方形，所以 \(E\) 为 \(BD\) 的中点. 因此 \(M\) 为 \(PB\) 的中点.
 
 （2）取 \(AD\) 的中点 \(O\)，连接 \(OP\)，\(OE\). 因为 \(PA=PD\)，所以 \(OP\perp AD\). 又因为平面 \(PAD\perp\) 平面 \(ABCD\)，且 \(OP\subset\) 平面 \(PAD\)，所以 \(OP\perp\) 平面 \(ABCD\). 因为 \(OE\subset\) 平面 \(ABCD\)，所以 \(OP\perp OE\). 又因为 \(ABCD\) 是正方形，所以 \(OE\perp AD\).
-
 建立空间直角坐标系 \(O-xyz\)，则 \(P(0,0,\sqrt2)\)，\(D(2,0,0)\)，\(B(-2,4,0)\).
 于是 \(\overrightarrow{BD}=(4,-4,0)\)，\(\overrightarrow{PD}=(2,0,-\sqrt2)\).
 设平面 \(BDP\) 的法向量为 \(\bs{n}=(x,y,z)\)，则
@@ -369,15 +368,12 @@ D
 （1）由图知，在服药的 \(50\) 名患者中，指标 \(y\) 的值小于 \(60\) 的有 \(15\) 人，所以所求概率为 \(\frac{15}{50}=0.3\).
 
 （2）由图知，\(A,B,C,D\) 四人中，指标 \(x\) 的值大于 \(1.7\) 的有 \(2\) 人：\(A\) 和 \(C\). 因此 \(\xi\) 的所有可能取值为 \(0,1,2\).
-
 \(P(\xi=0)=\frac{\mathrm C_2^2}{\mathrm C_4^2}=\frac16\)，\(P(\xi=1)=\frac{\mathrm C_2^1\mathrm C_2^1}{\mathrm C_4^2}=\frac23\)，\(P(\xi=2)=\frac{\mathrm C_2^2}{\mathrm C_4^2}=\frac16\)
-
 \examdisplayarray{}{c|ccc}{
 \xi & 0 & 1 & 2\\
 \hline
 P & \dfrac16 & \dfrac23 & \dfrac16
 }{}
-
 所以 \(E(\xi)=0\cdot \frac16+1\cdot \frac23+2\cdot \frac16=1\)
 
 （3）在这 \(100\) 名患者中，服药者指标 \(y\) 数据的方差大于未服药者指标 \(y\) 数据的方差.
@@ -405,9 +401,15 @@ y^2=x,
 得 \(4k^2x^2+(4k-4)x+1=0\)，所以 \(x_1+x_2=\frac{1-k}{k^2}\)，\(x_1x_2=\frac{1}{4k^2}\).
 因为点 \(P\) 的坐标为 \((1,1)\)，所以直线 \(OP\) 的方程为 \(y=x\)，点 \(A\) 的坐标为 \((x_1,x_1)\).
 又因为直线 \(ON\) 的方程为 \(y=\dfrac{y_2}{x_2}x\)，所以点 \(B\) 的坐标为 \(\left(x_1,\dfrac{y_2y_1}{x_2}\right)\).
-
 由 \(y_1=kx_1+\dfrac12\)，\(y_2=kx_2+\dfrac12\)，得
-\(y_1+\frac{y_2y_1}{x_2}-2x_1=\frac{y_1y_2+y_2y_1-2x_1x_2}{x_2}=\frac{\left(kx_1+\dfrac12\right)x_2+\left(kx_2+\dfrac12\right)x_1-2x_1x_2}{x_2}=\frac{(2k-2)x_1x_2+\dfrac12(x_2+x_1)}{x_2}=\frac{(2k-2)\cdot \dfrac{1}{4k^2}+\dfrac{1-k}{2k^2}}{x_2}=0\).
+\examdisplayaligned{
+y_1+\frac{y_2y_1}{x_2}-2x_1
+&=\frac{y_1y_2+y_2y_1-2x_1x_2}{x_2}\\
+&=\frac{\left(kx_1+\dfrac12\right)x_2+\left(kx_2+\dfrac12\right)x_1-2x_1x_2}{x_2}\\
+&=\frac{(2k-2)x_1x_2+\dfrac12(x_2+x_1)}{x_2}\\
+&=\frac{(2k-2)\cdot \dfrac{1}{4k^2}+\dfrac{1-k}{2k^2}}{x_2}\\
+&=0
+}
 所以 \(y_1+\frac{y_2y_1}{x_2}-2x_1=0\). 即 \(y_1+\frac{y_2y_1}{x_2}=2x_1\).
 故 \(A\) 为线段 \(BM\) 的中点.
 \end{solution}
@@ -470,7 +472,12 @@ b_1-a_1n, & d_2\le nd_1.
 \circled{2}当 \(d_1=0\) 时，对任意 \(n\ge1\)，\(c_n=b_1-a_1n+(n-1)\max\{d_2,0\}=b_1-a_1+(n-1)\bigl(\max\{d_2,0\}-a_1\bigr)\).
 此时，\(c_1,c_2,c_3,\dots,c_n,\dots\) 是等差数列.
 
-\circled{3}当 \(d_1<0\) 时，当 \(n>\dfrac{d_2}{d_1}\) 时，有 \(nd_1<d_2\)，所以 \(\frac{c_n}{n}=\frac{b_1-a_1n+(n-1)(d_2-nd_1)}{n}=n(-d_1)+d_1-a_1+d_2+\frac{b_1-d_2}{n}\).
+\circled{3}当 \(d_1<0\) 时，当 \(n>\dfrac{d_2}{d_1}\) 时，有 \(nd_1<d_2\)，所以
+\examdisplayaligned{
+\frac{c_n}{n}
+&=\frac{b_1-a_1n+(n-1)(d_2-nd_1)}{n}\\
+&=n(-d_1)+d_1-a_1+d_2+\frac{b_1-d_2}{n}
+}.
 从而 \(\frac{c_n}{n}\ge n(-d_1)+d_1-a_1+d_2-|b_1-d_2|\).
 对任意正数 \(M\)，取正整数 \(m>\max\left\{\frac{M+|b_1-d_2|+a_1-d_1-d_2}{-d_1},\frac{d_2}{d_1}\right\}\)
 故当 \(n\ge m\) 时，\(\dfrac{c_n}{n}>M\).

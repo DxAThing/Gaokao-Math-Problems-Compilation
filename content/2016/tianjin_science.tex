@@ -258,7 +258,13 @@ D
 \begin{solution}
 （1）因为 \(\tan x\) 有意义，所以 \(x\neq k\pi+\frac{\pi}{2}\)（\(k\in\Z\)）.
 故函数的定义域为 \(\left\{ x\mid x\neq k\pi+\frac{\pi}{2},\ k\in\Z \right\}\).
-又 \(f(x)=4\tan x\sin\left( \frac{\pi}{2}-x \right)\cos\left( x-\frac{\pi}{3} \right)-\sqrt3=4\tan x\cos x\left( \frac12\cos x+\frac{\sqrt3}{2}\sin x \right)-\sqrt3=4\sin x\left( \frac12\cos x+\frac{\sqrt3}{2}\sin x \right)-\sqrt3=2\sin x\cos x+2\sqrt3\sin^2x-\sqrt3=\sin2x+\sqrt3\left( 1-\cos2x \right)-\sqrt3=\sin2x-\sqrt3\cos2x=2\sin\left( 2x-\frac{\pi}{3} \right)\).
+又
+\begin{align*}
+f(x)&=4\tan x\sin\left( \frac{\pi}{2}-x \right)\cos\left( x-\frac{\pi}{3} \right)-\sqrt3=4\tan x\cos x\left( \frac12\cos x+\frac{\sqrt3}{2}\sin x \right)-\sqrt3\\
+&=4\sin x\left( \frac12\cos x+\frac{\sqrt3}{2}\sin x \right)-\sqrt3=2\sin x\cos x+2\sqrt3\sin^2x-\sqrt3\\
+&=\sin2x+\sqrt3\left( 1-\cos2x \right)-\sqrt3=\sin2x-\sqrt3\cos2x\\
+&=2\sin\left( 2x-\frac{\pi}{3} \right).
+\end{align*}
 故 \(f(x)\) 的最小正周期为 \(T=\frac{2\pi}{2}=\pi\).
 
 （2）由 \(2k\pi-\frac{\pi}{2}\le 2x-\frac{\pi}{3}\le 2k\pi+\frac{\pi}{2}\)（\(k\in\Z\)），得 \(k\pi-\frac{\pi}{12}\le x\le k\pi+\frac{5\pi}{12}\)（\(k\in\Z\)），所以函数的增区间为 \(\left[ k\pi-\frac{\pi}{12},k\pi+\frac{5\pi}{12} \right]\)（\(k\in\Z\)）.
@@ -341,19 +347,30 @@ P & \frac4{15} & \frac7{15} & \frac4{15}
 
 \begin{solution}
 因为 \(b_n^2=a_n a_{n+1}\). 若 \(a_n=a_1+(n-1)d\)，则
-\(c_n=b_{n+1}^2-b_n^2=a_{n+1}a_{n+2}-a_n a_{n+1}=a_{n+1}(a_{n+2}-a_n)=2d\,a_{n+1}\).
+\[
+c_n=b_{n+1}^2-b_n^2=a_{n+1}a_{n+2}-a_n a_{n+1}=a_{n+1}(a_{n+2}-a_n)=2d\,a_{n+1}.
+\]
 故
 \(c_{n+1}-c_n=2d(a_{n+2}-a_{n+1})=2d^2\)
 为定值，所以 \(\{c_n\}\) 是等差数列.
 
 第（2）问中 \(a_1=d\) 时可得 \(a_n=nd\)，于是
 \(b_n^2=a_n a_{n+1}=n(n+1)d^2\).
-从而 \(T_n=\sum_{k=1}^{2n}(-1)^k b_k^2=\left( -b_1^2+b_2^2 \right)+\left( -b_3^2+b_4^2 \right)+\cdots+\left( -b_{2n-1}^2+b_{2n}^2 \right)=2d\left( a_2+a_4+\cdots+a_{2n} \right)\).
+从而
+\[
+T_n=\sum_{k=1}^{2n}(-1)^k b_k^2=\left( -b_1^2+b_2^2 \right)+\left( -b_3^2+b_4^2 \right)+\cdots+\left( -b_{2n-1}^2+b_{2n}^2 \right)=2d\left( a_2+a_4+\cdots+a_{2n} \right).
+\]
 因为
 \(a_2+a_{2n}=2d+2nd=2d(n+1)\).
 所以
 \(T_n=2d\cdot \frac{n\left( a_2+a_{2n} \right)}{2}=2d^2n(n+1)\).
-于是 \(\sum_{k=1}^n \frac1{T_k}=\frac1{2d^2}\sum_{k=1}^n\frac1{k(k+1)}=\frac1{2d^2}\left( 1-\frac12+\frac12-\frac13+\cdots+\frac1n-\frac1{n+1} \right)=\frac1{2d^2}\left( 1-\frac1{n+1} \right)<\frac1{2d^2}\).
+于是
+\[
+\begin{aligned}
+\sum_{k=1}^n \frac1{T_k}&=\frac1{2d^2}\sum_{k=1}^n\frac1{k(k+1)}=\frac1{2d^2}\left( 1-\frac12+\frac12-\frac13+\cdots+\frac1n-\frac1{n+1} \right)\\
+&=\frac1{2d^2}\left( 1-\frac1{n+1} \right)<\frac1{2d^2}.
+\end{aligned}
+\]
 \end{solution}
 
 \begin{problem}
@@ -374,7 +391,9 @@ P & \frac4{15} & \frac7{15} & \frac4{15}
 第（2）问设直线 \(l:y=k(x-2)\)（\(k\neq0\)），设 \(M(x_0,k(x_0-2))\). 由 \(\angle MOA\le\angle MAO\) 得 \(x_0\ge 1\). 又由 \(BF\perp HF\) 可得
 \(x_0=\frac{9+20k^2}{12(1+k^2)}\).
 于是
-\(\frac{9+20k^2}{12(1+k^2)}\ge 1\iff 8k^2\ge 3\iff k\le -\frac{\sqrt6}{4}\text{ 或 }k\ge \frac{\sqrt6}{4}\).
+\[
+\frac{9+20k^2}{12(1+k^2)}\ge 1\iff 8k^2\ge 3\iff k\le -\frac{\sqrt6}{4}\text{ 或 }k\ge \frac{\sqrt6}{4}.
+\]
 \end{solution}
 
 \begin{problem}

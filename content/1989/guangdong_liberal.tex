@@ -170,7 +170,11 @@ B
 \begin{problem}
 函数 \(y=|x-1|\) 的图象是
 
-\bitmapfigure[max width=0.98\linewidth,max totalheight=6.0cm]{img/1989/guangdong_liberal/q12_options.png}
+\choices
+    {\choicebitmap[max width=0.22\linewidth,max totalheight=3.6cm]{img/1989/guangdong_liberal/q12_optA.png}}
+    {\choicebitmap[max width=0.22\linewidth,max totalheight=3.6cm]{img/1989/guangdong_liberal/q12_optB.png}}
+    {\choicebitmap[max width=0.22\linewidth,max totalheight=3.6cm]{img/1989/guangdong_liberal/q12_optC.png}}
+    {\choicebitmap[max width=0.22\linewidth,max totalheight=3.6cm]{img/1989/guangdong_liberal/q12_optD.png}}
 
 \end{problem}
 
@@ -450,7 +454,7 @@ B
 
 \begin{enumerate}
 \item 求证：\(AO = BO\)；
-\item 又设点 \(S\) 与平面 \(\beta\) 的距离为 \(3\text{厘米}\)，且 \(AO \perp BO\)，\(AB = 4\text{厘米}\)，求线段 \(SO\) 的长.
+\item 又设点 \(S\) 与平面 \(\beta\) 的距离为 \(3\mathrm{~cm}\)，且 \(AO \perp BO\)，\(AB = 4\mathrm{~cm}\)，求线段 \(SO\) 的长.
 \end{enumerate}
 
 \bitmapfigure[max width=0.42\linewidth,max totalheight=4.2cm]{img/1989/guangdong_liberal/q2_fig1.png}
@@ -462,7 +466,7 @@ B
 
 \bitmapfigure[max width=0.42\linewidth,max totalheight=4.2cm]{img/1989/guangdong_liberal/q2_solution_fig1.png}
 
-（2）由三垂线定理的逆定理，可知 \(\angle DAO = \angle DBO = 90^\circ\). 又 \(\angle AOB = 90^\circ\)，且 \(AO = BO\)，所以四边形 \(AOBD\) 是正方形，因此 \(OD = AB = 4\mathrm{cm}\). 又 \(SD = 3\mathrm{cm}\)，所以 \(SO = \sqrt{3^2 + 4^2} = 5\mathrm{cm}\).
+（2）由三垂线定理的逆定理，可知 \(\angle DAO = \angle DBO = 90^\circ\). 又 \(\angle AOB = 90^\circ\)，且 \(AO = BO\)，所以四边形 \(AOBD\) 是正方形，因此 \(OD = AB = 4\mathrm{~cm}\). 又 \(SD = 3\mathrm{~cm}\)，所以 \(SO = \sqrt{3^2 + 4^2} = 5\mathrm{~cm}\).
 \end{solution}
 
 \begin{problem}
@@ -479,12 +483,10 @@ B
 \begin{solution}
 （1）因为 \(z = 1 - 2\i\)，所以
 \[
-\begin{aligned}
-\frac{2}{z + \i} - \overline{(z + 1)}
-&= \frac{2}{1 - \i} - \overline{(2 - 2\i)} \\
-&= 1 + \i - (2 + 2\i) \\
-&= -1 - \i.
-\end{aligned}
+\begin{gathered}
+\frac{2}{z + \i} - \overline{(z + 1)}=\frac{2}{1 - \i} - \overline{(2 - 2\i)}=1 + \i - (2 + 2\i),\\
+\frac{2}{z + \i} - \overline{(z + 1)}=-1 - \i.
+\end{gathered}
 \]
 将其表示成三角形式，得 \(-1 - \i = \sqrt{2}\left(\cos \frac{5\pi}{4} + \i \sin \frac{5\pi}{4}\right)\).
 
@@ -498,14 +500,29 @@ a + 1 &> 0,\\
 \end{aligned}
 \right.
 \]
+由 \(a+1>0\)，不等式第一项两边平方，得 \(10a^2+7a+1\geqslant0\)，即 \(a\leqslant-\frac{1}{2}\) 或 \(a\geqslant-\frac{1}{5}\). 因此 \(a\) 的取值范围为 \(\left(-1,-\frac{1}{2}\right]\cup\left[-\frac{1}{5},+\infty\right)\).
 \end{solution}
 
 \begin{problem}
 
-设圆 \(O\) 的方程为 \(x^2 - 2x\cos \theta + y^2 + 2(1 + 2\sin \theta)y = 0\)，其中 \(0 < \theta < 2\pi\).
+设圆 \(O\) 的方程为 \(x^2 - 2x\cos \theta + y^2 + 2(1 + 2\sin \theta)y = 0\)，其中 \(0\leqslant\theta<2\pi\).
 
 \begin{enumerate}
 \item 当 \(\theta\) 变化时，求圆 \(O\) 的圆心轨迹的普通方程，并画出轨迹的草图；
 \item 如果又有圆 \(S\)：\(x^2 + y^2 + 2y = 0\)，求 \(\theta\) 的值，使得圆 \(O\) 与圆 \(S\) 的公共弦的长度取最大值（请把满足条件的 \(\theta\) 的值都求出来）.
 \end{enumerate}
 \end{problem}
+
+\begin{solution}
+（1）圆 \(O\) 的圆心为 \(C(\cos\theta,-1-2\sin\theta)\). 令圆心坐标为 \((x,y)\)，消去 \(\theta\) 得 \(x^2+\frac{(y+1)^2}{4}=1\)，即 \(4x^2+(y+1)^2=4\). 因此圆心轨迹是中心为 \((0,-1)\)、半轴长分别为 \(1\) 和 \(2\) 的椭圆.
+
+（2）两圆方程相减，得公共弦所在直线 \(x\cos\theta-2y\sin\theta=0\). 圆 \(S\) 的圆心为 \(S_0(0,-1)\)，半径为 \(1\)，圆心到该直线的距离为
+\[
+p=\frac{2|\sin\theta|}{\sqrt{\cos^2\theta+4\sin^2\theta}}=\frac{2|\sin\theta|}{\sqrt{1+3\sin^2\theta}}.
+\]
+故公共弦长为
+\[
+L=2\sqrt{1-p^2}=\frac{2|\cos\theta|}{\sqrt{1+3\sin^2\theta}}.
+\]
+当且仅当 \(\sin\theta=0\) 时，\(L\) 取得最大值 \(2\). 由 \(0\leqslant\theta<2\pi\)，得 \(\theta=0\) 或 \(\pi\).
+\end{solution}

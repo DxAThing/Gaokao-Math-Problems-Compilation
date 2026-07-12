@@ -286,6 +286,11 @@
     \endgroup
 }
 
+% 独立选择题选项图，供 choices/choicesfive 承载；尺寸由调用方控制。
+\newcommand{\choicebitmap}[2][]{%
+    \bitmapinclude[#1]{#2}%
+}
+
 \newcommand{\texfigure}[2][]{%
     \begin{center}
     \texinclude[#1]{#2}
@@ -348,11 +353,11 @@
 }
 
 \newcommand{\problemheadbox}{%
-    \makebox[\problembodyindent][l]{\textbf{\theprobnum.}}%
+    \makebox[\problembodyindent][r]{\textbf{\theprobnum.}\ }%
 }
 
 \newcommand{\problemheadprefix}{%
-    \textbf{\theprobnum.}\hspace{0.5em}%
+    \textbf{\theprobnum.}\ %
 }
 \newcommand{\problemoriginallabel}{}%
 
@@ -375,7 +380,7 @@
             \def\makelabel##1{%
                 \ifproblemheadpending
                     \global\problemheadpendingfalse
-                    \llap{\problemheadprefix}%
+                    \llap{\problemheadbox\hspace{0.5em}}%
                 \fi
                 \problemoriginallabel{##1}%
             }%
@@ -563,7 +568,8 @@
         \choicecell{\dimexpr0.30\examchoicewidth\relax}{C}{#3}\par
         \vspace{0.2em}
         \choicecell{\dimexpr0.30\examchoicewidth\relax}{D}{#4}\hfill
-        \choicecell{\dimexpr0.30\examchoicewidth\relax}{E}{#5}%
+        \choicecell{\dimexpr0.30\examchoicewidth\relax}{E}{#5}\hfill
+        \makebox[\dimexpr0.30\examchoicewidth\relax][l]{}%
     \else
     % 2+2+1: row1=A/B, row2=C/D, row3=E (E对齐A)
     \ifdim\examchoicemaxwidth<0.47\examchoicewidth
@@ -713,6 +719,9 @@
 \renewcommand{\thefootnote}{\circled{\arabic{footnote}}}
 \newcommand{\circled}[2][]{\tikz[baseline=(char.base)]
     {\node[shape=circle,draw,inner sep=0.8pt](char){\small #2};}}
+\makeatletter
+\renewcommand{\tagform@}[1]{\maketag@@@{\circled{#1}}}
+\makeatother
 
 \newcommand{\R}{\symbfup{R}}
 \newcommand{\Z}{\symbfup{Z}}
@@ -743,15 +752,18 @@
         {#1}%                              % 3. Script style (指数、上下标) -> 保持原样
         {#1}%                              % 4. Scriptscript style -> 保持原样
   }\limits}}
-% 辅助宏：积分类大运算符（同理，但用 \nolimits 保持极限在侧边）
+% 积分类必须把上下限直接挂在原生积分符上，保留字体的 MathKern 光学校正。
+\newcommand{\apply@integral@scripts}[3]{%
+  #1\IfValueT{#2}{_{#2}}\IfValueT{#3}{^{#3}}%
+}
 \newcommand{\make@display@bigint}[2]{% #1=备份命令, #2=原命令
-  \renewcommand{#2}{\mathop{%
+  \RenewDocumentCommand{#2}{e{_^}}{%
     \mathchoice
-        {#1}%                              % 1. Display style -> 保持原样
-        {\displaystyle #1}%                % 2. Text style (行内公式) -> 强制大符号
-        {#1}%                              % 3. Script style -> 保持原样
-        {#1}%                              % 4. Scriptscript style -> 保持原样
-  }\nolimits}}
+        {\apply@integral@scripts{#1}{##1}{##2}}%              % Display style
+        {\displaystyle\apply@integral@scripts{#1}{##1}{##2}}% Text style -> 强制大符号
+        {\apply@integral@scripts{#1}{##1}{##2}}%              % Script style
+        {\apply@integral@scripts{#1}{##1}{##2}}%              % Scriptscript style
+  }}
 \makeatother
 
 % \let\oldlim\lim
@@ -870,6 +882,7 @@
         }
       }
     }
+    \par
     \group_end:
   }
   \par
