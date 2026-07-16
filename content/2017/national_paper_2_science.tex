@@ -44,7 +44,7 @@ C
 \end{solution}
 
 \begin{problem}
-我国古代数学名著《算法统宗》中有如下问题：“远看巍巍塔七层，红光点点倍加增，共灯三百八十一，请问尖头几盏灯？”意思是：一座 7 层塔共挂了 381 盏灯，且相邻两层中的下一层灯数是上一层灯数的 2 倍，则塔的顶层共有灯（\quad）
+我国古代数学名著《算法统宗》中有如下问题：“远望巍巍塔七层，红光点点倍加增，共灯三百八十一，请问尖头几盏灯？”意思是：一座 7 层塔共挂了 381 盏灯，且相邻两层中的下一层灯数是上一层灯数的 2 倍，则塔的顶层共有灯（\quad）
 
 \choices
     {\(1\)盏}
@@ -120,11 +120,11 @@ D
 \end{answer}
 
 \begin{solution}
-先确定谁承担 \(2\) 项工作，有 \(3\) 种选法；再从 \(4\) 项工作中选 \(2\) 项给他，有 \(\binom42=6\) 种；剩下 \(2\) 项分别给另外两人，有 \(2\) 种分配. 故共有 \(3\times 6\times 2=36\) 种. 故选 D.
+先确定谁承担 \(2\) 项工作，有 \(3\) 种选法；再从 \(4\) 项工作中选 \(2\) 项给他，有 \(\mathrm C_4^2=6\) 种；剩下 \(2\) 项分别给另外两人，有 \(2\) 种分配. 故共有 \(3\times 6\times 2=36\) 种. 故选 D.
 \end{solution}
 
 \begin{problem}
-甲，乙，丙，丁四位同学一起去问老师询问成语竞赛的成绩. 老师说：你们四人中有 \(2\) 位优秀，\(2\) 位良好，我现在给甲看乙，丙的成绩，给乙看丙的成绩，给丁看甲的成绩. 看后甲对大家说：我还是不知道我的成绩. 根据以上信息，则（\quad）
+甲，乙，丙，丁四位同学一起去向老师询问成语竞赛的成绩. 老师说：你们四人中有 \(2\) 位优秀，\(2\) 位良好，我现在给甲看乙，丙的成绩，给乙看丙的成绩，给丁看甲的成绩. 看后甲对大家说：我还是不知道我的成绩. 根据以上信息，则（\quad）
 
 \choices
     {乙可以知道四人的成绩}
@@ -266,7 +266,7 @@ B
 故
 \examdisplaychain{
 \overrightarrow{PA}\cdot(\overrightarrow{PB}+\overrightarrow{PC})
-&=2x^2+2y^2-2\sqrt3\,y\\
+&=2x^2+2y^2-2\sqrt3 y\\
 &=2\Bigl(x^2+\bigl(y-\dfrac{\sqrt3}{2}\bigr)^2\Bigr)-\dfrac32\ge -\dfrac32
 }
 当 \(x=0\)，\(y=\dfrac{\sqrt3}{2}\) 时取等号，所以最小值为 \(-\dfrac32\). 故选 B.
@@ -317,12 +317,7 @@ B
 所以 \(a_2=2\). 又 \(a_3=3\)，故数列首项为 \(1\)，公差为 \(1\)，从而
 \(S_k=1+2+\cdots+k=\dfrac{k(k+1)}2\).
 于是
-\examdisplaychain{
-\sum_{k=1}^n \frac1{S_k}
-&=\sum_{k=1}^n \frac{2}{k(k+1)}\\
-&=2\sum_{k=1}^n\left(\frac1k-\frac1{k+1}\right)\\
-&=\dfrac{2n}{n+1}
-}
+\examdisplaymath{\sum_{k=1}^n \frac1{S_k}=\sum_{k=1}^n \frac{2}{k(k+1)}=2\sum_{k=1}^n\left(\frac1k-\frac1{k+1}\right)=\dfrac{2n}{n+1}}
 \end{solution}
 
 \begin{problem}
@@ -446,7 +441,7 @@ k & 3.841 & 6.635 & 10.828
 \item 点 \(M\) 在棱 \(PC\) 上，且直线 \(BM\) 与底面 \(ABCD\) 所成角为 \(45^\circ\)，求二面角 \(M-AB-D\) 的余弦值.
 \end{enumerate}
 
-\needspace{6cm}
+\examneedlines[12]
 \bitmapfigure[max width=0.34\linewidth,max totalheight=4.8cm]{img/2017/national_paper_2_science/q19_fig1.png}
 
 \end{problem}
@@ -528,6 +523,7 @@ k & 3.841 & 6.635 & 10.828
 \(f(x)=x(ax-a-\ln x)\)（\(x>0\)），
 且 \(f(x)\ge 0\)，所以
 \(h(x)=ax-a-\ln x\ge 0\).
+若 \(a\le 0\)，则 \(h(x)\to-\infty\)（\(x\to+\infty\)），矛盾，故 \(a>0\).
 而
 \(h'(x)=a-\dfrac1x\).
 当 \(x=\dfrac1a\) 时取最小值
@@ -567,7 +563,7 @@ k & 3.841 & 6.635 & 10.828
 \end{problem}
 
 \begin{solution}
-（1）由 \(\rho\cos\theta=4\)，\(C_1\) 的直角坐标方程为 \(x=4\). 设 \(P(x,y)\)，并设 \(M=(4,t)\). 因为 \(P\) 在线段 \(OM\) 上，所以存在 \(\lambda\in(0,1)\) 使得
+（1）由 \(\rho\cos\theta=4\)，\(C_1\) 的直角坐标方程为 \(x=4\). 设 \(P(x,y)\)，并设 \(M=(4,t)\). 因为 \(P\) 在线段 \(OM\) 上，所以存在 \(\lambda\in(0,1]\) 使得
 \(P=\lambda M\)，
 即
 \(x=4\lambda\)，\(y=\lambda t\).

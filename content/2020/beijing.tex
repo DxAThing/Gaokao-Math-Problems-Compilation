@@ -45,7 +45,7 @@ B
 \end{solution}
 
 \begin{problem}
-在 \((x-2)^5\) 的展开式中，\(x^2\) 的系数为（\quad）.
+在 \(\left(\sqrt{x}-2\right)^5\) 的展开式中，\(x^2\) 的系数为（\quad）.
 
 \choices
     {\(-5\)}
@@ -61,9 +61,9 @@ C
 
 \begin{solution}
 二项展开式的通项为
-\(T_{r+1}=\mathrm{C}_5^r x^{5-r}(-2)^r\)（\(r=0,1,2,3,4,5\)）.
-令 \(5-r=2\)，得 \(r=3\). 因此 \(x^2\) 的系数为
-\(\mathrm{C}_5^3(-2)^3=10\times(-8)=-10\).
+\(T_{r+1}=\mathrm{C}_5^r(\sqrt{x})^{5-r}(-2)^r\)（\(r=0,1,2,3,4,5\)）.
+令 \(\dfrac{5-r}{2}=2\)，得 \(r=1\). 因此 \(x^2\) 的系数为
+\(\mathrm{C}_5^1(-2)=-10\).
 故选 \(C\).
 \end{solution}
 
@@ -95,10 +95,6 @@ D
 \begin{problem}
 已知半径为 \(1\) 的圆经过点 \((3,4)\)，则其圆心到原点的距离的最小值为（\quad）.
 
-\begin{center}
-\bitmapfigure[max width=0.42\linewidth,max totalheight=4.8cm]{img/2020/beijing/q5_fig1.png}
-\end{center}
-
 \choices
     {\(4\)}
     {\(5\)}
@@ -122,10 +118,6 @@ A
 \begin{problem}
 已知函数 \(f(x)=2^x-x-1\)，则不等式 \(f(x)>0\) 的解集是（\quad）.
 
-\begin{center}
-\bitmapfigure[max width=0.42\linewidth,max totalheight=4.8cm]{img/2020/beijing/q6_fig1.png}
-\end{center}
-
 \choices
     {\(( -1,1)\)}
     {\((-\infty,-1)\cup(1,+\infty)\)}
@@ -141,15 +133,11 @@ D
 \begin{solution}
 因为
 \(f(x)=2^x-x-1\)，
-所以 \(f(x)>0\) 等价于 \(2^x>x+1\). 在同一直角坐标系中作出 \(y=2^x\) 和 \(y=x+1\) 的图象，如图所示. 两函数图象的交点坐标为 \((0,1)\)，\((1,2)\)，因此不等式 \(2^x>x+1\) 的解为 \(x<0\) 或 \(x>1\). 所以不等式 \(f(x)>0\) 的解集为 \((-\infty,0)\cup(1,+\infty)\). 故选 \(D\).
+所以 \(f(x)>0\) 等价于 \(2^x>x+1\). 在同一直角坐标系中作出 \(y=2^x\) 和 \(y=x+1\) 的图象. 两函数图象的交点坐标为 \((0,1)\)，\((1,2)\)，因此不等式 \(2^x>x+1\) 的解为 \(x<0\) 或 \(x>1\). 所以不等式 \(f(x)>0\) 的解集为 \((-\infty,0)\cup(1,+\infty)\). 故选 \(D\).
 \end{solution}
 
 \begin{problem}
 设抛物线的顶点为 \(O\)，焦点为 \(F\)，准线为 \(l\). \(P\) 是抛物线上异于 \(O\) 的一点，过 \(P\) 作 \(PQ\perp l\) 于 \(Q\)，则线段 \(FQ\) 的垂直平分线（\quad）.
-
-\begin{center}
-\bitmapfigure[max width=0.42\linewidth,max totalheight=4.8cm]{img/2020/beijing/q7_fig1.png}
-\end{center}
 
 \choices
     {经过点 \(O\)}
@@ -168,7 +156,7 @@ B
 \end{solution}
 
 \begin{problem}
-在等差数列 \(\{a_n\}\) 中，\(a_1=-9\)，\(a_5=-1\). 记 \(T_n=a_1a_2\cdots a_n\)（\(n=1,2,\dots\)），则数列 \(\{T_n\}\)（\quad）.
+在等差数列 \(\{a_n\}\) 中，\(a_1=-9\)，\(a_3=-1\). 记 \(T_n=a_1a_2\cdots a_n\)（\(n=1,2,\dots\)），则数列 \(\{T_n\}\)（\quad）.
 
 \choices
     {有最大项，有最小项}
@@ -184,12 +172,13 @@ B
 
 \begin{solution}
 由题意可知等差数列的公差为
-\(d=\frac{a_5-a_1}{4}=\frac{-1+9}{4}=2\)，
-所以
-\(a_n=a_1+(n-1)d=-9+2(n-1)=2n-11\).
-因此 \(a_1,a_2,a_3,a_4,a_5,a_6\) 依次为 \(-9,-7,-5,-3,-1,1\)，而 \(a_n>0\) 当 \(n\ge6\). 又
-\(T_2=63\)，\(T_4=945\)，
-所以数列 \(\{T_n\}\) 存在最大项，且最大项为 \(T_4\)；另一方面，\(\{T_n\}\) 不存在最小项. 故选 \(B\).
+\(d=\frac{a_3-a_1}{3-1}=\frac{-1+9}{2}=2\).
+所以 \(a_n=a_1+(n-1)d=-9+2(n-1)=2n-11\).
+注意到 \(a_1<a_2<a_3<a_4<a_5<0<a_6=1<a_7<\cdots\).
+且由 \(T_5<0\) 可知 \(T_i<0\) （\(i\ge6\)），由
+\(\frac{T_i}{T_{i-1}}=a_i>1\) （\(i\ge7\)）可知数列 \(\{T_n\}\) 不存在最小项.
+由于 \(a_1=-9\)，\(a_2=-7\)，\(a_3=-5\)，\(a_4=-3\)，\(a_5=-1\)，\(a_6=1\)，故数列 \(\{T_n\}\) 中的正项只有有限项：\(T_2=63\)，\(T_4=945\).
+故数列 \(\{T_n\}\) 中存在最大项，且最大项为 \(T_4\). 故选 \(B\).
 \end{solution}
 
 \begin{problem}
@@ -209,9 +198,9 @@ C
 
 \begin{solution}
 当存在 \(k\in\Z\) 使得 \(\alpha=k\pi+(-1)^k\beta\) 时，若 \(k\) 为偶数，则
-\(\sin\alpha=\sin(k\pi+\beta)=\sin\beta\)
+\(\sin\alpha=\sin(k\pi+\beta)=\sin\beta\).
 若 \(k\) 为奇数，则
-\(\sin\alpha=\sin(k\pi-\beta)=\sin\bigl((k-1)\pi+\pi-\beta\bigr)=\sin(\pi-\beta)=\sin\beta\).
+\(\sin\alpha=\sin(k\pi-\beta)=\sin\left((k-1)\pi+\pi-\beta\right)=\sin(\pi-\beta)=\sin\beta\).
 反过来，当 \(\sin\alpha=\sin\beta\) 时，\(\alpha=\beta+2m\pi\) 或 \(\alpha+\beta=\pi+2m\pi\)，\(m\in\Z\)，即
 \(\alpha=k\pi+(-1)^k\beta\).
 所以题述关系是充要条件. 故选 \(C\).
@@ -268,7 +257,7 @@ A
 \end{problem}
 
 \begin{answer}
-\((3,0),\ 3\)
+\((3,0),\ \sqrt3\)
 \end{answer}
 
 \begin{solution}
@@ -276,7 +265,7 @@ A
 \(c^2=a^2+b^2=9\)，\(c=3\).
 因此右焦点坐标为 \((3,0)\). 双曲线的渐近线方程为
 \(y=\pm\frac{b}{a}x=\pm\frac{1}{\sqrt2}x\)，
-即 \(x\pm \sqrt2\,y=0\)，所以焦点到渐近线的距离为 \(3\). 故答案为 \((3,0)\) 和 \(3\).
+即 \(x\pm \sqrt{2}y=0\)，所以焦点到渐近线的距离为 \(\sqrt3\). 故答案为 \((3,0)\) 和 \(\sqrt3\).
 \end{solution}
 
 \begin{problem}
@@ -297,7 +286,7 @@ A
 
 则
 \(A(0,0)\)，\(B(2,0)\)，\(C(2,2)\)，\(D(0,2)\).
-由 \(\overrightarrow{AP}=\frac12\left(\overrightarrow{AB}+\overrightarrow{AC}\right)=\frac12\bigl((2,0)+(2,2)\bigr)=(2,1)\)，得 \(P(2,1)\). 于是 \(\overrightarrow{PD}=(-2,1)\)，\(\overrightarrow{PB}=(0,-1)\).
+由 \(\overrightarrow{AP}=\frac12\left(\overrightarrow{AB}+\overrightarrow{AC}\right)=\frac12\left((2,0)+(2,2)\right)=(2,1)\)，得 \(P(2,1)\). 于是 \(\overrightarrow{PD}=(-2,1)\)，\(\overrightarrow{PB}=(0,-1)\).
 所以 \(|PD|=\sqrt{(-2)^2+1^2}=\sqrt5\)，\(\overrightarrow{PB}\cdot\overrightarrow{PD}=0\cdot(-2)+(-1)\cdot1=-1\).
 故答案为 \(\sqrt5\) 和 \(-1\).
 \end{solution}
@@ -327,7 +316,7 @@ A
 为满足人民对美好生活的向往，环保部门要求相关企业加强污水治理，排放未达标的企业要限期整改，设企业的污水排放量 \(W\) 与时间 \(t\) 的关系为 \(W=f(t)\)，用 \(-\dfrac{f(b)-f(a)}{b-a}\) 的大小评价在 \([a,b]\) 这段时间内企业污水治理能力的强弱，已知整改期内，甲，乙两企业的污水排放量与时间的关系如下图所示.
 
 \begin{center}
-\bitmapfigure[max width=0.42\linewidth,max totalheight=4.8cm]{img/2020/beijing/q15_fig1.png}
+\bitmapfigure[max width=0.80\linewidth,max totalheight=4.8cm]{img/2020/beijing/q15_fig1.png}
 \end{center}
 
 给出下列四个结论：
@@ -339,9 +328,8 @@ A
 
 \item 在 \(t_3\) 时刻，甲，乙两企业的污水排放都已达标；
 
-\item 甲企业在 \([0,t_1]\)，\([t_1,t_2]\)，\([t_2,t_3]\) 这三段时间
+\item 甲企业在 \([0,t_1]\)，\([t_1,t_2]\)，\([t_2,t_3]\) 这三段时间中，在 \([0,t_1]\) 的污水治理能力最强.
 \end{circlelist}
-中，在 \([0,t_1]\) 的污水治理能力最强.
 其中所有正确结论的序号是\fillinblank{}.
 
 \end{problem}
@@ -375,7 +363,9 @@ A
     \item 求直线 \(AA_1\) 与平面 \(AD_1E\) 所成角的正弦值.
 \end{enumerate}
 
-\bitmapfigure[max width=0.42\linewidth,max totalheight=4.8cm]{img/2020/beijing/q16_fig1.png}
+\begin{center}
+\bitmapfigure[max width=0.60\linewidth,max totalheight=4.8cm]{img/2020/beijing/q16_fig1.png}
+\end{center}
 
 \end{problem}
 
@@ -390,7 +380,7 @@ A
 （1）如下图所示：
 
 \begin{center}
-\bitmapfigure[max width=0.42\linewidth,max totalheight=4.8cm]{img/2020/beijing/q16_solution_fig1.png}
+\bitmapfigure[max width=0.60\linewidth,max totalheight=4.8cm]{img/2020/beijing/q16_solution_fig1.png}
 \end{center}
 
 在正方体 \(ABCD-A_1B_1C_1D_1\) 中，\(AB\parallel A_1B_1\) 且 \(AB=A_1B_1\)，\(A_1B_1\parallel C_1D_1\) 且 \(A_1B_1=C_1D_1\)，所以 \(AB\parallel C_1D_1\) 且 \(AB=C_1D_1\)，所以四边形 \(ABC_1D_1\) 为平行四边形，则 \(BC_1\parallel AD_1\).
@@ -399,7 +389,7 @@ A
 （2）以点 \(A\) 为坐标原点，\(AD,AB,AA_1\) 所在直线分别为 \(x,y,z\) 轴建立空间直角坐标系 \(A-xyz\)，如下图所示：
 
 \begin{center}
-\bitmapfigure[max width=0.42\linewidth,max totalheight=4.8cm]{img/2020/beijing/q16_solution_fig2.png}
+\bitmapfigure[max width=0.60\linewidth,max totalheight=4.8cm]{img/2020/beijing/q16_solution_fig2.png}
 \end{center}
 
 设正方体 \(ABCD-A_1B_1C_1D_1\) 的棱长为 \(2\)，则
@@ -411,11 +401,11 @@ A
 即
 \(2x+2z=0\)，\(2y+z=0\).
 令 \(z=-2\)，得 \(x=2\)，\(y=1\)，所以 \(\bs n=(2,1,-2)\).
-因此，直线 \(AA_1\) 与平面 \(AD_1E\) 所成角的正弦值为 \(\sin\theta=\frac{|\overrightarrow{AA_1}\cdot\bs n|}{|\overrightarrow{AA_1}|\,|\bs n|}=\frac{4}{2\cdot3}=\frac{2}{3}\).
+因此，直线 \(AA_1\) 与平面 \(AD_1E\) 所成角的正弦值为 \(\sin\theta=\frac{|\overrightarrow{AA_1}\cdot\bs n|}{|\overrightarrow{AA_1}||\bs n|}=\frac{4}{2\cdot3}=\frac{2}{3}\).
 \end{solution}
 
 \begin{problem}
-在 \(\triangle ABC\) 中，\(a+b=11\)，再从条件（1），条件（2）这两个条件中选择一个作为己知，求：
+在 \(\triangle ABC\) 中，\(a+b=11\)，再从条件（1），条件（2）这两个条件中选择一个作为已知，求：
 
 \begin{enumerate}
     \item \(a\) 的值；
@@ -473,14 +463,14 @@ A
 某校为举办甲，乙两项不同活动，分别设计了相应的活动方案：方案一，方案二. 为了解该校学生对活动方案是否支持，对学生进行简单随机抽样，获得数据如下表：
 
 \begin{center}
-\begin{tabular}{c|cccc}
+\begin{tabular}{c|cc|cc}
 \hline
-& 男生 & 男生 & 女生 & 女生 \\
+& \multicolumn{2}{c|}{男生} & \multicolumn{2}{c}{女生} \\
 \hline
 & 支持 & 不支持 & 支持 & 不支持 \\
 \hline
-方案一 & 200 人 & 400 人 & 300 人 & 100 人 \\
-方案二 & 350 人 & 250 人 & 150 人 & 250 人 \\
+方案一 & \(200\text{ 人}\) & \(400\text{ 人}\) & \(300\text{ 人}\) & \(100\text{ 人}\) \\
+方案二 & \(350\text{ 人}\) & \(250\text{ 人}\) & \(150\text{ 人}\) & \(250\text{ 人}\) \\
 \hline
 \end{tabular}
 \end{center}
@@ -489,8 +479,8 @@ A
 
 \begin{enumerate}
     \item 分别估计该校男生支持方案一的概率，该校女生支持方案一的概率；
-    \item 从该校全体男生中随机抽取 \(2\) 人，全体女生中随机抽取 \(1\) 人，估计这 \(3\) 人中恰有 \(2\) 人支持方案一的概率；
-    \item 将该校学生支持方案的概率估计值记为 \(p_0\)，假设该校年级有 \(500\) 名男生和 \(300\) 名女生，除一年级外其他年级学生支持方案二的概率估计值记为 \(p_1\)，试比较 \(p_0\) 与 \(p_1\) 的大小. （结论不要求证明）
+    \item 从该校全体男生中随机抽取 \(2\text{ 人}\)，全体女生中随机抽取 \(1\text{ 人}\)，估计这 \(3\text{ 人}\)中恰有 \(2\text{ 人}\)支持方案一的概率；
+    \item 将该校学生支持方案一的概率估计值记为 \(p_0\)，假设该校年级有 \(500\text{ 名}\) 男生和 \(300\text{ 名}\) 女生，除一年级外其他年级学生支持方案二的概率估计值记为 \(p_1\)，试比较 \(p_0\) 与 \(p_1\) 的大小. （结论不要求证明）
 \end{enumerate}
 
 \end{problem}
@@ -501,9 +491,12 @@ A
 该校女生支持方案一的概率为
 \(\frac{300}{300+100}=\frac34\).
 
-（2）3 人中恰有 2 人支持方案一分两种情况：\((1)\) 仅有两个男生支持方案一，\((2)\) 仅有一个男生支持方案一，一个女生支持方案一，所以 \(P=\left(\frac13\right)^2\left(1-\frac34\right)+\mathrm C_2^1\cdot\frac13\left(1-\frac13\right)\cdot\frac34=\frac{13}{36}\).
+（2）\(3\text{ 人}\) 中恰有 \(2\text{ 人}\) 支持方案一分两种情况：（1）仅有两个男生支持方案一，（2）仅有一个男生支持方案一，一个女生支持方案一，所以 \(P=\left(\frac13\right)^2\left(1-\frac34\right)+\mathrm C_2^1\cdot\frac13\left(1-\frac13\right)\cdot\frac34=\frac{13}{36}\).
 
-（3）由题意可知，\(p_1<p_0\).
+（3）由题意可得
+\(p_0=\frac{500\times\frac13+300\times\frac34}{500+300}=\frac{47}{96}\)，
+\(p_1=\frac{500\times\frac{350}{350+250}+300\times\frac{150}{150+250}}{500+300}=\frac{97}{192}\).
+所以 \(p_0<p_1\).
 \end{solution}
 
 \begin{problem}
@@ -578,13 +571,13 @@ A
 已知 \(\{a_n\}\) 是无穷数列. 给出两个性质：
 
 \begin{circlelist}
-\item 对于 \(\{a_n\}\) 中任意两项 \(a_i,a_j(i>j)\)，在 \(\{a_n\}\) 中都存在一项 \(a_m\)，使得 \(\dfrac{a_i^2}{a_j}=a_m\)；
-\item 对于 \(\{a_n\}\) 中任意项 \(a_n(n\ge3)\)，在 \(\{a_n\}\) 中都存在两项 \(a_k,a_l(k>l)\)，使得 \(a_n=\dfrac{a_k^2}{a_l}\).
+\item 对于 \(\{a_n\}\) 中任意两项 \(a_i,a_j\)（\(i>j\)），在 \(\{a_n\}\) 中都存在一项 \(a_m\)，使得 \(\dfrac{a_i^2}{a_j}=a_m\)；
+\item 对于 \(\{a_n\}\) 中任意项 \(a_n\)（\(n\ge3\)），在 \(\{a_n\}\) 中都存在两项 \(a_k,a_l\)（\(k>l\)），使得 \(a_n=\dfrac{a_k^2}{a_l}\).
 \end{circlelist}
 
 \begin{enumerate}
-\item 若 \(a_n=n\)（\(n=1,2,\dots\)），判断数列 \(\{a_n\}\) 是否满足性质\((1)\)，说明理由；
-\item 若 \(a_n=2^{n-1}\)（\(n=1,2,\dots\)），判断数列 \(\{a_n\}\) 是否同时满足性质\((1)\)和性质\((2)\)，说明理由；
+\item 若 \(a_n=n\)（\(n=1,2,\dots\)），判断数列 \(\{a_n\}\) 是否满足性质（1），说明理由；
+\item 若 \(a_n=2^{n-1}\)（\(n=1,2,\dots\)），判断数列 \(\{a_n\}\) 是否同时满足性质（1）和性质（2），说明理由；
 \item 若 \(\{a_n\}\) 是递增数列，且同时满足性质（1）和性质（2），证明：\(\{a_n\}\) 为等比数列.
 \end{enumerate}
 \end{problem}
@@ -592,15 +585,15 @@ A
 \begin{solution}
 （1）当 \(a_n=n\) 时，取 \(a_2=2\)，\(a_3=3\)，则
 \(\frac{a_3^2}{a_2}=\frac92\)，
-故数列 \(\{a_n\}\) 不满足性质\((1)\).
+故数列 \(\{a_n\}\) 不满足性质（1）.
 
 （2）当 \(a_n=2^{n-1}\) 时，对任意 \(i>j\)，有
 \(\frac{a_i^2}{a_j}=2^{2i-j-1}\)，
-仍是数列中的某一项，所以满足性质\((1)\)；对任意 \(n\ge3\)，取 \(k=n-1\)，\(l=n-2\)，则
+仍是数列中的某一项，所以满足性质（1）；对任意 \(n\ge3\)，取 \(k=n-1\)，\(l=n-2\)，则
 \(\frac{a_k^2}{a_l}=2^{2(k-1)-(l-1)}=2^{n-1}=a_n\)，
-所以也满足性质\((2)\).
+所以也满足性质（2）.
 
-（3）首先，证明数列中的项同号.
+（3）首先，性质（1）中的分式有意义，故 \(a_n\ne0\)（\(n\in\N^*\)）. 下面证明数列中的项同号.
 若数列中同时含有正项和负项，设 \(N_0=\max\{n\mid a_n<0\}\).
 
 第一种情况：若 \(N_0=1\)，即 \(a_1<0<a_2<a_3<\cdots\).
@@ -619,7 +612,7 @@ A
 
 故数列中不可能同时含有正项和负项，从而数列中的项同号.
 
-若对任意 \(n\in\N^*\) 都有 \(a_n<0\)，令 \(b_n=-a_n\)，则 \(\{b_n\}\) 是递增正数列.
+若对任意 \(n\in\N^*\) 都有 \(a_n<0\)，令 \(b_n=-a_n\)，则 \(\{b_n\}\) 是递减正数列.
 对于任意 \(i>j\)，由性质（1）可知，在 \(\{a_n\}\) 中存在一项 \(a_m\)，使得
 \(\frac{a_i^2}{a_j}=a_m\).
 于是
@@ -632,40 +625,40 @@ A
 \(b_n=-a_n=-\frac{a_k^2}{a_l}=\frac{(-a_k)^2}{-a_l}=\frac{b_k^2}{b_l}\)，
 所以数列 \(\{b_n\}\) 也满足性质（2）.
 
-因此，只需证明正项情形下数列 \(\{b_n\}\) 为等比数列，便可推出 \(\{a_n\}\) 也为等比数列. 所以下面不妨设 \(a_n>0\).
+下面分别处理全正和全负两种情形.
 
-其次，证明 \(a_3=\dfrac{a_2^2}{a_1}\).
-利用性质（2），取 \(n=3\)，则存在 \(k>l\) 使得
+先设 \(a_n>0\). 由性质（2）取 \(n=3\)，存在 \(k>l\) 使得
 \(a_3=\frac{a_k^2}{a_l}\).
-由数列的单调性可知 \(a_k>a_l>0\)，所以
-\(a_3=a_k\cdot\frac{a_k}{a_l}>a_k\)，
-故 \(k<3\)，于是只能取 \(k=2\)，\(l=1\)，即
-\(a_3=\frac{a_2^2}{a_1}\).
-因此 \(a_1,a_2,a_3\) 成等比数列.
+因数列递增，\(a_k>a_l>0\)，故
+\(a_3=a_k\cdot\frac{a_k}{a_l}>a_k\)，从而 \(k<3\)，只能有
+\(k=2,l=1\). 因此 \(a_3=\frac{a_2^2}{a_1}\)，前三项成等比数列.
 
-最后，用数学归纳法证明数列为等比数列.
-假设数列 \(\{a_n\}\) 的前 \(k\)（\(k\ge3\)） 项成等比数列，不妨设
-\(a_s=a_1q^{s-1}\)（\(1\le s\le k\)），
-其中 \(a_1>0\)，\(q>1\). （\(a_1<0\)，\(0<q<1\) 的情形类似）
+用数学归纳法证明全正情形下数列为等比数列. 假设前 \(k\)（\(k\ge3\)）项成等比数列，写成
+\(a_s=a_1q^{s-1}\)（\(1\le s\le k\)），其中 \(q>1\).
+由性质（1）取 \(i=k,j=k-1\)，存在 \(m\) 使得
+\(a_m=\frac{a_k^2}{a_{k-1}}=a_1q^k>a_k\)，故 \(m\ge k+1\)，从而
+\(a_1q^k=a_m\ge a_{k+1}\).
+由性质（2）存在 \(s>t\) 使得 \(a_{k+1}=\frac{a_s^2}{a_t}\). 由于 \(a_s>a_t>0\)，\(a_{k+1}=a_s\frac{a_s}{a_t}>a_s\)，所以 \(a_s<a_{k+1}\)，从而 \(s\le k\)，\(t<s\le k\). 由归纳假设，
+\(a_{k+1}=\frac{a_s^2}{a_t}=a_1q^{2s-t-1}\).
+又 \(a_{k+1}>a_k=a_1q^{k-1}\)，所以
+\(2s-t-1>k-1\). 结合 \(a_{k+1}\le a_1q^k\) 得
+\(2s-t-1\le k\). 指数为整数，故 \(2s-t-1=k\)，即
+\(a_{k+1}=a_1q^k\). 归纳完成.
 
-由性质（1）可得：取 \(i=k\)，\(j=k-1\)，存在整数 \(m\)，使得
-\(a_m=\frac{a_k^2}{a_{k-1}}=a_1q^k>a_k\)，
-且 \(a_m\ge a_{k+1}\).
+再设所有 \(a_n<0\)，令 \(b_n=-a_n\). 上面已验证 \(\{b_n\}\) 仍满足性质（1）、（2），且是递减正数列.
+由性质（2）取 \(n=3\)，存在 \(k>l\) 使得
+\(b_3=\frac{b_k^2}{b_l}\). 因 \(b_k<b_l\)，有
+\(b_3<b_k\)，递减性推出 \(k<3\)，故 \(k=2,l=1\)，即
+\(b_3=\frac{b_2^2}{b_1}\)，前三项成等比数列.
 
-由性质（2）得：存在 \(s>t\)，使得
-\(a_{k+1}=\frac{a_s^2}{a_t}=a_s\cdot\frac{a_s}{a_t}>a_s\)，
-由数列的单调性可知 \(t<s\le k+1\).
-由 \(a_s=a_1q^{s-1}\) 可得
-\(a_{k+1}=\frac{a_s^2}{a_t}=a_1q^{2s-t-1}>a_k=a_1q^{k-1}\).
-
-由上面两式可得
-\(a_1q^k\ge a_{k+1}=a_1q^{2s-t-1}>a_1q^{k-1}\)，
-结合数列的单调性有
-\(k\ge 2s-t-1>k-1\).
-注意到 \(s,t,k\) 均为整数，故 \(k=2s-t-1\)，代入上式可得
-\(a_{k+1}=a_1q^k\).
-
-因此前 \(k+1\) 项仍成等比数列.
-
-综上，数列 \(\{a_n\}\) 为等比数列.
+用数学归纳法处理递减情形. 假设前 \(k\)（\(k\ge3\)）项成等比数列，写成
+\(b_s=b_1q^{s-1}\)（\(1\le s\le k\)），其中 \(0<q<1\).
+由性质（1）取 \(i=k,j=k-1\)，存在 \(m\) 使得
+\(b_m=\frac{b_k^2}{b_{k-1}}=b_1q^k<b_k\)，故 \(m\ge k+1\)，从而
+\(b_1q^k=b_m\le b_{k+1}\).
+由性质（2）存在 \(s>t\) 使得 \(b_{k+1}=\frac{b_s^2}{b_t}\). 由于 \(0<b_s<b_t\)，\(b_{k+1}=b_s\frac{b_s}{b_t}<b_s\)，所以 \(b_s>b_{k+1}\)，递减性给出 \(s\le k\)，\(t<s\le k\). 由归纳假设，
+\(b_{k+1}=\frac{b_s^2}{b_t}=b_1q^{2s-t-1}\).
+又 \(b_{k+1}<b_k=b_1q^{k-1}\)，所以 \(2s-t-1>k-1\). 结合
+\(b_{k+1}\ge b_1q^k\) 和 \(0<q<1\)，得 \(2s-t-1\le k\). 指数为整数，故
+\(2s-t-1=k\)，即 \(b_{k+1}=b_1q^k\). 因而 \(\{b_n\}\)，从而 \(\{a_n\}\)，均为等比数列.
 \end{solution}
