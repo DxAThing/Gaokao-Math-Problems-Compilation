@@ -118,11 +118,11 @@ D 选项结论正确.
 \end{solution}
 
 \begin{problem}
-若 \(x,y\) 满足约束条件 \(\left\{\begin{smallmatrix}
+若 \(x,y\) 满足约束条件 \(\begin{cases}
 x+y\ge2\\
 x+2y\le4\\
 y\ge0
-\end{smallmatrix}\right.\)，则 \(z=2x-y\) 的最大值是（\quad）
+\end{cases}\)，则 \(z=2x-y\) 的最大值是（\quad）
 
 \choices
     {\(-2\)}
@@ -412,6 +412,7 @@ C
 
 \begin{solution}
 设四点分别为 \(A(0,0)\)，\(B(4,0)\)，\(C(-1,1)\)，\(D(4,2)\).
+
 \circled{1} 若圆过 \(A,B,C\) 三点，则线段 \(AB\) 的中垂线为 \(x=2\). 设圆心为 \((2,a)\)，则
 \(4+a^2=9+(a-1)^2\)，
 解得
@@ -489,14 +490,15 @@ C
 \begin{problem}
 已知 \(\triangle ABC\) 的内角 \(A,B,C\) 的对边分别为 \(a,b,c\)，且 \(\sin C\sin\left(A-B\right)=\sin B\sin\left(C-A\right)\).
 
-\circled{1} 若 \(A=2B\)，求 \(C\)；
-
-\circled{2} 证明：\(2a^2=b^2+c^2\).
+\begin{enumerate}
+\item 若 \(A=2B\)，求 \(C\)；
+\item 证明：\(2a^2=b^2+c^2\).
+\end{enumerate}
 
 \end{problem}
 
 \begin{solution}
-\circled{1} 由 \(A=2B\) 及
+（1） 由 \(A=2B\) 及
 \(\sin C\sin\left(A-B\right)=\sin B\sin\left(C-A\right)\)
 可得
 \(\sin C\sin B=\sin B\sin\left(C-A\right)\).
@@ -515,7 +517,7 @@ C
 解得
 \(C=\frac{5\pi}{8}\).
 
-\circled{2} 由已知条件得
+（2） 由已知条件得
 \(\sin C\left(\sin A\cos B-\cos A\sin B\right)=\sin B\left(\sin C\cos A-\cos C\sin A\right)\).
 再由正弦定理可得
 \(ac\cos B-bc\cos A=bc\cos A-ab\cos C\).
@@ -622,45 +624,48 @@ C
 并计算得 \(\sum_{i=1}^{10}x_i=0.6\)，\(\sum_{i=1}^{10}y_i=3.9\)，\(\sum_{i=1}^{10}x_i^2=0.038\)；
 \(\sum_{i=1}^{10}y_i^2=1.6158\)，\(\sum_{i=1}^{10}x_iy_i=0.2474\).
 
-\circled{1} 估计该林区这种树木平均一棵的根部横截面积与平均一棵的材积量；
-
-\circled{2} 求该林区这种树木的根部横截面积与材积量的样本相关系数（精确到 \(0.01\)）；
-
-\circled{3} 现测量了该林区所有这种树木的根部横截面积，并得到所有这种树木的根部横截面积总和为 \(186\text{ m}^2\). 已知树木的材积量与其根部横截面积近似成正比，利用以上数据给出该林区这种树木的总材积量的估计值.
+\begin{enumerate}
+\item 估计该林区这种树木平均一棵的根部横截面积与平均一棵的材积量；
+\item 求该林区这种树木的根部横截面积与材积量的样本相关系数（精确到 \(0.01\)）；
+\item 现测量了该林区所有这种树木的根部横截面积，并得到所有这种树木的根部横截面积总和为 \(186\text{ m}^2\). 已知树木的材积量与其根部横截面积近似成正比，利用以上数据给出该林区这种树木的总材积量的估计值.
+\end{enumerate}
 
 附：相关系数 \(r=\dfrac{\sum_{i=1}^n(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum_{i=1}^n(x_i-\bar{x})^2\sum_{i=1}^n(y_i-\bar{y})^2}}\)，且 \(\sqrt{1.896}\approx1.377\).
 
 \end{problem}
 
 \begin{solution}
-\circled{1} 样本中 \(10\) 棵这种树木的根部横截面积的平均值
+（1）样本中 \(10\) 棵这种树木的根部横截面积的平均值
 \(\bar{x}=\frac{0.6}{10}=0.06\).
 样本中 \(10\) 棵这种树木的材积量的平均值
 \(\bar{y}=\frac{3.9}{10}=0.39\).
 据此可估计该林区这种树木平均一棵的根部横截面积为 \(0.06\text{ m}^2\)，平均一棵的材积量为 \(0.39\text{ m}^3\).
 
-\circled{2} 由题给公式，
+（2） 由题给公式，
 \(r=\frac{\sum_{i=1}^{10}(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum_{i=1}^{10}(x_i-\bar{x})^2\sum_{i=1}^{10}(y_i-\bar{y})^2}}=\frac{\sum_{i=1}^{10}x_iy_i-10\bar{x}\bar{y}}{\sqrt{\left(\sum_{i=1}^{10}x_i^2-10\bar{x}^2\right)\left(\sum_{i=1}^{10}y_i^2-10\bar{y}^2\right)}}=\frac{0.2474-10\times0.06\times0.39}{\sqrt{\left(0.038-10\times0.06^2\right)\left(1.6158-10\times0.39^2\right)}}=\frac{0.0134}{\sqrt{0.0001896}} \approx\frac{0.0134}{0.01377} \approx0.97\).
 所以样本相关系数约为 \(0.97\).
-\circled{3} 设该林区这种树木的总材积量的估计值为 \(Y\text{ m}^3\).
+
+（3） 设该林区这种树木的总材积量的估计值为 \(Y\text{ m}^3\).
 已知树木的材积量与其根部横截面积近似成正比，所以
 \(\frac{0.06}{0.39}=\frac{186}{Y}\).
 解得
 \(Y=1209\).
 所以该林区这种树木的总材积量估计为 \(1209\text{ m}^3\).
+
 \end{solution}
 
 \begin{problem}
 已知函数 \(f(x)=ax-\dfrac{1}{x}-(a+1)\ln x\)，\(x>0\).
 
-\circled{1} 当 \(a=0\) 时，求 \(f(x)\) 的最大值；
-
-\circled{2} 若 \(f(x)\) 恰有一个零点，求 \(a\) 的取值范围.
+\begin{enumerate}
+    \item 当 \(a=0\) 时，求 \(f(x)\) 的最大值；
+    \item 若 \(f(x)\) 恰有一个零点，求 \(a\) 的取值范围.
+\end{enumerate}
 
 \end{problem}
 
 \begin{solution}
-\circled{1} 当 \(a=0\) 时，
+（1） 当 \(a=0\) 时，
 \(f(x)=-\frac1x-\ln x\)，\(x>0\).
 则
 \(f'(x)=\frac{1}{x^2}-\frac1x=\frac{1-x}{x^2}\).
@@ -669,7 +674,7 @@ C
 所以
 \(f(x)_{\max}=f(1)=-1\).
 
-\circled{2} 因为
+（2） 因为
 \(f(x)=ax-\frac1x-(a+1)\ln x\)，\(x>0\)，
 所以
 \(f'(x)=a+\frac1{x^2}-\frac{a+1}{x}=\frac{(ax-1)(x-1)}{x^2}\).
@@ -711,14 +716,16 @@ C
 \begin{problem}
 已知椭圆 \(E\) 的中心为坐标原点，对称轴为 \(x\) 轴，\(y\) 轴，且过 \(A(0,-2)\)，\(B\left(\dfrac32,-1\right)\) 两点.
 
-\circled{1} 求 \(E\) 的方程；
+\begin{enumerate}
+\item 求 \(E\) 的方程；
 
-\circled{2} 设过点 \(P(1,-2)\) 的直线交 \(E\) 于 \(M,N\) 两点，过 \(M\) 且平行于 \(x\) 轴的直线与线段 \(AB\) 交于点 \(T\)，点 \(H\) 满足 \(MT=TH\). 证明：直线 \(HN\) 过定点.
+\item 设过点 \(P(1,-2)\) 的直线交 \(E\) 于 \(M,N\) 两点，过 \(M\) 且平行于 \(x\) 轴的直线与线段 \(AB\) 交于点 \(T\)，点 \(H\) 满足 \(MT=TH\). 证明：直线 \(HN\) 过定点.
+\end{enumerate}
 
 \end{problem}
 
 \begin{solution}
-\circled{1} 设椭圆 \(E\) 的方程为
+（1）设椭圆 \(E\) 的方程为
 \(mx^2+ny^2=1\).
 由点 \(A(0,-2)\)，\(B\left(\frac32,-1\right)\) 在椭圆上，得
 \(4n=1\)，\(\frac94m+n=1\).
@@ -727,7 +734,7 @@ C
 所以椭圆 \(E\) 的方程为
 \(\frac{x^2}{3}+\frac{y^2}{4}=1\).
 
-\circled{2} 因为
+（2）因为
 \(A(0,-2)\)，\(B\left(\frac32,-1\right)\)，
 所以直线 \(AB\) 的方程为
 \(y+2=\frac23x\).
@@ -740,6 +747,7 @@ C
 \(M\left(1,-\frac{2\sqrt6}{3}\right)\)，\(N\left(1,\frac{2\sqrt6}{3}\right)\).
 由 \(AB\) 的方程得
 \(T\left(-\sqrt6+3,-\frac{2\sqrt6}{3}\right)\).
+
 由 \(MT=TH\) 得
 \(H\left(-2\sqrt6+5,-\frac{2\sqrt6}{3}\right)\).
 于是直线 \(HN\) 过点 \((0,-2)\).
@@ -757,14 +765,15 @@ C
 \begin{problem}
 在直角坐标系 \(xOy\) 中，曲线 \(C\) 的参数方程为 \(x=\sqrt3\cos2t\)，\(y=2\sin t\)（\(t\) 为参数），以坐标原点为极点，\(x\) 轴正半轴为极轴建立极坐标系，已知直线 \(l\) 的极坐标方程为 \(\rho\sin\left(\theta+\frac{\pi}{3}\right)+m=0\).
 
-\circled{1} 写出 \(l\) 的直角坐标方程；
-
-\circled{2} 若 \(l\) 与 \(C\) 有公共点，求 \(m\) 的取值范围.
+\begin{enumerate}
+\item 写出 \(l\) 的直角坐标方程；
+\item 若 \(l\) 与 \(C\) 有公共点，求 \(m\) 的取值范围.
+\end{enumerate}
 
 \end{problem}
 
 \begin{solution}
-\circled{1} 因为
+（1）因为
 \(\rho\sin\left(\theta+\frac{\pi}{3}\right)+m=0\)，
 所以
 \(\frac12\rho\sin\theta+\frac{\sqrt3}{2}\rho\cos\theta+m=0\).
@@ -775,7 +784,7 @@ C
 整理得 \(l\) 的直角坐标方程为
 \(\sqrt3x+y+2m=0\).
 
-\circled{2} 联立 \(l\) 与 \(C\) 的方程，即将
+（2）联立 \(l\) 与 \(C\) 的方程，即将
 \(x=\sqrt3\cos2t\)，\(y=2\sin t\)
 代入
 \(\sqrt3x+y+2m=0\)
@@ -807,14 +816,15 @@ C
 \begin{problem}
 已知 \(a,b,c>0\)，且 \(a^{\frac32}+b^{\frac32}+c^{\frac32}=1\). 证明：
 
-\circled{1} \(abc\le\dfrac19\)；
-
-\circled{2} \(\dfrac{a}{b+c}+\dfrac{b}{c+a}+\dfrac{c}{a+b}\le\dfrac{1}{2\sqrt{abc}}\).
+\begin{enumerate}
+\item \(abc\le\dfrac19\)；
+\item \(\dfrac{a}{b+c}+\dfrac{b}{c+a}+\dfrac{c}{a+b}\le\dfrac{1}{2\sqrt{abc}}\).
+\end{enumerate}
 
 \end{problem}
 
 \begin{solution}
-\circled{1} 因为
+（1） 因为
 \(a^{\frac32}>0\)，\(b^{\frac32}>0\)，\(c^{\frac32}>0\)，
 由三元均值不等式可得 \(\frac{a^{\frac32}+b^{\frac32}+c^{\frac32}}{3}\ge\sqrt[3]{a^{\frac32}b^{\frac32}c^{\frac32}}=\sqrt{abc}\).
 又
@@ -824,7 +834,7 @@ C
 故
 \(abc\le\frac19\).
 
-\circled{2} 因为
+（2） 因为
 \(b+c\ge2\sqrt{bc}\)，\(c+a\ge2\sqrt{ca}\)，\(a+b\ge2\sqrt{ab}\)，
 所以
 \(\frac{a}{b+c}\le\frac{a}{2\sqrt{bc}}=\frac{a^{\frac32}}{2\sqrt{abc}}\)，
