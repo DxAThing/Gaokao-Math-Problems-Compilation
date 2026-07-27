@@ -207,6 +207,8 @@
 }
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta, calc, intersections, positioning, shapes.geometric}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \usepackage{wrapfig}
 % 调整 wrapfigure 与正文的间距
 \setlength{\intextsep}{0pt}  % 纵向：图片上下的间距
@@ -953,3 +955,12 @@
     \let\oldoint\oint           \make@display@bigint{\oldoint}{\oint}
 }
 \makeatother
+
+% PDF 导航：目录与大纲均采用“年份 → 试卷”两级结构。
+\usepackage[hidelinks,bookmarksdepth=chapter,hypertexnames=false]{hyperref}
+\usepackage{bookmark}
+\newcommand{\examyear}[1]{%
+    \clearpage
+    \phantomsection
+    \addcontentsline{toc}{part}{#1}%
+}
