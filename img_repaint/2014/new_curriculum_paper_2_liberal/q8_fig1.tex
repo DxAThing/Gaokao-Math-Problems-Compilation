@@ -16,9 +16,9 @@
   x=1cm,y=1cm,baseline,
   flowarrow/.style={-{Latex[length=2.1mm,width=1.5mm]},line width=0.45pt},
   nodebox/.style={draw,line width=0.45pt,inner sep=2pt,minimum height=0.66cm,
-    anchor=center,align=center,execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+    anchor=center,align=center,execute at begin node={\setlength{\parindent}{0pt}}},
   branchlabel/.style={anchor=center,align=center,inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+    execute at begin node={\setlength{\parindent}{0pt}}},
   term/.style={nodebox,rounded corners=2.5pt,minimum width=1.30cm,text width=1.30cm},
   io/.style={nodebox,shape=trapezium,trapezium left angle=70,trapezium right angle=110,
     minimum width=2.00cm,text width=1.70cm,minimum height=0.72cm},
@@ -29,7 +29,7 @@
 
   \node[term] (start) at (0,11.10) {开始};
   \node[io] (input) at (0,9.82) {输入 $x,t$};
-  \node[nodebox,text width=2.90cm,minimum width=2.90cm] (init) at (0,8.52) {$M=1,\ S=3$};
+  \node[nodebox,text width=2.90cm,minimum width=2.90cm] (init) at (0,8.52) {$M=1,S=3$};
   \node[nodebox,text width=1.45cm,minimum width=1.45cm] (kinit) at (0,7.22) {$k=1$};
   \node[decision] (test) at (0,5.72) {$k\leq t$};
   \node[nodebox,text width=2.50cm,minimum width=2.50cm,minimum height=1.05cm] (multiply) at (-2.30,4.05)
@@ -47,18 +47,16 @@
   \draw[flowarrow] (0,6.62) -- (test.north);
 
   % Affirmative branch through the three process nodes.
-  \draw[flowarrow] (test.west) -- (-2.30,5.72) -- (multiply.north);
+  \draw[flowarrow] (test.west) -- node[branchlabel,above] {是} (-2.30,5.72) -- (multiply.north);
   \draw[flowarrow] (multiply.south) -- (sum.north);
   \draw[flowarrow] (sum.south) -- (increment.north);
 
   % Negative branch to output and termination, independent of the loop route.
-  \draw[flowarrow] (test.east) -- (3.35,5.72) -- (output.north);
+  \draw[flowarrow] (test.east) -- node[branchlabel,above] {否} (3.35,5.72) -- (output.north);
   \draw[flowarrow] (output.south) -- (finish.north);
 
   % Return path from k=k+1 to the single input point above the decision.
   \draw (increment.west) -- (-4.00,0.85) -- (-4.00,6.62);
   \draw[flowarrow] (-4.00,6.62) -- (0,6.62);
 
-  \node[branchlabel] at (-2.78,6.15) {是};
-  \node[branchlabel] at (2.42,6.15) {否};
 \end{tikzpicture}

@@ -33,7 +33,8 @@
   \node[terminal] (finish) at (0,1.18) {结束};
 
   % Main flow and the single vertical entry into a=aq.
-  \coordinate (loopjoin) at ([yshift=0.38cm]multiply.north);
+  \coordinate (loopjoin) at (0,7.55);
+  \coordinate (loopleft) at (-2.65,4.05);
   \draw[->] (start.south) -- (init.north);
   \draw[->] (init.south) -- (loopjoin) -- (multiply.north);
   \draw[->] (multiply.south) -- (increment.north);
@@ -42,5 +43,5 @@
   \draw[->] (output.south) -- (finish.north);
 
   % 否 returns left, then the horizontal arrow joins the main stem above a=aq.
-  \draw[->] (test.west) -- node[flowtext,above] {否} ++(-0.65cm,0) |- (loopjoin);
+  \draw[->] (test.west) -- node[flowtext,above] {否} (loopleft) |- (loopjoin);
 \end{tikzpicture}
