@@ -1,0 +1,57 @@
+% Source: source/普通高考/2008/2008江苏.pdf, page 1, question 7.
+% Nodes: 开始; S←0; i←1; 输入 G_i,F_i; S←S+G_i×F_i; i≥5;
+% 输出 S; 结束; i←i+1.
+% Directed edges: 开始→S←0→i←1→输入→累加→判定;
+% 判定(Y)→输出 S→结束; 判定(N)→i←i+1→输入.
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=0.55pt,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\normalsize,anchor=center,align=center,
+    execute at begin node={\everypar{}\leftskip=0pt\rightskip=0pt\parindent=0pt
+      \hangindent=0pt\hangafter=1\parshape=0}},
+  flowbox/.style={draw,minimum height=.70cm,inner xsep=4pt,inner ysep=2pt,
+    align=center},
+  terminal/.style={flowbox,rounded corners=.18cm,minimum width=1.55cm,
+    minimum height=.74cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
+    trapezium right angle=108,minimum height=.80cm},
+  decision/.style={flowbox,shape=diamond,aspect=2.85,minimum width=3.45cm,
+    minimum height=1.00cm,inner sep=1pt},
+  flowarrow/.style={->,line width=0.55pt},
+]
+  \node[terminal] (start) at (0,10.90) {开始};
+  \node[flowbox,minimum width=2.25cm] (initS) at (0,9.55)
+    {$S\leftarrow 0$};
+  \node[flowbox,minimum width=2.15cm] (initI) at (0,8.20)
+    {$i\leftarrow 1$};
+  \node[io,minimum width=3.85cm] (input) at (0,6.80)
+    {输入 $G_i,F_i$};
+  \node[flowbox,minimum width=4.60cm] (accum) at (0,5.30)
+    {$S\leftarrow S+G_i\times F_i$};
+  \node[decision] (test) at (0,3.72) {$i\geqslant 5$};
+  \node[flowbox,minimum width=2.70cm] (increment) at (-3.35,5.30)
+    {$i\leftarrow i+1$};
+  \node[io,minimum width=2.35cm] (output) at (0,2.02) {输出 $S$};
+  \node[terminal] (finish) at (0,0.68) {结束};
+
+  \draw[flowarrow] (start.south) -- (initS.north);
+  \draw[flowarrow] (initS.south) -- (initI.north);
+  \draw[flowarrow] (initI.south) -- (input.north);
+  \draw[flowarrow] (input.south) -- (accum.north);
+  \draw[flowarrow] (accum.south) -- (test.north);
+
+  % 否分支回到输入框；回线不与输出分支共线。
+  \draw[flowarrow] (test.west) -- (-3.35,3.72) -- (-3.35,5.30)
+    -- (increment.south);
+  \draw[flowarrow] (increment.north) -- (-3.35,6.80) -- (input.west);
+  \node[anchor=east] at (-1.70,3.84) {N};
+
+  % 是分支独立通往输出，不与循环回线交汇。
+  \draw[flowarrow] (test.south) -- (output.north);
+  \node[anchor=west] at (0.18,2.86) {Y};
+  \draw[flowarrow] (output.south) -- (finish.north);
+
+  \path[use as bounding box] (-4.75,0.30) rectangle (2.35,11.30);
+\end{tikzpicture}

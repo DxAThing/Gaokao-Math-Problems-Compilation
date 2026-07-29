@@ -1,0 +1,40 @@
+% Source: source/普通高考/1998/1998上海文.pdf, page 1, question 6.
+% Direct node -> directed-edge list from the original process network:
+% 1->2 (a,2), 1->3 (m,0), 2->5 (c,3), 3->4 (b,3), 4->5 (n,0, dashed),
+% 4->6 (d,1), 5->6 (p,0, dashed), 5->7 (e,3), 6->7 (f,4), 7->8 (g,2).
+% Solid edges are the eight numbered activities; dashed edges are the two
+% zero-duration dummy activities 4->5 and 5->6. All node text is centered
+% with local zero indentation.
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=0.55pt,
+  line cap=round,
+  line join=round,
+  font=\normalsize,
+  every node/.style={anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  activity/.style={inner sep=0pt,align=center},
+  event/.style={circle,draw,minimum size=0.62cm,inner sep=0pt},
+]
+  \path[use as bounding box] (-0.45,-1.75) rectangle (9.05,1.75);
+
+  \node[event] (n1) at (0,0) {1};
+  \node[event] (n2) at (1.70,1.25) {2};
+  \node[event] (n3) at (1.70,-1.25) {3};
+  \node[event] (n4) at (3.45,-1.25) {4};
+  \node[event] (n5) at (5.05,1.25) {5};
+  \node[event] (n6) at (5.35,-1.25) {6};
+  \node[event] (n7) at (6.95,0) {7};
+  \node[event] (n8) at (8.55,0) {8};
+
+  \draw[->] (n1) -- node[activity,above,sloped] {\shortstack{$a$\\2}} (n2);
+  \draw[->] (n1) -- node[activity,below,sloped] {\shortstack{$m$\\0}} (n3);
+  \draw[->] (n2) -- node[activity,above] {\shortstack{$c$\\3}} (n5);
+  \draw[->] (n3) -- node[activity,above] {\shortstack{$b$\\3}} (n4);
+  \draw[->,dashed] (n4) -- node[activity,left,sloped] {\shortstack{$n$\\0}} (n5);
+  \draw[->] (n4) -- node[activity,below] {\shortstack{$d$\\1}} (n6);
+  \draw[->,dashed] (n5) -- node[activity,right,sloped] {\shortstack{$p$\\0}} (n6);
+  \draw[->] (n5) -- node[activity,above,sloped] {\shortstack{$e$\\3}} (n7);
+  \draw[->] (n6) -- node[activity,above,sloped] {\shortstack{$f$\\4}} (n7);
+  \draw[->] (n7) -- node[activity,above] {\shortstack{$g$\\2}} (n8);
+\end{tikzpicture}

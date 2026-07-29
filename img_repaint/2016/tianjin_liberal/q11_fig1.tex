@@ -59,21 +59,19 @@
     % S>=6? no branch is separate from the yes path and merges at n=n+1.
     \coordinate (noTurn) at (-1.55,7.02);
     \coordinate (noDrop) at (-1.55,5.95);
-    \draw (testS.west) -- (noTurn) -- (noDrop);
+    \draw (testS.west) -- node[above left] {否} (noTurn) -- (noDrop);
     \draw[->] (noDrop) -- (double.north);
-    \draw[->] (double.south) -- (inc.north west);
-    \node[anchor=south east, inner sep=1pt] at (-1.80,7.16) {否};
+    \draw[->] (double.south) |- (inc.west);
 
     % Increment and second decision.
     \draw[->] (inc.south) -- (testn.north);
-    \draw[->] (testn.south) -- node[right=2pt] {是} (output.north);
+    \draw[->] (testn.south) -- node[right] {是} (output.north);
     \draw[->] (output.south) -- (finish.north);
 
     % n>3? no branch loops back to the first decision without touching output.
     \coordinate (loopRight) at (2.90,2.58);
     \coordinate (loopTop) at (2.90,7.90);
     \coordinate (loopJoin) at (0,7.90);
-    \draw (testn.east) -- (loopRight) -- (loopTop);
+    \draw (testn.east) -- node[above] {否} (loopRight) -- (loopTop);
     \draw[->] (loopTop) -- (loopJoin) -- (testS.north);
-    \node[anchor=south west, inner sep=1pt] at (1.62,2.76) {否};
 \end{tikzpicture}

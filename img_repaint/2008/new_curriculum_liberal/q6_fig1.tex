@@ -1,0 +1,60 @@
+% Source: source/普通高考/2008/2008新课标文(海南,宁夏).pdf, page 1, question 6.
+% pdfimages -list found no embedded bitmap; the program flowchart is vector artwork.
+% Node -> directed-edge list: 开始 -> 输入 a,b,c -> x=a -> b>x?;
+% 否 -> second (blank) decision -> 输出 x -> 结束;
+% 是 -> x=b -> left return arrow -> shared stem above the second decision;
+% second 是 -> x=c -> left return arrow -> shared stem above 输出 x.
+% All connectors are solid; branch labels are attached to their corresponding edges.
+
+\begin{tikzpicture}[
+    >=Stealth,
+    x=1cm,
+    y=0.86cm,
+    line width=0.45pt,
+    line cap=round,
+    line join=round,
+    font=\normalsize,
+    every node/.style={anchor=center, align=center,
+        execute at begin node={\setlength{\parindent}{0pt}}},
+    flowbox/.style={draw, anchor=center, align=center, inner xsep=3pt,
+        inner ysep=2pt, execute at begin node={\setlength{\parindent}{0pt}}},
+    terminal/.style={flowbox, rounded corners=0.16cm,
+        minimum width=1.35cm, minimum height=0.68cm},
+    process/.style={flowbox, minimum height=0.68cm},
+    decision/.style={flowbox, diamond, aspect=3.4, inner sep=0pt,
+        minimum width=3.45cm, minimum height=1.02cm},
+    io/.style={flowbox, trapezium, trapezium left angle=72,
+        trapezium right angle=108, minimum height=0.76cm},
+    branchlabel/.style={anchor=center, align=center, inner sep=0pt,
+        execute at begin node={\setlength{\parindent}{0pt}}},
+]
+    \path[use as bounding box] (-2.95,-1.05) rectangle (4.20,11.45);
+
+    \node[terminal] (start) at (0,10.85) {开始};
+    \node[io, minimum width=3.55cm] (input) at (0,9.40) {输入 $a,b,c$};
+    \node[process, minimum width=1.65cm] (seta) at (0,7.95) {$x=a$};
+    \node[decision] (first) at (0,6.42) {$b>x$};
+    \node[process, minimum width=1.75cm] (setb) at (3.30,5.00) {$x=b$};
+    \node[decision] (second) at (0,3.60) {};
+    \node[process, minimum width=1.75cm] (setc) at (3.30,2.58) {$x=c$};
+    \node[io, minimum width=2.15cm] (output) at (0,0.90) {输出 $x$};
+    \node[terminal] (finish) at (0,-0.50) {结束};
+
+    % Main chain and the first decision branch.
+    \draw[->] (start.south) -- (input.north);
+    \draw[->] (input.south) -- (seta.north);
+    \draw[->] (seta.south) -- (first.north);
+    \draw (first.south) -- node[branchlabel,left=2pt] {否} (0,4.65);
+    \draw[->] (0,4.65) -- (second.north);
+    \draw[->] (first.east) -- node[branchlabel,above=1pt] {是} (3.30,6.42)
+        -- (setb.north);
+    \draw[->] (setb.south) -- (3.30,4.65) -- (0,4.65);
+
+    % Second decision branch and the output path.
+    \draw (second.south) -- node[branchlabel,left=2pt] {否} (0,1.95);
+    \draw[->] (0,1.95) -- (output.north);
+    \draw[->] (second.east) -- node[branchlabel,above=1pt] {是} (3.30,3.60)
+        -- (setc.north);
+    \draw[->] (setc.south) -- (3.30,1.95) -- (0,1.95);
+    \draw[->] (output.south) -- (finish.north);
+\end{tikzpicture}
