@@ -34,34 +34,40 @@
   \node[io] (input) at (0,8.55) {输入 $a$};
   \node[process, minimum width=4.35cm] (initialize) at (0,7.05)
     {$P=0,Q=1,n=0$};
-  \node[decision] (test) at (0,5.45) {$P\leqslant Q$};
-  \node[process, minimum width=3.35cm] (updateP) at (0,3.98)
+  \node[decision] (test) at (0,5.20) {$P\leqslant Q$};
+  \node[process, minimum width=3.35cm] (updateP) at (0,3.62)
     {$P=P+a^n$};
   \node[process, minimum width=3.35cm] (updateQ) at (0,2.55)
     {$Q=2Q+1$};
   \node[process, minimum width=3.35cm] (updateN) at (0,1.12)
     {$n=n+1$};
-  \node[io] (output) at (4.00,3.98) {输出 $n$};
+  \node[io] (output) at (4.00,3.62) {输出 $n$};
   \node[terminal] (finish) at (4.00,2.55) {结束};
 
   % Main flow and the single downward arrow entering the decision.
   \draw[->] (start.south) -- (input.north);
   \draw[->] (input.south) -- (initialize.north);
-  \coordinate (merge) at (0,6.05);
+  \coordinate (merge) at (0,6.15);
   \draw (initialize.south) -- (merge);
   \draw[->] (merge) -- (test.north);
 
   % Yes branch and its sequential updates.
-  \draw[->] (test.south) -- node[branchlabel, right] {是} (updateP.north);
+  \draw[->] (test.south) --
+    node[branchlabel, anchor=west, xshift=3pt] {是} (updateP.north);
   \draw[->] (updateP.south) -- (updateQ.north);
   \draw[->] (updateQ.south) -- (updateN.north);
 
   % Independent loop-back path to the decision stem.
-  \draw[->] (updateN.south) -- (updateN.south |- 0,0.55)
-    -- (-2.05,0.55) -- (-2.05,6.05) -- (merge);
+  % The return arrowhead sits on the outer horizontal leg, not at the shared
+  % merge connector; the final horizontal join is unarrowed.
+  \draw (updateN.south) -- (updateN.south |- 0,0.55)
+    -- (-2.05,0.55);
+  \draw (-2.05,0.55) -- (-2.05,6.15);
+  \draw[->] (-2.05,6.15) -- (-0.55,6.15);
+  \draw (-0.55,6.15) -- (merge);
 
   % No branch exits right and terminates independently.
   \draw[->] (test.east) -- node[branchlabel, above] {否}
-    (4.00,5.45) -- (4.00,4.55) -- (output.north);
+    (4.00,5.20) -- (4.00,4.55) -- (output.north);
   \draw[->] (output.south) -- (finish.north);
 \end{tikzpicture}

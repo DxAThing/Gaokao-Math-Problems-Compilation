@@ -40,7 +40,8 @@
     % Main downward path and the terminating branch.  The loop return first
     % meets this trunk, followed by one separate arrow into the test diamond.
     \draw[->] (start.south) -- (init.north);
-    \coordinate (merge-level) at (0,8.95);
+    % Keep the merge below the initialization box (>=2.5 mm clearance).
+    \coordinate (merge-level) at (0,8.60);
     \draw (init.south) -- (merge-level);
     \draw[->] (merge-level) -- (test.north);
     \draw[->] (test.south) -- (output.north);
@@ -49,8 +50,9 @@
     % 是 branch: increment k, accumulate s, then return before the test.
     \draw[->] (test.east) -- (2.55,5.10) -- (2.55,5.57) -- (increment.south);
     \draw[->] (increment.north) -- (add.south);
-    \coordinate (merge-pre) at (0.20,8.95);
-    \draw[->] (add.north) -- (2.55,8.95) -- (merge-pre);
+    \coordinate (merge-pre) at (0.40,8.60);
+    % Stop the loop arrow before the merge and finish with a plain connector.
+    \draw[->] (add.north) -- (2.55,8.60) -- (merge-pre);
     \draw (merge-pre) -- (merge-level);
     \node[anchor=south west, text centered, inner xsep=1pt, inner ysep=1pt] at (0.92,5.23) {是};
     \node[anchor=west, text centered, inner xsep=1pt, inner ysep=1pt] at (0.14,4.42) {否};

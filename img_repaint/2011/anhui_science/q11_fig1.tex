@@ -30,6 +30,7 @@
   \node[term] (finish) at (0,2.82) {结束};
 
   \coordinate (sumjoin) at (0,7.98);
+  \coordinate (return-entry) at (0.35,7.98);
   \coordinate (returntop) at (3.00,7.98);
 
   \draw[flowarrow] (start.south) -- (init.north);
@@ -44,6 +45,9 @@
   % 否 branch updates k, then returns left into the shared sum entry.
   \draw[flowarrow] (test.east) -- (inc.west);
   \draw (inc.north) -- (returntop);
-  \draw[flowarrow] (returntop) -- (sumjoin);
+  % Stop the return arrow before the three-way junction, then use a short
+  % unarrowed connector into the shared stem.
+  \draw[flowarrow] (returntop) -- (return-entry);
+  \draw (return-entry) -- (sumjoin);
   \node[branchlabel] at (1.88,6.35) {否};
 \end{tikzpicture}

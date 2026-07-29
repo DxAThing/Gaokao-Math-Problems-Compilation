@@ -52,5 +52,7 @@
   % 否 branch increments i, then returns to the connector above x=x-1.
   \draw[->] (test.east) -- node[flowtext, above] {否}
     (3.10,3.00) -- (increment.south);
-  \draw[->] (increment.north) -- (3.10,5.60) -- (0,5.60);
+  % Lower the return rail so it clears the initialization box while still
+  % entering the main stem at an interior point.
+  \draw[->] (increment.north) -- (3.10,5.25) -- (0,5.25);
 \end{tikzpicture}

@@ -31,7 +31,7 @@
     {输入 $\varepsilon$ ($\varepsilon>0$)};
   \node[flowbox,minimum width=4.05cm] (init) at (0,6.48)
     {$F_0=1,F_1=2,n=1$};
-  \node[flowbox,minimum width=2.85cm] (sum1) at (0,5.18)
+  \node[flowbox,minimum width=2.85cm] (sum1) at (0,5.10)
     {$F_1=F_0+F_1$};
   \node[flowbox,minimum width=2.85cm] (sum0) at (0,3.92)
     {$F_0=F_1-F_0$};
@@ -59,7 +59,10 @@
 
   % 否 branch loops right and returns left into the shared entry.
   \draw (test.east) -- (loop-bottom) -- (loop-right);
-  \draw[flowarrow] (loop-right) -- (loopjoin);
+  % Keep the return arrowhead clear of the shared entry; the final unarrowed
+  % stub preserves the same directed edge without stacking tips at loopjoin.
+  \draw[flowarrow] (loop-right) -- (0.35,5.80);
+  \draw (0.35,5.80) -- (loopjoin);
   \node[inner sep=0pt,anchor=west] at (2.35,2.00) {否};
 
   \path[use as bounding box] (-2.35,-2.00) rectangle (3.70,9.45);

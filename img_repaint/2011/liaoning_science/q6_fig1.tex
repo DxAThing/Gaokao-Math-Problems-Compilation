@@ -37,17 +37,20 @@
 
   \draw[->] (start.south) -- (input.north);
   \draw[->] (input.south) -- (init.north);
-  \draw[->] (init.south) -- (test.north);
+  \coordinate (stem) at (0,7.10);
+  \draw (init.south) -- (stem);
+  \draw[->] (stem) -- (test.north);
 
   \draw[->] (test.south) -- node[branchlabel,right=2pt] {是} (sum.north);
   \draw[->] (sum.south) -- (shift.north);
   \draw[->] (shift.south) -- (inc.north);
 
   % 是 branch loops to the connector immediately above the decision.
-  \coordinate (loop-bottom) at (0,0.85);
-  \coordinate (loop-left) at (-2.60,0.85);
-  \coordinate (loop-entry) at (-2.60,6.70);
-  \draw[->] (inc.south) -- (loop-bottom) -- (loop-left) -- (loop-entry) -- (0,6.70);
+  \coordinate (loop-bottom) at (0,1.10);
+  \coordinate (loop-left) at (-2.60,1.10);
+  \coordinate (loop-entry) at (-2.60,7.10);
+  \draw[->] (inc.south) -- (loop-bottom) -- (loop-left) -- (loop-entry) -- (-0.80,7.10);
+  \draw (-0.80,7.10) -- (stem);
 
   % 否 branch runs independently right and down, then joins the output stem.
   \coordinate (merge) at (0,0.85);

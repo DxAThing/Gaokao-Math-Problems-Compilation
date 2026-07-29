@@ -36,7 +36,8 @@
 
   % Main sequence with a single downward arrow at the shared loop entry.
   \draw[flowarrow] (start.south) -- (init.north);
-  \coordinate (loopjoin) at (0,6.32);
+  \coordinate (loopjoin) at (0,6.30);
+  \coordinate (looptip) at (0.38,6.30);
   \draw (init.south) -- (loopjoin);
   \draw[flowarrow] (loopjoin) -- (increment.north);
   \draw[flowarrow] (increment.south) -- (update.north);
@@ -44,10 +45,12 @@
   \draw[flowarrow] (test.south) -- node[right] {是} (output.north);
   \draw[flowarrow] (output.south) -- (finish.north);
 
-  % 否 branch: right, up, then left back into the shared entry above i=i+1.
+  % 否 branch: right, up, then left back into the shared entry above i=i+1;
+  % place the return arrowhead before the merge and leave an unmarked tail.
   \coordinate (right) at (2.75,2.90);
-  \coordinate (righttop) at (2.75,6.32);
+  \coordinate (righttop) at (2.75,6.30);
   \draw (test.east) -- node[above] {否} (right);
   \draw (right) -- (righttop);
-  \draw[flowarrow] (righttop) -- (loopjoin);
+  \draw[flowarrow] (righttop) -- (looptip);
+  \draw (looptip) -- (loopjoin);
 \end{tikzpicture}

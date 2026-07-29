@@ -54,10 +54,12 @@
   % explicit central connector to avoid a false diagonal edge.
   \draw[flowarrow] (0,0.77) -- (finish.north);
 
-  % The no branch goes right, up, then left into the s,t connector.
-  \draw[flowarrow] (test.east) -- (3.30,2.50) -- (3.30,7.16) -- (0,7.16);
+  % The no branch goes right, up, then left into the s,t connector.  Keep
+  % its arrowhead clear of the degree-3 merge junction.
+  \draw[flowarrow] (test.east) -- (3.30,2.50) -- (3.30,7.30) -- (0.35,7.30);
+  \draw (0.35,7.30) -- (0,7.30);
   % Main connector continues from the loop junction into the s,t box.
-  \draw[flowarrow] (init.south) -- (0,7.16) -- (st.north);
+  \draw[flowarrow] (init.south) -- (0,7.30) -- (st.north);
 
   \node[anchor=west,inner sep=0pt] at (0.48,1.90) {是};
   \node[anchor=west,inner sep=0pt] at (2.42,2.92) {否};

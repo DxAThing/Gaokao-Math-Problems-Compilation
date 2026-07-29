@@ -24,9 +24,9 @@
         (start) at (0,8.20) {开始};
     \node[draw, trapezium, trapezium left angle=70, trapezium right angle=110,
         minimum width=1.20cm, minimum height=0.62cm]
-        (input) at (0,6.82) {输入 \(n=0\)};
+        (input) at (0,6.92) {输入 \(n=0\)};
     \node[draw, minimum width=2.20cm, minimum height=0.55cm]
-        (assign) at (0,5.50) {\(A=3^n-2^n\)};
+        (assign) at (0,5.40) {\(A=3^n-2^n\)};
     \node[draw, diamond, aspect=4.0, minimum width=3.40cm, minimum height=0.85cm]
         (test) at (0,4.10) {};
     \node[draw, trapezium, trapezium left angle=70, trapezium right angle=110,
@@ -41,7 +41,9 @@
 
     % Downward path and output branch.
     \draw[->] (start.south) -- (input.north);
-    \draw[->] (input.south) -- (assign.north);
+    % Arrowheads stop in the clear corridor; final shafts enter the boxes.
+    \draw[->] (input.south) -- (0,6.15);
+    \draw[-] (0,6.15) -- (assign.north);
     \draw[->] (assign.south) -- (test.north);
     \draw[->] (test.south) -- (output.north)
         node[pos=0.45, right=2pt] {否};
@@ -51,7 +53,6 @@
     \draw (test.west) -- (-3.25,4.10) -- (-3.25,4.62);
     \draw[->] (-3.25,4.62) -- (loopassign.south);
     \node[inner sep=0pt] at (-2.10,3.72) {是};
-    \draw (loopassign.north) -- (-3.25,6.10) -- (-0.12,6.10);
-    \draw[->] (-0.12,6.10) -- (0,6.10);
-    \draw[->] (0,6.10) -- (assign.north);
+    \draw[->] (loopassign.north) -- (-3.25,6.15) -- (-1.50,6.15);
+    \draw[-] (-1.50,6.15) -- (assign.north);
 \end{tikzpicture}

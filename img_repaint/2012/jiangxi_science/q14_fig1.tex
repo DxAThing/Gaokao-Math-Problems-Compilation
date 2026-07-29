@@ -59,8 +59,10 @@
     \draw[->] (first.east) -- node[branchlabel,above=3pt] {否} (5.0,10.75)
         -- (azero.north);
     \coordinate (branchMerge) at (0,7.30);
+    \coordinate (branchTip) at (0.35,7.30);
     \draw (azero.south) -- (5.0,7.30);
-    \draw[->] (5.0,7.30) -- (branchMerge);
+    \draw[->] (5.0,7.30) -- (branchTip);
+    \draw (branchTip) -- (branchMerge);
     \draw[->] (branchMerge) -- (add.north);
 
     % Common update path and second test.

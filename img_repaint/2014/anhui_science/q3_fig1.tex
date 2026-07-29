@@ -5,7 +5,7 @@
 % elements: rounded 开始/结束 terminals; assignment rectangles x=1,y=1, z=x+y, x=y, y=z;
 % condition diamond z<=50?; output parallelogram 输出 z; solid arrows and 是/否 labels.
 % node-edge list: 开始→(x=1,y=1)→z=x+y→z<=50?; 是→x=y→y=z→left loop-back to the
-% connector before z=x+y; 否→输出 z→结束. No other connecting segments are present.
+% main stem immediately before z=x+y; 否→输出 z→结束. No other connecting segments are present.
 % solid segments: all node borders and directed connectors; dashed segments: none.
 % Labels are centered in nodes with local zero paragraph indentation and compact padding.
 
@@ -40,9 +40,9 @@
   \node[terminal] (finish) at (3.58,2.02) {结束};
 
   \draw[->] (start.south) -- (init.north);
-  \coordinate (sum-entry) at (0,6.95);
-  \draw (init.south) -- (sum-entry);
-  \draw[->] (sum-entry) -- (sum.north);
+  % Keep the main stem as one directed segment; the return arrow lands on its
+  % interior rather than creating an extra graph junction.
+  \draw[->] (init.south) -- (sum.north);
   \draw[->] (sum.south) -- (test.north);
   \draw[->] (test.south) -- node[branchlabel,right] {是} (equalx.north);
   \draw[->] (equalx.south) -- (equaly.north);
@@ -50,10 +50,10 @@
     (3.58,4.88) -- (3.58,3.88) -- (output.north);
   \draw[->] (output.south) -- (finish.north);
 
-  % The yes branch returns left from y=z to the connector immediately before z=x+y.
+  % The yes branch returns left from y=z to the stem immediately before z=x+y.
   \coordinate (loop-left) at (-3.55,1.42);
-  \coordinate (loop-merge) at (-3.55,6.95);
-  \draw[->] (equaly.south) -- (0,1.42) -- (loop-left) -- (loop-merge) -- (sum-entry);
+  \coordinate (loop-merge) at (-3.55,7.05);
+  \draw[->] (equaly.south) -- (0,1.42) -- (loop-left) -- (loop-merge) -- (0,7.05);
 
   \path[use as bounding box] (-3.78,9.55) rectangle (4.15,1.70);
 \end{tikzpicture}

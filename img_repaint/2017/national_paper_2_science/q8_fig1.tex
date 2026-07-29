@@ -52,9 +52,11 @@
 
     % True loop: after increment, turn left and rise to the decision entry.
     \coordinate (leftbranch) at (-2.05,-6.30);
-    \coordinate (leftlevel) at (-2.05,-2.46);
+    % Place the loop entry below the initialization box (>=2.5 mm clear).
+    \coordinate (leftlevel) at (-2.05,-2.70);
     \draw (inc.west) -- (leftbranch) -- (leftlevel);
-    \draw[flowarrow] (leftlevel) -- (0,-2.46);
+    \draw[flowarrow] (leftlevel) -- (-0.32,-2.70);
+    \draw (-0.32,-2.70) -- (0,-2.70);
 
     % Preserve the source crop's modest white border around the inked chart.
     \path[use as bounding box] (-2.55,0.30) rectangle (3.10,-8.90);

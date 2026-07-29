@@ -40,8 +40,10 @@
   \coordinate (firstjoin) at (0,8.35);
   \coordinate (assignjoin) at (0,5.05);
   \coordinate (assignright) at (4.55,5.05);
+  \coordinate (assignTip) at (0.35,5.05);
   \coordinate (returnleft) at (-4.00,1.45);
   \coordinate (returntop) at (-4.00,8.35);
+  \coordinate (returnTip) at (-0.35,8.35);
 
   \draw[flowarrow] (start.south) -- (init.north);
   \draw (init.south) -- (firstjoin);
@@ -52,14 +54,16 @@
   \draw[flowarrow] (test1.east) -- node[above=2pt] {否} (4.55,7.35) -- (azero.north);
   \draw (aone.south) -- (assignjoin);
   \draw[flowarrow] (assignjoin) -- (sum.north);
-  \draw[flowarrow] (azero.south) -- (assignright) -- (assignjoin);
+  \draw[flowarrow] (azero.south) -- (assignright) -- (assignTip);
+  \draw (assignTip) -- (assignjoin);
 
   \draw[flowarrow] (sum.south) -- (inc.north);
   \draw[flowarrow] (inc.south) -- (test2.north);
 
   % Loop return from k<6? (是) enters the first-test junction via one right arrow.
   \draw (test2.west) -- node[above=2pt,pos=.10] {是} (returnleft) -- (returntop);
-  \draw[flowarrow] (returntop) -- (firstjoin);
+  \draw[flowarrow] (returntop) -- (returnTip);
+  \draw (returnTip) -- (firstjoin);
 
   % Termination branch is independent of the loop.
   \draw[flowarrow] (test2.south) -- node[right=2pt] {否} (out.north);

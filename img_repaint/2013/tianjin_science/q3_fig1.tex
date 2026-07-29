@@ -54,7 +54,10 @@
 
   % No branch: decision -> x=2x -> leftward loop-back into the shared stem.
   \draw[->] (test.east) -- (4.35,7.35) -- (4.35,8.95) -- (double.south);
-  \draw[->] (double.north) -- (4.35,10.55) -- (merge);
+  % Stop the loopback arrow just before the shared junction; the short
+  % unarrowed continuation enters the same stem without a second edge.
+  \draw[->] (double.north) -- (4.35,10.55) -- (-0.35,10.55);
+  \draw (-0.35,10.55) -- (merge);
 
   \node[branchlabel, anchor=west] at (0.42,5.85) {是};
   \node[branchlabel, anchor=west] at (2.70,7.78) {否};

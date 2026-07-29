@@ -32,7 +32,8 @@
   \node[process, minimum width=2.05cm] (increment) at (2.55,6.45) {$k=k+2$};
   \node[process, minimum width=2.55cm, minimum height=0.95cm] (sum) at (2.55,7.75)
     {$s=s+\dfrac{1}{k}$};
-  \coordinate (loopJoin) at (0,8.35);
+  % Keep the return edge centered in the clear gap below the init box.
+  \coordinate (loopJoin) at (0,8.00);
   \coordinate (branchRight) at (2.55,5.65);
 
   % Main path.
@@ -43,6 +44,6 @@
   % Decision branches and loop.
   \draw[->] (check.east) -- node[above] {是} (branchRight) -- (increment.south);
   \draw[->] (increment.north) -- (sum.south);
-  \draw[->] (sum.north) -- (2.55,8.35) -- (loopJoin);
+  \draw[->] (sum.north) -- (2.55,8.00) -- (loopJoin);
   \draw[->] (check.south) -- node[right] {否} (output.north);
 \end{tikzpicture}

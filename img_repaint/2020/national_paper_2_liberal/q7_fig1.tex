@@ -28,32 +28,35 @@
   \path[flow] (1.55,7.50) -- (3.73,7.50) -- (3.53,6.78) -- (1.33,6.78) -- cycle;
   \node at (2.54,7.14) {输入 \(k,a\)};
   \node[flow,rectangle,minimum width=2.00cm,minimum height=0.62cm]
-    (updatea) at (2.64,5.98) {\(a=2a+1\)};
+    (updatea) at (2.64,5.53) {\(a=2a+1\)};
   \node[flow,rectangle,minimum width=2.00cm,minimum height=0.62cm]
-    (updatek) at (2.64,4.73) {\(k=k+1\)};
+    (updatek) at (2.64,4.28) {\(k=k+1\)};
   \node[flow,diamond,aspect=2.75,minimum width=2.45cm,minimum height=0.72cm]
-    (check) at (2.64,3.48) {\(a>10\)};
-  \path[flow] (1.90,2.44) -- (3.40,2.44) -- (3.20,1.75) -- (1.65,1.75) -- cycle;
-  \node at (2.54,2.09) {输出 \(k\)};
+    (check) at (2.64,3.03) {\(a>10\)};
+  \path[flow] (1.90,1.99) -- (3.40,1.99) -- (3.20,1.30) -- (1.65,1.30) -- cycle;
+  \node at (2.54,1.64) {输出 \(k\)};
   \node[flow,rounded corners=0.16cm,minimum width=1.05cm,minimum height=0.64cm]
-    (finish) at (2.64,0.78) {结束};
+    (finish) at (2.64,0.33) {结束};
 
   % Main path; the true branch goes directly to output and then end.
   \draw[->,flow] (start.south) -- (2.64,7.50);
   \draw[->,flow] (2.64,6.78) -- (updatea.north);
   \draw[->,flow] (updatea.south) -- (updatek.north);
   \draw[->,flow] (updatek.south) -- (check.north);
-  \draw[->,flow] (check.south) -- node[pos=0.28,right=0.06cm] {是} (2.64,2.44);
-  \draw[->,flow] (2.64,1.75) -- (finish.north);
+  \draw[->,flow] (check.south) -- node[pos=0.28,right=0.06cm] {是} (2.64,1.99);
+  \draw[->,flow] (2.64,1.30) -- (finish.north);
 
   % The false branch has its own left return path and re-enters updatea.
-  \coordinate (loop-left) at (0.45,3.48);
+  \coordinate (loop-left) at (0.45,3.03);
   % The return arrow enters the main connector above the update box, as in the source;
   % keeping this junction clear avoids a duplicate arrowhead at the update border.
-  \coordinate (loop-top) at (0.45,6.55);
-  \coordinate (loop-merge) at (2.64,6.55);
+  % Keep the return shaft at least 2.5 mm above updatea's top edge.
+  \coordinate (loop-top) at (0.45,6.35);
+  % Stop the return arrow before the main-shaft junction; finish with a plain shaft.
+  \coordinate (loop-arrow-tip) at (2.10,6.35);
+  \coordinate (loop-merge) at (2.64,6.35);
   \draw[flow] (check.west) -- (loop-left) -- (loop-top);
-  \draw[->,flow] (loop-top) -- (loop-merge);
-  \draw[flow] (loop-merge) -- (updatea.north);
-  \node[anchor=east,inner sep=0pt] at (1.33,3.85) {否};
+  \draw[->,flow] (loop-top) -- (loop-arrow-tip);
+  \draw[flow] (loop-arrow-tip) -- (loop-merge) -- (updatea.north);
+  \node[anchor=east,inner sep=0pt] at (1.33,3.77) {否};
 \end{tikzpicture}

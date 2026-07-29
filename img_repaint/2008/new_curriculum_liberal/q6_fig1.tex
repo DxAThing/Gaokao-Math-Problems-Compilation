@@ -44,15 +44,13 @@
     \draw[->] (start.south) -- (input.north);
     \draw[->] (input.south) -- (seta.north);
     \draw[->] (seta.south) -- (first.north);
-    \draw (first.south) -- node[branchlabel,left=2pt] {否} (0,4.65);
-    \draw[->] (0,4.65) -- (second.north);
+    \draw[->] (first.south) -- node[branchlabel,left=2pt] {否} (second.north);
     \draw[->] (first.east) -- node[branchlabel,above=1pt] {是} (3.30,6.42)
         -- (setb.north);
-    \draw[->] (setb.south) -- (3.30,4.65) -- (0,4.65);
+    \draw[->] (setb.south) -- (3.30,4.40) -- (0,4.40);
 
     % Second decision branch and the output path.
-    \draw (second.south) -- node[branchlabel,left=2pt] {否} (0,1.95);
-    \draw[->] (0,1.95) -- (output.north);
+    \draw[->] (second.south) -- node[branchlabel,left=2pt] {否} (output.north);
     \draw[->] (second.east) -- node[branchlabel,above=1pt] {是} (3.30,3.60)
         -- (setc.north);
     \draw[->] (setc.south) -- (3.30,1.95) -- (0,1.95);

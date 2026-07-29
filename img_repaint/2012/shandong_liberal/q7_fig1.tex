@@ -52,8 +52,12 @@
   \draw[->] (test.south) -- node[right=2pt] {是} (pupdate.north);
   \draw[->] (pupdate.south) -- (qupdate.north);
   \draw[->] (qupdate.south) -- (nupdate.north);
-  \draw (nupdate.west) -- (-3.35,1.18) -- (-3.35,6.28);
-  \draw[->] (-3.35,6.28) -- (merge);
+  % Put the return arrowhead on the outer horizontal leg; the merge itself is
+  % an unarrowed degree-3 connector into the decision stem.
+  \draw (nupdate.west) -- (-3.35,1.18);
+  \draw (-3.35,1.18) -- (-3.35,6.28);
+  \draw[->] (-3.35,6.28) -- (-0.60,6.28);
+  \draw (-0.60,6.28) -- (merge);
 
   % 否 branch: output and finish are separate from the loop path.
   \draw[->] (test.east) -- node[above] {否} (3.55,5.20) -- (3.55,4.28) -- (output.north);

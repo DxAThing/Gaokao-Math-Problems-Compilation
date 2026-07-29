@@ -53,7 +53,8 @@
   \draw[->] (const.south) -- (-3.55,3.35) -- (0,3.35);
   \draw[->] (calc.south) -- (test.north);
   \draw[->] (test.east) -- node[branchlabel,above=2pt] {是} (subtract.west);
-  \draw[->] (subtract.north) -- (3.85,5.85) -- (0,5.85);
+  % Keep the loop return at least 2.5 mm below the formula box.
+  \draw[->] (subtract.north) -- (3.85,5.80) -- (0,5.80);
   \draw[->] (test.south) -- node[branchlabel,right=2pt] {否} (output.north);
   \draw[->] (output.south) -- (finish.north);
 

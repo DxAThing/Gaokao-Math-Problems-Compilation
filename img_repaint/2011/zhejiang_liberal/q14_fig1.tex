@@ -51,5 +51,6 @@
   \draw (test.east) -- node[branchlabel, above=2pt] {否} (loop-right)
     -- (3.35,10.05);
   \draw[->] (3.35,10.05) -- (loop-join);
-  \draw[->] (loop-join) -- (increment.north);
+  % The main stem owns the downward arrow; the return arrow ends at loop-join.
+  \draw (loop-join) -- (increment.north);
 \end{tikzpicture}

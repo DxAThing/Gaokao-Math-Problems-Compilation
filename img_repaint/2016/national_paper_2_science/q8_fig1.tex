@@ -25,7 +25,7 @@
     decision/.style={flowbox,diamond,aspect=2.8,inner sep=0pt,minimum height=0.96cm},
 ]
     % Centered process column and compact side loop follow the source layout.
-    \path[use as bounding box] (-2.20,-0.40) rectangle (4.00,10.75);
+    \path[use as bounding box] (-2.20,-0.70) rectangle (4.00,10.75);
 
     \node[terminal] (start) at (0,10.05) {开始};
     \node[io,minimum width=2.55cm] (inputxn) at (0,8.80) {输入 $x,n$};
@@ -53,6 +53,10 @@
     % 否 branch: right-side loop-back path; 输出 s is the affirmative branch below.
     \coordinate (loop-right) at (3.25,2.85);
     \coordinate (loop-return) at (3.25,6.72);
+    \coordinate (loop-arrow-tip) at (0.70,6.72);
     \draw (test.east) -- node[branchlabel,above] {否} (loop-right) -- (loop-return);
-    \draw[->] (loop-return) -- (loop-top);
+    % Place the left-pointing return arrow before the merge, leaving the
+    % single downward edge into 输入 a as a distinct continuation.
+    \draw[->] (loop-return) -- (loop-arrow-tip);
+    \draw (loop-arrow-tip) -- (loop-top);
 \end{tikzpicture}

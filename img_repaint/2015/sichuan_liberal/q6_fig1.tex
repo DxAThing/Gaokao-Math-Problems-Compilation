@@ -23,17 +23,20 @@
   \node[flowbox,rounded corners=5pt,text width=0.90cm,minimum width=0.90cm,minimum height=0.56cm] (finish) at (0,-7.25) {结束};
 
   \draw[->] (start.south) -- (init.north);
-  % The loop return joins the incoming connector above k=k+1; its leftward
-  % arrowhead lands on the stem, followed by one separate downward arrow.
-  \coordinate (merge-level) at (0,-1.72);
+  % The loop return joins the incoming connector above k=k+1; place its
+  % leftward arrowhead on the return segment before the merge, followed by
+  % an unmarked tail into the single downward arrow.
+  \coordinate (merge-level) at (0,-1.68);
+  \coordinate (merge-tip) at (0.38,-1.68);
   \draw (init.south) -- (merge-level);
   \draw[->] (merge-level) -- (inc.north);
   \draw[->] (inc.south) -- (test.north);
   \draw[->] (test.south) -- (formula.north);
   \draw[->] (formula.south) -- (output.north);
   \draw[->] (output.south) -- (finish.north);
-  \draw (test.east) -- (1.65,-3.48) -- (1.65,-1.72);
-  \draw[->] (1.65,-1.72) -- (merge-level);
-  \node[flowtext,inner xsep=1pt,inner ysep=1pt] at (1.55,-3.12) {否};
+  \draw (test.east) -- (1.65,-3.48) -- (1.65,-1.68);
+  \draw[->] (1.65,-1.68) -- (merge-tip);
+  \draw (merge-tip) -- (merge-level);
+  \node[flowtext,anchor=west,inner xsep=1pt,inner ysep=1pt] at (1.90,-3.12) {否};
   \node[flowtext,inner xsep=1pt,inner ysep=1pt] at (-0.42,-3.98) {是};
 \end{tikzpicture}

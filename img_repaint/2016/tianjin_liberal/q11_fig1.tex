@@ -52,15 +52,15 @@
     % Main chain and the S>=6? yes branch.
     \draw[->] (start.south) -- (setS.north);
     \draw[->] (setS.south) -- (setn.north);
-    \draw[->] (setn.south) -- (testS.north);
+    % The return edge carries the sole arrowhead; the initial trunk remains a shaft
+    % into the same decision, matching the source junction without stacked heads.
+    \draw[-] (setn.south) -- (testS.north);
     \draw[->] (testS.south) -- node[right] {是} (sub.north);
     \draw[->] (sub.south) -- (inc.north);
 
     % S>=6? no branch is separate from the yes path and merges at n=n+1.
     \coordinate (noTurn) at (-2.80,7.02);
-    \coordinate (noDrop) at (-2.80,5.95);
-    \draw (testS.west) -- node[above left] {否} (noTurn) -- (noDrop);
-    \draw[->] (noDrop) -- (double.north);
+    \draw[->] (testS.west) -- node[above left] {否} (noTurn) -- (double.north);
     \draw[->] (double.south) |- (inc.west);
 
     % Increment and second decision.
@@ -70,8 +70,9 @@
 
     % n>3? no branch loops back to the first decision without touching output.
     \coordinate (loopRight) at (2.90,2.58);
-    \coordinate (loopTop) at (2.90,7.90);
-    \coordinate (loopJoin) at (0,7.90);
+    \coordinate (loopTop) at (2.90,7.80);
+    \coordinate (loopJoin) at (0.30,7.80);
     \draw (testn.east) -- node[above] {否} (loopRight) -- (loopTop);
-    \draw[->] (loopTop) -- (loopJoin) -- (testS.north);
+    \draw[->] (loopTop) -- (loopJoin);
+    \draw[-] (loopJoin) -- (0,7.80) -- (testS.north);
 \end{tikzpicture}

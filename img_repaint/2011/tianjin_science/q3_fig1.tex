@@ -29,7 +29,8 @@
   \node[decision] (test) at (0,4.25) {$a>50?$};
   \node[io] (output) at (0,2.65) {输出 $i$};
   \node[terminal] (finish) at (0,1.05) {结束};
-  \coordinate (loopjoin) at (0,8.25);
+  % Keep the shared stem clear of the init box; return arrow stops before the junction.
+  \coordinate (loopjoin) at (0,8.35);
 
   \draw[flowarrow] (start.south) -- (init.north);
   \draw (init.south) -- (loopjoin);
@@ -40,10 +41,12 @@
 
   % 否 branch returns left and enters the shared stem above i=i+1.
   \coordinate (loop-left) at (-3.25,4.25);
-  \coordinate (loop-entry) at (-3.25,8.25);
+  \coordinate (loop-entry) at (-3.25,8.35);
+  \coordinate (loop-tip) at (-0.35,8.35);
   \draw (test.west) -- node[above=2pt] {否} (loop-left);
   \draw (loop-left) -- (loop-entry);
-  \draw[flowarrow] (loop-entry) -- (loopjoin);
+  \draw[flowarrow] (loop-entry) -- (loop-tip);
+  \draw (loop-tip) -- (loopjoin);
   \draw[flowarrow] (loopjoin) -- (inc.north);
 
   \path[use as bounding box] (-3.55,0.65) rectangle (2.35,10.95);

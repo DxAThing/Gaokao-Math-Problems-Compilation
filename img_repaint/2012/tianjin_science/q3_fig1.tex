@@ -41,8 +41,10 @@
   % Affirmative branch loops left into the stem above the decision.
   \coordinate (loop-left) at (-2.45,3.92);
   \coordinate (loop-left-top) at (-2.45,6.82);
-  \draw (sqrtupdate.south) -- (loop-left) -- (loop-left-top);
-  \draw[flowarrow] (loop-left-top) -- (loopjoin);
+  \draw (sqrtupdate.south) -- (loop-left);
+  \draw (loop-left) -- (loop-left-top);
+  \draw[flowarrow] (loop-left-top) -- (-0.55,6.82);
+  \draw (-0.55,6.82) -- (loopjoin);
 
   % Negative branch bypasses the loop and enters the affine update.
   \coordinate (out-right) at (3.20,5.98);

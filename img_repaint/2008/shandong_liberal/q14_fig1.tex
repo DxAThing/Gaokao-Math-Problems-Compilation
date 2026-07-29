@@ -20,7 +20,7 @@
   decision/.style={box,shape=diamond,aspect=2.8,inner sep=0pt,
     minimum width=3.5cm,minimum height=0.98cm},
 ]
-  \path[use as bounding box] (-2.95,0.05) rectangle (4.35,9.20);
+  \path[use as bounding box] (-2.95,0.05) rectangle (4.75,9.20);
 
   \node[terminal] (start) at (0,8.75) {开始};
   \node[io,minimum width=2.20cm] (input) at (0,7.45) {输入 $p$};
@@ -40,6 +40,8 @@
   \draw[->] (test.east) -- node[above] {否} (3.45,4.45) -- (3.45,3.55) -- (output.north);
   \draw[->] (output.south) -- (finish.north);
 
-  \coordinate (loopJoin) at (0,6.62);
-  \draw[->] (inc.south) -- (0,0.45) -- (-2.55,0.45) -- (-2.55,6.62) -- (loopJoin);
+  % Return joins the input-to-initialization stem above the initialization box;
+  % the slightly raised horizontal segment keeps clearance from that box.
+  \coordinate (loopJoin) at (0,6.70);
+  \draw[->] (inc.south) -- (0,0.45) -- (-2.55,0.45) -- (-2.55,6.70) -- (loopJoin);
 \end{tikzpicture}

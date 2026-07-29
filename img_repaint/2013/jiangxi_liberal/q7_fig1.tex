@@ -30,11 +30,11 @@
   \node[flowbox,minimum width=2.55cm] (inc) at (0,7.60) {$i=i+1$};
   \node[decision] (parity) at (0,6.18) {$i\text{ 是奇数}$};
   \node[flowbox,minimum width=2.70cm] (odd) at (4.00,6.18) {$S=2*i+1$};
-  \node[flowbox,minimum width=2.85cm] (even) at (0,4.70) {$S=2*i+2$};
-  \coordinate (branchmerge) at (0,3.98);
-  \node[decision,minimum width=4.60cm] (test) at (0,3.30) {};
-  \node[io,minimum width=2.10cm] (output) at (0,1.82) {输出 $i$};
-  \node[terminal] (finish) at (0,0.48) {结束};
+  \node[flowbox,minimum width=2.85cm] (even) at (0,4.90) {$S=2*i+2$};
+  \coordinate (branchmerge) at (0,4.00);
+  \node[decision,minimum width=4.60cm] (test) at (0,3.10) {};
+  \node[io,minimum width=2.10cm] (output) at (0,1.62) {输出 $i$};
+  \node[terminal] (finish) at (0,0.28) {结束};
 
   % Main chain and the pre-increment merge.
   \draw[->] (start.south) -- (init.north);
@@ -45,21 +45,26 @@
   % The parity branches are distinct and merge once before the blank test.
   \draw[->] (parity.east) -- (odd.west);
   \draw[->] (parity.south) -- (even.north);
-  \draw[->] (odd.south) -- (4.00,3.98) -- (branchmerge);
-  \draw[->] (even.south) -- (branchmerge);
-  \draw (branchmerge) -- (test.north);
+  % Put each branch arrowhead on its own incoming segment; the merge itself
+  % remains a clean, unambiguous junction with no stacked arrowheads.
+  \draw[->] (odd.south) -- (4.00,4.30);
+  \draw (4.00,4.30) -- (4.00,4.00) -- (branchmerge);
+  \draw[->] (even.south) -- (0,4.30);
+  \draw (0,4.30) -- (branchmerge);
+  \draw[->] (branchmerge) -- (test.north);
 
   % The second decision loops back to the pre-increment merge or outputs i.
   \coordinate (loop-left) at (-3.55,3.30);
   \coordinate (loop-entry) at (-3.55,8.28);
-  \draw[->] (test.west) -- (loop-left) -- (loop-entry) -- (preinc);
+  \draw[->] (test.west) -- (loop-left) -- (loop-entry) -- (-0.40,8.28);
+  \draw (-0.40,8.28) -- (preinc);
   \draw[->] (test.south) -- (output.north);
   \draw[->] (output.south) -- (finish.north);
 
   \node[branchlabel,anchor=south] at (2.72,6.50) {否};
   \node[branchlabel,anchor=west] at (0.22,5.35) {是};
-  \node[branchlabel,anchor=east] at (-2.85,3.08) {是};
-  \node[branchlabel,anchor=west] at (0.22,2.72) {否};
+  \node[branchlabel,anchor=east] at (-2.85,2.88) {是};
+  \node[branchlabel,anchor=west] at (0.22,2.52) {否};
 
   \path[use as bounding box] (-3.90,10.70) rectangle (5.50,0.15);
 \end{tikzpicture}

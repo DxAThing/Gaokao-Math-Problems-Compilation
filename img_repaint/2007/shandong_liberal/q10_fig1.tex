@@ -46,7 +46,8 @@
 
     \draw[->] (start.south) -- (input.north);
     \draw[->] (input.south) -- (init.north);
-    \coordinate (merge) at (0,6.45);
+    % Keep the decision-entry arrowhead at least 3 mm from the loop junction.
+    \coordinate (merge) at (0,6.60);
     \draw (init.south) -- (merge);
     \draw[->] (merge) -- (test.north);
 
@@ -63,5 +64,7 @@
 
     % Loop-back from the final decrement to the shared stem.
     \coordinate (loop-bottom) at (-3.55,-0.04);
-    \draw[->] (dec2.south) -- (loop-bottom) -- (-3.55,6.45) -- (merge);
+    \coordinate (loop-tip) at (-0.35,6.60);
+    \draw[->] (dec2.south) -- (loop-bottom) -- (-3.55,6.60) -- (loop-tip);
+    \draw (loop-tip) -- (merge);
 \end{tikzpicture}

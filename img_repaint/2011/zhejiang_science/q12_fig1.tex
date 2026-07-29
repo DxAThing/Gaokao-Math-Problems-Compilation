@@ -31,8 +31,9 @@
   \node[io, minimum width=2.20cm] (output) at (0,1.05) {输出 $k$};
   \node[terminal] (finish) at (0,-0.30) {结束};
 
-  \coordinate (loopJoin) at (0,7.55);
-  \coordinate (loopRight) at (2.55,7.55);
+  % Place the return segment below init with at least 2.5 mm clearance.
+  \coordinate (loopJoin) at (0,7.40);
+  \coordinate (loopRight) at (2.55,7.40);
 
   % Main path and terminating branch.
   \draw[->] (start.south) -- (init.north);

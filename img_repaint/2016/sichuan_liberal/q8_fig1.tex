@@ -34,8 +34,8 @@
   \node[draw,diamond,aspect=3.0,inner sep=0pt,minimum width=2.55cm,minimum height=0.80cm]
     (test) at (1.60,3.58) {$i\geq 0?$};
 
-  \node[process,minimum width=1.72cm] (update) at (3.72,4.90) {$v=vx+i$};
-  \node[process,minimum width=1.62cm] (decrement) at (3.72,6.00) {$i=i-1$};
+  \node[process,minimum width=1.72cm] (update) at (4.20,4.90) {$v=vx+i$};
+  \node[process,minimum width=1.62cm] (decrement) at (4.20,6.00) {$i=i-1$};
 
   % Output parallelogram, left-leaning as in the source.
   \coordinate (out-tl) at (0.92,2.42);
@@ -57,10 +57,11 @@
   \draw[->] (1.60,1.82) -- (finish.north);
 
   % Yes branch: decision -> update -> decrement -> loopback to the main trunk.
-  \draw[-] (test.east) -- (3.72,3.58) -- (3.72,4.55);
-  \draw[->] (3.72,4.55) -- (update.south);
+  \draw[->] (test.east) -- (4.20,3.58) -- (update.south);
   \draw[->] (update.north) -- (decrement.south);
-  \draw[->] (decrement.west) -- (1.60,6.00) -- (1.60,4.95);
+  % The loop-back arrowhead stops before the three-way trunk junction.
+  \draw[->] (decrement.west) -- (2.70,6.30) -- (2.70,5.15) -- (1.90,5.15);
+  \draw[-] (1.90,5.15) -- (1.60,5.15) -- (loopjoin);
 
   \node[anchor=west,inner sep=0pt] at (2.76,3.88) {是};
   \node[anchor=west,inner sep=0pt] at (1.84,2.93) {否};

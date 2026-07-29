@@ -33,7 +33,7 @@
     \path[use as bounding box] (-3.75,-0.40) rectangle (3.55,9.75);
 
     \node[terminal] (start) at (0,9.20) {开始};
-    \node[process, minimum width=3.15cm] (init) at (0,7.85) {$S=1,k=1$};
+    \node[process, minimum width=3.15cm] (init) at (0,7.98) {$S=1,k=1$};
     \node[decision, minimum width=3.55cm] (test) at (0,6.35) {$k>4?$};
     \node[process, minimum width=3.45cm, minimum height=1.00cm]
         (update) at (0,4.65) {$S=S+\dfrac{1}{k(k+1)}$};
@@ -43,7 +43,7 @@
 
     % Main chain and the terminating right branch.
     \draw[->] (start.south) -- (init.north);
-    \coordinate (loopJoin) at (0,6.98);
+    \coordinate (loopJoin) at (0,7.25);
     \draw (init.south) -- (loopJoin);
     \draw[->] (loopJoin) -- (test.north);
     \draw[->] (test.south) -- node[branchlabel,right] {否} (update.north);
@@ -55,5 +55,6 @@
 
     % Loopback: one left-pointing arrow enters the shared stem above test;
     % the main stem retains its separate downward arrow into the diamond.
-    \draw[->] (inc.west) -- (-2.85,3.15) -- (-2.85,6.98) -- (loopJoin);
+    \draw[->] (inc.west) -- (-2.85,3.15) -- (-2.85,7.25) -- (-0.35,7.25);
+    \draw (-0.35,7.25) -- (loopJoin);
 \end{tikzpicture}

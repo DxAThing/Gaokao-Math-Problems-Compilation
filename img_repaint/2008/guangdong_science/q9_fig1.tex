@@ -29,17 +29,16 @@
   \node[box, minimum width=2.70cm] (increment) at (2.80,6.45) {$i=i+1$};
   \node[io, minimum width=2.70cm] (output) at (0,2.80) {输出 $a,i$};
   \node[terminal] (finish) at (0,1.30) {结束};
-  \coordinate (loopJoin) at (0,7.00);
-
   \draw[flow] (start.south) -- (input.north);
   \draw[flow] (input.south) -- (init.north);
-  \draw[flow] (init.south) -- (loopJoin);
-  \draw[flow] (loopJoin) -- (multiply.north);
+  % The return arrow joins the main stem in its interior; keep the stem as one
+  % directed edge so no second arrowhead is placed at that join.
+  \draw[flow] (init.south) -- (multiply.north);
   \draw[flow] (multiply.south) -- (test.north);
   \draw[flow] (test.south) -- node[branchlabel,right] {是} (output.north);
   \draw[flow] (output.south) -- (finish.north);
 
   \draw[flow] (test.east) -- node[branchlabel,above] {否} (2.80,4.75)
     -- (2.80,6.00) -- (increment.south);
-  \draw[flow] (increment.north) -- (2.80,7.00) -- (loopJoin);
+  \draw[flow] (increment.north) -- (2.80,7.35) -- (0,7.35);
 \end{tikzpicture}

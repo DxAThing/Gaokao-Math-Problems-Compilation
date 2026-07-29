@@ -25,7 +25,7 @@
   % Main vertical sequence.
   \node[flowbox,rounded corners=0.16cm,minimum width=1.10cm] (start) at (0,10.80) {开始};
   \node[io,minimum width=2.85cm] (input) at (0,9.58) {输入 $a,b$};
-  \node[flowbox,minimum width=2.30cm] (init) at (0,8.34) {$n=0,s=0$};
+  \node[flowbox,minimum width=2.30cm] (init) at (0,8.65) {$n=0,s=0$};
   \node[flowbox,minimum width=1.75cm] (aone) at (0,7.10) {$a=b-a$};
   \node[flowbox,minimum width=1.75cm] (bone) at (0,5.86) {$b=b-a$};
   \node[flowbox,minimum width=1.75cm] (atwo) at (0,4.62) {$a=b+a$};
@@ -37,7 +37,7 @@
   \draw[flowarrow] (start.south) -- (input.north);
   \draw[flowarrow] (input.south) -- (init.north);
   % The loop joins the trunk above aone; only this single downward arrow enters it.
-  \coordinate (loop-top) at (0,7.47);
+  \coordinate (loop-top) at (0,7.80);
   \draw (init.south) -- (loop-top);
   \draw[flowarrow] (loop-top) -- (aone.north);
   \draw[flowarrow] (aone.south) -- (bone.north);
@@ -49,9 +49,11 @@
 
   % 否 loop: route left, then rejoin the main trunk before its single downward arrow into a=b-a.
   \coordinate (left) at (-2.28,2.05);
-  \coordinate (entry) at (-2.28,7.47);
+  \coordinate (entry) at (-2.28,7.80);
   \draw (test.west) -- node[above=2pt] {否} (left) -- (entry);
-  \draw (entry) -- (loop-top);
+  \coordinate (loop-arrow-tip) at (-0.70,7.80);
+  \draw[flowarrow] (entry) -- (loop-arrow-tip);
+  \draw (loop-arrow-tip) -- (loop-top);
 
   % Keep a restrained crop margin like the source page crop; no text is offset by hand.
   \path[use as bounding box] (-3.05,11.15) rectangle (2.65,-0.82);

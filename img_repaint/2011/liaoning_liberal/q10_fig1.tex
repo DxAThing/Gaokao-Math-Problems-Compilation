@@ -27,11 +27,11 @@
         trapezium right angle=108, minimum height=0.78cm},
     branchlabel/.style={flowtext, inner sep=0pt},
 ]
-    \path[use as bounding box] (-3.55,-1.25) rectangle (4.45,10.45);
+    \path[use as bounding box] (-3.55,-1.35) rectangle (4.45,10.45);
 
     \node[terminal] (start) at (0,10.10) {开始};
     \node[io, minimum width=1.85cm] (input) at (0,8.92) {输入 $n$};
-    \node[process, minimum width=4.15cm] (init) at (0,7.65)
+    \node[process, minimum width=4.15cm] (init) at (0,7.90)
         {$s=0,t=1,k=1,p=1$};
     \node[decision] (test) at (0,5.95) {$k<n$};
     \node[process, minimum width=2.25cm] (add) at (0,4.50) {$p=s+t$};
@@ -39,22 +39,23 @@
         {$s=t,t=p$};
     \node[process, minimum width=2.35cm] (increment) at (0,1.95)
         {$k=k+1$};
-    \node[io, minimum width=2.05cm] (output) at (0,0.75) {输出 $p$};
-    \node[terminal] (finish) at (0,-0.55) {结束};
+    \node[io, minimum width=2.05cm] (output) at (0,0.40) {输出 $p$};
+    \node[terminal] (finish) at (0,-0.90) {结束};
 
     \draw[->] (start.south) -- (input.north);
     \draw[->] (input.south) -- (init.north);
-    \draw (init.south) -- (0,6.80);
-    \draw[->] (0,6.80) -- (test.north);
+    \draw (init.south) -- (0,7.10);
+    \draw[->] (0,7.10) -- (test.north);
 
     \draw[->] (test.south) -- node[branchlabel, right=2pt] {是} (add.north);
     \draw[->] (add.south) -- (swap.north);
     \draw[->] (swap.south) -- (increment.north);
-    \draw (test.east) -- node[branchlabel, above=2pt] {否} (3.25,5.95) -- (3.25,1.38) -- (0,1.38);
-    \draw[->] (0,1.38) -- (output.north);
+    \draw (test.east) -- node[branchlabel, above=2pt] {否} (3.25,5.95) -- (3.25,1.10) -- (0,1.10);
+    \draw[->] (0,1.10) -- (output.north);
     \draw[->] (output.south) -- (finish.north);
 
     % Return from k update: one left-pointing arrow enters the shared stem;
     % the stem carries the only downward arrow into the decision.
-    \draw[->] (increment.west) -- (-3.05,1.95) -- (-3.05,6.80) -- (0,6.80);
+    \draw[->] (increment.west) -- (-3.05,1.95) -- (-3.05,7.10) -- (-0.70,7.10);
+    \draw (-0.70,7.10) -- (0,7.10);
 \end{tikzpicture}

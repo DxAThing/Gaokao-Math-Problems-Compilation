@@ -48,8 +48,9 @@
   \draw[->] (input.south) -- (init.north);
   % Split the main stem at the loop-entry level: the return arrow joins via
   % an un-directed segment, leaving one directed downward arrow into the test.
-  \coordinate (merge-level) at (0,7.15);
-  \coordinate (merge-pre) at (0.20,7.15);
+  \coordinate (merge-level) at (0,7.40);
+  % Keep the left-pointing return arrowhead at least 3 mm from the merge.
+  \coordinate (merge-pre) at (0.35,7.40);
   \draw (init.south) -- (merge-level);
   \draw[->] (merge-level) -- (test.north);
   \draw[->] (test.south) -- node[branchlabel,right] {是} (compute.north);
@@ -62,7 +63,7 @@
   \draw[->] (output.south) -- (finish.north);
 
   % Loop return: one left-pointing arrow joins the shared stem above the test.
-  \draw[->] (increment.east) -- (3.25,0.72) -- (3.25,7.15) -- (merge-pre);
+  \draw[->] (increment.east) -- (3.25,0.72) -- (3.25,7.40) -- (merge-pre);
   \draw (merge-pre) -- (merge-level);
 
   \path[use as bounding box] (-4.45,11.38) rectangle (4.05,0.30);

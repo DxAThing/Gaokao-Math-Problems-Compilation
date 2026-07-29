@@ -23,7 +23,7 @@
     execute at begin node={\setlength{\parindent}{0pt}}},
 ]
   \node[terminal] (start) at (0,10.00) {开始};
-  \node[flowbox,minimum width=2.90cm] (init) at (0,8.50) {$k=0,S=1$};
+  \node[flowbox,minimum width=2.90cm] (init) at (0,8.85) {$k=0,S=1$};
   \coordinate (pretest) at (0,8.00);
   \node[decision] (test) at (0,5.55) {$k<3$};
   \node[flowbox,minimum width=2.70cm] (multiply) at (3.05,6.45) {$S=S\cdot 2^k$};
@@ -39,8 +39,10 @@
   \draw[->] (test.east) -- node[below] {是} (3.05,5.55);
   \draw[->] (3.05,5.55) -- (3.05,6.12) -- (multiply.south);
   \draw[->] (multiply.north) -- (increment.south);
-  \coordinate (loop-top) at (3.05,7.95);
-  \draw[->] (increment.north) -- (loop-top) -- (pretest);
+  \coordinate (loop-top) at (3.05,8.10);
+  \coordinate (loop-tip) at (0.45,8.00);
+  \draw[->] (increment.north) -- (loop-top) -- (loop-tip);
+  \draw (loop-tip) -- (pretest);
 
   % 否 branch is independent of the loop and leads only to output.
   \draw[->] (test.south) -- node[right] {否} (output.north);

@@ -23,7 +23,7 @@
 
   \node[terminal] (start) at (0,12.05) {开始};
   \node[box, minimum width=3.20cm] (input) at (0,10.65) {输入 $x,n$};
-  \node[box, minimum width=1.70cm] (sinit) at (0,9.25) {$S=6$};
+  \node[box, minimum width=1.70cm] (s_init) at (0,9.25) {$S=6$};
   \node[box, minimum width=3.05cm] (iinit) at (0,7.95) {$i=n-1$};
   \node[decision] (test) at (0,4.15) {$i\geq 0?$};
   \node[box, minimum width=4.65cm] (update) at (3.10,5.35)
@@ -31,17 +31,18 @@
   \node[box, minimum width=3.00cm] (decrement) at (3.10,7.00) {$i=i-1$};
   \node[io, minimum width=2.35cm] (output) at (0,2.25) {输出 $S$};
   \node[terminal] (finish) at (0,0.75) {结束};
-  \coordinate (loopjoin) at (0,7.35);
 
   \draw[flow] (start) -- (input);
-  \draw[flow] (input) -- (sinit);
-  \draw[flow] (sinit) -- (iinit);
-  \draw[-] (iinit) -- (loopjoin);
-  \draw[flow] (loopjoin) -- (test.north);
+  \draw[flow] (input.south) -- (s_init.north);
+  \draw[flow] (s_init.south) -- (iinit.north);
+  % The return arrow lands on the interior of the main stem rather than
+  % terminating at a parsed 3-way endpoint junction.
+  \draw[flow] (iinit.south) -- (test.north);
   \draw[flow] (test.east) -- node[above, inner sep=1pt] {是} (3.10,4.15)
     -- (update.south);
   \draw[flow] (update.north) -- (decrement.south);
-  \draw[flow] (decrement.north) -- (3.10,7.35) -- (loopjoin);
+  \coordinate (loop-entry) at (0,7.35);
+  \draw[flow] (decrement.north) -- (3.10,7.35) -- (loop-entry);
   \draw[flow] (test.south) -- node[right, inner sep=1pt] {否} (output.north);
   \draw[flow] (output) -- (finish);
 \end{tikzpicture}

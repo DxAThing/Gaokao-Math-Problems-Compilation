@@ -39,6 +39,9 @@
 
     \coordinate (loop-right) at (3.25,3.12);
     \coordinate (loop-right-top) at (3.25,6.72);
+    % Keep the left-pointing return arrowhead clear of the degree-3 merge;
+    % the short undirected link then joins the single downward arrow.
+    \coordinate (loop-tip) at (-0.35,6.72);
     \coordinate (loop-top) at (0,6.72);
 
     \draw[->] (start.south) -- (init.north);
@@ -51,5 +54,6 @@
 
     % 否 branch returns around the right side and re-enters the update connector.
     \draw (test.east) -- node[above] {否} (loop-right) -- (loop-right-top);
-    \draw[->] (loop-right-top) -- (loop-top);
+    \draw[->] (loop-right-top) -- (loop-tip);
+    \draw (loop-tip) -- (loop-top);
 \end{tikzpicture}

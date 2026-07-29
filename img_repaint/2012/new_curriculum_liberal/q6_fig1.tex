@@ -35,7 +35,7 @@
     \node[terminal] (start) at (0,13.00) {开始};
     \node[io, minimum width=5.65cm] (input) at (0,11.70)
         {输入 $N,a_1,a_2,\ldots,a_N$};
-    \node[process, minimum width=5.65cm] (init) at (0,10.20)
+    \node[process, minimum width=5.65cm] (init) at (0,10.25)
         {$k=1,A=a_1,B=a_1$};
     \node[process, minimum width=1.75cm] (read) at (0,8.70) {$x=a_k$};
     \node[decision] (testA) at (0,7.20) {$x>A$};
@@ -53,7 +53,7 @@
     \draw[->] (input.south) -- (init.north);
     % Initialization and the loop return share one connector above x=a_k;
     % only the connector's downward edge carries the arrowhead.
-    \coordinate (loop-merge) at (0,9.60);
+    \coordinate (loop-merge) at (0,9.50);
     \draw (init.south) -- (loop-merge);
     \draw[->] (loop-merge) -- (read.north);
     \draw[->] (read.south) -- (testA.north);
@@ -68,15 +68,16 @@
     \draw[->] (testB.west) -- node[above=2pt, inner sep=0pt] {是}
         (-3.00,5.45) -- (setB.north);
     \draw (testB.south) -- node[right=2pt, inner sep=0pt] {否}
-        (0,4.35);
-    \draw (setB.south) -- (-3.00,4.35) -- (0,4.35);
-    \draw (setA.south) -- (3.00,4.35) -- (0,4.35);
-    \draw[->] (0,4.35) -- (testN.north);
+        (0,4.65);
+    \draw (setB.south) -- (-3.00,4.65) -- (0,4.65);
+    \draw (setA.south) -- (3.00,4.65) -- (0,4.65);
+    \draw[->] (0,4.65) -- (testN.north);
 
     % Final test: terminate on yes, otherwise increment and loop to x=a_k.
     \draw[->] (testN.south) -- (output.north);
     \draw[->] (output.south) -- (finish.north);
     \draw[->] (testN.east) -- node[above=2pt, inner sep=0pt] {否}
-        (3.55,3.60) -- (3.55,7.58) -- (inc.south);
-    \draw[->] (inc.north) -- (3.55,9.60) -- (loop-merge);
+        (4.30,3.60) -- (4.30,7.58) -- (inc.south);
+    \draw[->] (inc.north) -- (4.30,9.50) -- (0.35,9.50);
+    \draw (0.35,9.50) -- (loop-merge);
 \end{tikzpicture}

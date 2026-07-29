@@ -43,12 +43,12 @@
 
   % The 否 branch is an independent right-side loop and returns leftward
   % into the main trunk above i=i+1; the vertical trunk arrow remains separate.
-  \draw[line width=0.45pt] (test.east) -- (3.25,2.55) -- (3.25,7.20);
-  \draw[->] (3.25,7.20) -- (0,7.20);
+  \draw[line width=0.45pt] (test.east) -- (3.25,2.55) -- (3.25,7.30);
+  \draw[->] (3.25,7.30) -- (0,7.30);
   \node[branchlabel] at (2.72,2.92) {否};
 
-  \draw[->] (test.south) -- (output.north);
-  \node[branchlabel] at (0.32,1.96) {是};
+  \draw[->] (test.south) -- node[branchlabel,right=5pt,pos=0.5] {是}
+    (output.north);
   \draw[->] (output.south) -- (finish.north);
   \path[use as bounding box] (-0.65,-0.55) rectangle (3.55,11.15);
 \end{tikzpicture}

@@ -43,6 +43,7 @@
   % Split the stem at the loop-entry level so the return arrow has its own
   % left-pointing head and the main path has one downward arrow into test.
   \coordinate (merge-level) at (0,7.65);
+  \coordinate (loop-tip) at (0.45,7.65);
   \draw (init.south) -- (merge-level);
   \draw[->] (merge-level) -- (test.north);
   \draw[->] (test.south) -- node[branchlabel,right] {否} (output.north);
@@ -51,6 +52,7 @@
   % Yes branch rises through the two right-hand updates and returns left.
   \draw[->] (test.east) -- node[branchlabel,above] {是} (2.60,4.10) -- (update.south);
   \draw[->] (update.north) -- (increment.south);
-  \draw[->] (increment.north) -- (2.60,7.65) -- (merge-level);
+  \draw[->] (increment.north) -- (2.60,7.65) -- (loop-tip);
+  \draw (loop-tip) -- (merge-level);
   \path[use as bounding box] (-1.70,10.35) rectangle (4.00,0.22);
 \end{tikzpicture}

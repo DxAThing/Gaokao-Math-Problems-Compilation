@@ -29,7 +29,8 @@
   \node[terminal] (finish) at (0,1.45) {结束};
 
   \draw[->] (start.south) -- (init.north);
-  \draw[->] (init.south) -- (odd.north);
+  % Initial stem joins the shared entry; the single arrow into odd is drawn below.
+  \draw (init.south) -- (0,9.00);
   \draw[->] (odd.east) -- node[above=4pt] {是} (inc1.west);
   \draw[->] (odd.south) -- node[right=2pt] {否} (inc2.north);
   \draw[->] (inc2.south) -- (limit.north);
@@ -42,10 +43,13 @@
   \draw[->] (right-route) -- (4.85,7.62) -- (inc1.south);
 
   % 奇数分支更新后由顶部回线返回首个判定框入口。
-  \coordinate (top-route) at (6.10,9.15);
-  \coordinate (entry) at (0,9.15);
+  \coordinate (top-route) at (6.10,9.00);
+  \coordinate (entry) at (0,9.00);
   \draw (inc1.north east) -- (6.10,8.40) -- (top-route);
-  \draw[->] (top-route) -- (entry);
+  % One arrowhead is kept just before the merge; the final stem has one arrow.
+  \coordinate (return-tip) at (0.40,9.00);
+  \draw[->] (top-route) -- (return-tip);
+  \draw (return-tip) -- (entry);
   \draw[->] (entry) -- (odd.north);
 
   \path[use as bounding box] (-2.55,1.05) rectangle (6.50,11.45);

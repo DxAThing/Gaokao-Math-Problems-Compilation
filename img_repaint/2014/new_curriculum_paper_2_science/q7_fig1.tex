@@ -33,7 +33,7 @@
   \node[terminal] (start) at (0,10.85) {开始};
   \node[io, minimum width=1.85cm] (input) at (0,9.72) {输入 $x,t$};
   \node[flowbox, minimum width=2.65cm] (init) at (0,8.55) {$M=1,S=3$};
-  \node[flowbox, minimum width=1.45cm] (kinit) at (0,7.42) {$k=1$};
+  \node[flowbox, minimum width=1.45cm] (kinit) at (0,7.58) {$k=1$};
   \node[decision] (test) at (0,6.20) {$k\leq t$};
 
   \node[flowbox, minimum width=2.70cm, minimum height=1.00cm] (scale)
@@ -64,7 +64,10 @@
 
   % Loop from k=k+1 rises on the left and returns to the shared stem.
   \draw (increment.west) -- (-3.90,2.20) -- (-3.90,6.95);
-  \draw[->] (-3.90,6.95) -- (loop-merge);
+  % Keep the return arrow tip clear of the degree-3 merge; the short
+  % unarrowed continuation preserves the original loop topology.
+  \draw[->] (-3.90,6.95) -- (-0.60,6.95);
+  \draw (-0.60,6.95) -- (loop-merge);
 
   \node[branchlabel, anchor=south] at (-1.52,6.47) {是};
   \node[branchlabel, anchor=south] at (2.52,6.47) {否};

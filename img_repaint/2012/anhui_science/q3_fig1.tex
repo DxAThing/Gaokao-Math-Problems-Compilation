@@ -23,7 +23,9 @@
 ]
   \node[terminal] (start) at (0,7.35) {开始};
   \node[flowbox,minimum width=2.35cm] (init) at (0,6.10) {$x=1,y=1$};
-  \coordinate (loopjoin) at (0,5.52);
+  % Keep the return segment clear of init; stop its arrow before the junction.
+  \coordinate (loopjoin) at (0,5.42);
+  \coordinate (looptip) at (0.35,5.42);
   \node[decision,minimum width=3.35cm,minimum height=.94cm] (test) at (0,4.62)
     {$x\leq4?$};
   \node[flowbox,minimum width=3.55cm] (update) at (3.75,4.62)
@@ -39,8 +41,9 @@
   \draw[flowarrow] (output.south) -- (finish.north);
 
   % The affirmative update returns above the decision into the shared stem.
-  \draw (update.north) -- (3.75,5.52);
-  \draw[flowarrow] (3.75,5.52) -- (loopjoin);
+  \draw (update.north) -- (3.75,5.42);
+  \draw[flowarrow] (3.75,5.42) -- (looptip);
+  \draw (looptip) -- (loopjoin);
   \node[anchor=south west,inner sep=0pt] at (1.05,4.98) {是};
 
   \path[use as bounding box] (-2.10,1.45) rectangle (5.50,7.78);

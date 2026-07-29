@@ -33,7 +33,7 @@
 ]
   % Main nodes follow the source's vertical execution order.
   \node[startstop,minimum width=1.18cm] (start) at (0,5.95) {开始};
-  \node[flowbox,minimum width=2.45cm] (init) at (0,4.72) {$k=1,s=1$};
+  \node[flowbox,minimum width=2.45cm] (init) at (0,4.74) {$k=1,s=1$};
   \node[flowbox,minimum width=3.8cm,minimum height=0.98cm] (update) at (0,3.12)
     {$\displaystyle s=s+(-1)^k\cdot\frac{1}{1+k}$};
   \node[flowbox,minimum width=1.82cm] (increment) at (0,1.72) {$k=k+1$};
@@ -52,5 +52,5 @@
   % The negative branch returns to the update step, with a left-pointing arrow
   % on the horizontal segment as in the source diagram.
   \draw[flowline] (test.east) -- node[branchlabel,above=2pt] {否}
-    (2.08,0.30) -- (2.08,4.10) -- (0,4.10);
+    (2.30,0.30) -- (2.30,4.05) -- (0,4.05);
 \end{tikzpicture}

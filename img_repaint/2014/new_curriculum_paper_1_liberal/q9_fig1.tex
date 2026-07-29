@@ -58,7 +58,9 @@
 
     % The update loop rises on the right and returns to the trunk before n<=k?.
     \coordinate (loop-right) at (2.70,-8.90);
-    \coordinate (loop-top) at (2.70,-2.72);
-    \coordinate (loop-merge) at (0,-2.72);
+    % Leave a compact but explicit clearance below the n=1 box before the
+    % return arrow meets the main stem.
+    \coordinate (loop-top) at (2.70,-2.95);
+    \coordinate (loop-merge) at (0,-2.95);
     \draw[->] (increment.east) -- (loop-right) -- (loop-top) -- (loop-merge);
 \end{tikzpicture}

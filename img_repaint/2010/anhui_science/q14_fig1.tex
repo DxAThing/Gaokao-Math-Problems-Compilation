@@ -43,7 +43,8 @@
 
     \draw[->] (start.south) -- (init.north);
     % Initial stem and loop return share one connector above the first test.
-    \coordinate (loop-merge) at (0,6.95);
+    % Offset the merge slightly right so the stem arrow clears the diamond tip.
+    \coordinate (loop-merge) at (0.45,6.95);
     \draw (init.south) -- (loop-merge);
     \draw[->] (loop-merge) -- (odd.north);
 
@@ -55,7 +56,11 @@
 
     % Both nonterminal paths enter the same x=x+1 node before looping.
     \draw[->] (gt8.east) -- (3.20,3.25) -- (3.20,5.90) -- (plus1.south);
-    \draw[->] (plus1.north) -- (3.20,6.95) -- (loop-merge);
+    % Keep the loop arrowhead clear of the three-way merge; the short final
+    % connector is unarrowed, while loop-merge -> odd carries the stem arrow.
+    \coordinate (return-tip) at (0.85,6.95);
+    \draw[->] (plus1.north) -- (3.20,6.95) -- (return-tip);
+    \draw (return-tip) -- (loop-merge);
 
     \node[flowtext, anchor=south, inner sep=1pt] at (2.05,6.38) {是};
     \node[flowtext, anchor=west, inner sep=1pt] at (0.42,5.55) {否};

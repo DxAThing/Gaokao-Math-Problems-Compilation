@@ -46,20 +46,28 @@
   \node[branchlabel] at (-3.00,8.75) {是};
   \node[branchlabel] at (0.60,7.62) {否};
 
-  \coordinate (return-level) at (0,6.05);
+  % Three millimetres below the formula box keeps the return line clear.
+  \coordinate (return-level) at (0,5.95);
+  \coordinate (return-arrow-tip) at (0.35,5.95);
   \draw (formula.south) -- (return-level) -- (checkjoin);
   \draw[flowarrow] (checkjoin) -- (test2.north);
 
   % Second test loop: yes goes right, rises into the bottom of y=y-105,
   % then returns left into the formula stem above the second decision.
   \draw[flowarrow] (test2.east) -- (3.25,4.25) -- (minus.south);
-  \draw (minus.north) -- (3.25,6.05);
-  \draw[flowarrow] (3.25,6.05) -- (return-level);
+  \draw (minus.north) -- (3.25,5.95);
+  % The return arrow stops before the degree-3 merge, then joins without a second tip.
+  \draw[flowarrow] (3.25,5.95) -- (return-arrow-tip);
+  \draw (return-arrow-tip) -- (return-level);
   \node[branchlabel] at (1.75,4.85) {是};
 
   % The first-test yes path and second-test no path merge immediately before output.
-  \draw[flowarrow] (const.south) -- (outleft) -- (outjoin);
-  \draw[flowarrow] (test2.south) -- (outjoin);
+  \coordinate (outleft-arrow) at (-0.35,2.85);
+  \coordinate (outdown-arrow) at (0,3.20);
+  \draw[flowarrow] (const.south) -- (outleft) -- (outleft-arrow);
+  \draw (outleft-arrow) -- (outjoin);
+  \draw[flowarrow] (test2.south) -- (outdown-arrow);
+  \draw (outdown-arrow) -- (outjoin);
   \draw[flowarrow] (outjoin) -- (output.north);
   \node[branchlabel] at (0.60,3.58) {否};
   \draw[flowarrow] (output.south) -- (finish.north);

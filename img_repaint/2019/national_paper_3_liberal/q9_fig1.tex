@@ -38,7 +38,9 @@
   \draw[->] (output.south) -- (finish.north);
 
   % 否 branch loops back to the accumulation step.
-  \draw[->] (test.east) -- (2.02,4.53) -- (2.02,7.72) -- (0.00,7.72);
+  % Route the loop-back arrow between the boxes and attach it to the sum box.
+  \draw[->] (test.east) -- (2.02,4.53) -- (2.02,7.76) -- (1.40,7.76);
+  \draw (1.40,7.76) -- (sum.north east);
   \node[anchor=west,inner sep=0pt] at (1.56,5.08) {否};
   \node[anchor=west,inner sep=0pt] at (0.26,3.98) {是};
 \end{tikzpicture}

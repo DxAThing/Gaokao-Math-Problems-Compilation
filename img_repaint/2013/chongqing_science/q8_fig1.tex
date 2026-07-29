@@ -43,6 +43,8 @@
 
   % 是 branch: right loop-back, with left-pointing horizontal arrow into the update stem.
   \draw[flowarrow] (test.east) -- node[above=2pt] {是} (3.40,4.72) -- (3.40,8.55);
-  \draw[flowarrow] (3.40,8.55) -- (0,8.55);
+  % Stop the return arrow before the degree-3 merge, then join the main stem without another tip.
+  \draw[flowarrow] (3.40,8.55) -- (0.75,8.55);
+  \draw (0.75,8.55) -- (0,8.55);
 
 \end{tikzpicture}

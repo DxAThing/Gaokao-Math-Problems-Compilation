@@ -43,15 +43,13 @@
   \draw[->] (setx.south) -- (testb.north);
 
   % First decision: 否 continues down; 是 updates x=b then returns to the shared entry.
-  \draw (testb.south) -- node[left] {否} (0,5.25);
-  \draw[->] (0,5.25) -- (testc.north);
+  \draw[->] (testb.south) -- node[left] {否} (testc.north);
   \draw[->] (testb.east) -- node[above] {是} (3.05,6.95) -- (setb.north);
   \draw (setb.south) -- (3.05,5.25);
   \draw[->] (3.05,5.25) -- (0,5.25);
 
   % Second decision is intentionally blank in the source exam; its branches are analogous.
-  \draw (testc.south) -- node[left] {否} (0,2.60);
-  \draw[->] (0,2.60) -- (output.north);
+  \draw[->] (testc.south) -- node[left] {否} (output.north);
   \draw[->] (testc.east) -- node[above] {是} (3.05,4.45) -- (setc.north);
   \draw (setc.south) -- (3.05,2.60);
   \draw[->] (3.05,2.60) -- (0,2.60);

@@ -55,10 +55,13 @@
   % Loop-back branch: i=i+1 returns to the decision without touching output.
   \coordinate (loop-bottom) at (0,2.05);
   \coordinate (loop-left) at (-2.00,2.05);
-  \coordinate (loop-top) at (-2.00,6.12);
-  \coordinate (loop-junction) at (0,6.12);
+  % Keep the return leg at least 2.5 mm clear of the initialization box.
+  \coordinate (loop-top) at (-2.00,6.00);
+  \coordinate (loop-junction) at (0,6.00);
   % The source return exits below i=i+1, runs left, then rises to the main stem.
   \draw (inc.south) -- (loop-bottom) -- (loop-left) -- (loop-top);
-  % It joins the incoming vertical stem above the decision (not the diamond's west point).
-  \draw[->] (loop-top) -- (loop-junction);
+  % The arrowhead stops before the shared stem; the remaining 4 mm tail is
+  % unarrowed, keeping it clear of the following downward arrowhead.
+  \draw[->] (loop-top) -- (-0.40,6.00);
+  \draw (-0.40,6.00) -- (loop-junction);
 \end{tikzpicture}

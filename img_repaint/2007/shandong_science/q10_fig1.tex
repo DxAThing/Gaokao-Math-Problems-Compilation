@@ -38,8 +38,8 @@
     \node[io,minimum width=2.25cm] (output) at (3.75,-5.05) {输出 $S,T$};
     \node[terminal] (finish) at (3.75,-6.35) {结束};
 
-    \draw (start.south) -- (input.north);
-    \draw (input.south) -- (init.north);
+    \draw[flowarrow] (start.south) -- (input.north);
+    \draw[flowarrow] (input.south) -- (init.north);
     \draw (init.south) -- (join);
     \draw[flowarrow] (join) -- (test.north);
     \draw[flowarrow] (test.south) -- node[right=2pt] {否} (sum.north);
@@ -54,5 +54,7 @@
     \coordinate (loop-bottom) at (-2.25,-9.05);
     \coordinate (loop-top) at (-2.25,-3.05);
     \draw (dec2.south) -- (0,-9.05) -- (loop-bottom) -- (loop-top);
-    \draw[flowarrow] (loop-top) -- (join);
+    \coordinate (loop-tip) at (-0.35,-3.05);
+    \draw[flowarrow] (loop-top) -- (loop-tip);
+    \draw (loop-tip) -- (join);
 \end{tikzpicture}

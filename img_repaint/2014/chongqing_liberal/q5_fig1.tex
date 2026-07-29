@@ -48,6 +48,7 @@
     % arrowhead; the main stem carries the single directed arrow into test.
     \draw[->] (test.east) -- node[above=4pt] {是} (sum.west);
     \draw[->] (sum.north) -- (update.south);
-    \draw[->] (update.north) -- (3.20,6.15) -- (0,6.15);
-    \draw (0,6.15) -- (0,5.10);
+    % Return arrow lands on the main stem interior with clearance from init;
+    % the stem itself remains the single directed init-to-test segment.
+    \draw[->] (update.north) -- (3.20,5.90) -- (0,5.90);
 \end{tikzpicture}

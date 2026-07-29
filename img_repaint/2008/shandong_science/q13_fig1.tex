@@ -52,8 +52,9 @@
     \draw[->] (output.south) -- (finish.north);
 
     % Loop return enters the main stem immediately above n=1,S=0.
-    \coordinate (loop-merge) at (0,7.72);
+    % Keep the return segment at least 2.5 mm above the init box.
+    \coordinate (loop-merge) at (0,7.85);
     \draw (increment.south) -- (0,1.75) -- (-3.20,1.75)
-        -- (-3.20,7.72);
-    \draw[->] (-3.20,7.72) -- (loop-merge);
+        -- (-3.20,7.85);
+    \draw[->] (-3.20,7.85) -- (loop-merge);
 \end{tikzpicture}

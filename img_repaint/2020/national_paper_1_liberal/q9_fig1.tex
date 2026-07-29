@@ -18,7 +18,7 @@
   \node[flow, rounded corners=2pt, minimum width=1.05cm, minimum height=0.62cm]
     (start) at (0,7.55) {开始};
   % Input parallelogram is drawn around a centered text node to keep the source margins.
-  \draw[flow] (-1.80,6.90) -- (1.90,6.90) -- (1.70,6.20) -- (-2.00,6.20) -- cycle;
+  \draw[flow] (-1.80,6.90) -- (1.90,6.90) -- (1.70,6.20) -- (-2.00,6.20) -- (-1.80,6.90);
   \node (input) at (0,6.55) {输入 \(n=1,S=0\)};
 
   \node[flow, minimum width=1.85cm, minimum height=0.58cm] (inc)
@@ -43,10 +43,12 @@
   \draw[->,flow] (output.south) -- (finish.north);
 
   % Yes branch: diamond left tip -> increment -> return to the sum step.
-  \draw[flow] (test.west) -- (-2.55,4.10) -- (-2.55,4.97)
+  \draw[flow] (test.west) -- (-2.55,4.10) -- (-2.55,4.70)
         node[pos=0.02, above right=1pt] {是};
-  \draw[->,flow] (-2.55,4.97) -- (inc.south);
-  \draw[flow] (inc.north) -- (-2.55,5.82);
-  \draw[->,flow] (-2.55,5.82) -- (0,5.82);
-  \draw[flow] (0,5.82) -- (sum.north);
+  \draw[->,flow] (-2.55,4.70) -- (inc.south);
+  % Route the return above both process boxes, preserving clearances.
+  \draw[flow] (inc.north) -- (-2.55,5.90);
+  % Stop the return arrow before the shared main-shaft junction; finish with a plain shaft.
+  \draw[->,flow] (-2.55,5.90) -- (-0.45,5.90);
+  \draw[flow] (-0.45,5.90) -- (0,5.90) -- (sum.north);
 \end{tikzpicture}

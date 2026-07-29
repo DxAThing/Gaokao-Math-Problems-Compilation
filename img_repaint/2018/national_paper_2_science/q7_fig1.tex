@@ -52,8 +52,10 @@
   % Main vertical path.
   \draw[->] (start.south) -- (init.north);
   \draw[->] (init.south) -- (seti.north);
-  % The loop return joins the central path just above the decision.
-  \coordinate (loopjoin) at (0,5.38);
+  % The loop return joins the central path below the i=1 box; a plain
+  % spacer segment keeps the return arrowhead away from the shared trunk.
+  \coordinate (loopjoin) at (0,5.10);
+  \coordinate (testentry) at (1.05,5.10);
   \draw (seti.south) -- (loopjoin);
 
   % Branches from the decision diamond.
@@ -65,8 +67,10 @@
   % Left loop body and return path.
   \draw[->] (addn.south) -- (addt.north);
   \draw[->] (addt.south) -- (increment.north);
-  \draw[->] (increment.west) -- (-4.85,0.35) -- (-4.85,5.38) -- (loopjoin);
-  \draw[->] (loopjoin) -- (check.north);
+  \draw[->] (increment.west) -- (-4.85,0.35) -- (-4.85,5.10) -- (-1.00,5.10);
+  \draw (-1.00,5.10) -- (loopjoin);
+  \draw (loopjoin) -- (testentry);
+  \draw[->] (testentry) -- (check.north);
 
   % False branch output path.
   \draw[->] (sub.south) -- (out.north);

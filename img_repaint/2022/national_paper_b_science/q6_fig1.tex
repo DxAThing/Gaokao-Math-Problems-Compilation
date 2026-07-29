@@ -30,7 +30,7 @@
   \coordinate (inputBotR) at (2.00,-1.25);
   \coordinate (inputBotL) at (-2.40,-1.25);
   \node[flowtext] (input) at (0,-0.99) {输入 $a=1,b=1,n=1$};
-  \draw[flowbox] (inputTopL) -- (inputTopR) -- (inputBotR) -- (inputBotL) -- cycle;
+  \draw[flowbox] (inputTopL) -- (inputTopR) -- (inputBotR) -- (inputBotL) -- (inputTopL);
   \node[flowbox, minimum width=1.88cm, minimum height=0.53cm] (updateb) at (0,-1.95)
     {$b=b+2a$};
   \node[flowbox, minimum width=3.35cm, minimum height=0.55cm] (updatea) at (0,-2.90)
@@ -43,7 +43,7 @@
   \coordinate (outputBotR) at (0.60,-6.06);
   \coordinate (outputBotL) at (-1.00,-6.06);
   \node[flowtext] (output) at (0,-5.83) {输出 $n$};
-  \draw[flowbox] (outputTopL) -- (outputTopR) -- (outputBotR) -- (outputBotL) -- cycle;
+  \draw[flowbox] (outputTopL) -- (outputTopR) -- (outputBotR) -- (outputBotL) -- (outputTopL);
   \node[flowbox, rounded corners=0.12cm, minimum width=0.95cm, minimum height=0.60cm] (finish) at (0,-6.79) {结束};
 
   \draw[flowarrow] (start) -- (0,-0.73);
@@ -55,9 +55,12 @@
   % The 否 branch turns left, rises to the level below the input box, and
   % re-enters the b-update process through its top-center arrow.
   \coordinate (loopleft) at (-3.90,-4.28);
-  \coordinate (looplevel) at (-3.90,-1.52);
+  % Keep the return shaft at least 2.5 mm above updateb's top edge.
+  \coordinate (looplevel) at (-3.90,-1.40);
   \draw[line width=0.45pt] (test.west) -- node[flowtext, below] {否}
-    (loopleft) -- (looplevel) -- (0,-1.52);
-  \draw[flowarrow] (0,-1.52) -- (updateb.north);
+    (loopleft) -- (looplevel) -- (-0.45,-1.40) -- (0,-1.40);
+  % The return arrow is on its horizontal shaft; the main down-shaft keeps one arrowhead.
+  \draw[flowarrow] (looplevel) -- (-0.45,-1.40);
+  \draw[line width=0.45pt] (-0.45,-1.40) -- (0,-1.40) -- (updateb.north);
   \draw[flowarrow] (test.south) -- node[pos=0.05, flowtext, right] {是} (0,-5.54);
 \end{tikzpicture}

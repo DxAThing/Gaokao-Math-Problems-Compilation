@@ -32,6 +32,7 @@
 
 \draw[flowline] (start.east) -- (init.west);
 \coordinate (join) at (3.65,0);
+\coordinate (join-pre) at (3.30,0);
 \draw (init.east) -- (join);
 \draw[flowline] (join) -- (update.west);
 \draw[flowline] (update.east) -- (test.west);
@@ -39,5 +40,6 @@
 \draw[flowline] (print.east) -- (finish.west);
 \draw[flowline] (test.south) -- node[right=2pt,pos=0.45] {否}
     (test.south |- increment.east) -- (increment.east);
-\draw[flowline] (increment.west) -- (join |- increment.west) -- (join);
+\draw[flowline] (increment.west) -- (join-pre |- increment.west) -- (join-pre);
+\draw (join-pre) -- (join);
 \end{tikzpicture}

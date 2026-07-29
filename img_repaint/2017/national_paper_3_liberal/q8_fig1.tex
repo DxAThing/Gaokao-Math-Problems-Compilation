@@ -48,7 +48,9 @@
   \draw[->] (output.south) -- (finish.north);
 
   % Loop-back arrow from t=t+1 to the decision test.
-  \draw[->] (increment.west) -- (-2.55,2.57) -- (-2.55,7.76) -- (0,7.76);
+  % Keep the loop entry below the initialization box (>=2.5 mm clear).
+  \draw[->] (increment.west) -- (-2.55,2.57) -- (-2.55,7.48) -- (-0.32,7.48);
+  \draw (-0.32,7.48) -- (0,7.48);
   \node[anchor=west,inner sep=0pt] at (0.20,6.10) {是};
   \node[anchor=west,inner sep=0pt] at (1.55,7.10) {否};
   % Preserve a small, even white margin around the outer loop and terminals.

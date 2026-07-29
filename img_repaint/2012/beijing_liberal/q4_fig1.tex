@@ -35,6 +35,8 @@
   \node[terminal] (finish) at (0,0.80) {结束};
 
   \coordinate (loopjoin) at (0,8.85);
+  % Keep the return arrowhead clear of the degree-3 loop-entry junction.
+  \coordinate (loop-tip) at (0.45,8.85);
   \coordinate (loop-right) at (4.25,8.85);
   \coordinate (loop-bottom) at (4.25,4.60);
 
@@ -47,7 +49,8 @@
   \draw[->] (loop-bottom) -- (smul.south);
   \draw[->] (smul.north) -- (inc.south);
   \draw (inc.north) -- (loop-right);
-  \draw[->] (loop-right) -- (loopjoin);
+  \draw[->] (loop-right) -- (loop-tip);
+  \draw (loop-tip) -- (loopjoin);
   \node[branchlabel] at (1.85,4.00) {是};
 
   % 否 branch remains an independent output path.

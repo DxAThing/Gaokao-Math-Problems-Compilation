@@ -48,13 +48,15 @@
   % 否 branch to S=2S, then merge with the 是 branch before n=n+1.
   \draw (testS.west) -- (-2.55,-3.70);
   \draw[flowarrow] (-2.55,-3.70) -- (doubleS.north);
-  \draw[flowarrow] (doubleS.south) -- (-2.55,-6.00) -- (0,-6.00);
-  \draw (subtract.south) -- (0,-6.00);
-  \draw (0,-6.00) -- (0,-6.15);
-  \draw[flowarrow] (0,-6.15) -- (inc.north);
+  % Keep the branch arrowhead clear of the three-way merge, then use one
+  % centered shaft into the increment box.
+  \draw[flowarrow] (doubleS.south) -- (-2.55,-5.85) -- (-0.45,-5.85);
+  \draw[-] (-0.45,-5.85) -- (0,-5.85);
+  \draw (subtract.south) -- (0,-5.85);
+  \draw[flowarrow] (0,-5.85) -- (inc.north);
 
   % n>3 否 returns to the first decision; the output route stays independent.
-  \draw[flowarrow] (testN.east) -- (3.05,-8.00) -- (3.05,-2.95) -- (0,-2.95);
+  \draw[flowarrow] (testN.east) -- (3.05,-8.00) -- (3.05,-3.05) -- (0,-3.05);
 
   \node[branchlabel] at (-2.22,-3.12) {否};
   \node[branchlabel] at (0.42,-4.28) {是};

@@ -34,6 +34,7 @@
 
   \coordinate (loopJoin) at (0,6.10);
   \coordinate (loopRight) at (3.60,6.10);
+  \coordinate (loopTip) at (0.35,6.10);
 
   % Main path and terminating branch.
   \draw[->] (start.south) -- (init.north);
@@ -45,6 +46,7 @@
   % N branch and return loop. The left-pointing return arrow ends on the
   % shared stem; the main stem retains its single downward arrow into test.
   \draw[->] (test.east) -- node[above=3pt, pos=0.18] {N} (increment.west);
-  \draw[->] (increment.north) -- (loopRight) -- (loopJoin);
+  \draw[->] (increment.north) -- (loopRight) -- (loopTip);
+  \draw (loopTip) -- (loopJoin);
   \path[use as bounding box] (-2.25,1.55) rectangle (4.95,8.60);
 \end{tikzpicture}

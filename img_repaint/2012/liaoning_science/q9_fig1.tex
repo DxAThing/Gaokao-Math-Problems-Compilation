@@ -36,18 +36,20 @@
         {$i=i+1$};
     \node[io, minimum width=2.10cm] (output) at (3.05,3.48) {输出 $S$};
     \node[terminal] (finish) at (3.05,2.10) {结束};
-    \coordinate (loopjoin) at (0,6.00);
+    \coordinate (loopjoin) at (0,5.72);
 
     \draw[->] (start.south) -- (initS.north);
     \draw[->] (initS.south) -- (initi.north);
-    \draw (initi.south) -- (loopjoin);
-    \draw[->] (loopjoin) -- (test.north);
-    \draw[->] (test.south) -- node[left] {是} (updateS.north);
+    % Main stem is one continuous directed edge; the return joins it at an
+    % interior point after its arrowhead, keeping the junction unambiguous.
+    \draw[->] (initi.south) -- (test.north);
+    \draw[->] (test.south) -- node[left=4pt, yshift=-1pt] {是} (updateS.north);
     \draw[->] (updateS.south) -- (increment.north);
     \draw[->] (test.east) -- node[above] {否} (3.05,5.00) -- (output.north);
     \draw[->] (output.south) -- (finish.north);
 
-    % Loop return: one left-side route and a single arrow into the shared
-    % stem; the main stem has the only downward arrow into the test.
-    \draw[->] (increment.west) -- (-2.55,2.02) -- (-2.55,6.00) -- (loopjoin);
+    % Loop return: the arrowhead stops before the shared junction, then a
+    % short plain segment enters the stem; only the main stem points down.
+    \draw[->] (increment.west) -- (-2.55,2.02) -- (-2.55,5.72) -- (-0.35,5.72);
+    \draw (-0.35,5.72) -- (loopjoin);
 \end{tikzpicture}

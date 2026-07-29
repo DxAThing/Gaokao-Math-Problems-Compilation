@@ -29,7 +29,7 @@
 
   % Loop update nodes and decision.
   \node[flow,minimum width=2.00cm,minimum height=0.82cm]
-    (sub) at (0,5.42) {$S=S-m$};
+    (sub) at (0,5.22) {$S=S-m$};
   \node[flow,minimum width=3.55cm,minimum height=1.10cm]
     (halve) at (0,4.05) {$m=\dfrac{m}{2},n=n+1$};
   \node[flow,diamond,aspect=2.65,minimum width=2.65cm,minimum height=0.82cm]
@@ -50,8 +50,9 @@
   \draw[->,flow] (output.south) -- (finish.north);
 
   % True branch loop: return to the first update node.
-  \coordinate (loop-left) at (-2.00,2.68);
-  \coordinate (loop-top) at (-2.00,5.90);
+  \coordinate (loop-left) at (-2.10,2.68);
+  % Center the return edge in the clear gap between the init and update boxes.
+  \coordinate (loop-top) at (-2.10,6.01);
   \draw[flow] (check.west) -- node[above=2pt,inner sep=0pt] {是} (loop-left) -- (loop-top);
-  \draw[->,flow] (loop-top) -- (0,5.90);
+  \draw[->,flow] (loop-top) -- (0,6.01);
 \end{tikzpicture}

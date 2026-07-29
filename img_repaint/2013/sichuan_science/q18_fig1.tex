@@ -28,7 +28,7 @@
   \node[process,minimum width=1.85cm] (yone) at (4.05,8.15) {$y=1$};
   \node[decision,minimum width=5.05cm] (div3) at (0,6.45) {$x\text{ 能被 3 整除?}$};
   \node[process,minimum width=1.85cm] (ytwo) at (-4.05,6.45) {$y=2$};
-  \node[process,minimum width=1.85cm] (ythree) at (0,4.90) {$y=3$};
+  \node[process,minimum width=1.85cm] (ythree) at (0,5.00) {$y=3$};
   \coordinate (merge) at (0,3.95);
   \node[io,minimum width=2.30cm] (output) at (0,3.05) {输出 $y$};
   \node[terminal] (finish) at (0,1.55) {结束};
@@ -41,9 +41,14 @@
   \draw[->] (div3.south) -- (ythree.north);
 
   % Three branch outputs converge at the source's explicit merge point.
-  \draw[->] (yone.south) -- (4.05,3.95) -- (merge);
-  \draw[->] (ytwo.south) -- (-4.05,3.95) -- (merge);
-  \draw[->] (ythree.south) -- (merge);
+  % Keep the incoming arrows directional while reserving the exact junction
+  % for plain connector stubs (avoids stacked arrowheads at one point).
+  \draw[->] (yone.south) -- (4.05,3.95) -- (0.35,3.95);
+  \draw (0.35,3.95) -- (merge);
+  \draw[->] (ytwo.south) -- (-4.05,3.95) -- (-0.35,3.95);
+  \draw (-0.35,3.95) -- (merge);
+  \draw[->] (ythree.south) -- (0,4.30);
+  \draw (0,4.30) -- (merge);
   \draw[->] (merge) -- (output.north);
   \draw[->] (output.south) -- (finish.north);
 

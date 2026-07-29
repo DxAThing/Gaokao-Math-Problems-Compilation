@@ -35,8 +35,8 @@
     \node[decision, minimum width=4.35cm] (div3) at (0,4.80) {$x$ 能被 3 整除?};
     \node[process, minimum width=1.85cm] (y1) at (3.25,6.75) {$y=1$};
     \node[process, minimum width=1.85cm] (y2) at (-3.25,4.80) {$y=2$};
-    \node[process, minimum width=1.85cm] (y3) at (0,3.15) {$y=3$};
-    \node[io, minimum width=2.25cm] (output) at (0,1.72) {输出 $y$};
+    \node[process, minimum width=1.85cm] (y3) at (0,3.40) {$y=3$};
+    \node[io, minimum width=2.25cm] (output) at (0,1.58) {输出 $y$};
     \node[terminal] (finish) at (0,0.30) {结束};
 
     % Main decision chain and branch labels.
@@ -48,15 +48,19 @@
     \draw[->] (div3.west) -- node[above=1pt] {否} (y2.east);
 
     % The source merges all three assignments on one horizontal connector.
-    % Keep the two inward side arrowheads and the separate downward arrows.
+    % Keep each incoming direction, but leave a short unarrowed stub before
+    % the shared merge so no arrowhead is placed on the junction itself.
     \coordinate (merge-left) at (-3.25,2.40);
     \coordinate (merge-right) at (3.25,2.40);
     \coordinate (merge) at (0,2.40);
     \draw (y1.south) -- (merge-right);
     \draw (y2.south) -- (merge-left);
-    \draw[->] (merge-right) -- (merge);
-    \draw[->] (merge-left) -- (merge);
-    \draw[->] (y3.south) -- (merge);
+    \draw[->] (merge-right) -- (2.90,2.40);
+    \draw (2.90,2.40) -- (merge);
+    \draw[->] (merge-left) -- (-2.90,2.40);
+    \draw (-2.90,2.40) -- (merge);
+    \draw[->] (y3.south) -- (0,2.75);
+    \draw (0,2.75) -- (merge);
     \draw[->] (merge) -- (output.north);
     \draw[->] (output.south) -- (finish.north);
 \end{tikzpicture}

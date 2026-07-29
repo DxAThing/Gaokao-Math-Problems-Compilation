@@ -32,23 +32,25 @@
   \node[io,minimum width=2.20cm] (output) at (0,3.00) {输出 $p$};
   \node[term] (finish) at (0,1.55) {结束};
 
-  \coordinate (loopjoin) at (0,6.55);
+  % The return arrow ends 4 mm before the main stem; an unarrowed short segment
+  % completes the connection without placing an arrow tip at the junction.
+  \coordinate (loopjoin) at (0,6.80);
+  \coordinate (looppre) at (0.40,6.80);
   \coordinate (branchright) at (3.60,4.55);
-  \coordinate (incrementbottom) at (3.60,5.26);
-  \coordinate (righttop) at (3.60,6.55);
+  \coordinate (righttop) at (3.80,6.80);
 
   % Main stem and unique downward arrows.
   \draw[flowarrow] (start.south) -- (input.north);
   \draw[flowarrow] (input.south) -- (init.north);
-  \draw (init.south) -- (loopjoin);
-  \draw[flowarrow] (loopjoin) -- (product.north);
+  \draw[flowarrow] (init.south) -- (product.north);
   \draw[flowarrow] (product.south) -- (test.north);
 
   % Yes branch: enter the increment node from below, then return above the
   % product node and point left into the shared stem.
-  \draw[flowarrow] (test.east) -- (branchright) -- node[right=3pt,pos=.55] {是} (incrementbottom) -- (increment.south);
-  \draw (increment.north) -- (righttop);
-  \draw[flowarrow] (righttop) -- (loopjoin);
+  \draw (test.east) -- node[pos=.65,above=1pt] {是} (branchright);
+  \draw[flowarrow] (branchright) -- (increment.south);
+  \draw[flowarrow] (increment.north) -- (righttop) -- (looppre);
+  \draw (looppre) -- (loopjoin);
 
   % No branch exits to output and termination, independent of the loop.
   \draw[flowarrow] (test.south) -- node[right=3pt,pos=.45] {否} (output.north);

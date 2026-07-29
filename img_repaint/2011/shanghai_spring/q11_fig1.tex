@@ -41,6 +41,7 @@
     \draw[->] (start.south) -- (init.north);
     % Initial stem and loop return share one connector above the decision.
     \coordinate (loop-merge) at (0,6.15);
+    \coordinate (loop-arrow-tip) at (0.35,6.15);
     \draw (init.south) -- (loop-merge);
     \draw[->] (loop-merge) -- (test.north);
 
@@ -49,7 +50,9 @@
     \draw[->] (output.south) -- (finish.north);
     \draw[->] (test.east) -- (decrement.west);
     \draw[->] (decrement.north) -- (increment.south);
-    \draw[->] (increment.west) -- (loop-merge);
+    % Stop the return arrow before the shared merge, then join with a plain segment.
+    \draw[->] (increment.west) -- (loop-arrow-tip);
+    \draw (loop-arrow-tip) -- (loop-merge);
 
     \node[flowtext, anchor=south, inner sep=1pt] at (1.30,5.10) {否};
     \node[flowtext, anchor=east, inner sep=1pt] at (-0.55,4.05) {是};

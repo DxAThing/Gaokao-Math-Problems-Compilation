@@ -51,6 +51,8 @@
     \draw[->] (test.east) -- (multiply.west);
     \node[branchlabel, anchor=south] at (2.58,5.73) {否};
     \draw[->] (multiply.north) -- (decrement.south);
-    \coordinate (loopJoin) at (0,6.78);
+    % Keep the return arrow clear of the initialization box while it lands on
+    % the interior of the single main stem.
+    \coordinate (loopJoin) at (0,6.35);
     \draw[->] (decrement.west) -- (loopJoin);
 \end{tikzpicture}

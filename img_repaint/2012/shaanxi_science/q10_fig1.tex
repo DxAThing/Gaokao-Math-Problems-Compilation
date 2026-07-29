@@ -43,14 +43,15 @@
     \draw[->] (random.south) -- (inside.north);
 
     \draw[->] (inside.south) -- node[branchlabel, right=2pt] {是} (countM.north);
-    \draw (inside.east) -- (3.00,6.35) -- (3.00,5.35);
-    \draw[->] (3.00,5.35) -- (countN.north);
+    \draw (inside.east) -- (4.40,6.35) -- (4.40,5.60) -- (3.00,5.60);
+    \draw[->] (3.00,5.60) -- (countN.north);
     \node[branchlabel] at (1.35,6.70) {否};
 
     % The two counters merge immediately before i=i+1; only the N branch
     % carries the left-pointing arrow into the shared merge point.
-    \draw[->] (countM.south) -- (0,4.10);
-    \draw[->] (countN.south) -- (3.00,4.10) -- (0,4.10);
+    \draw (countM.south) -- (0,4.10);
+    \draw[->] (countN.south) -- (3.00,4.10) -- (0.35,4.10);
+    \draw (0.35,4.10) -- (0,4.10);
     \draw[->] (0,4.10) -- (increment.north);
     \draw[->] (increment.south) -- (test.north);
 
@@ -60,9 +61,9 @@
 
     % 否 loops left and returns with one right-pointing arrow above the
     % independent main downward arrow into random(x_i,y_i).
-    \draw (test.west) -- (-3.10,1.85) -- (-3.10,8.55);
-    \draw[->] (-3.10,8.55) -- (0,8.55);
-    \node[branchlabel] at (-2.55,2.13) {否};
+    \draw (test.west) -- (-4.10,1.85) -- (-4.10,8.65);
+    \draw[->] (-4.10,8.65) -- (0,8.65);
+    \node[branchlabel] at (-3.55,2.13) {否};
 
-    \path[use as bounding box] (-3.30,-2.75) rectangle (4.65,11.30);
+    \path[use as bounding box] (-4.35,-2.75) rectangle (4.65,11.30);
 \end{tikzpicture}

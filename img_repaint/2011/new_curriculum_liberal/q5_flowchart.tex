@@ -49,9 +49,11 @@
   % Affirmative branch updates k and returns along the upper right route.
   \coordinate (right-branch) at (3.20,3.38);
   \coordinate (right-top) at (3.20,5.76);
+  \coordinate (loop-tip) at (-0.40,5.76);
   \draw (test.east) -- node[below=2pt,inner sep=0pt] {是} (right-branch);
   \draw[flowarrow] (right-branch) -- (increment.south);
   \draw (increment.north) -- (right-top);
-  \draw[flowarrow] (right-top) -- (loopjoin);
+  \draw[flowarrow] (right-top) -- (loop-tip);
+  \draw (loop-tip) -- (loopjoin);
   \path[use as bounding box] (-2.55,0.30) rectangle (4.55,9.60);
 \end{tikzpicture}
