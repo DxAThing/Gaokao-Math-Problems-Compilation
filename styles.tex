@@ -309,11 +309,21 @@
     \parshape=0\relax
 }
 
+% TikZ's /tikz/font key is evaluated after the node text hbox has started in
+% this project, which can leave an invisible leading width when it contains a
+% font command (for example, \normalsize).  Redirect it locally to /tikz/node
+% font so the font is selected before TikZ measures the text hbox.  The key
+% definition lives only inside each figure wrapper group.
+\newcommand{\texboxtikzfontredirect}{%
+    \pgfkeys{/tikz/font/.code={\pgfkeysalso{/tikz/node font={##1}}}}%
+}
+
 \newcommand{\texinclude}[2][]{%
     \begingroup
     \adjustbox{max width=\linewidth,#1}{%
         \begingroup
         \texboxparagraphreset
+        \texboxtikzfontredirect
         \input{#2}%
         \endgroup
     }%
@@ -348,6 +358,7 @@
     \adjustbox{#1,max width=\linewidth,valign=c}{%
         \begingroup
         \texboxparagraphreset
+        \texboxtikzfontredirect
         \input{#2}%
         \endgroup
     }%

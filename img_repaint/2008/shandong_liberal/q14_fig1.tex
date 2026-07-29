@@ -1,0 +1,45 @@
+% Source: source/普通高考/2008/2008山东文.pdf, page 1, question 14.
+% Complete node -> directed-edge list:
+% 开始→输入p→(n=1,S=0)→S<p?; 是→S=S+1/2^n→n=n+1→left return to the
+% shared stem above (n=1,S=0); 否→输出n→结束. All connectors are solid.
+% The loop return and output branch are independent; every node is centered
+% with local parindent/leftskip/rightskip cleared.
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=0.55pt,
+  line cap=round,
+  line join=round,
+  font=\normalsize,
+  every node/.style={anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}\setlength{\leftskip}{0pt}\setlength{\rightskip}{0pt}\everypar{}}},
+  box/.style={draw,minimum height=0.68cm,inner xsep=4pt,inner ysep=2pt,
+    anchor=center,align=center},
+  terminal/.style={box,rounded corners=0.18cm,minimum width=1.25cm},
+  io/.style={box,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
+    minimum height=0.78cm},
+  decision/.style={box,shape=diamond,aspect=2.8,inner sep=0pt,
+    minimum width=3.5cm,minimum height=0.98cm},
+]
+  \path[use as bounding box] (-2.95,0.05) rectangle (4.35,9.20);
+
+  \node[terminal] (start) at (0,8.75) {开始};
+  \node[io,minimum width=2.20cm] (input) at (0,7.45) {输入 $p$};
+  \node[box,minimum width=3.15cm] (init) at (0,6.05) {$n=1,S=0$};
+  \node[decision] (test) at (0,4.45) {$S<p?$};
+  \node[box,minimum width=2.75cm,minimum height=1.00cm] (update) at (0,2.85)
+    {$S=S+\dfrac{1}{2^n}$};
+  \node[box,minimum width=2.35cm] (inc) at (0,1.20) {$n=n+1$};
+  \node[io,minimum width=1.95cm] (output) at (3.45,3.05) {输出 $n$};
+  \node[terminal] (finish) at (3.45,1.50) {结束};
+
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (init.north);
+  \draw[->] (init.south) -- (test.north);
+  \draw[->] (test.south) -- node[right] {是} (update.north);
+  \draw[->] (update.south) -- (inc.north);
+  \draw[->] (test.east) -- node[above] {否} (3.45,4.45) -- (3.45,3.55) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  \coordinate (loopJoin) at (0,6.62);
+  \draw[->] (inc.south) -- (0,0.45) -- (-2.55,0.45) -- (-2.55,6.62) -- (loopJoin);
+\end{tikzpicture}

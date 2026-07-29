@@ -1,0 +1,60 @@
+% Source PDF: source/普通高考/2008/2008新课标理(海南,宁夏).pdf, page 1, question 5.
+% pdfimages -list found no embedded bitmap; this program flowchart is vector line art.
+% Grid evidence: tmp/repaint_2008_new_curriculum_science/grid/page1_grid100.jpg,
+% q5_block_grid50.jpg; final source crop is q5_original_final.png from the ungridded page.
+% Nodes: 开始; 输入 a,b,c; x=a; b>x; x=b; blank second decision; x=c; 输出 x; 结束.
+% Edges: start→input→x=a→(b>x). 是→x=b→shared entry above second decision;
+% 否→shared entry above second decision. Second decision 是→x=c→shared entry above
+% output; 否→输出x→结束. All connectors are solid; no dashed segments or extra joins.
+\begin{tikzpicture}[
+  x=1cm,
+  y=1cm,
+  baseline,
+  >=Stealth,
+  line width=0.45pt,
+  line cap=round,
+  line join=round,
+  font=\normalsize,
+  every node/.style={anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flowbox/.style={draw,anchor=center,align=center,minimum height=0.68cm,
+    inner xsep=3.5pt,inner ysep=2pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  terminal/.style={flowbox,rounded corners=0.18cm,minimum width=1.30cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
+    minimum width=2.65cm,minimum height=0.76cm},
+  process/.style={flowbox,minimum width=1.95cm},
+  decision/.style={flowbox,shape=diamond,aspect=2.8,minimum width=3.55cm,
+    minimum height=1.02cm,inner sep=1pt}
+]
+  % Vertical main path and the two right-hand updates.
+  \node[terminal] (start) at (0,11.60) {开始};
+  \node[io] (input) at (0,10.05) {输入 $a,b,c$};
+  \node[process] (setx) at (0,8.55) {$x=a$};
+  \node[decision] (testb) at (0,6.95) {$b>x$};
+  \node[process] (setb) at (3.05,5.85) {$x=b$};
+  \node[decision] (testc) at (0,4.45) {};
+  \node[process] (setc) at (3.05,3.35) {$x=c$};
+  \node[io] (output) at (0,1.80) {输出 $x$};
+  \node[terminal] (finish) at (0,0.30) {结束};
+
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (setx.north);
+  \draw[->] (setx.south) -- (testb.north);
+
+  % First decision: 否 continues down; 是 updates x=b then returns to the shared entry.
+  \draw (testb.south) -- node[left] {否} (0,5.25);
+  \draw[->] (0,5.25) -- (testc.north);
+  \draw[->] (testb.east) -- node[above] {是} (3.05,6.95) -- (setb.north);
+  \draw (setb.south) -- (3.05,5.25);
+  \draw[->] (3.05,5.25) -- (0,5.25);
+
+  % Second decision is intentionally blank in the source exam; its branches are analogous.
+  \draw (testc.south) -- node[left] {否} (0,2.60);
+  \draw[->] (0,2.60) -- (output.north);
+  \draw[->] (testc.east) -- node[above] {是} (3.05,4.45) -- (setc.north);
+  \draw (setc.south) -- (3.05,2.60);
+  \draw[->] (3.05,2.60) -- (0,2.60);
+
+  \draw[->] (output.south) -- (finish.north);
+\end{tikzpicture}

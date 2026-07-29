@@ -1,0 +1,46 @@
+% original_pdf: source/普通高考/2009/2009福建文.pdf
+% page: 1
+% evidence: tmp/review_2009_fujian_liberal/crops/q6_source.png
+% node-edge list: 开始→S=2→n=1→S=1/(1-S)→n=n+1→S=2?;
+% 是→输出 n→结束; 否→左侧回边→S=1/(1-S). No other edges.
+% labels: Chinese labels centered in nodes; 否 on the left loop branch, 是 below the decision.
+\usetikzlibrary{shapes.misc}
+\begin{tikzpicture}[baseline,>=stealth,inner sep=1pt,
+    every node/.style={font=\normalsize,align=center,
+      execute at begin node={%
+        \everypar{}%
+        \setlength{\parindent}{0pt}%
+        \setlength{\leftskip}{0pt}%
+        \setlength{\rightskip}{0pt}%
+        \setlength{\hangindent}{0pt}%
+        \setlength{\parfillskip}{0pt}%
+      }},
+    flowbox/.style={draw,line width=0.55pt,align=center,minimum height=0.62cm,
+      inner xsep=4pt,inner ysep=2pt},
+    io/.style={draw,line width=0.55pt,shape=trapezium,
+      trapezium left angle=75,trapezium right angle=105,
+      minimum width=2.75cm,minimum height=0.76cm,inner xsep=4pt,inner ysep=2pt,align=center},
+    flowarrow/.style={->,line width=0.55pt}]
+  % Main vertical flow.
+  \node[draw,rounded rectangle,line width=0.55pt,minimum width=1.25cm,minimum height=0.65cm] (start) at (0,0) {开始};
+  \node[flowbox,minimum width=2.2cm] (initS) at (0,-1.15) {$S=2$};
+  \node[flowbox,minimum width=2.2cm] (initn) at (0,-2.25) {$n=1$};
+  \node[flowbox,minimum width=2.85cm,minimum height=1.08cm] (updateS) at (0,-3.55) {$S=\displaystyle\frac{1}{1-S}$};
+  \node[flowbox,minimum width=2.55cm] (incn) at (0,-4.95) {$n=n+1$};
+  \node[draw,diamond,line width=0.55pt,aspect=2.85,minimum width=3.55cm,minimum height=0.92cm] (test) at (0,-6.30) {$S=2$};
+  \node[io] (output) at (0,-7.58) {输出 $n$};
+  \node[draw,rounded rectangle,line width=0.55pt,minimum width=1.25cm,minimum height=0.65cm] (end) at (0,-8.72) {结束};
+
+  \draw[flowarrow] (start.south) -- (initS.north);
+  \draw[flowarrow] (initS.south) -- (initn.north);
+  \draw[flowarrow] (initn.south) -- (updateS.north);
+  \draw[flowarrow] (updateS.south) -- (incn.north);
+  \draw[flowarrow] (incn.south) -- (test.north);
+  \draw[flowarrow] (test.south) -- (output.north);
+  \draw[flowarrow] (0,-7.96) -- (end.north);
+
+  % The no branch loops left and re-enters immediately before the update node.
+  \draw[flowarrow] (test.west) -- (-2.30,-6.30) -- (-2.30,-2.78) -- (0,-2.78);
+  \node[anchor=east] at (-1.65,-6.05) {否};
+  \node[anchor=west] at (0.32,-6.78) {是};
+\end{tikzpicture}
