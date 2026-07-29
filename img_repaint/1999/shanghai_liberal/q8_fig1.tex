@@ -1,0 +1,38 @@
+% Source image: img/1999/shanghai_liberal/q8_fig1.png (process network diagram).
+% Nodes and directed edges: 1->2(a,1), 1->3(m,0), 2->5(c,unknown), 2->4(n,0),
+% 3->4(b,2), 4->6(d,3), 5->7(e,4), 6->7(f,3), 7->8(g,1).
+% Dashed m,n edges are zero-duration dummy activities; all other edges are solid.
+\begin{tikzpicture}[
+  x=1cm,y=1cm,
+  >=Stealth,
+  line width=0.45pt,
+  line cap=round,
+  line join=round,
+  node text/.style={font=\normalsize,anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  event/.style={node text,draw,regular polygon,regular polygon sides=8,
+    minimum size=0.78cm,inner sep=1pt},
+  label/.style={font=\normalsize,inner sep=0pt,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}}
+]
+  \path[use as bounding box] (-0.65,-2.55) rectangle (12.35,3.65);
+
+  \node[event] (n1) at (0,0) {1};
+  \node[event] (n2) at (2.15,2.35) {2};
+  \node[event] (n3) at (2.15,-1.75) {3};
+  \node[event] (n4) at (4.75,-1.75) {4};
+  \node[event] (n5) at (5.15,2.35) {5};
+  \node[event] (n6) at (7.35,-1.75) {6};
+  \node[event] (n7) at (9.40,0.65) {7};
+  \node[event] (n8) at (11.75,0.65) {8};
+
+  \draw[->] (n1) -- node[label,above left=2pt] {$a$} node[label,below left=2pt] {1} (n2);
+  \draw[->,dashed] (n1) -- node[label,right=2pt] {$m$} node[label,left=2pt] {0} (n3);
+  \draw[->] (n2) -- node[label,above] {$c$} (n5);
+  \draw[->,dashed] (n2) -- node[label,right=2pt] {$n$} node[label,left=2pt] {0} (n4);
+  \draw[->] (n3) -- node[label,above] {$b$} node[label,below] {2} (n4);
+  \draw[->] (n4) -- node[label,above] {$d$} node[label,below] {3} (n6);
+  \draw[->] (n5) -- node[label,above right=2pt] {$e$} node[label,below right=2pt] {4} (n7);
+  \draw[->] (n6) -- node[label,above left=2pt] {$f$} node[label,below right=2pt] {3} (n7);
+  \draw[->] (n7) -- node[label,above] {$g$} node[label,below] {1} (n8);
+\end{tikzpicture}

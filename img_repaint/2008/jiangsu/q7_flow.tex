@@ -31,7 +31,7 @@
   \node[flowbox,minimum width=4.60cm] (accum) at (0,5.30)
     {$S\leftarrow S+G_i\times F_i$};
   \node[decision] (test) at (0,3.72) {$i\geqslant 5$};
-  \node[flowbox,minimum width=2.70cm] (increment) at (-3.35,5.30)
+  \node[flowbox,minimum width=2.70cm] (increment) at (-4.05,5.30)
     {$i\leftarrow i+1$};
   \node[io,minimum width=2.35cm] (output) at (0,2.02) {输出 $S$};
   \node[terminal] (finish) at (0,0.68) {结束};
@@ -43,9 +43,9 @@
   \draw[flowarrow] (accum.south) -- (test.north);
 
   % 否分支回到输入框；回线不与输出分支共线。
-  \draw[flowarrow] (test.west) -- (-3.35,3.72) -- (-3.35,5.30)
+  \draw[flowarrow] (test.west) -- (-4.05,3.72) -- (-4.05,5.30)
     -- (increment.south);
-  \draw[flowarrow] (increment.north) -- (-3.35,6.80) -- (input.west);
+  \draw[flowarrow] (increment.north) -- (-4.05,6.80) -- (input.west);
   \node[anchor=east] at (-1.70,3.84) {N};
 
   % 是分支独立通往输出，不与循环回线交汇。
@@ -53,5 +53,5 @@
   \node[anchor=west] at (0.18,2.86) {Y};
   \draw[flowarrow] (output.south) -- (finish.north);
 
-  \path[use as bounding box] (-4.75,0.30) rectangle (2.35,11.30);
+  \path[use as bounding box] (-5.45,0.30) rectangle (2.35,11.30);
 \end{tikzpicture}

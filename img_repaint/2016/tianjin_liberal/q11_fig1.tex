@@ -34,14 +34,14 @@
         minimum height=1.04cm},
 ]
     % White margins preserve both the left branch and right loop-back.
-    \path[use as bounding box] (-3.25,-0.48) rectangle (3.55,11.42);
+    \path[use as bounding box] (-4.20,-0.48) rectangle (3.55,11.42);
 
     \node[terminal] (start) at (0,11.0) {开始};
     \node[process] (setS) at (0,9.72) {$S=4$};
     \node[process] (setn) at (0,8.48) {$n=1$};
     \node[decision, minimum width=3.65cm, minimum height=1.10cm] (testS)
         at (0,7.02) {$S\geq6?$};
-    \node[process, minimum width=2.45cm] (double) at (-1.55,5.42) {$S=2S$};
+    \node[process, minimum width=2.45cm] (double) at (-2.80,5.42) {$S=2S$};
     \node[process, minimum width=2.65cm] (sub) at (0,5.42) {$S=S-6$};
     \node[process, minimum width=2.85cm] (inc) at (0,4.02) {$n=n+1$};
     \node[decision, minimum width=3.35cm, minimum height=1.02cm] (testn)
@@ -57,8 +57,8 @@
     \draw[->] (sub.south) -- (inc.north);
 
     % S>=6? no branch is separate from the yes path and merges at n=n+1.
-    \coordinate (noTurn) at (-1.55,7.02);
-    \coordinate (noDrop) at (-1.55,5.95);
+    \coordinate (noTurn) at (-2.80,7.02);
+    \coordinate (noDrop) at (-2.80,5.95);
     \draw (testS.west) -- node[above left] {否} (noTurn) -- (noDrop);
     \draw[->] (noDrop) -- (double.north);
     \draw[->] (double.south) |- (inc.west);

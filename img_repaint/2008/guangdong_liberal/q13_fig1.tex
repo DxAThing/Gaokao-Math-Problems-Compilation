@@ -1,0 +1,45 @@
+% Source: source/普通高考/2008/2008广东文.pdf, page 1, question 13.
+% The source PDF is vector line art; the original PNG is retained for reference.
+% Nodes: 开始; 输入 m,n; i=1; a=m×i; n整除a?; i=i+1; 输出 a,i; 结束.
+% Directed edges: 开始→输入→i=1→a=m×i→n整除a?;
+% 是→输出 a,i→结束; 否→i=i+1→top loop-back→a=m×i.
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=0.55pt,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\normalsize,anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  flowbox/.style={draw,minimum height=.68cm,inner xsep=4pt,inner ysep=2pt,
+    anchor=center,align=center},
+  terminal/.style={flowbox,rounded corners=.18cm,minimum width=1.35cm,
+    minimum height=.72cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
+    trapezium right angle=108,minimum width=2.55cm,minimum height=.80cm},
+  decision/.style={flowbox,shape=diamond,aspect=2.8,minimum width=4.70cm,
+    minimum height=1.05cm,inner sep=1pt},
+]
+  \node[terminal] (start) at (0,10.85) {开始};
+  \node[io,minimum width=2.90cm] (input) at (0,9.40) {输入 $m,n$};
+  \node[flowbox,minimum width=2.05cm] (init) at (0,7.98) {$i=1$};
+  \node[flowbox,minimum width=3.15cm] (product) at (0,6.50) {$a=m\times i$};
+  \node[decision,minimum width=4.70cm] (test) at (0,4.85) {$n\text{ 整除 }a?$};
+  \node[flowbox,minimum width=2.90cm] (inc) at (3.75,4.85) {$i=i+1$};
+  \node[io,minimum width=3.05cm] (output) at (0,3.15) {输出 $a,i$};
+  \node[terminal] (finish) at (0,1.55) {结束};
+
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (init.north);
+  \draw[->] (init.south) -- (product.north);
+  \draw[->] (product.south) -- (test.north);
+  \draw[->] (test.south) -- node[right=2pt] {是} (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  \draw[->] (test.east) -- node[above=3pt] {否} (inc.west);
+  \coordinate (loop-right) at (5.35,7.25);
+  \draw (inc.north east) -- (5.35,5.25) -- (loop-right);
+  \draw[->] (loop-right) -- (0,7.25);
+  \draw[->] (0,7.25) -- (product.north);
+
+  \path[use as bounding box] (-2.70,1.10) rectangle (5.70,11.25);
+\end{tikzpicture}
