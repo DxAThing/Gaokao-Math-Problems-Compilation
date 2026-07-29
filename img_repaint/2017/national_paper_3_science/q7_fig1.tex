@@ -21,9 +21,10 @@
     line width=0.45pt,
     line cap=butt,
     line join=miter,
-    every node/.style={font=\normalsize,text centered,anchor=center,
-                       execute at begin node=\setlength{\parindent}{0pt}},
-    flowbox/.style={draw,text centered,anchor=center,inner xsep=4pt,inner ysep=2.5pt},
+    flowtext/.style={font=\normalsize,anchor=center,align=center,
+                     execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+    every node/.style={flowtext},
+    flowbox/.style={draw,flowtext,inner xsep=4pt,inner ysep=2.5pt},
     terminal/.style={flowbox,rounded corners=0.18cm,minimum width=1.40cm,minimum height=0.68cm},
     process/.style={flowbox,minimum height=0.68cm},
     io/.style={flowbox,trapezium,trapezium left angle=72,trapezium right angle=108,
@@ -38,7 +39,7 @@
     \node[terminal] (start) at (0,9.85) {开始};
     \node[io,minimum width=2.20cm] (input) at (0,8.52) {输入\(N\)};
     \node[process,minimum width=4.75cm] (init) at (0,7.18)
-        {\(t=1,\ M=100,\ S=0\)};
+        {\(t=1,M=100,S=0\)};
     \node[decision,minimum width=4.00cm] (test) at (0,5.70) {\(t\leq N\)};
     \node[process,minimum width=2.90cm] (sum) at (0,4.18) {\(S=S+M\)};
     \node[process,minimum width=2.80cm,minimum height=1.45cm] (scale) at (0,2.54)
@@ -59,8 +60,8 @@
 
     % The negative branch bypasses the loop body and reaches 输出 S.
     \coordinate (output-turn) at (4.02,5.70);
-    \draw[->] (test.east) -- (output-turn) -- (output.north);
-    \node[anchor=south west,inner sep=0pt] at (2.45,5.90) {否};
+    \draw[->] (test.east) -- node[flowtext,above=2pt] {否} (output-turn)
+        -- (output.north);
     \draw[->] (output.south) -- (finish.north);
 
     % Return path from t=t+1 to the top of the decision diamond.

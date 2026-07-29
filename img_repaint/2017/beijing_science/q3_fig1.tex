@@ -10,7 +10,14 @@
 \usetikzlibrary{shapes.misc}
 \begin{tikzpicture}[baseline,>=stealth,inner sep=1pt,yscale=1.15,
     every node/.style={font=\normalsize,align=center,
-      execute at begin node=\setlength{\parindent}{0pt}},
+      execute at begin node={%
+        \everypar{}%
+        \setlength{\parindent}{0pt}%
+        \setlength{\leftskip}{0pt}%
+        \setlength{\rightskip}{0pt}%
+        \setlength{\hangindent}{0pt}%
+        \setlength{\parfillskip}{0pt}%
+      }},
     flowbox/.style={draw,line width=0.55pt,align=center,minimum height=0.62cm,
       inner xsep=4pt,inner ysep=2pt},
     io/.style={draw,line width=0.55pt,shape=trapezium,
@@ -19,7 +26,7 @@
     flowarrow/.style={->,line width=0.55pt}]
   % Main vertical flow. Coordinates are a semantic schematic, not measured page pixels.
   \node[draw,rounded rectangle,line width=0.55pt,minimum width=1.18cm,minimum height=0.62cm] (start) at (0,0) {开始};
-  \node[flowbox,minimum width=2.55cm] (init) at (0,-1.15) {$k=0,\ s=1$};
+  \node[flowbox,minimum width=2.55cm] (init) at (0,-1.15) {$k=0,s=1$};
   \node[draw,diamond,line width=0.55pt,aspect=2.85,minimum width=3.35cm,minimum height=0.82cm] (test) at (0,-4.55) {$k<3?$};
   % The output node is a left-leaning parallelogram; text is centered by the node itself.
   \node[io] (output) at (0,-5.97) {输出 $s$};

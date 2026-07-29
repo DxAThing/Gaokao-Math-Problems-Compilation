@@ -296,9 +296,27 @@
 }
 \makeatother
 
+% TikZ/TeX figure bodies may be read while a problem's continuation
+% \everypar is active.  Keep that paragraph layout out of the boxed figure;
+% the surrounding problem paragraph remains unchanged by this local group.
+\newcommand{\texboxparagraphreset}{%
+    \everypar{}%
+    \leftskip=0pt\relax
+    \rightskip=0pt\relax
+    \parindent=0pt\relax
+    \hangindent=0pt\relax
+    \hangafter=1\relax
+    \parshape=0\relax
+}
+
 \newcommand{\texinclude}[2][]{%
     \begingroup
-    \adjustbox{max width=\linewidth,#1}{\input{#2}}%
+    \adjustbox{max width=\linewidth,#1}{%
+        \begingroup
+        \texboxparagraphreset
+        \input{#2}%
+        \endgroup
+    }%
     \endgroup
 }
 
@@ -327,7 +345,12 @@
 \newcommand{\choicetexfigure}[2][]{%
     \global\examchoicegraphictrue
     \begingroup
-    \adjustbox{#1,max width=\linewidth,valign=c}{\input{#2}}%
+    \adjustbox{#1,max width=\linewidth,valign=c}{%
+        \begingroup
+        \texboxparagraphreset
+        \input{#2}%
+        \endgroup
+    }%
     \endgroup
 }
 

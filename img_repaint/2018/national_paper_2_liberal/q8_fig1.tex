@@ -17,20 +17,25 @@
   >=Stealth,
   line width=0.45pt,
   node distance=0pt,
-  % Every node is locally zero-indent and centered in both axes.
-  every node/.style={font=\normalsize, text centered, anchor=center,
-    execute at begin node=\setlength{\parindent}{0pt}},
-  flowbox/.style={draw, minimum height=0.72cm, inner xsep=4pt, inner ysep=2.5pt,
-    text centered, anchor=center},
+  flowtext/.style={anchor=center, align=center,
+    execute at begin node={%
+      \everypar{}%
+      \setlength{\parindent}{0pt}%
+      \setlength{\leftskip}{0pt}%
+      \setlength{\rightskip}{0pt}%
+    }},
+  every node/.style={flowtext, font=\normalsize},
+  flowbox/.style={draw, flowtext, minimum height=0.72cm,
+    inner xsep=4pt, inner ysep=2.5pt},
   rounded/.style={flowbox, rounded corners=3pt},
-  decision/.style={draw, diamond, aspect=2.7, minimum width=3.5cm,
-    minimum height=1.0cm, text centered, anchor=center},
-  io/.style={draw, trapezium, trapezium left angle=74, trapezium right angle=106,
-    minimum height=0.72cm, minimum width=2.3cm, text centered, anchor=center}
+  decision/.style={draw, flowtext, diamond, aspect=2.7, minimum width=3.5cm,
+    minimum height=1.0cm},
+  io/.style={draw, flowtext, trapezium, trapezium left angle=74,
+    trapezium right angle=106, minimum height=0.72cm, minimum width=2.3cm}
 ]
   % Main vertical sequence.
   \node[rounded, minimum width=1.15cm] (start) at (0,11.7) {开始};
-  \node[flowbox, minimum width=3.8cm] (init) at (0,10.45) {$N=0,\ T=0$};
+  \node[flowbox, minimum width=3.8cm] (init) at (0,10.45) {$N=0,T=0$};
   \node[flowbox, minimum width=1.7cm] (seti) at (0,9.35) {$i=1$};
   \node[decision] (test) at (0,8.08) {$i<100$};
 
@@ -53,14 +58,12 @@
   \draw[->] (0,8.72) -- (test.north);
   \draw[->] (accn.south) -- (acct.north);
   \draw[->] (acct.south) -- (inc.north);
-  \draw[->] (test.east) -- (2.0,8.08) -- (sub.north)
-    node[pos=0.10, above=1pt] {否};
+  \draw[->] (test.east) -- node[above] {否} (2.0,8.08) -- (sub.north);
   \draw[->] (sub.south) -- (out.north);
   \draw[->] (out.south) -- (finish.north);
 
   % Yes branch and loop-back path.
-  \draw[->] (test.west) -- (-2.0,8.08) -- (accn.north)
-    node[pos=0.10, above=1pt] {是};
+  \draw[->] (test.west) -- node[above] {是} (-2.0,8.08) -- (accn.north);
   % The return arrow first joins the main trunk with a right-pointing head;
   % the separate trunk arrow above then enters the decision diamond.
   \draw[->] (inc.west) -- (-3.65,3.65) -- (-3.65,8.72) -- (-0.35,8.72);

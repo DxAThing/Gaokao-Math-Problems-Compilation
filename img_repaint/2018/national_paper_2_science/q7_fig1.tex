@@ -15,8 +15,16 @@
   line join=round,
   line cap=round,
   font=\normalsize,
-  flowbox/.style={draw, minimum height=0.72cm, inner xsep=5pt, inner ysep=3pt, align=center,
-                  execute at begin node={\setlength{\parindent}{0pt}}},
+  flowtext/.style={anchor=center, align=center,
+                   execute at begin node={%
+                     \everypar{}%
+                     \setlength{\parindent}{0pt}%
+                     \setlength{\leftskip}{0pt}%
+                     \setlength{\rightskip}{0pt}%
+                     \setlength{\parfillskip}{0pt}%
+                   }},
+  every node/.style={flowtext},
+  flowbox/.style={draw, flowtext, minimum height=0.72cm, inner xsep=5pt, inner ysep=3pt},
   process/.style={flowbox, minimum width=3.05cm},
   smallprocess/.style={flowbox, minimum width=1.55cm},
   startstop/.style={flowbox, rounded corners=0.18cm, minimum width=1.60cm},
@@ -29,7 +37,7 @@
 
   % Coordinates preserve the schematic topology and the source's two-column flow.
   \node[startstop] (start) at (0,8.40) {开始};
-  \node[process] (init) at (0,7.20) {$N=0,\ T=0$};
+  \node[process] (init) at (0,7.20) {$N=0, T=0$};
   \node[smallprocess] (seti) at (0,5.98) {$i=1$};
   \node[decision] (check) at (0,4.65) {$i<100$};
 
@@ -45,7 +53,7 @@
   \draw[->] (start.south) -- (init.north);
   \draw[->] (init.south) -- (seti.north);
   % The loop return joins the central path just above the decision.
-  \coordinate (loopjoin) at (0,5.05);
+  \coordinate (loopjoin) at (0,5.38);
   \draw (seti.south) -- (loopjoin);
 
   % Branches from the decision diamond.
@@ -57,7 +65,7 @@
   % Left loop body and return path.
   \draw[->] (addn.south) -- (addt.north);
   \draw[->] (addt.south) -- (increment.north);
-  \draw[->] (increment.west) -- (-4.85,0.35) -- (-4.85,5.05) -- (loopjoin);
+  \draw[->] (increment.west) -- (-4.85,0.35) -- (-4.85,5.38) -- (loopjoin);
   \draw[->] (loopjoin) -- (check.north);
 
   % False branch output path.

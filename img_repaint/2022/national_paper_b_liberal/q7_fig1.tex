@@ -1,39 +1,54 @@
 % 2022 全国乙卷（文）第 7 题程序框图，内容依据原始 PDF 第 1 页。
-% Node-edge list from the source: 开始→输入→b=b+2a→a=b-a,n=n+1→判定；
+% Source PDF: source/普通高考/2022/2022全国乙文(河南,山西,江西,安徽,陕西,甘肃,青海,内蒙古,黑龙江,吉林,.宁夏,新疆).pdf.
+% Grid evidence: tmp/repaint_2022_national_b_liberal/grid/page_grid100.png and page_grid50.png.
+% No-grid source crop: tmp/repaint_2022_national_b_liberal/crop/q7_source_tight.png.
+% Node-edge list: 开始→输入→b=b+2a→a=b-a,n=n+1→判定;
 % 判定“是”→输出n→结束；判定“否”→左侧回边→输入后、b更新前的主干汇合点。
-% The loop arrow ends at that merge point; the downward main arrow is the
-% separate input-to-b update edge, so no second arrow is added on the loop join.
-% solid segments: vertical and loop connectors, box outlines, diamond outline.
-% dashed segments: none. All node text is locally parindent=0pt and centered in both axes.
+% solid segments: all node boundaries and connector shafts; dashed segments: none.
+% Labels are attached to their branch edges; every node clears problem paragraph state and is centered.
+
 \begin{tikzpicture}[
+  x=1cm,
+  y=0.8cm,
   >=Stealth,
-  node distance=0.42cm and 0.8cm,
-  every node/.style={font={\small\setlength{\parindent}{0pt}},inner sep=0.5pt,align=center,anchor=center},
-  flow/.style={draw,thick,line width=0.45pt},
-  startstop/.style={flow,rounded corners=3pt,minimum width=1.00cm,minimum height=0.48cm},
-  process/.style={flow,rectangle,minimum width=1.95cm,minimum height=0.50cm},
-  inputoutput/.style={flow,trapezium,trapezium left angle=72,trapezium right angle=108,minimum width=3.30cm,minimum height=0.52cm},
-  decision/.style={flow,diamond,aspect=2.8,inner xsep=0cm,inner ysep=0.02cm,minimum width=5.35cm,minimum height=1.40cm},
+  line width=0.45pt,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\small,anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}\setlength{\leftskip}{0pt}\setlength{\rightskip}{0pt}\everypar{}}},
+  flow/.style={draw,anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}\setlength{\leftskip}{0pt}\setlength{\rightskip}{0pt}\everypar{}}},
+  startstop/.style={flow,rounded corners=0.18cm,minimum width=1.00cm,minimum height=0.54cm},
+  process/.style={flow,minimum width=1.95cm,minimum height=0.56cm,inner xsep=4pt,inner ysep=2pt},
+  inputoutput/.style={flow,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
+    minimum width=3.30cm,minimum height=0.58cm,inner xsep=4pt,inner ysep=2pt},
+  decision/.style={flow,shape=diamond,aspect=2.8,minimum width=5.35cm,minimum height=1.34cm,
+    inner xsep=4pt,inner ysep=2pt},
+  branchlabel/.style={anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}\setlength{\leftskip}{0pt}\setlength{\rightskip}{0pt}\everypar{}}},
 ]
-\node[startstop] (start) {开始};
-\node[inputoutput,below=of start] (input) {输入 $a=1,b=1,n=1$};
-\node[process,below=of input] (updateb) {$b=b+2a$};
-\node[process,below=of updateb] (updatean) {$a=b-a,\ n=n+1$};
-\node[decision,below=0.58cm of updatean] (check) {$\left|\dfrac{b^2}{a^2}-2\right|<0.01$};
-\node[inputoutput,below=0.58cm of check,minimum width=1.80cm] (output) {输出 $n$};
-\node[startstop,below=of output] (finish) {结束};
+  \node[startstop] (start) at (0,8.95) {开始};
+  \node[inputoutput] (input) at (0,7.72) {输入 $a=1,b=1,n=1$};
+  \node[process] (updateb) at (0,6.47) {$b=b+2a$};
+  \node[process,minimum width=2.90cm] (updatean) at (0,5.24) {$a=b-a,n=n+1$};
+  \node[decision] (check) at (0,3.72) {$\left|\dfrac{b^2}{a^2}-2\right|<0.01$};
+  \node[inputoutput,minimum width=1.80cm] (output) at (0,1.88) {输出 $n$};
+  \node[startstop] (finish) at (0,0.58) {结束};
 
-\draw[->] (start) -- (input);
-\draw[->] (input) -- (updateb);
-\draw[->] (updateb) -- (updatean);
-\draw[->] (updatean) -- (check);
-\draw[->] (check) -- node[right] {是} (output);
-\draw[->] (output) -- (finish);
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (updateb.north);
+  \draw[->] (updateb.south) -- (updatean.north);
+  \draw[->] (updatean.south) -- (check.north);
+  \draw[->] (check.south) -- node[branchlabel,anchor=east,pos=0.18] {是} (output.north);
+  \draw[->] (output.south) -- (finish.north);
 
-% 否分支沿左侧返回循环入口，箭头方向与原图一致。
-\coordinate (loopJoin) at ([yshift=0.28cm]updateb.north);
-\coordinate (loopBottom) at ([xshift=-2.45cm]check.west);
-\coordinate (loopTop) at (loopBottom |- loopJoin);
-\draw[->] (check.west) -- node[below left] {否} (loopBottom)
-  -- (loopTop) -- (loopJoin);
+  % 否分支左回，箭头在输入后、b 更新前的共享入口，和主干下行箭头独立。
+  \coordinate (loopJoin) at (0,6.86);
+  \coordinate (loopBottom) at (-3.15,3.72);
+  \coordinate (loopTop) at (-3.15,6.86);
+  \draw (check.west) -- node[branchlabel,below,pos=0.24] {否} (loopBottom)
+    -- (loopTop);
+  \draw[->] (loopTop) -- (loopJoin);
+
+  \path[use as bounding box] (-3.45,0.25) rectangle (3.45,9.28);
 \end{tikzpicture}
