@@ -29,12 +29,12 @@
 
   \node[terminal] (start) at (0,0) {开始};
   \node[process,minimum width=3.45cm] (init) at (0,-1.12) {$a=1,s=0,n=1$};
-  \node[process,minimum width=1.72cm] (sum) at (0,-2.28) {$s=s+a$};
+  \node[process,minimum width=1.72cm] (sum) at (0,-2.40) {$s=s+a$};
   \node[process,minimum width=1.72cm] (incA) at (0,-3.38) {$a=a+2$};
   \node[decision] (test) at (0,-4.62) {$n<3?$};
   \node[process,minimum width=1.82cm] (incN) at (0,-5.80) {$n=n+1$};
-  \node[io,minimum width=1.85cm] (output) at (2.80,-5.02) {输出 $s$};
-  \node[terminal] (finish) at (2.80,-6.20) {结束};
+  \node[io,minimum width=1.85cm] (output) at (2.80,-5.42) {输出 $s$};
+  \node[terminal] (finish) at (2.80,-6.60) {结束};
 
   % Main chain and false/output branch.
   \draw[->] (start.south) -- (init.north);
@@ -46,9 +46,14 @@
   % True branch updates n and returns left/up to the stem before s=s+a.
   \draw[->] (test.south) -- node[flowtext,right] {是} (incN.north);
   \coordinate (loop-left) at (-2.35,-6.14);
-  \coordinate (merge-level) at (0,-1.55);
-  \draw (incN.south) -- (loop-left) -- (loop-left |- merge-level);
-  \draw[->] (loop-left |- merge-level) -- (merge-level);
+  % Keep the loop return 2.8 mm below init's lower edge; place its arrowhead
+  % in the middle of the horizontal return so the shared merge has no loop tip.
+  \coordinate (merge-level) at (0,-1.74);
+  \coordinate (loop-arrow-start) at (-1.80,-1.74);
+  \coordinate (loop-arrow-tip) at (-1.05,-1.74);
+  \draw (incN.south) -- (loop-left) -- (loop-left |- merge-level) -- (loop-arrow-start);
+  \draw[->] (loop-arrow-start) -- (loop-arrow-tip);
+  \draw (loop-arrow-tip) -- (merge-level);
   \draw (init.south) -- (merge-level);
   \draw[->] (merge-level) -- (sum.north);
 

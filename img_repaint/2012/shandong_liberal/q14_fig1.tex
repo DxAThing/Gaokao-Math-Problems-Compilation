@@ -10,39 +10,38 @@
 %   (0.10, 0.12, 0.12, 0.26, 0.22, 0.18) from the source histogram.
 % solid segments: x/y axes, bar outlines, x-axis break mark.
 % dashed segments: horizontal guide lines at each labelled frequency-density level.
-% Labels are placed outside bars and clear of axes and guides.
+% The unused 0--20.5 range is represented by one class-width segment followed by a break.
+% Each dashed guide stops at the class boundary determined by the original bar height.
 \begin{tikzpicture}
 \begin{axis}[
-    width=8.0cm,
-    height=4.8cm,
-    xmin=18.8,
+    width=9.2cm,
+    height=5.2cm,
+    xmin=19.5,
     xmax=28.3,
-    ymin=-0.035,
+    ymin=-0.04,
     ymax=0.30,
-    axis lines=left,
+    axis x line=middle,
+    axis y line=left,
     axis line style={-stealth},
-    xlabel={平均气温/\(^{\circ}\mathrm{C}\)},
-    xlabel style={at={(axis description cs:0.98,0.08)},anchor=west,inner sep=0pt},
-    ylabel={},
     xtick={20.5,21.5,22.5,23.5,24.5,25.5,26.5},
     xticklabels={20.5,21.5,22.5,23.5,24.5,25.5,26.5},
+    x tick label as interval=false,
     ytick={0.10,0.12,0.18,0.22,0.26},
-    yticklabels={0.10,0.12,0.18,0.22,0.26},
+    yticklabels={,,,,},
     scaled x ticks=false,
     scaled y ticks=false,
-    tick label style={font=\scriptsize},
-    label style={font=\small},
+    tick label style={font=\normalsize},
     tick align=outside,
     tick style={black},
     enlargelimits=false,
     clip=false,
 ]
-    % Horizontal reference guides in the original statistical figure.
-    \addplot[dashed,black,line width=0.35pt] coordinates {(20.5,0.10) (26.5,0.10)};
-    \addplot[dashed,black,line width=0.35pt] coordinates {(20.5,0.12) (26.5,0.12)};
-    \addplot[dashed,black,line width=0.35pt] coordinates {(20.5,0.18) (26.5,0.18)};
-    \addplot[dashed,black,line width=0.35pt] coordinates {(20.5,0.22) (26.5,0.22)};
-    \addplot[dashed,black,line width=0.35pt] coordinates {(20.5,0.26) (26.5,0.26)};
+    % Guides begin at the y-axis and stop at the corresponding bar boundary.
+    \addplot[dashed,black,line width=0.35pt] coordinates {(19.5,0.10) (20.5,0.10)};
+    \addplot[dashed,black,line width=0.35pt] coordinates {(19.5,0.12) (21.5,0.12)};
+    \addplot[dashed,black,line width=0.35pt] coordinates {(19.5,0.18) (25.5,0.18)};
+    \addplot[dashed,black,line width=0.35pt] coordinates {(19.5,0.22) (24.5,0.22)};
+    \addplot[dashed,black,line width=0.35pt] coordinates {(19.5,0.26) (23.5,0.26)};
 
     % Histogram frequencies read from the original vector chart; class width is 1 degree C.
     \addplot[ybar interval,draw=black,fill=white,line width=0.45pt] coordinates {
@@ -55,12 +54,26 @@
         (26.5,0)
     };
 
-    % The source chart compresses the unused x-range between 0 and 20.5.
-    \node[anchor=north,inner sep=0pt] at (axis cs:19.25,-0.005) {0};
+    % The displayed 0--first-boundary segment has exactly one class width.
+    \node[anchor=north east,inner sep=1pt,font=\normalsize]
+        at (axis cs:19.48,-0.004) {0};
+    \draw[white,line width=1.4pt]
+        (axis cs:19.70,0) -- (axis cs:20.30,0);
     \draw[black,line width=0.45pt]
-        (axis cs:19.55,0) -- (axis cs:19.72,0.008)
-        -- (axis cs:19.89,0) -- (axis cs:20.06,0.008)
-        -- (axis cs:20.23,0) -- (axis cs:20.40,0.008);
-    \node[anchor=west,inner sep=0pt] at (axis cs:19.02,0.255) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+        (axis cs:19.70,0) -- (axis cs:19.82,0.010)
+        -- (axis cs:19.94,-0.010) -- (axis cs:20.06,0.010)
+        -- (axis cs:20.18,-0.010) -- (axis cs:20.30,0);
+
+    % Preserve every ordinate label shown in the source; stagger the dense lower pair.
+    \frequencyylabel[-28pt]{19.5}{0.10}{0.10}
+    \frequencyylabel[-4pt]{19.5}{0.12}{0.12}
+    \frequencyylabel[-4pt]{19.5}{0.18}{0.18}
+    \frequencyylabel[-4pt]{19.5}{0.22}{0.22}
+    \frequencyylabel[-4pt]{19.5}{0.26}{0.26}
+
+    \node[anchor=south west,inner sep=0pt,font=\normalsize]
+        at (axis cs:19.66,0.264) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=west,inner sep=0pt,font=\normalsize]
+        at (axis cs:27.05,0.018) {平均气温/\(^{\circ}\mathrm{C}\)};
 \end{axis}
 \end{tikzpicture}

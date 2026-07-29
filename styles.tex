@@ -134,9 +134,7 @@
 % 3. 宏包加载 (精简版)
 % ==============================================================================
 \usepackage{geometry}
-\usepackage{needspace}
 \geometry{a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm}
-\newcommand{\examneedlines}[1][2]{\Needspace{#1\baselineskip}}
 \newif\ifexampageflexused
 \AddToHook{shipout/after}{\global\exampageflexusedfalse}
 \newcommand{\examavoidshortpage}{%
@@ -334,8 +332,14 @@
     \begingroup
     \bitmappreparecaption{#2}%
     \begin{center}
-    \bitmapinclude[#1]{#2}
-    \bitmapinsertcaption
+    % Keep the image and its caption in one unbreakable vertical box.  A plain
+    % center environment is a breakable list, so TeX could ship the image on
+    % one page and captionof's paragraph on the next page.
+    \begin{minipage}{\linewidth}
+        \centering
+        \bitmapinclude[#1]{#2}%
+        \bitmapinsertcaption
+    \end{minipage}
     \end{center}
     \endgroup
 }
@@ -366,9 +370,18 @@
 }
 
 \newcommand{\texfigure}[2][]{%
+    \begingroup
+    \bitmappreparecaption{#2}%
     \begin{center}
-    \texinclude[#1]{#2}
+    % Keep the figure body together when the surrounding paragraph reaches a
+    % page boundary; this mirrors bitmapfigure without changing its options.
+    \begin{minipage}{\linewidth}
+        \centering
+        \texinclude[#1]{#2}%
+        \bitmapinsertcaption
+    \end{minipage}
     \end{center}
+    \endgroup
 }
 
 % 频率分布直方图纵轴标签：标签保持正文大小；密集柱高可用可选横移量错列，
@@ -546,7 +559,6 @@
 \newcommand{\problem}{%
     \problembodyfinish
     \examavoidshortpage
-    \examneedlines[1]%
     \stepcounter{probnum}%
     \global\problembodyactivetrue
     \global\problemfirstparagraphtrue
@@ -585,7 +597,6 @@
 \newcommand{\choices}[4]{%
     \problembodyend
     \par\nopagebreak
-    \examneedlines[2]%
     \vspace{4pt}
     \begingroup
     \setlength{\leftskip}{\problembodyindent}
@@ -645,7 +656,6 @@
 \newcommand{\choicesfive}[5]{%
     \problembodyend
     \par\nopagebreak
-    \examneedlines[2]%
     \vspace{4pt}
     \begingroup
     \setlength{\leftskip}{\problembodyindent}
@@ -729,7 +739,6 @@
 \newcommand{\answerbegin}{%
     \problembodyend
     \ifshowanswer
-        \examneedlines[3]%
         \begin{tcolorbox}[examanswer]
             \textbf{【答案】}\ignorespaces
     \else
@@ -751,7 +760,6 @@
 \newcommand{\solutionbegin}{%
     \problembodyend
     \ifshowanswer
-        \examneedlines[3]%
         \begin{tcolorbox}[examanswer]
             \textbf{【解析】}\ignorespaces
     \else
@@ -921,7 +929,6 @@
 
 \NewDocumentEnvironment{circlelist}{O{} +b}{
   \par\nopagebreak
-  \examneedlines[2]
   % 按 \item 拆分 body
   \regex_split:nnN { \c{item}\s* } { #2 } \l_tmpa_seq
   \seq_pop_left:NN \l_tmpa_seq \l_tmpa_tl

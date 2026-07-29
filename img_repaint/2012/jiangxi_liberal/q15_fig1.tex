@@ -48,7 +48,7 @@
   \draw[flowarrow] (firstjoin) -- (test1.north);
 
   % First decision branches remain independent until the assignment merge.
-  \draw[flowarrow] (test1.south) -- node[right=2pt] {是} (aone.north);
+  \draw[flowarrow] (test1.south) -- node[right=2pt,pos=.20,yshift=2pt] {是} (aone.north);
   \draw[flowarrow] (test1.east) -- node[above=2pt] {否} (4.55,7.35) -- (azero.north);
   \draw (aone.south) -- (assignjoin);
   \draw[flowarrow] (assignjoin) -- (sum.north);
@@ -58,7 +58,7 @@
   \draw[flowarrow] (inc.south) -- (test2.north);
 
   % Loop return from k<6? (是) enters the first-test junction via one right arrow.
-  \draw (test2.west) -- node[above=2pt] {是} (returnleft) -- (returntop);
+  \draw (test2.west) -- node[above=2pt,pos=.10] {是} (returnleft) -- (returntop);
   \draw[flowarrow] (returntop) -- (firstjoin);
 
   % Termination branch is independent of the loop.
