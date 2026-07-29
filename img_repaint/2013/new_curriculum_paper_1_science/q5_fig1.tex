@@ -1,0 +1,43 @@
+% Source PDF: source/普通高考/2013/2013新课标1理(河南,河北,山西).pdf, page 1, question 5.
+% Type: program flowchart; pdfimages -list reports no embedded bitmap (vector line art).
+% Node-edge list: 开始→输入t→t<1?；是→s=3t；否→s=4t−t^2；两分支汇合→输出s→结束。
+% Solid segments: all node outlines and directed connectors; dashed segments: none.
+% Labels 是/否 sit beside their corresponding decision exits. The branch connectors
+% merge through a single downward arrow into the output node.
+\begin{tikzpicture}[
+  x=1cm,
+  y=0.88cm,
+  >=Stealth,
+  line width=0.45pt,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\normalsize, inner sep=1pt, align=center, anchor=center,
+    execute at begin node=\setlength{\parindent}{0pt}},
+  flow/.style={draw, line width=0.45pt},
+  terminal/.style={flow, rounded corners=3pt, minimum width=1.35cm, minimum height=0.70cm},
+  process/.style={flow, minimum height=0.72cm, align=center},
+  io/.style={flow, trapezium, trapezium left angle=74, trapezium right angle=106,
+    minimum height=0.76cm, align=center},
+  decision/.style={flow, diamond, aspect=2.8, minimum width=3.4cm,
+    minimum height=1.0cm, inner sep=1pt, align=center}
+]
+  \node[terminal] (start) at (0,9.0) {开始};
+  \node[io, minimum width=2.20cm] (input) at (0,7.55) {输入 $t$};
+  \node[decision] (test) at (0,5.95) {$t<1$};
+  \node[process, minimum width=2.25cm] (left) at (-1.85,4.25) {$s=3t$};
+  \node[process, minimum width=3.05cm] (right) at (1.85,4.25) {$s=4t-t^2$};
+  \node[io, minimum width=2.20cm] (output) at (0,2.15) {输出 $s$};
+  \node[terminal] (finish) at (0,0.70) {结束};
+
+  \coordinate (merge) at (0,3.18);
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (test.north);
+  \draw[->] (test.west) -- node[above] {是} (-1.85,5.95) -- (left.north);
+  \draw[->] (test.east) -- node[above] {否} (1.85,5.95) -- (right.north);
+
+  % Branches are plain connectors; only the shared stem carries the merge arrow.
+  \draw (left.south) -- (left.south |- merge) -- (merge);
+  \draw (right.south) -- (right.south |- merge) -- (merge);
+  \draw[->] (merge) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+\end{tikzpicture}

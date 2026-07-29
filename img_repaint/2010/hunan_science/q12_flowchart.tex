@@ -1,0 +1,51 @@
+% Source: source/普通高考/2010/2010湖南理.pdf, page 1, question 12.
+% pdfimages -list reports no embedded bitmap; the program flowchart is vector/text artwork.
+% Grid evidence: tmp/redraw_flowchart_2010_hunan_science/grid/q12_grid.jpg.
+% Comparison crop: tmp/redraw_flowchart_2010_hunan_science/grid/q12_original_clean.png,
+% taken from the ungridded page render with a safety border.
+% Nodes: 开始; i=1,s=0; i≤n?; s=s+i^2; i=i+1; 输出 s; 结束.
+% Directed edges: 开始→初始化→判定; 判定(是)→s更新→i更新→上方回线→判定;
+% 判定(否)→输出 s→结束. The loop return does not connect to output.
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=0.55pt,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\normalsize,anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  flowbox/.style={draw,minimum height=.68cm,inner xsep=4pt,inner ysep=2pt,
+    anchor=center,align=center},
+  terminal/.style={flowbox,rounded corners=.18cm,minimum width=1.35cm,
+    minimum height=.72cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
+    trapezium right angle=108,minimum height=.78cm},
+  decision/.style={flowbox,shape=diamond,aspect=2.75,inner sep=2pt},
+  flowarrow/.style={->,line width=0.55pt},
+]
+  \node[terminal] (start) at (0,9.25) {开始};
+  \node[flowbox,minimum width=3.25cm] (init) at (0,7.95)
+    {$i=1,s=0$};
+  \coordinate (loopjoin) at (0,7.42);
+  \node[decision,minimum width=3.45cm,minimum height=.98cm] (test) at (0,5.10)
+    {$i\leq n?$};
+  \node[flowbox,minimum width=3.00cm] (sum) at (3.05,5.96)
+    {$s=s+i^2$};
+  \node[flowbox,minimum width=2.55cm] (inc) at (3.05,7.42)
+    {$i=i+1$};
+  \node[io,minimum width=1.95cm] (output) at (0,3.58) {输出 $s$};
+  \node[terminal] (finish) at (0,2.28) {结束};
+
+  \draw[flowarrow] (start.south) -- (init.north);
+  \draw (init.south) -- (loopjoin);
+  \draw[flowarrow] (loopjoin) -- (test.north);
+  \draw[flowarrow] (test.south) -- node[right=2pt] {否} (output.north);
+  \draw[flowarrow] (output.south) -- (finish.north);
+
+  % Affirmative branch goes right to s-update, then i-update, then returns left.
+  \coordinate (right-branch) at (3.05,5.10);
+  \draw (test.east) -- node[above] {是} (right-branch);
+  \draw[flowarrow] (right-branch) -- (sum.south);
+  \draw[flowarrow] (sum.north) -- (inc.south);
+  \draw[flowarrow] (inc.west) -- (loopjoin);
+  \path[use as bounding box] (-2.65,1.95) rectangle (4.55,9.60);
+\end{tikzpicture}

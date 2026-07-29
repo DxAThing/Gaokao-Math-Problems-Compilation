@@ -1,0 +1,69 @@
+% original_pdf: source/普通高考/2014/2014新课标1理(河南,河北,山西).pdf
+% page: 1 (question 7)
+% embedded_bitmap_attempt: pdfimages -list returned no embedded images; redraw from rendered page
+% evidence: tmp/review_flowchart_2014_new_curriculum_paper_1_science/grid/q7_grid100.jpg;
+%   q7_original_final.png (no-grid crop from the source page)
+% elements: rounded 开始/结束 terminals; input parallelogram 输入 a,b,k; initialization n=1;
+% condition diamond n<=k; process rectangles M=a+1/b, a=b, b=M, n=n+1; output parallelogram 输出 M.
+% node-edge list: 开始→输入(a,b,k)→n=1→n≤k?; 是→M=a+1/b→a=b→b=M→n=n+1→right loop-back to the
+% connector above n≤k?; 否→输出 M→结束. The main downward path into the test has one arrow only.
+% solid segments: all node borders and directed connectors; dashed segments: none.
+% Branch labels use natural edge-relative anchors; node text is locally zero-indented and centered.
+
+\begin{tikzpicture}[
+  baseline,
+  >=stealth,
+  x=1cm,
+  y=0.9cm,
+  line width=0.55pt,
+  line cap=round,
+  line join=round,
+  font=\small,
+  every node/.style={anchor=center,text centered,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flowbox/.style={draw,minimum height=0.68cm,inner xsep=4pt,inner ysep=2.5pt,
+    text centered,anchor=center},
+  branchlabel/.style={anchor=center,text centered,inner xsep=1pt,inner ysep=1pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  terminal/.style={flowbox,rounded corners=0.20cm,minimum width=1.24cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
+    minimum height=0.76cm},
+  decision/.style={flowbox,shape=diamond,aspect=2.8,inner xsep=4pt,inner ysep=2pt,
+    minimum height=1.00cm}
+]
+  % Main vertical path.
+  \node[terminal] (start) at (0,11.00) {开始};
+  \node[io,minimum width=3.85cm] (input) at (0,9.56) {输入 $a,b,k$};
+  \node[flowbox,minimum width=1.55cm] (init) at (0,8.12) {$n=1$};
+  \node[decision,minimum width=4.15cm] (test) at (0,6.35) {$n\leq k$};
+  \node[flowbox,minimum width=3.25cm,minimum height=1.05cm] (compute)
+    at (0,4.80) {$M=a+\frac{1}{b}$};
+  \node[flowbox,minimum width=1.65cm] (equal) at (0,3.38) {$a=b$};
+  \node[flowbox,minimum width=1.95cm] (copy) at (0,2.05) {$b=M$};
+  \node[flowbox,minimum width=2.65cm] (increment) at (0,0.72) {$n=n+1$};
+  \node[io,minimum width=2.45cm] (output) at (-3.20,4.95) {输出 $M$};
+  \node[terminal] (finish) at (-3.20,3.55) {结束};
+
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (init.north);
+  % Split the main stem at the loop-entry level: the return arrow joins via
+  % an un-directed segment, leaving one directed downward arrow into the test.
+  \coordinate (merge-level) at (0,7.15);
+  \coordinate (merge-pre) at (0.20,7.15);
+  \draw (init.south) -- (merge-level);
+  \draw[->] (merge-level) -- (test.north);
+  \draw[->] (test.south) -- node[branchlabel,right] {是} (compute.north);
+  \draw[->] (compute.south) -- (equal.north);
+  \draw[->] (equal.south) -- (copy.north);
+  \draw[->] (copy.south) -- (increment.north);
+
+  % No branch to output and finish.
+  \draw[->] (test.west) -- node[branchlabel,above] {否} (-3.20,6.35) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % Loop return: one left-pointing arrow joins the shared stem above the test.
+  \draw[->] (increment.east) -- (3.25,0.72) -- (3.25,7.15) -- (merge-pre);
+  \draw (merge-pre) -- (merge-level);
+
+  \path[use as bounding box] (-4.45,11.38) rectangle (4.05,0.30);
+\end{tikzpicture}

@@ -1,0 +1,52 @@
+% Source truth: source/普通高考/2010/2010广东理.pdf, p.1, q17 histogram.
+% Data: intervals (490,495], (495,500], (500,505], (505,510], (510,515]
+% have frequency-density heights 0.03, 0.04, 0.07, 0.05, 0.01 (from the source graph).
+% solid segments: five unfilled bar outlines; dashed segments: horizontal guides at
+% 0.01, 0.03, 0.04, 0.05, 0.07; labels: fraction on the y-axis, weight/unit on x-axis.
+\begin{tikzpicture}[baseline=(current bounding box.center)]
+\begin{axis}[
+  width=9.2cm,
+  height=5.6cm,
+  xmin=487,
+  xmax=518,
+  ymin=0,
+  ymax=0.08,
+  scaled y ticks=false,
+  axis lines=left,
+  axis line style={-Stealth},
+  tick align=outside,
+  xtick={487,490,495,500,505,510,515},
+  xticklabels={0,490,495,500,505,510,515},
+  ytick={0.01,0.03,0.04,0.05,0.07},
+  yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=2},
+  xlabel={重量/克},
+  xlabel style={at={(axis description cs:1.04,0)}, anchor=west, inner sep=0pt},
+  tick label style={font=\small},
+  label style={font=\small},
+  clip=false,
+]
+  % Source dashed guides terminate at the corresponding bar boundary.
+  \addplot[black, dashed, line width=0.45pt, forget plot]
+    coordinates {(487,0.01) (515,0.01)};
+  \addplot[black, dashed, line width=0.45pt, forget plot]
+    coordinates {(487,0.03) (495,0.03)};
+  \addplot[black, dashed, line width=0.45pt, forget plot]
+    coordinates {(487,0.04) (500,0.04)};
+  \addplot[black, dashed, line width=0.45pt, forget plot]
+    coordinates {(487,0.05) (505,0.05)};
+  \addplot[black, dashed, line width=0.45pt, forget plot]
+    coordinates {(487,0.07) (500,0.07)};
+  % Frequency-density bars, drawn as unfilled outlines to preserve visible guides.
+  \addplot[black, ybar interval, draw=black, fill=none, line width=0.55pt]
+    coordinates {(490,0.03) (495,0.04) (500,0.07) (505,0.05) (510,0.01) (515,0.01)};
+  % The source x-axis uses a short break immediately after the origin.
+  \draw[white, line width=2.2pt] (axis cs:487.5,0) -- (axis cs:489.2,0);
+  \draw[black, line width=0.55pt]
+    (axis cs:487.5,0) -- (axis cs:487.8,0.0012) -- (axis cs:488.1,0)
+    -- (axis cs:488.4,0.0012) -- (axis cs:488.7,0) -- (axis cs:489.0,0.0012)
+    -- (axis cs:489.3,0);
+  % Upright source-style fraction label above the y-axis.
+  \node[anchor=south] at (axis cs:489.8,0.073)
+    {\(\dfrac{\text{频率}}{\text{组距}}\)};
+\end{axis}
+\end{tikzpicture}

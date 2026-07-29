@@ -1,0 +1,59 @@
+% Source PDF: source/普通高考/2020/2020全国2文(甘肃,青海,内蒙古,黑龙江,吉林,辽宁.宁夏,新疆,陕西,重庆).pdf, page 1.
+% PDF embedded-bitmap attempt: pdfimages -list found no image objects; the flowchart is vector line art.
+% Original comparison crop: tmp/redraw_flowchart_2020_national_paper_2_liberal/q7_source_exact.png,
+% cropped from a no-grid 300 dpi page render after grid100/grid50 localization.
+% Elements: rounded start/end terminals, input/output parallelograms, two update rectangles,
+% one decision diamond, directed connectors, the left loop-back branch, and 是/否 labels.
+% Node→directed-edge list: 开始→输入(k,a)→a=2a+1→k=k+1→a>10;
+% a>10 的 是→输出 k→结束；a>10 的 否→左侧回边→a=2a+1.
+% solid segments: all node borders and connectors; dashed segments: none.
+% labels: every node is locally zero-indented and horizontally/vertically centered;
+% 是 sits beside the downward true branch and 否 sits beside the left return branch.
+
+\begin{tikzpicture}[
+  x=1cm,
+  y=0.91cm,
+  >=Stealth,
+  line cap=butt,
+  line join=miter,
+  every node/.style={font=\normalsize,anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flow/.style={draw=black,line width=0.45pt,anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+]
+  % The source is a schematic flowchart; coordinates preserve topology and compact spacing.
+  \node[flow,rounded corners=0.16cm,minimum width=1.05cm,minimum height=0.64cm]
+    (start) at (2.64,8.25) {开始};
+  % Input/output parallelograms are explicit polygons so their text bbox stays centered.
+  \path[flow] (1.55,7.50) -- (3.73,7.50) -- (3.53,6.78) -- (1.33,6.78) -- cycle;
+  \node at (2.54,7.14) {输入 \(k,a\)};
+  \node[flow,rectangle,minimum width=2.00cm,minimum height=0.62cm]
+    (updatea) at (2.64,5.98) {\(a=2a+1\)};
+  \node[flow,rectangle,minimum width=2.00cm,minimum height=0.62cm]
+    (updatek) at (2.64,4.73) {\(k=k+1\)};
+  \node[flow,diamond,aspect=2.75,minimum width=2.45cm,minimum height=0.72cm]
+    (check) at (2.64,3.48) {\(a>10\)};
+  \path[flow] (1.90,2.44) -- (3.40,2.44) -- (3.20,1.75) -- (1.65,1.75) -- cycle;
+  \node at (2.54,2.09) {输出 \(k\)};
+  \node[flow,rounded corners=0.16cm,minimum width=1.05cm,minimum height=0.64cm]
+    (finish) at (2.64,0.78) {结束};
+
+  % Main path; the true branch goes directly to output and then end.
+  \draw[->,flow] (start.south) -- (2.64,7.50);
+  \draw[->,flow] (2.64,6.78) -- (updatea.north);
+  \draw[->,flow] (updatea.south) -- (updatek.north);
+  \draw[->,flow] (updatek.south) -- (check.north);
+  \draw[->,flow] (check.south) -- node[pos=0.28,right=0.06cm] {是} (2.64,2.44);
+  \draw[->,flow] (2.64,1.75) -- (finish.north);
+
+  % The false branch has its own left return path and re-enters updatea.
+  \coordinate (loop-left) at (0.45,3.48);
+  % The return arrow enters the main connector above the update box, as in the source;
+  % keeping this junction clear avoids a duplicate arrowhead at the update border.
+  \coordinate (loop-top) at (0.45,6.55);
+  \coordinate (loop-merge) at (2.64,6.55);
+  \draw[flow] (check.west) -- (loop-left) -- (loop-top);
+  \draw[->,flow] (loop-top) -- (loop-merge);
+  \draw[flow] (loop-merge) -- (updatea.north);
+  \node[anchor=east,inner sep=0pt] at (1.33,3.85) {否};
+\end{tikzpicture}

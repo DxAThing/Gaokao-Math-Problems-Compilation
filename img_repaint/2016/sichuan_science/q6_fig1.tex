@@ -1,0 +1,63 @@
+% Source PDF: source/普通高考/2016/2016四川理.pdf, page 1, question 6.
+% PDF embedded-bitmap check: pdfimages -list found no image objects; the flowchart is vector artwork.
+% Grid evidence: tmp/redraw_2016_sichuan_science/page1_grid100.jpg;
+% original comparison crop: tmp/redraw_2016_sichuan_science/q6_3160.png,
+% cropped from the no-grid page render.
+% Elements: rounded start/end terminals; input/output parallelograms; process boxes
+%           v=1, i=n-1, v=vx+i, i=i-1; decision diamond i>=0; arrows and 是/否 labels.
+% Relations (source node -> directed edge list):
+%   开始->输入 n,x->v=1->i=n-1->(i>=0);
+%   (i>=0)-否->输出 v->结束;
+%   (i>=0)-是->v=vx+i->i=i-1->the central spine above the decision.
+% solid segments: every node outline, main spine, branch connectors, and arrows.
+% dashed segments: none.
+% labels: 是 is beside the right/up branch; 否 is beside the downward output branch;
+%         every node uses local zero-indent, centered text and compact white margins.
+
+\begin{tikzpicture}[x=1cm,y=1cm,>=stealth,line width=0.55pt,
+  line cap=round,line join=round,
+  every node/.append style={anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}}}
+]
+  % Main vertical spine.
+  \node[draw,rounded corners=0.16cm,minimum width=1.30cm,minimum height=0.64cm,
+    inner sep=0pt] (start) at (0,10.70) {开始};
+  \node[draw,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
+    minimum width=2.40cm,minimum height=0.70cm,inner sep=0pt] (input) at (0,9.38)
+    {输入 $n,x$};
+  \node[draw,minimum width=1.45cm,minimum height=0.70cm,inner sep=0pt] (vinit)
+    at (0,8.08) {$v=1$};
+  \node[draw,minimum width=2.30cm,minimum height=0.70cm,inner sep=0pt] (iinit)
+    at (0,6.72) {$i=n-1$};
+  \node[draw,diamond,aspect=2.65,minimum width=3.75cm,minimum height=1.10cm,
+    inner sep=0pt] (test) at (0,3.80) {$i\geq 0?$};
+  \node[draw,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
+    minimum width=2.15cm,minimum height=0.76cm,inner sep=0pt] (output) at (0,2.02)
+    {输出 $v$};
+  \node[draw,rounded corners=0.16cm,minimum width=1.30cm,minimum height=0.64cm,
+    inner sep=0pt] (finish) at (0,0.68) {结束};
+
+  % Right-hand update branch: the source arrows point upward into v=vx+i and i=i-1.
+  \node[draw,minimum width=2.30cm,minimum height=0.70cm,inner sep=0pt] (idec)
+    at (3.05,6.00) {$i=i-1$};
+  \node[draw,minimum width=2.45cm,minimum height=0.70cm,inner sep=0pt] (vcalc)
+    at (3.05,4.65) {$v=vx+i$};
+
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (vinit.north);
+  \draw[->] (vinit.south) -- (iinit.north);
+  \draw[->] (iinit.south) -- (test.north);
+  \draw[->] (test.south) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % Yes branch from the decision to the upward update chain.
+  \draw[->] (test.east) -- (3.05,3.80) -- (3.05,4.05) -- (vcalc.south);
+  \draw[->] (vcalc.north) -- (idec.south);
+  \draw[->] (idec.west) -- (0,6.00);
+
+  \node[anchor=west,inner sep=0pt] at (1.12,3.15) {是};
+  \node[anchor=west,inner sep=0pt] at (0.20,2.72) {否};
+
+  % Keep a small even margin around the outer nodes and branch.
+  \path[use as bounding box] (-1.95,11.10) rectangle (4.35,0.30);
+\end{tikzpicture}

@@ -1,0 +1,82 @@
+% Source PDF: source/普通高考/2012/2012新课标文(河南,河北,黑龙江,吉林,海南,宁夏,山西,内蒙古,新疆,云南).pdf,
+% page 1, question 6. pdfimages -list found no embedded bitmap; redraw uses the
+% rendered source page and the grid evidence below.
+% Grid evidence: tmp/review_2012_new_curriculum_liberal/grid/page1_grid100.jpg;
+% comparison crop: tmp/review_2012_new_curriculum_liberal/crops/q6_original_tight.png.
+% Node-edge list: 开始 -> 输入 N,a_1,...,a_N -> k=1,A=a_1,B=a_1 -> x=a_k;
+% x>A --是--> A=x; x>A --否--> x<B;
+% x<B --是--> B=x; x<B --否--> merge;
+% A=x -> merge and B=x -> merge; merge -> k>=N;
+% k>=N --是--> 输出 A,B -> 结束; k>=N --否--> k=k+1 -> x=a_k.
+% All borders/connectors are solid. Branch updates merge before the single
+% downward arrow entering k>=N; the output branch is independent of the loop.
+
+\begin{tikzpicture}[
+    >=Stealth,
+    x=1cm,
+    y=0.80cm,
+    line width=0.45pt,
+    line cap=round,
+    line join=round,
+    font=\normalsize,
+    flowtext/.style={anchor=center, align=center,
+        execute at begin node={\setlength{\parindent}{0pt}}},
+    flowbox/.style={draw, flowtext, minimum height=0.68cm,
+        inner xsep=5pt, inner ysep=3pt},
+    terminal/.style={flowbox, rounded corners=0.16cm, minimum width=1.35cm},
+    process/.style={flowbox, minimum width=2.00cm},
+    io/.style={flowbox, trapezium, trapezium left angle=72,
+        trapezium right angle=108, minimum height=0.78cm},
+    decision/.style={flowbox, diamond, aspect=2.9, minimum width=3.30cm,
+        minimum height=1.05cm},
+]
+    \path[use as bounding box] (-4.45,0.10) rectangle (4.55,13.35);
+
+    \node[terminal] (start) at (0,13.00) {开始};
+    \node[io, minimum width=5.65cm] (input) at (0,11.70)
+        {输入 $N,a_1,a_2,\ldots,a_N$};
+    \node[process, minimum width=5.65cm] (init) at (0,10.20)
+        {$k=1,A=a_1,B=a_1$};
+    \node[process, minimum width=1.75cm] (read) at (0,8.70) {$x=a_k$};
+    \node[decision] (testA) at (0,7.20) {$x>A$};
+    \node[decision] (testB) at (0,5.45) {$x<B$};
+    \node[decision] (testN) at (0,3.60) {$k\geqslant N$};
+
+    \node[process, minimum width=1.80cm] (setA) at (3.00,6.15) {$A=x$};
+    \node[process, minimum width=1.80cm] (setB) at (-3.00,4.55) {$B=x$};
+    \node[process, minimum width=2.30cm] (inc) at (3.55,8.00)
+        {$k=k+1$};
+    \node[io, minimum width=2.90cm] (output) at (0,2.00) {输出 $A,B$};
+    \node[terminal] (finish) at (0,0.65) {结束};
+
+    \draw[->] (start.south) -- (input.north);
+    \draw[->] (input.south) -- (init.north);
+    % Initialization and the loop return share one connector above x=a_k;
+    % only the connector's downward edge carries the arrowhead.
+    \coordinate (loop-merge) at (0,9.60);
+    \draw (init.south) -- (loop-merge);
+    \draw[->] (loop-merge) -- (read.north);
+    \draw[->] (read.south) -- (testA.north);
+
+    % First comparison: update A on the yes branch, otherwise test x<B.
+    \draw[->] (testA.east) -- node[above=2pt, inner sep=0pt] {是}
+        (3.00,7.20) -- (setA.north);
+    \draw[->] (testA.south) -- node[left=2pt, inner sep=0pt] {否}
+        (testB.north);
+
+    % Second comparison and branch updates.
+    \draw[->] (testB.west) -- node[above=2pt, inner sep=0pt] {是}
+        (-3.00,5.45) -- (setB.north);
+    \draw (testB.south) -- node[right=2pt, inner sep=0pt] {否}
+        (0,4.35);
+    \draw (setB.south) -- (-3.00,4.35) -- (0,4.35);
+    \draw (setA.south) -- (3.00,4.35) -- (0,4.35);
+    \draw[->] (0,4.35) -- (testN.north);
+
+    % Final test: terminate on yes, otherwise increment and loop to x=a_k.
+    \draw[->] (testN.south) -- (output.north);
+    \draw[->] (output.south) -- (finish.north);
+    \draw[->] (testN.east) -- node[above=2pt, inner sep=0pt] {否}
+        (3.55,3.60) -- (3.55,7.58) -- (inc.south);
+    \draw[->] (inc.north) -- (3.55,9.60) -- (loop-merge);
+\end{tikzpicture}

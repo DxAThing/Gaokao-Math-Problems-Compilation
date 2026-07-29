@@ -1,0 +1,78 @@
+% Source PDF: source/普通高考/2014/2014辽宁理.pdf
+% Page: 1
+% PDF embedded bitmap attempt: pdfimages -list found no embedded images; the source figure is vector content on the page.
+% Grid evidence: tmp/repaint_2014_liaoning_science/page-1-grid100.png and page-1-grid50.png.
+% No-grid crop evidence: tmp/repaint_2014_liaoning_science/q18_orig_crop_final3.png.
+% Elements: horizontal daily-sales axis with ticks 0/50/100/150/200/250 and arrow; vertical frequency/group-width axis with ticks 0.002/0.003/0.004/0.005/0.006 and arrow; five histogram bars; dashed reference levels; axis labels.
+% Relations: bars cover [0,50), [50,100), [100,150), [150,200), [200,250) with heights 0.003, 0.005, 0.006, 0.004, 0.002; dashed levels are drawn behind the bars and end at the corresponding bar boundary.
+% solid segments: x/y axes, axis arrows, tick marks, and bar outlines.
+% dashed segments: horizontal guides at 0.002, 0.004, 0.005, and 0.006.
+% labels: frequency/group-width label above the y-axis; daily-sales label to the right; numeric ticks kept clear of axes and bars.
+\begin{tikzpicture}[baseline]
+\begin{axis}[
+    width=8.4cm,
+    height=4.8cm,
+    axis lines=none,
+    xmin=-25,
+    xmax=290,
+    ymin=-0.00045,
+    ymax=0.0069,
+    clip=false,
+    ticks=none,
+]
+    % Dashed frequency reference levels, behind the bars.
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.002) -- (axis cs:200,0.002);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.004) -- (axis cs:150,0.004);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.005) -- (axis cs:50,0.005);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.006) -- (axis cs:100,0.006);
+
+    % Histogram bars: intervals and heights come from the source graph.
+    \addplot[
+        ybar interval,
+        draw=black,
+        fill=white,
+        line width=0.75pt,
+    ] coordinates {
+        (0,0.003)
+        (50,0.005)
+        (100,0.006)
+        (150,0.004)
+        (200,0.002)
+        (250,0.000)
+    };
+
+    % Axes.
+    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:285,0);
+    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,0.00675);
+
+    % x-axis ticks and labels.
+    \draw[line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.00018);
+    \draw[line width=0.45pt] (axis cs:50,0) -- (axis cs:50,-0.00018);
+    \draw[line width=0.45pt] (axis cs:100,0) -- (axis cs:100,-0.00018);
+    \draw[line width=0.45pt] (axis cs:150,0) -- (axis cs:150,-0.00018);
+    \draw[line width=0.45pt] (axis cs:200,0) -- (axis cs:200,-0.00018);
+    \draw[line width=0.45pt] (axis cs:250,0) -- (axis cs:250,-0.00018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:0,-0.00025) {0};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:50,-0.00025) {50};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:100,-0.00025) {100};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:150,-0.00025) {150};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:200,-0.00025) {200};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:250,-0.00025) {250};
+
+    % y-axis ticks and labels.
+    \draw[line width=0.45pt] (axis cs:0,0.002) -- (axis cs:-7,0.002);
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-9,0.002) {0.002};
+    \draw[line width=0.45pt] (axis cs:0,0.003) -- (axis cs:-7,0.003);
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-9,0.003) {0.003};
+    \draw[line width=0.45pt] (axis cs:0,0.004) -- (axis cs:-7,0.004);
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-9,0.004) {0.004};
+    \draw[line width=0.45pt] (axis cs:0,0.005) -- (axis cs:-7,0.005);
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-9,0.005) {0.005};
+    \draw[line width=0.45pt] (axis cs:0,0.006) -- (axis cs:-7,0.006);
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-9,0.006) {0.006};
+
+    \node[anchor=south west,inner sep=0pt,font=\small] at (axis cs:8,0.00675) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:255,0.0007) {日销售量/个};
+    \path (axis cs:-22,-0.00045) rectangle (axis cs:290,0.0069);
+\end{axis}
+\end{tikzpicture}

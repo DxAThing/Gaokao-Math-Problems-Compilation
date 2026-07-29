@@ -1,0 +1,62 @@
+% Source PDF: source/普通高考/2013/2013安徽理.pdf, page 1.
+% PDF embedded bitmap attempt: pdfimages -list returned no images; the flowchart is vector page content.
+% Grid evidence: tmp/review_2013_anhui_science/grid/page1_grid100.jpg and
+% q2_grid50.jpg; no-grid source crop:
+% tmp/review_2013_anhui_science/crops/q2_original_clean.png.
+% Complete directed edges: start -> init(s=0,n=2) -> test(n<8?);
+% test yes -> add(s=s+1/n) -> increment(n=n+2) -> test; test no -> output -> finish.
+% The loop return joins the vertical test-entry line; no other edges exist.
+\begin{tikzpicture}[
+    baseline,
+    >=Stealth,
+    x=1cm,
+    y=1cm,
+    line width=0.45pt,
+    line cap=round,
+    line join=round,
+    font=\normalsize,
+    flowtext/.style={anchor=center,align=center,
+        execute at begin node={\setlength{\parindent}{0pt}}},
+    flowbox/.style={flowtext,draw,inner xsep=3pt,inner ysep=2pt},
+]
+  % Tight bounding box around the full source topology.
+  \path[use as bounding box] (-2.95,-7.05) rectangle (4.35,0.42);
+
+  \node[flowbox,rounded corners=0.16cm,minimum width=1.35cm,minimum height=0.68cm]
+      (start) at (0,0) {开始};
+  \node[flowbox,minimum width=2.35cm,minimum height=0.72cm]
+      (init) at (0,-1.45) {$s=0,n=2$};
+  \node[flowbox,diamond,aspect=3.0,minimum width=3.25cm,minimum height=1.04cm]
+      (test) at (0,-3.20) {$n<8?$};
+  \node[flowbox,minimum width=2.65cm,minimum height=1.22cm]
+      (add) at (0,-4.95) {$s=s+\dfrac{1}{n}$};
+  \node[flowbox,minimum width=2.55cm,minimum height=0.72cm]
+      (inc) at (0,-6.50) {$n=n+2$};
+  \node[flowbox,trapezium,trapezium left angle=75,trapezium right angle=105,
+      minimum width=2.25cm,minimum height=0.82cm]
+      (output) at (3.05,-4.95) {输出 $s$};
+  \node[flowbox,rounded corners=0.16cm,minimum width=1.45cm,minimum height=0.72cm]
+      (finish) at (3.05,-6.50) {结束};
+
+  % Main path and the affirmative branch.
+  \draw[->] (start.south) -- (init.north);
+  \draw[->] (init.south) -- (test.north);
+  \draw[->] (test.south) -- (add.north);
+  \draw[->] (add.south) -- (inc.north);
+
+  % The update box loops left and returns with one horizontal arrow into the
+  % shared test-entry stem; there is no connection to the output branch.
+  \coordinate (loopLeft) at (-2.62,-6.50);
+  \coordinate (loopTop) at (-2.62,-2.20);
+  \draw (inc.west) -- (loopLeft) -- (loopTop);
+  \draw[->] (loopTop) -- (0,-2.20);
+
+  % The negative branch runs independently around the right side to output.
+  \coordinate (noRight) at (3.05,-3.20);
+  \coordinate (noDrop) at (3.05,-4.50);
+  \draw[->] (test.east) -- node[flowtext,above=2pt] {否} (noRight)
+      -- (noDrop) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  \node[flowtext,inner sep=0pt] at (-0.55,-4.00) {是};
+\end{tikzpicture}

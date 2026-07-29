@@ -1,0 +1,53 @@
+% Source: source/普通高考/2012/2012辽宁理.pdf, page 1, question 9.
+% pdfimages -list found no embedded image objects; the source flowchart is vector artwork.
+% Grid evidence: tmp/redraw_flowchart_2012_liaoning_science/grid/page1_grid100.png.
+% Program topology: 开始 -> S=4 -> i=1 -> i<9; 是 -> S=2/(2-S) -> i=i+1 ->
+% return to the shared stem above the test; 否 -> 输出 S -> 结束.
+% All connectors are solid directed edges; branch labels are attached to exits.
+
+\begin{tikzpicture}[
+    >=Stealth,
+    x=1cm,
+    y=0.86cm,
+    line width=0.45pt,
+    line cap=round,
+    line join=round,
+    font=\normalsize,
+    flowtext/.style={anchor=center, align=center,
+        execute at begin node={\setlength{\parindent}{0pt}}},
+    flowbox/.style={draw, flowtext, minimum height=0.68cm,
+        inner xsep=5pt, inner ysep=3pt},
+    terminal/.style={flowbox, rounded corners=0.16cm, minimum width=1.35cm},
+    process/.style={flowbox, minimum width=1.55cm},
+    decision/.style={flowbox, diamond, aspect=3.0, minimum width=3.40cm,
+        minimum height=1.02cm},
+    io/.style={flowbox, trapezium, trapezium left angle=72,
+        trapezium right angle=108, minimum height=0.78cm},
+]
+    \path[use as bounding box] (-3.15,0.70) rectangle (4.35,9.35);
+
+    \node[terminal] (start) at (0,9.00) {开始};
+    \node[process, minimum width=1.55cm] (initS) at (0,7.68) {$S=4$};
+    \node[process, minimum width=1.45cm] (initi) at (0,6.42) {$i=1$};
+    \node[decision] (test) at (0,5.00) {$i<9$};
+    \node[process, minimum width=2.75cm, minimum height=1.05cm] (updateS)
+        at (0,3.48) {$S=\dfrac{2}{2-S}$};
+    \node[process, minimum width=2.15cm] (increment) at (0,2.02)
+        {$i=i+1$};
+    \node[io, minimum width=2.10cm] (output) at (3.05,3.48) {输出 $S$};
+    \node[terminal] (finish) at (3.05,2.10) {结束};
+    \coordinate (loopjoin) at (0,6.00);
+
+    \draw[->] (start.south) -- (initS.north);
+    \draw[->] (initS.south) -- (initi.north);
+    \draw (initi.south) -- (loopjoin);
+    \draw[->] (loopjoin) -- (test.north);
+    \draw[->] (test.south) -- node[left] {是} (updateS.north);
+    \draw[->] (updateS.south) -- (increment.north);
+    \draw[->] (test.east) -- node[above] {否} (3.05,5.00) -- (output.north);
+    \draw[->] (output.south) -- (finish.north);
+
+    % Loop return: one left-side route and a single arrow into the shared
+    % stem; the main stem has the only downward arrow into the test.
+    \draw[->] (increment.west) -- (-2.55,2.02) -- (-2.55,6.00) -- (loopjoin);
+\end{tikzpicture}

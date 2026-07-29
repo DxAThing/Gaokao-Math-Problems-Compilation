@@ -1,0 +1,43 @@
+\begin{tikzpicture}[
+    >=Stealth,
+    flowbox/.style={
+        draw,
+        rectangle,
+        inner xsep=4pt,
+        inner ysep=2pt,
+        execute at begin node={\setlength{\parindent}{0pt}},
+        anchor=center,
+        align=center
+    },
+    terminal/.style={flowbox, rounded corners=3pt},
+    decision/.style={flowbox, diamond, aspect=2.2, inner sep=1.5pt},
+    output/.style={
+        flowbox,
+        trapezium,
+        trapezium left angle=70,
+        trapezium right angle=110
+    },
+    flowline/.style={->, line width=0.4pt}
+]
+% Node→directed-edge list:
+% 开始→s=0,n=1→s=s+(-1)^n+n→s>9；s>9(是)→输出 s→结束；
+% s>9(否)→n=n+1→s=s+(-1)^n+n。
+\node[terminal] (start) at (0,0) {开始};
+\node[flowbox] (init) at (2.1,0) {$s=0,n=1$};
+\node[flowbox] (update) at (5.5,0) {$s=s+(-1)^n+n$};
+\node[decision] (test) at (8.8,0) {$s>9$};
+\node[output] (print) at (11.3,0) {输出 $s$};
+\node[terminal] (finish) at (13.6,0) {结束};
+\node[flowbox] (increment) at (7.0,-1.55) {$n=n+1$};
+
+\draw[flowline] (start.east) -- (init.west);
+\coordinate (join) at (3.65,0);
+\draw (init.east) -- (join);
+\draw[flowline] (join) -- (update.west);
+\draw[flowline] (update.east) -- (test.west);
+\draw[flowline] (test.east) -- node[above=2pt] {是} (print.west);
+\draw[flowline] (print.east) -- (finish.west);
+\draw[flowline] (test.south) -- node[right=2pt,pos=0.45] {否}
+    (test.south |- increment.east) -- (increment.east);
+\draw[flowline] (increment.west) -- (join |- increment.west) -- (join);
+\end{tikzpicture}

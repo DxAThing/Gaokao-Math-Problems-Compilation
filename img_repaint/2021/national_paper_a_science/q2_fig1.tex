@@ -1,0 +1,106 @@
+% Source PDF: source/普通高考/2021/2021全国甲理(云南,广西,贵州,西藏,四川).pdf
+% Page: 1; q2 frequency-distribution histogram. pdfimages -list reported no embedded image objects;
+% the vector page render was inspected directly.
+% Grid evidence: tmp/redraw_2021_national_paper_a_science/page-1_grid100.png and
+% tmp/redraw_2021_national_paper_a_science/q2_block_grid50.png; original-side crop from the
+% no-grid page: tmp/redraw_2021_national_paper_a_science/q2_orig.png.
+% Elements: broken income x-axis (0, 2.5, 3.5, ..., 14.5), frequency/组距 y-axis,
+% twelve unit-width histogram bars, dashed guides at 0.02, 0.04, 0.10, 0.14, 0.20,
+% tick marks, arrowheads, and the labels 收入/万元 and 频率/组距.
+% Relations: the bars represent [2.5,3.5), [3.5,4.5), ..., [13.5,14.5)
+% with heights 0.02, 0.04, 0.10, 0.14, 0.20, 0.20, 0.10, 0.10, 0.04, 0.02, 0.02, 0.02;
+% source-PDF guide endpoints are displayed at 14.5, 11.5, 10.5, 6.5, and 8.5;
+% with the axis' internal coordinates offset by 1.5, these are x=13, 10, 9, 5, 7.
+% solid segments: bar outlines, axes, arrowheads, tick marks, and the x-axis break.
+% dashed segments: horizontal guides at the five labelled heights.
+
+\begin{tikzpicture}[baseline]
+\begin{axis}[
+    width=10.0cm,
+    height=5.25cm,
+    axis lines=none,
+    clip=false,
+    xmin=-0.78,
+    xmax=14.15,
+    ymin=-0.012,
+    ymax=0.224,
+    ticks=none,
+]
+    % Dashed guide endpoints match the source PDF (not bar-edge truncation).
+    \draw[dashed,line width=0.5pt] (axis cs:0,0.02) -- (axis cs:13,0.02);
+    \draw[dashed,line width=0.5pt] (axis cs:0,0.04) -- (axis cs:10,0.04);
+    \draw[dashed,line width=0.5pt] (axis cs:0,0.10) -- (axis cs:9,0.10);
+    \draw[dashed,line width=0.5pt] (axis cs:0,0.14) -- (axis cs:5,0.14);
+    \draw[dashed,line width=0.5pt] (axis cs:0,0.20) -- (axis cs:7,0.20);
+
+    % Twelve adjacent unit-width income classes.
+    \addplot[/tikz/ybar interval,mark=none,fill=white,line width=0.55pt] coordinates {
+      (1,0.02)
+      (2,0.04)
+      (3,0.10)
+      (4,0.14)
+      (5,0.20)
+      (6,0.20)
+      (7,0.10)
+      (8,0.10)
+      (9,0.04)
+      (10,0.02)
+      (11,0.02)
+      (12,0.02)
+      (13,0)
+    };
+
+    % Arrowed axes and the compressed 0--2.5 segment.
+    \draw[->,line width=0.75pt] (axis cs:0,0) -- (axis cs:13.95,0);
+    \draw[->,line width=0.75pt] (axis cs:0,0) -- (axis cs:0,0.218);
+    \fill[white] (axis cs:0.22,-0.006) -- (axis cs:0.36,0.004)
+        -- (axis cs:0.50,-0.006) -- (axis cs:0.64,0.004)
+        -- (axis cs:0.78,-0.006) -- cycle;
+    \draw[line width=0.75pt] (axis cs:0.22,-0.006) -- (axis cs:0.36,0.004)
+        -- (axis cs:0.50,-0.006) -- (axis cs:0.64,0.004)
+        -- (axis cs:0.78,-0.006);
+
+    % Axis labels and tick labels.
+    \node[anchor=south west,inner sep=0pt,font=\small]
+        at (axis cs:0.25,0.211) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:13.45,0.001) {收入/万元};
+    \node[anchor=north east,inner sep=0pt,font=\small] at (axis cs:0,-0.001) {0};
+
+    \draw[line width=0.35pt] (axis cs:1,0) -- (axis cs:1,-0.006);
+    \draw[line width=0.35pt] (axis cs:2,0) -- (axis cs:2,-0.006);
+    \draw[line width=0.35pt] (axis cs:3,0) -- (axis cs:3,-0.006);
+    \draw[line width=0.35pt] (axis cs:4,0) -- (axis cs:4,-0.006);
+    \draw[line width=0.35pt] (axis cs:5,0) -- (axis cs:5,-0.006);
+    \draw[line width=0.35pt] (axis cs:6,0) -- (axis cs:6,-0.006);
+    \draw[line width=0.35pt] (axis cs:7,0) -- (axis cs:7,-0.006);
+    \draw[line width=0.35pt] (axis cs:8,0) -- (axis cs:8,-0.006);
+    \draw[line width=0.35pt] (axis cs:9,0) -- (axis cs:9,-0.006);
+    \draw[line width=0.35pt] (axis cs:10,0) -- (axis cs:10,-0.006);
+    \draw[line width=0.35pt] (axis cs:11,0) -- (axis cs:11,-0.006);
+    \draw[line width=0.35pt] (axis cs:12,0) -- (axis cs:12,-0.006);
+    \draw[line width=0.35pt] (axis cs:13,0) -- (axis cs:13,-0.006);
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:1,-0.0065) {2.5};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:2,-0.0065) {3.5};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:3,-0.0065) {4.5};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:4,-0.0065) {5.5};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:5,-0.0065) {6.5};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:6,-0.0065) {7.5};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:7,-0.0065) {8.5};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:8,-0.0065) {9.5};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:9,-0.0065) {10.5};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:10,-0.0065) {11.5};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:11,-0.0065) {12.5};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:12,-0.0065) {13.5};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:13,-0.0065) {14.5};
+    \draw[line width=0.35pt] (axis cs:0,0.02) -- (axis cs:-0.10,0.02);
+    \draw[line width=0.35pt] (axis cs:0,0.04) -- (axis cs:-0.10,0.04);
+    \draw[line width=0.35pt] (axis cs:0,0.10) -- (axis cs:-0.10,0.10);
+    \draw[line width=0.35pt] (axis cs:0,0.14) -- (axis cs:-0.10,0.14);
+    \draw[line width=0.35pt] (axis cs:0,0.20) -- (axis cs:-0.10,0.20);
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-0.13,0.02) {0.02};
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-0.13,0.04) {0.04};
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-0.13,0.10) {0.10};
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-0.13,0.14) {0.14};
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-0.13,0.20) {0.20};
+\end{axis}
+\end{tikzpicture}

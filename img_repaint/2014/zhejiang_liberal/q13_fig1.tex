@@ -1,0 +1,57 @@
+% original_pdf: source/普通高考/2014/2014浙江文.pdf
+% page: 1 (question 13)
+% embedded_bitmap_attempt: pdfimages -list returned no embedded images; redraw from rendered page
+% evidence: tmp/independent_gate_2014_zhejiang_liberal/page1_grid.png; q13_original.png (no-grid crop)
+% elements: rounded 开始/结束 terminals; input parallelogram 输入 n; initialization rectangle S=0,i=1;
+% assignment rectangles S=2S+i and i=i+1; condition diamond S>n?; output parallelogram 输出 i;
+% solid arrows and 是/否 labels.
+% node-edge list: 开始→输入 n→(S=0,i=1)→(S=2S+i)→(i=i+1)→S>n?;
+% 是→输出 i→结束；否→right loop-back to the connector before S=2S+i. No other edges are present.
+% solid segments: all node borders and directed connectors; dashed segments: none.
+% Labels are centered in nodes with local zero paragraph indentation and compact padding.
+
+\begin{tikzpicture}[
+  baseline,
+  >=stealth,
+  x=1cm,
+  y=1.35cm,
+  line width=0.55pt,
+  line cap=round,
+  line join=round,
+  font=\normalsize,
+  every node/.style={anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flowbox/.style={draw,minimum height=0.68cm,inner xsep=4pt,inner ysep=2pt,
+    align=center,execute at begin node={\setlength{\parindent}{0pt}}},
+  terminal/.style={flowbox,rounded corners=0.20cm,minimum width=1.24cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
+    minimum height=0.76cm},
+  decision/.style={flowbox,shape=diamond,aspect=2.8,inner xsep=4pt,inner ysep=2pt,
+    minimum height=1.00cm}
+]
+  % Main vertical path.
+  \node[terminal] (start) at (0,10.50) {开始};
+  \node[io,minimum width=2.35cm] (input) at (0,9.08) {输入 $n$};
+  \node[flowbox,minimum width=3.65cm] (init) at (0,7.62) {$S=0,\ i=1$};
+  \node[flowbox,minimum width=3.20cm] (updateS) at (0,6.18) {$S=2S+i$};
+  \node[flowbox,minimum width=2.70cm] (updatei) at (0,4.74) {$i=i+1$};
+  \node[decision,minimum width=3.95cm] (test) at (0,3.28) {$S>n?$};
+  \node[io,minimum width=2.55cm] (output) at (0,1.78) {输出 $i$};
+  \node[terminal] (finish) at (0,0.34) {结束};
+
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (init.north);
+  \draw[->] (init.south) -- (updateS.north);
+  \draw[->] (updateS.south) -- (updatei.north);
+  \draw[->] (updatei.south) -- (test.north);
+  \draw[->] (test.south) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % The no branch loops right and returns to the connector immediately before S=2S+i.
+  \draw[->] (test.east) -- (3.05,3.28) -- (3.05,7.05) -- (0,7.05);
+
+  \node[anchor=east,inner sep=1pt] at (-0.34,2.66) {是};
+  \node[anchor=west,inner sep=1pt] at (1.72,3.85) {否};
+
+  \path[use as bounding box] (-2.20,10.92) rectangle (3.30,-0.07);
+\end{tikzpicture}

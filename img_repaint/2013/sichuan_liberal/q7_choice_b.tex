@@ -1,0 +1,37 @@
+% Source: source/普通高考/2013/2013四川文.pdf, page 1 (upper middle-right option B).
+% The source PDF has no embedded raster objects (pdfimages -list is empty); the
+% chart is vector linework.  A 100-unit grid inspection of a 300 dpi render
+% identified eight adjacent bins of width 5 on [0,40], with heights
+% 0.01, 0.02, 0.03, 0.03, 0.05, 0.02, 0.03, 0.01.  Bars share edges and rise
+% from the baseline; axes have arrowheads, y ticks are 0.01--0.05, and the
+% labels are “频率/组距” and “人数”.
+\begin{tikzpicture}
+  \begin{axis}[
+    width=5.8cm,height=4.0cm,
+    xmin=0,xmax=42,ymin=0,ymax=0.062,
+    axis lines=left, axis line style={->},
+    xtick={0,5,10,15,20,25,30,35,40},
+    xticklabel=\empty,
+    ytick={0.01,0.02,0.03,0.04,0.05}, scaled y ticks=false,
+    yticklabel style={/pgf/number format/fixed,/pgf/number format/precision=2},
+    tick style={black}, tick label style={font=\normalsize},
+    xlabel={人数}, xlabel style={font=\normalsize,at={(axis description cs:1.06,0.04)},anchor=west},
+    ylabel={},
+    tick align=outside, clip=false,
+  ]
+    \node[font=\normalsize,align=center,anchor=south] at (axis description cs:-0.08,1.08) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=north east,inner sep=0pt,xshift=-0.5pt,font=\normalsize] at (rel axis cs:0,-0.035) {0};
+    \node[anchor=north,inner sep=0pt,font=\normalsize] at (rel axis cs:0.119048,-0.035) {5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize] at (rel axis cs:0.238095,-0.035) {10};
+    \node[anchor=north,inner sep=0pt,font=\normalsize] at (rel axis cs:0.357143,-0.035) {15};
+    \node[anchor=north,inner sep=0pt,font=\normalsize] at (rel axis cs:0.476190,-0.035) {20};
+    \node[anchor=north,inner sep=0pt,font=\normalsize] at (rel axis cs:0.595238,-0.035) {25};
+    \node[anchor=north,inner sep=0pt,font=\normalsize] at (rel axis cs:0.714286,-0.035) {30};
+    \node[anchor=north,inner sep=0pt,font=\normalsize] at (rel axis cs:0.833333,-0.035) {35};
+    \node[anchor=north,inner sep=0pt,font=\normalsize] at (rel axis cs:0.952381,-0.035) {40};
+    \addplot[/tikz/ybar interval,draw=black,fill=white,mark=none] coordinates {
+      (0,0.01) (5,0.02) (10,0.03) (15,0.03) (20,0.05)
+      (25,0.02) (30,0.03) (35,0.01) (40,0)
+    };
+  \end{axis}
+\end{tikzpicture}

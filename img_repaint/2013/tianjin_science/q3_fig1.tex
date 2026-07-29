@@ -1,0 +1,61 @@
+% Source PDF: source/普通高考/2013/2013天津理.pdf, page 1 (question 3).
+% The source PDF contains vector line art (pdfimages -list returned no image objects).
+% Node -> directed-edge list: 开始 -> 输入 x -> S=0 -> S=S+x^3 -> S>=50?;
+% 是 -> 输出 S -> 结束; 否 -> x=2x -> loop-back to the stem immediately above
+% S=S+x^3.  The initial S=0 edge and the loop-back share this stem but carry
+% distinct directed segments, matching the source topology.
+% solid segments: all node outlines and connectors; dashed segments: none.
+% labels: 是 beside the downward decision exit; 否 beside the rightward exit;
+% all node text is locally zero-indented and centered.
+
+\begin{tikzpicture}[
+  x=1cm,
+  y=1cm,
+  >=Stealth,
+  line width=0.45pt,
+  line cap=round,
+  line join=round,
+  font=\normalsize,
+  flowtext/.style={anchor=center, align=center,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flowbox/.style={draw, minimum height=0.72cm, inner xsep=4pt, inner ysep=2pt,
+    align=center, execute at begin node={\setlength{\parindent}{0pt}}},
+  terminal/.style={flowbox, rounded corners=0.18cm, minimum width=1.30cm},
+  io/.style={flowbox, trapezium, trapezium left angle=72, trapezium right angle=108,
+    minimum height=0.78cm},
+  decision/.style={flowbox, diamond, aspect=2.75, minimum width=3.65cm,
+    minimum height=1.05cm, inner xsep=1pt, inner ysep=1pt},
+  branchlabel/.style={flowtext, inner sep=0pt},
+]
+  % Main sequence: the coordinates preserve the source's centered vertical stem.
+  \node[terminal] (start) at (0,15.0) {开始};
+  \node[io, minimum width=2.00cm] (input) at (0,13.45) {输入 $x$};
+  \node[flowbox, minimum width=2.45cm] (init) at (0,11.85) {$S=0$};
+  \node[flowbox, minimum width=3.70cm] (update) at (0,9.45) {$S=S+x^3$};
+  \node[decision] (test) at (0,7.35) {$S\geq 50?$};
+  \node[io, minimum width=2.00cm] (output) at (0,4.05) {输出 $S$};
+  \node[terminal] (finish) at (0,2.15) {结束};
+
+  \node[flowbox, minimum width=2.60cm] (double) at (4.35,9.45) {$x=2x$};
+
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (init.north);
+
+  % S=0 enters the shared stem; loop-back returns to the same merge point.
+  \coordinate (merge) at (0,10.55);
+  \draw (init.south) -- (merge);
+  \draw[->] (merge) -- (update.north);
+
+  \draw[->] (update.south) -- (test.north);
+
+  % Yes branch: decision -> output -> finish.
+  \draw[->] (test.south) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % No branch: decision -> x=2x -> leftward loop-back into the shared stem.
+  \draw[->] (test.east) -- (4.35,7.35) -- (4.35,8.95) -- (double.south);
+  \draw[->] (double.north) -- (4.35,10.55) -- (merge);
+
+  \node[branchlabel, anchor=west] at (0.42,5.85) {是};
+  \node[branchlabel, anchor=west] at (2.70,7.78) {否};
+\end{tikzpicture}

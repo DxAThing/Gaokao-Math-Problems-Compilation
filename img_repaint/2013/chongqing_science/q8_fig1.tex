@@ -1,0 +1,48 @@
+% Source PDF: source/普通高考/2013/2013重庆理.pdf, page 1, question 8.
+% pdfimages -list found no embedded bitmap; the program flowchart is vector line art.
+% Grid evidence: tmp/redraw_flowchart_2013_chongqing_science/grid/page1_grid100.png and q8_block_grid50.png.
+% Comparison crop: tmp/redraw_flowchart_2013_chongqing_science/crops/q8_orig_final.png,
+% taken from the ungridded 300 dpi page render with a safety border.
+% Elements: rounded start/end terminals; k=2,s=1, logarithm-update, and k=k+1
+% process rectangles; a deliberately blank decision diamond (the question asks for
+% its condition); output parallelogram; 是/否 labels; and the right loop-back.
+% Relations: start -> k=2,s=1 -> s=s*log_k(k+1) -> k=k+1 -> decision;
+% 是 -> right loop-back -> the update node; 否 -> 输出 s -> 结束. The initial
+% stem and loop return meet above the update node; the loop's horizontal arrow
+% points left, followed by one downward arrow into the update node. No dashed
+% segments or output-loop shared connections.
+\begin{tikzpicture}[
+  x=1cm,y=1cm,baseline,
+  flowarrow/.style={->,line width=0.55pt},
+  nodebox/.style={draw,line width=0.45pt,inner sep=2pt,minimum height=0.66cm,
+    anchor=center,align=center,execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  branchlabel/.style={anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  term/.style={nodebox,rounded corners=2.5pt,minimum width=1.30cm,text width=1.30cm},
+  io/.style={nodebox,shape=trapezium,trapezium left angle=70,trapezium right angle=110,
+    minimum width=1.80cm,text width=1.50cm,minimum height=0.72cm},
+  decision/.style={nodebox,diamond,aspect=2.7,minimum width=3.90cm,minimum height=1.02cm,inner sep=1pt}
+]
+  \node[term] (start) at (0,10.70) {开始};
+  \node[nodebox,text width=2.70cm,minimum width=2.70cm] (init) at (0,9.35) {$k=2,s=1$};
+  \node[nodebox,text width=4.05cm,minimum width=4.05cm] (update) at (0,7.82)
+    {$s=s\cdot\log_k(k+1)$};
+  \node[nodebox,text width=2.30cm,minimum width=2.30cm] (increment) at (0,6.22) {$k=k+1$};
+  \node[decision] (test) at (0,4.72) {};
+  \node[io] (output) at (0,3.08) {输出 $s$};
+  \node[term] (finish) at (0,1.52) {结束};
+
+  % Main vertical path, with a single incoming arrow to the blank decision.
+  \draw[flowarrow] (start.south) -- (init.north);
+  \draw (init.south) -- (0,8.55);
+  \draw[flowarrow] (0,8.55) -- (update.north);
+  \draw[flowarrow] (update.south) -- (increment.north);
+  \draw[flowarrow] (increment.south) -- (test.north);
+  \draw[flowarrow] (test.south) -- node[right=2pt] {否} (output.north);
+  \draw[flowarrow] (output.south) -- (finish.north);
+
+  % 是 branch: right loop-back, with left-pointing horizontal arrow into the update stem.
+  \draw[flowarrow] (test.east) -- node[above=2pt] {是} (3.40,4.72) -- (3.40,8.55);
+  \draw[flowarrow] (3.40,8.55) -- (0,8.55);
+
+\end{tikzpicture}

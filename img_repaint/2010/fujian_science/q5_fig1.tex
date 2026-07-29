@@ -1,0 +1,59 @@
+% Source PDF: source/普通高考/2010/2010福建理.pdf, page 1 (question 5).
+% PDF embedded-bitmap attempt: pdfimages -list found no image objects; the flowchart is vector artwork.
+% Grid evidence: tmp/redraw_flowchart_2010_fujian_science/source/page-1-grid100.png (100 px major grid).
+% No-grid comparison crop: tmp/redraw_flowchart_2010_fujian_science/source/q5_original_tight.png.
+% Elements: 开始; s=0; i=1; a=i×2^i; s=s+a; i=i+1; decision s>11?; 输出i; 结束.
+% Node -> directed-edge list: 开始→s=0→i=1→a=i×2^i→s=s+a→i=i+1→判定；
+% 判定(是)→输出i→结束；判定(否)→左侧回线→a=i×2^i. The return arrow enters the
+% stem between i=1 and the first calculation; it is independent of the output branch.
+% solid segments: all node borders and directed connectors; dashed segments: none.
+% labels: 是/否 are placed beside their corresponding decision exits; every node is locally zero-indented and centered.
+
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=0.50pt,
+  line cap=round,
+  line join=round,
+  font=\normalsize,
+  flowbox/.style={draw, minimum height=0.68cm, inner xsep=4pt, inner ysep=2pt,
+    anchor=center, align=center, execute at begin node={\setlength{\parindent}{0pt}}},
+  terminal/.style={flowbox, rounded corners=0.18cm, minimum width=1.30cm,
+    minimum height=0.72cm},
+  io/.style={flowbox, trapezium, trapezium left angle=72, trapezium right angle=108,
+    minimum width=1.75cm, minimum height=0.78cm},
+  decision/.style={flowbox, diamond, aspect=2.8, inner sep=2pt,
+    minimum width=3.25cm, minimum height=0.94cm},
+]
+  \node[terminal] (start) at (0,10.00) {开始};
+  \node[flowbox, minimum width=1.45cm] (s0) at (0,8.82) {$s=0$};
+  \node[flowbox, minimum width=1.45cm] (i1) at (0,7.62) {$i=1$};
+  \coordinate (merge) at (0,6.92);
+  \node[flowbox, minimum width=2.55cm] (calc) at (0,6.20)
+    {$a=i\times 2^i$};
+  \node[flowbox, minimum width=2.40cm] (sum) at (0,4.88)
+    {$s=s+a$};
+  \node[flowbox, minimum width=2.30cm] (inc) at (0,3.56)
+    {$i=i+1$};
+  \node[decision] (test) at (0,2.18) {$s>11?$};
+  \node[io] (output) at (0,0.82) {输出 $i$};
+  \node[terminal] (finish) at (0,-0.48) {结束};
+
+  \draw[->] (start.south) -- (s0.north);
+  \draw[->] (s0.south) -- (i1.north);
+  \draw (i1.south) -- (merge);
+  \draw[->] (merge) -- (calc.north);
+  \draw[->] (calc.south) -- (sum.north);
+  \draw[->] (sum.south) -- (inc.north);
+  \draw[->] (inc.south) -- (test.north);
+
+  % 是 branch to output and finish.
+  \draw[->] (test.south) -- node[right=2pt] {是} (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % 否 branch: independent left loop returning to the calculation stem.
+  \draw (test.west) -- (-3.20,2.18) -- (-3.20,6.92);
+  \draw[->] (-3.20,6.92) -- (merge);
+  \node[anchor=south east, inner sep=0pt] at (-1.42,2.37) {否};
+
+  \path[use as bounding box] (-3.42,-0.82) rectangle (3.42,10.38);
+\end{tikzpicture}

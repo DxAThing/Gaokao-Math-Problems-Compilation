@@ -1,0 +1,47 @@
+% Source PDF: source/普通高考/2013/2013浙江理.pdf, page 1, question 5.
+% pdfimages -list returned no embedded images; the source chart is vector line art.
+% Source crop: tmp/redraw_2013_zhejiang_science/q5_orig.png (ungridded page render).
+% Node-edge list: 开始 -> S=1,k=1 -> k>a?; 否 -> S=S+1/[k(k+1)] -> k=k+1
+% -> return to the connector above k>a?; 是 -> 输出 S -> 结束.  No other edges.
+% Solid segments: every node border and directed connector; dashed segments: none.
+% All node text is locally zero-indented and centered with compact padding.
+
+\begin{tikzpicture}[
+  x=1cm,y=1cm,baseline,>=Stealth,
+  line width=0.45pt,line cap=butt,line join=miter,
+  every node/.style={anchor=center,align=center,font=\normalsize,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flowbox/.style={draw,anchor=center,align=center,inner xsep=4pt,inner ysep=2.5pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  terminal/.style={flowbox,rounded corners=0.16cm,minimum width=1.35cm,minimum height=0.68cm},
+  process/.style={flowbox,minimum height=0.68cm},
+  decision/.style={flowbox,diamond,aspect=2.8,minimum height=0.92cm,inner xsep=4pt,inner ysep=2pt},
+  io/.style={flowbox,trapezium,trapezium left angle=72,trapezium right angle=108,
+    minimum height=0.74cm}
+]
+  \node[terminal] (start) at (0,9.25) {开始};
+  \node[process,minimum width=2.85cm] (init) at (0,7.95) {$S=1,k=1$};
+  \node[decision,minimum width=3.15cm] (test) at (0,6.55) {$k>a?$};
+  \node[process,minimum width=3.55cm,minimum height=0.95cm] (update)
+    at (0,4.95) {$S=S+\dfrac{1}{k(k+1)}$};
+  \node[process,minimum width=2.35cm] (increment) at (0,3.42) {$k=k+1$};
+  \node[io,minimum width=2.20cm] (output) at (0,1.55) {输出 $S$};
+  \node[terminal] (finish) at (0,0.15) {结束};
+
+  % Main chain; the loop enters the connector above the decision, then one
+  % separate downward arrow enters the decision node.
+  \draw[->] (start.south) -- (init.north);
+  \draw (init.south) -- (0,7.35);
+  \draw[->] (0,7.35) -- (test.north);
+  \draw[->] (test.south) -- node[right=2pt,inner sep=0pt] {否} (update.north);
+  \draw[->] (update.south) -- (increment.north);
+  \draw[->] (test.east) -- node[above=2pt,inner sep=0pt] {是}
+    (2.60,6.55) -- (2.60,2.35) -- (0,2.35) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % 否 branch returns around the left side to the same pre-decision connector.
+  % The source return leaves horizontally from the left side of k=k+1.
+  \draw (increment.west) -- (-3.10,3.42) -- (-3.10,7.35);
+  \draw[->] (-3.10,7.35) -- (0,7.35);
+
+\end{tikzpicture}

@@ -1,0 +1,52 @@
+% Source: source/普通高考/2010/2010安徽文.pdf, page 1, question 13.
+% The source PDF is vector line art; the original PNG is retained for reference.
+% Nodes: 开始; x=1; x是奇数?; x=x+1; x=x+2; x>8?; 输出x; 结束.
+% Directed edges: 开始→x=1→奇偶判定; 是→x=x+1→top loop-back→奇偶判定;
+% 否→x=x+2→x>8?; 是→输出x→结束; 否→right-side up-arrow→x=x+1.
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=0.55pt,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\normalsize,anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  flowbox/.style={draw,minimum height=.68cm,inner xsep=4pt,inner ysep=2pt,
+    anchor=center,align=center},
+  terminal/.style={flowbox,rounded corners=.18cm,minimum width=1.35cm,
+    minimum height=.72cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
+    trapezium right angle=108,minimum width=2.50cm,minimum height=.80cm},
+  decision/.style={flowbox,shape=diamond,aspect=2.7,minimum width=4.55cm,
+    minimum height=1.08cm,inner sep=1pt},
+]
+  \node[terminal] (start) at (0,11.05) {开始};
+  \node[flowbox,minimum width=2.25cm] (init) at (0,9.65) {$x=1$};
+  \node[decision,minimum width=4.55cm] (odd) at (0,8.05) {$x\text{ 是奇数?}$};
+  \node[flowbox,minimum width=3.20cm] (inc1) at (3.85,8.05) {$x=x+1$};
+  \node[flowbox,minimum width=3.20cm] (inc2) at (0,6.35) {$x=x+2$};
+  \node[decision,minimum width=3.75cm] (limit) at (0,4.65) {$x>8?$};
+  \node[io] (output) at (0,3.05) {输出 $x$};
+  \node[terminal] (finish) at (0,1.45) {结束};
+
+  \draw[->] (start.south) -- (init.north);
+  \draw[->] (init.south) -- (odd.north);
+  \draw[->] (odd.east) -- node[above=4pt] {是} (inc1.west);
+  \draw[->] (odd.south) -- node[right=2pt] {否} (inc2.north);
+  \draw[->] (inc2.south) -- (limit.north);
+  \draw[->] (limit.south) -- node[right=2pt] {是} (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % x>8 的否分支从右侧上行，进入 x=x+1 框底部。
+  \coordinate (right-route) at (4.85,4.65);
+  \draw (limit.east) -- node[above=2pt] {否} (right-route);
+  \draw[->] (right-route) -- (4.85,7.62) -- (inc1.south);
+
+  % 奇数分支更新后由顶部回线返回首个判定框入口。
+  \coordinate (top-route) at (6.10,9.15);
+  \coordinate (entry) at (0,9.15);
+  \draw (inc1.north east) -- (6.10,8.40) -- (top-route);
+  \draw[->] (top-route) -- (entry);
+  \draw[->] (entry) -- (odd.north);
+
+  \path[use as bounding box] (-2.55,1.05) rectangle (6.50,11.45);
+\end{tikzpicture}

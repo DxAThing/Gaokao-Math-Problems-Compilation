@@ -209,6 +209,11 @@
 \usetikzlibrary{arrows.meta, calc, intersections, positioning, shapes.geometric}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
+\pgfplotsset{
+    ybar interval/.append style={
+        x tick label as interval=false,
+    },
+}
 \usepackage{wrapfig}
 % 调整 wrapfigure 与正文的间距
 \setlength{\intextsep}{0pt}  % 纵向：图片上下的间距
@@ -266,15 +271,34 @@
 }
 \ExplSyntaxOff
 
+\makeatletter
+\newcommand{\FigureLayoutDeclare}[3]{%
+    \expandafter\gdef
+        \csname bitmaplayout@\detokenize{#1}\endcsname
+        {trim={#3},clip,width=#2,max width=\linewidth}%
+}
+\InputIfFileExists{tools/typeset/generated_image_layout.tex}{}{}
+
 \newcommand{\bitmapinclude}[2][]{%
     \begingroup
-    \adjustbox{max width=\linewidth,max totalheight=4.8cm,#1}{\includegraphics{#2}}%
+    \ifcsname bitmaplayout@\detokenize{#2}\endcsname
+        % 电子稿位图采用生成的白边裁切与标签定标宽度；
+        % 调用处旧的 width/height/scale 不再参与，避免同类题图忽大忽小。
+        \edef\bitmaplayoutoptions{%
+            \csname bitmaplayout@\detokenize{#2}\endcsname
+        }%
+    \else
+        % 照片、扫描稿、选项图及低置信度图片保留原调用参数。
+        \def\bitmaplayoutoptions{max width=\linewidth,#1}%
+    \fi
+    \expandafter\adjustbox\expandafter{\bitmaplayoutoptions}{\includegraphics{#2}}%
     \endgroup
 }
+\makeatother
 
 \newcommand{\texinclude}[2][]{%
     \begingroup
-    \adjustbox{max width=\linewidth,max totalheight=4.8cm,#1}{\input{#2}}%
+    \adjustbox{max width=\linewidth,#1}{\input{#2}}%
     \endgroup
 }
 
@@ -288,15 +312,38 @@
     \endgroup
 }
 
+\newif\ifexamchoicegraphic
+\newcount\examchoicegraphiccount
+
 % 独立选择题选项图，供 choices/choicesfive 承载；尺寸由调用方控制。
+% 全局标记只供 \choices 测量阶段识别图片选项；每次测量前都会重置。
 \newcommand{\choicebitmap}[2][]{%
-    \bitmapinclude[#1]{#2}%
+    \global\examchoicegraphictrue
+    \begingroup
+    \adjustbox{#1,max width=\linewidth,valign=c}{\includegraphics{#2}}%
+    \endgroup
+}
+
+\newcommand{\choicetexfigure}[2][]{%
+    \global\examchoicegraphictrue
+    \begingroup
+    \adjustbox{#1,max width=\linewidth,valign=c}{\input{#2}}%
+    \endgroup
 }
 
 \newcommand{\texfigure}[2][]{%
     \begin{center}
     \texinclude[#1]{#2}
     \end{center}
+}
+
+% 频率分布直方图纵轴标签：标签保持正文大小；密集柱高可用可选横移量错列，
+% 引线仍准确落在对应柱高，避免靠缩小字号处理重叠。
+\NewDocumentCommand{\frequencyylabel}{O{-4pt} m m m}{%
+    \draw[black,line width=0.4pt]
+        (axis cs:#2,#3) -- ([xshift=#1]axis cs:#2,#3);
+    \node[anchor=east,inner sep=1pt,font=\normalsize]
+        at ([xshift=#1]axis cs:#2,#3) {#4};
 }
 
 \NewDocumentCommand{\bitmapinlinefigure}{O{0.42\linewidth} O{} m}
@@ -436,28 +483,30 @@
      \@endpetrue
    \fi}
   {}{}
-\makeatother
 
 \newcommand{\problemcontinuationpar}{%
     \ifproblembodyactive
-        \ifproblemfirstparagraph
-            \leftskip=0pt\relax
-            \hangindent=\problembodyindent
-            \hangafter=1
-            \parshape=0\relax
-            \ifproblemheadpending
-                \problemheadbox
-                \global\problemheadpendingfalse
+        \ifnum\@listdepth=\z@
+            \ifproblemfirstparagraph
+                \leftskip=0pt\relax
+                \hangindent=\problembodyindent
+                \hangafter=1
+                \parshape=0\relax
+                \ifproblemheadpending
+                    \problemheadbox
+                    \global\problemheadpendingfalse
+                \fi
+                \global\problemfirstparagraphfalse
+            \else
+                \leftskip=\problembodyindent\relax
+                \hangindent=0pt\relax
+                \hangafter=1\relax
+                \parshape=0\relax
             \fi
-            \global\problemfirstparagraphfalse
-        \else
-            \leftskip=\problembodyindent\relax
-            \hangindent=0pt\relax
-            \hangafter=1\relax
-            \parshape=0\relax
         \fi
     \fi
 }
+\makeatother
 
 % --- B. 题目命令 \problem ---
 \newcommand{\problem}{%
@@ -482,6 +531,15 @@
     \parbox[t]{#1}{\raggedright\textbf{#2.}~#3}%
 }
 
+% 四个图片选项专用：复用普通四选项的 0.22\examchoicewidth 列和 hfill，
+% 保证 A/B/C/D 的列起点一致；标签与图片都按中心基线排放。
+\newcommand{\choicegraphiccell}[3]{%
+    \makebox[#1][l]{%
+        \adjustbox{valign=c}{\textbf{#2.}}\hspace{0.25em}%
+        #3%
+    }%
+}
+
 \newdimen\examchoicewidth
 \newdimen\examchoicewidthA
 \newdimen\examchoicewidthB
@@ -498,10 +556,19 @@
     \begingroup
     \setlength{\leftskip}{\problembodyindent}
     \examchoicewidth=\dimexpr\linewidth-\problembodyindent\relax
+    \examchoicegraphiccount=0
+    \global\examchoicegraphicfalse
     \settowidth{\examchoicewidthA}{\textbf{A.}~#1}
+    \ifexamchoicegraphic\advance\examchoicegraphiccount by 1\relax\fi
+    \global\examchoicegraphicfalse
     \settowidth{\examchoicewidthB}{\textbf{B.}~#2}
+    \ifexamchoicegraphic\advance\examchoicegraphiccount by 1\relax\fi
+    \global\examchoicegraphicfalse
     \settowidth{\examchoicewidthC}{\textbf{C.}~#3}
+    \ifexamchoicegraphic\advance\examchoicegraphiccount by 1\relax\fi
+    \global\examchoicegraphicfalse
     \settowidth{\examchoicewidthD}{\textbf{D.}~#4}
+    \ifexamchoicegraphic\advance\examchoicegraphiccount by 1\relax\fi
     \examchoicemaxwidth=\examchoicewidthA
     \ifdim\examchoicewidthB>\examchoicemaxwidth \examchoicemaxwidth=\examchoicewidthB \fi
     \ifdim\examchoicewidthC>\examchoicemaxwidth \examchoicemaxwidth=\examchoicewidthC \fi
@@ -509,7 +576,12 @@
     \addtolength{\examchoicemaxwidth}{2em}
 
     \vspace{-0.2em}\noindent
-    \ifdim\examchoicemaxwidth<0.22\examchoicewidth
+    \ifnum\examchoicegraphiccount=4
+        \choicegraphiccell{\dimexpr0.22\examchoicewidth\relax}{A}{#1}\hfill
+        \choicegraphiccell{\dimexpr0.22\examchoicewidth\relax}{B}{#2}\hfill
+        \choicegraphiccell{\dimexpr0.22\examchoicewidth\relax}{C}{#3}\hfill
+        \choicegraphiccell{\dimexpr0.22\examchoicewidth\relax}{D}{#4}%
+    \else\ifdim\examchoicemaxwidth<0.22\examchoicewidth
         \choicecell{\dimexpr0.22\examchoicewidth\relax}{A}{#1}\hfill
         \choicecell{\dimexpr0.22\examchoicewidth\relax}{B}{#2}\hfill
         \choicecell{\dimexpr0.22\examchoicewidth\relax}{C}{#3}\hfill
@@ -527,7 +599,8 @@
             \choiceentry{C}{#3}\par
             \choiceentry{D}{#4}%
         \fi
-    \fi
+    \fi\fi
+    \global\examchoicegraphicfalse
     \par
     \endgroup
 }
@@ -730,7 +803,6 @@
 \newcommand{\N}{\mathbb{N}}
 \renewcommand{\Pr}{P}
 \renewcommand{\d}{\text{d}}
-\renewcommand{\i}{\text{i}}
 \newcommand{\e}{\text{e}}
 \newcommand{\degree}{^\circ}
 \newcommand{\bs}[1]{\symbfit{#1}}
@@ -816,7 +888,6 @@
 \NewDocumentEnvironment{circlelist}{O{} +b}{
   \par\nopagebreak
   \examneedlines[2]
-  \vspace{4pt}
   % 按 \item 拆分 body
   \regex_split:nnN { \c{item}\s* } { #2 } \l_tmpa_seq
   \seq_pop_left:NN \l_tmpa_seq \l_tmpa_tl
@@ -959,6 +1030,7 @@
 % PDF 导航：目录与大纲均采用“年份 → 试卷”两级结构。
 \usepackage[hidelinks,bookmarksdepth=chapter,hypertexnames=false]{hyperref}
 \usepackage{bookmark}
+\renewcommand{\i}{\ensuremath{\mathrm{i}}}
 \newcommand{\examyear}[1]{%
     \clearpage
     \phantomsection

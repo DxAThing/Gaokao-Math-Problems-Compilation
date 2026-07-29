@@ -1,0 +1,66 @@
+% Source PDF: source/普通高考/2017/2017江苏.pdf, page 1, question 4.
+% pdfimages -list was attempted; the PDF contains no embedded bitmap objects (vector artwork).
+% Grid evidence: tmp/redraw_flowchart_2017_jiangsu/grid/page1_grid100.jpg and q4_block_grid50.jpg.
+% Comparison source: tmp/review_2017_jiangsu/crop/q4_orig_final_magick3.png,
+% cropped from the no-grid page render after grid localization.
+% Elements: start/end rounded terminals, input/output parallelograms, x>=1? decision diamond,
+% Y/N branch labels, y<-2^x and y<-2+log_2 x assignment boxes, arrows and merge path.
+% Relations: start -> input -> decision; Y selects y<-2^x, N selects y<-2+log_2 x;
+% both branches merge before output y -> end. The diagram is schematic, so only topology/layout is preserved.
+% solid segments: all process/decision outlines, branch connectors, merge connector and arrow stems.
+% dashed segments: none.
+% labels: Y/N sit above the corresponding branch horizontals; all math labels are centered in boxes.
+% Directed edges: 开始→输入x→判定；判定(Y)→左框、判定(N)→右框；两框→合流→输出y→结束。
+% 两个分支只在题设合流处相接，未添加原图不存在的边或交汇。
+\begin{tikzpicture}[
+  x=1.25cm,y=1cm,
+  >=Stealth,
+  line width=0.55pt,
+  font=\normalsize,
+  baseline,
+]
+  % Terminals and process boxes.
+  \node[draw,rounded corners=7pt,minimum width=1.22cm,minimum height=.62cm,
+    inner xsep=4pt,inner ysep=2pt,
+    anchor=center,align=center,font={\normalsize\setlength{\parindent}{0pt}}]
+    (start) at (0,7.25) {开始};
+  \draw (-.80,6.45) -- (.80,6.45) -- (.61,5.72) -- (-.98,5.72) -- cycle;
+  \node[inner xsep=4pt,inner ysep=2pt,anchor=center,align=center,font={\normalsize\setlength{\parindent}{0pt}}]
+    at (-.09,6.08) {输入\(x\)};
+
+  \draw (0,5.20) -- (1.70,4.72) -- (0,4.24) -- (-1.70,4.72) -- cycle;
+  \node[inner xsep=4pt,inner ysep=2pt,anchor=center,align=center,font={\normalsize\setlength{\parindent}{0pt}}]
+    at (0,4.72) {\(x\geq 1?\)};
+
+  \node[draw,minimum width=1.70cm,minimum height=.62cm,
+    inner xsep=4pt,inner ysep=2pt,
+    anchor=center,align=center,font={\normalsize\setlength{\parindent}{0pt}}]
+    (left) at (-2.10,3.55) {\(y\leftarrow 2^x\)};
+  \node[draw,minimum width=3.05cm,minimum height=.62cm,
+    inner xsep=4pt,inner ysep=2pt,
+    anchor=center,align=center,font={\normalsize\setlength{\parindent}{0pt}}]
+    (right) at (2.10,3.55) {\(y\leftarrow 2+\log_2 x\)};
+
+  \draw (-.80,2.30) -- (.80,2.30) -- (.61,1.58) -- (-.98,1.58) -- cycle;
+  \node[inner xsep=4pt,inner ysep=2pt,anchor=center,align=center,font={\normalsize\setlength{\parindent}{0pt}}]
+    at (-.09,1.94) {输出\(y\)};
+  \node[draw,rounded corners=7pt,minimum width=1.22cm,minimum height=.62cm,
+    inner xsep=4pt,inner ysep=2pt,
+    anchor=center,align=center,font={\normalsize\setlength{\parindent}{0pt}}]
+    (finish) at (0,.78) {结束};
+
+  % Directed flow: vertical stages and the two decision branches.
+  \draw[->] (start.south) -- (0,6.45);
+  \draw[->] (0,5.72) -- (0,5.20);
+  \draw[->] (-1.70,4.72) -- (-2.10,4.72) -- (-2.10,3.86);
+  \draw[->] (1.70,4.72) -- (2.10,4.72) -- (2.10,3.86);
+  \node[inner sep=0pt,anchor=center,align=center,font={\normalsize\setlength{\parindent}{0pt}}]
+    at (-1.78,5.03) {Y};
+  \node[inner sep=0pt,anchor=center,align=center,font={\normalsize\setlength{\parindent}{0pt}}]
+    at (1.78,5.03) {N};
+
+  \draw (left.south) -- (-2.10,2.65) -- (0,2.65);
+  \draw (right.south) -- (2.10,2.65) -- (0,2.65);
+  \draw[->] (0,2.65) -- (0,2.30);
+  \draw[->] (0,1.58) -- (finish.north);
+\end{tikzpicture}

@@ -1,0 +1,67 @@
+% original_pdf: source/普通高考/2020/2020江苏.pdf
+% page: 1; pdfimages -list found no embedded image objects (the flowchart is vector line art)
+% grid evidence: tmp/redraw_flowchart_2020_jiangsu/grid/page-1_grid100.png and flow_block_grid50.png
+% original-side comparison crop: tmp/redraw_flowchart_2020_jiangsu/original_q5_fig1_tight.png, cropped from no-grid page-1.png
+% elements: rounded start/end boxes, input parallelogram, decision diamond, two assignment rectangles,
+%           output rectangle, downward arrows, branch labels Y/N, and the common merge path.
+% node-edge checklist from the original PDF: 开始→输入x; 输入x→x>0?;
+% x>0?(Y)→y←2^x; x>0?(N)→y←x+1; y←2^x→合流;
+% y←x+1→合流; 合流→输出y; 输出y→结束. Branch exits are horizontal
+% to their own vertical drops; only the explicit merge point is shared.
+% relations: start -> input x -> test x>0; Y branch assigns y=2^x, N branch assigns y=x+1;
+%            both branches merge before output y -> end. The flowchart is a semantic diagram, not a scale drawing.
+% solid segments: all box borders, branch connectors, and vertical/horizontal flow lines.
+% dashed segments: none.
+% labels: Y and N sit above the corresponding decision exits; math labels remain centered in boxes;
+%         Chinese labels use the document font and arrows terminate at box boundaries.
+\begin{tikzpicture}[
+    x=1cm,
+    y=0.9cm,
+    >=stealth,
+    line width=0.45pt,
+    every node/.style={
+        inner sep=0pt,
+        align=center,
+        anchor=center,
+        execute at begin node={\setlength{\parindent}{0pt}},
+    },
+]
+    % Shapes and text follow the original algorithm diagram and question statement.
+    \node[draw, rounded corners=6pt, minimum width=1.25cm, minimum height=0.72cm]
+        (start) at (0,8.30) {开始};
+    % The input box is a true parallelogram (both sides lean in the same direction).
+    \coordinate (input) at (0,6.95);
+    \draw (-0.95,7.36) -- (1.20,7.36) -- (0.95,6.54) -- (-1.20,6.54) -- cycle;
+    \node[minimum width=2.15cm, minimum height=0.82cm] at (input) {输入 \(x\)};
+    \node[draw, diamond, aspect=2.9, minimum width=3.25cm, minimum height=0.86cm]
+        (decision) at (0,5.35) {\(x>0?\)};
+    \node[draw, minimum width=1.70cm, minimum height=0.72cm] (left) at (-3.05,3.55)
+        {\(y\leftarrow 2^x\)};
+    \node[draw, minimum width=2.30cm, minimum height=0.72cm] (right) at (3.05,3.55)
+        {\(y\leftarrow x+1\)};
+    \node[draw, minimum width=1.58cm, minimum height=0.72cm] (output) at (0,1.62)
+        {输出 \(y\)};
+    \node[draw, rounded corners=6pt, minimum width=1.25cm, minimum height=0.72cm]
+        (finish) at (0,0.30) {结束};
+
+    % Main path and decision entrance.
+    \draw[->] (start.south) -- (0,7.36);
+    \draw[->] (0,6.54) -- (decision.north);
+
+    % Decision branches: horizontal exits then separate vertical drops.
+    \node (yes-label) at (-2.35,5.72) {Y};
+    \node (no-label) at (2.35,5.72) {N};
+    \coordinate (left-turn) at (-3.05,5.35);
+    \coordinate (right-turn) at (3.05,5.35);
+    \draw (decision.west) -- (left-turn);
+    \draw[->] (left-turn) -- (left.north);
+    \draw (decision.east) -- (right-turn);
+    \draw[->] (right-turn) -- (right.north);
+
+    % Branch merge and output path.
+    \coordinate (merge) at (0,2.45);
+    \draw (left.south) -- (left.south |- merge) -- (merge);
+    \draw (right.south) -- (right.south |- merge) -- (merge);
+    \draw[->] (merge) -- (output.north);
+    \draw[->] (output.south) -- (finish.north);
+\end{tikzpicture}

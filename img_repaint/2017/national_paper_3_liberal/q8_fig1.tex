@@ -1,0 +1,56 @@
+% original_pdf: source/普通高考/2017/2017全国3文(云南,广西,贵州,四川,西藏).pdf
+% page: 1; embedded bitmap attempt: pdfimages/mutool extraction found no image objects (vector flowchart)
+% evidence: tmp/redraw_flowchart_2017_national_paper_3_liberal/source/page1.png (180 dpi, no grid)
+% elements: rounded start/end terminals; input/output parallelograms; initialization,
+% accumulation, M-update and t-update process rectangles; t<=N decision diamond;
+% loop-back connector and branch labels 是/否.
+% relations: top-to-bottom main flow; 是 continues through S=S+M, M=-M/10,
+% t=t+1; the loop returns from t=t+1 to the decision test; 否 goes to 输出S then 结束.
+% node -> directed edge list from the source: 开始->输入N, 输入N->(t=1,M=100,S=0),
+% init->(t<=N), (t<=N)-是->(S=S+M), (S=S+M)->(M=-M/10),
+% (M=-M/10)->(t=t+1), (t=t+1)->(t<=N), (t<=N)-否->输出S, 输出S->结束.
+% solid segments: every box outline and connector; dashed segments: none.
+% labels: formulas centered in boxes; 是 below the decision, 否 on the upper-right
+% branch; loop connector stays left of the main column to preserve the source topology.
+\begin{tikzpicture}[x=1cm,y=1cm,>=stealth,line width=0.55pt,
+  line cap=round,line join=round,
+  every node/.append style={anchor=center,align=center,
+    execute at begin node=\setlength{\parindent}{0pt}}]
+  % Main vertical flow.
+  \node[draw,rounded corners=0.16cm,minimum width=1.30cm,minimum height=0.64cm,
+    inner sep=0pt] (start) at (0,10.80) {开始};
+  \node[draw,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
+    minimum width=1.76cm,minimum height=0.70cm,inner sep=0pt] (input) at (0,9.48)
+    {输入 $N$};
+  \node[draw,minimum width=2.80cm,minimum height=0.70cm,inner xsep=2pt,inner ysep=0pt] (init)
+    at (0,8.18) {$t=1,M=100,S=0$};
+  \node[draw,diamond,aspect=2.65,minimum width=2.68cm,minimum height=0.82cm,
+    inner sep=0pt] (test) at (0,6.73) {$t\leq N$};
+  \node[draw,minimum width=1.98cm,minimum height=0.70cm,inner sep=0pt] (sum)
+    at (0,5.40) {$S=S+M$};
+  \node[draw,minimum width=1.82cm,minimum height=1.00cm,inner sep=0pt] (update)
+    at (0,3.96) {$M=-\dfrac{M}{10}$};
+  \node[draw,minimum width=1.82cm,minimum height=0.70cm,inner sep=0pt] (increment)
+    at (0,2.57) {$t=t+1$};
+  \node[draw,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
+    minimum width=1.82cm,minimum height=0.70cm,inner sep=0pt] (output) at (2.52,5.40)
+    {输出 $S$};
+  \node[draw,rounded corners=0.16cm,minimum width=1.30cm,minimum height=0.64cm,
+    inner sep=0pt] (finish) at (2.52,4.06) {结束};
+
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (init.north);
+  \draw[->] (init.south) -- (test.north);
+  \draw[->] (test.south) -- (sum.north);
+  \draw[->] (sum.south) -- (update.north);
+  \draw[->] (update.south) -- (increment.north);
+  \draw[->] (test.east) -- (2.52,6.73) -- (2.52,5.78) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % Loop-back arrow from t=t+1 to the decision test.
+  \draw[->] (increment.west) -- (-2.55,2.57) -- (-2.55,7.76) -- (0,7.76);
+  \node[anchor=west,inner sep=0pt] at (0.20,6.10) {是};
+  \node[anchor=west,inner sep=0pt] at (1.55,7.10) {否};
+  % Preserve a small, even white margin around the outer loop and terminals.
+  \path[use as bounding box] (-2.80,11.20) rectangle (3.00,3.50);
+\end{tikzpicture}

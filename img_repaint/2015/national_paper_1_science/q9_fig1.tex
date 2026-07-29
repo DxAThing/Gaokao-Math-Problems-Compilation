@@ -1,0 +1,59 @@
+% Source PDF: source/普通高考/2015/2015全国1理(河南,河北,山西,江西).pdf, page 1.
+% PDF embedded-image attempt: pdfimages -list found no image objects; the flowchart is vector/text artwork.
+% Node→directed-edge list: 开始→输入t→初始化(S=1,n=0,m=1/2)→S=S−m→m=m/2,n=n+1→判定S>t;
+% 判定“是”→左侧回边→S=S−m；判定“否”→输出n→结束。
+% solid segments: all node borders and connector lines; dashed segments: none.
+% labels: all node text is locally zero-indented and centered; 是 labels the left loop branch,
+% 否 labels the downward output branch.
+
+\begin{tikzpicture}[
+  baseline,
+  x=1cm,
+  y=0.89cm,
+  >=Stealth,
+  line cap=butt,
+  line join=miter,
+  every node/.style={font=\normalsize,anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flow/.style={draw=black,line width=0.45pt,anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+]
+  % Start, input, and initialisation.
+  \node[flow,rounded corners=0.16cm,minimum width=1.20cm,minimum height=0.68cm]
+    (start) at (0,9.45) {开始};
+  \path[flow] (-0.98,8.62) -- (0.98,8.62) -- (0.78,7.86) -- (-1.18,7.86) -- cycle;
+  \node at (0,8.24) {输入 \(t\)};
+  \node[flow,minimum width=3.60cm,minimum height=1.10cm]
+    (init) at (0,6.95) {$S=1,\ n=0,\ m=\dfrac12$};
+
+  % Loop update nodes and decision.
+  \node[flow,minimum width=2.00cm,minimum height=0.82cm]
+    (sub) at (0,5.42) {$S=S-m$};
+  \node[flow,minimum width=3.55cm,minimum height=1.10cm]
+    (halve) at (0,4.05) {$m=\dfrac{m}{2},\ n=n+1$};
+  \node[flow,diamond,aspect=2.65,minimum width=2.65cm,minimum height=0.82cm]
+    (check) at (0,2.68) {$S>t$};
+
+  % Output and end.
+  \path[flow] (-0.98,1.62) -- (0.98,1.62) -- (0.78,0.86) -- (-1.18,0.86) -- cycle;
+  \node at (0,1.24) {输出 \(n\)};
+  \node[flow,rounded corners=0.16cm,minimum width=1.20cm,minimum height=0.68cm]
+    (finish) at (0,0.12) {结束};
+
+  % Main path and false/output branch.
+  \draw[->,flow] (start.south) -- (0,8.62);
+  \draw[->,flow] (0,7.86) -- (init.north);
+  \draw[->,flow] (init.south) -- (sub.north);
+  \draw[->,flow] (sub.south) -- (halve.north);
+  \draw[->,flow] (halve.south) -- (check.north);
+  \draw[->,flow] (check.south) -- (0,1.62);
+  \draw[->,flow] (0,0.86) -- (finish.north);
+  \node[inner sep=0pt] at (0.42,2.02) {否};
+
+  % True branch loop: return to the first update node.
+  \coordinate (loop-left) at (-2.00,2.68);
+  \coordinate (loop-top) at (-2.00,5.90);
+  \draw[flow] (check.west) -- (loop-left) -- (loop-top);
+  \draw[->,flow] (loop-top) -- (0,5.90);
+  \node[inner sep=0pt] at (-1.48,3.05) {是};
+\end{tikzpicture}

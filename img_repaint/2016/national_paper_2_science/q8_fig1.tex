@@ -1,0 +1,58 @@
+% Source: source/普通高考/2016/2016全国2理(甘肃,青海,内蒙古,黑龙江,吉林,辽宁,海南,宁夏,新疆,西藏,陕西,重庆).pdf, page 1, question 8.
+% PDF embedded-bitmap attempt: pdfimages -list found no image objects; source chart is vector line art.
+% Type: Qin Jiushao polynomial-evaluation program flowchart (schematic topology).
+% Node -> directed-edge list: 开始 -> 输入 x,n -> k=0,s=0 -> 输入 a ->
+% (s=s*x+a; k=k+1) -> k>n; 是 -> 输出 s -> 结束; 否 -> right loop -> 输入 a.
+% solid segments: all node outlines and directed connectors; dashed segments: none.
+% Labels are locally zero-indented and horizontally/vertically centered; the return
+% arrow points left at the connector above 输入 a, then continues downward.
+\begin{tikzpicture}[
+    x=0.90cm,
+    y=1.14cm,
+    >=Stealth,
+    line width=0.45pt,
+    line cap=butt,
+    line join=miter,
+    every node/.style={font=\normalsize,inner sep=0pt,align=center,anchor=center,
+        execute at begin node={\setlength{\parindent}{0pt}}},
+    flowbox/.style={draw=black,align=center,inner xsep=4pt,inner ysep=2pt,
+        execute at begin node={\setlength{\parindent}{0pt}}},
+    terminal/.style={flowbox,rounded corners=0.18cm,minimum width=1.45cm,minimum height=0.68cm},
+    io/.style={flowbox,trapezium,trapezium left angle=72,trapezium right angle=108,
+        minimum height=0.74cm},
+    process/.style={flowbox,minimum height=0.68cm},
+    decision/.style={flowbox,diamond,aspect=2.8,inner sep=0pt,minimum height=0.96cm},
+]
+    % Centered process column and compact side loop follow the source layout.
+    \path[use as bounding box] (-2.20,-0.40) rectangle (4.00,10.75);
+
+    \node[terminal] (start) at (0,10.05) {开始};
+    \node[io,minimum width=2.55cm] (inputxn) at (0,8.80) {输入 $x,n$};
+    \node[process,minimum width=3.45cm] (init) at (0,7.48) {$k=0,\ s=0$};
+    \node[io,minimum width=2.20cm] (inputa) at (0,6.12) {输入 $a$};
+    \node[process,minimum width=3.40cm,minimum height=1.42cm] (update) at (0,4.55)
+        {$s=s\cdot x+a$\\$k=k+1$};
+    \node[decision,minimum width=3.95cm] (test) at (0,2.85) {$k>n$};
+    \node[io,minimum width=2.40cm] (output) at (0,1.25) {输出 $s$};
+    \node[terminal] (finish) at (0,-0.18) {结束};
+
+    % Main sequence and affirmative branch.
+    \draw[->] (start.south) -- (inputxn.north);
+    \draw[->] (inputxn.south) -- (init.north);
+    % The loop junction is shared intentionally by the two incoming paths,
+    % with one downward arrow into 输入 a and one left-pointing return arrow.
+    \coordinate (loop-top) at (0,6.72);
+    \draw (init.south) -- (loop-top);
+    \draw[->] (loop-top) -- (inputa.north);
+    \draw[->] (inputa.south) -- (update.north);
+    \draw[->] (update.south) -- (test.north);
+    \draw[->] (test.south) -- node[right=2pt] {是} (output.north);
+    \draw[->] (output.south) -- (finish.north);
+
+    % 否 branch: right-side loop-back path; 输出 s is the affirmative branch below.
+    \node[anchor=south west,inner sep=0pt] at (2.20,3.22) {否};
+    \coordinate (loop-right) at (3.25,2.85);
+    \coordinate (loop-return) at (3.25,6.72);
+    \draw (test.east) -- (loop-right) -- (loop-return);
+    \draw[->] (loop-return) -- (loop-top);
+\end{tikzpicture}

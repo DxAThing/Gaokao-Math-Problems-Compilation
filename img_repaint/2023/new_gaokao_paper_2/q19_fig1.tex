@@ -1,0 +1,78 @@
+% 依据原卷第1页 q19 图：两组医学指标频率/组距直方图。
+% 患病者分组 [95,100),[100,105),...,[125,130) 的频率组距分别为
+% 0.002, 0.012, 0.034, 0.036, 0.040, 0.040, 0.036。
+% 未患病者分组 [70,75),[75,80),...,[100,105) 的频率组距分别为
+% 0.038, 0.040, 0.040, 0.036, 0.034, 0.010, 0.002。
+\begin{tikzpicture}[font=\small]
+  \begin{axis}[
+    width=6.55cm,
+    height=4.85cm,
+    xmin=90, xmax=132,
+    ymin=0, ymax=0.045,
+    axis lines=left,
+    axis line style={-latex},
+    tick style={black},
+    xtick={95,100,105,110,115,120,125,130},
+    ytick={0.002,0.012,0.034,0.036,0.040},
+    yticklabels={0.002,0.012,0.034,0.036,0.040},
+    scaled y ticks=false,
+    xticklabel style={font=\scriptsize},
+    yticklabel style={font=\scriptsize},
+    tick align=outside,
+    clip=false,
+  ]
+    % Each ybar interval is one width-5 class; bars are unfilled outlines.
+    \addplot+[ybar interval, mark=none, draw=black, fill=white, line width=0.35pt]
+      coordinates {(95,0.002) (100,0.012) (105,0.034) (110,0.036)
+                   (115,0.040) (120,0.040) (125,0.036) (130,0.036)};
+    % Dashed guide segments terminate at the corresponding bar boundary.
+    \draw[dashed] (axis cs:90,0.002) -- (axis cs:95,0.002);
+    \draw[dashed] (axis cs:90,0.012) -- (axis cs:105,0.012);
+    \draw[dashed] (axis cs:90,0.034) -- (axis cs:105,0.034);
+    \draw[dashed] (axis cs:90,0.036) -- (axis cs:110,0.036);
+    \draw[dashed] (axis cs:90,0.040) -- (axis cs:115,0.040);
+    % Broken origin on the compressed x-axis.
+    \draw (axis cs:91.0,0) -- (axis cs:91.5,0.0008) -- (axis cs:92.0,0)
+          -- (axis cs:92.5,0.0008) -- (axis cs:93.0,0);
+    \node[anchor=north east, inner sep=1pt, font=\scriptsize] at (axis cs:90,0) {0};
+    \node[anchor=north, inner sep=1pt] at (axis description cs:0.52,-0.27) {患病者};
+    \node[anchor=west, inner sep=1pt] at (axis description cs:1.01,0.03) {指标};
+    \node[anchor=south, inner sep=1pt] at (axis description cs:0.03,1.01) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+  \end{axis}
+
+  \begin{scope}[xshift=7.15cm]
+    \begin{axis}[
+      width=6.55cm,
+      height=4.85cm,
+      xmin=65, xmax=107,
+      ymin=0, ymax=0.045,
+      axis lines=left,
+      axis line style={-latex},
+      tick style={black},
+      xtick={70,75,80,85,90,95,100,105},
+      ytick={0.002,0.010,0.034,0.036,0.038,0.040},
+      yticklabels={0.002,0.010,0.034,0.036,0.038,0.040},
+      scaled y ticks=false,
+      xticklabel style={font=\scriptsize},
+      yticklabel style={font=\scriptsize},
+      tick align=outside,
+      clip=false,
+    ]
+      \addplot+[ybar interval, mark=none, draw=black, fill=white, line width=0.35pt]
+        coordinates {(70,0.038) (75,0.040) (80,0.040) (85,0.036)
+                     (90,0.034) (95,0.010) (100,0.002) (105,0.002)};
+      \draw[dashed] (axis cs:65,0.002) -- (axis cs:70,0.002);
+      \draw[dashed] (axis cs:65,0.010) -- (axis cs:100,0.010);
+      \draw[dashed] (axis cs:65,0.034) -- (axis cs:95,0.034);
+      \draw[dashed] (axis cs:65,0.036) -- (axis cs:90,0.036);
+      \draw[dashed] (axis cs:65,0.038) -- (axis cs:75,0.038);
+      \draw[dashed] (axis cs:65,0.040) -- (axis cs:80,0.040);
+      \draw (axis cs:66.0,0) -- (axis cs:66.5,0.0008) -- (axis cs:67.0,0)
+            -- (axis cs:67.5,0.0008) -- (axis cs:68.0,0);
+      \node[anchor=north east, inner sep=1pt, font=\scriptsize] at (axis cs:65,0) {0};
+      \node[anchor=north, inner sep=1pt] at (axis description cs:0.52,-0.27) {未患病者};
+      \node[anchor=west, inner sep=1pt] at (axis description cs:1.01,0.03) {指标};
+      \node[anchor=south, inner sep=1pt] at (axis description cs:0.03,1.01) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \end{axis}
+  \end{scope}
+\end{tikzpicture}

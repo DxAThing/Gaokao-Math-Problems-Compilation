@@ -1,0 +1,57 @@
+% Source PDF: source/普通高考/2015/2015福建理.pdf, page 1; vector flowchart.
+% Grid evidence: tmp/review_2015_fujian_science/grid/page-1-grid100.jpg and
+%   q6_original_final2.png (no-grid crop from the source page).
+% Elements: rounded start/end terminals; assignment rectangles i=1, S=0,
+%   S=S+cos(i*pi/2), i=i+1; decision diamond i>5?; output parallelogram;
+%   directed connectors and 是/否 labels.
+% Complete node -> directed-edge list from the source:
+%   start -> init_i -> init_s -> sum -> increment -> test;
+%   test --是--> output -> finish; test --否--> left loop -> main entry above sum.
+% The loop return has a horizontal right-pointing arrow into the main vertical
+% stem, while the main stem keeps its independent downward arrow into sum.
+% All borders/connectors are solid; no dashed segments or extra edges.
+
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=0.45pt,
+  line join=round,
+  line cap=round,
+  font=\normalsize,
+  flowtext/.style={anchor=center, align=center, inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  every node/.style={flowtext},
+  flowbox/.style={flowtext, draw, minimum height=0.68cm,
+    inner xsep=3pt, inner ysep=2pt},
+  process/.style={flowbox},
+  terminal/.style={flowbox, rounded corners=0.18cm, minimum width=1.45cm},
+  io/.style={flowbox, trapezium, trapezium left angle=72,
+    trapezium right angle=72, minimum height=0.76cm, minimum width=2.35cm},
+  decision/.style={flowbox, diamond, aspect=2.65, minimum width=3.40cm,
+    minimum height=0.95cm},
+]
+  \node[terminal] (start) at (0,10.15) {开始};
+  \node[process, minimum width=1.55cm] (init_i) at (0,8.85) {$i=1$};
+  \node[process, minimum width=1.65cm] (init_s) at (0,7.40) {$S=0$};
+  \node[process, minimum width=3.85cm, minimum height=0.86cm]
+    (sum) at (0,5.90) {$S=S+\cos\dfrac{i\pi}{2}$};
+  \node[process, minimum width=2.20cm] (increment) at (0,4.40)
+    {$i=i+1$};
+  \node[decision] (test) at (0,2.85) {$i>5?$};
+  \node[io] (output) at (0,1.35) {输出 $S$};
+  \node[terminal] (finish) at (0,0.05) {结束};
+
+  % Main trunk, including the independent downward arrow into the sum box.
+  \draw[->] (start.south) -- (init_i.north);
+  \draw[->] (init_i.south) -- (init_s.north);
+  \draw[->] (init_s.south) -- (sum.north);
+  \draw[->] (sum.south) -- (increment.north);
+  \draw[->] (increment.south) -- (test.north);
+  \draw[->] (test.south) -- node[flowtext, right] {是} (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % 否 branch loops left and returns with a single horizontal right-pointing
+  % arrow into the main stem above sum; it does not touch output.
+  \coordinate (loopjoin) at ([yshift=0.28cm]sum.north);
+  \draw[->] (test.west) -- node[flowtext, below, pos=0.18] {否}
+    (-2.35,2.85) -- (-2.35,6.55) -- (loopjoin);
+\end{tikzpicture}

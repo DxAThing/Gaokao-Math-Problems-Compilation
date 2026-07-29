@@ -1,0 +1,67 @@
+% Source: source/普通高考/2012/2012广东理.pdf, page 1, question 13.
+% pdfimages -list reports no embedded bitmap; the program flowchart is vector/text artwork.
+% Grid evidence: tmp/redraw_flowchart_2012_guangdong_science/grid/q13_grid.jpg.
+% Comparison crop: tmp/redraw_flowchart_2012_guangdong_science/grid/q13_original_clean.png,
+% taken from the ungridded page render with a safety border.
+% Nodes: 开始; 输入 n; i=2,k=1,s=1; i<n?; s=(1/k)(s×i); i=i+2;
+% k=k+1; 输出 s; 结束.
+% Directed edges: 开始→输入→初始化→判定; 判定(是)→s更新→i更新→k更新→loop entry→判定;
+% 判定(否)→输出 s→结束. The loop return is independent of the output branch.
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=0.55pt,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\normalsize,anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flowbox/.style={draw,minimum height=.68cm,inner xsep=4pt,inner ysep=2pt,
+    anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  terminal/.style={flowbox,rounded corners=.18cm,minimum width=1.35cm,
+    minimum height=.72cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
+    trapezium right angle=108,minimum height=.78cm},
+  decision/.style={flowbox,shape=diamond,aspect=2.75,inner xsep=4pt,inner ysep=2pt},
+  branchlabel/.style={anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flowarrow/.style={->,line width=0.55pt},
+]
+  \node[terminal] (start) at (0,9.25) {开始};
+  \node[io,minimum width=2.35cm] (input) at (0,7.92) {输入 $n$};
+  \node[flowbox,minimum width=4.25cm] (init) at (0,6.58)
+    {$i=2,k=1,s=1$};
+  \coordinate (loopjoin) at (0,5.72);
+  \node[decision,minimum width=3.35cm,minimum height=.98cm] (test) at (0,4.92)
+    {$i<n$};
+  \node[flowbox,minimum width=3.75cm,minimum height=1.02cm] (update) at (0,3.57)
+    {$s=\dfrac{1}{k}(s\times i)$};
+  \node[flowbox,minimum width=2.35cm] (inc) at (0,2.16)
+    {$i=i+2$};
+  \node[flowbox,minimum width=2.35cm] (kinc) at (0,0.84)
+    {$k=k+1$};
+  \node[io,minimum width=1.95cm] (output) at (4.15,4.05) {输出 $s$};
+  \node[terminal] (finish) at (4.15,2.72) {结束};
+
+  \draw[flowarrow] (start.south) -- (input.north);
+  \draw[flowarrow] (input.south) -- (init.north);
+  \draw (init.south) -- (loopjoin);
+  \draw[flowarrow] (loopjoin) -- (test.north);
+  \draw[flowarrow] (test.south) -- node[branchlabel,left,pos=0.28] {是} (update.north);
+  \draw[flowarrow] (update.south) -- (inc.north);
+  \draw[flowarrow] (inc.south) -- (kinc.north);
+
+  % The affirmative branch updates state, then returns through an independent
+  % left-side loop to the shared stem above the decision.
+  \coordinate (loop-left) at (-2.45,0.47);
+  \coordinate (loop-left-top) at (-2.45,5.72);
+  \draw (kinc.south) -- (loop-left) -- (loop-left-top);
+  \draw[flowarrow] (loop-left-top) -- (loopjoin);
+
+  % The negative branch goes directly to output and never joins the loop.
+  \coordinate (out-right) at (4.15,4.92);
+  \draw (test.east) -- node[branchlabel,above,pos=0.20] {否} (out-right);
+  \draw[flowarrow] (out-right) -- (output.north);
+  \draw[flowarrow] (output.south) -- (finish.north);
+
+  \path[use as bounding box] (-2.85,0.10) rectangle (5.25,9.70);
+\end{tikzpicture}

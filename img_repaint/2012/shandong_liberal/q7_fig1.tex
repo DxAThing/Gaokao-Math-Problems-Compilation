@@ -1,0 +1,62 @@
+% Source PDF: source/普通高考/2012/2012山东文.pdf, page 1 (question 7).
+% PDF embedded-bitmap attempt: pdfimages -list found no image objects; the flowchart is vector line art.
+% Grid evidence: tmp/redraw_flowchart_2012_shandong_liberal/source/page-1-grid100.png (100 px major grid).
+% No-grid comparison crop: tmp/redraw_flowchart_2012_shandong_liberal/source/q7_original_tight.png.
+% Elements: 开始; 输入 a; P=0,Q=1,n=0; decision P≤Q; updates P=P+a^n, Q=2Q+1, n=n+1;
+% 输出 n; 结束; branch labels 是/否.
+% Node -> directed-edge list: 开始→输入a→P=0,Q=1,n=0→P≤Q;
+% 是→P=P+a^n→Q=2Q+1→n=n+1→left return→P≤Q;
+% 否→输出n→结束. The loop return enters the decision stem above the diamond;
+% the output branch is independent and shares no line with the loop.
+% solid segments: all node borders and directed connectors; dashed segments: none.
+% labels: every node is locally zero-indented and centered; 是/否 sit beside their exits.
+
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=0.50pt,
+  line cap=round,
+  line join=round,
+  font=\normalsize,
+  flowbox/.style={draw, minimum height=0.68cm, inner xsep=4pt, inner ysep=2pt,
+    anchor=center, align=center, execute at begin node={\setlength{\parindent}{0pt}}},
+  terminal/.style={flowbox, rounded corners=0.18cm, minimum width=1.30cm,
+    minimum height=0.72cm},
+  io/.style={flowbox, trapezium, trapezium left angle=72, trapezium right angle=108,
+    minimum height=0.78cm},
+  decision/.style={flowbox, diamond, aspect=2.8, inner sep=2pt,
+    minimum width=3.45cm, minimum height=0.94cm},
+]
+  \node[terminal] (start) at (0,9.35) {开始};
+  \node[io, minimum width=1.75cm] (input) at (0,8.15) {输入 $a$};
+  \node[flowbox, minimum width=3.55cm] (init) at (0,6.92)
+    {$P=0,Q=1,n=0$};
+  \coordinate (merge) at (0,6.28);
+  \node[decision] (test) at (0,5.20) {$P\leq Q$};
+
+  \node[flowbox, minimum width=2.75cm] (pupdate) at (0,3.82)
+    {$P=P+a^n$};
+  \node[flowbox, minimum width=2.60cm] (qupdate) at (0,2.50)
+    {$Q=2Q+1$};
+  \node[flowbox, minimum width=2.35cm] (nupdate) at (0,1.18)
+    {$n=n+1$};
+
+  \node[io, minimum width=1.75cm] (output) at (3.55,3.82) {输出 $n$};
+  \node[terminal] (finish) at (3.55,2.50) {结束};
+
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (init.north);
+  \draw (init.south) -- (merge);
+  \draw[->] (merge) -- (test.north);
+
+  % 是 branch: update chain followed by an independent left return loop.
+  \draw[->] (test.south) -- node[right=2pt] {是} (pupdate.north);
+  \draw[->] (pupdate.south) -- (qupdate.north);
+  \draw[->] (qupdate.south) -- (nupdate.north);
+  \draw (nupdate.west) -- (-3.35,1.18) -- (-3.35,6.28);
+  \draw[->] (-3.35,6.28) -- (merge);
+
+  % 否 branch: output and finish are separate from the loop path.
+  \draw[->] (test.east) -- node[above] {否} (3.55,5.20) -- (3.55,4.28) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+  \path[use as bounding box] (-3.65,0.70) rectangle (4.65,9.72);
+\end{tikzpicture}

@@ -1,0 +1,51 @@
+% Source PDF: source/普通高考/2013/2013湖南文.pdf, page 1; vector program flowchart.
+% Grid evidence: tmp/review_2013_hunan_liberal/grid/page-1-grid100.jpg and
+%   q12_original_clean.png (no-grid crop from the source page).
+% Elements: rounded start/end terminals; input parallelogram; decision diamond
+% a>8?; update rectangle a=a+b; output parallelogram; 是/否 labels.
+% Complete node -> directed-edge list from the source:
+%   start -> input -> test; test --是--> output -> finish;
+%   test --否--> update -> left loop -> main entry above test. The loop return
+% has one right-pointing arrow into the main vertical stem and remains separate
+% from the terminating branch; all borders/connectors are solid.
+
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=0.45pt,
+  line join=round,
+  line cap=round,
+  font=\normalsize,
+  flowtext/.style={anchor=center, align=center, inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  every node/.style={flowtext},
+  flowbox/.style={flowtext, draw, minimum height=0.68cm,
+    inner xsep=3pt, inner ysep=2pt},
+  terminal/.style={flowbox, rounded corners=0.18cm, minimum width=1.45cm},
+  process/.style={flowbox},
+  decision/.style={flowbox, diamond, aspect=2.7, minimum width=3.45cm,
+    minimum height=0.95cm},
+  io/.style={flowbox, trapezium, trapezium left angle=72,
+    trapezium right angle=72, minimum width=2.35cm, minimum height=0.76cm},
+]
+  \node[terminal] (start) at (0,8.05) {开始};
+  \node[io] (input) at (0,6.65) {输入 $a,b$};
+  \node[decision] (test) at (0,5.00) {$a>8?$};
+  \node[process, minimum width=2.75cm] (update) at (0,3.35)
+    {$a=a+b$};
+  \node[io] (output) at (3.25,3.95) {输出 $a$};
+  \node[terminal] (finish) at (3.25,2.45) {结束};
+
+  % Main trunk and terminating branch.
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (test.north);
+  \draw[->] (test.east) -- node[flowtext, above] {是}
+    (3.25,5.00) -- (3.25,4.33) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % The 否 branch updates a and loops left, returning with a single
+  % horizontal right-pointing arrow into the main stem above the diamond.
+  \draw[->] (test.south) -- node[flowtext, right] {否} (update.north);
+  \coordinate (loopjoin) at (0,5.78);
+  \draw[->] (update.south) -- (0,0.90) -- (-2.55,0.90)
+    -- (-2.55,5.78) -- (loopjoin);
+\end{tikzpicture}

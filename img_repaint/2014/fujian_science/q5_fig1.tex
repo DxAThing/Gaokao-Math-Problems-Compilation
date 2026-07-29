@@ -1,0 +1,55 @@
+% Source: source/普通高考/2014/2014福建理.pdf, page 1, question 5.
+% PDF embedded-bitmap attempt: pdfimages -list found no image objects; source chart is vector line art.
+% Type: program flowchart (schematic topology and labels are the mathematical content).
+% Node -> directed-edge list: 开始 -> S=0,n=1 -> S=S+2^n+n -> n=n+1 -> S>=15;
+% 是 -> 输出 S -> 结束; 否 -> right loop -> S=S+2^n+n.
+% solid segments: all node borders and directed connectors; dashed segments: none.
+% The return arrow points left at the connector above the update box, followed by one
+% downward arrow into that box; all node text is locally zero-indented and centered.
+\begin{tikzpicture}[
+    x=0.90cm,
+    y=1.12cm,
+    >=Stealth,
+    line width=0.45pt,
+    line cap=butt,
+    line join=miter,
+    flowtext/.style={anchor=center,align=center,
+        execute at begin node={\setlength{\parindent}{0pt}}},
+    every node/.style={flowtext,font=\normalsize},
+    flowbox/.style={draw=black,flowtext,
+        inner xsep=4pt,inner ysep=2.5pt},
+    terminal/.style={flowbox,rounded corners=0.18cm,minimum width=1.45cm,minimum height=0.68cm},
+    process/.style={flowbox,minimum height=0.68cm},
+    decision/.style={flowbox,diamond,aspect=2.8,minimum height=0.96cm},
+    io/.style={flowbox,trapezium,trapezium left angle=72,trapezium right angle=108,
+        minimum height=0.74cm},
+]
+    % Tight bounding box avoids an A4-like page around the standalone chart.
+    % Keep a small exterior margin around the widest update box so its border
+    % is not clipped by the standalone bounding box.
+    \path[use as bounding box] (-2.45,-0.35) rectangle (4.05,9.65);
+
+    \node[terminal] (start) at (0,8.95) {开始};
+    \node[process,minimum width=3.35cm] (init) at (0,7.55) {$S=0,n=1$};
+    \node[process,minimum width=4.10cm] (update) at (0,6.10) {$S=S+2^n+n$};
+    \node[process,minimum width=2.35cm] (increment) at (0,4.62) {$n=n+1$};
+    \node[decision,minimum width=4.05cm] (test) at (0,3.12) {$S\geq 15?$};
+    \node[io,minimum width=2.45cm] (output) at (0,1.50) {输出 $S$};
+    \node[terminal] (finish) at (0,0.05) {结束};
+
+    \coordinate (loop-right) at (3.25,3.12);
+    \coordinate (loop-right-top) at (3.25,6.72);
+    \coordinate (loop-top) at (0,6.72);
+
+    \draw[->] (start.south) -- (init.north);
+    \draw (init.south) -- (loop-top);
+    \draw[->] (loop-top) -- (update.north);
+    \draw[->] (update.south) -- (increment.north);
+    \draw[->] (increment.south) -- (test.north);
+    \draw[->] (test.south) -- node[right] {是} (output.north);
+    \draw[->] (output.south) -- (finish.north);
+
+    % 否 branch returns around the right side and re-enters the update connector.
+    \draw (test.east) -- node[above] {否} (loop-right) -- (loop-right-top);
+    \draw[->] (loop-right-top) -- (loop-top);
+\end{tikzpicture}

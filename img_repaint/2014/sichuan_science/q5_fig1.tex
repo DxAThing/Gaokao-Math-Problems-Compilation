@@ -1,0 +1,46 @@
+% Source: source/普通高考/2014/2014四川理.pdf, page 1, question 5.
+% pdfimages -list reports no embedded images; the source is vector artwork.
+% Original-side crop: tmp/repaint_2014_sichuan_science/q5_original_recheck.png,
+% rendered directly from the source PDF after 100px/50px grid positioning.
+% Nodes: start, input (x,y), test (x>=0,y>=0,x+y<=1?),
+% S=2x+y, S=1, output S, finish, and one explicit merge routing point.
+% Directed edges: start -> input -> test; test --是--> S=2x+y;
+% test --否--> S=1; both process nodes -> merge -> output S -> finish.
+% The source intentionally converges both branch-return segments at one merge
+% point; those segments are unarrowed, followed by one downward arrow into
+% 输出 S. There are no other edges or branch crossings.
+
+\begin{tikzpicture}[
+  >=Stealth,
+  flow/.style={draw, line width=0.55pt, -{Stealth[length=2.1pt,width=1.8pt]}},
+  every node/.style={align=center, execute at begin node=\setlength{\parindent}{0pt}},
+  box/.style={draw, rectangle, minimum height=0.65cm, inner xsep=0.15cm,
+    inner ysep=0.08cm, align=center, execute at begin node=\setlength{\parindent}{0pt}},
+  terminal/.style={box, rounded corners=0.18cm, minimum width=1.2cm},
+  io/.style={box, trapezium, trapezium left angle=72, trapezium right angle=108,
+    minimum width=2.25cm},
+  decision/.style={draw, diamond, aspect=2.7, inner xsep=0.10cm, inner ysep=0.06cm,
+    align=center, execute at begin node=\setlength{\parindent}{0pt}},
+]
+  \path[use as bounding box] (-4.10,0) rectangle (4.10,8.45);
+  \node[terminal] (start) at (0,8.00) {开始};
+  \node[io] (input) at (0,6.75) {输入 $x,y$};
+  \node[decision, minimum width=4.15cm, minimum height=1.15cm] (test) at (0,5.20)
+    {$\begin{gathered}x\geq0,y\geq0,\\x+y\leq1?\end{gathered}$};
+  \node[box, minimum width=2.35cm] (yesbox) at (-2.55,3.25) {$S=2x+y$};
+  \node[box, minimum width=1.65cm] (nobox) at (2.55,3.25) {$S=1$};
+  \coordinate (merge) at (0,2.38);
+  \node[io, minimum width=2.15cm] (output) at (0,1.35) {输出 $S$};
+  \node[terminal] (finish) at (0,0.25) {结束};
+
+  \draw[flow] (start) -- (input);
+  \draw[flow] (input) -- (test);
+  \draw[flow] (test.west) -| (yesbox.north);
+  \draw[flow] (test.east) -| (nobox.north);
+  \node[anchor=east, inner sep=1pt] at ([xshift=-0.25cm,yshift=0.18cm]test.west) {是};
+  \node[anchor=west, inner sep=1pt] at ([xshift=0.25cm,yshift=0.18cm]test.east) {否};
+  \draw[-] (yesbox.south) -- ++(0,-0.42cm) -| (merge);
+  \draw[-] (nobox.south) -- ++(0,-0.42cm) -| (merge);
+  \draw[flow] (merge) -- (output.north);
+  \draw[flow] (output) -- (finish);
+\end{tikzpicture}

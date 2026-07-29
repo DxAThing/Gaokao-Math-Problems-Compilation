@@ -1,0 +1,50 @@
+% Source: source/普通高考/2011/2011天津理.pdf, page 1, question 3.
+% The source PDF is vector line art; the original PNG is retained for reference.
+% Nodes: 开始; a=1,i=0; i=i+1; a=i×a+1; decision a>50?; 输出 i; 结束.
+% Directed edges: 开始→a=1,i=0→i=i+1→a=i×a+1→a>50?;
+% 是→输出 i→结束; 否→left loop→shared stem above i=i+1→i=i+1.
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=0.55pt,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\normalsize,anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  flowbox/.style={draw,minimum height=.68cm,inner xsep=4pt,inner ysep=2pt,
+    anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  terminal/.style={flowbox,rounded corners=.18cm,minimum width=1.35cm,
+    minimum height=.72cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
+    trapezium right angle=108,minimum width=2.40cm,minimum height=.80cm},
+  decision/.style={flowbox,shape=diamond,aspect=2.7,minimum width=4.30cm,
+    minimum height=1.02cm,inner sep=1pt},
+  flowarrow/.style={->,line width=0.55pt},
+]
+  \node[terminal] (start) at (0,10.55) {开始};
+  \node[flowbox,minimum width=3.95cm] (init) at (0,9.15) {$a=1,i=0$};
+  \node[flowbox,minimum width=2.75cm] (inc) at (0,7.65) {$i=i+1$};
+  \node[flowbox,minimum width=4.35cm] (update) at (0,6.05)
+    {$a=i\times a+1$};
+  \node[decision] (test) at (0,4.25) {$a>50?$};
+  \node[io] (output) at (0,2.65) {输出 $i$};
+  \node[terminal] (finish) at (0,1.05) {结束};
+  \coordinate (loopjoin) at (0,8.25);
+
+  \draw[flowarrow] (start.south) -- (init.north);
+  \draw (init.south) -- (loopjoin);
+  \draw[flowarrow] (inc.south) -- (update.north);
+  \draw[flowarrow] (update.south) -- (test.north);
+  \draw[flowarrow] (test.south) -- node[right=2pt] {是} (output.north);
+  \draw[flowarrow] (output.south) -- (finish.north);
+
+  % 否 branch returns left and enters the shared stem above i=i+1.
+  \coordinate (loop-left) at (-3.25,4.25);
+  \coordinate (loop-entry) at (-3.25,8.25);
+  \draw (test.west) -- node[above=2pt] {否} (loop-left);
+  \draw (loop-left) -- (loop-entry);
+  \draw[flowarrow] (loop-entry) -- (loopjoin);
+  \draw[flowarrow] (loopjoin) -- (inc.north);
+
+  \path[use as bounding box] (-3.55,0.65) rectangle (2.35,10.95);
+\end{tikzpicture}

@@ -1,0 +1,59 @@
+% original_pdf: source/普通高考/2014/2014安徽理.pdf
+% page: 1 (question 3)
+% embedded_bitmap_attempt: pdfimages -list returned no embedded images; redraw from rendered page
+% evidence: tmp/independent_gate_2014_anhui_science/page1_grid.png; q3_original.png (no-grid crop)
+% elements: rounded 开始/结束 terminals; assignment rectangles x=1,y=1, z=x+y, x=y, y=z;
+% condition diamond z<=50?; output parallelogram 输出 z; solid arrows and 是/否 labels.
+% node-edge list: 开始→(x=1,y=1)→z=x+y→z<=50?; 是→x=y→y=z→left loop-back to the
+% connector before z=x+y; 否→输出 z→结束. No other connecting segments are present.
+% solid segments: all node borders and directed connectors; dashed segments: none.
+% Labels are centered in nodes with local zero paragraph indentation and compact padding.
+
+\begin{tikzpicture}[
+  baseline,
+  >=stealth,
+  x=1cm,
+  y=1.35cm,
+  line width=0.55pt,
+  line cap=round,
+  line join=round,
+  font=\normalsize,
+  flowtext/.style={anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  every node/.style={flowtext},
+  flowbox/.style={flowtext,draw,minimum height=0.68cm,inner xsep=4pt,inner ysep=2pt},
+  branchlabel/.style={flowtext,inner sep=0pt},
+  terminal/.style={flowbox,rounded corners=0.20cm,minimum width=1.24cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
+    minimum height=0.76cm},
+  decision/.style={flowbox,shape=diamond,aspect=2.8,inner xsep=4pt,inner ysep=2pt,
+    minimum height=1.00cm}
+]
+  % Main vertical path.
+  \node[terminal] (start) at (0,9.15) {开始};
+  \node[flowbox,minimum width=3.55cm] (init) at (0,7.82) {$x=1,y=1$};
+  \node[flowbox,minimum width=2.80cm] (sum) at (0,6.45) {$z=x+y$};
+  \node[decision,minimum width=4.20cm] (test) at (0,4.88) {$z\leq 50?$};
+  \node[flowbox,minimum width=2.05cm] (equalx) at (0,3.45) {$x=y$};
+  \node[flowbox,minimum width=2.05cm] (equaly) at (0,2.10) {$y=z$};
+  \node[io,minimum width=2.95cm] (output) at (3.58,3.45) {输出 $z$};
+  \node[terminal] (finish) at (3.58,2.02) {结束};
+
+  \draw[->] (start.south) -- (init.north);
+  \coordinate (sum-entry) at (0,6.95);
+  \draw (init.south) -- (sum-entry);
+  \draw[->] (sum-entry) -- (sum.north);
+  \draw[->] (sum.south) -- (test.north);
+  \draw[->] (test.south) -- node[branchlabel,right] {是} (equalx.north);
+  \draw[->] (equalx.south) -- (equaly.north);
+  \draw[->] (test.east) -- node[branchlabel,above] {否}
+    (3.58,4.88) -- (3.58,3.88) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % The yes branch returns left from y=z to the connector immediately before z=x+y.
+  \coordinate (loop-left) at (-3.55,1.42);
+  \coordinate (loop-merge) at (-3.55,6.95);
+  \draw[->] (equaly.south) -- (0,1.42) -- (loop-left) -- (loop-merge) -- (sum-entry);
+
+  \path[use as bounding box] (-3.78,9.55) rectangle (4.15,1.70);
+\end{tikzpicture}

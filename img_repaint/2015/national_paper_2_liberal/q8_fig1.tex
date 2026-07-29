@@ -1,0 +1,68 @@
+% Source: source/普通高考/2015/2015全国2文(贵州,甘肃,青海,西藏,黑龙江,吉林,海南,宁夏,内蒙古,新疆,云南,广西,辽宁).pdf, page 1, question 8.
+% pdfimages -list found no embedded image objects; the program flowchart is vector artwork.
+% Original comparison crop: tmp/redraw_flowchart_2015_national_paper_2_liberal/recheck_source/q8_original_recheck.png.
+% Nodes: 开始, 输入 a,b, a≠b?, a>b?, a=a-b, b=b-a, 输出 a, 结束.
+% Directed edges: 开始→输入 a,b→a≠b?; a≠b? 否→输出 a→结束;
+% a≠b? 是→a>b?; a>b? 是→a=a-b, 否→b=b-a; both updates merge into the
+% left loop-back path, which returns to the top of a≠b?. No other connectors exist.
+% All node text is explicitly zero-indented and centered; no dashed segments are present.
+
+\begin{tikzpicture}[
+    >=stealth,
+    x=1cm,
+    y=0.88cm,
+    line width=0.45pt,
+    line cap=round,
+    line join=round,
+    font=\normalsize,
+    every node/.style={anchor=center, align=center,
+        execute at begin node={\setlength{\parindent}{0pt}}},
+    flowbox/.style={draw, anchor=center, minimum height=0.68cm, inner xsep=4pt,
+        inner ysep=2pt, align=center,
+        execute at begin node={\setlength{\parindent}{0pt}}},
+    terminal/.style={flowbox, rounded corners=0.16cm, minimum width=1.35cm},
+    io/.style={flowbox, trapezium, trapezium left angle=70, trapezium right angle=110,
+        minimum width=2.05cm, minimum height=0.76cm},
+    process/.style={flowbox, minimum width=2.55cm},
+    decision/.style={flowbox, diamond, aspect=2.6, minimum width=3.55cm,
+        minimum height=1.08cm},
+]
+    % The bounding box leaves compact clearance for the left return and right output.
+    \path[use as bounding box] (-4.80,1.45) rectangle (4.10,9.55);
+
+    \node[terminal] (start) at (0,9.15) {开始};
+    \node[io] (input) at (0,7.82) {输入 $a,b$};
+    \node[decision] (neq) at (0,6.28) {$a\ne b$};
+    \node[decision, minimum width=3.30cm] (gt) at (-1.65,4.72) {$a>b$};
+    \node[process, minimum width=2.45cm] (sub) at (-2.90,3.02) {$a=a-b$};
+    \node[process, minimum width=2.45cm] (bsub) at (-0.30,3.02) {$b=b-a$};
+    \node[io, minimum width=1.85cm] (output) at (2.60,4.58) {输出 $a$};
+    \node[terminal] (finish) at (2.60,3.02) {结束};
+
+    % Main chain and the first decision's 是/否 branches.
+    \draw[->] (start.south) -- (input.north);
+    \coordinate (loopJoin) at (0,6.98);
+    \draw (input.south) -- (loopJoin);
+    \draw[->] (loopJoin) -- (neq.north);
+    \coordinate (yes-turn) at (-1.65,5.58);
+    \draw[->] (neq.south) -- node[left=2pt] {是} (yes-turn) -- (gt.north);
+
+    \coordinate (no-turn) at (2.60,6.28);
+    \draw[->] (neq.east) -- node[above=2pt] {否} (no-turn) -- (output.north);
+
+    % Second decision and the two update branches.
+    \draw[->] (gt.south) -- node[left=2pt] {是} (sub.north);
+    \draw[->] (gt.east) -- node[above=2pt] {否} (bsub.north);
+
+    % The update nodes merge before the single left loop-back path.
+    \coordinate (merge) at (-1.60,2.05);
+    \draw (sub.south) -- (sub.south |- merge) -- (merge);
+    \draw (bsub.south) -- (bsub.south |- merge) -- (merge);
+    \coordinate (loop-left) at (-4.45,2.05);
+    \coordinate (loop-top) at (-4.45,6.98);
+    \draw (merge) -- (loop-left) -- (loop-top);
+    \draw[->] (loop-top) -- (loopJoin);
+
+    % Output is isolated from the loop and leads directly to the terminal.
+    \draw[->] (output.south) -- (finish.north);
+\end{tikzpicture}

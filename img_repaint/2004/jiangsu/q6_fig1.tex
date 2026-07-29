@@ -1,0 +1,47 @@
+% Source PDF: source/普通高考/2004/2004江苏.pdf
+% Page: 1
+% PDF embedded bitmap attempt: no embedded images were listed; source page was rendered at 300 dpi.
+% Grid evidence: tmp/repaint_2004_jiangsu/page-1-grid100.jpg and q6_chart_block_grid50.jpg.
+% Elements: x-axis reading time 0, 0.5, 1.0, 1.5, 2.0 hours; y-axis student count 5, 10, 15, 20.
+% Bars: frequencies (5, 20, 10, 10, 5), read from the source chart and totaling the stated 50 students.
+% Relations: each outlined bar is centered at its reading-time tick and its top encodes the corresponding frequency.
+% solid segments: x/y axes and five bar outlines; dashed segments: horizontal guides at y=5, 10, 20.
+% labels: y-axis label above the arrow; x-axis label to the right of the arrow; tick labels below/left of axes.
+\begin{tikzpicture}
+\begin{axis}[
+    width=8.0cm,
+    height=4.8cm,
+    xmin=-0.18,
+    xmax=2.38,
+    ymin=0,
+    ymax=24,
+    axis lines=left,
+    axis line style={-Stealth,black},
+    xlabel={时间（小时）},
+    xlabel style={at={(axis description cs:1.05,0)},anchor=west,inner sep=0pt},
+    xtick={0,0.5,1,1.5,2},
+    xticklabels={0,0.5,1.0,1.5,2.0},
+    ytick={5,10,15,20},
+    yticklabels={5,10,15,20},
+    tick style={draw=none},
+    clip=false,
+    enlargelimits=false,
+]
+    \node[anchor=south west,inner sep=0pt] at (axis description cs:0.02,1.04) {人数（人）};
+    \draw[dashed,black] (axis cs:0,5) -- (axis cs:2.15,5);
+    \draw[dashed,black] (axis cs:0,10) -- (axis cs:2.15,10);
+    \draw[dashed,black] (axis cs:0,20) -- (axis cs:2.15,20);
+    \addplot[
+        ybar,
+        bar width=0.24,
+        draw=black,
+        fill=white,
+    ] coordinates {
+        (0,5)
+        (0.5,20)
+        (1,10)
+        (1.5,10)
+        (2,5)
+    };
+\end{axis}
+\end{tikzpicture}

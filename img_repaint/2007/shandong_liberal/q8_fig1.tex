@@ -1,0 +1,87 @@
+% Source PDF: source/普通高考/2007/2007山东文.pdf
+% Page: 1; PDF embedded bitmap attempt: no image objects were present (pdfimages -list).
+% Grid evidence: tmp/redraw_2007_shandong/page-1_grid100.png and q8_block_grid50.png.
+% Original-side crop: tmp/redraw_2007_shandong/q8_block.png, cropped from the no-grid page render.
+% Elements: frequency-density y-axis with arrow and labels, broken x-axis with ticks 0 and 13--19,
+% six unit-width histogram bars, dashed horizontal guides at 0.02, 0.04, 0.06, 0.18, 0.34, 0.36.
+% Relations: bins [13,14), [14,15), [15,16), [16,17), [17,18), [18,19) have heights
+% 0.02, 0.18, 0.36, 0.34, 0.06, 0.04 respectively, read from the source graph and question data.
+% solid segments: bar outlines, x/y axes, tick marks, and x-axis break stroke.
+% dashed segments: horizontal reference guides, each ending at the corresponding bar boundary.
+% Labels: 频率/组距 is above the y-axis; 秒 is right of the x-axis arrow; tick labels stay below the axis.
+\begin{tikzpicture}[baseline]
+\begin{axis}[
+    width=7.2cm,
+    height=5.8cm,
+    axis lines=none,
+    clip=false,
+    xmin=-1.1,
+    xmax=20.2,
+    ymin=-0.045,
+    ymax=0.395,
+    ticks=none,
+]
+    % Dashed reference levels from the source histogram.
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.02) -- (axis cs:13,0.02);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.04) -- (axis cs:19,0.04);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.06) -- (axis cs:18,0.06);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.18) -- (axis cs:15,0.18);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.34) -- (axis cs:16,0.34);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.36) -- (axis cs:15,0.36);
+
+    \addplot[
+        ybar interval,
+        draw=black,
+        fill=white,
+        line width=0.7pt,
+    ] coordinates {
+        (13,0.02)
+        (14,0.18)
+        (15,0.36)
+        (16,0.34)
+        (17,0.06)
+        (18,0.04)
+        (19,0.00)
+    };
+
+    % Axes and the source's broken x-axis between 0 and 13.
+    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:20,0);
+    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,0.385);
+    \fill[white] (axis cs:1.0,-0.010) -- (axis cs:1.45,0.008) -- (axis cs:1.9,-0.010)
+        -- (axis cs:2.35,0.008) -- (axis cs:2.8,-0.010) -- cycle;
+    \draw[line width=0.8pt] (axis cs:1.0,-0.010) -- (axis cs:1.45,0.008)
+        -- (axis cs:1.9,-0.010) -- (axis cs:2.35,0.008) -- (axis cs:2.8,-0.010);
+
+    \node[anchor=south west,inner sep=0pt,font=\scriptsize] at (axis cs:0.55,0.366) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=west,inner sep=0pt,font=\scriptsize] at (axis cs:19.65,0.012) {秒};
+    \node[anchor=north east,inner sep=0pt,font=\scriptsize] at (axis cs:0,-0.002) {0};
+
+    \draw[line width=0.5pt] (axis cs:13,0) -- (axis cs:13,-0.008);
+    \draw[line width=0.5pt] (axis cs:14,0) -- (axis cs:14,-0.008);
+    \draw[line width=0.5pt] (axis cs:15,0) -- (axis cs:15,-0.008);
+    \draw[line width=0.5pt] (axis cs:16,0) -- (axis cs:16,-0.008);
+    \draw[line width=0.5pt] (axis cs:17,0) -- (axis cs:17,-0.008);
+    \draw[line width=0.5pt] (axis cs:18,0) -- (axis cs:18,-0.008);
+    \draw[line width=0.5pt] (axis cs:19,0) -- (axis cs:19,-0.008);
+    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:13,-0.011) {13};
+    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:14,-0.011) {14};
+    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:15,-0.011) {15};
+    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:16,-0.011) {16};
+    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:17,-0.011) {17};
+    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:18,-0.011) {18};
+    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:19,-0.011) {19};
+
+    \draw[line width=0.5pt] (axis cs:0,0.02) -- (axis cs:-0.35,0.02);
+    \draw[line width=0.5pt] (axis cs:0,0.04) -- (axis cs:-0.35,0.04);
+    \draw[line width=0.5pt] (axis cs:0,0.06) -- (axis cs:-0.35,0.06);
+    \draw[line width=0.5pt] (axis cs:0,0.18) -- (axis cs:-0.35,0.18);
+    \draw[line width=0.5pt] (axis cs:0,0.34) -- (axis cs:-0.35,0.34);
+    \draw[line width=0.5pt] (axis cs:0,0.36) -- (axis cs:-0.35,0.36);
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-0.42,0.02) {0.02};
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-0.42,0.04) {0.04};
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-0.42,0.06) {0.06};
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-0.42,0.18) {0.18};
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-0.42,0.34) {0.34};
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-0.42,0.36) {0.36};
+\end{axis}
+\end{tikzpicture}

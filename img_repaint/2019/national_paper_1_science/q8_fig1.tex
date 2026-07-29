@@ -1,0 +1,62 @@
+% Source PDF: source/普通高考/2019/2019全国1理(河南,河北,山西,江西,湖北,湖南,广东,安徽,福建,山东).pdf, page 1.
+% PDF embedded-bitmap attempt: no complete flowchart image object (pdfimages found only the q4 photograph).
+% The chart is vector line art; geometry and labels are read from the source PDF and q8 solution.
+% Elements: rounded start/end terminals, A=1/2 and k=1 process boxes, k<=2 decision diamond,
+% blank process box, k=k+1 process box, 输出 A parallelogram, and directed connectors.
+% Relations: 开始 -> A=1/2 -> k=1 -> decision; 是 enters the blank process then k=k+1 and loops
+% back to the decision; 否 exits to 输出 A -> 结束.  All borders/connectors are solid; no dashed segments.
+% Labels: 是 is beside the downward branch, 否 is above the right branch; node text is centered.
+
+\begin{tikzpicture}[
+    xscale=0.75,
+    yscale=1.55,
+    >=Stealth,
+    line width=0.45pt,
+    line cap=round,
+    line join=round,
+    font=\normalsize,
+    flowbox/.style={draw, anchor=center, minimum height=0.58cm,
+        inner xsep=4pt, inner ysep=2pt, align=center,
+        execute at begin node={\setlength{\parindent}{0pt}}},
+    branchlabel/.style={anchor=center, text centered, inner xsep=1pt, inner ysep=1pt,
+        execute at begin node={\setlength{\parindent}{0pt}}},
+    terminal/.style={flowbox, rounded corners=2pt, minimum width=1.25cm},
+    process/.style={flowbox, minimum width=1.65cm},
+    decision/.style={flowbox, diamond, aspect=2.55, minimum width=2.95cm, minimum height=0.90cm},
+    io/.style={flowbox, trapezium, trapezium left angle=72, trapezium right angle=108,
+        minimum width=1.75cm},
+]
+    \node[terminal] (start) {开始};
+    \node[process, below=0.38cm of start] (init) {$A=\dfrac{1}{2}$};
+    \node[process, below=0.38cm of init] (kinit) {$k=1$};
+    \node[decision, below=0.34cm of kinit] (test) {$k\le 2$};
+    \node[process, below=0.40cm of test] (blank) {};
+    \node[process, below=0.42cm of blank] (inc) {$k=k+1$};
+    \node[io] (output) at ([xshift=3.10cm,yshift=-0.75cm]test.center) {输出 $A$};
+    \node[terminal, below=0.38cm of output] (finish) {结束};
+
+    \draw[->] (start) -- (init);
+    \draw[->] (init) -- (kinit);
+    % The loop return joins the incoming trunk before one separate arrow enters
+    % the decision diamond; this avoids overlapping/double arrowheads.
+    \coordinate (loop-level) at ([yshift=0.20cm]test.north);
+    \draw (kinit) -- (loop-level);
+    \draw[->] (loop-level) -- (test.north);
+    \draw[->] (test) -- (blank);
+    \draw[->] (blank) -- (inc);
+    \draw[->] (output) -- (finish);
+
+    % 否 branch: exit right from the decision and enter the output box from above.
+    \draw[->] (test.east) -- (output.north |- test.east) -- (output.north);
+    % Loopback: k=k+1 returns around the left side and enters the decision's
+    % incoming vertical connector, leaving one clean arrowhead at the junction.
+    \coordinate (loop-left) at ([xshift=-0.85cm]inc.west);
+    \coordinate (loop-vertical) at (loop-left |- loop-level);
+    \coordinate (loop-merge) at ([xshift=-0.18cm]loop-level);
+    \draw (inc.west) -- (loop-left) -- (loop-vertical);
+    \draw[->] (loop-vertical) -- (loop-merge);
+    \draw (loop-merge) -- (loop-level);
+    \node[branchlabel, above right=0.02cm and 0.18cm of test.east] {否};
+    \node[branchlabel] at ([xshift=0.40cm,yshift=-0.18cm]test.south) {是};
+    \path[use as bounding box] (-1.85,0.35) rectangle (3.25,-5.25);
+\end{tikzpicture}

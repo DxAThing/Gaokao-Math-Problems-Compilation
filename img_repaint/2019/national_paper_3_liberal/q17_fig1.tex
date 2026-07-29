@@ -1,0 +1,161 @@
+% original_pdf: source/普通高考/2019/2019全国3文(云南,广西,贵州,西藏,四川).pdf
+% page: 1; pdfimages -list found no embedded image objects (both histograms are vector line art)
+% grid evidence: tmp/redraw_2019_n3/page300_grid100.png and tmp/redraw_2019_n3/q17_orig_full.png
+% elements: two frequency-density y-axes with arrows, percentage x-axes with arrows and breaks,
+%            outlined bins, horizontal guide lines, tick labels, variable levels a and b,
+%            and the two Chinese chart titles
+% relations: 甲 bins [1.5,2.5), [2.5,3.5), [3.5,4.5), [4.5,5.5), [5.5,6.5), [6.5,7.5)
+%            have heights 0.15, 0.20, 0.30, 0.20, 0.10, 0.05; 乙 bins
+%            [2.5,3.5), [3.5,4.5), [4.5,5.5), [5.5,6.5), [6.5,7.5), [7.5,8.5)
+%            have heights 0.05, b, 0.15, a, 0.20, 0.15; the solution gives a=0.35, b=0.10
+% solid segments: bar outlines, x/y axes, tick marks, and the two axis-break zigzags
+% dashed segments: horizontal frequency-density guides at each labeled level in both histograms
+% labels: 频率/组距 above-left of each y-axis, 百分比 to the right of each x-axis,
+%         variable labels a,b at their guide levels, and chart titles below the axes
+\begin{tikzpicture}[baseline]
+\begin{axis}[
+    name=leftchart,
+    width=6.7cm,
+    height=5.2cm,
+    axis lines=none,
+    clip=false,
+    xmin=-0.8,
+    xmax=8.7,
+    ymin=-0.09,
+    ymax=0.40,
+    ticks=none,
+]
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.30) -- (axis cs:4.5,0.30);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.20) -- (axis cs:5.5,0.20);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.15) -- (axis cs:2.5,0.15);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.10) -- (axis cs:6.5,0.10);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.05) -- (axis cs:7.5,0.05);
+
+    \addplot[
+        ybar interval,
+        draw=black,
+        fill=white,
+        line width=0.7pt,
+    ] coordinates {
+        (1.5,0.15)
+        (2.5,0.20)
+        (3.5,0.30)
+        (4.5,0.20)
+        (5.5,0.10)
+        (6.5,0.05)
+        (7.5,0)
+    };
+
+    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:8.25,0);
+    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,0.37);
+    \draw[line width=0.75pt]
+      (axis cs:0.65,0) -- (axis cs:0.78,0.022) -- (axis cs:0.91,-0.022) --
+      (axis cs:1.04,0.022) -- (axis cs:1.17,-0.022) -- (axis cs:1.30,0);
+    \node[anchor=south west,inner sep=0pt,font=\small]
+      at (axis cs:0.30,0.345) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:7.75,0.035) {百分比};
+
+    \draw[line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:0,-0.024) {0};
+    \draw[line width=0.45pt] (axis cs:1.5,0) -- (axis cs:1.5,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:1.5,-0.024) {1.5};
+    \draw[line width=0.45pt] (axis cs:2.5,0) -- (axis cs:2.5,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:2.5,-0.024) {2.5};
+    \draw[line width=0.45pt] (axis cs:3.5,0) -- (axis cs:3.5,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:3.5,-0.024) {3.5};
+    \draw[line width=0.45pt] (axis cs:4.5,0) -- (axis cs:4.5,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:4.5,-0.024) {4.5};
+    \draw[line width=0.45pt] (axis cs:5.5,0) -- (axis cs:5.5,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:5.5,-0.024) {5.5};
+    \draw[line width=0.45pt] (axis cs:6.5,0) -- (axis cs:6.5,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:6.5,-0.024) {6.5};
+    \draw[line width=0.45pt] (axis cs:7.5,0) -- (axis cs:7.5,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:7.5,-0.024) {7.5};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:3.9,-0.075) {甲离子残留百分比直方图};
+
+    \draw[line width=0.45pt] (axis cs:0,0.30) -- (axis cs:-0.12,0.30);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.18,0.30) {0.30};
+    \draw[line width=0.45pt] (axis cs:0,0.20) -- (axis cs:-0.12,0.20);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.18,0.20) {0.20};
+    \draw[line width=0.45pt] (axis cs:0,0.15) -- (axis cs:-0.12,0.15);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.18,0.15) {0.15};
+    \draw[line width=0.45pt] (axis cs:0,0.10) -- (axis cs:-0.12,0.10);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.18,0.10) {0.10};
+    \draw[line width=0.45pt] (axis cs:0,0.05) -- (axis cs:-0.12,0.05);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.18,0.05) {0.05};
+\end{axis}
+
+\begin{axis}[
+    name=rightchart,
+    at={(7.55cm,0cm)},
+    anchor=origin,
+    width=6.7cm,
+    height=5.2cm,
+    axis lines=none,
+    clip=false,
+    xmin=-0.8,
+    xmax=9.7,
+    ymin=-0.09,
+    ymax=0.40,
+    ticks=none,
+]
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.35) -- (axis cs:6.5,0.35);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.20) -- (axis cs:7.5,0.20);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.15) -- (axis cs:8.5,0.15);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.10) -- (axis cs:4.5,0.10);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.05) -- (axis cs:3.5,0.05);
+
+    \addplot[
+        ybar interval,
+        draw=black,
+        fill=white,
+        line width=0.7pt,
+    ] coordinates {
+        (2.5,0.05)
+        (3.5,0.10)
+        (4.5,0.15)
+        (5.5,0.35)
+        (6.5,0.20)
+        (7.5,0.15)
+        (8.5,0)
+    };
+
+    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:9.25,0);
+    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,0.37);
+    \draw[line width=0.75pt]
+      (axis cs:0.65,0) -- (axis cs:0.78,0.022) -- (axis cs:0.91,-0.022) --
+      (axis cs:1.04,0.022) -- (axis cs:1.17,-0.022) -- (axis cs:1.30,0);
+    \node[anchor=south west,inner sep=0pt,font=\small]
+      at (axis cs:0.30,0.345) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:8.05,0.035) {百分比};
+
+    \draw[line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:0,-0.024) {0};
+    \draw[line width=0.45pt] (axis cs:2.5,0) -- (axis cs:2.5,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:2.5,-0.024) {2.5};
+    \draw[line width=0.45pt] (axis cs:3.5,0) -- (axis cs:3.5,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:3.5,-0.024) {3.5};
+    \draw[line width=0.45pt] (axis cs:4.5,0) -- (axis cs:4.5,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:4.5,-0.024) {4.5};
+    \draw[line width=0.45pt] (axis cs:5.5,0) -- (axis cs:5.5,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:5.5,-0.024) {5.5};
+    \draw[line width=0.45pt] (axis cs:6.5,0) -- (axis cs:6.5,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:6.5,-0.024) {6.5};
+    \draw[line width=0.45pt] (axis cs:7.5,0) -- (axis cs:7.5,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:7.5,-0.024) {7.5};
+    \draw[line width=0.45pt] (axis cs:8.5,0) -- (axis cs:8.5,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:8.5,-0.024) {8.5};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:4.9,-0.075) {乙离子残留百分比直方图};
+
+    \draw[line width=0.45pt] (axis cs:0,0.35) -- (axis cs:-0.12,0.35);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.35,0.35) {$a$};
+    \draw[line width=0.45pt] (axis cs:0,0.20) -- (axis cs:-0.12,0.20);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.18,0.20) {0.20};
+    \draw[line width=0.45pt] (axis cs:0,0.15) -- (axis cs:-0.12,0.15);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.18,0.15) {0.15};
+    \draw[line width=0.45pt] (axis cs:0,0.10) -- (axis cs:-0.12,0.10);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.35,0.10) {$b$};
+    \draw[line width=0.45pt] (axis cs:0,0.05) -- (axis cs:-0.12,0.05);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.18,0.05) {0.05};
+\end{axis}
+\end{tikzpicture}

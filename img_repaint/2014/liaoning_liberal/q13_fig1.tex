@@ -1,0 +1,37 @@
+% Source PDF: source/普通高考/2014/2014辽宁文.pdf, page 1.
+% PDF embedded bitmap attempt: pdfimages -list returned no images; the flowchart is vector page content.
+% Grid evidence: tmp/review_2014_liaoning_liberal/grids/page-grid100.png,
+% tmp/review_2014_liaoning_liberal/grids/q13-grid50.png and q13-local-grid25.png.
+% No-grid source crop: tmp/review_2014_liaoning_liberal/crops/q13_original_clean2.png.
+% Complete directed edges: start -> input -> init -> test(i<=n);
+% test yes -> i=i+1 -> S=S+i -> T=T+S -> loop back to test;
+% test no -> output T -> finish. The output branch is separate from the loop return.
+\begin{tikzpicture}[baseline,>=Stealth,font=\small,line width=0.45pt,
+  flowtext/.style={anchor=center,align=center,execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  flowbox/.style={flowtext,draw,inner sep=1pt}]
+  \node[flowbox,rounded corners=5pt,text width=1.30cm,minimum width=1.30cm,minimum height=0.56cm] (start) at (0,0) {开始};
+  \node[flowbox,trapezium,trapezium left angle=75,trapezium right angle=105,
+        text width=1.45cm,minimum width=0pt,minimum height=0.58cm] (input) at (0,-1.50) {输入 $n$};
+  \node[flowbox,text width=3.75cm,minimum width=3.75cm,minimum height=0.56cm] (init) at (0,-3.30) {$i=0,S=0,T=0$};
+  \node[flowbox,diamond,aspect=3.2,minimum width=3.35cm,minimum height=0.78cm] (test) at (0,-5.34) {$i\le n$};
+  \node[flowbox,text width=1.95cm,minimum width=1.95cm,minimum height=0.56cm] (inc) at (0,-7.08) {$i=i+1$};
+  \node[flowbox,text width=2.30cm,minimum width=2.30cm,minimum height=0.56cm] (addS) at (0,-8.70) {$S=S+i$};
+  \node[flowbox,text width=2.30cm,minimum width=2.30cm,minimum height=0.56cm] (addT) at (0,-10.34) {$T=T+S$};
+  \node[flowbox,trapezium,trapezium left angle=75,trapezium right angle=105,
+        text width=1.45cm,minimum width=0pt,minimum height=0.58cm] (output) at (3.20,-11.98) {输出 $T$};
+  \node[flowbox,rounded corners=5pt,text width=1.30cm,minimum width=1.30cm,minimum height=0.56cm] (finish) at (3.20,-13.54) {结束};
+
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (init.north);
+  \draw[->] (init.south) -- (test.north);
+  \draw[->] (test.south) -- (inc.north);
+  \draw[->] (inc.south) -- (addS.north);
+  \draw[->] (addS.south) -- (addT.north);
+  \draw[->] (test.east) -- (3.20,-5.34) -- (3.20,-11.38) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+  \coordinate (loop-bottom) at (0,-11.00);
+  \draw (addT.south) -- (loop-bottom) -- (-2.25,-11.00) -- (-2.25,-4.80);
+  \draw[->] (-2.25,-4.80) -- (0,-4.80);
+  \node[flowtext,inner sep=1pt] at (-0.42,-6.00) {是};
+  \node[flowtext,inner sep=1pt] at (1.05,-4.85) {否};
+\end{tikzpicture}

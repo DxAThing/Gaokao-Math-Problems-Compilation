@@ -1,0 +1,50 @@
+% Source PDF: source/普通高考/2015/2015湖南理.pdf, page 1.
+% pdfimages -list found no embedded bitmap; source page rendered and localized with 100px grid.
+% Original comparison crop: tmp/review_2015_hunan_science/crops/q3_source_tight.png.
+% Node -> directed-edge list: start -> input n -> init (i=1,S=0) -> update S;
+% update -> increment i -> test (i>n); test --是--> output S -> finish;
+% test --否--> right-side loop-back arrow -> main stem above update.
+% Solid segments: all node outlines and connectors; dashed segments: none.
+% Every node has explicit anchor=center, align=center and parindent=0pt.
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=0.45pt,
+  line cap=butt,
+  line join=miter,
+  every node/.style={font=\normalsize,anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flow/.style={draw=black,anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+]
+  \node[flow,rounded corners=0.18cm,minimum width=1.35cm,minimum height=0.72cm]
+    (start) at (0,13.2) {开始};
+  \path[flow] (-0.90,12.38) -- (0.90,12.38) -- (0.70,11.62)
+    -- (-1.10,11.62) -- cycle;
+  \node[font=\small] (input) at (-0.10,12.0) {输入 $n$};
+  \node[flow,rectangle,minimum width=2.4cm,minimum height=0.82cm]
+    (init) at (0,10.6) {$i=1,\ S=0$};
+  \node[flow,rectangle,minimum width=4.6cm,minimum height=1.05cm]
+    (update) at (0,8.75) {$S=S+\dfrac{1}{(2i-1)(2i+1)}$};
+  \node[flow,rectangle,minimum width=1.8cm,minimum height=0.76cm]
+    (increment) at (0,7.1) {$i=i+1$};
+  \node[flow,diamond,aspect=2.8,minimum width=2.8cm,minimum height=1.16cm]
+    (test) at (0,5.4) {$i>n?$};
+  \path[flow] (-0.90,3.93) -- (0.90,3.93) -- (0.70,3.17)
+    -- (-1.10,3.17) -- cycle;
+  \node[font=\small] (output) at (-0.10,3.55) {输出 $S$};
+  \node[flow,rounded corners=0.18cm,minimum width=1.35cm,minimum height=0.72cm]
+    (finish) at (0,2.1) {结束};
+
+  \draw[->] (start.south) -- (0,12.38);
+  \draw[->] (0,11.62) -- (init.north);
+  \draw[->] (init.south) -- (update.north);
+  \draw[->] (update.south) -- (increment.north);
+  \draw[->] (increment.south) -- (test.north);
+  \draw[->] (test.south) -- node[right=2pt] {是} (0,3.93);
+  \draw[->] (0,3.17) -- (finish.north);
+
+  % False branch returns on a separate right-side route and re-enters the main stem.
+  \draw (test.east) -- (3.2,5.4) -- (3.2,9.6);
+  \draw[->] (3.2,9.6) -- (0,9.6);
+  \node[anchor=west,inner sep=0pt] at (2.15,5.72) {否};
+\end{tikzpicture}

@@ -1,0 +1,39 @@
+% 2022 全国乙卷（文）第 7 题程序框图，内容依据原始 PDF 第 1 页。
+% Node-edge list from the source: 开始→输入→b=b+2a→a=b-a,n=n+1→判定；
+% 判定“是”→输出n→结束；判定“否”→左侧回边→输入后、b更新前的主干汇合点。
+% The loop arrow ends at that merge point; the downward main arrow is the
+% separate input-to-b update edge, so no second arrow is added on the loop join.
+% solid segments: vertical and loop connectors, box outlines, diamond outline.
+% dashed segments: none. All node text is locally parindent=0pt and centered in both axes.
+\begin{tikzpicture}[
+  >=Stealth,
+  node distance=0.42cm and 0.8cm,
+  every node/.style={font={\small\setlength{\parindent}{0pt}},inner sep=0.5pt,align=center,anchor=center},
+  flow/.style={draw,thick,line width=0.45pt},
+  startstop/.style={flow,rounded corners=3pt,minimum width=1.00cm,minimum height=0.48cm},
+  process/.style={flow,rectangle,minimum width=1.95cm,minimum height=0.50cm},
+  inputoutput/.style={flow,trapezium,trapezium left angle=72,trapezium right angle=108,minimum width=3.30cm,minimum height=0.52cm},
+  decision/.style={flow,diamond,aspect=2.8,inner xsep=0cm,inner ysep=0.02cm,minimum width=5.35cm,minimum height=1.40cm},
+]
+\node[startstop] (start) {开始};
+\node[inputoutput,below=of start] (input) {输入 $a=1,b=1,n=1$};
+\node[process,below=of input] (updateb) {$b=b+2a$};
+\node[process,below=of updateb] (updatean) {$a=b-a,\ n=n+1$};
+\node[decision,below=0.58cm of updatean] (check) {$\left|\dfrac{b^2}{a^2}-2\right|<0.01$};
+\node[inputoutput,below=0.58cm of check,minimum width=1.80cm] (output) {输出 $n$};
+\node[startstop,below=of output] (finish) {结束};
+
+\draw[->] (start) -- (input);
+\draw[->] (input) -- (updateb);
+\draw[->] (updateb) -- (updatean);
+\draw[->] (updatean) -- (check);
+\draw[->] (check) -- node[right] {是} (output);
+\draw[->] (output) -- (finish);
+
+% 否分支沿左侧返回循环入口，箭头方向与原图一致。
+\coordinate (loopJoin) at ([yshift=0.28cm]updateb.north);
+\coordinate (loopBottom) at ([xshift=-2.45cm]check.west);
+\coordinate (loopTop) at (loopBottom |- loopJoin);
+\draw[->] (check.west) -- node[below left] {否} (loopBottom)
+  -- (loopTop) -- (loopJoin);
+\end{tikzpicture}

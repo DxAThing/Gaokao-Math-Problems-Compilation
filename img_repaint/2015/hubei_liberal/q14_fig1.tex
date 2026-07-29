@@ -1,0 +1,74 @@
+% original_pdf: source/普通高考/2015/2015湖北文.pdf
+% page: 1; embedded-image extraction: no images listed by pdfimages (vector chart)
+% grid: 100px coarse page grid, then 50px fine grid on the q14 block; comparison crop from the no-grid page render
+% elements: x/y axes with arrowheads, x-axis break, six histogram bars, dashed frequency guides, ticks 0/0.3/0.4/0.5/0.6/0.7/0.8/0.9, labels 频率/组距 and 金额/万元
+% relations: bars represent [0.3,0.4), [0.4,0.5), [0.5,0.6), [0.6,0.7), [0.7,0.8), [0.8,0.9); heights are 1.5, 2.5, a, 2.0, 0.8, 0.2 from the source graph
+% solid segments: bar outlines, axes, ticks, x-axis break; dashed segments: y=0.2, 0.8, 1.5, 2.0, 2.5 and y=a guides
+% labels: y label above-left of axis, x label right of 0.9 tick, tick labels below/left of axes with clear spacing
+\begin{tikzpicture}[baseline]
+\begin{axis}[
+    width=10.5cm,
+    height=5.6cm,
+    axis lines=none,
+    clip=false,
+    xmin=0,
+    xmax=7.65,
+    ymin=-0.14,
+    ymax=3.18,
+    ticks=none,
+]
+    % Frequency guides and histogram bars from the source chart.
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.2) -- (axis cs:7.0,0.2);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.8) -- (axis cs:7.0,0.8);
+    \draw[dashed,line width=0.55pt] (axis cs:0,1.5) -- (axis cs:7.0,1.5);
+    \draw[dashed,line width=0.55pt] (axis cs:0,2.0) -- (axis cs:7.0,2.0);
+    \draw[dashed,line width=0.55pt] (axis cs:0,2.5) -- (axis cs:7.0,2.5);
+    \draw[dashed,line width=0.55pt] (axis cs:0,3.0) -- (axis cs:7.0,3.0);
+    \addplot[/tikz/ybar interval,mark=none,fill=white,line width=0.7pt] coordinates {
+      (1,1.5)
+      (2,2.5)
+      (3,3.0)
+      (4,2.0)
+      (5,0.8)
+      (6,0.2)
+      (7,0)
+    };
+
+    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:7.50,0);
+    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,3.12);
+    \fill[white] (axis cs:0.18,-0.05) -- (axis cs:0.30,0.025) -- (axis cs:0.42,-0.05) -- (axis cs:0.54,0.025) -- (axis cs:0.66,-0.05) -- cycle;
+    \draw[line width=0.8pt] (axis cs:0.18,-0.05) -- (axis cs:0.30,0.025) -- (axis cs:0.42,-0.05) -- (axis cs:0.54,0.025) -- (axis cs:0.66,-0.05);
+
+    \node[anchor=south west,inner sep=0pt,font=\small] at (axis cs:0.16,3.02)
+        {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:7.55,-0.06) {金额/万元};
+    \node[anchor=north east,inner sep=0pt,font=\small] at (axis cs:0,0) {0};
+
+    \draw[line width=0.45pt] (axis cs:1,0) -- (axis cs:1,-0.07);
+    \draw[line width=0.45pt] (axis cs:2,0) -- (axis cs:2,-0.07);
+    \draw[line width=0.45pt] (axis cs:3,0) -- (axis cs:3,-0.07);
+    \draw[line width=0.45pt] (axis cs:4,0) -- (axis cs:4,-0.07);
+    \draw[line width=0.45pt] (axis cs:5,0) -- (axis cs:5,-0.07);
+    \draw[line width=0.45pt] (axis cs:6,0) -- (axis cs:6,-0.07);
+    \draw[line width=0.45pt] (axis cs:7,0) -- (axis cs:7,-0.07);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:1,-0.09) {0.3};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:2,-0.09) {0.4};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:3,-0.09) {0.5};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:4,-0.09) {0.6};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:5,-0.09) {0.7};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:6,-0.09) {0.8};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:7,-0.09) {0.9};
+    \draw[line width=0.45pt] (axis cs:0,0.2) -- (axis cs:-0.10,0.2);
+    \draw[line width=0.45pt] (axis cs:0,0.8) -- (axis cs:-0.10,0.8);
+    \draw[line width=0.45pt] (axis cs:0,1.5) -- (axis cs:-0.10,1.5);
+    \draw[line width=0.45pt] (axis cs:0,2.0) -- (axis cs:-0.10,2.0);
+    \draw[line width=0.45pt] (axis cs:0,2.5) -- (axis cs:-0.10,2.5);
+    \draw[line width=0.45pt] (axis cs:0,3.0) -- (axis cs:-0.10,3.0);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.13,0.2) {0.2};
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.13,0.8) {0.8};
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.13,1.5) {1.5};
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.13,2.0) {2.0};
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.13,2.5) {2.5};
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.30,3.0) {$a$};
+\end{axis}
+\end{tikzpicture}

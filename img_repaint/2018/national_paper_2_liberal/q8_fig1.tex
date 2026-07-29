@@ -1,0 +1,68 @@
+% Source: source/普通高考/2018/2018全国2文(甘肃,青海,内蒙古,黑龙江,吉林,辽宁,海南,宁夏,新疆,陕西,重庆).pdf, page 1.
+% Type: flowchart (schematic; topology and labels are the mathematical content).
+% Elements: 开始/结束 rounded boxes; N=0,T=0, i=1, N=N+1/i,
+% T=T+1/(i+1), blank increment box, and S=N-T process boxes; decision i<100;
+% 输出 S parallelogram; directed connectors and 是/否 branch labels.
+% Relations: 开始 -> N,T initialization -> i=1 -> i<100; 是 loops through
+% the two accumulators and the blank increment box back to the decision;
+% 否 -> S=N-T -> 输出 S -> 结束.  All connectors and box borders are solid.
+% Node-edge checklist transcribed from the PDF: 开始→N=0,T=0; N=0,T=0→i=1;
+% i=1→i<100; i<100(是)→N=N+1/i; N=N+1/i→T=T+1/(i+1);
+% T=T+1/(i+1)→空白框; 空白框→i<100; i<100(否)→S=N−T;
+% S=N−T→输出S; 输出S→结束.  Each listed edge is drawn exactly once below.
+% Label strategy: branch labels sit outside the diamond; math labels are centered
+% in their boxes; the return path stays left of the processing column.
+
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=0.45pt,
+  node distance=0pt,
+  % Every node is locally zero-indent and centered in both axes.
+  every node/.style={font=\normalsize, text centered, anchor=center,
+    execute at begin node=\setlength{\parindent}{0pt}},
+  flowbox/.style={draw, minimum height=0.72cm, inner xsep=4pt, inner ysep=2.5pt,
+    text centered, anchor=center},
+  rounded/.style={flowbox, rounded corners=3pt},
+  decision/.style={draw, diamond, aspect=2.7, minimum width=3.5cm,
+    minimum height=1.0cm, text centered, anchor=center},
+  io/.style={draw, trapezium, trapezium left angle=74, trapezium right angle=106,
+    minimum height=0.72cm, minimum width=2.3cm, text centered, anchor=center}
+]
+  % Main vertical sequence.
+  \node[rounded, minimum width=1.15cm] (start) at (0,11.7) {开始};
+  \node[flowbox, minimum width=3.8cm] (init) at (0,10.45) {$N=0,\ T=0$};
+  \node[flowbox, minimum width=1.7cm] (seti) at (0,9.35) {$i=1$};
+  \node[decision] (test) at (0,8.08) {$i<100$};
+
+  \node[flowbox, minimum width=2.55cm] (accn) at (-2.0,6.65)
+    {$N=N+\dfrac{1}{i}$};
+  \node[flowbox, minimum width=3.0cm] (acct) at (-2.0,5.18)
+    {$T=T+\dfrac{1}{i+1}$};
+  \node[flowbox, minimum width=2.05cm, minimum height=0.72cm] (inc) at (-2.0,3.65) {};
+
+  \node[flowbox, minimum width=2.75cm] (sub) at (2.0,6.65) {$S=N-T$};
+  \node[io, minimum width=2.4cm] (out) at (2.0,5.15) {输出 $S$};
+  \node[rounded, minimum width=1.15cm] (finish) at (2.0,3.75) {结束};
+
+  % Main arrows.
+  \draw[->] (start.south) -- (init.north);
+  \draw[->] (init.south) -- (seti.north);
+  % The source has a plain trunk down to the loop re-entry, then a separate
+  % downward arrow into the decision diamond (no overlapping arrowheads).
+  \draw (seti.south) -- (0,8.72);
+  \draw[->] (0,8.72) -- (test.north);
+  \draw[->] (accn.south) -- (acct.north);
+  \draw[->] (acct.south) -- (inc.north);
+  \draw[->] (test.east) -- (2.0,8.08) -- (sub.north)
+    node[pos=0.10, above=1pt] {否};
+  \draw[->] (sub.south) -- (out.north);
+  \draw[->] (out.south) -- (finish.north);
+
+  % Yes branch and loop-back path.
+  \draw[->] (test.west) -- (-2.0,8.08) -- (accn.north)
+    node[pos=0.10, above=1pt] {是};
+  % The return arrow first joins the main trunk with a right-pointing head;
+  % the separate trunk arrow above then enters the decision diamond.
+  \draw[->] (inc.west) -- (-3.65,3.65) -- (-3.65,8.72) -- (-0.35,8.72);
+  \draw (-0.35,8.72) -- (0,8.72);
+\end{tikzpicture}

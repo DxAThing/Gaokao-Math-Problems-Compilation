@@ -1,0 +1,45 @@
+% 统计图重绘：2016 北京文科卷第 17 题频率分布直方图。
+% 真值来源：source/普通高考/2016/2016北京文.pdf，第 1 页；pdfimages -list 未发现嵌入图像。
+% 定位证据：tmp/redraw_2016_beijing_liberal/page-1-grid100.jpg；无网格裁切证据：
+% tmp/redraw_2016_beijing_liberal/q17-finalcrop.png。图中横轴为用水量（立方米），
+% 纵轴为频率/组距；组距均为 0.5，八个区间柱高依次为 0.2、0.3、0.4、0.5、
+% 0.3、0.1、0.1、0.1。水平虚线分别指向对应柱顶。
+\begin{tikzpicture}
+  \begin{axis}[
+    width=12.7cm,
+    height=7.4cm,
+    xmin=0, xmax=5.35,
+    ymin=0, ymax=0.58,
+    axis lines=left,
+    axis line style={-stealth, line width=0.7pt},
+    clip=false,
+    xtick={0,0.5,1,1.5,2,2.5,3,3.5,4,4.5},
+    xticklabels={0,0.5,1,1.5,2,2.5,3,3.5,4,4.5},
+    ytick={0.1,0.2,0.3,0.4,0.5},
+    yticklabels={0.1,0.2,0.3,0.4,0.5},
+    tick style={draw=none},
+    tick label style={font=\large},
+  ]
+    % 原图中的水平虚线基准。
+    \draw[dashed, line width=0.55pt] (axis cs:0,0.1) -- (axis cs:4.5,0.1);
+    \draw[dashed, line width=0.55pt] (axis cs:0,0.2) -- (axis cs:1,0.2);
+    \draw[dashed, line width=0.55pt] (axis cs:0,0.3) -- (axis cs:3,0.3);
+    \draw[dashed, line width=0.55pt] (axis cs:0,0.4) -- (axis cs:2,0.4);
+    \draw[dashed, line width=0.55pt] (axis cs:0,0.5) -- (axis cs:2.5,0.5);
+    % 八个等组距矩形柱。
+    \addplot[/tikz/ybar interval,mark=none,draw=black,fill=none] coordinates {
+      (0.5,0.2)
+      (1,0.3)
+      (1.5,0.4)
+      (2,0.5)
+      (2.5,0.3)
+      (3,0.1)
+      (3.5,0.1)
+      (4,0.1)
+      (4.5,0)
+    };
+    \node[font=\large, anchor=south west] at (axis cs:0.1,0.55)
+      {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[font=\large, anchor=west] at (axis cs:4.55,0.025) {用水量（立方米）};
+  \end{axis}
+\end{tikzpicture}

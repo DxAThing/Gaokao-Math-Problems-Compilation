@@ -1,0 +1,50 @@
+% Source: source/普通高考/2012/2012江苏.pdf, page 1, question 4.
+% Type: algorithm flowchart; pdfimages -list reports no embedded bitmap (vector line art).
+% Grid evidence: tmp/review_flowchart_2012_jiangsu/grid/page-1-grid100.png
+% (100px coarse + 50px fine) and q4-block-grid50.png (50px coarse + 25px fine).
+% Comparison crop: tmp/review_flowchart_2012_jiangsu/crop/q4_original_final.png,
+% taken from the ungridded page render with a safety border.
+% Node-edge list: 开始→k←1→(k^2−5k+4>0)；是→输出k→结束；
+% 否→k←k+1→回线左向箭头→判定前共享主干。All borders/connectors are solid;
+% labels Y/N are placed beside the corresponding exits. Nodes are centered with
+% local parindent=0pt; the return arrow and the main downward arrow are distinct.
+\begin{tikzpicture}[
+  x=1cm,
+  y=0.9cm,
+  >=Stealth,
+  line width=0.45pt,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\normalsize, inner sep=1pt, align=center, anchor=center,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  flow/.style={draw, line width=0.45pt},
+  terminal/.style={flow, rounded corners=3pt, minimum width=1.25cm, minimum height=0.70cm},
+  process/.style={flow, minimum height=0.72cm, align=center},
+  io/.style={flow, trapezium, trapezium left angle=74, trapezium right angle=106,
+    minimum height=0.76cm, align=center},
+  decision/.style={flow, diamond, aspect=2.9, minimum width=4.0cm,
+    minimum height=1.0cm, inner sep=1pt, align=center}
+]
+  \node[terminal] (start) at (0,8.20) {开始};
+  \node[process, minimum width=1.50cm] (init) at (0,6.80) {$k\gets1$};
+  \node[decision] (test) at (0,4.95) {$k^2-5k+4>0$};
+  \node[io, minimum width=2.05cm] (output) at (0,3.35) {输出 $k$};
+  \node[terminal] (finish) at (0,1.95) {结束};
+  \node[process, minimum width=2.35cm] (increment) at (3.60,4.95) {$k\gets k+1$};
+
+  \coordinate (loopJoin) at (0,6.10);
+  \coordinate (loopRight) at (3.60,6.10);
+
+  % Main path and terminating branch.
+  \draw[->] (start.south) -- (init.north);
+  \draw (init.south) -- (loopJoin);
+  \draw[->] (loopJoin) -- (test.north);
+  \draw[->] (test.south) -- node[right=2pt] {Y} (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % N branch and return loop. The left-pointing return arrow ends on the
+  % shared stem; the main stem retains its single downward arrow into test.
+  \draw[->] (test.east) -- node[above=3pt, pos=0.18] {N} (increment.west);
+  \draw[->] (increment.north) -- (loopRight) -- (loopJoin);
+  \path[use as bounding box] (-2.25,1.55) rectangle (4.95,8.60);
+\end{tikzpicture}

@@ -1,0 +1,61 @@
+% Source PDF: source/普通高考/2023/2023全国甲文(广西,贵州,西藏,四川).pdf
+% Page: 1; pdfimages -list found no embedded bitmap; source page rendered at 300 dpi.
+% Grid evidence: tmp/redraw_flowchart_2023_national_paper_a_liberal/grid/page-1-grid100.jpg,
+%   q6_block_grid50.jpg, and q6_flow_block2_grid25.jpg.
+% Original comparison crop: tmp/redraw_flowchart_2023_national_paper_a_liberal/grid/q6_original_final.png,
+%   cropped from the no-grid page render.
+% Elements: rounded start/end nodes, input/output parallelograms, decision diamond,
+%   three assignment rectangles, directed connectors and branch labels.
+% Complete node -> directed-edge list from the source:
+%   start -> input -> test; test --是--> stepa -> stepb -> stepk -> test;
+%   test --否--> output -> finish. The left return branch is the loop-back path;
+%   there is no stepk -> output edge and no connection from the loop to output.
+% solid segments: all box outlines and connector lines; dashed segments: none.
+% labels: decision condition centered; “是” below the diamond and “否” above/right;
+%   math labels centered in their boxes, with branch paths kept clear of text.
+% directed edges (source): start->input, input->test; test->stepa (是),
+% stepa->stepb->stepk->test (loop); test->output (否), output->finish.
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=0.45pt,
+  line join=round,
+  line cap=round,
+  font=\normalsize,
+  flowtext/.style={anchor=center, align=center,
+                   execute at begin node={\setlength{\parindent}{0pt}}},
+  flowbox/.style={flowtext, draw,
+                  minimum height=0.60cm, inner xsep=4pt, inner ysep=2pt},
+  process/.style={flowbox},
+  startstop/.style={flowbox, rounded corners=0.18cm},
+  io/.style={flowbox, trapezium, trapezium left angle=75, trapezium right angle=105,
+             minimum height=0.70cm},
+  decision/.style={flowbox, diamond, aspect=2.8, minimum width=2.75cm, minimum height=0.90cm},
+]
+  % Coordinates are a clean schematic layout; topology and labels follow the source figure.
+  \node[startstop] (start) at (0,10.25) {开始};
+  \node[io] (input) at (0,8.83) {输入 \(n=3,A=1,B=2,k=1\)};
+  \node[decision]  (test)  at (0,7.40) {\(k\leq n\)};
+  \node[process]   (stepa) at (0,5.97) {\(A=A+B\)};
+  \node[process]   (stepb) at (0,4.54) {\(B=A+B\)};
+  \node[process]   (stepk) at (0,3.11) {\(k=k+1\)};
+  \node[io]        (output) at (0,1.68) {输出 \(B\)};
+  \node[startstop] (finish) at (0,0.25) {结束};
+
+  \draw[->] (start.south) -- (input.north);
+  % The forward stem and loop return share one arrow entering the decision;
+  % no second arrowhead is placed on the loop's horizontal apex segment.
+  \draw (input.south) -- (0,7.85);
+  \draw[->] (0,7.85) -- (test.north);
+  \draw[->] (test.south) -- node[flowtext, right] {是} (stepa.north);
+  \draw[->] (stepa.south) -- (stepb.north);
+  \draw[->] (stepb.south) -- (stepk.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % Loop-back branch from the increment box returns along the left side to the
+  % upper test entry, matching the source PDF's horizontal arrow and short entry.
+  \draw (stepk.west) -- (-1.80,3.11) -- (-1.80,7.85) -- (0,7.85);
+  % False branch bypasses the loop and follows the right-side route into output.east;
+  % it then continues output -> finish.  There is no k -> output connector.
+  \draw[->] (test.east) -- node[flowtext, above] {否} (2.00,7.40)
+    -- (2.00,1.68) -- (output.east);
+\end{tikzpicture}

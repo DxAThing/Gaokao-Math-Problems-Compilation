@@ -1,0 +1,66 @@
+% Source PDF: source/普通高考/2011/2011山东理.pdf, page 1, question 13.
+% pdfimages -list reports no embedded bitmap; the algorithm flowchart is vector/text artwork.
+% Grid evidence: tmp/review_flowchart_2011_shandong_science/grid/page-1-grid100.png and
+% tmp/review_flowchart_2011_shandong_science/grid/q13-block-grid50.png.
+% Nodes: 开始; 输入非负整数 l,m,n; l^2+m^2+n^2=0?; y=105;
+% y=70l+21m+15n; y>105?; y=y-105; 输出y; 结束.
+% Directed edges: first test(是)->y=105->output merge; first test(否)->initial y formula
+% -> second test; second test(是)->y=y-105->left return arrow to the second-test stem;
+% second test(否)->output->结束. The two output routes merge only immediately before output.
+\begin{tikzpicture}[
+  x=1cm,y=1cm,baseline,
+  flowarrow/.style={-{Latex[length=2.1mm,width=1.5mm]},line width=0.45pt},
+  nodebox/.style={draw,line width=0.45pt,inner sep=2pt,minimum height=.66cm,
+    anchor=center,align=center,execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  branchlabel/.style={anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  term/.style={nodebox,rounded corners=2.5pt,minimum width=1.30cm,text width=1.30cm},
+  io/.style={nodebox,shape=trapezium,trapezium left angle=70,trapezium right angle=110,
+    minimum width=4.35cm,text width=4.00cm,minimum height=.78cm},
+  decision/.style={nodebox,diamond,aspect=2.75,minimum width=4.85cm,minimum height=1.12cm,inner sep=1pt},
+  process/.style={nodebox,minimum height=.70cm},
+]
+  \path[use as bounding box] (-5.00,-1.65) rectangle (4.85,11.65);
+
+  \node[term] (start) at (0,11.25) {开始};
+  \node[io] (input) at (0,9.95) {输入非负整数 $l,m,n$};
+  \node[decision] (test1) at (0,8.30) {$l^2+m^2+n^2=0$};
+  \node[process,minimum width=2.25cm,text width=2.25cm] (const) at (-3.70,6.60) {$y=105$};
+  \node[process,minimum width=4.55cm,text width=4.55cm] (formula) at (0,6.60)
+    {$y=70l+21m+15n$};
+  \node[decision,minimum width=3.55cm,minimum height=1.02cm] (test2) at (0,4.25) {$y>105$};
+  \node[process,minimum width=3.05cm,text width=3.05cm] (minus) at (3.25,5.35) {$y=y-105$};
+  \node[io,minimum width=2.20cm,text width=1.95cm] (output) at (0,1.95) {输出 $y$};
+  \node[term] (finish) at (0,0.65) {结束};
+
+  \coordinate (checkjoin) at (0,5.45);
+  \coordinate (outjoin) at (0,2.85);
+  \coordinate (outleft) at (-3.70,2.85);
+
+  \draw[flowarrow] (start.south) -- (input.north);
+  \draw[flowarrow] (input.south) -- (test1.north);
+
+  % First decision branches: zero case bypasses the second test.
+  \draw[flowarrow] (test1.west) -- (-3.70,8.30) -- (const.north);
+  \draw[flowarrow] (test1.south) -- (formula.north);
+  \node[branchlabel] at (-3.00,8.75) {是};
+  \node[branchlabel] at (0.60,7.62) {否};
+
+  \coordinate (return-level) at (0,6.05);
+  \draw (formula.south) -- (return-level) -- (checkjoin);
+  \draw[flowarrow] (checkjoin) -- (test2.north);
+
+  % Second test loop: yes goes right, rises into the bottom of y=y-105,
+  % then returns left into the formula stem above the second decision.
+  \draw[flowarrow] (test2.east) -- (3.25,4.25) -- (minus.south);
+  \draw (minus.north) -- (3.25,6.05);
+  \draw[flowarrow] (3.25,6.05) -- (return-level);
+  \node[branchlabel] at (1.75,4.85) {是};
+
+  % The first-test yes path and second-test no path merge immediately before output.
+  \draw[flowarrow] (const.south) -- (outleft) -- (outjoin);
+  \draw[flowarrow] (test2.south) -- (outjoin);
+  \draw[flowarrow] (outjoin) -- (output.north);
+  \node[branchlabel] at (0.60,3.58) {否};
+  \draw[flowarrow] (output.south) -- (finish.north);
+\end{tikzpicture}

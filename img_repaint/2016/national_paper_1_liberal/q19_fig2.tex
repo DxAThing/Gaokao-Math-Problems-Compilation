@@ -1,0 +1,66 @@
+% Source PDF: source/普通高考/2016/2016全国1文(河南,河北,山西,江西,湖北,湖南,广东,安徽,福建).pdf
+% Page: 2 (q19 is a frequency-count bar chart for replacement counts)
+% PDF embedded bitmap attempt: pdfimages -list found no image objects; page rendered at 300 dpi.
+% Grid evidence: tmp/redraw_grid/2016_national_paper_1_liberal/page2_grid100.jpg and
+%   tmp/redraw_crops/2016_national_paper_1_liberal/q19_block_grid50.jpg
+% Original comparison crop: tmp/redraw_crops/2016_national_paper_1_liberal/q19_orig.png
+% Elements: x-axis break, replacement-count ticks 16--21, y-axis ticks 6, 10, 16, 20, 24,
+%   six contiguous frequency bars, dashed guides, and Chinese axis labels.
+% Relations: bar centers are 16--21; frequencies are (6, 16, 24, 24, 20, 10).
+% solid segments: x/y axes, bar outlines, x-axis break mark.
+% dashed segments: horizontal guide lines at each labelled frequency level.
+% Labels are placed outside bars and clear of axes and guides.
+\begin{tikzpicture}
+\begin{axis}[
+    width=8.4cm,
+    height=4.8cm,
+    xmin=14.8,
+    xmax=23.0,
+    ymin=-2.2,
+    ymax=27.0,
+    axis lines=left,
+    axis line style={-stealth},
+    xlabel={},
+    ylabel={},
+    xtick={16,17,18,19,20,21},
+    xticklabels={16,17,18,19,20,21},
+    ytick={6,10,16,20,24},
+    yticklabels={6,10,16,20,24},
+    scaled x ticks=false,
+    scaled y ticks=false,
+    tick label style={font=\scriptsize},
+    label style={font=\small},
+    tick align=outside,
+    tick style={black},
+    enlargelimits=false,
+    clip=false,
+]
+    % Horizontal reference guides in the original statistical figure.
+    \addplot[dashed,black,line width=0.35pt] coordinates {(15.5,6) (21.5,6)};
+    \addplot[dashed,black,line width=0.35pt] coordinates {(15.5,10) (21.5,10)};
+    \addplot[dashed,black,line width=0.35pt] coordinates {(15.5,16) (21.5,16)};
+    \addplot[dashed,black,line width=0.35pt] coordinates {(15.5,20) (21.5,20)};
+    \addplot[dashed,black,line width=0.35pt] coordinates {(15.5,24) (21.5,24)};
+
+    % Bar centers are the six replacement-count values; endpoints center the intervals on ticks.
+    \addplot[ybar interval,draw=black,fill=white,line width=0.45pt] coordinates {
+        (15.5,6)
+        (16.5,16)
+        (17.5,24)
+        (18.5,24)
+        (19.5,20)
+        (20.5,10)
+        (21.5,0)
+    };
+
+    % The source chart compresses the unused x-range between 0 and 16.
+    \node[anchor=north,inner sep=0pt] at (axis cs:15.08,-0.05) {0};
+    \draw[black,line width=0.45pt]
+        (axis cs:15.17,0) -- (axis cs:15.31,0.90)
+        -- (axis cs:15.45,0) -- (axis cs:15.59,0.90)
+        -- (axis cs:15.73,0) -- (axis cs:15.87,0.90)
+        -- (axis cs:16.01,0);
+    \node[anchor=west,inner sep=0pt] at (axis cs:14.92,24.85) {频数};
+    \node[anchor=west,inner sep=0pt] at (axis cs:21.95,1.05) {更换的易损零件数};
+\end{axis}
+\end{tikzpicture}

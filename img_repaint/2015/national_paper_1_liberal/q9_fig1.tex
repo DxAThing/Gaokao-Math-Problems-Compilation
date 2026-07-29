@@ -1,0 +1,47 @@
+% Source: source/普通高考/2015/2015全国1文(河南,河北,山西,江西).pdf, page 1.
+% The source PDF contains vector artwork (pdfimages -list reports no images).
+% Original-side crop: tmp/review_flowchart_2015_national_paper_1_liberal/q9_original_recheck.png.
+% Node list: start, input t, initialization (S=1,n=0,m=1/2), subtract S=S-m,
+% halve-and-count (m=m/2,n=n+1), test S>t, output n, finish.
+% Directed-edge list: start -> input; input -> initialization;
+% initialization -> subtract; subtract -> halve-and-count;
+% halve-and-count -> test; test --否--> output; output -> finish;
+% test --是--> subtract (the left loopback).  The source places the loopback
+% arrow on the shared vertical stem immediately above subtract; loopjoin is an
+% explicit routing coordinate, not an additional semantic node.
+\begin{tikzpicture}[
+  >=Stealth,
+  flow/.style={draw, line width=0.55pt, -{Stealth[length=2.1pt,width=1.8pt]}},
+  box/.style={draw, rectangle, minimum height=0.64cm, inner xsep=0.16cm,
+    inner ysep=0.08cm, align=center, execute at begin node=\setlength{\parindent}{0pt}},
+  terminal/.style={box, rounded corners=0.18cm, minimum width=1.05cm},
+  io/.style={box, trapezium, trapezium left angle=72, trapezium right angle=108,
+    minimum width=1.75cm},
+  decision/.style={draw, diamond, aspect=2.35, inner xsep=0.10cm, inner ysep=0.05cm,
+    align=center, execute at begin node=\setlength{\parindent}{0pt}},
+]
+  \node[terminal] (start) {开始};
+  \node[io, below=0.34cm of start] (input) {输入 $t$};
+  \node[box, below=0.34cm of input, minimum width=4.15cm] (init)
+    {$S=1,n=0,m=\dfrac{1}{2}$};
+  \node[box, below=0.34cm of init, minimum width=2.20cm] (subtract)
+    {$S=S-m$};
+  \node[box, below=0.34cm of subtract, minimum width=3.45cm] (update)
+    {$m=\dfrac{m}{2},n=n+1$};
+  \node[decision, below=0.36cm of update, minimum width=2.35cm, minimum height=0.86cm]
+    (test) {$S>t$};
+  \node[io, below=0.45cm of test] (output) {输出 $n$};
+  \node[terminal, below=0.34cm of output] (finish) {结束};
+  \coordinate (loopjoin) at ([yshift=0.28cm]subtract.north);
+
+  \draw[flow] (start) -- (input);
+  \draw[flow] (input) -- (init);
+  \draw[-] (init) -- (loopjoin);
+  \draw[flow] (loopjoin) -- (subtract.north);
+  \draw[flow] (subtract) -- (update);
+  \draw[flow] (update) -- (test);
+  \draw[flow] (test) -- node[right, inner sep=1pt] {否} (output);
+  \draw[flow] (output) -- (finish);
+  \draw[flow] (test.west) -- ++(-0.70cm,0) |- (loopjoin);
+  \node[anchor=east, inner sep=1pt] at ([xshift=-0.20cm,yshift=0.13cm]test.west) {是};
+\end{tikzpicture}

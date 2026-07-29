@@ -1,0 +1,65 @@
+% Source PDF: source/普通高考/2016/2016山东理.pdf, page 1 (question 11).
+% PDF embedded-bitmap attempt: pdfimages -list found no matching image object; the flowchart is vector line art.
+% Original comparison crop: tmp/redraw_flowchart_2016_shandong_science/recheck_source/q11_original_recheck.png,
+% cropped from a no-grid 300 dpi page render after grid100 localization.
+% Elements: rounded start/end terminals, input/output parallelograms, initialization and
+% update rectangles, one decision diamond, the right increment rectangle, directed connectors,
+% and 是/否 labels.
+% Node→directed-edge list: 开始→输入(a,b)→i=1→a=a+i,b=b-i→a>b;
+% a>b 的 是→输出 i→结束；a>b 的 否→i=i+1→a=a+i,b=b-i.
+% solid segments: every node border and connector; dashed segments: none.
+% labels: all node text is locally zero-indented and horizontally/vertically centered;
+% 是 is beside the downward true branch and 否 is beside the right return branch.
+
+\begin{tikzpicture}[
+  x=1cm,
+  y=0.92cm,
+  >=Stealth,
+  line cap=butt,
+  line join=miter,
+  every node/.style={font=\normalsize,anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flow/.style={draw=black,line width=0.45pt,anchor=center,align=center,inner sep=0.6pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+]
+  % Compact schematic coordinates preserve the source topology and branch directions.
+  \node[flow,rounded corners=0.16cm,minimum width=1.20cm,minimum height=0.66cm]
+    (start) at (0,8.45) {开始};
+
+  % Input/output polygons keep their text bbox at the polygon's geometric centre.
+  \path[flow] (-1.55,7.75) -- (1.55,7.75) -- (1.30,7.05) -- (-1.80,7.05) -- cycle;
+  \node at (-0.125,7.40) {输入 \(a,b\)};
+  \node[flow,minimum width=1.55cm,minimum height=0.66cm]
+    (init) at (0,6.15) {\(i=1\)};
+  \node[flow,minimum width=4.25cm,minimum height=0.70cm]
+    (update) at (0,4.82) {\(a=a+i,b=b-i\)};
+  \node[flow,minimum width=2.30cm,minimum height=0.70cm]
+    (inc) at (3.60,4.82) {\(i=i+1\)};
+  \node[flow,diamond,aspect=2.7,minimum width=3.55cm,minimum height=0.90cm]
+    (check) at (0,3.40) {\(a>b\)};
+  \path[flow] (-1.05,2.25) -- (1.05,2.25) -- (0.80,1.55) -- (-1.30,1.55) -- cycle;
+  \node at (-0.25,1.90) {输出 \(i\)};
+  \node[flow,rounded corners=0.16cm,minimum width=1.20cm,minimum height=0.66cm]
+    (finish) at (0,0.72) {结束};
+
+  % Main downward path and true branch.
+  \draw[->,flow] (start.south) -- (0,7.75);
+  \draw[->,flow] (0,7.05) -- (init.north);
+  \draw[->,flow] (init.south) -- (update.north);
+  \draw[->,flow] (update.south) -- (check.north);
+  \draw[->,flow] (check.south) -- node[right=0.08cm,pos=0.28] {是} (0,2.25);
+  \draw[->,flow] (0,1.55) -- (finish.north);
+
+  % False branch: right to i=i+1, then left and down to the update node.
+  \coordinate (right-turn) at (3.60,3.40);
+  \coordinate (inc-bottom) at (3.60,4.45);
+  \coordinate (inc-top) at (3.60,5.42);
+  \coordinate (loop-top) at (3.60,5.42);
+  \coordinate (loop-merge) at (0,5.42);
+  \draw[flow] (check.east) -- (right-turn) -- (inc-bottom);
+  \draw[->,flow] (inc-bottom) -- (inc.south);
+  \draw[flow] (inc.north) -- (inc-top) -- (loop-top);
+  \draw[->,flow] (loop-top) -- (loop-merge);
+  \draw[flow] (loop-merge) -- (update.north);
+  \node[anchor=west,inner sep=0pt] at (1.68,3.15) {否};
+\end{tikzpicture}

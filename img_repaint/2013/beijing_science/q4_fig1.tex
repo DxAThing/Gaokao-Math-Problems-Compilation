@@ -1,0 +1,48 @@
+% Source: source/普通高考/2013/2013北京理.pdf, p.1, question 4.
+% Node→directed-edge list: 开始→i=0,S=1→更新 S→i=i+1→判定 i>=2；
+% 判定(否)→右侧回边→初始化后主干；判定(是)→输出 S→结束。
+% Solid segments: all node borders and connectors; dashed segments: none.
+\begin{tikzpicture}[
+  x=1cm,
+  y=0.8cm,
+  >=Stealth,
+  line width=0.45pt,
+  every node/.style={
+    font=\normalsize,
+    anchor=center,
+    align=center,
+    execute at begin node={\setlength{\parindent}{0pt}},
+  },
+  flowbox/.style={draw,minimum height=0.62cm,inner xsep=4pt,inner ysep=2pt,
+    align=center,execute at begin node={\setlength{\parindent}{0pt}}},
+  startstop/.style={draw,rounded corners=0.22cm,minimum height=0.62cm,inner xsep=4pt,inner ysep=2pt,
+    align=center,execute at begin node={\setlength{\parindent}{0pt}}},
+  decision/.style={draw,diamond,aspect=2.8,minimum width=3.65cm,minimum height=0.95cm,inner xsep=4pt,inner ysep=2pt,
+    align=center,execute at begin node={\setlength{\parindent}{0pt}}},
+  io/.style={draw,trapezium,trapezium left angle=72,trapezium right angle=108,minimum width=2.05cm,minimum height=0.68cm,inner xsep=4pt,inner ysep=2pt,
+    align=center,execute at begin node={\setlength{\parindent}{0pt}}},
+  flowline/.style={-{Stealth[length=2.1mm,width=1.35mm]},line width=0.45pt}
+]
+  \node[startstop,minimum width=1.25cm] (start) at (0,9.10) {开始};
+  \node[flowbox,minimum width=2.85cm] (init) at (0,7.80) {$i=0,S=1$};
+  \node[flowbox,minimum width=3.75cm,minimum height=1.20cm] (update) at (0,6.15)
+    {$\displaystyle S=\frac{S^2+1}{2S+1}$};
+  \node[flowbox,minimum width=2.25cm] (increment) at (0,4.55) {$i=i+1$};
+  \node[decision] (test) at (0,3.05) {$i\geq 2$};
+  \node[io] (output) at (0,1.60) {输出 $S$};
+  \node[startstop,minimum width=1.25cm] (finish) at (0,0.25) {结束};
+
+  % Main path and the affirmative output branch.
+  \draw[flowline] (start.south) -- (init.north);
+  \draw[flowline] (init.south) -- (update.north);
+  \draw[flowline] (update.south) -- (increment.north);
+  \draw[flowline] (increment.south) -- (test.north);
+  \draw[flowline] (test.south) -- (output.north)
+    node[pos=0.50,right] {是};
+  \draw[flowline] (output.south) -- (finish.north);
+
+  % The negative branch loops right and returns to the connector below initialization.
+  \draw (test.east) -- (3.75,3.05) node[pos=0.22,above] {否}
+    -- (3.75,7.12) -- (1.50,7.12);
+  \draw[flowline] (1.50,7.12) -- (0,7.12);
+\end{tikzpicture}

@@ -1,0 +1,56 @@
+% Original PDF: source/普通高考/2013/2013福建文.pdf, page 1, question 8.
+% pdfimages -list returned no embedded bitmap; the program flowchart is vector/text artwork.
+% Grid evidence: tmp/review_flowchart_2013_fujian_liberal/source300/page1_grid100.jpg
+% and q8_original_grid50.jpg; comparison source is q8_original.png from the no-grid page render.
+% Elements: rounded 开始/结束 terminals; initialization S=0,k=1; input n;
+% process boxes S=1+2S and k=k+1; decision k>n?; output parallelogram 输出 S.
+% Node -> directed edge list: 开始->(S=0,k=1)->输入 n->(S=1+2S)->(k=k+1)->(k>n?);
+% (k>n)-是->输出 S->结束; (k>n)-否->right/up return branch->the connector
+% between 输入 n and S=1+2S. Solid segments: all borders and directed arrows;
+% dashed segments: none. Node text is locally zero-indented and centered; labels 是/否
+% sit beside their corresponding decision branches. The return edge is independent of
+% the single downward output edge and does not connect to the output node.
+
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=0.5pt,
+  line cap=round,
+  line join=round,
+  every node/.style={anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flowbox/.style={draw,line width=0.5pt,minimum height=0.70cm,
+    inner xsep=4pt,inner ysep=2pt},
+  terminal/.style={flowbox,rounded corners=0.18cm,minimum width=1.35cm,
+    minimum height=0.66cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
+    trapezium right angle=108,minimum height=0.78cm},
+  flowarrow/.style={-{Stealth[length=2.1mm,width=1.35mm]},line width=0.5pt}
+]
+  \node[terminal] (start) at (0,9.85) {开始};
+  \node[flowbox,minimum width=2.65cm] (init) at (0,8.52)
+    {$S=0, k=1$};
+  \node[io,minimum width=2.45cm] (input) at (0,7.10) {输入 $n$};
+  \node[flowbox,minimum width=3.25cm] (update) at (0,5.65)
+    {$S=1+2S$};
+  \node[flowbox,minimum width=2.60cm] (increment) at (0,4.25)
+    {$k=k+1$};
+  \node[flowbox,shape=diamond,aspect=2.75,minimum width=3.65cm,
+    minimum height=1.05cm,inner sep=0pt] (test) at (0,2.90) {$k>n?$};
+  \node[io,minimum width=2.25cm] (output) at (0,1.48) {输出 $S$};
+  \node[terminal] (finish) at (0,0.15) {结束};
+
+  \draw[flowarrow] (start.south) -- (init.north);
+  \draw[flowarrow] (init.south) -- (input.north);
+  % Main connector from input to the update box; the loop joins this connector above update.
+  \draw[flowarrow] (input.south) -- (update.north);
+  \draw[flowarrow] (update.south) -- (increment.north);
+  \draw[flowarrow] (increment.south) -- (test.north);
+  \draw[flowarrow] (test.south) -- (output.north);
+  \draw[flowarrow] (output.south) -- (finish.north);
+
+  % No branch: route right and up, then return left into the input/update trunk.
+  \draw[flowarrow] (test.east) -- (3.40,2.90) -- (3.40,6.42) -- (0,6.42);
+
+  \node[inner sep=0pt] at (0.48,2.18) {是};
+  \node[inner sep=0pt] at (1.30,3.40) {否};
+\end{tikzpicture}

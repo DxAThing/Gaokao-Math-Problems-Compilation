@@ -1,0 +1,62 @@
+% Source: source/普通高考/2013/2013四川文.pdf, page 2, question 18.
+% pdfimages -list found no embedded bitmap; the program flowchart is vector artwork.
+% Node -> directed-edge list: 开始 -> 输入 x -> x 为偶数?;
+% 否 -> y=1 -> merge; 是 -> x 能被 3 整除?;
+% 该判断否 -> y=2 -> merge; 是 -> y=3 -> merge;
+% merge -> 输出 y -> 结束. The source has inward horizontal arrowheads
+% from both side branches at the merge, plus the downward y=3 and output arrows.
+% All node text is zero-indented and centered; all connectors are solid.
+
+\begin{tikzpicture}[
+    >=Stealth,
+    x=1cm,
+    y=0.92cm,
+    line width=0.45pt,
+    line cap=round,
+    line join=round,
+    font=\normalsize,
+    every node/.style={anchor=center, align=center,
+        execute at begin node={\setlength{\parindent}{0pt}}},
+    flowbox/.style={draw, anchor=center, align=center, inner xsep=3pt,
+        inner ysep=2pt, execute at begin node={\setlength{\parindent}{0pt}}},
+    terminal/.style={flowbox, rounded corners=0.16cm,
+        minimum width=1.35cm, minimum height=0.68cm},
+    io/.style={flowbox, trapezium, trapezium left angle=72,
+        trapezium right angle=108, minimum height=0.76cm},
+    process/.style={flowbox, minimum height=0.68cm},
+    decision/.style={flowbox, diamond, aspect=3.0, inner sep=0pt,
+        minimum height=1.02cm},
+]
+    \path[use as bounding box] (-4.35,-0.38) rectangle (4.10,10.10);
+
+    \node[terminal] (start) at (0,9.55) {开始};
+    \node[io, minimum width=1.72cm] (input) at (0,8.20) {输入 $x$};
+    \node[decision, minimum width=4.20cm] (parity) at (0,6.75) {$x$ 为偶数?};
+    \node[decision, minimum width=4.35cm] (div3) at (0,4.80) {$x$ 能被 3 整除?};
+    \node[process, minimum width=1.85cm] (y1) at (3.25,6.75) {$y=1$};
+    \node[process, minimum width=1.85cm] (y2) at (-3.25,4.80) {$y=2$};
+    \node[process, minimum width=1.85cm] (y3) at (0,3.15) {$y=3$};
+    \node[io, minimum width=2.25cm] (output) at (0,1.72) {输出 $y$};
+    \node[terminal] (finish) at (0,0.30) {结束};
+
+    % Main decision chain and branch labels.
+    \draw[->] (start.south) -- (input.north);
+    \draw[->] (input.south) -- (parity.north);
+    \draw[->] (parity.south) -- node[right=2pt] {是} (div3.north);
+    \draw[->] (div3.south) -- node[right=2pt] {是} (y3.north);
+    \draw[->] (parity.east) -- node[above=1pt] {否} (y1.west);
+    \draw[->] (div3.west) -- node[above=1pt] {否} (y2.east);
+
+    % The source merges all three assignments on one horizontal connector.
+    % Keep the two inward side arrowheads and the separate downward arrows.
+    \coordinate (merge-left) at (-3.25,2.40);
+    \coordinate (merge-right) at (3.25,2.40);
+    \coordinate (merge) at (0,2.40);
+    \draw (y1.south) -- (merge-right);
+    \draw (y2.south) -- (merge-left);
+    \draw[->] (merge-right) -- (merge);
+    \draw[->] (merge-left) -- (merge);
+    \draw[->] (y3.south) -- (merge);
+    \draw[->] (merge) -- (output.north);
+    \draw[->] (output.south) -- (finish.north);
+\end{tikzpicture}

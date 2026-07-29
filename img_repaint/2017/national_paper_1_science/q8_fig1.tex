@@ -1,0 +1,57 @@
+% Source: source/普通高考/2017/2017全国1理(河南,河北,山西,江西,湖北,湖南,广东,安徽,福建).pdf, page 1.
+% The source flowchart is vector line art; pdfimages -list found no embedded image objects.
+% Original-side comparison crop: tmp/redraw_flowchart_2017_national_paper_1_science/original_q8_fig1.png,
+% cropped from the ungridded page after 100px coarse and 50px fine grid inspection.
+% Elements: rounded start/end boxes, input/output parallelograms, assignment rectangle,
+% blank assignment rectangle, decision diamond, directed connectors, and 是/否 branch labels.
+% Node -> directed-edge list from the source: 开始 -> 输入 n=0 -> A=3^n-2^n -> decision;
+% decision --是--> blank assignment -> A=3^n-2^n; decision --否--> 输出 n -> 结束.
+% This is a schematic flowchart.
+% solid segments: all box borders, the central arrows, and the loop connectors.
+% dashed segments: none.
+% labels: math labels centered in boxes; 是 sits below the left decision exit and 否 to the
+% right of the downward exit; the blank boxes intentionally contain no added text.
+\begin{tikzpicture}[
+    x=0.8cm,
+    y=0.8cm,
+    >=stealth,
+    line width=0.45pt,
+    every node/.style={inner sep=1pt, align=center, anchor=center,
+        execute at begin node=\setlength{\parindent}{0pt}},
+]
+    % Main vertical algorithm path.
+    \node[draw, rounded corners=6pt, minimum width=1.00cm, minimum height=0.56cm]
+        (start) at (0,8.20) {开始};
+    \node[draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+        minimum width=1.20cm, minimum height=0.62cm]
+        (input) at (0,6.82) {输入 \(n=0\)};
+    \node[draw, minimum width=2.20cm, minimum height=0.55cm]
+        (assign) at (0,5.50) {\(A=3^n-2^n\)};
+    \node[draw, diamond, aspect=4.0, minimum width=3.40cm, minimum height=0.85cm]
+        (test) at (0,4.10) {};
+    \node[draw, trapezium, trapezium left angle=70, trapezium right angle=110,
+        minimum width=0.95cm, minimum height=0.60cm]
+        (output) at (0,2.54) {输出 \(n\)};
+    \node[draw, rounded corners=6pt, minimum width=1.00cm, minimum height=0.56cm]
+        (finish) at (0,1.18) {结束};
+
+    % Empty assignment box on the loop branch.
+    \node[draw, minimum width=1.70cm, minimum height=0.58cm]
+        (loopassign) at (-3.25,4.98) {};
+
+    % Downward path and output branch.
+    \draw[->] (start.south) -- (input.north);
+    \draw[->] (input.south) -- (assign.north);
+    \draw[->] (assign.south) -- (test.north);
+    \draw[->] (test.south) -- (output.north)
+        node[pos=0.45, right=2pt] {否};
+    \draw[->] (output.south) -- (finish.north);
+
+    % 是 branch: left tip -> empty assignment -> return to A.
+    \draw (test.west) -- (-3.25,4.10) -- (-3.25,4.62);
+    \draw[->] (-3.25,4.62) -- (loopassign.south);
+    \node[inner sep=0pt] at (-2.10,3.72) {是};
+    \draw (loopassign.north) -- (-3.25,6.10) -- (-0.12,6.10);
+    \draw[->] (-0.12,6.10) -- (0,6.10);
+    \draw[->] (0,6.10) -- (assign.north);
+\end{tikzpicture}

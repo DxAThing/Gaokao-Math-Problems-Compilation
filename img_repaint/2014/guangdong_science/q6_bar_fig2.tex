@@ -1,0 +1,69 @@
+% Source PDF: source/普通高考/2014/2014广东理.pdf
+% Page: 1; PDF embedded bitmap attempt: no image objects were present (vector source).
+% Grid evidence: tmp/repaint_2014_guangdong_science/page1_grid100.jpg and q6_block_grid50.jpg.
+% Original-side crop: tmp/repaint_2014_guangdong_science/q6_bar_original.png, from the no-grid page render.
+% Elements: near-sighted-rate y-axis (percent), grade x-axis with arrow, three unit-width bars,
+% dashed horizontal guides at 10%, 30%, and 50%, and the origin/figure labels.
+% Relations: the bars for 小学, 初中, 高中 have heights 10%, 30%, 50%; each dashed guide
+% ends at the corresponding bar's right boundary. The x-axis categories are ordered by school stage.
+% solid segments: bar outlines, x/y axes, axis arrowheads, and category tick marks.
+% dashed segments: horizontal reference guides from the y-axis to the matching bar boundary.
+% labels: 近视率/% above the y-axis, 年级 to the right of the x-axis, O at the origin, 图2 below.
+\begin{tikzpicture}[baseline]
+\begin{axis}[
+    width=6.0cm,
+    height=3.6cm,
+    axis lines=none,
+    clip=false,
+    xmin=-0.65,
+    xmax=4.55,
+    ymin=-21,
+    ymax=57,
+    ticks=none,
+]
+    % Dashed percentage guides terminate at the matching bar boundary.
+    \draw[dashed,line width=0.55pt] (axis cs:0,10) -- (axis cs:1,10);
+    \draw[dashed,line width=0.55pt] (axis cs:0,30) -- (axis cs:2,30);
+    \draw[dashed,line width=0.55pt] (axis cs:0,50) -- (axis cs:3,50);
+
+    % Three grade bars: primary, junior high, senior high.
+    \addplot[
+        ybar,
+        bar width=0.62,
+        draw=black,
+        fill=white,
+        line width=0.7pt,
+    ] coordinates {
+        (1,10)
+        (2,30)
+        (3,50)
+    };
+
+    % Axes and arrowheads.
+    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:4.05,0);
+    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,55);
+
+    % Axis labels and origin.
+    \node[anchor=south west,inner sep=0pt,font=\small] at (axis cs:0.12,53.5) {近视率/\%};
+    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:4.15,1.2) {年级};
+    \node[anchor=north east,inner sep=0pt,font=\small] at (axis cs:-0.08,-0.5) {O};
+
+    % Category ticks and labels.
+    \draw[line width=0.45pt] (axis cs:1,0) -- (axis cs:1,-1.2);
+    \draw[line width=0.45pt] (axis cs:2,0) -- (axis cs:2,-1.2);
+    \draw[line width=0.45pt] (axis cs:3,0) -- (axis cs:3,-1.2);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:1,-2.0) {小学};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:2,-2.0) {初中};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:3,-2.0) {高中};
+
+    % Percentage ticks and labels.
+    \draw[line width=0.45pt] (axis cs:0,10) -- (axis cs:-0.08,10);
+    \draw[line width=0.45pt] (axis cs:0,30) -- (axis cs:-0.08,30);
+    \draw[line width=0.45pt] (axis cs:0,50) -- (axis cs:-0.08,50);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.12,10) {10};
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.12,30) {30};
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.12,50) {50};
+
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:2,-16.5) {图2};
+\end{axis}
+\end{tikzpicture}

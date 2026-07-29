@@ -1,0 +1,45 @@
+% Source: source/普通高考/2014/2014湖南理.pdf, p.1, question 6.
+% Node→directed-edge list: 开始→输入 t→判定 t<0?；判定(是)→t=2t^2+1→左侧回边→判定前主干；
+% 判定(否)→S=t-3→输出 S→结束。回边与输出支路独立，不共享线段。
+% Solid segments: all node borders and connectors; dashed segments: none.
+\begin{tikzpicture}[
+  x=1cm,
+  y=0.8cm,
+  >=Stealth,
+  line width=0.45pt,
+  every node/.style={
+    font=\normalsize,
+    anchor=center,
+    align=center,
+    execute at begin node={\setlength{\parindent}{0pt}},
+  },
+  flowbox/.style={draw,minimum height=0.62cm,inner xsep=4pt,inner ysep=2pt,align=center},
+  startstop/.style={draw,rounded corners=0.22cm,minimum height=0.62cm,inner xsep=4pt,inner ysep=2pt,align=center},
+  decision/.style={draw,diamond,aspect=2.8,minimum width=3.5cm,minimum height=0.95cm,inner xsep=4pt,inner ysep=2pt,align=center},
+  io/.style={draw,trapezium,trapezium left angle=72,trapezium right angle=108,minimum width=1.75cm,minimum height=0.68cm,inner xsep=4pt,inner ysep=2pt,align=center},
+  flowline/.style={-{Stealth[length=2.1mm,width=1.35mm]},line width=0.45pt}
+]
+  \node[startstop,minimum width=1.25cm] (start) at (0,8.55) {开始};
+  \node[io,minimum width=1.85cm] (input) at (0,7.18) {输入 $t$};
+  \node[decision] (test) at (0,5.82) {$t<0?$};
+  \node[flowbox,minimum width=3.20cm] (update) at (-2.65,4.22)
+    {$t=2t^2+1$};
+  \node[flowbox,minimum width=2.65cm] (assign) at (3.05,4.22)
+    {$S=t-3$};
+  \node[io,minimum width=2.05cm] (output) at (1.25,2.55) {输出 $S$};
+  \node[startstop,minimum width=1.25cm] (finish) at (1.25,1.05) {结束};
+
+  % Main path and the terminating (否) branch.
+  \draw[flowline] (start.south) -- (input.north);
+  \draw[flowline] (input.south) -- (test.north);
+  \draw[flowline] (test.east) -- (3.05,5.82) -- (assign.north)
+    node[pos=0.35,above=1pt] {否};
+  \draw[flowline] (assign.south) -- (3.05,3.40) -- (1.25,3.40) -- (output.north);
+  \draw[flowline] (output.south) -- (finish.north);
+
+  % The affirmative branch updates t and loops back to the central connector.
+  \draw[flowline] (test.west) -- (-2.65,5.82) -- (update.north)
+    node[pos=0.22,above=1pt] {是};
+  \draw (update.west) -- (-4.95,4.22) -- (-4.95,6.55) -- (-1.55,6.55);
+  \draw[flowline] (-1.55,6.55) -- (0,6.55);
+\end{tikzpicture}

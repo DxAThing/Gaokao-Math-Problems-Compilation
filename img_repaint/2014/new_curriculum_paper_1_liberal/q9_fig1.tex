@@ -1,0 +1,64 @@
+% original_pdf: source/普通高考/2014/2014新课标1文(河南,河北,山西).pdf
+% page: 1 (question 9)
+% embedded_bitmap_attempt: pdfimages -list returned no embedded images; redraw from rendered page
+% evidence: tmp/review_2014_new_curriculum_paper_1_liberal/grid/page1_grid100.png;
+% original crop: tmp/review_2014_new_curriculum_paper_1_liberal/crop/q9_original_final.png
+% Elements: rounded 开始/结束 terminals; input parallelogram 输入 a,b,k; process rectangles
+% n=1, M=a+1/b, a=b, b=M, n=n+1; decision diamond n<=k?; output parallelogram 输出 M.
+% Node-edge list: 开始→输入(a,b,k)→n=1→n<=k?;
+% n<=k? 是→M=a+1/b→a=b→b=M→n=n+1→right/up loop→connector before n<=k?;
+% n<=k? 否→left/down branch→输出 M→结束. No other edges are present.
+% This is a schematic program flowchart; coordinates preserve topology, not measured scale.
+% solid segments: all node outlines and directed connectors; dashed segments: none.
+% labels: all node text has local zero paragraph indent and is centered; 是/否 labels
+% sit beside their branches and clear of arrow shafts, diamond borders, and boxes.
+\usetikzlibrary{shapes.geometric,shapes.misc}
+\begin{tikzpicture}[
+    baseline,
+    >=Stealth,
+    line width=0.55pt,
+    line cap=round,
+    line join=round,
+    font=\normalsize,
+    flowbox/.style={draw, anchor=center, minimum height=0.68cm,
+        inner xsep=4pt, inner ysep=2pt, align=center,
+        execute at begin node={\setlength{\parindent}{0pt}}},
+    terminal/.style={flowbox, rounded rectangle, minimum width=1.30cm},
+    io/.style={flowbox, trapezium, trapezium left angle=72, trapezium right angle=108},
+    decision/.style={flowbox, diamond, aspect=2.9, inner sep=0pt},
+]
+    % Main flow.
+    \node[terminal] (start) at (0,0) {开始};
+    \node[io, minimum width=3.10cm] (input) at (0,-1.15) {输入 $a,b,k$};
+    \node[flowbox, minimum width=1.45cm] (init) at (0,-2.28) {$n=1$};
+    \node[decision, minimum width=3.45cm, minimum height=0.90cm] (test) at (0,-3.72)
+        {$n\leqslant k$};
+    \node[flowbox, minimum width=3.00cm, minimum height=1.05cm] (calc) at (0,-5.18)
+        {$M=a+\dfrac{1}{b}$};
+    \node[flowbox, minimum width=1.65cm] (swap) at (0,-6.45) {$a=b$};
+    \node[flowbox, minimum width=1.78cm] (assign) at (0,-7.62) {$b=M$};
+    \node[flowbox, minimum width=2.20cm] (increment) at (0,-8.90) {$n=n+1$};
+    \node[io, minimum width=2.20cm] (output) at (-3.35,-6.45) {输出 $M$};
+    \node[terminal] (finish) at (-3.35,-7.72) {结束};
+
+    \draw[->] (start.south) -- (input.north);
+    \draw[->] (input.south) -- (init.north);
+    \draw[->] (init.south) -- (test.north);
+    \draw[->] (test.south) -- node[right=2pt] {是} (calc.north);
+    \draw[->] (calc.south) -- (swap.north);
+    \draw[->] (swap.south) -- (assign.north);
+    \draw[->] (assign.south) -- (increment.north);
+    \draw[->] (output.south) -- (finish.north);
+
+    % 否 branch exits left from the decision and reaches 输出 M.
+    \coordinate (no-left) at (-3.35,-3.72);
+    \coordinate (no-drop) at (-3.35,-6.45);
+    \draw[->] (test.west) -- (no-left) -- (no-drop) -- (output.north);
+    \node[anchor=south east, inner sep=1pt] at (-1.95,-3.42) {否};
+
+    % The update loop rises on the right and returns to the trunk before n<=k?.
+    \coordinate (loop-right) at (2.70,-8.90);
+    \coordinate (loop-top) at (2.70,-2.72);
+    \coordinate (loop-merge) at (0,-2.72);
+    \draw[->] (increment.east) -- (loop-right) -- (loop-top) -- (loop-merge);
+\end{tikzpicture}

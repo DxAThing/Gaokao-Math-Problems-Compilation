@@ -1,0 +1,46 @@
+% original_pdf: source/普通高考/2015/2015山东理.pdf, page 1.
+% embedded bitmap attempt: no image objects; the flowchart is vector line art.
+% evidence: tmp/redraw_flowchart_2015_shandong_science/source300/page1_grid100.jpg;
+% q13_original_grid50.jpg; comparison source is q13_original.png from the no-grid page render.
+% elements: rounded start/end terminals; initialization, accumulation and increment
+% process rectangles; n<3 decision diamond; output parallelogram; branch labels 是/否;
+% loop-back connector.
+% node -> directed edge list: 开始->(n=1,T=1), (n=1,T=1)->(n<3),
+% (n<3)-是->(T=T+integral), (T=T+integral)->(n=n+1),
+% (n=n+1)->(n<3), (n<3)-否->输出T, 输出T->结束.
+% solid segments: all outlines and directed connectors; dashed segments: none.
+% labels are centered in framed nodes; 是 is below the decision and 否 is on its
+% upper-right branch; the loop-back arrow is independent of the output branch.
+\begin{tikzpicture}[x=1cm,y=1cm,>=stealth,line width=0.55pt,
+  line cap=round,line join=round,
+  every node/.append style={anchor=center,align=center,
+    execute at begin node=\setlength{\parindent}{0pt}}]
+  \node[draw,rounded corners=0.16cm,minimum width=1.28cm,minimum height=0.64cm,
+    inner sep=0pt] (start) at (0,8.20) {开始};
+  \node[draw,minimum width=2.66cm,minimum height=0.70cm,inner sep=0pt]
+    (init) at (0,6.82) {$n=1,T=1$};
+  \node[draw,diamond,aspect=2.7,minimum width=2.58cm,minimum height=0.82cm,
+    inner sep=0pt] (test) at (0,5.30) {$n<3$};
+  \node[draw,minimum width=3.70cm,minimum height=1.10cm,inner sep=0pt]
+    (accumulate) at (0,3.70) {$T=T+\displaystyle\int_0^1 x^n\,dx$};
+  \node[draw,minimum width=2.00cm,minimum height=0.70cm,inner sep=0pt]
+    (increment) at (0,2.12) {$n=n+1$};
+  \node[draw,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
+    minimum width=1.90cm,minimum height=0.70cm,inner sep=0pt]
+    (output) at (3.45,4.28) {输出 $T$};
+  \node[draw,rounded corners=0.16cm,minimum width=1.28cm,minimum height=0.64cm,
+    inner sep=0pt] (finish) at (3.45,2.92) {结束};
+
+  \draw[->] (start.south) -- (init.north);
+  \draw[->] (init.south) -- (test.north);
+  \draw[->] (test.south) -- (accumulate.north);
+  \draw[->] (accumulate.south) -- (increment.north);
+  \draw[->] (increment.south) -- (-2.85,1.72) -- (-2.85,5.92) -- (0,5.92);
+  % Stop the arrowhead just above the output border, then use an unarrowed
+  % short connector into the trapezium so the visible direction is downward.
+  \draw[->] (test.east) -- (3.45,5.30) -- (3.45,4.68);
+  \draw (3.45,4.68) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+  \node[inner sep=0pt] at (0.25,4.70) {是};
+  \node[inner sep=0pt] at (1.52,5.67) {否};
+\end{tikzpicture}

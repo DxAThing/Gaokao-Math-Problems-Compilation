@@ -1,0 +1,61 @@
+% Source: source/普通高考/2011/2011山东文.pdf, page 1, question 14.
+% pdfimages -list returned no embedded images; redraw from the rendered vector chart.
+% Evidence: tmp/review_2011_shandong_liberal/grid/page1_grid100.jpg,
+%   tmp/review_2011_shandong_liberal/grid/page1_grid50.jpg,
+%   tmp/review_2011_shandong_liberal/crops/q14_full.png (no-grid crop).
+% Elements: rounded terminals 开始/结束; input parallelogram 输入非负整数 l,m,n;
+% decision l^2+m^2+n^2=0; process y=105; process y=70l+21m+15n;
+% decision y>105; process y=y-105; output parallelogram 输出 y.
+% Complete node -> directed-edge list:
+% 开始 -> 输入非负整数 l,m,n -> l^2+m^2+n^2=0;
+% 是 -> y=105 -> 输出 y -> 结束;
+% 否 -> y=70l+21m+15n -> y>105;
+% y>105 是 -> y=y-105 -> loop-back arrow entering the y=70l+21m+15n→y>105 line;
+% y>105 否 -> 输出 y -> 结束. All connectors and borders are solid; no dashed edges.
+% Node text is centered with local zero paragraph indentation and compact padding.
+
+\begin{tikzpicture}[
+  baseline,
+  >=Stealth,
+  x=1cm,
+  y=1cm,
+  line width=0.5pt,
+  line cap=round,
+  line join=round,
+  font=\normalsize,
+  every node/.style={anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flowbox/.style={draw,minimum height=0.72cm,inner xsep=3pt,inner ysep=2pt,
+    align=center,execute at begin node={\setlength{\parindent}{0pt}}},
+  terminal/.style={flowbox,rounded corners=0.20cm,minimum width=1.10cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
+    trapezium right angle=108,minimum height=0.82cm},
+  decision/.style={flowbox,shape=diamond,aspect=2.5,inner sep=1pt,
+    minimum height=1.10cm},
+  branchlabel/.style={anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}}
+]
+  \node[terminal] (start) at (0,11.1) {开始};
+  \node[io,minimum width=3.80cm] (input) at (0,9.75) {输入非负整数 $l,m,n$};
+  \node[decision,minimum width=4.30cm] (zero) at (0,8.15) {$l^2+m^2+n^2=0$};
+  \node[flowbox,minimum width=1.80cm] (const) at (-3.55,6.45) {$y=105$};
+  \node[flowbox,minimum width=3.70cm] (calc) at (0,6.45) {$y=70l+21m+15n$};
+  \node[decision,minimum width=3.00cm] (test) at (0,4.55) {$y>105$};
+  \node[flowbox,minimum width=2.70cm] (subtract) at (3.85,4.55) {$y=y-105$};
+  \node[io,minimum width=1.70cm] (output) at (0,2.65) {输出 $y$};
+  \node[terminal] (finish) at (0,1.28) {结束};
+
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (zero.north);
+  \draw[->] (zero.west) -- node[branchlabel,above=2pt] {是} (-3.55,8.15)
+    -- (const.north);
+  \draw[->] (zero.south) -- node[branchlabel,right=2pt] {否} (calc.north);
+  \draw[->] (const.south) -- (-3.55,3.35) -- (0,3.35);
+  \draw[->] (calc.south) -- (test.north);
+  \draw[->] (test.east) -- node[branchlabel,above=2pt] {是} (subtract.west);
+  \draw[->] (subtract.north) -- (3.85,5.85) -- (0,5.85);
+  \draw[->] (test.south) -- node[branchlabel,right=2pt] {否} (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  \path[use as bounding box] (-4.65,0.90) rectangle (5.55,11.55);
+\end{tikzpicture}

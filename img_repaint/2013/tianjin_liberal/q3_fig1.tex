@@ -1,0 +1,48 @@
+% Source PDF: source/普通高考/2013/2013天津文.pdf, page 1, question 3.
+% pdfimages -list found no embedded bitmap; the program flowchart is vector line art.
+% Grid evidence: tmp/review_2013_tianjin_liberal/grid/page_grid100.png,
+%   tmp/review_2013_tianjin_liberal/grid/page_grid50.png.
+% No-grid source crop: tmp/review_2013_tianjin_liberal/crop/q3_orig_wide.png.
+% Elements: rounded start/end terminals; n=1,S=0 and S=S+(-1)^n*n
+% process rectangles; n=n+1 rectangle; S>=2? decision diamond; output parallelogram;
+% 是/否 labels; and the right-hand increment loop.
+% Relations: start -> n=1,S=0 -> S=S+(-1)^n*n -> S>=2?; 是 -> 输出 n -> 结束;
+% 否 -> n=n+1 -> S=S+(-1)^n*n. The initialization stem and loop return meet
+% above the update node; the loop's horizontal arrow points left, while the
+% decision's no branch enters n=n+1 from below. No dashed segments or shared
+% output-loop connections.
+\begin{tikzpicture}[
+  x=1cm,y=1cm,baseline,
+  flowarrow/.style={-{Latex[length=2.1mm,width=1.5mm]},line width=0.45pt},
+  nodebox/.style={draw,line width=0.45pt,inner sep=2pt,minimum height=0.66cm,
+    anchor=center,align=center,execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  branchlabel/.style={anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  term/.style={nodebox,rounded corners=2.5pt,minimum width=1.30cm,text width=1.30cm},
+  io/.style={nodebox,shape=trapezium,trapezium left angle=70,trapezium right angle=110,
+    minimum width=1.80cm,text width=1.50cm,minimum height=0.72cm},
+  decision/.style={nodebox,diamond,aspect=2.7,minimum width=3.60cm,minimum height=1.02cm,inner sep=1pt}
+]
+  \node[term] (start) at (0,10.55) {开始};
+  \node[nodebox,text width=2.75cm,minimum width=2.75cm] (init) at (0,9.15) {$n=1,S=0$};
+  \node[nodebox,text width=4.05cm,minimum width=4.05cm] (update) at (0,7.55)
+    {$S=S+(-1)^n\cdot n$};
+  \node[decision] (test) at (0,5.75) {$S\geq 2?$};
+  \node[io] (output) at (0,4.05) {输出 $n$};
+  \node[term] (finish) at (0,2.45) {结束};
+  \node[nodebox,text width=2.25cm,minimum width=2.25cm] (increment) at (3.70,6.95) {$n=n+1$};
+
+  % Main path; the initialization stem joins the loop junction without an extra arrowhead.
+  \draw[flowarrow] (start.south) -- (init.north);
+  \draw (init.south) -- (0,8.25);
+  \draw[flowarrow] (0,8.25) -- (update.north);
+  \draw[flowarrow] (update.south) -- (test.north);
+  \draw[flowarrow] (test.south) -- node[right] {是} (output.north);
+  \draw[flowarrow] (output.south) -- (finish.north);
+
+  % 否 branch enters n=n+1 from below, then returns to the update node.
+  \draw[flowarrow] (test.east) -- node[above] {否} (3.70,5.75) -- (increment.south);
+  \draw (increment.north) -- (3.70,8.25);
+  \draw[flowarrow] (3.70,8.25) -- (0,8.25);
+
+\end{tikzpicture}

@@ -1,0 +1,72 @@
+% Source PDF: source/普通高考/2005/2005江西文.pdf
+% Page: 1; PDF embedded bitmap attempt: pdfimages -list found no embedded images.
+% Grid evidence: tmp/redraw_2005_jiangxi/page1_grid100.png and tmp/redraw_2005_jiangxi/q12_block_grid50.png; no-grid source crop: tmp/redraw_2005_jiangxi/q12_orig_crop3.png
+% Elements: frequency/group-width y-axis, eyesight x-axis with origin break, nine adjacent bins, two reference guides (0.1 and 0.3), axis arrows, tick labels.
+% Relations: bin width is 0.1; visible density values are 0.1, 0.3, 0.9, 2.7, 2.2, 1.7, 1.2, 0.7, 0.2; first four form a geometric sequence and the final five form an arithmetic sequence as drawn.
+% solid segments: bar outlines, x-axis, y-axis, arrowheads, x-axis break, tick marks.
+% dashed segments: horizontal reference guides at 0.1 and 0.3.
+% labels: two-line y-axis label above-left; x-axis labels below ticks; eyesight label right of the arrow; labels stay clear of bars and axes.
+\begin{tikzpicture}[baseline]
+\begin{axis}[
+    width=11.0cm,
+    height=5.8cm,
+    axis lines=none,
+    clip=false,
+    xmin=4.15,
+    xmax=5.34,
+    ymin=-0.13,
+    ymax=2.95,
+    ticks=none,
+]
+    % Reference guides and histogram data read from the original PDF chart.
+    \draw[dashed,line width=0.6pt] (axis cs:4.18,0.1) -- (axis cs:4.50,0.1);
+    \draw[dashed,line width=0.6pt] (axis cs:4.18,0.3) -- (axis cs:4.50,0.3);
+    \addplot[
+        ybar interval,
+        draw=black,
+        fill=white,
+        line width=0.65pt,
+    ] coordinates {
+        (4.3,0.1)
+        (4.4,0.3)
+        (4.5,0.9)
+        (4.6,2.7)
+        (4.7,2.2)
+        (4.8,1.7)
+        (4.9,1.2)
+        (5.0,0.7)
+        (5.1,0.2)
+        (5.2,0.0)
+    };
+
+    \draw[->,line width=0.75pt] (axis cs:4.18,0) -- (axis cs:5.31,0);
+    \draw[->,line width=0.75pt] (axis cs:4.18,0) -- (axis cs:4.18,2.83);
+    \draw[line width=0.75pt] (axis cs:4.18,-0.055) -- (axis cs:4.205,-0.015) -- (axis cs:4.23,-0.055) -- (axis cs:4.255,-0.015) -- (axis cs:4.28,-0.055);
+
+    \draw[line width=0.45pt] (axis cs:4.3,0) -- (axis cs:4.3,-0.035);
+    \draw[line width=0.45pt] (axis cs:4.4,0) -- (axis cs:4.4,-0.035);
+    \draw[line width=0.45pt] (axis cs:4.5,0) -- (axis cs:4.5,-0.035);
+    \draw[line width=0.45pt] (axis cs:4.6,0) -- (axis cs:4.6,-0.035);
+    \draw[line width=0.45pt] (axis cs:4.7,0) -- (axis cs:4.7,-0.035);
+    \draw[line width=0.45pt] (axis cs:4.8,0) -- (axis cs:4.8,-0.035);
+    \draw[line width=0.45pt] (axis cs:4.9,0) -- (axis cs:4.9,-0.035);
+    \draw[line width=0.45pt] (axis cs:5.0,0) -- (axis cs:5.0,-0.035);
+    \draw[line width=0.45pt] (axis cs:5.1,0) -- (axis cs:5.1,-0.035);
+    \draw[line width=0.45pt] (axis cs:5.2,0) -- (axis cs:5.2,-0.035);
+    \node[anchor=north,inner sep=0pt] at (axis cs:4.18,-0.065) {0};
+    \node[anchor=north,inner sep=0pt] at (axis cs:4.3,-0.065) {4.3};
+    \node[anchor=north,inner sep=0pt] at (axis cs:4.4,-0.065) {4.4};
+    \node[anchor=north,inner sep=0pt] at (axis cs:4.5,-0.065) {4.5};
+    \node[anchor=north,inner sep=0pt] at (axis cs:4.6,-0.065) {4.6};
+    \node[anchor=north,inner sep=0pt] at (axis cs:4.7,-0.065) {4.7};
+    \node[anchor=north,inner sep=0pt] at (axis cs:4.8,-0.065) {4.8};
+    \node[anchor=north,inner sep=0pt] at (axis cs:4.9,-0.065) {4.9};
+    \node[anchor=north,inner sep=0pt] at (axis cs:5.0,-0.065) {5.0};
+    \node[anchor=north,inner sep=0pt] at (axis cs:5.1,-0.065) {5.1};
+    \node[anchor=north,inner sep=0pt] at (axis cs:5.2,-0.065) {5.2};
+    \frequencyylabel[-4pt]{4.18}{0.1}{0.1}
+    \frequencyylabel[-4pt]{4.18}{0.3}{0.3}
+    \node[anchor=south west,inner sep=0pt] at (axis cs:4.20,2.84) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=west,inner sep=0pt] at (axis cs:5.27,0.08) {视力};
+\end{axis}
+\end{tikzpicture}

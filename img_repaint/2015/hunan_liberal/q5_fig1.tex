@@ -1,0 +1,56 @@
+% Source PDF: source/普通高考/2015/2015湖南文.pdf, page 1, question 5.
+% PDF embedded-bitmap attempt: pdfimages found no image objects; the flowchart is vector line art.
+% Node-edge checklist from the source: 开始→输入 n→i=1,S=0→累加框→i=i+1→i>n?;
+% 否→right-side return path→累加框; 是→输出 S→结束.  All outlines/connectors are solid.
+% The return arrow joins the main incoming trunk before one separate downward arrow enters
+% the decision-free accumulation box; branch labels sit beside their outgoing connectors.
+
+\begin{tikzpicture}[
+  x=1cm,y=1cm,>=Stealth,
+  line width=0.45pt,line cap=round,line join=round,
+  every node/.style={font=\normalsize,align=center,anchor=center,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flowbox/.style={draw,align=center,anchor=center,
+    inner xsep=4pt,inner ysep=2.5pt},
+  terminal/.style={flowbox,rounded corners=3pt,minimum width=1.25cm,minimum height=0.72cm},
+  process/.style={flowbox,minimum height=0.72cm},
+  io/.style={flowbox,trapezium,trapezium left angle=72,trapezium right angle=108,
+    minimum height=0.78cm},
+  decision/.style={flowbox,diamond,aspect=2.8,minimum width=3.10cm,minimum height=0.95cm},
+  branchlabel/.style={anchor=center,align=center,inner xsep=1pt,inner ysep=1pt,
+    execute at begin node={\setlength{\parindent}{0pt}}}
+]
+  \node[terminal] (start) at (0,10.0) {开始};
+  \node[io,minimum width=2.25cm] (input) at (0,8.75) {输入 $n$};
+  \node[process,minimum width=3.05cm] (init) at (0,7.55) {$i=1, S=0$};
+  \node[process,minimum width=5.15cm,minimum height=1.25cm] (calc) at (0,5.85)
+    {$\displaystyle S=S+\frac{1}{(2i-1)(2i+1)}$};
+  \node[process,minimum width=2.15cm] (inc) at (0,4.20) {$i=i+1$};
+  \node[decision] (test) at (0,2.70) {$i>n?$};
+  \node[io,minimum width=2.05cm] (output) at (0,1.35) {输出 $S$};
+  \node[terminal] (finish) at (0,0.20) {结束};
+
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (init.north);
+
+  % The return path first points left into the main trunk; the separate trunk
+  % arrow then enters the accumulation box with one downward arrowhead.
+  \coordinate (merge-level) at (0,6.88);
+  \coordinate (merge-pre) at (0.20,6.88);
+  \draw (init.south) -- (merge-level);
+  \draw[->] (merge-level) -- (calc.north);
+  \draw[->] (calc.south) -- (inc.north);
+  \draw[->] (inc.south) -- (test.north);
+
+  % 否 branch: route right, up, then left back to the main incoming trunk.
+  \draw[->] (test.east) -- (3.25,2.70) -- (3.25,6.88) -- (merge-pre);
+  \draw (merge-pre) -- (merge-level);
+  \node[branchlabel,above right=1pt and 3pt of test.east] {否};
+
+  % 是 branch: output and termination stay independent of the return path.
+  \draw[->] (test.south) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+  \node[branchlabel,right=3pt of test.south] {是};
+
+  \path[use as bounding box] (-3.55,-0.25) rectangle (3.75,10.45);
+\end{tikzpicture}

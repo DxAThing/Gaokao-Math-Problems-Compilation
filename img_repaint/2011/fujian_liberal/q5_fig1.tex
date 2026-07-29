@@ -1,0 +1,49 @@
+% Source PDF: source/普通高考/2011/2011福建文.pdf, page 1, question 5.
+% pdfimages -list reports no embedded bitmap; the flowchart is vector/text artwork.
+% Grid evidence: tmp/review_flowchart_2011_fujian_liberal/grid/page-1-grid100.png
+% (100px coarse + 50px fine) and q5-block-grid50.png (50px coarse + 25px fine).
+% Comparison crop: tmp/review_flowchart_2011_fujian_liberal/crop/q5_original_final.png,
+% taken from the ungridded page render with a safety border.
+% Nodes: 开始; a=1; a<10?; a=a^2+2; 输出a; 结束.
+% Directed edges: 开始→a=1→判定; 判定(是)→a=a^2+2→共享入口→判定;
+% 判定(否)→输出a→结束. The update branch and output branch are independent.
+
+\begin{tikzpicture}[
+  x=1cm,y=1cm,baseline,
+  flowarrow/.style={-{Latex[length=2.1mm,width=1.5mm]},line width=.45pt},
+  nodebox/.style={draw,line width=.45pt,inner sep=2pt,minimum height=.68cm,
+    anchor=center,align=center,execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  branchlabel/.style={anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  term/.style={nodebox,rounded corners=2.5pt,minimum width=1.30cm,text width=1.30cm},
+  io/.style={nodebox,shape=trapezium,trapezium left angle=70,trapezium right angle=110,
+    minimum width=2.30cm,text width=1.90cm,minimum height=.72cm},
+  decision/.style={nodebox,diamond,aspect=2.7,minimum width=3.65cm,minimum height=1.02cm,inner sep=1pt}
+]
+  \node[term] (start) at (0,9.50) {开始};
+  \node[nodebox,text width=1.55cm,minimum width=1.55cm] (init) at (0,8.05) {$a=1$};
+  \node[decision] (test) at (0,5.75) {$a<10?$};
+  \node[nodebox,text width=2.75cm,minimum width=2.75cm] (update) at (3.05,6.95)
+    {$a=a^2+2$};
+  \node[io] (output) at (0,3.80) {输出 $a$};
+  \node[term] (finish) at (0,2.25) {结束};
+
+  \coordinate (loopjoin) at (0,6.95);
+  \coordinate (branchright) at (3.05,5.75);
+  \coordinate (updatebottom) at (3.05,6.59);
+
+  % Main stem and the single downward arrow into the decision.
+  \draw[flowarrow] (start.south) -- (init.north);
+  \draw (init.south) -- (loopjoin);
+  \draw[flowarrow] (loopjoin) -- (test.north);
+
+  % Yes branch enters the update node from below, then returns left into the stem.
+  \draw[flowarrow] (test.east) -- (branchright) -- node[right=3pt,pos=.55] {是} (updatebottom) -- (update.south);
+  \draw[flowarrow] (update.west) -- (loopjoin);
+
+  % No branch exits downward to output and termination.
+  \draw[flowarrow] (test.south) -- node[right=3pt,pos=.45] {否} (output.north);
+  \draw[flowarrow] (output.south) -- (finish.north);
+
+  \path[use as bounding box] (-2.05,1.85) rectangle (4.55,9.90);
+\end{tikzpicture}

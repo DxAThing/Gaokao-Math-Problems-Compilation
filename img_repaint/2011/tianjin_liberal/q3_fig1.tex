@@ -1,0 +1,61 @@
+% Source: source/普通高考/2011/2011天津文.pdf, page 1, question 3.
+% pdfimages -list reports no embedded bitmap; the program flowchart is vector/text artwork.
+% Grid evidence: tmp/review_2011_tianjin_liberal/grid/page_grid100.png,
+%   tmp/review_2011_tianjin_liberal/grid/page_grid50.png.
+% No-grid source crop: tmp/review_2011_tianjin_liberal/crop/q3_orig_fig_final.png.
+% Nodes: 开始; 输入 x; |x|>3?; x=|x−3|; y=2^x; 输出 y; 结束.
+% Directed edges: 开始→输入→判定; 判定(是)→绝对值更新→左回环→判定;
+% 判定(否)→y=2^x→输出 y→结束. The loop return and output branch are independent.
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=0.55pt,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\normalsize,anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  flowbox/.style={draw,minimum height=.68cm,inner xsep=4pt,inner ysep=2pt,
+    anchor=center,align=center},
+  terminal/.style={flowbox,rounded corners=.18cm,minimum width=1.35cm,
+    minimum height=.72cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
+    trapezium right angle=108,minimum height=.78cm},
+  decision/.style={flowbox,shape=diamond,aspect=2.80,inner sep=2pt},
+  branchlabel/.style={anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flowarrow/.style={->,line width=0.55pt},
+]
+  \node[terminal] (start) at (0,9.30) {开始};
+  \node[io,minimum width=2.35cm] (input) at (0,8.00) {输入 $x$};
+  \coordinate (loopjoin) at (0,7.12);
+  \node[decision,minimum width=3.55cm,minimum height=1.00cm] (test) at (0,6.28)
+    {$|x|>3?$};
+  \node[flowbox,minimum width=3.25cm] (absupdate) at (0,4.78)
+    {$x=|x-3|$};
+  \node[flowbox,minimum width=2.30cm] (power) at (0,3.10)
+    {$y=2^x$};
+  \node[io,minimum width=2.05cm] (output) at (0,1.78) {输出 $y$};
+  \node[terminal] (finish) at (0,0.48) {结束};
+
+  \draw[flowarrow] (start.south) -- (input.north);
+  \draw (input.south) -- (loopjoin);
+  \draw[flowarrow] (loopjoin) -- (test.north);
+  \draw[flowarrow] (test.south) -- node[branchlabel,right=2pt] {是} (absupdate.north);
+  % Affirmative branch loops left into the shared stem above the decision.
+  \coordinate (loop-bottom) at (0,4.05);
+  \coordinate (loop-left) at (-2.45,4.05);
+  \coordinate (loop-left-top) at (-2.45,7.12);
+  \draw (absupdate.south) -- (loop-bottom) -- (loop-left) -- (loop-left-top);
+  \draw[flowarrow] (loop-left-top) -- (loopjoin);
+
+  % Negative branch bypasses the loop and enters the power update.
+  \coordinate (right-branch) at (3.15,6.28);
+  \coordinate (right-bottom) at (3.15,3.90);
+  \coordinate (power-entry) at (0,3.90);
+  \draw (test.east) -- node[branchlabel,above=2pt] {否} (right-branch) -- (right-bottom);
+  \draw (right-bottom) -- (power-entry);
+  \draw[flowarrow] (power-entry) -- (power.north);
+  \draw[flowarrow] (power.south) -- (output.north);
+  \draw[flowarrow] (output.south) -- (finish.north);
+
+  \path[use as bounding box] (-2.85,0.15) rectangle (4.20,9.65);
+\end{tikzpicture}

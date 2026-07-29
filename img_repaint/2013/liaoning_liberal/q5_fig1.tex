@@ -1,0 +1,67 @@
+% original_pdf: source/普通高考/2013/2013辽宁文.pdf
+% page: 1
+% embedded_bitmap_attempt: pdfimages -list returned no embedded images; redraw from rendered page
+% evidence: tmp/repaint_2013_liaoning_liberal/original/page1_grid100.jpg (100px grid); tmp/repaint_2013_liaoning_liberal/crops/q5_broad_grid50.jpg (50px major, 25px fine grid); original comparison crop: tmp/repaint_2013_liaoning_liberal/crops/q5_original.png
+% elements: frequency-density histogram, x/y axes with arrowheads, four outlined bins, horizontal dashed reference lines, tick marks and labels
+% relations/data: score bins [0,20), [20,40), [40,60), [60,80), [80,100]; heights 0, 0.005, 0.010, 0.020, 0.015; y guides at 0.005, 0.010, 0.015, 0.020
+% solid segments: bar outlines, axes, tick marks; dashed segments: horizontal guides at the four marked densities
+% labels: 频率/组距 above the y-axis, 成绩/分 to the right of the x-axis, origin 0 and numeric ticks positioned outside the axes
+\begin{tikzpicture}[baseline]
+\begin{axis}[
+    width=7.2cm,
+    height=4.15cm,
+    axis lines=none,
+    clip=false,
+    xmin=-22,
+    xmax=130,
+    ymin=-0.004,
+    ymax=0.0245,
+    ticks=none,
+]
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.005) -- (axis cs:100,0.005);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.010) -- (axis cs:100,0.010);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.015) -- (axis cs:100,0.015);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.020) -- (axis cs:100,0.020);
+
+    \addplot[
+        ybar interval,
+        draw=black,
+        fill=white,
+        line width=0.65pt,
+    ] coordinates {
+        (0,0.000)
+        (20,0.005)
+        (40,0.010)
+        (60,0.020)
+        (80,0.015)
+        (100,0.000)
+    };
+
+    \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:114,0);
+    \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:0,0.023);
+
+    \node[anchor=south west,inner sep=0pt,font=\scriptsize] at (axis cs:4,0.0212) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=west,inner sep=0pt,font=\scriptsize] at (axis cs:118,-0.0008) {成绩/分};
+    \node[anchor=north east,inner sep=0pt,font=\scriptsize] at (axis cs:0,0) {0};
+
+    \draw[line width=0.45pt] (axis cs:20,0) -- (axis cs:20,-0.00065);
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:20,-0.0008) {20};
+    \draw[line width=0.45pt] (axis cs:40,0) -- (axis cs:40,-0.00065);
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:40,-0.0008) {40};
+    \draw[line width=0.45pt] (axis cs:60,0) -- (axis cs:60,-0.00065);
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:60,-0.0008) {60};
+    \draw[line width=0.45pt] (axis cs:80,0) -- (axis cs:80,-0.00065);
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:80,-0.0008) {80};
+    \draw[line width=0.45pt] (axis cs:100,0) -- (axis cs:100,-0.00065);
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:100,-0.0008) {100};
+
+    \draw[line width=0.45pt] (axis cs:0,0.005) -- (axis cs:-1.8,0.005);
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-2.4,0.005) {0.005};
+    \draw[line width=0.45pt] (axis cs:0,0.010) -- (axis cs:-1.8,0.010);
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-2.4,0.010) {0.010};
+    \draw[line width=0.45pt] (axis cs:0,0.015) -- (axis cs:-1.8,0.015);
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-2.4,0.015) {0.015};
+    \draw[line width=0.45pt] (axis cs:0,0.020) -- (axis cs:-1.8,0.020);
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-2.4,0.020) {0.020};
+\end{axis}
+\end{tikzpicture}

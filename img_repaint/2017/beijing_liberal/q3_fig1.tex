@@ -1,0 +1,40 @@
+% original_pdf: source/普通高考/2017/2017北京文.pdf, page 1
+% Flowchart data and labels are transcribed from the question figure and its solution.
+% solid segments: all process/decision boundaries and directed connectors;
+% dashed segments: none. Labels stay inside their nodes or beside branch connectors.
+\begin{tikzpicture}[
+    >=Stealth,
+    x=1cm,y=1cm,
+    line width=0.55pt,
+    every node/.style={font=\normalsize,anchor=center,align=center,
+        execute at begin node={\setlength{\parindent}{0pt}}},
+    flowbox/.style={draw,minimum height=0.72cm,inner xsep=4pt,inner ysep=2pt,align=center},
+    terminator/.style={draw,rounded corners=0.22cm,minimum width=1.35cm,
+        minimum height=0.72cm,inner xsep=4pt,inner ysep=2pt,align=center},
+    decision/.style={draw,diamond,aspect=2.9,inner xsep=4pt,inner ysep=2pt,align=center},
+    io/.style={draw,trapezium,trapezium left angle=82,trapezium right angle=82,
+        minimum width=2.55cm,minimum height=0.72cm,inner xsep=4pt,inner ysep=2pt,align=center},
+]
+% Main vertical path: start -> initialization -> test; the false branch is test -> output -> end.
+    \node[terminator] (start) at (0,10.6) {开始};
+    \node[flowbox,minimum width=3.3cm] (init) at (0,9.2) {$k=0,s=1$};
+    \node[decision,minimum width=4.1cm,minimum height=1.28cm] (test) at (0,4.25) {$k<3?$};
+    \node[io] (output) at (0,2.1) {输出 $s$};
+    \node[terminator] (end) at (0,0.45) {结束};
+
+    \draw[->] (start) -- (init);
+    \draw[->] (init) -- (test.north);
+    \draw[->] (test.south) -- node[right=1.5pt] {否} (output.north);
+    \draw[->] (output.south) -- (end.north);
+
+    % True branch: increment k, update s, then return to the test path.
+    \node[flowbox,minimum width=2.8cm] (update) at (3.95,6.15) {$k=k+1$};
+    \node[flowbox,minimum width=2.8cm,minimum height=1.12cm] (recur) at (3.95,7.95)
+        {$s=\dfrac{s+1}{s}$};
+    \draw (test.east) -- (3.95,4.25);
+    \draw[->] (3.95,4.25) -- (update.south);
+    \draw[->] (update.north) -- (recur.south);
+    \draw[->] (recur.west) -- (0,7.95);
+
+    \node[anchor=south west,inner sep=1pt] at (1.53,4.35) {是};
+\end{tikzpicture}

@@ -1,0 +1,76 @@
+% original_pdf: source/普通高考/2009/2009广东理.pdf
+% page: 1; pdfimages -list found no embedded image objects (the histogram is vector line art)
+% grid evidence: tmp/redraw_2009_gd/page300_grid100.png and tmp/redraw_2009_gd/q17_graph_zoom.png
+% original-side comparison crop: tmp/redraw_2009_gd/q17_orig_full.png, cropped from the no-grid page render
+% elements: frequency-density y-axis with arrow, API x-axis with arrow, six outlined bars,
+%           dashed guides at x, 2/365, 7/1825, 3/1825, and 8/9125, with ticks 0--300 by 50
+% relations: bins [0,50), [50,100), [100,150), [150,200), [200,250), [250,300)
+%            have heights 3/1825, x, 2/365, 7/1825, 3/1825, and 8/9125 respectively;
+%            total frequency gives x=119/18250 from 50*(x+123/9125)=1
+% solid segments: bar outlines and x/y axes; numeric x labels have no downward tick lines.
+% dashed segments: horizontal guides at x, 2/365, 7/1825, 3/1825, and 8/9125
+% labels: 频率/组距 above-left of y-axis, API right of final tick, fractional levels left of y-axis
+\pgfmathsetmacro{\xheight}{0.0065205479}
+\pgfmathsetmacro{\hthree}{0.0016438356}
+\pgfmathsetmacro{\htwo}{0.0054794521}
+\pgfmathsetmacro{\hseven}{0.0038356164}
+\pgfmathsetmacro{\height}{0.0008767123}
+\begin{tikzpicture}[baseline]
+\begin{axis}[
+    width=8.4cm,
+    height=5.9cm,
+    axis lines=none,
+    clip=false,
+    xmin=-42,
+    xmax=335,
+    ymin=-0.0009,
+    ymax=0.0076,
+    ticks=none,
+]
+    % Frequency-density guides and bar heights read from the source chart/table.
+    \draw[dashed,line width=0.55pt] (axis cs:0,\xheight) -- (axis cs:50,\xheight);
+    \draw[dashed,line width=0.55pt] (axis cs:0,\htwo) -- (axis cs:100,\htwo);
+    \draw[dashed,line width=0.55pt] (axis cs:0,\hseven) -- (axis cs:150,\hseven);
+    \draw[dashed,line width=0.55pt] (axis cs:0,\hthree) -- (axis cs:200,\hthree);
+    \draw[dashed,line width=0.55pt] (axis cs:0,\height) -- (axis cs:250,\height);
+
+    \addplot[
+        ybar interval,
+        draw=black,
+        fill=white,
+        line width=0.7pt,
+    ] coordinates {
+        (0,\hthree)
+        (50,\xheight)
+        (100,\htwo)
+        (150,\hseven)
+        (200,\hthree)
+        (250,\height)
+        (300,0)
+    };
+
+    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:330,0);
+    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,0.0074);
+
+    \node[anchor=south west,inner sep=0pt,font=\small,align=center] at (axis cs:-1,0.0070) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:307,0.006) {API};
+
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:0,-0.0008) {0};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:50,-0.0008) {50};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:100,-0.0008) {100};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:150,-0.0008) {150};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:200,-0.0008) {200};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:250,-0.0008) {250};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:300,-0.0008) {300};
+    \draw[line width=0.45pt] (axis cs:0,\xheight) -- (axis cs:-4,\xheight);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-6,\xheight) {$x$};
+    \draw[line width=0.45pt] (axis cs:0,\htwo) -- (axis cs:-4,\htwo);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-6,\htwo) {$\dfrac{2}{365}$};
+    \draw[line width=0.45pt] (axis cs:0,\hseven) -- (axis cs:-4,\hseven);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-6,\hseven) {$\dfrac{7}{1825}$};
+    \draw[line width=0.45pt] (axis cs:0,\hthree) -- (axis cs:-4,\hthree);
+    \node[anchor=east,inner sep=0pt,font=\small,yshift=4pt] at (axis cs:-6,\hthree) {$\dfrac{3}{1825}$};
+    \draw[line width=0.45pt] (axis cs:0,\height) -- (axis cs:-4,\height);
+    \node[anchor=east,inner sep=0pt,font=\small,yshift=-4pt] at (axis cs:-6,\height) {$\dfrac{8}{9125}$};
+\end{axis}
+\end{tikzpicture}

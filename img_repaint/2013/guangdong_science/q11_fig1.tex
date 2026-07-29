@@ -1,0 +1,64 @@
+% Source: source/普通高考/2013/2013广东理.pdf, page 1, question 11.
+% pdfimages -list: no embedded image objects; the program flowchart is vector line art.
+% Grid evidence: tmp/review_2013_guangdong_science/grid/page_grid100.png,
+%   tmp/review_2013_guangdong_science/grid/page_grid50.png.
+% No-grid source crop: tmp/review_2013_guangdong_science/crop/q11_orig_fig_final.png.
+% Node→directed-edge list (verified against the source page):
+% 开始→输入 n→i=1,s=1→i≤n?; 是→s=s+(i−1)→i=i+1→(loop back to i≤n?);
+% 否→输出 s→结束.  The loop branch is independent of the output branch.
+% solid segments: all node borders and connector shafts; dashed segments: none.
+% labels: formulas and Chinese text are centered in each node with local zero indentation;
+% 是 is beside the true downward edge and 否 beside the false right edge.
+
+\begin{tikzpicture}[
+  x=1cm,
+  y=0.92cm,
+  >=Stealth,
+  line width=0.45pt,
+  line cap=round,
+  line join=round,
+  font=\normalsize,
+  every node/.style={anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flow/.style={draw,anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  terminal/.style={flow,rounded corners=0.16cm,minimum width=1.10cm,minimum height=0.64cm},
+  process/.style={flow,minimum width=2.50cm,minimum height=0.68cm,inner xsep=4pt,inner ysep=2pt},
+  io/.style={flow,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
+    minimum width=1.90cm,minimum height=0.76cm,inner xsep=4pt,inner ysep=2pt},
+  decision/.style={flow,diamond,aspect=2.75,minimum width=2.75cm,minimum height=0.86cm,
+    inner xsep=4pt,inner ysep=2pt},
+  branchlabel/.style={anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+]
+  \path[use as bounding box] (-2.15,1.75) rectangle (5.35,9.62);
+
+  \node[terminal] (start) at (0,9.12) {开始};
+  \node[io] (input) at (0,7.94) {输入 $n$};
+  \node[process,minimum width=2.72cm] (init) at (0,6.70) {$i=1,s=1$};
+  \node[decision,minimum width=3.05cm,minimum height=0.98cm] (test) at (0,5.32) {$i\leq n$};
+  \node[process,minimum width=2.95cm] (sum) at (0,3.90) {$s=s+(i-1)$};
+  \node[process,minimum width=2.38cm] (inc) at (0,2.62) {$i=i+1$};
+  \node[io,minimum width=1.72cm] (output) at (4.20,4.48) {输出 $s$};
+  \node[terminal] (finish) at (4.20,3.20) {结束};
+
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (init.north);
+  \draw[->] (init.south) -- (test.north);
+  \draw[->] (test.south) -- node[branchlabel,left=2pt,pos=0.18] {是} (sum.north);
+  \draw[->] (sum.south) -- (inc.north);
+
+  % False branch: right exit to output and then termination.
+  \draw[->] (test.east) -- node[branchlabel,above=2pt] {否} (4.20,5.32) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % Loop-back branch: i=i+1 returns to the decision without touching output.
+  \coordinate (loop-bottom) at (0,2.05);
+  \coordinate (loop-left) at (-2.00,2.05);
+  \coordinate (loop-top) at (-2.00,6.12);
+  \coordinate (loop-junction) at (0,6.12);
+  % The source return exits below i=i+1, runs left, then rises to the main stem.
+  \draw (inc.south) -- (loop-bottom) -- (loop-left) -- (loop-top);
+  % It joins the incoming vertical stem above the decision (not the diamond's west point).
+  \draw[->] (loop-top) -- (loop-junction);
+\end{tikzpicture}

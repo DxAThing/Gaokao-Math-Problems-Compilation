@@ -1,0 +1,59 @@
+% Source: source/普通高考/2010/2010福建文.pdf, page 1, question 6.
+% pdfimages -list: no matching embedded raster; the flowchart is vector line art.
+% Grid evidence: tmp/repaint_2010_fujian_liberal/grid/page_grid100.png and page_grid50.png.
+% No-grid source crop: tmp/repaint_2010_fujian_liberal/crop/q6_source_wide.png.
+% Complete node -> directed-edge list (verified against the source page):
+% 开始→s=0→i=1→a=i×2^i→s=s+a→i=i+1→s>11?;
+% s>11? 是→输出 i→结束; 否→left return path→the stem immediately above a=i×2^i.
+% solid segments: node borders and all connector shafts; dashed segments: none.
+% labels: 是 sits beside the downward true edge; 否 sits beside the left return branch.
+
+\begin{tikzpicture}[
+  x=1cm,
+  y=0.92cm,
+  >=Stealth,
+  line width=0.45pt,
+  line cap=round,
+  line join=round,
+  font=\normalsize,
+  every node/.style={anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flow/.style={draw,anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  terminal/.style={flow,rounded corners=0.16cm,minimum width=1.10cm,minimum height=0.64cm},
+  process/.style={flow,minimum width=1.35cm,minimum height=0.64cm,inner xsep=4pt,inner ysep=2pt},
+  io/.style={flow,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
+    minimum width=1.55cm,minimum height=0.72cm,inner xsep=4pt,inner ysep=2pt},
+  decision/.style={flow,diamond,aspect=2.65,minimum width=2.60cm,minimum height=0.86cm,
+    inner xsep=4pt,inner ysep=2pt},
+  branchlabel/.style={anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+]
+  \path[use as bounding box] (-2.40,-1.75) rectangle (2.45,9.42);
+
+  \node[terminal] (start) at (0,9.00) {开始};
+  \node[process] (sinit) at (0,7.78) {$s=0$};
+  \node[process] (iinit) at (0,6.58) {$i=1$};
+  \node[process,minimum width=2.15cm] (term) at (0,5.28) {$a=i\times 2^i$};
+  \node[process,minimum width=1.95cm] (sum) at (0,3.93) {$s=s+a$};
+  \node[process,minimum width=1.75cm] (inc) at (0,2.65) {$i=i+1$};
+  \node[decision] (test) at (0,1.32) {$s>11$?};
+  \node[io,minimum width=1.55cm] (output) at (0,0.02) {输出 $i$};
+  \node[terminal] (finish) at (0,-1.24) {结束};
+
+  \draw[->] (start.south) -- (sinit.north);
+  \draw[->] (sinit.south) -- (iinit.north);
+  \draw[->] (iinit.south) -- (term.north);
+  \draw[->] (term.south) -- (sum.north);
+  \draw[->] (sum.south) -- (inc.north);
+  \draw[->] (inc.south) -- (test.north);
+  \draw[->] (test.south) -- node[branchlabel,right=2pt,pos=0.18] {是} (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % False branch: leave the decision to the left, rise, and re-enter above a=i×2^i.
+  \coordinate (loop-corner) at (-2.15,1.32);
+  \coordinate (loop-top) at (-2.15,5.92);
+  \coordinate (loop-junction) at (0,5.92);
+  \draw (test.west) -- node[branchlabel,above=2pt,pos=0.28] {否} (loop-corner) -- (loop-top);
+  \draw[->] (loop-top) -- (loop-junction);
+\end{tikzpicture}

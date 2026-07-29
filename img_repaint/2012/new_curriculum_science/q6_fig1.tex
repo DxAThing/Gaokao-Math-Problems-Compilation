@@ -1,0 +1,82 @@
+% Source PDF: source/普通高考/2012/2012新课标理(河南,河北,黑龙江,吉林,海南,宁夏,山西,内蒙古,新疆,云南).pdf, page 1 (question 6).
+% The source PDF contains vector line art (pdfimages -list returned no image objects).
+% Node -> directed-edge list: 开始 -> 输入(N,a_1,...,a_N) ->
+% k=1,A=a_1,B=a_1 -> x=a_k -> x>A; 是 -> A=x -> merge before x<B;
+% 否 -> x<B; 是 -> B=x -> the same merge; 否 -> the same merge -> k>=N;
+% 是 -> 输出 A,B -> 结束; 否 -> k=k+1 -> loop-back to the stem above x=a_k.
+% solid segments: all node outlines and connectors; dashed segments: none.
+% labels: each 是/否 sits beside its corresponding decision exit; all node text
+% is locally zero-indented and horizontally/vertically centered.
+
+\begin{tikzpicture}[
+  x=1cm,
+  y=1cm,
+  >=Stealth,
+  line width=0.45pt,
+  line cap=round,
+  line join=round,
+  font=\normalsize,
+  flowtext/.style={anchor=center, align=center,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flowbox/.style={draw, minimum height=0.72cm, inner xsep=4pt, inner ysep=2pt,
+    align=center, execute at begin node={\setlength{\parindent}{0pt}}},
+  terminal/.style={flowbox, rounded corners=0.18cm, minimum width=1.30cm},
+  io/.style={flowbox, trapezium, trapezium left angle=72, trapezium right angle=108,
+    minimum height=0.78cm},
+  decision/.style={flowbox, diamond, aspect=2.65, minimum width=4.20cm,
+    minimum height=1.00cm, inner xsep=1pt, inner ysep=1pt},
+  branchlabel/.style={flowtext, inner sep=0pt},
+]
+  % Main sequence and the two nested comparisons.
+  \node[terminal] (start) at (0,15.5) {开始};
+  \node[io, minimum width=6.30cm] (input) at (0,14.15)
+    {输入 $N,a_1,a_2,\cdots,a_N$};
+  \node[flowbox, minimum width=6.20cm] (init) at (0,12.75)
+    {$k=1,A=a_1,B=a_1$};
+  \node[flowbox, minimum width=2.55cm] (sample) at (0,11.10) {$x=a_k$};
+  \node[decision] (maxcheck) at (0,9.35) {$x>A$};
+  \node[flowbox, minimum width=2.55cm] (setmax) at (3.50,8.00) {$A=x$};
+  \node[decision] (mincheck) at (0,6.85) {$x<B$};
+  \node[flowbox, minimum width=2.55cm] (setmin) at (-4.00,5.65) {$B=x$};
+  \node[decision] (countcheck) at (0,3.40) {$k\geq N$};
+  \node[io, minimum width=3.10cm] (output) at (0,1.35) {输出 $A,B$};
+  \node[terminal] (finish) at (0,-0.25) {结束};
+  \node[flowbox, minimum width=3.00cm] (increment) at (5.35,5.70) {$k=k+1$};
+
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (init.north);
+
+  % Initialization and loop-back share a stem above x=a_k.
+  \coordinate (loop-merge) at (0,11.95);
+  \draw (init.south) -- (loop-merge);
+  \draw[->] (loop-merge) -- (sample.north);
+  \draw[->] (sample.south) -- (maxcheck.north);
+
+  % First comparison: update A on the yes branch, otherwise test B.
+  \draw[->] (maxcheck.east) -- (3.50,9.35) -- (3.50,8.48) -- (setmax.north);
+  \draw[->] (maxcheck.south) -- (mincheck.north);
+
+  % Second comparison and the explicit merge before k>=N.
+  \draw[->] (mincheck.west) -- (-4.00,6.85) -- (setmin.north);
+  \coordinate (merge) at (0,4.55);
+  \draw (mincheck.south) -- (0,5.15);
+  \draw (0,5.15) -- (merge);
+  \draw (setmax.south) -- (3.50,4.55);
+  \draw (3.50,4.55) -- (merge);
+  \draw (setmin.south) -- (-4.00,4.55);
+  \draw (-4.00,4.55) -- (merge);
+  \draw[->] (merge) -- (countcheck.north);
+
+  % Final test: output on yes, increment and loop-back on no.
+  \draw[->] (countcheck.south) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+  \draw[->] (countcheck.east) -- (5.35,3.40) -- (5.35,5.18) -- (increment.south);
+  \draw[->] (increment.north) -- (5.35,11.95) -- (loop-merge);
+
+  \node[branchlabel, anchor=west] at (1.85,9.62) {是};
+  \node[branchlabel, anchor=west] at (0.45,8.30) {否};
+  \node[branchlabel, anchor=east] at (-2.10,7.28) {是};
+  \node[branchlabel, anchor=west] at (0.45,5.95) {否};
+  \node[branchlabel, anchor=west] at (1.80,3.82) {否};
+  \node[branchlabel, anchor=west] at (0.45,2.15) {是};
+\end{tikzpicture}

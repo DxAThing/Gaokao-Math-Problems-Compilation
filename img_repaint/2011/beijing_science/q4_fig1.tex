@@ -1,0 +1,57 @@
+% Source PDF: source/普通高考/2011/2011北京理.pdf, page 1, question 4.
+% pdfimages found no matching embedded bitmap; the source page was rendered
+% and cropped through a 100/50-pixel grid for the comparison image.
+% Elements: rounded 开始/结束 terminals; initialization i=0,s=2; decision i<4?;
+% process nodes i=i+1 and s=(s-1)/(s+1); output parallelogram 输出 s.
+% Node-edge list: 开始→(i=0,s=2)→i<4?; 是→i=i+1→s=(s-1)/(s+1)
+% →left return to the main stem above the decision; 否→输出s→结束.
+% All borders and connectors are solid; no dashed segments or auxiliary edges.
+
+\begin{tikzpicture}[
+  baseline,
+  >=stealth,
+  x=1cm,
+  y=1cm,
+  line width=0.55pt,
+  line cap=round,
+  line join=round,
+  font=\normalsize,
+  every node/.style={anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flowbox/.style={draw,minimum height=0.68cm,inner xsep=4pt,inner ysep=2.5pt,
+    align=center,anchor=center},
+  branchlabel/.style={anchor=center,align=center,inner xsep=1pt,inner ysep=1pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  terminal/.style={flowbox,rounded corners=0.20cm,minimum width=1.24cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
+    trapezium right angle=108,minimum height=0.76cm},
+  decision/.style={flowbox,shape=diamond,aspect=2.8,inner xsep=4pt,inner ysep=2pt,
+    minimum height=1.00cm}
+]
+  \node[terminal] (start) at (0,10.00) {开始};
+  \node[flowbox,minimum width=2.85cm] (init) at (0,8.55) {$i=0,s=2$};
+  \node[decision,minimum width=2.90cm] (test) at (0,4.10) {$i<4$};
+  \node[flowbox,minimum width=2.35cm] (increment) at (3.10,4.10) {$i=i+1$};
+  \node[flowbox,minimum width=3.00cm,minimum height=1.05cm]
+    (update) at (3.10,6.35) {$s=\dfrac{s-1}{s+1}$};
+  \node[io,minimum width=2.15cm] (output) at (0,2.10) {输出 $s$};
+  \node[terminal] (finish) at (0,0.60) {结束};
+
+  \draw[->] (start.south) -- (init.north);
+  % Split the stem at the loop-entry level: the return arrow has one left
+  % pointing head, while the main path has one directed arrow into test.
+  \coordinate (merge-level) at (0,6.35);
+  \coordinate (merge-pre) at (0.20,6.35);
+  \draw (init.south) -- (merge-level);
+  \draw[->] (merge-level) -- (test.north);
+  \draw[->] (test.south) -- node[branchlabel,right] {否} (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % Yes branch: update i, then update s, then return left to the main stem.
+  \draw[->] (test.east) -- node[branchlabel,above] {是} (increment.west);
+  \draw[->] (increment.north) -- (update.south);
+  \draw[->] (update.west) -- (merge-pre);
+  \draw (merge-pre) -- (merge-level);
+
+  \path[use as bounding box] (-1.70,10.35) rectangle (4.70,0.22);
+\end{tikzpicture}

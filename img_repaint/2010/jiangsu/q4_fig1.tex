@@ -1,0 +1,51 @@
+% Source PDF: source/普通高考/2010/2010江苏.pdf, page 1, question 4.
+% PDF embedded bitmap attempt: no image objects were present (the source figure is vector artwork).
+% Grid evidence: tmp/redraw_grid/2010_jiangsu/page1_grid100.jpg and q4_block_grid50.jpg.
+% Original-side crop: tmp/redraw_crops/2010_jiangsu/q4_orig.png from the no-grid page render.
+% Elements: x-axis from 0 to 40 with 5-mm ticks and arrow; y-axis with arrow and
+% frequency-density labels; seven adjacent 5-mm bars; dashed guides at 0.01, 0.02,
+% 0.04, 0.05, and 0.06; axis labels 频率/组距 and 长度 (mm).
+% Relations: bins [5,10], [10,15], [15,20], [20,25], [25,30], [30,35], [35,40]
+% have frequency-density heights 0.01, 0.01, 0.04, 0.06, 0.05, 0.02, 0.01.
+% solid segments: x/y axes, tick marks, and seven unfilled bar outlines.
+% dashed segments: horizontal reference guides, ending at the relevant bar boundary.
+% labels: 0.01/0.02/0.04/0.05/0.06 left of the y-axis; 0,5,...,40 below x-axis;
+% place 频率/组距 above the y-axis and 长度 (mm) to the right of the x-axis arrow.
+\begin{tikzpicture}[baseline]
+\begin{axis}[
+    width=8.2cm,
+    height=5.4cm,
+    axis lines=left,
+    axis line style={-Stealth},
+    xmin=0,
+    xmax=42,
+    ymin=0,
+    ymax=0.07,
+    xtick={0,5,10,15,20,25,30,35,40},
+    ytick={0.01,0.02,0.04,0.05,0.06},
+    scaled y ticks=false,
+    yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=2},
+    tick align=outside,
+    tick label style={font=\small},
+    clip=false,
+]
+    % Source dashed guides; bars are drawn afterward with white fill.
+    \addplot[black,dashed,line width=0.45pt,forget plot]
+      coordinates {(0,0.01) (15,0.01)};
+    \addplot[black,dashed,line width=0.45pt,forget plot]
+      coordinates {(0,0.02) (30,0.02)};
+    \addplot[black,dashed,line width=0.45pt,forget plot]
+      coordinates {(0,0.04) (15,0.04)};
+    \addplot[black,dashed,line width=0.45pt,forget plot]
+      coordinates {(0,0.05) (25,0.05)};
+    \addplot[black,dashed,line width=0.45pt,forget plot]
+      coordinates {(0,0.06) (20,0.06)};
+    % Frequency-density bars from the source intervals and heights.
+    \addplot[black,ybar interval,draw=black,fill=white,line width=0.55pt]
+      coordinates {(5,0.01) (10,0.01) (15,0.04) (20,0.06)
+                   (25,0.05) (30,0.02) (35,0.01) (40,0)};
+    \node[anchor=south west,inner sep=0pt,font=\small] at (axis cs:0.9,0.066)
+      {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:41.1,0.002) {长度 (mm)};
+\end{axis}
+\end{tikzpicture}

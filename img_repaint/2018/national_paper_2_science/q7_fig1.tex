@@ -1,0 +1,66 @@
+% Source: source/普通高考/2018/2018全国2理(甘肃,青海,内蒙古,黑龙江,吉林,辽宁,海南.宁夏,新疆,陕西,重庆).pdf, page 1.
+% The source flowchart is vector line art; pdfimages -list found no embedded bitmap.
+% Elements: start/end rounded rectangles, assignment rectangles, decision diamond,
+% arithmetic process rectangles, output parallelogram, directed connectors, and branch labels.
+% Relations: 开始 -> N=0,T=0 -> i=1 -> i<100; 是 -> N update -> T update -> blank increment
+% -> loop back to the decision; 否 -> S=N-T -> 输出 S -> 结束.
+% solid segments: all box outlines and connectors; dashed segments: none.
+% labels: 是 at the left decision branch and 否 at the right branch; math labels centered
+% in boxes, with the left return path outside the process column to avoid overlap.
+% Node-edge list from the PDF: start→init, init→seti, seti→check; check(是)→addn,
+% check(否)→sub; addn→addt, addt→increment, increment→check; sub→out, out→finish.
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=0.45pt,
+  line join=round,
+  line cap=round,
+  font=\normalsize,
+  flowbox/.style={draw, minimum height=0.72cm, inner xsep=5pt, inner ysep=3pt, align=center,
+                  execute at begin node={\setlength{\parindent}{0pt}}},
+  process/.style={flowbox, minimum width=3.05cm},
+  smallprocess/.style={flowbox, minimum width=1.55cm},
+  startstop/.style={flowbox, rounded corners=0.18cm, minimum width=1.60cm},
+  output/.style={flowbox, trapezium, trapezium left angle=75, trapezium right angle=105,
+                minimum width=3.00cm},
+  decision/.style={flowbox, diamond, aspect=2.8, minimum width=3.80cm, minimum height=1.18cm},
+]
+  % Preserve the source's clear white margin around the outer return path.
+  \path[use as bounding box] (-5.15,-0.12) rectangle (4.05,8.82);
+
+  % Coordinates preserve the schematic topology and the source's two-column flow.
+  \node[startstop] (start) at (0,8.40) {开始};
+  \node[process] (init) at (0,7.20) {$N=0,\ T=0$};
+  \node[smallprocess] (seti) at (0,5.98) {$i=1$};
+  \node[decision] (check) at (0,4.65) {$i<100$};
+
+  \node[process] (addn) at (-2.35,3.25) {$N=N+\dfrac{1}{i}$};
+  \node[process, minimum width=3.55cm] (addt) at (-2.35,1.78) {$T=T+\dfrac{1}{i+1}$};
+  \node[smallprocess, minimum width=2.45cm] (increment) at (-2.35,0.35) {};
+
+  \node[process, minimum width=3.30cm] (sub) at (2.25,3.25) {$S=N-T$};
+  \node[output] (out) at (2.25,1.86) {输出 $S$};
+  \node[startstop] (finish) at (2.25,0.55) {结束};
+
+  % Main vertical path.
+  \draw[->] (start.south) -- (init.north);
+  \draw[->] (init.south) -- (seti.north);
+  % The loop return joins the central path just above the decision.
+  \coordinate (loopjoin) at (0,5.05);
+  \draw (seti.south) -- (loopjoin);
+
+  % Branches from the decision diamond.
+  \draw[->] (check.west) -- (-2.35,4.65) -- (addn.north)
+    node[pos=0.20, above=1pt] {是};
+  \draw[->] (check.east) -- (2.25,4.65) -- (sub.north)
+    node[pos=0.20, above=1pt] {否};
+
+  % Left loop body and return path.
+  \draw[->] (addn.south) -- (addt.north);
+  \draw[->] (addt.south) -- (increment.north);
+  \draw[->] (increment.west) -- (-4.85,0.35) -- (-4.85,5.05) -- (loopjoin);
+  \draw[->] (loopjoin) -- (check.north);
+
+  % False branch output path.
+  \draw[->] (sub.south) -- (out.north);
+  \draw[->] (out.south) -- (finish.north);
+\end{tikzpicture}

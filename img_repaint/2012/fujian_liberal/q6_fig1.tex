@@ -1,0 +1,59 @@
+% original_pdf: source/普通高考/2012/2012福建文.pdf
+% page: 1 (question 6)
+% embedded_bitmap_attempt: pdfimages -list returned no embedded images; redraw from rendered page
+% evidence: tmp/review_flowchart_2012_fujian_liberal/grid/q6_grid100.jpg;
+%   q6_original_final.png (no-grid crop from the source page)
+% elements: rounded 开始/结束 terminals; initialization rectangle k=1,s=1; condition diamond k<4?;
+% process rectangles s=2s−k and k=k+1; output parallelogram 输出 s; solid arrows and 是/否 labels.
+% node-edge list: 开始→(k=1,s=1)→k<4?; 是→s=2s−k→k=k+1→left loop-back to the connector above
+% k<4?; 否→输出 s→结束. The output branch is independent and the main down arrow is unique.
+% solid segments: all node borders and directed connectors; dashed segments: none.
+% Branch labels use natural edge-relative anchors; node text is locally zero-indented and centered.
+
+\begin{tikzpicture}[
+  baseline,
+  >=stealth,
+  x=1cm,
+  y=1cm,
+  line width=0.55pt,
+  line cap=round,
+  line join=round,
+  font=\normalsize,
+  every node/.style={anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flowbox/.style={draw,minimum height=0.68cm,inner xsep=4pt,inner ysep=2.5pt,
+    align=center,anchor=center},
+  branchlabel/.style={anchor=center,align=center,inner xsep=1pt,inner ysep=1pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  terminal/.style={flowbox,rounded corners=0.20cm,minimum width=1.24cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
+    minimum height=0.76cm},
+  decision/.style={flowbox,shape=diamond,aspect=2.8,inner xsep=4pt,inner ysep=2pt,
+    minimum height=1.00cm}
+]
+  % Main vertical path.
+  \node[terminal] (start) at (0,10.00) {开始};
+  \node[flowbox,minimum width=2.85cm] (init) at (0,8.55) {$k=1,s=1$};
+  \node[decision,minimum width=2.90cm] (test) at (0,4.10) {$k<4?$};
+  \node[flowbox,minimum width=2.65cm] (update) at (2.60,5.30) {$s=2s-k$};
+  \node[flowbox,minimum width=2.35cm] (increment) at (2.60,6.80) {$k=k+1$};
+  \node[io,minimum width=2.15cm] (output) at (0,2.10) {输出 $s$};
+  \node[terminal] (finish) at (0,0.60) {结束};
+
+  \draw[->] (start.south) -- (init.north);
+  % Split the stem at the loop-entry level so the return arrow has its own
+  % left-pointing head and the main path has one downward arrow into test.
+  \coordinate (merge-level) at (0,7.65);
+  \coordinate (merge-pre) at (0.20,7.65);
+  \draw (init.south) -- (merge-level);
+  \draw[->] (merge-level) -- (test.north);
+  \draw[->] (test.south) -- node[branchlabel,right] {否} (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % Yes branch rises through the two right-hand updates and returns left.
+  \draw[->] (test.east) -- node[branchlabel,above] {是} (2.60,4.10) -- (update.south);
+  \draw[->] (update.north) -- (increment.south);
+  \draw[->] (increment.north) -- (2.60,7.65) -- (merge-pre);
+  \draw (merge-pre) -- (merge-level);
+  \path[use as bounding box] (-1.70,10.35) rectangle (4.00,0.22);
+\end{tikzpicture}

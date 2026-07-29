@@ -1,0 +1,54 @@
+% Source PDF: source/普通高考/2010/2010安徽文.pdf
+% Page: 2; no embedded bitmap matched because the source contains the data prompt only.
+% Grid evidence: tmp/repaint_2010_anhui_liberal/grids/page-02-grid100.jpg.
+% Elements: seven contiguous class bars for pollution-index intervals [40,50),...,[100,110), axes, ticks, and labels.
+% Relations: class width is 10; frequencies from the 30 listed observations are 2,1,3,7,10,5,2,
+% so the bar heights (frequency/group width) are 1/150,1/300,1/100,7/300,1/30,1/60,1/150.
+% solid segments: x/y axes and seven bar outlines; dashed segments: none.
+% labels: the y-axis is frequency/group width and the x-axis is pollution index; ticks stay clear of bars.
+\begin{tikzpicture}
+\begin{axis}[
+    width=10.2cm,
+    height=5.8cm,
+    axis lines=left,
+    axis line style={->,black},
+    xmin=39,
+    xmax=111,
+    ymin=0,
+    ymax=0.040,
+    xtick={40,50,60,70,80,90,100,110},
+    ytick={0,0.01,0.02,0.03,0.04},
+    yticklabel=\empty,
+    scaled y ticks=false,
+    xlabel={污染指数},
+    ylabel={},
+    xlabel style={at={(axis description cs:1.02,0)},anchor=west,inner sep=0pt},
+    tick style={black},
+    clip=false,
+    enlargelimits=false,
+]
+    \addplot[
+        ybar interval,
+        draw=black,
+        fill=white,
+        line width=0.75pt,
+    ] coordinates {
+        (40,0.0066667)
+        (50,0.0033333)
+        (60,0.0100000)
+        (70,0.0233333)
+        (80,0.0333333)
+        (90,0.0166667)
+        (100,0.0066667)
+        (110,0)
+    };
+    \node[anchor=south west,inner sep=0pt,font=\normalsize]
+        at (axis cs:40,0.0385) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=north east,inner sep=1pt,font=\normalsize,xshift=-5pt]
+        at (axis cs:39,0) {0};
+    \frequencyylabel[-4pt]{39}{0.0100000}{0.0100}
+    \frequencyylabel[-4pt]{39}{0.0200000}{0.0200}
+    \frequencyylabel[-4pt]{39}{0.0300000}{0.0300}
+    \frequencyylabel[-4pt]{39}{0.0400000}{0.0400}
+\end{axis}
+\end{tikzpicture}

@@ -1,0 +1,60 @@
+% Source PDF: source/普通高考/2012/2012广东文.pdf, page 1, question 9.
+% pdfimages -list found no embedded image; the program flowchart is vector artwork.
+% Node-edge list: 开始 -> 输入 n -> i=1,s=1 -> i<n?;
+% 是 -> s=s×i -> i=i+2 -> left return to the connector above i<n?;
+% 否 -> 输出 s -> 结束. No update-to-output edge is present.
+% All borders/connectors are solid; labels 是/否 are beside their corresponding branches.
+% Every node uses local zero paragraph indentation and centered text.
+
+\begin{tikzpicture}[
+  >=Stealth,
+  x=1cm,
+  y=0.88cm,
+  line width=0.45pt,
+  line cap=round,
+  line join=round,
+  font=\normalsize,
+  flowtext/.style={anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flowbox/.style={flowtext,draw,minimum height=0.68cm,
+    inner xsep=4pt,inner ysep=2pt},
+  terminal/.style={flowbox,rounded corners=0.17cm,minimum width=1.35cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
+    trapezium right angle=108,minimum height=0.76cm},
+  process/.style={flowbox},
+  decision/.style={flowbox,diamond,aspect=2.8,minimum width=3.55cm,
+    minimum height=1.05cm},
+  branchlabel/.style={flowtext,inner sep=0pt},
+]
+  \path[use as bounding box] (-3.55,0.10) rectangle (4.85,10.15);
+
+  \node[terminal] (start) at (0,9.65) {开始};
+  \node[io,minimum width=2.05cm] (input) at (0,8.35) {输入 $n$};
+  \node[process,minimum width=3.45cm] (init) at (0,6.95) {$i=1,s=1$};
+  \node[decision] (test) at (0,5.45) {$i<n$};
+  \node[process,minimum width=2.85cm,minimum height=0.88cm]
+    (update) at (0,3.95) {$s=s\times i$};
+  \node[process,minimum width=2.65cm] (increment) at (0,2.50)
+    {$i=i+2$};
+  \node[io,minimum width=2.10cm] (output) at (3.25,3.85) {输出 $s$};
+  \node[terminal] (finish) at (3.25,2.40) {结束};
+
+  % Main path and the affirmative update loop.
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (init.north);
+  \draw[->] (init.south) -- (test.north);
+  \draw[->] (test.south) -- node[branchlabel,right] {是} (update.north);
+  \draw[->] (update.south) -- (increment.north);
+
+  % Negative branch is independent from the update loop.
+  \draw[->] (test.east) -- node[branchlabel,above] {否}
+    (3.25,5.45) -- (3.25,4.50) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % Return from i=i+2 enters the main stem above the test, without resetting i.
+  \coordinate (loop-bottom) at (0,1.35);
+  \coordinate (loop-left) at (-3.05,1.35);
+  \coordinate (loop-entry) at (-3.05,6.25);
+  \draw[->] (increment.south) -- (loop-bottom) -- (loop-left)
+    -- (loop-entry) -- (0,6.25);
+\end{tikzpicture}

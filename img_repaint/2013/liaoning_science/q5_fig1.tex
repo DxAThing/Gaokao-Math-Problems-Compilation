@@ -1,0 +1,70 @@
+% Source PDF: source/普通高考/2013/2013辽宁理.pdf
+% Page: 1; PDF embedded bitmap attempt: no image objects were present (pdfimages -list).
+% Grid evidence: tmp/redraw_2013_grid/page-1_grid100.png and q5_block_grid50.png.
+% Original-side crop: tmp/redraw_2013_grid/q5_orig_crop.png, cropped from the no-grid page render.
+% Elements: frequency-density y-axis with arrow and labels, score x-axis with arrow and ticks 0--100,
+% four adjacent histogram bars, and dashed horizontal guides at 0.005, 0.010, 0.015, 0.020.
+% Relations: bins [20,40), [40,60), [60,80), [80,100] have heights
+% 0.005, 0.010, 0.020, 0.015 respectively, read from the source graph and q5 statement.
+% solid segments: bar outlines, x/y axes, tick marks, and arrowheads.
+% dashed segments: horizontal reference guides ending at the corresponding bar boundary.
+% labels: 频率/组距 is above the y-axis; 成绩/分 is right of the x-axis arrow; tick labels stay below/left of axes.
+\begin{tikzpicture}[baseline, line cap=round, line join=round]
+\begin{axis}[
+    width=8.2cm,
+    height=4.9cm,
+    axis lines=none,
+    clip=false,
+    xmin=-17,
+    xmax=133,
+    ymin=-0.0045,
+    ymax=0.0245,
+    ticks=none,
+]
+    % Dashed reference levels read from the original histogram.
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.005) -- (axis cs:20,0.005);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.010) -- (axis cs:40,0.010);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.015) -- (axis cs:80,0.015);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.020) -- (axis cs:60,0.020);
+
+    \addplot[
+        ybar interval,
+        draw=black,
+        fill=white,
+        line width=0.7pt,
+    ] coordinates {
+        (20,0.005)
+        (40,0.010)
+        (60,0.020)
+        (80,0.015)
+        (100,0.000)
+    };
+
+    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:122,0);
+    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,0.023);
+
+    \node[anchor=south west,inner sep=0pt,font=\small,align=center] at (axis cs:4,0.022) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:106,0.002) {成绩/分};
+
+    \draw[line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.0012);
+    \draw[line width=0.45pt] (axis cs:20,0) -- (axis cs:20,-0.0012);
+    \draw[line width=0.45pt] (axis cs:40,0) -- (axis cs:40,-0.0012);
+    \draw[line width=0.45pt] (axis cs:60,0) -- (axis cs:60,-0.0012);
+    \draw[line width=0.45pt] (axis cs:80,0) -- (axis cs:80,-0.0012);
+    \draw[line width=0.45pt] (axis cs:100,0) -- (axis cs:100,-0.0012);
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:0,-0.0018) {0};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:20,-0.0018) {20};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:40,-0.0018) {40};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:60,-0.0018) {60};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:80,-0.0018) {80};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:100,-0.0018) {100};
+    \draw[line width=0.45pt] (axis cs:0,0.005) -- (axis cs:-2,0.005);
+    \draw[line width=0.45pt] (axis cs:0,0.010) -- (axis cs:-2,0.010);
+    \draw[line width=0.45pt] (axis cs:0,0.015) -- (axis cs:-2,0.015);
+    \draw[line width=0.45pt] (axis cs:0,0.020) -- (axis cs:-2,0.020);
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-3,0.005) {0.005};
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-3,0.010) {0.010};
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-3,0.015) {0.015};
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-3,0.020) {0.020};
+\end{axis}
+\end{tikzpicture}

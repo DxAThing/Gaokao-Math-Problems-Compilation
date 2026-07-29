@@ -1,0 +1,65 @@
+% Source PDF: source/春季高考/2023/2023春季上海.pdf
+% Page: 1; embedded-image extraction succeeded (pdfimages object 872x444).
+% Original image for comparison: tmp/repaint_2023_shanghai/extract-001.png.
+% Elements: stacked bars for 2018--2021, y-axis ticks 10,20,30,40, origin O,
+% title, year labels, segment values, and the import/export legend.
+% Relations: each bar's light segment is imports (14.09,14.33,14.29,17.37),
+% dark segment is exports (16.41,17.24,17.93,21.73); bar totals are their sums.
+% solid segments: axes, ticks, stacked bar outlines and legend swatches; dashed segments: none.
+% labels: values are centered in their segments; years below x-axis; legend at right.
+\begin{tikzpicture}[baseline, line cap=round, line join=round]
+\begin{axis}[
+    width=9.8cm,
+    height=6.0cm,
+    axis lines=none,
+    clip=false,
+    xmin=-0.55,
+    xmax=5.0,
+    ymin=-6.5,
+    ymax=47,
+    ticks=none,
+]
+    % Stacked import/export bars; values are read directly from the embedded source chart.
+    % Export is the dark lower segment; import is the light upper segment.
+    \addplot[ybar stacked, bar width=0.55, draw=black, fill=gray!65, line width=0.65pt]
+        coordinates {(1,16.41) (2,17.24) (3,17.93) (4,21.73)};
+    \addplot[ybar stacked, bar width=0.55, draw=black, fill=gray!35, line width=0.65pt]
+        coordinates {(1,14.09) (2,14.33) (3,14.29) (4,17.37)};
+
+    % Axes, tick marks and labels.
+    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:4.65,0);
+    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,44.5);
+    \node[anchor=north east,inner sep=0pt,font=\small] at (axis cs:-0.08,-0.4) {$O$};
+    \node[anchor=south east,inner sep=0pt,font=\small] at (axis cs:-0.12,44.7) {万亿元};
+    \node[anchor=north west,inner sep=0pt,font=\small] at (axis cs:4.52,-0.7) {年份};
+    \node[anchor=south,inner sep=0pt,font=\small] at (axis cs:2.35,46.0) {2018-2021年中国货物进出口总额统计图};
+    \draw[line width=0.45pt] (axis cs:0,10) -- (axis cs:0.16,10);
+    \draw[line width=0.45pt] (axis cs:0,20) -- (axis cs:0.16,20);
+    \draw[line width=0.45pt] (axis cs:0,30) -- (axis cs:0.16,30);
+    \draw[line width=0.45pt] (axis cs:0,40) -- (axis cs:0.16,40);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.10,10) {10};
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.10,20) {20};
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.10,30) {30};
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.10,40) {40};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:1,-1.0) {2018};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:2,-1.0) {2019};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:3,-1.0) {2020};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:4,-1.0) {2021};
+
+    % Segment values centered at their mathematically defined mid-heights.
+    \node[inner sep=0pt,font=\small] at (axis cs:1,7.045) {16.41};
+    \node[inner sep=0pt,font=\small] at (axis cs:2,7.165) {17.24};
+    \node[inner sep=0pt,font=\small] at (axis cs:3,7.965) {17.93};
+    \node[inner sep=0pt,font=\small] at (axis cs:4,10.865) {21.73};
+    \node[inner sep=0pt,font=\small] at (axis cs:1,23.455) {14.09};
+    \node[inner sep=0pt,font=\small] at (axis cs:2,24.575) {14.33};
+    \node[inner sep=0pt,font=\small] at (axis cs:3,25.075) {14.29};
+    \node[inner sep=0pt,font=\small] at (axis cs:4,30.545) {17.37};
+
+    % Legend swatches and labels from the source chart.
+    \draw[fill=gray!35,draw=black,line width=0.65pt] (axis cs:4.48,22.8) rectangle (axis cs:4.92,29.0);
+    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:5.02,25.9) {进口};
+    \draw[fill=gray!65,draw=black,line width=0.65pt] (axis cs:4.48,14.0) rectangle (axis cs:4.92,20.2);
+    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:5.02,17.1) {出口};
+\end{axis}
+\end{tikzpicture}

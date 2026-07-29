@@ -1,0 +1,53 @@
+% Source PDF: source/普通高考/2015/2015福建文.pdf, page 1 (question 4).
+% PDF embedded-bitmap attempt: pdfimages -list returned no image objects; vector flowchart.
+% Node-edge list: start -> 输入 x -> x>=2?; 是 -> y=2^x, 否 -> y=9-x;
+% both branches merge before 输出 y -> 结束.
+% solid segments: all node borders and directed connectors; dashed segments: none.
+% labels: all node text is centered with zero paragraph indent; 是/否 sit beside
+% their corresponding decision branches. The flowchart is schematic, not to scale.
+\begin{tikzpicture}[
+    >=Stealth,
+    line width=0.55pt,
+    line cap=round,
+    line join=round,
+    every node/.style={
+        inner xsep=2pt,
+        inner ysep=1pt,
+        anchor=center,
+        align=center,
+        execute at begin node={\setlength{\parindent}{0pt}},
+    },
+]
+    \node[draw, rounded corners=5pt, minimum width=1.35cm, minimum height=0.64cm]
+      (start) at (0,8.70) {开始};
+    \node[draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+      minimum width=2.45cm, minimum height=0.76cm]
+      (input) at (0,7.20) {输入 $x$};
+    \node[draw, diamond, aspect=2.45, inner sep=0pt,
+      minimum width=3.55cm, minimum height=1.08cm]
+      (check) at (0,5.25) {$x\geq 2?$};
+    \node[draw, minimum width=2.40cm, minimum height=0.70cm]
+      (yes) at (0,3.55) {$y=2^x$};
+    \node[draw, minimum width=2.90cm, minimum height=0.70cm]
+      (no) at (3.40,3.55) {$y=9-x$};
+    \node[draw, trapezium, trapezium left angle=72, trapezium right angle=108,
+      minimum width=2.45cm, minimum height=0.76cm]
+      (output) at (0,1.65) {输出 $y$};
+    \node[draw, rounded corners=5pt, minimum width=1.35cm, minimum height=0.64cm]
+      (finish) at (0,0.10) {结束};
+
+    % Main flow and the 是 branch.
+    \draw[->] (start.south) -- (input.north);
+    \draw[->] (input.south) -- (check.north);
+    \draw[->] (check.south) -- (yes.north);
+    \draw (yes.south) -- (0,2.45);
+
+    % 否 branch: evaluate y=9-x, then return left to the shared connector.
+    \draw[->] (check.east) -- (3.40,5.25) -- (no.north);
+    \draw[->] (no.south) -- (3.40,2.45) -- (0,2.45);
+    \draw[->] (0,2.45) -- (output.north);
+    \draw[->] (output.south) -- (finish.north);
+
+    \node[anchor=west, inner sep=0pt] at (0.38,4.46) {是};
+    \node[anchor=west, inner sep=0pt] at (2.12,5.60) {否};
+\end{tikzpicture}

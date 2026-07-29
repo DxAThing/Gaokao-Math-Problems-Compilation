@@ -1,0 +1,76 @@
+% Source PDF: source/普通高考/2011/2011湖北文.pdf
+% Page: 1 (the source histogram is vector artwork; no complete embedded bitmap matched it)
+% Grid evidence: tmp/repaint_2011_hubei/p1_grid100.jpg and q5_block_grid50.jpg
+% Comparison original side: img_comparison/2011/hubei_liberal/q5_fig1.png
+% Elements: horizontal sample-data axis with ticks 0,2,4,6,8,10,12; vertical frequency-density axis;
+% five adjacent histogram bars on [2,4), [4,6), [6,8), [8,10), [10,12) with heights
+% 0.02, 0.05, 0.15, 0.19, and 0.09; dashed guides at 0.02, 0.05, 0.09, 0.15, and 0.19.
+% Relations: each bar height is the frequency density for its 2-unit interval; the [10,12) bar
+% has density 0.09, giving frequency 0.09*2*200=36 as required by the question.
+% solid segments: bar outlines, axis arrows, tick marks, and the two axes.
+% dashed segments: horizontal reference guides at 0.02, 0.05, 0.09, 0.15, and 0.19.
+% Label strategy: frequency/interval-width label above the y-axis; sample-data label at the x-axis arrow;
+% numeric ticks below/left of axes and no labels placed over bars.
+\begin{tikzpicture}[baseline]
+\begin{axis}[
+    width=7.2cm,
+    height=5.0cm,
+    axis lines=none,
+    clip=false,
+    xmin=-0.85,
+    xmax=13.3,
+    ymin=-0.018,
+    ymax=0.215,
+    ticks=none,
+]
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.02) -- (axis cs:8,0.02);
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.05) -- (axis cs:8,0.05);
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.09) -- (axis cs:10,0.09);
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.15) -- (axis cs:8,0.15);
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.19) -- (axis cs:10,0.19);
+
+    \addplot[
+        ybar interval,
+        draw=black,
+        fill=white,
+        line width=0.6pt,
+    ] coordinates {
+        (2,0.02)
+        (4,0.05)
+        (6,0.15)
+        (8,0.19)
+        (10,0.09)
+        (12,0)
+    };
+
+    \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:13.0,0);
+    \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:0,0.21);
+
+    \node[anchor=south west,inner sep=0pt,font=\small] at (axis cs:0.18,0.205) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:12.95,-0.001) {样本数据};
+
+    \draw[line width=0.4pt] (axis cs:0,0) -- (axis cs:0,-0.005);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:0,-0.006) {0};
+    \draw[line width=0.4pt] (axis cs:2,0) -- (axis cs:2,-0.005);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:2,-0.006) {2};
+    \draw[line width=0.4pt] (axis cs:4,0) -- (axis cs:4,-0.005);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:4,-0.006) {4};
+    \draw[line width=0.4pt] (axis cs:6,0) -- (axis cs:6,-0.005);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:6,-0.006) {6};
+    \draw[line width=0.4pt] (axis cs:8,0) -- (axis cs:8,-0.005);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:8,-0.006) {8};
+    \draw[line width=0.4pt] (axis cs:10,0) -- (axis cs:10,-0.005);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:10,-0.006) {10};
+    \draw[line width=0.4pt] (axis cs:12,0) -- (axis cs:12,-0.005);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:12,-0.006) {12};
+
+    \draw[line width=0.4pt] (axis cs:0,0.02) -- (axis cs:-0.12,0.02);
+    \frequencyylabel[-4pt]{0}{0.02}{0.02}
+    \draw[line width=0.4pt] (axis cs:0,0.05) -- (axis cs:-0.12,0.05);
+    \frequencyylabel[-4pt]{0}{0.05}{0.05}
+    \draw[line width=0.4pt] (axis cs:0,0.15) -- (axis cs:-0.12,0.15);
+    \frequencyylabel[-4pt]{0}{0.15}{0.15}
+    \draw[line width=0.4pt] (axis cs:0,0.19) -- (axis cs:-0.12,0.19);
+    \frequencyylabel[-4pt]{0}{0.19}{0.19}
+\end{axis}
+\end{tikzpicture}

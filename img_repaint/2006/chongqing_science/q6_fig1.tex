@@ -1,0 +1,91 @@
+% Source PDF: source/普通高考/2006/2006重庆理.pdf
+% Page: 1
+% PDF embedded bitmap attempt: no embedded images; source page rendered at 300 dpi
+% Grid evidence: tmp/repaint_2006_chongqing/original/page1_grid100.jpg and q6_chart_block_grid25.jpg
+% Original-side comparison crop: tmp/repaint_2006_chongqing/crops/q6_orig_final.png (no-grid page crop)
+% Elements: horizontal weight axis with arrow and break, vertical frequency-density axis with arrow, 11 contiguous bars, dashed guides at 0.03, 0.05, 0.07, tick labels 54.5--76.5, and the labels 频率/组距 and 体重 (kg).
+% Relations: each bar represents a 2 kg interval; the bar heights are frequency densities from the source histogram, giving frequencies 0.01, 0.03, 0.05, 0.05, 0.07, 0.08, 0.065, 0.055, 0.04, 0.035, 0.015 on the consecutive intervals [54.5,56.5) through [74.5,76.5).
+% solid segments: both axis arrows, the horizontal axis break, and all bar outlines.
+% dashed segments: horizontal reference guides at frequency densities 0.03, 0.05, and 0.07.
+% labels: place 频率/组距 above-left of the y-axis, 体重 (kg) to the right of the x-axis arrow, and keep all ticks below/left of their axes.
+\begin{tikzpicture}[baseline, line cap=round, line join=round]
+\begin{axis}[
+    width=8.4cm,
+    height=4.8cm,
+    axis lines=none,
+    xmin=53.1,
+    xmax=79.2,
+    ymin=-0.008,
+    ymax=0.09,
+    clip=false,
+    ticks=none,
+]
+  % Axes and the source figure's broken origin segment.
+  \draw[line width=0.7pt] (axis cs:53.55,0) -- (axis cs:54.05,0);
+  \draw[line width=0.7pt] (axis cs:54.05,0) -- (axis cs:54.15,0.0018) -- (axis cs:54.25,-0.0018) -- (axis cs:54.35,0.0018) -- (axis cs:54.45,-0.0018) -- (axis cs:54.55,0);
+  \draw[-{Stealth[length=2mm]}, line width=0.7pt] (axis cs:54.55,0) -- (axis cs:78.35,0);
+  \draw[-{Stealth[length=2mm]}, line width=0.7pt] (axis cs:53.55,0) -- (axis cs:53.55,0.084);
+
+  % Dashed horizontal density guides from the y-axis to the 62.5 kg bar edge.
+  \draw[dashed, line width=0.55pt] (axis cs:53.55,0.03) -- (axis cs:62.5,0.03);
+  \draw[dashed, line width=0.55pt] (axis cs:53.55,0.05) -- (axis cs:62.5,0.05);
+  \draw[dashed, line width=0.55pt] (axis cs:53.55,0.07) -- (axis cs:62.5,0.07);
+
+  % Frequency-density bars, one for each 2 kg interval.
+  \addplot[
+      ybar interval,
+      draw=black,
+      fill=white,
+      line width=0.65pt,
+  ] coordinates {
+      (54.5,0.01)
+      (56.5,0.03)
+      (58.5,0.05)
+      (60.5,0.05)
+      (62.5,0.07)
+      (64.5,0.08)
+      (66.5,0.065)
+      (68.5,0.055)
+      (70.5,0.04)
+      (72.5,0.035)
+      (74.5,0.015)
+      (76.5,0)
+  };
+
+  % Axis labels, tick marks, and tick labels.
+  \node[anchor=south west, inner sep=0pt, align=center, font=\small] at (axis cs:53.85,0.078) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+  \node[anchor=west, inner sep=0pt, font=\small] at (axis cs:78.0,0.002) {体重（\(\mathrm{kg}\)）};
+  \node[anchor=north east, inner sep=0pt, font=\small] at (axis cs:53.45,-0.001) {O};
+
+  \draw[line width=0.45pt] (axis cs:54.5,0) -- (axis cs:54.5,-0.0018);
+  \draw[line width=0.45pt] (axis cs:56.5,0) -- (axis cs:56.5,-0.0018);
+  \draw[line width=0.45pt] (axis cs:58.5,0) -- (axis cs:58.5,-0.0018);
+  \draw[line width=0.45pt] (axis cs:60.5,0) -- (axis cs:60.5,-0.0018);
+  \draw[line width=0.45pt] (axis cs:62.5,0) -- (axis cs:62.5,-0.0018);
+  \draw[line width=0.45pt] (axis cs:64.5,0) -- (axis cs:64.5,-0.0018);
+  \draw[line width=0.45pt] (axis cs:66.5,0) -- (axis cs:66.5,-0.0018);
+  \draw[line width=0.45pt] (axis cs:68.5,0) -- (axis cs:68.5,-0.0018);
+  \draw[line width=0.45pt] (axis cs:70.5,0) -- (axis cs:70.5,-0.0018);
+  \draw[line width=0.45pt] (axis cs:72.5,0) -- (axis cs:72.5,-0.0018);
+  \draw[line width=0.45pt] (axis cs:74.5,0) -- (axis cs:74.5,-0.0018);
+  \draw[line width=0.45pt] (axis cs:76.5,0) -- (axis cs:76.5,-0.0018);
+  \node[anchor=north, inner sep=0pt, font=\tiny] at (axis cs:54.5,-0.0028) {54.5};
+  \node[anchor=north, inner sep=0pt, font=\tiny] at (axis cs:56.5,-0.0028) {56.5};
+  \node[anchor=north, inner sep=0pt, font=\tiny] at (axis cs:58.5,-0.0028) {58.5};
+  \node[anchor=north, inner sep=0pt, font=\tiny] at (axis cs:60.5,-0.0028) {60.5};
+  \node[anchor=north, inner sep=0pt, font=\tiny] at (axis cs:62.5,-0.0028) {62.5};
+  \node[anchor=north, inner sep=0pt, font=\tiny] at (axis cs:64.5,-0.0028) {64.5};
+  \node[anchor=north, inner sep=0pt, font=\tiny] at (axis cs:66.5,-0.0028) {66.5};
+  \node[anchor=north, inner sep=0pt, font=\tiny] at (axis cs:68.5,-0.0028) {68.5};
+  \node[anchor=north, inner sep=0pt, font=\tiny] at (axis cs:70.5,-0.0028) {70.5};
+  \node[anchor=north, inner sep=0pt, font=\tiny] at (axis cs:72.5,-0.0028) {72.5};
+  \node[anchor=north, inner sep=0pt, font=\tiny] at (axis cs:74.5,-0.0028) {74.5};
+  \node[anchor=north, inner sep=0pt, font=\tiny] at (axis cs:76.5,-0.0028) {76.5};
+  \draw[line width=0.45pt] (axis cs:53.55,0.03) -- (axis cs:53.40,0.03);
+  \draw[line width=0.45pt] (axis cs:53.55,0.05) -- (axis cs:53.40,0.05);
+  \draw[line width=0.45pt] (axis cs:53.55,0.07) -- (axis cs:53.40,0.07);
+  \frequencyylabel[-4pt]{53.55}{0.03}{0.03}
+  \frequencyylabel[-4pt]{53.55}{0.05}{0.05}
+  \frequencyylabel[-4pt]{53.55}{0.07}{0.07}
+\end{axis}
+\end{tikzpicture}

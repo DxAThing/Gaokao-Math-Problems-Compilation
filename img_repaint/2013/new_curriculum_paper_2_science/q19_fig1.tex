@@ -1,0 +1,67 @@
+% Statistics source: 2013新课标II理卷原始 PDF 第2页第19题；矢量路径给出五个组距为 10 t 的柱高。
+% solid segments: x/y axes, x-axis break, and histogram bin outlines [100,110),...,[140,150).
+% dashed segments: reference guides at 0.010, 0.015, 0.020, 0.025, 0.030; PDF endpoints x=100,140,110,130,120 respectively.
+% Relations: bar heights are frequency densities for the market-demand intervals; labels stay outside bars.
+\begin{tikzpicture}
+  \begin{axis}[
+    width=8.8cm,
+    height=5.1cm,
+    axis lines=none,
+    xmin=96.8,
+    xmax=156,
+    ymin=-0.0035,
+    ymax=0.035,
+    ticks=none,
+    clip=false,
+  ]
+    \addplot[
+      ybar interval,
+      draw=black,
+      fill=none,
+      line width=0.45pt,
+    ] coordinates {
+      (100,0.010) (110,0.020) (120,0.030) (130,0.025) (140,0.015) (150,0)
+    };
+
+    \draw[black,-Stealth,line width=0.65pt] (axis cs:97.2,0) -- (axis cs:153.7,0);
+    \draw[black,-Stealth,line width=0.65pt] (axis cs:97.2,0) -- (axis cs:97.2,0.0335);
+    \draw[black,line width=0.55pt]
+      (axis cs:98.0,-0.0009) -- (axis cs:98.35,0.0009)
+      -- (axis cs:98.7,-0.0009) -- (axis cs:99.05,0.0009)
+      -- (axis cs:99.4,-0.0009) -- (axis cs:99.75,0.0009);
+
+    \draw[dashed,line width=0.45pt] (axis cs:97.2,0.010) -- (axis cs:100,0.010);
+    \draw[dashed,line width=0.45pt] (axis cs:97.2,0.015) -- (axis cs:140,0.015);
+    \draw[dashed,line width=0.45pt] (axis cs:97.2,0.020) -- (axis cs:110,0.020);
+    \draw[dashed,line width=0.45pt] (axis cs:97.2,0.025) -- (axis cs:130,0.025);
+    \draw[dashed,line width=0.45pt] (axis cs:97.2,0.030) -- (axis cs:120,0.030);
+
+    \node[anchor=south west,inner sep=0pt,font=\small,align=center]
+      at (axis cs:97.0,0.0315) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:153.9,-0.0002) {市场需求量};
+    \node[anchor=north east,inner sep=0pt,font=\small] at (axis cs:97.2,-0.0001) {0};
+
+    \draw[line width=0.4pt] (axis cs:100,0) -- (axis cs:100,-0.0007);
+    \draw[line width=0.4pt] (axis cs:110,0) -- (axis cs:110,-0.0007);
+    \draw[line width=0.4pt] (axis cs:120,0) -- (axis cs:120,-0.0007);
+    \draw[line width=0.4pt] (axis cs:130,0) -- (axis cs:130,-0.0007);
+    \draw[line width=0.4pt] (axis cs:140,0) -- (axis cs:140,-0.0007);
+    \draw[line width=0.4pt] (axis cs:150,0) -- (axis cs:150,-0.0007);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:100,-0.0009) {100};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:110,-0.0009) {110};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:120,-0.0009) {120};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:130,-0.0009) {130};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:140,-0.0009) {140};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:150,-0.0009) {150};
+    \draw[line width=0.4pt] (axis cs:97.2,0.010) -- (axis cs:96.8,0.010);
+    \draw[line width=0.4pt] (axis cs:97.2,0.015) -- (axis cs:96.8,0.015);
+    \draw[line width=0.4pt] (axis cs:97.2,0.020) -- (axis cs:96.8,0.020);
+    \draw[line width=0.4pt] (axis cs:97.2,0.025) -- (axis cs:96.8,0.025);
+    \draw[line width=0.4pt] (axis cs:97.2,0.030) -- (axis cs:96.8,0.030);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:96.55,0.010) {0.010};
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:96.55,0.015) {0.015};
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:96.55,0.020) {0.020};
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:96.55,0.025) {0.025};
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:96.55,0.030) {0.030};
+  \end{axis}
+\end{tikzpicture}

@@ -1,0 +1,50 @@
+% Source PDF: source/普通高考/2013/2013新课标1文(河南,河北,山西).pdf, page 1, question 7.
+% pdfimages -list found no embedded bitmap; redraw from the rendered source page.
+% Independent grid evidence: tmp/review_2013_ncp1_liberal/grid/page1_grid100.jpg;
+% comparison crop: tmp/review_2013_ncp1_liberal/crops/q7_original_tight.png.
+% Elements: rounded 开始/结束 terminals; input parallelogram 输入 t; decision diamond t<1;
+% process rectangles s=3t and s=4t-t^2; output parallelogram 输出 s; 是/否 labels.
+% Node-edge list: 开始→输入 t→t<1?; 是→s=3t→merge→输出 s;
+% 否→s=4t-t^2→merge→输出 s; 输出 s→结束. No other edges are present.
+% This is a schematic program flowchart; coordinates preserve topology, not measured scale.
+% solid segments: all node outlines and directed connectors; dashed segments: none.
+% labels: all node text has local zero paragraph indent and is centered; 是/否 labels sit
+% beside their corresponding branches and clear of diamond borders and arrow shafts.
+\usetikzlibrary{shapes.geometric,shapes.misc}
+\begin{tikzpicture}[
+    baseline,
+    >=Stealth,
+    line width=0.55pt,
+    line cap=round,
+    line join=round,
+    font=\normalsize,
+    flowbox/.style={draw, anchor=center, minimum height=0.68cm,
+        inner xsep=4pt, inner ysep=2pt, align=center,
+        execute at begin node={\setlength{\parindent}{0pt}}},
+    terminal/.style={flowbox, rounded rectangle, minimum width=1.30cm},
+    io/.style={flowbox, trapezium, trapezium left angle=72, trapezium right angle=108},
+    decision/.style={flowbox, diamond, aspect=2.9, inner sep=0pt},
+]
+    \node[terminal] (start) at (0,0) {开始};
+    \node[io, minimum width=2.15cm] (input) at (0,-1.15) {输入 $t$};
+    \node[decision, minimum width=3.25cm, minimum height=0.88cm] (test) at (0,-2.52)
+        {$t<1$};
+    \node[flowbox, minimum width=1.85cm] (yesproc) at (-2.35,-3.78) {$s=3t$};
+    \node[flowbox, minimum width=3.00cm] (noproc) at (2.35,-3.78) {$s=4t-t^2$};
+    \node[io, minimum width=2.05cm] (output) at (0,-5.08) {输出 $s$};
+    \node[terminal] (finish) at (0,-6.25) {结束};
+
+    \draw[->] (start.south) -- (input.north);
+    \draw[->] (input.south) -- (test.north);
+    \draw[->] (test.west) -- (-2.35,-2.52) -- (yesproc.north);
+    \draw[->] (test.east) -- (2.35,-2.52) -- (noproc.north);
+
+    % Both branch results merge immediately above 输出 s, as in the source chart.
+    \coordinate (merge) at (0,-4.38);
+    \draw (yesproc.south) -- (-2.35,-4.38) -- (merge);
+    \draw (noproc.south) -- (2.35,-4.38) -- (merge);
+    \draw[->] (merge) -- (output.north);
+    \draw[->] (output.south) -- (finish.north);
+    \node[anchor=south east, inner sep=1pt] at (-1.42,-2.30) {是};
+    \node[anchor=south west, inner sep=1pt] at (1.40,-2.30) {否};
+\end{tikzpicture}

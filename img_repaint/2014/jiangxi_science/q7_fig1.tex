@@ -1,0 +1,54 @@
+% Source: source/普通高考/2014/2014江西理.pdf, page 1, question 7.
+% pdfimages -list found no embedded bitmap; the program flowchart is vector artwork.
+% Grid evidence: tmp/redraw_flowchart_2014_jiangxi_science/grid/page1_grid100.jpg
+% and tmp/redraw_flowchart_2014_jiangxi_science/crop/q7_block_grid50.jpg.
+% Node-edge list: start -> i=1,S=0 -> S=S+lg(i/(i+2)) -> test(S<-1?);
+% test(是) -> output i -> finish; test(否) -> i=i+2 -> loop back before
+% the summation node. No other connectors are present.
+% All segments are solid directed connectors; node text is locally zero-indented
+% and centered. The drawing is schematic and preserves the source topology.
+
+\begin{tikzpicture}[
+    >=Stealth,
+    x=0.90cm,
+    y=0.88cm,
+    line width=0.45pt,
+    line cap=round,
+    line join=round,
+    font=\small,
+    flowbox/.style={draw, minimum height=0.68cm, inner xsep=2pt, inner ysep=1pt,
+        align=center, execute at begin node={\setlength{\parindent}{0pt}}},
+    terminal/.style={flowbox, rounded corners=0.14cm, minimum width=1.25cm},
+    process/.style={flowbox, minimum width=2.20cm},
+    decision/.style={flowbox, diamond, aspect=3.2, minimum width=2.70cm,
+        minimum height=1.00cm},
+    io/.style={flowbox, trapezium, minimum width=1.65cm, minimum height=0.78cm,
+        trapezium left angle=70, trapezium right angle=110},
+]
+    \path[use as bounding box] (-7.35,1.65) rectangle (6.65,6.15);
+
+    \node[terminal] (start) at (-6.60,5.30) {开始};
+    \node[process, minimum width=2.10cm] (init) at (-4.70,5.30) {$i=1,S=0$};
+    \node[process, minimum width=3.00cm, minimum height=0.86cm] (sum)
+        at (-1.90,5.30) {$S=S+\lg\dfrac{i}{i+2}$};
+    \node[decision] (test) at (1.30,5.30) {$S<-1$};
+    \node[io] (output) at (3.85,5.30) {输出 $i$};
+    \node[terminal] (finish) at (5.75,5.30) {结束};
+    \node[process, minimum width=2.20cm] (increment) at (-0.20,2.85) {$i=i+2$};
+
+    % Main horizontal flow and the terminating yes branch.
+    \draw[->] (start.east) -- (init.west);
+    \draw[->] (init.east) -- (sum.west);
+    \draw[->] (sum.east) -- (test.west);
+    \draw[->] (test.east) -- node[above=2pt] {是} (output.west);
+    \draw[->] (output.east) -- (finish.west);
+
+    % 否 branch updates i and loops to the summation node.
+    \draw[->] (test.south) -- (2.20,2.85) -- (increment.east);
+    \coordinate (loopLeft) at (-3.90,2.85);
+    \coordinate (loopRise) at (-3.90,5.30);
+    \coordinate (loopJoin) at (-3.56,5.30);
+    \draw[->] (increment.west) -- (loopLeft) -- (loopRise);
+    \draw (loopRise) -- (loopJoin);
+    \node[anchor=east, inner sep=0pt] at (1.12,4.72) {否};
+\end{tikzpicture}

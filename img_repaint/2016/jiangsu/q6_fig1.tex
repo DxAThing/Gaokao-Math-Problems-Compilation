@@ -1,0 +1,59 @@
+% Source PDF: source/普通高考/2016/2016江苏.pdf, page 1 (vector flowchart; no embedded bitmap).
+% Type: algorithm flowchart; topology and labels are the mathematical content.
+% Elements: start/end rounded boxes; assignments a=1, b=9, a=a+4, b=b-2;
+% decision a>b; output parallelogram 输出 a; directed connectors and Y/N labels.
+% Relations: start→a=1→b=9→a>b; Y→输出 a→结束; N→a=a+4→b=b-2→the main vertical edge above a>b.
+% solid segments: every box border and directed connector; dashed segments: none.
+% Node-edge checklist: start→aset, aset→bset, bset→test, test(Y)→out, out→finish,
+% test(N)→aupdate, aupdate→bupdate, bupdate→left-loop merge→test. Each edge
+% appears exactly once; the return edge joins the main vertical path above test.
+% All nodes use explicit compact xsep/ysep, local zero paragraph indent, and centered labels.
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=0.45pt,
+  line join=round,
+  line cap=round,
+  font=\normalsize,
+  flowtext/.style={anchor=center, align=center, inner sep=0pt,
+                   execute at begin node={\setlength{\parindent}{0pt}}},
+  every node/.style={flowtext},
+  flowbox/.style={flowtext, draw, minimum height=0.72cm, inner xsep=3pt, inner ysep=2pt},
+  assign/.style={flowbox, minimum width=1.75cm},
+  startstop/.style={flowbox, rounded corners=0.18cm, minimum width=1.60cm},
+  decision/.style={flowbox, diamond, aspect=2.7, minimum width=3.55cm,
+                   minimum height=1.00cm},
+]
+  % Main column and right-hand update column follow the source topology.
+  \path[use as bounding box] (-3.55,0.00) rectangle (5.25,10.55);
+
+  \node[startstop] (start) at (0,10.15) {开始};
+  \node[assign] (aset) at (0,8.85) {\(a\leftarrow1\)};
+  \node[assign] (bset) at (0,7.25) {\(b\leftarrow9\)};
+  \node[decision] (test) at (0,4.45) {\(a>b\)};
+
+  \node[assign, minimum width=2.85cm] (bupdate) at (3.95,6.05)
+    {\(b\leftarrow b-2\)};
+  \node[assign, minimum width=2.85cm] (aupdate) at (3.95,4.45)
+    {\(a\leftarrow a+4\)};
+
+  % The output box is a true parallelogram, matching the source I/O shape.
+  \coordinate (out) at (0,2.15);
+  \draw (-1.05,2.55) -- (1.35,2.55) -- (1.05,1.75)
+    -- (-1.35,1.75) -- cycle;
+  \node[minimum width=2.40cm, minimum height=0.72cm] at (out) {输出 \(a\)};
+  \node[startstop] (finish) at (0,0.55) {结束};
+
+  % Main sequence.
+  \draw[->] (start.south) -- (aset.north);
+  \draw[->] (aset.south) -- (bset.north);
+  \draw[->] (bset.south) -- (test.north);
+
+  % Branch labels and exits.
+  \draw[->] (test.south) -- node[flowtext, right] {Y} (-0.0,2.55);
+  \draw[->] (0,1.75) -- (finish.north);
+
+  % N branch and its upward return edge.
+  \draw[->] (test.east) -- node[flowtext, above, pos=0.15] {N} (aupdate.west);
+  \draw[->] (aupdate.north) -- (bupdate.south);
+  \draw[->] (bupdate.west) -- (0,6.05);
+\end{tikzpicture}

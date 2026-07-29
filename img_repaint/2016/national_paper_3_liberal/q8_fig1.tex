@@ -1,0 +1,58 @@
+% Source PDF: source/普通高考/2016/2016全国3文(云南,广西,贵州).pdf, page 1, question 8.
+% PDF embedded-bitmap attempt: pdfimages -list found no embedded bitmap; source flowchart is vector.
+% Grid evidence: 300dpi no-grid page render with 100px coarse and 50px/25px local grid;
+% comparison crop is taken from the no-grid page render.
+% Elements: rounded start/end terminals, input/output parallelograms, five process rectangles,
+% one decision diamond, directed connectors, and the left return branch.
+% Node-edge list: start -> input -> initialize -> a=b-a -> b=b-a -> a=b+a -> update;
+% update -> decision; decision --是--> output -> end; decision --否--> a=b-a.
+% The loop-back horizontal arrow merges into the single vertical entry above a=b-a;
+% no loop segment connects to output, and no dashed segments are present.
+% All node text is centered with local parindent=0pt; branch labels are attached to connectors.
+
+\begin{tikzpicture}[
+    >=Stealth,
+    line width=0.45pt,
+    line cap=round,
+    line join=round,
+    font=\normalsize,
+    flowtext/.style={anchor=center, align=center,
+        execute at begin node={\setlength{\parindent}{0pt}}},
+    flowbox/.style={flowtext, draw, minimum height=0.58cm, inner xsep=3pt, inner ysep=2pt},
+    terminal/.style={flowbox, rounded corners=0.14cm, minimum width=1.20cm},
+    io/.style={flowbox, trapezium, trapezium left angle=72, trapezium right angle=72,
+        minimum width=2.35cm, minimum height=0.65cm},
+    process/.style={flowbox, minimum width=2.45cm},
+    decision/.style={flowbox, diamond, aspect=2.45, minimum width=3.05cm,
+        minimum height=0.95cm},
+]
+    \node[terminal] (start) at (0,9.55) {开始};
+    \node[io] (input) at (0,8.42) {输入 $a,b$};
+    \node[process, minimum width=3.10cm] (init) at (0,7.22) {$n=0,s=0$};
+    \node[process] (suba) at (0,5.98) {$a=b-a$};
+    \node[process] (subb) at (0,4.78) {$b=b-a$};
+    \node[process] (adda) at (0,3.58) {$a=b+a$};
+    \node[process, minimum width=4.15cm] (update) at (0,2.30)
+        {$s=s+a,n=n+1$};
+    \node[decision] (test) at (0,1.02) {$s>16$};
+    \node[io, minimum width=1.80cm] (output) at (0,-0.35) {输出 $n$};
+    \node[terminal] (finish) at (0,-1.60) {结束};
+
+    % Keep the left return arrow and the sole downward entry arrow visually
+    % separated while sharing one trunk junction above a=b-a.
+    \coordinate (loopjoin) at ([yshift=0.36cm]suba.north);
+
+    % Main sequence and the single vertical entry into the first update box.
+    \draw[->] (start) -- (input);
+    \draw[->] (input) -- (init);
+    \draw[->] (init) -- (loopjoin) -- (suba.north);
+    \draw[->] (suba) -- (subb);
+    \draw[->] (subb) -- (adda);
+    \draw[->] (adda) -- (update);
+    \draw[->] (update) -- (test);
+    \draw[->] (test) -- node[flowtext, right] {是} (output);
+    \draw[->] (output) -- (finish);
+
+    % The 否 branch loops left and returns to the shared entry above a=b-a.
+    \draw[->] (test.west) -- node[flowtext, above] {否} ++(-1.65cm,0) |- (loopjoin);
+\end{tikzpicture}

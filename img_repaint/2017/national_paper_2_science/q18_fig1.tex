@@ -1,0 +1,158 @@
+% original_pdf: source/普通高考/2017/2017全国2理(甘肃,青海,内蒙古,黑龙江,吉林,辽宁,海南,宁夏,新疆,陕西,重庆).pdf
+% page: 1 (question 18, paired frequency-distribution histograms)
+% evidence: tmp/redraw_2017_national2_science/page-1.png rendered at 180dpi;
+% 100px coarse grid used to locate both graphs, then the final comparison crop came
+% from the ungridded page. PDF embedded-image extraction was attempted; no image
+% asset was available for this chart.
+% elements: two frequency-density histograms, axes with breaks, dashed reference
+% levels, interval ticks from the source and method labels below each x-axis.
+% relations/data: old method intervals [25,30), [30,35), [35,40), [40,45),
+% [45,50), [50,55), [55,60), [60,65), [65,70) have heights
+% 0.012, 0.014, 0.024, 0.034, 0.040, 0.032, 0.020, 0.012, 0.012;
+% new method intervals [35,40), [40,45), [45,50), [50,55), [55,60),
+% [60,65), [65,70) have heights 0.004, 0.020, 0.044, 0.068, 0.046,
+% 0.010, 0.008. Every interval has width 5 kg.
+% solid segments: bars, axes, ticks, arrows and x-axis breaks.
+% dashed segments: each labelled horizontal reference level ends at its corresponding bar's left edge.
+\begin{tikzpicture}[baseline]
+\begin{axis}[
+    width=5.2cm,
+    height=4.8cm,
+    axis lines=none,
+    clip=false,
+    xmin=-5,
+    xmax=75,
+    ymin=-0.010,
+    ymax=0.045,
+    ticks=none,
+]
+    \draw[dashed,line width=0.4pt] (axis cs:0,0.012) -- (axis cs:25,0.012);
+    \draw[dashed,line width=0.4pt] (axis cs:0,0.014) -- (axis cs:30,0.014);
+    \draw[dashed,line width=0.4pt] (axis cs:0,0.020) -- (axis cs:55,0.020);
+    \draw[dashed,line width=0.4pt] (axis cs:0,0.024) -- (axis cs:35,0.024);
+    \draw[dashed,line width=0.4pt] (axis cs:0,0.032) -- (axis cs:50,0.032);
+    \draw[dashed,line width=0.4pt] (axis cs:0,0.034) -- (axis cs:40,0.034);
+    \draw[dashed,line width=0.4pt] (axis cs:0,0.040) -- (axis cs:45,0.040);
+    \addplot[ybar interval,draw=black,fill=white,line width=0.5pt] coordinates {
+        (25,0.012) (30,0.014) (35,0.024) (40,0.034) (45,0.040)
+        (50,0.032) (55,0.020) (60,0.012) (65,0.012) (70,0)
+    };
+    \draw[->,line width=0.6pt] (axis cs:0,0) -- (axis cs:75,0);
+    \draw[->,line width=0.6pt] (axis cs:0,0) -- (axis cs:0,0.0435);
+    \fill[white] (axis cs:7,-0.001) -- (axis cs:9,0.001)
+        -- (axis cs:11,-0.001) -- (axis cs:13,0.001)
+        -- (axis cs:15,-0.001) -- (axis cs:15,0.001)
+        -- (axis cs:7,0.001) -- cycle;
+    \draw[line width=0.6pt] (axis cs:7,-0.001) -- (axis cs:9,0.001)
+        -- (axis cs:11,-0.001) -- (axis cs:13,0.001)
+        -- (axis cs:15,-0.001);
+    \node[anchor=south west,inner sep=0pt,font=\small] at (axis cs:3,0.042) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:74,-0.0003) {箱产量/kg};
+    \draw[line width=0.35pt] (axis cs:0,0) -- (axis cs:0,-0.0015);
+    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:0,-0.0022) {0};
+    \draw[line width=0.35pt] (axis cs:25,0) -- (axis cs:25,-0.0015);
+    \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:25,-0.0022) {25};
+    \draw[line width=0.35pt] (axis cs:30,0) -- (axis cs:30,-0.0015);
+    \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:30,-0.0022) {30};
+    \draw[line width=0.35pt] (axis cs:35,0) -- (axis cs:35,-0.0015);
+    \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:35,-0.0022) {35};
+    \draw[line width=0.35pt] (axis cs:40,0) -- (axis cs:40,-0.0015);
+    \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:40,-0.0022) {40};
+    \draw[line width=0.35pt] (axis cs:45,0) -- (axis cs:45,-0.0015);
+    \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:45,-0.0022) {45};
+    \draw[line width=0.35pt] (axis cs:50,0) -- (axis cs:50,-0.0015);
+    \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:50,-0.0022) {50};
+    \draw[line width=0.35pt] (axis cs:55,0) -- (axis cs:55,-0.0015);
+    \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:55,-0.0022) {55};
+    \draw[line width=0.35pt] (axis cs:60,0) -- (axis cs:60,-0.0015);
+    \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:60,-0.0022) {60};
+    \draw[line width=0.35pt] (axis cs:65,0) -- (axis cs:65,-0.0015);
+    \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:65,-0.0022) {65};
+    \draw[line width=0.35pt] (axis cs:70,0) -- (axis cs:70,-0.0015);
+    \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:70,-0.0022) {70};
+    \draw[line width=0.35pt] (axis cs:0,0.012) -- (axis cs:-2,0.012);
+    \node[anchor=east,inner sep=0pt,font=\tiny,yshift=-0.8pt] at (axis cs:-2.5,0.012) {0.012};
+    \draw[line width=0.35pt] (axis cs:0,0.014) -- (axis cs:-2,0.014);
+    \node[anchor=east,inner sep=0pt,font=\tiny,yshift=0.8pt] at (axis cs:-2.5,0.014) {0.014};
+    \draw[line width=0.35pt] (axis cs:0,0.020) -- (axis cs:-2,0.020);
+    \node[anchor=east,inner sep=0pt,font=\tiny] at (axis cs:-2.5,0.020) {0.020};
+    \draw[line width=0.35pt] (axis cs:0,0.024) -- (axis cs:-2,0.024);
+    \node[anchor=east,inner sep=0pt,font=\tiny] at (axis cs:-2.5,0.024) {0.024};
+    \draw[line width=0.35pt] (axis cs:0,0.032) -- (axis cs:-2,0.032);
+    \node[anchor=east,inner sep=0pt,font=\tiny,yshift=-0.8pt] at (axis cs:-2.5,0.032) {0.032};
+    \draw[line width=0.35pt] (axis cs:0,0.034) -- (axis cs:-2,0.034);
+    \node[anchor=east,inner sep=0pt,font=\tiny,yshift=0.8pt] at (axis cs:-2.5,0.034) {0.034};
+    \draw[line width=0.35pt] (axis cs:0,0.040) -- (axis cs:-2,0.040);
+    \node[anchor=east,inner sep=0pt,font=\tiny] at (axis cs:-2.5,0.040) {0.040};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:47,-0.0072) {旧养殖法};
+\end{axis}
+\begin{scope}[xshift=6.2cm]
+\begin{axis}[
+    width=5.2cm,
+    height=4.8cm,
+    axis lines=none,
+    clip=false,
+    xmin=-5,
+    xmax=75,
+    ymin=-0.010,
+    ymax=0.075,
+    ticks=none,
+]
+    \draw[dashed,line width=0.4pt] (axis cs:0,0.004) -- (axis cs:35,0.004);
+    \draw[dashed,line width=0.4pt] (axis cs:0,0.008) -- (axis cs:65,0.008);
+    \draw[dashed,line width=0.4pt] (axis cs:0,0.010) -- (axis cs:60,0.010);
+    \draw[dashed,line width=0.4pt] (axis cs:0,0.020) -- (axis cs:40,0.020);
+    \draw[dashed,line width=0.4pt] (axis cs:0,0.044) -- (axis cs:45,0.044);
+    \draw[dashed,line width=0.4pt] (axis cs:0,0.046) -- (axis cs:55,0.046);
+    \draw[dashed,line width=0.4pt] (axis cs:0,0.068) -- (axis cs:50,0.068);
+    \addplot[ybar interval,draw=black,fill=white,line width=0.5pt] coordinates {
+        (35,0.004) (40,0.020) (45,0.044) (50,0.068)
+        (55,0.046) (60,0.010) (65,0.008) (70,0)
+    };
+    \draw[->,line width=0.6pt] (axis cs:0,0) -- (axis cs:75,0);
+    \draw[->,line width=0.6pt] (axis cs:0,0) -- (axis cs:0,0.0735);
+    \fill[white] (axis cs:7,-0.001) -- (axis cs:9,0.001)
+        -- (axis cs:11,-0.001) -- (axis cs:13,0.001)
+        -- (axis cs:15,-0.001) -- (axis cs:15,0.001)
+        -- (axis cs:7,0.001) -- cycle;
+    \draw[line width=0.6pt] (axis cs:7,-0.001) -- (axis cs:9,0.001)
+        -- (axis cs:11,-0.001) -- (axis cs:13,0.001)
+        -- (axis cs:15,-0.001);
+    \node[anchor=south west,inner sep=0pt,font=\small] at (axis cs:3,0.072) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:74,-0.0003) {箱产量/kg};
+    \draw[line width=0.35pt] (axis cs:0,0) -- (axis cs:0,-0.0015);
+    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:0,-0.0022) {0};
+    \draw[line width=0.35pt] (axis cs:35,0) -- (axis cs:35,-0.0015);
+    \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:35,-0.0022) {35};
+    \draw[line width=0.35pt] (axis cs:40,0) -- (axis cs:40,-0.0015);
+    \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:40,-0.0022) {40};
+    \draw[line width=0.35pt] (axis cs:45,0) -- (axis cs:45,-0.0015);
+    \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:45,-0.0022) {45};
+    \draw[line width=0.35pt] (axis cs:50,0) -- (axis cs:50,-0.0015);
+    \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:50,-0.0022) {50};
+    \draw[line width=0.35pt] (axis cs:55,0) -- (axis cs:55,-0.0015);
+    \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:55,-0.0022) {55};
+    \draw[line width=0.35pt] (axis cs:60,0) -- (axis cs:60,-0.0015);
+    \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:60,-0.0022) {60};
+    \draw[line width=0.35pt] (axis cs:65,0) -- (axis cs:65,-0.0015);
+    \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:65,-0.0022) {65};
+    \draw[line width=0.35pt] (axis cs:70,0) -- (axis cs:70,-0.0015);
+    \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:70,-0.0022) {70};
+    \draw[line width=0.35pt] (axis cs:0,0.004) -- (axis cs:-2,0.004);
+    \node[anchor=east,inner sep=0pt,font=\tiny] at (axis cs:-2.5,0.004) {0.004};
+    \draw[line width=0.35pt] (axis cs:0,0.008) -- (axis cs:-2,0.008);
+    \node[anchor=east,inner sep=0pt,font=\tiny,yshift=-0.8pt] at (axis cs:-2.5,0.008) {0.008};
+    \draw[line width=0.35pt] (axis cs:0,0.010) -- (axis cs:-2,0.010);
+    \node[anchor=east,inner sep=0pt,font=\tiny,yshift=0.8pt] at (axis cs:-2.5,0.010) {0.010};
+    \draw[line width=0.35pt] (axis cs:0,0.020) -- (axis cs:-2,0.020);
+    \node[anchor=east,inner sep=0pt,font=\tiny] at (axis cs:-2.5,0.020) {0.020};
+    \draw[line width=0.35pt] (axis cs:0,0.044) -- (axis cs:-2,0.044);
+    \node[anchor=east,inner sep=0pt,font=\tiny,yshift=-0.8pt] at (axis cs:-2.5,0.044) {0.044};
+    \draw[line width=0.35pt] (axis cs:0,0.046) -- (axis cs:-2,0.046);
+    \node[anchor=east,inner sep=0pt,font=\tiny,yshift=0.8pt] at (axis cs:-2.5,0.046) {0.046};
+    \draw[line width=0.35pt] (axis cs:0,0.068) -- (axis cs:-2,0.068);
+    \node[anchor=east,inner sep=0pt,font=\tiny] at (axis cs:-2.5,0.068) {0.068};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:47,-0.0072) {新养殖法};
+\end{axis}
+\end{scope}
+\end{tikzpicture}

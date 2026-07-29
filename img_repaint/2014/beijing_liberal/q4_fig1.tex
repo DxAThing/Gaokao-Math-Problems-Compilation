@@ -1,0 +1,56 @@
+% Source PDF: source/普通高考/2014/2014北京文.pdf, page 1 (question 4).
+% PDF embedded-bitmap attempt: pdfimages -list found no image objects; vector flowchart.
+% Node-edge list: start -> k=0,S=0 -> k<3; (是) -> S=S+2^k -> k=k+1
+% -> loop-back to the central connector; (否) -> 输出 S -> 结束.
+% solid segments: all node outlines and directed connectors; dashed segments: none.
+% labels: all node text uses zero paragraph indent and geometric centering;
+% 是/否 labels sit beside their corresponding branches without manual spacing.
+\begin{tikzpicture}[
+    >=Stealth,
+    line width=0.55pt,
+    line cap=round,
+    line join=round,
+    every node/.style={
+        inner xsep=4pt,
+        inner ysep=2pt,
+        anchor=center,
+        align=center,
+        execute at begin node={\setlength{\parindent}{0pt}\noindent},
+    },
+    flowbox/.style={draw,anchor=center,align=center,
+        execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+]
+    \node[flowbox, rounded corners=5pt, minimum width=1.20cm, minimum height=0.58cm]
+      (start) at (0,8.55) {开始};
+    \node[flowbox, minimum width=2.55cm, minimum height=0.62cm]
+      (init) at (0,7.25) {$k=0,S=0$};
+    \node[flowbox, diamond, aspect=2.45, inner sep=0pt,
+      minimum width=3.65cm, minimum height=1.05cm]
+      (check) at (0,4.35) {$k<3$};
+    \node[flowbox, minimum width=2.70cm, minimum height=0.62cm]
+      (update) at (0,3.00) {$S=S+2^k$};
+    \node[flowbox, minimum width=2.35cm, minimum height=0.62cm]
+      (increment) at (0,1.70) {$k=k+1$};
+    \node[flowbox, trapezium, trapezium left angle=75, trapezium right angle=105,
+      minimum width=2.35cm, minimum height=0.70cm]
+      (output) at (4.00,3.00) {输出 $S$};
+    \node[flowbox, rounded corners=5pt, minimum width=1.20cm, minimum height=0.58cm]
+      (finish) at (4.00,1.70) {结束};
+
+    % Main flow and the false branch to output.
+    \draw[->] (start.south) -- (init.north);
+    \draw[->] (init.south) -- (check.north);
+    \draw[->] (check.south) -- node[left=2pt] {是} (update.north);
+    \draw[->] (update.south) -- (increment.north);
+    \draw[->] (check.east) -- (output.north |- check.east) -- (output.north);
+    \node[anchor=south] at (1.35,4.58) {否};
+    \draw[->] (output.south) -- (finish.north);
+
+    % The true branch loops left and rejoins the central connector above the test.
+    \coordinate (loopBottom) at (-2.80,1.70);
+    \coordinate (loopTop) at (-2.80,6.45);
+    \coordinate (mergeLeft) at (-2.80,6.45);
+    \coordinate (merge) at (0,6.45);
+    \draw (increment.west) -- (loopBottom) -- (loopTop) -- (mergeLeft);
+    \draw[->] (mergeLeft) -- (merge);
+\end{tikzpicture}

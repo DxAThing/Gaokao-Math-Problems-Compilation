@@ -1,0 +1,67 @@
+% Source PDF: source/普通高考/2016/2016四川文.pdf, page 1, question 8.
+% PDF embedded-bitmap attempt: pdfimages -list returned no image objects; comparison is from a 300-DPI no-grid page render.
+% Node-edge list (checked against the source): start -> input(n,x) -> v=1 -> i=n-1 -> test(i>=0?);
+% test --否--> output(v) -> finish; test --是--> v=vx+i -> i=i-1 -> test.
+% Elements: rounded start/end terminals, input/output parallelograms, three rectangular process nodes,
+% one decision diamond, directed connectors and branch labels 是/否; all lines are solid.
+% Labels are centered in nodes with local zero paragraph indent; branch labels sit clear of connectors.
+
+\begin{tikzpicture}[
+  x=1cm,y=1cm,>=Stealth,baseline,
+  every node/.style={align=center,
+    execute at begin node=\setlength{\parindent}{0pt}},
+  line width=0.45pt,line cap=round,line join=round,
+  process/.style={draw,inner sep=0pt,minimum height=0.55cm},
+]
+  % Compact source-proportional frame; coordinates encode topology, not pixels.
+  \path[use as bounding box] (0,0) rectangle (5.2,9.1);
+
+  \node[draw,rounded corners=0.14cm,minimum width=1.05cm,minimum height=0.58cm]
+    (start) at (1.60,8.55) {开始};
+
+  % Input parallelogram: its label is centered at the geometric center.
+  \coordinate (input-tl) at (0.62,8.03);
+  \coordinate (input-tr) at (2.58,8.03);
+  \coordinate (input-br) at (2.38,7.43);
+  \coordinate (input-bl) at (0.42,7.43);
+  \draw (input-tl) -- (input-tr) -- (input-br) -- (input-bl) -- cycle;
+  \node at (1.50,7.73) {输入 $n,x$};
+
+  \node[process,minimum width=1.08cm] (vinit) at (1.60,6.72) {$v=1$};
+  \node[process,minimum width=1.62cm] (iinit) at (1.60,5.72) {$i=n-1$};
+  \coordinate (loopjoin) at (1.60,4.95);
+
+  \node[draw,diamond,aspect=3.0,inner sep=0pt,minimum width=2.55cm,minimum height=0.80cm]
+    (test) at (1.60,3.58) {$i\geq 0?$};
+
+  \node[process,minimum width=1.72cm] (update) at (3.72,4.90) {$v=vx+i$};
+  \node[process,minimum width=1.62cm] (decrement) at (3.72,6.00) {$i=i-1$};
+
+  % Output parallelogram, left-leaning as in the source.
+  \coordinate (out-tl) at (0.92,2.42);
+  \coordinate (out-tr) at (2.28,2.42);
+  \coordinate (out-br) at (2.08,1.82);
+  \coordinate (out-bl) at (0.72,1.82);
+  \draw (out-tl) -- (out-tr) -- (out-br) -- (out-bl) -- cycle;
+  \node at (1.50,2.12) {输出 $v$};
+
+  \node[draw,rounded corners=0.14cm,minimum width=1.05cm,minimum height=0.58cm]
+    (finish) at (1.60,0.72) {结束};
+
+  % Main path and the no branch enter the output independently.
+  \draw[->] (start.south) -- (1.60,8.03);
+  \draw[->] (1.60,7.43) -- (vinit.north);
+  \draw[->] (vinit.south) -- (iinit.north);
+  \draw[->] (iinit.south) -- (loopjoin) -- (test.north);
+  \draw[->] (test.south) -- (1.60,2.42);
+  \draw[->] (1.60,1.82) -- (finish.north);
+
+  % Yes branch: decision -> update -> decrement -> loopback to the main trunk.
+  \draw[-] (test.east) -- (3.72,3.58) -- (3.72,4.55);
+  \draw[->] (3.72,4.55) -- (update.south);
+  \draw[->] (update.north) -- (decrement.south);
+  \draw[->] (decrement.west) -- (1.60,6.00) -- (1.60,4.95);
+
+  \node[anchor=west,inner sep=0pt] at (2.76,3.88) {是};
+  \node[anchor=west,inner sep=0pt] at (1.84,2.93) {否};
+\end{tikzpicture}

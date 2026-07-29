@@ -1,0 +1,52 @@
+% original_pdf: source/普通高考/2015/2015四川理.pdf
+% page: 1 (question 3)
+% embedded_bitmap_attempt: pdfimages -list returned no embedded images; redraw from rendered page
+% evidence: tmp/review_2015_sichuan_science/grid/page1_grid100.png; original crop tmp/review_2015_sichuan_science/crop/q3_original_final.png
+% Elements: rounded 开始/结束 terminals; rectangles k=1, k=k+1, and S=sin(k*pi/6);
+% decision diamond k>4?; output parallelogram 输出 S; solid arrows and 是/否 labels.
+% Node-edge list: 开始→k=1→k=k+1→k>4?; k>4? 是→S=sin(k*pi/6)→输出 S→结束;
+% k>4? 否→up/right loop→the connector immediately before k=k+1, then repeats the test.
+% This is a schematic program flowchart; coordinates preserve topology, not measured scale.
+% solid segments: all node outlines and directed connectors; dashed segments: none.
+% labels: node text is centered with local zero paragraph indent; 是 is beside the
+% downward branch and 否 is beside the right loop branch, clear of arrows and borders.
+\usetikzlibrary{shapes.geometric,shapes.misc}
+\begin{tikzpicture}[
+    baseline,
+    >=Stealth,
+    line width=0.55pt,
+    line cap=round,
+    line join=round,
+    font=\normalsize,
+    flowbox/.style={draw, anchor=center, minimum height=0.68cm,
+        inner xsep=4pt, inner ysep=2pt, align=center,
+        execute at begin node={\setlength{\parindent}{0pt}}},
+    terminal/.style={flowbox, rounded rectangle, minimum width=1.28cm},
+    io/.style={flowbox, trapezium, trapezium left angle=72, trapezium right angle=108},
+    decision/.style={flowbox, diamond, aspect=2.9, inner sep=0pt},
+]
+    % Main vertical program path.
+    \node[terminal] (start) at (0,0) {开始};
+    \node[flowbox, minimum width=1.42cm] (init) at (0,-1.18) {$k=1$};
+    \node[flowbox, minimum width=2.30cm] (increment) at (0,-2.48) {$k=k+1$};
+    \node[decision, minimum width=3.45cm, minimum height=0.92cm] (test) at (0,-4.00) {$k>4?$};
+    \node[flowbox, minimum width=3.25cm, minimum height=1.10cm] (sum) at (0,-5.48)
+        {$S=\sin\dfrac{k\pi}{6}$};
+    \node[io, minimum width=2.35cm] (output) at (0,-6.93) {输出 $S$};
+    \node[terminal] (finish) at (0,-8.10) {结束};
+
+    \draw[->] (start.south) -- (init.north);
+    \draw[->] (init.south) -- (increment.north);
+    \draw[->] (increment.south) -- (test.north);
+    \draw[->] (test.south) -- node[left=2pt] {是} (sum.north);
+    \draw[->] (sum.south) -- (output.north);
+    \draw[->] (output.south) -- (finish.north);
+
+    % The 否 branch rises on the right and returns left to the connector before k=k+1.
+    % The return arrow joins the same trunk point shown in the source flowchart.
+    \coordinate (loop-right) at (2.70,-4.00);
+    \coordinate (loop-top) at (2.70,-1.78);
+    \coordinate (loop-merge) at (0,-1.78);
+    \draw[->] (test.east) -- (loop-right) -- (loop-top) -- (loop-merge);
+    \node[anchor=south west, inner sep=1pt] at (1.72,-3.62) {否};
+\end{tikzpicture}

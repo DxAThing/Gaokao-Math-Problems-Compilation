@@ -1,0 +1,77 @@
+% Source PDF: source/普通高考/2012/2012广东理.pdf
+% Page: 1
+% PDF embedded bitmap attempt: no matching image objects; the page is vector text/line art.
+% Grid evidence: tmp/repaint_grid_2012_gd_s/page1_grid100.png and tmp/repaint_grid_2012_gd_s/q17_block_grid50.png
+% Page crop evidence: tmp/repaint_crops_2012_gd_s/q17_orig.png, cropped from the no-grid page render.
+% Elements: x-axis with origin 0 and a break before score 40; y-axis; six histogram bars over [40,50), [50,60), [60,70), [70,80), [80,90), [90,100]; dashed horizontal guides at 0.006, 0.010, x, and 0.054; labels 频率/组距 and 成绩.
+% Relations: bar heights are 0.006, 0.010, x, 0.054, x, 0.006 respectively. Since each score interval has width 10 and the six frequencies sum to 1, 10(0.006+0.010+x+0.054+x+0.006)=1, so x=0.012.
+% solid segments: bar outlines, x/y axis arrows, tick marks, and the x-axis break stroke.
+% dashed segments: horizontal reference lines at y=0.006, 0.010, 0.012, and 0.054.
+% labels: y label sits above-left of the vertical axis; x label sits beyond the 100 tick; score ticks stay below the axis and y labels stay left of the axis.
+\begin{tikzpicture}[baseline]
+\begin{axis}[
+    width=7.8cm,
+    height=4.9cm,
+    axis lines=none,
+    clip=false,
+    xmin=-8,
+    xmax=112,
+    ymin=-0.0025,
+    ymax=0.060,
+    ticks=none,
+]
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.006) -- (axis cs:100,0.006);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.010) -- (axis cs:100,0.010);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.012) -- (axis cs:100,0.012);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.054) -- (axis cs:100,0.054);
+
+    \addplot[
+        ybar interval,
+        draw=black,
+        fill=white,
+        line width=0.7pt,
+    ] coordinates {
+        (40,0.006)
+        (50,0.010)
+        (60,0.012)
+        (70,0.054)
+        (80,0.012)
+        (90,0.006)
+        (100,0)
+    };
+
+    \draw[->,line width=0.75pt] (axis cs:0,0) -- (axis cs:110,0);
+    \draw[->,line width=0.75pt] (axis cs:0,0) -- (axis cs:0,0.059);
+
+    \fill[white] (axis cs:10,-0.0021) -- (axis cs:12,0.0008) -- (axis cs:14,-0.0021) -- (axis cs:16,0.0008) -- (axis cs:18,-0.0021) -- cycle;
+    \draw[line width=0.75pt] (axis cs:10,-0.0021) -- (axis cs:12,0.0008) -- (axis cs:14,-0.0021) -- (axis cs:16,0.0008) -- (axis cs:18,-0.0021);
+
+    \node[anchor=south west,inner sep=0pt,font=\small] at (axis cs:3,0.0555) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:104,-0.0002) {成绩};
+
+    \draw[line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.0010);
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:0,-0.0012) {0};
+    \draw[line width=0.45pt] (axis cs:40,0) -- (axis cs:40,-0.0010);
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:40,-0.0012) {40};
+    \draw[line width=0.45pt] (axis cs:50,0) -- (axis cs:50,-0.0010);
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:50,-0.0012) {50};
+    \draw[line width=0.45pt] (axis cs:60,0) -- (axis cs:60,-0.0010);
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:60,-0.0012) {60};
+    \draw[line width=0.45pt] (axis cs:70,0) -- (axis cs:70,-0.0010);
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:70,-0.0012) {70};
+    \draw[line width=0.45pt] (axis cs:80,0) -- (axis cs:80,-0.0010);
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:80,-0.0012) {80};
+    \draw[line width=0.45pt] (axis cs:90,0) -- (axis cs:90,-0.0010);
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:90,-0.0012) {90};
+    \draw[line width=0.45pt] (axis cs:100,0) -- (axis cs:100,-0.0010);
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:100,-0.0012) {100};
+
+    \draw[line width=0.45pt] (axis cs:0,0.006) -- (axis cs:-3,0.006);
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-4,0.006) {0.006};
+    \draw[line width=0.45pt] (axis cs:0,0.010) -- (axis cs:-3,0.010);
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-4,0.010) {0.010};
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-4,0.012) {$x$};
+    \draw[line width=0.45pt] (axis cs:0,0.054) -- (axis cs:-3,0.054);
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-4,0.054) {0.054};
+\end{axis}
+\end{tikzpicture}

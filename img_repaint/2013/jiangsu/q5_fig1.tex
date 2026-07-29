@@ -1,0 +1,55 @@
+% original_pdf: source/普通高考/2013/2013江苏.pdf
+% page: 1 (question 5)
+% embedded_bitmap_attempt: pdfimages -list returned no embedded images; redraw from rendered page
+% evidence: tmp/review_2013_jiangsu/grid/page_grid100.png,
+%   tmp/review_2013_jiangsu/grid/page_grid50.png,
+%   tmp/review_2013_jiangsu/crop/q5_orig_fig_final.png (no-grid crop)
+% elements: rounded 开始/结束 terminals; assignment rectangles n←1 and a←2; condition diamond a<20?;
+% right-branch assignments a←3a+2 and n←n+1; output parallelogram 输出 n; solid arrows and Y/N labels.
+% node-edge list: 开始→n←1→a←2→a<20?; Y→a←3a+2→n←n+1→left loop-back before a<20?;
+% N→输出 n→结束. No other edges are present.
+% solid segments: all node borders and directed connectors; dashed segments: none.
+% Labels are centered in nodes with local zero paragraph indentation and compact padding.
+
+\begin{tikzpicture}[
+  baseline,
+  >=stealth,
+  x=1cm,
+  y=1.3cm,
+  line width=0.55pt,
+  line cap=round,
+  line join=round,
+  font=\normalsize,
+  every node/.style={anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flowbox/.style={draw,minimum height=0.68cm,inner xsep=4pt,inner ysep=2pt,
+    align=center,execute at begin node={\setlength{\parindent}{0pt}}},
+  terminal/.style={flowbox,rounded corners=0.20cm,minimum width=1.24cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
+    minimum height=0.76cm},
+  decision/.style={flowbox,shape=diamond,aspect=2.8,inner xsep=4pt,inner ysep=2pt,
+    minimum height=1.00cm},
+  branchlabel/.style={anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}}
+]
+  % Main vertical path.
+  \node[terminal] (start) at (0,9.35) {开始};
+  \node[flowbox,minimum width=1.55cm] (initn) at (0,7.92) {$n\leftarrow 1$};
+  \node[flowbox,minimum width=1.55cm] (inita) at (0,6.48) {$a\leftarrow 2$};
+  \node[decision,minimum width=3.75cm] (test) at (0,4.98) {$a<20?$};
+  \node[io,minimum width=2.55cm] (output) at (0,3.42) {输出 $n$};
+  \node[terminal] (finish) at (0,1.95) {结束};
+  \node[flowbox,minimum width=2.85cm] (updatea) at (3.85,4.98) {$a\leftarrow 3a+2$};
+  \node[flowbox,minimum width=2.75cm] (updaten) at (3.85,5.95) {$n\leftarrow n+1$};
+
+  \draw[->] (start.south) -- (initn.north);
+  \draw[->] (initn.south) -- (inita.north);
+  \draw[->] (inita.south) -- (test.north);
+  \draw[->] (test.south) -- node[branchlabel,right=2pt] {N} (output.north);
+  \draw[->] (output.south) -- (finish.north);
+  \draw[->] (test.east) -- node[branchlabel,above=2pt] {Y} (updatea.west);
+  \draw[->] (updatea.north) -- (updaten.south);
+  \draw[->] (updaten.west) -- (0,5.95);
+
+  \path[use as bounding box] (-2.15,1.58) rectangle (4.90,9.78);
+\end{tikzpicture}

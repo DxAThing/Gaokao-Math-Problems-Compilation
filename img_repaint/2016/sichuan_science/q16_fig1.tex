@@ -1,0 +1,82 @@
+% Source PDF: source/普通高考/2016/2016四川理.pdf
+% Page: 1; PDF embedded bitmap attempt: pdfimages -list found no embedded images.
+% Grid evidence: tmp/redraw_2016_sichuan_science/page1_grid100.png and tmp/redraw_2016_sichuan_science/q16_block_grid50.png; no-grid source crop: tmp/redraw_2016_sichuan_science/q16_orig_crop.png
+% Elements: frequency/group-width y-axis, monthly-water-use x-axis, nine adjacent half-ton bins, reference guides at 0.04, 0.08, 0.12, 0.16, a, 0.40 and 0.52.
+% Relations: bins are [0,0.5), [0.5,1), ..., [4,4.5); heights read from the original as 0.08, 0.16, a, 0.40, 0.52, a, 0.12, 0.08, 0.04, with a=0.30 from the accompanying solution.
+% solid segments: bar outlines, axes, arrowheads, tick marks.
+% dashed segments: horizontal reference guides at every labeled density level.
+% labels: two-line y-axis label above-left; density labels at the y ticks; half-ton labels below the x axis; monthly-water-use label to the right.
+\begin{tikzpicture}[baseline]
+\begin{axis}[
+    width=8.8cm,
+    height=5.4cm,
+    axis lines=none,
+    clip=false,
+    xmin=-0.35,
+    xmax=4.95,
+    ymin=-0.065,
+    ymax=0.575,
+    ticks=none,
+]
+    % Horizontal reference guides are drawn first so the white bars mask them as in the source.
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.04) -- (axis cs:4.0,0.04);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.08) -- (axis cs:3.5,0.08);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.12) -- (axis cs:3.0,0.12);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.16) -- (axis cs:0.5,0.16);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.30) -- (axis cs:1.0,0.30);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.40) -- (axis cs:1.5,0.40);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.52) -- (axis cs:2.0,0.52);
+
+    \addplot[
+        ybar interval,
+        draw=black,
+        fill=white,
+        line width=0.65pt,
+    ] coordinates {
+        (0,0.08)
+        (0.5,0.16)
+        (1,0.30)
+        (1.5,0.40)
+        (2,0.52)
+        (2.5,0.30)
+        (3,0.12)
+        (3.5,0.08)
+        (4,0.04)
+        (4.5,0.00)
+    };
+
+    \draw[->,line width=0.75pt] (axis cs:0,0) -- (axis cs:4.78,0);
+    \draw[->,line width=0.75pt] (axis cs:0,0) -- (axis cs:0,0.56);
+
+    \draw[line width=0.45pt] (axis cs:0.5,0) -- (axis cs:0.5,-0.009);
+    \draw[line width=0.45pt] (axis cs:1,0) -- (axis cs:1,-0.009);
+    \draw[line width=0.45pt] (axis cs:1.5,0) -- (axis cs:1.5,-0.009);
+    \draw[line width=0.45pt] (axis cs:2,0) -- (axis cs:2,-0.009);
+    \draw[line width=0.45pt] (axis cs:2.5,0) -- (axis cs:2.5,-0.009);
+    \draw[line width=0.45pt] (axis cs:3,0) -- (axis cs:3,-0.009);
+    \draw[line width=0.45pt] (axis cs:3.5,0) -- (axis cs:3.5,-0.009);
+    \draw[line width=0.45pt] (axis cs:4,0) -- (axis cs:4,-0.009);
+    \draw[line width=0.45pt] (axis cs:4.5,0) -- (axis cs:4.5,-0.009);
+
+    \node[anchor=north,inner sep=0pt] at (axis cs:0,-0.014) {0};
+    \node[anchor=north,inner sep=0pt] at (axis cs:0.5,-0.014) {0.5};
+    \node[anchor=north,inner sep=0pt] at (axis cs:1,-0.014) {1};
+    \node[anchor=north,inner sep=0pt] at (axis cs:1.5,-0.014) {1.5};
+    \node[anchor=north,inner sep=0pt] at (axis cs:2,-0.014) {2};
+    \node[anchor=north,inner sep=0pt] at (axis cs:2.5,-0.014) {2.5};
+    \node[anchor=north,inner sep=0pt] at (axis cs:3,-0.014) {3};
+    \node[anchor=north,inner sep=0pt] at (axis cs:3.5,-0.014) {3.5};
+    \node[anchor=north,inner sep=0pt] at (axis cs:4,-0.014) {4};
+    \node[anchor=north,inner sep=0pt] at (axis cs:4.5,-0.014) {4.5};
+
+    \node[anchor=east,inner sep=1pt,font=\scriptsize] at (axis cs:-0.035,0.04) {0.04};
+    \node[anchor=east,inner sep=1pt,font=\scriptsize] at (axis cs:-0.035,0.08) {0.08};
+    \node[anchor=east,inner sep=1pt,font=\scriptsize] at (axis cs:-0.035,0.12) {0.12};
+    \node[anchor=east,inner sep=1pt,font=\scriptsize] at (axis cs:-0.035,0.16) {0.16};
+    \node[anchor=east,inner sep=1pt,font=\scriptsize] at (axis cs:-0.035,0.30) {$a$};
+    \node[anchor=east,inner sep=1pt,font=\scriptsize] at (axis cs:-0.035,0.40) {0.40};
+    \node[anchor=east,inner sep=1pt,font=\scriptsize] at (axis cs:-0.035,0.52) {0.52};
+    \node[anchor=south west,inner sep=0pt] at (axis cs:0.06,0.565) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=west,inner sep=0pt] at (axis cs:4.52,0.025) {月均用水量（吨）};
+\end{axis}
+\end{tikzpicture}

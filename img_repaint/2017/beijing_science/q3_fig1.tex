@@ -1,0 +1,44 @@
+% original_pdf: source/普通高考/2017/2017北京理.pdf
+% page: 1
+% embedded_bitmap_attempt: pdfimages -list returned no embedded images; redraw from rendered page
+% evidence: tmp/redraw_flowchart_2017_beijing_science/page-1_grid100.jpg; q3_block_grid50.jpg; original comparison crop q3_original.png
+% elements: 开始/结束 rounded terminators, initialization and update rectangles, assignment rectangle, condition diamond, output parallelogram, solid arrows, 是/否 branch labels
+% node-edge list: 开始→(k=0,s=1)→k<3?; 是→k=k+1→s=(s+1)/s→(trunk return)→k<3?;
+% 否→输出 s→结束. No other connecting segments are present.
+% solid segments: trunk arrows, decision yes branch, update-to-assignment arrow, assignment-to-trunk return, output-to-end arrow; dashed segments: none
+% labels: Chinese labels centered in nodes; 是 above the right branch, 否 below the decision; arrows use filled triangular heads
+\usetikzlibrary{shapes.misc}
+\begin{tikzpicture}[baseline,>=stealth,inner sep=1pt,yscale=1.15,
+    every node/.style={font=\normalsize,align=center,
+      execute at begin node=\setlength{\parindent}{0pt}},
+    flowbox/.style={draw,line width=0.55pt,align=center,minimum height=0.62cm,
+      inner xsep=4pt,inner ysep=2pt},
+    io/.style={draw,line width=0.55pt,shape=trapezium,
+      trapezium left angle=75,trapezium right angle=105,
+      minimum width=2.45cm,minimum height=0.68cm,inner xsep=4pt,inner ysep=2pt,align=center},
+    flowarrow/.style={->,line width=0.55pt}]
+  % Main vertical flow. Coordinates are a semantic schematic, not measured page pixels.
+  \node[draw,rounded rectangle,line width=0.55pt,minimum width=1.18cm,minimum height=0.62cm] (start) at (0,0) {开始};
+  \node[flowbox,minimum width=2.55cm] (init) at (0,-1.15) {$k=0,\ s=1$};
+  \node[draw,diamond,line width=0.55pt,aspect=2.85,minimum width=3.35cm,minimum height=0.82cm] (test) at (0,-4.55) {$k<3?$};
+  % The output node is a left-leaning parallelogram; text is centered by the node itself.
+  \node[io] (output) at (0,-5.97) {输出 $s$};
+  \node[draw,rounded rectangle,line width=0.55pt,minimum width=1.18cm,minimum height=0.62cm] (end) at (0,-7.08) {结束};
+
+  \draw[flowarrow] (start.south) -- (init.north);
+  \draw[flowarrow] (init.south) -- (test.north);
+  \draw[flowarrow] (test.south) -- (output.north);
+  % The output-to-end edge remains on the vertical trunk, as in the source.
+  % Use the central trunk explicitly; the trapezium's south anchor is offset
+  % by its slanted side and would otherwise create a false diagonal connector.
+  \draw[flowarrow] (0,-6.31) -- (end.north);
+
+  % Loop branch: yes from the decision, increment k, update s, then return left.
+  \node[flowbox,minimum width=2.16cm] (increment) at (3.12,-3.30) {$k=k+1$};
+  \node[flowbox,minimum width=2.30cm,minimum height=0.98cm] (assign) at (3.12,-1.95) {$s=\displaystyle\frac{s+1}{s}$};
+  \draw[flowarrow] (test.east) -- (3.12,-4.55) -- (3.12,-3.64) -- (increment.south);
+  \draw[flowarrow] (increment.north) -- (assign.south);
+  \draw[flowarrow] (assign.west) -- (0,-1.95);
+  \node[anchor=south west] at (1.48,-4.39) {是};
+  \node[anchor=north west] at (0.32,-4.83) {否};
+\end{tikzpicture}

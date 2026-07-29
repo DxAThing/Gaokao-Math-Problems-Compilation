@@ -1,0 +1,54 @@
+% Source PDF: source/普通高考/2013/2013福建理.pdf, page 1.
+% PDF embedded bitmap attempt: pdfimages -list returned no images; the flowchart is vector page content.
+% Grid evidence: tmp/review_2013_fujian_science/grids/page-grid100.png (100px major grid).
+% No-grid source crop: tmp/review_2013_fujian_science/crops/q6_source_tight.png.
+% Complete directed edges: start -> (S=0,i=1) -> input k -> (S=1+2S) -> (i=i+1) -> test (i>k);
+% test yes -> output S -> finish; test no -> independent right loop -> update entry above S=1+2S.
+% solid segments: all node borders and connectors/loop route; dashed segments: none.
+% Labels: 是 is beside the downward true branch, 否 is above the right false loop branch;
+% node text is centered with local zero indentation and no manual horizontal offset.
+\begin{tikzpicture}[
+  x=1cm,
+  y=0.8cm,
+  >=Stealth,
+  line width=0.45pt,
+  every node/.style={font=\normalsize,anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flow/.style={draw=black,anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  arrow/.style={-{Stealth[length=2.1mm,width=1.35mm]},line width=0.45pt}
+]
+  \node[flow,rounded corners=0.18cm,minimum width=1.35cm,minimum height=0.72cm]
+    (start) at (0,10.2) {开始};
+  \node[flow,rectangle,minimum width=2.90cm,minimum height=0.80cm]
+    (init) at (0,8.75) {$S=0,i=1$};
+  \node[flow,trapezium,trapezium left angle=75,trapezium right angle=105,
+    minimum width=2.50cm,minimum height=0.78cm]
+    (input) at (0,7.25) {输入 $k$};
+  \node[flow,rectangle,minimum width=2.85cm,minimum height=0.82cm]
+    (update) at (0,5.60) {$S=1+2S$};
+  \node[flow,rectangle,minimum width=2.25cm,minimum height=0.78cm]
+    (increment) at (0,4.10) {$i=i+1$};
+  \node[flow,diamond,aspect=2.9,minimum width=3.60cm,minimum height=1.16cm]
+    (test) at (0,2.55) {$i>k?$};
+  \node[flow,trapezium,trapezium left angle=75,trapezium right angle=105,
+    minimum width=2.45cm,minimum height=0.80cm]
+    (output) at (0,0.85) {输出 $S$};
+  \node[flow,rounded corners=0.18cm,minimum width=1.35cm,minimum height=0.72cm]
+    (finish) at (0,-0.62) {结束};
+
+  \coordinate (merge-level) at (0,6.50);
+  \draw[arrow] (start.south) -- (init.north);
+  \draw[arrow] (init.south) -- (input.north);
+  \draw (input.south) -- (merge-level);
+  \draw[arrow] (merge-level) -- (update.north);
+  \draw[arrow] (update.south) -- (increment.north);
+  \draw[arrow] (increment.south) -- (test.north);
+  \draw[arrow] (test.south) -- node[right=2pt] {是} (output.north);
+  \draw[arrow] (output.south) -- (finish.north);
+
+  % False branch is an independent right-side loop, returning to the update entry.
+  \draw (test.east) -- (3.15,2.55) -- (3.15,6.50);
+  \draw[arrow] (3.15,6.50) -- (merge-level);
+  \node[anchor=west,inner sep=0pt] at (2.20,3.18) {否};
+\end{tikzpicture}

@@ -1,0 +1,50 @@
+% Source PDF: source/普通高考/2014/2014江西文.pdf, page 1, question 8.
+% Vector flowchart; original page crop is the visual truth.
+% Node-edge list: 开始→(i=1,S=0)→S=S+lg(i/(i+2))→S<-1?;
+% 是→输出 i→结束；否→i=i+2→left return→merge on the main stem before the log node.
+% The return's upward arrow and the main horizontal arrow are separate; all
+% node text is centered with zero paragraph indent and no dashed edges.
+
+\begin{tikzpicture}[
+  >=Stealth,
+  x=1cm,y=1cm,
+  line width=0.45pt,
+  line cap=round,line join=round,
+  font=\normalsize,
+  flowtext/.style={anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  every node/.style={flowtext},
+  flowbox/.style={flowtext,draw,minimum height=.68cm,inner xsep=3pt,inner ysep=2pt},
+  terminal/.style={flowbox,rounded corners=.16cm,minimum width=1.25cm},
+  process/.style={flowbox},
+  decision/.style={flowbox,diamond,aspect=2.7,minimum width=3.40cm,minimum height=.90cm,inner sep=0pt},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,trapezium right angle=72,
+    minimum height=.72cm},
+]
+  \path[use as bounding box] (-8.00,0.00) rectangle (9.50,2.35);
+
+  \node[terminal] (start) at (-7.00,1.70) {开始};
+  \node[process,minimum width=1.85cm] (init) at (-4.45,1.70) {$i=1,S=0$};
+  \node[process,minimum width=2.95cm,minimum height=.88cm] (logterm) at (-1.00,1.70)
+    {$S=S+\lg\dfrac{i}{i+2}$};
+  \node[decision] (test) at (3.00,1.70) {$S<-1$};
+  \node[io,minimum width=1.55cm] (output) at (6.00,1.70) {输出 $i$};
+  \node[terminal] (finish) at (8.25,1.70) {结束};
+  \node[process,minimum width=1.55cm] (inc) at (-1.00,0.42) {$i=i+2$};
+
+  % Main horizontal sequence and true/output branch.
+  \draw[->] (start.east) -- (init.west);
+  \draw[->] (init.east) -- (logterm.west);
+  \draw[->] (logterm.east) -- (test.west);
+  \draw[->] (test.east) -- node[flowtext,above] {是} (output.west);
+  \draw[->] (output.east) -- (finish.west);
+
+  % False branch descends to i=i+2, then returns left and upward to the main stem.
+  \coordinate (false-turn) at (3.00,0.42);
+  \draw[->] (test.south) -- node[flowtext,right] {否} (false-turn)
+    -- (inc.east);
+  \coordinate (loop-left) at (-3.00,0.42);
+  \coordinate (loop-entry) at (-3.00,1.40);
+  \draw (inc.west) -- (loop-left) -- (loop-entry);
+  \draw[->] (loop-entry) -- (-3.00,1.70);
+\end{tikzpicture}

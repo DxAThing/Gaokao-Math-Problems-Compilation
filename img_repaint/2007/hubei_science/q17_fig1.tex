@@ -1,0 +1,41 @@
+% Source PDF: source/普通高考/2007/2007湖北理.pdf
+% Page: 1
+% PDF embedded bitmap attempt: pdfimages -list returned no image objects; the figure is vector content.
+% Grid evidence: tmp/redraw_2007_hubei/page-1_grid100.png and tmp/redraw_2007_hubei/q17_block_grid50.png.
+% Page crop evidence: tmp/redraw_2007_hubei/q17_orig.png (no-grid crop from the source page).
+% Elements: horizontal axis labeled 纤度 with arrow, vertical axis labeled 频率/组距 with arrow, origin 0,
+%   x-axis break mark, and ticks 1.30, 1.34, 1.38, 1.42, 1.46, 1.50, 1.54.
+% Relations: the x-axis carries the fiber-fineness class boundaries; the y-axis is frequency density.
+%   The source intentionally leaves the histogram plotting field blank for the student to complete.
+% solid segments: x-axis, y-axis, arrowheads, tick marks, zigzag break
+% dashed segments: none
+% Label avoidance: axis labels are placed outside the plot; tick labels remain below the x-axis.
+\begin{tikzpicture}
+\begin{axis}[
+    width=7.0cm,
+    height=4.2cm,
+    xmin=0,
+    xmax=3.1,
+    ymin=0,
+    ymax=1.05,
+    axis lines=left,
+    axis line style={->,black,line width=0.45pt},
+    xtick={0,0.45,0.85,1.25,1.65,2.05,2.45,2.85},
+    xticklabels={0,1.30,1.34,1.38,1.42,1.46,1.50,1.54},
+    ytick=\empty,
+    tick style={black,line width=0.4pt},
+    tick align=outside,
+    xlabel=\empty,
+    ylabel=\empty,
+    xticklabel style={font=\scriptsize},
+    clip=false,
+]
+\node[anchor=south west,inner sep=0pt] at (axis cs:0.08,1.02) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+\node[anchor=south east,inner sep=0pt] at (axis cs:3.08,0.10) {纤度};
+% The source has a broken x-axis between 0 and the first class boundary.
+\draw[white,line width=2.0pt] (axis cs:0.18,0) -- (axis cs:0.40,0);
+\draw[black,line width=0.45pt]
+    (axis cs:0.18,0) -- (axis cs:0.22,0.07) -- (axis cs:0.26,-0.07) --
+    (axis cs:0.30,0.07) -- (axis cs:0.34,-0.07) -- (axis cs:0.38,0.07) -- (axis cs:0.40,0);
+\end{axis}
+\end{tikzpicture}

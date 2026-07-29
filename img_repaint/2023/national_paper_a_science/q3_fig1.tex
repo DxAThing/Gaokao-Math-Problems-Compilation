@@ -1,0 +1,62 @@
+% Source PDF: source/普通高考/2023/2023全国甲理(广西,贵州,西藏,四川).pdf, page 1.
+% PDF embedded-bitmap attempt: no image objects were present (pdfimages -list); comparison is from the no-grid page render.
+% Elements: start/end rounded terminals, input/output parallelograms, decision diamond, three process rectangles,
+% and directed connectors. Values and labels are read directly from the source flowchart and q3 solution.
+% Node-edge list (checked against the source PDF): start -> input -> test;
+% test --是--> A=A+B -> B=A+B -> k=k+1 -> test; test --否--> output B -> finish.
+% solid segments: all flowchart borders and connectors; no dashed segments.
+% labels: 是 is right of the downward decision connector, 否 is above the right exit connector; node text is centered.
+
+\begin{tikzpicture}[
+    >=Stealth,
+    line width=0.45pt,
+    line cap=round,
+    line join=round,
+    font=\normalsize,
+    flowtext/.style={anchor=center, align=center,
+        execute at begin node={\setlength{\parindent}{0pt}}},
+    every node/.style={flowtext},
+    node distance=0pt,
+    flowbox/.style={flowtext, draw, minimum height=0.62cm,
+        inner xsep=4pt, inner ysep=2pt},
+    terminal/.style={flowbox, rounded corners=2pt, minimum width=1.35cm},
+    io/.style={flowbox, trapezium, trapezium left angle=72, trapezium right angle=108,
+        minimum width=5.7cm},
+    process/.style={flowbox, minimum width=2.65cm},
+    decision/.style={flowbox, diamond, aspect=2.5, inner sep=0pt,
+        minimum width=3.45cm, minimum height=1.0cm},
+]
+    \node[terminal] (start) {开始};
+    \node[io, below=0.48cm of start] (input) {输入 $n=3,A=1,B=2,k=1$};
+    \node[decision, below=0.48cm of input] (test) {$k\le n$};
+    \node[process, below=0.60cm of test] (addA) {$A=A+B$};
+    \node[process, below=0.52cm of addA] (addB) {$B=A+B$};
+    \node[process, below=0.52cm of addB] (inc) {$k=k+1$};
+    \node[io, below=0.62cm of inc, minimum width=1.80cm] (output) {输出 $B$};
+    \node[terminal, below=0.48cm of output] (finish) {结束};
+    % Keep the horizontal loop arrow visibly above the independent downward
+    % main-flow arrow, as in the source apex geometry.
+    % Separate the right-pointing loop arrowhead from the independent
+    % downward arrowhead on the input-to-test stem.
+    \coordinate (loopjoin) at ([yshift=0.56cm]test.north);
+
+    \draw[->] (start) -- (input);
+    % The source has two distinct apex arrows: a downward main-flow arrow
+    % into the decision and a horizontal right-pointing loop-return arrow
+    % entering the stem above it.
+    \draw[->] (input) -- (test.north);
+    \draw[->] (test) -- node[flowtext, right] {是} (addA);
+    \draw[->] (addA) -- (addB);
+    \draw[->] (addB) -- (inc);
+    \draw[->] (output) -- (finish);
+
+    % 否 branch exits around the loop body and enters 输出 B independently.
+    % The no-branch runs right, down, then left; its final short segment enters
+    % the output box vertically, without sharing the loop body's update edge.
+    \draw[-] (test.east) -- node[flowtext, above] {否} ++(1.55cm,0)
+        |- ([yshift=0.18cm]output.north);
+    \draw[->] ([yshift=0.18cm]output.north) -- (output.north);
+
+    % Loopback from k=k+1 to the decision; the arrow enters the decision from above.
+    \draw[->] (inc.west) -- ++(-1.55cm,0) |- (loopjoin);
+\end{tikzpicture}

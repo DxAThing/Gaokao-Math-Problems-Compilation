@@ -1,0 +1,35 @@
+% 统计图真值来自 source/普通高考/2014/2014新课标1文(河南,河北,山西).pdf 第 1 页、题 18。
+% 原卷图为待作答的频率分布直方图坐标模板，未绘制任何柱体；此处保留空网格。
+% x 轴标签依次为 0、75、85、95、105、115、125（0 到 75 为原卷断轴后的等距位置）。
+% y 轴刻度为 0.002 至 0.040，轴标题为“频率/组距”；网格覆盖全部刻度位置。
+\begin{tikzpicture}
+\begin{axis}[
+  width=10.0cm,
+  height=8.0cm,
+  xmin=0, xmax=6.6,
+  ymin=0, ymax=0.044,
+  axis lines=left,
+  axis line style={-stealth},
+  xtick={0,1,2,3,4,5,6},
+  xticklabels={0,75,85,95,105,115,125},
+  ytick={0.002,0.004,0.006,0.008,0.010,0.012,0.014,0.016,0.018,0.020,0.022,0.024,0.026,0.028,0.030,0.032,0.034,0.036,0.038,0.040},
+  yticklabels={0.002,0.004,0.006,0.008,0.010,0.012,0.014,0.016,0.018,0.020,0.022,0.024,0.026,0.028,0.030,0.032,0.034,0.036,0.038,0.040},
+  ytick scale label code/.code={},
+  tick style={draw=none},
+  grid=major,
+  major grid style={draw=gray!58,line width=0.3pt},
+  xlabel={质量指标值},
+  xlabel style={at={(axis description cs:1.06,-0.03)},anchor=west},
+  ylabel={},
+  clip=false,
+]
+\node[anchor=south] at (axis description cs:0.05,1.03) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+% 原卷在 0 与 75 之间使用断轴锯齿，覆盖连续基线后补回锯齿。
+\draw[white,line width=1.3pt] (axis cs:0.18,0) -- (axis cs:0.80,0);
+\draw[line width=0.45pt]
+  (axis cs:0.18,0) -- (axis cs:0.28,0.00045) --
+  (axis cs:0.38,-0.00005) -- (axis cs:0.48,0.00045) --
+  (axis cs:0.58,-0.00005) -- (axis cs:0.68,0.00045) --
+  (axis cs:0.80,0);
+\end{axis}
+\end{tikzpicture}

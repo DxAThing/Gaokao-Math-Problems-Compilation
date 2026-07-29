@@ -1,0 +1,52 @@
+% Source PDF: source/普通高考/2017/2017全国1文(河南,河北,山西,江西,湖北,湖南,广东,安徽,福建).pdf
+% Page: 1; pdfimages -list found no embedded image objects (the flowchart is vector line art).
+% Grid evidence: tmp/redraw_flowchart_2017_national_paper_1_liberal/grid/page1_grid100.jpg
+% Page crop evidence: tmp/redraw_flowchart_2017_national_paper_1_liberal/grid/q10_block3.png
+% Elements: start/end rounded boxes, input/output parallelograms, A-computation box,
+%   blank update box, decision diamond, arrows, and the 是/否 branch labels.
+% Relations: Start -> input n=0 -> A=3^n-2^n -> decision; 是 loops through
+%   the blank update box back to A, while 否 -> output n -> End.
+% solid segments: all flow lines, node outlines, and arrowheads.
+% dashed segments: none; labels: branch labels sit beside the corresponding
+%   diamond exits and all node text is centered with math in the computation nodes.
+\begin{tikzpicture}[
+  baseline,
+  >=Stealth,
+  every node/.style={anchor=center, align=center,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+]
+  % Main vertical chain (top to bottom, matching the source layout).
+  \node[draw, rounded corners=3pt, minimum width=1.28cm,
+        minimum height=0.68cm, inner sep=2pt] (start) at (4.25,7.18) {开始};
+  \node[draw, shape=trapezium, trapezium left angle=72, trapezium right angle=108,
+        trapezium stretches=true, minimum width=2.85cm, minimum height=0.68cm,
+        inner sep=2pt] (input) at (4.25,5.86) {输入 \(n=0\)};
+  \node[draw, minimum width=2.62cm, minimum height=0.68cm, inner sep=2pt]
+        (compute) at (4.25,4.58) {\(A=3^n-2^n\)};
+  \node[draw, shape=diamond, aspect=2.75, minimum width=4.05cm, minimum height=1.08cm,
+        inner sep=0pt] (decision) at (4.25,3.25) {};
+  \node[draw, shape=trapezium, trapezium left angle=72, trapezium right angle=108,
+        trapezium stretches=true, minimum width=2.18cm, minimum height=0.68cm,
+        inner sep=2pt] (output) at (4.25,1.68) {输出 \(n\)};
+  \node[draw, rounded corners=3pt, minimum width=1.28cm,
+        minimum height=0.68cm, inner sep=2pt] (finish) at (4.25,0.36) {结束};
+
+  % The unlabelled update operation is intentionally left blank as in the source.
+  \node[draw, minimum width=1.90cm, minimum height=0.70cm, inner sep=0pt]
+        (update) at (1.02,4.18) {};
+
+  % Downward main-chain arrows.
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (compute.north);
+  \draw[->] (compute.south) -- (decision.north);
+  \draw[->] (decision.south) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % Yes branch: decision -> update -> back to the computation node.
+  \draw[->] (decision.west) -- (1.02,3.25) -- (1.02,3.83);
+  \draw[->] (update.north) -- (1.02,5.20) -- (4.25,5.20);
+  \node[inner sep=1pt, anchor=east] at (2.48,3.05) {是};
+
+  % No branch label sits immediately below the decision diamond.
+  \node[inner sep=1pt, anchor=north] at (4.55,2.62) {否};
+\end{tikzpicture}

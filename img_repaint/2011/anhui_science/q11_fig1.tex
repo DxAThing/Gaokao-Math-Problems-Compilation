@@ -1,0 +1,49 @@
+% Source PDF: source/普通高考/2011/2011安徽理.pdf, page 1, question 11.
+% pdfimages -list reports no embedded bitmap; the algorithm flowchart is vector/text artwork.
+% Grid evidence: tmp/review_flowchart_2011_anhui_science/grid/page-1-grid100.png and
+% tmp/review_flowchart_2011_anhui_science/grid/q11-block-grid50.png.
+% Nodes: 开始; T=0,k=0; T=T+k; T>105?; k=k+1; 输出k; 结束.
+% Directed edges: 开始 -> T=0,k=0 -> T=T+k -> T>105?; 是 -> 输出k -> 结束;
+% 否 -> k=k+1 -> left-pointing return arrow -> shared entry above T=T+k.
+% The return route is independent of the output branch and has one horizontal arrow
+% into the shared entry followed by one downward main arrow.
+\begin{tikzpicture}[
+  x=1cm,y=1cm,baseline,
+  flowarrow/.style={-{Latex[length=2.1mm,width=1.5mm]},line width=0.45pt},
+  nodebox/.style={draw,line width=0.45pt,inner sep=2pt,minimum height=.66cm,
+    anchor=center,align=center,execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  branchlabel/.style={anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  term/.style={nodebox,rounded corners=2.5pt,minimum width=1.30cm,text width=1.30cm},
+  decision/.style={nodebox,diamond,aspect=2.8,minimum width=3.85cm,minimum height=1.02cm,inner sep=1pt},
+  output/.style={nodebox,shape=trapezium,trapezium left angle=70,trapezium right angle=110,
+    minimum width=2.05cm,text width=1.80cm,minimum height=.74cm}
+]
+  \path[use as bounding box] (-3.75,-1.75) rectangle (4.45,10.40);
+
+  \node[term] (start) at (0,10.00) {开始};
+  \node[nodebox,minimum width=3.20cm,text width=3.20cm] (init) at (0,8.70) {$T=0,k=0$};
+  \node[nodebox,minimum width=2.80cm,text width=2.80cm] (sum) at (0,7.25) {$T=T+k$};
+  \node[decision] (test) at (0,5.72) {$T>105$?};
+  \node[nodebox,minimum width=2.25cm,text width=2.25cm] (inc) at (3.00,5.72) {$k=k+1$};
+  \node[output] (out) at (0,4.10) {输出 $k$};
+  \node[term] (finish) at (0,2.82) {结束};
+
+  \coordinate (sumjoin) at (0,7.98);
+  \coordinate (returntop) at (3.00,7.98);
+
+  \draw[flowarrow] (start.south) -- (init.north);
+  \draw (init.south) -- (sumjoin);
+  \draw[flowarrow] (sumjoin) -- (sum.north);
+  \draw[flowarrow] (sum.south) -- (test.north);
+
+  % Termination branch is independent of the update loop.
+  \draw[flowarrow] (test.south) -- node[right=2pt] {是} (out.north);
+  \draw[flowarrow] (out.south) -- (finish.north);
+
+  % 否 branch updates k, then returns left into the shared sum entry.
+  \draw[flowarrow] (test.east) -- (inc.west);
+  \draw (inc.north) -- (returntop);
+  \draw[flowarrow] (returntop) -- (sumjoin);
+  \node[branchlabel] at (1.88,6.35) {否};
+\end{tikzpicture}

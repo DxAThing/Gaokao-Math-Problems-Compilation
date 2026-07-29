@@ -1,0 +1,63 @@
+% Source: source/普通高考/2022/2022天津.pdf, p.1, question 4.
+% Frequency-density histogram for six temperature intervals of width 0.20 C.
+% Elements: arrowed axes; x ticks 13.55, ..., 14.75; y ticks 0,.40,.50,.60,.65,1.30,1.55;
+% six contiguous white bars with heights .40,1.30,1.55,.60,.50,.65;
+% dashed guides run from the y-axis to the left boundary of the corresponding bar.
+% Relations: each bar encodes the source interval's frequency/group-width density;
+% guides identify the labelled density levels, and the x-axis label gives global mean temperature.
+\begin{tikzpicture}[baseline]
+  \begin{axis}[
+    width=9.6cm,
+    height=8.2cm,
+    xmin=-0.70, xmax=7.2,
+    ymin=0, ymax=1.70,
+    axis lines=middle,
+    axis line style={-Stealth},
+    xtick={0,1,2,3,4,5,6},
+    xticklabels={13.55,13.75,13.95,14.15,14.35,14.55,14.75},
+    ytick={0,0.40,0.50,0.60,0.65,1.30,1.55},
+    % Place all y labels explicitly: the four low levels use alternating
+    % columns/vertical offsets so 0.40--0.65 stay distinct at page scale.
+    yticklabels={,,,,,,},
+    scaled y ticks=false,
+    yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=2},
+    tick align=outside,
+    tick label style={font=\small},
+    yticklabel style={font=\scriptsize, /pgf/number format/fixed, /pgf/number format/precision=2},
+    enlarge x limits=false,
+    clip=false,
+  ]
+    % Bar interval values correspond to [13.55,13.75], ..., [14.55,14.75].
+    \addplot[
+      ybar interval,
+      draw=black,
+      fill=white,
+      line width=0.55pt,
+      area legend,
+    ] coordinates {
+      (0,0.40) (1,1.30) (2,1.55) (3,0.60)
+      (4,0.50) (5,0.65) (6,0.65)
+    };
+    % Draw guides over the white bars, as in the source figure; each ends at
+    % the left boundary of the bar carrying that density level.
+    \addplot[black,dashed,line width=0.45pt] coordinates {(0,1.30) (1,1.30)};
+    \addplot[black,dashed,line width=0.45pt] coordinates {(0,1.55) (2,1.55)};
+    \addplot[black,dashed,line width=0.45pt] coordinates {(0,0.60) (3,0.60)};
+    \addplot[black,dashed,line width=0.45pt] coordinates {(0,0.50) (4,0.50)};
+    \addplot[black,dashed,line width=0.45pt] coordinates {(0,0.65) (5,0.65)};
+    \node[anchor=south west,align=center,font=\small,inner sep=0pt]
+      at (axis cs:0.2,1.63) {$\dfrac{\text{频率}}{\text{组距}}$};
+    \node[anchor=west,font=\small,inner sep=0pt]
+      at (axis cs:6.15,0.09) {全球年平均气温/$^{\circ}$C};
+    % Explicit labels keep the baseline 0 and all close levels visible.
+    \node[anchor=east,font=\scriptsize,inner sep=0pt] at (axis cs:-0.08,0) {0};
+    \node[anchor=east,font=\scriptsize,inner sep=0pt] at (axis cs:-0.08,0.40) {0.40};
+    \node[anchor=east,font=\scriptsize,inner sep=0pt] at ([yshift=-1.2pt]axis cs:-0.08,0.50) {0.50};
+    \node[anchor=east,font=\scriptsize,inner sep=0pt] at ([yshift=-4.5pt]axis cs:-0.08,0.60) {0.60};
+    \node[anchor=east,font=\scriptsize,inner sep=0pt] at ([yshift=4.5pt]axis cs:-0.08,0.65) {0.65};
+    \node[anchor=east,font=\scriptsize,inner sep=0pt] at (axis cs:-0.08,1.30) {1.30};
+    \node[anchor=east,font=\scriptsize,inner sep=0pt] at (axis cs:-0.08,1.55) {1.55};
+    % Keep the first decimal tick visible at the axis crossing.
+    \node[anchor=north east,font=\small,inner sep=0pt] at (axis cs:0,-0.035) {13.55};
+  \end{axis}
+\end{tikzpicture}

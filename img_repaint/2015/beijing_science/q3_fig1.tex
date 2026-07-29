@@ -1,0 +1,66 @@
+% Original PDF: source/普通高考/2015/2015北京理.pdf, page 1, question 3.
+% pdfimages -list returned no embedded bitmap; the program flowchart is vector/text artwork.
+% Grid evidence: tmp/redraw_flowchart_2015_beijing_science/source/page1_grid100.jpg;
+% q3_block_grid50.jpg; comparison source is q3_block.png from the no-grid page render.
+% Elements: rounded 开始/结束 terminals; assignment boxes
+% x=1,y=1,k=0; s=x-y,t=x+y; x=s,y=t; k=k+1; decision k>=3;
+% output parallelogram 输出 (x,y); solid directed connectors and 是/否 labels.
+% Node -> directed edge list: 开始->(x=1,y=1,k=0)->(s=x-y,t=x+y)
+% ->(x=s,y=t)->(k=k+1)->(k>=3); (k>=3)-是->输出 (x,y)->结束;
+% (k>=3)-否->the right return branch->the connector entering s=x-y,t=x+y.
+% solid segments: every node border, trunk arrows, right return branch, and arrowheads;
+% dashed segments: none. Labels are centered in nodes, locally zero-indented,
+% with compact white margins; 是 is beside the output branch and 否 beside the return branch.
+
+\begin{tikzpicture}[
+  >=stealth,
+  line width=0.55pt,
+  line cap=round,
+  line join=round,
+  every node/.style={anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flowbox/.style={draw,line width=0.55pt,minimum height=0.70cm,
+    inner xsep=4pt,inner ysep=2pt},
+  io/.style={flowbox,shape=trapezium,
+    trapezium left angle=72,trapezium right angle=108,
+    minimum height=0.78cm},
+  flowarrow/.style={->,line width=0.55pt}
+]
+  % Main vertical flow; the loop returns to the connector above the s,t box.
+  \node[flowbox,rounded corners=0.18cm,minimum width=1.35cm]
+    (start) at (0,9.20) {开始};
+  \node[flowbox,minimum width=3.65cm]
+    (init) at (0,7.95) {$x=1, y=1, k=0$};
+  \node[flowbox,minimum width=3.72cm]
+    (st) at (0,6.62) {$s=x-y, t=x+y$};
+  \node[flowbox,minimum width=2.65cm]
+    (assign) at (0,5.25) {$x=s, y=t$};
+  \node[flowbox,minimum width=2.35cm]
+    (increment) at (0,3.90) {$k=k+1$};
+  \node[flowbox,shape=diamond,aspect=2.75,minimum width=3.95cm,
+    minimum height=1.02cm]
+    (test) at (0,2.50) {$k\geq 3$};
+  \node[io,minimum width=2.75cm]
+    (output) at (0,1.15) {输出 $(x,y)$};
+  \node[flowbox,rounded corners=0.18cm,minimum width=1.35cm]
+    (finish) at (0,-0.08) {结束};
+
+  \draw[flowarrow] (start.south) -- (init.north);
+  \draw[flowarrow] (st.south) -- (assign.north);
+  \draw[flowarrow] (assign.south) -- (increment.north);
+  \draw[flowarrow] (increment.south) -- (test.north);
+  \draw[flowarrow] (test.south) -- (output.north);
+  % The trapezium's south anchor is offset by its slanted side; keep this
+  % explicit central connector to avoid a false diagonal edge.
+  \draw[flowarrow] (0,0.77) -- (finish.north);
+
+  % The no branch goes right, up, then left into the s,t connector.
+  \draw[flowarrow] (test.east) -- (3.30,2.50) -- (3.30,7.16) -- (0,7.16);
+  % Main connector continues from the loop junction into the s,t box.
+  \draw[flowarrow] (init.south) -- (0,7.16) -- (st.north);
+
+  \node[anchor=west,inner sep=0pt] at (0.48,1.90) {是};
+  \node[anchor=west,inner sep=0pt] at (2.42,2.92) {否};
+
+  \path[use as bounding box] (-2.15,9.55) rectangle (4.05,-0.42);
+\end{tikzpicture}

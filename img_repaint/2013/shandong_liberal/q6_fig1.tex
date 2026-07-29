@@ -1,0 +1,56 @@
+% Source: source/普通高考/2013/2013山东文.pdf, page 1, question 6.
+% pdfimages -list found no embedded bitmap; the program flowchart is vector artwork.
+% Grid evidence: tmp/redraw_flowchart_2013_shandong_liberal/source/page-1_grid100.jpg
+% and tmp/redraw_flowchart_2013_shandong_liberal/crop/q6_block_grid50.jpg.
+% Node-edge list: start -> input a -> test(a<0); test yes -> a=a+1 -> back
+% to the input/test connector; test no -> test(a>=1); second test yes ->
+% a=a-1 -> back to the second-test connector; second test no -> output a -> end.
+% Every connector is orthogonal and directed; no other edges are present.
+
+\begin{tikzpicture}[
+    >=Stealth,
+    x=0.92cm,
+    y=0.90cm,
+    line width=0.45pt,
+    line cap=round,
+    line join=round,
+    font=\small,
+    flowbox/.style={draw, minimum height=0.68cm, inner xsep=2pt, inner ysep=1pt,
+        align=center, execute at begin node={\setlength{\parindent}{0pt}}},
+    terminal/.style={flowbox, rounded corners=0.14cm, minimum width=1.25cm},
+    process/.style={flowbox, minimum width=2.25cm},
+    decision/.style={flowbox, diamond, aspect=3.0, minimum width=3.25cm,
+        minimum height=1.02cm},
+    io/.style={flowbox, trapezium, minimum width=1.75cm, minimum height=0.78cm,
+        trapezium left angle=70, trapezium right angle=110},
+]
+    \path[use as bounding box] (-4.45,-1.70) rectangle (4.55,7.45);
+
+    \node[terminal] (start) at (0,7.0) {开始};
+    \node[io] (input) at (0,5.80) {输入 $a$};
+    \node[decision] (testneg) at (0,4.00) {$a<0$};
+    \node[process] (incplus) at (3.15,4.95) {$a=a+1$};
+    \node[decision] (testone) at (0,1.90) {$a\geqslant1$};
+    \node[process] (incminus) at (-3.05,2.90) {$a=a-1$};
+    \node[io] (output) at (0,0.00) {输出 $a$};
+    \node[terminal] (finish) at (0,-1.20) {结束};
+
+    % Main path.
+    \draw[->] (start.south) -- (input.north);
+    \draw[->] (input.south) -- (testneg.north);
+    \draw[->] (testneg.south) -- (testone.north) node[midway, right=3pt] {否};
+    \draw[->] (testone.south) -- (output.north) node[midway, right=3pt] {否};
+    \draw[->] (output.south) -- (finish.north);
+
+    % a<0 yes branch: increment, then return to the connector before a<0.
+    \draw[->] (testneg.east) -- (3.15,4.00) -- (3.15,4.56) -- (incplus.south);
+    \node[anchor=west, inner sep=0pt] at (1.14,4.32) {是};
+    \coordinate (plusJoin) at (0,5.35);
+    \draw[->] (incplus.north) -- (3.15,5.35) -- (plusJoin);
+
+    % a>=1 yes branch: decrement, then return to the connector before a>=1.
+    \draw[->] (testone.west) -- (-3.05,1.90) -- (incminus.south);
+    \node[anchor=east, inner sep=0pt] at (-1.15,2.30) {是};
+    \coordinate (minusJoin) at (0,3.55);
+    \draw[->] (incminus.north) -- (-3.05,3.55) -- (minusJoin);
+\end{tikzpicture}

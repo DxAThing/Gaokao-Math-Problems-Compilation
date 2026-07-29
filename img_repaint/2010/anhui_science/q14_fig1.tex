@@ -1,0 +1,64 @@
+% Source PDF: source/普通高考/2010/2010安徽理.pdf, page 1, question 14.
+% pdfimages -list found no embedded bitmap; grid evidence:
+% tmp/review_2010_anhui_science/grid/page1_grid100.jpg;
+% comparison crop: tmp/review_2010_anhui_science/crops/q14_original_tight.png.
+% Node-edge list: 开始 -> x=1 -> x 是奇数?;
+% 是 -> x=x+1 -> loop-merge -> x 是奇数?;
+% 否 -> x=x+2 -> x>8?; 否 -> x=x+1;
+% x>8? --是--> 输出 x -> 结束. All borders/connectors are solid.
+% Nodes are locally zero-indented and centered; the loop return is independent
+% and carries one left-pointing arrow into the stem above the first decision.
+
+\begin{tikzpicture}[
+    >=Stealth,
+    x=1cm,
+    y=0.86cm,
+    line width=0.45pt,
+    line cap=round,
+    line join=round,
+    font=\normalsize,
+    flowtext/.style={anchor=center, align=center,
+        execute at begin node={\setlength{\parindent}{0pt}}},
+    flowbox/.style={draw, flowtext, minimum height=0.70cm,
+        inner xsep=5pt, inner ysep=3pt},
+    terminal/.style={flowbox, rounded corners=0.16cm, minimum width=1.40cm},
+    process/.style={flowbox, minimum width=2.40cm},
+    decision/.style={flowbox, diamond, aspect=2.9, minimum width=3.75cm,
+        minimum height=1.05cm},
+    io/.style={flowbox, trapezium, trapezium left angle=72,
+        trapezium right angle=108, minimum height=0.80cm},
+]
+    \path[use as bounding box] (-3.90,0.20) rectangle (4.75,9.20);
+
+    \node[terminal] (start) at (0,8.85) {开始};
+    \node[process, minimum width=1.60cm] (init) at (0,7.65) {$x=1$};
+    \node[decision] (odd) at (0,6.25) {$x\text{ 是奇数?}$};
+    \node[process, minimum width=2.35cm] (plus1) at (3.20,6.25)
+        {$x=x+1$};
+    \node[process, minimum width=2.35cm] (plus2) at (0,4.75)
+        {$x=x+2$};
+    \node[decision] (gt8) at (0,3.25) {$x>8?$};
+    \node[io, minimum width=2.35cm] (output) at (0,1.85) {输出 $x$};
+    \node[terminal] (finish) at (0,0.55) {结束};
+
+    \draw[->] (start.south) -- (init.north);
+    % Initial stem and loop return share one connector above the first test.
+    \coordinate (loop-merge) at (0,6.95);
+    \draw (init.south) -- (loop-merge);
+    \draw[->] (loop-merge) -- (odd.north);
+
+    \draw[->] (odd.east) -- (plus1.west);
+    \draw[->] (odd.south) -- (plus2.north);
+    \draw[->] (plus2.south) -- (gt8.north);
+    \draw[->] (gt8.south) -- (output.north);
+    \draw[->] (output.south) -- (finish.north);
+
+    % Both nonterminal paths enter the same x=x+1 node before looping.
+    \draw[->] (gt8.east) -- (3.20,3.25) -- (3.20,5.90) -- (plus1.south);
+    \draw[->] (plus1.north) -- (3.20,6.95) -- (loop-merge);
+
+    \node[flowtext, anchor=south, inner sep=1pt] at (2.05,6.38) {是};
+    \node[flowtext, anchor=west, inner sep=1pt] at (0.42,5.55) {否};
+    \node[flowtext, anchor=south, inner sep=1pt] at (1.15,3.48) {否};
+    \node[flowtext, anchor=west, inner sep=1pt] at (0.42,2.55) {是};
+\end{tikzpicture}

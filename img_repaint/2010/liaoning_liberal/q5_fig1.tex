@@ -1,0 +1,58 @@
+% Source PDF: source/普通高考/2010/2010辽宁文.pdf, page 1, question 5.
+% pdfimages -list reports no embedded bitmap; the flowchart is vector/text artwork.
+% Grid evidence: tmp/review_flowchart_2010_liaoning_liberal/grid/page-1-grid100.png
+% (100px coarse + 50px fine) and q5-block-grid50.png (50px coarse + 25px fine).
+% Comparison crop: tmp/review_flowchart_2010_liaoning_liberal/crop/q5_original_final.png,
+% taken from the ungridded page render with a safety border.
+% Nodes: 开始; 输入 n,m; k=1,p=1; p=p(n-m+k); k<m?; k=k+1; 输出 p; 结束.
+% Directed edges: 开始→输入→初始化→乘积更新→判定;
+% 判定(是)→k更新→上回线左向箭头→乘积更新; 判定(否)→输出→结束.
+% The loop return is independent of the output branch; all node text is centered
+% with local zero paragraph indentation.
+
+\begin{tikzpicture}[
+  x=1cm,y=1cm,baseline,
+  flowarrow/.style={-{Latex[length=2.1mm,width=1.5mm]},line width=.45pt},
+  nodebox/.style={draw,line width=.45pt,inner sep=2pt,minimum height=.68cm,
+    anchor=center,align=center,execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  term/.style={nodebox,rounded corners=2.5pt,minimum width=1.30cm,text width=1.30cm},
+  io/.style={nodebox,shape=trapezium,trapezium left angle=70,trapezium right angle=110,
+    minimum width=2.30cm,text width=1.90cm,minimum height=.72cm},
+  decision/.style={nodebox,diamond,aspect=2.75,minimum width=3.55cm,minimum height=1.02cm,inner sep=1pt}
+]
+  \node[term] (start) at (0,10.00) {开始};
+  \node[io,minimum width=2.45cm,text width=2.05cm] (input) at (0,8.75) {输入 $n,m$};
+  \node[nodebox,text width=3.30cm,minimum width=3.30cm] (init) at (0,7.45)
+    {$k=1,p=1$};
+  \node[nodebox,text width=4.20cm,minimum width=4.20cm] (product) at (0,6.20)
+    {$p=p(n-m+k)$};
+  \node[decision] (test) at (0,4.55) {$k<m$};
+  \node[nodebox,text width=2.65cm,minimum width=2.65cm] (increment) at (3.60,5.60)
+    {$k=k+1$};
+  \node[io,minimum width=2.20cm] (output) at (0,3.00) {输出 $p$};
+  \node[term] (finish) at (0,1.55) {结束};
+
+  \coordinate (loopjoin) at (0,6.55);
+  \coordinate (branchright) at (3.60,4.55);
+  \coordinate (incrementbottom) at (3.60,5.26);
+  \coordinate (righttop) at (3.60,6.55);
+
+  % Main stem and unique downward arrows.
+  \draw[flowarrow] (start.south) -- (input.north);
+  \draw[flowarrow] (input.south) -- (init.north);
+  \draw (init.south) -- (loopjoin);
+  \draw[flowarrow] (loopjoin) -- (product.north);
+  \draw[flowarrow] (product.south) -- (test.north);
+
+  % Yes branch: enter the increment node from below, then return above the
+  % product node and point left into the shared stem.
+  \draw[flowarrow] (test.east) -- (branchright) -- node[right=3pt,pos=.55] {是} (incrementbottom) -- (increment.south);
+  \draw (increment.north) -- (righttop);
+  \draw[flowarrow] (righttop) -- (loopjoin);
+
+  % No branch exits to output and termination, independent of the loop.
+  \draw[flowarrow] (test.south) -- node[right=3pt,pos=.45] {否} (output.north);
+  \draw[flowarrow] (output.south) -- (finish.north);
+
+  \path[use as bounding box] (-2.55,1.15) rectangle (5.05,10.45);
+\end{tikzpicture}
