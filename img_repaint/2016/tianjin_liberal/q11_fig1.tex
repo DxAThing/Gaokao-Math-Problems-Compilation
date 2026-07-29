@@ -42,19 +42,19 @@
     \node[decision, minimum width=3.65cm, minimum height=1.10cm] (testS)
         at (0,7.02) {$S\geq6?$};
     \node[process, minimum width=2.45cm] (double) at (-1.55,5.42) {$S=2S$};
-    \node[process, minimum width=2.65cm] (sub) at (1.25,5.42) {$S=S-6$};
+    \node[process, minimum width=2.65cm] (sub) at (0,5.42) {$S=S-6$};
     \node[process, minimum width=2.85cm] (inc) at (0,4.02) {$n=n+1$};
     \node[decision, minimum width=3.35cm, minimum height=1.02cm] (testn)
         at (0,2.58) {$n>3?$};
-    \node[io, minimum width=1.45cm] (output) at (0,1.18) {输出\,$S$};
+    \node[io, minimum width=1.45cm] (output) at (0,1.18) {输出 $S$};
     \node[terminal] (finish) at (0,-0.08) {结束};
 
     % Main chain and the S>=6? yes branch.
     \draw[->] (start.south) -- (setS.north);
     \draw[->] (setS.south) -- (setn.north);
     \draw[->] (setn.south) -- (testS.north);
-    \draw[->] (testS.south) -- node[right=2pt] {是} (sub.north);
-    \draw[->] (sub.south) -- (inc.north east);
+    \draw[->] (testS.south) -- node[right] {是} (sub.north);
+    \draw[->] (sub.south) -- (inc.north);
 
     % S>=6? no branch is separate from the yes path and merges at n=n+1.
     \coordinate (noTurn) at (-1.55,7.02);

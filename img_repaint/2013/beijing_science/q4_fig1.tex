@@ -1,4 +1,6 @@
 % Source: source/普通高考/2013/2013北京理.pdf, p.1, question 4.
+% Grid evidence: tmp/review_2013_beijing_science/grid/page1_grid100.jpg;
+% comparison crop: tmp/review_2013_beijing_science/crops/q4_original_tight.png.
 % Node→directed-edge list: 开始→i=0,S=1→更新 S→i=i+1→判定 i>=2；
 % 判定(否)→右侧回边→初始化后主干；判定(是)→输出 S→结束。
 % Solid segments: all node borders and connectors; dashed segments: none.
@@ -7,14 +9,10 @@
   y=0.8cm,
   >=Stealth,
   line width=0.45pt,
-  every node/.style={
-    font=\normalsize,
-    anchor=center,
-    align=center,
-    execute at begin node={\setlength{\parindent}{0pt}},
-  },
-  flowbox/.style={draw,minimum height=0.62cm,inner xsep=4pt,inner ysep=2pt,
-    align=center,execute at begin node={\setlength{\parindent}{0pt}}},
+  flowtext/.style={anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  every node/.style={flowtext,font=\normalsize},
+  flowbox/.style={draw,flowtext,minimum height=0.62cm,inner xsep=4pt,inner ysep=2pt},
   startstop/.style={draw,rounded corners=0.22cm,minimum height=0.62cm,inner xsep=4pt,inner ysep=2pt,
     align=center,execute at begin node={\setlength{\parindent}{0pt}}},
   decision/.style={draw,diamond,aspect=2.8,minimum width=3.65cm,minimum height=0.95cm,inner xsep=4pt,inner ysep=2pt,

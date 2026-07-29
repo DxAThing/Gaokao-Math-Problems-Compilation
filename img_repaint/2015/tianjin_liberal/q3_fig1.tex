@@ -21,7 +21,7 @@
   \node[flowbox,rounded corners=0.18cm,minimum width=1.35cm,minimum height=0.68cm]
     (start) at (0,8.15) {开始};
   \node[flowbox,minimum width=3.15cm,minimum height=0.70cm]
-    (init) at (0,6.90) {$S=10,\ i=0$};
+    (init) at (0,6.90) {$S=10,i=0$};
   \node[flowbox,minimum width=2.20cm,minimum height=0.68cm]
     (increment) at (0,5.62) {$i=i+1$};
   \node[flowbox,minimum width=2.25cm,minimum height=0.68cm]
@@ -41,14 +41,13 @@
   \draw[flowarrow] (loopjoin) -- (increment.north);
   \draw[flowarrow] (increment.south) -- (update.north);
   \draw[flowarrow] (update.south) -- (test.north);
-  \draw[flowarrow] (test.south) -- node[right=2pt,pos=0.28] {是} (output.north);
+  \draw[flowarrow] (test.south) -- node[right] {是} (output.north);
   \draw[flowarrow] (output.south) -- (finish.north);
 
   % 否 branch: right, up, then left back into the shared entry above i=i+1.
   \coordinate (right) at (2.75,2.90);
   \coordinate (righttop) at (2.75,6.32);
-  \draw (test.east) -- (right);
+  \draw (test.east) -- node[above] {否} (right);
   \draw (right) -- (righttop);
   \draw[flowarrow] (righttop) -- (loopjoin);
-  \node[anchor=west,inner sep=0pt] at (1.38,2.58) {否};
 \end{tikzpicture}

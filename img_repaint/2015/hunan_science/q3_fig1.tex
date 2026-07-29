@@ -1,50 +1,49 @@
-% Source PDF: source/普通高考/2015/2015湖南理.pdf, page 1.
-% pdfimages -list found no embedded bitmap; source page rendered and localized with 100px grid.
-% Original comparison crop: tmp/review_2015_hunan_science/crops/q3_source_tight.png.
-% Node -> directed-edge list: start -> input n -> init (i=1,S=0) -> update S;
-% update -> increment i -> test (i>n); test --是--> output S -> finish;
-% test --否--> right-side loop-back arrow -> main stem above update.
-% Solid segments: all node outlines and connectors; dashed segments: none.
-% Every node has explicit anchor=center, align=center and parindent=0pt.
+% Source PDF: source/普通高考/2015/2015湖南理.pdf, page 1, question 3.
+% The source flowchart is vector page content; original PNG remains at img/2015/hunan_science/q3_fig1.png.
+% Node -> directed-edge list: 开始 -> 输入 n -> i=1,S=0 ->
+% S=S+1/((2i-1)(2i+1)) -> i=i+1 -> i>n?;
+% 是 -> 输出 S -> 结束; 否 -> right-side return route -> the stem immediately above the update box.
+% All connectors are solid; no dashed segments or other edges. Node text is centered with local parindent=0pt.
+
 \begin{tikzpicture}[
   >=Stealth,
+  x=1cm, y=1cm,
   line width=0.45pt,
-  line cap=butt,
-  line join=miter,
-  every node/.style={font=\normalsize,anchor=center,align=center,
+  line cap=round,
+  line join=round,
+  font=\normalsize,
+  flowtext/.style={anchor=center,align=center,inner sep=0pt,
     execute at begin node={\setlength{\parindent}{0pt}}},
-  flow/.style={draw=black,anchor=center,align=center,inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}}},
+  flowbox/.style={flowtext,draw,minimum height=.68cm,inner xsep=3pt,inner ysep=2pt},
+  terminal/.style={flowbox,rounded corners=2pt,minimum width=1.35cm},
+  process/.style={flowbox},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
+    minimum height=.76cm},
+  decision/.style={flowbox,shape=diamond,aspect=2.8,minimum width=3.20cm,
+    minimum height=1.02cm,inner sep=0pt},
+  branchlabel/.style={flowtext,inner sep=0pt}
 ]
-  \node[flow,rounded corners=0.18cm,minimum width=1.35cm,minimum height=0.72cm]
-    (start) at (0,13.2) {开始};
-  \path[flow] (-0.90,12.38) -- (0.90,12.38) -- (0.70,11.62)
-    -- (-1.10,11.62) -- cycle;
-  \node[font=\small] (input) at (-0.10,12.0) {输入 $n$};
-  \node[flow,rectangle,minimum width=2.4cm,minimum height=0.82cm]
-    (init) at (0,10.6) {$i=1,\ S=0$};
-  \node[flow,rectangle,minimum width=4.6cm,minimum height=1.05cm]
-    (update) at (0,8.75) {$S=S+\dfrac{1}{(2i-1)(2i+1)}$};
-  \node[flow,rectangle,minimum width=1.8cm,minimum height=0.76cm]
-    (increment) at (0,7.1) {$i=i+1$};
-  \node[flow,diamond,aspect=2.8,minimum width=2.8cm,minimum height=1.16cm]
-    (test) at (0,5.4) {$i>n?$};
-  \path[flow] (-0.90,3.93) -- (0.90,3.93) -- (0.70,3.17)
-    -- (-1.10,3.17) -- cycle;
-  \node[font=\small] (output) at (-0.10,3.55) {输出 $S$};
-  \node[flow,rounded corners=0.18cm,minimum width=1.35cm,minimum height=0.72cm]
-    (finish) at (0,2.1) {结束};
+  \node[terminal] (start) at (0,12.20) {开始};
+  \node[io,minimum width=1.80cm] (input) at (0,10.90) {输入 $n$};
+  \node[process,minimum width=2.40cm] (init) at (0,9.55) {$i=1,S=0$};
+  \node[process,minimum width=4.60cm,minimum height=1.02cm] (update) at (0,7.75)
+    {$S=S+\dfrac{1}{(2i-1)(2i+1)}$};
+  \node[process,minimum width=1.85cm] (increment) at (0,6.20) {$i=i+1$};
+  \node[decision] (test) at (0,4.75) {$i>n?$};
+  \node[io,minimum width=2.15cm] (output) at (0,3.25) {输出 $S$};
+  \node[terminal] (finish) at (0,1.85) {结束};
 
-  \draw[->] (start.south) -- (0,12.38);
-  \draw[->] (0,11.62) -- (init.north);
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (init.north);
   \draw[->] (init.south) -- (update.north);
   \draw[->] (update.south) -- (increment.north);
   \draw[->] (increment.south) -- (test.north);
-  \draw[->] (test.south) -- node[right=2pt] {是} (0,3.93);
-  \draw[->] (0,3.17) -- (finish.north);
+  \draw[->] (test.south) -- node[branchlabel,right] {是} (output.north);
+  \draw[->] (output.south) -- (finish.north);
 
-  % False branch returns on a separate right-side route and re-enters the main stem.
-  \draw (test.east) -- (3.2,5.4) -- (3.2,9.6);
-  \draw[->] (3.2,9.6) -- (0,9.6);
-  \node[anchor=west,inner sep=0pt] at (2.15,5.72) {否};
+  % 否 returns independently along the right side and re-enters above update.
+  \draw (test.east) -- node[branchlabel,above] {否} (3.20,4.75) -- (3.20,8.55);
+  \draw[->] (3.20,8.55) -- (0,8.55);
+
+  \path[use as bounding box] (-0.35,1.50) rectangle (3.55,12.55);
 \end{tikzpicture}

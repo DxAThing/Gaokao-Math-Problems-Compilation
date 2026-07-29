@@ -19,10 +19,9 @@
   line cap=round,
   line join=round,
   font=\normalsize,
-  every node/.style={anchor=center,align=center,
-    execute at begin node={\setlength{\parindent}{0pt}}},
-  flowbox/.style={draw,minimum height=0.68cm,inner xsep=4pt,inner ysep=2pt,
-    align=center,execute at begin node={\setlength{\parindent}{0pt}}},
+  flowbox/.style={draw,anchor=center,align=center,minimum height=0.68cm,
+    inner xsep=4pt,inner ysep=2pt,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
   terminal/.style={flowbox,rounded corners=0.20cm,minimum width=1.24cm},
   io/.style={flowbox,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
     minimum height=0.76cm},
@@ -32,7 +31,7 @@
   % Main vertical path.
   \node[terminal] (start) at (0,10.50) {开始};
   \node[io,minimum width=2.35cm] (input) at (0,9.08) {输入 $n$};
-  \node[flowbox,minimum width=3.65cm] (init) at (0,7.62) {$S=0,\ i=1$};
+  \node[flowbox,minimum width=3.65cm] (init) at (0,7.62) {$S=0,i=1$};
   \node[flowbox,minimum width=3.20cm] (updateS) at (0,6.18) {$S=2S+i$};
   \node[flowbox,minimum width=2.70cm] (updatei) at (0,4.74) {$i=i+1$};
   \node[decision,minimum width=3.95cm] (test) at (0,3.28) {$S>n?$};

@@ -11,20 +11,20 @@
   y=0.8cm,
   >=Stealth,
   line width=0.45pt,
-  every node/.style={
-    font=\normalsize,
-    anchor=center,
-    align=center,
-    execute at begin node={\setlength{\parindent}{0pt}},
-  },
-  flowbox/.style={draw,minimum height=0.62cm,inner xsep=4pt,inner ysep=2pt,align=center},
-  startstop/.style={draw,rounded corners=0.22cm,minimum height=0.62cm,inner xsep=4pt,inner ysep=2pt,align=center},
-  decision/.style={draw,diamond,aspect=2.8,minimum width=3.4cm,minimum height=0.92cm,inner xsep=4pt,inner ysep=2pt,align=center},
-  io/.style={draw,trapezium,trapezium left angle=72,trapezium right angle=108,minimum width=1.80cm,minimum height=0.68cm,inner xsep=4pt,inner ysep=2pt,align=center},
+  every node/.style={font=\normalsize,anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  flowbox/.style={draw,minimum height=0.62cm,inner xsep=4pt,inner ysep=2pt,
+    anchor=center,align=center,execute at begin node={\setlength{\parindent}{0pt}}},
+  startstop/.style={flowbox,rounded corners=0.22cm,minimum height=0.62cm},
+  decision/.style={flowbox,diamond,aspect=2.8,minimum width=3.4cm,minimum height=0.92cm},
+  io/.style={flowbox,trapezium,trapezium left angle=72,trapezium right angle=108,
+    minimum width=1.80cm,minimum height=0.68cm},
+  branchlabel/.style={anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
   flowline/.style={-{Stealth[length=2.1mm,width=1.35mm]},line width=0.45pt}
 ]
   \node[startstop,minimum width=1.25cm] (start) at (0,8.05) {开始};
-  \node[flowbox,minimum width=2.55cm] (init) at (0,6.70) {$x=1,\ y=1$};
+  \node[flowbox,minimum width=2.55cm] (init) at (0,6.70) {$x=1,y=1$};
   \node[flowbox,minimum width=2.45cm] (sum) at (0,5.35) {$z=x+y$};
   \node[decision] (test) at (0,3.95) {$z\leq 50?$};
   \node[flowbox,minimum width=1.55cm] (setxy) at (0,2.63) {$x=y$};
@@ -36,13 +36,11 @@
   \draw[flowline] (start.south) -- (init.north);
   \draw[flowline] (init.south) -- (sum.north);
   \draw[flowline] (sum.south) -- (test.north);
-  \draw[flowline] (test.east) -- (3.55,3.95) -- (output.north)
-    node[pos=0.40,above=1pt] {否};
+  \draw[flowline] (test.east) -- node[branchlabel,above,pos=0.40] {否} (3.55,3.95) -- (output.north);
   \draw[flowline] (output.south) -- (finish.north);
 
   % The affirmative branch updates x and y, then returns independently to the sum entry.
-  \draw[flowline] (test.south) -- (setxy.north)
-    node[pos=0.48,right=2pt] {是};
+  \draw[flowline] (test.south) -- node[branchlabel,anchor=west,pos=0.48] {是} (setxy.north);
   \draw[flowline] (setxy.south) -- (setyz.north);
   \draw (setyz.south) -- (0,0.20) -- (-3.20,0.20)
     -- (-3.20,5.92) -- (-1.45,5.92);
