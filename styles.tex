@@ -736,10 +736,14 @@
 
 % 答案/解析环境；旧命令写法 \answer{...}、\solution{...} 继续兼容。
 \newbox\examhiddenanswerbox
+\makeatletter
+\newcommand{\examallownextpagebreak}{\@nobreakfalse}
+\makeatother
 \newcommand{\answerbegin}{%
     \problembodyend
     \ifshowanswer
-        \begin{tcolorbox}[examanswer,breakable=false]
+        \examallownextpagebreak
+        \begin{tcolorbox}[examanswer]
             \textbf{【答案】}\ignorespaces
     \else
         \setbox\examhiddenanswerbox=\vbox\bgroup\hsize=\linewidth

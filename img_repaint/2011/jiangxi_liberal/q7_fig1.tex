@@ -11,57 +11,61 @@
     width=9.0cm,
     height=4.9cm,
     xmin=0,
-    xmax=11.2,
+    xmax=9.8,
     ymin=0,
     ymax=11.25,
     axis lines=none,
     xtick=\empty,
+    x tick label as interval=false,
     ytick=\empty,
     clip=false,
     enlargelimits=false,
     scale only axis,
 ]
     % Frequency guide lines read from the original chart.
-    \draw[dashed,line width=0.35pt] (axis cs:0,2) -- (axis cs:10,2);
-    \draw[dashed,line width=0.35pt] (axis cs:0,3) -- (axis cs:7,3);
-    \draw[dashed,line width=0.35pt] (axis cs:0,6) -- (axis cs:6,6);
-    \draw[dashed,line width=0.35pt] (axis cs:0,10) -- (axis cs:5,10);
+    \draw[dashed,line width=0.35pt] (axis cs:0,2) -- (axis cs:8.5,2);
+    \draw[dashed,line width=0.35pt] (axis cs:0,3) -- (axis cs:5.5,3);
+    \draw[dashed,line width=0.35pt] (axis cs:0,6) -- (axis cs:4.5,6);
+    \draw[dashed,line width=0.35pt] (axis cs:0,10) -- (axis cs:3.5,10);
 
     % The eight unit-width bars are centred at scores 3--10 and encode
-    % frequencies 2,3,10,6,3,2,2,2.
+    % frequencies 2,3,10,6,3,2,2,2.  The x coordinates are shifted so
+    % that the broken-axis gap from 0 to the first group boundary is one
+    % group width, as in the source chart.
     \addplot[/tikz/ybar interval,mark=none,draw=black,fill=white,line width=0.45pt] coordinates {
-      (2.5,2)
-      (3.5,3)
-      (4.5,10)
-      (5.5,6)
-      (6.5,3)
-      (7.5,2)
-      (8.5,2)
-      (9.5,2)
-      (10.5,0)
+      (1,2)
+      (2,3)
+      (3,10)
+      (4,6)
+      (5,3)
+      (6,2)
+      (7,2)
+      (8,2)
+      (9,0)
     };
 
     % Axes, with the original x-axis break near the origin.
-    \draw[->,black,line width=0.45pt] (axis cs:0,0) -- (axis cs:11.0,0);
+    \draw[->,black,line width=0.45pt] (axis cs:0,0) -- (axis cs:9.6,0);
     \draw[->,black,line width=0.45pt] (axis cs:0,0) -- (axis cs:0,11.0);
-    \draw[black,line width=0.45pt] (axis cs:0.34,0) -- (axis cs:0.43,0.11)
-        -- (axis cs:0.52,-0.11) -- (axis cs:0.61,0.11) -- (axis cs:0.70,0);
+    \draw[black,line width=0.45pt] (axis cs:0.18,0) -- (axis cs:0.30,0.11)
+        -- (axis cs:0.42,-0.11) -- (axis cs:0.54,0.11) -- (axis cs:0.66,-0.11)
+        -- (axis cs:0.78,0.11) -- (axis cs:0.82,0);
 
     % Tick labels and axis labels.
     \node[anchor=north east,inner sep=0pt] at (axis cs:0,-0.12) {0};
-    \node[anchor=north,inner sep=0pt] at (axis cs:3,-0.12) {3};
-    \node[anchor=north,inner sep=0pt] at (axis cs:4,-0.12) {4};
-    \node[anchor=north,inner sep=0pt] at (axis cs:5,-0.12) {5};
-    \node[anchor=north,inner sep=0pt] at (axis cs:6,-0.12) {6};
-    \node[anchor=north,inner sep=0pt] at (axis cs:7,-0.12) {7};
-    \node[anchor=north,inner sep=0pt] at (axis cs:8,-0.12) {8};
-    \node[anchor=north,inner sep=0pt] at (axis cs:9,-0.12) {9};
-    \node[anchor=north,inner sep=0pt] at (axis cs:10,-0.12) {10};
+    \node[anchor=north,inner sep=0pt] at (axis cs:1.5,-0.12) {3};
+    \node[anchor=north,inner sep=0pt] at (axis cs:2.5,-0.12) {4};
+    \node[anchor=north,inner sep=0pt] at (axis cs:3.5,-0.12) {5};
+    \node[anchor=north,inner sep=0pt] at (axis cs:4.5,-0.12) {6};
+    \node[anchor=north,inner sep=0pt] at (axis cs:5.5,-0.12) {7};
+    \node[anchor=north,inner sep=0pt] at (axis cs:6.5,-0.12) {8};
+    \node[anchor=north,inner sep=0pt] at (axis cs:7.5,-0.12) {9};
+    \node[anchor=north,inner sep=0pt] at (axis cs:8.5,-0.12) {10};
     \node[anchor=east,inner sep=1pt] at (axis cs:-0.12,2) {2};
     \node[anchor=east,inner sep=1pt] at (axis cs:-0.12,3) {3};
     \node[anchor=east,inner sep=1pt] at (axis cs:-0.12,6) {6};
     \node[anchor=east,inner sep=1pt] at (axis cs:-0.12,10) {10};
     \node[anchor=south west,inner sep=0pt] at (axis cs:0.12,10.95) {频数};
-    \node[anchor=west,inner sep=0pt] at (axis cs:11.05,0.05) {得分};
+    \node[anchor=west,inner sep=0pt] at (axis cs:9.65,0.05) {得分};
 \end{axis}
 \end{tikzpicture}
