@@ -39,9 +39,6 @@
   \node[terminal] (finish) at (0,3.35) {结束};
 
   \coordinate (loop-join) at (0,8.75);
-  % Keep the return arrowhead 3 mm before the shared stem junction; the
-  % final unarrowed connector preserves the original loop topology.
-  \coordinate (return-tip) at (0.35,8.75);
   \coordinate (right-turn) at (3.55,7.45);
 
   \draw[->] (start.south) -- (input.north);
@@ -52,10 +49,9 @@
   % 是 branch: update s, increment i, then return left into the main stem.
   \draw[->] (test.east) -- (right-turn) -- (add.west);
   \draw[->] (add.north) -- (increment.south);
-  \draw[->] (increment.west) -- (return-tip);
-  \draw (return-tip) -- (loop-join);
+  \draw[->] (increment.west) -- (loop-join);
 
-  % 否 branch terminates independently; no extra arrow on the horizontal return.
+  % 否 branch terminates independently; the loop return is the sole horizontal back edge.
   \draw[->] (test.south) -- node[flowtext, right=2pt] {否} (output.north);
   \draw[->] (output.south) -- (finish.north);
   \node[flowtext, anchor=west] at (1.75,7.95) {是};

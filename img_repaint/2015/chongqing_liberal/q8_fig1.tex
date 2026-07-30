@@ -50,10 +50,8 @@
     % 是 branch: increment k, accumulate s, then return before the test.
     \draw[->] (test.east) -- (2.55,5.10) -- (2.55,5.57) -- (increment.south);
     \draw[->] (increment.north) -- (add.south);
-    \coordinate (merge-pre) at (0.40,8.60);
-    % Stop the loop arrow before the merge and finish with a plain connector.
-    \draw[->] (add.north) -- (2.55,8.60) -- (merge-pre);
-    \draw (merge-pre) -- (merge-level);
+    % The loop arrow terminates at the actual merge endpoint.
+    \draw[->] (add.north) -- (2.55,8.60) -- (merge-level);
     \node[anchor=south west, text centered, inner xsep=1pt, inner ysep=1pt] at (0.92,5.23) {是};
     \node[anchor=west, text centered, inner xsep=1pt, inner ysep=1pt] at (0.14,4.42) {否};
 \end{tikzpicture}

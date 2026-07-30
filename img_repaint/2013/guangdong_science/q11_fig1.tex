@@ -60,8 +60,6 @@
   \coordinate (loop-junction) at (0,6.00);
   % The source return exits below i=i+1, runs left, then rises to the main stem.
   \draw (inc.south) -- (loop-bottom) -- (loop-left) -- (loop-top);
-  % The arrowhead stops before the shared stem; the remaining 4 mm tail is
-  % unarrowed, keeping it clear of the following downward arrowhead.
-  \draw[->] (loop-top) -- (-0.40,6.00);
-  \draw (-0.40,6.00) -- (loop-junction);
+  % The loop return arrow terminates at the shared stem.
+  \draw[->] (loop-top) -- (-0.40,6.00) -- (loop-junction);
 \end{tikzpicture}

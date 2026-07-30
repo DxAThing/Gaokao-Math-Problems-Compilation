@@ -32,17 +32,15 @@
   \coordinate (loopjoin) at (0,6.65);
 
   \draw[flow] (start) -- (input);
-  \draw[flow] (input) -- (init);
-  \draw[-] (init) -- (loopjoin);
+  \draw[flow] (input.south) -- (init.north);
+  \draw[-] (init.south) -- (loopjoin);
   % Keep the incoming arrow clear of both the merge and the decision border.
-  \draw[flow] (loopjoin) -- (0,6.30);
-  \draw[-] (0,6.30) -- (test.north);
+  \draw[flow] (loopjoin) -- (0,6.30) -- (test.north);
   \draw[flow] (test.south) -- node[right, inner sep=1pt] {是} (update.north);
   \draw[flow] (update) -- (increment);
   \draw[flow] (test.east) -- node[above, inner sep=1pt] {否} (3.60,5.50)
     -- (3.60,4.68) -- (output.north);
   \draw[flow] (output) -- (finish);
   \draw[flow] (increment.south) -- (0,0.55) -- (-2.85,0.55)
-    -- (-2.85,6.50) -- (-0.40,6.50);
-  \draw[-] (-0.40,6.50) -- (loopjoin);
+    -- (-2.85,6.50) -- (-0.40,6.50) -- (loopjoin);
 \end{tikzpicture}

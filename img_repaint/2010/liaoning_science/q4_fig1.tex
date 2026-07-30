@@ -43,10 +43,7 @@
 
   \draw[->] (start.south) -- (input.north);
   \draw[->] (input.south) -- (init.north);
-  % The return arrow ends 4 mm before the main stem; an unarrowed short segment
-  % completes the connection without an arrow tip at the junction.
   \coordinate (merge) at (0,6.00);
-  \coordinate (mergepre) at (0.40,6.00);
   \coordinate (branchright) at (3.35,3.85);
   \draw[->] (init.south) -- (updateP.north);
   \draw[->] (updateP.south) -- (test.north);
@@ -55,8 +52,7 @@
   \draw (test.east) --
     node[branchlabel, pos=.65, above=1pt] {是} (branchright);
   \draw[->] (branchright) -- (inc.south);
-  \draw[->] (inc.north) -- (3.80,6.00) -- (mergepre);
-  \draw (mergepre) -- (merge);
+  \draw[->] (inc.north) -- (3.80,6.00) -- (merge);
 
   % No branch exits directly to output and termination.
   \draw[->] (test.south) -- node[branchlabel, right=2pt] {否} (output.north);

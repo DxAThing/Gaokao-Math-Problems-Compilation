@@ -50,9 +50,8 @@
     \draw[->] (output.south) -- (finish.north);
     \draw[->] (test.east) -- (decrement.west);
     \draw[->] (decrement.north) -- (increment.south);
-    % Stop the return arrow before the shared merge, then join with a plain segment.
-    \draw[->] (increment.west) -- (loop-arrow-tip);
-    \draw (loop-arrow-tip) -- (loop-merge);
+    % The directed return path ends at the shared stem entry.
+    \draw[->] (increment.west) -- (loop-arrow-tip) -- (loop-merge);
 
     \node[flowtext, anchor=south, inner sep=1pt] at (1.30,5.10) {否};
     \node[flowtext, anchor=east, inner sep=1pt] at (-0.55,4.05) {是};

@@ -29,7 +29,6 @@
   \node[term] (finish) at (0,2.25) {结束};
 
   \coordinate (loopjoin) at (0,6.95);
-  % The loop arrow stops 3.5 mm before the shared stem junction.
   \coordinate (looppre) at (0.35,6.95);
   \coordinate (branchright) at (3.05,5.75);
   \coordinate (updatebottom) at (3.05,6.59);
@@ -41,8 +40,7 @@
 
   % Yes branch enters the update node from below, then returns left into the stem.
   \draw[flowarrow] (test.east) -- (branchright) -- node[right=3pt,pos=.55] {是} (updatebottom) -- (update.south);
-  \draw[flowarrow] (update.west) -- (looppre);
-  \draw (looppre) -- (loopjoin);
+  \draw[flowarrow] (update.west) -- (looppre) -- (loopjoin);
 
   % No branch exits downward to output and termination.
   \draw[flowarrow] (test.south) -- node[right=3pt,pos=.45] {否} (output.north);

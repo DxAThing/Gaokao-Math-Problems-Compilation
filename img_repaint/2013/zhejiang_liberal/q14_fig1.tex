@@ -53,8 +53,6 @@
     \draw[->] (0,1.95) -- (output.north);
     \draw[->] (output.south) -- (finish.north);
 
-    % Loopback: one left-pointing arrow enters the shared stem above test;
-    % the main stem retains its separate downward arrow into the diamond.
-    \draw[->] (inc.west) -- (-2.85,3.15) -- (-2.85,7.25) -- (-0.35,7.25);
-    \draw (-0.35,7.25) -- (loopJoin);
+    % Loopback arrow terminates at the shared stem above test.
+    \draw[->] (inc.west) -- (-2.85,3.15) -- (-2.85,7.25) -- (-0.35,7.25) -- (loopJoin);
 \end{tikzpicture}

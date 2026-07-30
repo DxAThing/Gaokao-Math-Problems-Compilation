@@ -37,10 +37,8 @@
   \coordinate (merge) at (3.65,0);
   \coordinate (loopdown) at (10.45,-1.45);
   \coordinate (loopleft) at (3.65,-1.45);
-  % Leave the final 3.5 mm into the stem unheaded to avoid a shared-point arrow.
   \coordinate (merge-pre) at (3.65,-0.35);
-  \draw[->] (test.south) -- (loopdown) -- (loopleft) -- (merge-pre);
-  \draw (merge-pre) -- (merge);
+  \draw[->] (test.south) -- (loopdown) -- (loopleft) -- (merge-pre) -- (merge);
   \node[anchor=south,inner sep=1pt] at (11.75,0.12) {是};
   \node[anchor=north,inner sep=1pt] at (10.45,-0.52) {否};
 \end{tikzpicture}

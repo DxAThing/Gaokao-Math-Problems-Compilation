@@ -46,14 +46,13 @@
   % True branch updates n and returns left/up to the stem before s=s+a.
   \draw[->] (test.south) -- node[flowtext,right] {是} (incN.north);
   \coordinate (loop-left) at (-2.35,-6.14);
-  % Keep the loop return 2.8 mm below init's lower edge; place its arrowhead
-  % in the middle of the horizontal return so the shared merge has no loop tip.
+  % Keep the loop return 2.8 mm below init's lower edge; its arrow ends at the
+  % shared merge before the independent main-stem arrow.
   \coordinate (merge-level) at (0,-1.74);
   \coordinate (loop-arrow-start) at (-1.80,-1.74);
   \coordinate (loop-arrow-tip) at (-1.05,-1.74);
   \draw (incN.south) -- (loop-left) -- (loop-left |- merge-level) -- (loop-arrow-start);
-  \draw[->] (loop-arrow-start) -- (loop-arrow-tip);
-  \draw (loop-arrow-tip) -- (merge-level);
+  \draw[->] (loop-arrow-start) -- (loop-arrow-tip) -- (merge-level);
   \draw (init.south) -- (merge-level);
   \draw[->] (merge-level) -- (sum.north);
 

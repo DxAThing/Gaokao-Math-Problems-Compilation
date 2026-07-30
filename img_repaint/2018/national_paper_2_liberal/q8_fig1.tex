@@ -57,7 +57,6 @@
   \coordinate (trunkjoin) at (0,8.40);
   \coordinate (testentry) at (0.80,8.40);
   \draw (seti.south) -- (trunkjoin);
-  \draw (trunkjoin) -- (testentry);
   \draw[->] (testentry) -- (test.north);
   \draw[->] (accn.south) -- (acct.north);
   \draw[->] (acct.south) -- (inc.north);
@@ -67,8 +66,7 @@
 
   % Yes branch and loop-back path.
   \draw[->] (test.west) -- node[above] {是} (-2.0,8.08) -- (accn.north);
-  % The return arrow first joins the main trunk with a right-pointing head;
-  % the separate trunk arrow above then enters the decision diamond.
-  \draw[->] (inc.west) -- (-3.90,3.65) -- (-3.90,8.40) -- (-1.00,8.40);
-  \draw (-1.00,8.40) -- (trunkjoin);
+  % The return arrow traverses the horizontal re-entry to its visible endpoint;
+  % the separate arrow after the turn then enters the decision diamond.
+  \draw[->] (inc.west) -- (-3.90,3.65) -- (-3.90,8.40) -- (testentry);
 \end{tikzpicture}

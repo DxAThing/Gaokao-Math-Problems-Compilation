@@ -44,9 +44,7 @@
 
   % No branch: diamond -> increment -> return to update.
   \draw[->] (decision.east) -- node[above] {否} (2.35,3.03) -- (inc.south);
-  % The return arrow turns above the update box, then its unarrowed tail
-  % meets the box boundary; this preserves the source edge without a
-  % sub-threshold line-to-node clearance.
+  % The return arrow turns above the update box and terminates at the visible
+  % trunk junction; the trunk's own arrow continues into update.
   \draw[->] (inc.north) -- (2.35,5.25) -- (0,5.25);
-  \draw (0,5.25) -- (update.north);
 \end{tikzpicture}

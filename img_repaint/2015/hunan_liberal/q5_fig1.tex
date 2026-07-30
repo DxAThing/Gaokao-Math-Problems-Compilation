@@ -36,15 +36,13 @@
   % The return path first points left into the main trunk; the separate trunk
   % arrow then enters the accumulation box with one downward arrowhead.
   \coordinate (merge-level) at (0,6.88);
-  \coordinate (merge-pre) at (0.20,6.88);
   \draw (init.south) -- (merge-level);
   \draw[->] (merge-level) -- (calc.north);
   \draw[->] (calc.south) -- (inc.north);
   \draw[->] (inc.south) -- (test.north);
 
   % 否 branch: route right, up, then left back to the main incoming trunk.
-  \draw[->] (test.east) -- (3.25,2.70) -- (3.25,6.88) -- (merge-pre);
-  \draw (merge-pre) -- (merge-level);
+  \draw[->] (test.east) -- (3.25,2.70) -- (3.25,6.88) -- (merge-level);
   \node[branchlabel,above right=1pt and 3pt of test.east] {否};
 
   % 是 branch: output and termination stay independent of the return path.

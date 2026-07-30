@@ -41,7 +41,6 @@
   \draw[->] (input.south) -- (init.north);
   % Keep the shared stem 2.5 mm clear of the initialization box.
   \coordinate (merge-level) at (0,-3.18);
-  \coordinate (return-entry) at (-0.40,-3.18);
   \draw (init.south) -- (merge-level);
   \draw[->] (merge-level) -- (blank.north);
   \draw[->] (blank.south) -- (test.north);
@@ -54,9 +53,6 @@
   \draw (test.west) -- (no-left);
   \draw[->] (no-left) -- (increment.south);
   \draw (increment.north) -- (loop-top);
-  % Stop the return arrow before the three-way junction, then continue
-  % without a second arrowhead into the shared stem.
-  \draw[->] (loop-top) -- (return-entry);
-  \draw (return-entry) -- (merge-level);
+  \draw[->] (loop-top) -- (merge-level);
   \node[label,anchor=east] at (-1.20,-4.82) {否};
 \end{tikzpicture}

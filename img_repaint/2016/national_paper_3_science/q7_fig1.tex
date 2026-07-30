@@ -51,9 +51,7 @@
   \coordinate (left) at (-2.28,2.05);
   \coordinate (entry) at (-2.28,7.80);
   \draw (test.west) -- node[above=2pt] {否} (left) -- (entry);
-  \coordinate (loop-arrow-tip) at (-0.70,7.80);
-  \draw[flowarrow] (entry) -- (loop-arrow-tip);
-  \draw (loop-arrow-tip) -- (loop-top);
+  \draw[flowarrow] (entry) -- (-0.70,7.80) -- (loop-top);
 
   % Keep a restrained crop margin like the source page crop; no text is offset by hand.
   \path[use as bounding box] (-3.05,11.15) rectangle (2.65,-0.82);

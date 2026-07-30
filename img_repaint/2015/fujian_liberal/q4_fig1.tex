@@ -44,9 +44,8 @@
 
     % 否 branch: evaluate y=9-x, then return left to the shared connector.
     \draw[->] (check.east) -- (3.40,5.25) -- (no.north);
-    % Put the branch arrow before the merge; the shared connector has one arrow.
-    \draw[->] (no.south) -- (3.40,2.45);
-    \draw (3.40,2.45) -- (0,2.45);
+    % The branch arrow terminates at the shared connector junction.
+    \draw[->] (no.south) -- (3.40,2.45) -- (0,2.45);
     \draw[->] (0,2.45) -- (output.north);
     \draw[->] (output.south) -- (finish.north);
 

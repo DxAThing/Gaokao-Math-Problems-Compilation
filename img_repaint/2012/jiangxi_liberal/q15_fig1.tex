@@ -54,16 +54,14 @@
   \draw[flowarrow] (test1.east) -- node[above=2pt] {否} (4.55,7.35) -- (azero.north);
   \draw (aone.south) -- (assignjoin);
   \draw[flowarrow] (assignjoin) -- (sum.north);
-  \draw[flowarrow] (azero.south) -- (assignright) -- (assignTip);
-  \draw (assignTip) -- (assignjoin);
+  \draw[flowarrow] (azero.south) -- (assignright) -- (assignTip) -- (assignjoin);
 
   \draw[flowarrow] (sum.south) -- (inc.north);
   \draw[flowarrow] (inc.south) -- (test2.north);
 
   % Loop return from k<6? (是) enters the first-test junction via one right arrow.
   \draw (test2.west) -- node[above=2pt,pos=.10] {是} (returnleft) -- (returntop);
-  \draw[flowarrow] (returntop) -- (returnTip);
-  \draw (returnTip) -- (firstjoin);
+  \draw[flowarrow] (returntop) -- (returnTip) -- (firstjoin);
 
   % Termination branch is independent of the loop.
   \draw[flowarrow] (test2.south) -- node[right=2pt] {否} (out.north);

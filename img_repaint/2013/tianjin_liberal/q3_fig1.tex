@@ -43,9 +43,7 @@
   % 否 branch enters n=n+1 from below, then returns to the update node.
   \draw[flowarrow] (test.east) -- node[above] {否} (3.70,5.75) -- (increment.south);
   \draw (increment.north) -- (3.70,8.25);
-  % Keep the return arrow clear of the shared loop junction; the final plain
-  % stub preserves the original left-pointing return topology.
-  \draw[flowarrow] (3.70,8.25) -- (0.35,8.25);
-  \draw (0.35,8.25) -- (0,8.25);
+  % The return arrow terminates at the shared loop junction.
+  \draw[flowarrow] (3.70,8.25) -- (0.35,8.25) -- (0,8.25);
 
 \end{tikzpicture}

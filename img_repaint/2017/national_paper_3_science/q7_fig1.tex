@@ -68,12 +68,8 @@
     \coordinate (loop-left) at (-4.28,0.91);
     \coordinate (loop-top) at (-4.28,6.55);
     \draw (increment.west) -- (loop-left) -- (loop-top);
-    % The source shows a right-pointing arrow at the loop junction and a
-    % separate downward arrow into the decision node.  Leave a short
-    % unarrowed run into the junction so the arrow tip is not at the shared
-    % degree-3 point (the direction remains explicit and the topology is
-    % unchanged).
-    \draw[->] (loop-top) -- (-0.36,6.55);
-    \draw (-0.36,6.55) -- (0,6.55);
+    % The source shows a right-pointing arrow terminating at the loop junction
+    % and a separate downward arrow into the decision node.
+    \draw[->] (loop-top) -- (0,6.55);
     \draw[->] (0,6.55) -- (test.north);
 \end{tikzpicture}

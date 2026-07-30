@@ -43,16 +43,13 @@
   \draw[->] (output.south) -- (finish.north);
 
   % 否分支左回，箭头在输入后、b 更新前的共享入口，和主干下行箭头独立。
-  % Merge the return branch well clear of the update box before its single shaft arrow.
+  % The return arrow ends at the shared entrance; no plain shaft follows its tip.
   \coordinate (loopJoin) at (0,6.87);
-  % Stop the return arrow before the main-shaft junction; finish with a plain shaft.
-  \coordinate (loopArrowTip) at (-0.45,6.87);
   \coordinate (loopBottom) at (-3.15,3.72);
   \coordinate (loopTop) at (-3.15,6.87);
   \draw (check.west) -- node[branchlabel,below,pos=0.24] {否} (loopBottom)
     -- (loopTop);
-  \draw[->] (loopTop) -- (loopArrowTip);
-  \draw (loopArrowTip) -- (loopJoin);
+  \draw[->] (loopTop) -- (loopJoin);
 
   \path[use as bounding box] (-3.45,-0.20) rectangle (3.45,9.28);
 \end{tikzpicture}

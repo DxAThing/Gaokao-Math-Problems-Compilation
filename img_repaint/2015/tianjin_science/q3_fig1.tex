@@ -36,10 +36,8 @@
   \node[terminal] (finish) at (0,0.55) {结束};
 
   \draw[->] (start.south) -- (init.north);
-  % The initial trunk and the loop return share one explicit entry into i=2i;
-  % place the return arrowhead before the merge and leave an unmarked tail.
+  % The initial trunk and the loop return share one explicit entry into i=2i.
   \coordinate (loop-merge) at (0,6.75);
-  \coordinate (loop-tip) at (0.38,6.75);
   \draw (init.south) -- (loop-merge);
   \draw[->] (loop-merge) -- (double.north);
   \draw[->] (double.south) -- (subtract.north);
@@ -49,7 +47,6 @@
 
   % 否 branch: the independent right-side loop returns to the i=2i entry.
   \draw (test.east) -- (2.85,3.25) -- (2.85,6.75);
-  \draw[->] (2.85,6.75) -- (loop-tip);
-  \draw (loop-tip) -- (loop-merge);
+  \draw[->] (2.85,6.75) -- (loop-merge);
   \node[flowtext, anchor=west, inner sep=1pt] at (2.08,3.02) {否};
 \end{tikzpicture}

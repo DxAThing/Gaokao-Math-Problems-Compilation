@@ -30,7 +30,7 @@
     decision/.style={flowbox, diamond, aspect=2.9, minimum width=3.30cm,
         minimum height=1.05cm},
 ]
-    \path[use as bounding box] (-4.45,0.10) rectangle (4.55,13.35);
+    \path[use as bounding box] (-4.45,0.10) rectangle (4.90,13.35);
 
     \node[terminal] (start) at (0,13.00) {开始};
     \node[io, minimum width=5.65cm] (input) at (0,11.70)
@@ -78,6 +78,5 @@
     \draw[->] (output.south) -- (finish.north);
     \draw[->] (testN.east) -- node[above=2pt, inner sep=0pt] {否}
         (4.30,3.60) -- (4.30,7.58) -- (inc.south);
-    \draw[->] (inc.north) -- (4.30,9.50) -- (0.35,9.50);
-    \draw (0.35,9.50) -- (loop-merge);
+    \draw[->] (inc.north) -- (4.30,9.50) -- (0.35,9.50) -- (loop-merge);
 \end{tikzpicture}

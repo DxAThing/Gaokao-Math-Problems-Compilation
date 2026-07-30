@@ -52,11 +52,11 @@
   % keeping this junction clear avoids a duplicate arrowhead at the update border.
   % Keep the return shaft at least 2.5 mm above updatea's top edge.
   \coordinate (loop-top) at (0.45,6.35);
-  % Stop the return arrow before the main-shaft junction; finish with a plain shaft.
-  \coordinate (loop-arrow-tip) at (2.10,6.35);
+  % The return arrow terminates at the visible junction on the main shaft;
+  % the shaft's own arrow continues into updatea.
+  \coordinate (loop-bend) at (2.10,6.35);
   \coordinate (loop-merge) at (2.64,6.35);
   \draw[flow] (check.west) -- (loop-left) -- (loop-top);
-  \draw[->,flow] (loop-top) -- (loop-arrow-tip);
-  \draw[flow] (loop-arrow-tip) -- (loop-merge) -- (updatea.north);
+  \draw[->,flow] (loop-top) -- (loop-bend) -- (loop-merge);
   \node[anchor=east,inner sep=0pt] at (1.33,3.77) {否};
 \end{tikzpicture}

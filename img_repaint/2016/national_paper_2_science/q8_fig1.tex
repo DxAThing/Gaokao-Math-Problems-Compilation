@@ -55,8 +55,7 @@
     \coordinate (loop-return) at (3.25,6.72);
     \coordinate (loop-arrow-tip) at (0.70,6.72);
     \draw (test.east) -- node[branchlabel,above] {否} (loop-right) -- (loop-return);
-    % Place the left-pointing return arrow before the merge, leaving the
-    % single downward edge into 输入 a as a distinct continuation.
-    \draw[->] (loop-return) -- (loop-arrow-tip);
-    \draw (loop-arrow-tip) -- (loop-top);
+    % The return arrow runs to the actual merge endpoint; the downward edge
+    % into 输入 a remains the distinct continuation from that merge.
+    \draw[->] (loop-return) -- (loop-arrow-tip) -- (loop-top);
 \end{tikzpicture}

@@ -51,10 +51,9 @@
   \node[branchlabel] at (0.38,5.58) {是};
   \draw[->] (incp.south) -- (updates.north);
   \draw (updates.south) -- (loop-under) -- (loop-bottom) -- (loop-left);
-  % Stop the return arrow before the three-way junction, then continue into
-  % the shared stem without adding a second arrowhead at the merge.
-  \draw[->] (loop-left) -- (return-entry);
-  \draw (return-entry) -- (loopjoin);
+  % The return arrow reaches the main-stem junction; the downward arrow
+  % remains on the separate stem into the decision node.
+  \draw[->] (loop-left) -- (return-entry) -- (loopjoin);
 
   % 否 branch goes independently to output and finish.
   \draw (test.east) -- (output-turn);

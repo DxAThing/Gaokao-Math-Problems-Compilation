@@ -59,9 +59,8 @@
   % Yes branch: decision -> update -> decrement -> loopback to the main trunk.
   \draw[->] (test.east) -- (4.20,3.58) -- (update.south);
   \draw[->] (update.north) -- (decrement.south);
-  % The loop-back arrowhead stops before the three-way trunk junction.
-  \draw[->] (decrement.west) -- (2.70,6.30) -- (2.70,5.15) -- (1.90,5.15);
-  \draw[-] (1.90,5.15) -- (1.60,5.15) -- (loopjoin);
+  % The loop-back arrow runs to the trunk junction's actual endpoint.
+  \draw[->] (decrement.west) -- (2.70,6.30) -- (2.70,5.15) -- (1.90,5.15) -- (1.60,5.15);
 
   \node[anchor=west,inner sep=0pt] at (2.76,3.88) {是};
   \node[anchor=west,inner sep=0pt] at (1.84,2.93) {否};

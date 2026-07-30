@@ -41,9 +41,8 @@
 
     % Downward path and output branch.
     \draw[->] (start.south) -- (input.north);
-    % Arrowheads stop in the clear corridor; final shafts enter the boxes.
-    \draw[->] (input.south) -- (0,6.15);
-    \draw[-] (0,6.15) -- (assign.north);
+    \draw[-] (input.south) -- (0,6.15);
+    \draw[->] (0,6.15) -- (assign.north);
     \draw[->] (assign.south) -- (test.north);
     \draw[->] (test.south) -- (output.north)
         node[pos=0.45, right=2pt] {否};
@@ -53,6 +52,5 @@
     \draw (test.west) -- (-3.25,4.10) -- (-3.25,4.62);
     \draw[->] (-3.25,4.62) -- (loopassign.south);
     \node[inner sep=0pt] at (-2.10,3.72) {是};
-    \draw[->] (loopassign.north) -- (-3.25,6.15) -- (-1.50,6.15);
-    \draw[-] (-1.50,6.15) -- (assign.north);
+    \draw[->] (loopassign.north) -- (-3.25,6.15) -- (0,6.15);
 \end{tikzpicture}

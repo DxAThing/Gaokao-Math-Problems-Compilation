@@ -41,8 +41,7 @@
   \draw[->] (multiply.north) -- (increment.south);
   \coordinate (loop-top) at (3.05,8.10);
   \coordinate (loop-tip) at (0.45,8.00);
-  \draw[->] (increment.north) -- (loop-top) -- (loop-tip);
-  \draw (loop-tip) -- (pretest);
+  \draw[->] (increment.north) -- (loop-top) -- (loop-tip) -- (pretest);
 
   % 否 branch is independent of the loop and leads only to output.
   \draw[->] (test.south) -- node[right] {否} (output.north);

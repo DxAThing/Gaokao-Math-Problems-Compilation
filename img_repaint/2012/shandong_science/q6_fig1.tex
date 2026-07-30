@@ -57,14 +57,12 @@
   \draw[->] (updateP.south) -- (updateQ.north);
   \draw[->] (updateQ.south) -- (updateN.north);
 
-  % Independent loop-back path to the decision stem.
-  % The return arrowhead sits on the outer horizontal leg, not at the shared
-  % merge connector; the final horizontal join is unarrowed.
+  % Independent loop-back path to the decision stem; its arrow ends at the
+  % shared merge before the independent downward stem arrow.
   \draw (updateN.south) -- (updateN.south |- 0,0.55)
     -- (-2.05,0.55);
   \draw (-2.05,0.55) -- (-2.05,6.15);
-  \draw[->] (-2.05,6.15) -- (-0.55,6.15);
-  \draw (-0.55,6.15) -- (merge);
+  \draw[->] (-2.05,6.15) -- (-0.55,6.15) -- (merge);
 
   % No branch exits right and terminates independently.
   \draw[->] (test.east) -- node[branchlabel, above] {否}

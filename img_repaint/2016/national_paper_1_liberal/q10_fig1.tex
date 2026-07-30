@@ -44,9 +44,7 @@
   % 否 branch: decision -> increment, then return to the computation step.
   \draw[->] (test.west) -- (-3.20,3.35) -- (inc.south);
   % Keep the return line centered in the narrow gap between input and update;
-  % the final short drop makes the incoming edge explicit without touching input.
-  \coordinate (loop-arrow-tip) at (-0.70,5.405);
-  \draw[->] (inc.north) -- (-3.20,5.405) -- (loop-arrow-tip);
-  \draw (loop-arrow-tip) -- (0,5.405) -- (update.north);
+  % its arrow ends at the junction with the independent main stem.
+  \draw[->] (inc.north) -- (-3.20,5.405) -- (0,5.405);
   \node[branch label, anchor=east, inner sep=1pt] at (-1.96,3.15) {否};
 \end{tikzpicture}

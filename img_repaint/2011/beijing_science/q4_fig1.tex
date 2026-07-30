@@ -41,7 +41,6 @@
   % Split the stem at the loop-entry level: the return arrow has one left
   % pointing head, while the main path has one directed arrow into test.
   \coordinate (merge-level) at (0,6.35);
-  % Keep the loop arrowhead clear of the three-way junction by 3.5 mm.
   \coordinate (merge-pre) at (0.35,6.35);
   \draw (init.south) -- (merge-level);
   \draw[->] (merge-level) -- (test.north);
@@ -51,8 +50,7 @@
   % Yes branch: update i, then update s, then return left to the main stem.
   \draw[->] (test.east) -- node[branchlabel,above] {是} (increment.west);
   \draw[->] (increment.north) -- (update.south);
-  \draw[->] (update.west) -- (merge-pre);
-  \draw (merge-pre) -- (merge-level);
+  \draw[->] (update.west) -- (merge-pre) -- (merge-level);
 
   \path[use as bounding box] (-1.70,10.35) rectangle (4.70,0.22);
 \end{tikzpicture}

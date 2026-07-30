@@ -54,9 +54,8 @@
   \coordinate (loop-left) at (-3.05,1.38);
   \coordinate (loop-entry) at (-3.05,6.50);
   \draw (inc.south) -- (loop-bottom) -- (loop-left) -- (loop-entry);
-  % Keep the loop arrowhead clear of the degree-3 merge junction.
-  \draw[flowarrow] (loop-entry) -- (-0.35,6.50);
-  \draw (-0.35,6.50) -- (merge);
+  % The loop arrow terminates at the actual merge endpoint.
+  \draw[flowarrow] (loop-entry) -- (merge);
 
   % 否 branch to output and finish.
   \draw[flowarrow] (test.east) -- (4.50,5.62) -- (4.50,4.42);

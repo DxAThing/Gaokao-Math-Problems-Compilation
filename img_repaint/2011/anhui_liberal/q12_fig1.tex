@@ -54,9 +54,7 @@
   % The return leg leaves the top of the update box, avoiding a line through
   % the node interior before turning left into the shared stem.
   \draw (inc.north) -- (loop-right);
-  % The return arrow stops before the three-way junction; the final short
-  % connector is unarrowed so only one arrowhead is present at this merge.
-  \draw[->] (loop-right) -- (return-entry);
-  \draw (return-entry) -- (merge-level);
+  % The directed return path ends at the shared stem entry.
+  \draw[->] (loop-right) -- (return-entry) -- (merge-level);
   
 \end{tikzpicture}

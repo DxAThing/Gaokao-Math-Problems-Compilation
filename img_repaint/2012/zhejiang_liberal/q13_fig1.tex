@@ -46,7 +46,7 @@
   % False branch exits right, rises, and points left into the T update entry.
   \coordinate (loop-right) at (2.45,-5.18);
   \draw (test.east) -- node[above=2pt] {否} (loop-right) -- (2.45,-1.82);
-  % Arrowhead stops before the degree-3 merge; the final short segment is unarrowed.
-  \draw[->] (2.45,-1.82) -- (0.75,-1.82);
-  \draw (0.75,-1.82) -- (merge-level);
+  % The return arrow ends at the degree-3 merge; the main stem continues with
+  % its independent downward arrow into the division box.
+  \draw[->] (2.45,-1.82) -- (0.75,-1.82) -- (merge-level);
 \end{tikzpicture}

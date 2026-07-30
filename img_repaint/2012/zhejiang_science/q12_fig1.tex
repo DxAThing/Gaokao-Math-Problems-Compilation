@@ -46,9 +46,9 @@
 
   % 否 branch loops right to the shared connector; output remains separate.
   \draw (test.east) -- (2.65,3.80) -- (2.65,7.50);
-  % Stop the left-pointing arrow before the degree-3 merge, then join without a second arrowhead.
-  \draw[->] (2.65,7.50) -- (0.75,7.50);
-  \draw (0.75,7.50) -- (merge);
+  % The left-pointing return arrow ends at the merge; the main stem carries
+  % its independent downward arrow into the division box.
+  \draw[->] (2.65,7.50) -- (0.75,7.50) -- (merge);
 
   \node[anchor=south west,inner xsep=1pt,inner ysep=1pt] at (0.28,2.95) {是};
   \node[anchor=south west,inner xsep=1pt,inner ysep=1pt] at (1.30,4.05) {否};

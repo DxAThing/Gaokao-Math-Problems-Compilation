@@ -45,10 +45,7 @@
   \coordinate (loop-left) at (-3.55,0.70);
   \coordinate (loop-entry) at (-3.55,5.55);
   \draw (inc.south) -- (loop-bottom) -- (loop-left) -- (loop-entry);
-  % Keep the return arrow tip clear of the degree-3 merge; the short
-  % unarrowed continuation preserves the same loop-entry connection.
-  \draw[flowarrow] (loop-entry) -- (-0.60,5.55);
-  \draw (-0.60,5.55) -- (merge);
+  \draw[flowarrow] (loop-entry) -- (-0.60,5.55) -- (merge);
 
   % 否 branch to output and finish.
   \draw[flowarrow] (test.east) -- (3.20,4.64) -- (3.20,3.62);

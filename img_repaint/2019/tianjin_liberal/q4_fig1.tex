@@ -52,19 +52,16 @@
   \draw[line width=0.45pt] (even.east) -- (3.10,-2.50) -- (3.10,-3.30);
   \draw[flowarrow] (3.10,-3.30) -- (sodd.north);
   \node[font=\normalsize, anchor=west, inner sep=0.02cm] at (2.55,-2.13) {否};
-  % Both branches join immediately above i=i+1; the horizontal arrow points left.
-  % The two branches meet at an unarrowed junction; one arrow then enters i=i+1.
-  % The odd-branch arrow tip is kept 3 mm from that junction.
+  % Both branches join immediately above i=i+1; the horizontal arrow points left
+  % and the odd-branch arrow terminates at the visible merge point.
   \draw[line width=0.45pt] (seven.south) -- (0,-6.20);
-  \draw[flowarrow] (sodd.south) -- (3.10,-6.20) -- (0.30,-6.20);
-  \draw[line width=0.45pt] (0.30,-6.20) -- (0,-6.20);
+  \draw[flowarrow] (sodd.south) -- (3.10,-6.20) -- (0.30,-6.20) -- (0,-6.20);
   \draw[flowarrow] (0,-6.20) -- (inc.north);
   \draw[flowarrow] (inc) -- (gefour);
   % The loop returns with a right-pointing arrow into the trunk above the
   % decision; the main trunk retains its separate downward arrowhead.
   \draw[line width=0.45pt] (gefour.west) -- (-3.30,-8.25) -- (-3.30,-1.60);
-  \draw[flowarrow] (-3.30,-1.60) -- (-0.30,-1.60);
-  \draw[line width=0.45pt] (-0.30,-1.60) -- (0,-1.60);
+  \draw[flowarrow] (-3.30,-1.60) -- (-0.30,-1.60) -- (0,-1.60);
   \node[font=\normalsize, anchor=east, inner sep=0.02cm] at (-2.70,-8.00) {否};
   \draw[flowarrow] (gefour) -- node[font=\normalsize, right, xshift=0.06cm] {是} (output);
   \draw[flowarrow] (output) -- (finish);

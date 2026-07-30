@@ -54,8 +54,7 @@
     \coordinate (loop-vertical) at (loop-left |- loop-level);
     \coordinate (loop-merge) at ([xshift=-0.18cm]loop-level);
     \draw (inc.west) -- (loop-left) -- (loop-vertical);
-    \draw[->] (loop-vertical) -- (loop-merge);
-    \draw (loop-merge) -- (loop-level);
+    \draw[->] (loop-vertical) -- (loop-merge) -- (loop-level);
     \node[branchlabel, above right=0.02cm and 0.18cm of test.east] {否};
     \node[branchlabel] at ([xshift=0.40cm,yshift=-0.18cm]test.south) {是};
     \path[use as bounding box] (-1.85,0.35) rectangle (3.25,-5.25);

@@ -54,8 +54,5 @@
     \coordinate (loopArrowTip) at (0.45,6.14);
     \coordinate (loopJoin) at (0,6.14);
     \draw (check.east) -- node[above=2pt] {否} (loopRight) -- (loopTop);
-    % The left-pointing arrow ends before the T-junction; the unarrowed
-    % continuation preserves the original return into the main stem.
-    \draw[->] (loopTop) -- (loopArrowTip);
-    \draw (loopArrowTip) -- (loopJoin);
+    \draw[->] (loopTop) -- (loopArrowTip) -- (loopJoin);
 \end{tikzpicture}

@@ -58,9 +58,8 @@
   % Keep the return shaft at least 2.5 mm above updateb's top edge.
   \coordinate (looplevel) at (-3.90,-1.40);
   \draw[line width=0.45pt] (test.west) -- node[flowtext, below] {否}
-    (loopleft) -- (looplevel) -- (-0.45,-1.40) -- (0,-1.40);
-  % The return arrow is on its horizontal shaft; the main down-shaft keeps one arrowhead.
-  \draw[flowarrow] (looplevel) -- (-0.45,-1.40);
-  \draw[line width=0.45pt] (-0.45,-1.40) -- (0,-1.40) -- (updateb.north);
+    (loopleft) -- (looplevel);
+  % The return arrow ends at the shared entrance; no plain shaft follows its tip.
+  \draw[flowarrow] (looplevel) -- (-0.45,-1.40) -- (0,-1.40);
   \draw[flowarrow] (test.south) -- node[pos=0.05, flowtext, right] {是} (0,-5.54);
 \end{tikzpicture}

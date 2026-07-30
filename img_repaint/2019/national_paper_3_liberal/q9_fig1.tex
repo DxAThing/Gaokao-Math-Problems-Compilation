@@ -21,8 +21,10 @@
   \node[draw,rounded corners=0.18cm,minimum width=1.25cm,minimum height=0.68cm,inner xsep=4pt,inner ysep=2pt] (start) at (0,10.8) {开始};
   \node[draw,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
     minimum width=0.95cm,minimum height=0.76cm,inner xsep=4pt,inner ysep=2pt] (input) at (0,9.58) {输入 $\varepsilon$};
-  \node[draw,minimum width=2.55cm,minimum height=0.72cm,inner xsep=4pt,inner ysep=2pt] (init) at (0,8.36) {$x=1,s=0$};
-  \node[draw,minimum width=2.12cm,minimum height=0.72cm,inner xsep=4pt,inner ysep=2pt] (sum) at (0,7.18) {$s=s+x$};
+  % The init/sum boxes are separated by 6 mm at the loop junction so the
+  % return shaft clears both black borders with margin while preserving order.
+  \node[draw,minimum width=2.55cm,minimum height=0.72cm,inner xsep=4pt,inner ysep=2pt] (init) at (0,8.42) {$x=1,s=0$};
+  \node[draw,minimum width=2.12cm,minimum height=0.72cm,inner xsep=4pt,inner ysep=2pt] (sum) at (0,7.10) {$s=s+x$};
   \node[draw,minimum width=1.55cm,minimum height=1.02cm,inner xsep=4pt,inner ysep=2pt] (half) at (0,5.88) {$x=\dfrac{x}{2}$};
   \node[draw,diamond,aspect=2.7,minimum width=2.62cm,minimum height=0.74cm,inner xsep=4pt,inner ysep=2pt] (test) at (0,4.53) {$x<\varepsilon$};
   \node[draw,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
@@ -38,9 +40,9 @@
   \draw[->] (output.south) -- (finish.north);
 
   % 否 branch loops back to the accumulation step.
-  % Route the loop-back arrow between the boxes and attach it to the sum box.
-  \draw[->] (test.east) -- (2.02,4.53) -- (2.02,7.76) -- (1.40,7.76);
-  \draw (1.40,7.76) -- (sum.north east);
+  % Route the loop-back arrow between the boxes and attach it to the main trunk
+  % at the visible junction above the sum box.
+  \draw[->] (test.east) -- (2.02,4.53) -- (2.02,7.76) -- (1.40,7.76) -- (0,7.76);
   \node[anchor=west,inner sep=0pt] at (1.56,5.08) {否};
   \node[anchor=west,inner sep=0pt] at (0.26,3.98) {是};
 \end{tikzpicture}

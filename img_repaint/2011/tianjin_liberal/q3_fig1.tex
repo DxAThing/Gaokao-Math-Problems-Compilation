@@ -46,9 +46,8 @@
   \coordinate (loop-left-top) at (-2.45,7.12);
   \coordinate (loop-arrow-tip) at (-0.35,7.12);
   \draw (absupdate.south) -- (loop-bottom) -- (loop-left) -- (loop-left-top);
-  % Stop the return arrow before the shared stem, then join without a second tip.
-  \draw[flowarrow] (loop-left-top) -- (loop-arrow-tip);
-  \draw (loop-arrow-tip) -- (loopjoin);
+  % The directed return path ends at the shared stem entry.
+  \draw[flowarrow] (loop-left-top) -- (loop-arrow-tip) -- (loopjoin);
 
   % Negative branch bypasses the loop and enters the power update.
   \coordinate (right-branch) at (3.15,6.28);

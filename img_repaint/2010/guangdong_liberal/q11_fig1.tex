@@ -39,10 +39,7 @@
   \node[io, minimum width=2.80cm] (output) at (0,2.65) {输出 $s$};
   \node[terminal] (finish) at (0,1.05) {结束};
 
-  % The return arrow ends 4 mm before the main stem; an unarrowed short segment
-  % completes the connection while the stem remains a single segment.
   \coordinate (loopjoin) at (0,7.95);
-  \coordinate (looppre) at (0.40,7.95);
 
   \draw[->] (start.south) -- (input.north);
   \draw[->] (input.south) -- (init.north);
@@ -53,8 +50,7 @@
     node[pos=0, above left=3pt, inner sep=0pt] {是} (sum.west);
   \draw[->] (sum.north) -- (avg.south);
   \draw[->] (avg.north) -- (inc.south);
-  \draw[->] (inc.west) -- (looppre);
-  \draw (looppre) -- (loopjoin);
+  \draw[->] (inc.west) -- (loopjoin);
 
   % 否 branch independently outputs s and terminates.
   \draw[->] (test.south) -- node[right=2pt, inner sep=0pt] {否} (output.north);

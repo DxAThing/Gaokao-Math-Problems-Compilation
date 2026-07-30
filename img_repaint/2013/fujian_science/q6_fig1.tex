@@ -49,9 +49,7 @@
 
   % False branch is an independent right-side loop, returning to the update entry.
   \draw (test.east) -- (3.15,2.55) -- (3.15,6.50);
-  % Keep the loop arrowhead clear of the three-way merge; the final short
-  % connector is unarrowed, matching the source's left-pointing arrow placement.
-  \draw[arrow] (3.15,6.50) -- (0.45,6.50);
-  \draw (0.45,6.50) -- (merge-level);
+  % The loop arrow terminates at the update-entry merge.
+  \draw[arrow] (3.15,6.50) -- (0.45,6.50) -- (merge-level);
   \node[anchor=west,inner sep=0pt] at (2.20,3.18) {否};
 \end{tikzpicture}

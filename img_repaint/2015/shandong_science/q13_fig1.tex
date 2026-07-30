@@ -36,10 +36,8 @@
   \draw[->] (test.south) -- (accumulate.north);
   \draw[->] (accumulate.south) -- (increment.north);
   \draw[->] (increment.south) -- (-2.85,1.72) -- (-2.85,5.92) -- (0,5.92);
-  % Stop the arrowhead just above the output border, then use an unarrowed
-  % short connector into the trapezium so the visible direction is downward.
-  \draw[->] (test.east) -- (3.45,5.30) -- (3.45,4.68);
-  \draw (3.45,4.68) -- (output.north);
+  % The output branch arrow terminates at the actual output endpoint.
+  \draw[->] (test.east) -- (3.45,5.30) -- (3.45,4.68) -- (output.north);
   \draw[->] (output.south) -- (finish.north);
   \node[inner sep=0pt] at (0.25,4.70) {是};
   \node[inner sep=0pt] at (1.52,5.67) {否};

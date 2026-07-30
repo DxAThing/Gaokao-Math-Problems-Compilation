@@ -48,8 +48,7 @@
     \draw[->] (test.east) -- node[above] {否} (3.05,5.00) -- (output.north);
     \draw[->] (output.south) -- (finish.north);
 
-    % Loop return: the arrowhead stops before the shared junction, then a
-    % short plain segment enters the stem; only the main stem points down.
-    \draw[->] (increment.west) -- (-2.55,2.02) -- (-2.55,5.72) -- (-0.35,5.72);
-    \draw (-0.35,5.72) -- (loopjoin);
+    % Loop return: the arrow ends at the shared junction; only the main stem
+    % carries the independent downward arrow.
+    \draw[->] (increment.west) -- (-2.55,2.02) -- (-2.55,5.72) -- (-0.35,5.72) -- (loopjoin);
 \end{tikzpicture}

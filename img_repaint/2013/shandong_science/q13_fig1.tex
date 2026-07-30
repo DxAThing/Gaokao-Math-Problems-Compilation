@@ -59,10 +59,8 @@
 
   % 否 branch loops right and returns left into the shared entry.
   \draw (test.east) -- (loop-bottom) -- (loop-right);
-  % Keep the return arrowhead clear of the shared entry; the final unarrowed
-  % stub preserves the same directed edge without stacking tips at loopjoin.
-  \draw[flowarrow] (loop-right) -- (0.35,5.80);
-  \draw (0.35,5.80) -- (loopjoin);
+  % The return arrow terminates at the shared entry.
+  \draw[flowarrow] (loop-right) -- (0.35,5.80) -- (loopjoin);
   \node[inner sep=0pt,anchor=west] at (2.35,2.00) {否};
 
   \path[use as bounding box] (-2.35,-2.00) rectangle (3.70,9.45);

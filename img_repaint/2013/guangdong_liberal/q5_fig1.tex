@@ -59,8 +59,6 @@
     % Loop return: left and up, then a single arrow into the shared stem.
     \draw (increment.south) -- (0,1.95) -- (-3.35,1.95)
         -- (-3.35,6.55);
-    % Place the arrowhead before the three-way merge, then use a short
-    % unarrowed connector into the shared stem as in the source scan.
-    \draw[->] (-3.35,6.55) -- (-0.45,6.55);
-    \draw (-0.45,6.55) -- (loop-merge);
+    % The loop return arrow terminates at the shared stem.
+    \draw[->] (-3.35,6.55) -- (-0.45,6.55) -- (loop-merge);
 \end{tikzpicture}
