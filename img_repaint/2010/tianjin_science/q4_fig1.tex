@@ -1,0 +1,44 @@
+% Flowchart transcription from img/2010/tianjin_science/q4_fig1.png.
+% Nodes: 开始; i=1; s=2; blank decision; s=s-i; i=i+2; 输出 s; 结束.
+% Directed edges: 开始→i=1→s=2→汇合点→判断; 判断(是)→s更新→i更新→回路向右接主竖线;
+% 判断(否)→输出 s→结束.
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=.55pt,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\normalsize,anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  flowbox/.style={draw,minimum height=.70cm,inner xsep=4pt,inner ysep=2pt,
+    anchor=center,align=center},
+  terminal/.style={flowbox,rounded corners=.18cm,minimum width=1.50cm,
+    minimum height=.76cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
+    trapezium right angle=108,minimum height=.82cm},
+  decision/.style={flowbox,shape=diamond,aspect=2.75,inner sep=2pt},
+  flowarrow/.style={->,line width=.55pt},
+]
+  \node[terminal] (start) at (0,12.20) {开始};
+  \node[flowbox,minimum width=1.75cm] (init) at (0,10.65) {$i=1$};
+  \node[flowbox,minimum width=1.75cm] (sum0) at (0,9.20) {$s=2$};
+  \coordinate (loopjoin) at (0,8.35);
+  \node[decision,minimum width=5.10cm,minimum height=1.10cm] (test) at (0,4.45) {};
+  \node[flowbox,minimum width=2.60cm] (sub) at (-3.35,6.15) {$s=s-i$};
+  \node[flowbox,minimum width=2.70cm] (inc) at (-3.35,7.55) {$i=i+2$};
+  \node[io,minimum width=2.40cm] (output) at (0,2.70) {输出 $s$};
+  \node[terminal] (finish) at (0,1.15) {结束};
+
+  \coordinate (leftbranch) at (-3.35,4.45);
+  \coordinate (lefttop) at (-3.35,8.35);
+  \draw[flowarrow] (start.south) -- (init.north);
+  \draw[flowarrow] (init.south) -- (sum0.north);
+  \draw (sum0.south) -- (loopjoin);
+  \draw[flowarrow] (loopjoin) -- (test.north);
+  \draw[flowarrow] (test.south) -- node[right=3pt] {否} (output.north);
+  \draw[flowarrow] (output.south) -- (finish.north);
+
+  \draw[flowarrow] (test.west) -- node[above=2pt] {是} (leftbranch) -- (sub.south);
+  \draw[flowarrow] (sub.north) -- (inc.south);
+  \draw[flowarrow] (inc.north) -- (lefttop) -- (loopjoin);
+  \path[use as bounding box] (-4.02,.78) rectangle (3.15,12.58);
+\end{tikzpicture}

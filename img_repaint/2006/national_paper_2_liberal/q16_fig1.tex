@@ -8,64 +8,67 @@
 % solid segments: bar outlines, x/y axis arrows, tick marks, and the x-axis break stroke.
 % dashed segments: horizontal reference lines at y=0.0001, 0.0002, 0.0003, 0.0004, 0.0005.
 % labels: y label sits above-left of the vertical axis; x label sits beyond the 4000 tick; tick labels stay below/left of axes and clear the bars.
+% x display map: 0 -> 0, then each true group boundary is shifted left by 500
+% so the displayed 0-to-1000 break span is exactly one 500-unit group width.
 \begin{tikzpicture}[baseline]
 \begin{axis}[
     width=9.2cm,
-    height=4.7cm,
     axis lines=none,
     clip=false,
     xmin=-180,
-    xmax=4700,
+    xmax=4000,
     ymin=-0.00009,
     ymax=0.00059,
     ticks=none,
+    x tick label as interval=false,
 ]
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.0001) -- (axis cs:4000,0.0001);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.0002) -- (axis cs:4000,0.0002);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.0003) -- (axis cs:4000,0.0003);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.0004) -- (axis cs:4000,0.0004);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.0005) -- (axis cs:4000,0.0005);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.0001) -- (axis cs:3500,0.0001);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.0002) -- (axis cs:3500,0.0002);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.0003) -- (axis cs:3500,0.0003);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.0004) -- (axis cs:3500,0.0004);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.0005) -- (axis cs:3500,0.0005);
 
     \addplot[
         ybar interval,
+        mark=none,
         draw=black,
         fill=white,
         line width=0.7pt,
     ] coordinates {
-        (1000,0.0002)
-        (1500,0.0004)
+        (500,0.0002)
+        (1000,0.0004)
+        (1500,0.0005)
         (2000,0.0005)
-        (2500,0.0005)
-        (3000,0.0003)
-        (3500,0.0001)
-        (4000,0)
+        (2500,0.0003)
+        (3000,0.0001)
+        (3500,0)
     };
 
-    \draw[->,line width=0.75pt] (axis cs:0,0) -- (axis cs:4300,0);
+    \draw[->,line width=0.75pt] (axis cs:0,0) -- (axis cs:3800,0);
     \draw[->,line width=0.75pt] (axis cs:0,0) -- (axis cs:0,0.00058);
 
     \fill[white] (axis cs:180,-0.000075) -- (axis cs:245,0.000025) -- (axis cs:310,-0.000075) -- (axis cs:375,0.000025) -- (axis cs:440,-0.000075) -- cycle;
     \draw[line width=0.75pt] (axis cs:180,-0.000075) -- (axis cs:245,0.000025) -- (axis cs:310,-0.000075) -- (axis cs:375,0.000025) -- (axis cs:440,-0.000075);
 
     \node[anchor=south west,inner sep=0pt,font=\small] at (axis cs:55,0.000535) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:4270,-0.000015) {月收入（元）};
+    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:3770,-0.000015) {月收入（元）};
 
     \draw[line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.000014);
     \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:0,-0.000018) {0};
+    \draw[line width=0.45pt] (axis cs:500,0) -- (axis cs:500,-0.000014);
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:500,-0.000018) {1000};
     \draw[line width=0.45pt] (axis cs:1000,0) -- (axis cs:1000,-0.000014);
-    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:1000,-0.000018) {1000};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:1000,-0.000018) {1500};
     \draw[line width=0.45pt] (axis cs:1500,0) -- (axis cs:1500,-0.000014);
-    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:1500,-0.000018) {1500};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:1500,-0.000018) {2000};
     \draw[line width=0.45pt] (axis cs:2000,0) -- (axis cs:2000,-0.000014);
-    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:2000,-0.000018) {2000};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:2000,-0.000018) {2500};
     \draw[line width=0.45pt] (axis cs:2500,0) -- (axis cs:2500,-0.000014);
-    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:2500,-0.000018) {2500};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:2500,-0.000018) {3000};
     \draw[line width=0.45pt] (axis cs:3000,0) -- (axis cs:3000,-0.000014);
-    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:3000,-0.000018) {3000};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:3000,-0.000018) {3500};
     \draw[line width=0.45pt] (axis cs:3500,0) -- (axis cs:3500,-0.000014);
-    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:3500,-0.000018) {3500};
-    \draw[line width=0.45pt] (axis cs:4000,0) -- (axis cs:4000,-0.000014);
-    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:4000,-0.000018) {4000};
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:3500,-0.000018) {4000};
 
     \draw[line width=0.45pt] (axis cs:0,0.0001) -- (axis cs:-55,0.0001);
     \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-70,0.0001) {0.0001};

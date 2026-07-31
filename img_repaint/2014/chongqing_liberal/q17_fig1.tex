@@ -21,17 +21,20 @@
     height=5.4cm,
     axis lines=none,
     clip=false,
-    xmin=-12,
-    xmax=126,
+    % Display mapping compresses the omitted score interval [0,50) to one
+    % displayed group width: 0,50,60,...,100 map to 0,10,20,...,60.
+    xmin=-8,
+    xmax=70,
     ymin=-0.36,
     ymax=0.82,
     ticks=none,
+    x tick label as interval=false,
 ]
     % Dashed guide levels are the frequency-density labels shown in the source.
-    \draw[dashed,line width=0.55pt] (axis cs:0,\hTwo) -- (axis cs:100,\hTwo);
-    \draw[dashed,line width=0.55pt] (axis cs:0,\hThree) -- (axis cs:70,\hThree);
-    \draw[dashed,line width=0.55pt] (axis cs:0,\hSix) -- (axis cs:90,\hSix);
-    \draw[dashed,line width=0.55pt] (axis cs:0,\hSeven) -- (axis cs:80,\hSeven);
+    \draw[dashed,line width=0.55pt] (axis cs:0,\hTwo) -- (axis cs:60,\hTwo);
+    \draw[dashed,line width=0.55pt] (axis cs:0,\hThree) -- (axis cs:30,\hThree);
+    \draw[dashed,line width=0.55pt] (axis cs:0,\hSix) -- (axis cs:50,\hSix);
+    \draw[dashed,line width=0.55pt] (axis cs:0,\hSeven) -- (axis cs:40,\hSeven);
 
     \addplot[
         ybar interval,
@@ -39,40 +42,41 @@
         fill=white,
         line width=0.7pt,
     ] coordinates {
+        (10,\hTwo)
+        (20,\hThree)
+        (30,\hSeven)
+        (40,\hSix)
         (50,\hTwo)
-        (60,\hThree)
-        (70,\hSeven)
-        (80,\hSix)
-        (90,\hTwo)
-        (100,0)
+        (60,0)
     };
 
-    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:118,0);
+    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:68,0);
     \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,0.76);
 
-    % The source omits the interval between 0 and 50, marked by a small zigzag.
+    % The source omits the interval between 0 and 50; one displayed group
+    % width (10 display units) is retained and marked by a small zigzag.
     \draw[line width=0.75pt]
-      (axis cs:9,0) -- (axis cs:11,0.045) -- (axis cs:13,-0.045) --
-      (axis cs:15,0.045) -- (axis cs:17,-0.045) -- (axis cs:19,0);
+      (axis cs:2.8,0) -- (axis cs:4.2,0.045) -- (axis cs:5.6,-0.045) --
+      (axis cs:7.0,0.045) -- (axis cs:8.4,-0.045) -- (axis cs:9.8,0);
 
     \node[anchor=south west,inner sep=0pt,font=\small,align=center]
       at (axis cs:-2,0.70) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:103,0.12) {成绩（分）};
+    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:62,0.12) {成绩（分）};
 
     \draw[line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.065);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:0,-0.08) {0};
+    \node[anchor=north east,inner sep=0pt,font=\small] at (axis cs:-0.2,-0.08) {0};
+    \draw[line width=0.45pt] (axis cs:10,0) -- (axis cs:10,-0.065);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:10,-0.08) {50};
+    \draw[line width=0.45pt] (axis cs:20,0) -- (axis cs:20,-0.065);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:20,-0.08) {60};
+    \draw[line width=0.45pt] (axis cs:30,0) -- (axis cs:30,-0.065);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:30,-0.08) {70};
+    \draw[line width=0.45pt] (axis cs:40,0) -- (axis cs:40,-0.065);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:40,-0.08) {80};
     \draw[line width=0.45pt] (axis cs:50,0) -- (axis cs:50,-0.065);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:50,-0.08) {50};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:50,-0.08) {90};
     \draw[line width=0.45pt] (axis cs:60,0) -- (axis cs:60,-0.065);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:60,-0.08) {60};
-    \draw[line width=0.45pt] (axis cs:70,0) -- (axis cs:70,-0.065);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:70,-0.08) {70};
-    \draw[line width=0.45pt] (axis cs:80,0) -- (axis cs:80,-0.065);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:80,-0.08) {80};
-    \draw[line width=0.45pt] (axis cs:90,0) -- (axis cs:90,-0.065);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:90,-0.08) {90};
-    \draw[line width=0.45pt] (axis cs:100,0) -- (axis cs:100,-0.065);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:100,-0.08) {100};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:60,-0.08) {100};
 
     \draw[line width=0.45pt] (axis cs:0,\hTwo) -- (axis cs:-2,\hTwo);
     \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-3,\hTwo) {$2a$};

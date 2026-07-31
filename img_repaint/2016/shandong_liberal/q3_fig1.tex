@@ -6,27 +6,29 @@
 % Elements: self-study-time axis with origin 0, an axis break before 17.5, ticks 17.5--30, frequency-density axis,
 % five contiguous bins [17.5,20), [20,22.5), [22.5,25), [25,27.5), [27.5,30), and dashed guides at 0.02, 0.04, 0.08, 0.10, 0.16.
 % Relations: the bar heights are (0.02, 0.10, 0.16, 0.08, 0.04), each class width is 2.5 hours, and the density-area sum is 1.
+% Display mapping: the omitted source interval 0--17.5 is 7.00 source group-widths;
+% it is mapped to exactly 1.00 displayed group width before the first boundary.
 % solid segments: bar outlines, x/y axis arrows, tick marks, and the x-axis break stroke.
 % dashed segments: horizontal reference lines at the five source-labelled heights.
 % labels: 频率/组距 sits above the y-axis, 自习时间/小时 follows the x-axis arrow, and source tick labels stay below/left of axes.
 \begin{tikzpicture}[baseline]
 \begin{axis}[
     width=8.0cm,
-    height=4.9cm,
     axis lines=none,
     clip=false,
-    xmin=-5,
-    xmax=36,
-    ymin=-0.016,
+    xmin=-0.8,
+    xmax=7.5,
+    ymin=-0.008,
     ymax=0.18,
     ticks=none,
+    x tick label as interval=false,
 ]
     % Source dashed guides terminate at the corresponding histogram boundary.
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.02) -- (axis cs:20,0.02);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.04) -- (axis cs:30,0.04);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.08) -- (axis cs:27.5,0.08);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.10) -- (axis cs:22.5,0.10);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.16) -- (axis cs:25,0.16);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.02) -- (axis cs:2,0.02);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.04) -- (axis cs:6,0.04);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.08) -- (axis cs:5,0.08);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.10) -- (axis cs:3,0.10);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.16) -- (axis cs:4,0.16);
 
     % Frequency-density bars read from the source histogram.
     \addplot[
@@ -35,52 +37,52 @@
         fill=white,
         line width=0.7pt,
     ] coordinates {
-        (17.5,0.02)
-        (20,0.10)
-        (22.5,0.16)
-        (25,0.08)
-        (27.5,0.04)
-        (30,0)
+        (1,0.02)
+        (2,0.10)
+        (3,0.16)
+        (4,0.08)
+        (5,0.04)
+        (6,0)
     };
 
     % Source x/y axes and the short break before the time bins.
-    \draw[->,line width=0.75pt] (axis cs:0,0) -- (axis cs:35,0);
+    \draw[->,line width=0.75pt] (axis cs:0,0) -- (axis cs:7.2,0);
     \draw[->,line width=0.75pt] (axis cs:0,0) -- (axis cs:0,0.175);
-    \fill[white] (axis cs:4,-0.014) -- (axis cs:4.7,0.006) -- (axis cs:5.4,-0.014) --
-        (axis cs:6.1,0.006) -- (axis cs:6.8,-0.014) -- cycle;
+    \fill[white] (axis cs:0.22,-0.006) -- (axis cs:0.34,0.003) -- (axis cs:0.46,-0.006) --
+        (axis cs:0.58,0.003) -- (axis cs:0.70,-0.006) -- cycle;
     \draw[line width=0.75pt]
-        (axis cs:4,-0.014) -- (axis cs:4.7,0.006) -- (axis cs:5.4,-0.014) --
-        (axis cs:6.1,0.006) -- (axis cs:6.8,-0.014);
+        (axis cs:0.22,-0.006) -- (axis cs:0.34,0.003) -- (axis cs:0.46,-0.006) --
+        (axis cs:0.58,0.003) -- (axis cs:0.70,-0.006);
 
-    \node[anchor=south west,inner sep=0pt,font=\small] at (axis cs:1.2,0.163)
+    \node[anchor=south west,inner sep=0pt,font=\small] at (axis cs:0.2,0.163)
         {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\scriptsize] at (axis cs:32.2,0.012) {自习时间/小时};
+    \node[anchor=west,inner sep=0pt,font=\scriptsize] at (axis cs:6.35,0.012) {自习时间/小时};
 
     % Tick marks and labels reproduced from the source chart.
     \draw[line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.004);
-    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:0,-0.005) {0};
-    \draw[line width=0.45pt] (axis cs:17.5,0) -- (axis cs:17.5,-0.004);
-    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:17.5,-0.005) {17.5};
-    \draw[line width=0.45pt] (axis cs:20,0) -- (axis cs:20,-0.004);
-    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:20,-0.005) {20};
-    \draw[line width=0.45pt] (axis cs:22.5,0) -- (axis cs:22.5,-0.004);
-    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:22.5,-0.005) {22.5};
-    \draw[line width=0.45pt] (axis cs:25,0) -- (axis cs:25,-0.004);
-    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:25,-0.005) {25};
-    \draw[line width=0.45pt] (axis cs:27.5,0) -- (axis cs:27.5,-0.004);
-    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:27.5,-0.005) {27.5};
-    \draw[line width=0.45pt] (axis cs:30,0) -- (axis cs:30,-0.004);
-    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:30,-0.005) {30};
+    \node[anchor=north east,inner sep=0pt,font=\tiny] at (axis cs:0,-0.005) {0};
+    \draw[line width=0.45pt] (axis cs:1,0) -- (axis cs:1,-0.004);
+    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:1,-0.005) {17.5};
+    \draw[line width=0.45pt] (axis cs:2,0) -- (axis cs:2,-0.004);
+    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:2,-0.005) {20};
+    \draw[line width=0.45pt] (axis cs:3,0) -- (axis cs:3,-0.004);
+    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:3,-0.005) {22.5};
+    \draw[line width=0.45pt] (axis cs:4,0) -- (axis cs:4,-0.004);
+    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:4,-0.005) {25};
+    \draw[line width=0.45pt] (axis cs:5,0) -- (axis cs:5,-0.004);
+    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:5,-0.005) {27.5};
+    \draw[line width=0.45pt] (axis cs:6,0) -- (axis cs:6,-0.004);
+    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:6,-0.005) {30};
 
-    \draw[line width=0.45pt] (axis cs:0,0.02) -- (axis cs:-1.8,0.02);
-    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-2.2,0.02) {0.02};
-    \draw[line width=0.45pt] (axis cs:0,0.04) -- (axis cs:-1.8,0.04);
-    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-2.2,0.04) {0.04};
-    \draw[line width=0.45pt] (axis cs:0,0.08) -- (axis cs:-1.8,0.08);
-    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-2.2,0.08) {0.08};
-    \draw[line width=0.45pt] (axis cs:0,0.10) -- (axis cs:-1.8,0.10);
-    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-2.2,0.10) {0.10};
-    \draw[line width=0.45pt] (axis cs:0,0.16) -- (axis cs:-1.8,0.16);
-    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-2.2,0.16) {0.16};
+    \draw[line width=0.45pt] (axis cs:0,0.02) -- (axis cs:-0.18,0.02);
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-0.45,0.02) {0.02};
+    \draw[line width=0.45pt] (axis cs:0,0.04) -- (axis cs:-0.18,0.04);
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-0.45,0.04) {0.04};
+    \draw[line width=0.45pt] (axis cs:0,0.08) -- (axis cs:-0.18,0.08);
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-0.45,0.08) {0.08};
+    \draw[line width=0.45pt] (axis cs:0,0.10) -- (axis cs:-0.18,0.10);
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-0.45,0.10) {0.10};
+    \draw[line width=0.45pt] (axis cs:0,0.16) -- (axis cs:-0.18,0.16);
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-0.45,0.16) {0.16};
 \end{axis}
 \end{tikzpicture}

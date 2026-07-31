@@ -24,12 +24,13 @@
     ymin=-0.09,
     ymax=0.40,
     ticks=none,
+    x tick label as interval=false,
 ]
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.30) -- (axis cs:4.5,0.30);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.20) -- (axis cs:5.5,0.20);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.15) -- (axis cs:2.5,0.15);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.10) -- (axis cs:6.5,0.10);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.05) -- (axis cs:7.5,0.05);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.30) -- (axis cs:4,0.30);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.20) -- (axis cs:5,0.20);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.15) -- (axis cs:2,0.15);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.10) -- (axis cs:6,0.10);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.05) -- (axis cs:7,0.05);
 
     \addplot[
         ybar interval,
@@ -37,40 +38,40 @@
         fill=white,
         line width=0.7pt,
     ] coordinates {
-        (1.5,0.15)
-        (2.5,0.20)
-        (3.5,0.30)
-        (4.5,0.20)
-        (5.5,0.10)
-        (6.5,0.05)
-        (7.5,0)
+        (1,0.15)
+        (2,0.20)
+        (3,0.30)
+        (4,0.20)
+        (5,0.10)
+        (6,0.05)
+        (7,0)
     };
 
-    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:8.25,0);
+    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:8.0,0);
     \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,0.37);
     \draw[line width=0.75pt]
-      (axis cs:0.65,0) -- (axis cs:0.78,0.022) -- (axis cs:0.91,-0.022) --
-      (axis cs:1.04,0.022) -- (axis cs:1.17,-0.022) -- (axis cs:1.30,0);
+      (axis cs:0.18,0) -- (axis cs:0.31,0.022) -- (axis cs:0.44,-0.022) --
+      (axis cs:0.57,0.022) -- (axis cs:0.70,-0.022) -- (axis cs:0.83,0);
     \node[anchor=south west,inner sep=0pt,font=\small]
       at (axis cs:0.30,0.345) {\(\dfrac{\text{频率}}{\text{组距}}\)};
     \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:7.75,0.035) {百分比};
 
     \draw[line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:0,-0.024) {0};
-    \draw[line width=0.45pt] (axis cs:1.5,0) -- (axis cs:1.5,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:1.5,-0.024) {1.5};
-    \draw[line width=0.45pt] (axis cs:2.5,0) -- (axis cs:2.5,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:2.5,-0.024) {2.5};
-    \draw[line width=0.45pt] (axis cs:3.5,0) -- (axis cs:3.5,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:3.5,-0.024) {3.5};
-    \draw[line width=0.45pt] (axis cs:4.5,0) -- (axis cs:4.5,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:4.5,-0.024) {4.5};
-    \draw[line width=0.45pt] (axis cs:5.5,0) -- (axis cs:5.5,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:5.5,-0.024) {5.5};
-    \draw[line width=0.45pt] (axis cs:6.5,0) -- (axis cs:6.5,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:6.5,-0.024) {6.5};
-    \draw[line width=0.45pt] (axis cs:7.5,0) -- (axis cs:7.5,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:7.5,-0.024) {7.5};
+    \node[anchor=north east,inner sep=0pt,font=\small] at (axis cs:0,-0.024) {0};
+    \draw[line width=0.45pt] (axis cs:1,0) -- (axis cs:1,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:1,-0.024) {1.5};
+    \draw[line width=0.45pt] (axis cs:2,0) -- (axis cs:2,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:2,-0.024) {2.5};
+    \draw[line width=0.45pt] (axis cs:3,0) -- (axis cs:3,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:3,-0.024) {3.5};
+    \draw[line width=0.45pt] (axis cs:4,0) -- (axis cs:4,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:4,-0.024) {4.5};
+    \draw[line width=0.45pt] (axis cs:5,0) -- (axis cs:5,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:5,-0.024) {5.5};
+    \draw[line width=0.45pt] (axis cs:6,0) -- (axis cs:6,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:6,-0.024) {6.5};
+    \draw[line width=0.45pt] (axis cs:7,0) -- (axis cs:7,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:7,-0.024) {7.5};
     \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:3.9,-0.075) {甲离子残留百分比直方图};
 
     \draw[line width=0.45pt] (axis cs:0,0.30) -- (axis cs:-0.12,0.30);
@@ -98,12 +99,13 @@
     ymin=-0.09,
     ymax=0.40,
     ticks=none,
+    x tick label as interval=false,
 ]
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.35) -- (axis cs:6.5,0.35);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.20) -- (axis cs:7.5,0.20);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.15) -- (axis cs:8.5,0.15);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.10) -- (axis cs:4.5,0.10);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.05) -- (axis cs:3.5,0.05);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.35) -- (axis cs:5,0.35);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.20) -- (axis cs:6,0.20);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.15) -- (axis cs:7,0.15);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.10) -- (axis cs:3,0.10);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.05) -- (axis cs:2,0.05);
 
     \addplot[
         ybar interval,
@@ -111,40 +113,40 @@
         fill=white,
         line width=0.7pt,
     ] coordinates {
-        (2.5,0.05)
-        (3.5,0.10)
-        (4.5,0.15)
-        (5.5,0.35)
-        (6.5,0.20)
-        (7.5,0.15)
-        (8.5,0)
+        (1,0.05)
+        (2,0.10)
+        (3,0.15)
+        (4,0.35)
+        (5,0.20)
+        (6,0.15)
+        (7,0)
     };
 
-    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:9.25,0);
+    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:8.0,0);
     \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,0.37);
     \draw[line width=0.75pt]
-      (axis cs:0.65,0) -- (axis cs:0.78,0.022) -- (axis cs:0.91,-0.022) --
-      (axis cs:1.04,0.022) -- (axis cs:1.17,-0.022) -- (axis cs:1.30,0);
+      (axis cs:0.18,0) -- (axis cs:0.31,0.022) -- (axis cs:0.44,-0.022) --
+      (axis cs:0.57,0.022) -- (axis cs:0.70,-0.022) -- (axis cs:0.83,0);
     \node[anchor=south west,inner sep=0pt,font=\small]
       at (axis cs:0.30,0.345) {\(\dfrac{\text{频率}}{\text{组距}}\)};
     \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:8.05,0.035) {百分比};
 
     \draw[line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:0,-0.024) {0};
-    \draw[line width=0.45pt] (axis cs:2.5,0) -- (axis cs:2.5,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:2.5,-0.024) {2.5};
-    \draw[line width=0.45pt] (axis cs:3.5,0) -- (axis cs:3.5,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:3.5,-0.024) {3.5};
-    \draw[line width=0.45pt] (axis cs:4.5,0) -- (axis cs:4.5,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:4.5,-0.024) {4.5};
-    \draw[line width=0.45pt] (axis cs:5.5,0) -- (axis cs:5.5,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:5.5,-0.024) {5.5};
-    \draw[line width=0.45pt] (axis cs:6.5,0) -- (axis cs:6.5,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:6.5,-0.024) {6.5};
-    \draw[line width=0.45pt] (axis cs:7.5,0) -- (axis cs:7.5,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:7.5,-0.024) {7.5};
-    \draw[line width=0.45pt] (axis cs:8.5,0) -- (axis cs:8.5,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:8.5,-0.024) {8.5};
+    \node[anchor=north east,inner sep=0pt,font=\small] at (axis cs:0,-0.024) {0};
+    \draw[line width=0.45pt] (axis cs:1,0) -- (axis cs:1,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:1,-0.024) {2.5};
+    \draw[line width=0.45pt] (axis cs:2,0) -- (axis cs:2,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:2,-0.024) {3.5};
+    \draw[line width=0.45pt] (axis cs:3,0) -- (axis cs:3,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:3,-0.024) {4.5};
+    \draw[line width=0.45pt] (axis cs:4,0) -- (axis cs:4,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:4,-0.024) {5.5};
+    \draw[line width=0.45pt] (axis cs:5,0) -- (axis cs:5,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:5,-0.024) {6.5};
+    \draw[line width=0.45pt] (axis cs:6,0) -- (axis cs:6,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:6,-0.024) {7.5};
+    \draw[line width=0.45pt] (axis cs:7,0) -- (axis cs:7,-0.018);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:7,-0.024) {8.5};
     \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:4.9,-0.075) {乙离子残留百分比直方图};
 
     \draw[line width=0.45pt] (axis cs:0,0.35) -- (axis cs:-0.12,0.35);

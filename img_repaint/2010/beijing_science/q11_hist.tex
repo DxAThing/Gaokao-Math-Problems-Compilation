@@ -15,17 +15,20 @@
     height=5.4cm,
     axis lines=none,
     clip=false,
-    xmin=-12,
-    xmax=180,
+    % Display coordinates are remapped so 0--100 has exactly one class width;
+    % the printed tick labels below retain the true height boundaries.
+    xmin=-1.2,
+    xmax=7.4,
     ymin=-0.004,
     ymax=0.041,
     ticks=none,
+    x tick label as interval=false,
 ]
     % Frequency-density guides read from the original vector chart.
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.005) -- (axis cs:100,0.005);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.030) -- (axis cs:120,0.030);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.020) -- (axis cs:130,0.020);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.010) -- (axis cs:140,0.010);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.005) -- (axis cs:1,0.005);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.030) -- (axis cs:3,0.030);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.020) -- (axis cs:4,0.020);
+    \draw[dashed,line width=0.55pt] (axis cs:0,0.010) -- (axis cs:5,0.010);
 
     % Five 10-cm height classes; a is determined by the stated total frequency.
     \addplot[
@@ -34,48 +37,48 @@
         fill=white,
         line width=0.7pt,
     ] coordinates {
-        (100,0.005)
-        (110,0.035)
-        (120,0.030)
-        (130,0.020)
-        (140,0.010)
-        (150,0.000)
+        (1,0.005)
+        (2,0.035)
+        (3,0.030)
+        (4,0.020)
+        (5,0.010)
+        (6,0.000)
     };
 
     % Axes and the source's broken x-axis between 0 and 100 cm.
-    \draw[->,line width=0.8pt] (axis cs:-1,0) -- (axis cs:160,0);
+    \draw[->,line width=0.8pt] (axis cs:-0.1,0) -- (axis cs:7.0,0);
     \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,0.039);
-    \fill[white] (axis cs:14,-0.0018) -- (axis cs:18,0.0018) -- (axis cs:22,-0.0018)
-        -- (axis cs:26,0.0018) -- (axis cs:30,-0.0018) -- cycle;
-    \draw[line width=0.8pt] (axis cs:14,-0.0018) -- (axis cs:18,0.0018)
-        -- (axis cs:22,-0.0018) -- (axis cs:26,0.0018) -- (axis cs:30,-0.0018);
+    \fill[white] (axis cs:0.22,-0.0018) -- (axis cs:0.34,0.0018) -- (axis cs:0.46,-0.0018)
+        -- (axis cs:0.58,0.0018) -- (axis cs:0.70,-0.0018) -- cycle;
+    \draw[line width=0.8pt] (axis cs:0.22,-0.0018) -- (axis cs:0.34,0.0018)
+        -- (axis cs:0.46,-0.0018) -- (axis cs:0.58,0.0018) -- (axis cs:0.70,-0.0018);
 
-    \node[anchor=south west,inner sep=0pt,font=\small] at (axis cs:4,0.038) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:166,0.001) {身高};
+    \node[anchor=south west,inner sep=0pt,font=\small] at (axis cs:0.12,0.038) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:7.08,0.001) {身高};
 
     \draw[line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.0012);
-    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:0,-0.0018) {0};
-    \draw[line width=0.45pt] (axis cs:100,0) -- (axis cs:100,-0.0012);
-    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:100,-0.0018) {100};
-    \draw[line width=0.45pt] (axis cs:110,0) -- (axis cs:110,-0.0012);
-    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:110,-0.0018) {110};
-    \draw[line width=0.45pt] (axis cs:120,0) -- (axis cs:120,-0.0012);
-    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:120,-0.0018) {120};
-    \draw[line width=0.45pt] (axis cs:130,0) -- (axis cs:130,-0.0012);
-    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:130,-0.0018) {130};
-    \draw[line width=0.45pt] (axis cs:140,0) -- (axis cs:140,-0.0012);
-    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:140,-0.0018) {140};
-    \draw[line width=0.45pt] (axis cs:150,0) -- (axis cs:150,-0.0012);
-    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:150,-0.0018) {150};
-    \draw[line width=0.45pt] (axis cs:0,0.005) -- (axis cs:-2,0.005);
-    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-3,0.005) {0.005};
-    \draw[line width=0.45pt] (axis cs:0,0.010) -- (axis cs:-2,0.010);
-    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-3,0.010) {0.010};
-    \draw[line width=0.45pt] (axis cs:0,0.020) -- (axis cs:-2,0.020);
-    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-3,0.020) {0.020};
-    \draw[line width=0.45pt] (axis cs:0,0.030) -- (axis cs:-2,0.030);
-    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-3,0.030) {$a$};
-    \draw[line width=0.45pt] (axis cs:0,0.035) -- (axis cs:-2,0.035);
-    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-3,0.035) {0.035};
+    \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-0.04,-0.0018) {0};
+    \draw[line width=0.45pt] (axis cs:1,0) -- (axis cs:1,-0.0012);
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:1,-0.0018) {100};
+    \draw[line width=0.45pt] (axis cs:2,0) -- (axis cs:2,-0.0012);
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:2,-0.0018) {110};
+    \draw[line width=0.45pt] (axis cs:3,0) -- (axis cs:3,-0.0012);
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:3,-0.0018) {120};
+    \draw[line width=0.45pt] (axis cs:4,0) -- (axis cs:4,-0.0012);
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:4,-0.0018) {130};
+    \draw[line width=0.45pt] (axis cs:5,0) -- (axis cs:5,-0.0012);
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:5,-0.0018) {140};
+    \draw[line width=0.45pt] (axis cs:6,0) -- (axis cs:6,-0.0012);
+    \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:6,-0.0018) {150};
+    \draw[line width=0.45pt] (axis cs:0,0.005) -- (axis cs:-0.12,0.005);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.18,0.005) {0.005};
+    \draw[line width=0.45pt] (axis cs:0,0.010) -- (axis cs:-0.12,0.010);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.18,0.010) {0.010};
+    \draw[line width=0.45pt] (axis cs:0,0.020) -- (axis cs:-0.12,0.020);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.18,0.020) {0.020};
+    \draw[line width=0.45pt] (axis cs:0,0.030) -- (axis cs:-0.12,0.030);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.18,0.030) {$a$};
+    \draw[line width=0.45pt] (axis cs:0,0.035) -- (axis cs:-0.12,0.035);
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.18,0.035) {0.035};
 \end{axis}
 \end{tikzpicture}

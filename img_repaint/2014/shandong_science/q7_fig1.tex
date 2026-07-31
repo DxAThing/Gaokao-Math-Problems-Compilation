@@ -2,7 +2,7 @@
 % Page: 1 (the source histogram is vector artwork; no complete embedded bitmap matched it)
 % Grid evidence: tmp/repaint_2014_shandong/p1_grid100.jpg and q7_block_grid50.jpg
 % Comparison original side: img_comparison/2014/shandong_science/q7_fig1.png
-% Elements: broken horizontal sample-data axis (compressed 0--12 segment) with ticks 0,12,13,14,15,16,17; vertical frequency-density axis;
+% Elements: broken horizontal sample-data axis (one-unit 0--12 segment) with ticks 0,12,13,14,15,16,17; vertical frequency-density axis;
 % five adjacent bars on [12,13), [13,14), [14,15), [15,16), [16,17] with heights
 % 0.24, 0.16, 0.36, 0.16, and 0.08; dashed reference guides at those four distinct heights.
 % Relations: each bar height is the frequency density for its unit-width interval; the first two groups
@@ -18,15 +18,16 @@
     axis lines=none,
     clip=false,
     xmin=-0.85,
-    xmax=9.0,
+    xmax=7.0,
     ymin=-0.075,
     ymax=0.415,
     ticks=none,
+    x tick label as interval=false,
 ]
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.08) -- (axis cs:7,0.08);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.16) -- (axis cs:6,0.16);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.24) -- (axis cs:4,0.24);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.36) -- (axis cs:6,0.36);
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.08) -- (axis cs:5,0.08);
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.16) -- (axis cs:4,0.16);
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.24) -- (axis cs:2,0.24);
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.36) -- (axis cs:4,0.36);
 
     \addplot[
         ybar interval,
@@ -34,38 +35,38 @@
         fill=white,
         line width=0.6pt,
     ] coordinates {
-        (3,0.24)
+        (1,0.24)
+        (2,0.16)
+        (3,0.36)
         (4,0.16)
-        (5,0.36)
-        (6,0.16)
-        (7,0.08)
-        (8,0)
+        (5,0.08)
+        (6,0)
     };
 
-    \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:8.55,0);
+    \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:6.55,0);
     \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:0,0.41);
 
-    \fill[white] (axis cs:2.20,-0.018) -- (axis cs:2.35,0.012) -- (axis cs:2.50,-0.018) -- (axis cs:2.65,0.012) -- (axis cs:2.80,-0.018) -- cycle;
-    \draw[line width=0.7pt] (axis cs:2.20,-0.018) -- (axis cs:2.35,0.012) -- (axis cs:2.50,-0.018) -- (axis cs:2.65,0.012) -- (axis cs:2.80,-0.018);
+    \fill[white] (axis cs:0.20,-0.018) -- (axis cs:0.35,0.012) -- (axis cs:0.50,-0.018) -- (axis cs:0.65,0.012) -- (axis cs:0.80,-0.018) -- cycle;
+    \draw[line width=0.7pt] (axis cs:0.20,-0.018) -- (axis cs:0.35,0.012) -- (axis cs:0.50,-0.018) -- (axis cs:0.65,0.012) -- (axis cs:0.80,-0.018);
 
     \node[anchor=south west,inner sep=0pt,font=\small] at (axis cs:0.16,0.405)
         {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:8.5,-0.002) {舒张压/kPa};
+    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:6.5,-0.002) {舒张压/kPa};
 
     \draw[line width=0.4pt] (axis cs:0,0) -- (axis cs:0,-0.01);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:0,-0.012) {0};
+    \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.08,-0.012) {0};
+    \draw[line width=0.4pt] (axis cs:1,0) -- (axis cs:1,-0.01);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:1,-0.012) {12};
+    \draw[line width=0.4pt] (axis cs:2,0) -- (axis cs:2,-0.01);
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:2,-0.012) {13};
     \draw[line width=0.4pt] (axis cs:3,0) -- (axis cs:3,-0.01);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:3,-0.012) {12};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:3,-0.012) {14};
     \draw[line width=0.4pt] (axis cs:4,0) -- (axis cs:4,-0.01);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:4,-0.012) {13};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:4,-0.012) {15};
     \draw[line width=0.4pt] (axis cs:5,0) -- (axis cs:5,-0.01);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:5,-0.012) {14};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:5,-0.012) {16};
     \draw[line width=0.4pt] (axis cs:6,0) -- (axis cs:6,-0.01);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:6,-0.012) {15};
-    \draw[line width=0.4pt] (axis cs:7,0) -- (axis cs:7,-0.01);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:7,-0.012) {16};
-    \draw[line width=0.4pt] (axis cs:8,0) -- (axis cs:8,-0.01);
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:8,-0.012) {17};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:6,-0.012) {17};
 
     \draw[line width=0.4pt] (axis cs:0,0.08) -- (axis cs:-0.12,0.08);
     \node[anchor=east,inner sep=0pt,font=\small] at (axis cs:-0.2,0.08) {0.08};

@@ -13,39 +13,41 @@
     axis lines=none,
     clip=false,
     xmin=-8,
-    xmax=90,
+    xmax=70,
     ymin=-0.0052,
     ymax=0.046,
     ticks=none,
+    xtick=\empty,
+    x tick label as interval=false,
 ]
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.012) -- (axis cs:25,0.012);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.014) -- (axis cs:30,0.014);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.020) -- (axis cs:55,0.020);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.024) -- (axis cs:35,0.024);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.032) -- (axis cs:50,0.032);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.034) -- (axis cs:40,0.034);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.040) -- (axis cs:45,0.040);
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.012) -- (axis cs:5,0.012);
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.014) -- (axis cs:10,0.014);
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.020) -- (axis cs:35,0.020);
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.024) -- (axis cs:15,0.024);
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.032) -- (axis cs:30,0.032);
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.034) -- (axis cs:20,0.034);
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.040) -- (axis cs:25,0.040);
     \addplot[ybar interval,draw=black,fill=white,line width=0.6pt] coordinates {
-        (25,0.012) (30,0.014) (35,0.024) (40,0.034) (45,0.040)
-        (50,0.032) (55,0.020) (60,0.012) (65,0.012) (70,0)
+        (5,0.012) (10,0.014) (15,0.024) (20,0.034) (25,0.040)
+        (30,0.032) (35,0.020) (40,0.012) (45,0.012) (50,0)
     };
-    \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:88,0);
+    \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:68,0);
     \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:0,0.045);
-    \fill[white] (axis cs:10,-0.0031) -- (axis cs:12,0.0010) -- (axis cs:14,-0.0031) -- (axis cs:16,0.0010) -- (axis cs:18,-0.0031) -- cycle;
-    \draw[line width=0.7pt] (axis cs:10,-0.0031) -- (axis cs:12,0.0010) -- (axis cs:14,-0.0031) -- (axis cs:16,0.0010) -- (axis cs:18,-0.0031);
+    \fill[white] (axis cs:1,-0.0031) -- (axis cs:1.5,0.0010) -- (axis cs:2,-0.0031) -- (axis cs:2.5,0.0010) -- (axis cs:3.5,-0.0031) -- cycle;
+    \draw[line width=0.7pt] (axis cs:1,-0.0031) -- (axis cs:1.5,0.0010) -- (axis cs:2,-0.0031) -- (axis cs:2.5,0.0010) -- (axis cs:3.5,-0.0031);
     \node[anchor=south west,inner sep=0pt,font=\small] at (axis cs:2,0.042) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\scriptsize] at (axis cs:74,-0.0025) {箱产量/kg};
-    \draw[line width=0.4pt] (axis cs:0,0) -- (axis cs:0,-0.0012); \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:0,-0.0014) {0};
-    \draw[line width=0.4pt] (axis cs:25,0) -- (axis cs:25,-0.0012); \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:25,-0.0014) {25};
-    \draw[line width=0.4pt] (axis cs:30,0) -- (axis cs:30,-0.0012); \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:30,-0.0014) {30};
-    \draw[line width=0.4pt] (axis cs:35,0) -- (axis cs:35,-0.0012); \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:35,-0.0014) {35};
-    \draw[line width=0.4pt] (axis cs:40,0) -- (axis cs:40,-0.0012); \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:40,-0.0014) {40};
-    \draw[line width=0.4pt] (axis cs:45,0) -- (axis cs:45,-0.0012); \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:45,-0.0014) {45};
-    \draw[line width=0.4pt] (axis cs:50,0) -- (axis cs:50,-0.0012); \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:50,-0.0014) {50};
-    \draw[line width=0.4pt] (axis cs:55,0) -- (axis cs:55,-0.0012); \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:55,-0.0014) {55};
-    \draw[line width=0.4pt] (axis cs:60,0) -- (axis cs:60,-0.0012); \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:60,-0.0014) {60};
-    \draw[line width=0.4pt] (axis cs:65,0) -- (axis cs:65,-0.0012); \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:65,-0.0014) {65};
-    \draw[line width=0.4pt] (axis cs:70,0) -- (axis cs:70,-0.0012); \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:70,-0.0014) {70};
+    \node[anchor=west,inner sep=0pt,font=\scriptsize] at (axis cs:52,-0.0025) {箱产量/kg};
+    \node[anchor=north east,inner sep=0pt,font=\scriptsize] at (axis cs:-0.6,-0.0014) {0};
+    \draw[line width=0.4pt] (axis cs:5,0) -- (axis cs:5,-0.0012); \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:5,-0.0014) {25};
+    \draw[line width=0.4pt] (axis cs:10,0) -- (axis cs:10,-0.0012); \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:10,-0.0014) {30};
+    \draw[line width=0.4pt] (axis cs:15,0) -- (axis cs:15,-0.0012); \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:15,-0.0014) {35};
+    \draw[line width=0.4pt] (axis cs:20,0) -- (axis cs:20,-0.0012); \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:20,-0.0014) {40};
+    \draw[line width=0.4pt] (axis cs:25,0) -- (axis cs:25,-0.0012); \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:25,-0.0014) {45};
+    \draw[line width=0.4pt] (axis cs:30,0) -- (axis cs:30,-0.0012); \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:30,-0.0014) {50};
+    \draw[line width=0.4pt] (axis cs:35,0) -- (axis cs:35,-0.0012); \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:35,-0.0014) {55};
+    \draw[line width=0.4pt] (axis cs:40,0) -- (axis cs:40,-0.0012); \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:40,-0.0014) {60};
+    \draw[line width=0.4pt] (axis cs:45,0) -- (axis cs:45,-0.0012); \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:45,-0.0014) {65};
+    \draw[line width=0.4pt] (axis cs:50,0) -- (axis cs:50,-0.0012); \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:50,-0.0014) {70};
     \draw[line width=0.4pt] (axis cs:0,0.012) -- (axis cs:-2.5,0.012);
     \node[anchor=east,inner sep=0pt,font=\tiny,yshift=-0.8pt] at (axis cs:-3,0.012) {0.012};
     \draw[line width=0.4pt] (axis cs:0,0.014) -- (axis cs:-2.5,0.014);
@@ -60,7 +62,7 @@
     \node[anchor=east,inner sep=0pt,font=\tiny,yshift=0.8pt] at (axis cs:-3,0.034) {0.034};
     \draw[line width=0.4pt] (axis cs:0,0.040) -- (axis cs:-2.5,0.040);
     \node[anchor=east,inner sep=0pt,font=\tiny] at (axis cs:-3,0.040) {0.040};
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:38,-0.0045) {旧养殖法};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:28,-0.0045) {旧养殖法};
 \end{axis}
 
 \begin{axis}[
@@ -71,37 +73,39 @@
     axis lines=none,
     clip=false,
     xmin=-8,
-    xmax=90,
+    xmax=60,
     ymin=-0.0068,
     ymax=0.074,
     ticks=none,
+    xtick=\empty,
+    x tick label as interval=false,
 ]
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.004) -- (axis cs:35,0.004);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.008) -- (axis cs:65,0.008);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.010) -- (axis cs:60,0.010);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.020) -- (axis cs:40,0.020);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.044) -- (axis cs:45,0.044);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.046) -- (axis cs:55,0.046);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.068) -- (axis cs:50,0.068);
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.004) -- (axis cs:5,0.004);
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.008) -- (axis cs:35,0.008);
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.010) -- (axis cs:30,0.010);
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.020) -- (axis cs:10,0.020);
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.044) -- (axis cs:15,0.044);
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.046) -- (axis cs:25,0.046);
+    \draw[dashed,line width=0.45pt] (axis cs:0,0.068) -- (axis cs:20,0.068);
     \addplot[ybar interval,draw=black,fill=white,line width=0.6pt] coordinates {
-        (35,0.004) (40,0.020) (45,0.044) (50,0.068)
-        (55,0.046) (60,0.010) (65,0.008) (70,0)
+        (5,0.004) (10,0.020) (15,0.044) (20,0.068)
+        (25,0.046) (30,0.010) (35,0.008) (40,0)
     };
-    \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:88,0);
+    \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:58,0);
     \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:0,0.073);
-    \fill[white] (axis cs:10,-0.0048) -- (axis cs:12,0.0015) -- (axis cs:14,-0.0048) -- (axis cs:16,0.0015) -- (axis cs:18,-0.0048) -- cycle;
-    \draw[line width=0.7pt] (axis cs:10,-0.0048) -- (axis cs:12,0.0015) -- (axis cs:14,-0.0048) -- (axis cs:16,0.0015) -- (axis cs:18,-0.0048);
+    \fill[white] (axis cs:1,-0.0048) -- (axis cs:1.5,0.0015) -- (axis cs:2,-0.0048) -- (axis cs:2.5,0.0015) -- (axis cs:3.5,-0.0048) -- cycle;
+    \draw[line width=0.7pt] (axis cs:1,-0.0048) -- (axis cs:1.5,0.0015) -- (axis cs:2,-0.0048) -- (axis cs:2.5,0.0015) -- (axis cs:3.5,-0.0048);
     \node[anchor=south west,inner sep=0pt,font=\small] at (axis cs:2,0.069) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\scriptsize] at (axis cs:74,-0.0028) {箱产量/kg};
-    \draw[line width=0.4pt] (axis cs:0,0) -- (axis cs:0,-0.0014); \node[anchor=north,inner sep=0pt,font=\scriptsize] at (axis cs:0,-0.0017) {0};
-    \draw[line width=0.4pt] (axis cs:35,0) -- (axis cs:35,-0.0014); \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:35,-0.0017) {35};
-    \draw[line width=0.4pt] (axis cs:40,0) -- (axis cs:40,-0.0014); \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:40,-0.0017) {40};
-    \draw[line width=0.4pt] (axis cs:45,0) -- (axis cs:45,-0.0014); \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:45,-0.0017) {45};
-    \draw[line width=0.4pt] (axis cs:50,0) -- (axis cs:50,-0.0014); \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:50,-0.0017) {50};
-    \draw[line width=0.4pt] (axis cs:55,0) -- (axis cs:55,-0.0014); \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:55,-0.0017) {55};
-    \draw[line width=0.4pt] (axis cs:60,0) -- (axis cs:60,-0.0014); \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:60,-0.0017) {60};
-    \draw[line width=0.4pt] (axis cs:65,0) -- (axis cs:65,-0.0014); \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:65,-0.0017) {65};
-    \draw[line width=0.4pt] (axis cs:70,0) -- (axis cs:70,-0.0014); \node[anchor=north east,rotate=45,inner sep=0pt,font=\tiny] at (axis cs:70,-0.0017) {70};
+    \node[anchor=west,inner sep=0pt,font=\scriptsize] at (axis cs:44,-0.0028) {箱产量/kg};
+    \node[anchor=north east,inner sep=0pt,font=\scriptsize] at (axis cs:-0.6,-0.0017) {0};
+    \draw[line width=0.4pt] (axis cs:5,0) -- (axis cs:5,-0.0014); \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:5,-0.0017) {35};
+    \draw[line width=0.4pt] (axis cs:10,0) -- (axis cs:10,-0.0014); \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:10,-0.0017) {40};
+    \draw[line width=0.4pt] (axis cs:15,0) -- (axis cs:15,-0.0014); \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:15,-0.0017) {45};
+    \draw[line width=0.4pt] (axis cs:20,0) -- (axis cs:20,-0.0014); \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:20,-0.0017) {50};
+    \draw[line width=0.4pt] (axis cs:25,0) -- (axis cs:25,-0.0014); \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:25,-0.0017) {55};
+    \draw[line width=0.4pt] (axis cs:30,0) -- (axis cs:30,-0.0014); \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:30,-0.0017) {60};
+    \draw[line width=0.4pt] (axis cs:35,0) -- (axis cs:35,-0.0014); \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:35,-0.0017) {65};
+    \draw[line width=0.4pt] (axis cs:40,0) -- (axis cs:40,-0.0014); \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:40,-0.0017) {70};
     \draw[line width=0.4pt] (axis cs:0,0.004) -- (axis cs:-2.5,0.004);
     \node[anchor=east,inner sep=0pt,font=\tiny] at (axis cs:-3,0.004) {0.004};
     \draw[line width=0.4pt] (axis cs:0,0.008) -- (axis cs:-2.5,0.008);
@@ -116,6 +120,6 @@
     \node[anchor=east,inner sep=0pt,font=\tiny,yshift=0.8pt] at (axis cs:-3,0.046) {0.046};
     \draw[line width=0.4pt] (axis cs:0,0.068) -- (axis cs:-2.5,0.068);
     \node[anchor=east,inner sep=0pt,font=\tiny] at (axis cs:-3,0.068) {0.068};
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:38,-0.0058) {新养殖法};
+    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:23,-0.0058) {新养殖法};
 \end{axis}
 \end{tikzpicture}
