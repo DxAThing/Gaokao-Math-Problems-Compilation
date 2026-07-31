@@ -1,0 +1,46 @@
+% Flowchart transcription from img/2010/shanghai_liberal/q11_fig1.png.
+% Nodes: 开始; T←9,S←0; 输出 T,S; T≤19?; T←T+1; 输入 a; blank update box; 结束.
+% Directed edges: 开始→初始化→输出→判定; 判定(否)→结束;
+% 判定(是)→T更新→输入a→空白更新框→回到判定上方.
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=.55pt,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\normalsize,anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  flowbox/.style={draw,minimum height=.70cm,inner xsep=4pt,inner ysep=2pt,
+    anchor=center,align=center},
+  terminal/.style={flowbox,rounded corners=.18cm,minimum width=1.50cm,
+    minimum height=.76cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
+    trapezium right angle=108,minimum height=.82cm},
+  decision/.style={flowbox,shape=diamond,aspect=2.75,inner sep=2pt},
+  flowarrow/.style={->,line width=.55pt},
+]
+  \node[terminal] (start) at (0,11.20) {开始};
+  \node[flowbox,minimum width=4.35cm] (init) at (0,9.72)
+    {$T\leftarrow 9,\ S\leftarrow 0$};
+  \node[io,minimum width=3.65cm] (report) at (0,8.12) {输出 $T,S$};
+  \node[decision,minimum width=4.35cm,minimum height=1.10cm] (test) at (0,6.32)
+    {$T\leqslant 19$};
+  \node[flowbox,minimum width=3.35cm] (inc) at (0,4.55)
+    {$T\leftarrow T+1$};
+  \node[io,minimum width=3.15cm] (input) at (0,2.83) {输入 $a$};
+  \node[flowbox,minimum width=3.75cm] (update) at (0,1.18) {};
+  \node[terminal] (finish) at (3.58,4.92) {结束};
+
+  \coordinate (loopjoin) at (-3.38,7.42);
+  \coordinate (loopright) at (0,7.42);
+  \draw[flowarrow] (start.south) -- (init.north);
+  \draw[flowarrow] (init.south) -- (report.north);
+  \draw (report.south) -- (loopright);
+  \draw[flowarrow] (loopright) -- (test.north);
+  \draw[flowarrow] (test.south) -- node[right=3pt] {是} (inc.north);
+  \draw[flowarrow] (inc.south) -- (input.north);
+  \draw[flowarrow] (input.south) -- (update.north);
+  \draw[flowarrow] (test.east) -- node[above=2pt] {否} (3.58,6.32) -- (finish.north);
+  \draw (update.west) -- (-3.38,1.18) -- (loopjoin);
+  \draw[flowarrow] (loopjoin) -- (loopright);
+  \path[use as bounding box] (-3.62,.72) rectangle (4.38,11.58);
+\end{tikzpicture}

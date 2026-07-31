@@ -21,6 +21,12 @@
 
 % 单字不成行、单行不成页
 \makeatletter
+\newif\ifexamcolorstackinitialized
+\ifdefined\main@pdfcolorstack
+    \examcolorstackinitializedtrue
+\else
+    \examcolorstackinitializedfalse
+\fi
 \newcommand{\examwidoworphanrules}{%
     \clubpenalty=10000%
     \widowpenalty=10000%
@@ -59,7 +65,37 @@
 % tall-page 布尔开关：\tallpagetrue（默认）/ \tallpagefalse
 \newif\iftallpage
 \tallpagetrue
+\makeatletter
+% Reset the TeX/xcolor current-color bookkeeping without pushing a new
+% graphics color-stack entry.  Chapter hooks run at top level, so the usual
+% \normalcolor (which calls \set@color and schedules an aftergroup pop) would
+% leak one stack entry per chapter.
+\newcommand{\examresetnormalcolor}{%
+    \let\current@color\default@color
+    \ifdefined\XC@default@color
+        \let\XC@current@color\XC@default@color
+    \fi
+    \ifexamcolorstackinitialized\else
+        \special{pdfcolorstackinit 1 page direct (0 g 0 G)}%
+        \global\examcolorstackinitializedtrue
+    \fi
+    \ifdefined\@pdfcolorstack
+        \special{pdfcolorstack \@pdfcolorstack set (0 g 0 G)}%
+    \else
+        \special{pdfcolorstack 1 set (0 g 0 G)}%
+        % Legacy xdv color handlers still understand the direct `color`
+        % special; discard one leaked non-default color first, then change
+        % the graphics state in place without another stack push.
+        \ifx\current@color\default@color\else
+            \special{color pop}%
+        \fi
+        \special{color gray 0}%
+    \fi
+}
+\makeatother
 \pretocmd{\chapter}{%
+    \FloatBarrier
+    \examresetnormalcolor
     \problembodyend
     \setcounter{probnum}{0}%
     \setcounter{section}{0}%
@@ -213,11 +249,29 @@
     },
 }
 \usepackage{wrapfig}
-% 调整 wrapfigure 与正文的间距
-\setlength{\intextsep}{0pt}  % 纵向：图片上下的间距
+% 调整 wrapfigure 与正文的间距；普通题内 figure 也采用同一稳定半行距。
+\setlength{\intextsep}{0.45\baselineskip}  % 纵向：图片上下的间距
+\setlength{\textfloatsep}{0.45\baselineskip}
+\setlength{\floatsep}{0.45\baselineskip}
 % \columnsep（横向：图片与侧边文字的间距）已在上方 multicol 区域统一设为 1.5em
 \usepackage{array, tabularray, multirow}
 \usepackage{caption}
+\usepackage{placeins}
+% Permit large block figures to use the standard top-float queue even when
+% their measured box is taller than the conservative defaults.
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.70}
+\setcounter{topnumber}{2}
+% Keep float-only pages compact and top-aligned.  The default \@fptop and
+% \@fpbot both contain stretch, which vertically centers a lone figure;
+% reserve the stretch only below the float instead.
+\makeatletter
+\setlength{\@fptop}{0pt}
+\setlength{\@fpsep}{0.5\baselineskip}
+\setlength{\@fpbot}{0pt plus 1fil}
+\makeatother
+\AtEndDocument{\FloatBarrier}
 
 % --- 接管 \includegraphics：找不到文件时显示占位框而非报错 ---
 \let\originalincludegraphics\includegraphics
@@ -275,6 +329,14 @@
         \csname bitmaplayout@\detokenize{#1}\endcsname
         {trim={#3},clip,width=#2,max width=\linewidth}%
 }
+% Trim-only declarations preserve the caller's width/max width controls.  A
+% complete generated layout remains authoritative when both declarations
+% exist for the same image.
+\newcommand{\FigureTrimDeclare}[2]{%
+    \expandafter\gdef
+        \csname bitmaptrim@\detokenize{#1}\endcsname
+        {#2}%
+}
 \InputIfFileExists{tools/typeset/generated_image_layout.tex}{}{}
 
 \newcommand{\bitmapinclude}[2][]{%
@@ -285,10 +347,16 @@
         \edef\bitmaplayoutoptions{%
             \csname bitmaplayout@\detokenize{#2}\endcsname
         }%
+    \else\ifcsname bitmaptrim@\detokenize{#2}\endcsname
+        % Trim-only assets keep the invocation's width/max width while
+        % applying the declared crop.
+        \edef\bitmaplayoutoptions{%
+            trim={\csname bitmaptrim@\detokenize{#2}\endcsname},clip,max width=\linewidth,#1%
+        }%
     \else
         % 照片、扫描稿、选项图及低置信度图片保留原调用参数。
         \def\bitmaplayoutoptions{max width=\linewidth,#1}%
-    \fi
+    \fi\fi
     \expandafter\adjustbox\expandafter{\bitmaplayoutoptions}{\includegraphics{#2}}%
     \endgroup
 }
@@ -316,32 +384,327 @@
     \pgfkeys{/tikz/font/.code={\pgfkeysalso{/tikz/node font={##1}}}}%
 }
 
-\newcommand{\texinclude}[2][]{%
-    \begingroup
-    \adjustbox{max width=\linewidth,#1}{%
-        \begingroup
-        \texboxparagraphreset
-        \texboxtikzfontredirect
-        \input{#2}%
-        \endgroup
+% TeX figures are rendered at their authored size, then the finished box is
+% uniformly scaled.  Scaling the box (rather than TikZ coordinates) keeps
+% lines, anchors, nodes, labels and PGFPlots ticks in exactly the same relative
+% geometry.  Source-level \small/\scriptsize/\tiny declarations therefore
+% remain meaningful and are not allowed to create a second, shape-only scale.
+\makeatletter
+\newsavebox{\texfiguremeasurebox}
+\newlength{\texfigurenaturalwidth}
+\newlength{\texfiguretargetwidth}
+\newlength{\texfiguremaxwidth}
+\newlength{\texfigurefinalwidth}
+\newlength{\texfiguremaxnodefontdim}
+\newlength{\texfigurenodefontdim}
+\newlength{\texfigureautotargetwidth}
+\newlength{\texfigurebboxmargin}
+\newlength{\texfiguresavedmaxnodefontdim}
+\setlength{\texfigurebboxmargin}{2.5pt}
+\def\texfigure@width{}
+\def\texfigure@maxwidth{}
+\def\texfigure@scale{1}
+\def\texfigure@haswidth{0}
+\def\texfigure@hasmaxwidth{0}
+\def\texfigure@factor{1}
+\def\texfigure@fontfactor{1}
+\def\texfigure@bodyfontsize{10}
+
+\def\texfigure@parseone#1=#2\@nil{%
+    \edef\texfigure@key{\zap@space#1 \@empty}%
+    \def\texfigure@value{#2}%
+    \ifdefstring{\texfigure@key}{width}{%
+        \def\texfigure@width{#2}%
+        \def\texfigure@haswidth{1}%
+    }{}%
+    % Spaces are removed from keys above, so `max width` is compared as
+    % `maxwidth` here.
+    \ifdefstring{\texfigure@key}{maxwidth}{%
+        \def\texfigure@maxwidth{#2}%
+        \def\texfigure@hasmaxwidth{1}%
+    }{}%
+    \ifdefstring{\texfigure@key}{scale}{\def\texfigure@scale{#2}}{}%
+}
+\def\texfigure@parseopts#1{%
+    \def\texfigure@width{}%
+    \def\texfigure@maxwidth{}%
+    \def\texfigure@scale{1}%
+    \def\texfigure@haswidth{0}%
+    \def\texfigure@hasmaxwidth{0}%
+    \@for\texfigure@item:=#1\do{%
+        \expandafter\texfigure@parseone\texfigure@item\@nil
     }%
-    \endgroup
 }
 
+\def\texfigure@input#1{%
+    \texboxparagraphreset
+    \texboxtikzfontredirect
+    % Legacy sources often contain a generous `use as bounding box`
+    % rectangle.  Keep that path visible but make it overlay-only, so TikZ's
+    % automatic box follows actual strokes and labels.  The enclosing measure
+    % adds a small fixed margin.
+    \pgfkeys{/tikz/use as bounding box/.style={overlay}}%
+    \input{#1}%
+}
+
+% TikZ and PGFPlots execute this hook after the node's font keys have been
+% applied.  The assignment is global only for the duration of one measurement:
+% texinclude snapshots and restores the register below, so nested figure
+% groups or surrounding problem text cannot observe the measured value.
+\def\texfigure@recordnodefont{%
+    \ifx\f@size\@undefined\else
+        \texfigurenodefontdim=\f@size pt\relax
+        \ifdim\texfigurenodefontdim>\texfiguremaxnodefontdim
+            \global\texfiguremaxnodefontdim=\texfigurenodefontdim
+        \fi
+    \fi
+}
+
+\def\texfigure@installrecordhooks{%
+    % Append directly to TikZ's internal begin-node accumulator.  Unlike an
+    % `every node/.append style` entry, this survives a source picture that
+    % later replaces `every node/.style=...`; source execute-at-begin-node code
+    % is itself append-only and therefore cannot erase this recorder.
+    \expandafter\def\expandafter\tikz@atbegin@node\expandafter{\tikz@atbegin@node\texfigure@recordnodefont}%
+    % A few legacy nodes select their font from an execute-at-begin hook.  A
+    % matching end hook samples the resulting font after such source code has
+    % run, while remaining inside TikZ's node text group.
+    \expandafter\def\expandafter\tikz@atend@node\expandafter{\tikz@atend@node\texfigure@recordnodefont}%
+    \pgfkeys{/tikz/every node/.append style={execute at begin node={\texfigure@recordnodefont}}}%
+    % PGFPlots tick, title and axis-description nodes normally inherit
+    % /tikz/every node; these explicit hooks cover styles that replace it.
+    \pgfkeys{/pgfplots/every tick label/.append style={execute at begin node={\texfigure@recordnodefont}}}%
+    \pgfkeys{/pgfplots/every axis label/.append style={execute at begin node={\texfigure@recordnodefont}}}%
+    \pgfkeys{/pgfplots/every axis title/.append style={execute at begin node={\texfigure@recordnodefont}}}%
+}
+
+\def\texfigure@measure#1{%
+    \setbox\texfiguremeasurebox=\hbox{%
+        \kern\texfigurebboxmargin
+        \begingroup
+            \texfigure@input{#1}%
+        \endgroup
+        \kern\texfigurebboxmargin
+    }%
+    % Legacy flowcharts frequently declare `baseline` at coordinate y=0
+    % while all visible nodes sit above it.  Rebase the finished picture on
+    % its visible bottom so the box carries no artificial depth below the
+    % artwork (choice figures intentionally bypass texinclude and keep their
+    % dedicated R5-4a baseline behavior).
+    \ifdim\dp\texfiguremeasurebox>0pt
+        \setbox\texfiguremeasurebox=\hbox{%
+            \raisebox{\dp\texfiguremeasurebox}{\box\texfiguremeasurebox}%
+        }%
+    \fi
+    \texfigurenaturalwidth=\wd\texfiguremeasurebox
+}
+
+% Determine one factor for the complete box.  Automatic enlargement raises
+% the largest observed node label to the current body size.  Historical
+% width/max width/scale values below that target are deliberately ignored;
+% explicit enlargement remains honoured, subject only to the final line-width
+% cap.  max width is an upper bound only when it is not smaller than the
+% automatic font target.
+\def\texfigure@setfactor{%
+    \def\texfigure@fontfactor{1}%
+    \ifdim\texfigurenaturalwidth>0pt
+        \ifdim\texfiguremaxnodefontdim>0pt
+            \pgfmathparse{max(1,\texfigure@bodyfontsize / \strip@pt\texfiguremaxnodefontdim)}%
+            \edef\texfigure@fontfactor{\pgfmathresult}%
+        \fi
+        \edef\texfigure@factor{\texfigure@fontfactor}%
+        % scale<1 is a historical shrink request; scale>1 is an explicit
+        % enlargement and participates in the same uniform factor.
+        \pgfmathparse{max(\texfigure@factor,\texfigure@scale)}%
+        \edef\texfigure@factor{\pgfmathresult}%
+        \ifnum\texfigure@haswidth=1
+            \texfiguretargetwidth=\texfigure@width\relax
+            \ifdim\texfiguretargetwidth>\texfigurenaturalwidth
+                \edef\texfigure@ratio{\strip@pt\texfiguretargetwidth/\strip@pt\texfigurenaturalwidth}%
+                \pgfmathparse{max(\texfigure@factor,\texfigure@ratio)}%
+                \edef\texfigure@factor{\pgfmathresult}%
+            \fi
+        \fi
+        % Compute the automatic target in physical units.  A max width below
+        % this target is ignored, preserving readable labels from old calls.
+        \pgfmathparse{\texfigure@fontfactor * \strip@pt\texfigurenaturalwidth}%
+        \texfigureautotargetwidth=\pgfmathresult pt\relax
+        \ifnum\texfigure@hasmaxwidth=1
+            \texfiguremaxwidth=\texfigure@maxwidth\relax
+            \ifdim\texfiguremaxwidth>\texfigureautotargetwidth
+                \pgfmathparse{\texfigure@factor * \strip@pt\texfigurenaturalwidth}%
+                \texfiguretargetwidth=\pgfmathresult pt\relax
+                \ifdim\texfiguretargetwidth>\texfiguremaxwidth
+                    \edef\texfigure@ratio{\strip@pt\texfiguremaxwidth/\strip@pt\texfigurenaturalwidth}%
+                    \pgfmathparse{min(\texfigure@factor,\texfigure@ratio)}%
+                    \edef\texfigure@factor{\pgfmathresult}%
+                \fi
+            \fi
+        \fi
+    \else
+        \def\texfigure@factor{1}%
+    \fi
+    % Final hard cap: only the actual finished box width may force a shrink.
+    \ifdim\texfigurenaturalwidth>0pt
+        \pgfmathparse{\texfigure@factor * \strip@pt\texfigurenaturalwidth}%
+        \texfigurefinalwidth=\pgfmathresult pt\relax
+        \ifdim\texfigurefinalwidth>\linewidth
+            % Leave a tiny numerical safety margin: pgfmath's decimal
+            % rounding can otherwise make \scalebox one or two milli-points
+            % wider than \linewidth in the emitted box.
+            \texfiguretargetwidth=\dimexpr\linewidth-0.1pt\relax
+            \edef\texfigure@ratio{\strip@pt\texfiguretargetwidth/\strip@pt\texfigurenaturalwidth}%
+            \pgfmathparse{min(\texfigure@factor,\texfigure@ratio)}%
+            \edef\texfigure@factor{\pgfmathresult}%
+            \texfigurefinalwidth=\texfiguretargetwidth
+        \fi
+    \else
+        \texfigurefinalwidth=0pt
+    \fi
+}
+
+\newcommand{\texinclude}[2][]{%
+    \begingroup
+        \texfigure@parseopts{#1}%
+        \edef\texfigure@bodyfontsize{\f@size}%
+        \texfiguresavedmaxnodefontdim=\texfiguremaxnodefontdim
+        \global\texfiguremaxnodefontdim=0pt\relax
+        \texfigure@installrecordhooks
+        \texfigure@measure{#2}%
+        \texfigure@setfactor
+        \typeout{TEXFIGURE body-font=\texfigure@bodyfontsize pt recorded-max-node-font=\the\texfiguremaxnodefontdim uniform-factor=\texfigure@factor natural-width=\the\texfigurenaturalwidth final-width=\the\texfigurefinalwidth}%
+        \scalebox{\texfigure@factor}{\box\texfiguremeasurebox}%
+        \global\texfiguremaxnodefontdim=\texfiguresavedmaxnodefontdim
+    \endgroup
+}
+\makeatother
+
+% Block figure float support.  The outer float key is consumed here; every
+% other adjustbox key is forwarded unchanged to bitmapinclude/texinclude.
+\makeatletter
+\newsavebox{\examfigurebox}
+\newlength{\examfigureheight}
+\def\examfigure@opts{}
+\def\examfigure@float{auto}
+\def\examfigure@modeinline{inline}
+\def\examfigure@modetop{top}
+\ExplSyntaxOn
+\tl_new:N \l__exam_figure_raw_tl
+\tl_new:N \l__exam_figure_float_tl
+\cs_new:Npn \examfigureparsedopts {}
+\cs_new:Npn \examfigureparsedfloat {auto}
+\cs_new_protected:Npn \examfigureparseopts #1
+  {
+    \tl_set:Nn \l__exam_figure_raw_tl {#1}
+    \tl_set:Nn \l__exam_figure_float_tl {auto}
+    \tl_if_in:VnT \l__exam_figure_raw_tl {float}
+      {
+        \regex_extract_once:nnNT
+          { (?:\A|,)\s*float\s*=\s*(auto|inline|top)\s*(?:,|\Z) }
+          { \tl_to_str:V \l__exam_figure_raw_tl } \l_tmpa_seq
+          { \tl_set:Nx \l__exam_figure_float_tl { \seq_item:Nn \l_tmpa_seq {1} } }
+        \regex_replace_once:nnN
+          { \A\s*float\s*=\s*(?:auto|inline|top)\s*,\s* }
+          { }
+          \l__exam_figure_raw_tl
+        \regex_replace_once:nnN
+          { ,\s*float\s*=\s*(?:auto|inline|top)\s*,\s* }
+          { , }
+          \l__exam_figure_raw_tl
+        \regex_replace_once:nnN
+          { \A\s*float\s*=\s*(?:auto|inline|top)\s*\Z }
+          { }
+          \l__exam_figure_raw_tl
+        \regex_replace_once:nnN
+          { ,\s*float\s*=\s*(?:auto|inline|top)\s*\Z }
+          { }
+          \l__exam_figure_raw_tl
+      }
+    % Publish the parsed values as live macros.  A \cs_new_eq:NN alias here
+    % would snapshot the initially empty token lists and silently discard
+    % every bitmapfigure/texfigure option.
+    \cs_set:Npx \examfigureparsedopts
+      { \exp_not:V \l__exam_figure_raw_tl }
+    \cs_set:Npx \examfigureparsedfloat
+      { \exp_not:V \l__exam_figure_float_tl }
+  }
+\ExplSyntaxOff
+\def\examfigure@parseopts#1{%
+    \examfigureparseopts{#1}%
+    % Copy one expansion level so xkeyval receives a literal comma-separated
+    % key list while commands inside values (for example \linewidth) survive.
+    \expandafter\def\expandafter\examfigure@opts
+        \expandafter{\examfigureparsedopts}%
+    \edef\examfigure@float{\examfigureparsedfloat}%
+}
+\def\examfigure@buildbox#1{%
+    \setbox\examfigurebox=\vbox{%
+        \hsize=\linewidth
+        \begin{minipage}{\linewidth}
+            \centering
+            \begingroup
+                \def\theprobnum{\examfigure@frozenprobnum}%
+                #1%
+                \bitmapinsertcaption
+            \endgroup
+        \end{minipage}%
+    }%
+    \examfigureheight=\dimexpr\ht\examfigurebox+\dp\examfigurebox\relax
+}
+% Inline figures are ordinary block content in a problem.  Keep a stable,
+% compact half-line separation from surrounding prose; the caption itself has
+% its own 0.3\baselineskip top skip and therefore does not need extra glue.
+\def\examfigure@emitinline{%
+    \vspace{0.45\baselineskip}%
+    \box\examfigurebox\par
+    \vspace{0.4\baselineskip}%
+}
+\def\examfigure@emitfloatwithspec#1#2{%
+    \ifdim\examfigureheight>\textheight
+        \PackageError{styles}{Figure box too tall for one page}{The figure #2 cannot fit without shrinking; fix the source figure.}%
+        \examfigure@emitinline
+    \else
+        \global\@topnum\z@
+        \begin{figure}[#1]
+            \centering
+            \box\examfigurebox
+        \end{figure}%
+    \fi
+}
+\def\examfigure@emitfloat#1{\examfigure@emitfloatwithspec{!ht}{#1}}
+\def\examfigure@emittop#1{\examfigure@emitfloatwithspec{!t}{#1}}
+\def\examfigure@dispatch#1#2#3{%
+    \par
+    \examfigure@parseopts{#1}%
+    \edef\examfigure@frozenprobnum{\theprobnum}%
+    \bitmappreparecaption{#2}%
+    \edef\examfigure@call{\noexpand#3[\unexpanded\expandafter{\examfigure@opts}]{#2}}%
+    \examfigure@buildbox{\examfigure@call}%
+    \ifinner
+        \ifx\examfigure@float\examfigure@modetop
+            \PackageWarning{styles}{float=top ignored in inner mode for #2}%
+        \fi
+        \examfigure@emitinline
+    \else
+        \iftallpage
+            \examfigure@emitinline
+        \else\ifdim\pagegoal=\maxdimen
+            \examfigure@emitinline
+        \else\ifx\examfigure@float\examfigure@modeinline
+            \examfigure@emitinline
+        \else\ifx\examfigure@float\examfigure@modetop
+            \examfigure@emittop{#2}%
+        \else
+            \examfigure@emitfloat{#2}%
+        \fi\fi\fi\fi\fi
+    \endgroup
+}
+\makeatother
+
+\makeatletter
 \newcommand{\bitmapfigure}[2][]{%
     \begingroup
-    \bitmappreparecaption{#2}%
-    \begin{center}
-    % Keep the image and its caption in one unbreakable vertical box.  A plain
-    % center environment is a breakable list, so TeX could ship the image on
-    % one page and captionof's paragraph on the next page.
-    \begin{minipage}{\linewidth}
-        \centering
-        \bitmapinclude[#1]{#2}%
-        \bitmapinsertcaption
-    \end{minipage}
-    \end{center}
-    \endgroup
+    \examfigure@dispatch{#1}{#2}{\bitmapinclude}%
 }
 
 \newif\ifexamchoicegraphic
@@ -371,18 +734,9 @@
 
 \newcommand{\texfigure}[2][]{%
     \begingroup
-    \bitmappreparecaption{#2}%
-    \begin{center}
-    % Keep the figure body together when the surrounding paragraph reaches a
-    % page boundary; this mirrors bitmapfigure without changing its options.
-    \begin{minipage}{\linewidth}
-        \centering
-        \texinclude[#1]{#2}%
-        \bitmapinsertcaption
-    \end{minipage}
-    \end{center}
-    \endgroup
+    \examfigure@dispatch{#1}{#2}{\texinclude}%
 }
+\makeatother
 
 % 频率分布直方图纵轴标签：标签保持正文大小；密集柱高可用可选横移量错列，
 % 引线仍准确落在对应柱高，避免靠缩小字号处理重叠。
@@ -826,7 +1180,9 @@
 \captionsetup[figure]{
     labelformat=examfig,
     labelsep=none,
-    font=small
+    font=small,
+    aboveskip=.3\baselineskip,
+    belowskip=0pt
 }
 \captionsetup[table]{
     labelformat=examtab,

@@ -1,0 +1,53 @@
+% Source: source/普通高考/2011/2011湖南理.pdf, question 13.
+% Node-edge list: 开始→输入 x_1,x_2,x_3,x̄→i=1,S=0→S=S+(x_i−x̄)^2→i<3?;
+%   是→i=i+1→回到 S=S+(x_i−x̄)^2；否→S=S/i→输出 S→结束。
+\begin{tikzpicture}[
+  >=Stealth,
+  x=1cm,y=0.82cm,
+  line width=0.45pt,
+  line cap=round,
+  line join=round,
+  font=\normalsize,
+  flowtext/.style={anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\everypar{}\setlength{\parindent}{0pt}\noindent}},
+  every node/.style={flowtext},
+  flowbox/.style={flowtext,draw,minimum height=0.68cm,
+    inner xsep=3.5pt,inner ysep=2pt},
+  terminal/.style={flowbox,rounded corners=0.18cm,minimum width=1.18cm,
+    minimum height=0.70cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
+    trapezium right angle=108,minimum height=0.74cm},
+  decision/.style={flowbox,diamond,aspect=2.8,minimum width=3.10cm,
+    minimum height=0.92cm,inner sep=1pt},
+  branchlabel/.style={flowtext,inner sep=0pt},
+]
+  \path[use as bounding box] (-2.10,0.30) rectangle (4.90,10.35);
+
+  \node[terminal] (start) at (0,9.95) {开始};
+  \node[io,minimum width=3.65cm] (input) at (0,8.85)
+    {输入 $x_{1}$，$x_{2}$，$x_{3}$，$\overline{x}$};
+  \node[flowbox,minimum width=2.72cm] (init) at (0,7.70)
+    {$i=1$，$S=0$};
+  \node[flowbox,minimum width=3.72cm] (sum) at (0,6.34)
+    {$S=S+(x_{i}-\overline{x})^{2}$};
+  \node[decision] (test) at (0,4.96) {$i<3?$};
+  \node[flowbox,minimum width=2.20cm] (inc) at (3.50,6.34)
+    {$i=i+1$};
+  \node[flowbox,minimum width=1.75cm] (divide) at (0,3.48)
+    {$S=\displaystyle\frac{1}{i}S$};
+  \node[io,minimum width=1.85cm] (output) at (0,2.25) {输出 $S$};
+  \node[terminal] (finish) at (0,1.12) {结束};
+
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (init.north);
+  \draw[->] (init.south) -- (sum.north);
+  \draw[->] (sum.south) -- (test.north);
+  \draw[->] (test.south) -- node[branchlabel,right=3pt] {否} (divide.north);
+  \draw[->] (divide.south) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % Yes branch: increment i, then return left into the summation step.
+  \draw (test.east) -- node[branchlabel,above=2pt] {是} (3.50,4.96);
+  \draw[->] (3.50,4.96) -- (3.50,5.95);
+  \draw[->] (inc.north) -- (3.50,6.77) -- (0,6.77);
+\end{tikzpicture}

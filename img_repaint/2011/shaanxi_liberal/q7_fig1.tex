@@ -1,0 +1,54 @@
+% Source: source/普通高考/2011/2011陕西文.pdf, question 7.
+% Node-edge list: 开始→输入 x_1,x_2,x_3→|x_1−x_2|<|x_2−x_3|?;
+%   是→p=(x_1+x_2)/2；否→p=(x_2+x_3)/2；两支→输出 p→结束。
+\begin{tikzpicture}[
+  >=Stealth,
+  x=1cm,y=0.85cm,
+  line width=0.45pt,
+  line cap=round,
+  line join=round,
+  font=\normalsize,
+  flowtext/.style={anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\everypar{}\setlength{\parindent}{0pt}\noindent}},
+  every node/.style={flowtext},
+  flowbox/.style={flowtext,draw,minimum height=0.72cm,
+    inner xsep=4pt,inner ysep=2pt},
+  terminal/.style={flowbox,rounded corners=0.18cm,minimum width=1.12cm,
+    minimum height=0.72cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
+    trapezium right angle=108,minimum height=0.78cm},
+  decision/.style={flowbox,diamond,aspect=3.1,minimum width=5.20cm,
+    minimum height=1.12cm,inner sep=1pt},
+  branchlabel/.style={flowtext,inner sep=0pt},
+]
+  \path[use as bounding box] (-3.05,0.20) rectangle (4.65,8.05);
+
+  \node[terminal] (start) at (0,7.72) {开始};
+  \node[io,minimum width=3.45cm] (input) at (0,6.45)
+    {输入 $x_{1}$，$x_{2}$，$x_{3}$};
+  \node[decision] (test) at (0,5.05)
+    {$|x_{1}-x_{2}|<|x_{2}-x_{3}|$};
+  \node[flowbox,minimum width=2.55cm] (leftp) at (0,3.48)
+    {$p=\displaystyle\frac{x_{1}+x_{2}}{2}$};
+  \node[flowbox,minimum width=2.55cm] (rightp) at (3.40,3.48)
+    {$p=\displaystyle\frac{x_{2}+x_{3}}{2}$};
+  \node[io,minimum width=1.75cm] (output) at (0,2.00) {输出 $p$};
+  \node[terminal] (finish) at (0,0.82) {结束};
+
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (test.north);
+  \draw[->] (test.south) -- (leftp.north);
+  \node[branchlabel] at (0.34,4.24) {是};
+  % The left process is the main stem; both branches meet above output,
+  % and only the shared stem continues into the output node.
+  \draw[->] (leftp.south) -- (0,2.55) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % The negative branch exits the diamond to the right and enters the
+  % right-hand process box from above.
+  \draw (test.east) -- node[branchlabel,above=2pt] {否} (3.40,5.05);
+  \draw[->] (3.40,5.05) -- (3.40,3.88) -- (rightp.north);
+  % The right branch turns down and then left, with its arrowhead at the
+  % shared main-stem junction rather than at the output box itself.
+  \draw[->] (rightp.south) -- (3.40,2.55) -- (0,2.55);
+\end{tikzpicture}

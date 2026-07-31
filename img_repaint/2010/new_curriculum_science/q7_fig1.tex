@@ -1,0 +1,48 @@
+% Flowchart transcription from img/2010/new_curriculum_science/q7_fig1.png.
+% Nodes: 开始; 输入 N; k=1,S=0; S=S+1/[k(k+1)]; k<N?; k=k+1; 输出 S; 结束.
+% Directed edges: 开始→输入→初始化→求和→判定; 判定(否)→输出→结束;
+% 判定(是)→k递增→上方回线→求和.
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=.55pt,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\normalsize,anchor=center,align=center,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  flowbox/.style={draw,minimum height=.70cm,inner xsep=4pt,inner ysep=2pt,
+    anchor=center,align=center},
+  terminal/.style={flowbox,rounded corners=.18cm,minimum width=1.42cm,
+    minimum height=.76cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
+    trapezium right angle=108,minimum height=.82cm},
+  decision/.style={flowbox,shape=diamond,aspect=2.75,inner sep=2pt},
+  flowarrow/.style={->,line width=.55pt},
+]
+  \node[terminal] (start) at (0,12.10) {开始};
+  \node[io,minimum width=3.35cm] (input) at (0,10.62) {输入 $N$};
+  \node[flowbox,minimum width=4.35cm] (init) at (0,9.05)
+    {$k=1,\ S=0$};
+  \node[flowbox,minimum width=4.55cm,minimum height=1.08cm] (sum) at (0,7.05)
+    {$S=S+\dfrac{1}{k(k+1)}$};
+  \node[decision,minimum width=4.25cm,minimum height=1.08cm] (test) at (0,5.20)
+    {$k<N$};
+  \node[flowbox,minimum width=2.85cm] (inc) at (4.35,7.30)
+    {$k=k+1$};
+  \node[io,minimum width=3.15cm] (output) at (0,3.15) {输出 $S$};
+  \node[terminal] (finish) at (0,1.48) {结束};
+
+  \coordinate (loopjoin) at (0,8.20);
+  \coordinate (branchright) at (4.35,5.20);
+  \coordinate (righttop) at (4.35,8.20);
+  \draw[flowarrow] (start.south) -- (input.north);
+  \draw[flowarrow] (input.south) -- (init.north);
+  \draw (init.south) -- (loopjoin);
+  \draw[flowarrow] (loopjoin) -- (sum.north);
+  \draw[flowarrow] (sum.south) -- (test.north);
+  \draw[flowarrow] (test.south) -- node[right=3pt] {否} (output.north);
+  \draw[flowarrow] (output.south) -- (finish.north);
+  \draw (test.east) -- node[above=2pt] {是} (branchright);
+  \draw[flowarrow] (branchright) -- (inc.south);
+  \draw[flowarrow] (inc.north) -- (righttop) -- (loopjoin);
+  \path[use as bounding box] (-2.92,1.05) rectangle (5.70,12.48);
+\end{tikzpicture}

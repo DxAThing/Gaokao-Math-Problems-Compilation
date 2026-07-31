@@ -1,0 +1,54 @@
+% Source: source/普通高考/2011/2011湖南文.pdf, question 11.
+% Node-edge list: 开始→输入 x_1,x_2,x_3,x_4→i=1,x=0→x=x+x_i→i<4?;
+%   是→i=i+1→回到 x=x+x_i；否→x=x/4→输出 x→结束。
+\begin{tikzpicture}[
+  >=Stealth,
+  x=1cm,y=0.86cm,
+  line width=0.45pt,
+  line cap=round,
+  line join=round,
+  font=\normalsize,
+  flowtext/.style={anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\everypar{}\setlength{\parindent}{0pt}\noindent}},
+  every node/.style={flowtext},
+  flowbox/.style={flowtext,draw,minimum height=0.72cm,
+    inner xsep=4pt,inner ysep=2pt},
+  terminal/.style={flowbox,rounded corners=0.18cm,minimum width=1.45cm,
+    minimum height=0.78cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
+    trapezium right angle=108,minimum height=0.84cm},
+  decision/.style={flowbox,diamond,aspect=2.7,minimum width=4.15cm,
+    minimum height=1.08cm,inner sep=1pt},
+  branchlabel/.style={flowtext,inner sep=0pt},
+]
+  \path[use as bounding box] (-2.65,0.20) rectangle (4.45,13.00);
+
+  \node[terminal] (start) at (0,12.55) {开始};
+  \node[io,minimum width=5.20cm] (input) at (0,11.18)
+    {输入 $x_{1}$，$x_{2}$，$x_{3}$，$x_{4}$};
+  \node[flowbox,minimum width=3.25cm] (init) at (0,9.77)
+    {$i=1$，$x=0$};
+  \node[flowbox,minimum width=3.05cm] (sum) at (0,8.28)
+    {$x=x+x_{i}$};
+  \node[decision] (test) at (0,6.67) {$i<4?$};
+  \node[flowbox,minimum width=2.65cm] (inc) at (3.15,8.28)
+    {$i=i+1$};
+  \node[flowbox,minimum width=2.05cm,minimum height=1.02cm] (divide)
+    at (0,4.90) {$x=\displaystyle\frac{x}{4}$};
+  \node[io,minimum width=2.15cm] (output) at (0,3.35) {输出 $x$};
+  \node[terminal] (finish) at (0,1.95) {结束};
+
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (init.north);
+  \draw[->] (init.south) -- (sum.north);
+  \draw[->] (sum.south) -- (test.north);
+  \draw[->] (test.south) -- node[branchlabel,right=3pt] {否} (divide.north);
+  \draw[->] (divide.south) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % The affirmative branch leaves the diamond to the right, increments i,
+  % then returns left into the top of the summation box.
+  \draw (test.east) -- node[branchlabel,above=2pt] {是} (3.15,6.67);
+  \draw[->] (3.15,6.67) -- (3.15,7.90);
+  \draw[->] (inc.north) -- (3.15,8.78) -- (0,8.78);
+\end{tikzpicture}

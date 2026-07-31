@@ -1,0 +1,44 @@
+% Source: source/普通高考/2015/2015陕西文.pdf, page 1, question 7.
+% Flowchart topology: 开始 -> 输入 x -> x=x-3 -> x>=0?; 是 loops to the
+% entry above x=x-3, 否 -> y=x^2+1 -> 输出 y -> 结束.
+\begin{tikzpicture}[
+  x=1cm, y=0.86cm, >=Stealth,
+  line width=0.45pt, line cap=round, line join=round,
+  every node/.style={anchor=center, align=center,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  flowbox/.style={draw, minimum height=0.70cm, inner xsep=4pt, inner ysep=2pt,
+    align=center, execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  terminal/.style={flowbox, rounded corners=0.16cm, minimum width=1.30cm,
+    minimum height=0.72cm},
+  io/.style={flowbox, trapezium, trapezium left angle=72, trapezium right angle=108,
+    minimum width=2.30cm, minimum height=0.78cm},
+  process/.style={flowbox, minimum width=3.00cm},
+  decision/.style={flowbox, diamond, aspect=3.1, minimum width=3.55cm,
+    minimum height=1.00cm, inner sep=1pt},
+  branchlabel/.style={anchor=center, align=center, inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}}
+]
+  \node[terminal] (start) at (0,10.60) {开始};
+  \node[io] (input) at (0,9.10) {输入 $x$};
+  \node[process, minimum width=3.05cm] (update) at (0,7.55) {$x=x-3$};
+  \node[decision] (test) at (0,5.80) {$x\geqslant 0$};
+  \node[process, minimum width=3.35cm] (calc) at (0,4.05) {$y=x^2+1$};
+  \node[io] (output) at (0,2.45) {输出 $y$};
+  \node[terminal] (finish) at (0,0.95) {结束};
+
+  \draw[->] (start.south) -- (input.north);
+  \coordinate (loopJoin) at (0,8.25);
+  \draw (input.south) -- (loopJoin);
+  \draw[->] (loopJoin) -- (update.north);
+  \draw[->] (update.south) -- (test.north);
+  \draw[->] (test.south) -- node[branchlabel, right=2pt] {否} (calc.north);
+  \draw[->] (calc.south) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % The affirmative branch turns right, rises, then points left into the
+  % single entry junction above x=x-3.
+  \coordinate (loopRight) at (2.85,5.80);
+  \coordinate (loopTop) at (2.85,8.25);
+  \draw (test.east) -- node[branchlabel, above=2pt] {是} (loopRight) -- (loopTop);
+  \draw[->] (loopTop) -- (loopJoin);
+\end{tikzpicture}
