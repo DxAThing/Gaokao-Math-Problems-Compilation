@@ -1,0 +1,53 @@
+% Source: img/2010/jiangsu/q7_fig1.png, question 7.
+% Complete algorithm flowchart redraw: initialize S and n, accumulate 2^n,
+% test S>=33, loop on N, and output S on Y.
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=0.55pt,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\normalsize,anchor=center,align=center,
+    execute at begin node={\everypar{}\leftskip=0pt\rightskip=0pt\parindent=0pt
+      \hangindent=0pt\hangafter=1\parshape=0}},
+  flowbox/.style={draw,minimum height=.70cm,inner xsep=4pt,inner ysep=2pt,
+    align=center},
+  terminal/.style={flowbox,rounded corners=.18cm,minimum width=1.55cm,
+    minimum height=.74cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
+    trapezium right angle=108,minimum height=.80cm},
+  decision/.style={flowbox,shape=diamond,aspect=2.85,minimum width=4.10cm,
+    minimum height=1.05cm,inner sep=1pt},
+  flowarrow/.style={->,line width=0.55pt},
+]
+  \node[terminal] (start) at (0,11.20) {开始};
+  \node[flowbox,minimum width=2.15cm] (initS) at (0,9.80)
+    {$S\leftarrow 1$};
+  \node[flowbox,minimum width=2.15cm] (initN) at (0,8.45)
+    {$n\leftarrow 1$};
+  \node[flowbox,minimum width=4.45cm] (accum) at (0,6.90)
+    {$S\leftarrow S+2^n$};
+  \node[decision] (test) at (0,5.20) {$S\geqslant 33$};
+  \node[flowbox,minimum width=2.95cm] (increment) at (4.10,6.90)
+    {$n\leftarrow n+1$};
+  \node[io,minimum width=2.40cm] (output) at (0,3.40) {输出 $S$};
+  \node[terminal] (finish) at (0,2.00) {结束};
+  \coordinate (merge) at (0,8.00);
+
+  \draw[flowarrow] (start.south) -- (initS.north);
+  \draw[flowarrow] (initS.south) -- (initN.north);
+  \draw (initN.south) -- (merge);
+  \draw[flowarrow] (merge) -- (accum.north);
+  \draw[flowarrow] (accum.south) -- (test.north);
+
+  % N branch: increment n, then return to the accumulation step.
+  \draw[flowarrow] (test.east) -- (4.10,5.20) -- (increment.south);
+  \draw[flowarrow] (increment.north) -- (4.10,8.00) -- (merge);
+  \node[anchor=west] at (1.78,5.37) {N};
+
+  % Y branch: output and terminate.
+  \draw[flowarrow] (test.south) -- (output.north);
+  \node[anchor=west] at (0.18,4.38) {Y};
+  \draw[flowarrow] (output.south) -- (finish.north);
+
+  \path[use as bounding box] (-2.90,1.62) rectangle (5.25,11.60);
+\end{tikzpicture}

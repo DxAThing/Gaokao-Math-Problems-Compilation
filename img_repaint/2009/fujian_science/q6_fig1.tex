@@ -1,0 +1,42 @@
+% Source: source/普通高考/2009/2009福建理.pdf, question 6.
+% Topology: 开始→S=2→n=1→S=1/(1−S)→n=2n→S=2?;
+% 是→输出n→结束；否→左回边→回到 S=1/(1−S) 前的主竖线。
+\begin{tikzpicture}[
+  >=Stealth,
+  x=1cm,y=0.86cm,
+  line width=0.45pt,line cap=round,line join=round,
+  font=\normalsize,
+  flowtext/.style={anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\everypar{}\setlength{\parindent}{0pt}\noindent}},
+  every node/.style={flowtext},
+  flowbox/.style={flowtext,draw,minimum height=0.70cm,inner xsep=4pt,inner ysep=2pt},
+  terminal/.style={flowbox,rounded corners=0.18cm,minimum width=1.45cm,minimum height=0.78cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
+    minimum width=2.65cm,minimum height=0.82cm},
+  decision/.style={flowbox,diamond,aspect=2.8,minimum width=4.10cm,minimum height=1.05cm,inner sep=1pt},
+  branchlabel/.style={flowtext,inner sep=0pt},
+]
+  \path[use as bounding box] (-3.35,0.25) rectangle (2.60,13.10);
+  \node[terminal] (start) at (0,12.65) {开始};
+  \node[flowbox,minimum width=2.25cm] (sinit) at (0,11.30) {$S=2$};
+  \node[flowbox,minimum width=2.25cm] (ninit) at (0,9.88) {$n=1$};
+  \node[flowbox,minimum width=3.25cm,minimum height=1.22cm] (update)
+    at (0,8.25) {$S=\displaystyle\frac{1}{1-S}$};
+  \node[flowbox,minimum width=2.45cm] (double) at (0,6.55) {$n=2n$};
+  \node[decision] (test) at (0,4.95) {$S=2$};
+  \node[io,minimum width=2.35cm] (output) at (0,3.25) {输出 $n$};
+  \node[terminal] (finish) at (0,1.75) {结束};
+
+  \draw[->] (start.south) -- (sinit.north);
+  \draw[->] (sinit.south) -- (ninit.north);
+  \draw[->] (ninit.south) -- (update.north);
+  \draw[->] (update.south) -- (double.north);
+  \draw[->] (double.south) -- (test.north);
+  \draw[->] (test.south) -- node[branchlabel,right=3pt] {是} (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  % 否 loops left and returns by a horizontal arrow to the main stem.
+  \draw (test.west) -- (-3.0,4.95) -- (-3.0,9.10);
+  \draw[->] (-3.0,9.10) -- (0,9.10);
+  \node[branchlabel] at (-1.72,5.28) {否};
+\end{tikzpicture}

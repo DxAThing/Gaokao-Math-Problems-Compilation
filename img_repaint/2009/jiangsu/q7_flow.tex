@@ -1,0 +1,56 @@
+% Source: img/2009/jiangsu/q7_flow.png, question 7.
+% Complete algorithm flowchart redraw.
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=0.55pt,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\normalsize,anchor=center,align=center,
+    execute at begin node={\everypar{}\leftskip=0pt\rightskip=0pt\parindent=0pt
+      \hangindent=0pt\hangafter=1\parshape=0}},
+  flowbox/.style={draw,minimum height=.70cm,inner xsep=4pt,inner ysep=2pt,
+    align=center},
+  terminal/.style={flowbox,rounded corners=.18cm,minimum width=1.55cm,
+    minimum height=.74cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
+    trapezium right angle=108,minimum height=.80cm},
+  diamondbox/.style={flowbox,shape=diamond,aspect=3.25,minimum height=1.25cm,
+    inner sep=1pt},
+  flowarrow/.style={->,line width=0.55pt},
+]
+  \node[terminal] (start) at (0,12.10) {开始};
+  \node[flowbox,minimum width=2.30cm] (initS) at (0,10.70)
+    {$S\leftarrow 0$};
+  \node[flowbox,minimum width=2.30cm] (initT) at (0,9.35)
+    {$T\leftarrow 1$};
+  \node[diamondbox,minimum width=5.60cm] (update) at (0,7.55)
+    {$S\leftarrow T^2-S$};
+  \node[diamondbox,minimum width=4.55cm,minimum height=1.15cm] (test)
+    at (0,5.30) {$S\geqslant 10$};
+  \node[flowbox,minimum width=3.20cm] (increment) at (4.55,7.55)
+    {$T\leftarrow T+2$};
+  \node[flowbox,minimum width=3.75cm] (calcW) at (0,3.55)
+    {$W\leftarrow S+T$};
+  \node[io,minimum width=2.80cm] (output) at (0,2.00) {输出 $W$};
+  \node[terminal] (finish) at (0,0.65) {结束};
+  \coordinate (merge) at (0,8.65);
+
+  \draw[flowarrow] (start.south) -- (initS.north);
+  \draw[flowarrow] (initS.south) -- (initT.north);
+  \draw (initT.south) -- (merge);
+  \draw[flowarrow] (merge) -- (update.north);
+  \draw[flowarrow] (update.south) -- (test.north);
+
+  % N branch: increment T, then return to the update step.
+  \draw[flowarrow] (test.east) -- (4.55,5.30) -- (increment.south);
+  \draw[flowarrow] (increment.north) -- (4.55,8.65) -- (merge);
+  \node[anchor=west] at (2.15,5.45) {N};
+
+  % Y branch: calculate and output W.
+  \draw[flowarrow] (test.south) -- (calcW.north);
+  \node[anchor=west] at (0.18,4.48) {Y};
+  \draw[flowarrow] (calcW.south) -- (output.north);
+  \draw[flowarrow] (output.south) -- (finish.north);
+
+  \path[use as bounding box] (-3.20,0.25) rectangle (6.20,12.50);
+\end{tikzpicture}

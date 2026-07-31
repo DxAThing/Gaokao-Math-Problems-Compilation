@@ -1,0 +1,41 @@
+% Source: source/普通高考/2013/2013湖南理.pdf, page 1, question 13.
+% Topology: start -> input a,b -> a>8?; 是 -> 输出 a -> 结束;
+% 否 -> a=a+b -> loop back to the single entry above the test.
+\begin{tikzpicture}[
+  x=1cm, y=0.90cm, >=Stealth,
+  line width=0.45pt, line cap=round, line join=round,
+  every node/.style={anchor=center, align=center,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  flowbox/.style={draw, minimum height=0.70cm, inner xsep=4pt, inner ysep=2pt,
+    align=center, execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  terminal/.style={flowbox, rounded corners=0.16cm, minimum width=1.30cm,
+    minimum height=0.72cm},
+  io/.style={flowbox, trapezium, trapezium left angle=72, trapezium right angle=108,
+    minimum width=2.45cm, minimum height=0.78cm},
+  process/.style={flowbox, minimum width=3.10cm},
+  decision/.style={flowbox, diamond, aspect=3.2, minimum width=3.90cm,
+    minimum height=1.00cm, inner sep=1pt},
+  branchlabel/.style={anchor=center, align=center, inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}}
+]
+  \node[terminal] (start) at (0,9.50) {开始};
+  \node[io, minimum width=3.35cm] (input) at (0,8.05) {输入 $a,b$};
+  \node[decision] (test) at (0,6.20) {$a>8?$};
+  \node[process, minimum width=3.35cm] (update) at (0,4.35) {$a=a+b$};
+  \node[io] (output) at (4.25,5.20) {输出 $a$};
+  \node[terminal] (finish) at (4.25,3.70) {结束};
+
+  \draw[->] (start.south) -- (input.north);
+  \coordinate (loopJoin) at (0,6.80);
+  \draw (input.south) -- (loopJoin);
+  \draw[->] (loopJoin) -- (test.north);
+  \draw[->] (test.south) -- node[branchlabel, right=2pt] {否} (update.north);
+  \draw[->] (test.east) -- node[branchlabel, above=2pt] {是} (4.25,6.20) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  \coordinate (loopDrop) at (0,3.55);
+  \coordinate (loopLeft) at (-3.45,3.55);
+  \coordinate (loopTop) at (-3.45,6.80);
+  \draw (update.south) -- (loopDrop) -- (loopLeft) -- (loopTop);
+  \draw[->] (loopTop) -- (loopJoin);
+\end{tikzpicture}

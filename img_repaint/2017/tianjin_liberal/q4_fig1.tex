@@ -1,0 +1,48 @@
+% Source: source/普通高考/2017/2017天津文.pdf, page 1, question 4.
+% Topology: start -> 输入 N -> N能被3整除?; 是 -> N=N/3, 否 -> N=N-1;
+% both -> N<=3?; 否 loops to the first test, 是 -> 输出 N -> 结束.
+\begin{tikzpicture}[
+  x=1cm, y=0.88cm, >=Stealth,
+  line width=0.45pt, line cap=round, line join=round,
+  every node/.style={anchor=center, align=center,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  flowbox/.style={draw, minimum height=0.70cm, inner xsep=4pt, inner ysep=2pt,
+    align=center, execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  terminal/.style={flowbox, rounded corners=0.16cm, minimum width=1.30cm,
+    minimum height=0.72cm},
+  io/.style={flowbox, trapezium, trapezium left angle=72, trapezium right angle=108,
+    minimum width=2.45cm, minimum height=0.78cm},
+  process/.style={flowbox, minimum width=3.05cm},
+  decision/.style={flowbox, diamond, aspect=3.0, minimum width=4.35cm,
+    minimum height=1.00cm, inner sep=1pt},
+  branchlabel/.style={anchor=center, align=center, inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}}
+]
+  \node[terminal] (start) at (0,12.0) {开始};
+  \node[io] (input) at (0,10.55) {输入 $N$};
+  \node[decision, minimum width=5.10cm] (test1) at (0,8.80) {$N\text{ 能被 }3\text{ 整除?}$};
+  \node[process, minimum width=2.55cm] (divide) at (0,6.55) {$N=\dfrac{N}{3}$};
+  \node[process, minimum width=3.35cm] (minus) at (4.00,6.55) {$N=N-1$};
+  \node[decision, minimum width=3.95cm] (test2) at (0,4.25) {$N\leqslant 3?$};
+  \node[io] (output) at (0,2.65) {输出 $N$};
+  \node[terminal] (finish) at (0,1.20) {结束};
+
+  \draw[->] (start.south) -- (input.north);
+  \coordinate (join1) at (0,9.35);
+  \draw (input.south) -- (join1);
+  \draw[->] (join1) -- (test1.north);
+  \draw[->] (test1.south) -- node[branchlabel, right=2pt] {是} (divide.north);
+  \draw (divide.south) -- (0,5.55);
+  \draw[->] (test1.east) -- node[branchlabel, above=2pt] {否} (4.00,8.80) -- (minus.north);
+  \draw (minus.south) -- (4.00,5.55);
+  \coordinate (join2) at (0,5.55);
+  \draw[->] (4.00,5.55) -- (join2);
+  \draw[->] (join2) -- (test2.north);
+  \draw[->] (test2.south) -- node[branchlabel, right=2pt] {是} (output.north);
+  \draw[->] (output.south) -- (finish.north);
+
+  \coordinate (loopLeft) at (-4.20,4.25);
+  \coordinate (loopTop) at (-4.20,9.35);
+  \draw (test2.west) -- node[branchlabel, above=2pt] {否} (loopLeft) -- (loopTop);
+  \draw[->] (loopTop) -- (join1);
+\end{tikzpicture}

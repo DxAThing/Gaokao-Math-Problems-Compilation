@@ -1,0 +1,38 @@
+% Source: source/普通高考/2017/2017山东文.pdf, page 1, question 6.
+% Topology: start -> input x -> blank test; 是 -> y=x+2, 否 -> y=log_2 x;
+% both branches merge before 输出 y -> 结束.
+\begin{tikzpicture}[
+  x=1cm, y=0.90cm, >=Stealth,
+  line width=0.45pt, line cap=round, line join=round,
+  every node/.style={anchor=center, align=center,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  flowbox/.style={draw, minimum height=0.70cm, inner xsep=4pt, inner ysep=2pt,
+    align=center, execute at begin node={\setlength{\parindent}{0pt}\noindent}},
+  terminal/.style={flowbox, rounded corners=0.16cm, minimum width=1.30cm,
+    minimum height=0.72cm},
+  io/.style={flowbox, trapezium, trapezium left angle=72, trapezium right angle=108,
+    minimum width=2.35cm, minimum height=0.78cm},
+  process/.style={flowbox, minimum width=3.10cm},
+  decision/.style={flowbox, diamond, aspect=3.0, minimum width=3.35cm,
+    minimum height=1.00cm, inner sep=1pt},
+  branchlabel/.style={anchor=center, align=center, inner sep=0pt,
+    execute at begin node={\setlength{\parindent}{0pt}\noindent}}
+]
+  \node[terminal] (start) at (0,9.20) {开始};
+  \node[io] (input) at (0,7.75) {输入 $x$};
+  \node[decision] (test) at (0,6.10) {};
+  \node[process, minimum width=3.10cm] (plus) at (0,4.45) {$y=x+2$};
+  \node[process, minimum width=3.55cm] (log) at (3.70,4.45) {$y=\log_{2}x$};
+  \node[io] (output) at (0,2.65) {输出 $y$};
+  \node[terminal] (finish) at (0,1.15) {结束};
+
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (test.north);
+  \draw[->] (test.south) -- node[branchlabel, right=2pt] {是} (plus.north);
+  \draw[->] (test.east) -- node[branchlabel, above=2pt] {否} (3.70,6.10) -- (log.north);
+  \coordinate (merge) at (0,3.45);
+  \draw (plus.south) -- (merge);
+  \draw[->] (log.south) -- (3.70,3.45) -- (merge);
+  \draw[->] (merge) -- (output.north);
+  \draw[->] (output.south) -- (finish.north);
+\end{tikzpicture}

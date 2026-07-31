@@ -1,0 +1,63 @@
+% Original PDF: source/普通高考/2009/2009新课标理(海南,宁夏).pdf, question 10.
+% Program-flow topology read from the original figure; it is the same graph as
+% the liberal-arts version, with the original science-paper proportions retained.
+\begin{tikzpicture}[
+  >=Stealth,
+  line width=0.55pt,
+  line cap=round,
+  line join=round,
+  every node/.style={font=\normalsize,anchor=center,align=center,
+    execute at begin node={\everypar{}\leftskip=0pt\rightskip=0pt\parindent=0pt
+      \hangindent=0pt\hangafter=1\parshape=0}},
+  flowbox/.style={draw,minimum height=.70cm,inner xsep=4pt,inner ysep=2pt,
+    align=center},
+  terminal/.style={flowbox,rounded corners=.18cm,minimum width=1.55cm,
+    minimum height=.74cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
+    trapezium right angle=108,minimum height=.80cm},
+  decision/.style={flowbox,shape=diamond,aspect=2.65,minimum width=3.20cm,
+    minimum height=.95cm,inner sep=1pt},
+  flowarrow/.style={->,line width=0.55pt},
+]
+  \node[terminal] (start) at (0,11.20) {开始};
+  \node[io,minimum width=3.20cm] (input) at (0,9.75) {输入 $x,h$};
+  \node[decision] (testneg) at (0,8.25) {$x<0$};
+  \node[decision,minimum width=3.55cm] (testone) at (2.95,6.90) {$x<1$};
+  \node[flowbox,minimum width=2.05cm] (yzero) at (-3.00,5.25) {$y=0$};
+  \node[flowbox,minimum width=2.05cm] (yx) at (1.35,5.25) {$y=x$};
+  \node[flowbox,minimum width=2.05cm] (yone) at (4.20,5.25) {$y=1$};
+  \node[io,minimum width=2.45cm] (output) at (0,3.65) {输出 $y$};
+  \node[decision,minimum width=3.45cm] (testtwo) at (0,2.00) {$x\geqslant 2$};
+  \node[flowbox,minimum width=3.20cm] (increment) at (4.65,3.35) {$x=x+h$};
+  \node[terminal] (finish) at (0,0.55) {结束};
+
+  \draw[flowarrow] (start.south) -- (input.north);
+  % The input trunk and the return loop share one explicit merge point.
+  \coordinate (entry) at (0,9.00);
+  \draw (input.south) -- (entry);
+  \draw[flowarrow] (entry) -- (testneg.north);
+  \draw[flowarrow] (testneg.west) -- (-3.00,8.25) -- (yzero.north);
+  \node[anchor=east] at (-1.35,8.42) {是};
+  \draw[flowarrow] (testneg.east) -- (2.95,8.25) -- (testone.north);
+  \node[anchor=west] at (1.30,8.42) {否};
+  \draw[flowarrow] (testone.west) -- (1.35,6.90) -- (yx.north);
+  \node[anchor=east] at (2.15,7.08) {是};
+  \draw[flowarrow] (testone.east) -- (4.20,6.90) -- (yone.north);
+  \node[anchor=west] at (3.65,7.08) {否};
+  \draw[flowarrow] (yzero.south) -- (-3.00,4.45);
+  \draw (-3.00,4.45) -- (0,4.45);
+  \draw[flowarrow] (yx.south) -- (1.35,4.45);
+  \draw (1.35,4.45) -- (0,4.45);
+  \draw[flowarrow] (yone.south) -- (4.20,4.45);
+  \draw (4.20,4.45) -- (0,4.45);
+  \draw[flowarrow] (0,4.45) -- (output.north);
+  \draw[flowarrow] (output.south) -- (testtwo.north);
+  \draw[flowarrow] (testtwo.south) -- (finish.north);
+  \node[anchor=west] at (0.18,1.28) {是};
+  \draw[flowarrow] (testtwo.east) -- (6.00,2.00) -- (6.00,2.95)
+    -- (increment.south);
+  \node[anchor=west] at (1.85,2.28) {否};
+  \draw[flowarrow] (increment.north) -- (6.00,3.75) -- (6.00,9.00)
+    -- (entry);
+  \path[use as bounding box] (-4.35,0.18) rectangle (6.15,11.55);
+\end{tikzpicture}

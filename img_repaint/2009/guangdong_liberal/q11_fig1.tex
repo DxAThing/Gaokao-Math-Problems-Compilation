@@ -1,0 +1,37 @@
+% Source: source/普通高考/2009/2009广东文.pdf, question 11.
+% Topology: 开始→输入→s=0,i=1→空白判断；是→s=s+a_i→i=i+1→回到主竖线；否→输出s→结束。
+\begin{tikzpicture}[
+  >=Stealth,
+  x=1cm,y=0.84cm,
+  line width=0.45pt,line cap=round,line join=round,
+  font=\normalsize,
+  flowtext/.style={anchor=center,align=center,inner sep=0pt,
+    execute at begin node={\everypar{}\setlength{\parindent}{0pt}\noindent}},
+  every node/.style={flowtext},
+  flowbox/.style={flowtext,draw,minimum height=0.70cm,inner xsep=4pt,inner ysep=2pt},
+  terminal/.style={flowbox,rounded corners=0.18cm,minimum width=1.42cm,minimum height=0.76cm},
+  io/.style={flowbox,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
+    minimum height=0.80cm},
+  decision/.style={flowbox,diamond,aspect=2.8,minimum width=3.65cm,minimum height=1.00cm,inner sep=1pt},
+  branchlabel/.style={flowtext,inner sep=0pt},
+]
+  \path[use as bounding box] (-2.45,0.20) rectangle (4.85,10.05);
+  \node[terminal] (start) at (0,9.55) {开始};
+  \node[io,minimum width=5.45cm] (input) at (0,8.25)
+    {输入 $n$，$a_{1}$，$a_{2}$，$\cdots$，$a_{6}$};
+  \node[flowbox,minimum width=3.10cm] (init) at (0,6.95) {$s=0$，$i=1$};
+  \node[decision] (test) at (0,5.10) {};
+  \node[flowbox,minimum width=2.85cm] (add) at (3.75,5.10) {$s=s+a_{i}$};
+  \node[flowbox,minimum width=2.75cm] (inc) at (3.75,6.95) {$i=i+1$};
+  \node[io,minimum width=2.00cm] (output) at (0,3.05) {输出 $s$};
+  \node[terminal] (finish) at (0,1.65) {结束};
+
+  \draw[->] (start.south) -- (input.north);
+  \draw[->] (input.south) -- (init.north);
+  \draw[->] (init.south) -- (test.north);
+  \draw[->] (test.south) -- node[branchlabel,right=3pt] {否} (output.north);
+  \draw[->] (output.south) -- (finish.north);
+  \draw[->] (test.east) -- node[pos=0.25,branchlabel,above=2pt] {是} (add.west);
+  \draw[->] (add.north) -- (inc.south);
+  \draw[->] (inc.north) -- (3.75,6.30) -- (0,6.30);
+\end{tikzpicture}
