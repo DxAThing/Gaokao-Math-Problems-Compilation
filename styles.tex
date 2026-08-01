@@ -19,6 +19,16 @@
 \setlength{\parskip}{0pt}
 \renewcommand{\baselinestretch}{1.5}
 
+% Keep a finite amount of stretch on prose paragraph final lines.  The
+% default infinite \parfillskip makes a one-character final line cost-free,
+% so TeX may strand a single Han character or punctuation mark.  A small
+% finite reserve (half the local line width) makes that break expensive while
+% preserving ordinary justification.  Structured layouts (TOC, choices, figures and tables)
+% restore their own paragraph settings or never enter this hook.
+\newcommand{\examproseparagraph}{%
+    \parfillskip=0pt plus 0.5\linewidth
+}
+
 % 单字不成行、单行不成页
 \makeatletter
 \newif\ifexamcolorstackinitialized
@@ -817,11 +827,13 @@
     \global\problemfirstparagraphfalse
     \global\problemheadpendingfalse
     \everypar{}%
+    \parfillskip=0pt plus 1fil\relax
     \problemresetlayout
 }
 \let\problembodyend\problembodyfinish
 
 \newcommand{\problemliststart}{%
+    \examproseparagraph
     \ifproblembodyactive
         \ifhmode\unskip\par\fi
         \ifproblemheadpending
@@ -839,6 +851,7 @@
 }
 
 \newcommand{\problemblockstart}{%
+    \examproseparagraph
     \ifproblembodyactive
         \ifhmode\unskip\par\fi
         \ifproblemheadpending
@@ -850,6 +863,7 @@
 }
 
 \newcommand{\problemconsumeinlineblockprefix}{%
+    \examproseparagraph
     \ifproblemheadpending
         \global\problemheadpendingfalse
         \leavevmode\llap{\problemheadprefix}%
@@ -857,6 +871,7 @@
 }
 
 \newcommand{\problemcenterstart}{%
+    \examproseparagraph
     \ifproblembodyactive
         \ifhmode\unskip\par\fi
         \ifproblemheadpending
@@ -886,6 +901,7 @@
   {}{}
 
 \newcommand{\problemcontinuationpar}{%
+    \examproseparagraph
     \ifproblembodyactive
         \ifnum\@listdepth=\z@
             \ifproblemfirstparagraph
@@ -917,6 +933,7 @@
     \global\problembodyactivetrue
     \global\problemfirstparagraphtrue
     \global\problemheadpendingtrue
+    \examproseparagraph
     \everypar{\problemcontinuationpar}%
     \ignorespaces%
 }
@@ -1083,7 +1100,7 @@
         left=3pt,right=2pt, top=1pt, bottom=1pt,
         before skip=0.3em,
         after skip=0.3em,
-        before upper={\examwidoworphanrules\setlength{\parindent}{2em}\tolerance=3200\emergencystretch=8em\setlength{\jot}{4pt}\lineskiplimit=3pt\lineskip=4pt\selectfont},
+        before upper={\examwidoworphanrules\examproseparagraph\setlength{\parindent}{2em}\tolerance=3200\emergencystretch=8em\setlength{\jot}{4pt}\lineskiplimit=3pt\lineskip=4pt\selectfont},
         fontupper=\zihao{-4},
     }
 }
@@ -1313,6 +1330,7 @@
     \dim_gadd:Nn \g__circle_maxwidth_dim { 1em }
     \dim_set:Nn \g__circle_availwidth_dim { \linewidth - \problembodyindent }
     \group_begin:
+    \examproseparagraph
     \setlength{\leftskip}{\problembodyindent}
     \setlength{\parindent}{0pt}
     \dim_compare:nNnTF

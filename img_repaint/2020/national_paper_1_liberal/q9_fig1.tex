@@ -36,7 +36,8 @@
 
   % Downstream path and loop connectors.
   \draw[->,flow] (start.south) -- (0,6.90);
-  \draw[->,flow] (0,6.20) -- (sum.north);
+  \draw[flow] (0,6.20) -- (0,5.90);
+  \draw[->,flow] (0,5.90) -- (sum.north);
   \draw[->,flow] (sum.south) -- (test.north);
   \draw[->,flow] (test.south) -- (output.north)
         node[pos=0.50, right=2pt] {否};
@@ -50,5 +51,5 @@
   \draw[flow] (inc.north) -- (-2.55,5.90);
   % The return arrow terminates at the visible junction on the main shaft;
   % the shaft's own arrow continues into the sum box.
-  \draw[->,flow] (-2.55,5.90) -- (-0.45,5.90) -- (0,5.90);
+  \draw[flow] (-2.55,5.90) -- (-0.45,5.90) -- (0,5.90);
 \end{tikzpicture}

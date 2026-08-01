@@ -37,13 +37,15 @@
 
     % Main directed sequence.
     \draw[->] (start.south) -- (init.north);
-    \draw[->] (init.south) -- (update.north);
+    \draw (init.south) -- (0,7.48);
+    \draw[->] (0,7.48) -- (update.north);
     \draw[->] (update.south) -- (increment.north);
     \draw[->] (increment.south) -- (decision.north);
     \draw[->] (decision.south) -- node[pos=0.50, anchor=west] {是} (output.north);
     \draw[->] (output.south) -- (finish.north);
 
-    % No branch loops rightward and back to the update connector; the arrow points left at the return.
-    \draw[->] (decision.east) -- ++(1.25,0) |- (0,7.48);
+    % No branch loops rightward and merges into the update-entry trunk; the
+    % main trunk's arrow marks the single continuation into the update box.
+    \draw (decision.east) -- ++(1.25,0) |- (0,7.48);
     \node[anchor=south] at (1.38,3.83) {否};
 \end{tikzpicture}

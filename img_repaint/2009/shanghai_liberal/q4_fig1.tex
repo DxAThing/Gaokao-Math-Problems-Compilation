@@ -1,0 +1,44 @@
+% Source PDF: source/普通高考/2009/2009上海文.pdf, page 1 (question 4).
+% Program flow: 开始 -> 输入实数 x -> x>1?; 是 -> y<-x-2, 否 -> y<-2^x;
+% branches merge -> 输出 y -> 结束.
+\begin{tikzpicture}[
+    >=Stealth,
+    x=1cm,
+    y=0.86cm,
+    line width=0.45pt,
+    line cap=round,
+    line join=round,
+    flowtext/.style={anchor=center,align=center,
+        execute at begin node={\setlength{\parindent}{0pt}}},
+    every node/.style={flowtext,font=\normalsize},
+    flowbox/.style={draw,flowtext,minimum height=0.68cm,inner xsep=4pt,inner ysep=2pt},
+    terminal/.style={flowbox,rounded corners=0.18cm,minimum width=1.30cm},
+    process/.style={flowbox,minimum width=2.20cm},
+    decision/.style={draw,diamond,flowtext,aspect=2.8,minimum width=2.90cm,
+        minimum height=0.95cm,inner sep=0pt},
+    io/.style={draw,trapezium,flowtext,trapezium left angle=72,
+        trapezium right angle=108,minimum width=1.95cm,minimum height=0.74cm,
+        inner xsep=4pt,inner ysep=2pt},
+    branchlabel/.style={flowtext,inner sep=0pt},
+]
+    \path[use as bounding box] (-1.90,-0.50) rectangle (3.80,8.65);
+
+    \node[terminal] (start) at (0,8.20) {开始};
+    \node[io,minimum width=2.35cm] (input) at (0,6.90) {输入实数 $x$};
+    \node[decision] (check) at (0,5.35) {$x>1$};
+    \node[process] (linear) at (0,3.85) {$y\leftarrow x-2$};
+    \node[process] (exponential) at (2.40,3.85) {$y\leftarrow 2^x$};
+    \node[io,minimum width=1.95cm] (output) at (0,2.30) {输出 $y$};
+    \node[terminal] (finish) at (0,0.90) {结束};
+
+    \draw[->] (start.south) -- (input.north);
+    \draw[->] (input.south) -- (check.north);
+    \draw[->] (check.south) -- node[branchlabel,left=3pt] {是} (linear.north);
+    \draw[->] (check.east) -- node[branchlabel,above=2pt] {否} (3.45,5.35)
+        -- (3.45,4.20) -- (exponential.north);
+    \coordinate (merge) at (0,2.95);
+    \draw[-] (linear.south) -- (merge);
+    \draw[-] (exponential.south) -- (2.40,2.95) -- (merge);
+    \draw[->] (merge) -- (output.north);
+    \draw[->] (output.south) -- (finish.north);
+\end{tikzpicture}

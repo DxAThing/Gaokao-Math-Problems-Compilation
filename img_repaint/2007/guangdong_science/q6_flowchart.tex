@@ -39,15 +39,13 @@
   \node[terminal] (finish) at (0,3.35) {结束};
 
   \coordinate (loop-join) at (0,8.75);
-  \coordinate (right-turn) at (3.55,7.45);
-
   \draw[->] (start.south) -- (input.north);
   \draw[->] (input.south) -- (init.north);
   \draw (init.south) -- (loop-join);
   \draw[->] (loop-join) -- (test.north);
 
   % 是 branch: update s, increment i, then return left into the main stem.
-  \draw[->] (test.east) -- (right-turn) -- (add.west);
+  \draw[->] (test.east) -- (add.west);
   \draw[->] (add.north) -- (increment.south);
   \draw[->] (increment.west) -- (loop-join);
 

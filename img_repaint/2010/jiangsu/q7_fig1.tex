@@ -42,7 +42,8 @@
   % N branch: increment n, then return to the accumulation step.
   \draw[flowarrow] (test.east) -- (4.10,5.20) -- (increment.south);
   \draw[flowarrow] (increment.north) -- (4.10,8.00) -- (merge);
-  \node[anchor=west] at (1.78,5.37) {N};
+  % Keep the branch label clear of the horizontal connector.
+  \node[anchor=south west,inner sep=0pt] at (1.78,5.42) {N};
 
   % Y branch: output and terminate.
   \draw[flowarrow] (test.south) -- (output.north);

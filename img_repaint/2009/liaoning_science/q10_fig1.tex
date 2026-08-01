@@ -15,13 +15,13 @@
   decision/.style={flowbox,diamond,aspect=2.9,minimum width=4.25cm,minimum height=1.08cm,inner sep=1pt},
   branchlabel/.style={flowtext,inner sep=0pt},
 ]
-  \path[use as bounding box] (-4.60,0.10) rectangle (5.20,13.00);
+  \path[use as bounding box] (-4.60,0.10) rectangle (6.50,13.00);
   \node[terminal] (start) at (0,12.55) {开始};
   \node[io,minimum width=5.80cm] (input) at (0,11.25)
     {输入 $N$，$a_{1}$，$a_{2}$，$\cdots$，$a_{N}$};
-  \node[flowbox,minimum width=4.70cm] (init) at (0,9.85)
+  \node[flowbox,minimum width=4.70cm] (init) at (0,10.00)
     {$k=1$，$S=0$，$T=0$};
-  \node[flowbox,minimum width=1.95cm] (assign) at (0,8.40) {$A=a_{k}$};
+  \node[flowbox,minimum width=1.95cm] (assign) at (0,8.20) {$A=a_{k}$};
   \node[decision] (testA) at (0,6.90) {};
   \node[flowbox,minimum width=2.70cm] (addT) at (-2.85,5.35) {$T=T+A$};
   \node[flowbox,minimum width=2.70cm] (addS) at (2.85,5.35) {$S=S+A$};
@@ -29,21 +29,23 @@
   \node[flowbox,minimum width=2.80cm] (blank) at (0,2.50) {};
   \node[io,minimum width=3.20cm] (output) at (0,1.18) {输出 $S$，$V$};
   \node[terminal] (finish) at (0,0.02) {结束};
-  \node[flowbox,minimum width=2.85cm] (inc) at (4.00,7.05) {$k=k+1$};
+  \node[flowbox,minimum width=2.85cm] (inc) at (4.90,7.05) {$k=k+1$};
 
   \draw[->] (start.south) -- (input.north);
   \draw[->] (input.south) -- (init.north);
   \draw[->] (init.south) -- (assign.north);
   \draw[->] (assign.south) -- (testA.north);
-  \draw[->] (testA.west) -- node[branchlabel,above=2pt] {否} (addT.north);
-  \draw[->] (testA.east) -- node[branchlabel,above=2pt] {是} (addS.north);
+  \draw[->] (testA.west) -- node[pos=0.25,branchlabel,above=4pt] {否}
+    (-2.85,6.90) -- (addT.north);
+  \draw[->] (testA.east) -- node[pos=0.25,branchlabel,above=5pt] {是}
+    (2.85,6.90) -- (addS.north);
   \draw (addT.south) -- (-2.85,4.65) -- (0,4.65);
   \draw (addS.south) -- (2.85,4.65) -- (0,4.65);
   \draw[->] (0,4.65) -- (testK.north);
   \draw[->] (testK.south) -- node[branchlabel,right=3pt] {否} (blank.north);
   \draw[->] (blank.south) -- (output.north);
   \draw[->] (output.south) -- (finish.north);
-  \draw (testK.east) -- node[branchlabel,above=2pt] {是} (4.00,3.95);
-  \draw[->] (4.00,3.95) -- (4.00,6.65) -- (inc.south);
-  \draw[->] (inc.north) -- (4.00,9.10) -- (0,9.10);
+  \draw (testK.east) -- node[branchlabel,above=5pt] {是} (4.90,3.95);
+  \draw[->] (4.90,3.95) -- (4.90,6.70);
+  \draw[->] (inc.north) -- (4.90,9.20) -- (0,9.20);
 \end{tikzpicture}

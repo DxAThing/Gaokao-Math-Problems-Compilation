@@ -27,15 +27,16 @@
 
   \draw[->] (start.south) -- (input.north);
   \draw[->] (input.south) -- (init.north);
-  \draw[->] (init.south) -- (sum.north);
+  \draw (init.south) -- (0,-2.78);
+  \draw[->] (0,-2.78) -- (sum.north);
   \draw[->] (sum.south) -- (half.north);
   \draw[->] (half.south) -- (test.north);
   \draw[->] (test.south) -- (output.north);
   \draw[->] (output.south) -- (finish.north);
 
   % The source's right-hand branch returns to the top of the accumulation box.
-  \draw[->] (test.east) -- (1.50,-5.68) -- (1.50,-2.78) -- (0,-2.78);
-  % Keep the 否 label between the decision and the return spine, matching the source.
-  \node[flow node,anchor=east] at (1.05,-5.27) {否};
+  \draw (test.east) -- (1.50,-5.68) -- (1.50,-2.78) -- (0,-2.78);
+  % Keep the 否 label outside the diamond, between its east edge and return spine.
+  \node[flow node,anchor=west] at (1.16,-5.27) {否};
   \node[flow node] at (0.28,-6.18) {是};
 \end{tikzpicture}

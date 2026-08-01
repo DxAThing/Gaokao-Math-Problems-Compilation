@@ -28,11 +28,10 @@
   \draw (init.south) -- (merge-level);
   \draw[->] (merge-level) -- (inc.north);
   \draw[->] (inc.south) -- (test.north);
-  \draw[->] (test.south) -- (formula.north);
+  \draw[->] (test.south) -- node[left=2pt] {是} (formula.north);
   \draw[->] (formula.south) -- (output.north);
   \draw[->] (output.south) -- (finish.north);
   \draw (test.east) -- (1.65,-3.48) -- (1.65,-1.68);
   \draw[->] (1.65,-1.68) -- (merge-level);
   \node[flowtext,anchor=west,inner xsep=1pt,inner ysep=1pt] at (1.90,-3.12) {否};
-  \node[flowtext,inner xsep=1pt,inner ysep=1pt] at (-0.42,-3.98) {是};
 \end{tikzpicture}

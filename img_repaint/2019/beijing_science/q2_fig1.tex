@@ -37,14 +37,17 @@
 
   % Main downward path.
   \draw[->] (start.south) -- (init.north);
-  \draw[->] (init.south) -- (update.north);
+  \draw (init.south) -- (0,5.25);
+  \draw[->] (0,5.25) -- (update.north);
   \draw[->] (update.south) -- (decision.north);
   \draw[->] (decision.south) -- node[right] {是} (output.north);
   \draw[->] (output.south) -- (end.north);
 
   % No branch: diamond -> increment -> return to update.
-  \draw[->] (decision.east) -- node[above] {否} (2.35,3.03) -- (inc.south);
+  \draw (decision.east) -- (2.35,3.03);
+  \draw[->] (2.35,3.03) -- (inc.south);
+  \node[anchor=east] at (2.15,3.20) {否};
   % The return arrow turns above the update box and terminates at the visible
   % trunk junction; the trunk's own arrow continues into update.
-  \draw[->] (inc.north) -- (2.35,5.25) -- (0,5.25);
+  \draw (inc.north) -- (2.35,5.25) -- (0,5.25);
 \end{tikzpicture}

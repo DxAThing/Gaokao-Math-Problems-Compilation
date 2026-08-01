@@ -32,10 +32,14 @@
   \node[io] (output) at (0,-8.27) {输出 $S$};
   \node[term] (finish) at (0,-9.35) {结束};
 
+  % Clear shared junction above the decision.
+  \coordinate (loopJoin) at (0,-2.68);
+
   % Main vertical path and the yes branch.
   \draw[flowarrow] (start.south) -- (input.north);
   \draw[flowarrow] (input.south) -- (init.north);
-  \draw[flowarrow] (init.south) -- (test.north);
+  \draw (init.south) -- (loopJoin);
+  \draw[flowarrow] (loopJoin) -- (test.north);
   \draw[flowarrow] (test.south) -- (sum.north);
   \draw[flowarrow] (sum.south) -- (flip.north);
   \draw[flowarrow] (flip.south) -- (inc.north);
@@ -43,8 +47,8 @@
 
   % Loop-back from K increment: the horizontal segment enters the shared decision stem.
   % Keep the loop entry below the initialization box (>=2.5 mm clear).
-  \draw (inc.west) -- (-2.25,-6.98) -- (-2.25,-2.80);
-  \draw[flowarrow] (-2.25,-2.80) -- (0,-2.80);
+  \draw (inc.west) -- (-2.25,-6.98) -- (-2.25,-2.68);
+  \draw[flowarrow] (-2.25,-2.68) -- (loopJoin);
   % The no branch exits right, runs down, then turns left to the output stem.
   \draw (test.east) -- (2.55,-3.45) -- (2.55,-7.70) -- (0,-7.70);
   \draw[flowarrow] (0,-7.70) -- (output.north);

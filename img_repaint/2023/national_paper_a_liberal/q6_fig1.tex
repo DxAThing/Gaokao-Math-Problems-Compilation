@@ -42,10 +42,10 @@
   \node[startstop] (finish) at (0,0.25) {结束};
 
   \draw[->] (start.south) -- (input.north);
-  % The forward stem and loop return share one arrow entering the decision;
-  % no second arrowhead is placed on the loop's horizontal apex segment.
-  \draw (input.south) -- (0,7.85);
-  \draw[->] (0,7.85) -- (test.north);
+  % The forward stem and loop return share a merge above the decision;
+  % the short downward stem carries the sole arrow entering the diamond.
+  \draw (input.south) -- (0,8.10);
+  \draw[->] (0,8.10) -- (test.north);
   \draw[->] (test.south) -- node[flowtext, right] {是} (stepa.north);
   \draw[->] (stepa.south) -- (stepb.north);
   \draw[->] (stepb.south) -- (stepk.north);
@@ -53,7 +53,8 @@
 
   % Loop-back branch from the increment box returns along the left side to the
   % upper test entry, matching the source PDF's horizontal arrow and short entry.
-  \draw (stepk.west) -- (-1.80,3.11) -- (-1.80,7.85) -- (0,7.85);
+  \draw (stepk.west) -- (-1.80,3.11) -- (-1.80,8.10);
+  \draw[->] (-1.80,8.10) -- (0,8.10);
   % False branch bypasses the loop and follows the right-side route into output.east;
   % it then continues output -> finish.  There is no k -> output connector.
   \draw[->] (test.east) -- node[flowtext, above] {否} (2.00,7.40)

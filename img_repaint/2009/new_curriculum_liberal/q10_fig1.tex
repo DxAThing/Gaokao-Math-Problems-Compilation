@@ -40,15 +40,15 @@
 
   % x<0? branches: yes to y=0; no to the second decision.
   \draw[flowarrow] (testneg.west) -- (-3.00,8.25) -- (yzero.north);
-  \node[anchor=east] at (-1.35,8.42) {是};
+  \node[anchor=east] at (-2.00,8.42) {是};
   \draw[flowarrow] (testneg.east) -- (2.95,8.25) -- (testone.north);
   \node[anchor=west] at (1.30,8.42) {否};
 
   % x<1? branches to y=x and y=1.
   \draw[flowarrow] (testone.west) -- (1.35,6.90) -- (yx.north);
-  \node[anchor=east] at (2.15,7.08) {是};
+  \node[anchor=east] at (1.05,7.08) {是};
   \draw[flowarrow] (testone.east) -- (4.20,6.90) -- (yone.north);
-  \node[anchor=west] at (3.65,7.08) {否};
+  \node[anchor=west] at (3.50,7.08) {否};
 
   % Three output branches merge before 输出 y.
   \draw[flowarrow] (yzero.south) -- (-3.00,4.45);
@@ -64,11 +64,11 @@
   \node[anchor=west] at (0.18,1.28) {是};
 
   % No branch loops upward and re-enters the first decision.
-  \draw[flowarrow] (testtwo.east) -- (6.00,2.00) -- (6.00,2.95)
-    -- (increment.south);
+  \draw[flowarrow] (testtwo.east) -- (6.00,2.00) -- (6.00,2.65)
+    -- (4.65,2.65) -- (4.65,2.95) -- (increment.south);
   \node[anchor=west] at (1.85,2.28) {否};
-  \draw[flowarrow] (increment.north) -- (6.00,3.75) -- (6.00,9.00)
-    -- (entry);
+  \draw[flowarrow] (increment.north) -- (4.65,4.05) -- (6.00,4.05)
+    -- (6.00,9.00) -- (entry);
 
   \path[use as bounding box] (-4.35,0.18) rectangle (6.15,11.55);
 \end{tikzpicture}

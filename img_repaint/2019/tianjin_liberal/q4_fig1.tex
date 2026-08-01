@@ -45,7 +45,8 @@
   \node[flowbox, rounded corners=0.12cm, minimum width=1.10cm] (finish) at (0,-10.82) {结束};
 
   \draw[flowarrow] (start) -- (init);
-  \draw[flowarrow] (init) -- (even);
+  \draw (init.south) -- (0,-1.60);
+  \draw[flowarrow] (0,-1.60) -- (even.north);
   \draw[flowarrow] (even) -- node[font=\normalsize, right, xshift=0.05cm] {是} (jcalc);
   \draw[flowarrow] (jcalc) -- (seven);
   % Keep the branch stem clear of the odd-case box before attaching to it.
@@ -58,10 +59,10 @@
   \draw[flowarrow] (sodd.south) -- (3.10,-6.20) -- (0.30,-6.20) -- (0,-6.20);
   \draw[flowarrow] (0,-6.20) -- (inc.north);
   \draw[flowarrow] (inc) -- (gefour);
-  % The loop returns with a right-pointing arrow into the trunk above the
-  % decision; the main trunk retains its separate downward arrowhead.
+  % The loop returns into the trunk above the decision; the main trunk carries
+  % the sole downward arrowhead into the decision.
   \draw[line width=0.45pt] (gefour.west) -- (-3.30,-8.25) -- (-3.30,-1.60);
-  \draw[flowarrow] (-3.30,-1.60) -- (-0.30,-1.60) -- (0,-1.60);
+  \draw (-3.30,-1.60) -- (-0.30,-1.60) -- (0,-1.60);
   \node[font=\normalsize, anchor=east, inner sep=0.02cm] at (-2.70,-8.00) {否};
   \draw[flowarrow] (gefour) -- node[font=\normalsize, right, xshift=0.06cm] {是} (output);
   \draw[flowarrow] (output) -- (finish);

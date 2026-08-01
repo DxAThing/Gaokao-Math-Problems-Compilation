@@ -34,10 +34,14 @@
   \node[io, minimum width=1.75cm] (output) at (0,1.05) {输出 $s$};
   \node[startstop] (finish) at (0,-0.25) {结束};
 
+  % Clear shared junction above 输入 a.
+  \coordinate (loopJoin) at (0,6.38);
+
   % Main downward path.
   \draw[->] (start.south) -- (input.north);
   \draw[->] (input.south) -- (init.north);
-  \draw[->] (init.south) -- (inputa.north);
+  \draw (init.south) -- (loopJoin);
+  \draw[->] (loopJoin) -- (inputa.north);
   \draw[->] (inputa.south) -- (update.north);
   \draw[->] (update.south) -- (check.north);
   \draw[->] (output.south) -- (finish.north);
@@ -45,8 +49,7 @@
   % 否: right-side return to the input-a entry; the left-pointing arrow ends
   % at the main vertical edge, while the main init→input-a arrow remains unique.
   \coordinate (loopRight) at (2.65,2.55);
-  \coordinate (loopTop) at (2.65,6.22);
-  \coordinate (loopJoin) at (0,6.22);
+  \coordinate (loopTop) at (2.65,6.38);
   \draw[->] (check.east) -- node[pos=0.28,above] {否} (loopRight) -- (loopTop) -- (loopJoin);
   \draw[->] (check.south) -- node[midway,right] {是} (output.north);
 \end{tikzpicture}

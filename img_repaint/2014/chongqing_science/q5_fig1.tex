@@ -47,7 +47,8 @@
 
   % True branch and loop return. The horizontal return arrow merges above test;
   % it remains separate from the downward main-trunk arrow into the diamond.
-  \draw[->] (test.east) -- node[flowtext, above] {是} (update_s.west);
+  % Keep the branch label near the decision exit, clear of the process box.
+  \draw[->] (test.east) -- node[flowtext, above=2pt,pos=0,anchor=south east] {是} (update_s.west);
   \draw[->] (update_s.north) -- (decrement.south);
   % Return arrow lands on the main stem interior and stays clear of init.
   \draw[->] (decrement.north) -- (3.85,7.42) -- (0,7.42);

@@ -55,7 +55,8 @@
     % Main downward path and the integer-test yes branch.
     \draw[->] (start.south) -- (input.north);
     \draw[->] (input.south) -- (init.north);
-    \draw[->] (init.south) -- (testdiv.north);
+    \draw (init.south) -- (0,7.80);
+    \draw[->] (0,7.80) -- (testdiv.north);
     \draw[->] (testdiv.south) -- node[right=2pt] {是} (add.north);
     \draw[->] (add.south) -- (inc.north);
     \draw[->] (inc.south) -- (check.north);
@@ -73,13 +74,13 @@
     \draw (divNoJoin) -- (inc.north);
     \node[anchor=south west, inner sep=1pt] at (1.82,7.16) {否};
 
-    % i>=5 no branch returns left and re-enters the first decision.
+    % i>=5 no branch returns left and merges into the first decision's trunk.
     \coordinate (loopLeft) at (-2.55,2.63);
     % Separate the horizontal return arrowhead from the main-chain arrowhead.
     \coordinate (loopTop) at (-2.55,7.80);
     \coordinate (loopJoin) at (0,7.80);
     \draw (check.west) -- (loopLeft) -- (loopTop);
-    \draw[->] (loopTop) -- (loopJoin);
+    \draw (loopTop) -- (loopJoin);
     \draw (loopJoin) -- (testdiv.north);
     % Place the label beside the check diamond's left exit, not on the outer spine.
     \node[anchor=south east, inner sep=1pt] at (-1.40,2.82) {否};

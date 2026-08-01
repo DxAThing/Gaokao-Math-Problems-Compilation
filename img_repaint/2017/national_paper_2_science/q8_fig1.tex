@@ -34,10 +34,12 @@
     \node[process, minimum width=2.00cm] (inc) at (0,-6.30) {$K=K+1$};
     \node[io, minimum width=1.40cm] (output) at (0,-7.40) {输出 $S$};
     \node[terminal] (finish) at (0,-8.50) {结束};
+    \coordinate (merge) at (0,-2.50);
 
     \draw[flowarrow] (start) -- (input);
     \draw[flowarrow] (input) -- (init);
-    \draw[flowarrow] (init) -- (test);
+    \draw (init.south) -- (merge);
+    \draw[flowarrow] (merge) -- (test.north);
     \draw[flowarrow] (test) -- node[right=2pt] {是} (sum);
     \draw[flowarrow] (sum) -- (neg);
     \draw[flowarrow] (neg) -- (inc);
@@ -53,9 +55,9 @@
     % True loop: after increment, turn left and rise to the decision entry.
     \coordinate (leftbranch) at (-2.05,-6.30);
     % Place the loop entry below the initialization box (>=2.5 mm clear).
-    \coordinate (leftlevel) at (-2.05,-2.70);
+    \coordinate (leftlevel) at (-2.05,-2.50);
     \draw (inc.west) -- (leftbranch) -- (leftlevel);
-    \draw[flowarrow] (leftlevel) -- (0,-2.70);
+    \draw[flowarrow] (leftlevel) -- (merge);
 
     % Preserve the source crop's modest white border around the inked chart.
     \path[use as bounding box] (-2.55,0.30) rectangle (3.10,-8.90);
