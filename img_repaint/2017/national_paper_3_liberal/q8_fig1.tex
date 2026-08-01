@@ -44,7 +44,9 @@
   \draw[->] (test.south) -- (sum.north);
   \draw[->] (sum.south) -- (update.north);
   \draw[->] (update.south) -- (increment.north);
-  \draw[->] (test.east) -- (2.52,6.73) -- (2.52,5.78) -- (output.north);
+    % Split the final vertical leg far enough before the arrowhead to leave
+    % a visible shaft after the turn into 输出 S.
+    \draw[->] (test.east) -- (2.52,6.73) -- (2.52,6.10) -- (output.north);
   \draw[->] (output.south) -- (finish.north);
 
   % Loop-back arrow from t=t+1 to the decision test.

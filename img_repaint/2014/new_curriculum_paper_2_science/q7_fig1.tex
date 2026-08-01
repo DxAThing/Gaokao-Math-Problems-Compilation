@@ -49,7 +49,7 @@
   \draw[->] (init.south) -- (kinit.north);
 
   % One explicit shared stem receives the loop return and enters the decision.
-  \coordinate (loop-merge) at (0,6.95);
+  \coordinate (loop-merge) at (0,7.15);
   \draw (kinit.south) -- (loop-merge);
   \draw[->] (loop-merge) -- (test.north);
 
@@ -64,7 +64,7 @@
 
   % Loop from k=k+1 rises on the left and returns to the shared stem.
   \draw (increment.west) -- (-3.90,2.20) -- (-3.90,6.95);
-  \draw[->] (-3.90,6.95) -- (-0.60,6.95) -- (loop-merge);
+  \draw (-3.90,7.15) -- (-0.60,7.15) -- (loop-merge);
 
   \node[branchlabel, anchor=south] at (-1.52,6.47) {是};
   \node[branchlabel, anchor=south] at (2.52,6.47) {否};

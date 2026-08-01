@@ -54,8 +54,10 @@
   \draw[flowarrow] (output.south) -- (testtwo.north);
   \draw[flowarrow] (testtwo.south) -- (finish.north);
   \node[anchor=west] at (0.18,1.28) {是};
-  \draw[flowarrow] (testtwo.east) -- (6.00,2.00) -- (6.00,2.65)
-    -- (4.65,2.65) -- (4.65,2.95) -- (increment.south);
+  % Route below the decision, then leave a visible upward shaft into x=x+h.
+  \draw[-] (testtwo.east) -- (6.00,2.00) -- (6.00,2.45)
+    -- (4.65,2.45);
+  \draw[flowarrow] (4.65,2.45) -- (increment.south);
   \node[anchor=west] at (1.85,2.28) {否};
   \draw[flowarrow] (increment.north) -- (4.65,4.05) -- (6.00,4.05)
     -- (6.00,9.00) -- (entry);

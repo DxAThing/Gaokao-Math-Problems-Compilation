@@ -28,14 +28,14 @@
     \node[decision] (check) at (0,5.35) {$x>1$};
     \node[process] (linear) at (0,3.85) {$y\leftarrow x-2$};
     \node[process] (exponential) at (2.40,3.85) {$y\leftarrow 2^x$};
-    \node[io,minimum width=1.95cm] (output) at (0,2.30) {输出 $y$};
-    \node[terminal] (finish) at (0,0.90) {结束};
+    \node[io,minimum width=1.95cm] (output) at (0,2.05) {输出 $y$};
+    \node[terminal] (finish) at (0,0.55) {结束};
 
     \draw[->] (start.south) -- (input.north);
     \draw[->] (input.south) -- (check.north);
     \draw[->] (check.south) -- node[branchlabel,left=3pt] {是} (linear.north);
     \draw[->] (check.east) -- node[branchlabel,above=2pt] {否} (3.45,5.35)
-        -- (3.45,4.20) -- (exponential.north);
+        -- (3.45,4.80) -- (2.40,4.80) -- (exponential.north);
     \coordinate (merge) at (0,2.95);
     \draw[-] (linear.south) -- (merge);
     \draw[-] (exponential.south) -- (2.40,2.95) -- (merge);

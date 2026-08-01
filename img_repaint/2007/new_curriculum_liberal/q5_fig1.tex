@@ -50,6 +50,7 @@
   \draw[->] (return-entry) -- (test.west);
 
   \draw (test.east) -- node[branchlabel,above=2pt] {否} (3.20,4.95);
-  \draw[->] (3.20,4.95) -- (3.20,3.74) -- (output.north);
+  % Keep a visible final vertical arrow segment before the output node.
+  \draw[->] (3.20,4.95) -- (3.20,4.15) -- (output.north);
   \draw[->] (output.south) -- (finish.north);
 \end{tikzpicture}

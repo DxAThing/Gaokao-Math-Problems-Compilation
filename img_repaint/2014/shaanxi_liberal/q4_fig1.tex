@@ -31,8 +31,8 @@
   \draw[->] (start.south) -- (input.north);
   \draw[->] (input.south) -- (init.north);
   % The initialization shaft and the return edge meet at one junction;
-  % only the downward edge into a_i carries its arrowhead.
-  \coordinate (loopJoin) at (0,8.35);
+  % the return joins an unarrowed segment; the downward edge carries the arrow.
+  \coordinate (loopJoin) at (0,8.55);
   \draw (init.south) -- (loopJoin);
   \draw[->] (loopJoin) -- (double.north);
   \draw[->] (double.south) -- (assign.north);
@@ -43,7 +43,7 @@
 
   % The negative branch returns to the single vertical entry above a_i.
   \coordinate (loopLeft) at (-3.25,3.35);
-  \coordinate (loopTop) at (-3.25,8.35);
+  \coordinate (loopTop) at (-3.25,8.55);
   \draw (test.west) -- node[branchlabel, above=2pt] {否} (loopLeft) -- (loopTop);
-  \draw[->] (loopTop) -- (loopJoin);
+  \draw (loopTop) -- (loopJoin);
 \end{tikzpicture}

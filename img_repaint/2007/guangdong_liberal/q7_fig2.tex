@@ -41,6 +41,8 @@
   \draw[->] (merge) -- (test.north);
   \draw[->] (test.east) -- node[above,inner sep=2pt] {是} (sum.west);
   \draw[->] (sum.north) -- (inc.south);
+  % Return path merges into the main stem; the arrowhead marks the
+  % leftward flow into the shared stem before the decision.
   \draw[->] (inc.west) -- (loopjoin);
   \draw[->] (test.south) -- node[right,inner sep=2pt] {否} (output.north);
   \draw[->] (output.south) -- (finish.north);

@@ -19,19 +19,19 @@
   output/.style={nodebox,shape=trapezium,trapezium left angle=70,trapezium right angle=110,
     minimum width=2.05cm,text width=1.80cm,minimum height=.74cm}
 ]
-  \path[use as bounding box] (-3.75,-1.75) rectangle (4.45,10.40);
+  \path[use as bounding box] (-3.75,-1.75) rectangle (5.05,10.40);
 
   \node[term] (start) at (0,10.00) {开始};
   \node[nodebox,minimum width=3.20cm,text width=3.20cm] (init) at (0,8.70) {$T=0,k=0$};
   \node[nodebox,minimum width=2.80cm,text width=2.80cm] (sum) at (0,7.25) {$T=T+k$};
   \node[decision] (test) at (0,5.72) {$T>105$?};
-  \node[nodebox,minimum width=2.25cm,text width=2.25cm] (inc) at (3.00,5.72) {$k=k+1$};
+  \node[nodebox,minimum width=2.25cm,text width=2.25cm] (inc) at (3.60,5.72) {$k=k+1$};
   \node[output] (out) at (0,4.10) {输出 $k$};
   \node[term] (finish) at (0,2.82) {结束};
 
   \coordinate (sumjoin) at (0,7.98);
-  \coordinate (return-entry) at (0.35,7.98);
-  \coordinate (returntop) at (3.00,7.98);
+  \coordinate (return-entry) at (0.60,7.98);
+  \coordinate (returntop) at (3.60,7.98);
 
   \draw[flowarrow] (start.south) -- (init.north);
   \draw (init.south) -- (sumjoin);

@@ -4,8 +4,8 @@
 % Node -> directed-edge list: 开始 -> S=0,n=1 -> S=S+2^n+n -> n=n+1 -> S>=15;
 % 是 -> 输出 S -> 结束; 否 -> right loop -> S=S+2^n+n.
 % solid segments: all node borders and directed connectors; dashed segments: none.
-% The return arrow points left at the connector above the update box, followed by one
-% downward arrow into that box; all node text is locally zero-indented and centered.
+% The return joins the connector above the update box without an extra arrowhead;
+% one downward arrow enters that box; all node text is locally zero-indented and centered.
 \begin{tikzpicture}[
     x=0.90cm,
     y=1.12cm,
@@ -38,8 +38,8 @@
     \node[terminal] (finish) at (0,0.05) {结束};
 
     \coordinate (loop-right) at (3.25,3.12);
-    \coordinate (loop-right-top) at (3.25,6.72);
-    \coordinate (loop-top) at (0,6.72);
+    \coordinate (loop-right-top) at (3.25,6.92);
+    \coordinate (loop-top) at (0,6.92);
 
     \draw[->] (start.south) -- (init.north);
     \draw (init.south) -- (loop-top);
@@ -51,5 +51,5 @@
 
     % 否 branch returns around the right side and re-enters the update connector.
     \draw (test.east) -- node[above] {否} (loop-right) -- (loop-right-top);
-    \draw[->] (loop-right-top) -- (loop-top);
+    \draw (loop-right-top) -- (loop-top);
 \end{tikzpicture}

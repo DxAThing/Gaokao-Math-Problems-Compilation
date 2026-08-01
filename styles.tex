@@ -594,6 +594,22 @@
 \makeatletter
 \newsavebox{\examfigurebox}
 \newlength{\examfigureheight}
+% Remember the source page of each exam figure float.  LaTeX may otherwise
+% put a deferred condition figure at the top of the page where its question
+% starts, which reverses the question/figure order.  The source page is keyed
+% by the float box register and therefore survives the deferlist.
+\newif\ifexamfigure@recordsource
+\examfigure@recordsourcefalse
+\newcount\examfigure@sourcepage
+\examfigure@sourcepage=0
+\newcount\examfigure@lastbox
+\examfigure@lastbox=-1
+\newdimen\examfigure@pendingheight
+\examfigure@pendingheight=0pt
+\newif\ifexamfigure@tcbreserve
+\examfigure@tcbreservefalse
+\newif\ifexamfigure@tcbready
+\examfigure@tcbreadyfalse
 \def\examfigure@opts{}
 \def\examfigure@float{auto}
 \def\examfigure@modeinline{inline}
@@ -675,6 +691,7 @@
         \examfigure@emitinline
     \else
         \global\@topnum\z@
+        \examfigure@recordsourcetrue
         \begin{figure}[#1]
             \centering
             \box\examfigurebox
@@ -683,10 +700,76 @@
 }
 \def\examfigure@emitfloat#1{\examfigure@emitfloatwithspec{!ht}{#1}}
 \def\examfigure@emittop#1{\examfigure@emitfloatwithspec{!t}{#1}}
+\def\examfigure@queuepending{%
+    \expandafter\ifx\csname examfigure@queued@\number\@currbox\endcsname\relax
+        \expandafter\xdef\csname examfigure@queued@\number\@currbox\endcsname{1}%
+        \expandafter\xdef\csname examfigure@reserved@\number\@currbox\endcsname
+            {\the\dimexpr\ht\@currbox+\textfloatsep\relax}%
+        \global\advance\examfigure@pendingheight by \dimexpr\ht\@currbox+\textfloatsep\relax
+        \global\examfigure@tcbreservetrue
+    \fi
+}
+\def\examfigure@queueconsumed{%
+    \expandafter\ifx\csname examfigure@queued@\number\@currbox\endcsname\relax\else
+        \global\examfigure@tcbreadytrue
+    \fi
+}
+% Attach the source page to the newly allocated float box.  This hook is
+% deliberately local to exam figures; unrelated package floats keep LaTeX's
+% normal placement behaviour.
+\let\examfigure@orig@xfloat\@xfloat
+\def\@xfloat#1[#2]{%
+    \examfigure@orig@xfloat{#1}[#2]%
+    \ifexamfigure@recordsource
+        \global\examfigure@lastbox=\@currbox\relax
+        \typeout{EXAM-XFLOAT curr=\number\@currbox source=\number\examfigure@sourcepage}%
+        \expandafter\xdef\csname examfigure@sourcepage@\number\@currbox\endcsname{\number\examfigure@sourcepage}%
+        \global\examfigure@recordsourcefalse
+    \fi
+}
+% On the source page, bypass only the top-float branch.  The ordinary bottom
+% fallback (and the deferlist when no bottom placement is allowed) remains
+% intact.  On the following page, the saved source page is strictly older,
+% so the original top/bottom algorithm is restored.
+\let\examfigure@orig@addtotoporbot\@addtotoporbot
+\def\@addtotoporbot{%
+    \typeout{EXAM-ADDTOP-BEFORE curr=\number\@currbox page=\the\c@page mapped=\expandafter\ifx\csname examfigure@sourcepage@\number\@currbox\endcsname\relax0\else1\fi insert=\if@insert1\else0\fi}%
+    \expandafter\ifx\csname examfigure@sourcepage@\number\@currbox\endcsname\relax
+        \examfigure@orig@addtotoporbot
+    \else
+        \ifnum\csname examfigure@sourcepage@\number\@currbox\endcsname<\c@page
+            \examfigure@orig@addtotoporbot
+            \typeout{EXAM-ADDTOP-AFTER curr=\number\@currbox page=\the\c@page insert=\if@insert1\else0\fi}%
+            \if@insert\examfigure@queueconsumed\fi
+        \else
+            \@addtobot
+            \if@insert\else\examfigure@queuepending\fi
+        \fi
+    \fi
+}
+\let\examfigure@orig@addtocurcol\@addtocurcol
+\def\@addtocurcol{%
+    \typeout{EXAM-ADDCUR-BEFORE curr=\number\@currbox page=\the\c@page mapped=\expandafter\ifx\csname examfigure@sourcepage@\number\@currbox\endcsname\relax0\else1\fi insert=\if@insert1\else0\fi}%
+    \typeout{EXAM-ADDCUR curr=\number\@currbox last=\the\examfigure@lastbox page=\the\c@page insert=\if@insert1\else0\fi}%
+    \examfigure@orig@addtocurcol
+    \typeout{EXAM-ADDCUR-AFTER curr=\number\@currbox page=\the\c@page mapped=\expandafter\ifx\csname examfigure@sourcepage@\number\@currbox\endcsname\relax0\else1\fi insert=\if@insert1\else0\fi}%
+    \if@insert\else
+        \ifnum\@currbox=\examfigure@lastbox\relax
+            \examfigure@queuepending
+        \else
+            \expandafter\ifx\csname examfigure@sourcepage@\number\@currbox\endcsname\relax\else
+                \ifnum\csname examfigure@sourcepage@\number\@currbox\endcsname=\c@page
+                    \examfigure@queuepending
+                \fi
+            \fi
+        \fi
+    \fi
+}
 \def\examfigure@dispatch#1#2#3{%
-    \par
+    \par\penalty0
     \examfigure@parseopts{#1}%
     \edef\examfigure@frozenprobnum{\theprobnum}%
+    \examfigure@sourcepage=\c@page\relax
     \bitmappreparecaption{#2}%
     \edef\examfigure@call{\noexpand#3[\unexpanded\expandafter{\examfigure@opts}]{#2}}%
     \examfigure@buildbox{\examfigure@call}%
@@ -703,8 +786,12 @@
         \else\ifx\examfigure@float\examfigure@modeinline
             \examfigure@emitinline
         \else\ifx\examfigure@float\examfigure@modetop
+            \global\advance\examfigure@pendingheight by \dimexpr\examfigureheight+\textfloatsep\relax
             \examfigure@emittop{#2}%
         \else
+            \ifdim\dimexpr\examfigureheight+2\intextsep+\baselineskip\relax>\dimexpr\pagegoal-\pagetotal\relax
+                \global\advance\examfigure@pendingheight by \dimexpr\examfigureheight+\textfloatsep\relax
+            \fi
             \examfigure@emitfloat{#2}%
         \fi\fi\fi\fi\fi
     \endgroup
@@ -780,6 +867,51 @@
 
 % 盒子宏包 (用于答案)
 \usepackage[most]{tcolorbox}
+
+% A top float reserves \@colroom even while \pagegoal still reflects the
+% original page goal.  Breakable tcolorbox otherwise computes a box height
+% larger than the space actually left in the column and can cover that float.
+% Keep the patch narrow: only the non-floating, non-multicol page branch is
+% changed, with the package's compression allowance retained.
+\makeatletter
+\patchcmd{\tcb@comp@h@page}
+  {\tcbdimto\tcb@h@page{\pagegoal-\pagetotal+\tcb@compress@height}}
+  {\ifnum\c@tcbbreakpart>0\relax
+     \ifdim\examfigure@pendingheight>0pt\relax
+       \tcbdimto\tcb@h@page{\textheight-\examfigure@pendingheight+\tcb@compress@height}
+       \global\examfigure@pendingheight=0pt\relax
+     \else
+       \tcbdimto\tcb@h@page{\pagegoal-\pagetotal+\tcb@compress@height}
+     \fi
+   \else
+     \ifdim\pagegoal<\@colroom
+       \tcbdimto\tcb@h@page{\pagegoal-\pagetotal+\tcb@compress@height}
+     \else
+       \tcbdimto\tcb@h@page{\@colroom-\pagetotal+\tcb@compress@height}
+     \fi
+   \fi}
+  {}
+  {\PackageError{styles}{Failed to patch tcolorbox page-height calculation}
+    {The installed tcolorbox breakable implementation is incompatible with the figure layout guard.}}
+\patchcmd{\tcb@split@pagebreak}
+  {\iftcb@multicol}
+  {\global\examfigure@tcbreadytrue\iftcb@multicol}
+  {}
+  {\PackageError{styles}{Failed to patch tcolorbox page-break reserve hook}
+    {The installed tcolorbox breakable implementation is incompatible with the figure layout guard.}}
+\patchcmd{\tcb@split@first}
+  {\long\def\tcb@after@first{\par\pagebreak\tcb@enlbreak@next}}
+  {\long\def\tcb@after@first{\par\global\examfigure@tcbreadytrue\pagebreak\tcb@enlbreak@next}}
+  {}
+  {\PackageError{styles}{Failed to patch tcolorbox first-break reserve hook}
+    {The installed tcolorbox breakable implementation is incompatible with the figure layout guard.}}
+\patchcmd{\tcb@split@first}
+  {\long\def\tcb@after@middle{\par\vfill\eject\tcb@enlbreak@next}}
+  {\long\def\tcb@after@middle{\par\vfill\global\examfigure@tcbreadytrue\eject\tcb@enlbreak@next}}
+  {}
+  {\PackageError{styles}{Failed to patch tcolorbox middle-break reserve hook}
+    {The installed tcolorbox breakable implementation is incompatible with the figure layout guard.}}
+\makeatother
 
 \usepackage{ulem}
 \newcommand{\examblankrule}{\rule[-0.2ex]{5em}{0.4pt}}

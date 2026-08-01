@@ -39,6 +39,6 @@
     \draw[->] (test.south) -- node[right=1pt] {是} (output.north);
     \draw[->] (output.south) -- (finish.north);
     \draw[->] (test.east) -- node[below right=1pt] {否} (2.95,1.05) -- (assign.south);
-    % The return edge joins the existing INPUT-to-calc trunk; its arrowhead points left at the join.
-    \draw[->] (assign.north) -- ++(0,0.25) -- (0,2.98);
+% The return edge joins the existing INPUT-to-calc trunk without a duplicate arrowhead.
+    \draw (assign.north) -- ++(0,0.25) -- (0,2.98);
 \end{tikzpicture}

@@ -45,9 +45,10 @@
   % The parity branches are distinct and merge once before the blank test.
   \draw[->] (parity.east) -- (odd.west);
   \draw[->] (parity.south) -- (even.north);
-  % Each branch arrow terminates at the common merge endpoint.
-  \draw[->] (odd.south) -- (4.00,4.30) -- (4.00,4.00) -- (branchmerge);
-  \draw[->] (even.south) -- (0,4.30) -- (branchmerge);
+  % Branches merge as plain lines; the single directed edge below carries
+  % the only arrowhead into the following decision node.
+  \draw (odd.south) -- (4.00,4.30) -- (4.00,4.00) -- (branchmerge);
+  \draw (even.south) -- (0,4.30) -- (branchmerge);
   \draw[->] (branchmerge) -- (test.north);
 
   % The second decision loops back to the pre-increment merge or outputs i.

@@ -37,9 +37,11 @@
     \node[process, minimum width=2.00cm] (blank) at (0,0.35) {};
     \node[io, minimum width=1.85cm] (output) at (0,-1.05) {输出 $P$};
     \node[terminal] (finish) at (0,-2.40) {结束};
+    \coordinate (loop-entry) at (0,8.65);
 
     \draw[->] (start.south) -- (init.north);
-    \draw[->] (init.south) -- (random.north);
+    \draw (init.south) -- (loop-entry);
+    \draw[->] (loop-entry) -- (random.north);
     \draw[->] (random.south) -- (inside.north);
 
     \draw[->] (inside.south) -- node[branchlabel, right=2pt] {是} (countM.north);
@@ -61,7 +63,7 @@
     % 否 loops left and returns with one right-pointing arrow above the
     % independent main downward arrow into random(x_i,y_i).
     \draw (test.west) -- (-4.10,1.85) -- (-4.10,8.65);
-    \draw[->] (-4.10,8.65) -- (0,8.65);
+    \draw[->] (-4.10,8.65) -- (loop-entry);
     \node[branchlabel] at (-3.55,2.13) {否};
 
     \path[use as bounding box] (-4.35,-2.75) rectangle (4.65,11.30);

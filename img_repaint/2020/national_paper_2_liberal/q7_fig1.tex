@@ -55,9 +55,10 @@
   \coordinate (loop-top) at (0.45,6.35);
   % The return arrow terminates at the visible junction on the main shaft;
   % the shaft's own arrow continues into updatea.
-  \coordinate (loop-bend) at (2.10,6.35);
+  \coordinate (loop-bend) at (1.75,6.35);
   \coordinate (loop-merge) at (2.64,6.35);
   \draw[flow] (check.west) -- (loop-left) -- (loop-top);
-  \draw[flow] (loop-top) -- (loop-bend) -- (loop-merge);
+  \draw[flow] (loop-top) -- (loop-bend);
+  \draw[->,flow] (loop-bend) -- (loop-merge);
   \node[anchor=east,inner sep=0pt] at (1.33,3.77) {否};
 \end{tikzpicture}

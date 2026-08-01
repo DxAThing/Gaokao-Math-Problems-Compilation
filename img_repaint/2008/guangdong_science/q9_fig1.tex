@@ -40,5 +40,8 @@
 
   \draw[flow] (test.east) -- node[branchlabel,above] {否} (2.80,4.75)
     -- (2.80,6.00) -- (increment.south);
+  % Return path merges into the main stem; the arrowhead marks the
+  % leftward flow before the shared stem enters the multiply node.
   \draw[flow] (increment.north) -- (2.80,7.35) -- (0,7.35);
+  \draw (0,7.35) -- (multiply.north);
 \end{tikzpicture}

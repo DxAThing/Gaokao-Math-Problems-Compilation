@@ -40,12 +40,14 @@
     {$k=k+1$};
   \node[io,minimum width=1.95cm] (output) at (4.15,4.05) {输出 $s$};
   \node[terminal] (finish) at (4.15,2.72) {结束};
+  \coordinate (loop-entry) at (0,5.72);
 
   \draw[flowarrow] (start.south) -- (input.north);
   \draw[flowarrow] (input.south) -- (init.north);
   % Keep the loop arrow tip on the main stem interior, not at a 3-way
   % endpoint junction; the stem itself remains one directed edge.
-  \draw[flowarrow] (init.south) -- (test.north);
+  \draw (init.south) -- (loop-entry);
+  \draw[flowarrow] (loop-entry) -- (test.north);
   \draw[flowarrow] (test.south) -- node[branchlabel,left,pos=0.28] {是} (update.north);
   \draw[flowarrow] (update.south) -- (inc.north);
   \draw[flowarrow] (inc.south) -- (kinc.north);
@@ -54,7 +56,6 @@
   % left-side loop to the shared stem above the decision.
   \coordinate (loop-left) at (-2.45,0.47);
   \coordinate (loop-left-top) at (-2.45,5.72);
-  \coordinate (loop-entry) at (0,5.72);
   \draw (kinc.south) -- (loop-left) -- (loop-left-top);
   \draw[flowarrow] (loop-left-top) -- (loop-entry);
 

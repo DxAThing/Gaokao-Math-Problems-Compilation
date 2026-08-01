@@ -47,12 +47,14 @@
   \draw[flowline] (0,4.05) -- (update.north);
   \draw[flowline] (update.south) -- (increment.north);
   \draw[flowline] (increment.south) -- (test.north);
-  \draw[flowline] (test.south) -- node[right=1.5pt] {是} (output.north);
+  % Keep the true-branch label clear of the output trapezium's top border.
+  \draw[flowline] (test.south) -- node[pos=0.20,right=1.5pt] {是} (output.north);
   \draw[flowline] (output.south) -- (finish.north);
 
   % The negative branch returns to the shared update-entry trunk; the main
   % trunk's directed arrow marks the single continuation into the update box.
   \draw (test.east) -- (2.30,0.30);
-  \draw (2.30,0.30) -- (2.30,4.05) -- (0,4.05);
+  \draw (2.30,0.30) -- (2.30,4.05);
+  \draw[flowline] (2.30,4.05) -- (0,4.05);
   \node[branchlabel,anchor=east] at (2.15,0.48) {否};
 \end{tikzpicture}

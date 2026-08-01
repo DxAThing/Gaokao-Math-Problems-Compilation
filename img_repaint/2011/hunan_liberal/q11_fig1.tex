@@ -49,8 +49,8 @@
   % The affirmative branch leaves the diamond to the right, increments i,
   % then returns into the right side of the summation box.  Keep the return
   % leg above both neighboring boxes so it does not skim a frame.
-  \draw (test.east) -- node[branchlabel,above=2pt] {是} (3.15,6.67);
-  \draw[->] (3.15,6.67) -- (3.15,7.90);
-  \draw[->] (inc.north) -- (3.15,8.90) -- (1.85,8.90)
-    -- (1.85,8.28) -- (sum.east);
+  \draw[->] (test.east) -- node[branchlabel,above=2pt] {是} (3.15,6.67)
+    -- (inc.south);
+  \draw[->] (inc.north) -- (3.15,8.90) -- (2.10,8.90)
+    -- (2.10,8.28) -- (sum.east);
 \end{tikzpicture}

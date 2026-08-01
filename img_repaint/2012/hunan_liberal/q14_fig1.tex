@@ -40,11 +40,13 @@
   \node[terminal] (finish) at (0,0.05) {结束};
   \node[flowbox, minimum width=2.35cm] (increment) at (3.10,4.55)
     {$i=i+1$};
+  \coordinate (loop-entry) at (0,5.25);
 
   % Main trunk and terminating branch.
   \draw[->] (start.south) -- (input.north);
   \draw[->] (input.south) -- (init.north);
-  \draw[->] (init.south) -- (decrement.north);
+  \draw (init.south) -- (loop-entry);
+  \draw[->] (loop-entry) -- (decrement.north);
   \draw[->] (decrement.south) -- (test.north);
   \draw[->] (test.south) -- node[flowtext, right] {是} (output.north);
   \draw[->] (output.south) -- (finish.north);
@@ -54,5 +56,5 @@
     (3.10,3.00) -- (increment.south);
   % Lower the return rail so it clears the initialization box while still
   % entering the main stem at an interior point.
-  \draw[->] (increment.north) -- (3.10,5.25) -- (0,5.25);
+  \draw[->] (increment.north) -- (3.10,5.25) -- (loop-entry);
 \end{tikzpicture}

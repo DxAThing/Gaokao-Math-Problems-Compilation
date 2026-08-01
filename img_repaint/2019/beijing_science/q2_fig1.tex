@@ -26,7 +26,7 @@
   \node[flowbox,minimum width=2.05cm,minimum height=1.15cm]
         (update) at (0,4.32) {$s=\dfrac{2s^2}{3s-2}$};
   \node[flowbox,minimum width=1.85cm,minimum height=0.62cm]
-        (inc) at (2.35,4.32) {$k=k+1$};
+        (inc) at (2.85,4.32) {$k=k+1$};
 
   % Decision diamond and output/end nodes.
   \node[flowbox,shape=diamond,aspect=2.9,minimum width=2.90cm,
@@ -44,10 +44,11 @@
   \draw[->] (output.south) -- (end.north);
 
   % No branch: diamond -> increment -> return to update.
-  \draw (decision.east) -- (2.35,3.03);
-  \draw[->] (2.35,3.03) -- (inc.south);
-  \node[anchor=east] at (2.15,3.20) {否};
+  \draw (decision.east) -- (2.85,3.03);
+  \draw[->] (2.85,3.03) -- (inc.south);
+  \node[anchor=east] at (2.65,3.20) {否};
   % The return arrow turns above the update box and terminates at the visible
   % trunk junction; the trunk's own arrow continues into update.
-  \draw (inc.north) -- (2.35,5.25) -- (0,5.25);
+  \draw (inc.north) -- (2.85,5.25);
+  \draw[->] (2.85,5.25) -- (0,5.25);
 \end{tikzpicture}

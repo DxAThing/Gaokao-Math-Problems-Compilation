@@ -37,18 +37,19 @@
   \coordinate (loop-right) at (4.10,8.12);
   \coordinate (loop-drop) at (0,2.35);
   \coordinate (loop-bottom) at (-3.05,2.35);
+  \coordinate (loop-entry) at (0,8.20);
 
   % Initialization stem and the single downward arrow into s=s+a.
   \draw[flowarrow] (start.south) -- (init.north);
   % The return arrow lands on the interior of the main stem; avoid a
   % parsed 3-way endpoint while preserving the original loop topology.
-  \draw[flowarrow] (init.south) -- (sum.north);
+  \draw (init.south) -- (loop-entry);
+  \draw[flowarrow] (loop-entry) -- (sum.north);
   \draw[flowarrow] (sum.south) -- (increment.north);
   \draw[flowarrow] (increment.south) -- (test.north);
 
   % Yes branch continues to n=n+1 and returns around the left side.
   \draw[flowarrow] (test.south) -- node[right=2pt] {是} (next.north);
-  \coordinate (loop-entry) at (0,8.20);
   \draw (next.south) -- (loop-drop) -- (loop-bottom) -- (loop-left);
   \draw[flowarrow] (loop-left) -- (loop-entry);
 

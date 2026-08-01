@@ -54,8 +54,8 @@
   \draw[->] (init.south) -- (seti.north);
   % The source has a plain trunk down to the loop re-entry, then a separate
   % downward arrow into the decision diamond (no overlapping arrowheads).
-  \coordinate (trunkjoin) at (0,8.40);
-  \coordinate (testentry) at (0.80,8.40);
+  \coordinate (trunkjoin) at (0,8.75);
+  \coordinate (testentry) at (0,8.75);
   \draw (seti.south) -- (trunkjoin);
   \draw[->] (testentry) -- (test.north);
   \draw[->] (accn.south) -- (acct.north);
@@ -68,5 +68,6 @@
   \draw[->] (test.west) -- node[above] {是} (-2.0,8.08) -- (accn.north);
   % The return shaft traverses the horizontal re-entry to its visible endpoint;
   % the separate arrow after the turn then enters the decision diamond.
-  \draw (inc.west) -- (-3.90,3.65) -- (-3.90,8.40) -- (testentry);
+  \draw (inc.west) -- (-3.90,3.65) -- (-3.90,8.40);
+  \draw[->] (-3.90,8.40) -- (testentry);
 \end{tikzpicture}

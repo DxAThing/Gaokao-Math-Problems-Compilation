@@ -6,9 +6,9 @@
 % output parallelogram; directed connectors and 是/否 labels.
 % Complete node -> directed-edge list from the source:
 %   start -> input -> calc -> test; test --是--> output -> finish;
-%   test --否--> assign -> main entry above calc. The loop return has one
-%   left-pointing arrow into the main vertical stem; the downward main arrow
-%   into calc remains independent. All borders/connectors are solid.
+%   test --否--> assign -> main entry above calc. The loop return joins the
+%   main stem without a duplicate arrowhead; the downward main arrow into calc
+%   remains independent. All borders/connectors are solid.
 
 \begin{tikzpicture}[
   >=Stealth,
@@ -42,7 +42,7 @@
   \draw[->] (start.south) -- (input.north);
   % Split the trunk at the loop-entry level so the return arrow merges into
   % the stem without sharing a directed segment or creating a second arrow.
-  \coordinate (merge-level) at (0,7.20);
+  \coordinate (merge-level) at (0,7.40);
   \draw (input.south) -- (merge-level);
   \draw[->] (merge-level) -- (calc.north);
   \draw[->] (calc.south) -- (test.north);
@@ -53,5 +53,5 @@
   % arrow is horizontal and points left; it does not create a second vertical
   % arrow at the calc box.
   \draw[->] (test.east) -- node[branchlabel, above=2pt] {否} (assign.west);
-  \draw[->] (assign.north) -- (3.45,7.20) -- (merge-level);
+  \draw (assign.north) -- (3.45,7.40) -- (merge-level);
 \end{tikzpicture}

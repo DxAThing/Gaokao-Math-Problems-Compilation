@@ -35,8 +35,9 @@
   \draw[->] (output.south) -- (finish.north);
 
   % The source's right-hand branch returns to the top of the accumulation box.
-  \draw (test.east) -- (1.50,-5.68) -- (1.50,-2.78) -- (0,-2.78);
+  \draw (test.east) -- (1.50,-5.68) -- (1.50,-2.78);
+  \draw[->] (1.50,-2.78) -- (0,-2.78);
   % Keep the 否 label outside the diamond, between its east edge and return spine.
   \node[flow node,anchor=west] at (1.16,-5.27) {否};
-  \node[flow node] at (0.28,-6.18) {是};
+  \node[flow node] at (0.28,-6.06) {是};
 \end{tikzpicture}

@@ -22,7 +22,7 @@
     (start) at (0,8.55) {开始};
   \node[io,minimum width=1.65cm] (input) at (0,7.25) {输入 $x$};
   \node[flowbox,minimum width=1.45cm] (init) at (0,6.25) {$n=0$};
-  \coordinate (merge) at (0,5.55);
+  \coordinate (merge) at (0,5.75);
   \node[draw,diamond,aspect=2.85,minimum width=4.55cm,minimum height=1.10cm,
     inner sep=2pt,anchor=center,align=center] (test) at (0,4.64)
     {$x^2-4x+3\leq 0$};
@@ -43,9 +43,9 @@
   \draw[flowarrow] (update.south) -- (inc.north);
   \coordinate (loop-bottom) at (0,0.70);
   \coordinate (loop-left) at (-3.55,0.70);
-  \coordinate (loop-entry) at (-3.55,5.55);
+  \coordinate (loop-entry) at (-3.55,5.75);
   \draw (inc.south) -- (loop-bottom) -- (loop-left) -- (loop-entry);
-  \draw[flowarrow] (loop-entry) -- (-0.60,5.55) -- (merge);
+  \draw (loop-entry) -- (-0.60,5.75) -- (merge);
 
   % 否 branch to output and finish.
   \draw[flowarrow] (test.east) -- (3.20,4.64) -- (3.20,3.62);

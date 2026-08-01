@@ -25,7 +25,7 @@
     io/.style={flowbox, trapezium, trapezium left angle=72,
         trapezium right angle=108, minimum height=0.80cm},
 ]
-    \path[use as bounding box] (-3.80,0.25) rectangle (4.75,8.95);
+    \path[use as bounding box] (-3.80,0.25) rectangle (5.65,8.95);
 
     \node[terminal] (start) at (0,8.55) {开始};
     \node[process, minimum width=3.55cm] (init) at (0,7.15)
@@ -33,15 +33,15 @@
     \node[decision] (test) at (0,4.95) {$s\leqslant 0$};
     \node[io, minimum width=2.65cm] (output) at (0,2.95) {输出 $i$};
     \node[terminal] (finish) at (0,1.35) {结束};
-    \node[process, minimum width=2.85cm] (decrement) at (3.25,4.95)
+    \node[process, minimum width=2.85cm] (decrement) at (3.85,4.95)
         {$s=s-10$};
-    \node[process, minimum width=2.85cm] (increment) at (3.25,6.15)
+    \node[process, minimum width=2.85cm] (increment) at (3.85,6.15)
         {$i=i+1$};
 
     \draw[->] (start.south) -- (init.north);
     % Initial stem and loop return share one connector above the decision.
     \coordinate (loop-merge) at (0,6.15);
-    \coordinate (loop-arrow-tip) at (0.35,6.15);
+    \coordinate (loop-arrow-tip) at (0.60,6.15);
     \draw (init.south) -- (loop-merge);
     \draw[->] (loop-merge) -- (test.north);
 

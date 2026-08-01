@@ -43,5 +43,9 @@
   % Return joins the input-to-initialization stem above the initialization box;
   % the slightly raised horizontal segment keeps clearance from that box.
   \coordinate (loopJoin) at (0,6.70);
-  \draw[->] (inc.south) -- (0,0.45) -- (-2.55,0.45) -- (-2.55,6.70) -- (loopJoin);
+  % Return path merges into the main stem; the arrowhead marks the
+  % leftward flow before the shared stem enters the initialization node.
+  \draw[->] (inc.south) -- (0,0.45) -- (-2.55,0.45) -- (-2.55,6.70)
+    -- (loopJoin);
+  \draw (loopJoin) -- (init.north);
 \end{tikzpicture}

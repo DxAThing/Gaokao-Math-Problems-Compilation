@@ -55,8 +55,10 @@
   % upper test entry, matching the source PDF's horizontal arrow and short entry.
   \draw (stepk.west) -- (-1.80,3.11) -- (-1.80,8.10);
   \draw[->] (-1.80,8.10) -- (0,8.10);
-  % False branch bypasses the loop and follows the right-side route into output.east;
-  % it then continues output -> finish.  There is no k -> output connector.
-  \draw[->] (test.east) -- node[flowtext, above] {否} (2.00,7.40)
-    -- (2.00,1.68) -- (output.east);
+  % False branch bypasses the loop and follows the right-side route into the
+  % top of the output box; it then continues output -> finish.  There is no
+  % k -> output connector.
+  \draw[-] (test.east) -- node[flowtext, above] {否} (2.00,7.40)
+    -- (2.00,2.38) -- (0,2.38);
+  \draw[->] (0,2.38) -- (output.north);
 \end{tikzpicture}

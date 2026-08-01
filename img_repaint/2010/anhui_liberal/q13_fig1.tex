@@ -38,14 +38,14 @@
   \draw[->] (output.south) -- (finish.north);
 
   % x>8 的否分支从右侧上行，进入 x=x+1 框底部。
-  \coordinate (right-route) at (4.85,4.65);
+  \coordinate (right-route) at (3.85,4.65);
   \draw (limit.east) -- node[above=2pt] {否} (right-route);
-  \draw[->] (right-route) -- (4.85,7.62) -- (inc1.south);
+  \draw[->] (right-route) -- (3.85,7.62) -- (inc1.south);
 
   % 奇数分支更新后由顶部回线返回首个判定框入口。
-  \coordinate (top-route) at (6.10,9.00);
+  \coordinate (top-route) at (3.85,9.00);
   \coordinate (entry) at (0,9.00);
-  \draw (inc1.north east) -- (6.10,8.40) -- (top-route);
+  \draw (inc1.north) -- (top-route);
   \draw[->] (top-route) -- (entry);
   \draw[->] (entry) -- (odd.north);
 

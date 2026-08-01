@@ -54,8 +54,8 @@
   \draw[->] (init.south) -- (seti.north);
   % The loop return traverses the horizontal re-entry to its visible endpoint;
   % the separate arrow after the turn then enters the decision diamond.
-  \coordinate (loopjoin) at (0,5.10);
-  \coordinate (testentry) at (1.05,5.10);
+  \coordinate (loopjoin) at (0,5.45);
+  \coordinate (testentry) at (0,5.45);
   \draw (seti.south) -- (loopjoin);
 
   % Branches from the decision diamond.
@@ -67,7 +67,8 @@
   % Left loop body and return path.
   \draw[->] (addn.south) -- (addt.north);
   \draw[->] (addt.south) -- (increment.north);
-  \draw (increment.west) -- (-4.85,0.35) -- (-4.85,5.10) -- (testentry);
+  \draw (increment.west) -- (-4.85,0.35) -- (-4.85,5.10);
+  \draw[->] (-4.85,5.10) -- (testentry);
   \draw[->] (testentry) -- (check.north);
 
   % False branch output path.

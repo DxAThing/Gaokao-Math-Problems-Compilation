@@ -48,7 +48,7 @@
 
     % Negative branch exits to output and does not share the loop return.
     \draw[->] (test.east) -- node[pos=0.18,above right] {否} (3.05,5.45)
-        -- (3.05,4.75) -- (output.north);
+        -- (3.05,5.15) -- (output.north);
     \draw[->] (output.south) -- (finish.north);
 
     % Loop return enters the main stem immediately above n=1,S=0.
@@ -56,5 +56,8 @@
     \coordinate (loop-merge) at (0,7.85);
     \draw (increment.south) -- (0,1.75) -- (-3.20,1.75)
         -- (-3.20,7.85);
+    % Return path merges into the main stem; the arrowhead marks the
+    % leftward flow before the shared stem enters the initialization node.
     \draw[->] (-3.20,7.85) -- (loop-merge);
+    \draw (loop-merge) -- (init.north);
 \end{tikzpicture}

@@ -36,7 +36,7 @@
   \node[process, minimum width=3.55cm] (updateP) at (0,5.27)
     {$p=p(n-m+k)$};
   \node[decision] (test) at (0,3.85) {$k<m$};
-  \node[process, minimum width=2.25cm] (inc) at (3.35,5.35)
+  \node[process, minimum width=2.25cm] (inc) at (3.80,5.35)
     {$k=k+1$};
   \node[io] (output) at (0,1.95) {输出 $p$};
   \node[terminal] (finish) at (0,0.55) {结束};
@@ -44,7 +44,7 @@
   \draw[->] (start.south) -- (input.north);
   \draw[->] (input.south) -- (init.north);
   \coordinate (merge) at (0,6.00);
-  \coordinate (branchright) at (3.35,3.85);
+  \coordinate (branchright) at (3.80,3.85);
   \draw[->] (init.south) -- (updateP.north);
   \draw[->] (updateP.south) -- (test.north);
 
@@ -52,7 +52,7 @@
   \draw (test.east) --
     node[branchlabel, pos=.65, above=1pt] {是} (branchright);
   \draw[->] (branchright) -- (inc.south);
-  \draw[->] (inc.north) -- (3.35,6.00) -- (merge);
+  \draw[->] (inc.north) -- (3.80,6.00) -- (merge);
 
   % No branch exits directly to output and termination.
   \draw[->] (test.south) -- node[branchlabel, right=3pt] {否} (output.north);

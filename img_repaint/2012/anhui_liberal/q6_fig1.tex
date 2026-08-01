@@ -41,7 +41,8 @@
   % single downward arrow is placed immediately before the decision node.
   \draw[->] (start.south) -- (init.north);
   \coordinate (loopJoin) at (0,7.15);
-  \draw[->] (init.south) -- (test.north);
+  \draw (init.south) -- (loopJoin);
+  \draw[->] (loopJoin) -- (test.north);
   \draw[->] (test.south) -- node[branchlabel, right=2pt] {否} (output.north);
   \draw[->] (output.south) -- (finish.north);
 

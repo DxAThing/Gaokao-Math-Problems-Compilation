@@ -22,7 +22,7 @@
         inner xsep=4pt,inner ysep=2pt},
     branchlabel/.style={flowtext,inner sep=0pt},
 ]
-    \path[use as bounding box] (-3.55,-0.55) rectangle (4.10,10.55);
+    \path[use as bounding box] (-3.55,-0.55) rectangle (4.70,10.55);
 
     \node[terminal] (start) at (0,10.05) {开始};
     \node[process] (setk) at (0,8.72) {$k=0$};
@@ -30,8 +30,8 @@
     \node[decision] (check) at (0,6.00) {$S<100?$};
     \node[process,minimum width=2.80cm] (update) at (0,4.35) {$S=S+2^S$};
     \node[process,minimum width=2.35cm] (inc) at (0,2.82) {$k=k+1$};
-    \node[io,minimum width=1.95cm] (output) at (2.85,4.55) {输出 $k$};
-    \node[terminal] (finish) at (2.85,2.95) {结束};
+    \node[io,minimum width=1.95cm] (output) at (3.45,4.55) {输出 $k$};
+    \node[terminal] (finish) at (3.45,2.95) {结束};
 
     \draw[->] (start.south) -- (setk.north);
     \draw[->] (setk.south) -- (sets.north);
@@ -41,8 +41,10 @@
     \draw[->] (merge) -- (check.north);
     \draw[->] (check.south) -- node[branchlabel,left=3pt] {是} (update.north);
     \draw[->] (update.south) -- (inc.north);
-    \draw[->] (check.east) -- node[branchlabel,above=2pt] {否} (2.85,6.00)
-        -- (2.85,4.93) -- (output.north);
+    % Keep a visible downward shaft before the arrowhead enters 输出 k.
+    \draw[-] (check.east) -- node[branchlabel,above=2pt] {否} (3.45,6.00)
+        -- (3.45,5.35);
+    \draw[->] (3.45,5.35) -- (output.north);
     \draw[->] (output.south) -- (finish.north);
 
     % Return path from k=k+1 enters the main stem above the decision.

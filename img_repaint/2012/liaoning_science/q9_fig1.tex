@@ -42,7 +42,8 @@
     \draw[->] (initS.south) -- (initi.north);
     % Main stem is one continuous directed edge; the return joins it at an
     % interior point after its arrowhead, keeping the junction unambiguous.
-    \draw[->] (initi.south) -- (test.north);
+    \draw (initi.south) -- (loopjoin);
+    \draw[->] (loopjoin) -- (test.north);
     \draw[->] (test.south) -- node[left=4pt, yshift=-1pt] {是} (updateS.north);
     \draw[->] (updateS.south) -- (increment.north);
     \draw[->] (test.east) -- node[above] {否} (3.05,5.00) -- (output.north);

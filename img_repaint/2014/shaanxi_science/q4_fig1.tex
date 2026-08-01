@@ -30,7 +30,7 @@
 
   \draw[->] (start.south) -- (input.north);
   \draw[->] (input.south) -- (init.north);
-  \coordinate (loopJoin) at (0,8.35);
+  \coordinate (loopJoin) at (0,8.55);
   \draw (init.south) -- (loopJoin);
   \draw[->] (loopJoin) -- (double.north);
   \draw[->] (double.south) -- (assign.north);
@@ -40,7 +40,7 @@
   \draw[->] (output.south) -- (finish.north);
 
   \coordinate (loopLeft) at (-3.25,3.35);
-  \coordinate (loopTop) at (-3.25,8.35);
+  \coordinate (loopTop) at (-3.25,8.55);
   \draw (test.west) -- node[branchlabel, above=2pt] {否} (loopLeft) -- (loopTop);
-  \draw[->] (loopTop) -- (loopJoin);
+  \draw (loopTop) -- (loopJoin);
 \end{tikzpicture}

@@ -47,11 +47,13 @@
   % 是 branch: update s, increment i, then return left into the main stem.
   \draw[->] (test.east) -- (add.west);
   \draw[->] (add.north) -- (increment.south);
+  % Return path merges into the main stem; the arrowhead marks the
+  % leftward flow into the shared stem before the decision.
   \draw[->] (increment.west) -- (loop-join);
 
   % 否 branch terminates independently; the loop return is the sole horizontal back edge.
   \draw[->] (test.south) -- node[flowtext, right=2pt] {否} (output.north);
   \draw[->] (output.south) -- (finish.north);
-  \node[flowtext, anchor=west] at (1.75,7.95) {是};
+  \node[flowtext, anchor=south east] at (1.85,8.12) {是};
   \node[caption] at (0,2.25) {图2};
 \end{tikzpicture}

@@ -43,8 +43,8 @@
   \draw[flowarrow] (start.south) -- (input.north);
   \draw[flowarrow] (input.south) -- (init.north);
   \draw[flowarrow] (init.south) -- (kinit.north);
-  \draw (kinit.south) -- (0,6.62);
-  \draw[flowarrow] (0,6.62) -- (test.north);
+  \draw (kinit.south) -- (0,6.82);
+  \draw[flowarrow] (0,6.82) -- (test.north);
 
   % Affirmative branch through the three process nodes.
   \draw[flowarrow] (test.west) -- node[branchlabel,above] {是} (-2.30,5.72) -- (multiply.north);
@@ -56,7 +56,7 @@
   \draw[flowarrow] (output.south) -- (finish.north);
 
   % Return path from k=k+1 to the single input point above the decision.
-  \draw (increment.west) -- (-4.00,0.85) -- (-4.00,6.62);
-  \draw[flowarrow] (-4.00,6.62) -- (-0.60,6.62) -- (0,6.62);
+  \draw (increment.west) -- (-4.00,0.85) -- (-4.00,6.82);
+  \draw (-4.00,6.82) -- (-0.60,6.82) -- (0,6.82);
 
 \end{tikzpicture}
