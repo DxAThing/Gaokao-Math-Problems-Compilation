@@ -14,6 +14,7 @@
 \begin{tikzpicture}
 \begin{axis}[
     name=leftplot,
+    font=\normalsize,
     width=5.8cm,
     height=4.1cm,
     xmin=0,
@@ -26,15 +27,15 @@
     xticklabels={0,50,60,70,80,90,100},
     ytick={0.005,0.020,0.035},
     yticklabels={0.0050,0.0200,0.0350},
-    xticklabel style={font=\scriptsize},
-    yticklabel style={font=\scriptsize},
+    xticklabel style={font=\normalsize,rotate=-45,anchor=north east},
+    yticklabel style={font=\normalsize},
     tick style={black,line width=0.4pt},
     tick align=outside,
     clip=false,
 ]
-\node[anchor=south west,inner sep=0pt] at (axis cs:0.08,0.039) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-\node[anchor=south east,inner sep=0pt] at (axis cs:3.23,0.005) {件数};
-\node[anchor=north,inner sep=0pt] at (axis cs:1.63,-0.009) {25 周岁以上组};
+\node[anchor=south west,inner sep=0pt,font=\normalsize] at (axis cs:0.08,0.039) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+\node[anchor=south east,inner sep=0pt,font=\normalsize] at (axis cs:3.23,0.005) {件数};
+\node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:1.63,-0.009) {25 周岁以上组};
 \draw[dashed,line width=0.35pt] (axis cs:0,0.005)--(axis cs:2.5,0.005);
 \draw[dashed,line width=0.35pt] (axis cs:0,0.020)--(axis cs:2.0,0.020);
 \draw[dashed,line width=0.35pt] (axis cs:0,0.035)--(axis cs:2.0,0.035);
@@ -54,6 +55,7 @@
     at={(leftplot.east)},
     anchor=west,
     xshift=1.05cm,
+    font=\normalsize,
     width=5.8cm,
     height=4.1cm,
     xmin=0,
@@ -66,15 +68,15 @@
     xticklabels={0,50,60,70,80,90,100},
     ytick={0.005,0.025,0.0325},
     yticklabels={0.0050,0.0250,0.0325},
-    xticklabel style={font=\scriptsize},
-    yticklabel style={font=\scriptsize},
+    xticklabel style={font=\normalsize,rotate=-45,anchor=north east},
+    yticklabel style={font=\normalsize},
     tick style={black,line width=0.4pt},
     tick align=outside,
     clip=false,
 ]
-\node[anchor=south west,inner sep=0pt] at (axis cs:0.08,0.036) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-\node[anchor=south east,inner sep=0pt] at (axis cs:3.23,0.005) {件数};
-\node[anchor=north,inner sep=0pt] at (axis cs:1.63,-0.009) {25 周岁以下组};
+\node[anchor=south west,inner sep=0pt,font=\normalsize] at (axis cs:0.08,0.036) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+\node[anchor=south east,inner sep=0pt,font=\normalsize] at (axis cs:3.23,0.005) {件数};
+\node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:1.63,-0.009) {25 周岁以下组};
 \draw[dashed,line width=0.35pt] (axis cs:0,0.005)--(axis cs:2.5,0.005);
 \draw[dashed,line width=0.35pt] (axis cs:0,0.025)--(axis cs:1.5,0.025);
 \draw[dashed,line width=0.35pt] (axis cs:0,0.0325)--(axis cs:2.0,0.0325);

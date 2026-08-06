@@ -221,7 +221,7 @@
   \let\@ifnextchar\new@ifnextchar
   \left\lbrace
   \def\arraystretch{0.9}%
-  \array{@{}l@{\quad}l@{}}%
+  \array{@{}l@{\enspace}l@{}}%
 }
 % An inline cases block is one math atom.  Discard source-line whitespace
 % immediately after the environment so a following Chinese clause is not
@@ -692,9 +692,31 @@
 % compact half-line separation from surrounding prose; the caption itself has
 % its own 0.3\baselineskip top skip and therefore does not need extra glue.
 \def\examfigure@emitinline{%
-    \vspace{0.45\baselineskip}%
-    \box\examfigurebox\par
-    \vspace{0.4\baselineskip}%
+    % Marker figures are already framed as a continuation slice.  Do not add
+    % the ordinary inline-figure glue here, otherwise the slice acquires the
+    % same visible seam as a float separated by \intextsep.
+    \ifdefined\ifexam@marker@floatcontext
+        \ifexam@marker@floatcontext\else\vspace{0.45\baselineskip}\fi
+    \else
+        \vspace{0.45\baselineskip}%
+    \fi
+    \ifdefined\ifexam@marker@floatcontext
+        \ifexam@marker@floatcontext
+            \begin{tcolorbox}[examanswermarkerfigure]%
+                \box\examfigurebox
+            \end{tcolorbox}%
+        \else
+            \box\examfigurebox
+        \fi
+    \else
+        \box\examfigurebox
+    \fi
+    \par
+    \ifdefined\ifexam@marker@floatcontext
+        \ifexam@marker@floatcontext\else\vspace{0.4\baselineskip}\fi
+    \else
+        \vspace{0.4\baselineskip}%
+    \fi
 }
 \def\examfigure@emitfloatwithspec#1#2{%
     \ifdim\examfigureheight>\textheight
@@ -705,7 +727,17 @@
         \examfigure@recordsourcetrue
         \begin{figure}[#1]
             \centering
-            \box\examfigurebox
+            \ifdefined\ifexam@marker@floatcontext
+                \ifexam@marker@floatcontext
+                    \begin{tcolorbox}[examanswermarkerfigure]%
+                        \box\examfigurebox
+                    \end{tcolorbox}%
+                \else
+                    \box\examfigurebox
+                \fi
+            \else
+                \box\examfigurebox
+            \fi
         \end{figure}%
     \fi
 }
@@ -717,7 +749,9 @@
         \expandafter\xdef\csname examfigure@reserved@\number\@currbox\endcsname
             {\the\dimexpr\ht\@currbox+\dp\@currbox+\textfloatsep\relax}%
         \global\advance\examfigure@pendingheight by \dimexpr\ht\@currbox+\dp\@currbox+\textfloatsep\relax
-        \global\examfigure@tcbreservetrue
+        % The output routine already reduces \@colroom when this top float is
+        % inserted.  Do not pre-reserve the pending height in tcolorbox: that
+        % double-counts the source-page float and strands the next answer box.
     \fi
 }
 \def\examfigure@queueconsumed{%
@@ -747,6 +781,12 @@
 \def\@xfloat#1[#2]{%
     \examfigure@orig@xfloat{#1}[#2]%
     \global\expandafter\let\csname examfigure@sourcepage@\number\@currbox\endcsname\relax
+    \global\expandafter\let\csname examfigure@markertopfloat@\number\@currbox\endcsname\relax
+    \ifdefined\ifexam@marker@floatcontext
+        \ifexam@marker@floatcontext
+            \global\expandafter\let\csname examfigure@markertopfloat@\number\@currbox\endcsname\@empty
+        \fi
+    \fi
     \ifexamfigure@recordsource
         \global\expandafter\let\csname examfigure@queued@\number\@currbox\endcsname\relax
         \global\expandafter\let\csname examfigure@reserved@\number\@currbox\endcsname\relax
@@ -755,6 +795,33 @@
         \global\examfigure@recordsourcefalse
     \fi
 }
+% The output routine reads \textfloatsep only when a deferred top float is
+% finally shipped.  By then the temporary marker-glue settings may already
+% have been restored.  Track the last top float and suppress only the separator
+% between a marker figure and its following answer-box slice; ordinary figures
+% retain the document's normal \textfloatsep.
+\newif\ifexamfigure@lasttopmarker
+\let\examfigure@orig@comflelt\@comflelt
+\def\examfigure@tracked@comflelt#1{%
+    \expandafter\ifx\csname examfigure@markertopfloat@\number#1\endcsname\relax
+        \examfigure@lasttopmarkerfalse
+    \else
+        \examfigure@lasttopmarkertrue
+    \fi
+    \examfigure@orig@comflelt{#1}%
+}
+\patchcmd{\@cflt}
+  {\let\@elt\@comflelt}
+  {\examfigure@lasttopmarkerfalse\let\@elt\examfigure@tracked@comflelt}
+  {}
+  {\PackageError{styles}{Failed to track the final top marker float}
+    {The installed LaTeX output routine is incompatible with the marker figure layout guard.}}
+\patchcmd{\@cflt}
+  {\vskip\textfloatsep}
+  {\ifexamfigure@lasttopmarker\else\vskip\textfloatsep\fi}
+  {}
+  {\PackageError{styles}{Failed to suppress marker top-float separation}
+    {The installed LaTeX output routine is incompatible with the marker figure layout guard.}}
 % On the source page, bypass only the top-float branch.  The ordinary bottom
 % fallback (and the deferlist when no bottom placement is allowed) remains
 % intact.  On the following page, the saved source page is strictly older,
@@ -1204,17 +1271,6 @@
 \newdimen\examchoicewidthD
 \newdimen\examchoicewidthE
 \newdimen\examchoicemaxwidth
-\newdimen\examchoicecurrentheight
-\newdimen\examchoicemaxheight
-\newsavebox{\examchoicemeasurebox}
-
-\newcommand{\examchoiceupdatemaxheight}[1]{%
-    \sbox{\examchoicemeasurebox}{#1}%
-    \examchoicecurrentheight=\dimexpr\ht\examchoicemeasurebox+\dp\examchoicemeasurebox\relax
-    \ifdim\examchoicecurrentheight>\examchoicemaxheight
-        \examchoicemaxheight=\examchoicecurrentheight
-    \fi
-}
 
 \newcommand{\choices}[4]{%
     \problembodyend
@@ -1243,11 +1299,6 @@
     \ifdim\examchoicewidthC>\examchoicemaxwidth \examchoicemaxwidth=\examchoicewidthC \fi
     \ifdim\examchoicewidthD>\examchoicemaxwidth \examchoicemaxwidth=\examchoicewidthD \fi
     \addtolength{\examchoicemaxwidth}{2em}
-    \examchoicemaxheight=0pt
-    \examchoiceupdatemaxheight{\textbf{A.}~#1}
-    \examchoiceupdatemaxheight{\textbf{B.}~#2}
-    \examchoiceupdatemaxheight{\textbf{C.}~#3}
-    \examchoiceupdatemaxheight{\textbf{D.}~#4}
 
     \vspace{-0.2em}\noindent
     \ifnum\examchoicegraphiccount=4
@@ -1255,11 +1306,6 @@
         \choicegraphiccell{\dimexpr0.22\examchoicewidth\relax}{B}{#2}\hfill
         \choicegraphiccell{\dimexpr0.22\examchoicewidth\relax}{C}{#3}\hfill
         \choicegraphiccell{\dimexpr0.22\examchoicewidth\relax}{D}{#4}%
-    \else\ifdim\examchoicemaxheight>1.8\baselineskip
-        \choiceentry{A}{#1}\par
-        \choiceentry{B}{#2}\par
-        \choiceentry{C}{#3}\par
-        \choiceentry{D}{#4}%
     \else\ifdim\examchoicemaxwidth<0.22\examchoicewidth
         \choicecell{\dimexpr0.22\examchoicewidth\relax}{A}{#1}\hfill
         \choicecell{\dimexpr0.22\examchoicewidth\relax}{B}{#2}\hfill
@@ -1278,7 +1324,7 @@
             \choiceentry{C}{#3}\par
             \choiceentry{D}{#4}%
         \fi
-    \fi\fi\fi
+    \fi\fi
     \global\examchoicegraphicfalse
     \par
     \endgroup
@@ -1365,7 +1411,43 @@
         after skip=0.3em,
         before upper={\examwidoworphanrules\examproseparagraph\setlength{\parindent}{2em}\tolerance=3200\emergencystretch=8em\setlength{\jot}{4pt}\lineskiplimit=3pt\lineskip=4pt\selectfont},
         fontupper=\zihao{-4},
-    }
+    },
+    % Marker slices are named styles rather than inline key lists: keyval
+    % normalizes spaces in dynamically supplied lists, while these definitions
+    % retain tcolorbox's `before skip`/`after skip` keys verbatim.
+    examanswermarkerfirst/.style={
+        examanswer,
+        bottomrule=0pt,
+        arc=0pt,
+        after skip=0pt,
+    },
+    examanswermarkermiddle/.style={
+        examanswer,
+        toprule=0pt,
+        bottomrule=0pt,
+        sharp corners,
+        before skip=0pt,
+        after skip=0pt,
+    },
+    examanswermarkerlast/.style={
+        examanswer,
+        toprule=0pt,
+        arc=0pt,
+        before skip=0pt,
+        boxsep=0.5pt,
+        top=0.5pt,
+        bottom=0.5pt,
+        after skip=0.1em,
+    },
+    examanswermarkerfigure/.style={
+        examanswer,
+        unbreakable,
+        toprule=0pt,
+        bottomrule=0pt,
+        sharp corners,
+        before skip=0pt,
+        after skip=0pt,
+    },
 }
 
 % 答案/解析环境；旧命令写法 \answer{...}、\solution{...} 继续兼容。
@@ -1412,10 +1494,156 @@
     \fi
 }
 \makeatother
-\NewDocumentCommand{\solution}{+g}{%
-    \IfNoValueTF{#1}{\solutionbegin}{\solutionbegin #1\solutionend}%
+
+% Explicit solution/answer figure marker.  It is consumed only by the body
+% collector below; outside a collected body its error keeps accidental use
+% visible instead of silently changing layout.
+\NewDocumentCommand{\solutionfigure}{+m}{%
+    \PackageError{styles}{solutionfigure used outside answer/solution body}%
+        {Wrap the complete figure command in an answer or solution body.}%
 }
-\let\endsolution\solutionend
+
+\makeatletter
+\ExplSyntaxOn
+\def\exam@marker@stop{\relax}
+\newif\ifexam@marker@first
+\newif\ifexam@marker@forcefirst
+\newif\ifexam@marker@hasmarker
+\newif\ifexam@marker@floatcontext
+\exam@marker@floatcontextfalse
+\newif\ifexam@marker@floatgluezero
+\exam@marker@floatgluezerofalse
+\newskip\exam@marker@savedintextsep
+\newskip\exam@marker@savedtextfloatsep
+\newskip\exam@marker@savedfloatsep
+% A marker float must remain a real float, but its external float glue would
+% visibly break the surrounding examanswer frame.  Keep the original lengths
+% until FloatBarrier has placed all marker floats, then restore them before
+% subsequent ordinary figures are emitted.
+\def\exam@marker@beginfloatglue{%
+    \ifexam@marker@floatgluezero\else
+        \global\exam@marker@savedintextsep=\intextsep
+        \global\exam@marker@savedtextfloatsep=\textfloatsep
+        \global\exam@marker@savedfloatsep=\floatsep
+        \global\intextsep=0pt
+        \global\textfloatsep=0pt
+        \global\floatsep=0pt
+        \global\exam@marker@floatgluezerotrue
+    \fi
+}
+\def\exam@marker@endfloatglue{%
+    \ifexam@marker@floatgluezero
+        \global\intextsep=\exam@marker@savedintextsep
+        \global\textfloatsep=\exam@marker@savedtextfloatsep
+        \global\floatsep=\exam@marker@savedfloatsep
+        \global\exam@marker@floatgluezerofalse
+    \fi
+}
+% A blank line between two solutionfigure markers is tokenized as \par while
+% the body is collected.  Strip only paragraph tokens and surrounding spaces
+% for the emptiness test; any real text, math, or layout command remains a
+% non-blank segment and is rendered normally.
+\prg_new_conditional:Npnn \exam_marker_if_segment_blank:n {p,T,F,TF}
+  {
+    \tl_set:Nn \l_tmpa_tl {##1}
+    \tl_remove_all:Nn \l_tmpa_tl {\par}
+    \tl_if_blank:VTF \l_tmpa_tl
+      {\prg_return_true:}
+      {\prg_return_false:}
+  }
+% A solution figure is a real float and therefore cannot live inside one
+% physical breakable tcolorbox.  The collector below emits visual *slices*
+% of one logical box instead: the slice before a float has no bottom rule or
+% lower rounding, the slice after it has no top rule or upper rounding, and
+% any intervening slice has neither.  The side rules and shared background
+% continue through the float's source page, so this preserves the float's
+% placement/back-fill behaviour without exposing separate rounded boxes.
+\long\def\exam@marker@rendersegment#1#2#3{%
+    \ifexam@marker@forcefirst
+        \begin{tcolorbox}[#3]%
+            \textbf{#1}\ignorespaces
+            #2
+        \end{tcolorbox}%
+        \global\exam@marker@firstfalse
+        \global\exam@marker@forcefirstfalse
+    \else
+      \exam_marker_if_segment_blank:nTF {#2}{%
+        % Empty source segments (including one or more \par tokens) do not
+        % create a visual tcolorbox slice.
+      }{%
+        \begin{tcolorbox}[#3]%
+            \ifexam@marker@first
+                \textbf{#1}\ignorespaces
+            \fi
+            #2
+        \end{tcolorbox}%
+        \global\exam@marker@firstfalse
+      }%
+    \fi
+}
+% The figure command itself still owns the standard float placement.  Mark
+% its construction, so the float box can receive the same gray background and
+% side rules as the surrounding text slices without nesting a float inside a
+% tcolorbox (which would disable floating in inner mode).
+\def\exam@marker@emitfigure#1{%
+    \exam@marker@beginfloatglue
+    \global\exam@marker@floatcontexttrue
+    #1%
+    \global\exam@marker@floatcontextfalse
+}
+\long\def\exam@marker@parse#1\solutionfigure#2#3\exam@marker@end{%
+    \ifx#2\exam@marker@stop
+        \ifexam@marker@hasmarker
+            % The final slice follows the last float.  Its top edge is a
+            % continuation edge; only its bottom edge closes the container.
+            \exam@marker@rendersegment{\exam@marker@heading}{#1}{examanswermarkerlast}%
+        \else
+            \exam@marker@rendersegment{\exam@marker@heading}{#1}{examanswer}%
+        \fi
+    \else
+        \global\exam@marker@hasmarkertrue
+        \ifexam@marker@first
+            \global\exam@marker@forcefirsttrue
+            % First slice: keep the top rounding, but leave the lower edge
+            % open for the continuation slice after the float.
+            \exam@marker@rendersegment{\exam@marker@heading}{#1}{examanswermarkerfirst}%
+        \else
+            % Middle slice between two floats: no horizontal seam at all.
+            \exam@marker@rendersegment{\exam@marker@heading}{#1}{examanswermarkermiddle}%
+        \fi
+        \exam@marker@emitfigure{#2}%
+        % Pass the explicit end sentinel into each recursive parse.  Without
+        % it, the final segment would scan forward to a later solutionfigure
+        % in the document and be rendered a second time.
+        \exam@marker@parse#3\solutionfigure{\exam@marker@stop}\exam@marker@end
+    \fi
+}
+\long\def\exam@marker@render#1#2{%
+    \ifshowanswer
+        \problembodyend
+        \examallownextpagebreak
+        \def\exam@marker@heading{#1}%
+        \exam@marker@firsttrue
+        \exam@marker@forcefirstfalse
+        \exam@marker@hasmarkerfalse
+        \exam@marker@parse#2\solutionfigure{\exam@marker@stop}\exam@marker@end
+        \ifexam@marker@hasmarker
+            \FloatBarrier
+            \exam@marker@endfloatglue
+        \fi
+    \fi
+}
+\long\def\exam@collectsolution#1{\exam@marker@render{\textbf{【解析】}}{#1}}
+\long\def\exam@collectanswer#1{\exam@marker@render{\textbf{【答案】}}{#1}}
+\NewDocumentCommand{\solution}{+g}{%
+    \IfNoValueTF{#1}{\Collect@Body\exam@collectsolution}{\exam@marker@render{\textbf{【解析】}}{#1}}%
+}
+\RenewDocumentCommand{\answer}{+g}{%
+    \IfNoValueTF{#1}{\Collect@Body\exam@collectanswer}{\exam@marker@render{\textbf{【答案】}}{#1}}%
+}
+\let\endanswer\relax
+\ExplSyntaxOff
+\makeatother
 
 % ==============================================================================
 % 5.1 解析区行间公式归一化宏

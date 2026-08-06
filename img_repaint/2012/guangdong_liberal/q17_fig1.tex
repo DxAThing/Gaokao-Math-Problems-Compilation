@@ -10,7 +10,7 @@
 % solid segments: bar outlines, x/y axis arrows, tick marks, and the x-axis break stroke.
 % dashed segments: horizontal reference lines at the four source-labelled heights.
 % labels: 频率/组距 sits above the y-axis, 成绩 follows the x-axis arrow, and source tick labels stay below/left of axes.
-\begin{tikzpicture}[baseline]
+\begin{tikzpicture}[baseline,font=\normalsize]
 \begin{axis}[
     width=10.4cm,
     height=5.8cm,
@@ -19,8 +19,8 @@
     % Internal score coordinates are equally spaced: 0 is the origin and
     % 1--6 are the displayed group boundaries 50--100.  This preserves one
     % group width for the broken 0-to-50 segment.
-    xmin=-5.0,
-    xmax=12.3,
+    xmin=-2.0,
+    xmax=8.0,
     ymin=-0.005,
     ymax=0.053,
     ticks=none,
@@ -55,25 +55,25 @@
         (axis cs:0.08,-0.0035) -- (axis cs:0.16,0.0012) -- (axis cs:0.24,-0.0035) --
         (axis cs:0.32,0.0012) -- (axis cs:0.40,-0.0035);
 
-    \node[anchor=south west,inner sep=0pt,font=\small] at (axis cs:0.3,0.0455)
+    \node[anchor=south west,inner sep=0pt,font=\normalsize] at (axis cs:0.3,0.0455)
         {\(\dfrac{\text{频率}}{\text{组距}}\)};
     \node[anchor=west,inner sep=0pt,font=\normalsize] at (axis cs:6.2,0.0035) {成绩};
 
     % Tick marks and labels reproduced from the source chart.
     \draw[line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.0010);
-    \node[anchor=north east,inner sep=0pt,font=\normalsize] at (axis cs:0,-0.0015) {0};
+    \node[anchor=north east,inner sep=0pt,font=\normalsize] at (axis cs:-0.25,-0.0015) {0};
     \draw[line width=0.45pt] (axis cs:1,0) -- (axis cs:1,-0.0010);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:1,-0.0012) {50};
+    \node[anchor=north east,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:1,-0.0012) {50};
     \draw[line width=0.45pt] (axis cs:2,0) -- (axis cs:2,-0.0010);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:2,-0.0012) {60};
+    \node[anchor=north east,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:2,-0.0012) {60};
     \draw[line width=0.45pt] (axis cs:3,0) -- (axis cs:3,-0.0010);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:3,-0.0012) {70};
+    \node[anchor=north east,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:3,-0.0012) {70};
     \draw[line width=0.45pt] (axis cs:4,0) -- (axis cs:4,-0.0010);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:4,-0.0012) {80};
+    \node[anchor=north east,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:4,-0.0012) {80};
     \draw[line width=0.45pt] (axis cs:5,0) -- (axis cs:5,-0.0010);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:5,-0.0012) {90};
+    \node[anchor=north east,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:5,-0.0012) {90};
     \draw[line width=0.45pt] (axis cs:6,0) -- (axis cs:6,-0.0010);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:6,-0.0012) {100};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=5pt] at (axis cs:6,-0.0012) {100};
     \draw[line width=0.45pt] (axis cs:0,0.005) -- (axis cs:-0.3,0.005);
     \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.4,0.005) {$a$};
     \draw[line width=0.45pt] (axis cs:0,0.02) -- (axis cs:-0.3,0.02);

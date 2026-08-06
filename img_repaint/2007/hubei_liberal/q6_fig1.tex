@@ -1,6 +1,9 @@
 % Source PDF: source/普通高考/2007/2007湖北文.pdf, page 1, question 6.
 % The source page is vector artwork (pdfimages -list found no embedded bitmap).
 % Comparison source was rendered from the PDF after 100px/50px grid location.
+% Grid evidence: tmp/redraw_grid/2007_hubei_liberal/page1_grid100.png and
+% tmp/redraw_crops/2007_hubei_liberal/q6_block_grid50.png.
+% Original comparison crop: tmp/redraw_crops/2007_hubei_liberal/q6_orig_chart.png.
 % Elements: frequency-density axes with a broken x-axis, eleven width-2 kg
 % histogram bars, twelve group-bound labels 54.5--76.5, and axis titles.
 % Relations: each bar spans one 2 kg class interval; heights are the source
@@ -9,15 +12,17 @@
 % width to x=0..1, then map the twelve source group boundaries to x=1..12.
 % solid segments: x/y axes, bar outlines, tick marks, and the x-axis break.
 % dashed segments: none.  Labels stay outside bars; rotated group labels use
-% the lower-right anchor so each label remains attached to its bar boundary.
+% a north-west anchor at each bar boundary, so text descends rightward without overlap.
+
+\newcommand{\statAuditRotation}{rotate=-45}
 
 \begin{tikzpicture}[baseline]
 \begin{axis}[
-    width=11.0cm,
-    height=6.0cm,
-    xmin=-0.85,
-    xmax=13.35,
-    ymin=-0.013,
+    width=13.5cm,
+    height=6.2cm,
+    xmin=-0.95,
+    xmax=14.0,
+    ymin=-0.016,
     ymax=0.093,
     axis lines=none,
     ticks=none,
@@ -46,7 +51,7 @@
     };
 
     % Coordinate axes.  The omitted 0--54.5 kg range is one displayed group width.
-    \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:13.15,0);
+    \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:13.45,0);
     \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:0,0.090);
 
     % A pale, short zig-zag marks the broken part of the x-axis.
@@ -62,26 +67,53 @@
     \node[anchor=south west,inner sep=0pt,font=\normalsize,align=center]
         at (axis cs:0.08,0.089) {\(\dfrac{\text{频率}}{\text{组距}}\)};
     \node[anchor=west,inner sep=0pt,font=\normalsize]
-        at (axis cs:12.55,-0.0008) {体重（kg）};
+        at (axis cs:12.70,-0.0008) {体重（kg）};
     \node[anchor=north east,inner sep=0pt,font=\normalsize]
         at (axis cs:-0.10,-0.0018) {0};
 
     % Group-bound ticks and labels.  Each label is directly below its bar edge.
-    \foreach \x/\label in {
-        1/54.5,2/56.5,3/58.5,4/60.5,5/62.5,6/64.5,
-        7/66.5,8/68.5,9/70.5,10/72.5,11/74.5,12/76.5} {
-        \draw[line width=0.4pt] (axis cs:{\x},0) -- (axis cs:{\x},-0.0022);
-        \node[anchor=north east,inner sep=0pt,font=\normalsize,rotate=-45]
-            at (axis cs:{\x},-0.0030) {\label};
-    }
+    \draw[line width=0.4pt] (axis cs:1,0) -- (axis cs:1,-0.0022);
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:1,-0.0030) {54.5};
+    \draw[line width=0.4pt] (axis cs:2,0) -- (axis cs:2,-0.0022);
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:2,-0.0030) {56.5};
+    \draw[line width=0.4pt] (axis cs:3,0) -- (axis cs:3,-0.0022);
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:3,-0.0030) {58.5};
+    \draw[line width=0.4pt] (axis cs:4,0) -- (axis cs:4,-0.0022);
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:4,-0.0030) {60.5};
+    \draw[line width=0.4pt] (axis cs:5,0) -- (axis cs:5,-0.0022);
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:5,-0.0030) {62.5};
+    \draw[line width=0.4pt] (axis cs:6,0) -- (axis cs:6,-0.0022);
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:6,-0.0030) {64.5};
+    \draw[line width=0.4pt] (axis cs:7,0) -- (axis cs:7,-0.0022);
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:7,-0.0030) {66.5};
+    \draw[line width=0.4pt] (axis cs:8,0) -- (axis cs:8,-0.0022);
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:8,-0.0030) {68.5};
+    \draw[line width=0.4pt] (axis cs:9,0) -- (axis cs:9,-0.0022);
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:9,-0.0030) {70.5};
+    \draw[line width=0.4pt] (axis cs:10,0) -- (axis cs:10,-0.0022);
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:10,-0.0030) {72.5};
+    \draw[line width=0.4pt] (axis cs:11,0) -- (axis cs:11,-0.0022);
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:11,-0.0030) {74.5};
+    \draw[line width=0.4pt] (axis cs:12,0) -- (axis cs:12,-0.0022);
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:12,-0.0030) {76.5};
 
     % Frequency-density ticks and labels.
-    \foreach \y/\label in {
-        0.01/0.01,0.02/0.02,0.03/0.03,0.04/0.04,
-        0.05/0.05,0.06/0.06,0.07/0.07,0.08/0.08} {
-        \draw[line width=0.4pt] (axis cs:0,{\y}) -- (axis cs:-0.14,{\y});
-        \node[anchor=east,inner sep=0pt,font=\normalsize]
-            at (axis cs:-0.22,{\y}) {\label};
-    }
+    \draw[line width=0.4pt] (axis cs:0,0.01) -- (axis cs:-0.14,0.01);
+    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.22,0.01) {0.01};
+    \draw[line width=0.4pt] (axis cs:0,0.02) -- (axis cs:-0.14,0.02);
+    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.22,0.02) {0.02};
+    \draw[line width=0.4pt] (axis cs:0,0.03) -- (axis cs:-0.14,0.03);
+    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.22,0.03) {0.03};
+    \draw[line width=0.4pt] (axis cs:0,0.04) -- (axis cs:-0.14,0.04);
+    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.22,0.04) {0.04};
+    \draw[line width=0.4pt] (axis cs:0,0.05) -- (axis cs:-0.14,0.05);
+    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.22,0.05) {0.05};
+    \draw[line width=0.4pt] (axis cs:0,0.06) -- (axis cs:-0.14,0.06);
+    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.22,0.06) {0.06};
+    \draw[line width=0.4pt] (axis cs:0,0.07) -- (axis cs:-0.14,0.07);
+    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.22,0.07) {0.07};
+    \draw[line width=0.4pt] (axis cs:0,0.08) -- (axis cs:-0.14,0.08);
+    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.22,0.08) {0.08};
+
 \end{axis}
 \end{tikzpicture}

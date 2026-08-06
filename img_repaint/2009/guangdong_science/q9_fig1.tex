@@ -15,7 +15,8 @@
   decision/.style={flowbox,diamond,aspect=2.8,minimum width=3.85cm,minimum height=1.00cm,inner sep=1pt},
   branchlabel/.style={flowtext,inner sep=0pt},
 ]
-  \path[use as bounding box] (-2.55,0.20) rectangle (5.70,10.05);
+  % Keep the full update box and recurrence box inside the standalone bounding box.
+  \path[use as bounding box] (-2.55,0.20) rectangle (7.10,10.05);
   \node[terminal] (start) at (0,9.55) {开始};
   \node[io,minimum width=5.55cm] (input) at (0,8.25)
     {输入 $n$，$a_{1}$，$a_{2}$，$\cdots$，$a_{n}$};
@@ -34,5 +35,7 @@
   \draw[->] (output.south) -- (finish.north);
   \draw[->] (test.east) -- node[pos=0.25,branchlabel,above=5pt] {是} (update.west);
   \draw[->] (update.north) -- (inc.south);
-  \draw[->] (inc.north) -- (4.60,6.30) -- (0,6.30);
+  % The return branch leaves the increment box from its west side, matching the source
+  % flowchart and keeping the arrow clear of the node text.
+  \draw[->] (inc.west) -- (0,6.95);
 \end{tikzpicture}

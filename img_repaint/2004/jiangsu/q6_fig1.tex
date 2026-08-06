@@ -5,8 +5,10 @@
 % Elements: x-axis reading time 0, 0.5, 1.0, 1.5, 2.0 hours; y-axis student count 5, 10, 15, 20.
 % Bars: frequencies (5, 20, 10, 10, 5), read from the source chart and totaling the stated 50 students.
 % Relations: each outlined bar is centered at its reading-time tick and its top encodes the corresponding frequency.
-% solid segments: x/y axes and five bar outlines; dashed segments: horizontal guides at y=5, 10, 20.
-% labels: y-axis label above the arrow; x-axis label to the right of the arrow; tick labels below/left of axes.
+% solid segments: x/y axes and five bar outlines; dashed segments: y=5 runs from x=0 to x=2.12 (right edge of the 2.0-hour bar);
+% y=10 runs from x=0 to x=1.62 (right edge of the 1.5-hour bar); y=20 runs from x=0 to x=0.62 (right edge of the 0.5-hour bar).
+% Draw guides before white-filled bars so bar interiors and boundaries mask guides as in the source.
+% labels: all axis names and tick labels use \normalsize; y-axis label above arrow; x-axis label right of arrow.
 \begin{tikzpicture}
 \begin{axis}[
     width=8.0cm,
@@ -18,19 +20,22 @@
     axis lines=left,
     axis line style={-Stealth,black},
     xlabel={时间（小时）},
-    xlabel style={at={(axis description cs:1.05,0)},anchor=west,inner sep=0pt},
+    xlabel style={at={(axis description cs:1.05,0)},anchor=west,inner sep=0pt,font=\normalsize},
+    label style={font=\normalsize},
+    tick label style={font=\normalsize},
     xtick={0,0.5,1,1.5,2},
     xticklabels={0,0.5,1.0,1.5,2.0},
+    x tick label as interval=false,
     ytick={5,10,15,20},
     yticklabels={5,10,15,20},
     tick style={draw=none},
     clip=false,
     enlargelimits=false,
 ]
-    \node[anchor=south west,inner sep=0pt] at (axis description cs:0.02,1.04) {人数（人）};
-    \draw[dashed,black] (axis cs:0,5) -- (axis cs:2.15,5);
-    \draw[dashed,black] (axis cs:0,10) -- (axis cs:2.15,10);
-    \draw[dashed,black] (axis cs:0,20) -- (axis cs:2.15,20);
+    \node[anchor=south west,inner sep=0pt,font=\normalsize] at (axis description cs:0.02,1.04) {人数（人）};
+    \draw[dashed,black] (axis cs:0,5) -- (axis cs:2.12,5);
+    \draw[dashed,black] (axis cs:0,10) -- (axis cs:1.62,10);
+    \draw[dashed,black] (axis cs:0,20) -- (axis cs:0.62,20);
     \addplot[
         ybar,
         bar width=0.24,

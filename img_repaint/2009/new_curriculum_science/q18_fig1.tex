@@ -12,11 +12,11 @@
 \begin{tikzpicture}[baseline]
 \begin{axis}[
     name=histA,
-    width=5.2cm,
+    width=9.0cm,
     height=5.4cm,
     xmin=-1.2,
-    xmax=8.6,
-    ymin=-0.010,
+    xmax=8.8,
+    ymin=-0.024,
     ymax=0.041,
     axis lines=none,
     ticks=none,
@@ -38,30 +38,30 @@
     \pgfplotsinvokeforeach{2,3,4,5,6,7}{
         \draw[line width=0.45pt] (axis cs:#1,0) -- (axis cs:#1,-0.0012);
     }
-    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:2,-0.0016) {100};
-    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:3,-0.0016) {110};
-    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:4,-0.0016) {120};
-    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:5,-0.0016) {130};
-    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:6,-0.0016) {140};
-    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:7,-0.0016) {150};
-    \node[anchor=north east,inner sep=0pt] at (axis cs:0,-0.0002) {0};
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:2,-0.0035) {100};
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:3,-0.0035) {110};
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:4,-0.0035) {120};
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:5,-0.0035) {130};
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:6,-0.0035) {140};
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:7,-0.0035) {150};
+    \node[anchor=north east,inner sep=0pt,font=\normalsize] at (axis cs:0,-0.0002) {0};
     \pgfplotsinvokeforeach{0.004,0.008,0.012,0.016,0.020,0.024,0.028,0.032,0.036}{
-        \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-0.12,#1) {#1};
+        \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.12,#1) {#1};
     }
-    \node[anchor=south west,inner sep=0pt,font=\small] at (axis cs:0.25,0.0365) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:7.15,0.003) {生产能力};
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:4.5,-0.0075) {\(A\) 类工人生产能力的频率分布直方图};
+    \node[anchor=south west,inner sep=0pt,font=\normalsize] at (axis cs:0.25,0.0365) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=west,inner sep=0pt,font=\normalsize] at (axis cs:7.15,0.003) {生产能力};
+    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:4.5,-0.021) {\(A\) 类工人生产能力的频率分布直方图};
 \end{axis}
 
 \begin{axis}[
     name=histB,
-    at={(6.3cm,0)},
+    at={(10.3cm,3.4pt)},
     anchor=south west,
-    width=5.2cm,
+    width=9.0cm,
     height=5.4cm,
     xmin=-1.2,
-    xmax=8.6,
-    ymin=-0.010,
+    xmax=8.8,
+    ymin=-0.024,
     ymax=0.053,
     axis lines=none,
     ticks=none,
@@ -83,18 +83,18 @@
     \pgfplotsinvokeforeach{2,3,4,5,6,7}{
         \draw[line width=0.45pt] (axis cs:#1,0) -- (axis cs:#1,-0.0012);
     }
-    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:2,-0.0016) {100};
-    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:3,-0.0016) {110};
-    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:4,-0.0016) {120};
-    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:5,-0.0016) {130};
-    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:6,-0.0016) {140};
-    \node[anchor=north,inner sep=0pt,font=\tiny] at (axis cs:7,-0.0016) {150};
-    \node[anchor=north east,inner sep=0pt] at (axis cs:0,-0.0002) {0};
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:2,-0.0035) {100};
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:3,-0.0035) {110};
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:4,-0.0035) {120};
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:5,-0.0035) {130};
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:6,-0.0035) {140};
+    \node[anchor=north west,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:7,-0.0035) {150};
+    \node[anchor=north east,inner sep=0pt,font=\normalsize] at (axis cs:0,-0.0002) {0};
     \pgfplotsinvokeforeach{0.004,0.008,0.012,0.016,0.020,0.024,0.028,0.032,0.036,0.040,0.044,0.048}{
-        \node[anchor=east,inner sep=0pt,font=\scriptsize] at (axis cs:-0.12,#1) {#1};
+        \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.12,#1) {#1};
     }
-    \node[anchor=south west,inner sep=0pt,font=\small] at (axis cs:0.25,0.0485) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\small] at (axis cs:7.15,0.003) {生产能力};
-    \node[anchor=north,inner sep=0pt,font=\small] at (axis cs:4.5,-0.0075) {\(B\) 类工人生产能力的频率分布直方图};
+    \node[anchor=south west,inner sep=0pt,font=\normalsize] at (axis cs:0.25,0.0485) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=west,inner sep=0pt,font=\normalsize] at (axis cs:7.15,0.003) {生产能力};
+    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:4.5,-0.021) {\(B\) 类工人生产能力的频率分布直方图};
 \end{axis}
 \end{tikzpicture}
