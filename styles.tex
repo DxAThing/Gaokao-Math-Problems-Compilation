@@ -223,6 +223,10 @@
   \def\arraystretch{0.9}%
   \array{@{}l@{\quad}l@{}}%
 }
+% An inline cases block is one math atom.  Discard source-line whitespace
+% immediately after the environment so a following Chinese clause is not
+% separated by an accidental interword glue node.
+\def\endcases{\endarray\right.\ignorespacesafterend}
 \makeatother
 
 % 图形与表格
@@ -258,6 +262,7 @@
         x tick label as interval=false,
     },
 }
+
 \usepackage{wrapfig}
 % 调整 wrapfigure 与正文的间距；普通题内 figure 也采用同一稳定半行距。
 \setlength{\intextsep}{0.45\baselineskip}  % 纵向：图片上下的间距
@@ -602,10 +607,16 @@
 \examfigure@recordsourcefalse
 \newcount\examfigure@sourcepage
 \examfigure@sourcepage=0
-\newcount\examfigure@lastbox
-\examfigure@lastbox=-1
 \newdimen\examfigure@pendingheight
 \examfigure@pendingheight=0pt
+% Height of mapped exam figures already inserted at the current page top.
+% Unlike pendingheight, this must survive queue consumption until the page is
+% shipped: tcolorbox may still compute its page height after the top float has
+% left the defer list but before it is physically shipped.
+\newdimen\examfigure@currenttopheight
+\examfigure@currenttopheight=0pt
+\newcount\examfigure@currenttoppage
+\examfigure@currenttoppage=-1
 \newif\ifexamfigure@tcbreserve
 \examfigure@tcbreservefalse
 \newif\ifexamfigure@tcbready
@@ -704,14 +715,29 @@
     \expandafter\ifx\csname examfigure@queued@\number\@currbox\endcsname\relax
         \expandafter\xdef\csname examfigure@queued@\number\@currbox\endcsname{1}%
         \expandafter\xdef\csname examfigure@reserved@\number\@currbox\endcsname
-            {\the\dimexpr\ht\@currbox+\textfloatsep\relax}%
-        \global\advance\examfigure@pendingheight by \dimexpr\ht\@currbox+\textfloatsep\relax
+            {\the\dimexpr\ht\@currbox+\dp\@currbox+\textfloatsep\relax}%
+        \global\advance\examfigure@pendingheight by \dimexpr\ht\@currbox+\dp\@currbox+\textfloatsep\relax
         \global\examfigure@tcbreservetrue
     \fi
 }
 \def\examfigure@queueconsumed{%
     \expandafter\ifx\csname examfigure@queued@\number\@currbox\endcsname\relax\else
-        \global\examfigure@tcbreadytrue
+        \expandafter\ifx\csname examfigure@consumed@\number\@currbox\endcsname\relax
+            \expandafter\xdef\csname examfigure@consumed@\number\@currbox\endcsname{1}%
+            \expandafter\ifx\csname examfigure@reserved@\number\@currbox\endcsname\relax\else
+                \global\advance\examfigure@pendingheight by
+                    -\csname examfigure@reserved@\number\@currbox\endcsname\relax
+                \ifdim\examfigure@pendingheight<0pt
+                    \global\examfigure@pendingheight=0pt\relax
+                \fi
+                \ifnum\examfigure@currenttoppage=\c@page\relax\else
+                    \global\examfigure@currenttopheight=0pt\relax
+                    \global\examfigure@currenttoppage=\c@page\relax
+                \fi
+                \global\advance\examfigure@currenttopheight by
+                    \csname examfigure@reserved@\number\@currbox\endcsname\relax
+            \fi
+        \fi
     \fi
 }
 % Attach the source page to the newly allocated float box.  This hook is
@@ -720,9 +746,11 @@
 \let\examfigure@orig@xfloat\@xfloat
 \def\@xfloat#1[#2]{%
     \examfigure@orig@xfloat{#1}[#2]%
+    \global\expandafter\let\csname examfigure@sourcepage@\number\@currbox\endcsname\relax
     \ifexamfigure@recordsource
-        \global\examfigure@lastbox=\@currbox\relax
-        \typeout{EXAM-XFLOAT curr=\number\@currbox source=\number\examfigure@sourcepage}%
+        \global\expandafter\let\csname examfigure@queued@\number\@currbox\endcsname\relax
+        \global\expandafter\let\csname examfigure@reserved@\number\@currbox\endcsname\relax
+        \global\expandafter\let\csname examfigure@consumed@\number\@currbox\endcsname\relax
         \expandafter\xdef\csname examfigure@sourcepage@\number\@currbox\endcsname{\number\examfigure@sourcepage}%
         \global\examfigure@recordsourcefalse
     \fi
@@ -733,14 +761,16 @@
 % so the original top/bottom algorithm is restored.
 \let\examfigure@orig@addtotoporbot\@addtotoporbot
 \def\@addtotoporbot{%
-    \typeout{EXAM-ADDTOP-BEFORE curr=\number\@currbox page=\the\c@page mapped=\expandafter\ifx\csname examfigure@sourcepage@\number\@currbox\endcsname\relax0\else1\fi insert=\if@insert1\else0\fi}%
     \expandafter\ifx\csname examfigure@sourcepage@\number\@currbox\endcsname\relax
         \examfigure@orig@addtotoporbot
     \else
         \ifnum\csname examfigure@sourcepage@\number\@currbox\endcsname<\c@page
             \examfigure@orig@addtotoporbot
-            \typeout{EXAM-ADDTOP-AFTER curr=\number\@currbox page=\the\c@page insert=\if@insert1\else0\fi}%
-            \if@insert\examfigure@queueconsumed\fi
+            \if@insert
+                \examfigure@queueconsumed
+            \else
+                \examfigure@queuepending
+            \fi
         \else
             \@addtobot
             \if@insert\else\examfigure@queuepending\fi
@@ -749,22 +779,16 @@
 }
 \let\examfigure@orig@addtocurcol\@addtocurcol
 \def\@addtocurcol{%
-    \typeout{EXAM-ADDCUR-BEFORE curr=\number\@currbox page=\the\c@page mapped=\expandafter\ifx\csname examfigure@sourcepage@\number\@currbox\endcsname\relax0\else1\fi insert=\if@insert1\else0\fi}%
-    \typeout{EXAM-ADDCUR curr=\number\@currbox last=\the\examfigure@lastbox page=\the\c@page insert=\if@insert1\else0\fi}%
     \examfigure@orig@addtocurcol
-    \typeout{EXAM-ADDCUR-AFTER curr=\number\@currbox page=\the\c@page mapped=\expandafter\ifx\csname examfigure@sourcepage@\number\@currbox\endcsname\relax0\else1\fi insert=\if@insert1\else0\fi}%
-    \if@insert\else
-        \ifnum\@currbox=\examfigure@lastbox\relax
+    \expandafter\ifx\csname examfigure@sourcepage@\number\@currbox\endcsname\relax\else
+        \if@insert\else
             \examfigure@queuepending
-        \else
-            \expandafter\ifx\csname examfigure@sourcepage@\number\@currbox\endcsname\relax\else
-                \ifnum\csname examfigure@sourcepage@\number\@currbox\endcsname=\c@page
-                    \examfigure@queuepending
-                \fi
-            \fi
         \fi
     \fi
 }
+% A consumed mapped top float belongs to the page recorded in
+% examfigure@currenttoppage.  queueconsumed starts a fresh height accumulator
+% whenever output processing advances to another page.
 \def\examfigure@dispatch#1#2#3{%
     \par\penalty0
     \examfigure@parseopts{#1}%
@@ -786,12 +810,8 @@
         \else\ifx\examfigure@float\examfigure@modeinline
             \examfigure@emitinline
         \else\ifx\examfigure@float\examfigure@modetop
-            \global\advance\examfigure@pendingheight by \dimexpr\examfigureheight+\textfloatsep\relax
             \examfigure@emittop{#2}%
         \else
-            \ifdim\dimexpr\examfigureheight+2\intextsep+\baselineskip\relax>\dimexpr\pagegoal-\pagetotal\relax
-                \global\advance\examfigure@pendingheight by \dimexpr\examfigureheight+\textfloatsep\relax
-            \fi
             \examfigure@emitfloat{#2}%
         \fi\fi\fi\fi\fi
     \endgroup
@@ -833,6 +853,32 @@
     \begingroup
     \examfigure@dispatch{#1}{#2}{\texinclude}%
 }
+
+% Controlled composition interface for one logical figure made from several
+% bitmap/TeX panels. Low-level bitmapinclude/texinclude are allowed only in
+% this body; the outer dispatch keeps ordinary examfigure placement/caption
+% behaviour and avoids ad-hoc figure environments in正文.
+\def\examfiguregroup@body{}
+\newcommand{\examfiguregroup@render}[2][]{%
+    \texboxparagraphreset
+    \examfiguregroup@body
+}
+\NewDocumentCommand{\examfiguregroup}{O{} m +m}{%
+    \begingroup
+    \def\examfiguregroup@body{#3}%
+    \examfigure@dispatch{#1}{#2}{\examfiguregroup@render}%
+}
+
+% Narrow controlled exception for figures whose source is a page crop from a
+% PDF. Graphicx keys stay on the inner image; float/placement keys are
+% consumed by examfigure.
+\newcommand{\sourcefigure@render}[2][]{%
+    \adjustbox{valign=c,max width=\linewidth}{\originalincludegraphics[#1]{#2}}%
+}
+\NewDocumentCommand{\sourcefigure}{O{} m}{%
+    \begingroup
+    \examfigure@dispatch{#1}{#2}{\sourcefigure@render}%
+}
 \makeatother
 
 % 频率分布直方图纵轴标签：标签保持正文大小；密集柱高可用可选横移量错列，
@@ -871,45 +917,107 @@
 % A top float reserves \@colroom even while \pagegoal still reflects the
 % original page goal.  Breakable tcolorbox otherwise computes a box height
 % larger than the space actually left in the column and can cover that float.
-% Keep the patch narrow: only the non-floating, non-multicol page branch is
-% changed, with the package's compression allowance retained.
+% Apply the reserve only on the first post-break calculation; ordinary page
+% and floating/maxdimen paths retain their native height rules.
 \makeatletter
+\def\examfigure@tcb@normalheight{%
+    \ifdim\pagegoal<\@colroom
+        \tcbdimto\tcb@h@page{\pagegoal-\pagetotal+\tcb@compress@height}%
+    \else
+        \tcbdimto\tcb@h@page{\@colroom-\pagetotal+\tcb@compress@height}%
+    \fi
+}
+\def\examfigure@tcb@reserveheight{%
+    \tcbdimto\tcb@h@page{\textheight-\examfigure@pendingheight+\tcb@compress@height}%
+    \global\examfigure@tcbreservefalse
+    \global\examfigure@tcbreadyfalse
+}
+\def\examfigure@tcb@reserveheightfloat{%
+    \dimen@=\dimexpr\textheight-\examfigure@pendingheight\relax
+    \dimen@ii=\vsize
+    \ifdim\pagetotal<0pt
+        \advance\dimen@ii by \pagetotal
+    \fi
+    \ifdim\dimen@ii<0pt
+        \dimen@ii=0pt
+    \fi
+    \ifdim\dimen@ii<\dimen@
+        \tcbdimto\tcb@h@page{\dimen@ii}%
+    \else
+        \tcbdimto\tcb@h@page{\dimen@}%
+    \fi
+    \global\examfigure@tcbreservefalse
+    \global\examfigure@tcbreadyfalse
+}
 \patchcmd{\tcb@comp@h@page}
-  {\tcbdimto\tcb@h@page{\pagegoal-\pagetotal+\tcb@compress@height}}
-  {\ifnum\c@tcbbreakpart>0\relax
-     \ifdim\examfigure@pendingheight>0pt\relax
-       \tcbdimto\tcb@h@page{\textheight-\examfigure@pendingheight+\tcb@compress@height}
-       \global\examfigure@pendingheight=0pt\relax
+  {\tcbdimto\tcb@h@page{\vsize}}
+   {\ifexamfigure@tcbreserve
+     \ifdim\examfigure@currenttopheight>0pt\relax
+       \ifnum\examfigure@currenttoppage=\c@page\relax
+         \examfigure@tcb@reserveheightfloat
+       \else
+         \tcbdimto\tcb@h@page{\vsize}
+       \fi
      \else
-       \tcbdimto\tcb@h@page{\pagegoal-\pagetotal+\tcb@compress@height}
+     \ifdim\examfigure@pendingheight>0pt\relax
+       \ifexamfigure@tcbready
+         \examfigure@tcb@reserveheightfloat
+       \else
+         \ifnum\c@tcbbreakpart>0\relax
+           \examfigure@tcb@reserveheightfloat
+         \else
+           \tcbdimto\tcb@h@page{\vsize}
+         \fi
+       \fi
+     \else
+       \tcbdimto\tcb@h@page{\vsize}
+     \fi
      \fi
    \else
-     \ifdim\pagegoal<\@colroom
-       \tcbdimto\tcb@h@page{\pagegoal-\pagetotal+\tcb@compress@height}
+     \tcbdimto\tcb@h@page{\vsize}
+   \fi}
+  {}
+  {\PackageError{styles}{Failed to patch tcolorbox floating page-height calculation}
+    {The installed tcolorbox breakable implementation is incompatible with the figure layout guard.}}
+\patchcmd{\tcb@comp@h@page}
+  {\tcbdimto\tcb@h@page{\pagegoal-\pagetotal+\tcb@compress@height}}
+  {\ifexamfigure@tcbreserve
+     \ifdim\examfigure@currenttopheight>0pt\relax
+       \ifnum\examfigure@currenttoppage=\c@page\relax
+         \examfigure@tcb@reserveheightfloat
+       \else
+         \ifdim\examfigure@pendingheight>0pt\relax
+           \examfigure@tcb@reserveheight
+         \else
+           \examfigure@tcb@normalheight
+         \fi
+       \fi
      \else
-       \tcbdimto\tcb@h@page{\@colroom-\pagetotal+\tcb@compress@height}
+       \ifdim\examfigure@pendingheight>0pt\relax
+         \ifexamfigure@tcbready
+           \examfigure@tcb@reserveheight
+         \else
+           \ifnum\c@tcbbreakpart>0\relax
+             \examfigure@tcb@reserveheight
+           \else
+             \examfigure@tcb@normalheight
+           \fi
+         \fi
+       \else
+         \examfigure@tcb@normalheight
+       \fi
      \fi
+   \else
+     \examfigure@tcb@normalheight
    \fi}
   {}
   {\PackageError{styles}{Failed to patch tcolorbox page-height calculation}
-    {The installed tcolorbox breakable implementation is incompatible with the figure layout guard.}}
+  {The installed tcolorbox breakable implementation is incompatible with the figure layout guard.}}
 \patchcmd{\tcb@split@pagebreak}
   {\iftcb@multicol}
   {\global\examfigure@tcbreadytrue\iftcb@multicol}
   {}
   {\PackageError{styles}{Failed to patch tcolorbox page-break reserve hook}
-    {The installed tcolorbox breakable implementation is incompatible with the figure layout guard.}}
-\patchcmd{\tcb@split@first}
-  {\long\def\tcb@after@first{\par\pagebreak\tcb@enlbreak@next}}
-  {\long\def\tcb@after@first{\par\global\examfigure@tcbreadytrue\pagebreak\tcb@enlbreak@next}}
-  {}
-  {\PackageError{styles}{Failed to patch tcolorbox first-break reserve hook}
-    {The installed tcolorbox breakable implementation is incompatible with the figure layout guard.}}
-\patchcmd{\tcb@split@first}
-  {\long\def\tcb@after@middle{\par\vfill\eject\tcb@enlbreak@next}}
-  {\long\def\tcb@after@middle{\par\vfill\global\examfigure@tcbreadytrue\eject\tcb@enlbreak@next}}
-  {}
-  {\PackageError{styles}{Failed to patch tcolorbox middle-break reserve hook}
     {The installed tcolorbox breakable implementation is incompatible with the figure layout guard.}}
 \makeatother
 
@@ -1096,10 +1204,23 @@
 \newdimen\examchoicewidthD
 \newdimen\examchoicewidthE
 \newdimen\examchoicemaxwidth
+\newdimen\examchoicecurrentheight
+\newdimen\examchoicemaxheight
+\newsavebox{\examchoicemeasurebox}
+
+\newcommand{\examchoiceupdatemaxheight}[1]{%
+    \sbox{\examchoicemeasurebox}{#1}%
+    \examchoicecurrentheight=\dimexpr\ht\examchoicemeasurebox+\dp\examchoicemeasurebox\relax
+    \ifdim\examchoicecurrentheight>\examchoicemaxheight
+        \examchoicemaxheight=\examchoicecurrentheight
+    \fi
+}
 
 \newcommand{\choices}[4]{%
     \problembodyend
-    \par\nopagebreak
+    % Keep the transition mildly preferred but breakable; do not lock the
+    % entire question to the current page when only the stem's first line fits.
+    \par\penalty300
     \vspace{4pt}
     \begingroup
     \setlength{\leftskip}{\problembodyindent}
@@ -1122,6 +1243,11 @@
     \ifdim\examchoicewidthC>\examchoicemaxwidth \examchoicemaxwidth=\examchoicewidthC \fi
     \ifdim\examchoicewidthD>\examchoicemaxwidth \examchoicemaxwidth=\examchoicewidthD \fi
     \addtolength{\examchoicemaxwidth}{2em}
+    \examchoicemaxheight=0pt
+    \examchoiceupdatemaxheight{\textbf{A.}~#1}
+    \examchoiceupdatemaxheight{\textbf{B.}~#2}
+    \examchoiceupdatemaxheight{\textbf{C.}~#3}
+    \examchoiceupdatemaxheight{\textbf{D.}~#4}
 
     \vspace{-0.2em}\noindent
     \ifnum\examchoicegraphiccount=4
@@ -1129,6 +1255,11 @@
         \choicegraphiccell{\dimexpr0.22\examchoicewidth\relax}{B}{#2}\hfill
         \choicegraphiccell{\dimexpr0.22\examchoicewidth\relax}{C}{#3}\hfill
         \choicegraphiccell{\dimexpr0.22\examchoicewidth\relax}{D}{#4}%
+    \else\ifdim\examchoicemaxheight>1.8\baselineskip
+        \choiceentry{A}{#1}\par
+        \choiceentry{B}{#2}\par
+        \choiceentry{C}{#3}\par
+        \choiceentry{D}{#4}%
     \else\ifdim\examchoicemaxwidth<0.22\examchoicewidth
         \choicecell{\dimexpr0.22\examchoicewidth\relax}{A}{#1}\hfill
         \choicecell{\dimexpr0.22\examchoicewidth\relax}{B}{#2}\hfill
@@ -1147,7 +1278,7 @@
             \choiceentry{C}{#3}\par
             \choiceentry{D}{#4}%
         \fi
-    \fi\fi
+    \fi\fi\fi
     \global\examchoicegraphicfalse
     \par
     \endgroup
@@ -1158,7 +1289,7 @@
 % 对齐规则：D/E 对齐第一行的 A/B（3+2 时），E 对齐 A（2+2+1 时）
 \newcommand{\choicesfive}[5]{%
     \problembodyend
-    \par\nopagebreak
+    \par\penalty300
     \vspace{4pt}
     \begingroup
     \setlength{\leftskip}{\problembodyindent}
@@ -1241,7 +1372,6 @@
 \newbox\examhiddenanswerbox
 \makeatletter
 \newcommand{\examallownextpagebreak}{\@nobreakfalse}
-\makeatother
 \newcommand{\answerbegin}{%
     \problembodyend
     \ifshowanswer
@@ -1267,6 +1397,7 @@
 \newcommand{\solutionbegin}{%
     \problembodyend
     \ifshowanswer
+        \examallownextpagebreak
         \begin{tcolorbox}[examanswer]
             \textbf{【解析】}\ignorespaces
     \else
@@ -1280,6 +1411,7 @@
         \egroup
     \fi
 }
+\makeatother
 \NewDocumentCommand{\solution}{+g}{%
     \IfNoValueTF{#1}{\solutionbegin}{\solutionbegin #1\solutionend}%
 }

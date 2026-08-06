@@ -1,64 +1,87 @@
-% Source PDF: source/普通高考/2007/2007湖北文.pdf
-% Page: 1 (the q6 frequency histogram is a vector drawing; pdfimages found no embedded bitmap)
-% PDF embedded bitmap attempt: pdfimages -list found no image objects; page rendered at 300 dpi.
-% Grid evidence: tmp/redraw_grid/2007_hubei_liberal/page1_grid100.jpg and
-%   tmp/redraw_crops/2007_hubei_liberal/q6_block_grid50.jpg
-% Original comparison crop: tmp/redraw_crops/2007_hubei_liberal/q6_orig.png
-% Elements: x-axis with break and weight ticks 54.5--76.5 kg; y-axis ticks 0.01--0.08;
-%   eleven contiguous frequency-density bars over width-2 kg intervals; axis labels.
-% Relations: each bar spans one 2 kg class interval; heights are frequency/组距
-%   values (0.01, 0.02, 0.05, 0.06, 0.07, 0.08, 0.065, 0.055, 0.04, 0.035, 0.015).
-% solid segments: x/y axes, bar outlines, the x-axis break mark.
-% dashed segments: none. Labels are kept outside bars and clear of the axes.
-\begin{tikzpicture}
+% Source PDF: source/普通高考/2007/2007湖北文.pdf, page 1, question 6.
+% The source page is vector artwork (pdfimages -list found no embedded bitmap).
+% Comparison source was rendered from the PDF after 100px/50px grid location.
+% Elements: frequency-density axes with a broken x-axis, eleven width-2 kg
+% histogram bars, twelve group-bound labels 54.5--76.5, and axis titles.
+% Relations: each bar spans one 2 kg class interval; heights are the source
+% frequency densities (0.01, 0.02, 0.05, 0.06, 0.07, 0.08, 0.065, 0.055,
+% 0.04, 0.035, 0.015).  The displayed coordinates map one omitted group
+% width to x=0..1, then map the twelve source group boundaries to x=1..12.
+% solid segments: x/y axes, bar outlines, tick marks, and the x-axis break.
+% dashed segments: none.  Labels stay outside bars; rotated group labels use
+% the lower-right anchor so each label remains attached to its bar boundary.
+
+\begin{tikzpicture}[baseline]
 \begin{axis}[
-    width=8.8cm,
-    height=5.0cm,
-    xmin=52.5,
-    xmax=79.5,
-    ymin=-0.008,
-    ymax=0.09,
-    axis lines=left,
-    axis line style={-stealth},
-    xlabel={体重 (kg)},
-    xlabel style={at={(axis description cs:0.98,0.02)},anchor=west,inner sep=0pt},
-    ylabel={},
-    xtick={54.5,56.5,58.5,60.5,62.5,64.5,66.5,68.5,70.5,72.5,74.5,76.5},
-    xticklabels={54.5,56.5,58.5,60.5,62.5,64.5,66.5,68.5,70.5,72.5,74.5,76.5},
-    ytick={0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08},
-    yticklabels={0.01,0.02,0.03,0.04,0.05,0.06,0.07,0.08},
-    scaled x ticks=false,
-    scaled y ticks=false,
-    tick label style={font=\scriptsize},
-    label style={font=\small},
-    tick align=outside,
-    tick style={black},
-    enlargelimits=false,
+    width=11.0cm,
+    height=6.0cm,
+    xmin=-0.85,
+    xmax=13.35,
+    ymin=-0.013,
+    ymax=0.093,
+    axis lines=none,
+    ticks=none,
     clip=false,
-    every axis plot/.append style={draw=black,fill=white,line width=0.45pt},
+    x tick label as interval=false,
 ]
-    % Histogram frequencies read from the original vector chart; class width is 2 kg.
-    \addplot[ybar interval] coordinates {
-        (54.5,0.01)
-        (56.5,0.02)
-        (58.5,0.05)
-        (60.5,0.06)
-        (62.5,0.07)
-        (64.5,0.08)
-        (66.5,0.065)
-        (68.5,0.055)
-        (70.5,0.04)
-        (72.5,0.035)
-        (74.5,0.015)
-        (76.5,0)
+    % Frequency-density bars; the final zero closes the last interval.
+    \addplot[
+        ybar interval,
+        draw=black,
+        fill=white,
+        line width=0.65pt,
+    ] coordinates {
+        (1,0.01)
+        (2,0.02)
+        (3,0.05)
+        (4,0.06)
+        (5,0.07)
+        (6,0.08)
+        (7,0.065)
+        (8,0.055)
+        (9,0.04)
+        (10,0.035)
+        (11,0.015)
+        (12,0)
     };
 
-    % The source chart compresses the unused x-range between 0 and 54.5.
-    \node[anchor=north,inner sep=0pt] at (axis cs:53.0,-0.001) {0};
-    \draw[black,line width=0.45pt]
-        (axis cs:53.25,0) -- (axis cs:53.42,0.002)
-        -- (axis cs:53.59,0) -- (axis cs:53.76,0.002)
-        -- (axis cs:53.93,0) -- (axis cs:54.10,0.002);
-    \node[anchor=west,inner sep=0pt] at (axis cs:52.75,0.078) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    % Coordinate axes.  The omitted 0--54.5 kg range is one displayed group width.
+    \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:13.15,0);
+    \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:0,0.090);
+
+    % A pale, short zig-zag marks the broken part of the x-axis.
+    \fill[white] (axis cs:0.18,-0.0022) -- (axis cs:0.30,0.0010)
+        -- (axis cs:0.42,-0.0022) -- (axis cs:0.54,0.0010)
+        -- (axis cs:0.66,-0.0022) -- cycle;
+    \draw[black!55,line width=0.55pt]
+        (axis cs:0.18,-0.0022) -- (axis cs:0.30,0.0010)
+        -- (axis cs:0.42,-0.0022) -- (axis cs:0.54,0.0010)
+        -- (axis cs:0.66,-0.0022);
+
+    % Upright axis labels.
+    \node[anchor=south west,inner sep=0pt,font=\normalsize,align=center]
+        at (axis cs:0.08,0.089) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=west,inner sep=0pt,font=\normalsize]
+        at (axis cs:12.55,-0.0008) {体重（kg）};
+    \node[anchor=north east,inner sep=0pt,font=\normalsize]
+        at (axis cs:-0.10,-0.0018) {0};
+
+    % Group-bound ticks and labels.  Each label is directly below its bar edge.
+    \foreach \x/\label in {
+        1/54.5,2/56.5,3/58.5,4/60.5,5/62.5,6/64.5,
+        7/66.5,8/68.5,9/70.5,10/72.5,11/74.5,12/76.5} {
+        \draw[line width=0.4pt] (axis cs:{\x},0) -- (axis cs:{\x},-0.0022);
+        \node[anchor=north east,inner sep=0pt,font=\normalsize,rotate=-45]
+            at (axis cs:{\x},-0.0030) {\label};
+    }
+
+    % Frequency-density ticks and labels.
+    \foreach \y/\label in {
+        0.01/0.01,0.02/0.02,0.03/0.03,0.04/0.04,
+        0.05/0.05,0.06/0.06,0.07/0.07,0.08/0.08} {
+        \draw[line width=0.4pt] (axis cs:0,{\y}) -- (axis cs:-0.14,{\y});
+        \node[anchor=east,inner sep=0pt,font=\normalsize]
+            at (axis cs:-0.22,{\y}) {\label};
+    }
 \end{axis}
 \end{tikzpicture}
