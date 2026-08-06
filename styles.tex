@@ -270,6 +270,15 @@
 \setlength{\floatsep}{0.45\baselineskip}
 % \columnsep（横向：图片与侧边文字的间距）已在上方 multicol 区域统一设为 1.5em
 \usepackage{array, tabularray, multirow}
+% 正文依靠 \lineskip 在含显示样式分式的相邻行之间自动避让。array/tabular
+% 内部会把 \lineskip 清零，故进入表格前保存正文间距的一半，由分式上下各承担
+% 一半；相邻两个高行合计仍是一个正文 \lineskip，普通文本行不被无谓拉高。
+\newif\ifexamtablefractioncontext
+\newdimen\examtablefractionclearance
+\newcommand{\examcapturetablefractionclearance}{%
+    \examtablefractionclearance=\lineskip
+    \divide\examtablefractionclearance by 2
+}
 \usepackage{caption}
 \usepackage{placeins}
 % Permit large block figures to use the standard top-float queue even when
@@ -976,7 +985,8 @@
 \usepackage{enumitem}
 \AtBeginEnvironment{center}{\problemcenterstart}
 \AfterEndEnvironment{center}{\problemcenterend}
-\AtBeginEnvironment{tabular}{\problemconsumeinlineblockprefix}
+\AtBeginEnvironment{tabular}{\problemconsumeinlineblockprefix\examcapturetablefractionclearance\examtablefractioncontexttrue}
+\AtBeginEnvironment{tabular*}{\examcapturetablefractionclearance\examtablefractioncontexttrue}
 
 % 盒子宏包 (用于答案)
 \usepackage[most]{tcolorbox}
@@ -1669,9 +1679,13 @@
 }
 \NewDocumentCommand{\examdisplayarray}{+m m +m +m}{%
     \[
+    \begingroup
+    \examcapturetablefractionclearance
+    \examtablefractioncontexttrue
     #1\begin{array}{#2}
     #3
     \end{array}#4
+    \endgroup
     \]
 }
 \NewDocumentCommand{\examdisplaychain}{+m}{%
@@ -1718,10 +1732,20 @@
 \newcommand{\degree}{^\circ}
 \newcommand{\bs}[1]{\symbfit{#1}}
 \let\oldfrac\frac
+\newcommand{\examtablefractionpad}[1]{%
+    \ifexamtablefractioncontext
+        \mathinner{\raisebox{0pt}%
+            [\dimexpr\height+\examtablefractionclearance\relax]%
+            [\dimexpr\depth+\examtablefractionclearance\relax]%
+            {\ensuremath{#1}}}%
+    \else
+        #1%
+    \fi
+}
 \renewcommand{\frac}[2]{%
     \mathchoice
-        {\dfrac{#1}{#2}}                             % 1. Display style (行间公式时) -> 使用大分式
-        {\dfrac{#1}{#2}}                             % 2. Text style (行内公式时) -> 强制使用大分式
+        {\examtablefractionpad{\dfrac{#1}{#2}}}      % 1. Display style；表格中保留大分式并补上下净空
+        {\examtablefractionpad{\dfrac{#1}{#2}}}      % 2. Text style；行内仍强制使用大分式
         {\oldfrac{\scriptstyle #1}{\scriptstyle #2}} % 3. Script style (指数、上下标) -> 强制分子分母维持 scriptstyle
         {\oldfrac{\scriptscriptstyle #1}{\scriptscriptstyle #2}} % 4. Scriptscript style (更深层的下标) -> 恢复默认小分式
 }
