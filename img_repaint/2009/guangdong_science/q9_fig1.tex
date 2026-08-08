@@ -35,7 +35,7 @@
   \draw[->] (output.south) -- (finish.north);
   \draw[->] (test.east) -- node[pos=0.25,branchlabel,above=5pt] {是} (update.west);
   \draw[->] (update.north) -- (inc.south);
-  % The return branch leaves the increment box from its west side, matching the source
-  % flowchart and keeping the arrow clear of the node text.
-  \draw[->] (inc.west) -- (0,6.95);
+  % The return branch joins the main vertical line below the initialization box,
+  % matching the source flowchart and keeping the arrow clear of the node text.
+  \draw[->] (inc.west) |- (0,6.15);
 \end{tikzpicture}

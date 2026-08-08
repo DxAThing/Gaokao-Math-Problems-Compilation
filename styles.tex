@@ -233,26 +233,7 @@
 \usepackage{graphicx}
 \usepackage{adjustbox}
 \usepackage{xparse}
-\let\examoriginalsection\section
-\RenewDocumentCommand{\section}{s o m}{%
-    \IfBooleanTF{#1}{%
-        \IfValueTF{#2}{\examoriginalsection*[#2]{#3}}{\examoriginalsection*{#3}}%
-    }{%
-        \ifstrequal{#3}{附加题}{%
-            \additionalproblemsection
-        }{%
-            \ifstrequal{#3}{参考题}{%
-                \referenceproblemsection
-            }{%
-                \ifstrequal{#3}{选作题}{%
-                    \optionalproblemsection
-                }{%
-                    \IfValueTF{#2}{\examoriginalsection[#2]{#3}}{\examoriginalsection{#3}}%
-                }%
-            }%
-        }%
-    }%
-}
+
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta, calc, intersections, positioning, shapes.geometric, shapes.misc}
 \usepackage{pgfplots}
@@ -1121,6 +1102,10 @@
 \newif\ifproblembodyactive
 \newif\ifproblemfirstparagraph
 \newif\ifproblemheadpending
+\newcommand{\problemnumbersuffix}{}
+\newcommand{\reuseproblemnumber}{%
+    \addtocounter{probnum}{-1}%
+}
 
 \newcommand{\problemresetlayout}{%
     \leftskip=0pt\relax
@@ -1130,11 +1115,11 @@
 }
 
 \newcommand{\problemheadbox}{%
-    \makebox[\problembodyindent][r]{\textbf{\theprobnum.}\ }%
+    \makebox[\problembodyindent][r]{\textbf{\theprobnum\problemnumbersuffix.}\ }%
 }
 
 \newcommand{\problemheadprefix}{%
-    \textbf{\theprobnum.}\ %
+    \textbf{\theprobnum\problemnumbersuffix.}\ %
 }
 \newcommand{\problemoriginallabel}{}%
 
@@ -1243,10 +1228,11 @@
 \makeatother
 
 % --- B. 题目命令 \problem ---
-\newcommand{\problem}{%
+\newcommand{\problem}[1][]{%
     \problembodyfinish
     \examavoidshortpage
     \stepcounter{probnum}%
+    \def\problemnumbersuffix{#1}%
     \global\problembodyactivetrue
     \global\problemfirstparagraphtrue
     \global\problemheadpendingtrue
