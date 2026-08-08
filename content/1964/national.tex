@@ -161,12 +161,15 @@ M_1M_2=M_2M_3=M_3M_4=M_4M_1=\frac{\sqrt2}{2}+\frac{\sqrt2}{2}=\sqrt2
 \end{problem}
 
 \begin{solution}
-【法一】（1）设 \(\odot O\) 与 \(AB\) 相切于 \(P\)，\(\odot O'\) 与 \(BC\) 相切于 \(Q\). 连 \(OP\)，\(O'Q\). 作 \(O'R\perp AB\)，\(OS\perp O'R\). 令 \(r\) 与 \(r'\) 分别表示 \(\odot O\) 与 \(\odot O'\) 的半径，又令 \(s=r+r'\).
 \solutionfigure{\bitmapfigure[max width=0.4\linewidth]{img/1964/national/q8_solution_fig1.png}}
+\begin{enumerate}
+\item 【法一】设 \(\odot O\) 与 \(AB\) 相切于 \(P\)，\(\odot O'\) 与 \(BC\) 相切于 \(Q\). 连 \(OP\)，\(O'Q\). 作 \(O'R\perp AB\)，\(OS\perp O'R\). 令 \(r\) 与 \(r'\) 分别表示 \(\odot O\) 与 \(\odot O'\) 的半径，又令 \(s=r+r'\).
 容易看出，\(O\)，\(O'\) 在对角线 \(AC\) 上，\(\triangle OAP\) 是等腰直角三角形，\(O'RBQ\) 和 \(O'PRS\) 是矩形. 因此 \(AP=OP=r\)，\(RB=O'Q=r'\)，所以 \(OS=PR=1-\left( r+r' \right)=1-s\). 又 \(\triangle O'OS\) 也是等腰直角三角形，所以 \(OO'=\sqrt2OS=\sqrt2\left( 1-s \right)\). 但 \(OO'\) 是两圆连心线，所以 \(OO'=r+r'=s\). 故 \(s=\sqrt2\left( 1-s \right)\)，从而
 \(s=\frac{\sqrt2}{1+\sqrt2}=2-\sqrt2\)，记作\(\circled{1}\).
 
-（2）由\(\circled{1}\)得 \(s=2-\sqrt2\). 两圆面积之和为
+【法二】\(AO=AP\sqrt2=r\sqrt2\)，\(OO'=r+r'\)，\(O'C=O'Q\sqrt2=r'\sqrt2\). 因为 \(AC=\sqrt2\)，所以 \(r\sqrt2+r+r'+r'\sqrt2=\sqrt2\)，即 \(\left( 1+\sqrt2 \right)\left( r+r' \right)=\sqrt2\). 令 \(s=r+r'\)，得 \(\left( 1+\sqrt2 \right)s=\sqrt2\)，所以 \(s=\frac{\sqrt2}{1+\sqrt2}=2-\sqrt2\).
+
+\item 【法一】由\(\circled{1}\)得 \(s=2-\sqrt2\). 两圆面积之和为
 \begin{equation}
 \begin{aligned}
 \pi\left( r^2+r'^2 \right)
@@ -181,13 +184,20 @@ M_1M_2=M_2M_3=M_3M_4=M_4M_1=\frac{\sqrt2}{2}+\frac{\sqrt2}{2}=\sqrt2
 
 现在讨论面积之和最大时半径各多么长. 不妨设 \(r\ge r'\)，即 \(r\ge\frac{2-\sqrt2}{2}\). 又显然 \(r\le\frac12\). 由\(\circled{2}\)知，当 \(r=\frac12\)，\(r'=\frac32-\sqrt2\) 时，面积之和最大. 同理，当 \(r'=\frac12\)，\(r=\frac32-\sqrt2\) 时，面积之和也最大.
 
-【法二】（1）\(AO=AP\sqrt2=r\sqrt2\)，\(OO'=r+r'\)，\(O'C=O'Q\sqrt2=r'\sqrt2\). 因为 \(AC=\sqrt2\)，所以 \(r\sqrt2+r+r'+r'\sqrt2=\sqrt2\)，即 \(\left( 1+\sqrt2 \right)\left( r+r' \right)=\sqrt2\). 令 \(s=r+r'\)，得 \(\left( 1+\sqrt2 \right)s=\sqrt2\)，所以 \(s=\frac{\sqrt2}{1+\sqrt2}=2-\sqrt2\).
-
-（2）两圆面积之和为 \(\pi\left( r^2+r'^2 \right)=\frac12\pi\left[ \left( r+r' \right)^2+\left( r-r' \right)^2 \right]\)，记作\(\circled{3}\).
+【法二】两圆面积之和为
+\[
+\pi\left( r^2+r'^2 \right)=\frac12\pi\left[ \left( r+r' \right)^2+\left( r-r' \right)^2 \right]
+\]
+记作\(\circled{3}\).
 因为 \(r+r'=2-\sqrt2\) 为定值，所以当 \(r-r'=0\)，即 \(r=r'=\frac{2-\sqrt2}{2}\) 时，两圆面积之和最小.
 
-现在讨论面积之和最大时半径各多么长. 不妨设 \(r\ge r'\)，即 \(r\ge\frac{s}{2}\). 由\(\circled{3}\)得 \(\pi\left( r^2+r'^2 \right)=\frac{\pi}{2}\left[ s^2+\left( 2r-s \right)^2 \right]\). 但显然 \(r\le\frac12\). 所以当 \(r=\frac12\)，\(r'=\frac32-\sqrt2\) 时，面积之和最大. 同理，当 \(r'=\frac12\)，\(r=\frac32-\sqrt2\) 时，面积之和也最大.
+现在讨论面积之和最大时半径各多么长. 不妨设 \(r\ge r'\)，即 \(r\ge\frac{s}{2}\). 由\(\circled{3}\)得
+\[
+\pi\left( r^2+r'^2 \right)=\frac{\pi}{2}\left[ s^2+\left( 2r-s \right)^2 \right].
+\]
+但显然 \(r\le\frac12\). 所以当 \(r=\frac12\)，\(r'=\frac32-\sqrt2\) 时，面积之和最大. 同理，当 \(r'=\frac12\)，\(r=\frac32-\sqrt2\) 时，面积之和也最大.
 
+\end{enumerate}
 \end{solution}
 
 \section{附加题}

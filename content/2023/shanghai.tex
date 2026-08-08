@@ -305,10 +305,11 @@ C
 \end{problem}
 
 \begin{solution}
-（1） 红色外观共有 \(12+2=14\) 个，棕色内饰共有 \(2+3=5\) 个，所以 \(P(B)=\frac{5}{25}=\frac15\)，\(P(B\mid A)=\frac{2}{14}=\frac17\).
+\begin{enumerate}
+\item 红色外观共有 \(12+2=14\) 个，棕色内饰共有 \(2+3=5\) 个，所以 \(P(B)=\frac{5}{25}=\frac15\)，\(P(B\mid A)=\frac{2}{14}=\frac17\).
 因为 \(P(B\mid A)\ne P(B)\)，所以事件 \(A\) 和事件 \(B\) 不独立.
 
-（2） 从 \(25\) 个模型中一次取出 \(2\) 个，不计顺序，总取法数为 \(\mathrm C_{25}^{2}=300\).
+\item 从 \(25\) 个模型中一次取出 \(2\) 个，不计顺序，总取法数为 \(\mathrm C_{25}^{2}=300\).
 “外观和内饰均为同色”即两模型完全相同，取法数为 \(\mathrm C_{12}^{2}+\mathrm C_{8}^{2}+\mathrm C_{2}^{2}+\mathrm C_{3}^{2}=98\)，故其概率为 \(\frac{98}{300}=\frac{49}{150}\).
 
 “仅外观或仅内饰为同色”的取法数为 \(12\times 2+8\times 3+12\times 8+2\times 3=150\)，故其概率为 \(\frac{150}{300}=\frac12\).
@@ -318,14 +319,15 @@ C
 由“概率越小奖项越高”可知：\(P(X=600)=\frac{13}{75}\)，\(P(X=300)=\frac{49}{150}\)，\(P(X=150)=\frac12\).
 因此 \(E(X)=600\times \frac{13}{75}+300\times \frac{49}{150}+150\times \frac12=277\).
 故 \(X\) 的分布列为
-\begin{center}
+{\centering
 \begin{tabular}{c|ccc}
 \(X\) & \(600\) & \(300\) & \(150\) \\
 \hline
 \(P\) & \(\frac{13}{75}\) & \(\frac{49}{150}\) & \(\frac12\)
 \end{tabular}
-\end{center}
+\par}
 且 \(E(X)=277\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -336,9 +338,9 @@ C
 \end{problem}
 
 \begin{solution}
-（1） 在四棱柱中，\(AA_1\parallel DD_1\)，且 \(AB\parallel DC\). 因此 \(\overrightarrow{A_1B}=\overrightarrow{AB}-\overrightarrow{AA_1}\) 的方向可由平面 \(DCC_1D_1\) 内的两个方向 \(\overrightarrow{DC}\)，\(\overrightarrow{DD_1}\) 线性表示，故 \(A_1B\parallel\) 平面 \(DCC_1D_1\).
+在四棱柱中，\(AA_1\parallel DD_1\)，且 \(AB\parallel DC\). 因此 \(\overrightarrow{A_1B}=\overrightarrow{AB}-\overrightarrow{AA_1}\) 的方向可由平面 \(DCC_1D_1\) 内的两个方向 \(\overrightarrow{DC}\)，\(\overrightarrow{DD_1}\) 线性表示，故 \(A_1B\parallel\) 平面 \(DCC_1D_1\).
 
-（2） 取坐标系：令 \(A(0,0,0)\)，\(B(2,0,0)\)，\(D(0,3,0)\)，\(C(4,3,0)\). 直四棱柱的高为 \(h\)，则 \(A_1(0,0,h)\)，\(B_1(2,0,h)\)，\(C_1(4,3,h)\)，\(D_1(0,3,h)\). 由棱柱体积为 \(36\) 得底面四边形 \(ABCD\) 的面积 \(S_{ABCD}=\frac{2+4}{2}\times 3=9\)，故棱柱高 \(h=\frac{36}{9}=4\).
+取坐标系：令 \(A(0,0,0)\)，\(B(2,0,0)\)，\(D(0,3,0)\)，\(C(4,3,0)\). 直四棱柱的高为 \(h\)，则 \(A_1(0,0,h)\)，\(B_1(2,0,h)\)，\(C_1(4,3,h)\)，\(D_1(0,3,h)\). 由棱柱体积为 \(36\) 得底面四边形 \(ABCD\) 的面积 \(S_{ABCD}=\frac{2+4}{2}\times 3=9\)，故棱柱高 \(h=\frac{36}{9}=4\).
 设 \(H\) 为点 \(A\) 到直线 \(BD\) 的垂足，则在直角三角形 \(ABD\) 中，\(BD=\sqrt{2^2+3^2}=\sqrt{13}\)，\(AH=\frac{AB\cdot AD}{BD}=\frac{6}{\sqrt{13}}\). 二面角 \(A_1-BD-A\) 的平面角就是 \(\angle A_1HA\)，因此 \(\tan\angle A_1-BD-A=\frac{AA_1}{AH}=\frac{4}{6/\sqrt{13}}=\frac{2\sqrt{13}}{3}\). 故 \(\angle A_1-BD-A=\arctan\frac{2\sqrt{13}}{3}\)，也可写成 \(\arccos\frac{3}{\sqrt{61}}\).
 \end{solution}
 
@@ -352,14 +354,16 @@ C
 \end{problem}
 
 \begin{solution}
-（1） 当 \(a=0\) 时，\(f(x)=\frac{x^2+x+c}{x}=x+1+\frac{c}{x}\)，于是对任意 \(x\ne 0\)，有 \(f(-x)=-x+1-\frac{c}{x}\)，\(f(x)+f(-x)=2\neq 0\)，所以不存在这样的实数 \(c\).
+\begin{enumerate}
+\item 当 \(a=0\) 时，\(f(x)=\frac{x^2+x+c}{x}=x+1+\frac{c}{x}\)，于是对任意 \(x\ne 0\)，有 \(f(-x)=-x+1-\frac{c}{x}\)，\(f(x)+f(-x)=2\neq 0\)，所以不存在这样的实数 \(c\).
 
-（2） 由图像过点 \((1,3)\)，得 \(f(1)=3\iff \frac{1+(3a+1)+c}{1+a}=3\)，化简得 \(c=1\).
+\item 由图像过点 \((1,3)\)，得 \(f(1)=3\iff \frac{1+(3a+1)+c}{1+a}=3\)，化简得 \(c=1\).
 此时 \(f(x)=\frac{x^2+(3a+1)x+1}{x+a}\)，函数图像与 \(x\) 轴的交点由分子 \(x^2+(3a+1)x+1=0\) 给出. 要使其在负半轴上有两个不同交点，需要这两个根都为负且不同.
 因为两根之积为 \(1>0\)，故只要两根和为负且判别式大于 \(0\) 即可：\(-(3a+1)<0\)，\((3a+1)^2-4>0\).
 前者给出 \(a>-\frac13\)，后者在此条件下化为 \(3a+1>2\)，即 \(a>\frac13\).
 此外，当 \(a=\frac12\) 时，\(x^2+\left(3a+1\right)x+1=x^2+\frac52x+1=\left(x+\frac12\right)\left(x+2\right)\)，与分母 \(x+a=x+\frac12\) 约去后，只剩一个负半轴交点，因此还需排除 \(a=\frac12\).
 故 \(c=1\)，\(a\in\left(\frac13,+\infty\right)\setminus\left\{\frac12\right\}\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -373,16 +377,18 @@ C
 \end{problem}
 
 \begin{solution}
-（1） 设点 \(A\left(\frac{a^2}{4},a\right)\). 抛物线 \(y^2=4x\) 的准线为 \(x=-1\)，点 \(A\) 到准线的距离为 \(\frac{a^2}{4}+1\). 由题意 \(\frac{a^2}{4}+1=3\)，得 \(a=2\sqrt2\).
+\begin{enumerate}
+\item 设点 \(A\left(\frac{a^2}{4},a\right)\). 抛物线 \(y^2=4x\) 的准线为 \(x=-1\)，点 \(A\) 到准线的距离为 \(\frac{a^2}{4}+1\). 由题意 \(\frac{a^2}{4}+1=3\)，得 \(a=2\sqrt2\).
 
-（2） 当 \(a=4\) 时，\(A(4,4)\). 设 \(B(x,0)\)，则 \(AB\) 的中点为 \(\left(\frac{x+4}{2},2\right)\). 该点在 \(\Gamma\) 上，所以 \(2^2=4\cdot \frac{x+4}{2}\)，解得 \(x=-2\)，故 \(B(-2,0)\). 直线 \(AB\) 的方程为 \(2x-3y+4=0\)，于是原点 \(O\) 到直线 \(AB\) 的距离为 \(\frac{4}{\sqrt{2^2+(-3)^2}}=\frac{4}{\sqrt{13}}\).
+\item 当 \(a=4\) 时，\(A(4,4)\). 设 \(B(x,0)\)，则 \(AB\) 的中点为 \(\left(\frac{x+4}{2},2\right)\). 该点在 \(\Gamma\) 上，所以 \(2^2=4\cdot \frac{x+4}{2}\)，解得 \(x=-2\)，故 \(B(-2,0)\). 直线 \(AB\) 的方程为 \(2x-3y+4=0\)，于是原点 \(O\) 到直线 \(AB\) 的距离为 \(\frac{4}{\sqrt{2^2+(-3)^2}}=\frac{4}{\sqrt{13}}\).
 
-（3） 设 \(P\left(\frac{u^2}{4},u\right)\)，其中 \(u>0\) 且 \(u\ne a\). 又 \(A\left(\frac{a^2}{4},a\right)\)，则直线 \(AP\) 的斜率为 \(\frac{u-a}{\frac{u^2-a^2}{4}}=\frac{4}{u+a}\). 由此得直线 \(AP\) 与 \(x=-3\) 交于 \(Q\left(-3,\frac{au-12}{u+a}\right)\). 而 \(H(-3,u)\)，故 \(\left|HQ\right|=u-\frac{au-12}{u+a}=\frac{u^2+12}{u+a}\).
+\item 设 \(P\left(\frac{u^2}{4},u\right)\)，其中 \(u>0\) 且 \(u\ne a\). 又 \(A\left(\frac{a^2}{4},a\right)\)，则直线 \(AP\) 的斜率为 \(\frac{u-a}{\frac{u^2-a^2}{4}}=\frac{4}{u+a}\). 由此得直线 \(AP\) 与 \(x=-3\) 交于 \(Q\left(-3,\frac{au-12}{u+a}\right)\). 而 \(H(-3,u)\)，故 \(\left|HQ\right|=u-\frac{au-12}{u+a}=\frac{u^2+12}{u+a}\).
 题设要求 \(\frac{u^2+12}{u+a}>4\) 对任意 \(u>0\)，\(u\ne a\) 成立，即 \(u^2-4u+12-4a>0\).
 左边视为关于 \(u\) 的二次函数，其最小值在 \(u=2\) 处取得，最小值为 \(8-4a\).
 因此若 \(a<2\)，则不等式恒成立；若 \(a=2\)，则左边化为 \((u-2)^2\)，其等号只在 \(u=2\) 处取得，而这时 \(P=A\) 被排除，所以仍成立；若 \(a>2\)，取 \(u=2\) 即不成立.
 又 \(A\) 在第一象限，故 \(a>0\).
 所以 \(a\in\left(0,2\right]\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -396,9 +402,11 @@ C
 \end{problem}
 
 \begin{solution}
-（1） 曲线 \(y=\ln x\) 在点 \(\left(a_{n-1},\ln a_{n-1}\right)\) 处的切线方程为 \(y-\ln a_{n-1}=\frac1{a_{n-1}}\left(x-a_{n-1}\right)\). 令 \(x=0\)，得该切线与 \(y\) 轴的交点纵坐标为 \(\ln a_{n-1}-1\)，所以 \(a_n=\ln a_{n-1}-1\).
+\begin{enumerate}
+\item 曲线 \(y=\ln x\) 在点 \(\left(a_{n-1},\ln a_{n-1}\right)\) 处的切线方程为 \(y-\ln a_{n-1}=\frac1{a_{n-1}}\left(x-a_{n-1}\right)\). 令 \(x=0\)，得该切线与 \(y\) 轴的交点纵坐标为 \(\ln a_{n-1}-1\)，所以 \(a_n=\ln a_{n-1}-1\).
 
-（2） 由 \(\ln x\le x-1\)（\(x>0\)）得 \(a_n=\ln a_{n-1}-1\le a_{n-1}-2\)，当且仅当 \(a_{n-1}=1\) 时取等号.
+\item 由 \(\ln x\le x-1\)（\(x>0\)）得 \(a_n=\ln a_{n-1}-1\le a_{n-1}-2\)，当且仅当 \(a_{n-1}=1\) 时取等号.
 
-（3） 记 \(h(x)=e^{x+1}+\ln x-1-2x\)（\(x>0\)）. 若 \(a_1\)，\(a_2\)，\(a_3\) 成等差数列，则 \(a_1+a_3=2a_2\). 由 （1） 知 \(a_1=e^{a_2+1}\)，且 \(a_3=\ln a_2-1\)，故 \(h(a_2)=0\). 又 \(h'(x)=e^{x+1}+\frac1x-2>0\)（\(x>0\)），所以 \(h(x)\) 在 \((0,+\infty)\) 上严格递增. 并且 \(\lim\limits_{x\to 0^+}h(x)=-\infty\)，\(h(1)=e^2-3>0\)，故方程 \(h(x)=0\) 在 \((0,1)\) 内有唯一解，从而存在唯一的 \(a_2\in(0,1)\) 使得 \(a_1\)，\(a_2\)，\(a_3\) 成等差数列. 此时 \(a_3=\ln a_2-1<0\)，所以序列在 \(a_3\) 处停止，满足题意的 \(k\) 只能取 \(3\).
+\item 记 \(h(x)=e^{x+1}+\ln x-1-2x\)（\(x>0\)）. 若 \(a_1\)，\(a_2\)，\(a_3\) 成等差数列，则 \(a_1+a_3=2a_2\). 由 （1） 知 \(a_1=e^{a_2+1}\)，且 \(a_3=\ln a_2-1\)，故 \(h(a_2)=0\). 又 \(h'(x)=e^{x+1}+\frac1x-2>0\)（\(x>0\)），所以 \(h(x)\) 在 \((0,+\infty)\) 上严格递增. 并且 \(\lim\limits_{x\to 0^+}h(x)=-\infty\)，\(h(1)=e^2-3>0\)，故方程 \(h(x)=0\) 在 \((0,1)\) 内有唯一解，从而存在唯一的 \(a_2\in(0,1)\) 使得 \(a_1\)，\(a_2\)，\(a_3\) 成等差数列. 此时 \(a_3=\ln a_2-1<0\)，所以序列在 \(a_3\) 处停止，满足题意的 \(k\) 只能取 \(3\).
+\end{enumerate}
 \end{solution}

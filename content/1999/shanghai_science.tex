@@ -123,22 +123,34 @@
 \end{problem}
 
 \begin{answer}
-B
+C
 \end{answer}
 
 \begin{problem}
 下列以 \(t\) 为参数的参数方程所表示的曲线中，与方程 \(xy = 1\) 所表示的曲线完全一致的是（\quad）
 
 \choices
-    {\(\begin{cases} x = t^{\frac{1}{2}} y = t^{-\frac{1}{2}} \end{cases}\)}
-    {\(\begin{cases} x = |t| y = \frac{1}{|t|} \end{cases}\)}
-    {\(\begin{cases} x = \cos t y = \sec t \end{cases}\)}
-    {\(\begin{cases} x = \tan t y = \cot t \end{cases}\)}
+    {\(\begin{cases}
+        x = t^{\frac{1}{2}} \\
+        y = t^{-\frac{1}{2}}
+    \end{cases}\)}
+    {\(\begin{cases}
+        x = |t| \\
+        y = \frac{1}{|t|}
+    \end{cases}\)}
+    {\(\begin{cases}
+        x = \cos t \\
+        y = \sec t
+    \end{cases}\)}
+    {\(\begin{cases}
+        x = \tan t \\
+        y = \cot t
+    \end{cases}\)}
 
 \end{problem}
 
 \begin{answer}
-A
+D
 \end{answer}
 
 \begin{problem}
@@ -148,12 +160,12 @@ A
     {不等式 \(\frac{1}{a} > \frac{1}{b}\) 和 \(\frac{1}{|a|} > \frac{1}{|b|}\) 均不能成立}
     {不等式 \(\frac{1}{a - b} > \frac{1}{a}\) 和 \(\frac{1}{|a|} > \frac{1}{|b|}\) 均不能成立}
     {不等式 \(\frac{1}{a - b} > \frac{1}{a}\) 和 \(\left(a + \frac{1}{b}\right)^2 > \left(b + \frac{1}{a}\right)^2\) 均不能成立}
-    {不等式 \(\frac{1}{|a|} > \frac{1}{|b|}\) 和 \(\left(a + \frac{1}{b}\right)^2 >\) \(\left(b + \frac{1}{a}\right)^2\) 均不能成立.}
+    {不等式 \(\frac{1}{|a|} > \frac{1}{|b|}\) 和 \(\left(a + \frac{1}{b}\right)^2 > \left(b + \frac{1}{a}\right)^2\) 均不能成立.}
 
 \end{problem}
 
 \begin{answer}
-D
+B
 \end{answer}
 
 \begin{problem}
@@ -187,12 +199,12 @@ C
 \end{solution}
 
 \begin{problem}
-设正数数列 \(\{a_n\}\) 为一等比数列，且 \(a_2 = 4\)，\(a_4 = 16\)，求 \(\lim\limits_{n \to \infty} \frac{\lg a_{n + 1} + \lg a_{n + 2} + \cdots + \lg a_{2n}}{n^2}\).
+设正数数列 \(\{a_n\}\) 为一等比数列，且 \(a_2 = 4\)，\(a_4 = 16\)，求 \(\displaystyle\lim_{n \to \infty} \frac{\lg a_{n + 1} + \lg a_{n + 2} + \cdots + \lg a_{2n}}{n^2}\).
 
 \end{problem}
 
 \begin{solution}
-设公比为 \(q\). 因为 \(q^2=\dfrac{a_4}{a_2}=4\)，又 \(a_n>0\)，所以 \(q=2\). 于是 \(a_1=\dfrac{a_2}{q}=2\)，\(a_n=a_1q^{n-1}=2^n\).
+设公比为 \(q\). 因为 \(q^2=\dfrac{a_4}{a_2}=4\)，又 \(a_n>0\)，\(n\in\N\)，所以 \(q=2\). 于是 \(a_1=\dfrac{a_2}{q}=2\)，\(a_n=a_1q^{n-1}=2^n\).
 因此
 \[
 \frac{\lg a_{n+1}+\lg a_{n+2}+\cdots+\lg a_{2n}}{n^2}
@@ -202,8 +214,11 @@ C
 =\frac{(n+1)+(n+2)+\cdots+2n}{n^2}\lg2
 =\left(\frac32+\frac{1}{2n}\right)\lg2
 \]
-所以 \(\lim\limits_{n\to\infty}\frac{\lg a_{n+1}+\lg a_{n+2}+\cdots+\lg a_{2n}}{n^2}
-=\frac32\lg2\).
+所以
+\[
+\lim_{n\to\infty}\frac{\lg a_{n+1}+\lg a_{n+2}+\cdots+\lg a_{2n}}{n^2}
+=\frac32\lg2.
+\]
 \end{solution}
 
 \begin{problem}
@@ -213,25 +228,25 @@ C
 
 \begin{solution}
 设实根为 \(b\). 代入方程得 \(b^2+(4+\i)b+4+a\i=0\).
-因为 \(b\) 是实数，所以实部，虚部分别为 \(b^2+4b+4=0\)，\(b+a=0\).
+因为 \(b\) 是实数，所以实部、虚部分别为 \(b^2+4b+4=0\)，\(b+a=0\).
 解得 \(b=-2\)，\(a=2\). 因此 \(z=2-2\i\)，\(\bar z=2+2\i\).
 于是 \(\bar z(1-c\i)=(2+2\i)(1-c\i)=(2+2c)+(2-2c)\i\).
 
 当 \(0<c\le1\) 时，\(\bar z(1-c\i)\) 的实部大于 \(0\)，虚部不小于 \(0\)，所以其辐角主值在 \([0,\frac{\pi}{2})\) 范围内.
 又
 \[
-\arg[\bar z(1-c\i)]=\arctan\frac{2-2c}{2+2c}
+\arg\left[\bar z(1-c\i)\right]=\arctan\frac{2-2c}{2+2c}
 =\arctan\left(\frac{2}{1+c}-1\right)
 \]
-且 \(0<c\le1\) 时有 \(0\le\frac{2}{1+c}-1<1\)，所以 \(0\le \arg[\bar z(1-c\i)]<\dfrac{\pi}{4}\).
+且 \(0<c\le1\) 时有 \(0\le\frac{2}{1+c}-1<1\)，所以 \(0\le \arg\left[\bar z(1-c\i)\right]<\dfrac{\pi}{4}\).
 
 当 \(c>1\) 时，\(\bar z(1-c\i)\) 的实部大于 \(0\)，虚部小于 \(0\)，所以其辐角主值在 \(\left(\frac{3\pi}{2},2\pi\right)\) 范围内.
 又
 \[
-\arg[\bar z(1-c\i)]=2\pi+\arctan\frac{2-2c}{2+2c}
+\arg\left[\bar z(1-c\i)\right]=2\pi+\arctan\frac{2-2c}{2+2c}
 =2\pi+\arctan\left(\frac{2}{1+c}-1\right)
 \]
-且 \(c>1\) 时有 \(-1<\frac{2}{1+c}-1<0\)，所以 \(-\dfrac{\pi}{4}<\arctan\left(\dfrac{2}{1+c}-1\right)<0\)，从而 \(\dfrac{7\pi}{4}<\arg[\bar z(1-c\i)]<2\pi\).
+且 \(c>1\) 时有 \(-1<\frac{2}{1+c}-1<0\)，所以 \(-\dfrac{\pi}{4}<\arctan\left(\dfrac{2}{1+c}-1\right)<0\)，从而 \(\dfrac{7\pi}{4}<\arg\left[\bar z(1-c\i)\right]<2\pi\).
 
 综上，复数 \(\bar z(1-c\i)\)（\(c>0\)）的辐角主值的取值范围为
 \[
@@ -247,18 +262,19 @@ C
 \item 求异面直线 \(AE\) 与 \(CD\) 所成角的大小（用反三角函数表示）.
 \end{enumerate}
 
-\bitmapfigure[max width=0.78\linewidth]{img/1999/shanghai_science/q20_fig1.png}
+\bitmapfigure[float=inline,max width=0.78\linewidth]{img/1999/shanghai_science/q20_fig1.png}
 
 \end{problem}
 
 \begin{solution}
-（1）【证法一】因为 \(PA\perp\) 平面 \(ABCD\)，所以 \(PA\perp AB\). 又 \(AB\perp AD\)，所以 \(AB\perp\) 平面 \(PAD\). 因此 \(AB\perp PD\).
+\begin{enumerate}
+\item 【证法一】因为 \(PA\perp\) 平面 \(ABCD\)，所以 \(PA\perp AB\). 又 \(AB\perp AD\)，所以 \(AB\perp\) 平面 \(PAD\). 因此 \(AB\perp PD\).
 
 又因为 \(AE\perp PD\)，所以 \(PD\perp\) 平面 \(ABE\). 从而 \(BE\perp PD\).
 
-（1）【法二】由题设 \(AB\perp AD\)，\(AB\perp AP\)，所以 \(AB\perp\) 平面 \(PAD\). 因此 \(AB\perp PD\). 又 \(AE\perp PD\)，所以 \(PD\perp\) 平面 \(ABE\). 从而 \(BE\perp PD\).
+【证法二】由题设 \(AB\perp AD\)，\(AB\perp AP\)，所以 \(AB\perp\) 平面 \(PAD\). 因此 \(AB\perp PD\). 又 \(AE\perp PD\)，所以 \(PD\perp\) 平面 \(ABE\). 从而 \(BE\perp PD\).
 
-（2）【法一】设 \(A\) 为原点，\(AB\)，\(AD\)，\(AP\) 所在直线分别为 \(x\) 轴，\(y\) 轴，\(z\) 轴，建立空间直角坐标系，则 \(C(a,a,0)\)，\(D(0,2a,0)\).
+\item 【解法一】设 \(A\) 为原点，\(AB\)，\(AD\)，\(AP\) 所在直线分别为 \(x\) 轴，\(y\) 轴，\(z\) 轴，建立空间直角坐标系，则 \(C(a,a,0)\)，\(D(0,2a,0)\).
 因为 \(PA\perp\) 平面 \(ABCD\)，所以 \(\angle PDA\) 是 \(PD\) 与底面 \(ABCD\) 所成的角，且 \(\angle PDA=30^\circ\). 在直角三角形 \(AED\) 中，由 \(AD=2a\) 得 \(AE=a\).
 
 过 \(E\) 作 \(EF\perp AD\)，垂足为 \(F\). 在直角三角形 \(AFE\) 中，由 \(AE=a\)，\(\angle EAF=60^\circ\)，得 \(AF=\dfrac12a\)，\(EF=\dfrac{\sqrt3}{2}a\).
@@ -272,7 +288,7 @@ C
 所以 \(\theta=\arccos\dfrac{\sqrt2}{4}\).
 即异面直线 \(AE\) 与 \(CD\) 所成角的大小为 \(\arccos\frac{\sqrt2}{4}\).
 
-（2）【法二】如图，设 \(G\)，\(H\) 分别为 \(ED\)，\(AD\) 的中点，连结 \(BH\)，\(HG\)，\(GB\). 易知 \(DH \cong CB\)，所以 \(BH\parallel CD\). 又 \(G\)，\(H\) 分别为 \(ED\)，\(AD\) 的中点，所以 \(HG\parallel AE\).
+【解法二】如图，设 \(G\)，\(H\) 分别为 \(ED\)，\(AD\) 的中点，连结 \(BH\)，\(HG\)，\(GB\). 易知 \(DH \cong CB\)，所以 \(BH\parallel CD\). 又 \(G\)，\(H\) 分别为 \(ED\)，\(AD\) 的中点，所以 \(HG\parallel AE\).
 
 则 \(\angle BHG\) 或它的补角就是异面直线 \(AE\)，\(CD\) 所成的角.
 
@@ -287,10 +303,13 @@ BG^2=BE^2+EG^2=AB^2+AE^2+EG^2=\dfrac{11}{4}a^2
 \]
 \(\angle BHG=\pi-\arccos\dfrac{\sqrt2}{4}\).
 所以异面直线 \(AE\)，\(CD\) 所成角的大小为 \(\arccos\frac{\sqrt2}{4}\).
+\end{enumerate}
+\solutionfigure{\bitmapfigure[max width=0.55\linewidth]{img/1999/shanghai_science/q20_solution_fig1.png}}
+\solutionfigure{\bitmapfigure[max width=0.55\linewidth]{img/1999/shanghai_science/q20_solution_fig2.png}}
 \end{solution}
 
 \begin{problem}
-平地上有一条水沟，沟沿是两条长 \(100\mathrm{m}\) 的平行线段，沟宽 \(AB\) 为 \(2\mathrm{m}\). 与沟沿垂直的平面与沟的交线是一段抛物线，抛物线顶点为 \(O\)，对称轴与地面垂直，沟深 \(1.5\mathrm{m}\)，沟中水深 \(1\mathrm{m}\).
+平地上有一条水沟，沟沿是两条长 \(100\mathrm{~m}\) 的平行线段，沟宽 \(AB\) 为 \(2\mathrm{~m}\). 与沟沿垂直的平面与沟的交线是一段抛物线，抛物线顶点为 \(O\)，对称轴与地面垂直，沟深 \(1.5\mathrm{~m}\)，沟中水深 \(1\mathrm{~m}\).
 
 \begin{enumerate}
 \item 求水面宽；
@@ -298,21 +317,25 @@ BG^2=BE^2+EG^2=AB^2+AE^2+EG^2=\dfrac{11}{4}a^2
 \item 若要把这条水沟改挖（不准填土）成截面为等腰梯形的沟，使沟的底面与地面平行，则改挖后的沟底宽为多少米时，所挖的土最少.
 \end{enumerate}
 
-\bitmapfigure[max width=0.90\linewidth]{img/1999/shanghai_science/q21_fig1.png}
+\bitmapfigure[float=inline,max width=0.90\linewidth]{img/1999/shanghai_science/q21_problem_fig1.png}
+\FloatBarrier
 
 \end{problem}
 
 \begin{solution}
-（1）如图，建立直角坐标系. 设抛物线的方程为 \(y=ax^2\)，则由抛物线过点 \(\left(1,\dfrac32\right)\)，得 \(a=\dfrac32\)，于是抛物线方程为 \(y=\dfrac32x^2\). 当 \(y=1\) 时，\(x=\pm\dfrac{\sqrt6}{3}\)，由此，水面宽为 \(\dfrac{2\sqrt6}{3}\text{ 米}\).
+\solutionfigure{\bitmapfigure[max width=0.38\linewidth]{img/1999/shanghai_science/q21_solution_fig1.png}}
+\begin{enumerate}
+\item 如图，建立直角坐标系.
+设抛物线的方程为 \(y=ax^2\)，则由抛物线过点 \(\left(1,\dfrac32\right)\)，得 \(a=\dfrac32\)，于是抛物线方程为 \(y=\dfrac32x^2\). 当 \(y=1\) 时，\(x=\pm\dfrac{\sqrt6}{3}\)，由此，水面宽为 \(\dfrac{2\sqrt6}{3}\text{ 米}\).
 
-（2）水的体积
+\item 水的体积
 \[
 V=2\cdot100\cdot\int_0^{\frac{\sqrt6}{3}}\left(1-\frac32x^2\right)\,dx
 =\frac{400\sqrt6}{9}
 \]
-故沟中有 \(\frac{400\sqrt6}{9}\) 立方米的水.
+故沟中有 \(\frac{400\sqrt6}{9}\text{ 立方米}\) 的水.
 
-（3）为使挖掉的土最少，等腰梯形的两腰必须同抛物线相切.
+\item 为使挖掉的土最少，等腰梯形的两腰必须同抛物线相切.
 设切点 \(P\left(t,\frac32t^2\right)\)（\(0<t\le1\)）是抛物线弧 \(OB\) 上的一点，过 \(P\) 作抛物线的切线得如图所示的直角梯形 \(OCDE\)，则切线 \(CD\) 的方程为
 \[
 y=3t(x-t)+\frac32t^2=3tx-\frac32t^2
@@ -320,6 +343,7 @@ y=3t(x-t)+\frac32t^2=3tx-\frac32t^2
 于是 \(C\left(\dfrac{t}{2},0\right)\)，\(D\left(\dfrac12\left(t+\dfrac1t\right),\dfrac32\right)\).
 记梯形 \(OCDE\) 的面积为 \(S\)，则 \(S=\dfrac34\left(t+\dfrac1{2t}\right)\)（\(0<t\le1\)）.
 当 \(t=\dfrac{\sqrt2}{2}\) 时，\(S\) 取得最小值，此时所挖的土最少，所以改挖后的沟底宽为 \(\dfrac{\sqrt2}{2}\text{ 米}\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -333,21 +357,23 @@ y=3t(x-t)+\frac32t^2=3tx-\frac32t^2
 \end{problem}
 
 \begin{solution}
-（1）将 \(y=\dfrac{1}{x}\) 代入椭圆方程，得 \(\dfrac{x^2}{a^2}+\dfrac{1}{b^2x^2}=1\)，化简得 \(b^2x^4-a^2b^2x^2+a^2=0\). 由题意，有 \(\Delta=a^4b^4-4a^2b^2=0\)，故 \(ab=2\). 于是由方程解得 \(x=\dfrac{a}{\sqrt2}\)（舍去 \(x=-\dfrac{a}{\sqrt2}\)），所以 \(P\left(\dfrac{a}{\sqrt2},\dfrac{\sqrt2}{a}\right)\).
+\begin{enumerate}
+\item 将 \(y=\dfrac{1}{x}\) 代入椭圆方程，得 \(\dfrac{x^2}{a^2}+\dfrac{1}{b^2x^2}=1\)，化简得 \(b^2x^4-a^2b^2x^2+a^2=0\). 由题意，有 \(\Delta=a^4b^4-4a^2b^2=0\)，故 \(ab=2\). 于是由方程解得 \(x=\dfrac{a}{\sqrt2}\)（舍去 \(x=-\dfrac{a}{\sqrt2}\)），所以 \(P\left(\dfrac{a}{\sqrt2},\dfrac{\sqrt2}{a}\right)\).
 
-（2）在 \(\triangle ABP\) 中，\(|AB|=2\sqrt{a^2-b^2}\)，高为 \(\dfrac{\sqrt2}{a}\)，所以 \(S(a)=\dfrac12\cdot2\sqrt{a^2-b^2}\cdot\dfrac{\sqrt2}{a}=\sqrt{2\left(1-\dfrac{4}{a^4}\right)}\).
+\item 在 \(\triangle ABP\) 中，\(|AB|=2\sqrt{a^2-b^2}\)，高为 \(\dfrac{\sqrt2}{a}\)，所以 \(S(a)=\dfrac12\cdot2\sqrt{a^2-b^2}\cdot\dfrac{\sqrt2}{a}=\sqrt{2\left(1-\dfrac{4}{a^4}\right)}\).
 又 \(a>b>0\)，\(b=\frac{2}{a}\)，所以 \(a>\sqrt2\). 因而 \(0<S(a)<\sqrt2\)，
 故 \(\triangle ABP\) 的面积函数 \(S(a)\) 的值域为 \((0,\sqrt2)\).
 
-（3）
+\item
 \(g(a)=c^2=a^2-b^2=a^2-\dfrac{4}{a^2}\)，
 若不等式 \(g(a)\ge S(a)\)，则 \(a^2-\dfrac{4}{a^2}\ge\sqrt{2\left(1-\dfrac{4}{a^4}\right)}\)，整理得 \(a^8-10a^4+24\ge0\)，即 \((a^4-4)(a^4-6)\ge0\). 因 \(a>\sqrt2\)，故 \(a^4-4>0\). 于是 \(a\ge\sqrt[4]{6}\).
 所以
 \[
 f(a)=\min\{g(a),S(a)\}=
 \begin{cases}
-a^2-\dfrac{4}{a^2}, & \sqrt2<a\le\sqrt[4]{6},\\[6pt]
+a^2-\dfrac{4}{a^2}, & \sqrt2<a\le\sqrt[4]{6},\\
 \sqrt{2\left(1-\dfrac{4}{a^4}\right)}, & a>\sqrt[4]{6}.
 \end{cases}
 \]
+\end{enumerate}
 \end{solution}

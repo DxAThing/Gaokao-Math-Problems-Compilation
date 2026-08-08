@@ -22,9 +22,33 @@
 \begin{solution}
 因为 \(\lg5=0.6990\)，所以 \(\lg2=1-\lg5=0.3010\).
 
-\[\lg\left(8^{34}\times25^{11}\right)=34\lg8+11\lg25=34\times3\lg2+11\times2\lg5=102\lg2+22\lg5=102\times0.3010+22\times0.6990=30.702+15.378=46.08\]
+\[
+\begin{aligned}
+\lg\left(8^{34}\times25^{11}\right)&=34\lg8+11\lg25=34\times3\lg2+11\times2\lg5\\
+&=102\lg2+22\lg5=102\times0.3010+22\times0.6990\\
+&=30.702+15.378=46.08
+\end{aligned}
+\]
 
 因此 \(8^{34}\times25^{11}\) 是 \(47\) 位的整数.
+\end{solution}
+
+\begin{problem}
+把 \(\sin\left(30^\circ+x\right)+\cos\left(x+60^\circ\right)-\sin^2x-\cos^2x\) 化成积的形式.
+
+\end{problem}
+
+\begin{solution}
+\[
+\begin{aligned}
+&\sin\left(30^\circ+x\right)+\cos\left(x+60^\circ\right)-\sin^2x-\cos^2x\\
+={}&\sin\left(30^\circ+x\right)+\sin\left(90^\circ-\left(x+60^\circ\right)\right)-\left(\sin^2x+\cos^2x\right)\\
+={}&\sin\left(30^\circ+x\right)+\sin\left(30^\circ-x\right)-1\\
+={}&2\sin\frac{\left(30^\circ+x\right)+\left(30^\circ-x\right)}{2}\cos\frac{\left(30^\circ+x\right)-\left(30^\circ-x\right)}{2}-1\\
+={}&2\sin30^\circ\cos x-1=\cos x-1=-\left(1-\cos x\right)\\
+={}&-2\sin^2\frac{x}{2}
+\end{aligned}
+\]
 \end{solution}
 
 \begin{problem}
@@ -122,10 +146,9 @@
 \end{problem}
 
 \begin{solution}
-（1） \(\left(x+2\right)\left(y-1\right)=0\). 两个因式相乘等于零，必定有一个因式是零. 因此 \(x+2=0\) 或 \(y-1=0\). 故此方程的图象为两条直线：\(x=-2\)，\(y=1\)（见右图1）.
-\solutionfigure{\bitmapfigure[max width=4.0cm]{img/1977/chongqing/q6_fig1.png}}
-
-（2） \(\left(x+2\right)^2+\left(y-1\right)^2=0\). 因为平方数 \(\left(x+2\right)^2\) 和 \(\left(y-1\right)^2\) 不可能小于零，要使它们的和为零，必须同时
+\begin{enumerate}
+\item \(\left(x+2\right)\left(y-1\right)=0\). 两个因式相乘等于零，必定有一个因式是零. 因此 \(x+2=0\) 或 \(y-1=0\). 故此方程的图象为两条直线：\(x=-2\)，\(y=1\)（见右图1）.
+\item \(\left(x+2\right)^2+\left(y-1\right)^2=0\). 因为平方数 \(\left(x+2\right)^2\) 和 \(\left(y-1\right)^2\) 不可能小于零，要使它们的和为零，必须同时
 \(\begin{cases}
 x+2=0\\
 y-1=0
@@ -138,9 +161,10 @@ y=1
 \end{cases}
 \)
 故此方程的图象是一个点 \((-2,1)\)（见右图2）.
+\item \(\left(x+2\right)^2-\left(y-1\right)^2=0\). 分解因式，\(\left(x+2-y+1\right)\left(x+2+y-1\right)=0\)，\(\left(x-y+3\right)\left(x+y+1\right)=0\). 则 \(x-y+3=0\) 或者 \(x+y+1=0\). 故此方程的图象是两条直线：\(x-y+3=0\) 和 \(x+y+1=0\)（见左图3）.
+\end{enumerate}
+\solutionfigure{\bitmapfigure[max width=4.0cm]{img/1977/chongqing/q6_fig1.png}}
 \solutionfigure{\bitmapfigure[max width=4.0cm]{img/1977/chongqing/q6_fig2.png}}
-
-（3） \(\left(x+2\right)^2-\left(y-1\right)^2=0\). 分解因式，\(\left(x+2-y+1\right)\left(x+2+y-1\right)=0\)，\(\left(x-y+3\right)\left(x+y+1\right)=0\). 则 \(x-y+3=0\) 或者 \(x+y+1=0\). 故此方程的图象是两条直线：\(x-y+3=0\) 和 \(x+y+1=0\)（见左图3）.
 \solutionfigure{\bitmapfigure[max width=4.0cm]{img/1977/chongqing/q6_fig3.png}}
 \end{solution}
 
@@ -162,7 +186,14 @@ y=1
 
 \begin{solution}
 \(\int \frac{1}{\sqrt{1-x^2}}\mathrm{d}x=\arcsin x+c_1\). 在 \(\int \frac{x^2}{\sqrt{4-x^2}}\mathrm{d}x\) 中，令 \(x=2\sin t\)，则
-\[\int \frac{x^2}{\sqrt{4-x^2}}\mathrm{d}x=\int \frac{4\sin^2t}{2\cos t}\cdot2\cos t\mathrm{d}t=\int4\sin^2t\mathrm{d}t=\int2\left(1+\cos2t\right)\mathrm{d}t=\int2\mathrm{d}t-\int2\cos2t\mathrm{d}t=2t-\sin2t+c_2\]
+\[
+\begin{aligned}
+\int \frac{x^2}{\sqrt{4-x^2}}\mathrm{d}x
+&=\int \frac{4\sin^2t}{2\cos t}\cdot2\cos t\mathrm{d}t=\int4\sin^2t\mathrm{d}t\\
+&=\int2\left(1+\cos2t\right)\mathrm{d}t=\int2\mathrm{d}t-\int2\cos2t\mathrm{d}t\\
+&=2t-\sin2t+c_2
+\end{aligned}
+\]
 代回原变量 \(t=\arcsin\frac{x}{2}\)，得 \(\int \frac{x^2}{\sqrt{4-x^2}}\mathrm{d}x =2\arcsin\frac{x}{2}-\sin\left(2\arcsin\frac{x}{2}\right)+c_2 =2\arcsin\frac{x}{2}-\frac{x}{2}\sqrt{4-x^2}+c_2\). 所以
 \[
 \begin{aligned}
@@ -176,12 +207,12 @@ y=1
 \end{solution}
 
 \begin{problem}
-计算 \(\iint_D\left(1+y^2\right)\mathrm{d}x\mathrm{d}y\)，（\(D\)）是 \(y=x^2\)，\(x=y^2\) 所围成的区域.
+计算 \(\iint_D\left(1+y^2\right)\mathrm{d}x\mathrm{d}y\)，区域 \(D\) 是 \(y=x^2\)，\(x=y^2\) 所围成的区域.
 
 \end{problem}
 
 \begin{solution}
-区域（\(D\)）如右图所示.
+区域 \(D\) 如右图所示.
 \solutionfigure{\bitmapfigure[max width=4.2cm]{img/1977/chongqing/ref1_q3_solution_fig1.png}}
 因此
 \[
@@ -198,22 +229,21 @@ y=1
 
 \begin{problem}
 求下列方程的通解
-\(x\mathrm{d}y-2y\mathrm{d}x=3x^2\mathrm{d}x\)；
+
+\begin{enumerate}
+\item \(x\mathrm{d}y-2y\mathrm{d}x=3x^2\mathrm{d}x\)；
+\item \(y''-2y'+y=\cos x\).
+\end{enumerate}
 
 \end{problem}
 
 \begin{solution}
-【法一】原方程两边同除以 \(x^3\)，得 \(\frac{1}{x^2}\mathrm{d}y-\frac{2y}{x^3}\mathrm{d}x=\frac{3}{x}\mathrm{d}x\). 方程的左端 \(\frac{1}{x^2}\mathrm{d}y-\frac{2y}{x^3}\mathrm{d}x=\mathrm{d}\left(\frac{y}{x^2}\right)\)，而右端 \(\frac{3}{x}\mathrm{d}x=\mathrm{d}\left(3\ln|x|\right)\). 因此方程又可化为 \(\mathrm{d}\left(\frac{y}{x^2}\right)=\mathrm{d}\left(3\ln|x|\right)\). 所以 \(\frac{y}{x^2}=3\ln|x|+c\)，或者 \(y=3x^2\ln|x|+cx^2\)，其中 \(c\) 为任意常数.
+\begin{enumerate}
+\item 【法一】原方程两边同除以 \(x^3\)，得 \(\frac{1}{x^2}\mathrm{d}y-\frac{2y}{x^3}\mathrm{d}x=\frac{3}{x}\mathrm{d}x\). 方程的左端 \(\frac{1}{x^2}\mathrm{d}y-\frac{2y}{x^3}\mathrm{d}x=\mathrm{d}\left(\frac{y}{x^2}\right)\)，而右端 \(\frac{3}{x}\mathrm{d}x=\mathrm{d}\left(3\ln|x|\right)\). 因此方程又可化为 \(\mathrm{d}\left(\frac{y}{x^2}\right)=\mathrm{d}\left(3\ln|x|\right)\). 所以 \(\frac{y}{x^2}=3\ln|x|+c\)，或者 \(y=3x^2\ln|x|+cx^2\)，其中 \(c\) 为任意常数.
 
 【法二】原方程可写成 \(\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{2y+3x^2}{x}\). 令 \(\frac{y}{x^2}=t\)，即 \(y=tx^2\)，则 \(\frac{\mathrm{d}y}{\mathrm{d}x}=2xt+x^2\frac{\mathrm{d}t}{\mathrm{d}x}\). 代入原方程，得 \(2xt+x^2\frac{\mathrm{d}t}{\mathrm{d}x}=\frac{2x^2t+3x^2}{x}\)，所以 \(\frac{\mathrm{d}t}{\mathrm{d}x}=\frac{3}{x}\). 所以 \(t=3\ln|x|+c\). 代回原变量 \(t=\frac{y}{x^2}\)，得 \(\frac{y}{x^2}=3\ln|x|+c\)，或者 \(y=3x^2\ln|x|+cx^2\)，其中 \(c\) 为任意常数.
 
-\end{solution}
+\item 这是一个常系数线性微分方程，它相应的齐次方程 \(y''-2y'+y=0\) 的特征方程为 \(\lambda^2-2\lambda+1=0\). 特征根为 \(\lambda_1=\lambda_2=1\)，因此相应的齐次方程的通解为 \(y=c_1\e^x+c_2x\e^x\)（\(c_1\)，\(c_2\) 是任意常数）. 现在再求原非齐次方程的特解. 设此特解有如下形式：\(y=A\cos x+B\sin x\)（其中 \(A\)，\(B\) 为待定常数）. 把它代入原方程，并化简后得 \(-2B\cos x+2A\sin x=\cos x\). 于是 \(A=0\)，\(B=-\frac{1}{2}\)，这样我们得到了原非齐次方程的一个特解 \(y=-\frac{1}{2}\sin x\)，再加上相应齐次方程的通解，就得到原方程的通解为 \(y=c_1\e^x+c_2x\e^x-\frac{1}{2}\sin x\)（\(c_1\)，\(c_2\) 为任意常数）.
 
-\begin{problem}
-求下列方程的通解
-\(y''-2y'+y=\cos x\).
-\end{problem}
-
-\begin{solution}
-这是一个常系数线性微分方程，它相应的齐次方程 \(y''-2y'+y=0\) 的特征方程为 \(\lambda^2-2\lambda+1=0\). 特征根为 \(\lambda_1=\lambda_2=1\)，因此相应的齐次方程的通解为 \(y=c_1\e^x+c_2x\e^x\)（\(c_1\)，\(c_2\) 是任意常数）. 现在再求原非齐次方程的特解. 设此特解有如下形式：\(y=A\cos x+B\sin x\)（其中 \(A\)，\(B\) 为待定常数）. 把它代入原方程，并化简后得 \(-2B\cos x+2A\sin x=\cos x\). 于是 \(A=0\)，\(B=-\frac{1}{2}\)，这样我们得到了原非齐次方程的一个特解 \(y=-\frac{1}{2}\sin x\)，再加上相应齐次方程的通解，就得到原方程的通\(y=c_1\e^x+c_2x\e^x-\frac{1}{2}\sin x\)（\(c_1\)，\(c_2\) 为任意常数）.
+\end{enumerate}
 \end{solution}

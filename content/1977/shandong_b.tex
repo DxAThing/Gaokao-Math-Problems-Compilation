@@ -1,20 +1,15 @@
 \chapter{1977年山东B卷}
 
-\providecommand{\shandongproblabel}[1]{%
-  \renewcommand{\problemheadprefix}{\textbf{#1}\hspace{0.5em}}%
-  \renewcommand{\problemheadbox}{\makebox[\problembodyindent][l]{\textbf{#1}}}%
-}
-
-\section{解下列各题}
-
 \begin{problem}
 \(\sqrt{\left( -a \right)^2}=?\)
 
 \end{problem}
 
 \begin{solution}
-\(\sqrt{\left( -a \right)^2}=a\)（\(a\geqslant 0\)），
-\(\sqrt{\left( -a \right)^2}=-a\)（\(a<0\)）.
+\(\sqrt{\left( -a \right)^2}=\begin{cases}
+a, & a\geqslant 0,\\
+-a, & a<0
+\end{cases}\).
 \end{solution}
 
 \begin{problem}
@@ -27,14 +22,20 @@
 \end{solution}
 
 \begin{problem}
-写出下列函数的定义域：\(y=\frac{\sqrt{\left| x-3 \right|}}{x-2}\)；\(y=\lg\left( x+3 \right)\).
+写出下列函数的定义域：
+
+\begin{enumerate}
+\item \(y=\frac{\sqrt{\left| x-3 \right|}}{x-2}\)；
+\item \(y=\lg\left( x+3 \right)\).
+\end{enumerate}
 
 \end{problem}
 
 \begin{solution}
-（1）\(x\neq 2\).
-
-（2）\(x>-3\).
+\begin{enumerate}
+\item \(x\neq 2\).
+\item \(x>-3\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -58,9 +59,11 @@
 \begin{problem}
 如图所示的二视图是什么几何体？
 
-\bitmapfigure[max width=6.0cm]{img/1977/shandong_b/q6_fig1.png}
+\bitmapfigure[float=inline,width=6.0cm]{img/1977/shandong_b/q6_fig1.png}
 
 \end{problem}
+
+\FloatBarrier
 
 \begin{solution}
 正四棱锥.
@@ -72,7 +75,7 @@
 \end{problem}
 
 \begin{solution}
-\solutionfigure{\bitmapfigure[max width=6.0cm]{img/1977/shandong_b/q7_solution_fig1.png}}
+\solutionfigure{\bitmapfigure[width=6.0cm]{img/1977/shandong_b/q7_solution_fig1.png}}
 
 因为 \(AB:AD=2:1\)，\(AM=\frac{1}{2}AB\)，所以 \(AM=AD\). 所以 \(\angle ADM=\angle AMD\). 又因为 \(AB\parallel DC\)，且 \(A\)，\(M\)，\(B\) 三点共线，所以 \(\angle AMD=\angle MDC\). 因此 \(\angle MDC=\frac{1}{2}\angle ADC\).
 
@@ -86,63 +89,22 @@
 \end{solution}
 
 \begin{problem}
-\(\frac{\sin\alpha}{2}x^2+x+\frac{1}{2\cos\alpha}=0\)（\(0<\alpha<\frac{\pi}{2}\)）为关于 \(x\) 的二次方程. 当 \(\alpha\) 为何值时，方程有两个不相等的实数根？它的根是什么？
+\(\frac{\sin\alpha}{2}x^2+x+\frac{1}{2\cos\alpha}=0\)（\(0<\alpha<\frac{\pi}{2}\)）为关于 \(x\) 的二次方程.
+
+\begin{enumerate}
+\item 当 \(\alpha\) 为何值时，方程有两个不相等的实数根？
+\item 它的根是什么？
+\end{enumerate}
 
 \end{problem}
 
 \begin{solution}
-因为方程有两个不相等的实数根，所以 \(b^2-4ac>0\)，即 \(1-\frac{\sin\alpha}{\cos\alpha}=1-\tan\alpha>0\)，亦即 \(\tan\alpha<1\). 因此 \(0<\alpha<\frac{\pi}{4}\) 时，方程有两个不相等的实数根.
-
-\(x=\frac{-1\pm\sqrt{1-\tan\alpha}}{\sin\alpha}\)
+\begin{enumerate}
+\item 因为方程有两个不相等的实数根，所以 \(b^2-4ac>0\)，即 \(1-\frac{\sin\alpha}{\cos\alpha}=1-\tan\alpha>0\)，亦即 \(\tan\alpha<1\). 因此 \(0<\alpha<\frac{\pi}{4}\) 时，方程有两个不相等的实数根.
+\item 当 \(0<\alpha<\frac{\pi}{4}\) 时，方程的根为 \(x=\frac{-1\pm\sqrt{1-\tan\alpha}}{\sin\alpha}\).
+\end{enumerate}
 \end{solution}
 
-
-\begingroup
-\shandongproblabel{一，}
-\begin{problem}
-求极限：\(\lim\limits_{x\to 0}\frac{\ln(1+x)}{x}\).
-
-\end{problem}
-
-\begin{solution}
-\[
-\lim\limits_{x\to 0}\frac{\ln(1+x)}{x}
-=\lim\limits_{x\to 0}\frac{[\ln(1+x)]'}{x'}
-=\lim\limits_{x\to 0}\frac{1}{1+x}=1
-\]
-\end{solution}
-\endgroup
-
-\begingroup
-\shandongproblabel{二，}
-\begin{problem}
-用定积分求抛物线 \(y^2=4x\) 与 \(x^2=4y\) 所围成的曲边形面积.
-
-\end{problem}
-
-\begin{solution}
-\begin{center}
-\bitmapfigure[float=inline,width=5.0cm]{img/1977/shandong_b/q10_solution_fig2.png}
-\end{center}
-
-设曲边形面积为 \(S\). 解方程组
-\[
-\begin{cases}
-y^2=4x,\\
-x^2=4y.
-\end{cases}
-\]
-得两交点的横坐标 \(x=0\) 与 \(x=4\).
-
-\[
-\begin{aligned}
-S&=\int_0^4 2\sqrt{x}\,\mathrm{d}x-\int_0^4 \frac{1}{4}x^2\,\mathrm{d}x
-=\left. \frac{4}{3}x^{\frac{3}{2}} \right|_0^4-\left. \frac{1}{12}x^3 \right|_0^4 \\
-&=\frac{32}{3}-\frac{16}{3}=\frac{16}{3}.
-\end{aligned}
-\]
-\end{solution}
-\endgroup
 
 \begin{problem}
 试比较等底等高的正四棱锥和正圆锥的侧面积，看哪个的侧面积较小.
@@ -164,40 +126,89 @@ S_{\text{圆锥侧}}=\pi\cdot\sqrt{\frac{S}{\pi}}\cdot\sqrt{\frac{S}{\pi}+h^2}=\
 \end{solution}
 
 \begin{problem}
-一只船以 \(v\) 海里/小时的速度向正北航行，在 \(A\) 处望见灯塔在船的北 \(\alpha\) 度东，继续航行 \(t\) 小时后，在 \(B\) 处望见 \(S\) 在船的北 \(\beta\) 度东，求第二次望见灯塔 \(S\) 时船和灯塔的距离 \(BS\).
+一只船以 \(v\text{ 海里/小时}\) 的速度向正北航行，在 \(A\) 处望见灯塔在船的北 \(\alpha\) 度东，继续航行 \(t\text{ 小时}\) 后，在 \(B\) 处望见 \(S\) 在船的北 \(\beta\) 度东，求第二次望见灯塔 \(S\) 时船和灯塔的距离 \(BS\).
 
 \end{problem}
 
 \begin{solution}
-\solutionfigure{\bitmapfigure[max width=4.2cm]{img/1977/shandong_b/q10_solution_fig1.png}}
+\solutionfigure{\bitmapfigure[width=4.2cm]{img/1977/shandong_b/q10_solution_fig1.png}}
 
 在 \(\triangle ABS\) 中，\(AB=vt\)，\(\angle A=\alpha\)，\(\angle S=\beta-\alpha\). 由正弦定理得 \(\frac{BS}{\sin\alpha}=\frac{vt}{\sin\left( \beta-\alpha \right)}\)，所以 \(BS=\frac{vt\sin\alpha}{\sin\left( \beta-\alpha \right)}\).
 \end{solution}
 
 \begin{problem}
-某隧道的横断面如图所示，已知隧道横断面的周长为 \(23\) 米，试根据图所示尺寸，求当 \(x\) 和 \(y\) 为何值时，隧道的横断面的面积最大？最大面积是多少？（取 \(\pi\approx 3\)）（图尺寸单位：米）
+某隧道的横断面如图所示，已知隧道横断面的周长为 \(23\text{ 米}\)，试根据图所示尺寸，求：
 
-\bitmapfigure[max width=4.8cm]{img/1977/shandong_b/q11_fig1.png}
+\begin{enumerate}
+\item 当 \(x\) 和 \(y\) 为何值时，隧道的横断面面积最大？
+\item 最大面积是多少？
+\end{enumerate}
+
+（取 \(\pi\approx 3\)）（图尺寸单位：米）
+
+{\leftskip=0pt\relax
+\rightskip=0pt\relax
+\bitmapfigure[width=4.8cm]{img/1977/shandong_b/q11_fig1.png}}
 
 \end{problem}
 
 \begin{solution}
-设半圆的半径为 \(x\) 米，隧道横断面面积为 \(S\) 平方米. 则
-\[
-y\approx\left( 23-3x-0.5\times 2-2x \right)\times\frac{1}{2}=\left( 11-2.5x \right)\text{米}
-\]
+\begin{enumerate}
+\item 设半圆的半径为 \(x\) 米，隧道横断面面积为 \(S\) 平方米. 则
+\(\displaystyle y\approx\left( 23-3x-0.5\times 2-2x \right)\times\frac{1}{2}=\left( 11-2.5x \right)\) 米
 
-\[
-S\approx\frac{3x^2}{2}+2x\left( 11-2.5x \right)-\left( 2x-1 \right)\times 0.5=-3.5x^2+21x+0.5
-\]
+\(\displaystyle S\approx\frac{3x^2}{2}+2x\left( 11-2.5x \right)-\left( 2x-1 \right)\times 0.5=-3.5x^2+21x+0.5\)
 
 因为 \(-3.5<0\)，所以当 \(x=-\frac{21}{2\times\left( -3.5 \right)}=3\) 时，\(S\) 有最大值.
 
+当 \(x=3\) 时，\(y=11-2.5\times 3=3.5\) 米.
+
+\item
+\(\displaystyle S_{\max}=\frac{4\times\left( -3.5 \right)\times 0.5-21^2}{4\times\left( -3.5 \right)}=32\) 平方米
+
+答：当半圆的半径为 \(x=3\) 米，\(y=3.5\) 米时隧道的横断面面积最大，最大面积为 \(32\) 平方米.
+\end{enumerate}
+\end{solution}
+
+\section{参考题}
+
+\begin{problem}
+求极限：\(\lim\limits_{x\to 0}\frac{\ln(1+x)}{x}\).
+
+\end{problem}
+
+\begin{solution}
 \[
-S_{\max}=\frac{4\times\left( -3.5 \right)\times 0.5-21^2}{4\times\left( -3.5 \right)}=32\text{（米}^2\text{）}
+\lim\limits_{x\to 0}\frac{\ln(1+x)}{x}
+=\lim\limits_{x\to 0}\frac{[\ln(1+x)]'}{x'}
+=\lim\limits_{x\to 0}\frac{1}{1+x}=1
 \]
+\end{solution}
 
-当 \(x=3\) 时，\(y=11-2.5\times 3=3.5\)（米）.
+\begin{problem}
+用定积分求抛物线 \(y^2=4x\) 与 \(x^2=4y\) 所围成的曲边形面积.
 
-答：当半圆的半径 \(x\) 为 \(3\) 米，\(y\) 为 \(3.5\) 米时隧道的横断面面积最大，最大面积为 \(32\) 平方米.
+\end{problem}
+
+\begin{solution}
+\begin{center}
+\bitmapfigure[float=inline,width=5.0cm]{img/1977/shandong_b/ref1_q2_solution_fig1.png}
+\end{center}
+
+设曲边形面积为 \(S\). 解方程组
+\[
+\begin{cases}
+y^2=4x,\\
+x^2=4y.
+\end{cases}
+\]
+得两交点的横坐标 \(x=0\) 与 \(x=4\).
+
+\[
+\begin{aligned}
+S&=\int_0^4 2\sqrt{x}\,\mathrm{d}x-\int_0^4 \frac{1}{4}x^2\,\mathrm{d}x
+=\left. \frac{4}{3}x^{\frac{3}{2}} \right|_0^4-\left. \frac{1}{12}x^3 \right|_0^4 \\
+&=\frac{32}{3}-\frac{16}{3}=\frac{16}{3}.
+\end{aligned}
+\]
 \end{solution}

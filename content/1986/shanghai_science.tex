@@ -346,7 +346,7 @@ D
 
 \begin{problem}
 
-\(\lim\limits_{n\to\infty}\frac{1+3+5+\cdots+(2n-1)}{n(n+1)}=\)\fillinblank{}.
+\(\displaystyle\lim_{n\to\infty}\frac{1+3+5+\cdots+(2n-1)}{n(n+1)}=\)\fillinblank{}.
 
 \end{problem}
 
@@ -438,16 +438,18 @@ D
 \end{problem}
 
 \begin{solution}
-（1）由 \(a_1=S_1\)，得 \(a_1=1^2+2\times 1+4=7\).
+\begin{enumerate}
+\item 由 \(a_1=S_1\)，得 \(a_1=1^2+2\times 1+4=7\).
 又 \(a_2=S_2-S_1=2^2+2\times 2+4-7=5\)，\(a_3=S_3-S_2=3^2+2\times 3+4-\left( 2^2+2\times 2+4 \right)=7\).
 所以 \(a_1=7\)，\(a_2=5\)，\(a_3=7\).
 
-（2）当 \(n\geqslant 2\) 时，
+\item 当 \(n\geqslant 2\) 时，
 \[
 a_n=S_n-S_{n-1}=n^2+2n+4-\left[ \left( n-1 \right)^2+2\left( n-1 \right)+4 \right]=2n+1
 \]
 因此 \(a_{n+1}-a_n=\left[ 2\left( n+1 \right)+1 \right]-\left( 2n+1 \right)=2\).
 故数列 \(a_2\)，\(a_3\)，\(a_4\)，\(\cdots\) 构成公差为 \(2\) 的等差数列.
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -486,7 +488,8 @@ z^3+k\overline{z}^3
 &=\left( 1+k \right)\cos 3\theta+\i\left( 1-k \right)\sin 3\theta
 \end{align*}
 
-（1）若 \(z^3+k\overline{z}^3\) 是纯虚数，则
+\begin{enumerate}
+\item 若 \(z^3+k\overline{z}^3\) 是纯虚数，则
 \[
 \begin{cases}
 \left( 1+k \right)\cos 3\theta&=0,\\
@@ -499,7 +502,7 @@ z^3+k\overline{z}^3
 
 或 \(k\ne 1\) 且 \(\theta=\frac{2n\pi}{3}\pm \frac{\pi}{6}\)（\(n\in\Z\)）.
 
-（2）由上式得
+\item 由上式得
 \begin{align*}
 \left| z^3+k\overline{z}^3 \right|^2
 &=\left( 1+k \right)^2\cos^2 3\theta+\left( 1-k \right)^2\sin^2 3\theta\\
@@ -512,6 +515,7 @@ z^3+k\overline{z}^3
 当 \(k=0\) 时，\(\left| z^3+k\overline{z}^3 \right|\) 的最大值和最小值都等于 \(1\)；
 
 当 \(k<0\) 时，\(\left| z^3+k\overline{z}^3 \right|\) 的最大值是 \(1-k\)，最小值是 \(|1+k|\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -546,14 +550,24 @@ y_1+y_2
 
 \begin{problem}
 
-已知三角形 \(ABC\) 的两边 \(AC=2\)，\(BC=3\)，\(P\) 为边 \(AB\) 上一点（图1）. 现沿 \(CP\) 将此三角形折成直二面角 \(A-CP-B\)，当 \(AB=\sqrt{7}\) 时，求二面角 \(P-AC-B\) 的大小（图2）.
+已知直角三角形 \(ABC\) 的两直角边 \(AC=2\)，\(BC=3\)，\(P\) 为斜边 \(AB\) 上一点（图1）. 现沿 \(CP\) 将此三角形折成直二面角 \(A-CP-B\)，当 \(AB=\sqrt{7}\) 时，求二面角 \(P-AC-B\) 的大小（图2）.
 
 \bitmapfigure[max width=0.72\linewidth]{img/1986/shanghai_science/q7_fig1.png}
+
+\bitmapfigure[max width=0.46\linewidth]{img/1986/shanghai_science/q7_fig2.png}
 
 \end{problem}
 
 \begin{solution}
-在 \(\triangle ACB\) 中，\(BC=3\)，\(AC=2\)，\(AB=\sqrt{7}\). 因此 \(\cos \angle ACB=\dfrac{3^2+2^2-7}{2\times 3\times 2}=\dfrac{1}{2}\)，从而 \(\angle ACB=60^\circ\).
+解法一. 自 \(A\) 作 \(AD\perp CP\) 于 \(D\)，自 \(B\) 作 \(BE\perp CP\) 于 \(E\). 连 \(BD\). 因为平面 \(ACP\perp\) 平面 \(BCP\)，且 \(AD\perp CP\)，所以 \(AD\perp\) 平面 \(BCP\)，则 \(\triangle ADB\) 为直角三角形. 设 \(\angle BCP=\alpha\)，则 \(\angle CAD=\alpha\).
+
+因此 \(AD=2\cos\alpha\)，\(CD=2\sin\alpha\)，\(BE=3\sin\alpha\)，\(CE=3\cos\alpha\)，从而 \(DE=CE-CD=3\cos\alpha-2\sin\alpha\). 由
+\[
+\sqrt{7}=\sqrt{BE^2+ED^2+AD^2}=\sqrt{13\sin^2\alpha+13\cos^2\alpha-12\sin\alpha\cos\alpha}=\sqrt{13-6\sin 2\alpha}
+\]
+得 \(7=13-6\sin 2\alpha\)，即 \(\sin 2\alpha=1\). 由 \(0^\circ<\alpha<90^\circ\)，得 \(\alpha=45^\circ\)，所以 \(\angle BCD=\angle CAD=\angle ACP=45^\circ\).
+
+解法二. 在 \(\triangle ACB\) 中，\(BC=3\)，\(AC=2\)，\(AB=\sqrt{7}\). 因此 \(\cos \angle ACB=\dfrac{3^2+2^2-7}{2\times 3\times 2}=\dfrac{1}{2}\)，从而 \(\angle ACB=60^\circ\).
 
 因为 \(A-CP-B\) 为直二面角，所以 \(\angle ACP+\angle PCB=90^\circ\)，且 \(\cos \angle ACP\cdot \cos \angle BCP=\cos \angle ACB=\dfrac{1}{2}\).
 于是 \(\cos \angle ACP\cdot \cos \left( 90^\circ-\angle ACP \right)=\cos 60^\circ\)，即 \(\cos \angle ACP\cdot \sin \angle ACP=\dfrac{1}{2}\).
@@ -563,7 +577,7 @@ y_1+y_2
 
 自 \(R\) 作 \(RH\perp AC\)，连 \(PH\). 由三垂线定理可知 \(PH\perp AC\)，故 \(\angle PHR\) 为二面角 \(P-AC-B\) 的平面角.
 
-\solutionfigure{\bitmapfigure[max width=0.46\linewidth]{img/1986/shanghai_science/q7_solution_fig2.png}}
+\bitmapinlinefigure[0.38\linewidth][]{img/1986/shanghai_science/q7_solution_fig2.png}
 
 又因为 \(PH=CH\)，\(RH=CH\tan 30^\circ\)，所以
 \[

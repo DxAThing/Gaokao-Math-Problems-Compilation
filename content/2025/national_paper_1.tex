@@ -633,14 +633,16 @@ X_i=
 \end{problem}
 
 \begin{solution}
-（1）在检查结果不正常的 \(200\) 人中，有 \(180\) 人患病，所以所求概率 \(p\) 的估计值为 \(\frac{180}{200}=\frac{9}{10}\).
+\begin{enumerate}
+\item 在检查结果不正常的 \(200\) 人中，有 \(180\) 人患病，所以所求概率 \(p\) 的估计值为 \(\frac{180}{200}=\frac{9}{10}\).
 
-（2）零假设为 \(H_0\)：超声波检查结果与患病无关.
+\item 零假设为 \(H_0\)：超声波检查结果与患病无关.
 根据表中数据可得
 \[
 \chi^2=\frac{1000\times(20\times20-780\times180)^2}{800\times200\times800\times200}=765.625>10.828=\chi^2_{0.001}
 \]
 根据小概率值 \(\alpha=0.001\) 的 \(\chi^2\) 独立性检验，我们推断 \(H_0\) 不成立，即认为超声波检查结果与患该病有关，该推断犯错误的概率不超过 0.001.
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -654,9 +656,10 @@ X_i=
 \end{problem}
 
 \begin{solution}
-（1）由题意，\(n \in \mathbb{N}^*\)，在数列 \(\{a_n\}\) 中，\(a_1 = 3\)，\(\frac{a_{n+1}}{n} = \frac{a_n}{n+1} + \frac{1}{n(n+1)}\). 两边同乘 \(n(n+1)\)，得 \((n+1)a_{n+1} = na_n + 1\)，即 \((n+1)a_{n+1} - na_n = 1\). 所以 \(\{na_n\}\) 是以 \(a_1 = 3\) 为首项，\(1\) 为公差的等差数列.
+\begin{enumerate}
+\item 由题意，\(n \in \mathbb{N}^*\)，在数列 \(\{a_n\}\) 中，\(a_1 = 3\)，\(\frac{a_{n+1}}{n} = \frac{a_n}{n+1} + \frac{1}{n(n+1)}\). 两边同乘 \(n(n+1)\)，得 \((n+1)a_{n+1} = na_n + 1\)，即 \((n+1)a_{n+1} - na_n = 1\). 所以 \(\{na_n\}\) 是以 \(a_1 = 3\) 为首项，\(1\) 为公差的等差数列.
 
-（2）由题意及（1）得，\(n \in \mathbb{N}^*\)，在数列 \(\{na_n\}\) 中，首项为 \(3\)，公差为 \(1\)，所以 \(na_n = 3 + 1 \times (n-1) = n+2\)，即 \(a_n = 1 + \frac{2}{n}\). 在 \(f(x) = a_1x + a_2x^2 + \cdots + a_mx^m\) 中，\(f(x) = 3x + 2x^2 + \cdots + \left(1 + \frac{2}{m}\right)x^m\)，所以 \(f'(x) = 3 + 4x + \cdots + (m+2)x^{m-1}\). 当 \(x \neq 1\) 且 \(x \neq 0\) 时，考虑 \(xf'(x) = 3x + 4x^2 + \cdots + (m+2)x^m\). 则 \((1-x)f'(x)=3+x+x^2+\cdots+x^{m-1}-(m+2)x^m=3+\frac{x(1-x^{m-1})}{1-x}-(m+2)x^m\)，所以 \(f'(x) = \frac{3}{1-x} + \frac{x(1-x^{m-1})}{(1-x)^2} - \frac{(m+2)x^m}{1-x}\).
+\item 由题意及（1）得，\(n \in \mathbb{N}^*\)，在数列 \(\{na_n\}\) 中，首项为 \(3\)，公差为 \(1\)，所以 \(na_n = 3 + 1 \times (n-1) = n+2\)，即 \(a_n = 1 + \frac{2}{n}\). 在 \(f(x) = a_1x + a_2x^2 + \cdots + a_mx^m\) 中，\(f(x) = 3x + 2x^2 + \cdots + \left(1 + \frac{2}{m}\right)x^m\)，所以 \(f'(x) = 3 + 4x + \cdots + (m+2)x^{m-1}\). 当 \(x \neq 1\) 且 \(x \neq 0\) 时，考虑 \(xf'(x) = 3x + 4x^2 + \cdots + (m+2)x^m\). 则 \((1-x)f'(x)=3+x+x^2+\cdots+x^{m-1}-(m+2)x^m=3+\frac{x(1-x^{m-1})}{1-x}-(m+2)x^m\)，所以 \(f'(x) = \frac{3}{1-x} + \frac{x(1-x^{m-1})}{(1-x)^2} - \frac{(m+2)x^m}{1-x}\).
 于是
 \begin{align*}
 f'(-2)
@@ -665,6 +668,7 @@ f'(-2)
 &= 1 - \frac{2}{9} + \frac{(-2)^m}{9} - \frac{(m+2)(-2)^m}{3} \\
 &= \frac{7}{9} - \frac{(3m+7)(-2)^m}{9}
 \end{align*}
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -684,9 +688,12 @@ f'(-2)
 \end{problem}
 
 \begin{solution}
-（1）由题意证明如下，在四棱锥 \(P - ABCD\) 中，\(PA \perp \text{平面} ABCD\)，\(AB \perp AD\)，因为 \(AB \subset \text{平面} ABCD\)，\(AD \subset \text{平面} ABCD\)，所以 \(PA \perp AB\)，\(PA \perp AD\). 又 \(AB \perp AD\)，且 \(PA \cap AD = A\)，所以 \(AB \perp \text{平面} PAD\). 因为 \(AB \subset \text{平面} PAB\)，所以平面 \(PAB \perp \text{平面} PAD\).
+\begin{enumerate}
+\item 由题意证明如下，在四棱锥 \(P - ABCD\) 中，\(PA \perp \text{平面} ABCD\)，\(AB \perp AD\)，因为 \(AB \subset \text{平面} ABCD\)，\(AD \subset \text{平面} ABCD\)，所以 \(PA \perp AB\)，\(PA \perp AD\). 又 \(AB \perp AD\)，且 \(PA \cap AD = A\)，所以 \(AB \perp \text{平面} PAD\). 因为 \(AB \subset \text{平面} PAB\)，所以平面 \(PAB \perp \text{平面} PAD\).
 
-（2）（i）由题意及（1）证明如下.
+\item
+\begin{enumerate}
+\item 由题意及（1）证明如下.
 
 【法一】在四棱锥 \(P - ABCD\) 中，\(AP \perp AB\)，\(AP \perp AD\)，\(AB \perp AD\)，\(BC \parallel AD\)，且 \(PA = AB = \sqrt{2}\)，\(AD = 1 + \sqrt{3}\)，建立空间直角坐标系如下图所示，设 \(A(0,0,0)\)，\(B(\sqrt{2},0,0)\)，\(C(\sqrt{2},2,0)\)，\(D(0,1+\sqrt{3},0)\)，\(P(0,0,\sqrt{2})\).
 
@@ -734,7 +741,7 @@ PO_1 = BO_1 = CO_1 = O_1 D = \sqrt{3}
 \]
 点 \(O_1\) 即为点 \(P\)，\(B\)，\(C\)，\(D\) 所在球的球心 \(O\). 此时点 \(O\) 在线段 \(AD\) 上，且 \(AD \subset \text{平面} ABCD\)，所以点 \(O\) 在平面 \(ABCD\) 上.
 
-（2）（ii）由题意及上述结论和图得，设直线 \(AC\) 与直线 \(PO\) 所成角为 \(\theta\).
+\item 由题意及上述结论和图得，设直线 \(AC\) 与直线 \(PO\) 所成角为 \(\theta\).
 
 \solutionfigure{\bitmapfigure[max width=3.5cm]{img/2025/national_paper_1/q17_solution_fig5.png}}
 
@@ -770,6 +777,8 @@ PC_1^2 = PO^2 + OC_1^2 - 2PO \cdot OC_1 \cos \angle POC_1 =(\sqrt{13})^2 = (\sqr
 \(\cos \angle POC_1 = -\frac{\sqrt{2}}{3}\)，
 所以直线 \(AC\) 与直线 \(PO\) 所成角的余弦值为
 \(|\cos \angle POC_1| = \frac{\sqrt{2}}{3}\).
+\end{enumerate}
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -787,7 +796,8 @@ PC_1^2 = PO^2 + OC_1^2 - 2PO \cdot OC_1 \cos \angle POC_1 =(\sqrt{13})^2 = (\sqr
 \end{problem}
 
 \begin{solution}
-（1）下顶点 \(A\) 在 \(y\) 轴负半轴上，右顶点 \(B\) 在 \(x\) 轴正半轴上，所以
+\begin{enumerate}
+\item 下顶点 \(A\) 在 \(y\) 轴负半轴上，右顶点 \(B\) 在 \(x\) 轴正半轴上，所以
 \[
 \begin{cases}
 \sqrt{a^2+b^2}=\sqrt{10}\\
@@ -797,7 +807,9 @@ c^2=a^2-b^2
 \]
 解得 \(a^2=9\)，\(b^2=1\)，\(c^2=8\)，故椭圆 \(C\) 的标准方程为 \(\frac{x^2}{9}+y^2=1\).
 
-（2）（i）设 \(R(x_0,y_0)\). 因为点 \(P\) 不在 \(y\) 轴上，所以 \(m \neq 0\).
+\item
+\begin{enumerate}
+\item 设 \(R(x_0,y_0)\). 因为点 \(P\) 不在 \(y\) 轴上，所以 \(m \neq 0\).
 
 【法一】先由 \(k_{AP}=\frac{n+1}{m}\) 得
 \(\frac{y_0+1}{x_0}=\frac{n+1}{m}\)，\(m x_0>0\). 因为 \(A(0,-1)\) 且 \(|AR|\cdot|AP|=3\)，所以 \(\sqrt{x_0^2+(y_0+1)^2}\cdot \sqrt{m^2+(n+1)^2}=3\)，即 \(\left(1+\left(\frac{n+1}{m}\right)^2\right)x_0^2 =\frac{9}{m^2+(n+1)^2}\). 故 \(x_0=\frac{3m}{m^2+(n+1)^2}\)，\(y_0=\frac{n+2-m^2-n^2}{m^2+(n+1)^2}\). 所以点 \(R\) 的坐标为 \(\left(\frac{3m}{m^2+(n+1)^2},\frac{n+2-m^2-n^2}{m^2+(n+1)^2}\right)\).
@@ -807,7 +819,7 @@ c^2=a^2-b^2
 
 \solutionfigure{\bitmapfigure[max width=4.0cm]{img/2025/national_paper_1/q18_solution_fig1.png}}
 
-（2）（ii）因为 \(k_{OR}=\frac{n+2-m^2-n^2}{m^2+(n+1)^2}\div\frac{3m}{m^2+(n+1)^2} =\frac{n+2-m^2-n^2}{3m}\)，\(k_{OP}=\frac{n}{m}\). 由 \(k_{OR}=3k_{OP}\)，可得 \(\frac{3n}{m}=\frac{n+2-m^2-n^2}{3m}\). 化简得 \(m^2+n^2+8n-2=0\)，\(m^2+(n+4)^2=18\)（\(m\neq0\)）.
+\item 因为 \(k_{OR}=\frac{n+2-m^2-n^2}{m^2+(n+1)^2}\div\frac{3m}{m^2+(n+1)^2} =\frac{n+2-m^2-n^2}{3m}\)，\(k_{OP}=\frac{n}{m}\). 由 \(k_{OR}=3k_{OP}\)，可得 \(\frac{3n}{m}=\frac{n+2-m^2-n^2}{3m}\). 化简得 \(m^2+n^2+8n-2=0\)，\(m^2+(n+4)^2=18\)（\(m\neq0\)）.
 所以点 \(P\) 在以 \(N(0,-4)\) 为圆心，\(3\sqrt{2}\) 为半径的圆上（除去两个点），\(|PQ|_{\max}\) 为 \(Q\) 到圆心 \(N\) 的距离加上半径.
 
 【法一】设 \(Q(3\cos\theta,\sin\theta)\)，则
@@ -829,6 +841,8 @@ c^2=a^2-b^2
 &\le 27
 \end{align*}
 当且仅当 \(y_0=\frac{1}{2}\) 时取等号. 此时可取的最远点 \(P\) 不在 \(y\) 轴上，故 \(|PQ|_{\max}=\sqrt{27}+3\sqrt{2}=3(\sqrt{3}+\sqrt{2})\).
+\end{enumerate}
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -842,7 +856,8 @@ c^2=a^2-b^2
 \end{problem}
 
 \begin{solution}
-（1）【法一】\(f'(x) = -5\sin x + 5\sin 5x = 10\cos 3x\sin 2x\). 因为 \(x \in \left[0, \frac{\pi}{4}\right]\)，故 \(2x \in \left[0, \frac{\pi}{2}\right]\)，\(\sin 2x \ge 0\). 当 \(0 < x < \frac{\pi}{6}\) 时，\(\cos 3x > 0\)，所以 \(f'(x) > 0\)；当 \(\frac{\pi}{6} < x < \frac{\pi}{4}\) 时，\(\cos 3x < 0\)，所以 \(f'(x) < 0\). 所以 \(f(x)\) 在 \(\left(0, \frac{\pi}{6}\right]\) 上增，在 \(\left(\frac{\pi}{6}, \frac{\pi}{4}\right)\) 上减. 故
+\begin{enumerate}
+\item 【法一】\(f'(x) = -5\sin x + 5\sin 5x = 10\cos 3x\sin 2x\). 因为 \(x \in \left[0, \frac{\pi}{4}\right]\)，故 \(2x \in \left[0, \frac{\pi}{2}\right]\)，\(\sin 2x \ge 0\). 当 \(0 < x < \frac{\pi}{6}\) 时，\(\cos 3x > 0\)，所以 \(f'(x) > 0\)；当 \(\frac{\pi}{6} < x < \frac{\pi}{4}\) 时，\(\cos 3x < 0\)，所以 \(f'(x) < 0\). 所以 \(f(x)\) 在 \(\left(0, \frac{\pi}{6}\right]\) 上增，在 \(\left(\frac{\pi}{6}, \frac{\pi}{4}\right)\) 上减. 故
 \[
 f_{\max} = f\left(\frac{\pi}{6}\right) = 5\cos \frac{\pi}{6} - \cos \frac{5\pi}{6} = 3\sqrt{3}
 \]
@@ -867,9 +882,9 @@ f(x) &= 5\cos x - \cos 5x \\
 \end{align*}
 这得到 \(f(x) \le 3\sqrt{3}\)，同时又有 \(f\left(\frac{\pi}{6}\right) = 5\cos \frac{\pi}{6} - \cos \frac{5\pi}{6} = 3\sqrt{3}\)，故 \(f(x)\) 在 \(\left[0, \frac{\pi}{4}\right]\) 上的最大值为 \(3\sqrt{3}\)，在 \(\R\) 上的最大值也是 \(3\sqrt{3}\).
 
-（2）\(\cos y \le \cos\theta \iff y\in [2k\pi+\theta,2(k+1)\pi-\theta]\)，\(k\in\Z\). 若每个 \([2k\pi+\theta,2(k+1)\pi-\theta]\) 与 \([a-\theta,a+\theta]\) 交集都为空，则对每个 \(k\in\Z\)，必有 \(2(k+1)\pi - \theta < a-\theta\)或\(2k\pi + \theta > a+\theta\). 即 \(k < \frac{a}{2\pi} - 1\)或\(k > \frac{a}{2\pi}\). 但闭区间 \(\left[\frac{a}{2\pi}-1,\frac{a}{2\pi}\right]\) 上必有一整数 \(k\)，该 \(k\) 不满足上述条件，故矛盾. 故存在 \(y\in[a-\theta,a+\theta]\)，\(\cos y\le \cos\theta\).
+\item \(\cos y \le \cos\theta \iff y\in [2k\pi+\theta,2(k+1)\pi-\theta]\)，\(k\in\Z\). 若每个 \([2k\pi+\theta,2(k+1)\pi-\theta]\) 与 \([a-\theta,a+\theta]\) 交集都为空，则对每个 \(k\in\Z\)，必有 \(2(k+1)\pi - \theta < a-\theta\)或\(2k\pi + \theta > a+\theta\). 即 \(k < \frac{a}{2\pi} - 1\)或\(k > \frac{a}{2\pi}\). 但闭区间 \(\left[\frac{a}{2\pi}-1,\frac{a}{2\pi}\right]\) 上必有一整数 \(k\)，该 \(k\) 不满足上述条件，故矛盾. 故存在 \(y\in[a-\theta,a+\theta]\)，\(\cos y\le \cos\theta\).
 
-（3）【法一】记 \(h_\varphi(x)=5\cos x-\cos (5x+\varphi)\). 因为 \(h_\varphi(x+2\pi)=h_\varphi(x)\)，且 \(\varphi\) 可模 \(2\pi\) 化到 \([0,2\pi]\) 内，又有 \(h_{2\pi-\varphi}(x)=h_\varphi(-x)\)，所以只需讨论 \(x\in[0,2\pi]\)，\(\varphi\in[0,\pi]\) 的情况.
+\item 【法一】记 \(h_\varphi(x)=5\cos x-\cos (5x+\varphi)\). 因为 \(h_\varphi(x+2\pi)=h_\varphi(x)\)，且 \(\varphi\) 可模 \(2\pi\) 化到 \([0,2\pi]\) 内，又有 \(h_{2\pi-\varphi}(x)=h_\varphi(-x)\)，所以只需讨论 \(x\in[0,2\pi]\)，\(\varphi\in[0,\pi]\) 的情况.
 
 当 \(\varphi=\pi\) 时，\(h_\varphi(x)=5\cos x-\cos(5x+\pi)=5\cos x+\cos 5x\le 6\)，且 \(h_{\pi}(0)=6\)，故其最大值为 \(6\).
 
@@ -892,7 +907,7 @@ b_{\min}=3\sqrt{3}
 【法二】
 \(g_\varphi(x)=5\cos x-\cos (5x+\varphi)\).
 
-\circled{1}一方面，若存在 \(\varphi\) 使 \(g_\varphi(x)\le b\) 对任意 \(x\) 成立，则 \(g_\varphi(x+\pi)\ge -b\)，从而
+一方面，若存在 \(\varphi\) 使 \(g_\varphi(x)\le b\) 对任意 \(x\) 成立，则 \(g_\varphi(x+\pi)\ge -b\)，从而
 \(|g_\varphi(x)|\le b\).
 故有 \(b\ge 0\). 设
 \(\frac{\varphi}{6}-\frac{\pi}{6}=m\)，
@@ -907,7 +922,7 @@ b&\ge \left|g_\varphi\left(-\frac{\varphi}{6}+\frac{\pi}{2}\right)\right| =\left
 \(\cos 2m\)，\(\ \cos \left(2m+\frac{2\pi}{3}\right)\)，\(\ \cos \left(2m-\frac{2\pi}{3}\right)\le 2\left(\frac{b}{6}\right)^2-1=\frac{b^2}{18}-1\).
 若 \(b<3\sqrt{3}\)，则上述三个余弦值都小于 \(\frac{1}{2}\). 但三个角在单位圆上两两相差 \(\frac{2\pi}{3}\)，其中至少有一个角模 \(2\pi\) 后落在 \(\left[-\frac{\pi}{3},\frac{\pi}{3}\right]\) 内，对应的余弦值不小于 \(\frac{1}{2}\)，矛盾. 故 \(b\ge 3\sqrt{3}\).
 
-\circled{2}另一方面，若 \(b=3\sqrt{3}\)，由（1）知 \(f(x)\le 3\sqrt{3}\)，取 \(\varphi=0\) 时
+另一方面，若 \(b=3\sqrt{3}\)，由（1）知 \(f(x)\le 3\sqrt{3}\)，取 \(\varphi=0\) 时
 \[
 5\cos x-\cos (5x+\varphi)=5\cos x-\cos 5x=f(x)\le 3\sqrt{3}=b
 \]
@@ -915,4 +930,5 @@ b&\ge \left|g_\varphi\left(-\frac{\varphi}{6}+\frac{\pi}{2}\right)\right| =\left
 \(
 b_{\min}=3\sqrt{3}
 \)
+\end{enumerate}
 \end{solution}

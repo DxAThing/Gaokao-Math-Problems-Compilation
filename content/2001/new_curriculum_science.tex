@@ -85,7 +85,7 @@ A
 \end{answer}
 
 \begin{problem}
-若 \(0<\alpha<\beta<\frac{\pi}{4}\)，\(\sin\alpha+\cos\alpha=a\)，\(\ \sin\beta+\cos\beta=b\)，则（\quad）
+若 \(0<\alpha<\beta<\frac{\pi}{4}\)，\(\sin\alpha+\cos\alpha=a\)，\(\sin\beta+\cos\beta=b\)，则（\quad）
 
 \choices
     {\(a<b\)}
@@ -151,7 +151,11 @@ B
 
 记三种盖法屋顶面积分别为 \(P_1\)，\(P_2\)，\(P_3\). 若屋顶斜面与水平面所成的角都是 \(\alpha\)，则（\quad）
 
+\begingroup
+\leftskip=0pt\relax
+\rightskip=0pt\relax
 \bitmapfigure[max width=0.74\linewidth]{img/2001/new_curriculum_science/q11_fig1.png}
+\endgroup
 
 \choices
     {\(P_3>P_2>P_1\)}
@@ -226,23 +230,78 @@ D
 \end{problem}
 
 \begin{solution}
-当 \(a<0\) 或 \(a>1\) 时，\(a<a^2\)，不等式的解集为 \((a,a^2)\)；当 \(0<a<1\) 时，\(a^2<a\)，解集为 \((a^2,a)\)；当 \(a=0\) 或 \(a=1\) 时，不等式无解.
+原不等式的解集是下面两个不等式组的解集的并集：
+\[
+\begin{cases}
+x-a>0,\\
+x-a^2<0
+\end{cases}
+\qquad\text{或}\qquad
+\begin{cases}
+x-a<0,\\
+x-a^2>0.
+\end{cases}
+\]
+
+分情况讨论.
+
+当 \(a<0\) 或 \(a>1\) 时，有 \(a<a^2\). 此时，第一个不等式组的解集为 \(\{x\mid a<x<a^2\}\)，第二个不等式组的解集为空集 \(\varnothing\).
+
+当 \(0<a<1\) 时，有 \(a^2<a\). 此时，第一个不等式组的解集为空集 \(\varnothing\)，第二个不等式组的解集为 \(\{x\mid a^2<x<a\}\).
+
+当 \(a=0\) 或 \(a=1\) 时，原不等式无解.
+
+综上，当 \(a<0\) 或 \(a>1\) 时，原不等式的解集为 \(\{x\mid a<x<a^2\}\)；当 \(0<a<1\) 时，原不等式的解集为 \(\{x\mid a^2<x<a\}\)；当 \(a=0\) 或 \(a=1\) 时，原不等式无解.
 \end{solution}
 
 \begin{problem}
-如图，用 \(A\)，\(B\)，\(C\) 三类不同的元件连接成两个系统 \(N_1\)，\(N_2\). 当元件 \(A\)，\(B\)，\(C\) 都正常工作时，系统 \(N_1\) 正常工作；当元件 \(A\) 正常工作且元件 \(B\)，\(C\) 至少有一个正常工作时，系统 \(N_2\) 正常工作. 已知元件 \(A\)，\(B\)，\(C\) 正常工作的概率依次为 \(0.80\)，\(0.90\)，\(0.90\). 分别求系统 \(N_1\)，\(N_2\) 正常工作的概率 \(P_1\)，\(P_2\).
+如图，用 \(A\)，\(B\)，\(C\) 三类不同的元件连接成两个系统 \(N_1\)，\(N_2\).
 
+\begin{enumerate}
+\item 当元件 \(A\)，\(B\)，\(C\) 都正常工作时，系统 \(N_1\) 正常工作；
+\item 当元件 \(A\) 正常工作且元件 \(B\)，\(C\) 至少有一个正常工作时，系统 \(N_2\) 正常工作.
+\end{enumerate}
+
+已知元件 \(A\)，\(B\)，\(C\) 正常工作的概率依次为 \(0.80\)，\(0.90\)，\(0.90\). 分别求系统 \(N_1\)，\(N_2\) 正常工作的概率 \(P_1\)，\(P_2\).
+
+\begingroup
+\leftskip=0pt\relax
+\rightskip=0pt\relax
 \bitmapfigure[max width=0.74\linewidth]{img/2001/new_curriculum_science/q18_fig1.png}
+\endgroup
 \end{problem}
 
 \begin{solution}
-由相互独立性，
+\begin{enumerate}
+\item 分别记元件 \(A\)，\(B\)，\(C\) 正常工作为事件 \(A\)，\(B\)，\(C\). 由已知条件，
 \[
-P_1=0.80\times0.90\times0.90=0.648,
-\qquad
-P_2=0.80\left[1-(1-0.90)(1-0.90)\right]=0.792
+P(A)=0.80,\qquad P(B)=0.90,\qquad P(C)=0.90.
 \]
-故 \(P_1=0.648\)，\(P_2=0.792\).
+
+由于事件 \(A\)，\(B\)，\(C\) 是相互独立的，所以系统 \(N_1\) 正常工作的概率为
+\[
+P_1=P(A\cdot B\cdot C)
+=P(A)\cdot P(B)\cdot P(C)
+=0.80\times0.90\times0.90=0.648.
+\]
+故系统 \(N_1\) 正常工作的概率为 \(0.648\).
+
+\item 系统 \(N_2\) 正常工作的概率为
+\[
+P_2=P(A)\left[1-P(\overline{B}\cdot\overline{C})\right]
+=P(A)\left[1-P(\overline{B})P(\overline{C})\right].
+\]
+又
+\[
+P(\overline{B})=1-P(B)=1-0.90=0.10,\qquad
+P(\overline{C})=1-P(C)=1-0.90=0.10.
+\]
+因此
+\[
+P_2=0.80\left[1-0.10\times0.10\right]=0.80\times0.99=0.792.
+\]
+故系统 \(N_2\) 正常工作的概率为 \(0.792\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -256,15 +315,41 @@ P_2=0.80\left[1-(1-0.90)(1-0.90)\right]=0.792
 \end{problem}
 
 \begin{solution}
-由偶函数条件，\(f(x)=f(-x)\)，即
+\begin{enumerate}
+\item 依题意，对一切 \(x\in\R\) 有 \(f(x)=f(-x)\)，即
 \[
-\left(\frac1a-a\right)(\e^x-\e^{-x})=0
+\frac{\e^x}{a}+\frac{a}{\e^x}=\frac{1}{a\e^x}+a\e^x.
 \]
-由于 \(a>0\)，得 \(a=1\).
+所以
+\[
+\left(a-\frac1a\right)\left(\e^x-\frac1{\e^x}\right)=0
+\]
+对一切 \(x\in\R\) 成立. 由此得到 \(a-\frac1a=0\)，即 \(a^2=1\). 又因为 \(a>0\)，所以 \(a=1\).
+\item
+\begin{enumerate}
+\item 证明一：设 \(0<x_1<x_2\)，则
+\[
+f(x_1)-f(x_2)=\e^{x_1}-\e^{x_2}+\frac1{\e^{x_1}}-\frac1{\e^{x_2}}
+\]
+\[
+f(x_1)-f(x_2)=(\e^{x_2}-\e^{x_1})\left(\frac1{\e^{x_1+x_2}}-1\right)
+\]
+\[
+f(x_1)-f(x_2)=\e^{x_1}(\e^{x_2-x_1}-1)\frac{1-\e^{x_2+x_1}}{\e^{x_2+x_1}}.
+\]
+由 \(x_1>0\)，\(x_2>0\)，\(x_2-x_1>0\)，得 \(x_1+x_2>0\)，从而 \(\e^{x_2-x_1}-1>0\)，\(1-\e^{x_2+x_1}<0\). 因此 \(f(x_1)-f(x_2)<0\)，即 \(f(x)\) 在 \((0,+\infty)\) 上是增函数.
 
-此时 \(f(x)=\e^x+\e^{-x}\)，且当 \(x>0\) 时，\(f'(x)=\e^x-\e^{-x}>0\)，所以 \(f(x)\) 在 \((0,+\infty)\) 上是增函数.
+\item 证明二：由 \(f(x)=\e^x+\e^{-x}\) 得
+\[
+f'(x)=\e^x-\e^{-x}=\e^{-x}(\e^{2x}-1).
+\]
+当 \(x\in(0,+\infty)\) 时，有 \(\e^{-x}>0\)，\(\e^{2x}-1>0\)，此时 \(f'(x)>0\). 所以 \(f(x)\) 在 \((0,+\infty)\) 上是增函数.
+\end{enumerate}
+\end{enumerate}
 \end{solution}
 
+
+\section{选做题：解答题}
 
 \begin{problem}
 如图，以正四棱锥 \(V-ABCD\) 底面中心 \(O\) 为坐标原点建立空间直角坐标系 \(O-xyz\)，其中 \(Ox \parallel BC\)，\(Oy \parallel AB\). \(E\) 为 \(VC\) 中点，正四棱锥底面边长为 \(2a\)，高为 \(h_0\).
@@ -279,19 +364,55 @@ P_2=0.80\left[1-(1-0.90)(1-0.90)\right]=0.792
 \end{problem}
 
 \begin{solution}
-取 \(B(a,a,0)\)，\(C(-a,a,0)\)，\(D(-a,-a,0)\)，\(V(0,0,h_0)\)，则 \(E=(-a/2,a/2,h_0/2)\). 因此
+\begin{enumerate}
+\item 由题意知 \(B(a,a,0)\)，\(C(-a,a,0)\)，\(D(-a,-a,0)\)，\(V(0,0,h_0)\)，\(E=\left(-\frac a2,\frac a2,\frac{h_0}{2}\right)\). 由此得
 \[
 \overrightarrow{BE}=\left(-\frac{3a}{2},-\frac a2,\frac{h_0}{2}\right),\qquad
 \overrightarrow{DE}=\left(\frac a2,\frac{3a}{2},\frac{h_0}{2}\right)
 \]
-从而
+于是
 \[
-\cos\langle\overrightarrow{BE},\overrightarrow{DE}\rangle=\frac{h_0^2-6a^2}{10a^2+h_0^2}
+\overrightarrow{BE}\cdot\overrightarrow{DE}
+=\left(-\frac{3a}{2}\cdot\frac a2\right)+\left(-\frac a2\cdot\frac{3a}{2}\right)+\frac{h_0}{2}\cdot\frac{h_0}{2}
+=-\frac{3a^2}{2}+\frac{h_0^2}{4},
 \]
-又 \(\overrightarrow{CV}=(a,-a,h_0)\). 由题设 \(BE\perp CV\)，得 \(h_0^2=2a^2\)，故
+且
 \[
-\angle BED=\arccos\left(-\frac13\right)
+\lvert\overrightarrow{BE}\rvert=\lvert\overrightarrow{DE}\rvert
+=\sqrt{\left(-\frac{3a}{2}\right)^2+\left(-\frac a2\right)^2+\left(\frac{h_0}{2}\right)^2}
+=\frac12\sqrt{10a^2+h_0^2}.
 \]
+由向量的数量积公式，有
+\[
+\cos\langle\overrightarrow{BE},\overrightarrow{DE}\rangle
+=\frac{\overrightarrow{BE}\cdot\overrightarrow{DE}}{\lvert\overrightarrow{BE}\rvert\cdot\lvert\overrightarrow{DE}\rvert}
+=\frac{-6a^2+h_0^2}{10a^2+h_0^2}.
+\]
+
+\item 若 \(\angle BED\) 是二面角 \(\alpha-VC-\beta\) 的平面角，则 \(\overrightarrow{BE}\perp\overrightarrow{CV}\)，即 \(\overrightarrow{BE}\cdot\overrightarrow{CV}=0\). 又由 \(C(-a,a,0)\)，\(V(0,0,h_0)\)，有
+\[
+\overrightarrow{CV}=(a,-a,h_0),\qquad
+\overrightarrow{BE}=\left(-\frac{3a}{2},-\frac a2,\frac{h_0}{2}\right).
+\]
+因此
+\[
+\overrightarrow{BE}\cdot\overrightarrow{CV}
+=-\frac{3a^2}{2}+\frac{a^2}{2}+\frac{h_0^2}{2}=0,
+\]
+即 \(h_0=\sqrt2a\). 这时
+\[
+\cos\langle\overrightarrow{BE},\overrightarrow{DE}\rangle
+=\frac{-6a^2+h_0^2}{10a^2+h_0^2}
+=\frac{-6a^2+(\sqrt2a)^2}{10a^2+(\sqrt2a)^2}
+=-\frac13.
+\]
+故
+\[
+\angle BED=\langle\overrightarrow{BE},\overrightarrow{DE}\rangle
+=\arccos\left(-\frac13\right)
+=\pi-\arccos\frac13.
+\]
+\end{enumerate}
 \end{solution}
 
 
@@ -308,12 +429,32 @@ P_2=0.80\left[1-(1-0.90)(1-0.90)\right]=0.792
 \end{problem}
 
 \begin{solution}
-底面直角梯形 \(ABCD\) 的面积为 \(\frac12(BC+AD)AB=\frac34\)，所以四棱锥体积为 \(\frac13\times1\times\frac34=\frac14\).
+\begin{enumerate}
+\item 直角梯形 \(ABCD\) 的面积是
+\[
+M_{\text{底面}}=\frac12(BC+AD)\cdot AB
+=\frac{1+0.5}{2}\times1=\frac34.
+\]
+所以四棱锥 \(S-ABCD\) 的体积为
+\[
+V=\frac13\times SA\times M_{\text{底面}}
+=\frac13\times1\times\frac34=\frac14.
+\]
 
-延长 \(BA\)，\(CD\) 交于 \(E\)，连接 \(SE\). 由 \(AD\parallel BC\) 且 \(BC=2AD\)，得 \(EA=AB=SA=1\)，故 \(SB=\sqrt2\). 又 \(BC\perp SB\)，所以所求二面角的正切值为
+\item 延长 \(BA\)，\(CD\) 相交于点 \(E\)，连接 \(SE\)，则 \(SE\) 是所求二面角的棱. 由 \(AD\parallel BC\)，\(BC=2AD\)，得
+\[
+EA=AB=SA,\qquad SE\perp SB.
+\]
+又因为 \(SA\perp\) 面 \(ABCD\)，得到面 \(SEB\perp\) 面 \(EBC\)，\(EB\) 是两面的交线；又 \(BC\perp EB\)，所以 \(BC\perp\) 面 \(SEB\). 故 \(SB\) 是 \(CS\) 在面 \(SEB\) 上的射影，从而 \(CS\perp SE\). 所以 \(\angle BSC\) 是所求二面角的平面角.
+
+\[
+SB=\sqrt{SA^2+AB^2}=\sqrt2,\qquad BC=1,\qquad BC\perp SB.
+\]
+因此所求二面角的正切值为
 \[
 \tan\angle BSC=\frac{BC}{SB}=\frac{\sqrt2}{2}
 \]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -329,25 +470,46 @@ P_2=0.80\left[1-(1-0.90)(1-0.90)\right]=0.792
 \end{problem}
 
 \begin{solution}
-取 \(AA'\) 的中点为原点，令 \(y\) 轴沿塔的中轴、\(x\) 轴垂直于中轴，则双曲线设为
+\begin{enumerate}
+\item 如图建立直角坐标系 \(xOy\)，\(AA'\) 在 \(x\) 轴上，\(AA'\) 的中点为坐标原点 \(O\)，\(CC'\) 与 \(BB'\) 平行于 \(x\) 轴. 设双曲线方程为
 \[
-\frac{x^2}{a^2}-\frac{y^2}{b^2}=1
+\frac{x^2}{a^2}-\frac{y^2}{b^2}=1\quad(a>0,b>0).
 \]
-由 \(AA'=14\mathrm{~m}\) 得 \(a=7\). 设 \(B(11,y_1)\)，\(C(9,y_2)\)，则 \(y_2-y_1=20\)，且
+由 \(a=\frac12AA'=7\). 又设 \(B(11,y_1)\)，\(C(9,y_2)\)，因为 \(B\)，\(C\) 在双曲线上，所以有
 \[
-\frac{121}{49}-\frac{y_1^2}{b^2}=1,\qquad \frac{81}{49}-\frac{y_2^2}{b^2}=1
+\begin{cases}
+\dfrac{11^2}{7^2}-\dfrac{y_1^2}{b^2}=1,\\
+\dfrac{9^2}{7^2}-\dfrac{y_2^2}{b^2}=1,\\
+y_2-y_1=20.
+\end{cases}
 \]
 解得 \(y_1=-12\)，\(y_2=8\)，\(b=7\sqrt2\)，故双曲线方程为
 \[
 \frac{x^2}{49}-\frac{y^2}{98}=1
 \]
 
-冷却塔容积为
+\item 由双曲线方程得
 \[
-V=\pi\int_{-12}^{8}\left(\frac{y^2}{2}+49\right)\,\mathrm dy
-=\frac{4060\pi}{3}\approx4.25\times10^3\mathrm{~m^3}
+x^2=\frac12y^2+49.
 \]
-所以容积约为 \(4250\mathrm{~m^3}\).
+设冷却塔的容积为 \(V\mathrm{~m^3}\)，则
+\[
+V=\pi\int_{y_1}^{y_2}x^2\,\mathrm dy
+\]
+即
+\[
+V=\pi\int_{-12}^{8}\left(\frac12y^2+49\right)\,\mathrm dy.
+\]
+所以
+\[
+V=\pi\left.\left(\frac16y^3+49y\right)\right|_{-12}^{8}
+\]
+即
+\[
+V=\frac{4060\pi}{3}\approx4.25\times10^3\mathrm{~m^3}.
+\]
+经计算得 \(V\approx4.25\times10^3\mathrm{~m^3}\)，所以冷却塔的容积约为 \(4.25\times10^3\mathrm{~m^3}\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -360,17 +522,41 @@ V=\pi\int_{-12}^{8}\left(\frac{y^2}{2}+49\right)\,\mathrm dy
 \end{problem}
 
 \begin{solution}
-联立两曲线方程，解得
+\begin{enumerate}
+\item 两曲线的交点坐标 \((x,y)\) 满足方程组
+\[
+\begin{cases}
+x^2\sin\theta+y^2\cos\theta=1,\\
+x^2\cos\theta-y^2\sin\theta=1.
+\end{cases}
+\]
+解得
 \[
 \begin{cases}
 x^2=\sin\theta+\cos\theta,\\
 y^2=\cos\theta-\sin\theta.
 \end{cases}
 \]
-要有四个不同交点，须 \(x^2>0\)，\(y^2>0\). 结合 \(0<\theta<\frac\pi2\)，得 \(0<\theta<\frac\pi4\).
+有 \(4\) 个不同交点等价于 \(x^2>0\) 且 \(y^2>0\)，即
+\[
+\begin{cases}
+\sin\theta+\cos\theta>0,\\
+\cos\theta-\sin\theta>0.
+\end{cases}
+\]
+又因为 \(0<\theta<\frac\pi2\)，所以得 \(\theta\) 的取值范围为 \(0<\theta<\frac\pi4\).
 
-两式相加得 \(x^2+y^2=2\cos\theta\)，故四个交点共圆，圆心为原点，圆半径 \(r=\sqrt{2\cos\theta}\). 当 \(0<\theta<\frac\pi4\) 时，
+\item 由第（1）问的推理，4 个交点的坐标 \((x,y)\) 满足方程
+\[
+x^2+y^2=2\cos\theta\quad\left(0<\theta<\frac\pi4\right).
+\]
+即得 4 个交点共圆，该圆的圆心在原点，半径为
+\[
+r=\sqrt{2\cos\theta}\quad\left(0<\theta<\frac\pi4\right).
+\]
+因为 \(\cos\theta\) 在 \(\left(0,\frac\pi4\right)\) 上是减函数，所以由 \(\cos0=1\)，\(\cos\frac\pi4=\frac{\sqrt2}{2}\) 知，\(r\) 的取值范围是
 \[
 \sqrt[4]{2}<r<\sqrt2
 \]
+\end{enumerate}
 \end{solution}

@@ -1407,6 +1407,91 @@
 \newif\ifshowanswer
 \showanswertrue     % 【默认开启】
 
+% 答案框内的 enumerate 不是悬挂列表，而是带自动标签的普通段落流。
+% 第一项可紧跟框标题；嵌套第一项可紧跟父项标签。其余项目及项目内
+% 的显式新段落均沿用答案正文的 2em 首行缩进，续行回到框体左边界。
+\makeatletter
+\newif\ifexamanswerenumfirstitem
+\newif\ifexamanswerenumcontinuefirst
+
+\newcommand{\examanswerenumemititem}[1]{%
+    \ifexamanswerenumfirstitem
+        \ifexamanswerenumcontinuefirst
+            \unskip
+        \else
+            \par\indent
+        \fi
+    \else
+        \par\indent
+    \fi
+    \examanswerenumfirstitemfalse
+    #1\ignorespaces
+}
+
+\newcommand{\examanswerenumstep}{%
+    % Hyperref inserts a zero-width destination between adjacent generated
+    % labels; xeCJK then treats that node as a punctuation boundary and adds
+    % visible space in `（2）（i）`.  The saved kernel refstepcounter retains
+    % counter/\label semantics without injecting that horizontal node.
+    \@ifundefined{H@refstepcounter}{%
+        \refstepcounter{\@enumctr}%
+    }{%
+        \H@refstepcounter{\@enumctr}%
+    }%
+}
+
+\newcommand{\examanswerenumitem}{%
+    \@ifnextchar[\examanswerenumitemexplicit\examanswerenumitemautomatic
+}
+
+\newcommand{\examanswerenumitemautomatic}{%
+    \examanswerenumstep
+    \expandafter\examanswerenumemititem\expandafter{%
+        \csname label\@enumctr\endcsname
+    }%
+}
+
+\def\examanswerenumitemexplicit[#1]{%
+    \examanswerenumstep
+    \examanswerenumemititem{#1}%
+}
+
+\newenvironment{examanswerenumerate}[1][]{%
+    \ifnum\@enumdepth>3\relax
+        \@toodeep
+    \else
+        \ifhmode
+            \examanswerenumcontinuefirsttrue
+        \else
+            \examanswerenumcontinuefirstfalse
+        \fi
+        \advance\@enumdepth\@ne
+        \edef\@enumctr{enum\romannumeral\the\@enumdepth}%
+        \setcounter{\@enumctr}{0}%
+        \examanswerenumfirstitemtrue
+        \let\item\examanswerenumitem
+    \fi
+    \ignorespaces
+}{%
+    \ifnum\@enumdepth=1\relax
+        \par
+    \fi
+}
+
+\newcommand{\examanswerenumeratecontext}{%
+    \def\labelenumi{（\arabic{enumi}）}%
+    \def\labelenumii{（\roman{enumii}）}%
+    % Paragraph-style items temporarily replace \item.  LaTeX's center,
+    % flush and quote environments are based on trivlist and still need the
+    % kernel \item internally, so restore it only inside those local groups.
+    \let\examanswerstandarditem\item
+    \let\examanswerstandardtrivlist\trivlist
+    \def\trivlist{\let\item\examanswerstandarditem\examanswerstandardtrivlist}%
+    \let\enumerate\examanswerenumerate
+    \let\endenumerate\endexamanswerenumerate
+}
+\makeatother
+
 % 定义答案盒子的样式
 \tcbset{
     examanswer/.style={
@@ -1419,7 +1504,7 @@
         left=3pt,right=2pt, top=1pt, bottom=1pt,
         before skip=0.3em,
         after skip=0.3em,
-        before upper={\examwidoworphanrules\examproseparagraph\setlength{\parindent}{2em}\tolerance=3200\emergencystretch=8em\setlength{\jot}{4pt}\lineskiplimit=3pt\lineskip=4pt\selectfont},
+        before upper={\examwidoworphanrules\examproseparagraph\setlength{\parindent}{2em}\examanswerenumeratecontext\tolerance=3200\emergencystretch=8em\setlength{\jot}{4pt}\lineskiplimit=3pt\lineskip=4pt\selectfont},
         fontupper=\zihao{-4},
     },
     % Marker slices are named styles rather than inline key lists: keyval
@@ -1628,19 +1713,43 @@
         \exam@marker@parse#3\solutionfigure{\exam@marker@stop}\exam@marker@end
     \fi
 }
+\long\def\exam@marker@rendersliced#1#2{%
+    \def\exam@marker@heading{#1}%
+    \exam@marker@firsttrue
+    \exam@marker@forcefirstfalse
+    \exam@marker@hasmarkerfalse
+    \exam@marker@parse#2\solutionfigure{\exam@marker@stop}\exam@marker@end
+    \ifexam@marker@hasmarker
+        \FloatBarrier
+        \exam@marker@endfloatglue
+    \fi
+}
+% A source enumerate may span one or more solutionfigure markers.  Splitting
+% such a body into physical tcolorbox slices would close a slice while the
+% environment group is still open.  Keep that body in one breakable box and
+% let its marked figures use bitmapfigure/texfigure's existing inner-mode
+% block rendering.  Marker bodies without enumerate retain real-float slices.
+\long\def\exam@marker@renderenumerated#1#2{%
+    \begin{tcolorbox}[examanswer]%
+        \textbf{#1}\ignorespaces
+        \long\def\solutionfigure##1{%
+            \begingroup
+                \parindent=0pt\relax
+                ##1%
+            \endgroup
+        }%
+        #2
+    \end{tcolorbox}%
+}
 \long\def\exam@marker@render#1#2{%
     \ifshowanswer
         \problembodyend
         \examallownextpagebreak
-        \def\exam@marker@heading{#1}%
-        \exam@marker@firsttrue
-        \exam@marker@forcefirstfalse
-        \exam@marker@hasmarkerfalse
-        \exam@marker@parse#2\solutionfigure{\exam@marker@stop}\exam@marker@end
-        \ifexam@marker@hasmarker
-            \FloatBarrier
-            \exam@marker@endfloatglue
-        \fi
+        \tl_if_in:nnTF {#2} {\begin{enumerate}}%
+            {\tl_if_in:nnTF {#2} {\solutionfigure}%
+                {\exam@marker@renderenumerated{#1}{#2}}%
+                {\exam@marker@rendersliced{#1}{#2}}}%
+            {\exam@marker@rendersliced{#1}{#2}}%
     \fi
 }
 \long\def\exam@collectsolution#1{\exam@marker@render{\textbf{【解析】}}{#1}}
