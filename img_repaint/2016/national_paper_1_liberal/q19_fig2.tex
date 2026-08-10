@@ -11,12 +11,12 @@
 % dashed segments: horizontal guide lines at each labelled frequency level.
 % Labels are placed outside bars and clear of axes and guides.
 \begin{tikzpicture}
-\begin{axis}[
+\begin{axis}[exam statistical histogram,scaled ticks=false,
     width=8.4cm,
     height=4.8cm,
     xmin=14.8,
     xmax=23.0,
-    ymin=-2.2,
+    ymin=0,
     ymax=27.0,
     axis lines=left,
     axis line style={-stealth},
@@ -54,13 +54,9 @@
     };
 
     % The source chart compresses the unused x-range between 0 and 16.
-    \node[anchor=north,inner sep=0pt] at (axis cs:15.08,-0.05) {0};
-    \draw[black,line width=0.45pt]
-        (axis cs:15.17,0) -- (axis cs:15.31,0.90)
-        -- (axis cs:15.45,0) -- (axis cs:15.59,0.90)
-        -- (axis cs:15.73,0) -- (axis cs:15.87,0.90)
-        -- (axis cs:16.01,0);
-    \node[anchor=west,inner sep=0pt] at (axis cs:14.92,24.85) {频数};
-    \node[anchor=east,inner sep=0pt] at (axis cs:22.95,1.05) {更换的易损零件数};
+    \node[anchor=north east,inner sep=0pt,xshift=-6pt,yshift=-4pt] at (axis cs:15.08,0.000000) {0};
+    \examstatxbreak[black,line width=0.45pt]{15.59}{0};
+    \examstatylabel{频数};
+    \examstatxlabel{更换的易损零件数};
 \end{axis}
 \end{tikzpicture}

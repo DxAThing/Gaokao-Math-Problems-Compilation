@@ -4,9 +4,9 @@
 % dashed guides: y=0.39 to x=3, y=0.37 to x=2, y=0.10 to x=4, y=0.02 to x=5。
 % labels: y-axis is 频率/组距, x-axis is 月均用水量/吨, first bar height is x。
 \begin{tikzpicture}
-\begin{axis}[
-  width=12cm,
-  height=7cm,
+\begin{axis}[exam statistical histogram,scaled ticks=false,
+  width=16cm,
+  height=13.172cm,
   xmin=0, xmax=6,
   ymin=0, ymax=0.45,
   axis lines=left,
@@ -14,12 +14,10 @@
   xtick={0,1,2,3,4,5},
   ytick=\empty,
   tick style={draw=none},
-  xlabel={月均用水量/吨},
-  xlabel style={at={(axis description cs:0.94,-0.03)},anchor=west},
-  ylabel={\(\dfrac{\text{频率}}{\text{组距}}\)},
-  ylabel style={rotate=0,at={(axis description cs:0.02,1.02)},anchor=south},
   clip=false,
 ]
+    \examstatxlabel{月均用水量/吨};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
 \addplot[
   ybar interval,
   draw=black,
@@ -32,10 +30,10 @@
 \draw[dashed,line width=0.4pt] (axis cs:0,0.37) -- (axis cs:2,0.37);
 \draw[dashed,line width=0.4pt] (axis cs:0,0.10) -- (axis cs:4,0.10);
 \draw[dashed,line width=0.4pt] (axis cs:0,0.02) -- (axis cs:5,0.02);
-\node[anchor=east,xshift=-3pt] at (axis cs:0,0.39) {0.39};
-\node[anchor=east,xshift=-3pt] at (axis cs:0,0.37) {0.37};
-\node[anchor=east,xshift=-3pt] at (axis cs:0,0.10) {0.1};
-\node[anchor=east,xshift=-3pt] at (axis cs:0,0.02) {0.02};
+\node[anchor=east,xshift=-4pt] at (axis cs:0.000000,0.39) {0.39};
+\node[anchor=east,xshift=-4pt] at (axis cs:0.000000,0.37) {0.37};
+\node[anchor=east,xshift=-4pt] at (axis cs:0.000000,0.10) {0.1};
+\node[anchor=east,xshift=-4pt] at (axis cs:0.000000,0.02) {0.02};
 \node[anchor=east,xshift=-3pt] at (axis cs:0,0.12) {$x$};
 \end{axis}
 \end{tikzpicture}

@@ -12,9 +12,9 @@
 % dashed segments: horizontal frequency guides terminating at the corresponding bar edge.
 % labels: frequency-density above the y-axis, 身高 to the right of the x-axis, ticks below x-axis.
 \begin{tikzpicture}[baseline,font=\normalsize]
-\begin{axis}[
-    width=10.0cm,
-    height=5.8cm,
+\begin{axis}[exam statistical histogram,
+    width=16cm,
+    height=10.914cm,
     axis lines=none,
     clip=false,
     xmin=-12,
@@ -43,41 +43,38 @@
     % Axes and the source x-axis break before the 100 cm group.
     \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:132,0);
     \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,0.039);
-    \fill[white] (axis cs:2,-0.0035) -- (axis cs:5,0.0012) -- (axis cs:8,-0.0035)
-        -- (axis cs:11,0.0012) -- (axis cs:14,-0.0035) -- cycle;
-    \draw[line width=0.8pt] (axis cs:2,-0.0035) -- (axis cs:5,0.0012)
-        -- (axis cs:8,-0.0035) -- (axis cs:11,0.0012) -- (axis cs:14,-0.0035);
+    \examstatxbreak[line width=0.8pt]{8}{0};
 
-    \node[anchor=south west,inner sep=0pt] at (axis cs:4,0.0365) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt] at (axis cs:128,-0.0012) {身高};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{身高};
 
     % x-axis tick marks and labels.
     \draw[line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.0008);
     % Keep the origin label left of the y-axis so the break mark cannot obscure it.
-    \node[anchor=north east,inner sep=0pt] at (axis cs:-1,-0.0010) {0};
+    \node[anchor=north east,inner sep=0pt,xshift=-4pt,yshift=-4pt] at (axis cs:-1,0.000000) {0};
     \draw[line width=0.45pt] (axis cs:20,0) -- (axis cs:20,-0.0008);
-    \node[anchor=north,inner sep=0pt] at (axis cs:20,-0.0010) {100};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:20,-0.000800) {100};
     \draw[line width=0.45pt] (axis cs:40,0) -- (axis cs:40,-0.0008);
-    \node[anchor=north,inner sep=0pt] at (axis cs:40,-0.0010) {110};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:40,-0.000800) {110};
     \draw[line width=0.45pt] (axis cs:60,0) -- (axis cs:60,-0.0008);
-    \node[anchor=north,inner sep=0pt] at (axis cs:60,-0.0010) {120};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:60,-0.000800) {120};
     \draw[line width=0.45pt] (axis cs:80,0) -- (axis cs:80,-0.0008);
-    \node[anchor=north,inner sep=0pt] at (axis cs:80,-0.0010) {130};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:80,-0.000800) {130};
     \draw[line width=0.45pt] (axis cs:100,0) -- (axis cs:100,-0.0008);
-    \node[anchor=north,inner sep=0pt] at (axis cs:100,-0.0010) {140};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:100,-0.000800) {140};
     \draw[line width=0.45pt] (axis cs:120,0) -- (axis cs:120,-0.0008);
-    \node[anchor=north,inner sep=0pt] at (axis cs:120,-0.0010) {150};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:120,-0.000800) {150};
 
     % y-axis guides and labels.
     \draw[line width=0.45pt] (axis cs:0,0.005) -- (axis cs:-3,0.005);
-    \node[anchor=east,inner sep=0pt] at (axis cs:-4,0.005) {0.005};
+    \node[anchor=east,inner sep=0pt,xshift=-4pt] at (axis cs:-3.000000,0.005) {0.005};
     \draw[line width=0.45pt] (axis cs:0,0.010) -- (axis cs:-3,0.010);
-    \node[anchor=east,inner sep=0pt] at (axis cs:-4,0.010) {0.010};
+    \node[anchor=east,inner sep=0pt,xshift=-4pt] at (axis cs:-3.000000,0.010) {0.010};
     \draw[line width=0.45pt] (axis cs:0,0.020) -- (axis cs:-3,0.020);
-    \node[anchor=east,inner sep=0pt] at (axis cs:-4,0.020) {0.020};
+    \node[anchor=east,inner sep=0pt,xshift=-4pt] at (axis cs:-3.000000,0.020) {0.020};
     \draw[line width=0.45pt] (axis cs:0,0.030) -- (axis cs:-3,0.030);
-    \node[anchor=east,inner sep=0pt] at (axis cs:-4,0.030) {$a$};
+    \node[anchor=east,inner sep=0pt,xshift=-4pt] at (axis cs:-4,0.030) {$a$};
     \draw[line width=0.45pt] (axis cs:0,0.035) -- (axis cs:-3,0.035);
-    \node[anchor=east,inner sep=0pt] at (axis cs:-4,0.035) {0.035};
+    \node[anchor=east,inner sep=0pt,xshift=-4pt] at (axis cs:-3.000000,0.035) {0.035};
 \end{axis}
 \end{tikzpicture}

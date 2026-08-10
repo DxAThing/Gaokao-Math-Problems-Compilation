@@ -9,7 +9,7 @@
 % dashed segments: horizontal guides at 0.002, 0.004, 0.005, and 0.006.
 % labels: frequency/group-width label above the y-axis; daily-sales label to the right; numeric ticks kept clear of axes and bars.
 \begin{tikzpicture}[baseline]
-\begin{axis}[
+\begin{axis}[exam statistical histogram,
     width=8.4cm,
     height=4.8cm,
     axis lines=none,
@@ -52,27 +52,27 @@
     \draw[line width=0.45pt] (axis cs:150,0) -- (axis cs:150,-0.00018);
     \draw[line width=0.45pt] (axis cs:200,0) -- (axis cs:200,-0.00018);
     \draw[line width=0.45pt] (axis cs:250,0) -- (axis cs:250,-0.00018);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:0,-0.00025) {0};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:50,-0.00025) {50};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:100,-0.00025) {100};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:150,-0.00025) {150};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:200,-0.00025) {200};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:250,-0.00025) {250};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:0,-0.000180) {0};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:50,-0.000180) {50};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:100,-0.000180) {100};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:150,-0.000180) {150};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:200,-0.000180) {200};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:250,-0.000180) {250};
 
     % y-axis ticks and labels.
     \draw[line width=0.45pt] (axis cs:0,0.002) -- (axis cs:-7,0.002);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-9,0.002) {0.002};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-7.000000,0.002) {0.002};
     \draw[line width=0.45pt] (axis cs:0,0.003) -- (axis cs:-7,0.003);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-9,0.003) {0.003};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-7.000000,0.003) {0.003};
     \draw[line width=0.45pt] (axis cs:0,0.004) -- (axis cs:-7,0.004);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-9,0.004) {0.004};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-7.000000,0.004) {0.004};
     \draw[line width=0.45pt] (axis cs:0,0.005) -- (axis cs:-7,0.005);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-9,0.005) {0.005};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-7.000000,0.005) {0.005};
     \draw[line width=0.45pt] (axis cs:0,0.006) -- (axis cs:-7,0.006);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-9,0.006) {0.006};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-7.000000,0.006) {0.006};
 
-    \node[anchor=south west,inner sep=0pt,font=\normalsize] at (axis cs:8,0.00675) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\normalsize] at (axis cs:255,0.0007) {日销售量/个};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{日销售量/个};
     \path (axis cs:-22,-0.00045) rectangle (axis cs:290,0.0069);
 \end{axis}
 \end{tikzpicture}

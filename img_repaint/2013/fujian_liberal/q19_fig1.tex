@@ -12,11 +12,11 @@
 % dashed segments: horizontal reference lines at the labeled frequency-density levels
 % Label avoidance: y labels sit above the vertical axes; 件数 sits by the x-arrow; group labels sit below each axis.
 \begin{tikzpicture}
-\begin{axis}[
+\begin{axis}[exam statistical histogram,
     name=leftplot,
     font=\normalsize,
-    width=5.8cm,
-    height=4.1cm,
+    width=15cm,
+    height=6.5cm,
     xmin=0,
     xmax=3.25,
     ymin=0,
@@ -27,15 +27,15 @@
     xticklabels={0,50,60,70,80,90,100},
     ytick={0.005,0.020,0.035},
     yticklabels={0.0050,0.0200,0.0350},
-    xticklabel style={font=\normalsize,rotate=-45,anchor=north east},
-    yticklabel style={font=\normalsize},
+    xticklabel style={font=\normalsize,anchor=north,yshift=-4pt},
+    yticklabel style={font=\normalsize,xshift=-4pt},
     tick style={black,line width=0.4pt},
     tick align=outside,
     clip=false,
 ]
-\node[anchor=south west,inner sep=0pt,font=\normalsize] at (axis cs:0.08,0.039) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+\examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
 \node[anchor=south east,inner sep=0pt,font=\normalsize] at (axis cs:3.23,0.005) {件数};
-\node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:1.63,-0.009) {25 周岁以上组};
+\node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:1.63,-0.009) {25 周岁以上组};
 \draw[dashed,line width=0.35pt] (axis cs:0,0.005)--(axis cs:2.5,0.005);
 \draw[dashed,line width=0.35pt] (axis cs:0,0.020)--(axis cs:2.0,0.020);
 \draw[dashed,line width=0.35pt] (axis cs:0,0.035)--(axis cs:2.0,0.035);
@@ -48,16 +48,16 @@
   (3.0,0)
 };
 \draw[white,line width=2pt] (axis cs:0.16,0)--(axis cs:0.40,0);
-\draw[line width=0.45pt] (axis cs:0.16,0)--(axis cs:0.20,0.0018)--(axis cs:0.24,-0.0018)--(axis cs:0.28,0.0018)--(axis cs:0.32,-0.0018)--(axis cs:0.36,0.0018)--(axis cs:0.40,0);
+\examstatxbreak[line width=0.45pt]{0.28}{0};
 \end{axis}
 
-\begin{axis}[
-    at={(leftplot.east)},
-    anchor=west,
-    xshift=1.05cm,
+\begin{axis}[exam statistical histogram,
+    at={(leftplot.south west)},
+    anchor=north west,
+    yshift=-5cm,
     font=\normalsize,
-    width=5.8cm,
-    height=4.1cm,
+    width=15cm,
+    height=6.5cm,
     xmin=0,
     xmax=3.25,
     ymin=0,
@@ -68,15 +68,15 @@
     xticklabels={0,50,60,70,80,90,100},
     ytick={0.005,0.025,0.0325},
     yticklabels={0.0050,0.0250,0.0325},
-    xticklabel style={font=\normalsize,rotate=-45,anchor=north east},
-    yticklabel style={font=\normalsize},
+    xticklabel style={font=\normalsize,anchor=north,yshift=-4pt},
+    yticklabel style={font=\normalsize,xshift=-4pt},
     tick style={black,line width=0.4pt},
     tick align=outside,
     clip=false,
 ]
-\node[anchor=south west,inner sep=0pt,font=\normalsize] at (axis cs:0.08,0.036) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+\examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
 \node[anchor=south east,inner sep=0pt,font=\normalsize] at (axis cs:3.23,0.005) {件数};
-\node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:1.63,-0.009) {25 周岁以下组};
+\node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:1.63,-0.009) {25 周岁以下组};
 \draw[dashed,line width=0.35pt] (axis cs:0,0.005)--(axis cs:2.5,0.005);
 \draw[dashed,line width=0.35pt] (axis cs:0,0.025)--(axis cs:1.5,0.025);
 \draw[dashed,line width=0.35pt] (axis cs:0,0.0325)--(axis cs:2.0,0.0325);
@@ -89,6 +89,6 @@
   (3.0,0)
 };
 \draw[white,line width=2pt] (axis cs:0.16,0)--(axis cs:0.40,0);
-\draw[line width=0.45pt] (axis cs:0.16,0)--(axis cs:0.20,0.0018)--(axis cs:0.24,-0.0018)--(axis cs:0.28,0.0018)--(axis cs:0.32,-0.0018)--(axis cs:0.36,0.0018)--(axis cs:0.40,0);
+\examstatxbreak[line width=0.45pt]{0.28}{0};
 \end{axis}
 \end{tikzpicture}

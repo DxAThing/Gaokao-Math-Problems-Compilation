@@ -6,9 +6,9 @@
 % at 0.002, 0.008, 0.009, 0.022, 0.024, 0.033; labels: frequency/group-width
 % fraction on the y-axis and quality-index label on the x-axis.
 \begin{tikzpicture}[baseline=(current bounding box.center)]
-\begin{axis}[
-  width=11.4cm,
-  height=5.8cm,
+\begin{axis}[exam statistical histogram,
+  width=16cm,
+  height=16cm,
   xmin=158,
   xmax=245,
   ymin=0,
@@ -22,13 +22,12 @@
   ytick={0.002,0.008,0.009,0.022,0.024,0.033},
   yticklabels={0.002,\raisebox{-3pt}{0.008},\raisebox{3pt}{0.009},
                \raisebox{-2pt}{0.022},\raisebox{2pt}{0.024},0.033},
-  yticklabel style={font=\normalsize},
-  xlabel={质量指标值},
-  xlabel style={at={(axis description cs:1.03,0)}, anchor=west, inner sep=0pt},
+  yticklabel style={font=\normalsize,xshift=-4pt},
   tick label style={font=\normalsize},
   label style={font=\normalsize},
   clip=false,
 ]
+    \examstatxlabel{质量指标值};
   % Source dashed guides terminate at the corresponding bar boundary.
   \addplot[black, dashed, line width=0.45pt, forget plot]
     coordinates {(158,0.002) (235,0.002)};
@@ -48,12 +47,8 @@
                  (205,0.024) (215,0.008) (225,0.002) (235,0.002)};
   % The source x-axis uses a short break immediately after the origin.
   \draw[white, line width=2.2pt] (axis cs:158.5,0) -- (axis cs:163.8,0);
-  \draw[black, line width=0.55pt]
-    (axis cs:158.5,0) -- (axis cs:159.3,0.0012) -- (axis cs:160.1,0)
-    -- (axis cs:160.9,0.0012) -- (axis cs:161.7,0) -- (axis cs:162.5,0.0012)
-    -- (axis cs:163.3,0);
+  \examstatxbreak[black, line width=0.55pt]{160.9}{0};
   % Upright source-style fraction label above the y-axis.
-  \node[anchor=south] at (axis cs:159.8,0.0345)
-    {\(\dfrac{\text{频率}}{\text{组距}}\)};
+  \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
 \end{axis}
 \end{tikzpicture}

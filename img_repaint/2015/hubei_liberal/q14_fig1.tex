@@ -6,9 +6,9 @@
 % solid segments: bar outlines, axes, ticks, x-axis break; dashed segments: y=0.2, 0.8, 1.5, 2.0, 2.5 and y=a guides
 % labels: y label above-left of axis, x label right of 0.9 tick, tick labels below/left of axes with clear spacing
 \begin{tikzpicture}[baseline]
-\begin{axis}[
+\begin{axis}[exam statistical histogram,
     width=10.5cm,
-    height=5.6cm,
+    height=6.272cm,
     axis lines=none,
     clip=false,
     xmin=0,
@@ -36,13 +36,11 @@
 
     \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:7.50,0);
     \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,3.12);
-    \fill[white] (axis cs:0.18,-0.05) -- (axis cs:0.30,0.025) -- (axis cs:0.42,-0.05) -- (axis cs:0.54,0.025) -- (axis cs:0.66,-0.05) -- cycle;
-    \draw[line width=0.8pt] (axis cs:0.18,-0.05) -- (axis cs:0.30,0.025) -- (axis cs:0.42,-0.05) -- (axis cs:0.54,0.025) -- (axis cs:0.66,-0.05);
+    \examstatxbreak[line width=0.8pt]{0.42000000000000004}{0};
 
-    \node[anchor=south west,inner sep=0pt,font=\normalsize] at (axis cs:0.16,3.02)
-        {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\normalsize] at (axis cs:7.55,-0.06) {金额/万元};
-    \node[anchor=north east,inner sep=0pt,font=\normalsize] at (axis cs:0,0) {0};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{金额/万元};
+    \node[anchor=north east,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:0,0.000000) {0};
 
     \draw[line width=0.45pt] (axis cs:1,0) -- (axis cs:1,-0.07);
     \draw[line width=0.45pt] (axis cs:2,0) -- (axis cs:2,-0.07);
@@ -51,24 +49,24 @@
     \draw[line width=0.45pt] (axis cs:5,0) -- (axis cs:5,-0.07);
     \draw[line width=0.45pt] (axis cs:6,0) -- (axis cs:6,-0.07);
     \draw[line width=0.45pt] (axis cs:7,0) -- (axis cs:7,-0.07);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:1,-0.09) {0.3};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:2,-0.09) {0.4};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:3,-0.09) {0.5};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:4,-0.09) {0.6};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:5,-0.09) {0.7};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:6,-0.09) {0.8};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:7,-0.09) {0.9};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:1,-0.070000) {0.3};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:2,-0.070000) {0.4};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:3,-0.070000) {0.5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:4,-0.070000) {0.6};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:5,-0.070000) {0.7};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:6,-0.070000) {0.8};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:7,-0.070000) {0.9};
     \draw[line width=0.45pt] (axis cs:0,0.2) -- (axis cs:-0.10,0.2);
     \draw[line width=0.45pt] (axis cs:0,0.8) -- (axis cs:-0.10,0.8);
     \draw[line width=0.45pt] (axis cs:0,1.5) -- (axis cs:-0.10,1.5);
     \draw[line width=0.45pt] (axis cs:0,2.0) -- (axis cs:-0.10,2.0);
     \draw[line width=0.45pt] (axis cs:0,2.5) -- (axis cs:-0.10,2.5);
     \draw[line width=0.45pt] (axis cs:0,3.0) -- (axis cs:-0.10,3.0);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.13,0.2) {0.2};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.13,0.8) {0.8};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.13,1.5) {1.5};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.13,2.0) {2.0};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.13,2.5) {2.5};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.30,3.0) {$a$};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.100000,0.2) {0.2};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.100000,0.8) {0.8};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.100000,1.5) {1.5};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.100000,2.0) {2.0};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.100000,2.5) {2.5};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.30,3.0) {$a$};
 \end{axis}
 \end{tikzpicture}

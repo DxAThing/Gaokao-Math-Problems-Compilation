@@ -12,9 +12,9 @@
 % labels: 0.01/0.02/0.04/0.05/0.06 left of the y-axis; 0,5,...,40 below x-axis;
 % place 频率/组距 above the y-axis and 长度 (mm) to the right of the x-axis arrow.
 \begin{tikzpicture}[baseline]
-\begin{axis}[
-    width=8.2cm,
-    height=5.4cm,
+\begin{axis}[exam statistical histogram,
+    width=15.429cm,
+    height=10.161cm,
     axis lines=left,
     axis line style={-Stealth},
     xmin=0,
@@ -44,8 +44,7 @@
     \addplot[black,ybar interval,draw=black,fill=white,line width=0.55pt]
       coordinates {(5,0.01) (10,0.01) (15,0.04) (20,0.06)
                    (25,0.05) (30,0.02) (35,0.01) (40,0)};
-    \node[anchor=south west,inner sep=0pt,font=\normalsize] at (axis cs:0.9,0.066)
-      {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\normalsize] at (axis cs:41.1,0.002) {长度 (mm)};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{长度 (mm)};
 \end{axis}
 \end{tikzpicture}

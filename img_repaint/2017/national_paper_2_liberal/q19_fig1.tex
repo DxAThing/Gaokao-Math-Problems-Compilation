@@ -7,9 +7,10 @@
 % Relations/data: old method bars over [25,30),...,[65,70) have heights .012,.014,.024,.034,.040,.032,.020,.012,.012;
 % new method bars over [35,40),...,[65,70) have heights .004,.020,.044,.068,.046,.010,.008.
 \begin{tikzpicture}[baseline]
-\begin{axis}[
-    width=10.85cm,
-    height=5.4cm,
+\begin{axis}[exam statistical histogram,
+    name=panelA,
+    width=15cm,
+    height=9cm,
     axis lines=none,
     clip=false,
     xmin=-8,
@@ -33,43 +34,43 @@
     };
     \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:68,0);
     \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:0,0.045);
-    \fill[white] (axis cs:1,-0.0031) -- (axis cs:1.5,0.0010) -- (axis cs:2,-0.0031) -- (axis cs:2.5,0.0010) -- (axis cs:3.5,-0.0031) -- cycle;
-    \draw[line width=0.7pt] (axis cs:1,-0.0031) -- (axis cs:1.5,0.0010) -- (axis cs:2,-0.0031) -- (axis cs:2.5,0.0010) -- (axis cs:3.5,-0.0031);
-    \node[anchor=south west,inner sep=0pt,font=\normalsize] at (axis cs:2,0.042) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\normalsize] at (axis cs:52,-0.0025) {箱产量/kg};
-    \node[anchor=north east,inner sep=0pt,font=\normalsize] at (axis cs:-0.6,-0.0014) {0};
-    \draw[line width=0.4pt] (axis cs:5,0) -- (axis cs:5,-0.0012); \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:5,-0.0014) {25};
-    \draw[line width=0.4pt] (axis cs:10,0) -- (axis cs:10,-0.0012); \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:10,-0.0014) {30};
-    \draw[line width=0.4pt] (axis cs:15,0) -- (axis cs:15,-0.0012); \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:15,-0.0014) {35};
-    \draw[line width=0.4pt] (axis cs:20,0) -- (axis cs:20,-0.0012); \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:20,-0.0014) {40};
-    \draw[line width=0.4pt] (axis cs:25,0) -- (axis cs:25,-0.0012); \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:25,-0.0014) {45};
-    \draw[line width=0.4pt] (axis cs:30,0) -- (axis cs:30,-0.0012); \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:30,-0.0014) {50};
-    \draw[line width=0.4pt] (axis cs:35,0) -- (axis cs:35,-0.0012); \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:35,-0.0014) {55};
-    \draw[line width=0.4pt] (axis cs:40,0) -- (axis cs:40,-0.0012); \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:40,-0.0014) {60};
-    \draw[line width=0.4pt] (axis cs:45,0) -- (axis cs:45,-0.0012); \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:45,-0.0014) {65};
-    \draw[line width=0.4pt] (axis cs:50,0) -- (axis cs:50,-0.0012); \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:50,-0.0014) {70};
+    \examstatxbreak[line width=0.7pt]{2.25}{0};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{箱产量/kg};
+    \node[anchor=north east,inner sep=0pt,font=\normalsize,xshift=-4pt,yshift=-4pt] at (axis cs:-0.6,0.000000) {0};
+    \draw[line width=0.4pt] (axis cs:5,0) -- (axis cs:5,-0.0012); \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:5,-0.001200) {25};
+    \draw[line width=0.4pt] (axis cs:10,0) -- (axis cs:10,-0.0012); \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:10,-0.001200) {30};
+    \draw[line width=0.4pt] (axis cs:15,0) -- (axis cs:15,-0.0012); \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:15,-0.001200) {35};
+    \draw[line width=0.4pt] (axis cs:20,0) -- (axis cs:20,-0.0012); \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:20,-0.001200) {40};
+    \draw[line width=0.4pt] (axis cs:25,0) -- (axis cs:25,-0.0012); \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:25,-0.001200) {45};
+    \draw[line width=0.4pt] (axis cs:30,0) -- (axis cs:30,-0.0012); \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:30,-0.001200) {50};
+    \draw[line width=0.4pt] (axis cs:35,0) -- (axis cs:35,-0.0012); \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:35,-0.001200) {55};
+    \draw[line width=0.4pt] (axis cs:40,0) -- (axis cs:40,-0.0012); \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:40,-0.001200) {60};
+    \draw[line width=0.4pt] (axis cs:45,0) -- (axis cs:45,-0.0012); \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:45,-0.001200) {65};
+    \draw[line width=0.4pt] (axis cs:50,0) -- (axis cs:50,-0.0012); \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:50,-0.001200) {70};
     \draw[line width=0.4pt] (axis cs:0,0.012) -- (axis cs:-2.5,0.012);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,yshift=-0.8pt] at (axis cs:-3,0.012) {0.012};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,yshift=-3pt,xshift=-4pt] at (axis cs:-2.500000,0.012) {0.012};
     \draw[line width=0.4pt] (axis cs:0,0.014) -- (axis cs:-2.5,0.014);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,yshift=0.8pt] at (axis cs:-3,0.014) {0.014};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,yshift=3pt,xshift=-40pt] at (axis cs:-2.500000,0.014) {0.014};
     \draw[line width=0.4pt] (axis cs:0,0.020) -- (axis cs:-2.5,0.020);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-3,0.020) {0.020};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-2.500000,0.020) {0.020};
     \draw[line width=0.4pt] (axis cs:0,0.024) -- (axis cs:-2.5,0.024);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-3,0.024) {0.024};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-2.500000,0.024) {0.024};
     \draw[line width=0.4pt] (axis cs:0,0.032) -- (axis cs:-2.5,0.032);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,yshift=-0.8pt] at (axis cs:-3,0.032) {0.032};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,yshift=-3pt,xshift=-4pt] at (axis cs:-2.500000,0.032) {0.032};
     \draw[line width=0.4pt] (axis cs:0,0.034) -- (axis cs:-2.5,0.034);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,yshift=0.8pt] at (axis cs:-3,0.034) {0.034};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,yshift=3pt,xshift=-40pt] at (axis cs:-2.500000,0.034) {0.034};
     \draw[line width=0.4pt] (axis cs:0,0.040) -- (axis cs:-2.5,0.040);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-3,0.040) {0.040};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:28,-0.0045) {旧养殖法};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-2.500000,0.040) {0.040};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:28,-0.005200) {旧养殖法};
 \end{axis}
 
-\begin{axis}[
-    at={(7.0cm,0cm)},
-    anchor=south west,
-    width=10.85cm,
-    height=5.4cm,
+\begin{axis}[exam statistical histogram,
+    at={(panelA.south west)},
+    anchor=north west,
+    yshift=-2.5cm,
+    width=15cm,
+    height=9cm,
     axis lines=none,
     clip=false,
     xmin=-8,
@@ -93,33 +94,32 @@
     };
     \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:58,0);
     \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:0,0.073);
-    \fill[white] (axis cs:1,-0.0048) -- (axis cs:1.5,0.0015) -- (axis cs:2,-0.0048) -- (axis cs:2.5,0.0015) -- (axis cs:3.5,-0.0048) -- cycle;
-    \draw[line width=0.7pt] (axis cs:1,-0.0048) -- (axis cs:1.5,0.0015) -- (axis cs:2,-0.0048) -- (axis cs:2.5,0.0015) -- (axis cs:3.5,-0.0048);
-    \node[anchor=south west,inner sep=0pt,font=\normalsize] at (axis cs:2,0.069) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\normalsize] at (axis cs:44,-0.0028) {箱产量/kg};
-    \node[anchor=north east,inner sep=0pt,font=\normalsize] at (axis cs:-0.6,-0.0017) {0};
-    \draw[line width=0.4pt] (axis cs:5,0) -- (axis cs:5,-0.0014); \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:5,-0.0017) {35};
-    \draw[line width=0.4pt] (axis cs:10,0) -- (axis cs:10,-0.0014); \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:10,-0.0017) {40};
-    \draw[line width=0.4pt] (axis cs:15,0) -- (axis cs:15,-0.0014); \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:15,-0.0017) {45};
-    \draw[line width=0.4pt] (axis cs:20,0) -- (axis cs:20,-0.0014); \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:20,-0.0017) {50};
-    \draw[line width=0.4pt] (axis cs:25,0) -- (axis cs:25,-0.0014); \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:25,-0.0017) {55};
-    \draw[line width=0.4pt] (axis cs:30,0) -- (axis cs:30,-0.0014); \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:30,-0.0017) {60};
-    \draw[line width=0.4pt] (axis cs:35,0) -- (axis cs:35,-0.0014); \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:35,-0.0017) {65};
-    \draw[line width=0.4pt] (axis cs:40,0) -- (axis cs:40,-0.0014); \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:40,-0.0017) {70};
+    \examstatxbreak[line width=0.7pt]{2.25}{0};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{箱产量/kg};
+    \node[anchor=north east,inner sep=0pt,font=\normalsize,xshift=-4pt,yshift=-4pt] at (axis cs:-0.6,0.000000) {0};
+    \draw[line width=0.4pt] (axis cs:5,0) -- (axis cs:5,-0.0014); \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:5,-0.001400) {35};
+    \draw[line width=0.4pt] (axis cs:10,0) -- (axis cs:10,-0.0014); \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:10,-0.001400) {40};
+    \draw[line width=0.4pt] (axis cs:15,0) -- (axis cs:15,-0.0014); \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:15,-0.001400) {45};
+    \draw[line width=0.4pt] (axis cs:20,0) -- (axis cs:20,-0.0014); \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:20,-0.001400) {50};
+    \draw[line width=0.4pt] (axis cs:25,0) -- (axis cs:25,-0.0014); \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:25,-0.001400) {55};
+    \draw[line width=0.4pt] (axis cs:30,0) -- (axis cs:30,-0.0014); \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:30,-0.001400) {60};
+    \draw[line width=0.4pt] (axis cs:35,0) -- (axis cs:35,-0.0014); \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:35,-0.001400) {65};
+    \draw[line width=0.4pt] (axis cs:40,0) -- (axis cs:40,-0.0014); \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:40,-0.001400) {70};
     \draw[line width=0.4pt] (axis cs:0,0.004) -- (axis cs:-2.5,0.004);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-3,0.004) {0.004};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,yshift=-4pt,xshift=-4pt] at (axis cs:-2.500000,0.004) {0.004};
     \draw[line width=0.4pt] (axis cs:0,0.008) -- (axis cs:-2.5,0.008);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,yshift=-0.8pt] at (axis cs:-3,0.008) {0.008};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-2.500000,0.008) {0.008};
     \draw[line width=0.4pt] (axis cs:0,0.010) -- (axis cs:-2.5,0.010);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,yshift=0.8pt] at (axis cs:-3,0.010) {0.010};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,yshift=6pt,xshift=-40pt] at (axis cs:-2.500000,0.010) {0.010};
     \draw[line width=0.4pt] (axis cs:0,0.020) -- (axis cs:-2.5,0.020);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-3,0.020) {0.020};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-2.500000,0.020) {0.020};
     \draw[line width=0.4pt] (axis cs:0,0.044) -- (axis cs:-2.5,0.044);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,yshift=-0.8pt] at (axis cs:-3,0.044) {0.044};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,yshift=-3pt,xshift=-4pt] at (axis cs:-2.500000,0.044) {0.044};
     \draw[line width=0.4pt] (axis cs:0,0.046) -- (axis cs:-2.5,0.046);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,yshift=0.8pt] at (axis cs:-3,0.046) {0.046};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,yshift=3pt,xshift=-40pt] at (axis cs:-2.500000,0.046) {0.046};
     \draw[line width=0.4pt] (axis cs:0,0.068) -- (axis cs:-2.5,0.068);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-3,0.068) {0.068};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:23,-0.0058) {新养殖法};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-2.500000,0.068) {0.068};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:23,-0.006800) {新养殖法};
 \end{axis}
 \end{tikzpicture}

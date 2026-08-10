@@ -3,7 +3,7 @@
 % solid bars: [12,13), [13,14), [14,15), [15,16), [16,17].
 % dashed guides: y=0.08, 0.16, 0.24, 0.36; x-axis is broken between 0 and 12.
 \begin{tikzpicture}
-    \begin{axis}[
+    \begin{axis}[exam statistical histogram,
         width=8.4cm,
         height=5.4cm,
         xmin=0,
@@ -17,12 +17,11 @@
         ytick={0.08,0.16,0.24,0.36},
         yticklabels={0.08,0.16,0.24,0.36},
         ytick style={draw=none},
-        yticklabel style={font=\large, anchor=east, xshift=-2pt},
+        yticklabel style={font=\normalsize, anchor=east, xshift=-2pt},
         x axis line style={-Stealth},
         y axis line style={-Stealth},
-        xlabel={舒张压/kPa},
-        xlabel style={font=\large, anchor=west, at={(axis description cs:1.04,0.03)}},
     ]
+    \examstatxlabel{舒张压/kPa};
         % Source horizontal guides terminate at the matching bar boundary.
         \draw[dashed, line width=0.35pt] (axis cs:0,0.08) -- (axis cs:5,0.08);
         \draw[dashed, line width=0.35pt] (axis cs:0,0.16) -- (axis cs:3,0.16);
@@ -30,9 +29,7 @@
         \draw[dashed, line width=0.35pt] (axis cs:0,0.36) -- (axis cs:3,0.36);
 
         % Broken x-axis leaves the long interval from 0 to 12 implicit.
-        \draw[black, line width=0.6pt] (axis cs:0.18,0) -- (axis cs:0.28,0.008)
-            -- (axis cs:0.38,-0.008) -- (axis cs:0.48,0.008)
-            -- (axis cs:0.58,-0.008) -- (axis cs:0.68,0);
+        \examstatxbreak[black, line width=0.6pt]{0.43000000000000005}{0};
 
         % Histogram bars use the five frequencies read from the source chart.
         \addplot[/tikz/ybar interval,mark=none,black, line width=0.45pt, fill=white] coordinates {
@@ -44,14 +41,13 @@
           (6,0)
         };
 
-        \node[font=\large, anchor=north] at (axis cs:0,0) {0};
-        \node[font=\large, anchor=north] at (axis cs:1,0) {12};
-        \node[font=\large, anchor=north] at (axis cs:2,0) {13};
-        \node[font=\large, anchor=north] at (axis cs:3,0) {14};
-        \node[font=\large, anchor=north] at (axis cs:4,0) {15};
-        \node[font=\large, anchor=north] at (axis cs:5,0) {16};
-        \node[font=\large, anchor=north] at (axis cs:6,0) {17};
-        \node[font=\large, anchor=south] at (axis description cs:-0.12,1.02)
-            {\(\dfrac{\text{频率}}{\text{组距}}\)};
+        \node[font=\normalsize, anchor=north,yshift=-4pt] at (axis cs:0,0.000000) {0};
+        \node[font=\normalsize, anchor=north,yshift=-4pt] at (axis cs:1,0.000000) {12};
+        \node[font=\normalsize, anchor=north,yshift=-4pt] at (axis cs:2,0.000000) {13};
+        \node[font=\normalsize, anchor=north,yshift=-4pt] at (axis cs:3,0.000000) {14};
+        \node[font=\normalsize, anchor=north,yshift=-4pt] at (axis cs:4,0.000000) {15};
+        \node[font=\normalsize, anchor=north,yshift=-4pt] at (axis cs:5,0.000000) {16};
+        \node[font=\normalsize, anchor=north,yshift=-4pt] at (axis cs:6,0.000000) {17};
+        \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
     \end{axis}
 \end{tikzpicture}

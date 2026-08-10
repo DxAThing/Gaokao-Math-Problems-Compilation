@@ -7,7 +7,7 @@
 % solid segments: x/y axes and seven bar outlines; dashed segments: none.
 % labels: the y-axis is frequency/group width and the x-axis is pollution index; ticks stay clear of bars.
 \begin{tikzpicture}
-\begin{axis}[
+\begin{axis}[exam statistical histogram,
     width=10.2cm,
     height=5.8cm,
     every axis/.append style={font=\normalsize},
@@ -22,13 +22,12 @@
     ytick={0,0.01,0.02,0.03,0.04},
     yticklabel=\empty,
     scaled y ticks=false,
-    xlabel={污染指数},
     ylabel={},
-    xlabel style={at={(axis description cs:1.10,0)},anchor=west,inner sep=0pt},
     tick style={black},
     clip=false,
     enlargelimits=false,
 ]
+    \examstatxlabel{污染指数};
     \addplot[
         ybar interval,
         draw=black,
@@ -44,10 +43,8 @@
         (100,0.0066667)
         (110,0)
     };
-    \node[anchor=south west,inner sep=0pt,font=\normalsize]
-        at (axis cs:41.5,0.0415) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=north east,inner sep=1pt,font=\normalsize,xshift=-8pt,yshift=-4pt]
-        at (axis cs:39,0) {0};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \node[anchor=north east,inner sep=1pt,font=\normalsize,xshift=-8pt,yshift=-4pt] at (axis cs:39,0.000000) {0};
     \frequencyylabel[-4pt]{39}{0.0100000}{0.0100}
     \frequencyylabel[-4pt]{39}{0.0200000}{0.0200}
     \frequencyylabel[-4pt]{39}{0.0300000}{0.0300}

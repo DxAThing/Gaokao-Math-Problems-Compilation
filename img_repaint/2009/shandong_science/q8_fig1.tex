@@ -3,7 +3,7 @@
 % solid bars: [96,98), [98,100), [100,102), [102,104), [104,106].
 % dashed guides: y=0.050, 0.075, 0.100, 0.125, 0.150; labels attach to axes/ticks.
 \begin{tikzpicture}
-    \begin{axis}[
+    \begin{axis}[exam statistical histogram,
         width=8.2cm,
         height=5.4cm,
         xmin=0,
@@ -23,13 +23,10 @@
         grid=major,
         major grid style={dashed, line width=0.35pt},
         xmajorgrids=false,
-        xlabel={克},
-        xlabel style={font=\normalsize, anchor=west, at={(axis description cs:1.04,0.03)}},
     ]
+    \examstatxlabel{克};
         % The source uses a broken x-axis between 0 and the first weight bin.
-        \draw[black, line width=0.6pt] (axis cs:0.18,0) -- (axis cs:0.28,0.004)
-            -- (axis cs:0.38,-0.004) -- (axis cs:0.48,0.004)
-            -- (axis cs:0.58,-0.004) -- (axis cs:0.68,0);
+        \examstatxbreak[black, line width=0.6pt]{0.43000000000000005}{0};
 
         % Histogram heights are the frequency densities read from the source chart.
         \addplot[/tikz/ybar interval,mark=none,black, line width=0.45pt, fill=white] coordinates {
@@ -41,14 +38,13 @@
           (6,0)
         };
 
-        \node[font=\normalsize, anchor=north] at (axis cs:0,0) {0};
-        \node[font=\normalsize, anchor=north] at (axis cs:1,0) {96};
-        \node[font=\normalsize, anchor=north] at (axis cs:2,0) {98};
-        \node[font=\normalsize, anchor=north] at (axis cs:3,0) {100};
-        \node[font=\normalsize, anchor=north] at (axis cs:4,0) {102};
-        \node[font=\normalsize, anchor=north] at (axis cs:5,0) {104};
-        \node[font=\normalsize, anchor=north] at (axis cs:6,0) {106};
-        \node[font=\normalsize, anchor=south] at (axis description cs:-0.12,1.02)
-            {\(\dfrac{\text{频率}}{\text{组距}}\)};
+        \node[font=\normalsize, anchor=north,yshift=-4pt] at (axis cs:0,0.000000) {0};
+        \node[font=\normalsize, anchor=north,yshift=-4pt] at (axis cs:1,0.000000) {96};
+        \node[font=\normalsize, anchor=north,yshift=-4pt] at (axis cs:2,0.000000) {98};
+        \node[font=\normalsize, anchor=north,yshift=-4pt] at (axis cs:3,0.000000) {100};
+        \node[font=\normalsize, anchor=north,yshift=-4pt] at (axis cs:4,0.000000) {102};
+        \node[font=\normalsize, anchor=north,yshift=-4pt] at (axis cs:5,0.000000) {104};
+        \node[font=\normalsize, anchor=north,yshift=-4pt] at (axis cs:6,0.000000) {106};
+        \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
     \end{axis}
 \end{tikzpicture}

@@ -10,9 +10,9 @@
 % dashed segments: horizontal reference guides from the y-axis to the matching bar boundary.
 % labels: 近视率/% above the y-axis, 年级 to the right of the x-axis, O at the origin, 图2 below.
 \begin{tikzpicture}[baseline]
-\begin{axis}[
-    width=6.0cm,
-    height=3.6cm,
+\begin{axis}[exam statistical bar,
+    width=6.72cm,
+    height=4.032cm,
     axis lines=none,
     clip=false,
     xmin=-0.65,
@@ -45,24 +45,24 @@
 
     % Axis labels and origin.
     \node[anchor=south west,inner sep=0pt,font=\normalsize] at (axis cs:0.12,53.5) {近视率/\%};
-    \node[anchor=west,inner sep=0pt,font=\normalsize] at (axis cs:4.15,1.2) {年级};
-    \node[anchor=north east,inner sep=0pt,font=\normalsize] at (axis cs:-0.08,-0.5) {O};
+    \examstatxlabel{年级};
+    \node[anchor=north east,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:-0.08,-21.000000) {O};
 
     % Category ticks and labels.
     \draw[line width=0.45pt] (axis cs:1,0) -- (axis cs:1,-1.2);
     \draw[line width=0.45pt] (axis cs:2,0) -- (axis cs:2,-1.2);
     \draw[line width=0.45pt] (axis cs:3,0) -- (axis cs:3,-1.2);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:1,-2.0) {小学};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:2,-2.0) {初中};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:3,-2.0) {高中};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:1,-1.200000) {小学};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:2,-1.200000) {初中};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:3,-1.200000) {高中};
 
     % Percentage ticks and labels.
     \draw[line width=0.45pt] (axis cs:0,10) -- (axis cs:-0.08,10);
     \draw[line width=0.45pt] (axis cs:0,30) -- (axis cs:-0.08,30);
     \draw[line width=0.45pt] (axis cs:0,50) -- (axis cs:-0.08,50);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.12,10) {10};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.12,30) {30};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.12,50) {50};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,10) {10};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,30) {30};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,50) {50};
 
     \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:2,-16.5) {图2};
 \end{axis}

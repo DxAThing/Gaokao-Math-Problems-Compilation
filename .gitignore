@@ -53,6 +53,47 @@ tools/typeset/*
 !tools/typeset/parentheses_special/
 !tools/typeset/parentheses_special/*.go
 
+# 人工裁图前端：仅放行共享裁切核心、应用源码和人工映射。
+!tools/crop/
+tools/crop/*
+!tools/crop/internal/
+tools/crop/internal/*
+!tools/crop/internal/cropcore/
+!tools/crop/internal/cropcore/*.go
+!tools/crop/internal/threadreport/
+!tools/crop/internal/threadreport/*.go
+!tools/crop/crop_grid.go
+!tools/crop/crop_grid_test.go
+!tools/crop/queue.go
+!tools/crop/queue_test.go
+!tools/crop/thread_report.go
+!tools/crop/build_low_confidence_worklist.go
+!tools/crop/build_low_confidence_worklist_test.go
+!tools/crop/manualcrop/
+!tools/crop/manualcrop/**
+!tools/crop/manual_image_layout.tex
+!tools/crop/manual_trim_passes.tsv
+!tools/typeset/auto_image_layout.go
+!tools/typeset/auto_image_layout_test.go
+!tools/typeset/image_label_detector.py
+!tools/typeset/test_image_label_detector.py
+!tools/typeset/image_label_calibration.tex
+!tools/typeset/generated_image_layout.tex
+
 # 发布成品：仅放行两份根目录 PDF，其余 PDF 仍保持忽略。
 !/Compilation.pdf
 !/Compilation-answer.pdf
+
+# 人工裁图前端的已确认规格与实施计划。
+!/AGENTS.md
+!/docs/
+/docs/*
+!/docs/裁图规则.md
+!/docs/superpowers/
+/docs/superpowers/*
+!/docs/superpowers/specs/
+/docs/superpowers/specs/*
+!/docs/superpowers/specs/2026-08-09-manual-crop-frontend-design.md
+!/docs/superpowers/plans/
+/docs/superpowers/plans/*
+!/docs/superpowers/plans/2026-08-09-manual-crop-frontend.md

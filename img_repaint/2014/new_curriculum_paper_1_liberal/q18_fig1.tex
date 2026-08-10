@@ -3,9 +3,9 @@
 % x 轴标签依次为 0、75、85、95、105、115、125（0 到 75 为原卷断轴后的等距位置）。
 % y 轴刻度为 0.002 至 0.040，轴标题为“频率/组距”；网格覆盖全部刻度位置。
 \begin{tikzpicture}
-\begin{axis}[
+\begin{axis}[exam statistical histogram,
   width=10.0cm,
-  height=8.0cm,
+  height=15.053cm,
   xmin=0, xmax=6.6,
   ymin=0, ymax=0.044,
   axis lines=left,
@@ -18,18 +18,13 @@
   tick style={draw=none},
   grid=major,
   major grid style={draw=gray!58,line width=0.3pt},
-  xlabel={质量指标值},
-  xlabel style={at={(axis description cs:1.06,-0.03)},anchor=west},
   ylabel={},
   clip=false,
 ]
-\node[anchor=south] at (axis description cs:0.05,1.03) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{质量指标值};
+\examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
 % 原卷在 0 与 75 之间使用断轴锯齿，覆盖连续基线后补回锯齿。
 \draw[white,line width=1.3pt] (axis cs:0.18,0) -- (axis cs:0.80,0);
-\draw[line width=0.45pt]
-  (axis cs:0.18,0) -- (axis cs:0.28,0.00045) --
-  (axis cs:0.38,-0.00005) -- (axis cs:0.48,0.00045) --
-  (axis cs:0.58,-0.00005) -- (axis cs:0.68,0.00045) --
-  (axis cs:0.80,0);
+\examstatxbreak[line width=0.45pt]{0.49}{0};
 \end{axis}
 \end{tikzpicture}

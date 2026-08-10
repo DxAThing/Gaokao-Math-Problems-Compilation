@@ -12,7 +12,7 @@
 % Label strategy: frequency/interval-width label above the y-axis; sample-data label at the x-axis arrow;
 % numeric ticks below/left of axes and no labels placed over bars.
 \begin{tikzpicture}[baseline]
-\begin{axis}[
+\begin{axis}[exam statistical histogram,
     width=7.2cm,
     height=5.0cm,
     axis lines=none,
@@ -46,23 +46,23 @@
     \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:13.0,0);
     \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:0,0.21);
 
-    \node[anchor=south west,inner sep=0pt,font=\normalsize] at (axis cs:0.18,0.205) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\normalsize] at (axis cs:12.95,-0.001) {样本数据};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{样本数据};
 
     \draw[line width=0.4pt] (axis cs:0,0) -- (axis cs:0,-0.005);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:0,-0.006) {0};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:0,-0.005000) {0};
     \draw[line width=0.4pt] (axis cs:2,0) -- (axis cs:2,-0.005);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:2,-0.006) {2};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:2,-0.005000) {2};
     \draw[line width=0.4pt] (axis cs:4,0) -- (axis cs:4,-0.005);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:4,-0.006) {4};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:4,-0.005000) {4};
     \draw[line width=0.4pt] (axis cs:6,0) -- (axis cs:6,-0.005);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:6,-0.006) {6};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:6,-0.005000) {6};
     \draw[line width=0.4pt] (axis cs:8,0) -- (axis cs:8,-0.005);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:8,-0.006) {8};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:8,-0.005000) {8};
     \draw[line width=0.4pt] (axis cs:10,0) -- (axis cs:10,-0.005);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:10,-0.006) {10};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:10,-0.005000) {10};
     \draw[line width=0.4pt] (axis cs:12,0) -- (axis cs:12,-0.005);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:12,-0.006) {12};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:12,-0.005000) {12};
 
     \draw[line width=0.4pt] (axis cs:0,0.02) -- (axis cs:-0.12,0.02);
     \frequencyylabel[-4pt]{0}{0.02}{0.02}

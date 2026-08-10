@@ -15,9 +15,9 @@
 % labels: y ticks are 0.010--0.030, x ticks are 0, 80, 90, 100, 110, 120, 130;
 % the axis labels sit above/along their respective axes without covering bars.
 \begin{tikzpicture}[baseline]
-\begin{axis}[
-    width=9.0cm,
-    height=6.2cm,
+\begin{axis}[exam statistical histogram,
+    width=16cm,
+    height=11.665cm,
     axis lines=none,
     clip=false,
     xmin=-0.75,
@@ -45,27 +45,21 @@
 
     \draw[->,line width=0.65pt] (axis cs:0,0) -- (axis cs:7.05,0);
     \draw[->,line width=0.65pt] (axis cs:0,0) -- (axis cs:0,0.034);
-    \fill[white] (axis cs:0.35,-0.002) -- (axis cs:0.50,0.003)
-        -- (axis cs:0.65,-0.002) -- (axis cs:0.80,0.003)
-        -- (axis cs:0.95,-0.002) -- (axis cs:0.35,-0.002) -- cycle;
-    \draw[line width=0.65pt] (axis cs:0.35,-0.002) -- (axis cs:0.50,0.003)
-        -- (axis cs:0.65,-0.002) -- (axis cs:0.80,0.003)
-        -- (axis cs:0.95,-0.002);
+    \examstatxbreak[line width=0.65pt]{0.6499999999999999}{0};
 
     \draw[line width=0.35pt] (axis cs:-0.08,0.010) -- (axis cs:0,0.010);
     \draw[line width=0.35pt] (axis cs:-0.08,0.015) -- (axis cs:0,0.015);
     \draw[line width=0.35pt] (axis cs:-0.08,0.020) -- (axis cs:0,0.020);
     \draw[line width=0.35pt] (axis cs:-0.08,0.025) -- (axis cs:0,0.025);
     \draw[line width=0.35pt] (axis cs:-0.08,0.030) -- (axis cs:0,0.030);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.010) {0.010};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.015) {0.015};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.020) {0.020};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.025) {0.025};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.030) {0.030};
-    \node[anchor=south west,inner sep=0pt,font=\normalsize,align=center]
-        at (axis cs:0.18,0.033) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\normalsize] at (axis cs:6.45,0.001) {底部周长/cm};
-    \node[anchor=north east,inner sep=0pt,font=\normalsize] at (axis cs:0,-0.001) {0};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.010) {0.010};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.015) {0.015};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.020) {0.020};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.025) {0.025};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.030) {0.030};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{底部周长/cm};
+    \node[anchor=north east,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:0,0.000000) {0};
 
     \draw[line width=0.35pt] (axis cs:1.00,0) -- (axis cs:1.00,-0.006);
     \draw[line width=0.35pt] (axis cs:2.00,0) -- (axis cs:2.00,-0.006);

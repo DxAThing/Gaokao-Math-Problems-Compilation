@@ -5,7 +5,7 @@
 % 纵轴为频率/组距；组距均为 0.5，八个区间柱高依次为 0.2、0.3、0.4、0.5、
 % 0.3、0.1、0.1、0.1。水平虚线分别指向对应柱顶。
 \begin{tikzpicture}
-  \begin{axis}[
+  \begin{axis}[exam statistical histogram,
     width=12.7cm,
     height=7.4cm,
     xmin=0, xmax=5.35,
@@ -18,7 +18,7 @@
     ytick={0.1,0.2,0.3,0.4,0.5},
     yticklabels={0.1,0.2,0.3,0.4,0.5},
     tick style={draw=none},
-    tick label style={font=\large},
+    tick label style={font=\normalsize},
   ]
     % 原图中的水平虚线基准。
     \draw[dashed, line width=0.55pt] (axis cs:0,0.1) -- (axis cs:4.5,0.1);
@@ -38,8 +38,7 @@
       (4,0.1)
       (4.5,0)
     };
-    \node[font=\large, anchor=south west] at (axis cs:0.1,0.55)
-      {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[font=\large, anchor=west] at (axis cs:4.55,0.025) {用水量（立方米）};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{用水量（立方米）};
   \end{axis}
 \end{tikzpicture}

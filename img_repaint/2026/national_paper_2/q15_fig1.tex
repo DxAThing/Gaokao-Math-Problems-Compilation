@@ -11,7 +11,7 @@
 % Dashed guide segments: y=.005 ends at x=345; y=.010 at x=355;
 % y=.015 at x=385; y=.020 at x=365; y=.025 at x=375 (each bar's left edge).
 \begin{tikzpicture}
-  \begin{axis}[
+  \begin{axis}[exam statistical histogram,
     width=8.55cm,height=4.15cm,
     xmin=342,xmax=429,ymin=0,ymax=0.029,
     axis lines=left, axis line style={->},
@@ -34,8 +34,8 @@
     \draw[dashed,black,line width=.4pt] (axis cs:342,0.015) -- (axis cs:385,0.015);
     \draw[dashed,black,line width=.4pt] (axis cs:342,0.020) -- (axis cs:365,0.020);
     \draw[dashed,black,line width=.4pt] (axis cs:342,0.025) -- (axis cs:375,0.025);
-    \node[font=\normalsize,anchor=south] at (axis description cs:-0.065,1.06) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[font=\normalsize,anchor=west] at (axis description cs:1.02,-0.035) {时间/天};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{时间/天};
     % The source marks the axis origin with O.
     \node[font=\normalsize,anchor=north east] at (axis description cs:0,-0.055) {O};
     % Broken-axis mark before the first labelled interval.

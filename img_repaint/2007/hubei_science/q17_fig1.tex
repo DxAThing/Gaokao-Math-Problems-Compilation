@@ -11,7 +11,7 @@
 % dashed segments: none
 % Label avoidance: axis labels are placed outside the plot; tick labels remain below the x-axis.
 \begin{tikzpicture}
-\begin{axis}[
+\begin{axis}[exam statistical histogram,
     width=10.0cm,
     height=4.2cm,
     xmin=0,
@@ -27,15 +27,13 @@
     tick align=outside,
     xlabel=\empty,
     ylabel=\empty,
-    xticklabel style={font=\normalsize,rotate=-45,anchor=north east},
+    xticklabel style={font=\normalsize,anchor=north},
     clip=false,
 ]
-\node[anchor=south west,inner sep=0pt] at (axis cs:0.08,1.02) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+\examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
 \node[anchor=south east,inner sep=0pt] at (axis cs:3.28,0.10) {纤度};
 % The source has a broken x-axis between 0 and the first class boundary.
 \draw[white,line width=2.0pt] (axis cs:0.18,0) -- (axis cs:0.40,0);
-\draw[black,line width=0.45pt]
-    (axis cs:0.18,0) -- (axis cs:0.22,0.07) -- (axis cs:0.26,-0.07) --
-    (axis cs:0.30,0.07) -- (axis cs:0.34,-0.07) -- (axis cs:0.38,0.07) -- (axis cs:0.40,0);
+\examstatxbreak[black,line width=0.45pt]{0.29000000000000004}{0};
 \end{axis}
 \end{tikzpicture}
