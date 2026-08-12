@@ -12,6 +12,18 @@
     {\(-\dfrac35+\dfrac45\i\)}
 \end{problem}
 
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+分子分母同乘以分母的共轭复数，得
+\[
+\frac{1+2\i}{1-2\i}=\frac{(1+2\i)^2}{(1-2\i)(1+2\i)}=\frac{-3+4\i}{5}=-\frac35+\frac45\i.
+\]
+故选：D.
+\end{solution}
+
 \begin{problem}
 已知集合 \(A=\{(x,y)\mid x^2+y^2\le 3,\ x\in\Z,\ y\in\Z\}\)，则 \(A\) 中元素的个数为（\quad）
 
@@ -22,8 +34,20 @@
     {\(4\)}
 \end{problem}
 
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+由 \(x^2+y^2\le3\) 且 \(x,y\) 为整数，得
+\(x,y\in\{-1,0,1\}\). 这九个整数点中，最大的 \(x^2+y^2\) 为
+\(1^2+1^2=2\le3\)，所以它们都属于集合 \(A\). 因此
+\(|A|=3\times3=9\).
+故选：A.
+\end{solution}
+
 \begin{problem}
-函数 \(f(x)=\dfrac{e^x-e^{-x}}{x^2}\) 的图象大致为（\quad）
+函数 \(f(x)=\dfrac{\e^x-\e^{-x}}{x^2}\) 的图象大致为（\quad）
 
 \choices
     {\choicebitmap[width=0.15\paperwidth]{img/2018/national_paper_2_science/q3_fig1.png}}
@@ -31,6 +55,20 @@
     {\choicebitmap[width=0.15\paperwidth]{img/2018/national_paper_2_science/q3_fig3.png}}
     {\choicebitmap[width=0.15\paperwidth]{img/2018/national_paper_2_science/q3_fig4.png}}
 \end{problem}
+
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+函数的定义域为 \(x\ne0\). 当 \(x>0\) 时，
+\(\e^x-\e^{-x}>0\)，故 \(f(x)>0\)；当 \(x<0\) 时，
+\(\e^x-\e^{-x}<0\)，故 \(f(x)<0\). 又当 \(x\to0^+\) 时，
+\(f(x)\to+\infty\)，当 \(x\to0^-\) 时，\(f(x)\to-\infty\)，且
+\(\displaystyle\lim_{x\to+\infty}f(x)=+\infty\)，
+\(\displaystyle\lim_{x\to-\infty}f(x)=-\infty\). 因此图象的右支在 \(x\) 轴上方并在两端趋于正无穷，左支在 \(x\) 轴下方并在两端趋于负无穷. 这与选项 B 的图象相符.
+故选：B.
+\end{solution}
 
 \begin{problem}
 已知向量 \(\bs a\)，\(\bs b\) 满足 \(|\bs a|=1\)，\(\bs a\cdot\bs b=-1\)，则 \(\bs a\cdot(2\bs a-\bs b)=\)（\quad）
@@ -42,6 +80,17 @@
     {\(0\)}
 \end{problem}
 
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+\[
+\bs a\cdot(2\bs a-\bs b)=2|\bs a|^2-\bs a\cdot\bs b=2\times1^2-(-1)=3.
+\]
+故选：B.
+\end{solution}
+
 \begin{problem}
 双曲线 \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\)（\(a>0\)，\(b>0\)）的离心率为 \(\sqrt3\)，则其渐近线方程为（\quad）
 
@@ -51,6 +100,18 @@
     {\(y=\pm\dfrac{\sqrt2}{2}x\)}
     {\(y=\pm\dfrac{\sqrt3}{2}x\)}
 \end{problem}
+
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+双曲线满足 \(c^2=a^2+b^2\)，且离心率
+\(e=\dfrac ca=\sqrt3\)，所以 \(c^2=3a^2\). 因而
+\(b^2=c^2-a^2=2a^2\)，即 \(\dfrac ba=\sqrt2\). 双曲线的渐近线方程为
+\(y=\pm\dfrac ba x=\pm\sqrt2\,x\).
+故选：A.
+\end{solution}
 
 \begin{problem}
 在 \(\triangle ABC\) 中，\(\cos\dfrac C2=\dfrac{\sqrt5}{5}\)，\(BC=1\)，\(AC=5\)，则 \(AB=\)（\quad）
@@ -62,10 +123,27 @@
     {\(2\sqrt5\)}
 \end{problem}
 
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+由半角公式，
+\[
+\cos C=2\cos^2\frac C2-1=2\left(\frac{\sqrt5}{5}\right)^2-1=-\frac35.
+\]
+由余弦定理，
+\[
+AB^2=AC^2+BC^2-2AC\cdot BC\cos C=25+1-2\times5\times1\times\left(-\frac35\right)=32.
+\]
+因为 \(AB>0\)，所以 \(AB=4\sqrt2\).
+故选：A.
+\end{solution}
+
 \begin{problem}
 为计算 \(S=1-\dfrac12+\dfrac13-\dfrac14+\cdots+\dfrac1{99}-\dfrac1{100}\)，设计了如图的程序框图，则在空白框中应填入（\quad）
 
-\bitmapfigure[float=inline,max width=0.38\linewidth]{img/2018/national_paper_2_science/q7_fig1.png}
+\bitmapinlinefigure[9.6cm][max width=9.6cm]{img/2018/national_paper_2_science/q7_fig1.png}
 
 \choices
     {\(i=i+1\)}
@@ -73,6 +151,22 @@
     {\(i=i+3\)}
     {\(i=i+4\)}
 \end{problem}
+
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+每次循环中，程序先把 \(\dfrac1i\) 加入 \(N\)，再把
+\(\dfrac1{i+1}\) 加入 \(T\)，于是 \(N-T\) 增加
+\(\dfrac1i-\dfrac1{i+1}\). 初始时 \(i=1\)，若空白框填入
+\(i=i+2\)，则各次循环依次得到
+\[
+\left(1-\frac12\right)+\left(\frac13-\frac14\right)+\cdots+\left(\frac1{99}-\frac1{100}\right).
+\]
+循环条件为 \(i<100\)，最后一次 \(i=99\)，正好得到题设中的 \(S\). 因此应填 \(i=i+2\).
+故选：B.
+\end{solution}
 
 \begin{problem}
 我国数学家陈景润在哥德巴赫猜想的研究中取得了世界领先的成果. 哥德巴赫猜想是“每个大于 \(2\) 的偶数可以表示为两个素数的和”，如 \(30=7+23\). 在不超过 \(30\) 的素数中，随机选取两个不同的数，其和等于 \(30\) 的概率是（\quad）
@@ -84,8 +178,23 @@
     {\(\dfrac1{18}\)}
 \end{problem}
 
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+不超过 \(30\) 的素数共有
+\(2,3,5,7,11,13,17,19,23,29\)，共 \(10\) 个. 任取两个不同的素数的取法数为
+\(\mathrm C_{10}^{2}=45\). 和为 \(30\) 的取法为
+\((7,23)\)、\((11,19)\)、\((13,17)\)，共 \(3\) 种. 所以所求概率为
+\[
+\frac{3}{\mathrm C_{10}^{2}}=\frac3{45}=\frac1{15}.
+\]
+故选：C.
+\end{solution}
+
 \begin{problem}
-在长方体 \(ABCD-A_1B_1C_1D_1\) 中，\(AB=BC=1\)，\(AA_1=\sqrt3\)，则异面直线 \(AD_1\) 与 \(DB_1\) 所成角的余弦值为（\quad）.
+在长方体 \(ABCD-A_1B_1C_1D_1\) 中，\(AB=BC=1\)，\(AA_1=\sqrt3\)，则异面直线 \(AD_1\) 与 \(DB_1\) 所成角的余弦值为（\quad）
 
 \choices
     {\(\dfrac15\)}
@@ -93,6 +202,21 @@
     {\(\dfrac{\sqrt5}{5}\)}
     {\(\dfrac{\sqrt2}{2}\)}
 \end{problem}
+
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+以 \(D\) 为原点，分别以 \(\overrightarrow{DA}\)、\(\overrightarrow{DC}\)、\(\overrightarrow{DD_1}\) 的方向为三个坐标轴正方向，则
+\(A(1,0,0)\)、\(D_1(0,0,\sqrt3)\)、\(B_1(1,1,\sqrt3)\). 因此可取
+\(\overrightarrow{AD_1}=(-1,0,\sqrt3)\)，\(\overrightarrow{DB_1}=(1,1,\sqrt3)\).
+两向量的内积为 \(2\)，长度分别为 \(2\) 和 \(\sqrt5\). 异面直线所成的角取锐角，故其余弦值为
+\[
+\frac{|\overrightarrow{AD_1}\cdot\overrightarrow{DB_1}|}{|\overrightarrow{AD_1}|\,|\overrightarrow{DB_1}|}=\frac2{2\sqrt5}=\frac{\sqrt5}{5}.
+\]
+故选：C.
+\end{solution}
 
 \begin{problem}
 若 \(f(x)=\cos x-\sin x\) 在 \([-a,a]\) 是减函数，则 \(a\) 的最大值是（\quad）
@@ -104,6 +228,23 @@
     {\(\pi\)}
 \end{problem}
 
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+\[
+f'(x)=-\sin x-\cos x=-\sqrt2\sin\left(x+\frac\pi4\right).
+\]
+要使 \(f(x)\) 在 \([-a,a]\) 上为减函数，需使该区间内始终有
+\(f'(x)\le0\)，即 \(\sin\left(x+\dfrac\pi4\right)\ge0\). 包含点 \(x=0\) 的最大连续区间为
+\(-\dfrac\pi4\le x\le\dfrac{3\pi}4\). 因为区间关于原点对称，必须有
+\([-a,a]\subseteq\left[-\dfrac\pi4,\dfrac{3\pi}4\right]\)，从而
+\(a\le\dfrac\pi4\). 当 \(a=\dfrac\pi4\) 时条件确实成立，所以 \(a\) 的最大值为
+\(\dfrac\pi4\).
+故选：A.
+\end{solution}
+
 \begin{problem}
 已知 \(f(x)\) 是定义域为 \((-\infty,+\infty)\) 的奇函数，满足 \(f(1-x)=f(1+x)\)，若 \(f(1)=2\)，则 \(f(1)+f(2)+f(3)+\cdots+f(50)=\)（\quad）
 
@@ -113,6 +254,26 @@
     {\(2\)}
     {\(50\)}
 \end{problem}
+
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+因为 \(f\) 是奇函数，所以 \(f(0)=0\) 且 \(f(-x)=-f(x)\). 由
+\(f(1-x)=f(1+x)\)，令 \(1-x=t\)，得
+\(f(t)=f(2-t)\). 令 \(t=-x\)，则
+\[
+f(2+x)=f(-x)=-f(x).
+\]
+再次使用上式可得 \(f(4+x)=-f(2+x)=f(x)\)，所以 \(4\) 是 \(f\) 的一个周期. 另外
+\(f(2)=-f(0)=0\)，\(f(3)=-f(1)=-2\)，\(f(4)=f(0)=0\). 因此每四项的和为
+\(f(1)+f(2)+f(3)+f(4)=2+0-2+0=0\). 前 \(48\) 项由 \(12\) 个周期组成，故
+\[
+\sum_{n=1}^{50}f(n)=12\times0+f(49)+f(50)=f(1)+f(2)=2.
+\]
+故选：C.
+\end{solution}
 
 \begin{problem}
 已知 \(F_1\)，\(F_2\) 是椭圆 \(C:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\)（\(a>b>0\)）的左，右焦点，\(A\) 是 \(C\) 的左顶点，点 \(P\) 在过 \(A\) 且斜率为 \(\dfrac{\sqrt3}{6}\) 的直线上，\(\triangle PF_1F_2\) 为等腰三角形，\(\angle F_1F_2P=120^\circ\)，则 \(C\) 的离心率为（\quad）
@@ -124,11 +285,42 @@
     {\(\dfrac14\)}
 \end{problem}
 
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+设椭圆焦半距为 \(c\)，则 \(F_1(-c,0)\)、\(F_2(c,0)\)，且
+\(A(-a,0)\). 在等腰三角形 \(\triangle PF_1F_2\) 中，
+\(\angle F_1F_2P=120^\circ\) 不可能是底角，因此它是顶角，故
+\(PF_2=F_1F_2=2c\). 由直线斜率为正，点 \(P\) 位于 \(x\) 轴上方. 以 \(F_2\) 为顶点，
+\(\overrightarrow{F_2F_1}\) 与 \(\overrightarrow{F_2P}\) 的夹角为 \(120^\circ\)，所以
+\[
+P=(c+2c\cos60^\circ,2c\sin60^\circ)=(2c,\sqrt3c).
+\]
+又 \(P\) 在过 \(A\) 且斜率为 \(\dfrac{\sqrt3}{6}\) 的直线上，故
+\[
+\sqrt3c=\frac{\sqrt3}{6}(2c+a),
+\]
+从而 \(a=4c\). 因此椭圆的离心率为
+\(e=\dfrac ca=\dfrac14\).
+故选：D.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
 曲线 \(y=2\ln(x+1)\) 在点 \((0,0)\) 处的切线方程为\fillinblank{}.
 \end{problem}
+
+\begin{answer}
+\(y=2x\)
+\end{answer}
+
+\begin{solution}
+函数的导数为 \(y'=\dfrac2{x+1}\)，所以在 \(x=0\) 处的切线斜率为 \(2\). 由于切点为 \((0,0)\)，切线方程为
+\(y-0=2(x-0)\)，即 \(y=2x\).
+\end{solution}
 
 \begin{problem}
 若变量 \(x\)，\(y\) 满足约束条件
@@ -140,13 +332,69 @@ x-5\le0
 则 \(z=x+y\) 的最大值为\fillinblank{}.
 \end{problem}
 
+\begin{answer}
+\(9\)
+\end{answer}
+
+\begin{solution}
+由约束条件得
+\(y\ge\dfrac{5-x}{2}\)、\(y\le\dfrac{x+3}{2}\)，所以可行时必须有
+\(\dfrac{5-x}{2}\le\dfrac{x+3}{2}\)，即 \(x\ge1\). 再结合 \(x\le5\)，得
+\(1\le x\le5\). 对固定的 \(x\)，\(z=x+y\) 随 \(y\) 增大而增大，故取
+\(y=\dfrac{x+3}{2}\) 时，
+\[
+z\le x+\frac{x+3}{2}=\frac{3x+3}{2}\le\frac{3\times5+3}{2}=9.
+\]
+当 \((x,y)=(5,4)\) 时三个约束均满足，且 \(z=9\)，所以最大值为 \(9\).
+\end{solution}
+
 \begin{problem}
 已知 \(\sin\alpha+\cos\beta=1\)，\(\cos\alpha+\sin\beta=0\)，则 \(\sin(\alpha+\beta)=\fillinblank{}\).
 \end{problem}
 
+\begin{answer}
+\(-\dfrac12\)
+\end{answer}
+
+\begin{solution}
+将题设两式分别平方后相加，得
+\[
+(\sin\alpha+\cos\beta)^2+(\cos\alpha+\sin\beta)^2=1.
+\]
+展开并利用平方和公式，得到
+\[
+2+2(\sin\alpha\cos\beta+\cos\alpha\sin\beta)=1.
+\]
+因此 \(2+2\sin(\alpha+\beta)=1\)，即
+\(\sin(\alpha+\beta)=-\dfrac12\).
+\end{solution}
+
 \begin{problem}
 已知圆锥的顶点为 \(S\)，母线 \(SA\)，\(SB\) 所成角的余弦值为 \(\dfrac78\)，\(SA\) 与圆锥底面所成角为 \(45^\circ\)，若 \(\triangle SAB\) 的面积为 \(5\sqrt{15}\)，则该圆锥的侧面积为\fillinblank{}.
 \end{problem}
+
+\begin{answer}
+\(40\sqrt2\pi\)
+\end{answer}
+
+\begin{solution}
+设圆锥母线长为 \(\ell=SA=SB\). 由
+\(\cos\angle ASB=\dfrac78\)，得
+\(\sin\angle ASB=\sqrt{1-\dfrac{49}{64}}=\dfrac{\sqrt{15}}8\). 由三角形面积公式，
+\[
+5\sqrt{15}=\frac12\ell^2\sin\angle ASB=\frac12\ell^2\cdot\frac{\sqrt{15}}8,
+\]
+所以 \(\ell^2=80\)，即 \(\ell=4\sqrt5\).
+
+设顶点 \(S\) 在底面的射影为 \(S'\)，则 \(AS'\) 是底面半径. 因为母线 \(SA\) 与底面所成角为 \(45^\circ\)，在直角三角形 \(SAS'\) 中，
+\[
+AS'=SA\cos45^\circ=4\sqrt5\cdot\frac{\sqrt2}{2}=2\sqrt{10}.
+\]
+所以圆锥的侧面积为
+\[
+\pi\cdot AS'\cdot SA=\pi\cdot2\sqrt{10}\cdot4\sqrt5=40\sqrt2\pi.
+\]
+\end{solution}
 
 \section{解答题}
 
@@ -159,6 +407,27 @@ x-5\le0
 \end{enumerate}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item 设等差数列 \(\{a_n\}\) 的公差为 \(d\). 由
+\(S_3=3a_1+3d=-15\) 和 \(a_1=-7\)，得
+\[
+3(-7)+3d=-15,
+\]
+所以 \(d=2\). 因此
+\[
+a_n=a_1+(n-1)d=-7+2(n-1)=2n-9.
+\]
+\item 由等差数列前 \(n\) 项和公式，
+\[
+S_n=\frac n2\bigl[2a_1+(n-1)d\bigr]
+=\frac n2[-14+2(n-1)]
+=n^2-8n=(n-4)^2-16.
+\]
+因为 \(n\) 为正整数，\(n=4\) 时 \((n-4)^2\) 取得最小值 \(0\)，所以 \(S_n\) 的最小值为 \(-16\).
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
 如图是某地区 \(2000\) 年至 \(2016\) 年环境基础设施投资额 \(y\)（单位：亿元）的折线图.
 
@@ -169,8 +438,29 @@ x-5\le0
 \item 你认为用哪个模型得到的预测值更可靠？并说明理由.
 \end{enumerate}
 
-\bitmapfigure[float=inline,max width=0.80\linewidth]{img/2018/national_paper_2_science/q18_fig1.png}
+{\begingroup
+    \leftskip=0pt\relax
+    \examfiguregroup[float=inline]{img/2018/national_paper_2_science/q18_fig1.png}{%
+        \adjustbox{scale=0.9}{%
+            \bitmapinclude{img/2018/national_paper_2_science/q18_fig1.png}%
+        }%
+    }%
+\endgroup}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item 模型（1）中 \(2000\) 年对应 \(t=1\)，所以 \(2018\) 年对应 \(t=19\). 因此预测值为
+\[
+\hat y_1=-30.4+13.5\times19=226.1.
+\]
+模型（2）中 \(2010\) 年对应 \(t=1\)，所以 \(2018\) 年对应 \(t=9\). 因此预测值为
+\[
+\hat y_2=99+17.5\times9=256.5.
+\]
+\item 模型（2）得到的预测值更可靠. 从折线图看，\(2010\) 年至 \(2016\) 年的数据点大致分布在一条直线附近，呈现出较明显的线性增长趋势；而 \(2000\) 年至 \(2009\) 年的数据与 \(2010\) 年后的增长阶段差异较大，把它们全部用于建立模型（1）会削弱对近期趋势的反映. 模型（2）使用了较近时期的数据，且其预测的 \(2018\) 年投资额相对于 \(2016\) 年的 \(220\) 亿元继续保持近期增长趋势，因此更可靠.
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 设抛物线 \(C:y^2=4x\) 的焦点为 \(F\)，过 \(F\) 且斜率为 \(k\)（\(k>0\)）的直线 \(l\) 与 \(C\) 交于 \(A\)，\(B\) 两点，\(|AB|=8\).
@@ -180,6 +470,69 @@ x-5\le0
 \item 求过点 \(A\)，\(B\) 且与 \(C\) 的准线相切的圆的方程.
 \end{enumerate}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item 由 \(C:y^2=4x\) 可知焦点为 \(F(1,0)\)，所以直线 \(l\) 的方程为
+\(y=k(x-1)\)，其中 \(k>0\). 设直线与抛物线交点的横坐标为 \(x_1,x_2\)，则
+\[
+k^2(x-1)^2=4x,
+\]
+即
+\[
+k^2x^2-(2k^2+4)x+k^2=0.
+\]
+该方程的判别式为
+\[
+(2k^2+4)^2-4k^4=16(k^2+1)>0,
+\]
+所以确有两个交点. 由求根公式或根与系数的关系，
+\[
+|x_1-x_2|=\frac{4\sqrt{k^2+1}}{k^2}.
+\]
+又因为 \(y_i=k(x_i-1)\)，所以
+\[
+|AB|=|x_1-x_2|\sqrt{1+k^2}
+=\frac{4(k^2+1)}{k^2}.
+\]
+由 \(|AB|=8\)，得
+\(\dfrac{4(k^2+1)}{k^2}=8\)，即 \(k^2=1\). 结合 \(k>0\)，得 \(k=1\)，故
+\[
+l:y=x-1.
+\]
+\item 当 \(k=1\) 时，交点横坐标满足 \(x^2-6x+1=0\)，所以
+\(x_1+x_2=6\). 由 \(y=x-1\) 得交点的中点为
+\(M(3,2)\). 由于 \(AB\) 的斜率为 \(1\)，其垂直平分线为
+\[
+y-2=-(x-3),\qquad\text{即}\qquad y=-x+5.
+\]
+设所求圆的圆心为 \(O(u,v)\)，则 \(v=5-u\). 又
+\(|AB|=8\)，故圆半径 \(R\) 满足
+\[
+R^2=OM^2+\left(\frac{|AB|}{2}\right)^2
+=(u-3)^2+(v-2)^2+16
+=2(u-3)^2+16.
+\]
+抛物线的准线为 \(x=-1\). 圆与此直线相切，当且仅当
+\(R=|u+1|\). 因而
+\[
+2(u-3)^2+16=(u+1)^2,
+\]
+化简得
+\[
+u^2-14u+33=0,
+\]
+所以 \(u=3\) 或 \(u=11\). 对应的圆心和半径分别为
+\((3,2),4\) 以及 \((11,-6),12\). 所求圆的方程为
+\[
+(x-3)^2+(y-2)^2=16
+\]
+或
+\[
+(x-11)^2+(y+6)^2=144.
+\]
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 如图，在三棱锥 \(P-ABC\) 中，\(AB=BC=2\sqrt2\)，\(PA=PB=PC=AC=4\)，\(O\) 为 \(AC\) 的中点.
@@ -192,8 +545,60 @@ x-5\le0
 \bitmapfigure[float=inline,max width=0.38\linewidth]{img/2018/national_paper_2_science/q20_fig1.png}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item 因为 \(PA=PC=AC=4\)，所以 \(\triangle PAC\) 为等边三角形. \(O\) 是 \(AC\) 的中点，故
+\(PO\perp AC\)，且
+\(PO=2\sqrt3\). 又
+\[
+AB^2+BC^2=(2\sqrt2)^2+(2\sqrt2)^2=16=AC^2,
+\]
+所以 \(\triangle ABC\) 为等腰直角三角形，直角在 \(B\). 于是 \(O\) 为斜边 \(AC\) 的中点，得
+\(OB\perp AC\) 且 \(OB=\dfrac{AC}{2}=2\). 在三角形 \(POB\) 中，
+\[
+PO^2+OB^2=(2\sqrt3)^2+2^2=16=PB^2,
+\]
+所以 \(PO\perp OB\). 直线 \(AC\)、\(OB\) 是平面 \(ABC\) 内相交的两条直线，且 \(PO\) 同时垂直于它们，因此
+\(PO\perp\) 平面 \(ABC\).
+\item 以 \(O\) 为原点，\(\overrightarrow{OB}\) 的方向为 \(x\) 轴正方向，\(\overrightarrow{OC}\) 的方向为 \(y\) 轴正方向，建立空间直角坐标系，则
+\(O(0,0,0)\)，\(B(2,0,0)\)，\(A(0,-2,0)\)，\(C(0,2,0)\)，\(P(0,0,2\sqrt3)\).
+设 \(M(a,2-a,0)\)，其中 \(0\le a\le2\). 则
+\[
+\overrightarrow{AP}=(0,2,2\sqrt3).
+\]
+\(\overrightarrow{AM}=(a,4-a,0)\).
+平面 \(PAC\) 的一个法向量为 \(\bs n_1=(1,0,0)\). 由
+\(\overrightarrow{AP}\times\overrightarrow{AM}\) 可取平面 \(PAM\) 的法向量为
+\[
+\bs n=(\sqrt3(a-4),\sqrt3a,-a).
+\]
+由于 \(0\le a\le2\)，二面角为 \(30^\circ\) 给出
+\[
+\frac{\sqrt3(4-a)}{\sqrt{3(4-a)^2+4a^2}}=\cos30^\circ=\frac{\sqrt3}{2}.
+\]
+平方并化简得
+\((4-a)^2=4a^2\)，所以 \(a=4/3\) 或 \(a=-4\). 舍去不满足 \(0\le a\le2\) 的 \(a=-4\)，故 \(a=4/3\). 此时可取
+\[
+\bs n=\left(-\frac{8\sqrt3}{3},\frac{4\sqrt3}{3},-\frac43\right).
+\]
+又
+\(\overrightarrow{PC}=(0,2,-2\sqrt3)\)，\(|\overrightarrow{PC}|=4\)，\(|\bs n|=\frac{16}{3}\)，
+且
+\[
+\left|\overrightarrow{PC}\cdot\bs n\right|
+=\frac{16\sqrt3}{3}.
+\]
+设 \(PC\) 与平面 \(PAM\) 所成的角为 \(\theta\)，则
+\[
+\sin\theta=\frac{|\overrightarrow{PC}\cdot\bs n|}{|\overrightarrow{PC}|\,|\bs n|}
+=\frac{\frac{16\sqrt3}{3}}{4\cdot\frac{16}{3}}
+=\frac{\sqrt3}{4}.
+\]
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
-已知函数 \(f(x)=e^x-ax^2\).
+已知函数 \(f(x)=\e^x-ax^2\).
 
 \begin{enumerate}
 \item 若 \(a=1\)，证明：当 \(x\ge0\) 时，\(f(x)\ge1\)；
@@ -201,16 +606,98 @@ x-5\le0
 \end{enumerate}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item 当 \(a=1\) 时，
+\(f(x)-1=\e^x-x^2-1\). 令
+\(g(x)=(x^2+1)\e^{-x}\)，则
+\[
+g'(x)=\e^{-x}(2x-x^2-1)=-\e^{-x}(x-1)^2\le0.
+\]
+所以 \(g(x)\) 在 \([0,+\infty)\) 上单调递减，从而
+\(g(x)\le g(0)=1\). 因此
+\[
+f(x)-1=\e^x\bigl[1-(x^2+1)\e^{-x}\bigr]=\e^x[1-g(x)]\ge0,
+\]
+即当 \(x\ge0\) 时，\(f(x)\ge1\).
+\item 当 \(x>0\) 时，\(f(x)=0\) 等价于
+\[
+a=\frac{\e^x}{x^2}=:h(x).
+\]
+函数 \(h\) 的导数为
+\[
+h'(x)=\frac{\e^x(x-2)}{x^3}.
+\]
+所以 \(h(x)\) 在 \((0,2)\) 上单调递减，在 \((2,+\infty)\) 上单调递增. 又
+\(\lim_{x\to0^+}h(x)=+\infty\)，\(\lim_{x\to+\infty}h(x)=+\infty\)，故 \(h\) 在 \(x=2\) 处取得唯一最小值
+\[
+h(2)=\frac{\e^2}{4}.
+\]
+当 \(a<\dfrac{\e^2}{4}\) 时无零点，当 \(a=\dfrac{\e^2}{4}\) 时只有 \(x=2\) 一个零点，当 \(a>\dfrac{\e^2}{4}\) 时有两个零点. 因此满足题意的 \(a\) 为
+\[
+a=\frac{\e^2}{4}.
+\]
+\end{enumerate}
+\end{solution}
+
 \section{选考题：解答题}
 
 \begin{problem}
-在直角坐标系 \(xOy\) 中，曲线 \(C\) 的参数方程为 \((x=2\cos\theta,\ y=4\sin\theta)\)（\(\theta\) 为参数），直线 \(l\) 的参数方程为 \((x=1+t\cos\alpha,\ y=2+t\sin\alpha)\)（\(t\) 为参数）.
+在直角坐标系 \(xOy\) 中，曲线 \(C\) 的参数方程为
+\examdisplaycases{}{
+x=2\cos\theta,\\
+y=4\sin\theta
+}
+（\(\theta\) 为参数），直线 \(l\) 的参数方程为
+\examdisplaycases{}{
+x=1+t\cos\alpha,\\
+y=2+t\sin\alpha
+}
+（\(t\) 为参数）.
 
 \begin{enumerate}
 \item 求 \(C\) 和 \(l\) 的直角坐标方程；
 \item 若曲线 \(C\) 截直线 \(l\) 所得线段的中点坐标为 \((1,2)\)，求 \(l\) 的斜率.
 \end{enumerate}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item 由 \(x=2\cos\theta\)、\(y=4\sin\theta\)，得
+\(\cos\theta=\dfrac x2\)、\(\sin\theta=\dfrac y4\). 利用
+\(\sin^2\theta+\cos^2\theta=1\)，得到曲线 \(C\) 的直角坐标方程
+\[
+\frac{x^2}{4}+\frac{y^2}{16}=1.
+\]
+当 \(\cos\alpha\ne0\) 时，由直线参数方程消去 \(t\)，得
+\[
+y-2=(x-1)\tan\alpha,
+\]
+即 \(l\) 的直角坐标方程为
+\(y=(\tan\alpha)x+2-\tan\alpha\). 当 \(\cos\alpha=0\) 时，\(\sin\alpha=\pm1\)，直线方程为 \(x=1\).
+\item 点 \((1,2)\) 在曲线 \(C\) 内部，因为
+\[
+\frac{1^2}{4}+\frac{2^2}{16}=\frac12<1.
+\]
+将直线的参数方程代入 \(C\) 的方程，得
+\[
+\frac{(1+t\cos\alpha)^2}{4}+\frac{(2+t\sin\alpha)^2}{16}=1,
+\]
+即
+\[
+(1+3\cos^2\alpha)t^2+4(2\cos\alpha+\sin\alpha)t-8=0.
+\]
+由于 \((1,2)\) 是弦的中点，而它对应参数 \(t=0\)，设两个交点对应的参数为 \(t_1,t_2\)，则
+\(t_1+t_2=0\). 由韦达定理，
+\[
+t_1+t_2=-\frac{4(2\cos\alpha+\sin\alpha)}{1+3\cos^2\alpha}=0,
+\]
+所以 \(2\cos\alpha+\sin\alpha=0\). 这里 \(\cos\alpha\ne0\)，故直线 \(l\) 的斜率为
+\[
+\tan\alpha=-2.
+\]
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 设函数 \(f(x)=5-|x+a|-|x-2|\).
@@ -220,3 +707,35 @@ x-5\le0
 \item 若 \(f(x)\le1\)，求 \(a\) 的取值范围.
 \end{enumerate}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item 当 \(a=1\) 时，
+\[
+|x+1|+|x-2|=
+\begin{cases}
+1-2x,&x\le-1,\\
+3,&-1\le x\le2,\\
+2x-1,&x\ge2.
+\end{cases}
+\]
+由 \(f(x)\ge0\) 得 \(|x+1|+|x-2|\le5\). 分三段求解：当 \(x\le-1\) 时，\(1-2x\le5\)，得 \(x\ge-2\)；当 \(-1\le x\le2\) 时恒有 \(3\le5\)；当 \(x\ge2\) 时，\(2x-1\le5\)，得 \(x\le3\). 合并得解集为
+\[
+[-2,3].
+\]
+\item 要使 \(f(x)\le1\)，等价于
+\[
+|x+a|+|x-2|\ge4.
+\]
+由三角不等式，
+\[
+|x+a|+|x-2|\ge|(x+a)-(x-2)|=|a+2|.
+\]
+当 \(x=2\) 时等号成立，所以左侧关于 \(x\) 的最小值恰为 \(|a+2|\). 因此
+\(f(x)\le1\) 对所有 \(x\) 成立，当且仅当
+\[
+5-|a+2|\le1,
+\]
+即 \(|a+2|\ge4\). 解得 \(a\le-6\) 或 \(a\ge2\).
+\end{enumerate}
+\end{solution}

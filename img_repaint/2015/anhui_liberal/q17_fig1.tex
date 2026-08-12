@@ -11,9 +11,9 @@
 % dashed segments: horizontal reference lines at .004, .018, .022, .028 and a
 % Label avoidance: y label is above the vertical axis, 分数 is near the x-arrow, and a is beside its dashed level.
 \begin{tikzpicture}
-\begin{axis}[
-    width=7.0cm,
-    height=4.6cm,
+\begin{axis}[exam statistical histogram,scaled ticks=false,
+    width=16cm,
+    height=8.655cm,
     xmin=0,
     xmax=3.75,
     ymin=0,
@@ -24,14 +24,13 @@
     xticklabels={0,40,50,60,70,80,90,100},
     ytick={0.004,0.018,0.022,0.028},
     yticklabels={0.004,0.018,0.022,0.028},
-    xticklabel style={font=\normalsize},
-    yticklabel style={font=\normalsize},
+    xticklabel style={font=\normalsize,yshift=-4pt},
+    yticklabel style={font=\normalsize,xshift=-4pt},
     tick style={black,line width=0.4pt},
     tick align=outside,
     clip=false,
 ]
-\node[anchor=south west,inner sep=0pt,font=\normalsize] at (axis cs:0.08,0.033)
-  {\(\dfrac{\text{频率}}{\text{组距}}\)};
+\examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
 \node[anchor=south east,inner sep=0pt] at (axis cs:3.73,0.003) {分数};
 \node[anchor=east,inner sep=0pt] at (axis cs:0,0.006) {$a$};
 \draw[dashed,line width=0.35pt] (axis cs:0,0.004)--(axis cs:0.5,0.004);
@@ -49,6 +48,6 @@
   (3.5,0)
 };
 \draw[white,line width=2pt] (axis cs:0.16,0)--(axis cs:0.40,0);
-\draw[line width=0.45pt] (axis cs:0.16,0)--(axis cs:0.20,0.0018)--(axis cs:0.24,-0.0018)--(axis cs:0.28,0.0018)--(axis cs:0.32,-0.0018)--(axis cs:0.36,0.0018)--(axis cs:0.40,0);
+\examstatxbreak[line width=0.45pt]{0.28}{0};
 \end{axis}
 \end{tikzpicture}

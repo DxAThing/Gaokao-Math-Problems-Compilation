@@ -6,9 +6,9 @@
 % [1.20,1.25), [1.25,1.30) have frequency densities 1, 4, 5.6, 6, 3, 0.4.
 % The compressed x coordinates below encode the printed axis break between 0 and 1.00.
 \begin{tikzpicture}[baseline]
-\begin{axis}[
-    width=12.0cm,
-    height=5.4cm,
+\begin{axis}[exam statistical histogram,
+    width=15.053cm,
+    height=10.161cm,
     axis lines=none,
     xmin=-0.9,
     xmax=8.4,
@@ -45,7 +45,7 @@
     % Axes and the printed break on the mass axis.
     \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:8.05,0);
     \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,7.0);
-    \draw[line width=0.8pt] (axis cs:0.30,-0.13) -- (axis cs:0.45,0.13) -- (axis cs:0.60,-0.13) -- (axis cs:0.75,0.13) -- (axis cs:0.90,-0.13);
+    \examstatxbreak[line width=0.8pt]{0.6}{0};
 
     % x-axis ticks and labels.
     \draw[line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.10);
@@ -56,30 +56,30 @@
     \draw[line width=0.45pt] (axis cs:5,0) -- (axis cs:5,-0.10);
     \draw[line width=0.45pt] (axis cs:6,0) -- (axis cs:6,-0.10);
     \draw[line width=0.45pt] (axis cs:7,0) -- (axis cs:7,-0.10);
-    \node[anchor=north east,inner sep=0pt,font=\normalsize] at (axis cs:-0.12,-0.16) {0};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:1,-0.18) {1.00};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:2,-0.18) {1.05};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:3,-0.18) {1.10};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:4,-0.18) {1.15};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:5,-0.18) {1.20};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:6,-0.18) {1.25};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:7,-0.18) {1.30};
+    \node[anchor=north east,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:-0.12,0.000000) {0};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:1,-0.100000) {1.00};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:2,-0.100000) {1.05};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:3,-0.100000) {1.10};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:4,-0.100000) {1.15};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:5,-0.100000) {1.20};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:6,-0.100000) {1.25};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:7,-0.100000) {1.30};
 
     % y-axis ticks and labels.
     \draw[line width=0.45pt] (axis cs:0,0.4) -- (axis cs:-0.16,0.4);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.24,0.4) {0.4};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.160000,0.4) {0.4};
     \draw[line width=0.45pt] (axis cs:0,1) -- (axis cs:-0.16,1);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.24,1) {1};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.160000,1) {1};
     \draw[line width=0.45pt] (axis cs:0,3) -- (axis cs:-0.16,3);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.24,3) {3};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.160000,3) {3};
     \draw[line width=0.45pt] (axis cs:0,4) -- (axis cs:-0.16,4);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.24,4) {4};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.160000,4) {4};
     \draw[line width=0.45pt] (axis cs:0,5.6) -- (axis cs:-0.16,5.6);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.24,5.6) {5.6};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.160000,5.6) {5.6};
     \draw[line width=0.45pt] (axis cs:0,6) -- (axis cs:-0.16,6);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.24,6) {6};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.160000,6) {6};
 
-    \node[anchor=south west,inner sep=0pt,font=\normalsize] at (axis cs:0.28,7.06) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\normalsize] at (axis cs:7.45,0.40) {质量 (kg)};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{质量 (kg)};
 \end{axis}
 \end{tikzpicture}

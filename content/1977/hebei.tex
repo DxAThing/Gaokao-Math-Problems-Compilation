@@ -1,5 +1,7 @@
 \chapter{1977年河北卷}
 
+\section{解答题}
+
 \begin{problem}
 \begin{enumerate}[label=（\arabic*）]
     \item 叙述函数的定义.
@@ -11,19 +13,56 @@
 \end{enumerate}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+    \item 设 \(D\) 和 \(E\) 是两个非空数集，对于集合 \(D\) 中的每一个 \(x\)，按照某个确定的对应关系，在集合 \(E\) 中都有唯一确定的数 \(y\) 与它对应，那么称 \(y\) 是 \(x\) 的函数，记作 \(y=f(x)\). 集合 \(D\) 叫作这个函数的定义域，所有函数值组成的集合叫作这个函数的值域，\(y\) 叫作函数值.
+    \item 因为分母中的根式必须有意义且不能为零，所以 \(2-3x>0\)，解得 \(x<\dfrac{2}{3}\). 因此函数的定义域为 \(\left(-\infty,\dfrac{2}{3}\right)\).
+    \item \(\left(0.5\right)^{-2}=\left(\dfrac{1}{2}\right)^{-2}=4\)，且 \(\left(-\dfrac{27}{8}\right)^{\frac{1}{3}}=-\dfrac{3}{2}\)，所以原式 \(=(1-4)\div\left(-\dfrac{3}{2}\right)=2\).
+    \item 由于 \(4^{\frac{1}{2}}=2\)，所以 \(\log_{4}2=\dfrac{1}{2}\).
+    \item 提取公因式 \(y\)，得 \(x^{2}y-2y^{3}=y\left(x^{2}-2y^{2}\right)\). 若在实数范围内继续分解，则为 \(y\left(x-\sqrt{2}y\right)\left(x+\sqrt{2}y\right)\).
+    \item 利用三角函数的周期性，\(\sin\dfrac{4\pi}{3}=-\dfrac{\sqrt{3}}{2}\)，\(\cos\dfrac{25\pi}{6}=\cos\dfrac{\pi}{6}=\dfrac{\sqrt{3}}{2}\)，\(\tan\left(-\dfrac{3\pi}{4}\right)=\tan\dfrac{\pi}{4}=1\)，所以原式 \(=-\dfrac{\sqrt{3}}{2}\cdot\dfrac{\sqrt{3}}{2}\cdot1=-\dfrac{3}{4}\).
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
 证明：如图，\(AB\) 是圆 \(O\) 的直径，\(CB\) 是圆 \(O\) 的切线，切点为 \(B\)，\(OC\) 平行于弦 \(AD\)，求证：\(DC\) 是圆 \(O\) 的切线.
 
 \bitmapfigure[max width=4.8cm]{img/1977/hebei/q2_fig1.png}
 \end{problem}
 
+\begin{solution}
+建立直角坐标系，使 \(O=(0,0)\)，\(A=(-R,0)\)，\(B=(R,0)\)，其中 \(R>0\) 是圆的半径. 由于 \(CB\) 是在 \(B\) 点的切线，故可设 \(C=(R,c)\)；设 \(D=(u,v)\). 由 \(D\) 在圆上，得 \(u^{2}+v^{2}=R^{2}\). 又因为 \(OC\parallel AD\)，而 \(\overrightarrow{OC}=(R,c)\)，\(\overrightarrow{AD}=(u+R,v)\)，所以 \(Rv=c(u+R)\). 图中 \(D\ne A\)，从而 \(u+R\ne0\)，即 \(c=\dfrac{Rv}{u+R}\).
+
+直线 \(DC\) 的方向向量可取 \((R-u,c-v)\)，而半径 \(OD\) 的方向向量为 \((u,v)\). 于是
+\[
+(u,v)\cdot(R-u,c-v)=u(R-u)+v(c-v)=R(u-R)+vc=R(u-R)+\frac{Rv^{2}}{u+R}.
+\]
+再由 \(u^{2}+v^{2}=R^{2}\)，有
+\[
+R(u-R)+\frac{Rv^{2}}{u+R}=\frac{R\left((u-R)(u+R)+v^{2}\right)}{u+R}=0.
+\]
+因此 \(OD\perp DC\). 半径与过其端点的直线垂直，所以 \(DC\) 是圆 \(O\) 在 \(D\) 点的切线.
+\end{solution}
+
 \begin{problem}
 证明：\(\frac{\sin2\alpha+1}{1+\cos2\alpha+\sin2\alpha}=\frac{1}{2}\tan\alpha+\frac{1}{2}\).
 \end{problem}
 
+\begin{solution}
+当等式两边有意义时，利用倍角公式可得 \(1+\sin2\alpha=\left(\sin\alpha+\cos\alpha\right)^{2}\)，以及 \(1+\cos2\alpha+\sin2\alpha=2\cos\alpha\left(\sin\alpha+\cos\alpha\right)\). 原式化为
+\[
+\frac{\left(\sin\alpha+\cos\alpha\right)^{2}}{2\cos\alpha\left(\sin\alpha+\cos\alpha\right)}=\frac{\sin\alpha+\cos\alpha}{2\cos\alpha}=\frac{1}{2}\tan\alpha+\frac{1}{2}.
+\]
+原式有意义时，\(\cos\alpha\ne0\) 且 \(\sin\alpha+\cos\alpha\ne0\)，所以上述约分合法，等式得证.
+\end{solution}
+
 \begin{problem}
 已知 \(2\lg x+\lg2=\lg\left( x+6 \right)\)，求 \(x\).
 \end{problem}
+
+\begin{solution}
+由对数的定义域，必须有 \(x>0\) 且 \(x+6>0\)，所以只需取 \(x>0\). 在此条件下，\(2\lg x=\lg x^{2}\)，故原方程等价于 \(\lg\left(2x^{2}\right)=\lg\left(x+6\right)\). 由于常用对数函数是单调函数，得到 \(2x^{2}=x+6\)，即 \(2x^{2}-x-6=0\)，从而 \(\left(2x+3\right)\left(x-2\right)=0\). 方程的根为 \(x=-\dfrac{3}{2}\) 或 \(x=2\)，结合 \(x>0\)，得 \(x=2\).
+\end{solution}
 
 \begin{problem}
 某生产队要建立一个形状是直角梯形的苗圃，其两邻边借用夹角为 \(135^\circ\) 的两面墙，另外两边是总长为 \(30\text{ 米}\) 的篱笆（如图，\(AD\) 和 \(DC\) 为墙），问篱笆的两边各多长时，苗圃的面积最大？最大面积是多少？
@@ -31,9 +70,33 @@
 \bitmapfigure[max width=5.8cm]{img/1977/hebei/q5_fig1.png}
 \end{problem}
 
+\begin{solution}
+设篱笆边 \(BC=x\text{ 米}\)，\(AB=y\text{ 米}\)，则 \(x+y=30\)，且 \(x>0\)，\(y>0\). 因为 \(AB\parallel DC\)，而两面墙的夹角为 \(135^\circ\)，所以墙 \(AD\) 与底边 \(AB\) 的锐角为 \(45^\circ\). 从 \(D\) 向 \(AB\) 作垂线，所得直角等腰三角形的两直角边相等，故 \(AB-DC=BC=x\)，即 \(DC=y-x\)，并且图示梯形要求 \(y>x\).
+
+苗圃的高为 \(BC=x\)，所以面积
+\[
+S=\frac{AB+DC}{2}\cdot BC=\frac{y+(y-x)}{2}x=\frac{2y-x}{2}x.
+\]
+代入 \(y=30-x\)，得 \(S=30x-\dfrac{3}{2}x^{2}=-\dfrac{3}{2}\left(x-10\right)^{2}+150\). 因此当 \(x=10\) 时面积最大，最大面积为 \(150\text{ 平方米}\). 此时 \(BC=10\text{ 米}\)，\(AB=20\text{ 米}\)，并且 \(DC=10\text{ 米}\)，满足图示梯形的形状.
+\end{solution}
+
 \begin{problem}
-工人师傅要用铁皮做一个上大下小的正四棱台形容器（上面开口），使其容积为 \(208\text{ 立方米}\)，高为 \(4\text{ 分米}\)，上口边长与下底面边长的比为 \(5:2\)，做这样的容器需要多少平方米的铁皮？（不计容器的厚度和加工余量，不要求写出已知，求解，直接求解并画图即可）
+工人师傅要用铁皮做一个上大下小的正四棱台形容器（上面开口），使其容积为 \(208\text{ 立方分米}\)，高为 \(4\text{ 分米}\)，上口边长与下底面边长的比为 \(5:2\)，做这样的容器需要多少平方分米的铁皮？（不计容器的厚度和加工余量）
 \end{problem}
+
+\begin{solution}
+设上口和下底面的边长分别为 \(5k\text{ 分米}\) 和 \(2k\text{ 分米}\)，其中 \(k>0\). 正四棱台的上、下底面积分别为 \(25k^{2}\) 和 \(4k^{2}\)，所以由棱台体积公式
+\[
+208=\frac{4}{3}\left(25k^{2}+\sqrt{25k^{2}\cdot4k^{2}}+4k^{2}\right)=52k^{2}.
+\]
+因此 \(k^{2}=4\)，由 \(k>0\) 得 \(k=2\)，上口边长为 \(10\text{ 分米}\)，下底面边长为 \(4\text{ 分米}\).
+
+每个侧面是上底为 \(10\text{ 分米}\)、下底为 \(4\text{ 分米}\) 的等腰梯形. 其斜高为
+\[
+\sqrt{4^{2}+\left(\frac{10-4}{2}\right)^{2}}=5\text{ 分米}.
+\]
+故四个侧面的总面积为 \(4\cdot\dfrac{10+4}{2}\cdot5=140\text{ 平方分米}\)，下底面面积为 \(4^{2}=16\text{ 平方分米}\). 容器上面开口，所以所需铁皮面积为 \(140+16=156\text{ 平方分米}\).
+\end{solution}
 
 \begin{problem}
 如图，\(MN\) 为圆的直径，\(P\)，\(C\) 为圆上两点，连 \(PM\)，\(PN\)，过 \(C\) 作 \(MN\) 的垂线与 \(MN\)，\(MP\) 和 \(NP\) 的延长线依次相交于 \(A\)，\(B\)，\(D\)，求证：\(AC^2=AB\cdot AD\).
@@ -41,15 +104,36 @@
 \bitmapfigure[max width=5.0cm]{img/1977/hebei/q7_fig1.png}
 \end{problem}
 
+\begin{solution}
+建立直角坐标系，使 \(MN\) 为 \(x\) 轴，过 \(C\) 的垂线为 \(y\) 轴，并令 \(A=(0,0)\)，\(M=(-u,0)\)，\(N=(v,0)\)，\(C=(0,w)\)，其中 \(u>0\)，\(v>0\)，\(w>0\). 以 \(MN\) 为直径的圆的方程为 \(\left(x+u\right)\left(x-v\right)+y^{2}=0\). 代入点 \(C\)，得 \(w^{2}=uv\).
+
+设 \(P=(p,q)\). 根据图形位置，\(0<p<v\) 且 \(q>0\). 因为 \(P\) 在圆上，所以 \(q^{2}=\left(p+u\right)\left(v-p\right)\). 直线 \(MP\) 的斜率为 \(\dfrac{q}{p+u}\)，从 \(M\) 到 \(y\) 轴横坐标增加 \(u\)，所以 \(AB=\dfrac{qu}{p+u}\). 直线 \(NP\) 的斜率为 \(\dfrac{q}{p-v}\)，从 \(N\) 到 \(y\) 轴横坐标变化为 \(-v\)，所以其延长线与 \(y\) 轴交点满足 \(AD=\dfrac{qv}{v-p}\). 于是
+\[
+AB\cdot AD=\frac{q^{2}uv}{\left(p+u\right)\left(v-p\right)}=uv=w^{2}=AC^{2}.
+\]
+所以 \(AC^{2}=AB\cdot AD\).
+\end{solution}
+
 \section{选做题}
 
-\begin{problem}
+\begin{problem}[甲]
 已知椭圆短轴长为 \(2\)，中心与抛物线 \(y^2=4x\) 的顶点重合，椭圆的一个焦点恰是此抛物线的焦点，求椭圆方程及其长轴的长.
 \end{problem}
 
-\begin{problem}
+\begin{solution}
+抛物线 \(y^{2}=4x\) 的焦点为 \(F=(1,0)\). 椭圆中心与抛物线顶点重合，所以椭圆中心为原点；又因为椭圆的一个焦点是 \(F\)，故椭圆的焦半距为 \(c=1\). 设椭圆的半长轴、半短轴分别为 \(a\)、\(b\)，则 \(2b=2\)，从而 \(b=1\). 由椭圆的关系式 \(a^{2}=b^{2}+c^{2}\)，得 \(a^{2}=1+1=2\). 因此椭圆方程为 \(\dfrac{x^{2}}{2}+y^{2}=1\)，长轴长为 \(2a=2\sqrt{2}\).
+\end{solution}
+
+\reuseproblemnumber
+\begin{problem}[乙]
 已知菱形的一对内角各为 \(60^\circ\)，边长为 \(4\)，以菱形对角线所在的直线为坐标轴建立直角坐标系，以菱形 \(60^\circ\) 角的两个顶点为焦点，并且过菱形的另外两个顶点作椭圆，求椭圆方程.
 \end{problem}
+
+\begin{solution}
+取菱形两条对角线的交点为原点，取连接两个 \(60^\circ\) 角顶点的长对角线为 \(x\) 轴，另一条对角线为 \(y\) 轴. 菱形边长为 \(4\)，且内角为 \(60^\circ\)，所以长对角线长为 \(2\cdot4\cos30^\circ=4\sqrt{3}\)，短对角线长为 \(2\cdot4\sin30^\circ=4\). 因此椭圆的两个焦点为 \(\left(\pm2\sqrt{3},0\right)\)，另外两个顶点为 \((0,\pm2)\).
+
+设椭圆方程为 \(\dfrac{x^{2}}{a^{2}}+\dfrac{y^{2}}{b^{2}}=1\)，则焦距关系给出 \(a^{2}-b^{2}=\left(2\sqrt{3}\right)^{2}=12\). 又因为点 \((0,2)\) 在椭圆上，故 \(b=2\)，从而 \(a^{2}=4+12=16\). 所以椭圆方程为 \(\dfrac{x^{2}}{16}+\dfrac{y^{2}}{4}=1\).
+\end{solution}
 
 \section{附加题}
 
@@ -57,6 +141,26 @@
 将函数 \(f(x)=\e^x\) 展开为 \(x\) 的幂级数，并求出收敛区间. （\(\e=2.718\) 为自然对数的底数）
 \end{problem}
 
+\begin{solution}
+函数 \(f(x)=\e^{x}\) 的各阶导数仍为 \(\e^{x}\)，所以在 \(x=0\) 处有 \(f^{(n)}(0)=1\). 由麦克劳林公式，
+\[
+\e^{x}=1+x+\frac{x^{2}}{2!}+\frac{x^{3}}{3!}+\cdots+\frac{x^{n}}{n!}+\cdots.
+\]
+级数的一般项为 \(u_n=\dfrac{x^{n}}{n!}\). 当 \(x\ne0\) 时，\(\left|\dfrac{u_{n+1}}{u_n}\right|=\dfrac{|x|}{n+1}\to0\)；当 \(x=0\) 时级数也显然收敛. 因此对于任意实数 \(x\)，该幂级数都收敛，收敛区间为 \(\left(-\infty,+\infty\right)\).
+\end{solution}
+
 \begin{problem}
 利用定积分计算椭圆 \(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\)（\(a>b>0\)）所围成的面积.
 \end{problem}
+
+\begin{solution}
+由椭圆方程可得上半部分的函数为 \(y=b\sqrt{1-\dfrac{x^{2}}{a^{2}}}\). 椭圆关于坐标轴对称，所以其面积为
+\[
+S=4b\int_{0}^{a}\sqrt{1-\frac{x^{2}}{a^{2}}}\,dx.
+\]
+令 \(x=a\sin t\)，则 \(dx=a\cos t\,dt\)，当 \(x=0\) 时 \(t=0\)，当 \(x=a\) 时 \(t=\dfrac{\pi}{2}\). 于是
+\[
+S=4ab\int_{0}^{\frac{\pi}{2}}\cos^{2}t\,dt=4ab\left[\frac{t}{2}+\frac{\sin2t}{4}\right]_{0}^{\frac{\pi}{2}}=4ab\cdot\frac{\pi}{4}=\pi ab.
+\]
+所以椭圆所围成的面积为 \(\pi ab\).
+\end{solution}

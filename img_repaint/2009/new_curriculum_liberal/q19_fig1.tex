@@ -14,9 +14,10 @@
 % labels: y labels sit left of each y-axis; x labels sit below the axis; chart captions
 % are centered below their respective plots and remain clear of neighboring labels.
 \begin{tikzpicture}[baseline]
-\begin{axis}[
-    width=7.5cm,
-    height=6.0cm,
+\begin{axis}[exam statistical histogram,
+    name=panelA,
+    width=15cm,
+    height=8.5cm,
     axis lines=none,
     clip=false,
     xmin=-0.75,
@@ -44,12 +45,7 @@
     \draw[->,line width=0.65pt] (axis cs:0,0) -- (axis cs:6.75,0);
     \draw[->,line width=0.65pt] (axis cs:0,0) -- (axis cs:0,0.041);
     % Mask the compressed interval (0,100) and draw the source-style break.
-    \fill[white] (axis cs:0.35,-0.002) -- (axis cs:0.50,0.003)
-        -- (axis cs:0.65,-0.002) -- (axis cs:0.80,0.003)
-        -- (axis cs:0.95,-0.002) -- (axis cs:0.35,-0.002) -- cycle;
-    \draw[line width=0.65pt] (axis cs:0.35,-0.002) -- (axis cs:0.50,0.003)
-        -- (axis cs:0.65,-0.002) -- (axis cs:0.80,0.003)
-        -- (axis cs:0.95,-0.002);
+    \examstatxbreak[line width=0.65pt]{0.6499999999999999}{0};
     \draw[line width=0.35pt] (axis cs:-0.08,0.004) -- (axis cs:0,0.004);
     \draw[line width=0.35pt] (axis cs:-0.08,0.008) -- (axis cs:0,0.008);
     \draw[line width=0.35pt] (axis cs:-0.08,0.012) -- (axis cs:0,0.012);
@@ -59,37 +55,39 @@
     \draw[line width=0.35pt] (axis cs:-0.08,0.028) -- (axis cs:0,0.028);
     \draw[line width=0.35pt] (axis cs:-0.08,0.032) -- (axis cs:0,0.032);
     \draw[line width=0.35pt] (axis cs:-0.08,0.036) -- (axis cs:0,0.036);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.004) {0.004};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.008) {0.008};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.012) {0.012};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.016) {0.016};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.020) {0.020};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.024) {0.024};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.028) {0.028};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.032) {0.032};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.036) {0.036};
-    \node[anchor=south west,inner sep=0pt,font=\normalsize,align=center] at (axis cs:0.18,0.039) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\normalsize] at (axis cs:6.45,0.001) {生产能力};
-    \node[anchor=north east,inner sep=0pt,font=\normalsize] at (axis cs:0,-0.001) {0};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.004) {0.004};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.008) {0.008};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.012) {0.012};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.016) {0.016};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.020) {0.020};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.024) {0.024};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.028) {0.028};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.032) {0.032};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.036) {0.036};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{生产能力};
+    \node[anchor=north east,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:0,0.000000) {0};
     \draw[line width=0.35pt] (axis cs:1.20,0) -- (axis cs:1.20,-0.006);
     \draw[line width=0.35pt] (axis cs:2.20,0) -- (axis cs:2.20,-0.006);
     \draw[line width=0.35pt] (axis cs:3.20,0) -- (axis cs:3.20,-0.006);
     \draw[line width=0.35pt] (axis cs:4.20,0) -- (axis cs:4.20,-0.006);
     \draw[line width=0.35pt] (axis cs:5.20,0) -- (axis cs:5.20,-0.006);
     \draw[line width=0.35pt] (axis cs:6.20,0) -- (axis cs:6.20,-0.006);
-    \node[anchor=north east,rotate=-45,inner sep=0pt,font=\normalsize] at (axis cs:1.20,-0.0065) {100};
-    \node[anchor=north east,rotate=-45,inner sep=0pt,font=\normalsize] at (axis cs:2.20,-0.0065) {110};
-    \node[anchor=north east,rotate=-45,inner sep=0pt,font=\normalsize] at (axis cs:3.20,-0.0065) {120};
-    \node[anchor=north east,rotate=-45,inner sep=0pt,font=\normalsize] at (axis cs:4.20,-0.0065) {130};
-    \node[anchor=north east,rotate=-45,inner sep=0pt,font=\normalsize] at (axis cs:5.20,-0.0065) {140};
-    \node[anchor=north east,rotate=-45,inner sep=0pt,font=\normalsize] at (axis cs:6.20,-0.0065) {150};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:3.70,-0.018) {A 类工人生产能力的频率分布直方图};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:1.20,-0.006000) {100};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:2.20,-0.006000) {110};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:3.20,-0.006000) {120};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:4.20,-0.006000) {130};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:5.20,-0.006000) {140};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:6.20,-0.006000) {150};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:3.70,-0.018) {A 类工人生产能力的频率分布直方图};
 \end{axis}
 
-\begin{axis}[
-    xshift=8.7cm,
-    width=7.5cm,
-    height=6.0cm,
+\begin{axis}[exam statistical histogram,
+    at={(panelA.south west)},
+    anchor=north west,
+    yshift=-5cm,
+    width=15cm,
+    height=8.5cm,
     axis lines=none,
     clip=false,
     xmin=-0.75,
@@ -119,12 +117,7 @@
     \draw[line width=0.45pt] (axis cs:1.20,0.048) -- (axis cs:6.20,0.048);
     \draw[->,line width=0.65pt] (axis cs:0,0) -- (axis cs:6.75,0);
     \draw[->,line width=0.65pt] (axis cs:0,0) -- (axis cs:0,0.053);
-    \fill[white] (axis cs:0.35,-0.002) -- (axis cs:0.50,0.003)
-        -- (axis cs:0.65,-0.002) -- (axis cs:0.80,0.003)
-        -- (axis cs:0.95,-0.002) -- (axis cs:0.35,-0.002) -- cycle;
-    \draw[line width=0.65pt] (axis cs:0.35,-0.002) -- (axis cs:0.50,0.003)
-        -- (axis cs:0.65,-0.002) -- (axis cs:0.80,0.003)
-        -- (axis cs:0.95,-0.002);
+    \examstatxbreak[line width=0.65pt]{0.6499999999999999}{0};
     \draw[line width=0.35pt] (axis cs:-0.08,0.004) -- (axis cs:0,0.004);
     \draw[line width=0.35pt] (axis cs:-0.08,0.008) -- (axis cs:0,0.008);
     \draw[line width=0.35pt] (axis cs:-0.08,0.012) -- (axis cs:0,0.012);
@@ -137,33 +130,33 @@
     \draw[line width=0.35pt] (axis cs:-0.08,0.040) -- (axis cs:0,0.040);
     \draw[line width=0.35pt] (axis cs:-0.08,0.044) -- (axis cs:0,0.044);
     \draw[line width=0.35pt] (axis cs:-0.08,0.048) -- (axis cs:0,0.048);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.004) {0.004};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.008) {0.008};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.012) {0.012};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.016) {0.016};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.020) {0.020};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.024) {0.024};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.028) {0.028};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.032) {0.032};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.036) {0.036};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.040) {0.040};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.044) {0.044};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.14,0.048) {0.048};
-    \node[anchor=south west,inner sep=0pt,font=\normalsize,align=center] at (axis cs:0.18,0.051) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\normalsize] at (axis cs:6.45,0.001) {生产能力};
-    \node[anchor=north east,inner sep=0pt,font=\normalsize] at (axis cs:0,-0.001) {0};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.004) {0.004};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.008) {0.008};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.012) {0.012};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.016) {0.016};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.020) {0.020};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.024) {0.024};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.028) {0.028};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.032) {0.032};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.036) {0.036};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.040) {0.040};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.044) {0.044};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.048) {0.048};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{生产能力};
+    \node[anchor=north east,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:0,0.000000) {0};
     \draw[line width=0.35pt] (axis cs:1.20,0) -- (axis cs:1.20,-0.006);
     \draw[line width=0.35pt] (axis cs:2.20,0) -- (axis cs:2.20,-0.006);
     \draw[line width=0.35pt] (axis cs:3.20,0) -- (axis cs:3.20,-0.006);
     \draw[line width=0.35pt] (axis cs:4.20,0) -- (axis cs:4.20,-0.006);
     \draw[line width=0.35pt] (axis cs:5.20,0) -- (axis cs:5.20,-0.006);
     \draw[line width=0.35pt] (axis cs:6.20,0) -- (axis cs:6.20,-0.006);
-    \node[anchor=north east,rotate=-45,inner sep=0pt,font=\normalsize] at (axis cs:1.20,-0.0065) {100};
-    \node[anchor=north east,rotate=-45,inner sep=0pt,font=\normalsize] at (axis cs:2.20,-0.0065) {110};
-    \node[anchor=north east,rotate=-45,inner sep=0pt,font=\normalsize] at (axis cs:3.20,-0.0065) {120};
-    \node[anchor=north east,rotate=-45,inner sep=0pt,font=\normalsize] at (axis cs:4.20,-0.0065) {130};
-    \node[anchor=north east,rotate=-45,inner sep=0pt,font=\normalsize] at (axis cs:5.20,-0.0065) {140};
-    \node[anchor=north east,rotate=-45,inner sep=0pt,font=\normalsize] at (axis cs:6.20,-0.0065) {150};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:3.70,-0.018) {B 类工人生产能力的频率分布直方图};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:1.20,-0.006000) {100};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:2.20,-0.006000) {110};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:3.20,-0.006000) {120};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:4.20,-0.006000) {130};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:5.20,-0.006000) {140};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:6.20,-0.006000) {150};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:3.70,-0.018) {B 类工人生产能力的频率分布直方图};
 \end{axis}
 \end{tikzpicture}

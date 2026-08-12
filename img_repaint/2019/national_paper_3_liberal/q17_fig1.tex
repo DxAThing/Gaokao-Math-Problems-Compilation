@@ -13,10 +13,10 @@
 % labels: 频率/组距 above-left of each y-axis, 百分比 to the right of each x-axis,
 %         variable labels a,b at their guide levels, and chart titles below the axes
 \begin{tikzpicture}[baseline]
-\begin{axis}[
+\begin{axis}[exam statistical histogram,
     name=leftchart,
-    width=9.2cm,
-    height=5.2cm,
+    width=15cm,
+    height=7.5cm,
     axis lines=none,
     clip=false,
     xmin=-0.8,
@@ -49,49 +49,47 @@
 
     \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:8.0,0);
     \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,0.37);
-    \draw[line width=0.75pt]
-      (axis cs:0.18,0) -- (axis cs:0.31,0.022) -- (axis cs:0.44,-0.022) --
-      (axis cs:0.57,0.022) -- (axis cs:0.70,-0.022) -- (axis cs:0.83,0);
-    \node[anchor=south west,inner sep=0pt,font=\normalsize]
-      at (axis cs:0.30,0.345) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=center,inner sep=0pt,font=\normalsize] at (axis cs:7.2,-0.055) {百分比};
+    \examstatxbreak[line width=0.75pt]{0.505}{0};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{百分比};
 
     \draw[line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.018);
-    \node[anchor=north east,inner sep=0pt,font=\normalsize] at (axis cs:0,-0.024) {0};
+    \node[anchor=north east,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:0,-0.018000) {0};
     \draw[line width=0.45pt] (axis cs:1,0) -- (axis cs:1,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:1,-0.024) {1.5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:1,-0.018000) {1.5};
     \draw[line width=0.45pt] (axis cs:2,0) -- (axis cs:2,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:2,-0.024) {2.5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:2,-0.018000) {2.5};
     \draw[line width=0.45pt] (axis cs:3,0) -- (axis cs:3,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:3,-0.024) {3.5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:3,-0.018000) {3.5};
     \draw[line width=0.45pt] (axis cs:4,0) -- (axis cs:4,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:4,-0.024) {4.5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:4,-0.018000) {4.5};
     \draw[line width=0.45pt] (axis cs:5,0) -- (axis cs:5,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:5,-0.024) {5.5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:5,-0.018000) {5.5};
     \draw[line width=0.45pt] (axis cs:6,0) -- (axis cs:6,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:6,-0.024) {6.5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:6,-0.018000) {6.5};
     \draw[line width=0.45pt] (axis cs:7,0) -- (axis cs:7,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:7,-0.024) {7.5};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:3.9,-0.075) {甲离子残留百分比直方图};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:7,-0.018000) {7.5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:3.9,-0.075) {甲离子残留百分比直方图};
 
     \draw[line width=0.45pt] (axis cs:0,0.30) -- (axis cs:-0.12,0.30);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.18,0.30) {0.30};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.120000,0.30) {0.30};
     \draw[line width=0.45pt] (axis cs:0,0.20) -- (axis cs:-0.12,0.20);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.18,0.20) {0.20};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.120000,0.20) {0.20};
     \draw[line width=0.45pt] (axis cs:0,0.15) -- (axis cs:-0.12,0.15);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.18,0.15) {0.15};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.120000,0.15) {0.15};
     \draw[line width=0.45pt] (axis cs:0,0.10) -- (axis cs:-0.12,0.10);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.18,0.10) {0.10};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.120000,0.10) {0.10};
     \draw[line width=0.45pt] (axis cs:0,0.05) -- (axis cs:-0.12,0.05);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.18,0.05) {0.05};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.120000,0.05) {0.05};
 \end{axis}
 
-\begin{axis}[
+\begin{axis}[exam statistical histogram,
     name=rightchart,
-    at={(10.0cm,0cm)},
-    anchor=origin,
-    width=9.2cm,
-    height=5.2cm,
+    at={(leftchart.south west)},
+    anchor=north west,
+    yshift=-5cm,
+    width=15cm,
+    height=7.5cm,
     axis lines=none,
     clip=false,
     xmin=-0.8,
@@ -124,40 +122,37 @@
 
     \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:8.0,0);
     \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,0.37);
-    \draw[line width=0.75pt]
-      (axis cs:0.18,0) -- (axis cs:0.31,0.022) -- (axis cs:0.44,-0.022) --
-      (axis cs:0.57,0.022) -- (axis cs:0.70,-0.022) -- (axis cs:0.83,0);
-    \node[anchor=south west,inner sep=0pt,font=\normalsize]
-      at (axis cs:0.30,0.345) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=center,inner sep=0pt,font=\normalsize] at (axis cs:7.8,-0.055) {百分比};
+    \examstatxbreak[line width=0.75pt]{0.505}{0};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{百分比};
 
     \draw[line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.018);
-    \node[anchor=north east,inner sep=0pt,font=\normalsize] at (axis cs:0,-0.024) {0};
+    \node[anchor=north east,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:0,-0.018000) {0};
     \draw[line width=0.45pt] (axis cs:1,0) -- (axis cs:1,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:1,-0.024) {2.5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:1,-0.018000) {2.5};
     \draw[line width=0.45pt] (axis cs:2,0) -- (axis cs:2,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:2,-0.024) {3.5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:2,-0.018000) {3.5};
     \draw[line width=0.45pt] (axis cs:3,0) -- (axis cs:3,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:3,-0.024) {4.5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:3,-0.018000) {4.5};
     \draw[line width=0.45pt] (axis cs:4,0) -- (axis cs:4,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:4,-0.024) {5.5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:4,-0.018000) {5.5};
     \draw[line width=0.45pt] (axis cs:5,0) -- (axis cs:5,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:5,-0.024) {6.5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:5,-0.018000) {6.5};
     \draw[line width=0.45pt] (axis cs:6,0) -- (axis cs:6,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:6,-0.024) {7.5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:6,-0.018000) {7.5};
     \draw[line width=0.45pt] (axis cs:7,0) -- (axis cs:7,-0.018);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:7,-0.024) {8.5};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:4.9,-0.075) {乙离子残留百分比直方图};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:7,-0.018000) {8.5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:4.9,-0.075) {乙离子残留百分比直方图};
 
     \draw[line width=0.45pt] (axis cs:0,0.35) -- (axis cs:-0.12,0.35);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.35,0.35) {$a$};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.35,0.35) {$a$};
     \draw[line width=0.45pt] (axis cs:0,0.20) -- (axis cs:-0.12,0.20);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.18,0.20) {0.20};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.120000,0.20) {0.20};
     \draw[line width=0.45pt] (axis cs:0,0.15) -- (axis cs:-0.12,0.15);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.18,0.15) {0.15};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.120000,0.15) {0.15};
     \draw[line width=0.45pt] (axis cs:0,0.10) -- (axis cs:-0.12,0.10);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.35,0.10) {$b$};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.35,0.10) {$b$};
     \draw[line width=0.45pt] (axis cs:0,0.05) -- (axis cs:-0.12,0.05);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.18,0.05) {0.05};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.120000,0.05) {0.05};
 \end{axis}
 \end{tikzpicture}

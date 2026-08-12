@@ -8,9 +8,9 @@
 % dashed segments: horizontal guides at 0.05, b, 0.15, 0.20, and a ending at the first bar boundary for each level.
 % labels: frequency/group-width above the y-axis, percentage to the right of the x-axis, a/b and numeric ticks, Chinese caption below.
 \begin{tikzpicture}[baseline]
-\begin{axis}[
-    width=8.4cm,
-    height=4.8cm,
+\begin{axis}[scaled ticks=false,exam statistical histogram,
+    width=15.806cm,
+    height=9.031cm,
     axis lines=none,
     xmin=-0.55,
     xmax=8.15,
@@ -45,9 +45,7 @@
 
     % The source axis has a break immediately to the right of the origin.
     \draw[white,line width=2.5pt] (axis cs:0.15,0) -- (axis cs:0.70,0);
-    \draw[line width=0.55pt]
-      (axis cs:0.18,0) -- (axis cs:0.27,0.025) -- (axis cs:0.36,-0.005) --
-      (axis cs:0.45,0.025) -- (axis cs:0.54,-0.005) -- (axis cs:0.63,0.025);
+    \examstatxbreak[line width=0.55pt]{0.405}{0};
 
     \draw[line width=0.4pt] (axis cs:0,0) -- (axis cs:0,-0.012);
     \draw[line width=0.4pt] (axis cs:1,0) -- (axis cs:1,-0.012);
@@ -57,29 +55,28 @@
     \draw[line width=0.4pt] (axis cs:5,0) -- (axis cs:5,-0.012);
     \draw[line width=0.4pt] (axis cs:6,0) -- (axis cs:6,-0.012);
     \draw[line width=0.4pt] (axis cs:7,0) -- (axis cs:7,-0.012);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:0,-0.018) {0};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:1,-0.018) {2.5};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:2,-0.018) {3.5};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:3,-0.018) {4.5};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:4,-0.018) {5.5};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:5,-0.018) {6.5};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:6,-0.018) {7.5};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:7,-0.018) {8.5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:0,-0.012000) {0};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:1,-0.012000) {2.5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:2,-0.012000) {3.5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:3,-0.012000) {4.5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:4,-0.012000) {5.5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:5,-0.012000) {6.5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:6,-0.012000) {7.5};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:7,-0.012000) {8.5};
     \draw[line width=0.4pt] (axis cs:0,0.05) -- (axis cs:-0.10,0.05);
     \draw[line width=0.4pt] (axis cs:0,0.15) -- (axis cs:-0.10,0.15);
     \draw[line width=0.4pt] (axis cs:0,0.20) -- (axis cs:-0.10,0.20);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.05,0.05) {0.05};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.05,0.15) {0.15};
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.05,0.20) {0.20};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.100000,0.05) {0.05};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.100000,0.15) {0.15};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.100000,0.20) {0.20};
     \draw[line width=0.4pt] (axis cs:0,0.10) -- (axis cs:-0.10,0.10);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.05,0.10) {$b$};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.05,0.10) {$b$};
     \draw[line width=0.4pt] (axis cs:0,0.30) -- (axis cs:-0.10,0.30);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.05,0.30) {$a$};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.05,0.30) {$a$};
 
-    \node[anchor=south west,inner sep=0pt,font=\normalsize]
-      at (axis cs:0.25,0.345) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\normalsize] at (axis cs:7.05,0.045) {百分比};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:4.0,-0.09) {乙离子残留百分比直方图};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{百分比};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:4.0,-0.09) {乙离子残留百分比直方图};
     \path[use as bounding box] (axis cs:-0.80,-0.12) rectangle (axis cs:8.15,0.36);
 \end{axis}
 \end{tikzpicture}

@@ -6,9 +6,9 @@
 % Relations: each bar encodes the source interval's frequency/group-width density;
 % guides identify the labelled density levels, and the x-axis label gives global mean temperature.
 \begin{tikzpicture}[baseline]
-  \begin{axis}[
-    width=9.6cm,
-    height=8.2cm,
+  \begin{axis}[exam statistical histogram,scaled ticks=false,
+    width=16cm,
+    height=15.429cm,
     xmin=-0.70, xmax=7.2,
     ymin=0, ymax=1.70,
     axis lines=middle,
@@ -18,12 +18,12 @@
     ytick={0,0.40,0.50,0.60,0.65,1.30,1.55},
     % Place all y labels explicitly: the four low levels use alternating
     % columns/vertical offsets so 0.40--0.65 stay distinct at page scale.
-    yticklabels={,,,,,,},
+    yticklabels={,},
     scaled y ticks=false,
-    yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=2},
+    yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=2,xshift=-4pt},
     tick align=outside,
     tick label style={font=\normalsize},
-    yticklabel style={font=\normalsize, /pgf/number format/fixed, /pgf/number format/precision=2},
+    yticklabel style={font=\normalsize, /pgf/number format/fixed, /pgf/number format/precision=2,xshift=-4pt},
     enlarge x limits=false,
     clip=false,
   ]
@@ -45,19 +45,17 @@
     \addplot[black,dashed,line width=0.45pt] coordinates {(0,0.60) (3,0.60)};
     \addplot[black,dashed,line width=0.45pt] coordinates {(0,0.50) (4,0.50)};
     \addplot[black,dashed,line width=0.45pt] coordinates {(0,0.65) (5,0.65)};
-    \node[anchor=south west,align=center,font=\normalsize,inner sep=0pt]
-      at (axis cs:0.2,1.63) {$\dfrac{\text{频率}}{\text{组距}}$};
-    \node[anchor=west,font=\normalsize,inner sep=0pt]
-      at (axis cs:6.15,0.09) {全球年平均气温/$^{\circ}$C};
+    \examstatylabel{$\dfrac{\text{频率}}{\text{组距}}$};
+    \examstatxlabel{全球年平均气温/$^{\circ}$C};
     % Explicit labels keep the baseline 0 and all close levels visible.
-    \node[anchor=east,font=\normalsize,inner sep=0pt] at (axis cs:-0.08,0) {0};
-    \node[anchor=east,font=\normalsize,inner sep=0pt] at (axis cs:-0.08,0.40) {0.40};
+    \node[anchor=south east,font=\normalsize,inner sep=0pt,xshift=-6pt,yshift=4pt] at (axis cs:-0.08,0) {0};
+    \node[anchor=east,font=\normalsize,inner sep=0pt,xshift=-4pt] at (axis cs:-0.080000,0.40) {0.40};
     \node[anchor=east,font=\normalsize,inner sep=0pt] at ([yshift=-1.2pt]axis cs:-0.08,0.50) {0.50};
     \node[anchor=east,font=\normalsize,inner sep=0pt] at ([yshift=-4.5pt]axis cs:-0.08,0.60) {0.60};
     \node[anchor=east,font=\normalsize,inner sep=0pt] at ([yshift=4.5pt]axis cs:-0.08,0.65) {0.65};
-    \node[anchor=east,font=\normalsize,inner sep=0pt] at (axis cs:-0.08,1.30) {1.30};
-    \node[anchor=east,font=\normalsize,inner sep=0pt] at (axis cs:-0.08,1.55) {1.55};
+    \node[anchor=east,font=\normalsize,inner sep=0pt,xshift=-4pt] at (axis cs:-0.080000,1.30) {1.30};
+    \node[anchor=east,font=\normalsize,inner sep=0pt,xshift=-4pt] at (axis cs:-0.080000,1.55) {1.55};
     % Keep the first decimal tick visible at the axis crossing.
-    \node[anchor=north east,font=\normalsize,inner sep=0pt] at (axis cs:0,-0.035) {13.55};
+    \node[anchor=north east,font=\normalsize,inner sep=0pt,yshift=-4pt] at (axis cs:0,0.000000) {13.55};
   \end{axis}
 \end{tikzpicture}

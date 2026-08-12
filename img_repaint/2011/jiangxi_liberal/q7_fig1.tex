@@ -7,7 +7,7 @@
 % the x-axis break is drawn between 0 and the first score bar.
 
 \begin{tikzpicture}
-\begin{axis}[
+\begin{axis}[exam statistical histogram,
     width=9.0cm,
     height=4.9cm,
     xmin=0,
@@ -47,25 +47,23 @@
     % Axes, with the original x-axis break near the origin.
     \draw[->,black,line width=0.45pt] (axis cs:0,0) -- (axis cs:9.6,0);
     \draw[->,black,line width=0.45pt] (axis cs:0,0) -- (axis cs:0,11.0);
-    \draw[black,line width=0.45pt] (axis cs:0.18,0) -- (axis cs:0.30,0.11)
-        -- (axis cs:0.42,-0.11) -- (axis cs:0.54,0.11) -- (axis cs:0.66,-0.11)
-        -- (axis cs:0.78,0.11) -- (axis cs:0.82,0);
+    \examstatxbreak[black,line width=0.45pt]{0.5}{0};
 
     % Tick labels and axis labels.
-    \node[anchor=north east,inner sep=0pt] at (axis cs:0,-0.12) {0};
-    \node[anchor=north,inner sep=0pt] at (axis cs:1.5,-0.12) {3};
-    \node[anchor=north,inner sep=0pt] at (axis cs:2.5,-0.12) {4};
-    \node[anchor=north,inner sep=0pt] at (axis cs:3.5,-0.12) {5};
-    \node[anchor=north,inner sep=0pt] at (axis cs:4.5,-0.12) {6};
-    \node[anchor=north,inner sep=0pt] at (axis cs:5.5,-0.12) {7};
-    \node[anchor=north,inner sep=0pt] at (axis cs:6.5,-0.12) {8};
-    \node[anchor=north,inner sep=0pt] at (axis cs:7.5,-0.12) {9};
-    \node[anchor=north,inner sep=0pt] at (axis cs:8.5,-0.12) {10};
-    \node[anchor=east,inner sep=1pt] at (axis cs:-0.12,2) {2};
-    \node[anchor=east,inner sep=1pt] at (axis cs:-0.12,3) {3};
-    \node[anchor=east,inner sep=1pt] at (axis cs:-0.12,6) {6};
-    \node[anchor=east,inner sep=1pt] at (axis cs:-0.12,10) {10};
+    \node[anchor=north east,inner sep=0pt,yshift=-4pt] at (axis cs:0,0.000000) {0};
+    \node[anchor=north,inner sep=0pt,yshift=-4pt] at (axis cs:1.5,0.000000) {3};
+    \node[anchor=north,inner sep=0pt,yshift=-4pt] at (axis cs:2.5,0.000000) {4};
+    \node[anchor=north,inner sep=0pt,yshift=-4pt] at (axis cs:3.5,0.000000) {5};
+    \node[anchor=north,inner sep=0pt,yshift=-4pt] at (axis cs:4.5,0.000000) {6};
+    \node[anchor=north,inner sep=0pt,yshift=-4pt] at (axis cs:5.5,0.000000) {7};
+    \node[anchor=north,inner sep=0pt,yshift=-4pt] at (axis cs:6.5,0.000000) {8};
+    \node[anchor=north,inner sep=0pt,yshift=-4pt] at (axis cs:7.5,0.000000) {9};
+    \node[anchor=north,inner sep=0pt,yshift=-4pt] at (axis cs:8.5,0.000000) {10};
+    \node[anchor=east,inner sep=1pt,xshift=-4pt] at (axis cs:0.000000,2) {2};
+    \node[anchor=east,inner sep=1pt,xshift=-4pt] at (axis cs:0.000000,3) {3};
+    \node[anchor=east,inner sep=1pt,xshift=-4pt] at (axis cs:0.000000,6) {6};
+    \node[anchor=east,inner sep=1pt,xshift=-4pt] at (axis cs:0.000000,10) {10};
     \node[anchor=south west,inner sep=0pt] at (axis cs:0.12,10.95) {频数};
-    \node[anchor=west,inner sep=0pt] at (axis cs:9.65,0.05) {得分};
+    \examstatxlabel{得分};
 \end{axis}
 \end{tikzpicture}

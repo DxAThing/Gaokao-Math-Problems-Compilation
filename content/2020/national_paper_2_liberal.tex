@@ -3,7 +3,7 @@
 \section{单选题}
 
 \begin{problem}
-已知集合 \(A=\{x\mid |x|<3,\ x\in \Z\}\)，\(B=\{x\mid |x|>1,\ x\in \Z\}\)，则 \(A\cap B=\)（\quad）
+已知集合 \(A=\{x\mid \lvert x\rvert<3,\ x\in \Z\}\)，\(B=\{x\mid \lvert x\rvert>1,\ x\in \Z\}\)，则 \(A\cap B=\)（\quad）
 
 \choices
     {\(\varnothing\)}
@@ -11,6 +11,14 @@
     {\(\{-2,0,2\}\)}
     {\(\{-2,2\}\)}
 \end{problem}
+
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+由 \(\lvert x\rvert<3\) 且 \(x\in\Z\)，得 \(A=\{-2,-1,0,1,2\}\)；由 \(\lvert x\rvert>1\) 且 \(x\in\Z\)，得 \(B\) 中满足条件的整数的绝对值至少为 \(2\). 因此 \(A\cap B=\{-2,2\}\)，故选 D.
+\end{solution}
 
 \begin{problem}
 \((1-\i)^4=\)（\quad）
@@ -22,27 +30,52 @@
     {\(4\i\)}
 \end{problem}
 
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+先计算平方得 \((1-\i)^2=1-2\i+\i^2=-2\i\)，所以 \((1-\i)^4=(-2\i)^2=4\i^2=-4\)，故选 A.
+\end{solution}
+
 \begin{problem}
 如图，将钢琴上的 \(12\) 个键依次记为 \(a_1\)，\(a_2\)，\(\cdots\)，\(a_{12}\). 设 \(1\le i<j<k\le 12\). 若 \(k-j=3\) 且 \(j-i=4\)，则 \(a_i\)，\(a_j\)，\(a_k\) 为原位大三和弦；若 \(k-j=4\) 且 \(j-i=3\)，则称 \(a_i\)，\(a_j\)，\(a_k\) 为原位小三和弦. 用这 \(12\) 个键可以构成的原位大三和弦与原位小三和弦的个数之和为（\quad）
 
+\FigureLayoutDeclare{img/2020/national_paper_2_liberal/q3_fig1.png}{14.0cm}{17bp 19bp 31bp 22bp}
 \bitmapfigure[max width=6.0cm]{img/2020/national_paper_2_liberal/q3_fig1.png}
 
 \choices
-    {5}
-    {8}
-    {10}
-    {15}
+    {\(5\)}
+    {\(8\)}
+    {\(10\)}
+    {\(15\)}
 \end{problem}
+
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+对于原位大三和弦，由 \(j=i+4\)，\(k=i+7\)，且 \(k\leq12\)，得 \(1\leq i\leq5\)，所以共有 \(5\) 个. 对于原位小三和弦，由 \(j=i+3\)，\(k=i+7\)，同样得 \(1\leq i\leq5\)，所以共有 \(5\) 个. 因此个数之和为 \(5+5=10\)，故选 C.
+\end{solution}
 
 \begin{problem}
 在新冠肺炎疫情防控期间，某超市开通网上销售业务，每天能完成 \(1200\) 份订单的配货，由于订单量大幅增加，导致订单积压. 为解决困难，许多志愿者踊跃报名参加配货工作. 已知该超市某日积压 \(500\) 份订单未配货，预计第二天的新订单超过 \(1600\) 份的概率为 \(0.05\). 志愿者每人每天能完成 \(50\) 份订单的配货，为使第二天完成积压订单及当日订单的配货的概率不小于 \(0.95\)，则至少需要志愿者（\quad）
 
 \choices
-    {10 名}
-    {18 名}
-    {24 名}
-    {32 名}
+    {\(10\text{ 名}\)}
+    {\(18\text{ 名}\)}
+    {\(24\text{ 名}\)}
+    {\(32\text{ 名}\)}
 \end{problem}
+
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+设第二天的新订单数为 \(X\)，志愿者人数为 \(n\). 第二天需要完成的订单总数为 \(500+X\)，而可完成的订单数为 \(1200+50n\). 当 \(X\leq1600\) 时，若要保证完成所有订单，需有 \(1200+50n\geq500+1600=2100\). 由于 \(P(X>1600)=0.05\)，故 \(P(X\leq1600)=0.95\)，上述容量条件正好保证完成概率不小于 \(0.95\). 于是 \(1200+50n\geq2100\)，解得 \(n\geq18\). 因而至少需要 \(18\) 名志愿者，故选 B.
+\end{solution}
 
 \begin{problem}
 已知单位向量 \(\bs a\)，\(\bs b\) 的夹角为 \(60^\circ\)，则在下列向量中，与 \(\bs b\) 垂直的是（\quad）
@@ -54,6 +87,15 @@
     {\(2\bs a-\bs b\)}
 \end{problem}
 
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+因为 \(\lvert\bs a\rvert=\lvert\bs b\rvert=1\)，且夹角为 \(60^\circ\)，所以 \(\bs a\cdot\bs b=\cos60^\circ=\dfrac12\)，并且 \(\bs b\cdot\bs b=1\). 分别计算各选项与 \(\bs b\) 的数量积：
+\(\left(\bs a+2\bs b\right)\cdot\bs b=\dfrac12+2\)，\(\left(2\bs a+\bs b\right)\cdot\bs b=1+1\)，\(\left(\bs a-2\bs b\right)\cdot\bs b=\dfrac12-2\)，\(\left(2\bs a-\bs b\right)\cdot\bs b=1-1=0\). 因此只有 \(2\bs a-\bs b\) 与 \(\bs b\) 垂直，故选 D.
+\end{solution}
+
 \begin{problem}
 记 \(S_n\) 为等比数列 \(\{a_n\}\) 的前 \(n\) 项和. 若 \(a_5-a_3=12\)，\(a_6-a_4=24\)，则 \(\dfrac{S_n}{a_n}=\)（\quad）
 
@@ -64,17 +106,35 @@
     {\(2^{1-n}-1\)}
 \end{problem}
 
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+设等比数列的公比为 \(q\). 由 \(a_5-a_3=12\ne0\)，可知相关因子不为零，并且
+\(\dfrac{a_6-a_4}{a_5-a_3}=\dfrac{a_1q^5-a_1q^3}{a_1q^4-a_1q^2}=q\). 因此 \(q=\dfrac{24}{12}=2\). 于是
+\(S_n=a_1\dfrac{2^n-1}{2-1}=a_1(2^n-1)\)，\(a_n=a_1\cdot2^{n-1}\)，从而 \(\dfrac{S_n}{a_n}=\dfrac{2^n-1}{2^{n-1}}=2-2^{1-n}\)，故选 B.
+\end{solution}
+
 \begin{problem}
 执行下面的程序框图，若输入的 \(k=0\)，\(a=0\)，则输出的 \(k\) 为（\quad）
 
-\bitmapfigure[float=inline,width=5.0cm]{img/2020/national_paper_2_liberal/q7_fig1.png}
+\bitmapinlinefigure[5.0cm][width=5.0cm]{img/2020/national_paper_2_liberal/q7_fig1.png}
 
 \choices
-    {2}
-    {3}
-    {4}
-    {5}
+    {\(2\)}
+    {\(3\)}
+    {\(4\)}
+    {\(5\)}
 \end{problem}
+
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+程序开始时 \(k=0\)，\(a=0\). 第一次循环后 \(a=2\times0+1=1\)，\(k=1\)；第二次循环后 \(a=3\)，\(k=2\)；第三次循环后 \(a=7\)，\(k=3\)；第四次循环后 \(a=15\)，\(k=4\). 此时 \(a>10\)，输出 \(k=4\)，故选 C.
+\end{solution}
 
 \begin{problem}
 若过点 \((2,1)\) 的圆与两坐标轴都相切，则圆心到直线 \(2x-y-3=0\) 的距离为（\quad）
@@ -86,15 +146,32 @@
     {\(\dfrac{4\sqrt5}{5}\)}
 \end{problem}
 
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+设圆心为 \((h,k)\)，半径为 \(r>0\). 圆与两坐标轴都相切，所以 \(\lvert h\rvert=\lvert k\rvert=r\). 又因为圆过点 \((2,1)\)，有
+\((2-h)^2+(1-k)^2=r^2\)，即 \(r^2-4h-2k+5=0\). 分别令 \(h=\varepsilon r\)，\(k=\delta r\)，其中 \(\varepsilon,\delta\in\{1,-1\}\)，得到 \(r^2-(4\varepsilon+2\delta)r+5=0\). 当 \((\varepsilon,\delta)=(1,1)\) 时，方程为 \(r^2-6r+5=0\)，得 \(r=1\) 或 \(r=5\)；当 \((\varepsilon,\delta)=(1,-1)\) 或 \((-1,1)\) 时，方程分别为 \(r^2-2r+5=0\) 或 \(r^2+2r+5=0\)，二者的判别式均为 \(-16<0\)，均无实根；当 \((\varepsilon,\delta)=(-1,-1)\) 时，方程为 \(r^2+6r+5=0\)，得 \(r=-1\) 或 \(r=-5\)，均不满足 \(r>0\). 因此圆心只能是 \((1,1)\) 或 \((5,5)\). 对这两个圆心，圆心到直线 \(2x-y-3=0\) 的距离都为 \(\dfrac{\lvert2h-k-3\rvert}{\sqrt{2^2+(-1)^2}}=\dfrac{2}{\sqrt5}=\dfrac{2\sqrt5}{5}\)，故选 B.
+\end{solution}
+
 \begin{problem}
 设 \(O\) 为坐标原点，直线 \(x=a\) 与双曲线 \(C:\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\)（\(a>0,\ b>0\)）的两条渐近线分别交于 \(D\)，\(E\) 两点. 若 \(\triangle ODE\) 的面积为 \(8\)，则 \(C\) 的焦距的最小值为（\quad）
 
 \choices
-    {4}
-    {8}
-    {16}
-    {32}
+    {\(4\)}
+    {\(8\)}
+    {\(16\)}
+    {\(32\)}
 \end{problem}
+
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+双曲线的两条渐近线为 \(y=\dfrac ba x\) 和 \(y=-\dfrac ba x\). 它们与直线 \(x=a\) 的交点为 \(D(a,b)\)，\(E(a,-b)\)，所以 \(\triangle ODE\) 的面积为 \(\dfrac12\cdot2b\cdot a=ab=8\). 双曲线的焦半距为 \(c=\sqrt{a^2+b^2}\)，焦距为 \(2c\). 由基本不等式 \(a^2+b^2\geq2ab=16\)，得 \(2c=2\sqrt{a^2+b^2}\geq2\sqrt{16}=8\). 当 \(a=b=2\sqrt2\) 时取等号，因此焦距的最小值为 \(8\)，故选 B.
+\end{solution}
 
 \begin{problem}
 设函数 \(f(x)=x^3-\dfrac{1}{x^3}\)，则 \(f(x)\)（\quad）
@@ -106,15 +183,31 @@
     {是偶函数，且在 \((0,+\infty)\) 单调递减}
 \end{problem}
 
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+函数定义域为 \(\R\smallsetminus\{0\}\). 对任意 \(x\ne0\)，有 \(f(-x)=(-x)^3-\dfrac{1}{(-x)^3}=-x^3+\dfrac1{x^3}=-f(x)\)，所以 \(f(x)\) 是奇函数. 又在 \((0,+\infty)\) 上，\(f'(x)=3x^2+\dfrac{3}{x^4}>0\)，故 \(f(x)\) 在该区间上单调递增，故选 A.
+\end{solution}
+
 \begin{problem}
 已知 \(\triangle ABC\) 是面积为 \(\dfrac{9\sqrt3}{4}\) 的等边三角形，且其顶点都在球 \(O\) 的球面上. 若球 \(O\) 的表面积为 \(16\pi\)，则 \(O\) 到平面 \(ABC\) 的距离为（\quad）
 
 \choices
     {\(\sqrt3\)}
     {\(\dfrac{3}{2}\)}
-    {1}
+    {\(1\)}
     {\(\dfrac{\sqrt3}{2}\)}
 \end{problem}
+
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+设等边三角形边长为 \(s\). 由面积公式 \(\dfrac{\sqrt3}{4}s^2=\dfrac{9\sqrt3}{4}\)，得 \(s=3\). 等边三角形的外接圆半径为 \(R_{\mathrm{tri}}=\dfrac{s}{\sqrt3}=\sqrt3\). 设球 \(O\) 的半径为 \(R\)，由 \(4\pi R^2=16\pi\) 得 \(R=2\). 球心到平面 \(ABC\) 的垂足是三角形外心，故由直角三角形关系得 \(d^2+R_{\mathrm{tri}}^2=R^2\)，即 \(d^2+3=4\)，所以 \(d=1\)，故选 C.
+\end{solution}
 
 \begin{problem}
 若 \(2^x-2^y<3^{-x}-3^{-y}\)，则（\quad）
@@ -122,9 +215,17 @@
 \choices
     {\(\ln(y-x+1)>0\)}
     {\(\ln(y-x+1)<0\)}
-    {\(\ln|x-y|>0\)}
-    {\(\ln|x-y|<0\)}
+    {\(\ln\lvert x-y\rvert>0\)}
+    {\(\ln\lvert x-y\rvert<0\)}
 \end{problem}
+
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+令 \(t=y-x\). 原不等式化为 \(2^x(1-2^t)<3^{-x}(1-3^{-t})\). 当 \(t>0\) 时，左边为负数，右边为正数，不等式成立；当 \(t=0\) 时两边相等，不等式不成立；当 \(t<0\) 时，左边为正数，右边为负数，不等式不成立. 因而必有 \(y-x>0\)，所以 \(y-x+1>1\)，从而 \(\ln(y-x+1)>0\)，故选 A.
+\end{solution}
 
 \section{填空题}
 
@@ -132,26 +233,55 @@
 若 \(\sin x=-\dfrac{2}{3}\)，则 \(\cos 2x=\fillinblank{}\).
 \end{problem}
 
+\begin{answer}
+\(\dfrac{1}{9}\)
+\end{answer}
+
+\begin{solution}
+由二倍角公式 \(\cos2x=1-2\sin^2x\)，代入 \(\sin x=-\dfrac23\)，得 \(\cos2x=1-2\times\dfrac49=\dfrac19\). 故答案为 \(\dfrac19\).
+\end{solution}
+
 \begin{problem}
 记 \(S_n\) 为等差数列 \(\{a_n\}\) 的前 \(n\) 项和. 若 \(a_1=-2\)，\(a_2+a_6=2\)，则 \(S_{10}=\fillinblank{}\).
 \end{problem}
 
+\begin{answer}
+\(25\)
+\end{answer}
+
+\begin{solution}
+设等差数列的公差为 \(d\). 由 \(a_1=-2\)，得 \(a_2=-2+d\)，\(a_6=-2+5d\). 由 \(a_2+a_6=2\)，得 \(-4+6d=2\)，所以 \(d=1\). 因此 \(S_{10}=\dfrac{10}{2}\left(2a_1+9d\right)=5(-4+9)=25\). 故答案为 \(25\).
+\end{solution}
+
 \begin{problem}
-若 \(x\)，\(y\) 满足约束条件 \(x+y\ge -1\)，\(x-y\ge -1\)，\(2x-y\le 1\)，则 \(z=x+2y\) 的最大值是\fillinblank{}.
+若 \(x\)，\(y\) 满足约束条件
+\(\begin{cases}
+x+y\ge -1,\\
+x-y\ge -1,\\
+2x-y\le 1
+\end{cases}\)，则 \(z=x+2y\) 的最大值是\fillinblank{}.
 \end{problem}
+
+\begin{answer}
+\(8\)
+\end{answer}
+
+\begin{solution}
+将约束条件改写为 \(y\geq-1-x\)，\(y\leq x+1\)，\(y\geq2x-1\). 可行域的边界交点分别由
+\(y=-1-x\) 与 \(y=x+1\)，\(y=-1-x\) 与 \(y=2x-1\)，\(y=x+1\) 与 \(y=2x-1\) 求得，依次为 \((-1,0)\)，\((0,-1)\)，\((2,3)\). 目标函数 \(z=x+2y\) 在有界可行域的顶点处取得最大值，三个顶点处的值分别为 \(-1\)，\(-2\)，\(8\)，故最大值为 \(8\). 故答案为 \(8\).
+\end{solution}
 
 \begin{problem}
 设有下列四个命题：
 
-\(p_1\)：两两相交且不过同一点的三条直线必在同一平面内.
+\begin{circlelist}
+\item \(p_1\)：两两相交且不过同一点的三条直线必在同一平面内；
+\item \(p_2\)：过空间中任意三点有且仅有一个平面；
+\item \(p_3\)：若空间两条直线不相交，则这两条直线平行；
+\item \(p_4\)：若直线 \(l\subset \alpha\)，直线 \(m\perp \alpha\)，则 \(m\perp l\).
+\end{circlelist}
 
-\(p_2\)：过空间中任意三点有且仅有一个平面.
-
-\(p_3\)：若空间两条直线不相交，则这两条直线平行.
-
-\(p_4\)：若直线 \(l\subset \alpha\)，直线 \(m\perp \alpha\)，则 \(m\perp l\).
-
-则下述命题中所有真命题的序号是\fillinblank{}.
+则下述命题中所有真命题的序号是\fillinblank{}
 
 \begin{circlelist}
     \item \(p_1\land p_4\)
@@ -160,6 +290,14 @@
     \item \(\neg p_3\vee \neg p_4\)
 \end{circlelist}
 \end{problem}
+
+\begin{answer}
+\(\circled{1}\)\(\circled{3}\)\(\circled{4}\)
+\end{answer}
+
+\begin{solution}
+命题 \(p_1\) 为真：任取其中两条相交直线确定一个平面，第三条直线分别与前两条直线相交且三线不过同一点，因此第三条直线上的两个交点是该平面内的两个不同点，第三条直线也在此平面内. 命题 \(p_2\) 为假：当三点共线时，过这条直线有无数个平面. 命题 \(p_3\) 为假：空间中不相交的两条直线还可能是异面直线. 命题 \(p_4\) 为真：若直线 \(m\perp\alpha\)，则 \(m\) 垂直于平面 \(\alpha\) 内的任意直线，故 \(m\perp l\). 所以 \(p_1\land p_4\)、\(\neg p_2\vee p_3\)、\(\neg p_3\vee\neg p_4\) 均为真，所有真命题的序号为 \(\circled{1}\)\(\circled{3}\)\(\circled{4}\). 故答案为 \(\circled{1}\)\(\circled{3}\)\(\circled{4}\).
+\end{solution}
 
 \section{解答题}
 
@@ -171,6 +309,13 @@
 \item 若 \(b-c=\dfrac{\sqrt3}{3}a\)，证明：\(\triangle ABC\) 是直角三角形.
 \end{enumerate}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item 因为 \(\cos\left(\dfrac\pi2+A\right)=-\sin A\)，所以 \(\cos^2\left(\dfrac\pi2+A\right)=\sin^2A=1-\cos^2A\). 令 \(u=\cos A\)，则题设化为 \(1-u^2+u=\dfrac54\)，即 \(u^2-u+\dfrac14=0\)，所以 \(\left(u-\dfrac12\right)^2=0\)，得 \(\cos A=\dfrac12\). 由于 \(0<A<\pi\)，故 \(A=\dfrac\pi3\).
+\item 由正弦定理，设三角形外接圆半径为 \(R\)，则 \(a=2R\sin A=2R\sin\dfrac\pi3=\sqrt3R\). 又 \(b-c=2R(\sin B-\sin C)\)，利用和差化积及 \(B+C=\dfrac{2\pi}3\)，得 \(b-c=4R\cos\dfrac{B+C}{2}\sin\dfrac{B-C}{2}=2R\sin\dfrac{B-C}{2}\). 由题设 \(b-c=\dfrac{\sqrt3}{3}a=R\)，所以 \(\sin\dfrac{B-C}{2}=\dfrac12\). 因为 \(B,C>0\) 且 \(B+C=\dfrac{2\pi}3\)，有 \(-\dfrac\pi3<\dfrac{B-C}{2}<\dfrac\pi3\)，故 \(\dfrac{B-C}{2}=\dfrac\pi6\). 从而 \(B-C=\dfrac\pi3\)，联立 \(B+C=\dfrac{2\pi}3\)，得 \(B=\dfrac\pi2\)，\(C=\dfrac\pi6\). 因此 \(\triangle ABC\) 是直角三角形.
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 某沙漠地区经过治理，生态系统得到很大改善，野生动物数量有所增加. 为调查该地区某种野生动物的数量，将其分成面积相近的 \(200\) 个地块，从这些地块中用简单随机抽样的方法抽取 \(20\) 个作为样区，调查得到样本数据 \((x_i,y_i)\)（\(i=1\)，\(2\)，\(\cdots\)，\(20\)），其中 \(x_i\) 和 \(y_i\) 分别表示第 \(i\) 个样区的植物覆盖面积（单位：公顷）和这种野生动物的数量，并计算得 \(\sum_{i=1}^{20}x_i=60\)，\(\sum_{i=1}^{20}y_i=1200\)，\(\sum_{i=1}^{20}(x_i-\bar x)^2=80\)，\(\sum_{i=1}^{20}(y_i-\bar y)^2=9000\)，\(\sum_{i=1}^{20}(x_i-\bar x)(y_i-\bar y)=800\).
@@ -186,14 +331,29 @@
 \(\sqrt2\approx 1.414\).
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item 样区中动物数量的平均数为 \(\bar y=\dfrac1{20}\sum_{i=1}^{20}y_i=\dfrac{1200}{20}=60\). 按题意，该地区动物数量的估计值为样区平均数乘以地块数，因此估计值为 \(60\times200=12000\).
+\item 代入相关系数公式，得 \(r=\dfrac{800}{\sqrt{80\times9000}}\). 因为 \(80\times9000=720000=(600\sqrt2)^2\)，所以 \(r=\dfrac{800}{600\sqrt2}=\dfrac{2\sqrt2}{3}\approx\dfrac{2\times1.414}{3}\approx0.94\). 因而相关系数约为 \(0.94\).
+\item 可采用分层随机抽样：先按各地块的植物覆盖面积将 \(200\) 个地块分成若干层，再在各层内进行随机抽样，并按各层地块数占总体地块数的比例分配样本数. 由于各地块间植物覆盖面积差异很大，分层后每层内部的差异相对较小，且各类地块都能被抽到，样本的代表性更强，从而能够减小抽样误差，使动物数量的估计更加准确.
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
-已知椭圆 \(C_1:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\)（\(a>b>0\)）的右焦点 \(F\) 与抛物线 \(C_2\) 的焦点重合，\(C_1\) 的中心与 \(C_2\) 的顶点重合. 过 \(F\) 且与 \(x\) 轴垂直的直线交 \(C_1\) 于 \(A\)，\(B\) 两点，交 \(C_2\) 于 \(C\)，\(D\) 两点，且 \(|CD|=\dfrac{4}{3}|AB|\).
+已知椭圆 \(C_1:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\)（\(a>b>0\)）的右焦点 \(F\) 与抛物线 \(C_2\) 的焦点重合，\(C_1\) 的中心与 \(C_2\) 的顶点重合. 过 \(F\) 且与 \(x\) 轴垂直的直线交 \(C_1\) 于 \(A\)，\(B\) 两点，交 \(C_2\) 于 \(C\)，\(D\) 两点，且 \(\lvert CD\rvert=\dfrac{4}{3}\lvert AB\rvert\).
 
 \begin{enumerate}
 \item 求 \(C_1\) 的离心率；
 \item 若 \(C_1\) 的四个顶点到 \(C_2\) 的准线距离之和为 \(12\)，求 \(C_1\) 与 \(C_2\) 的标准方程.
 \end{enumerate}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item 设椭圆的右焦点为 \(F(c,0)\)，其中 \(c=\sqrt{a^2-b^2}>0\). 因为抛物线的焦点为 \(F\)，顶点为椭圆中心 \((0,0)\)，所以抛物线开口向右，方程可设为 \(y^2=4cx\). 直线 \(x=c\) 与椭圆相交时，代入椭圆方程得 \(\dfrac{c^2}{a^2}+\dfrac{y^2}{b^2}=1\). 由 \(c^2=a^2-b^2\)，得 \(y^2=\dfrac{b^4}{a^2}\)，所以 \(\lvert AB\rvert=\dfrac{2b^2}{a}\). 直线 \(x=c\) 与抛物线相交时，得 \(y^2=4c^2\)，所以 \(\lvert CD\rvert=4c\). 由题设 \(4c=\dfrac43\cdot\dfrac{2b^2}{a}\)，从而 \(\dfrac ca=\dfrac{2b^2}{3a^2}\). 令离心率 \(e=\dfrac ca\)，又 \(b^2=a^2-c^2=a^2(1-e^2)\)，于是 \(e=\dfrac23(1-e^2)\)，即 \(2e^2+3e-2=0\). 因为 \(0<e<1\)，故 \(e=\dfrac12\).
+\item 由 \(e=\dfrac12\)，得 \(c=\dfrac a2\). 抛物线的准线为 \(x=-c\). 椭圆的四个顶点为 \((a,0)\)，\((-a,0)\)，\((0,b)\)，\((0,-b)\)，它们到准线的距离之和为 \((a+c)+(a-c)+c+c=2a+2c=3a\). 由题设 \(3a=12\)，得 \(a=4\)，从而 \(c=2\)，\(b^2=a^2-c^2=16-4=12\)，即 \(b=2\sqrt3\). 所以 \(C_1\) 与 \(C_2\) 的标准方程分别为 \(\dfrac{x^2}{16}+\dfrac{y^2}{12}=1\) 和 \(y^2=8x\).
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 如图，已知三棱柱 \(ABC-A_1B_1C_1\) 的底面是正三角形，侧面 \(BB_1C_1C\) 是矩形，\(M\)，\(N\) 分别为 \(BC\)，\(B_1C_1\) 的中点，\(P\) 为 \(AM\) 上一点. 过 \(B_1C_1\) 和 \(P\) 的平面交 \(AB\) 于 \(E\)，交 \(AC\) 于 \(F\).
@@ -206,6 +366,22 @@
 \bitmapfigure[float=inline,max width=6.0cm]{img/2020/national_paper_2_liberal/q20_fig1.png}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item 设 \(BC\) 的中点为 \(M\)，则 \(MN\) 是上下底面对应中点的连线. 由棱柱的性质，\(AA_1\parallel BB_1\parallel CC_1\)，又 \(MN\parallel BB_1\)，所以 \(AA_1\parallel MN\). 在等边三角形 \(ABC\) 中，\(AM\perp BC\)；又因为侧面 \(BB_1C_1C\) 是矩形，故 \(BB_1\perp BC\)，从而 \(AA_1\perp BC\). 因此平面 \(A_1AMN\) 内相交的两条直线 \(AM\)，\(AA_1\) 都垂直于 \(BC\)，所以 \(BC\perp\text{平面 }A_1AMN\). 又 \(B_1C_1\parallel BC\)，且 \(B_1C_1\subset\text{平面 }EB_1C_1F\)，故平面 \(A_1AMN\perp\text{平面 }EB_1C_1F\).
+\item 建立空间直角坐标系，使 \(M\) 为原点，\(BC\) 为 \(x\) 轴，底面 \(ABC\) 为 \(xOy\) 平面，并设正三角形边长为 \(s\). 于是可取
+\(B\left(-\dfrac s2,0,0\right)\)，\(C\left(\dfrac s2,0,0\right)\)，\(A\left(0,\dfrac{\sqrt3s}{2},0\right)\). 设棱柱的平移向量为 \(\overrightarrow{AA_1}=\overrightarrow{BB_1}=\overrightarrow{CC_1}=(0,u,h)\)，其中 \(h>0\). 设 \(P=(0,p,0)\)，则
+\(A_1=(0,\dfrac{\sqrt3s}{2}+u,h)\)，\(B_1=(-\dfrac s2,u,h)\)，\(C_1=(\dfrac s2,u,h)\)，\(N=(0,u,h)\). 由于上底面也是正三角形，其中心为 \(O=(0,u+\dfrac{\sqrt3s}{6},h)\). 因而 \(\overrightarrow{AO}=(0,u-\dfrac{\sqrt3s}{3},h)\).
+
+平面 \(EB_1C_1F\) 由直线 \(B_1C_1\) 和点 \(P\) 确定. 取该平面内的两个方向向量 \((1,0,0)\) 和 \(P-B_1=(\dfrac s2,p-u,-h)\)，可得其一个法向量为 \((0,h,p-u)\). 由 \(AO\parallel\text{平面 }EB_1C_1F\)，有 \((0,u-\dfrac{\sqrt3s}{3},h)\cdot(0,h,p-u)=0\)，即 \(h(p-\dfrac{\sqrt3s}{3})=0\). 所以 \(p=\dfrac{\sqrt3s}{3}\).
+
+又由 \(AO=AB=6\)，得 \(s=6\)，且 \(\lvert AO\rvert=\lvert PN\rvert=6\). 因此 \(p=2\sqrt3\)，并且 \(\overrightarrow{PM}=(0,-2\sqrt3,0)\)，\(\overrightarrow{PN}=(0,u-2\sqrt3,h)\). 由 \(\angle MPN=\dfrac\pi3\)，得
+\(\dfrac{\overrightarrow{PM}\cdot\overrightarrow{PN}}{\lvert PM\rvert\lvert PN\rvert}=\dfrac12\)，即 \(\dfrac{-2\sqrt3(u-2\sqrt3)}{2\sqrt3\times6}=\dfrac12\). 解得 \(u-2\sqrt3=-3\). 再由 \(\lvert PN\rvert=6\)，得 \(h^2=36-9=27\)，所以 \(h=3\sqrt3\).
+
+此时平面 \(EB_1C_1F\) 的方程为 \(\sqrt3y+z-6=0\). 它与底面 \(z=0\) 的交线为 \(y=2\sqrt3\)，故 \(EF\parallel BC\). 在底面内，\(AM=3\sqrt3\)，而 \(AP=\sqrt3\)，所以由相似三角形 \(\triangle AEF\sim\triangle ABC\)，得 \(EF=\dfrac{AP}{AM}BC=2\). 又 \(B_1C_1=BC=6\)，且 \(PN\) 垂直于这两条平行边，\(PN=6\)，所以四边形 \(EB_1C_1F\) 的面积为 \(\dfrac{2+6}{2}\times6=24\). 点 \(B\) 到平面 \(EB_1C_1F\) 的距离为 \(\dfrac{\lvert\sqrt3\cdot0+0-6\rvert}{\sqrt{(\sqrt3)^2+1^2}}=3\). 因此四棱锥的体积为 \(\dfrac13\times24\times3=24\).
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
 已知函数 \(f(x)=2\ln x+1\).
 
@@ -215,10 +391,25 @@
 \end{enumerate}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item 要使不等式对定义域内一切 \(x>0\) 成立，需有 \(2\ln x+1\leq2x+c\)，即 \(c\geq2\ln x-2x+1\). 令 \(h(x)=2\ln x-2x+1\)，则 \(h'(x)=\dfrac2x-2\). 当 \(0<x<1\) 时 \(h'(x)>0\)，当 \(x>1\) 时 \(h'(x)<0\)，所以 \(h(x)\) 在 \(x=1\) 处取得最大值 \(h(1)=-1\). 因而 \(c\geq-1\) 时不等式恒成立，且由 \(x=1\) 可知 \(c\) 不可能小于 \(-1\)，所以 \(c\in[-1,+\infty)\).
+\item 定义域为 \(x>0\) 且 \(x\ne a\). 化简得 \(g(x)=\dfrac{2\ln x-2\ln a}{x-a}=\dfrac{2\ln(x/a)}{x-a}\). 求导得 \(g'(x)=\dfrac{2\left(1-\dfrac ax-\ln\dfrac xa\right)}{(x-a)^2}\). 令 \(t=\dfrac xa>0\)，分子中的函数为 \(\varphi(t)=1-\dfrac1t-\ln t\)，且 \(\varphi'(t)=\dfrac{1-t}{t^2}\). 因此 \(\varphi\) 在 \((0,1)\) 上递增、在 \((1,+\infty)\) 上递减，并且 \(\varphi(1)=0\)，从而 \(\varphi(t)<0\)（\(t\ne1\)）. 所以 \(g'(x)<0\)，故 \(g(x)\) 在 \((0,a)\) 和 \((a,+\infty)\) 上均单调递减.
+\end{enumerate}
+\end{solution}
+
 \section{选考题：解答题}
 
 \begin{problem}
-已知曲线 \(C_1\) 的参数方程为 \(x=4\cos^2\theta\)，\(y=4\sin^2\theta\)（\(\theta\) 为参数），\(C_2\) 的参数方程为 \(x=t+\dfrac{1}{t}\)，\(y=t-\dfrac{1}{t}\)（\(t\) 为参数）.
+已知曲线 \(C_1\) 的参数方程为
+\(\begin{cases}
+x=4\cos^2\theta,\\
+y=4\sin^2\theta
+\end{cases}\)（\(\theta\) 为参数），\(C_2\) 的参数方程为
+\(\begin{cases}
+x=t+\dfrac{1}{t},\\
+y=t-\dfrac{1}{t}
+\end{cases}\)（\(t\) 为参数）.
 
 \begin{enumerate}
 \item 将 \(C_1\)，\(C_2\) 的参数方程化为普通方程；
@@ -226,11 +417,25 @@
 \end{enumerate}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item 对曲线 \(C_1\)，由 \(x=4\cos^2\theta\)，\(y=4\sin^2\theta\)，得 \(x+y=4\)，且 \(x\geq0\)，\(y\geq0\). 因此 \(C_1\) 的普通方程为 \(x+y=4\)（\(x\geq0\)，\(y\geq0\)）. 对曲线 \(C_2\)，参数 \(t\ne0\)，由参数方程消去 \(t\) 得 \(x^2-y^2=\left(t+\dfrac1t\right)^2-\left(t-\dfrac1t\right)^2=4\)，所以 \(C_2\) 的普通方程为 \(x^2-y^2=4\).
+\item 联立两曲线的普通方程，并考虑 \(C_1\) 的范围，得 \(y=4-x\)，以及 \(x^2-(4-x)^2=4\). 化简得 \(8x-16=4\)，所以 \(x=\dfrac{5}{2}\)，\(y=\dfrac{3}{2}\)，即 \(P\left(\dfrac{5}{2},\dfrac{3}{2}\right)\). 设所求圆的圆心为 \((h,0)\)，因为圆经过极点 \(O(0,0)\)，半径为 \(\lvert h\rvert\)，其直角坐标方程为 \((x-h)^2+y^2=h^2\)，即 \(x^2+y^2=2hx\). 将点 \(P\) 代入，得 \(\dfrac{25}{4}+\dfrac94=2h\cdot\dfrac52\)，从而 \(h=\dfrac{17}{10}\). 令极坐标为 \((\rho,\theta)\)，代入 \(x=\rho\cos\theta\)，\(x^2+y^2=\rho^2\)，得 \(\rho^2=\dfrac{17}{5}\rho\cos\theta\)，所以所求圆的极坐标方程为 \(\rho=\dfrac{17}{5}\cos\theta\).
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
-已知函数 \(f(x)=|x-a^2|+|x-2a+1|\).
+已知函数 \(f(x)=\lvert x-a^2\rvert+\lvert x-2a+1\rvert\).
 
 \begin{enumerate}
 \item 当 \(a=2\) 时，求不等式 \(f(x)\ge 4\) 的解集；
 \item 若 \(f(x)\ge 4\)，求 \(a\) 的取值范围.
 \end{enumerate}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item 当 \(a=2\) 时，\(f(x)=\lvert x-4\rvert+\lvert x-3\rvert\). 分三种情况讨论：当 \(x\leq3\) 时，\(f(x)=7-2x\)，由 \(7-2x\geq4\) 得 \(x\leq\dfrac32\)；当 \(3\leq x\leq4\) 时，\(f(x)=1<4\)，无解；当 \(x\geq4\) 时，\(f(x)=2x-7\)，由 \(2x-7\geq4\) 得 \(x\geq\dfrac{11}{2}\). 所以不等式的解集为 \(\left(-\infty,\dfrac32\right]\cup\left[\dfrac{11}{2},+\infty\right)\).
+\item 令 \(u=a^2\)，\(v=2a-1\). 对任意实数 \(x\)，由三角不等式得 \(f(x)=\lvert x-u\rvert+\lvert x-v\rvert\geq\lvert u-v\rvert=\lvert a^2-2a+1\rvert=(a-1)^2\). 当 \(x\) 位于 \(u\) 与 \(v\) 之间时取等号，所以 \(f(x)\geq4\) 恒成立的充要条件是 \((a-1)^2\geq4\). 解得 \(a\leq-1\) 或 \(a\geq3\)，故 \(a\) 的取值范围为 \(\left(-\infty,-1\right]\cup[3,+\infty)\).
+\end{enumerate}
+\end{solution}

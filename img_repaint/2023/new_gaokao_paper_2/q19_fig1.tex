@@ -4,9 +4,9 @@
 % 未患病者分组 [70,75),[75,80),...,[100,105) 的频率组距分别为
 % 0.038, 0.040, 0.040, 0.036, 0.034, 0.010, 0.002。
 \begin{tikzpicture}[font=\normalsize]
-  \begin{axis}[
+  \begin{axis}[exam statistical histogram,
     width=6.55cm,
-    height=4.85cm,
+    height=13.689cm,
     xmin=90, xmax=132,
     ymin=0, ymax=0.045,
     axis lines=left,
@@ -34,16 +34,16 @@
     % Broken origin on the compressed x-axis.
     \draw (axis cs:91.0,0) -- (axis cs:91.5,0.0008) -- (axis cs:92.0,0)
           -- (axis cs:92.5,0.0008) -- (axis cs:93.0,0);
-    \node[anchor=north east, inner sep=1pt, font=\normalsize] at (axis cs:90,0) {0};
+    \node[anchor=north east, inner sep=1pt, font=\normalsize,yshift=-4pt] at (axis cs:90,0.000000) {0};
     \node[anchor=north, inner sep=1pt] at (axis description cs:0.52,-0.27) {患病者};
-    \node[anchor=west, inner sep=1pt] at (axis description cs:1.01,0.03) {指标};
-    \node[anchor=south, inner sep=1pt] at (axis description cs:0.03,1.01) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{指标};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
   \end{axis}
 
   \begin{scope}[xshift=7.15cm]
-    \begin{axis}[
+    \begin{axis}[exam statistical histogram,
       width=6.55cm,
-      height=4.85cm,
+      height=13.689cm,
       xmin=65, xmax=107,
       ymin=0, ymax=0.045,
       axis lines=left,
@@ -69,10 +69,10 @@
       \draw[dashed] (axis cs:65,0.040) -- (axis cs:80,0.040);
       \draw (axis cs:66.0,0) -- (axis cs:66.5,0.0008) -- (axis cs:67.0,0)
             -- (axis cs:67.5,0.0008) -- (axis cs:68.0,0);
-      \node[anchor=north east, inner sep=1pt, font=\normalsize] at (axis cs:65,0) {0};
+      \node[anchor=north east, inner sep=1pt, font=\normalsize,yshift=-4pt] at (axis cs:65,0.000000) {0};
       \node[anchor=north, inner sep=1pt] at (axis description cs:0.52,-0.27) {未患病者};
-      \node[anchor=west, inner sep=1pt] at (axis description cs:1.01,0.03) {指标};
-      \node[anchor=south, inner sep=1pt] at (axis description cs:0.03,1.01) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+      \examstatxlabel{指标};
+      \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
     \end{axis}
   \end{scope}
 \end{tikzpicture}

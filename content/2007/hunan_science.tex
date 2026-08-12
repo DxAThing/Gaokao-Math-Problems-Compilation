@@ -12,6 +12,18 @@
     {\(-2\i\)}
 \end{problem}
 
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+由
+\(\frac{2\i}{1+\i}=\frac{2\i(1-\i)}{(1+\i)(1-\i)}=\frac{2\i(1-\i)}{2}=1+\i\).
+因此
+\(\left(\frac{2\i}{1+\i}\right)^2=(1+\i)^2=1+2\i+\i^2=2\i\)，
+故选 C.
+\end{solution}
+
 \begin{problem}
 不等式 \(\frac{x - 2}{x + 1} \leqslant 0\) 的解集是（\quad）
 
@@ -21,6 +33,15 @@
     {\((-\infty, -1) \cup [2, +\infty)\)}
     {\((-1, 2]\)}
 \end{problem}
+
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+不等式的分界点为 \(x=-1\) 和 \(x=2\)，其中 \(x=-1\) 使分母为零，不能取. 当 \(x<-1\) 时，\(\frac{x-2}{x+1}>0\)；当 \(-1<x<2\) 时，\(\frac{x-2}{x+1}<0\)；当 \(x>2\) 时，\(\frac{x-2}{x+1}>0\).
+当 \(x=2\) 时分式等于零，可以取. 所以解集为 \((-1,2]\)，故选 D.
+\end{solution}
 
 \begin{problem}
 设 \(M\)，\(N\) 是两个集合，则 \(M \cup N \neq \emptyset\) 是“\(M \cap N \neq \emptyset\)”的（\quad）
@@ -32,6 +53,16 @@
     {既不充分又不必要条件}
 \end{problem}
 
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+若 \(M\cap N\neq\emptyset\)，则存在元素同时属于 \(M\) 和 \(N\)，从而该元素属于 \(M\cup N\)，所以 \(M\cup N\neq\emptyset\). 因此“\(M\cup N\neq\emptyset\)”是“\(M\cap N\neq\emptyset\)”的必要条件.
+
+但取 \(M=\{1\}\)，\(N=\{2\}\)，则 \(M\cup N\neq\emptyset\)，而 \(M\cap N=\emptyset\)，故必要条件不充分. 所以选 B.
+\end{solution}
+
 \begin{problem}
 设 \(\bs{a}\)，\(\bs{b}\) 是非零向量，若函数 \(f(x) = (x\bs{a} + \bs{b}) \cdot (\bs{a} - x\bs{b})\) 的图象是一条直线，则必有（\quad）
 
@@ -42,6 +73,18 @@
     {\( |\bs{a}| \neq |\bs{b}| \)}
 \end{problem}
 
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+展开函数式得
+\[
+f(x)=(x\bs{a}+\bs{b})\cdot(\bs{a}-x\bs{b})=-\left(\bs{a}\cdot\bs{b}\right)x^2+\left(|\bs{a}|^2-|\bs{b}|^2\right)x+\bs{a}\cdot\bs{b}.
+\]
+函数图象是一条直线，故二次项系数必须为零，即 \(\bs{a}\cdot\bs{b}=0\). 由于 \(\bs{a}\)，\(\bs{b}\) 均为非零向量，所以 \(\bs{a}\perp\bs{b}\)，故选 A.
+\end{solution}
+
 \begin{problem}
 设随机变量 \(\xi\) 服从标准正态分布 \(N(0,1)\). 已知 \(\Phi(-1.96) = 0.025\)，则 \(P(|\xi| < 1.96) =\)（\quad）
 
@@ -51,6 +94,16 @@
     {0.950}
     {0.975}
 \end{problem}
+
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+由标准正态分布的对称性，\(\Phi(1.96)=1-\Phi(-1.96)=0.975\). 因此
+\(P(|\xi|<1.96)=P(-1.96<\xi<1.96)=\Phi(1.96)-\Phi(-1.96)=0.975-0.025=0.950\).
+故选 C.
+\end{solution}
 
 \begin{problem}
 函数 \( f(x) = \begin{cases}
@@ -65,6 +118,24 @@ x^2 - 4x + 3, & x > 1,
     {1}
 \end{problem}
 
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+因为 \(\log_2x\) 的定义域为 \(x>0\)，先考察 \(0<x\leqslant1\). 令
+\[
+F_1(x)=4x-4-\log_2x.
+\]
+则 \(F_1(x)\) 在 \((0,1]\) 上连续，且 \(F_1'(x)=4-\frac{1}{x\ln2}\)，\(F_1''(x)=\frac{1}{x^2\ln2}>0\).
+所以 \(F_1'\) 严格递增，\(F_1\) 只有一个极小值点. 又 \(F_1(x)\to+\infty\)（\(x\to0^+\)），\(F_1(1)=0\)，且 \(F_1\left(\frac12\right)=-1<0\)，故方程 \(F_1(x)=0\) 在 \((0,1]\) 内有两个根，其中一个是 \(x=1\).
+
+再考察 \(x>1\)，令 \(F_2(x)=x^2-4x+3-\log_2x\). 有 \(F_2'(x)=2x-4-\frac{1}{x\ln2}\)，\(F_2''(x)=2+\frac{1}{x^2\ln2}>0\).
+因此 \(F_2'\) 严格递增，且 \(F_2'(1)<0\)，而 \(F_2(x)\to+\infty\)（\(x\to+\infty\)）. 由于 \(F_2(1)=0\)，故在 \(x>1\) 的右邻域内 \(F_2(x)<0\)，随后只在极小值点右侧有一个根. 所以该分支有且仅有一个交点.
+
+两段合计有 \(2+1=3\) 个交点，故选 B.
+\end{solution}
+
 \begin{problem}
 下列四个命题中，不正确的是（\quad）
 
@@ -74,6 +145,20 @@ x^2 - 4x + 3, & x > 1,
     {若函数 \(f(x)\)，\(g(x)\) 满足 \( \lim\limits_{x \to \infty} [f(x) - g(x)] = 0 \)，则 \( \lim\limits_{x \to \infty} f(x) = \lim\limits_{x \to \infty} g(x) \)}
     {\(\lim\limits_{x\to 1}\frac{\sqrt{x} - 1}{x - 1} = \frac{1}{2}\)}
 \end{problem}
+
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+命题 A 是连续函数的性质，正确. 对命题 B，函数在 \(x=-2\) 和 \(x=2\) 处无定义，且
+\(\frac{x+2}{x^2-4}=\frac{1}{x-2}\)（\(x\neq-2,2\)），
+所以在 \(x=-2\) 和 \(x=2\) 处都不连续，命题 B 正确. 命题 D 中有
+\(\lim_{x\to1}\frac{\sqrt{x}-1}{x-1}=\lim_{x\to1}\frac{1}{\sqrt{x}+1}=\frac12\)，
+故命题 D 正确.
+
+命题 C 没有说明 \(f(x)\) 和 \(g(x)\) 的极限存在. 例如取 \(f(x)=\sin x\)，\(g(x)=\sin x+\frac1x\)，则 \(f(x)-g(x)\to0\)，但 \(f(x)\) 和 \(g(x)\) 的极限都不存在. 因此命题 C 不正确，故选 C.
+\end{solution}
 
 \begin{problem}
 棱长为 \(1\) 的正方体 \(ABCD - A_{1}B_{1}C_{1}D_{1}\) 的 \(8\) 个顶点都在球 \(O\) 的表面上，\(E\)，\(F\) 分别是棱 \(AA_{1}\)，\(DD_{1}\) 的中点，则直线 \(EF\) 被球 \(O\) 截得的线段长为（\quad）
@@ -85,6 +170,23 @@ x^2 - 4x + 3, & x > 1,
     {\(\sqrt{2}\)}
 \end{problem}
 
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+建立直角坐标系，取 \(A=(0,0,0)\)，\(B=(1,0,0)\)，\(C=(1,1,0)\)，\(D=(0,1,0)\)，\(A_1=(0,0,1)\)，\(D_1=(0,1,1)\)，\(E=\left(0,0,\frac12\right)\)，\(F=\left(0,1,\frac12\right)\).
+球心为正方体中心 \(O=(\frac12,\frac12,\frac12)\)，半径为
+\[
+R=OA=\sqrt{\left(\frac12\right)^2+\left(\frac12\right)^2+\left(\frac12\right)^2}=\frac{\sqrt3}{2}.
+\]
+直线 \(EF\) 为 \(x=0\)，\(z=\frac12\)，球心到该直线的距离为 \(d=\frac12\). 因而直线被球截得的弦长为
+\[
+2\sqrt{R^2-d^2}=2\sqrt{\frac34-\frac14}=\sqrt2.
+\]
+故选 D.
+\end{solution}
+
 \begin{problem}
 设 \(F_{1}\)，\(F_{2}\) 分别是椭圆 \(\frac{x^{2}}{a^{2}} + \frac{y^{2}}{b^{2}} = 1\)（\(a > b > 0\)）的左，右焦点，若在其右准线上存在 \(P\)，使线段 \(PF_{1}\) 的中垂线过点 \(F_{2}\)，则椭圆离心率的取值范围是（\quad）
 
@@ -95,13 +197,33 @@ x^2 - 4x + 3, & x > 1,
     {\(\left[\frac{\sqrt{3}}{3}, 1\right)\)}
 \end{problem}
 
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+设椭圆焦距的一半为 \(c\)，离心率为 \(e\)，则 \(c=ae\)，且右准线方程为 \(x=\frac{a^2}{c}=\frac{a}{e}\). 设右准线上的点为 \(P=(\frac{a}{e},y)\). 因为 \(F_2\) 在线段 \(PF_1\) 的中垂线上，所以
+\(F_2P=F_2F_1=2c\).
+于是
+\(\left(\frac{a}{e}-c\right)^2+y^2=4c^2\).
+要存在实数 \(y\)，必须且只需
+\[
+\left(\frac{a}{e}-ae\right)^2\leqslant4a^2e^2.
+\]
+由于 \(0<e<1\)，化简为
+\[
+(1-e^2)^2\leqslant4e^4\quad\Longleftrightarrow\quad1-e^2\leqslant2e^2\quad\Longleftrightarrow\quad e^2\geqslant\frac13.
+\]
+所以离心率的取值范围为 \(\left[\frac{\sqrt3}{3},1\right)\)，故选 D.
+\end{solution}
+
 \begin{problem}
 设集合 \(M = \{1, 2, 3, 4, 5, 6\}\)，\(S_1\)，\(S_2\)，\(\cdots\)，\(S_k\) 都是 \(M\) 的含两个元素的子集，且满足：
 
 对任意的 \(S_i = \{a_i, b_i\}\)，\(S_j = \{a_j, b_j\}\)（\(i \neq j\)，\(i\)，\(j \in \{1, 2, 3, \cdots, k\}\)），都有
 \(\min \left\{\frac{a_i}{b_i}, \frac{b_i}{a_i}\right\} \neq \min \left\{\frac{a_j}{b_j}, \frac{b_j}{a_j}\right\}\).
 
-（\(\min \{x, y\}\) 表示两个数 \(x\)，\(y\) 中的较小者）.则 \(k\) 的最大值是（\quad）
+（\(\min \{x, y\}\) 表示两个数 \(x\)，\(y\) 中的较小者）. 则 \(k\) 的最大值是（\quad）
 
 \choices
     {10}
@@ -110,19 +232,60 @@ x^2 - 4x + 3, & x > 1,
     {13}
 \end{problem}
 
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+对任意二元子集 \(\{a_i,b_i\}\)，不妨令 \(m=\min\{a_i,b_i\}\)，\(n=\max\{a_i,b_i\}\)，则对应的数为 \(m/n\)，其中 \(1\leqslant m<n\leqslant6\). 约分后，不同的数正好为 \(\frac12\)，\(\frac13\)，\(\frac23\)，\(\frac14\)，\(\frac34\)，\(\frac15\)，\(\frac25\)，\(\frac35\)，\(\frac45\)，\(\frac16\)，\(\frac56\).
+这些数共有 \(1+2+2+4+2=11\) 个，并且每一个都由 \(M\) 中相应的两个元素构成的子集取得. 因此 \(k\) 的最大值为 \(11\)，故选 B.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
 圆心为 \((1,1)\) 且与直线 \(x + y = 4\) 相切的圆的方程是\fillinblank{}.
 \end{problem}
 
+\begin{answer}
+\((x-1)^2+(y-1)^2=2\)
+\end{answer}
+
+\begin{solution}
+圆心到直线 \(x+y-4=0\) 的距离为 \(\frac{|1+1-4|}{\sqrt{1^2+1^2}}=\sqrt{2}\).
+因此圆的半径为 \(\sqrt{2}\)，所求圆的方程为
+\[
+\left(x-1\right)^2+\left(y-1\right)^2=\left(\sqrt{2}\right)^2=2.
+\]
+\end{solution}
+
 \begin{problem}
 在 \(\triangle ABC\) 中，角 \(A\)，\(B\)，\(C\) 所对的边分别为 \(a\)，\(b\)，\(c\)，若 \(a = 1\)，\(b = \sqrt{7}\)，\(c = \sqrt{3}\)，则 \(B = \)\fillinblank{}.
 \end{problem}
 
+\begin{answer}
+\(\frac{5\pi}{6}\)
+\end{answer}
+
+\begin{solution}
+由余弦定理，边 \(b\) 所对的角 \(B\) 满足 \(b^2=a^2+c^2-2ac\cos B\). 代入 \(a=1\)，\(b=\sqrt7\)，\(c=\sqrt3\)，得 \(7=1+3-2\sqrt3\cos B\)，
+从而 \(\cos B=-\frac{\sqrt3}{2}\). 因为 \(0<B<\pi\)，所以 \(B=\frac{5\pi}{6}\).
+\end{solution}
+
 \begin{problem}
 函数 \( f(x) = 12x - x^3 \) 在区间 \([-3, 3]\) 上的最小值是\fillinblank{}.
 \end{problem}
+
+\begin{answer}
+\(-16\)
+\end{answer}
+
+\begin{solution}
+函数在 \([-3,3]\) 上连续，且 \(f'(x)=12-3x^2=3(2-x)(2+x)\).
+所以区间内的驻点为 \(x=-2\) 和 \(x=2\). 比较端点和驻点处的函数值：
+\(f(-3)=-9\)，\(f(-2)=-16\)，\(f(2)=16\)，\(f(3)=9\).
+因此最小值为 \(-16\).
+\end{solution}
 
 \begin{problem}
 设集合 \(A = \left\{(x, y) \mid y \geqslant \frac{1}{2} |x - 2|\right\}\)，\(B = \{(x, y) \mid y \leqslant -|x| + b\}\)，\(A \cap B \neq \emptyset\).
@@ -133,19 +296,73 @@ x^2 - 4x + 3, & x > 1,
 \end{enumerate}
 \end{problem}
 
+\begin{answer}
+第一空：\([1,+\infty)\)；第二空：\(\frac{9}{2}\)
+\end{answer}
+
+\begin{solution}
+由 \(A\cap B\neq\emptyset\)，存在实数 \(x\) 和 \(y\) 使
+\[
+\frac{1}{2}|x-2|\leqslant y\leqslant -|x|+b.
+\]
+因此必须且只需
+\[
+b\geqslant |x|+\frac{1}{2}|x-2|
+\]
+对某个实数 \(x\) 成立. 分三种情况讨论：
+
+当 \(x\leqslant0\) 时，
+\[
+|x|+\frac{1}{2}|x-2|=-x+\frac{1}{2}(2-x)=1-\frac{3}{2}x\geqslant1;
+\]
+当 \(0\leqslant x\leqslant2\) 时，
+\[
+|x|+\frac{1}{2}|x-2|=x+\frac{1}{2}(2-x)=1+\frac{1}{2}x\geqslant1;
+\]
+当 \(x\geqslant2\) 时，
+\[
+|x|+\frac{1}{2}|x-2|=x+\frac{1}{2}(x-2)=\frac{3}{2}x-1\geqslant2.
+\]
+所以该式的最小值为 \(1\)，第一空为 \(b\in[1,+\infty)\).
+
+在 \(A\cap B\) 中，固定 \(x\) 时 \(x+2y\) 随 \(y\) 增大而增大，故可取 \(y=-|x|+b\). 于是
+\[
+x+2y=2b+x-2|x|.
+\]
+当 \(x\leqslant0\) 时，\(x-2|x|=3x\leqslant0\)；当 \(x\geqslant0\) 时，\(x-2|x|=-x\leqslant0\). 因此最大值在 \(x=0\) 处取得，且最大值为 \(2b\). 由题设 \(2b=9\)，得第二空为 \(b=\frac{9}{2}\).
+\end{solution}
+
 \begin{problem}
 将杨辉三角中的奇数换成 \(1\)，偶数换成 \(0\)，得到如图所示的 \(0\)-\(1\) 三角数表. 从上往下数，第 \(1\) 次全行的数都为 \(1\) 的是第 \(1\) 行，第 \(2\) 次全行的数都为 \(1\) 的是第 \(3\) 行，…，第 \(n\) 次全行的数都为 \(1\) 的是第\fillinblank{} 行；第 \(61\) 行中 \(1\) 的个数是\fillinblank{}.
 
 \begin{center}
-\begin{tabular}{c|cc}
+\begin{tabular}{c|cccccc}
 第 \(1\) 行 & \(1\) & \(1\) \\
-第 \(2\) 行 & \(1\) & \(0\) \\
-第 \(3\) 行 & \(1\) & \(1\) \\
-第 \(4\) 行 & \(1\) & \(0\) \\
-第 \(5\) 行 & \(1\) & \(1\)
+第 \(2\) 行 & \(1\) & \(0\) & \(1\) \\
+第 \(3\) 行 & \(1\) & \(1\) & \(1\) & \(1\) \\
+第 \(4\) 行 & \(1\) & \(0\) & \(0\) & \(0\) & \(1\) \\
+第 \(5\) 行 & \(1\) & \(1\) & \(0\) & \(0\) & \(1\) & \(1\)
 \end{tabular}
 \end{center}
 \end{problem}
+
+\begin{answer}
+第一空：\(2^n-1\)；第二空：\(32\)
+\end{answer}
+
+\begin{solution}
+第 \(r\) 行的数是二项式系数
+\[
+\mathrm C_r^0,\ \mathrm C_r^1,\ \ldots,\ \mathrm C_r^r
+\]
+的奇偶性. 设 \(r\) 的二进制表示中有 \(s\) 个数位为 \(1\)，则在模 \(2\) 意义下
+\[
+(1+x)^r\equiv\prod_{j=1}^{s}\left(1+x^{2^{t_j}}\right),
+\]
+其中 \(r=2^{t_1}+2^{t_2}+\cdots+2^{t_s}\). 右端展开后有 \(2^s\) 个不同的项，故第 \(r\) 行中 \(1\) 的个数为 \(2^s\).
+
+第 \(r\) 行全为 \(1\) 当且仅当 \(r\) 的二进制表示各数位均为 \(1\)，即 \(r=2^m-1\). 因此第 \(n\) 次出现全为 \(1\) 的行是第 \(2^n-1\) 行. 又 \(61=(111101)_2\)，其中有 \(5\) 个数位为 \(1\)，所以第 \(61\) 行中 \(1\) 的个数为 \(2^5=32\).
+\end{solution}
 
 \section{解答题}
 
@@ -158,14 +375,55 @@ x^2 - 4x + 3, & x > 1,
 \end{enumerate}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item
+由 \(f(x)=\cos^2\left(x+\frac{\pi}{12}\right)\) 可知，函数 \(y=f(x)\) 的对称轴满足 \(x+\frac{\pi}{12}=\frac{k\pi}{2}\)，其中 \(k\in\Z\). 因此 \(x_0=\frac{k\pi}{2}-\frac{\pi}{12}\)，从而
+\(g(x_0)=1+\frac{1}{2}\sin\left(k\pi-\frac{\pi}{6}\right)=1+\frac{(-1)^{k+1}}{4}\).
+所以 \(g(x_0)\) 的值为 \(\frac{3}{4}\) 或 \(\frac{5}{4}\).
+
+\item
+利用二倍角公式，\(f(x)=\frac{1+\cos\left(2x+\frac{\pi}{6}\right)}{2}=\frac{1}{2}+\frac{\sqrt{3}}{4}\cos 2x-\frac{1}{4}\sin 2x\). 故 \(h(x)=\frac{3}{2}+\frac{\sqrt{3}}{4}\cos 2x+\frac{1}{4}\sin 2x=\frac{3}{2}+\frac{1}{2}\sin\left(2x+\frac{\pi}{3}\right)\)，于是 \(h'(x)=\cos\left(2x+\frac{\pi}{3}\right)\).
+当且仅当
+\[
+-\frac{\pi}{2}+2k\pi\leqslant2x+\frac{\pi}{3}\leqslant\frac{\pi}{2}+2k\pi
+\]
+时，\(h'(x)\geqslant0\). 因此函数 \(h(x)\) 的单调递增区间为
+\[
+\left[k\pi-\frac{5\pi}{12},\,k\pi+\frac{\pi}{12}\right],
+\qquad k\in\Z.
+\]
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
-某地区为下岗人员免费提供财会和计算机培训，以提高下岗人员的再就业能力.每名下岗人员可以选择参加一项培训，参加两项培训或不参加培训，已知参加过财会培训的有 \(60\%\)，参加过计算机培训的有 \(75\%\).假设每个人对培训项目的选择是相互独立的，且各人的选择相互之间没有影响.
+某地区为下岗人员免费提供财会和计算机培训，以提高下岗人员的再就业能力. 每名下岗人员可以选择参加一项培训，参加两项培训或不参加培训，已知参加过财会培训的有 \(60\%\)，参加过计算机培训的有 \(75\%\). 假设每个人对培训项目的选择是相互独立的，且各人的选择相互之间没有影响.
 
 \begin{enumerate}
 \item 任选 \(1\) 名下岗人员，求该人参加过培训的概率；
 \item 任选 \(3\) 名下岗人员，记 \(\xi\) 为 \(3\) 人中参加过培训的人数，求 \(\xi\) 的分布列和期望.
 \end{enumerate}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item
+设事件 \(A\) 表示参加过财会培训，事件 \(B\) 表示参加过计算机培训. 由题意 \(P(A)=0.6\)，\(P(B)=0.75\)，且 \(A\)，\(B\) 相互独立，所以 \(P(A\cap B)=P(A)P(B)=0.6\times0.75=0.45\). 任选一名下岗人员，该人参加过至少一项培训的概率为 \(P(A\cup B)=P(A)+P(B)-P(A\cap B)=0.6+0.75-0.45=0.9\).
+
+\item
+由第一问，每名下岗人员参加过培训的概率为 \(p=0.9\)，未参加过培训的概率为 \(1-p=0.1\). 由于各人的选择相互独立，\(\xi\) 服从参数为 \(3\)，\(0.9\) 的二项分布. 因此
+\(P(\xi=k)=\mathrm C_3^k(0.9)^k(0.1)^{3-k}\)，\(k=0,1,2,3\).
+分布列为
+\begin{center}
+\begin{tabular}{c|cccc}
+\(\xi\)&\(0\)&\(1\)&\(2\)&\(3\)\\ \hline
+\(P\)&\(0.001\)&\(0.027\)&\(0.243\)&\(0.729\)
+\end{tabular}
+\end{center}
+从而
+\(E(\xi)=3\times0.9=2.7\).
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 如图 1，\(E\)，\(F\) 分别是矩形 \(ABCD\) 的边 \(AB\)，\(CD\) 的中点，\(G\) 是 \(EF\) 上的一点，将 \(\triangle GAB\)，\(\triangle GCD\) 分别沿 \(AB\)，\(CD\) 翻折成 \(\triangle G_{1}AB\)，\(\triangle G_{2}CD\)，并连接 \(G_{1}G_{2}\)，使得平面 \(G_{1}AB \perp\) 平面 \(ABCD\)，\(G_{1}G_{2} \parallel AD\)，且 \(G_{1}G_{2} < AD\)，连接 \(BG_{2}\)，如图 2.
@@ -180,16 +438,176 @@ x^2 - 4x + 3, & x > 1,
 \bitmapfigure[max width=0.34\linewidth]{img/2007/hunan_science/q18_fig2.png}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item
+设 \(AB=m\)，\(AD=n\)，\(EG=u\)，建立空间直角坐标系，使矩形 \(ABCD\) 所在平面为 \(z=0\)，并取 \(A=(0,0,0)\)，\(B=(0,m,0)\)，\(D=(n,0,0)\)，\(C=(n,m,0)\). 于是 \(E=\left(0,\frac{m}{2},0\right)\)，\(F=\left(n,\frac{m}{2},0\right)\).
+沿 \(AB\) 翻折后，平面 \(G_1AB\) 垂直于平面 \(ABCD\)，故 \(G_1\) 在过 \(E\) 且垂直于平面 \(ABCD\) 的直线上，且 \(EG_1=EG=u\). 取
+\[
+G_1=\left(0,\frac{m}{2},u\right).
+\]
+由于 \(G_1G_2\parallel AD\)，点 \(G_2\) 与 \(G_1\) 的 \(y\)，\(z\) 坐标分别相同，即可写成 \(G_2=(x_2,\frac{m}{2},u)\). 平面 \(G_1ADG_2\) 由方向向量 \(\overrightarrow{AD}=(n,0,0)\)，\(\overrightarrow{AG_1}=\left(0,\frac{m}{2},u\right)\) 确定，其方程为 \(2uy-mz=0\). 这两个平面的一个法向量分别为 \(\bs{n}_1=(1,0,0)\)，\(\bs{n}_2=(0,2u,-m)\)，且 \(\bs{n}_1\cdot\bs{n}_2=0\). 因此
+平面 \(G_1AB\) 垂直于平面 \(G_1ADG_2\).
+
+\item
+在第二问给出的数值条件下，取 \(A=(0,0,0)\)，\(B=(0,12,0)\)，\(D=(25,0,0)\)，\(C=(25,12,0)\). 于是 \(E=(0,6,0)\)，\(F=(25,6,0)\)，\(G=(8,6,0)\).
+沿 \(AB\) 翻折后 \(G_1=(0,6,8)\). 又 \(FG=25-8=17\). 设沿 \(CD\) 翻折后 \(G_2\) 与 \(F\) 的连线和底面内垂直于 \(CD\) 的方向所成的角为 \(\varphi\)，则
+\[
+G_2=(25-17\cos\varphi,6,17\sin\varphi).
+\]
+由 \(G_1G_2\parallel AD\)，两点的 \(z\) 坐标相等，所以
+\[
+17\sin\varphi=8.
+\]
+于是
+\[
+17\cos\varphi=\sqrt{17^2-8^2}=15.
+\]
+条件 \(G_1G_2<AD=25\) 排除 \(\cos\varphi<0\) 的情形，故 \(G_2=(10,6,8)\). 平面 \(G_1AB\) 的方程为 \(x=0\). 平面 \(G_1ADG_2\) 的方程为 \(4y-3z=0\)，取其法向量 \(\bs{n}=(0,4,-3)\).
+由 \(B=(0,12,0)\)，\(G_2=(10,6,8)\)，可取直线 \(BG_2\) 的方向向量
+\[
+\bs{v}=\overrightarrow{BG_2}=(10,-6,8).
+\]
+设直线 \(BG_2\) 与平面 \(G_1ADG_2\) 所成的角为 \(\alpha\). 由直线与平面所成角的定义，
+\[
+\sin\alpha
+=\frac{|\bs{v}\cdot\bs{n}|}{|\bs{v}|\,|\bs{n}|}
+=\frac{|10\cdot0-6\cdot4+8\cdot(-3)|}
+{\sqrt{10^2+(-6)^2+8^2}\sqrt{0^2+4^2+(-3)^2}}
+=\frac{12\sqrt{2}}{25}.
+\]
+所以所求角 \(\alpha\) 满足
+\[
+\sin\alpha=\frac{12\sqrt{2}}{25},\qquad 0<\alpha<\frac{\pi}{2}.
+\]
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
-如图，某地为了开发旅游资源，欲修建一条连接风景点 \(P\) 和居民区 \(O\) 的公路，点 \(P\) 所在的山坡面与山脚所在水平面 \(\alpha\) 所成的二面角为 \(\theta\)（\(0^{\circ} < \theta < 90^{\circ}\)），且 \(\sin \theta = \frac{2}{5}\)，点 \(P\) 到平面 \(\alpha\) 的距离 \(PH = 0.4\mathrm{~km}\).沿山脚原有一段笔直的公路 \(AB\) 可供利用，从点 \(O\) 到山脚修路的造价为 \(a\text{ 万元}/\mathrm{km}\)，原有公路改建费用为 \(\frac{a}{2}\text{ 万元}/\mathrm{km}\)，当山坡上公路长度为 \(l\mathrm{~km}\)（\(1 \leqslant l \leqslant 2\)）时，其造价为 \((l^{2} + 1)a\text{ 万元}\)，已知 \(OA \perp AB\)，\(PB \perp AB\)，\(AB = 1.5\mathrm{~km}\)，\(OA = \sqrt{3}\mathrm{~km}\).
+如图，某地为了开发旅游资源，欲修建一条连接风景点 \(P\) 和居民区 \(O\) 的公路，点 \(P\) 所在的山坡面与山脚所在水平面 \(\alpha\) 所成的二面角为 \(\theta\)（\(0^{\circ} < \theta < 90^{\circ}\)），且 \(\sin \theta = \frac{2}{5}\)，点 \(P\) 到平面 \(\alpha\) 的距离 \(PH = 0.4\mathrm{~km}\). 沿山脚原有一段笔直的公路 \(AB\) 可供利用，从点 \(O\) 到山脚修路的造价为 \(a\text{ 万元}/\mathrm{km}\)，原有公路改建费用为 \(\frac{a}{2}\text{ 万元}/\mathrm{km}\)，当山坡上公路长度为 \(l\mathrm{~km}\)（\(1 \leqslant l \leqslant 2\)）时，其造价为 \((l^{2} + 1)a\text{ 万元}\)，已知 \(OA \perp AB\)，\(PB \perp AB\)，\(AB = 1.5\mathrm{~km}\)，\(OA = \sqrt{3}\mathrm{~km}\).
 
 \begin{enumerate}
 \item 在 \(AB\) 上求一点 \(D\)，使沿折线 \(PDAO\) 修建公路的总造价最小；
 \item 对于上一问得到的点 \(D\)，在 \(DA\) 上求一点 \(E\)，使沿折线 \(PDEO\) 修建公路的总造价最小；
 \item 在 \(AB\) 上是否存在两个不同的点 \(D'\)，\(E'\)，使沿折线 \(PD'E'O\) 修建公路的总造价小于上一问得到的最小总造价，证明你的结论.
 \end{enumerate}
+\FigureLayoutDeclare{img/2007/hunan_science/q19_fig1.png}{8.5cm}{5bp 60bp 11bp 13bp}
 \bitmapfigure[max width=0.62\linewidth]{img/2007/hunan_science/q19_fig1.png}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item
+在水平面 \(\alpha\) 上建立直角坐标系，并在竖直方向取 \(z\) 轴，使 \(A=\left(0,0,0\right)\)，\(B=\left(\frac{3}{2},0,0\right)\)，\(O=\left(0,\sqrt{3},0\right)\).
+由 \(\sin\theta=\frac{2}{5}\) 和 \(PH=\frac{2}{5}\mathrm{~km}\)，得
+\[
+PB=\frac{PH}{\sin\theta}=1\mathrm{~km}.
+\]
+在直角三角形 \(PBH\) 中，
+\[
+BH=\sqrt{PB^2-PH^2}
+   =\sqrt{1-\left(\frac{2}{5}\right)^2}
+   =\frac{\sqrt{21}}{5}\mathrm{~km}.
+\]
+取 \(H=\left(\frac{3}{2},\frac{\sqrt{21}}{5},0\right)\)，\(P=\left(\frac{3}{2},\frac{\sqrt{21}}{5},\frac{2}{5}\right)\).
+设 \(D\in AB\)，并令 \(x=BD\)，则 \(0\leqslant x\leqslant\frac{3}{2}\)，且
+\[
+PD^2=x^2+BH^2+PH^2=x^2+1.
+\]
+所以 \(1\leqslant PD\leqslant\frac{\sqrt{13}}{2}<2\)，山坡公路的造价公式在整个 \(AB\) 上均适用. 折线 \(PDAO\) 的总造价除以 \(a\) 为
+\[
+PD^2+1+\frac{AD}{2}+AO
+=x^2+2+\frac{\frac{3}{2}-x}{2}+\sqrt{3}
+=x^2-\frac{x}{2}+\frac{11}{4}+\sqrt{3}.
+\]
+配方得
+\[
+x^2-\frac{x}{2}=\left(x-\frac{1}{4}\right)^2-\frac{1}{16}.
+\]
+故总造价在 \(x=\frac{1}{4}\) 时取得最小值，即
+\[
+BD=\frac{1}{4}\mathrm{~km},\qquad AD=\frac{5}{4}\mathrm{~km}.
+\]
+
+\item
+由上一问，
+\[
+PD=\frac{\sqrt{17}}{4}\mathrm{~km},\qquad PD^2+1=\frac{33}{16}.
+\]
+设 \(E\in DA\)，令 \(AE=e\)，则 \(0\leqslant e\leqslant\frac{5}{4}\)，并且
+\[
+DE=\frac{5}{4}-e,\qquad EO=\sqrt{e^2+3}.
+\]
+折线 \(PDEO\) 的总造价除以 \(a\) 为
+\[
+\frac{33}{16}+\frac{1}{2}\left(\frac{5}{4}-e\right)+\sqrt{e^2+3}.
+\]
+令
+\[
+\varphi(e)=-\frac{e}{2}+\sqrt{e^2+3}.
+\]
+则
+\[
+\varphi'(e)=-\frac{1}{2}+\frac{e}{\sqrt{e^2+3}}.
+\]
+当 \(0\leqslant e<1\) 时，\(\varphi'(e)<0\)；当 \(e=1\) 时，\(\varphi'(e)=0\)；当 \(1<e\leqslant\frac{5}{4}\) 时，\(\varphi'(e)>0\). 因此总造价在 \(e=1\) 时取得最小值，即
+\[
+AE=1\mathrm{~km},\qquad DE=\frac{1}{4}\mathrm{~km}.
+\]
+此时最小总造价为
+\[
+a\left(\frac{33}{16}+\frac{1}{8}+2\right)
+=\frac{67}{16}a\text{ 万元}.
+\]
+
+\item
+设 \(D'\)，\(E'\) 分别对应 \(x=BD'\) 和 \(e=AE'\)，则
+\[
+0\leqslant x\leqslant\frac{3}{2},\qquad
+0\leqslant e\leqslant\frac{3}{2}.
+\]
+无论 \(D'\)，\(E'\) 在 \(AB\) 上的先后关系如何，折线 \(PD'E'O\) 的总造价除以 \(a\) 都为
+\[
+F(x,e)=x^2+2+\frac{1}{2}\left|\frac{3}{2}-x-e\right|+\sqrt{e^2+3}.
+\]
+固定 \(e\)，先考察
+\[
+\psi_e(x)=x^2+\frac{1}{2}\left|\frac{3}{2}-e-x\right|.
+\]
+当 \(0\leqslant e\leqslant\frac{5}{4}\) 时，令 \(t=\frac{3}{2}-e\geqslant\frac{1}{4}\). 分别在 \(0\leqslant x\leqslant t\) 和 \(t\leqslant x\leqslant\frac{3}{2}\) 上考察，可知 \(\psi_e(x)\) 的最小值在 \(x=\frac{1}{4}\) 处取得，且
+\[
+\min\psi_e(x)=\frac{11}{16}-\frac{e}{2}.
+\]
+于是
+\[
+\min F(x,e)=\frac{43}{16}-\frac{e}{2}+\sqrt{e^2+3}.
+\]
+其导数为
+\[
+-\frac{1}{2}+\frac{e}{\sqrt{e^2+3}},
+\]
+故在 \(0\leqslant e\leqslant\frac{5}{4}\) 上的最小值在 \(e=1\) 处取得，等于
+\[
+\frac{43}{16}-\frac{1}{2}+2=\frac{67}{16}.
+\]
+
+当 \(\frac{5}{4}\leqslant e\leqslant\frac{3}{2}\) 时，令 \(t=\frac{3}{2}-e\leqslant\frac{1}{4}\)，则 \(\psi_e(x)\) 的最小值在 \(x=t\) 处取得，从而
+\[
+\min F(x,e)=\left(\frac{3}{2}-e\right)^2+2+\sqrt{e^2+3}.
+\]
+该式在此区间上递增，因为其导数
+\[
+2e-3+\frac{e}{\sqrt{e^2+3}}
+\]
+在 \(e=\frac{5}{4}\) 处已经为正，且导数本身递增. 因而该区间上的最小值为
+\[
+\frac{1}{16}+2+\frac{\sqrt{73}}{4}
+=\frac{33}{16}+\frac{\sqrt{73}}{4}
+>\frac{67}{16}.
+\]
+所以任意两个不同的点 \(D'\)，\(E'\) 都不能使总造价小于上一问的最小总造价，答案为不存在.
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 已知双曲线 \(x^{2} - y^{2} = 2\) 的左，右焦点分别为 \(F_{1}\)，\(F_{2}\)，过点 \(F_{2}\) 的动直线与双曲线相交于 \(A\)，\(B\) 两点.
@@ -200,8 +618,89 @@ x^2 - 4x + 3, & x > 1,
 \end{enumerate}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item
+双曲线 \(x^2-y^2=2\) 的焦半距为 \(2\)，故
+\[
+F_1=(-2,0),\qquad F_2=(2,0),\qquad O=(0,0).
+\]
+设过 \(F_2\) 的动直线的方向向量为 \((u,v)\)，其参数方程为
+\[
+(x,y)=(2,0)+t(u,v).
+\]
+设直线与双曲线的两个交点分别对应参数 \(t_1\)，\(t_2\). 代入双曲线方程，得
+\[
+(u^2-v^2)t^2+4ut+2=0.
+\]
+由于有两个有限交点，韦达定理给出
+\[
+t_1+t_2=-\frac{4u}{u^2-v^2}.
+\]
+设 \(A\)，\(B\)，\(M\) 的位置向量分别为 \(\bs{a}\)，\(\bs{b}\)，\(\bs{m}\)，则由题设
+\[
+\bs{m}-\bs{f}_1
+=(\bs{a}-\bs{f}_1)+(\bs{b}-\bs{f}_1)
+ +(\bs{o}-\bs{f}_1),
+\]
+所以
+\[
+\bs{m}=\bs{a}+\bs{b}+\bs{o}-2\bs{f}_1
+=\bs{a}+\bs{b}+(4,0).
+\]
+又
+\[
+\bs{a}+\bs{b}
+=2F_2+(t_1+t_2)(u,v)
+=(4,0)-\frac{4u}{u^2-v^2}(u,v).
+\]
+因此
+\[
+M=(8,0)-\frac{4u}{u^2-v^2}(u,v).
+\]
+当 \(u\neq0\) 时，令 \(k=\frac{v}{u}\)，并设 \(M=(X,Y)\)，则
+\[
+X-8=-\frac{4}{1-k^2},\qquad
+Y=-\frac{4k}{1-k^2}.
+\]
+消去 \(k\) 得
+\[
+(X-6)^2-Y^2=4.
+\]
+当动直线为 \(x=2\) 时，交点为 \((2,\sqrt{2})\)，\((2,-\sqrt{2})\)，相应的 \(M=(8,0)\) 也满足上式. 故点 \(M\) 的轨迹方程为
+\[
+(x-6)^2-y^2=4.
+\]
+
+\item
+设 \(C=(c,0)\). 对非竖直动直线，仍令 \(k\) 为其斜率. 交点的横坐标 \(x_A\)，\(x_B\) 满足
+\[
+(1-k^2)x^2+4k^2x-(4k^2+2)=0.
+\]
+由韦达定理，
+\[
+x_A+x_B=-\frac{4k^2}{1-k^2},\qquad
+x_Ax_B=-\frac{4k^2+2}{1-k^2}.
+\]
+又 \(y_A=k(x_A-2)\)，\(y_B=k(x_B-2)\)，故
+\[
+\overrightarrow{CA}\cdot\overrightarrow{CB}
+=(x_A-c)(x_B-c)+y_Ay_B
+=c^2+\frac{(4c-2)k^2-2}{1-k^2}.
+\]
+要使其与 \(k\) 无关，必须有 \(4c-2=2\)，即 \(c=1\). 此时
+\[
+\overrightarrow{CA}\cdot\overrightarrow{CB}=1-2=-1.
+\]
+竖直动直线 \(x=2\) 时，\(A=(2,\sqrt2)\)，\(B=(2,-\sqrt2)\)，代入 \(C=(1,0)\) 也得到内积 \(-1\). 因而存在定点
+\[
+C=(1,0).
+\]
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
-已知 \(A_{n}(a_{n}, b_{n})\)（\(n \in \mathbf{N}^{*}\)）是曲线 \(y = \e^{x}\) 上的点，\(a_{1} = a\)，\(S_{n}\) 是数列 \(\{a_{n}\}\) 的前 \(n\) 项和，且满足 \(S_{n}^{2} = 3n^{2}a_{n} + S_{n-1}^{2}\)，\(a_{n} \neq 0\)，\(n = 2\)，\(3\)，\(4\)，\(\cdots\).
+已知 \(A_{n}(a_{n}, b_{n})\)（\(n \in \N^{*}\)）是曲线 \(y = \e^{x}\) 上的点，\(a_{1} = a\)，\(S_{n}\) 是数列 \(\{a_{n}\}\) 的前 \(n\) 项和，且满足 \(S_{n}^{2} = 3n^{2}a_{n} + S_{n-1}^{2}\)，\(a_{n} \neq 0\)，\(n = 2\)，\(3\)，\(4\)，\(\cdots\).
 
 \begin{enumerate}
 \item 证明：数列 \(\left\{\frac{b_{n+2}}{b_n}\right\}\)（\(n \geqslant 2\)）是常数数列；
@@ -209,3 +708,89 @@ x^2 - 4x + 3, & x > 1,
 \item 证明：当 \(a \in M\) 时，弦 \(A_{n} A_{n+1}\)（\(n \in \mathbf{N}^{*}\)）的斜率随 \(n\) 单调递增.
 \end{enumerate}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item
+由 \(S_n=S_{n-1}+a_n\) 以及 \(a_n\neq0\)，原条件化为
+\[
+a_n+2S_{n-1}=3n^2,\qquad n\geqslant2.
+\]
+取 \(n=2\)，得
+\[
+a_2+2a=12,\qquad\text{即}\qquad a_2=12-2a.
+\]
+将上式分别对 \(n\) 和 \(n+1\) 使用并相减，得
+\[
+a_{n+1}+a_n=3\left((n+1)^2-n^2\right)=6n+3,\qquad n\geqslant2.
+\]
+再将 \(n\) 换成 \(n+1\)，两式相减，得
+\[
+a_{n+2}-a_n=6,\qquad n\geqslant2.
+\]
+由于 \(A_n\) 在曲线 \(y=\e^x\) 上，\(b_n=\e^{a_n}\). 因此
+\[
+\frac{b_{n+2}}{b_n}
+=\frac{\e^{a_{n+2}}}{\e^{a_n}}
+=\e^{a_{n+2}-a_n}
+=\e^6,
+\]
+所以该数列是常数数列.
+
+\item
+由 \(a_2=12-2a\) 及 \(a_{n+2}=a_n+6\)，有
+\[
+a_3=3+2a,
+\]
+并且
+\[
+a_{2k}=12-2a+6(k-1),\qquad k\geqslant1,
+\]
+\[
+a_{2k+1}=3+2a+6(k-1),\qquad k\geqslant1.
+\]
+数列严格递增需要先满足
+\[
+a_1<a_2\quad\Longleftrightarrow\quad a<4,
+\]
+\[
+a_{2k}<a_{2k+1}\quad\Longleftrightarrow\quad
+12-2a+6(k-1)<3+2a+6(k-1)
+\quad\Longleftrightarrow\quad a>\frac{9}{4},
+\]
+以及
+\[
+a_{2k+1}<a_{2k+2}\quad\Longleftrightarrow\quad
+3+2a+6(k-1)<12-2a+6k
+\quad\Longleftrightarrow\quad a<\frac{15}{4}.
+\]
+当 \(\frac{9}{4}<a<\frac{15}{4}\) 时，上述各不等式均成立，且 \(a<\frac{15}{4}<4\)，所以数列严格递增. 反之，若 \(a\leqslant\frac{9}{4}\) 或 \(a\geqslant\frac{15}{4}\)，则相邻两项中至少有一处不满足递增. 故
+\[
+M=\left(\frac{9}{4},\frac{15}{4}\right).
+\]
+
+\item
+当 \(a\in M\) 时，数列 \(\{a_n\}\) 严格递增，因此
+\[
+a_n<a_{n+1}<a_{n+2}.
+\]
+设弦 \(A_nA_{n+1}\) 的斜率为 \(K_n\)，则
+\[
+K_n=\frac{b_{n+1}-b_n}{a_{n+1}-a_n}
+=\frac{\e^{a_{n+1}}-\e^{a_n}}{a_{n+1}-a_n}.
+\]
+由拉格朗日中值定理，存在
+\[
+c_n\in(a_n,a_{n+1}),\qquad c_{n+1}\in(a_{n+1},a_{n+2})
+\]
+使得
+\[
+K_n=\e^{c_n},\qquad K_{n+1}=\e^{c_{n+1}}.
+\]
+因为 \(c_n<c_{n+1}\)，且指数函数严格递增，所以
+\[
+K_n<K_{n+1}.
+\]
+因此弦 \(A_nA_{n+1}\) 的斜率随 \(n\) 单调递增.
+\end{enumerate}
+\end{solution}

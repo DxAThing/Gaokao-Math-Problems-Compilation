@@ -8,6 +8,11 @@
     {\(2\)}
     {\(3\)}
     {\(4\)}
+\answer{B}
+
+\begin{solution}
+因为并集等于 \(\{1,2,3\}\)，所以 \(M\) 不能含有这三个元素以外的元素，并且 \(2,3\) 必须属于 \(M\)；元素 \(1\) 是否属于 \(M\) 均不影响并集的结果. 因此 \(M\) 只有两种可能：\(M=\{2,3\}\) 或 \(M=\{1,2,3\}\)，故集合 \(M\) 的个数为 \(2\)，选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -18,6 +23,15 @@
     {\(\frac{\sqrt{2}}{2}\)}
     {\(\frac{\sqrt{3}}{2}\)}
     {\(1\)}
+\answer{D}
+
+\begin{solution}
+由两点距离公式，
+\[
+|AB|^{2}=(\cos80^{\circ}-\cos20^{\circ})^{2}+(\sin80^{\circ}-\sin20^{\circ})^{2}=2-2\cos(80^{\circ}-20^{\circ})=2-2\cos60^{\circ}=1
+\]
+由于 \(|AB|>0\)，所以 \(|AB|=1\)，选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -28,6 +42,11 @@
     {\(y=2|\sin x|\)}
     {\(y=\left(\frac{1}{3}\right)^{\cos x}\)}
     {\(y=-\cot x\)}
+\answer{B}
+
+\begin{solution}
+逐一判断四个函数. 有 \(\cos^{2}x=\frac{1+\cos2x}{2}\)，其最小正周期为 \(\pi\)，但在 \(\left(\frac{\pi}{2},\pi\right)\) 上 \((\cos^{2}x)'=-\sin2x>0\)，是增函数. 函数 \(2|\sin x|\) 的最小正周期为 \(\pi\)，且在所给区间内 \(2|\sin x|=2\sin x\)，其导数 \(2\cos x<0\)，是减函数. 函数 \(\left(\frac13\right)^{\cos x}\) 的周期为 \(2\pi\)，且在所给区间内导数为 \(-\ln3\cdot(-\sin x)\left(\frac13\right)^{\cos x}>0\)，不是减函数. 函数 \(-\cot x\) 的最小正周期为 \(\pi\)，但其导数为 \(\csc^{2}x>0\)，也是增函数. 因此选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -38,19 +57,44 @@
     {\(V_{\text{甲}}<V_{\text{乙}}\)，\(S_{\text{甲}}<S_{\text{乙}}\)}
     {\(V_{\text{甲}}=V_{\text{乙}}\)，\(S_{\text{甲}}>S_{\text{乙}}\)}
     {\(V_{\text{甲}}=V_{\text{乙}}\)，\(S_{\text{甲}}=S_{\text{乙}}\)}
+\answer{C}
+
+\begin{solution}
+球的体积与直径的三次方成正比，表面积与直径的平方成正比. 因此
+\[
+V_{\text{甲}}=64\cdot\frac{\pi}{6}\left(\frac a4\right)^{3}=\frac{\pi a^{3}}6=V_{\text{乙}}
+\]
+\[
+S_{\text{甲}}=64\cdot4\pi\left(\frac a8\right)^{2}=4\pi a^{2}>\pi a^{2}=S_{\text{乙}}
+\]
+故 \(V_{\text{甲}}=V_{\text{乙}}\)，且 \(S_{\text{甲}}>S_{\text{乙}}\)，选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
 已知某曲线的参数方程是 \(\begin{cases}
 x=\sec\varphi,\\
-y=\tan\varphi,
-\end{cases}\)（\(\varphi\) 为参数），若以原点为极点，\(x\) 轴的正半轴为极轴，长度单位不便变，建立极坐标系，则该曲线的极坐标方程是（\quad）
+y=\tan\varphi
+\end{cases}\)（\(\varphi\) 为参数），若以原点为极点，\(x\) 轴的正半轴为极轴，长度单位不变，建立极坐标系，则该曲线的极坐标方程是（\quad）
 
 \choices
     {\(\rho=1\)}
     {\(\rho\cos 2\theta=1\)}
     {\(\rho^{2}\sin 2\theta=1\)}
     {\(\rho^{2}\cos 2\theta=1\)}
+\answer{D}
+
+\begin{solution}
+由参数方程恒有
+\[
+x^{2}-y^{2}=\sec^{2}\varphi-\tan^{2}\varphi=1
+\]
+在极坐标中 \(x=\rho\cos\theta\)，\(y=\rho\sin\theta\)，所以
+\[
+x^{2}-y^{2}=\rho^{2}(\cos^{2}\theta-\sin^{2}\theta)=\rho^{2}\cos2\theta
+\]
+因此曲线的极坐标方程为 \(\rho^{2}\cos2\theta=1\)，选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -70,6 +114,28 @@ y=\tan\varphi,
     {\(\circled{2}\circled{3}\circled{4}\)}
     {\(\circled{1}\circled{2}\circled{4}\)}
     {\(\circled{1}\circled{3}\circled{4}\)}
+\answer{D}
+
+\begin{solution}
+把直线方程写成 \(y=\sqrt5-x\)，分别代入四条曲线. 对曲线 \(1\)，代入得
+\[
+x^{2}+(-\sqrt5+x)^{2}=\frac52
+\Longleftrightarrow 2x^{2}-2\sqrt5x+\frac52=0
+\]
+其判别式为 \(20-20=0\)，所以只有一个交点. 对曲线 \(2\)，代入并整理得
+\[
+13x^{2}-18\sqrt5x+9=0
+\]
+其判别式为 \(1620-468=1152>0\)，有两个交点. 对曲线 \(3\)，代入并整理得
+\[
+5x^{2}-2\sqrt5x+1=0
+\]
+其判别式为 \(20-20=0\)，所以只有一个交点. 对曲线 \(4\)，代入并整理得
+\[
+5x^{2}-8\sqrt5x+16=0
+\]
+其判别式为 \(320-320=0\)，所以只有一个交点. 因此满足条件的曲线为 \(1,3,4\)，选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -80,6 +146,19 @@ y=\tan\varphi,
     {\(5\)}
     {\(4\)}
     {\(3\)}
+\answer{C}
+
+\begin{solution}
+由 \(z_{1}+z_{2}=2\)，得 \(z_{2}=2-z_{1}\)，于是
+\[
+|z_{1}-z_{2}|=|2z_{1}-2|=2|z_{1}-1|
+\]
+因为 \(|z_{1}|=1\)，由三角不等式
+\[
+|z_{1}-1|\leqslant |z_{1}|+1=2
+\]
+所以 \(|z_{1}-z_{2}|\leqslant4\). 当 \(z_{1}=-1\) 时，\(|z_{1}|=1\)，且 \(z_{2}=3\)，上式取等号，故最大值为 \(4\)，选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -90,6 +169,22 @@ y=\tan\varphi,
     {\(-3\)}
     {\(-2\)}
     {\(-\frac{1}{2}\)}
+\answer{A}
+
+\begin{solution}
+原式有意义时 \(2\cot\theta+1\ne0\)，由题设得
+\[
+\cot\theta-1=2\cot\theta+1
+\]
+所以 \(\cot\theta=-2\)，即 \(\cos\theta=-2\sin\theta\). 又因 \(\cot\theta=-2\)，有 \(\cos\theta+\sin\theta\ne0\)，于是
+\[
+\frac{\cos2\theta}{1+\sin2\theta}
+=\frac{\cos^{2}\theta-\sin^{2}\theta}{(\cos\theta+\sin\theta)^{2}}
+=\frac{\cos\theta-\sin\theta}{\cos\theta+\sin\theta}
+=\frac{-2\sin\theta-\sin\theta}{-2\sin\theta+\sin\theta}=3
+\]
+故选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -100,6 +195,15 @@ y=\tan\varphi,
     {\(3\mathrm C_{12}^{4}\mathrm C_{8}^{4}\mathrm C_{4}^{4}\) 种}
     {\(\mathrm C_{12}^{4}\mathrm C_{8}^{4}\mathrm A_{3}^{3}\) 种}
     {\(\frac{\mathrm C_{12}^{4}\mathrm C_{8}^{4}\mathrm C_{4}^{4}}{\mathrm A_{3}^{3}}\) 种}
+\answer{A}
+
+\begin{solution}
+三个路口是不同的，先从 \(12\) 名学生中选出到第一个路口的 \(4\) 人，再从余下的 \(8\) 人中选出到第二个路口的 \(4\) 人，最后剩下的 \(4\) 人到第三个路口. 因而分配方案数为
+\[
+\mathrm C_{12}^{4}\mathrm C_{8}^{4}\mathrm C_{4}^{4}
+\]
+故选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -110,6 +214,16 @@ y=\tan\varphi,
     {充分非必要条件}
     {必要非充分条件}
     {即非充分又非必要条件}
+\answer{C}
+
+\begin{solution}
+先说明必要性. 若直四棱柱是正方体，设其棱长为 \(a\)，取
+\(A=(0,0,0)\)，\(B=(a,0,0)\)，\(C=(a,a,0)\)，\(D=(0,a,0)\).
+再取 \(B_{1}=(a,0,a)\)，\(D_{1}=(0,a,a)\).
+平面 \(ACB_{1}\) 内两条相交直线的方向向量可取 \(\overrightarrow{AC}=(a,a,0)\)、\(\overrightarrow{AB_{1}}=(a,0,a)\)，其法向量可取 \((1,-1,-1)\). 平面 \(BB_{1}D_{1}D\) 内两条相交直线的方向向量可取 \(\overrightarrow{BD}=(-a,a,0)\)、\(\overrightarrow{BB_{1}}=(0,0,a)\)，其法向量可取 \((1,1,0)\). 两法向量的内积为 \(1-1+0=0\)，故两平面垂直，所以甲是乙的必要条件.
+
+再说明不充分性. 取底面为边长 \(a\) 的正方形、高为任意 \(h>0\) 且 \(h\ne a\) 的直四棱柱，并仍取上述底面坐标，令 \(B_{1}=(a,0,h)\)，\(D_{1}=(0,a,h)\). 此时平面 \(ACB_{1}\) 与平面 \(BB_{1}D_{1}D\) 的法向量可分别取为 \((ah,-ah,-a^{2})\) 与 \((1,1,0)\)，二者内积为 \(0\)，所以甲成立；但由于 \(h\ne a\)，该棱柱不是正方体. 因此甲不是乙的充分条件，故选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -122,10 +236,21 @@ y=\tan\varphi,
     {\((-\frac{\pi}{2},-1)\cup(0,1)\cup(\frac{\pi}{2},3)\)}
     {\((-3,-1)\cup(0,1)\cup(1,3)\)}
     {\((-3,-\frac{\pi}{2})\cup(0,1)\cup(1,3)\)}
+\answer{B}
+
+\begin{solution}
+由图可知，在 \(0<x<3\) 时，\(f(x)<0\) 于 \((0,1)\)，\(f(1)=0\)，且 \(f(x)>0\) 于 \((1,3)\). 又因 \(f\) 为奇函数，\(f(-x)=-f(x)\)，而 \(\cos(-x)=\cos x\). 在正半轴上，\(\cos x>0\) 于 \((0,\frac\pi2)\)，\(\cos x<0\) 于 \((\frac\pi2,3)\). 所以正半轴上不等式成立的区间为 \((0,1)\cup(\frac\pi2,3)\)，而在 \((1,\frac\pi2)\) 上乘积为正.
+
+对负数 \(x\)，有 \(f(x)\cos x=-f(-x)\cos(-x)\)，故负半轴上乘积为负的区间正好是正半轴上乘积为正区间关于原点的对称区间，即 \((-\frac\pi2,-1)\). 因此解集为
+\[
+\left(-\frac\pi2,-1\right)\cup(0,1)\cup\left(\frac\pi2,3\right)
+\]
+选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
-如图所示，\(f_i(x)\)（\(i=1,2,3,4\)）是定义在 \([0,1]\) 上的四个函数，其中满足性质：“对 \([0,1]\) 中任意的 \(x_1\) 和 \(x_2\)，任意 \(\lambda\in[0,1]\)，\(f[\lambda x_1+(1-\lambda)x_2]\le \lambda f(x_1)+(1-\lambda)f(x_2)\) 恒成立”的只有（\quad）
+如图所示，\(f_i(x)\)（\(i=1,2,3,4\)）是定义在 \([0,1]\) 上的四个函数，其中满足性质：“对 \([0,1]\) 中任意的 \(x_1\) 和 \(x_2\)，任意 \(\lambda\in[0,1]\)，\(f_i[\lambda x_1+(1-\lambda)x_2]\le \lambda f_i(x_1)+(1-\lambda)f_i(x_2)\) 恒成立”的只有（\quad）
 
 \bitmapfigure[max width=0.95\linewidth]{img/2002/beijing_science_autumn/q12_fig1.png}
 
@@ -134,15 +259,54 @@ y=\tan\varphi,
     {\(f_2(x)\)}
     {\(f_2(x)\)，\(f_3(x)\)}
     {\(f_4(x)\)}
+\answer{A}
+
+\begin{solution}
+题中的不等式是凸函数的定义不等式：函数图象应位于任意两点连线的下方. 由图可见，\(f_{1}(x)\) 的图象为凸形，满足该不等式；\(f_{2}(x)\) 的图象为向下弯曲，在内点处位于弦的上方，不满足；\(f_{3}(x)\) 为直线，对任意 \(x_{1},x_{2},\lambda\) 等号成立，满足；\(f_{4}(x)\) 在定义区间内存在向下弯曲的部分，不满足. 所以满足条件的函数为 \(f_{1}(x)\)、\(f_{3}(x)\)，选 A.
+\end{solution}
 \end{problem}
 
 \section{填空题}
 \begin{problem}
 \(\arcsin\left(-\frac{2}{5}\right)\)，\(\arccos\left(-\frac{3}{4}\right)\)，\(\arctan\left(-\frac{5}{4}\right)\) 从小到大的顺序是\fillinblank{}.
+\answer{\(\arctan\left(-\frac{5}{4}\right)<\arcsin\left(-\frac{2}{5}\right)<\arccos\left(-\frac{3}{4}\right)\)}
+
+\begin{solution}
+令 \(\alpha=\arcsin\frac25\)，\(\beta=\arctan\frac54\)，则 \(\alpha,\beta\in\left(0,\frac\pi2\right)\). 因为
+\[
+\tan\alpha=\frac{2/5}{\sqrt{1-(2/5)^{2}}}=\frac{2}{\sqrt{21}}<\frac54=\tan\beta
+\]
+所以 \(\alpha<\beta\)，从而 \(-\beta<-\alpha\)，即
+\[
+\arctan\left(-\frac54\right)<\arcsin\left(-\frac25\right).
+\]
+另一方面，\(\arccos(-3/4)\in(\frac\pi2,\pi)\)，而前两个数都属于 \((-\frac\pi2,0)\)，故
+\[
+\arctan\left(-\frac54\right)<\arcsin\left(-\frac25\right)<\arccos\left(-\frac34\right).
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
 等差数列 \(\{a_n\}\) 中，\(a_1=2\)，公差不为零，且 \(a_1\)，\(a_3\)，\(a_{11}\) 恰好是某等比数列的前三项，那么该等比数列公比的值等于\fillinblank{}.
+\answer{4}
+
+\begin{solution}
+设等差数列的公差为 \(d\)，则
+有 \(a_{3}=2+2d\)，\(a_{11}=2+10d\).
+由于 \(a_{1},a_{3},a_{11}\) 依次为等比数列的前三项，且 \(a_{1}=2\ne0\)，有
+\[
+a_{3}^{2}=a_{1}a_{11}
+\]
+即
+\[
+(2+2d)^{2}=2(2+10d)\Longleftrightarrow 4d(d-3)=0
+\]
+题设给出 \(d\ne0\)，所以 \(d=3\). 因而等比数列的公比为
+\[
+\frac{a_{3}}{a_{1}}=\frac{2+2\times3}{2}=4
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -152,54 +316,134 @@ y=\tan\varphi,
 \item 可能是 \(0^{\circ}\) 的角；
 \item 可能是锐角；
 \item 可能是直角；
-\item 可能是直角；
+\item 可能是钝角；
 \item 可能是 \(180^{\circ}\) 的角
 \end{circlelist}
 
-其中正确的序号是\fillinblank{}.（注：把你认为正确判断的序号都填上）
+其中正确的序号是\fillinblank{}.
+
+\answer{12345}
+
+\begin{solution}
+取投影平面 \(\alpha\) 为 \(xy\) 平面，令 \(O\) 为原点. 直角 \(AOB\) 的两条射线方向向量内积为零；将方向向量的第三个坐标删去，就得到两条射线在 \(\alpha\) 内的射影. 下面分别构造题目所列的几种投影角.
+
+    取 \(\overrightarrow{OA}=(1,0,1)\)，\(\overrightarrow{OB}=(1,0,-1)\)，两向量内积为 \(0\)，而两射影均为 \((1,0)\)，故射影角可能为 \(0^{\circ}\). 取 \(\overrightarrow{OA}=(1,0,1)\)，\(\overrightarrow{OB}=(1,1,-1)\)，两向量内积仍为 \(0\)，两射影的内积为 \(1>0\)，故射影角可能为锐角. 取 \(\overrightarrow{OA}=(1,0,0)\)，\(\overrightarrow{OB}=(0,1,0)\)，两向量及其射影均互相垂直，故射影角可能为直角. 再取 \(\overrightarrow{OA}=(1,0,1)\)，\(\overrightarrow{OB}=(-1,1,1)\)，两向量内积为 \(0\)，而两射影的内积为 \(-1<0\)，故射影角可能为钝角. 最后取 \(\overrightarrow{OA}=(1,0,1)\)，\(\overrightarrow{OB}=(-1,0,1)\)，两向量内积为 \(0\)，而两射影方向相反，故射影角可能为 \(180^{\circ}\). 因此五种判断均正确，正确的序号为 \(12345\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
 已知 \(P\) 是直线 \(3x+4y+8=0\) 上的动点，\(PA\)，\(PB\) 是圆 \(x^{2}+y^{2}-2x-2y+8=0\) 的两条切线，\(A\)，\(B\) 是切点，\(C\) 是圆心，那么四边形 \(PACB\) 面积的最小值为\fillinblank{}.
+
+\begin{solution}
+将原题给出的方程配方，得
+\[
+x^{2}+y^{2}-2x-2y+8=(x-1)^{2}+(y-1)^{2}+6=0
+\]
+即 \((x-1)^{2}+(y-1)^{2}=-6\). 左边对任意实数 \(x,y\) 都不小于零，不可能等于 \(-6\)，所以该方程不表示实圆. 因而原题条件下不存在切点 \(A\)、\(B\)，四边形 \(PACB\) 及其面积最小值均无法定义，不能确定填空答案.
+\end{solution}
 \end{problem}
 
 \section{解答题}
 \begin{problem}
 解不等式 \(\left|\sqrt{2x-1}-x\right|<2\).
+\begin{solution}
+由根式有意义知 \(x\geqslant\frac{1}{2}\). 令 \(t=\sqrt{2x-1}\)，则 \(t\geqslant0\)，且 \(x=\frac{t^{2}+1}{2}\). 原不等式化为
+\[
+\left|t-\frac{t^{2}+1}{2}\right|<2
+\Longleftrightarrow \frac{(t-1)^{2}}{2}<2
+\Longleftrightarrow (t-1)^{2}<4.
+\]
+因此 \(-1<t<3\). 结合 \(t\geqslant0\)，得 \(0\leqslant t<3\)，从而
+\[
+\frac{1}{2}\leqslant x=\frac{t^{2}+1}{2}<5
+\]
+所以不等式的解集为 \(\left[\frac{1}{2},5\right)\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
-如图，在多面体 \(ABCD-A_{1}B_{1}C_{1}D_{1}\) 中，上，下底面平行且均为矩形，相对的侧面与同一底面所成的二面角大小相等，侧棱延长后相交与 \(E\)，\(F\) 两点，上，下底面矩形的长，宽分别为 \(c\)，\(d\) 与 \(a\)，\(b\)，且 \(a>c\)，\(b>d\)，两底面间的距离为 \(h\).
+如图，在多面体 \(ABCD-A_{1}B_{1}C_{1}D_{1}\) 中，上、下底面平行且均为矩形，相对的侧面与同一底面所成的二面角大小相等，侧棱延长后相交于 \(E\)，\(F\) 两点，上、下底面矩形的长、宽分别为 \(c\)，\(d\) 与 \(a\)，\(b\)，且 \(a>c\)，\(b>d\)，两底面间的距离为 \(h\).
 
 \begin{enumerate}
 \item 求侧面 \(ABB_{1}A_{1}\) 与底面 \(ABCD\) 所成二面角的大小；
-\item 证明：\(EF \parallel ABCD\)；
-\item 在估侧该多面体的体积时，经常运用近似公式 \(V_{\text{估}}=S_{\text{中截面}}\cdot h\) 来计算，已知它的体积公式是 \(V=\frac{h}{6}(S_{\text{上底面}}+4S_{\text{中截面}}+S_{\text{下底面}})\)，试判断 \(V_{\text{估}}\) 与 \(V\) 的大小关系，并加以证明.
+\item 证明：\(EF \parallel\) 平面 \(ABCD\)；
+\item 在估测该多面体的体积时，经常运用近似公式 \(V_{\text{估}}=S_{\text{中截面}}\cdot h\) 来计算，已知它的体积公式是 \(V=\frac{h}{6}(S_{\text{上底面}}+4S_{\text{中截面}}+S_{\text{下底面}})\)，试判断 \(V_{\text{估}}\) 与 \(V\) 的大小关系，并加以证明.
 \end{enumerate}
 
 \medskip
 注：与两个底面平行，且到两个底面距离相等的截面称为该多面体的中截面.
 
-\begin{center}
-\begin{minipage}{0.48\linewidth}
-\centering
-\bitmapfigure{img/2002/beijing_science_autumn/q18_fig1.png}
-\end{minipage}
-\end{center}
+\bitmapinlinefigure[0.48\linewidth][max width=0.48\linewidth]{img/2002/beijing_science_autumn/q18_fig1.png}
+
+\begin{solution}
+\begin{enumerate}
+\item 建立直角坐标系，使下底面在 \(z=0\) 平面内，并取 \(A=(0,0,0)\)，\(B=(a,0,0)\)，\(C=(a,b,0)\)，\(D=(0,b,0)\).
+设上底面的一个顶点为 \(A_{1}=(u,v,h)\)，则可写成 \(B_{1}=(u+c,v,h)\)，\(C_{1}=(u+c,v+d,h)\)，\(D_{1}=(u,v+d,h)\).
+侧面 \(ABB_{1}A_{1}\) 与底面的二面角，在垂直于 \(AB\) 的截面内对应于水平位移为 \(v\)、竖直位移为 \(h\) 的直角三角形；相对侧面给出的相等二面角使两个水平位移相等，所以 \(v=b-v-d\)，即 \(v=\frac{b-d}{2}\). 同理，由另一对相对侧面的二面角相等，得 \(u=a-u-c\)，即 \(u=\frac{a-c}{2}\). 因此在上述截面内，二面角记为 \(\theta\)，则
+\[
+\tan\theta=\frac{h}{v}=\frac{2h}{b-d}
+\]
+故 \(\theta=\arctan\frac{2h}{b-d}\).
+\item 由图中相对的侧棱交于 \(E\)、\(F\). 在平面 \(ADD_{1}A_{1}\) 内，设 \(E=A A_{1}\cap D D_{1}\)，用同一参数表示两条侧棱上的点，有
+\[
+A+t(A_{1}-A)=(tu,tv,th)
+\]
+\[
+D+t(D_{1}-D)=\bigl(tu,b-t(b-v-d),th\bigr)
+\]
+两式相等时，\(t(b-d)=b\)，所以 \(z_{E}=\frac{bh}{b-d}\). 对另一侧面 \(BCC_{1}B_{1}\) 作完全相同的计算，得到 \(z_{F}=\frac{bh}{b-d}\). 于是 \(E\)、\(F\) 位于同一个与底面平行的平面内，故 \(EF\parallel\) 平面 \(ABCD\).
+\item 中截面位于 \(z=\frac{h}{2}\) 的平面内. 由上述坐标表示，截面的两条边分别是上下底面对应边长的平均值，即长、宽分别为 \(\frac{a+c}{2}\)、\(\frac{b+d}{2}\). 因此
+\[
+S_{\text{中截面}}=\frac{(a+c)(b+d)}{4}
+\]
+从而
+\[
+V_{\text{估}}=\frac{h(a+c)(b+d)}{4}
+\]
+代入已知体积公式，得
+\[
+V=\frac{h}{6}\bigl(ab+(a+c)(b+d)+cd\bigr)
+\]
+两者之差为
+\[
+V-V_{\text{估}}=\frac{h}{12}\bigl(2ab+2cd-(a+c)(b+d)\bigr)=\frac{h(a-c)(b-d)}{12}>0
+\]
+因为 \(a>c\)、\(b>d\)、\(h>0\). 所以 \(V_{\text{估}}<V\).
+\end{enumerate}
+\end{solution}
 \end{problem}
 
 \begin{problem}
-数列 \(\{a_n\}\) 由下列条件确定：\(x_1=a>0\)，\(x_{n+1}=\frac12\left(x_n+\frac{a}{x_n}\right)\)，\(n\in\N\).
+数列 \(\{x_n\}\) 由下列条件确定：\(x_1=a>0\)，\(x_{n+1}=\frac12\left(x_n+\frac{a}{x_n}\right)\)，\(n\in\N\).
 
 \begin{enumerate}
 \item 证明：对 \(n\ge 2\)，总有 \(x_n\ge \sqrt{a}\)；
 \item 证明：对 \(n\ge 2\)，总有 \(x_n\ge x_{n+1}\)；
-\item 若数列 \(\{a_n\}\) 的极限存在，且大于零，求 \(\lim\limits_{n\to\infty}x_n\) 的值.
+\item 若数列 \(\{x_n\}\) 的极限存在，且大于零，求 \(\lim\limits_{n\to\infty}x_n\) 的值.
 \end{enumerate}
+\begin{solution}
+\begin{enumerate}
+\item 由 \(x_1=a>0\) 可知 \(x_1>0\). 若 \(x_n>0\)，则 \(x_{n+1}=\frac12\left(x_n+\frac{a}{x_n}\right)>0\)，故所有 \(x_n\) 都为正数. 并且
+\[
+x_{n+1}-\sqrt{a}=\frac{x_n+\frac{a}{x_n}-2\sqrt{a}}{2}=\frac{(x_n-\sqrt{a})^{2}}{2x_n}\geqslant0
+\]
+取 \(n\geqslant1\)，即得 \(x_{n+1}\geqslant\sqrt{a}\)，所以对任意 \(n\geqslant2\)，都有 \(x_n\geqslant\sqrt{a}\).
+\item 对 \(n\geqslant2\)，由上一问及 \(x_n>0\) 得
+\[
+x_n-x_{n+1}=\frac{x_n-\frac{a}{x_n}}{2}=\frac{x_n^{2}-a}{2x_n}\geqslant0
+\]
+因此 \(x_n\geqslant x_{n+1}\).
+\item 设 \(\displaystyle\lim_{n\to\infty}x_n=L>0\). 在递推式两边取极限，得到
+\[
+L=\frac12\left(L+\frac{a}{L}\right)
+\]
+所以 \(2L^{2}=L^{2}+a\)，即 \(L^{2}=a\). 由于 \(L>0\)，故 \(\displaystyle\lim_{n\to\infty}x_n=L=\sqrt{a}\).
+\end{enumerate}
+\end{solution}
 \end{problem}
 
 \begin{problem}
-在研究并行计算的基本算法时，有以下简单模型问题：用计算机求 \(n\) 个不同的数 \(v_1\)，\(v_2\)，\(\cdots\)，\(v_n\) 的和 \(\sum_{i=1}^{n}v_i=v_1+v_2+\cdots+v_n\)，计算开始前，\(n\) 个数存贮在 \(n\) 台由网络连接的计算机中，每台机器存一个数. 计算开始后，在一个单位时间内，每台机器至多到一台其他机器中读数据，并与自己原有数据相加得到新的数据，各台机器可同时完成上述工作. 为了用尽可能少的单位时间，即可完成计算，方法可用下表表示：
+在研究并行计算的基本算法时，有以下简单模型问题：用计算机求 \(n\) 个不同的数 \(v_1\)，\(v_2\)，\(\cdots\)，\(v_n\) 的和 \(\sum_{i=1}^{n}v_i=v_1+v_2+\cdots+v_n\)，计算开始前，\(n\) 个数存贮在 \(n\) 台由网络连接的计算机中，每台机器存一个数. 计算开始后，在一个单位时间内，每台机器至多到一台其他机器中读数据，并与自己原有数据相加得到新的数据，各台机器可同时完成上述工作. 为了用尽可能少的单位时间，使各台机器都得到 \(\sum_{i=1}^{n}v_i\)，方法可用下表表示：
 
 \begin{center}
 \begingroup
@@ -232,20 +476,26 @@ y=\tan\varphi,
 \cline{3-8}
  & & 被读机号 & 结果 & 被读机号 & 结果 & 被读机号 & 结果 \\
 \hline
-1 & \(v_1\) & & & & & & \\
+1 & \(v_1\) & 2 & \(v_1+v_2\) & 3 & \(\sum_{i=1}^{4}v_i\) & & \\
 \hline
-2 & \(v_2\) & & & & & & \\
+2 & \(v_2\) & 1 & \(v_2+v_1\) & 4 & \(\sum_{i=1}^{4}v_i\) & & \\
 \hline
-3 & \(v_3\) & & & & & & \\
+3 & \(v_3\) & 4 & \(v_3+v_4\) & 1 & \(\sum_{i=1}^{4}v_i\) & & \\
 \hline
-4 & \(v_4\) & & & & & & \\
+4 & \(v_4\) & 3 & \(v_4+v_3\) & 2 & \(\sum_{i=1}^{4}v_i\) & & \\
 \hline
 \end{tabular}
 \endgroup
 \end{center}
 
-\item 当 \(n=128\) 时，要使所有机器都得到 \(\sum_{i=1}^{n}v_i\)，至少需要多少个单位时间可完成计算？（结论不要求证明）
+\item 当 \(n=128\) 时，要使所有机器都得到 \(\sum_{i=1}^{n}v_i\)，至少需要多少个单位时间可完成计算？
 \end{enumerate}
+\begin{solution}
+\begin{enumerate}
+\item 一开始每台机器只含有一个数. 第一单位时间内，机器至多再读入一个数，所以经过一个单位时间后，每台机器至多含有两个初始数，不能得到四个数的总和. 因此至少需要两个单位时间. 上表给出一种两单位时间完成的方法：第一单位时间先将机器两两配对，得到 \(v_1+v_2\) 和 \(v_3+v_4\)；第二单位时间再让每台机器从另一组读取数据，于是四台机器都得到 \(\sum_{i=1}^{4}v_i\). 故最少需要 \(2\) 个单位时间.
+\item 经过一个单位时间，每台机器所含初始数据的种数至多扩大为原来的两倍. 经过 \(k\) 个单位时间后，每台机器至多含有 \(2^{k}\) 个初始数. 要使每台机器都含有 \(128\) 个初始数，必须满足 \(2^{k}\geqslant128=2^{7}\)，所以至少需要 \(7\) 个单位时间. 另一方面，将机器编号为 \(0,1,\ldots,127\)，在第 \(j\) 个单位时间（\(j=0,1,\ldots,6\)）让编号为 \(i\) 的机器读取编号为 \(i\mathbin{\mathsf{xor}}2^{j}\) 的机器中的数据，其中 \(\mathsf{xor}\) 表示按位异或. 每次配对的两台机器互相读取，经过第 \(j+1\) 个单位时间后，每台机器所含数据数翻倍. 七个单位时间后所有机器都得到总和. 因此最少需要 \(7\) 个单位时间.
+\end{enumerate}
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -255,6 +505,44 @@ y=\tan\varphi,
 \item 写出 \(\triangle OBC\) 的重心 \(G\)，外心 \(F\)，垂心 \(H\) 的坐标，并证明 \(G\)，\(F\)，\(H\) 三点共线；
 \item 当直线 \(FH\) 与 \(OB\) 平行时，求顶点 \(C\) 的轨迹.
 \end{enumerate}
+\begin{solution}
+\begin{enumerate}
+\item 因为三角形的三个顶点为 \(O=(0,0)\)、\(B=(1,0)\)、\(C=(b,c)\)，且三点不共线，所以 \(c\ne0\). 由重心坐标公式，
+\[
+G=\left(\frac{b+1}{3},\frac{c}{3}\right)
+\]
+外心 \(F\) 在边 \(OB\) 的垂直平分线 \(x=\frac12\) 上，设 \(F=\left(\frac12,y_F\right)\). 由 \(FO=FC\)，有
+\[
+\left(\frac12\right)^2+y_F^2=\left(b-\frac12\right)^2+(c-y_F)^2
+\]
+整理得 \(2cy_F=b^2+c^2-b\)，所以
+\[
+F=\left(\frac12,\frac{b^2+c^2-b}{2c}\right)
+\]
+因为 \(OB\) 是水平线，过 \(C\) 的高为 \(x=b\). 设垂心为 \(H=(b,y_H)\)，又因 \(OH\perp BC\)，故
+\[
+(b,y_H)\cdot(b-1,c)=0
+\]
+即 \(b(b-1)+cy_H=0\)，从而
+\[
+H=\left(b,\frac{b(1-b)}{c}\right)
+\]
+再计算得
+\[
+3G-2F=\left(b,c-\frac{b^2+c^2-b}{c}\right)=\left(b,\frac{b(1-b)}{c}\right)=H
+\]
+于是 \(H-F=2(G-F)\)，所以 \(G\)、\(F\)、\(H\) 三点共线.
+\item 由于 \(OB\) 平行于 \(x\) 轴，且 \(FH\) 为水平线，必须有
+\[
+\frac{b^2+c^2-b}{2c}=\frac{b(1-b)}{c}
+\]
+化简得 \(c^2=3b(1-b)\)，即
+\[
+\left(b-\frac12\right)^2+\frac{c^2}{3}=\frac14
+\]
+因此顶点 \(C(b,c)\) 的轨迹是椭圆 \(\left(b-\frac12\right)^2+\frac{c^2}{3}=\frac14\). 三角形非退化要求 \(C\ne O,B\)，而在 \(b=\frac12\)、\(c=\pm\frac{\sqrt{3}}{2}\) 时三角形为正三角形，恰有 \(F=H\)，直线 \(FH\) 不确定，所以还应去掉这四个点：\(O=(0,0)\)、\(B=(1,0)\)、\(\left(\frac12,\frac{\sqrt{3}}{2}\right)\)、\(\left(\frac12,-\frac{\sqrt{3}}{2}\right)\).
+\end{enumerate}
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -265,4 +553,38 @@ y=\tan\varphi,
 \item 判断 \(f(x)\) 的奇偶性，并证明你的结论；
 \item 若 \(f(2)=2\)，\(u_n=\frac{f(2^{-n})}{n}\)（\(n\in\N\)），求数列 \(\{u_n\}\) 的前 \(n\) 项的和 \(S_n\).
 \end{enumerate}
+\begin{solution}
+\begin{enumerate}
+\item 在已知关系中取 \(a=b=0\)，得 \(f(0)=0\). 再取 \(a=b=1\)，得 \(f(1)=2f(1)\)，所以 \(f(1)=0\).
+\item 取 \(a=b=-1\)，由 \(f(1)=0\) 得
+\[
+0=f(1)=(-1)f(-1)+(-1)f(-1)=-2f(-1)
+\]
+故 \(f(-1)=0\). 对任意 \(x\in\R\)，取 \(a=-1\)、\(b=x\)，则
+\[
+f(-x)=(-1)f(x)+x f(-1)=-f(x)
+\]
+所以 \(f(x)\) 是奇函数.
+\item 先求正整数次幂处的函数值. 由 \(f(1)=0\) 及 \(f(2)=2\)，对 \(n\geqslant1\) 有
+\[
+f(2^n)=f(2\cdot2^{n-1})=2f(2^{n-1})+2^{n-1}f(2)=2f(2^{n-1})+2^n
+\]
+用归纳法可得 \(f(2^n)=n2^n\)：当 \(n=0\) 时，等式为 \(f(1)=0\)；若 \(f(2^{n-1})=(n-1)2^{n-1}\)，则
+\[
+f(2^n)=2(n-1)2^{n-1}+2^n=n2^n
+\]
+再在已知关系中取 \(a=2^n\)、\(b=2^{-n}\)，利用 \(f(1)=0\)，得到
+\[
+0=f(1)=2^n f(2^{-n})+2^{-n}f(2^n)=2^n f(2^{-n})+n
+\]
+所以 \(f(2^{-n})=-\frac{n}{2^n}\)，从而
+\[
+u_n=\frac{f(2^{-n})}{n}=-\frac{1}{2^n}
+\]
+因此
+\[
+S_n=-\sum_{k=1}^{n}\frac{1}{2^k}=-(1-2^{-n})=2^{-n}-1
+\]
+\end{enumerate}
+\end{solution}
 \end{problem}

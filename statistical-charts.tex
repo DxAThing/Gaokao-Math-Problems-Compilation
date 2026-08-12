@@ -1,0 +1,58 @@
+% Shared statistical-chart templates.  Data and ranges stay source-local;
+% typography, axis-title anchoring, and chart-type defaults stay uniform.
+\pgfplotsset{
+  exam statistical common/.style={
+    scaled ticks=false,
+    every tick label/.append style={font=\normalsize},
+    every axis label/.append style={font=\normalsize},
+    every axis title/.append style={font=\normalsize},
+    every node near coord/.append style={font=\normalsize},
+  },
+  exam statistical histogram/.style={exam statistical common},
+  exam statistical bar/.style={exam statistical common},
+  exam statistical line/.style={exam statistical common},
+  exam statistical scatter/.style={exam statistical common},
+}
+\tikzset{
+  exam statistical xlabel/.style={
+    anchor=north west,
+    inner sep=0pt,
+    font=\normalsize,
+    xshift=4pt,
+    yshift=-1pt,
+  },
+  exam statistical ylabel/.style={
+    anchor=south west,
+    inner sep=0pt,
+    font=\normalsize,
+    xshift=2pt,
+    yshift=2pt,
+  },
+  exam statistical legend label/.style={
+    anchor=west,
+    inner sep=0pt,
+    font=\normalsize,
+    xshift=2pt,
+  },
+}
+\newcommand{\examstatxlabel}[2][]{%
+  \node[exam statistical xlabel,#1] at (current axis.right of origin) {#2};%
+}
+\newcommand{\examstatylabel}[2][]{%
+  \node[exam statistical ylabel,#1] at (current axis.above origin) {#2};%
+}
+% Fixed-size horizontal-axis discontinuity.  Its physical dimensions do not
+% grow with the data range, so every statistical chart gets the same short,
+% shallow mark.  #2/#3 are the centre in axis coordinates.
+\newcommand{\examstatxbreak}[3][]{%
+  \draw[white,line width=3.2pt]
+    ([xshift=-10pt]axis cs:#2,#3) -- ([xshift=10pt]axis cs:#2,#3);%
+  \draw[line width=0.65pt,line cap=round,line join=round,#1]
+    ([xshift=-9pt]axis cs:#2,#3)
+    -- ++(3pt,0pt)
+    -- ++(3pt,1.4pt)
+    -- ++(3pt,-2.8pt)
+    -- ++(3pt,2.8pt)
+    -- ++(3pt,-1.4pt)
+    -- ++(3pt,0pt);%
+}

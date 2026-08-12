@@ -1,39 +1,182 @@
 \chapter{1979年全国卷（文）}
+\section{解答题}
 
 \begin{problem}
 求函数 \(y = 2x^{2} - x + 1\) 的极小值.
 \end{problem}
 
+\begin{solution}
+配方得 \(y=2x^{2}-x+1=2\left(x-\frac{1}{4}\right)^{2}+\frac{7}{8}\). 因为 \(2\left(x-\frac{1}{4}\right)^{2}\geqslant0\)，所以当 \(x=\frac{1}{4}\) 时，\(y\) 取得极小值 \(\frac{7}{8}\).
+\end{solution}
+
 \begin{problem}
 化简：\(\left[(1 + \sin^2\theta)^2 - \cos^4\theta\right]\left[(1 + \cos^2\theta)^2 - \sin^4\theta\right]\).
 \end{problem}
 
+\begin{solution}
+由平方差公式及 \(\sin^2\theta+\cos^2\theta=1\)，有
+\[
+(1+\sin^2\theta)^2-\cos^4\theta=(1+\sin^2\theta-\cos^2\theta)(1+\sin^2\theta+\cos^2\theta)=4\sin^2\theta.
+\]
+同理，
+\[
+(1+\cos^2\theta)^2-\sin^4\theta=(1+\cos^2\theta-\sin^2\theta)(1+\cos^2\theta+\sin^2\theta)=4\cos^2\theta.
+\]
+所以原式 \(=16\sin^2\theta\cos^2\theta=4\sin^2 2\theta\).
+\end{solution}
+
 \begin{problem}
-甲，乙二容器内都盛有酒精，甲有 \(V_{1}\text{公斤}\)，乙有 \(V_{2}\text{公斤}\). 甲中纯酒精与水（重量）之比为 \(m_{1}:n_{1}\)，乙中纯酒精与水之比为 \(m_{2}:n_{2}\). 问将二者混合后所得液体中纯酒精与水之比是多少？
+甲，乙二容器内都盛有酒精，甲有 \(V_{1}\text{ 公斤}\)，乙有 \(V_{2}\text{ 公斤}\). 甲中纯酒精与水（重量）之比为 \(m_{1}:n_{1}\)，乙中纯酒精与水之比为 \(m_{2}:n_{2}\). 问将二者混合后所得液体中纯酒精与水之比是多少？
 \end{problem}
+
+\begin{solution}
+甲中纯酒精的质量为 \(\dfrac{m_{1}V_{1}}{m_{1}+n_{1}}\)，水的质量为 \(\dfrac{n_{1}V_{1}}{m_{1}+n_{1}}\)；乙中纯酒精的质量为 \(\dfrac{m_{2}V_{2}}{m_{2}+n_{2}}\)，水的质量为 \(\dfrac{n_{2}V_{2}}{m_{2}+n_{2}}\).
+
+因此，混合后纯酒精的总质量为
+\[
+M_{\text{酒精}}=\frac{m_{1}V_{1}}{m_{1}+n_{1}}+\frac{m_{2}V_{2}}{m_{2}+n_{2}}.
+\]
+通分得
+\[
+M_{\text{酒精}}=\frac{m_{1}V_{1}(m_{2}+n_{2})+m_{2}V_{2}(m_{1}+n_{1})}{(m_{1}+n_{1})(m_{2}+n_{2})}.
+\]
+同理，混合后水的总质量为
+\[
+M_{\text{水}}=\frac{n_{1}V_{1}(m_{2}+n_{2})+n_{2}V_{2}(m_{1}+n_{1})}{(m_{1}+n_{1})(m_{2}+n_{2})}.
+\]
+两式的公共分母在比值中约去，所以混合后纯酒精与水之比为
+\[
+\bigl[m_{1}V_{1}(m_{2}+n_{2})+m_{2}V_{2}(m_{1}+n_{1})\bigr]:\bigl[n_{1}V_{1}(m_{2}+n_{2})+n_{2}V_{2}(m_{1}+n_{1})\bigr].
+\]
+\end{solution}
 
 \begin{problem}
 叙述并证明勾股定理.
 \end{problem}
 
-\begin{problem}
-外国船只除特许外不得进入离我海岸线 \(D\text{里}\) 以内的区域. 设 \(A\) 及 \(B\) 是我们的观测站，\(A\) 及 \(B\) 间的距离为 \(S\text{里}\)，海岸线是过 \(A\)，\(B\) 的直线，一外国船在 \(P\) 点，在 \(A\) 站测得 \(\angle BAP = \alpha\)，同时在 \(B\) 站测得 \(\angle BAP = \beta\). 问 \(\alpha\) 及 \(\beta\) 满足什么简单的三角函数值不等式，就应当向此未经特许的外国船发出警告，命令退出我海域？
-\end{problem}
+\begin{solution}
+勾股定理：在直角三角形 \(ABC\) 中，若 \(\angle C=90^\circ\)，则斜边 \(AB\) 的平方等于两条直角边 \(AC\)、\(BC\) 的平方和，即 \(AB^2=AC^2+BC^2\).
+
+证明：过直角顶点 \(C\) 作 \(CD\perp AB\)，垂足为 \(D\). 因为 \(\angle ADC=\angle ACB=90^\circ\)，且 \(\angle CAD=\angle CAB\)，所以 \(\triangle ACD\sim\triangle ABC\). 由相似三角形对应边成比例，得 \(\dfrac{AC}{AB}=\dfrac{AD}{AC}\)，即 \(AC^2=AB\cdot AD\).
+
+同理，\(\angle BDC=\angle ACB=90^\circ\)，且 \(\angle CBD=\angle CBA\)，所以 \(\triangle BCD\sim\triangle ABC\). 因而 \(\dfrac{BC}{AB}=\dfrac{BD}{BC}\)，即 \(BC^2=AB\cdot BD\).
+
+将两式相加，并利用 \(AD+BD=AB\)，可得 \(AC^2+BC^2=AB(AD+BD)=AB^2\). 定理得证.
+\end{solution}
 
 \begin{problem}
-设三棱锥 \(V-ABC\) 中，\(\angle AVB = \angle BVC = \angle CVA = 90^\circ\). 求证：\(\triangle ABC\) 是锐角三角形.
+外国船只除特许外不得进入离我海岸线 \(D\text{ 里}\) 以内的区域. 设 \(A\) 及 \(B\) 是我们的观测站，\(A\) 及 \(B\) 间的距离为 \(S\text{ 里}\)，海岸线是过 \(A\)，\(B\) 的直线，一外国船在 \(P\) 点，在 \(A\) 站测得 \(\angle BAP = \alpha\)，同时在 \(B\) 站测得 \(\angle ABP = \beta\). 问 \(\alpha\) 及 \(\beta\) 满足什么简单的三角函数值不等式，就应当向此未经特许的外国船发出警告，命令退出我海域？
 \end{problem}
 
+\begin{solution}
+设船到海岸线 \(AB\) 的距离为 \(d\)，则三角形 \(ABP\) 的面积一方面为 \(\dfrac{1}{2}Sd\)，另一方面由正弦定理为
+
+\[
+\frac{1}{2}AP\cdot BP\sin(\alpha+\beta)=\frac{1}{2}\left(\frac{S\sin\beta}{\sin(\alpha+\beta)}\right)\left(\frac{S\sin\alpha}{\sin(\alpha+\beta)}\right)\sin(\alpha+\beta).
+\]
+
+因此
+\[
+d=\frac{S\sin\alpha\sin\beta}{\sin(\alpha+\beta)}.
+\]
+
+从而
+\[
+\cot\alpha+\cot\beta=\frac{\sin(\alpha+\beta)}{\sin\alpha\sin\beta}=\frac{S}{d}.
+\]
+
+船只进入禁入区域的条件是 \(d\leqslant D\)，所以
+\[
+\cot\alpha+\cot\beta\geqslant\frac{S}{D}.
+\]
+所以，当 \(\cot\alpha+\cot\beta\geqslant\dfrac{S}{D}\) 时，应向该船发出警告.
+\end{solution}
+
 \begin{problem}
-美国的物价从 1939 年的 100 增加到四十年后 1979 年的 500，如果每年物价增长率相同，问每年增长百分之几？（注意：\(x<0.1\)，可用：\(\ln(1 + x)\approx x\)，取 \(\lg 2 = 0.3\)，\(\ln 10 = 2.3\)）
+美国的物价从 \(1939\text{ 年}\) 的 \(100\) 增加到四十年后 \(1979\text{ 年}\) 的 \(500\)，如果每年物价增长率相同，问每年增长百分之几？（注意：\(x<0.1\)，可用：\(\ln(1 + x)\approx x\)，取 \(\lg 2 = 0.3\)，\(\ln 10 = 2.3\)）
 \end{problem}
+
+\begin{solution}
+设每年的物价增长率为 \(x\). 经过 \(40\text{ 年}\) 后，物价由 \(100\) 变为 \(500\)，所以
+\[
+100(1+x)^{40}=500,
+\]
+即 \((1+x)^{40}=5\). 两边取自然对数，得
+\[
+40\ln(1+x)=\ln 5.
+\]
+由 \(\lg 5=\lg 10-\lg 2=1-0.3=0.7\)，以及换底关系 \(\ln 5=\ln 10\cdot\lg 5\)，得 \(\ln 5=2.3\times0.7=1.61\). 因为题设给出 \(\ln(1+x)\approx x\)，所以
+\[
+x\approx\frac{\ln 5}{40}=\frac{1.61}{40}=0.04025.
+\]
+因此每年物价增长约为 \(4\%\).
+\end{solution}
 
 \begin{problem}
 设 \(CEDF\) 是一个已知圆的内接矩形，过 \(D\) 作该圆的切线与 \(CE\) 的延长线相交于点 \(A\)，与 \(CF\) 的延长线相交于点 \(B\). 求证：\(\frac{BF}{AE} = \frac{BC^{3}}{AC^{3}}\).
 
-\bitmapfigure[max width=5.0cm]{img/1979/national_liberal/q4_fig1.png}
+\bitmapfigure[float=inline,width=8.5cm]{img/1979/national_liberal/q4_fig1.png}
 \end{problem}
+
+\begin{solution}
+连接 \(C,D\). 因为 \(\angle CFD=90^\circ\)，所以由圆周角定理的逆定理，\(CD\) 是该圆的直径. 切线在切点 \(D\) 处垂直于半径，故 \(CD\perp AB\).
+
+又因为 \(A,C,E\) 共线，\(B,C,F\) 共线，且矩形的邻边 \(CE\perp CF\)，所以 \(\angle ACB=90^\circ\). 在直角三角形 \(ABC\) 中，\(CD\) 是斜边 \(AB\) 上的高. 由相似三角形 \(\triangle ACD\sim\triangle ABC\) 和 \(\triangle BCD\sim\triangle BAC\)，分别得到
+\[
+AC^2=AD\cdot AB.
+\]
+\[
+BC^2=BD\cdot BA.
+\]
+因此
+\[
+\frac{BD}{AD}=\frac{BC^2}{AC^2}.
+\]
+
+由切线与割线定理，从点 \(A\) 引出的切线和割线给出 \(AD^2=AE\cdot AC\)；从点 \(B\) 引出的切线和割线给出 \(BD^2=BF\cdot BC\). 所以
+\[
+\frac{BF}{AE}=\frac{BD^2/BC}{AD^2/AC}=\left(\frac{BD}{AD}\right)^2\frac{AC}{BC}=\left(\frac{BC^2}{AC^2}\right)^2\frac{AC}{BC}=\frac{BC^3}{AC^3}.
+\]
+命题得证.
+\end{solution}
 
 \begin{problem}
 过原点 \(O\) 作圆 \(x^{2} + y^{2} - 2x - 4y + 4 = 0\) 的任意割线交圆于 \(P_{1}\)，\(P_{2}\) 两点，求 \(P_{1}P_{2}\) 的中点 \(P\) 的轨迹.
 \end{problem}
+
+\begin{solution}
+设割线 \(OP_{1}P_{2}\) 的方向角为 \(\varphi\)，用参数 \(t\) 表示该直线上的点：\(x=t\cos\varphi\)，\(y=t\sin\varphi\). 代入圆方程，得
+\[
+t^2-2t(\cos\varphi+2\sin\varphi)+4=0.
+\]
+这个方程的两个根 \(t_{1}\)、\(t_{2}\) 分别对应 \(P_{1}\)、\(P_{2}\)，由根与系数的关系，\(t_{1}+t_{2}=2(\cos\varphi+2\sin\varphi)\). 因为 \(P\) 是弦 \(P_{1}P_{2}\) 的中点，所以
+\[
+P=\left(\frac{t_{1}+t_{2}}{2}\cos\varphi,\frac{t_{1}+t_{2}}{2}\sin\varphi\right).
+\]
+设 \(P\) 的坐标为 \((x,y)\)，于是
+\[
+x=(\cos\varphi+2\sin\varphi)\cos\varphi.
+\]
+\[
+y=(\cos\varphi+2\sin\varphi)\sin\varphi.
+\]
+利用 \(\cos^2\varphi+\sin^2\varphi=1\)，可得
+\[
+x^2+y^2=(\cos\varphi+2\sin\varphi)^2=x+2y.
+\]
+配方得
+\[
+\left(x-\frac{1}{2}\right)^2+(y-1)^2=\frac{5}{4}.
+\]
+
+原圆的圆心为 \(M(1,2)\)，半径为 \(1\). 由于 \(P_{1}\)、\(P_{2}\) 是两个不同的交点，代入二次方程的判别式可知
+\[
+\bigl(\cos\varphi+2\sin\varphi\bigr)^2>4.
+\]
+将直线方向取向圆的一侧，可令 \(\cos\varphi+2\sin\varphi>2\). 又因为 \(\cos\varphi+2\sin\varphi\leqslant\sqrt{5}\)，所以对应的中点满足
+\[
+2<OP=\cos\varphi+2\sin\varphi\leqslant\sqrt{5}.
+\]
+
+上式所表示的圆以 \(OM\) 为直径；对其中任一点 \(P\)，有 \(MP\perp OP\). 由 \(OM^2=5\) 及勾股定理，\(MP^2=5-OP^2\)，故 \(2<OP\leqslant\sqrt{5}\) 等价于 \(MP<1\). 因此这部分圆弧位于原圆内部，直线 \(OP\) 到圆心 \(M\) 的距离小于原圆半径，必与原圆交于两个点，且垂足 \(P\) 正是这条弦的中点. 所以所求轨迹是圆 \(\left(x-\frac{1}{2}\right)^2+(y-1)^2=\frac{5}{4}\) 在所给圆内的一段弧，两端切线对应的端点不计.
+\end{solution}

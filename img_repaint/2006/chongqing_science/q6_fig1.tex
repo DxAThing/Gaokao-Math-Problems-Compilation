@@ -9,11 +9,11 @@
 % dashed segments: horizontal reference guides at frequency densities 0.03, 0.05, and 0.07.
 % labels: place 频率/组距 above-left of the y-axis, 体重 (kg) to the right of the x-axis arrow, and keep all ticks below/left of their axes.
 \begin{tikzpicture}[baseline, line cap=round, line join=round]
-\begin{axis}[
-    width=15cm,
-    height=4.8cm,
+\begin{axis}[exam statistical histogram,scaled ticks=false,
+    width=16cm,
+    height=9.031cm,
     axis lines=none,
-    xmin=53.1,
+    xmin=53.0,
     xmax=79.2,
     ymin=-0.008,
     ymax=0.09,
@@ -21,15 +21,14 @@
     ticks=none,
 ]
   % Axes and the source figure's broken origin segment.
-  \draw[line width=0.7pt] (axis cs:53.55,0) -- (axis cs:54.05,0);
-  \draw[line width=0.7pt] (axis cs:54.05,0) -- (axis cs:54.15,0.0018) -- (axis cs:54.25,-0.0018) -- (axis cs:54.35,0.0018) -- (axis cs:54.45,-0.0018) -- (axis cs:54.55,0);
-  \draw[-{Stealth[length=2mm]}, line width=0.7pt] (axis cs:54.55,0) -- (axis cs:78.35,0);
-  \draw[-{Stealth[length=2mm]}, line width=0.7pt] (axis cs:53.55,0) -- (axis cs:53.55,0.084);
+  \draw[-{Stealth[length=2mm]}, line width=0.7pt] (axis cs:53.0,0) -- (axis cs:78.35,0);
+  \examstatxbreak[line width=0.7pt]{53.75}{0};
+  \draw[-{Stealth[length=2mm]}, line width=0.7pt] (axis cs:53.0,0) -- (axis cs:53.0,0.084);
 
   % Dashed horizontal density guides from the y-axis to the 62.5 kg bar edge.
-  \draw[dashed, line width=0.55pt] (axis cs:53.55,0.03) -- (axis cs:62.5,0.03);
-  \draw[dashed, line width=0.55pt] (axis cs:53.55,0.05) -- (axis cs:62.5,0.05);
-  \draw[dashed, line width=0.55pt] (axis cs:53.55,0.07) -- (axis cs:62.5,0.07);
+  \draw[dashed, line width=0.55pt] (axis cs:53.0,0.03) -- (axis cs:62.5,0.03);
+  \draw[dashed, line width=0.55pt] (axis cs:53.0,0.05) -- (axis cs:62.5,0.05);
+  \draw[dashed, line width=0.55pt] (axis cs:53.0,0.07) -- (axis cs:62.5,0.07);
 
   % Frequency-density bars, one for each 2 kg interval.
   \addplot[
@@ -53,9 +52,9 @@
   };
 
   % Axis labels, tick marks, and tick labels.
-  \node[anchor=south west, inner sep=0pt, align=center, font=\normalsize] at (axis cs:53.85,0.078) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-  \node[anchor=west, inner sep=0pt, font=\normalsize] at (axis cs:78.0,0.002) {体重（\(\mathrm{kg}\)）};
-  \node[anchor=north east, inner sep=0pt, font=\normalsize] at (axis cs:53.45,-0.001) {O};
+  \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+  \examstatxlabel{体重（\(\mathrm{kg}\)）};
+  \node[anchor=north east, inner sep=0pt, font=\normalsize,yshift=-4pt] at (axis cs:52.9,-0.008000) {O};
 
   \draw[line width=0.45pt] (axis cs:54.5,0) -- (axis cs:54.5,-0.0018);
   \draw[line width=0.45pt] (axis cs:56.5,0) -- (axis cs:56.5,-0.0018);
@@ -69,23 +68,23 @@
   \draw[line width=0.45pt] (axis cs:72.5,0) -- (axis cs:72.5,-0.0018);
   \draw[line width=0.45pt] (axis cs:74.5,0) -- (axis cs:74.5,-0.0018);
   \draw[line width=0.45pt] (axis cs:76.5,0) -- (axis cs:76.5,-0.0018);
-  \node[anchor=north, inner sep=0pt, font=\normalsize] at (axis cs:54.5,-0.0028) {54.5};
-  \node[anchor=north, inner sep=0pt, font=\normalsize] at (axis cs:56.5,-0.0028) {56.5};
-  \node[anchor=north, inner sep=0pt, font=\normalsize] at (axis cs:58.5,-0.0028) {58.5};
-  \node[anchor=north, inner sep=0pt, font=\normalsize] at (axis cs:60.5,-0.0028) {60.5};
-  \node[anchor=north, inner sep=0pt, font=\normalsize] at (axis cs:62.5,-0.0028) {62.5};
-  \node[anchor=north, inner sep=0pt, font=\normalsize] at (axis cs:64.5,-0.0028) {64.5};
-  \node[anchor=north, inner sep=0pt, font=\normalsize] at (axis cs:66.5,-0.0028) {66.5};
-  \node[anchor=north, inner sep=0pt, font=\normalsize] at (axis cs:68.5,-0.0028) {68.5};
-  \node[anchor=north, inner sep=0pt, font=\normalsize] at (axis cs:70.5,-0.0028) {70.5};
-  \node[anchor=north, inner sep=0pt, font=\normalsize] at (axis cs:72.5,-0.0028) {72.5};
-  \node[anchor=north, inner sep=0pt, font=\normalsize] at (axis cs:74.5,-0.0028) {74.5};
-  \node[anchor=north, inner sep=0pt, font=\normalsize] at (axis cs:76.5,-0.0028) {76.5};
-  \draw[line width=0.45pt] (axis cs:53.55,0.03) -- (axis cs:53.40,0.03);
-  \draw[line width=0.45pt] (axis cs:53.55,0.05) -- (axis cs:53.40,0.05);
-  \draw[line width=0.45pt] (axis cs:53.55,0.07) -- (axis cs:53.40,0.07);
-  \frequencyylabel[-4pt]{53.55}{0.03}{0.03}
-  \frequencyylabel[-4pt]{53.55}{0.05}{0.05}
-  \frequencyylabel[-4pt]{53.55}{0.07}{0.07}
+  \node[anchor=north, inner sep=0pt, font=\normalsize,yshift=-2pt] at (axis cs:54.5,-0.001800) {54.5};
+  \node[anchor=north, inner sep=0pt, font=\normalsize,yshift=-2pt] at (axis cs:56.5,-0.001800) {56.5};
+  \node[anchor=north, inner sep=0pt, font=\normalsize,yshift=-2pt] at (axis cs:58.5,-0.001800) {58.5};
+  \node[anchor=north, inner sep=0pt, font=\normalsize,yshift=-2pt] at (axis cs:60.5,-0.001800) {60.5};
+  \node[anchor=north, inner sep=0pt, font=\normalsize,yshift=-2pt] at (axis cs:62.5,-0.001800) {62.5};
+  \node[anchor=north, inner sep=0pt, font=\normalsize,yshift=-2pt] at (axis cs:64.5,-0.001800) {64.5};
+  \node[anchor=north, inner sep=0pt, font=\normalsize,yshift=-2pt] at (axis cs:66.5,-0.001800) {66.5};
+  \node[anchor=north, inner sep=0pt, font=\normalsize,yshift=-2pt] at (axis cs:68.5,-0.001800) {68.5};
+  \node[anchor=north, inner sep=0pt, font=\normalsize,yshift=-2pt] at (axis cs:70.5,-0.001800) {70.5};
+  \node[anchor=north, inner sep=0pt, font=\normalsize,yshift=-2pt] at (axis cs:72.5,-0.001800) {72.5};
+  \node[anchor=north, inner sep=0pt, font=\normalsize,yshift=-2pt] at (axis cs:74.5,-0.001800) {74.5};
+  \node[anchor=north, inner sep=0pt, font=\normalsize,yshift=-2pt] at (axis cs:76.5,-0.001800) {76.5};
+  \draw[line width=0.45pt] (axis cs:53.0,0.03) -- (axis cs:52.85,0.03);
+  \draw[line width=0.45pt] (axis cs:53.0,0.05) -- (axis cs:52.85,0.05);
+  \draw[line width=0.45pt] (axis cs:53.0,0.07) -- (axis cs:52.85,0.07);
+  \frequencyylabel[-4pt]{53.0}{0.03}{0.03}
+  \frequencyylabel[-4pt]{53.0}{0.05}{0.05}
+  \frequencyylabel[-4pt]{53.0}{0.07}{0.07}
 \end{axis}
 \end{tikzpicture}

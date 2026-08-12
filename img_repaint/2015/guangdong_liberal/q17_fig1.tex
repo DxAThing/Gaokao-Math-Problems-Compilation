@@ -13,9 +13,9 @@
 % Dashed segments: horizontal frequency guides terminating at the corresponding
 % bar edge. Labels: 频率/组距, x, and 月平均用电量/度 with all source tick values.
 \begin{tikzpicture}[baseline]
-\begin{axis}[
-    width=10.5cm,
-    height=6.2cm,
+\begin{axis}[exam statistical histogram,
+    width=11.76cm,
+    height=11.665cm,
     axis lines=none,
     clip=false,
     xmin=-12,
@@ -49,49 +49,45 @@
     % Axes and the source x-axis break before the 160-unit group.
     \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:174,0);
     \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,0.0141);
-    \fill[white] (axis cs:3,-0.0018) -- (axis cs:6,0.0007) -- (axis cs:9,-0.0018)
-        -- (axis cs:12,0.0007) -- (axis cs:15,-0.0018) -- cycle;
-    \draw[line width=0.8pt] (axis cs:3,-0.0018) -- (axis cs:6,0.0007)
-        -- (axis cs:9,-0.0018) -- (axis cs:12,0.0007) -- (axis cs:15,-0.0018);
+    \examstatxbreak[line width=0.8pt]{9}{0};
 
-    \node[anchor=south west,inner sep=0pt] at (axis cs:4,0.0130)
-        {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt] at (axis cs:182,-0.0005) {月平均用电量/度};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{月平均用电量/度};
 
     % x-axis tick marks and labels.
     \draw[line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.00045);
-    \node[anchor=north east,inner sep=0pt] at (axis cs:-0.8,-0.0006) {0};
+    \node[anchor=north east,inner sep=0pt,yshift=-4pt] at (axis cs:-0.8,0.000000) {0};
     \draw[line width=0.45pt] (axis cs:20,0) -- (axis cs:20,-0.00045);
-    \node[anchor=north,inner sep=0pt] at (axis cs:20,-0.0006) {160};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:20,-0.000450) {160};
     \draw[line width=0.45pt] (axis cs:40,0) -- (axis cs:40,-0.00045);
-    \node[anchor=north,inner sep=0pt] at (axis cs:40,-0.0006) {180};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:40,-0.000450) {180};
     \draw[line width=0.45pt] (axis cs:60,0) -- (axis cs:60,-0.00045);
-    \node[anchor=north,inner sep=0pt] at (axis cs:60,-0.0006) {200};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:60,-0.000450) {200};
     \draw[line width=0.45pt] (axis cs:80,0) -- (axis cs:80,-0.00045);
-    \node[anchor=north,inner sep=0pt] at (axis cs:80,-0.0006) {220};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:80,-0.000450) {220};
     \draw[line width=0.45pt] (axis cs:100,0) -- (axis cs:100,-0.00045);
-    \node[anchor=north,inner sep=0pt] at (axis cs:100,-0.0006) {240};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:100,-0.000450) {240};
     \draw[line width=0.45pt] (axis cs:120,0) -- (axis cs:120,-0.00045);
-    \node[anchor=north,inner sep=0pt] at (axis cs:120,-0.0006) {260};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:120,-0.000450) {260};
     \draw[line width=0.45pt] (axis cs:140,0) -- (axis cs:140,-0.00045);
-    \node[anchor=north,inner sep=0pt] at (axis cs:140,-0.0006) {280};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:140,-0.000450) {280};
     \draw[line width=0.45pt] (axis cs:160,0) -- (axis cs:160,-0.00045);
-    \node[anchor=north,inner sep=0pt] at (axis cs:160,-0.0006) {300};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:160,-0.000450) {300};
 
     % y-axis guides and labels.
     \draw[line width=0.45pt] (axis cs:0,0.0020) -- (axis cs:-3,0.0020);
-    \node[font=\normalsize,anchor=east,inner sep=0pt,yshift=-2pt] at (axis cs:-4,0.0020) {0.002};
+    \node[font=\normalsize,anchor=east,inner sep=0pt,yshift=-2pt,xshift=-4pt] at (axis cs:-3.000000,0.0020) {0.002};
     \draw[line width=0.45pt] (axis cs:0,0.0025) -- (axis cs:-3,0.0025);
-    \node[font=\normalsize,anchor=east,inner sep=0pt,yshift=2pt] at (axis cs:-4,0.0025) {0.0025};
+    \node[font=\normalsize,anchor=east,inner sep=0pt,yshift=2pt,xshift=-40pt] at (axis cs:-3.000000,0.0025) {0.0025};
     \draw[line width=0.45pt] (axis cs:0,0.0050) -- (axis cs:-3,0.0050);
-    \node[anchor=east,inner sep=0pt] at (axis cs:-4,0.0050) {0.005};
+    \node[anchor=east,inner sep=0pt,xshift=-4pt] at (axis cs:-3.000000,0.0050) {0.005};
     \draw[line width=0.45pt] (axis cs:0,0.0075) -- (axis cs:-3,0.0075);
-    \node[anchor=east,inner sep=0pt] at (axis cs:-4,0.0075) {$x$};
+    \node[anchor=east,inner sep=0pt,xshift=-4pt] at (axis cs:-4,0.0075) {$x$};
     \draw[line width=0.45pt] (axis cs:0,0.0095) -- (axis cs:-3,0.0095);
-    \node[anchor=east,inner sep=0pt] at (axis cs:-4,0.0095) {0.0095};
+    \node[anchor=east,inner sep=0pt,xshift=-4pt] at (axis cs:-3.000000,0.0095) {0.0095};
     \draw[line width=0.45pt] (axis cs:0,0.0110) -- (axis cs:-3,0.0110);
-    \node[anchor=east,inner sep=0pt] at (axis cs:-4,0.0110) {0.011};
+    \node[anchor=east,inner sep=0pt,xshift=-4pt] at (axis cs:-3.000000,0.0110) {0.011};
     \draw[line width=0.45pt] (axis cs:0,0.0125) -- (axis cs:-3,0.0125);
-    \node[anchor=east,inner sep=0pt] at (axis cs:-4,0.0125) {0.0125};
+    \node[anchor=east,inner sep=0pt,xshift=-4pt] at (axis cs:-3.000000,0.0125) {0.0125};
 \end{axis}
 \end{tikzpicture}

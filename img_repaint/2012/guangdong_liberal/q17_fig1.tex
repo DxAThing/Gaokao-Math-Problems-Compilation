@@ -11,7 +11,7 @@
 % dashed segments: horizontal reference lines at the four source-labelled heights.
 % labels: 频率/组距 sits above the y-axis, 成绩 follows the x-axis arrow, and source tick labels stay below/left of axes.
 \begin{tikzpicture}[baseline,font=\normalsize]
-\begin{axis}[
+\begin{axis}[exam statistical histogram,
     width=10.4cm,
     height=5.8cm,
     axis lines=none,
@@ -49,38 +49,33 @@
     % Source x/y axes and the short break before the score bins.
     \draw[->,line width=0.75pt] (axis cs:0,0) -- (axis cs:7,0);
     \draw[->,line width=0.75pt] (axis cs:0,0) -- (axis cs:0,0.050);
-    \fill[white] (axis cs:0.08,-0.0035) -- (axis cs:0.16,0.0012) -- (axis cs:0.24,-0.0035) --
-        (axis cs:0.32,0.0012) -- (axis cs:0.40,-0.0035) -- cycle;
-    \draw[line width=0.75pt]
-        (axis cs:0.08,-0.0035) -- (axis cs:0.16,0.0012) -- (axis cs:0.24,-0.0035) --
-        (axis cs:0.32,0.0012) -- (axis cs:0.40,-0.0035);
+    \examstatxbreak[line width=0.75pt]{0.24000000000000002}{0};
 
-    \node[anchor=south west,inner sep=0pt,font=\normalsize] at (axis cs:0.3,0.0455)
-        {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\normalsize] at (axis cs:6.2,0.0035) {成绩};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{成绩};
 
     % Tick marks and labels reproduced from the source chart.
     \draw[line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.0010);
-    \node[anchor=north east,inner sep=0pt,font=\normalsize] at (axis cs:-0.25,-0.0015) {0};
+    \node[anchor=north east,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:-0.25,0.000000) {0};
     \draw[line width=0.45pt] (axis cs:1,0) -- (axis cs:1,-0.0010);
-    \node[anchor=north east,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:1,-0.0012) {50};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:1,-0.001000) {50};
     \draw[line width=0.45pt] (axis cs:2,0) -- (axis cs:2,-0.0010);
-    \node[anchor=north east,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:2,-0.0012) {60};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:2,-0.001000) {60};
     \draw[line width=0.45pt] (axis cs:3,0) -- (axis cs:3,-0.0010);
-    \node[anchor=north east,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:3,-0.0012) {70};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:3,-0.001000) {70};
     \draw[line width=0.45pt] (axis cs:4,0) -- (axis cs:4,-0.0010);
-    \node[anchor=north east,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:4,-0.0012) {80};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:4,-0.001000) {80};
     \draw[line width=0.45pt] (axis cs:5,0) -- (axis cs:5,-0.0010);
-    \node[anchor=north east,inner sep=0pt,font=\normalsize,rotate=-45] at (axis cs:5,-0.0012) {90};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:5,-0.001000) {90};
     \draw[line width=0.45pt] (axis cs:6,0) -- (axis cs:6,-0.0010);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=5pt] at (axis cs:6,-0.0012) {100};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:6,-0.001000) {100};
     \draw[line width=0.45pt] (axis cs:0,0.005) -- (axis cs:-0.3,0.005);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.4,0.005) {$a$};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.4,0.005) {$a$};
     \draw[line width=0.45pt] (axis cs:0,0.02) -- (axis cs:-0.3,0.02);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.4,0.02) {0.02};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.300000,0.02) {0.02};
     \draw[line width=0.45pt] (axis cs:0,0.03) -- (axis cs:-0.3,0.03);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.4,0.03) {0.03};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.300000,0.03) {0.03};
     \draw[line width=0.45pt] (axis cs:0,0.04) -- (axis cs:-0.3,0.04);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-0.4,0.04) {0.04};
+    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.300000,0.04) {0.04};
 \end{axis}
 \end{tikzpicture}

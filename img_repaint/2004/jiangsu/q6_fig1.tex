@@ -10,7 +10,7 @@
 % Draw guides before white-filled bars so bar interiors and boundaries mask guides as in the source.
 % labels: all axis names and tick labels use \normalsize; y-axis label above arrow; x-axis label right of arrow.
 \begin{tikzpicture}
-\begin{axis}[
+\begin{axis}[exam statistical bar,
     width=8.0cm,
     height=4.8cm,
     xmin=-0.18,
@@ -19,8 +19,6 @@
     ymax=24,
     axis lines=left,
     axis line style={-Stealth,black},
-    xlabel={时间（小时）},
-    xlabel style={at={(axis description cs:1.05,0)},anchor=west,inner sep=0pt,font=\normalsize},
     label style={font=\normalsize},
     tick label style={font=\normalsize},
     xtick={0,0.5,1,1.5,2},
@@ -32,10 +30,11 @@
     clip=false,
     enlargelimits=false,
 ]
+    \examstatxlabel{时间（小时）};
     \node[anchor=south west,inner sep=0pt,font=\normalsize] at (axis description cs:0.02,1.04) {人数（人）};
-    \draw[dashed,black] (axis cs:0,5) -- (axis cs:2.12,5);
-    \draw[dashed,black] (axis cs:0,10) -- (axis cs:1.62,10);
-    \draw[dashed,black] (axis cs:0,20) -- (axis cs:0.62,20);
+    \draw[dashed,black] (axis cs:-0.18,5) -- (axis cs:2.12,5);
+    \draw[dashed,black] (axis cs:-0.18,10) -- (axis cs:1.62,10);
+    \draw[dashed,black] (axis cs:-0.18,20) -- (axis cs:0.62,20);
     \addplot[
         ybar,
         bar width=0.24,

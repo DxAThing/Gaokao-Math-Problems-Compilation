@@ -7,9 +7,9 @@
 % dashed segments: horizontal reference guides at 0.1 and 0.3.
 % labels: two-line y-axis label above-left; x-axis labels below ticks; eyesight label right of the arrow; labels stay clear of bars and axes.
 \begin{tikzpicture}[baseline]
-\begin{axis}[
-    width=11.0cm,
-    height=5.8cm,
+\begin{axis}[exam statistical histogram,scaled ticks=false,
+    width=16cm,
+    height=10.914cm,
     axis lines=none,
     clip=false,
     xmin=4.15,
@@ -42,7 +42,7 @@
 
     \draw[->,line width=0.75pt] (axis cs:4.20,0) -- (axis cs:5.31,0);
     \draw[->,line width=0.75pt] (axis cs:4.20,0) -- (axis cs:4.20,2.83);
-    \draw[line width=0.75pt] (axis cs:4.20,-0.055) -- (axis cs:4.225,-0.015) -- (axis cs:4.25,-0.055) -- (axis cs:4.275,-0.015) -- (axis cs:4.30,-0.055);
+    \examstatxbreak[line width=0.75pt]{4.25}{0};
 
     \draw[line width=0.45pt] (axis cs:4.3,0) -- (axis cs:4.3,-0.035);
     \draw[line width=0.45pt] (axis cs:4.4,0) -- (axis cs:4.4,-0.035);
@@ -54,20 +54,20 @@
     \draw[line width=0.45pt] (axis cs:5.0,0) -- (axis cs:5.0,-0.035);
     \draw[line width=0.45pt] (axis cs:5.1,0) -- (axis cs:5.1,-0.035);
     \draw[line width=0.45pt] (axis cs:5.2,0) -- (axis cs:5.2,-0.035);
-    \node[anchor=north east,inner sep=0pt] at (axis cs:4.20,-0.065) {0};
-    \node[anchor=north,inner sep=0pt] at (axis cs:4.3,-0.065) {4.3};
-    \node[anchor=north,inner sep=0pt] at (axis cs:4.4,-0.065) {4.4};
-    \node[anchor=north,inner sep=0pt] at (axis cs:4.5,-0.065) {4.5};
-    \node[anchor=north,inner sep=0pt] at (axis cs:4.6,-0.065) {4.6};
-    \node[anchor=north,inner sep=0pt] at (axis cs:4.7,-0.065) {4.7};
-    \node[anchor=north,inner sep=0pt] at (axis cs:4.8,-0.065) {4.8};
-    \node[anchor=north,inner sep=0pt] at (axis cs:4.9,-0.065) {4.9};
-    \node[anchor=north,inner sep=0pt] at (axis cs:5.0,-0.065) {5.0};
-    \node[anchor=north,inner sep=0pt] at (axis cs:5.1,-0.065) {5.1};
-    \node[anchor=north,inner sep=0pt] at (axis cs:5.2,-0.065) {5.2};
+    \node[anchor=north east,inner sep=0pt,yshift=-4pt] at (axis cs:4.20,0.000000) {0};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:4.3,-0.035000) {4.3};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:4.4,-0.035000) {4.4};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:4.5,-0.035000) {4.5};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:4.6,-0.035000) {4.6};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:4.7,-0.035000) {4.7};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:4.8,-0.035000) {4.8};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:4.9,-0.035000) {4.9};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:5.0,-0.035000) {5.0};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:5.1,-0.035000) {5.1};
+    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:5.2,-0.035000) {5.2};
     \frequencyylabel[-4pt]{4.20}{0.1}{0.1}
     \frequencyylabel[-4pt]{4.20}{0.3}{0.3}
-    \node[anchor=south west,inner sep=0pt] at (axis cs:4.20,2.84) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt] at (axis cs:5.27,0.08) {视力};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{视力};
 \end{axis}
 \end{tikzpicture}

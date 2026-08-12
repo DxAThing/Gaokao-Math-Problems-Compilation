@@ -16,9 +16,9 @@
 \pgfmathsetmacro{\hSix}{6*\aheight}
 \pgfmathsetmacro{\hSeven}{7*\aheight}
 \begin{tikzpicture}[baseline]
-\begin{axis}[
-    width=8.2cm,
-    height=5.4cm,
+\begin{axis}[exam statistical histogram,scaled ticks=false,
+    width=15.429cm,
+    height=10.161cm,
     axis lines=none,
     clip=false,
     % Display mapping compresses the omitted score interval [0,50) to one
@@ -55,28 +55,25 @@
 
     % The source omits the interval between 0 and 50; one displayed group
     % width (10 display units) is retained and marked by a small zigzag.
-    \draw[line width=0.75pt]
-      (axis cs:2.8,0) -- (axis cs:4.2,0.045) -- (axis cs:5.6,-0.045) --
-      (axis cs:7.0,0.045) -- (axis cs:8.4,-0.045) -- (axis cs:9.8,0);
+    \examstatxbreak[line width=0.75pt]{6.300000000000001}{0};
 
-    \node[anchor=south west,inner sep=0pt,font=\normalsize,align=center]
-      at (axis cs:-2,0.70) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\normalsize] at (axis cs:62,0.12) {成绩（分）};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{成绩（分）};
 
     \draw[line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.065);
-    \node[anchor=north east,inner sep=0pt,font=\normalsize] at (axis cs:-0.2,-0.08) {0};
+    \node[anchor=north east,inner sep=0pt,font=\normalsize,xshift=-4pt,yshift=-4pt] at (axis cs:-0.2,0.000000) {0};
     \draw[line width=0.45pt] (axis cs:10,0) -- (axis cs:10,-0.065);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:10,-0.08) {50};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:10,-0.065000) {50};
     \draw[line width=0.45pt] (axis cs:20,0) -- (axis cs:20,-0.065);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:20,-0.08) {60};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:20,-0.065000) {60};
     \draw[line width=0.45pt] (axis cs:30,0) -- (axis cs:30,-0.065);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:30,-0.08) {70};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:30,-0.065000) {70};
     \draw[line width=0.45pt] (axis cs:40,0) -- (axis cs:40,-0.065);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:40,-0.08) {80};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:40,-0.065000) {80};
     \draw[line width=0.45pt] (axis cs:50,0) -- (axis cs:50,-0.065);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:50,-0.08) {90};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:50,-0.065000) {90};
     \draw[line width=0.45pt] (axis cs:60,0) -- (axis cs:60,-0.065);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:60,-0.08) {100};
+    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:60,-0.065000) {100};
 
     \draw[line width=0.45pt] (axis cs:0,\hTwo) -- (axis cs:-2,\hTwo);
     \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-3,\hTwo) {$2a$};

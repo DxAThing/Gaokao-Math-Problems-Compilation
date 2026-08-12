@@ -6,8 +6,8 @@
 % from the baseline; axes have arrowheads, y ticks are 0.01--0.05, and the
 % labels are “频率/组距” and “人数”.
 \begin{tikzpicture}
-  \begin{axis}[
-    width=5.8cm,height=4.0cm,
+  \begin{axis}[exam statistical histogram,
+    width=10.914cm,height=7.527cm,
     xmin=0,xmax=42,ymin=0,ymax=0.062,
     axis lines=left, axis line style={->},
     xtick={0,5,10,15,20,25,30,35,40},
@@ -15,11 +15,11 @@
     ytick={0.01,0.02,0.03,0.04,0.05}, scaled y ticks=false,
     yticklabel style={/pgf/number format/fixed,/pgf/number format/precision=2},
     tick style={black}, tick label style={font=\normalsize},
-    xlabel={人数}, xlabel style={font=\normalsize,at={(axis description cs:1.06,0.04)},anchor=west},
     ylabel={},
     tick align=outside, clip=false,
   ]
-    \node[font=\normalsize,align=center,anchor=south] at (axis description cs:-0.08,1.08) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{人数};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
     \node[anchor=north east,inner sep=0pt,xshift=-0.5pt,font=\normalsize] at (rel axis cs:0,-0.035) {0};
     \node[anchor=north,inner sep=0pt,font=\normalsize] at (rel axis cs:0.119048,-0.035) {5};
     \node[anchor=north,inner sep=0pt,font=\normalsize] at (rel axis cs:0.238095,-0.035) {10};

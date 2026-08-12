@@ -4,9 +4,9 @@
 % Relations: each rectangle height is the frequency density for its water-level interval;
 % the original chart's tail-frequency question uses these contiguous bins.
 \begin{tikzpicture}
-  \begin{axis}[
+  \begin{axis}[exam statistical histogram,
     width=16.0cm,
-    height=6.2cm,
+    height=11.665cm,
     xmin=29.6,
     xmax=51.8,
     ymin=0,
@@ -14,13 +14,11 @@
     axis lines=left,
     axis line style={-Stealth},
     tick style={black},
-    xlabel={水位（米）},
-    xlabel style={at={(axis description cs:1.02,0)},anchor=west},
     ylabel={},
     xtick={30,31,32,33,48,49,50,51},
     ytick={0},
     yticklabels={0},
-    xticklabel style={font=\normalsize,rotate=-45,anchor=east,xshift=8pt,yshift=-5pt},
+    xticklabel style={font=\normalsize,anchor=north},
     yticklabel style={font=\normalsize},
     extra y ticks={0.5,1,2},
     extra y tick labels={0.5\%,1\%,2\%},
@@ -33,6 +31,7 @@
     enlarge x limits=false,
     clip=false,
   ]
+    \examstatxlabel{水位（米）};
     \addplot[
       ybar interval,
       draw=black,
@@ -44,7 +43,6 @@
       (42,5.5) (43,5) (44,6) (45,5) (46,5.5) (47,4.5)
       (48,2) (49,1) (50,0.5) (51,0)
     };
-    \node[anchor=south west,inner sep=0pt,font=\normalsize]
-      at (axis cs:29.78,7.55) {\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
   \end{axis}
 \end{tikzpicture}

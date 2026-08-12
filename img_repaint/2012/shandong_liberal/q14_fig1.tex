@@ -13,9 +13,9 @@
 % The unused 0--20.5 range is represented by one class-width segment followed by a break.
 % Each dashed guide stops at the class boundary determined by the original bar height.
 \begin{tikzpicture}
-\begin{axis}[
-    width=10cm,
-    height=5.2cm,
+\begin{axis}[exam statistical histogram,
+    width=16cm,
+    height=5.824cm,
     xmin=19.5,
     xmax=28.3,
     ymin=-0.04,
@@ -27,7 +27,7 @@
     xticklabels={20.5,21.5,22.5,23.5,24.5,25.5,26.5},
     x tick label as interval=false,
     ytick={0.10,0.12,0.18,0.22,0.26},
-    yticklabels={,,,,},
+    yticklabels={,},
     scaled x ticks=false,
     scaled y ticks=false,
     tick label style={font=\normalsize},
@@ -55,14 +55,10 @@
     };
 
     % The displayed 0--first-boundary segment has exactly one class width.
-    \node[anchor=north east,inner sep=1pt,font=\normalsize]
-        at (axis cs:19.48,-0.004) {0};
+    \node[anchor=north east,inner sep=1pt,font=\normalsize,yshift=-4pt] at (axis cs:19.48,0.000000) {0};
     \draw[white,line width=1.4pt]
         (axis cs:19.70,0) -- (axis cs:20.30,0);
-    \draw[black,line width=0.45pt]
-        (axis cs:19.70,0) -- (axis cs:19.82,0.010)
-        -- (axis cs:19.94,-0.010) -- (axis cs:20.06,0.010)
-        -- (axis cs:20.18,-0.010) -- (axis cs:20.30,0);
+    \examstatxbreak[black,line width=0.45pt]{20}{0};
 
     % Preserve every ordinate label shown in the source; stagger the dense lower pair.
     \frequencyylabel[-28pt]{19.5}{0.10}{0.10}
@@ -71,9 +67,7 @@
     \frequencyylabel[-4pt]{19.5}{0.22}{0.22}
     \frequencyylabel[-4pt]{19.5}{0.26}{0.26}
 
-    \node[anchor=south west,inner sep=0pt,font=\normalsize]
-        at (axis cs:19.66,0.264) {\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \node[anchor=west,inner sep=0pt,font=\normalsize]
-        at (axis cs:27.05,0.018) {平均气温/\(^{\circ}\mathrm{C}\)};
+    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+    \examstatxlabel{平均气温/\(^{\circ}\mathrm{C}\)};
 \end{axis}
 \end{tikzpicture}
