@@ -10,6 +10,18 @@
     {\(-1 + 3\i\)}
     {\(3 + \i\)}
     {\(-1 + \i\)}
+
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+由复数乘法得
+\[
+(1-\i)(1+2\i)=1+2\i-\i-2\i^2=1+\i+2=3+\i.
+\]
+故选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -20,6 +32,18 @@
     {\(\{1\}\)}
     {\(\{2\}\)}
     {\(\{1, 2, 3, 4\}\)}
+
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+全集中不属于 \(B\) 的元素为 \(1\)，\(5\)，\(6\)，所以 \(\complement_U B=\{1,5,6\}\). 因而
+\[
+A\cap(\complement_U B)=\{1,2\}\cap\{1,5,6\}=\{1\}.
+\]
+故选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -30,6 +54,14 @@
     {充分不必要条件}
     {必要不充分条件}
     {既不充分也不必要条件}
+
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+由 \(q\) 成立可得 \(-1<x<3\)，从而 \(x<3\)，所以 \(q\) 是 \(p\) 成立的充分条件，\(p\) 是 \(q\) 成立的必要条件. 但 \(x=-2\) 时 \(p\) 成立而 \(q\) 不成立，所以 \(p\) 不是 \(q\) 的充分条件. 故选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -40,6 +72,14 @@
     {\(y = \sin x\)}
     {\(y = \ln x\)}
     {\(y = x^{2} + 1\)}
+
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+函数 \(y=\cos x\) 的定义域为 \(\R\)，且 \(\cos(-x)=\cos x\)，所以它是偶函数；又因为 \(\cos\frac{\pi}{2}=0\)，所以它存在零点. 函数 \(y=\sin x\) 满足 \(\sin(-x)=-\sin x\)，是奇函数；函数 \(y=\ln x\) 的定义域为 \((0,+\infty)\)，不是关于原点对称的集合，因而不可能是偶函数；函数 \(y=x^{2}+1\) 虽为偶函数，但始终有 \(x^{2}+1>0\)，不存在零点. 因此选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -54,6 +94,18 @@ y \geqslant 1,
     {\(-2\)}
     {\(-5\)}
     {1}
+
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+由约束条件得 \(x\geqslant y\)，\(x\leqslant4-y\)，且 \(y\geqslant1\). 要使 \(x\) 存在，还需 \(y\leqslant2\). 对固定的 \(y\)，因为 \(z=-2x+y\) 随 \(x\) 减小而增大，所以取 \(x\) 的最小值 \(x=y\) 时，
+\[
+z\leqslant-2y+y=-y\leqslant-1.
+\]
+当 \(x=y=1\) 时，三个约束条件均满足，且 \(z=-1\)，所以最大值为 \(-1\). 故选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -64,6 +116,14 @@ y \geqslant 1,
     {\(\frac{x^2}{4} - y^2 = 1\)}
     {\(x^{2} - \frac{y^{2}}{2} = 1\)}
     {\(\frac{x^2}{2} - y^2 = 1\)}
+
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+双曲线标准方程 \(\frac{x^2}{a^2}-\frac{y^2}{b^2}=1\) 的渐近线方程为 \(y=\pm\frac{b}{a}x\). 选项 A 中 \(a=1\)，\(b=2\)，所以渐近线为 \(y=\pm2x\)，符合题意；其余选项的 \(\frac{b}{a}\) 均不等于 \(2\). 故选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -72,20 +132,64 @@ y \geqslant 1,
 \texfigure[max width=0.52\linewidth]{img_repaint/2015/anhui_liberal/q7_fig1.tex}
 
 \choices
-    {3}
-    {4}
-    {5}
-    {6}
+    {\(3\)}
+    {\(4\)}
+    {\(5\)}
+    {\(6\)}
+
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+初始时 \(a=1\)，\(n=1\). 第一次判断中
+\(|1-1.414|=0.414\geqslant0.005\)，所以更新为
+\[
+a=1+\frac{1}{1+1}=1.5.
+\]
+此时 \(n=2\).
+第二次判断中 \(|1.5-1.414|=0.086\geqslant0.005\)，所以更新为
+\[
+a=1+\frac{1}{1+1.5}=1.4.
+\]
+此时 \(n=3\).
+第三次判断中 \(|1.4-1.414|=0.014\geqslant0.005\)，所以更新为
+\[
+a=1+\frac{1}{1+1.4}=1+\frac{5}{12}=\frac{17}{12}.
+\]
+此时 \(n=4\).
+此时
+\[
+\left|\frac{17}{12}-1.414\right|=\frac{1}{375}<0.005,
+\]
+程序输出 \(n=4\)，故选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
 直线 \(3x + 4y = b\) 与圆 \(x^{2} + y^{2} - 2x - 2y + 1 = 0\) 相切，则 \(b\) 的值是（\quad）
 
 \choices
-    {\(-2\) 或 12}
-    {2 或 \(-12\)}
+    {\(-2\) 或 \(12\)}
+    {\(2\) 或 \(-12\)}
     {\(-2\) 或 \(-12\)}
-    {2 或 12}
+    {\(2\) 或 \(12\)}
+
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+将圆的方程配方得
+\[
+(x-1)^2+(y-1)^2=1,
+\]
+所以圆心为 \((1,1)\)，半径为 \(1\). 直线 \(3x+4y=b\) 与圆相切，当且仅当圆心到直线的距离等于半径，即
+\[
+\frac{|3+4-b|}{\sqrt{3^2+4^2}}=1.
+\]
+因此 \(|7-b|=5\)，解得 \(b=2\) 或 \(b=12\)，故选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -98,6 +202,29 @@ y \geqslant 1,
     {\(2 + \sqrt{3}\)}
     {\(1 + 2\sqrt{2}\)}
     {\(2\sqrt{2}\)}
+
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+由三视图可将该四面体还原为坐标形式
+\(A=(-1,0,0)\)，\(B=(1,0,0)\)，\(C=(0,1,0)\)，\(P=(0,0,1)\). 这个坐标模型的三个正投影正好分别给出题图中的正视图、侧视图和俯视图.
+
+在三角形 \(ABC\) 和 \(PAB\) 中，底边均为 \(2\)，对应高均为 \(1\)，所以
+\[
+S_{ABC}=S_{PAB}=\frac12\times2\times1=1.
+\]
+又 \(PA=PC=AC=\sqrt2\)，\(PB=PC=BC=\sqrt2\)，所以三角形 \(PAC\) 和 \(PBC\) 均为边长 \(\sqrt2\) 的等边三角形，从而
+\[
+S_{PAC}=S_{PBC}=\frac{\sqrt3}{4}(\sqrt2)^2=\frac{\sqrt3}{2}.
+\]
+因此该四面体的表面积为
+\[
+S=1+1+\frac{\sqrt3}{2}+\frac{\sqrt3}{2}=2+\sqrt3.
+\]
+故选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -106,40 +233,136 @@ y \geqslant 1,
 \bitmapfigure[max width=0.42\linewidth]{img/2015/anhui_liberal/q10_fig1.png}
 
 \choices
-    {\(a > 0, b < 0, c > 0, d > 0\)}
+    {\(a > 0\)，\(b < 0\)，\(c > 0\)，\(d > 0\)}
     {\(a > 0\)，\(b < 0\)，\(c < 0\)，\(d > 0\)}
     {\(a < 0\)，\(b < 0\)，\(c > 0\)，\(d > 0\)}
     {\(a > 0\)，\(b > 0\)，\(c > 0\)，\(d < 0\)}
+
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+由图象右端向上可知三次项系数 \(a>0\). 设函数的两个极值点横坐标为 \(x_1\)，\(x_2\)，由图可知 \(0<x_1<x_2\). 因为
+\(f'(x)=3ax^2+2bx+c\)，且 \(x_1\)，\(x_2\) 是方程 \(f'(x)=0\) 的两个根，所以
+\[
+x_1+x_2=-\frac{2b}{3a}>0,
+\]
+结合 \(a>0\) 得 \(b<0\). 图象在 \(x=0\) 处递增，所以 \(c=f'(0)>0\)；图象与 \(y\) 轴交点在 \(x\) 轴上方，所以 \(d=f(0)>0\). 因此成立的是 \(a>0\)，\(b<0\)，\(c>0\)，\(d>0\)，故选 A.
+\end{solution}
 \end{problem}
 
 \section{填空题}
 \begin{problem}
-计算： \( \lg\frac{5}{2}+2\lg2-\left(\frac{1}{2}\right)^{-1}=\fillinblank{} \).
+计算： \( \lg\frac{5}{2}+2\lg2-\left(\frac{1}{2}\right)^{-1}=\)\fillinblank{}.
+
+\begin{answer}
+\(-1\)
+\end{answer}
+
+\begin{solution}
+利用对数的运算性质，
+\[
+\lg\frac52+2\lg2=\lg\frac52+\lg4=\lg10=1.
+\]
+又 \(\left(\frac12\right)^{-1}=2\)，所以原式的值为 \(1-2=-1\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
-在 \(\triangle ABC\) 中，\(AB = \sqrt{6}\)，\(\angle A = 75^{\circ}\)，\(\angle B = 45^{\circ}\)，则 \(AC =\fillinblank{}\).
+在 \(\triangle ABC\) 中，\(AB = \sqrt{6}\)，\(\angle A = 75^{\circ}\)，\(\angle B = 45^{\circ}\)，则 \(AC =\)\fillinblank{}.
+
+\begin{answer}
+\(2\)
+\end{answer}
+
+\begin{solution}
+由三角形内角和得 \(\angle C=180^\circ-75^\circ-45^\circ=60^\circ\). 根据正弦定理，
+\[
+\frac{AC}{\sin45^\circ}=\frac{AB}{\sin60^\circ},
+\]
+所以
+\[
+AC=\sqrt6\cdot\frac{\sin45^\circ}{\sin60^\circ}=\sqrt6\cdot\frac{\sqrt2/2}{\sqrt3/2}=2.
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
-已知数列 \( \{a_{n}\} \) 中， \(a_{1}=1\)，\(a_{n}=a_{n-1}+\frac{1}{2}\left(n\geqslant2\right)\)，则数列 \( \{a_{n}\} \) 的前 9 项和等于\fillinblank{}.
+已知数列 \( \{a_{n}\} \) 中， \(a_{1}=1\)，\(a_{n}=a_{n-1}+\frac{1}{2}\left(n\geqslant2\right)\)，则数列 \( \{a_{n}\} \) 的前 \(9\) 项和等于\fillinblank{}.
+
+\begin{answer}
+\(27\)
+\end{answer}
+
+\begin{solution}
+由递推式可知这是首项为 \(1\)，公差为 \(\frac12\) 的等差数列，因此
+\[
+a_n=1+(n-1)\cdot\frac12=\frac{n+1}{2}.
+\]
+于是 \(a_9=5\)，前 \(9\) 项和为
+\[
+S_9=\frac{9(a_1+a_9)}{2}=\frac{9(1+5)}{2}=27.
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
 在平面直角坐标系 \(xOy\) 中，若直线 \(y = 2a\) 与函数 \(y = |x - a| - 1\) 的图象只有一个交点，则 \(a\) 的值为\fillinblank{}.
+
+\begin{answer}
+\(-\frac{1}{2}\)
+\end{answer}
+
+\begin{solution}
+联立两图象的方程得
+\[
+2a=|x-a|-1,
+\]
+即 \(|x-a|=2a+1\). 当 \(2a+1>0\) 时有两个交点，当 \(2a+1<0\) 时无交点，只有 \(2a+1=0\) 时有唯一交点. 因此
+\[
+a=-\frac12.
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
-\(\triangle ABC\) 是边长为 2 的等边三角形，已知向量 \(a\)，\(b\) 满足 \(\overrightarrow{AB} = 2a\)，\(\overrightarrow{AC} = 2a + b\). 则下列结论中正确的是\fillinblank{}. （写出所有正确结论的序号）
+\(\triangle ABC\) 是边长为 2 的等边三角形，已知向量 \(\bs{a}\)，\(\bs{b}\) 满足 \(\overrightarrow{AB} = 2\bs{a}\)，\(\overrightarrow{AC} = 2\bs{a} + \bs{b}\). 则下列结论中正确的是\fillinblank{}. （写出所有正确结论的序号）
 
 \begin{circlelist}
-\item \(a\) 为单位向量；
-\item \(b\) 为单位向量；
-\item \(a \perp b\)；
-\item \(b \parallel BC\)；
-\item \( (4a + b) \perp BC\).
+\item \(\bs{a}\) 为单位向量；
+\item \(\bs{b}\) 为单位向量；
+\item \(\bs{a} \perp \bs{b}\)；
+\item \(\bs{b} \parallel \overrightarrow{BC}\)；
+\item \(\left(4\bs{a} + \bs{b}\right) \perp \overrightarrow{BC}\).
 \end{circlelist}
+
+\begin{answer}
+\(\circled{1}\circled{4}\circled{5}\)
+\end{answer}
+
+\begin{solution}
+因为三角形 \(ABC\) 为边长 \(2\) 的等边三角形，所以 \(|\overrightarrow{AB}|=|\overrightarrow{AC}|=2\). 由 \(\overrightarrow{AB}=2\bs a\) 得 \(|\bs a|=1\)，结论\(\circled{1}\)正确.
+
+由
+\[
+\overrightarrow{BC}=\overrightarrow{AC}-\overrightarrow{AB}=\bs b
+\]
+可知 \(|\bs b|=|\overrightarrow{BC}|=2\)，所以结论\(\circled{2}\)错误，且 \(\bs b\parallel\overrightarrow{BC}\)，结论\(\circled{4}\)正确.
+
+又 \(|2\bs a+\bs b|=|\overrightarrow{AC}|=2\)，于是
+\[
+|2\bs a+\bs b|^2=4|\bs a|^2+4\bs a\cdot\bs b+|\bs b|^2=4.
+\]
+代入 \(|\bs a|=1\)，\(|\bs b|=2\)，得 \(\bs a\cdot\bs b=-1\)，所以结论\(\circled{3}\)错误. 最后，
+\[
+(4\bs a+\bs b)\cdot\overrightarrow{BC}=(4\bs a+\bs b)\cdot\bs b=4(-1)+2^2=0,
+\]
+故结论\(\circled{5}\)正确. 所有正确结论的序号为\(\circled{1}\)\(\circled{4}\)\(\circled{5}\).
+\end{solution}
 \end{problem}
+
+\section{解答题}
 
 \begin{problem}
 已知函数 \( f(x) = (\sin x + \cos x)^2 + \cos 2x \).
@@ -149,17 +372,45 @@ y \geqslant 1,
 \end{enumerate}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item 由 \((\sin x+\cos x)^2=1+\sin 2x\)，得
+\[
+f(x)=1+\sin 2x+\cos 2x=1+\sqrt{2}\sin\left(2x+\frac{\pi}{4}\right).
+\]
+函数 \(\sin\left(2x+\frac{\pi}{4}\right)\) 的最小正周期为 \(\pi\)，故 \(f(x)\) 的最小正周期为 \(T=\pi\).
+\item 当 \(x\in\left[0,\frac{\pi}{2}\right]\) 时，\(2x+\frac{\pi}{4}\in\left[\frac{\pi}{4},\frac{5\pi}{4}\right]\). 在此区间上，正弦函数的最大值为 \(1\)，最小值为 \(-\frac{\sqrt{2}}{2}\)，因此 \(f(x)\) 的最大值为 \(1+\sqrt{2}\)，最小值为 \(1+\sqrt{2}\left(-\frac{\sqrt{2}}{2}\right)=0\).
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
-某企业为了了解下属某部门对本企业职工的服务情况，随机访问 50 名职工，根据这 50 名职工对该部门的评分，绘制频率分布直方图（如图所示），其中样本数据分组区间为：\([40, 50)\)，\([50, 60)\)，…，\([80, 90)\)，\([90, 100]\).
+某企业为了了解下属某部门对本企业职工的服务情况，随机访问 \(50\text{ 名}\) 职工，根据这 \(50\text{ 名}\) 职工对该部门的评分，绘制频率分布直方图（如图所示），其中样本数据分组区间为：\(\left[40,50\right)\)，\(\left[50,60\right)\)，…，\(\left[80,90\right)\)，\(\left[90,100\right]\).
 
 \begin{enumerate}
-\item 求频率分布直方图中 a 的值；
-\item 估计该企业的职工对该部门评分不低于 80 的概率；
-\item 从评分在 \([40,60)\) 的受访职工中，随机抽取 2 人，求此 2 人评分都在 \([40,50)\) 的概率.
+\item 求频率分布直方图中 \(a\) 的值；
+\item 估计该企业的职工对该部门评分不低于 \(80\) 的概率；
+\item 从评分在 \(\left[40,60\right)\) 的受访职工中，随机抽取 \(2\text{ 人}\)，求此 \(2\text{ 人}\) 评分都在 \(\left[40,50\right)\) 的概率.
 \end{enumerate}
 
-\texfigure[max width=0.42\linewidth]{img_repaint/2015/anhui_liberal/q17_fig1.tex}
+\texfigure[float=inline,max width=0.42\linewidth]{img_repaint/2015/anhui_liberal/q17_fig1.tex}
 \end{problem}
+
+\FloatBarrier
+
+\begin{solution}
+\begin{enumerate}
+\item 频率分布直方图中各小矩形的面积之和为 \(1\)，每组组距为 \(10\)，所以
+\[
+10\left(0.004+a+0.022+0.028+0.022+0.018\right)=1,
+\]
+解得 \(a=0.006\).
+\item 评分不低于 \(80\) 的频率为 \(10\times0.022+10\times0.018=0.4\)，所以估计该企业职工评分不低于 \(80\) 的概率为 \(0.4\).
+\item 评分在 \(\left[40,50\right)\) 内的受访职工人数为 \(50\times10\times0.004=2\)，评分在 \(\left[50,60\right)\) 内的受访职工人数为 \(50\times10\times0.006=3\). 因而评分在 \(\left[40,60\right)\) 内的受访职工共有 \(5\) 人，从中随机抽取 \(2\) 人，所有可能的抽法有 \(\mathrm C_5^2\) 种，其中 \(2\) 人评分都在 \(\left[40,50\right)\) 内的抽法有 \(\mathrm C_2^2\) 种，所以所求概率为
+\[
+P=\frac{\mathrm C_2^2}{\mathrm C_5^2}=\frac{1}{10}.
+\]
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 已知数列 \(\{a_{n}\}\) 是递增的等比数列，且 \(a_{1} + a_{4} = 9\)，\(a_{2}a_{3} = 8\).
@@ -169,21 +420,82 @@ y \geqslant 1,
 \end{enumerate}
 \end{problem}
 
-\section{解答题}
-\begin{problem}
-如图，三棱锥 \(P - ABC\) 中，\(PA \perp\) 平面 \(ABC\)，\(PA = 1\)，\(AB = 1\)，\(AC = 2\)，\(\angle BAC = 60^\circ\).
+\begin{solution}
 \begin{enumerate}
-\item 求三棱锥 P-ABC 的体积；
+\item 设等比数列的公比为 \(q\)，则 \(a_4=a_1q^3\)，且 \(a_2a_3=a_1^2q^3=a_1a_4=8\). 又因为数列递增且 \(a_1+a_4=9>0\)，所以 \(a_1>0\)，从而 \(a_1<a_4\). 因此 \(a_1\) 和 \(a_4\) 是方程 \(t^2-9t+8=0\) 的两个根，得 \(a_1=1\)，\(a_4=8\). 于是 \(q^3=\frac{a_4}{a_1}=8\)，\(q=2\)，所以数列的通项公式为 \(a_n=2^{n-1}\).
+\item 由上式 \(a_n=2^{n-1}\)，得 \(S_n=1+2+\cdots+2^{n-1}=2^n-1\). 又 \(S_{n+1}-S_n=a_{n+1}\)，所以
+\[
+b_n=\frac{a_{n+1}}{S_nS_{n+1}}=\frac{S_{n+1}-S_n}{S_nS_{n+1}}=\frac{1}{S_n}-\frac{1}{S_{n+1}}.
+\]
+故
+\[
+T_n=\sum_{k=1}^{n}b_k=\left(\frac{1}{S_1}-\frac{1}{S_2}\right)+\cdots+\left(\frac{1}{S_n}-\frac{1}{S_{n+1}}\right)=1-\frac{1}{S_{n+1}}=1-\frac{1}{2^{n+1}-1}.
+\]
+\end{enumerate}
+\end{solution}
+
+\begin{problem}
+如图，三棱锥 \(P-ABC\) 中，\(PA \perp\) 平面 \(ABC\)，\(PA = 1\)，\(AB = 1\)，\(AC = 2\)，\(\angle BAC = 60^\circ\).
+\begin{enumerate}
+\item 求三棱锥 \(P-ABC\) 的体积；
 \item 证明：在线段 \(PC\) 上存在点 \(M\)，使得 \(AC \perp BM\)，并求 \(\frac{PM}{MC}\) 的值.
 \end{enumerate}
 
-\bitmapfigure[max width=0.42\linewidth]{img/2015/anhui_liberal/q19_fig1.png}
+\bitmapfigure[float=inline,max width=0.42\linewidth]{img/2015/anhui_liberal/q19_fig1.png}
 \end{problem}
 
+\FloatBarrier
+
+\begin{solution}
+\begin{enumerate}
+\item 底面三角形 \(ABC\) 的面积为 \(S_{\triangle ABC}=\frac{1}{2}\times AB\times AC\times\sin\angle BAC=\frac{1}{2}\times1\times2\times\sin60^\circ=\frac{\sqrt{3}}{2}\). 又 \(PA\perp\) 平面 \(ABC\)，所以三棱锥的高为 \(PA=1\)，从而
+\[
+V=\frac{1}{3}S_{\triangle ABC}\cdot PA=\frac{1}{3}\times\frac{\sqrt{3}}{2}\times1=\frac{\sqrt{3}}{6}.
+\]
+\item 建立空间直角坐标系，使 \(A\) 为原点，\(AC\) 所在直线为 \(x\) 轴，且 \(P\) 在 \(z\) 轴正半轴上. 由已知可取 \(C=(2,0,0)\)，\(P=(0,0,1)\)，并由 \(AB=1\)、\(\angle BAC=60^\circ\) 得 \(B=\left(\frac{1}{2},\frac{\sqrt{3}}{2},0\right)\). 设 \(M\) 在线段 \(PC\) 上，令 \(t=\frac{PM}{PC}\)，则 \(0\leq t\leq1\)，且
+\[
+M=P+t(C-P)=(2t,0,1-t).
+\]
+于是 \(\overrightarrow{AC}=(2,0,0)\)，\(\overrightarrow{BM}=\left(2t-\frac{1}{2},-\frac{\sqrt{3}}{2},1-t\right)\). 因此
+\[
+\overrightarrow{AC}\cdot\overrightarrow{BM}=2\left(2t-\frac{1}{2}\right).
+\]
+取 \(t=\frac{1}{4}\) 时，\(M\) 在线段 \(PC\) 上且 \(\overrightarrow{AC}\cdot\overrightarrow{BM}=0\)，所以 \(AC\perp BM\). 此时
+\[
+\frac{PM}{MC}=\frac{t}{1-t}=\frac{1/4}{3/4}=\frac{1}{3}.
+\]
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
-设椭圆 \(E\) 的方程为 \(\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\)（\(a > b > 0\)），点 \(O\) 为坐标原点，点 \(A\) 的坐标为 \((a, 0)\)，点 \(B\) 的坐标为 \((0, b)\)，点 \(M\) 在线段 \(AB\) 上，满足 \(|BM| = 2|MA|\)，直线 \(OM\) 的斜率为 \(\frac{\sqrt{5}}{10}\). （1） 求 \(E\) 的离心率 \(e\)；
-（2） 设点 \(C\) 的坐标为 \((0, -b)\)，\(N\) 为线段 \(AC\) 的中点，证明： \(MN \perp AB\).
+设椭圆 \(E\) 的方程为 \(\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\)（\(a > b > 0\)），点 \(O\) 为坐标原点，点 \(A\) 的坐标为 \((a, 0)\)，点 \(B\) 的坐标为 \((0, b)\)，点 \(M\) 在线段 \(AB\) 上，满足 \(|BM| = 2|MA|\)，直线 \(OM\) 的斜率为 \(\frac{\sqrt{5}}{10}\).
+\begin{enumerate}
+\item 求 \(E\) 的离心率 \(e\)；
+\item 设点 \(C\) 的坐标为 \((0, -b)\)，\(N\) 为线段 \(AC\) 的中点，证明：\(MN \perp AB\).
+\end{enumerate}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item 由 \(|BM|=2|MA|\) 及 \(M\) 在线段 \(AB\) 上，得 \(AM:MB=1:2\)，所以 \(M=A+\frac{1}{3}(B-A)=\left(\frac{2a}{3},\frac{b}{3}\right)\). 因而直线 \(OM\) 的斜率为 \(\frac{b/3}{2a/3}=\frac{b}{2a}\)，由已知得 \(\frac{b}{2a}=\frac{\sqrt{5}}{10}\)，即 \(\frac{b}{a}=\frac{\sqrt{5}}{5}\). 椭圆的半焦距满足 \(c^2=a^2-b^2\)，所以
+\[
+e=\frac{c}{a}=\frac{\sqrt{a^2-b^2}}{a}=\sqrt{1-\frac{b^2}{a^2}}=\sqrt{1-\frac{1}{5}}=\frac{2\sqrt{5}}{5}.
+\]
+\item 由 \(C=(0,-b)\) 及 \(N\) 为线段 \(AC\) 的中点，得 \(N=\left(\frac{a}{2},-\frac{b}{2}\right)\). 因此
+\[
+\overrightarrow{MN}=N-M=\left(-\frac{a}{6},-\frac{5b}{6}\right).
+\]
+又
+\[
+\overrightarrow{AB}=B-A=(-a,b).
+\]
+又由上问 \(b^2=\frac{a^2}{5}\)，故
+\[
+\overrightarrow{MN}\cdot\overrightarrow{AB}=\frac{a^2}{6}-\frac{5b^2}{6}=\frac{a^2-5b^2}{6}=0.
+\]
+所以 \(MN\perp AB\).
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 已知函数 \(f(x) = \frac{ax}{(x + r)^2}\)（\(a > 0, r > 0\)）.
@@ -192,3 +504,18 @@ y \geqslant 1,
 \item 若 \(\frac{a}{r} = 400\)，求 \(f(x)\) 在 \((0, +\infty)\) 内的极值.
 \end{enumerate}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item 因为分母不能为 \(0\)，所以 \(f(x)\) 的定义域为 \((-\infty,-r)\cup(-r,+\infty)\). 求导得
+\[
+f'(x)=\frac{a(r-x)}{(x+r)^3}.
+\]
+当 \(x\in(-\infty,-r)\) 时，\(r-x>0\) 且 \((x+r)^3<0\)，故 \(f'(x)<0\)，函数单调递减；当 \(x\in(-r,r)\) 时，\(r-x>0\) 且 \((x+r)^3>0\)，故 \(f'(x)>0\)，函数单调递增；当 \(x\in(r,+\infty)\) 时，\(r-x<0\) 且 \((x+r)^3>0\)，故 \(f'(x)<0\)，函数单调递减.
+\item 在 \((0,+\infty)\) 内，当 \(0<x<r\) 时 \(f'(x)>0\)，当 \(x>r\) 时 \(f'(x)<0\)，所以 \(f(x)\) 在 \(x=r\) 处取得极大值，且
+\[
+f(r)=\frac{ar}{(2r)^2}=\frac{a}{4r}=\frac{1}{4}\frac{a}{r}=100.
+\]
+由于 \(x\to0^+\) 或 \(x\to+\infty\) 时 \(f(x)\to0\)，而 \(0\notin(0,+\infty)\)，所以该区间内无最小值.
+\end{enumerate}
+\end{solution}

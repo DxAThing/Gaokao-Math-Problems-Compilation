@@ -1,7 +1,7 @@
 \chapter{2005年天津卷（文）}
 \section{单选题}
 \begin{problem}
-设集合 \(A = \{x \mid 0 \leqslant x < 3 \text{ 且 } x \in \mathbf{N}\}\) 的真子集的个数是（\(\quad\)）
+设集合 \(A = \{x \mid 0 \leqslant x < 3 \text{ 且 } x \in \N\}\) 的真子集的个数是（\(\quad\)）
 
 \choices
     {\(16\)}
@@ -9,6 +9,14 @@
     {\(7\)}
     {\(4\)}
 \end{problem}
+
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+由 \(0\leqslant x<3\) 且 \(x\in\N\)，得 \(A=\{0,1,2\}\)，所以集合 \(A\) 有 \(3\) 个元素. 含有 \(3\) 个元素的集合共有 \(2^3=8\) 个子集，除去集合 \(A\) 本身后，真子集的个数为 \(8-1=7\)，故选 C.
+\end{solution}
 
 \begin{problem}
 已知 \(\log_{\frac{1}{2}} b < \log_{\frac{1}{2}} a < \log_{\frac{1}{2}} c\)，则（\(\quad\)）
@@ -20,15 +28,45 @@
     {\(2^{c} > 2^{a} > 2^{b}\)}
 \end{problem}
 
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+因为对数函数 \(y=\log_{\frac{1}{2}}x\) 在正数范围内单调递减，所以
+\[
+b>a>c.
+\]
+又因为指数函数 \(y=2^x\) 单调递增，故
+\[
+2^b>2^a>2^c.
+\]
+因此选 A.
+\end{solution}
+
 \begin{problem}
 某人射击一次击中的概率为 \(0.6\)，经过 \(3\) 次射击，此人至少有两次击中目标的概率为（\(\quad\)）
 
 \choices
-    {\(\frac{51}{125}\)}
+    {\(\frac{81}{125}\)}
     {\(\frac{54}{125}\)}
     {\(\frac{36}{125}\)}
     {\(\frac{27}{125}\)}
 \end{problem}
+
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+设每次射击击中的概率为 \(p=0.6=\frac{3}{5}\)，未击中的概率为 \(1-p=\frac{2}{5}\). 至少两次击中包括恰有两次击中和三次都击中两种互斥情形，因此所求概率为
+\[
+\mathrm C_3^2\left(\frac{3}{5}\right)^2\frac{2}{5}+\left(\frac{3}{5}\right)^3
+=\frac{54}{125}+\frac{27}{125}
+=\frac{81}{125}.
+\]
+故选 A.
+\end{solution}
 
 \begin{problem}
 将直线 \(2x - y + \lambda = 0\) 沿 \(x\) 轴向左平移 \(1\) 个单位. 所得直线与圆 \(x^{2} + y^{2} + 2x - 4y = 0\) 相切，则实数 \(\lambda\) 的值为（\(\quad\)）
@@ -40,6 +78,26 @@
     {\(1\) 或 \(11\)}
 \end{problem}
 
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+直线 \(2x-y+\lambda=0\) 向左平移 \(1\) 个单位后，所得直线方程为
+\[
+2(x+1)-y+\lambda=0,
+\]
+即 \(2x-y+\lambda+2=0\). 圆的方程可化为
+\[
+(x+1)^2+(y-2)^2=5,
+\]
+所以圆心为 \((-1,2)\)，半径为 \(\sqrt{5}\). 由直线与圆相切，得
+\[
+\frac{|2(-1)-2+\lambda+2|}{\sqrt{2^2+(-1)^2}}=\sqrt{5},
+\]
+即 \(|\lambda-2|=5\)，从而 \(\lambda=-3\) 或 \(\lambda=7\)，故选 A.
+\end{solution}
+
 \begin{problem}
 设 \(\alpha\)，\(\beta\)，\(\gamma\) 为平面，\(m\)，\(n\)，\(l\) 为直线. 则 \(m \perp \beta\) 的一个充分条件是（\(\quad\)）
 
@@ -50,6 +108,16 @@
     {\(n \perp \alpha\)，\(n \perp \beta\)，\(m \perp \alpha\)}
 \end{problem}
 
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+选项 D 中，直线 \(m\)，\(n\) 都垂直于平面 \(\alpha\)，所以 \(m\parallel n\). 又因为 \(n\perp\beta\)，由平行线的垂直性质得 \(m\perp\beta\).
+
+选项 A 只说明 \(m\perp l\)，没有说明 \(m\) 与平面 \(\alpha\) 的位置关系；选项 B、C 中的条件也不能推出 \(m\) 的方向与平面 \(\beta\) 的法向量平行. 因此充分条件是 \(D\)，故选 D.
+\end{solution}
+
 \begin{problem}
 设双曲线以椭圆 \(\frac{x^2}{25} + \frac{y^2}{9} = 1\) 长轴的两个端点为焦点，其准线过椭圆的焦点，则双曲线的渐近线的斜率为（\(\quad\)）
 
@@ -59,6 +127,24 @@
     {\(\pm \frac{1}{2}\)}
     {\(\pm \frac{3}{4}\)}
 \end{problem}
+
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+椭圆的长轴端点为 \((-5,0)\)，\((5,0)\)，所以所求双曲线的焦点为 \((-5,0)\)，\((5,0)\)，其焦半距为 \(c=5\). 椭圆的焦点为 \((-4,0)\)，\((4,0)\)，因此双曲线的一条准线为 \(x=4\) 或 \(x=-4\).
+
+设双曲线方程为
+\[
+\frac{x^2}{u^2}-\frac{y^2}{v^2}=1,
+\]
+则 \(u^2+v^2=c^2=25\)，离心率为 \(e=\frac{c}{u}\)，准线方程为 \(x=\pm\frac{u}{e}=\pm\frac{u^2}{c}\). 由 \(\frac{u^2}{5}=4\)，得 \(u^2=20\)，从而 \(v^2=5\). 故渐近线斜率为
+\[
+\pm\frac{v}{u}=\pm\frac{\sqrt{5}}{2\sqrt{5}}=\pm\frac{1}{2},
+\]
+所以选 C.
+\end{solution}
 
 \begin{problem}
 给出下列三个命题：
@@ -78,10 +164,30 @@
     {\(3\)}
 \end{problem}
 
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+对命题 \(\circled{1}\)，函数 \(h(x)=\frac{x}{1+x}\) 在 \((-1,+\infty)\) 上的导数为
+\[
+h'(x)=\frac{1}{(1+x)^2}>0,
+\]
+所以 \(a\geqslant b>-1\) 时 \(h(a)\geqslant h(b)\)，命题 \(\circled{1}\) 正确.
+
+对命题 \(\circled{2}\)，由 \(m\leqslant n\) 可知两边均非负，且
+\[
+\frac{n^2}{4}-m(n-m)=\frac{(n-2m)^2}{4}\geqslant0,
+\]
+所以 \(\sqrt{m(n-m)}\leqslant\frac{n}{2}\)，命题 \(\circled{2}\) 正确.
+
+对命题 \(\circled{3}\)，条件给出圆心 \(Q\) 与圆 \(O_1\) 上点 \(P\) 的距离为 \(1\)，但两圆半径分别为 \(3\) 和 \(1\). 两圆相切要求圆心距为 \(3+1=4\) 或 \(3-1=2\)，而这里圆心距为 \(1\)，所以命题 \(\circled{3}\) 错误. 因此假命题有 \(1\) 个，故选 B.
+\end{solution}
+
 \begin{problem}
 函数 \( y = A \sin (\omega x + \varphi) \)（\(\omega > 0\)，\(|\varphi| < \frac{\pi}{2}\)，\(x \in \R\)）的部分图象如图所示，则函数表达式为（\(\quad\)）
 
-\bitmapfigure{img/2005/tianjin_liberal/q8_fig1.png}
+\bitmapfigure[max width=0.50\linewidth]{img/2005/tianjin_liberal/q8_fig1.png}
 
 \choices
     {\(y = -4\sin \left(\frac{\pi}{8} x + \frac{\pi}{4}\right)\)}
@@ -89,6 +195,29 @@
     {\(y = -4\sin \left(\frac{\pi}{8} x - \frac{\pi}{4}\right)\)}
     {\(y = 4\sin \left(\frac{\pi}{8} x + \frac{\pi}{4}\right)\)}
 \end{problem}
+
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+由图象的最大值和最小值分别为 \(4\) 和 \(-4\)，得振幅 \(|A|=4\). 图象在 \(x=6\) 处由下向上通过 \(x\) 轴，且在 \(x=-2\) 处也通过 \(x\) 轴，这两个相邻零点相距 \(8\)，所以半周期为 \(8\)，从而
+\[
+\omega=\frac{\pi}{8}.
+\]
+由于 \(|\varphi|<\frac{\pi}{2}\)，且 \(\frac{6\pi}{8}+\varphi\in\left(\frac{\pi}{4},\frac{5\pi}{4}\right)\)，由 \(x=6\) 处为零点可知
+\[
+\frac{6\pi}{8}+\varphi=\pi,
+\qquad
+\varphi=\frac{\pi}{4}.
+\]
+此时图象在 \(x=6\) 处的导数为 \(A\omega\cos\pi=-A\omega\). 图象由下向上通过 \(x\) 轴，所以 \(A<0\)，从而 \(A=-4\).
+因此函数表达式为
+\[
+y=-4\sin\left(\frac{\pi}{8}x+\frac{\pi}{4}\right),
+\]
+故选 A.
+\end{solution}
 
 \begin{problem}
 若函数 \( f(x) = \log_a(2x^2 + x) \)（\(a > 0\)，\(a \neq 1\)）在区间 \( \left(0, \frac{1}{2}\right) \) 内恒有 \( f(x) > 0 \)，则 \( f(x) \) 的单调递增区间为（\(\quad\)）
@@ -100,6 +229,24 @@
     {\(\left(-\infty, -\frac{1}{2}\right)\)}
 \end{problem}
 
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+当 \(0<x<\frac12\) 时，\(0<2x^2+x<1\). 要使
+\[
+\log_a(2x^2+x)>0
+\]
+恒成立，必须有 \(0<a<1\)，因为底数大于 \(1\) 时对数函数在 \((0,1)\) 上取负值.
+
+函数定义域满足 \(2x^2+x>0\)，即 \(x<-\frac12\) 或 \(x>0\). 在定义域内
+\[
+f'(x)=\frac{4x+1}{(2x^2+x)\ln a}.
+\]
+由于 \(0<a<1\)，所以 \(\ln a<0\). 当 \(x<-\frac12\) 时，\(4x+1<0\)，从而 \(f'(x)>0\)；当 \(x>0\) 时，\(4x+1>0\)，从而 \(f'(x)<0\). 因此 \(f(x)\) 的单调递增区间为 \(\left(-\infty,-\frac12\right)\)，故选 D.
+\end{solution}
+
 \begin{problem}
 设 \( f(x) \) 是定义在 \( \R \) 上以 \(6\) 为周期的函数，\( f(x) \) 在 \( (0,3) \) 内单调递增，且 \( y = f(x) \) 的图象关于直线 \( x = 3 \) 对称，则下面正确的结论是（\(\quad\)）
 
@@ -110,44 +257,265 @@
     {\(f(3.5) < f(6.5) < f(1.5)\)}
 \end{problem}
 
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+由周期性，\(f(6.5)=f(0.5)\)；由图象关于 \(x=3\) 对称，\(f(3.5)=f(2.5)\). 因为 \(f(x)\) 在 \((0,3)\) 内单调递增，所以
+\[
+f(0.5)<f(1.5)<f(2.5).
+\]
+因此
+\[
+f(6.5)<f(1.5)<f(3.5),
+\]
+即选项 C 正确，故选 C.
+\end{solution}
+
 \section{填空题}
 \begin{problem}
 二项式 \(\left(\sqrt[3]{x} - \frac{1}{\sqrt{x}}\right)^{10}\) 的展开式中常数项为\fillinblank{}. （用数字作答）
 \end{problem}
 
+\begin{answer}
+210
+\end{answer}
+
+\begin{solution}
+展开式的通项为
+\[
+\mathrm C_{10}^{k}\left(\sqrt[3]{x}\right)^{10-k}\left(-\frac{1}{\sqrt{x}}\right)^k
+=(-1)^k\mathrm C_{10}^{k}x^{\frac{10-k}{3}-\frac{k}{2}}.
+\]
+要得到常数项，指数必须为 \(0\)，所以
+\[
+\frac{10-k}{3}-\frac{k}{2}=0,
+\qquad
+20-5k=0,
+\qquad
+k=4.
+\]
+因此常数项为
+\[
+(-1)^4\mathrm C_{10}^{4}=\mathrm C_{10}^{4}=210.
+\]
+\end{solution}
+
 \begin{problem}
 已知 \(\left|\bs{a}\right| = 2\)，\(\left|\bs{b}\right| = 4\)，\(\bs{a}\) 与 \(\bs{b}\) 的夹角为 \( \frac{\pi}{3} \)，以 \(\bs{a}\)，\(\bs{b}\) 为邻边作平行四边形，则此平行四边形的两条对角线中较短的一条的长度为\fillinblank{}.
 \end{problem}
 
+\begin{answer}
+\(2\sqrt{3}\)
+\end{answer}
+
+\begin{solution}
+平行四边形的两条对角线所对应的向量分别为 \(\bs{a}+\bs{b}\) 和 \(\bs{a}-\bs{b}\). 由数量积公式，
+\[
+\left|\bs{a}+\bs{b}\right|^2
+=\left|\bs{a}\right|^2+\left|\bs{b}\right|^2+2\left|\bs{a}\right|\left|\bs{b}\right|\cos\frac{\pi}{3}
+=4+16+8=28,
+\]
+\[
+\left|\bs{a}-\bs{b}\right|^2
+=\left|\bs{a}\right|^2+\left|\bs{b}\right|^2-2\left|\bs{a}\right|\left|\bs{b}\right|\cos\frac{\pi}{3}
+=4+16-8=12.
+\]
+较短对角线的长度为 \(\sqrt{12}=2\sqrt{3}\).
+\end{solution}
+
 \begin{problem}
 如图，\(PA \perp\) 平面 \(ABC\)，\(\angle ACB = 90^\circ\) 且 \(PA = AC = BC = a\)，则异面直线 \(PB\) 与 \(AC\) 所成角的正切值等于\fillinblank{}.
 
-\bitmapfigure{img/2005/tianjin_liberal/q13_fig1.png}
+\bitmapfigure[max width=0.32\linewidth]{img/2005/tianjin_liberal/q13_fig1.png}
 \end{problem}
 
+\begin{answer}
+\(\sqrt{2}\)
+\end{answer}
+
+\begin{solution}
+建立空间直角坐标系，取 \(C\) 为原点，令 \(CA\) 所在直线为 \(x\) 轴，\(CB\) 所在直线为 \(y\) 轴，过 \(A\) 且垂直于平面 \(ABC\) 的直线为 \(z\) 轴方向. 于是可取
+\[
+C=(0,0,0),\qquad A=(a,0,0),\qquad B=(0,a,0),\qquad P=(a,0,a).
+\]
+所以
+\[
+\overrightarrow{PB}=(-a,a,-a),\qquad \overrightarrow{AC}=(-a,0,0).
+\]
+设异面直线 \(PB\) 与 \(AC\) 所成的锐角为 \(\theta\)，则
+\[
+\cos\theta
+=\frac{\left|\overrightarrow{PB}\cdot\overrightarrow{AC}\right|}
+{\left|\overrightarrow{PB}\right|\left|\overrightarrow{AC}\right|}
+=\frac{a^2}{a\sqrt{3}\cdot a}
+=\frac{1}{\sqrt{3}}.
+\]
+因此
+\[
+\tan\theta=\frac{\sqrt{1-\cos^2\theta}}{\cos\theta}
+=\frac{\sqrt{\frac{2}{3}}}{\frac{1}{\sqrt{3}}}
+=\sqrt{2}.
+\]
+\end{solution}
+
 \begin{problem}
-在数列 \(\{a_{n}\}\) 中，\(a_{1} = 1\)，\(a_{2} = 2\)，且 \(a_{n+2} - a_{n} = 1 + (-1)^{n}\)（\(n \in \mathbf{N}^{*}\)）. 则 \(S_{10} = \)\fillinblank{}.
+在数列 \(\{a_{n}\}\) 中，\(a_{1} = 1\)，\(a_{2} = 2\)，且 \(a_{n+2} - a_{n} = 1 + (-1)^{n}\)（\(n \in \N^*\)）. 则 \(S_{10} = \)\fillinblank{}.
 \end{problem}
+
+\begin{answer}
+35
+\end{answer}
+
+\begin{solution}
+当 \(n\) 为奇数时，\(1+(-1)^n=0\)，所以 \(a_{n+2}=a_n\)；当 \(n\) 为偶数时，\(1+(-1)^n=2\)，所以 \(a_{n+2}=a_n+2\). 结合 \(a_1=1\)，\(a_2=2\)，得
+\[
+a_{2k-1}=1,\qquad a_{2k}=2k\quad(k\in\N^*).
+\]
+因此
+\[
+S_{10}=(a_1+a_3+a_5+a_7+a_9)+(a_2+a_4+a_6+a_8+a_{10})
+=5+(2+4+6+8+10)=35.
+\]
+\end{solution}
 
 \begin{problem}
 在直角坐标系 \(xOy\) 中，已知点 \(A(0,1)\) 和点 \(B(-3,4)\). 若点 \(C\) 在 \(\angle AOB\) 的平分线上且 \(\left|\overrightarrow{OC}\right| = 2\)，则 \(\overrightarrow{OC} =\fillinblank{}\).
 \end{problem}
 
+\begin{answer}
+\(\left(-\frac{\sqrt{10}}{5},\frac{3\sqrt{10}}{5}\right)\)
+\end{answer}
+
+\begin{solution}
+有
+\[
+\overrightarrow{OA}=(0,1),\qquad \left|\overrightarrow{OA}\right|=1,
+\]
+\[
+\overrightarrow{OB}=(-3,4),\qquad \left|\overrightarrow{OB}\right|=5.
+\]
+内角平分线的方向向量可取两个单位向量之和：
+\[
+\frac{\overrightarrow{OA}}{\left|\overrightarrow{OA}\right|}
++\frac{\overrightarrow{OB}}{\left|\overrightarrow{OB}\right|}
+=(0,1)+\left(-\frac35,\frac45\right)
+=\frac35(-1,3).
+\]
+其单位方向向量为 \(\frac{1}{\sqrt{10}}(-1,3)\). 由于点 \(C\) 在 \(\angle AOB\) 的内部平分线上且 \(\left|\overrightarrow{OC}\right|=2\)，故
+\[
+\overrightarrow{OC}
+=2\cdot\frac{1}{\sqrt{10}}(-1,3)
+=\left(-\frac{\sqrt{10}}5,\frac{3\sqrt{10}}5\right).
+\]
+\end{solution}
+
 \begin{problem}
 设函数 \( f(x) = \ln \frac{1 + x}{1 - x} \)，则函数 \( g(x) = f\left(\frac{x}{2}\right) + f\left(\frac{1}{x}\right) \) 的定义域为\fillinblank{}.
 \end{problem}
+
+\begin{answer}
+\((-2,-1)\cup(1,2)\)
+\end{answer}
+
+\begin{solution}
+函数 \(f(t)=\ln\frac{1+t}{1-t}\) 有意义的充要条件为
+\[
+\frac{1+t}{1-t}>0,
+\]
+解得 \(-1<t<1\). 因此 \(f\left(\frac{x}{2}\right)\) 有意义要求
+\[
+-1<\frac{x}{2}<1,
+\qquad
+-2<x<2.
+\]
+同时，\(f\left(\frac{1}{x}\right)\) 有意义要求 \(x\ne0\) 且
+\[
+-1<\frac{1}{x}<1,
+\]
+即 \(|x|>1\). 两组条件取交集，得到定义域为
+\[
+(-2,-1)\cup(1,2).
+\]
+\end{solution}
 
 \begin{problem}
 在三角形的每条边上各取三个分点（如图），以这\(9\)个分点为顶点可画出若干个三角形，若从中任意抽取一个三角形，则其三个顶点分别落在原三角形的三条不同边上的概率为\fillinblank{}. （用数字作答）
 
 \FigureLayoutDeclare{img/2005/tianjin_liberal/q17_fig1.png}{5.0cm}{32bp 38bp 87bp 24bp}
-\bitmapfigure{img/2005/tianjin_liberal/q17_fig1.png}
+\bitmapfigure[max width=0.42\linewidth]{img/2005/tianjin_liberal/q17_fig1.png}
 \end{problem}
+
+\begin{answer}
+\(\frac{1}{3}\)
+\end{answer}
+
+\begin{solution}
+从 \(9\) 个分点中任取 \(3\) 个点时，\(\mathrm C_9^3\) 个组合中，同一条边上的 \(3\) 个分点共线，不能构成三角形. 原三角形有 \(3\) 条边，因此可抽取的三角形总数为
+\[
+\mathrm C_9^3-3\mathrm C_3^3=84-3=81.
+\]
+若三个顶点分别落在原三角形的三条不同边上，则先从三条边中各取一个分点，方法数为
+\[
+3\cdot3\cdot3=27.
+\]
+因此所求概率为
+\[
+\frac{27}{81}=\frac{1}{3}.
+\]
+\end{solution}
 
 \section{解答题}
 \begin{problem}
 已知 \(\sin \left( \alpha - \frac{\pi}{4} \right) = \frac{7\sqrt{2}}{10}\)，\(\cos 2\alpha = \frac{7}{25}\)，求 \(\sin \alpha\) 及 \(\tan \left( \alpha + \frac{\pi}{3} \right)\).
 \end{problem}
+
+\begin{solution}
+由
+\[
+\sin\left(\alpha-\frac{\pi}{4}\right)
+=\frac{\sin\alpha-\cos\alpha}{\sqrt{2}}
+=\frac{7\sqrt{2}}{10},
+\]
+得
+\[
+\sin\alpha-\cos\alpha=\frac{7}{5}.
+\]
+又因为
+\[
+\cos2\alpha=\cos^2\alpha-\sin^2\alpha
+=(\cos\alpha-\sin\alpha)(\cos\alpha+\sin\alpha)
+=\frac{7}{25},
+\]
+所以
+\[
+-\frac{7}{5}(\sin\alpha+\cos\alpha)=\frac{7}{25},
+\qquad
+\sin\alpha+\cos\alpha=-\frac{1}{5}.
+\]
+两式相加、相减，得到
+\[
+\sin\alpha=\frac{3}{5},\qquad \cos\alpha=-\frac{4}{5}.
+\]
+因此
+\[
+\tan\alpha=-\frac{3}{4},
+\]
+从而
+\[
+\tan\left(\alpha+\frac{\pi}{3}\right)
+=\frac{\tan\alpha+\sqrt{3}}{1-\sqrt{3}\tan\alpha}
+=\frac{-\frac34+\sqrt{3}}{1+\frac{3\sqrt{3}}4}
+=\frac{4\sqrt{3}-3}{4+3\sqrt{3}}
+=\frac{48-25\sqrt{3}}{11}.
+\]
+故
+\[
+\sin\alpha=\frac35,\qquad
+\tan\left(\alpha+\frac{\pi}{3}\right)=\frac{48-25\sqrt{3}}{11}.
+\]
+\end{solution}
 
 \begin{problem}
 若公比为 \(c\) 的等比数列 \(\{a_{n}\}\) 的首项 \(a_1 = 1\) 且满足 \(a_{n} = \frac{a_{n - 1} + a_{n - 2}}{2}\)（\(n = 3\)，\(4\)，\(\dots\)）.
@@ -156,6 +524,54 @@
 \item 求数列 \(\{na_{n}\}\) 的前 \(n\) 项和 \(S_{n}\).
 \end{enumerate}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item
+因为数列为等比数列且 \(a_1=1\)，所以 \(a_2=c\)，\(a_3=c^2\). 将 \(n=3\) 代入递推关系，得
+\[
+c^2=\frac{c+1}{2},
+\qquad
+2c^2-c-1=0,
+\qquad
+(2c+1)(c-1)=0.
+\]
+因此
+\[
+c=1\quad\text{或}\quad c=-\frac12.
+\]
+这两个值都满足递推关系，故均为可行的公比.
+
+\item
+当 \(c=1\) 时，\(a_k=1\)，所以
+\[
+S_n=\sum_{k=1}^n ka_k=\sum_{k=1}^n k=\frac{n(n+1)}{2}.
+\]
+
+当 \(c=-\frac12\) 时，\(a_k=\left(-\frac12\right)^{k-1}\). 令 \(r=-\frac12\)，由有限等比数列求和公式
+\[
+\sum_{k=1}^n r^k=\frac{r-r^{n+1}}{1-r}
+\]
+两边对 \(r\) 求导，得
+\[
+\sum_{k=1}^n kr^{k-1}
+=\frac{1-(n+1)r^n+nr^{n+1}}{(1-r)^2}.
+\]
+代入 \(r=-\frac12\)，得到
+\[
+S_n=\sum_{k=1}^n k\left(-\frac12\right)^{k-1}
+=\frac{1}{9}\left[4-(-1)^n\frac{3n+2}{2^{n-1}}\right].
+\]
+综上，当 \(c=1\) 时，
+\[
+S_n=\frac{n(n+1)}{2}.
+\]
+当 \(c=-\frac12\) 时，
+\[
+S_n=\frac{1}{9}\left[4-(-1)^n\frac{3n+2}{2^{n-1}}\right].
+\]
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 如图，在斜三棱柱 \(ABC - A_{1}B_{1}C_{1}\) 中，\(\angle A_{1}AB = \angle A_{1}AC\)，\(AB = AC\)，\(A_{1}A = A_{1}B = a\)，侧面 \(B_{1}BCC_{1}\) 与底面 \(ABC\) 所成的二面角为 \(120^{\circ}\)，\(E\)，\(F\) 分别是棱 \(B_{1}C_{1}\)，\(A_{1}A\) 的中点.
@@ -166,24 +582,294 @@
 \item 求经过 \(A_{1}\)，\(A\)，\(B\)，\(C\) 四点的球的体积.
 \end{enumerate}
 
-\bitmapfigure{img/2005/tianjin_liberal/q20_fig1.png}
+\bitmapfigure[max width=0.62\linewidth]{img/2005/tianjin_liberal/q20_fig1.png}
 \end{problem}
+
+\begin{solution}
+由 \(AB=AC\)，且 \(\angle A_1AB=\angle A_1AC\)，在三角形 \(A_1AB\) 与 \(A_1AC\) 中使用边角边判定，得
+\[
+A_1C=A_1B=a.
+\]
+设 \(H\) 为点 \(A_1\) 在底面 \(ABC\) 内的射影，则 \(A_1H\perp\) 平面 \(ABC\). 因为
+\[
+A_1A=A_1B=A_1C,
+\]
+所以 \(HA=HB=HC\)，即 \(H\) 为三角形 \(ABC\) 的外心.
+
+\begin{enumerate}
+\item 在过 \(BC\) 且垂直于 \(BC\) 的截面内，二面角的平面角为 \(120^{\circ}\)，其补角就是直线 \(A_1A\) 与底面所成的锐角. 因此
+\[
+\angle A_1AH=60^{\circ}.
+\]
+在直角三角形 \(A_1AH\) 中，
+\[
+A_1H=A_1A\sin60^{\circ}=\frac{\sqrt{3}}{2}a,
+\qquad
+AH=A_1A\cos60^{\circ}=\frac{a}{2}.
+\]
+所以 \(A_1A\) 与底面 \(ABC\) 所成的角为 \(60^{\circ}\).
+
+\item 设
+\[
+\overrightarrow{AB}=\bs{u},\qquad
+\overrightarrow{AC}=\bs{v},\qquad
+\overrightarrow{AA_1}=\bs{w}.
+\]
+由棱柱的平移关系，\(\overrightarrow{B_1C_1}=\overrightarrow{BC}\)，且 \(E\) 是 \(B_1C_1\) 的中点，因此
+\[
+\overrightarrow{A_1E}=\frac12(\bs{u}+\bs{v}).
+\]
+另一方面，\(F\) 是 \(A_1A\) 的中点，所以
+\[
+\overrightarrow{FB_1}=\bs{u}+\frac12\bs{w},
+\qquad
+\overrightarrow{FC}=\bs{v}-\frac12\bs{w}.
+\]
+于是
+\[
+\overrightarrow{FB_1}+\overrightarrow{FC}=\bs{u}+\bs{v}
+=2\overrightarrow{A_1E}.
+\]
+左端是平面 \(B_1FC\) 内两个向量的和，所以直线 \(A_1E\) 的方向平行于平面 \(B_1FC\). 若 \(A_1\) 在平面 \(B_1FC\) 内，则存在实数 \(s,t\)，使
+\[
+\overrightarrow{AA_1}
+=\overrightarrow{AF}+s\overrightarrow{FB_1}+t\overrightarrow{FC}
+=\frac12\bs{w}+s\left(\bs{u}+\frac12\bs{w}\right)
++t\left(\bs{v}-\frac12\bs{w}\right).
+\]
+比较 \(\bs{u}\)、\(\bs{v}\)、\(\bs{w}\) 的系数，先得 \(s=t=0\)，再得 \(\frac12=1\)，矛盾. 因而 \(A_1\notin\) 平面 \(B_1FC\)，
+故 \(A_1E\parallel\) 平面 \(B_1FC\).
+
+\item 设所求球的球心为 \(O\)，半径为 \(R\). 因为 \(A\)，\(B\)，\(C\) 在底面内，且 \(H\) 是三角形 \(ABC\) 的外心，所以球心 \(O\) 在过 \(H\) 且垂直于底面的直线上；又 \(A_1\) 在该直线上. 设 \(OH=x\)，取从底面指向 \(A_1\) 的方向为正方向，则
+\[
+AH=\frac{a}{2},\qquad A_1H=\frac{\sqrt{3}}{2}a.
+\]
+由 \(OA=OA_1=R\)，分别在两个直角三角形中列式：
+\[
+R^2=OH^2+AH^2=x^2+\frac{a^2}{4},
+\]
+\[
+R^2=OA_1^2=\left(A_1H-OH\right)^2
+=\left(\frac{\sqrt{3}}{2}a-x\right)^2.
+\]
+两式相等，得
+\[
+\frac{a^2}{4}+x^2
+=\frac{3a^2}{4}-\sqrt{3}ax+x^2,
+\qquad
+x=\frac{a}{2\sqrt{3}}.
+\]
+因此
+\[
+R^2=\frac{a^2}{4}+\frac{a^2}{12}=\frac{a^2}{3},
+\qquad
+R=\frac{\sqrt{3}}{3}a.
+\]
+所求球的体积为
+\[
+V=\frac43\pi R^3
+=\frac43\pi\left(\frac{\sqrt{3}}{3}a\right)^3
+=\frac{4\sqrt{3}}{27}\pi a^3.
+\]
+\end{enumerate}
+\end{solution}
+
+\begin{problem}
+某人在一山坡 \(P\) 处观看对面山顶上的一座铁塔，如图所示，塔高 \(BC = 80\mathrm{~m}\)，塔所在的山高 \(OB = 220\mathrm{~m}\)，\(OA = 200\mathrm{~m}\). 图中所示的山坡可视为直线 \(l\) 且点 \(P\) 在直线 \(l\) 上，\(l\) 与水平地面的夹角为 \(\alpha\)，\(\tan \alpha = \frac{1}{2}\). 试问此人距水平地面多高时，观看塔的视角 \(\angle BPC\) 最大？ （不计此人的身高）
+
+\bitmapfigure[max width=0.55\linewidth]{img/2005/tianjin_liberal/q21_fig1.png}
+\end{problem}
+
+\begin{solution}
+设此人距水平地面的高度为 \(h\)，则 \(h\geqslant0\). 取水平地面为 \(x\) 轴，令
+\[
+O=(0,0),\qquad A=(200,0),\qquad B=(0,220),\qquad C=(0,300).
+\]
+由 \(\tan\alpha=\frac12\)，点 \(P\) 的坐标为
+\[
+P=(200+2h,h).
+\]
+记 \(X=200+2h\)，则
+\[
+\overrightarrow{PB}=(-X,220-h),\qquad
+\overrightarrow{PC}=(-X,300-h).
+\]
+设观看塔的视角为 \(\theta=\angle BPC\). 向量叉积的绝对值为
+\[
+\left|\overrightarrow{PB}\times\overrightarrow{PC}\right|=80X,
+\]
+数量积为
+\[
+\overrightarrow{PB}\cdot\overrightarrow{PC}
+=X^2+(220-h)(300-h)
+=5h^2+280h+106000>0.
+\]
+所以 \(\theta\) 为锐角，且
+\[
+\tan\theta
+=\frac{80X}{X^2+(220-h)(300-h)}
+=\frac{16000+160h}{5h^2+280h+106000}.
+\]
+对 \(h\) 求导，得
+\[
+\frac{\mathrm d}{\mathrm dh}\tan\theta
+=\frac{-800(h-60)(h+260)}
+{\left(5h^2+280h+106000\right)^2}.
+\]
+在 \(h\geqslant0\) 时，导数在 \(0\leqslant h<60\) 为正，在 \(h>60\) 为负，所以 \(\tan\theta\) 在 \(h=60\) 处取得最大值. 由于正切函数在锐角范围内单调递增，\(\theta\) 也在此时最大.
+
+因此，此人距水平地面 \(60\mathrm{~m}\) 高时，观看塔的视角最大.
+\end{solution}
 
 \begin{problem}
 已知 \(m \in \R\). 设 \(P\)： \(x_1\) 和 \(x_2\) 是方程 \(x^2 - ax - 2 = 0\) 的两个实根，不等式 \(|m^2 - 5m - 3| \geqslant |x_1 - x_2|\) 对任意实数 \(a \in [-1, 1]\) 恒成立； \(Q\)：函数 \(f(x) = x^3 + mx^2 + \left(m + \frac{4}{3}\right)x + 6\) 在 \((- \infty, +\infty)\) 上有极值. 求使 \(P\) 正确且 \(Q\) 正确的 \(m\) 的取值范围.
 \end{problem}
+
+\begin{solution}
+先判断命题 \(P\). 方程
+\[
+x^2-ax-2=0
+\]
+的两根之差的绝对值为判别式的平方根，即
+\[
+|x_1-x_2|=\sqrt{a^2+8}.
+\]
+当 \(a\in[-1,1]\) 时，\(\sqrt{a^2+8}\) 的最大值为 \(3\)，所以 \(P\) 正确的充要条件是
+\[
+|m^2-5m-3|\geqslant3.
+\]
+于是
+\[
+m^2-5m-3\leqslant-3
+\quad\text{或}\quad
+m^2-5m-3\geqslant3,
+\]
+即
+\[
+m(m-5)\leqslant0
+\quad\text{或}\quad
+(m-6)(m+1)\geqslant0.
+\]
+因此
+\[
+P:\quad m\in(-\infty,-1]\cup[0,5]\cup[6,+\infty).
+\]
+
+再判断命题 \(Q\). 函数的导数为
+\[
+f'(x)=3x^2+2mx+m+\frac43.
+\]
+\[
+\Delta=(2m)^2-4\cdot3\left(m+\frac43\right)=4(m-4)(m+1)>0.
+\]
+由于 \(\Delta=0\) 时导数不变号，函数没有极值，所以
+\[
+Q:\quad m\in(-\infty,-1)\cup(4,+\infty).
+\]
+取 \(P\) 与 \(Q\) 的交集，得到
+\[
+m\in(-\infty,-1)\cup(4,5]\cup[6,+\infty).
+\]
+\end{solution}
 
 \begin{problem}
 抛物线 \(C\) 的方程为 \( y = ax^{2} \)（\(a < 0\)），过抛物线 \(C\) 上一点 \( P(x_{0}, y_{0}) \)（\(x_{0} \neq 0\)）作斜率为 \(k_{1}\)，\(k_{2}\) 的两条直线分别交抛物线 \(C\) 于 \(A(x_{1}, y_{1})\)，\(B(x_{2}, y_{2})\) 两点（\(P\)，\(A\)，\(B\) 三点互不相同），且满足 \( k_{2} + \lambda k_{1} = 0 \)（\(\lambda \neq 0\)，\(\lambda \neq -1\)）.
 \begin{enumerate}
 \item 求抛物线 \(C\) 的焦点坐标和准线方程；
 \item 设直线 \(AB\) 上一点 \(M\)，满足 \(\overrightarrow{BM} = \lambda \overrightarrow{MA}\)，证明线段 \(PM\) 的中点在 \(y\) 轴上；
-\item 当 \(\lambda = 1\) 时，若点 \(P\) 的坐标为 \((1, -1)\)，求 \(\angle PAB\) 为钝角时点 A 的纵坐标 \(y_{1}\) 的取值范围.
+\item 当 \(\lambda = 1\) 时，若点 \(P\) 的坐标为 \((1, -1)\)，求 \(\angle PAB\) 为钝角时点 \(A\) 的纵坐标 \(y_{1}\) 的取值范围.
 \end{enumerate}
 \end{problem}
 
-\begin{problem}
-某人在一山坡 \(P\) 处观看对面山顶上的一座铁塔，如图所示，塔高 \(BC = 80\) （米），塔所在的山高 \(OB = 220\) （米），\(OA = 200\) （米）. 图中所示的山坡可视为直线 \(l\) 且点 \(P\) 在直线 \(l\) 上，\(l\) 与水平地面的夹角为 \(\alpha\)，\(\tan \alpha = \frac{1}{2}\). 试问此人距水平地面多高时，观看塔的视角 \(\angle BPC\) 最大？ （不计此人的身高）
+\begin{solution}
+\begin{enumerate}
+\item 将抛物线方程写成
+\[
+x^2=\frac{1}{a}y=4py,
+\]
+所以
+\[
+p=\frac{1}{4a}.
+\]
+因此抛物线的焦点为
+\[
+\left(0,\frac{1}{4a}\right),
+\]
+准线方程为
+\[
+y=-\frac{1}{4a}.
+\]
 
-\bitmapfigure{img/2005/tianjin_liberal/q21_fig1.png}
-\end{problem}
+\item 由于 \(P\)，\(A\) 都在抛物线 \(y=ax^2\) 上，且 \(P\ne A\)，直线 \(PA\) 的斜率为
+\[
+k_1=\frac{ax_1^2-ax_0^2}{x_1-x_0}=a(x_1+x_0).
+\]
+同理
+\[
+k_2=a(x_2+x_0).
+\]
+由 \(k_2+\lambda k_1=0\)，并利用 \(a\ne0\)，得
+\[
+x_2+x_0+\lambda(x_1+x_0)=0,
+\]
+即
+\[
+x_2+\lambda x_1=-(1+\lambda)x_0.
+\]
+由 \(\overrightarrow{BM}=\lambda\overrightarrow{MA}\) 且 \(\lambda\ne-1\)，有
+\[
+(1+\lambda)\overrightarrow{OM}
+=\overrightarrow{OB}+\lambda\overrightarrow{OA}.
+\]
+比较横坐标，得
+\[
+(1+\lambda)x_M=x_2+\lambda x_1=-(1+\lambda)x_0,
+\qquad
+x_M=-x_0.
+\]
+若 \(N\) 为线段 \(PM\) 的中点，则
+\[
+x_N=\frac{x_0+x_M}{2}=0,
+\]
+所以 \(N\) 在 \(y\) 轴上.
+
+\item 当 \(\lambda=1\) 且 \(P=(1,-1)\) 时，由 \(y=ax^2\) 得 \(a=-1\)，\(x_0=1\). 由上面的关系式，
+\[
+x_1+x_2=-2,
+\qquad
+x_2=-2-x_1.
+\]
+设 \(x_1=x\)，则
+\[
+A=(x,-x^2),\qquad B=(-2-x,-(x+2)^2),\qquad P=(1,-1).
+\]
+于是
+\[
+\overrightarrow{AP}
+=(1-x,x^2-1)
+=(1-x)\bigl(1,-x-1\bigr),
+\]
+\[
+\overrightarrow{AB}
+=(-2x-2,-4x-4)
+=-2(x+1)(1,2).
+\]
+因此
+\[
+\overrightarrow{AP}\cdot\overrightarrow{AB}
+=2(1-x)(x+1)(2x+1).
+\]
+因为 \(P\)，\(A\)，\(B\) 三点互不相同，相关向量均非零；\(\angle PAB\) 为钝角的充要条件是数量积小于 \(0\)，所以
+\[
+(1-x)(x+1)(2x+1)<0.
+\]
+作符号讨论，得
+\[
+x\in\left(-1,-\frac12\right)\cup(1,+\infty).
+\]
+又 \(y_1=-x^2\)，故
+\[
+y_1\in(-\infty,-1)\cup\left(-1,-\frac14\right).
+\]
+\end{enumerate}
+\end{solution}

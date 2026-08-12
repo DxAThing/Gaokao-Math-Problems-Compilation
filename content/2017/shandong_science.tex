@@ -12,8 +12,16 @@
     {\(\left[-2,1\right)\)}
 \end{problem}
 
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+由根式有意义得 \(4-x^2\geq 0\)，所以函数 \(y=\sqrt{4-x^2}\) 的定义域为 \(A=[-2,2]\). 由对数真数为正得 \(1-x>0\)，所以函数 \(y=\ln(1-x)\) 的定义域为 \(B=(-\infty,1)\). 因此 \(A\cap B=[-2,1)\)，故选 D.
+\end{solution}
+
 \begin{problem}
-已知 \(a\in\R\)，\(\i\) 是虚数单位，若 \(z=a+\sqrt3\,\i\)，\(z\bar z=4\)，则 \(a=\)（\quad）.
+已知 \(a\in\R\)，\(\i\) 是虚数单位，若 \(z=a+\sqrt3\,\i\)，\(z\cdot\bar z=4\)，则 \(a=\)（\quad）.
 
 \choices
     {\(1\) 或 \(-1\)}
@@ -21,6 +29,18 @@
     {\(-\sqrt3\)}
     {\(\sqrt3\)}
 \end{problem}
+
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+因为 \(z=a+\sqrt3\,\i\)，所以 \(\bar z=a-\sqrt3\,\i\)，从而
+\[
+z\cdot\bar z=(a+\sqrt3\,\i)(a-\sqrt3\,\i)=a^2+3.
+\]
+由 \(z\cdot\bar z=4\) 得 \(a^2+3=4\)，即 \(a^2=1\)，所以 \(a=1\) 或 \(a=-1\)，故选 A.
+\end{solution}
 
 \begin{problem}
 已知命题 \(p:\forall x>0\)，\(\ln(x+1)>0\)；命题 \(q\)：若 \(a>b\)，则 \(a^2>b^2\)，下列命题为真命题的是（\quad）.
@@ -32,8 +52,22 @@
     {\(\lnot p\land \lnot q\)}
 \end{problem}
 
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+当 \(x>0\) 时，\(x+1>1\)，所以 \(\ln(x+1)>0\)，命题 \(p\) 为真. 命题 \(q\) 不是真命题，例如取 \(a=0\)，\(b=-1\)，则 \(a>b\)，但 \(a^2=0<1=b^2\)，所以 \(q\) 为假. 因此 \(p\land\lnot q\) 为真，故选 B.
+\end{solution}
+
 \begin{problem}
-已知 \(x\)，\(y\) 满足约束条件 \(x-y+3\le0\)，\(3x+y+5\le0\)，\(x+3\ge0\)，则 \(z=x+2y\) 的最大值是（\quad）.
+已知 \(x\)，\(y\) 满足约束条件
+\(\begin{cases}
+x-y+3\le 0,\\
+3x+y+5\le 0,\\
+x+3\ge 0,
+\end{cases}\)
+则 \(z=x+2y\) 的最大值是（\quad）.
 
 \choices
     {\(0\)}
@@ -42,8 +76,24 @@
     {\(6\)}
 \end{problem}
 
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+约束条件可化为
+\[
+y\geq x+3,\qquad y\leq-3x-5,\qquad x\geq-3.
+\]
+可行域的顶点由边界直线 \(y=x+3\)、\(y=-3x-5\) 和 \(x=-3\) 确定. 前两条直线交于
+\[
+x+3=-3x-5\Longrightarrow x=-2,\qquad y=1.
+\]
+另外两点为 \((-3,0)\) 和 \((-3,4)\). 目标函数 \(z=x+2y\) 在这些顶点处的值分别为 \(-3\)、\(0\)、\(5\)，所以最大值为 \(5\)，故选 C.
+\end{solution}
+
 \begin{problem}
-为了研究某班学生的脚长 \(x\)（单位：厘米）和身高 \(y\)（单位：厘米）的关系，从该班随机抽取 10 名学生，根据测量数据的散点图可以看出 \(y\) 与 \(x\) 之间有线性相关关系，设其回归直线方程为 \(\hat y=bx+a\)，已知 \(\sum_{i=1}^{10}x_i=225\)，\(\sum_{i=1}^{10}y_i=1600\)，\(b=4\)，该班某学生的脚长为 24，据此估计其身高为（\quad）.
+为了研究某班学生的脚长 \(x\)（单位：厘米）和身高 \(y\)（单位：厘米）的关系，从该班随机抽取 10 名学生，根据测量数据的散点图可以看出 \(y\) 与 \(x\) 之间有线性相关关系，设其回归直线方程为 \(\hat y=\hat b x+\hat a\)，已知 \(\sum_{i=1}^{10}x_i=225\)，\(\sum_{i=1}^{10}y_i=1600\)，\(\hat b=4\)，该班某学生的脚长为 24，据此估计其身高为（\quad）.
 
 \choices
     {\(160\)}
@@ -51,6 +101,18 @@
     {\(166\)}
     {\(170\)}
 \end{problem}
+
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+回归直线必经过样本中心点 \((\bar x,\bar y)\). 由题意
+\[
+\bar x=\frac{225}{10}=22.5,\qquad \bar y=\frac{1600}{10}=160.
+\]
+又 \(\hat y=4x+\hat a\)，代入样本中心点得 \(160=4\times22.5+\hat a\)，所以 \(\hat a=70\). 当脚长 \(x=24\) 时，估计身高为 \(\hat y=4\times24+70=166\)，故选 C.
+\end{solution}
 
 \begin{problem}
 执行两次如图所示的程序框图，若第一次输入的 \(x\) 值为 7，第二次输入的 \(x\) 值为 9，则第一次，第二次输出的 \(a\) 值分别为（\quad）.
@@ -64,6 +126,16 @@
     {\(1,0\)}
 \end{problem}
 
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+第一次输入 \(x=7\) 时，初始 \(b=2\). 此时 \(b^2=4\not>7\)，且 \(7\) 不能被 \(2\) 整除，于是令 \(b=3\). 此时 \(b^2=9>7\)，程序令 \(a=1\) 并输出 \(1\).
+
+第二次输入 \(x=9\) 时，初始 \(b=2\). 此时 \(b^2=4\not>9\)，且 \(9\) 不能被 \(2\) 整除，于是令 \(b=3\). 此时 \(b^2=9\not>9\)，但 \(9\) 能被 \(3\) 整除，程序令 \(a=0\) 并输出 \(0\). 因此两次输出分别为 \(1,0\)，故选 D.
+\end{solution}
+
 \begin{problem}
 若 \(a>b>0\)，且 \(ab=1\)，则下列不等式成立的是（\quad）.
 
@@ -74,8 +146,24 @@
     {\(\log_2(a+b)<a+\dfrac1b<\dfrac{b}{2a}\)}
 \end{problem}
 
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+由 \(ab=1\) 且 \(a>b>0\) 得 \(a>1\)，并且 \(\dfrac1b=a\). 因此
+\[
+a+\frac1b=2a,\qquad \frac{b}{2a}=\frac1{2a^2}<1.
+\]
+又 \(a+b=a+\dfrac1a>2\)，所以 \(\log_2(a+b)>1\)，从而 \(\dfrac{b}{2a}<\log_2(a+b)\). 此外 \(a+\dfrac1a<2a\)，且 \(2a<2^{2a}\)，于是
+\[
+\log_2(a+b)<2a=a+\frac1b.
+\]
+所以成立的不等式为 \(\dfrac{b}{2a}<\log_2(a+b)<a+\dfrac1b\)，故选 B.
+\end{solution}
+
 \begin{problem}
-从分别标有 \(1\)，\(2\)，\(\ldots\)，\(9\) 的 9 张卡片中不放回地随机抽取 2 次，每次抽取 1 张，则抽到在 2 张卡片上的数奇偶性不同的概率是（\quad）.
+从分别标有 \(1\)，\(2\)，\(\ldots\)，\(9\) 的 9 张卡片中不放回地随机抽取 2 次，每次抽取 1 张，则抽到的 \(2\) 张卡片上的数奇偶性不同的概率是（\quad）.
 
 \choices
     {\(\dfrac{5}{18}\)}
@@ -83,6 +171,18 @@
     {\(\dfrac{5}{9}\)}
     {\(\dfrac79\)}
 \end{problem}
+
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+从 \(1\) 到 \(9\) 的数中有 \(5\) 个奇数和 \(4\) 个偶数. 两次有序抽取的总数为 \(9\times8\)，抽到的两张卡片奇偶性不同的情形数为 \(5\times4+4\times5\). 因此所求概率为
+\[
+\frac{5\times4+4\times5}{9\times8}=\frac59.
+\]
+故选 C.
+\end{solution}
 
 \begin{problem}
 在 \(\triangle ABC\) 中，角 \(A\)，\(B\)，\(C\) 的对边分别为 \(a\)，\(b\)，\(c\)，若 \(\triangle ABC\) 为锐角三角形，且满足 \(\sin B(1+2\cos C)=2\sin A\cos C+\cos A\sin C\)，则下列等式成立的是（\quad）.
@@ -94,6 +194,22 @@
     {\(B=2A\)}
 \end{problem}
 
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+由 \(A+B+C=\pi\) 及和角公式，
+\[
+2\sin A\cos C=\sin(A+C)+\sin(A-C)=\sin B+\sin(A-C).
+\]
+将其代入已知等式并消去 \(\sin B\)，得
+\[
+2\sin B\cos C=\sin(A-C)+\cos A\sin C=\sin A\cos C.
+\]
+因为三角形为锐角三角形，\(\cos C>0\)，所以 \(\sin A=2\sin B\). 由正弦定理 \(\dfrac a{\sin A}=\dfrac b{\sin B}\)，得 \(a=2b\)，故选 A.
+\end{solution}
+
 \begin{problem}
 已知当 \(x\in[0,1]\) 时，函数 \(y=(mx-1)^2\) 的图象与 \(y=\sqrt{x}+m\) 的图象有且只有一个交点，则正实数 \(m\) 的取值范围是（\quad）.
 
@@ -104,25 +220,132 @@
     {\((0,\sqrt2]\cup[3,+\infty)\)}
 \end{problem}
 
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+令 \(t=\sqrt x\)，则 \(t\in[0,1]\)，交点方程等价于
+\[
+F_m(t):=(mt^2-1)^2-t-m=0.
+\]
+其中
+\[
+F_m(0)=1-m,\qquad F_m(1)=m(m-3),\qquad F_m'(t)=4m^2t^3-4mt-1,
+\]
+且
+\[
+F_m''(t)=4m(3mt^2-1).
+\]
+
+当 \(0<m\leq1\) 时，\(mt^2\leq1\)，从而
+\[
+F_m'(t)=4mt(mt^2-1)-1<0.
+\]
+所以 \(F_m\) 在 \([0,1]\) 上严格递减. 当 \(0<m<1\) 时，\(F_m(0)>0>F_m(1)\)，恰有一个零点；当 \(m=1\) 时，\(F_m(0)=0\)，且 \(F_m(t)<0\)（\(0<t\leq1\)），也恰有一个零点.
+
+当 \(1<m<3\) 时，\(F_m(0)<0\)，\(F_m(1)<0\). 由 \(F_m''(t)\) 的符号变化可知，\(F_m'(t)\) 先减后增；又因 \(F_m'(0)=-1<0\)，所以 \(F_m'\) 至多有一个零点，\(F_m\) 先减（也可能始终递减）后增，最大值只能在端点取得. 两个端点值都小于 \(0\)，所以区间内没有零点.
+
+当 \(m\geq3\) 时，\(F_m(0)<0\leq F_m(1)\). 同样由 \(F_m''(t)\) 可知 \(F_m'\) 至多有一个零点，\(F_m\) 先减后增，因此从负值开始至非负端点只经过一次零点. 综上，恰有一个交点时
+\[
+m\in(0,1]\cup[3,+\infty).
+\]
+故选 B.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
 已知 \((1+3x)^n\) 的展开式中含有 \(x^2\) 的系数是 54，则 \(n=\fillinblank{}\).
 \end{problem}
 
+\begin{answer}
+4
+\end{answer}
+
+\begin{solution}
+展开式中 \(x^2\) 的项来自选取两个 \(3x\)，所以其系数为
+\[
+\mathrm C_n^2\cdot3^2=54.
+\]
+因此 \(\dfrac{n(n-1)}2\cdot9=54\)，即 \(n(n-1)=12\)，解得 \(n=4\) 或 \(n=-3\). 由于二项式展开式中的 \(n\) 为非负整数，故 \(n=4\).
+\end{solution}
+
 \begin{problem}
 已知 \(\bs e_1\)，\(\bs e_2\) 是互相垂直的单位向量，若 \(\sqrt3\,\bs e_1-\bs e_2\) 与 \(\bs e_1+\lambda\bs e_2\) 的夹角为 \(60^\circ\)，则实数 \(\lambda\) 的值是\fillinblank{}.
 \end{problem}
 
+\begin{answer}
+\(\dfrac{\sqrt3}{3}\)
+\end{answer}
+
+\begin{solution}
+设 \(\bs u=\sqrt3\,\bs e_1-\bs e_2\)，\(\bs v=\bs e_1+\lambda\bs e_2\). 由 \(\bs e_1\)、\(\bs e_2\) 为互相垂直的单位向量，得
+\[
+\bs u\cdot\bs v=\sqrt3-\lambda,\qquad |\bs u|=2,\qquad |\bs v|=\sqrt{1+\lambda^2}.
+\]
+由夹角为 \(60^\circ\)，
+\[
+\frac{\sqrt3-\lambda}{2\sqrt{1+\lambda^2}}=\cos60^\circ=\frac12,
+\]
+所以 \(\sqrt3-\lambda=\sqrt{1+\lambda^2}\). 两边平方得
+\[
+3-2\sqrt3\lambda+\lambda^2=1+\lambda^2,
+\]
+从而 \(\lambda=\dfrac{\sqrt3}{3}\). 代回原等式可知两边均为正，故该值符合条件.
+\end{solution}
+
 \begin{problem}
-由一个长方体和两个 \(\dfrac14\) 圆柱构成的几何体的三视图如图，则该几何体的体积为\fillinblank{}.
+由一个长方体和两个 \(\dfrac14\) 圆柱体构成的几何体的三视图如图，则该几何体的体积为\fillinblank{}.
 
 \bitmapfigure[max width=0.48\linewidth]{img/2017/shandong_science/q13_fig1.png}
 \end{problem}
 
+\begin{answer}
+\(2+\dfrac{\pi}{2}\)
+\end{answer}
+
+\begin{solution}
+由三视图可知，该几何体由一个长为 \(2\)、宽为 \(1\)、高为 \(1\) 的长方体，以及两个半径为 \(1\)、高为 \(1\) 的四分之一圆柱体组成. 因此长方体体积为 \(2\times1\times1=2\)，两个四分之一圆柱体的体积之和为
+\[
+2\times\frac14\pi\times1^2\times1=\frac\pi2.
+\]
+所以该几何体的体积为 \(2+\dfrac\pi2\).
+\end{solution}
+
 \begin{problem}
 在平面直角坐标系 \(xOy\) 中，双曲线 \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\)（\(a>0\)，\(b>0\)）的右支与焦点为 \(F\) 的抛物线 \(x^2=2py\)（\(p>0\)）交于 \(A\)，\(B\) 两点，若 \(\lvert AF\rvert+\lvert BF\rvert=4\lvert OF\rvert\)，则该双曲线的渐近线方程为\fillinblank{}.
 \end{problem}
+
+\begin{answer}
+\(y=\pm\dfrac{\sqrt2}{2}x\)
+\end{answer}
+
+\begin{solution}
+设抛物线上的交点为 \(P(x,y)\). 抛物线 \(x^2=2py\) 的焦点为 \(F(0,\frac p2)\)，故由抛物线的定义，
+\[
+|PF|=y+\frac p2.
+\]
+设交点 \(A\)、\(B\) 的纵坐标分别为 \(y_A\)、\(y_B\). 由已知条件
+\[
+|AF|+|BF|=y_A+y_B+p=4|OF|=4\times\frac p2=2p,
+\]
+得 \(y_A+y_B=p\).
+
+将 \(x^2=2py\) 代入双曲线方程，得
+\[
+\frac{2py}{a^2}-\frac{y^2}{b^2}=1,
+\]
+即交点纵坐标满足关于 \(y\) 的二次方程
+\[
+\frac{y^2}{b^2}-\frac{2p}{a^2}y+1=0.
+\]
+由韦达定理，两个根的和为 \(\dfrac{2pb^2}{a^2}\)，所以
+\[
+\frac{2pb^2}{a^2}=p,\qquad \frac{b^2}{a^2}=\frac12.
+\]
+双曲线的渐近线为 \(y=\pm\dfrac ba x\)，因此所求方程为 \(y=\pm\dfrac{\sqrt2}{2}x\).
+\end{solution}
 
 \begin{problem}
 若函数 \(\e^x f(x)\)（\(\e\approx2.71828\ldots\) 是自然对数的底数）在 \(f(x)\) 的定义域上单调递增，则称函数 \(f(x)\) 具有 \(M\) 性质. 下列函数中所有具有 \(M\) 性质的函数的序号为\fillinblank{}.
@@ -133,6 +356,21 @@
 \item \(f(x)=x^2+2\)
 \end{circlelist}
 \end{problem}
+
+\begin{answer}
+\(\circled{1}\circled{4}\)
+\end{answer}
+
+\begin{solution}
+逐一判断各函数：
+\begin{enumerate}
+\item \(\e^xf(x)=\left(\dfrac\e2\right)^x\)，因为 \(\dfrac\e2>1\)，所以该函数在 \(\R\) 上单调递增，函数 \(f(x)=2^{-x}\) 具有 \(M\) 性质.
+\item \(\e^xf(x)=\left(\dfrac\e3\right)^x\)，因为 \(0<\dfrac\e3<1\)，所以该函数单调递减，函数 \(f(x)=3^{-x}\) 不具有 \(M\) 性质.
+\item \(\left(\e^xx^3\right)'=\e^x(x^3+3x^2)=\e^xx^2(x+3)\). 当 \(x<-3\) 时导数小于 \(0\)，所以函数 \(f(x)=x^3\) 不具有 \(M\) 性质.
+\item \(\left[\e^x(x^2+2)\right]'=\e^x(x^2+2x+2)=\e^x[(x+1)^2+1]>0\)，所以函数 \(f(x)=x^2+2\) 具有 \(M\) 性质.
+\end{enumerate}
+因此所有具有 \(M\) 性质的函数序号为 \(\circled{1}\circled{4}\).
+\end{solution}
 
 \section{解答题}
 
@@ -145,16 +383,82 @@
 \end{enumerate}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item 由和差化积公式，
+\[
+f(x)=2\sin\left(\omega x-\frac\pi3\right)\cos\frac\pi6=\sqrt3\sin\left(\omega x-\frac\pi3\right).
+\]
+由 \(f\left(\dfrac\pi6\right)=0\)，得
+\[
+\sin\left(\frac{\omega\pi}{6}-\frac\pi3\right)=0,
+\]
+所以 \(\dfrac{\omega\pi}{6}-\dfrac\pi3=k\pi\)，即 \(\omega=2+6k\). 又 \(0<\omega<3\)，故 \(k=0\)，从而 \(\omega=2\).
+\item 函数 \(y=f(x)\) 的图象上各点横坐标伸长为原来的 \(2\) 倍后，所得函数为
+\[
+y=f\left(\frac x2\right)=\sqrt3\sin\left(x-\frac\pi3\right).
+\]
+再向左平移 \(\dfrac\pi4\) 个单位，得到
+\[
+g(x)=f\left(\frac{x+\pi/4}{2}\right)=\sqrt3\sin\left(x-\frac\pi{12}\right).
+\]
+当 \(x\in\left[-\dfrac\pi4,\dfrac{3\pi}4\right]\) 时，令 \(t=x-\dfrac\pi{12}\)，则 \(t\in\left[-\dfrac\pi3,\dfrac{2\pi}3\right]\). 在此区间内，\(\sin t\) 的最小值为 \(-\dfrac{\sqrt3}{2}\)，所以 \(g(x)\) 的最小值为
+\[
+\sqrt3\times\left(-\frac{\sqrt3}{2}\right)=-\frac32.
+\]
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
 如图，几何体是圆柱的一部分，它是由矩形 \(ABCD\)（及其内部）以 \(AB\) 边所在直线为旋转轴旋转 \(120^\circ\) 得到的，\(G\) 是 \(\overset{\frown}{DF}\) 的中点.
 
 \begin{enumerate}
-\item 设 \(P\) 是 \(EC\) 上的一点，且 \(AP\perp BE\)，求 \(\angle CBP\) 的大小；
+\item 设 \(P\) 是 \(\overset{\frown}{CE}\) 上的一点，且 \(AP\perp BE\)，求 \(\angle CBP\) 的大小；
 \item 当 \(AB=3\)，\(AD=2\) 时，求二面角 \(E-AG-C\) 的大小.
 \end{enumerate}
 
 \bitmapfigure[max width=0.55\linewidth]{img/2017/shandong_science/q17_fig1.png}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item 设 \(AB\) 为 \(z\) 轴，取 \(B\) 为原点，令 \(AB=h\)，\(AD=r\). 在旋转前取 \(C=(r,0,0)\)、\(D=(r,0,h)\)、\(A=(0,0,h)\)，则旋转 \(120^\circ\) 后
+\[
+E=\left(-\frac r2,\frac{\sqrt3r}{2},0\right),\qquad F=\left(-\frac r2,\frac{\sqrt3r}{2},h\right).
+\]
+设 \(P\) 在弧 \(\overset{\frown}{CE}\) 上，对应的圆心角为 \(\theta\)，则
+\[
+P=(r\cos\theta,r\sin\theta,0),\qquad 0\leq\theta\leq\frac{2\pi}{3}.
+\]
+由 \(AP\perp BE\)，有
+\[
+\overrightarrow{AP}\cdot\overrightarrow{BE}=0.
+\]
+代入 \(\overrightarrow{AP}=(r\cos\theta,r\sin\theta,-h)\) 和 \(\overrightarrow{BE}=\left(-\dfrac r2,\dfrac{\sqrt3r}{2},0\right)\)，得
+\[
+\frac{r^2}{2}(-\cos\theta+\sqrt3\sin\theta)=0,
+\]
+所以 \(\tan\theta=\dfrac1{\sqrt3}\). 结合 \(\theta\in\left[0,\dfrac{2\pi}3\right]\)，得 \(\theta=\dfrac\pi6\). 而 \(BC\) 与 \(BP\) 都在同一底面圆内，故 \(\angle CBP=\theta=30^\circ\).
+\item 当 \(AB=3\)、\(AD=2\) 时，取 \(h=3\)、\(r=2\). 弧 \(\overset{\frown}{DF}\) 的中点对应的圆心角为 \(60^\circ\)，所以
+\[
+A=(0,0,3),\quad G=(1,\sqrt3,3),\quad E=(-1,\sqrt3,0),\quad C=(2,0,0).
+\]
+取 \(\bs u=\overrightarrow{AG}=(1,\sqrt3,0)\)、\(\bs v=\overrightarrow{AE}=(-1,\sqrt3,-3)\)、\(\bs w=\overrightarrow{AC}=(2,0,-3)\)，则平面 \(EAG\)、\(CAG\) 的法向量可分别取为
+\[
+\bs n_1=\bs u\times\bs v=(-3\sqrt3,3,2\sqrt3),\qquad
+\bs n_2=\bs u\times\bs w=(-3\sqrt3,3,-2\sqrt3).
+\]
+于是
+\[
+\bs n_1\cdot\bs n_2=24,\qquad |\bs n_1|=|\bs n_2|=4\sqrt3.
+\]
+设二面角 \(E-AG-C\) 为 \(\alpha\)，则
+\[
+\cos\alpha=\frac{\bs n_1\cdot\bs n_2}{|\bs n_1||\bs n_2|}=\frac{24}{48}=\frac12.
+\]
+因此 \(\alpha=60^\circ\).
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 在心理学研究中，常采用对比试验的方法评价不同心理暗示对人的影响，具体方法如下：将参加试验的志愿者随机分成两组，一组接受甲种心理暗示，另一组接受乙种心理暗示，通过对比这两组志愿者接受心理暗示后的结果来评价两种心理暗示的作用，现有 6 名男志愿者 \(A_1\)，\(A_2\)，\(A_3\)，\(A_4\)，\(A_5\)，\(A_6\) 和 4 名女志愿者 \(B_1\)，\(B_2\)，\(B_3\)，\(B_4\)，从中随机抽取 5 人接受甲种心理暗示，另 5 人接受乙种心理暗示.
@@ -164,6 +468,35 @@
 \item 用 \(X\) 表示接受乙种心理暗示的女志愿者人数，求 \(X\) 的分布列与数学期望 \(E(X)\).
 \end{enumerate}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item 从 \(10\) 名志愿者中随机抽取 \(5\) 人接受甲种心理暗示，所有等可能的抽法共有 \(\mathrm C_{10}^5\) 种. 若甲组包含 \(A_1\) 但不包含 \(B_1\)，则其余 \(4\) 人从另外 \(8\) 人中选取，共有 \(\mathrm C_8^4\) 种. 因此所求概率为
+\[
+\frac{\mathrm C_8^4}{\mathrm C_{10}^5}=\frac{70}{252}=\frac5{18}.
+\]
+\item 乙组共有 \(5\) 人，\(X\) 表示其中女志愿者人数. 对 \(k=0,1,2,3,4\)，乙组含 \(k\) 名女志愿者的概率为
+\[
+P(X=k)=\frac{\mathrm C_4^k\mathrm C_6^{5-k}}{\mathrm C_{10}^5}.
+\]
+分别计算得
+\[
+P(X=0)=\frac1{42},\quad P(X=1)=\frac5{21},\quad P(X=2)=\frac{10}{21},\quad P(X=3)=\frac5{21},\quad P(X=4)=\frac1{42}.
+\]
+因此 \(X\) 的分布列为
+\begin{center}
+\begin{tabular}{c|ccccc}
+\(X\) & \(0\) & \(1\) & \(2\) & \(3\) & \(4\) \\
+\hline
+\(P\) & \(\dfrac1{42}\) & \(\dfrac5{21}\) & \(\dfrac{10}{21}\) & \(\dfrac5{21}\) & \(\dfrac1{42}\)
+\end{tabular}
+\end{center}
+且
+\[
+E(X)=0\times\frac1{42}+1\times\frac5{21}+2\times\frac{10}{21}+3\times\frac5{21}+4\times\frac1{42}=2.
+\]
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 已知 \(\{x_n\}\) 是各项均为正数的等比数列，且 \(x_1+x_2=3\)，\(x_3-x_2=2\).
@@ -176,6 +509,38 @@
 \bitmapfigure[max width=0.48\linewidth]{img/2017/shandong_science/q19_fig1.png}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item 设等比数列的公比为 \(q\)，因为各项为正数，所以 \(q>0\). 由 \(x_2=x_1q\)、\(x_3=x_1q^2\) 及已知条件，得
+\[
+x_1(1+q)=3,\qquad x_1q(q-1)=2.
+\]
+由第一式 \(x_1=\dfrac3{1+q}\)，代入第二式得
+\[
+\frac{3q(q-1)}{1+q}=2
+\Longrightarrow 3q^2-5q-2=0
+\Longrightarrow (3q+1)(q-2)=0.
+\]
+因 \(q>0\)，所以 \(q=2\)，进而 \(x_1=1\). 因此数列通项为 \(x_n=2^{n-1}\).
+\item 由 \(P_i(x_i,i)\) 与 \(P_{i+1}(x_{i+1},i+1)\) 及直线 \(y=0\) 所围成的部分是一个梯形，其面积为
+\[
+\frac{i+(i+1)}2(x_{i+1}-x_i).
+\]
+将 \(x_i=2^{i-1}\) 代入，得
+\[
+T_n=\sum_{i=1}^n\frac{2i+1}{2}\left(2^i-2^{i-1}\right)=\frac12\sum_{i=1}^n(2i+1)2^{i-1}.
+\]
+又
+\[
+\sum_{i=1}^n i2^{i-1}=(n-1)2^n+1,\qquad \sum_{i=1}^n2^{i-1}=2^n-1,
+\]
+所以
+\[
+T_n=\frac12\left[2\bigl((n-1)2^n+1\bigr)+(2^n-1)\right]=\frac{(2n-1)2^n+1}{2}.
+\]
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
 已知函数 \(f(x)=x^2+2\cos x\)，\(g(x)=\e^x\left( \cos x-\sin x+2x-2 \right)\)，其中 \(\e\approx2.71828\ldots\) 是自然对数的底数.
 
@@ -185,13 +550,107 @@
 \end{enumerate}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item \(f'(x)=2x-2\sin x\)，所以 \(f'(\pi)=2\pi\)，又 \(f(\pi)=\pi^2-2\). 因此切线方程为
+\[
+y-(\pi^2-2)=2\pi(x-\pi),
+\]
+即 \(y=2\pi x-\pi^2-2\).
+\item 令 \(u(x)=\cos x-\sin x+2x-2\)，则 \(g(x)=\e^xu(x)\)，且
+\[
+g'(x)=\e^x[u(x)+u'(x)]=2\e^x(x-\sin x).
+\]
+从而
+\[
+h'(x)=2(x-\sin x)(\e^x-a).
+\]
+记 \(\varphi(x)=x-\sin x\). 因为 \(\varphi'(x)=1-\cos x\geq0\) 且 \(\varphi(0)=0\)，所以 \(\varphi(x)<0\)（\(x<0\)），\(\varphi(x)>0\)（\(x>0\)）.
+
+当 \(a\leq0\) 时，\(\e^x-a>0\)，故 \(h(x)\) 在 \((-\infty,0)\) 上单调递减，在 \((0,+\infty)\) 上单调递增，在 \(x=0\) 处取得极小值
+\[
+h(0)=\e^0(1-0-2)-a(0+2)=-1-2a.
+\]
+
+当 \(0<a<1\) 时，\(\ln a<0\). 按 \(\ln a\) 和 \(0\) 将定义域分段，得 \(h(x)\) 在 \((-\infty,\ln a)\)、\((\ln a,0)\)、\((0,+\infty)\) 上分别单调递增、递减、递增. 因此 \(x=\ln a\) 处为极大值点，\(x=0\) 处为极小值点. 令 \(r=\ln a\)，由 \(\e^r=a\) 得
+\[
+h(r)=a(\cos r-\sin r+2r-2)-a(r^2+2\cos r)
+=-a\left(r^2-2r+\sin r+\cos r+2\right),
+\]
+即极大值为 \(-a\left[(\ln a)^2-2\ln a+\sin(\ln a)+\cos(\ln a)+2\right]\)，极小值为 \(-1-2a\).
+
+当 \(a=1\) 时，\(\ln a=0\)，在 \(x<0\) 和 \(x>0\) 时都有 \(h'(x)>0\)，所以 \(h(x)\) 在 \(\R\) 上单调递增，无极值.
+
+当 \(a>1\) 时，\(\ln a>0\). 按 \(0\) 和 \(\ln a\) 分段，得 \(h(x)\) 在 \((-\infty,0)\)、\((0,\ln a)\)、\((\ln a,+\infty)\) 上分别单调递增、递减、递增. 因此 \(x=0\) 处为极大值点，极大值为 \(-1-2a\)；\(x=\ln a\) 处为极小值点，极小值为
+\[
+-a\left[(\ln a)^2-2\ln a+\sin(\ln a)+\cos(\ln a)+2\right].
+\]
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
 在平面直角坐标系 \(xOy\) 中，椭圆 \(E:\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\)（\(a>b>0\)）的离心率为 \(\dfrac{\sqrt2}{2}\)，焦距为 2.
 
 \begin{enumerate}
 \item 求椭圆 \(E\) 的方程；
-\item 如图，该直线 \(l:y=k_1x-\dfrac{\sqrt3}{2}\) 交椭圆 E 于 A，B 两点，C 是椭圆 E 上的一点，直线 \(OC\) 的斜率为 \(k_2\)，且 \(k_1k_2=\dfrac{\sqrt2}{4}\)，\(M\) 是线段 \(OC\) 延长线上一点，且 \(\lvert MC\rvert:\lvert AB\rvert=2:3\)，\(\odot M\) 的半径为 \(\lvert MC\rvert\)，\(OS\)，\(OT\) 是 \(\odot M\) 的两条切线，切点分别为 \(S\)，\(T\)，求 \(\angle SOT\) 的最大值，并求取得最大值时直线 \(l\) 的斜率.
+\item 如图，该直线 \(l:y=k_1x-\dfrac{\sqrt3}{2}\) 交椭圆 \(E\) 于 \(A\)，\(B\) 两点，\(C\) 是椭圆 \(E\) 上的一点，直线 \(OC\) 的斜率为 \(k_2\)，且 \(k_1k_2=\dfrac{\sqrt2}{4}\)，\(M\) 是线段 \(OC\) 延长线上一点，且 \(\lvert MC\rvert:\lvert AB\rvert=2:3\)，\(\odot M\) 的半径为 \(\lvert MC\rvert\)，\(OS\)，\(OT\) 是 \(\odot M\) 的两条切线，切点分别为 \(S\)，\(T\)，求 \(\angle SOT\) 的最大值，并求取得最大值时直线 \(l\) 的斜率.
 \end{enumerate}
 
 \bitmapfigure[max width=0.55\linewidth]{img/2017/shandong_science/q21_fig1.png}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item 设椭圆的半焦距为 \(c\). 由焦距为 \(2\) 得 \(2c=2\)，所以 \(c=1\). 又离心率 \(\dfrac ca=\dfrac{\sqrt2}{2}\)，故 \(a=\sqrt2\). 由 \(b^2=a^2-c^2\)，得 \(b^2=1\)，所以椭圆方程为
+\[
+\frac{x^2}{2}+y^2=1.
+\]
+\item 记 \(k_1=k\)，则 \(k\ne0\)，且由 \(k_1k_2=\dfrac{\sqrt2}{4}\) 得
+\[
+k_2=\frac{\sqrt2}{4k},\qquad k_2^2=\frac1{8k^2}.
+\]
+设 \(t=k^2>0\). 直线 \(l:y=kx-\dfrac{\sqrt3}{2}\) 与椭圆联立，得
+\[
+\left(\frac12+k^2\right)x^2-\sqrt3kx-\frac14=0.
+\]
+设交点横坐标为 \(x_A,x_B\)，由一元二次方程根的差及直线斜率，弦长为
+\[
+|AB|=\sqrt{1+k^2}|x_A-x_B|
+=\frac{\sqrt{2(1+k^2)(8k^2+1)}}{2k^2+1}.
+\]
+另一方面，点 \(C\) 在椭圆上且 \(OC\) 的斜率为 \(k_2\)，所以
+\[
+|OC|^2=\frac{1+k_2^2}{\frac12+k_2^2}=\frac{8t+1}{4t+1}.
+\]
+由上式及 \(k^2=t\)，
+\[
+\left(\frac{|AB|}{|OC|}\right)^2
+=\frac{2(1+t)(4t+1)}{(2t+1)^2}.
+\]
+记右端为 \(Q(t)\)，则
+\[
+Q'(t)=\frac{2(1-4t^2)}{(4t^2+4t+1)^2}.
+\]
+所以 \(Q(t)\) 在 \(0<t<\dfrac12\) 时递增，在 \(t>\dfrac12\) 时递减，最大值在 \(t=\dfrac12\) 处取得，且
+\[
+\max\frac{|AB|}{|OC|}=\sqrt{Q\left(\frac12\right)}=\frac32.
+\]
+由 \(|MC|:|AB|=2:3\)，得
+\[
+\frac{|MC|}{|OC|}=\frac23\frac{|AB|}{|OC|}\leq1.
+\]
+设圆 \(\odot M\) 的半径为 \(r=|MC|\)，在直角三角形 \(OMS\) 中，\(OS\) 为切线，所以 \(\angle OSM=90^\circ\). 设 \(\angle SOM=\theta\)，则
+\[
+\sin\theta=\frac{MS}{OM}=\frac r{|OM|}.
+\]
+由于 \(M\) 在线段 \(OC\) 的延长线上，\(|OM|=|OC|+|CM|\)，因此
+\[
+\frac r{|OM|}=\frac{|MC|}{|OC|+|MC|}\leq\frac12.
+\]
+又 \(\angle SOT=2\theta\)，故 \(\angle SOT\leq60^\circ\). 当 \(t=\dfrac12\)，即 \(k_1^2=\dfrac12\) 时，\(|MC|=|OC|\)，从而 \(\sin\theta=\dfrac12\)，\(\theta=30^\circ\)，取得最大值
+\[
+\angle SOT=60^\circ=\frac\pi3.
+\]
+此时 \(k_1=\pm\dfrac{\sqrt2}{2}\).
+\end{enumerate}
+\end{solution}

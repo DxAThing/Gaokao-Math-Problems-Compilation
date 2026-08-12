@@ -1,5 +1,7 @@
 \chapter{1980年全国卷（理）}
 
+\section{解答题}
+
 \begin{problem}
 将多项式 \(x^{5}y - 9xy^{5}\) 分别在下列范围内分解因式：
 
@@ -10,57 +12,132 @@
 \end{enumerate}
 \end{problem}
 
+\begin{solution}
+先提取公因式并利用平方差公式，得 \(x^{5}y-9xy^{5}=xy\left(x^{4}-9y^{4}\right)=xy\left(x^{2}-3y^{2}\right)\left(x^{2}+3y^{2}\right)\).
+
+\begin{enumerate}
+\item 在有理数范围内，\(x^{2}-3y^{2}\) 的根为 \(x=\pm\sqrt{3}y\)，不是有理数倍的 \(y\)，而 \(x^{2}+3y^{2}\) 也没有有理数一次因式，因此分解为 \(xy\left(x^{2}-3y^{2}\right)\left(x^{2}+3y^{2}\right)\).
+\item 在实数范围内，\(x^{2}-3y^{2}=\left(x+\sqrt{3}y\right)\left(x-\sqrt{3}y\right)\)，而 \(x^{2}+3y^{2}\) 在实数范围内不能再分解，所以分解为 \(xy\left(x^{2}+3y^{2}\right)\left(x+\sqrt{3}y\right)\left(x-\sqrt{3}y\right)\).
+\item 在复数范围内，\(x^{2}+3y^{2}=\left(x+\sqrt{3}\i y\right)\left(x-\sqrt{3}\i y\right)\)，故完全分解为 \(xy\left(x+\sqrt{3}\i y\right)\left(x-\sqrt{3}\i y\right)\left(x+\sqrt{3}y\right)\left(x-\sqrt{3}y\right)\).
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
 半径为 \(1\)，\(2\)，\(3\) 的三个圆两两外切. 证明：以这三个圆的圆心为顶点的三角形是直角三角形.
 \end{problem}
+
+\begin{solution}
+设三个圆的圆心分别为 \(O_1\)，\(O_2\)，\(O_3\)，相应半径分别为 \(1\)，\(2\)，\(3\). 由两圆外切时两圆心之间的距离等于两半径之和，得 \(O_1O_2=1+2=3\)，\(O_1O_3=1+3=4\)，\(O_2O_3=2+3=5\). 因为 \(3^{2}+4^{2}=5^{2}\)，所以由勾股定理的逆定理，\(\triangle O_1O_2O_3\) 是直角三角形，直角在 \(O_1\) 处.
+\end{solution}
 
 \begin{problem}
 用解析几何方法证明：三角形的三条高线交于一点.
 \end{problem}
 
+\begin{solution}
+设三角形为 \(\triangle ABC\). 取最长边 \(BC\) 所在直线为 \(x\) 轴，取过 \(A\) 且垂直于 \(BC\) 的高所在直线为 \(y\) 轴. 设 \(A=(0,a)\)，\(B=(b,0)\)，\(C=(c,0)\). 由于 \(BC\) 是最长边，点 \(A\) 的高足在边 \(BC\) 的内部，故可取 \(a>0\)，\(b<0<c\).
+
+直线 \(AB\) 的方程为 \(\frac{x}{b}+\frac{y}{a}=1\)，斜率为 \(-\frac{a}{b}\)，所以过 \(C\) 的高线方程为 \(y=\frac{b}{a}(x-c)\). 同理，直线 \(AC\) 的斜率为 \(-\frac{a}{c}\)，所以过 \(B\) 的高线方程为 \(y=\frac{c}{a}(x-b)\).
+
+设这两条高线的交点为 \(D\). 联立两式，得 \(b(x-c)=c(x-b)\)，即 \((b-c)x=0\). 因为 \(b\neq c\)，所以 \(x=0\). 这说明 \(D\) 在 \(y\) 轴上，而 \(y\) 轴就是过 \(A\) 的高线. 因此三条高线交于同一点.
+\end{solution}
+
 \begin{problem}
-证明对数换底公式： \(\log_b N = \frac{\log_a N}{\log_a b}\)（\(a\)，\(b\)，\(N\) 都是正数，\(a \neq 1\)，\(b \neq 1\)）.
+证明对数换底公式：\(\log_b N = \frac{\log_a N}{\log_a b}\)（\(a\)，\(b\)，\(N\) 都是正数，\(a \neq 1\)，\(b \neq 1\)）.
 \end{problem}
+
+\begin{solution}
+令 \(x=\log_b N\). 由对数定义，\(b^x=N\). 两边取以 \(a\) 为底的对数，得 \(\log_a\left(b^x\right)=\log_a N\)，即 \(x\log_a b=\log_a N\). 因为 \(b\neq1\)，所以 \(\log_a b\neq0\)，从而 \(x=\frac{\log_a N}{\log_a b}\). 代回 \(x=\log_b N\)，即得 \(\log_b N=\frac{\log_a N}{\log_a b}\).
+\end{solution}
 
 \begin{problem}
 直升飞机上一点 \(P\) 在地面 \(M\) 上的正射影是 \(A\)，从 \(P\) 看地面上一物体 \(B\)（不同于 \(A\)）. 直线 \(PB\) 垂直于飞机窗玻璃所在的平面 \(N\)（如图）.
+
+证明：平面 \(N\) 必与平面 \(M\) 相交，且交线 \(l\) 垂直于 \(AB\).
 
 \begin{center}
 \FigureLayoutDeclare{img/1980/national_science/q4_fig1.png}{5.8cm}{18bp 25bp 36bp 29bp}
 \bitmapfigure[float=inline,width=4.8cm]{img/1980/national_science/q4_fig1.png}
 \end{center}
-
-证明：平面 \(N\) 必与平面 \(M\) 相交，且交线 \(l\) 垂直于 \(AB\).
 \end{problem}
 
+\begin{solution}
+若平面 \(N\) 与平面 \(M\) 平行，则因 \(PA\perp M\)，有 \(PA\perp N\). 于是过点 \(P\) 的两条直线 \(PA\) 和 \(PB\) 都垂直于平面 \(N\)，它们必重合，从而 \(A\) 与 \(B\) 重合，这与题设 \(A\neq B\) 矛盾. 因此平面 \(N\) 必与平面 \(M\) 相交.
+
+设交线为 \(l\). 因为 \(l\subset M\)，且 \(PA\perp M\)，所以 \(PA\perp l\)；又因为 \(PB\perp N\)，且 \(l\subset N\)，所以 \(PB\perp l\). 将向量 \(\overrightarrow{PB}\) 正投影到平面 \(M\) 上，得到向量 \(\overrightarrow{AB}\). 直线 \(l\) 在平面 \(M\) 内，且 \(PB\perp l\)，所以其投影 \(AB\) 也垂直于 \(l\). 因而 \(l\perp AB\).
+\end{solution}
+
 \begin{problem}
-设三角函数 \(f(x)=\sin \left( \frac{k\pi}{5} + \frac{\pi}{3} \right)\)，其中 \(k\neq 0\).
+设三角函数 \(f(x)=\sin\left(\frac{kx}{5}+\frac{\pi}{3}\right)\)，其中 \(k\neq0\).
 
 \begin{enumerate}
-\item 写出 \(f(x)\) 极大值 \(M\)，极小值 \(m\) 与最小正周期 \(T\).
+\item 写出 \(f(x)\) 极大值 \(M\)，极小值 \(m\) 与最小正周期 \(T\)；
 \item 试求最小的正整数 \(k\)，使得当自变量 \(x\) 在任意两个整数间（包括整数本身）变化时，函数 \(f(x)\) 至少有一个值是 \(M\) 与一个值是 \(m\).
 \end{enumerate}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item 正弦函数的值域为 \([-1,1]\)，故 \(f(x)\) 的极大值为 \(M=1\)，极小值为 \(m=-1\). 其中 \(x\) 的系数为 \(\frac{k}{5}\)，所以最小正周期为 \(T=\frac{2\pi}{\left\lvert k/5\right\rvert}=\frac{10\pi}{\lvert k\rvert}\).
+\item 欲求最小正整数，以下设 \(k\in\Z_{>0}\). 在每一个长度为 \(T\) 的闭区间内，正弦函数的相位增加 \(2\pi\)，因此至少各出现一次最大值 \(M\) 和最小值 \(m\). 所以当 \(T\leq1\) 时，任意两个相邻整数 \(n\) 与 \(n+1\) 所确定的区间 \([n,n+1]\) 都包含其子区间 \([n,n+T]\)，从而其中至少各有一个值为 \(M\) 和 \(m\). 两个不相邻整数所确定的区间包含某个相邻整数区间，故同样满足题意.
+
+反过来设 \(T>1\). 函数取最大值的点为 \(x_j=\frac{5\pi}{6k}+jT\)（\(j\in\Z\)），相邻两点之间的距离为 \(T\). 令 \(n_j=\lfloor x_j\rfloor\). 因为 \(T>1\)，所以 \(n_{j+1}-n_j\geq1\). 若对所有 \(j\geq0\) 都有 \(n_{j+1}-n_j=1\)，则令 \(r_j=x_j-n_j\)，有 \(r_j=r_0+j(T-1)\)；当 \(j\) 足够大时 \(r_j\geq1\)，这与 \(0\leq r_j<1\) 矛盾. 因而存在某个 \(j\geq0\)，使 \(n_{j+1}-n_j\geq2\). 又因为 \(x_j=\frac{(5+60j)\pi}{6k}\) 不是整数，所以 \(x_j<n_j+1\)，且 \(x_{j+1}>n_j+2\). 因此闭区间 \([n_j+1,n_j+2]\) 完全位于相邻两个最大值点 \(x_j\)、\(x_{j+1}\) 之间，不含最大值 \(M\)，题意不成立. 所以题意的充要条件为 \(T\leq1\).
+
+于是 \(\frac{10\pi}{k}\leq1\)，即 \(k\geq10\pi\). 因为 \(31<10\pi<32\)，最小的正整数为 \(k=32\).
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 \(CD\) 为直角 \(\triangle ABC\) 中斜边 \(AB\) 上的高，已知 \(\triangle ACD\)，\(\triangle CBD\)，\(\triangle ABC\) 的面积成等比数列，求 \(\angle B\)（用反三角函数表示）.
 \end{problem}
 
-\begin{problem}
-已知 \(0 < \alpha < \pi\)，证明：\(2\sin \alpha \leqslant \cot \frac{\alpha}{2}\)；并讨论 \(\alpha\) 为何值时等号成立.
-\end{problem}
+\begin{solution}
+设 \(CD=h\)，\(AB=c\)，\(BD=x\)，则 \(AD=c-x\). 三个三角形的面积依次为 \(\frac12h(c-x)\)，\(\frac12hx\)，\(\frac12hc\). 由它们成等比数列，得 \(\left(\frac12hx\right)^2=\frac12h(c-x)\cdot\frac12hc\)，约去正数 \(\frac14h^2\)，得到 \(x^2=c(c-x)\).
+
+整理为 \(x^2+cx-c^2=0\)，解得 \(x=\frac{-1\pm\sqrt{5}}{2}c\). 因为 \(0<x<c\)，只能取正根，所以 \(x=\frac{\sqrt{5}-1}{2}c\).
+
+由直角三角形斜边上的高的性质，\(AC^2=AD\cdot AB=c(c-x)\). 与前式比较，得 \(AC^2=x^2\)，故 \(AC=x\). 在直角三角形 \(ABC\) 中，\(\sin B=\frac{AC}{AB}=\frac{x}{c}=\frac{\sqrt{5}-1}{2}\). 因为 \(B\) 是锐角，所以 \(\angle B=\arcsin\frac{\sqrt{5}-1}{2}\).
+\end{solution}
 
 \begin{problem}
-抛物线的方程是 \( y^{2} = 2x \)，有一个半径为 \(1\) 的圆，圆心在 \( x \) 轴上运动. 问这个圆运动到什么位置时，圆与抛物线在交点处的切线互相垂直.
-注：设 \(P(x_0,y_0)\) 是抛物线 \(y^{2} = 2px\) 上一点，则抛物线在 \(P\) 点处的切线斜率是 \(\frac{p}{y_0}\).
+已知 \(0 < \alpha < \pi\)，证明：\(2\sin 2\alpha\leqslant\cot\frac{\alpha}{2}\)；并讨论 \(\alpha\) 为何值时等号成立.
 \end{problem}
 
+\begin{solution}
+因为 \(0<\alpha<\pi\)，所以 \(\sin\alpha>0\)，且 \(\cot\frac{\alpha}{2}=\frac{1+\cos\alpha}{\sin\alpha}\). 原不等式等价于 \(2\sin2\alpha\sin\alpha\leq1+\cos\alpha\).
+
+令 \(c=\cos\alpha\). 利用 \(\sin2\alpha=2\sin\alpha\cos\alpha\)，左端化为 \(4\sin^2\alpha\cos\alpha=4(1-c^2)c=4(1-c)(1+c)c\). 因此只需证明 \((1+c)\left[4(1-c)c-1\right]\leq0\). 而 \(1+c>0\)，并且 \(4(1-c)c-1=-(2c-1)^2\leq0\)，所以原不等式成立.
+
+等号成立当且仅当 \((2c-1)^2=0\)，即 \(\cos\alpha=\frac12\). 在 \(0<\alpha<\pi\) 内，得到 \(\alpha=\frac\pi3\).
+\end{solution}
+
 \begin{problem}
-设直线 \(l\) 的参数方程是 \(\begin{cases}
-x = t\\
-y = b + mt
-\end{cases}\)（\(t\) 是参数），椭圆 \(E\) 的参数方程是 \(\begin{cases}
-x = 1 + a\cos \theta,\\
-y = \sin \theta
-\end{cases}\)（\(a \neq 0\)，\(\theta\) 是参数），问 \(a\)，\(b\) 应满足什么条件，使得对于任意 \(m\) 值来说，直线 \(l\) 与椭圆 \(E\) 总有公共点.
+抛物线的方程是 \(y^{2}=2x\)，有一个半径为 \(1\) 的圆，圆心在 \(x\) 轴上运动. 问这个圆运动到什么位置时，圆与抛物线在交点处的切线互相垂直.
+注：设 \(P(x_0,y_0)\) 是抛物线 \(y^{2}=2px\) 上一点，则抛物线在 \(P\) 点处的切线斜率是 \(\frac{p}{y_0}\).
 \end{problem}
+
+\begin{solution}
+设圆心为 \(C=(k,0)\)，则圆的方程为 \((x-k)^2+y^2=1\). 设圆与抛物线的一个交点为 \(P=(x_0,y_0)\). 在 \(P\) 点，圆的半径 \(CP\) 与圆的切线垂直；要使圆的切线与抛物线的切线垂直，充要条件是半径 \(CP\) 与抛物线在 \(P\) 点的切线平行.
+
+若 \(y_0=0\)，则 \(P=(0,0)\)，此时圆心在 \(x\) 轴上且 \(CP\) 平行于 \(x\) 轴，圆在 \(P\) 处的切线与抛物线在顶点处的切线均为 \(y\) 轴，不可能互相垂直，故以下 \(y_0\neq0\). 抛物线 \(y^2=2x\) 在 \(P\) 点的切线斜率为 \(\frac1{y_0}\)，可取方向向量 \((y_0,1)\)；圆在 \(P\) 点的切线可取方向向量 \((-y_0,x_0-k)\). 两切线垂直当且仅当 \((-y_0,x_0-k)\cdot(y_0,1)=0\)，即 \(y_0^2=x_0-k\). 又因 \(P\) 在抛物线上，\(y_0^2=2x_0\)，所以 \(k=-x_0\).
+
+将 \(k=-x_0\) 代入圆的方程，得 \((2x_0)^2+2x_0=1\)，即 \(4x_0^2+2x_0-1=0\). 由于抛物线上的点满足 \(x_0\geq0\)，故 \(x_0=\frac{\sqrt{5}-1}{4}\)，从而 \(k=\frac{1-\sqrt{5}}{4}\).
+
+所以圆心为 \(\left(\frac{1-\sqrt{5}}{4},0\right)\)，圆的方程为 \(\left(x-\frac{1-\sqrt{5}}{4}\right)^2+y^2=1\). 关于 \(x\) 轴对称的另一个交点同样满足垂直条件.
+\end{solution}
+
+\section{附加题}
+
+\begin{problem}
+设直线 \(l\) 的参数方程是 \(\left\{\begin{aligned}x=t,\\ y=b+mt\end{aligned}\right.\)（\(t\) 是参数），椭圆 \(E\) 的参数方程是 \(\left\{\begin{aligned}x=1+a\cos\theta,\\ y=\sin\theta\end{aligned}\right.\)（\(a\neq0\)，\(\theta\) 是参数），问 \(a\)，\(b\) 应满足什么条件，使得对于任意 \(m\) 值来说，直线 \(l\) 与椭圆 \(E\) 总有公共点.
+\end{problem}
+
+\begin{solution}
+消去参数，直线为 \(y=mx+b\)，椭圆为 \(\frac{(x-1)^2}{a^2}+y^2=1\). 将直线方程代入椭圆方程并乘以 \(a^2\)，得关于 \(x\) 的方程 \((1+a^2m^2)x^2+2(a^2mb-1)x+1+a^2b^2-a^2=0\).
+
+因为二次项系数 \(1+a^2m^2>0\)，直线与椭圆有公共点的充要条件是判别式非负. 将判别式除以正数 \(4a^2\)，化简为 \((a^2-1)m^2-2bm+1-b^2\geq0\). 因此题目的条件等价于这个关于 \(m\) 的二次式对任意实数 \(m\) 都非负.
+
+若 \(a^2-1<0\)，二次式在 \(\lvert m\rvert\) 足够大时为负，不可能. 若 \(a^2-1=0\)，要使一次式对任意 \(m\) 非负，必须有 \(b=0\)，这正好满足后面的统一条件. 若 \(a^2-1>0\)，二次式对任意 \(m\) 非负，当且仅当其判别式不大于零，即 \(4b^2-4(a^2-1)(1-b^2)\leq0\). 化简得 \(a^2b^2\leq a^2-1\)，即 \(b^2\leq\frac{a^2-1}{a^2}\).
+
+合并三种情况，所求充要条件为 \(\lvert a\rvert\geq1\)，且 \(-\frac{\sqrt{a^2-1}}{\lvert a\rvert}\leq b\leq\frac{\sqrt{a^2-1}}{\lvert a\rvert}\).
+\end{solution}

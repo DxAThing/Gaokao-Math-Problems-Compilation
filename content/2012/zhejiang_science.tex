@@ -12,15 +12,46 @@
     {\((1,2)\) \(\cup\) \((3,4)\)}
 \end{problem}
 
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+由
+\[
+x^2-2x-3=(x-3)(x+1)
+\]
+得 \(B=[-1,3]\)，从而
+\(\complement_{\R}B=(-\infty,-1)\cup(3,+\infty)\).
+因此
+\[
+A\cap(\complement_{\R}B)=(1,4)\cap\bigl((-\infty,-1)\cup(3,+\infty)\bigr)=(3,4)
+\]
+故选第二项.
+\end{solution}
+
 \begin{problem}
-已知 i 是虚数单位，则 \( \frac{3+\i}{1-\i}= \)（\quad）
+已知 \(\i\) 是虚数单位，则 \( \frac{3+\i}{1-\i}= \)（\quad）
 
 \choices
-    {1 - 2i}
-    {2 - i}
+    {\(1-2\i\)}
+    {\(2-\i\)}
     {\(2 + \i\)}
     {\(1 + 2\i\)}
 \end{problem}
+
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+分母有理化，得
+\[
+\frac{3+\i}{1-\i}=\frac{(3+\i)(1+\i)}{(1-\i)(1+\i)}
+=\frac{2+4\i}{2}=1+2\i
+\]
+故选第四项.
+\end{solution}
 
 \begin{problem}
 设 \(a \in \R\)，则“\(a = 1\)”是直线 \(l_1: ax + 2y - 1 = 0\) 与直线 \(l_2: x + (a + 1)y + 4 = 0\) 平行的（\quad）
@@ -32,8 +63,25 @@
     {既不充分也不必要条件}
 \end{problem}
 
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+两直线平行的充要条件为其法向量平行，即
+\[
+\begin{vmatrix}a&2\\1&a+1\end{vmatrix}=0.
+\]
+所以
+\[
+a(a+1)-2=0\Longleftrightarrow(a-1)(a+2)=0
+\]
+即 \(a=1\) 或 \(a=-2\).
+当 \(a=1\) 时，两直线分别为 \(x+2y-1=0\) 和 \(x+2y+4=0\)，确实平行；但平行还可以由 \(a=-2\) 得到. 因此“\(a=1\)”是充分不必要条件，故选第一项.
+\end{solution}
+
 \begin{problem}
-把函数 \( y = \cos 2x + 1 \) 的图象上所有点的横坐标伸长到原来的2倍（纵坐标不变），然后向左平移1个单位长度，再向下平移1个单位长度，得到的图象是 （\quad）
+把函数 \( y = \cos 2x + 1 \) 的图象上所有点的横坐标伸长到原来的 \(2\) 倍（纵坐标不变），然后向左平移 \(1\) 个单位长度，再向下平移 \(1\) 个单位长度，得到的图象是 （\quad）
 
 \choices
     {\choicebitmap[width=0.15\paperwidth]{img/2012/zhejiang_science/q4_optA.png}}
@@ -42,25 +90,63 @@
     {\choicebitmap[width=0.15\paperwidth]{img/2012/zhejiang_science/q4_optD.png}}
 \end{problem}
 
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+横坐标伸长到原来的 \(2\) 倍后，函数变为 \(y=\cos x+1\). 向左平移 \(1\) 个单位长度后，函数变为 \(y=\cos(x+1)+1\)；再向下平移 \(1\) 个单位长度，得到
+\[
+y=\cos(x+1).
+\]
+该函数的周期为 \(2\pi\)，且在 \(x=-1\) 处取得最大值，在 \(x=\frac{\pi}{2}-1\) 处与 \(x\) 轴相交，所以图象为第一种.
+\end{solution}
+
 \begin{problem}
-设 \(a\)，\(b\) 是两个非零向量（\quad）
+设 \(\bs{a}\)，\(\bs{b}\) 是两个非零向量（\quad）
 
 \choices
-    {若 \( |a + b| = |a| - |b| \)，则 \( a \perp b \)}
-    {若 \(a \perp b\)，则 \(|a + b| = |a| - |b|\)}
-    {若 \( |a + b| = |a| - |b| \)，则存在实数 \( \lambda \)，使得 \( b = \lambda a \)}
-    {若存在实数 \(\lambda\)，使得 \(b = \lambda a\)，则 \(|a + b| = |a| - |b|\)}
+    {若 \(|\bs{a} + \bs{b}| = |\bs{a}| - |\bs{b}|\)，则 \(\bs{a} \perp \bs{b}\)}
+    {若 \(\bs{a} \perp \bs{b}\)，则 \(|\bs{a} + \bs{b}| = |\bs{a}| - |\bs{b}|\)}
+    {若 \(|\bs{a} + \bs{b}| = |\bs{a}| - |\bs{b}|\)，则存在实数 \(\lambda\)，使得 \(\bs{b} = \lambda \bs{a}\)}
+    {若存在实数 \(\lambda\)，使得 \(\bs{b} = \lambda \bs{a}\)，则 \(|\bs{a} + \bs{b}| = |\bs{a}| - |\bs{b}|\)}
 \end{problem}
+
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+若 \(|\bs{a}+\bs{b}|=|\bs{a}|-|\bs{b}|\)，则右端非负，且两边平方得
+\[
+|\bs{a}|^2+|\bs{b}|^2+2\bs{a}\cdot\bs{b}
+=|\bs{a}|^2+|\bs{b}|^2-2|\bs{a}||\bs{b}|.
+\]
+因此 \(\bs{a}\cdot\bs{b}=-|\bs{a}||\bs{b}|\)，这说明两向量反向共线，故存在实数 \(\lambda\)，使得 \(\bs{b}=\lambda\bs{a}\)，第三项正确. 例如取 \(\bs{b}=-\frac12\bs{a}\)，等式成立但两向量不垂直，故第一项错误；若两向量垂直，则 \(|\bs{a}+\bs{b}|=\sqrt{|\bs{a}|^2+|\bs{b}|^2}\)，一般不等于 \(|\bs{a}|-|\bs{b}|\)，故第二项错误；取 \(\lambda=1\) 时等式变为 \(2|\bs{a}|=0\)，故第四项错误.
+\end{solution}
 
 \begin{problem}
-若从 1, 2, 3, \(\cdots\)，9 这 9 个整数中同时取 4 个不同的数，其和为偶数，则不同的取法共有（\quad）
+若从 \(1\)，\(2\)，\(3\)，\(\cdots\)，\(9\) 这 9 个整数中同时取 4 个不同的数，其和为偶数，则不同的取法共有（\quad）
 
 \choices
-    {60 种}
-    {63 种}
-    {65 种}
-    {66 种}
+    {\(60\text{ 种}\)}
+    {\(63\text{ 种}\)}
+    {\(65\text{ 种}\)}
+    {\(66\text{ 种}\)}
 \end{problem}
+
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+这 9 个数中有 5 个奇数和 4 个偶数. 四个数的和为偶数，当且仅当取出的偶数个数为 \(0\)、\(2\) 或 \(4\). 因而取法数为
+\[
+\mathrm C_5^4\mathrm C_4^0+\mathrm C_5^2\mathrm C_4^2+\mathrm C_5^0\mathrm C_4^4
+=5+60+1=66
+\]
+故选第四项.
+\end{solution}
 
 \begin{problem}
 设 \(S_{n}\) 是公差为 \(d\)（\(d \neq 0\)） 的无穷等差数列 \(\{a_{n}\}\) 的前 \(n\) 项和，则下列命题错误的是（\quad）
@@ -72,6 +158,24 @@
     {若对任意 \(n \in \mathbf{N}^{*}\)，均有 \(S_n > 0\)，则数列 \(\{S_n\}\) 是递增数列}
 \end{problem}
 
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+由
+\[
+S_n-S_{n-1}=a_n=a_1+(n-1)d
+\]
+可知 \(\{S_n\}\) 的相邻项差构成等差数列.
+
+当 \(d<0\) 时，\(S_n\) 是关于 \(n\) 的开口向下二次函数在正整数上的取值，且 \(S_n\to-\infty\)，所以有最大项，第一项正确. 若 \(d>0\)，则 \(S_n\to+\infty\)，不可能有最大项，因此有最大项时必有 \(d<0\)，第二项正确.
+
+若 \(\{S_n\}\) 递增，则只需有 \(a_n>0\) 对所有 \(n\geqslant2\) 成立，并不能推出 \(S_1=a_1>0\). 例如取 \(a_1=-1,d=2\)，则 \(S_1=-1,S_2=0,S_3=3,\ldots\)，数列 \(\{S_n\}\) 递增但 \(S_1<0\)，所以第三项错误.
+
+若对任意正整数 \(n\) 都有 \(S_n>0\)，则 \(S_1=a_1>0\). 此时不能有 \(d<0\)，否则 \(S_n\to-\infty\)；故 \(d>0\)，从而所有 \(a_n>0\)，即 \(S_n\) 递增，第四项正确. 故选第三项.
+\end{solution}
+
 \begin{problem}
 如图，\(F_{1}\)，\(F_{2}\) 分别是双曲线 \(C: \frac{x^{2}}{a^{2}} - \frac{y^{2}}{b^{2}} = 1 \) （\(a, b > 0\)）的左，右焦点，\(B\) 是虚轴的端点，直线 \(F_{1}B\) 与 \(C\) 的两条渐近线分别交于 \(P\)，\(Q\) 两点，线段 \(PQ\) 的垂直平分线与 \(x\) 轴交于点 \(M\). 若 \(|MF_{2}| = |F_{1}F_{2}|\)，则 \(C\) 的离心率是（\quad）
 
@@ -81,6 +185,45 @@
     {\(\sqrt{2}\)}
     {\(\sqrt{3}\)}
 \end{problem}
+
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+令双曲线的半焦距为 \(c\)，则 \(c^2=a^2+b^2\)，且 \(F_1(-c,0)\)，\(F_2(c,0)\)，\(B(0,b)\). 直线 \(F_1B\) 上的点可表示为
+\[
+F_1+t(c,b).
+\]
+与两条渐近线 \(y=\frac ba x\) 和 \(y=-\frac ba x\) 相交时，对应的参数分别为
+\[
+t_1=\frac{c}{c-a},\qquad t_2=\frac{c}{c+a}.
+\]
+设 \(H\) 为线段 \(PQ\) 的中点，则
+\[
+H=F_1+\frac{t_1+t_2}{2}(c,b),\qquad
+\frac{t_1+t_2}{2}=\frac{c^2}{b^2}.
+\]
+由于 \(PQ\) 的方向向量为 \((c,b)\)，其垂直平分线满足 \((X-H)\cdot(c,b)=0\). 设 \(M=(m,0)\)，则
+\[
+m=H_x+\frac bcH_y
+=-c+\frac{c^2}{b^2}\left(c+\frac{b^2}{c}\right)
+=\frac{c^3}{b^2}.
+\]
+又因为 \(c^2>b^2\)，所以
+\[
+|MF_2|=m-c=\frac{ca^2}{b^2}.
+\]
+由题意 \(|F_1F_2|=2c\)，故
+\[
+\frac{ca^2}{b^2}=2c\Longrightarrow a^2=2b^2.
+\]
+因此离心率为
+\[
+e=\frac ca=\frac{\sqrt{a^2+b^2}}a=\sqrt{\frac32}=\frac{\sqrt6}{2}
+\]
+故选第二项.
+\end{solution}
 
 \begin{problem}
 设 \(a > 0\)，\(b > 0\).（\quad）
@@ -92,6 +235,28 @@
     {若 \(2^{a} - 2a = 2^{b} - 3b\)，则 \(a < b\)}
 \end{problem}
 
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+令 \(g(x)=2^x+2x\). 因为
+\[
+g'(x)=2^x\ln2+2>0
+\]
+所以 \(g(x)\) 在 \((0,+\infty)\) 上严格递增. 若 \(2^a+2a=2^b+3b\)，则
+\[
+g(a)=2^b+3b>2^b+2b=g(b)
+\]
+从而 \(a>b\)，第一项正确，第二项错误.
+
+对于后两个选项，先取 \(a=1\). 此时 \(2^a-2a=0\)，而函数 \(h(x)=2^x-3x\) 满足 \(h(3)=-1<0<h(4)=4\)，故由连续性存在 \(b\in(3,4)\) 使 \(h(b)=0\)，此时 \(a<b\)，第三项错误. 再令 \(a=b+1\)，方程 \(2^a-2a=2^b-3b\) 化为
+\[
+2^b=2-b.
+\]
+函数 \(2^b+b-2\) 在 \(b=0\) 时为负，在 \(b=1\) 时为正，故存在 \(b\in(0,1)\) 满足该方程，此时 \(a>b\)，第四项也错误. 故选第一项.
+\end{solution}
+
 \begin{problem}
 已知矩形 \(ABCD\)，\(AB = 1\)，\(BC = \sqrt{2}\)，将 \(\triangle ABD\) 沿矩形的对角线 \(BD\) 所在的直线进行翻折，在翻折过程中（\quad）
 
@@ -102,13 +267,80 @@
     {对任意位置，三对直线“\(AC\) 与 \(BD\)”，“\(AB\) 与 \(CD\)”，“\(AD\) 与 \(BC\)”均不垂直}
 \end{problem}
 
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+取初始位置的坐标为
+\[
+A(0,0,0),\quad B(1,0,0),\quad C(1,\sqrt2,0),\quad D(0,\sqrt2,0).
+\]
+令两向量
+\[
+\bs e=\frac1{\sqrt3}(-1,\sqrt2,0),\qquad
+\bs n=\frac1{\sqrt3}(\sqrt2,1,0),
+\]
+则 \(\bs e\) 是直线 \(BD\) 的单位方向向量，\(\bs n\) 与 \(\bs e\) 垂直. 设翻折后点 \(A\) 变为 \(A'\)，以折叠角为参数 \(\varphi\)，则
+\[
+\overrightarrow{BA'}=\frac1{\sqrt3}\bs e-\frac{\sqrt2}{\sqrt3}\bigl(\cos\varphi\,\bs n+\sin\varphi\,(0,0,1)\bigr).
+\]
+此外
+\[
+\overrightarrow{BC}=\frac2{\sqrt3}\bs e+\frac{\sqrt2}{\sqrt3}\bs n,
+\quad
+\overrightarrow{CD}=\frac1{\sqrt3}\bs e-\frac{\sqrt2}{\sqrt3}\bs n,
+\quad
+\overrightarrow{BD}=\sqrt3\bs e.
+\]
+于是
+\[
+\overrightarrow{A'C}\cdot\overrightarrow{BD}
+=(\overrightarrow{BC}-\overrightarrow{BA'})\cdot\sqrt3\bs e=1\neq0
+\]
+所以第一项所述位置不存在.
+
+又有
+\[
+\overrightarrow{BA'}\cdot\overrightarrow{CD}=\frac13+\frac23\cos\varphi.
+\]
+当 \(\cos\varphi=-\frac12\) 时该内积为零，故存在某个位置使 \(AB\perp CD\)，第二项正确.
+
+最后
+\[
+\overrightarrow{DA'}\cdot\overrightarrow{BC}
+=(\overrightarrow{BA'}-\overrightarrow{BD})\cdot\overrightarrow{BC}
+=-\frac43-\frac23\cos\varphi.
+\]
+要使其为零需 \(\cos\varphi=-2\)，不可能，因此第三项所述位置不存在，而第四项也不成立. 故选第二项.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
-已知某三棱锥的三视图（单位：cm）如图所示，则该三棱锥的体积等于\fillinblank{} \(\mathrm{cm}^3\).
+已知某三棱锥的三视图（单位：\(\mathrm{cm}\)）如图所示，则该三棱锥的体积等于\fillinblank{} \(\mathrm{cm}^3\).
 
 \bitmapfigure[max width=0.78\linewidth]{img/2012/zhejiang_science/q11_fig1.png}
 \end{problem}
+
+\begin{answer}
+1
+\end{answer}
+
+\begin{solution}
+由三视图可取四个顶点的坐标为
+\[
+O(0,0,0),\quad U(3,0,0),\quad V(3,1,0),\quad W(3,0,2).
+\]
+其中底面 \(OUV\) 在水平面内，且
+\[
+S_{\triangle OUV}=\frac12\times3\times1=\frac32
+\]
+三棱锥的高为 \(W\) 到水平面的距离 \(2\). 因此体积为
+\[
+V=\frac13S_{\triangle OUV}\times2=1.
+\]
+\end{solution}
 
 \begin{problem}
 若某程序框图如图所示，则该程序运行后输出的值是\fillinblank{}.
@@ -118,25 +350,164 @@
 \end{center}
 \end{problem}
 
+\begin{answer}
+\(\frac{1}{120}\)
+\end{answer}
+
+\begin{solution}
+程序开始时 \(T=1\)，\(i=1\). 每次循环先执行 \(T=\frac Ti\)，再令 \(i=i+1\)，当 \(i>5\) 时输出. 因此依次除以 \(1\)、\(2\)、\(3\)、\(4\)、\(5\)，最后
+\[
+T=\frac1{1\times2\times3\times4\times5}=\frac1{120}.
+\]
+\end{solution}
+
 \begin{problem}
-设公比为 \(q \) （\(q > 0\)）的等比数列 \(\{a_{n}\}\) 的前 \(n\) 项和为 \(S_{n}\). 若 \(S_{2} = 3a_{2} + 2\)，\(S_{4} = 3a_{4} + 2\)，则 \(q =\fillinblank{}\).
+设公比为 \(q\)（\(q>0\)）的等比数列 \(\{a_{n}\}\) 的前 \(n\) 项和为 \(S_{n}\). 若 \(S_{2} = 3a_{2} + 2\)，\(S_{4} = 3a_{4} + 2\)，则 \(q =\fillinblank{}\).
 \end{problem}
+
+\begin{answer}
+\(\frac{3}{2}\)
+\end{answer}
+
+\begin{solution}
+设首项为 \(a_1\). 由 \(a_2=a_1q\) 及 \(S_2=a_1(1+q)\)，得
+\[
+a_1(1+q)=3a_1q+2\Longrightarrow a_1(1-2q)=2.
+\]
+同理，由 \(a_4=a_1q^3\) 及 \(S_4=a_1(1+q+q^2+q^3)\)，得
+\[
+a_1(1+q+q^2+q^3)=3a_1q^3+2
+\]
+即得
+\[
+a_1(1+q+q^2-2q^3)=2.
+\]
+两式相减并利用 \(a_1\neq0\)，得
+\[
+q+q^2-2q^3+2q=0
+\Longrightarrow q(3+q-2q^2)=0.
+\]
+由于 \(q>0\)，故 \(2q^2-q-3=0\)，从而 \(q=\frac32\).
+\end{solution}
 
 \begin{problem}
 若将函数 \( f(x) = x^5 \) 表示为 \( f(x) = a_0 + a_1(1 + x) + a_2(1 + x)^2 + \cdots + a_5(1 + x)^5 \)，其中 \(a_0\)，\(a_1\)，\(a_2\)，\(\cdots\)，\(a_5\) 为实数，则 \( a_3 = \)\fillinblank{}.
 \end{problem}
 
+\begin{answer}
+10
+\end{answer}
+
+\begin{solution}
+令 \(u=1+x\)，则 \(x=u-1\). 由二项式定理，
+\[
+x^5=(u-1)^5=u^5-5u^4+10u^3-10u^2+5u-1.
+\]
+与题设表示式逐项比较，\(u^3=(1+x)^3\) 的系数为 \(a_3=10\).
+\end{solution}
+
 \begin{problem}
 在 \(\triangle ABC\) 中，\(M\) 是 \(BC\) 的中点，\(AM = 3\)，\(BC = 10\). 则 \(\overrightarrow{AB} \cdot \overrightarrow{AC} =\)\fillinblank{}.
 \end{problem}
+
+\begin{answer}
+-16
+\end{answer}
+
+\begin{solution}
+由于 \(M\) 是 \(BC\) 的中点，
+\[
+\overrightarrow{AM}=\frac{\overrightarrow{AB}+\overrightarrow{AC}}2
+\]
+所以
+\[
+|\overrightarrow{AB}+\overrightarrow{AC}|^2=4AM^2=36.
+\]
+又有
+\[
+|\overrightarrow{AC}-\overrightarrow{AB}|^2=BC^2=100.
+\]
+两式相减，得
+\[
+4\overrightarrow{AB}\cdot\overrightarrow{AC}=36-100=-64
+\]
+故 \(\overrightarrow{AB}\cdot\overrightarrow{AC}=-16\).
+\end{solution}
 
 \begin{problem}
 定义：曲线 \(C\) 上的点到直线 \(l\) 的距离的最小值为曲线 \(C\) 到直线 \(l\) 的距离. 已知曲线 \( C_{1}: y = x^{2} + a \) 到直线 \(l: y = x\) 的距离等于曲线 \( C_{2}: x^{2} + (y + 4)^{2} = 2 \) 到直线 \(l: y = x\) 的距离，则实数 \( a = \)\fillinblank{}.
 \end{problem}
 
+\begin{answer}
+\(\frac{9}{4}\)
+\end{answer}
+
+\begin{solution}
+曲线 \(C_1\) 上点 \((x,x^2+a)\) 到直线 \(y=x\) 的距离为
+\[
+\frac{|x^2-x+a|}{\sqrt2}.
+\]
+由于
+\[
+x^2-x=\left(x-\frac12\right)^2-\frac14
+\]
+且题设距离不为零，所以 \(a>\frac14\)，从而 \(C_1\) 到直线 \(l\) 的距离为
+\[
+\frac{a-\frac14}{\sqrt2}.
+\]
+
+曲线 \(C_2\) 是圆心 \((0,-4)\)、半径 \(\sqrt2\) 的圆. 圆心到直线 \(y=x\) 的距离为 \(2\sqrt2\)，故圆到该直线的最小距离为
+\[
+2\sqrt2-\sqrt2=\sqrt2.
+\]
+因此
+\[
+\frac{a-\frac14}{\sqrt2}=\sqrt2
+\Longrightarrow a=\frac94.
+\]
+\end{solution}
+
 \begin{problem}
 设 \(a \in \R\)，若 \(x > 0\) 时均有 \([(a - 1)x - 1](x^2 - ax - 1) \geqslant 0\)，则 \(a = \)\fillinblank{}.
 \end{problem}
+
+\begin{answer}
+\(\frac{3}{2}\)
+\end{answer}
+
+\begin{solution}
+令函数
+\[
+p(x)=(a-1)x-1,\qquad q(x)=x^2-ax-1.
+\]
+当 \(x\) 趋近于 \(0\) 且 \(x>0\) 时，\(p(x)<0,q(x)<0\)，故乘积为正. 多项式 \(q(x)\) 有唯一正根
+\[
+r=\frac{a+\sqrt{a^2+4}}2
+\]
+并且在 \((0,r)\) 上为负，在 \((r,+\infty)\) 上为正.
+
+要使 \(p(x)q(x)\geqslant0\) 对所有正数 \(x\) 成立，\(p(x)\) 必须在 \((0,r)\) 上非正、在 \((r,+\infty)\) 上非负. 因而必须有 \(a>1\)，且 \(p(x)\) 的正根与 \(r\) 重合，即
+\[
+r=\frac1{a-1}.
+\]
+将其代入 \(q(r)=0\)，得
+\[
+\frac1{(a-1)^2}-\frac a{a-1}-1=0
+\Longrightarrow 1-a(a-1)-(a-1)^2=0
+\Longrightarrow a(3-2a)=0.
+\]
+结合 \(a>1\)，得到 \(a=\frac32\).
+
+反之，当 \(a=\frac32\) 时，
+\[
+p(x)=\frac{x-2}{2},\qquad q(x)=x^2-\frac32x-1=(x-2)\left(x+\frac12\right)
+\]
+所以
+\[
+p(x)q(x)=\frac12(x-2)^2\left(x+\frac12\right)\geqslant0
+\]
+对一切 \(x>0\) 成立，故所求为 \(a=\frac32\).
+\end{solution}
 
 \section{解答题}
 
@@ -148,31 +519,207 @@
 \end{enumerate}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item 由三角形内角和，\(B=\pi-A-C\)，所以
+\[
+\sin B=\sin(A+C)=\sin A\cos C+\cos A\sin C.
+\]
+由 \(\cos A=\frac{2}{3}\) 及 \(0<A<\pi\)，得
+\(\sin A=\frac{\sqrt{5}}{3}\). 代入已知条件，得
+\[
+\frac{\sqrt{5}}{3}\cos C+\frac{2}{3}\sin C=\sqrt{5}\cos C,
+\]
+即 \(\sin C=\sqrt{5}\cos C\). 因为 \(0<C<\pi\)，且上式不可能有 \(\cos C=0\)，所以
+\[
+\tan C=\sqrt{5}.
+\]
+
+\item 由 \(\tan C=\sqrt{5}\) 且 \(0<C<\pi\)，可知 \(C\) 为锐角，从而
+\[
+\cos C=\frac{1}{\sqrt{6}},\qquad \sin C=\frac{\sqrt{5}}{\sqrt{6}}.
+\]
+由正弦定理，
+\[
+c=a\frac{\sin C}{\sin A}=\sqrt{2}\cdot\frac{\sqrt{5}/\sqrt{6}}{\sqrt{5}/3}=\sqrt{3}.
+\]
+又 \(\sin B=\sqrt{5}\cos C=\frac{\sqrt{5}}{\sqrt{6}}\)，故三角形面积为
+\[
+S_{\triangle ABC}=\frac{1}{2}ac\sin B
+=\frac{1}{2}\cdot\sqrt{2}\cdot\sqrt{3}\cdot\frac{\sqrt{5}}{\sqrt{6}}
+=\frac{\sqrt{5}}{2}.
+\]
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
-已知箱中装有 4 个白球和 5 个黑球，且规定：取出一个白球得 2 分，取出一个黑球得 1 分. 现从该箱中任取 （无放回，且每球取到的机会均等） 3 个球，记随机变量 X 为取出此 3 球所得分数之和.
+已知箱中装有 \(4\) 个白球和 \(5\) 个黑球，且规定：取出一个白球得 \(2\) 分，取出一个黑球得 \(1\) 分. 现从该箱中任取（无放回，且每球取到的机会均等） \(3\) 个球，记随机变量 \(X\) 为取出此 \(3\) 个球所得分数之和.
 \begin{enumerate}
 \item 求 \(X\) 的分布列；
 \item 求 \(E(X)\).
 \end{enumerate}
 \end{problem}
 
+\begin{solution}
+设取出的白球数为 \(k\)，则取出的黑球数为 \(3-k\)，从而
+\[
+X=2k+(3-k)=3+k,\qquad k=0,1,2,3.
+\]
+从 \(9\) 个球中任取 \(3\) 个球的总取法数为
+\(\mathrm C_9^3=84\). 因此
+\[
+P(X=3+k)=\frac{\mathrm C_4^k\mathrm C_5^{3-k}}{\mathrm C_9^3}.
+\]
+具体计算得
+\begin{center}
+\begin{tabular}{c|cccc}
+\(X\) & \(3\) & \(4\) & \(5\) & \(6\) \\
+\hline
+\(P\) & \(\frac{5}{42}\) & \(\frac{10}{21}\) & \(\frac{5}{14}\) & \(\frac{1}{21}\)
+\end{tabular}
+\end{center}
+
+所以
+\[
+E(X)=3\cdot\frac{5}{42}+4\cdot\frac{10}{21}
++5\cdot\frac{5}{14}+6\cdot\frac{1}{21}
+=\frac{13}{3}.
+\]
+\end{solution}
+
 \begin{problem}
 如图，在四棱锥 \(P - ABCD\) 中，底面是边长为 \(2\sqrt{3}\) 的菱形，\(\angle BAD = 120^{\circ}\)，且 \(PA \perp\) 平面 \(ABCD\)，\(PA = 2\sqrt{6}\)，\(M\)，\(N\) 分别为 \(PB\)，\(PD\) 的中点.
 \begin{enumerate}
-\item 证明： \(MN //\) 平面 \(ABCD\)；
+\item 证明： \(MN \parallel\) 平面 \(ABCD\)；
 \item 过点 \(A\) 作 \(AQ \perp PC\)，垂足为点 \(Q\)，求二面角 \(A - MN - Q\) 的平面角的余弦值.
 \end{enumerate}
 \bitmapfigure[max width=0.42\linewidth]{img/2012/zhejiang_science/q20_fig1.png}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item 在三角形 \(PBD\) 中，\(M\)，\(N\) 分别为 \(PB\)，\(PD\) 的中点，所以由中位线定理得
+\(MN\parallel BD\). 又 \(BD\) 在平面 \(ABCD\) 内，且 \(MN\) 不在平面 \(ABCD\) 内，故
+\[
+MN\parallel\text{平面 }ABCD.
+\]
+
+\item 建立如下坐标系：取
+\[
+A(0,0,0),\quad B(2\sqrt{3},0,0),\quad D(-\sqrt{3},3,0),
+\quad C(\sqrt{3},3,0),\quad P(0,0,2\sqrt{6}).
+\]
+则 \(AB=AD=2\sqrt{3}\)，且 \(\angle BAD=120^\circ\)，符合题设. 由中点坐标公式，
+\[
+M(\sqrt{3},0,\sqrt{6}),\qquad
+N\left(-\frac{\sqrt{3}}{2},\frac{3}{2},\sqrt{6}\right).
+\]
+取 \(MN\) 的一个方向向量 \(\bs{u}=(-\sqrt{3},1,0)\). 又
+\[
+\overrightarrow{PC}=(\sqrt{3},3,-2\sqrt{6}),\qquad
+|\overrightarrow{PC}|^2=36.
+\]
+因为 \(Q\) 在直线 \(PC\) 上且 \(AQ\perp PC\)，所以
+\[
+Q=P+\frac{(\overrightarrow{PA})\cdot\overrightarrow{PC}}{|\overrightarrow{PC}|^2}\overrightarrow{PC}
+=\left(\frac{2\sqrt{3}}{3},2,\frac{2\sqrt{6}}{3}\right).
+\]
+平面 \(AMN\) 与平面 \(QMN\) 的法向量可分别取为
+\[
+\bs{n}_1=\bs{u}\times\overrightarrow{AM}
+=(\sqrt{6},3\sqrt{2},-\sqrt{3}),
+\]
+\[
+\bs{n}_2=-3\bs{u}\times\overrightarrow{MQ}
+=(\sqrt{6},3\sqrt{2},5\sqrt{3}).
+\]
+于是二面角的平面角 \(\theta\) 的余弦为
+\[
+\cos\theta
+=\frac{|\bs{n}_1\cdot\bs{n}_2|}{|\bs{n}_1||\bs{n}_2|}
+=\frac{|6+18-15|}{\sqrt{27}\sqrt{99}}
+=\frac{1}{\sqrt{33}}
+=\frac{\sqrt{33}}{33}.
+\]
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
-如图，椭圆 \(C: \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 \) （\(a > b > 0\)）的离心率为 \(\frac{1}{2}\). 其左焦点到点 \(P(2,1)\) 的距离为 \(\sqrt{10}\). 不过原点 \(O\) 的直线 \(l\) 与 \(C\) 相交于 \(A\)，\(B\) 两点，且线段 \(AB\) 被直线 \(OP\) 平分.
+如图，椭圆 \(C: \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1 \) （\(a > b > 0\)）的离心率为 \(\frac{1}{2}\). 其左焦点到点 \(P(2,1)\) 的距离为 \(\sqrt{10}\). 不经过原点 \(O\) 的直线 \(l\) 与 \(C\) 相交于 \(A\)，\(B\) 两点，且线段 \(AB\) 被直线 \(OP\) 平分.
 \begin{enumerate}
 \item 求椭圆 \(C\) 的方程；
 \item 求 \( \triangle ABP \) 面积取最大值时直线 \(l\) 的方程.
 \end{enumerate}
 \bitmapfigure[max width=0.42\linewidth]{img/2012/zhejiang_science/q21_fig1.png}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item 设椭圆的半焦距为 \(c\). 由离心率
+\[
+\frac{c}{a}=\frac{1}{2},
+\]
+得 \(c=\frac{a}{2}\)，从而
+\[
+b^2=a^2-c^2=\frac{3a^2}{4}.
+\]
+椭圆的左焦点为 \(F_1\left(-\frac{a}{2},0\right)\)，故由题意
+\[
+\left(2+\frac{a}{2}\right)^2+1=10.
+\]
+因为 \(a>0\)，所以 \(2+\frac{a}{2}=3\)，即 \(a=2\). 因此
+\(c=1\)，\(b^2=3\)，椭圆 \(C\) 的方程为
+\[
+\frac{x^2}{4}+\frac{y^2}{3}=1.
+\]
+
+\item 设线段 \(AB\) 的中点为 \(M\). 由题意，\(M\) 在直线 \(OP\) 上；又因直线 \(l\) 不经过 \(O\)，故 \(M\neq O\). 于是可设 \(M=(2t,t)\)，其中 \(t\neq0\). 设直线 \(l\) 的一个方向向量为 \(\bs{d}=(u,v)\)，并写
+\[
+A=M+\lambda\bs{d},\qquad B=M-\lambda\bs{d},
+\]
+其中 \(\lambda\neq0\). 由 \(A\)，\(B\) 同在椭圆上，代入椭圆方程并相减，得
+\[
+\frac{(2t+\lambda u)^2-(2t-\lambda u)^2}{4}+\frac{(t+\lambda v)^2-(t-\lambda v)^2}{3}=0,
+\]
+即 \(2t\lambda u+\frac{4}{3}t\lambda v=0\). 由于 \(t\lambda\neq0\)，所以 \(3u+2v=0\). 因此直线 \(l\) 的方向可取 \((2,-3)\)，从而可设
+\[
+3x+2y=k,\qquad k\neq0.
+\]
+直线 \(l\) 与 \(OP\) 的交点就是 \(M\)，故 \(M=\left(\frac{k}{4},\frac{k}{8}\right)\). 于是可设
+\[
+A=M+\lambda(2,-3),\qquad B=M-\lambda(2,-3).
+\]
+代入椭圆方程，得
+\[
+\frac{(\frac{k}{4}+2\lambda)^2}{4}+\frac{(\frac{k}{8}-3\lambda)^2}{3}=1
+\Longrightarrow 4\lambda^2+\frac{k^2}{48}=1.
+\]
+所以 \(|k|<4\sqrt{3}\)，且
+\[
+|AB|=2|\lambda|\sqrt{13}=\sqrt{13}\sqrt{1-\frac{k^2}{48}}.
+\]
+点 \(P(2,1)\) 到直线 \(l\) 的距离为
+\[
+d(P,l)=\frac{|8-k|}{\sqrt{13}}=\frac{8-k}{\sqrt{13}},
+\]
+其中最后一个等号由 \(k<4\sqrt{3}<8\) 得到. 因此
+\[
+S_{\triangle ABP}=\frac12|AB|d(P,l)=\frac12(8-k)\sqrt{1-\frac{k^2}{48}}.
+\]
+令
+\[
+g(k)=(8-k)^2\left(1-\frac{k^2}{48}\right),\qquad -4\sqrt{3}<k<4\sqrt{3}.
+\]
+则
+\[
+g'(k)=\frac{(8-k)(k^2-4k-24)}{12}=\frac{(8-k)(k-2-2\sqrt{7})(k-2+2\sqrt{7})}{12}.
+\]
+在区间 \((-4\sqrt{3},4\sqrt{3})\) 内，\(2+2\sqrt{7}>4\sqrt{3}\) 且 \(8-k>0\)，所以当 \(-4\sqrt{3}<k<2-2\sqrt{7}\) 时 \(g'(k)>0\)，当 \(2-2\sqrt{7}<k<4\sqrt{3}\) 时 \(g'(k)<0\). 因而 \(g(k)\) 在 \(k=2-2\sqrt{7}\) 处取得最大值. 由于 \(k\neq0\) 且 \(2-2\sqrt{7}\neq0\)，满足题设条件. 故所求直线方程为
+\[
+\boxed{3x+2y=2-2\sqrt{7}}.
+\]
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 已知 \(a > 0\)，\(b \in \R\)，函数 \(f(x) = 4ax^3 - 2bx - a + b\).
@@ -185,3 +732,76 @@
 \item 若 \(-1 \leqslant f(x) \leqslant 1\) 对 \(x \in [0,1]\) 恒成立，求 \(a+b\) 的取值范围.
 \end{enumerate}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item 由
+\[
+f'(x)=12ax^2-2b=2(6ax^2-b)
+\]
+可知，\(f'(x)\) 在 \([0,1]\) 内至多改变一次符号；若有内点零点，该点是极小值点. 因此 \(f(x)\) 在 \([0,1]\) 上的最大值取在端点.
+又有
+\[
+f(0)=b-a,\qquad f(1)=3a-b,
+\]
+所以
+\[
+\max_{0\leqslant x\leqslant1}f(x)
+=\max\{b-a,3a-b\}
+=a+|2a-b|.
+\]
+
+令 \(h(x)=2x^3-2x+1\). 由于
+\(h'(x)=6x^2-2\)，\(h(x)\) 在 \([0,1]\) 上的最小值为
+\[
+h\left(\frac{1}{\sqrt{3}}\right)=1-\frac{4}{3\sqrt{3}}>0.
+\]
+当 \(b\leqslant2a\) 时，
+\[
+f(x)+|2a-b|+a
+=2(2ax^3-bx+a)
+\geqslant2a(2x^3-2x+1)\geqslant0.
+\]
+当 \(b\geqslant2a\) 时，
+\[
+f(x)+|2a-b|+a
+=2\bigl(2ax^3+b(1-x)-a\bigr)
+\geqslant2a(2x^3-2x+1)\geqslant0.
+\]
+故结论成立.
+
+\item 若 \(-1\leqslant f(x)\leqslant1\) 在 \([0,1]\) 上恒成立，则由上一步的最大值公式，必有
+\[
+a+|2a-b|\leqslant1.
+\]
+反之，若上式成立，则 \(f(x)\leqslant1\)，且由上一问
+\[
+f(x)\geqslant-\bigl(a+|2a-b|\bigr)\geqslant-1,
+\]
+所以该条件也是充分的. 因而题设条件等价于
+\[
+a+|2a-b|\leqslant1.
+\]
+由于 \(a>0\)，这等价于
+\[
+0<a\leqslant1,\qquad 3a-1\leqslant b\leqslant a+1.
+\]
+于是
+\[
+4a-1\leqslant a+b\leqslant2a+1,
+\]
+从而 \(-1<a+b\leqslant3\). 下面说明区间内每个值都能取得. 设 \(s=a+b\)：
+当 \(-1<s\leqslant1\) 时，取
+\[
+a=\frac{s+1}{4},\qquad b=s-a;
+\]
+当 \(1<s\leqslant3\) 时，取
+\[
+a=\frac{s-1}{2},\qquad b=s-a.
+\]
+这两种取法均满足 \(0<a\leqslant1\) 及 \(3a-1\leqslant b\leqslant a+1\). 因此
+\[
+\boxed{-1<a+b\leqslant3}.
+\]
+\end{enumerate}
+\end{solution}

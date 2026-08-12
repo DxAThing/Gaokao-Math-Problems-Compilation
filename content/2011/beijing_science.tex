@@ -12,6 +12,14 @@
     {\((- \infty, -1] \cup [1, +\infty)\)}
 \end{problem}
 
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+由 \(x^2\leqslant 1\) 得 \(-1\leqslant x\leqslant 1\)，所以 \(P=[-1,1]\). 条件 \(P\cup M=P\) 等价于 \(M\subseteq P\)，即 \(a\in[-1,1]\). 故选 C.
+\end{solution}
+
 \begin{problem}
 复数 \(\frac{\i-2}{1+2\i}=\)（\quad）
 
@@ -21,6 +29,14 @@
     {\(-\frac{4}{5} - \frac{3}{5}\i\)}
     {\(-\frac{4}{5} + \frac{3}{5}\i\)}
 \end{problem}
+
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+分子、分母同乘以 \(1-2\i\)，得 \(\dfrac{\i-2}{1+2\i}=\dfrac{(\i-2)(1-2\i)}{(1+2\i)(1-2\i)}\). 其中 \((\i-2)(1-2\i)=5\i\)，\((1+2\i)(1-2\i)=5\)，所以原式等于 \(\i\). 故选 A.
+\end{solution}
 
 \begin{problem}
 在极坐标系中，圆 \(\rho = -2\sin \theta\) 的圆心的极坐标是（\quad）
@@ -32,10 +48,18 @@
     {\((1, \pi)\)}
 \end{problem}
 
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+由极坐标关系 \(x=\rho\cos\theta\)，\(y=\rho\sin\theta\)，将 \(\rho=-2\sin\theta\) 两边乘以 \(\rho\)，得 \(\rho^2=-2\rho\sin\theta=-2y\). 因此 \(x^2+y^2=-2y\)，即 \(x^2+(y+1)^2=1\). 圆心为 \((0,-1)\)，其极坐标为 \(\left(1,-\dfrac{\pi}{2}\right)\). 故选 B.
+\end{solution}
+
 \begin{problem}
 执行如图所示的程序框图，输出的 \(s\) 的值为（\quad）
 
-\texfigure[max width=0.44\linewidth]{img_repaint/2011/beijing_science/q4_fig1.tex}
+\bitmapinlinefigure[0.44\linewidth][]{img/2011/beijing_science/q4_fig1.png}
 
 \choices
     {\(-3\)}
@@ -43,6 +67,15 @@
     {\(\frac{1}{3}\)}
     {\(2\)}
 \end{problem}
+
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+程序开始时 \(i=0\)，\(s=2\). 当 \(i<4\) 时，先令 \(i\leftarrow i+1\)，再计算 \(s\leftarrow\dfrac{s-1}{s+1}\). 因此共循环 4 次：
+\(s=2\to\dfrac13\to-\dfrac12\to-3\to2\). 此时 \(i=4\)，条件不成立，输出 \(s=2\). 故选 D.
+\end{solution}
 
 \begin{problem}
 如图，\(AD\)，\(AE\)，\(BC\) 分别与圆 \(O\) 切于点 \(D\)，\(E\)，\(F\)，延长 \(AF\) 与圆 \(O\) 交于另一点 \(G\). 给出下列三个结论：
@@ -55,7 +88,7 @@
 
 其中正确结论的序号是（\quad）
 
-\bitmapfigure{img/2011/beijing_science/q5_fig1.png}
+\bitmapinlinefigure[0.82\linewidth][]{img/2011/beijing_science/q5_fig1.png}
 
 \choices
     {\(\circled{1}\circled{2}\)}
@@ -63,6 +96,19 @@
     {\(\circled{1}\circled{3}\)}
     {\(\circled{1}\circled{2}\circled{3}\)}
 \end{problem}
+
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+由同一点引圆的切线长相等，得 \(AD=AE\)，\(BD=BF\)，\(CE=CF\). 又因为 \(B,F,C\) 共线，\(A,B,D\) 共线，\(A,C,E\) 共线，所以 \(BC=BF+FC=BD+CE\). 因此
+\(AB+BC+CA=AB+BD+CE+CA=(AB+BD)+(AC+CE)=AD+AE\)，结论 \(\circled{1}\) 正确.
+
+由点 \(A\) 的切线长与割线幂，得 \(AF\cdot AG=AD^2=AD\cdot AE\)，结论 \(\circled{2}\) 正确.
+
+若结论 \(\circled{3}\) 成立，按 \(\triangle AFB\sim\triangle ADG\) 的对应顺序应有 \(\dfrac{AF}{AD}=\dfrac{AB}{AG}\). 但由上面的幂定理，\(\dfrac{AF}{AD}=\dfrac{AD}{AG}\)，从而必有 \(AB=AD\)，这与图中 \(B\) 位于 \(A,D\) 之间且 \(B\ne D\) 矛盾. 因此结论 \(\circled{3}\) 不正确，正确结论的序号为 \(\circled{1}\circled{2}\)，故选 A.
+\end{solution}
 
 \begin{problem}
 根据统计，一名工人组装第 \(x\) 件某产品所用的时间（单位：分钟）为
@@ -79,6 +125,14 @@
     {\((60, 16)\)}
 \end{problem}
 
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+若 \(A\leqslant4\)，则第 \(4\) 件和第 \(A\) 件都落在第二段，所用时间都为 \(\dfrac{c}{\sqrt A}=15\)，与第 \(4\) 件用时 \(30\) 分钟矛盾. 因此 \(A>4\)，从而 \(30=f(4)=\dfrac{c}{2}\)，得 \(c=60\). 又因为 \(15=f(A)=\dfrac{60}{\sqrt A}\)，所以 \(\sqrt A=4\)，即 \(A=16\). 故选 D.
+\end{solution}
+
 \begin{problem}
 某四面体的三视图如图所示，该四面体四个面的面积中最大的是（\quad）
 
@@ -91,6 +145,20 @@
     {\(8\sqrt{2}\)}
 \end{problem}
 
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+由三视图可还原为一个三棱锥. 取底面为俯视图对应的直角三角形，设其三个顶点为 \(A(0,0,0)\)，\(B(4,0,0)\)，\(C(0,3,0)\)，由正视图、侧视图可知顶点在 \(B\) 的正上方，且高为 \(4\)，故可取 \(D(4,0,4)\).
+
+于是
+\(S_{ABC}=\dfrac12\cdot4\cdot3=6\)，
+\(S_{ABD}=\dfrac12\cdot4\cdot4=8\). 由于 \(AC\perp AD\)，有
+\(S_{ACD}=\dfrac12\cdot3\cdot\sqrt{4^2+4^2}=6\sqrt2\). 又 \(BC=\sqrt{4^2+3^2}=5\)，且 \(BD\perp BC\)，所以
+\(S_{BCD}=\dfrac12\cdot5\cdot4=10\). 四个面积中最大值为 \(10\)，故选 C.
+\end{solution}
+
 \begin{problem}
 设 \(A(0, 0)\)，\(B(4, 0)\)，\(C(t + 4, 4)\)，\(D(t, 4)\)（\(t \in \R\)）. 记 \(N(t)\) 为平行四边形 \(ABCD\) 内部（不含边界）的整点的个数，其中整点是指横，纵坐标都是整数的点，则函数 \(N(t)\) 的值域为（\quad）
 
@@ -101,23 +169,72 @@
     {\(\{10, 11, 12\}\)}
 \end{problem}
 
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+令横截面所在的高度为 \(y=j\)，其中内部整点只能有 \(j=1,2,3\). 平行四边形可参数表示为
+\((x,y)=(4u+tv,4v)\)，其中 \(0<u<1\)，\(0<v<1\). 固定 \(y=j\) 后，\(v=\dfrac j4\)，所以横坐标满足
+\(\dfrac{jt}{4}<x<4+\dfrac{jt}{4}\).
+
+这个开区间长度为 \(4\)：当 \(\dfrac{jt}{4}\) 为整数时，内部整数有 \(3\) 个；当 \(\dfrac{jt}{4}\) 不是整数时，内部整数有 \(4\) 个. 因此 \(N(t)\) 等于 \(12\) 减去满足 \(\dfrac{jt}{4}\in\Z\) 的 \(j\in\{1,2,3\}\) 的个数.
+
+若 \(\dfrac t4\in\Z\)，三个横截面各有 \(3\) 个整点，得到 \(N(t)=9\)；若只有 \(\dfrac t2\) 或 \(\dfrac{3t}{4}\) 为整数，得到 \(N(t)=11\)；若三者均不是整数，得到 \(N(t)=12\). 不可能恰有两个条件成立，因为任意两者成立都会推出 \(\dfrac t4\in\Z\). 取 \(t=0\)、\(t=2\)、\(t=1\) 分别可得到 \(N(t)=9\)、\(11\)、\(12\)，故值域为 \(\{9,11,12\}\)，选 C.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
 在 \(\triangle ABC\) 中，若 \(b = 5\)，\(\angle B = \frac{\pi}{4}\)，\(\tan A = 2\)，则 \(\sin A=\)\fillinblank{}；\(a=\)\fillinblank{}.
 \end{problem}
 
+\begin{answer}
+\(\frac{2\sqrt{5}}{5}\)；\(2\sqrt{10}\)
+\end{answer}
+
+\begin{solution}
+因为 \(A\) 是三角形内角且 \(\tan A=2>0\)，所以 \(A\) 为锐角. 由 \(\tan A=2\)，得 \(\sin A=\dfrac{2}{\sqrt5}=\dfrac{2\sqrt5}{5}\). 由正弦定理，\(\dfrac a{\sin A}=\dfrac b{\sin B}\)，故
+\(a=5\cdot\dfrac{2\sqrt5/5}{\sin(\pi/4)}=5\cdot\dfrac{2\sqrt5/5}{\sqrt2/2}=2\sqrt{10}\).
+\end{solution}
+
 \begin{problem}
 已知向量 \(\bs{a} = (\sqrt{3}, 1)\)，\(\bs{b} = (0, -1)\)，\(\bs{c} = (k, \sqrt{3})\). 若 \(\bs{a} - 2\bs{b}\) 与 \(\bs{c}\) 共线，则 \(k=\)\fillinblank{}.
 \end{problem}
+
+\begin{answer}
+1
+\end{answer}
+
+\begin{solution}
+\(\bs{a}-2\bs{b}=(\sqrt3,1)-2(0,-1)=(\sqrt3,3)\). 两向量共线等价于行列式为零，因此
+\(\begin{vmatrix}\sqrt3&3\\ k&\sqrt3\end{vmatrix}=3-3k=0\)，解得 \(k=1\).
+\end{solution}
 
 \begin{problem}
 在等比数列 \(\{a_n\}\) 中，\(a_1 = \frac{1}{2}\)，\(a_4 = -4\)，则公比 \(q=\)\fillinblank{}；\(|a_1| + |a_2| + \cdots + |a_n| = \)\fillinblank{}.
 \end{problem}
 
+\begin{answer}
+\(-2\)；\(2^{n-1}-\frac{1}{2}\)
+\end{answer}
+
+\begin{solution}
+由等比数列通项公式，\(a_4=a_1q^3\)，所以 \(-4=\dfrac12q^3\)，即 \(q^3=-8\)，得 \(q=-2\). 又 \(|q|=2\)，故 \(|a_j|=|a_1||q|^{j-1}=\dfrac12\cdot2^{j-1}\). 于是
+\(|a_1|+\cdots+|a_n|=\dfrac12(1+2+\cdots+2^{n-1})=\dfrac12(2^n-1)=2^{n-1}-\dfrac12\).
+\end{solution}
+
 \begin{problem}
 用数字 \(2\)，\(3\) 组成四位数，且数字 \(2\)，\(3\) 至少都出现一次，这样的四位数共有\fillinblank{} 个（用数字作答）.
 \end{problem}
+
+\begin{answer}
+14
+\end{answer}
+
+\begin{solution}
+每一位都有两种选择，共有 \(2^4=16\) 个由 \(2,3\) 组成的四位数. 减去全为 \(2\) 和全为 \(3\) 的两个不合要求的数，得到 \(16-2=14\) 个.
+\end{solution}
 
 \begin{problem}
 已知函数 \(f(x) = \begin{cases}
@@ -126,6 +243,16 @@
 \end{cases}\)
 若关于 \(x\) 的方程 \(f(x) = k\) 有两个不同的实根，则实数 \(k\) 的取值范围是\fillinblank{}.
 \end{problem}
+
+\begin{answer}
+\((0, 1)\)
+\end{answer}
+
+\begin{solution}
+当 \(x<2\) 时，\(f(x)=(x-1)^3\) 在 \((-\infty,2)\) 上严格递增，值域为 \((-\infty,1)\)，所以对每个 \(k<1\) 有一个来自这一段的根.
+
+当 \(x\geqslant2\) 时，\(f(x)=\dfrac2x\)，值域为 \((0,1]\)，所以对每个 \(0<k\leqslant1\) 有一个来自这一段的根. 若 \(0<k<1\)，两段各有一个根，且一个满足 \(x<2\)、另一个满足 \(x>2\)，故有两个不同实根；当 \(k=1\) 时，左段方程的根为 \(x=2\)，但不满足 \(x<2\)，右段只有根 \(x=2\)，所以只有一个根. 其余 \(k\) 至多有一个根. 因此 \(k\in(0,1)\).
+\end{solution}
 
 \begin{problem}
 曲线 \(C\) 是平面内与两个定点 \(F_1(-1, 0)\) 和 \(F_2(1, 0)\) 的距离的积等于常数 \(a^2\)（\(a > 1\)）的点的轨迹. 给出下列三个结论：
@@ -139,6 +266,19 @@
 其中所有正确结论的序号是\fillinblank{}.
 \end{problem}
 
+\begin{answer}
+\(\circled{2}\circled{3}\)
+\end{answer}
+
+\begin{solution}
+在原点处，\(PF_1=PF_2=1\)，两距离之积为 \(1\)，而题设常数为 \(a^2>1\)，所以原点不在曲线 \(C\) 上，结论 \(\circled{1}\) 错误.
+
+若点 \(P\) 在曲线 \(C\) 上，将其关于原点对称得到点 \(-P\). 对称变换交换 \(F_1,F_2\)，故 \((-P)F_1\cdot(-P)F_2=PF_2\cdot PF_1=a^2\)，所以曲线关于原点对称，结论 \(\circled{2}\) 正确.
+
+设 \(\theta=\angle F_1PF_2\). 三角形面积为
+\(S_{\triangle F_1PF_2}=\dfrac12PF_1\cdot PF_2\sin\theta=\dfrac12a^2\sin\theta\leqslant\dfrac12a^2\)，所以结论 \(\circled{3}\) 正确. 故正确结论为 \(\circled{2}\circled{3}\).
+\end{solution}
+
 \section{解答题}
 
 \begin{problem}
@@ -148,6 +288,15 @@
 \item 求 \(f(x)\) 的最小正周期；
 \item 求 \(f(x)\) 在区间 \(\left[-\frac{\pi}{6}, \frac{\pi}{4}\right]\) 上的最大值和最小值.
 \end{enumerate}
+
+\begin{solution}
+\begin{enumerate}
+\item 利用和角公式，
+\(f(x)=4\cos x\left(\dfrac{\sqrt3}{2}\sin x+\dfrac12\cos x\right)-1=\sqrt3\sin 2x+\cos 2x=2\sin\left(2x+\dfrac{\pi}{6}\right)\).
+因为正弦函数的最小正周期为 \(2\pi\)，所以 \(f(x)\) 的最小正周期为 \(\pi\).
+\item 令 \(u=2x+\dfrac{\pi}{6}\). 当 \(x\in\left[-\dfrac{\pi}{6},\dfrac{\pi}{4}\right]\) 时，\(u\in\left[-\dfrac{\pi}{6},\dfrac{2\pi}{3}\right]\)，且 \(f(x)=2\sin u\). 区间包含 \(u=\dfrac\pi2\)，故最大值为 \(2\sin\dfrac\pi2=2\). 端点处 \(2\sin\left(-\dfrac\pi6\right)=-1\)，而另一端点值为 \(2\sin\dfrac{2\pi}3=\sqrt3\)，所以最小值为 \(-1\).
+\end{enumerate}
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -160,6 +309,20 @@
 \end{enumerate}
 
 \bitmapfigure{img/2011/beijing_science/q16_fig1.png}
+
+\begin{solution}
+\begin{enumerate}
+\item 在底面菱形中，\(AB=AD=2\)，\(\angle BAD=60^{\circ}\). 由平行四边形法则，取底面坐标
+\(A=(0,0,0)\)，\(B=(2,0,0)\)，\(D=(1,\sqrt3,0)\)，则 \(C=(3,\sqrt3,0)\). 于是
+\(\overrightarrow{BD}=(-1,\sqrt3,0)\)，\(\overrightarrow{AC}=(3,\sqrt3,0)\)，从而 \(\overrightarrow{BD}\cdot\overrightarrow{AC}=0\)，即 \(BD\perp AC\). 设 \(H\) 为 \(BD\) 的中点，则 \(H=(\frac32,\frac{\sqrt3}{2},0)=\frac12C\)，所以 \(H\in AC\subset\) 平面 \(PAC\)，即 \(BD\) 与平面 \(PAC\) 相交于 \(H\). 又因为 \(PA\perp\) 平面 \(ABCD\)，过 \(H\) 作直线 \(h\parallel PA\)，则 \(BD\perp h\). 因 \(AC\) 与 \(h\) 是平面 \(PAC\) 内过 \(H\) 的两条相交直线，且 \(BD\perp AC\)、\(BD\perp h\)，故 \(BD\perp\) 平面 \(PAC\).
+\item 由 \(PA=AB=2\)，可取 \(P=(0,0,2)\). 于是 \(\overrightarrow{PB}=(2,0,-2)\)，\(\overrightarrow{AC}=(3,\sqrt3,0)\). 因此
+\(\cos\angle(PB,AC)=\dfrac{\overrightarrow{PB}\cdot\overrightarrow{AC}}{|PB||AC|}=\dfrac6{(2\sqrt2)(2\sqrt3)}=\dfrac{\sqrt6}{4}\).
+\item 设 \(PA=h>0\)，取 \(P=(0,0,h)\). 平面 \(PBC\) 的两个方向向量可取 \(\overrightarrow{PB}=(2,0,-h)\)，\(\overrightarrow{PC}=(3,\sqrt3,-h)\)，其法向量可取
+\(\bs n_1=(\sqrt3h,-h,2\sqrt3)\). 平面 \(PDC\) 的两个方向向量可取 \(\overrightarrow{PD}=(1,\sqrt3,-h)\)，\(\overrightarrow{PC}=(3,\sqrt3,-h)\)，其法向量可取 \(\bs n_2=(0,-2h,-2\sqrt3)\).
+
+两平面垂直等价于两法向量垂直，所以 \(\bs n_1\cdot\bs n_2=2h^2-12=0\). 由 \(h>0\)，得 \(PA=h=\sqrt6\).
+\end{enumerate}
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -180,6 +343,16 @@
 \end{enumerate}
 
 （注：方差 \(s^2 = \frac{1}{n}\left[(x_1 - \bar{x})^2 + (x_2 - \bar{x})^2 + \cdots + (x_n - \bar{x})^2\right]\)，其中 \(\bar{x}\) 为 \(x_1\)，\(x_2\)，\(\cdots\)，\(x_n\) 的平均数）
+
+\begin{solution}
+\begin{enumerate}
+\item 当 \(X=8\) 时，乙组数据为 \(8,8,9,10\)，所以平均数为 \(\bar{x}=\dfrac{8+8+9+10}{4}=\dfrac{35}{4}\). 由题给方差定义，
+\(s^2=\dfrac14\left[2\left(8-\dfrac{35}{4}\right)^2+\left(9-\dfrac{35}{4}\right)^2+\left(10-\dfrac{35}{4}\right)^2\right]=\dfrac14\cdot\dfrac{44}{16}=\dfrac{11}{16}\).
+\item 当 \(X=9\) 时，甲组数据为 \(9,9,11,11\)，乙组数据为 \(8,9,9,10\). 两组各随机选取一人，所有 \(4\times4=16\) 个结果等可能. 甲组选出两个 \(9\) 与乙组选出 \(8\) 时，\(Y=17\)，共有 \(2\times1=2\) 个结果；甲组选出两个 \(9\) 与乙组选出两个 \(9\) 时，\(Y=18\)，共有 \(2\times2=4\) 个结果；甲组选出两个 \(9\) 与乙组选出 \(10\)，或甲组选出两个 \(11\) 与乙组选出 \(8\) 时，\(Y=19\)，共有 \(2\times1+2\times1=4\) 个结果；甲组选出两个 \(11\) 与乙组选出两个 \(9\) 时，\(Y=20\)，共有 \(2\times2=4\) 个结果；甲组选出两个 \(11\) 与乙组选出 \(10\) 时，\(Y=21\)，共有 \(2\times1=2\) 个结果. 因此
+\(P(Y=17)=\dfrac{2}{16}=\dfrac18\)，\(P(Y=18)=\dfrac{4}{16}=\dfrac14\)，\(P(Y=19)=\dfrac{4}{16}=\dfrac14\)，\(P(Y=20)=\dfrac{4}{16}=\dfrac14\)，\(P(Y=21)=\dfrac{2}{16}=\dfrac18\). 所以
+\(E(Y)=17\cdot\dfrac18+18\cdot\dfrac14+19\cdot\dfrac14+20\cdot\dfrac14+21\cdot\dfrac18=19\).
+\end{enumerate}
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -189,6 +362,19 @@
 \item 求 \(f(x)\) 的单调区间；
 \item 若对于任意的 \(x \in (0, +\infty)\)，都有 \(f(x) \leqslant \frac{1}{\e}\)，求 \(k\) 的取值范围.
 \end{enumerate}
+
+\begin{solution}
+\begin{enumerate}
+\item 由于 \(k\ne0\)，求导得 \(f'(x)=2(x-k)\e^{x/k}+\dfrac1k(x-k)^2\e^{x/k}=\dfrac{\e^{x/k}}{k}(x-k)(x+k)\). 因 \(\e^{x/k}>0\)，只需讨论 \(\dfrac{(x-k)(x+k)}k\) 的符号.
+
+当 \(k>0\) 时，\(f'(x)>0\) 在 \((-\infty,-k)\) 和 \((k,+\infty)\) 上成立，\(f'(x)<0\) 在 \((-k,k)\) 上成立. 因此递增区间为 \((-\infty,-k)\)、\((k,+\infty)\)，递减区间为 \((-k,k)\).
+
+当 \(k<0\) 时，因分母 \(k\) 为负，符号相反，故递减区间为 \((-\infty,k)\)、\((-k,+\infty)\)，递增区间为 \((k,-k)\).
+\item 若 \(k>0\)，则当 \(x\to+\infty\) 时，\((x-k)^2\e^{x/k}\to+\infty\)，不可能对所有 \(x>0\) 有 \(f(x)\leqslant\dfrac1\e\).
+
+令 \(k=-a\)，其中 \(a>0\). 此时 \(f(x)=(x+a)^2\e^{-x/a}\)，且 \(f'(x)=\dfrac{\e^{-x/a}}a(a-x)(a+x)\). 所以 \(f\) 在 \((0,a)\) 上递增，在 \((a,+\infty)\) 上递减，最大值为 \(f(a)=\dfrac{4a^2}{\e}\). 要使最大值不超过 \(\dfrac1\e\)，必须且只需 \(4a^2\leqslant1\)，即 \(0<a\leqslant\dfrac12\). 因此 \(-\dfrac12\leqslant k<0\).
+\end{enumerate}
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -198,14 +384,71 @@
 \item 求椭圆 \(G\) 的焦点坐标和离心率；
 \item 将 \(\left|AB\right|\) 表示为 \(m\) 的函数，并求 \(\left|AB\right|\) 的最大值.
 \end{enumerate}
+
+\begin{solution}
+\begin{enumerate}
+\item 椭圆的标准方程为 \(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\)，所以 \(a=2\)，\(b=1\). 由 \(c^2=a^2-b^2=3\)，得 \(c=\sqrt3\). 因此焦点为 \((-\sqrt3,0)\)、\((\sqrt3,0)\)，离心率为 \(e=\dfrac ca=\dfrac{\sqrt3}{2}\).
+\item 过 \((m,0)\) 的圆 \(x^2+y^2=1\) 的切线存在的条件是 \(|m|\geqslant1\). 设切线写成 \(x+\lambda y=m\)，则其到原点的距离为 \(1\)，故 \(1+\lambda^2=m^2\). 代入椭圆方程，令 \(x=m-\lambda y\)，得
+\((\lambda^2+4)y^2-2m\lambda y+m^2-4=0\). 该方程关于 \(y\) 的判别式为
+\(\Delta=4m^2\lambda^2-4(\lambda^2+4)(m^2-4)=48\)，所以两交点的纵坐标之差为 \(\dfrac{4\sqrt3}{\lambda^2+4}=\dfrac{4\sqrt3}{m^2+3}\). 又直线方向向量可取 \((\lambda,-1)\)，其长度为 \(\sqrt{1+\lambda^2}=|m|\)，故
+\(\displaystyle\left|AB\right|=\frac{4\sqrt{3}\left|m\right|}{m^2+3},\qquad \left|m\right|\geqslant1\).
+令 \(r=|m|\geqslant1\)，则 \(|AB|=g(r)=\dfrac{4\sqrt3r}{r^2+3}\)，且
+\(g'(r)=\dfrac{4\sqrt3(3-r^2)}{(r^2+3)^2}\). 所以 \(g\) 在 \([1,\sqrt3]\) 上递增，在 \([\sqrt3,+\infty)\) 上递减，最大值在 \(r=\sqrt3\) 处取得，为 \(g(\sqrt3)=2\).
+\end{enumerate}
+\end{solution}
 \end{problem}
 
 \begin{problem}
-若数列 \(A_n : a_1\)，\(a_2\)，\(\cdots\)，\(a_n\)（\(n \geqslant 2\)）满足 \(|a_{n+1} - a_k| = 1\)（\(k = 1\)，\(2\)，\(\cdots\)，\(n - 1\)），则称 \(A_n\) 为 \(E\) 数列. 记 \(S(A_n) = a_1 + a_2 + \cdots + a_n\).
+若数列 \(A_n : a_1\)，\(a_2\)，\(\cdots\)，\(a_n\)（\(n \geqslant 2\)）满足 \(\left|a_{k+1} - a_k\right| = 1\)（\(k = 1\)，\(2\)，\(\cdots\)，\(n - 1\)），则称 \(A_n\) 为 \(E\) 数列. 记 \(S(A_n) = a_1 + a_2 + \cdots + a_n\).
 
 \begin{enumerate}
 \item 写出一个满足 \(a_1 = a_5 = 0\)，且 \(S(A_5) > 0\) 的 \(E\) 数列 \(A_5\)；
 \item 若 \(a_1 = 12\)，\(n = 2000\)，证明：\(E\) 数列 \(A_n\) 是递增数列的充要条件是 \(a_n = 2011\)；
 \item 对任意给定的整数 \(n\)（\(n \geqslant 2\)），是否存在首项为 \(0\) 的 \(E\) 数列 \(A_n\)，使得 \(S(A_n) = 0\)？如果存在，写出一个满足条件的 \(E\) 数列 \(A_n\)；如果不存在，说明理由.
 \end{enumerate}
+
+\begin{solution}
+\begin{enumerate}
+\item 取 \(A_5: 0,1,2,1,0\). 相邻两项之差的绝对值均为 \(1\)，且
+\(a_1=a_5=0\)，\(S(A_5)=0+1+2+1+0=4>0\)，所以它满足条件.
+\item 必要性：若 \(A_{2000}\) 是递增数列，则对 \(k=1,2,\cdots,1999\)，均有
+\(a_{k+1}-a_k>0\). 又 \(A_{2000}\) 是 \(E\) 数列，故
+\(a_{k+1}-a_k=1\). 因此 \(A_{2000}\) 是首项为 \(12\)、公差为 \(1\) 的等差数列，从而
+\(a_{2000}=12+(2000-1)\times1=2011\).
+
+充分性：设 \(a_{2000}=2011\)，并令 \(d_k=a_{k+1}-a_k\). 由 \(E\) 数列的定义，\(d_k\in\{-1,1\}\)，所以 \(d_k\leqslant1\). 将这些不等式相加，得
+\[
+a_{2000}-a_1=\sum_{k=1}^{1999}(a_{k+1}-a_k)=\sum_{k=1}^{1999}d_k\leqslant1999.
+\]
+而 \(a_{2000}-a_1=2011-12=1999\)，故上式取等号. 由于每个 \(d_k\leqslant1\)，只有当所有 \(d_k=1\) 时才能取等号，于是
+\(a_{k+1}-a_k=1>0\)（\(k=1,2,\cdots,1999\)），所以 \(A_{2000}\) 是递增数列.
+
+综上，\(E\) 数列 \(A_{2000}\) 是递增数列的充要条件是 \(a_{2000}=2011\).
+\item 令
+\(d_k=a_{k+1}-a_k\)（\(k=1,2,\cdots,n-1\)）. 则 \(d_k\in\{-1,1\}\)，且因 \(a_1=0\)，有
+\[
+a_i=\sum_{k=1}^{i-1}d_k.
+\]
+因此
+\[
+S(A_n)=\sum_{i=1}^n a_i=\sum_{k=1}^{n-1}(n-k)d_k.
+\]
+令 \(\varepsilon_k=\dfrac{1-d_k}{2}\)，则 \(\varepsilon_k\in\{0,1\}\)，\(d_k=1-2\varepsilon_k\). 代入上式，得
+\[
+S(A_n)=\sum_{k=1}^{n-1}(n-k)-2\sum_{k=1}^{n-1}(n-k)\varepsilon_k=\dfrac{n(n-1)}2-2\sum_{k=1}^{n-1}(n-k)\varepsilon_k.
+\]
+若 \(S(A_n)=0\)，则 \(\dfrac{n(n-1)}2\) 必须是偶数，即 \(4\mid n(n-1)\). 由于 \(n\) 与 \(n-1\) 是相邻整数，这等价于 \(n\equiv0,1\pmod{4}\).
+
+当 \(n=4m\)（\(m\geqslant1\)）时，取数列的项按四项一组循环为
+\(0,-1,0,1\)，即
+\[
+(a_{4j+1},a_{4j+2},a_{4j+3},a_{4j+4})=(0,-1,0,1),\qquad j=0,1,\cdots,m-1.
+\]
+每组相邻两项之差的绝对值均为 \(1\)，每组和为 \(0\)，所以 \(a_1=0\) 且 \(S(A_n)=0\).
+
+当 \(n=4m+1\)（\(m\geqslant1\)）时，取前 \(4m\) 项同上，再令 \(a_{4m+1}=0\). 末两项为 \(1,0\)，仍满足相邻两项之差的绝对值为 \(1\)，且新增项为 \(0\)，所以仍有 \(a_1=0\) 且 \(S(A_n)=0\).
+
+因此，当且仅当 \(n\equiv0,1\pmod{4}\) 时存在满足条件的 \(E\) 数列；当 \(n\equiv2,3\pmod{4}\) 时不存在.
+\end{enumerate}
+\end{solution}
 \end{problem}

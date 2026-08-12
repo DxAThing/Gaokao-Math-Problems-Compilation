@@ -8,6 +8,14 @@
     {\([1,2]\)}
     {\([0,4]\)}
     {\([1,4]\)}
+
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+由集合的交集定义，元素必须同时满足 \(-1\leqslant x\leqslant2\) 和 \(0\leqslant x\leqslant4\)，所以 \(0\leqslant x\leqslant2\)，即 \(A\cap B=[0,2]\). 因此选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -18,6 +26,18 @@
     {\(1 - 2\i\)}
     {\(2 + \i\)}
     {\(2 - \i\)}
+
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+将等式两边同乘 \(1+\i\)，得
+\[
+m=(1-n\i)(1+\i)=1+n+(1-n)\i.
+\]
+由于 \(m\) 为实数，虚部必须为零，所以 \(1-n=0\)，从而 \(n=1\)，\(m=2\). 因此 \(m+n\i=2+\i\)，选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -28,16 +48,37 @@
     {\(1 < m < n\)}
     {\(m < n < 1\)}
     {\(n < m < 1\)}
+
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+因为 \(0<a<1\)，所以函数 \(y=\log_a x\) 在 \((0,+\infty)\) 上单调递减. 由 \(\log_a m<\log_a n\) 得 \(m>n\). 又因为 \(\log_a n<0=\log_a1\)，由单调递减性得 \(n>1\). 所以 \(1<n<m\)，选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
-在平面直角坐标系中，不等式组 \(x+y-2\geqslant0\)，\(x-y+2\geqslant0\)，\(x\leqslant2\) 表示的平面区域的面积是（\quad）
+在平面直角坐标系中，不等式组 \(\begin{cases}
+x+y-2\geqslant0,\\
+x-y+2\geqslant0,\\
+x\leqslant2
+\end{cases}\) 表示的平面区域的面积是（\quad）
 
 \choices
     {\(4\sqrt{2}\)}
     {\(4\)}
     {\(2\sqrt{2}\)}
     {\(2\)}
+
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+不等式组等价于 \(y\geqslant2-x\)、\(y\leqslant x+2\) 和 \(x\leqslant2\).
+两条斜边界线的交点为 \((0,2)\)，直线 \(x=2\) 与它们的交点分别为 \((2,0)\) 和 \((2,4)\). 因而所表示的区域是以这三个点为顶点的三角形，其底边长为 \(4\)，高为 \(2\)，面积为 \(\frac12\times4\times2=4\). 因此选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -48,6 +89,22 @@
     {\(\frac{3}{2}\)}
     {\(\frac{1}{8}\)}
     {\(\frac{9}{8}\)}
+
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+双曲线可写为 \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\)，其中 \(a^2=m\)，\(b^2=1\). 于是焦半距满足 \(c^2=a^2+b^2=m+1\)，离心率为
+\[
+e=\frac ca=\sqrt{\frac{m+1}{m}}.
+\]
+对于左支，点到左焦点的距离与到左准线的距离之比为离心率. 题设给出到左准线的距离是到左焦点距离的 \(\frac13\)，故 \(e=3\). 因此
+\[
+\frac{m+1}{m}=9,
+\]
+解得 \(m=\frac18\). 因此选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -58,6 +115,22 @@
     {\(\left[-\frac{3}{2}, \frac{1}{2}\right]\)}
     {\(\left[-\frac{\sqrt{2}}{2} + \frac{1}{2}, \frac{\sqrt{2}}{2} + \frac{1}{2}\right]\)}
     {\(\left[-\frac{\sqrt{2}}{2} - \frac{1}{2}, \frac{\sqrt{2}}{2} - \frac{1}{2}\right]\)}
+
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+利用 \(\sin^2x=\dfrac{1-\cos2x}{2}\)，有
+\[
+y=\frac12\sin2x+\frac{1-\cos2x}{2}=\frac12+\frac12(\sin2x-\cos2x)=\frac12+\frac{\sqrt2}{2}\sin\left(2x-\frac\pi4\right).
+\]
+因为正弦函数的值域为 \([-1,1]\)，所以
+\[
+y\in\left[\frac12-\frac{\sqrt2}{2},\frac12+\frac{\sqrt2}{2}\right].
+\]
+因此选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -68,6 +141,18 @@
     {必要而不充分条件}
     {充分必要条件}
     {既不充分也不必要条件}
+
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+由 \(a>b>0\) 得 \((a-b)^2>0\)，即 \(a^2+b^2>2ab\)，从而
+\[
+ab<\frac{a^2+b^2}{2}.
+\]
+所以该条件是充分条件. 但它不是必要条件，例如取 \(a=1,b=2\)，则 \(ab=2<\frac{1+4}{2}\)，而 \(a>b>0\) 不成立. 因此选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -78,6 +163,18 @@
     {\(10\)}
     {\(-9\)}
     {\(-10\)}
+
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+令 \(t=x+1\)，则 \(x=t-1\). 展开式中 \(a_9\) 是 \(t^9\) 的系数. 其中 \((t-1)^2\) 不含 \(t^9\)，而
+\[
+(t-1)^{10}=\cdots+\mathrm C_{10}^{9}t^9(-1)+t^{10},
+\]
+所以 \(a_9=-\mathrm C_{10}^{9}=-10\). 因此选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -90,6 +187,22 @@
     {\(\frac{\pi}{3}\)}
     {\(\frac{\pi}{2}\)}
     {\(\frac{\sqrt{2}\pi}{4}\)}
+
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+取单位向量 \(\bs{e}_A,\bs{e}_B,\bs{e}_C\) 分别沿 \(OA,OB,OC\) 方向，则它们两两垂直. 大圆弧 \(AB\) 的中点对应的单位向量为
+\[
+\bs{e}_E=\frac{\bs{e}_A+\bs{e}_B}{\sqrt2},
+\]
+同理 \(\bs{e}_F=\dfrac{\bs{e}_A+\bs{e}_C}{\sqrt2}\). 因而
+\[
+\bs{e}_E\cdot\bs{e}_F=\frac12.
+\]
+球面半径为 \(1\)，所以球面距离等于对应圆心角，设其为 \(\theta\)，则 \(\cos\theta=\frac12\)，从而 \(\theta=\frac\pi3\). 因此选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -100,11 +213,32 @@
     {\(4\) 个}
     {\(8\) 个}
     {\(10\) 个}
+
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+设函数值为固定点的元素集合为 \(S\). 条件 \(f(f(x))=f(x)\) 表明每个函数值都是固定点，即 \(f(s)=s\)（\(s\in S\)），且 \(S\) 非空. 若 \(|S|=k\)，先从 3 个元素中选出 \(S\) 有 \(\mathrm C_3^k\) 种，再将其余 \(3-k\) 个元素分别映射到 \(S\) 中，有 \(k^{3-k}\) 种. 因此函数总数为
+\[
+\sum_{k=1}^{3}\mathrm C_3^k k^{3-k}=\mathrm C_3^1\cdot1^2+\mathrm C_3^2\cdot2+\mathrm C_3^3\cdot1=3+6+1=10.
+\]
+因此选 D.
+\end{solution}
 \end{problem}
 
 \section{填空题}
 \begin{problem}
 设 \(S_{n}\) 为等差数列 \(\{a_{n}\}\) 的前 \(n\) 项和. 若 \(S_{5} = 10\)，\(S_{10} = -5\)，则公差为\fillinblank{}（用数字作答）.
+
+\begin{answer}
+\(-1\)
+\end{answer}
+
+\begin{solution}
+设等差数列的首项为 \(a_1\)，公差为 \(d\). 由前 \(n\) 项和公式，得 \(S_5=5a_1+10d=10\)，\(S_{10}=10a_1+45d=-5\).
+将第一式乘以 \(2\)，得 \(10a_1+20d=20\). 与第二式相减，得到 \(25d=-25\)，所以 \(d=-1\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -112,16 +246,77 @@
 a, & a \geqslant b,\\
 b, & a < b,
 \end{cases}\) 函数 \(f(x) = \max \{|x + 1|, |x - 2|\}\) （\(x \in \R\)）的最小值是\fillinblank{}.
+
+\begin{answer}
+\(\frac{3}{2}\)
+\end{answer}
+
+\begin{solution}
+对任意 \(x\)，由三角不等式有
+\[
+|x+1|+|x-2|\geqslant |(x+1)-(x-2)|=3.
+\]
+因此 \(f(x)=\max\{|x+1|,|x-2|\}\geqslant\frac32\). 当 \(x=\frac12\) 时，\(|x+1|=|x-2|=\frac32\)，等号成立. 所以函数的最小值为 \(\frac32\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
 设向量 \(\bs{a}\)，\(\bs{b}\)，\(\bs{c}\)，满足 \(\bs{a} + \bs{b} + \bs{c} = 0\)，\((\bs{a} - \bs{b}) \perp \bs{c}\)，\(\bs{a} \perp \bs{b}\)，若 \(|\bs{a}| = 1\)，则 \(|\bs{a}|^2 + |\bs{b}|^2 + |\bs{c}|^2\) 的值是\fillinblank{}.
+
+\begin{answer}
+\(4\)
+\end{answer}
+
+\begin{solution}
+由 \(\bs{a}+\bs{b}+\bs{c}=0\)，得 \(\bs{c}=-(\bs{a}+\bs{b})\). 由 \((\bs{a}-\bs{b})\perp\bs{c}\)，有
+\[
+0=(\bs{a}-\bs{b})\cdot\bs{c}=-(\bs{a}-\bs{b})\cdot(\bs{a}+\bs{b})=-|\bs{a}|^2+|\bs{b}|^2.
+\]
+所以 \(|\bs{b}|=|\bs{a}|=1\). 又因为 \(\bs{a}\perp\bs{b}\)，
+\[
+|\bs{c}|^2=|\bs{a}+\bs{b}|^2=|\bs{a}|^2+|\bs{b}|^2=2.
+\]
+故 \(|\bs{a}|^2+|\bs{b}|^2+|\bs{c}|^2=1+1+2=4\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
 正四面体 \(ABCD\) 的棱长为 \(1\)，棱 \(AB \parallel\) 平面 \(\alpha\)，则正四面体上的所有点在平面 \(\alpha\) 内的射影构成的图形面积的取值范围是\fillinblank{}.
 \FigureLayoutDeclare{img/2006/zhejiang_science/q14_fig1.png}{9.5cm}{30bp 28bp 38bp 1bp}
 \bitmapfigure[max width=0.55\linewidth]{img/2006/zhejiang_science/q14_fig1.png}
+
+\begin{answer}
+\(\left[\frac{\sqrt{2}}{4}, \frac{1}{2}\right]\)
+\end{answer}
+
+\begin{solution}
+建立直角坐标系，令 \(A=(0,0,0)\)、\(B=(1,0,0)\)、\(C=\left(\frac12,\frac{\sqrt3}{2},0\right)\)、\(D=\left(\frac12,\frac{\sqrt3}{6},\sqrt{\frac23}\right)\). 由于 \(AB\parallel\alpha\)，取平面 \(\alpha\) 内与 \(AB\) 同向的单位向量，并取其垂直方向为 \(\left(0,\cos\theta,\sin\theta\right)\). 反向选择第二个方向不改变投影面积，故可设 \(-\frac\pi2\leqslant\theta\leqslant\frac\pi2\).
+
+以 \(AB\) 和上述第二个方向为投影平面内的坐标轴，四个顶点的正投影可记为 \(A'=(0,0)\)、\(B'=(1,0)\)、\(C'=\left(\frac12,u\right)\)、\(D'=\left(\frac12,v\right)\)，其中 \(u=\frac{\sqrt3}{2}\cos\theta\)，\(v=\frac{\sqrt3}{6}\cos\theta+\sqrt{\frac23}\sin\theta\). 正四面体是四个顶点的凸包，所以所求图形是上述四个投影点的凸包. 因为 \(u\geqslant0\)，当 \(v\geqslant0\) 时面积为 \(\frac12\max\{u,v\}\)，当 \(v<0\) 时面积为 \(\frac12(u-v)\).
+
+设 \(\theta_0=\arctan\frac1{\sqrt2}\)，\(\theta_1=-\arctan\frac1{2\sqrt2}\). 当 \(v\geqslant0\) 时，必有 \(\theta\in[\theta_1,\frac\pi2]\). 若 \(\theta\in[\theta_1,\theta_0]\)，则 \(u\geqslant u(\theta_0)=\frac{\sqrt2}{2}\). 若 \(\theta\in[\theta_0,\frac\pi2]\)，由于 \(v>0\) 且 \(v''(\theta)=-v(\theta)<0\)，函数 \(v\) 在该区间上为凹函数，故其最小值出现在端点，而
+\[
+v(\theta_0)=\frac{\sqrt2}{2},\qquad v\left(\frac\pi2\right)=\sqrt{\frac23}>\frac{\sqrt2}{2}.
+\]
+所以此时 \(\max\{u,v\}\geqslant\frac{\sqrt2}{2}\). 当 \(v<0\) 时，\(\theta\in[-\frac\pi2,\theta_1)\)，且
+\[
+u-v=\frac{\sqrt3}{3}\cos\theta-\sqrt{\frac23}\sin\theta.
+\]
+记 \(w(\theta)=u-v=\frac{\sqrt3}{3}\cos\theta-\sqrt{\frac23}\sin\theta\). 在该区间内 \(w>0\)，且 \(w''(\theta)=-w(\theta)<0\)，所以 \(w\) 的最小值出现在端点，端点值均为 \(\sqrt{\frac23}>\frac{\sqrt2}{2}\). 因而任意情况下投影面积均不小于 \(\frac{\sqrt2}{4}\). 当 \(\theta=\theta_0\) 时 \(u=v=\frac{\sqrt2}{2}\)，下界可以取得.
+
+另一方面，\(u\leqslant\frac{\sqrt3}{2}<1\)，且由柯西不等式
+\[
+|v|\leqslant\sqrt{\frac1{12}+\frac23}=\frac{\sqrt3}{2}<1.
+\]
+当 \(v\geqslant0\) 时面积严格小于 \(\frac12\). 当 \(v<0\) 时，仍由柯西不等式
+\[
+u-v=\frac{\sqrt3}{3}\cos\theta-\sqrt{\frac23}\sin\theta\leqslant1,
+\]
+故面积不大于 \(\frac12\). 取 \((\cos\theta,\sin\theta)=\left(\frac{\sqrt3}{3},-\sqrt{\frac23}\right)\) 时 \(v=-\frac12<0\)，且 \(u-v=1\)，上界可以取得. 投影面积关于 \(\theta\) 连续，故其取值范围为
+\[
+\left[\frac{\sqrt2}{4},\frac12\right].
+\]
+\end{solution}
 \end{problem}
 
 \section{解答题}
@@ -137,6 +332,25 @@ b, & a < b,
 \bitmapfigure[max width=0.50\linewidth]{img/2006/zhejiang_science/q15_fig1.png}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item
+令 \(x=0\)，由图象经过 \((0,1)\) 得 \(2\sin\varphi=1\). 因为 \(0\leqslant\varphi\leqslant\frac\pi2\)，所以
+\[
+\varphi=\frac\pi6.
+\]
+\item
+此时函数为 \(y=2\sin\left(\pi x+\frac\pi6\right)\). 取图中最高点及其左右相邻的两个 \(x\) 轴交点，则
+\(P=\left(\frac13,2\right)\)，\(M=\left(-\frac16,0\right)\)，\(N=\left(\frac56,0\right)\). 于是
+\(\overrightarrow{PM}=\left(-\frac12,-2\right)\)，\(\overrightarrow{PN}=\left(\frac12,-2\right)\)，从而 \(\overrightarrow{PM}\cdot\overrightarrow{PN}=-\frac14+4=\frac{15}{4}\)，且 \(|\overrightarrow{PM}|=|\overrightarrow{PN}|=\frac{\sqrt{17}}2\).
+设夹角为 \(\theta\)，则
+\[
+\cos\theta=\frac{\overrightarrow{PM}\cdot\overrightarrow{PN}}{|\overrightarrow{PM}|\,|\overrightarrow{PN}|}=\frac{15}{17}.
+\]
+故夹角为 \(\arccos\frac{15}{17}\).
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
 设 \( f(x)=3ax^{2}+2bx+c \). 若 \( a+b+c=0 \)，\( f(0)>0 \)，\( f(1)>0 \)，求证：
 
@@ -145,6 +359,32 @@ b, & a < b,
 \item 方程 \( f(x)=0 \) 在 \((0,1)\) 内有两个实根.
 \end{enumerate}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item
+由 \(a+b+c=0\)，得 \(c=-a-b\). 由 \(f(0)>0\) 得
+\[
+a+b<0,
+\]
+而
+\[
+f(1)=3a+2b+c=2a+b>0.
+\]
+两式相减得到 \(a>0\). 于是由 \(a+b<0\) 得 \(\frac ba<-1\)，由 \(2a+b>0\) 得 \(\frac ba>-2\)，即 \(-2<\frac ba<-1\).
+
+\item
+令 \(t=-\frac ba\)，则 \(1<t<2\)，且二次函数 \(f\) 的对称轴为
+\[
+x_0=-\frac{b}{3a}=\frac t3\in\left(\frac13,\frac23\right)\subset(0,1).
+\]
+在顶点处，
+\[
+f(x_0)=c-\frac{b^2}{3a}=a(t-1)-\frac{at^2}{3}=-\frac a3(t^2-3t+3).
+\]
+由于 \(t^2-3t+3=\left(t-\frac32\right)^2+\frac34>0\)，且 \(a>0\)，所以 \(f(x_0)<0\). 又已知 \(f(0)>0\)，由零点存在定理，\((0,x_0)\) 内有一个根；已知 \(f(1)>0\)，同理 \((x_0,1)\) 内有一个根. 二次函数至多有两个实根，所以方程 \(f(x)=0\) 在 \((0,1)\) 内恰有两个实根.
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 如图，在四棱锥 \(P-ABCD\) 中，底面为直角梯形，\(AD \parallel BC\)，\(\angle BAD = 90^\circ\)，\(PA \perp\) 底面 \(ABCD\)，且 \(PA = AD = AB = 2BC\)，\(M\)，\(N\) 分别为 \(PC\)，\(PB\) 的中点.
@@ -157,6 +397,25 @@ b, & a < b,
 \bitmapfigure[max width=0.55\linewidth]{img/2006/zhejiang_science/q17_fig1.png}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item
+建立空间直角坐标系，令 \(A=(0,0,0)\)、\(B=(0,2,0)\)、\(D=(2,0,0)\)、\(C=(1,2,0)\)、\(P=(0,0,2)\).
+这些坐标满足底面为直角梯形、\(AD\parallel BC\)，并且 \(PA=AD=AB=2\)，\(BC=1\). 因而
+\(M=\left(\frac12,1,1\right)\)，\(N=(0,1,1)\). 有 \(\overrightarrow{PB}=(0,2,-2)\)，\(\overrightarrow{DM}=\left(-\frac32,1,1\right)\)，
+所以 \(\overrightarrow{PB}\cdot\overrightarrow{DM}=0\)，即 \(PB\perp DM\).
+
+\item
+平面 \(ADMN\) 的方程为 \(y=z\)，可取其一个法向量为 \(\bs{n}=(0,1,-1)\). 又
+\(\overrightarrow{CD}=(1,-2,0)\)，\(|\overrightarrow{CD}|=\sqrt5\)，\(|\bs{n}|=\sqrt2\)，
+且 \(|\overrightarrow{CD}\cdot\bs{n}|=2\). 设 \(CD\) 与平面 \(ADMN\) 所成的角为 \(\theta\)，则
+\[
+\sin\theta=\frac{|\overrightarrow{CD}\cdot\bs{n}|}{|\overrightarrow{CD}|\,|\bs{n}|}=\frac2{\sqrt{10}}=\sqrt{\frac25}.
+\]
+因此 \(\cos\theta=\sqrt{\frac35}\)，即 \(\theta=\arcsin\sqrt{\frac25}\).
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
 甲，乙两袋装有大小相同的红球和白球，甲袋装有 \(2\) 个红球，\(2\) 个白球，乙袋装有 \(2\) 个红球，\(n\) 个白球. 现从甲，乙两袋中各任取 \(2\) 个球.
 
@@ -165,6 +424,32 @@ b, & a < b,
 \item 若取到的 \(4\) 个球中至少有 \(2\) 个红球的概率为 \(\frac{3}{4}\)，求 \(n\).
 \end{enumerate}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item
+从甲袋任取两个球，取到红球数分别为 \(0\)，\(1\)，\(2\) 的概率为 \(P(X=0)=\frac{\mathrm C_2^0\mathrm C_2^2}{\mathrm C_4^2}=\frac16\)，\(P(X=1)=\frac{\mathrm C_2^1\mathrm C_2^1}{\mathrm C_4^2}=\frac23\)，\(P(X=2)=\frac{\mathrm C_2^2\mathrm C_2^0}{\mathrm C_4^2}=\frac16\). 当 \(n=3\) 时，从乙袋取到两个红球的概率为 \(P(Y=2)=\frac{\mathrm C_2^2\mathrm C_3^0}{\mathrm C_5^2}=\frac1{10}\).
+所以四个球全是红球的概率为 \(\frac16\cdot\frac1{10}=\frac1{60}\).
+
+\item
+一般地，从乙袋取到 \(0\) 个和 \(1\) 个红球的概率分别为 \(P(Y=0)=\frac{\mathrm C_n^2}{\mathrm C_{n+2}^2}=\frac{n(n-1)}{(n+1)(n+2)}\)，\(P(Y=1)=\frac{\mathrm C_2^1\mathrm C_n^1}{\mathrm C_{n+2}^2}=\frac{4n}{(n+1)(n+2)}\).
+设从甲、乙两袋取到的红球数分别为 \(X,Y\). 则取到的四个球中红球数少于 \(2\) 的概率为
+\[
+P(X+Y<2)=\frac16\bigl(P(Y=0)+P(Y=1)\bigr)+\frac23P(Y=0)
+=\frac56P(Y=0)+\frac16P(Y=1).
+\]
+代入上式中的概率，得
+\[
+P(X+Y<2)=\frac{5n^2-n}{6(n+1)(n+2)}.
+\]
+由题意
+\[
+1-\frac{5n^2-n}{6(n+1)(n+2)}=\frac34,
+\]
+化简得 \(7n^2-11n-6=0\)，即 \((7n+3)(n-2)=0\).
+因为 \(n\) 是白球个数，取正整数解，故 \(n=2\).
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 如图，椭圆 \(\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\)（\(a > b > 0\)）与过点 \(A(2,0)\)，\(B(0,1)\) 的直线有且只有一个公共点 \(T\)，且椭圆的离心率 \(e = \frac{\sqrt{3}}{2}\).
@@ -178,8 +463,57 @@ b, & a < b,
 \bitmapfigure[max width=0.55\linewidth]{img/2006/zhejiang_science/q19_fig1.png}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item
+由离心率条件，
+\[
+e^2=1-\frac{b^2}{a^2}=\frac34,
+\]
+所以 \(b^2=\frac{a^2}{4}\). 直线 \(AB\) 的方程为 \(y=1-\frac x2\). 代入椭圆方程，得
+\[
+\frac{x^2}{a^2}+\frac{4\left(1-\frac x2\right)^2}{a^2}=1,
+\]
+即
+\[
+2x^2-4x+4-a^2=0.
+\]
+因为直线与椭圆只有一个公共点，所以上述关于 \(x\) 的方程有重根，故
+\[
+(-4)^2-4\cdot2(4-a^2)=0,
+\]
+解得 \(a^2=2\)，从而 \(b^2=\frac12\). 椭圆方程为
+\[
+\frac{x^2}{2}+2y^2=1.
+\]
+重根为 \(x=1\)，故 \(T=(1,\frac12)\). 设焦半距为 \(c\)，则
+\[
+c=\sqrt{a^2-b^2}=\sqrt{\frac32}=\frac{\sqrt6}{2}.
+\]
+于是 \(F_1=(-c,0)\)，\(F_2=(c,0)\)，且
+\[
+M=\left(\frac{2+c}{2},0\right)=\left(1+\frac c2,0\right).
+\]
+
+\item
+直线 \(TA\) 和 \(TM\) 的斜率分别为 \(-\frac12\) 和 \(-\frac1c\). 由于 \(0<c<2\)，两直线的夹角为锐角，故
+\[
+\tan\angle ATM=\left|\frac{\frac12-\frac1c}{1+\frac1{2c}}\right|=\frac{2-c}{2c+1}.
+\]
+从 \(F_1\) 看，\(F_1A\) 为水平线，\(F_1T=(1+c,\frac12)\)，所以
+\[
+\tan\angle AF_1T=\frac1{2(1+c)}.
+\]
+又因为 \(c^2=\frac32\)，有
+\[
+2(1+c)(2-c)=4+2c-2c^2=1+2c.
+\]
+因此 \(\dfrac{2-c}{2c+1}=\dfrac1{2(1+c)}\)，从而 \(\angle ATM=\angle AF_1T\).
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
-已知函数 \( f(x) = x^3 + x^2 \)，数列 \( \{x_n\} \)（\(x_n > 0\)）的第一项 \( x_1 = 1 \)，以后各项按如下方式取定：曲线 \( y = f(x) \) 在 \((x_{n+1}, f(x_{n+1}))\) 处的切线与经过 \((0,0)\) 和 \((x_n, f(x_n))\) 两点的直线平行（如图）. 求证：当 \( n \in \mathbf{N}^* \) 时，
+已知函数 \( f(x) = x^3 + x^2 \)，数列 \( \{x_n\} \)（\(x_n > 0\)）的第一项 \( x_1 = 1 \)，以后各项按如下方式取定：曲线 \( y = f(x) \) 在 \((x_{n+1}, f(x_{n+1}))\) 处的切线与经过 \((0,0)\) 和 \((x_n, f(x_n))\) 两点的直线平行（如图）. 求证：当 \(n\in\N^*\) 时，
 
 \begin{enumerate}
 \item \(x_{n}^{2} + x_{n} = 3x_{n + 1}^{2} + 2x_{n + 1};\)
@@ -188,3 +522,48 @@ b, & a < b,
 
 \bitmapfigure[max width=0.42\linewidth]{img/2006/zhejiang_science/q20_fig1.png}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item
+函数 \(f(x)=x^3+x^2\) 的导数为 \(f'(x)=3x^2+2x\). 过原点和 \((x_n,f(x_n))\) 的直线斜率为
+\[
+\frac{f(x_n)}{x_n}=x_n^2+x_n,
+\]
+而曲线在 \((x_{n+1},f(x_{n+1}))\) 处的切线斜率为 \(3x_{n+1}^2+2x_{n+1}\). 由两直线平行，得到
+\[
+x_n^2+x_n=3x_{n+1}^2+2x_{n+1}.
+\]
+
+\item
+记 \(h(x)=x^2+x\)，\(q(x)=3x^2+2x\). 对任意 \(x>0\)，有 \(q(x)>h(x)\)，且 \(q\) 在正半轴上递增. 若 \(t=x_{n+1}\)，由 \(q(t)=h(x_n)\) 得 \(t<x_n\). 又
+\[
+q\left(\frac{x_n}{2}\right)=x_n+\frac34x_n^2<h(x_n),
+\]
+故 \(x_{n+1}>\frac{x_n}{2}\). 由 \(x_1=1\) 归纳可得
+\[
+x_n\geqslant\left(\frac12\right)^{n-1}.
+\]
+
+再证上界. 由 \(x_{n+1}<x_n\) 及 \(x_1=1\)，知 \(0<x_n\leqslant1\). 对 \(0<x\leqslant1\)，令 \(t_0=\dfrac{2x}{4-x}\)，直接计算得
+\[
+q(t_0)-h(x)=\frac{x^3(7-x)}{(4-x)^2}>0.
+\]
+由于 \(q\) 递增且 \(q(x_{n+1})=h(x_n)\)，取 \(x=x_n\) 可得
+\[
+x_{n+1}<\frac{2x_n}{4-x_n}.
+\]
+令 \(u_n=\dfrac1{x_n}\)，则
+\[
+u_{n+1}>\frac{4-x_n}{2x_n}=2u_n-\frac12.
+\]
+由 \(u_1=1\)，先得 \(u_2>\frac32\). 事实上，\(u_2>\frac12+2^0\)；若 \(n\geqslant2\) 时 \(u_n>\frac12+2^{n-2}\)，则
+\[
+u_{n+1}>2u_n-\frac12>\frac12+2^{n-1}.
+\]
+所以由数学归纳法，对所有 \(n\geqslant2\) 都有 \(u_n>\frac12+2^{n-2}>2^{n-2}\). 于是 \(x_n<2^{2-n}\)（\(n\geqslant2\)），而 \(x_1=1<2\)，故对所有 \(n\in\mathbf N^*\) 都有
+\[
+\left(\frac12\right)^{n-1}\leqslant x_n\leqslant\left(\frac12\right)^{n-2}.
+\]
+\end{enumerate}
+\end{solution}

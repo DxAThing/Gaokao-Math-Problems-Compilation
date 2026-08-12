@@ -12,6 +12,14 @@
     {\(\{b, e\}\)}
 \end{problem}
 
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+由于 \(I\) 是全集，\(I\) 中除去 \(M\) 的元素为 \(b,e\)，除去 \(N\) 的元素为 \(a,c\)，所以 \(\overline{M}=\{b,e\}\)，\(\overline{N}=\{a,c\}\). 因而 \(\overline{M}\cap\overline{N}=\varnothing\)，故选 A.
+\end{solution}
+
 \begin{problem}
 与函数 \(y = x\) 有相同图象的一个函数是（\quad）
 
@@ -21,6 +29,14 @@
     {\(y = a^{\log_a x}\)（其中 \(a > 0\)，\(a \neq 1\)）}
     {\(y = \log_a a^x\)（其中 \(a > 0\)，\(a \neq 1\)）}
 \end{problem}
+
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+选项 A 中 \(y=\sqrt{x^2}=|x|\)，当 \(x<0\) 时不等于 \(x\)；选项 B 中 \(y=\frac{x^2}{x}=x\) 只在 \(x\neq0\) 时有定义，定义域不是 \(\R\)；选项 C 中 \(y=a^{\log_a x}=x\) 的定义域为 \(x>0\)，也不是 \(\R\). 选项 D 中，由于 \(a>0\) 且 \(a\neq1\)，对任意 \(x\in\R\) 都有 \(y=\log_a a^x=x\)，故选 D.
+\end{solution}
 
 \begin{problem}
 如果圆锥的底面半径为 \(\sqrt{2}\)，高为 \(2\)，那么它的侧面积是（\quad）
@@ -32,18 +48,38 @@
     {\(4\sqrt{2}\pi\)}
 \end{problem}
 
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+设圆锥的母线长为 \(l\)，则由勾股定理，\(l=\sqrt{(\sqrt{2})^2+2^2}=\sqrt{6}\). 所以圆锥的侧面积为 \(\pi\sqrt{2}\cdot\sqrt{6}=2\sqrt{3}\pi\)，故选 C.
+\end{solution}
+
 \begin{problem}
 \(\cos \left[\arcsin \left(-\frac{4}{5}\right) - \arccos \left(-\frac{3}{5}\right)\right]\) 的值等于（\quad）
 
 \choices
     {\(-1\)}
-    {\(-\frac{\sqrt{7}}{25}\)}
+    {\(-\frac{7}{25}\)}
     {\(\frac{7}{25}\)}
     {\(-\frac{\sqrt{10}}{5}\)}
 \end{problem}
 
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+设 \(\alpha=\arcsin\frac{4}{5}\)，则 \(\alpha\in(0,\frac{\pi}{2})\)，且 \(\cos\alpha=\frac{3}{5}\). 因而 \(\arcsin(-\frac45)=-\alpha\)，\(\arccos(-\frac35)=\pi-\alpha\). 所以
+\[
+\cos\left[\arcsin\left(-\frac45\right)-\arccos\left(-\frac35\right)\right]=\cos(-\pi)=-1,
+\]
+故选 A.
+\end{solution}
+
 \begin{problem}
-已知 \(\{a_n\}\) 是等比数列，如果 \(a_1 + a_2 + a_3 = 18\)，\(a_2 + a_3 + a_4 = -9\)，且 \(S_n = a_1 + a_2 + \cdots + a_n\)，那么 \(\lim\limits_{n \to \infty} S_n\) 的值等于（\quad）
+已知 \(\{a_n\}\) 是等比数列，如果 \(a_1 + a_2 + a_3 = 18\)，\(a_2 + a_3 + a_4 = -9\)，且 \(S_n = a_1 + a_2 + \cdots + a_n\)，那么 \(\displaystyle\lim_{n \to \infty} S_n\) 的值等于（\quad）
 
 \choices
     {\(8\)}
@@ -51,6 +87,22 @@
     {\(32\)}
     {\(48\)}
 \end{problem}
+
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+设等比数列的公比为 \(q\). 因为 \(a_2+a_3+a_4=q(a_1+a_2+a_3)\)，所以 \(q=\frac{-9}{18}=-\frac12\). 又
+\[
+18=a_1(1+q+q^2)=a_1\left(1-\frac12+\frac14\right)=\frac34a_1,
+\]
+从而 \(a_1=24\). 由于 \(|q|=\frac12<1\)，无穷等比级数收敛，故
+\[
+\lim_{n\to\infty}S_n=\frac{a_1}{1-q}=\frac{24}{1+\frac12}=16,
+\]
+故选 B.
+\end{solution}
 
 \begin{problem}
 如果 \(\left|\cos \theta\right| = \frac{1}{5}\)，\(\frac{5}{2}\pi < \theta < 3\pi\)，那么 \(\sin \frac{\theta}{2}\) 的值等于（\quad）
@@ -62,6 +114,18 @@
     {\(\frac{\sqrt{15}}{5}\)}
 \end{problem}
 
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+由 \(\frac{5\pi}{2}<\theta<3\pi\)，可知 \(\frac{\pi}{2}<\theta-2\pi<\pi\)，因此 \(\cos\theta<0\). 结合 \(|\cos\theta|=\frac15\)，得 \(\cos\theta=-\frac15\). 又 \(\frac{5\pi}{4}<\frac{\theta}{2}<\frac{3\pi}{2}\)，所以 \(\sin\frac{\theta}{2}<0\). 由半角公式，
+\[
+\sin^2\frac{\theta}{2}=\frac{1-\cos\theta}{2}=\frac{1+\frac15}{2}=\frac35,
+\]
+故 \(\sin\frac{\theta}{2}=-\frac{\sqrt{15}}5\)，选 C.
+\end{solution}
+
 \begin{problem}
 设复数 \(z\) 满足关系式 \(z + |z| = 2 + \i\)，那么 \(z\) 等于（\quad）
 
@@ -71,6 +135,18 @@
     {\(-\frac{3}{4} - \i\)}
     {\(\frac{3}{4} + \i\)}
 \end{problem}
+
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+设 \(z=x+y\i\)，其中 \(x,y\in\R\). 比较实部和虚部，得 \(x+|z|=2\)，\(y=1\). 令 \(r=|z|\)，则 \(r=2-x\)，且 \(r^2=x^2+1\). 因而
+\[
+(2-x)^2=x^2+1,
+\]
+解得 \(x=\frac34\)，再由 \(r=2-x\) 得 \(r=\frac54\). 所以 \(z=\frac34+\i\)，故选 D.
+\end{solution}
 
 \begin{problem}
 已知球的两个平行截面的面积分别为 \(5\pi\) 和 \(8\pi\)，它们位于球心的同一侧，且相距为 \(1\)，那么这个球的半径是（\quad）
@@ -82,6 +158,22 @@
     {\(5\)}
 \end{problem}
 
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+设球的半径为 \(R\)，球心到面积为 \(5\pi\) 和 \(8\pi\) 的截面的距离分别为 \(d_5\) 和 \(d_8\). 由截面圆面积公式，
+\[
+d_5^2=R^2-5,\qquad d_8^2=R^2-8.
+\]
+面积为 \(8\pi\) 的截面更靠近球心，且两截面在球心同一侧，所以 \(d_5-d_8=1\). 因此
+\[
+\sqrt{R^2-5}-\sqrt{R^2-8}=1.
+\]
+令 \(u=\sqrt{R^2-8}\)，则 \(\sqrt{u^2+3}=u+1\). 两边平方得 \(u^2+3=u^2+2u+1\)，从而 \(u=1\)，所以 \(R^2=9\)，\(R=3\)，故选 B.
+\end{solution}
+
 \begin{problem}
 已知椭圆的极坐标方程是 \(\rho = \frac{5}{3 - 2\cos \theta}\)，那么它的短轴长是（\quad）
 
@@ -91,6 +183,26 @@
     {\(2\sqrt{5}\)}
     {\(2\sqrt{3}\)}
 \end{problem}
+
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+由 \(x=\rho\cos\theta\) 及题设方程，得 \(3\rho-2x=5\)，即 \(3\rho=5+2x\). 两边平方并利用 \(\rho^2=x^2+y^2\)，有
+\[
+9(x^2+y^2)=(5+2x)^2,
+\]
+整理得 \(5x^2+9y^2-20x-25=0\). 配方可得
+\[
+5(x-2)^2+9y^2=45,
+\]
+即
+\[
+\frac{(x-2)^2}{9}+\frac{y^2}{5}=1.
+\]
+所以椭圆的长半轴为 \(3\)，短半轴为 \(\sqrt5\)，短轴长为 \(2\sqrt5\)，故选 C.
+\end{solution}
 
 \begin{problem}
 如果双曲线 \(\frac{x^2}{64} - \frac{y^2}{36} = 1\) 上一点 \(P\) 到它的右焦点的距离是 \(8\)，那么点 \(P\) 到它的右准线的距离是（\quad）
@@ -102,6 +214,22 @@
     {\(\frac{32}{5}\)}
 \end{problem}
 
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+双曲线的实半轴长为 \(a=8\)，虚半轴长为 \(b=6\)，所以焦半距
+\[
+c=\sqrt{a^2+b^2}=\sqrt{64+36}=10,
+\]
+离心率为 \(e=\frac{c}{a}=\frac54\). 右准线为 \(x=\frac{a}{e}\). 题设中的点 \(P\) 必在右支上，因为左支上的点到右焦点的距离不小于 \(18\)，不可能等于 \(8\). 由双曲线的焦点—准线定义，\(PF=e\cdot d\)，其中 \(d\) 是 \(P\) 到右准线的距离. 因而
+\[
+d=\frac{PF}{e}=\frac{8}{\frac54}=\frac{32}{5},
+\]
+故选 D.
+\end{solution}
+
 \begin{problem}
 已知 \(f(x) = 8 + 2x - x^2\)，如果 \(g(x) = f(2 - x^2)\)，那么 \(g(x)\)（\quad）
 
@@ -111,6 +239,18 @@
     {在区间 \((-2,0)\) 上是增函数}
     {在区间 \((0,2)\) 上是增函数}
 \end{problem}
+
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+先化简复合函数：
+\[
+g(x)=8+2(2-x^2)-(2-x^2)^2=8+2x^2-x^4.
+\]
+所以 \(g'(x)=4x(1-x^2)\). 在 \((-1,0)\) 上，\(x<0\) 且 \(1-x^2>0\)，故 \(g'(x)<0\)，函数为减函数. 在 \((0,1)\) 上函数为增函数；在 \((-2,0)\) 和 \((0,2)\) 上，导数都发生变号，不能分别判断为增函数. 因此只有选项 A 正确.
+\end{solution}
 
 \begin{problem}
 由数字 \(1\)，\(2\)，\(3\)，\(4\)，\(5\) 组成没有重复数字的五位数，其中小于 \(50000\) 的偶数共有（\quad）
@@ -122,39 +262,134 @@
     {\(24\text{ 个}\)}
 \end{problem}
 
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+五位数小于 \(50000\)，首位只能取 \(1,2,3,4\)；末位为偶数，末位只能取 \(2,4\). 若首位取 \(1\) 或 \(3\)，有 \(2\) 种首位选择和 \(2\) 种末位选择，中间三位从剩下的三个数字中排列，有 \(3!\) 种，共有 \(2\cdot2\cdot3!=24\) 个. 若首位取 \(2\) 或 \(4\)，末位只能取另一个偶数，有 \(2\) 种首位选择和 \(1\) 种末位选择，中间三位仍有 \(3!\) 种，共有 \(2\cdot1\cdot3!=12\) 个. 所以总数为 \(24+12=36\)，故选 C.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
 方程 \(\sin x - \sqrt{3}\cos x = \sqrt{2}\) 的解集是\fillinblank{}.
 \end{problem}
 
+\begin{answer}
+\(x = \frac{7\pi}{12} + 2k\pi\) 或 \(x = \frac{13\pi}{12} + 2k\pi\)，\(k \in \Z\)
+\end{answer}
+
+\begin{solution}
+利用正弦差角公式，
+\[
+\sin x-\sqrt3\cos x=2\sin\left(x-\frac{\pi}{3}\right).
+\]
+所以原方程等价于 \(\sin(x-\frac{\pi}{3})=\frac{\sqrt2}{2}\). 因而
+\[
+x-\frac{\pi}{3}=\frac{\pi}{4}+2k\pi\quad\text{或}\quad x-\frac{\pi}{3}=\frac{3\pi}{4}+2k\pi,\qquad k\in\Z.
+\]
+解得 \(x=\frac{7\pi}{12}+2k\pi\) 或 \(x=\frac{13\pi}{12}+2k\pi\)，其中 \(k\in\Z\).
+\end{solution}
+
 \begin{problem}
 不等式 \(|x^2 - 3x| > 4\) 的解集是\fillinblank{}.
 \end{problem}
+
+\begin{answer}
+\((-\infty,-1) \cup (4,+\infty)\)
+\end{answer}
+
+\begin{solution}
+由绝对值不等式的定义，原不等式等价于
+\[
+x^2-3x>4\quad\text{或}\quad x^2-3x<-4.
+\]
+第一种情况给出 \(x^2-3x-4>0\)，即 \((x-4)(x+1)>0\)，所以 \(x<-1\) 或 \(x>4\). 第二种情况给出 \(x^2-3x+4<0\)，其判别式为 \(9-16=-7<0\)，且二次项系数为正，故无实数解. 因此解集为 \((-\infty,-1)\cup(4,+\infty)\).
+\end{solution}
 
 \begin{problem}
 函数 \(y = \frac{\e^x - 1}{\e^x + 1}\) 的反函数的定义域是\fillinblank{}.
 \end{problem}
 
+\begin{answer}
+\((-1,1)\)
+\end{answer}
+
+\begin{solution}
+令 \(t=\e^x\)，则 \(t>0\)，且 \(y=\frac{t-1}{t+1}\). 由 \(t>0\) 可知 \(-1<\frac{t-1}{t+1}<1\). 反过来，对任意 \(y\in(-1,1)\)，由
+\[
+y=\frac{t-1}{t+1}
+\]
+可得 \(t=\frac{1+y}{1-y}>0\)，从而存在 \(x=\ln\frac{1+y}{1-y}\). 所以原函数的值域为 \((-1,1)\)，即反函数的定义域为 \((-1,1)\).
+\end{solution}
+
 \begin{problem}
 已知 \((1 - 2x)^7 = a_0 + a_1x + a_2x^2 + \cdots + a_7x^7\)，那么 \(a_1 + a_2 + \cdots + a_7 = \)\fillinblank{}.
 \end{problem}
 
+\begin{answer}
+\(-2\)
+\end{answer}
+
+\begin{solution}
+令 \(x=1\)，题设展开式给出
+\[
+a_0+a_1+\cdots+a_7=(1-2)^7=-1.
+\]
+再令 \(x=0\)，得 \(a_0=(1-0)^7=1\). 因此
+\[
+a_1+a_2+\cdots+a_7=-1-a_0=-2.
+\]
+\end{solution}
+
 \begin{problem}
-已知 \(A\) 和 \(B\) 是两个命题，如果 \(A\) 是 \(B\) 的充分条件，那么 \(B\) 是 \(A\) 的\fillinblank{}条件；\(\overline{A}\) 是 \(B\) 的\fillinblank{}条件.
+已知 \(A\) 和 \(B\) 是两个命题，如果 \(A\) 是 \(B\) 的充分条件，那么 \(B\) 是 \(A\) 的\fillinblank{}条件；\(\overline{A}\) 是 \(\overline{B}\) 的\fillinblank{}条件.
 \end{problem}
+
+\begin{answer}
+必要；必要
+\end{answer}
+
+\begin{solution}
+“\(A\) 是 \(B\) 的充分条件”表示 \(A\Rightarrow B\)，所以 \(B\) 是 \(A\) 的必要条件. 对这个蕴含关系取逆否命题，得 \(\overline{B}\Rightarrow\overline{A}\)，所以 \(\overline{A}\) 是 \(\overline{B}\) 的必要条件. 两个空均填“必要”.
+\end{solution}
 
 \begin{problem}
 如图，已知圆柱的底面半径是 \(3\)，高是 \(4\)，\(A\)，\(B\) 两点分别在两底面的圆周上，并且 \(AB = 5\)，那么直线 \(AB\) 与轴 \(OO'\) 之间的距离等于\fillinblank{}.
 
-\bitmapfigure[max width=0.34\linewidth]{img/1989/national_science/q18_fig1.png}
+\bitmapinlinefigure[0.34\linewidth][max width=0.34\linewidth]{img/1989/national_science/q18_fig1.png}
 \end{problem}
+
+\begin{answer}
+\(\frac{3\sqrt{3}}{2}\)
+\end{answer}
+
+\begin{solution}
+把 \(A\)，\(B\) 沿轴方向投影到同一个水平面，记所得点为 \(A_0\)，\(B_0\)，并记轴 \(OO'\) 在该水平面上的投影点为 \(O_0\). 则 \(O_0A_0=O_0B_0=3\). 由于两底面间的高为 \(4\)，有
+\[
+A_0B_0^2=AB^2-4^2=5^2-4^2=9,
+\]
+所以 \(A_0B_0=3\). 在等腰三角形 \(O_0A_0B_0\) 中，腰长为 \(3\)，底边长为 \(3\)，从 \(O_0\) 到直线 \(A_0B_0\) 的距离为
+\[
+\sqrt{3^2-\left(\frac32\right)^2}=\frac{3\sqrt3}{2}.
+\]
+直线 \(AB\) 与轴 \(OO'\) 的最短距离正好等于其水平投影直线 \(A_0B_0\) 到 \(O_0\) 的距离，因此所求距离为 \(\frac{3\sqrt3}{2}\).
+\end{solution}
 
 \section{解答题}
 
 \begin{problem}
 证明：\(\tan \frac{3x}{2} - \tan \frac{x}{2} = \frac{2\sin x}{\cos x + \cos 2x}\).
 \end{problem}
+
+\begin{solution}
+在两边均有意义的范围内，利用正切差角公式和积化和差公式，有
+\[
+\tan \frac{3x}{2} - \tan \frac{x}{2} = \frac{\sin\left(\frac{3x}{2}-\frac{x}{2}\right)}{\cos\frac{3x}{2}\cos\frac{x}{2}} = \frac{\sin x}{\dfrac{1}{2}\left(\cos 2x+\cos x\right)} = \frac{2\sin x}{\cos x+\cos 2x}.
+\]
+所以等式成立.
+\end{solution}
 
 \begin{problem}
 如图，在平行六面体 \(ABCD - A_1B_1C_1D_1\) 中，已知 \(AB = 5\)，\(AD = 4\)，\(AA_1 = 3\)，\(AB \perp AD\)，\(\angle A_1AB = \angle A_1AD = \frac{\pi}{3}\).
@@ -163,26 +398,174 @@
 \item 求这个平行六面体的体积.
 \end{enumerate}
 
-\bitmapfigure[max width=0.44\linewidth]{img/1989/national_science/q20_fig1.png}
+\bitmapinlinefigure[0.50\linewidth][max width=0.50\linewidth]{img/1989/national_science/q20_fig1.png}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item 设 \(O\) 为 \(A_1\) 在底面 \(ABCD\) 上的射影，在底面内以 \(AB\)，\(AD\) 为两条互相垂直的方向，并设 \(O\) 在这两个方向上的有向坐标分别为 \(u\)，\(v\). 由于 \(A_1O\perp\) 底面，\(AA_1\) 在 \(AB\) 和 \(AD\) 方向上的投影分别等于 \(u\)，\(v\)，因此
+\[
+u=AA_1\cos\angle A_1AB=3\cos\frac{\pi}{3}=\frac{3}{2},\qquad v=AA_1\cos\angle A_1AD=3\cos\frac{\pi}{3}=\frac{3}{2}.
+\]
+因为 \(AB\perp AD\)，所以 \(\angle BAD\) 是直角，且其平分线上的点在 \(AB\)，\(AD\) 两个方向上的分量相等. 由 \(u=v=\frac{3}{2}\)，可知 \(O\) 在 \(\angle BAD\) 的平分线上.
+
+ \item 因为 \(AB\perp AD\)，有
+\[
+AO^2=u^2+v^2=\frac{9}{2}.
+\]
+又因为三角形 \(AA_1O\) 在 \(O\) 处为直角，所以
+\[
+A_1O^2=AA_1^2-AO^2=9-\frac{9}{2}=\frac{9}{2},\qquad A_1O=\frac{3}{\sqrt{2}}.
+\]
+底面 \(ABCD\) 是矩形，面积为 \(AB\cdot AD=5\times4=20\)，故平行六面体的体积为
+\[
+V=20\times\frac{3}{\sqrt{2}}=30\sqrt{2}.
+\]
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 自点 \(A(-3,3)\) 发出的光线 \(L\) 射到 \(x\) 轴上，被 \(x\) 轴反射，其反射光线所在直线与圆 \(x^2 + y^2 - 4x - 4y + 7 = 0\) 相切，求光线 \(L\) 所在直线的方程.
 \end{problem}
 
+\begin{solution}
+将点 \(A(-3,3)\) 关于 \(x\) 轴对称，得到点 \(A'(-3,-3)\). 反射光线所在直线关于 \(x\) 轴反射后经过 \(A'\)，且与圆相切. 将圆的方程化为
+\[
+(x-2)^2+(y-2)^2=1,
+\]
+可知圆心为 \(C(2,2)\)，半径为 \(1\).
+
+设过 \(A'\) 的切线斜率为 \(m\)，则其方程为 \(y+3=m(x+3)\)，即 \(mx-y+3m-3=0\). 圆心到该直线的距离等于半径，因而
+\[
+\frac{|2m-2+3m-3|}{\sqrt{m^2+1}}=1.
+\]
+平方并整理，得 \(25(m-1)^2=m^2+1\)，即 \(12m^2-25m+12=0\)，所以
+\[
+m=\frac{4}{3}\quad\text{或}\quad m=\frac{3}{4}.
+\]
+令切线与 \(x\) 轴的交点为 \(Q\)，由 \(y+3=m(x+3)\) 得
+\[
+Q=\left(\frac{3}{m}-3,0\right).
+\]
+当 \(m=\frac{4}{3}\) 和 \(m=\frac{3}{4}\) 时，分别有 \(Q=\left(-\frac{3}{4},0\right)\) 和 \(Q=(1,0)\)，二者都在 \(A\) 的右侧，因而入射光线确实可由 \(A\) 射至 \(Q\). 对直线 \(mx-y+3m-3=0\)，圆心 \(C\) 到该直线的垂足为
+\[
+T=C-\frac{5(m-1)}{m^2+1}(m,-1).
+\]
+代入两种斜率，得切点分别为 \(T=\left(\frac{6}{5},\frac{13}{5}\right)\) 和 \(T=\left(\frac{13}{5},\frac{6}{5}\right)\)，均位于从相应的 \(Q\) 沿斜率 \(m\) 的正向射线，因此两条候选切线均满足反射光线的方向条件. 关于 \(x\) 轴反射回去后，原光线所在直线经过 \(A(-3,3)\)，斜率分别为 \(-\frac{4}{3}\)，\(-\frac{3}{4}\). 因此
+\[
+y-3=-\frac{4}{3}(x+3)\quad\text{或}\quad y-3=-\frac{3}{4}(x+3),
+\]
+即所求直线方程为 \(4x+3y+3=0\) 或 \(3x+4y-3=0\).
+\end{solution}
+
 \begin{problem}
 已知 \(a > 0\)，\(a \neq 1\)，试求使方程 \(\log_a(x - ak) = \log_{a^2}(x^2 - a^2)\) 有解的 \(k\) 的取值范围.
 \end{problem}
+
+\begin{solution}
+由对数的定义域，必须有 \(x-ak>0\) 且 \(x^2-a^2>0\). 又因为 \(a>0\)，\(a\neq1\)，所以
+\[
+\log_{a^2}(x^2-a^2)=\frac{1}{2}\log_a(x^2-a^2)=\log_a\sqrt{x^2-a^2}.
+\]
+由于 \(\log_a x\) 在其定义域内是一一对应的，原方程等价于
+\[
+x-ak=\sqrt{x^2-a^2}.
+\]
+两边均为正数，平方得
+\[
+(x-ak)^2=x^2-a^2,
+\]
+从而 \(2akx=a^2(k^2+1)\). 当 \(k=0\) 时上式变为 \(0=a^2\)，不可能；当 \(k\neq0\) 时，解得
+\[
+x=\frac{a(k^2+1)}{2k},\qquad x-ak=\frac{a(1-k^2)}{2k}.
+\]
+要使 \(x-ak>0\)，由于 \(a>0\)，必须有 \(\frac{1-k^2}{k}>0\)，即 \(k<-1\) 或 \(0<k<1\). 对这些 \(k\)，由上式可得 \(x^2-a^2=(x-ak)^2>0\)，定义域条件同时满足. 因此 \(k\) 的取值范围为
+\[
+k\in(-\infty,-1)\cup(0,1).
+\]
+\end{solution}
 
 \begin{problem}
 是否存在常数 \(a\)，\(b\)，\(c\) 使得等式 \(1 \cdot 2^2 + 2 \cdot 3^2 + \cdots + n(n + 1)^2 = \frac{n(n + 1)}{12}(an^2 + bn + c)\) 对一切自然数 \(n\) 都成立？并证明你的结论.
 \end{problem}
 
+\begin{solution}
+将左端逐项展开，得
+
+\[
+\sum_{j=1}^{n}j(j+1)^2=\sum_{j=1}^{n}(j^3+2j^2+j).
+\]
+
+由幂和公式，\(\sum_{j=1}^{n}j^3=\left(\frac{n(n+1)}{2}\right)^2\)，\(\sum_{j=1}^{n}j^2=\frac{n(n+1)(2n+1)}{6}\)，\(\sum_{j=1}^{n}j=\frac{n(n+1)}{2}\). 因此
+\[
+\sum_{j=1}^{n}j(j+1)^2=\left(\frac{n(n+1)}{2}\right)^2+2\cdot\frac{n(n+1)(2n+1)}{6}+\frac{n(n+1)}{2}.
+\]
+将右侧通分并提取 \(\frac{n(n+1)}{12}\)，得到
+\[
+\sum_{j=1}^{n}j(j+1)^2=\frac{n(n+1)}{12}\left(3n(n+1)+4(2n+1)+6\right).
+\]
+将括号内展开，得
+\[
+3n(n+1)+4(2n+1)+6=3n^2+11n+10.
+\]
+所以
+\[
+\sum_{j=1}^{n}j(j+1)^2=\frac{n(n+1)}{12}\left(3n^2+11n+10\right).
+\]
+所以对一切自然数 \(n\)，题设等式确实成立，取
+\[
+a=3,\qquad b=11,\qquad c=10.
+\]
+反过来，若题设等式对一切自然数 \(n\) 成立，则对一切正整数 \(n\) 也成立. 由于正整数 \(n\) 满足 \(n(n+1)\neq0\)，约去 \(\frac{n(n+1)}{12}\) 后，必须有
+\[
+an^2+bn+c=3n^2+11n+10
+\]
+对一切正整数 \(n\) 成立，即
+\[
+(a-3)n^2+(b-11)n+(c-10)=0
+\]
+对一切正整数 \(n\) 成立. 这个次数不超过 \(2\) 的多项式有无穷多个根，只能恒等于零. 于是
+\[
+a=3,\qquad b=11,\qquad c=10.
+\]
+所以存在这样的常数，且唯一为 \(a=3\)，\(b=11\)，\(c=10\).
+\end{solution}
+
 \begin{problem}
-设 \(f(x)\) 是定义在区间 \((-\infty, +\infty)\) 上以 \(2\) 为周期的函数，对 \(k \in \Z\)，用 \(I_k\) 表示区间 \((2k - 1, 2k + 1)\)，已知当 \(x \in I_0\) 时，\(f(x) = x^2\).
+设 \(f(x)\) 是定义在区间 \((-\infty, +\infty)\) 上以 \(2\) 为周期的函数，对 \(k \in \Z\)，用 \(I_k\) 表示区间 \((2k - 1, 2k + 1]\)，已知当 \(x \in I_0\) 时，\(f(x) = x^2\).
 \begin{enumerate}
 \item 求 \(f(x)\) 在 \(I_k\) 上的解析表达式；
 \item 对自然数 \(k\)，求集合 \(M_k = \left\{ a \mid \text{使方程 } f(x) = ax \text{ 在 } I_k \text{ 上有两个不等的实根} \right\}\).
 \end{enumerate}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item 当 \(x\in I_k\) 时，\(x-2k\in(-1,1]=I_0\). 由 \(f(x)\) 的周期为 \(2\)，有 \(f(x)=f(x-2k)\)，再由 \(f(t)=t^2\)（\(t\in I_0\)）可得
+\[
+f(x)=(x-2k)^2,\qquad x\in I_k.
+\]
+
+\item 按题目中自然数 \(k=1,2,\ldots\) 讨论. 令 \(t=x-2k\)，则 \(t\in(-1,1]\)，且 \(x=2k+t>0\). 因而当 \(a<0\) 时方程没有实根；当 \(a=0\) 时方程化为 \(t^2=0\)，只有一个实根. 对 \(a>0\)，方程 \(f(x)=ax\) 等价于
+\[
+t^2=a(2k+t),\qquad\text{即}\qquad a=h(t):=\frac{t^2}{2k+t}.
+\]
+在 \((-1,1]\) 上，
+\[
+h'(t)=\frac{t(4k+t)}{(2k+t)^2}.
+\]
+因为 \(k\geqslant1\)，所以 \(4k+t>0\)，从而 \(h(t)\) 在 \((-1,0)\) 上递减，在 \((0,1]\) 上递增. 并且
+\[
+\lim_{t\to-1^+}h(t)=\frac{1}{2k-1},\qquad h(0)=0,\qquad h(1)=\frac{1}{2k+1}.
+\]
+因此，负半段给出值域 \(\left(0,\frac{1}{2k-1}\right)\)，正半段给出值域 \(\left(0,\frac{1}{2k+1}\right]\). 方程有两个不等的实根，当且仅当同一个正数 \(a\) 同时落在这两个值域中，即
+\[
+0<a\leqslant\frac{1}{2k+1}.
+\]
+所以
+\[
+M_k=\left(0,\frac{1}{2k+1}\right].
+\]
+若将 \(0\) 也列入自然数，则另由 \(I_0=(-1,1]\) 直接得到 \(M_0=(-1,0)\cup(0,1]\).
+\end{enumerate}
+\end{solution}

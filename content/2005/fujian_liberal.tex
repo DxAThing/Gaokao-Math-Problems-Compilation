@@ -1,7 +1,7 @@
 \chapter{2005年福建卷（文）}
 \section{单选题}
 \begin{problem}
-已知集合 \(P = \{x \mid |x - 1| \leqslant 1, x \in \R\}\)，集合 \(Q = \{x \mid x \in \mathbf{N}\}\)，则 \(P \cap Q\) 等于（\quad）
+已知集合 \(P = \{x \mid |x - 1| \leqslant 1, x \in \R\}\)，集合 \(Q = \{x \mid x \in \N\}\)，则 \(P \cap Q\) 等于（\quad）
 
 \choices
     {\(P\)}
@@ -9,6 +9,19 @@
     {\(\{1,2\}\)}
     {\(\{0,1,2\}\)}
 \end{problem}
+
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+由 \(\lvert x-1\rvert\leqslant1\)，得 \(0\leqslant x\leqslant2\)，所以
+\(P=[0,2]\). 又因 \(Q=\N\)，题设采用 \(0\in\N\)，故
+\[
+P\cap Q=\{0,1,2\}.
+\]
+因此选 D.
+\end{solution}
 
 \begin{problem}
 不等式 \(\frac{2x - 1}{3x + 1} > 0\) 的解集是（\quad）
@@ -20,15 +33,48 @@
     {\(\left\{x\mid x > -\frac{1}{3}\right\}\)}
 \end{problem}
 
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+分式有意义的条件是 \(x\neq-\frac{1}{3}\). 分子、分母的零点分别为
+\(\frac{1}{2}\) 和 \(-\frac{1}{3}\)，据此将数轴分为三段. 在三段上分别取
+\(x=-1\)，\(x=0\)，\(x=1\)，所得分式的符号依次为正、负、正，因此
+\[
+\frac{2x-1}{3x+1}>0
+\Longleftrightarrow
+x<-\frac{1}{3}\text{ 或 }x>\frac{1}{2}.
+\]
+故选 A.
+\end{solution}
+
 \begin{problem}
 已知等差数列 \(\{a_{n}\}\) 中，\(a_{7} + a_{9} = 16\)，\(a_{4} = 1\)，则 \(a_{12}\) 的值是（\quad）
 
 \choices
-    {15}
-    {30}
-    {31}
-    {64}
+    {\(15\)}
+    {\(30\)}
+    {\(31\)}
+    {\(64\)}
 \end{problem}
+
+\begin{answer}
+A
+\end{answer}
+
+\begin{solution}
+设等差数列的公差为 \(d\). 由等差数列的性质，
+\[
+a_{7}+a_{9}=2a_{8}=16
+\]
+所以 \(a_{8}=8\). 于是
+\[
+d=\frac{a_{8}-a_{4}}{8-4}=\frac{8-1}{4}=\frac{7}{4}
+\]
+所以 \(a_{12}=a_{4}+8d=1+8\times\frac{7}{4}=15\).
+故选 A.
+\end{solution}
 
 \begin{problem}
 函数 \( y = \cos 2x \) 在下列哪个区间上是减函数（\quad）
@@ -40,6 +86,19 @@
     {\(\left[\frac{\pi}{2}, \pi\right]\)}
 \end{problem}
 
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+函数的导数为 \(y'=-2\sin2x\). 在区间 \(\left[0,\frac{\pi}{2}\right]\) 的内部，
+\(0<2x<\pi\)，故 \(\sin2x>0\)，从而 \(y'<0\)，函数在该区间上为减函数.
+在区间 \(\left[-\frac{\pi}{4},0\right)\) 内，\(\sin2x<0\)，故 \(y'>0\)；在
+\(\left[\frac{\pi}{4},\frac{3\pi}{4}\right]\) 内，\(\sin2x\) 先为正后为负，故 \(y'\) 变号；在
+\(\left(\frac{\pi}{2},\pi\right]\) 内，\(\sin2x<0\)，故 \(y'>0\)，所以其余三个区间均不能使函数在整个区间上递减.
+因此选 C.
+\end{solution}
+
 \begin{problem}
 下列结论正确的是（\quad）
 
@@ -50,17 +109,44 @@
     {当 \(0 < x \leqslant 2\) 时，\(x - \frac{1}{x}\) 无最大值}
 \end{problem}
 
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+令 \(t=\sqrt{x}>0\). 由基本不等式，
+\[
+\sqrt{x}+\frac{1}{\sqrt{x}}=t+\frac{1}{t}\geqslant2
+\]
+等号在 \(t=1\)，即 \(x=1\) 时成立，所以选项 B 正确.
+
+选项 A 不恒成立，例如取 \(\lg x=-1\)，左边为 \(-2\)；选项 C 中函数
+\(x+\frac{1}{x}\) 的导数为 \(1-\frac{1}{x^2}>0\)（\(x\geqslant2\)），故其最小值为
+\(\frac{5}{2}\)；选项 D 中函数 \(x-\frac{1}{x}\) 的导数为
+\(1+\frac{1}{x^2}>0\)（\(x>0\)），故其最大值为 \(\frac{3}{2}\).
+\end{solution}
+
 \begin{problem}
 若函数 \( f(x) = a^{x - b} \) 的图象如图，其中 \(a\)，\(b\) 为常数，则下列结论正确的是（\quad）
 
-\bitmapfigure[max width=0.34\linewidth]{img/2005/fujian_liberal/q6_fig1.png}
+\bitmapfigure[width=0.34\linewidth]{img/2005/fujian_liberal/q6_fig1.png}
 
 \choices
-    {\(a > 1, b < 0\)}
+    {\(a > 1\)，\(b < 0\)}
     {\(a > 1\)，\(b > 0\)}
     {\(0 < a < 1\)，\(b > 0\)}
     {\(0 < a < 1\)，\(b < 0\)}
 \end{problem}
+
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+图象从左向右递减，所以指数函数的底数满足 \(0<a<1\). 又因
+\(f(b)=a^{b-b}=1\)，图象与直线 \(y=1\) 的交点横坐标就是 \(b\). 由图可见该交点在
+\(y\) 轴左侧，故 \(b<0\). 因此选 D.
+\end{solution}
 
 \begin{problem}
 已知直线 \(m\)，\(n\) 与平面 \(\alpha\)，\(\beta\)，给出下列三个命题：
@@ -74,11 +160,27 @@
 其中真命题的个数是（\quad）
 
 \choices
-    {0}
-    {1}
-    {2}
-    {3}
+    {\(0\)}
+    {\(1\)}
+    {\(2\)}
+    {\(3\)}
 \end{problem}
+
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+命题一不成立：两条直线都平行于同一平面时，仍可能相交或异面，不能推出两直线平行.
+
+命题二成立. 直线 \(n\perp\alpha\)，因此 \(n\) 垂直于平面 \(\alpha\) 内任一直线；又因
+\(m\parallel\alpha\)，直线 \(m\) 的方向与平面 \(\alpha\) 内某一直线的方向相同，所以
+\(n\perp m\).
+
+命题三成立. 由 \(m\perp\alpha\) 可知 \(m\) 的方向垂直于平面 \(\alpha\)，由
+\(m\parallel\beta\) 可知该方向平行于平面 \(\beta\). 因此平面 \(\beta\) 内有一条直线垂直于
+平面 \(\alpha\)，从而 \(\alpha\perp\beta\). 所以真命题有 \(2\) 个，选 C.
+\end{solution}
 
 \begin{problem}
 已知 \(p: a \neq 0\)，\(q: ab \neq 0\)，则 \(p\) 是 \(q\) 的（\quad）
@@ -90,6 +192,16 @@
     {既不充分也不必要条件}
 \end{problem}
 
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+命题 \(q:ab\neq0\) 等价于 \(a\neq0\) 且 \(b\neq0\)，所以 \(q\) 能推出 \(p:a\neq0\)，即
+\(p\) 是 \(q\) 的必要条件. 反之，取 \(a=1\)，\(b=0\)，有 \(p\) 成立而 \(q\) 不成立，故
+\(p\) 不是 \(q\) 的充分条件. 因此选 B.
+\end{solution}
+
 \begin{problem}
 已知定点 \(A\)，\(B\) 且 \(|AB| = 4\)，动点 \(P\) 满足 \(|PA| - |PB| = 3\)，则 \(|PA|\) 的最小值是（\quad）
 
@@ -97,23 +209,54 @@
     {\( \frac{1}{2} \)}
     {\( \frac{3}{2} \)}
     {\( \frac{7}{2} \)}
-    {5}
+    {\(5\)}
 \end{problem}
+
+\begin{answer}
+C
+\end{answer}
+
+\begin{solution}
+由三角不等式，
+\[
+|PA|+|PB|\geqslant|AB|=4.
+\]
+设 \(|PA|=r\)，由题设 \(|PB|=r-3\)，所以
+\[
+2r-3\geqslant4\Longrightarrow r\geqslant\frac{7}{2}
+\]
+当点 \(P\) 在线段 \(AB\) 上且 \(|PA|=\frac{7}{2}\)、\(|PB|=\frac{1}{2}\) 时，
+\(|PA|-|PB|=3\)，故下界可以取得. 因此 \(|PA|\) 的最小值为 \(\frac{7}{2}\)，选 C.
+\end{solution}
 
 \begin{problem}
-从 6 人中选 4 人分别到巴黎，伦敦，悉尼，莫斯科四个城市游览，要求每个城市有一人游览，每人只游览一个城市，且这 6 人中甲，乙两人不去巴黎游览，则不同的选择方案共有（\quad）
+从 \(6\) 人中选 \(4\) 人分别到巴黎，伦敦，悉尼，莫斯科四个城市游览，要求每个城市有一人游览，每人只游览一个城市，且这 \(6\) 人中甲，乙两人不去巴黎游览，则不同的选择方案共有（\quad）
 
 \choices
-    {300 种}
-    {240 种}
-    {144 种}
-    {96 种}
+    {\(300\) 种}
+    {\(240\) 种}
+    {\(144\) 种}
+    {\(96\) 种}
 \end{problem}
+
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+巴黎的游览者只能从除甲、乙以外的 \(4\) 人中选出，先选定此人有 \(4\) 种方法.
+剩下的 \(5\) 人中选出 \(3\) 人并分别安排到伦敦、悉尼、莫斯科，有
+\(\mathrm A_{5}^{3}=5\times4\times3=60\) 种方法. 因此总方案数为
+\[
+4\mathrm A_{5}^{3}=4\times60=240.
+\]
+故选 B.
+\end{solution}
 
 \begin{problem}
 如图，长方体 \(ABCD - A_{1}B_{1}C_{1}D_{1}\) 中，\(AA_{1} = AB = 2\)，\(AD = 1\)，点 \(E\)，\(F\)，\(G\) 分别是 \(DD_{1}\)，\(AB\)，\(CC_{1}\) 的中点，则异面直线 \(A_{1}E\) 与 \(GF\) 所成的角是（\quad）
 
-\bitmapfigure[max width=0.42\linewidth]{img/2005/fujian_liberal/q11_fig1.png}
+\bitmapfigure[width=0.42\linewidth]{img/2005/fujian_liberal/q11_fig1.png}
 
 \choices
     {\(\arccos \frac{\sqrt{15}}{5}\)}
@@ -122,35 +265,127 @@
     {\(\frac{\pi}{2}\)}
 \end{problem}
 
+\begin{answer}
+D
+\end{answer}
+
+\begin{solution}
+建立直角坐标系，取 \(A(0,0,0)\)，\(B(2,0,0)\)，\(D(0,1,0)\)，\(A_{1}(0,0,2)\).
+于是 \(C(2,1,0)\)，且中点坐标为 \(E(0,1,1)\)，\(F(1,0,0)\)，\(G(2,1,1)\).
+取两异面直线的方向向量分别为
+\(\overrightarrow{A_{1}E}=(0,1,-1)\) 和 \(\overrightarrow{GF}=(-1,-1,-1)\).
+它们的内积为
+\[
+(0,1,-1)\cdot(-1,-1,-1)=0
+\]
+所以两直线所成的角为 \(\frac{\pi}{2}\)，选 D.
+\end{solution}
+
 \begin{problem}
-\(f(x)\) 是定义在 \(\R\) 上的以3为周期的偶函数，且 \(f(2) = 0\)，则方程 \(f(x) = 0\) 在区间 \((0,6)\) 内解的个数的最小值是（\quad）
+\(f(x)\) 是定义在 \(\R\) 上的以 \(3\) 为周期的偶函数，且 \(f(2) = 0\)，则方程 \(f(x) = 0\) 在区间 \((0,6)\) 内解的个数的最小值是（\quad）
 
 \choices
-    {5}
-    {4}
-    {3}
-    {2}
+    {\(5\)}
+    {\(4\)}
+    {\(3\)}
+    {\(2\)}
 \end{problem}
+
+\begin{answer}
+B
+\end{answer}
+
+\begin{solution}
+由偶性得 \(f(-2)=0\). 由周期性得 \(f(1)=f(-2)=0\)，\(f(4)=f(1)=0\)，
+\(f(5)=f(2)=0\).
+因此区间 \((0,6)\) 内至少有 \(1\)，\(2\)，\(4\)，\(5\) 四个解.
+
+这个下界可以取得. 例如取
+\[
+f(x)=\cos\frac{2\pi x}{3}+\frac{1}{2}.
+\]
+它是偶函数且以 \(3\) 为周期，并且 \(f(2)=0\). 其零点满足
+\(x=1+3k\) 或 \(x=2+3k\)，在 \((0,6)\) 内恰为 \(1,2,4,5\).
+故解的个数的最小值为 \(4\)，选 B.
+\end{solution}
 
 \section{填空题}
 \begin{problem}
-\(\left(2\sqrt{x} -\frac{1}{x}\right)^6\) 展开式中的常数项是\fillinblank{}.（用数字作答）
+\(\left(2\sqrt{x} -\frac{1}{x}\right)^6\) 展开式中的常数项是\fillinblank{}.
 \end{problem}
+
+\begin{answer}
+240
+\end{answer}
+
+\begin{solution}
+展开式的通项为
+\[
+\mathrm C_{6}^{k}(2\sqrt{x})^{6-k}\left(-\frac{1}{x}\right)^{k}
+=\mathrm C_{6}^{k}2^{6-k}(-1)^{k}x^{\frac{6-k}{2}-k}
+=\mathrm C_{6}^{k}2^{6-k}(-1)^{k}x^{3-\frac{3k}{2}}.
+\]
+要得到常数项，须有 \(3-\frac{3k}{2}=0\)，所以 \(k=2\). 常数项为
+\[
+\mathrm C_{6}^{2}2^{4}=15\times16=240.
+\]
+\end{solution}
 
 \begin{problem}
 在 \(\triangle ABC\) 中，\(\angle C = 90^{\circ}\)，\(\overrightarrow{AB} = (k,1)\)，\(\overrightarrow{AC} = (2,3)\)，则 \(k\) 的值是\fillinblank{}.
+
 \end{problem}
+
+\begin{answer}
+5
+\end{answer}
+
+\begin{solution}
+由 \(\angle C=90^{\circ}\)，有 \(\overrightarrow{CA}\perp\overrightarrow{CB}\). 又有
+\(\overrightarrow{CA}=-(2,3)=(-2,-3)\)，
+\(\overrightarrow{CB}=\overrightarrow{AB}-\overrightarrow{AC}=(k-2,-2)\).
+因此
+\[
+(-2,-3)\cdot(k-2,-2)=-2k+10=0
+\]
+解得 \(k=5\).
+\end{solution}
 
 \begin{problem}
 非负实数 \(x\)，\(y\) 满足 \(\begin{cases}
 2x + y \leqslant 0,\\
 x + y - 3 \leqslant 0,
 \end{cases}\) 则 \(x + 3y\) 的最大值为\fillinblank{}.
+
 \end{problem}
+
+\begin{answer}
+0
+\end{answer}
+
+\begin{solution}
+因为 \(x\)，\(y\) 为非负实数，且 \(2x+y\leqslant0\)，所以
+\(2x+y\geqslant0\) 与 \(2x+y\leqslant0\) 同时成立，只能有
+\(x=y=0\). 此时第二个不等式也成立，且
+\[
+x+3y=0.
+\]
+故最大值为 \(0\).
+\end{solution}
 
 \begin{problem}
 把下面不完整的命题补充完整，并使之成为真命题：若函数 \( f(x)=3+\log_{2}x \) 的图象与 \( g(x) \) 的图象关于\fillinblank{} 对称，则函数 \( g(x)=\fillinblank{} \). 注：填上你认为可以成为真命题的一件情形即可，不必考虑所有可能的情形.
 \end{problem}
+
+\begin{answer}
+\(x\) 轴；\(g(x)=-3-\log_{2}x\)
+\end{answer}
+
+\begin{solution}
+关于 \(x\) 轴对称时，图象上的点 \((x,f(x))\) 变为 \((x,-f(x))\). 因此
+\(g(x)=-f(x)=-(3+\log_{2}x)=-3-\log_{2}x\)，其中 \(x>0\).
+所以填“\(x\) 轴”和 \(g(x)=-3-\log_{2}x\).
+\end{solution}
 
 \section{解答题}
 
@@ -161,7 +396,36 @@ x + y - 3 \leqslant 0,
 \item 求 \( \sin x - \cos x \) 的值；
 \item 求 \( \frac{\sin 2x + 2\sin^{2}x}{1 - \tan x} \) 的值.
 \end{enumerate}
+
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item 记 \(s=\sin x\)，\(c=\cos x\). 由 \(-\frac{\pi}{2}<x<0\)，知 \(s<0\)，\(c>0\). 由题意，
+\[
+(s+c)^2=s^2+c^2+2sc=\frac{1}{25}
+\]
+所以 \(sc=-\frac{12}{25}\). 又
+\[
+(s-c)^2=s^2+c^2-2sc=1-2sc=\frac{49}{25}.
+\]
+因为 \(c-s>0\)，所以 \(s-c=-\frac{7}{5}\)，即 \(\sin x-\cos x=-\frac{7}{5}\).
+\item 由 \(\sin 2x=2sc\) 及 \(s+c=\frac{1}{5}\)，得
+\[
+\sin 2x+2\sin^2x=2sc+2s^2=2s(s+c)=\frac{2s}{5}.
+\]
+另一方面，
+\[
+1-\tan x=1-\frac{s}{c}=\frac{c-s}{c}=\frac{7}{5c}.
+\]
+因此
+\[
+\frac{\sin 2x+2\sin^2x}{1-\tan x}
+=\frac{2s}{5}\cdot\frac{5c}{7}
+=\frac{2sc}{7}=-\frac{24}{175}.
+\]
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 甲，乙两人在罚球线投球命中的概率分别为 \(\frac{1}{2}\) 与 \(\frac{2}{5}\)，投中得 1 分，投不中得 0 分.
@@ -172,6 +436,26 @@ x + y - 3 \leqslant 0,
 \end{enumerate}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item 设甲、乙各投一次所得分数分别为 \(X\)，\(Y\). 则
+\(E(X)=1\cdot\frac{1}{2}+0\cdot\frac{1}{2}=\frac{1}{2}\)，
+\(E(Y)=1\cdot\frac{2}{5}+0\cdot\frac{3}{5}=\frac{2}{5}\).
+由 \(\xi=X+Y\) 及数学期望的线性性质，
+\(E(\xi)=E(X)+E(Y)=\frac{1}{2}+\frac{2}{5}=\frac{9}{10}\).
+\item 各次投球相互独立. 四次投球均未命中的概率为
+\[
+\left(1-\frac{1}{2}\right)^2\left(1-\frac{2}{5}\right)^2
+=\left(\frac{1}{2}\right)^2\left(\frac{3}{5}\right)^2
+=\frac{9}{100}.
+\]
+所以至少有一次命中的概率为
+\[
+1-\frac{9}{100}=\frac{91}{100}.
+\]
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
 已知 \(\{a_{n}\}\) 是公比为 \(q\) 的等比数列，且 \(a_{1}\)，\(a_{3}\)，\(a_{2}\) 成等差数列.
 
@@ -180,6 +464,33 @@ x + y - 3 \leqslant 0,
 \item 设 \(\{b_n\}\) 是以 2 为首项，\(q\) 为公差的等差数列，其前 \(n\) 项和为 \(S_n\)，当 \(n \geqslant 2\) 时，比较 \(S_n\) 与 \(b_n\) 的大小，并说明理由.
 \end{enumerate}
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item 由等比数列的通项关系，\(a_2=a_1q\)，\(a_3=a_1q^2\). 因为 \(a_1\)，\(a_3\)，\(a_2\) 成等差数列，所以
+\[
+2a_3=a_1+a_2
+\]
+即 \(a_1(2q^2-q-1)=0\). 由公比的定义取 \(a_1\ne0\)，故
+\[
+2q^2-q-1=(2q+1)(q-1)=0.
+\]
+所以 \(q=1\) 或 \(q=-\frac{1}{2}\).
+\item 由等差数列的通项公式和求和公式，
+\(b_n=2+(n-1)q\)，\(S_n=\frac{n}{2}\left[4+(n-1)q\right]\).
+当 \(q=1\) 时，
+\[
+S_n-b_n=\frac{n(n+3)}{2}-(n+1)=\frac{(n-1)(n+2)}{2}>0
+\]
+对一切 \(n\geqslant2\) 成立，所以 \(S_n>b_n\).
+
+当 \(q=-\frac{1}{2}\) 时，
+\[
+S_n-b_n=\frac{n(9-n)}{4}-\frac{5-n}{2}=\frac{(n-1)(10-n)}{4}.
+\]
+因此，当 \(2\leqslant n\leqslant9\) 时 \(S_n>b_n\)，当 \(n=10\) 时 \(S_n=b_n\)，当 \(n\geqslant11\) 时 \(S_n<b_n\).
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 已知函数 \( f(x) = x^3 + bx^2 + ax + d \) 的图象过点 \( P(0,2) \)，且在点 \( M(-1, f(-1)) \) 处的切线方程为 \( 6x - y + 7 = 0 \).
@@ -190,6 +501,28 @@ x + y - 3 \leqslant 0,
 \end{enumerate}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item 因为图象过点 \(P(0,2)\)，所以 \(f(0)=d=2\). 切线方程为 \(y=6x+7\)，故切点 \(M\) 的纵坐标为 \(f(-1)=1\)，且 \(f'(-1)=6\). 从而 \(-1+b-a+d=1\)，\(3-2b+a=6\).
+代入 \(d=2\)，得到 \(b-a=0\)，即 \(a=b\)，以及 \(a-2b=3\). 解得 \(a=b=-3\). 因此
+\[
+f(x)=x^3-3x^2-3x+2.
+\]
+\item
+\[
+f'(x)=3x^2-6x-3=3\left[(x-1)^2-2\right].
+\]
+令 \(f'(x)=0\)，得 \(x=1-\sqrt{2}\) 或 \(x=1+\sqrt{2}\). 由于二次函数 \(f'(x)\) 的开口向上，故
+\[
+f'(x)>0\quad\text{当 }x<1-\sqrt{2}\text{ 或 }x>1+\sqrt{2}
+\]
+\[
+f'(x)<0\quad\text{当 }1-\sqrt{2}<x<1+\sqrt{2}.
+\]
+所以函数在 \((-\infty,1-\sqrt{2})\) 和 \((1+\sqrt{2},+\infty)\) 上单调递增，在 \((1-\sqrt{2},1+\sqrt{2})\) 上单调递减.
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
 如图，直二面角 \(D - AB - E\) 中，四边形 \(ABCD\) 是边长为 2 的正方形，\(AE = EB\)，\(F\) 为 \(CE\) 上的点，且 \(BF \perp\) 平面 \(ACE\).
 
@@ -199,8 +532,46 @@ x + y - 3 \leqslant 0,
 \item 求点 \(D\) 到平面 \(ACE\) 的距离.
 \end{enumerate}
 
-\bitmapfigure[max width=0.42\linewidth]{img/2005/fujian_liberal/q21_fig1.png}
+\bitmapfigure[width=0.42\linewidth]{img/2005/fujian_liberal/q21_fig1.png}
+
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item
+取直角坐标系，使正方形 \(ABCD\) 所在平面为 \(y=0\)，平面 \(ABE\) 为 \(z=0\)，并设
+\(A(0,0,0)\)，\(B(2,0,0)\)，\(C(2,0,2)\)，\(D(0,0,2)\)，\(E(1,t,0)\).
+设 \(F=C+\lambda(E-C)\)，则
+\(\overrightarrow{BF}=(-\lambda,\lambda t,2-2\lambda)\)，
+\(\overrightarrow{AC}=(2,0,2)\)，
+\(\overrightarrow{AE}=(1,t,0)\).
+由 \(BF\perp\) 平面 \(ACE\)，得 \(\overrightarrow{BF}\cdot\overrightarrow{AC}=0\) 及 \(\overrightarrow{BF}\cdot\overrightarrow{AE}=0\)，即
+\[
+\begin{cases}
+4-6\lambda=0,\\
+\lambda(t^2-1)=0
+\end{cases}
+\]
+由第一式得 \(\lambda=\frac{2}{3}\)，从而 \(\lambda\ne0\) 且 \(t^2=1\). 由于 \(t\) 的正负只对应于 \(y\) 轴方向的选择，以下取 \(t=1\)，则
+\(A(0,0,0)\)，\(B(2,0,0)\)，\(C(2,0,2)\)，\(D(0,0,2)\)，\(E(1,1,0)\).
+\(\overrightarrow{AE}=(1,1,0)\)，\(\overrightarrow{BE}=(-1,1,0)\)，\(\overrightarrow{CE}=(-1,1,-2)\)，所以
+有 \(\overrightarrow{AE}\cdot\overrightarrow{BE}=0\)，\(\overrightarrow{AE}\cdot\overrightarrow{CE}=0\).
+直线 \(BE\)，\(CE\) 是平面 \(BCE\) 内相交的两条直线，故 \(AE\perp\) 平面 \(BCE\).
+\item 平面 \(ABC\) 的一个法向量为 \(\bs{n}_1=(0,1,0)\)，平面 \(ACE\) 的一个法向量为
+\[
+\bs{n}_2=\overrightarrow{AC}\times\overrightarrow{AE}=(-2,2,2).
+\]
+因此二面角 \(B-AC-E\) 的平面角 \(\theta\) 满足
+\[
+\cos\theta=\frac{|\bs{n}_1\cdot\bs{n}_2|}{|\bs{n}_1||\bs{n}_2|}=\frac{2}{2\sqrt{3}}=\frac{\sqrt{3}}{3}.
+\]
+所以二面角 \(B-AC-E\) 的大小为 \(\arccos\frac{\sqrt{3}}{3}\).
+\item 平面 \(ACE\) 的方程为 \(-x+y+z=0\). 因此点 \(D(0,0,2)\) 到平面 \(ACE\) 的距离为
+\[
+\frac{|{-0}+0+2|}{\sqrt{(-1)^2+1^2+1^2}}=\frac{2\sqrt{3}}{3}.
+\]
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 已知方向向量为 \(\bs{v} = (1, \sqrt{3})\) 的直线 \(l\) 过点 \((0, -2\sqrt{3})\) 和椭圆 \(C: \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\)（\(a > b > 0\)）的焦点，且椭圆 \(C\) 的中心关于直线 \(l\) 的对称点在椭圆 \(C\) 的右准线上.
@@ -209,4 +580,72 @@ x + y - 3 \leqslant 0,
 \item 求椭圆 \(C\) 的方程；
 \item 是否存在过点 \(E(-2,0)\) 的直线 \(m\) 交椭圆 \(C\) 于点 \(M\)，\(N\)，满足 \(\overrightarrow{OM} \cdot \overrightarrow{ON} = \frac{4}{3}\sqrt{6}\cot \angle MON \neq 0\)（\(O\) 为原点）. 若存在，求直线 \(m\) 的方程；若不存在，请说明理由.
 \end{enumerate}
+
 \end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item 直线 \(l\) 的方程为
+\[
+y=\sqrt{3}x-2\sqrt{3}.
+\]
+它与 \(x\) 轴交于点 \((2,0)\)，故椭圆的右焦点为 \((2,0)\)，从而焦距参数 \(c=2\). 直线 \(l\) 可写为
+\[
+\sqrt{3}x-y-2\sqrt{3}=0.
+\]
+原点到该直线的垂足为
+\[
+H=\left(\frac{3}{2},-\frac{\sqrt{3}}{2}\right)
+\]
+所以原点关于直线 \(l\) 的对称点为
+\[
+2H=(3,-\sqrt{3}).
+\]
+椭圆的右准线方程为 \(x=\frac{a^2}{c}=\frac{a^2}{2}\)，因此 \(\frac{a^2}{2}=3\)，即 \(a^2=6\). 又 \(c^2=a^2-b^2\)，得 \(b^2=2\). 所以椭圆 \(C\) 的方程为
+\[
+\frac{x^2}{6}+\frac{y^2}{2}=1.
+\]
+\item 记 \(K=\frac{4}{3}\sqrt{6}\)，设 \(\theta=\angle MON\)，并记
+\(D=\overrightarrow{OM}\cdot\overrightarrow{ON}\)，
+\(\Delta=\left|\det\left(\overrightarrow{OM},\overrightarrow{ON}\right)\right|\).
+由于 \(D\ne0\)，且 \(\cot\theta=\frac{D}{\Delta}\)，题设等式等价于 \(\Delta=K\).
+
+先考虑非竖直直线，设其斜率为 \(k\)，则直线方程为 \(y=k(x+2)\). 令
+\[
+x=-2+t\qquad y=kt.
+\]
+将其代入椭圆方程，得
+\[
+(1+3k^2)t^2-4t-2=0.
+\]
+设该方程的两个根为 \(t_1,t_2\)，则
+\[
+|t_1-t_2|=\frac{2\sqrt{6}\sqrt{1+k^2}}{1+3k^2}.
+\]
+取 \(\bs{u}=(1,k)\)，则 \(M=E+t_1\bs{u}\)，\(N=E+t_2\bs{u}\)，所以
+\[
+\Delta=|t_1-t_2|\left|\det(E,\bs{u})\right|
+=\frac{4\sqrt{6}|k|\sqrt{1+k^2}}{1+3k^2}.
+\]
+令 \(\Delta=K\)，得
+\[
+3|k|\sqrt{1+k^2}=1+3k^2.
+\]
+两边均为非负数，平方并化简得 \(3k^2=1\)，所以 \(k=\pm\frac{\sqrt{3}}{3}\). 此时由韦达定理，
+\[
+D=\frac{10k^2-6}{1+3k^2}=-\frac{4}{3}\ne0
+\]
+故两条非竖直直线均满足题设条件.
+
+再考虑竖直直线 \(x=-2\). 它与椭圆的交点为
+\[
+M\left(-2,\sqrt{\frac{2}{3}}\right)
+\qquad N\left(-2,-\sqrt{\frac{2}{3}}\right).
+\]
+此时 \(D=\frac{10}{3}\ne0\)，\(\Delta=4\sqrt{\frac{2}{3}}=\frac{4\sqrt{6}}{3}=K\)，
+所以竖直直线也满足题设条件.
+
+因此，存在这样的直线 \(m\)，其方程分别为 \(x=-2\)，\(y=\frac{\sqrt{3}}{3}(x+2)\)，
+\(y=-\frac{\sqrt{3}}{3}(x+2)\).
+\end{enumerate}
+\end{solution}

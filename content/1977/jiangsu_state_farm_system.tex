@@ -7,30 +7,81 @@
 \end{enumerate}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}[label=（\arabic*）]
+\item 因为 \(\frac{3}{8}+\frac{1}{6}-\frac{3}{4}=\frac{9}{24}+\frac{4}{24}-\frac{18}{24}=-\frac{5}{24}\)，所以原式为 \(\left[\frac{25}{24}-\left(-\frac{5}{24}\right)\times24\right]\div1=\left(\frac{25}{24}+5\right)\div1=\frac{145}{24}\).
+\item 因为 \(\frac{5}{2}\cdot\frac{2}{5}=1\)，且 \(\lg10^3=3\)，所以原式为 \(\lg\left(\frac{5}{2}\cdot\frac{2}{5}\right)-\lg10^3=\lg1-3=-3\).
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
 解方程：\( \frac{1}{x+2}+\frac{4x}{x^2-4}-\frac{2}{x-2}=1 \).
 \end{problem}
 
-\begin{problem}
-用长 \( 60\text{米} \) 的篱笆围成一矩形养鸡场，一面利用原有旧墙，问矩形的长和宽各多少米才能使所围成的面积最大？
-\end{problem}
+\begin{solution}
+由分式有意义的条件得 \(x\ne-2\)，且 \(x\ne2\). 又因为 \(x^2-4=(x+2)(x-2)\)，所以 \(\frac{1}{x+2}+\frac{4x}{x^2-4}-\frac{2}{x-2}=\frac{(x-2)+4x-2(x+2)}{(x+2)(x-2)}=\frac{3(x-2)}{(x+2)(x-2)}=\frac{3}{x+2}\).
+
+于是 \(\frac{3}{x+2}=1\)，解得 \(x=1\). 经检验，\(x=1\) 不违反原方程的定义域，所以原方程的解为 \(x=1\).
+\end{solution}
 
 \begin{problem}
-把极坐标方程 \( \rho=2\cos\theta \) 化成直角坐标方程，并说出它是什么曲线？
+用长 \( 60\text{ 米} \) 的篱笆围成一矩形养鸡场，一面利用原有旧墙，问矩形的长和宽各多少米才能使所围成的面积最大？
 \end{problem}
+
+\begin{solution}
+设矩形的宽为 \(x\text{ 米}\)，沿墙的一边为长，则篱笆围成的三边中有两条宽和一条长，因此矩形的长为 \(60-2x\text{ 米}\)，其中 \(0<x<30\). 设面积为 \(S\)，则 \(S=x(60-2x)=-2x^2+60x=-2(x-15)^2+450\).
+
+因为 \((x-15)^2\geqslant0\)，所以 \(S\leqslant450\)，且当 \(x=15\) 时等号成立. 此时矩形的长为 \(60-2\times15=30\text{ 米}\)，宽为 \(15\text{ 米}\)，所围面积最大.
+\end{solution}
+
+\begin{problem}
+把极坐标方程 \(\rho=2\cos\theta\) 化成直角坐标方程，并说出它是什么曲线？
+\end{problem}
+
+\begin{solution}
+由极坐标与直角坐标的关系 \(x=\rho\cos\theta\)，\(\rho^2=x^2+y^2\)，将方程两边同乘以 \(\rho\)，得 \(\rho^2=2\rho\cos\theta=2x\). 因而直角坐标方程为 \(x^2+y^2=2x\)，即 \((x-1)^2+y^2=1\). 所以它表示圆心为 \((1,0)\)、半径为 \(1\) 的圆.
+\end{solution}
 
 \begin{problem}
 在锐角 \( \triangle ABC \) 中，已知 \( \sin A=\frac{3}{5} \)，\( \cos B=\frac{5}{13} \)，求 \( \cos C \) 的值.
 \end{problem}
 
+\begin{solution}
+因为三角形 \(ABC\) 为锐角三角形，所以 \(\cos A>0\)，\(\sin B>0\). 于是 \(\cos A=\sqrt{1-\sin^2A}=\sqrt{1-\frac{9}{25}}=\frac45\)，\(\sin B=\sqrt{1-\cos^2B}=\sqrt{1-\frac{25}{169}}=\frac{12}{13}\).
+
+又因为 \(C=180^\circ-(A+B)\)，所以 \(\cos C=-\cos(A+B)=\sin A\sin B-\cos A\cos B=\frac35\cdot\frac{12}{13}-\frac45\cdot\frac5{13}=\frac{16}{65}\).
+\end{solution}
+
 \begin{problem}
-三个数成等差数列，且它们的和是 \( 9 \)，如果把这个数列依次加上 \( 1 \)，\( 1 \)，\( 3 \)，那么所得的数又成等比数列.求这三个数.
+三个数成等差数列，且它们的和是 \( 9 \)，如果把这个数列依次加上 \( 1 \)，\( 1 \)，\( 3 \)，那么所得的数又成等比数列. 求这三个数.
 \end{problem}
+
+\begin{solution}
+设原等差数列为 \(3-d\)，\(3\)，\(3+d\)，其中 \(d\) 为实数. 依次加上 \(1\)，\(1\)，\(3\) 后得到 \(4-d\)，\(4\)，\(6+d\). 这三个数成等比数列，所以中间项的平方等于两端项的积，即 \(4^2=(4-d)(6+d)\). 整理得 \(16=24-2d-d^2\)，即 \(d^2+2d-8=0\)，从而 \((d-2)(d+4)=0\).
+
+当 \(d=2\) 时，原数列为 \(1\)，\(3\)，\(5\)，所得数列为 \(2\)，\(4\)，\(8\)；当 \(d=-4\) 时，原数列为 \(7\)，\(3\)，\(-1\)，所得数列为 \(8\)，\(4\)，\(2\). 这两种情形均符合题意，所以所求三个数为 \(1\)，\(3\)，\(5\) 或 \(7\)，\(3\)，\(-1\).
+\end{solution}
 
 \begin{problem}
 求以椭圆 \( \frac{x^2}{49}+\frac{y^2}{25}=1 \) 的焦点和长轴的端点作为顶点和焦点的双曲线方程.
 \end{problem}
 
+\begin{solution}
+椭圆的长半轴为 \(7\)，短半轴为 \(5\)，所以椭圆焦半距为 \(c=\sqrt{7^2-5^2}=2\sqrt6\). 因而椭圆的焦点为 \((\pm2\sqrt6,0)\)，长轴的端点为 \((\pm7,0)\).
+
+题设双曲线的顶点取椭圆的焦点，焦点取椭圆长轴的端点，因此双曲线的实半轴为 \(a=2\sqrt6\)，焦半距为 \(c=7\). 由 \(c^2=a^2+b^2\) 得 \(b^2=49-24=25\). 双曲线的焦点和顶点均在 \(x\) 轴上，所以其方程为 \(\frac{x^2}{24}-\frac{y^2}{25}=1\).
+\end{solution}
+
 \begin{problem}
 等腰三角形 \(ABC\) 的顶角 \(A\) 为 \( 100^\circ \)，底角 \(B\) 的平分线交腰 \(AC\) 于 \(D\)，求证：\( BC=AD+BD \).
 \end{problem}
+
+\begin{solution}
+因为 \(AB=AC\)，所以 \(\angle B=\angle C=40^\circ\). 又因为 \(BD\) 平分底角 \(B\)，所以 \(\angle ABD=\angle DBC=20^\circ\). 在三角形 \(BDC\) 中，\(\angle BDC=180^\circ-20^\circ-40^\circ=120^\circ\). 由正弦定理得 \(\frac{BD}{BC}=\frac{\sin40^\circ}{\sin120^\circ}\). 因为正弦函数在 \([0^\circ,90^\circ]\) 上递增，且 \(\sin120^\circ=\sin60^\circ>\sin40^\circ\)，所以 \(BD<BC\). 因而可在边 \(BC\) 上取点 \(E\)，使得 \(BE=BD\).
+
+在等腰三角形 \(BDE\) 中，\(\angle DBE=\angle DBC=20^\circ\)，所以 \(\angle BDE=\angle BED=80^\circ\). 又 \(\angle BAD=\angle BAC=100^\circ\)，从而 \(\angle BED+\angle BAD=180^\circ\)，四边形 \(BEDA\) 为圆内接四边形.
+
+由同弧所对的圆周角相等，得 \(\angle EAD=\angle EBD=20^\circ\)，\(\angle AED=\angle ABD=20^\circ\). 所以在三角形 \(AED\) 中，\(\angle EAD=\angle AED\)，从而 \(AD=DE\).
+
+在三角形 \(DCE\) 中，\(\angle DCE=\angle ACB=40^\circ\)，且 \(\angle DEC=180^\circ-\angle BED=100^\circ\)，所以 \(\angle CDE=40^\circ\). 因而 \(DE=EC\). 最后，\(BC=BE+EC=BD+DE=BD+AD\)，所以 \(BC=AD+BD\).
+\end{solution}

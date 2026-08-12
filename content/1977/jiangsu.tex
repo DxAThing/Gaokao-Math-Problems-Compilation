@@ -1,8 +1,10 @@
 \chapter{1977年江苏卷}
 
+\section{解答题}
+
 \begin{problem}
 \begin{enumerate}
-\item 计算：\( \left(2\frac{1}{4}\right)^{\frac{1}{2}}+\left(\frac{1}{10}\right)^{-2}-(3.14)^0+\left(-\frac{27}{8}\right)^{-\frac{1}{2}} \).
+\item 计算：\( \left(2\frac{1}{4}\right)^{\frac{1}{2}}+\left(\frac{1}{10}\right)^{-2}-\left(3.14\right)^0+\left(-\frac{27}{8}\right)^{-\frac{1}{2}} \).
 
 \item 求函数 \( y=\sqrt{x-2}+\frac{1}{x-3}+\lg\left( 5-x \right) \) 的定义域.
 
@@ -12,15 +14,46 @@
 
 \item 把直角坐标方程 \( \left( x-3 \right)^2+y^2=9 \) 化为极坐标方程.
 
-\item 计算：\( \lim\limits_{n\to\infty}\frac{1+2+3+\cdots+n}{n^2} \).
+\item 计算：\( \displaystyle\lim_{n\to\infty}\frac{1+2+3+\cdots+n}{n^2} \).
 
 \item 分解因式：\( x^4-2x^2y-3y^2+8y-4 \).
 \end{enumerate}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item 由于 \(-\frac{27}{8}<0\)，而实数范围内平方根的被开方数必须非负，故 \(\left(-\frac{27}{8}\right)^{-\frac{1}{2}}\) 没有实数意义；虽然前三项的和为 \(\left(2\frac{1}{4}\right)^{\frac{1}{2}}+\left(\frac{1}{10}\right)^{-2}-\left(3.14\right)^0=\frac{3}{2}+100-1=\frac{201}{2}\)，但第四项不存在，所以原式按原题面在实数范围内无定义.
+
+\item 由根式有意义，得 \(x-2\geqslant0\)；由分式有意义，得 \(x\ne3\)；由对数真数为正，得 \(5-x>0\). 因此 \(x\geqslant2\)，\(x<5\)，且去掉 \(x=3\)，函数的定义域为 \(2\leqslant x<3\) 或 \(3<x<5\).
+
+\item 因为 \(125=5^3\)，且底数 \(5>0\) 且 \(5\ne1\)，所以由指数函数的单调性，得 \(x^2+2x=3\). 整理得 \(x^2+2x-3=0\)，即 \((x-1)(x+3)=0\)，故原方程的解为 \(x=1\)，\(x=-3\).
+
+\item 设三重立方根为 \(3^{\frac{1}{27}}\)，则 \(\log_3\sqrt[3]{\sqrt[3]{\sqrt[3]{3}}}=\log_3 3^{\frac{1}{27}}=\frac{1}{27}=3^{-3}\). 所以原式为 \(-\log_3 3^{-3}=3\).
+
+\item 令 \(x=\rho\cos\theta\)，\(y=\rho\sin\theta\)，代入原方程得 \(\left(\rho\cos\theta-3\right)^2+\rho^2\sin^2\theta=9\). 展开并利用 \(\sin^2\theta+\cos^2\theta=1\)，得 \(\rho^2-6\rho\cos\theta=0\)，即 \(\rho\left(\rho-6\cos\theta\right)=0\). 因而极坐标方程为 \(\rho=0\) 或 \(\rho=6\cos\theta\).
+
+\item 当 \(n\) 为正整数时，\(1+2+3+\cdots+n=\frac{n(n+1)}{2}\)，所以 \(\displaystyle\frac{1+2+3+\cdots+n}{n^2}=\frac{n+1}{2n}=\frac{1}{2}\left(1+\frac{1}{n}\right)\). 令 \(n\to\infty\)，得到极限为 \(\frac{1}{2}\).
+
+\item 令 \(u=x^2\)，原式变为 \(u^2-2uy-3y^2+8y-4\). 观察到
+\[
+u^2-2uy-3y^2+8y-4=(u+y-2)(u-3y+2).
+\]
+代回 \(u=x^2\)，得 \(x^4-2x^2y-3y^2+8y-4=(x^2+y-2)(x^2-3y+2)\).
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
 过抛物线 \( y^2=4x \) 的焦点作倾斜角为 \( \frac{3}{4}\pi \) 的直线，它与抛物线相交于 \(A\)，\(B\) 两点. 求 \(A\)，\(B\) 两点间的距离.
 \end{problem}
+
+\begin{solution}
+抛物线 \(y^2=4x\) 的标准形式为 \(y^2=4ax\)，所以 \(a=1\)，焦点为 \(\left(1,0\right)\). 直线的倾斜角为 \(\frac{3\pi}{4}\)，斜率为 \(\tan\frac{3\pi}{4}=-1\)，故过焦点的直线方程为 \(y=-(x-1)=1-x\).
+
+联立直线与抛物线方程，得 \((1-x)^2=4x\)，即 \(x^2-6x+1=0\)，从而两个交点的横坐标为 \(x_1=3-2\sqrt{2}\)，\(x_2=3+2\sqrt{2}\). 因为交点在斜率为 \(-1\) 的直线上，所以 \(\lvert y_1-y_2\rvert=\lvert x_1-x_2\rvert=4\sqrt{2}\). 因此
+\[
+AB=\sqrt{\left(4\sqrt{2}\right)^2+\left(4\sqrt{2}\right)^2}=8.
+\]
+\end{solution}
 
 \begin{problem}
 在直角三角形 \(ABC\) 中，\( \angle ACB=90^\circ \)，\(CD\)，\(CE\) 分别为斜边 \(AB\) 上的高和中线，且 \( \angle BCD \) 与 \( \angle ACD \) 之比为 \( 3:1 \)，求证：\( CD=DE \).
@@ -28,9 +61,38 @@
 \bitmapfigure[max width=6.2cm]{img/1977/jiangsu/q3_fig1.png}
 \end{problem}
 
+\begin{solution}
+设 \(\angle ACD=\theta\)，则由 \(\angle ACB=90^\circ\) 及题设角之比，得 \(\angle BCD=3\theta\)，且 \(4\theta=90^\circ\)，所以 \(\theta=\frac{\pi}{8}\). 记 \(CD=h\). 在直角三角形 \(ACD\) 和 \(BCD\) 中，分别有 \(AD=h\tan\theta\)，\(DB=h\tan3\theta\).
+
+因为 \(E\) 是斜边 \(AB\) 的中点，且 \(\tan3\theta>\tan\theta\)，所以 \(D\) 位于 \(A\) 与 \(E\) 之间，从而 \(DE=\frac{DB-AD}{2}\). 又
+\[
+\tan\frac{\pi}{8}=\sqrt{2}-1,
+\qquad
+\tan\frac{3\pi}{8}=\cot\frac{\pi}{8}=\sqrt{2}+1,
+\]
+所以 \(\tan3\theta-\tan\theta=2\). 因此 \(DE=\frac{h\left(\tan3\theta-\tan\theta\right)}{2}=h=CD\)，即证得 \(CD=DE\).
+\end{solution}
+
 \begin{problem}
-在周长为 \(300\mathrm{~cm}\) 的圆周上，有甲，乙两球以大小不等的速度作匀速圆周运动. 甲球从 \(A\) 点出发按逆时针方向运动，乙球从 \(B\) 点出发按顺时针方向运动，两球相遇于 \(C\) 点相遇后，两球各自反方向作匀速圆周运动，但这时甲球速度的大小是原来的 \(2\) 倍，乙球速度的大小是原来的一半，以后他们第二次相遇于 \(D\) 点. 已知 \( \widehat{AmC}=40\text{ 厘米} \)，\( \widehat{BnD}=20\text{ 厘米} \)，求 \( \widehat{ACB} \) 的长度.
+在周长为 \(300\mathrm{~cm}\) 的圆周上，有甲、乙两球以大小不等的速度作匀速圆周运动. 甲球从 \(A\) 点出发按逆时针方向运动，乙球从 \(B\) 点出发按顺时针方向运动，两球相遇于 \(C\) 点. 相遇后，两球各自反方向作匀速圆周运动，但这时甲球速度的大小是原来的 \(2\) 倍，乙球速度的大小是原来的一半，以后他们第二次相遇于 \(D\) 点. 已知 \(\widehat{AmC}=40\mathrm{~cm}\)，\(\widehat{BnD}=20\mathrm{~cm}\)，求 \(\widehat{ACB}\) 的长度.
 \end{problem}
+
+\begin{solution}
+设甲、乙两球原来的速度分别为 \(v_A\) 和 \(v_B\)，并令 \(r=\frac{v_B}{v_A}\). 甲球从 \(A\) 到 \(C\) 沿逆时针方向走过的弧长为 \(40\mathrm{~cm}\)，设两球第一次相遇所用时间为 \(t_1\)，则 \(v_A t_1=40\mathrm{~cm}\). 乙球同一时间沿顺时针方向从 \(B\) 到 \(C\) 走过的弧长记为 \(s\)，于是 \(s=v_Bt_1=40r\mathrm{~cm}\).
+
+相遇后，甲球改为以 \(2v_A\) 顺时针运动，乙球改为以 \(\frac{1}{2}v_B\) 逆时针运动. 两球从 \(C\) 出发反向运动，第二次相遇前共同走过一周，因此第二次相遇所用时间 \(t_2\) 满足 \(\left(2v_A+\frac{1}{2}v_B\right)t_2=300\mathrm{~cm}\). 乙球从 \(C\) 到 \(D\) 沿逆时针方向走过的弧长为
+\[
+s'=\frac{\frac{1}{2}v_B}{2v_A+\frac{1}{2}v_B}\cdot300\mathrm{~cm}=\frac{300r}{4+r}\mathrm{~cm}.
+\]
+沿逆时针方向，弧 \(CB\) 的长度为 \(s\)，弧 \(CD\) 的长度为 \(s'\)，而题设弧 \(BnD\) 的长度为 \(20\mathrm{~cm}\)，所以 \(s'-s=20\mathrm{~cm}\). 代入 \(s=40r\mathrm{~cm}\)，得
+\[
+\frac{300r}{4+r}-40r=20.
+\]
+化简得 \(r^2-3r+2=0\)，即 \((r-1)(r-2)=0\). 由于两球速度大小不等，\(r\ne1\)，故 \(r=2\). 因而弧 \(ACB\) 的长度为
+\[
+\widehat{ACB}=40\mathrm{~cm}+s=40(1+r)\mathrm{~cm}=120\mathrm{~cm}.
+\]
+\end{solution}
 
 \begin{problem}
 \begin{enumerate}
@@ -40,18 +102,72 @@
 \end{enumerate}
 \end{problem}
 
+\begin{solution}
+\begin{enumerate}
+\item 将三角形的三个内角按从小到大排列为 \(\alpha-d\)，\(\alpha\)，\(\alpha+d\)，其中 \(d\geqslant0\). 由三角形内角和得 \(3\alpha=180^\circ\)，所以 \(\alpha=60^\circ\)，中间的内角必为 \(60^\circ\).
+
+\item 仍将三个内角按从小到大排列为 \(60^\circ-d\)，\(60^\circ\)，\(60^\circ+d\). 设相应的对边为 \(a\)，\(b\)，\(c\). 由于正弦定理及三边的大小规律，三边成等比数列等价于 \(b^2=ac\). 因此
+\[
+\sin^2 60^\circ=\sin\left(60^\circ-d\right)\sin\left(60^\circ+d\right).
+\]
+利用积化和差公式，右边等于 \(\sin^2 60^\circ-\sin^2d\)，故 \(\sin^2d=0\). 又 \(0\leqslant d<60^\circ\)，所以 \(d=0\)，三个内角均为 \(60^\circ\).
+\end{enumerate}
+\end{solution}
+
 \begin{problem}
 在两条平行直线 \(AB\) 和 \(CD\) 上分别取定一点 \(M\) 和 \(N\)，在直线 \(AB\) 上取一定线段 \( ME=a \)；在线段 \(MN\) 上取一点 \(K\)，连结 \(EK\) 并延长交 \(CD\) 于 \(F\). 试问 \(K\) 取在哪里时，\( \triangle EMK \) 与 \( \triangle FNK \) 的面积之和最小？最小值是多少？
 \end{problem}
 
-
+\begin{solution}
+设两平行直线之间的距离为 \(h\)，并令 \(t=\frac{MK}{MN}\)，则 \(0<t\leqslant1\). 由 \(AB\parallel CD\) 及 \(E,K,F\) 共线，三角形 \(EMK\) 与三角形 \(FNK\) 相似，所以
+\[
+\frac{FN}{EM}=\frac{KN}{MK}=\frac{1-t}{t},
+\]
+从而 \(FN=a\frac{1-t}{t}\). 点 \(K\) 到两条平行直线的距离分别为 \(th\) 和 \((1-t)h\). 因此两个三角形的面积和为
+\[
+S=\frac{1}{2}a\cdot th+\frac{1}{2}a\frac{1-t}{t}\cdot(1-t)h
+=ah\left(t+\frac{1}{2t}-1\right).
+\]
+由基本不等式，
+\[
+t+\frac{1}{2t}\geqslant2\sqrt{t\cdot\frac{1}{2t}}=\sqrt{2},
+\]
+等号成立的条件为 \(t=\frac{1}{\sqrt{2}}\). 所以当 \(\frac{MK}{MN}=\frac{1}{\sqrt{2}}\)，即 \(MK:KN=1:(\sqrt{2}-1)\) 时，面积之和最小，最小值为 \(ah(\sqrt{2}-1)\).
+\end{solution}
 
 \section{附加题}
 
 \begin{problem}
-求极限：\( \lim\limits_{n\to\infty}\sqrt{x}\left( \sqrt{x+1}-\sqrt{x} \right) \).
+求极限：\( \displaystyle\lim_{n\to\infty}\sqrt{x}\left( \sqrt{x+1}-\sqrt{x} \right) \).
 \end{problem}
+
+\begin{solution}
+按原始试卷题面，极限变量是 \(n\)，而被取极限的式子只含 \(x\). 因此先要求 \(x\geqslant0\)，并把 \(x\) 视为与 \(n\) 无关的固定量. 有理化得
+\[
+\sqrt{x}\left(\sqrt{x+1}-\sqrt{x}\right)=\frac{\sqrt{x}}{\sqrt{x+1}+\sqrt{x}}.
+\]
+右端与 \(n\) 无关，所以按原题字面，极限就是 \(\frac{\sqrt{x}}{\sqrt{x+1}+\sqrt{x}}\). 若题面中的极限变量原拟为 \(x\)，则另有 \(\displaystyle\lim_{x\to\infty}\frac{\sqrt{x}}{\sqrt{x+1}+\sqrt{x}}=\frac{1}{2}\)，但这不能替换原始试卷中清楚印出的题式.
+\end{solution}
 
 \begin{problem}
 求不定积分：\( \int \frac{\mathrm{d}x}{\left( 1+\e^x \right)^2} \).
 \end{problem}
+
+\begin{solution}
+令 \(u=\e^x\)，则 \(u>0\)，且 \(\mathrm{d}u=\e^x\mathrm{d}x=u\mathrm{d}x\)，从而 \(\mathrm{d}x=\frac{\mathrm{d}u}{u}\). 原积分化为
+\[
+\int\frac{\mathrm{d}u}{u(1+u)^2}.
+\]
+作部分分式分解，得
+\[
+\frac{1}{u(1+u)^2}=\frac{1}{u}-\frac{1}{1+u}-\frac{1}{(1+u)^2}.
+\]
+所以
+\[
+\int\frac{\mathrm{d}u}{u(1+u)^2}=\ln u-\ln(1+u)+\frac{1}{1+u}+C.
+\]
+代回 \(u=\e^x\)，并利用 \(\ln\e^x=x\)，得到
+\[
+\int\frac{\mathrm{d}x}{\left(1+\e^x\right)^2}=x-\ln\left(1+\e^x\right)+\frac{1}{1+\e^x}+C.
+\]
+\end{solution}
