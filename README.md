@@ -1,6 +1,6 @@
-# 高考数学题库 PDF
+# 高考数学题库
 
-仓库已包含生成题目版和答案版 PDF 所需的全部项目文件；`source/` 中的原卷 PDF 仅用于内容核对，不参与成品构建。
+`main` 是公开发布分支，只包含生成题目版和答案版 PDF 所需的 LaTeX 源文件、索引、题图、重绘图源和布局表。
 
 ## 构建
 
@@ -8,8 +8,6 @@
 
 - TeX Live（含 XeLaTeX、latexmk 及 `styles.tex` 引用的宏包）
 - `SimSun`、`SimHei`、`KaiTi`、`Times New Roman` 字体
-
-无需 OCR、PDF 裁切工具、仓库外图片目录或专用转换脚本。
 
 ```bash
 make pdf
@@ -25,3 +23,5 @@ make pdf
 ```bash
 make clean
 ```
+
+原卷 PDF、来源记录、审核工具和队列状态仅保存在本地私有开发分支 `codex/private-dev`，不会推送到公开仓库。
