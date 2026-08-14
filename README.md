@@ -24,4 +24,6 @@ make pdf
 make clean
 ```
 
-原卷 PDF、来源记录、审核工具和队列状态仅保存在本地私有开发分支 `codex/private-dev`，不会推送到公开仓库。
+原卷 PDF、来源记录、审核工具和队列状态保存在独立私有仓库
+[`DxAThing/Gaokao-Math-Develop`](https://github.com/DxAThing/Gaokao-Math-Develop)，
+不会推送到公开仓库。
