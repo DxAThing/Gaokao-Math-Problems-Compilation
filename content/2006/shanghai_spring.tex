@@ -10,6 +10,18 @@
 \(\dfrac34\)
 \end{answer}
 
+\begin{solution}
+将分子、分母同除以 \(n\)，得
+\[
+\frac{3n-2}{4n+3}=\frac{3-\frac2n}{4+\frac3n}
+\]
+当 \(n\to\infty\) 时，\(\frac2n\to0\)，\(\frac3n\to0\)，所以
+\[
+\lim_{n\to\infty}\frac{3n-2}{4n+3}=\frac{3}{4}
+\]
+因此填 \(\dfrac34\).
+\end{solution}
+
 \begin{problem}
 方程 \(\log_3(2x-1)=1\) 的解 \(x=\)\fillinblank{}.
 \end{problem}
@@ -17,6 +29,14 @@
 \begin{answer}
 \(2\)
 \end{answer}
+
+\begin{solution}
+由对数的真数必须为正，得 \(2x-1>0\). 由方程
+\[
+\log_3(2x-1)=1
+\]
+可得 \(2x-1=3^1=3\)，从而 \(x=2\). 由于 \(2>\frac12\)，满足定义域条件，因此方程的解为 \(2\).
+\end{solution}
 
 \begin{problem}
 函数 \(f(x)=3x+5\)（\(x\in[0,1]\)）的反函数 \(f^{-1}(x)=\)\fillinblank{}.
@@ -26,6 +46,15 @@
 \(\dfrac13(x-5)\)，\(x\in[5,8]\)
 \end{answer}
 
+\begin{solution}
+设 \(y=3x+5\)，且 \(0\le x\le1\). 因为一次函数 \(3x+5\) 在 \([0,1]\) 上递增，所以其值域为 \([5,8]\). 由 \(y=3x+5\) 解得
+\[
+x=\frac{y-5}{3}
+\]
+交换自变量和因变量，得到反函数
+\(f^{-1}(x)=\frac{x-5}{3}\)，\(x\in[5,8]\).
+\end{solution}
+
 \begin{problem}
 不等式 \(\dfrac{1-2x}{x+1}>0\) 的解集是\fillinblank{}.
 \end{problem}
@@ -33,6 +62,11 @@
 \begin{answer}
 \(\left(-1,\dfrac12\right)\)
 \end{answer}
+
+\begin{solution}
+分式的分子、分母分别在 \(x=\frac12\)、\(x=-1\) 处为零或无意义. 当 \(x<-1\) 时，分子为正、分母为负，分式为负；当 \(-1<x<\frac12\) 时，分子、分母均为正，分式为正；当 \(x>\frac12\) 时，分子为负、分母为正，分式为负.
+由于不等式要求分式大于零，且 \(x=-1\) 不在定义域内、\(x=\frac12\) 使分式等于零，故解集为 \(\left(-1,\frac12\right)\).
+\end{solution}
 
 \begin{problem}
 已知圆 \(C:(x+5)^2+y^2=r^2\)（\(r>0\)）和直线 \(l:3x+y+5=0\). 若圆 \(C\) 与直线 \(l\) 没有公共点，则 \(r\) 的取值范围是\fillinblank{}.
@@ -42,6 +76,17 @@
 \((0,\sqrt{10})\)
 \end{answer}
 
+\begin{solution}
+圆心为 \(C_0(-5,0)\). 圆心到直线 \(l:3x+y+5=0\) 的距离为
+\[
+d=\frac{|3(-5)+0+5|}{\sqrt{3^2+1^2}}=\frac{10}{\sqrt{10}}=\sqrt{10}
+\]
+圆与直线没有公共点，当且仅当圆心到直线的距离大于半径，即 \(r<\sqrt{10}\). 又已知 \(r>0\)，所以
+\[
+0<r<\sqrt{10}
+\]
+\end{solution}
+
 \begin{problem}
 已知函数 \(f(x)\) 是定义在 \((-\infty,+\infty)\) 上的偶函数. 当 \(x\in(-\infty,0)\) 时，\(f(x)=x-x^4\)，则当 \(x\in(0,+\infty)\) 时，\(f(x)=\)\fillinblank{}.
 \end{problem}
@@ -49,6 +94,14 @@
 \begin{answer}
 \(-x-x^4\)
 \end{answer}
+
+\begin{solution}
+当 \(x>0\) 时，\(-x<0\). 由偶函数的定义，\(f(x)=f(-x)\). 将 \(-x\) 代入已知的负半轴解析式，得
+\[
+f(x)=f(-x)=(-x)-(-x)^4=-x-x^4
+\]
+因此当 \(x\in(0,+\infty)\) 时，\(f(x)=-x-x^4\).
+\end{solution}
 
 \begin{problem}
 电视台连续播放 \(6\) 个广告，其中含 \(4\) 个不同的商业广告和 \(2\) 个不同的公益广告，要求首尾必须播放公益广告，则共有\fillinblank{} 种不同的播放方式（结果用数值表示）.
@@ -58,6 +111,14 @@
 \(48\)
 \end{answer}
 
+\begin{solution}
+首、尾位置必须放置两个不同的公益广告，两个公益广告在首尾的排列方式有 \(2!\) 种. 中间四个位置放置四个不同的商业广告，排列方式有 \(4!\) 种. 因此播放方式共有
+\[
+2!\cdot4!=2\cdot24=48
+\]
+种.
+\end{solution}
+
 \begin{problem}
 正四棱锥底面边长为 \(4\)，侧棱长为 \(3\)，则其体积为\fillinblank{}.
 \end{problem}
@@ -65,6 +126,21 @@
 \begin{answer}
 \(\dfrac{16}{3}\)
 \end{answer}
+
+\begin{solution}
+设正四棱锥的顶点为 \(S\)，底面中心为 \(O\)，底面正方形的一个顶点为 \(A\). 由于是正四棱锥，\(SO\perp\) 底面，且
+\[
+OA=\frac{4\sqrt2}{2}=2\sqrt2
+\]
+在直角三角形 \(SOA\) 中，侧棱 \(SA=3\)，所以
+\[
+SO=\sqrt{SA^2-OA^2}=\sqrt{3^2-(2\sqrt2)^2}=1
+\]
+底面积为 \(4^2=16\)，故体积为
+\[
+V=\frac13\cdot16\cdot1=\frac{16}{3}
+\]
+\end{solution}
 
 \begin{problem}
 在 \(\triangle ABC\) 中，已知 \(BC=8\)，\(AC=5\)，三角形面积为 \(12\)，则 \(\cos2C=\)\fillinblank{}.
@@ -74,6 +150,22 @@
 \(\dfrac{7}{25}\)
 \end{answer}
 
+\begin{solution}
+由三角形面积公式
+\[
+12=\frac12\cdot AC\cdot BC\cdot\sin C
+ =\frac12\cdot5\cdot8\cdot\sin C
+\]
+得 \(\sin C=\frac35\). 因为 \(C\) 是三角形内角，虽不能仅由正弦值确定 \(\cos C\) 的正负，但有
+\[
+\cos^2C=1-\sin^2C=1-\frac9{25}=\frac{16}{25}
+\]
+于是
+\[
+\cos2C=2\cos^2C-1=2\cdot\frac{16}{25}-1=\frac7{25}
+\]
+\end{solution}
+
 \begin{problem}
 若向量 \(\bs{a}\)，\(\bs{b}\) 的夹角为 \(150^\circ\)，\(|\bs{a}|=\sqrt3\)，\(|\bs{b}|=4\)，则 \(|2\bs{a}+\bs{b}|=\)\fillinblank{}.
 \end{problem}
@@ -81,6 +173,19 @@
 \begin{answer}
 \(2\)
 \end{answer}
+
+\begin{solution}
+由向量夹角公式，
+\[
+\bs a\cdot\bs b=|\bs a|\,|\bs b|\cos150^\circ
+ =\sqrt3\cdot4\cdot\left(-\frac{\sqrt3}{2}\right)=-6
+\]
+因此
+\[
+|2\bs a+\bs b|^2=4|\bs a|^2+4\bs a\cdot\bs b+|\bs b|^2=4\cdot3+4(-6)+16=4
+\]
+由于向量的模非负，得 \(|2\bs a+\bs b|=2\).
+\end{solution}
 
 \begin{problem}
 已知直线 \(l\) 过点 \(P(2,1)\)，且与 \(x\) 轴，\(y\) 轴的正半轴分别交于 \(A\)，\(B\) 两点，\(O\) 为坐标原点，则三角形 \(OAB\) 面积的最小值为\fillinblank{}.
@@ -90,6 +195,26 @@
 \(4\)
 \end{answer}
 
+\begin{solution}
+设直线与正半轴的交点为 \(A(a,0)\)、\(B(0,b)\)，其中 \(a>0\)、\(b>0\). 直线方程为
+\[
+\frac{x}{a}+\frac{y}{b}=1
+\]
+点 \(P(2,1)\) 在直线上，所以
+\[
+\frac2a+\frac1b=1
+\]
+令 \(u=\frac2a\)、\(v=\frac1b\)，则 \(u>0\)、\(v>0\)、\(u+v=1\). 三角形面积为
+\[
+S_{\triangle OAB}=\frac12ab=\frac12\cdot\frac2u\cdot\frac1v=\frac1{uv}
+\]
+由 \(u+v=1\) 及均值不等式，\(uv\le\left(\frac{u+v}{2}\right)^2=\frac14\)，故
+\[
+S_{\triangle OAB}\ge4
+\]
+当且仅当 \(u=v=\frac12\)，即 \(a=4\)、\(b=2\) 时取等号. 所以面积的最小值为 \(4\).
+\end{solution}
+
 \begin{problem}
 同学们都知道，在一次考试后，如果按顺序去掉一些高分，那么班级的平均分将降低；反之，如果按顺序去掉一些低分，那么班级的平均分将提高. 这两个事实可以用数学语言描述为：若有限数列 \(a_1\)，\(a_2\)，\(\cdots\)，\(a_n\) 满足 \(a_1\le a_2\le\cdots\le a_n\)，则（结论用数学式子表示）\fillinblank{}.
 \end{problem}
@@ -97,6 +222,19 @@
 \begin{answer}
 \(\dfrac{a_1+a_2+\cdots+a_m}{m}\le\dfrac{a_1+a_2+\cdots+a_n}{n}\)（\(1\le m<n\)），且 \(\dfrac{a_{m+1}+a_{m+2}+\cdots+a_n}{n-m}\ge\dfrac{a_1+a_2+\cdots+a_n}{n}\)（\(1\le m<n\)）.
 \end{answer}
+
+\begin{solution}
+取任意 \(1\le m<n\). 因为 \(a_1\le\cdots\le a_m\le a_{m+1}\le\cdots\le a_n\)，所以
+\[
+\frac{a_1+\cdots+a_m}{m}\le a_m\le a_{m+1}\le\frac{a_{m+1}+\cdots+a_n}{n-m}
+\]
+记前一部分的平均数为 \(u\)，后一部分的平均数为 \(v\)，则 \(u\le v\). 全部数列的平均数是两部分平均数按项数加权的平均：
+\[
+\frac{a_1+\cdots+a_n}{n}=\frac{m}{n}u+\frac{n-m}{n}v
+\]
+因此 \(u\le\frac{m}{n}u+\frac{n-m}{n}v\le v\)，即
+\(\frac{a_1+\cdots+a_m}{m}\le\frac{a_1+\cdots+a_n}{n}\)，\(\frac{a_{m+1}+\cdots+a_n}{n-m}\ge\frac{a_1+\cdots+a_n}{n}\).
+\end{solution}
 
 \section{单选题}
 
@@ -111,8 +249,12 @@
 \end{problem}
 
 \begin{answer}
-\(B\)
+B
 \end{answer}
+
+\begin{solution}
+抛物线的标准形式为 \(y^2=2px\)，其焦点为 \(\left(\frac p2,0\right)\). 由 \(y^2=4x\) 得 \(2p=4\)，所以 \(p=2\)，焦点为 \((1,0)\)，对应选项 B.
+\end{solution}
 
 \begin{problem}
 若 \(a\)，\(b\)，\(c\in\R\)，\(a>b\)，则下列不等式成立的是（\quad）
@@ -125,8 +267,16 @@
 \end{problem}
 
 \begin{answer}
-\(C\)
+C
 \end{answer}
+
+\begin{solution}
+因为 \(c^2+1>0\)，所以不等式 \(a>b\) 两边同除以 \(c^2+1\) 后方向不变，恒有
+\[
+\frac{a}{c^2+1}>\frac{b}{c^2+1}
+\]
+故选项 C 一定成立. 其余选项不恒成立：取 \(a=1\)，\(b=-1\) 可否定 A，取 \(a=-1\)，\(b=-2\) 可否定 B，取 \(c=0\) 可否定 D. 因此选 C.
+\end{solution}
 
 \begin{problem}
 若 \(k\in\R\)，则“\(k>3\)”是“方程 \(\dfrac{x^2}{k-3}-\dfrac{y^2}{k+3}=1\) 表示双曲线”的（\quad）
@@ -139,8 +289,24 @@
 \end{problem}
 
 \begin{answer}
-\(A\)
+A
 \end{answer}
+
+\begin{solution}
+当 \(k>3\) 时，\(k-3>0\)、\(k+3>0\)，方程可写为
+\[
+\frac{x^2}{k-3}-\frac{y^2}{k+3}=1
+\]
+这是实轴在 \(x\) 轴上的双曲线，所以 \(k>3\) 是充分条件.
+
+但它不是必要条件. 例如取 \(k=-4\)，则
+\[
+\frac{x^2}{-7}-\frac{y^2}{-1}=1
+\quad\Longleftrightarrow\quad
+\frac{y^2}{1}-\frac{x^2}{7}=1
+\]
+仍表示双曲线，而 \(-4\not>3\). 因此“\(k>3\)”是“方程表示双曲线”的充分不必要条件，选 A.
+\end{solution}
 
 \begin{problem}
 若集合 \(A=\left\{y\mid y=x^{\frac13},-1\le x\le1\right\}\)，\(B=\left\{y\mid y=2-\dfrac1x,0<x\le1\right\}\)，则 \(A\cap B\) 等于（\quad）
@@ -153,8 +319,24 @@
 \end{problem}
 
 \begin{answer}
-\(B\)
+B
 \end{answer}
+
+\begin{solution}
+因为函数 \(y=x^{\frac13}\) 在实数集上递增，且 \(-1\le x\le1\)，所以
+\[
+A=\left[-1,1\right]
+\]
+对 \(B\)，当 \(0<x\le1\) 时，\(\frac1x\ge1\)，从而 \(2-\frac1x\le1\). 当 \(x\to0^+\) 时，\(2-\frac1x\to-\infty\)，且在 \(x=1\) 时取到最大值 \(1\)，所以
+\[
+B=(-\infty,1]
+\]
+于是
+\[
+A\cap B=[-1,1]
+\]
+故选 B.
+\end{solution}
 
 \section{解答题}
 
@@ -329,9 +511,11 @@ y=-x^2+4x+5
 
 \item 所给数列可推广为无穷数列 \(\{a_n\}\). 其中 \(a_1\)，\(a_2\)，\(\cdots\)，\(a_{10}\) 是首项为 \(1\)，公差为 \(1\) 的等差数列；当 \(n\ge1\) 时，数列 \(a_{10n}\)，\(a_{10n+1}\)，\(\cdots\)，\(a_{10(n+1)}\) 是公差为 \(d^n\) 的等差数列.
 
-研究的问题可以是：试写出 \(a_{10(n+1)}\) 关于 \(d\) 的关系式，并求 \(a_{10(n+1)}\) 的取值范围.
+研究的问题可以是：试写出 \(a_{10(n+1)}\) 关于 \(d\) 的关系式，并在 \(d\ne0\) 的条件下求 \(a_{10(n+1)}\) 的取值范围，其中 \(n\) 为正整数.
 
-由 \(a_{40}=a_{30}+10d^3=10(1+d+d^2+d^3)\)，依次类推可得
+每个长度为 10 的等差数列区段包含 10 个公差，因此对 \(n\ge1\) 有递推关系
+\(a_{10(n+1)}=a_{10n}+10d^n\)，\(a_{10}=10\).
+逐项展开可得
 \[
 a_{10(n+1)}=10(1+d+\cdots+d^n)=
 \begin{cases}
@@ -339,6 +523,42 @@ a_{10(n+1)}=10(1+d+\cdots+d^n)=
 10(n+1), & d=1.
 \end{cases}
 \]
-例如，当 \(d>0\) 时，\(a_{10(n+1)}\) 的取值范围为 \((10,+\infty)\) 等.
+令 \(F_n(d)=10(1+d+\cdots+d^n)\). 当 \(n=2\) 时，\(F_2(d)=10\left[\left(d+\dfrac12\right)^2+\dfrac34\right]\)，所以 \(F_2(d)\) 的取值范围为 \(\left[\dfrac{15}{2},+\infty\right)\)，正好得到第 \(2\) 问的结论.
+
+下面研究一般的固定正整数 \(n\). 若 \(n\) 为奇数，则
+\[
+F_n(d)-10=10d(1+d+\cdots+d^{n-1})
+\]
+当 \(d=1\) 时，\(1+d+\cdots+d^{n-1}=n>0\)；当 \(d\ne1\) 时，
+\[
+1+d+\cdots+d^{n-1}=\frac{d^n-1}{d-1}>0
+\]
+这里不等号成立是因为 \(n\) 为奇数：当 \(d<0\) 时分子、分母均为负；当 \(0<d<1\) 时分子、分母也均为负；当 \(d>1\) 时分子、分母均为正. 所以 \(F_n(d)<10\)（\(d<0\)）或 \(F_n(d)>10\)（\(d>0\)）. 又当 \(d\to-\infty\) 时 \(F_n(d)\to-\infty\)，当 \(d\to0^-\) 时 \(F_n(d)\to10\)，由连续性可知负数 \(d\) 对应的取值范围为 \((-\infty,10)\)；同理，正数 \(d\) 对应的取值范围为 \((10,+\infty)\). 因而当 \(n\) 为奇数时，
+\[
+F_n(d)\in(-\infty,10)\cup(10,+\infty)
+\]
+
+若 \(n\) 为偶数，则 \(F_n(d)\) 是偶次多项式，且首项系数为正，所以当 \(|d|\to+\infty\) 时 \(F_n(d)\to+\infty\)，从而它在实数集上有最小值. 记
+\[
+m_n=10\min_{d\in\R}(1+d+\cdots+d^n)
+\]
+去掉题设不允许的 \(d=0\) 不会改变值域，因为 \(F_n(0)=10\)，而 \(n\) 为偶数时 \(F_n(-1)=10\). 因此当 \(n\) 为偶数时，
+\[
+F_n(d)\in[m_n,+\infty)
+\]
+最小值点满足
+\[
+1+2d+3d^2+\cdots+nd^{n-1}=0
+\]
+综上，推广后的结论是：
+\[
+a_{10(n+1)}\in
+\begin{cases}
+(-\infty,10)\cup(10,+\infty), & n\text{为奇数},\\
+[m_n,+\infty), & n\text{为偶数},
+\end{cases}
+\qquad d\ne0
+\]
+其中 \(m_n=10\min_{d\in\R}(1+d+\cdots+d^n)\). 当 \(n=2\) 时，\(m_2=\dfrac{15}{2}\)，故确实包含第 \(2\) 问作为特例.
 \end{enumerate}
 \end{solution}

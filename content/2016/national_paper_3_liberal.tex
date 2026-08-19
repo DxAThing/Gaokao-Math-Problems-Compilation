@@ -79,7 +79,7 @@ D
 \end{answer}
 
 \begin{solution}
-由雷达图可读出，各月平均最低气温均在 \(0^\circ\mathrm{C}\) 以上，七月的最高、最低气温差大于一月，且三月和十一月的平均最高气温都约为 \(10^\circ\mathrm{C}\). 图中实线表示的平均最高气温高于 \(20^\circ\mathrm{C}\) 的有六月、七月和八月，共 \(3\) 个月份，因而题述“有 \(5\) 个”错误，故选 D.
+由图例知，实线表示平均最高气温，虚线表示平均最低气温. 逐月比较虚线与 \(0^\circ\mathrm{C}\) 的位置可知，各月平均最低气温都高于 \(0^\circ\mathrm{C}\)，所以 A 正确. 七月实线与虚线的半径差大于一月对应的半径差，所以七月的平均温差较大，B 正确. 三月和十一月的实线都约在 \(10^\circ\mathrm{C}\) 的圆周上，故 C 正确. 实线超过 \(20^\circ\mathrm{C}\) 圆周的月份只有六月、七月和八月，共 \(3\) 个，不是 \(5\) 个，因此不正确的是 D.
 \end{solution}
 
 \begin{problem}
@@ -155,11 +155,9 @@ B
 \end{answer}
 
 \begin{solution}
-每次循环中的三条赋值语句按顺序执行. 记每次循环结束后的状态为 \((a,b,s,n)\)，初始状态为 \((4,6,0,0)\)，则依次有
-\[
-(4,6,0,0)\to(6,4,6,1)\to(4,6,10,2)\to(6,4,16,3)\to(4,6,20,4).
-\]
-前三次循环结束时 \(s\le16\)，第四次结束时 \(s=20>16\)，所以输出 \(n=4\)，故选 B.
+每次循环中的赋值语句按从上到下的顺序执行，不能把三条语句看成同时赋值. 初始时 \((a,b,s,n)=(4,6,0,0)\). 第一次循环后，\(a=6-4=2\)，\(b=6-2=4\)，\(a=4+2=6\)，再得 \(s=0+6=6\)，\(n=1\). 因而状态为 \((6,4,6,1)\). 继续按同样方法计算，四次循环后的状态依次为
+\((a,b,s,n)=(6,4,6,1)\)，\(\ (4,6,10,2)\)，\(\ (6,4,16,3)\)，\(\ (4,6,20,4)\).
+前三次循环后均有 \(s\le16\)，继续循环；第四次循环后 \(s=20>16\)，满足停止条件，所以输出 \(n=4\)，故选 B.
 \end{solution}
 
 \begin{problem}
@@ -179,7 +177,7 @@ D
 \begin{solution}
 设从 \(A\) 向 \(BC\) 作垂线，垂足为 \(H\)，并设 \(BC=L\)，则 \(AH=\dfrac L3\). 在直角三角形 \(ABH\) 中，\(\angle ABH=B=45^\circ\)，所以 \(BH=AH=\dfrac L3\)，从而 \(CH=\dfrac{2L}{3}\). 于是
 \[
-AC=\sqrt{AH^2+CH^2}=\frac{\sqrt5}{3}L.
+AC=\sqrt{AH^2+CH^2}=\frac{\sqrt5}{3}L
 \]
 由正弦定理，\(\dfrac{\sin A}{BC}=\dfrac{\sin B}{AC}\)，故 \(\sin A=\dfrac{L\cdot\frac{\sqrt2}{2}}{\frac{\sqrt5}{3}L}=\dfrac{3\sqrt{10}}{10}\)，故选 D.
 \end{solution}
@@ -203,9 +201,13 @@ B
 \end{answer}
 
 \begin{solution}
-由三视图可知该多面体是以侧视图为底面的斜四棱柱. 侧视图的底面为边长分别为 \(3\) 和 \(6\) 的矩形，另外两组侧面的对应边长分别为 \(3\) 和 \(3\sqrt5\)，其中 \(3\sqrt5=\sqrt{3^2+6^2}\). 因此表面积为
+由三视图可知，该多面体是以侧视图中的 \(3\times6\) 矩形为底面的斜四棱柱，棱柱的长度由俯视图读得为 \(3\). 两个底面的总面积为 \(2\times3\times6\). 斜四棱柱的两组侧面分别是边长 \(3\) 与 \(3\) 的矩形，以及边长 \(3\) 与斜高
+\(
+\sqrt{3^2+6^2}=3\sqrt5
+\)
+的平行四边形，因此四个侧面的总面积为 \(2\times3\times3+2\times3\times3\sqrt5\). 所以表面积为
 \[
-S=2\left(3\times6\right)+2\left(3\times3\right)+2\left(3\times3\sqrt5\right)=54+18\sqrt5,
+S=2\left(3\times6\right)+2\left(3\times3\right)+2\left(3\times3\sqrt5\right)=54+18\sqrt5
 \]
 故选 B.
 \end{solution}
@@ -225,9 +227,14 @@ B
 \end{answer}
 
 \begin{solution}
-三棱柱底面为直角三角形，斜边 \(AC=\sqrt{6^2+8^2}=10\)，所以底面三角形的内切圆半径为 \(\dfrac{6+8-10}{2}=2\). 球要同时位于上下底面之间，半径还必须不超过棱柱高的一半 \(\dfrac32\)，故球半径满足 \(r\le\dfrac32\). 取球心在棱柱高的中点，并使其在底面内切圆圆心的正上方时，球与上下底面相切，且到三个侧面的距离为 \(2>\dfrac32\)，所以最大半径为 \(\dfrac32\). 因此
+三棱柱的底面是直角三角形，斜边
+\(AC=\sqrt{AB^2+BC^2}=\sqrt{6^2+8^2}=10\)，其内切圆半径为
+\(
+r_0=\frac{AB+BC-AC}{2}=\frac{6+8-10}{2}=2.
+\)
+任意内接球的球心到上、下底面的距离之和为 \(3\)，所以球半径 \(r\le\dfrac32\). 同时，球心在底面内的投影到三个侧面对应边的距离都至少要为 \(r\)，而底面内能达到的最大最小边距就是内切圆半径 \(r_0=2\). 因此 \(r\le\min\left(2,\dfrac32\right)=\dfrac32\). 取球心为底面内切圆圆心沿棱柱高方向上升 \(\dfrac32\) 的位置，即位于两底面中间，此时到上、下底面的距离均为 \(\dfrac32\)，到三个侧面的距离均为 \(2\)，确实得到半径 \(\dfrac32\) 的内接球. 所以
 \[
-V_{\max}=\frac43\pi\left(\frac32\right)^3=\frac{9\pi}{2},
+V_{\max}=\frac43\pi\left(\frac32\right)^3=\frac{9\pi}{2}
 \]
 故选 B.
 \end{solution}
@@ -247,13 +254,21 @@ A
 \end{answer}
 
 \begin{solution}
-设椭圆焦距的一半为 \(c\)，则 \(F=(-c,0)\)，\(A=(-a,0)\)，\(B=(a,0)\). 设直线 \(l\) 的斜率为 \(k\)，则其方程为 \(y=k(x+a)\)，于是 \(M=(-c,k(a-c))\)，\(E=(0,ka)\). 设 \(OE\) 的中点为 \(N=(0,ka/2)\).
+设椭圆焦距的一半为 \(c\)，则 \(F=(-c,0)\)，\(A=(-a,0)\)，\(B=(a,0)\). 由于 \(PF\perp x\) 轴，点 \(P\) 与 \(F\) 的横坐标相同，所以线段 \(PF\) 在直线 \(x=-c\) 上. 设直线 \(l\) 的斜率为 \(k\)，则其方程为 \(y=k(x+a)\)，从而
+\(
+M=(-c,k(a-c)),\qquad E=(0,ka).
+\)
+先讨论非退化情形 \(M\ne F\). 设 \(OE\) 的中点为 \(N\)，则 \(N=(0,ka/2)\). 因为 \(a>c\)，此时 \(k\ne0\).
 
-由 \(B,M,N\) 三点共线，比较直线 \(BM\) 和 \(BN\) 的斜率，得
+由 \(B\)，\(M\)，\(N\) 三点共线，比较直线 \(BM\) 和 \(BN\) 的斜率，得
 \[
--\frac{k(a-c)}{a+c}=-\frac{k}{2}.
+-\frac{k(a-c)}{a+c}=-\frac{k}{2}
 \]
-这里 \(k\ne0\)，约去 \(-k\) 后有 \(\dfrac{a-c}{a+c}=\dfrac12\)，即 \(2a-2c=a+c\)，所以 \(a=3c\). 因此离心率 \(e=\dfrac ca=\dfrac13\)，故选 A.
+约去 \(-k\) 后有 \(\dfrac{a-c}{a+c}=\dfrac12\)，即 \(2a-2c=a+c\)，所以 \(a=3c\). 因此离心率
+\(
+e=\frac ca=\frac13,
+\)
+故按标准答案所采用的非退化解释，离心率为 \(\dfrac13\)，选 A. 但若严格按题面允许直线 \(l\) 为 \(x\) 轴，则 \(M=F\)，\(E=O\)，且 \(B\)，\(M\)，\(O\) 恒共线，此时条件对任意椭圆都成立，不能唯一确定离心率；因此题面需要排除这一退化情形.
 \end{solution}
 
 \section{填空题}
@@ -275,7 +290,7 @@ x\le1
 \begin{solution}
 约束条件等价于 \(y\le2x+1\)、\(y\ge\dfrac{x-1}{2}\) 和 \(x\le1\). 要使可行域非空，必须有 \(\dfrac{x-1}{2}\le2x+1\)，解得 \(x\ge-1\). 对固定的 \(x\)，因为 \(z=2x+3y-5\) 随 \(y\) 增大而增大，所以取 \(y=\dfrac{x-1}{2}\) 时取得该 \(x\) 下的最小值. 此时
 \[
-z=2x+3\cdot\frac{x-1}{2}-5=\frac72x-\frac{13}{2}.
+z=2x+3\cdot\frac{x-1}{2}-5=\frac72x-\frac{13}{2}
 \]
 它随 \(x\) 增大而增大，故在 \(x=-1\) 时取得最小值. 此时 \(y=-1\)，从而 \(z_{\min}=2(-1)+3(-1)-5=-10\).
 \end{solution}
@@ -305,7 +320,7 @@ z=2x+3\cdot\frac{x-1}{2}-5=\frac72x-\frac{13}{2}.
 
 设 \(A=(x_A,y_A)\). 过 \(A\) 的 \(l\) 的垂线方向向量可取 \((1,-\sqrt3)\)，它与 \(x\) 轴交点的横坐标为 \(x_A+\dfrac{y_A}{\sqrt3}\). 又因 \(A\in l\)，有 \(x_A=\sqrt3 y_A-6\)，所以 \(x_C=\dfrac4{\sqrt3}y_A-6\). 同理 \(x_D=\dfrac4{\sqrt3}y_B-6\)，从而
 \[
-|CD|=|x_C-x_D|=\frac4{\sqrt3}|y_A-y_B|=4.
+|CD|=|x_C-x_D|=\frac4{\sqrt3}|y_A-y_B|=4
 \]
 \end{solution}
 
@@ -367,7 +382,7 @@ z=2x+3\cdot\frac{x-1}{2}-5=\frac72x-\frac{13}{2}.
 \begin{enumerate}
 \item \(\bar t=4\)，且 \(\sum_{i=1}^{7}(t_i-\bar t)^2=28\). 由已知数据，\(\sum_{i=1}^{7}(t_i-\bar t)(y_i-\bar y)=\sum_{i=1}^{7}t_i y_i-\bar t\sum_{i=1}^{7}y_i=40.17-4\times9.32=2.89\). 因此
 \[
-r=\frac{2.89}{\sqrt{28}\times0.55}\approx0.99,
+r=\frac{2.89}{\sqrt{28}\times0.55}\approx0.99
 \]
 说明 \(y\) 与 \(t\) 的线性相关程度相当高.
 \item 回归方程的斜率为 \(\hat b=\dfrac{2.89}{28}\approx0.10\)，又 \(\bar y=\dfrac{9.32}{7}\)，所以截距 \(\hat a=\bar y-4\hat b\approx0.92\). 故回归方程为 \(\hat y=0.92+0.10t\). \(2016\) 年对应的年份代码为 \(t=9\)，所以预测处理量为 \(\hat y=0.92+0.10\times9=1.82\) 亿吨.
@@ -392,17 +407,15 @@ r=\frac{2.89}{\sqrt{28}\times0.55}\approx0.99,
 \begin{solution}
 \begin{enumerate}
 \item 在底面内建立直角坐标系，取 \(A=(0,0,0)\)，\(D=(3,0,0)\)，并设 \(B=(u,v,0)\)，\(C=(u+4,v,0)\). 由 \(AB=AC=3\) 得
-\[
-u^2+v^2=9,\qquad (u+4)^2+v^2=9,
-\]
+\(u^2+v^2=9\)，\((u+4)^2+v^2=9\)
 从而 \(u=-2\)，\(v^2=5\). 取 \(v=\sqrt5\)，则 \(B=(-2,\sqrt5,0)\)，\(C=(2,\sqrt5,0)\). 又 \(P=(0,0,4)\)，由 \(AM=2\) 得 \(M=(2,0,0)\)，而 \(N\) 是 \(PC\) 的中点，所以 \(N=(1,\dfrac{\sqrt5}{2},2)\). 于是
 \[
-\overrightarrow{MN}=\left(-1,\frac{\sqrt5}{2},2\right)=\frac12\overrightarrow{AB}+\frac12\overrightarrow{AP}.
+\overrightarrow{MN}=\left(-1,\frac{\sqrt5}{2},2\right)=\frac12\overrightarrow{AB}+\frac12\overrightarrow{AP}
 \]
-因此 \(\overrightarrow{MN}\) 是平面 \(PAB\) 内两个相交方向向量的线性组合，故 \(MN\parallel\) 平面 \(PAB\).
+因此 \(\overrightarrow{MN}\) 是平面 \(PAB\) 内两个相交方向向量的线性组合. 又 \(M\) 在底面内且不在直线 \(AB\) 上，所以 \(M\notin\) 平面 \(PAB\)，故 \(MN\parallel\) 平面 \(PAB\).
 \item 三角形 \(BCM\) 的底边 \(BC=4\)，点 \(M\) 到直线 \(BC\) 的距离为 \(\sqrt5\)，所以 \(S_{\triangle BCM}=\dfrac12\times4\times\sqrt5=2\sqrt5\). 点 \(N\) 到底面 \(ABCD\) 的距离为 \(2\)，故
 \[
-V_{N-BCM}=\frac13S_{\triangle BCM}\times2=\frac{4\sqrt5}{3}.
+V_{N-BCM}=\frac13S_{\triangle BCM}\times2=\frac{4\sqrt5}{3}
 \]
 \end{enumerate}
 \end{solution}
@@ -420,26 +433,25 @@ V_{N-BCM}=\frac13S_{\triangle BCM}\times2=\frac{4\sqrt5}{3}.
 \begin{enumerate}
 \item 抛物线可参数化为 \(X(t)=\left(\dfrac{t^2}{2},t\right)\). 设 \(A=X(t_1)\)，\(B=X(t_2)\)，则准线为 \(x=-\dfrac12\)，故 \(P=\left(-\dfrac12,t_1\right)\)，\(Q=\left(-\dfrac12,t_2\right)\)，焦点为 \(F=\left(\dfrac12,0\right)\). 直线 \(AB\) 的方程为
 \[
-x-\frac{t_1+t_2}{2}y+\frac{t_1t_2}{2}=0.
+x-\frac{t_1+t_2}{2}y+\frac{t_1t_2}{2}=0
 \]
 因为 \(F\) 在线段 \(AB\) 上，代入上式得 \(t_1t_2=-1\). 又 \(R\) 为 \(PQ\) 的中点，所以
 \[
-\overrightarrow{AR}=\left(-\frac{1+t_1^2}{2},\frac{t_2-t_1}{2}\right).
+\overrightarrow{AR}=\left(-\frac{1+t_1^2}{2},\frac{t_2-t_1}{2}\right)
 \]
 由 \(t_1t_2=-1\)，有 \(t_2-t_1=t_2+t_1^2t_2\)，从而
 \[
-\overrightarrow{AR}=\frac{1+t_1^2}{2}(-1,t_2)=\frac{1+t_1^2}{2}\overrightarrow{FQ}.
+\overrightarrow{AR}=\frac{1+t_1^2}{2}(-1,t_2)=\frac{1+t_1^2}{2}\overrightarrow{FQ}
 \]
 因此 \(AR\parallel FQ\).
 \item 设 \(t_1\ne t_2\). 因为 \(PQ\) 在准线上，焦点到准线的距离为 \(1\)，所以 \(S_{\triangle PQF}=\dfrac12|t_2-t_1|\). 另一方面，由行列式计算三角形面积，得
 \[
-S_{\triangle ABF}=\frac14|t_2-t_1|\left|1+t_1t_2\right|.
+S_{\triangle ABF}=\frac14|t_2-t_1|\left|1+t_1t_2\right|
 \]
-由题意 \(S_{\triangle PQF}=2S_{\triangle ABF}\)，可得 \(\left|1+t_1t_2\right|=1\)，即 \(t_1t_2=0\) 或 \(t_1t_2=-2\). 当 \(t_1t_2=0\) 时，\(t_1=0\) 或 \(t_2=0\)，相应的水平直线为 \(y=0\)，与抛物线在顶点处相切，属于退化情形，按题意的非退化交点取 \(t_1t_2=-2\). 设 \(AB\) 的中点为 \((x,y)\)，则
-\[
-x=\frac{t_1^2+t_2^2}{4},\qquad y=\frac{t_1+t_2}{2}.
-\]
-于是 \(x-y^2=-\dfrac{t_1t_2}{2}=1\)，所以轨迹方程为 \(y^2=x-1\).
+由题意 \(S_{\triangle PQF}=2S_{\triangle ABF}\)，约去非零因子 \(\dfrac12|t_2-t_1|\)，可得 \(\left|1+t_1t_2\right|=1\)，即
+\(t_1t_2=0\) 或 \(t_1t_2=-2\). 若 \(t_1t_2=0\)，则 \(t_1=0\) 或 \(t_2=0\)，其中一条水平直线为 \(y=0\)，它在抛物线顶点处相切；此时 \(AB\) 中点满足 \(y^2=x\)，且因两直线不同而有 \(x>0\). 若按标准答案将两条直线理解为非切线，即排除该退化分支，则 \(t_1t_2=-2\). 设 \(AB\) 的中点为 \((x,y)\)，则
+\(x=\frac{t_1^2+t_2^2}{4}\)，\(y=\frac{t_1+t_2}{2}\).
+非退化分支中 \(x-y^2=-\dfrac{t_1t_2}{2}=1\)，所以标准答案的轨迹方程为 \(y^2=x-1\). 严格按原题字面若允许切线，还应加上退化分支 \(y^2=x\)（\(x>0\)）；故题面未明确排除切线时，轨迹并非唯一为标准答案所列的一条曲线.
 \end{enumerate}
 \end{solution}
 
@@ -459,7 +471,7 @@ x=\frac{t_1^2+t_2^2}{4},\qquad y=\frac{t_1+t_2}{2}.
 \item 由第（1）问，\(f(1)=0\)，且当 \(x>1\) 时 \(f(x)<f(1)=0\)，所以 \(\ln x<x-1\)，从而 \(1<\dfrac{x-1}{\ln x}\). 又因为 \(0<\dfrac1x<1\)，有 \(f\left(\dfrac1x\right)<0\)，即 \(-\ln x-\dfrac1x+1<0\)，所以 \(\ln x>1-\dfrac1x\). 两边乘以正数 \(x\)，得 \(x\ln x>x-1\)，从而 \(\dfrac{x-1}{\ln x}<x\). 综上，\(1<\dfrac{x-1}{\ln x}<x\).
 \item 设 \(h(x)=\ln\left(1+(c-1)x\right)-x\ln c\). 则 \(h(0)=h(1)=0\)，且
 \[
-h''(x)=-\frac{(c-1)^2}{\left(1+(c-1)x\right)^2}<0.
+h''(x)=-\frac{(c-1)^2}{\left(1+(c-1)x\right)^2}<0
 \]
 所以 \(h\) 在 \((0,1)\) 上严格凹，函数图象严格位于端点连线之上，故当 \(0<x<1\) 时 \(h(x)>0\). 于是 \(\ln\left(1+(c-1)x\right)>x\ln c\)，两边取指数即得 \(1+(c-1)x>c^x\).
 \end{enumerate}
@@ -482,30 +494,44 @@ h''(x)=-\frac{(c-1)^2}{\left(1+(c-1)x\right)^2}<0.
 
 \begin{solution}
 \begin{enumerate}
-\item 设弧 \(PA\)、\(PB\) 的度数均为 \(u\)，弧 \(BD\)、\(DC\)、\(CA\) 的度数分别为 \(v,w,s\). 因为 \(P\) 是弧 \(AB\) 的中点，所以弧 \(PA=\)弧 \(PB\). 由圆周角定理，\(\angle PCD\) 所对的弧为弧 \(PB\) 与弧 \(BD\)，故 \(\angle PCD=\dfrac{u+v}{2}\). 又由圆内相交弦所成角的度数等于所对两弧度数和的一半，\(\angle PFB=\dfrac{u+w+s}{2}\). 条件 \(\angle PFB=2\angle PCD\) 给出 \(u+w+s=2u+2v\)，即 \(w+s=u+2v\). 再由圆周上的弧度数和为 \(2u+v+w+s=360^\circ\)，得 \(3u+3v=360^\circ\)，所以 \(u+v=120^\circ\)，从而 \(\angle PCD=60^\circ\).
+\item 设弧 \(PA\)、\(PB\) 的度数均为 \(u\)，弧 \(BD\)、\(DC\)、\(CA\) 的度数分别为 \(v\)，\(w\)，\(s\). 因为 \(P\) 是弧 \(AB\) 的中点，所以弧 \(PA=\)弧 \(PB\). 由圆周角定理，\(\angle PCD\) 所对的弧为弧 \(PB\) 与弧 \(BD\)，故 \(\angle PCD=\dfrac{u+v}{2}\). 又由圆内相交弦所成角的度数等于所对两弧度数和的一半，\(\angle PFB=\dfrac{u+w+s}{2}\). 条件 \(\angle PFB=2\angle PCD\) 给出 \(u+w+s=2u+2v\)，即 \(w+s=u+2v\). 再由圆周上的弧度数和为 \(2u+v+w+s=360^\circ\)，得 \(3u+3v=360^\circ\)，所以 \(u+v=120^\circ\)，从而 \(\angle PCD=60^\circ\).
 \item 建立直角坐标系，使圆为单位圆，圆心 \(O=(0,0)\)，并取 \(P=(0,1)\). 令
 \[
-T(t)=\left(\frac{2t}{1+t^2},\frac{1-t^2}{1+t^2}\right).
+T(t)=\left(\frac{2t}{1+t^2},\frac{1-t^2}{1+t^2}\right)
 \]
-由于 \(P\) 是弧 \(AB\) 的中点，可设 \(A=T(-u)\)，\(B=T(u)\). 令 \(C=T(r)\)，\(D=T(s)\)，则直线 \(AB\) 的方程为 \(y=\dfrac{1-u^2}{1+u^2}\). 分别求直线 \(PC\)、\(PD\) 与此直线的交点，得到
+由于 \(P\) 是弧 \(AB\) 的中点，可设 \(A=T(-u)\)，\(B=T(u)\). 因而
 \[
-E=\left(\frac{k}{r},\frac{1-u^2}{1+u^2}\right),\qquad F=\left(\frac{k}{s},\frac{1-u^2}{1+u^2}\right),\qquad k=\frac{2u^2}{1+u^2}.
+y_{AB}=\frac{1-u^2}{1+u^2}=:h
 \]
-设 \(G=(X,Y)\). 由 \(GE=GC\) 和 \(GF=GD\)，分别化简距离平方相等的关系，得到
+令 \(C=T(r)\)，\(D=T(s)\)，并记 \(k=\dfrac{2u^2}{1+u^2}\). 直线 \(PC\) 的斜率为 \(-r\)，故方程为 \(y=1-rx\)，与 \(y=h\) 联立得 \(x=k/r\). 同理，直线 \(PD\) 与 \(AB\) 的交点分别为
+\(E=\left(\frac{k}{r},h\right)\)，\(F=\left(\frac{k}{s},h\right)\).
+设 \(G=(X,Y)\). 由 \(G\) 在 \(EC\) 的垂直平分线上，\(GE^2=GC^2\). 将 \(E\)、\(C\) 的坐标代入并使用 \(h=\dfrac{1-u^2}{1+u^2}\)、\(k=\dfrac{2u^2}{1+u^2}\)，移项并约去公共因子，得
 \[
-rX-r^2Y=\frac{u^2(1+r^2)}{1+u^2},\qquad sX-s^2Y=\frac{u^2(1+s^2)}{1+u^2}.
+rX-r^2Y=\frac{u^2(1+r^2)}{1+u^2}
 \]
-解得
+同理，由 \(GF=GD\) 得
 \[
-X=\frac{u^2(r+s)}{rs(1+u^2)},\qquad Y=-\frac{u^2(rs-1)}{rs(1+u^2)}.
+sX-s^2Y=\frac{u^2(1+s^2)}{1+u^2}
 \]
-另一方面，
+令 \(q=\dfrac{u^2}{1+u^2}\)，将上面两式分别除以 \(r\)、\(s\) 后相减，得到
 \[
-\overrightarrow{CD}=\frac{2(s-r)}{(1+r^2)(1+s^2)}\left(1-rs,-(r+s)\right).
+Y=q\left(\frac1{rs}-1\right)=-\frac{u^2(rs-1)}{rs(1+u^2)}
 \]
-于是
+再代回任一式，得到
 \[
-\overrightarrow{OG}\cdot\overrightarrow{CD}\propto (r+s)(1-rs)+(rs-1)(r+s)=0.
+X=q\left(\frac1r+\frac1s\right)=\frac{u^2(r+s)}{rs(1+u^2)}
+\]
+另一方面，由 \(C=T(r)\)、\(D=T(s)\) 直接相减可得
+\[
+\overrightarrow{CD}=\frac{2(s-r)}{(1+r^2)(1+s^2)}\left(1-rs,-(r+s)\right)
+\]
+而
+\[
+\overrightarrow{OG}=\frac{u^2}{rs(1+u^2)}\left(r+s,1-rs\right)
+\]
+因此
+\[
+\overrightarrow{OG}\cdot\overrightarrow{CD}\propto (r+s)(1-rs)+(1-rs)\bigl(-(r+s)\bigr)=0
 \]
 所以 \(OG\perp CD\).
 \end{enumerate}
@@ -524,12 +550,12 @@ X=\frac{u^2(r+s)}{rs(1+u^2)},\qquad Y=-\frac{u^2(rs-1)}{rs(1+u^2)}.
 \begin{enumerate}
 \item 由参数方程，\(\dfrac{x^2}{3}+y^2=\cos^2\alpha+\sin^2\alpha=1\)，所以 \(C_1:\dfrac{x^2}{3}+y^2=1\). 又因为 \(x=\rho\cos\theta\)，\(y=\rho\sin\theta\)，所以
 \[
-\rho\sin\left(\theta+\frac\pi4\right)=\frac{x+y}{\sqrt2}=2\sqrt2,
+\rho\sin\left(\theta+\frac\pi4\right)=\frac{x+y}{\sqrt2}=2\sqrt2
 \]
 从而 \(C_2:x+y-4=0\).
 \item 对椭圆上的任意点，\(x+y=\sqrt3\cos\alpha+\sin\alpha\le\sqrt{3+1}=2\). 因此椭圆在直线 \(x+y=4\) 的一侧，点 \(P\) 到该直线的距离为 \(\dfrac{4-x-y}{\sqrt2}\)，要使 \(|PQ|\) 最小，只需使 \(x+y\) 最大. 由柯西不等式取等条件，\(\cos\alpha=\dfrac{\sqrt3}{2}\)，\(\sin\alpha=\dfrac12\)，故 \(P=\left(\dfrac32,\dfrac12\right)\)，且
 \[
-|PQ|_{\min}=\frac{4-2}{\sqrt2}=\sqrt2.
+|PQ|_{\min}=\frac{4-2}{\sqrt2}=\sqrt2
 \]
 \end{enumerate}
 \end{solution}
@@ -548,7 +574,7 @@ X=\frac{u^2(r+s)}{rs(1+u^2)},\qquad Y=-\frac{u^2(rs-1)}{rs(1+u^2)}.
 \item 当 \(a=2\) 时，不等式化为 \(2|x-1|+2\le6\)，即 \(|x-1|\le2\). 所以 \(-2\le x-1\le2\)，解得 \(-1\le x\le3\).
 \item 令 \(t=2x\)，则题设不等式对任意 \(t\in\R\) 成立，当且仅当
 \[
-|t-a|+|t-1|+a\ge3.
+|t-a|+|t-1|+a\ge3
 \]
 由三角不等式，\(|t-a|+|t-1|\ge|a-1|\)，且当 \(t\) 位于 \(a\) 与 \(1\) 之间时取等号. 因此左边关于 \(t\) 的最小值为 \(a+|a-1|\). 若 \(a<1\)，该最小值为 \(1<3\)；若 \(a\ge1\)，该最小值为 \(2a-1\)，不小于 3 当且仅当 \(a\ge2\). 故 \(a\in[2,+\infty)\).
 \end{enumerate}

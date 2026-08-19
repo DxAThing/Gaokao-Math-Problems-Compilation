@@ -16,6 +16,14 @@
 C
 \end{answer}
 
+\begin{solution}
+因为 \(\i^3=-\i\)，所以
+\[
+\frac{2\i^3}{1-\i}=\frac{-2\i}{1-\i}\cdot\frac{1+\i}{1+\i}=\frac{-2\i(1+\i)}{2}=1-\i
+\]
+因此正确选项为 C.
+\end{solution}
+
 \begin{problem}
 设变量 \(x\)，\(y\) 满足约束条件 \(\begin{cases}
 x-y\geqslant -1,\\
@@ -34,6 +42,13 @@ x+y\geqslant 1,\\
 B
 \end{answer}
 
+\begin{solution}
+约束条件的边界直线分别为 \(y=x+1\)、\(y=1-x\) 和 \(y=3x-3\). 它们两两相交于三个点，分别为 \((0,1)\)、\((1,0)\)、\((2,3)\).
+这三个点均满足其余约束条件，且可行域是由它们围成的三角形. 在线性目标函数的可行域中，最大值在顶点处取得，故
+\(z(0,1)=1\)，\(z(1,0)=4\)，\(z(2,3)=11\).
+最大值为 \(11\)，因此正确选项为 B.
+\end{solution}
+
 \begin{problem}
 \(\theta = \dfrac{2\pi}{3}\) 是“\(\tan \theta = 2\cos\left(\dfrac{\pi}{2} + \theta\right)\)”的（\quad）
 
@@ -47,6 +62,16 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+利用诱导公式，原等式化为
+\[
+\tan\theta=2\cos\left(\frac{\pi}{2}+\theta\right)=-2\sin\theta
+\]
+当 \(\theta=\dfrac{2\pi}{3}\) 时，左边为 \(-\sqrt{3}\)，右边也为 \(-\sqrt{3}\)，所以该条件能推出原等式成立，即为充分条件.
+
+但取 \(\theta=\pi\) 时，原等式同样成立，而 \(\theta\ne\dfrac{2\pi}{3}\)，所以该条件不是必要条件. 因此正确选项为 A.
+\end{solution}
 
 \begin{problem}
 设双曲线 \(\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1\)（\(a > 0\)，\(b > 0\)）的离心率为 \(\sqrt{3}\)，且它的一条准线与抛物线 \(y^2 = 4x\) 的准线重合，则双曲线的方程为（\quad）
@@ -62,6 +87,18 @@ A
 D
 \end{answer}
 
+\begin{solution}
+设双曲线的焦半距为 \(c\). 由离心率得
+\(\frac{c}{a}=\sqrt{3}\)，\(c^2=a^2+b^2\)，
+从而 \(b^2=2a^2\). 双曲线的准线为 \(x=\pm\dfrac{a^2}{c}=\pm\dfrac{a}{\sqrt{3}}\)，而抛物线 \(y^2=4x\) 的准线为 \(x=-1\). 因为有一条准线重合，所以
+\(\frac{a}{\sqrt{3}}=1\)，从而 \(a^2=3\)，\(b^2=6\).
+故双曲线方程为
+\[
+\frac{x^2}{3}-\frac{y^2}{6}=1
+\]
+因此正确选项为 D.
+\end{solution}
+
 \begin{problem}
 函数 \(y = \log_2\left(\sqrt{x + 4} + 2\right)\)（\(x > 0\)）的反函数是（\quad）
 
@@ -76,11 +113,22 @@ D
 C
 \end{answer}
 
+\begin{solution}
+由
+\[
+y=\log_2\left(\sqrt{x+4}+2\right)
+\]
+得 \(2^y=\sqrt{x+4}+2\)，从而 \(\sqrt{x+4}=2^y-2\).
+由于原函数的定义域为 \(x>0\)，其值域为 \(y>\log_2 4=2\). 两边平方并整理，得到反函数
+\(y=4^x-2^{x+2}\)，\(x>2\).
+因此正确选项为 C.
+\end{solution}
+
 \begin{problem}
 设 \(a\)，\(b\) 为两条直线，\(\alpha\)，\(\beta\) 为两个平面. 下列四个命题中，正确的命题是（\quad）
 
 \choices
-    {若 \(a, b\) 与 \(\alpha\) 所成的角相等，则 \(a \parallel b\)}
+    {若 \(a\)，\(b\) 与 \(\alpha\) 所成的角相等，则 \(a \parallel b\)}
     {若 \(a \parallel \alpha\)，\(b \parallel \beta\)，\(\alpha \parallel \beta\)，则 \(a \parallel b\)}
     {若 \(a \subset \alpha\)，\(b \subset \beta\)，\(a \parallel b\)，则 \(\alpha \parallel \beta\)}
     {若 \(a \perp \alpha\)，\(b \perp \beta\)，\(\alpha \perp \beta\)，则 \(a \perp b\)}
@@ -89,6 +137,16 @@ C
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+命题 A 不成立：在同一平面内取两条不平行的直线，它们与该平面所成的角都为 \(0\).
+
+命题 B 不成立：例如取 \(\alpha:z=0\)、\(\beta:z=1\)，再取 \(a\) 为 \(z=2\)，\(y=0\) 上沿 \(x\) 轴方向的直线，取 \(b\) 为 \(z=2\)，\(x=0\) 上沿 \(y\) 轴方向的直线. 此时 \(a\parallel\alpha\)、\(b\parallel\beta\)、\(\alpha\parallel\beta\)，但 \(a\) 与 \(b\) 相交，故不平行.
+
+命题 C 不成立：例如在相交平面 \(\alpha:z=0\)、\(\beta:y=0\) 内分别取 \(a\colon y=1\)，\(z=0\) 和 \(b\colon y=0\)，\(z=1\)，两直线方向相同且互相平行，但两个平面相交.
+
+对于命题 D，若 \(a\perp\alpha\)，则 \(a\) 的方向向量是平面 \(\alpha\) 的法向量；同理，\(b\) 的方向向量是平面 \(\beta\) 的法向量. 两平面垂直时，它们的法向量互相垂直，所以 \(a\perp b\). 因此正确选项为 D.
+\end{solution}
 
 \begin{problem}
 在 \(\R\) 上定义的函数 \(f(x)\) 是偶函数，且 \(f(x) = f(2 - x)\). 若 \(f(x)\) 在区间 \([1, 2]\) 上是减函数，则 \(f(x)\)（\quad）
@@ -104,6 +162,24 @@ D
 B
 \end{answer}
 
+\begin{solution}
+任取 \(-2\leqslant x_1<x_2\leqslant-1\)，则
+\[
+1\leqslant-x_2<-x_1\leqslant2
+\]
+因为 \(f(x)\) 在 \([1,2]\) 上是减函数，所以 \(f(-x_2)\geqslant f(-x_1)\). 又因 \(f\) 是偶函数，故
+\[
+f(x_2)=f(-x_2)\geqslant f(-x_1)=f(x_1)
+\]
+所以 \(f(x)\) 在 \([-2,-1]\) 上是增函数.
+
+由 \(f(x)=f(2-x)=f(x-2)\)，任取 \(3\leqslant x_1<x_2\leqslant4\)，有 \(1\leqslant x_1-2<x_2-2\leqslant2\)，从而
+\[
+f(x_1)=f(x_1-2)\geqslant f(x_2-2)=f(x_2)
+\]
+所以 \(f(x)\) 在 \([3,4]\) 上是减函数. 因此正确选项为 B.
+\end{solution}
+
 \begin{problem}
 设等差数列 \(\{a_{n}\}\) 的公差 \(d\) 不为 0，\(a_{1} = 9d\). 若 \(a_{k}\) 是 \(a_{1}\) 与 \(a_{2k}\) 的等比中项，则 \(k =\)（\quad）
 
@@ -117,6 +193,24 @@ B
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+等差数列的通项为
+\[
+a_n=a_1+(n-1)d=(n+8)d
+\]
+因为 \(a_k\) 是 \(a_1\) 与 \(a_{2k}\) 的等比中项，所以
+\[
+a_k^2=a_1a_{2k}
+\]
+代入通项并利用 \(d\ne0\)，得
+\[
+(k+8)^2d^2=9d\cdot(2k+8)d
+\]
+即
+\(k^2-2k-8=0\)，\((k-4)(k+2)=0\).
+由于 \(k\in\mathbf N^*\)，所以 \(k=4\)，正确选项为 B.
+\end{solution}
 
 \begin{problem}
 设 \(a\)，\(b\)，\(c\) 均为正数，且 \(2^{a} = \log_{\frac{1}{2}} a\)，\(\left(\frac{1}{2}\right)^{b} = \log_{\frac{1}{2}} b\)，\(\left(\frac{1}{2}\right)^{c} = \log_{2} c\). 则（\quad）
@@ -132,6 +226,31 @@ B
 A
 \end{answer}
 
+\begin{solution}
+由 \(2^a=\log_{1/2}a>0\)，得 \(0<a<1\). 同理，由第二个等式得 \(0<b<1\)，由第三个等式得 \(c>1\).
+
+在 \((0,1)\) 上令 \(F(x)=-\log_2x-2^x\)，\(G(x)=-\log_2x-2^{-x}\).
+则 \(F(a)=0\)，\(G(b)=0\)，并且
+\[
+F'(x)=-\frac{1}{x\ln2}-(\ln2)2^x<0
+\]
+并且
+\[
+G'(x)=-\frac{1}{x\ln2}+(\ln2)2^{-x}
+\]
+因 \(0<x<1\) 且 \(0<\ln2<1\)，所以
+\[
+x(\ln2)^2<1<2^x
+\]
+即 \((\ln2)2^{-x}<1/(x\ln2)\)，故 \(G'(x)<0\). 于是 \(G\) 在 \((0,1)\) 上严格递减.
+
+又
+\[
+G(a)-F(a)=2^a-2^{-a}>0
+\]
+所以 \(G(a)>0=G(b)\). 由 \(G\) 严格递减可得 \(a<b\). 结合 \(c>1\)，得到 \(a<b<c\)，因此正确选项为 A.
+\end{solution}
+
 \begin{problem}
 设两个向量 \(\bs{a} = (\lambda + 2, \lambda^2 - \cos^2 \alpha)\) 和 \(\bs{b} = \left(m, \dfrac{m}{2} + \sin \alpha\right)\)，其中 \(\lambda\)，\(m\)，\(\alpha\) 为实数. 若 \(\bs{a} = 2\bs{b}\)，则 \(\dfrac{\lambda}{m}\) 的取值范围是（\quad）
 
@@ -146,6 +265,47 @@ A
 A
 \end{answer}
 
+\begin{solution}
+由 \(\bs{a}=2\bs{b}\) 得
+\[
+\begin{cases}
+\lambda+2=2m,\\
+\lambda^2-\cos^2\alpha=m+2\sin\alpha.
+\end{cases}
+\]
+令 \(s=\sin\alpha\)，则 \(-1\leqslant s\leqslant1\)，且 \(\cos^2\alpha=1-s^2\). 代入 \(m=\dfrac{\lambda+2}{2}\)，可得
+\[
+s^2-2s+\lambda^2-\frac{\lambda}{2}-2=0
+\]
+即
+\[
+(s-1)^2=3-\lambda^2+\frac{\lambda}{2}
+\]
+由于 \(s\in[-1,1]\)，左边的取值范围为 \([0,4]\). 因此必须有
+\[
+0\leqslant3-\lambda^2+\frac{\lambda}{2}\leqslant4
+\]
+其中左侧不等式给出 \(-\dfrac32\leqslant\lambda\leqslant2\)，右侧不等式等价于 \(\lambda^2-\dfrac\lambda2+1\geqslant0\)，恒成立. 反过来，在此区间内令
+\[
+s=1-\sqrt{3-\lambda^2+\frac{\lambda}{2}}
+\]
+即可使 \(s\in[-1,1]\)，所以这正是 \(\lambda\) 的可取范围.
+
+又 \(m=\dfrac{\lambda+2}{2}\ne0\)，故
+\[
+\frac{\lambda}{m}=\frac{2\lambda}{\lambda+2}
+\]
+因为
+\[
+\left(\frac{2\lambda}{\lambda+2}\right)'=\frac{4}{(\lambda+2)^2}>0
+\]
+该函数在 \(\left[-\dfrac32,2\right]\) 上递增，故其取值范围为
+\[
+\left[\frac{2(-3/2)}{-3/2+2},\frac{2\cdot2}{2+2}\right]=[-6,1]
+\]
+因此正确选项为 A.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -156,6 +316,19 @@ A
 \(2\)
 \end{answer}
 
+\begin{solution}
+展开式的第 \(k+1\) 项为
+\[
+\mathrm C_6^k(x^2)^{6-k}\left(\frac{1}{ax}\right)^k
+=\mathrm C_6^k a^{-k}x^{12-3k}
+\]
+要得到 \(x^3\) 项，必须有 \(12-3k=3\)，所以 \(k=3\). 因此该项的系数为
+\[
+\mathrm C_6^3a^{-3}=\frac{20}{a^3}=\frac52
+\]
+于是 \(a^3=8\)，从而 \(a=2\).
+\end{solution}
+
 \begin{problem}
 一个长方体的各顶点均在同一球的球面上，且一个顶点上的三条棱的长分别为 \(1\)，\(2\)，\(3\)，则此球的表面积为\fillinblank{}.
 \end{problem}
@@ -163,6 +336,17 @@ A
 \begin{answer}
 \(14\pi\)
 \end{answer}
+
+\begin{solution}
+长方体的外接球球心是长方体的中心，球的直径等于长方体的体对角线. 因此球的直径为
+\[
+\sqrt{1^2+2^2+3^2}=\sqrt{14}
+\]
+球半径为 \(\dfrac{\sqrt{14}}2\). 所以球的表面积为
+\[
+4\pi\left(\frac{\sqrt{14}}2\right)^2=14\pi
+\]
+\end{solution}
 
 \begin{problem}
 设等差数列 \(\{a_{n}\}\) 的公差 \(d\) 是 \(2\)，前 \(n\) 项的和为 \(S_{n}\)，则 \(\lim\limits_{n\to \infty}\dfrac{a_n^2 - n^2}{S_n} =\)\fillinblank{}.
@@ -172,6 +356,27 @@ A
 \(3\)
 \end{answer}
 
+\begin{solution}
+设等差数列首项为 \(a_1\). 因为公差为 \(2\)，所以
+\[
+a_n=a_1+2(n-1)=2n+a_1-2
+\]
+且
+\[
+S_n=\frac{n(a_1+a_n)}2=n^2+(a_1-1)n
+\]
+于是
+\[
+a_n^2-n^2=\left(2n+a_1-2\right)^2-n^2
+=3n^2+4(a_1-2)n+(a_1-2)^2
+\]
+因此
+\[
+\lim_{n\to\infty}\frac{a_n^2-n^2}{S_n}
+=\lim_{n\to\infty}\frac{3+\dfrac{4(a_1-2)}n+\dfrac{(a_1-2)^2}{n^2}}{1+\dfrac{a_1-1}{n}}=3
+\]
+\end{solution}
+
 \begin{problem}
 已知两圆 \(x^{2} + y^{2} = 10\) 和 \((x - 1)^{2} + (y - 3)^{2} = 20\) 相交于 \(A\)，\(B\) 两点，则直线 \(AB\) 的方程是\fillinblank{}.
 \end{problem}
@@ -179,6 +384,18 @@ A
 \begin{answer}
 \(x + 3y = 0\)
 \end{answer}
+
+\begin{solution}
+将两圆方程相减，得到
+\[
+x^2+y^2-\left((x-1)^2+(y-3)^2\right)=10-20
+\]
+展开并整理为
+\[
+x+3y=0
+\]
+两圆的公共弦所在直线必为两圆的根轴，而根轴正是上述相减所得的直线，所以直线 \(AB\) 的方程为 \(x+3y=0\).
+\end{solution}
 
 \begin{problem}
 如图，在 \(\triangle ABC\) 中，\(\angle BAC = 120^{\circ}\)，\(AB = 2AC = 1\)，\(D\) 是边 \(BC\) 上一点，\(DC = 2BD\)，则 \(\overrightarrow{AD} \cdot \overrightarrow{BC} =\)\fillinblank{}.
@@ -190,6 +407,24 @@ A
 \(-\dfrac{2}{3}\)
 \end{answer}
 
+\begin{solution}
+设 \(\bs{b}=\overrightarrow{AB}\)，\(\bs{c}=\overrightarrow{AC}\). 由 \(AB=1\)、\(AC=\dfrac12\) 以及 \(\angle BAC=120^{\circ}\)，有
+\[
+\bs{b}\cdot\bs{c}=|\bs{b}|\,|\bs{c}|\cos120^{\circ}=-\frac14
+\]
+由 \(DC=2BD\) 可知 \(BD:DC=1:2\)，故
+\[
+\overrightarrow{AD}=\overrightarrow{AB}+\overrightarrow{BD}
+=\bs{b}+\frac13\overrightarrow{BC}
+=\frac23\bs{b}+\frac13\bs{c}
+\]
+又 \(\overrightarrow{BC}=\bs{c}-\bs{b}\).
+于是
+\[
+\overrightarrow{AD}\cdot\overrightarrow{BC}=\left(\frac23\bs{b}+\frac13\bs{c}\right)\cdot(\bs{c}-\bs{b})=\frac23\left(-\frac14-1\right)+\frac13\left(\frac14+\frac14\right)=-\frac23
+\]
+\end{solution}
+
 \begin{problem}
 如图，用 \(6\) 种不同的颜色给图中的 \(4\) 个格子涂色，每个格子涂一种颜色. 要求最多使用 \(3\) 种颜色且相邻的两个格子颜色不同，则不同的涂色方法共有\fillinblank{} 种.（用数字作答）
 
@@ -200,6 +435,21 @@ A
 \begin{answer}
 \(390\)
 \end{answer}
+
+\begin{solution}
+相邻格子颜色不同，因此不可能只使用一种颜色.
+
+恰使用两种颜色时，先从 \(6\) 种颜色中选出两种，有 \(\mathrm C_6^2\) 种选法. 对固定的两种颜色，四个格子的颜色只能交替排列，有 \(2\) 种方法，因此共有
+\[
+\mathrm C_6^2\cdot2
+\]
+种.
+
+恰使用三种颜色时，先选出三种颜色. 对固定的三种颜色，相邻不同的涂法共有 \(3\cdot2^3=24\) 种，其中只使用两种颜色的有 \(\mathrm C_3^2\cdot2=6\) 种，所以恰使用三种颜色的有 \(24-6=18\) 种. 因此总数为
+\[
+\mathrm C_6^2\cdot2+\mathrm C_6^3\cdot18=30+360=390
+\]
+\end{solution}
 
 \section{解答题}
 
@@ -238,6 +488,15 @@ A
 \item 取出的 \(4\) 个球中恰有 \(1\) 个红球包括两种互斥情形：红球来自甲盒，或红球来自乙盒. 所求概率为 \(\dfrac{1}{2}\times\dfrac{2}{5}+\dfrac{1}{2}\times\dfrac{8}{15}=\dfrac{7}{15}\).
 \item 由上面的分类，\(\xi\) 的分布列为
 
+\[
+P(\xi=2)=\frac{1}{2}\times\frac{1}{15}+\frac{1}{2}\times\frac{8}{15}
+=\frac{3}{10}
+\]
+\[
+P(\xi=3)=\frac{1}{2}\times\frac{1}{15}
+=\frac{1}{30}
+\]
+
 \begin{center}
 \begin{tabular}{c|cccc}
 \(\xi\) & \(0\) & \(1\) & \(2\) & \(3\) \\
@@ -263,30 +522,34 @@ A
 \end{problem}
 
 \begin{solution}
-设 \(PA=AB=BC=\ell\)，建立空间直角坐标系，使 \(A\) 为原点，\(AB\)，\(AD\)，\(AP\) 分别为 \(x\)，\(y\)，\(z\) 轴. 由题意可设
-\[
-B=(\ell,0,0),\quad P=(0,0,\ell),\quad D=(0,d,0),\quad C=\left(\dfrac{\ell}{2},\dfrac{\sqrt{3}\ell}{2},0\right).
-\]
+设 \(PA=AB=BC=\ell\)，建立空间直角坐标系，使 \(A\) 为原点，\(AB\)，\(AD\)，\(AP\) 分别为 \(x\)，\(y\)，\(z\) 轴.
+由题意可设 \(B=(\ell,0,0)\)，\(P=(0,0,\ell)\)，\(D=(0,d,0)\)，
+\(C=\left(\dfrac{\ell}{2},\dfrac{\sqrt{3}\ell}{2},0\right)\).
 由 \(AC\perp CD\) 得
 \[
-\overrightarrow{AC}\cdot\overrightarrow{CD}=\left(\dfrac{\ell}{2},\dfrac{\sqrt{3}\ell}{2},0\right)\cdot\left(-\dfrac{\ell}{2},d-\dfrac{\sqrt{3}\ell}{2},0\right)=0,
+\overrightarrow{AC}\cdot\overrightarrow{CD}=\left(\dfrac{\ell}{2},\dfrac{\sqrt{3}\ell}{2},0\right)\cdot\left(-\dfrac{\ell}{2},d-\dfrac{\sqrt{3}\ell}{2},0\right)=0
 \]
-所以 \(d=\dfrac{2\ell}{\sqrt{3}}\). 因而
-\[
-E=\left(\dfrac{\ell}{4},\dfrac{\sqrt{3}\ell}{4},\dfrac{\ell}{2}\right),\quad \overrightarrow{CD}=\left(-\dfrac{\ell}{2},\dfrac{\ell}{2\sqrt{3}},0\right),\quad \overrightarrow{AE}=\left(\dfrac{\ell}{4},\dfrac{\sqrt{3}\ell}{4},\dfrac{\ell}{2}\right).
-\]
+所以 \(d=\dfrac{2\ell}{\sqrt{3}}\). 因而 \(E=\left(\dfrac{\ell}{4},\dfrac{\sqrt{3}\ell}{4},\dfrac{\ell}{2}\right)\)，
+\(\overrightarrow{CD}=\left(-\dfrac{\ell}{2},\dfrac{\ell}{2\sqrt{3}},0\right)\)，
+\(\overrightarrow{AE}=\left(\dfrac{\ell}{4},\dfrac{\sqrt{3}\ell}{4},\dfrac{\ell}{2}\right)\).
 
 \begin{enumerate}
 \item \(\overrightarrow{CD}\cdot\overrightarrow{AE}=-\dfrac{\ell^2}{8}+\dfrac{\ell^2}{8}=0\)，故 \(CD\perp AE\).
 \item \(\overrightarrow{PD}=\left(0,\dfrac{2\ell}{\sqrt{3}},-\ell\right)\). 于是 \(\overrightarrow{PD}\cdot\overrightarrow{AB}=0\)，且
-\(\overrightarrow{PD}\cdot\overrightarrow{AE}=\dfrac{2\ell}{\sqrt{3}}\times\dfrac{\sqrt{3}\ell}{4}-\ell\times\dfrac{\ell}{2}=0\). 直线 \(AB\) 与 \(AE\) 是平面 \(ABE\) 内相交的两条直线，所以 \(PD\perp\) 平面 \(ABE\).
+\(\overrightarrow{PD}\cdot\overrightarrow{AE}=\dfrac{2\ell}{\sqrt{3}}\times\dfrac{\sqrt{3}\ell}{4}-\ell\times\dfrac{\ell}{2}=0\). 直线 \(AB\) 与 \(AE\) 是平面 \(ABE\) 内相交的两条直线，所以 \(\overrightarrow{PD}\) 是平面 \(ABE\) 的法向量.
+
+为确认直线与平面相交，平面 \(ABE\) 的方程为 \(-2y+\sqrt{3}z=0\)，而直线 \(PD\) 可表示为
+\[
+(x,y,z)=\left(0,\dfrac{2t\ell}{\sqrt{3}},\ell(1-t)\right)
+\]
+取 \(t=\dfrac{3}{7}\) 时该点满足平面方程，故 \(PD\) 与平面 \(ABE\) 相交，从而 \(PD\perp\) 平面 \(ABE\).
 \item 平面 \(APD\) 的一个法向量为 \((1,0,0)\). 又
 \[
-\overrightarrow{PD}\times\overrightarrow{PC}=\left(-\dfrac{\ell^2}{2\sqrt{3}},-\dfrac{\ell^2}{2},-\dfrac{\ell^2}{\sqrt{3}}\right),
+\overrightarrow{PD}\times\overrightarrow{PC}=\left(-\dfrac{\ell^2}{2\sqrt{3}},-\dfrac{\ell^2}{2},-\dfrac{\ell^2}{\sqrt{3}}\right)
 \]
 故平面 \(CPD\) 的一个法向量可取 \((1,\sqrt{3},2)\). 设二面角 \(A-PD-C\) 的大小为 \(\theta\)，则
 \[
-\cos\theta=\dfrac{|(1,0,0)\cdot(1,\sqrt{3},2)|}{\sqrt{1^2}\sqrt{1^2+(\sqrt{3})^2+2^2}}=\dfrac{\sqrt{2}}{4}.
+\cos\theta=\dfrac{|(1,0,0)\cdot(1,\sqrt{3},2)|}{\sqrt{1^2}\sqrt{1^2+(\sqrt{3})^2+2^2}}=\dfrac{\sqrt{2}}{4}
 \]
 所以二面角 \(A-PD-C\) 的大小为 \(\arccos\dfrac{\sqrt{2}}{4}\).
 \end{enumerate}
@@ -304,13 +567,14 @@ E=\left(\dfrac{\ell}{4},\dfrac{\sqrt{3}\ell}{4},\dfrac{\ell}{2}\right),\quad \ov
 \begin{solution}
 \begin{enumerate}
 \item 当 \(a=1\) 时，\(f(x)=\dfrac{2x}{x^2+1}\)，所以 \(f(2)=\dfrac{4}{5}\)，且
-\[f'(x)=\dfrac{2(1-x^2)}{(x^2+1)^2},\quad f'(2)=-\dfrac{6}{25}.\]
+\[f'(x)=\dfrac{2(1-x^2)}{(x^2+1)^2}\]
+所以 \(f'(2)=-\dfrac{6}{25}\).
 因此曲线在点 \(\left(2,\dfrac{4}{5}\right)\) 处的切线方程为
-\[y-\dfrac{4}{5}=-\dfrac{6}{25}(x-2),\quad\text{即}\quad 6x+25y-32=0.\]
+\[y-\dfrac{4}{5}=-\dfrac{6}{25}(x-2),\quad\text{即}\quad 6x+25y-32=0\]
 \item 对任意 \(a\neq0\)，有
-\[f'(x)=\dfrac{-2a x^2+2(a^2-1)x+2a}{(x^2+1)^2}=\dfrac{-2a(x-a)\left(x+\dfrac{1}{a}\right)}{(x^2+1)^2}.\]
+\[f'(x)=\dfrac{-2a x^2+2(a^2-1)x+2a}{(x^2+1)^2}=\dfrac{-2a(x-a)\left(x+\dfrac{1}{a}\right)}{(x^2+1)^2}\]
 所以两个临界点为 \(x=a\) 和 \(x=-\dfrac{1}{a}\)，并且
-\[f(a)=1,\qquad f\left(-\dfrac{1}{a}\right)=-a^2.\]
+\(f(a)=1\)，\(f\left(-\dfrac{1}{a}\right)=-a^2\).
 当 \(a>0\) 时，\(-\dfrac{1}{a}<a\)，故 \(f(x)\) 在 \(\left(-\infty,-\dfrac{1}{a}\right)\) 和 \((a,+\infty)\) 上单调递减，在 \(\left(-\dfrac{1}{a},a\right)\) 上单调递增；极小值为 \(-a^2\)，极大值为 \(1\).
 
 当 \(a<0\) 时，\(a<-\dfrac{1}{a}\)，故 \(f(x)\) 在 \(\left(-\infty,a\right)\) 和 \(\left(-\dfrac{1}{a},+\infty\right)\) 上单调递增，在 \(\left(a,-\dfrac{1}{a}\right)\) 上单调递减；极大值为 \(1\)，极小值为 \(-a^2\).
@@ -330,26 +594,32 @@ E=\left(\dfrac{\ell}{4},\dfrac{\sqrt{3}\ell}{4},\dfrac{\ell}{2}\right),\quad \ov
 \begin{solution}
 \begin{enumerate}
 \item 由递推式可验证
-\[ (n-1)\lambda^{n+1}+2^{n+1}=\lambda\left((n-1)\lambda^n+2^n\right)+\lambda^{n+1}+(2-\lambda)2^n. \]
+\[(n-1)\lambda^{n+1}+2^{n+1}=\lambda\left((n-1)\lambda^n+2^n\right)+\lambda^{n+1}+(2-\lambda)2^n\]
 又 \(a_1=2=(1-1)\lambda^1+2^1\)，所以由数学归纳法得
-\[a_n=(n-1)\lambda^n+2^n.\]
-\item 当 \(\lambda\neq1\) 时，
+\[a_n=(n-1)\lambda^n+2^n\]
+\item 当 \(\lambda\neq1\) 时，记 \(T_n=\sum_{k=1}^{n}(k-1)\lambda^k\). 当 \(n=1\) 时下式直接成立；当 \(n\geqslant2\) 时，将 \(T_n\) 与 \(\lambda T_n\) 相减，得
 \[
-\begin{aligned}
-S_n&=\sum_{k=1}^{n}\left((k-1)\lambda^k+2^k\right)\\
-&=\dfrac{\lambda^2-n\lambda^{n+1}+(n-1)\lambda^{n+2}}{(1-\lambda)^2}+2^{n+1}-2.
-\end{aligned}
+(1-\lambda)T_n=\lambda^2+\sum_{k=3}^{n}\lambda^k-(n-1)\lambda^{n+1}
+\]
+再利用有限等比数列求和公式，得到
+\[
+T_n=\dfrac{\lambda^2-n\lambda^{n+1}+(n-1)\lambda^{n+2}}{(1-\lambda)^2}
+\]
+因此
+\[
+S_n=T_n+\sum_{k=1}^{n}2^k
+=\dfrac{\lambda^2-n\lambda^{n+1}+(n-1)\lambda^{n+2}}{(1-\lambda)^2}+2^{n+1}-2
 \]
 当 \(\lambda=1\) 时，\(a_k=k-1+2^k\)，因此
-\[S_n=\sum_{k=1}^{n}(k-1)+\sum_{k=1}^{n}2^k=\dfrac{n(n-1)}{2}+2^{n+1}-2.\]
+\[S_n=\sum_{k=1}^{n}(k-1)+\sum_{k=1}^{n}2^k=\dfrac{n(n-1)}{2}+2^{n+1}-2\]
 \item 由 \(a_n=(n-1)\lambda^n+2^n>0\)，且 \(a_1=2\)，\(a_2=\lambda^2+4\)，有
-\[\frac{a_2}{a_1}=\frac{\lambda^2+4}{2}.\]
+\[\frac{a_2}{a_1}=\frac{\lambda^2+4}{2}\]
 对任意 \(n\in\mathbf N^*\)，
-\[(\lambda^2+4)a_n-2a_{n+1}=\left((n-1)(\lambda^2-2\lambda+4)-2\lambda\right)\lambda^n+\lambda^2 2^n.\]
+\[(\lambda^2+4)a_n-2a_{n+1}=\left((n-1)(\lambda^2-2\lambda+4)-2\lambda\right)\lambda^n+\lambda^2 2^n\]
 当 \(n=1\) 时上式等于 \(0\)；当 \(n\geq2\) 时，
-\[(n-1)(\lambda^2-2\lambda+4)-2\lambda\geq(\lambda-2)^2\geq0,\]
+\[(n-1)(\lambda^2-2\lambda+4)-2\lambda\geq(\lambda-2)^2\geq0\]
 从而 \((\lambda^2+4)a_n-2a_{n+1}\geq0\). 因此
-\[\frac{a_{n+1}}{a_n}\leq\frac{\lambda^2+4}{2}=\frac{a_2}{a_1}.\]
+\[\frac{a_{n+1}}{a_n}\leq\frac{\lambda^2+4}{2}=\frac{a_2}{a_1}\]
 取 \(k=1\)，即可得到所证结论.
 \end{enumerate}
 \end{solution}
@@ -367,40 +637,39 @@ S_n&=\sum_{k=1}^{n}\left((k-1)\lambda^k+2^k\right)\\
 \begin{enumerate}
 \item 设椭圆的焦距的一半为 \(c\)，则 \(c^2=a^2-b^2\)，且 \(F_1=(-c,0)\)，\(F_2=(c,0)\). 由 \(AF_2\perp F_1F_2\)，不妨设 \(A=\left(c,\dfrac{b^2}{a}\right)\). 直线 \(AF_1\) 的方程为
 \[
-b^2(x+c)-2acy=0.
+b^2(x+c)-2acy=0
 \]
 所以原点到直线 \(AF_1\) 的距离为
 \[
-\dfrac{b^2c}{\sqrt{b^4+4a^2c^2}}=\dfrac{c}{3}.
+\dfrac{b^2c}{\sqrt{b^4+4a^2c^2}}=\dfrac{c}{3}
 \]
 由于 \(c>0\)，得 \(9b^4=b^4+4a^2c^2\)，即 \(2b^4=a^2c^2=a^2(a^2-b^2)\). 令 \(t=\dfrac{a^2}{b^2}>1\)，则 \(t(t-1)=2\)，所以 \(t=2\)，从而 \(a=\sqrt{2}b\).
-\item 由上面的结论，椭圆方程化为 \(x^2+2y^2=2b^2\). 设 \(D=(u,v)\)，记 \(\rho^2=u^2+v^2\). 由于 \(OD\perp Q_1Q_2\)，直线 \(Q_1Q_2\) 的方程为
+\item 由上面的结论，椭圆方程化为 \(x^2+2y^2=2b^2\). 设 \(D=(u,v)\)，记 \(\rho^2=u^2+v^2\). 若 \(D=O\)，则弦 \(Q_1Q_2\) 经过椭圆中心，因而 \(Q_2=-Q_1\)，这与 \(OQ_1\perp OQ_2\) 矛盾，所以 \(\rho>0\). 由于 \(OD\perp Q_1Q_2\)，直线 \(Q_1Q_2\) 的方程为
 \[
-uX+vY=\rho^2.
+uX+vY=\rho^2
 \]
 记 \(L=2u^2+v^2\). 令
 \[
-M=\left(\dfrac{2\rho^2u}{L},\dfrac{\rho^2v}{L}\right).
+M=\left(\dfrac{2\rho^2u}{L},\dfrac{\rho^2v}{L}\right)
 \]
 则 \(M\) 在直线 \(Q_1Q_2\) 上，且沿方向 \((-v,u)\) 代入椭圆方程时一次项为零，所以 \(M\) 是弦 \(Q_1Q_2\) 的中点. 设
-\[
-Q_1=M+t(-v,u),\qquad Q_2=M-t(-v,u).
-\]
+\(Q_1=M+t(-v,u)\)，\(Q_2=M-t(-v,u)\).
 由 \(Q_1\)，\(Q_2\) 在椭圆上，分别计算得
 \[
-\dfrac{M_x^2}{2b^2}+\dfrac{M_y^2}{b^2}=\dfrac{\rho^4}{b^2L},\qquad \dfrac{(-v)^2}{2b^2}+\dfrac{u^2}{b^2}=\dfrac{L}{2b^2},
+\dfrac{M_x^2}{2b^2}+\dfrac{M_y^2}{b^2}=\dfrac{\rho^4}{b^2L}
 \]
+又 \(\dfrac{(-v)^2}{2b^2}+\dfrac{u^2}{b^2}=\dfrac{L}{2b^2}\)，
 从而
 \[
-t^2=\dfrac{2(b^2L-\rho^4)}{L^2}.
+t^2=\dfrac{2(b^2L-\rho^4)}{L^2}
 \]
 又 \(|M|^2=\dfrac{\rho^4(4u^2+v^2)}{L^2}\)，故
 \[
-Q_1\cdot Q_2=|M|^2-t^2\rho^2=\dfrac{\rho^2(3\rho^2-2b^2)}{L}.
+Q_1\cdot Q_2=|M|^2-t^2\rho^2=\dfrac{\rho^2(3\rho^2-2b^2)}{L}
 \]
-条件 \(OQ_1\perp OQ_2\) 等价于 \(Q_1\cdot Q_2=0\). 因为 \(\rho>0\) 且 \(L>0\)，所以 \(\rho^2=\dfrac{2b^2}{3}\). 反过来，任取满足该条件的点 \(D\)，上式给出 \(Q_1\cdot Q_2=0\)，且 \(t^2>0\)，故确有相应的两个椭圆点 \(Q_1\)，\(Q_2\). 因此点 \(D\) 的轨迹方程为
+条件 \(OQ_1\perp OQ_2\) 等价于 \(Q_1\cdot Q_2=0\). 因为 \(\rho>0\) 且 \(L>0\)，所以 \(\rho^2=\dfrac{2b^2}{3}\). 反过来，任取满足该条件的点 \(D\)，有 \(L=\rho^2+u^2\geqslant\dfrac{2b^2}{3}\)，从而 \(b^2L-\rho^4\geqslant\dfrac{2b^4}{9}>0\)，故 \(t^2>0\)，确有相应的两个椭圆点 \(Q_1\)，\(Q_2\)，且上式给出 \(Q_1\cdot Q_2=0\). 因此点 \(D\) 的轨迹方程为
 \[
-x^2+y^2=\dfrac{2b^2}{3}=\dfrac{a^2}{3}.
+x^2+y^2=\dfrac{2b^2}{3}=\dfrac{a^2}{3}
 \]
 \end{enumerate}
 \end{solution}

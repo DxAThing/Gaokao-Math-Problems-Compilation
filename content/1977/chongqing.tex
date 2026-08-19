@@ -1,16 +1,33 @@
 \chapter{1977年重庆卷}
 
+\section{解答题}
+
 \begin{problem}
 解方程：\(9\left(3x+2\right)^2-4=0\).
 \end{problem}
 
 \begin{solution}
-法一. 把方程左边因式分解，
-\(\left[3\left(3x+2\right)+2\right]\left[3\left(3x+2\right)-2\right]=0\)，
-\(\left(9x+8\right)\left(9x+4\right)=0\)，
-因此 \(x_1=-\frac{8}{9}\)，\(x_2=-\frac{4}{9}\).
+移项得
+\[
+9\left(3x+2\right)^2=4
+\]
+将左边看作平方差，得
+\[
+\left[3\left(3x+2\right)+2\right]\left[3\left(3x+2\right)-2\right]=0
+\]
+即
+\[
+\left(9x+8\right)\left(9x+4\right)=0
+\]
+所以 \(9x+8=0\) 或 \(9x+4=0\)，从而
+\[
+x=-\frac{8}{9}\quad\text{或}\quad x=-\frac{4}{9}
+\]
+把这两个值分别代回原方程，均使等式成立，故原方程的解为
+\(x_1=-\frac{8}{9}\)，\(x_2=-\frac{4}{9}\).
 
-法二. 原方程可写成 \(\left(3x+2\right)^2=\frac{4}{9}\). 两边开平方，得 \(3x+2=\pm\frac{2}{3}\). 所以 \(x_1=\frac{-\frac{2}{3}-2}{3}=-\frac{8}{9}\)，\(x_2=\frac{\frac{2}{3}-2}{3}=-\frac{4}{9}\).
+也可由 \(\left(3x+2\right)^2=\frac49\) 得
+\(3x+2=\pm\frac23\)，解得同样的两个值.
 \end{solution}
 
 \begin{problem}
@@ -18,17 +35,21 @@
 \end{problem}
 
 \begin{solution}
-因为 \(\lg5=0.6990\)，所以 \(\lg2=1-\lg5=0.3010\).
-
+设 \(N=8^{34}\times25^{11}\). 由 \(\lg10=1\) 和已知条件，
+\[
+\lg2=\lg10-\lg5=1-0.6990=0.3010
+\]
+于是
 \[
 \begin{aligned}
-\lg\left(8^{34}\times25^{11}\right)&=34\lg8+11\lg25=34\times3\lg2+11\times2\lg5\\
-&=102\lg2+22\lg5=102\times0.3010+22\times0.6990\\
-&=30.702+15.378=46.08
+\lg N
+&=34\lg8+11\lg25\\
+&=34\times3\lg2+11\times2\lg5\\
+&=102\times0.3010+22\times0.6990\\
+&=30.702+15.378=46.0800.
 \end{aligned}
 \]
-
-因此 \(8^{34}\times25^{11}\) 是 \(47\) 位的整数.
+因此 \(10^{46}<N<10^{47}\). 正整数的常用对数在 \((46,47)\) 内时，该正整数恰有 \(47\) 位，所以 \(8^{34}\times25^{11}\) 是 \(47\) 位的整数.
 \end{solution}
 
 \begin{problem}
@@ -36,16 +57,21 @@
 \end{problem}
 
 \begin{solution}
+利用 \(\cos\theta=\sin\left(90^\circ-\theta\right)\) 和平方关系，原式为
+\[
+\sin\left(30^\circ+x\right)+\sin\left(30^\circ-x\right)-1
+\]
+用两角和的正弦之和公式，得
 \[
 \begin{aligned}
-&\sin\left(30^\circ+x\right)+\cos\left(x+60^\circ\right)-\sin^2x-\cos^2x\\
-={}&\sin\left(30^\circ+x\right)+\sin\left(90^\circ-\left(x+60^\circ\right)\right)-\left(\sin^2x+\cos^2x\right)\\
-={}&\sin\left(30^\circ+x\right)+\sin\left(30^\circ-x\right)-1\\
-={}&2\sin\frac{\left(30^\circ+x\right)+\left(30^\circ-x\right)}{2}\cos\frac{\left(30^\circ+x\right)-\left(30^\circ-x\right)}{2}-1\\
-={}&2\sin30^\circ\cos x-1=\cos x-1=-\left(1-\cos x\right)\\
-={}&-2\sin^2\frac{x}{2}
+&\sin\left(30^\circ+x\right)+\sin\left(30^\circ-x\right)-1\\
+&=2\sin30^\circ\cos x-1\\
+&=\cos x-1\\
+&=-\left(1-\cos x\right)\\
+&=-2\sin^2\frac{x}{2}.
 \end{aligned}
 \]
+所以原式化成积的形式为 \(-2\sin^2\frac{x}{2}\).
 \end{solution}
 
 \begin{problem}
@@ -53,18 +79,38 @@
 \end{problem}
 
 \begin{solution}
-
+原式有意义并且可以进行下列约分时，需要
+\(m\ne0\)，\(x\ne0\)，\(m+x\ne0\)，\(m+x\ne1\). 在这些条件下，先把幂改写为分式：
+\(\left(2m\right)^0=1\)，\(\left(2x\right)^0=1\)，\(\left(m+x\right)^{-2}=\frac{1}{\left(m+x\right)^2}\)，\(\left(m+x\right)^{-1}=\frac{1}{m+x}\).
+因此第一因子为
+\[
+1-\frac{1}{\left(m+x\right)^2}
+=\frac{\left(m+x-1\right)\left(m+x+1\right)}{\left(m+x\right)^2}
+\]
+被除数中的平方因子为
+\[
+\left(1-\frac{1}{m+x}\right)^2
+=\frac{\left(m+x-1\right)^2}{\left(m+x\right)^2}
+\]
+第三因子化为
 \[
 \begin{aligned}
-&\left[\left(2m\right)^0-\left(m+x\right)^{-2}\right]\div\left[\left(2x\right)^0-\left(m+x\right)^{-1}\right]^2\cdot\left[2m^0-\frac{1-\left(m-x\right)^2}{2mx}\right]\\
-={}&\left(1-\frac{1}{\left(m+x\right)^2}\right)\div\left(1-\frac{1}{m+x}\right)^2\cdot\left[2-\frac{1-\left(m-x\right)^2}{2mx}\right]\\
-={}&\frac{\left(m+x\right)^2-1}{\left(m+x\right)^2}\div\left(\frac{m+x-1}{m+x}\right)^2\cdot\frac{4mx-1+\left(m^2-2mx+x^2\right)}{2mx}\\
-={}&\frac{\left(m+x-1\right)\left(m+x+1\right)}{\left(m+x\right)^2}\cdot\frac{\left(m+x\right)^2}{\left(m+x-1\right)^2}\cdot\frac{m^2+x^2+2mx-1}{2mx}\\
-={}&\frac{m+x+1}{m+x-1}\cdot\frac{\left(m+x\right)^2-1}{2mx}
-=\frac{m+x+1}{m+x-1}\cdot\frac{\left(m+x-1\right)\left(m+x+1\right)}{2mx}\\
-={}&\frac{\left(m+x+1\right)^2}{2mx}
+2-\frac{1-\left(m-x\right)^2}{2mx}
+&=\frac{4mx-1+\left(m-x\right)^2}{2mx}\\
+&=\frac{m^2+x^2+2mx-1}{2mx}\\
+&=\frac{\left(m+x-1\right)\left(m+x+1\right)}{2mx}.
 \end{aligned}
 \]
+代入原式并约去非零因子，得
+\[
+\begin{aligned}
+&\frac{\left(m+x-1\right)\left(m+x+1\right)}{\left(m+x\right)^2}
+\cdot\frac{\left(m+x\right)^2}{\left(m+x-1\right)^2}
+\cdot\frac{\left(m+x-1\right)\left(m+x+1\right)}{2mx}\\
+&=\frac{\left(m+x+1\right)^2}{2mx}.
+\end{aligned}
+\]
+这正是题中右端，故等式成立.
 \end{solution}
 
 \begin{problem}
@@ -72,9 +118,29 @@
 \end{problem}
 
 \begin{solution}
-因为圆锥容积 \(V=\frac{1}{3}\pi r^2h\)，所以只要求出底面半径 \(r\) 和圆锥的高 \(h\) 就行了.
+设卷成的圆锥底面半径为 \(r\)，高为 \(h\). 扇形的两条半径卷合后成为圆锥的母线，所以母线长仍为 \(R\)，扇形弧长成为圆锥底面周长.
+
+扇形弧长为
+\[
+\frac{120^\circ}{360^\circ}\cdot2\pi R=\frac{2\pi R}{3}
+\]
+所以
+\(2\pi r=\frac{2\pi R}{3}\)，\(r=\frac{R}{3}\).
+由圆锥的母线、高和底面半径构成直角三角形，
+\[
+h=\sqrt{R^2-r^2}
+=\sqrt{R^2-\left(\frac{R}{3}\right)^2}
+=\frac{2\sqrt2}{3}R
+\]
+于是圆锥容积为
+\[
+V=\frac13\pi r^2h
+=\frac13\pi\left(\frac{R}{3}\right)^2\cdot\frac{2\sqrt2}{3}R
+=\frac{2\sqrt2}{81}\pi R^3
+\]
+故圆锥容器的容积为 \(\frac{2\sqrt2}{81}\pi R^3\).
+
 \solutionfigure{\bitmapfigure[max width=3.2cm]{img/1977/chongqing/q2_solution_fig1.png}}
-据图可得扇形的弧长 \(C=\frac{120\pi R}{180}=\frac{2\pi}{3}R\). 又 \(2\pi r=\frac{2}{3}\pi R\)，所以 \(r=\frac{1}{3}R\). 据勾股定理，\(h=\sqrt{R^2-\left(\frac{R}{3}\right)^2}=\frac{2\sqrt{2}}{3}R\). 因此圆锥容积 \(V=\frac{1}{3}\pi\left(\frac{R}{3}\right)^2\cdot\frac{2\sqrt{2}}{3}R=\frac{2\sqrt{2}}{81}\pi R^3\). 答：圆锥的容积为 \(\frac{2\sqrt{2}}{81}\pi R^3\).
 \end{solution}
 
 \begin{problem}
@@ -85,8 +151,33 @@
 \end{problem}
 
 \begin{solution}
-延长 \(BD\) 交圆于 \(F\). \(\angle BDE\text{ 的度数}=\frac{1}{2}\left(\widehat{B1E}+\widehat{A4F}\right)\text{ 的度数}\)，\(\angle DBE\text{ 的度数}=\frac{1}{2}\left(\widehat{ECF}\right)\text{ 的度数}
-=\frac{1}{2}\left(\widehat{E2C}+\widehat{C3F}\right)\text{ 的度数}\). 而据已知得：\(\widehat{B1E}=\widehat{E2C}\)，\(\widehat{A4F}=\widehat{C3F}\). 所以 \(\angle BDE=\angle DBE\)，故 \(BE=DE\).
+延长 \(BD\) 交外接圆于 \(F\). 由于两弦 \(AE\) 和 \(BF\) 在圆内相交，圆内两弦所成角的度数等于所对两弧度数和的一半，因此
+\[
+m\left(\angle BDE\right)=\frac12\left[m\left(\widehat{BE}\right)+m\left(\widehat{AF}\right)\right]
+\]
+又因为 \(D\) 在 \(BF\) 上，\(\angle DBE=\angle FBE\) 是圆周角，它所对的弧为不含点 \(B\) 的弧 \(FE\)，所以
+\[
+m\left(\angle DBE\right)=\frac12m\left(\widehat{FE}\right)
+\]
+图中弧 \(FE\) 经过 \(C\)，故
+\[
+m\left(\angle DBE\right)=\frac12\left[m\left(\widehat{EC}\right)+m\left(\widehat{CF}\right)\right]
+\]
+因为 \(AD\) 平分 \(\angle BAC\)，且 \(A\)，\(D\)，\(E\) 共线，所以
+\(\angle BAE=\angle EAC\). 这两个圆周角分别所对弧 \(BE\) 和 \(EC\)，从而
+\[
+m\left(\widehat{BE}\right)=m\left(\widehat{EC}\right)
+\]
+同理，\(BD\) 平分 \(\angle ABC\)，且 \(B\)，\(D\)，\(F\) 共线，所以
+\(\angle ABF=\angle FBC\)，从而
+\[
+m\left(\widehat{AF}\right)=m\left(\widehat{FC}\right)
+\]
+代入前面的两个角度关系，得到
+\[
+m\left(\angle BDE\right)=m\left(\angle DBE\right)
+\]
+所以 \(\triangle BDE\) 的两个底角相等，故 \(BE=DE\).
 \end{solution}
 
 \begin{problem}
@@ -94,18 +185,28 @@
 \end{problem}
 
 \begin{solution}
-直线 \(BC\) 的方程为 \(\frac{y-2}{x-2}=\frac{0-2}{4-2}\)，即 \(y+x-4=0\)，斜率为 \(-1\). \(BC\) 边上的高过 \(A(-2,4)\) 点，斜率应为 \(1\)，因此 \(BC\) 上高所在直线方程为 \(y-4=x+2\)，即 \(y=x+6\). \(BC\) 边上的高 \(h\)，等于 \(A\) 点到直线 \(BC\) 的距离. 因此 \(h=\frac{|4+\left(-2\right)-4|}{\sqrt{1^2+1^2}}=\frac{2}{\sqrt{2}}=\sqrt{2}\). 而 \(|BC|=\sqrt{\left(2-4\right)^2+\left(2-0\right)^2}=2\sqrt{2}\). 所以 \(\triangle ABC\) 的面积 \(=\frac{1}{2}h\cdot|BC|=\frac{1}{2}\cdot\sqrt{2}\cdot2\sqrt{2}=2\). 答：\(BC\) 边上的高所在的直线方程为 \(y=x+6\)；\(\triangle ABC\) 的面积为 \(2\)（面积单位）.
-
-（注）\(\triangle ABC\) 的面积也可用下法直接求出：
+直线 \(BC\) 的斜率为
 \[
-\triangle ABC\text{ 的面积}=\frac{1}{2}
-\begin{vmatrix}
--2 & 4 & 1\\
-4 & 0 & 1\\
-2 & 2 & 1
-\end{vmatrix}
-=\frac{1}{2}\left|0+8+8-0-16+4\right|=2
+\frac{0-2}{4-2}=-1
 \]
+所以直线 \(BC\) 的方程为
+\(y-2=-(x-2)\)，\(x+y-4=0\).
+\(BC\) 边上的高垂直于 \(BC\)，其斜率为 \(1\)，又经过点 \(A(-2,4)\)，故高所在直线为
+\(y-4=x+2\)，\(y=x+6\).
+
+点 \(A\) 到直线 \(BC\) 的距离为高的长度：
+\[
+h=\frac{|(-2)+4-4|}{\sqrt{1^2+1^2}}=\sqrt2
+\]
+而
+\[
+|BC|=\sqrt{(4-2)^2+(0-2)^2}=2\sqrt2
+\]
+因此
+\[
+S_{\triangle ABC}=\frac12h|BC|=\frac12\cdot\sqrt2\cdot2\sqrt2=2
+\]
+所以高所在直线方程为 \(y=x+6\)，三角形面积为 \(2\).
 \end{solution}
 
 \begin{problem}
@@ -115,16 +216,33 @@
 \end{problem}
 
 \begin{solution}
-自 \(A\) 向 \(DC\) 作垂线 \(AE\)，交 \(DC\) 于 \(E\)；自 \(B\) 向 \(DC\) 作垂线 \(BF\)，交 \(DC\) 于 \(F\). 设 \(DE=x\)，则 \(FC=b-a-x\). 依题意可知：\(c=a\)，\(b=3a\)，\(d=2a\). 由勾股定理得 \(AE^2=a^2-x^2\)，\(BF^2=\left(2a\right)^2-\left(3a-a-x\right)^2\). 而已知 \(AE=BF\)，所以 \(a^2-x^2=\left(2a\right)^2-\left(3a-a-x\right)^2\). 整理后得 \(4ax=a^2\)，所以 \(x=DE=\frac{1}{4}a\)，\(FC=3a-a-x=2a-x=\frac{7}{4}a\). 因此
+由图记 \(AB=a\)，\(DC=b\)，\(AD=c\)，\(BC=d\)，且 \(AB\parallel DC\). 从 \(A\)、\(B\) 分别向 \(DC\) 作垂线，垂足为 \(E\)、\(F\). 因为两条垂线之间的四边形 \(ABFE\) 是矩形，所以
+\(EF=AB=a\)，\(AE=BF\).
+设 \(DE=x\)，则
 \[
-\cos\alpha=\frac{FC}{BC}=\frac{\frac{7}{4}a}{d}=\frac{\frac{7}{4}a}{2a}=\frac{7}{8}
+FC=DC-DE-EF=b-x-a=b-a-x
 \]
+由比例条件可取 \(a\) 为基本长度，于是
+\(c=a\)，\(b=3a\)，\(d=2a\).
+在直角三角形 \(ADE\) 和 \(BFC\) 中，勾股定理分别给出
+\(AE^2=a^2-x^2\)，\(BF^2=(2a)^2-(3a-a-x)^2\).
+利用 \(AE=BF\)，得
 \[
-\sin\alpha=\frac{BF}{BC}=\frac{\sqrt{\left(2a\right)^2-\left(\frac{7}{4}a\right)^2}}{2a}=\frac{\frac{\sqrt{15}a}{4}}{2a}=\frac{\sqrt{15}}{8}
+a^2-x^2=4a^2-(2a-x)^2=4ax-x^2
 \]
+所以 \(4ax=a^2\)，即
+\(DE=x=\frac a4\)，\(qquad FC=2a-x=\frac{7a}{4}\).
+在直角三角形 \(BFC\) 中，\(\alpha\) 位于点 \(C\)，因此
 \[
-\sin\beta=\frac{AE}{AD}=\frac{BF}{c}=\frac{\frac{\sqrt{15}a}{4}}{a}=\frac{\sqrt{15}}{4}
+\cos\alpha=\frac{FC}{BC}=\frac{\frac{7a}{4}}{2a}=\frac78
 \]
+\(BF=\sqrt{(2a)^2-\left(\frac{7a}{4}\right)^2}=\frac{\sqrt{15}}4a\)，\(\sin\alpha=\frac{BF}{BC}=\frac{\sqrt{15}}8\).
+在直角三角形 \(ADE\) 中，\(\beta\) 位于点 \(D\)，所以
+\[
+\sin\beta=\frac{AE}{AD}=\frac{BF}{c}
+=\frac{\frac{\sqrt{15}}4a}{a}=\frac{\sqrt{15}}4
+\]
+故 \(\cos\alpha=\frac78\)，\(\sin\alpha=\frac{\sqrt{15}}8\)，\(\sin\beta=\frac{\sqrt{15}}4\).
 \end{solution}
 
 \begin{problem}
@@ -139,25 +257,46 @@
 
 \begin{solution}
 \begin{enumerate}
-\item \(\left(x+2\right)\left(y-1\right)=0\). 两个因式相乘等于零，必定有一个因式是零. 因此 \(x+2=0\) 或 \(y-1=0\). 故此方程的图象为两条直线：\(x=-2\)，\(y=1\)（见右图1）.
-\item \(\left(x+2\right)^2+\left(y-1\right)^2=0\). 因为平方数 \(\left(x+2\right)^2\) 和 \(\left(y-1\right)^2\) 不可能小于零，要使它们的和为零，必须同时
-\(\begin{cases}
-x+2=0\\
-y-1=0
-\end{cases}\)
-即
-\(
-\begin{cases}
-x=-2\\
-y=1
-\end{cases}
-\)
-故此方程的图象是一个点 \((-2,1)\)（见右图2）.
-\item \(\left(x+2\right)^2-\left(y-1\right)^2=0\). 分解因式，\(\left(x+2-y+1\right)\left(x+2+y-1\right)=0\)，\(\left(x-y+3\right)\left(x+y+1\right)=0\). 则 \(x-y+3=0\) 或者 \(x+y+1=0\). 故此方程的图象是两条直线：\(x-y+3=0\) 和 \(x+y+1=0\)（见左图3）.
-\end{enumerate}
+\item 乘积为零，等价于至少有一个因式为零，因此
+\[
+x+2=0\quad\text{或}\quad y-1=0
+\]
+所以图形是两条直线 \(x=-2\) 和 \(y=1\).
+
 \solutionfigure{\bitmapfigure[max width=4.0cm]{img/1977/chongqing/q6_fig1.png}}
+
+\item 两个平方数都不小于零，平方数之和等于零，当且仅当两个平方数同时为零. 因此
+\[
+\begin{cases}
+x+2=0,\\
+y-1=0,
+\end{cases}
+\qquad\text{即}\qquad
+\begin{cases}
+x=-2,\\
+y=1.
+\end{cases}
+\]
+所以图形只有一个点 \((-2,1)\).
+
 \solutionfigure{\bitmapfigure[max width=4.0cm]{img/1977/chongqing/q6_fig2.png}}
+
+\item 将平方差分解，得
+\[
+\begin{aligned}
+\left(x+2\right)^2-\left(y-1\right)^2
+&=\left(x+2-y+1\right)\left(x+2+y-1\right)\\
+&=\left(x-y+3\right)\left(x+y+1\right).
+\end{aligned}
+\]
+因此原方程等价于
+\[
+x-y+3=0\quad\text{或}\quad x+y+1=0
+\]
+所以图形是两条直线 \(x-y+3=0\) 和 \(x+y+1=0\).
+
 \solutionfigure{\bitmapfigure[max width=4.0cm]{img/1977/chongqing/q6_fig3.png}}
+\end{enumerate}
 \end{solution}
 
 \section{参考题}
@@ -167,7 +306,29 @@ y=1
 \end{problem}
 
 \begin{solution}
-先找出可能是极值点的那些 \(x\) 的值，即求 \(f'(x)=0\) 的根. 令 \(f'(x)=x^3-3x^2-4x=0\)，即 \(x(x-4)(x+1)=0\). 其根分别是 \(0\)，\(4\)，\(-1\). 因此在 \(x=0\)，\(x=4\)，\(x=-1\) 处 \(f(x)\) 可能有极值. 又因为 \(f''(0)=(3x^2-6x-4)\big|_{x=0}=-4<0\)，\(f''(4)=(3x^2-6x-4)\big|_{x=4}=20>0\)，\(f''(-1)=(3x^2-6x-4)\big|_{x=-1}=5>0\). 所以 \(x=0\) 时，有极大值 \(f(0)=3\)；\(x=4\) 时，有极小值 \(f(4)=-29\)；\(x=-1\) 时，有极小值 \(f(-1)=2\frac{1}{4}\). 答：当 \(x=0\) 时 \(f(x)\) 有极大值 \(3\)；\(x=4\) 时 \(f(x)\) 有极小值 \(-29\)；\(x=-1\) 时 \(f(x)\) 有极小值 \(2\frac{1}{4}\).
+函数在 \(\R\) 上可导，先求其可能的极值点：
+\[
+f'(x)=x^3-3x^2-4x=x(x-4)(x+1)
+\]
+令 \(f'(x)=0\)，得临界点 \(x=-1\)，\(0\)，\(4\). 再求二阶导数：
+\[
+f''(x)=3x^2-6x-4
+\]
+于是
+\(f''(-1)=5>0\)，\(f''(0)=-4<0\)，\(f''(4)=20>0\).
+由二阶导数判别法，\(x=-1\) 和 \(x=4\) 处为极小值点，\(x=0\) 处为极大值点.
+
+分别计算函数值：
+\[
+f(-1)=\frac14+1-2+3=\frac94=2\frac14
+\]
+\[
+f(0)=3
+\]
+\[
+f(4)=\frac14\times4^4-4^3-2\times4^2+3=64-64-32+3=-29
+\]
+所以当 \(x=0\) 时有极大值 \(3\)；当 \(x=-1\) 时有极小值 \(2\frac14\)；当 \(x=4\) 时有极小值 \(-29\).
 \end{solution}
 
 \begin{problem}
@@ -175,25 +336,41 @@ y=1
 \end{problem}
 
 \begin{solution}
-\(\int \frac{1}{\sqrt{1-x^2}}\mathrm{d}x=\arcsin x+c_1\). 在 \(\int \frac{x^2}{\sqrt{4-x^2}}\mathrm{d}x\) 中，令 \(x=2\sin t\)，则
+实被积函数在 \((-1,1)\) 上有意义. 第一项直接积分得
+\[
+\int\frac{1}{\sqrt{1-x^2}}\mathrm{d}x=\arcsin x+C_1
+\]
+对第二项令 \(x=2\sin t\). 在本题的实数定义域内可以取 \(t=\arcsin\frac{x}{2}\)，且 \(\cos t>0\)，于是
+\(\mathrm{d}x=2\cos t\,\mathrm{d}t\)，\(\sqrt{4-x^2}=2\cos t\).
+因此
 \[
 \begin{aligned}
-\int \frac{x^2}{\sqrt{4-x^2}}\mathrm{d}x
-&=\int \frac{4\sin^2t}{2\cos t}\cdot2\cos t\mathrm{d}t=\int4\sin^2t\mathrm{d}t\\
-&=\int2\left(1+\cos2t\right)\mathrm{d}t=\int2\mathrm{d}t-\int2\cos2t\mathrm{d}t\\
-&=2t-\sin2t+c_2
+\int\frac{x^2}{\sqrt{4-x^2}}\mathrm{d}x
+&=\int\frac{4\sin^2t}{2\cos t}\cdot2\cos t\,\mathrm{d}t\\
+&=\int4\sin^2t\,\mathrm{d}t\\
+&=\int2\left(1-\cos2t\right)\,\mathrm{d}t\\
+&=2t-\sin2t+C_2.
 \end{aligned}
 \]
-代回原变量 \(t=\arcsin\frac{x}{2}\)，得 \(\int \frac{x^2}{\sqrt{4-x^2}}\mathrm{d}x =2\arcsin\frac{x}{2}-\sin\left(2\arcsin\frac{x}{2}\right)+c_2 =2\arcsin\frac{x}{2}-\frac{x}{2}\sqrt{4-x^2}+c_2\). 所以
+代回 \(t=\arcsin\frac{x}{2}\)，并利用
+\[
+\sin\left(2\arcsin\frac{x}{2}\right)
+=2\cdot\frac{x}{2}\cdot\sqrt{1-\frac{x^2}{4}}
+=\frac{x}{2}\sqrt{4-x^2}
+\]
+得到
+\[
+\int\frac{x^2}{\sqrt{4-x^2}}\mathrm{d}x
+=2\arcsin\frac{x}{2}-\frac{x}{2}\sqrt{4-x^2}+C_2
+\]
+所以原积分为
 \[
 \begin{aligned}
-\int\left(\frac{1}{\sqrt{1-x^2}}-\frac{x^2}{\sqrt{4-x^2}}\right)\mathrm{d}x
-&=\int \frac{1}{\sqrt{1-x^2}}\mathrm{d}x-\int \frac{x^2}{\sqrt{4-x^2}}\mathrm{d}x\\
-&=\arcsin x+c_1-\left(2\arcsin\frac{x}{2}-\frac{x}{2}\sqrt{4-x^2}+c_2\right)\\
-&=\arcsin x-2\arcsin\frac{x}{2}+\frac{x}{2}\sqrt{4-x^2}+c
+&\int\left(\frac{1}{\sqrt{1-x^2}}-\frac{x^2}{\sqrt{4-x^2}}\right)\mathrm{d}x\\
+&=\arcsin x-\left(2\arcsin\frac{x}{2}-\frac{x}{2}\sqrt{4-x^2}\right)+C\\
+&=\arcsin x-2\arcsin\frac{x}{2}+\frac{x}{2}\sqrt{4-x^2}+C.
 \end{aligned}
 \]
-其中 \(c=c_1-c_2\)，是任意常数.
 \end{solution}
 
 \begin{problem}
@@ -201,23 +378,31 @@ y=1
 \end{problem}
 
 \begin{solution}
-区域 \(D\) 如右图所示.
-\solutionfigure{\bitmapfigure[max width=4.2cm]{img/1977/chongqing/ref1_q3_solution_fig1.png}}
-因此
+联立两条边界曲线. 由 \(y=x^2\) 和 \(x=y^2\) 得 \(x=x^4\)，所以交点的横坐标为 \(x=0\) 或 \(x=1\)，相应交点为 \((0,0)\) 和 \((1,1)\). 在 \(0\leqslant x\leqslant1\) 内，\(y=x^2\) 是下边界，\(y=\sqrt{x}\) 是上边界，因此由二重积分的累次积分和 Fubini 定理，
+\[
+\iint_D\left(1+y^2\right)\mathrm{d}x\mathrm{d}y
+=\int_0^1\left(\int_{x^2}^{\sqrt{x}}\left(1+y^2\right)\mathrm{d}y\right)\mathrm{d}x
+\]
+先对 \(y\) 积分：
+\[
+\begin{aligned}
+\int_{x^2}^{\sqrt{x}}\left(1+y^2\right)\mathrm{d}y
+&=\left[y+\frac{y^3}{3}\right]_{x^2}^{\sqrt{x}}\\
+&=\sqrt{x}+\frac{x\sqrt{x}}{3}-x^2-\frac{x^6}{3}.
+\end{aligned}
+\]
+再对 \(x\) 积分，得
 \[
 \begin{aligned}
 \iint_D\left(1+y^2\right)\mathrm{d}x\mathrm{d}y
-&=\int_0^1\left(\int_{x^2}^{\sqrt{x}}\left(1+y^2\right)\mathrm{d}y\right)\mathrm{d}x
-=\int_0^1\left[\left(y+\frac{y^3}{3}\right)\big|_{x^2}^{\sqrt{x}}\right]\mathrm{d}x\\
-&=\int_0^1\left(-\frac{x^6}{3}-x^2+\frac{x\sqrt{x}}{3}+\sqrt{x}\right)\mathrm{d}x
-=\left(-\frac{x^7}{21}-\frac{x^3}{3}+\frac{2x^2\sqrt{x}}{15}+\frac{2x\sqrt{x}}{3}\right)\bigg|_0^1
-=\frac{44}{105}
+&=\left[-\frac{x^7}{21}-\frac{x^3}{3}+\frac{2x^2\sqrt{x}}{15}+\frac{2x\sqrt{x}}{3}\right]_0^1\\
+&=-\frac1{21}-\frac13+\frac2{15}+\frac23=\frac{44}{105}.
 \end{aligned}
 \]
 \end{solution}
 
 \begin{problem}
-求下列方程的通解
+求下列方程的通解.
 
 \begin{enumerate}
 \item \(x\mathrm{d}y-2y\mathrm{d}x=3x^2\mathrm{d}x\)；
@@ -227,11 +412,48 @@ y=1
 
 \begin{solution}
 \begin{enumerate}
-\item 【法一】原方程两边同除以 \(x^3\)，得 \(\frac{1}{x^2}\mathrm{d}y-\frac{2y}{x^3}\mathrm{d}x=\frac{3}{x}\mathrm{d}x\). 方程的左端 \(\frac{1}{x^2}\mathrm{d}y-\frac{2y}{x^3}\mathrm{d}x=\mathrm{d}\left(\frac{y}{x^2}\right)\)，而右端 \(\frac{3}{x}\mathrm{d}x=\mathrm{d}\left(3\ln|x|\right)\). 因此方程又可化为 \(\mathrm{d}\left(\frac{y}{x^2}\right)=\mathrm{d}\left(3\ln|x|\right)\). 所以 \(\frac{y}{x^2}=3\ln|x|+c\)，或者 \(y=3x^2\ln|x|+cx^2\)，其中 \(c\) 为任意常数.
+\item 对于第一式，先在 \(x\ne0\) 的区间上把方程两边同除以 \(x^3\)，得
+\[
+\frac{1}{x^2}\mathrm{d}y-\frac{2y}{x^3}\mathrm{d}x=\frac{3}{x}\mathrm{d}x
+\]
+注意到
+\(\mathrm{d}\left(\frac{y}{x^2}\right)=\frac{1}{x^2}\mathrm{d}y-\frac{2y}{x^3}\mathrm{d}x\)，\(\mathrm{d}\left(3\ln|x|\right)=\frac{3}{x}\mathrm{d}x\).
+所以
+\[
+\mathrm{d}\left(\frac{y}{x^2}\right)=\mathrm{d}\left(3\ln|x|\right)
+\]
+积分得
+\[
+\frac{y}{x^2}=3\ln|x|+C
+\]
+从而通解为
+\(y=3x^2\ln|x|+Cx^2\)，\(x\ne0\).
 
-【法二】原方程可写成 \(\frac{\mathrm{d}y}{\mathrm{d}x}=\frac{2y+3x^2}{x}\). 令 \(\frac{y}{x^2}=t\)，即 \(y=tx^2\)，则 \(\frac{\mathrm{d}y}{\mathrm{d}x}=2xt+x^2\frac{\mathrm{d}t}{\mathrm{d}x}\). 代入原方程，得 \(2xt+x^2\frac{\mathrm{d}t}{\mathrm{d}x}=\frac{2x^2t+3x^2}{x}\)，所以 \(\frac{\mathrm{d}t}{\mathrm{d}x}=\frac{3}{x}\). 所以 \(t=3\ln|x|+c\). 代回原变量 \(t=\frac{y}{x^2}\)，得 \(\frac{y}{x^2}=3\ln|x|+c\)，或者 \(y=3x^2\ln|x|+cx^2\)，其中 \(c\) 为任意常数.
-
-\item 这是一个常系数线性微分方程，它相应的齐次方程 \(y''-2y'+y=0\) 的特征方程为 \(\lambda^2-2\lambda+1=0\). 特征根为 \(\lambda_1=\lambda_2=1\)，因此相应的齐次方程的通解为 \(y=c_1\e^x+c_2x\e^x\)（\(c_1\)，\(c_2\) 是任意常数）. 现在再求原非齐次方程的特解. 设此特解有如下形式：\(y=A\cos x+B\sin x\)（其中 \(A\)，\(B\) 为待定常数）. 把它代入原方程，并化简后得 \(-2B\cos x+2A\sin x=\cos x\). 于是 \(A=0\)，\(B=-\frac{1}{2}\)，这样我们得到了原非齐次方程的一个特解 \(y=-\frac{1}{2}\sin x\)，再加上相应齐次方程的通解，就得到原方程的通解为 \(y=c_1\e^x+c_2x\e^x-\frac{1}{2}\sin x\)（\(c_1\)，\(c_2\) 为任意常数）.
-
+\item 先求对应齐次方程
+\(y''-2y'+y=0\) 的通解. 其特征方程为
+\[
+\lambda^2-2\lambda+1=(\lambda-1)^2=0
+\]
+所以有二重特征根 \(\lambda=1\)，齐次通解为
+\[
+y_h=\left(C_1+C_2x\right)\e^x
+\]
+为求非齐次方程的一个特解，设
+\[
+y_p=A\cos x+B\sin x
+\]
+则
+\(y_p'=-A\sin x+B\cos x\)，\(y_p''=-A\cos x-B\sin x\).
+代入左端，得到
+\[
+y_p''-2y_p'+y_p=-2B\cos x+2A\sin x
+\]
+要使其等于 \(\cos x\)，必须有
+\(-2B=1\)，\(2A=0\)
+即 \(A=0\)，\(B=-\frac12\). 因而
+\(y_p=-\frac12\sin x\)，原方程的通解为
+\[
+y=\left(C_1+C_2x\right)\e^x-\frac12\sin x
+\]
 \end{enumerate}
 \end{solution}

@@ -15,8 +15,24 @@
 D
 \end{answer}
 
+\begin{solution}
+由 \(|x|<3\) 且 \(x\in\Z\)，可得
+\[
+I=\{-2,-1,0,1,2\}
+\]
+因此
+\[
+\complement_I B=I\smallsetminus B=\{0,1\}
+\]
+从而
+\[
+A\cup(\complement_I B)=\{1,2\}\cup\{0,1\}=\{0,1,2\}
+\]
+故选 D.
+\end{solution}
+
 \begin{problem}
-已知 \(\tan \frac{\alpha}{2} = 3\)，则 \(\cos \alpha =\)（\quad）
+已知 \(\tan\dfrac{\alpha}{2}=3\)，则 \(\cos\alpha=\)（\quad）
 
 \choices
     {\(\frac{1}{5}\)}
@@ -29,36 +45,77 @@ D
 B
 \end{answer}
 
+\begin{solution}
+由半角正切的二倍角公式
+\[
+\cos\alpha=\frac{1-\tan^2\dfrac{\alpha}{2}}{1+\tan^2\dfrac{\alpha}{2}}
+\]
+代入 \(\tan\dfrac{\alpha}{2}=3\)，得
+\[
+\cos\alpha=\frac{1-3^2}{1+3^2}=-\frac45
+\]
+故选 B.
+\end{solution}
+
 \begin{problem}
-\((\sqrt{x} + \sqrt[3]{x})^{12}\) 的展开式中，含 \(x\) 的正整数次幂的项共有（\quad）
+\((\sqrt{x}+\sqrt[3]{x})^{12}\) 的展开式中，含 \(x\) 的正整数次幂的项共有（\quad）
 
 \choices
-    {4 项}
-    {3 项}
-    {2 项}
-    {1 项}
+    {\(4\) 项}
+    {\(3\) 项}
+    {\(2\) 项}
+    {\(1\) 项}
 \end{problem}
 
 \begin{answer}
 B
 \end{answer}
 
+\begin{solution}
+在二项式展开式中，设某项取了 \(j\) 个 \(\sqrt[3]{x}\)，则 \(0\leqslant j\leqslant12\)，该项中 \(x\) 的幂为
+\[
+\left(x^{1/2}\right)^{12-j}\left(x^{1/3}\right)^j
+=x^{\frac{12-j}{2}+\frac j3}
+=x^{6-\frac j6}
+\]
+要使指数 \(6-\dfrac j6\) 是正整数，必须且只须 \(j\) 是 \(6\) 的倍数. 由 \(0\leqslant j\leqslant12\)，可取 \(j=0\)，\(6\)，\(12\)，对应指数分别为 \(6\)，\(5\)，\(4\)，所以共有 \(3\) 项.
+
+故选 B.
+\end{solution}
+
 \begin{problem}
-函数 \(f(x) = \frac{1}{\log_{2}(-x^{2} + 4x - 3)}\) 的定义域为（\quad）
+函数 \(f(x)=\dfrac{1}{\log_{2}(-x^{2}+4x-3)}\) 的定义域为（\quad）
 
 \choices
-    {\((1, 2) \cup (2, 3)\)}
-    {\((-\infty, 1) \cup (3, +\infty)\)}
-    {\((1, 3)\)}
-    {\([1, 3]\)}
+    {\((1,2)\cup(2,3)\)}
+    {\(\left(-\infty,1\right)\cup\left(3,+\infty\right)\)}
+    {\((1,3)\)}
+    {\([1,3]\)}
 \end{problem}
 
 \begin{answer}
 A
 \end{answer}
 
+\begin{solution}
+对数的真数必须为正，且分母不能为零. 先由
+\[
+-x^2+4x-3=-(x-1)(x-3)>0
+\]
+得 \(1<x<3\). 在此范围内还必须有
+\[
+\log_2(-x^2+4x-3)\neq0
+\]
+即 \(-x^2+4x-3\neq1\). 解方程
+\[
+-x^2+4x-3=1
+\Longleftrightarrow (x-2)^2=0
+\]
+得 \(x=2\). 因此定义域为 \((1,2)\cup(2,3)\)，故选 A.
+\end{solution}
+
 \begin{problem}
-设函数 \(f(x) = \sin 3x + |\sin 3x|\)，则 \(f(x)\) 为（\quad）
+设函数 \(f(x)=\sin3x+|\sin3x|\)，则 \(f(x)\) 为（\quad）
 
 \choices
     {周期函数，最小正周期为 \(\frac{\pi}{3}\)}
@@ -71,8 +128,26 @@ A
 B
 \end{answer}
 
+\begin{solution}
+因为
+\[
+f(x)=\sin3x+|\sin3x|=2\max\{\sin3x,0\}
+\]
+所以
+\[
+f\left(x+\frac{2\pi}{3}\right)=f(x)
+\]
+即 \(\dfrac{2\pi}{3}\) 是一个正周期.
+
+设 \(T>0\) 是任意一个正周期. 由于 \(f\left(\dfrac\pi6\right)=2\)，周期性要求
+\[
+f\left(\frac\pi6+T\right)=2
+\]
+函数值达到 \(2\) 时必须有 \(\sin\left(\dfrac\pi2+3T\right)=1\)，故 \(3T=2m\pi\)，其中 \(m\) 为正整数. 因而 \(T=\dfrac{2m\pi}{3}\)，最小正周期为 \(\dfrac{2\pi}{3}\). 故选 B.
+\end{solution}
+
 \begin{problem}
-已知向量 \(\bs{a} = (1, 2)\)，\(\bs{b} = (-2, -4)\)，\(|\bs{c}| = \sqrt{5}\)，若 \((\bs{a} + \bs{b}) \cdot \bs{c} = \frac{5}{2}\)，则 \(\bs{a}\) 与 \(\bs{c}\) 的夹角为（\quad）
+已知向量 \(\bs{a}=(1,2)\)，\(\bs{b}=(-2,-4)\)，\(|\bs{c}|=\sqrt5\)，若 \((\bs{a}+\bs{b})\cdot\bs{c}=\dfrac52\)，则 \(\bs{a}\) 与 \(\bs{c}\) 的夹角为（\quad）
 
 \choices
     {\(30^{\circ}\)}
@@ -85,22 +160,51 @@ B
 C
 \end{answer}
 
+\begin{solution}
+由
+\[
+\bs{a}+\bs{b}=(1,2)+(-2,-4)=(-1,-2)=-\bs{a}
+\]
+得
+\[
+\bs{a}\cdot\bs{c}=-\left(\bs{a}+\bs{b}\right)\cdot\bs{c}=-\frac52
+\]
+又 \(|\bs{a}|=\sqrt{1^2+2^2}=\sqrt5\). 设 \(\bs{a}\) 与 \(\bs{c}\) 的夹角为 \(\theta\)，则
+\[
+\cos\theta=\frac{\bs{a}\cdot\bs{c}}{|\bs{a}|\,|\bs{c}|}
+=\frac{-\frac52}{\sqrt5\sqrt5}=-\frac12
+\]
+由于 \(0\leqslant\theta\leqslant\pi\)，所以 \(\theta=\dfrac{2\pi}{3}=120^{\circ}\)，故选 C.
+\end{solution}
+
 \begin{problem}
-将 9 个（含甲，乙）平均分成三组，甲，乙分在同一组，则不同分组方法的种数为（\quad）
+将 9 个（含甲、乙）平均分成三组，甲、乙分在同一组，则不同分组方法的种数为（\quad）
 
 \choices
-    {70}
-    {140}
-    {280}
-    {840}
+    {\(70\)}
+    {\(140\)}
+    {\(280\)}
+    {\(840\)}
 \end{problem}
 
 \begin{answer}
 A
 \end{answer}
 
+\begin{solution}
+甲、乙已经同组，还需从其余 \(7\) 人中选出 \(1\) 人与他们组成这一组，有 \(\mathrm C_7^1=7\) 种选法. 剩余 \(6\) 人分成两个不标号的三人组，有
+\[
+\frac{\mathrm C_6^3}{2!}=10
+\]
+种分法. 因而不同分组方法共有
+\[
+\mathrm C_7^1\frac{\mathrm C_6^3}{2!}=7\times10=70
+\]
+故选 A.
+\end{solution}
+
 \begin{problem}
-在 \(\triangle ABC\) 中，设命题 \(p: \frac{a}{\sin B} = \frac{b}{\sin C} = \frac{c}{\sin A}\)，命题 \(q: \triangle ABC\) 是等边三角形，那么命题 \(p\) 是命题 \(q\) 的（\quad）
+在 \(\triangle ABC\) 中，设命题 \(p:\dfrac{a}{\sin B}=\dfrac{b}{\sin C}=\dfrac{c}{\sin A}\)，命题 \(q:\triangle ABC\) 是等边三角形，那么命题 \(p\) 是命题 \(q\) 的（\quad）
 
 \choices
     {充分不必要条件}
@@ -113,8 +217,30 @@ A
 C
 \end{answer}
 
+\begin{solution}
+若 \(q\) 成立，则 \(A=B=C=\dfrac\pi3\)，且 \(a=b=c\)，所以
+\[
+\frac{a}{\sin B}=\frac{b}{\sin C}=\frac{c}{\sin A}
+\]
+即 \(q\Rightarrow p\).
+
+反过来设 \(p\) 成立. 由正弦定理，存在正数 \(2R\)，使得
+\(a=2R\sin A\)，\(b=2R\sin B\)，\(c=2R\sin C\).
+代入命题 \(p\)，得到
+\[
+\frac{\sin A}{\sin B}=\frac{\sin B}{\sin C}=\frac{\sin C}{\sin A}
+\]
+这三个比值均为正，且相乘等于 \(1\)，因此每个比值都等于 \(1\)，从而
+\[
+\sin A=\sin B=\sin C
+\]
+由于 \(A\)，\(B\)，\(C\in(0,\pi)\)，由 \(\sin A=\sin B\) 可知 \(A=B\) 或 \(A+B=\pi\). 后一种情形会导致 \(C=0\)，与三角形内角条件矛盾，所以 \(A=B\). 同理可得 \(B=C\)，再由内角和得 \(A=B=C=\dfrac\pi3\)，三角形为等边三角形，即 \(p\Rightarrow q\).
+
+因此 \(p\) 是 \(q\) 的充分必要条件，故选 C.
+\end{solution}
+
 \begin{problem}
-矩形 \(ABCD\) 中，\(AB = 4\)，\(BC = 3\)，沿 \(AC\) 将矩形 \(ABCD\) 折成一个直二面角 \(B - AC - D\)，则四面体 \(ABCD\) 的外接球的体积为（\quad）
+矩形 \(ABCD\) 中，\(AB=4\)，\(BC=3\)，沿 \(AC\) 将矩形 \(ABCD\) 折成一个直二面角 \(B-AC-D\)，则四面体 \(ABCD\) 的外接球的体积为（\quad）
 
 \choices
     {\(\frac{125}{12}\pi\)}
@@ -127,43 +253,109 @@ C
 C
 \end{answer}
 
+\begin{solution}
+折叠后 \(AC\) 仍为公共棱，且
+\[
+AC=\sqrt{AB^2+BC^2}=5
+\]
+以 \(AC\) 为 \(x\) 轴，含 \(B\) 的面为 \(xy\) 平面，含 \(D\) 的面为 \(xz\) 平面，取
+\(A=(0,0,0)\)，\(C=(5,0,0)\).
+设 \(B=(u,v,0)\). 由 \(AB=4\)、\(BC=3\)，有
+\(u^2+v^2=16\)，\((u-5)^2+v^2=9\).
+两式相减得 \(u=\dfrac{16}{5}\)，再由第一式取 \(v=\dfrac{12}{5}\)，即
+\[
+B=\left(\frac{16}{5},\frac{12}{5},0\right)
+\]
+同理，由 \(AD=3\)、\(CD=4\)，可取
+\[
+D=\left(\frac95,0,\frac{12}{5}\right)
+\]
+
+设外接球球心为 \(O=(\xi,\eta,\zeta)\). 由 \(OA=OC\)，得 \(\xi=\dfrac52\). 又因 \(OA=OB\)，有
+\[
+2O\cdot B=|B|^2=16
+\]
+代入坐标得
+\[
+2\left(\frac52\cdot\frac{16}{5}+\eta\cdot\frac{12}{5}\right)=16
+\]
+所以 \(\eta=0\). 同理，由 \(OA=OD\)，有
+\[
+2\left(\frac52\cdot\frac95+\zeta\cdot\frac{12}{5}\right)=9
+\]
+所以 \(\zeta=0\). 因而 \(O=\left(\dfrac52,0,0\right)\)，外接球半径为 \(R=OA=\dfrac52\).
+
+于是外接球体积为
+\[
+V=\frac43\pi R^3=\frac43\pi\left(\frac52\right)^3=\frac{125}{6}\pi
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
-已知实数 \(a\)，\(b\) 满足等式 \(\left(\frac{1}{2}\right)^a = \left(\frac{1}{3}\right)^b\)，下列五个关系式：
+已知实数 \(a\)，\(b\) 满足等式 \(\left(\dfrac12\right)^a=\left(\dfrac13\right)^b\)，下列五个关系式：
 
 \begin{circlelist}
-\item \(0 < b < a\)；
-\item \(a < b < 0\)；
-\item \(0 < a < b\)；
-\item \(b < a < 0\)；
-\item \(a = b\).
+\item \(0<b<a\)；
+\item \(a<b<0\)；
+\item \(0<a<b\)；
+\item \(b<a<0\)；
+\item \(a=b\).
 \end{circlelist}
 
 其中不可能成立的关系式（\quad）
 
 \choices
-    {1 个}
-    {2 个}
-    {3 个}
-    {4 个}
+    {\(1\) 个}
+    {\(2\) 个}
+    {\(3\) 个}
+    {\(4\) 个}
 \end{problem}
 
 \begin{answer}
 B
 \end{answer}
 
+\begin{solution}
+两边取自然对数，得
+\[
+a\ln2=b\ln3
+\]
+所以
+\[
+b=\frac{\ln2}{\ln3}a
+\]
+记 \(r=\dfrac{\ln2}{\ln3}\)，因为 \(1<2<3\)，所以 \(0<r<1\). 当 \(a>0\) 时，\(0<b<a\)，第 1 个关系式可以成立；当 \(a<0\) 时，乘以 \(0<r<1\) 会使负数变大，故 \(a<b<0\)，第 2 个关系式可以成立；当 \(a=0\) 时，\(b=0\)，第 5 个关系式可以成立.
+
+第 3、4 个关系式均不可能成立，所以不可能成立的关系式有 \(2\) 个，故选 B.
+\end{solution}
+
 \begin{problem}
-在 \(\triangle OAB\) 中，\(O\) 为坐标原点，\(A(1, \cos \theta)\)，\(B(\sin \theta, 1)\)，\(\theta \in \left(0, \frac{\pi}{2}\right]\)，则 \(\triangle OAB\) 的面积达到最大值时，\(\theta =\)（\quad）
+在 \(\triangle OAB\) 中，\(O\) 为坐标原点，\(A(1,\cos\theta)\)，\(B(\sin\theta,1)\)，\(\theta\in\left(0,\dfrac\pi2\right]\)，则 \(\triangle OAB\) 的面积达到最大值时，\(\theta=\)（\quad）
 
 \choices
-    {\(\frac{\pi}{6}\)}
-    {\(\frac{\pi}{4}\)}
-    {\(\frac{\pi}{3}\)}
-    {\(\frac{\pi}{2}\)}
+    {\(\frac\pi6\)}
+    {\(\frac\pi4\)}
+    {\(\frac\pi3\)}
+    {\(\frac\pi2\)}
 \end{problem}
 
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+由行列式，三角形面积为
+\[
+S=\frac12\left|\begin{vmatrix}1&\cos\theta\\ \sin\theta&1\end{vmatrix}\right|
+=\frac12|1-\sin\theta\cos\theta|
+\]
+当 \(\theta\in\left(0,\dfrac\pi2\right]\) 时，\(\sin\theta\cos\theta\geqslant0\)，且 \(\sin\theta\cos\theta\leqslant\dfrac12\)，所以绝对值内的数非负，故
+\[
+S=\frac12\left(1-\sin\theta\cos\theta\right)
+\]
+要使 \(S\) 最大，就要使 \(\sin\theta\cos\theta\) 最小. 该乘积在给定区间的最小值为 \(0\)，且在 \(\theta=\dfrac\pi2\) 时取得. 因此面积最大时 \(\theta=\dfrac\pi2\)，故选 D.
+\end{solution}
 
 \begin{problem}
 为了解某校高三学生的视力情况，随机地抽查了该校 \(100\) 名高三学生的视力情况，得到频率分布直方图. 由于不慎将部分数据丢失，但知道前 \(4\) 组的频数成等比数列，后 \(6\) 组的频数成等差数列，设最大频率为 \(a\)，视力在 \(4.6\) 到 \(5.0\) 之间的学生数为 \(b\)，则 \(a\)，\(b\) 的值分别为（\quad）
@@ -171,31 +363,73 @@ D
 \bitmapfigure[max width=0.74\linewidth]{img/2005/jiangxi_liberal/q12_fig1.png}
 
 \choices
-    {0.27, 78}
-    {0.27, 83}
-    {2.7, 78}
-    {2.7, 83}
+    {\(0.27\)，\(78\)}
+    {\(0.27\)，\(83\)}
+    {\(2.7\)，\(78\)}
+    {\(2.7\)，\(83\)}
 \end{problem}
 
 \begin{answer}
 A
 \end{answer}
 
+\begin{solution}
+图中各组组距为 \(0.1\)，纵轴表示频率与组距的比值. 前两组的直方图高度分别为 \(0.1\)、\(0.3\)，所以前两组频率分别为 \(0.01\)、\(0.03\). 前 \(4\) 组频数成等比数列，故公比为 \(3\)，前 \(4\) 组频率为
+\(0.01\)，\(0.03\)，\(0.09\)，\(0.27\).
+因此最大频率为 \(a=0.27\).
+
+前 \(4\) 组与后 \(6\) 组重合一组，后 \(6\) 组的首项为 \(0.27\). 设后 \(6\) 组频率的公差为 \(d\). 全部频率之和为 \(1\)，所以后 \(6\) 组频率之和为
+\[
+1-(0.01+0.03+0.09+0.27)+0.27=0.87
+\]
+于是
+\[
+\frac{6}{2}\left[0.27+(0.27+5d)\right]=0.87
+\]
+解得 \(d=-0.05\). 后六组频率依次为 \(0.27\)，\(0.22\)，\(0.17\)，\(0.12\)，\(0.07\)，\(0.02\). 视力在 \(4.6\) 到 \(5.0\) 之间对应前四个组中的后一个与后六组中的前三个，频率之和为
+\[
+0.27+0.22+0.17+0.12=0.78
+\]
+所以学生数 \(b=100\times0.78=78\). 故选 A.
+\end{solution}
+
 \section{填空题}
 \begin{problem}
-若函数 \(f(x) = \log_a\left(x + \sqrt{x^2 + 2a^2}\right)\) 是奇函数，则 \(a =\)\fillinblank{}.
+若函数 \(f(x)=\log_a\left(x+\sqrt{x^2+2a^2}\right)\) 是奇函数，则 \(a=\)\fillinblank{}.
 \end{problem}
 
 \begin{answer}
-\(\frac{\sqrt{2}}{2}\)
+\(\dfrac{\sqrt2}{2}\)
 \end{answer}
 
+\begin{solution}
+对数的底数要求 \(a>0\) 且 \(a\neq1\). 记
+\[
+g(x)=x+\sqrt{x^2+2a^2}
+\]
+因为 \(\sqrt{x^2+2a^2}>|x|\)，所以 \(g(x)>0\)，函数的定义域为 \(\R\). 若 \(f\) 是奇函数，则
+\[
+\log_a g(-x)=-\log_a g(x)=\log_a\frac1{g(x)}
+\]
+由于对数函数是单调函数，得 \(g(-x)=\dfrac1{g(x)}\). 另一方面，
+\[
+g(x)g(-x)=\left(x+\sqrt{x^2+2a^2}\right)\left(-x+\sqrt{x^2+2a^2}\right)=2a^2
+\]
+所以必须有 \(2a^2=1\). 结合 \(a>0\)，得
+\[
+a=\frac{\sqrt2}{2}
+\]
+当 \(a=\dfrac{\sqrt2}{2}\) 时，\(g(x)g(-x)=1\)，上述推导反向成立，故函数确为奇函数.
+\end{solution}
+
 \begin{problem}
-设实数 \(x\)，\(y\) 满足 \(\begin{cases}
-x - y - 2 \leqslant 0,\\
-x + 2y - 4 > 0,\\
-2y - 3 \leqslant 0,
-\end{cases}\) 则 \(\frac{y}{x}\) 的最大值是\fillinblank{}.
+设实数 \(x\)，\(y\) 满足
+\(\begin{cases}
+x-y-2\leqslant0,\\
+x+2y-4>0,\\
+2y-3\leqslant0
+\end{cases}\)
+则 \(\dfrac yx\) 的最大值是\fillinblank{}.
 \end{problem}
 
 \begin{answer}
@@ -203,185 +437,268 @@ x + 2y - 4 > 0,\\
 \end{answer}
 
 \begin{solution}
-由 \(x-y-2\leqslant0\) 和 \(x+2y-4>0\)，分别得
-\(x\leqslant y+2\) 和 \(x>4-2y\). 要使这样的 \(x\) 存在，必须有
+前两个不等式分别给出
+\(x\leqslant y+2\)，\(x>4-2y\).
+要使这样的 \(x\) 存在，必须有 \(4-2y<y+2\)，即 \(y>\dfrac23\). 再结合 \(2y-3\leqslant0\)，得
 \[
-4-2y<y+2,
+\frac23<y\leqslant\frac32
 \]
-从而 \(y>\frac{2}{3}\). 再结合 \(2y-3\leqslant0\)，得
-\(\frac{2}{3}<y\leqslant\frac{3}{2}\). 因而 \(4-2y>0\)，且
+于是 \(4-2y\geqslant1\)，从而 \(x>0\) 且 \(y>0\). 对固定的 \(y\)，由于 \(x>4-2y\)，有
 \[
-0<\frac{y}{x}<\frac{y}{4-2y}\leqslant\frac{3}{2}.
+\frac yx<\frac{y}{4-2y}
 \]
-但取任意 \(0<\varepsilon\leqslant\frac{5}{2}\)，令
-\(y=\frac{3}{2}\)，\(x=1+\varepsilon\)，则三式均成立，且
+函数 \(h(y)=\dfrac{y}{4-2y}\) 在 \(\left(\dfrac23,\dfrac32\right]\) 上满足
 \[
-\frac{y}{x}=\frac{3}{2(1+\varepsilon)}\longrightarrow\frac{3}{2}
-\quad(\varepsilon\to0^+)
+h'(y)=\frac4{(4-2y)^2}>0
 \]
-所以 \(\frac{y}{x}\) 的上确界为 \(\frac{3}{2}\)，但上确界不能取到，故不存在最大值.
+因此
+\[
+\frac yx<\frac{y}{4-2y}\leqslant h\left(\frac32\right)=\frac32
+\]
+但对任意 \(0<\varepsilon\leqslant\dfrac52\)，取 \(y=\dfrac32\)、\(x=1+\varepsilon\)，则三项约束均满足，且
+\(\frac yx=\frac{3}{2(1+\varepsilon)}\longrightarrow\frac32\)，\((\varepsilon\to0^+)\).
+所以 \(\dfrac32\) 是上确界，但不能取到，\(\dfrac yx\) 不存在最大值.
 \end{solution}
 
 \begin{problem}
-如图，在三棱锥 \(P - ABC\) 中，\(PA = PB = PC = BC\)，且 \(\angle BAC = \frac{\pi}{2}\)，则 \(PA\) 与底面 \(ABC\) 所成角为\fillinblank{}.
+如图，在三棱锥 \(P-ABC\) 中，\(PA=PB=PC=BC\)，且 \(\angle BAC=\dfrac\pi2\)，则 \(PA\) 与底面 \(ABC\) 所成角为\fillinblank{}.
 
 \bitmapfigure[max width=0.42\linewidth]{img/2005/jiangxi_liberal/q15_fig1.png}
 \end{problem}
 
 \begin{answer}
-\(\frac{\pi}{3}\)
+\(\dfrac\pi3\)
 \end{answer}
+
+\begin{solution}
+设 \(H\) 是点 \(P\) 在底面 \(ABC\) 上的射影. 由于 \(PA=PB=PC\)，在直角三角形 \(PHA\)、\(PHB\)、\(PHC\) 中分别应用勾股定理，得
+\[
+HA^2=PA^2-PH^2=PB^2-PH^2=HB^2
+\]
+同理可得 \(HA=HC\). 因而 \(H\) 是 \(\triangle ABC\) 的外心.
+
+由于 \(\angle BAC=\dfrac\pi2\)，\(BC\) 是直角三角形 \(ABC\) 的斜边，故外心 \(H\) 是 \(BC\) 的中点，并且
+\[
+HA=\frac{BC}{2}
+\]
+又由题设 \(PA=BC\)，在直角三角形 \(PHA\) 中，
+\[
+PH=\sqrt{PA^2-HA^2}
+=\sqrt{BC^2-\left(\frac{BC}{2}\right)^2}
+=\frac{\sqrt3}{2}BC
+\]
+设 \(PA\) 与底面所成的角为 \(\theta\). 该角为 \(\angle PAH\)，所以
+\[
+\sin\theta=\frac{PH}{PA}=\frac{\sqrt3}{2}
+\]
+由于 \(0<\theta<\dfrac\pi2\)，得 \(\theta=\dfrac\pi3\).
+\end{solution}
 
 \begin{problem}
 以下四个关于圆锥曲线的命题中：
 
 \begin{circlelist}
-\item 设 \(A\)，\(B\) 为两个定点，\(k\) 为非零常数，\(\left| \overrightarrow{PA} \right| - \left| \overrightarrow{PB} \right| = k\)，则动点 \(P\) 的轨迹为双曲线；
-\item 设圆 \(C\) 上一定点 \(A\)，作圆的动点弦 \(AB\)，\(O\) 为坐标原点，若 \(\overrightarrow{OP} = \frac{1}{2} \left(\overrightarrow{OA} + \overrightarrow{OB}\right)\)，则动点 \(P\) 的轨迹为椭圆；
-\item 方程 \(2x^2 - 5x + 2 = 0\) 的两根可分别作为椭圆和双曲线的离心率；
-    \item 双曲线 \(\frac{x^2}{25} - \frac{y^2}{9} = 1\) 与椭圆 \(\frac{x^2}{35} + y^2 = 1\) 有相同的焦点.
+\item 设 \(A\)、\(B\) 为两个定点，\(k\) 为非零常数，\(\left|\overrightarrow{PA}\right|-\left|\overrightarrow{PB}\right|=k\)，则动点 \(P\) 的轨迹为双曲线；
+\item 设圆 \(C\) 上一定点 \(A\)，作圆的动点弦 \(AB\)，\(O\) 为坐标原点，若 \(\overrightarrow{OP}=\dfrac12\left(\overrightarrow{OA}+\overrightarrow{OB}\right)\)，则动点 \(P\) 的轨迹为椭圆；
+\item 方程 \(2x^2-5x+2=0\) 的两根可分别作为椭圆和双曲线的离心率；
+\item 双曲线 \(\dfrac{x^2}{25}-\dfrac{y^2}{9}=1\) 与椭圆 \(\dfrac{x^2}{35}+y^2=1\) 有相同的焦点.
 \end{circlelist}
 
 其中真命题的序号为\fillinblank{}.（写出所有真命题的序号）
 \end{problem}
 
 \begin{answer}
-\(\circled{3}\circled{4}\)
+\(3\)，\(4\)
 \end{answer}
+
+\begin{solution}
+第 1 个命题不一定成立. 双曲线定义要求常数差的绝对值小于两焦点间距离，即需要 \(|k|<AB\). 题目只给出 \(k\neq0\)，例如取 \(|k|\geqslant AB\) 时，轨迹不是非退化双曲线，所以第 1 个命题为假.
+
+第 2 个命题中，设圆心为 \(O_0\)，半径为 \(R\). 由
+\[
+\overrightarrow{OP}=\frac12\left(\overrightarrow{OA}+\overrightarrow{OB}\right)
+\]
+可知 \(P\) 是线段 \(AB\) 的中点. 因为 \(A\) 固定、\(B\) 在圆 \(C\) 上运动，所以 \(\overrightarrow{OP}=\dfrac12\overrightarrow{OA}+\dfrac12\overrightarrow{OB}\) 表明 \(P\) 是固定向量 \(\dfrac12\overrightarrow{OA}\) 加上动向量 \(\dfrac12\overrightarrow{OB}\). 因而 \(P\) 的轨迹是半径为 \(\dfrac R2\) 的圆，而不是题目所称的椭圆，故第 2 个命题为假.
+
+第 3 个命题的两个根为
+\[
+x=\frac{5\pm\sqrt{25-16}}4=\frac{5\pm3}{4}
+\]
+即 \(2\) 和 \(\dfrac12\). 椭圆的离心率满足 \(0<e<1\)，双曲线的离心率满足 \(e>1\)，所以 \(\dfrac12\) 和 \(2\) 可分别作为椭圆和双曲线的离心率，第 3 个命题为真.
+
+第 4 个命题中，双曲线的焦半距满足
+\[
+c^2=25+9=34
+\]
+椭圆的焦半距满足
+\[
+c^2=35-1=34
+\]
+两者的焦点均为 \((\pm\sqrt{34},0)\)，所以第 4 个命题为真.
+
+因此真命题的序号为 \(3,4\).
+\end{solution}
 
 \section{解答题}
 \begin{problem}
-已知函数 \(f(x) = \frac{x^2}{ax + b}\)（\(a\)，\(b\) 为常数），且方程 \(f(x) - x + 12 = 0\) 有两个实根为 \(x_1 = 3\)，\(x_2 = 4\).
+已知函数 \(f(x)=\dfrac{x^2}{ax+b}\)（\(a\)、\(b\) 为常数），且方程 \(f(x)-x+12=0\) 有两个实根 \(x_1=3\)、\(x_2=4\).
 
 \begin{enumerate}
 \item 求函数 \(f(x)\) 的解析式；
-\item 设 \(k > 1\)，解关于 \(x\) 的不等式：\(f(x) < \frac{(k + 1)x - k}{2 - x}\).
+\item 设 \(k>1\)，解关于 \(x\) 的不等式：\(f(x)<\dfrac{(k+1)x-k}{2-x}\).
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item 将 \(x=3\) 和 \(x=4\) 代入方程，分别得
-\(\frac{9}{3a+b}-3+12=0\)，\(\frac{16}{4a+b}-4+12=0\).
-因此 \(3a+b=-1\)，\(4a+b=-2\)，解得 \(a=-1\)，\(b=2\)，所以 \(f(x)=\dfrac{x^2}{2-x}\)，且 \(x\ne2\).
-\item 由函数定义域知 \(x\ne2\)，原不等式等价于
+\item 将 \(x=3\)、\(x=4\) 代入方程，分别得
+\(\frac9{3a+b}-3+12=0\)，\(\frac{16}{4a+b}-4+12=0\).
+因此
+\(3a+b=-1\)，\(4a+b=-2\)
+解得 \(a=-1\)、\(b=2\). 所以
+\(f(x)=\frac{x^2}{2-x}\)，\(x\neq2\).
+
+\item 由定义域知 \(x\neq2\). 原不等式化为
 \[
-\frac{x^2}{2-x}-\frac{(k+1)x-k}{2-x}<0
-\quad\Longleftrightarrow\quad
-\frac{(x-1)(x-k)}{2-x}<0.
+\frac{x^2-(k+1)x+k}{2-x}<0
+\Longleftrightarrow
+\frac{(x-1)(x-k)}{2-x}<0
 \]
-当 \(1<k<2\) 时，按 \(1\)，\(k\)，\(2\) 分点讨论，得 \(x\in(1,k)\cup(2,+\infty)\)；当 \(k=2\) 时，得 \(x\in(1,2)\cup(2,+\infty)\)；当 \(k>2\) 时，得 \(x\in(1,2)\cup(k,+\infty)\).
+当 \(1<k<2\) 时，临界点顺序为 \(1<k<2\)，符号分析得
+\[
+x\in(1,k)\cup(2,+\infty)
+\]
+当 \(k=2\) 时，原式为 \(-\dfrac{x-1}{1}\)（仍需排除 \(x=2\)），故
+\[
+x\in(1,2)\cup(2,+\infty)
+\]
+当 \(k>2\) 时，临界点顺序为 \(1<2<k\)，符号分析得
+\[
+x\in(1,2)\cup(k,+\infty)
+\]
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-已知向量 \(\bs{a} = \left(2\cos \frac{x}{2}, \tan \left(\frac{x}{2} + \frac{\pi}{4}\right)\right)\)，\(\bs{b} = \left(\sqrt{2}\sin \left(\frac{x}{2} + \frac{\pi}{4}\right), \tan \left(\frac{x}{2} - \frac{\pi}{4}\right)\right)\)，令 \(f(x) = \bs{a} \cdot \bs{b}\). 求函数 \(f(x)\) 的最大值，最小正周期，并写出 \(f(x)\) 在 \([0, \pi]\) 上的单调区间.
+已知向量 \(\bs{a}=\left(2\cos\dfrac x2,\tan\left(\dfrac x2+\dfrac\pi4\right)\right)\)，\(\bs{b}=\left(\sqrt2\sin\left(\dfrac x2+\dfrac\pi4\right),\tan\left(\dfrac x2-\dfrac\pi4\right)\right)\)，
+令 \(f(x)=\bs{a}\cdot\bs{b}\). 求函数 \(f(x)\) 的最大值，最小正周期，并写出 \(f(x)\) 在 \([0,\pi]\) 上的单调区间.
 \end{problem}
 
 \begin{solution}
-令 \(t=\frac{x}{2}\). 两个切线函数都有定义时，
+令 \(t=\dfrac x2\). 当两个正切函数都有定义时，
 \[
-2\cos t\cdot\sqrt{2}\sin\left(t+\frac{\pi}{4}\right)=1+\sin x+\cos x
+\tan\left(t+\frac\pi4\right)\tan\left(t-\frac\pi4\right)
+=\frac{\sin t+\cos t}{\cos t-\sin t}
+ \frac{\sin t-\cos t}{\cos t+\sin t}=-1
 \]
-且
+又 \(\sqrt2\sin\left(t+\dfrac\pi4\right)=\sin t+\cos t\)，所以
 \[
-\tan\left(t+\frac{\pi}{4}\right)\tan\left(t-\frac{\pi}{4}\right)=-1
+f(x)=2\cos t(\sin t+\cos t)-1=\sin x+\cos x
 \]
-所以在定义域
+两个正切函数的定义条件给出
 \[
-\mathcal D=\left\{x\in\R\mid x\ne\frac{\pi}{2}+n\pi,\ n\in\Z\right\}
+\mathcal D=\left\{x\in\R\mid x\neq\frac\pi2+n\pi,\ n\in\Z\right\}
 \]
-上，\(f(x)=\sin x+\cos x=\sqrt{2}\sin\left(x+\frac{\pi}{4}\right)\). 因此函数的最大值为 \(\sqrt{2}\). 定义域中被排除的点相邻间隔为 \(\pi\)，故函数的正周期必须是 \(\pi\) 的整数倍；又 \(f(x+\pi)=-f(x)\)，而 \(f(x+2\pi)=f(x)\)，所以最小正周期为 \(2\pi\). 在 \([0,\pi]\) 上，原函数在 \(x=\frac{\pi}{2}\) 处无定义，且 \(f'(x)=\cos x-\sin x\)，故在 \([0,\frac{\pi}{4}]\) 上单调递增，在 \([\frac{\pi}{4},\frac{\pi}{2})\) 和 \((\frac{\pi}{2},\pi]\) 上单调递减.
+因此在定义域上 \(f(x)=\sin x+\cos x=\sqrt2\sin\left(x+\dfrac\pi4\right)\)，最大值为 \(\sqrt2\)，且在 \(x=\dfrac\pi4+2n\pi\) 处取得.
+
+若 \(T\) 是函数的正周期，则它必须把定义域的缺点集合 \(\left\{\dfrac\pi2+n\pi\mid n\in\Z\right\}\) 映射为自身，所以 \(T\) 是 \(\pi\) 的整数倍. 但
+\[
+f(x+\pi)=-f(x)
+\]
+而 \(f(x+2\pi)=f(x)\)，所以最小正周期为 \(2\pi\).
+
+在 \([0,\pi]\) 的定义域内，除去 \(x=\dfrac\pi2\)，且
+\[
+f'(x)=\cos x-\sin x
+\]
+当 \(0\leqslant x<\dfrac\pi4\) 时，\(f'(x)>0\)；当 \(\dfrac\pi4<x<\pi\) 时，\(f'(x)<0\). 所以 \(f(x)\) 在 \(\left[0,\dfrac\pi4\right]\) 上单调递增，在 \(\left[\dfrac\pi4,\dfrac\pi2\right)\) 和 \(\left(\dfrac\pi2,\pi\right]\) 上单调递减.
 \end{solution}
 
 \begin{problem}
-\(A\)，\(B\) 两位同学各有五张卡片，现以投掷均匀硬币的形式进行游戏，当出现正面朝上时 \(A\) 赢得 \(B\) 一张卡片，否则 \(B\) 赢得 \(A\) 一张卡片，如果某人已赢得所有卡片，则游戏终止. 求掷硬币的次数不大于 7 次时游戏终止的概率.
+A、B 两位同学各有五张卡片，现以投掷均匀硬币的形式进行游戏，当出现正面朝上时 A 赢得 B 一张卡片，否则 B 赢得 A 一张卡片，如果某人已赢得所有卡片，则游戏终止. 求掷硬币的次数不大于 \(7\) 次时游戏终止的概率.
 \end{problem}
 
 \begin{solution}
-设正面出现的次数与反面出现的次数之差为 \(D_n\). 每投掷一次硬币，\(D_n\) 增加 \(1\) 或减少 \(1\)，游戏在 \(D_n=5\) 或 \(D_n=-5\) 时终止.
+设第 \(n\) 次投掷后正面次数与反面次数之差为 \(D_n\). 每次投掷使 \(D_n\) 增加 \(1\) 或减少 \(1\)，游戏在 \(D_n=5\) 或 \(D_n=-5\) 时终止.
 
-由于 \(D_n\) 与 \(n\) 具有相同的奇偶性，游戏在 \(7\) 次以内终止的次数只能是 \(5\) 或 \(7\). \(5\) 次终止时，必须连续出现 \(5\) 次正面或连续出现 \(5\) 次反面，所以
+由于 \(D_n\) 与 \(n\) 具有相同的奇偶性，且前 \(4\) 次不可能达到 \(\pm5\)，所以 \(7\) 次以内终止的时刻只有 \(5\) 和 \(7\).
+
+第 \(5\) 次终止时，前 \(5\) 次必须全为正面或全为反面，因此
 \[
-P(T=5)=\frac{2}{2^5}=\frac{1}{16}
+P(T=5)=\frac{2}{2^5}=\frac1{16}
 \]
-在第 \(7\) 次终止时，以正面终止为例，前 \(6\) 次中必须有 \(5\) 次正面和 \(1\) 次反面，且反面必须出现在前 \(5\) 个位置之一，否则会在第 \(5\) 次已经终止. 因此共有 \(5\) 种；以反面终止同理有 \(5\) 种，从而
+第 \(7\) 次以正面终止时，前 \(6\) 次必须有 \(5\) 次正面、\(1\) 次反面，且反面必须位于前 \(5\) 个位置；若反面在第 \(6\) 个位置，则前 \(5\) 次全为正面，游戏已经在第 \(5\) 次终止. 因而这种序列有 \(5\) 个. 以反面终止同理也有 \(5\) 个，所以
 \[
-P(T=7)=\frac{10}{2^7}=\frac{5}{64}
+P(T=7)=\frac{10}{2^7}=\frac5{64}
 \]
-所以掷硬币的次数不大于 \(7\) 次时游戏终止的概率为
+于是
 \[
-P(T\le7)=\frac{1}{16}+\frac{5}{64}=\frac{9}{64}
+P(T\leqslant7)=P(T=5)+P(T=7)=\frac1{16}+\frac5{64}=\frac9{64}
 \]
 \end{solution}
 
 \begin{problem}
-如图，在长方体 \(ABCD - A_{1}B_{1}C_{1}D_{1}\) 中，\(AD = AA_{1} = 1\)，\(AB = 2\)，点 \(E\) 在棱 \(AB\) 上移动.
+如图，在长方体 \(ABCD-A_1B_1C_1D_1\) 中，\(AD=AA_1=1\)，\(AB=2\)，点 \(E\) 在棱 \(AB\) 上移动.
 
 \begin{enumerate}
-\item 证明：\(D_{1}E \perp A_{1}D\)；
-\item 当 \(E\) 为 \(AB\) 的中点时，求点 \(E\) 到面 \(ACD_{1}\) 的距离；
-\item \(AE\) 等于何值时，二面角 \(D_{1} - EC - D\) 的大小为 \(\frac{\pi}{4}\).
+\item 证明：\(D_1E\perp A_1D\)；
+\item 当 \(E\) 为 \(AB\) 的中点时，求点 \(E\) 到面 \(ACD_1\) 的距离；
+\item \(AE\) 等于何值时，二面角 \(D_1-EC-D\) 的大小为 \(\dfrac\pi4\).
 \end{enumerate}
 
 \bitmapfigure[max width=0.55\linewidth]{img/2005/jiangxi_liberal/q20_fig1.png}
 \end{problem}
 
 \begin{solution}
-建立空间直角坐标系，使 \(D\) 为原点，\(DA\)、\(DC\)、\(DD_{1}\) 分别为 \(x\)、\(y\)、\(z\) 轴正方向. 设 \(AE=t\)，则 \(0\leqslant t\leqslant2\)，各点坐标为
-\[
-D(0,0,0),\quad A(1,0,0),\quad C(0,2,0),\quad D_{1}(0,0,1),\quad A_{1}(1,0,1),\quad E(1,t,0).
-\]
+以 \(D\) 为坐标原点，\(DA\)、\(DC\)、\(DD_1\) 分别为 \(x\)、\(y\)、\(z\) 轴正方向. 设 \(AE=t\)，则 \(0\leqslant t\leqslant2\)，各点坐标为
+\(D=(0,0,0)\)，\(A=(1,0,0)\)，\(C=(0,2,0)\)，\(D_1=(0,0,1)\)
+\(A_1=(1,0,1)\)，\(E=(1,t,0)\).
 
 \begin{enumerate}
-\item
-\(\overrightarrow{D_{1}E}=(1,t,-1)\)，\(\overrightarrow{A_{1}D}=(-1,0,-1)\)，所以
+\item 有
+\(\overrightarrow{D_1E}=(1,t,-1)\)，\(\overrightarrow{A_1D}=(-1,0,-1)\)
+所以
 \[
-\overrightarrow{D_{1}E}\cdot\overrightarrow{A_{1}D}=-1+1=0.
+\overrightarrow{D_1E}\cdot\overrightarrow{A_1D}=-1+1=0
 \]
-故 \(D_{1}E\perp A_{1}D\).
+故 \(D_1E\perp A_1D\).
 
-\item 当 \(E\) 为 \(AB\) 的中点时，\(E(1,1,0)\). 平面 \(ACD_{1}\) 的一个法向量为
+\item 当 \(E\) 为 \(AB\) 的中点时，\(E=(1,1,0)\). 平面 \(ACD_1\) 的一个法向量为
 \[
-\overrightarrow{AC}\times\overrightarrow{AD_{1}}=(2,1,2)
+\overrightarrow{AC}\times\overrightarrow{AD_1}=(2,1,2)
 \]
-故其方程为
+故平面方程为
 \[
 2x+y+2z-2=0
 \]
 于是点 \(E\) 到该平面的距离为
 \[
-\frac{|2\times1+1+2\times0-2|}{\sqrt{2^{2}+1^{2}+2^{2}}}=\frac{1}{3}
+\frac{|2\times1+1+2\times0-2|}{\sqrt{2^2+1^2+2^2}}=\frac13
 \]
 
-\item 平面 \(D_{1}EC\) 的一个法向量为
+\item 平面 \(D_1EC\) 的一个法向量为
 \[
-\overrightarrow{D_{1}E}\times\overrightarrow{D_{1}C}=(2-t,1,2)
+\overrightarrow{D_1E}\times\overrightarrow{D_1C}=(2-t,1,2)
 \]
-而平面 \(DEC\) 即底面 \(ABCD\)，可取法向量 \((0,0,1)\). 设二面角 \(D_{1}-EC-D\) 为 \(\theta\)，则
+平面 \(DEC\) 是底面 \(ABCD\)，可取法向量 \((0,0,1)\). 设二面角 \(D_1-EC-D\) 为 \(\theta\)，则
 \[
-\cos\theta=\frac{2}{\sqrt{(2-t)^{2}+1+4}}.
+\cos\theta=\frac{|(2-t,1,2)\cdot(0,0,1)|}{\sqrt{(2-t)^2+1+4}}=\frac2{\sqrt{(2-t)^2+5}}
 \]
-当 \(\theta=\frac{\pi}{4}\) 时，
+当 \(\theta=\dfrac\pi4\) 时，
 \[
-\frac{2}{\sqrt{(2-t)^{2}+5}}=\frac{\sqrt{2}}{2}
-\quad\Longrightarrow\quad
-(2-t)^{2}=3.
+\frac2{\sqrt{(2-t)^2+5}}=\frac{\sqrt2}{2}
+\Longrightarrow (2-t)^2=3
 \]
-由于 \(0\leqslant t\leqslant2\)，所以 \(2-t\geqslant0\)，从而
-\[
-t=2-\sqrt{3}
-\]
-即 \(AE=2-\sqrt{3}\).
+由 \(0\leqslant t\leqslant2\)，知 \(2-t\geqslant0\)，所以 \(t=2-\sqrt3\). 因而 \(AE=2-\sqrt3\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-如图，\(M\) 是抛物线 \(y^2 = x\) 上的一点，动弦 \(ME\)，\(MF\) 分别交 \(x\) 轴于 \(A\)，\(B\) 两点，且 \(MA = MB\).
+如图，\(M\) 是抛物线 \(y^2=x\) 上的一点，动弦 \(ME\)、\(MF\) 分别交 \(x\) 轴于 \(A\)、\(B\) 两点，且 \(MA=MB\).
 
 \begin{enumerate}
 \item 若 \(M\) 为定点，证明：直线 \(EF\) 的斜率为定值；
-\item 若 \(M\) 为动点，且 \(\angle EMF = 90^{\circ}\)，求 \(\triangle EMF\) 的重心 \(G\) 的轨迹方程.
+\item 若 \(M\) 为动点，且 \(\angle EMF=90^{\circ}\)，求 \(\triangle EMF\) 的重心 \(G\) 的轨迹方程.
 \end{enumerate}
 
 \bitmapfigure[max width=0.50\linewidth]{img/2005/jiangxi_liberal/q21_fig1.png}
@@ -391,63 +708,71 @@ t=2-\sqrt{3}
 
 \begin{solution}
 \begin{enumerate}
-\item 设 \(M=(u^2,u)\)，\(E=(v^2,v)\)，\(F=(w^2,w)\). 抛物线上参数为 \(r\)，\(s\) 的两点连线斜率为 \(\dfrac{1}{r+s}\)，且该直线与 \(x\) 轴交于 \((-rs,0)\). 因此 \(A=(-uv,0)\)，\(B=(-uw,0)\). 由于 \(A\)，\(B\) 是两个不同的交点，故 \(u\ne0\)，从而
+\item 设 \(M=(u^2,u)\)、\(E=(v^2,v)\)、\(F=(w^2,w)\). 抛物线上参数为 \(r\)、\(s\) 的两点 \((r^2,r)\)、\((s^2,s)\) 所在直线满足
 \[
-MA^2=u^2\left((u+v)^2+1\right),
-\qquad
-MB^2=u^2\left((u+w)^2+1\right).
+x=(r+s)y-rs
 \]
-由 \(MA=MB\)，并且 \(E\ne F\)，得 \((u+v)^2=(u+w)^2\)，故 \(v+w=-2u\). 于是直线 \(EF\) 的斜率为
+因为代入 \(y=r\) 或 \(y=s\) 均成立. 因而弦 \(ME\)、\(MF\) 与 \(x\) 轴的交点分别为
+\(A=(-uv,0)\)，\(B=(-uw,0)\).
+题目中的 \(A\)、\(B\) 是两个不同的交点，所以 \(u\neq0\). 由坐标计算
+\(MA^2=u^2\left((u+v)^2+1\right)\)，\(MB^2=u^2\left((u+w)^2+1\right)\).
+由 \(MA=MB\) 得 \((u+v)^2=(u+w)^2\). 若 \(v=w\)，则 \(E=F\)，与两条动弦对应不同端点矛盾，因此只能有
 \[
-\frac{1}{v+w}=-\frac{1}{2u},
+v+w=-2u
 \]
-只由定点 \(M\) 决定.
-\item 由 \(v+w=-2u\)，令 \(s=u+v\)，则 \(u+w=-s\). 若 \(s=0\)，则 \(v=w=-u\)，与 \(E\ne F\) 矛盾，故 \(s\ne0\). 两弦 \(ME\)，\(MF\) 的斜率分别为 \(\dfrac{1}{s}\)，\(-\dfrac{1}{s}\). 由 \(\angle EMF=90^{\circ}\)，得
+又因 \(v\neq w\)，直线 \(EF\) 的斜率为
 \[
-\frac{1}{s}\cdot\left(-\frac{1}{s}\right)=-1,
-\qquad s^2=1
+\frac{w-v}{w^2-v^2}=\frac1{v+w}=-\frac1{2u}
 \]
-所以 \(s=\pm1\)，并且 \(v=s-u\)，\(w=-s-u\). 设重心 \(G=(x_G,y_G)\)，则
+它只由定点 \(M=(u^2,u)\) 决定，所以为定值.
+
+\item 由上面的关系令 \(s=u+v\)，则 \(u+w=-s\)，从而 \(v=s-u\)、\(w=-s-u\). 若 \(s=0\)，则 \(v=w=-u\)，导致 \(E=F\)，故 \(s\neq0\). 两条弦的斜率分别为
+\(k_{ME}=\frac1{u+v}=\frac1s\)，\(k_{MF}=\frac1{u+w}=-\frac1s\).
+由 \(\angle EMF=90^{\circ}\)，得
 \[
-x_G=\frac{u^2+(s-u)^2+(-s-u)^2}{3}=u^2+\frac{2}{3},
-\qquad
-y_G=\frac{u+(s-u)+(-s-u)}{3}=-\frac{u}{3}.
+k_{ME}k_{MF}=-1\Longrightarrow -\frac1{s^2}=-1
 \]
-消去 \(u\)，得 \(x_G=9y_G^2+\frac{2}{3}\)，即
+所以 \(s=\pm1\). 设重心 \(G=(x,y)\)，则
 \[
-y_G^2=\frac{1}{9}x_G-\frac{2}{27}.
+x=\frac{u^2+(s-u)^2+(-s-u)^2}{3}=u^2+\frac23
 \]
-由于 \(A\)，\(B\) 为两个不同的交点，\(u\ne0\)，故轨迹为 \(y^2=\dfrac{1}{9}x-\dfrac{2}{27}\)，其中 \(x>\dfrac{2}{3}\).
+\[
+y=\frac{u+(s-u)+(-s-u)}{3}=-\frac u3
+\]
+消去 \(u\)，得
+\[
+x=9y^2+\frac23,
+\qquad\text{即}\qquad
+y^2=\frac19x-\frac{2}{27}
+\]
+由于 \(u\neq0\)，有 \(x=u^2+\dfrac23>\dfrac23\). 因而轨迹方程为
+\(y^2=\frac19x-\frac{2}{27}\)，\(x>\frac23\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-已知数列 \(\{a_n\}\) 的前 \(n\) 项和 \(S_n\) 满足 \(S_n - S_{n - 2} = 3\left(-\frac{1}{2}\right)^{n - 1}\)（\(n \geqslant 3\)），且 \(S_1 = 1\)，\(S_2 = -\frac{3}{2}\). 求数列 \(\{a_n\}\) 的通项公式.
+已知数列 \(\{a_n\}\) 的前 \(n\) 项和 \(S_n\) 满足 \(S_n-S_{n-2}=3\left(-\dfrac12\right)^{n-1}\)（\(n\geqslant3\)），且 \(S_1=1\)、\(S_2=-\dfrac32\). 求数列 \(\{a_n\}\) 的通项公式.
 \end{problem}
 
 \begin{solution}
-由 \(a_1=S_1=1\)，\(a_2=S_2-S_1=-\frac{5}{2}\)，且对 \(n\ge3\)，
+由已知初值
+\(a_1=S_1=1\)，\(a_2=S_2-S_1=-\frac52\).
+当 \(n\geqslant3\) 时，
 \[
-a_{n-1}+a_n=S_n-S_{n-2}=3\left(-\frac{1}{2}\right)^{n-1}
+a_{n-1}+a_n=S_n-S_{n-2}=3\left(-\frac12\right)^{n-1}
 \]
-因此
+令
 \[
-a_n=3\left(-\frac{1}{2}\right)^{n-1}-a_{n-1}
+b_n=(-1)^{n-1}a_n
 \]
-下面用归纳法求 \(a_n\). 当 \(n=1\) 和 \(n=2\) 时，分别有 \(a_1=4-3\)，\(a_2=-4+3\left(\frac{1}{2}\right)\)，结论成立. 若结论对 \(n-1\) 成立，当 \(n\) 为奇数时，\(n-1\) 为偶数，代入递推式得
+由于 \(a_n=(-1)^{n-1}b_n\)、\(a_{n-1}=-(-1)^{n-1}b_{n-1}\)，上式化为
+\(b_n-b_{n-1}=\frac3{2^{n-1}}\)，\((n\geqslant3)\).
+又 \(b_2=-a_2=\dfrac52\)，所以对 \(n\geqslant2\)，
 \[
-a_n=3\left(\frac{1}{2}\right)^{n-1}+4-3\left(\frac{1}{2}\right)^{n-2}=4-3\left(\frac{1}{2}\right)^{n-1}
+b_n=\frac52+3\sum_{j=3}^{n}\frac1{2^{j-1}}
+=\frac52+3\left(\frac12-\frac1{2^{n-1}}\right)
+=4-\frac3{2^{n-1}}
 \]
-当 \(n\) 为偶数时，\(n-1\) 为奇数，代入递推式得
-\[
-a_n=-3\left(\frac{1}{2}\right)^{n-1}-4+3\left(\frac{1}{2}\right)^{n-2}=-4+3\left(\frac{1}{2}\right)^{n-1}
-\]
-所以
-\[
-a_n=
-\begin{cases}
-4-3\left(\dfrac{1}{2}\right)^{n-1}, & n\text{ 为奇数},\\
--4+3\left(\dfrac{1}{2}\right)^{n-1}, & n\text{ 为偶数}.
-\end{cases}
-\]
+当 \(n=1\) 时，\(b_1=a_1=1=4-3\)，同样成立. 因而
+\(a_n=(-1)^{n-1}\left(4-3\left(\frac12\right)^{n-1}\right)\)，\(n\geqslant1\).
 \end{solution}

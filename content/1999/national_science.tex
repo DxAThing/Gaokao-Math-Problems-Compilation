@@ -18,7 +18,8 @@ C
 \end{answer}
 
 \begin{solution}
-由图可知，阴影部分同时属于集合 \(M\) 和 \(P\)，但不属于集合 \(S\)，所以所表示的集合为 \((M\cap P)\cap\overline{S}\)，故选 C.
+图中阴影内任意元素都属于 \(M\) 和 \(P\)，因此先取交集 \(M\cap P\)；阴影不在 \(S\) 内，因此还要取 \(S\) 的补集. 所以阴影部分表示
+\((M\cap P)\cap\overline{S}\)，故选 C.
 \end{solution}
 
 \begin{problem}
@@ -36,9 +37,10 @@ A
 \end{answer}
 
 \begin{solution}
-由映射的对应关系，集合 \(B\) 中的元素组成集合
-\(B=\{|a|:a\in A\}=\{1,2,3,4\}\).
-因此集合 \(B\) 有 \(4\) 个元素，故选 A.
+由 \(f(a)=|a|\)，逐一取集合 \(A\) 中元素的象，得到
+\(f(-3)=3\)，\(f(-2)=2\)，\(f(-1)=1\)，\(f(1)=1\)，\(f(2)=2\)，\(f(3)=3\)，\(f(4)=4\).
+因此
+\(B=\{f(a):a\in A\}=\{1,2,3,4\}\)，共有 \(4\) 个不同元素，故选 A.
 \end{solution}
 
 \begin{problem}
@@ -56,7 +58,8 @@ A
 \end{answer}
 
 \begin{solution}
-因为 \(f(a)=b\)，而 \(g\) 是 \(f\) 的反函数，所以 \(g(f(a))=a\)，从而 \(g(b)=a\)，故选 A.
+反函数的定义给出 \(g(f(x))=x\)（在 \(f\) 的定义域内）. 由题设 \(f(a)=b\)，代入得
+\(g(b)=g(f(a))=a\)，故选 A. 条件 \(ab\neq0\) 不影响这一反函数关系.
 \end{solution}
 
 \begin{problem}
@@ -74,9 +77,13 @@ C
 \end{answer}
 
 \begin{solution}
-由 \(f(a)=-M<f(b)=M\) 且 \(f\) 在 \([a,b]\) 上为增函数可知 \(M>0\). 令 \(u=\omega x+\varphi\)，则 \(u\) 随 \(x\) 增大而增大，并且
-\(\sin(\omega a+\varphi)=-1\)，\(\sin(\omega b+\varphi)=1\).
-在这段递增的正弦曲线上，相位从 \(-\frac{\pi}{2}+2k\pi\) 变化到 \(\frac{\pi}{2}+2k\pi\)，其中必经过 \(u=2k\pi\). 因此 \(g(x)=M\cos u\) 可以取得最大值 \(M\)，故选 C.
+由 \(f(a)=-M<f(b)=M\) 且 \(f\) 在 \([a,b]\) 上为增函数可知 \(M>0\). 令 \(u(x)=\omega x+\varphi\)，并记 \(u_a=u(a)\)、\(u_b=u(b)\)，则 \(u\) 随 \(x\) 增大而严格增大，且
+\(\sin u_a=-1\)，\(\sin u_b=1\).
+
+因为 \(M\omega>0\)，且 \(f\) 在整个区间上递增，所以在相位变化的区间内必须有
+\(f'(x)=M\omega\cos u(x)\geqslant0\)，即 \(\cos u(x)\geqslant0\). 又由 \(\sin u(a)=-1\)、\(\sin u(b)=1\)，并结合 \(u(x)\) 严格递增，只能取
+\(u(a)=-\frac{\pi}{2}+2k\pi\)，\(u(b)=\frac{\pi}{2}+2k\pi\)，其中 \(k\in\Z\). 因而区间 \([u(a),u(b)]\) 包含 \(2k\pi\). 取 \(x_0\in[a,b]\) 使 \(u(x_0)=2k\pi\)，则
+\(g(x_0)=M\cos(2k\pi)=M\). 又因 \(|\cos u|\leqslant1\) 且 \(M>0\)，\(g(x)\leqslant M\) 对所有 \(x\in[a,b]\) 成立，所以 \(g\) 可以取得最大值 \(M\)，故选 C.
 \end{solution}
 
 \begin{problem}
@@ -94,8 +101,15 @@ B
 \end{answer}
 
 \begin{solution}
-逐项检验：若 \(f(x)=\sin x\)，则 \(f(x)\sin x=\sin^2x\) 为偶函数；若 \(f(x)=\cos x\)，则
-\(f(x)\sin x=\sin x\cos x=\frac{1}{2}\sin 2x\)，它是奇函数且以 \(\pi\) 为周期；若 \(f(x)=\sin 2x\)，乘积为偶函数；若 \(f(x)=\cos 2x\)，乘积虽为奇函数，但以 \(\pi\) 平移后变号，不以 \(\pi\) 为周期. 因此选 B.
+设 \(h(x)=f(x)\sin x\)，逐项检验：
+当 \(f(x)=\sin x\) 时，\(h(x)=\sin^2x\)，满足 \(h(-x)=h(x)\)，是偶函数；
+当 \(f(x)=\cos x\) 时，
+\(h(x)=\sin x\cos x=\frac{1}{2}\sin 2x\)，满足 \(h(-x)=-h(x)\)，且 \(h(x+\pi)=h(x)\)，所以它是周期为 \(\pi\) 的奇函数；
+当 \(f(x)=\sin2x\) 时，
+\(h(x)=\sin2x\sin x=\frac{1}{2}(\cos x-\cos3x)\)，是偶函数；
+当 \(f(x)=\cos2x\) 时，
+\(h(x)=\cos2x\sin x=\frac{1}{2}(\sin3x-\sin x)\) 虽是奇函数，但
+\(h(\frac{\pi}{6})=\frac{1}{4}\)，\(h(\frac{7\pi}{6})=-\frac{1}{4}\)，所以 \(h(x+\pi)\) 不恒等于 \(h(x)\)，不以 \(\pi\) 为周期. 因此只有选项 B 符合.
 \end{solution}
 
 \begin{problem}
@@ -113,8 +127,8 @@ B
 \end{answer}
 
 \begin{solution}
-将极坐标方程化为直角坐标方程：
-\(\rho=4\sin\left(\theta-\frac{\pi}{3}\right)=2\sin\theta-2\sqrt{3}\cos\theta\)，所以
+将极坐标方程乘以 \(\rho\)，并利用 \(x=\rho\cos\theta\)、\(y=\rho\sin\theta\)，得
+\(\rho^2=4\rho\sin\left(\theta-\frac{\pi}{3}\right)=2y-2\sqrt{3}x\)，所以
 \(x^2+y^2=2y-2\sqrt{3}x\)，即
 \((x+\sqrt{3})^2+(y-1)^2=4\).
 该圆的圆心为 \((-\sqrt{3},1)\)，其极角为 \(\frac{5\pi}{6}\)，所以圆关于直线 \(\theta=\frac{5\pi}{6}\) 轴对称，故选 B.
@@ -199,23 +213,27 @@ D
 \end{answer}
 
 \begin{solution}
-沿 \(AB\) 方向作剪切不改变各平行截面的面积和体积，所以可将图形特殊化为 \(ED\perp\) 平面 \(ABCD\)，且 \(ED=2\) 的情形. 此时 \(EF\parallel AB\)，所以 \(EF\perp AD\)；又 \(EF\perp ED\)，从而 \(EF\perp\) 平面 \(ADE\).
+由于 \(EF\parallel AB\)，且 \(AB\) 与 \(AC\) 相交，\(EF\) 与 \(AC\) 的公垂线垂直于底面 \(ABCD\)，所以题设距离 \(2\) 就是该多面体的高. 设从底面起高为 \(2t\)（\(0\leqslant t\leqslant1\)）的水平截面面积为 \(S_t\). 该截面是底面正方形按比例 \(1-t\) 缩小后与线段 \(EF\) 按比例 \(t\) 叠加得到的矩形，且其两条边分别平行于 \(EF\) 及垂直于 \(EF\). 因此，平行于 \(EF\) 的边长由底面的 \(AB=3\) 线性变到顶边的 \(EF=\frac{3}{2}\)，为
 
-沿三角形 \(ADF\) 分割多面体，可得到四棱锥 \(F\text{-}ABCD\) 和三棱锥 \(F\text{-}ADE\). 四棱锥 \(F\text{-}ABCD\) 的底面积为 \(9\)，高为 \(2\)，所以其体积为
 \[
-V_1=\frac{1}{3}\cdot9\cdot2=6
+3(1-t)+\frac{3}{2}t
 \]
 
-在直角三角形 \(ADE\) 中，\(AD=3\)，\(DE=2\)，故其面积为 \(S_{\triangle ADE}=\frac{1}{2}\cdot3\cdot2=3\). 由于 \(EF\perp\) 平面 \(ADE\)，三棱锥 \(F\text{-}ADE\) 的高为 \(EF=\frac{3}{2}\)，从而
+另一条边长由底面的 \(AD=3\) 线性变到顶端的 \(0\)，为 \(3(1-t)\). 所以
+
 \[
-V_2=\frac{1}{3}\cdot3\cdot\frac{3}{2}=\frac{3}{2}
+S_t=\left(3(1-t)+\frac{3}{2}t\right)3(1-t)
 \]
 
-因此该多面体的体积为
+令实际高度为 \(z=2t\)，则 \(\mathrm dz=2\,\mathrm dt\)，由截面积积分得
 \[
-V=V_1+V_2=6+\frac{3}{2}=\frac{15}{2}
+V=\int_0^2 S_{z/2}\,\mathrm dz
+ =2\int_0^1\left(3-\frac{3}{2}t\right)3(1-t)\,\mathrm dt
+ =2\int_0^1\left(9-\frac{27}{2}t+\frac{9}{2}t^2\right)\,\mathrm dt
+ =2\left(9-\frac{27}{4}+\frac{3}{2}\right)
+ =\frac{15}{2}
 \]
-故选 D.
+所以该多面体的体积为 \(\frac{15}{2}\)，故选 D.
 \end{solution}
 
 \begin{problem}
@@ -235,7 +253,9 @@ B
 \begin{solution}
 在给定区间内 \(\cos\alpha>0\)，且 \(\tan\alpha\) 有意义. 令 \(t=\tan\alpha\)，则
 \(\sin\alpha=\frac{t}{\sqrt{1+t^2}}\).
-由 \(\sin\alpha>\tan\alpha\) 得 \(t<0\). 在 \(t<0\) 时，\(\tan\alpha>\cot\alpha\) 等价于 \(t>1/t\)，即 \(t^2<1\). 因而
+由
+\(\sin\alpha-\tan\alpha=t\left(\frac{1}{\sqrt{1+t^2}}-1\right)>0\)
+可知 \(t<0\). 在 \(t<0\) 时，\(\tan\alpha>\cot\alpha\) 等价于 \(t>1/t\)，两边同乘负数 \(t\) 后不等号反向，得 \(t^2<1\). 因而
 \(-1<t<0\)，从而 \(-\frac{\pi}{4}<\alpha<0\)，故选 B.
 \end{solution}
 
@@ -254,7 +274,7 @@ D
 \end{answer}
 
 \begin{solution}
-设圆台母线长为 \(l\)，中截面的半径为 \(r=\frac{R+5}{2}\). 上、下两个圆台的母线长相等，分别为原圆台母线长的一半，因此侧面积之比等于相应上下底面周长和之比：
+设圆台母线长为 \(l\)，中截面的半径为 \(r=\frac{R+5}{2}\). 中截面平行于两底面且位于母线中点，所以分成的上、下两个圆台母线长均为 \(l/2\). 由圆台侧面积公式 \(S=\pi(r_1+r_2)l\)，侧面积之比等于相应上下底面半径和之比：
 \[
 \frac{5+r}{r+R}=\frac{1}{2}
 \]
@@ -316,11 +336,11 @@ C
 \end{answer}
 
 \begin{solution}
-设软件购买 \(x\) 片，磁盘购买 \(y\) 盒，则 \(x,y\) 为正整数且 \(x\geqslant3\)，\(y\geqslant2\)，并满足
+设软件购买 \(x\) 片，磁盘购买 \(y\) 盒，则 \(x\)，\(y\) 为正整数且 \(x\geqslant3\)，\(y\geqslant2\)，并满足
 \(60x+70y\leqslant500\).
-令 \(x'=x-3\)，\(y'=y-2\)，则 \(x',y'\) 为非负整数，且
+令 \(x'=x-3\)，\(y'=y-2\)，则 \(x'\)，\(y'\) 为非负整数，且
 \(6x'+7y'\leqslant18\).
-当 \(y'=0\) 时，\(x'=0,1,2,3\)，有 \(4\) 种；当 \(y'=1\) 时，\(x'=0,1\)，有 \(2\) 种；当 \(y'=2\) 时，只有 \(x'=0\)，有 \(1\) 种；\(y'\geqslant3\) 时不可能. 所以共有 \(4+2+1=7\) 种，故选 C.
+当 \(y'=0\) 时，\(x'=0\)，\(1\)，\(2\)，\(3\)，有 \(4\) 种；当 \(y'=1\) 时，\(x'=0\)，\(1\)，有 \(2\) 种；当 \(y'=2\) 时，只有 \(x'=0\)，有 \(1\) 种；\(y'\geqslant3\) 时不可能. 所以共有 \(4+2+1=7\) 种，故选 C.
 \end{solution}
 
 \section{填空题}
@@ -342,7 +362,7 @@ C
 \end{solution}
 
 \begin{problem}
-在一块并排 \(10\text{ 垄}\) 的田地中，选择 \(2\text{ 垄}\) 分别种植 \(A\)，\(B\) 两种作物，每种作物种植一垄，为有利于作物生长，要求 \(A\)，\(B\) 两种作物的间隔不小于 \(6\text{ 垄}\)，则不同的选垄方法共有\fillinblank{}\(\text{种}\).
+在一块并排 \(10\text{ 垄}\) 的田地中，选择 \(2\text{ 垄}\) 分别种植 A，B 两种作物，每种作物种植一垄，为有利于作物生长，要求 A，B 两种作物的间隔不小于 \(6\text{ 垄}\)，则不同的选垄方法共有\fillinblank{}\(\text{种}\).
 \end{problem}
 
 \begin{answer}
@@ -350,8 +370,8 @@ C
 \end{answer}
 
 \begin{solution}
-把 \(10\) 垄从左到右编号为 \(1,2,\ldots,10\). 若两种作物分别种在第 \(i,j\) 垄，则它们之间至少有 \(6\) 垄，故 \(|i-j|\geqslant7\).
-无序地选择两垄时，间距为 \(7,8,9\) 的选法数分别为 \(3,2,1\)，共有 \(6\) 对. 由于 \(A\)，\(B\) 两种作物不同，每一对垄有 \(2\) 种分配方式，所以共有 \(2(3+2+1)=12\) 种.
+把 \(10\) 垄从左到右编号为 \(1\)，\(2\)，\(\ldots\)，\(10\). 若两种作物分别种在第 \(i\)，\(j\) 垄，则它们之间至少有 \(6\) 垄，故 \(|i-j|\geqslant7\).
+无序地选择两垄时，间距为 \(7\)，\(8\)，\(9\) 的选法数分别为 \(3\)，\(2\)，\(1\)，共有 \(6\) 对. 由于 \(A\)，\(B\) 两种作物不同，每一对垄有 \(2\) 种分配方式，所以共有 \(2(3+2+1)=12\) 种.
 \end{solution}
 
 \begin{problem}
@@ -363,7 +383,7 @@ C
 \end{answer}
 
 \begin{solution}
-设 \(p=ab\). 由 \(ab=a+b+3\) 得 \(a+b=p-3\). 因为 \(a,b\) 是方程
+设 \(p=ab\). 由 \(ab=a+b+3\) 得 \(a+b=p-3\). 因为 \(a\)，\(b\) 是方程
 \(u^2-(p-3)u+p=0\) 的两个正根，所以其判别式必须非负：
 \((p-3)^2-4p=(p-1)(p-9)\geqslant0\).
 又 \(p=ab=a+b+3>3\)，故只能有 \(p\geqslant9\).
@@ -388,7 +408,11 @@ C
 \end{answer}
 
 \begin{solution}
-取直线 \(m\)，\(n\) 的方向向量分别为 \(\bs{u}\)，\(\bs{v}\). 由 \(m\perp\alpha\)，\(\bs{u}\) 平行于平面 \(\alpha\) 的法向量；由 \(n\perp\beta\)，\(\bs{v}\) 平行于平面 \(\beta\) 的法向量. 因为 \(\alpha\perp\beta\)，两平面的法向量互相垂直，所以 \(\bs{u}\cdot\bs{v}=0\)，从而 \(m\perp n\). 因此所写命题正确.
+取平面 \(\alpha\)，\(\beta\) 的法向量分别为 \(\bs{p}\)，\(\bs{q}\)，并取直线 \(m\)，\(n\) 的方向向量分别为 \(\bs{u}\)，\(\bs{v}\). 由 \(m\perp\alpha\)，直线 \(m\) 的方向与平面 \(\alpha\) 的法向量平行，故 \(\bs{u}=\lambda\bs{p}\)；同理，由 \(n\perp\beta\)，有 \(\bs{v}=\mu\bs{q}\)，其中 \(\lambda\)，\(\mu\) 均不为零. 由 \(\alpha\perp\beta\)，两平面的法向量垂直，即 \(\bs{p}\cdot\bs{q}=0\). 因而
+\[
+\bs{u}\cdot\bs{v}=\lambda\mu\left(\bs{p}\cdot\bs{q}\right)=0
+\]
+所以直线 \(m\)，\(n\) 的方向互相垂直，即 \(m\perp n\). 因此，取第 2，3，4 个论断为条件，第 1 个论断为结论，得到的命题正确.
 \end{solution}
 
 \section{解答题}
@@ -408,13 +432,25 @@ C
 \end{problem}
 
 \begin{solution}
-因为 \(0<\theta<\frac{\pi}{2}\)，复数 \(z\) 的实部和虚部均为正，所以 \(\arg z=\arctan\frac{2\sin\theta}{3\cos\theta}=\arctan\left(\frac{2}{3}\tan\theta\right)\). 令 \(t=\tan\theta>0\)，则
+因为 \(0<\theta<\frac{\pi}{2}\)，复数 \(z\) 的实部和虚部均为正，所以
+\(0<\arg z<\frac{\pi}{2}\)，且
 \[
-y'=1-\frac{\frac{2}{3}\sec^2\theta}{1+\frac{4}{9}\tan^2\theta}=\frac{3-2t^2}{9+4t^2}
+\tan(\arg z)=\frac{2\sin\theta}{3\cos\theta}=\frac{2}{3}\tan\theta
 \]
-分母恒为正，因此当 \(0<t<\sqrt{\frac{3}{2}}\) 时 \(y'>0\)，当 \(t>\sqrt{\frac{3}{2}}\) 时 \(y'<0\). 所以最大值在 \(t=\sqrt{\frac{3}{2}}=\frac{\sqrt{6}}{2}\)，即 \(\theta=\arctan\frac{\sqrt{6}}{2}\) 时取得.
-
-在此时，利用正切差角公式得 \(\tan y=\frac{t-\frac{2}{3}t}{1+\frac{2}{3}t^2}=\frac{t}{6}=\frac{\sqrt{6}}{12}\). 又 \(0<y<\frac{\pi}{2}\)，故函数的最大值为 \(\arctan\frac{\sqrt{6}}{12}\).
+令 \(t=\tan\theta>0\). 由 \(y=\theta-\arg z\) 以及正切差角公式，得
+\[
+\tan y=\frac{t-\frac{2}{3}t}{1+\frac{2}{3}t^2}=\frac{1}{3/t+2t}
+\]
+又 \(0<\arg z<\theta<\frac{\pi}{2}\)，所以 \(0<y<\frac{\pi}{2}\)，正切函数在此区间上严格递增. 由均值不等式，
+\[
+\frac{3}{t}+2t\geqslant2\sqrt{6}
+\]
+等号当且仅当 \(\frac{3}{t}=2t\)，即 \(t=\sqrt{\frac{3}{2}}=\frac{\sqrt{6}}{2}\). 因此
+\[
+\tan y\leqslant\frac{1}{2\sqrt{6}}=\frac{\sqrt{6}}{12}
+\]
+所以 \(y\) 的最大值为 \(\arctan\frac{\sqrt{6}}{12}\)，且对应
+\(\theta=\arctan\frac{\sqrt{6}}{2}\).
 \end{solution}
 
 \begin{problem}
@@ -465,8 +501,16 @@ y'=1-\frac{\frac{2}{3}\sec^2\theta}{1+\frac{4}{9}\tan^2\theta}=\frac{3-2t^2}{9+4
 
 \begin{solution}
 \begin{enumerate}
-\item 设安装 \(n\) 对轧辊，若每对轧辊都按允许的最大减薄率工作，则出口厚度为 \(\alpha(1-r_0)^n\). 要使带钢能够减薄到 \(\beta\)，必须有 \(\alpha(1-r_0)^n\leqslant\beta\). 由于 \(0<1-r_0<1\)，两边取对数时不等号方向反转，得 \(n\geqslant\frac{\lg\beta-\lg\alpha}{\lg(1-r_0)}\). 因为 \(n\) 为整数，所需轧辊对数为 \(\left\lceil\frac{\lg\beta-\lg\alpha}{\lg(1-r_0)}\right\rceil\)，也就是至少安装不小于该分数的整数对轧辊.
-\item 设带钢宽度为 \(w\)，第 \(j\) 对轧辊出口处的厚度为 \(t_j\). 由于每对轧辊的减薄率为 \(20\%\)，有 \(t_j=0.8^j t_0\). 第 \(k\) 对轧辊出口处相邻疵点的间距是轧辊周长 \(1600\mathrm{~mm}\)，所以两疵点之间带钢的体积为 \(1600t_kw\). 这段带钢经过第 \(k+1\) 至第 \(4\) 对轧辊后，输出间距为 \(L_k\)，体积变为 \(L_kt_4w\). 由带钢宽度不变且轧制过程中不考虑损耗，得 \(1600t_kw=L_kt_4w\)，即 \(L_k=1600\frac{t_k}{t_4}=\frac{1600}{0.8^{4-k}}\). 因而 \(L_1=3125\mathrm{~mm}\)，\(L_2=2500\mathrm{~mm}\)，\(L_3=2000\mathrm{~mm}\)，且 \(L_4=1600\mathrm{~mm}\)，与表中已给数值一致.
+\item 设安装 \(n\) 对轧辊. 在每对轧辊均达到允许的最大减薄率 \(r_0\) 时，厚度依次乘以 \(1-r_0\)，所以出口厚度的最小可能值为 \(\alpha(1-r_0)^n\). 在通常的减薄情形 \(0<\beta<\alpha\)、\(0<r_0<1\) 下，要使出口厚度不超过 \(\beta\)，必须且只需
+\[
+\alpha(1-r_0)^n\leqslant\beta
+\]
+由于 \(0<1-r_0<1\)，\(\lg(1-r_0)<0\)，取对数并反转不等号，得到
+\[
+n\geqslant\frac{\lg\beta-\lg\alpha}{\lg(1-r_0)}
+\]
+因此最少需要安装 \(\left\lceil\frac{\lg\beta-\lg\alpha}{\lg(1-r_0)}\right\rceil\) 对轧辊. 若 \(\beta\geqslant\alpha\)，则不安装轧辊已满足厚度要求；若 \(r_0=0\) 且 \(\beta<\alpha\)，则无法达到目标厚度.
+\item 设带钢宽度为 \(w\)，输入厚度为 \(t_0\)，第 \(j\) 对轧辊出口处的厚度为 \(t_j\). 由于每对轧辊的减薄率为 \(20\%\)，有 \(t_j=0.8^j t_0\). 第 \(k\) 对轧辊出口处相邻疵点的间距是轧辊周长 \(1600\mathrm{~mm}\)，所以两疵点之间带钢的体积为 \(1600t_kw\). 这段带钢经过第 \(k+1\) 至第 \(4\) 对轧辊后，输出间距为 \(L_k\)，体积变为 \(L_kt_4w\). 由带钢宽度不变且轧制过程中不考虑损耗，得 \(1600t_kw=L_kt_4w\)，即 \(L_k=1600\frac{t_k}{t_4}=\frac{1600}{0.8^{4-k}}\). 因而 \(L_1=3125\mathrm{~mm}\)，\(L_2=2500\mathrm{~mm}\)，\(L_3=2000\mathrm{~mm}\)，且 \(L_4=1600\mathrm{~mm}\)，与表中已给数值一致.
 \end{enumerate}
 \end{solution}
 
@@ -482,7 +526,8 @@ y'=1-\frac{\frac{2}{3}\sec^2\theta}{1+\frac{4}{9}\tan^2\theta}=\frac{3-2t^2}{9+4
 
 \begin{solution}
 \begin{enumerate}
-\item 当 \(0\leqslant y\leqslant1\) 时，图象从原点出发且斜率为 \(b^0=1\)，所以 \(x_1=1\). 当 \(1\leqslant y\leqslant2\) 时斜率为 \(b\)，故 \(x_2-x_1=1/b\)，从而 \(x_2=1+1/b\). 一般地，第 \(n\) 段线段的斜率为 \(b^n\)，所以 \(x_{n+1}-x_n=1/b^n\). 因此 \(x_n=\sum_{k=0}^{n-1}\frac{1}{b^k}=\frac{1-b^{-n}}{1-b}=\frac{b-(1/b)^{n-1}}{b-1}\)（\(n=1,2,\ldots\)）.
+\item 当 \(0\leqslant y\leqslant1\) 时，图象从原点出发且斜率为 \(b^0=1\)，所以 \(x_1=1\). 当 \(1\leqslant y\leqslant2\) 时斜率为 \(b\)，故 \(x_2-x_1=1/b\)，从而 \(x_2=1+1/b\). 一般地，第 \(n\) 段线段的斜率为 \(b^n\)，所以 \(x_{n+1}-x_n=1/b^n\). 因此
+\(x_n=\sum_{k=0}^{n-1}\frac{1}{b^k}=\frac{1-b^{-n}}{1-b^{-1}}=\frac{b-(1/b)^{n-1}}{b-1}\)，其中 \(n=1\)，\(2\)，\(\ldots\).
 \item 当 \(0\leqslant x\leqslant1\) 时，\(f(x)=x\). 当 \(n\leqslant y\leqslant n+1\) 且 \(n\geqslant1\) 时，线段经过 \((x_n,n)\)，斜率为 \(b^n\)，故 \(f(x)=n+b^n(x-x_n)\)，其中 \(x_n\leqslant x\leqslant x_{n+1}\). 由 \(x_n=\sum_{k=0}^{n-1}b^{-k}\) 可知：当 \(b>1\) 时，\(x_n\) 递增并趋近于 \(\frac{b}{b-1}\)，所以定义域为 \(\left[0,\frac{b}{b-1}\right)\)；当 \(0<b<1\) 时，\(x_n\to+\infty\)，所以定义域为 \([0,+\infty)\).
 \item 对于 \(b>1\)，在第一段 \(1<x\leqslant x_2\) 上，\(f(x)-x=(b-1)(x-1)>0\). 对于任意 \(n\geqslant2\)，因为 \(b^{-k}<1\)（\(k\geqslant1\)），所以 \(x_n<n\)，\(x_{n+1}<n+1\). 在线段 \([x_n,x_{n+1}]\) 上，\(f(x)-x\) 是关于 \(x\) 的一次函数，并且在两个端点都为正，故整个线段上均为正.
 
@@ -499,11 +544,21 @@ y'=1-\frac{\frac{2}{3}\sec^2\theta}{1+\frac{4}{9}\tan^2\theta}=\frac{3-2t^2}{9+4
 \begin{solution}
 设动点 \(B=(-1,t)\)，记 \(r=OB=\sqrt{1+t^2}\). 在三角形 \(AOB\) 中，\(OC\) 是顶角的内角平分线，由角平分线定理得 \(AC:CB=AO:OB=a:r\). 因而 \(C=\frac{rA+aB}{a+r}\)，即 \(x=\frac{a(r-1)}{a+r}\)，\(y=\frac{at}{a+r}\).
 
-由上式可得 \(a-x=\frac{a(a+1)}{a+r}\)，从而 \(r=\frac{a(x+1)}{a-x}\)，同时 \(t=\frac{(a+1)y}{a-x}\). 代入 \(r^2=1+t^2\)，得 \(a^2(x+1)^2=(a-x)^2+(a+1)^2y^2\). 整理得点 \(C\) 的轨迹方程
+由上式可得 \(a-x=\frac{a(a+1)}{a+r}\)，从而 \(r=\frac{a(x+1)}{a-x}\)，同时 \(t=\frac{(a+1)y}{a-x}\). 代入 \(r^2=1+t^2\)，得
+\[
+a^2(x+1)^2=(a-x)^2+(a+1)^2y^2
+\]
+整理得点 \(C\) 的轨迹方程
 \[
 (a-1)x^2+2ax-(a+1)y^2=0
 \]
-由参数表示还可知实际轨迹取该二次曲线中 \(0\leqslant x<a\) 的部分；若排除使三点退化的 \(B=(-1,0)\)，则相应取 \(0<x<a\).
+由参数表示还可知实际轨迹满足 \(0\leqslant x<a\). 反过来，先取二次曲线上满足 \(0<x<a\) 的一点 \((x,y)\)，分别令
+\(r=\frac{a(x+1)}{a-x}\)，\(t=\frac{(a+1)y}{a-x}\).
+此时 \(r>1\)，且由轨迹方程可得 \(r^2=1+t^2\). 取 \(B=(-1,t)\)，则 \(OB=r\)，三角形 \(AOB\) 非退化，代入角平分线定理的内分公式
+\[
+C=\frac{rA+aB}{a+r}
+\]
+即可得到原点为顶点的角平分线与 \(AB\) 的交点正是 \((x,y)\). 当 \(x=0\) 时，轨迹方程给出 \(y=0\)，对应 \(B=(-1,0)\) 时的退化交点 \(C=O\). 所以若把该退化情形计入，实际轨迹是该二次曲线中 \(0\leqslant x<a\) 的部分；若排除 \(B=(-1,0)\)，则相应取 \(0<x<a\).
 
 当 \(a>1\) 时，方程可化为 \((a-1)\left(x+\frac{a}{a-1}\right)^2-(a+1)y^2=\frac{a^2}{a-1}\)，表示双曲线. 当 \(a=1\) 时，方程为 \(x=y^2\)，表示抛物线. 当 \(0<a<1\) 时，方程可化为 \((1-a)\left(x-\frac{a}{1-a}\right)^2+(a+1)y^2=\frac{a^2}{1-a}\)，表示椭圆.
 \end{solution}

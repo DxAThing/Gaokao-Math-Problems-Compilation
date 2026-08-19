@@ -33,6 +33,17 @@
 依次为 \(\{0\}\)，\(\R\)，\(\R\)，\([-1,1]\)，\((0,+\infty)\)，\(\R\).
 \end{answer}
 
+\begin{solution}
+\begin{enumerate}
+\item 根式有意义要求被开方数非负，即 \(-x^2\geqslant0\)，所以 \(x^2\leqslant0\)，从而 \(x=0\)，定义域为 \(\{0\}\).
+\item 因为 \((-x)^2=x^2\geqslant0\) 对任意实数 \(x\) 都成立，所以定义域为 \(\R\).
+\item 对任意 \(x\in\R\)，都有 \(-1\leqslant\sin x\leqslant1\)，而 \(\arcsin t\) 在 \([-1,1]\) 上有意义，所以定义域为 \(\R\).
+\item \(\arcsin x\) 有意义的充要条件是 \(-1\leqslant x\leqslant1\)，故定义域为 \([-1,1]\).
+\item \(\lg x\) 有意义的充要条件是 \(x>0\)，故定义域为 \((0,+\infty)\).
+\item 对任意实数 \(x\)，都有 \(10^x>0\)，所以 \(\lg 10^x\) 对任意实数 \(x\) 有意义，定义域为 \(\R\).
+\end{enumerate}
+\end{solution}
+
 \section{解答题}
 
 \begin{problem}
@@ -45,8 +56,19 @@
 
 \begin{solution}
 \begin{enumerate}
-\item \(-38760\).
-\item \(-\dfrac{1}{3}\sin\dfrac{2x}{3}\).
+\item 由二项式定理，展开式的第 \(15\) 项对应 \(i\) 的幂为 \(14\)，因此
+\[
+T_{15}=\mathrm C_{20}^{14}(-1)^{20-14}\i^{14}=\mathrm C_{20}^{14}\i^{14}=-\mathrm C_{20}^{14}=-38760
+\]
+这里用到了 \(\i^{14}=\i^{12}\i^2=-1\).
+\item 令 \(u=\cos\dfrac{x}{3}\)，则 \(y=u^2\)，且
+\[
+u'=-\dfrac{1}{3}\sin\dfrac{x}{3}
+\]
+所以
+\[
+y'=2u u'=-\dfrac{2}{3}\cos\dfrac{x}{3}\sin\dfrac{x}{3}=-\dfrac{1}{3}\sin\dfrac{2x}{3}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -65,8 +87,18 @@ y=2\sin \varphi
 
 \begin{solution}
 \begin{enumerate}
-\item 直线 \(2x-3y-6=0\).
-\item 椭圆 \((x-1)^2+\dfrac{y^2}{4}=1\).
+\item 按第一行展开行列式，得
+\[
+\begin{vmatrix} 2x & 1 & 1 \\ -3y & 2 & 3 \\ 6 & 3 & 4 \end{vmatrix}
+=2x(8-9)-\bigl((-3y)\cdot4-3\cdot6\bigr)+\bigl((-3y)\cdot3-2\cdot6\bigr)
+=-2x+3y+6
+\]
+因此原方程等价于 \(2x-3y-6=0\)，即 \(y=\dfrac{2}{3}x-2\)，表示一条直线. 它与 \(x\) 轴、\(y\) 轴分别交于 \((3,0)\)、\((0,-2)\)，连接这两点即可作出图形.
+\item 由参数方程有 \(x-1=\cos\varphi\)、\(y=2\sin\varphi\)，于是
+\[
+\left(x-1\right)^2+\dfrac{y^2}{4}=\cos^2\varphi+\sin^2\varphi=1
+\]
+当 \(\varphi\) 取遍实数时，这条曲线的全部点都被取得，故它表示以 \((1,0)\) 为中心、半轴长分别为 \(1\) 和 \(2\) 的椭圆. 其顶点为 \((0,0)\)、\((2,0)\)、\((1,2)\)、\((1,-2)\)，据此即可作图.
 \end{enumerate}
 \end{solution}
 
@@ -79,7 +111,22 @@ y=2\sin \varphi
 \end{problem}
 
 \begin{solution}
-\(h=\dfrac{H}{3}\).
+设圆柱的底面半径为 \(r\)，高为 \(h\)，其中 \(0<h<H\). 由圆锥的轴截面中相似三角形关系，圆柱顶面到圆锥顶点的距离为 \(H-h\)，故
+\[
+\dfrac{r}{R}=\dfrac{H-h}{H}\Longrightarrow r=\dfrac{R(H-h)}{H}
+\]
+圆柱体积为
+\[
+V(h)=\pi r^2h=\dfrac{\pi R^2}{H^2}h(H-h)^2
+\]
+在 \(0<h<H\) 内求导，得
+\[
+V'(h)=\dfrac{\pi R^2}{H^2}(H-h)(H-3h)
+\]
+因此 \(0<h<\dfrac{H}{3}\) 时 \(V'(h)>0\)，而 \(\dfrac{H}{3}<h<H\) 时 \(V'(h)<0\). 体积在 \(h=\dfrac{H}{3}\) 处由增转减，且两端的极限体积均为 \(0\)，所以最大体积对应的圆柱高为
+\[
+h=\dfrac{H}{3}
+\]
 \end{solution}
 
 \begin{problem}
@@ -88,7 +135,26 @@ y=2\sin \varphi
 \end{problem}
 
 \begin{solution}
-\(\left|\log_a(1-x)\right|>\left|\log_a(1+x)\right|\).
+因为 \(a>0\) 且 \(a\neq1\)，由换底公式
+\[
+\left|\log_a t\right|=\dfrac{|\ln t|}{|\ln a|}
+\]
+又因为 \(0<x<1\)，所以 \(0<1-x<1<1+x\)，从而
+\[
+\left|\log_a(1-x)\right|=\dfrac{-\ln(1-x)}{|\ln a|}
+\]
+以及
+\[
+\left|\log_a(1+x)\right|=\dfrac{\ln(1+x)}{|\ln a|}
+\]
+比较分子，注意到 \(0<1-x^2<1\)，于是 \(\ln(1-x^2)<0\)，即
+\[
+-\ln(1-x)-\ln(1+x)=-\ln(1-x^2)>0
+\]
+因此
+\[
+\left|\log_a(1-x)\right|>\left|\log_a(1+x)\right|
+\]
 \end{solution}
 
 \begin{problem}
@@ -99,8 +165,27 @@ y=2\sin \varphi
 \end{problem}
 
 \begin{solution}
-\(\rho^2\cos 2\theta=\dfrac{2c^2}{\sin 2\alpha}\)，即
-\(x^2-y^2=\dfrac{2c^2}{\sin 2\alpha}\). 这是双曲线右支在角 \(AOB\) 内的一部分.
+设 \(OP=\rho\)，且以角平分线 \(OX\) 为极轴，记有向角 \(\angle XOP=\theta\). 由于 \(P\) 在角 \(AOB\) 内，\(-\alpha<\theta<\alpha\). 在直角三角形 \(OMP\)、\(ONP\) 中，分别有 \(OM=\rho\cos(\alpha-\theta)\)，\(PM=\rho\sin(\alpha-\theta)\).
+
+同理，\(ON=\rho\cos(\alpha+\theta)\)，\(PN=\rho\sin(\alpha+\theta)\).
+对角线 \(OP\) 将四边形 \(PMON\) 分成这两个直角三角形，所以
+\[
+c^2=\dfrac12OM\cdot PM+\dfrac12ON\cdot PN
+=\dfrac{\rho^2}{4}\left[\sin(2\alpha-2\theta)+\sin(2\alpha+2\theta)\right]
+\]
+再由和差化积公式，得
+\[
+c^2=\dfrac{\rho^2}{2}\sin2\alpha\cos2\theta
+\]
+故动点轨迹的极坐标方程为
+\[
+\rho^2\cos2\theta=\dfrac{2c^2}{\sin2\alpha}
+\]
+由 \(x=\rho\cos\theta\)、\(y=\rho\sin\theta\) 以及 \(\rho^2\cos2\theta=x^2-y^2\)，可化为
+\[
+x^2-y^2=\dfrac{2c^2}{\sin2\alpha}
+\]
+右端为正，且 \(P\) 在角 \(AOB\) 内时 \(x>0\)，所以它表示双曲线 \(x^2-y^2=\dfrac{2c^2}{\sin2\alpha}\) 的右支在角 \(AOB\) 内的一段.
 \end{solution}
 
 \begin{problem}
@@ -114,7 +199,33 @@ y=2\sin \varphi
 \end{problem}
 
 \begin{solution}
-\(MNPQ\) 是矩形.
+设点 \(A\)，\(B\)，\(C\)，\(D\) 的位置向量分别为 \(\bs{a}\)，\(\bs{b}\)，\(\bs{c}\)，\(\bs{d}\). 由中点公式，
+\[
+\overrightarrow{MN}=\dfrac12(\bs{c}-\bs{a})=\dfrac12\overrightarrow{AC}
+\]
+又有
+\[
+\overrightarrow{QP}=\dfrac12(\bs{c}-\bs{a})
+\]
+以及
+\[
+\overrightarrow{NP}=\dfrac12(\bs{d}-\bs{b})=\overrightarrow{MQ}
+\]
+所以 \(MNPQ\) 是平行四边形，且 \(MN\parallel AC\)、\(NP\parallel BD\).
+
+令 \(\bs{u}=\bs{c}-\bs{a}\)，\(\bs{v}=\bs{b}-\bs{a}\)，\(\bs{w}=\bs{d}-\bs{a}\). 由 \(AB=BC\)，有
+\[
+|\bs{v}|^2=|\bs{u}-\bs{v}|^2
+\]
+从而 \(\bs{u}\cdot\bs{v}=\dfrac12|\bs{u}|^2\). 由 \(CD=DA\)，有
+\[
+|\bs{u}-\bs{w}|^2=|\bs{w}|^2
+\]
+从而 \(\bs{u}\cdot\bs{w}=\dfrac12|\bs{u}|^2\). 因此
+\[
+\overrightarrow{AC}\cdot\overrightarrow{BD}=\bs{u}\cdot(\bs{w}-\bs{v})=0
+\]
+即 \(AC\perp BD\). 于是 \(MN\perp NP\)，平行四边形 \(MNPQ\) 有一个直角，故 \(MNPQ\) 是矩形.
 \end{solution}
 
 \begin{problem}
@@ -123,7 +234,48 @@ y=2\sin \varphi
 \end{problem}
 
 \begin{solution}
-第三边也与抛物线 \(x^2=2qy\) 相切.
+由于题中两式均表示非退化抛物线，\(p\)、\(q\) 均不为零. 将 \(y^2=2px\) 上参数为 \(t\) 的点写成
+\[
+T(t)=\left(\dfrac{p}{2}t^2,pt\right)
+\]
+参数为 \(u\)，\(v\) 的两点所确定的弦方程为
+\[
+2x-(u+v)y+puv=0
+\]
+若这条弦与 \(x^2=2qy\) 相切，先证明 \(u+v\neq0\). 若 \(u+v=0\)，弦方程为 \(2x-pu^2=0\)，它是竖直直线；而 \(q\neq0\) 时，抛物线 \(x^2=2qy\) 在任一点 \(\left(x_0,y_0\right)\) 处由隐式求导得 \(\dfrac{dy}{dx}=\dfrac{x_0}{q}\)，故切线方程为 \(2x_0x-2qy-x_0^2=0\)，其斜率有限，不可能是竖直直线，矛盾. 因此可写为
+\[
+y=\dfrac{2}{u+v}x+\dfrac{puv}{u+v}
+\]
+将其与 \(x^2=2qy\) 联立，所得关于 \(x\) 的二次方程必须有重根，故
+\[
+\left(\dfrac{4q}{u+v}\right)^2+\dfrac{8qpuv}{u+v}=0
+\]
+即
+\[
+puv(u+v)+2q=0
+\]
+
+设三角形三个顶点的参数为 \(u\)，\(v\)，\(w\)，不妨设边 \(T(u)T(v)\)、\(T(v)T(w)\) 与第二条抛物线相切. 由这个相切条件，分别有
+\[
+puv(u+v)+2q=0
+\]
+和
+\[
+pvw(v+w)+2q=0
+\]
+由于 \(q\neq0\)，有 \(v\neq0\)，两式相减得
+\[
+u(u+v)=w(v+w)
+\]
+即
+\[
+(u-w)(u+v+w)=0
+\]
+三角形非退化，所以 \(u\neq w\)，从而 \(u+v+w=0\). 又因 \(v\neq0\)，有 \(u+w=-v\neq0\)，因此
+\[
+puw(u+w)+2q=-puvw+2q=puv(u+v)+2q=0
+\]
+再由同一相切判定，边 \(T(u)T(w)\) 也与 \(x^2=2qy\) 相切，证毕.
 \end{solution}
 
 \section{附加题}
@@ -140,7 +292,43 @@ y=2\sin \varphi
 
 \begin{solution}
 \begin{enumerate}
-\item \(b_n=\dfrac{q\left(p^n-r^n\right)}{p-r}\).
-\item \(\dfrac{q}{\sqrt{(p-r)^2+q^2}}\).
+\item 先由 \(a_1=p\) 及递推式归纳得到
+\[
+a_n=p^n
+\]
+确实，\(a_1=p=p^1\)；若 \(a_{n-1}=p^{n-1}\)，则 \(a_n=pa_{n-1}=p^n\).
+
+据此猜想
+\[
+b_n=\dfrac{q\left(p^n-r^n\right)}{p-r}
+\]
+当 \(n=1\) 时，右端为 \(q(p-r)/(p-r)=q=b_1\)，命题成立. 假设对某个 \(n-1\geqslant1\) 成立，则
+\[
+b_n=qa_{n-1}+rb_{n-1}=qp^{n-1}+r\cdot\dfrac{q\left(p^{n-1}-r^{n-1}\right)}{p-r}
+\]
+\[
+b_n=\dfrac{q\left((p-r)p^{n-1}+rp^{n-1}-r^n\right)}{p-r}
+=\dfrac{q\left(p^n-r^n\right)}{p-r}
+\]
+所以由数学归纳法，对所有正整数 \(n\) 都有
+\[
+b_n=\dfrac{q\left(p^n-r^n\right)}{p-r}
+\]
+
+\item 因为 \(p>r>0\)，所以 \(p^n>0\)，并且
+\[
+\dfrac{b_n}{p^n}=\dfrac{q}{p-r}\left(1-\left(\dfrac{r}{p}\right)^n\right)\longrightarrow\dfrac{q}{p-r}
+\]
+于是
+\[
+\frac{b_n}{\sqrt{a_n^2+b_n^2}}
+=\frac{b_n/p^n}{\sqrt{1+(b_n/p^n)^2}}
+\]
+因此
+\[
+\lim_{n\to\infty}\frac{b_n}{\sqrt{a_n^2+b_n^2}}
+=\frac{q/(p-r)}{\sqrt{1+q^2/(p-r)^2}}
+=\dfrac{q}{\sqrt{(p-r)^2+q^2}}
+\]
 \end{enumerate}
 \end{solution}

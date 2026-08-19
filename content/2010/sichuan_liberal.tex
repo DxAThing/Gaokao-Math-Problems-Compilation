@@ -35,7 +35,7 @@ C
 \end{answer}
 
 \begin{solution}
-函数 \(y=\log_2x\) 的定义域为 \(x>0\)，且底数 \(2>1\)，所以函数在定义域上单调递增. 又因为 \(\log_2 1=0\)，图象经过点 \((1,0)\)，并在 \(x\) 轴右侧趋近于直线 \(x=0\). 具有这些特征的图象是 C，故选 C.
+函数 \(y=\log_2x\) 的定义域为 \(x>0\)，且底数 \(2>1\)，所以函数在定义域上单调递增. 又因为 \(\log_2 1=0\)，图象经过点 \((1,0)\)；当 \(x\to0^+\) 时，\(y\to-\infty\)，所以其左侧竖直渐近线为 \(x=0\). 具有这些特征的图象是 C，故选 C.
 \end{solution}
 
 \begin{problem}
@@ -61,9 +61,9 @@ C
 
 \choices
     {\(12, 24, 15, 9\)}
-    {\(9, 12, 12, 7\)}
-    {\(8, 15, 12, 5\)}
-    {\(8, 16, 10, 6\)}
+    {\(9\)，\(12\)，\(12\)，\(7\)}
+    {\(8\)，\(15\)，\(12\)，\(5\)}
+    {\(8\)，\(16\)，\(10\)，\(6\)}
 \end{problem}
 
 \begin{answer}
@@ -190,7 +190,7 @@ D
 设椭圆焦距参数为 \(c=\sqrt{a^2-b^2}\)，离心率为 \(e=c/a\)，则 \(0<e<1\). 右焦点和右准线与 \(x\) 轴的交点分别为 \(F(c,0)\) 和 \(A(a^2/c,0)\). 因为 \(F\) 在线段 \(AP\) 的垂直平分线上，所以 \(FA=FP\). 计算得
 \(FA=\frac{a^2}{c}-c=\frac{a^2-c^2}{c}=\frac{b^2}{c}=\frac{a(1-e^2)}{e}\).
 
-对椭圆上的点 \(P\)，焦距 \(FP\) 的取值范围为 \([a-c,a+c]=[a(1-e),a(1+e)]\). 因此存在这样的 \(P\) 的充要条件是 \(a(1-e)\leq\frac{a(1-e^2)}{e}\leq a(1+e)\). 左侧不等式对 \(0<e<1\) 恒成立；右侧不等式化为 \(1-e\leq e\)，即 \(e\geq1/2\). 所以离心率的取值范围为 \([1/2,1)\)，故选 D.
+对椭圆上的点 \(P\)，距离 \(FP\) 的取值范围为 \([a-c,a+c]=[a(1-e),a(1+e)]\). 因此存在这样的 \(P\) 的充要条件是 \(a(1-e)\leq\frac{a(1-e^2)}{e}\leq a(1+e)\). 左侧不等式对 \(0<e<1\) 恒成立；右侧不等式化为 \(1-e\leq e\)，即 \(e\geq1/2\). 所以离心率的取值范围为 \([1/2,1)\)，故选 D.
 \end{solution}
 
 \begin{problem}
@@ -233,7 +233,10 @@ A
 \begin{solution}
 取 \(O\) 为原点，令 \(A=(0,0,R)\)、\(B=(0,0,-R)\)，从而平面 \(\alpha\) 可取为 \(z=-R\). 由正三角形的对称性，不妨设 \(C=(R,0,-R)\)、\(D=\left(\frac R2,\frac{\sqrt3R}{2},-R\right)\).
 
-直线 \(AC\) 上的点可写为 \(A+s(C-A)\). 代入球面方程 \(x^2+y^2+z^2=R^2\)，除去 \(s=0\) 对应的点 \(A\) 后得 \(s=4/5\)，所以 \(M=\left(\frac{4R}{5},0,-\frac{3R}{5}\right)\). 同理，直线 \(AD\) 与球面的另一个交点为 \(N=\left(\frac{2R}{5},\frac{2\sqrt3R}{5},-\frac{3R}{5}\right)\).
+直线 \(AC\) 上的点可写为 \(A+s(C-A)=(sR,0,R-2sR)\). 代入球面方程得 \(s^2R^2+(R-2sR)^2=R^2\)，即 \(s(5s-4)=0\). 除去 \(s=0\) 对应的点 \(A\)，得 \(s=4/5\)，所以 \(M=\left(\frac{4R}{5},0,-\frac{3R}{5}\right)\).
+
+直线 \(AD\) 上的点可写为 \(A+s(D-A)=\left(\frac{sR}{2},\frac{\sqrt3sR}{2},R-2sR\right)\). 代入球面方程得
+\(\frac{s^2R^2}{4}+\frac{3s^2R^2}{4}+(R-2sR)^2=R^2\)，即 \(s(5s-4)=0\). 除去 \(s=0\) 对应的点 \(A\)，得 \(s=4/5\)，所以 \(N=\left(\frac{2R}{5},\frac{2\sqrt3R}{5},-\frac{3R}{5}\right)\).
 
 于是 \(\overrightarrow{OM}\cdot\overrightarrow{ON}=\frac{8R^2}{25}+\frac{9R^2}{25}=\frac{17R^2}{25}\)，且 \(|OM|=|ON|=R\). 设小圆弧 \(MN\) 所对的圆心角为 \(\theta\)，则 \(\cos\theta=\frac{\overrightarrow{OM}\cdot\overrightarrow{ON}}{|OM||ON|}=\frac{17}{25}\). 因此球面距离为 \(R\theta=R\arccos\frac{17}{25}\)，故选 A.
 \end{solution}
@@ -278,7 +281,7 @@ A
 \begin{solution}
 取 \(l\) 为 \(x\) 轴，令平面 \(\alpha\) 为 \(z=0\). 二面角为 \(60^\circ\)，所以平面 \(\beta\) 可看作平面 \(\alpha\) 绕 \(l\) 旋转 \(60^\circ\) 所得的平面. 取 \(AB\) 的单位方向向量为 \(\bs{u}=(\cos30^\circ,\sin30^\circ,0)\)，取平面 \(\beta\) 的单位法向量为 \(\bs{n}=(0,\sin60^\circ,\cos60^\circ)\).
 
-若直线与平面的夹角为 \(\theta\)，则 \(\sin\theta=|\bs{u}\cdot\bs{n}|\). 因而 \(\sin\theta=\sin30^\circ\sin60^\circ=\frac12\times\frac{\sqrt3}{2}=\frac{\sqrt3}{4}\).
+设 \(AB\) 与平面 \(\beta\) 所成的角为 \(\theta\)，则 \(\sin\theta=|\bs{u}\cdot\bs{n}|\). 因而 \(\sin\theta=\sin30^\circ\sin60^\circ=\frac12\times\frac{\sqrt3}{2}=\frac{\sqrt3}{4}\).
 \end{solution}
 
 \begin{problem}
@@ -299,7 +302,7 @@ A
 \end{answer}
 
 \begin{solution}
-对于命题 \(\circled{1}\)，任取 \(a+b\sqrt3\) 与 \(c+d\sqrt3\)，其中 \(a,b,c,d\) 为整数，则
+对于命题 \(\circled{1}\)，任取 \(a+b\sqrt3\) 与 \(c+d\sqrt3\)，其中 \(a\)，\(b\)，\(c\)，\(d\) 为整数，则
 \((a+b\sqrt3)+(c+d\sqrt3)=(a+c)+(b+d)\sqrt3\)，
 \((a+b\sqrt3)-(c+d\sqrt3)=(a-c)+(b-d)\sqrt3\)，
 以及 \((a+b\sqrt3)(c+d\sqrt3)=(ac+3bd)+(ad+bc)\sqrt3\). 三式仍属于该集合，所以命题 \(\circled{1}\) 正确.
@@ -371,7 +374,7 @@ A
 \(\cos\alpha(\cos\beta,\sin\beta)+\sin\alpha(-\sin\beta,\cos\beta)\)
 \(=(\cos\alpha\cos\beta-\sin\alpha\sin\beta,\ \cos\alpha\sin\beta+\sin\alpha\cos\beta)\).
 另一方面，该点坐标也为 \((\cos(\alpha+\beta),\sin(\alpha+\beta))\)，比较第一坐标得 \(\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta\).
-\item 比较上述旋转后点坐标的第二坐标，得 \(\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta\).
+\item 由余弦公式 \(C_{(\alpha+\beta)}\) 及诱导关系 \(\sin\theta=\cos\left(\frac{\pi}{2}-\theta\right)\)，有 \(\sin(\alpha+\beta)=\cos\left(\frac{\pi}{2}-(\alpha+\beta)\right)=\cos\left(\left(\frac{\pi}{2}-\alpha\right)+(-\beta)\right)\). 应用余弦公式，并利用 \(\cos\left(\frac{\pi}{2}-\alpha\right)=\sin\alpha\)、\(\sin\left(\frac{\pi}{2}-\alpha\right)=\cos\alpha\)、\(\cos(-\beta)=\cos\beta\)、\(\sin(-\beta)=-\sin\beta\)，得 \(\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta\).
 \end{enumerate}
 \item 因为 \(\alpha\in(\pi,\frac{3\pi}{2})\)，所以 \(\sin\alpha<0\)，从而 \(\sin\alpha=-\sqrt{1-\cos^2\alpha}=-\frac35\). 又因为 \(\beta\in(\frac\pi2,\pi)\)，所以 \(\sin\beta>0\)、\(\cos\beta<0\). 由 \(\tan\beta=-1/3\) 得
 \(\sin\beta=\frac1{\sqrt{10}}=\frac{\sqrt{10}}{10}\)，\(\cos\beta=-\frac3{\sqrt{10}}=-\frac{3\sqrt{10}}{10}\).
@@ -414,10 +417,10 @@ A
 \begin{enumerate}
 \item 设 \(P=(x,y)\). 由题意，\(P\) 到 \(F(2,0)\) 的距离是它到直线 \(l:x=\frac12\) 的距离的 \(2\) 倍，所以
 \((x-2)^2+y^2=4\left(x-\frac12\right)^2\).
-化简得 \(3x^2-y^2=3\)，即 \(E\) 的方程为 \(x^2-\frac{y^2}{3}=1\).
+化简得 \(3x^2-y^2=3\)，即 \(x^2-\frac{y^2}{3}=1\). 结合题设 \(P\) 不在 \(x\) 轴上，轨迹为 \(E: x^2-\frac{y^2}{3}=1\)，并满足 \(y\ne0\).
 \item 设过 \(F\) 的直线不是竖直直线，写成 \(y=k(x-2)\). 因为 \(B\)、\(C\) 不在 \(x\) 轴上，所以 \(k\ne0\). 设它与 \(E\) 的交点 \(B\)、\(C\) 的横坐标分别为 \(x_1\)、\(x_2\)，则 \(x_1\)、\(x_2\) 是方程
 \((3-k^2)x^2+4k^2x-(4k^2+3)=0\)
-的两个根. 因而
+的两个根. 由于 \(B\)、\(C\) 是两个交点，必须有 \(3-k^2\ne0\)，由韦达定理
 \(x_1+x_2=-\frac{4k^2}{3-k^2}\)，\(x_1x_2=-\frac{4k^2+3}{3-k^2}\).
 
 直线 \(A(-1,0)B\) 与 \(x=\frac12\) 的交点记为 \(M\)，直线 \(A C\) 与该直线的交点记为 \(N\). 由相似三角形或直线参数方程，二者的纵坐标分别为

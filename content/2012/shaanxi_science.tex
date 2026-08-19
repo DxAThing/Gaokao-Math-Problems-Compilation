@@ -14,6 +14,14 @@
 
 \answer{C}
 
+\begin{solution}
+由 \(\lg x>0\) 得 \(x>1\)，由 \(x^2\leqslant4\) 得 \(-2\leqslant x\leqslant2\). 因此
+\[
+M\cap N=(1,2]
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
 下列函数中，既是奇函数又是增函数的为（\quad）
 
@@ -26,8 +34,21 @@
 
 \answer{D}
 
+\begin{solution}
+逐项判断：\(y=x+1\) 不是奇函数；\(y=-x^3\) 虽为奇函数，但为减函数；\(y=1/x\) 是奇函数. 对于 \(y=x|x|\)，有
+\[
+x|x|=
+\begin{cases}
+x^2,&x\geqslant0,\\
+-x^2,&x<0.
+\end{cases}
+\]
+故它是奇函数. 若 \(x<y\) 且二者同为非负数，则 \(x|x|=x^2<y^2=y|y|\)；若二者同为负数，则 \(-x^2<-y^2\)；若 \(x<0\leqslant y\)，则 \(x|x|<0\leqslant y|y|\). 所以 \(x|x|\) 严格递增.
+函数 \(y=1/x\) 在 \((0,+\infty)\) 上严格递减，因而不是定义域上的增函数. 故选 D.
+\end{solution}
+
 \begin{problem}
-设 \(a\)，\(b \in \R\)，\(\i\) 是虚数单位，则“\(ab = 0\)”是“复数 \(a + \frac{b}{\i}\) 为纯虚数”的（\quad）
+设 \(a\)，\(b\in\R\)，\(\i\) 是虚数单位，则“\(ab = 0\)”是“复数 \(a + \frac{b}{\i}\) 为纯虚数”的（\quad）
 
 \choices
     {充分不必要条件}
@@ -37,6 +58,11 @@
 \end{problem}
 
 \answer{B}
+
+\begin{solution}
+因为 \(1/\i=-\i\)，所以复数为 \(a-b\i\). 它为纯虚数时实部必须为零，即 \(a=0\)，从而 \(ab=0\)，故 \(ab=0\) 是必要条件.
+但 \(ab=0\) 不一定推出 \(a=0\)，例如 \(a=1\)，\(b=0\) 时复数为实数 \(1\)，不是纯虚数. 因此这是必要不充分条件，故选 B.
+\end{solution}
 
 \begin{problem}
 已知圆 \(C: x^{2} + y^{2} - 4x = 0\)，\(l\) 是过点 \(P(3,0)\) 的直线，则（\quad）
@@ -49,6 +75,15 @@
 \end{problem}
 
 \answer{A}
+
+\begin{solution}
+将圆方程化为
+\[
+(x-2)^2+y^2=4
+\]
+所以圆心为 \(O(2,0)\)，半径为 \(2\). 点 \(P(3,0)\) 到圆心的距离为 \(1<2\)，故 \(P\) 在圆内. 过圆内一点的任意直线都与圆相交，因此 \(l\) 与 \(C\) 相交.
+故选 A.
+\end{solution}
 
 \begin{problem}
 如图，在空间直角坐标系中有直三棱柱 \(ABC - A_{1}B_{1}C_{1}\)，\(CA = CC_{1} = 2CB\)，则直线 \(BC_{1}\) 与直线 \(AB_{1}\) 夹角的余弦值为（\quad）
@@ -64,6 +99,20 @@
 
 \answer{A}
 
+\begin{solution}
+取图中坐标原点为 \(C\)，令 \(CA\) 沿 \(x\) 轴正向，\(CC_1\) 沿 \(y\) 轴正向，\(CB\) 沿 \(z\) 轴正向. 由 \(CA=CC_1=2CB\)，可设
+\(C=(0,0,0)\)，\(A=(2,0,0)\)，\(B=(0,0,1)\)，\(C_1=(0,2,0)\)，\(B_1=(0,2,1)\).
+于是
+\(\overrightarrow{BC_1}=(0,2,-1)\)，\(\overrightarrow{AB_1}=(-2,2,1)\).
+两向量的夹角 \(\theta\) 满足
+\[
+\cos\theta=\frac{\left|\overrightarrow{BC_1}\cdot\overrightarrow{AB_1}\right|}
+{|\overrightarrow{BC_1}|\,|\overrightarrow{AB_1}|}
+=\frac{|3|}{\sqrt5\cdot3}=\frac{\sqrt5}{5}
+\]
+故选 A.
+\end{solution}
+
 \begin{problem}
 从甲，乙两个城市分别随机抽取 \(16\text{ 台}\) 自动售货机. 对其销售额进行统计，统计数据用茎叶图表示（如图所示）. 设甲，乙两组数据的平均数分别为 \(\overline{x}_{\text{甲}}\)，\(\overline{x}_{\text{乙}}\)，中位数分别为 \(m_{\text{甲}}\)，\(m_{\text{乙}}\)，则（\quad）
 
@@ -71,11 +120,11 @@
 \begin{tabular}{c|c|c}
 甲 & & 乙 \\
 \hline
-\(8\quad 6\quad 5\) & 0 & \\
-\(8\quad 8\quad 4\quad 0\quad 0\) & 1 & \(0\quad 2\quad 8\) \\
-\(7\quad 5\quad 2\) & 2 & \(0\quad 2\quad 3\quad 3\quad 7\) \\
-\(8\quad 0\quad 0\) & 3 & \(1\quad 2\quad 4\quad 4\quad 8\) \\
-\(3\quad 1\) & 4 & \(2\quad 3\quad 8\)
+\(8\)，\(6\)，\(5\) & 0 & \\
+\(8\)，\(8\)，\(4\)，\(0\)，\(0\) & 1 & \(0\)，\(2\)，\(8\) \\
+\(7\)，\(5\)，\(2\) & 2 & \(0\)，\(2\)，\(3\)，\(3\)，\(7\) \\
+\(8\)，\(0\)，\(0\) & 3 & \(1\)，\(2\)，\(4\)，\(4\)，\(8\) \\
+\(3\quad 1\) & 4 & \(2\)，\(3\)，\(8\)
 \end{tabular}
 \end{center}
 
@@ -88,6 +137,21 @@
 
 \answer{B}
 
+\begin{solution}
+由茎叶图读出甲组数据的总和为
+\[
+8+6+5+18+18+14+10+10+27+25+22+38+30+30+43+41=345
+\]
+故 \(\overline{x}_{\text{甲}}=345/16\). 乙组数据的总和为
+\[
+10+12+18+20+22+23+23+27+31+32+34+34+38+42+43+48=457
+\]
+故 \(\overline{x}_{\text{乙}}=457/16\)，从而 \(\overline{x}_{\text{甲}}<\overline{x}_{\text{乙}}\).
+
+甲组从小到大排列后第8、9个数为 \(18,22\)，所以 \(m_{\text{甲}}=20\)；乙组第8、9个数为 \(27,31\)，所以 \(m_{\text{乙}}=29\). 因而 \(m_{\text{甲}}<m_{\text{乙}}\).
+故选 B.
+\end{solution}
+
 \begin{problem}
 设函数 \( f(x) = x\e^{x} \)，则（\quad）
 
@@ -99,6 +163,14 @@
 \end{problem}
 
 \answer{D}
+
+\begin{solution}
+\[
+f'(x)=\e^x(x+1)
+\]
+因为 \(\e^x>0\)，所以当 \(x<-1\) 时 \(f'(x)<0\)，当 \(x>-1\) 时 \(f'(x)>0\). 因此函数在 \((-\infty,-1)\) 上递减，在 \((-1,+\infty)\) 上递增，故 \(x=-1\) 是极小值点.
+故选 D.
+\end{solution}
 
 \begin{problem}
 两人进行乒乓球比赛，先赢 3 局者获胜，决出胜负为止，则所有可能出现的情形（各人输赢局次的不同视为不同情形）共有（\quad）
@@ -113,6 +185,14 @@
 
 \answer{C}
 
+\begin{solution}
+设最后获胜者为甲. 若甲在第 \(3+r\) 局获胜，其中 \(r=0\)，\(1\)，\(2\)，则在最后一局以前甲已胜 \(2\) 局、乙胜 \(r\) 局，前 \(2+r\) 局的排列数为 \(\binom{2+r}{2}\). 甲最后获胜的情形数为
+\[
+\binom22+\binom32+\binom42=1+3+6=10
+\]
+乙最后获胜的情形数相同，故总数为 \(2\times10=20\). 故选 C.
+\end{solution}
+
 \begin{problem}
 在 \(\triangle ABC\) 中，角 \(A\)，\(B\)，\(C\) 所对的边长分别为 \(a\)，\(b\)，\(c\)，若 \(a^2 + b^2 = 2c^2\)，则 \(\cos C\) 的最小值为（\quad）
 
@@ -124,6 +204,20 @@
 \end{problem}
 
 \answer{C}
+
+\begin{solution}
+由余弦定理，
+\[
+c^2=a^2+b^2-2ab\cos C
+\]
+代入 \(a^2+b^2=2c^2\)，得
+\[
+\cos C=\frac{a^2+b^2}{4ab}
+=\frac14\left(\frac ab+\frac ba\right)
+\]
+由基本不等式 \(a/b+b/a\geqslant2\)，有 \(\cos C\geqslant1/2\). 当且仅当 \(a=b\) 时取等号，且此时条件可成立，所以最小值为 \(1/2\).
+故选 C.
+\end{solution}
 
 \begin{problem}
 如图所示是用模拟方法估计圆周率 \(\pi\) 值的程序框图，\(P\) 表示估计结果，则图中空白框内应填入（\quad）
@@ -140,6 +234,16 @@
 
 \answer{D}
 
+\begin{solution}
+每次随机点落在单位正方形内，落入四分之一单位圆内的概率等于面积比
+\[
+\frac{\frac14\pi}{1}=\frac\pi4
+\]
+设 \(M\) 为落入四分之一圆内的点数，\(N\) 为落在其外的点数，则 \(M+N=1000\). 模拟得到的频率为 \(M/1000\)，因此
+\(\frac\pi4\approx\frac{M}{1000}\)，\(\pi\approx\frac{4M}{1000}\).
+故选 D.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -148,11 +252,30 @@
 
 \answer{\(1 + \frac{1}{2^{2}} + \frac{1}{3^{2}} + \frac{1}{4^{2}} + \frac{1}{5^{2}} + \frac{1}{6^{2}} < \frac{11}{6}\)}
 
+\begin{solution}
+第一个不等式含有 \(2\) 到 \(2\) 的平方倒数，右端为 \(3/2\)；第二个含有 \(2\) 到 \(3\) 的平方倒数，右端为 \(5/3\). 因此第 \(n\) 个不等式的规律为
+\[
+1+\sum_{k=2}^{n+1}\frac1{k^2}<\frac{2n+1}{n+1}
+\]
+取 \(n=5\)，得到
+\[
+1+\frac1{2^2}+\frac1{3^2}+\frac1{4^2}+\frac1{5^2}+\frac1{6^2}<\frac{11}{6}
+\]
+\end{solution}
+
 \begin{problem}
 \((a + x)^{5}\) 展开式中 \(x^{2}\) 的系数为 10，则实数 \(a\) 的值为\fillinblank{}.
 \end{problem}
 
 \answer{1}
+
+\begin{solution}
+二项式展开式中 \(x^2\) 的项为
+\[
+\binom52a^3x^2=10a^3x^2
+\]
+由题意 \(10a^3=10\)，故 \(a^3=1\). 因为 \(a\) 为实数，所以 \(a=1\).
+\end{solution}
 
 \begin{problem}
 如图是抛物线形拱桥，当水面在 \(l\) 时，拱顶离水面 \(2\text{ 米}\)，水面宽 \(4\text{ 米}\)，水位下降 \(1\text{ 米}\) 后，水面宽\fillinblank{}\(\text{米}\).
@@ -161,6 +284,14 @@
 \end{problem}
 
 \answer{\(2\sqrt{6}\)}
+
+\begin{solution}
+取拱顶为原点，令竖直向下为 \(y\) 轴正向，设拱桥截面的抛物线为 \(y=kx^2\). 原水面距拱顶 \(2\) 米且宽为 \(4\) 米，所以点 \((2,2)\) 在抛物线上，从而 \(2=4k\)，即 \(k=1/2\).
+
+水位下降 \(1\) 米后，水面对应 \(y=3\). 设此时水面半宽为 \(x_0\)，则
+\(3=\frac12x_0^2\)，\(x_0=\sqrt6\).
+所以水面宽为 \(2x_0=2\sqrt6\) 米.
+\end{solution}
 
 \begin{problem}
 设函数 \( f(x) = \begin{cases}
@@ -171,6 +302,18 @@
 
 \answer{2}
 
+\begin{solution}
+在 \(x=1\) 处，\(f(1)=0\)，且右支 \(y=\ln x\) 的导数为 \(1/x\)，所以切线方程为
+\[
+y=x-1
+\]
+左支直线 \(y=-2x-1\) 与 \(x\) 轴交于 \((-1/2,0)\)，与切线交于
+\(-2x-1=x-1\Longrightarrow x=0\)，\(y=-1\)
+即交点为 \((0,-1)\). 对 \(0<x<1\)，有 \(\ln x<x-1\)，右支 \(y=\ln x\) 与切线在该侧不围成有界区域；因此题目所指的封闭区域由左支直线、\(x\) 轴和切线围成，边界是三条线段，顶点为
+\(\left(-\frac12,0\right)\)，\((0,-1)\)，\((1,0)\).
+线性函数 \(z=x-2y\) 在三角形上最大值必在顶点取得. 三个顶点处的值分别为 \(-1/2\)，\(2\)，\(1\)，故最大值为 \(2\).
+\end{solution}
+
 \section{选做题}
 
 \begin{problem}[A]
@@ -178,6 +321,17 @@
 \end{problem}
 
 \answer{\(-2 \leqslant a \leqslant 4\)}
+
+\begin{solution}
+由三角不等式，
+\[
+|x-a|+|x-1|\geqslant|a-1|
+\]
+当 \(x\) 取在 \(a\) 与 \(1\) 之间时等号成立，所以存在这样的 \(x\) 当且仅当 \(|a-1|\leqslant3\). 解得
+\[
+-2\leqslant a\leqslant4
+\]
+\end{solution}
 
 \reuseproblemnumber
 \begin{problem}[B]
@@ -189,12 +343,41 @@
 
 \answer{5}
 
+\begin{solution}
+因为 \(AB\) 是直径，所以 \(\angle ADB=90^\circ\). 又 \(DE\perp AB\)，故在直角三角形 \(ADB\) 中，\(DE\) 是斜边 \(AB\) 上的高. 由射影定理
+\[
+DE^2=AE\cdot EB=1\times(6-1)=5
+\]
+在直角三角形 \(DEB\) 中，\(EF\perp DB\)，所以 \(EF\) 是斜边 \(DB\) 上的高，再由射影定理
+\[
+DE^2=DF\cdot DB
+\]
+因此 \(DF\cdot DB=5\).
+\end{solution}
+
 \reuseproblemnumber
 \begin{problem}[C]
 直线 \(2\rho\cos \theta = 1\) 与圆 \(\rho = 2\cos \theta\) 相交的弦长为\fillinblank{}.
 \end{problem}
 
 \answer{\(\sqrt{3}\)}
+
+\begin{solution}
+由极坐标与直角坐标的关系 \(x=\rho\cos\theta\)，直线方程
+\[
+2\rho\cos\theta=1
+\]
+化为 \(x=1/2\). 圆方程
+\[
+\rho=2\cos\theta
+\]
+两边乘以 \(\rho\)，得 \(\rho^2=2\rho\cos\theta\)，即
+\(x^2+y^2=2x\)，\((x-1)^2+y^2=1\).
+圆心为 \((1,0)\)，半径为 \(1\). 圆心到直线 \(x=1/2\) 的距离为 \(1/2\)，所以弦长为
+\[
+2\sqrt{1^2-\left(\frac12\right)^2}=\sqrt3
+\]
+\end{solution}
 
 \section{解答题}
 
@@ -207,7 +390,25 @@
 \end{enumerate}
 \end{problem}
 
-\solution{短答案：\(f(x)=2\sin\left(2x-\frac{\pi}{6}\right)+1\)，\(\alpha=\frac{\pi}{3}\).}
+\begin{solution}
+由最大值 \(A+1=3\)，得 \(A=2\). 正弦函数相邻两条对称轴之间的距离为半个周期，即 \(\pi/\omega\)，所以
+\(\frac\pi\omega=\frac\pi2\)，\(\omega=2\).
+故
+\[
+f(x)=2\sin\left(2x-\frac\pi6\right)+1
+\]
+
+又 \(f(\alpha/2)=2\)，所以
+\[
+2\sin\left(\alpha-\frac\pi6\right)+1=2,
+\quad\text{即}\quad
+\sin\left(\alpha-\frac\pi6\right)=\frac12
+\]
+由 \(0<\alpha<\pi/2\) 得 \(-\pi/6<\alpha-\pi/6<\pi/3\). 在此区间内满足正弦值为 \(1/2\) 的只有 \(\alpha-\pi/6=\pi/6\)，故
+\[
+\alpha=\frac\pi3
+\]
+\end{solution}
 
 \begin{problem}
 设 \(\{a_{n}\}\) 是公比不为 \(1\) 的等比数列，其前 \(n\) 项和为 \(S_{n}\)，且 \(a_{5}\)，\(a_{3}\)，\(a_{4}\) 成等差数列.
@@ -218,7 +419,30 @@
 \end{enumerate}
 \end{problem}
 
-\solution{短答案：公比为 \(2\).}
+\begin{solution}
+设公比为 \(q\). 由等比数列定义，\(a_1\ne0\) 且 \(q\ne0\). 因为公比不为 \(1\)，由 \(a_5\)，\(a_3\)，\(a_4\) 成等差数列，得
+\[
+2a_3=a_5+a_4
+\]
+写成首项与公比的形式并约去非零因子 \(a_1q^2\)，有
+\[
+2a_1q^2=a_1q^4+a_1q^3
+\Longrightarrow q^2+q-2=0
+\]
+所以 \(q=1\) 或 \(q=-2\)，舍去题设不允许的 \(q=1\)，从而
+\[
+q=-2
+\]
+
+由 \(a_{k+1}=qa_k\)、\(a_{k+2}=q^2a_k\)，可得
+\[
+S_{k+2}+S_{k+1}-2S_k
+=(S_{k+2}-S_k)+(S_{k+1}-S_k)
+=a_{k+1}+a_{k+2}+a_{k+1}
+=(2+q)a_{k+1}=0
+\]
+因此 \(2S_k=S_{k+2}+S_{k+1}\)，即按 \(S_{k+2}\)，\(S_k\)，\(S_{k+1}\) 的顺序成等差数列.
+\end{solution}
 
 \begin{problem}
 \begin{enumerate}
@@ -230,7 +454,29 @@
 \bitmapfigure[max width=0.36\linewidth]{img/2012/shaanxi_science/q18_fig1.png}
 \end{problem}
 
-\solution{短答案：逆命题为真命题.}
+\begin{solution}
+取 \(\pi\) 的一个法向量为 \(\bs{n}\)，取直线 \(b\)、其在 \(\pi\) 上的投影 \(c\) 的方向向量分别为 \(\bs{b}\)、\(\bs{c}\). 由于 \(c\) 是 \(b\) 在 \(\pi\) 上的投影，\(\bs{b}\) 可分解为
+\[
+\bs{b}=\bs{c}+\lambda\bs{n}
+\]
+其中 \(\lambda\) 为实数. 对于平面 \(\pi\) 内的直线 \(a\)，其方向向量 \(\bs{a}\) 满足 \(\bs{a}\cdot\bs{n}=0\).
+
+若 \(a\perp b\)，则 \(\bs{a}\cdot\bs{b}=0\)，从而
+\[
+\bs{a}\cdot\bs{c}
+=\bs{a}\cdot(\bs{b}-\lambda\bs{n})
+=\bs{a}\cdot\bs{b}-\lambda\bs{a}\cdot\bs{n}=0
+\]
+因此 \(a\perp c\)，原命题为真.
+
+逆命题为：若 \(a\perp c\)，则 \(a\perp b\). 若 \(\bs{a}\cdot\bs{c}=0\)，则
+\[
+\bs{a}\cdot\bs{b}
+=\bs{a}\cdot(\bs{c}+\lambda\bs{n})
+=\bs{a}\cdot\bs{c}+\lambda\bs{a}\cdot\bs{n}=0
+\]
+所以 \(a\perp b\)，逆命题为真命题.
+\end{solution}
 
 \begin{problem}
 已知椭圆 \(C_1: \frac{x^2}{4} + y^2 = 1\)，椭圆 \(C_2\) 以 \(C_1\) 的长轴为短轴，且与 \(C_1\) 有相同的离心率.
@@ -241,7 +487,36 @@
 \end{enumerate}
 \end{problem}
 
-\solution{短答案：\(C_2:\frac{x^2}{4}+\frac{y^2}{16}=1\)；\(AB:y=x\) 或 \(y=-x\).}
+\begin{solution}
+椭圆 \(C_1\) 的长半轴为 \(2\)，短半轴为 \(1\)，离心率为
+\[
+e_1=\sqrt{1-\frac{1^2}{2^2}}=\frac{\sqrt3}{2}
+\]
+设 \(C_2\) 的短半轴沿 \(x\) 轴，且为 \(2\)，长半轴为 \(a\)，其中 \(a>2\). 则
+\[
+e_2=\sqrt{1-\frac{2^2}{a^2}}
+\]
+由 \(e_2=e_1\)，得
+\(1-\frac4{a^2}=\frac34\)，\(a^2=16\).
+因此
+\[
+C_2:\frac{x^2}{4}+\frac{y^2}{16}=1
+\]
+
+设 \(A=(x,y)\)，由 \(A\in C_1\) 得
+\[
+\frac{x^2}{4}+y^2=1
+\]
+由 \(\overrightarrow{OB}=2\overrightarrow{OA}\)，得 \(B=(2x,2y)\). 代入 \(C_2\) 得
+\[
+\frac{(2x)^2}{4}+\frac{(2y)^2}{16}=1,
+\quad\text{即}\quad x^2+\frac{y^2}{4}=1
+\]
+两式相减，得到 \(x^2-y^2=0\)，所以 \(y=x\) 或 \(y=-x\). 这两条直线均有满足条件的交点，故
+\[
+AB:y=x\quad\text{或}\quad y=-x
+\]
+\end{solution}
 
 \begin{problem}
 某银行柜台设有一个服务窗口，假设顾客办理业务所需的时间互相独立，且都是整数分钟，对以往顾客办理业务所需的时间统计结果如下：
@@ -262,7 +537,43 @@
 \end{enumerate}
 \end{problem}
 
-\solution{短答案：第一问 \(0.22\)；第二问 \(P(X=0)=0.5\)，\(P(X=1)=0.49\)，\(P(X=2)=0.01\)，\(E(X)=0.51\).}
+\begin{solution}
+设一个顾客办理业务所需时间为随机变量 \(Y\)，则
+\(P(Y=1)=0.1\)，\(P(Y=2)=0.4\)，\(P(Y=3)=0.3\)，\(P(Y=4)=0.1\)，\(P(Y=5)=0.1\).
+
+\begin{enumerate}
+\item 第三个顾客开始办理业务的时刻为前两个顾客办理时间之和. 要恰好等待 \(4\) 分钟，需
+\((Y_1,Y_2)=(1,3)\)，\((2,2)\)，\((3,1)\).
+利用独立性，所求概率为
+\[
+0.1\times0.3+0.4\times0.4+0.3\times0.1=0.22
+\]
+
+\item 在前 \(2\) 分钟内，若第一个顾客所需时间大于 \(2\)，则 \(X=0\)，故
+\[
+P(X=0)=0.3+0.1+0.1=0.5
+\]
+若第一个顾客用时为 \(1\) 分钟且第二个顾客用时大于 \(1\) 分钟，或者第一个顾客用时为 \(2\) 分钟，则恰好完成一个顾客，故
+\[
+P(X=1)=0.1\times0.9+0.4=0.49
+\]
+只有前两个顾客都用时 \(1\) 分钟时才能完成两个顾客，所以
+\[
+P(X=2)=0.1^2=0.01
+\]
+因此分布列为
+\[
+\begin{tabular}{c|ccc}
+X&0&1&2\\ \hline
+P&0.5&0.49&0.01
+\end{tabular}
+\]
+数学期望为
+\[
+E(X)=0\times0.5+1\times0.49+2\times0.01=0.51
+\]
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 设函数 \(f_{n}(x) = x^{n} + bx + c\)（\(n \in \N_+\)，\(b\)，\(c \in \R\)）.
@@ -274,4 +585,44 @@
 \end{enumerate}
 \end{problem}
 
-\solution{短答案：第二问 \(-2\leqslant b\leqslant2\)；第三问数列 \(x_2,x_3,\ldots\) 为递增数列.}
+\begin{solution}
+\begin{enumerate}
+\item 当 \(n\geqslant2\)、\(b=1\)、\(c=-1\) 时，
+\[
+f_n(x)=x^n+x-1
+\]
+有
+\(f_n\left(\frac12\right)=\frac1{2^n}-\frac12<0\)，\(f_n(1)=1>0\).
+由零点存在定理，\(f_n\) 在 \((1/2,1)\) 内至少有一个零点. 又
+\(f_n'(x)=nx^{n-1}+1>0\)，\(\left(\frac12<x<1\right)\)
+所以 \(f_n\) 在该区间严格递增，零点至多一个. 因而存在唯一零点.
+
+\item 此时 \(f_2(x)=x^2+bx+c\). 条件等价于该函数在 \([-1,1]\) 上的最大值与最小值之差不超过 \(4\). 令 \(t=|b|\).
+
+当 \(0\leqslant t\leqslant2\) 时，顶点 \(-b/2\) 在区间 \([-1,1]\) 内，故
+\(\max f_2=1+t+c\)，\(\min f_2=c-\frac{b^2}{4}\)
+从而
+\[
+\max f_2-\min f_2=1+t+\frac{t^2}{4}\leqslant4
+\]
+该不等式等价于 \((t+6)(t-2)\leqslant0\)，在本情形下恒等价于 \(t\leqslant2\).
+
+当 \(t\geqslant2\) 时，抛物线顶点在区间端点之外，函数在 \([-1,1]\) 上单调，故值域长度为 \(2t\). 条件给出 \(2t\leqslant4\)，仍得 \(t\leqslant2\).
+
+综上 \(|b|\leqslant2\)，即
+\[
+-2\leqslant b\leqslant2
+\]
+
+\item 由 \(x_n\) 是 \(f_n\) 的零点，
+\(x_n^n+x_n-1=0\)，\(x_n^n=1-x_n\).
+于是
+\[
+f_{n+1}(x_n)
+=x_n^{n+1}+x_n-1
+=x_n(1-x_n)+x_n-1
+=-(1-x_n)^2<0
+\]
+因为 \(x_n\in(1/2,1)\). 而 \(f_{n+1}\) 在 \((1/2,1)\) 上严格递增，且其唯一零点为 \(x_{n+1}\)，所以 \(x_n<x_{n+1}\). 因此数列 \(x_2\)，\(x_3\)，\(\ldots\) 为严格递增数列.
+\end{enumerate}
+\end{solution}

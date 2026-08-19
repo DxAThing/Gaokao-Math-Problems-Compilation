@@ -11,11 +11,18 @@
 
 \begin{solution}
 \begin{enumerate}
-\item
-把一个多项式分解成几个单项式或多项式连乘的形式，叫做多项式的因式分解.
+\item 把一个多项式表示成几个整式的积的形式，这种变形叫做多项式的因式分解. 这里的变形必须保持恒等，即分解式展开后应当还原为原多项式.
 
-\item
-\(18a^3-48a^2b+32ab^2=2a\left(9a^2-24ab+16b^2\right)=2a\left(3a-4b\right)^2\).
+\item 原多项式的三项都有公因式 \(2a\)，先提取公因式，得
+\[
+18a^3-48a^2b+32ab^2=2a\left(9a^2-24ab+16b^2\right)
+\]
+括号内的三项式是完全平方式，因为 \(9a^2=(3a)^2\)，\(16b^2=(-4b)^2\)，且中间项
+\(-24ab=2\cdot3a\cdot(-4b)\). 因此
+\[
+18a^3-48a^2b+32ab^2=2a\left(3a-4b\right)^2
+\]
+展开右边可得 \(2a(9a^2-24ab+16b^2)=18a^3-48a^2b+32ab^2\)，所以分解正确.
 \end{enumerate}
 \end{solution}
 
@@ -29,14 +36,21 @@
 
 \begin{solution}
 \begin{enumerate}
-\item
-含有未知数的等式叫做方程.
+\item 含有未知数的等式叫做方程.
 
-\item
-使方程两端相等的未知数的值叫方程的解.
+\item 使方程两边的值相等的未知数的值，叫做这个方程的解.
 
-\item
-解方程：\(\frac{2}{x-2}+x=\frac{x}{x-2}\). 去分母，得 \(2+x\left(x-2\right)=x\)，整理得 \(x^2-3x+2=0\)，\(\left(x-2\right)\left(x-1\right)=0\)，所以 \(x_1=2\)，\(x_2=1\). 把 \(x=2\) 代入原方程分母为零，所以 \(x=2\) 是增根，舍去. 故原方程的解是 \(x=1\).
+\item 原方程的分母不能为零，所以定义域为 \(x\ne2\). 在这个条件下，\(x-2\ne0\)，可以将方程两边同乘 \(x-2\)，得
+\[
+2+x\left(x-2\right)=x
+\]
+移项并合并同类项，得 \(x^2-3x+2=0\)，因式分解为
+\[
+\left(x-2\right)\left(x-1\right)=0
+\]
+所以去分母后得到的候选值为 \(x=2\) 或 \(x=1\). 其中 \(x=2\) 不满足原方程的定义域，是去分母产生的增根，必须舍去.
+
+代入剩余候选值 \(x=1\) 检验，原方程左边为 \(\frac{2}{1-2}+1=-1\)，右边为 \(\frac{1}{1-2}=-1\)，等式成立. 故原方程的解为 \(x=1\).
 \end{enumerate}
 \end{solution}
 
@@ -45,11 +59,23 @@
 \end{problem}
 
 \begin{solution}
-因为 \(\angle C\) 是直角，所以 \(\triangle ABC\) 是直角三角形. 由勾股定理得 \(BC=\sqrt{AB^2-AC^2}=\sqrt{81-36}=3\sqrt{5}\).
+\(\angle C=90^\circ\)，所以 \(\triangle ABC\) 是以 \(AB\) 为斜边的直角三角形. 由勾股定理，
+\[
+BC^2=AB^2-AC^2=9^2-6^2=45
+\]
+因为 \(BC\) 是线段长，取正平方根，得 \(BC=\sqrt{45}=3\sqrt{5}\).
 
 \solutionfigure{\bitmapfigure[max width=4.0cm]{img/1977/jilin/q3_solution_fig1.png}}
 
-又因为 \(CD\) 是 \(AB\) 边上的高，所以 \(\frac{1}{2}AB\cdot CD=\frac{1}{2}AC\cdot BC\)，因此 \(CD=\frac{AC\cdot BC}{AB}=\frac{6\cdot3\sqrt{5}}{9}=2\sqrt{5}\).
+由于 \(CD\perp AB\)，三角形 \(ABC\) 的面积既可用两直角边表示，也可用斜边及其高表示，因此
+\[
+\frac{1}{2}AC\cdot BC=\frac{1}{2}AB\cdot CD
+\]
+约去 \(\frac{1}{2}\)，并注意 \(AB\ne0\)，得
+\[
+CD=\frac{AC\cdot BC}{AB}=\frac{6\cdot3\sqrt{5}}{9}=2\sqrt{5}
+\]
+所以 \(CD=2\sqrt{5}\).
 \end{solution}
 
 \begin{problem}
@@ -63,14 +89,18 @@
 \end{problem}
 
 \begin{solution}
-方程 \(x^2+4x+k=0\) 的判别式是 \(\Delta=4^2-4k=4\left(4-k\right)\).
+这是关于 \(x\) 的一元二次方程，且二次项系数为 \(1\ne0\)，判别式为
+\[
+\Delta=4^2-4k=4\left(4-k\right)
+\]
+一元二次方程有两个不相等的实根、两个相等的实根或没有实根，分别对应 \(\Delta>0\)、\(\Delta=0\) 和 \(\Delta<0\).
 
 \begin{enumerate}
-\item 当 \(k<4\) 时，\(\Delta>0\)，方程有两个不相等的实根.
+\item 有两个不相等的实根时，必须且只需 \(\Delta>0\). 于是 \(4\left(4-k\right)>0\)，由于 \(4>0\)，所以 \(4-k>0\)，即 \(k<4\).
 
-\item 当 \(k=4\) 时，\(\Delta=0\)，方程有两个相等的实根.
+\item 有相等的实根时，必须且只需 \(\Delta=0\). 于是 \(4\left(4-k\right)=0\)，所以 \(k=4\). 此时根为 \(x=-2\)，确实为相等的实根.
 
-\item 当 \(k>4\) 时，\(\Delta<0\)，方程没有实根.
+\item 没有实根时，必须且只需 \(\Delta<0\). 于是 \(4\left(4-k\right)<0\)，由于 \(4>0\)，所以 \(4-k<0\)，即 \(k>4\).
 \end{enumerate}
 \end{solution}
 
@@ -83,15 +113,20 @@
 
 \begin{solution}
 \begin{enumerate}
-\item
-平面上的动点按照一定规律运动所描绘的图形，就叫做动点在平面上的轨迹.
+\item 平面上的动点按照一定规律运动所描绘的图形，叫做这个动点在平面上的轨迹.
 
-\item
-港口所建的两灯塔 \(A\)，\(B\) 之间距离为一定长，暗礁区所张的角 \(\angle AMB\) 也已知，为一定角. 因此 \(\angle AMB\) 的顶点 \(M\) 的轨迹是以 \(AB\) 为弦，圆周角为定角 \(\angle AMB\) 所划的圆弧，暗礁区就在圆弧内（如图）.
+\item 设 \(\theta=\angle AMB\). 因为两灯塔 \(A\)，\(B\) 固定，所以弦 \(AB\) 的长度固定；又因为 \(\theta\) 是定角，满足 \(\angle AXB=\theta\) 的动点 \(X\) 的轨迹是以 \(AB\) 为弦、以 \(\theta\) 为圆周角的圆弧. 取与暗礁区同侧的圆弧 \(\widehat{AMB}\)，它就是暗礁区边界上各点的轨迹.
 
-根据圆外任一点到两弦连线的夹角都小于该弦上的圆周角这一道理，所以在 \(\angle ASB<\angle AMB\) 时船总是在暗礁区 \(AMB\) 的外面，所以船就可以安全进港.
-\end{enumerate}
 \solutionfigure{\bitmapfigure[max width=4.2cm]{img/1977/jilin/q5_solution_fig1.png}}
+
+在这条圆弧上，任一点对弦 \(AB\) 所张的角都等于 \(\theta\). 设 \(S\) 在由弦 \(AB\) 和该圆弧围成的圆弧段内部，直线 \(SA\)，\(SB\) 分别与圆再次交于 \(P\)，\(Q\)，则 \(S\) 是两弦 \(AP\)，\(BQ\) 的交点. 记不含点 \(M\) 的弧 \(AB\) 为 \(\widehat{AB}\)，并用 \(m(\widehat{AB})\) 表示其弧的度数，则圆周角定理给出 \(\angle AMB=\frac{1}{2}m(\widehat{AB})=\theta\). 由两弦在圆内相交所成的角等于所对两弧和的一半，
+\[
+\angle ASB=\frac{1}{2}\left(m(\widehat{AB})+m(\widehat{PQ})\right)>\frac{1}{2}m(\widehat{AB})=\angle AMB=\theta
+\]
+因为 \(m(\widehat{PQ})>0\)，所以圆弧段内部是视角大于 \(\theta\) 的区域；圆弧上视角等于 \(\theta\)，而视角小于 \(\theta\) 的点只能在该圆弧段外部.
+
+因此，若船只 \(S\) 满足 \(\angle ASB<\angle AMB=\theta\)，则 \(S\) 不在暗礁区的圆弧段内部，而在其外部，故船只可以安全进港.
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -99,11 +134,23 @@
 \end{problem}
 
 \begin{solution}
-原式 \(=8x^{-\frac{1}{3}}\sqrt{y^{-\frac{1}{3}}x^4\sqrt{y^{\frac{4}{3}}}}\).
+设原式为 \(E\). 在实数范围内，\(x^{-\frac{1}{3}}=1/\sqrt[3]{x}\)，所以必须有 \(x\ne0\). 同理，\(y^{-\frac{1}{3}}\) 要求 \(y\ne0\). 若 \(y<0\)，令 \(t=\sqrt[3]{y}<0\)，则
+\(y^{-\frac{1}{3}}=\frac{1}{t}\)，\(\sqrt{y^{\frac{4}{3}}}=\sqrt{t^4}=t^2\)
+从而 \(y^{-\frac{1}{3}}\sqrt{y^{\frac{4}{3}}}=t=y^{\frac{1}{3}}<0\). 此时外层根式的被开方数为 \(x^4y^{\frac{1}{3}}<0\)，没有实数意义. 因此原式的实数定义域为 \(x\ne0\)，\(y>0\)，以下化简均在此条件下进行.
+
+由 \(y>0\)，有 \(\sqrt{y^{\frac{4}{3}}}=y^{\frac{2}{3}}\)，故内层根式中的被开方数为
 \[
-=8x^{-\frac{1}{3}}\left[y^{-\frac{1}{3}}x^4\left(y^{\frac{4}{3}}\right)^{\frac{1}{2}}\right]^{\frac{1}{2}}=8x^{-\frac{1}{3}}x^2y^{-\frac{1}{6}}y^{\frac{1}{3}}
-=8x^{\frac{5}{3}}y^{\frac{1}{6}}=8x\sqrt[6]{x^4y}
+y^{-\frac{1}{3}}x^4\sqrt{y^{\frac{4}{3}}}=y^{-\frac{1}{3}}x^4y^{\frac{2}{3}}=x^4y^{\frac{1}{3}}
 \]
+因为 \(x^2\geqslant0\)，所以 \(\sqrt{x^4}=\sqrt{(x^2)^2}=x^2\). 从而
+\[
+E=8x^{-\frac{1}{3}}\sqrt{x^4y^{\frac{1}{3}}}=8x^{-\frac{1}{3}}x^2y^{\frac{1}{6}}
+\]
+再利用 \(x^{-\frac13}x^2=x^{\frac53}\) 化简得
+\[
+E=8x^{\frac{5}{3}}y^{\frac{1}{6}}=8x\sqrt[6]{x^4y}
+\]
+所以原式的值为 \(8x^{\frac{5}{3}}y^{\frac{1}{6}}\)，也可写成 \(8x\sqrt[6]{x^4y}\).
 \end{solution}
 
 \begin{problem}
@@ -111,7 +158,14 @@
 \end{problem}
 
 \begin{solution}
-根据对数的换底公式，有 \(\log_a b\cdot\log_b c\cdot\log_c a=\frac{\lg b}{\lg a}\cdot\frac{\lg c}{\lg b}\cdot\frac{\lg a}{\lg c}=1\).
+在对数有定义的条件下，须有 \(a>0\)，\(b>0\)，\(c>0\)，且 \(a\ne1\)，\(b\ne1\)，\(c\ne1\). 因而 \(\ln a\)，\(\ln b\)，\(\ln c\) 都非零. 由换底公式，
+\(\log_a b=\frac{\ln b}{\ln a}\)，\(\log_b c=\frac{\ln c}{\ln b}\)，\(\log_c a=\frac{\ln a}{\ln c}\).
+将三式相乘，分子分母中的同一非零因子逐一约去，得到
+\[
+\log_a b\cdot\log_b c\cdot\log_c a
+=\frac{\ln b}{\ln a}\cdot\frac{\ln c}{\ln b}\cdot\frac{\ln a}{\ln c}=1
+\]
+所以在原等式有意义的全部条件下，等式成立.
 \end{solution}
 
 \begin{problem}
@@ -119,15 +173,19 @@
 \end{problem}
 
 \begin{solution}
-左边
+原等式有意义时，左边分母必须不为零；同时右边的正切也要求 \(\cos\left(\beta-\alpha\right)\ne0\). 先用和角公式化简分子：
 \[
-\begin{aligned}
-&=\frac{\sin\alpha\cos\beta+\cos\alpha\sin\beta-2\sin\alpha\cos\beta}{2\sin\alpha\sin\beta+\cos\alpha\cos\beta-\sin\alpha\sin\beta}\\
-&=\frac{\cos\alpha\sin\beta-\sin\alpha\cos\beta}{\cos\alpha\cos\beta+\sin\alpha\sin\beta}=\frac{\sin\left(\beta-\alpha\right)}{\cos\left(\beta-\alpha\right)}\\
-&=\tan\left(\beta-\alpha\right)=\text{右边}.
-\end{aligned}
+\sin\left(\alpha+\beta\right)-2\sin\alpha\cos\beta=\sin\alpha\cos\beta+\cos\alpha\sin\beta-2\sin\alpha\cos\beta=\sin\left(\beta-\alpha\right)
 \]
-所以原等式成立.
+再化简分母：
+\[
+2\sin\alpha\sin\beta+\cos\left(\alpha+\beta\right)=2\sin\alpha\sin\beta+\cos\alpha\cos\beta-\sin\alpha\sin\beta=\cos\left(\beta-\alpha\right)
+\]
+因此，当 \(\cos\left(\beta-\alpha\right)\ne0\) 时，左边等于
+\[
+\frac{\sin\left(\beta-\alpha\right)}{\cos\left(\beta-\alpha\right)}=\tan\left(\beta-\alpha\right)
+\]
+正是右边，故原等式成立. 反过来，原左边的分母已经化为 \(\cos\left(\beta-\alpha\right)\)，所以这个条件也正好保证两边都有定义.
 \end{solution}
 
 \begin{problem}
@@ -135,7 +193,15 @@
 \end{problem}
 
 \begin{solution}
-因为 \(a_1=2\)，\(S_3=26\)，根据等比数列前 \(n\) 项和的公式，有 \(26=\frac{2\left(1-q^3\right)}{1-q}\)，即 \(1+q+q^2=13\)，\(q^2+q-12=0\)，\(\left(q+4\right)\left(q-3\right)=0\). 所以 \(q_1=-4\)，\(q_2=3\).
+等比数列的公比为 \(q\)，所以前三项依次为 \(a_1=2\)，\(a_2=2q\)，\(a_3=2q^2\). 直接按前三项求和，不需要另行假设 \(q\ne1\)，因而
+\[
+S_3=a_1+a_2+a_3=2+2q+2q^2=26
+\]
+两边除以 \(2\)，得 \(q^2+q+1=13\)，即 \(q^2+q-12=0\). 因式分解为
+\[
+\left(q+4\right)\left(q-3\right)=0
+\]
+所以 \(q=-4\) 或 \(q=3\). 验算可得，\(q=-4\) 时前三项为 \(2\)，\(-8\)，\(32\)，和为 \(26\)；\(q=3\) 时前三项为 \(2\)，\(6\)，\(18\)，和也为 \(26\). 故 \(q=-4\) 或 \(q=3\).
 \end{solution}
 
 \begin{problem}
@@ -145,14 +211,41 @@
 \begin{solution}
 \solutionfigure{\bitmapfigure[max width=5.8cm]{img/1977/jilin/q10_solution_fig1.png}}
 
-在 \(\triangle ACD\) 中，\(\angle CAD=180^\circ-\angle ACD-\angle ADC=180^\circ-105^\circ-30^\circ=45^\circ\). 根据正弦定理，\(AC=\frac{200\sin30^\circ}{\sin45^\circ}=100\sqrt{2}\text{ 米}\).
-在 \(\triangle BDC\) 中，\(\angle CBD=180^\circ-\angle BDC-\angle BCD=180^\circ-120^\circ-15^\circ=45^\circ\). 由正弦定理，\(BC=\frac{200\sin120^\circ}{\sin45^\circ}=100\sqrt{6}\text{ 米}\).
-在 \(\triangle ACB\) 中，\(\angle ACB=\angle ACD-\angle BCD=105^\circ-15^\circ=90^\circ\). 因此，由勾股定理，
+在 \(\triangle ACD\) 中，三角形内角和为 \(180^\circ\)，所以
+\[
+\angle CAD=180^\circ-\angle ACD-\angle ADC=180^\circ-105^\circ-30^\circ=45^\circ
+\]
+由正弦定理，边 \(AC\) 对应角 \(\angle ADC=30^\circ\)，边 \(CD\) 对应角 \(\angle CAD=45^\circ\)，故
+\[
+\frac{AC}{\sin30^\circ}=\frac{CD}{\sin45^\circ}
+\]
+代入 \(CD=200\text{ 米}\)、\(\sin30^\circ=\frac12\)、\(\sin45^\circ=\frac{\sqrt2}{2}\)，得
+\[
+AC=\frac{200\sin30^\circ}{\sin45^\circ}=\frac{200\cdot\frac12}{\frac{\sqrt2}{2}}=100\sqrt2\text{ 米}
+\]
+
+在 \(\triangle BDC\) 中，同理有
+\[
+\angle CBD=180^\circ-\angle BDC-\angle BCD=180^\circ-120^\circ-15^\circ=45^\circ
+\]
+边 \(BC\) 对应角 \(\angle BDC=120^\circ\)，边 \(CD\) 对应角 \(\angle CBD=45^\circ\)，由正弦定理得
+\[
+\frac{BC}{\sin120^\circ}=\frac{CD}{\sin45^\circ}
+\]
+代入 \(\sin120^\circ=\frac{\sqrt3}{2}\) 和 \(\sin45^\circ=\frac{\sqrt2}{2}\)，得
+\[
+BC=\frac{200\sin120^\circ}{\sin45^\circ}=\frac{200\cdot\frac{\sqrt3}{2}}{\frac{\sqrt2}{2}}=100\sqrt6\text{ 米}
+\]
+
+由原图中各射线的位置，射线 \(CB\) 位于 \(\angle ACD\) 的内部，所以
+\[
+\angle ACB=\angle ACD-\angle BCD=105^\circ-15^\circ=90^\circ
+\]
+于是 \(\triangle ACB\) 是直角三角形，且 \(AB\) 是斜边. 再由勾股定理，
 \[
 AB=\sqrt{AC^2+BC^2}=\sqrt{\left(100\sqrt{2}\right)^2+\left(100\sqrt{6}\right)^2}=200\sqrt{2}\text{ 米}
 \]
-
-答：\(AB\) 长为 \(200\sqrt{2}\text{ 米}\).
+所以 \(AB=200\sqrt{2}\text{ 米}\).
 \end{solution}
 
 \begin{problem}
@@ -160,22 +253,35 @@ AB=\sqrt{AC^2+BC^2}=\sqrt{\left(100\sqrt{2}\right)^2+\left(100\sqrt{6}\right)^2}
 \end{problem}
 
 \begin{solution}
-根据已知，圆的方程可写为 \(\left(x-4\right)^2+\left(y-7\right)^2=R^2\). 因为它与直线 \(4x+3y-12=0\) 相切，因此圆心 \(\left(4,7\right)\) 到直线 \(4x+3y-12=0\) 的距离等于圆半径 \(R\)，即
+设圆心为 \(O\left(4,7\right)\)，切点为 \(H\). 圆与直线相切，所以过圆心向切线作垂线，垂足 \(H\) 就是切点，且 \(OH\) 是圆的半径. 因此圆心到直线的距离就是半径，
 \[
-R=\frac{\left|4\times4+3\times7-12\right|}{\sqrt{4^2+3^2}}=\frac{25}{5}=5
+R=\frac{\left|4\cdot4+3\cdot7-12\right|}{\sqrt{4^2+3^2}}=\frac{25}{5}=5
 \]
-从而圆的方程是 \(\left(x-4\right)^2+\left(y-7\right)^2=5^2\).
 
-下面求圆和直线的交点坐标 \(\left(x,y\right)\)，解如下方程组
+直线 \(4x+3y-12=0\) 的一个法向量为 \(\left(4,3\right)\). 从点 \(O\) 沿法向量方向到直线的有向位移系数为
 \[
-\begin{cases}
-\left(x-4\right)^2+\left(y-7\right)^2=5^2,\\
-4x+3y-12=0.
-\end{cases}
+\frac{4\cdot4+3\cdot7-12}{4^2+3^2}=\frac{25}{25}=1
 \]
-解之，得两组相同解 \(x_1=x_2=0\)，\(y_1=y_2=4\)，表示 \(\left(0,4\right)\) 是切点. 因此过圆心 \(\left(4,7\right)\) 和切点 \(\left(0,4\right)\) 的直线方程为 \(\frac{y-4}{x-0}=\frac{7-4}{4-0}\)，即 \(3x-4y+16=0\).
+所以由点到直线的垂足公式，切点为
+\[
+H=\left(4,7\right)-\frac{4\cdot4+3\cdot7-12}{4^2+3^2}\left(4,3\right)
+\]
+代入计算，得
+\[
+H=\left(4,7\right)-1\left(4,3\right)=\left(0,4\right)
+\]
+检验可知，\(4\cdot0+3\cdot4-12=0\)，且 \(OH=\sqrt{(4-0)^2+(7-4)^2}=\sqrt{4^2+3^2}=5=R\)，故 \(H\) 确为切点.
+
+直线 \(OH\) 经过 \(\left(4,7\right)\) 和 \(\left(0,4\right)\)，其斜率为
+\[
+\frac{7-4}{4-0}=\frac34
+\]
+由点斜式，
+\[
+y-4=\frac{3}{4}x
+\]
+整理得过圆心和切点的直线方程为 \(3x-4y+16=0\).
 \end{solution}
-
 
 \section{参考题}
 
@@ -184,9 +290,32 @@ R=\frac{\left|4\times4+3\times7-12\right|}{\sqrt{4^2+3^2}}=\frac{25}{5}=5
 \end{problem}
 
 \begin{solution}
-原方程可化为 \(4\left(x^2+2x+1\right)+9\left(y^2-4y+4\right)-36=0\)，即 \(4\left(x+1\right)^2+9\left(y-2\right)^2=36\). 标准式为 \(\frac{\left(x+1\right)^2}{3^2}+\frac{\left(y-2\right)^2}{2^2}=1\). 此方程表示以 \(\left(-1,2\right)\) 为中心的椭圆. 长半轴 \(a=3\)，短半轴 \(b=2\). 其离心率为
+分别对含 \(x\) 和含 \(y\) 的项配方，先有
 \[
-e=\frac{c}{a}=\frac{\sqrt{a^2-b^2}}{a}=\frac{\sqrt{3^2-2^2}}{3}=\frac{\sqrt{5}}{3}
+4x^2+8x=4\left(x+1\right)^2-4
+\]
+\[
+9y^2-36y=9\left(y-2\right)^2-36
+\]
+代回原方程，得
+\[
+4\left(x+1\right)^2+9\left(y-2\right)^2-36=0
+\]
+即
+\[
+4\left(x+1\right)^2+9\left(y-2\right)^2=36
+\]
+两边除以 \(36\)，得到标准方程
+\[
+\frac{\left(x+1\right)^2}{3^2}+\frac{\left(y-2\right)^2}{2^2}=1
+\]
+这是一个中心为 \(\left(-1,2\right)\)、长轴平行于 \(x\) 轴的椭圆. 因为标准方程中分母较大的数为 \(a^2=3^2\)，较小的数为 \(b^2=2^2\)，所以长半轴 \(a=3\)，短半轴 \(b=2\)，长轴长为 \(2a=6\). 焦距的一半满足
+\[
+c=\sqrt{a^2-b^2}=\sqrt{3^2-2^2}=\sqrt{5}
+\]
+故离心率为
+\[
+e=\frac{c}{a}=\frac{\sqrt{5}}{3}
 \]
 \end{solution}
 
@@ -202,11 +331,36 @@ e=\frac{c}{a}=\frac{\sqrt{a^2-b^2}}{a}=\frac{\sqrt{3^2-2^2}}{3}=\frac{\sqrt{5}}{
 
 \begin{solution}
 \begin{enumerate}
-\item \(y'=6x+\frac{1}{2\sqrt{x}}=6x+\frac{\sqrt{x}}{2x}\).
+\item 函数 \(y=3x^2+\sqrt{x}+5\) 的定义域为 \(x\geqslant0\). 在可导的点上，逐项求导：\(\left(3x^2\right)'=6x\)，\(\left(\sqrt{x}\right)'=\frac{1}{2\sqrt{x}}\)，常数项的导数为 \(0\). 由于 \(x=0\) 处 \(\frac{1}{2\sqrt{x}}\) 不存在，所以导数公式的适用范围为 \(x>0\)，从而
+\[
+y'=6x+\frac{1}{2\sqrt{x}}
+\]
 
-\item \(y'=\frac{10x^9}{x^{10}}+\frac{\frac{1}{x}}{\ln x}=\frac{10}{x}+\frac{1}{x\ln x}\).
+\item \(\ln\left(x^{10}\right)\) 与 \(\ln\left(\ln x\right)\) 同时有意义时，首先需要 \(x^{10}>0\)，即 \(x\ne0\)，并且需要 \(\ln x>0\)，即 \(x>1\). 因此函数的定义域为 \(x>1\). 由链式法则，
+\[
+\frac{\mathrm{d}}{\mathrm{d}x}\ln\left(x^{10}\right)=\frac{10x^9}{x^{10}}=\frac{10}{x}
+\]
+且
+\[
+\frac{\mathrm{d}}{\mathrm{d}x}\ln\left(\ln x\right)=\frac{1}{\ln x}\cdot\frac{1}{x}=\frac{1}{x\ln x}
+\]
+因此
+\[
+y'=\frac{10}{x}+\frac{1}{x\ln x}
+\]
 
-\item \(y'=x\cdot x^{x-1}+x^x\ln x=x^x\left(1+\ln x\right)\).
+\item 在实数范围内按通常的指数函数定义，\(x^x\) 取对数求导时要求 \(x>0\). 令 \(y=x^x>0\)，两边取自然对数，得
+\[
+\ln y=x\ln x
+\]
+两边对 \(x\) 求导，左边为 \(\frac{y'}{y}\)，右边由乘积法则为 \(\ln x+x\cdot\frac1x=\ln x+1\)，所以
+\[
+\frac{y'}{y}=\ln x+1
+\]
+代回 \(y=x^x\)，得到
+\[
+y'=x^x\left(1+\ln x\right)
+\]
 \end{enumerate}
 \end{solution}
 
@@ -221,9 +375,40 @@ e=\frac{c}{a}=\frac{\sqrt{a^2-b^2}}{a}=\frac{\sqrt{3^2-2^2}}{3}=\frac{\sqrt{5}}{
 
 \begin{solution}
 \begin{enumerate}
-\item 原方程可写成 \(\frac{\mathrm{d}y}{2+y}=\frac{\mathrm{d}x}{3-x}\). 两边积分，得 \(\ln\left|2+y\right|=-\ln\left|3-x\right|+C_1\)（\(C_1\) 为任意常数）.
-于是 \(2+y=\frac{C}{3-x}\). 因此通解为 \(y=\frac{C}{3-x}-2\)（其中 \(C=\e^{C_1}\)，是任意常数）.
+\item 方程右端的分母要求 \(x\ne3\). 先考虑 \(y\ne-2\) 的情形，此时可以把含 \(y\) 的因子分离到左边，得
+\[
+\frac{\mathrm{d}y}{y+2}=\frac{\mathrm{d}x}{3-x}
+\]
+两边积分，注意 \(\int\frac{\mathrm{d}x}{3-x}=-\ln\left|3-x\right|\)，得到
+\[
+\ln\left|y+2\right|=-\ln\left|3-x\right|+C_1
+\]
+移项并合并对数，得
+\[
+\ln\left|\left(y+2\right)\left(3-x\right)\right|=C_1
+\]
+因此 \(\left(y+2\right)\left(3-x\right)\) 为常数，记该常数为 \(C\)，可得
+\[
+y=\frac{C}{3-x}-2
+\]
+上面的分离变量暂时排除了 \(y=-2\)，但把 \(C=0\) 代入所得公式正好给出常值解 \(y=-2\)，所以通解为
+\[
+y=\frac{C}{3-x}-2
+\]
+其中 \(C\) 为任意常数，定义在不包含 \(x=3\) 的区间上. 直接求导可验证
+\(y'=\frac{C}{(3-x)^2}\)，\(\frac{2+y}{3-x}=\frac{2+\frac{C}{3-x}-2}{3-x}=\frac{C}{(3-x)^2}\)
+故该通解确实满足原方程.
 
-\item 这是一个二阶常系数齐次线性方程，其特征方程 \(\lambda^2-2\lambda-3=0\) 的根是 \(3\)，\(-1\)，因此原方程的通解为 \(y=C_1\e^{3x}+C_2\e^{-x}\)，其中 \(C_1\)，\(C_2\) 是任意常数.
+\item 设方程有形如 \(y=\e^{\lambda x}\) 的非零解，则
+\(y'=\lambda\e^{\lambda x}\)，\(y''=\lambda^2\e^{\lambda x}\).
+代入方程并约去 \(\e^{\lambda x}\ne0\)，得特征方程
+\[
+\lambda^2-2\lambda-3=0=\left(\lambda-3\right)\left(\lambda+1\right)
+\]
+所以两个不同的特征根为 \(\lambda_1=3\)，\(\lambda_2=-1\)，对应的两个线性无关解为 \(\e^{3x}\) 和 \(\e^{-x}\). 二阶齐次线性微分方程的通解是这两个线性无关解的任意线性组合，因而
+\[
+y=C_1\e^{3x}+C_2\e^{-x}
+\]
+其中 \(C_1\)，\(C_2\) 为任意常数. 代入原方程时，\(\e^{3x}\) 项的系数为 \(9-2\cdot3-3=0\)，\(\e^{-x}\) 项的系数为 \(1-2\cdot(-1)-3=0\)，故该式满足原方程；由于特征根已给出两个线性无关解，它就是原方程的通解.
 \end{enumerate}
 \end{solution}

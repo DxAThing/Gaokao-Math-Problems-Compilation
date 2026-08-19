@@ -1,5 +1,7 @@
 \chapter{1958年地区不明卷}
 
+\section{解答题}
+
 \begin{problem}
 若 \(\tan \alpha=\frac{1}{2}\)，\(\tan \beta=\frac{1}{3}\)，并且 \(\alpha\) 与 \(\beta\) 均为锐角. 求证：\(\alpha+\beta=45^\circ\).
 \end{problem}
@@ -11,9 +13,9 @@
 \tan\left(\alpha+\beta\right)
 =\frac{\tan\alpha+\tan\beta}{1-\tan\alpha\tan\beta}
 =\frac{\frac{1}{2}+\frac{1}{3}}{1-\frac{1}{6}}
-=\frac{5}{6}\div\frac{5}{6}=1.
+=\frac{5}{6}\div\frac{5}{6}=1
 \]
-因为 \(\alpha\)，\(\beta\) 均为锐角，所以 \(0^\circ<\alpha+\beta<180^\circ\). 在此范围内，满足 \(\tan\theta=1\) 的角只有 \(\theta=45^\circ\)，故 \(\alpha+\beta=45^\circ\).
+因为 \(\alpha\)，\(\beta\) 均为锐角，所以 \(0^\circ<\alpha+\beta<180^\circ\). 方程 \(\tan\theta=1\) 的一般解为 \(\theta=45^\circ+180^\circ n\)，其中 \(n\in\Z\). 结合 \(\alpha+\beta\) 的范围，只能取 \(n=0\)，故 \(\alpha+\beta=45^\circ\).
 \end{solution}
 
 \begin{problem}
@@ -25,10 +27,11 @@
 \[
 0=\left(k+1\right)^2-4\left(2k-1\right)\left(k-4\right)
 =k^2+2k+1-4\left(2k^2-9k+4\right)
-=-7k^2+38k-15.
+=-7k^2+38k-15
 \]
 于是 \(7k^2-38k+15=0\)，即 \((7k-3)(k-5)=0\).
-所以 \(k=\frac{3}{7}\) 或 \(k=5\). 这两个值都满足 \(2k-1\ne0\)，且判别式确为零，故所求为 \(k=\frac{3}{7},5\).
+所以 \(k=\frac{3}{7}\) 或 \(k=5\). 当 \(k=\frac{3}{7}\) 时，\(2k-1=-\frac{1}{7}\ne0\)；当 \(k=5\) 时，\(2k-1=9\ne0\). 两个值都使原式确为二次方程，且判别式为零. 相应的二重根为
+\(x=-\frac{k+1}{2\left(2k-1\right)}\)，分别为 \(5\) 和 \(-\frac{1}{3}\)，故所求为 \(k=\frac{3}{7}\)，\(5\).
 \end{solution}
 
 \begin{problem}
@@ -36,23 +39,20 @@
 \end{problem}
 
 \begin{solution}
-令 \(u=\sqrt[3]{4a^3+x}\)，\(v=\sqrt[3]{4a^3-x}\).
+在实数范围内，令 \(u=\sqrt[3]{4a^3+x}\)，\(v=\sqrt[3]{4a^3-x}\).
 原方程变为 \(u+v=2a\)，并且
 \[
-u^3+v^3=\left(4a^3+x\right)+\left(4a^3-x\right)=8a^3.
+u^3+v^3=\left(4a^3+x\right)+\left(4a^3-x\right)=8a^3
 \]
-对 \(u+v=2a\) 两边立方，利用 \((u+v)^3=u^3+v^3+3uv(u+v)\)，得
-\[
-8a^3=8a^3+3uv\cdot2a.
-\]
-所以
-\[
-6auv=0.
-\]
+对 \(u+v=2a\) 两边立方，利用 \(\left(u+v\right)^3=u^3+v^3+3uv\left(u+v\right)\)，得
+\(8a^3=8a^3+3uv\cdot2a\)，
+所以 \(6auv=0\).
 
-分情况讨论. 当 \(a=0\) 时，原方程为 \(\sqrt[3]{x}+\sqrt[3]{-x}=0\)，任意实数 \(x\) 都满足，因此此时解为任意实数 \(x\). 当 \(a\ne0\) 时，由 \(6auv=0\) 得 \(uv=0\)，所以 \(u=0\) 或 \(v=0\). 于是
-\(u=0\) 时，\(4a^3+x=0\)，从而 \(x=-4a^3\)；\(v=0\) 时，\(4a^3-x=0\)，从而 \(x=4a^3\).
-代回原方程检验：当 \(x=4a^3\) 时，左边为 \(\sqrt[3]{8a^3}+0=2a\)；当 \(x=-4a^3\) 时，左边为 \(0+\sqrt[3]{8a^3}=2a\). 两值均满足原方程.
+分情况讨论. 当 \(a=0\) 时，原方程为 \(\sqrt[3]{x}+\sqrt[3]{-x}=0\). 由于实立方根是奇函数，\(\sqrt[3]{-x}=-\sqrt[3]{x}\)，所以任意实数 \(x\) 都满足原方程.
+
+当 \(a\ne0\) 时，由 \(6auv=0\) 得 \(uv=0\)，所以 \(u=0\) 或 \(v=0\). 若 \(u=0\)，则 \(4a^3+x=0\)，从而 \(x=-4a^3\)；若 \(v=0\)，则 \(4a^3-x=0\)，从而 \(x=4a^3\).
+
+反代检验：当 \(x=4a^3\) 时，左边为 \(\sqrt[3]{8a^3}+0=2a\)；当 \(x=-4a^3\) 时，左边为 \(0+\sqrt[3]{8a^3}=2a\)，两值均满足原方程.
 
 故当 \(a\ne0\) 时，解为 \(x=\pm4a^3\)；当 \(a=0\) 时，任意实数 \(x\) 都是解.
 \end{solution}

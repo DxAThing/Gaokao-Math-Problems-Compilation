@@ -3,12 +3,19 @@
 \section{填空题}
 
 \begin{problem}
-已知集合 \(A = \{-1, 1, 2, 4\}\)，\(B = \{-1, 0, 2\}\). 则 \(A \cap B =\fillinblank{}.\)
+已知集合 \(A = \{-1, 1, 2, 4\}\)，\(B = \{-1, 0, 2\}\). 则 \(A \cap B =\fillinblank{}\).
 \end{problem}
 
 \begin{answer}
 \(\{-1,2\}\)
 \end{answer}
+
+\begin{solution}
+交集中的元素必须同时属于集合 \(A\) 和集合 \(B\). 在 \(A\) 的四个元素中，只有 \(-1\) 和 \(2\) 也属于 \(B\)，所以
+\[
+A\cap B=\{-1,2\}
+\]
+\end{solution}
 
 \begin{problem}
 函数 \(f(x)=\log_{5}(2x+1)\) 的单调增区间是\fillinblank{}.
@@ -18,6 +25,15 @@
 \(\left(-\frac{1}{2},+\infty\right)\)
 \end{answer}
 
+\begin{solution}
+对数的真数必须为正，因此定义域满足
+\(2x+1>0\)，\(x>-\frac{1}{2}\).
+由于底数 \(5>1\)，函数 \(\log_{5}u\) 在 \(u>0\) 上单调递增，而 \(2x+1\) 也是增函数，所以 \(f(x)\) 在整个定义域上单调递增. 故单调增区间为
+\[
+\left(-\frac{1}{2},+\infty\right)
+\]
+\end{solution}
+
 \begin{problem}
 设复数 \(z\) 满足 \(\i(z+1)=-3+2\i\)（\(\i\) 是虚数单位），则 \(z\) 的实部是\fillinblank{}.
 \end{problem}
@@ -25,6 +41,18 @@
 \begin{answer}
 1
 \end{answer}
+
+\begin{solution}
+由
+\[
+\i(z+1)=-3+2\i
+\]
+且 \(1/\i=-\i\)，得
+\[
+z+1=\frac{-3+2\i}{\i}=(-3+2\i)(-\i)=2+3\i
+\]
+因此 \(z=1+3\i\)，所以 \(z\) 的实部为 \(1\).
+\end{solution}
 
 \begin{problem}
 根据如图所示伪代码，当输入 \(a\)，\(b\) 分别为 \(2, 3\) 时，最后输出的 \(m\) 的值是\fillinblank{}.
@@ -36,6 +64,13 @@
 3
 \end{answer}
 
+\begin{solution}
+输入 \(a=2\)，\(b=3\) 后，先判断 \(a>b\). 因为 \(2>3\) 不成立，所以执行伪代码的否则分支，将 \(b\) 赋给 \(m\). 因而最后输出
+\[
+m=b=3
+\]
+\end{solution}
+
 \begin{problem}
 从 \(1\)，\(2\)，\(3\)，\(4\) 这四个数中一次随机取两个数，则其中一个数是另一个的两倍的概率是\fillinblank{}.
 \end{problem}
@@ -43,6 +78,17 @@
 \begin{answer}
 \(\frac{1}{3}\)
 \end{answer}
+
+\begin{solution}
+从四个数中一次取两个数，取出的无序数对共有
+\[
+\mathrm C_4^2=6
+\]
+种，分别为 \(\{1,2\}\)，\(\{1,3\}\)，\(\{1,4\}\)，\(\{2,3\}\)，\(\{2,4\}\)，\(\{3,4\}\). 其中一个数是另一个数的两倍的有 \(\{1,2\}\) 和 \(\{2,4\}\)，共 \(2\) 种. 因此所求概率为
+\[
+\frac{2}{6}=\frac{1}{3}
+\]
+\end{solution}
 
 \begin{problem}
 某老师从星期一到星期五收到信件数分别是 \(10\)，\(6\)，\(8\)，\(5\)，\(6\)，则该组数据的方差 \(s^2=\)\fillinblank{}.
@@ -52,6 +98,18 @@
 3.2
 \end{answer}
 
+\begin{solution}
+这组数据的平均数为
+\[
+\bar{x}=\frac{10+6+8+5+6}{5}=7
+\]
+按方差定义，
+\[
+s^2=\frac{(10-7)^2+(6-7)^2+(8-7)^2+(5-7)^2+(6-7)^2}{5}
+=\frac{9+1+1+4+1}{5}=\frac{16}{5}=3.2
+\]
+\end{solution}
+
 \begin{problem}
 已知 \(\tan\left(x+\frac{\pi}{4}\right)=2\)，则 \(\frac{\tan x}{\tan 2x}\) 的值为\fillinblank{}.
 \end{problem}
@@ -60,6 +118,22 @@
 \(\frac{4}{9}\)
 \end{answer}
 
+\begin{solution}
+令 \(t=\tan x\). 由正切的和角公式，
+\[
+\frac{t+1}{1-t}=2
+\]
+解得 \(t=\frac{1}{3}\). 因此
+\[
+\tan 2x=\frac{2\tan x}{1-\tan^2x}
+=\frac{2\cdot\frac13}{1-\frac19}=\frac34
+\]
+所以
+\[
+\frac{\tan x}{\tan2x}=\frac{\frac13}{\frac34}=\frac49
+\]
+\end{solution}
+
 \begin{problem}
 在平面直角坐标系 \(xOy\) 中，过坐标原点的一条直线与函数 \(f(x)=\frac{2}{x}\) 的图象交于 \(P\)，\(Q\) 两点，则线段 \(PQ\) 长的最小值是\fillinblank{}.
 \end{problem}
@@ -67,6 +141,22 @@
 \begin{answer}
 4
 \end{answer}
+
+\begin{solution}
+设过原点的直线斜率为 \(k\). 因为它与 \(y=2/x\) 有两个交点，所以 \(k>0\). 联立 \(y=kx\) 与双曲线，得
+\(kx=\frac{2}{x}\)，\(kx^2=2\).
+两个交点关于原点对称，且
+\(|x|=\sqrt{\frac{2}{k}}\)，\(|y|=\sqrt{2k}\).
+故
+\[
+PQ=2\sqrt{x^2+y^2}=2\sqrt{\frac{2}{k}+2k}
+\]
+由 \(k+1/k\geqslant2\)，有
+\[
+PQ\geqslant2\sqrt{2\left(2\right)}=4
+\]
+当 \(k=1\) 时取等号，所以线段 \(PQ\) 长的最小值为 \(4\).
+\end{solution}
 
 \begin{problem}
 函数 \(f(x)=A\sin(\omega x+\varphi)\)（\(A\)，\(\omega\)，\(\varphi\) 是常数，\(A>0\)，\(\omega>0\)）的部分图象如图所示，则 \(f(0)=\)\fillinblank{}.
@@ -78,6 +168,21 @@
 \(\frac{\sqrt{6}}{2}\)
 \end{answer}
 
+\begin{solution}
+由图象的最低点纵坐标为 \(-\sqrt{2}\)，得振幅 \(A=\sqrt{2}\). 图象在 \(x=\frac{\pi}{3}\) 处过 \(x\) 轴且向下穿过，在 \(x=\frac{7\pi}{12}\) 处取得最低值，因此从过零点到相邻最低点的横坐标差为
+\[
+\frac{7\pi}{12}-\frac{\pi}{3}=\frac{\pi}{4}
+\]
+这对应相位增加 \(\frac{\pi}{2}\)，所以 \(\omega=2\). 在 \(x=\frac{\pi}{3}\) 处向下过零，故可取相位满足
+\[
+2\cdot\frac{\pi}{3}+\varphi=\pi
+\]
+从而 \(\varphi=\frac{\pi}{3}\). 因此
+\[
+f(0)=\sqrt{2}\sin\frac{\pi}{3}=\frac{\sqrt{6}}{2}
+\]
+\end{solution}
+
 \begin{problem}
 已知 \(\bs{e}_1\)，\(\bs{e}_2\) 是夹角为 \(\frac{2\pi}{3}\) 的两个单位向量，\(\bs{a}=\bs{e}_1-2\bs{e}_2\)，\(\bs{b}=k\bs{e}_1+\bs{e}_2\). 若 \(\bs{a}\cdot\bs{b}=0\)，则 \(k\) 的值为\fillinblank{}.
 \end{problem}
@@ -85,6 +190,18 @@
 \begin{answer}
 \(\frac{5}{4}\)
 \end{answer}
+
+\begin{solution}
+由 \(\bs{e}_1\)，\(\bs{e}_2\) 是夹角为 \(\frac{2\pi}{3}\) 的单位向量，得
+\(\bs{e}_1\cdot\bs{e}_2=\cos\frac{2\pi}{3}=-\frac12\)，\(\bs{e}_1\cdot\bs{e}_1=\bs{e}_2\cdot\bs{e}_2=1\).
+于是
+\[
+\bs{a}\cdot\bs{b}=(\bs{e}_1-2\bs{e}_2)\cdot(k\bs{e}_1+\bs{e}_2)
+=k-\frac12-2k\left(-\frac12\right)-2
+=2k-\frac52
+\]
+由 \(\bs{a}\cdot\bs{b}=0\)，得 \(2k-\frac52=0\)，所以 \(k=\frac54\).
+\end{solution}
 
 \begin{problem}
 已知实数 \(a\neq 0\)，函数 \(f(x)=\begin{cases}
@@ -98,6 +215,25 @@
 \(-\frac{3}{4}\)
 \end{answer}
 
+\begin{solution}
+分 \(a>0\) 和 \(a<0\) 讨论 \(1-a\)，\(1+a\) 所在的分段.
+
+若 \(a>0\)，则 \(1-a<1\)，且 \(1+a\geqslant1\)，所以
+\(f(1-a)=2(1-a)+a=2-a\)，\(f(1+a)=-(1+a)-2a=-1-3a\).
+两式相等给出 \(a=-\frac32\)，与 \(a>0\) 矛盾，所以这一分支无解.
+
+若 \(a<0\)，则 \(1+a<1\). 当 \(-1<a<0\) 时，\(1-a>1\)，所以
+\(f(1-a)=-(1-a)-2a=-1-a\)，\(f(1+a)=2(1+a)+a=2+3a\).
+等式给出 \(a=-\frac34\)，符合 \(-1<a<0\). 当 \(a\leqslant-1\) 时，\(1-a\geqslant2\) 和 \(1+a\leqslant0\)，两点分别仍在右段和左段，等式给出
+\[
+-1-a=2+3a
+\]
+即 \(a=-\frac34\)，但不满足 \(a\leqslant-1\). 因此唯一解为
+\[
+a=-\frac34
+\]
+\end{solution}
+
 \begin{problem}
 在平面直角坐标系 \(xOy\) 中，已知点 \(P\) 是函数 \(f(x)=\e^x\) （\(x>0\)）的图象上的动点，该图象在 \(P\) 处的切线 \(l\) 交 \(y\) 轴于点 \(M\). 过点 \(P\) 作 \(l\) 的垂线交 \(y\) 轴于点 \(N\). 设线段 \(MN\) 的中点的纵坐标为 \(t\)，则 \(t\) 的最大值是\fillinblank{}.
 \end{problem}
@@ -106,6 +242,32 @@
 \(\frac{1}{2}(\e+\e^{-1})\)
 \end{answer}
 
+\begin{solution}
+设 \(P=(u,\e^u)\)，其中 \(u>0\). 曲线 \(y=\e^x\) 在 \(P\) 处的切线斜率为 \(\e^u\)，故切线方程为
+\[
+y-\e^u=\e^u(x-u)
+\]
+令 \(x=0\)，得 \(M=(0,(1-u)\e^u)\).
+
+过 \(P\) 的垂线斜率为 \(-\e^{-u}\)，方程为
+\[
+y-\e^u=-\e^{-u}(x-u)
+\]
+令 \(x=0\)，得 \(N=(0,\e^u+u\e^{-u})\). 所以中点纵坐标为
+\[
+t=\frac{(1-u)\e^u+\e^u+u\e^{-u}}{2}
+=\frac{2\e^u+u(\e^{-u}-\e^u)}{2}
+\]
+求导得
+\[
+t'(u)=\frac{(1-u)(\e^u+\e^{-u})}{2}
+\]
+于是 \(0<u<1\) 时 \(t'(u)>0\)，\(u>1\) 时 \(t'(u)<0\)，所以 \(t\) 在 \(u=1\) 时取得最大值. 代入得
+\[
+t_{\max}=t(1)=\frac{\e+\e^{-1}}{2}
+\]
+\end{solution}
+
 \begin{problem}
 设 \(1=a_{1}\leqslant a_{2}\leqslant \cdots \leqslant a_{7}\)，其中 \(a_{1}\)，\(a_{3}\)，\(a_{5}\)，\(a_{7}\) 成公比为 \(q\) 的等比数列，\(a_{2}\)，\(a_{4}\)，\(a_{6}\) 成公差为 \(1\) 的等差数列，则 \(q\) 的最小值是\fillinblank{}.
 \end{problem}
@@ -113,6 +275,27 @@
 \begin{answer}
 \(\sqrt[3]{3}\)
 \end{answer}
+
+\begin{solution}
+由 \(a_1=1\leqslant a_3=q\)，得 \(q\geqslant1\). 令 \(a_2=x\). 由题设的单调性，\(a_2\geqslant a_1=1\)，且等差数列部分为
+\(a_2=x\)，\(a_4=x+1\)，\(a_6=x+2\).
+等比数列部分为
+\(a_1=1\)，\(a_3=q\)，\(a_5=q^2\)，\(a_7=q^3\).
+因为 \(a_6\geqslant a_3\) 且 \(a_6\leqslant a_7\)，尤其 \(a_6=x+2\geqslant3\)，所以
+\[
+q^3=a_7\geqslant a_6\geqslant3
+\]
+从而 \(q\geqslant\sqrt[3]{3}\).
+
+取 \(q=\sqrt[3]{3}\) 且 \(x=1\)，则
+\[
+(a_1,a_2,\ldots,a_7)=(1,1,q,2,q^2,3,3)
+\]
+由于 \(1<q<2<q^2<3\)，该数列满足单调不减条件，且奇数项、偶数项分别满足题设的等比和等差条件. 因此下界可以取得，\(q\) 的最小值为
+\[
+\sqrt[3]{3}
+\]
+\end{solution}
 
 \begin{problem}
 设集合 \(A=\left\{(x,y)\mid \frac{m}{2}\leqslant (x-2)^2+y^2\leqslant m^2,\ x,y\in\R\right\}\).
@@ -124,6 +307,33 @@
 \begin{answer}
 \(\left[\frac{1}{2},2+\sqrt{2}\right]\)
 \end{answer}
+
+\begin{solution}
+集合 \(A\) 中的点到圆心 \(O=(2,0)\) 的距离平方介于 \(m/2\) 与 \(m^2\) 之间，集合 \(B\) 是两条平行直线 \(x+y=2m\) 与 \(x+y=2m+1\) 之间的闭带.
+
+若 \(m<0\)，则 \(A\) 要求半径平方不超过 \(m^2\). 而 \(B\) 中离 \(O\) 最近的边界为 \(x+y=2m+1\)，其到 \(O\) 的距离为 \((1-2m)/\sqrt2\). 要有交集必须满足
+\[
+\frac{1-2m}{\sqrt2}\leqslant -m
+\]
+即 \(2m^2-4m+1\leqslant0\). 该不等式的解为 \(1-\frac{\sqrt2}{2}\leqslant m\leqslant1+\frac{\sqrt2}{2}\)，与 \(m<0\) 矛盾. 当 \(m=0\) 时，\(A=\{(2,0)\}\)，但该点不满足 \(0\leqslant x+y\leqslant1\)，所以也无交集.
+
+当 \(m>0\) 时，\(A\) 非空必须有 \(m/2\leqslant m^2\)，即 \(m\geqslant1/2\). 对 \(m\geqslant1/2\)，外圆盘半径为 \(m\)，内边界半径为 \(\sqrt{m/2}\)，且 \(m\geqslant\sqrt{m/2}\). 因而只需判断带 \(B\) 是否与圆心为 \(O\)、半径为 \(m\) 的闭圆盘相交.
+
+更具体地，对固定的 \(s=x+y\)，直线 \(x+y=s\) 上的点到 \(O\) 的距离平方可以从 \((s-2)^2/2\) 连续增大到任意大值. 因为 \(m^2\geqslant m/2\)，所以只要某个 \(s\in[2m,2m+1]\) 满足
+\[
+\frac{(s-2)^2}{2}\leqslant m^2
+\]
+就可以在该直线上选取距离平方属于 \([m/2,m^2]\) 的点；反之这也是必要条件.
+
+当 \(1/2\leqslant m\leqslant1\) 时，\(2m\leqslant2\leqslant2m+1\)，取 \(s=2\) 即可. 当 \(m>1\) 时，区间 \([2m,2m+1]\) 在 \(2\) 的右侧，故其中离 \(2\) 最近的是 \(s=2m\)，交集非空当且仅当
+\[
+\frac{2m-2}{\sqrt2}\leqslant m
+\]
+即 \(m\leqslant2+\sqrt2\). 综上，
+\[
+m\in\left[\frac12,2+\sqrt2\right]
+\]
+\end{solution}
 
 \section{解答题}
 
@@ -145,7 +355,7 @@
 
 \item 由余弦定理，得
 \[
-a^2=b^2+c^2-2bc\cos A=9c^2+c^2-2\cdot3c\cdot c\cdot\frac{1}{3}=8c^2.
+a^2=b^2+c^2-2bc\cos A=9c^2+c^2-2\cdot3c\cdot c\cdot\frac{1}{3}=8c^2
 \]
 因此 \(a=2\sqrt{2}c\)，且 \(b^2=a^2+c^2\). 根据勾股定理的逆定理，\(B=\frac{\pi}{2}\)，所以
 \(\sin C=\cos A=\frac{1}{3}\).
@@ -163,7 +373,7 @@ a^2=b^2+c^2-2bc\cos A=9c^2+c^2-2\cdot3c\cdot c\cdot\frac{1}{3}=8c^2.
 
 \begin{solution}
 \begin{enumerate}
-\item 在 \(\triangle PAD\) 中，\(E\)，\(F\) 分别是 \(AP\)，\(AD\) 的中点，所以中位线定理给出 \(EF\parallel PD\). 又因为 \(PD\subset\) 平面 \(PCD\)，且 \(EF\) 不在平面 \(PCD\) 内，所以 \(EF\parallel\) 平面 \(PCD\).
+\item 在 \(\triangle PAD\) 中，\(E\)，\(F\) 分别是 \(AP\)，\(AD\) 的中点，所以中位线定理给出 \(EF\parallel PD\). 平面 \(PAD\) 与平面 \(PCD\) 的交线为 \(PD\)，而 \(F\in AD\) 且 \(F\neq D\)，故 \(F\notin\) 平面 \(PCD\)，从而 \(EF\) 不在平面 \(PCD\) 内. 又因为 \(PD\subset\) 平面 \(PCD\)，所以 \(EF\parallel\) 平面 \(PCD\).
 
 \item 连接 \(BD\). 因为 \(AB=AD\)，且 \(\angle BAD=60^\circ\)，所以 \(\triangle ABD\) 是正三角形. 又因为 \(F\) 是 \(AD\) 的中点，所以 \(BF\perp AD\).
 
@@ -184,28 +394,28 @@ a^2=b^2+c^2-2bc\cos A=9c^2+c^2-2\cdot3c\cdot c\cdot\frac{1}{3}=8c^2.
 \begin{solution}
 设包装盒的底面边长为 \(a\)，高为 \(h\). 由 \(AE=FB=x\) 及 \(AB=60\)，被切去的等腰直角三角形的斜边长为 \(EF=60-2x\). 由折叠关系，底面边长是两条长度为 \(x\) 的直角边所对的斜边，故 \(a=\sqrt{2}x\). 该等腰直角三角形的直角边折起后成为包装盒的高，所以
 \[
-h=\frac{60-2x}{\sqrt{2}}=\sqrt{2}(30-x).
+h=\frac{60-2x}{\sqrt{2}}=\sqrt{2}(30-x)
 \]
 且 \(0<x<30\).
 
 \begin{enumerate}
 \item 包装盒的侧面积为
 \[
-S=4ah=4\cdot\sqrt{2}x\cdot\sqrt{2}(30-x)=8x(30-x)=-8(x-15)^2+1800.
+S=4ah=4\cdot\sqrt{2}x\cdot\sqrt{2}(30-x)=8x(30-x)=-8(x-15)^2+1800
 \]
 因此当 \(x=15\) 时，\(S\) 取得最大值.
 
 \item 包装盒的容积为
 \[
-V=a^2h=2\sqrt{2}x^2(30-x).
+V=a^2h=2\sqrt{2}x^2(30-x)
 \]
 求导得
 \[
-V'=6\sqrt{2}x(20-x).
+V'=6\sqrt{2}x(20-x)
 \]
 在 \(0<x<20\) 时，\(V'>0\)；在 \(20<x<30\) 时，\(V'<0\). 所以 \(V\) 在 \(x=20\) 时取得最大值. 此时
 \[
-\frac{h}{a}=\frac{\sqrt{2}(30-20)}{\sqrt{2}\cdot20}=\frac{1}{2}.
+\frac{h}{a}=\frac{\sqrt{2}(30-20)}{\sqrt{2}\cdot20}=\frac{1}{2}
 \]
 故应取 \(x=20\)，且包装盒的高与底面边长的比值为 \(1:2\).
 \end{enumerate}
@@ -227,42 +437,42 @@ V'=6\sqrt{2}x(20-x).
 \item 由椭圆方程及题图可知 \(M=(-2,0)\)，\(N=(0,-\sqrt{2})\)，所以线段 \(MN\) 的中点为
 \(\left(-1,-\frac{\sqrt{2}}{2}\right)\). 直线 \(PA\) 经过原点，且平分线段 \(MN\)，故它经过该中点，从而
 \[
-k=\frac{-\frac{\sqrt{2}}{2}}{-1}=\frac{\sqrt{2}}{2}.
+k=\frac{-\frac{\sqrt{2}}{2}}{-1}=\frac{\sqrt{2}}{2}
 \]
 
 \item 当 \(k=2\) 时，直线 \(PA\) 的方程为 \(y=2x\). 代入椭圆方程，得
 \[
-\frac{x^2}{4}+\frac{(2x)^2}{2}=1.
+\frac{x^2}{4}+\frac{(2x)^2}{2}=1
 \]
 所以 \(x=\pm\frac{2}{3}\).
 因此 \(P\left(\frac{2}{3},\frac{4}{3}\right)\)，\(A\left(-\frac{2}{3},-\frac{4}{3}\right)\)，且 \(C\left(\frac{2}{3},0\right)\). 直线 \(AC\) 即直线 \(AB\)，其斜率为
 \[
-\frac{0+\frac{4}{3}}{\frac{2}{3}+\frac{2}{3}}=1,
+\frac{0+\frac{4}{3}}{\frac{2}{3}+\frac{2}{3}}=1
 \]
 所以直线 \(AB\) 的方程为 \(y=x-\frac{2}{3}\)，即 \(x-y-\frac{2}{3}=0\). 点 \(P\) 到直线 \(AB\) 的距离为
 \[
-d=\frac{\left|\frac{2}{3}-\frac{4}{3}-\frac{2}{3}\right|}{\sqrt{2}}=\frac{2\sqrt{2}}{3}.
+d=\frac{\left|\frac{2}{3}-\frac{4}{3}-\frac{2}{3}\right|}{\sqrt{2}}=\frac{2\sqrt{2}}{3}
 \]
 
 \item 设 \(P=(p,kp)\)，其中 \(p>0\)，则 \(A=(-p,-kp)\)，\(C=(p,0)\). 因此直线 \(AC\) 的方程为
 \[
-y=\frac{k}{2}(x-p).
+y=\frac{k}{2}(x-p)
 \]
 将其代入椭圆方程并乘以 \(8\)，得
 \[
-2x^2+k^2(x-p)^2=8.
+2x^2+k^2(x-p)^2=8
 \]
 这是一元二次方程，两个根分别是点 \(A\)，\(B\) 的横坐标. 由韦达定理及已知一个根为 \(-p\)，另一个根为
 \[
-x_B=\frac{2k^2p}{k^2+2}+p=\frac{(3k^2+2)p}{k^2+2}.
+x_B=\frac{2k^2p}{k^2+2}+p=\frac{(3k^2+2)p}{k^2+2}
 \]
 于是
 \[
-y_B=\frac{k}{2}(x_B-p)=\frac{k^3p}{k^2+2}.
+y_B=\frac{k}{2}(x_B-p)=\frac{k^3p}{k^2+2}
 \]
 从而
 \[
-\frac{y_B-kp}{x_B-p}=\frac{-\frac{2kp}{k^2+2}}{\frac{2k^2p}{k^2+2}}=-\frac{1}{k}.
+\frac{y_B-kp}{x_B-p}=\frac{-\frac{2kp}{k^2+2}}{\frac{2k^2p}{k^2+2}}=-\frac{1}{k}
 \]
 直线 \(PA\) 的斜率为 \(k\)，直线 \(PB\) 的斜率为 \(-\frac{1}{k}\)，两斜率之积为 \(-1\)，所以 \(PA\perp PB\).
 \end{enumerate}
@@ -286,12 +496,12 @@ y_B=\frac{k}{2}(x_B-p)=\frac{k^3p}{k^2+2}.
 
 若 \(b>0\)，则 \(0\) 在以 \(a\)，\(b\) 为端点的开区间内，且 \(f'(0)g'(0)=ab<0\)，与题设矛盾，所以 \(b\leqslant0\). 当 \(x<0\) 时，\(g'(x)=2x+b<0\)；当 \(x<-r\) 时，\(f'(x)>0\)，故在 \(x<-r\) 时有 \(f'(x)g'(x)<0\). 因此端点 \(a\)，\(b\) 都不能小于 \(-r\)，即
 \[
-a\geqslant-r.
+a\geqslant-r
 \]
 并且 \(b\geqslant-r\).
 由 \(a<0\) 及 \(a\geqslant-\sqrt{-a/3}\)，令 \(u=-a>0\)，得 \(u\leqslant\sqrt{u/3}\)，从而 \(u\leqslant1/3\)，即 \(a\geqslant-1/3\). 此时 \(r\leqslant1/3\)，所以 \(b\geqslant-r\geqslant-1/3\). 结合 \(a<0\)，\(b\leqslant0\)，可得
 \[
-|a-b|\leqslant\frac{1}{3}.
+|a-b|\leqslant\frac{1}{3}
 \]
 取 \(a=-\frac{1}{3}\)，\(b=0\) 时，对 \(-\frac{1}{3}<x<0\)，有 \(f'(x)<0\)，\(g'(x)<0\)，所以 \(f'(x)g'(x)>0\)，条件成立. 因此 \(|a-b|\) 的最大值为 \(\frac{1}{3}\).
 \end{enumerate}
@@ -310,121 +520,119 @@ a\geqslant-r.
 \begin{enumerate}
 \item 当 \(M=\{1\}\) 时，对任意 \(n\geqslant2\)，有
 \[
-S_{n+1}+S_{n-1}=2(S_n+S_1).
+S_{n+1}+S_{n-1}=2(S_n+S_1)
 \]
 移项并利用 \(S_1=a_1=1\)，得
 \[
-a_{n+1}-a_n=S_{n+1}-2S_n+S_{n-1}=2S_1=2.
+a_{n+1}-a_n=S_{n+1}-2S_n+S_{n-1}=2S_1=2
 \]
 又因为 \(a_2=2\)，所以当 \(n\geqslant2\) 时，\(a_n=2+2(n-2)=2n-2\)，从而 \(a_5=8\).
 
 \item 对固定的 \(k\in\{3,4\}\)，分别写出题设中下标为 \(n\) 和 \(n+1\) 的两个等式并相减，得
 \[
-a_{n+k+1}+a_{n-k+1}=2a_{n+1}.
+a_{n+k+1}+a_{n-k+1}=2a_{n+1}
 \]
 令 \(j=n+1\)，可得
-\[
-a_{j+3}+a_{j-3}=2a_j\quad(j\geqslant5).
-\]
+\(a_{j+3}+a_{j-3}=2a_j\)，\((j\geqslant5)\).
 以及
-\[
-a_{j+4}+a_{j-4}=2a_j\quad(j\geqslant6).
-\]
+\(a_{j+4}+a_{j-4}=2a_j\)，\((j\geqslant6)\).
 
 当 \(j\geqslant8\) 时，由第一式分别取下标 \(j+3\)，\(j-3\)，得
 \[
-a_{j+6}+a_j=2a_{j+3}.
+a_{j+6}+a_j=2a_{j+3}
 \]
 以及
 \[
-a_j+a_{j-6}=2a_{j-3}.
+a_j+a_{j-6}=2a_{j-3}
 \]
 两式相加，再利用 \(a_{j+3}+a_{j-3}=2a_j\)，得
 \[
-a_{j+6}+a_{j-6}=2a_j.
+a_{j+6}+a_{j-6}=2a_j
 \]
 由第二式分别取下标 \(j+2\)，\(j-2\)，得
 \[
-a_{j+6}+a_{j-2}=2a_{j+2}.
+a_{j+6}+a_{j-2}=2a_{j+2}
 \]
 以及
 \[
-a_{j+2}+a_{j-6}=2a_{j-2}.
+a_{j+2}+a_{j-6}=2a_{j-2}
 \]
 两式相加，得
 \[
-a_{j+6}+a_{j-6}=a_{j+2}+a_{j-2}.
+a_{j+6}+a_{j-6}=a_{j+2}+a_{j-2}
 \]
 因此
-\[
-2a_j=a_{j+2}+a_{j-2}\quad(j\geqslant8).
-\]
+\(2a_j=a_{j+2}+a_{j-2}\)，\((j\geqslant8)\).
 
 当 \(j\geqslant9\) 时，上式在 \(j-1\)，\(j+1\) 处成立，所以
 \[
-a_{j+1}+a_{j-3}=2a_{j-1}.
+a_{j+1}+a_{j-3}=2a_{j-1}
 \]
 以及
 \[
-a_{j+3}+a_{j-1}=2a_{j+1}.
+a_{j+3}+a_{j-1}=2a_{j+1}
 \]
 这说明 \(a_{j-3}\)，\(a_{j-1}\)，\(a_{j+1}\)，\(a_{j+3}\) 成等差数列. 又由 \(a_{j+3}+a_{j-3}=2a_j\)，得
 \[
-2a_j=a_{j+1}+a_{j-1},
+2a_j=a_{j+1}+a_{j-1}
 \]
-即 \(a_{j+1}-a_j=a_j-a_{j-1}\). 令这个公差为 \(d\)，则 \(a_{j+1}-a_j=d\) 对所有 \(j\geqslant9\) 成立.
+即 \(a_{j+1}-a_j=a_j-a_{j-1}\). 记这个相等的差为 \(d\)，则 \(a_{j+1}-a_j=d\) 对所有 \(j\geqslant9\) 成立.
 
 先对 \(3\leqslant m\leqslant8\)，在 \(a_{j+6}+a_{j-6}=2a_j\) 中分别取 \(j=m+6\) 和 \(j=m+7\)，得
 \[
-2a_{m+6}=a_m+a_{m+12}.
+2a_{m+6}=a_m+a_{m+12}
 \]
 以及
 \[
-2a_{m+7}=a_{m+1}+a_{m+13}.
+2a_{m+7}=a_{m+1}+a_{m+13}
 \]
 两式相减，得
 \[
-2(a_{m+7}-a_{m+6})=(a_{m+1}-a_m)+(a_{m+13}-a_{m+12}).
+2(a_{m+7}-a_{m+6})=(a_{m+1}-a_m)+(a_{m+13}-a_{m+12})
 \]
 其中左边括号内的差以及右边第二个括号内的差都等于 \(d\)，所以 \(a_{m+1}-a_m=d\).
 
 对 \(m=2\)，同样由上式得
 \[
-2(a_9-a_8)=(a_3-a_2)+(a_{15}-a_{14}).
+2(a_9-a_8)=(a_3-a_2)+(a_{15}-a_{14})
 \]
-由 \(m=3\) 时的结论及高项差为 \(d\)，得 \(a_9-a_8=d\)，\(a_{15}-a_{14}=d\)，从而 \(a_3-a_2=d\). 因而
+由 \(m=8\) 时的结论及高项差为 \(d\)，得 \(a_9-a_8=d\)，\(a_{15}-a_{14}=d\)，从而 \(a_3-a_2=d\). 因而
 \[
-a_{n+1}-a_n=d\quad\text{对所有 }n\geqslant2\text{成立}.
+a_{n+1}-a_n=d\quad\text{对所有 }n\geqslant2\text{成立}
 \]
 
 取充分大的 \(n\)，将题设等式改写为
 \[
-(S_{n+k}-S_n)-(S_n-S_{n-k})=2S_k.
+(S_{n+k}-S_n)-(S_n-S_{n-k})=2S_k
 \]
 左边的两组各含 \(k\) 项，且对应项相差 \(kd\)，所以
 \[
-k^2d=2S_k.
+k^2d=2S_k
 \]
 分别取 \(k=3\)，\(k=4\)，并用 \(a_1=1\)，\(a_3=a_2+d\)，\(a_4=a_2+2d\)，得
 \[
-9d=2S_3=2(1+2a_2+d).
+9d=2S_3=2(1+2a_2+d)
 \]
 以及
 \[
-16d=2S_4=2(1+3a_2+3d).
+16d=2S_4=2(1+3a_2+3d)
 \]
 即
 \[
-4a_2=7d-2.
+4a_2=7d-2
 \]
 以及
 \[
-6a_2=10d-2.
+6a_2=10d-2
 \]
-消去 \(a_2\)，得 \(d=2\)，进而 \(a_2=3\). 因此
+消去 \(a_2\)，得 \(d=2\)，进而 \(a_2=3\). 因为 \(a_1=1\)，且对所有 \(n\geqslant2\) 有 \(a_{n+1}-a_n=d=2\)，所以
 \[
-a_n=1+(n-1)d=2n-1.
+\begin{cases}
+1,&n=1,\\
+3+2(n-2)=2n-1,&n\geqslant2.
+\end{cases}
 \]
+故数列的通项公式为 \(a_n=2n-1\)（\(n\geqslant1\)）.
 \end{enumerate}
 \end{solution}
 
@@ -441,7 +649,7 @@ a_n=1+(n-1)d=2n-1.
 
 由于 \(C\) 在圆 \(O_2\) 上，且 \(C\neq A\)，其像只能是圆 \(O_1\) 与射线 \(AC\) 的另一个交点 \(B\). 所以
 \[
-AB=\frac{r_1}{r_2}AC.
+AB=\frac{r_1}{r_2}AC
 \]
 故 \(AB:AC=r_1:r_2\)，为定值.
 \end{solution}
@@ -454,7 +662,7 @@ AB=\frac{r_1}{r_2}AC.
 \begin{solution}
 先计算矩阵平方，得
 \[
-A^2=\begin{bmatrix}1&1\\2&1\end{bmatrix}\begin{bmatrix}1&1\\2&1\end{bmatrix}=\begin{bmatrix}3&2\\4&3\end{bmatrix}.
+A^2=\begin{bmatrix}1&1\\2&1\end{bmatrix}\begin{bmatrix}1&1\\2&1\end{bmatrix}=\begin{bmatrix}3&2\\4&3\end{bmatrix}
 \]
 设 \(\bs{\alpha}=\begin{bmatrix}u\\v\end{bmatrix}\)，则
 \[
@@ -465,7 +673,7 @@ A^2=\begin{bmatrix}1&1\\2&1\end{bmatrix}\begin{bmatrix}1&1\\2&1\end{bmatrix}=\be
 \]
 用第二式减去第一式，得 \(u+v=1\)，代入第一式得 \(u=-1\)，从而 \(v=2\). 因此
 \[
-\bs{\alpha}=\begin{bmatrix}-1\\2\end{bmatrix}.
+\bs{\alpha}=\begin{bmatrix}-1\\2\end{bmatrix}
 \]
 \end{solution}
 
@@ -490,7 +698,7 @@ y=\frac{1}{2}(x-4)
 \]
 即普通方程为
 \[
-x-2y-4=0.
+x-2y-4=0
 \]
 \end{solution}
 
@@ -533,24 +741,28 @@ x-2y-4=0.
 \begin{enumerate}
 \item 当 \(\theta=90^\circ\) 时，两平面的法向量垂直，所以 \(1-5t=0\)，得 \(t=\frac{1}{5}\). 因而
 \[
-AM=\sqrt{(-1)^2+1^2+\left(\frac{1}{5}\right)^2}=\frac{\sqrt{51}}{5}.
+AM=\sqrt{(-1)^2+1^2+\left(\frac{1}{5}\right)^2}=\frac{\sqrt{51}}{5}
 \]
 
 \item 两平面夹角取锐角，所以
 \[
-\frac{|1-5t|}{\sqrt{6}\sqrt{5t^2+1}}=\frac{\sqrt{6}}{6}.
+\frac{|1-5t|}{\sqrt{6}\sqrt{5t^2+1}}=\frac{\sqrt{6}}{6}
 \]
 两边平方并化简，得
 \[
-(1-5t)^2=5t^2+1.
+(1-5t)^2=5t^2+1
 \]
 进一步得 \(10t(2t-1)=0\).
-故 \(t=0\) 或 \(t=\frac{1}{2}\). 按题图取 \(M\) 为棱 \(CC_1\) 上不与 \(C\) 重合的点，故 \(t>0\)，从而 \(CM=\frac{1}{2}\).
+故 \(t=0\) 或 \(t=\frac{1}{2}\). 若按题图将 \(M\) 理解为棱 \(CC_1\) 的内点，即 \(M\neq C\)，则 \(t>0\)，从而
+\[
+CM=\frac{1}{2}
+\]
+需要指出的是，题干文字仅写“点 \(M\) 在 \(CC_1\) 上”，按闭线段的通常定义允许 \(M=C\)，此时 \(t=0\) 也满足上面的夹角方程. 因而 \(CM=\frac12\) 是题图所采用的内点约定下的答案，文字端点约定存在歧义.
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-设整数 \(n\geqslant 4\)，\(P(a,b)\) 是平面直角坐标系 \(xOy\) 中的点，其中 \(a,b\in\{1,2,3,\dots,n\}\)，\(a>b\).
+设整数 \(n\geqslant 4\)，\(P(a,b)\) 是平面直角坐标系 \(xOy\) 中的点，其中 \(a\)，\(b\in\{1,2,3,\dots,n\}\)，\(a>b\).
 \begin{enumerate}
 \item 记 \(A_{n}\) 为满足 \(a-b=3\) 的点 \(P\) 的个数，求 \(A_{n}\)；
 \item 记 \(B_{n}\) 为满足 \(\frac{1}{3}(a-b)\) 是整数的点 \(P\) 的个数，求 \(B_{n}\).
@@ -563,20 +775,20 @@ AM=\sqrt{(-1)^2+1^2+\left(\frac{1}{5}\right)^2}=\frac{\sqrt{51}}{5}.
 
 \item 因为 \(a-b\) 是正整数，\(\frac{1}{3}(a-b)\) 为整数当且仅当存在正整数 \(k\)，使得 \(a-b=3k\). 对固定的 \(k\)，有 \(b=a-3k\)，且 \(1\leqslant b\leqslant n-3k\)，所以满足条件的点有 \(n-3k\) 个. 令
 \[
-m=\left\lfloor\frac{n-1}{3}\right\rfloor,
+m=\left\lfloor\frac{n-1}{3}\right\rfloor
 \]
 则 \(1\leqslant k\leqslant m\)，从而
 \[
-B_n=\sum_{k=1}^{m}(n-3k)=mn-\frac{3m(m+1)}{2}.
+B_n=\sum_{k=1}^{m}(n-3k)=mn-\frac{3m(m+1)}{2}
 \]
 
 若 \(3\mid n\)，写成 \(n=3q\)，则 \(m=q-1\)，所以
 \[
-B_n=\frac{n(n-3)}{6}.
+B_n=\frac{n(n-3)}{6}
 \]
 若 \(3\nmid n\)，则直接按 \(n=3q+1\) 或 \(n=3q+2\) 代入上式，均得
 \[
-B_n=\frac{(n-1)(n-2)}{6}.
+B_n=\frac{(n-1)(n-2)}{6}
 \]
 综上，
 \[

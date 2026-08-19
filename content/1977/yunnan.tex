@@ -1,5 +1,7 @@
 \chapter{1977年云南卷}
 
+\section{解答题}
+
 \begin{problem}
 \begin{enumerate}
 \item 计算 \(\left(\frac{8x^{-3}}{\sqrt{y^3}z^{-6}}\right)^{-\frac{1}{3}}\)（\(=\)？）
@@ -14,17 +16,27 @@
 
 \begin{solution}
 \begin{enumerate}
-\item
-
+\item 原式在实数范围内有意义时，必须有 \(x\neq0\)、\(y>0\) 且 \(z\neq0\). 由于 \(y>0\)，有 \(\sqrt{y^3}=y^{\frac{3}{2}}\)，于是
+\[
+\frac{8x^{-3}}{\sqrt{y^3}z^{-6}}
+=\frac{2^3x^{-3}}{y^{\frac{3}{2}}z^{-6}}
+=2^3x^{-3}y^{-\frac{3}{2}}z^6
+\]
+因此
 \[
 \left(\frac{8x^{-3}}{\sqrt{y^3}z^{-6}}\right)^{-\frac{1}{3}}
-=\left(\frac{2^3x^{-3}}{y^{\frac{3}{2}}z^{-6}}\right)^{-\frac{1}{3}}
-=\frac{2^{-1}x}{y^{-\frac{1}{2}}z^2}
+=\left(2^3x^{-3}y^{-\frac{3}{2}}z^6\right)^{-\frac{1}{3}}
+=2^{-1}xy^{\frac{1}{2}}z^{-2}
 =\frac{x\sqrt{y}}{2z^2}
 \]
 
-\item
-
+\item 由余函数关系，
+\[
+\cos\frac{3\pi}{8}
+=\sin\left(\frac{\pi}{2}-\frac{3\pi}{8}\right)
+=\sin\frac{\pi}{8}
+\]
+所以
 \[
 \cos\frac{3\pi}{8}\cdot\cos\frac{\pi}{8}
 =\sin\frac{\pi}{8}\cos\frac{\pi}{8}
@@ -32,18 +44,22 @@
 =\frac{\sqrt{2}}{4}
 \]
 
-\item
+\item 将各真数写成相应底数的幂，得
+\(\log_3\frac{1}{27}=\log_3 3^{-3}=-3\)，\(\log_{\frac{1}{2}}8=\log_{\frac{1}{2}}\left(\frac{1}{2}\right)^{-3}=-3\)
+\(\log_2 8=\log_2 2^3=3\)，\(\log_4 64=\log_4 4^3=3\).
+因此原式的值为 \(-3-3+3+3=0\).
 
-\(\displaystyle\log_3\frac{1}{27}+\log_{\frac{1}{2}}8+\log_2 8+\log_4 64
-=\log_3 3^{-3}+\log_{\frac{1}{2}}\left(\frac{1}{2}\right)^{-3}+\log_2 2^3+\log_4 4^3\)
+\item 原方程有意义的条件是 \(x-3\geqslant0\). 令
 \[
-=-3\log_3 3-3\log_{\frac{1}{2}}\frac{1}{2}+3\log_2 2+3\log_4 4
-=-3-3+3+3=0
+y=\sqrt{x-3}
 \]
-
-\item
-
-令 \(y=\sqrt{x-3}\)，代入 \((x-3)-2\sqrt{x-3}-3=0\)，得 \(y^2-2y-3=0\). 解得 \(y=3\) 或 \(y=-1\). 因为 \(y=\sqrt{x-3}\ge0\)，所以 \(y=3\)，从而 \(x-3=9\)，\(x=12\). 答：\(x=12\).
+则 \(y\geqslant0\)，且 \(x=y^2+3\). 代入原方程，得
+\[
+2y+6=y^2+3
+\]
+即
+\(y^2-2y-3=0\)，\(\left(y-3\right)\left(y+1\right)=0\).
+所以 \(y=3\) 或 \(y=-1\). 由 \(y\geqslant0\)，只能取 \(y=3\)，从而 \(x=3^2+3=12\). 代回原方程，\(2\sqrt{12-3}+6=2\times3+6=12\)，故原方程的解为 \(x=12\).
 \end{enumerate}
 \end{solution}
 
@@ -52,16 +68,26 @@
 \end{problem}
 
 \begin{solution}
-设预定期限为 \(x\text{~天}\)，原计划生产拖拉机 \(y\text{~台}\)，根据题意，得方程组
+设预定期限为 \(x\text{~天}\)，原计划生产拖拉机 \(y\text{~台}\). 按原计划每天生产 \(20\text{~台}\)，到期还差 \(100\text{~台}\)，所以
+\[
+y=20x+100
+\]
+每天生产 \(25\text{~台}\) 时，到期比原计划多生产 \(50\text{~台}\)，所以
+\[
+25x=y+50
+\]
+即 \(y=25x-50\). 因此根据题意，得方程组
 \[
 \begin{cases}
 y=20x+100,\\
 y=25x-50.
 \end{cases}
 \]
-比较两式得 \(20x+100=25x-50\)，即 \(5x=150\)，因此 \(x=30\text{~天}\). 代入 \(y=20x+100\)，得 \(y=20\times30+100=700\text{~台}\).
-
-答：原计划生产拖拉机 \(700\text{~台}\)，预定期限是 \(30\text{~天}\).
+比较两式，得 \(20x+100=25x-50\)，所以 \(5x=150\)，从而 \(x=30\). 代入 \(y=20x+100\)，得
+\[
+y=20\times30+100=700
+\]
+由于 \(x>0\)、\(y>0\)，所得结果符合题意. 答：原计划生产拖拉机 \(700\text{~台}\)，预定期限是 \(30\text{~天}\).
 \end{solution}
 
 \begin{problem}
@@ -71,9 +97,19 @@ y=25x-50.
 \end{problem}
 
 \begin{solution}
-过 \(C\) 作两圆的内公切线 \(CD\) 与 \(PQ\) 交于 \(D\) 点，则 \(DA=DC\)，因此 \(\angle DAC=\angle DCA\).
-
-又 \(DC=DB\)，因此 \(\angle DCB=\angle DBC\). 而 \(\angle DAC+\angle DCA+\angle DCB+\angle DBC=180^\circ\)，所以
+过两圆的切点 \(C\) 作两圆的内公切线 \(CD\)，交外公切线 \(PQ\) 于 \(D\). 由同一点向同一圆所作的两条切线长相等，得
+\(DA=DC\)，\(DB=DC\).
+因此，在等腰三角形 \(ADC\) 和 \(BDC\) 中，分别有
+\(\angle DAC=\angle DCA\)，\(\angle DCB=\angle DBC\).
+又因为 \(A\)，\(D\)，\(B\) 共线，射线 \(DA\) 与 \(DB\) 方向相反，所以
+\[
+\angle ADC+\angle CDB=180^\circ
+\]
+将三角形 \(ADC\) 和 \(BDC\) 的内角和相加，得到
+\[
+\angle DAC+\angle DCA+\angle DCB+\angle DBC=180^\circ
+\]
+而射线 \(CD\) 位于 \(\angle ACB\) 的内部，故
 \[
 \angle ACB=\angle DCA+\angle DCB=90^\circ
 \]
@@ -85,9 +121,19 @@ y=25x-50.
 \end{problem}
 
 \begin{solution}
-过 \(x^2+y^2=4\) 上 \(P\left(1,\sqrt{3}\right)\) 点的切线方程是 \(1\cdot x+\sqrt{3}y=4\)，即 \(x+\sqrt{3}y-4=0\).
-
-答：过 \(x^2+y^2=4\) 上一点 \(P\left(1,\sqrt{3}\right)\) 的切线 \(L\) 的方程是 \(x+\sqrt{3}y-4=0\).
+圆 \(x^2+y^2=4\) 的圆心为 \(O\left(0,0\right)\)，半径为 \(2\). 先验证
+\[
+1^2+\left(\sqrt{3}\right)^2=4
+\]
+所以 \(P\left(1,\sqrt{3}\right)\) 在圆上. 半径 \(OP\) 垂直于过 \(P\) 的切线，故切线的法向量可取 \(\left(1,\sqrt{3}\right)\). 由点法式，切线 \(L\) 满足
+\[
+1\left(x-1\right)+\sqrt{3}\left(y-\sqrt{3}\right)=0
+\]
+整理得
+\[
+x+\sqrt{3}y-4=0
+\]
+代入点 \(P\) 可得 \(1+3-4=0\)，故该直线确实经过 \(P\). 答：切线 \(L\) 的方程为 \(x+\sqrt{3}y-4=0\).
 \end{solution}
 
 \begin{problem}
@@ -97,10 +143,27 @@ y=25x-50.
 \end{problem}
 
 \begin{solution}
-在 \(\triangle A_1A_2S\) 中，\(\angle A_1SA_2=65^\circ-30^\circ=35^\circ\)，\(A_1A_2=24\times\frac{15}{60}=6\text{~浬}\).
-
-根据正弦定理得
-\(\displaystyle\frac{A_2S}{\sin\angle A_2A_1S}=\frac{A_1A_2}{\sin\angle A_1SA_2}\)
+船沿正北方向航行，因此 \(A_1A_2\) 沿正北方向. 在 \(A_1\) 点，射线 \(A_1S\) 为北偏东 \(30^\circ\)，所以
+\[
+\angle SA_1A_2=30^\circ
+\]
+在 \(A_2\) 点，射线 \(A_2A_1\) 指向正南，而射线 \(A_2S\) 为北偏东 \(65^\circ\)，所以
+\[
+\angle SA_2A_1=180^\circ-65^\circ=115^\circ
+\]
+从而
+\[
+\angle A_1SA_2=180^\circ-30^\circ-115^\circ=35^\circ
+\]
+船行驶了 \(15\) 分钟，即 \(\frac{15}{60}\) 小时，所以
+\[
+A_1A_2=24\times\frac{15}{60}=6\text{~浬}
+\]
+在三角形 \(A_1A_2S\) 中，由正弦定理，
+\[
+\frac{A_2S}{\sin\angle SA_1A_2}
+=\frac{A_1A_2}{\sin\angle A_1SA_2}
+\]
 所以
 \[
 A_2S=\frac{6\sin30^\circ}{\sin35^\circ}
@@ -125,13 +188,25 @@ A_2S=\frac{6\sin30^\circ}{\sin35^\circ}
 
 \begin{solution}
 \begin{enumerate}
-\item 设这个直角三角形为 \(ABC\)，且 \(\angle B=\beta\)，斜边即它的外接圆直径为 \(2R\)（如图）.
+\item 设直角三角形为 \(ABC\)，其中 \(\angle C=90^\circ\)、\(\angle B=\beta\)，外接圆半径为 \(R\). 因为直角三角形的斜边是外接圆的直径，所以 \(AB=2R\). 又因为 \(0<\beta<90^\circ\)，在直角三角形中有
+\(AC=2R\sin\beta\)，\(BC=2R\cos\beta\).
+由三角形面积为 \(12\)，得
+\[
+\frac{1}{2}\cdot2R\sin\beta\cdot2R\cos\beta=12
+\]
+即
+\(R^2\sin\left(2\beta\right)=12\)，\(R^2=\frac{12}{\sin\left(2\beta\right)}\).
+所以外接圆的面积为
+\[
+\pi R^2=\frac{12\pi}{\sin\left(2\beta\right)}
+\]
+答：此三角形外接圆的面积为 \(\frac{12\pi}{\sin\left(2\beta\right)}\).
 
-那么，三角形的两条直角边分别为 \(2R\sin\beta\) 和 \(2R\cos\beta\). 依题意有 \(\frac{1}{2}\cdot2R\sin\beta\cdot2R\cos\beta=12\)，即 \(R^2=\frac{12}{\sin2\beta}\).
-
-\(\triangle ABC\) 外接圆的面积等于 \(\pi R^2=\frac{12\pi}{\sin2\beta}\). 答：此三角形外接圆的面积等于 \(\frac{12\pi}{\sin2\beta}\).
-
-\item 当 \(\sin2\beta=1\)，即 \(\beta=45^\circ\) 时，\(\triangle ABC\) 外接圆的面积有最小值 \(12\pi\). 答：当 \(\beta=45^\circ\) 时，外接圆的面积最小.
+\item 因为 \(0<2\beta<180^\circ\)，所以 \(0<\sin\left(2\beta\right)\leqslant1\). 因而
+\[
+\frac{12\pi}{\sin\left(2\beta\right)}\geqslant12\pi
+\]
+当且仅当 \(\sin\left(2\beta\right)=1\) 时取等号，即 \(2\beta=90^\circ\)，所以 \(\beta=45^\circ\). 此时外接圆面积的最小值为 \(12\pi\). 答：当 \(\beta=45^\circ\) 时，外接圆的面积最小.
 
 \end{enumerate}
 \end{solution}
@@ -141,13 +216,25 @@ A_2S=\frac{6\sin30^\circ}{\sin35^\circ}
 \end{problem}
 
 \begin{solution}
-设这个三角形三边长分别为 \(a=4x\mathrm{~cm}\)，\(b=5x\mathrm{~cm}\)，\(c=6x\mathrm{~cm}\). 记 \(s\) 为三角形周长的一半，那么 \(s=\frac{4x+5x+6x}{2}=\frac{15}{2}x\)，\(s-a=\frac{7x}{2}\)，\(s-b=\frac{5x}{2}\)，\(s-c=\frac{3x}{2}\).
-
-根据公式 \(\Delta=\sqrt{s(s-a)(s-b)(s-c)}\)，得
-\(\displaystyle\sqrt{\frac{15x}{2}\cdot\frac{7x}{2}\cdot\frac{5x}{2}\cdot\frac{3x}{2}}=27\sqrt{7}\)
-即 \(\frac{15}{4}\sqrt{7}x^2=27\sqrt{7}\)，所以 \(x=\frac{6}{5}\sqrt{5}\). 因此 \(a=\frac{24}{5}\sqrt{5}\,\mathrm{~cm}\)，\(b=6\sqrt{5}\,\mathrm{~cm}\)，\(c=\frac{36}{5}\sqrt{5}\,\mathrm{~cm}\).
-
-答：三边之长分别为 \(\frac{24}{5}\sqrt{5}\,\mathrm{~cm}\)，\(6\sqrt{5}\,\mathrm{~cm}\)，\(\frac{36}{5}\sqrt{5}\,\mathrm{~cm}\).
+设三边长分别为 \(a=4x\mathrm{~cm}\)、\(b=5x\mathrm{~cm}\)、\(c=6x\mathrm{~cm}\)，其中 \(x>0\). 半周长为
+\[
+s=\frac{a+b+c}{2}=\frac{4x+5x+6x}{2}\mathrm{~cm}=\frac{15x}{2}\mathrm{~cm}
+\]
+因此
+\(s-a=\frac{7x}{2}\mathrm{~cm}\)，\(s-b=\frac{5x}{2}\mathrm{~cm}\)，\(s-c=\frac{3x}{2}\mathrm{~cm}\).
+由海伦公式，三角形面积满足
+\[
+27\sqrt{7}\mathrm{~cm}^2
+=\sqrt{s\left(s-a\right)\left(s-b\right)\left(s-c\right)}
+=\frac{15\sqrt{7}}{4}x^2\mathrm{~cm}^2
+\]
+约去 \(\sqrt{7}\mathrm{~cm}^2\)，得 \(\frac{15}{4}x^2=27\)，所以
+\[
+x^2=\frac{36}{5}
+\]
+由于 \(x>0\)，故 \(x=\frac{6\sqrt{5}}{5}\). 于是
+\(a=\frac{24\sqrt{5}}{5}\mathrm{~cm}\)，\(b=6\sqrt{5}\mathrm{~cm}\)，\(c=\frac{36\sqrt{5}}{5}\mathrm{~cm}\).
+三边满足三角形不等式，故结果符合题意. 答：三边之长分别为 \(\frac{24\sqrt{5}}{5}\mathrm{~cm}\)、\(6\sqrt{5}\mathrm{~cm}\)、\(\frac{36\sqrt{5}}{5}\mathrm{~cm}\).
 \end{solution}
 
 \section{参考题}
@@ -159,30 +246,40 @@ A_2S=\frac{6\sin30^\circ}{\sin35^\circ}
 \end{problem}
 
 \begin{solution}
-【法一】氨水池的体积为 \(\pi r^2h=50\)，所以 \(h=\frac{50}{\pi r^2}\). 氨水池的表面积
+设底面半径为 \(r\text{~m}\)，高为 \(h\text{~m}\)，则 \(r>0\)、\(h>0\). 由圆柱体积为 \(50\text{~m}^3\)，得
+\(\pi r^2h=50\)，\(h=\frac{50}{\pi r^2}\).
+氨水池有盖，所以表面积为两个底面面积与侧面积之和，即
 \[
 S=2\pi r^2+2\pi rh
-=2\pi r^2+2\pi r\cdot\frac{50}{\pi r^2}
 =2\pi r^2+\frac{100}{r}
 \]
-所以 \(S'=4\pi r-\frac{100}{r^2}\)，\(S''=4\pi+\frac{200}{r^3}\). 因为 \(r>0\)，所以 \(S''>0\). 因此当 \(S'=0\)，即 \(4\pi r-\frac{100}{r^2}=0\) 时，得 \(r=\sqrt[3]{\frac{25}{\pi}}\)，\(h=\frac{50}{\pi\left(\sqrt[3]{\frac{25}{\pi}}\right)^2}=2\sqrt[3]{\frac{25}{\pi}}=2r\). \(S\) 有最小值.
 
-答：当这个氨水池的高取 \(2\sqrt[3]{\frac{25}{\pi}}\text{~米}\)，底半径取 \(\sqrt[3]{\frac{25}{\pi}}\text{~米}\)，即高等于底面的直径时，用料最省.
-
-【法二】此题也可以不利用导数，而用不等式求解. 由 \(\pi r^2h=50\) 得 \(h=\frac{50}{\pi r^2}\). 氨水池的表面积
+方法一：将 \(S\) 看作 \(r\) 的函数，则
+\(S'(r)=4\pi r-\frac{100}{r^2}\)，\(S''(r)=4\pi+\frac{200}{r^3}>0\).
+所以 \(S\) 在 \(r>0\) 上为严格凸函数. 令 \(S'(r)=0\)，得
 \[
-S=2\pi r^2+2\pi rh
-=2\pi r^2+2\pi r\cdot\frac{50}{\pi r^2}
-=2\pi r^2+\frac{100}{r}
+4\pi r-\frac{100}{r^2}=0
+\Longleftrightarrow
+4\pi r^3=100
+\Longleftrightarrow
+r=\sqrt[3]{\frac{25}{\pi}}
 \]
+这是正数范围内的唯一驻点，且由 \(S''(r)>0\) 可知此时表面积取得最小值. 代入体积条件，
 \[
-=2\pi r^2+\frac{50}{r}+\frac{50}{r}
+h=\frac{50}{\pi r^2}=2\sqrt[3]{\frac{25}{\pi}}=2r
+\]
+
+方法二：由上式，
+\[
+S=2\pi r^2+\frac{50}{r}+\frac{50}{r}
 \geqslant3\sqrt[3]{\left(2\pi r^2\right)\cdot\frac{50}{r}\cdot\frac{50}{r}}
 =3\sqrt[3]{5000\pi}
 \]
-当 \(2\pi r^2=\frac{50}{r}=\frac{50}{r}\)，即 \(r=\sqrt[3]{\frac{25}{\pi}}\) 时，取等号，\(S\) 达最小值. 这时 \(h=\frac{50}{\pi r^2}=2\sqrt[3]{\frac{25}{\pi}}=2r\).
-
-答：这个氨水池的高取 \(2\sqrt[3]{\frac{25}{\pi}}\text{~米}\)，底半径取 \(\sqrt[3]{\frac{25}{\pi}}\text{~米}\)，即高等于底的直径时，用料最省.
+当且仅当
+\[
+2\pi r^2=\frac{50}{r}=\frac{50}{r}
+\]
+时取等号，解得 \(r=\sqrt[3]{\frac{25}{\pi}}\). 此时 \(h=\frac{50}{\pi r^2}=2r\). 因而两种方法均得到：当底面半径为 \(\sqrt[3]{\frac{25}{\pi}}\text{~m}\)、高为 \(2\sqrt[3]{\frac{25}{\pi}}\text{~m}\)，即高等于底面直径时，用料最省. 答：底面半径取 \(\sqrt[3]{\frac{25}{\pi}}\text{~m}\)，高取 \(2\sqrt[3]{\frac{25}{\pi}}\text{~m}\).
 \end{solution}
 
 \begin{problem}
@@ -190,9 +287,11 @@ S=2\pi r^2+2\pi rh
 \end{problem}
 
 \begin{solution}
-\(
-\displaystyle\int_0^2\frac{x}{\sqrt{1+x^2}}\,\mathrm{d}x
-=\sqrt{1+x^2}\Big|_0^2
+令 \(u=1+x^2\)，则 \(\mathrm{d}u=2x\,\mathrm{d}x\). 当 \(x=0\) 时 \(u=1\)，当 \(x=2\) 时 \(u=5\). 因此
+\[
+\int_0^2\frac{x}{\sqrt{1+x^2}}\,\mathrm{d}x
+=\frac{1}{2}\int_1^5u^{-\frac{1}{2}}\,\mathrm{d}u
+=\left.\sqrt{u}\right|_1^5
 =\sqrt{5}-1
-\)
+\]
 \end{solution}

@@ -11,8 +11,20 @@
 \end{problem}
 
 \begin{answer}
-15
+A
 \end{answer}
+
+\begin{solution}
+集合 \(A\) 有 \(4\) 个元素，因此它的全部子集共有
+\[
+2^{4}=16
+\]
+个. 真子集不包括集合 \(A\) 本身，所以真子集的个数为
+\[
+16-1=15
+\]
+故选 A.
+\end{solution}
 
 \begin{problem}
 在复平面内，把复数 \(3 - \sqrt{3}\i\) 对应的向量按顺时针方向旋转 \(\frac{\pi}{3}\)，所得向量对应的复数是（\quad）
@@ -28,6 +40,21 @@
 B
 \end{answer}
 
+\begin{solution}
+顺时针旋转 \(\frac{\pi}{3}\) 相当于乘以
+\[
+\cos\left(-\frac{\pi}{3}\right)+\i\sin\left(-\frac{\pi}{3}\right)
+=\frac12-\frac{\sqrt{3}}2\i
+\]
+因此所得复数为
+\[
+(3-\sqrt{3}\i)\left(\frac12-\frac{\sqrt{3}}2\i\right)
+=\frac32-\frac{3\sqrt{3}}2\i-\frac{\sqrt{3}}2\i+\frac32\i^2
+=-2\sqrt{3}\i
+\]
+故选 B.
+\end{solution}
+
 \begin{problem}
 一个长方体共一顶点的三个面的面积分别是 \(\sqrt{2}\)，\(\sqrt{3}\)，\(\sqrt{6}\)，这个长方体对角线的长是（\quad）
 
@@ -42,19 +69,42 @@ B
 D
 \end{answer}
 
+\begin{solution}
+设长方体从同一顶点出发的三条棱长分别为 \(x\)，\(y\)，\(z\)，
+则 \(xy=\sqrt{2}\)，\(yz=\sqrt{3}\)，\(zx=\sqrt{6}\).
+于是 \(x^{2}=\frac{(xy)(xz)}{yz}=2\)，\(y^{2}=\frac{(xy)(yz)}{xz}=1\)，\(z^{2}=\frac{(yz)(xz)}{xy}=3\).
+长方体对角线长为
+\[
+\sqrt{x^{2}+y^{2}+z^{2}}=\sqrt{2+1+3}=\sqrt{6}
+\]
+故选 D.
+\end{solution}
+
 \begin{problem}
 已知 \(\sin \alpha > \sin \beta\)，那么下列命题成立的是（\quad）
 
 \choices
-    {若 \(\alpha, \beta\) 是第一象限角，则 \(\cos \alpha > \cos \beta\)}
-    {若 \(\alpha\)，\(\beta\) 是第二象限角，则 \(\tan \alpha > \tan \beta\)}
-    {若 \(\alpha\)，\(\beta\) 是第三象限角，则 \(\cos \alpha > \cos \beta\)}
-    {若 \(\alpha\)，\(\beta\) 是第四象限角，则 \(\tan \alpha > \tan \beta\)}
+    {若 \(\alpha\)、\(\beta\) 是第一象限角，则 \(\cos \alpha > \cos \beta\)}
+    {若 \(\alpha\)、\(\beta\) 是第二象限角，则 \(\tan \alpha > \tan \beta\)}
+    {若 \(\alpha\)、\(\beta\) 是第三象限角，则 \(\cos \alpha > \cos \beta\)}
+    {若 \(\alpha\)、\(\beta\) 是第四象限角，则 \(\tan \alpha > \tan \beta\)}
 \end{problem}
 
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+在每个象限内考察相应三角函数的单调性.
+
+第一象限内，正弦递增而余弦递减，所以 \(\sin\alpha>\sin\beta\) 推出 \(\alpha>\beta\)，从而 \(\cos\alpha<\cos\beta\)，A 错.
+
+第二象限内，正弦递减而正切递增，所以 \(\sin\alpha>\sin\beta\) 推出 \(\alpha<\beta\)，从而 \(\tan\alpha<\tan\beta\)，B 错.
+
+第三象限内，正弦递减而余弦递增，所以 \(\sin\alpha>\sin\beta\) 推出 \(\alpha<\beta\)，从而 \(\cos\alpha<\cos\beta\)，C 错.
+
+第四象限内，正弦递增且正切递增，所以 \(\sin\alpha>\sin\beta\) 推出 \(\alpha>\beta\)，进而 \(\tan\alpha>\tan\beta\). 故选 D.
+\end{solution}
 
 \begin{problem}
 函数 \( y = -x \cos x \) 的部分图象是（\quad）
@@ -69,6 +119,23 @@ D
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+函数满足
+\[
+f(0)=0
+\]
+且 \(f'(x)=-\cos x+x\sin x\)，\(f'(0)=-1\).
+所以图象在原点附近从左上方向右下方通过原点. 函数的零点满足
+\[
+-x\cos x=0
+\]
+即 \(x=0\)，或 \(x=\frac{\pi}{2}+k\pi\)（\(k\in\Z\)）. 特别地，在原点附近有
+\[
+f\left(-\frac{\pi}{2}\right)=f(0)=f\left(\frac{\pi}{2}\right)=0
+\]
+由 \(f'(0)=-1\)，曲线在原点处由左上方向右下方穿过. 再由零点的表达式可知，在 \((-\pi,-\frac{\pi}{2})\) 上 \(x<0\)、\(\cos x<0\)，故 \(f(x)<0\)；在 \((-\frac{\pi}{2},0)\) 上 \(x<0\)、\(\cos x>0\)，故 \(f(x)>0\). 在 \((0,\frac{\pi}{2})\) 上 \(x>0\)、\(\cos x>0\)，故 \(f(x)<0\)；在 \((\frac{\pi}{2},\pi)\) 上 \(x>0\)、\(\cos x<0\)，故 \(f(x)>0\). 因此曲线依次在 \(x=-\frac{\pi}{2}\)、\(x=0\)、\(x=\frac{\pi}{2}\) 处穿过横轴，穿越方向分别为向上、向下、向上. 逐项对照四个图形，只有第四个图形符合这些零点、符号和切线方向，故选 D.
+\end{solution}
 
 \begin{problem}
 《中华人民共和国个人所得税法》规定，公民全月工资、薪金所得不超过 \(800\text{ 元}\) 的部分不必纳税. 超过 \(800\text{ 元}\) 的部分为全月应纳税所得额，此项税款按下列标准分段累进计算：
@@ -102,6 +169,23 @@ D
 C
 \end{answer}
 
+\begin{solution}
+设月工资为 \(w\)，超过 \(800\) 元的部分为
+\[
+u=w-800
+\]
+前 \(500\) 元的税额为 \(500\times5\%=25\) 元. 由于总税额为 \(26.78\) 元，且
+\[
+25<26.78<25+(2000-500)\times10\%=175
+\]
+所以 \(500<u<2000\)，确实落在第二档. 此时税额为
+\[
+25+(u-500)\times10\%=0.1u-25
+\]
+令其等于 \(26.78\)，得 \(0.1u-25=26.78\)，\(u=517.8\)，\(w=1317.8\).
+因为 \(1200<1317.8<1500\)，故选 C.
+\end{solution}
+
 \begin{problem}
 若 \(a > b > 1\)，\(P = \sqrt{\lg a \cdot \lg b}\)，\(Q = \frac{1}{2} (\lg a + \lg b)\)，\(R = \lg \left(\frac{a + b}{2}\right)\)，则（\quad）
 
@@ -115,6 +199,24 @@ C
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+令 \(x=\lg a\)，\(y=\lg b\).
+由 \(a>b>1\) 得 \(x>y>0\). 正数的几何平均数小于算术平均数，因此
+\[
+P=\sqrt{xy}<\frac{x+y}{2}=Q
+\]
+另一方面，
+\[
+\frac{a+b}{2}>\sqrt{ab}
+\]
+对两边取常用对数，得到
+\[
+R=\lg\left(\frac{a+b}{2}\right)>\lg\sqrt{ab}
+=\frac{\lg a+\lg b}{2}=Q
+\]
+所以 \(P<Q<R\)，故选 B.
+\end{solution}
 
 \begin{problem}
 以极坐标系中的点 \((1,1)\) 为圆心，\(1\) 为半径的圆的方程是（\quad）
@@ -130,6 +232,26 @@ B
 C
 \end{answer}
 
+\begin{solution}
+极坐标点 \((1,1)\) 的直角坐标为
+\[
+(\cos 1,\sin 1)
+\]
+设圆上任一点的极坐标为 \((\rho,\theta)\). 由圆心距等于半径，得
+\[
+(\rho\cos\theta-\cos1)^2+(\rho\sin\theta-\sin1)^2=1
+\]
+展开并利用 \(\cos\theta\cos1+\sin\theta\sin1=\cos(\theta-1)\)，得
+\[
+\rho^2-2\rho\cos(\theta-1)=0
+\]
+对非原点的圆上点可约去 \(\rho\)，得到圆的标准极坐标方程
+\[
+\rho=2\cos(\theta-1)
+\]
+当 \(\rho=0\) 时表示的原点本身也在该圆上，并且在标准方程中由 \(\cos(\theta-1)=0\) 得到，因此不影响上述方程表示整圆. 故选 C.
+\end{solution}
+
 \begin{problem}
 一个圆柱的侧面展开图是一个正方形，这个圆柱的全面积与侧面积的比例是（\quad）
 
@@ -143,6 +265,22 @@ C
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+设圆柱底面半径为 \(r\)，高为 \(h\). 侧面展开为正方形，说明正方形的边长既是圆柱的高又是底面圆周长，因此
+\[
+h=2\pi r
+\]
+圆柱侧面积与全面积分别为 \(S_{\text{侧}}=2\pi rh\)，\(S_{\text{全}}=2\pi rh+2\pi r^2\).
+所以
+\[
+\frac{S_{\text{全}}}{S_{\text{侧}}}
+=1+\frac{r}{h}
+=1+\frac{1}{2\pi}
+=\frac{1+2\pi}{2\pi}
+\]
+故选 A.
+\end{solution}
 
 \begin{problem}
 过原点的直线与圆 \(x^{2} + y^{2} + 4x + 3 = 0\) 相切，若切点在第三象限，则该直线的方程是（\quad）
@@ -158,6 +296,24 @@ A
 C
 \end{answer}
 
+\begin{solution}
+圆的方程可写为
+\[
+(x+2)^2+y^2=1
+\]
+所以圆心为 \((-2,0)\)，半径为 \(1\). 设过原点的切线为 \(y=mx\)，即 \(mx-y=0\). 由圆心到切线的距离等于半径，得
+\[
+\frac{2\lvert m\rvert}{\sqrt{m^2+1}}=1
+\]
+平方并整理得 \(4m^2=m^2+1\)，所以 \(m^2=\frac13\).
+所以 \(m=\pm\frac{\sqrt3}{3}\). 对直线 \(mx-y=0\)，圆心 \((-2,0)\) 到直线的垂足为
+\[
+\left(-\frac{2}{1+m^2},-\frac{2m}{1+m^2}\right)
+\]
+若切点在第三象限，垂足的两个坐标都应为负，因此取 \(m>0\). 因此 \(m=\frac{\sqrt{3}}3\)，直线方程为 \(y=\frac{\sqrt{3}}3x\).
+故选 C.
+\end{solution}
+
 \begin{problem}
 过抛物线 \(y = ax^{2}\)（\(a > 0\)）的焦点 \(F\) 作一直线交抛物线于 \(P\)，\(Q\) 两点，若线段 \(PF\) 与 \(FQ\) 的长分别是 \(p\)，\(q\)，则 \(\frac{1}{p} + \frac{1}{q}\) 等于（\quad）
 
@@ -171,6 +327,47 @@ C
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+将抛物线写成标准形式
+\[
+x^2=\frac1a y=4p_0y
+\]
+其中 \(p_0=\frac{1}{4a}\)，
+故焦点为 \(F=(0,p_0)\). 设过焦点的非竖直直线为
+\[
+y=mx+p_0
+\]
+它与抛物线的交点横坐标 \(x_1\)，\(x_2\) 满足
+\[
+ax^2-mx-p_0=0
+\]
+由韦达定理，
+\[
+x_1x_2=-\frac{p_0}{a}=-\frac{1}{4a^2}
+\]
+又
+\[
+|x_1-x_2|=\frac{\sqrt{m^2+4ap_0}}{a}=\frac{\sqrt{m^2+1}}a
+\]
+两根异号，所以
+\[
+|x_1|+|x_2|=|x_1-x_2|
+\]
+又因为点 \((x,mx+p_0)\) 到焦点的距离为 \(\lvert x\rvert\sqrt{1+m^2}\)，故
+\[
+p+q=(|x_1|+|x_2|)\sqrt{1+m^2}=\frac{1+m^2}{a}
+\]
+以及
+\[
+pq=|x_1x_2|(1+m^2)=\frac{1+m^2}{4a^2}
+\]
+因此
+\[
+\frac1p+\frac1q=\frac{p+q}{pq}=4a
+\]
+故选 C.
+\end{solution}
 
 \begin{problem}
 如图，\(OA\) 是圆锥底面中心 \(O\) 到母线的垂线，\(OA\) 绕轴旋转一周所得曲面将圆锥分成体积相等的两部分，则母线与轴的夹角的余弦值为（\quad）
@@ -188,6 +385,41 @@ C
 D
 \end{answer}
 
+\begin{solution}
+设圆锥顶点为 \(B\)，底面圆心为 \(O\)，底面圆周上的点为 \(C\)，并令
+\(OC=R\)，\(DA=r\)
+其中 \(D\) 是过 \(A\) 向轴 \(OB\) 作垂线的垂足；设母线与轴的夹角为
+\[
+\angle OBC=\beta
+\]
+旋转轴截面中的三角形 \(OBA\) 时，在轴上以 \(D\) 为分界，它所生成的部分可分成两个底面半径均为 \(r\)、高分别为 \(OD\) 和 \(BD\) 的圆锥. 因此该部分体积为
+\[
+\frac13\pi r^2(OD+BD)=\frac13\pi r^2OB
+\]
+题设两部分体积相等，而整个圆锥体积为
+\[
+\frac13\pi R^2OB
+\]
+故
+\(\frac13\pi r^2OB=\frac12\cdot\frac13\pi R^2OB\)，\(R^2=2r^2\).
+
+由 \(OA\perp BC\)，线段 \(OA\) 在垂直于轴的方向上的投影为
+\[
+r=OA\cos\beta
+\]
+在直角三角形 \(OBC\) 与 \(OBA\) 中，分别有
+\(R=OB\tan\beta\)，\(OA=OB\sin\beta\)
+从而
+\(OA=R\cos\beta\)，\(r=R\cos^2\beta\).
+代入 \(R^2=2r^2\)，得
+\(R^2=2R^2\cos^4\beta\)，\(\cos^4\beta=\frac12\).
+由于 \(\beta\) 是锐角，
+\[
+\cos\beta=\frac1{\sqrt[4]{2}}
+\]
+故选 D.
+\end{solution}
+
 \section{填空题}
 \begin{problem}
 乒乓球队的 \(10\) 名队员中有 \(3\) 名主力队员，派 \(5\) 名参加比赛，\(3\) 名主力队员要安排在第一，三，五位置，其余 \(7\) 名队员选 \(2\) 名安排在第二，四位置，那么不同的出场安排共有\fillinblank{} 种（用数字作答）.
@@ -197,33 +429,118 @@ D
 252
 \end{answer}
 
+\begin{solution}
+三名主力队员必须分别占据第一、三、五位置，有
+\[
+3!
+\]
+种安排. 其余两名队员从七名非主力队员中选出并安排在第二、四位置，有
+\[
+\mathrm C_7^2 2!=7\cdot6
+\]
+种安排. 因此总数为
+\[
+3!\mathrm C_7^2 2!=6\cdot7\cdot6=252
+\]
+\end{solution}
+
 \begin{problem}
 椭圆 \(\frac{x^{2}}{9} + \frac{y^{2}}{4} = 1\) 的焦点 \(F_{1}\)，\(F_{2}\)，点 \(P\) 为其上的动点，当 \(\angle F_{1}PF_{2}\) 为钝角时，点 \(P\) 横坐标的取值范围是\fillinblank{}.
 \end{problem}
 
 \begin{answer}
-\(\left(-\frac{\sqrt{5}}{3},\frac{\sqrt{5}}{3}\right)\)
+\(\left(-\frac{3}{\sqrt{5}},\frac{3}{\sqrt{5}}\right)\)
 \end{answer}
 
+\begin{solution}
+椭圆的焦点为
+\(F_1=(-\sqrt{5},0)\)，\(F_2=(\sqrt{5},0)\).
+设动点 \(P=(x,y)\). 当 \(\angle F_1PF_2\) 为钝角时，两条向量的内积为负，即
+\[
+\overrightarrow{PF_1}\cdot\overrightarrow{PF_2}<0
+\]
+计算内积得
+\[
+(-x-\sqrt5,-y)\cdot(-x+\sqrt5,-y)=x^2+y^2-5<0
+\]
+即
+\[
+x^2+y^2<5
+\]
+由椭圆方程
+\[
+\frac{x^2}{9}+\frac{y^2}{4}=1
+\]
+得
+\[
+y^2=4\left(1-\frac{x^2}{9}\right)
+\]
+代入钝角条件，得到
+\[
+x^2+4\left(1-\frac{x^2}{9}\right)<5
+\iff \frac59x^2<1
+\iff x^2<\frac95
+\]
+所以
+\[
+-\frac3{\sqrt5}<x<\frac3{\sqrt5}
+\]
+\end{solution}
+
 \begin{problem}
-设 \(\{a_{n}\}\) 是首项为 \(1\) 的正项数列，且 \((n+1)a_{n+1}^{2} - na_{n}^{2} + a_{n+1}a_{n} = 0\)（\(n=1,2,3,\ldots\)），则它的通项公式是 \(a_{n}=\)\fillinblank{}.
+设 \(\{a_{n}\}\) 是首项为 \(1\) 的正项数列，且 \((n+1)a_{n+1}^{2} - na_{n}^{2} + a_{n+1}a_{n} = 0\)（\(n=1\)，\(2\)，\(3\)，\(\ldots\)），则它的通项公式是 \(a_{n}=\)\fillinblank{}.
 \end{problem}
 
 \begin{answer}
 \(\frac{1}{n}\)
 \end{answer}
 
+\begin{solution}
+由于数列各项为正，令
+\[
+r_n=\frac{a_{n+1}}{a_n}>0
+\]
+原递推式除以 \(a_n^2\)，得
+\[
+(n+1)r_n^2+r_n-n=0
+\]
+将其因式分解为
+\[
+\bigl((n+1)r_n-n\bigr)(r_n+1)=0
+\]
+因为 \(r_n>0\)，只能有
+\(r_n=\frac{n}{n+1}\)，\(a_{n+1}=\frac{n}{n+1}a_n\).
+由 \(a_1=1\)，逐项相乘得到
+\[
+a_n=a_1\prod_{k=1}^{n-1}\frac{k}{k+1}
+=\frac1n
+\]
+\end{solution}
+
 \begin{problem}
 如图，\(E\)，\(F\) 分别为正方体面 \(ADD_{1}A_{1}\)，面 \(BCC_{1}B_{1}\) 的中心，则四边形 \(BFD_{1}E\) 在该正方体的面上的射影可能是\fillinblank{}.
 
 （要求：把可能的图序号都填上）
 
-\bitmapinlinefigure[0.82\linewidth][max width=0.82\linewidth]{img/2000/guangdong/q16_fig1.png}
+\bitmapfigure[max width=0.82\linewidth]{img/2000/guangdong/q16_fig1.png}
 \end{problem}
 
 \begin{answer}
 \(\circled{2}\)，\(\circled{3}\)
 \end{answer}
+
+\begin{solution}
+建立正方体坐标系，取
+\(A=(0,0,0)\)，\(B=(1,0,0)\)，\(C=(1,1,0)\)，\(D=(0,1,0)\)
+顶面各点的第三坐标为 \(1\). 则
+\(E=\left(0,\frac12,\frac12\right)\)，\(F=\left(1,\frac12,\frac12\right)\)，\(D_1=(0,1,1)\).
+
+向 \(x=0\) 的面作正投影时，\(B\) 投影到 \(A\)，\(F\) 与 \(E\) 的投影重合，\(D_1\) 不变；三点 \(A\)，\(E\)，\(D_1\) 共线. 向 \(x=1\) 的面作正投影时，\(A\) 投影到 \(B\)，\(E\) 与 \(F\) 的投影重合，\(D_1\) 投影到 \(C_1\)；三点 \(B\)，\(F\)，\(C_1\) 共线. 这两种情形均得到题图中的 \(\circled{3}\).
+
+向 \(y=0\)、\(y=1\)、\(z=0\) 或 \(z=1\) 的面作正投影时，按 \(B\)，\(F\)，\(D_1\)，\(E\) 的顺序，四个投影点的两组对边分别平行且等长，所得图形为题图中的 \(\circled{2}\). 因此其余四个面的投影均为平行四边形，不会得到图形 \(\circled{1}\) 或 \(\circled{4}\).
+
+所以可能的图序号为 \(\circled{2}\)，\(\circled{3}\).
+\end{solution}
 
 \section{解答题}
 \begin{problem}
@@ -237,8 +554,29 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item \(\left\{x \mid x=\frac{\pi}{3}+2k\pi,\ k\in\Z\right\}\).
-\item 由 \(y=\sin x\) 的图象向左平移 \(\frac{\pi}{6}\)，再将纵坐标伸长到原来的 \(2\) 倍.
+\item 将函数改写为
+\[
+y=\sqrt{3}\sin x+\cos x
+=2\left(\frac{\sqrt{3}}2\sin x+\frac12\cos x\right)
+=2\sin\left(x+\frac{\pi}{6}\right)
+\]
+因此 \(y\) 的最大值为 \(2\). 取最大值的充要条件是
+\[
+\sin\left(x+\frac{\pi}{6}\right)=1
+\]
+所以
+\(x+\frac{\pi}{6}=\frac{\pi}{2}+2k\pi\)，\(k\in\Z\)
+即
+\(x=\frac{\pi}{3}+2k\pi\)，\(k\in\Z\).
+\item 从 \(y=\sin x\) 的图象出发，先向左平移 \(\frac{\pi}{6}\)，得到
+\[
+y=\sin\left(x+\frac{\pi}{6}\right)
+\]
+的图象；再把纵坐标伸长到原来的 \(2\) 倍，得到
+\[
+y=2\sin\left(x+\frac{\pi}{6}\right)
+=\sqrt{3}\sin x+\cos x
+\]
 \end{enumerate}
 \end{solution}
 
@@ -253,8 +591,41 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item \(a_{1}=1\)，公比为 \(2\)，\(a_{n}=2^{n-1}\).
-\item \(T_{n}=2^{n+1}-n-2\).
+\item 由 \(T_1=a_1=1\)，得
+\[
+a_1=1
+\]
+又
+\[
+T_2=2a_1+a_2=4
+\]
+所以
+\[
+a_2=4-2a_1=2
+\]
+等比数列的公比为
+\[
+q=\frac{a_2}{a_1}=2
+\]
+从而
+\[
+a_n=a_1q^{n-1}=2^{n-1}
+\]
+\item 由定义直接相减，得
+\[
+T_n-T_{n-1}=a_1+a_2+\cdots+a_n
+\]
+由等比数列通项公式，
+\[
+a_1+a_2+\cdots+a_n=\sum_{k=0}^{n-1}2^k=2^n-1
+\]
+因此
+\[
+T_n=T_1+\sum_{j=2}^{n}(T_j-T_{j-1})
+=1+\sum_{j=2}^{n}(2^j-1)
+=1+(2^{n+1}-4)-(n-1)
+=2^{n+1}-n-2
+\]
 \end{enumerate}
 \end{solution}
 
@@ -270,7 +641,51 @@ D
 \end{problem}
 
 \begin{solution}
-\(\frac{CD}{CC_{1}}=1\).
+设
+\(\bs{b}=\overrightarrow{CB}\)，\(\bs{d}=\overrightarrow{CD}\)，\(\bs{u}=\overrightarrow{CC_1}\)
+并记
+\(|\bs{b}|=|\bs{d}|=s\)，\(|\bs{u}|=h\).
+由于底面 \(ABCD\) 是菱形，且三个给定角相等，设它们均为 \(\theta\)，则
+\[
+\bs{u}\cdot\bs{b}=hs\cos\theta
+=\bs{u}\cdot\bs{d}
+\]
+所以
+\[
+\bs{u}\cdot(\bs{d}-\bs{b})=0
+\]
+即
+\[
+CC_1\perp BD
+\]
+
+取 \(C\) 为向量起点，则
+\[
+\overrightarrow{CA_1}=\bs{b}+\bs{d}+\bs{u}
+\]
+平面 \(C_1BD\) 内的两个相交方向向量可取
+\(\overrightarrow{BD}=\bs{d}-\bs{b}\)，\(\overrightarrow{BC_1}=\bs{u}-\bs{b}\).
+先有
+\[
+(\bs{b}+\bs{d}+\bs{u})\cdot(\bs{d}-\bs{b})=0
+\]
+因为 \(|\bs{b}|=|\bs{d}|\) 且 \(\bs{u}\cdot(\bs{d}-\bs{b})=0\). 因此只需令
+\[
+(\bs{b}+\bs{d}+\bs{u})\cdot(\bs{u}-\bs{b})=0
+\]
+由 \(\bs{b}\cdot\bs{d}=s^2\cos\theta\) 及上面的内积关系，左边为
+\[
+h^2+hs\cos\theta-s^2(1+\cos\theta)
+=(h-s)\bigl(h+s(1+\cos\theta)\bigr)
+\]
+由于 \(h\)，\(s>0\) 且 \(1+\cos\theta>0\)，第二因子为正，所以该内积为零当且仅当
+\[
+h=s
+\]
+于是
+\[
+\frac{CD}{CC_1}=\frac{s}{h}=1
+\]
 \end{solution}
 
 \begin{problem}
@@ -284,8 +699,41 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item 当 \(0<a<1\) 时，解集为 \(\left[0,\frac{2a}{1-a^{2}}\right]\)；当 \(a\geqslant 1\) 时，解集为 \(\left[0,+\infty\right)\).
-\item 函数单调递减.
+\item 当 \(x<0\) 时，
+\(\sqrt{x^2+1}>1\)，\(-ax>0\)
+所以 \(f(x)>1\)，不等式无负数解. 令 \(x\geqslant0\)，则
+\[
+\sqrt{x^2+1}\leqslant1+ax
+\]
+且右边为正，可以平方而不改变不等号方向，得到
+\[
+x^2+1\leqslant(1+ax)^2
+\iff x\bigl((1-a^2)x-2a\bigr)\leqslant0
+\]
+当 \(0<a<1\) 时，因 \(1-a^2>0\)，故
+\[
+0\leqslant x\leqslant\frac{2a}{1-a^2}
+\]
+当 \(a\geqslant1\) 时，对任意 \(x\geqslant0\)，有
+\[
+(1-a^2)x-2a<0
+\]
+所以不等式恒成立. 综上，解集为
+\[
+\begin{cases}
+\left[0,\dfrac{2a}{1-a^2}\right],&0<a<1,\\[6pt]
+\left[0,+\infty\right),&a\geqslant1.
+\end{cases}
+\]
+\item 在 \([0,+\infty)\) 上，
+\[
+f'(x)=\frac{x}{\sqrt{x^2+1}}-a
+\]
+由于
+\[
+0\leqslant\frac{x}{\sqrt{x^2+1}}<1\leqslant a
+\]
+故 \(f'(x)<0\). 因此 \(f(x)\) 在 \([0,+\infty)\) 上严格单调递减.
 \end{enumerate}
 \end{solution}
 
@@ -300,11 +748,36 @@ D
 注：市场售价与种植成本的单位：\(\text{元}/10^{2}\mathrm{~kg}\)，时间单位：\(\text{天}\).
 \FigureLayoutDeclare{img/2000/guangdong/q21_fig1.png}{11.7cm}{10bp 9bp 9bp 10bp}
 
-\bitmapinlinefigure[0.75\linewidth][max width=0.75\linewidth]{img/2000/guangdong/q21_fig1.png}
+\bitmapfigure[max width=0.75\linewidth]{img/2000/guangdong/q21_fig1.png}
 \end{problem}
 
 \begin{solution}
-从二月一日开始的第 \(50\) 天.
+由图一两段直线分别经过 \((0,300)\)，\((200,100)\) 和 \((200,100)\)，\((300,300)\)，故
+\[
+f(t)=
+\begin{cases}
+300-t,&0\leqslant t\leqslant200,\\
+2t-300,&200<t\leqslant300.
+\end{cases}
+\]
+图二的抛物线顶点为 \((150,100)\)，且经过 \((50,150)\)，所以
+\(g(t)=\frac1{200}(t-150)^2+100\)，\(0\leqslant t\leqslant300\).
+设纯收益为 \(h(t)=f(t)-g(t)\). 当 \(0\leqslant t\leqslant200\) 时，
+\[
+h(t)=300-t-\frac1{200}(t-150)^2-100
+=100-\frac{(t-50)^2}{200}
+\]
+故这一段的最大值为 \(100\)，在 \(t=50\) 时取得.
+
+当 \(200<t\leqslant300\) 时，
+\[
+h'(t)=2-\frac{t-150}{100}=\frac{350-t}{100}>0
+\]
+所以 \(h(t)\) 在这一段递增，最大值在 \(t=300\) 时取得，且
+\[
+h(300)=300-\left(\frac{150^2}{200}+100\right)=87.5
+\]
+由于 \(100>87.5\)，全区间最大收益在 \(t=50\) 时取得，即从二月一日开始的第 \(50\) 天.
 \end{solution}
 
 \begin{problem}
@@ -313,5 +786,73 @@ D
 \end{problem}
 
 \begin{solution}
-\(\left[\sqrt{7},\sqrt{10}\right]\).
+建立直角坐标系，使 \(AB\) 为 \(x\) 轴，\(AB\) 的垂直平分线为 \(y\) 轴. 令
+\(AB=2c\)，\(CD=c\)
+则可设
+\(A=(-c,0)\)，\(B=(c,0)\)，\(C=\left(\frac c2,h\right)\)，\(D=\left(-\frac c2,h\right)\)
+其中 \(h>0\) 为梯形的高. 这里利用了双曲线以 \(A\)，\(B\) 为焦点，故其关于 \(y\) 轴对称，且 \(C\)，\(D\) 的纵坐标相同.
+
+设双曲线的标准方程为
+\(\frac{x^2}{a^2}-\frac{y^2}{b^2}=1\)，\(b^2=c^2-a^2\)
+其离心率为 \(e=c/a\). 令
+\(t=\frac{a^2}{c^2}\)，\(u=\frac hc\).
+将点 \(C\) 代入双曲线方程，得
+\[
+\frac{1}{4t}-\frac{u^2}{1-t}=1
+\]
+即
+\[
+\frac{u^2}{1-t}=\frac{1-4t}{4t}
+\]
+由定比分点公式以及题设有向线段比，点 \(E\) 的坐标为
+\[
+E=\frac{A+\lambda C}{1+\lambda}
+=\left(\frac{c(\lambda-2)}{2(1+\lambda)},
+\frac{\lambda h}{1+\lambda}\right)
+\]
+将 \(E\) 代入双曲线方程，并除以相应的 \(c^2\)，得到
+\[
+\frac{(\lambda-2)^2}{4(1+\lambda)^2t}
+-\frac{\lambda^2u^2}{(1+\lambda)^2(1-t)}=1
+\]
+利用
+\[
+\frac{u^2}{1-t}=\frac{1-4t}{4t}
+\]
+上式化为
+\[
+\frac{(\lambda-2)^2-\lambda^2(1-4t)}
+{4(1+\lambda)^2t}=1
+\]
+整理分子后，得到
+\[
+\frac{1-\lambda+\lambda^2t}{(1+\lambda)^2t}=1
+\]
+从而
+\(1-\lambda=(1+2\lambda)t\)，\(t=\frac{1-\lambda}{1+2\lambda}\).
+因此
+\[
+e^2=\frac{c^2}{a^2}
+=\frac1t
+=\frac{1+2\lambda}{1-\lambda}
+\]
+函数
+\[
+\frac{1+2\lambda}{1-\lambda}
+\]
+在 \(\lambda<1\) 时严格递增，因为其导数为
+\[
+\frac{3}{(1-\lambda)^2}>0
+\]
+所以当 \(\frac23\leqslant\lambda\leqslant\frac34\) 时，
+\[
+7=\frac{1+2\cdot\frac23}{1-\frac23}
+\leqslant e^2
+\leqslant
+\frac{1+2\cdot\frac34}{1-\frac34}=10
+\]
+又 \(e>0\)，故
+\[
+e\in\left[\sqrt7,\sqrt{10}\right]
+\]
 \end{solution}

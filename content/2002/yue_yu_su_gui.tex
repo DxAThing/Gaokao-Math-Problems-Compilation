@@ -15,6 +15,18 @@
 C
 \end{answer}
 
+\begin{solution}
+函数的定义域为 \(\cos x\ne0\)，即 \(x\ne\dfrac{\pi}{2}+k\pi\)，其中 \(k\in\Z\). 在定义域内，
+\[
+f(x)=\frac{\sin2x}{\cos x}=\frac{2\sin x\cos x}{\cos x}=2\sin x
+\]
+定义域在平移 \(2\pi\) 后不变，且 \(2\sin(x+2\pi)=2\sin x\)，因此 \(2\pi\) 是周期. 若 \(T>0\) 是任一周期，则在避开定义域中离散缺点的某个开区间内，有
+\[
+2\sin(x+T)=f(x+T)=f(x)=2\sin x
+\]
+于是 \(\sin(T/2)\cos(x+T/2)=0\) 在该开区间内恒成立，只能有 \(\sin(T/2)=0\)，即 \(T=2k\pi\)，其中 \(k\) 为正整数. 所以任一正周期都不小于 \(2\pi\)，最小正周期为 \(2\pi\)，故选 C.
+\end{solution}
+
 \begin{problem}
 圆 \((x - 1)^2 + y^2 = 1\) 的圆心到直线 \(y = \dfrac{\sqrt{3}}{3}x\) 的距离是（\(\quad\)）
 
@@ -28,6 +40,14 @@ C
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+圆 \((x-1)^2+y^2=1\) 的圆心为 \(C(1,0)\). 直线可写为 \(\sqrt{3}x-3y=0\)，所以圆心到直线的距离为
+\[
+\frac{|\sqrt{3}\cdot1-3\cdot0|}{\sqrt{(\sqrt{3})^2+(-3)^2}}=\frac{\sqrt{3}}{\sqrt{12}}=\frac12
+\]
+故选 A.
+\end{solution}
 
 \begin{problem}
 不等式 \((1 + x)(1 - |x|) > 0\) 的解集是（\(\quad\)）
@@ -43,6 +63,18 @@ A
 D
 \end{answer}
 
+\begin{solution}
+当 \(x<0\) 时，\(|x|=-x\)，原不等式化为
+\[
+(1+x)^2>0
+\]
+所以此时 \(x<0\) 且 \(x\ne-1\). 当 \(x\geqslant0\) 时，原不等式化为
+\[
+(1+x)(1-x)>0
+\]
+因为 \(1+x>0\)，所以 \(0\leqslant x<1\). 合并两种情况，解集为 \(\{x\mid x<1\text{ 且 }x\ne-1\}\)，故选 D.
+\end{solution}
+
 \begin{problem}
 在 \((0,2\pi)\) 内，使 \(\sin x > \cos x\) 成立的 \(x\) 的取值范围是（\(\quad\)）
 
@@ -56,6 +88,18 @@ D
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+由
+\[
+\sin x-\cos x=\sqrt{2}\sin\left(x-\frac{\pi}{4}\right)
+\]
+原不等式等价于 \(\sin\left(x-\dfrac{\pi}{4}\right)>0\). 当 \(0<x<2\pi\) 时，只有
+\[
+0<x-\frac{\pi}{4}<\pi
+\]
+对应正弦值为正，故 \(\dfrac{\pi}{4}<x<\dfrac{5\pi}{4}\)，选 C.
+\end{solution}
 
 \begin{problem}
 设集合 \(M = \left\{x \mid x = \dfrac{k}{2} + \dfrac{1}{4}, k \in \Z\right\}\)，\(N = \left\{x \mid x = \dfrac{k}{4} + \dfrac{1}{2}, k \in \Z\right\}\)，则（\(\quad\)）
@@ -71,6 +115,12 @@ C
 B
 \end{answer}
 
+\begin{solution}
+集合 \(M\) 中的元素可写成
+\(x=\frac{k}{2}+\frac14=\frac{2k+1}{4}\)，\(\; k\in\Z\).
+而 \(N=\left\{\dfrac{k+2}{4}\mid k\in\Z\right\}=\left\{\dfrac{m}{4}\mid m\in\Z\right\}\). 因为 \(2k+1\in\Z\)，所以 \(M\subseteq N\). 但 \(0\in N\)，若 \(0\in M\)，则应有 \(2k+1=0\)，这与 \(k\in\Z\) 矛盾，因此 \(M\ne N\). 故选 B.
+\end{solution}
+
 \begin{problem}
 一个圆锥和一个半球有公共底面，如果圆锥的体积恰好与半球的体积相等，那么这个圆锥轴截面顶角的余弦值是（\(\quad\)）
 
@@ -84,6 +134,18 @@ B
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+设圆锥和半球的公共底面半径为 \(r\)，圆锥高为 \(h\). 由两者体积相等，得
+\[
+\frac13\pi r^2h=\frac23\pi r^3
+\]
+从而 \(h=2r\). 圆锥轴截面是底边长为 \(2r\)、两腰长为 \(\sqrt{h^2+r^2}=\sqrt{5}r\) 的等腰三角形. 设其顶角为 \(\theta\)，由余弦定理，
+\[
+\cos\theta=\frac{(\sqrt{5}r)^2+(\sqrt{5}r)^2-(2r)^2}{2(\sqrt{5}r)^2}=\frac35
+\]
+故选 C.
+\end{solution}
 
 \begin{problem}
 函数 \(f(x) = x|x + a| + b\) 是奇函数的充要条件是（\(\quad\)）
@@ -99,6 +161,20 @@ C
 D
 \end{answer}
 
+\begin{solution}
+若 \(f(x)\) 是奇函数，则 \(f(0)=0\)，所以 \(b=0\). 此时令 \(g(x)=x|x+a|\). 对任意 \(x\ne0\)，由 \(g(-x)=-g(x)\) 得
+\[
+(-x)|a-x|=-x|a+x|
+\]
+即 \(|a-x|=|a+x|\). 两边平方可得
+\((a-x)^2=(a+x)^2\)，\(\; 4ax=0\).
+该式对任意非零实数 \(x\) 成立，只能有 \(a=0\). 反之，当 \(a=b=0\) 时，\(f(x)=x|x|\)，且
+\[
+f(-x)=(-x)|-x|=-x|x|=-f(x)
+\]
+确为奇函数. 因而充要条件是 \(a=b=0\)，等价于 \(a^2+b^2=0\)，故选 D.
+\end{solution}
+
 \begin{problem}
 已知 \(0 < x < y < a < 1\)，则有（\(\quad\)）
 
@@ -112,6 +188,14 @@ D
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+由 \(0<x<a\) 和 \(0<y<a\)，得 \(0<xy<a^2\). 因为 \(0<a<1\)，函数 \(t\mapsto\log_a t\) 在正数范围内单调递减，所以
+\[
+\log_a(xy)>\log_a(a^2)=2
+\]
+故选 D.
+\end{solution}
 
 \begin{problem}
 函数 \(y = 1 - \dfrac{1}{x - 1}\)（\(\quad\)）
@@ -127,6 +211,14 @@ D
 C
 \end{answer}
 
+\begin{solution}
+函数定义域为 \(x\ne1\)，且
+\[
+y'=\frac{1}{(x-1)^2}>0
+\]
+因此函数在 \((1,+\infty)\) 内单调递增；前两个选项所给区间包含不在定义域内的点 \(x=1\)，不能成立，最后一个选项的单调性方向相反. 故选 C.
+\end{solution}
+
 \begin{problem}
 极坐标方程 \(\rho = \cos \theta\) 与 \(\rho \cos \theta = \dfrac{1}{2}\) 的图形是（\(\quad\)）
 
@@ -140,6 +232,15 @@ C
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+由极坐标与直角坐标的关系，\(\rho^2=x^2+y^2\)，\(\rho\cos\theta=x\). 因此
+\[
+\rho=\cos\theta\Longleftrightarrow x^2+y^2=x
+\Longleftrightarrow \left(x-\frac12\right)^2+y^2=\frac14
+\]
+这是圆心为 \(\left(\dfrac12,0\right)\)、半径为 \(\dfrac12\) 的圆，圆与 \(x\) 轴相切于原点并经过 \((1,0)\)；另一个方程为 \(x=\dfrac12\)，表示过圆心的竖直直线. 只有选项 B 同时具有这两个图形特征，故选 B.
+\end{solution}
 
 \begin{problem}
 从正方体的 \(6\) 个面中选取 \(3\) 个面，其中有 \(2\) 个面不相邻的选法共有（\(\quad\)）
@@ -155,6 +256,14 @@ B
 B
 \end{answer}
 
+\begin{solution}
+正方体的六个面组成三对相对面，每对相对面不相邻. 先从三对相对面中选出一对，有 \(3\) 种；再从剩余的四个面中选出第三个面，有 \(4\) 种. 由于只选三个面，不可能同时包含两对相对面，所以没有重复计数，选法共有
+\[
+3\times4=12
+\]
+种，故选 B.
+\end{solution}
+
 \begin{problem}
 据 \(2002\text{年}\) \(3\text{月}\) \(5\text{日}\)九届人大五次会议《政府工作报告》： “\(2001\text{年}\)国内生产总值达到 \(95933\text{亿元}\)，比上年增长 \(7.3\%\)”，如果“十五”期间（\(2001\text{年}\)－\(2005\text{年}\)）每年的国内生产总值都按此年增长率增长，那么到“十五”末我国国内年生产总值约为（\(\quad\)）
 
@@ -169,6 +278,14 @@ B
 C
 \end{answer}
 
+\begin{solution}
+以 \(2001\) 年末的国内生产总值为基数，从 \(2001\) 年末到 \(2005\) 年末经历四次增长，所以
+\[
+95933(1+7.3\%)^4=95933(1.073)^4
+\]
+由于 \((1.073)^4\approx1.3256\)，上式约为 \(127000\) 亿元，故选 C.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -179,6 +296,18 @@ C
 \(1\)
 \end{answer}
 
+\begin{solution}
+方程化为
+\[
+x^2+\frac{k}{5}y^2=1
+\]
+焦点在 \(y\) 轴上，所以横向半轴为 \(1\)，纵向半轴的平方为 \(\dfrac5k\). 由焦半距公式，
+\[
+2^2=\frac5k-1
+\]
+解得 \(k=1\)，故填 \(1\).
+\end{solution}
+
 \begin{problem}
 \((x^{2} + 1)(x - 2)^{7}\) 展开式中 \(x^{3}\) 的系数是\fillinblank{}.
 \end{problem}
@@ -186,6 +315,17 @@ C
 \begin{answer}
 \(1008\)
 \end{answer}
+
+\begin{solution}
+要得到 \(x^3\) 项，分别取 \(x^2\) 与 \((x-2)^7\) 的 \(x\) 项，或取 \(1\) 与 \((x-2)^7\) 的 \(x^3\) 项. 由二项式定理，
+\[
+\text{\((x-2)^7\) 中 \(x\) 的系数}=\mathrm C_7^1(-2)^6=448
+\]
+\[
+\text{\((x-2)^7\) 中 \(x^3\) 的系数}=\mathrm C_7^3(-2)^4=560
+\]
+所以所求系数为 \(448+560=1008\)，故填 \(1008\).
+\end{solution}
 
 \begin{problem}
 已知 \(\sin \alpha = \cos 2\alpha\)，\(\alpha \in \left(\dfrac{\pi}{2}, \pi\right)\)，则 \(\tan \alpha =\)\fillinblank{}.
@@ -195,6 +335,20 @@ C
 \(-\dfrac{\sqrt{3}}{3}\)
 \end{answer}
 
+\begin{solution}
+令 \(s=\sin\alpha\). 因为 \(\alpha\in\left(\dfrac\pi2,\pi\right)\)，所以 \(s>0\). 由
+\[
+\sin\alpha=\cos2\alpha=1-2\sin^2\alpha
+\]
+得
+\(2s^2+s-1=0\)，\(\; (2s-1)(s+1)=0\).
+由于 \(s>0\)，故 \(s=\dfrac12\). 又 \(\alpha\) 在第二象限，\(\cos\alpha=-\dfrac{\sqrt3}{2}\)，从而
+\[
+\tan\alpha=\frac{\sin\alpha}{\cos\alpha}=-\frac{\sqrt3}{3}
+\]
+故填 \(-\dfrac{\sqrt3}{3}\).
+\end{solution}
+
 \begin{problem}
 已知 \(f(x) = \dfrac{x^{2}}{1 + x^{2}}\)，那么 \(f(1) + f(2) + f\left(\dfrac{1}{2}\right) + f(3) + f\left(\dfrac{1}{3}\right) + f(4) + f\left(\dfrac{1}{4}\right) =\)\fillinblank{}.
 \end{problem}
@@ -203,6 +357,18 @@ C
 \(\dfrac{7}{2}\)
 \end{answer}
 
+\begin{solution}
+对任意正数 \(t\)，有
+\[
+f(t)+f\left(\frac1t\right)=\frac{t^2}{1+t^2}+\frac{1/t^2}{1+1/t^2}=\frac{t^2}{1+t^2}+\frac1{1+t^2}=1
+\]
+因此
+\[
+f(2)+f\left(\frac12\right)=f(3)+f\left(\frac13\right)=f(4)+f\left(\frac14\right)=1
+\]
+又 \(f(1)=\dfrac12\)，所以原式为 \(3+\dfrac12=\dfrac72\)，故填 \(\dfrac72\).
+\end{solution}
+
 \section{解答题}
 
 \begin{problem}
@@ -210,7 +376,19 @@ C
 \end{problem}
 
 \begin{solution}
-\(a=-2\)，\(b=-1\) 或 \(a=-4\)，\(b=2\).
+由 \(z=1+\i\) 和 \(\bar z=1-\i\)，原方程左边为
+\[
+az+2b\bar z=a(1+\i)+2b(1-\i)=(a+2b)+(a-2b)\i
+\]
+右边为
+\[
+(a+2z)^2=(a+2+2\i)^2=a^2+4a+(4a+8)\i
+\]
+比较实部和虚部，得到
+\(a+2b=a^2+4a\)，\(\; a-2b=4a+8\).
+分别整理为 \(2b=a^2+3a\) 和 \(2b=-3a-8\). 消去 \(b\)，得
+\(a^2+6a+8=0\)，\(\; (a+2)(a+4)=0\).
+当 \(a=-2\) 时，\(2b=-2\)，故 \(b=-1\)；当 \(a=-4\) 时，\(2b=4\)，故 \(b=2\). 因此所求为 \(a=-2\)，\(b=-1\) 或 \(a=-4\)，\(b=2\).
 \end{solution}
 
 \begin{problem}
@@ -218,7 +396,30 @@ C
 \end{problem}
 
 \begin{solution}
-\(S_{10}=-\dfrac{55}{8}\). 等比数列的公比为 \(\dfrac{\sqrt{2}}{2}\) 时，\(T_{10}=\dfrac{31}{32}(2+\sqrt{2})\)；公比为 \(-\dfrac{\sqrt{2}}{2}\) 时，\(T_{10}=\dfrac{31}{32}(2-\sqrt{2})\).
+设等差数列 \(\{a_n\}\) 的公差为 \(d\)，等比数列 \(\{b_n\}\) 的公比为 \(q\). 由 \(a_1=b_1=1\)，有
+\[
+a_2+a_4=(1+d)+(1+3d)=2+4d=2a_3
+\]
+\(b_3=q^2\)，\(\; b_2b_4=q\cdot q^3=q^4\).
+题设条件给出
+\(2+4d=q^2\)，\(\; q^4=1+2d\).
+由第一式得 \(1+2d=\dfrac{q^2}{2}\)，代入第二式，得
+\[
+q^4=\frac{q^2}{2}
+\]
+等比数列的公比按定义不为零，所以 \(q^2=\dfrac12\)，即 \(q=\pm\dfrac{\sqrt2}{2}\). 同时
+\[
+d=\frac{q^2-2}{4}=-\frac38
+\]
+因此
+\[
+S_{10}=\frac{10}{2}\left(2+9d\right)=5\left(2-\frac{27}{8}\right)=-\frac{55}{8}
+\]
+又因为 \(q^{10}=(q^2)^5=\dfrac1{32}\)，所以
+\[
+T_{10}=\frac{1-q^{10}}{1-q}=\frac{31}{32(1-q)}
+\]
+当 \(q=\dfrac{\sqrt2}{2}\) 时，\(\dfrac1{1-q}=2+\sqrt2\)，从而 \(T_{10}=\dfrac{31}{32}(2+\sqrt2)\)；当 \(q=-\dfrac{\sqrt2}{2}\) 时，\(\dfrac1{1-q}=2-\sqrt2\)，从而 \(T_{10}=\dfrac{31}{32}(2-\sqrt2)\).
 \end{solution}
 
 \begin{problem}
@@ -233,8 +434,35 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item 这个四棱锥的体积为 \(\dfrac{\sqrt{3}}{3}a^{3}\).
-\item 面 \(PAD\) 与面 \(PCD\) 所成的二面角恒大于 \(90^{\circ}\).
+\item 设 \(PB=h\). 因为 \(PB\perp\) 平面 \(ABCD\)，所以 \(PB\perp AB\)，且点 \(P\) 在底面上的射影为 \(B\). 又 \(AD\perp AB\)，并且 \(AD\perp PB\)，故 \(AD\perp PA\). 于是 \(\angle PAB\) 是面 \(PAD\) 与面 \(ABCD\) 所成二面角的平面角. 由题意 \(\angle PAB=60^{\circ}\)，在直角三角形 \(PAB\) 中，
+\[
+\tan60^{\circ}=\frac{PB}{AB}=\frac{h}{a}
+\]
+所以 \(h=\sqrt3a\). 因而四棱锥体积为
+\[
+V=\frac13\cdot a^2\cdot h=\frac{\sqrt3}{3}a^3
+\]
+
+\item 设四棱锥的高为任意的 \(h>0\)，建立空间直角坐标系，使
+\(A=(0,0,0)\)，\(\; B=(a,0,0)\)，\(\; C=(a,a,0)\)，\(\; D=(0,a,0)\)，\(\; P=(a,0,h)\).
+面 \(PAD\) 与面 \(PCD\) 的公共棱为 \(PD\). 在垂直于 \(PD\) 的截面内，二面角的两条截线方向分别是 \(DA\) 和 \(DC\) 在垂直于 \(DP\) 的平面上的正投影. 记
+\[
+L=|\overrightarrow{DP}|^2=2a^2+h^2
+\]
+\(\bs{u}=\overrightarrow{DA}-\frac{\overrightarrow{DA}\cdot\overrightarrow{DP}}{L}\overrightarrow{DP}\)，\(\; \bs{v}=\overrightarrow{DC}-\frac{\overrightarrow{DC}\cdot\overrightarrow{DP}}{L}\overrightarrow{DP}\).
+由坐标可得
+\(\overrightarrow{DA}=(0,-a,0)\)，\(\; \overrightarrow{DC}=(a,0,0)\)，\(\; \overrightarrow{DA}\cdot\overrightarrow{DP}=\overrightarrow{DC}\cdot\overrightarrow{DP}=a^2\)，\(\; \overrightarrow{DA}\cdot\overrightarrow{DC}=0\).
+故
+\[
+\bs{u}\cdot\bs{v}=\overrightarrow{DA}\cdot\overrightarrow{DC}
+-\frac{(\overrightarrow{DA}\cdot\overrightarrow{DP})(\overrightarrow{DC}\cdot\overrightarrow{DP})}{L}
+=-\frac{a^4}{2a^2+h^2}<0
+\]
+由于 \(\bs{u}\)、\(\bs{v}\) 均为非零向量，二面角平面角 \(\theta\) 满足
+\[
+\cos\theta=\frac{\bs{u}\cdot\bs{v}}{|\bs{u}|\,|\bs{v}|}<0
+\]
+所以面 \(PAD\) 与面 \(PCD\) 所成的二面角恒大于 \(90^{\circ}\).
 \end{enumerate}
 \end{solution}
 
@@ -249,8 +477,50 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item 直线 \(AB\) 的方程为 \(y=x+1\).
-\item 四点 \(A\)，\(B\)，\(C\)，\(D\) 共圆.
+\item 直线 \(AB\) 不可能是竖直线：当 \(x=1\) 时，双曲线只有一个交点 \((1,0)\)，不能得到两点 \(A\)，\(B\). 因此设直线 \(AB\) 为
+\[
+y-2=k(x-1)
+\]
+即 \(y=kx+2-k\). 代入双曲线方程，得
+\[
+(2-k^2)x^2-2k(2-k)x-\bigl((2-k)^2+2\bigr)=0
+\]
+若 \(2-k^2=0\)，上式至多为一次方程，不能有两个不同的交点，所以 \(2-k^2\ne0\). 设两个交点的横坐标为 \(x_1\)，\(x_2\)，由 \(N(1,2)\) 是中点，得 \(x_1+x_2=2\). 由韦达定理，
+\[
+x_1+x_2=\frac{2k(2-k)}{2-k^2}=2
+\]
+于是 \(k(2-k)=2-k^2\)，解得 \(k=1\). 故
+\[
+AB:y=x+1
+\]
+
+\item 由 \(y=x+1\) 代入双曲线方程，得
+\(x^2-\frac{(x+1)^2}{2}=1\)，\(\; (x+1)(x-3)=0\).
+所以可取 \(A=(-1,0)\)，\(B=(3,4)\). 线段 \(AB\) 的垂直平分线过 \(N(1,2)\)，斜率为 \(-1\)，故方程为
+\[
+y=3-x
+\]
+设其与双曲线的交点为 \(C(x_3,3-x_3)\)，\(D(x_4,3-x_4)\). 代入双曲线方程，得
+\[
+x^2+6x-11=0
+\]
+从而 \(x_3+x_4=-6\)，\(x_3x_4=-11\). 设 \(M\) 为 \(CD\) 的中点，则
+\[
+M=\left(\frac{x_3+x_4}{2},\frac{(3-x_3)+(3-x_4)}{2}\right)=(-3,6)
+\]
+由 \(A=(-1,0)\)，\(B=(3,4)\)，有
+\[
+MA^2=MB^2=(-1+3)^2+(0-6)^2=40
+\]
+另一方面，由 \(x_3^2+6x_3-11=0\)，得 \((x_3+3)^2=20\)，所以
+\[
+MC^2=(x_3+3)^2+\bigl((3-x_3)-6\bigr)^2=2(x_3+3)^2=40
+\]
+由 \(x_4^2+6x_4-11=0\) 得 \((x_4+3)^2=20\)，从而
+\[
+MD^2=(x_4+3)^2+\bigl((3-x_4)-6\bigr)^2=2(x_4+3)^2=40
+\]
+因而 \(A\)，\(B\)，\(C\)，\(D\) 到点 \(M\) 的距离相等，四点共圆.
 \end{enumerate}
 \end{solution}
 
@@ -265,7 +535,33 @@ C
 \end{problem}
 
 \begin{solution}
-正三棱柱的体积大于正三棱锥的体积.
+\begin{enumerate}
+    \item 设原正三角形边长为 \(s\). 在图 1 中连接三边中点，得到一个边长为 \(\dfrac{s}{2}\) 的中心正三角形和三个全等的角部正三角形. 沿三条中位线折起，使中心三角形作底面，三个角部三角形作侧面，三个外部顶点重合，便得到正三棱锥. 四个面的面积之和仍为原正三角形面积.
+
+在图 2 中，设正三角形的内心为 \(I\)，取 \(IA\)，\(IB\)，\(IC\) 的中点为 \(P\)，\(Q\)，\(R\). 从 \(P\) 分别向 \(AB\)，\(AC\) 作垂线，从 \(Q\) 分别向 \(AB\)，\(BC\) 作垂线，从 \(R\) 分别向 \(BC\)，\(CA\) 作垂线. 记这六条垂线在 \(AB\) 上的垂足为 \(U\)，\(V\)，在 \(BC\) 上的垂足为 \(X\)，\(Y\)，在 \(CA\) 上的垂足为 \(Z\)，\(W\)，其中 \(U\)、\(W\) 分别对应 \(P\)，\(V\)、\(X\) 分别对应 \(Q\)，\(Y\)、\(Z\) 分别对应 \(R\). 于是得到三个矩形 \(PUVQ\)、\(QXYR\)、\(RZWP\)，它们折起后组成正三棱柱的三个侧面，三角形 \(PQR\) 作下底. 三个顶点处剩下的四边形分别为 \(AUPW\)、\(BVQX\)、\(CYRZ\). 将 \(PU\) 与 \(QV\)、\(QX\) 与 \(RY\)、\(RZ\) 与 \(PW\) 分别重合并适当翻转，三个四边形的外边界在 \(AB\)、\(BC\)、\(CA\) 方向上分别合成长度为 \(\dfrac{s}{2}\) 的三条边，并保留原三角形的三个顶角，因此恰好拼成与 \(PQR\) 全等的上底. 其中每个四边形在原三角形顶点处的两条邻边长为 \(\dfrac{s}{4}\)，且在两条垂线处有直角，这正是图 2 中应标出的六条剪切线的几何特征.
+
+因为 \(PQR\) 是 \(ABC\) 以 \(I\) 为中心、相似比为 \(\dfrac12\) 的像，所以其边长为 \(\dfrac{s}{2}\). 又内心到三边的距离为 \(\dfrac{\sqrt3}{6}s\)，故六条垂线中每条的长度为 \(\dfrac{\sqrt3}{12}s\)，上述三个矩形的另一边就是这个长度. 因此余下部分折起后确为正三棱柱，三个四边形拼成上底后，六个面的面积之和仍等于原正三角形面积.
+
+\item 取 \(s=2\) 计算. 图 1 中所得正三棱锥为边长为 \(1\) 的正四面体，其底面积为 \(\dfrac{\sqrt3}{4}\)，高为 \(\sqrt{1-\dfrac13}=\sqrt{\dfrac23}\)，故
+\[
+V_{\text{锥}}=\frac13\cdot\frac{\sqrt3}{4}\cdot\sqrt{\frac23}=\frac{\sqrt2}{12}
+\]
+图 2 中所得正三棱柱的两个底面都是边长为 \(1\) 的正三角形. 原纸片面积为 \(\sqrt3\)，两个底面面积之和为 \(\dfrac{\sqrt3}{2}\)，所以三个侧面的总面积为 \(\dfrac{\sqrt3}{2}\). 侧面总宽为底面周长 \(3\)，故棱柱高为 \(\dfrac{\sqrt3}{6}\). 因而
+\[
+V_{\text{柱}}=\frac{\sqrt3}{4}\cdot\frac{\sqrt3}{6}=\frac18
+\]
+由于 \(\dfrac18>\dfrac{\sqrt2}{12}\) 等价于 \(3>2\sqrt2\)，且 \(9>8\)，所以正三棱柱的体积大于正三棱锥的体积.
+
+    \item 设任意三角形为 \(ABC\)，内心为 \(I\)，内切圆半径为 \(r\). 连接 \(IA\)，\(IB\)，\(IC\)，取这三条线段的中点 \(P\)，\(Q\)，\(R\)，以 \(\triangle PQR\) 作为直三棱柱的一个底面. 从 \(P\) 分别向 \(AB\)，\(AC\) 作垂线，从 \(Q\) 分别向 \(AB\)，\(BC\) 作垂线，从 \(R\) 分别向 \(BC\)，\(CA\) 作垂线，共得到六条剪切线.
+
+以边 \(AB\) 为例，设从 \(P\)，\(Q\) 向 \(AB\) 作垂线的垂足为 \(U\)，\(V\). 由于 \(PQR\) 是 \(ABC\) 以 \(I\) 为中心、相似比为 \(\dfrac12\) 的像，所以 \(PQ\parallel AB\)，且 \(PQ=\dfrac{AB}{2}\). 又 \(P\)，\(Q\) 是 \(IA\)，\(IB\) 的中点，点 \(I\) 到 \(AB\) 的距离为 \(r\)，故 \(PU=QV=\dfrac r2\)，从而 \(PUVQ\) 是长为 \(\dfrac{AB}{2}\)、宽为 \(\dfrac r2\) 的矩形. 对边 \(BC\)，从 \(Q\)，\(R\) 向 \(BC\) 作垂线，所得矩形的长为 \(\dfrac{BC}{2}\)、宽为 \(\dfrac r2\)；对边 \(CA\)，从 \(R\)，\(P\) 向 \(CA\) 作垂线，所得矩形的长为 \(\dfrac{CA}{2}\)、宽为 \(\dfrac r2\). 三个矩形折起后成为直三棱柱的三个侧面.
+
+三个顶点处由六条垂线切下的三个四边形，按上述方式将 \(PU\) 与 \(QV\)、\(QX\) 与 \(RY\)、\(RZ\) 与 \(PW\) 分别重合并适当翻转. 例如，沿 \(AB\) 的两条边段 \(AU\)、\(BV\) 拼成一条直边，且
+\[
+AU+BV=AB-UV=AB-PQ=\frac{AB}{2};
+\]
+沿 \(BC\)、\(CA\) 的两条边段同理分别拼成长度为 \(\dfrac{BC}{2}\)、\(\dfrac{CA}{2}\) 的边，并保留原三角形的三个顶角，因此三个四边形恰好拼成与 \(\triangle PQR\) 全等的第二个底面. 其面积关系也可直接核对：若原三角形面积为 \(S\)，则 \(\triangle PQR\) 的面积为 \(\dfrac S4\)，三个矩形的总面积为 \(\dfrac r2\cdot\dfrac{AB+BC+CA}{2}=\dfrac S2\)，所以三个四边形的总面积为 \(S-\dfrac S4-\dfrac S2=\dfrac S4\)，恰与第二个底面相等. 余下部分按三条侧棱方向折起，再把拼成的第二底面合上，即得到全面积等于原三角形面积的直三棱柱.
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -280,8 +576,32 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item \(a \leqslant 2\sqrt{b}\).
-\item \(b - 1 \leqslant a \leqslant 2\sqrt{b}\).
-\item 当 \(0 < b \leqslant 1\) 时，条件为 \(a \leqslant b + 1\).
+\item 因为 \(b>0\)，配方得
+\[
+f(x)=ax-bx^2=-b\left(x-\frac{a}{2b}\right)^2+\frac{a^2}{4b}
+\]
+对任意实数 \(x\) 都有 \(f(x)\leqslant1\)，特别是在 \(x=\dfrac{a}{2b}\) 时取得最大值，因此 \(\dfrac{a^2}{4b}\leqslant1\). 又 \(a>0\)，故 \(a\leqslant2\sqrt b\).
+
+\item 先证必要性. 由 \(|f(1)|\leqslant1\)，得 \(a-b\geqslant-1\)，所以 \(a\geqslant b-1\). 又由同一条件得 \(a-b\leqslant1\)，即 \(a\leqslant b+1<2b\)，故 \(x_0=\dfrac{a}{2b}\in(0,1)\). 在 \(x_0\) 处，\(f\) 取得区间 \([0,1]\) 上的最大值 \(\dfrac{a^2}{4b}\)，由 \(|f(x_0)|\leqslant1\) 得 \(a\leqslant2\sqrt b\). 因而必要条件为 \(b-1\leqslant a\leqslant2\sqrt b\).
+
+再证充分性. 若 \(b-1\leqslant a\leqslant2\sqrt b\)，则对 \(0\leqslant x\leqslant1\)，由 \(a\leqslant2\sqrt b\) 及配方可得
+\[
+f(x)\leqslant\frac{a^2}{4b}\leqslant1
+\]
+又由 \(a\geqslant b-1\)，有
+\[
+f(x)=ax-bx^2\geqslant(b-1)x-bx^2=bx(1-x)-x\geqslant-1
+\]
+所以 \(-1\leqslant f(x)\leqslant1\)，即 \(|f(x)|\leqslant1\). 综上，充要条件为 \(b-1\leqslant a\leqslant2\sqrt b\).
+
+\item 当 \(0<b\leqslant1\) 时，对 \(0\leqslant x\leqslant1\)，因为 \(ax\geqslant0\) 且 \(-bx^2\geqslant-b\)，所以
+\[
+f(x)\geqslant-b\geqslant-1
+\]
+因此只需讨论 \(f(x)\leqslant1\). 必要性由 \(x=1\) 得 \(a-b\leqslant1\)，即 \(a\leqslant b+1\). 反之，若 \(a\leqslant b+1\)，则
+\[
+f(x)\leqslant(b+1)x-bx^2=1-(1-x)(1-bx)\leqslant1
+\]
+其中 \(1-x\geqslant0\)，且 \(1-bx\geqslant0\). 故此时的充要条件为 \(a\leqslant b+1\).
 \end{enumerate}
 \end{solution}

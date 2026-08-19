@@ -14,6 +14,14 @@
 B
 \end{answer}
 
+\begin{solution}
+设 \(\bs{b}=(u,v)\). 由 \(\bs{b}\) 是单位向量，得 \(u^{2}+v^{2}=1\)；由数量积条件，得 \(\sqrt{3}u+v=\sqrt{3}\)，即 \(v=\sqrt{3}(1-u)\). 代入单位向量条件，得到
+\[
+u^{2}+3(1-u)^{2}=1\Longleftrightarrow 2u^{2}-3u+1=0\Longleftrightarrow u=1\text{ 或 }u=\frac{1}{2}
+\]
+当 \(u=1\) 时 \(v=0\)，与 \(\bs{b}\) 不平行于 \(x\) 轴矛盾；所以 \(u=\frac{1}{2}\)，\(v=\frac{\sqrt{3}}{2}\)，故选 B.
+\end{solution}
+
 \begin{problem}
 若互相不等的实数 \(a\)，\(b\)，\(c\) 成等差数列，\(c\)，\(a\)，\(b\) 成等比数列，且 \(a + 3b + c = 10\)，则 \(a =\)（\quad）
 
@@ -27,6 +35,14 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+设等差数列的公差为 \(d\). 由 \(a+3b+c=10\) 及 \(a+c=2b\)，得 \(5b=10\)，所以 \(b=2\)，且 \(c=4-a\). 由于 \(c\)，\(a\)，\(b\) 成等比数列，中项的平方等于两端项的积，故
+\[
+a^{2}=bc=2(4-a)\Longleftrightarrow (a+4)(a-2)=0
+\]
+若 \(a=2\)，则 \(a=b=c=2\)，与三个实数互不相等矛盾；因此 \(a=-4\)，故选 D.
+\end{solution}
 
 \begin{problem}
 \(\triangle ABC\) 的内角 \(A\) 满足 \(\sin 2A = \frac{2}{3}\)，则 \(\sin A + \cos A =\)（\quad）
@@ -42,6 +58,14 @@ D
 A
 \end{answer}
 
+\begin{solution}
+三角形内角满足 \(0<A<\pi\). 由 \(\sin 2A=\frac{2}{3}\)，有
+\[
+(\sin A+\cos A)^{2}=\sin^{2}A+\cos^{2}A+2\sin A\cos A=1+\sin 2A=\frac{5}{3}
+\]
+又因为 \(0<A<\pi\) 且 \(\sin 2A>0\)，所以 \(0<A<\frac{\pi}{2}\)，从而 \(\sin A+\cos A>0\). 因而 \(\sin A+\cos A=\sqrt{\frac{5}{3}}=\frac{\sqrt{15}}{3}\)，故选 A.
+\end{solution}
+
 \begin{problem}
 设 \(f(x) = \lg \frac{2 + x}{2 - x}\)，则 \(f\left(\frac{x}{2}\right) + f\left(\frac{2}{x}\right)\) 的定义域为（\quad）
 
@@ -56,6 +80,14 @@ A
 B
 \end{answer}
 
+\begin{solution}
+对 \(f\left(\frac{x}{2}\right)\)，真数为 \(\frac{4+x}{4-x}\)，要求 \(-4<x<4\). 对 \(f\left(\frac{2}{x}\right)\)，先要求 \(x\ne0\)，且真数
+\[
+\frac{2+2/x}{2-2/x}=\frac{x+1}{x-1}>0
+\]
+符号分析得 \(x<-1\) 或 \(x>1\). 与 \((-4,4)\) 取交集，函数的定义域为 \((-4,-1)\cup(1,4)\)，故选 B.
+\end{solution}
+
 \begin{problem}
 在 \(\left(\sqrt{x} - \frac{1}{\sqrt[3]{x}}\right)^{24}\) 的展开式中，\(x\) 的幂的指数是整数的项共有（\quad）
 
@@ -69,6 +101,16 @@ B
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+展开式的通项可写为
+\(\mathrm C_{24}^{k}(\sqrt{x})^{24-k}\left(-\frac{1}{\sqrt[3]{x}}\right)^{k}\)，\(k=0\)，\(1\)，\(\ldots\)，\(24\).
+其中 \(x\) 的幂的指数为
+\[
+\frac{24-k}{2}-\frac{k}{3}=12-\frac{5k}{6}
+\]
+该指数为整数当且仅当 \(6\mid 5k\)，由于 \(5\) 与 \(6\) 互质，必须有 \(6\mid k\). 在 \(0\leqslant k\leqslant24\) 中，\(k=0\)，\(6\)，\(12\)，\(18\)，\(24\)，所以共有 \(5\) 项，故选 C.
+\end{solution}
 
 \begin{problem}
 关于直线 \(m\)，\(n\) 与平面 \(\alpha\)，\(\beta\)，有以下四个命题：
@@ -91,6 +133,10 @@ C
 D
 \end{answer}
 
+\begin{solution}
+命题\(\circled{1}\)不成立：在互相平行的两个平面内，分别取方向不同的两条直线，它们不一定平行. 命题\(\circled{2}\)成立，因为 \(m\) 与 \(n\) 的方向分别是平面 \(\alpha\) 与 \(\beta\) 的法向方向，而 \(\alpha\perp\beta\) 时两平面的法向方向互相垂直，所以 \(m\perp n\). 命题\(\circled{3}\)成立：\(m\perp\alpha\)，而 \(n\parallel\beta\parallel\alpha\)，故 \(m\perp n\). 命题\(\circled{4}\)不成立：\(n\perp\beta\) 只说明 \(n\) 的方向平行于平面 \(\alpha\) 的某一方向，不能推出它与任意给定的 \(m\parallel\alpha\) 平行. 因而真命题为\(\circled{2}\circled{3}\)，选 D.
+\end{solution}
+
 \begin{problem}
 设过点 \(P(x, y)\) 的直线分别与 \(x\) 轴的正半轴和 \(y\) 轴的正半轴交于 \(A\)，\(B\) 两点，点 \(Q\) 与点 \(P\) 关于 \(y\) 轴对称，\(O\) 为坐标原点，若 \(\overrightarrow{BP} = 2\overrightarrow{PA}\) 且 \(\overrightarrow{OQ} \cdot \overrightarrow{AB} = 1\)，则点 \(P\) 的轨迹方程是（\quad）
 
@@ -105,6 +151,16 @@ D
 D
 \end{answer}
 
+\begin{solution}
+设 \(A=(u,0)\)，\(B=(0,v)\)，其中 \(u\)，\(v>0\). 由 \(\overrightarrow{BP}=2\overrightarrow{PA}\)，得 \(P-B=2(A-P)\)，即 \(3P=2A+B\). 因而 \(P=\left(\frac{2u}{3},\frac{v}{3}\right)\)，所以 \(u=\frac{3x}{2}\)，\(v=3y\). 又 \(Q=(-x,y)\)，从而
+\(\overrightarrow{AB}=\left(-\frac{3x}{2},3y\right)\)，\(\overrightarrow{OQ}=(-x,y)\).
+代入数量积条件，得
+\[
+1=\overrightarrow{OQ}\cdot\overrightarrow{AB}=\frac{3}{2}x^{2}+3y^{2}
+\]
+由于 \(u\)，\(v>0\)，有 \(x>0\)，\(y>0\)，故轨迹方程为 \(\frac{3}{2}x^{2}+3y^{2}=1\)，选 D.
+\end{solution}
+
 \begin{problem}
 有限集合 \(S\) 中元素的个数记作 \(\operatorname{card}(S)\). 设 \(A\)，\(B\) 都为有限集合，给出下列命题：
 \begin{circlelist}
@@ -116,8 +172,8 @@ D
 其中真命题的序号是（\quad）
 
 \choices
-    {\circled{1}\circled{2}}
     {\circled{3}\circled{4}}
+    {\circled{1}\circled{2}}
     {\circled{1}\circled{4}}
     {\circled{2}\circled{3}}
 \end{problem}
@@ -125,6 +181,14 @@ D
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+有限集合满足容斥公式
+\[
+\operatorname{card}(A\cup B)=\operatorname{card}(A)+\operatorname{card}(B)-\operatorname{card}(A\cap B)
+\]
+所以命题\(\circled{1}\)正确. 若 \(A\subseteq B\)，则 \(B\) 包含 \(A\) 的全部元素，故必有 \(\operatorname{card}(A)\leqslant\operatorname{card}(B)\)，命题\(\circled{2}\)正确. 命题\(\circled{3}\)不正确，例如 \(A=\{1\}\)，\(B=\{1,2\}\) 时基数不等式成立，但 \(A\subseteq B\). 命题\(\circled{4}\)不正确，例如 \(A=\{1\}\)，\(B=\{2\}\) 时两集合基数相等但不相等. 因此真命题为\(\circled{1}\circled{2}\)，按原题选项顺序选 B.
+\end{solution}
 
 \begin{problem}
 已知平面区域 \(D\) 由以 \(A(1,3)\)，\(B(5,2)\)，\(C(3,1)\) 为顶点的三角形内部和边界组成. 若在区域 \(D\) 上有无穷多个点 \((x, y)\) 可使目标函数 \(z = x + my\) 取得最小值，则 \(m =\)（\quad）
@@ -139,6 +203,12 @@ B
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+目标函数的等值线为 \(x+my=\text{常数}\). 要使最小值在三角形的一条边上有无穷多个取得，等值线必须与该边平行. 三条边的方向向量可分别取
+\(\overrightarrow{AB}=(4,-1)\)，\(\overrightarrow{BC}=(-2,-1)\)，\(\overrightarrow{CA}=(-2,2)\).
+目标函数的梯度为 \((1,m)\)，因此分别得到 \(m=4\)，\(-2\)，\(1\). 逐一比较顶点处的函数值：当 \(m=-2\) 时，\(z(A)=-5\)，\(z(B)=1\)，\(z(C)=1\)，边 \(BC\) 上取得的是最大值；当 \(m=4\) 时，\(z(A)=z(B)=13\)，\(z(C)=7\)，边 \(AB\) 上取得的是最大值；当 \(m=1\) 时，\(z(A)=z(C)=4\)，\(z(B)=7\)，边 \(CA\) 上的所有点都取得最小值. 所以 \(m=1\)，选 C.
+\end{solution}
 
 \begin{problem}
 关于 \(x\) 的方程 \((x^{2} - 1)^{2} - |x^{2} - 1| + k = 0\). 给出下列四个命题：
@@ -158,8 +228,14 @@ C
 \end{problem}
 
 \begin{answer}
-B
+A
 \end{answer}
+
+\begin{solution}
+令 \(t=|x^{2}-1|\)，则 \(t\geqslant0\)，原方程化为 \(t^{2}-t+k=0\). 对固定的 \(t\)，方程 \(|x^{2}-1|=t\) 的实根数为：\(t=0\) 时为 \(2\) 个；\(0<t<1\) 时由 \(x^{2}=1-t\) 或 \(x^{2}=1+t\) 得 \(4\) 个；\(t=1\) 时为 \(x=0\)，\(\pm\sqrt{2}\)，共 \(3\) 个；\(t>1\) 时只有 \(x^{2}=1+t\)，为 \(2\) 个.
+
+取 \(k=-1\)，二次方程的唯一非负根为 \(t=\frac{1+\sqrt{5}}{2}>1\)，原方程有 \(2\) 个根；取 \(k=\frac14\)，有重根 \(t=\frac12\)，原方程有 \(4\) 个根；取 \(k=0\)，有 \(t=0\)，\(1\)，原方程有 \(2+3=5\) 个根；取 \(k=\frac{6}{25}\)，有两个根 \(t=\frac25\)，\(\frac35\)，每个都在 \((0,1)\) 内，原方程有 \(4+4=8\) 个根. 四个命题均为真，假命题的个数为 \(0\)，选 A.
+\end{solution}
 
 \section{填空题}
 \begin{problem}
@@ -170,6 +246,16 @@ B
 4
 \end{answer}
 
+\begin{solution}
+将各分式有理化，原等式化为
+\[
+\frac{x}{2}(1+\i)+\frac{y}{5}(1+2\i)=\frac{1}{2}(1+3\i)
+\]
+比较实部和虚部，得到
+\(\frac{x}{2}+\frac{y}{5}=\frac12\)，\(\frac{x}{2}+\frac{2y}{5}=\frac32\).
+两式相减得 \(y=5\)，再代入第一式得 \(x=-1\)，所以 \(x+y=4\).
+\end{solution}
+
 \begin{problem}
 接种某疫苗后，当出现发热反应的概率为 \(0.80\)，现有 \(5\) 人接种该疫苗，至少有 \(3\) 人出现发热反应的概率为\fillinblank{}. （精确到 \(0.01\)）
 \end{problem}
@@ -177,6 +263,15 @@ B
 \begin{answer}
 0.94
 \end{answer}
+
+\begin{solution}
+按各人的反应相互独立，设出现发热反应的人数为 \(X\)，则 \(X\sim B(5,0.8)\). 所求概率为
+\[
+P(X\geqslant3)=\mathrm C_{5}^{3}(0.8)^{3}(0.2)^{2}+\mathrm C_{5}^{4}(0.8)^{4}(0.2)+(0.8)^{5}
+=0.2048+0.4096+0.32768=0.94208
+\]
+精确到 \(0.01\) 得 \(0.94\).
+\end{solution}
 
 \begin{problem}
 已知直线 \(5x + 12y + a = 0\) 与圆 \(x^{2} - 2x + y^{2} = 0\) 相切，则 \(a\) 的值为\fillinblank{}.
@@ -186,6 +281,18 @@ B
 \(-18\) 或 \(8\)
 \end{answer}
 
+\begin{solution}
+将圆方程配方，得
+\[
+(x-1)^{2}+y^{2}=1
+\]
+所以圆心为 \((1,0)\)，半径为 \(1\). 由直线与圆相切，圆心到直线的距离等于半径，即
+\[
+\frac{|5+a|}{\sqrt{5^{2}+12^{2}}}=1\Longleftrightarrow |a+5|=13
+\]
+因此 \(a=8\) 或 \(a=-18\).
+\end{solution}
+
 \begin{problem}
 某工程队有 \(6\) 项工程需要先后单独完成，其中工程乙必须在工程甲完成后才能进行，工程丙必须在工程乙完成后才能进行，又工程丁必须在工程丙完成后立即进行. 那么安排这 \(6\) 项工程的不同排法种数是\fillinblank{}. （用数字作答）
 \end{problem}
@@ -194,8 +301,16 @@ B
 20
 \end{answer}
 
+\begin{solution}
+将工程丙和必须紧接其后的工程丁看作一个整体 \(\text{丙丁}\). 于是需要排列的五个对象为甲、乙、\(\text{丙丁}\) 以及另外两项工程，并且甲、乙、\(\text{丙丁}\) 的先后顺序必须固定为甲、乙、\(\text{丙丁}\). 先从五个位置中选出这三个对象的位置，再安排另外两项工程，排法数为
+\[
+\mathrm C_{5}^{3}\times 2!=20
+\]
+因此不同排法种数为 \(20\).
+\end{solution}
+
 \begin{problem}
-将杨辉三角中的每一个数 \(\mathrm{C}_n^r\) 都换成分数 \(\frac{1}{(n + 1)\mathrm{C}_n^r}\)，得到一个如图所示的分数三角形，成为莱布尼茨三角形.
+将杨辉三角中的每一个数 \(\mathrm{C}_n^r\) 都换成分数 \(\frac{1}{(n + 1)\mathrm{C}_n^r}\)，得到一个如图所示的分数三角形，称为莱布尼茨三角形.
 
 \begin{center}
 \begin{tabular}{ccccccccccccc}
@@ -217,6 +332,24 @@ B
 \(r+1\)，\(\frac{1}{2}\)
 \end{answer}
 
+\begin{solution}
+莱布尼茨三角形中同一行相邻两项之和等于上一行夹在它们正上方的项，因此右边一项的组合数下标比左边一项大 \(1\)，故 \(x=r+1\).
+
+由组合数的对称性，给出的和可写为
+\[
+a_n=\sum_{j=2}^{n}\frac{1}{(j+1)\mathrm C_{j}^{2}}
+\]
+又 \(\mathrm C_j^2=\frac{j(j-1)}{2}\)，所以
+\[
+\frac{1}{(j+1)\mathrm C_j^2}=\frac{2}{j(j-1)(j+1)}=\frac{1}{j(j-1)}-\frac{1}{j(j+1)}
+\]
+从而
+\[
+a_n=\sum_{j=2}^{n}\left(\frac{1}{j(j-1)}-\frac{1}{j(j+1)}\right)=\frac12-\frac{1}{n(n+1)}
+\]
+令 \(n\to\infty\)，得到 \(\lim\limits_{n\to\infty}a_n=\frac12\).
+\end{solution}
+
 \section{解答题}
 \begin{problem}
 设函数 \(f(x) = \bs{a} \cdot (\bs{b} + \bs{c})\)，其中向量 \(\bs{a} = (\sin x, -\cos x)\)，\(\bs{b} = (\sin x, -3\cos x)\)，\(\bs{c} = (-\cos x, \sin x)\)，\(x \in \R\).
@@ -228,20 +361,65 @@ B
 \end{problem}
 
 \begin{solution}
-短答案：函数 \(f(x)\) 的最大值为 \(2+\sqrt{2}\)，最小正周期为 \(\pi\)；\(\bs{d}=\left(-\frac{\pi}{8},-2\right)\).
+\begin{enumerate}
+\item
+由向量的坐标及数量积定义，
+\[
+f(x)=(\sin x,-\cos x)\cdot(\sin x-\cos x,\sin x-3\cos x)
+ =\sin^{2}x+3\cos^{2}x-2\sin x\cos x
+\]
+又
+\[
+f(x)=2+\cos 2x-\sin 2x=2+\sqrt{2}\cos\left(2x+\frac{\pi}{4}\right)
+\]
+因此 \(f(x)\) 的最大值为 \(2+\sqrt{2}\)，且因角频率为 \(2\)，最小正周期为 \(\pi\).
+
+\item
+设平移向量为 \(\bs{d}=(h,k)\). 平移后的图像是函数
+\[
+g(x)=f(x-h)+k=2+k+\sqrt{2}\cos\left(2x-2h+\frac{\pi}{4}\right)
+\]
+的图像. 图像关于坐标原点中心对称，当且仅当 \(g\) 是奇函数. 由 \(g(x)+g(-x)\equiv0\)，常数项和余弦项的系数分别必须满足
+\(k=-2\)，\(\cos\left(-2h+\frac{\pi}{4}\right)=0\).
+所以
+\(h=-\frac{\pi}{8}-\frac{\ell\pi}{2}\)，\(k=-2\)，\(\ell\in\Z\).
+在这些向量中，\(h\) 的绝对值最小时取 \(\ell=0\)，故长度最小的平移向量为 \(\bs d=\left(-\frac{\pi}{8},-2\right)\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
-已知二次函数 \(y = f(x)\) 的图象经过坐标原点，其导函数为 \(f'(x) = 6x - 2\)，数列 \(\{a_n\}\) 的前 \(n\) 项和为 \(S_n\)，点 \((n, S_n)\)（\(n \in \mathbf{N}^*\)）均在函数 \(y = f(x)\) 的图象上.
+已知二次函数 \(y = f(x)\) 的图象经过坐标原点，其导函数为 \(f'(x) = 6x - 2\)，数列 \(\{a_n\}\) 的前 \(n\) 项和为 \(S_n\)，点 \((n, S_n)\)（\(n \in \N^*\)）均在函数 \(y = f(x)\) 的图象上.
 
 \begin{enumerate}
 \item 求数列 \(\{a_n\}\) 的通项公式；
-\item 设 \(b_n = \frac{3}{a_n a_{n+1}}\)，\(T_n\) 是数列 \(\{b_n\}\) 的前 \(n\) 项和，求使得 \(T_n < \frac{m}{20}\) 对所有 \(n \in \mathbf{N}^*\) 都成立的最小正整数 \(m\).
+\item 设 \(b_n = \frac{3}{a_n a_{n+1}}\)，\(T_n\) 是数列 \(\{b_n\}\) 的前 \(n\) 项和，求使得 \(T_n < \frac{m}{20}\) 对所有 \(n \in \N^*\) 都成立的最小正整数 \(m\).
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
-短答案：\(a_n=6n-5\)；\(m=10\).
+\begin{enumerate}
+\item
+由 \(f'(x)=6x-2\)，积分得 \(f(x)=3x^{2}-2x+C\). 因为图像经过原点，\(f(0)=0\)，所以 \(C=0\)，即 \(f(x)=3x^{2}-2x\). 由点 \((n,S_n)\) 在图像上，得
+\[
+S_n=f(n)=3n^{2}-2n
+\]
+当 \(n=1\) 时，\(a_1=S_1=1=6\times1-5\). 当 \(n\geqslant2\) 时，
+\[
+a_n=S_n-S_{n-1}=3n^{2}-2n-\bigl(3(n-1)^{2}-2(n-1)\bigr)=6n-5
+\]
+故数列通项为 \(a_n=6n-5\)（\(n\in\N^*\)）.
+
+\item
+由通项公式，
+\[
+b_n=\frac{3}{(6n-5)(6n+1)}=\frac12\left(\frac{1}{6n-5}-\frac{1}{6n+1}\right)
+\]
+因此
+\[
+T_n=\sum_{j=1}^{n}b_j=\frac12\left(1-\frac{1}{6n+1}\right)<\frac12
+\]
+取 \(m=10\) 时，\(m/20=1/2\)，不等式对所有正整数 \(n\) 成立. 若 \(m\leqslant9\)，则 \(m/20<1/2\)，而 \(T_n\to1/2\)，故对充分大的 \(n\) 有 \(T_n>m/20\)，不满足条件. 所以最小正整数为 \(m=10\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -256,7 +434,20 @@ B
 \end{problem}
 
 \begin{solution}
-短答案：\(m=\frac{1}{3}\)；存在这样的定点 \(Q\)，为线段 \(A_{1}C_{1}\) 的中点.
+取空间直角坐标系，使
+\(A=(0,0,0)\)，\(B=(1,0,0)\)，\(C=(1,1,0)\)，\(D=(0,1,0)\)
+\(A_{1}=(0,0,1)\)，\(B_{1}=(1,0,1)\)，\(C_{1}=(1,1,1)\)，\(D_{1}=(0,1,1)\).
+于是 \(P=(1,1,m)\)，其中 \(0\leqslant m\leqslant1\)，且 \(\overrightarrow{AP}=(1,1,m)\). 平面 \(BDD_{1}B_{1}\) 的方程为 \(x+y=1\)，法向量可取 \(\bs{n}=(1,1,0)\). 设直线 \(AP\) 与该平面所成的角为 \(\theta\)，则
+\(\sin\theta=\frac{|\overrightarrow{AP}\cdot\bs{n}|}{|\overrightarrow{AP}|\,|\bs{n}|}=\frac{\sqrt{2}}{\sqrt{m^{2}+2}}\)，\(\cos\theta=\frac{m}{\sqrt{m^{2}+2}}\).
+当正切值为有限数时 \(m>0\)，所以 \(\tan\theta=\frac{\sqrt{2}}{m}\). 由题意 \(\frac{\sqrt{2}}{m}=3\sqrt{2}\)，得 \(m=\frac13\).
+
+再设 \(Q\) 在线段 \(A_{1}C_{1}\) 上，写成 \(Q=(t,t,1)\)，其中 \(0\leqslant t\leqslant1\). 则
+\(\overrightarrow{D_{1}Q}=(t,t-1,0)\)，\(\overrightarrow{AP}=(1,1,m)\).
+设 \(\overrightarrow{D_{1}Q}\) 在平面 \(APD_{1}\) 上的射影为 \(\bs{w}\)，并令 \(\bs{u}=\overrightarrow{D_{1}Q}-\bs{w}\). 则 \(\bs{u}\) 垂直于平面 \(APD_{1}\)，而 \(\overrightarrow{AP}\) 在该平面内，所以
+\[
+\bs{w}\cdot\overrightarrow{AP}=\overrightarrow{D_{1}Q}\cdot\overrightarrow{AP}=t+(t-1)=2t-1
+\]
+因此投影垂直于 \(AP\) 当且仅当 \(2t-1=0\)，即 \(t=\frac12\). 这与 \(m\) 无关，故存在唯一这样的定点，且它是线段 \(A_{1}C_{1}\) 的中点.
 \end{solution}
 
 \begin{problem}
@@ -296,7 +487,25 @@ B
 \end{problem}
 
 \begin{solution}
-短答案：参赛学生总数约为 \(526\) 人，设奖分数线约为 \(83.1\) 分.
+\begin{enumerate}
+\item
+设参赛学生的成绩为 \(X\)，则 \(X\sim N(70,100)\)，标准差为 \(10\). 令 \(Z=\frac{X-70}{10}\)，则 \(Z\sim N(0,1)\). 由标准正态分布表，
+\[
+P(X\geqslant90)=P(Z\geqslant2)=1-\Phi(2)=1-0.9772=0.0228
+\]
+若参赛学生总数为 \(N\)，则 \(0.0228N\approx12\)，所以
+\[
+N\approx\frac{12}{0.0228}\approx526
+\]
+故参赛学生总数约为 \(526\) 人.
+
+\item
+设奖励分数线为 \(x\) 分，则成绩不低于该分数线的学生约占 \(\frac{50}{526}\approx0.0951\). 因而
+\[
+P(X\leqslant x)\approx1-0.0951=0.9049
+\]
+所以 \(\Phi\left(\frac{x-70}{10}\right)=0.9049\). 查表得 \(\frac{x-70}{10}\approx1.31\)，从而 \(x\approx70+10\times1.31=83.1\). 故设奖分数线约为 \(83.1\) 分.
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -309,7 +518,49 @@ B
 \end{problem}
 
 \begin{solution}
-短答案：椭圆方程为 \(\frac{x^{2}}{4}+\frac{y^{2}}{3}=1\)；点 \(B\) 在以 \(MN\) 为直径的圆内.
+\begin{enumerate}
+\item
+设椭圆的半焦距为 \(c\)，则焦点为 \((\pm c,0)\)，右准线方程为 \(x=\frac{a^{2}}{c}\). 题设“长半轴的长等于焦距”给出 \(a=2c\)，又由右准线为 \(x=4\) 得
+\(\frac{a^{2}}{c}=4\)，\(a=2c\).
+于是 \(4c=4\)，从而 \(c=1\)，\(a=2\). 再由 \(b^{2}=a^{2}-c^{2}\)，得 \(b^{2}=3\). 所以椭圆方程为
+\[
+\frac{x^{2}}{4}+\frac{y^{2}}{3}=1
+\]
+
+\item
+由上问，\(A=(-2,0)\)，\(B=(2,0)\). 设 \(P=(4,t)\)，因 \(P\ne(4,0)\)，有 \(t\ne0\). 记 \(r=\frac{t}{6}\)，则直线 \(AP\) 的方程为 \(y=r(x+2)\)，直线 \(BP\) 的方程为 \(y=3r(x-2)\).
+
+设 \(M\) 是直线 \(AP\) 与椭圆除 \(A\) 外的交点. 将 \(y=r(x+2)\) 代入椭圆方程，得
+\[
+\frac{x^{2}}{4}+\frac{r^{2}(x+2)^{2}}{3}-1=0
+\Longleftrightarrow
+(x+2)\left[\left(\frac14+\frac{r^{2}}{3}\right)(x+2)-1\right]=0
+\]
+除去对应于 \(A\) 的根，得到
+\(x_M+2=\frac{12}{3+4r^{2}}\)，\(y_M=\frac{12r}{3+4r^{2}}\).
+因此
+\[
+\overrightarrow{BM}=\frac{4r}{3+4r^{2}}(-4r,3)
+\]
+
+令 \(v=x-2\)，将 \(y=3rv\) 代入椭圆方程，得
+\[
+\frac{(v+2)^{2}}{4}+3r^{2}v^{2}-1=0
+\Longleftrightarrow
+v\left[\left(\frac14+3r^{2}\right)v+1\right]=0
+\]
+其中 \(v=0\) 对应于 \(B\)，除去该根后
+\(x_N-2=-\frac{4}{1+12r^{2}}\)，\(y_N=-\frac{12r}{1+12r^{2}}\)
+从而
+\[
+\overrightarrow{BN}=-\frac{4}{1+12r^{2}}(1,3r)
+\]
+于是
+\[
+\overrightarrow{BM}\cdot\overrightarrow{BN}=-\frac{80r^{2}}{(3+4r^{2})(1+12r^{2})}<0
+\]
+所以 \(\angle MBN>90^{\circ}\). 根据圆的直径所对的圆周角为直角及其内外判定，点 \(B\) 在以 \(MN\) 为直径的圆内.
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -322,5 +573,35 @@ B
 \end{problem}
 
 \begin{solution}
-短答案：\(b=-3-2a\)，且 \(a\neq -4\)；当 \(a>-4\) 时，\(f(x)\) 在 \((-\infty,-a-1)\) 上单调递减，在 \((-a-1,3)\) 上单调递增，在 \((3,+\infty)\) 上单调递减；当 \(a<-4\) 时，\(f(x)\) 在 \((-\infty,3)\) 上单调递减，在 \((3,-a-1)\) 上单调递增，在 \((-a-1,+\infty)\) 上单调递减；第（2）问 \(0<a<\frac{2}{3}\).
+\begin{enumerate}
+\item
+求导得
+\[
+f'(x)=\bigl(2x+a-(x^{2}+ax+b)\bigr)\e^{3-x}
+\]
+因为 \(x=3\) 是极值点，必有 \(f'(3)=0\)，所以
+\[
+\bigl(6+a-(9+3a+b)\bigr)\e^{0}=0\Longleftrightarrow b=-3-2a
+\]
+代回并因式分解，得
+\[
+f'(x)=\bigl(-x^{2}+(2-a)x+3+3a\bigr)\e^{3-x}=(3-x)(x+a+1)\e^{3-x}
+\]
+若 \(a=-4\)，则两个零点重合，且 \(f'(x)=-(x-3)^{2}\e^{3-x}\leqslant0\)，函数在 \(x=3\) 两侧均不改变单调性，不是极值点. 因此 \(a\ne-4\).
+
+当 \(a>-4\) 时，\(-a-1<3\)，由导数符号得 \(f(x)\) 在 \((-\infty,-a-1)\) 上单调递减，在 \((-a-1,3)\) 上单调递增，在 \((3,+\infty)\) 上单调递减. 当 \(a<-4\) 时，\(3<-a-1\)，所以 \(f(x)\) 在 \((-\infty,3)\) 上单调递减，在 \((3,-a-1)\) 上单调递增，在 \((-a-1,+\infty)\) 上单调递减.
+
+\item
+现有 \(a>0\)，属于 \(a>-4\) 的情形. 因而 \(f\) 在 \([0,3]\) 上递增，在 \([3,4]\) 上递减. 由 \(b=-3-2a\)，
+\(f(0)=(-3-2a)\e^{3}<0\)，\(f(3)=a+6\)，\(f(4)=\frac{13+2a}{\e}\).
+并且
+\[
+\e(a+6)-(13+2a)=(\e-2)a+6\e-13>0
+\]
+所以 \(f(4)<f(3)\)，从而 \(f([0,4])=[f(0),a+6]\). 另一方面，\(g(x)=\left(a^{2}+\frac{25}{4}\right)\e^{x}\) 在 \([0,4]\) 上递增，其最小值为 \(g(0)=a^{2}+\frac{25}{4}\). 因为 \(f(0)<0<g(0)\)，两值域中能使距离小于 \(1\) 的最小可能距离由 \(f(3)\) 与 \(g(0)\) 决定，故存在 \(\xi_1\)，\(\xi_2\in[0,4]\) 使 \(\left|f(\xi_1)-g(\xi_2)\right|<1\) 当且仅当
+\[
+g(0)-f(3)<1\Longleftrightarrow a^{2}+\frac{25}{4}-(a+6)<1\Longleftrightarrow \left(a-\frac12\right)^{2}<1
+\]
+结合 \(a>0\)，得到 \(0<a<\frac32\).
+\end{enumerate}
 \end{solution}

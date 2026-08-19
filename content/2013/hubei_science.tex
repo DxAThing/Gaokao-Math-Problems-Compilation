@@ -16,6 +16,12 @@
 D
 \end{answer}
 
+\begin{solution}
+将分子分母同乘以 \(1-\i\)，得
+\(z=\dfrac{2\i(1-\i)}{(1+\i)(1-\i)}=\dfrac{2\i(1-\i)}{2}=1+\i\).
+因此共轭复数为 \(\overline{z}=1-\i\)，它在复平面内对应的点为 \((1,-1)\)，位于第四象限，故选 D.
+\end{solution}
+
 \begin{problem}
 已知全集为 \(\R\). 集合 \(A = \left\{x \mid \left(\frac{1}{2}\right)^x \leqslant 1\right\}\)，\(B = \{x \mid x^2 - 6x + 8 \leqslant 0\}\)，则 \(A \cap \complement_{\R} B =\)（\quad）
 
@@ -29,6 +35,13 @@ D
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+因为函数 \(y=\left(\dfrac12\right)^x\) 是减函数，且在 \(x=0\) 时取值为 \(1\)，所以 \(\left(\dfrac12\right)^x\leqslant1\) 等价于 \(x\geqslant0\)，即 \(A=[0,+\infty)\).
+又 \(x^2-6x+8=(x-2)(x-4)\)，所以 \(B=[2,4]\)，从而 \(\complement_{\R}B=(-\infty,2)\cup(4,+\infty)\).
+因此
+\(A\cap\complement_{\R}B=[0,2)\cup(4,+\infty)\)，对应选项 C.
+\end{solution}
 
 \begin{problem}
 在一次跳伞训练中，甲，乙两位学员各跳一次. 设命题 \(p\) 是“甲降落在指定范围”，\(q\) 是“乙降落在指定范围”，则命题“至少有一位学员没有降落在指定范围”可表示为（\quad）
@@ -44,6 +57,11 @@ C
 A
 \end{answer}
 
+\begin{solution}
+“至少有一位学员没有降落在指定范围”是“不是两位学员都降落在指定范围”，即命题 \(\neg(p\wedge q)\).
+由德摩根律，\(\neg(p\wedge q)=(\neg p)\vee(\neg q)\)，所以选 A.
+\end{solution}
+
 \begin{problem}
 将函数 \( y = \sqrt{3} \cos x + \sin x \)（\(x \in \R\)）的图像向左平移 \(m\)（\(m > 0\)）个单位长度后，所得到的图象关于 \(y\) 轴对称. 则 \(m\) 的最小值是（\quad）
 
@@ -57,6 +75,17 @@ A
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+原函数可化为
+\(y=\sqrt{3}\cos x+\sin x=2\cos\left(x-\dfrac{\pi}{6}\right)\).
+图象向左平移 \(m\) 个单位后，函数变为
+\(g(x)=2\cos\left(x+m-\dfrac{\pi}{6}\right)\).
+图象关于 \(y\) 轴对称等价于 \(g(x)\) 为偶函数. 展开得
+\(g(x)=2\cos x\cos\left(m-\dfrac{\pi}{6}\right)-2\sin x\sin\left(m-\dfrac{\pi}{6}\right)\)，故必须有
+\(\sin\left(m-\dfrac{\pi}{6}\right)=0\).
+于是 \(m=\dfrac{\pi}{6}+k\pi\)，其中 \(k\) 为整数. 结合 \(m>0\)，最小值为 \(\dfrac{\pi}{6}\)，故选 B.
+\end{solution}
 
 \begin{problem}
 已知 \(0 < \theta < \frac{\pi}{4}\)，则双曲线 \(C_1: \frac{x^{2}}{\cos^{2}\theta} - \frac{y^{2}}{\sin^{2}\theta} = 1\) 与 \(C_2: \frac{y^{2}}{\sin^{2}\theta} - \frac{x^{2}}{\sin^{2}\theta \tan^{2}\theta} = 1\) 的（\quad）
@@ -72,6 +101,17 @@ B
 D
 \end{answer}
 
+\begin{solution}
+双曲线 \(C_1\) 的实半轴和虚半轴分别为 \(a_1=\cos\theta\)、\(b_1=\sin\theta\)，所以其焦半距满足 \(c_1^2=a_1^2+b_1^2=1\)，离心率为
+\(e_1=\dfrac{c_1}{a_1}=\dfrac{1}{\cos\theta}\).
+将 \(C_2\) 写成标准形式
+\(\dfrac{y^2}{(\sin\theta)^2}-\dfrac{x^2}{(\sin\theta\tan\theta)^2}=1\)，其竖直实半轴为 \(a_2=\sin\theta\)，虚半轴为 \(b_2=\sin\theta\tan\theta\).
+因此
+\(c_2^2=a_2^2+b_2^2=\sin^2\theta+\sin^2\theta\tan^2\theta=\tan^2\theta\)，从而 \(c_2=\tan\theta\)，且
+\(e_2=\dfrac{c_2}{a_2}=\dfrac{\tan\theta}{\sin\theta}=\dfrac{1}{\cos\theta}=e_1\).
+故两条双曲线的离心率相等，选 D.
+\end{solution}
+
 \begin{problem}
 已知点 \(A(-1,1)\)，\(B(1,2)\)，\(C(-2,-1)\)，\(D(3,4)\). 则向量 \(\overrightarrow{AB}\) 在 \(\overrightarrow{CD}\) 方向上的投影为（\quad）
 
@@ -86,6 +126,12 @@ D
 A
 \end{answer}
 
+\begin{solution}
+\(\overrightarrow{AB}=(1-(-1),2-1)=(2,1)\)，\(\overrightarrow{CD}=(3-(-2),4-(-1))=(5,5)\).
+向量 \(\overrightarrow{AB}\) 在 \(\overrightarrow{CD}\) 方向上的投影为
+\(\dfrac{\overrightarrow{AB}\cdot\overrightarrow{CD}}{|\overrightarrow{CD}|}=\dfrac{2\cdot5+1\cdot5}{\sqrt{5^2+5^2}}=\dfrac{15}{5\sqrt{2}}=\dfrac{3\sqrt{2}}{2}\)，故选 A.
+\end{solution}
+
 \begin{problem}
 一辆汽车在高速公路上行驶，由于遇到紧急情况而刹车，以速度 \(v(t) = 7 - 3t + \frac{25}{1 + t}\)（\(t\) 的单位：\(\mathrm{s}\)，\(v\) 的单位：\(\mathrm{m/s}\)）行驶至停止，在此期间汽车继续行驶的距离（单位：\(\mathrm{m}\)）是（\quad）
 
@@ -99,6 +145,19 @@ A
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+汽车停止时速度为 \(0\). 由于 \(t\geqslant0\)，由
+\(7-3t+\dfrac{25}{1+t}=0\) 得 \((7-3t)(1+t)+25=0\)，即 \(3t^2-4t-32=0\).
+解得 \(t=4\) 或 \(t=-\dfrac{8}{3}\)，故汽车在 \(0\leqslant t\leqslant4\) 内行驶.
+行驶距离为
+\[
+\int_0^4\left(7-3t+\frac{25}{1+t}\right)\,\mathrm{d}t
+=\left[7t-\frac{3}{2}t^2+25\ln(1+t)\right]_0^4
+=4+25\ln5
+\]
+故选 C.
+\end{solution}
 
 \begin{problem}
 一个几何体的三视图如图所示，该几何体从上到下由四个简单几何体组成，其体积分别记为 \(V_{1}\)，\(V_{2}\)，\(V_{3}\)，\(V_{4}\). 上面两个简单几何体均为旋转体，下面两个简单几何体均为多面体，则有（\quad）
@@ -117,10 +176,20 @@ C
 C
 \end{answer}
 
+\begin{solution}
+由三视图可读出，从上到下四个几何体分别是高为 \(1\)、上、下底面半径分别为 \(2\)、\(1\) 的圆台，高为 \(2\)、半径为 \(1\) 的圆柱，边长为 \(2\) 的正方体，以及高为 \(1\)、上、下底面边长分别为 \(2\)、\(4\) 的正四棱台.
+因此
+\(V_1=\dfrac{\pi}{3}(2^2+2\cdot1+1^2)\cdot1=\dfrac{7\pi}{3}\)，
+\(V_2=\pi\cdot1^2\cdot2=2\pi\)，
+\(V_3=2^3=8\)，
+\(V_4=\dfrac{1}{3}(2^2+2\cdot4+4^2)\cdot1=\dfrac{28}{3}\).
+利用 \(\pi<\dfrac{22}{7}\)，有 \(V_2<V_1<8=V_3<V_4\)，故选 C.
+\end{solution}
+
 \begin{problem}
 如图，将一个各面都涂了油漆的正方体切割为 125 个同样大小的小正方体，经过搅拌后，从中随机取一个小正方体，记其涂漆面数为 \(X\)，则 \(X\) 的均值 \(E(X) =\)（\quad）
 
-\bitmapfigure[max width=0.42\linewidth]{img/2013/hubei_science/q9_fig1.png}
+\bitmapfigure[float=inline,max width=0.42\linewidth]{img/2013/hubei_science/q9_fig1.png}
 
 \choices
     {\(\frac{126}{125}\)}
@@ -132,6 +201,15 @@ C
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+正方体被切成 \(5^3=125\) 个小正方体. 三面涂漆的小正方体有 \(8\) 个，两面涂漆的有 \(12(5-2)=36\) 个，一面涂漆的有 \(6(5-2)^2=54\) 个，没有涂漆面的有 \((5-2)^3=27\) 个.
+所以
+\[
+E(X)=\frac{3\cdot8+2\cdot36+1\cdot54+0\cdot27}{125}=\frac{150}{125}=\frac65
+\]
+故选 B.
+\end{solution}
 
 \begin{problem}
 已知 \(a\) 为常数，函数 \(f(x) = x(\ln x - ax)\) 有两个极值点 \(x_1\)，\(x_2\)（\(x_1 < x_2\)），则（\quad）
@@ -147,6 +225,17 @@ B
 D
 \end{answer}
 
+\begin{solution}
+函数定义域为 \(x>0\)，且
+\(f'(x)=\ln x+1-2ax\).
+要使 \(f'(x)=0\) 有两个根，必须有 \(a>0\). 函数 \(h(x)=\ln x+1-2ax\) 在 \(x=\dfrac{1}{2a}\) 处取得最大值 \(-\ln(2a)\)，故两个根的存在要求 \(-\ln(2a)>0\)，即 \(0<a<\dfrac12\).
+又 \(h(1)=1-2a>0\)，而 \(h(x)\) 在 \(x\to0^+\) 和 \(x\to+\infty\) 时均趋于负无穷，因此 \(x_1<1<x_2\).
+在极值点处由 \(\ln x+1=2ax\) 得 \(ax=\dfrac{\ln x+1}{2}\)，于是
+\(f(x)=x(\ln x-ax)=\dfrac{x}{2}(\ln x-1)\).
+所以 \(f(x_1)<0\). 对 \(x>1\)，函数 \(x(\ln x-1)\) 的导数为 \(\ln x>0\)，且在 \(x=1\) 时其值为 \(-1\)，故 \(f(x_2)>-\dfrac12\).
+因此选 D.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -157,12 +246,20 @@ D
 \item 在这些用户中，用电量落在区间 \([100,250)\) 内的户数为\fillinblank{}.
 \end{enumerate}
 
-\texfigure[max width=0.45\linewidth]{img_repaint/2013/hubei_science/q11_fig1.tex}
+\bitmapfigure[max width=0.45\linewidth]{img/2013/hubei_science/q11_fig1.png}
 \end{problem}
 
 \begin{answer}
 \(0.0044\)；\(70\)
 \end{answer}
+
+\begin{solution}
+每个组距为 \(50\)，频率分布直方图的各柱面积之和为 \(1\)，所以
+\(50\left(0.0024+0.0036+0.0060+x+0.0024+0.0012\right)=1\).
+解得 \(x=0.0044\).
+用电量落在 \([100,250)\) 内的频率为
+\(50(0.0036+0.0060+0.0044)=0.70\)，因此相应户数为 \(100\times0.70=70\) 户.
+\end{solution}
 
 \begin{problem}
 阅读如图所示的程序框图，运行相应的程序，输出的结果 \(i=\fillinblank{}\).
@@ -174,6 +271,10 @@ D
 5
 \end{answer}
 
+\begin{solution}
+程序开始时 \(a=10\)，\(i=1\). 逐次执行循环：当 \(a=10\) 时，\(a\) 不是 \(4\) 且为偶数，令 \(a=10/2=5\)，再令 \(i=2\)；当 \(a=5\) 时，令 \(a=3\times5+1=16\)，再令 \(i=3\)；当 \(a=16\) 时，令 \(a=16/2=8\)，再令 \(i=4\)；当 \(a=8\) 时，令 \(a=8/2=4\)，再令 \(i=5\). 此时满足 \(a=4\)，输出 \(i=5\).
+\end{solution}
+
 \begin{problem}
 设 \(x\)，\(y\)，\(z \in \R\)，且满足：\(x^2 + y^2 + z^2 = 1\)，\(x + 2y + 3z = \sqrt{14}\)，则 \(x + y + z =\fillinblank{}\).
 \end{problem}
@@ -181,6 +282,13 @@ D
 \begin{answer}
 \(\frac{3\sqrt{14}}{7}\)
 \end{answer}
+
+\begin{solution}
+由柯西不等式，
+\((x+2y+3z)^2\leqslant(1^2+2^2+3^2)(x^2+y^2+z^2)=14\).
+题设给出 \((x+2y+3z)^2=14\)，故等号成立. 于是 \((x,y,z)\) 与 \((1,2,3)\) 同向，设 \((x,y,z)=k(1,2,3)\). 代入 \(x+2y+3z=\sqrt{14}\)，得 \(14k=\sqrt{14}\)，所以 \(k=\dfrac{\sqrt{14}}{14}\).
+因此 \(x+y+z=6k=\dfrac{3\sqrt{14}}{7}\).
+\end{solution}
 
 \begin{problem}
 古希腊毕达哥拉斯学派的数学家研究过各种多边形数，如三角形数 \(1\)，\(3\)，\(6\)，\(10\)，\(\cdots\)，第 \(n\) 个三角形数为 \(\frac{n(n + 1)}{2} = \frac{1}{2}n^2 + \frac{1}{2}n\). 记第 \(n\) 个 \(k\) 边形数为 \(N(n, k)\)（\(k \geqslant 3\)），以下列出了部分 \(k\) 边形数中第 \(n\) 个数的表达式：
@@ -191,12 +299,19 @@ D
 六边形数 \(N(n, 6) = 2n^2 - n\)，
 ……
 
-可以推测 \(N(n, k)\) 的表达式，由此计算 \(N(10, 24) =\fillinblank{}.\)
+可以推测 \(N(n, k)\) 的表达式，由此计算 \(N(10, 24) =\fillinblank{}\).
 \end{problem}
 
 \begin{answer}
 1000
 \end{answer}
+
+\begin{solution}
+观察题中各式，\(n^2\) 的系数在 \(k=3\)，\(4\)，\(5\)，\(6\) 时依次为 \(\dfrac12\)，\(1\)，\(\dfrac32\)，\(2\)，构成公差为 \(\dfrac12\) 的等差数列，故该系数为 \(\dfrac{k-2}{2}\). \(n\) 的系数依次为 \(\dfrac12\)，\(0\)，\(-\dfrac12\)，\(-1\)，故该系数为 \(\dfrac{4-k}{2}\). 因此
+\(N(n,k)=\dfrac{k-2}{2}n^2+\dfrac{4-k}{2}n\).
+代入 \(n=10\)、\(k=24\)，得
+\(N(10,24)=\dfrac{22}{2}\cdot10^2+\dfrac{-20}{2}\cdot10=1100-100=1000\).
+\end{solution}
 
 \section{选考题：填空题}
 
@@ -210,6 +325,15 @@ D
 8
 \end{answer}
 
+\begin{solution}
+设 \(AD=x\)，则 \(AB=3x\)，圆的半径为 \(OA=\dfrac{3x}{2}\). 因为 \(D\) 在线段 \(AB\) 上，所以
+\(OD=OA-AD=\dfrac{x}{2}\).
+在直角三角形 \(ODC\) 中，\(OC\) 是斜边，且 \(DE\perp OC\). 由射影定理，
+\(OE\cdot OC=OD^2\)，从而 \(OE=\dfrac{(x/2)^2}{3x/2}=\dfrac{x}{6}\).
+于是 \(CE=OC-OE=\dfrac{3x}{2}-\dfrac{x}{6}=\dfrac{4x}{3}\)，故
+\(\dfrac{CE}{EO}=\dfrac{4x/3}{x/6}=8\).
+\end{solution}
+
 \begin{problem}
 在直角坐标系 \(xOy\) 中，椭圆 \(C\) 的参数方程为 \(\begin{cases}
 x = a\cos\varphi,\\
@@ -221,6 +345,14 @@ y = b\sin\varphi,
 \begin{answer}
 \(\frac{\sqrt{6}}{3}\)
 \end{answer}
+
+\begin{solution}
+将直线的极坐标方程化为直角坐标方程. 由 \(x=\rho\cos\theta\)、\(y=\rho\sin\theta\)，有
+\(\rho\sin\left(\theta+\dfrac{\pi}{4}\right)=\dfrac{x+y}{\sqrt{2}}\)，所以直线 \(l\) 的方程为 \(x+y=m\).
+直线 \(l\) 与圆 \(O: x^2+y^2=b^2\) 相切，故原点到直线的距离满足 \(\dfrac{|m|}{\sqrt{2}}=b\)，即 \(|m|=\sqrt{2}b\).
+椭圆焦点为 \((\pm c,0)\)，其中 \(c^2=a^2-b^2\). 由于直线 \(l\) 经过一个焦点，有 \(|m|=c\)，故 \(c=\sqrt{2}b\). 于是 \(a^2=b^2+c^2=3b^2\)，椭圆离心率为
+\(e=\dfrac{c}{a}=\dfrac{\sqrt{2}b}{\sqrt{3}b}=\dfrac{\sqrt{6}}{3}\).
+\end{solution}
 
 \section{解答题}
 
@@ -235,14 +367,7 @@ y = b\sin\varphi,
 \begin{solution}
 \begin{enumerate}
 \item 因为 \(A+B+C=\pi\)，所以 \(B+C=\pi-A\)，从而 \(\cos(B+C)=-\cos A\). 代入已知等式，得 \(\cos 2A+3\cos A=1\).
-令 \(u=\cos A\)，利用 \(\cos 2A=2\cos^2A-1\)，可得
-\[
-2u^2-1+3u=1,
-\qquad
-2u^2+3u-2=0,
-\qquad
-(2u-1)(u+2)=0.
-\]
+令 \(u=\cos A\)，利用 \(\cos 2A=2\cos^2A-1\)，可得 \(2u^2-1+3u=1\)，即 \(2u^2+3u-2=0\)，从而 \((2u-1)(u+2)=0\).
 因为 \(0<A<\pi\)，所以 \(-1<u<1\)，故 \(u=\frac{1}{2}\)，即 \(A=\frac{\pi}{3}\).
 
 \item 由三角形面积公式 \(S=\frac{1}{2}bc\sin A\)，得 \(5\sqrt{3}=\frac{1}{2}\cdot5\cdot c\cdot\frac{\sqrt{3}}{2}\)，所以 \(c=4\). 由余弦定理，\(a^2=b^2+c^2-2bc\cos A=25+16-2\cdot5\cdot4\cdot\frac{1}{2}=21\). 由正弦定理，\(\sin B=\frac{b}{a}\sin A\)，\(\sin C=\frac{c}{a}\sin A\)，因此
@@ -250,7 +375,7 @@ y = b\sin\varphi,
 \sin B\sin C
 =\frac{bc}{a^2}\sin^2A
 =\frac{5\cdot4}{21}\cdot\frac{3}{4}
-=\frac{5}{7}.
+=\frac{5}{7}
 \]
 \end{enumerate}
 \end{solution}
@@ -266,7 +391,7 @@ y = b\sin\varphi,
 \begin{solution}
 设等比数列的公比为 \(q\). 由 \(a_2=a_1q\)，有
 \[
-a_1a_2a_3=a_1\cdot a_1q\cdot a_1q^2=(a_1q)^3=a_2^3.
+a_1a_2a_3=a_1\cdot a_1q\cdot a_1q^2=(a_1q)^3=a_2^3
 \]
 因此 \(a_2^3=125\)，从而 \(a_2=5\). 又 \(|a_2-a_3|=|5-5q|=10\)，即 \(|1-q|=2\)，所以 \(q=3\) 或 \(q=-1\).
 
@@ -281,7 +406,7 @@ a_1a_2a_3=a_1\cdot a_1q\cdot a_1q^2=(a_1q)^3=a_2^3.
 \[
 \sum_{k=1}^{m}\frac{1}{a_k}
 =\frac{3}{5}\sum_{k=0}^{m-1}\left(\frac{1}{3}\right)^k
-=\frac{9}{10}\left(1-\frac{1}{3^m}\right)<\frac{9}{10}<1.
+=\frac{9}{10}\left(1-\frac{1}{3^m}\right)<\frac{9}{10}<1
 \]
 当 \(q=-1\) 时，\(a_n=5(-1)^n\)，所以
 \[
@@ -323,7 +448,7 @@ a_1a_2a_3=a_1\cdot a_1q\cdot a_1q^2=(a_1q)^3=a_2^3.
 =\frac{\sqrt{b^2+h^2/4}}{L}\cdot
 \frac{h/2}{\sqrt{b^2+h^2/4}}
 =\frac{h/2}{L}
-=\sin\theta.
+=\sin\theta
 \]
 故 \(\sin\theta=\sin\alpha\sin\beta\).
 \end{enumerate}
@@ -344,18 +469,18 @@ a_1a_2a_3=a_1\cdot a_1q\cdot a_1q^2=(a_1q)^3=a_2^3.
 因此
 \[
 P_0=P(X\leqslant800)+P(800<X\leqslant900)
-=0.5+\frac{0.9544}{2}=0.9772.
+=0.5+\frac{0.9544}{2}=0.9772
 \]
 
 \(p_0\) 按题意取为第一问所得的 \(P_0\)，即 \(p_0=0.9772\).
 
-\item 设配备 \(x\) 辆 \(A\) 型车、\(y\) 辆 \(B\) 型车，其中 \(x,y\) 为非负整数. 要使运力满足概率要求，车辆总载客量至少为 900 人，因此 \(36x+60y\geqslant900\)，即 \(3x+5y\geqslant75\). 另外，\(x+y\leqslant21\)，\(y\leqslant x+7\). 营运成本为 \(1600x+2400y=800(2x+3y)\).
+\item 设配备 \(x\) 辆 \(A\) 型车、\(y\) 辆 \(B\) 型车，其中 \(x\)，\(y\) 为非负整数. 要使运力满足概率要求，车辆总载客量至少为 900 人，因此 \(36x+60y\geqslant900\)，即 \(3x+5y\geqslant75\). 另外，\(x+y\leqslant21\)，\(y\leqslant x+7\). 营运成本为 \(1600x+2400y=800(2x+3y)\).
 
 下面证明 \(2x+3y\) 不小于 46. 若 \(2x+3y\leqslant45\)，则由运力约束
 \[
 75\leqslant3x+5y
 =\frac{3}{2}(2x+3y)+\frac{1}{2}y
-\leqslant67.5+\frac{1}{2}y,
+\leqslant67.5+\frac{1}{2}y
 \]
 可得 \(y\geqslant15\). 又因 \(y\leqslant x+7\)，所以 \(x\geqslant8\)，从而 \(2x+3y\geqslant2\cdot8+3\cdot15=61\)，这与 \(2x+3y\leqslant45\) 矛盾. 因此 \(2x+3y\geqslant46\).
 
@@ -381,25 +506,25 @@ P_0=P(X\leqslant800)+P(800<X\leqslant900)
 令 \(m=\lambda n\)，可得 \(\lambda+1=\lambda(\lambda-1)\)，即 \(\lambda^2-2\lambda-1=0\).
 因为 \(\lambda>1\)，所以 \(\lambda=1+\sqrt{2}\).
 
-\item 设直线 \(l\) 与正半轴方向的夹角为 \(\varphi\)，取直线在上半平面的射线为正方向. 记该射线与 \(C_1,C_2\) 的交点到原点的距离分别为 \(R_m,R_n\)，则
+\item 设直线 \(l\) 与正半轴方向的夹角为 \(\varphi\)，取直线在上半平面的射线为正方向. 记该射线与 \(C_1\)，\(C_2\) 的交点到原点的距离分别为 \(R_m\)，\(R_n\)，则
 \[
-R_m=\left(\frac{\cos^2\varphi}{a^2}+\frac{\sin^2\varphi}{m^2}\right)^{-1/2}.
+R_m=\left(\frac{\cos^2\varphi}{a^2}+\frac{\sin^2\varphi}{m^2}\right)^{-1/2}
 \]
 并且
 \[
-R_n=\left(\frac{\cos^2\varphi}{a^2}+\frac{\sin^2\varphi}{n^2}\right)^{-1/2}.
+R_n=\left(\frac{\cos^2\varphi}{a^2}+\frac{\sin^2\varphi}{n^2}\right)^{-1/2}
 \]
 记上半平面内的两个交点为 \(A=(x_m,y_m)\)、\(B=(x_n,y_n)\)，则
 有 \(y_m=R_m\sin\varphi\)，\(y_n=R_n\sin\varphi\)，\(C=-B\)，\(D=-A\).
 由三角形面积的行列式公式，
 \[
 S_1=\frac{1}{2}\left|\overrightarrow{BD}\times\overrightarrow{BM}\right|
-=\frac{1}{2}a(y_m+y_n),
+=\frac{1}{2}a(y_m+y_n)
 \]
 以及
 \[
 S_2=\frac{1}{2}\left|\overrightarrow{AB}\times\overrightarrow{AN}\right|
-=\frac{1}{2}a(y_m-y_n).
+=\frac{1}{2}a(y_m-y_n)
 \]
 令 \(\rho=\frac{y_m}{y_n}=\frac{R_m}{R_n}\)，则条件 \(S_1=\lambda S_2\) 等价于 \(\frac{\rho+1}{\rho-1}=\lambda\)，即 \(\rho=\frac{\lambda+1}{\lambda-1}\).
 
@@ -413,7 +538,7 @@ S_2=\frac{1}{2}\left|\overrightarrow{AB}\times\overrightarrow{AN}\right|
 反之，当 \(\lambda>1+\sqrt{2}\) 时，令 \(m=\lambda n\)，由上式令 \(\rho=\frac{\lambda+1}{\lambda-1}\)，整理得
 \[
 \tan^2\varphi
-=\frac{4\lambda^3n^2}{a^2(\lambda^2+1)(\lambda^2-2\lambda-1)}.
+=\frac{4\lambda^3n^2}{a^2(\lambda^2+1)(\lambda^2-2\lambda-1)}
 \]
 右端为正且有限，故存在既不与 \(x\) 轴也不与 \(y\) 轴重合的直线 \(l\) 满足条件. 综上，当且仅当 \(\lambda>1+\sqrt{2}\) 时，存在满足条件的直线 \(l\).
 \end{enumerate}
@@ -441,11 +566,11 @@ S_2=\frac{1}{2}\left|\overrightarrow{AB}\times\overrightarrow{AN}\right|
 对任意正整数 \(n\)，将 \(x=\frac{1}{n}\) 代入，同样因为 \(x\neq0\)，有 \(\left(1+\frac{1}{n}\right)^{r+1}-\frac{r+1}{n}-1>0\). 两边同乘以正数 \(n^{r+1}\)，得 \((n+1)^{r+1}-(r+1)n^r-n^{r+1}>0\)，即 \(n^r<\frac{(n+1)^{r+1}-n^{r+1}}{r+1}\).
 两式合并即得所证不等式.
 
-\item 在第（2）问中取 \(r=\frac{1}{3}\)，对 \(n=81,82,\ldots,125\) 分别求和，得到
+\item 在第（2）问中取 \(r=\frac{1}{3}\)，对 \(n=81\)，\(82\)，\(\ldots\)，\(125\) 分别求和，得到
 \[
 \frac{3}{4}\left(125^{4/3}-80^{4/3}\right)
 <S<
-\frac{3}{4}\left(126^{4/3}-81^{4/3}\right).
+\frac{3}{4}\left(126^{4/3}-81^{4/3}\right)
 \]
 因为 \(125^{4/3}=625\)，结合题中参考数据，\(\frac{3}{4}(625-344.7)\approx210.2<S\)，且 \(S<\frac{3}{4}(631.7-350.5)\approx210.9\).
 所以 \(210<S<211\). 题目中的 \([S]\) 表示不小于 \(S\) 的最小整数，故 \([S]=211\).

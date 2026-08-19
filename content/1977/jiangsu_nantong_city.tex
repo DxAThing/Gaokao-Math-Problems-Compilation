@@ -13,19 +13,19 @@
 
 \begin{solution}
 \begin{enumerate}
-\item 由 \(0<m<3n\) 且 \(m>0\)，知 \(n>0\)，从而 \(2mn>0\)，并且 \(m+3n>0\). 因此
-\(\sqrt{\dfrac{\left(m+3n\right)^2}{2mn}}=\dfrac{m+3n}{\sqrt{2mn}}\).
-又因为 \(m-3n<0\)，所以原式
+\item 由 \(0<m<3n\) 可得 \(n>\dfrac{m}{3}>0\)，所以 \(2mn>0\)，且 \(m+3n>0\). 因而 \(\sqrt{\dfrac{\left(m+3n\right)^2}{2mn}}=\dfrac{m+3n}{\sqrt{2mn}}\). 又因为 \(m-3n<0\)，所以原式为
 \[
-=\dfrac{-2mn}{m-3n}\cdot\dfrac{m+3n}{\sqrt{2mn}}-6
+\dfrac{-2mn}{m-3n}\sqrt{\dfrac{\left(m+3n\right)^2}{2mn}}-6
+=\dfrac{2mn}{3n-m}\cdot\dfrac{m+3n}{\sqrt{2mn}}-6
 =\dfrac{\left(m+3n\right)\sqrt{2mn}}{3n-m}-6
 \]
-\item \(1.5=\dfrac32\)，且 \(2\dfrac79=\dfrac{25}{9}\)，所以
+
+\item 先将小数指数和带分数化为分数，得 \(1.5=\dfrac32\)，\(2\dfrac79=\dfrac{25}{9}\). 由于 \(\left(\dfrac7{11}\right)^0=1\)，且 \(\sqrt{\dfrac{25}{9}}=\dfrac53\)，所以
 \[
 \left(\dfrac14\right)^{-1.5}\left[\left(\dfrac7{11}\right)^0\right]^{-3}-\left(\dfrac35\right)^{-2}\div\left(2\dfrac79\right)^{\frac12}
-=4^{\frac32}\cdot1^{-3}-\left(\dfrac53\right)^2\div\dfrac53
-=8-\dfrac{25}{9}\cdot\dfrac35
-=\dfrac{19}{3}
+=4^{\frac32}\cdot1^{-3}-\left(\dfrac53\right)^2\div\sqrt{\dfrac{25}{9}}
+=8-\dfrac{25}{9}\div\dfrac53
+=8-\dfrac{25}{9}\cdot\dfrac35=\dfrac{19}{3}
 \]
 \end{enumerate}
 \end{solution}
@@ -47,11 +47,22 @@ a^4-10a^2+16=u^2-10u+16=\left(u-2\right)\left(u-8\right)
 \]
 代回 \(u=a^2\)，并在实数范围内继续分解，得
 \[
-a^4-10a^2+16=\left(a^2-2\right)\left(a^2-8\right)=\left(a-\sqrt2\right)\left(a+\sqrt2\right)\left(a-2\sqrt2\right)\left(a+2\sqrt2\right)
+a^4-10a^2+16=\left(a^2-2\right)\left(a^2-8\right)
+=\left(a-\sqrt2\right)\left(a+\sqrt2\right)\left(a-2\sqrt2\right)\left(a+2\sqrt2\right)
 \]
-\item 注意到前两项可合并为完全平方，且后三项也只含 \(x-2y\)，所以
+
+\item 将含有 \(x\)，\(y\) 的项按 \(x-2y\) 重新组合，得
 \[
-x^2-4xy+4y^2-3x+6y+2=\left(x-2y\right)^2-3\left(x-2y\right)+2=\left(x-2y-1\right)\left(x-2y-2\right)
+x^2-4xy+4y^2-3x+6y+2
+=\left(x-2y\right)^2-3\left(x-2y\right)+2
+\]
+令 \(v=x-2y\)，则
+\[
+v^2-3v+2=\left(v-1\right)\left(v-2\right)
+\]
+代回 \(v=x-2y\)，得
+\[
+x^2-4xy+4y^2-3x+6y+2=\left(x-2y-1\right)\left(x-2y-2\right)
 \]
 \end{enumerate}
 \end{solution}
@@ -68,15 +79,19 @@ x^2-4xy+4y^2-3x+6y+2=\left(x-2y\right)^2-3\left(x-2y\right)+2=\left(x-2y-1\right
 
 \begin{solution}
 \begin{enumerate}
-\item 原方程有意义的条件是 \(x\ne1\) 且 \(x\ne3\)，因为 \(x^2-4x+3=\left(x-1\right)\left(x-3\right)\). 在此条件下，方程两边同乘 \(\left(x-1\right)\left(x-3\right)\)，得
-\(\left(2x+1\right)\left(x-1\right)-\left(5x-11\right)=3\left(x-3\right)\).
-化简得 \(2x^2-9x+19=0\)，其判别式为 \(\Delta=\left(-9\right)^2-4\times2\times19=-71<0\). 因此原方程无实数解.
-\item 由根式有意义，须 \(x\geqslant2\). 移项得 \(\sqrt{2x-4}=1+\sqrt{x+5}\).
-两边平方，得 \(2x-4=x+6+2\sqrt{x+5}\)，即 \(x-10=2\sqrt{x+5}\)，所以还须 \(x\geqslant10\). 再次平方，得 \(\left(x-10\right)^2=4\left(x+5\right)\).
-即 \(x^2-24x+80=0\)，所以 \(x=4\) 或 \(x=20\). 由 \(x\geqslant10\) 取 \(x=20\)，代回原方程检验：\(\sqrt{2\times20-4}-\sqrt{20+5}=6-5=1\)，故原方程的解为 \(x=20\).
-\item 对数的底数须满足 \(x-1>0\) 且 \(x-1\ne1\)，即 \(x>1\) 且 \(x\ne2\). 真数还须满足 \(2x^2-3x-1>0\). 由于 \(2x^2-3x-1=0\) 的两根为 \(\frac{3-\sqrt {17}}4\) 和 \(\frac{3+\sqrt {17}}4\)，所以在 \(x>1\) 时，真数为正等价于 \(x>\frac{3+\sqrt {17}}4\). 在这些条件下，原方程等价于
-\(2x^2-3x-1=\left(x-1\right)^2\).
-整理得 \(x^2-x-2=0\)，所以 \(x=2\) 或 \(x=-1\). 其中 \(x=2\) 使底数为 \(1\)，\(x=-1\) 使底数为负数，均不满足定义域条件，因此原方程无实数解.
+\item 因为分母中出现 \(x-3\) 和 \(x^2-4x+3\)，且 \(x^2-4x+3=\left(x-1\right)\left(x-3\right)\)，所以原方程的定义域为 \(x\ne1\)，\(3\). 在这个条件下，两边同乘 \(\left(x-1\right)\left(x-3\right)\)，得到
+\[
+\left(2x+1\right)\left(x-1\right)-\left(5x-11\right)=3\left(x-3\right)
+\]
+展开并移项，得
+\(2x^2-6x+10=3x-9\)，\(2x^2-9x+19=0\).
+这个二次方程的判别式为 \(\Delta=(-9)^2-4\times2\times19=81-152=-71<0\)，所以它没有实数根，原方程无实数解.
+
+\item 两个根式都有意义，首先要求 \(2x-4\geqslant0\)，即 \(x\geqslant2\). 移项得 \(\sqrt{2x-4}=1+\sqrt{x+5}\). 两边非负，可以平方，得 \(2x-4=1+x+5+2\sqrt{x+5}\)，即 \(x-10=2\sqrt{x+5}\). 右端非负，所以还必须有 \(x\geqslant10\). 在此条件下再次平方，得
+\(\left(x-10\right)^2=4\left(x+5\right)\)，\(x^2-24x+80=0\).
+解得 \(x=4\) 或 \(x=20\). 结合 \(x\geqslant10\) 只保留 \(x=20\)，并检验 \(\sqrt{2\times20-4}-\sqrt{20+5}=6-5=1\)，因此原方程的解为 \(x=20\).
+
+\item 对数底数的条件为 \(x-1>0\) 且 \(x-1\ne1\)，即 \(x>1\) 且 \(x\ne2\). 真数还必须为正. 方程 \(2x^2-3x-1=0\) 的根为 \(x=\dfrac{3\pm\sqrt{17}}{4}\). 在 \(x>1\) 的范围内，真数为正还要求 \(x>\dfrac{3+\sqrt{17}}4\). 在这些定义域条件下，由对数定义，原方程等价于 \(2x^2-3x-1=\left(x-1\right)^2\). 整理得 \(x^2-x-2=0\)，即 \(\left(x-2\right)\left(x+1\right)=0\)，所以候选值为 \(x=2\)，\(-1\). 但 \(x=2\) 时底数为 \(1\)，\(x=-1\) 时底数为负数，二者均不在定义域内，因此原方程无实数解.
 \end{enumerate}
 \end{solution}
 
@@ -91,8 +106,11 @@ x^2-4xy+4y^2-3x+6y+2=\left(x-2y\right)^2-3\left(x-2y\right)+2=\left(x-2y-1\right
 
 \begin{solution}
 \begin{enumerate}
-\item 根式有意义要求 \(x-1\geqslant0\)，分母不为零要求 \(1-\sqrt{x-1}\ne0\). 因此定义域为 \(x\geqslant1\) 且 \(x\ne2\).
-\item 对数真数须为正，所以要求 \(\tan x>0\)；同时这已保证 \(\tan x\) 有定义. 正切函数在每个周期内的正值区间为 \(\left(k\pi,k\pi+\frac\pi2\right)\)，其中 \(k\in\Z\)，故定义域为
+\item 根式有意义要求 \(x-1\geqslant0\)，即 \(x\geqslant1\). 同时分母不能为零，故 \(1-\sqrt{x-1}\ne0\)，这等价于 \(\sqrt{x-1}\ne1\)，即 \(x\ne2\). 因此定义域为 \(x\geqslant1\) 且 \(x\ne2\)，也可写为 \([1,2)\cup(2,+\infty)\).
+
+\item \(\lg\) 的真数必须为正，因此要求 \(\tan x>0\). 这个条件同时排除了正切函数无定义的点. 正切函数在每个周期内为正的区间是
+\(\left(k\pi,k\pi+\dfrac\pi2\right)\)，\(k\in\Z\).
+所以定义域为
 \[
 \bigcup_{k\in\Z}\left(k\pi,k\pi+\dfrac\pi2\right)
 \]
@@ -111,17 +129,30 @@ x^2-4xy+4y^2-3x+6y+2=\left(x-2y\right)^2-3\left(x-2y\right)+2=\left(x-2y-1\right
 
 \begin{solution}
 \begin{enumerate}
-\item 因为 \(\log_2\dfrac25=1-\log_2 5\)，
-并且 \(\log_2\sqrt2=\dfrac12\)，
-所以指数为 \(1-\left(1-\log_2 5\right)+\frac12=\frac12+\log_2 5\). 因而
+\item 由对数的商和幂的运算性质，\(\log_2\dfrac25=\log_2 2-\log_2 5=1-\log_2 5\)，且 \(\log_2\sqrt2=\dfrac12\). 因此原式的指数为
+\[
+1-\log_2\dfrac25+\log_2\sqrt2
+=1-\left(1-\log_2 5\right)+\dfrac12
+=\dfrac12+\log_2 5
+\]
+于是
 \[
 4^{1-\log_2\frac25+\log_2\sqrt2}=\left(2^2\right)^{\frac12+\log_2 5}=2^{1+2\log_2 5}=2\cdot5^2=50
 \]
-\item 由三角形内角和可得 \(\angle A=180^\circ-120^\circ-15^\circ=45^\circ\). 由正弦定理可得 \(\dfrac{c}{\sin15^\circ}=\dfrac{b}{\sin120^\circ}\)，所以
+
+\item 由三角形内角和，\(\angle A=180^\circ-120^\circ-15^\circ=45^\circ\). 由正弦定理，\(\dfrac{c}{\sin15^\circ}=\dfrac{b}{\sin120^\circ}\). 又因为
+\[
+\sin15^\circ=\sin\left(45^\circ-30^\circ\right)=\sin45^\circ\cos30^\circ-\cos45^\circ\sin30^\circ=\dfrac{\sqrt6-\sqrt2}{4}
+\]
+同时 \(\sin120^\circ=\sin60^\circ=\dfrac{\sqrt3}{2}\)，所以
 \[
 c=100\cdot\dfrac{\sin15^\circ}{\sin120^\circ}=100\cdot\dfrac{\frac{\sqrt6-\sqrt2}{4}}{\frac{\sqrt3}{2}}=\dfrac{50\left(\sqrt6-\sqrt2\right)}{\sqrt3}=\dfrac{50}{3}\left(3\sqrt2-\sqrt6\right)
 \]
-\item 令极坐标为 \(\left(r,\theta\right)\)，则 \(x=r\cos\theta\)，\(y=r\sin\theta\). 代入直角坐标方程，得 \(r^2\cos^2\theta-r^2\sin^2\theta=a^2\)，即极坐标方程为 \(r^2\cos2\theta=a^2\).
+
+\item 设动点的极坐标为 \(\left(r,\theta\right)\)，则 \(x=r\cos\theta\)，\(y=r\sin\theta\). 代入 \(x^2-y^2=a^2\)，得 \(r^2\cos^2\theta-r^2\sin^2\theta=a^2\). 利用 \(\cos^2\theta-\sin^2\theta=\cos2\theta\)，得到极坐标方程
+\[
+r^2\cos2\theta=a^2
+\]
 \end{enumerate}
 \end{solution}
 
@@ -130,18 +161,20 @@ c=100\cdot\dfrac{\sin15^\circ}{\sin120^\circ}=100\cdot\dfrac{\frac{\sqrt6-\sqrt2
 \end{problem}
 
 \begin{solution}
-由角平分线定理可得 \(\dfrac{BD}{DC}=\dfrac{AB}{AC}\).
-设 \(AB=m\)，\(AC=n\)，\(BD=p\)，\(DC=q\). 由角平分线定理，\(np=mq\). 斯特瓦特定理给出
+设 \(AB=m\)，\(AC=n\)，\(BD=p\)，\(DC=q\). 由于 \(AD\) 是角平分线，角平分线定理给出 \(\dfrac{p}{q}=\dfrac{m}{n}\)，即 \(np=mq\).
+在三角形 \(ABC\) 中对截线 \(AD\) 使用斯特瓦特定理，得
 \[
 n^2p+m^2q=\left(p+q\right)\left(AD^2+pq\right)
 \]
-由 \(np=mq\)，左端可化为 \(mn\left(p+q\right)\)，所以 \(mn\left(p+q\right)=\left(p+q\right)\left(AD^2+pq\right)\). 因 \(p+q>0\)，约去 \(p+q\)，得到 \(AD^2=mn-pq=AB\cdot AC-BD\cdot DC\).
-又因为 \(A\)、\(B\)、\(C\)、\(E\) 四点共圆，且 \(D\) 在弦 \(BC\) 与弦 \(AE\) 的交点上，由相交弦定理可得 \(AD\cdot DE=BD\cdot DC\).
-由于 \(D\) 在线段 \(AE\) 上，\(AE=AD+DE\). 因此
+由 \(np=mq\)，斯特瓦特定理左端为
+\[
+n^2p+m^2q=n(np)+m(mq)=mnq+mnp=mn\left(p+q\right)
+\]
+因此 \(mn\left(p+q\right)=\left(p+q\right)\left(AD^2+pq\right)\). 因为 \(p+q=BC>0\)，约去 \(p+q\)，得到 \(AD^2=mn-pq=AB\cdot AC-BD\cdot DC\). 又因为 \(A\)，\(B\)，\(C\)，\(E\) 共圆，且弦 \(AE\) 与弦 \(BC\) 交于 \(D\)，由相交弦定理 \(AD\cdot DE=BD\cdot DC\). 由题意，点的顺序为 \(A\)，\(D\)，\(E\)，所以 \(AE=AD+DE\). 于是
 \[
 AB\cdot AC=AD^2+BD\cdot DC=AD^2+AD\cdot DE=AD\left(AD+DE\right)=AD\cdot AE
 \]
-所以 \(AB\cdot AC=AD\cdot AE\).
+故 \(AB\cdot AC=AD\cdot AE\).
 \end{solution}
 
 \begin{problem}
@@ -149,14 +182,11 @@ AB\cdot AC=AD^2+BD\cdot DC=AD^2+AD\cdot DE=AD\left(AD+DE\right)=AD\cdot AE
 \end{problem}
 
 \begin{solution}
-设正三角形底面 \(ABC\) 的中心为 \(O\)，\(PO\) 为棱锥的高，设 \(M\) 为 \(BC\) 的中点. 因为棱锥为正三棱锥，所以 \(PO\perp\) 平面 \(ABC\)，且 \(PM\perp BC\)，\(OM\perp BC\). 因此侧面与底面所成的二面角就是 \(\angle PMO=60^\circ\).
+设正三角形 \(ABC\) 的中心为 \(O\)，\(PO\) 为棱锥的高，\(M\) 为 \(BC\) 的中点. 正三棱锥的高垂直于底面，且侧面三角形 \(PBC\) 为等腰三角形，因此 \(PO\perp\text{平面 }ABC\)，\(PM\perp BC\)，\(OM\perp BC\).
+所以侧面 \(PBC\) 与底面 \(ABC\) 所成的二面角等于 \(\angle PMO=60^\circ\)，且三角形 \(POM\) 在 \(O\) 处为直角三角形.
 
-底面为边长 \(6\mathrm{~cm}\) 的正三角形，所以 \(OM=\dfrac{6\sqrt3}{6}=\sqrt3\mathrm{~cm}\).
-底面积为
-\(S_{\triangle ABC}=\dfrac{6^2\sqrt3}{4}=9\sqrt3\mathrm{~cm}^2\).
-在直角三角形 \(POM\) 中，
-\(PO=OM\tan60^\circ=\sqrt3\cdot\sqrt3=3\mathrm{~cm}\).
-所以棱锥的体积为
+正三角形边长为 \(6\mathrm{~cm}\)，其中心到边的距离为内切圆半径，故 \(OM=\dfrac{6\sqrt3}{6}=\sqrt3\mathrm{~cm}\). 底面积为 \(S_{\triangle ABC}=\dfrac{6^2\sqrt3}{4}=9\sqrt3\mathrm{~cm}^2\). 在直角三角形 \(POM\) 中，\(\tan60^\circ=\dfrac{PO}{OM}\)，所以 \(PO=OM\tan60^\circ=\sqrt3\cdot\sqrt3=3\mathrm{~cm}\).
+因此棱锥体积为
 \[
 V=\dfrac13S_{\triangle ABC}\cdot PO=\dfrac13\cdot9\sqrt3\cdot3=9\sqrt3\mathrm{~cm}^3
 \]
@@ -167,8 +197,16 @@ V=\dfrac13S_{\triangle ABC}\cdot PO=\dfrac13\cdot9\sqrt3\cdot3=9\sqrt3\mathrm{~c
 \end{problem}
 
 \begin{solution}
-因为 \(a\)、\(b\)、\(c\) 是三角形的三条边，所以 \(\left|b-c\right|<a<b+c\). 三边均为正数，平方后得 \(\left(b-c\right)^2<a^2<\left(b+c\right)^2\). 移项可得 \(-2bc<b^2+c^2-a^2<2bc\)，因此 \(\left(b^2+c^2-a^2\right)^2<4b^2c^2\). 原方程的判别式为 \(\Delta=\left(b^2+c^2-a^2\right)^2-4b^2c^2<0\).
-又因二次项系数 \(b^2>0\)，故原方程无实数根.
+因为 \(a\)，\(b\)，\(c\) 是三角形的三条边，所以满足严格三角不等式 \(\left|b-c\right|<a<b+c\). 三边均为正数，平方后得到
+\[
+\left(b-c\right)^2<a^2<\left(b+c\right)^2
+\]
+将两端展开并移项，得 \(-2bc<b^2+c^2-a^2<2bc\). 由于 \(b\)，\(c>0\)，上式说明 \(\left|b^2+c^2-a^2\right|<2bc\)，从而
+\[
+\left(b^2+c^2-a^2\right)^2<4b^2c^2
+\]
+原方程的二次项系数为 \(b^2>0\)，其判别式为 \(\Delta=\left(b^2+c^2-a^2\right)^2-4b^2c^2<0\).
+因此原方程无实数根.
 \end{solution}
 
 \begin{problem}
@@ -176,12 +214,11 @@ V=\dfrac13S_{\triangle ABC}\cdot PO=\dfrac13\cdot9\sqrt3\cdot3=9\sqrt3\mathrm{~c
 \end{problem}
 
 \begin{solution}
-设方程的另一根为 \(x_2\). 由韦达定理可得 \(\left(2+\sqrt3\right)x_2=1\)，所以 \(x_2=2-\sqrt3\). 再由两根之和，\(\tan\theta+\cot\theta=\left(2+\sqrt3\right)+\left(2-\sqrt3\right)=4\).
-另一方面，由题设中的 \(\tan\theta\) 与 \(\cot\theta\) 有意义，知 \(\sin\theta\cos\theta\ne0\)，因此
+设方程的另一根为 \(x_2\). 由韦达定理，两根之积为 \(1\)，所以 \(\left(2+\sqrt3\right)x_2=1\)，即 \(x_2=\dfrac{1}{2+\sqrt3}=2-\sqrt3\). 再由两根之和，得到 \(\tan\theta+\cot\theta=\left(2+\sqrt3\right)+\left(2-\sqrt3\right)=4\). 因为题目中的 \(\tan\theta\) 和 \(\cot\theta\) 均有意义，所以 \(\sin\theta\cos\theta\ne0\). 因而
 \[
 \tan\theta+\cot\theta=\dfrac{\sin^2\theta+\cos^2\theta}{\sin\theta\cos\theta}=\dfrac{1}{\sin\theta\cos\theta}=\dfrac{2}{\sin2\theta}
 \]
-因此 \(\dfrac{2}{\sin2\theta}=4\)，从而 \(\sin2\theta=\dfrac12\).
+所以 \(\dfrac{2}{\sin2\theta}=4\)，从而 \(\sin2\theta=\dfrac12\).
 \end{solution}
 
 \begin{problem}
@@ -189,12 +226,13 @@ V=\dfrac13S_{\triangle ABC}\cdot PO=\dfrac13\cdot9\sqrt3\cdot3=9\sqrt3\mathrm{~c
 \end{problem}
 
 \begin{solution}
-取 \(B\) 为坐标原点，正东方向为 \(x\) 轴正向，正北方向为 \(y\) 轴正向，则 \(A=\left(75,0\right)\). 设出发 \(t\mathrm{~h}\) 后汽车和自行车的位置分别为 \(C\)、\(D\)，其中 \(t\geqslant0\). 于是汽车位置为 \(C=\left(75-30t,0\right)\)，自行车位置为 \(D=\left(0,-15t\right)\).
-两车距离的平方为
+取 \(B\) 为坐标原点，正东方向为 \(x\) 轴正向，正北方向为 \(y\) 轴正向，则 \(A=\left(75,0\right)\). 设出发 \(t\mathrm{~h}\) 后两车的位置分别为 \(C\)、\(D\)，其中 \(t\geqslant0\). 由速度和方向，汽车位置为 \(C=\left(75-30t,0\right)\)，自行车位置为 \(D=\left(0,-15t\right)\). 所以两车距离的平方为
 \[
-CD^2=\left(75-30t\right)^2+\left(15t\right)^2=1125t^2-4500t+5625=1125\left(t-2\right)^2+1125
+CD^2=\left(75-30t\right)^2+\left(15t\right)^2
+=1125t^2-4500t+5625
+=1125\left(t-2\right)^2+1125
 \]
-当 \(t=2\) 时，上式取得最小值，所以出发后 \(2\mathrm{~h}\) 两车相距最短.
+距离本身非负，而平方距离在 \(t\geqslant0\) 上于 \(t=2\) 时取得最小值，因此出发后 \(2\mathrm{~h}\) 两车相距最短.
 \end{solution}
 
 \begin{problem}
@@ -202,7 +240,7 @@ CD^2=\left(75-30t\right)^2+\left(15t\right)^2=1125t^2-4500t+5625=1125\left(t-2\r
 \end{problem}
 
 \begin{solution}
-设等差数列的首项为 \(a_1\)，公差为 \(d\). 奇数项之和为
+设等差数列的首项为 \(a_1\)，公差为 \(d\). 其第 \(k\) 项为 \(a_k=a_1+(k-1)d\). 因而奇数项之和为
 \[
 a_1+a_3+a_5+a_7+a_9=5a_1+\left(0+2+4+6+8\right)d=5a_1+20d=45
 \]
@@ -210,7 +248,7 @@ a_1+a_3+a_5+a_7+a_9=5a_1+\left(0+2+4+6+8\right)d=5a_1+20d=45
 \[
 a_2+a_4+a_6+a_8+a_{10}=5a_1+\left(1+3+5+7+9\right)d=5a_1+25d=55
 \]
-两式相减得 \(5d=10\)，即 \(d=2\). 代入奇数项之和得 \(5a_1+40=45\)，所以 \(a_1=1\). 因此第五项为 \(a_5=a_1+4d=1+4\times2=9\).
+两式相减，得 \(5d=10\)，所以 \(d=2\). 代入奇数项之和，得 \(5a_1+40=45\)，从而 \(a_1=1\). 因此 \(a_5=a_1+4d=1+4\times2=9\).
 \end{solution}
 
 \begin{problem}
@@ -226,14 +264,33 @@ a_2+a_4+a_6+a_8+a_{10}=5a_1+\left(1+3+5+7+9\right)d=5a_1+25d=55
 \begin{solution}
 设动点为 \(P\left(x,y\right)\).
 \begin{enumerate}
-\item 由题意，点 \(P\) 到直线 \(x=8\) 的距离为 \(\left|x-8\right|\)，到点 \(A\left(2,0\right)\) 的距离为 \(\sqrt{\left(x-2\right)^2+y^2}\)，所以 \(\left|x-8\right|=2\sqrt{\left(x-2\right)^2+y^2}\).
-两边均非负，平方得 \(\left(x-8\right)^2=4\left(\left(x-2\right)^2+y^2\right)\).
-化简为 \(3x^2+4y^2=48\)，即轨迹方程为
+\item 点 \(P\) 到直线 \(x=8\) 的距离为 \(\left|x-8\right|\)，到点 \(A\left(2,0\right)\) 的距离为 \(\sqrt{\left(x-2\right)^2+y^2}\). 因此
+\[
+\left|x-8\right|=2\sqrt{\left(x-2\right)^2+y^2}
+\]
+两边均非负，平方是等价变形，不引入增根，得
+\[
+\left(x-8\right)^2=4\left(\left(x-2\right)^2+y^2\right)
+\]
+展开化简：
+\(x^2-16x+64=4x^2-16x+16+4y^2\)，\(3x^2+4y^2=48\).
+所以轨迹方程为
 \[
 \dfrac{x^2}{16}+\dfrac{y^2}{12}=1
 \]
-\item 上式是椭圆的标准方程，且半长轴为 \(4\)，半短轴为 \(2\sqrt3\)，所以这条轨迹是以原点为中心、长轴在 \(x\) 轴上的椭圆.
-\item 先检验 \(B\left(2,3\right)\) 在椭圆上：\(\frac{2^2}{16}+\frac{3^2}{12}=1\). 对方程 \(3x^2+4y^2=48\) 隐式求导，得 \(6x+8yy'=0\). 在 \(B\left(2,3\right)\) 处，切线斜率为 \(y'=-\frac12\)，所以切线方程为 \(y-3=-\dfrac12\left(x-2\right)\)，
-即 \(x+2y=8\).
+
+\item 将轨迹方程写成标准形式
+\[
+\dfrac{x^2}{4^2}+\dfrac{y^2}{\left(2\sqrt3\right)^2}=1
+\]
+所以这条轨迹是以原点为中心、长轴在 \(x\) 轴上的椭圆，半长轴为 \(4\)，半短轴为 \(2\sqrt3\).
+
+\item 先检验给定点：
+\[
+\dfrac{2^2}{16}+\dfrac{3^2}{12}=\dfrac14+\dfrac34=1
+\]
+故 \(B\left(2,3\right)\) 在椭圆上. 对等价方程 \(3x^2+4y^2=48\) 隐式求导，得 \(6x+8yy'=0\). 在 \(B\left(2,3\right)\) 处，\(y'=-\dfrac{6\times2}{8\times3}=-\dfrac12\).
+因此切线方程为
+\(y-3=-\dfrac12\left(x-2\right)\)，\(x+2y=8\).
 \end{enumerate}
 \end{solution}

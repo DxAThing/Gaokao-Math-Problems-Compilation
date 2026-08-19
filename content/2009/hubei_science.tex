@@ -16,6 +16,14 @@
 A
 \end{answer}
 
+\begin{solution}
+由集合定义，\(P=\{(1,m)\mid m\in\R\}\)，\(Q=\{(1-n,1+n)\mid n\in\R\}\). 若向量属于 \(P\cap Q\)，则存在 \(m\)，\(n\in\R\)，使得
+\[
+(1,m)=(1-n,1+n)
+\]
+比较两个分量，得 \(1=1-n\)，所以 \(n=0\)；再由 \(m=1+n\)，得 \(m=1\). 因而 \(P\cap Q=\{(1,1)\}\)，故选 A.
+\end{solution}
+
 \begin{problem}
 函数 \( y = \frac{1 - ax}{1 + ax} \)（\(x \in \R\)，\(x \neq -\frac{1}{a}\)）的反函数是（\quad）
 
@@ -29,6 +37,20 @@ A
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+由题设 \(a\ne0\). 设原函数中的自变量为 \(x\)，函数值为 \(y\)，则
+\[
+y=\frac{1-ax}{1+ax}
+\]
+等价于 \(y(1+ax)=1-ax\)，即 \(a(y+1)x=1-y\). 原函数不可能取值 \(-1\)，因为代入原式会得到 \(-1=1\)，所以 \(y\ne-1\). 因此
+\[
+x=\frac{1-y}{a(1+y)}
+\]
+交换自变量与函数值的字母，反函数为
+\(y=\frac{1-x}{a(1+x)}\)，\(x\in\R\)，\(\ x\ne-1\).
+故选 D.
+\end{solution}
 
 \begin{problem}
 投掷两颗骰子，得到其向上的点数分别为 \(m\) 和 \(n\)，则复数 \( (m + n\i)(n - m\i) \) 为实数的概率为（\quad）
@@ -44,6 +66,14 @@ D
 C
 \end{answer}
 
+\begin{solution}
+展开复数得
+\[
+(m+n\i)(n-m\i)=mn-m^{2}\i+n^{2}\i-mn\i^{2}=2mn+(n^{2}-m^{2})\i
+\]
+它为实数，当且仅当虚部为零，即 \(n^{2}-m^{2}=0\). 由于两颗骰子的点数 \(m\)，\(n\) 都是正整数，所以这等价于 \(m=n\). 满足条件的有序结果为 \((1,1)\)，\((2,2)\)，\(\ldots\)，\((6,6)\)，共 \(6\) 个，而全部有序结果有 \(6\times6=36\) 个. 所求概率为 \(\frac{6}{36}=\frac16\)，故选 C.
+\end{solution}
+
 \begin{problem}
 函数 \( y = \cos \left(2x + \frac{\pi}{6}\right) - 2 \) 的图象 \(F\) 按向量 \(\bs{a}\) 平移到 \(F'\)，\(F'\) 的解析式 \( y = f(x) \)，当 \( y = f(x) \) 为奇函数时，向量 \(\bs{a}\) 可以等于（\quad）
 
@@ -58,6 +88,18 @@ C
 B
 \end{answer}
 
+\begin{solution}
+设平移向量为 \(\bs a=(h,k)\). 原图象上的点向右、向上分别平移 \(h\)，\(k\) 后，所得函数为
+\[
+f(x)=\cos\left(2(x-h)+\frac{\pi}{6}\right)-2+k
+\]
+逐一代入选项检验奇偶性：当 \((h,k)=\left(-\frac\pi6,2\right)\) 时，
+\[
+f(x)=\cos\left(2x+\frac\pi2\right)=-\sin2x
+\]
+是奇函数. 当 \(k=-2\) 时，函数常数项为 \(-4\)，不可能是奇函数；当 \(h=\frac\pi6\)，\(k=2\) 时，\(f(0)=\cos\frac\pi6\ne0\)，也不可能是奇函数. 故选 B.
+\end{solution}
+
 \begin{problem}
 将甲，乙，丙，丁四名学生分到三个不同的班，每个班至少分到一名学生，且甲，乙两名学生不能分到一个班，则不同分法的种数为（\quad）
 
@@ -71,6 +113,14 @@ B
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+先将甲、乙安排到不同班级：甲有 \(3\) 种选择，乙有 \(2\) 种选择，共 \(3\times2=6\) 种. 固定这两人的安排后，丙、丁各有 \(3\) 个班级可选，共 \(3^{2}=9\) 种. 其中丙、丁都分到已经有甲或乙的两个班级时，剩下的一个班级无人，共有 \(2^{2}=4\) 种不合要求的安排. 所以符合每班至少一人的安排数为
+\[
+6\left(9-4\right)=30
+\]
+故选 C.
+\end{solution}
 
 \begin{problem}
 设 \(\left(\frac{\sqrt{2}}{2} + x\right)^{2n} = a_0 + a_1x + a_2x^2 + \cdots + a_{2n-1}x^{2n-1} + a_{2n}x^{2n}\)，则
@@ -88,6 +138,18 @@ C
 B
 \end{answer}
 
+\begin{solution}
+记多项式 \(P(x)=(\frac{\sqrt2}{2}+x)^{2n}\)，并令
+\(E_n=a_0+a_2+a_4+\cdots+a_{2n}\)，\(O_n=a_1+a_3+a_5+\cdots+a_{2n-1}\).
+由 \(P(1)=E_n+O_n\)，\(P(-1)=E_n-O_n\)，得
+\(E_n+O_n=\left(1+\frac{\sqrt2}{2}\right)^{2n}\)，\(E_n-O_n=\left(\frac{\sqrt2}{2}-1\right)^{2n}\).
+于是
+\[
+E_n^2-O_n^2=(E_n+O_n)(E_n-O_n)=\left[\left(1+\frac{\sqrt2}{2}\right)\left(\frac{\sqrt2}{2}-1\right)\right]^{2n}=\left(-\frac12\right)^{2n}=\frac1{4^n}
+\]
+因此极限为 \(0\)，故选 B.
+\end{solution}
+
 \begin{problem}
 已知双曲线 \(\frac{x^{2}}{2}-\frac{y^{2}}{2}=1\) 的准线过椭圆 \(\frac{x^{2}}{4}+\frac{y^{2}}{b^{2}}=1\) 的焦点，则直线 \(y=kx+2\) 与椭圆至多有一个交点的充要条件是（\quad）
 
@@ -101,6 +163,26 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+双曲线 \(\frac{x^2}{2}-\frac{y^2}{2}=1\) 的半实轴、半虚轴分别为 \(a_1=\sqrt2\)，\(b_1=\sqrt2\)，焦半距 \(c_1=\sqrt{a_1^2+b_1^2}=2\)，离心率 \(e_1=\frac{c_1}{a_1}=\sqrt2\). 所以其准线为
+\[
+x=\pm\frac{a_1}{e_1}=\pm1
+\]
+椭圆的焦点为 \((\pm\sqrt{4-b^2},0)\). 准线经过焦点，故 \(\sqrt{4-b^2}=1\)，从而 \(b^2=3\). 椭圆方程为
+\[
+\frac{x^2}{4}+\frac{y^2}{3}=1
+\]
+将直线 \(y=kx+2\) 代入，得
+\[
+(3+4k^2)x^2+16kx+4=0
+\]
+因为二次项系数恒为正，直线与椭圆至多有一个交点，当且仅当上述方程的判别式不大于零，即
+\[
+\Delta=(16k)^2-4(3+4k^2)\times4=48(4k^2-1)\leqslant0
+\]
+所以 \(k\in[-\frac12,\frac12]\)，故选 A.
+\end{solution}
 
 \begin{problem}
 在“家电下乡”活动中，某厂要将 \(100\text{ 台}\)洗衣机运往邻近的乡镇，现有 \(4\text{ 辆}\)甲型货车和 \(8\text{ 辆}\)乙型货车可供使用，每辆甲型货车运输费用 \(400\text{ 元}\)，可装洗衣机 \(20\text{ 台}\)；每辆乙型货车运输费用 \(300\text{ 元}\)，可装洗衣机 \(10\text{ 台}\)，若每辆至多只运一次，则该厂所花的最少运输费用为（\quad）
@@ -116,6 +198,10 @@ A
 B
 \end{answer}
 
+\begin{solution}
+设使用 \(x\) 辆甲型货车、\(y\) 辆乙型货车，其中 \(x\)，\(y\) 为非负整数，且 \(x\leqslant4\)，\(y\leqslant8\). 运力和费用分别为 \(20x+10y\) 台、\(400x+300y\) 元，因此必须满足 \(2x+y\geqslant10\). 逐一考察 \(x\) 的可能值：\(x=0\) 时最多运输 \(80\) 台，不可行；\(x=1\)，\(2\)，\(3\)，\(4\) 时，为满足运力要求，所需的最少乙型货车数分别为 \(8\)，\(6\)，\(4\)，\(2\)，对应费用分别为 \(2800\)，\(2600\)，\(2400\)，\(2200\) 元. 所以最少费用为 \(2200\) 元，故选 B.
+\end{solution}
+
 \begin{problem}
 设球的半径为时间 \(t\) 的函数 \(R(t)\). 若球的体积以均匀速度 \(c\) 增长，则球的表面积的增长速度与球半径（\quad）
 
@@ -129,6 +215,18 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+球的体积和表面积分别为 \(V=\frac43\pi R^3\)，\(S=4\pi R^2\). 由体积以均匀速度 \(c\) 增长，得 \(\frac{dV}{dt}=c\)，即
+\[
+4\pi R^2\frac{dR}{dt}=c
+\]
+因此
+\[
+\frac{dS}{dt}=8\pi R\frac{dR}{dt}=8\pi R\cdot\frac{c}{4\pi R^2}=\frac{2c}{R}
+\]
+所以表面积的增长速度与半径成反比，比例系数为 \(2c\)，故选 D.
+\end{solution}
 
 \begin{problem}
 古希腊人常用小石子在沙滩上摆成各种形状来研究数，例如：
@@ -152,6 +250,14 @@ D
 C
 \end{answer}
 
+\begin{solution}
+第 \(n\) 个三角形数为 \(T_n=\frac{n(n+1)}2\)，正方形数必须是完全平方数. 选项 \(289=17^2\)，但 \(T_{23}=276<T_{24}=300\)，不是三角形数；\(1024=32^2\)，但 \(T_{44}=990<T_{45}=1035\)，不是三角形数；\(1225=35^2\)，且
+\[
+1225=\frac{49\times50}{2}
+\]
+所以它既是正方形数又是三角形数；\(1378\) 介于 \(37^2=1369\) 与 \(38^2=1444\) 之间，不是正方形数. 故选 C.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -162,16 +268,32 @@ C
 \(-2\)
 \end{answer}
 
+\begin{solution}
+分式 \(\frac{ax-1}{x+1}\) 的分母零点为 \(x=-1\). 题给解集的另一个分界点为 \(x=-\frac12\)，因此分子零点为 \(-\frac12\)，即
+\[
+\frac1a=-\frac12
+\]
+解得 \(a=-2\). 验证时，\(\frac{-2x-1}{x+1}<0\) 的符号在 \(-1\) 与 \(-\frac12\) 处改变，解集正是 \((-\infty,-1)\cup(-\frac12,+\infty)\)，故答案为 \(-2\).
+\end{solution}
+
 \begin{problem}
 \noindent 样本容量为 \(200\) 的频率分布直方图.
 根据样本的频率分布直方图估计，样本数据在 \([6, 10)\) 内的频数为\fillinblank{}，数据落在 \([2, 10)\) 内的概率约为\fillinblank{}.
 
-\bitmapinlinefigure[0.34\linewidth][max width=0.34\linewidth]{img/2009/hubei_science/q12_fig1.png}
+\bitmapfigure[max width=0.34\linewidth]{img/2009/hubei_science/q12_fig1.png}
 \end{problem}
 
 \begin{answer}
 64，0.4
 \end{answer}
+
+\begin{solution}
+频率分布直方图中，某组的频率等于组距乘以该组的频率组距. 由图可知 \([6,10)\) 组的组距为 \(4\)，频率组距为 \(0.08\)，所以该组频率为 \(4\times0.08=0.32\)，频数为 \(200\times0.32=64\). 又 \([2,6)\) 组频率为 \(4\times0.02=0.08\)，故数据落在 \([2,10)\) 内的概率约为
+\[
+0.08+0.32=0.40
+\]
+所以两空依次为 \(64\)，\(0.4\).
+\end{solution}
 
 \begin{problem}
 卫星和地面之间的电视信号沿直线传输，电视信号能够传送到达的地面区域，称为这个卫星的覆盖区域. 为了转播 2008 年北京奥运会，我国发射了“中星九号”广播电视直播卫星，它离地球表面的距离约为 \(36000\mathrm{~km}\). 已知地球半径约为 \(6400\mathrm{~km}\)，则“中星九号”覆盖区域内的任意两点的球面距离的最大值约为\fillinblank{}\(\mathrm{km}\).（结果中保留反余弦的符号）
@@ -181,6 +303,22 @@ C
 \(12800\arccos\frac{8}{53}\)
 \end{answer}
 
+\begin{solution}
+设地球球心为 \(O\)，卫星为 \(S\)，地球半径为 \(R=6400\mathrm{~km}\). 卫星到球心的距离为
+\[
+OS=6400+36000=42400\mathrm{~km}
+\]
+覆盖区域的边界由从卫星向地球作出的切线确定. 设切点为 \(P\)，则 \(OP\perp SP\)，在直角三角形 \(OSP\) 中，若 \(\theta=\angle SOP\)，则
+\[
+\cos\theta=\frac{OP}{OS}=\frac{6400}{42400}=\frac8{53}
+\]
+覆盖区域是以地心方向为中心、球心角半径为 \(\theta\) 的球面区域. 区域内任意两点的球心角最大为 \(2\theta\)，所以球面距离最大值为
+\[
+R\cdot2\theta=12800\arccos\frac8{53}\ \mathrm{km}
+\]
+故答案为 \(12800\arccos\frac8{53}\).
+\end{solution}
+
 \begin{problem}
 已知函数 \(f(x) = f'\left(\frac{\pi}{4}\right)\cos x + \sin x\)，则 \(f\left(\frac{\pi}{4}\right)\) 的值为\fillinblank{}.
 \end{problem}
@@ -188,6 +326,22 @@ C
 \begin{answer}
 \(1\).
 \end{answer}
+
+\begin{solution}
+记 \(A=f'\left(\frac\pi4\right)\). 由题设
+\[
+f(x)=A\cos x+\sin x
+\]
+求导得 \(f'(x)=-A\sin x+\cos x\). 在 \(x=\frac\pi4\) 处利用 \(A=f'\left(\frac\pi4\right)\)，有
+\[
+A=-A\frac{\sqrt2}{2}+\frac{\sqrt2}{2}
+\]
+解得 \(A=\sqrt2-1\). 因而
+\[
+f\left(\frac\pi4\right)=A\frac{\sqrt2}{2}+\frac{\sqrt2}{2}=1
+\]
+故答案为 \(1\).
+\end{solution}
 
 \begin{problem}
 已知数列 \(\{a_{n}\}\) 满足：\(a_1 = m\)（\(m\) 为正整数），\(a_{n+1} = \begin{cases}
@@ -197,8 +351,16 @@ C
 \end{problem}
 
 \begin{answer}
-\(4,5,32\)
+\(4\)，\(5\)，\(32\)
 \end{answer}
+
+\begin{solution}
+设递推变换为 \(T(t)=\frac t2\)（当 \(t\) 为偶数时），\(T(t)=3t+1\)（当 \(t\) 为奇数时）. 从 \(a_6=1\) 反向寻找前一项：要使下一项为 \(1\)，前一项只能是偶数 \(2\)；于是 \(a_5=2\)，再反推得 \(a_4=4\). 对于 \(a_4=4\)，前一项可以是偶数 \(8\)，也可以是奇数 \(1\)，因为 \(3\times1+1=4\)，故 \(a_3\in\{8,1\}\). 继续反推，\(8\) 的正整数前项只有 \(16\)，\(1\) 的正整数前项只有 \(2\)，所以 \(a_2\in\{16,2\}\). 最后，\(16\) 的正整数前项为 \(32\) 或 \(5\)，而 \(2\) 的正整数前项为 \(4\)，故
+\[
+m=a_1\in\{32,5,4\}
+\]
+正向检验：\(4\to2\to1\to4\to2\to1\)，\(5\to16\to8\to4\to2\to1\)，\(32\to16\to8\to4\to2\to1\)，三者均满足 \(a_6=1\). 因此答案为 \(4\)，\(5\)，\(32\).
+\end{solution}
 
 \section{解答题}
 
@@ -223,7 +385,7 @@ C
 
 因此
 \[
-E(\eta)=\frac{5+2\times6+3\times7+4\times8+3\times9+2\times10+11}{16}=8.
+E(\eta)=\frac{5+2\times6+3\times7+4\times8+3\times9+2\times10+11}{16}=8
 \]
 \end{solution}
 
@@ -240,21 +402,21 @@ E(\eta)=\frac{5+2\times6+3\times7+4\times8+3\times9+2\times10+11}{16}=8.
 \begin{enumerate}
 \item
 \[
-\left\lvert\bs{b}+\bs{c}\right\rvert^{2}=(\cos\beta-1)^{2}+\sin^{2}\beta=2-2\cos\beta.
+\left\lvert\bs{b}+\bs{c}\right\rvert^{2}=(\cos\beta-1)^{2}+\sin^{2}\beta=2-2\cos\beta
 \]
 因为 \(\cos\beta\geqslant-1\)，所以
 \[
-\left\lvert\bs{b}+\bs{c}\right\rvert^{2}\leqslant4,
+\left\lvert\bs{b}+\bs{c}\right\rvert^{2}\leqslant4
 \]
 从而向量 \(\bs{b}+\bs{c}\) 的长度的最大值为 \(2\)，且在 \(\cos\beta=-1\) 时取得.
 
 \item 当 \(\alpha=\frac{\pi}{4}\) 时，\(\bs{a}=\left(\frac{\sqrt{2}}{2},\frac{\sqrt{2}}{2}\right)\). 由垂直条件，得
 \[
-0=\bs{a}\cdot(\bs{b}+\bs{c})=\frac{\sqrt{2}}{2}(\cos\beta-1+\sin\beta),
+0=\bs{a}\cdot(\bs{b}+\bs{c})=\frac{\sqrt{2}}{2}(\cos\beta-1+\sin\beta)
 \]
 即 \(\cos\beta+\sin\beta=1\). 又因为
 \[
-(\cos\beta+\sin\beta)^{2}=\cos^{2}\beta+\sin^{2}\beta+2\sin\beta\cos\beta,
+(\cos\beta+\sin\beta)^{2}=\cos^{2}\beta+\sin^{2}\beta+2\sin\beta\cos\beta
 \]
 所以 \(\sin\beta\cos\beta=0\). 结合 \(\cos\beta+\sin\beta=1\)，得到 \((\cos\beta,\sin\beta)=(1,0)\) 或 \((\cos\beta,\sin\beta)=(0,1)\).
 故 \(\cos\beta=1\) 或 \(0\).
@@ -280,7 +442,7 @@ E(\eta)=\frac{5+2\times6+3\times7+4\times8+3\times9+2\times10+11}{16}=8.
 有 \(\overrightarrow{AC}=(-s,s,0)\)，\(\overrightarrow{BE}=(-s,-s,h)\).
 从而
 \[
-\overrightarrow{AC}\cdot\overrightarrow{BE}=s^{2}-s^{2}=0.
+\overrightarrow{AC}\cdot\overrightarrow{BE}=s^{2}-s^{2}=0
 \]
 因此对任意 \(\lambda\in(0,2]\)，都有 \(AC\perp BE\).
 
@@ -288,20 +450,20 @@ E(\eta)=\frac{5+2\times6+3\times7+4\times8+3\times9+2\times10+11}{16}=8.
 设二面角 \(C-AE-D\) 的大小为 \(\theta\)，则
 \[
 \cos\theta=\frac{|\bs{n}_{1}\cdot\bs{n}_{2}|}{|\bs{n}_{1}|\,|\bs{n}_{2}|}
-=\frac{h}{\sqrt{2h^{2}+s^{2}}}.
+=\frac{h}{\sqrt{2h^{2}+s^{2}}}
 \]
 于是
 \[
-\tan\theta=\frac{\sqrt{h^{2}+s^{2}}}{h}=\frac{\sqrt{\lambda^{2}+2}}{\lambda}.
+\tan\theta=\frac{\sqrt{h^{2}+s^{2}}}{h}=\frac{\sqrt{\lambda^{2}+2}}{\lambda}
 \]
 
 直线 \(BE\) 在底面 \(ABCD\) 上的射影为 \(BD\)，且 \(BD=\sqrt{2}s=2a\)，所以
 \[
-\tan\varphi=\frac{DE}{BD}=\frac{\lambda a}{2a}=\frac{\lambda}{2}.
+\tan\varphi=\frac{DE}{BD}=\frac{\lambda a}{2a}=\frac{\lambda}{2}
 \]
 由题设
 \[
-1=\tan\theta\tan\varphi=\frac{\sqrt{\lambda^{2}+2}}{2}.
+1=\tan\theta\tan\varphi=\frac{\sqrt{\lambda^{2}+2}}{2}
 \]
 因 \(\lambda>0\)，解得 \(\lambda^{2}=2\)，故 \(\lambda=\sqrt{2}\).
 \end{enumerate}
@@ -320,62 +482,62 @@ E(\eta)=\frac{5+2\times6+3\times7+4\times8+3\times9+2\times10+11}{16}=8.
 \begin{enumerate}
 \item 当 \(n=1\) 时，由已知式得
 \[
-a_{1}=S_{1}=-a_{1}-1+2,
+a_{1}=S_{1}=-a_{1}-1+2
 \]
 所以 \(a_{1}=\frac12\). 当 \(n\geqslant2\) 时，由 \(S_{n}-S_{n-1}=a_{n}\)，得
 \[
-a_{n}=-a_{n}+a_{n-1}+\left(\frac12\right)^{n-1},
+a_{n}=-a_{n}+a_{n-1}+\left(\frac12\right)^{n-1}
 \]
 即
 \[
-2a_{n}=a_{n-1}+\left(\frac12\right)^{n-1}.
+2a_{n}=a_{n-1}+\left(\frac12\right)^{n-1}
 \]
 令 \(b_{n}=2^{n}a_{n}\)，上式两边乘以 \(2^{n}\)，得
 \[
-2b_{n}=2b_{n-1}+2,
+2b_{n}=2b_{n-1}+2
 \]
 即 \(b_{n}-b_{n-1}=1\). 又 \(b_{1}=2a_{1}=1\)，所以 \(b_{n}=n\)，从而
 \[
-a_{n}=\frac{n}{2^{n}}.
+a_{n}=\frac{n}{2^{n}}
 \]
 
 \item 由定义
 \[
-c_{n}=\frac{n+1}{n}a_{n}=\frac{n+1}{2^{n}},
+c_{n}=\frac{n+1}{n}a_{n}=\frac{n+1}{2^{n}}
 \]
 故
 \[
-T_{n}=\sum_{k=1}^{n}\frac{k+1}{2^{k}}.
+T_{n}=\sum_{k=1}^{n}\frac{k+1}{2^{k}}
 \]
 记 \(U_{n}=\sum_{k=1}^{n}\frac{k}{2^{k}}\). 将 \(U_n\) 乘以 \(2\) 并错位相减，得
 \[
 2U_{n}-U_{n}=1+\sum_{k=1}^{n-1}\frac{1}{2^{k}}-\frac{n}{2^{n}}
-=2-\frac{n+2}{2^{n}},
+=2-\frac{n+2}{2^{n}}
 \]
 所以 \(U_{n}=2-\frac{n+2}{2^{n}}\). 又
 \[
-\sum_{k=1}^{n}\frac{1}{2^{k}}=1-\frac{1}{2^{n}},
+\sum_{k=1}^{n}\frac{1}{2^{k}}=1-\frac{1}{2^{n}}
 \]
 从而
 \[
-T_{n}=3-\frac{n+3}{2^{n}}.
+T_{n}=3-\frac{n+3}{2^{n}}
 \]
 比较两者，得
 \[
 T_{n}-\frac{5n}{2n+1}
 =(n+3)\left(\frac{1}{2n+1}-\frac{1}{2^{n}}\right)
-=\frac{(n+3)\left(2^{n}-2n-1\right)}{(2n+1)2^{n}}.
+=\frac{(n+3)\left(2^{n}-2n-1\right)}{(2n+1)2^{n}}
 \]
-当 \(n=1,2\) 时，\(2^{n}-2n-1<0\)，故 \(T_{n}<\frac{5n}{2n+1}\). 当 \(n=3\) 时，\(2^{3}>2\times3+1\)；若 \(2^{n}>2n+1\)，则
+当 \(n=1\)，\(2\) 时，\(2^{n}-2n-1<0\)，故 \(T_{n}<\frac{5n}{2n+1}\). 当 \(n=3\) 时，\(2^{3}>2\times3+1\)；若 \(2^{n}>2n+1\)，则
 \[
-2^{n+1}>4n+2>2n+3=2(n+1)+1.
+2^{n+1}>4n+2>2n+3=2(n+1)+1
 \]
 因此当 \(n\geqslant3\) 时，\(2^{n}>2n+1\)，故 \(T_{n}>\frac{5n}{2n+1}\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-过抛物线 \(y^{2} = 2px\)（\(p > 0\)）的对称轴上一点 \(A(a,0)\)（\(a > 0\)）的直线与抛物线相交于 \(M\)，\(N\) 两点，自 \(M\)，\(N\) 向直线 \(l: x = -a\) 作垂线，垂足分别为 \(M_{1}\)，\(N_{1}\).
+过抛物线 \(y^{2} = 2px\)（\(p > 0\)）的对称轴上一点 \(A(a,0)\)（\(a > 0\)）的直线与抛物线相交于 \(M\)，\(N\) 两点，自 \(M\)，\(N\) 向直线 \(l\)：\(x = -a\) 作垂线，垂足分别为 \(M_{1}\)，\(N_{1}\).
 
 \begin{enumerate}
 \item 当 \(a = \frac{p}{2}\) 时，求证： \(AM_{1} \perp AN_{1}\)；
@@ -384,10 +546,11 @@ T_{n}-\frac{5n}{2n+1}
 \end{problem}
 
 \begin{solution}
-设直线 \(MN\) 不是竖直线，记其非零斜率为 \(k\)，并设 \(M=\left(\frac{u^{2}}{2p},u\right)\)，\(N=\left(\frac{v^{2}}{2p},v\right)\).
+题设称直线与抛物线相交于 \(M\)，\(N\) 两个交点，因而水平直线 \(y=0\) 仅在顶点
+\((0,0)\) 处与抛物线相切，不属于本题的两个交点情形. 对于非竖直的直线，记其非零斜率为 \(k\)，并设 \(M=\left(\frac{u^{2}}{2p},u\right)\)，\(N=\left(\frac{v^{2}}{2p},v\right)\).
 由 \(M\)，\(N\)，\(A(a,0)\) 共线，直线可写为 \(y=k(x-a)\). 代入抛物线方程，得
 \[
-ku^{2}-2pu-2pak=0,
+ku^{2}-2pu-2pak=0
 \]
 因此由韦达定理得 \(u+v=\frac{2p}{k}\)，\(uv=-2pa\).
 
@@ -396,7 +559,7 @@ ku^{2}-2pu-2pak=0,
 所以
 \[
 \overrightarrow{AM_{1}}\cdot\overrightarrow{AN_{1}}=4a^{2}+uv
-=4a^{2}-2pa=2a(2a-p).
+=4a^{2}-2pa=2a(2a-p)
 \]
 当 \(a=\frac{p}{2}\) 时，上式等于 \(0\)，故 \(AM_{1}\perp AN_{1}\).
 
@@ -405,14 +568,14 @@ ku^{2}-2pu-2pak=0,
 \[
 \left(\frac{u^{2}}{2p}+a\right)\left(\frac{v^{2}}{2p}+a\right)
 =\frac{u(u-v)}{2p}\cdot\frac{v(v-u)}{2p}
-=\frac{a(u-v)^{2}}{2p}.
+=\frac{a(u-v)^{2}}{2p}
 \]
 于是
 \[
 4S_{1}S_{3}
 =\left(\frac{u^{2}}{2p}+a\right)\left(\frac{v^{2}}{2p}+a\right)|uv|
 =\frac{a(u-v)^{2}}{2p}\cdot2pa
-=a^{2}(u-v)^{2}=S_{2}^{2}.
+=a^{2}(u-v)^{2}=S_{2}^{2}
 \]
 
 若直线 \(MN\) 为竖直线，则 \(x=a\)，且 \(u^{2}=v^{2}=2pa\)，\(v=-u\). 此时 \(S_{1}=a|u|\)，\(S_{3}=a|v|\)，\(S_{2}=a|u-v|=2a|u|\).
@@ -435,93 +598,93 @@ ku^{2}-2pu-2pak=0,
 \[
 f(x)=-\frac13\bigl((x^{2}-2c)-c\bigr)\bigl((x-2b)-b\bigr)+4bc
 =-\frac13(x^{2}-3c)(x-3b)+4bc
-=-\frac13x^{3}+bx^{2}+cx+bc.
+=-\frac13x^{3}+bx^{2}+cx+bc
 \]
 
 \begin{enumerate}
 \item 由
 \[
-f'(x)=-x^{2}+2bx+c,
+f'(x)=-x^{2}+2bx+c
 \]
 函数在 \(x=1\) 处有极值，必有 \(f'(1)=0\)，即
 \[
-2b+c=1.
+2b+c=1
 \]
 又由 \(f(1)=-\frac43\)，得
 \[
--\frac13+b+c+bc=-\frac43,
+-\frac13+b+c+bc=-\frac43
 \]
 即 \(b+c+bc=-1\). 代入 \(c=1-2b\)，得
 \[
-1-2b^{2}=-1,
+1-2b^{2}=-1
 \]
 所以 \(b=1\) 或 \(b=-1\)，相应地 \(c=-1\) 或 \(c=3\).
 
 当 \((b,c)=(1,-1)\) 时，\(f'(x)=-(x-1)^{2}\)，在 \(x=1\) 的两侧导数均不变号，故 \(x=1\) 不是极值点. 当 \((b,c)=(-1,3)\) 时，
 \[
-f'(x)=-(x-1)(x+3),
+f'(x)=-(x-1)(x+3)
 \]
 导数在 \(x=1\) 的左侧为正、右侧为负，故 \(x=1\) 为极大值点. 因此 \(b=-1\)，\(c=3\).
 
 \item 在第（1）问所得 \(b=-1\)，\(c=3\) 的条件下，\(f(x)=-\frac13x^{3}-x^{2}+3x-3\)，\(f'(x)=-x^{2}-2x+3\). 设切点横坐标为 \(t\). 切线斜率为 \(c=3\)，所以 \(f'(t)=3\)，即 \(-t^{2}-2t+3=3\).
 即
 \[
-t(t+2)=0.
+t(t+2)=0
 \]
 因此切点横坐标为 \(t=0\) 或 \(t=-2\).
 
 当 \(t=0\) 时，\(f(0)=-3\)，切线为
 \[
-y=3x-3.
+y=3x-3
 \]
 将其与曲线方程联立，得
 \[
--\frac13x^{3}-x^{2}+3x-3=3x-3,
+-\frac13x^{3}-x^{2}+3x-3=3x-3
 \]
 即
 \[
--\frac13x^{2}(x+3)=0.
+-\frac13x^{2}(x+3)=0
 \]
 所以公共点为 \((0,-3)\) 和 \((-3,-12)\).
 
 当 \(t=-2\) 时，\(f(-2)=-\frac{31}{3}\)，切线为
 \[
-y=3(x+2)-\frac{31}{3}=3x-\frac{13}{3}.
+y=3(x+2)-\frac{31}{3}=3x-\frac{13}{3}
 \]
 将其与曲线方程联立，得
 \[
--\frac13x^{3}-x^{2}+3x-3=3x-\frac{13}{3},
+-\frac13x^{3}-x^{2}+3x-3=3x-\frac{13}{3}
 \]
 即
 \[
--\frac13(x+2)^{2}(x-1)=0.
+-\frac13(x+2)^{2}(x-1)=0
 \]
 所以公共点为 \(\left(-2,-\frac{31}{3}\right)\) 和 \(\left(1,-\frac43\right)\). 因而所求公共点为 \((0,-3)\)，\((-3,-12)\)，\(\left(-2,-\frac{31}{3}\right)\)，\(\left(1,-\frac43\right)\).
 
 \item 令
 \[
-q(x)=f'(x)=-x^{2}+2bx+c.
+q(x)=f'(x)=-x^{2}+2bx+c
 \]
 由 \(M\) 的定义，至少有
 \[
-M\geqslant |q(0)|=|c|.
+M\geqslant |q(0)|=|c|
 \]
 另一方面
 \[
-q(1)+q(-1)=2(c-1),
+q(1)+q(-1)=2(c-1)
 \]
 故
 \[
-M\geqslant\max\{|q(1)|,|q(-1)|\}\geqslant |c-1|.
+M\geqslant\max\{|q(1)|,|q(-1)|\}\geqslant |c-1|
 \]
 于是
 \[
-M\geqslant\max\{|c|,|c-1|\}\geqslant\frac12.
+M\geqslant\max\{|c|,|c-1|\}\geqslant\frac12
 \]
 取 \(b=0\)，\(c=\frac12\) 时，\(q(x)=\frac12-x^{2}\)，且当 \(-1\leqslant x\leqslant1\) 时，有 \(-\frac12\leqslant q(x)\leqslant\frac12\).
 从而 \(M=\frac12\). 因此对任意 \(b\)，\(c\) 恒成立的最大 \(k\) 为
 \[
-k=\frac12.
+k=\frac12
 \]
 \end{enumerate}
 \end{solution}

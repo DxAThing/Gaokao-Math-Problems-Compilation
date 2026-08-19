@@ -16,6 +16,11 @@
 A
 \end{answer}
 
+\begin{solution}
+先求并集：\(A\cup B=\{1,2,3,4,5,7\}\). 因此在全集 \(U\) 中，未出现在并集中的元素为 \(6,8\)，即
+\(\complement_U\left(A\cup B\right)=\{6,8\}\). 故选 A.
+\end{solution}
+
 \begin{problem}
 若向量 \(\bs{a} = (1, 2)\)，\(\bs{b} = (1, -1)\)，则 \(2\bs{a} + \bs{b}\) 与 \(\bs{a} - \bs{b}\) 的夹角等于（\quad）
 
@@ -29,6 +34,12 @@ A
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+设 \(\bs{u}=2\bs{a}+\bs{b}\)，\(\bs{v}=\bs{a}-\bs{b}\)，则
+\(\bs{u}=(3,3)\)，\(\bs{v}=(0,3)\). 从而 \(\bs{u}\cdot\bs{v}=9\)，\(\lVert\bs{u}\rVert=3\sqrt{2}\)，\(\lVert\bs{v}\rVert=3\). 若两向量的夹角为 \(\theta\)，则
+\(\cos\theta=\dfrac{\bs{u}\cdot\bs{v}}{\lVert\bs{u}\rVert\lVert\bs{v}\rVert}=\dfrac{1}{\sqrt{2}}=\cos\dfrac{\pi}{4}\). 因为 \(0\leqslant\theta\leqslant\pi\)，所以 \(\theta=\dfrac{\pi}{4}\)，故选 C.
+\end{solution}
 
 \begin{problem}
 若定义在 \(\R\) 上的偶函数 \(f(x)\) 和奇函数 \(g(x)\) 满足 \(f(x) + g(x) = \e^{x}\)，则 \(g(x) =\)（\quad）
@@ -44,6 +55,13 @@ C
 D
 \end{answer}
 
+\begin{solution}
+将 \(x\) 换成 \(-x\)，由 \(f\) 为偶函数、\(g\) 为奇函数得
+\(f(x)-g(x)=\e^{-x}\). 与已知的 \(f(x)+g(x)=\e^x\) 相减，得到
+\(2g(x)=\e^x-\e^{-x}\)，所以
+\(g(x)=\dfrac{1}{2}\left(\e^x-\e^{-x}\right)\). 故选 D.
+\end{solution}
+
 \begin{problem}
 将两个顶点在抛物线 \( y^{2} = 2px \)（\(p > 0\)） 上，另一个顶点是此抛物线焦点的正三角形个数记为 \( n \)，则（\quad）
 
@@ -58,10 +76,19 @@ D
 C
 \end{answer}
 
+\begin{solution}
+抛物线 \(y^2=2px\) 的焦点为 \(F\left(\dfrac p2,0\right)\). 任取抛物线上两点，设为
+\(P\left(\dfrac p2u^2,pu\right)\) 和 \(Q\left(\dfrac p2v^2,pv\right)\). 有
+\(FP^2=\dfrac{p^2}{4}\left(u^2+1\right)^2\)，\(FQ^2=\dfrac{p^2}{4}\left(v^2+1\right)^2\). 若 \(\triangle FPQ\) 为正三角形，则 \(FP=FQ\)，故 \(u^2=v^2\). 因为 \(P\neq Q\)，所以 \(v=-u\).
+
+此时 \(PQ=2p\lvert u\rvert\)，而 \(FP=\dfrac p2\left(u^2+1\right)\). 再由 \(PQ=FP\) 得
+\(u^2-4\lvert u\rvert+1=0\)，所以 \(\lvert u\rvert=2+\sqrt{3}\) 或 \(\lvert u\rvert=2-\sqrt{3}\). 每一个绝对值对应一个点对 \(\{P,Q\}\)，故正三角形共有 \(2\) 个，选 C.
+\end{solution}
+
 \begin{problem}
 有一个容量为 \(200\) 的样本，其频率分布直方图如图所示，根据样本的频率分布直方图估计，样本数据落在区间 \([10,12)\) 内的频数为（\quad）
 
-\texfigure[max width=0.42\linewidth]{img_repaint/2011/hubei_liberal/q5_fig1.tex}
+\bitmapfigure[max width=0.42\linewidth]{img/2011/hubei_liberal/q5_fig1.png}
 
 \choices
     {\(18\)}
@@ -73,6 +100,12 @@ C
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+由直方图可知，区间 \([10,12)\) 的组距为 \(2\)，该区间的高为 \(0.09\)，所以该区间的频率为
+\(0.09\times2=0.18\). 样本容量为 \(200\)，故样本数据落在该区间内的频数为
+\(200\times0.18=36\). 故选 B.
+\end{solution}
 
 \begin{problem}
 已知函数 \(f(x) = \sqrt{3}\sin x - \cos x\)，\(x \in \R\). 若 \( f(x) \geqslant 1 \)，则 \( x \) 的取值范围为（\quad）
@@ -88,6 +121,14 @@ B
 A
 \end{answer}
 
+\begin{solution}
+由
+\(f(x)=\sqrt{3}\sin x-\cos x=2\sin\left(x-\dfrac{\pi}{6}\right)\)，条件 \(f(x)\geqslant1\) 等价于
+\(\sin\left(x-\dfrac{\pi}{6}\right)\geqslant\dfrac12\). 因此存在 \(k\in\Z\)，使
+\(\dfrac{\pi}{6}+2k\pi\leqslant x-\dfrac{\pi}{6}\leqslant\dfrac{5\pi}{6}+2k\pi\). 移项得
+\(2k\pi+\dfrac{\pi}{3}\leqslant x\leqslant2k\pi+\pi\)，故选 A.
+\end{solution}
+
 \begin{problem}
 设球的体积为 \(V_{1}\). 它的内接正方体的体积为 \(V_{2}\). 下列说法中最合适的是（\quad）
 
@@ -101,6 +142,12 @@ A
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+设球的半径为 \(r\)，则球的体积为 \(V_1=\dfrac43\pi r^3\). 设内接正方体的棱长为 \(s\)，正方体的体对角线等于球的直径，所以 \(s\sqrt{3}=2r\)，从而
+\(V_2=s^3=\dfrac{8r^3}{3\sqrt{3}}\). 因此
+\(\dfrac{V_1-V_2}{V_2}=\dfrac{\pi\sqrt{3}}{2}-1\approx1.72\)，即 \(V_1\) 比 \(V_2\) 大约多一倍半，故选 D.
+\end{solution}
 
 \begin{problem}
 直线 \(2x + y - 10 = 0\) 与不等式组 \(\begin{cases}
@@ -121,6 +168,10 @@ x - y \geqslant -2,\\
 B
 \end{answer}
 
+\begin{solution}
+由直线方程得 \(y=10-2x\). 与 \(x\geqslant0\)、\(y\geqslant0\) 合并，得 \(0\leqslant x\leqslant5\). 代入约束 \(x-y\geqslant-2\)，得 \(3x-10\geqslant-2\)，即 \(x\geqslant\dfrac83\). 代入约束 \(4x+3y\leqslant20\)，得 \(4x+3(10-2x)\leqslant20\)，即 \(x\geqslant5\). 所以只能有 \(x=5\)，进而 \(y=0\)，公共点只有一个，故选 B.
+\end{solution}
+
 \begin{problem}
 《九章算术》“竹九节”问题：现有一根 \(9\) 节的竹子，自上而下各节的容积成等差数列，上面 \(4\) 节的容积共 \(3\text{ 升}\)，下面 \(3\) 节的容积共 \(4\text{ 升}\)，则第 \(5\) 节的容积为（\quad）
 
@@ -134,6 +185,12 @@ B
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+设自上而下第 \(i\) 节的容积为 \(u_i\)，公差为 \(d\). 以 \(u_5\) 为中心表示各项，则上面四节和下面三节分别给出
+\(u_1+u_2+u_3+u_4=4u_5-10d=3\)，
+\(u_7+u_8+u_9=3u_5+9d=4\). 解得 \(d=\dfrac7{66}\)，从而 \(u_5=\dfrac{3+10d}{4}=\dfrac{67}{66}\). 故选 B.
+\end{solution}
 
 \begin{problem}
 若实数 \(a\)，\(b\) 满足 \(a \geqslant 0\)，\(b \geqslant 0\)，且 \(ab = 0\)，则称 \(a\) 与 \(b\) 互补. 记 \(\varphi(a, b) = \sqrt{a^2 + b^2} - a - b\)，那么 \(\varphi(a, b) = 0\) 是 \(a\) 与 \(b\) 互补的（\quad）
@@ -149,6 +206,14 @@ B
 C
 \end{answer}
 
+\begin{solution}
+若 \(a\) 与 \(b\) 互补，则 \(a\)，\(b\geqslant0\) 且 \(ab=0\). 此时 \(a=0\) 或 \(b=0\)，所以
+\(\sqrt{a^2+b^2}=a+b\)，从而 \(\varphi(a,b)=0\).
+
+反之，若 \(\varphi(a,b)=0\)，则 \(\sqrt{a^2+b^2}=a+b\). 两边均非负，平方得
+\(a^2+b^2=a^2+2ab+b^2\)，即 \(ab=0\). 结合题设 \(a\)，\(b\geqslant0\)，可知 \(a\)，\(b\) 互补. 所以该条件是充要条件，故选 C.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -159,6 +224,11 @@ C
 \(20\)
 \end{answer}
 
+\begin{solution}
+超市总数为 \(200+400+1400=2000\) 家. 分层抽样时各层抽取比例相同，因此应抽取的中型超市数为
+\(100\times\dfrac{400}{2000}=20\) 家.
+\end{solution}
+
 \begin{problem}
 \(\left(x - \frac{1}{3\sqrt{x}}\right)^{18}\) 的展开式中含 \(x^{15}\) 的项的系数为\fillinblank{}. （结果用数值表示）
 \end{problem}
@@ -166,6 +236,13 @@ C
 \begin{answer}
 \(17\)
 \end{answer}
+
+\begin{solution}
+展开式通项中从第二项取 \(k\) 次的项为
+\(\mathrm C_{18}^{k}x^{18-k}\left(-\dfrac{1}{3\sqrt{x}}\right)^k=\mathrm C_{18}^{k}\dfrac{(-1)^k}{3^k}x^{18-\frac32k}\). 要含 \(x^{15}\)，需满足
+\(18-\dfrac32k=15\)，所以 \(k=2\). 因此所求系数为
+\(\mathrm C_{18}^{2}\dfrac{1}{3^2}=\dfrac{153}{9}=17\).
+\end{solution}
 
 \begin{problem}
 在 \(30\) 瓶饮料中，有 \(3\) 瓶已过了保质期. 从这 \(30\) 瓶饮料中任取 \(2\) 瓶，则至少取到 \(1\) 瓶已过保质期饮料的概率为\fillinblank{}. （结果用最简分数表示）
@@ -175,21 +252,43 @@ C
 \(\frac{28}{145}\)
 \end{answer}
 
+\begin{solution}
+两瓶中至少有一瓶过期的概率等于 \(1\) 减去两瓶都不过期的概率. 不过期饮料有 \(27\) 瓶，所以所求概率为
+\(1-\dfrac{\mathrm C_{27}^{2}}{\mathrm C_{30}^{2}}=1-\dfrac{27\times26}{30\times29}=\dfrac{28}{145}\).
+\end{solution}
+
 \begin{problem}
-过点 \((-1, -2)\) 的直线 \(t\) 被圆 \(x^{2} + y^{2} - 2x - 2y + 1 = 0\) 截得的弦长为 \(\sqrt{2}\)，则直线 \(t\) 的斜率为\fillinblank{}.
+过点 \((-1, -2)\) 的直线 \(l\) 被圆 \(x^{2} + y^{2} - 2x - 2y + 1 = 0\) 截得的弦长为 \(\sqrt{2}\)，则直线 \(l\) 的斜率为\fillinblank{}.
 \end{problem}
 
 \begin{answer}
 \(1\) 或 \(\frac{17}{7}\)
 \end{answer}
 
+\begin{solution}
+圆的方程化为 \(\left(x-1\right)^2+\left(y-1\right)^2=1\)，所以圆心为 \(O(1,1)\)，半径为 \(1\). 弦长为 \(\sqrt{2}\) 时，圆心到直线 \(l\) 的距离为
+\(\sqrt{1^2-\left(\dfrac{\sqrt{2}}2\right)^2}=\dfrac1{\sqrt{2}}\).
+
+设直线 \(l\) 的斜率为 \(k\)，由其过点 \((-1,-2)\)，得 \(y+2=k(x+1)\)，即 \(kx-y+k-2=0\). 由点到直线的距离公式，得
+\(\dfrac{\lvert2k-3\rvert}{\sqrt{k^2+1}}=\dfrac1{\sqrt{2}}\). 两边平方并整理，得
+\(7k^2-24k+17=0\)，所以 \(k=1\) 或 \(k=\dfrac{17}{7}\).
+\end{solution}
+
 \begin{problem}
-里氏震级 \(M\) 的计算公式为： \(M = \lg A - \lg A_0\). 其中 \(A\) 是测震仪记录的地震曲线的最大振幅，\(A_0\) 是相应的标准地震的振幅. 假设在一次地震中，测震仪记录的最大振幅是 \(1000\)，此时标准地震的振幅为 \(0.001\)，则此次地震的震级为\fillinblank{}\(\text{级}\)；\(9\text{ 级}\)地震的最大的振幅是 \(5\text{ 级}\)地震最大振幅的\fillinblank{}\(\text{倍}\).
+里氏震级 \(M\) 的计算公式为： \(M = \lg A - \lg A_0\). 其中 \(A\) 是测震仪记录的地震曲线的最大振幅，\(A_0\) 是相应的标准地震的振幅. 假设在一次地震中，测震仪记录的最大振幅是 \(1000\)，此时标准地震的振幅为 \(0.001\)，则此次地震的震级为\fillinblank{}\(\text{级}\)；\(9\text{ 级}\)地震的最大的振幅是\(5\text{ 级}\)地震最大振幅的\fillinblank{}\(\text{倍}\).
 \end{problem}
 
 \begin{answer}
 \(6\)，\(10000\)
 \end{answer}
+
+\begin{solution}
+由 \(M=\lg A-\lg A_0=\lg\dfrac{A}{A_0}\)，第一次地震的震级为
+\(\lg\dfrac{1000}{0.001}=\lg10^6=6\)，所以为 \(6\) 级.
+
+在相同标准振幅 \(A_0\) 下，\(9\) 级与 \(5\) 级的震级相差 \(4\)，故最大振幅之比为
+\(10^{9-5}=10^4=10000\). 所以 \(9\) 级地震的最大振幅是 \(5\) 级地震的 \(10000\) 倍.
+\end{solution}
 
 \section{解答题}
 
@@ -203,8 +302,9 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item \(\triangle ABC\) 的周长为 \(5\).
-\item \(\cos(A-C)=\frac{11}{16}\).
+\item 由余弦定理，\(c^2=a^2+b^2-2ab\cos C=1+4-4\times\dfrac14=4\). 因为边长为正，所以 \(c=2\)，从而 \(\triangle ABC\) 的周长为 \(1+2+2=5\).
+\item 由余弦定理，\(\cos A=\dfrac{b^2+c^2-a^2}{2bc}=\dfrac78\). 又因为 \(A\) 是三角形内角，\(\sin A=\sqrt{1-\cos^2A}=\dfrac{\sqrt{15}}8\)，且 \(\sin C=\sqrt{1-\cos^2C}=\dfrac{\sqrt{15}}4\). 所以
+\(\cos(A-C)=\cos A\cos C+\sin A\sin C=\dfrac78\times\dfrac14+\dfrac{\sqrt{15}}8\times\dfrac{\sqrt{15}}4=\dfrac{11}{16}\).
 \end{enumerate}
 \end{solution}
 
@@ -218,8 +318,12 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item \(b_n=\frac{5}{4}\cdot 2^{n-1}\).
-\item \(S_n+\frac{5}{4}=5\cdot 2^{n-2}\)，故数列 \(\left\{S_n+\frac{5}{4}\right\}\) 是等比数列.
+\item 按题目所给次序设三个正数为 \(5-d\)，\(5\)，\(5+d\)，其中 \(-5<d<5\). 加上 \(2\)，\(5\)，\(13\) 后，分别得到 \(b_3=7-d\)，\(b_4=10\)，\(b_5=18+d\). 由等比数列的中项性质，
+\(10^2=(7-d)(18+d)\)，即 \(d^2+11d-26=0\). 所以 \(d=2\) 或 \(d=-13\)，正数条件排除 \(d=-13\)，故 \(b_3=5\)，\(b_4=10\)，\(b_5=20\). 数列公比为 \(2\)，且 \(b_3=b_1\cdot2^2\)，所以 \(b_1=\dfrac54\)，从而
+\(b_n=\dfrac54\cdot2^{n-1}\).
+\item \(S_n=\dfrac54\left(2^n-1\right)\)，所以
+\(S_n+\dfrac54=\dfrac54\cdot2^n\). 因此
+\(\dfrac{S_{n+1}+\frac54}{S_n+\frac54}=2\)，该比值与 \(n\) 无关，故数列 \(\left\{S_n+\dfrac54\right\}\) 是等比数列，公比为 \(2\).
 \end{enumerate}
 \end{solution}
 
@@ -236,8 +340,15 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item \(CF \perp C_1E\).
-\item 二面角 \(E-CF-C_1\) 的大小为 \(45^{\circ}\).
+\item 建立直角坐标系，使
+\(A=(0,0,0)\)，\(B=(2,0,0)\)，\(C=(1,\sqrt{3},0)\)，\(E=(0,0,2\sqrt{2})\)，\(F=(2,0,\sqrt{2})\)，\(C_1=(1,\sqrt{3},3\sqrt{2})\). 则
+\(\overrightarrow{CF}=(1,-\sqrt{3},\sqrt{2})\)，\(\overrightarrow{C_1E}=(-1,-\sqrt{3},-\sqrt{2})\)，从而
+\(\overrightarrow{CF}\cdot\overrightarrow{C_1E}=-1+3-2=0\). 所以 \(CF\perp C_1E\).
+\item 取平面 \(ECF\) 和平面 \(CFC_1\) 的法向量
+\(\bs{n}_1=\overrightarrow{CF}\times\overrightarrow{CE}=(-\sqrt{6},-3\sqrt{2},-2\sqrt{3})\)，
+\(\bs{n}_2=\overrightarrow{CF}\times\overrightarrow{CC_1}=(-3\sqrt{6},-3\sqrt{2},0)\). 因此
+\(\lvert\bs{n}_1\cdot\bs{n}_2\rvert=36\)，\(\lVert\bs{n}_1\rVert=6\)，\(\lVert\bs{n}_2\rVert=6\sqrt{2}\). 设二面角为 \(\theta\)，则
+\(\cos\theta=\dfrac{\lvert\bs{n}_1\cdot\bs{n}_2\rvert}{\lVert\bs{n}_1\rVert\lVert\bs{n}_2\rVert}=\dfrac1{\sqrt{2}}\). 取二面角的较小角，得 \(\theta=45^{\circ}\).
 \end{enumerate}
 \end{solution}
 
@@ -251,11 +362,13 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item \(v(x)=\begin{cases}
-60,&0\leqslant x\leqslant 20,\\
-\frac{1}{3}(200-x),&20\leqslant x\leqslant 200.
+\item 当 \(0\leqslant x\leqslant20\) 时，题设给出 \(v(x)=60\). 当 \(20\leqslant x\leqslant200\) 时，设 \(v(x)=kx+b\). 由 \(v(20)=60\)、\(v(200)=0\)，得 \(k=-\dfrac13\)、\(b=\dfrac{200}{3}\)，所以
+\(v(x)=\begin{cases}
+60,&0\leqslant x\leqslant20,\\
+\dfrac13(200-x),&20\leqslant x\leqslant200.
 \end{cases}\)
-\item 当车流密度为 \(100\text{ 辆/千米}\) 时，车流量达到最大，最大值约为 \(3333\text{ 辆/小时}\).
+\item 当 \(0\leqslant x\leqslant20\) 时，\(f(x)=60x\)，所以 \(f(x)\leqslant1200\). 当 \(20\leqslant x\leqslant200\) 时，
+\(f(x)=\dfrac{x(200-x)}3=\dfrac{10000}{3}-\dfrac{(x-100)^2}{3}\). 因此 \(x=100\) 时取得该区间最大值 \(\dfrac{10000}{3}\)，且它大于 \(1200\). 所以车流密度为 \(100\text{ 辆/千米}\) 时车流量最大，最大值为 \(\dfrac{10000}{3}\approx3333\text{ 辆/小时}\).
 \end{enumerate}
 \end{solution}
 
@@ -269,22 +382,54 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item \(a=-2\)，\(b=5\)，切线 \(l\) 的方程为 \(x-y-2=0\).
-\item \(m\in\left(-\frac{1}{4},0\right)\).
+\item \(g(2)=0\)，且 \(g'(x)=2x-3\)，所以 \(g'(2)=1\). 由两曲线在 \((2,0)\) 处有相同切线，得 \(f(2)=0\)、\(f'(2)=1\). 又
+\(f(2)=8+9a+2b=0\)，\(f'(x)=3x^2+4ax+b\)，所以 \(f'(2)=12+8a+b=1\). 解得 \(a=-2\)，\(b=5\)，切线方程为 \(y=x-2\)，即 \(x-y-2=0\).
+\item 代入 \(a=-2\)、\(b=5\)，得
+\(f(x)+g(x)=x^3-3x^2+2x=x(x^2-3x+2)\). 方程 \(f(x)+g(x)=mx\) 化为
+\(x\left(x^2-3x+2-m\right)=0\). 因为 \(0\)，\(x_1\)，\(x_2\) 互不相同，二次方程 \(x^2-3x+2-m=0\) 有两个不同实根，故
+\(1+4m>0\)，即 \(m>-\dfrac14\).
+
+对 \(x=x_1\)，\(x_2\)，由方程 \(f(x)+g(x)=mx\) 及题设严格不等式，得 \(m<0\). 于是必要条件为 \(m\in\left(-\dfrac14,0\right)\).
+
+反之，设 \(m\in\left(-\dfrac14,0\right)\)，则
+\(x_1=\dfrac{3-\sqrt{1+4m}}2\)，\(x_2=\dfrac{3+\sqrt{1+4m}}2\)，所以 \(1<x_1<x_2<2\). 令
+\(h(x)=f(x)+g(x)-m(x-1)=(x-1)(x^2-2x-m)\). 对 \(i=1\)，\(2\)，由 \(x_i^2-3x_i+2-m=0\) 得
+\(x_i^2-2x_i-m=x_i-2<0\). 又 \(x>1\) 时函数 \(x^2-2x-m\) 递增，所以当 \(x\in[x_1,x_2]\) 时
+\(x^2-2x-m\leqslant x_2-2<0\). 因此 \(h(x)<0\)，即题设不等式恒成立. 所以
+\(m\in\left(-\dfrac14,0\right)\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-平面内与两定点 \(A_{1}(-a,0)\)，\(A_{2}(a,0) \)（\(a > 0\)） 连线的斜率之积等于非零常数 \(m\) 的点的轨迹，加上 \(A_{1}\)，\(A_{2}\) 两点所成的曲线 \(C\) 可以是圆，椭圆或双曲线.
+平面内与两定点 \(A_{1}(-a,0)\)，\(A_{2}(a,0) \)（\(a > 0\)） 连线的斜率之积等于非零常数 \(m\) 的点的轨迹，加上 \(A_{1}\)，\(A_{2}\) 两点所成的曲线 \(C\) 可以是圆、椭圆或双曲线.
 \begin{enumerate}
-\item 求曲线 C 的方程，并讨论 C 的形状与 m 值的关系；
+\item 求曲线 \(C\) 的方程，并讨论 \(C\) 的形状与 \(m\) 值的关系；
 \item 当 \(m = -1\) 时，对应的曲线为 \(C_1\)；对给定的 \(m \in (-1,0) \cup (0,+\infty)\)，对应的曲线为 \(C_2\). 设 \(F_1\)，\(F_2\) 是 \(C_2\) 的两个焦点. 试问：在 \(C_1\) 上，是否存在点 \(N\)，使得 \(\triangle F_1NF_2\) 的面积 \(S = |m|a^2\)？若存在，求 \(\tan \angle F_1NF_2\) 的值；若不存在，请说明理由.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item 曲线 \(C\) 的方程为 \(mx^{2}-y^{2}=ma^{2}\). 当 \(m<-1\) 时，\(C\) 是焦点在 \(y\) 轴上的椭圆；当 \(m=-1\) 时，\(C\) 是圆；当 \(-1<m<0\) 时，\(C\) 是焦点在 \(x\) 轴上的椭圆；当 \(m>0\) 时，\(C\) 是焦点在 \(x\) 轴上的双曲线.
-\item 当 \(m\in\left[\frac{1-\sqrt{5}}{2},0\right)\cup\left(0,\frac{1+\sqrt{5}}{2}\right]\) 时存在这样的点 \(N\). 当 \(m\in\left[\frac{1-\sqrt{5}}{2},0\right)\) 时，\(\tan\angle F_{1}NF_{2}=2\)；当 \(m\in\left(0,\frac{1+\sqrt{5}}{2}\right]\) 时，\(\tan\angle F_{1}NF_{2}=-2\). 其他情形不存在.
+\item 设动点为 \(P(x,y)\). 当 \(x\neq\pm a\) 时，点 \(P\) 与 \(A_1\)，\(A_2\) 连线的斜率之积为
+\(\dfrac{y}{x+a}\cdot\dfrac{y}{x-a}=\dfrac{y^2}{x^2-a^2}=m\)，所以
+\(mx^2-y^2=ma^2\). 两个定点 \(A_1\)，\(A_2\) 也满足这个方程，故曲线 \(C\) 的方程为
+\(mx^2-y^2=ma^2\).
+
+当 \(m<-1\) 时，方程化为 \(\dfrac{x^2}{a^2}+\dfrac{y^2}{(-m)a^2}=1\)，为焦点在 \(y\) 轴上的椭圆；当 \(m=-1\) 时，为圆 \(x^2+y^2=a^2\)；当 \(-1<m<0\) 时，为焦点在 \(x\) 轴上的椭圆；当 \(m>0\) 时，方程化为 \(\dfrac{x^2}{a^2}-\dfrac{y^2}{ma^2}=1\)，为焦点在 \(x\) 轴上的双曲线.
+\item 当 \(m=-1\) 时，\(C_1\) 的方程为 \(x^2+y^2=a^2\). 对给定的 \(m\in(-1,0)\cup(0,+\infty)\)，\(C_2\) 的两个焦点均为
+\(F_1=(-c,0)\)、\(F_2=(c,0)\)，其中 \(c=a\sqrt{1+m}\).
+
+设 \(N=(x_0,y_0)\in C_1\). 三角形面积为
+\(S=\dfrac12\left|F_1F_2\right|\left|y_0\right|=c\left|y_0\right|\). 要使 \(S=|m|a^2\)，必须有
+\(\left|y_0\right|=\dfrac{|m|a}{\sqrt{1+m}}\). 因为 \(N\) 在圆 \(C_1\) 上，存在这样的点 \(N\) 的充要条件为
+\(\dfrac{|m|a}{\sqrt{1+m}}\leqslant a\)，即
+\(m^2-m-1\leqslant0\). 所以在题设范围内，存在点 \(N\) 当且仅当
+\(m\in\left[\dfrac{1-\sqrt{5}}2,0\right)\cup\left(0,\dfrac{1+\sqrt{5}}2\right]\).
+
+对于存在的情形，令 \(\theta=\angle F_1NF_2\). 有
+\(\overrightarrow{NF_1}=(-c-x_0,-y_0)\)、\(\overrightarrow{NF_2}=(c-x_0,-y_0)\)，从而
+\(\overrightarrow{NF_1}\cdot\overrightarrow{NF_2}=x_0^2+y_0^2-c^2=a^2-c^2=-ma^2\)，且
+\(\left|\det\left(\overrightarrow{NF_1},\overrightarrow{NF_2}\right)\right|=2c|y_0|=2|m|a^2\). 因此
+\(\tan\theta=\dfrac{2|m|a^2}{-ma^2}\). 当 \(m\in\left[\dfrac{1-\sqrt{5}}2,0\right)\) 时，\(\tan\theta=2\)；当 \(m\in\left(0,\dfrac{1+\sqrt{5}}2\right]\) 时，\(\tan\theta=-2\). 其他情形不存在这样的点 \(N\).
 \end{enumerate}
 \end{solution}

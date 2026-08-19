@@ -14,9 +14,9 @@
 
 \begin{solution}
 \begin{enumerate}
-\item 当 \(a>0\) 时，\(2a>a\)；当 \(a=0\) 时，\(2a=a\)；当 \(a<0\) 时，\(2a<a\).
+\item 由 \(2a>a\) 两边同时减去 \(a\)，得 \(a>0\)，所以当 \(a>0\) 时，\(2a>a\). 由 \(2a=a\) 两边同时减去 \(a\)，得 \(a=0\)，所以当 \(a=0\) 时，\(2a=a\). 由 \(2a<a\) 两边同时减去 \(a\)，得 \(a<0\)，所以当 \(a<0\) 时，\(2a<a\).
 
-\item 当 \(x\geqslant0\) 时，\(|x|=x\).
+\item 当 \(x\geqslant0\) 时，\(|x|=x\)；当 \(x<0\) 时，\(|x|=-x\)，而 \(-x>x\)，不可能有 \(|x|=x\). 因此 \(x\geqslant0\).
 \end{enumerate}
 \end{solution}
 
@@ -31,9 +31,9 @@
 
 \begin{solution}
 \begin{enumerate}
-\item 当 \(2-x\neq0\)，即 \(x\neq2\) 时分母有意义，所以函数 \(y=\dfrac{1}{2-x}\) 的定义域为 \(x\neq2\).
+\item 分式有意义的条件是分母不为零，即 \(2-x\neq0\)，所以 \(x\neq2\). 因此定义域为所有满足 \(x\in\R\) 且 \(x\neq2\) 的 \(x\).
 
-\item 当 \(2x-1\geqslant0\)，即 \(x\geqslant\dfrac12\) 时，根式 \(\sqrt{2x-1}\) 在实数范围内有意义，所以函数 \(y=\sqrt{2x-1}\) 的定义域为 \(x\geqslant\dfrac12\).
+\item 根式在实数范围内有意义的条件是被开方数不小于零，即 \(2x-1\geqslant0\)，解得 \(x\geqslant\dfrac12\). 因此定义域为 \(\left[\dfrac12,+\infty\right)\).
 \end{enumerate}
 \end{solution}
 
@@ -42,7 +42,10 @@
 \end{problem}
 
 \begin{solution}
-\(\left(\dfrac{2}{3}\right)^2+\left(-5.8\right)^0-\left(\dfrac{8}{27}\right)^{-\frac23}+\left(\dfrac12\right)^{-2}=\dfrac49+1-\dfrac94+4=3\dfrac7{36}\).
+因为 \(-5.8\neq0\)，所以 \(\left(-5.8\right)^0=1\). 又因为 \(\dfrac{8}{27}=\left(\dfrac23\right)^3\)，所以 \(\left(\dfrac{8}{27}\right)^{-\frac23}=\left(\dfrac23\right)^{-2}=\dfrac94\)，且 \(\left(\dfrac12\right)^{-2}=4\). 因而
+\[
+\left(\dfrac{2}{3}\right)^2+\left(-5.8\right)^0-\left(\dfrac{8}{27}\right)^{-\frac23}+\left(\dfrac12\right)^{-2}=\dfrac49+1-\dfrac94+4=\dfrac{115}{36}=3\dfrac7{36}
+\]
 \end{solution}
 
 \begin{problem}
@@ -50,11 +53,13 @@
 \end{problem}
 
 \begin{solution}
-由 \(\Delta=(-2k)^2-4\times4=4k^2-16\)，当 \(4k^2-16=0\)，即 \(k=\pm2\) 时，方程有两个相等的实数根.
+方程为关于 \(x\) 的一元二次方程，\(x^2-2kx+4=0\) 有两个相等的实数根的充要条件是判别式为零. 因此
+\[
+\Delta=(-2k)^2-4\cdot1\cdot4=4k^2-16=0
+\]
+解得 \(k^2=4\)，即 \(k=2\) 或 \(k=-2\).
 
-将 \(k=2\) 代入原方程得 \(x^2-4x+4=0\)，即 \((x-2)^2=0\)，所以 \(x_1=x_2=2\).
-
-将 \(k=-2\) 代入原方程得 \(x^2+4x+4=0\)，即 \((x+2)^2=0\)，所以 \(x_1=x_2=-2\).
+当 \(k=2\) 时，原方程为 \(x^2-4x+4=0\)，即 \((x-2)^2=0\)，所以相等的实数根为 \(x_1=x_2=2\). 当 \(k=-2\) 时，原方程为 \(x^2+4x+4=0\)，即 \((x+2)^2=0\)，所以相等的实数根为 \(x_1=x_2=-2\).
 \end{solution}
 
 \begin{problem}
@@ -62,7 +67,11 @@
 \end{problem}
 
 \begin{solution}
-因为 \(90^\circ<\alpha<180^\circ\)，所以 \(\cos\alpha=-\sqrt{1-\sin^2\alpha}=-\sqrt{1-\dfrac9{25}}=-\sqrt{\dfrac{16}{25}}=-\dfrac45\). 所以 \(\tan\alpha=\dfrac{\sin\alpha}{\cos\alpha}=\dfrac{3/5}{-4/5}=-\dfrac34\)，\(\cot\alpha=\dfrac1{\tan\alpha}=-\dfrac43\).
+因为 \(90^\circ<\alpha<180^\circ\)，所以 \(\alpha\) 是第二象限角，\(\cos\alpha<0\). 由同角三角函数的平方关系，
+\[
+\cos^2\alpha=1-\sin^2\alpha=1-\left(\dfrac35\right)^2=\dfrac{16}{25}
+\]
+故 \(\cos\alpha=-\dfrac45\). 于是 \(\tan\alpha=\dfrac{\sin\alpha}{\cos\alpha}=\dfrac{3/5}{-4/5}=-\dfrac34\)，\(\cot\alpha=\dfrac{\cos\alpha}{\sin\alpha}=\dfrac{-4/5}{3/5}=-\dfrac43\).
 \end{solution}
 
 \begin{problem}
@@ -70,7 +79,11 @@
 \end{problem}
 
 \begin{solution}
-\(y=1+4x-2x^2=-2\left(x^2-2x-\dfrac12\right)=-2\left[(x-1)^2-\dfrac32\right]=-2(x-1)^2+3\)，因此顶点坐标为 \((1,3)\)，对称轴方程为 \(x=1\). 因为 \(-2<0\)，所以函数 \(y\) 有极大值；当 \(x=-\dfrac{b}{2a}=1\) 时，\(y_{\max}=\dfrac{4ac-b^2}{4a}=3\).
+将函数配方，得
+\[
+y=1+4x-2x^2=-2\left(x^2-2x-\dfrac12\right)=-2\left[(x-1)^2-\dfrac32\right]=-2(x-1)^2+3
+\]
+因此抛物线的顶点坐标为 \((1,3)\)，对称轴方程为 \(x=1\). 对任意实数 \(x\)，都有 \((x-1)^2\geqslant0\)，所以 \(y=-2(x-1)^2+3\leqslant3\)，且当 \(x=1\) 时等号成立. 故函数 \(y\) 的极大值为 \(3\)，无极小值.
 \end{solution}
 
 \begin{problem}
@@ -78,7 +91,15 @@
 \end{problem}
 
 \begin{solution}
-由 \(\lg(2x)=2\lg(x-4)\) 得 \(\lg(2x)=\lg(x-4)^2\)，所以 \(2x=(x-4)^2\)，即 \(x^2-10x+16=0\)，亦即 \((x-8)(x-2)=0\). 由 \(x-8=0\)，得 \(x=8\)；由 \(x-2=0\)，得 \(x=2\). 经检验知 \(x=8\) 是原方程的根，\(x=2\) 是增根，应舍去.
+原方程有意义必须满足 \(2x>0\)，\(x-4>0\)，并且分母 \(\lg(x-4)\neq0\). 这些条件合并为 \(x>4\) 且 \(x\neq5\).
+
+在此定义域内，方程两边同乘 \(\lg(x-4)\)，得 \(\lg(2x)=2\lg(x-4)\). 根据对数的幂运算法则，
+\[
+\lg(2x)=\lg\left((x-4)^2\right)
+\]
+由于常用对数函数在正数范围内是单调函数，故 \(2x=(x-4)^2\)，即
+\(x^2-10x+16=0\)，\((x-8)(x-2)=0\).
+所以候选值为 \(x=8\) 或 \(x=2\). 其中 \(x=2\) 不满足 \(x>4\)，舍去；\(x=8\) 满足定义域，且 \(\lg16/\lg4=2\). 因此原方程的解为 \(x=8\).
 \end{solution}
 
 \begin{problem}
@@ -86,7 +107,11 @@
 \end{problem}
 
 \begin{solution}
-由 \(200=33\times6+2\)，得 \(S_{33}=6\times1+6\times2+6\times3+\cdots+6\times33=\dfrac{33}{2}\times(6+6\times33)=\dfrac{33}{2}\times204=3366\).
+不超过 \(200\) 的正的 \(6\) 的倍数依次为 \(6\)，\(12\)，\(\ldots\)，\(6\times33=198\)，因为 \(6\times34=204>200\). 共有 \(33\) 项，构成首项为 \(6\)、末项为 \(198\) 的等差数列，因此它们的和为
+\[
+S=\dfrac{33(6+198)}{2}=\dfrac{33\times204}{2}=3366
+\]
+若将 \(0\) 计入自然数，增加的 \(0\) 不改变和，故所求和仍为 \(3366\).
 \end{solution}
 
 \begin{problem}
@@ -94,13 +119,19 @@
 \end{problem}
 
 \begin{solution}
-如图，\(P-ABCD\) 是正四棱锥，\(PO\) 是高，并且 \(PO=2\sqrt7\mathrm{~cm}\).
+如图，\(P-ABCD\) 是正四棱锥，\(O\) 是正方形 \(ABCD\) 的中心，\(PO\) 是棱锥的高，所以 \(PO\perp\) 平面 \(ABCD\)，且 \(PO=2\sqrt7\mathrm{~cm}\).
 
 \solutionfigure{\bitmapfigure[max width=0.42\linewidth]{img/1977/jiangsu_nantong/q9_solution_fig1.png}}
 
-所以 \(AB=BC=12\mathrm{~cm}\)，\(AC=\sqrt{AB^2+BC^2}=12\sqrt2\)，\(AO=\dfrac{AC}{2}=6\sqrt2\)，\(PA=\sqrt{PO^2+AO^2}=\sqrt{(2\sqrt7)^2+(6\sqrt2)^2}=\sqrt{28+72}=\sqrt{100}=10\mathrm{~cm}\).
-
-答：它的侧棱为 \(10\mathrm{~cm}\).
+在正方形 \(ABCD\) 中，\(AB=BC=12\mathrm{~cm}\). 由勾股定理，
+\[
+AC=\sqrt{AB^2+BC^2}=\sqrt{12^2+12^2}=12\sqrt2\mathrm{~cm}
+\]
+因为 \(O\) 是正方形的中心，所以 \(AO=\dfrac{AC}{2}=6\sqrt2\mathrm{~cm}\). 又因为 \(PO\perp\) 平面 \(ABCD\)，所以 \(PO\perp AO\)，三角形 \(PAO\) 是直角三角形. 因而
+\[
+PA=\sqrt{PO^2+AO^2}=\sqrt{(2\sqrt7)^2+(6\sqrt2)^2}=\sqrt{28+72}=\sqrt{100}=10\mathrm{~cm}
+\]
+所以它的侧棱为 \(10\mathrm{~cm}\).
 \end{solution}
 
 \begin{problem}
@@ -108,9 +139,30 @@
 \end{problem}
 
 \begin{solution}
-如图：
+如图，货物静止，故两根钢绳的拉力与重力 \(P\) 的合力为零. 将两根拉力分别沿水平方向和铅垂方向分解，水平方向的分力相互平衡，铅垂方向的分力平衡重力，所以
+\[
+\begin{cases}
+F_1\sin\alpha=F_2\sin\beta,\\
+F_1\cos\alpha+F_2\cos\beta=P.
+\end{cases}
+\]
 
 \solutionfigure{\bitmapfigure[max width=0.34\linewidth]{img/1977/jiangsu_nantong/q10_solution_fig1.png}}
 
-由几何关系得 \(\angle1=180^\circ-\alpha\)，\(\angle2=180^\circ-\beta\)，\(\angle3=180^\circ-\beta\)，\(\angle4=\alpha+\beta-180^\circ\). 据正弦定理得 \(\dfrac{F_1}{\sin(180^\circ-\beta)}=\dfrac{-P}{\sin(\alpha+\beta-180^\circ)}\)，所以 \(F_1=\dfrac{P\sin\beta}{\sin(\alpha+\beta)}\). 同理可得 \(F_2=\dfrac{P\sin\alpha}{\sin(\alpha+\beta)}\).
+将第二个等式两边乘以 \(\sin\beta\)，并利用第一个等式 \(F_2\sin\beta=F_1\sin\alpha\)，得
+\[
+P\sin\beta=F_1\sin\beta\cos\alpha+F_2\sin\beta\cos\beta=F_1\left(\sin\beta\cos\alpha+\sin\alpha\cos\beta\right)=F_1\sin\left(\alpha+\beta\right)
+\]
+所以
+\[
+F_1=\dfrac{P\sin\beta}{\sin\left(\alpha+\beta\right)}
+\]
+同理，将第二个等式两边乘以 \(\sin\alpha\)，并利用 \(F_1\sin\alpha=F_2\sin\beta\)，可得
+\[
+P\sin\alpha=F_2\left(\sin\beta\cos\alpha+\sin\alpha\cos\beta\right)=F_2\sin\left(\alpha+\beta\right)
+\]
+因此
+\[
+F_2=\dfrac{P\sin\alpha}{\sin\left(\alpha+\beta\right)}
+\]
 \end{solution}

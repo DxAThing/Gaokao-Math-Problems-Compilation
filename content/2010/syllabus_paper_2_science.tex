@@ -16,6 +16,18 @@
 A
 \end{answer}
 
+\begin{solution}
+先化简分式，得
+\[
+\frac{3-\i}{1+\i}=\frac{(3-\i)(1-\i)}{(1+\i)(1-\i)}=\frac{2-4\i}{2}=1-2\i
+\]
+因此
+\[
+\left(\frac{3-\i}{1+\i}\right)^2=(1-2\i)^2=1-4\i+4\i^2=-3-4\i
+\]
+所以选 A.
+\end{solution}
+
 \begin{problem}
 函数 \( y = \frac{1 + \ln(x - 1)}{2} \)（\(x > 1\)）的反函数是（\quad）
 
@@ -29,6 +41,18 @@ A
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+设原函数中的自变量为 \(x\)，函数值为 \(y\)，则
+\[
+2y=1+\ln(x-1)
+\]
+所以
+\(\ln(x-1)=2y-1\)，\(x-1=\e^{2y-1}\)，\(x=\e^{2y-1}+1\).
+原函数的值域为 \(\R\)，交换 \(x\)，\(y\) 后，反函数为
+\(y=\e^{2x-1}+1\)，\((x\in\R)\).
+所以选 D.
+\end{solution}
 
 \begin{problem}
 若变量 \(x\)，\(y\) 满足约束条件 \(\begin{cases}
@@ -48,6 +72,18 @@ y \geqslant x,\\
 C
 \end{answer}
 
+\begin{solution}
+由 \(y\geqslant x\) 和 \(3x+2y\leqslant5\)，可得
+\[
+x\leqslant y\leqslant\frac{5-3x}{2}
+\]
+从而 \(x\leqslant1\). 结合 \(x\geqslant-1\)，有 \(-1\leqslant x\leqslant1\). 又因为
+\[
+z=2x+y\leqslant2x+\frac{5-3x}{2}=\frac{x+5}{2}\leqslant3
+\]
+当 \(x=1\)，\(y=1\) 时，三个约束条件均成立，且 \(z=3\)，故最大值为 \(3\). 所以选 C.
+\end{solution}
+
 \begin{problem}
 如果等差数列 \(\{a_{n}\}\) 中，\(a_{3} + a_{4} + a_{5} = 12\)，那么 \(a_{1} + a_{2} + \dots + a_{7} =\)（\quad）
 
@@ -61,6 +97,16 @@ C
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+等差数列满足中间项等于相邻三项的平均值，因此
+\(a_3+a_4+a_5=3a_4=12\)，\(a_4=4\).
+又 \(a_1+a_7=a_2+a_6=a_3+a_5=2a_4\)，所以
+\[
+a_1+a_2+\cdots+a_7=7a_4=28
+\]
+所以选 C.
+\end{solution}
 
 \begin{problem}
 不等式 \(\frac{x^2 - x - 6}{x - 1} > 0\) 的解集为（\quad）
@@ -76,6 +122,20 @@ C
 C
 \end{answer}
 
+\begin{solution}
+将分子因式分解，得
+\[
+\frac{x^2-x-6}{x-1}=\frac{(x+2)(x-3)}{x-1}
+\]
+临界点为 \(-2\)，\(1\)，\(3\)，其中 \(x=1\) 不在定义域内. 在区间
+\((-\infty,-2)\)，\((-2,1)\)，\((1,3)\)，\((3,+\infty)\)
+上分别判断三个因式的符号，原式的符号依次为负、正、负、正. 因为要求原式大于 \(0\)，且 \(-2\)，\(3\) 也不能取，所以解集为
+\[
+\{x\mid -2<x<1\text{或}x>3\}
+\]
+所以选 C.
+\end{solution}
+
 \begin{problem}
 将标号为 \(1\)，\(2\)，\(3\)，\(4\)，\(5\)，\(6\) 的 \(6\) 张卡片放入 \(3\) 个不同的信封中，若每个信封放 \(2\) 张，其中标号为 \(1\)，\(2\) 的卡片放入同一信封，则不同的放法共有（\quad）
 
@@ -89,6 +149,14 @@ C
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+先把标号为 \(1\)，\(2\) 的卡片放入同一个信封，有 \(3\) 种选择. 选定该信封后，剩下的 \(4\) 张卡片须分别放入另外两个有区别的信封，指定其中一个信封放入 \(2\) 张卡片，另一个信封自动得到其余 \(2\) 张，放法有 \(\mathrm C_4^2=6\) 种. 因此总放法数为
+\[
+3\mathrm C_4^2=3\times6=18
+\]
+所以选 B.
+\end{solution}
 
 \begin{problem}
 为了得到函数 \( y = \sin \left(2x - \frac{\pi}{3}\right) \) 的图象，只需把函数 \( y = \sin \left(2x + \frac{\pi}{6}\right) \) 的图象（\quad）
@@ -104,6 +172,16 @@ B
 B
 \end{answer}
 
+\begin{solution}
+把原函数图象向右平移 \(h\) 个长度单位后，函数变为
+\[
+y=\sin\left(2(x-h)+\frac{\pi}{6}\right)=\sin\left(2x-2h+\frac{\pi}{6}\right)
+\]
+要使它等于 \(y=\sin(2x-\frac{\pi}{3})\)，应满足
+\(-2h+\frac{\pi}{6}=-\frac{\pi}{3}\)，\(h=\frac{\pi}{4}\).
+所以应向右平移 \(\frac{\pi}{4}\) 个长度单位，选 B.
+\end{solution}
+
 \begin{problem}
 \(\triangle ABC\) 中，点 \(D\) 在边 \(AB\) 上，\(CD\) 平分 \(\angle ACB\). 若 \(\overrightarrow{CB} = \bs{a}\)，\(\overrightarrow{CA} = \bs{b}\)，\(|\bs{a}| = 1\)，\(|\bs{b}| = 2\)，则 \(\overrightarrow{CD} =\)（\quad）
 
@@ -117,6 +195,20 @@ B
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+由角平分线定理，
+\[
+\frac{AD}{DB}=\frac{AC}{CB}=\frac{|\bs b|}{|\bs a|}=2
+\]
+因此 \(AD:DB=2:1\)，点 \(D\) 将从 \(A\) 到 \(B\) 的向量按比例分点，故
+\[
+\overrightarrow{CD}=\overrightarrow{CA}+\frac{2}{3}\overrightarrow{AB}
+=\bs b+\frac{2}{3}(\bs a-\bs b)
+=\frac{2}{3}\bs a+\frac{1}{3}\bs b
+\]
+所以选 B.
+\end{solution}
 
 \begin{problem}
 已知正四棱锥 \(S - ABCD\) 中，\(SA = 2\sqrt{3}\)，那么当该棱锥的体积最大时，它的高为（\quad）
@@ -132,6 +224,22 @@ B
 C
 \end{answer}
 
+\begin{solution}
+设正方形底面的边长为 \(s\)，棱锥的高为 \(h\)，底面中心为 \(O\). 因为
+\(OA=\frac{s}{\sqrt{2}}\)，\(SA^2=h^2+OA^2=12\)
+所以
+\[
+s^2=2(12-h^2)
+\]
+棱锥体积为
+\[
+V=\frac{1}{3}s^2h=\frac{2}{3}(12-h^2)h
+\]
+令 \(u=h^2\)，则 \(0<u<12\)，且
+\(V=\frac{2}{3}(12-u)\sqrt{u}\)，\(V'(u)=\frac{4-u}{\sqrt{u}}\).
+因此 \(V\) 在 \(0<u<4\) 时递增，在 \(4<u<12\) 时递减，体积最大时 \(u=4\)，从而 \(h=2\). 所以选 C.
+\end{solution}
+
 \begin{problem}
 若曲线 \( y = x^{-\frac{1}{2}} \) 在点 \( \left(a, a^{-\frac{1}{2}}\right) \) 处的切线与两个坐标轴围成的三角形的面积为 \(18\)，则 \(a =\)（\quad）
 
@@ -145,6 +253,22 @@ C
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+函数 \(y=x^{-1/2}\) 的导数为
+\[
+y'=-\frac{1}{2}x^{-3/2}
+\]
+因此曲线在 \(\left(a,a^{-1/2}\right)\) 处的切线斜率为 \(-1/(2a^{3/2})\)，切线方程为
+\[
+y-a^{-1/2}=-\frac{1}{2a^{3/2}}(x-a)
+\]
+令 \(y=0\)，得切线在 \(x\) 轴上的截距为 \(3a\)；令 \(x=0\)，得切线在 \(y\) 轴上的截距为 \(3/(2\sqrt a)\). 因而三角形面积为
+\[
+\frac{1}{2}\cdot3a\cdot\frac{3}{2\sqrt a}=\frac{9\sqrt a}{4}=18
+\]
+所以 \(\sqrt a=8\)，\(a=64\)，选 A.
+\end{solution}
 
 \begin{problem}
 与正方体 \(ABCD - A_{1}B_{1}C_{1}D_{1}\) 的三条棱 \(AB\)，\(CC_{1}\)，\(A_{1}D_{1}\) 所在直线的距离相等的点（\quad）
@@ -160,6 +284,25 @@ A
 D
 \end{answer}
 
+\begin{solution}
+设正方体边长为 \(1\)，建立直角坐标系：
+\(A(0,0,0)\)，\(B(1,0,0)\)，\(C(1,1,0)\)，\(A_1(0,0,1)\)，\(C_1(1,1,1)\)，\(D_1(0,1,1)\).
+设空间中任一点为 \(P(x,y,z)\). 则
+\(d^2(P,AB)=y^2+z^2\)，\(d^2(P,CC_1)=(x-1)^2+(y-1)^2\)
+\[
+d^2(P,A_1D_1)=x^2+(z-1)^2
+\]
+注意直线 \(A_1D_1\) 平行于 \(y\) 轴，因此到它的距离由 \(x\)，\(z\) 两个坐标决定.
+
+对任意 \(t\in\R\)，取
+\[
+P_t=(t,1-t,t)
+\]
+则
+\(d^2(P_t,AB)=(1-t)^2+t^2\)，\(d^2(P_t,CC_1)=(t-1)^2+t^2\)，\(d^2(P_t,A_1D_1)=t^2+(t-1)^2\).
+三者相等，故每个 \(P_t\) 都满足条件. 由于 \(t\) 可以取任意实数，满足条件的点有无数个，所以选 D.
+\end{solution}
+
 \begin{problem}
 已知椭圆 \(C: \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\)（\(a > b > 0\)）的离心率为 \(\frac{\sqrt{3}}{2}\)，过右焦点 \(F\) 且斜率为 \(k\)（\(k > 0\)）的直线与 \(C\) 相交于 \(A\)，\(B\) 两点. 若 \(\overrightarrow{AF} = 3\overrightarrow{FB}\)，则 \(k =\)（\quad）
 
@@ -174,6 +317,32 @@ D
 B
 \end{answer}
 
+\begin{solution}
+设椭圆焦距的一半为 \(c\). 由离心率得
+\(\frac{c}{a}=\frac{\sqrt3}{2}\)，\(c^2=\frac{3a^2}{4}\)，\(b^2=a^2-c^2=\frac{a^2}{4}\).
+取右焦点 \(F=(c,0)\)，并设
+\[
+\overrightarrow{FB}=(t,kt)
+\]
+由 \(\overrightarrow{AF}=3\overrightarrow{FB}\)，有
+\(B=F+(t,kt)\)，\(A=F-3(t,kt)\).
+直线 \(AB\) 上的点可写成 \(F+s(1,k)\). 将其代入椭圆方程并乘以 \(a^2\)，得
+\[
+(c+s)^2+4k^2s^2=a^2
+\]
+即
+\[
+(1+4k^2)s^2+2cs-\frac{a^2}{4}=0
+\]
+该方程的两个根为 \(-3t\)，\(t\)，由韦达定理，
+\(-2t=-\frac{2c}{1+4k^2}\)，\(-3t^2=-\frac{a^2}{4(1+4k^2)}\).
+由第一式 \(t=c/(1+4k^2)\)，代入第二式并利用 \(c^2=3a^2/4\)，得
+\[
+\frac{9}{(1+4k^2)^2}=\frac{1}{1+4k^2}
+\]
+因为 \(1+4k^2>0\)，所以 \(1+4k^2=9\)，从而 \(k^2=2\). 又 \(k>0\)，故 \(k=\sqrt2\). 所以选 B.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -184,6 +353,24 @@ B
 \(-\frac{1}{2}\)
 \end{answer}
 
+\begin{solution}
+由正切函数的周期性，
+\[
+\tan(\pi+2\alpha)=\tan2\alpha=-\frac43
+\]
+令 \(t=\tan\alpha\)，则
+\[
+\frac{2t}{1-t^2}=-\frac43
+\]
+因为题目中的正切有定义，所以 \(t^2\ne1\)，交叉相乘得
+\(6t=-4(1-t^2)\)，\(2t^2-3t-2=0\)
+即
+\[
+(2t+1)(t-2)=0
+\]
+所以 \(t=-\frac12\) 或 \(t=2\). 由于 \(\alpha\) 是第二象限的角，\(\tan\alpha<0\)，故 \(\tan\alpha=-\frac12\).
+\end{solution}
+
 \begin{problem}
 若 \(\left(x - \frac{a}{x}\right)^9\) 的展开式中 \(x^3\) 的系数是\(-84\)，则 \(a =\)\fillinblank{}.
 \end{problem}
@@ -191,6 +378,21 @@ B
 \begin{answer}
 \(1\)
 \end{answer}
+
+\begin{solution}
+展开式通项中取 \(-a/x\) 的 \(k\) 次幂时，项为
+\[
+\mathrm C_9^k x^{9-k}\left(-\frac{a}{x}\right)^k
+=\mathrm C_9^k(-a)^k x^{9-2k}
+\]
+要得到 \(x^3\) 项，必须满足
+\(9-2k=3\)，\(k=3\).
+因此 \(x^3\) 的系数为
+\[
+\mathrm C_9^3(-a)^3=-84a^3
+\]
+由题意 \(-84a^3=-84\)，得 \(a^3=1\)，所以 \(a=1\).
+\end{solution}
 
 \begin{problem}
 已知抛物线 \(C: y^2 = 2px\)（\(p > 0\)）的准线为 \(l\)，过 \(M(1,0)\) 且斜率为 \(\sqrt{3}\) 的直线与 \(l\) 相交于点 \(A\)，与 \(C\) 的一个交点为 \(B\). 若 \(\overrightarrow{AM} = \overrightarrow{MB}\)，则 \(p =\fillinblank{}\).
@@ -200,6 +402,28 @@ B
 \(2\)
 \end{answer}
 
+\begin{solution}
+抛物线 \(y^2=2px\) 的准线为 \(x=-p/2\). 过 \(M(1,0)\) 且斜率为 \(\sqrt3\) 的直线为
+\[
+y=\sqrt3(x-1)
+\]
+因此
+\[
+A=\left(-\frac p2,-\sqrt3\left(\frac p2+1\right)\right)
+\]
+由 \(\overrightarrow{AM}=\overrightarrow{MB}\)，有 \(B=2M-A\)，所以
+\[
+B=\left(2+\frac p2,\sqrt3\left(\frac p2+1\right)\right)
+\]
+将 \(B\) 代入抛物线方程，得
+\[
+3\left(\frac p2+1\right)^2=2p\left(2+\frac p2\right)=4p+p^2
+\]
+整理得
+\(\frac{p^2}{4}+p-3=0\)，\((p+6)(p-2)=0\).
+因为 \(p>0\)，所以 \(p=2\).
+\end{solution}
+
 \begin{problem}
 已知球 \(O\) 的半径为 4，圆 \(M\) 与圆 \(N\) 为该球的两个小圆，\(AB\) 为圆 \(M\) 与圆 \(N\) 的公共弦，\(AB = 4\). 若 \(OM = ON = 3\)，则两圆圆心的距离 \(MN = \)\fillinblank{}.
 \end{problem}
@@ -207,6 +431,32 @@ B
 \begin{answer}
 \(3\)
 \end{answer}
+
+\begin{solution}
+设 \(H\) 为公共弦 \(AB\) 的中点. 由于 \(OH\perp AB\)，球半径为 \(4\)，且 \(AB=4\)，有
+\[
+OH=\sqrt{4^2-\left(\frac{AB}{2}\right)^2}=\sqrt{16-4}=2\sqrt3
+\]
+对圆 \(M\)，其圆心 \(M\) 到弦 \(AB\) 垂直，且小圆半径满足
+\[
+MA=\sqrt{4^2-OM^2}=\sqrt7
+\]
+所以
+\[
+MH=\sqrt{MA^2-\left(\frac{AB}{2}\right)^2}=\sqrt{7-4}=\sqrt3
+\]
+同理 \(NH=\sqrt3\). 又 \(OM\perp MH\)，\(ON\perp NH\)，故在直角三角形 \(OMH\) 中
+\(\cos\angle MHO=\frac{MH}{OH}=\frac12\)，\(\angle MHO=60^\circ\).
+由于 \(MH\perp AB\)，\(NH\perp AB\)，点 \(M\)，\(N\) 都位于过 \(H\) 且垂直于 \(AB\) 的平面内. 在这个平面内，满足与 \(HO\) 成 \(60^\circ\) 角且到 \(H\) 的距离为 \(\sqrt3\) 的位置只有 \(HO\) 两侧的两个点；圆 \(M\) 与圆 \(N\) 不同，所以 \(M\)，\(N\) 位于 \(HO\) 的两侧，从而
+\[
+\angle MHN=120^\circ
+\]
+在三角形 \(MHN\) 中，应用余弦定理得
+\[
+MN^2=MH^2+NH^2-2MH\cdot NH\cos120^\circ=3+3+3=9
+\]
+所以 \(MN=3\).
+\end{solution}
 
 \section{解答题}
 
@@ -330,9 +580,9 @@ a_n=(n^2+n)3^n-\bigl((n-1)^2+(n-1)\bigr)3^{n-1}=2n(n+2)3^{n-1}
 \begin{enumerate}
 \item 由独立性，前三个组件中至少有一个能通过电流的概率为
 \[
-1-P\left(\overline{A_1}\overline{A_2}\overline{A_3}\right)=1-(1-p)^3=0.999
+1-P\left(\overline{A_1}\cap\overline{A_2}\cap\overline{A_3}\right)=1-(1-p)^3=0.999
 \]
-所以 \(1-p=0.1\)，即 \(p=0.9\).
+由于 \(p\) 是概率，\(0\leqslant p\leqslant1\)，所以 \(1-p=0.1\)，即 \(p=0.9\).
 
 \item 由电路图可知，除 \(T_4\) 所在支路外，另一条通路要求 \(T_3\) 能通过电流且 \(T_1\)，\(T_2\) 中至少一个能通过电流. 因此电流能在 \(M\) 与 \(N\) 之间通过的概率为
 \[
@@ -351,7 +601,7 @@ E(\xi)=E(I_1)+E(I_2)+E(I_3)+E(I_4)=3p+0.9=3.6
 \end{solution}
 
 \begin{problem}
-已知斜率为 \(1\) 的直线 \(l\) 与双曲线 \(C: \frac{x^{2}}{a^{2}} - \frac{y^{2}}{b^{2}} = 1\)（\(a > 0, b > 0\)）相交于 \(B\)，\(D\) 两点，且 \(BD\) 的中点为 \(M(1,3)\).
+已知斜率为 \(1\) 的直线 \(l\) 与双曲线 \(C: \frac{x^{2}}{a^{2}} - \frac{y^{2}}{b^{2}} = 1\)（\(a > 0\)，\(b > 0\)）相交于 \(B\)，\(D\) 两点，且 \(BD\) 的中点为 \(M(1,3)\).
 \begin{enumerate}
 \item 求 \(C\) 的离心率；
 \item 设 \(C\) 的右顶点为 \(A\)，右焦点为 \(F\)，\(|DF| \cdot |BF| = 17\)，证明：过 \(A\)，\(B\)，\(D\) 三点的圆与 \(x\) 轴相切.
@@ -456,7 +706,7 @@ f(x)-\frac{x}{x+1}=1-\e^{-x}-\frac{x}{x+1}=\frac{\e^x-x-1}{(x+1)\e^x}
 \]
 令 \(g(x)=\e^x-x-1\)，则 \(g'(x)=\e^x-1\). 当 \(x<0\) 时，\(g'(x)<0\)；当 \(x>0\) 时，\(g'(x)>0\)，所以 \(g(x)\) 在 \(x=0\) 处取得最小值 \(g(0)=0\). 故 \(f(x)\geqslant\frac{x}{x+1}\).
 
-\item 当 \(x>0\) 时，若不等式对一切 \(x\geqslant0\) 成立，则 \(a<0\) 时取充分大的 \(x\)，会有 \(ax+1<0\)，从而 \(\frac{x}{ax+1}<0<1-\e^{-x}\)，矛盾. 因此必须有 \(a\geqslant0\). 此时 \(ax+1>0\)，原不等式等价于
+\item 若 \(a<0\)，则 \(x=-1/a>0\) 时 \(ax+1=0\)，右端无定义；并且取 \(x>-1/a\) 时右端为负，而 \(f(x)=1-\e^{-x}>0\)，不等式也不可能对所有 \(x\geqslant0\) 成立. 因此必须有 \(a\geqslant0\). 此时 \(ax+1>0\)，原不等式等价于
 \[
 a\leqslant\frac{x-1+\e^{-x}}{x(1-\e^{-x})}=:\varphi(x)
 \]

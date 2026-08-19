@@ -1,10 +1,14 @@
 \chapter{1977年山东A卷}
 
+\section{解答题}
+
 \begin{problem}
 \(\sqrt{\left( 3-x \right)^2}=?\)
 \end{problem}
 
 \begin{solution}
+根号表示算术平方根，因此对任意实数 \(u\)，有 \(\sqrt{u^2}=\lvert u\rvert\). 于是
+\(\sqrt{\left( 3-x \right)^2}=\lvert 3-x\rvert\). 当 \(x\le 3\) 时，\(3-x\ge 0\)，所以 \(\lvert 3-x\rvert=3-x\)；当 \(x>3\) 时，\(3-x<0\)，所以 \(\lvert 3-x\rvert=-(3-x)=x-3\). 因而
 \[
 \sqrt{\left( 3-x \right)^2}=
 \begin{cases}
@@ -19,9 +23,9 @@ x-3, & x>3.
 \end{problem}
 
 \begin{solution}
-原式 \(=\lg 2+\lg 5+\frac{1}{2}\lg 10-2\lg 10+\log_8 1\)
+因为 \(\lg 2+\lg 5=\lg 10=1\)，\(\lg\sqrt{10}=\frac12\lg 10=\frac12\)，\(\lg 0.01=\lg 10^{-2}=-2\lg 10=-2\)，并且 \(\log_3 3=1\)、\(\log_8 1=0\)，所以原式
 \[
-=\lg 10+\frac{1}{2}\lg 10-2\lg 10+0=1+\frac{1}{2}-2=-\frac{1}{2}
+\lg 2+\lg 5+\lg\sqrt{10}+\lg 0.01+\log_8\log_3 3=1+\frac12-2+0=-\frac12
 \]
 \end{solution}
 
@@ -30,24 +34,23 @@ x-3, & x>3.
 
 \begin{enumerate}
 \item \(y=\log_a x\)（\(a>0\)）；
-\item \(y=\frac{\sqrt{x-1}}{x+3}\)
+\item \(y=\frac{\sqrt{x-1}}{x+3}\).
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item \(y=\log_a x\)（\(a>0\)）的定义域为 \(x>0\).
-
-\item \(y=\frac{\sqrt{x-1}}{x+3}\) 的定义域为 \(x\ge 1\).
+\item 对数的真数必须为正，所以 \(x>0\). 题面给出底数 \(a>0\)；按对数的定义还须有 \(a\ne 1\)，但这不改变 \(x\) 的取值范围. 因此定义域为 \(\{x\mid x>0\}\).
+\item 根式有意义要求 \(x-1\ge 0\)，即 \(x\ge 1\)；分母还要求 \(x+3\ne 0\)，即 \(x\ne -3\). 两个条件合并后，\(x\ge 1\) 已自动保证 \(x\ne -3\)，所以定义域为 \(\{x\mid x\ge 1\}\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-写出过点 \((2,3)\) 斜率为 \(-\frac{1}{2}\) 的直线方程.
+写出过点 \((2,3)\)、斜率为 \(-\frac{1}{2}\) 的直线方程.
 \end{problem}
 
 \begin{solution}
-根据点斜式，所求的直线方程为 \(y-3=-\dfrac{1}{2}\left( x-2 \right)\)，即 \(y=-\dfrac{1}{2}x+4\).
+设所求直线为 \(y=kx+b\). 由斜率条件得 \(k=-\frac12\)，所以直线可写成 \(y=-\frac12x+b\). 将点 \((2,3)\) 代入，得 \(3=-\frac12\cdot2+b\)，从而 \(b=4\). 因此所求直线方程为 \(y=-\frac12x+4\)，等价地也可写成点斜式 \(y-3=-\frac12\left( x-2 \right)\).
 \end{solution}
 
 \begin{problem}
@@ -55,7 +58,8 @@ x-3, & x>3.
 \end{problem}
 
 \begin{solution}
-椭圆方程可写为 \(\frac{x^2}{5^2}+\frac{y^2}{4^2}=1\). 其长半轴 \(a=5\)，短半轴 \(b=4\). 因此 \(c=\sqrt{5^2-4^2}=3\)，所以焦点坐标为 \(F_1\left(-3,0\right)\)，\(F_2\left(3,0\right)\).
+将方程写成标准形式
+\(\frac{x^2}{5^2}+\frac{y^2}{4^2}=1\). 因为 \(5^2>4^2\)，长轴在 \(x\) 轴上，长半轴 \(a=5\)，短半轴 \(b=4\). 椭圆的焦半距满足 \(c^2=a^2-b^2\)，所以 \(c=\sqrt{5^2-4^2}=3\). 焦点在长轴上且关于原点对称，故焦点坐标为 \(F_1\left(-3,0\right)\)、\(F_2\left(3,0\right)\).
 \end{solution}
 
 \begin{problem}
@@ -65,7 +69,7 @@ x-3, & x>3.
 \end{problem}
 
 \begin{solution}
-右图所示的三视图是个正四棱台.
+由俯视图可见，上、下底面都是正方形，且两个正方形的中心和对应边方向相同；由主视图、左视图可见，侧面轮廓都是上窄下宽的等腰梯形. 因此该三视图表示的几何体是正四棱台.
 \end{solution}
 
 \begin{problem}
@@ -75,16 +79,13 @@ x-3, & x>3.
 \end{problem}
 
 \begin{solution}
-连接 \(FC\).
+连接 \(FC\). 因为 \(A\)，\(E\)，\(F\) 三点共线，所以 \(\angle FAC=\angle EAC=\angle BAD\). 又因为 \(A\)，\(B\)，\(C\)，\(F\) 四点共圆，点 \(B\) 与点 \(F\) 在弦 \(AC\) 的同侧，故它们所对的同一弦 \(AC\) 的圆周角相等，即 \(\angle AFC=\angle ABC\).
 
-由于 \(A\)，\(E\)，\(F\) 三点共线，\(\angle FAC=\angle EAC=\angle BAD\). 又因为 \(\angle ABC=\angle AFC\)（同圆中，同弧上圆周角相等），且 \(\angle ADB=90^\circ\)，所以在 \(\triangle ABD\) 和 \(\triangle ACF\) 中，有
+由于 \(AD\) 是 \(\triangle ABC\) 的高，且 \(D\) 在 \(BC\) 上，所以 \(AD\perp BC\)，从而 \(\angle ADB=90^\circ\). 在直角三角形 \(ABD\) 中，\(\angle ABD=\angle ABC\)，故 \(\angle BAD+\angle ABC=90^\circ\). 因此在 \(\triangle ACF\) 中，
 \[
-\angle ACF=180^\circ-\angle FAC-\angle AFC
-=180^\circ-\angle BAD-\angle ABC
-=\angle ADB=90^\circ
+\angle ACF=180^\circ-\angle FAC-\angle AFC=180^\circ-\angle BAD-\angle ABC=90^\circ
 \]
-
-因此 \(AF\) 是 \(\triangle ABC\) 外接圆的直径.
+于是 \(\angle ACF\) 是外接圆所对弦 \(AF\) 的圆周角，且为直角. 根据圆周角所对的弦为直径，\(AF\) 是该外接圆的直径.
 \end{solution}
 
 \begin{problem}
@@ -98,11 +99,16 @@ x-3, & x>3.
 
 \begin{solution}
 \begin{enumerate}
-\item 当二次方程的根的判别式 \(\Delta>0\) 时，方程 \(x^2-x\cos \alpha+\frac{1}{4}\sin^2 \alpha=0\) 有两个不相等的实数根. 由 \(\Delta=\cos^2 \alpha-\sin^2 \alpha>0\) 得 \(\cos 2\alpha>0\)，所以 \(0<2\alpha<\frac{\pi}{2}\)，即 \(0<\alpha<\frac{\pi}{4}\).
-
-\item 这时方程的两个实数根是 \(x_1=\frac{\cos \alpha+\sqrt{\cos 2\alpha}}{2}\)，\(x_2=\frac{\cos \alpha-\sqrt{\cos 2\alpha}}{2}\).
-
-答：当 \(0<\alpha<\frac{\pi}{4}\) 时，方程 \(x^2-x\cos \alpha+\frac{1}{4}\sin^2 \alpha=0\) 有两个不相等的实数根 \(x=\frac{\cos \alpha\pm\sqrt{\cos 2\alpha}}{2}\).
+\item 该方程关于 \(x\) 的二次项系数为 \(1\)，一次项系数为 \(-\cos\alpha\)，常数项为 \(\frac14\sin^2\alpha\). 因此判别式为
+\[
+\Delta=(-\cos\alpha)^2-4\cdot1\cdot\frac14\sin^2\alpha=\cos^2\alpha-\sin^2\alpha=\cos 2\alpha
+\]
+方程有两个不相等的实数根当且仅当 \(\Delta>0\)，即 \(\cos 2\alpha>0\). 由 \(0<\alpha<\frac\pi2\) 得 \(0<2\alpha<\pi\)，在此范围内 \(\cos 2\alpha>0\) 等价于 \(0<2\alpha<\frac\pi2\)，所以 \(0<\alpha<\frac\pi4\).
+\item 当 \(0<\alpha<\frac\pi4\) 时，\(\Delta=\cos 2\alpha>0\). 根据一元二次方程求根公式，
+\[
+x=\frac{\cos\alpha\pm\sqrt{\cos 2\alpha}}{2}
+\]
+即两个根为 \(x_1=\frac{\cos\alpha+\sqrt{\cos 2\alpha}}{2}\) 和 \(x_2=\frac{\cos\alpha-\sqrt{\cos 2\alpha}}{2}\).
 \end{enumerate}
 \end{solution}
 
@@ -110,62 +116,60 @@ x-3, & x>3.
 在半径为 \(R\) 的一块圆形铁板上，剪去一个圆心角为 \(\alpha\) 弧度的扇形，用剩下的铁板做一个圆锥形容器（铁板厚度和加工量不计）.
 
 \begin{enumerate}
-\item 用 \(R\) 和 \(\alpha\) 表示圆锥底面半径 \(r\)，圆锥高 \(h\)，圆锥容积 \(V\).
+\item 用 \(R\) 和 \(\alpha\) 表示圆锥底面半径 \(r\)、圆锥高 \(h\)、圆锥容积 \(V\)；
 \item 当 \(R=20\mathrm{~cm}\)，\(\alpha=\frac{2\pi}{5}\) 弧度时，计算圆锥容积 \(V\)（取 \(\pi=3.14\)，精确到 \(1\mathrm{~cm^3}\)）.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item 因为 \(2\pi r=R\left( 2\pi-\alpha \right)\)，所以 \(r=\dfrac{2\pi-\alpha}{2\pi}R\). 而
+\item 剪去扇形后，剩余扇形的弧长成为圆锥底面圆的周长，而剩余扇形的半径 \(R\) 成为圆锥的母线长，因此：
 \[
-h^2=R^2-r^2=R^2-\left( \frac{2\pi-\alpha}{2\pi}R \right)^2=R^2-\frac{\left( 2\pi-\alpha \right)^2}{4\pi^2}R^2
-=R^2\left[1-\frac{\left( 2\pi-\alpha \right)^2}{4\pi^2}\right]=\frac{4\pi \alpha-\alpha^2}{4\pi^2}R^2
+2\pi r=R\left( 2\pi-\alpha \right)
 \]
-所以 \(h=\dfrac{\sqrt{4\pi \alpha-\alpha^2}}{2\pi}R\)，所以
+所以 \(r=\frac{2\pi-\alpha}{2\pi}R\).
+圆锥的母线、底面半径和高构成直角三角形，所以
 \[
-V=\frac{1}{3}\pi r^2 h=\frac{1}{3}\pi \left( \frac{2\pi-\alpha}{2\pi}R \right)^2\cdot \frac{\sqrt{4\pi \alpha-\alpha^2}}{2\pi}R
-=\frac{R^3\left( 2\pi-\alpha \right)^2}{24\pi^2}\sqrt{4\pi \alpha-\alpha^2}
+h^2=R^2-r^2=R^2\left[1-\frac{\left( 2\pi-\alpha \right)^2}{4\pi^2}\right]=\frac{4\pi\alpha-\alpha^2}{4\pi^2}R^2
 \]
-
-\item 当 \(R=20\mathrm{~cm}\)，\(\alpha=\frac{2\pi}{5}\) 时，
+由于高度取正值，
 \[
-V=\frac{20^3\left( 2\pi-\frac{2\pi}{5} \right)^2}{24\pi^2}\sqrt{\left( 4\pi-\frac{2\pi}{5} \right)\cdot \frac{2\pi}{5}}
-=\frac{20^3\cdot \frac{64}{25}\pi^2}{24\pi^2}\cdot \sqrt{\frac{36\pi^2}{25}}
-=1024\pi\approx3215\mathrm{~cm^3}
+h=\frac{\sqrt{4\pi\alpha-\alpha^2}}{2\pi}R
 \]
-答：当 \(R=20\mathrm{~cm}\)，\(\alpha=\frac{2\pi}{5}\) 时，圆锥的容积约为 \(3215\mathrm{~cm^3}\).
+于是
+\[
+V=\frac13\pi r^2h=\frac{R^3\left( 2\pi-\alpha \right)^2}{24\pi^2}\sqrt{4\pi\alpha-\alpha^2}
+\]
+\item 代入 \(R=20\)、\(\alpha=\frac{2\pi}{5}\)，先化简半径和高：
+\(r=\frac{2\pi-\frac{2\pi}{5}}{2\pi}\cdot20=16\)，\(h=\sqrt{20^2-16^2}=12\).
+因此
+\[
+V=\frac13\pi\cdot16^2\cdot12=1024\pi
+\]
+取 \(\pi=3.14\)，得 \(V=1024\times3.14=3215.36\mathrm{~cm^3}\)，精确到 \(1\mathrm{~cm^3}\) 为 \(3215\mathrm{~cm^3}\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-我炮兵阵地位于 \(A\)，两观察所分别设于 \(C\)，\(D\)，已知 \(\triangle ACD\) 为一正三角形，且 \(CD=a\)，当目标出现于 \(B\) 时，测得 \(\angle CDB=45^\circ\)，\(\angle BCD=75^\circ\)，求炮目距离 \(AB\).
+我炮兵阵地位于 \(A\)，两观察所分别设于 \(C\)、\(D\)，已知 \(\triangle ACD\) 为一正三角形，且 \(CD=a\)，当目标出现于 \(B\) 时，测得 \(\angle CDB=45^\circ\)、\(\angle BCD=75^\circ\)，求炮目距离 \(AB\).
 
 \bitmapfigure[max width=6.0cm]{img/1977/shandong_a/q9_fig1.png}
 \end{problem}
 
 \begin{solution}
-\(\angle B=180^\circ-\left( 45^\circ+75^\circ \right)=60^\circ\).
-
-在 \(\triangle BCD\) 中，由正弦定理知
+在 \(\triangle BCD\) 中，\(\angle CDB=45^\circ\)、\(\angle BCD=75^\circ\)，所以
+\(\angle CBD=180^\circ-45^\circ-75^\circ=60^\circ\). 由正弦定理，\(CD\) 对应 \(60^\circ\)，\(BC\) 对应 \(45^\circ\)，故
 \[
-BC=\frac{a\sin 45^\circ}{\sin 60^\circ}
-=\frac{a\cdot \frac{\sqrt{2}}{2}}{\frac{\sqrt{3}}{2}}
-=\frac{\sqrt{6}}{3}a
+BC=\frac{a\sin45^\circ}{\sin60^\circ}=\frac{a\cdot\frac{\sqrt2}{2}}{\frac{\sqrt3}{2}}=\frac{\sqrt6}{3}a
 \]
-
-在 \(\triangle ABC\) 中，根据余弦定理
+因为 \(\triangle ACD\) 为正三角形，所以 \(AC=CD=a\)，且 \(\angle ACD=60^\circ\). 由图中各射线的位置，\(\angle ACB=\angle ACD+\angle DCB=60^\circ+75^\circ=135^\circ\). 在 \(\triangle ABC\) 中使用余弦定理，
 \[
-\begin{aligned}
-AB&=\sqrt{AC^2+BC^2-2\cdot AC\cdot BC\cdot \cos \angle ACB} \\
-  &=\sqrt{a^2+\frac{2}{3}a^2-2a\cdot \frac{\sqrt{6}}{3}a\cos \left( 75^\circ+60^\circ \right)} \\
-  &=\sqrt{\frac{5}{3}a^2+\frac{2\sqrt{6}}{3}a^2\cos 45^\circ}
-    =\sqrt{\frac{5+2\sqrt{3}}{3}}a
-    =\frac{\sqrt{15+6\sqrt{3}}}{3}a.
-\end{aligned}
+AB^2=a^2+\left(\frac{\sqrt6}{3}a\right)^2-2a\cdot\frac{\sqrt6}{3}a\cos135^\circ=\frac{5+2\sqrt3}{3}a^2
 \]
-
-答：炮目距离 \(AB=\frac{\sqrt{15+6\sqrt{3}}}{3}a\).
+由于 \(AB>0\)，所以炮目距离为
+\[
+AB=\sqrt{\frac{5+2\sqrt3}{3}}a=\frac{\sqrt{15+6\sqrt3}}{3}a
+\]
 \end{solution}
 
 \begin{problem}
@@ -181,36 +185,44 @@ AB&=\sqrt{AC^2+BC^2-2\cdot AC\cdot BC\cdot \cos \angle ACB} \\
 
 \begin{solution}
 \begin{enumerate}
-\item
-设此猪圈的长为 \(x\) 米，则宽就为 \(\frac{L-2x}{m+1}\) 米. 猪圈的总面积 \(S=x\cdot\dfrac{L-2x}{m+1}=-\dfrac{2}{m+1}x^2+\dfrac{L}{m+1}x\)，是长度 \(x\) 的二次函数，其中 \(a=-\dfrac{2}{m+1}\)，\(b=\dfrac{L}{m+1}\)，\(c=0\).
+\item 设图中每排横向围墙的长度为 \(x\) 米，设每条纵向围墙的长度为 \(y\) 米. 由于共有上下两排横向围墙和 \(m+1\) 条纵向围墙，材料长度满足
+\(2x+(m+1)y=L\)，所以 \(y=\frac{L-2x}{m+1}\)，且必须有 \(0<x<\frac L2\).
 
-因为 \(a<0\)，所以当
+每间猪圈的长为 \(\frac{x}{m}\)，宽为 \(y\)，故总面积为
 \[
-x=-\frac{b}{2a}=\frac{\frac{L}{m+1}}{\frac{4}{m+1}}=\frac{L}{4}
+S=m\cdot\frac{x}{m}\cdot y=xy=\frac{x(L-2x)}{m+1}
 \]
-时，面积 \(S\) 最大.
+配方得
 \[
-S_{\max}=\frac{4ac-b^2}{4a}=\frac{-\left( \frac{L}{m+1} \right)^2}{-\frac{8}{m+1}}=\frac{L^2}{8\left( m+1 \right)}
+S=\frac{L^2}{8(m+1)}-\frac{2}{m+1}\left( x-\frac L4 \right)^2\le \frac{L^2}{8(m+1)}
 \]
-
-这时，宽 \(\frac{L-2x}{m+1}=\frac{L}{2\left( m+1 \right)}\)，每间的长 \(\frac{x}{m}=\frac{L}{4m}\).
-
-答：每间猪圈的长为 \(\frac{L}{4m}\)，宽为 \(\frac{L}{2\left( m+1 \right)}\) 时，才能使所建猪圈总面积最大.
-
-\item 按这种设计，猪圈长的总和 \(=2x=\frac{L}{2}\)，宽的总和 \(=L-\frac{L}{2}=\frac{L}{2}\)，所以 \(m\) 间猪圈长的总和与宽的总和相等.
-
-答：按这种设计，\(m\) 间猪圈长的总和与宽的总和相等.
+等号成立当且仅当 \(x=\frac L4\). 此时
+\[
+y=\frac{L-2x}{m+1}=\frac{L}{2(m+1)}
+\]
+每间猪圈的长为 \(\frac{x}{m}=\frac{L}{4m}\).
+所以每间猪圈的长为 \(\frac{L}{4m}\) 米、宽为 \(\frac{L}{2(m+1)}\) 米时，总面积最大，最大总面积为 \(\frac{L^2}{8(m+1)}\) 平方米.
+\item 按图中所有围墙的长、宽统计，\(m\) 间猪圈的长边共有上下两排，长度总和为 \(2x=\frac L2\)；宽边共有 \(m+1\) 条，长度总和为 \((m+1)y=L-2x=\frac L2\). 因而长的总和与宽的总和相等.
 \end{enumerate}
 \end{solution}
 
 \section{参考题}
 
 \begin{problem}
-求极限：\(\lim\limits_{x\to\infty}\frac{\e^x}{x^2}\)
+求极限：\(\displaystyle\lim_{x\to\infty}\frac{\e^x}{x^2}\)
 \end{problem}
 
 \begin{solution}
-根据洛必达法则 \(\lim\limits_{x\to\infty}\frac{\e^x}{x^2}=\lim\limits_{x\to\infty}\frac{\e^x}{2x}=\lim\limits_{x\to\infty}\frac{\e^x}{2}=+\infty\). 因此该函数不存在有限极限.
+当 \(x\to+\infty\) 时，分子 \(\e^x\to+\infty\)，分母 \(x^2\to+\infty\)，构成 \(\frac{\infty}{\infty}\) 型；在充分大的 \(x\) 上，分母及其导数均不为零，且分子、分母都可导，因此可使用洛必达法则. 第一次使用得
+\[
+\lim_{x\to\infty}\frac{\e^x}{x^2}=\lim_{x\to\infty}\frac{\e^x}{2x}
+\]
+右端仍为 \(\frac{\infty}{\infty}\) 型，再次使用洛必达法则得
+\[
+\lim_{x\to\infty}\frac{\e^x}{2x}=\lim_{x\to\infty}\frac{\e^x}{2}=+\infty
+\]
+所以
+\(\displaystyle\lim_{x\to\infty}\frac{\e^x}{x^2}=+\infty\)，即该函数在 \(x\to+\infty\) 时无有限的实数极限.
 \end{solution}
 
 \begin{problem}
@@ -218,19 +230,15 @@ S_{\max}=\frac{4ac-b^2}{4a}=\frac{-\left( \frac{L}{m+1} \right)^2}{-\frac{8}{m+1
 \end{problem}
 
 \begin{solution}
-先求椭圆在第一象限内的面积 \(S'=\displaystyle\int_0^a b\sqrt{1-\frac{x^2}{a^2}}\,\mathrm{d}x=\frac{b}{a}\int_0^a \sqrt{a^2-x^2}\,\mathrm{d}x\).
-
-令 \(x=a\sin t\)，则 \(\sqrt{a^2-x^2}=a\cos t\)，\(\mathrm{d}x=a\cos t\,\mathrm{d}t\)（\(0\le t\le \frac{\pi}{2}\)）.
-因此
+设 \(a>0\)、\(b>0\). 椭圆在第一象限的上半支满足
+\(y=b\sqrt{1-\frac{x^2}{a^2}}\)，所以第一象限面积为
 \[
-\begin{aligned}
-S'&=\frac{b}{a}\int_0^{\frac{\pi}{2}}a\cos t\cdot a\cos t\,\mathrm{d}t
-=ab\int_0^{\frac{\pi}{2}}\cos^2 t\,\mathrm{d}t
-=ab\int_0^{\frac{\pi}{2}}\frac{\cos 2t+1}{2}\,\mathrm{d}t \\
-&=ab\left( \frac{\sin 2t}{4}+\frac{t}{2} \right)\bigg|_0^{\frac{\pi}{2}}
-=\frac{ab\pi}{4}.
-\end{aligned}
+S_1=\int_0^a b\sqrt{1-\frac{x^2}{a^2}}\,\mathrm{d}x=\frac ba\int_0^a\sqrt{a^2-x^2}\,\mathrm{d}x
 \]
-
-由对称性，椭圆的面积 \(S=4S'=ab\pi\).
+令 \(x=a\sin t\)，则 \(\mathrm{d}x=a\cos t\,\mathrm{d}t\)，且当 \(x=0\) 时 \(t=0\)，当 \(x=a\) 时 \(t=\frac\pi2\). 在 \(0\le t\le\frac\pi2\) 内 \(\cos t\ge0\)，故 \(\sqrt{a^2-x^2}=a\cos t\). 因此
+\[
+S_1=ab\int_0^{\frac\pi2}\cos^2t\,\mathrm{d}t=ab\int_0^{\frac\pi2}\frac{1+\cos2t}{2}\,\mathrm{d}t=ab\left(\frac t2+\frac{\sin2t}{4}\right)\bigg|_0^{\frac\pi2}=\frac{\pi ab}{4}
+\]
+椭圆关于 \(x\) 轴、\(y\) 轴均对称，四个象限面积相等，所以
+\(S=4S_1=\pi ab\). 这就证明了椭圆面积公式.
 \end{solution}

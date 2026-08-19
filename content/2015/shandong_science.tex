@@ -16,6 +16,18 @@
 C
 \end{answer}
 
+\begin{solution}
+由
+\[
+x^2-4x+3=(x-1)(x-3)<0
+\]
+可得 \(1<x<3\)，所以 \(A=(1,3)\). 又 \(B=(2,4)\)，因此
+\[
+A\cap B=(1,3)\cap(2,4)=(2,3)
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
 若复数 \(z\) 满足 \(\frac{\bar z}{1 - \i} = \i\)，其中 \(\i\) 为虚数单位，则 \(z =\)（\quad）
 
@@ -29,6 +41,18 @@ C
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+由题设
+\[
+\frac{\overline z}{1-\i}=\i
+\]
+得
+\[
+\overline z=\i(1-\i)=1+\i
+\]
+两边取共轭，得到 \(z=1-\i\). 故选 A.
+\end{solution}
 
 \begin{problem}
 要得到函数 \(y = \sin\left(4x - \frac{\pi}{3}\right)\) 的图象，只需要将函数 \(y = \sin 4x\) 的图象（\quad）
@@ -44,6 +68,15 @@ A
 B
 \end{answer}
 
+\begin{solution}
+将自变量提取系数 \(4\)，有
+\[
+\sin\left(4x-\frac{\pi}{3}\right)
+=\sin\left(4\left(x-\frac{\pi}{12}\right)\right)
+\]
+因此这是将 \(y=\sin4x\) 的图象向右平移 \(\frac{\pi}{12}\) 个单位得到的图象. 故选 B.
+\end{solution}
+
 \begin{problem}
 已知菱形 \(ABCD\) 的边长为 \(a\)，\(\angle ABC = 60^{\circ}\)，则 \(\overrightarrow{BD} \cdot \overrightarrow{CD} =\)（\quad）
 
@@ -58,6 +91,22 @@ B
 D
 \end{answer}
 
+\begin{solution}
+以 \(B\) 为原点，令 \(\overrightarrow{BC}=(a,0)\). 由菱形的边长和
+\(\angle ABC=60^\circ\)，可取
+\[
+\overrightarrow{BA}=\left(\frac a2,\frac{\sqrt3a}{2}\right)
+\]
+因为 \(ABCD\) 是平行四边形，
+\(\overrightarrow{BD}=\overrightarrow{BA}+\overrightarrow{BC} =\left(\frac{3a}{2},\frac{\sqrt3a}{2}\right)\)，\(\overrightarrow{CD}=\overrightarrow{BA} =\left(\frac a2,\frac{\sqrt3a}{2}\right)\)
+所以
+\[
+\overrightarrow{BD}\cdot\overrightarrow{CD}
+=\frac{3a^2}{4}+\frac{3a^2}{4}=\frac32a^2
+\]
+故选 D.
+\end{solution}
+
 \begin{problem}
 不等式 \(|x - 1| - |x - 5| < 2\) 的解集是（\quad）
 
@@ -71,6 +120,22 @@ D
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+按 \(x=1\) 和 \(x=5\) 分段讨论.
+当 \(x<1\) 时，
+\[
+|x-1|-|x-5|=(1-x)-(5-x)=-4<2
+\]
+故这一段全部满足不等式.
+当 \(1\leqslant x<5\) 时，
+\[
+|x-1|-|x-5|=(x-1)-(5-x)=2x-6<2
+\]
+即 \(x<4\)，得到 \(1\leqslant x<4\).
+当 \(x\geqslant5\) 时，左边为 \((x-1)-(x-5)=4\)，不满足不等式.
+合并得解集为 \((-\infty,4)\)，故选 A.
+\end{solution}
 
 \begin{problem}
 已知 \(x\)，\(y\) 满足约束条件 \(\begin{cases}
@@ -90,6 +155,15 @@ y \geqslant 0,
 B
 \end{answer}
 
+\begin{solution}
+约束区域是三条边界直线围成的三角形，其顶点为
+\((0,0)\)，\((2,0)\)，\((1,1)\)
+目标函数 \(z=ax+y\) 在闭三角形上的最大值在顶点处取得，三个顶点处的值分别为
+\(0\)，\(2a\)，\(a+1\)
+逐项检验选项：当 \(a=2\) 时，三值为 \(0\)，\(4\)，\(3\)，最大值为 \(4\)；当 \(a=3\) 时最大值为 \(6\)；当 \(a=-2\) 或 \(a=-3\) 时最大值为 \(0\).
+所以 \(a=2\)，故选 B.
+\end{solution}
+
 \begin{problem}
 在梯形 \(ABCD\) 中，\(\angle ABC = \frac{\pi}{2}\)，\(AD \parallel BC\)，\(BC = 2AD = 2AB = 2\). 将梯形 \(ABCD\) 绕 \(AD\) 所在的直线旋转一周而形成的曲面所围成的几何体的体积为（\quad）
 
@@ -103,6 +177,18 @@ B
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+取 \(AD\) 所在直线为 \(x\) 轴，设
+\(A=(0,0)\)，\(D=(1,0)\)，\(B=(0,1)\)，\(C=(2,1)\)
+旋转后，在 \(0\leqslant x\leqslant1\) 时截面是半径为 \(1\) 的圆；在 \(1\leqslant x\leqslant2\) 时截面是外半径为 \(1\)、内半径为 \(x-1\) 的圆环. 因此体积为
+\[
+V=\int_0^1\pi dx+\int_1^2\pi\left(1-(x-1)^2\right)dx
+=\pi+\pi\left[x-\frac{(x-1)^3}{3}\right]_1^2
+=\pi+\frac{2\pi}{3}=\frac{5\pi}{3}
+\]
+故选 C.
+\end{solution}
 
 \begin{problem}
 已知某批零件的长度误差（单位：毫米）服从正态分布 \(N(0,3^2)\)，从中随机取一件，其长度误差落在区间 \((3,6)\) 内的概率为（\quad）（附：若随机变量 \(\xi\) 服从正态分布 \(N(\mu,\sigma^2)\)，则 \(P(\mu - \sigma < \xi < \mu + \sigma) = 68.26\%\)，\(P(\mu - 2\sigma < \xi < \mu + 2\sigma) = 95.44\%\)）.
@@ -118,6 +204,19 @@ C
 B
 \end{answer}
 
+\begin{solution}
+令标准化变量 \(Z=\frac{\xi}{3}\)，则 \(Z\sim N(0,1)\). 题目所求为
+\[
+P(3<\xi<6)=P(1<Z<2)
+\]
+由正态分布的对称性，
+\[
+P(1<Z<2)=\frac12\left(P(-2<Z<2)-P(-1<Z<1)\right)
+=\frac12(0.9544-0.6826)=0.1359
+\]
+所以概率为 \(13.59\%\)，故选 B.
+\end{solution}
+
 \begin{problem}
 一条光线从点 \((-2,-3)\) 射出，经 \(y\) 轴反射后与圆 \((x + 3)^2 + (y - 2)^2 = 1\) 相切，则反射光线所在直线的斜率为（\quad）
 
@@ -131,6 +230,31 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+将入射点 \((-2,-3)\) 关于 \(y\) 轴对称，得到 \((2,-3)\). 反射光线与入射点关于反射轴的对称点连线的斜率设为 \(k\)，则该直线可写为
+\[
+y+3=k(x-2)
+\]
+即
+\[
+kx-y-2k-3=0
+\]
+圆心为 \((-3,2)\)，半径为 \(1\). 相切条件是圆心到直线的距离等于 \(1\)，所以
+\[
+\frac{|k(-3)-2-2k-3|}{\sqrt{k^2+1}}=1
+\]
+化简得
+\[
+25(k+1)^2=k^2+1
+\iff 12k^2+25k+12=0
+\]
+解得
+\[
+k=-\frac34\quad\text{或}\quad k=-\frac43
+\]
+故选 D.
+\end{solution}
 
 \begin{problem}
 设函数 \(f(x) = \begin{cases}
@@ -149,6 +273,25 @@ D
 C
 \end{answer}
 
+\begin{solution}
+令 \(t=f(a)\)，原方程化为 \(f(t)=2^t\).
+当 \(t<1\) 时，方程为 \(3t-1=2^t\). 设
+\[
+g(t)=3t-1-2^t
+\]
+若 \(t<1\)，则
+\[
+g'(t)=3-2^t\ln2>3-2\ln2>0
+\]
+所以 \(g(t)<g(1)=0\)，该段没有解.
+当 \(t\geqslant1\) 时，按函数定义 \(f(t)=2^t\)，方程恒成立. 因此只需 \(f(a)\geqslant1\).
+若 \(a<1\)，则 \(3a-1\geqslant1\)，即 \(a\geqslant\frac23\)；若 \(a\geqslant1\)，则 \(f(a)=2^a\geqslant2\)，也满足条件. 故
+\[
+a\in\left[\frac23,+\infty\right)
+\]
+故选 C.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -159,6 +302,19 @@ C
 \(4^{n-1}\)
 \end{answer}
 
+\begin{solution}
+由于 \(2n-1\) 是奇数，二项式系数满足
+\[
+\mathrm C_{2n-1}^{j}=\mathrm C_{2n-1}^{2n-1-j}
+\]
+因此前 \(n\) 项恰好与后 \(n\) 项两两对应，且没有中间项，故
+\[
+\mathrm C_{2n-1}^0+\cdots+\mathrm C_{2n-1}^{n-1}
+=\frac12\sum_{j=0}^{2n-1}\mathrm C_{2n-1}^{j}
+=\frac12(1+1)^{2n-1}=2^{2n-2}=4^{n-1}
+\]
+\end{solution}
+
 \begin{problem}
 若“\(\forall x \in \left[0,\frac{\pi}{4}\right]\)，\(\tan x \leqslant m\)”是真命题，则实数 \(m\) 的最小值为\fillinblank{}.
 \end{problem}
@@ -167,6 +323,14 @@ C
 \(1\)
 \end{answer}
 
+\begin{solution}
+在区间 \(\left[0,\frac{\pi}{4}\right]\) 上，正切函数单调递增，所以
+\[
+\max_{x\in[0,\pi/4]}\tan x=\tan\frac{\pi}{4}=1
+\]
+因此不等式对所有给定 \(x\) 成立的充要条件是 \(m\geqslant1\)，最小值为 \(1\).
+\end{solution}
+
 \begin{problem}
 执行如图所示的程序框图，输出的 \(T\) 的值为\fillinblank{}.
 
@@ -174,8 +338,25 @@ C
 \end{problem}
 
 \begin{answer}
-\(\frac{1}{6}\)
+\(\frac{11}{6}\)
 \end{answer}
+
+\begin{solution}
+由程序框图初始值 \(n=1\)，\(T=1\). 第一次判断 \(n<3\) 成立，执行
+\[
+T\leftarrow T+\int_0^1x^n dx
+=1+\int_0^1x dx=1+\frac12
+\]
+然后 \(n\) 加 \(1\) 变为 \(2\). 第二次判断仍成立，执行
+\[
+T\leftarrow1+\frac12+\int_0^1x^2 dx
+=1+\frac12+\frac13=\frac{11}{6}
+\]
+并将 \(n\) 加 \(1\) 变为 \(3\). 此时 \(n<3\) 不成立，程序输出
+\[
+T=\frac{11}{6}
+\]
+\end{solution}
 
 \begin{problem}
 已知函数 \(f(x) = a^x + b\)（\(a > 0\)，\(a \neq 1\)）的定义域和值域都是 \([-1,0]\)，则 \(a + b =\)\fillinblank{}.
@@ -185,13 +366,48 @@ C
 \(-\frac{3}{2}\)
 \end{answer}
 
+\begin{solution}
+在题设给定的定义域 \([-1,0]\) 上，先讨论 \(a\) 的单调性.
+若 \(a>1\)，函数递增，故值域端点应满足
+\(a^{-1}+b=-1\)，\(1+b=0\)
+由第二式得 \(b=-1\)，代入第一式得到 \(a^{-1}=0\)，矛盾.
+
+若 \(0<a<1\)，函数递减，故
+\(a^{-1}+b=0\)，\(1+b=-1\)
+由第二式得 \(b=-2\)，再由第一式得 \(a^{-1}=2\)，即 \(a=\frac12\). 因此
+\[
+a+b=\frac12-2=-\frac32
+\]
+\end{solution}
+
 \begin{problem}
-平面直角坐标系 \(xOy\) 中，双曲线 \(C_1: \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1\)（\(a > 0,b > 0\)）的渐近线与抛物线 \(C_2: x^2 = 2py\)（\(p > 0\)）交于 \(O\)，\(A\)，\(B\). 若 \(\triangle OAB\) 的垂心为 \(C_2\) 的焦点，则 \(C_1\) 的离心率为\fillinblank{}.
+平面直角坐标系 \(xOy\) 中，双曲线 \(C_1: \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1\)（\(a > 0\)，\(b > 0\)）的渐近线与抛物线 \(C_2: x^2 = 2py\)（\(p > 0\)）交于 \(O\)，\(A\)，\(B\). 若 \(\triangle OAB\) 的垂心为 \(C_2\) 的焦点，则 \(C_1\) 的离心率为\fillinblank{}.
 \end{problem}
 
 \begin{answer}
-\(\frac{\sqrt{3}}{2}\)
+\(\frac{3}{2}\)
 \end{answer}
+
+\begin{solution}
+设双曲线渐近线 \(y=\pm\frac ba x\) 的斜率绝对值为
+\[
+r=\frac ba>0
+\]
+抛物线 \(x^2=2py\) 与两条渐近线的交点为
+\(A=(2pr,2pr^2)\)，\(B=(-2pr,2pr^2)\)，\(O=(0,0)\)
+抛物线焦点为 \(F=(0,p/2)\). 因 \(F\) 是三角形 \(OAB\) 的垂心，所以 \(AF\perp OB\). 其中
+\(k_{OB}=-r\)，\(k_{AF}=\frac{2pr^2-p/2}{2pr}=\frac{4r^2-1}{4r}\)
+于是
+\[
+-r\cdot\frac{4r^2-1}{4r}=-1
+\iff r^2=\frac54
+\]
+双曲线离心率满足
+\[
+e^2=1+\frac{b^2}{a^2}=1+r^2=\frac94
+\]
+所以 \(e=\frac32\).
+\end{solution}
 
 \section{解答题}
 
@@ -205,8 +421,47 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item 递增区间为 \(\left[k\pi-\frac{\pi}{4},k\pi+\frac{\pi}{4}\right]\)，递减区间为 \(\left[k\pi+\frac{\pi}{4},k\pi+\frac{3\pi}{4}\right]\)，其中 \(k\in\Z\).
-\item \(\triangle ABC\) 面积的最大值为 \(\frac{2+\sqrt{3}}{4}\).
+\item
+\(\sin x\cos x=\frac12\sin2x\)，\(\cos^2\left(x+\frac\pi4\right)=\frac12(1-\sin2x)\)
+所以
+\(f(x)=\sin2x-\frac12\)，\(f'(x)=2\cos2x\)
+当
+\[
+k\pi-\frac\pi4<x<k\pi+\frac\pi4
+\]
+时 \(f'(x)>0\)，当
+\[
+k\pi+\frac\pi4<x<k\pi+\frac{3\pi}4
+\]
+时 \(f'(x)<0\). 因此递增区间可写为
+\[
+\left[k\pi-\frac\pi4,k\pi+\frac\pi4\right]
+\]
+，递减区间可写为
+\[
+\left[k\pi+\frac\pi4,k\pi+\frac{3\pi}4\right]
+\]
+，其中 \(k\in\Z\).
+\item 由 \(f\left(\frac A2\right)=0\) 得
+\[
+\sin A-\frac12=0
+\]
+因 \(A\) 是锐角，所以 \(A=\frac\pi6\)，又已知 \(a=1\). 由正弦定理
+\(b=2\sin B\)，\(c=2\sin C\)，\(B+C=\frac{5\pi}{6}\)
+三角形面积为
+\[
+S=\frac12bc\sin A=\sin B\sin C
+\]
+利用积化和差公式，
+\[
+S=\frac{\cos(B-C)-\cos(B+C)}2
+=\frac{\cos(B-C)+\frac{\sqrt3}{2}}2
+\leqslant\frac{2+\sqrt3}{4}
+\]
+当 \(B=C=\frac{5\pi}{12}\) 时等号成立，且三角形仍为锐角三角形. 因此面积最大值为
+\[
+\frac{2+\sqrt3}{4}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -222,8 +477,43 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item \(BD \parallel\) 平面 \(FGH\).
-\item 平面 \(FGH\) 与平面 \(ACFD\) 所成的角（锐角）为 \(60^{\circ}\).
+\item 设 \(A\) 为原点，记
+\(\overrightarrow{AB}=\mathbf b\)，\(\overrightarrow{AC}=\mathbf c\)，\(\overrightarrow{AD}=\mathbf d\)
+由三棱台的对应边关系及 \(AB=2DE\)，顶面是底面的位似图形，位似比为 \(\frac12\)，故
+\(\overrightarrow{AE}=\mathbf d+\frac12\mathbf b\)，\(\overrightarrow{AF}=\mathbf d+\frac12\mathbf c\)
+又 \(G\)，\(H\) 分别为 \(AC\)，\(BC\) 的中点，所以
+\(\overrightarrow{AG}=\frac12\mathbf c\)，\(\overrightarrow{AH}=\frac12(\mathbf b+\mathbf c)\)
+于是
+\(\overrightarrow{GH}=\frac12\mathbf b\)，\(\overrightarrow{GF}=\mathbf d\)
+平面 \(FGH\) 的方向向量由 \(\mathbf b\)，\(\mathbf d\) 张成，而
+\[
+\overrightarrow{BD}=\mathbf d-\mathbf b
+\]
+也在这个方向平面内. 又因 \(\mathbf b\)，\(\mathbf c\)，\(\mathbf d\) 不共面，点 \(B\) 不在平面 \(FGH\)，因此 \(BD\) 平行于平面 \(FGH\).
+\item 由已知条件可令 \(AB=2\)，建立直角坐标系
+\(A=(0,0,0)\)，\(B=(2,0,0)\)，\(C=(2,2,0)\)
+并由 \(CF\perp\) 平面 \(ABC\)、\(CF=DE=1\) 得
+\(D=(1,1,1)\)，\(E=(2,1,1)\)，\(F=(2,2,1)\)
+同时
+\(G=(1,1,0)\)，\(H=(2,1,0)\)
+平面 \(FGH\) 的两个方向向量可取
+\(\overrightarrow{GH}=(1,0,0)\)，\(\overrightarrow{GF}=(1,1,1)\)
+故其法向量可取
+\[
+\mathbf n_1=(0,-1,1)
+\]
+平面 \(ACFD\) 的两个方向向量可取
+\(\overrightarrow{AC}=(2,2,0)\)，\(\overrightarrow{AD}=(1,1,1)\)
+故其法向量可取
+\[
+\mathbf n_2=(1,-1,0)
+\]
+设两平面的锐角为 \(\theta\)，则
+\[
+\cos\theta=\frac{|\mathbf n_1\cdot\mathbf n_2|}{|\mathbf n_1||\mathbf n_2|}
+=\frac1{\sqrt2\sqrt2}=\frac12
+\]
+所以 \(\theta=60^\circ\).
 \end{enumerate}
 \end{solution}
 
@@ -237,8 +527,40 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item \(a_1=3\)，当 \(n\geqslant2\) 时，\(a_n=3^{n-1}\).
-\item \(T_n=\frac{13}{12}-\frac{2n+1}{4\cdot3^{n-1}}\).
+\item 由 \(2S_1=3+3=6\)，得 \(a_1=S_1=3\). 当 \(n\geqslant2\) 时，
+\[
+2a_n=2(S_n-S_{n-1})
+=(3^n+3)-(3^{n-1}+3)=2\cdot3^{n-1}
+\]
+所以
+\(a_n=3^{n-1}\)，\((n\geqslant2)\)
+结合 \(a_1=3\)，通项为 \(a_n=3^{n-1}\)（\(n\geqslant1\)）.
+\item 由 \(a_nb_n=\log_3a_n\)，得
+\[
+b_1=\frac{\log_33}{3}=\frac13
+\]
+当 \(n\geqslant2\) 时，
+\[
+b_n=\frac{\log_3(3^{n-1})}{3^{n-1}}=\frac{n-1}{3^{n-1}}
+\]
+令 \(m=n-1\)，则
+\[
+T_n=\frac13+\sum_{j=1}^{m}\frac j{3^j}
+\]
+设 \(U_m=\sum_{j=1}^{m}\frac j{3^j}\)，则
+\[
+U_m-\frac13U_m
+=\frac13+\sum_{j=2}^{m}\frac1{3^j}-\frac{m}{3^{m+1}}
+=\frac12\left(1-\frac1{3^m}\right)-\frac{m}{3^{m+1}}
+\]
+从而
+\[
+U_m=\frac34-\frac{2m+3}{4\cdot3^m}
+\]
+代入 \(m=n-1\)，得到
+\[
+T_n=\frac{13}{12}-\frac{2n+1}{4\cdot3^{n-1}}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -252,8 +574,32 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item 所有个位数字是 \(5\) 的“三位递增数”为 \(125\)，\(135\)，\(145\)，\(235\)，\(245\)，\(345\).
-\item \(P(X=-1)=\frac{1}{14}\)，\(P(X=0)=\frac{2}{3}\)，\(P(X=1)=\frac{11}{42}\)，\(E(X)=\frac{4}{21}\).
+\item 个位数字为 \(5\)，且百位、十位均小于 \(5\)，从 \(1\)，\(2\)，\(3\)，\(4\) 中选两个并按递增顺序排列，因此这些数为
+\(125\)，\(135\)，\(145\)，\(235\)，\(245\)，\(345\)
+\item 三位递增数由 \(1\)，\(2\)，\(\ldots\)，\(9\) 中任选三个数字组成，共有
+\[
+\mathrm C_9^3=84
+\]
+个. 不被 \(5\) 整除时不含数字 \(5\)，共有
+\[
+\mathrm C_8^3=56
+\]
+个，所以 \(P(X=0)=\frac{56}{84}=\frac23\).
+能被 \(5\) 整除但不能被 \(10\) 整除时，必须含 \(5\) 且不含偶数，另外两个数字从 \(1\)，\(3\)，\(7\)，\(9\) 中选取，共有
+\[
+\mathrm C_4^2=6
+\]
+个，所以 \(P(X=-1)=\frac6{84}=\frac1{14}\).
+能被 \(10\) 整除时，必须含 \(5\) 且至少含一个偶数. 除 \(5\) 外任选两个数字的 \(\mathrm C_8^2\) 种中，减去两数都为奇数的 \(\mathrm C_4^2\) 种，得到
+\[
+\mathrm C_8^2-\mathrm C_4^2=22
+\]
+个，所以 \(P(X=1)=\frac{22}{84}=\frac{11}{42}\). 分布列为
+\(P(X=-1)=\frac1{14}\)，\(P(X=0)=\frac23\)，\(P(X=1)=\frac{11}{42}\)
+数学期望为
+\[
+E(X)=-1\cdot\frac1{14}+0\cdot\frac23+1\cdot\frac{11}{42}=\frac4{21}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -271,11 +617,69 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item \(C\) 的方程为 \(\frac{x^2}{4}+y^2=1\).
+\item 设圆与椭圆的交点为 \(R\). 由椭圆的焦点定义，
+\[
+RF_1+RF_2=2a
+\]
+又 \(RF_1=3\)，\(RF_2=1\)，所以 \(2a=4\)，即 \(a=2\). 由离心率
+\[
+\frac ca=\frac{\sqrt3}{2}
+\]
+得 \(c=\sqrt3\)，从而
+\[
+b^2=a^2-c^2=4-3=1
+\]
+因此椭圆 \(C\) 的方程为
+\[
+\frac{x^2}{4}+y^2=1
+\]
 \item
 \begin{enumerate}
-\item \(\frac{|OQ|}{|OP|}=2\).
-\item \(\triangle ABQ\) 面积的最大值为 \(12\).
+\item 椭圆 \(E\) 的方程为 \(\frac{x^2}{16}+\frac{y^2}{4}=1\)，它是 \(C\) 以原点为中心、长短轴均放大为原来的 \(2\) 倍得到的椭圆. 若 \(P=(x_0,y_0)\)，则射线 \(PO\) 上另一交点为
+\[
+Q=(-2x_0,-2y_0)
+\]
+所以
+\[
+\frac{|OQ|}{|OP|}=2
+\]
+\item 设 \(u=1+4k^2\). 直线 \(y=kx+m\) 与 \(C\) 的交点条件给出
+\[
+ux^2+8kmx+4m^2-4=0
+\]
+因为该直线经过 \(P\in C\)，有
+\[
+16(u-m^2)\geqslant0
+\]
+故令 \(t=\frac{m^2}{u}\)，则 \(0\leqslant t\leqslant1\).
+
+直线与 \(E\) 的交点横坐标满足
+\[
+ux^2+8kmx+4m^2-16=0
+\]
+其判别式为 \(16(4u-m^2)\). 因此
+\[
+|AB|=\sqrt{1+k^2}\frac{4\sqrt{4u-m^2}}{u}
+\]
+直线可写为 \(kx-y+m=0\). 由于 \(P\) 在直线上且 \(Q=-2P\)，代入可得 \(Q\) 到该直线的距离为
+\[
+\frac{3|m|}{\sqrt{1+k^2}}
+\]
+所以
+\[
+S_{\triangle ABQ}
+=\frac12|AB|\cdot d(Q,AB)
+=\frac{6|m|\sqrt{4u-m^2}}{u}
+=6\sqrt{t(4-t)}
+\]
+因为
+\[
+\frac{\mathrm d}{\mathrm dt}\bigl(t(4-t)\bigr)=4-2t>0
+\]
+在 \(0\leqslant t\leqslant1\) 上成立，所以 \(t(4-t)\) 递增，最大值在 \(t=1\) 时取得，为
+\[
+S_{\triangle ABQ,\max}=6\sqrt3
+\]
 \end{enumerate}
 \end{enumerate}
 \end{solution}
@@ -290,7 +694,48 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item 当 \(a<0\) 时，函数有一个极值点；当 \(0\leqslant a\leqslant\frac{8}{9}\) 时，函数无极值点；当 \(a>\frac{8}{9}\) 时，函数有两个极值点.
-\item 第二问中 \(a\in[0,1]\).
+\item 函数定义域为 \(x>-1\)，且
+\(f'(x)=\frac1{x+1}+a(2x-1)=\frac{g(x)}{x+1}\)，\(g(x)=2ax^2+ax+1-a\)
+由于 \(x+1>0\)，\(f'\) 与 \(g\) 同号，且 \(g(-1)=1\).
+
+当 \(a<0\) 时，\(g\) 是开口向下的抛物线，且在 \(x\to+\infty\) 时趋于负无穷，因此在定义域内恰有一个零点，\(f'\) 由正变负，函数有一个极值点.
+
+当 \(a=0\) 时，\(g(x)=1>0\)，函数无极值点.
+
+当 \(0<a<\frac89\) 时，\(g\) 的判别式为
+\[
+\Delta=a^2-8a(1-a)=a(9a-8)<0
+\]
+且二次项系数为正，所以 \(g(x)>0\)，函数无极值点.
+当 \(a=\frac89\) 时，\(g\geqslant0\)，虽在 \(x=-\frac14\) 处为零，但不变号，函数仍无极值点.
+
+当 \(a>\frac89\) 时，\(\Delta>0\). 二次函数顶点横坐标为 \(-\frac14>-1\)，又 \(g(-1)=1>0\)，故 \(g\) 在定义域内有两个零点，符号依次为正、负、正，函数有两个极值点.
+综上，当 \(a<0\) 时有一个极值点；当 \(0\leqslant a\leqslant\frac89\) 时无极值点；当 \(a>\frac89\) 时有两个极值点.
+\item 对 \(0<x<1\)，条件 \(f(x)\geqslant0\) 等价于
+\[
+a\leqslant\frac{\ln(1+x)}{x(1-x)}
+\]
+令
+\[
+h(x)=\ln(1+x)-x(1-x)
+\]
+则 \(h(0)=0\)，且
+\[
+h'(x)=\frac{x(1+2x)}{1+x}>0
+\]
+所以 \(\ln(1+x)\geqslant x(1-x)\)，从而 \(a\leqslant1\) 时对 \(0<x<1\) 成立. 另一方面
+\[
+\lim_{x\to0^+}\frac{\ln(1+x)}{x(1-x)}=1
+\]
+所以若 \(a>1\)，取充分小的正数 \(x\) 即不满足条件，故必须 \(a\leqslant1\).
+
+当 \(x>1\) 时，若 \(a<0\)，则
+\[
+\frac{f(x)}{x^2}=\frac{\ln(1+x)}{x^2}+a\left(1-\frac1x\right)\longrightarrow a<0
+\]
+故大 \(x\) 时 \(f(x)<0\)，所以必须 \(a\geqslant0\). 若 \(0\leqslant a\leqslant1\)，则 \(x\geqslant1\) 时两项均非负，结合前面的结论可知对一切 \(x>0\) 都有 \(f(x)\geqslant0\). 因此
+\[
+a\in[0,1]
+\]
 \end{enumerate}
 \end{solution}

@@ -9,6 +9,10 @@
 2
 \end{answer}
 
+\begin{solution}
+配方得 \(y=x^2-2x+3=(x-1)^2+2\). 因为 \((x-1)^2\geqslant 0\)，所以 \(y\geqslant 2\)，当 \(x=1\) 时取等号，故最小值为 \(2\).
+\end{solution}
+
 \begin{problem}
 函数 \(y = \cos^2(\omega x)\)（\(\omega > 0\)）的最小正周期是\fillinblank{}.
 \end{problem}
@@ -17,13 +21,21 @@
 \(\frac{\pi}{\omega}\)
 \end{answer}
 
+\begin{solution}
+由二倍角公式，\(\cos^2(\omega x)=\frac{1+\cos(2\omega x)}{2}\). 因为 \(\omega>0\)，\(\cos(2\omega x)\) 的最小正周期为 \(\frac{\pi}{\omega}\)，加上常数和乘以非零常数不改变周期，所以原函数的最小正周期为 \(\frac{\pi}{\omega}\).
+\end{solution}
+
 \begin{problem}
 设 \(z = \cos \frac{7\pi}{5} + \i \sin \frac{7\pi}{5}\)，\(\i\) 是虚数单位，则 \(z\) 的辐角主值是\fillinblank{}.
 \end{problem}
 
 \begin{answer}
-\(\frac{3\pi}{5}\)
+\(\frac{7\pi}{5}\)
 \end{answer}
+
+\begin{solution}
+题中复数已经写成三角形式 \(z=\cos\frac{7\pi}{5}+\i\sin\frac{7\pi}{5}\). 按本卷复数辐角主值的约定 \(0\leqslant\arg z<2\pi\)，且 \(\frac{7\pi}{5}\) 属于该区间，故 \(\arg z=\frac{7\pi}{5}\).
+\end{solution}
 
 \begin{problem}
 \(1\text{ 名}\)老师和\(4\text{ 名}\)获奖同学排成一排照相留念，若老师不排在两端，则共有不同排法\fillinblank{}\(\text{种}\)（结果用数值表示）.
@@ -33,6 +45,10 @@
 72
 \end{answer}
 
+\begin{solution}
+老师不能排在两端，因此老师有第 \(2\)、第 \(3\)、第 \(4\) 个位置，共有 \(3\) 种选法. 每确定老师的位置后，\(4\) 名同学任意排列，有 \(4!=24\) 种排法. 所以不同排法共有 \(3\times 4!=72\) 种.
+\end{solution}
+
 \begin{problem}
 函数 \(y = \arccos x\)（\(-1 \leqslant x \leqslant 0\)）的反函数是\fillinblank{}.
 \end{problem}
@@ -40,6 +56,10 @@
 \begin{answer}
 \(y = \cos x\)（\(\frac{\pi}{2} \leqslant x \leqslant \pi\)）
 \end{answer}
+
+\begin{solution}
+原函数为 \(y=\arccos x\)，其定义域为 \([-1,0]\)，值域为 \(\left[\frac{\pi}{2},\pi\right]\). 交换自变量和因变量，得到反函数 \(y=\cos x\)，并且其定义域为原函数的值域 \(\left[\frac{\pi}{2},\pi\right]\)，故反函数为 \(y=\cos x\)，\(\frac{\pi}{2}\leqslant x\leqslant\pi\).
+\end{solution}
 
 \begin{problem}
 \(P\) 点分 \(\overline{AB}\) 所成的比是 \(-3\)，则 \(B\) 点分 \(\overline{AP}\) 所成的比是\fillinblank{}.
@@ -49,13 +69,27 @@
 2
 \end{answer}
 
+\begin{solution}
+取有向线段 \(\overline{AP}\) 和 \(\overline{PB}\) 的方向分别为从 \(A\) 到 \(P\)、从 \(P\) 到 \(B\)，则
+\(\frac{\overline{AP}}{\overline{PB}}=-3\). 设 \(\overline{AP}=t\overline{AB}\)，则 \(\overline{PB}=(1-t)\overline{AB}\)，从而 \(\frac{t}{1-t}=-3\)，解得 \(t=\frac{3}{2}\). 因而 \(P\) 在 \(B\) 的外侧，且 \(\overline{BP}=\frac{1}{2}\overline{AB}\). 所以 \(B\) 分 \(\overline{AP}\) 所成的比为 \(\frac{\overline{AB}}{\overline{BP}}=2\).
+\end{solution}
+
 \begin{problem}
-已知圆台的上，下底面半径分别是 \(10 \mathrm{~cm}\) 和 \(20 \mathrm{~cm}\)，它的侧面展开后所得扇环的圆心角是 \(180^{\circ}\)，那么圆台的侧面积是\fillinblank{} \(\mathrm{cm}^{2}\)（结果中保留 \(\pi\)）.
+已知圆台的上、下底面半径分别是 \(10 \mathrm{~cm}\) 和 \(20 \mathrm{~cm}\)，它的侧面展开后所得扇环的圆心角是 \(180^{\circ}\)，那么圆台的侧面积是\fillinblank{} \(\mathrm{cm}^{2}\)（结果中保留 \(\pi\)）.
 \end{problem}
 
 \begin{answer}
 \(600\pi\)
 \end{answer}
+
+\begin{solution}
+设扇环的内、外半径分别为 \(l_1\)、\(l_2\). 扇环圆心角为 \(\pi\)，内弧长和外弧长分别等于圆台上、下底面的周长，因此
+\(\pi l_1=2\pi\times 10\)，\(\pi l_2=2\pi\times 20\)，解得 \(l_1=20\)，\(l_2=40\). 圆台侧面积等于扇环面积，所以
+\[
+S=\frac{\pi}{2}\left(l_2^2-l_1^2\right)=\frac{\pi}{2}\left(40^2-20^2\right)=600\pi
+\]
+故圆台的侧面积为 \(600\pi\ \mathrm{cm}^{2}\).
+\end{solution}
 
 \begin{problem}
 已知等比数列 \(\{a_n\}\)（\(a_n \in \R\)），\(a_1 + a_2 = 9\)，\(a_1 \cdot a_2 \cdot a_3 = 27\)，且 \(S_n = a_1 + a_2 + \cdots + a_n\)（\(n = 1\)，\(2\)，\(\cdots\)），则 \(\displaystyle\lim_{n \to \infty} S_n =\)\fillinblank{}.
@@ -65,6 +99,14 @@
 12
 \end{answer}
 
+\begin{solution}
+设等比数列的公比为 \(q\)，则 \(a_2=a_1q\)，且
+\(a_1a_2a_3=a_1^3q^3=(a_1q)^3=a_2^3=27\). 因为 \(a_2\in\R\)，故 \(a_2=3\). 由 \(a_1+a_2=9\) 得 \(a_1=6\)，于是 \(q=\frac{a_2}{a_1}=\frac{1}{2}\). 由于 \(|q|<1\)，无穷等比级数收敛，且
+\[
+\lim_{n\to\infty}S_n=\frac{a_1}{1-q}=\frac{6}{1-\frac{1}{2}}=12
+\]
+\end{solution}
+
 \begin{problem}
 在极坐标系中，过点 \(M\left(2, \frac{\pi}{2}\right)\) 且平行于极轴的直线的极坐标方程是\fillinblank{}.
 \end{problem}
@@ -72,6 +114,10 @@
 \begin{answer}
 \(\rho \sin \theta = 2\)
 \end{answer}
+
+\begin{solution}
+极坐标与直角坐标的关系为 \(x=\rho\cos\theta\)，\(y=\rho\sin\theta\). 点 \(M\left(2,\frac{\pi}{2}\right)\) 的直角坐标为 \((0,2)\)，过该点且平行于极轴的直线是 \(y=2\). 因而其极坐标方程为 \(\rho\sin\theta=2\).
+\end{solution}
 
 \begin{problem}
 如图，正方体 \(ABCD - A_1B_1C_1D_1\) 中，过顶点 \(B\)，\(D\)，\(C_1\) 作截面，则二面角 \(B - DC_1 - C\) 的大小是\fillinblank{}（用反三角函数表示）.
@@ -84,6 +130,19 @@
 \begin{answer}
 \(\arccos \frac{\sqrt{3}}{3}\)
 \end{answer}
+
+\begin{solution}
+取正方体棱长为 \(1\)，建立坐标系
+\(A(0,0,0)\)、\(B(1,0,0)\)、\(C(1,1,0)\)、\(D(0,1,0)\)、\(C_1(1,1,1)\). 二面角 \(B-DC_1-C\) 的两个面分别为平面 \(BDC_1\) 和平面 \(DCC_1\).
+
+在平面 \(BDC_1\) 内，取
+\(\overrightarrow{DC_1}=(1,0,1)\)、\(\overrightarrow{DB}=(1,-1,0)\)，则该平面的一个法向量为
+\(\bs{n}_1=\overrightarrow{DC_1}\times\overrightarrow{DB}=(1,1,-1)\). 平面 \(DCC_1\) 是 \(y=1\)，其法向量可取 \(\bs{n}_2=(0,1,0)\). 因此两平面所成的较小角 \(\varphi\) 满足
+\[
+\cos\varphi=\frac{|\bs{n}_1\cdot\bs{n}_2|}{|\bs{n}_1||\bs{n}_2|}=\frac{1}{\sqrt{3}}=\frac{\sqrt{3}}{3}
+\]
+故二面角的大小为 \(\arccos\frac{\sqrt{3}}{3}\).
+\end{solution}
 
 \section{单选题}
 
@@ -101,6 +160,10 @@
 C
 \end{answer}
 
+\begin{solution}
+由对数函数的定义，必须有 \(a>0\) 且 \(a\neq 1\). 曲线 \(y=\log_a x\) 的定义域为 \(x>0\)，经过点 \((1,0)\)，并以 \(x=0\) 为渐近线；当 \(a>1\) 时它递增且向下凸，当 \(0<a<1\) 时它递减且向上凸. 直线 \(y=x+a\) 的斜率为 \(1\)，与两坐标轴的交点分别为 \((0,a)\) 和 \((-a,0)\). 对照四个图象，只有第三个图象同时满足对数曲线的渐近线、经过点 \((1,0)\) 及单调性，并满足直线的截距关系，故正确选项为第三项.
+\end{solution}
+
 \begin{problem}
 \((x - 1)^{9}\) 按 \(x\) 降幂排列的展开式中，系数最大的项是（\quad）
 
@@ -114,6 +177,12 @@ C
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+按 \(x\) 的降幂排列，二项式通项为
+\(T_{k+1}=\mathrm C_9^k x^{9-k}(-1)^k\)，其中 \(k=0\)，\(1\)，\(\ldots\)，\(9\). 只有 \(k\) 为偶数时系数为正；这些正系数依次为
+\(\mathrm C_9^0=1\)、\(\mathrm C_9^2=36\)、\(\mathrm C_9^4=126\)、\(\mathrm C_9^6=84\)、\(\mathrm C_9^8=9\). 最大系数为 \(126\)，对应 \(k=4\)，即第 \(5\) 项，故第 \(5\) 项正确.
+\end{solution}
 
 \begin{problem}
 在区间 \((0, +\infty)\) 上为增函数的是（\quad）
@@ -129,19 +198,35 @@ B
 D
 \end{answer}
 
+\begin{solution}
+在 \((0,+\infty)\) 上，\(y=\operatorname{arccot}x\) 为减函数，\(y=\log_{\frac12}x\) 的底数小于 \(1\)，为减函数，\(y=-2^x\) 也是减函数. 而
+\(y=x^{\frac13}\) 的导数为 \(y'=\frac{1}{3x^{\frac23}}>0\)，所以它在 \((0,+\infty)\) 上为增函数，故第 \(4\) 个选项正确.
+\end{solution}
+
 \begin{problem}
 下列不等式中正确的是（\quad）
 
 \choices
     {\(\arcsin \left(-\frac{1}{4}\right) < \arcsin \left(-\frac{1}{3}\right)\)}
     {\(\arccos \left(-\frac{1}{4}\right) < \arccos \frac{1}{3}\)}
-    {\(\arctan \frac{1}{3} < \arcsin \frac{1}{4}\)}
+    {\(\arctan \frac{1}{4} < \arcsin \frac{1}{4}\)}
     {\(\operatorname{arccot} \frac{1}{3} < \arctan \frac{1}{3}\)}
 \end{problem}
 
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+反正弦函数在 \([-1,1]\) 上递增，而 \(-\frac14>-\frac13\)，所以
+\(\arcsin\left(-\frac14\right)>\arcsin\left(-\frac13\right)\)，选项 A 错. 反余弦函数在 \([-1,1]\) 上递减，而 \(-\frac14<\frac13\)，所以
+\(\arccos\left(-\frac14\right)>\arccos\frac13\)，选项 B 错.
+
+设 \(\alpha=\arctan\frac14\)，\(\beta=\arcsin\frac14\). 则 \(\alpha\)、\(\beta\in\left(0,\frac\pi2\right)\)，且
+\(\tan\alpha=\frac14\)，\(\tan\beta=\frac{1/4}{\sqrt{1-1/16}}=\frac{1}{\sqrt{15}}\). 因为 \(\sqrt{15}<4\)，所以 \(\frac{1}{\sqrt{15}} > \frac14\)，从而 \(\beta>\alpha\)，选项 C 正确.
+
+对 \(t>0\)，有 \(\operatorname{arccot}t=\frac\pi2-\arctan t\)，且 \(0<\arctan\frac13<\frac\pi4\)，故 \(\operatorname{arccot}\frac13>\arctan\frac13\)，选项 D 错. 因此选 C.
+\end{solution}
 
 \begin{problem}
 动点 \(P\) 到直线 \(x + 4 = 0\) 的距离减去它到点 \(M(2,0)\) 的距离之差等于\(2\)，则点 \(P\) 的轨迹是（\quad）
@@ -156,6 +241,18 @@ C
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+设动点为 \(P(x,y)\). 由题意，
+\[
+\sqrt{(x-2)^2+y^2}=|x+4|-2
+\]
+因此必须有 \(|x+4|\geqslant 2\). 当 \(x\geqslant-4\) 时，条件化为 \(x\geqslant-2\)，平方并整理得
+\((x-2)^2+y^2=(x+2)^2\)，\(\Longrightarrow\)，\(y^2=8x\).
+该方程本身要求 \(x\geqslant0\)，所以这一支全部满足原条件. 当 \(x<-4\) 时，条件要求 \(x\leqslant-6\)，平方得
+\((x-2)^2+y^2=(-x-6)^2\)，\(\Longrightarrow\)，\(y^2=16(x+2)<0\)
+不可能有实数点. 故轨迹为抛物线 \(y^2=8x\)，选 \(D\).
+\end{solution}
 
 \begin{problem}
 设有三个命题：
@@ -179,6 +276,14 @@ D
 B
 \end{answer}
 
+\begin{solution}
+命题甲正确：四棱柱的两个底面平行且全等，若底面是平行四边形，则四个侧面也都是平行四边形，所以它是平行六面体.
+
+命题乙不一定正确. 平行六面体的一个底面可以是矩形，但侧棱不必垂直于底面，因此不一定是长方体.
+
+命题丙不一定正确. 直四棱柱只保证侧棱垂直于底面，底面四边形不一定是平行四边形，因此不一定是直平行六面体. 所以真命题只有 \(1\) 个，选 \(B\).
+\end{solution}
+
 \begin{problem}
 在直角坐标系中平移坐标轴，把原点 \(O(0,0)\) 移到 \(O'(2,-5)\)，点 \(A\) 在新坐标系中的坐标为 \((-3,7)\)，则点 \(A\) 在原坐标系中的坐标是（\quad）
 
@@ -192,6 +297,14 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+平移坐标轴只改变原点位置，不改变坐标轴方向. 新原点 \(O'(2,-5)\) 在原坐标系中的坐标为 \((2,-5)\)，而点 \(A\) 从新原点出发的坐标向量为 \((-3,7)\). 因此
+\[
+\overrightarrow{OA}=\overrightarrow{OO'}+\overrightarrow{O'A}=(2,-5)+(-3,7)=(-1,2)
+\]
+故点 \(A\) 在原坐标系中的坐标为 \((-1,2)\)，选 \(A\).
+\end{solution}
 
 \begin{problem}
 设 \(a\)，\(b\) 是两条异面直线. 在下列命题中正确的是（\quad）
@@ -207,6 +320,12 @@ A
 C
 \end{answer}
 
+\begin{solution}
+取直线 \(a\) 上任一点 \(A\)，过 \(A\) 作直线 \(b'\parallel b\). 因为 \(a\)、\(b\) 是异面直线，二者方向不平行，故直线 \(a\) 与 \(b'\) 唯一确定一个平面 \(\pi\)，且 \(\pi\parallel b\). 若另有一个过直线 \(a\) 且平行于 \(b\) 的平面，则它也必须包含过 \(A\) 的平行于 \(b\) 的直线，因而与 \(\pi\) 重合，所以该平面唯一.
+
+选项 A 错：设 \(m\) 是 \(a\)、\(b\) 的公垂线，则所有与 \(m\) 平行的直线都分别与 \(a\)、\(b\) 垂直，故不可能只有一条. 选项 B 错：若平面同时垂直于 \(a\)、\(b\)，则 \(a\)、\(b\) 的方向都应平行于该平面的法向量，从而 \(a\parallel b\)，与异面矛盾. 选项 D 也不成立：取过 \(a\) 且平行于 \(b\) 的平面 \(\pi\) 内、但不在 \(a\) 上的一点 \(X\). 任取过 \(X\) 且与 \(a\) 相交的直线，它的交点和 \(X\) 都在 \(\pi\) 内，故整条直线在 \(\pi\) 内；而 \(b\parallel\pi\) 且 \(b\) 不在 \(\pi\) 内，所以该直线不可能与 \(b\) 相交. 故选 C.
+\end{solution}
+
 \begin{problem}
 函数 \(y = \cos \left(2x + \frac{\pi}{2}\right) \) 的图象的一条对称轴方程是（\quad）
 
@@ -221,8 +340,13 @@ C
 B
 \end{answer}
 
+\begin{solution}
+函数可写为 \(y=\cos\left(2x+\frac\pi2\right)=-\sin 2x\). 对于余弦函数，对称轴经过其极大值点或极小值点. 极大值点满足
+\(2x+\frac\pi2=2k\pi\)，从而 \(x=-\frac\pi4+k\pi\)，其中 \(k\in\Z\). 因此 \(x=-\frac\pi4\) 是一条对称轴，选 \(B\).
+\end{solution}
+
 \begin{problem}
-\(a + b > 2c^{2}\) 的一个充分条件是（\quad）
+\(a + b > 2c\) 的一个充分条件是（\quad）
 
 \choices
     {\(a > c\) 或 \(b > c\)}
@@ -235,6 +359,12 @@ B
 C
 \end{answer}
 
+\begin{solution}
+若 \(a>c\) 且 \(b>c\)，则两式相加得到 \(a+b>2c\)，所以选项 C 是充分条件.
+
+其余选项都不能保证结论：只满足 \(a>c\) 或只满足 \(b<c\) 时，另一个数可以取得足够小，使 \(a+b\leqslant2c\)；选项 B 也没有保证 \(b>c\). 故选 C.
+\end{solution}
+
 \section{解答题}
 
 \begin{problem}
@@ -242,9 +372,15 @@ C
 \end{problem}
 
 \begin{solution}
-【法一】 因为 \(r = |OP| = \sqrt{(-1)^2 + 2^2} = \sqrt{5}\)，所以 \(\sin \alpha = \frac{2}{\sqrt{5}}\)，\(\cos \alpha = -\frac{1}{\sqrt{5}}\). 因为 \(\sin 2\alpha = 2\sin \alpha \cos \alpha = -\frac{4}{5}\)，\(\cos 2\alpha = 1 - 2\sin^2 \alpha = -\frac{3}{5}\). 所以 \(\sin \left(2\alpha + \frac{2\pi}{3}\right) = \sin 2\alpha \cdot \cos \frac{2\pi}{3} + \cos 2\alpha \cdot \sin \frac{2\pi}{3} = \frac{4 - 3\sqrt{3}}{10}\).
-
-【法二】 因为 \(\tan \alpha = -2\)，所以 \(\sin 2\alpha = \frac{2\tan \alpha}{1 + \tan^2 \alpha} = -\frac{4}{5}\)，\(\cos 2\alpha = \frac{1 - \tan^2 \alpha}{1 + \tan^2 \alpha} = -\frac{3}{5}\). 以下同解一.
+因为 \(r = |OP| = \sqrt{(-1)^2 + 2^2} = \sqrt{5}\)，所以
+\(\sin \alpha = \frac{2}{\sqrt{5}}\)，\(\cos \alpha = -\frac{1}{\sqrt{5}}\). 因而
+\(\sin 2\alpha = 2\sin \alpha\cos \alpha = -\frac{4}{5}\)，
+\(\cos 2\alpha = 1 - 2\sin^2\alpha = -\frac{3}{5}\). 所以
+\[
+\sin\left(2\alpha + \frac{2\pi}{3}\right)
+= \sin 2\alpha\cos\frac{2\pi}{3} + \cos 2\alpha\sin\frac{2\pi}{3}
+= \frac{4 - 3\sqrt{3}}{10}
+\]
 \end{solution}
 
 \begin{problem}
@@ -260,28 +396,16 @@ C
 \end{problem}
 
 \begin{solution}
-【法一】 设点 \(A\) 和点 \(B\) 的坐标分别为 \((x_1,y_1)\) 和 \((x_2,y_2)\). 由条件可设直线 \(l\) 的方程为 \(y = kx - 1\). 设直线 \(OA\) 和 \(OB\) 的斜率分别为 \(k_{OA}\) 和 \(k_{OB}\)，则由条件有
+设点 \(A\) 和点 \(B\) 的坐标分别为 \((x_1,y_1)\) 和 \((x_2,y_2)\). 由条件可设直线 \(l\) 的方程为 \(y = kx - 1\). 设直线 \(OA\) 和 \(OB\) 的斜率分别为 \(k_{OA}\) 和 \(k_{OB}\)，则由条件有
 \(k_{OA} + k_{OB} = \frac{y_1}{x_1} + \frac{y_2}{x_2} = 1\).
 由于 \(y_1 = -\frac{x_1^2}{2}\)，\(y_2 = -\frac{x_2^2}{2}\)，故代入上式后得 \(-\frac{1}{2}(x_1 + x_2) = 1\). 于是
 \[
-k = \frac{y_2 - y_1}{x_2 - x_1} = -\frac{\left(-\frac{x_2^2}{2}\right) - \left(-\frac{x_1^2}{2}\right)}{x_2 - x_1} = -\frac{1}{2}(x_1 + x_2) = 1
+ k = \frac{y_2 - y_1}{x_2 - x_1} = \frac{\left(-\frac{x_2^2}{2}\right) - \left(-\frac{x_1^2}{2}\right)}{x_2 - x_1} = -\frac{1}{2}(x_1 + x_2) = 1
 \]
 因此直线 \(l\) 的方程为 \(y = x - 1\).
 
-【法二】由法一中的条件式，直线方程代入抛物线方程得 \(x^2 + 2kx - 2 = 0\).
-方程有实数解 \(x_1\) 及 \(x_2\)，由韦达定理，有 \(x_1 + x_2 = -2k\)，\(x_1x_2 = -2\).
-由于 \(y_1 = kx_1 - 1\)，\(y_2 = kx_2 - 1\)，于是条件式成为
-\[
-1 = \frac{kx_1 - 1}{x_1} + \frac{kx_2 - 1}{x_2} = 2k - \frac{x_1 + x_2}{x_1x_2} = k
-\]
-因此直线 \(l\) 的方程为 \(y = x - 1\).
+代入抛物线方程得 \(x^2+2x-2=0\)，其判别式为 \(12>0\)，故直线 \(y=x-1\) 确实与抛物线交于两个不同的实点，所求直线有效.
 
-【法三】由法二中的方程，方程的解为 \(x_1 = -k - \sqrt{k^2 + 2}\)，\(x_2 = -k + \sqrt{k^2 + 2}\).
-由于 \(y_1 = -\frac{x_1^2}{2}\)，\(y_2 = -\frac{x_2^2}{2}\)，于是条件式成为
-\[
-1 = -\frac{x_1}{2} - \frac{x_2}{2} = -\frac{1}{2}\left(-k - \sqrt{k^2 + 2}\right) - \frac{1}{2}\left(-k + \sqrt{k^2 + 2}\right) = k
-\]
-因此直线 \(l\) 的方程为 \(y = x - 1\).
 \end{solution}
 
 \begin{problem}
@@ -298,7 +422,6 @@ k = \frac{y_2 - y_1}{x_2 - x_1} = -\frac{\left(-\frac{x_2^2}{2}\right) - \left(-
 \end{problem}
 
 \begin{solution}
-【法一】
 \begin{enumerate}
 \item 在平面 \(\beta\) 内作 \(BD \perp PQ\)，垂足为 \(D\)，连接 \(AD\). 因 \(\angle BCD = \angle ACD\)，且 \(BC = AC\)，\(DC\) 为公共边，故 \(\triangle BCD \cong \triangle ACD\)，所以 \(AD \perp PQ\). 于是 \(PQ \perp\) 平面 \(ABD\)，故 \(AB \perp PQ\).
 
@@ -308,18 +431,6 @@ k = \frac{y_2 - y_1}{x_2 - x_1} = -\frac{\left(-\frac{x_2^2}{2}\right) - \left(-
 在 \(\triangle BCR\) 中，设 \(x = CR\)，由余弦定理得 \(\left(\frac{\sqrt{6}}{4}a\right)^2 = x^2 + a^2 - 2ax \cdot \frac{7}{8}\)，
 即 \(8x^2 - 14ax + 5a^2 = 0\). 所以 \(x_1 = \frac{1}{2}a\)，\(x_2 = \frac{5}{4}a\).
 由于 \(\frac{5}{4}a > a\)，故 \(x_2 = \frac{5}{4}a\) 舍去. 因此 \(CR\) 的长为 \(\frac{1}{2}a\).
-
-\end{enumerate}
-
-【法二】
-\begin{enumerate}
-\item 同法一.
-
-\item 同法一.
-
-\item 连接 \(HR\). 因 \(BH \perp \alpha\)，故 \(\angle BRH\) 是 \(BR\) 与平面 \(\alpha\) 所成的角，\(\angle BRH = 45^{\circ}\). \(HR = BH = \frac{\sqrt{3}}{4}a\). 因 \(\triangle ADC\) 为 \(\mathrm{Rt}\triangle\)，\(\angle DAC = 60^{\circ}\). 在正三角形 \(ABD\) 中，\(BH \perp AD\)，所以 \(AH = \frac{1}{2}AD = \frac{1}{4}a\). 在 \(\triangle ARH\) 中，设 \(t = AR\)，由余弦定理得 \(\left(\frac{\sqrt{3}}{4}a\right)^2 = \left(\frac{1}{4}a\right)^2 + t^2 - 2 \cdot \frac{1}{4}a \cdot t \cdot \frac{1}{2}\)，
-即 \(8t^2 - 2at - a^2 = 0\). 所以 \(t_1 = \frac{1}{2}a\)，\(t_2 = -\frac{1}{4}a\).
-因为 \(-\frac{1}{4}a < 0\)，故 \(t_2 = -\frac{1}{4}a\) 舍去. 因此 \(CR = a - \frac{1}{2}a = \frac{1}{2}a\).
 \end{enumerate}
 \end{solution}
 
@@ -390,7 +501,6 @@ r^2 - 8r + 10 > 0.
 \end{problem}
 
 \begin{solution}
-【法一】
 \begin{enumerate}
 \item 双曲线的半焦距 \(c = \sqrt{a^2 + 1}\)，焦点为 \(F_1(-\sqrt{a^2 + 1},0)\) 和 \(F_2(\sqrt{a^2 + 1},0)\). 设 \(P(x_0,y_0)\) 为椭圆上一点，与长轴的端点 \(A_1\) 及 \(A_2\) 不重合，由对称性，不妨设 \(0 < y_0 \leqslant 1\).
 
@@ -425,22 +535,5 @@ r^2 - 8r + 10 > 0.
 于是 \(\frac{2\pi}{3} \leqslant \varphi_0 \leqslant \pi - \arctan\sqrt{2}\).
 故 \(\varphi_0\) 的取值范围是 \(\left[\frac{2\pi}{3}, \pi - \arctan\sqrt{2}\right]\).
 
-\end{enumerate}
-
-【法二】
-\begin{enumerate}
-\item 双曲线的半焦距 \(c = \sqrt{a^2 + 1}\)，焦点为 \(F_1(-\sqrt{a^2 + 1},0)\) 和 \(F_2(\sqrt{a^2 + 1},0)\). 设 \(P(a\cos \theta,\sin \theta)\) 为椭圆上一点，与长轴的端点 \(A_1\) 及 \(A_2\) 不重合，由对称性，不妨设 \(0 < \theta \leqslant \frac{\pi}{2}\). 记 \(\alpha = \angle PF_2x\)，\(\beta = \angle PF_1x\)，故 \(\varphi = \alpha - \beta\). 因 \(PF_1\) 的斜率 \(k_1 = \frac{\sin \theta}{a\cos \theta + \sqrt{a^2 + 1}}\)，
-\(PF_2\) 的斜率 \(k_2 = \frac{\sin \theta}{a\cos \theta - \sqrt{a^2 + 1}}\)，
-故 \(\tan \varphi = \tan(\alpha - \beta) = -\frac{2\sqrt{a^2 + 1} \cdot \sin \theta}{(a^2 - 1)\sin^2 \theta + 1}\).
-
-\item 由于 \(a \geqslant \sqrt{2}\)，故 \(a^2 - 1 \geqslant 1\)，\(\tan \varphi < 0\)，\(\frac{\pi}{2} < \varphi < \pi\). 故
-\[
-\tan(\pi - \varphi) = \frac{2\sqrt{a^2 + 1} \cdot \sin \theta}{(a^2 - 1)\sin^2 \theta + 1}
-= \frac{2\sqrt{a^2 + 1}}{(a^2 - 1)\sin \theta + \frac{1}{\sin \theta}}
-\leqslant \sqrt{\frac{a^2 + 1}{a^2 - 1}}
-\]
-当且仅当 \((a^2 - 1)\sin \theta = \frac{1}{\sin \theta}\)，即 \(\sin \theta = \frac{1}{\sqrt{a^2 - 1}} \leqslant 1\) 时取“\(=\)”号.
-
-\item 同法一.
 \end{enumerate}
 \end{solution}

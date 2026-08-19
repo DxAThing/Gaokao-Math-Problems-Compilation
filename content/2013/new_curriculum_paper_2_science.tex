@@ -16,6 +16,10 @@
 A
 \end{answer}
 
+\begin{solution}
+由 \((x-1)^2<4\) 得 \(-2<x-1<2\)，所以 \(-1<x<3\)，即 \(M=(-1,3)\). 与 \(N=\{-1,0,1,2,3\}\) 求交集时，\(-1\) 和 \(3\) 不在 \(M\) 中，故 \(M\cap N=\{0,1,2\}\)，选 A.
+\end{solution}
+
 \begin{problem}
 设复数 \(z\) 满足 \((1 - \i)z = 2\i\)，则 \(z =\)（\quad）
 
@@ -29,6 +33,14 @@ A
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+将等式两边同乘 \(1+\i\)，得
+\[
+z=\frac{2\i}{1-\i}=\frac{2\i(1+\i)}{(1-\i)(1+\i)}=\i(1+\i)=-1+\i
+\]
+故选 A.
+\end{solution}
 
 \begin{problem}
 等比数列 \(\{a_n\}\) 的前 \(n\) 项和为 \(S_n\)，已知 \(S_3 = a_2 + 10a_1\)，\(a_5 = 9\)，则 \(a_1 =\)（\quad）
@@ -44,6 +56,16 @@ A
 C
 \end{answer}
 
+\begin{solution}
+设等比数列的公比为 \(q\). 由 \(a_5=9\) 可知 \(a_1\ne0\)，于是
+\[
+a_1(1+q+q^2)=a_1q+10a_1
+\]
+约去 \(a_1\) 得 \(q^2=9\)，即 \(q=3\) 或 \(q=-3\). 两种情形都满足 \(q^4=81\)，所以
+\(a_1q^4=9\)，\(\Longrightarrow\)，\(a_1=\frac{9}{81}=\frac19\).
+故选 C.
+\end{solution}
+
 \begin{problem}
 已知 \(m\)，\(n\) 为异面直线，\(m \perp\) 平面 \(\alpha\)，\(n \perp\) 平面 \(\beta\)，直线 \(l\) 满足 \(l \perp m\)，\(l \perp n\)，\(l \not\subset \alpha\)，\(l \not\subset \beta\)，则（\quad）
 
@@ -58,6 +80,12 @@ C
 D
 \end{answer}
 
+\begin{solution}
+因为 \(m\perp\alpha\)，且 \(l\perp m\)，所以 \(l\) 的方向平行于平面 \(\alpha\)；同理，\(l\) 的方向也平行于平面 \(\beta\). 若 \(\alpha\parallel\beta\)，则它们的法向量 \(m\)，\(n\) 平行，与 \(m\)，\(n\) 为异面直线矛盾. 因此 \(\alpha\) 与 \(\beta\) 相交.
+
+两相交平面的公共方向只有交线方向，故同时平行于两个平面的直线 \(l\) 必与交线平行. 由题设 \(l\not\subset\alpha\) 且 \(l\not\subset\beta\)，可知交线平行于 \(l\)，选 D.
+\end{solution}
+
 \begin{problem}
 已知 \((1 + ax)(1 + x)^5\) 的展开式中 \(x^2\) 的系数为 5，则 \(a =\)（\quad）
 
@@ -71,6 +99,14 @@ D
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+展开式中 \(x^2\) 的来源有两种：从 \((1+x)^5\) 中取 \(x^2\)，或从 \(ax\) 与 \((1+x)^5\) 中的 \(x\) 相乘. 因此 \(x^2\) 的系数为
+\[
+\mathrm C_5^2+a\mathrm C_5^1=10+5a
+\]
+由题意 \(10+5a=5\)，得 \(a=-1\)，故选 D.
+\end{solution}
 
 \begin{problem}
 执行如图的程序框图，如果输入的 \(N = 10\)，那么输出的 \(S =\)（\quad）
@@ -90,6 +126,16 @@ D
 B
 \end{answer}
 
+\begin{solution}
+按程序框图逐次计算. 初值为 \(k=1\)，\(S=0\)，\(T=1\). 每次循环先令 \(T\leftarrow T/k\)，再令 \(S\leftarrow S+T\)，最后令 \(k\leftarrow k+1\). 因此各次加入 \(S\) 的项依次为
+\(1\)，\(\frac1{2!}\)，\(\frac1{3!}\)，\(\ldots\)，\(\frac1{10!}\).
+当第十次循环结束时 \(k=11>10\)，程序停止，故输出
+\[
+S=1+\frac1{2!}+\frac1{3!}+\cdots+\frac1{10!}
+\]
+选 B.
+\end{solution}
+
 \begin{problem}
 一个四面体的顶点在空间直角坐标系 \(O - xyz\) 中的坐标分别是 \((1, 0, 1)\)，\((1, 1, 0)\)，\((0, 1, 1)\)，\((0, 0, 0)\)，画该四面体三视图中的正视图时，以 \(zOx\) 平面为投影面，则得到正视图可以为（\quad）
 
@@ -104,6 +150,12 @@ B
 A
 \end{answer}
 
+\begin{solution}
+以 \(zOx\) 平面为投影面时，空间点 \((x,y,z)\) 的投影坐标为 \((x,z)\). 四个顶点的投影分别为
+\((1,1)\)，\((1,0)\)，\((0,1)\)，\((0,0)\).
+它们组成一个正方形；四面体的六条棱投影后包含正方形的两条对角线，其中一条为实线、另一条为虚线. 因此正视图可以是选项 A.
+\end{solution}
+
 \begin{problem}
 设 \(a = \log_{3} 6\)，\(b = \log_{5} 10\)，\(c = \log_{7} 14\)，则（\quad）
 
@@ -117,6 +169,18 @@ A
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+对 \(t>1\) 令 \(g(t)=\log_t(2t)=1+\dfrac{\ln2}{\ln t}\). 则
+\[
+g'(t)=-\frac{\ln2}{t(\ln t)^2}<0
+\]
+所以 \(g(t)\) 在 \((1,+\infty)\) 上递减. 由于 \(3<5<7\)，有
+\[
+a=g(3)>g(5)=b>g(7)=c
+\]
+故选 D.
+\end{solution}
 
 \begin{problem}
 已知 \(a > 0\)，\(x\)，\(y\) 满足约束条件 \(\begin{cases}
@@ -133,8 +197,24 @@ y \geqslant a (x - 3),
 \end{problem}
 
 \begin{answer}
-C
+B
 \end{answer}
+
+\begin{solution}
+由约束条件可得 \(1\leqslant x\leqslant3\)，且
+\[
+a(x-3)\leqslant y\leqslant3-x
+\]
+因为目标函数 \(z=2x+y\) 关于 \(y\) 的系数为正，所以固定 \(x\) 时，最小值在下边界 \(y=a(x-3)\) 上取得. 此时
+\[
+z=2x+a(x-3)=(a+2)x-3a
+\]
+由于 \(a>0\)，该式随 \(x\) 增大而增大，故在 \(x=1\)，\(y=-2a\) 处取得最小值，且
+\[
+z_{\min}=2-2a
+\]
+由 \(z_{\min}=1\) 得 \(a=\frac12\)，选 B.
+\end{solution}
 
 \begin{problem}
 已知函数 \(f(x) = x^3 + ax^2 + bx + c\)，下列结论中错误的是（\quad）
@@ -150,6 +230,21 @@ C
 C
 \end{answer}
 
+\begin{solution}
+因为 \(f(x)\) 是首项系数为正的三次多项式，所以
+\(\displaystyle\lim_{x\to-\infty}f(x)=-\infty\)，\(\displaystyle\lim_{x\to+\infty}f(x)=+\infty\)，由零点定理知它至少有一个实根，结论 A 正确.
+
+令 \(h=-\dfrac a3\)，则
+\[
+f(h+t)=t^3+\left(b-\frac{a^2}{3}\right)t+f(h)
+\]
+于是 \(f(h+t)+f(h-t)=2f(h)\)，图象关于点 \((h,f(h))\) 中心对称，结论 B 正确.
+
+若 \(x_0\) 是极小值点，则只能说明函数在极小值点左侧的某个邻域内递减，不能推出在整个 \((-\infty,x_0)\) 上递减. 例如 \(f(x)=x^3-3x\) 在 \(x_0=1\) 处有极小值，但在 \((-\infty,-1)\) 上递增，结论 C 错误.
+
+多项式处处可导，函数在极值点的导数为零，所以结论 D 正确. 故选 C.
+\end{solution}
+
 \begin{problem}
 设抛物线 \(C: y^2 = 2px\)（\(p > 0\)）的焦点为 \(F\)，点 \(M\) 在 \(C\) 上，\(|MF| = 5\). 若以 \(MF\) 为直径的圆过点 \((0,2)\)，则 \(C\) 的方程为（\quad）
 
@@ -163,6 +258,25 @@ C
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+设 \(M=(x,y)\)，抛物线焦点为 \(F=(p/2,0)\). 由 \(M\) 在抛物线上，得 \(y^2=2px\)，从而
+\[
+MF^2=\left(x-\frac p2\right)^2+y^2
+=\left(x+\frac p2\right)^2
+\]
+由于 \(x\geqslant0\)，故 \(MF=x+p/2=5\)，即 \(x=5-p/2\).
+
+以 \(MF\) 为直径的圆过 \(Q=(0,2)\)，所以 \(\overrightarrow{QM}\perp\overrightarrow{QF}\)，即
+\(\left(x,y-2\right)\cdot\left(\frac p2,-2\right)=0\)，\(y=\frac{px}{4}+2\).
+令 \(R=p(10-p)\)，则 \(x=5-p/2\)，且
+\[
+y=\frac{p(5-p/2)}4+2=\frac{R+16}{8}
+\]
+另一方面，\(y^2=2px=p(10-p)=R\)，故
+\(\frac{(R+16)^2}{64}=R\)，\(\Longrightarrow\)，\((R-16)^2=0\).
+于是 \(p(10-p)=16\)，即 \(p^2-10p+16=0\)，所以 \(p=2\) 或 \(p=8\). 故抛物线方程为 \(y^2=4x\) 或 \(y^2=16x\)，选 C.
+\end{solution}
 
 \begin{problem}
 已知点 \(A(-1, 0)\)，\(B(1, 0)\)，\(C(0, 1)\)，直线 \(y = ax + b\)（\(a > 0\)）将 \(\triangle ABC\) 分割为面积相等的两部分，则 \(b\) 的取值范围是（\quad）
@@ -178,6 +292,37 @@ C
 B
 \end{answer}
 
+\begin{solution}
+三角形 \(ABC\) 的面积为 \(1\). 直线斜率为正，按其与三角形边界的交点位置分类.
+
+若 \(b\leqslant0\)，要与三角形内部相交必须有 \(a+b>0\)，此时直线与 \(AB\)、\(BC\) 相交. 直线一侧在顶点 \(B\) 处的三角形面积为
+\[
+\frac{(a+b)^2}{2a(a+1)}
+\]
+令其等于 \(1/2\) 得 \((a+b)^2=a(a+1)\)，从而 \(b=\sqrt{a(a+1)}-a>0\)，与 \(b\leqslant0\) 矛盾. 因此此时无解.
+
+若 \(0<b<1\) 且 \(a\geqslant b\)，直线与 \(AB\)、\(BC\) 相交. 同样由面积条件得
+\((a+b)^2=a(a+1)\)，\(a=\frac{b^2}{1-2b}\).
+条件 \(a\geqslant b>0\) 等价于 \(\frac13\leqslant b<\frac12\).
+
+若 \(0<b<1\) 且 \(0<a<b\)，直线与 \(AC\)、\(BC\) 相交. 顶点 \(C\) 一侧的三角形面积为
+\[
+\frac{(1-b)^2}{1-a^2}
+\]
+令其等于 \(1/2\)，得 \(a^2=1-2(1-b)^2\). 由 \(a>0\) 及 \(a<b\)，得到
+\[
+1-\frac{\sqrt2}{2}<b<\frac13
+\]
+
+若 \(b\geqslant1\)，有交点时必为 \(a>b>1\)，直线与 \(AB\)、\(AC\) 相交，顶点 \(A\) 一侧的三角形面积为 \(\dfrac{(a-b)^2}{2a(a-1)}\). 令其为 \(1/2\) 得 \((a-b)^2=a(a-1)\)，即 \(b=a-\sqrt{a(a-1)}<1\)，矛盾；其余情形直线不把三角形分成两块正面积区域.
+
+合并可行范围，得
+\[
+1-\frac{\sqrt2}{2}<b<\frac12
+\]
+故选 B.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -188,6 +333,15 @@ B
 \(2\)
 \end{answer}
 
+\begin{solution}
+建立直角坐标系，取 \(A=(0,0)\)，\(B=(2,0)\)，\(C=(2,2)\)，\(D=(0,2)\). 则 \(E=(1,2)\)，所以
+\(\overrightarrow{AE}=(1,2)\)，\(\overrightarrow{BD}=(-2,2)\).
+因此
+\[
+\overrightarrow{AE}\cdot\overrightarrow{BD}=1\times(-2)+2\times2=2
+\]
+\end{solution}
+
 \begin{problem}
 从 \(n\) 个正整数 \(1\)，\(2\)，\(\cdots\)，\(n\) 中任意取出两个不同的数，若取出的两数之和等于 5 的概率为 \(\frac{1}{14}\)，则 \(n =\)\fillinblank{}.
 \end{problem}
@@ -195,6 +349,12 @@ B
 \begin{answer}
 \(8\)
 \end{answer}
+
+\begin{solution}
+所有取法共有 \(\mathrm C_n^2\) 种. 和为 5 的取法只有 \((1,4)\) 和 \((2,3)\)，所以有两种，且必须有 \(n\geqslant4\). 由题意
+\(\frac{2}{\mathrm C_n^2}=\frac1{14}\)，\(\mathrm C_n^2=28\).
+于是 \(n(n-1)/2=28\)，即 \(n^2-n-56=0\)，解得正整数 \(n=8\).
+\end{solution}
 
 \begin{problem}
 设 \(\theta\) 为第二象限角，若 \(\tan \left( \theta + \frac{\pi}{4} \right) = \frac{1}{2}\)，则 \(\sin \theta + \cos \theta =\)\fillinblank{}.
@@ -204,6 +364,16 @@ B
 \(-\frac{\sqrt{10}}{5}\)
 \end{answer}
 
+\begin{solution}
+设 \(t=\tan\theta\). 由正切和角公式，
+\[
+\frac{t+1}{1-t}=\frac12
+\]
+所以 \(2t+2=1-t\)，得 \(t=-\frac13\). 因 \(\theta\) 在第二象限，\(\sin\theta>0\)，\(\cos\theta<0\)，故
+\(\sin\theta=\frac1{\sqrt{10}}\)，\(\cos\theta=-\frac3{\sqrt{10}}\).
+因此 \(\sin\theta+\cos\theta=-\frac2{\sqrt{10}}=-\frac{\sqrt{10}}5\).
+\end{solution}
+
 \begin{problem}
 等差数列 \(\{a_n\}\) 的前 \(n\) 项和为 \(S_n\)，已知 \(S_{10} = 0\)，\(S_{15} = 25\)，则 \(nS_n\) 的最小值为\fillinblank{}.
 \end{problem}
@@ -211,6 +381,21 @@ B
 \begin{answer}
 \(-49\)
 \end{answer}
+
+\begin{solution}
+设等差数列首项为 \(a_1\)，公差为 \(d\). 由
+\(S_{10}=5(2a_1+9d)=0\)，\(S_{15}=\frac{15}{2}(2a_1+14d)=25\)
+得 \(2a_1+9d=0\)，\(2a_1+14d=\frac{10}{3}\)，从而 \(d=\frac23\)，\(a_1=-3\). 因此
+\(S_n=\frac n2\left(-6+\frac23(n-1)\right)=\frac{n(n-10)}3\)，\(nS_n=\frac{n^2(n-10)}3\).
+对正整数 \(n\)，令 \(G(n)=n^2(n-10)/3\)，则
+\[
+G(n+1)-G(n)=\frac{3n^2-17n-9}{3}
+\]
+当 \(1\leqslant n\leqslant6\) 时该差为负，当 \(n\geqslant7\) 时该差为正，所以 \(G(n)\) 在 \(n=7\) 处取得最小值，且
+\[
+G(7)=\frac{49(-3)}3=-49
+\]
+\end{solution}
 
 \section{解答题}
 
@@ -224,8 +409,32 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item \(B=\frac{\pi}{4}\).
-\item \(\triangle ABC\) 面积的最大值为 \(1+\sqrt{2}\).
+\item 由正弦定理，存在正数 \(k\)，使得 \(a=k\sin A\)，\(b=k\sin B\)，\(c=k\sin C\). 代入已知等式并约去 \(k\)，得
+\[
+\sin A=\sin B\cos C+\sin B\sin C
+\]
+又 \(A+B+C=\pi\)，所以 \(\sin A=\sin(B+C)=\sin B\cos C+\cos B\sin C\). 两式相减得
+\[
+\sin C(\cos B-\sin B)=0
+\]
+三角形内角满足 \(0<C<\pi\)，故 \(\sin C>0\)，从而 \(\sin B=\cos B\)，即 \(B=\frac\pi4\).
+
+\item 此时 \(A+C=\frac{3\pi}{4}\). 由正弦定理和 \(b=2\)，得
+\(a=\frac{2\sin A}{\sin(\pi/4)}=2\sqrt2\sin A\)，\(c=2\sqrt2\sin C\).
+三角形面积为
+\[
+S=\frac12ac\sin B=2\sqrt2\sin A\sin C
+\]
+由于 \(A+C=\frac{3\pi}{4}\)，有
+\[
+\sin A\sin C=\frac{\cos(A-C)-\cos(A+C)}2
+=\frac{\cos(A-C)+\frac{\sqrt2}{2}}2
+\leqslant\frac{1+\frac{\sqrt2}{2}}2
+\]
+等号在 \(A=C=3\pi/8\) 时成立. 因此面积最大值为
+\[
+S_{\max}=2\sqrt2\cdot\frac{1+\frac{\sqrt2}{2}}2=1+\sqrt2
+\]
 \end{enumerate}
 \end{solution}
 
@@ -240,14 +449,46 @@ B
 \end{problem}
 
 \begin{solution}
+不妨设 \(AB=2\)，建立空间直角坐标系，取
+\(A=(0,0,0)\)，\(B=(2,0,0)\)，\(C=(1,1,0)\)
+则由直棱柱及长度条件
+\(A_1=(0,0,\sqrt2)\)，\(C_1=(1,1,\sqrt2)\)，\(D=(1,0,0)\)，\(E=(2,0,\tfrac{\sqrt2}{2})\).
 \begin{enumerate}
-\item \(BC_1\parallel\) 平面 \(A_1CD\).
-\item 二面角 \(D-A_1C-E\) 的正弦值为 \(\frac{\sqrt{6}}{3}\).
+\item 有
+\(\overrightarrow{A_1C}=(1,1,-\sqrt2)\)，\(\overrightarrow{A_1D}=(1,0,-\sqrt2)\)，\(\overrightarrow{BC_1}=(-1,1,\sqrt2)\).
+并且
+\[
+\overrightarrow{BC_1}=\overrightarrow{A_1C}-2\overrightarrow{A_1D}
+\]
+所以 \(BC_1\) 的方向平行于平面 \(A_1CD\). 又平面 \(A_1CD\) 的一个法向量为 \((\sqrt2,0,1)\)，而
+\[
+(\sqrt2,0,1)\cdot\overrightarrow{A_1B}=(\sqrt2,0,1)\cdot(2,0,-\sqrt2)=\sqrt2\ne0
+\]
+故 \(B\) 不在该平面内，从而 \(BC_1\parallel\) 平面 \(A_1CD\).
+
+\item 取平面 \(A_1CD\) 的法向量
+\[
+\bs{n}_1=(\sqrt2,0,1)
+\]
+平面 \(A_1CE\) 的一个法向量为
+\[
+\bs{n}_2=(\sqrt2,3\sqrt2,4)
+\]
+因为它分别垂直于 \(\overrightarrow{A_1C}=(1,1,-\sqrt2)\) 和 \(\overrightarrow{A_1E}=(2,0,-\sqrt2/2)\). 于是
+\(|\bs{n}_1|=\sqrt3\)，\(|\bs{n}_2|=6\)，\(\bs{n}_1\cdot\bs{n}_2=6\).
+设二面角为 \(\theta\)，则
+\[
+\cos\theta=\frac{|\bs{n}_1\cdot\bs{n}_2|}{|\bs{n}_1||\bs{n}_2|}=\frac1{\sqrt3}
+\]
+所以
+\[
+\sin\theta=\sqrt{1-\frac13}=\frac{\sqrt6}{3}
+\]
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-经销商经销某种农产品，在一个销售季度内，每售出 \(1\mathrm{~t}\) 该产品获利润 \(500\text{ 元}\)，未售出的产品，每 \(1\mathrm{~t}\) 亏损 \(300\text{ 元}\). 根据历史资料，得到销售季度内市场需求量的频率分布直方图，如图所示. 经销商为下一个销售季度购进了 \(130\mathrm{~t}\) 该农产品. 以 \(X\)（单位：\(\mathrm{t}\)，\(100 \leqslant X \leqslant 150\)）表示下一个销售季度内的市场需求量，\(T\)（单位：\(\text{元}\)）表示下一个销售季度内经销该农产品的利润.
+经销商经销某种农产品，在一个销售季度内，每售出 \(1\mathrm{~t}\) 该产品获利润 \(500\text{ 元}\)，未售出的产品，每 \(1\mathrm{~t}\) 亏损 \(300\text{ 元}\). 根据历史资料，得到销售季度内市场需求量的频率分布直方图，如图所示. 经销商为下一个销售季度购进了 \(130\mathrm{~t}\) 该农产品. 以 \(X\)（单位：\(\mathrm{t}\)，\(100 \leqslant X \leqslant 150\)）表示下一个销售季度内的市场需求量，\(T\)（单位：\text{元}）表示下一个销售季度内经销该农产品的利润.
 
 \begin{enumerate}
 \item 将 \(T\) 表示为 \(X\) 的函数；
@@ -260,17 +501,37 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item
+\item 当 \(100\leqslant X<130\) 时，售出 \(X\mathrm{~t}\)，剩余 \(130-X\mathrm{~t}\)，所以
+\[
+T=500X-300(130-X)=800X-39000
+\]
+当 \(130\leqslant X\leqslant150\) 时，最多售出购进的 \(130\mathrm{~t}\)，所以 \(T=500\times130=65000\). 故
 \[
 T=\begin{cases}
 800X-39000,&100\leqslant X<130,\\
-65000,&130\leqslant X\leqslant150;
+65000,&130\leqslant X\leqslant150.
 \end{cases}
 \]
 
-\item 利润 \(T\) 不少于 57000 元的概率估计值为 \(0.7\).
+\item 当 \(X<130\) 时，\(T\geqslant57000\) 等价于
+\[
+800X-39000\geqslant57000\quad\Longleftrightarrow\quad X\geqslant120
+\]
+当 \(X\geqslant130\) 时利润为 \(65000\)，也满足条件. 因此所求概率为需求量落在 \([120,150]\) 的频率.
+直方图五组的频率依次为
+\(0.010\times10=0.1\)，\(0.020\times10=0.2\)，\(0.030\times10=0.3\)，\(0.025\times10=0.25\)，\(0.015\times10=0.15\).
+所以
+\[
+P(T\geqslant57000)\approx0.3+0.25+0.15=0.7
+\]
 
-\item \(E(T)=59400\).
+\item 各组中点为 \(105,115,125,135,145\)，相应概率为 \(0.1\)，\(0.2\)，\(0.3\)，\(0.25\)，\(0.15\). 对应利润分别为
+\(45000\)，\(53000\)，\(61000\)，\(65000\)，\(65000\).
+因此
+\[
+E(T)=45000\times0.1+53000\times0.2+61000\times0.3
++65000\times0.25+65000\times0.15=59400
+\]
 \end{enumerate}
 \end{solution}
 
@@ -285,8 +546,37 @@ T=\begin{cases}
 
 \begin{solution}
 \begin{enumerate}
-\item \(M:\frac{x^2}{6}+\frac{y^2}{3}=1\).
-\item 四边形 \(ACBD\) 面积的最大值为 \(\frac{8\sqrt{6}}{3}\).
+\item 设椭圆焦距的一半为 \(c\)，则右焦点为 \((c,0)\). 由该点在直线 \(x+y-\sqrt3=0\) 上，得 \(c=\sqrt3\)，所以
+\[
+a^2-b^2=c^2=3
+\]
+取直线方向向量 \((1,-1)\)，设弦中点为 \(P=(u,v)\)，将 \((u+t,v-t)\) 代入椭圆方程. 关于 \(t\) 的一次项系数必须为零，故
+\[
+\frac{u}{a^2}-\frac{v}{b^2}=0
+\]
+又 \(OP\) 的斜率为 \(v/u=1/2\)，从而 \(b^2=a^2/2\). 结合 \(a^2-b^2=3\)，得 \(a^2=6\)，\(b^2=3\). 所以
+\[
+M:\frac{x^2}{6}+\frac{y^2}{3}=1
+\]
+
+\item 直线 \(AB\) 的方向向量为 \((1,-1)\)，由 \(CD\perp AB\)，可取 \(CD\) 的方向向量为 \((1,1)\). 先求 \(AB\) 长度. 将 \(y=\sqrt3-x\) 代入椭圆方程，得
+\[
+\frac{x^2}{6}+\frac{(\sqrt3-x)^2}{3}=1
+\quad\Longleftrightarrow\quad
+x(3x-4\sqrt3)=0
+\]
+故弦端点的横坐标为 \(0\) 和 \(4\sqrt3/3\)，于是
+\[
+|AB|=\sqrt{\left(\frac{4\sqrt3}{3}\right)^2+\left(-\frac{4\sqrt3}{3}\right)^2}=\frac{4\sqrt6}{3}
+\]
+
+对椭圆中所有方向固定为 \((1,1)\) 的弦，过椭圆中心的弦最长. 取中心弦端点为 \((t,t)\)，代入椭圆方程得
+\(\frac{t^2}{6}+\frac{t^2}{3}=1\)，\(t=\sqrt2\)
+所以最长的 \(CD\) 长度为 \(4\). 四边形 \(ACBD\) 的两条对角线互相垂直，面积等于两条对角线乘积的一半，因此
+\[
+S_{ACBD}\leqslant\frac12\cdot\frac{4\sqrt6}{3}\cdot4=\frac{8\sqrt6}{3}
+\]
+当 \(CD\) 为过原点的中心弦时取等号，故面积最大值为 \(\frac{8\sqrt6}{3}\).
 \end{enumerate}
 \end{solution}
 
@@ -301,8 +591,27 @@ T=\begin{cases}
 
 \begin{solution}
 \begin{enumerate}
-\item \(m=1\). \(f(x)\) 在 \((-1,0)\) 上单调递减，在 \((0,+\infty)\) 上单调递增.
-\item 当 \(m\leqslant2\) 时，\(f(x)>0\).
+\item 因为 \(x=0\) 在定义域内，所以 \(m>0\). 又
+\[
+f'(x)=\e^x-\frac1{x+m}
+\]
+由极值点的必要条件 \(f'(0)=0\)，得 \(1-1/m=0\)，所以 \(m=1\). 此时定义域为 \((-1,+\infty)\)，并且
+\[
+f'(x)=\e^x-\frac1{x+1}=\frac{\e^x(x+1)-1}{x+1}
+\]
+令 \(h(x)=\e^x(x+1)\)，则在 \((-1,+\infty)\) 上
+\(h'(x)=\e^x(x+2)>0\)，\(h(0)=1\).
+所以 \(f'(x)<0\) 在 \((-1,0)\) 上成立，\(f'(x)>0\) 在 \((0,+\infty)\) 上成立. 故 \(f(x)\) 在 \((-1,0)\) 上单调递减，在 \((0,+\infty)\) 上单调递增.
+
+\item 令 \(t=x+m>0\). 由于 \(m\leqslant2\)，有
+\[
+\e^x=\e^{t-m}\geqslant\e^{t-2}
+\]
+对 \(t>0\)，函数 \(u(t)=\e^{t-2}-t+1\) 满足 \(u'(t)=\e^{t-2}-1\)，所以它在 \(t=2\) 处取得最小值 \(u(2)=0\)，即 \(\e^{t-2}\geqslant t-1\). 又由 \(\ln t\leqslant t-1\)，当 \(t\ne1\) 时有 \(t-1>\ln t\)；当 \(t=1\) 时，\(\e^{t-2}=\e^{-1}>0=\ln t\). 因此对一切 \(t>0\)，有
+\[
+\e^x\geqslant\e^{t-2}>\ln t=\ln(x+m)
+\]
+因此 \(f(x)>0\).
 \end{enumerate}
 \end{solution}
 
@@ -319,8 +628,56 @@ T=\begin{cases}
 
 \begin{solution}
 \begin{enumerate}
-\item \(CA\) 是 \(\triangle ABC\) 外接圆的直径.
-\item 过 \(B\)，\(E\)，\(F\)，\(C\) 四点的圆的面积与 \(\triangle ABC\) 外接圆面积的比值为 \(\frac{1}{2}\).
+\item 设四点 \(B\)，\(E\)，\(F\)，\(C\) 所在圆为 \(\omega\). 由点 \(A\) 的割线定理，
+\[
+AB\cdot AE=AC\cdot AF
+\]
+结合题设 \(BC\cdot AE=DC\cdot AF\)，消去正数 \(AE\)，得
+\[
+\frac{DC}{BC}=\frac{AC}{AB}
+\]
+记 \(\triangle ABC\) 的内角为 \(A\)，\(B\)，\(C\). 由切线弦定理，\(\angle BCD=A\)；又因 \(D\)，\(B\)，\(A\) 共线且 \(D\) 在 \(BA\) 的延长线上，\(\angle DBC=\pi-B\)，所以 \(\angle CDB=B-A\). 在 \(\triangle DBC\) 中由正弦定理，
+\[
+\frac{DC}{BC}=\frac{\sin B}{\sin(B-A)}
+\]
+在 \(\triangle ABC\) 中由正弦定理，
+\[
+\frac{AC}{AB}=\frac{\sin B}{\sin C}
+\]
+比较两式，得 \(\sin(B-A)=\sin C\). 由于 \(C=\pi-A-B\)，所以 \(\sin C=\sin(A+B)\)，从而
+\[
+\sin(B-A)=\sin(A+B)
+\]
+这里 \(0<B-A<\pi\)，\(0<A+B<\pi\). 若两角相等则推出 \(A=0\)，不可能；故两角互补，即 \(2B=\pi\)，所以 \(B=\pi/2\). 因此 \(\angle ABC=90^\circ\)，由圆的性质，\(CA\) 是外接圆的直径.
+
+\item 设 \(DB=BE=EA=t\). 由图中点的顺序，\(AB=2t\)，\(DA=3t\). 由切线与割线的幂定理，
+\(DC^2=DB\cdot DA=3t^2\)，\(DC=\sqrt3t\).
+由第（1）问得到 \(\angle B=90^\circ\)，且由上面的长度关系
+\[
+AC\cdot BC=DC\cdot AB=2\sqrt3t^2
+\]
+设 \(BC^2=ut^2\)，则 \(AC^2=(u+4)t^2\)，故
+\[
+u(u+4)=12
+\]
+由 \(u>0\) 得 \(u=2\)，所以 \(BC=\sqrt2t\)，\(AC=\sqrt6t\).
+
+取坐标 \(B=(0,0)\)，\(E=(t,0)\)，\(A=(2t,0)\)，\(C=(0,\sqrt2t)\). 由点 \(A\) 关于圆 \(BEFC\) 的幂，
+\[
+AB\cdot AE=AC\cdot AF
+\]
+所以 \(AF=\sqrt{2/3}t=AC/3\)，从而
+\[
+F=\left(\frac{4t}{3},\frac{\sqrt2t}{3}\right)
+\]
+过 \(B\)，\(E\)，\(C\) 的圆方程可写为
+\[
+x^2+y^2-tx-\sqrt2ty=0
+\]
+代入 \(F\) 可验证其也经过 \(F\). 该圆圆心为 \((t/2,\sqrt2t/2)\)，半径平方为 \(3t^2/4\). 原三角形外接圆以 \(CA\) 为直径，半径平方为 \(AC^2/4=3t^2/2\). 故所求面积比为
+\[
+\frac{3t^2/4}{3t^2/2}=\frac12
+\]
 \end{enumerate}
 \end{solution}
 
@@ -338,15 +695,29 @@ y = 2\sin t,
 
 \begin{solution}
 \begin{enumerate}
-\item \(M\) 的轨迹参数方程为
+\item 两动点坐标分别为 \(P=(2\cos\alpha,2\sin\alpha)\) 和 \(Q=(2\cos2\alpha,2\sin2\alpha)\)，所以中点
+\[
+M=\left(\cos\alpha+\cos2\alpha,\ \sin\alpha+\sin2\alpha\right)
+\]
+因此轨迹的参数方程为
 \[
 \begin{cases}
 x=\cos\alpha+\cos2\alpha,\\
-y=\sin\alpha+\sin2\alpha;
+y=\sin\alpha+\sin2\alpha,
 \end{cases}
+\qquad 0<\alpha<2\pi
 \]
 
-\item \(d=\sqrt{2+2\cos\alpha}=2\left|\cos\frac{\alpha}{2}\right|\). 当 \(\alpha=\pi\) 时 \(M\) 在坐标原点，故轨迹过坐标原点.
+\item 由平方和公式，
+\[
+d^2=(\cos\alpha+\cos2\alpha)^2+(\sin\alpha+\sin2\alpha)^2
+=2+2\cos(\alpha-2\alpha)=2+2\cos\alpha
+\]
+故
+\[
+d=\sqrt{2+2\cos\alpha}=2\left|\cos\frac\alpha2\right|
+\]
+当 \(\alpha=\pi\) 时，\(d=0\)，此时 \(M\) 为坐标原点，所以轨迹过坐标原点.
 \end{enumerate}
 \end{solution}
 
@@ -361,7 +732,21 @@ y=\sin\alpha+\sin2\alpha;
 
 \begin{solution}
 \begin{enumerate}
-\item \(ab+bc+ca\leqslant\frac13\).
-\item \(\frac{a^2}{b}+\frac{b^2}{c}+\frac{c^2}{a}\geqslant1\).
+\item 由平方恒非负，
+\[
+(a-b)^2+(b-c)^2+(c-a)^2\geqslant0
+\]
+即 \(a^2+b^2+c^2\geqslant ab+bc+ca\). 因此
+\[
+1=(a+b+c)^2=a^2+b^2+c^2+2(ab+bc+ca)
+\geqslant3(ab+bc+ca)
+\]
+所以 \(ab+bc+ca\leqslant1/3\).
+
+\item 由柯西不等式，
+\[
+\frac{a^2}{b}+\frac{b^2}{c}+\frac{c^2}{a}
+\geqslant\frac{(a+b+c)^2}{a+b+c}=1
+\]
 \end{enumerate}
 \end{solution}

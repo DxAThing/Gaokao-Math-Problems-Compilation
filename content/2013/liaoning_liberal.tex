@@ -16,6 +16,11 @@
 B
 \end{answer}
 
+\begin{solution}
+由 \(B=\{x\mid |x|<2\}=(-2,2)\)，而 \(A=\{0,1,2,3,4\}\)，所以
+\(A\cap B=\{0,1\}\)，故选 B.
+\end{solution}
+
 \begin{problem}
 复数的 \(z = \frac{1}{\i - 1}\) 模为（\quad）
 
@@ -30,6 +35,14 @@ B
 B
 \end{answer}
 
+\begin{solution}
+\[
+|z|=\left|\frac{1}{\i-1}\right|=\frac{1}{|\i-1|}
+ =\frac{1}{\sqrt{(-1)^2+1^2}}=\frac{\sqrt{2}}{2}
+\]
+故选 B.
+\end{solution}
+
 \begin{problem}
 已知点 \(A(1,3)\)，\(B(4,-1)\)，则与向量 \(\overrightarrow{AB}\) 同方向的单位向量为（\quad）
 
@@ -43,6 +56,17 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+\(\overrightarrow{AB}=(4-1,-1-3)=(3,-4)\)，且
+\(\lvert\overrightarrow{AB}\rvert=\sqrt{3^2+(-4)^2}=5\). 因此与
+\(\overrightarrow{AB}\) 同方向的单位向量为
+\[
+\frac{\overrightarrow{AB}}{\lvert\overrightarrow{AB}\rvert}
+ =\left(\frac35,-\frac45\right)
+\]
+故选 A.
+\end{solution}
 
 \begin{problem}
 下面是关于公差 \(d > 0\) 的等差数列 \(\{a_{n}\}\) 的四个命题：
@@ -67,6 +91,33 @@ A
 D
 \end{answer}
 
+\begin{solution}
+设 \(a_n=a_1+(n-1)d\)，其中 \(d>0\). 则
+\[
+a_{n+1}-a_n=d>0
+\]
+所以 \(p_1\) 正确.
+
+对 \(p_2\)，有
+\[
+(n+1)a_{n+1}-na_n=a_n+(n+1)d=a_1+2nd
+\]
+该式不一定为正，例如可取 \(a_1=-100\)，\(d=1\)，\(n=1\)，故 \(p_2\) 不一定正确.
+
+对 \(p_3\)，有
+\[
+\frac{a_{n+1}}{n+1}-\frac{a_n}{n}
+ =\frac{nd-a_n}{n(n+1)}
+\]
+该式不一定为正，例如可取 \(a_1=100\)，\(d=1\)，故 \(p_3\) 不一定正确.
+
+最后
+\[
+(a_{n+1}+3(n+1)d)-(a_n+3nd)=4d>0
+\]
+所以 \(p_4\) 正确. 真命题为 \(p_1\)，\(p_4\)，故选 D.
+\end{solution}
+
 \begin{problem}
 某班的全体学生参加英语测试，成绩的频率分布直方图如图，数据的分组依次为：\([20,40)\)，\([40,60)\)，\([60,80)\)，\([80,100]\). 若低于 \(60\) 分的人数是 \(15\)，则该班的学生人数是（\quad）
 
@@ -83,6 +134,15 @@ D
 B
 \end{answer}
 
+\begin{solution}
+由直方图，\([20,40)\) 和 \([40,60)\) 两组的频率分别为
+\(20\times0.005=0.1\) 与 \(20\times0.01=0.2\)，所以低于 \(60\) 分的频率为 \(0.3\). 设全班有 \(N\) 人，则
+\[
+0.3N=15
+\]
+解得 \(N=50\). 故选 B.
+\end{solution}
+
 \begin{problem}
 在 \(\triangle ABC\) 中，内角 \(A\)，\(B\)，\(C\) 所对的边分别为 \(a\)，\(b\)，\(c\)，若 \(a \sin B \cos C + c \sin B \cos A = \frac{1}{2} b\)，且 \(a > b\)，则 \(\angle B =\)（\quad）
 
@@ -97,6 +157,27 @@ B
 A
 \end{answer}
 
+\begin{solution}
+由正弦定理，存在正数 \(2R\)，使得
+\(a=2R\sin A\)，\(b=2R\sin B\)，\(c=2R\sin C\). 因而
+\[
+a\cos C+c\cos A
+ =2R(\sin A\cos C+\sin C\cos A)
+ =2R\sin(A+C)=2R\sin B=b
+\]
+题设等式化为 \(b\sin B=\frac12b\)，所以
+\(\sin B=\frac12\). 由于 \(0<B<\pi\)，故
+\(B=\frac\pi6\) 或 \(B=\frac{5\pi}6\).
+
+又因 \(a>b\)，由正弦定理得 \(\sin A>\sin B=\frac12\). 若
+\(B=\frac{5\pi}6\)，则 \(A<\frac\pi6\)，从而
+\(\sin A<\frac12\)，矛盾. 因此
+\[
+B=\frac\pi6
+\]
+故选 A.
+\end{solution}
+
 \begin{problem}
 已知函数 \( f(x) = \ln (\sqrt{1 + 9x^2} - 3x) + 1 \)，则 \( f(\lg 2) + f\left(\lg \frac{1}{2}\right) = \)（\quad）
 
@@ -108,8 +189,16 @@ A
 \end{problem}
 
 \begin{answer}
-C
+D
 \end{answer}
+
+\begin{solution}
+令 \(t=\lg2\)，则 \(\lg\frac12=-t\). 于是
+\[
+f(t)+f(-t)=\ln\left[(\sqrt{1+9t^2}-3t)(\sqrt{1+9t^2}+3t)\right]+2=\ln1+2=2
+\]
+故选 D.
+\end{solution}
 
 \begin{problem}
 执行如图所示的程序框图，若输入 \(n = 8\)，则输出 \(S =\)（\quad）
@@ -127,6 +216,23 @@ C
 A
 \end{answer}
 
+\begin{solution}
+程序从 \(i=2\) 开始，每次循环把 \(i\) 增加 \(2\)，当 \(i\leqslant8\) 时累加. 因此
+\[
+S=\frac1{2^2-1}+\frac1{4^2-1}+\frac1{6^2-1}+\frac1{8^2-1}
+\]
+利用
+\[
+\frac1{i^2-1}=\frac12\left(\frac1{i-1}-\frac1{i+1}\right)
+\]
+得
+\[
+S=\frac12\left(1-\frac13+\frac13-\frac15+\frac15-\frac17+\frac17-\frac19\right)
+ =\frac12\left(1-\frac19\right)=\frac49
+\]
+故选 A.
+\end{solution}
+
 \begin{problem}
 已知点 \(O(0,0)\)，\(A(0,b)\)，\(B(a,a^3)\). 若 \(\triangle OAB\) 为直角三角形，则必有（\quad）
 
@@ -140,6 +246,38 @@ A
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+三角形非退化，所以直角不能在 \(O\) 点；只需分别讨论直角在 \(A\) 或 \(B\).
+
+若 \(\angle A=90^\circ\)，则
+\[
+\overrightarrow{AO}=(0,-b)
+\]
+又 \(\overrightarrow{AB}=(a,a^3-b)\)，
+从而
+\[
+\overrightarrow{AO}\cdot\overrightarrow{AB}=b(b-a^3)=0
+\]
+因三角形非退化，得 \(b=a^3\).
+
+若 \(\angle B=90^\circ\)，则
+\[
+\overrightarrow{BO}=(-a,-a^3)
+\]
+又 \(\overrightarrow{BA}=(-a,b-a^3)\)，
+所以
+\[
+\overrightarrow{BO}\cdot\overrightarrow{BA}
+ =a^2-a^3(b-a^3)
+ =-a^3\left(b-a^3-\frac1a\right)=0
+\]
+因三角形非退化，得 \(b=a^3+\frac1a\). 因此必有
+\[
+\left(b-a^3\right)\left(b-a^3-\frac1a\right)=0
+\]
+故选 C.
+\end{solution}
 
 \begin{problem}
 已知直三棱柱 \(ABC-A_{1}B_{1}C_{1}\) 的 \(6\) 个顶点都在球 \(O\) 的球面上. 若 \(AB = 3\)，\(AC = 4\)，\(AB \perp AC\)，\(AA_{1} = 12\)，则球 \(O\) 的半径为（\quad）
@@ -155,6 +293,19 @@ C
 C
 \end{answer}
 
+\begin{solution}
+底面 \(\triangle ABC\) 在 \(A\) 点直角，所以
+\[
+BC=\sqrt{AB^2+AC^2}=\sqrt{3^2+4^2}=5
+\]
+底面三角形的外接圆半径为 \(BC/2=5/2\). 直三棱柱的球心在上下两个底面外接圆圆心连线的中点处，因此球半径满足
+\[
+R^2=\left(\frac52\right)^2+\left(\frac{AA_1}{2}\right)^2
+ =\frac{25}{4}+6^2=\frac{169}{4}
+\]
+故 \(R=\frac{13}{2}\)，选 C.
+\end{solution}
+
 \begin{problem}
 已知椭圆 \(C:\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\)（\(a > b > 0\)）的左焦点为 \(F\)，\(C\) 与过原点的直线相交于 \(A\)，\(B\) 两点，连接 \(AF\)，\(BF\)，若 \(|AB| = 10\)，\(|BF| = 8\)，\(\cos \angle ABF = \frac{4}{5}\)，则 \(C\) 的离心率为（\quad）
 
@@ -169,6 +320,40 @@ C
 B
 \end{answer}
 
+\begin{solution}
+由余弦定理，在 \(\triangle ABF\) 中
+\[
+AF^2=AB^2+BF^2-2\cdot AB\cdot BF\cos\angle ABF
+ =10^2+8^2-2\cdot10\cdot8\cdot\frac45=36
+\]
+所以 \(AF=6\).
+
+设椭圆的右焦点为 \(F'\). 因直线 \(AB\) 过原点，\(A\)，\(B\) 关于原点对称，所以 \(AF'=BF\). 由椭圆定义
+\[
+2a=AF+AF'=AF+BF=6+8=14
+\]
+从而 \(a=7\).
+
+设 \(A=(x,y)\)，则 \(B=(-x,-y)\)，且 \(AB=10\) 给出
+\(x^2+y^2=25\). 设左焦点 \(F=(-c,0)\)，由
+\[
+AF^2=(x+c)^2+y^2=x^2+y^2+c^2+2cx
+\]
+和 \(BF^2=(c-x)^2+y^2\)，得
+\[
+AF^2-BF^2=4cx=36-64=-28
+\]
+于是 \(2cx=-14\)，代入 \(AF^2=36\) 得
+\[
+36=25+c^2-14=c^2+11
+\]
+所以 \(c=5\). 因而离心率为
+\[
+e=\frac ca=\frac57
+\]
+故选 B.
+\end{solution}
+
 \begin{problem}
 已知函数 \( f(x) = x^2 - 2(a + 2)x + a^2 \)，\( g(x) = -x^2 + 2(a - 2)x - a^2 + 8 \)，设 \( H_1(x) = \max \{f(x), g(x)\} \)，\( H_2(x) = \min \{f(x), g(x)\} \)（\(\max \{p, q\}\) 表示 \(p\)，\(q\) 中的较大值，\(\min \{p, q\}\) 表示 \(p\)，\(q\) 中的较小值）. 记 \( H_1(x) \) 的最小值为 \(A\)，\( H_2(x) \) 的最大值为 \(B\)，则 \( A - B = \)（\quad）
 
@@ -180,22 +365,57 @@ B
 \end{problem}
 
 \begin{answer}
-C
+B
 \end{answer}
+
+\begin{solution}
+两函数之差为
+\[
+f(x)-g(x)=2\bigl((x-a)^2-4\bigr)
+\]
+故交点横坐标为 \(a-2\) 与 \(a+2\)，且在区间 \([a-2,a+2]\) 内有 \(f\leqslant g\).
+
+函数 \(H_1=\max\{f,g\}\) 在左侧取 \(f\)，中间取 \(g\)，右侧取 \(f\). 因为
+\(f(x)=(x-a-2)^2-4a-4\)，其在右侧交点处取得最小值，故
+\[
+A=H_1(a+2)=f(a+2)=-4a-4
+\]
+
+函数 \(H_2=\min\{f,g\}\) 在中间取 \(f\)，两侧取 \(g\). 在中间区间上，\(f\)
+在左端点取得最大值；左侧的 \(g\) 也在左端点取得最大值，而右侧的 \(g\) 在右端点取得最大值
+\(g(a+2)=-4a-4<12-4a\)，因此
+\[
+B=H_2(a-2)=f(a-2)=g(a-2)=12-4a
+\]
+所以
+\[
+A-B=(-4a-4)-(12-4a)=-16
+\]
+故选 B.
+\end{solution}
 
 \section{填空题}
 
 \begin{problem}
 某几何体的三视图如图所示.
 
-\bitmapfigure[max width=0.46\linewidth]{img/2013/liaoning_liberal/q13_fig1.png}
-
 则该几何体的体积是\fillinblank{}.
+
+\noindent
+\leftskip=0pt\relax
+\bitmapfigure[float=inline,width=0.40\linewidth]{img/2013/liaoning_liberal/q13_fig1.png}
 \end{problem}
 
 \begin{answer}
 \(16\pi - 16\)
 \end{answer}
+
+\begin{solution}
+由三视图可知，该几何体是高为 \(4\)、底面半径为 \(2\) 的圆柱去掉一个底面边长为 \(2\)、高为 \(4\) 的正四棱柱. 因此体积为
+\[
+V=\pi\cdot2^2\cdot4-2^2\cdot4=16\pi-16
+\]
+\end{solution}
 
 \begin{problem}
 已知等比数列 \(\{a_n\}\) 是递增数列，\(S_n\) 是 \(\{a_n\}\) 的前 \(n\) 项和. 若 \(a_1\)，\(a_3\) 是方程 \(x^2 - 5x + 4 = 0\) 的两个根，则 \(S_6 =\)\fillinblank{}.
@@ -205,6 +425,19 @@ C
 63
 \end{answer}
 
+\begin{solution}
+方程 \(x^2-5x+4=0\) 的两根为 \(1,4\). 设等比数列首项为 \(a_1\)，公比为 \(q\).
+若 \(a_1=1\)，\(a_3=4\)，则 \(q^2=4\). 由于数列递增且首项为正，必须有 \(q>1\)，故 \(q=2\).
+若 \(a_1=4\)，\(a_3=1\)，则 \(q^2=1/4\)，不可能使首项为正的等比数列递增. 所以
+\[
+a_1=1
+\]
+从而
+\[
+S_6=\frac{1(2^6-1)}{2-1}=63
+\]
+\end{solution}
+
 \begin{problem}
 已知 \(F\) 为双曲线 \(C:\frac{x^2}{9} - \frac{y^2}{16} = 1\) 的左焦点，\(P\)，\(Q\) 为 \(C\) 上的点. 若 \(PQ\) 的长等于虚轴长的 \(2\) 倍，点 \(A(5,0)\) 在线段 \(PQ\) 上，则 \(\triangle PQF\) 的周长为\fillinblank{}.
 \end{problem}
@@ -213,6 +446,51 @@ C
 44
 \end{answer}
 
+\begin{solution}
+双曲线的实半轴、虚半轴和半焦距分别为 \(a=3\)，\(b=4\)，\(c=5\)，右焦点为
+\(F_2=(5,0)=A\)，而题设的左焦点为 \(F=(-5,0)\). 由题设
+\[
+PQ=2\times 2b=16
+\]
+点 \(A=F_2\) 在线段 \(PQ\) 上，所以
+\[
+PF_2+QF_2=PQ=16
+\]
+下面说明 \(P\)，\(Q\) 确在右支上. 若 \(PQ\) 不是竖直线，设其方程为
+\(y=m(x-5)\)，并令 \(u=m^2\). 代入双曲线方程，令 \(t=x-5\)，得
+\[
+(16-9u)t^2+160t+256=0
+\]
+因 \(A\) 位于两交点之间，须有 \(u>\frac{16}{9}\). 设两交点的横坐标为
+\(x_1\)，\(x_2\)，由求根公式得
+\[
+|x_1-x_2|=\frac{96\sqrt{1+u}}{9u-16}
+\]
+由于对应点的纵坐标差为 \(m(x_1-x_2)\)，所以
+\[
+PQ=|x_1-x_2|\sqrt{1+m^2}
+=\frac{96(1+u)}{9u-16}
+\]
+结合 \(PQ=16\)，得 \(u=\frac{22}{3}\). 此时两交点的横坐标为
+\[
+x=\frac{33\pm8\sqrt3}{5}>3
+\]
+故均在右支上. 若 \(PQ\) 为竖直线，则两交点为
+\((5,\pm\frac{16}{3})\)，弦长为 \(\frac{32}{3}\ne16\)，也不符合题设. 因而
+双曲线定义给出
+\[
+PF-PF_2=QF-QF_2=2a=6
+\]
+因此
+\[
+PF+QF=(PF_2+6)+(QF_2+6)=16+12=28
+\]
+所求三角形周长为
+\[
+PQ+PF+QF=16+28=44
+\]
+\end{solution}
+
 \begin{problem}
 为了考察某校各班参加课外书法小组的人数，从全校随机抽取 \(5\) 个班级，把每个班级参加该小组的人数作为样本数据. 已知样本平均数为 \(7\)，样本方差为 \(4\)，且样本数据互不相同，则样本数据中的最大值为\fillinblank{}.
 \end{problem}
@@ -220,6 +498,29 @@ C
 \begin{answer}
 10
 \end{answer}
+
+\begin{solution}
+设样本数据为 \(x_1\)，\(\ldots\)，\(x_5\)，令 \(y_i=x_i-7\). 由平均数和方差得
+\[
+\sum_{i=1}^5y_i=0
+\]
+并且
+\[
+\sum_{i=1}^5y_i^2=5\times4=20
+\]
+设最大值为 \(7+k\)，则其余四个偏差之和为 \(-k\). 由柯西不等式，四个偏差的平方和至少为
+\(k^2/4\)，所以
+\[
+20\geqslant k^2+\frac{k^2}{4}=\frac54k^2
+\]
+从而 \(k\leqslant4\). 若 \(k=4\)，上式取等号，四个其余偏差必须全为 \(-1\)，这与样本数据互不相同矛盾. 又因 \(x_i\) 表示人数，\(k\) 为整数，所以 \(k\leqslant3\)，最大值不超过 \(10\).
+
+数据 \(4\)，\(6\)，\(7\)，\(8\)，\(10\) 的平均数为 \(7\)，且
+\[
+\frac{(4-7)^2+(6-7)^2+(7-7)^2+(8-7)^2+(10-7)^2}{5}=4
+\]
+满足所有条件，故最大值为 \(10\).
+\end{solution}
 
 \section{解答题}
 
@@ -231,7 +532,35 @@ C
 \end{problem}
 
 \begin{solution}
-短答案：\(x=\frac{\pi}{6}\)；\(f(x)\) 的最大值为\(\frac{3}{2}\).
+\begin{enumerate}
+\item
+\[
+|\bs{a}|^2=3\sin^2x+\sin^2x=4\sin^2x
+\]
+并且
+\[
+|\bs{b}|^2=\cos^2x+\sin^2x=1
+\]
+由 \(|\bs{a}|=|\bs{b}|\) 得 \(4\sin^2x=1\). 因
+\(x\in[0,\frac\pi2]\)，所以 \(\sin x\geqslant0\)，从而
+\[
+x=\frac\pi6
+\]
+
+\item
+\[
+f(x)=\bs{a}\cdot\bs{b}=\sqrt3\sin x\cos x+\sin^2x
+ =\frac12+\frac12(\sqrt3\sin2x-\cos2x)
+\]
+又
+\[
+\sqrt3\sin2x-\cos2x=2\sin\left(2x-\frac\pi6\right)
+\]
+当 \(x\in[0,\frac\pi2]\) 时，取 \(x=\frac\pi3\) 可使上式取得最大值 \(2\)，因此
+\[
+\max f(x)=\frac12+\frac12\times2=\frac32
+\]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -243,7 +572,33 @@ C
 \end{problem}
 
 \begin{solution}
-短答案：\(BC\perp\) 平面 \(PAC\)；\(QG\parallel\) 平面 \(PBC\).
+\begin{enumerate}
+\item 由 \(AB\) 是圆的直径，得 \(\angle ACB=90^\circ\)，所以
+\(BC\perp AC\). 又因为 \(PA\perp\) 平面 \(ABC\)，且 \(BC\) 在平面 \(ABC\) 内，所以
+\(BC\perp PA\). 直线 \(PA\)，\(AC\) 是平面 \(PAC\) 内相交的两条直线，故
+\[
+BC\perp\text{ 平面 }PAC
+\]
+
+\item 以 \(A\) 为参考点，记
+\(\overrightarrow{AP}=\bs{p}\)，\(\overrightarrow{AB}=\bs{b}\)，\(\overrightarrow{AC}=\bs{c}\). 因 \(O\)
+是 \(AB\) 的中点，\(\overrightarrow{AO}=\frac12\bs{b}\). 又 \(Q\) 是 \(PA\) 的中点，\(G\) 是
+\(\triangle AOC\) 的重心，所以
+\[
+\overrightarrow{AQ}=\frac12\bs{p}
+\]
+并且 \(\overrightarrow{AG}=\frac13\left(\frac12\bs{b}+\bs{c}\right)\)，
+因此
+\[
+\overrightarrow{QG}=\frac16\bs{b}+\frac13\bs{c}-\frac12\bs{p}
+ =\frac16(\bs{b}-\bs{p})+\frac13(\bs{c}-\bs{p})
+ =\frac16\overrightarrow{PB}+\frac13\overrightarrow{PC}
+\]
+该向量是平面 \(PBC\) 内两个向量的线性组合，故
+\[
+QG\parallel\text{ 平面 }PBC
+\]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -256,7 +611,20 @@ C
 \end{problem}
 
 \begin{solution}
-短答案：\(\frac{2}{5}\)；\(\frac{8}{15}\).
+从 \(6\) 道题中任取 \(2\) 道，基本事件总数为
+\(\mathrm C_6^2=15\).
+\begin{enumerate}
+\item 所取两题都是甲类题的基本事件数为 \(\mathrm C_4^2=6\)，所以概率为
+\[
+\frac{\mathrm C_4^2}{\mathrm C_6^2}=\frac6{15}=\frac25
+\]
+
+\item 所取两题不是同一类题，即一题甲类、一题乙类，基本事件数为
+\(\mathrm C_4^1\mathrm C_2^1=8\)，所以概率为
+\[
+\frac{\mathrm C_4^1\mathrm C_2^1}{\mathrm C_6^2}=\frac8{15}
+\]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -272,7 +640,61 @@ C
 \end{problem}
 
 \begin{solution}
-短答案：\(p=2\)；点 \(N\) 的轨迹方程为 \(x^2=\frac{4}{3}y\).
+\begin{enumerate}
+\item 将 \(C_1\) 写成 \(y=x^2/4\)，其在点 \((x_A,y_A)\) 处切线的斜率为
+\(x_A/2\). 由斜率为 \(-1/2\)，得
+\[
+x_A=-1
+\]
+并且 \(y_A=\frac14\)，
+切线 \(MA\) 为
+\[
+y-\frac14=-\frac12(x+1),
+\qquad\text{即}\qquad y=-\frac12x-\frac14
+\]
+当 \(x_0=1-\sqrt2\) 时，因 \(M\) 在该切线上且在 \(C_2\) 上，故
+\[
+-\frac{(1-\sqrt2)^2}{2p}
+ =-\frac12(1-\sqrt2)-\frac14
+ =-\frac{3-2\sqrt2}{4}
+\]
+于是 \(p=2\).
+
+\item 设切点 \(A\)，\(B\) 分别对应参数 \(m_1\)，\(m_2\)，即
+\[
+A=(2m_1,m_1^2)
+\]
+并且 \(B=(2m_2,m_2^2)\).
+抛物线 \(C_1\) 在该点的切线方程为 \(y=mx-m^2\). 因切线经过
+\(M(x_0,y_0)\)，所以 \(m_1\)，\(m_2\) 是方程
+\[
+m^2-x_0m+y_0=0
+\]
+的两根，从而
+\[
+m_1+m_2=x_0
+\]
+并且 \(m_1m_2=y_0\).
+设 \(N=(x,y)\) 为 \(AB\) 中点，则
+\[
+x=m_1+m_2=x_0
+\]
+且
+\[
+y=\frac{m_1^2+m_2^2}{2}
+ =\frac{(m_1+m_2)^2-2m_1m_2}{2}
+ =\frac{x_0^2-2y_0}{2}
+\]
+由 \(p=2\)，曲线 \(C_2\) 为 \(x_0^2=-4y_0\)，所以
+\[
+y=\frac{x_0^2+x_0^2/2}{2}=\frac34x_0^2
+\]
+又 \(x=x_0\)，故轨迹方程为
+\[
+x^2=\frac43y
+\]
+当 \(M=O\) 时 \(x_0=y_0=0\)，上式也给出 \(N=O\)，故不需另加条件.
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -283,7 +705,52 @@ C
 \end{problem}
 
 \begin{solution}
-短答案：第（1）问不等式成立；第（2）问 \(a\in(-\infty,-2]\).
+\begin{enumerate}
+\item 设 \(h(x)=x-\sin x\). 在 \([0,1]\) 上，
+\(h'(x)=1-\cos x\geqslant0\)，且 \(h(0)=0\)，所以 \(\sin x\leqslant x\).
+
+再设 \(g(x)=\sin x-\frac{\sqrt2}{2}x\). 因为
+\(g''(x)=-\sin x\leqslant0\)，所以 \(g\) 在 \([0,1]\) 上为凹函数，其最小值在端点取得. 又
+\(g(0)=0\)，\(g(1)=\sin1-\frac{\sqrt2}{2}>0\)，
+其中 \(1>\frac\pi4\) 且正弦函数在 \([0,\frac\pi2]\) 上递增. 因此 \(g(x)\geqslant0\)，即
+\[
+\frac{\sqrt2}{2}x\leqslant\sin x\leqslant x
+\]
+
+\item 记
+\[
+F_a(x)=ax+x^2+\frac{x^3}{2}+2(x+2)\cos x
+\]
+若题设不等式对所有 \(x\in[0,1]\) 成立，则对 \(x\in(0,1]\) 有
+\[
+a\leqslant \frac{4-x^2-x^3/2-2(x+2)\cos x}{x}
+\]
+将分子写成
+\[
+-2x+2(x+2)(1-\cos x)-x^2-\frac{x^3}{2}
+\]
+并令 \(x\to0^+\)，由 \(\frac{1-\cos x}{x}\to0\)，得到 \(a\leqslant-2\).
+
+反之，若 \(a\leqslant-2\)，因 \(x\geqslant0\)，只需证明 \(F_{-2}(x)\leqslant4\). 而
+\[
+4-F_{-2}(x)=2(x+2)(1-\cos x)-x^2-\frac{x^3}{2}
+\]
+对 \(x/2\in[0,1]\) 使用第（1）问，得
+\[
+1-\cos x=2\sin^2\frac{x}{2}
+ \geqslant2\left(\frac{\sqrt2}{2}\cdot\frac{x}{2}\right)^2
+ =\frac{x^2}{4}
+\]
+因此
+\[
+4-F_{-2}(x)
+ \geqslant2(x+2)\frac{x^2}{4}-x^2-\frac{x^3}{2}=0
+\]
+故实数 \(a\) 的取值范围为
+\[
+a\in(-\infty,-2]
+\]
+\end{enumerate}
 \end{solution}
 
 \section{选考题：解答题}
@@ -297,7 +764,39 @@ C
 \end{problem}
 
 \begin{solution}
-短答案：\(\angle FEB=\angle CEB\)；\(EF^{2}=AD\cdot BC\).
+\begin{enumerate}
+\item 因 \(AB\) 是直径，\(\angle AEB=90^\circ\). 又 \(EF\perp AB\)，所以在直角三角形
+\(AEB\) 中，\(EF\) 是斜边 \(AB\) 上的高，得到
+\[
+\angle FEB=\angle EAB
+\]
+另一方面，切线弦定理给出
+\[
+\angle CEB=\angle EAB
+\]
+因此 \(\angle FEB=\angle CEB\).
+
+\item 由 \(AD\perp CD\)，且 \(D\)，\(E\)，\(C\) 共线，三角形 \(ADE\) 在 \(D\) 点为直角. 由切线弦定理
+\(\angle AED=\angle ABE\)，故
+\[
+AD=AE\sin\angle AED=AE\sin\angle ABE=AF
+\]
+最后一个等式来自直角三角形 \(AEB\) 中的三角函数关系.
+
+同理，三角形 \(BCE\) 在 \(C\) 点为直角，且
+\(\angle BEC=\angle BAE\)，所以
+\[
+BC=BE\sin\angle BEC=BE\sin\angle BAE=BF
+\]
+又由直角三角形 \(EAB\) 的斜边高定理，
+\[
+EF^2=AF\cdot FB
+\]
+结合 \(AD=AF\)、\(BC=BF\)，得
+\[
+EF^2=AD\cdot BC
+\]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -313,7 +812,39 @@ y = \frac{b}{2} t^3 + 1,
 \end{problem}
 
 \begin{solution}
-短答案：\(C_{1}\) 与 \(C_{2}\) 的交点极坐标为 \((4,\frac{\pi}{2})\)，\((2\sqrt{2},\frac{\pi}{4})\)；\(a=-1\)，\(b=2\).
+\begin{enumerate}
+\item 由 \(\rho=4\sin\theta\)，得
+\[
+\rho^2=4\rho\sin\theta
+\]
+即 \(x^2+y^2=4y\).
+由另一个方程，
+\[
+\rho\cos\left(\theta-\frac\pi4\right)=2\sqrt2
+\]
+化为 \(x+y=4\). 联立得
+\[
+x^2+(4-x)^2=4(4-x)
+\]
+即 \(2x(x-2)=0\). 所以交点为 \((0,4)\) 与 \((2,2)\)，对应的极坐标分别为
+\(\left(4,\frac\pi2\right)\)，\(\left(2\sqrt2,\frac\pi4\right)\).
+
+\item 圆 \(C_1:x^2+y^2=4y\) 的圆心为 \(P=(0,2)\). 两交点的中点为
+\[
+Q=\left(\frac{0+2}{2},\frac{4+2}{2}\right)=(1,3)
+\]
+因此直线 \(PQ\) 的方程为 \(y=x+2\). 由参数方程消去参数
+\(t^3=x-a\)，得到
+\[
+y=\frac b2(x-a)+1
+\]
+与 \(y=x+2\) 比较斜率和截距，得
+\[
+\frac b2=1
+\]
+且 \(1-\frac{ab}{2}=2\)，
+所以 \(b=2\)，\(a=-1\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -326,5 +857,40 @@ y = \frac{b}{2} t^3 + 1,
 \end{problem}
 
 \begin{solution}
-短答案：第（1）问解集为 \((-\infty,1]\cup[5,+\infty)\)；第（2）问 \(a=3\).
+\begin{enumerate}
+\item 当 \(a=2\) 时，分三段讨论.
+当 \(x\leqslant2\) 时，原不等式为
+\[
+2-x\geqslant x
+\]
+得 \(x\leqslant1\). 当 \(2\leqslant x\leqslant4\) 时，原不等式为
+\(x-2\geqslant x\)，无解. 当 \(x\geqslant4\) 时，原不等式为
+\[
+x-2\geqslant8-x
+\]
+得 \(x\geqslant5\). 所以解集为
+\[
+(-\infty,1]\cup[5,+\infty)
+\]
+
+\item 因 \(a>1\)，有
+\[
+f(2x+a)=|2x|=2|x|
+\]
+题设不等式等价于
+\[
+\left||x|-|x-a|\right|\leqslant1
+\]
+当 \(x<0\) 时，\(|x|=-x\)，\(|x-a|=a-x\)，左边等于 \(a>1\)，无解.
+
+当 \(0\leqslant x\leqslant a\) 时，左边为 \(|2x-a|\)，所以
+\[
+\frac{a-1}{2}\leqslant x\leqslant\frac{a+1}{2}
+\]
+当 \(x\geqslant a\) 时，左边等于 \(a>1\)，也无解. 因而解集为
+\[
+\left[\frac{a-1}{2},\frac{a+1}{2}\right]
+\]
+与题设的 \([1,2]\) 相同，故 \(a=3\).
+\end{enumerate}
 \end{solution}

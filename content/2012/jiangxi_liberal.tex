@@ -6,15 +6,21 @@
 若复数 \(z = 1 + \i\) （\(\i\) 为虚数单位），\(\overline{z}\) 是 \(z\) 的共轭复数，则 \(z^2 + \overline{z}^2\) 的虚部为（\quad）
 
 \choices
-    {0}
+    {\(0\)}
     {\(-1\)}
-    {1}
+    {\(1\)}
     {\(-2\)}
 \end{problem}
 
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+由共轭复数的定义，\(\overline{z}=1-\i\). 因此
+\(z^2=(1+\i)^2=2\i\)，\(\overline{z}^{\,2}=(1-\i)^2=-2\i\)，从而
+\(z^2+\overline{z}^{\,2}=0\)，其虚部为 \(0\)，故选 A.
+\end{solution}
 
 \begin{problem}
 若全集 \(U = \{x \in \R \mid x^2 \leqslant 4\}\)，则集合 \(A = \{x \in \R \mid |x + 1| \leqslant 1\}\) 的补集 \(\complement_U A\) 为（\quad）
@@ -30,6 +36,13 @@ A
 C
 \end{answer}
 
+\begin{solution}
+由 \(x^2\leqslant4\) 得全集 \(U=[-2,2]\). 又由
+\(\lvert x+1\rvert\leqslant1\) 得 \(-2\leqslant x\leqslant0\)，即
+\(A=[-2,0]\). 因此
+\(\complement_U A=(0,2]\)，故选 C.
+\end{solution}
+
 \begin{problem}
 设函数 \( f(x) = \begin{cases}
 x^2 + 1, & x \leqslant 1,\\
@@ -38,7 +51,7 @@ x^2 + 1, & x \leqslant 1,\\
 
 \choices
     {\(\frac{1}{5}\)}
-    {3}
+    {\(3\)}
     {\( \frac{2}{3} \)}
     {\(\frac{13}{9}\)}
 \end{problem}
@@ -46,6 +59,12 @@ x^2 + 1, & x \leqslant 1,\\
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+因为 \(3>1\)，所以 \(f(3)=\dfrac{2}{3}\). 又
+\(\dfrac{2}{3}\leqslant1\)，故应使用第一段解析式，得到
+\(f(f(3))=f\left(\dfrac{2}{3}\right)=\left(\dfrac{2}{3}\right)^2+1=\dfrac{13}{9}\)，故选 D.
+\end{solution}
 
 \begin{problem}
 若 \(\frac{\sin\alpha + \cos\alpha}{\sin\alpha - \cos\alpha} = \frac{1}{2}\)，则 \(\tan 2\alpha =\)（\quad）
@@ -58,22 +77,41 @@ D
 \end{problem}
 
 \begin{answer}
-B
-\end{answer}
+    B
+    \end{answer}
+
+\begin{solution}
+由分母不为零且可交叉相乘，原式等价于
+\(2(\sin\alpha+\cos\alpha)=\sin\alpha-\cos\alpha\)，即
+\(\sin\alpha+3\cos\alpha=0\). 因此 \(\cos\alpha\neq0\)，且
+\(\tan\alpha=-3\). 于是
+\[
+\tan2\alpha=\frac{2\tan\alpha}{1-\tan^2\alpha}
+ =\frac{-6}{1-9}=\frac{3}{4}
+\]
+故选 B.
+\end{solution}
 
 \begin{problem}
 观察下列事实： \(|x| + |y| = 1\) 的不同整数解 \((x, y)\) 的个数为 4，\(|x| + |y| = 2\) 的不同整数解 \((x, y)\) 的个数为 8，\(|x| + |y| = 3\) 的不同整数解 \((x, y)\) 的个数为 12，\(\cdots\)，则 \(|x| + |y| = 20\) 的不同整数解 \((x, y)\) 的个数为（\quad）
 
 \choices
-    {76}
-    {80}
-    {86}
-    {92}
+    {\(76\)}
+    {\(80\)}
+    {\(86\)}
+    {\(92\)}
 \end{problem}
 
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+当 \(n\geqslant1\) 时，若 \(x=0\) 或 \(y=0\)，共有 \(4\) 个解；若
+\(x\neq0\) 且 \(y\neq0\)，令 \(\lvert x\rvert=k\)，则
+\(k=1\)，\(2\)，\(\ldots\)，\(n-1\)，每个 \(k\) 对应 \(4\) 个解. 因此解的总数为
+\(4+4(n-1)=4n\). 取 \(n=20\)，得到 \(4\times20=80\)，故选 B.
+\end{solution}
 
 \begin{problem}
 小波一星期的总开支分布如图 1 所示，一星期的食品开支如图 2 所示，则小波一星期的鸡蛋开支占总开支的百分比为（\quad）
@@ -81,15 +119,22 @@ B
 \bitmapfigure[max width=0.92\linewidth]{img/2012/jiangxi_liberal/q6_fig1.png}
 
 \choices
-    {30\%}
-    {10\%}
-    {3\%}
+    {\(30\%\)}
+    {\(10\%\)}
+    {\(3\%\)}
     {不能确定}
 \end{problem}
 
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+图 2 中食品开支总额为
+\(30+40+100+80+50=300\) 元，其中鸡蛋开支占食品开支的
+\(\dfrac{30}{300}=10\%\). 图 1 表明食品开支占一周总开支的 \(30\%\)，所以鸡蛋开支占总开支的
+\(30\%\times10\%=3\%\)，故选 C.
+\end{solution}
 
 \begin{problem}
 若一个几何体的三视图如图所示，则此几何体的体积为（\quad）
@@ -98,14 +143,22 @@ C
 
 \choices
     {\(\frac{11}{2}\)}
-    {5}
+    {\(5\)}
     {\(\frac{9}{2}\)}
-    {4}
+    {\(4\)}
 \end{problem}
 
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+由主视图和左视图可知，该几何体的高为 \(1\). 俯视图为一个六边形，可分成一个长为 \(1\)、宽为 \(2\) 的矩形和左右两个底为 \(2\)、高为 \(1\) 的三角形，因此俯视图面积为
+\[
+1\times2+2\times\frac{1}{2}\times2\times1=4
+\]
+所以几何体体积为 \(4\times1=4\)，故选 D.
+\end{solution}
 
 \begin{problem}
 椭圆 \(\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\) （\(a > b > 0\)）的左、右顶点分别是 \(A\)，\(B\)，左、右焦点分别是 \(F_1\)，\(F_2\). 若 \(|AF_1|\)，\(|F_1F_2|\)，\(|F_1B|\) 成等比数列，则此椭圆的离心率为（\quad）
@@ -121,6 +174,17 @@ D
 B
 \end{answer}
 
+\begin{solution}
+设椭圆的焦半距为 \(c\). 则
+\(\lvert AF_1\rvert=a-c\)，\(\lvert F_1F_2\rvert=2c\)，
+\(\lvert F_1B\rvert=a+c\). 由三项成等比数列，得
+\[
+(2c)^2=(a-c)(a+c)=a^2-c^2
+\]
+因此 \(a^2=5c^2\)，离心率
+\(e=\dfrac{c}{a}=\dfrac{1}{\sqrt5}=\dfrac{\sqrt5}{5}\)，故选 B.
+\end{solution}
+
 \begin{problem}
 已知 \( f(x) = \sin^2\left(x + \frac{\pi}{4}\right) \). 若 \(a = f(\lg 5)\)，\(b = f\left(\lg \frac{1}{5}\right)\)，则（\quad）
 
@@ -134,6 +198,14 @@ B
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+令 \(u=\lg5\)，则 \(\lg\dfrac15=-u\). 于是
+\(a=\sin^2\left(u+\frac{\pi}{4}\right)\)，\(b=\sin^2\left(\frac{\pi}{4}-u\right)\).
+注意 \(\dfrac{\pi}{4}-u=\dfrac{\pi}{2}-\left(u+\dfrac{\pi}{4}\right)\)，所以
+\(b=\cos^2\left(u+\dfrac{\pi}{4}\right)\). 故
+\(a+b=1\)，选 C.
+\end{solution}
 
 \begin{problem}
 如图，\(|OA| = 2 \mathrm{~m}\)，\(|OB| = 1 \mathrm{~m}\)，\(OA\) 与 \(OB\) 的夹角为 \(\frac{\pi}{6}\)，以 \(A\) 为圆心，\(AB\) 为半径作圆弧 \(BDC\) 与线段 \(OA\) 的延长线交于点 \(C\). 甲、乙两质点同时从点 \(O\) 出发，甲先以速率 \(1 \mathrm{~m/s}\) 沿线段 \(OB\) 行至点 \(B\)，再以速率 \(3 \mathrm{~m/s}\) 沿圆弧 \(BDC\) 行至点 \(C\) 后停止；乙以速率 \(2 \mathrm{~m/s}\) 沿线段 \(OA\) 行至点 \(A\) 后停止. 设 \(t\) 时刻甲、乙两点连线与它们经过的路径所围成图形的面积为 \(S(t)\)（\(S(0)=0\)），则函数 \(y = S(t)\) 的图象大致是（\quad）
@@ -151,6 +223,20 @@ C
 A
 \end{answer}
 
+\begin{solution}
+在 \(0\leqslant t\leqslant1\) 时，甲、乙分别在 \(OB\)、\(OA\) 上，
+\(OB\) 上的路程为 \(t\)，\(OA\) 上的路程为 \(2t\). 故
+\[
+S(t)=\frac12\cdot t\cdot2t\cdot\sin\frac{\pi}{6}=\frac{t^2}{2}
+\]
+图象从原点出发且向上凸.
+
+当 \(t>1\) 且甲沿圆弧运动时，乙停在 \(A\). 相对于 \(t=1\) 时的三角形 \(OAB\)，新增部分是圆心为 \(A\)、半径为 \(AB\) 的扇形. 设甲在圆弧上行进的弧长为 \(s=3(t-1)\)，则新增面积为
+\(\dfrac12 AB\cdot s\)，是 \(t\) 的一次函数. 因此这段图象为斜率为正常数的直线.
+
+甲到达 \(C\) 后两点均停止，\(S(t)\) 保持不变，图象最后为水平线. 符合这些特征的图象是 A.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -161,6 +247,14 @@ A
 \((-3,2)\cup(3,+\infty)\)
 \end{answer}
 
+\begin{solution}
+因式分解得 \(x^2-9=(x-3)(x+3)\)，且分母要求 \(x\neq2\). 在关键点
+\(-3\)，\(2\)，\(3\) 将数轴分成四段，分式的符号依次为负、正、负、正，故
+\[
+x\in(-3,2)\cup(3,+\infty)
+\]
+\end{solution}
+
 \begin{problem}
 设单位向量 \(\bs{m} = (x, y)\)，\(\bs{b} = (2, -1)\). 若 \(\bs{m} \perp \bs{b}\)，则 \(|x + 2y| = \)\fillinblank{}.
 \end{problem}
@@ -169,13 +263,35 @@ A
 \(\sqrt{5}\)
 \end{answer}
 
+\begin{solution}
+由 \(\bs{m}\perp\bs{b}\)，得
+\(2x-y=0\)，即 \(y=2x\). 又因为 \(\bs{m}\) 是单位向量，
+\(x^2+y^2=1\)，所以 \(5x^2=1\). 于是
+\[
+x+2y=5x=\pm\sqrt{5}
+\]
+故 \(\lvert x+2y\rvert=\sqrt{5}\).
+\end{solution}
+
 \begin{problem}
-等比数列 \(\{a_{n}\}\) 的前 \(n\) 项和为 \(S_{n}\)，公比不为 1. 若 \(a_{1} = 1\)，且对任意的 \(n \in \mathbf{N}^{*}\)，都有 \(a_{n+2} + a_{n+1} - 2a_{n} = 0\)，则 \(S_{5} = \)\fillinblank{}.
+等比数列 \(\{a_{n}\}\) 的前 \(n\) 项和为 \(S_{n}\)，公比不为 1. 若 \(a_{1} = 1\)，且对任意的 \(n \in \N^{*}\)，都有 \(a_{n+2} + a_{n+1} - 2a_{n} = 0\)，则 \(S_{5} = \)\fillinblank{}.
 \end{problem}
 
 \begin{answer}
 11
 \end{answer}
+
+\begin{solution}
+设公比为 \(q\). 由题设递推式在 \(n=1\) 时有
+\[
+a_3+a_2-2a_1=q^2+q-2=0
+\]
+因公比不为 \(1\)，故 \(q=-2\). 于是
+\[
+S_5=1+(-2)+(-2)^2+(-2)^3+(-2)^4
+ =\frac{1-(-2)^5}{1-(-2)}=11
+\]
+\end{solution}
 
 \begin{problem}
 过直线 \(x + y - 2\sqrt{2} = 0\) 上的点 \(P\) 作圆 \(x^{2} + y^{2} = 1\) 的两条切线，若两条切线的夹角是 \(60^{\circ}\)，则点 \(P\) 的坐标是\fillinblank{}.
@@ -184,6 +300,17 @@ A
 \begin{answer}
 \((\sqrt{2},\sqrt{2})\)
 \end{answer}
+
+\begin{solution}
+设圆心为 \(O\)，切点为 \(T\). 两条切线的夹角为 \(60^\circ\)，而 \(OP\) 平分此角，所以在直角三角形 \(OPT\) 中，
+\(\angle OPT=30^\circ\)，从而
+\[
+\sin30^\circ=\frac{OT}{OP}=\frac{1}{OP}
+\]
+即 \(OP=2\). 直线 \(x+y-2\sqrt2=0\) 到原点的距离为
+\(\dfrac{2\sqrt2}{\sqrt2}=2\)，故 \(P\) 是原点到该直线的垂足. 联立
+\(x=y\) 与 \(x+y=2\sqrt2\)，得 \(P=(\sqrt2,\sqrt2)\).
+\end{solution}
 
 \begin{problem}
 如图为某算法的程序框图，则程序运行后输出的结果是\fillinblank{}.
@@ -194,6 +321,15 @@ A
 \begin{answer}
 3
 \end{answer}
+
+\begin{solution}
+初始化时 \(T=0\)，\(k=1\). 依次执行循环：
+当 \(k=1\) 时，\(\sin\dfrac{k\pi}{2}=1>0=\sin\dfrac{(k-1)\pi}{2}\)，取 \(a=1\)，更新为 \(T=1\)，\(k=2\)；
+当 \(k=2\) 时，\(0\not>1\)，取 \(a=0\)，更新为 \(T=1\)，\(k=3\)；
+当 \(k=3\) 时，\(-1\not>0\)，取 \(a=0\)，更新为 \(T=1\)，\(k=4\)；
+当 \(k=4\) 时，\(0>-1\)，取 \(a=1\)，更新为 \(T=2\)，\(k=5\)；
+当 \(k=5\) 时，\(1>0\)，取 \(a=1\)，更新为 \(T=3\)，\(k=6\). 此时不满足 \(k<6\)，程序输出 \(T=3\).
+\end{solution}
 
 \section{解答题}
 
@@ -207,8 +343,31 @@ A
 
 \begin{solution}
 \begin{enumerate}
-\item \(\cos A=\frac{1}{3}\).
-\item \((b,c)=(2,3)\) 或 \((3,2)\).
+\item 由和差角公式，
+\[
+\cos(B-C)=\cos B\cos C+\sin B\sin C
+\]
+代入已知等式并整理，得
+\[
+3\bigl(\sin B\sin C-\cos B\cos C\bigr)=1
+\]
+又 \(B+C=\pi-A\)，所以
+\(\sin B\sin C-\cos B\cos C=-\cos(B+C)=\cos A\). 因此
+\(3\cos A=1\)，即 \(\cos A=\dfrac13\).
+
+\item 由第（1）问，\(\sin A=\sqrt{1-\dfrac19}=\dfrac{2\sqrt2}{3}\). 由三角形面积公式，
+\[
+2\sqrt2=\frac12bc\sin A
+ =\frac12bc\cdot\frac{2\sqrt2}{3}
+\]
+故 \(bc=6\). 再由余弦定理，
+\[
+9=b^2+c^2-2bc\cos A
+ =b^2+c^2-4
+\]
+所以 \(b^2+c^2=13\). 于是 \(b+c>0\) 且
+\((b+c)^2=13+2\times6=25\)，故 \(b+c=5\). 因此 \(b\)，\(c\) 是方程
+\(u^2-5u+6=0\) 的两个根，即 \((b,c)=(2,3)\) 或 \((3,2)\).
 \end{enumerate}
 \end{solution}
 
@@ -222,8 +381,32 @@ A
 
 \begin{solution}
 \begin{enumerate}
-\item \(a_n=2^n\).
-\item \(T_n=2+(n-1)2^{n+1}\).
+\item 当 \(n\geqslant2\) 时，
+\[
+a_n=S_n-S_{n-1}=k(c^n-c^{n-1})=k(c-1)c^{n-1}
+\]
+由 \(a_2=4\) 得 \(k(c-1)c=4\)，所以 \(c\neq0\). 又
+\(a_3=a_2c=4c\neq0\)，且 \(a_6=a_3c^3\). 因此由
+\(a_6=8a_3\)，有
+\[
+c^3=\frac{a_6}{a_3}=8
+\]
+从而 \(c=2\). 再由 \(a_2=k(c-1)c=4\)，得 \(k=2\). 同时
+\(a_1=S_1=k(c-1)=2\)，所以对任意 \(n\in\mathbf N^*\)，
+\(a_n=2^n\).
+
+\item 设所求和为 \(T_n\)，则
+\[
+T_n=\sum_{j=1}^{n}j2^j
+\]
+将上式乘以 \(2\)，并按 \(2^j\) 的幂次与原式相减，得
+\(2T_n=2^2+2\cdot2^3+\cdots+n2^{n+1}\)，\(T_n=2+2\cdot2^2+\cdots+n2^n\).
+\[
+T_n=n2^{n+1}-2-(2^2+2^3+\cdots+2^n)
+ =n2^{n+1}-2-(2^{n+1}-4)
+ =2+(n-1)2^{n+1}
+\]
+因此 \(T_n=2+(n-1)2^{n+1}\).
 \end{enumerate}
 \end{solution}
 
@@ -239,8 +422,12 @@ A
 
 \begin{solution}
 \begin{enumerate}
-\item 所求概率为 \(\frac{1}{10}\).
-\item 所求概率为 \(\frac{3}{10}\).
+\item 总的选法数为 \(\mathrm C_6^3=20\). 若所选三点中有两点位于同一坐标轴上，则这两点和原点在同一直线上，另一个点又位于另一坐标轴上，所以原点与所选三点共面，不能构成非退化的正三棱锥. 设所选三点分别在三个坐标轴上，且它们到原点的距离分别为 \(r\)，\(s\)，\(t\)，则底面三角形的三边平方分别为 \(r^2+s^2\)、\(s^2+t^2\)、\(t^2+r^2\). 底面为正三角形要求 \(r=s=t\)，此时三条侧棱也相等；并且底面重心为 \((r/3,r/3,r/3)\)，\(O\) 到该重心的连线垂直于底面，故确为正三棱锥. 因而只有
+\(\{A_1,B_1,C_1\}\) 和 \(\{A_2,B_2,C_2\}\) 两种选法，所求概率为
+\(\dfrac{2}{20}=\dfrac{1}{10}\).
+
+\item 三点与原点共面，当且仅当选出的三点中有两个在同一坐标轴上；若三点分别在三个坐标轴上，则其坐标行列式为 \(\pm rst\neq0\)，不共面. 选取同一坐标轴上的两个点有 \(3\) 种选轴，另一个坐标轴有 \(2\) 种选法，并在该轴上有 \(2\) 个点可选，所以共面选法数为
+\(3\times2\times2=12\). 故所求概率为 \(\dfrac{12}{20}=\dfrac35\).
 \end{enumerate}
 \end{solution}
 
@@ -257,8 +444,28 @@ A
 
 \begin{solution}
 \begin{enumerate}
-\item 平面 \(DEG \perp\) 平面 \(CFG\).
-\item 多面体 \(CDEFG\) 的体积为 \(20\).
+\item 在折叠前的直角三角形 \(ADE\) 中，
+\(AE=\sqrt{AD^2-DE^2}=\sqrt{25-16}=3\). 同理，在直角三角形 \(CBF\) 中，
+\(BF=\sqrt{BC^2-CF^2}=\sqrt{32-16}=4\). 因此
+\(EF=AB-AE-BF=12-3-4=5\)，且折叠后
+\(EG=3\)、\(FG=4\). 于是三角形 \(EFG\) 的三边为 \(3\)，\(4\)，\(5\)，故
+\(EG\perp FG\).
+
+由于 \(CF\perp AB\) 且 \(EF\subset AB\)，所以 \(CF\perp EF\). 折叠 \(\triangle CFB\) 是绕轴 \(CF\) 的旋转，故折叠后仍有 \(CF\perp FG\). 从而
+\(CF\perp\) 平面 \(EFG\)，所以 \(CF\) 的方向垂直于 \(EG\). 在平面 \(CFG\) 内过 \(G\) 作直线 \(\ell\parallel CF\)，则 \(EG\perp\ell\)，且由前面三角形 \(EFG\) 为直角三角形知 \(EG\perp FG\). 直线 \(\ell\) 与 \(FG\) 相交于 \(G\)，故
+\(EG\perp\) 平面 \(CFG\). 由于 \(EG\subset\) 平面 \(DEG\)，因此
+\(\text{平面 }DEG\perp\text{平面 }CFG\).
+
+\item 因为 \(CD\parallel EF\)，且 \(DE\perp EF\)、\(CF\perp EF\)，所以四边形 \(CDEF\) 是矩形. 又 \(CD=EF=5\)，\(DE=CF=4\)，故
+\(S_{CDEF}=20\). 设 \(H\) 为 \(G\) 到 \(EF\) 的垂足. 由于平面 \(EFG\) 与平面 \(CDEF\) 垂直，且 \(GH\perp EF\)，所以 \(GH\perp\) 平面 \(CDEF\)，即 \(GH\) 是多面体的高. 在直角三角形 \(EFG\) 中，
+\[
+GH=\frac{EG\cdot FG}{EF}=\frac{3\times4}{5}=\frac{12}{5}
+\]
+故
+\[
+V_{CDEFG}=\frac13S_{CDEF}\cdot GH
+ =\frac13\times20\times\frac{12}{5}=16
+\]
 \end{enumerate}
 \end{solution}
 
@@ -272,8 +479,67 @@ A
 
 \begin{solution}
 \begin{enumerate}
-\item \(0\leqslant a\leqslant 1\).
-\item 令 \(\alpha=\frac{\e-1}{\e+1}\). 当 \(a=0\) 时，最大值为 \(\e\)，最小值为 \(1\)；当 \(a=1\) 时，最大值为 \(2\)，最小值为 \(0\)；当 \(0<a\leqslant\frac{1}{3}\) 时，最大值为 \((1-a)\e\)，最小值为 \(1+a\)；当 \(\frac{1}{3}<a\leqslant\alpha\) 时，最大值为 \(2a\e^{\frac{1-a}{2a}}\)，最小值为 \(1+a\)；当 \(\alpha<a<1\) 时，最大值为 \(2a\e^{\frac{1-a}{2a}}\)，最小值为 \((1-a)\e\).
+\item 由 \(f(0)=1\) 得 \(c=1\)，由 \(f(1)=0\) 得
+\(a+b+1=0\)，\(b=-a-1\).
+因此
+\(f(x)=\bigl(ax^2-(a+1)x+1\bigr)\e^x\)，\(f'(x)=\bigl(ax^2+(a-1)x-a\bigr)\e^x\).
+记
+\[
+h(x)=ax^2+(a-1)x-a
+\]
+因为 \(\e^x>0\)，\(f\) 在 \([0,1]\) 上单调递减等价于 \(h(x)\leqslant0\)；必要性给出
+\(h(0)=-a\leqslant0\)，\(h(1)=a-1\leqslant0\)
+即 \(0\leqslant a\leqslant1\). 反之，当 \(0\leqslant a\leqslant1\) 时，\(h\) 为区间上的凸函数，故其最大值在端点取得，而
+\(h(0)\leqslant0\)、\(h(1)\leqslant0\)，从而整个区间上 \(h(x)\leqslant0\). 所以
+\[
+0\leqslant a\leqslant1
+\]
+
+\item 由上式
+\(g(x)=f(x)-f'(x)=(a+1-2ax)\e^x\)，\(g'(x)=(1-a-2ax)\e^x\).
+当 \(a=0\) 时，\(g(x)=\e^x\)，故最小值为 \(1\)，最大值为 \(\e\). 当 \(a=1\) 时，
+\(g'(x)=-2x\e^x\leqslant0\)，故最大值为 \(g(0)=2\)，最小值为 \(g(1)=0\).
+
+当 \(0<a<1\) 时，\(g'(x)=0\) 的唯一根为
+\[
+x_0=\frac{1-a}{2a}
+\]
+若 \(0<a\leqslant\frac13\)，则 \(x_0\geqslant1\)，所以 \(g\) 在 \([0,1]\) 上递增，
+\(\min g=g(0)=1+a\)，\(\max g=g(1)=(1-a)\e\).
+若 \(\frac13<a<1\)，则 \(0<x_0<1\)，且 \(g\) 先增后减，故
+\[
+\max g=g(x_0)=2a\e^{\frac{1-a}{2a}}
+\]
+此时最小值比较两个端点：令
+\[
+\alpha=\frac{\e-1}{\e+1}
+\]
+则 \((1-a)\e\geqslant1+a\) 等价于 \(a\leqslant\alpha\). 因此
+\[
+\min g=
+\begin{cases}
+1+a,&\dfrac13<a\leqslant\alpha,\\
+(1-a)\e,&\alpha<a<1.
+\end{cases}
+\]
+综上，
+\[
+\max g=
+\begin{cases}
+\e,&a=0,\\
+(1-a)\e,&0<a\leqslant\dfrac13,\\
+2a\e^{\frac{1-a}{2a}},&\dfrac13<a<1,\\
+2,&a=1,
+\end{cases}
+\qquad
+\min g=
+\begin{cases}
+1,&a=0,\\
+1+a,&0<a\leqslant\alpha,\\
+(1-a)\e,&\alpha<a<1,\\
+0,&a=1.
+\end{cases}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -287,7 +553,38 @@ A
 
 \begin{solution}
 \begin{enumerate}
-\item 曲线 \(C\) 的方程为 \(x^2=4y\).
-\item \(S_{\triangle QAB}:S_{\triangle PDE}=2\).
+\item
+\(\overrightarrow{MA}=(-2-x,1-y)\)，\(\overrightarrow{MB}=(2-x,1-y)\)
+所以 \(\overrightarrow{MA}+\overrightarrow{MB}=(-2x,2-2y)\)，左端为
+\(2\sqrt{x^2+(1-y)^2}\). 又
+\(\overrightarrow{OA}+\overrightarrow{OB}=(0,2)\)，故右端为 \(2y+2\). 于是
+\[
+2\sqrt{x^2+(1-y)^2}=2y+2
+\]
+左端非负，且由原式可知 \(y+1\geqslant0\)，两边平方得
+\[
+x^2+(1-y)^2=(y+1)^2
+\]
+即 \(x^2=4y\). 反代可知该方程上的点均满足原式，故曲线方程为 \(x^2=4y\).
+
+\item 设 \(Q=(x_0,y_0)\)，则 \(y_0=\dfrac{x_0^2}{4}\). 抛物线在 \(Q\) 处的切线为
+\[
+y=\frac{x_0}{2}x-\frac{x_0^2}{4}
+\]
+直线 \(PA\)、\(PB\) 的方程分别为 \(y=-x-1\)、\(y=x-1\). 与切线联立，得
+\(D=\left(\frac{x_0-2}{2},-\frac{x_0}{2}\right)\)，\(E=\left(\frac{x_0+2}{2},\frac{x_0}{2}\right)\).
+因为 \(AB=4\)，
+\[
+S_{\triangle QAB}=\frac12\cdot4\left(1-\frac{x_0^2}{4}\right)=\frac{4-x_0^2}{2}
+\]
+又 \(\overrightarrow{PD}=\left(\frac{x_0}{2}-1,1-\frac{x_0}{2}\right)\)，
+\(\overrightarrow{PE}=\left(1+\frac{x_0}{2},1+\frac{x_0}{2}\right)\)，故
+\[
+S_{\triangle PDE}=\frac12\left|\overrightarrow{PD}\times\overrightarrow{PE}\right|=\frac{4-x_0^2}{4}
+\]
+由于 \(-2<x_0<2\)，两面积均为正，遂有
+\[
+S_{\triangle QAB}:S_{\triangle PDE}=2:1=2
+\]
 \end{enumerate}
 \end{solution}

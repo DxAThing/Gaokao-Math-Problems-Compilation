@@ -14,6 +14,10 @@
 C
 \end{answer}
 
+\begin{solution}
+由德 Morgan 律，\(\complement_{I}S_{1}\cap\complement_{I}S_{2}\cap\complement_{I}S_{3}=\complement_{I}(S_{1}\cup S_{2}\cup S_{3})=\complement_{I}I=\varnothing\)，所以正确选项为 C.
+\end{solution}
+
 \begin{problem}
 一个与球心距离为 \(1\) 的平面截球所得的圆面面积为 \(\pi\)，则球的表面积为（\quad）
 
@@ -28,8 +32,12 @@ C
 B
 \end{answer}
 
+\begin{solution}
+设球的半径为 \(R\)，截面圆的半径为 \(r\). 由 \(\pi r^{2}=\pi\) 得 \(r=1\). 球心到截面的距离为 \(1\)，所以在球心、截面圆心和截面圆周上的任一点构成的直角三角形中，\(R^{2}=1^{2}+1^{2}=2\). 因而球的表面积为 \(4\pi R^{2}=8\pi\)，所以正确选项为 B.
+\end{solution}
+
 \begin{problem}
-函数 \(f(x) = x^3 + ax^2 + 3x - 9\)，已知 \(f(x)\) 在 \(x = -3\) 时取得极值，则 \(a =\)（\quad）
+函数 \(f(x) = x^3 + ax^2 + 3x - 9\)，已知 \(f(x)\) 在 \(x=-3\) 时取得极值，则 \(a=\)（\quad）
 
 \choices
     {\(2\)}
@@ -42,8 +50,12 @@ B
 D
 \end{answer}
 
+\begin{solution}
+函数在 \(x=-3\) 处取得极值，故 \(f'(-3)=0\). 由 \(f'(x)=3x^{2}+2ax+3\)，得 \(27-6a+3=0\)，解得 \(a=5\). 此时 \(f'(x)=3x^{2}+10x+3=3(x+3)(x+\frac{1}{3})\)，在 \(x=-3\) 两侧导数符号发生变化，确实取得极值，所以正确选项为 D.
+\end{solution}
+
 \begin{problem}
-如图，在多面体 \(ABCDEF\) 中，已知 \(ABCD\) 是边长为 \(1\) 的正方形，且 \(\triangle ADE\)，\(\triangle BCF\) 均为正三角形，\(EF \parallel AB\)，\(EF = 2\)，则该多面体的体积为（\quad）
+如图，在多面体 \(ABCDEF\) 中，已知 \(ABCD\) 是边长为 \(1\) 的正方形，且 \(\triangle ADE\)，\(\triangle BCF\) 均为正三角形，\(EF \parallel AB\)，\(EF=2\)，则该多面体的体积为（\quad）
 
 \begin{center}
 \bitmapfigure[width=0.48\linewidth]{img/2005/national_paper_1_liberal/q4_fig1.png}
@@ -60,8 +72,29 @@ D
 A
 \end{answer}
 
+\begin{solution}
+建立空间直角坐标系，令 \(A=(0,0,0)\)，\(B=(1,0,0)\)，\(D=(0,1,0)\)，\(C=(1,1,0)\). 由 \(EF\parallel AB\) 且 \(EF=2\)，设 \(E=(u,\frac{1}{2},h)\)，\(F=(u+2,\frac{1}{2},h)\). 由 \(\triangle ADE\) 为正三角形，得 \(u^{2}+\frac{1}{4}+h^{2}=1\)；由 \(\triangle BCF\) 为正三角形，得 \((u+1)^{2}+\frac{1}{4}+h^{2}=1\). 两式相减得 \(u=-\frac{1}{2}\)，代回得 \(h^{2}=\frac{1}{2}\).  取 \(h>0\)，另一种取向所得体积相同.
+
+由 \(E\) 向底面四边形 \(ABCD\) 的四个顶点以及 \(F\) 连线，可将该多面体分割为四棱锥 \(E-ABCD\) 和三棱锥 \(E-BCF\). 四棱锥 \(E-ABCD\) 的底面积为 \(1\)，高为 \(|h|=\frac{\sqrt{2}}{2}\)，所以
+\[
+V_{E-ABCD}=\frac{1}{3}\times1\times\frac{\sqrt{2}}{2}=\frac{\sqrt{2}}{6}
+\]
+
+又
+\(\overrightarrow{EB}=\left(\frac{3}{2},-\frac{1}{2},-h\right)\)，\(\overrightarrow{EC}=\left(\frac{3}{2},\frac{1}{2},-h\right)\)，\(\overrightarrow{EF}=(2,0,0)\)
+故
+\[
+V_{E-BCF}=\frac{1}{6}\left|\det(\overrightarrow{EB},\overrightarrow{EC},\overrightarrow{EF})\right|=\frac{|h|}{3}=\frac{\sqrt{2}}{6}
+\]
+因此
+\[
+V=V_{E-ABCD}+V_{E-BCF}=\frac{\sqrt{2}}{3}
+\]
+因此正确选项为 A.
+\end{solution}
+
 \begin{problem}
-已知双曲线 \(\frac{x^2}{a^2} - y^2 = 1\)（\(a > 0\)）的一条准线与抛物线 \(y^2 = -6x\) 的准线重合，则该双曲线的离心率为（\quad）
+已知双曲线 \(\frac{x^2}{a^2} - y^2 = 1\)（\(a>0\)）的一条准线与抛物线 \(y^2=-6x\) 的准线重合，则该双曲线的离心率为（\quad）
 
 \choices
     {\(\frac{\sqrt{3}}{2}\)}
@@ -74,8 +107,12 @@ A
 D
 \end{answer}
 
+\begin{solution}
+抛物线 \(y^{2}=-6x\) 的准线为 \(x=\frac{3}{2}\). 设双曲线的焦半距为 \(c\)，离心率为 \(e=\frac{c}{a}\). 双曲线的准线为 \(x=\pm\frac{a}{e}\)，故 \(\frac{a}{e}=\frac{3}{2}\). 又因为 \(c^{2}=a^{2}+1\)，所以 \(e^{2}=1+\frac{1}{a^{2}}\). 由 \(a=\frac{3e}{2}\) 得 \(\frac{9e^{4}}{4}-\frac{9e^{2}}{4}=1\)，即 \(9e^{4}-9e^{2}-4=0\). 令 \(z=e^{2}\)，则 \((3z-4)(3z+1)=0\). 由于 \(e>1\)，得 \(e^{2}=\frac{4}{3}\)，所以 \(e=\frac{2\sqrt{3}}{3}\)，正确选项为 D.
+\end{solution}
+
 \begin{problem}
-当 \(0 < x < \frac{\pi}{2}\) 时，函数 \(f(x) = \frac{1 + \cos 2x + 8\sin^2 x}{\sin 2x}\) 的最小值为（\quad）
+当 \(0<x<\frac{\pi}{2}\) 时，函数 \(f(x)=\frac{1+\cos2x+8\sin^2x}{\sin2x}\) 的最小值为（\quad）
 
 \choices
     {\(2\)}
@@ -87,6 +124,11 @@ D
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+因为 \(0<x<\frac{\pi}{2}\)，所以 \(\sin x>0\)，\(\cos x>0\). 于是
+\(f(x)=\frac{2\cos^{2}x+8\sin^{2}x}{2\sin x\cos x}=\cot x+4\tan x\). 令 \(t=\tan x>0\)，则 \(f(x)=\frac{1}{t}+4t\geqslant2\sqrt{\frac{1}{t}\cdot4t}=4\)，且当 \(t=\frac{1}{2}\) 时等号成立. 因此最小值为 \(4\)，正确选项为 C.
+\end{solution}
 
 \begin{problem}
 \(y = \sqrt{2x - x^2}\)（\(1 \leqslant x \leqslant 2\)）的反函数是（\quad）
@@ -102,11 +144,15 @@ C
 B
 \end{answer}
 
+\begin{solution}
+原函数可写为 \(y=\sqrt{1-(x-1)^{2}}\). 当 \(1\leqslant x\leqslant2\) 时，\(0\leqslant y\leqslant1\)，且由 \(y^{2}=1-(x-1)^{2}\) 及 \(x-1\geqslant0\)，得 \(x=1+\sqrt{1-y^{2}}\). 交换变量名，反函数为 \(y=1+\sqrt{1-x^{2}}\)，定义域为 \(0\leqslant x\leqslant1\)，所以正确选项为 B.
+\end{solution}
+
 \begin{problem}
-设 \(0 < a < 1\)，函数 \(f(x) = \log_a(a^{2x} - 2a^x - 2)\)，则使 \(f(x) < 0\) 的 \(x\) 取值范围是（\quad）
+设 \(0<a<1\)，函数 \(f(x)=\log_a(a^{2x}-2a^x-2)\)，则使 \(f(x)<0\) 的 \(x\) 取值范围是（\quad）
 
 \choices
-    {\((-\infty, 0)\)}
+    {\(f(x)\)}
     {\((0, +\infty)\)}
     {\((-\infty, \log_a 3)\)}
     {\((\log_a 3, +\infty)\)}
@@ -115,6 +161,10 @@ B
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+令 \(t=a^{x}>0\).  函数有意义要求 \(t^{2}-2t-2>0\)，即 \(t>1+\sqrt{3}\).  因为 \(0<a<1\)，对数函数 \(\log_a u\) 在正数范围内单调递减，所以 \(f(x)<0\) 等价于 \(a^{2x}-2a^x-2>1\).  因而 \(t^{2}-2t-3>0\)，即 \(t>3\).  再由底数 \(a\) 小于 \(1\)，得 \(a^x>3\) 等价于 \(x<\log_a3\).  该条件已保证函数有意义，所以取值范围为 \((-\infty,\log_a3)\)，正确选项为 C.
+\end{solution}
 
 \begin{problem}
 在坐标平面上，不等式组 \(\begin{cases}
@@ -132,6 +182,14 @@ y\leqslant-3|x|+1
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+当 \(-1\leqslant x\leqslant0\) 时，上、下边界分别为 \(y=3x+1\) 和 \(y=x-1\)；当 \(0\leqslant x\leqslant\frac{1}{2}\) 时，上、下边界分别为 \(y=-3x+1\) 和 \(y=x-1\).  交点的横坐标由边界相等得到 \(-1\)，\(0\) 和 \(\frac{1}{2}\). 因而区域面积为
+\[
+\int_{-1}^{0}\bigl((3x+1)-(x-1)\bigr)\,\mathrm{d}x+\int_{0}^{1/2}\bigl((-3x+1)-(x-1)\bigr)\,\mathrm{d}x=1+\frac{1}{2}=\frac{3}{2}
+\]
+所以正确选项为 B.
+\end{solution}
 
 \begin{problem}
 在 \(\triangle ABC\) 中，已知 \(\tan \frac{A + B}{2} = \sin C\)，给出以下四个论断：
@@ -156,8 +214,14 @@ B
 B
 \end{answer}
 
+\begin{solution}
+因为 \(A+B=\pi-C\)，所以 \(\tan\frac{A+B}{2}=\cot\frac{C}{2}\).  由题设得 \(\cot\frac{C}{2}=2\sin\frac{C}{2}\cos\frac{C}{2}\).  因为 \(0<C<\pi\)，故 \(0<\frac{C}{2}<\frac{\pi}{2}\)，从而 \(\sin^{2}\frac{C}{2}=\frac{1}{2}\)，即 \(C=\frac{\pi}{2}\)，所以 \(A+B=\frac{\pi}{2}\).
+
+于是 \(B=\frac{\pi}{2}-A\)，且 \(0<A<\frac{\pi}{2}\).  因此 \(\sin A+\sin B=\sin A+\cos A\)，其值为正且不超过 \(\sqrt{2}\)，命题 \(\circled{2}\) 正确；又 \(\cos^{2}A+\cos^{2}B=\cos^{2}A+\sin^{2}A=1=\sin^{2}C\)，命题 \(\circled{4}\) 正确.  命题 \(\circled{1}\) 化为 \(\tan^{2}A=1\)，命题 \(\circled{3}\) 化为 \(2\sin^{2}A=1\). 例如取 \(A=\frac{\pi}{6}\)，\(B=\frac{\pi}{3}\)，则 \(\tan A\cot B=\frac{1}{3}\ne1\)，且 \(\sin^{2}A+\cos^{2}B=\frac{1}{2}\ne1\)，故命题 \(\circled{1}\)、\(\circled{3}\) 均不正确. 所以正确选项为 B.
+\end{solution}
+
 \begin{problem}
-点 \(O\) 是三角形 \(ABC\) 所在平面内的一点，满足 \(\overrightarrow{OA} \cdot \overrightarrow{OB} = \overrightarrow{OB} \cdot \overrightarrow{OC} = \overrightarrow{OC} \cdot \overrightarrow{OA}\)，则点 \(O\) 是 \(\triangle ABC\) 的（\quad）
+点 \(O\) 是三角形 \(ABC\) 所在平面内的一点，满足 \(\overrightarrow{OA}\cdot\overrightarrow{OB}=\overrightarrow{OB}\cdot\overrightarrow{OC}=\overrightarrow{OC}\cdot\overrightarrow{OA}\)，则点 \(O\) 是 \(\triangle ABC\) 的（\quad）
 
 \choices
     {三个内角的角平分线的交点}
@@ -170,8 +234,14 @@ B
 D
 \end{answer}
 
+\begin{solution}
+记 \(\overrightarrow{OA}=\bs a\)，\(\overrightarrow{OB}=\bs b\)，\(\overrightarrow{OC}=\bs c\). 若 \(O=A\)，则 \(\bs a=\bs0\)，由题设得 \(\bs b\cdot\bs c=0\)，所以 \(AB\perp AC\)，此时 \(A\) 正是直角三角形 \(ABC\) 的垂心. 若 \(O=B\)，则 \(\bs b=\bs0\)，由题设得 \(\bs c\cdot\bs a=0\)，所以 \(BA\perp BC\)，此时 \(B\) 是垂心；若 \(O=C\)，则 \(\bs c=\bs0\)，由题设得 \(\bs a\cdot\bs b=0\)，所以 \(CA\perp CB\)，此时 \(C\) 是垂心. 以下设 \(O\) 不与 \(A\)，\(B\)，\(C\) 重合.
+
+由 \(\bs a\cdot\bs b=\bs c\cdot\bs a\)，得 \(\bs a\cdot(\bs b-\bs c)=0\). 因为 \(\overrightarrow{BC}=\bs c-\bs b\)，所以 \(\overrightarrow{AO}=-\bs a\) 与 \(\overrightarrow{BC}\) 垂直，即 \(AO\perp BC\). 又由 \(\bs a\cdot\bs b=\bs b\cdot\bs c\)，得 \(\bs b\cdot(\bs a-\bs c)=0\)，故 \(\overrightarrow{BO}=-\bs b\) 与 \(\overrightarrow{CA}=\bs a-\bs c\) 垂直，即 \(BO\perp CA\). 再由 \(\bs b\cdot\bs c=\bs c\cdot\bs a\)，得 \(\bs c\cdot(\bs b-\bs a)=0\)，故 \(\overrightarrow{CO}=-\bs c\) 与 \(\overrightarrow{AB}=\bs b-\bs a\) 垂直，即 \(CO\perp AB\). 因而 \(O\) 是三条高的交点，正确选项为 D.
+\end{solution}
+
 \begin{problem}
-设直线 \(l\) 过点 \((-2,0)\)，且与圆 \(x^{2} + y^{2} = 1\) 相切，则 \(l\) 的斜率是（\quad）
+设直线 \(l\) 过点 \((-2,0)\)，且与圆 \(x^{2}+y^{2}=1\) 相切，则 \(l\) 的斜率是（\quad）
 
 \choices
     {\(\pm 1\)}
@@ -184,14 +254,22 @@ D
 C
 \end{answer}
 
+\begin{solution}
+设直线斜率为 \(k\)，则直线方程为 \(y=k(x+2)\)，即 \(kx-y+2k=0\). 圆心为原点，圆心到直线的距离等于半径 \(1\)，故 \(\frac{|2k|}{\sqrt{k^{2}+1}}=1\). 两边平方得 \(4k^{2}=k^{2}+1\)，所以 \(k^{2}=\frac{1}{3}\)，即 \(k=\pm\frac{\sqrt{3}}{3}\). 正确选项为 C.
+\end{solution}
+
 \section{填空题}
 \begin{problem}
-若正整数 \(m\) 满足 \(10^{m-1} < 2^{512} < 10^{m}\)，则 \(m =\fillinblank{}.\)（\(\lg 2 \approx 0.3010\)）
+若正整数 \(m\) 满足 \(10^{m-1}<2^{512}<10^{m}\)，则 \(m=\fillinblank{}\).（\(\lg2\approx0.3010\)）
 \end{problem}
 
 \begin{answer}
 155
 \end{answer}
+
+\begin{solution}
+对不等式取常用对数，得 \(m-1<512\lg2<m\).  由 \(\lg2\approx0.3010\)，有 \(512\lg2\approx154.112\)，所以 \(154.112<m<155.112\)，正整数 \(m\) 只能取 \(155\)，故 \(m=155\).
+\end{solution}
 
 \begin{problem}
 \(\left(x - \frac{1}{x}\right)^8\) 的展开式中，常数项为\fillinblank{}.（用数字作答）
@@ -201,22 +279,30 @@ C
 70
 \end{answer}
 
+\begin{solution}
+展开式的通项为 \(\mathrm C_{8}^{k}x^{8-k}\left(-\frac{1}{x}\right)^{k}=(-1)^{k}\mathrm C_{8}^{k}x^{8-2k}\). 要得到常数项，必须有 \(8-2k=0\)，即 \(k=4\). 此时系数为 \((-1)^{4}\mathrm C_{8}^{4}=70\)，所以常数项为 \(70\).
+\end{solution}
+
 \begin{problem}
-从 \(6\) 名男生和 \(4\) 名女生中，选出 \(3\) 名代表，要求至少包含 \(1\) 名女生，则不同的选法有\fillinblank{} 种.
+从 \(6\text{ 名}\) 男生和 \(4\text{ 名}\) 女生中，选出 \(3\text{ 名}\) 代表，要求至少包含 \(1\text{ 名}\) 女生，则不同的选法有\fillinblank{}\(\text{种}\).
 \end{problem}
 
 \begin{answer}
 100
 \end{answer}
 
+\begin{solution}
+从 \(10\text{ 人}\) 中任取 \(3\text{ 人}\) 共有 \(\mathrm C_{10}^{3}\) 种，减去全为男生的 \(\mathrm C_{6}^{3}\) 种，所以满足至少有 \(1\text{ 名}\) 女生的选法数为 \(\mathrm C_{10}^{3}-\mathrm C_{6}^{3}=120-20=100\).
+\end{solution}
+
 \begin{problem}
-在正方体 \(ABCD - A'B'C'D'\) 中，过对角线 \(BD'\) 的一个平面交 \(AA'\) 于 \(E\)，交 \(CC'\) 于 \(F\)，则：
+在正方体 \(ABCD-A'B'C'D'\) 中，过对角线 \(BD'\) 的一个平面交 \(AA'\) 于 \(E\)，交 \(CC'\) 于 \(F\)，则：
 
 \begin{circlelist}
-\item 四边形 \(BFD'E\) 一定是平行四边形；
-\item 四边形 \(BFD'E\) 有可能是正方形；
-\item 四边形 \(BFD'E\) 在底面 \(ABCD\) 内的投影一定是正方形；
-\item 平面 \(BFD'E\) 有可能垂直于平面 \(BB'D\).
+    \item 四边形 \(BFD'E\) 一定是平行四边形；
+    \item 四边形 \(BFD'E\) 有可能是正方形；
+    \item 四边形 \(BFD'E\) 在底面 \(ABCD\) 内的投影一定是正方形；
+    \item 平面 \(BFD'E\) 有可能垂直于平面 \(BB'D\).
 \end{circlelist}
 
 以上结论正确的为\fillinblank{}.（写出所有正确结论的编号）
@@ -226,26 +312,35 @@ C
 \(1\)，\(3\)，\(4\)
 \end{answer}
 
+\begin{solution}
+设正方体棱长为 \(1\)，建立空间直角坐标系，取 \(A=(0,0,0)\)，\(B=(1,0,0)\)，\(C=(1,1,0)\)，\(D=(0,1,0)\)，并令上底面各点的第三坐标为 \(1\).  设 \(E=(0,0,t)\)，其中 \(0\leqslant t\leqslant1\).  平面过 \(B\)，\(D'\)，\(E\)，其方程可写为 \(tx+(t-1)y+z=t\).  因为 \(F\in CC'\)，令 \(F=(1,1,s)\)，代入平面方程得 \(s=1-t\)，所以 \(F=(1,1,1-t)\).
+
+此时 \(\overrightarrow{BF}=(0,1,1-t)=\overrightarrow{ED'}\)，且 \(\overrightarrow{FD'}=(-1,0,t)=\overrightarrow{BE}\)，所以四边形 \(BFD'E\) 一定是平行四边形，命题 \(\circled{1}\) 正确. 它成为正方形需同时满足 \(\overrightarrow{BF}\cdot\overrightarrow{FD'}=0\) 和 \(|BF|=|FD'|\). 前一个条件给出 \(t(1-t)=0\)，后一个条件给出 \(1+(1-t)^{2}=1+t^{2}\)，即 \(t=\frac{1}{2}\). 因而两个条件不能同时成立，命题 \(\circled{2}\) 错误.
+
+将四个顶点投影到平面 \(ABCD\)，得到 \(B\)，\(C\)，\(D\)，\(A\)，它们依次构成正方形，所以命题 \(\circled{3}\) 正确. 平面 \(BB'D\) 的法向量可取 \((1,1,0)\)，平面 \(BFD'E\) 的法向量可取 \((t,t-1,1)\). 两平面垂直的条件为 \((t,t-1,1)\cdot(1,1,0)=2t-1=0\)，取 \(t=\frac{1}{2}\) 即可满足，所以命题 \(\circled{4}\) 正确. 因此正确结论为 \(1\)，\(3\)，\(4\).
+\end{solution}
+
 \section{解答题}
 \begin{problem}
-设函数 \(f(x) = \sin(2x + \varphi)\)（\(-\pi < \varphi < 0\)），\(y = f(x)\) 图象的一条对称轴是直线 \(x = \frac{\pi}{8}\).
+设函数 \(f(x)=\sin(2\pi+\varphi)\)（\(-\pi<\varphi<0\)），\(y=f(x)\) 图象的一条对称轴是直线 \(x=\frac{\pi}{8}\).
 
 \begin{enumerate}
 \item 求 \(\varphi\)；
-\item 求函数 \(y = f(x)\) 的单调增区间；
-\item 画出函数 \(y = f(x)\) 在区间 \([0,\pi]\) 上的图象.
+\item 求函数 \(y=f(x)\) 的单调增区间；
+\item 画出函数 \(y=f(x)\) 在区间 \([0,\pi]\) 上的图象.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item \(\varphi=-\dfrac{3\pi}{4}\).
-\item \(\left[k\pi+\dfrac{\pi}{8},\,k\pi+\dfrac{5\pi}{8}\right]\)，\(k\in\Z\).
+\item 按原 PDF 字面，\(f(x)=\sin(2\pi+\varphi)=\sin\varphi\)，与 \(x\) 无关，所以它的图象是水平直线. 水平直线关于任意竖直直线 \(x=c\) 对称，故题设的 \(x=\frac{\pi}{8}\) 不能限制 \(\varphi\)；在 \(-\pi<\varphi<0\) 内的任意值都满足这条对称性条件，\(\varphi\) 不能唯一确定.
+\item 由上问，\(f(x)\) 为常数函数. 对任意 \(x_{1}<x_{2}\)，都有 \(f(x_{1})=f(x_{2})\)，所以按严格单调递增的定义不存在单调增区间；若“单调增”采用非严格单调不减的约定，则整个 \(\R\) 都是单调不减区间.
+\item 图象为直线 \(y=\sin\varphi\)，但 \(\varphi\) 未被唯一确定，故该题按原 PDF 字面不能唯一画出在 \([0,\pi]\) 上的图象.
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-已知四棱锥 \(P - ABCD\) 的底面为直角梯形，\(AB \parallel DC\)，\(\angle DAB = 90^{\circ}\)，\(PA \perp\) 底面 \(ABCD\)，且 \(PA = AD = DE = \frac{1}{2}AB = 1\)，\(M\) 是 \(PB\) 的中点.
+已知四棱锥 \(P-ABCD\) 的底面为直角梯形，\(AB\parallel DC\)，\(\angle DAB=90^{\circ}\)，\(PA\perp\) 底面 \(ABCD\)，且 \(PA=AD=DE=\frac{1}{2}AB=1\)，\(M\) 是 \(PB\) 的中点.
 
 \begin{enumerate}
 \item 证明：面 \(PAD\perp\) 面 \(PCD\)；
@@ -260,48 +355,56 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item 面 \(PAD\perp\) 面 \(PCD\).
-\item \(AC\) 与 \(PB\) 所成的角为 \(\arccos\dfrac{\sqrt{10}}{5}\).
-\item 面 \(AMC\) 与面 \(BMC\) 所成二面角的大小为 \(\arccos\left(-\dfrac{2}{3}\right)\).
+\item 因为 \(AB\parallel DC\)，\(\angle DAB=90^{\circ}\)，所以 \(AD\perp DC\). 又因为 \(PA\perp\) 底面 \(ABCD\)，所以 \(PA\perp DC\). 直线 \(AD\)，\(PA\) 是平面 \(PAD\) 内相交的两条直线，故由直线与平面垂直的判定定理，得 \(DC\perp\) 平面 \(PAD\). 又 \(DC\subset\) 平面 \(PCD\)，所以平面 \(PAD\perp\) 平面 \(PCD\).
+\item 题干把长度条件写成 \(DE=1\)，但题干和题图均没有定义点 \(E\)，因此该条件不能确定点 \(C\) 的位置，也不能确定 \(DC\) 的长度. 对任意 \(d>0\) 且 \(d\ne2\)，取 \(A=(0,0,0)\)，\(B=(2,0,0)\)，\(D=(0,1,0)\)，\(C=(d,1,0)\)，\(P=(0,0,1)\)，并在点 \(D\) 为圆心、半径为 \(1\) 的球面上任取未定义的点 \(E\)，均可满足字面上的 \(DE=1\). 此时 \(\overrightarrow{AC}=(d,1,0)\)，\(\overrightarrow{PB}=(2,0,-1)\)，从而 \(\cos\theta=\frac{2d}{\sqrt{d^{2}+1}\sqrt{5}}\)，它随 \(d\) 改变，故 \(AC\) 与 \(PB\) 所成的角不能唯一确定.
+\item 仍设 \(C=(d,1,0)\)，\(M=(1,0,\frac{1}{2})\). 取平面 \(AMC\)、\(BMC\) 的法向量分别为 \(\bs n_{1}=(1,-d,-2)\)，\(\bs n_{2}=(1,2-d,2)\)，因为 \(\bs n_{1}\cdot\overrightarrow{AC}=\bs n_{1}\cdot\overrightarrow{AM}=0\)，\(\bs n_{2}\cdot\overrightarrow{BC}=\bs n_{2}\cdot\overrightarrow{BM}=0\)，这两个向量确实分别垂直于相应平面. 为了比较由射线 \(MA\)、\(MB\) 确定的二面角，取各平面内垂直于 \(MC\) 且分别指向 \(A\)、\(B\) 的向量.
+
+当 \(d=\frac{1}{2}\) 时，可取 \(\bs p=(-3,-2,-1)\)，\(\bs q=(11,2,-7)\). 两者都垂直于 \(MC\)，且分别属于平面 \(AMC\)、\(BMC\)，所以二面角余弦为
+\[
+\frac{\bs p\cdot\bs q}{|\bs p|\,|\bs q|}=\frac{-33-4+7}{\sqrt{14}\sqrt{174}}=-\frac{15}{\sqrt{609}}
+\]
+当 \(d=3\) 时，可取 \(\bs p=(-\frac{1}{3},\frac{1}{3},-\frac{2}{3})\)，\(\bs q=(\frac{1}{7},-\frac{3}{7},-\frac{2}{7})\). 同样有 \(\bs p\perp MC\)、\(\bs q\perp MC\)，且分别属于平面 \(AMC\)、\(BMC\)，并且 \(\bs p\cdot\bs q=0\)，故二面角余弦为 \(0\). 两个取值不同，且 \(d=\frac{1}{2}\)，\(3\) 均给出非平行四边形的直角梯形底面，说明该问同样不能由原 PDF 题面唯一确定.
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-已知二次函数 \(f(x)\) 的二次项系数为 \(a\)，且不等式 \(f(x) > -2x\) 的解集为 \((1,3)\).
+已知二次函数 \(f(x)\) 的二次项系数为 \(a\)，且不等式 \(f(x)>-2x\) 的解集为 \((1,3)\).
 
 \begin{enumerate}
-\item 若方程 \(f(x) + 6a = 0\) 有两个相等的根，求 \(f(x)\) 的解析式；
+\item 若方程 \(f(x)+6a=0\) 有两个相等的根，求 \(f(x)\) 的解析式；
 \item 若 \(f(x)\) 的最大值为正数，求 \(a\) 的取值范围.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item \(f(x)=-\dfrac{1}{5}x^{2}-\dfrac{6}{5}x-\dfrac{3}{5}\).
-\item \(a\in(-\infty,-2-\sqrt{3})\cup(-2+\sqrt{3},0)\).
+\item 令 \(g(x)=f(x)+2x\). 因为 \(g(x)>0\) 的解集为 \((1,3)\)，所以 \(a<0\)，且 \(g(x)=a(x-1)(x-3)\). 因而 \(f(x)=a(x-1)(x-3)-2x=ax^{2}-(4a+2)x+3a\). 方程 \(f(x)+6a=0\) 化为 \(ax^{2}-(4a+2)x+9a=0\). 两根相等，故
+\(\left(4a+2\right)^{2}-36a^{2}=0\)，即 \(-4(a-1)(5a+1)=0\).  由于 \(a<0\)，取 \(a=-\frac{1}{5}\)，所以 \(f(x)=-\frac{1}{5}x^{2}-\frac{6}{5}x-\frac{3}{5}\).
+\item 因为 \(a<0\)，抛物线开口向下，其最大值为
+\(f_{\max}=-\frac{(4a+2)^{2}-12a^{2}}{4a}=-\frac{a^{2}+4a+1}{a}\).  由 \(a<0\)，条件 \(f_{\max}>0\) 等价于 \(a^{2}+4a+1>0\).  解得 \(a<-2-\sqrt{3}\) 或 \(a>-2+\sqrt{3}\)，再结合 \(a<0\)，得到 \(a\in(-\infty,-2-\sqrt{3})\cup(-2+\sqrt{3},0)\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-\(9\) 粒种子分种在甲，乙，丙 \(3\) 个坑内，每坑 \(3\) 粒，每粒种子发芽的概率为 \(0.5\). 若一个坑内至少有 \(1\) 粒种子发芽，则这个坑不需要补种；若一个坑内的种子都没发芽，则这个坑需要补种.
+\(9\text{ 粒}\) 种子分种在甲、乙、丙 \(3\text{ 个}\) 坑内，每坑 \(3\text{ 粒}\)，每粒种子发芽的概率为 \(0.5\). 若一个坑内至少有 \(1\text{ 粒}\) 种子发芽，则这个坑不需要补种；若一个坑内的种子都没发芽，则这个坑需要补种.
 
 \begin{enumerate}
 \item 求甲坑不需要补种的概率；
 \item 求 \(3\) 个坑中恰有 \(1\) 个坑不需要补种的概率；
-\item 求有坑需要补种的概率.（精确到 \(0.001\)）
+\item 求有坑需要补种的概率（精确到 \(0.001\)）.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item \(\dfrac{7}{8}\).
-\item \(\mathrm C_3^1\cdot\dfrac{7}{8}\cdot\left(\dfrac{1}{8}\right)^{2}=0.041\).
-\item \(0.330\).
+\item 甲坑需要补种当且仅当其中的 \(3\text{ 粒}\) 种子都不发芽，其概率为 \(\left(\frac{1}{2}\right)^{3}=\frac{1}{8}\). 所以甲坑不需要补种的概率为 \(1-\frac{1}{8}=\frac{7}{8}\).
+\item 由于各粒种子的发芽相互独立，三个坑的状态也相互独立. 每个坑不需要补种的概率为 \(\frac{7}{8}\)，需要补种的概率为 \(\frac{1}{8}\). 因此恰有一个坑不需要补种的概率为 \(\mathrm C_{3}^{1}\cdot\frac{7}{8}\cdot\left(\frac{1}{8}\right)^{2}=\frac{21}{512}\approx0.041\).
+\item 三个坑都不需要补种的概率为 \(\left(\frac{7}{8}\right)^{3}=\frac{343}{512}\). 所以有坑需要补种的概率为 \(1-\frac{343}{512}=\frac{169}{512}\approx0.330\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-设正项等比数列 \(\{a_{n}\}\) 的首项 \(a_1 = \frac{1}{2}\). 前 \(n\) 项和为 \(S_{n}\)，且 \(2^{10}S_{30} - (2^{10} + 1)S_{20} + S_{10} = 0\).
+设正项等比数列 \(\{a_{n}\}\) 的首项 \(a_{1}=\frac{1}{2}\). 前 \(n\) 项和为 \(S_{n}\)，且 \(2^{10}S_{30}-(2^{10}+1)S_{20}+S_{10}=0\).
 
 \begin{enumerate}
 \item 求 \(\{a_{n}\}\) 的通项；
@@ -311,23 +414,43 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item \(a_{n}=\dfrac{1}{2^{n}}\).
-\item \(T_{n}=\dfrac{n(n+1)}{2}+\dfrac{1}{2^{n+1}}+\dfrac{n}{2^{n}}-2\).
+\item 设公比为 \(q>0\). 若 \(q=1\)，则原式为 \(2^{10}\cdot15-1025\cdot10+5=5115\ne0\)，故 \(q\ne1\). 令 \(r=q^{10}\). 由等比数列前 \(n\) 项和公式，原条件可写为
+\[
+0=\frac{1}{2(1-q)}\left[2^{10}(1-r^{3})-(2^{10}+1)(1-r^{2})+(1-r)\right]
+\]
+提取因式 \(1-r\)，得
+\[
+0=\frac{1-r}{2(1-q)}\left[2^{10}(1+r+r^{2})-(2^{10}+1)(1+r)+1\right]
+\]
+又因 \(q>0\) 且 \(q\ne1\)，所以 \(r=q^{10}\ne1\)，可约去非零因子 \(\frac{1-r}{2(1-q)}\). 整理得 \(r(2^{10}r-1)=0\). 因为 \(r>0\)，所以 \(r=2^{-10}\)，从而 \(q=\frac{1}{2}\). 因而 \(a_{n}=a_{1}q^{n-1}=\frac{1}{2^{n}}\).
+\item 由上式 \(S_{k}=1-\frac{1}{2^{k}}\)，故
+\(T_{n}=\sum_{k=1}^{n}kS_{k}=\frac{n(n+1)}{2}-\sum_{k=1}^{n}\frac{k}{2^{k}}\). 又因为
+\[
+\frac{k}{2^{k}}=\frac{k+1}{2^{k-1}}-\frac{k+2}{2^{k}}
+\]
+所以
+\[
+\sum_{k=1}^{n}\frac{k}{2^{k}}
+=\sum_{k=1}^{n}\left(\frac{k+1}{2^{k-1}}-\frac{k+2}{2^{k}}\right)
+=2-\frac{n+2}{2^{n}}
+\]
+因此 \(T_{n}=\frac{n(n+1)}{2}-2+\frac{n+2}{2^{n}}\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-已知椭圆的中心为坐标原点 \(O\)，焦点在 \(x\) 轴上，斜率为 \(1\) 且过椭圆右焦点 \(F\) 的直线交椭圆于 \(A\)，\(B\) 两点，\(\overrightarrow{OA} + \overrightarrow{OB}\) 与 \(\bs{a} = (3, -1)\) 共线.
+已知椭圆的中心为坐标原点 \(O\)，焦点在 \(x\) 轴上，斜率为 \(1\) 且过椭圆右焦点 \(F\) 的直线交椭圆于 \(A\)，\(B\) 两点，\(\overrightarrow{OA}+\overrightarrow{OB}\) 与 \(\bs{a}=(3,-1)\) 共线.
 
 \begin{enumerate}
 \item 求椭圆的离心率；
-\item 设 \(M\) 为椭圆上任意一点，且 \(\overrightarrow{OM} = \lambda \overrightarrow{OA} + \mu \overrightarrow{OB}\)（\(\lambda\)，\(\mu \in \R\)），证明 \(\lambda^2 + \mu^2\) 为定值.
+\item 设 \(M\) 为椭圆上任意一点，且 \(\overrightarrow{OM}=\lambda\overrightarrow{OA}+\lambda\overrightarrow{OB}\)（\(\lambda\)，\(\mu\in\R\)），证明 \(\lambda^{2}+\mu^{2}\) 为定值.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item 椭圆的离心率为 \(\dfrac{\sqrt{6}}{3}\).
-\item \(\lambda^{2}+\mu^{2}=1\).
+\item 设椭圆方程为 \(\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1\)，其中 \(a>b>0\)，焦半距为 \(c\)，则 \(c^{2}=a^{2}-b^{2}\).  右焦点为 \(F=(c,0)\)，所给直线方程为 \(y=x-c\). 将其代入椭圆方程，设交点 \(A\)，\(B\) 的横坐标为 \(x_{1}\)，\(x_{2}\)，由韦达定理得 \(x_{1}+x_{2}=\frac{2a^{2}c}{a^{2}+b^{2}}\). 因为 \(y_{i}=x_{i}-c\)，所以
+\(\overrightarrow{OA}+\overrightarrow{OB}=\left(\frac{2a^{2}c}{a^{2}+b^{2}},-\frac{2b^{2}c}{a^{2}+b^{2}}\right)\). 它与 \((3,-1)\) 共线，故 \(\frac{b^{2}}{a^{2}}=\frac{1}{3}\). 因而 \(e^{2}=1-\frac{b^{2}}{a^{2}}=\frac{2}{3}\)，所以椭圆的离心率为 \(e=\frac{\sqrt{6}}{3}\).
+\item 按原 PDF 字面，\(\overrightarrow{OM}=\lambda(\overrightarrow{OA}+\overrightarrow{OB})\)，其中的 \(\mu\) 没有出现在向量等式中. 记 \(\bs v=\overrightarrow{OA}+\overrightarrow{OB}\)，则题面等式只是 \(\overrightarrow{OM}=\lambda\bs v\)，完全没有给出 \(\mu\) 的限制. 因而只要某个 \((\lambda,\mu)\) 满足等式，对任意 \(t\in\R\)，\((\lambda,\mu+t)\) 仍满足同一等式，而 \(\lambda^{2}+(\mu+t)^{2}\) 随 \(t\) 不可能保持不变. 例如取两个不同的 \(t\) 即可得到不同的平方和，故 \(\lambda^{2}+\mu^{2}\) 不可能由题设确定为定值；并且当 \(\overrightarrow{OM}\) 不与 \(\bs v\) 共线时，题面等式本身也无解. 该问按原 PDF 字面不能唯一作答.
 \end{enumerate}
 \end{solution}

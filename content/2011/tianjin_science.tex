@@ -13,6 +13,17 @@
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+分子、分母同乘以 \(1+\i\)，得
+\[
+\frac{1-3\i}{1-\i}
+=\frac{(1-3\i)(1+\i)}{(1-\i)(1+\i)}
+=\frac{4-2\i}{2}
+=2-\i
+\]
+因此选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -26,6 +37,14 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+若 \(x\geqslant2\) 且 \(y\geqslant2\)，则
+\[
+x^2+y^2\geqslant 2^2+2^2=8\geqslant4
+\]
+所以前一个条件能推出后一个条件. 反过来，取 \(x=2\)，\(y=0\)，有 \(x^2+y^2=4\)，但 \(y\not\geqslant2\). 因此前一个条件是后一个条件的充分而不必要条件，选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -34,13 +53,21 @@ A
 \bitmapfigure[max width=0.70\linewidth]{img/2011/tianjin_science/q3_fig1.png}
 
 \choices
-    {3}
-    {4}
-    {5}
-    {6}
+    {\(3\)}
+    {\(4\)}
+    {\(5\)}
+    {\(6\)}
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+按程序框图逐次执行循环. 初始时 \(a=1\)，\(i=0\). 第一次循环后
+\(i=1\)，\(a=1\times1+1=2\)，此时 \(a\leqslant50\). 第二次循环后
+\(i=2\)，\(a=2\times2+1=5\)，仍有 \(a\leqslant50\). 第三次循环后
+\(i=3\)，\(a=3\times5+1=16\)，仍有 \(a\leqslant50\). 第四次循环后
+\(i=4\)，\(a=4\times16+1=65>50\)，循环结束并输出 \(i=4\). 因此选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -49,11 +76,28 @@ B
 \choices
     {\(-110\)}
     {\(-90\)}
-    {90}
-    {110}
+    {\(90\)}
+    {\(110\)}
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+设 \(a_7=x\). 由公差为 \(-2\)，有
+\(a_3=x+8\)，\(a_9=x-4\).
+因为 \(a_7\) 是 \(a_3\) 与 \(a_9\) 的等比中项，
+\[
+x^2=(x+8)(x-4)=x^2+4x-32
+\]
+故 \(x=8\). 从而
+\(a_1=a_7-6(-2)=20\)，\(a_{10}=a_1+9(-2)=2\).
+所以
+\[
+S_{10}=\frac{10(a_1+a_{10})}{2}
+=5(20+2)=110
+\]
+因此选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -67,6 +111,23 @@ D
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+因根式及分母有意义，须有 \(x>0\). 二项展开式的第 \(k+1\) 项为
+\[
+\mathrm C_6^k
+\left(\frac{\sqrt{x}}{2}\right)^{6-k}
+\left(-\frac{2}{\sqrt{x}}\right)^k
+=\mathrm C_6^k\frac{(-2)^k}{2^{6-k}}x^{3-k}
+\]
+要得到 \(x^2\)，必须有 \(3-k=2\)，即 \(k=1\). 该项的系数为
+\[
+\mathrm C_6^1\frac{-2}{2^5}
+=-\frac{12}{32}
+=-\frac{3}{8}
+\]
+因此选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -82,10 +143,40 @@ C
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+令 \(AB=AD=s\). 由 \(2AB=\sqrt{3}BD\) 和 \(BC=2BD\)，得
+\(BD=\frac{2s}{\sqrt{3}}\)，\(BC=\frac{4s}{\sqrt{3}}\).
+在等腰三角形 \(ABD\) 中，
+\[
+\cos\angle DAB
+=\frac{s^2+s^2-\left(\frac{2s}{\sqrt3}\right)^2}{2s^2}
+=\frac13
+\]
+所以 \(\sin\angle DAB=\frac{2\sqrt2}{3}\). 取坐标
+\(A=(0,0)\)，\(D=(s,0)\)，\(B=\left(\frac{s}{3},\frac{2\sqrt2s}{3}\right)\)，\(C=(u,0)\).
+由图中 \(C\) 在 \(D\) 的外侧，\(u>s\). 利用 \(BC=4s/\sqrt3\)，
+\[
+\left(u-\frac{s}{3}\right)^2+\frac{8s^2}{9}
+=\frac{16s^2}{3}
+\]
+故
+\[
+u-\frac{s}{3}=\frac{2\sqrt{10}s}{3}
+\]
+于是
+\[
+\sin C
+=\frac{\text{点 }B\text{ 到直线 }AC\text{ 的距离}}{BC}
+=\frac{2\sqrt2s/3}{4s/\sqrt3}
+=\frac{\sqrt6}{6}
+\]
+因此选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
-已知 \(a = 5^{\log_{2} 3^{4}}\)，\(b = 5^{\log_{4} 3^{6}}\)，\(c = \left(\frac{1}{5}\right)^{\log_{3} 0.3}\)，则（\quad）
+已知 \(a = 5^{\log_{2} 3.4}\)，\(b = 5^{\log_{4} 3.6}\)，\(c = \left(\frac{1}{5}\right)^{\log_{3} 0.3}\)，则（\quad）
 
 \choices
     {\(a > b > c\)}
@@ -95,6 +186,27 @@ D
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+由于底数 \(5>1\)，只需比较三个指数. 令
+\(u=\log_2 3.4\)，\(v=\log_4 3.6\)，\(w=-\log_3 0.3=\log_3\frac{10}{3}\).
+由 \(1<3.6<4\)，得 \(0<v<1\). 又因为 \(10/3>3\)，所以 \(w>1\)，从而 \(w>v\).
+另一方面，
+\[
+3.4^4=\left(\frac{17}{5}\right)^4=\frac{83521}{625}
+>\frac{80000}{625}=2^7
+\]
+给出 \(u>\frac74\)，而
+\[
+\left(\frac{10}{3}\right)^4=\frac{10000}{81}
+<\frac{177147}{81}=3^7
+\]
+给出 \(w<\frac74\). 因此 \(u>w>v\). 于是
+\[
+a>c>b
+\]
+选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -111,15 +223,50 @@ b, & a - b > 1.
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+令 \(p=x^2-2\)，\(q=x-x^2\). 则
+\[
+p-q=2x^2-x-2
+\]
+因此当
+\[
+2x^2-x-2\leqslant1
+\quad\Longleftrightarrow\quad
+2x^2-x-3\leqslant0
+\quad\Longleftrightarrow\quad
+-1\leqslant x\leqslant\frac32
+\]
+时，\(f(x)=x^2-2\)；在其余区间，\(f(x)=x-x^2\).
+
+分别考察三段的值域. 当 \(x<-1\) 时，\(f(x)=x-x^2\)，且 \(f'(x)=1-2x>0\)，值域为
+\((-\infty,-2)\). 当 \(-1\leqslant x\leqslant\frac32\) 时，\(f(x)=x^2-2\)，在 \(x=0\) 处取得最小值 \(-2\)，并且
+\(f(-1)=-1\)，\(f\left(\frac32\right)=\frac14\)
+所以这一段的取值在 \([-2,1/4]\)，其中 \(c\in(-2,-1)\) 时有两个原像，\(c=-2\) 时有一个原像，\(c\in[-1,1/4]\) 时有一个或两个原像需结合其他区间判断. 当 \(x>\frac32\) 时，\(f(x)=x-x^2\)，且 \(f'(x)=1-2x<0\)，值域为 \((-\infty,-3/4)\)，每个值至多有一个原像.
+
+具体计数如下：若 \(c<-2\)，左右两个外侧区间各有一个原像；若 \(c=-2\)，中间区间的 \(x=0\) 和右侧区间的 \(x=2\) 共两个原像；若 \(-2<c<-1\)，中间区间有两个原像，右侧区间还有一个原像，共三个；若 \(c=-1\)，中间区间的 \(x=-1\)，\(1\) 与右侧区间的一个原像共三个；若 \(-1<c<-3/4\)，中间区间和右侧区间各有一个原像；若 \(c\geqslant-3/4\) 且 \(c\leqslant1/4\)，只有中间区间的一个原像；其他 \(c\) 没有两个原像. 所以恰有两个公共点的条件为
+\[
+c\in(-\infty,-2]\cup\left(-1,-\frac34\right)
+\]
+因此选 B.
+\end{solution}
 \end{problem}
 
 \section{填空题}
 
 \begin{problem}
-一支田径队有男运动员 48 人，女运动员 36 人，若用分层抽样的方法从该队的全体运动员中抽取一个容量为 21 的样本，则抽取男运动员的人数为\fillinblank{}.
+一支田径队有男运动员 \(48\text{ 人}\)，女运动员 \(36\text{ 人}\)，若用分层抽样的方法从该队的全体运动员中抽取一个容量为 \(21\) 的样本，则抽取男运动员的人数为\fillinblank{}.
 \begin{answer}
-12
+\(12\)
 \end{answer}
+
+\begin{solution}
+全体运动员有 \(48+36=84\) 人，样本抽取比例为 \(\frac{21}{84}=\frac14\). 因此男运动员应抽取
+\[
+48\times\frac14=12
+\]
+人.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -129,6 +276,15 @@ B
 \begin{answer}
 \(6 + \pi\)
 \end{answer}
+
+\begin{solution}
+由三视图可知，该几何体由一个长、宽、高分别为 \(3\mathrm{~m}\)、\(2\mathrm{~m}\)、\(1\mathrm{~m}\) 的长方体和一个底面半径为 \(1\mathrm{~m}\)、高为 \(3\mathrm{~m}\) 的圆锥组成，且两部分没有重叠体积. 因此
+\[
+V=3\times2\times1+\frac13\pi\cdot1^2\cdot3
+=6+\pi\ \mathrm{m}^3
+\]
+所以填 \(6+\pi\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -137,10 +293,25 @@ B
 x = 8t^{2},\\
 y = 8t,
 \end{cases}\)
-（\(t\) 为参数），若斜率为 1 的直线经过抛物线 \(C\) 的焦点，且与圆 \( (x - 4)^{2} + y^{2} = r^{2} \) （\(r > 0\)）相切，则 \(r =\)\fillinblank{}.
+（\(t\) 为参数），若斜率为 \(1\) 的直线经过抛物线 \(C\) 的焦点，且与圆 \( (x - 4)^{2} + y^{2} = r^{2} \) （\(r > 0\)）相切，则 \(r =\)\fillinblank{}.
 \begin{answer}
 \(\sqrt{2}\)
 \end{answer}
+
+\begin{solution}
+消去参数 \(t\)，得
+\[
+y^2=64t^2=8x
+\]
+与标准式 \(y^2=4px\) 比较，得 \(p=2\)，所以焦点为 \((2,0)\). 过焦点且斜率为 \(1\) 的直线为
+\[
+y=x-2
+\]
+即 \(x-y-2=0\). 圆心为 \((4,0)\)，圆与该直线相切时，半径等于圆心到直线的距离：
+\[
+r=\frac{|4-0-2|}{\sqrt{1^2+(-1)^2}}=\sqrt2
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -151,6 +322,33 @@ y = 8t,
 \begin{answer}
 \(\frac{\sqrt{7}}{2}\)
 \end{answer}
+
+\begin{solution}
+设
+\(AF=4k\)，\(FB=2k\)，\(BE=k\).
+由相交弦定理，
+\[
+AF\cdot FB=DF\cdot CF
+\]
+即
+\[
+(4k)(2k)=\sqrt2\cdot\sqrt2=2
+\]
+因 \(k>0\)，故 \(k=\frac12\). 从而
+\(AF=2\)，\(FB=1\)，\(BE=\frac12\).
+因 \(E\) 在 \(AB\) 的延长线上且位于 \(B\) 的外侧，
+\[
+EA=AF+FB+BE=2+1+\frac12=\frac72
+\]
+由切割线定理，
+\[
+CE^2=EA\cdot EB=\frac72\cdot\frac12=\frac74
+\]
+所以
+\[
+CE=\frac{\sqrt7}{2}
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -158,13 +356,62 @@ y = 8t,
 \begin{answer}
 \(\{x \mid -2 \leqslant x \leqslant 5\}\)
 \end{answer}
+
+\begin{solution}
+分段求集合 \(A\). 当 \(x<-3\) 时，
+\[
+|x+3|+|x-4|=1-2x\leqslant9
+\quad\Longleftrightarrow\quad x\geqslant-4
+\]
+当 \(-3\leqslant x\leqslant4\) 时，左式等于 \(7\)，恒满足不等式. 当 \(x>4\) 时，
+\[
+|x+3|+|x-4|=2x-1\leqslant9
+\quad\Longleftrightarrow\quad x\leqslant5
+\]
+所以 \(A=[-4,5]\).
+
+对 \(B\)，由 \(4t>0\)、\(1/t>0\)，且
+\[
+4t+\frac1t\geqslant2\sqrt{4t\cdot\frac1t}=4
+\]
+等号在 \(t=1/2\) 时成立. 函数 \(4t+1/t-6\) 在 \((0,+\infty)\) 上连续，且当 \(t\to0^+\) 或 \(t\to+\infty\) 时趋于 \(+\infty\)，故
+\[
+B=[-2,+\infty)
+\]
+因此
+\[
+A\cap B=[-4,5]\cap[-2,+\infty)=[-2,5]
+\]
+\end{solution}
+
 \end{problem}
 
 \begin{problem}
 已知直角梯形 \(ABCD\) 中，\(AD \parallel BC\)，\(\angle ADC = 90^{\circ}\)，\(AD = 2\)，\(BC = 1\)，\(P\) 是腰 \(DC\) 上的动点，则 \(\left|\overrightarrow{PA} + 3\overrightarrow{PB}\right|\) 的最小值为\fillinblank{}.
 \begin{answer}
-5
+\(5\)
 \end{answer}
+
+\begin{solution}
+建立直角坐标系，令
+\(D=(0,0)\)，\(C=(0,h)\)，\(A=(2,0)\)，\(B=(1,h)\)
+其中 \(h>0\). 设
+\[
+Q=\frac{A+3B}{4}
+=\left(\frac54,\frac{3h}{4}\right)
+\]
+对任意 \(P\in DC\)，
+\[
+\overrightarrow{PA}+3\overrightarrow{PB}
+=(A-P)+3(B-P)
+=4(Q-P)
+\]
+点 \(Q\) 到直线 \(DC\) 的垂足为 \((0,3h/4)\)，属于线段 \(DC\)，所以 \(PQ\) 的最小值为 \(5/4\). 因而
+\[
+\min\left|\overrightarrow{PA}+3\overrightarrow{PB}\right|
+=4\min PQ=4\cdot\frac54=5
+\]
+\end{solution}
 \end{problem}
 
 \section{解答题}
@@ -177,30 +424,88 @@ y = 8t,
 \end{enumerate}
 \begin{solution}
 \begin{enumerate}
-\item 定义域为 \(\left\{x \in \R \middle| x \ne \frac{\pi}{8} + \frac{k\pi}{2},\ k \in \Z\right\}\)，最小正周期为 \(\frac{\pi}{2}\).
-\item \(\alpha = \frac{\pi}{12}\).
+\item 正切函数有意义的条件为
+\(2x+\frac{\pi}{4}\ne\frac{\pi}{2}+k\pi\)，\(k\in\Z\).
+所以
+\(x\ne\frac{\pi}{8}+\frac{k\pi}{2}\)，\(k\in\Z\)
+定义域为
+\[
+\left\{x\in\R\middle|x\ne\frac{\pi}{8}+\frac{k\pi}{2},\ k\in\Z\right\}
+\]
+因为 \(\tan u\) 的最小正周期为 \(\pi\)，所以 \(f(x)\) 的最小正周期为 \(\pi/2\).
+
+\item 令 \(t=\tan\alpha\). 由 \(0<\alpha<\pi/4\)，知 \(0<t<1\). 原方程化为
+\[
+\tan\left(\alpha+\frac{\pi}{4}\right)=2\cos2\alpha
+\]
+即
+\[
+\frac{1+t}{1-t}=\frac{2(1-t^2)}{1+t^2}
+\]
+因 \(1+t>0\) 且 \(1-t>0\)，约去 \(1+t\) 后得
+\[
+1+t^2=2(1-t)^2
+\]
+所以
+\[
+t^2-4t+1=0
+\]
+其根为 \(t=2\pm\sqrt3\)，结合 \(0<t<1\)，取
+\[
+t=2-\sqrt3=\tan\frac{\pi}{12}
+\]
+故 \(\alpha=\frac{\pi}{12}\).
 \end{enumerate}
 \end{solution}
 \end{problem}
 
 \begin{problem}
-学校游园活动有这样一个游戏项目：甲箱子里装有3个白球，2个黑球，乙箱子里装有1个白球，2个黑球，这些球除颜色外完全相同. 每次游戏从这两个箱子里各随机摸出2个球，若摸出的白球不少于2个，则获奖. （每次游戏结束后将球放回原箱）
+学校游园活动有这样一个游戏项目：甲箱子里装有\(3\)个白球，\(2\)个黑球，乙箱子里装有\(1\)个白球，\(2\)个黑球，这些球除颜色外完全相同. 每次游戏从这两个箱子里各随机摸出\(2\)个球，若摸出的白球不少于\(2\)个，则获奖. （每次游戏结束后将球放回原箱）
 \begin{enumerate}
 \item 求在一次游戏中
 \begin{enumerate}
     \item 摸出 3 个白球的概率；
     \item 获奖的概率.
 \end{enumerate}
-\item 求在两次中获奖次数 X 的分布列及数学期望 \( E(X) \).
+\item 求在两次中获奖次数 \(X\) 的分布列及数学期望 \(E(X)\).
 \end{enumerate}
 \begin{solution}
+记 \(U\) 为从甲箱摸出的白球数，\(V\) 为从乙箱摸出的白球数. 由组合数等可能性，
+\(P(U=0)=\frac{\mathrm C_2^2}{\mathrm C_5^2}=\frac1{10}\)，\(P(U=1)=\frac{\mathrm C_3^1\mathrm C_2^1}{\mathrm C_5^2}=\frac35\)，\(P(U=2)=\frac{\mathrm C_3^2}{\mathrm C_5^2}=\frac3{10}\).
+乙箱中只有一个白球，故
+\(P(V=0)=\frac{\mathrm C_2^2}{\mathrm C_3^2}=\frac13\)，\(P(V=1)=\frac{\mathrm C_1^1\mathrm C_2^1}{\mathrm C_3^2}=\frac23\)，\(P(V=2)=0\).
+
 \begin{enumerate}
 \item
 \begin{enumerate}
-\item \(\frac{1}{5}\).
-\item \(\frac{7}{10}\).
+\item 摸出 3 个白球只可能是 \(U=2\)，\(V=1\)，故
+\[
+P(U+V=3)=\frac3{10}\cdot\frac23=\frac15
+\]
+\item 获奖事件为 \(U+V\geqslant2\)，包括
+\((U,V)=(2,0)\)，\((2,1)\)，\((1,1)\). 由于两箱独立，
+\[
+P(U+V\geqslant2)
+=P(U=2)+P(U=1)P(V=1)
+=\frac3{10}+\frac35\cdot\frac23
+=\frac7{10}
+\]
 \end{enumerate}
-\item \(P(X=0)=\frac{9}{100}\)，\(P(X=1)=\frac{21}{50}\)，\(P(X=2)=\frac{49}{100}\)，\(E(X)=\frac{7}{5}\).
+
+\item 每次游戏独立，令获奖概率 \(p=7/10\)，则两次获奖次数 \(X\) 服从参数为 \(2\)，\(p\) 的二项分布. 因此
+\[
+P(X=0)=\left(\frac3{10}\right)^2=\frac9{100}
+\]
+\[
+P(X=1)=2\cdot\frac7{10}\cdot\frac3{10}=\frac{21}{50}
+\]
+\[
+P(X=2)=\left(\frac7{10}\right)^2=\frac{49}{100}
+\]
+且
+\[
+E(X)=2p=\frac75
+\]
 \end{enumerate}
 \end{solution}
 \end{problem}
@@ -214,10 +519,132 @@ y = 8t,
 \end{enumerate}
 \bitmapfigure[max width=0.42\linewidth]{img/2011/tianjin_science/q17_fig1.png}
 \begin{solution}
+取空间直角坐标系，使
+\(A=(0,0,0)\)，\(A_1=(2\sqrt2,0,0)\)，\(B=(0,2\sqrt2,0)\)，\(B_1=(2\sqrt2,2\sqrt2,0)\).
+于是 \(H=(\sqrt2,\sqrt2,0)\). 由于 \(C_1H\) 垂直于正方形所在平面且
+\(C_1H=\sqrt5\)，可取
+\(C_1=(\sqrt2,\sqrt2,\sqrt5)\)，\(C=(-\sqrt2,\sqrt2,\sqrt5)\).
+
 \begin{enumerate}
-\item \(\frac{\sqrt{2}}{3}\).
-\item \(\frac{3\sqrt{5}}{7}\).
-\item \(\frac{\sqrt{10}}{4}\).
+\item
+\(\overrightarrow{AC}=(-\sqrt2,\sqrt2,\sqrt5)\)，\(\overrightarrow{A_1B_1}=(0,2\sqrt2,0)\).
+所以
+\(\overrightarrow{AC}\cdot\overrightarrow{A_1B_1}=4\)，\(|\overrightarrow{AC}|=3\)，\(|\overrightarrow{A_1B_1}|=2\sqrt2\).
+因此
+\[
+\cos\theta=\frac{|4|}{3\cdot2\sqrt2}
+=\frac{\sqrt2}{3}
+\]
+\item 平面 \(AA_1C_1\) 和平面 \(A_1B_1C_1\) 的法向量可分别取
+\(\mathbf n_1=(0,2\sqrt{10},-4)\)，\(\mathbf n_2=(2\sqrt{10},0,4)\).
+有
+\(|\mathbf n_1\cdot\mathbf n_2|=16\)，\(|\mathbf n_1|^2=|\mathbf n_2|^2=56\).
+若二面角为 \(\varphi\)，则
+\[
+\cos\varphi=\frac{16}{56}=\frac27
+\]
+从而
+\[
+\sin\varphi=\sqrt{1-\frac4{49}}=\frac{3\sqrt5}{7}
+\]
+
+\item 点 \(N\) 为 \(B_1C_1\) 的中点，故
+\[
+N=\left(\frac{3\sqrt2}{2},\frac{3\sqrt2}{2},\frac{\sqrt5}{2}\right)
+\]
+平面 \(A_1B_1C_1\) 的一个法向量为
+\[
+\mathbf n=(\sqrt{10},0,2)
+\]
+设 \(M=(x,y,0)\). 由 \(MN\perp\) 平面 \(A_1B_1C_1\)，存在实数 \(\lambda\) 使
+\[
+M-N=\lambda(\sqrt{10},0,2)
+\]
+比较 \(z\) 坐标得 \(\lambda=-\sqrt5/4\)，于是
+\(x=\frac{\sqrt2}{4}\)，\(y=\frac{3\sqrt2}{2}\).
+因此
+\[
+BM^2=\left(\frac{\sqrt2}{4}\right)^2
++\left(\frac{3\sqrt2}{2}-2\sqrt2\right)^2
+=\frac{5}{8}
+\]
+故 \(BM=\frac{\sqrt{10}}4\).
+\end{enumerate}
+\end{solution}
+\end{problem}
+
+\begin{problem}
+在平面直角坐标系 \(xOy\) 中，点 \(P(a,b)\)（\(a>b>0\)）为动点，\(F_{1}\)，\(F_{2}\) 分别为椭圆 \(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\) 的左、右焦点. 已知 \(\triangle F_1PF_2\) 为等腰三角形.
+\begin{enumerate}
+\item 求椭圆的离心率 \(e\)；
+\item 设直线 \(PF_{2}\) 与椭圆相交于 \(A\)，\(B\) 两点，\(M\) 是直线 \(PF_{2}\) 上的点，满足 \(\overrightarrow{AM}\cdot\overrightarrow{BM}=-2\)，求点 \(M\) 的轨迹方程.
+\end{enumerate}
+\begin{solution}
+设椭圆焦距的一半为 \(c\)，则
+\(c^2=a^2-b^2\)，\(e=\frac ca\)，\(F_1=(-c,0)\)，\(F_2=(c,0)\).
+由于 \(P=(a,b)\)，且 \(b^2=a^2-c^2\)，有
+\[
+PF_1^2=(a+c)^2+b^2=2a(a+c)
+\]
+\[
+PF_2^2=(a-c)^2+b^2=2a(a-c)
+\]
+从而 \(PF_1>PF_2\). 又 \(F_1F_2=2c\).
+
+\begin{enumerate}
+\item 三角形等腰时，若 \(PF_1=F_1F_2\)，则
+\[
+2a(a+c)=4c^2
+\quad\Longleftrightarrow\quad
+2e^2-e-1=0
+\]
+其根为 \(e=1\) 或 \(e=-1/2\)，均不满足 \(0<e<1\). 因而只能有
+\(PF_2=F_1F_2\)，即
+\[
+2a(a-c)=4c^2
+\quad\Longleftrightarrow\quad
+2e^2+e-1=0
+\]
+由 \(0<e<1\)，得 \(e=1/2\). 所以
+\(a=2c\)，\(b=\sqrt3c\).
+
+\item 此时椭圆方程为
+\[
+\frac{x^2}{4c^2}+\frac{y^2}{3c^2}=1
+\]
+且直线 \(PF_2\) 经过 \(F_2=(c,0)\) 和 \(P=(2c,\sqrt3c)\)，故
+\[
+PF_2:\ y=\sqrt3(x-c)
+\]
+将直线上的点参数化为
+\[
+X(t)=(c+t,\sqrt3t)
+\]
+代入椭圆方程，交点参数 \(t_1\)，\(t_2\) 满足
+\[
+5t^2+2ct-3c^2=0
+\]
+因此
+\(t_1+t_2=-\frac{2c}{5}\)，\(t_1t_2=-\frac{3c^2}{5}\).
+设 \(M=X(m)\). 直线方向向量为 \((1,\sqrt3)\)，其模的平方为 \(4\)，所以
+\[
+\overrightarrow{AM}\cdot\overrightarrow{BM}
+=4(m-t_1)(m-t_2)=-2
+\]
+整理得
+\[
+20m^2+8cm-12c^2+10=0
+\]
+又 \(m=y/\sqrt3\)，且 \(c=x-y/\sqrt3\). 代入并化简，得到
+\[
+18x^2-16\sqrt3xy-15=0
+\]
+还需确定范围. 将上式与 \(c=x-y/\sqrt3\) 联立，可得
+\[
+c=\frac{5(2x^2+1)}{16x}
+\]
+由于 \(c>0\)，必有 \(x>0\). 所以点 \(M\) 的轨迹方程为
+\(18x^2-16\sqrt3xy-15=0\)，\(x>0\).
 \end{enumerate}
 \end{solution}
 \end{problem}
@@ -227,43 +654,229 @@ y = 8t,
 \begin{enumerate}
 \item 求 \( f(x) \) 的单调区间；
 \item 当 \(a = \frac{1}{8}\) 时，证明：存在 \(x_0 \in (2, +\infty)\)，使 \(f(x_0) = f\left(\frac{3}{2}\right)\).
-\item 若存在均属于区间 \([1,3]\) 的 \(\alpha\)，\(\beta\)，且 \(\beta - \alpha \geqslant 1\)，使 \(f(\alpha) = f(\beta)\). 证明： \(\frac{\ln 3 - \ln 2}{5} \leqslant a \leqslant \frac{\ln 2}{3}\).
+\item 若存在均属于区间 \([1,3]\) 的 \(\alpha\)，\(\beta\)，且 \(\beta - \alpha \geqslant 1\)，使 \(f(\alpha) = f(\beta)\). 证明：\(\frac{\ln 3 - \ln 2}{5} \leqslant a \leqslant \frac{\ln 2}{3}\).
 \end{enumerate}
 \begin{solution}
 \begin{enumerate}
-\item 在 \(\left(0,\frac{\sqrt{2a}}{2a}\right)\) 上单调递增，在 \(\left(\frac{\sqrt{2a}}{2a},+\infty\right)\) 上单调递减.
-\item 存在 \(x_{0} \in (2,+\infty)\)，使 \(f(x_{0})=f\left(\frac{3}{2}\right)\).
-\item \(\frac{\ln 3 - \ln 2}{5} \leqslant a \leqslant \frac{\ln 2}{3}\).
+\item
+\[
+f'(x)=\frac1x-2ax=\frac{1-2ax^2}{x}
+\]
+因 \(x>0\)，所以当 \(0<x<1/\sqrt{2a}\) 时 \(f'(x)>0\)，当
+\(x>1/\sqrt{2a}\) 时 \(f'(x)<0\). 因此 \(f(x)\) 在
+\[
+\left(0,\frac1{\sqrt{2a}}\right)
+\]
+上单调递增，在
+\[
+\left(\frac1{\sqrt{2a}},+\infty\right)
+\]
+上单调递减.
+
+\item 当 \(a=1/8\) 时，令
+\[
+g(x)=f(x)-f\left(\frac32\right)
+=\ln x-\frac{x^2}{8}-\ln\frac32+\frac9{32}
+\]
+函数 \(g\) 在 \([2,4]\) 上连续. 对 \(u>0\)，由
+\[
+\frac{u}{1+u}<\ln(1+u)<u
+\]
+可得
+\[
+g(2)=\ln\frac43-\frac7{32}
+>\frac14-\frac7{32}
+=\frac1{32}>0
+\]
+以及
+\[
+g(4)=\ln\frac83-\frac{55}{32}
+<\frac53-\frac{55}{32}
+=-\frac5{96}<0
+\]
+由零点定理，存在 \(x_0\in(2,4)\subset(2,+\infty)\)，使
+\(g(x_0)=0\)，即 \(f(x_0)=f\left(\frac32\right)\).
+
+\item 由 \(\beta-\alpha\geqslant1\) 知 \(\alpha<\beta\). 令
+\(d=\beta-\alpha\)，\(1\leqslant d\leqslant2\)，\(1\leqslant\alpha\leqslant3-d\).
+由 \(f(\alpha)=f(\beta)\)，得
+\[
+a=\frac{\ln(\beta/\alpha)}{\beta^2-\alpha^2}
+=\frac{\ln(1+d/\alpha)}{d(2\alpha+d)}
+\]
+
+先证上界. 因 \(\alpha\geqslant1\) 且 \(1\leqslant d\leqslant2\)，有
+\(1+d/\alpha\leqslant1+d\). 又令 \(h(d)=2^d-d-1\)，则
+\(h(1)=0\)，且 \(h'(d)=2^d\ln2-1\geqslant2\ln2-1>0\)，所以
+\(1+d\leqslant2^d\). 因而
+\[
+\ln(1+d/\alpha)\leqslant d\ln2
+\]
+又 \(2\alpha+d=\alpha+\beta\geqslant3\)，所以
+\[
+a\leqslant\frac{d\ln2}{3d}=\frac{\ln2}{3}
+\]
+
+再证下界. 对固定的 \(d\)，分子
+\(\ln(1+d/\alpha)\) 随 \(\alpha\) 增大而减小，分母
+\(d(2\alpha+d)\) 随 \(\alpha\) 增大而增大，故该比值随 \(\alpha\) 减小. 由
+\(\alpha\leqslant3-d\)，
+\[
+a\geqslant
+\frac{\ln\left(1+\frac{d}{3-d}\right)}{d(6-d)}
+=:G(d)
+\]
+令 \(u=d/(3-d)\)，则 \(u\in[1/2,2]\)，且
+\[
+G(d)=\frac{\ln(1+u)}{d(6-d)}
+\]
+直接求导得
+\[
+G'(d)=
+\frac{\dfrac{d(6-d)}{3-d}-2(3-d)\ln(1+u)}{[d(6-d)]^2}
+=\frac{3\left[u(2+u)-2\ln(1+u)\right]}{(1+u)[d(6-d)]^2}
+\]
+由于 \(\ln(1+u)<u\)，有
+\[
+u(2+u)-2\ln(1+u)>u(2+u)-2u=u^2>0
+\]
+所以 \(G(d)\) 在 \([1,2]\) 上递增，从而
+\[
+a\geqslant G(1)
+=\frac{\ln\left(\frac32\right)}5
+=\frac{\ln3-\ln2}{5}
+\]
+综上，
+\[
+\frac{\ln3-\ln2}{5}\leqslant a\leqslant\frac{\ln2}{3}
+\]
 \end{enumerate}
 \end{solution}
 \end{problem}
 
 \begin{problem}
-已知数列 \(\{a_{n}\}\) 与 \(\{b_{n}\}\) 满足： \(b_{n}a_{n} + a_{n + 1} + b_{n + 1}a_{n + 2} = 0\)，\(b_{n} = \frac{3 + (-1)^{n}}{2}\)，\(n \in \N^{*}\)，且 \(a_{1} = 2\)，\(a_{2} = 4\)，
+已知数列 \(\{a_n\}\) 与 \(\{b_n\}\) 满足：\(b_na_n+a_{n+1}+b_{n+1}a_{n+2}=0\)，\(b_n=\frac{3+(-1)^n}{2}\)，\(n\in\N^*\)，且 \(a_1=2\)，\(a_2=4\)，
 \begin{enumerate}
-\item 求 \(a_{3}\)，\(a_{4}\)，\(a_{5}\) 的值；
-\item 设 \(c_{n} = a_{2n - 1} + a_{2n + 1}\)，\(n \in \N^{*}\)，证明： \(\{c_{n}\}\) 是等比数列；
-\item 设 \(S_{k} = a_{2} + a_{4} + \dots + a_{2k}\)，\(k \in \N^{*}\)，证明： \(\sum_{k=1}^{n} \frac{S_{k}}{a_{k}} < \frac{7}{6}\)（\(n \in \N^{*}\)）.
+\item 求 \(a_3\)，\(a_4\)，\(a_5\) 的值；
+\item 设 \(c_n=a_{2n-1}+a_{2n+1}\)，\(n\in\N^*\)，证明：\(\{c_n\}\) 是等比数列；
+\item 设 \(S_k=a_2+a_4+\dots+a_{2k}\)，\(k\in\N^*\)，证明：\(\sum_{k=1}^{4n}\frac{S_k}{a_k}<\frac76\)（\(n\in\N^*\)）.
 \end{enumerate}
 \begin{solution}
-\begin{enumerate}
-\item \(a_{3}=-3\)，\(a_{4}=-5\)，\(a_{5}=4\).
-\item \(c_{n}=(-1)^{n}\)，故 \(\{c_{n}\}\) 是等比数列.
-\item \(\displaystyle\sum_{k=1}^{n}\frac{S_{k}}{a_{k}}<\frac{7}{6}\).
-\end{enumerate}
-\end{solution}
-\end{problem}
+由于
+\(b_{2n-1}=1\)，\(b_{2n}=2\).
 
-\begin{problem}
-在平面直角坐标系 \(xOy\) 中，点 \(P(a,b)\) （\(a > b > 0\)） 为动点，\(F_{1}\)，\(F_{2}\) 分别为椭圆 \(\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\) 的左，右焦点. 已知 \(\triangle F_1PF_2\) 为等腰三角形.
 \begin{enumerate}
-\item 求椭圆的离心率 \(e\)；
-\item 设直线 \(PF_{2}\) 与椭圆相交于 \(A\)，\(B\) 两点，\(M\) 是直线 \(PF_{2}\) 上的点，满足 \(\overrightarrow{AM} \cdot \overrightarrow{BM} = -2\)，求点 \(M\) 的轨迹方程.
-\end{enumerate}
-\begin{solution}
-\begin{enumerate}
-\item \(e=\frac{1}{2}\).
-\item \(18x^{2}-16\sqrt{3}xy-15y^{2}-15=0\)，且 \(x>0\).
+\item 取 \(n=1\)，\(2\)，\(3\)，原递推式分别给出
+\(a_1+a_2+2a_3=0\)，\(2a_2+a_3+a_4=0\)，\(a_3+a_4+2a_5=0\).
+代入 \(a_1=2\)，\(a_2=4\)，依次得
+\(a_3=-3\)，\(a_4=-5\)，\(a_5=4\).
+
+\item 对任意 \(n\in\N^*\)，取原递推式中下标 \(2n\) 和 \(2n+1\)，得
+\[
+2a_{2n}+a_{2n+1}+a_{2n+2}=0
+\]
+\[
+a_{2n+1}+a_{2n+2}+2a_{2n+3}=0
+\]
+两式相减可得
+\[
+a_{2n+3}=a_{2n}
+\]
+再取下标 \(2n-1\)，有
+\[
+a_{2n-1}+a_{2n}+2a_{2n+1}=0
+\]
+因此
+\[
+c_{n+1}=a_{2n+1}+a_{2n+3}
+=a_{2n+1}+a_{2n}
+=-(a_{2n-1}+a_{2n+1})
+=-c_n
+\]
+又 \(c_1=a_1+a_3=2-3=-1\)，所以
+\[
+c_n=(-1)^n
+\]
+故 \(\{c_n\}\) 是首项 \(-1\)、公比 \(-1\) 的等比数列.
+
+\item 先由 \(a_1=2\)，\(a_2=4\) 验证
+\(a_{2\cdot1-1}=(-1)^{1-1}(1+1)\)，\(a_{2\cdot1}=(-1)^{1-1}(1+3)\).
+若
+\(a_{2n-1}=(-1)^{n-1}(n+1)\)，\(a_{2n}=(-1)^{n-1}(n+3)\)
+则由下标 \(2n-1\) 和 \(2n\) 的递推式分别有
+\[
+a_{2n+1}=-\frac{a_{2n-1}+a_{2n}}2=(-1)^n(n+2)
+\]
+\[
+a_{2n+2}=-2a_{2n}-a_{2n+1}=(-1)^n(n+4)
+\]
+这正是把 \(n\) 换成 \(n+1\) 后的两个等式，故由数学归纳法，对任意 \(n\in\N^*\)，
+\(a_{2n-1}=(-1)^{n-1}(n+1)\)，\(a_{2n}=(-1)^{n-1}(n+3)\).
+于是
+\[
+S_{2m}=a_2+a_4+\cdots+a_{4m}=-m
+\]
+\[
+S_{2m-1}=a_2+a_4+\cdots+a_{4m-2}=m+3
+\]
+将四项作为一组，得
+\[
+B_m=\frac{S_{4m-3}}{a_{4m-3}}
++\frac{S_{4m-2}}{a_{4m-2}}
++\frac{S_{4m-1}}{a_{4m-1}}
++\frac{S_{4m}}{a_{4m}}
+\]
+化简得
+\[
+B_m=\frac{2m+2}{2m}
+-\frac{2m-1}{2m+2}
+-\frac{2m+3}{2m+1}
++\frac{2m}{2m+3}
+=\frac{2}{2m(2m+1)}
++\frac{3}{(2m+2)(2m+3)}
+\]
+当 \(n=1\) 时，
+\[
+\sum_{k=1}^{4}\frac{S_k}{a_k}
+=B_1=\frac{29}{60}<\frac76
+\]
+当 \(n\geqslant2\) 时，对 \(m\geqslant2\) 有
+\[
+B_m=\frac5{2m(2m+1)}
++\frac3{(2m+2)(2m+3)}
+-\frac3{2m(2m+1)}
+\]
+其中最后一项恰与前一组的第二项相消，且
+\[
+B_1-\frac3{4\cdot5}=\frac13
+\]
+因此望远镜相消得到
+\[
+\sum_{k=1}^{4n}\frac{S_k}{a_k}
+=\frac13+\sum_{m=2}^{n}\frac5{2m(2m+1)}
++\frac3{(2n+2)(2n+3)}
+\]
+因为
+\[
+\frac5{2m(2m+1)}
+<\frac5{(2m-1)(2m+1)}
+=\frac52\left(\frac1{2m-1}-\frac1{2m+1}\right)
+\]
+所以
+\[
+\sum_{m=2}^{n}\frac5{2m(2m+1)}
+<\frac56-\frac5{2(2n+1)}
+\]
+并且因 \(6(2n+1)<5(2n+2)(2n+3)\)，有
+\[
+\frac3{(2n+2)(2n+3)}
+<\frac5{2(2n+1)}
+\]
+故
+\[
+\sum_{k=1}^{4n}\frac{S_k}{a_k}
+<\frac13+\frac56=\frac76
+\]
 \end{enumerate}
 \end{solution}
 \end{problem}

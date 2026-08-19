@@ -11,6 +11,11 @@
     {\( \frac{1}{2} \)}
     {\(1\)}
 \answer{B}
+
+\begin{solution}
+由二倍角公式，\(f(x)=\sin x\cos x=\frac{1}{2}\sin 2x\).因为\(-1\leqslant\sin 2x\leqslant1\)，所以
+\(f(x)\geqslant-\frac{1}{2}\)，且当\(\sin 2x=-1\)时取等号.因此最小值为\(-\frac{1}{2}\)，选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -19,9 +24,15 @@
 \choices
     {\(\{x\mid 0\leqslant x\leqslant 2\}\)}
     {\(\{x\mid 0 < x < 2\}\)}
-    {\(\{x\mid x < 0\) 或 \(x > 2\}\)}
-    {\(\{x\mid x\leqslant 0\) 或 \(x\geqslant 2\}\)}
+    {\(\{x\mid x < 0\text{ 或 }x > 2\}\)}
+    {\(\{x\mid x\leqslant 0\text{ 或 }x\geqslant 2\}\)}
 \answer{A}
+
+\begin{solution}
+由\(x^2-2x=x(x-2)>0\)，得\(x<0\)或\(x>2\)，所以
+\(A=(-\infty,0)\cup(2,+\infty)\).在全集\(\R\)中取补集，得到
+\(\complement_U A=[0,2]=\{x\mid 0\leqslant x\leqslant2\}\)，选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -33,6 +44,14 @@
     {\(2\)}
     {\(3\)}
 \answer{C}
+
+\begin{solution}
+等差数列前三项为\(a_1=4\)，\(a_2=4+d\)，\(a_3=4+2d\).由题设
+\[
+S_3=a_1+a_2+a_3=4+(4+d)+(4+2d)=12+3d=6
+\]
+解得\(d=-2\).因此按题设条件公差为\(-2\)；原 PDF 的选项 C 印为\(2\)，与计算结果不一致.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -44,6 +63,16 @@
     {\(\pi - 2\)}
     {\(\pi + 2\)}
 \answer{D}
+
+\begin{solution}
+由原函数的一个原函数可得
+\[
+\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}(1+\cos x)\mathrm{d}x
+=\left.x+\sin x\right|_{-\frac{\pi}{2}}^{\frac{\pi}{2}}
+=\left(\frac{\pi}{2}+1\right)-\left(-\frac{\pi}{2}-1\right)=\pi+2
+\]
+因此选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -55,12 +84,17 @@
     {\(f(x) = \e^{x}\)}
     {\(f(x) = \ln (x + 1)\)}
 \answer{A}
+
+\begin{solution}
+当\(x>0\)时，\(f(x)=\frac{1}{x}\)的导数为\(f'(x)=-\frac{1}{x^2}<0\)，所以它在\((0,+\infty)\)上严格递减，满足题设.
+\(f(x)=(x-1)^2\)在\((0,1)\)上递减、在\((1,+\infty)\)上递增；\(f(x)=\e^x\)和\(f(x)=\ln(x+1)\)的导数分别为\(\e^x>0\)和\(\frac{1}{x+1}>0\)，均严格递增.因此选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
 阅读如图所示的程序框图，运行相应的程序，输出的结果是（\quad）
 
-\texfigure[float=inline,max width=0.42\linewidth]{img_repaint/2009/fujian_science/q6_fig1.tex}
+\bitmapfigure[max width=0.42\linewidth]{img/2009/fujian_science/q6_fig1.png}
 
 \choices
     {\(2\)}
@@ -68,21 +102,34 @@
     {\(8\)}
     {\(16\)}
 \answer{C}
+
+\begin{solution}
+程序开始时\(S=2\)，\(n=1\).循环第一次计算
+\(S=\frac{1}{1-S}=\frac{1}{1-2}=-1\)，随后\(n=2\)；第二次计算
+\(S=\frac{1}{1-(-1)}=\frac{1}{2}\)，随后\(n=4\)；第三次计算
+\(S=\frac{1}{1-\frac{1}{2}}=2\)，随后\(n=8\).此时满足\(S=2\)，输出\(n=8\)，选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
-设 \(m\)，\(n\) 是平面 \(\alpha\) 内的两条不同直线，\(l_{1}\)，\(l_{2}\) 是平面 \(\beta\) 内的两条相交直线，则 \(\alpha // \beta\) 的一个充分而不必要条件是（\quad）
+设 \(m\)，\(n\) 是平面 \(\alpha\) 内的两条不同直线，\(l_{1}\)，\(l_{2}\) 是平面 \(\beta\) 内的两条相交直线，则 \(\alpha\parallel\beta\) 的一个充分而不必要条件是（\quad）
 
 \choices
-    {\(m // \beta\) 且 \(l_{1} // \alpha\)}
-    {\(m // l_{1}\) 且 \(n // l_{2}\)}
-    {\(m // \beta\) 且 \(n // \beta\)}
-    {\(m // \beta\) 且 \(n // l_{2}\)}
+    {\(m\parallel\beta\) 且 \(l_{1}\parallel\alpha\)}
+    {\(m\parallel l_{1}\) 且 \(n\parallel l_{2}\)}
+    {\(m\parallel\beta\) 且 \(n\parallel\beta\)}
+    {\(m\parallel\beta\) 且 \(n\parallel l_{2}\)}
 \answer{B}
+
+\begin{solution}
+若\(m\parallel l_1\)且\(n\parallel l_2\)，则\(m\)与\(n\)的方向分别平行于平面\(\beta\)内相交直线\(l_1\)与\(l_2\)的方向.由于\(m\)，\(n\)在平面\(\alpha\)内且方向不同，平面\(\alpha\)的两个方向均与平面\(\beta\)的两个方向平行，从而\(\alpha\)与\(\beta\)平行.因此 B 是充分条件.
+
+它不是必要条件.例如两平面平行时，可以在\(\alpha\)内任取两条不同直线\(m\)，\(n\)，它们未必分别平行于指定的\(l_1\)，\(l_2\).所以该条件充分而不必要，选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
-已知某运动员每次投篮命中的概率都为 \(40\%\). 现采用随机模拟的方法估计该运动员三次投篮恰有两次命中的概率：先由计算器算出\(0\)到\(9\)之间取整数值的随机数，指定\(1,2,3,4\)表示命中，\(5,6,7,8,9,0\)表示不命中；再以每\(3\)个随机数为一组，代表三次投篮的结果. 经随机模拟产生了\(20\)组随机数：
+已知某运动员每次投篮命中的概率都为 \(40\%\). 现采用随机模拟的方法估计该运动员三次投篮恰有两次命中的概率：先由计算器算出\(0\)到\(9\)之间取整数值的随机数，指定\(1\)，\(2\)，\(3\)，\(4\)表示命中，\(5\)，\(6\)，\(7\)，\(8\)，\(9\)，\(0\)表示不命中；再以每\(3\)个随机数为一组，代表三次投篮的结果. 经随机模拟产生了\(20\)组随机数：
 
 \begin{center}
 \begin{tabular}{ccccc}
@@ -101,6 +148,12 @@
     {\(0.20\)}
     {\(0.15\)}
 \answer{B}
+
+\begin{solution}
+把每组的三个数字按“\(1\)，\(2\)，\(3\)，\(4\) 命中，其余不命中”判断.恰有两次命中的组为
+\(191\)、\(271\)、\(932\)、\(812\)、\(393\)，共\(5\)组.总共模拟了\(20\)组，所以频率为
+\(\frac{5}{20}=0.25\).因此估计的概率为\(0.25\)，选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -112,6 +165,16 @@
     {以 \(\bs{a}\)，\(\bs{b}\) 为邻边的平行四边形的面积}
     {以 \(\bs{b}\)，\(\bs{c}\) 为邻边的平行四边形的面积}
 \answer{C}
+
+\begin{solution}
+设\(\theta\)为\(\bs{a}\)与\(\bs{b}\)的夹角.因为\(\bs{a}\perp\bs{c}\)且\(|\bs{a}|=|\bs{c}|\)，所以\(\bs{b}\)与\(\bs{c}\)的夹角的余弦绝对值等于\(\sin\theta\).于是
+\[
+\lvert\bs{b}\cdot\bs{c}\rvert
+=|\bs{b}||\bs{c}|\lvert\cos\angle(\bs{b},\bs{c})\rvert
+=|\bs{b}||\bs{a}|\sin\theta
+\]
+右端正是以\(\bs a\)，\(\bs b\)为邻边的平行四边形面积.因此选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -123,6 +186,15 @@
     {\( \{1, 2, 3, 4\} \)}
     {\( \{1, 4, 16, 64\} \)}
 \answer{D}
+
+\begin{solution}
+二次函数图象关于直线\(x=-\frac{b}{2a}\)对称，所以对任意使\(f(x)\)有定义的\(x\)，关于该直线对称的点
+\(x'=-\frac{b}{a}-x\)满足\(f(x')=f(x)\).因此方程
+\(m[f(x)]^2+nf(x)+p=0\)的解集必须关于同一条竖直直线对称：方程先确定至多两个\(f(x)\)的取值，而每个取值的原像关于抛物线的对称轴成对出现.
+
+集合\(\{1,2\}\)、\(\{1,4\}\)分别关于\(x=\frac{3}{2}\)、\(x=\frac{5}{2}\)对称，集合\(\{1,2,3,4\}\)关于\(x=\frac{5}{2}\)对称，均不违反这个必要条件.它们确实可以实现. 对于集合\(\{1,2\}\)，取\(f(x)=\left(x-\frac{3}{2}\right)^2+1\)，并令关于\(y\)的二次方程为\((y-\tfrac{5}{4})(y+1)=0\)；对于集合\(\{1,4\}\)，取\(f(x)=\left(x-\frac{5}{2}\right)^2+1\)，并令关于\(y\)的二次方程为\((y-\tfrac{13}{4})(y+1)=0\)；对于集合\(\{1,2,3,4\}\)，取\(f(x)=\left(x-\frac{5}{2}\right)^2\)，并令关于\(y\)的二次方程为\((y-\tfrac{9}{4})(y-\tfrac{1}{4})=0\).
+前三个例子展开后\(a\)，\(b\)，\(c\)，\(m\)，\(n\)，\(p\)均非零.第一个方程的解集为\(\{1,2\}\)，第二个方程的解集为\(\{1,4\}\)，第三个方程的解集为\(\{1,2,3,4\}\).而\(\{1,4,16,64\}\)中，若关于同一条竖直直线成对对称，则应有\(1+64=4+16\)，但\(65\neq20\)，故该集合不可能是解集.因此不可能的是 D.
+\end{solution}
 \end{problem}
 
 \section{填空题}
@@ -130,6 +202,14 @@
 \begin{problem}
 若 \( \frac{2}{1 - \i} = a + b\i \)（\(\i\) 为虚数单位，\(a\)，\(b\in\R\)），则 \(a+b=\)\fillinblank{}.
 \answer{\(2\)}
+
+\begin{solution}
+分母有理化得
+\[
+\frac{2}{1-\i}=\frac{2(1+\i)}{(1-\i)(1+\i)}=\frac{2(1+\i)}{2}=1+\i
+\]
+所以\(a=1\)，\(b=1\)，从而\(a+b=2\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -144,16 +224,53 @@
 \end{tabular}
 \end{center}
 \answer{\(1\)}
+
+\begin{solution}
+茎叶图中的九个分数为\(88\)，\(89\)，\(89\)，\(91\)，\(92\)，\(92\)，\(93\)，\(94\)，\(90+x\).去掉最低分\(88\)后，最高分为\(94\)（当\(x\leqslant4\)）或\(90+x\)（当\(x\geqslant5\)）.去掉最高、最低分后，七个分数的和应为\(7\times91=637\).
+
+九个分数的总和为\(818+x\).若\(x\leqslant4\)，去掉\(88,94\)后有
+\(818+x-88-94=637\)，解得\(x=1\)，符合\(x\leqslant4\).若\(x\geqslant5\)，去掉\(88\)，\(90+x\)后总和为\(640\)，不等于\(637\).因此\(x=1\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
 过抛物线 \( y^{2} = 2px  \) （\(p > 0\)）的焦点 \(F\) 作倾斜角为 \( 45^{\circ} \) 的直线交抛物线于 \(A\)，\(B\) 两点，若线段 \(AB\) 的长为 \( 8 \)，则 \( p = \)\fillinblank{}.
 \answer{\(2\)}
+
+\begin{solution}
+抛物线\(y^2=2px\)的焦点为\(F\left(\frac{p}{2},0\right)\).倾斜角为\(45^{\circ}\)的直线为
+\(y=x-\frac{p}{2}\).代入抛物线得
+\[
+\left(x-\frac{p}{2}\right)^2=2px
+\quad\Longleftrightarrow\quad
+x^2-3px+\frac{p^2}{4}=0
+\]
+设两交点的横坐标为\(x_1\)，\(x_2\)，则
+\(\lvert x_1-x_2\rvert=\sqrt{9p^2-p^2}=2\sqrt{2}p\).由于直线斜率为\(1\)，弦长
+\[
+AB=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}
+=\sqrt{2}\lvert x_1-x_2\rvert=4p
+\]
+由\(AB=8\)得\(p=2\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
 若曲线 \( f(x) = ax^3 + \ln x \) 存在垂直于 \( y \) 轴的切线，则实数 \( a \) 取值范围是\fillinblank{}.
 \answer{\((-\infty,0)\)}
+
+\begin{solution}
+函数定义域为\(x>0\)，且
+\(f'(x)=3ax^2+\frac{1}{x}\).切线垂直于\(y\)轴即切线水平，所以存在\(x_0>0\)使
+\[
+f'(x_0)=0
+\quad\Longleftrightarrow\quad
+3ax_0^3+1=0
+\quad\Longleftrightarrow\quad
+a=-\frac{1}{3x_0^3}<0
+\]
+反之，任取\(a<0\)，取\(x_0=\sqrt[3]{-\frac{1}{3a}}>0\)，即可使\(f'(x_0)=0\).因此\(a\)的取值范围是\((-\infty,0)\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -166,6 +283,15 @@
 
 已知甲同学第一个报数，当五位同学依序循环报到第\(100\)个数时，甲同学拍手的总次数为\fillinblank{}.
 \answer{\(5\)}
+
+\begin{solution}
+记第\(n\)个报出的数为\(F_n\)，则\(F_1=F_2=1\)，且\(F_n=F_{n-1}+F_{n-2}\).模\(3\)计算得到
+\(F_1\)，\(F_2\)，\(\ldots\)，\(F_8\equiv1\)，\(1\)，\(2\)，\(0\)，\(2\)，\(2\)，\(1\)，\(0\pmod{3}\)
+又 \(F_9\equiv F_1\)，\(F_{10}\equiv F_2\pmod{3}\)，递推关系相同，所以之后以\(8\)为周期.因此\(F_n\)是\(3\)的倍数当且仅当\(n\equiv0\)或\(4\pmod{8}\).
+
+甲同学第一次报第\(1\)个数，五人循环，所以甲报数的序号为\(n=1+5k\).报到第\(100\)个数时\(0\leqslant k\leqslant19\).条件
+\(1+5k\equiv0\)或\(4\pmod{8}\)分别给出\(k\equiv3\)或\(7\pmod{8}\).在\(0\leqslant k\leqslant19\)中，这些\(k\)为\(3\)，\(7\)，\(11\)，\(15\)，\(19\)，共\(5\)个.因此甲同学拍手\(5\)次.
+\end{solution}
 \end{problem}
 
 \section{解答题}
@@ -179,7 +305,24 @@
 \end{enumerate}
 
 \begin{solution}
-短答案：\(P(r)=\dfrac{3}{31}\)；\(\xi\) 的分布列为 \(P(\xi=1)=\dfrac{5}{31}\)，\(P(\xi=2)=\dfrac{10}{31}\)，\(P(\xi=3)=\dfrac{10}{31}\)，\(P(\xi=4)=\dfrac{5}{31}\)，\(P(\xi=5)=\dfrac{1}{31}\)；\(E_{\xi}=\dfrac{80}{31}\).
+\begin{enumerate}
+\item 非空子集共有\(2^5-1=31\)个，且每个被取出的可能性相同.元素和为\(10\)的非空子集为
+\(\{1,4,5\}\)、\(\{2,3,5\}\)、\(\{1,2,3,4\}\)，共\(3\)个，所以\(P(r)=\dfrac{3}{31}\).
+
+\item 记所取子集的元素个数为\(\xi\).当\(\xi=k\)时，从\(5\)个元素中选出\(k\)个，共有\(\mathrm C_5^k\)种，故
+\begin{center}
+\begin{tabular}{c|ccccc}
+\(\xi\)&\(1\)&\(2\)&\(3\)&\(4\)&\(5\)\\
+\hline
+\(P\)&\(\dfrac{5}{31}\)&\(\dfrac{10}{31}\)&\(\dfrac{10}{31}\)&\(\dfrac{5}{31}\)&\(\dfrac{1}{31}\)
+\end{tabular}
+\end{center}
+并且
+\[
+E_{\xi}=1\cdot\frac{5}{31}+2\cdot\frac{10}{31}+3\cdot\frac{10}{31}+4\cdot\frac{5}{31}+5\cdot\frac{1}{31}
+=\frac{80}{31}
+\]
+\end{enumerate}
 \end{solution}
 \end{problem}
 
@@ -193,7 +336,26 @@
 \bitmapfigure[max width=0.42\linewidth]{img/2009/fujian_science/q17_fig1.png}
 
 \begin{solution}
-短答案：异面直线 \(NE\) 与 \(AM\) 所成角的余弦值为 \(\dfrac{\sqrt{10}}{10}\)；存在点 \(S\)，且 \(AS=\dfrac{\sqrt{2}}{2}\).
+\begin{enumerate}
+\item 建立空间直角坐标系，使\(D\)为原点，\(DC\)、\(DA\)、\(DM\)分别为三个坐标轴正方向.则\(A(0,1,0)\)、\(B(1,1,0)\)、\(C(1,0,0)\)、\(M(0,0,1)\)、\(N(1,1,1)\)、\(E\left(1,\frac{1}{2},0\right)\).
+于是\(\overrightarrow{NE}=\left(0,-\frac{1}{2},-1\right)\)，\(\overrightarrow{AM}=(0,-1,1)\)，且
+\(\overrightarrow{NE}\cdot\overrightarrow{AM}=-\frac{1}{2}\)、\(|\overrightarrow{NE}|=\frac{\sqrt{5}}{2}\)、\(|\overrightarrow{AM}|=\sqrt{2}\).
+异面直线所成角取锐角，故其余弦值为
+\[
+\frac{|\overrightarrow{NE}\cdot\overrightarrow{AM}|}{|\overrightarrow{NE}||\overrightarrow{AM}|}
+=\frac{\frac{1}{2}}{\frac{\sqrt{10}}{2}}=\frac{\sqrt{10}}{10}
+\]
+
+\item 设\(S\)在线段\(AN\)上，令\(S=A+t(N-A)=(t,1,t)\)，其中\(0\leqslant t\leqslant1\).平面\(AMN\)内有
+\(\overrightarrow{AM}=(0,-1,1)\)，\(\overrightarrow{AN}=(1,0,1)\)，其法向量可取
+\[
+\overrightarrow{AM}\times\overrightarrow{AN}=(-1,1,1)
+\]
+又\(\overrightarrow{ES}=\left(t-1,\frac{1}{2},t\right)\).要使\(ES\perp\)平面\(AMN\)，必须有\(\overrightarrow{ES}\)平行于\((-1,1,1)\).比较第二坐标得比例因子为\(\frac{1}{2}\)，于是第一、第三坐标分别给出\(t-1=-\frac{1}{2}\)和\(t=\frac{1}{2}\)，两者一致.因此存在这样的点\(S\)，且
+\[
+AS=t|AN|=\frac{1}{2}\sqrt{1^2+1^2}=\frac{\sqrt{2}}{2}
+\]
+\end{enumerate}
 \end{solution}
 \end{problem}
 
@@ -207,12 +369,34 @@
 \bitmapfigure[max width=0.48\linewidth]{img/2009/fujian_science/q18_fig1.png}
 
 \begin{solution}
-短答案：\(A=2\sqrt{3}\)，\(\omega=\dfrac{\pi}{6}\)，\(MP=5\)；当 \(\angle PMN=30^{\circ}\)（等价于 \(MN=NP\)）时，折线段赛道 \(MNP\) 最长.
+\begin{enumerate}
+\item 因为图象的最高点为\(S(3,2\sqrt{3})\)，所以振幅\(A=2\sqrt{3}\)，且\(\sin(3\omega)=1\).写成\(3\omega=\frac{\pi}{2}+2k\pi\).由\(\omega>0\)知\(k\geqslant0\).若\(k\geqslant1\)，则前一个最高点的横坐标为\(3-\frac{2\pi}{\omega}\in(0,3)\)，与最高点只有\(S\)不符，故\(k=0\)，从而\(\omega=\frac{\pi}{6}\).
+
+曲线在\(x=4\)处的终点为
+\[
+M\left(4,2\sqrt{3}\sin\frac{2\pi}{3}\right)=(4,3)
+\]
+而\(P=(8,0)\)，所以
+\[
+MP=\sqrt{(8-4)^2+(0-3)^2}=5
+\]
+
+\item 设\(MN=u\)，\(NP=v\)，其中\(u\)，\(v>0\).在三角形\(MNP\)中，\(\angle MNP=120^{\circ}\)，由余弦定理
+\[
+MP^2=u^2+v^2-2uv\cos120^{\circ}=u^2+v^2+uv=25
+\]
+因此由\(u^2+v^2\geqslant2uv\)得\(25\geqslant3uv\)，即\(uv\leqslant\frac{25}{3}\).于是
+\[
+(u+v)^2=u^2+v^2+2uv=25+uv\leqslant25+\frac{25}{3}=\frac{100}{3}
+\]
+等号当且仅当\(u=v\)，即\(MN=NP\).此时三角形为等腰三角形，底角
+\(\angle PMN=\angle MPN=\frac{180^{\circ}-120^{\circ}}{2}=30^{\circ}\).所以应设计为\(MN=NP\)，等价于\(\angle PMN=30^{\circ}\).
+\end{enumerate}
 \end{solution}
 \end{problem}
 
 \begin{problem}
-已知 \(A\)，\(B\) 分别为曲线 \(C: \frac{x^2}{a^2} + y^2 = 1\)（\(y \geqslant 0, a > 0\)）与 \(x\) 轴的左，右两个交点，直线 \(l\) 过点 \(B\)，且与 \(x\) 轴垂直，\(S\) 为 \(l\) 上异于点 \(B\) 的一点，连结 \(AS\) 交曲线 \(C\) 于点 \(T\).
+已知 \(A\)，\(B\) 分别为曲线 \(C: \frac{x^2}{a^2} + y^2 = 1\)（\(y \geqslant 0\)，\(a > 0\)）与 \(x\) 轴的左，右两个交点，直线 \(l\) 过点 \(B\)，且与 \(x\) 轴垂直，\(S\) 为 \(l\) 上异于点 \(B\) 的一点，连结 \(AS\) 交曲线 \(C\) 于点 \(T\).
 
 \begin{enumerate}
 \item 若曲线 \(C\) 为半圆，点 \(T\) 为圆弧 \( \widehat{AB} \) 的三等分点，试求出点 \(S\) 的坐标；
@@ -221,7 +405,36 @@
 \bitmapfigure[max width=0.48\linewidth]{img/2009/fujian_science/q19_fig1.png}
 
 \begin{solution}
-短答案：\(S=\left(1,\dfrac{2\sqrt{3}}{3}\right)\) 或 \(S=\left(1,2\sqrt{3}\right)\)；存在，\(a=\sqrt{2}\).
+\begin{enumerate}
+\item 当\(C\)为半圆时\(a=1\)，故\(A=(-1,0)\)，\(B=(1,0)\).圆弧\(AB\)的两个三等分点为\(T_1\left(\frac{1}{2},\frac{\sqrt{3}}{2}\right)\)和\(T_2\left(-\frac{1}{2},\frac{\sqrt{3}}{2}\right)\).
+
+直线\(AT_1\)的斜率为\(\frac{\sqrt{3}}{3}\)，代入\(x=1\)得\(y=\frac{2\sqrt{3}}{3}\)；直线\(AT_2\)的斜率为\(\sqrt{3}\)，代入\(x=1\)得\(y=2\sqrt{3}\).因此
+\[
+S=\left(1,\frac{2\sqrt{3}}{3}\right)\quad\text{或}\quad S=(1,2\sqrt{3})
+\]
+
+\item 设\(S=(a,s)\).由于第二个交点\(T\)在\(y\geqslant0\)的上半椭圆上，且\(S\neq B\)，故取\(s>0\).令直线\(AS\)上的点为\((x,y)=(-a+2au,su)\).代入椭圆方程，除去对应于\(A\)的根\(u=0\)，得到
+\((-1+2u)^2+s^2u^2=1\)，\(\Longrightarrow\)，\(u=\frac{4}{4+s^2}\)
+所以
+\[
+T=\left(a\left(-1+\frac{8}{4+s^2}\right),\frac{4s}{4+s^2}\right)
+\]
+圆\(SB\)以\(SB\)为直径，其方程为\((x-a)^2+y^2-sy=0\).若\(O\)，\(M\)，\(S\)共线，设\(M=\lambda S=(\lambda a,\lambda s)\).由于\(M\)在\(TB\)上而\(S\)不在\(TB\)上，故\(\lambda\neq1\).由\(\angle SMB=90^{\circ}\)得
+\[
+(S-M)\cdot(B-M)=(1-\lambda)\bigl[a^2(1-\lambda)-\lambda s^2\bigr]=0
+\]
+由于\(\lambda\neq1\)，所以
+\[
+a^2(1-\lambda)-\lambda s^2=0
+\]
+从而\(\lambda=\frac{a^2}{a^2+s^2}\)，即
+\[
+M=\left(\frac{a^3}{a^2+s^2},\frac{a^2s}{a^2+s^2}\right)
+\]
+另一方面，由上式中\(T\)的坐标，直线\(BT\)的斜率为\(\frac{y_T}{x_T-a}=-\frac{2}{as}\)；而\(BM\)的斜率为\(-\frac{a}{s}\).要使\(B\)，\(T\)，\(M\)共线，必须有\(-\frac{a}{s}=-\frac{2}{as}\)，所以\(a^2=2\).因为\(a>0\)，得到\(a=\sqrt{2}\).此时
+\(M-B=\frac{4+s^2}{2(2+s^2)}(T-B)\)，\(0<\frac{4+s^2}{2(2+s^2)}<1\)
+故\(M\)确在线段\(TB\)上，所求值存在.
+\end{enumerate}
 \end{solution}
 \end{problem}
 
@@ -239,7 +452,36 @@
 \end{enumerate}
 
 \begin{solution}
-短答案：\(b=2a-1\). 当 \(a>1\) 时，\(f(x)\) 的单调增区间为 \((-\infty,1-2a)\) 和 \((-1,+\infty)\)，单调减区间为 \((1-2a,-1)\)；当 \(a=1\) 时，单调增区间为 \(\R\)；当 \(a<1\) 时，单调增区间为 \((-\infty,-1)\) 和 \((1-2a,+\infty)\)，单调减区间为 \((-1,1-2a)\).
+\begin{enumerate}
+\item 由
+\(f'(x)=x^2+2ax+b\)，\(f'(-1)=1-2a+b=0\)
+得\(b=2a-1\).于是
+\[
+f'(x)=x^2+2ax+2a-1=(x+1)(x+2a-1)=(x+1)(x-(1-2a))
+\]
+
+当\(a>1\)时，\(1-2a<-1\)，故\(f'(x)\)在\((-\infty,1-2a)\)和\((-1,+\infty)\)上为正，在\((1-2a,-1)\)上为负.因此增区间为\((-\infty,1-2a)\)和\((-1,+\infty)\)，减区间为\((1-2a,-1)\).
+
+当\(a=1\)时，\(f'(x)=(x+1)^2\geqslant0\)，所以\(f(x)\)在\(\R\)上单调递增.
+
+当\(a<1\)时，\(-1<1-2a\)，故\(f'(x)\)在\((-\infty,-1)\)和\((1-2a,+\infty)\)上为正，在\((-1,1-2a)\)上为负.因此增区间为\((-\infty,-1)\)和\((1-2a,+\infty)\)，减区间为\((-1,1-2a)\).
+
+\item 令\(a=-1\)，则\(b=-3\)，故\(f(x)=\frac{1}{3}x^3-x^2-3x\)，\(f'(x)=(x+1)(x-3)\)，所以\(x_1=-1\)，\(x_2=3\).
+
+对曲线上横坐标为\(u\)，\(v\)的两个点作割线.由于\(f(x)\)的三次项系数为\(\frac{1}{3}\)，割线方程与曲线方程相减后所得三次方程的三个根为\(u\)，\(v\)，\(w\).该三次方程的首项为\(\frac{1}{3}x^3\)，而二次项系数为\(-1\)，与\(\frac{1}{3}(x-u)(x-v)(x-w)\)比较可得\(-\frac{u+v+w}{3}=-1\)，即\(u+v+w=3\)，所以第三个交点的横坐标为\(w=3-u-v\).
+
+\begin{enumerate}
+\item 取\(u=x_1=-1\)，\(v=m\)，得\(w=4-m\).当\(m\in(t,3]\)时，线段\(MP\)与曲线有异于\(M\)，\(P\)的公共点，要求第三个交点的横坐标满足\(-1<w<m\).代入\(w=4-m\)得\(4-m<m\)，即\(m>2\)；当\(m=3\)时仍有\(w=1\)，满足条件.因此对所有\(m\in(2,3]\)均成立，而任意\(t<2\)都会使\(m=2\)落入\((t,3]\)，此时\(w=m\)并无异于\(P\)的第三个交点.故\(t\)的最小值为\(2\).
+
+\item 取\(u=n\)，\(v=m\)，第三个交点横坐标为\(w=3-m-n\).它位于线段\(PQ\)内部当且仅当
+\[
+n<3-m-n<m
+\quad\Longleftrightarrow\quad
+3-2m<n<\frac{3-m}{2}
+\]
+还需满足\(-1\leqslant n<m\).当\(m\leqslant1\)时，\(3-2m\geqslant m\)，不存在这样的\(n\)；当\(1<m<3\)时，上述不等式区间与\([-1,m)\)有公共部分，可以选取这样的\(n\).所以\(m\)的取值范围为\((1,3)\).
+\end{enumerate}
+\end{enumerate}
 \end{solution}
 \end{problem}
 
@@ -249,7 +491,23 @@
 已知矩阵 \( M = \begin{pmatrix} 2 & -3 \\ 1 & -1 \end{pmatrix} \) 所对应的线性变换把点 \( A(x, y) \) 变成点 \( A'(13, 5) \)，试求 \(M\) 的逆矩阵及点 \(A\) 的坐标.
 
 \begin{solution}
-短答案：\(M^{-1}=\begin{pmatrix} -1 & 3 \\ -1 & 2 \end{pmatrix}\)，\(A=(2,-3)\).
+矩阵\(M\)的行列式为
+\(\det M=2\times(-1)-(-3)\times1=1\neq0\)，所以\(M\)可逆，且
+\[
+M^{-1}=\frac{1}{\det M}\begin{pmatrix}-1&3\\-1&2\end{pmatrix}
+=\begin{pmatrix}-1&3\\-1&2\end{pmatrix}
+\]
+由线性变换关系
+\[
+M\begin{pmatrix}x\\y\end{pmatrix}=\begin{pmatrix}13\\5\end{pmatrix}
+\]
+得
+\[
+\begin{pmatrix}x\\y\end{pmatrix}=M^{-1}\begin{pmatrix}13\\5\end{pmatrix}
+=\begin{pmatrix}-1&3\\-1&2\end{pmatrix}\begin{pmatrix}13\\5\end{pmatrix}
+=\begin{pmatrix}2\\-3\end{pmatrix}
+\]
+因此\(A=(2,-3)\).
 \end{solution}
 \end{problem}
 
@@ -260,7 +518,11 @@ y = 2 + 2\sin \theta,
 \end{cases}\) （\(\theta\) 为参数），试判断他们的公共点个数.
 
 \begin{solution}
-短答案：公共点个数为 \(2\).
+圆\(C\)的圆心为\(O_1=(-1,2)\)，半径为\(2\).圆心到直线\(l:3x+4y-12=0\)的距离为
+\[
+d=\frac{|3(-1)+4\times2-12|}{\sqrt{3^2+4^2}}=\frac{7}{5}<2
+\]
+因此直线与圆相交于两个不同的公共点，公共点个数为\(2\).
 \end{solution}
 \end{problem}
 
@@ -268,6 +530,16 @@ y = 2 + 2\sin \theta,
 解不等式 \(|2x - 1| < |x| + 1\).
 
 \begin{solution}
-短答案：\(x\in(0,2)\).
+两边均为非负数，可以平方而不改变不等号方向，得
+\[
+(2x-1)^2<(|x|+1)^2
+\quad\Longleftrightarrow\quad
+3x^2-4x<2|x|
+\]
+当\(x\geqslant0\)时，\(|x|=x\)，所以
+\(3x^2-6x<0\)，即\(0<x<2\).
+当\(x<0\)时，\(|x|=-x\)，所以
+\(3x^2-2x<0\)，即\(x(3x-2)<0\)，但此时两个因子均为负，乘积为正，无解.
+综上，不等式的解集为\((0,2)\).
 \end{solution}
 \end{problem}

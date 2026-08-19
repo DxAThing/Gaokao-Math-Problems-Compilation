@@ -13,6 +13,17 @@
 \begin{answer}
 D
 \end{answer}
+\begin{solution}
+先求并集：
+\[
+A\cup B=\{1,2\}\cup\{2,3\}=\{1,2,3\}
+\]
+补集中的元素属于全集而不属于这个并集，因此
+\[
+\complement_U(A\cup B)=\{4\}
+\]
+所以选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -26,6 +37,11 @@ D
 \begin{answer}
 A
 \end{answer}
+\begin{solution}
+全称命题“对任意实数 \(x\)，都有 \(x^2\geqslant0\)”的否定是把“任意”改为“存在”，并把不等号改为严格相反的不等号，即
+存在 \(x_0\in\R\)，使得 \(x_0^2<0\).
+这正是选项 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -39,6 +55,15 @@ A
 \begin{answer}
 C
 \end{answer}
+\begin{solution}
+对数的真数必须为正，且分母不能为零，所以
+\(x-2>0\)，\(\log_2(x-2)\neq0\).
+第一条件给出 \(x>2\)，第二条件给出 \(x-2\neq1\)，即 \(x\neq3\). 因此定义域为
+\[
+(2,3)\cup(3,+\infty)
+\]
+选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -52,6 +77,17 @@ C
 \begin{answer}
 B
 \end{answer}
+\begin{solution}
+圆心为 \(C(3,-1)\)，半径为 \(2\). 圆心到直线 \(x=-3\) 的距离为
+\[
+|3-(-3)|=6
+\]
+点 \(P\) 在圆上运动时，到该直线的最小距离等于圆心到直线的距离减去半径，即
+\[
+6-2=4
+\]
+取圆心与直线同侧且沿水平半径的圆上点即可达到该距离，所以最小值为 \(4\)，选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -67,6 +103,15 @@ B
 \begin{answer}
 C
 \end{answer}
+\begin{solution}
+程序开始时 \(k=1\)，\(s=1\). 每次先执行
+\[
+s\leftarrow s+(k-1)^2
+\]
+再判断 \(s>15\)；若否，则令 \(k\leftarrow k+1\) 后继续循环. 因此各次判断前的 \(s\) 依次为
+\(1\)，\(2\)，\(6\)，\(15\)，\(31\).
+前四次均不满足 \(s>15\)，第五次满足，且此时 \(k=5\). 所以输出 \(k=5\)，选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -88,6 +133,15 @@ C
 \begin{answer}
 B
 \end{answer}
+\begin{solution}
+由茎叶图，10 个数据为
+\(18\)，\(19\)，\(21\)，\(22\)，\(22\)，\(27\)，\(29\)，\(30\)，\(30\)，\(33\).
+区间 \([22,30)\) 包含 \(22\)，\(22\)，\(27\)，\(29\)，共 \(4\) 个数据；\(30\) 不属于该区间. 因此频率为
+\[
+\frac{4}{10}=0.4
+\]
+所以选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -101,6 +155,17 @@ B
 \begin{answer}
 A
 \end{answer}
+\begin{solution}
+因 \(a>0\)，不等式左侧可因式分解为
+\[
+x^2-2ax-8a^2=(x-4a)(x+2a)
+\]
+故解集为 \((-2a,4a)\)，从而
+\[
+x_2-x_1=4a-(-2a)=6a=15
+\]
+解得 \(a=\frac52\)，选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -118,10 +183,33 @@ A
 \begin{answer}
 D
 \end{answer}
+\begin{solution}
+由三视图可还原出一个直四棱柱，其底面是高为 \(4\)、上底为 \(2\)、下底为 \(8\) 的等腰梯形，棱柱的高为 \(10\). 梯形两腰的水平投影均为
+\[
+\frac{8-2}{2}=3
+\]
+所以腰长为
+\[
+\sqrt{4^2+3^2}=5
+\]
+底面梯形面积为
+\[
+\frac{2+8}{2}\times4=20
+\]
+四个侧面的面积和为
+\[
+10(2+8+5+5)=200
+\]
+因此几何体的表面积为
+\[
+2\times20+200=240
+\]
+选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
-已知函数 \( f(x) = ax^3 + b\sin x + 4 \) （\(a, b \in \R\)），\( f(\lg (\log_2 10)) = 5 \)，则 \( f(\lg (\lg 2)) = \)（\quad）
+已知函数 \( f(x) = ax^3 + b\sin x + 4 \) （\(a\)，\(b \in \R\)），\( f(\lg (\log_2 10)) = 5 \)，则 \( f(\lg (\lg 2)) = \)（\quad）
 
 \choices
     {\(-5\)}
@@ -131,6 +219,25 @@ D
 \begin{answer}
 C
 \end{answer}
+\begin{solution}
+令
+\[
+t=\lg(\log_2 10)
+\]
+由于 \(\log_2 10=1/\lg2\)，有
+\[
+t=\lg\left(\frac1{\lg2}\right)=-\lg(\lg2)
+\]
+函数中的 \(ax^3\) 和 \(b\sin x\) 都是奇函数，常数项为 \(4\)，所以对任意 \(x\) 有
+\[
+f(x)+f(-x)=8
+\]
+题设给出 \(f(t)=5\)，而所求量为 \(f(\lg(\lg2))=f(-t)\)，故
+\[
+f(-t)=8-f(t)=8-5=3
+\]
+所以选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -144,6 +251,47 @@ C
 \begin{answer}
 A
 \end{answer}
+\begin{solution}
+取坐标轴沿双曲线的实轴、虚轴，则可设
+\(\frac{x^2}{a^2}-\frac{y^2}{b^2}=1\)，\(e^2=1+\frac{b^2}{a^2}\).
+过原点、方向角为 \(\theta\) 的直线上的点可写为
+\[
+(x,y)=\rho(\cos\theta,\sin\theta)
+\]
+它与双曲线相交的条件为
+\[
+\rho^2\left(\frac{\cos^2\theta}{a^2}-\frac{\sin^2\theta}{b^2}\right)=1
+\]
+且弦长为 \(2|\rho|\). 两条方向相差 \(\frac\pi3\) 的直线弦长相等，当且仅当
+\[
+\frac{\cos^2\theta}{a^2}-\frac{\sin^2\theta}{b^2}
+=\frac{\cos^2(\theta+\frac\pi3)}{a^2}-\frac{\sin^2(\theta+\frac\pi3)}{b^2}
+\]
+整理得
+\[
+\left(\frac1{a^2}+\frac1{b^2}\right)
+\left[\cos^2\theta-\cos^2\left(\theta+\frac\pi3\right)\right]=0
+\]
+故候选的两对直线分别可取方向角
+\(\left(-\frac\pi6,\frac\pi6\right)\)，\(\left(\frac\pi3,\frac{2\pi}3\right)\).
+第一对为割线的条件是
+\[
+\frac{3}{4a^2}-\frac{1}{4b^2}>0
+\iff \frac{b^2}{a^2}>\frac13
+\iff e>\frac{2\sqrt3}{3}
+\]
+第二对为割线的条件是
+\[
+\frac{1}{4a^2}-\frac{3}{4b^2}>0
+\iff \frac{b^2}{a^2}>3
+\iff e>2
+\]
+因此当 \(\frac{2\sqrt3}{3}<e\leqslant2\) 时恰有第一对；\(e>2\) 时两对均存在，而 \(e=\frac{2\sqrt3}{3}\) 或更小时第一对也不是有限割线. 故离心率范围为
+\[
+\left(\frac{2\sqrt3}{3},2\right]
+\]
+选 A.
+\end{solution}
 \end{problem}
 
 \section{填空题}
@@ -153,6 +301,12 @@ A
 \begin{answer}
 \(\sqrt{5}\)
 \end{answer}
+\begin{solution}
+复数的模为实部与虚部平方和的平方根，因此
+\[
+|z|=|1+2\i|=\sqrt{1^2+2^2}=\sqrt5
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -160,6 +314,16 @@ A
 \begin{answer}
 \(\frac{7}{2}\)
 \end{answer}
+\begin{solution}
+设等差数列的公差为 \(d\). 由首项和末项得
+\(2+4d=9\)，\(d=\frac74\).
+于是
+\(a=2+d\)，\(c=2+3d\)
+从而
+\[
+c-a=2d=\frac72
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -167,6 +331,16 @@ A
 \begin{answer}
 \(\frac{2}{3}\)
 \end{answer}
+\begin{solution}
+三人的全排列共有 \(3!=6\) 种. 把甲、乙看成一个整体时，整体与丙有 \(2!\) 种排法，甲、乙在整体内还有 \(2!\) 种次序，所以甲乙相邻的排法有
+\[
+2!\times2!=4
+\]
+种. 因此所求概率为
+\[
+\frac46=\frac23
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -174,6 +348,18 @@ A
 \begin{answer}
 \(4\)
 \end{answer}
+\begin{solution}
+矩形中 \(OA\perp AB\)，且
+\[
+\overrightarrow{AB}=\overrightarrow{OB}-\overrightarrow{OA}=(1,k-1)
+\]
+因此
+\[
+\overrightarrow{OA}\cdot\overrightarrow{AB}
+=(-3,1)\cdot(1,k-1)=-3+k-1=0
+\]
+解得 \(k=4\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -181,38 +367,87 @@ A
 \begin{answer}
 \(\left[0,\frac{\pi}{6}\right]\cup\left[\frac{5\pi}{6},\pi\right]\)
 \end{answer}
+\begin{solution}
+关于 \(x\) 的二次式首项系数 \(8>0\)，要对任意实数 \(x\) 非负，充要条件是判别式不大于零，即
+\[
+\Delta=(-8\sin\alpha)^2-4\cdot8\cos2\alpha\leqslant0
+\]
+化简得
+\[
+2\sin^2\alpha-\cos2\alpha\leqslant0
+\]
+利用 \(\cos2\alpha=1-2\sin^2\alpha\)，得到
+\(4\sin^2\alpha-1\leqslant0\)，\(|\sin\alpha|\leqslant\frac12\).
+在 \(0\leqslant\alpha\leqslant\pi\) 上，\(\sin\alpha\geqslant0\)，所以
+\[
+\alpha\in\left[0,\frac\pi6\right]\cup\left[\frac{5\pi}6,\pi\right]
+\]
+\end{solution}
 \end{problem}
 
 \section{解答题}
 
 \begin{problem}
-设数列 \(\{a_{n}\}\) 满足：\(a_{1} = 1\)，\(a_{n+1} = 3a_{n}\)，\(n \in \mathbf{N}_{+}\).
+设数列 \(\{a_{n}\}\) 满足：\(a_{1} = 1\)，\(a_{n+1} = 3a_{n}\)，\(n \in \N^*\).
 \begin{enumerate}
 \item 求 \( \{a_{n}\} \) 的通项公式及前 \(n\) 项和 \( S_{n} \)；
 \item 已知 \( \{b_{n}\} \) 是等差数列，\( T_{n} \) 为其前 \(n\) 项和，且 \(b_{1}=a_{2}\)，\(b_{3}=a_{1}+a_{2}+a_{3}\)，求 \(T_{20}\).
 \end{enumerate}
 \begin{solution}
 \begin{enumerate}
-\item \(a_{n}=3^{n-1}\)，\(S_{n}=\frac{3^{n}-1}{2}\).
-\item 又 \(b_{1}=3\)，\(b_{3}=13\)，故等差数列 \(\{b_{n}\}\) 的公差为 \(5\)，\(T_{20}=1010\).
+\item 由递推关系，每增加一个下标就乘以 \(3\)，且 \(a_1=1\)，所以
+\[
+a_n=a_1\cdot3^{n-1}=3^{n-1}
+\]
+这是首项为 \(1\)、公比为 \(3\) 的等比数列，故前 \(n\) 项和为
+\[
+S_n=\frac{a_1(3^n-1)}{3-1}=\frac{3^n-1}{2}
+\]
+\item 由第（1）问
+\(a_2=3\)，\(a_1+a_2+a_3=1+3+9=13\).
+因此 \(b_1=3\)，\(b_3=13\). 设等差数列 \(\{b_n\}\) 的公差为 \(d\)，则
+\(b_3=b_1+2d\)，\(\Longrightarrow\)，\(13=3+2d\)，\(d=5\).
+所以
+\[
+T_{20}=\frac{20}{2}\bigl(2b_1+19d\bigr)
+=10(6+95)=1010
+\]
 \end{enumerate}
 \end{solution}
 \end{problem}
 
 \begin{problem}
-从某居民区随机抽取 \(10\text{ 个}\)家庭，获得第 \(i\) 个家庭的月收入 \(x_{i}\) （单位：\(\text{千元}\)）与月储蓄 \(y_{i}\) （单位：\(\text{千元}\)）的数据资料，算得 \(\sum_{i=1}^{10} x_{i} = 80\)，\(\qquad \sum_{i=1}^{10} y_{i} = 20\)，\(\qquad \sum_{i=1}^{10} x_{i}y_{i} = 184\)，\(\qquad \sum_{i=1}^{10} x_{i}^{2} = 720.\)
+从某居民区随机抽取 \(10\text{ 个}\)家庭，获得第 \(i\) 个家庭的月收入 \(x_{i}\) （单位：\(\text{千元}\)）与月储蓄 \(y_{i}\) （单位：\(\text{千元}\)）的数据资料，算得 \(\sum_{i=1}^{10} x_{i} = 80\)，\(\sum_{i=1}^{10} y_{i} = 20\)，\(\sum_{i=1}^{10} x_{i}y_{i} = 184\)，\(\sum_{i=1}^{10} x_{i}^{2} = 720\).
 \begin{enumerate}
 \item 求家庭的月储蓄 \(y\) 对月收入 \(x\) 的线性回归方程 \(y = bx + a\)；
 \item 判断变量 \(x\) 与 \(y\) 之间是正相关还是负相关；
 \item 若该居民区某家庭月收入为 \(7\text{ 千元}\)，预测该家庭的月储蓄.
 \end{enumerate}
-附：线性回归方程 \(y = bx + a\) 中， \(b = \frac{\sum_{i=1}^{n} x_{i}y_{i} - n\overline{x}\,\overline{y}}{\sum_{i=1}^{n} x_{i}^{2} - n\overline{x}^{2}},\qquad a = \overline{y} - b\overline{x}\)，
+附：线性回归方程 \(y = bx + a\) 中， \(b = \frac{\sum_{i=1}^{n} x_{i}y_{i} - n\overline{x}\,\overline{y}}{\sum_{i=1}^{n} x_{i}^{2} - n\overline{x}^{2}}\)，\(a = \overline{y} - b\overline{x}\)，
 其中 \(\overline{x}\)，\(\overline{y}\) 为样本平均值，线性回归方程也可写为 \(\hat{y} = \hat{b}x + \hat{a}\).
 \begin{solution}
 \begin{enumerate}
-\item 线性回归方程为 \(\hat{y}=0.3x-0.4\).
-\item \(x\) 与 \(y\) 正相关.
-\item 月收入为 \(7\) 千元时，预测月储蓄为 \(1.7\) 千元.
+\item 样本平均值为
+\(\overline{x}=\frac{80}{10}=8\)，\(\overline{y}=\frac{20}{10}=2\).
+代入题给公式，回归系数
+\[
+b=\frac{184-10\times8\times2}{720-10\times8^2}
+=\frac{24}{80}=\frac3{10}
+\]
+于是
+\[
+a=\overline y-b\overline x=2-\frac3{10}\times8=-\frac25
+\]
+线性回归方程为
+\[
+\hat y=\frac3{10}x-\frac25
+\]
+\item 回归系数 \(b=\frac3{10}>0\)，所以 \(x\) 与 \(y\) 正相关.
+\item 当 \(x=7\) 时，预测值为
+\[
+\hat y=\frac3{10}\times7-\frac25=\frac{17}{10}=1.7
+\]
+故预测该家庭月储蓄为 \(1.7\) 千元.
 \end{enumerate}
 \end{solution}
 \end{problem}
@@ -225,8 +460,48 @@ A
 \end{enumerate}
 \begin{solution}
 \begin{enumerate}
-\item \(A=\frac{\pi}{6}\).
-\item \(S+3\cos B\cos C\) 的最大值为 \(3\)，此时 \(B=\frac{\pi}{3}\).
+\item 由余弦定理
+\[
+a^2=b^2+c^2-2bc\cos A
+\]
+与题设比较可得
+\(-2bc\cos A=\sqrt3bc\)，\(\cos A=-\frac{\sqrt3}{2}\).
+因为 \(0<A<\pi\)，所以
+\[
+A=\frac{5\pi}{6}
+\]
+\item 由三角形内角和
+\[
+B+C=\pi-A=\frac\pi6
+\]
+又由正弦定理及 \(a=\sqrt3\)、\(\sin A=\frac12\)，有
+\(b=2\sqrt3\sin B\)，\(c=2\sqrt3\sin C\).
+令 \(t=B-C\)，则 \(-\frac\pi6<t<\frac\pi6\)，并且
+\[
+\sin B\sin C=\frac{\cos t-\cos(B+C)}2
+=\frac{\cos t-\frac{\sqrt3}{2}}2
+\]
+\[
+\cos B\cos C=\frac{\cos t+\cos(B+C)}2
+=\frac{\cos t+\frac{\sqrt3}{2}}2
+\]
+三角形面积为
+\[
+S=\frac12bc\sin A
+=\frac14bc
+=3\sin B\sin C
+\]
+所以
+\[
+S+3\cos B\cos C
+=3\sin B\sin C+3\cos B\cos C
+=3\cos(B-C)=3\cos t\leqslant3
+\]
+当且仅当 \(t=0\)，即 \(B=C\) 时取等号. 此时
+\[
+B=C=\frac{B+C}{2}=\frac\pi{12}
+\]
+故最大值为 \(3\)，且此时 \(B=\frac\pi{12}\).
 \end{enumerate}
 \end{solution}
 \end{problem}
@@ -241,8 +516,31 @@ A
 \bitmapfigure[max width=0.42\linewidth]{img/2013/chongqing_liberal/q19_fig1.png}
 \begin{solution}
 \begin{enumerate}
-\item \(BD\perp\) 平面 \(PAC\).
-\item 三棱锥 \(P-BDF\) 的体积为 \(\frac{7}{4}\).
+\item 在等腰三角形 \(BCD\) 中，\(BC=CD\)，且 \(AC\) 平分顶角 \(\angle BCD\)，所以
+\[
+AC\perp BD
+\]
+又因为 \(PA\perp\) 底面 \(ABCD\)，而 \(BD\) 在底面内，所以 \(BD\perp PA\). 直线 \(AC\) 与 \(PA\) 都在平面 \(PAC\) 内，且相交于 \(A\). 因为 \(BD\) 垂直于这两条相交直线，所以 \(BD\perp\) 平面 \(PAC\).
+\item 建立空间直角坐标系：取 \(C\) 为原点，\(x\) 轴沿 \(CA\)，\(y\) 轴沿底面内垂直于 \(CA\) 的方向，\(z\) 轴沿 \(AP\). 设 \(AC=m\)，则可取
+\(C=(0,0,0)\)，\(A=(m,0,0)\)，\(B=(1,\sqrt3,0)\)，\(D=(1,-\sqrt3,0)\)，\(P=(m,0,2\sqrt3)\).
+其中 \(B\)，\(D\) 的坐标来自 \(BC=CD=2\) 及 \(\angle ACB=\angle ACD=\frac\pi3\).
+
+由 \(PF=7FC\)，得 \(PF:PC=7:8\)，所以
+\[
+\overrightarrow{PF}=\frac78\overrightarrow{PC}
+\]
+于是
+\[
+V_{P-BDF}
+=\frac16\cdot\frac78
+\left|\det\begin{pmatrix}
+1-m&\sqrt3&-2\sqrt3\\
+1-m&-\sqrt3&-2\sqrt3\\
+-m&0&-2\sqrt3
+\end{pmatrix}\right|
+=\frac16\cdot\frac78\times12=\frac74
+\]
+故三棱锥 \(P-BDF\) 的体积为 \(\frac74\).
 \end{enumerate}
 \end{solution}
 \end{problem}
@@ -255,8 +553,28 @@ A
 \end{enumerate}
 \begin{solution}
 \begin{enumerate}
-\item \(V(r)=\pi\left(60r-\frac45r^{3}\right)\)，定义域为 \(0<r<5\sqrt{3}\).
-\item \(V(r)\) 在 \((0,5)\) 上递增，在 \((5,5\sqrt{3})\) 上递减，故最大体积对应 \(r=5\)，\(h=8\).
+\item 无盖圆柱的侧面积为 \(2\pi rh\)，底面积为 \(\pi r^2\)，故成本条件为
+\[
+100\cdot2\pi rh+160\pi r^2=12000\pi
+\]
+约去 \(40\pi\)，得
+\(5rh+4r^2=300\)，\(h=\frac{300-4r^2}{5r}=\frac{60}{r}-\frac45r\).
+因为 \(r>0\) 且水池高度必须为正，需有
+\[
+0<r<5\sqrt3
+\]
+又 \(V=\pi r^2h\)，所以
+\(V(r)=\pi\left(60r-\frac45r^3\right)\)，\(0<r<5\sqrt3\).
+\item 求导得
+\[
+V'(r)=\pi\left(60-\frac{12}{5}r^2\right)
+=\frac{12\pi}{5}(25-r^2)
+\]
+在 \((0,5)\) 上，\(V'(r)>0\)，所以 \(V(r)\) 递增；在 \((5,5\sqrt3)\) 上，\(V'(r)<0\)，所以 \(V(r)\) 递减. 因此最大值在 \(r=5\) 处取得. 代入高度公式：
+\[
+h=\frac{60}{5}-\frac45\times5=8
+\]
+故体积最大时 \(r=5\) 米、\(h=8\) 米.
 \end{enumerate}
 \end{solution}
 \end{problem}
@@ -272,8 +590,51 @@ A
 \bitmapfigure[max width=0.42\linewidth]{img/2013/chongqing_liberal/q21_fig1.png}
 \begin{solution}
 \begin{enumerate}
-\item 椭圆的标准方程为 \(\frac{x^{2}}{4}+\frac{y^{2}}{2}=1\).
-\item \(\triangle PP'Q\) 的面积 \(S\) 的最大值为 \(2\sqrt{2}\)，对应的圆的标准方程为 \((x+\sqrt{2})^{2}+y^{2}=6\) 或 \((x-\sqrt{2})^{2}+y^{2}=6\).
+\item 设椭圆的标准方程为
+\(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\)，\((a>b>0)\)
+焦距的一半为 \(c\)，则
+\(c^2=a^2-b^2\)，\(e=\frac ca=\frac{\sqrt2}{2}\).
+所以 \(c^2=\frac{a^2}{2}\)，从而 \(b^2=\frac{a^2}{2}\). 左焦点为 \((-c,0)\)，过它的竖直弦的两个端点纵坐标为 \(\pm2\)，故代入椭圆方程得
+\[
+\frac{c^2}{a^2}+\frac{4}{b^2}=1
+\]
+由 \(c^2/a^2=1/2\) 得 \(4/b^2=1/2\)，即 \(b^2=8\)，进而 \(a^2=16\). 因此椭圆的标准方程为
+\[
+\frac{x^2}{16}+\frac{y^2}{8}=1
+\]
+\item 设竖直弦所在直线为 \(x=t\)，其端点为 \(P=(t,y_0)\)、\(P'=(t,-y_0)\). 由椭圆方程
+\(y_0^2=8-\frac{t^2}{2}\)，\(|t|<4\).
+圆心 \(Q\) 必在弦 \(PP'\) 的垂直平分线上，而所有椭圆上其余点在圆外，意味着 \(P\)，\(P'\) 是椭圆上到 \(Q\) 的最近点. 故可设 \(Q=(q,0)\)，并令椭圆点为 \((x,y)\)，则其到 \(Q\) 的距离平方为
+\[
+(x-q)^2+y^2
+=\frac{x^2}{2}-2qx+q^2+8
+\]
+由于最近点的横坐标 \(t\) 在区间 \((-4,4)\) 内，二次式在 \(x=t\) 处取最小值，故
+\[
+t=2q
+\]
+于是 \(|q|<2\)，且
+\[
+y_0^2=8-2q^2
+\]
+三角形 \(PP'Q\) 的底为 \(2|y_0|\)，高为 \(|q-t|=|q|\)，所以
+\[
+S=|q|\sqrt{8-2q^2}
+\]
+令 \(u=q^2\)，则 \(0\leqslant u<4\)，并且
+\[
+S^2=u(8-2u)=8-2(u-2)^2\leqslant8
+\]
+故 \(S\) 的最大值为 \(2\sqrt2\)，当且仅当 \(q^2=2\)，即 \(q=\pm\sqrt2\) 时取得. 此时圆的半径平方为
+\[
+QP^2=(t-q)^2+y_0^2=q^2+4=6
+\]
+因此对应的圆为
+\[
+(x-\sqrt2)^2+y^2=6
+\quad\text{或}\quad
+(x+\sqrt2)^2+y^2=6
+\]
 \end{enumerate}
 \end{solution}
 \end{problem}

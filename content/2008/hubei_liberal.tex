@@ -16,6 +16,17 @@
 C
 \end{answer}
 
+\begin{solution}
+\[
+\bs{a}+2\bs{b}=(1,-2)+2(-3,4)=(-5,6)
+\]
+因此
+\[
+(\bs{a}+2\bs{b})\cdot\bs{c}=(-5,6)\cdot(3,2)=-15+12=-3
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
 \(\left(2x^{3} - \frac{1}{2x^{2}}\right)^{10}\) 的展开式中常数项是（\quad）
 
@@ -29,6 +40,21 @@ C
 \begin{answer}
 B
 \end{answer}
+
+
+\begin{solution}
+设展开式的通项中取了 \(k\) 个 \(-\dfrac{1}{2x^2}\)，其中 \(0\leqslant k\leqslant10\)，则
+\[
+T_{k+1}=\mathrm C_{10}^{k}(2x^3)^{10-k}\left(-\frac{1}{2x^2}\right)^k
+=\mathrm C_{10}^{k}2^{10-2k}(-1)^k x^{30-5k}
+\]
+要得到常数项，必须有 \(30-5k=0\)，所以 \(k=6\). 此时常数项为
+\[
+\mathrm C_{10}^{6}2^{10-12}(-1)^6
+=210\times\frac{1}{4}=\frac{105}{2}
+\]
+故选 B.
+\end{solution}
 
 \begin{problem}
 若集合 \(P = \{1, 2, 3, 4\}\)，\(Q = \{x \mid 0 < x < 5, x \in \R\}\)，则（\quad）
@@ -44,6 +70,13 @@ B
 A
 \end{answer}
 
+\begin{solution}
+因为 \(P=\{1,2,3,4\}\)，且其中每个数都满足 \(0<x<5\)，所以 \(P\subset Q\). 因此
+\(x\in P\) 能推出 \(x\in Q\)，即“\(x\in P\)”是“\(x\in Q\)”的充分条件.
+
+但 \(\dfrac{1}{2}\in Q\) 而 \(\dfrac{1}{2}\notin P\)，所以 \(x\in Q\) 不能推出 \(x\in P\)，前者不是后者的必要条件. 故选 A.
+\end{solution}
+
 \begin{problem}
 用与球心距离为 1 的平面去截球，所得的截面面积为 \(\pi\)，则球的体积为（\quad）
 
@@ -57,6 +90,18 @@ A
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+设球的半径为 \(R\)，截面圆半径为 \(r\). 球心到截面的距离为 \(1\)，由截面半径、球半径和球心到截面的距离构成直角三角形，得
+\[
+R^2=r^2+1^2=1+1=2
+\]
+截面面积为 \(\pi\)，所以 \(r^2=1\)，从而 \(R^2=2\)，\(R=\sqrt{2}\). 因此球的体积为
+\[
+V=\frac{4}{3}\pi R^3=\frac{4}{3}\pi(\sqrt{2})^3=\frac{8\sqrt{2}\pi}{3}
+\]
+故选 B.
+\end{solution}
 
 \begin{problem}
 在平面直角坐标系 \(xOy\) 中，满足不等式组 \(\begin{cases}
@@ -75,6 +120,12 @@ B
 C
 \end{answer}
 
+\begin{solution}
+不等式 \(|x|\leqslant|y|\) 等价于 \(y\geqslant|x|\) 或 \(y\leqslant-|x|\)，表示直线 \(y=x\)、\(y=-x\) 上方的两个区域以及它们的边界. 不等式 \(|x|<1\) 表示直线 \(x=-1\) 与 \(x=1\) 之间的开条带，边界 \(x=\pm1\) 不取.
+
+两者取交集后，阴影区域是在开条带 \(-1<x<1\) 内、位于 \(y\geqslant|x|\) 或 \(y\leqslant-|x|\) 的上下两个区域，边界两条斜线包含而两条竖直边界不包含. 这与图 C 相符，故选 C.
+\end{solution}
+
 \begin{problem}
 已知 \( f(x) \) 在 \( \R \) 上是奇函数，且 \( f(x + 4) = f(x) \)，当 \( x \in (0,2) \) 时，\( f(x) = 2x^2 \)，则 \( f(7) = \)（\quad）
 
@@ -88,6 +139,18 @@ C
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+由周期性，\(f(7)=f(3)\). 又因为函数 \(f\) 是奇函数，
+\[
+f(3)=-f(-3)=-f(1)
+\]
+由于 \(1\in(0,2)\)，所以 \(f(1)=2\)，从而
+\[
+f(7)=-2
+\]
+故选 A.
+\end{solution}
 
 \begin{problem}
 将函数 \( y = \sin (x - \theta) \) 的图象 \(F\) 向右平移 \( \frac{\pi}{3} \) 个单位长度得到图象 \(F'\). 若 \(F'\) 的一条对称轴是直线 \( x = \frac{\pi}{4} \)，则 \( \theta \) 的一个可能取值是（\quad）
@@ -103,6 +166,25 @@ A
 A
 \end{answer}
 
+\begin{solution}
+图象 \(F\) 向右平移 \(\dfrac{\pi}{3}\) 后，\(F'\) 的方程为
+\[
+y=\sin\left(x-\frac{\pi}{3}-\theta\right)
+=\sin\left(x-\left(\theta+\frac{\pi}{3}\right)\right)
+\]
+函数 \(y=\sin(x-\alpha)\) 的对称轴为
+\(x=\alpha+\frac{\pi}{2}+k\pi\)，\(k\in\Z\).
+因此，若 \(x=\dfrac{\pi}{4}\) 是 \(F'\) 的一条对称轴，则
+\[
+\theta+\frac{\pi}{3}+\frac{\pi}{2}+k\pi=\frac{\pi}{4}
+\]
+即
+\[
+\theta=-\frac{7\pi}{12}-k\pi
+\]
+取 \(k=-1\)，得 \(\theta=\dfrac{5\pi}{12}\)，故选 A.
+\end{solution}
+
 \begin{problem}
 函数 \( f(x) = \frac{1}{x} \ln (\sqrt{x^2 - 3x + 2} + \sqrt{-x^2 - 3x + 4}) \) 的定义域为（\quad）
 
@@ -117,6 +199,18 @@ A
 D
 \end{answer}
 
+\begin{solution}
+要使两个根式有意义，必须满足
+\(x^2-3x+2=(x-1)(x-2)\geqslant0\)，\(-x^2-3x+4=-(x+4)(x-1)\geqslant0\).
+前一个不等式的解集为 \((-\infty,1]\cup[2,+\infty)\)，后一个不等式的解集为 \([-4,1]\). 两者交集为 \([-4,1]\).
+
+在 \(x=1\) 时，两个根式都为 \(0\)，对数的真数为 \(0\)，因此 \(x=1\) 不能取. 另外分母中的 \(x\) 不能为 \(0\). 对于 \([-4,1)\) 中的其他 \(x\)，两个根式不同时为 \(0\)，对数的真数为正数. 所以定义域为
+\[
+[-4,0)\cup(0,1)
+\]
+故选 D.
+\end{solution}
+
 \begin{problem}
 从 5 名男生和 5 名女生中选 3 人组队参加某集体项目的比赛，其中至少有一名女生入选的组队方案数为（\quad）
 
@@ -130,6 +224,22 @@ D
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+从 \(10\) 人中任选 \(3\) 人共有
+\[
+\mathrm C_{10}^{3}=120
+\]
+种方案. 不符合“至少有一名女生”的方案是全部选男生，共有
+\[
+\mathrm C_{5}^{3}=10
+\]
+种. 因此符合条件的方案数为
+\[
+\mathrm C_{10}^{3}-\mathrm C_{5}^{3}=120-10=110
+\]
+故选 B.
+\end{solution}
 
 \begin{problem}
 如图所示，“嫦娥一号”探月卫星沿地月转移轨道飞向月球. 在月球附近一点 \(P\) 轨进入以月球球心 \(F\) 为一个焦点的椭圆轨道 \(I\) 绕月飞行，之后卫星在 \(P\) 点第二次变轨进入仍以 \(F\) 为一个焦点的椭圆轨道 \(II\) 绕月飞行，最终卫星在 \(P\) 点第三次变轨进入以 \(F\) 为圆心的圆形轨道 \(III\) 绕月飞行，若用 \(2c_{1}\) 和 \(2c_{2}\) 分别表示椭圆轨道 \(I\) 和 \(II\) 的焦距. 用 \(2a_{1}\) 和 \(2a_{2}\) 分别表示椭圆轨道 \(I\) 和 \(II\) 的长轴的长，给出下列式子：
@@ -155,6 +265,39 @@ B
 B
 \end{answer}
 
+\begin{solution}
+由图可知，\(P\) 是两条椭圆长轴方向上的同一端点，\(F\) 是两条椭圆的同一个焦点. 设
+\[
+d=PF>0
+\]
+对长半轴为 \(a\)、焦半距为 \(c\) 的椭圆，靠近焦点一侧的长轴顶点到该焦点的距离为 \(a-c\). 因为两条椭圆都经过 \(P\)，且焦点都是 \(F\)，所以
+\[
+a_{1}-c_{1}=PF=a_{2}-c_{2}=d
+\]
+故式子 \(2\) 正确.
+
+轨道 \(I\) 在轨道 \(II\) 外侧，所以 \(a_{1}>a_{2}\). 由 \(c_i=a_i-d\)，可得
+\[
+c_{1}a_{2}-a_{1}c_{2}
+=(a_{1}-d)a_{2}-a_{1}(a_{2}-d)
+=d(a_{1}-a_{2})>0
+\]
+故式子 \(3\) 正确.
+
+同时
+\[
+(a_{1}+c_{1})-(a_{2}+c_{2})
+=2(a_{1}-a_{2})>0
+\]
+所以式子 \(1\) 不正确. 另外
+\[
+\frac{c_{1}}{a_{1}}-\frac{c_{2}}{a_{2}}
+=\left(1-\frac{d}{a_{1}}\right)-\left(1-\frac{d}{a_{2}}\right)
+=d\left(\frac{1}{a_{2}}-\frac{1}{a_{1}}\right)>0
+\]
+即 \(\dfrac{c_{1}}{a_{1}}>\dfrac{c_{2}}{a_{2}}\)，式子 \(4\) 也不正确. 因此正确式子的序号为 \(2,3\)，故选 B.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -165,6 +308,17 @@ B
 10
 \end{answer}
 
+\begin{solution}
+分层抽样时，各层抽取人数与该层员工人数的比等于总体抽样比. 总体抽样比为
+\[
+\frac{50}{1000}=\frac{1}{20}
+\]
+因此该部门应抽取的员工人数为
+\[
+200\times\frac{1}{20}=10
+\]
+\end{solution}
+
 \begin{problem}
 在 \(\triangle ABC\) 中，\(a\)，\(b\)，\(c\) 分别是角 \(A\)，\(B\)，\(C\) 所对的边，已知 \(a = \sqrt{3}\)，\(b = 3\)，\(C = 30^{\circ}\)，则 \(A = \)\fillinblank{}.
 \end{problem}
@@ -172,6 +326,19 @@ B
 \begin{answer}
 \(30^{\circ}\)
 \end{answer}
+
+\begin{solution}
+由余弦定理，
+\[
+c^2=a^2+b^2-2ab\cos C
+=3+9-2\times\sqrt{3}\times3\times\frac{\sqrt{3}}{2}
+=3
+\]
+由于边长为正，得 \(c=\sqrt{3}=a\). 在同一三角形中，相等的边所对的角相等，所以
+\[
+A=C=30^{\circ}
+\]
+\end{solution}
 
 \begin{problem}
 方程 \(2^{-x} + x^{2} = 3\) 的实数解的个数为\fillinblank{}.
@@ -181,6 +348,28 @@ B
 2
 \end{answer}
 
+\begin{solution}
+令
+\[
+g(x)=2^{-x}+x^2-3
+\]
+当 \(x<0\) 时，
+\[
+g'(x)=2x-(\ln2)2^{-x}<0
+\]
+所以 \(g\) 在 \((-\infty,0)\) 上严格递减. 又 \(g(-1)=0\)，故负数范围内只有一个实根.
+
+当 \(x\geqslant0\) 时，
+\[
+g''(x)=2+(\ln2)^2 2^{-x}>0
+\]
+所以 \(g'(x)\) 严格递增. 由于 \(g'(0)=-\ln2<0\)，\(g'(1)=2-\ln2>0\)，存在唯一的 \(x_0\in(0,1)\) 使 \(g'(x_0)=0\). 函数 \(g\) 先减后增，而 \(g(1)=-\dfrac{3}{2}<0\)，\(g(2)=\dfrac{5}{4}>0\)，所以正数范围内恰有一个实根. 因此方程共有
+\[
+1+1=2
+\]
+个实数解.
+\end{solution}
+
 \begin{problem}
 明天上午李明要参加奥运志愿者活动，为了准时起床，他用甲，乙两个闹钟叫醒自己. 假设甲闹钟准时响的概率是 0.80，乙闹钟准时响的概率是 0.90，则两个闹钟至少有一准时响的概率是\fillinblank{}.
 \end{problem}
@@ -188,6 +377,18 @@ B
 \begin{answer}
 0.98
 \end{answer}
+
+\begin{solution}
+设甲闹钟准时响为事件 \(A\)，乙闹钟准时响为事件 \(B\). 按两个闹钟相互独立处理，则
+\(P(\overline{A})=1-0.80=0.20\)，\(P(\overline{B})=1-0.90=0.10\).
+两个闹钟至少有一个准时响的对立事件是两个闹钟都不准时响，因此
+\[
+P(A\cup B)
+=1-P(\overline{A}\cap\overline{B})
+=1-0.20\times0.10
+=0.98
+\]
+\end{solution}
 
 \begin{problem}
 圆 \(C: \begin{cases}
@@ -199,6 +400,17 @@ y = -2 + 4\sin \theta.
 \begin{answer}
 \((3,-2)\)，\((x+2)^2+(y-3)^2=16\)
 \end{answer}
+
+\begin{solution}
+由参数方程
+\(x=3+4\cos\theta\)，\(y=-2+4\sin\theta\)
+可知圆 \(C\) 的圆心为 \((3,-2)\)，半径为 \(4\). 直线 \(x-y=0\) 即 \(y=x\)，关于该直线的对称变换把点 \((u,v)\) 变为 \((v,u)\). 因而圆心 \((3,-2)\) 变为 \((-2,3)\)，半径不变.
+
+所以圆 \(C'\) 的普通方程为
+\[
+(x+2)^2+(y-3)^2=4^2=16
+\]
+\end{solution}
 
 \section{解答题}
 
@@ -216,25 +428,18 @@ y = -2 + 4\sin \theta.
 \[
 f(x)=\frac{1}{2}\sin x+\frac{1+\cos x}{2}-2
 =\frac{1}{2}(\sin x+\cos x)-\frac{3}{2}
-=\frac{\sqrt{2}}{2}\sin\left(x+\frac{\pi}{4}\right)-\frac{3}{2}.
+=\frac{\sqrt{2}}{2}\sin\left(x+\frac{\pi}{4}\right)-\frac{3}{2}
 \]
 因此 \(A=\dfrac{\sqrt{2}}{2}\)，\(\omega=1\)，\(\varphi=\dfrac{\pi}{4}\)，\(B=-\dfrac{3}{2}\)，函数 \(f(x)\) 的周期为 \(2\pi\).
 
 \item 令 \(t=x+\dfrac{\pi}{4}\)，则当 \(x\in\left[\pi,\dfrac{17\pi}{12}\right]\) 时，
 \[
-t\in\left[\frac{5\pi}{4},\frac{5\pi}{3}\right].
+t\in\left[\frac{5\pi}{4},\frac{5\pi}{3}\right]
 \]
 在该区间上，\(\sin t\) 在 \(t=\dfrac{3\pi}{2}\) 处取得最小值 \(-1\)，而两端点的函数值为
-\[
-\sin\frac{5\pi}{4}=-\frac{\sqrt{2}}{2},\qquad
-\sin\frac{5\pi}{3}=-\frac{\sqrt{3}}{2}.
-\]
+\(\sin\frac{5\pi}{4}=-\frac{\sqrt{2}}{2}\)，\(\sin\frac{5\pi}{3}=-\frac{\sqrt{3}}{2}\).
 所以 \(\sin t\) 的最大值为 \(-\dfrac{\sqrt{2}}{2}\). 从而
-\[
-f_{\max}=\frac{\sqrt{2}}{2}\left(-\frac{\sqrt{2}}{2}\right)-\frac{3}{2}=-2,
-\qquad
-f_{\min}=\frac{\sqrt{2}}{2}(-1)-\frac{3}{2}=-\frac{3+\sqrt{2}}{2}.
-\]
+\(f_{\max}=\frac{\sqrt{2}}{2}\left(-\frac{\sqrt{2}}{2}\right)-\frac{3}{2}=-2\)，\(f_{\min}=\frac{\sqrt{2}}{2}(-1)-\frac{3}{2}=-\frac{3+\sqrt{2}}{2}\).
 \end{enumerate}
 \end{solution}
 
@@ -250,32 +455,29 @@ f_{\min}=\frac{\sqrt{2}}{2}(-1)-\frac{3}{2}=-\frac{3+\sqrt{2}}{2}.
 \begin{enumerate}
 \item \(f'(x)=3x^2+2mx-m^2=(x+m)(3x-m)\). 因为 \(m>0\)，所以在 \(x=-m\) 的左侧 \(f'(x)>0\)，在 \((-m,m/3)\) 内 \(f'(x)<0\)，在 \(x=m/3\) 的右侧 \(f'(x)>0\). 因此 \(x=-m\) 是极大值点，且
 \[
-f(-m)=-m^3+m^3+m^3+1=m^3+1.
+f(-m)=-m^3+m^3+m^3+1=m^3+1
 \]
 由极大值为 \(9\)，得 \(m^3+1=9\)，所以 \(m=2\).
 
 \item 当 \(m=2\) 时，
 \[
-f'(x)=3x^2+4x-4.
+f'(x)=3x^2+4x-4
 \]
 切线斜率为 \(-5\)，故切点横坐标满足
-\[
-3x^2+4x-4=-5,
-\qquad 3x^2+4x+1=0,
-\]
+\(3x^2+4x-4=-5\)，\(3x^2+4x+1=0\)
 即 \(x=-1\) 或 \(x=-\dfrac{1}{3}\).
 
 此时 \(f(x)=x^3+2x^2-4x+1\). 当 \(x=-1\) 时，\(f(-1)=6\)，切线方程为
 \[
-y-6=-5(x+1),
+y-6=-5(x+1)
 \]
 即 \(y=-5x+1\). 当 \(x=-\dfrac{1}{3}\) 时，
 \[
-f\left(-\frac{1}{3}\right)=-\frac{1}{27}+\frac{2}{9}+\frac{4}{3}+1=\frac{68}{27},
+f\left(-\frac{1}{3}\right)=-\frac{1}{27}+\frac{2}{9}+\frac{4}{3}+1=\frac{68}{27}
 \]
 切线方程为
 \[
-y-\frac{68}{27}=-5\left(x+\frac{1}{3}\right),
+y-\frac{68}{27}=-5\left(x+\frac{1}{3}\right)
 \]
 即 \(y=-5x+\dfrac{23}{27}\). 因此所求直线有两条：\(y=-5x+1\) 和 \(y=-5x+\dfrac{23}{27}\).
 \end{enumerate}
@@ -293,43 +495,37 @@ y-\frac{68}{27}=-5\left(x+\frac{1}{3}\right),
 
 \begin{solution}
 建立空间直角坐标系，令
-\[
-A=(0,0,0),\quad B=(u,0,0),\quad C=(v,w,0),\quad A_{1}=(0,0,h),
-\]
+\(A=(0,0,0)\)，\(B=(u,0,0)\)，\(C=(v,w,0)\)，\(A_{1}=(0,0,h)\)
 其中 \(u>0\)，\(w\ne0\)，\(h>0\). 由于三棱柱为直三棱柱，底面 \(ABC\) 在平面 \(z=0\) 内，侧面 \(A_{1}ABB_{1}\) 在平面 \(y=0\) 内.
 
 \begin{enumerate}
 \item 平面 \(A_{1}ABB_{1}\) 的一个法向量为 \(\bs{n}_{1}=(0,1,0)\). 又
-\[
-\overrightarrow{A_{1}B}=(u,0,-h),\qquad \overrightarrow{A_{1}C}=(v,w,-h),
-\]
+\(\overrightarrow{A_{1}B}=(u,0,-h)\)，\(\overrightarrow{A_{1}C}=(v,w,-h)\)
 故平面 \(A_{1}BC\) 的一个法向量为
 \[
-\bs{n}_{2}=\overrightarrow{A_{1}B}\times\overrightarrow{A_{1}C}=(hw,h(u-v),uw).
+\bs{n}_{2}=\overrightarrow{A_{1}B}\times\overrightarrow{A_{1}C}=(hw,h(u-v),uw)
 \]
 由题设平面 \(A_{1}BC\perp\) 平面 \(A_{1}ABB_{1}\)，有 \(\bs{n}_{1}\cdot\bs{n}_{2}=0\)，从而
 \[
-h(u-v)=0.
+h(u-v)=0
 \]
 因为 \(h>0\)，所以 \(u=v\). 于是
-\[
-\overrightarrow{AB}=(u,0,0),\qquad \overrightarrow{BC}=(v-u,w,0)=(0,w,0),
-\]
+\(\overrightarrow{AB}=(u,0,0)\)，\(\overrightarrow{BC}=(v-u,w,0)=(0,w,0)\)
 从而 \(\overrightarrow{AB}\cdot\overrightarrow{BC}=0\)，即 \(AB\perp BC\).
 
 \item 由（1）知 \(v=u\). 又因为 \(AA_{1}=AC=a\)，所以 \(h=a\)，且
 \[
-u^2+w^2=AC^2=a^2.
+u^2+w^2=AC^2=a^2
 \]
 此时平面 \(A_{1}BC\) 的一个法向量可取 \(\bs{n}=(a,0,u)\)，而 \(\overrightarrow{AC}=(u,w,0)\). 设直线 \(AC\) 与平面 \(A_{1}BC\) 所成的角为 \(\theta\)，则
 \[
 \sin\theta=\frac{|\overrightarrow{AC}\cdot\bs{n}|}{|\overrightarrow{AC}|\,|\bs{n}|}
-=\frac{au}{a\sqrt{a^2+u^2}}=\frac{u}{\sqrt{a^2+u^2}}.
+=\frac{au}{a\sqrt{a^2+u^2}}=\frac{u}{\sqrt{a^2+u^2}}
 \]
 
 在垂直于 \(BC\) 的截面内，二面角 \(A_{1}-BC-A\) 等于射线 \(BA_{1}\) 与 \(BA\) 的夹角. 这两条射线在该截面内的方向向量分别为 \((-u,a)\) 与 \((-u,0)\)，故
 \[
-\cos\varphi=\frac{u}{\sqrt{a^2+u^2}}.
+\cos\varphi=\frac{u}{\sqrt{a^2+u^2}}
 \]
 因此 \(\sin\theta=\cos\varphi\). 由于 \(\theta\)，\(\varphi\) 均为锐角，故 \(\theta+\varphi=\dfrac{\pi}{2}\).
 \end{enumerate}
@@ -344,24 +540,22 @@ u^2+w^2=AC^2=a^2.
 \begin{solution}
 设广告的高为 \(h\)，每个矩形栏目的宽为 \(w\). 由于上下空白各为 \(10\mathrm{~cm}\)，两栏面积之和为 \(18000\mathrm{~cm}^{2}\)，有
 \[
-2w(h-20)=18000.
+2w(h-20)=18000
 \]
 令 \(x=h-20\)，则 \(x>0\)，且 \(w=\dfrac{9000}{x}\). 广告的宽为
 \[
-2w+5+2\times10=\frac{18000}{x}+25.
+2w+5+2\times10=\frac{18000}{x}+25
 \]
 所以广告面积
 \[
-S=(x+20)\left(\frac{18000}{x}+25\right)=25x+\frac{360000}{x}+18500.
+S=(x+20)\left(\frac{18000}{x}+25\right)=25x+\frac{360000}{x}+18500
 \]
 由基本不等式，
 \[
-25x+\frac{360000}{x}\geqslant2\sqrt{25x\cdot\frac{360000}{x}}=6000,
+25x+\frac{360000}{x}\geqslant2\sqrt{25x\cdot\frac{360000}{x}}=6000
 \]
 当且仅当 \(25x=\dfrac{360000}{x}\) 时取等号. 因为 \(x>0\)，解得 \(x=120\). 此时
-\[
-h=x+20=140,\qquad w=\frac{9000}{120}=75,
-\]
+\(h=x+20=140\)，\(w=\frac{9000}{120}=75\)
 广告的宽为 \(2w+25=175\). 因此广告的高为 \(140\mathrm{~cm}\)，宽为 \(175\mathrm{~cm}\)，最小面积为 \(24500\mathrm{~cm}^{2}\).
 \end{solution}
 
@@ -377,24 +571,18 @@ h=x+20=140,\qquad w=\frac{9000}{120}=75,
 \begin{enumerate}
 \item 由双曲线焦点坐标知焦半距 \(c=2\)，所以
 \[
-a^2+b^2=c^2=4.
+a^2+b^2=c^2=4
 \]
 又因为点 \(P(3,\sqrt{7})\) 在双曲线 \(C\) 上，得
 \[
-\frac{9}{a^2}-\frac{7}{b^2}=1.
+\frac{9}{a^2}-\frac{7}{b^2}=1
 \]
 令 \(t=a^2\)，则 \(b^2=4-t\)，其中 \(0<t<4\). 代入上式并整理，得
-\[
-\frac{9}{t}-\frac{7}{4-t}=1
-\quad\Longrightarrow\quad
-t^2-20t+36=0
-\quad\Longrightarrow\quad
-(t-2)(t-18)=0.
-\]
+\(\frac{9}{t}-\frac{7}{4-t}=1\)，\(\Longrightarrow\)，\(t^2-20t+36=0\)，\(\Longrightarrow\)，\((t-2)(t-18)=0\).
 由 \(0<t<4\)，只能取 \(t=2\). 因此 \(a^2=b^2=2\)，双曲线方程为
 \[
 \frac{x^2}{2}-\frac{y^2}{2}=1,
-\quad\text{即}\quad x^2-y^2=2.
+\quad\text{即}\quad x^2-y^2=2
 \]
 
 \item 直线 \(l\) 不可能为直线 \(x=0\)，因为它与双曲线方程联立得 \(-y^2=2\)，没有实交点. 故设 \(l\) 的方程为 \(y=kx+2\).
@@ -403,33 +591,27 @@ t^2-20t+36=0
 \[
 x^2-(kx+2)^2=2,
 \quad\text{即}\quad
-(1-k^2)x^2-4kx-6=0.
+(1-k^2)x^2-4kx-6=0
 \]
 设两交点 \(E\)、\(F\) 的横坐标分别为 \(x_1\)、\(x_2\)，则对应纵坐标为 \(y_i=kx_i+2\). 由三角形面积公式，
 \[
-2S_{\triangle OEF}=|x_1y_2-x_2y_1|=|2(x_1-x_2)|,
+2S_{\triangle OEF}=|x_1y_2-x_2y_1|=|2(x_1-x_2)|
 \]
 所以已知 \(S_{\triangle OEF}=2\sqrt{2}\) 等价于 \(|x_1-x_2|=2\sqrt{2}\).
 
 由于交点不同且 \(k\ne\pm1\)，上式为二次方程，根的判别式为
 \[
-\Delta=(-4k)^2-4(1-k^2)(-6)=8(3-k^2).
+\Delta=(-4k)^2-4(1-k^2)(-6)=8(3-k^2)
 \]
 因此
 \[
-(x_1-x_2)^2=\frac{\Delta}{(1-k^2)^2}=8.
+(x_1-x_2)^2=\frac{\Delta}{(1-k^2)^2}=8
 \]
 从而
-\[
-\frac{8(3-k^2)}{(1-k^2)^2}=8
-\quad\Longrightarrow\quad
-k^4-k^2-2=0
-\quad\Longrightarrow\quad
-(k^2-2)(k^2+1)=0.
-\]
+\(\frac{8(3-k^2)}{(1-k^2)^2}=8\)，\(\Longrightarrow\)，\(k^4-k^2-2=0\)，\(\Longrightarrow\)，\((k^2-2)(k^2+1)=0\).
 所以 \(k=\pm\sqrt{2}\)，所求直线方程为
 \[
-y=\sqrt{2}x+2\quad\text{或}\quad y=-\sqrt{2}x+2.
+y=\sqrt{2}x+2\quad\text{或}\quad y=-\sqrt{2}x+2
 \]
 \end{enumerate}
 \end{solution}
@@ -449,52 +631,46 @@ y=\sqrt{2}x+2\quad\text{或}\quad y=-\sqrt{2}x+2.
 \[
 c_{n+1}=a_{n+1}-3(n+1)+21
 =\frac{2}{3}a_n+n-4-3n-3+21
-=\frac{2}{3}(a_n-3n+21)=\frac{2}{3}c_n.
+=\frac{2}{3}(a_n-3n+21)=\frac{2}{3}c_n
 \]
 又 \(c_1=\lambda+18\)，所以
-\[
-c_n=(\lambda+18)\left(\frac{2}{3}\right)^{n-1},
-\qquad
-b_n=(-1)^n(\lambda+18)\left(\frac{2}{3}\right)^{n-1}.
-\]
+\(c_n=(\lambda+18)\left(\frac{2}{3}\right)^{n-1}\)，\(b_n=(-1)^n(\lambda+18)\left(\frac{2}{3}\right)^{n-1}\).
 由递推式得
-\[
-a_2=\frac{2}{3}\lambda-3,\qquad a_3=\frac{4}{9}\lambda-4.
-\]
+\(a_2=\frac{2}{3}\lambda-3\)，\(a_3=\frac{4}{9}\lambda-4\).
 若 \(\{a_n\}\) 是等比数列，则必有 \(a_2^2=a_1a_3\). 但
 \[
-a_2^2-a_1a_3=\left(\frac{2}{3}\lambda-3\right)^2-\lambda\left(\frac{4}{9}\lambda-4\right)=9\ne0,
+a_2^2-a_1a_3=\left(\frac{2}{3}\lambda-3\right)^2-\lambda\left(\frac{4}{9}\lambda-4\right)=9\ne0
 \]
 矛盾. 因此对任意实数 \(\lambda\)，数列 \(\{a_n\}\) 都不是等比数列.
 
 \item 当 \(\lambda\ne-18\) 时，\(b_n\ne0\)，且
 \[
-\frac{b_{n+1}}{b_n}=-\frac{2}{3}.
+\frac{b_{n+1}}{b_n}=-\frac{2}{3}
 \]
 所以数列 \(\{b_n\}\) 是首项 \(b_1=-(\lambda+18)\)、公比 \(-\dfrac{2}{3}\) 的等比数列.
 
 \item 由等比数列求和公式，且该公式在 \(\lambda=-18\) 时也成立，
 \[
 S_n=-(\lambda+18)\frac{1-\left(-\frac{2}{3}\right)^n}{1+\frac{2}{3}}
-=-\frac{3}{5}(\lambda+18)\left[1-\left(-\frac{2}{3}\right)^n\right].
+=-\frac{3}{5}(\lambda+18)\left[1-\left(-\frac{2}{3}\right)^n\right]
 \]
 取 \(n=1\)，由 \(S_1>-12\) 得
 \[
 -(\lambda+18)>-12,
-\quad\text{即}\quad \lambda<-6.
+\quad\text{即}\quad \lambda<-6
 \]
 
 下面证明这个条件也是充分的. 若 \(\lambda+18\leqslant0\)，则对任意正整数 \(n\)，有
 \[
-1-\left(-\frac{2}{3}\right)^n>0,
+1-\left(-\frac{2}{3}\right)^n>0
 \]
 从而 \(S_n\geqslant0>-12\). 若 \(0<\lambda+18<12\)，当 \(n\) 为偶数时，
 \[
-0<1-\left(-\frac{2}{3}\right)^n<1,
+0<1-\left(-\frac{2}{3}\right)^n<1
 \]
 当 \(n\) 为奇数时，
 \[
-1-\left(-\frac{2}{3}\right)^n=1+\left(\frac{2}{3}\right)^n\leqslant\frac{5}{3}.
+1-\left(-\frac{2}{3}\right)^n=1+\left(\frac{2}{3}\right)^n\leqslant\frac{5}{3}
 \]
 于是对任意正整数 \(n\)，
 \(\displaystyle S_n\geqslant-\frac{3}{5}(\lambda+18)\frac{5}{3}=-(\lambda+18)>-12\).

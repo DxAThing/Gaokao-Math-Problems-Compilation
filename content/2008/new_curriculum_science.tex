@@ -15,6 +15,10 @@
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+由图象可见，在区间 \([0,2\pi]\) 内函数完成两个完整周期，所以其周期为 \(T=\pi\). 对于函数 \(y=2\sin(\omega x+\varphi)\)，周期满足 \(T=\frac{2\pi}{\omega}\)，故 \(\frac{2\pi}{\omega}=\pi\)，解得 \(\omega=2\). 因而选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -28,6 +32,16 @@ B
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+由 \(z=1-\i\) 得 \(z-1=-\i\)，且
+\(z^2=\left(1-\i\right)^2=-2\i\). 因此
+\(z^2-2z=-2\i-2\left(1-\i\right)=-2\)，从而
+\[
+\frac{z^2-2z}{z-1}=\frac{-2}{-\i}=\frac{2}{\i}=-2\i
+\]
+故选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -41,6 +55,14 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+设等腰三角形的底边长为 \(c\)，两腰长均为 \(l\). 由周长条件，\(2l+c=5c\)，所以 \(l=2c\). 设顶角为 \(\theta\)，由余弦定理得
+\[
+\cos\theta=\frac{l^2+l^2-c^2}{2l^2}=\frac{2\left(2c\right)^2-c^2}{2\left(2c\right)^2}=\frac{7}{8}
+\]
+故选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -54,12 +76,24 @@ D
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+设等比数列首项为 \(a_1\). 因为公比 \(q=2\)，所以 \(a_2=2a_1\)，并且
+\[
+S_4=a_1\left(1+2+2^2+2^3\right)=15a_1
+\]
+由于题中商有意义，\(a_1\ne0\)，故
+\[
+\frac{S_4}{a_2}=\frac{15a_1}{2a_1}=\frac{15}{2}
+\]
+故选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
 下面的程序框图，如果输入三个实数 \(a\)，\(b\)，\(c\)，要求输出这三个数中最大的数，那么在空白的判断框中，应该填入下面四个选项中的（\quad）
 
-\bitmapinlinefigure[0.42\linewidth][max width=0.42\linewidth]{img/2008/new_curriculum_science/q5_fig1.png}
+\bitmapfigure[max width=0.42\linewidth]{img/2008/new_curriculum_science/q5_fig1.png}
 
 \choices
     {\(c > x\)}
@@ -69,10 +103,14 @@ C
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+程序先令 \(x=a\). 第一个判断框若填 \(b>x\)，则在 \(b>x\) 时令 \(x=b\)，否则保留 \(x=a\)，因此经过这一判断后 \(x=\max\{a,b\}\). 第二个判断框必须在 \(c>x\) 时令 \(x=c\)，否则保持原值，才能保证最后输出 \(\max\{a,b,c\}\). 所以应填 \(c>x\)，故选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
-已知 \(a_{1} > a_{2} > a_{3} > 0\)，则使得 \((1 - a_{i}x)^{2} < 1\)（\(i = 1, 2, 3\)）都成立的 \(x\) 取值范围是（\quad）
+已知 \(a_{1} > a_{2} > a_{3} > 0\)，则使得 \((1 - a_{i}x)^{2} < 1\)（\(i = 1\)，\(2\)，\(3\)）都成立的 \(x\) 取值范围是（\quad）
 
 \choices
     {\(\left(0, \frac{1}{a_1}\right)\)}
@@ -82,6 +120,16 @@ A
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+对任意 \(i\in\{1,2,3\}\)，有
+\[
+\left(1-a_i x\right)^2<1
+\Longleftrightarrow -1<1-a_i x<1
+\Longleftrightarrow 0<a_i x<2
+\]
+因为 \(a_i>0\)，所以该不等式等价于 \(0<x<\frac{2}{a_i}\). 三个不等式同时成立时，\(x\) 必须属于这些区间的交集；又因 \(a_1>a_2>a_3>0\)，有 \(\frac{2}{a_1}<\frac{2}{a_2}<\frac{2}{a_3}\)，故交集为 \(\left(0,\frac{2}{a_1}\right)\). 故选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -95,6 +143,20 @@ B
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+利用诱导公式 \(\sin70^{\circ}=\cos20^{\circ}\)，以及二倍角公式
+\(\cos^2 10^{\circ}=\frac{1+\cos20^{\circ}}{2}\)，可得
+\[
+2-\cos^2 10^{\circ}=2-\frac{1+\cos20^{\circ}}{2}=\frac{3-\cos20^{\circ}}{2}
+\]
+因此
+\[
+\frac{3-\sin70^{\circ}}{2-\cos^2 10^{\circ}}
+=\frac{3-\cos20^{\circ}}{\frac{3-\cos20^{\circ}}{2}}=2
+\]
+故选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -108,6 +170,11 @@ C
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+若存在不全为零的实数 \(\lambda_1\)，\(\lambda_2\)，使得
+\(\lambda_1\bs a+\lambda_2\bs b=\bs0\)，则 \(\bs a\)，\(\bs b\) 线性相关；在平面向量中，这等价于两个向量共线. 反之，若 \(\bs a\)，\(\bs b\) 共线，则当其中一个为零向量时可直接取相应系数为 \(1\)、另一个为 \(0\)；当两者均非零时，一个向量是另一个向量的实数倍，也能得到这样的非零系数组合. 因此选项 D 是充要条件，故选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -121,6 +188,14 @@ D
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+先从 \(5\) 天中选出甲、乙、丙参加活动的三天，共有 \(\mathrm C_5^3=10\) 种选法. 对于选定的三天，甲必须排在乙、丙之前，所以甲只能占这三天中最早的一天，乙、丙还可以互换，有 \(2\) 种排法. 因而安排方法共有
+\[
+\mathrm C_5^3\times2=10\times2=20
+\]
+种，故选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -134,6 +209,16 @@ A
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+在区间 \(\left[\frac12,2\right]\) 上，曲线 \(y=\frac1x\) 位于 \(x\) 轴上方，所围面积为
+\[
+S=\int_{1/2}^{2}\frac{1}{x}\,\mathrm dx
+=\left.\ln x\right|_{1/2}^{2}
+=\ln2-\ln\frac12=2\ln2
+\]
+故选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -147,6 +232,18 @@ D
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+设抛物线上点 \(P\) 的参数坐标为 \(P\left(t^2,2t\right)\). 抛物线 \(y^2=4x\) 的焦点为 \(F\left(1,0\right)\)，准线为 \(x=-1\). 令准线上与 \(P\) 同纵坐标的点为 \(D\left(-1,2t\right)\)，则抛物线的定义给出 \(PF=PD=t^2+1\). 因而
+\[
+PQ+PF=PQ+PD\ge QD=\sqrt{9+\left(2t+1\right)^2}\ge3
+\]
+当且仅当 \(t=-\frac12\) 时，\(Q\)、\(P\)、\(D\) 共线且 \(QD=3\)，此时
+\[
+P=\left(t^2,2t\right)=\left(\frac14,-1\right)
+\]
+所以距离和的最小值在 \(P\left(\frac14,-1\right)\) 处取得，故选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -160,6 +257,17 @@ A
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+把这条棱在三个互相垂直方向上的分量平方分别记为 \(u\)、\(v\)、\(w\). 棱长为 \(\sqrt7\)，所以 \(u+v+w=7\). 正视图中的投影长为 \(\sqrt6\)，说明其中两个方向的分量平方之和为 \(6\)，另一个分量平方为 \(1\). 设前者为 \(u\)，\(v\)，则 \(u+v=6\)，且两个另外的正投影长度分别为
+\(a=\sqrt{u+1}\)，\(b=\sqrt{v+1}\)
+（交换 \(u\)，\(v\) 不影响结论）. 由均方不等式，
+\[
+a+b\le\sqrt{2\left(\left(u+1\right)+\left(v+1\right)\right)}
+=\sqrt{16}=4
+\]
+当且仅当 \(u=v=3\) 时取等号，因此 \(a+b\) 的最大值为 \(4\)，故选 C.
+\end{solution}
 \end{problem}
 
 \section{填空题}
@@ -169,6 +277,18 @@ C
 \begin{answer}
 3
 \end{answer}
+
+\begin{solution}
+由向量坐标，
+\[
+\lambda\bs a+\bs b=\left(4,1-\lambda,\lambda\right)
+\]
+由长度条件得
+\[
+16+\left(1-\lambda\right)^2+\lambda^2=29
+\]
+即 \(\lambda^2-\lambda-6=0\)，所以 \(\lambda=3\) 或 \(\lambda=-2\). 因为 \(\lambda>0\)，故 \(\lambda=3\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -176,6 +296,24 @@ C
 \begin{answer}
 \(\frac{32}{15}\)
 \end{answer}
+
+\begin{solution}
+双曲线的实半轴、虚半轴分别为 \(a=3\)、\(b=4\)，所以焦半距
+\(c=\sqrt{a^2+b^2}=5\)，从而 \(A=\left(3,0\right)\)、\(F=\left(5,0\right)\). 双曲线的一条渐近线为 \(y=\frac43x\)，过 \(F\) 的平行直线可写为
+\[
+y=\frac43\left(x-5\right)
+\]
+将其代入双曲线方程，得
+\[
+\frac{x^2}{9}-\frac{\left(\frac43\left(x-5\right)\right)^2}{16}=1
+\Longleftrightarrow x^2-\left(x-5\right)^2=9
+\]
+故 \(x=\frac{17}{5}\)，相应地 \(y=-\frac{32}{15}\). 另一条渐近线所得交点关于 \(x\) 轴对称，三角形面积相同. 因此
+\[
+S_{\triangle AFB}=\frac12\cdot AF\cdot\left|y_B\right|
+=\frac12\cdot2\cdot\frac{32}{15}=\frac{32}{15}
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -183,6 +321,21 @@ C
 \begin{answer}
 \(\frac{4\pi}{3}\)
 \end{answer}
+
+\begin{solution}
+设正六边形边长为 \(s\)，六棱柱高为 \(h\). 由底面周长为 \(3\)，得 \(s=\frac12\). 正六边形面积为
+\[
+S=\frac{3\sqrt3}{2}s^2=\frac{3\sqrt3}{8}
+\]
+由体积条件 \(Sh=\frac98\)，得 \(h=\sqrt3\). 正六边形的外接圆半径等于边长，所以球心位于两底面中心连线的中点，球半径满足
+\[
+R^2=s^2+\left(\frac h2\right)^2=\frac14+\frac34=1
+\]
+故球的体积为
+\[
+V=\frac43\pi R^3=\frac{4\pi}{3}
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -235,6 +388,14 @@ C
 \begin{answer}
 乙品种棉花的纤维平均长度大于甲品种棉花的纤维平均长度；甲品种棉花的纤维长度较乙品种棉花的纤维长度更分散.
 \end{answer}
+
+\begin{solution}
+由原始数据求和，甲、乙两品种的纤维长度总和分别为 \(7682\) 和 \(7975\)，故样本平均数分别为
+\(\bar x_{\text{甲}}=\frac{7682}{25}=307.28\)，\(\bar x_{\text{乙}}=\frac{7975}{25}=319\).
+所以乙品种棉花的纤维平均长度大于甲品种. 再以极差衡量离散程度，甲、乙两品种的极差分别为
+\(352-271=81\)，\(356-284=72\).
+因此甲品种棉花的纤维长度比乙品种的更分散. 例如可写出两个统计结论：乙品种的平均纤维长度较大；甲品种的纤维长度较分散.
+\end{solution}
 \end{problem}
 
 \section{解答题}
@@ -249,8 +410,17 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item \(a_n=-2n+5\)；
-\item \(S_n=-n^2+4n=4-(n-2)^2\)，当 \(n=2\) 时，\(S_n\) 取得最大值 \(4\).
+\item 设等差数列的公差为 \(d\)，则
+\(a_2=a_1+d=1\)，\(a_5=a_1+4d=-5\).
+两式相减得 \(3d=-6\)，所以 \(d=-2\)，再由 \(a_1+d=1\) 得 \(a_1=3\). 因而
+\[
+a_n=a_1+(n-1)d=3-2(n-1)=5-2n
+\]
+\item 由等差数列前 \(n\) 项和公式，
+\[
+S_n=\frac{n\left(a_1+a_n\right)}{2}=\frac{n\left(3+5-2n\right)}{2}=n(4-n)=4-(n-2)^2
+\]
+因为 \(n\) 是正整数，\((n-2)^2\ge0\)，且当 \(n=2\) 时取到最小值 \(0\)，所以 \(S_n\) 的最大值为 \(4\)，在 \(n=2\) 时取得.
 \end{enumerate}
 \end{solution}
 \end{problem}
@@ -267,8 +437,31 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item \(45^{\circ}\)；
-\item \(30^{\circ}\).
+\item 设正方体棱长为 \(a\)，建立直角坐标系
+\(A\left(0,0,0\right)\)，\(\ B\left(a,0,0\right)\)，\(\ D\left(0,a,0\right)\)，\(\ D'\left(0,a,a\right)\).
+令 \(P\) 将 \(BD'\) 按参数 \(t\) 表示为
+\(P=\left(a\left(1-t\right),at,at\right)\)，\(0\le t\le1\).
+于是
+\(\overrightarrow{DP}=a\left(1-t,-(1-t),t\right)\)，\(\overrightarrow{DA}=a\left(0,-1,0\right)\).
+由 \(\angle PDA=60^{\circ}\)，得
+\[
+\frac{\overrightarrow{DP}\cdot\overrightarrow{DA}}{|DP|\,|DA|}
+=\frac{1-t}{\sqrt{2\left(1-t\right)^2+t^2}}=\frac12
+\]
+所以 \(t^2=2\left(1-t\right)^2\)，从而 \(t=\sqrt2\left(1-t\right)\). 又
+\[
+|DP|=a\sqrt{2\left(1-t\right)^2+t^2}=2a(1-t)
+\]
+因此
+\[
+\cos\angle\left(DP,CC'\right)=\frac{at}{|DP|}=\frac{\sqrt2}{2}
+\]
+故 \(DP\) 与 \(CC'\) 所成角为 \(45^{\circ}\).
+\item 平面 \(A'AD'D\) 的方程为 \(x=0\)，其法向量沿 \(x\) 轴. 设 \(DP\) 与该平面所成角为 \(\alpha\)，则
+\[
+\sin\alpha=\frac{a(1-t)}{|DP|}=\frac12
+\]
+因为 \(0\le\alpha\le90^{\circ}\)，所以 \(\alpha=30^{\circ}\).
 \end{enumerate}
 \end{solution}
 \end{problem}
@@ -300,11 +493,36 @@ C
 \end{enumerate}
 
 \begin{solution}
-短答案：
-
 \begin{enumerate}
-\item \(D(Y_1)=4\)，\(D(Y_2)=12\)；
-\item \(f(x)\) 的最小值为 \(3\)，此时 \(x=75\).
+\item 将百分数按小数表示，则
+\[
+E(X_1)=0.05\times0.8+0.10\times0.2=0.06
+\]
+\[
+D(X_1)=0.8\left(0.05-0.06\right)^2+0.2\left(0.10-0.06\right)^2=0.0004
+\]
+由于 \(Y_1=100X_1\)，所以
+\[
+D(Y_1)=100^2D(X_1)=4
+\]
+对第二个项目，
+\[
+E(X_2)=0.02\times0.2+0.08\times0.5+0.12\times0.3=0.08
+\]
+\[
+D(X_2)=0.2\left(0.02-0.08\right)^2+0.5\left(0.08-0.08\right)^2+0.3\left(0.12-0.08\right)^2=0.0012
+\]
+由于 \(Y_2=100X_2\)，所以 \(D(Y_2)=100^2D(X_2)=12\).
+\item 投资 \(A\) 项目 \(x\) 万元、投资 \(B\) 项目 \(100-x\) 万元时，两项投资所得利润的方差分别为 \(x^2D(X_1)\) 与 \((100-x)^2D(X_2)\). 因而
+\[
+f(x)=0.0004x^2+0.0012(100-x)^2
+=\frac{x^2+3(100-x)^2}{2500}
+\]
+整理得
+\[
+f(x)=\frac{4(x-75)^2+7500}{2500}=\frac{(x-75)^2}{625}+3
+\]
+在 \(0\le x\le100\) 时，\((x-75)^2\ge0\)，所以 \(f(x)\) 的最小值为 \(3\)，且当 \(x=75\) 时取得.
 \end{enumerate}
 \end{solution}
 \end{problem}
@@ -319,8 +537,38 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item \(C_1\) 的方程为 \(\frac{x^2}{4}+\frac{y^2}{3}=1\)；
-\item 直线 \(l\) 的方程为 \(y=\sqrt{6}x-2\sqrt{3}\) 或 \(y=\sqrt{6}x+2\sqrt{3}\).
+\item 抛物线 \(C_2:y^2=4x\) 的焦点为 \(F_2\left(1,0\right)\). 设 \(M=(x_M,y_M)\)，因 \(M\) 在第一象限且在 \(C_2\) 上，有 \(y_M^2=4x_M\). 于是
+\[
+|MF_2|=\sqrt{\left(x_M-1\right)^2+y_M^2}=\sqrt{\left(x_M-1\right)^2+4x_M}=x_M+1
+\]
+由 \(|MF_2|=\frac53\)，得 \(x_M=\frac23\)，再得 \(y_M=\frac{2\sqrt6}{3}\). 椭圆的左焦点为 \(F_1=(-1,0)\)，并且
+\[
+|MF_1|=\sqrt{\left(x_M+1\right)^2+y_M^2}=\frac73
+\]
+所以椭圆的长轴长 \(2a=|MF_1|+|MF_2|=4\)，即 \(a=2\). 又焦半距 \(c=1\)，故 \(b^2=a^2-c^2=3\)，从而
+\[
+C_1:\frac{x^2}{4}+\frac{y^2}{3}=1
+\]
+\item 由焦点坐标关于原点对称，\(\overrightarrow{MF_1}+\overrightarrow{MF_2}=-2\overrightarrow{OM}\)，所以 \(\overrightarrow{MN}=-2\overrightarrow{OM}\)，从而 \(N=-M\). 因此直线 \(l\parallel MN\) 的斜率为
+\[
+k=\frac{y_M}{x_M}=\sqrt6
+\]
+可设 \(l:y=\sqrt6x+r\). 设其与椭圆交于 \(A(x_1,y_1)\)、\(B(x_2,y_2)\)，代入椭圆方程得
+\[
+\frac94x^2+\frac{2\sqrt6}{3}rx+\frac{r^2}{3}-1=0
+\]
+故由韦达定理
+\(x_1+x_2=-\frac{8\sqrt6 r}{27}\)，\(x_1x_2=\frac{4r^2}{27}-\frac49\).
+条件 \(\overrightarrow{OA}\cdot\overrightarrow{OB}=0\) 给出
+\[
+0=x_1x_2+y_1y_2
+=x_1x_2+\left(\sqrt6x_1+r\right)\left(\sqrt6x_2+r\right)
+=7x_1x_2+\sqrt6r(x_1+x_2)+r^2
+\]
+代入上式，得 \(\frac{7r^2}{27}-\frac{28}{9}=0\)，所以 \(r^2=12\)，即 \(r=\pm2\sqrt3\). 因而
+\[
+l:y=\sqrt6x-2\sqrt3\quad\text{或}\quad y=\sqrt6x+2\sqrt3
+\]
 \end{enumerate}
 \end{solution}
 \end{problem}
@@ -336,9 +584,38 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item \(f(x)=x+\frac{1}{x-1}\)；
-\item 对称中心为 \((1,1)\)；
-\item 三角形面积的定值为 \(2\).
+\item 因切线方程为 \(y=3\)，切点为 \(\left(2,3\right)\)，故 \(f(2)=3\)，且 \(f'(2)=0\). 由
+\[
+f'(x)=a-\frac{1}{\left(x+b\right)^2}
+\]
+得 \(a=\frac{1}{\left(b+2\right)^2}\). 令整数 \(t=b+2\)，则 \(a=1/t^2\) 为整数，所以 \(t=\pm1\)，且 \(a=1\). 再由 \(f(2)=2+1/t=3\)，得 \(t=1\)，即 \(b=-1\). 因而
+\(f(x)=x+\frac{1}{x-1}\)，\(x\ne1\).
+\item 对任意 \(x\ne1\)，令 \(u=x-1\)，则
+\[
+f(x)=1+u+\frac1u
+\]
+当点 \(\left(x,f(x)\right)\) 关于 \(\left(1,1\right)\) 中心对称后变为 \(\left(2-x,2-f(x)\right)\)，而
+\[
+f(2-x)=1-u-\frac1u=2-f(x)
+\]
+所以对称点仍在曲线上，函数图象是中心对称图形，对称中心为 \(\left(1,1\right)\).
+\item 设曲线上任一点为 \(P\left(1+u,1+u+\frac1u\right)\)，其中 \(u\ne0\). 此点处切线斜率为
+\[
+m=f'(1+u)=1-\frac1{u^2}
+\]
+切线与直线 \(x=1\) 的交点为
+\[
+C=\left(1,1+\frac2u\right)
+\]
+与直线 \(y=x\) 的交点为
+\[
+D=\left(2u+1,2u+1\right)
+\]
+两条固定直线的交点为 \(E=\left(1,1\right)\). 因此 \(EC=\frac2{|u|}\)，点 \(D\) 到直线 \(x=1\) 的距离为 \(2|u|\)，三角形 \(ECD\) 的面积为
+\[
+S=\frac12\cdot\frac2{|u|}\cdot2|u|=2
+\]
+故该三角形面积恒为 \(2\).
 \end{enumerate}
 \end{solution}
 \end{problem}
@@ -356,11 +633,26 @@ C
 \bitmapfigure[max width=0.48\linewidth]{img/2008/new_curriculum_science/q22_fig1.png}
 
 \begin{solution}
-短答案：
-
 \begin{enumerate}
-\item \(OM \cdot OP = OA^2\)；
-\item \(\angle OKM = 90^{\circ}\).
+\item 因为 \(OA\perp AM\)，且 \(AP\perp OM\)，所以三角形 \(OAM\) 与三角形 \(OPA\) 都是直角三角形. 又它们在点 \(O\) 处有相同的夹角，故
+\(\triangle OAM\sim\triangle OPA\). 由对应边关系
+\[
+\frac{OP}{OA}=\frac{OA}{OM}
+\]
+得 \(OM\cdot OP=OA^2\).
+\item 取 \(OM\) 为 \(x\) 轴，设圆半径为 \(r=OA\)，并记 \(O=(0,0)\)、\(M=(m,0)\)、\(P=(p,0)\). 由第（1）问，\(mp=r^2\). 因为 \(AP\perp OM\)，可设 \(N=(p,n)\). 由
+\[
+\overrightarrow{NB}\perp\overrightarrow{ON}
+\]
+得
+\[
+\overrightarrow{OB}\cdot\overrightarrow{ON}=|ON|^2
+\]
+圆在点 \(B\) 处的切线方程为 \(\overrightarrow{OB}\cdot\overrightarrow{OX}=r^2\). 由于 \(K\) 在直线 \(ON\) 上，设 \(\overrightarrow{OK}=\lambda\overrightarrow{ON}\)，代入切线方程并利用上式，得
+\(\lambda|ON|^2=r^2\)，\(\overrightarrow{OK}=\frac{r^2}{|ON|^2}\overrightarrow{ON}\).
+于是
+\(|OK|^2=\frac{r^4}{|ON|^2}\)，\(\overrightarrow{OM}\cdot\overrightarrow{OK}=\frac{r^2mp}{|ON|^2}=\frac{r^4}{|ON|^2}=|OK|^2\).
+所以 \(\overrightarrow{KO}\cdot\overrightarrow{KM}=0\)，即 \(\angle OKM=90^{\circ}\).
 \end{enumerate}
 \end{solution}
 \end{problem}
@@ -380,11 +672,29 @@ y = \frac{\sqrt{2}}{2} t,
 \end{enumerate}
 
 \begin{solution}
-短答案：
-
 \begin{enumerate}
-\item \(C_1\) 是圆 \(x^2+y^2=1\)，\(C_2\) 是直线 \(x-y+\sqrt{2}=0\)，两曲线有一个公共点；
-\item 压缩后的参数方程为 \(C_1^{\prime}: x=\cos\theta,\ y=\frac{1}{2}\sin\theta\)，\(C_2^{\prime}: x=\frac{\sqrt{2}}{2}t-\sqrt{2},\ y=\frac{\sqrt{2}}{4}t\)，两曲线仍有一个公共点.
+\item 由 \(x=\cos\theta\)、\(y=\sin\theta\)，消去参数得 \(x^2+y^2=1\)，所以 \(C_1\) 是单位圆. 对 \(C_2\)，由 \(y=\frac{\sqrt2}{2}t\) 得 \(t=\sqrt2y\)，代入 \(x\) 式得 \(x-y+\sqrt2=0\)，所以 \(C_2\) 是直线. 将 \(x=y-\sqrt2\) 代入圆方程，得
+\[
+2y^2-2\sqrt2y+1=0
+\]
+其判别式为 \(8-8=0\)，所以直线与圆相切，\(C_1\) 与 \(C_2\) 有一个公共点.
+\item 纵坐标压缩为原来的一半后，直接得到
+\[
+C_1':\begin{cases}
+x=\cos\theta,\\
+y=\frac12\sin\theta,
+\end{cases}
+\qquad
+C_2':\begin{cases}
+x=\frac{\sqrt2}{2}t-\sqrt2,\\
+y=\frac{\sqrt2}{4}t.
+\end{cases}
+\]
+消去参数后，\(C_1'\) 满足 \(x^2+4y^2=1\)，\(C_2'\) 满足 \(x-2y+\sqrt2=0\). 联立得
+\[
+8y^2-4\sqrt2y+1=0
+\]
+其判别式仍为 \(32-32=0\)，故压缩后仍有一个公共点. 这也符合将平面作同一纵向压缩变换的性质：该变换是一一对应的，原两曲线的公共点恰好一一对应到压缩后两曲线的公共点，所以公共点个数相同.
 \end{enumerate}
 \end{solution}
 \end{problem}
@@ -398,18 +708,27 @@ y = \frac{\sqrt{2}}{2} t,
 \end{enumerate}
 
 \FigureLayoutDeclare{img/2008/new_curriculum_science/q24_fig1.png}{6.0cm}{2bp 2.4bp 1.2bp 0bp}
-\bitmapinlinefigure[6.0cm][]{img/2008/new_curriculum_science/q24_fig1.png}
+\bitmapfigure[width=6.0cm]{img/2008/new_curriculum_science/q24_fig1.png}
 
 \begin{solution}
-短答案：
-
 \begin{enumerate}
-\item \(f(x)=\begin{cases}
-4,&x\leqslant 4,\\
--2x+12,&4<x\leqslant 8,\\
--4,&x>8,
-\end{cases}\)；
-\item 不等式的解集为 \((-\infty,5)\).
+\item 按绝对值定义分三种情况：
+\[
+f(x)=\begin{cases}
+\left(8-x\right)-\left(4-x\right)=4,&x\le4,\\
+\left(8-x\right)-\left(x-4\right)=-2x+12,&4<x\le8,\\
+\left(x-8\right)-\left(x-4\right)=-4,&x>8.
+\end{cases}
+\]
+所以函数图象由直线 \(y=4\) 在 \(x\le4\) 上的部分、连接点 \(\left(4,4\right)\) 与 \(\left(8,-4\right)\) 的线段 \(y=-2x+12\)，以及直线 \(y=-4\) 在 \(x>8\) 上的部分组成. 以 \(\left(4,4\right)\)、\(\left(8,-4\right)\) 为转折点即可在题图坐标系中作出图象.
+\item 同样分情况讨论. 当 \(x\le4\) 时，\(f(x)=4>2\)，所以得到 \(x\le4\). 当 \(4<x\le8\) 时，
+\[
+-2x+12>2\Longleftrightarrow x<5
+\]
+与本区间合并得 \(4<x<5\). 当 \(x>8\) 时，\(f(x)=-4\)，不满足不等式. 因而解集为
+\[
+\left(-\infty,4\right]\cup\left(4,5\right)=\left(-\infty,5\right)
+\]
 \end{enumerate}
 \end{solution}
 \end{problem}

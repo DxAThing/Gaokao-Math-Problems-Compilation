@@ -16,6 +16,14 @@
 A
 \end{answer}
 
+\begin{solution}
+将等式两边同乘以 \(2+\i\)，得
+\[
+5z=z(2-\i)(2+\i)=(11+7\i)(2+\i)=15+25\i
+\]
+所以 \(z=3+5\i\)，故选 A.
+\end{solution}
+
 \begin{problem}
 已知全集 \(U = \{0, 1, 2, 3, 4\}\)，集合 \(A = \{1, 2, 3\}\)，\(B = \{2, 4\}\)，则 \(\complement_U A \cup B =\)（\quad）
 
@@ -29,6 +37,18 @@ A
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+全集为 \(U\)，所以
+\[
+\complement_U A=\{0,4\}
+\]
+因此
+\[
+\complement_U A\cup B=\{0,4\}\cup\{2,4\}=\{0,2,4\}
+\]
+故选 C.
+\end{solution}
 
 \begin{problem}
 设 \(a > 0\) 且 \(a \neq 1\)，则“函数 \(f(x) = a^x\) 在 \(\R\) 上是减函数”是“函数 \(g(x) = (2 - a)x^3\) 在 \(\R\) 上是增函数”的（\quad）
@@ -44,6 +64,13 @@ C
 A
 \end{answer}
 
+\begin{solution}
+因为 \(a^x\) 在 \(\R\) 上为减函数，当且仅当 \(0<a<1\). 又因 \(x^3\) 在 \(\R\) 上为增函数，
+所以 \(g(x)=(2-a)x^3\) 在 \(\R\) 上为增函数，当且仅当 \(2-a>0\)，即 \(a<2\)（题设已给 \(a>0\) 且 \(a\ne1\)）.
+
+若 \(f\) 为减函数，则 \(0<a<1\)，必有 \(a<2\)，从而 \(g\) 为增函数；反之，取 \(1<a<2\) 时 \(g\) 为增函数而 \(f\) 不是减函数. 因此前者是后者的充分不必要条件，故选 A.
+\end{solution}
+
 \begin{problem}
 采用系统抽样方法从 960 人中抽取 32 人做问卷调查. 为此将他们随机编号为 1, 2, \ldots, 960，分组后在第一组采用简单随机抽样的方法抽到的号码为 9. 抽到的 32 人中，编号落入区间 \([1, 450]\) 的人做问卷 A，编号落入区间 \([451, 750]\) 的人做问卷 B，其余的人做问卷 C. 则抽到的人中，做问卷 B 的人数为（\quad）
 
@@ -58,6 +85,16 @@ A
 C
 \end{answer}
 
+\begin{solution}
+每组有 \(960\div32=30\) 人. 第一组抽到号码 \(9\)，故抽到的号码为
+\(9\)，\(39\)，\(69\)，\(\ldots\)，\(9+31\times30\).
+设抽到的号码为 \(9+30j\)，其中 \(j=0\)，\(1\)，\(\ldots\)，\(31\). 落入区间 \([451,750]\) 等价于
+\[
+451\leqslant9+30j\leqslant750
+\]
+即 \(15\leqslant j\leqslant24\). 因此共有 \(24-15+1=10\) 人做问卷 B，故选 C.
+\end{solution}
+
 \begin{problem}
 设变量 \(x\)，\(y\) 满足约束条件 \(\begin{cases}
 x + 2y \geqslant 2,\\
@@ -66,7 +103,7 @@ x + 2y \geqslant 2,\\
 \end{cases}\) 则目标函数 \(z = 3x - y\) 的取值范围是（\quad）
 
 \choices
-    {\(\left[\frac{3}{2}, 6\right]\)}
+    {\(\left[-\frac{3}{2}, 6\right]\)}
     {\(\left[-\frac{3}{2}, -1\right]\)}
     {\([-1,6]\)}
     {\(\left[-6, \frac{3}{2}\right]\)}
@@ -75,6 +112,16 @@ x + 2y \geqslant 2,\\
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+三个约束分别给出
+\(y\geqslant1-\frac{x}{2}\)，\(y\leqslant4-2x\)，\(qquad y\leqslant4x+1\).
+可行域的三个顶点由边界直线两两相交得到：
+\((0,1)\)，\((2,0)\)，\(\left(\frac12,3\right)\).
+线性目标函数 \(z=3x-y\) 在三角形可行域的顶点处取得最值，且
+\(z(0,1)=-1\)，\(qquad z(2,0)=6\)，\(qquad z\left(\frac12,3\right)=\frac32-3=-\frac32\).
+所以 \(z\) 的取值范围为 \(\left[-\frac32,6\right]\)，故选 A.
+\end{solution}
 
 \begin{problem}
 执行如图所示的程序框图，如果输入 \(a = 4\)，那么输出的 \(n\) 的值为（\quad）
@@ -92,6 +139,12 @@ A
 B
 \end{answer}
 
+\begin{solution}
+初始时 \(P=0\)，\(Q=1\)，\(n=0\). 依次执行循环：
+第一次循环后 \(P=0+4^0=1\)，\(Q=2\times1+1=3\)，\(n=1\)；第二次循环后 \(P=1+4^1=5\)，\(Q=2\times3+1=7\)，\(n=2\)；第三次循环后 \(P=5+4^2=21\)，\(Q=2\times7+1=15\)，\(n=3\).
+第三次循环后 \(P=21>15=Q\)，判断 \(P\leqslant Q\) 不成立，输出 \(n=3\)，故选 B.
+\end{solution}
+
 \begin{problem}
 若 \(\theta \in \left[\frac{\pi}{4}, \frac{\pi}{2}\right]\)，\(\sin 2\theta = \frac{3\sqrt{7}}{8}\)，则 \(\sin \theta =\)（\quad）
 
@@ -105,6 +158,18 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+由 \(2\theta\in\left[\frac{\pi}{2},\pi\right]\)，知 \(\cos2\theta\leqslant0\). 因此
+\[
+\cos^2 2\theta=1-\sin^2 2\theta
+=1-\left(\frac{3\sqrt7}{8}\right)^2
+=\frac1{64}
+\]
+从而 \(\cos2\theta=-\frac18\). 又 \(\theta\in\left[\frac{\pi}{4},\frac{\pi}{2}\right]\)，故 \(\sin\theta>0\)，于是
+\(\sin^2\theta=\frac{1-\cos2\theta}{2} =\frac{1+\frac18}{2} =\frac9{16}\)，\(\sin\theta=\frac34\).
+故选 D.
+\end{solution}
 
 \begin{problem}
 定义在 \(\R\) 的函数 \(f(x)\) 满足 \(f(x + 6) = f(x)\). 当 \(-3 \leqslant x < -1\) 时，\(f(x) = -(x + 2)^2\)；当 \(-1 \leqslant x < 3\) 时，\(f(x) = x\). 则 \(f(1) + f(2) + \cdots + f(2012) =\)（\quad）
@@ -120,6 +185,20 @@ D
 B
 \end{answer}
 
+\begin{solution}
+由周期性，一个长度为 \(6\) 的周期内有
+\[
+f(1)+f(2)+f(3)+f(4)+f(5)+f(6)
+=1+2+f(-3)+f(-2)+f(-1)+f(0)
+=1+2-1+0-1+0=1
+\]
+因为 \(2012=6\times335+2\)，所以
+\[
+\sum_{j=1}^{2012}f(j)=335\times1+f(1)+f(2)=335+1+2=338
+\]
+故选 B.
+\end{solution}
+
 \begin{problem}
 函数 \( f(x) = \frac{\cos 6x}{2^x - 2^{-x}} \) 的图象大致为（\quad）
 
@@ -133,6 +212,16 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+函数定义域为 \(\{x\in\R\mid x\ne0\}\)，且
+\[
+f(-x)=\frac{\cos(-6x)}{2^{-x}-2^x}=-f(x)
+\]
+所以图象关于原点中心对称. 又
+\(\lim_{x\to0^+}f(x)=+\infty\)，\(\lim_{x\to0^-}f(x)=-\infty\)
+因为 \(2^x-2^{-x}\) 与 \(x\) 同号且在 \(x=0\) 附近趋于 \(0\). 此外，函数的零点满足 \(\cos6x=0\)，并且当 \(|x|\to+\infty\) 时 \(f(x)\to0\). 符合这些特征的图象为选项 D，故选 D.
+\end{solution}
 
 \begin{problem}
 已知椭圆 \(C: \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\) （\(a > b > 0\)） 的离心率为 \(\frac{\sqrt{3}}{2}\). 双曲线 \(x^2 - y^2 = 1\) 的渐近线与椭圆 \(C\) 有四个交点，以这四个交点为顶点的四边形的面积为 16，则椭圆 \(C\) 的方程为（\quad）
@@ -148,6 +237,20 @@ D
 D
 \end{answer}
 
+\begin{solution}
+双曲线 \(x^2-y^2=1\) 的渐近线为 \(y=x\) 和 \(y=-x\). 设椭圆半焦距为 \(c\)，则
+\(\frac ca=\frac{\sqrt3}{2}\)，\(c^2=a^2-b^2\)
+从而 \(b^2=\frac{a^2}{4}\). 令渐近线与椭圆的交点在第一象限的横坐标为 \(t\)，则
+\(\frac{t^2}{a^2}+\frac{t^2}{b^2}=1\)，\(\Longrightarrow\)，\(t^2=\frac{a^2b^2}{a^2+b^2}=\frac{a^2}{5}\).
+四个交点为 \((\pm t,\pm t)\)，它们组成正方形，面积为 \(4t^2\). 由题意
+\(4t^2=16\)，\(\Longrightarrow\)，\(t^2=4\)
+所以 \(a^2=20\)，\(\ b^2=5\). 椭圆方程为
+\[
+\frac{x^2}{20}+\frac{y^2}{5}=1
+\]
+故选 D.
+\end{solution}
+
 \begin{problem}
 现有 16 张不同的卡片，其中红色、黄色、蓝色、绿色卡片各 4 张，从中任取 3 张. 要求这 3 张卡片不能是同一种颜色，且红色卡片至多 1 张. 不同的取法种数为（\quad）
 
@@ -162,8 +265,30 @@ D
 C
 \end{answer}
 
+\begin{solution}
+先按“红色卡片至多 \(1\) 张”计数. 红色取 \(0\) 张时，从其余 \(12\) 张中取 \(3\) 张，共
+\[
+\mathrm C_{12}^{3}=220
+\]
+种；红色取 \(1\) 张时，共
+\[
+\mathrm C_{4}^{1}\mathrm C_{12}^{2}=4\times66=264
+\]
+种. 两种颜色条件合计 \(220+264=484\) 种.
+
+其中不符合“不能是同一种颜色”的取法只能是从黄色、蓝色、绿色中各自取 \(3\) 张，共
+\[
+3\mathrm C_{4}^{3}=12
+\]
+种. 故所求种数为
+\[
+484-12=472
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
-设函数 \( f(x) = \frac{1}{x} \)，\( g(x) = ax^2 + bx\) （\(a, b \in \R, a \neq 0\)）. 若 \( y = f(x) \) 的图象与 \( y = g(x) \) 图象有且仅有两个不同的公共点 \(A(x_1, y_1)\)，\(B(x_2, y_2)\)，则下列判断正确的是（\quad）
+设函数 \( f(x) = \frac{1}{x} \)，\( g(x) = ax^2 + bx\) （\(a\)，\(b \in \R\)，\(a \neq 0\)）. 若 \( y = f(x) \) 的图象与 \( y = g(x) \) 图象有且仅有两个不同的公共点 \(A(x_1, y_1)\)，\(B(x_2, y_2)\)，则下列判断正确的是（\quad）
 
 \choices
     {当 \(a < 0\) 时，\(x_{1} + x_{2} < 0\)，\(y_{1} + y_{2} > 0\)}
@@ -176,6 +301,37 @@ C
 B
 \end{answer}
 
+\begin{solution}
+公共点的横坐标 \(x\ne0\) 满足
+\[
+\frac1x=ax^2+bx
+\quad\Longleftrightarrow\quad
+ax^3+bx^2-1=0
+\]
+恰有两个不同的公共点，说明这个三次方程有一个二重实根. 设二重根为 \(t\)，则 \(t\ne0\)，并且
+\[
+\begin{cases}
+at^3+bt^2-1=0,\\
+3at^2+2bt=0.
+\end{cases}
+\]
+由第二式得 \(b=-\frac32at\)，代入第一式得
+\(-\frac12at^3-1=0\)，\(at^3=-2\).
+三次方程的三个根为 \(t\)，\(t\)，\(s\)，由韦达定理
+\[
+2t+s=-\frac ba=\frac32t
+\]
+所以 \(s=-\frac t2\). 两个不同公共点的横坐标之和为
+\[
+x_1+x_2=t-\frac t2=\frac t2
+\]
+当 \(a<0\) 时，由 \(at^3=-2\) 得 \(t>0\)，故 \(x_1+x_2>0\). 又因 \(y_i=1/x_i\)，所以
+\[
+y_1+y_2=\frac1t+\frac1{-t/2}=-\frac1t<0
+\]
+因此当 \(a<0\) 时，\(x_1+x_2>0\) 且 \(y_1+y_2<0\)，与选项 B 一致；当 \(a>0\) 时，\(t<0\)，从而 \(x_1+x_2<0\) 且 \(y_1+y_2>0\)，其余选项均不成立. 故选 B.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -185,6 +341,16 @@ B
 \begin{answer}
 2
 \end{answer}
+
+\begin{solution}
+由
+\[
+|kx-4|\leqslant2
+\quad\Longleftrightarrow\quad
+2\leqslant kx\leqslant6
+\]
+若 \(k>0\)，解集为 \(\left[\frac2k,\frac6k\right]\). 与 \([1,3]\) 相同，故 \(\frac2k=1\)，从而 \(k=2\). 若 \(k<0\)，解集端点均为负数，不可能等于 \([1,3]\)；\(k=0\) 时不等式无解. 因此 \(k=2\).
+\end{solution}
 
 \begin{problem}
 如图，正方体 \(ABCD - A_{1}B_{1}C_{1}D_{1}\) 的棱长为 1，\(E\)，\(F\) 分别为线段 \(AA_{1}\)，\(B_{1}C\) 上的点，则三棱锥 \(D_{1} - EDF\) 的体积为\fillinblank{}.
@@ -196,6 +362,29 @@ B
 \(\frac{1}{6}\)
 \end{answer}
 
+\begin{solution}
+建立空间直角坐标系，取
+\(A(0,0,0)\)，\(\ B(1,0,0)\)，\(\ C(1,1,0)\)，\(\ D(0,1,0)\)
+\(A_1(0,0,1)\)，\(\ B_1(1,0,1)\)，\(\ C_1(1,1,1)\)，\(\ D_1(0,1,1)\).
+设 \(E=(0,0,t)\)，\(F=(1,s,1-s)\)，其中 \(0\leqslant t\)，\(s\leqslant1\). 则
+\(\overrightarrow{D_1E}=(0,-1,t-1)\)，\(\overrightarrow{D_1D}=(0,0,-1)\)，\(\overrightarrow{D_1F}=(1,s-1,-s)\).
+所以
+\[
+\left|\det\begin{pmatrix}
+0&0&1\\
+-1&0&s-1\\
+t-1&-1&-s
+\end{pmatrix}\right|=1
+\]
+三棱锥 \(D_1-EDF\) 的体积为
+\[
+V=\frac16\left|\det\left(\overrightarrow{D_1E},
+\overrightarrow{D_1D},\overrightarrow{D_1F}\right)\right|
+=\frac16
+\]
+因此填 \(\frac16\).
+\end{solution}
+
 \begin{problem}
 设 \(a > 0\)，若曲线 \(y = \sqrt{x}\) 与直线 \(x = a\)，\(y = 0\) 所围成封闭图形的面积为 \(a^2\)，则 \(a = \)\fillinblank{}.
 \end{problem}
@@ -203,6 +392,18 @@ B
 \begin{answer}
 \(\frac{4}{9}\)
 \end{answer}
+
+\begin{solution}
+封闭图形的面积为曲线 \(y=\sqrt{x}\) 与 \(x\) 轴在 \(0\leqslant x\leqslant a\) 下围成的面积，因此
+\[
+\int_0^a\sqrt{x}\,\mathrm{d}x=\frac23a^{3/2}
+\]
+由题意 \(\frac23a^{3/2}=a^2\)，且 \(a>0\)，两边除以 \(a^{3/2}\) 得
+\[
+\sqrt a=\frac23
+\]
+所以 \(a=\frac49\).
+\end{solution}
 
 \begin{problem}
 如图，在平面直角坐标系 \(xOy\) 中，一单位圆的圆心的初始位置在 \((0, 1)\)，此时圆上一点 \(P\) 的位置在 \((0, 0)\). 圆在 \(x\) 轴上沿正向滚动. 当圆滚动到圆心位于 \((2, 1)\) 时，\(\overrightarrow{OP}\) 的坐标为\fillinblank{}.
@@ -213,6 +414,27 @@ B
 \begin{answer}
 \(\left(2 - \sin 2, 1 - \cos 2\right)\)
 \end{answer}
+
+\begin{solution}
+圆的半径为 \(1\)，向右滚动的距离为 \(2\)，所以圆转过的弧度数为
+\[
+\theta=\frac{2}{1}=2
+\]
+圆向右滚动时，圆上点相对于圆心顺时针转过 \(2\) 弧度. 初始时
+\[
+\overrightarrow{O_{\rm c}P}=(0,-1)
+\]
+其中 \(O_{\rm c}\) 为圆心. 顺时针旋转 \(2\) 弧度后，该向量变为
+\[
+(-\sin2,-\cos2)
+\]
+滚动后圆心为 \((2,1)\)，故
+\[
+\overrightarrow{OP}=(2,1)+(-\sin2,-\cos2)
+=\left(2-\sin2,1-\cos2\right)
+\]
+因此填 \(\left(2-\sin2,1-\cos2\right)\).
+\end{solution}
 
 \section{解答题}
 
@@ -226,8 +448,28 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item \(A=6\).
-\item \(g(x)=6\sin\left(4x+\frac{\pi}{3}\right)\)，值域为 \([-3,6]\).
+\item
+\[
+f(x)=\bs{m}\cdot\bs{n}=\sqrt3A\sin x\cos x+\frac A2\cos2x
+=\frac A2\left(\sqrt3\sin2x+\cos2x\right)
+=A\sin\left(2x+\frac{\pi}{6}\right)
+\]
+由于 \(A>0\)，函数 \(f(x)\) 的最大值为 \(A\)，由题意得 \(A=6\).
+\item
+图象向左平移 \(\frac{\pi}{12}\) 后，函数变为
+\[
+y=f\left(x+\frac{\pi}{12}\right)
+=6\sin\left(2x+\frac{\pi}{3}\right)
+\]
+再将横坐标缩短为原来的 \(\frac12\) 倍，相当于将自变量 \(x\) 换成 \(2x\)，所以
+\[
+g(x)=6\sin\left(4x+\frac{\pi}{3}\right)
+\]
+当 \(x\in\left[0,\frac{5\pi}{24}\right]\) 时，
+\[
+4x+\frac{\pi}{3}\in\left[\frac{\pi}{3},\frac{7\pi}{6}\right]
+\]
+在此区间内，正弦函数最大值为 \(1\)，最小值为 \(\sin\frac{7\pi}{6}=-\frac12\)，故 \(g(x)\) 的值域为 \([-3,6]\).
 \end{enumerate}
 \end{solution}
 
@@ -244,8 +486,50 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item \(BD\perp\) 平面 \(AED\).
-\item 二面角 \(F-BD-C\) 的余弦值为 \(\frac{\sqrt{5}}{5}\).
+\item
+因为 \(ABCD\) 是等腰梯形，所以
+\[
+\angle ABC=\angle DAB=60^\circ
+\]
+又 \(AB\parallel CD\)，故
+\[
+\angle BCD=180^\circ-\angle ABC=120^\circ
+\]
+在等腰三角形 \(BCD\) 中，\(CB=CD\)，所以
+\[
+\angle CBD=\angle BDC=\frac{180^\circ-120^\circ}{2}=30^\circ
+\]
+于是 \(\angle ABD=\angle ABC-\angle CBD=30^\circ\). 在三角形 \(ABD\) 中，
+\[
+\angle ADB=180^\circ-\angle DAB-\angle ABD
+=180^\circ-60^\circ-30^\circ=90^\circ
+\]
+从而 \(BD\perp AD\). 题设又给出 \(BD\perp AE\)，且 \(AD\) 与 \(AE\) 在点 \(A\) 相交并同在平面 \(AED\) 内，因此
+\[
+BD\perp\text{平面 }AED
+\]
+\item
+由 \(CB=CD=CF\)，可令 \(CB=CD=CF=1\). 等腰梯形还给出 \(AD=BC\)，故 \(AD=BC=1\). 在平面 \(ABCD\) 内建立坐标，取 \(A\) 为原点、\(AB\) 为 \(x\) 轴正向. 由 \(\angle DAB=60^\circ\) 和 \(AD=1\)，得 \(D\left(\frac12,\frac{\sqrt3}{2},0\right)\)；又因 \(CD=1\) 且 \(CD\parallel AB\)，得 \(C\left(\frac32,\frac{\sqrt3}{2},0\right)\). 设 \(B=(u,0,0)\)，由 \(BC=1\) 得 \((u-\frac32)^2+\frac34=1\)，结合图形中 \(B\) 在 \(C\) 的右侧，得 \(u=2\)，故
+\(A(0,0,0)\)，\(B(2,0,0)\)，\(D\left(\frac12,\frac{\sqrt3}{2},0\right)\)，\(C\left(\frac32,\frac{\sqrt3}{2},0\right)\).
+因 \(FC\perp\) 平面 \(ABCD\) 且 \(CF=1\)，可取
+\[
+F\left(\frac32,\frac{\sqrt3}{2},1\right)
+\]
+取平面 \(FBD\) 的法向量
+\[
+\bs{n}_1=\overrightarrow{BD}\times\overrightarrow{BF}
+=\left(\frac{\sqrt3}{2},\frac32,-\frac{\sqrt3}{2}\right)
+\]
+平面 \(CBD\) 的法向量取 \(\bs{n}_2=(0,0,-1)\). 于是
+\(\bs{n}_1\cdot\bs{n}_2=\frac{\sqrt3}{2}\)，\(|\bs{n}_1|=\frac{\sqrt{15}}2\)，\(|\bs{n}_2|=1\).
+因此二面角 \(F-BD-C\) 的余弦值为
+\[
+\cos\theta
+=\frac{\bs{n}_1\cdot\bs{n}_2}
+ {|\bs{n}_1||\bs{n}_2|}
+=\frac{\sqrt3/2}{\sqrt{15}/2}
+=\frac{\sqrt5}{5}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -253,19 +537,51 @@ B
 在等差数列 \(\{a_{n}\}\) 中，\(a_{3} + a_{4} + a_{5} = 84\)，\(a_{9} = 73\).
 \begin{enumerate}
 \item 求数列 \(\{a_{n}\}\) 的通项公式；
-\item 对任意 \(m \in \mathbf{N}^*\)，将数列 \(\{a_n\}\) 中落入区间 \((9^m, 9^{2m})\) 内的项的个数记为 \(b_m\)，求数列 \(\{b_m\}\) 的前 \(m\) 项和 \(S_m\).
+\item 对任意 \(m \in \N^*\)，将数列 \(\{a_n\}\) 中落入区间 \((9^m, 9^{2m})\) 内的项的个数记为 \(b_m\)，求数列 \(\{b_m\}\) 的前 \(m\) 项和 \(S_m\).
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item \(a_n=9n-8\).
-\item \(b_m=9^{2m-1}-9^{m-1}\)，\(S_m=\frac{9^{2m+1}-10\times 9^m+1}{80}\).
+\item
+设等差数列首项为 \(a_1\)，公差为 \(d\). 由等差数列性质，
+\[
+a_3+a_4+a_5=3a_4=84
+\]
+所以 \(a_4=28\). 又
+\[
+a_9=a_4+5d=73
+\]
+得 \(d=9\)，从而 \(a_1=a_4-3d=1\). 因此
+\[
+a_n=a_1+(n-1)d=1+9(n-1)=9n-8
+\]
+\item
+由 \(9^m<9n-8<9^{2m}\)，得
+\(n>9^{m-1}+\frac89\)，\(n<9^{2m-1}+\frac89\).
+因为 \(n\) 为正整数，所以
+\[
+9^{m-1}+1\leqslant n\leqslant9^{2m-1}
+\]
+故
+\[
+b_m=9^{2m-1}-\left(9^{m-1}+1\right)+1
+=9^{2m-1}-9^{m-1}
+\]
+于是
+\[
+\begin{aligned}
+S_m
+&=\sum_{j=1}^m\left(9^{2j-1}-9^{j-1}\right)\\
+&=\frac{9(81^m-1)}{80}-\frac{9^m-1}{8}\\
+&=\frac{9^{2m+1}-10\times9^m+1}{80}.
+\end{aligned}
+\]
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-已知函数 \( f(x) = \frac{\ln x + k}{x} \)（\(k\) 为常数，\(\e = 2.71828 \cdots\) 是自然对数的底数），曲线 \( y = f(x) \) 在点 \( (1, f(1)) \) 处的切线与 \( x \) 轴平行.
+已知函数 \( f(x) = \frac{\ln x + k}{\e^x} \)（\(k\) 为常数，\(\e = 2.71828 \cdots\) 是自然对数的底数），曲线 \( y = f(x) \) 在点 \( (1, f(1)) \) 处的切线与 \( x \) 轴平行.
 \begin{enumerate}
 \item 求 \(k\) 的值；
 \item 求 \( f(x) \) 的单调区间；
@@ -275,9 +591,61 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item \(k=1\).
-\item 在 \((0,1)\) 上单调递增，在 \((1,+\infty)\) 上单调递减.
-\item \(g(x)<1+\e^{-2}\).
+\item
+函数定义域为 \((0,+\infty)\)，且
+\[
+f'(x)=\e^{-x}\left(\frac1x-\ln x-k\right)
+\]
+切线与 \(x\) 轴平行，故 \(f'(1)=0\)，从而
+\(\e^{-1}(1-k)=0\)，\(k=1\).
+\item
+此时
+\[
+f'(x)=\e^{-x}\left(\frac1x-\ln x-1\right)
+\]
+令 \(h(x)=\frac1x-\ln x-1\)，则
+\(h'(x)=-\frac1{x^2}-\frac1x<0\)，\(h(1)=0\).
+所以 \(h(x)>0\)（\(0<x<1\)），\(h(x)<0\)（\(x>1\)）. 因此 \(f(x)\) 在 \((0,1)\) 上单调递增，在 \((1,+\infty)\) 上单调递减.
+\item
+由 \(k=1\)，有
+\[
+g(x)=(x^2+x)f'(x)
+=(x+1)\e^{-x}\left(1-x\ln x-x\right)
+\]
+当 \(x\geqslant1\) 时，\(f'(x)\leqslant0\)，故
+\[
+g(x)\leqslant0<1+\e^{-2}
+\]
+当 \(0<x<1\) 时，令 \(\phi(x)=x-\ln(1+x)\)，则 \(\phi(0)=0\)，且
+\[
+\phi'(x)=1-\frac1{1+x}=\frac{x}{1+x}>0
+\]
+所以 \(\ln(1+x)<x\)，从而 \((x+1)\e^{-x}<1\). 另一方面，令 \(\psi(x)=x-1-\ln x\)，则 \(\psi(1)=0\)，且
+\[
+\psi'(x)=1-\frac1x<0
+\]
+因此 \(0<x<1\) 时 \(\ln x<x-1\)，进而
+\[
+x\ln x+x<x(x-1)+x=x^2<1
+\]
+即 \(1-x\ln x-x>0\). 于是
+\[
+g(x)<F(x):=1-x\ln x-x
+\]
+又
+\[
+F'(x)=-(\ln x+2)
+\]
+故 \(F\) 在 \((0,\e^{-2})\) 上递增，在 \((\e^{-2},1)\) 上递减，从而
+\[
+F(x)\leqslant F(\e^{-2})
+=1-\e^{-2}(-2)-\e^{-2}
+=1+\e^{-2}
+\]
+结合前面的严格不等式，得到对任意 \(x>0\)，
+\[
+g(x)<1+\e^{-2}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -291,8 +659,46 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item \(\frac{7}{36}\).
-\item \(P(X=0)=\frac{1}{36}\)，\(P(X=1)=\frac{1}{12}\)，\(P(X=2)=\frac{1}{9}\)，\(P(X=3)=\frac{1}{3}\)，\(P(X=4)=\frac{1}{9}\)，\(P(X=5)=\frac{1}{3}\)，且 \(E(X)=\frac{41}{12}\).
+\item
+设甲靶命中事件为 \(A\)，乙靶两次射击分别命中事件为 \(B_1\)，\(B_2\). 恰好命中一次包括“甲中且乙均不中”和“甲不中且乙中一次”两种互斥情形，因此
+\[
+\begin{aligned}
+P(\text{恰好命中一次})
+&=\frac34\left(\frac13\right)^2
++\frac14\mathrm C_{2}^{1}\frac23\frac13\\
+&=\frac1{12}+\frac19=\frac7{36}.
+\end{aligned}
+\]
+\item
+设乙靶命中次数为 \(Y\)，则
+\(P(Y=0)=\left(\frac13\right)^2=\frac19\)，\(P(Y=1)=\mathrm C_{2}^{1}\frac23\frac13=\frac49\)，\(P(Y=2)=\left(\frac23\right)^2=\frac49\).
+甲靶得分为 \(0\) 或 \(1\)，乙靶得分为 \(0\)，\(2\)，\(4\). 利用独立性，逐项计算得
+\[
+\begin{aligned}
+P(X=0)&=\frac14\cdot\frac19=\frac1{36},&
+P(X=1)&=\frac34\cdot\frac19=\frac1{12},\\
+P(X=2)&=\frac14\cdot\frac49=\frac19,&
+P(X=3)&=\frac34\cdot\frac49=\frac13,\\
+P(X=4)&=\frac14\cdot\frac49=\frac19,&
+P(X=5)&=\frac34\cdot\frac49=\frac13.
+\end{aligned}
+\]
+所以分布列为
+\begin{center}
+\begin{tabular}{c|cccccc}
+\(X\)&\(0\)&\(1\)&\(2\)&\(3\)&\(4\)&\(5\)\\ \hline
+\(P(X)\)&\(\frac1{36}\)&\(\frac1{12}\)&\(\frac19\)&\(\frac13\)&\(\frac19\)&\(\frac13\)
+\end{tabular}
+\end{center}
+因此
+\[
+\begin{aligned}
+E(X)
+&=0\cdot\frac1{36}+1\cdot\frac1{12}+2\cdot\frac19
+ +3\cdot\frac13+4\cdot\frac19+5\cdot\frac13\\
+&=\frac{41}{12}.
+\end{aligned}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -307,8 +713,106 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item \(x^2=2y\).
-\item 存在，\(M\left(\sqrt{2},1\right)\).
-\item 当 \(k=\frac{1}{2}\) 时，\(|AB|^2+|DE|^2\) 取得最小值 \(\frac{13}{2}\).
+\item
+抛物线 \(x^2=2py\) 的焦点为 \(F\left(0,\frac p2\right)\)，准线为 \(y=-\frac p2\). 由于 \(O\)，\(F\) 在 \(y\) 轴上，过 \(O\)，\(F\) 的圆的圆心 \(Q\) 在它们的垂直平分线
+\[
+y=\frac p4
+\]
+上. 于是 \(Q\) 到准线的距离为
+\[
+\frac p4-\left(-\frac p2\right)=\frac{3p}{4}
+\]
+由题意 \(\frac{3p}{4}=\frac34\)，得 \(p=1\)，所以抛物线方程为
+\[
+x^2=2y
+\]
+\item
+设 \(M=(t,\frac{t^2}{2})\)，其中 \(t>0\). 设圆心 \(Q=(q,\frac14)\). 由 \(QM=QO\)，有
+\[
+(t-q)^2+\left(\frac{t^2}{2}-\frac14\right)^2
+=q^2+\frac1{16}
+\]
+化简得
+\(t^2-2tq+\frac{t^4}{4}-\frac{t^2}{4}=0\)，\(q=\frac{t(t^2+3)}8\).
+抛物线 \(x^2=2y\) 在 \(M\) 处的切线为
+\[
+y=tx-\frac{t^2}{2}
+\]
+若 \(MQ\) 与抛物线相切于 \(M\)，则 \(Q\) 在这条切线上，从而
+\[
+\frac14=tq-\frac{t^2}{2}
+=\frac{t^2(t^2+3)}8-\frac{t^2}{2}
+=\frac{t^2(t^2-1)}8
+\]
+因此
+\(t^2(t^2-1)=2\)，\(\Longrightarrow\)，\(t^4-t^2-2=0\).
+令 \(u=t^2\)，则 \(u^2-u-2=0\)，故
+\(u=2\)（另一根 \(-1<0\) 不合题意）. 因此
+\[
+M=(\sqrt2,1)
+\]
+故存在这样的点 \(M\).
+\item
+由 \(M=(\sqrt2,1)\) 及上面的 \(q\) 式，得
+\[
+Q=\left(\frac{5\sqrt2}{8},\frac14\right)
+\]
+圆 \(Q\) 过原点，故其半径平方为
+\[
+R^2=\left(\frac{5\sqrt2}{8}\right)^2+\left(\frac14\right)^2
+=\frac{27}{32}
+\]
+令直线 \(l\) 上点的横坐标为 \(x\)，则 \(y=kx+\frac14\).
+
+对于抛物线，交点横坐标满足
+\[
+x^2=2\left(kx+\frac14\right)
+\quad\Longleftrightarrow\quad
+x^2-2kx-\frac12=0
+\]
+两根之差的平方为 \(4k^2+2=4(k^2+\frac12)\)，故
+\[
+|AB|^2=(1+k^2)\left(4k^2+2\right)
+=4(1+k^2)\left(k^2+\frac12\right)
+\]
+
+对于圆，代入 \(y=kx+\frac14\) 得
+\[
+\left(x-\frac{5\sqrt2}{8}\right)^2+k^2x^2=\frac{27}{32}
+\]
+圆心 \(Q\) 到直线 \(l\) 的距离为
+\[
+d=\frac{\frac{5\sqrt2}{8}k}{\sqrt{1+k^2}}
+\]
+由弦长公式，
+\[
+|DE|^2=4(R^2-d^2)
+=4\left(\frac{27}{32}-\frac{25k^2}{32(1+k^2)}\right)
+=\frac{25}{8(1+k^2)}+\frac14
+\]
+令 \(t=1+k^2\)，则 \(t\in[\frac54,5]\)，且
+\[
+\Phi(t)=|AB|^2+|DE|^2
+=4t^2-2t+\frac{25}{8t}+\frac14
+\]
+求导得
+\[
+\Phi'(t)=8t-2-\frac{25}{8t^2}
+\]
+又
+\[
+\Phi''(t)=8+\frac{25}{4t^3}>0
+\]
+因此 \(\Phi'(t)\) 在 \([\frac54,5]\) 上递增，且
+\[
+\Phi'(t)\geqslant\Phi'\left(\frac54\right)=6>0
+\]
+所以 \(\Phi(t)\) 在 \([\frac54,5]\) 上单调递增，最小值在 \(t=\frac54\)，即 \(k=\frac12\) 时取得. 此时
+\[
+\Phi\left(\frac54\right)
+=4\left(\frac54\right)^2-2\cdot\frac54
++\frac{25}{8\cdot\frac54}+\frac14
+=\frac{13}{2}
+\]
 \end{enumerate}
 \end{solution}

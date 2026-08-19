@@ -14,6 +14,28 @@
 C
 \end{answer}
 
+\begin{solution}
+由
+\[
+x^2-5x+6=(x-2)(x-3)
+\]
+且二次项系数为正，得
+\[
+A=\left[2,3\right]
+\]
+又因为
+\[
+\left|2x-1\right|>3
+\Longleftrightarrow 2x-1>3\text{ 或 }2x-1<-3
+\Longleftrightarrow x>2\text{ 或 }x<-1
+\]
+所以 \(B=(-\infty,-1)\cup(2,+\infty)\). 因而
+\[
+A\cap B=(2,3]
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
 函数 \(f(x) = \ln(x - 1)\)（\(x > 1\)）的反函数是（\quad）
 
@@ -27,6 +49,14 @@ C
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+设 \(y=\ln(x-1)\)，则 \(x-1=\e^y\)，从而 \(x=\e^y+1\). 交换 \(x\)，\(y\) 得
+\[
+f^{-1}(x)=\e^x+1
+\]
+原函数的值域为 \(\R\)，因此反函数的定义域为 \(\R\)，故选 A.
+\end{solution}
 
 \begin{problem}
 曲线 \( y = 4x - x^3 \) 在点 \((-1, -3)\) 处的切线方程是（\quad）
@@ -42,10 +72,20 @@ A
 D
 \end{answer}
 
+\begin{solution}
+设 \(y=f(x)=4x-x^3\)，则
+\(f'(x)=4-3x^2\)，\(f'(-1)=1\).
+所以曲线在 \((-1,-3)\) 处的切线斜率为 \(1\). 由点斜式，切线方程为
+\[
+y+3=x+1
+\]
+即 \(y=x-2\). 故选 D.
+\end{solution}
+
 \begin{problem}
 如图，已知正六边形 \(P_{1}P_{2}P_{3}P_{4}P_{5}P_{6}\). 下列向量的数量积中最大的是（\quad）
 
-\bitmapfigure[max width=0.42\linewidth]{img/2006/sichuan_liberal/q4_fig1.png}
+\bitmapfigure[width=0.42\linewidth]{img/2006/sichuan_liberal/q4_fig1.png}
 
 \choices
     {\(\overrightarrow{P_1P_2} \cdot \overrightarrow{P_1P_3}\)}
@@ -57,6 +97,18 @@ D
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+设正六边形的边长为 \(s>0\)，建立直角坐标系，使
+\(P_1=\left(-\frac{s}{2},-\frac{\sqrt{3}}{2}s\right)\)，\(P_2=\left(\frac{s}{2},-\frac{\sqrt{3}}{2}s\right)\)，\(P_3=(s,0)\)
+\(P_4=\left(\frac{s}{2},\frac{\sqrt{3}}{2}s\right)\)，\(P_5=\left(-\frac{s}{2},\frac{\sqrt{3}}{2}s\right)\)，\(P_6=(-s,0)\).
+于是
+\(\overrightarrow{P_1P_2}=(s,0)\)，\(\overrightarrow{P_1P_3}=\left(\frac{3s}{2},\frac{\sqrt{3}s}{2}\right)\)
+\(\overrightarrow{P_1P_4}=(s,\sqrt{3}s)\)，\(\overrightarrow{P_1P_5}=(0,\sqrt{3}s)\)，\(\overrightarrow{P_1P_6}=\left(-\frac{s}{2},\frac{\sqrt{3}s}{2}\right)\).
+相应的数量积依次为
+\(\frac{3}{2}s^2\)，\(s^2\)，\(0\)，\(-\frac{1}{2}s^2\).
+最大值为 \(\frac{3}{2}s^2\)，故选 A.
+\end{solution}
 
 \begin{problem}
 甲校有 \(3600\) 名学生，乙校有 \(5400\) 名学生，丙校有 \(1800\) 名学生. 为统计三校学生某方面的情况，计划采用分层抽样法，抽取一个容量为 \(90\) 人的样本，应在这三校分别抽取学生（\quad）
@@ -72,10 +124,21 @@ A
 B
 \end{answer}
 
+\begin{solution}
+三校学生人数之比为
+\[
+3600:5400:1800=2:3:1
+\]
+分层抽样时，各层抽取人数之比应与各层人数之比相同. 总份数为 \(2+3+1=6\)，每份对应
+\(90\div6=15\) 人，因此三校分别抽取
+\(2\times15=30\)，\(3\times15=45\)，\(1\times15=15\)
+人，故选 B.
+\end{solution}
+
 \begin{problem}
 下列函数中，图象的一部分如图所示的是（\quad）
 
-\bitmapfigure[max width=0.42\linewidth]{img/2006/sichuan_liberal/q6_fig1.png}
+\bitmapfigure[width=0.42\linewidth]{img/2006/sichuan_liberal/q6_fig1.png}
 
 \choices
     {\(y = \sin \left(x + \frac{\pi}{6}\right)\)}
@@ -87,6 +150,26 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+从图象可读出函数在 \(x=-\frac{\pi}{6}\) 处过 \(x\) 轴，并且在
+\(x=\frac{\pi}{12}\) 处取得最大值 \(1\). 逐项检验：选项 A 在
+\(x=\frac{\pi}{12}\) 处的函数值为
+\(\sin\frac{\pi}{4}=\frac{\sqrt{2}}{2}\ne1\)；选项 B 在
+\(x=-\frac{\pi}{6}\) 处的函数值为
+\(\sin\left(-\frac{\pi}{2}\right)=-1\ne0\)；选项 C 在
+\(x=-\frac{\pi}{6}\) 处的函数值为
+\(\cos\left(-\frac{2\pi}{3}-\frac{\pi}{3}\right)=-1\ne0\). 对于选项 D，
+\[
+\cos\left(2\cdot\left(-\frac{\pi}{6}\right)-\frac{\pi}{6}\right)
+=\cos\left(-\frac{\pi}{2}\right)=0
+\]
+且
+\[
+\cos\left(2\cdot\frac{\pi}{12}-\frac{\pi}{6}\right)=\cos0=1
+\]
+因此只有选项 D 的图象同时满足这两个特征，故选 D.
+\end{solution}
 
 \begin{problem}
 已知二面角 \(\alpha - l - \beta\) 的大小为 \(60^{\circ}\)，\(m\)，\(n\) 为异面直线，且 \(m \perp \alpha\)，\(n \perp \beta\)，则 \(m\)，\(n\) 所成的角为（\quad）
@@ -102,6 +185,14 @@ D
 B
 \end{answer}
 
+\begin{solution}
+取平面 \(\alpha\) 与平面 \(\beta\) 的法向量分别为 \(\bs{u}\) 与 \(\bs{v}\). 由于
+\(m\perp\alpha\)，\(n\perp\beta\)，可分别取 \(m\)，\(n\) 的方向向量为 \(\bs{u}\)，\(\bs{v}\).
+因此这两条直线的方向所成的角等于两个平面的法向量所成的角，可能为 \(60^{\circ}\) 或
+\(120^{\circ}\). 直线所成的角取不大于 \(90^{\circ}\) 的角，故 \(m\)，\(n\) 所成的角为
+\(60^{\circ}\)，选 B.
+\end{solution}
+
 \begin{problem}
 已知两定点 \(A(-2,0)\)，\(B(1,0)\)，如果动点 \(P\) 满足 \(|PA| = 2|PB|\)，则点 \(P\) 的轨迹所包围的图形的面积等于（\quad）
 
@@ -116,10 +207,30 @@ B
 C
 \end{answer}
 
+\begin{solution}
+设 \(P=(x,y)\). 由 \(|PA|=2|PB|\)，得
+\[
+(x+2)^2+y^2=4\left((x-1)^2+y^2\right)
+\]
+整理得
+\[
+x^2-4x+y^2=0
+\]
+即
+\[
+(x-2)^2+y^2=4
+\]
+所以点 \(P\) 的轨迹是圆心为 \((2,0)\)，半径为 \(2\) 的圆，其所包围图形的面积为
+\[
+\pi\cdot2^2=4\pi
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
 如图，正四棱锥 \(P - ABCD\) 底面的四个顶点 \(A\)，\(B\)，\(C\)，\(D\) 在球 \(O\) 的同一个大圆上，点 \(P\) 在球面上，如果 \(V_{P - ABCD} = \frac{16}{3}\)，则球 \(O\) 的表面积是（\quad）
 
-\bitmapfigure[max width=0.48\linewidth]{img/2006/sichuan_liberal/q9_fig1.png}
+\bitmapfigure[width=0.48\linewidth]{img/2006/sichuan_liberal/q9_fig1.png}
 
 \choices
     {\(4\pi\)}
@@ -131,6 +242,21 @@ C
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+设球 \(O\) 的半径为 \(R\). 由于正方形 \(ABCD\) 的四个顶点在球的同一个大圆上，
+该大圆的圆心 \(O\) 是正方形的中心，且正方形的对角线为球的直径 \(2R\). 因而
+\(AB=\frac{2R}{\sqrt{2}}=\sqrt{2}R\)，\(S_{ABCD}=AB^2=2R^2\).
+正四棱锥的高为 \(PO=R\)，所以
+\[
+V_{P-ABCD}=\frac{1}{3}\cdot2R^2\cdot R=\frac{2}{3}R^3=\frac{16}{3}
+\]
+解得 \(R^3=8\)，即 \(R=2\). 因此球 \(O\) 的表面积为
+\[
+4\pi R^2=16\pi
+\]
+故选 D.
+\end{solution}
 
 \begin{problem}
 直线 \( y = x - 3 \) 与抛物线 \( y^{2} = 4x \) 交于 \(A\)，\(B\) 两点，过 \(A\)，\(B\) 两点向抛物线的准线作垂线，垂足分别为 \(P\)，\(Q\)，则梯形 \(APQB\) 的面积为（\quad）
@@ -146,6 +272,26 @@ D
 B
 \end{answer}
 
+\begin{solution}
+将 \(y=x-3\) 代入 \(y^2=4x\)，得
+\[
+(x-3)^2=4x
+\]
+即
+\[
+x^2-10x+9=0
+\]
+所以交点的横坐标为 \(x=1\) 或 \(x=9\)，对应点为
+\(A=(1,-2)\)，\(B=(9,6)\).
+抛物线 \(y^2=4x\) 的准线为 \(x=-1\). 过 \(A\)，\(B\) 向准线作水平垂线，故
+\(P=(-1,-2)\)，\(Q=(-1,6)\).
+于是 \(AP=2\)，\(BQ=10\)，且梯形 \(APQB\) 的高为 \(6-(-2)=8\). 因此
+\[
+S_{APQB}=\frac{AP+BQ}{2}\cdot8=\frac{2+10}{2}\cdot8=48
+\]
+故选 B.
+\end{solution}
+
 \begin{problem}
 设 \(a\)，\(b\)，\(c\) 分别是 \(\triangle ABC\) 的三个内角 \(A\)，\(B\)，\(C\) 所对的边，则 \(a^2 = b(b + c)\) 是 \(A = 2B\) 的（\quad）
 
@@ -159,6 +305,50 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+先证明充分性. 若 \(A=2B\)，由正弦定理，
+\[
+\frac{a}{b}=\frac{\sin A}{\sin B}=\frac{\sin2B}{\sin B}=2\cos B
+\]
+\[
+\frac{c}{b}=\frac{\sin C}{\sin B}
+=\frac{\sin(\pi-3B)}{\sin B}
+=\frac{\sin3B}{\sin B}
+=4\cos^2B-1
+\]
+因此
+\[
+\frac{b+c}{b}=1+\frac{c}{b}=4\cos^2B
+\]
+从而 \(a=2b\cos B\)，即 \(a^2=b(b+c)\).
+
+再证明必要性. 由余弦定理和已知条件，
+\[
+a^2=b^2+c^2-2bc\cos A=b^2+bc
+\]
+所以
+\[
+\frac{c}{b}=1+2\cos A
+\]
+另一方面，由正弦定理及 \(C=\pi-A-B\)，
+\[
+\frac{c}{b}=\frac{\sin C}{\sin B}
+=\frac{\sin(A+B)}{\sin B}
+=\sin A\cot B+\cos A
+\]
+两式相等，得
+\[
+\sin A\cot B=1+\cos A
+\]
+由于 \(0<A<\pi\)，有 \(\sin A>0\)，且 \(1+\cos A>0\)，所以 \(\cot B>0\). 又
+\(0<B<\pi\)，故 \(0<B<\frac{\pi}{2}\). 于是
+\[
+\cot B=\frac{1+\cos A}{\sin A}=\cot\frac{A}{2}
+\]
+因为 \(0<B<\frac{\pi}{2}\)，\(0<\frac{A}{2}<\frac{\pi}{2}\)，余切函数在该区间上单调，
+故 \(B=\frac{A}{2}\)，即 \(A=2B\). 因此二者互为充要条件，选 A.
+\end{solution}
 
 \begin{problem}
 从 \(0\) 到 \(9\) 这 \(10\) 个数字中任取 \(3\) 个数字组成一个没有重复数字的三位数，这个数不能被 \(3\) 整除的概率为（\quad）
@@ -174,6 +364,31 @@ A
 C
 \end{answer}
 
+\begin{solution}
+三位数的总数为 \(9\cdot9\cdot8=648\). 将 \(0\) 到 \(9\) 按除以 \(3\) 的余数分类：
+\(\{0,3,6,9\}\)，\(\{1,4,7\}\)，\(\{2,5,8\}\).
+三个不同数字之和能被 \(3\) 整除的数字组合有两类：从三类中各取一个，共
+\(4\cdot3\cdot3=36\) 组；或者从同一类中取三个，共
+\[
+\mathrm C_4^3+\mathrm C_3^3+\mathrm C_3^3=4+1+1=6
+\]
+组，所以共有 \(42\) 组.
+
+其中含有数字 \(0\) 的组合有：从三类中各取一个且余数为 \(0\) 的数字取 \(0\)，
+共有 \(3\cdot3=9\) 组；从余数为 \(0\) 的一类中取三个且含 \(0\)，共有
+\(\mathrm C_3^2=3\) 组，共 \(12\) 组. 不含 \(0\) 的组合有 \(30\) 组，每组可组成
+\(3!=6\) 个三位数；含 \(0\) 的组合每组只能组成 \(3!-2!=4\) 个三位数. 因而能被
+\(3\) 整除的三位数共有
+\[
+30\cdot6+12\cdot4=228
+\]
+不能被 \(3\) 整除的三位数共有 \(648-228=420\)，所求概率为
+\[
+\frac{420}{648}=\frac{35}{54}
+\]
+故选 C.
+\end{solution}
+
 \section{填空题}
 \begin{problem}
 \((1 - 2x)^{10}\) 展开式中的 \(x^{3}\) 的系数为\fillinblank{}.
@@ -182,6 +397,17 @@ C
 \begin{answer}
 \(-960\)
 \end{answer}
+
+\begin{solution}
+二项式展开的通项为
+\[
+\mathrm C_{10}^{r}(-2x)^r
+\]
+要得到 \(x^3\) 项，必须取 \(r=3\)，所以其系数为
+\[
+\mathrm C_{10}^{3}(-2)^3=120\cdot(-8)=-960
+\]
+\end{solution}
 
 \begin{problem}
 设 \(x\)，\(y\) 满足约束条件 \(\begin{cases}
@@ -195,10 +421,19 @@ y \geqslant \frac{1}{2}x,\\
 \(-6\)
 \end{answer}
 
+\begin{solution}
+可行域的边界由 \(x=1\)，\(y=\frac{x}{2}\) 和 \(2x+y=10\) 组成. 三条边界的交点
+分别为
+\(\left(1,\frac12\right)\)，\((1,8)\)，\((4,2)\).
+因为 \(z=2x-y\) 是线性函数，其最小值在可行域的顶点处取得. 在上述三个顶点处，
+\(z\left(1,\frac12\right)=\frac32\)，\(z(1,8)=-6\)，\(z(4,2)=6\).
+所以 \(z\) 的最小值为 \(-6\).
+\end{solution}
+
 \begin{problem}
 如图，把椭圆 \(\frac{x^2}{25} + \frac{y^2}{16} = 1\) 的长轴 \(AB\) 分成 \(8\) 等分，过每个分点作 \(x\) 轴的垂线交椭圆的上半部分于 \(P_1\)，\(P_2\)，\(\cdots\)，\(P_7\) 七个点，\(F\) 是椭圆的一个焦点，则
 
-\(|P_1F| + |P_2F| + \cdots + |P_7F| =\fillinblank{}.\)
+\(|P_1F| + |P_2F| + \cdots + |P_7F| =\fillinblank{}\).
 
 \problemresetlayout
 \bitmapfigure[width=0.47\linewidth]{img/2006/sichuan_liberal/q15_fig1.png}
@@ -208,12 +443,36 @@ y \geqslant \frac{1}{2}x,\\
 \(35\)
 \end{answer}
 
+\begin{solution}
+椭圆的长半轴为 \(5\)，短半轴为 \(4\)，所以半焦距为
+\[
+c=\sqrt{5^2-4^2}=3
+\]
+取焦点 \(F=(-3,0)\). 长轴端点为 \((-5,0)\)，\((5,0)\)，七个内部分点的横坐标
+关于 \(y\) 轴对称. 设关于 \(y\) 轴对称的点为 \(P_i\) 与 \(P_{8-i}\)，则椭圆的
+焦点性质给出
+\[
+|P_iF|+|P_iF'|=2a=10
+\]
+其中 \(F'=(3,0)\). 由关于 \(y\) 轴的对称性，
+\(|P_{8-i}F|=|P_iF'|\)，故
+\(|P_iF|+|P_{8-i}F|=10\)，\(i=1\)，\(2\)，\(3\).
+中间点 \(P_4\) 的坐标为 \((0,4)\)，所以
+\[
+|P_4F|=\sqrt{(0+3)^2+4^2}=5
+\]
+因此
+\[
+|P_1F|+\cdots+|P_7F|=3\cdot10+5=35
+\]
+\end{solution}
+
 \begin{problem}
 \(m\)，\(n\) 是空间两条不同直线，\(\alpha\)，\(\beta\) 是两个不同平面，下面有四个命题：
 
 \begin{circlelist}
 \item \(m \perp \alpha\)，\(n \parallel \beta\)，\(\alpha \parallel \beta \Rightarrow m \perp n\)；
-\item \(m \perp n\)，\(\alpha \parallel \beta\)，\(m \perp \alpha \Rightarrow n \perp \beta\)；
+\item \(m \perp n\)，\(\alpha \parallel \beta\)，\(m \perp \alpha \Rightarrow n \parallel \beta\)；
 \item \(m \perp n\)，\(\alpha \parallel \beta\)，\(m \parallel \alpha \Rightarrow n \perp \beta\)；
 \item \(m \perp \alpha\)，\(m \parallel n\)，\(\alpha \parallel \beta \Rightarrow n \perp \beta\).
 \end{circlelist}
@@ -224,6 +483,29 @@ y \geqslant \frac{1}{2}x,\\
 \begin{answer}
 \circled{1}，\circled{4}
 \end{answer}
+
+\begin{solution}
+命题 \(\circled{1}\) 中，\(m\perp\alpha\)，且 \(\alpha\parallel\beta\)，所以 \(m\perp\beta\). 又
+\(n\parallel\beta\)，故 \(m\perp n\)，命题 \(\circled{1}\) 为真.
+
+命题 \(\circled{2}\) 中，\(m\perp\alpha\)，且 \(\alpha\parallel\beta\)，所以 \(m\perp\beta\). 由
+\(m\perp n\) 只能说明直线 \(n\) 的方向平行于平面 \(\beta\)，但 \(n\) 也可能在平面 \(\beta\) 内，不能保证 \(n\) 与平面 \(\beta\) 没有公共点. 例如取
+\(\alpha:z=0\)，\(\beta:z=1\)，\(m=\{(0,0,z)\mid z\in\R\}\)，
+\(n=\{(x,0,1)\mid x\in\R\}\)，则 \(m\) 与 \(n\) 相交且垂直，各已知条件成立，而
+\(n\subset\beta\)，故命题 \(\circled{2}\) 不一定成立.
+
+命题 \(\circled{3}\) 中，\(m\parallel\alpha\)，且 \(\alpha\parallel\beta\)，所以 \(m\parallel\beta\).
+虽然 \(m\perp n\)，但 \(n\) 只需与平面 \(\beta\) 内的一条直线垂直，并不一定与平面
+\(\beta\) 垂直. 例如取 \(\alpha:z=0\)，\(\beta:z=1\)，
+\(m=\{(x,0,2)\mid x\in\R\}\)，\(n=\{(0,y,2)\mid y\in\R\}\)，则
+\(m\parallel\alpha\)，\(m\perp n\)，但 \(n\parallel\beta\) 而非
+\(n\perp\beta\)，故命题 \(\circled{3}\) 不一定成立.
+
+命题 \(\circled{4}\) 中，\(m\perp\alpha\)，\(m\parallel n\)，且 \(\alpha\parallel\beta\)，所以
+\(n\parallel m\perp\beta\)，从而 \(n\perp\beta\)，命题 \(\circled{4}\) 为真.
+
+因此真命题的编号为 \circled{1}，\circled{4}.
+\end{solution}
 
 \section{解答题}
 \begin{problem}
@@ -239,7 +521,7 @@ y \geqslant \frac{1}{2}x,\\
 \begin{enumerate}
 \item 由 \(S_n=S_{n-1}+a_n\)，当 \(n\geqslant 2\) 时，
 \[
-a_{n+1}-a_n=(2S_n+1)-(2S_{n-1}+1)=2a_n.
+a_{n+1}-a_n=(2S_n+1)-(2S_{n-1}+1)=2a_n
 \]
 又 \(a_2=2S_1+1=3=3a_1\)，所以对任意 \(n\geqslant 1\)，都有 \(a_{n+1}=3a_n\). 因此 \(\{a_n\}\) 是首项为 \(1\)，公比为 \(3\) 的等比数列，从而 \(a_n=3^{n-1}\).
 
@@ -247,11 +529,11 @@ a_{n+1}-a_n=(2S_n+1)-(2S_{n-1}+1)=2a_n.
 \(3u+3d=15\)，即 \(u+d=5\).
 由第一问，\(a_1=1\)，\(a_2=3\)，\(a_3=9\). 三个数成等比数列，所以
 \[
-\bigl(3+u+d\bigr)^2=(1+u)\bigl(9+u+2d\bigr).
+\bigl(3+u+d\bigr)^2=(1+u)\bigl(9+u+2d\bigr)
 \]
 利用 \(d=5-u\)，上式化为 \(8^2=(1+u)(19-u)\)，即 \(u^2-18u+45=0\)，解得 \(u=3\) 或 \(u=15\). 当 \(u=15\) 时，\(d=-10\)，有 \(b_3=-5<0\)，不合题意；故 \(u=3\)，\(d=2\). 因此
 \[
-T_n=\frac{n}{2}\bigl[2u+(n-1)d\bigr]=\frac{n}{2}\bigl[6+2(n-1)\bigr]=n^2+2n.
+T_n=\frac{n}{2}\bigl[2u+(n-1)d\bigr]=\frac{n}{2}\bigl[6+2(n-1)\bigr]=n^2+2n
 \]
 \end{enumerate}
 \end{solution}
@@ -269,18 +551,18 @@ T_n=\frac{n}{2}\bigl[2u+(n-1)d\bigr]=\frac{n}{2}\bigl[6+2(n-1)\bigr]=n^2+2n.
 \begin{enumerate}
 \item 由向量数量积条件，得
 \[
--\cos A+\sqrt{3}\sin A=1=2\sin\left(A-\frac{\pi}{6}\right).
+-\cos A+\sqrt{3}\sin A=1=2\sin\left(A-\frac{\pi}{6}\right)
 \]
 因为 \(0<A<\pi\)，所以 \(-\frac{\pi}{6}<A-\frac{\pi}{6}<\frac{5\pi}{6}\). 在此范围内，方程 \(\sin\left(A-\frac{\pi}{6}\right)=\frac{1}{2}\) 只有解 \(A-\frac{\pi}{6}=\frac{\pi}{6}\)，故 \(A=\frac{\pi}{3}\).
 
 \item 原等式有意义，所以 \(\cos 2B\ne 0\). 若 \(\cos B=0\)，则 \(B=\frac{\pi}{2}\)，原式等于 \(-1\)，与题设矛盾，故 \(\cos B\ne 0\). 令 \(t=\tan B\)，则
 \[
--3=\frac{1+\sin 2B}{\cos 2B}=\frac{(1+t)^2}{1-t^2}=\frac{1+t}{1-t},
+-3=\frac{1+\sin 2B}{\cos 2B}=\frac{(1+t)^2}{1-t^2}=\frac{1+t}{1-t}
 \]
 解得 \(t=2\)，即 \(\tan B=2\). 由三角形内角和，\(C=\frac{2\pi}{3}-B\)，所以
 \[
 \tan C=\frac{\tan\frac{2\pi}{3}-\tan B}{1+\tan\frac{2\pi}{3}\tan B}
-=\frac{-\sqrt{3}-2}{1-2\sqrt{3}}=\frac{8+5\sqrt{3}}{11}.
+=\frac{-\sqrt{3}-2}{1-2\sqrt{3}}=\frac{8+5\sqrt{3}}{11}
 \]
 \end{enumerate}
 \end{solution}
@@ -298,12 +580,12 @@ T_n=\frac{n}{2}\bigl[2u+(n-1)d\bigr]=\frac{n}{2}\bigl[6+2(n-1)\bigr]=n^2+2n.
 \begin{enumerate}
 \item 设理论考核中甲、乙、丙合格分别为事件 \(A\)，\(B\)，\(C\). 至少两人合格包括恰有两人合格和三人都合格，故所求概率为
 \[
-0.9\times0.8\times0.3+0.9\times0.2\times0.7+0.1\times0.8\times0.7+0.9\times0.8\times0.7=0.902.
+0.9\times0.8\times0.3+0.9\times0.2\times0.7+0.1\times0.8\times0.7+0.9\times0.8\times0.7=0.902
 \]
 
 \item 甲、乙、丙课程考核合格的概率分别为 \(0.9\times0.8=0.72\)，\(0.8\times0.7=0.56\)，\(0.7\times0.9=0.63\). 由于所有考核是否合格互相之间没有影响，三人课程考核都合格的概率为
 \[
-0.72\times0.56\times0.63=0.254016\approx0.254.
+0.72\times0.56\times0.63=0.254016\approx0.254
 \]
 \end{enumerate}
 \end{solution}
@@ -315,7 +597,7 @@ T_n=\frac{n}{2}\bigl[2u+(n-1)d\bigr]=\frac{n}{2}\bigl[6+2(n-1)\bigr]=n^2+2n.
 \item 求二面角 \(P - AE - D\) 的大小.
 \end{enumerate}
 
-\bitmapfigure[max width=0.55\linewidth]{img/2006/sichuan_liberal/q20_fig1.png}
+\bitmapfigure[width=0.55\linewidth]{img/2006/sichuan_liberal/q20_fig1.png}
 \end{problem}
 
 \begin{solution}
@@ -330,7 +612,7 @@ T_n=\frac{n}{2}\bigl[2u+(n-1)d\bigr]=\frac{n}{2}\bigl[6+2(n-1)\bigr]=n^2+2n.
 \(\bs{u}=\overrightarrow{AE}\times\overrightarrow{AP}=\left(\frac{a^2}{2},-2a^2,a^2\right)\)，\(\bs{v}=\overrightarrow{AE}\times\overrightarrow{AD}=(0,0,2a^2)\).
 于是 \(\bs{u}\cdot\bs{v}=2a^4\)，\(\lvert\bs{u}\rvert=\frac{a^2\sqrt{21}}{2}\)，\(\lvert\bs{v}\rvert=2a^2\). 因而
 \[
-\cos\theta=\frac{\bs{u}\cdot\bs{v}}{\lvert\bs{u}\rvert\lvert\bs{v}\rvert}=\frac{2}{\sqrt{21}}=\frac{2\sqrt{21}}{21}.
+\cos\theta=\frac{\bs{u}\cdot\bs{v}}{\lvert\bs{u}\rvert\lvert\bs{v}\rvert}=\frac{2}{\sqrt{21}}=\frac{2\sqrt{21}}{21}
 \]
 所以二面角 \(P-AE-D\) 的大小为 \(\arccos\dfrac{2\sqrt{21}}{21}\).
 \end{enumerate}
@@ -349,25 +631,27 @@ T_n=\frac{n}{2}\bigl[2u+(n-1)d\bigr]=\frac{n}{2}\bigl[6+2(n-1)\bigr]=n^2+2n.
 \begin{enumerate}
 \item 由 \(f'(x)=3x^2+3a\)，得
 \[
-g(x)=3x^2-ax+3a-5=3x^2-5+a(3-x).
+g(x)=3x^2-ax+3a-5=3x^2-5+a(3-x)
 \]
 当 \(-1\leqslant a\leqslant1\) 时，关于 \(a\) 的一次式 \(a(3-x)\) 的最大值为 \(\lvert 3-x\rvert\). 因而题设条件等价于
 \[
-3x^2-5+\lvert 3-x\rvert<0.
+3x^2-5+\lvert 3-x\rvert<0
 \]
-若 \(x\leqslant3\)，则上式化为 \(3x^2-x-2<0\)，即 \(-\frac{2}{3}<x<1\). 若 \(x>3\)，则上式化为 \(3x^2+x-8<0\)，但其在 \(x>3\) 时不可能成立. 故 \(x\) 的取值范围为 \(\left(-\frac{2}{3},1\right)\).
+若 \(x\leqslant3\)，则上式化为 \(3x^2-x-2<0\)，即 \(-\frac{2}{3}<x<1\). 若 \(x>3\)，则上式化为
+\(3x^2+x-8<0\)，而 \(3x^2+x-8>3\cdot3^2+3-8=22>0\)，不可能成立. 故 \(x\) 的取值范围为
+\(\left(-\frac{2}{3},1\right)\).
 
 \item 令 \(r=\lvert m\rvert\). 函数图像与直线 \(y=3\) 的公共点横坐标是方程
 \[
 h(x)=x^3-3m^2x-4=x^3-3r^2x-4=0
 \]
-的实根. 当 \(r=0\) 时，\(h'(x)=3x^2\geqslant0\)，且 \(h\) 只有一个实根.
+的实根. 当 \(r=0\) 时，\(h(x)=x^3-4\) 严格递增，故方程只有一个实根.
 
 当 \(r>0\) 时，\(h'(x)=3(x-r)(x+r)\)，所以 \(h\) 在 \((-\infty,-r)\) 和 \((r,+\infty)\) 上递增，在 \((-r,r)\) 上递减，并且
 \(h(-r)=2r^3-4\)，\(h(r)=-2r^3-4<0\).
 若 \(2r^3-4<0\)，两个极值点的函数值都小于零，方程只有一个实根；若 \(2r^3-4=0\)，\(-r\) 是一个重根且另有实根，故有两个不同实根；若 \(2r^3-4>0\)，方程有三个实根. 因而只有一个公共点的充要条件是 \(r^3<2\)，即
 \[
-m\in\left(-\sqrt[3]{2},\sqrt[3]{2}\right).
+m\in\left(-\sqrt[3]{2},\sqrt[3]{2}\right)
 \]
 \end{enumerate}
 \end{solution}
@@ -383,25 +667,25 @@ m\in\left(-\sqrt[3]{2},\sqrt[3]{2}\right).
 
 \begin{solution}
 \begin{enumerate}
-\item 设 \(P=(x,y)\). 由焦点坐标和距离差条件，曲线 \(E\) 是焦点为 \(F_1,F_2\)、实轴长为 \(2\) 的双曲线. 因为焦距的一半为 \(\sqrt{2}\)，故虚半轴的平方为 \(\left(\sqrt{2}\right)^2-1^2=1\)，双曲线方程为 \(x^2-y^2=1\). 条件 \(\lvert PF_2\rvert-\lvert PF_1\rvert=2>0\) 选取其左支，所以 \(E\) 满足 \(x\leqslant-1\).
+\item 设 \(P=(x,y)\). 由焦点坐标和距离差条件，曲线 \(E\) 是焦点为 \(F_1\)，\(F_2\)、实轴长为 \(2\) 的双曲线. 因为焦距的一半为 \(\sqrt{2}\)，故虚半轴的平方为 \(\left(\sqrt{2}\right)^2-1^2=1\)，双曲线方程为 \(x^2-y^2=1\). 条件 \(\lvert PF_2\rvert-\lvert PF_1\rvert=2>0\) 选取其左支，所以 \(E\) 满足 \(x\leqslant-1\).
 
 将直线 \(y=kx-1\) 代入双曲线方程，得
 \[
-(1-k^2)x^2+2kx-2=0.
+(1-k^2)x^2+2kx-2=0
 \]
 要有两个不同的交点，首先需 \(4(2-k^2)>0\)，即 \(\lvert k\rvert<\sqrt{2}\). 当 \(-1<k<1\) 时，方程两根异号，不能同时在双曲线左支；当 \(1<k<\sqrt{2}\) 时，两根均为正，也不能在左支；当 \(-\sqrt{2}<k<-1\) 时，两根同为负，而双曲线上横坐标为负的点必在左支. \(k=\pm1\) 时方程退化为一次方程，\(k=\pm\sqrt{2}\) 时只有一个交点. 因此 \(k\) 的取值范围为 \(-\sqrt{2}<k<-1\).
 
-\item 设直线与双曲线的两个交点横坐标为 \(x_1,x_2\). 由根的判别式和根之差，
+\item 设直线与双曲线的两个交点横坐标为 \(x_1\)，\(x_2\). 由根的判别式和根之差，
 \[
-\lvert x_1-x_2\rvert=\frac{2\sqrt{2-k^2}}{k^2-1}.
+\lvert x_1-x_2\rvert=\frac{2\sqrt{2-k^2}}{k^2-1}
 \]
-由于 \(A,B\) 在斜率为 \(k\) 的直线上，故
+由于 \(A\)，\(B\) 在斜率为 \(k\) 的直线上，故
 \[
-\lvert AB\rvert=\sqrt{1+k^2}\lvert x_1-x_2\rvert=\frac{2\sqrt{(1+k^2)(2-k^2)}}{k^2-1}=6\sqrt{3}.
+\lvert AB\rvert=\sqrt{1+k^2}\lvert x_1-x_2\rvert=\frac{2\sqrt{(1+k^2)(2-k^2)}}{k^2-1}=6\sqrt{3}
 \]
 令 \(t=k^2\)，平方并整理得
 \[
-(1+t)(2-t)=27(t-1)^2.
+(1+t)(2-t)=27(t-1)^2
 \]
 所以 \(28t^2-55t+25=0\)，解得 \(t=\frac{5}{4}\) 或 \(t=\frac{5}{7}\). 结合 \(1<k^2<2\) 及 \(k<0\)，得 \(k=-\frac{\sqrt{5}}{2}\).
 
@@ -409,22 +693,22 @@ m\in\left(-\sqrt[3]{2},\sqrt[3]{2}\right).
 \(x_1+x_2=\frac{2k}{k^2-1}\)，\(y_1+y_2=k(x_1+x_2)-2=\frac{2}{k^2-1}\).
 当 \(k=-\frac{\sqrt{5}}{2}\) 时，\(k^2-1=\frac14\)，所以
 \[
-\overrightarrow{OA}+\overrightarrow{OB}=(-4\sqrt{5},8).
+\overrightarrow{OA}+\overrightarrow{OB}=(-4\sqrt{5},8)
 \]
 设 \(C=(x_C,y_C)\)，由 \(\overrightarrow{OA}+\overrightarrow{OB}=m\overrightarrow{OC}\)，得 \(C=\left(-\frac{4\sqrt{5}}{m},\frac{8}{m}\right)\). 又 \(C\in E\)，故
 \[
-\frac{(-4\sqrt{5})^2-8^2}{m^2}=1.
+\frac{(-4\sqrt{5})^2-8^2}{m^2}=1
 \]
 所以 \(m^2=16\).
 由于 \(C\) 必在双曲线左支，取 \(m=4\)，从而 \(C=(-\sqrt{5},2)\).
 
 直线 \(AB\) 的方程为 \(y=-\frac{\sqrt{5}}{2}x-1\)，点 \(C\) 到该直线的距离为
 \[
-d=\frac{\left\lvert\frac{\sqrt{5}}{2}(-\sqrt{5})+2+1\right\rvert}{\sqrt{\frac54+1}}=\frac13.
+d=\frac{\left\lvert\frac{\sqrt{5}}{2}(-\sqrt{5})+2+1\right\rvert}{\sqrt{\frac54+1}}=\frac13
 \]
 所以
 \[
-S_{\triangle ABC}=\frac12\lvert AB\rvert d=\frac12\times6\sqrt{3}\times\frac13=\sqrt{3}.
+S_{\triangle ABC}=\frac12\lvert AB\rvert d=\frac12\times6\sqrt{3}\times\frac13=\sqrt{3}
 \]
 \end{enumerate}
 \end{solution}

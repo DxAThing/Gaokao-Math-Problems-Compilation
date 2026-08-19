@@ -18,6 +18,10 @@
 A.
 \end{answer}
 
+\begin{solution}
+由 \(A=\{x\mid x>-1\}\)，\(B=\{x\mid -2<x<2\}\). 当 \(-2<x\leqslant -1\) 时，\(x\in B\)；当 \(x>-1\) 时，\(x\in A\). 因此 \(A\cup B=\{x\mid x>-2\}\)，故选 A.
+\end{solution}
+
 \begin{problem}
 已知命题 \(p\)：\(\forall x \in \R\)，\(\sin x \leqslant 1\)，则（\quad）
 
@@ -31,6 +35,10 @@ A.
 \begin{answer}
 C.
 \end{answer}
+
+\begin{solution}
+命题 \(p\) 是“对任意 \(x\in\R\)，都有 \(\sin x\leqslant1\)”. 全称命题的否定是存在一个 \(x\in\R\) 使原不等式不成立，即 \(\sin x>1\). 因而 \(\neg p\) 应为“\(\exists x\in\R\)，\(\sin x>1\)”，故选 C.
+\end{solution}
 
 \begin{problem}
 函数 \( y = \sin \left(2x - \frac{\pi}{3}\right) \) 在区间 \(\left[-\frac{\pi}{2}, \pi\right]\) 的简图是（\quad）
@@ -46,6 +54,10 @@ C.
 A.
 \end{answer}
 
+\begin{solution}
+令 \(u=2x-\dfrac{\pi}{3}\). 在 \(x\in\left[-\dfrac{\pi}{2},\pi\right]\) 上，\(u\) 从 \(-\dfrac{4\pi}{3}\) 变化到 \(\dfrac{5\pi}{3}\). 图象在 \(x=-\dfrac{\pi}{2}\) 处的函数值为 \(\dfrac{\sqrt{3}}{2}\)，且此处函数递减；在 \(x=-\dfrac{\pi}{12}\) 处取得极小值 \(-1\)，在 \(x=\dfrac{5\pi}{12}\) 处取得极大值 \(1\)，在 \(x=\dfrac{11\pi}{12}\) 处再次取得极小值 \(-1\). 零点为 \(x=-\dfrac{\pi}{3}\)、\(\dfrac{\pi}{6}\)、\(\dfrac{2\pi}{3}\). 这些端点值、极值点和零点的变化顺序与选项 A 的图象一致，故选 A.
+\end{solution}
+
 \begin{problem}
 已知平面向量 \( \bs{a} = (1, 1) \)，\( \bs{b} = (1, -1) \)，则向量 \( \frac{1}{2}\bs{a} - \frac{3}{2}\bs{b} = \)（\quad）
 
@@ -60,10 +72,20 @@ A.
 D.
 \end{answer}
 
+\begin{solution}
+逐坐标计算得
+\[
+\frac{1}{2}\bs a-\frac{3}{2}\bs b
+=\left(\frac12,\frac12\right)-\left(\frac32,-\frac32\right)
+=\left(-1,2\right)
+\]
+故选 D.
+\end{solution}
+
 \begin{problem}
 如果执行下面的程序框图，那么输出的 \(S =\)（\quad）
 
-\texfigure[width=0.34\linewidth]{img_repaint/2007/new_curriculum_liberal/q5_fig1.tex}
+\bitmapfigure[width=0.34\linewidth]{img/2007/new_curriculum_liberal/q5_fig1.png}
 
 \choices
     {\(2450\)}
@@ -75,6 +97,14 @@ D.
 \begin{answer}
 C.
 \end{answer}
+
+\begin{solution}
+程序开始时 \(k=1\)，每次判断 \(k\leqslant50\) 成立就把 \(2k\) 加入 \(S\)，再令 \(k\) 增加 \(1\). 因而循环正好取 \(k=1\)，\(2\)，\(\ldots\)，\(50\)，输出值为
+\[
+S=2(1+2+\cdots+50)=2\cdot\frac{50\cdot51}{2}=2550
+\]
+故选 C.
+\end{solution}
 
 \begin{problem}
 已知 \(a\)，\(b\)，\(c\)，\(d\) 成等比数列，且曲线 \(y = x^2 - 2x + 3\) 的顶点是 \((b, c)\)，则 \(ad\) 等于（\quad）
@@ -90,6 +120,10 @@ C.
 B.
 \end{answer}
 
+\begin{solution}
+将抛物线方程配方为 \(y=(x-1)^2+2\)，所以顶点 \((b,c)=(1,2)\). 等比数列的公比为 \(q=\dfrac{c}{b}=2\)，从而 \(a=\dfrac{b}{q}=\dfrac12\)，\(d=cq=4\). 因此 \(ad=\dfrac12\cdot4=2\)，故选 B.
+\end{solution}
+
 \begin{problem}
 已知抛物线 \( y^{2} = 2px \)（\( p > 0 \)）的焦点为 \(F\)，点 \( P_{1}(x_{1}, y_{1}) \)，\( P_{2}(x_{2}, y_{2}) \)，\( P_{3}(x_{3}, y_{3}) \) 在抛物线上，且 \( 2x_{2} = x_{1} + x_{3} \)，则有（\quad）
 
@@ -103,6 +137,19 @@ B.
 \begin{answer}
 C.
 \end{answer}
+
+\begin{solution}
+抛物线 \(y^2=2px\) 的焦点为 \(F\left(\dfrac p2,0\right)\). 对任意抛物线上点 \(P_i(x_i,y_i)\)，由 \(y_i^2=2px_i\) 得
+\[
+|FP_i|^2=\left(x_i-\frac p2\right)^2+y_i^2
+=\left(x_i+\frac p2\right)^2
+\]
+因 \(x_i\geqslant0\)，故 \(|FP_i|=x_i+\dfrac p2\). 由 \(2x_2=x_1+x_3\)，可得
+\[
+2|FP_2|=2x_2+p=x_1+x_3+p=|FP_1|+|FP_3|
+\]
+故选 C.
+\end{solution}
 
 \begin{problem}
 已知某个几何体的三视图如下，根据图中标出的尺寸（单位：\(\mathrm{cm}\)），可得这个几何体的体积是（\quad）
@@ -120,6 +167,14 @@ C.
 B.
 \end{answer}
 
+\begin{solution}
+由俯视图可知该几何体的底面为边长 \(20\,\mathrm{cm}\) 的正方形，底面积为 \(20\times20=400\,\mathrm{cm}^2\). 由正视图可知几何体的高为 \(20\,\mathrm{cm}\). 因而它的体积为
+\[
+V=\frac13\times400\times20=\frac{8000}{3}\,\mathrm{cm}^3
+\]
+故选 B.
+\end{solution}
+
 \begin{problem}
 若 \(\frac{\cos 2\alpha}{\sin \left(\alpha - \frac{\pi}{4}\right)} = -\frac{\sqrt{2}}{2}\)，则 \(\cos \alpha + \sin \alpha\) 的值为（\quad）
 
@@ -133,6 +188,16 @@ B.
 \begin{answer}
 C.
 \end{answer}
+
+\begin{solution}
+由分母不为零知 \(\sin\left(\alpha-\dfrac\pi4\right)\ne0\)，即 \(\cos\alpha-\sin\alpha\ne0\). 利用恒等式
+\(\cos2\alpha=(\cos\alpha+\sin\alpha)(\cos\alpha-\sin\alpha)\)，\(\sin\left(\alpha-\frac\pi4\right)=\frac{\sin\alpha-\cos\alpha}{\sqrt2}\)
+原等式左边化为 \(-\sqrt2(\cos\alpha+\sin\alpha)\). 所以
+\[
+-\sqrt2(\cos\alpha+\sin\alpha)=-\frac{\sqrt2}{2}
+\]
+从而 \(\cos\alpha+\sin\alpha=\dfrac12\)，故选 C.
+\end{solution}
 
 \begin{problem}
 曲线 \( y = \e^{x} \) 在点 \((2, \e^{2})\) 处的切线与坐标轴所围三角形的面积为（\quad）
@@ -148,6 +213,14 @@ C.
 D.
 \end{answer}
 
+\begin{solution}
+函数 \(y=\e^x\) 的导数为 \(y'=\e^x\)，所以在 \((2,\e^2)\) 处的切线方程为
+\[
+y-\e^2=\e^2(x-2),\qquad\text{即}\qquad y=\e^2x-\e^2
+\]
+它与 \(x\) 轴交于 \((1,0)\)，与 \(y\) 轴交于 \((0,-\e^2)\). 所围三角形的两条直角边长分别为 \(1\) 和 \(\e^2\)，故面积为 \(\dfrac{\e^2}{2}\)，选 D.
+\end{solution}
+
 \begin{problem}
 已知三棱锥 \(S - ABC\) 的各顶点都在一个半径为 \(r\) 的球面上，球心 \(O\) 在 \(AB\) 上，\(SO \perp\) 底面 \(ABC\)，\(AC = \sqrt{2} r\)，则球的体积与三棱锥体积之比是（\quad）
 
@@ -161,6 +234,22 @@ D.
 \begin{answer}
 D.
 \end{answer}
+
+\begin{solution}
+由于 \(O\) 是球心且 \(O\in AB\)，\(AB\) 是球的直径，所以 \(AB=2r\). 又 \(SO\perp\) 平面 \(ABC\)，且 \(SO=r\)，故三棱锥的高为 \(r\). 由直径所对的圆周角为直角，\(\angle ACB=90^\circ\). 在直角三角形 \(ABC\) 中，
+\[
+BC=\sqrt{AB^2-AC^2}=\sqrt{(2r)^2-(\sqrt2r)^2}=\sqrt2r
+\]
+所以底面面积为
+\[
+S_{\triangle ABC}=\frac12\,AC\cdot BC=\frac12\cdot\sqrt2r\cdot\sqrt2r=r^2
+\]
+三棱锥体积为 \(\dfrac13r^3\). 球的体积为 \(\dfrac43\pi r^3\)，因此二者之比为
+\[
+\frac{\frac43\pi r^3}{\frac13r^3}=4\pi
+\]
+故选 D.
+\end{solution}
 
 \begin{problem}
 甲，乙，丙三名射箭运动员在某次测试中各射箭 \(20\) 次，三人的测试成绩如下表
@@ -198,6 +287,20 @@ D.
 B.
 \end{answer}
 
+\begin{solution}
+三人的平均成绩都为 \(8.5\)，所以可直接比较方差. 对甲、乙、丙分别计算得
+\[
+s_1^2=\frac{5(1.5^2+0.5^2+0.5^2+1.5^2)}{20}=\frac54
+\]
+\[
+s_2^2=\frac{6\cdot1.5^2+4\cdot0.5^2+4\cdot0.5^2+6\cdot1.5^2}{20}=\frac{29}{20}
+\]
+\[
+s_3^2=\frac{4\cdot1.5^2+6\cdot0.5^2+6\cdot0.5^2+4\cdot1.5^2}{20}=\frac{21}{20}
+\]
+因标准差均为非负数，\(s_2^2>s_1^2>s_3^2\) 等价于 \(s_2>s_1>s_3\)，故选 B.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -208,6 +311,22 @@ B.
 \(3\).
 \end{answer}
 
+\begin{solution}
+设双曲线为 \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\)，焦距参数满足 \(c^2=a^2+b^2\). 其渐近线为 \(bx\pm ay=0\). 顶点 \((a,0)\) 到渐近线的距离为
+\[
+\frac{ab}{\sqrt{a^2+b^2}}=\frac{ab}{c}=2
+\]
+焦点 \((c,0)\) 到渐近线的距离为
+\[
+\frac{bc}{\sqrt{a^2+b^2}}=b=6
+\]
+于是
+\[
+\frac ca=\frac{b}{ab/c}=\frac{6}{2}=3
+\]
+故离心率为 \(3\).
+\end{solution}
+
 \begin{problem}
 设函数 \( f(x) = (x + 1)(x + a) \) 为偶函数，则 \( a = \)\fillinblank{}.
 \end{problem}
@@ -215,6 +334,10 @@ B.
 \begin{answer}
 \(-1\).
 \end{answer}
+
+\begin{solution}
+展开得 \(f(x)=x^2+(a+1)x+a\). 二次函数为偶函数，当且仅当一次项系数为零，因此 \(a+1=0\)，即 \(a=-1\).
+\end{solution}
 
 \begin{problem}
 \(\i\) 是虚数单位，\(\i + 2\i^2 + 3\i^3 + \cdots + 8\i^8 = \)\fillinblank{}. （用 \(a + b\i\) 的形式表示，\(a\)，\(b \in \R\)）
@@ -224,6 +347,15 @@ B.
 \(4 - 4\i\).
 \end{answer}
 
+\begin{solution}
+利用 \(\i^2=-1\)，并按四次幂循环计算，得
+\[
+\i+2\i^2+3\i^3+4\i^4+5\i^5+6\i^6+7\i^7+8\i^8
+=(\i-2-3\i+4+5\i-6-7\i+8)=4-4\i
+\]
+故填 \(4-4\i\).
+\end{solution}
+
 \begin{problem}
 已知 \(\{a_{n}\}\) 是等差数列，\(a_{4} + a_{6} = 6\)，其前 5 项和 \(S_{5} = 10\)，则其公差 \(d = \)\fillinblank{}.
 \end{problem}
@@ -231,6 +363,18 @@ B.
 \begin{answer}
 \(\frac{1}{2}\).
 \end{answer}
+
+\begin{solution}
+设等差数列首项为 \(a_1\)，公差为 \(d\). 由 \(a_4+a_6=6\)，得
+\[
+(a_1+3d)+(a_1+5d)=6
+\]
+即 \(a_1+4d=3\). 又
+\[
+S_5=\frac52(2a_1+4d)=5(a_1+2d)=10
+\]
+所以 \(a_1+2d=2\). 两式相减得 \(2d=1\)，故 \(d=\dfrac12\).
+\end{solution}
 
 \section{解答题}
 
@@ -245,7 +389,7 @@ B.
 
 由于塔 \(AB\) 垂直于地面，且 \(\theta\) 是在点 \(C\) 测得的仰角，在直角三角形 \(ABC\) 中有 \(\tan\theta=\dfrac{AB}{BC}\). 因此塔高为
 \[
-AB=BC\tan\theta=\frac{s\sin\beta\tan\theta}{\sin(\alpha+\beta)}.
+AB=BC\tan\theta=\frac{s\sin\beta\tan\theta}{\sin(\alpha+\beta)}
 \]
 \end{solution}
 
@@ -283,9 +427,8 @@ AB=BC\tan\theta=\frac{s\sin\beta\tan\theta}{\sin(\alpha+\beta)}.
 函数的定义域为 \(\left(-\dfrac{3}{2},+\infty\right)\)，且
 \(f'(x)=\dfrac{2}{2x+3}+2x=\dfrac{2(2x+1)(x+1)}{2x+3}\).
 
-在定义域内，分点 \(-1\)，\(-\dfrac{1}{2}\) 讨论导数符号，得 \(f'(x)>0\) 当 \(x\in\left(-\dfrac{3}{2},-1\right)\) 或 \(x\in\left(-\dfrac{1}{2},+\infty\right)\)，得 \(f'(x)<0\) 当 \(x\in\left(-1,-\dfrac{1}{2}\right)\). 所以 \(f(x)\) 在 \(\left(-\dfrac{3}{2},-1\right)\) 和 \(\left(-\dfrac{1}{2},+\infty\right)\) 上单调递增，在 \(\left(-1,-\dfrac{1}{2}\right)\) 上单调递减.
-
 \begin{enumerate}
+\item 在定义域内分点 \(-1\)、\(-\dfrac{1}{2}\) 讨论导数符号. 因为分母 \(2x+3>0\)，所以 \(f'(x)>0\) 当 \(x\in\left(-\dfrac{3}{2},-1\right)\) 或 \(x\in\left(-\dfrac{1}{2},+\infty\right)\)，\(f'(x)<0\) 当 \(x\in\left(-1,-\dfrac{1}{2}\right)\). 因此 \(f(x)\) 在 \(\left(-\dfrac{3}{2},-1\right)\) 和 \(\left(-\dfrac{1}{2},+\infty\right)\) 上单调递增，在 \(\left(-1,-\dfrac{1}{2}\right)\) 上单调递减.
 \item 在区间 \(\left[-\dfrac{3}{4},\dfrac{1}{4}\right]\) 内，函数先减后增，因此最小值在 \(x=-\dfrac{1}{2}\) 处取得，且
 \(f\left(-\dfrac{1}{2}\right)=\ln2+\dfrac{1}{4}\).
 
@@ -346,12 +489,10 @@ AB=BC\tan\theta=\frac{s\sin\beta\tan\theta}{\sin(\alpha+\beta)}.
 \end{problem}
 
 \begin{solution}
-连接 \(OM\). 因为 \(M\) 是弦 \(BC\) 的中点，所以 \(OM\perp BC\). 又因为 \(A\)，\(B\)，\(C\) 共线，所以 \(OM\perp AM\)，从而 \(\angle AMO=90^{\circ}\). 由 \(AP\) 是圆的切线，得 \(OP\perp AP\)，即 \(\angle APO=90^{\circ}\). 因此点 \(A\)，\(P\)，\(O\)，\(M\) 均在以 \(AO\) 为直径的圆上.
-
 \begin{enumerate}
-\item 由上面的两个直角可知，四边形 \(APOM\) 是圆内接四边形，即 \(A\)，\(P\)，\(O\)，\(M\) 四点共圆.
-\item 由圆心 \(O\) 在 \(\angle PAC\) 的内部，点 \(P\) 和点 \(O\) 在线段 \(AM\) 所在直线的同侧. 在同一圆中，同弧所对的圆周角相等，所以 \(\angle APM=\angle AOM\). 又 \(\angle AMO=90^{\circ}\)，在直角三角形 \(AOM\) 中，\(\angle OAM+\angle AOM=90^{\circ}\). 因而
-\(\angle OAM+\angle APM=\angle OAM+\angle AOM=90^{\circ}\).
+\item 连接 \(OM\). 因为 \(M\) 是弦 \(BC\) 的中点，所以 \(OM\perp BC\). 又因为 \(A\)、\(B\)、\(C\) 共线，所以 \(OM\perp AM\)，从而 \(\angle AMO=90^\circ\). 由 \(AP\) 是圆的切线，得 \(OP\perp AP\)，即 \(\angle APO=90^\circ\). 因此 \(A\)、\(P\)、\(O\)、\(M\) 均在以 \(AO\) 为直径的圆上，故四点共圆.
+\item 由圆心 \(O\) 在 \(\angle PAC\) 的内部，点 \(P\) 和点 \(O\) 在线段 \(AM\) 所在直线的同侧. 在同一圆中，同弧所对的圆周角相等，所以 \(\angle APM=\angle AOM\). 又 \(\angle AMO=90^\circ\)，在直角三角形 \(AOM\) 中，\(\angle OAM+\angle AOM=90^\circ\). 因而
+\(\angle OAM+\angle APM=\angle OAM+\angle AOM=90^\circ\).
 \end{enumerate}
 \end{solution}
 

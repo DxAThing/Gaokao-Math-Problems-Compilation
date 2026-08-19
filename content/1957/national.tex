@@ -7,11 +7,14 @@
 \end{problem}
 
 \begin{solution}
+先把带分数和小数化为适合乘方运算的形式：\(2\frac{7}{9}=\frac{25}{9}=\left(\frac{5}{3}\right)^2\)，\(0.1=\frac{1}{10}\)，\(2\frac{10}{27}=\frac{64}{27}=\left(\frac{4}{3}\right)^3\).
+因此原式
 \[
-\begin{aligned}
-\text{原式}&=\left(2\frac{7}{9}\right)^{\frac{1}{2}}+0.1^{-2}+\left(2\frac{10}{27}\right)^{-\frac{2}{3}}\\
-&=\left(\frac{25}{9}\right)^{\frac{1}{2}}+\frac{1}{0.1^{2}}+\frac{1}{\left(\frac{64}{27}\right)^{\frac{2}{3}}}=\frac{5}{3}+100+\frac{9}{16}=102\frac{11}{48}
-\end{aligned}
+=\left(\frac{25}{9}\right)^{\frac{1}{2}}+\left(\frac{1}{10}\right)^{-2}+\left(\frac{64}{27}\right)^{-\frac{2}{3}}
+=\frac{5}{3}+100+\left[\left(\frac{4}{3}\right)^3\right]^{-\frac{2}{3}}
+=\frac{5}{3}+100+\left(\frac{4}{3}\right)^{-2}
+=\frac{5}{3}+100+\frac{9}{16}
+=102\frac{11}{48}
 \]
 \end{solution}
 
@@ -20,7 +23,11 @@
 \end{problem}
 
 \begin{solution}
-即 \((x+2)(x-1)<0\)，所以 \(-2<x<1\).
+移项并因式分解，得
+\[
+x^{2}+x<2\Longleftrightarrow x^{2}+x-2<0\Longleftrightarrow (x+2)(x-1)<0
+\]
+两个因式的零点分别为 \(-2\) 和 \(1\). 当 \(x<-2\) 时，两个因式均为负，乘积为正；当 \(-2<x<1\) 时，两个因式异号，乘积为负；当 \(x>1\) 时，两个因式均为正，乘积为正. 由于不等式是严格不等式，两个零点都不能取，所以实数 \(x\) 的范围是 \(-2<x<1\).
 \end{solution}
 
 \begin{problem}
@@ -28,8 +35,13 @@
 \end{problem}
 
 \begin{solution}
+令 \(\theta=22^{\circ}30'=\frac{45^{\circ}}{2}\). 由二倍角公式，
 \[
-\cot22^{\circ}30'=\cot\frac{45^{\circ}}{2}=\frac{1+\cos45^{\circ}}{\sin45^{\circ}}=\frac{1+\frac{1}{\sqrt2}}{\frac{1}{\sqrt2}}=1+\sqrt2
+\cot\theta=\frac{\cos\theta}{\sin\theta}=\frac{2\cos^2\theta}{2\sin\theta\cos\theta}=\frac{1+\cos2\theta}{\sin2\theta}
+\]
+取 \(2\theta=45^{\circ}\)，并代入 \(\cos45^{\circ}=\sin45^{\circ}=\frac{\sqrt2}{2}\)，得
+\[
+\cot22^{\circ}30'=\frac{1+\cos45^{\circ}}{\sin45^{\circ}}=\frac{1+\frac{\sqrt2}{2}}{\frac{\sqrt2}{2}}=1+\sqrt2
 \]
 \end{solution}
 
@@ -38,11 +50,14 @@
 \end{problem}
 
 \begin{solution}
-因为 \(P\)，\(Q\) 依次为 \(AB\)，\(BC\) 的中点，所以 \(PQ\parallel AC\) 且 \(PQ=\frac{1}{2}AC\). 同理 \(RS\parallel AC\) 且 \(RS=\frac{1}{2}AC\). 所以 \(PQ\parallel RS\) 且 \(PQ=RS\)，所以 \(PQRS\) 为平行四边形.
+在三角形 \(ABC\) 中，\(P\)，\(Q\) 分别是 \(AB\)，\(BC\) 的中点，由三角形中位线定理得 \(PQ\parallel AC\)，且 \(PQ=\frac{1}{2}AC\).
+在三角形 \(CDA\) 中，\(R\)，\(S\) 分别是 \(CD\)，\(DA\) 的中点，由同一定理得 \(RS\parallel CA\)，且 \(RS=\frac{1}{2}CA\).
+所以 \(PQ\parallel RS\) 且 \(PQ=RS\)，四边形 \(PQRS\) 是平行四边形.
 
-又因 \(AC=BD\)，所以 \(PQ=\frac{1}{2}AC=\frac{1}{2}BD\). 而 \(QR=\frac{1}{2}BD\)，所以 \(PQ=QR\). 所以 \(PQRS\) 为一菱形.
+在三角形 \(BCD\) 中，\(Q\)，\(R\) 分别是 \(BC\)，\(CD\) 的中点，因此 \(QR=\frac{1}{2}BD\). 由题设 \(AC=BD\)，以及前面所得 \(PQ=\frac{1}{2}AC\)，有 \(PQ=\frac{1}{2}AC=\frac{1}{2}BD=QR\).
+平行四边形 \(PQRS\) 的一组邻边相等，所以 \(PQRS\) 为菱形.
 
-\solutionfigure{\bitmapfigure[max width=0.42\linewidth]{img/1957/national/q4_solution_fig1.png}}
+\solutionfigure{\bitmapfigure[width=0.42\linewidth]{img/1957/national/q4_solution_fig1.png}}
 \end{solution}
 
 \begin{problem}
@@ -50,9 +65,17 @@
 \end{problem}
 
 \begin{solution}
-过 \(a\) 作平面 \(\beta\) 与 \(\alpha\) 平行，过 \(b\) 作平面 \(\gamma\) 与 \(\alpha\) 平行，则 \(\alpha\parallel\beta\parallel\gamma\). 设 \(EF\) 中点为 \(O\)，\(MN\) 与 \(\alpha\) 的交点为 \(O'\)，则 \(MO':O'N=EO:OF\). 因为 \(EO=OF\)，所以 \(MO'=O'N\)，即线段 \(MN\) 被平面 \(\alpha\) 二等分.
+设 \(O\) 为 \(EF\) 的中点. 因为平面 \(\alpha\) 平行于 \(a\)，\(b\)，而 \(EF\) 同时垂直于 \(a\)，\(b\)，所以 \(EF\perp\alpha\)，且 \(EF\cap\alpha=\{O\}\). 过直线 \(a\) 作平面 \(\beta\)，使 \(\beta\parallel\alpha\)；过直线 \(b\) 作平面 \(\gamma\)，使 \(\gamma\parallel\alpha\). 这是因为每条与 \(\alpha\) 平行的直线都能包含在一个与 \(\alpha\) 平行的平面内.
 
-\solutionfigure{\bitmapfigure[max width=0.42\linewidth]{img/1957/national/q5_solution_fig1.png}}
+点 \(E\)，\(M\) 在平面 \(\beta\) 内，点 \(F\)，\(N\) 在平面 \(\gamma\) 内. 若 \(\beta\) 与 \(\gamma\) 重合，则异面直线 \(a\)，\(b\) 同在一个平面内，矛盾. 又因 \(E\ne O\)，\(F\ne O\)，由 \(EF\cap\alpha=\{O\}\) 知 \(\beta\ne\alpha\)，\(\gamma\ne\alpha\)，所以 \(\alpha\)，\(\beta\)，\(\gamma\) 是三个互相平行的平面.
+
+设 \(O'=MN\cap\alpha\). 直线 \(EF\) 截这三个平行平面，且 \(O\) 是 \(EF\) 的中点，所以平面 \(\alpha\) 位于平面 \(\beta\) 与平面 \(\gamma\) 之间. 因而直线 \(MN\) 也截平面 \(\alpha\) 于线段 \(MN\) 内的一点 \(O'\). 由平行平面截线成比例定理，
+\[
+\frac{MO'}{O'N}=\frac{EO}{OF}
+\]
+由于 \(EO=OF\)，得到 \(MO'=O'N\). 因此 \(O'\) 是 \(MN\) 的中点，线段 \(MN\) 被平面 \(\alpha\) 二等分.
+
+\solutionfigure{\bitmapfigure[width=0.42\linewidth]{img/1957/national/q5_solution_fig1.png}}
 \end{solution}
 
 \begin{problem}
@@ -63,48 +86,47 @@
 \end{problem}
 
 \begin{solution}
-由方程组得
-\[
-\begin{cases}
-\lg(2x+1)+\lg(y-2)=1,\\
-10^{xy}=10^{x}\cdot10^{y}.
-\end{cases}
-\]
-由第一式得 \((2x+1)(y-2)=10\)，由第二式得 \(xy=x+y\). 从而
-\(2xy-4x+y-12=0\)，又 \(-4x+y-12=-2x-2y\)，故 \(2x-3y+12=0\)，即 \(y=\frac{2}{3}x+4\).
-代入 \(xy=x+y\) 得 \(x\left(\frac{2}{3}x+4\right)=x+\frac{2}{3}x+4\)，即 \(\frac{2}{3}x^{2}+\frac{7}{3}x-4=0\)，所以 \(2x^{2}+7x-12=0\)，故 \(x=\frac{-7\pm\sqrt{145}}{4}\).
-代入 \(y=\frac{2}{3}x+4\) 得 \(y=\frac{17\pm\sqrt{145}}{4}\).
-因为 \(\sqrt{145}>12\)，所以当 \(y=\frac{17-\sqrt{145}}{4}\) 时，\(y-2<0\) 不合原题. 所以原方程组的解为
+由对数式有意义，必须满足 \(2x+1>0\)，\(y-2>0\). 在此定义域内，第一式等价于 \(\lg\left((2x+1)(y-2)\right)=1\)，所以 \((2x+1)(y-2)=10\). 第二式中底数 \(10>1\)，指数函数 \(10^t\) 为严格增函数，因此 \(xy=x+y\). 将前一个等式展开，得 \(2xy-4x+y-12=0\). 再用 \(xy=x+y\) 消去 \(xy\)，有 \(2(x+y)-4x+y-12=0\)，即 \(2x-3y+12=0\)，所以 \(y=\frac{2}{3}x+4\).
+代入 \(xy=x+y\)，得 \(x\left(\frac{2}{3}x+4\right)=x+\frac{2}{3}x+4\)，即 \(\frac{2}{3}x^2+\frac{7}{3}x-4=0\)，即 \(2x^2+7x-12=0\). 其判别式为 \(\Delta=7^2-4\cdot2\cdot(-12)=145\)，所以 \(x=\frac{-7\pm\sqrt{145}}{4}\). 代入 \(y=\frac{2}{3}x+4\)，分别得到 \(y=\frac{17\pm\sqrt{145}}{6}\).
+因为 \(145>144\)，所以 \(\sqrt{145}>12\). 取负号时，\(x=\frac{-7-\sqrt{145}}{4}<-\frac{19}{4}<-\frac12\)，且 \(y=\frac{17-\sqrt{145}}{6}<\frac{5}{6}<2\)，不满足定义域，舍去；取正号时，\(\sqrt{145}>7\)，从而 \(x=\frac{-7+\sqrt{145}}{4}>0\)，并且 \(y=\frac{17+\sqrt{145}}{6}>2\)，满足 \(2x+1>0\) 与 \(y-2>0\). 所有变形均在定义域内可逆；反向代入时，\(y=\frac{2}{3}x+4\) 与 \(2x^2+7x-12=0\) 分别保证 \(2xy-4x+y-12=0\) 与 \(xy=x+y\)，进而保证 \((2x+1)(y-2)=10\) 和原对数方程成立，因此原方程组的解为
 \[
 \begin{cases}
 x=\dfrac{-7+\sqrt{145}}{4},\\
-y=\dfrac{17+\sqrt{145}}{4}.
+y=\dfrac{17+\sqrt{145}}{6}.
 \end{cases}
 \]
 \end{solution}
 
 \begin{problem}
-若 \(\triangle ABC\) 的内切圆半径为 \(r\)，求证 \(BC\) 边上的高 \(AD=\frac{2r\cos\frac{B}{2}\cos\frac{C}{2}}{\sin\frac{A}{2}}\).
+若 \(\triangle ABC\) 的内切圆半径为 \(r\)，求证 \(BC\) 边上的高 \(AD=\dfrac{2r\cos\frac{B}{2}\cos\frac{C}{2}}{\sin\frac{A}{2}}\).
 \end{problem}
 
 \begin{solution}
-设 \(O\) 为 \(\triangle ABC\) 的内切圆心，\(E\) 为 \(AB\) 边上的切点，连结 \(OB\)，\(OA\)，\(OE\)，则 \(OB\)，\(OA\) 分别平分 \(\angle B\)，\(\angle A\)，而 \(OE\perp AB\). 在直角三角形 \(OEB\) 中，\(BE=OE\cot\angle EBO=r\cot\frac{B}{2}\)，同理可得 \(EA=r\cot\frac{A}{2}\).
+设 \(O\) 为 \(\triangle ABC\) 的内切圆圆心，\(E\) 为内切圆在 \(AB\) 边上的切点，连接 \(OB\)，\(OA\)，\(OE\). 由于内心在三个内角的角平分线上，\(OB\)，\(OA\) 分别平分 \(\angle B\)，\(\angle A\)；又因为半径垂直于切线，所以 \(OE\perp AB\)，且 \(OE=r\).
 
-所以 \(AB=AE+EB=r\left(\cot\frac{A}{2}+\cot\frac{B}{2}\right)\). 在直角三角形 \(ADB\) 中，\(AD=AB\sin B\)，所以
+在直角三角形 \(OEB\) 中，\(\angle EBO=\frac{B}{2}\)，因此 \(\tan\frac{B}{2}=\frac{OE}{BE}=\frac{r}{BE}\)，所以 \(BE=r\cot\frac{B}{2}\).
+在直角三角形 \(OEA\) 中，\(\angle EAO=\frac{A}{2}\)，同样有
+\(\tan\frac{A}{2}=\frac{OE}{EA}=\frac{r}{EA}\)，所以 \(EA=r\cot\frac{A}{2}\). 因而 \(AB=AE+EB=r\left(\cot\frac{A}{2}+\cot\frac{B}{2}\right)\).
+由三角形面积公式，\(\frac12BC\cdot AD=\frac12AB\cdot BC\sin B\)，故 \(AD=AB\sin B=r\left(\cot\frac{A}{2}+\cot\frac{B}{2}\right)\sin B\). 这个面积关系也涵盖高的垂足落在线段 \(BC\) 延长线上的情形.
+利用 \(\cot t=\dfrac{\cos t}{\sin t}\) 和 \(\sin B=2\sin\frac{B}{2}\cos\frac{B}{2}\)，得
 \[
-\begin{aligned}
-AD
-&=r\left(\cot\frac{A}{2}+\cot\frac{B}{2}\right)\sin B\\
-&=r\frac{\cos\frac{A}{2}\sin\frac{B}{2}+\cos\frac{B}{2}\sin\frac{A}{2}}{\sin\frac{A}{2}\sin\frac{B}{2}}\cdot2\sin\frac{B}{2}\cos\frac{B}{2}\\
-&=2r\cdot\frac{\sin\frac{1}{2}(A+B)}{\sin\frac{A}{2}}\cdot\cos\frac{B}{2}=\frac{2r\cos\frac{B}{2}\cos\frac{C}{2}}{\sin\frac{A}{2}}
-\end{aligned}
+AD=2r\frac{\cos\frac{A}{2}\sin\frac{B}{2}+\sin\frac{A}{2}\cos\frac{B}{2}}{\sin\frac{A}{2}}\cos\frac{B}{2}
+=2r\frac{\sin\frac{A+B}{2}}{\sin\frac{A}{2}}\cos\frac{B}{2}
+\]
+三角形内角和给出 \(A+B=180^{\circ}-C\)，所以
+\[
+\sin\frac{A+B}{2}=\sin\left(90^{\circ}-\frac{C}{2}\right)=\cos\frac{C}{2}
+\]
+代回即得
+\[
+AD=\frac{2r\cos\frac{B}{2}\cos\frac{C}{2}}{\sin\frac{A}{2}}
 \]
 
-\solutionfigure{\bitmapfigure[max width=0.42\linewidth]{img/1957/national/q7_solution_fig1.png}}
+\solutionfigure{\bitmapfigure[width=0.42\linewidth]{img/1957/national/q7_solution_fig1.png}}
 \end{solution}
 
 \begin{problem}
-若 \(\triangle ABC\) 为锐角三角形，以 \(BC\) 边为直径作圆，并从 \(A\) 作此圆的切线 \(AD\) 与圆切于 \(D\). 又在 \(AB\) 边上取 \(AE\) 等于 \(AD\) 并过 \(E\) 作 \(AB\) 的垂线与 \(AC\) 边的延长线交于 \(F\)，求证：
+若 \(\triangle ABC\) 为锐角三角形，以 \(BC\) 边为直径作圆，并从 \(A\) 作此圆的切线 \(AD\) 与圆切于 \(D\). 又在 \(AB\) 边上取 \(AE\) 等于 \(AD\)，并过 \(E\) 作 \(AB\) 的垂线与 \(AC\) 边的延长线交于 \(F\)，求证：
 
 \begin{enumerate}
 \item \(AE:AB=AC:AF\)；
@@ -114,29 +136,49 @@ AD
 
 \begin{solution}
 \begin{enumerate}
-\item 设 \(AB\) 与圆交于 \(G\)，则 \(AG:AD=AD:AB\). 因为 \(AE=AD\)，所以 \(AG:AE=AE:AB\). 连结 \(GC\)，则 \(GC\parallel EF\)，所以 \(AG:AE=AC:AF\). 所以 \(AE:AB=AC:AF\).
+\item 设直线 \(AB\) 与圆的另一个交点为 \(G\). 因为 \(\triangle ABC\) 为锐角三角形，\(\angle BAC<90^{\circ}\)，所以 \(A\) 在以 \(BC\) 为直径的圆外，且 \(A\)，\(G\)，\(B\) 按此顺序共线. 由点 \(A\) 的切割线定理，\(AD^2=AG\cdot AB\). 又因为 \(AE=AD\)，且 \(0<AG<AB\)，所以 \(AG<AE<AB\)，从而 \(A\)，\(G\)，\(E\)，\(B\) 按此顺序在同一条射线上.
 
-\item 因为 \(AE:AB=AC:AF\)，所以 \(AB\cdot AC=AE\cdot AF\). 因为 \(\triangle ABC\) 与 \(\triangle AEF\) 有公共角 \(\angle A\)，所以 \(\frac{\triangle ABC}{\triangle AEF}=\frac{AB\cdot AC}{AE\cdot AF}=1\). 所以 \(\triangle ABC\) 的面积 \(=\triangle AEF\) 的面积.
+由圆的直径为 \(BC\)，圆周角定理得 \(\angle BGC=90^{\circ}\)，所以 \(GC\perp AB\). 又 \(EF\perp AB\)，故 \(GC\parallel EF\). 因为 \(A\) 为锐角，\(F\) 在射线 \(AC\) 上，于是 \(\angle AGC=\angle AEF=90^{\circ}\)，\(\angle GAC=\angle EAF\). 所以 \(\triangle AGC\sim\triangle AEF\)，得 \(\frac{AG}{AE}=\frac{AC}{AF}\). 另一方面，由 \(AD^2=AG\cdot AB\) 和 \(AE=AD\)，有 \(\frac{AG}{AE}=\frac{AE}{AB}\). 两式结合，得到 \(\frac{AE}{AB}=\frac{AC}{AF}\).
+
+\item 由上面的比例式交叉相乘，得 \(AB\cdot AC=AE\cdot AF\). 三角形 \(ABC\) 与三角形 \(AEF\) 具有公共角 \(\angle A\)，故用两边及其夹角的面积公式，
+\[
+\frac{[\triangle ABC]}{[\triangle AEF]}=\frac{\frac12 AB\cdot AC\sin A}{\frac12 AE\cdot AF\sin A}=\frac{AB\cdot AC}{AE\cdot AF}=1
+\]
+所以 \([\triangle ABC]=[\triangle AEF]\)，即 \(\triangle ABC\) 的面积等于 \(\triangle AEF\) 的面积.
 \end{enumerate}
 
-\solutionfigure{\bitmapfigure[max width=0.42\linewidth]{img/1957/national/q8_solution_fig1.png}}
+\solutionfigure{\bitmapfigure[width=0.42\linewidth]{img/1957/national/q8_solution_fig1.png}}
 \end{solution}
 
 \begin{problem}
 \begin{enumerate}
-\item 求证：方程 \(x^{3}-(\sqrt2+1)x^{2}+(\sqrt2-q)x+q=0\) 的一个根是 1.
+\item 求证：方程 \(x^{3}-(\sqrt2+1)x^{2}+(\sqrt2-q)x+q=0\) 的一个根是 \(1\).
 \item 设这个方程的三个根是一个 \(\triangle ABC\) 的三个内角的正弦 \(\sin A\)，\(\sin B\)，\(\sin C\)，求 \(A\)，\(B\)，\(C\) 的度数及 \(q\) 的数值.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item 将 1 代入原方程得 \(1-(\sqrt2+1)+(\sqrt2-q)+q=0\)，故 1 适合原方程，故知原方程有一个根是 1. 原方程现有一根是 1，所以它的左端可以析出 \(x-1\) 的因式，而得 \((x-1)\left(x^{2}-\sqrt2\,x-q\right)=0\).
+\item 设多项式 \(f(x)=x^{3}-(\sqrt2+1)x^{2}+(\sqrt2-q)x+q\). 代入 \(x=1\)，得 \(f(1)=1-(\sqrt2+1)+(\sqrt2-q)+q=0\)，所以 \(1\) 是原方程的一个根. 将多项式除以因式 \(x-1\)，得 \(f(x)=(x-1)\left(x^{2}-\sqrt2x-q\right)\)，故原方程可写为 \((x-1)\left(x^{2}-\sqrt2x-q\right)=0\).
 
-\item 又因这个方程的三个根是 \(\sin A\)，\(\sin B\)，\(\sin C\)，所以这三个之中必定有一个是 1，设 \(\sin C=1\)，则 \(C=90^{\circ}\). 并且 \(\sin A\)，\(\sin B\) 是方程 \(x^{2}-\sqrt2\,x-q=0\) 的两个根.
-
-由根与系数的关系知 \(\sin A+\sin B=\sqrt2\). 由于 \(A+B=90^{\circ}\)，所以 \(\sin^{2}A+\sin^{2}B=1\). 由 \((\sin A+\sin B)^{2}=2\) 和 \(\sin^{2}A+\sin^{2}B=1\) 得 \(2\sin A\sin B=1\). 再由 \(\sin^{2}A+\sin^{2}B=1\) 和 \(2\sin A\sin B=1\) 得 \((\sin A-\sin B)^{2}=0\). 所以 \(\sin A=\sin B\)，所以 \(A=B=45^{\circ}\).
-
-由根与系数的关系及上式知 \(-q=\sin A\sin B=\frac{1}{2}\)，所以 \(q=-\frac{1}{2}\).
+\item 三角形内角都在 \(0^{\circ}\) 与 \(180^{\circ}\) 之间，而三个根中有一个根是 \(1\). 因此三个数 \(\sin A\)，\(\sin B\)，\(\sin C\) 中有一个等于 \(1\). 不妨设 \(\sin C=1\)，则 \(C=90^{\circ}\)，从而 \(A+B=90^{\circ}\). 另外两个根 \(\sin A\)，\(\sin B\) 是方程 \(x^{2}-\sqrt2x-q=0\) 的两个根，由根与系数的关系，\(\sin A+\sin B=\sqrt2\)，\(\sin A\sin B=-q\).
+由于 \(B=90^{\circ}-A\)，有 \(\sin B=\cos A\)，因此
+\[
+\sin^{2}A+\sin^{2}B=\sin^{2}A+\cos^{2}A=1
+\]
+另一方面，将 \(\sin A+\sin B=\sqrt2\) 两边平方，得 \(1+2\sin A\sin B=2\)，所以 \(\sin A\sin B=\frac{1}{2}\).
+于是
+\[
+(\sin A-\sin B)^2=\sin^2A+\sin^2B-2\sin A\sin B=1-1=0
+\]
+所以 \(\sin A=\sin B\). 因为 \(A\)，\(B\) 都是锐角，正弦函数在 \(0^{\circ}\) 到 \(90^{\circ}\) 上严格递增，故 \(A=B\). 结合 \(A+B=90^{\circ}\)，得
+\[
+A=B=45^{\circ}
+\]
+并且 \(C=90^{\circ}\).
+最后由 \(\sin A\sin B=-q\) 和 \(\sin A\sin B=\frac12\)，得
+\[
+q=-\frac12
+\]
 \end{enumerate}
 \end{solution}

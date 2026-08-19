@@ -16,6 +16,10 @@
 D
 \end{answer}
 
+\begin{solution}
+因为 \(\frac{\pi}{2}<2<\pi\)，所以 \(\sin 2>0\)，\(\cos 2<0\). 复数 \(z=\sin 2+\i\cos 2\) 对应的点的横坐标为正、纵坐标为负，故该点位于第四象限.
+\end{solution}
+
 \begin{problem}
 定义集合运算： \( A * B = \{z \mid z = xy, x \in A, y \in B\} \). 设 \( A = \{1, 2\} \)，\( B = \{0, 2\} \)，则集合 \( A * B \) 的所有元素之和为（\quad）
 
@@ -29,6 +33,14 @@ D
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+根据定义，取 \(x\in A\)、\(y\in B\) 可得乘积 \(1\cdot0=0\)、\(1\cdot2=2\)、\(2\cdot0=0\)、\(2\cdot2=4\). 因此
+\[
+A*B=\{0,2,4\}
+\]
+其所有元素之和为 \(0+2+4=6\)，故选 D.
+\end{solution}
 
 \begin{problem}
 若函数 \( y = f(x) \) 的值域是 \( \left[\frac{1}{2}, 3\right] \)，则函数 \( F(x) = f(x) + \frac{1}{f(x)} \) 的值域是（\quad）
@@ -44,6 +56,18 @@ D
 B
 \end{answer}
 
+\begin{solution}
+令 \(t=f(x)\)，则 \(t\in\left[\frac12,3\right]\)，且所求函数值为
+\[
+F=t+\frac1t
+\]
+在 \(t>0\) 时，函数 \(t+\frac1t\) 的导数为 \(1-\frac1{t^2}\)，所以它在 \(\left[\frac12,1\right]\) 上递减，在 \([1,3]\) 上递增. 因而最小值为 \(2\)，最大值为
+\[
+\max\left\{\frac12+2,\,3+\frac13\right\}=\frac{10}{3}
+\]
+所以值域为 \(\left[2,\frac{10}{3}\right]\)，故选 B.
+\end{solution}
+
 \begin{problem}
 \(\displaystyle \lim\limits_{x\to 1}\frac{\sqrt{x + 3} - 2}{\sqrt{x} - 1} =\) （\quad）
 
@@ -57,6 +81,20 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+当 \(x\ne1\) 时，分子、分母分别有理化，得
+\[
+\frac{\sqrt{x+3}-2}{\sqrt{x}-1}
+=\frac{x-1}{\sqrt{x+3}+2}\cdot\frac{\sqrt{x}+1}{x-1}
+=\frac{\sqrt{x}+1}{\sqrt{x+3}+2}
+\]
+令 \(x\to1\)，得到
+\[
+\lim_{x\to1}\frac{\sqrt{x+3}-2}{\sqrt{x}-1}=\frac{2}{4}=\frac12
+\]
+故选 A.
+\end{solution}
 
 \begin{problem}
 在数列 \(\{a_{n}\}\) 中，\(a_{1} = 2\)，\(a_{n+1} = a_{n} + \ln \left(1 + \frac{1}{n}\right)\)，则 \(a_{n} =\)（\quad）
@@ -72,6 +110,20 @@ A
 A
 \end{answer}
 
+\begin{solution}
+由递推式逐项相加，得到
+\[
+a_n=a_1+\sum_{k=1}^{n-1}\ln\left(1+\frac1k\right)
+=2+\sum_{k=1}^{n-1}\ln\frac{k+1}{k}
+\]
+利用对数的运算性质，
+\[
+\sum_{k=1}^{n-1}\ln\frac{k+1}{k}
+=\ln\prod_{k=1}^{n-1}\frac{k+1}{k}=\ln n
+\]
+因此 \(a_n=2+\ln n\)，故选 A.
+\end{solution}
+
 \begin{problem}
 函数 \( y = \tan x + \sin x - |\tan x - \sin x| \) 在区间 \(\left(\frac{\pi}{2}, \frac{3\pi}{2}\right)\) 内的图象大致是 （\quad）
 
@@ -85,6 +137,20 @@ A
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+在 \(\left(\frac\pi2,\pi\right)\) 内，\(\sin x>0\)、\(\cos x<0\)，所以 \(\tan x<0<\sin x\)，从而
+\[
+y=\tan x+\sin x-(\sin x-\tan x)=2\tan x
+\]
+该段图象从 \(x\to\frac\pi2+\) 时的负无穷上升到 \(x\to\pi-\) 时的 \(0\).
+
+在 \(\left(\pi,\frac{3\pi}{2}\right)\) 内，\(\sin x<0\)、\(\cos x<0\)，所以 \(\tan x>0>\sin x\)，从而
+\[
+y=\tan x+\sin x-(\tan x-\sin x)=2\sin x
+\]
+在 \(x=\pi\) 时，\(y=0\)，该点属于定义域；第二段图象从 \(x\to\pi+\) 时的 \(0\) 下降到 \(x\to\frac{3\pi}{2}-\) 时的 \(-2\)，而 \(x=\frac\pi2\) 和 \(x=\frac{3\pi}{2}\) 不属于定义域. 这与选项 D 的图象相符，故选 D.
+\end{solution}
 
 \begin{problem}
 已知 \(F_{1}\)，\(F_{2}\) 是椭圆的两个焦点，满足 \(\overrightarrow{MF_{1}} \cdot \overrightarrow{MF_{2}} = 0\) 的点 \(M\) 总在椭圆内部，则椭圆离心率的取值范围是（\quad）
@@ -100,6 +166,32 @@ D
 C
 \end{answer}
 
+\begin{solution}
+设椭圆的半长轴、半短轴和半焦距分别为 \(a\)、\(b\)、\(c\)，则 \(a>b>0\)，且
+\[
+a^2=b^2+c^2
+\]
+取椭圆中心为原点、焦点为 \(F_1(-c,0)\)、\(F_2(c,0)\). 对点 \(M(x,y)\)，条件
+\[
+\overrightarrow{MF_1}\cdot\overrightarrow{MF_2}=0
+\]
+化为
+\[
+(x+c)(x-c)+y^2=0
+\]
+即 \(x^2+y^2=c^2\). 因而这些点构成以椭圆中心为圆心、半径为 \(c\) 的圆.
+
+该圆上的点都在椭圆内部时，圆在短轴端点处最容易到达椭圆边界，因此必须有 \(c<b\). 于是
+\[
+e=\frac ca<\frac ba=\sqrt{1-e^2}
+\]
+由于 \(e>0\)，平方后得 \(2e^2<1\)，即
+\[
+0<e<\frac{\sqrt2}{2}
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
 \((1 + \sqrt[3]{x})^6\left(1 + \frac{1}{\sqrt[4]{x}}\right)^{10}\) 展开式中的常数项为（\quad）
 
@@ -114,6 +206,21 @@ C
 D
 \end{answer}
 
+\begin{solution}
+第一项取 \(\mathrm C_6^r(\sqrt[3]{x})^r\)，第二项取 \(\mathrm C_{10}^k(x^{-1/4})^k\)，所得项的幂为
+\[
+\frac r3-\frac k4
+\]
+成为常数项的条件是 \(\frac r3-\frac k4=0\)，即 \(4r=3k\). 在 \(0\leqslant r\leqslant6\)、\(0\leqslant k\leqslant10\) 内，只有
+\((r,k)=(0,0)\)，\((3,4)\)，\((6,8)\).
+所以常数项为
+\[
+\mathrm C_6^0\mathrm C_{10}^0+\mathrm C_6^3\mathrm C_{10}^4+\mathrm C_6^6\mathrm C_{10}^8
+=1+20\times210+1\times45=4246
+\]
+故选 D.
+\end{solution}
+
 \begin{problem}
 若 \(0 < a_{1} < a_{2}\)，\(0 < b_{1} < b_{2}\)，且 \(a_{1} + a_{2} = b_{1} + b_{2} = 1\)，则下列代数式中值最大的是（\quad）
 
@@ -127,6 +234,25 @@ D
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+令 \(u=a_2-a_1\)、\(v=b_2-b_1\)，则 \(0<u<1\)、\(0<v<1\)，并且
+\(a_1=\frac{1-u}{2}\)，\(a_2=\frac{1+u}{2}\)，\(b_1=\frac{1-v}{2}\)，\(b_2=\frac{1+v}{2}\).
+记四个选项中的代数式依次为 \(X_1\)，\(X_2\)，\(X_3\)，\(X_4\). 直接代入得
+\(X_1=\frac{1+uv}{2}\)，\(X_2=\frac{2-u^2-v^2}{4}\)，\(X_3=\frac{1-uv}{2}\)，\(X_4=\frac12\).
+于是
+\[
+X_1-X_3=uv>0
+\]
+\[
+X_1-X_4=\frac{uv}{2}>0
+\]
+以及
+\[
+X_1-X_2=\frac{(u+v)^2}{4}>0
+\]
+因此 \(X_1\) 最大，故选 A.
+\end{solution}
 
 \begin{problem}
 连结球面上两点的线段称为球的弦. 半径为 \(4\) 的球的两条弦 \(AB\)，\(CD\) 的长度分别等于 \(2\sqrt{7}\)，\(4\sqrt{3}\)，\(M\)，\(N\) 分别为 \(AB\)，\(CD\) 的中点，每条弦的两端都在球面上运动，有下列四个命题：
@@ -149,6 +275,21 @@ A
 C
 \end{answer}
 
+\begin{solution}
+设球心为 \(O\). 弦中点到球心的连线垂直于弦，因此
+\(OM=\sqrt{4^2-\left(\frac{2\sqrt7}{2}\right)^2}=3\)，\(ON=\sqrt{4^2-\left(\frac{4\sqrt3}{2}\right)^2}=2\).
+
+弦 \(AB\) 的所在直线上各点到 \(O\) 的距离不小于直线到 \(O\) 的距离 \(OM=3\)，而 \(ON=2\)，所以弦 \(AB\) 不可能经过 \(N\)，第二个命题错误.
+
+弦 \(CD\) 所在直线到 \(O\) 的距离为 \(2\). 可以取一条经过 \(M\) 且到 \(O\) 的距离为 \(2\) 的直线；其上从垂足到 \(M\) 的距离为 \(\sqrt{OM^2-ON^2}=\sqrt5<2\sqrt3\)，故以该垂足为中点截取长度为 \(4\sqrt3\) 的弦时，\(M\) 在线段 \(CD\) 上. 因此第一个命题正确.
+
+又由三角不等式，
+\[
+|OM-ON|\leqslant MN\leqslant OM+ON
+\]
+即 \(1\leqslant MN\leqslant5\). 当 \(M\)，\(O\)，\(N\) 共线且同向时取最小值 \(1\)，反向时取最大值 \(5\)，所以第三、第四个命题均正确. 真命题共有 3 个，故选 C.
+\end{solution}
+
 \begin{problem}
 电子钟一天显示的时间是从 \(00{:}00\) 到 \(23{:}59\). 每一时刻都由四个数字组成. 则一天中任一时刻显示的四个数字之和为 \(23\) 的概率为（\quad）
 
@@ -162,6 +303,18 @@ C
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+一天共有 \(24\times60=1440\) 个时刻，且每个时刻等可能.
+
+若小时的十位为 \(0\)，四个数字和为 \(23\) 只能是 \(09{:}59\). 若小时的十位为 \(1\)，需满足“小时个位、分钟十位、分钟个位”之和为 \(22\)，只有 \(18{:}59\)、\(19{:}49\)、\(19{:}58\). 小时的十位为 \(2\) 时，四个数字和的最大值为 \(2+3+5+9=19\)，不可能为 \(23\).
+
+所以满足条件的时刻共有 4 个，所求概率为
+\[
+\frac4{1440}=\frac1{360}
+\]
+故选 C.
+\end{solution}
 
 \begin{problem}
 已知函数 \( f(x) = 2mx^2 - 2(4 - m)x + 1 \)，\( g(x) = mx \)，若对于任一实数 \( x \)，\( f(x) \) 与 \( g(x) \) 的值至少有一个为正数，则实数 \( m \) 的取值范围是（\quad）
@@ -177,6 +330,34 @@ C
 B
 \end{answer}
 
+\begin{solution}
+若 \(m<0\)，当 \(x\to+\infty\) 时，\(f(x)\to-\infty\)，且 \(g(x)=mx<0\)，所以对充分大的正数 \(x\)，二者都不是正数，条件不成立. 若 \(m=0\)，取 \(x=1\) 得 \(f(1)=-7\)、\(g(1)=0\)，条件也不成立. 因此必须有 \(m>0\).
+
+当 \(m>0\) 且 \(x\geqslant0\) 时，若 \(x>0\)，则 \(g(x)>0\)；若 \(x=0\)，则 \(f(0)=1>0\). 所以只需保证 \(x<0\) 时 \(f(x)>0\).
+
+此时
+\[
+f(x)=2mx^2+(2m-8)x+1
+\]
+当 \(0<m\leqslant4\) 时，\(x<0\) 有
+\[
+f'(x)=4mx+2m-8<0
+\]
+所以 \(f(x)>f(0)=1>0\). 当 \(m>4\) 时，抛物线顶点横坐标为
+\[
+x_0=-\frac{2m-8}{4m}=\frac{4-m}{2m}<0
+\]
+且顶点处的最小值为
+\[
+f(x_0)=1-\frac{(2m-8)^2}{8m}=-\frac{(m-2)(m-8)}{2m}
+\]
+要使该最小值为正，必须且只需 \(4<m<8\). 结合前一种情形，得到
+\[
+0<m<8
+\]
+故选 B.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -187,6 +368,17 @@ B
 22
 \end{answer}
 
+\begin{solution}
+由 \(\overrightarrow{BC}=(6,9)\)，线段的两个三等分点为
+\(E=B+\frac13\overrightarrow{BC}=(5,1)\)，\(F=B+\frac23\overrightarrow{BC}=(7,4)\).
+所以
+\(\overrightarrow{AE}=(4,-1)\)，\(\overrightarrow{AF}=(6,2)\)
+从而
+\[
+\overrightarrow{AE}\cdot\overrightarrow{AF}=4\times6+(-1)\times2=22
+\]
+\end{solution}
+
 \begin{problem}
 不等式 \(2^{x - \frac{3}{x} + 1} \leqslant \frac{1}{2}\) 的解集为\fillinblank{}.
 \end{problem}
@@ -194,6 +386,23 @@ B
 \begin{answer}
 \(\left(-\infty,-3\right]\cup\left(0,1\right]\)
 \end{answer}
+
+\begin{solution}
+因为底数 \(2>1\)，原不等式等价于
+\(x-\frac3x+1\leqslant-1\)，即 \(x-\frac3x+2\leqslant0\)，且 \(x\ne0\).
+当 \(x>0\) 时，乘以正数 \(x\)，得
+\[
+x^2+2x-3=(x-1)(x+3)\leqslant0
+\]
+故 \(0<x\leqslant1\). 当 \(x<0\) 时，乘以负数 \(x\) 后不等号改变方向，得
+\[
+x^2+2x-3\geqslant0
+\]
+故 \(x\leqslant-3\). 因此解集为
+\[
+(-\infty,-3]\cup(0,1]
+\]
+\end{solution}
 
 \begin{problem}
 过抛物线 \(x^{2} = 2py\) （\(p > 0\)）的焦点 \(F\) 作倾斜角为 \(30^{\circ}\) 的直线，与抛物线分别交于 \(A\)，\(B\) 两点（点 \(A\) 在 \(y\) 轴左侧），则 \(\frac{|AF|}{|FB|} =\)\fillinblank{}.
@@ -203,10 +412,26 @@ B
 \(\frac{1}{3}\)
 \end{answer}
 
+\begin{solution}
+抛物线 \(x^2=2py\) 的焦点为 \(F\left(0,\frac p2\right)\). 过焦点且倾斜角为 \(30^\circ\) 的直线方程为
+\[
+y=\frac{x}{\sqrt3}+\frac p2
+\]
+与抛物线联立，得
+\(x^2=2p\left(\frac{x}{\sqrt3}+\frac p2\right)\)，\(x^2-\frac{2p}{\sqrt3}x-p^2=0\).
+其两个根分别为
+\(x_A=-\frac p{\sqrt3}\)，\(x_B=\sqrt3p\)
+其中 \(x_A<0<x_B\). 因为 \(A\)，\(F\)，\(B\) 共线，且横坐标差与同一直线上距离成固定比例，所以
+\[
+\frac{|AF|}{|FB|}=\frac{|x_A-0|}{|x_B-0|}
+=\frac{p/\sqrt3}{\sqrt3p}=\frac13
+\]
+\end{solution}
+
 \begin{problem}
 如图 1，一个正四棱柱形的密闭容器水平放置，其底部镶嵌了同底的正四棱锥形实心装饰块，容器内盛有 \(a\text{ 升}\) 水时，水面恰好经过正四棱锥的顶点 \(P\). 如果将容器倒置，水面也恰好过点 \(P\)（图 2）. 有下列四个命题：
 
-\begin{circlelist}[label=\Alph*.,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]
+\begin{circlelist}
 \item 正四棱锥的高等于正四棱柱高的一半；
 \item 将容器侧面水平放置时，水面也恰好过点 \(P\)；
 \item 任意摆放该容器，当水面静止时，水面都恰好经过点 \(P\)；
@@ -214,12 +439,66 @@ B
 \end{circlelist}
 其中真命题的代号是\fillinblank{}.（写出所有真命题的代号）
 
-\bitmapfigure[max width=0.6\linewidth]{img/2008/jiangxi_science/q16_fig1.png}
+\bitmapfigure[max width=0.55\linewidth]{img/2008/jiangxi_science/q16_fig1.png}
 \end{problem}
 
 \begin{answer}
 B，D
 \end{answer}
+
+\begin{solution}
+设正四棱柱的底面边长为 \(s\)，高为 \(H\)，正四棱锥的高为 \(h\). 在图 1 中，水面经过顶点 \(P\)，所以水的体积为正四棱柱内高为 \(h\) 的部分减去正四棱锥体积，即
+\[
+a=s^2h-\frac13s^2h=\frac23s^2h
+\]
+倒置后，点 \(P\) 距容器底面为 \(H-h\)，水面经过 \(P\)，且水面以下没有装饰块，所以
+\[
+a=s^2(H-h)
+\]
+两式相等，得
+\[
+\frac23h=H-h,\quad\text{即}\quad H=\frac53h
+\]
+因此正四棱锥的高不是正四棱柱高的一半，命题 A 错误.
+
+容器除去实心装饰块后的总容积为
+\[
+V=s^2H-\frac13s^2h
+=s^2\left(\frac53h-\frac13h\right)
+=\frac43s^2h=2a
+\]
+所以再注入 \(a\) 升水后恰好装满，命题 D 正确.
+
+当容器的一个侧面水平放置时，经过 \(P\) 且平行于该侧面的水平面是容器和正四棱锥的对称面，分别把容器空间和装饰块体积平分. 由 \(V=2a\)，当前水量正好是可用容积的一半，故水面恰好经过 \(P\)，命题 B 正确.
+
+说明命题 C 错误：将正四棱锥的一个侧面水平放置，若水面经过 \(P\)，水面就必须与该侧面重合. 在原坐标系中取底面为
+\(-\frac{s}{2}\leqslant x\)，\(y\leqslant\frac{s}{2}\)、\(z=0\)，顶面为 \(z=H\)，并令 \(P\left(0,0,h\right)\). 取包含底边 \(y=\frac{s}{2}\) 的侧面，其所在平面为
+
+\[
+y+\frac{s}{2h}z=\frac{s}{2}
+\]
+
+该平面一侧包含整个正四棱锥. 由 \(H=\frac53h\)，棱柱位于该侧的体积为
+
+\[
+V_-=\int_0^H s\left(s-\frac{s}{2h}z\right)\,\mathrm dz
+=s^2\left(H-\frac{H^2}{4h}\right)=\frac{35}{36}s^2h
+\]
+
+因此该侧的可用空间体积为
+
+\[
+V_--\frac13s^2h=\frac{23}{36}s^2h
+\]
+
+另一侧的可用空间体积为
+
+\[
+V-\left(V_--\frac13s^2h\right)=\frac{25}{36}s^2h
+\]
+
+而当前水量 \(a=\frac23s^2h=\frac{24}{36}s^2h\)，两者均不等于 \(a\). 所以并非任意摆放时水面都经过 \(P\). 综上，真命题为 B，D.
+\end{solution}
 
 \section{解答题}
 
@@ -231,9 +510,9 @@ B，D
 因为 \(A+B+C=\pi\)，所以 \(\tan\frac{A+B}{2}=\cot\frac{C}{2}\). 令 \(t=\tan\frac{C}{2}\)，则 \(t>0\)，且
 \(t+\dfrac{1}{t}=4\)，即 \(t^2-4t+1=0\)，从而 \(t=2-\sqrt{3}\) 或 \(t=2+\sqrt{3}\). 因此 \(C=30^\circ\) 或 \(C=150^\circ\).
 
-又 \(A=\pi-B-C\)，由已知条件得 \(\sin B\sin C=\sin^2\dfrac{B+C}{2}\). 利用积化和差公式，左边为 \(\dfrac{\cos(B-C)-\cos(B+C)}{2}\)，右边为 \(\dfrac{1-\cos(B+C)}{2}\)，所以 \(\cos(B-C)=1\). 由于 \(B\)，\(C\) 均为三角形内角，故 \(B=C\).
+又 \(A=\pi-B-C\)，由已知条件得 \(\sin B\sin C=\sin^2\dfrac{B+C}{2}\). 利用积化和差公式，左边为 \(\dfrac{\cos(B-C)-\cos(B+C)}{2}\)，右边为 \(\dfrac{1-\cos(B+C)}{2}\)，所以 \(\cos(B-C)=1\).
 
-若 \(C=150^\circ\)，则 \(A=\pi-B-C<0\)，不合题意，因此 \(B=C=30^\circ\)，\(A=120^\circ\). 由正弦定理，\(\dfrac{a}{\sin A}=\dfrac{b}{\sin B}=\dfrac{c}{\sin C}\)，且 \(\dfrac{a}{\sin A}=\dfrac{2\sqrt{3}}{\sqrt{3}/2}=4\). 所以 \(b=4\sin30^\circ=2\)，\(c=4\sin30^\circ=2\).
+由 \(\cos(B-C)=1\) 且 \(B\)，\(C\in(0,\pi)\)，可知 \(B=C\). 若 \(C=150^\circ\)，则 \(B=150^\circ\)，从而 \(A+B+C>180^\circ\)，不合题意. 因此 \(B=C=30^\circ\)，\(A=120^\circ\). 由正弦定理，\(\dfrac{a}{\sin A}=\dfrac{b}{\sin B}=\dfrac{c}{\sin C}\)，且 \(\dfrac{a}{\sin A}=\dfrac{2\sqrt{3}}{\sqrt{3}/2}=4\). 所以 \(b=4\sin30^\circ=2\)，\(c=4\sin30^\circ=2\).
 \end{solution}
 
 \begin{problem}
@@ -284,7 +563,7 @@ B，D
 \begin{enumerate}
 \item 设等差数列 \(\{a_n\}\) 的公差为 \(d\)，等比数列 \(\{b_n\}\) 的公比为 \(q\). 因为 \(a_n=3+(n-1)d\) 对任意正整数 \(n\) 都是正整数，所以 \(d\) 是整数且 \(d\geqslant0\). 又 \(b_1=1\)，所以 \(b_n=q^{n-1}\)，并且 \(S_2=3+(3+d)=6+d\). 由 \(b_2S_2=64\) 得 \(q(6+d)=64\)，从而 \(q>0\).
 
-由 \(b_{a_n}=q^{a_n-1}=q^{2+(n-1)d}\)，可知 \(\{b_{a_n}\}\) 的公比为 \(q^d\)，故 \(q^d=64\). 因为 \(d=0\) 时 \(q^d=1\)，不满足 \(q^d=64\)，所以 \(d>0\). 由 \(q=\dfrac{64}{d+6}\) 可知 \(q\) 是正有理数. 设 \(q=\dfrac{r}{s}\)，其中 \(r,s\) 是互质的正整数，则 \(r^d=64s^d\)，故 \(s^d\mid r^d\). 由 \(r\)，\(s\) 互质可得 \(s=1\)，所以 \(q\) 是正整数. 再由 \(q^d=64=2^6\)，正整数 \(q\) 只能为 \(2^k\)，且 \(kd=6\)，于是 \((q,d)\) 只能是 \((64,1)\)，\((8,2)\)，\((4,3)\) 或 \((2,6)\). 代入 \(q(6+d)=64\) 检验，只有 \(q=8\)，\(d=2\) 满足条件. 所以 \(a_n=3+2(n-1)=2n+1\)，\(b_n=8^{n-1}\).
+由 \(b_{a_n}=q^{a_n-1}=q^{2+(n-1)d}\)，可知 \(\{b_{a_n}\}\) 的公比为 \(q^d\)，故 \(q^d=64\). 因为 \(d=0\) 时 \(q^d=1\)，不满足 \(q^d=64\)，所以 \(d>0\). 由 \(q=\dfrac{64}{d+6}\) 可知 \(q\) 是正有理数. 设 \(q=\dfrac{r}{s}\)，其中 \(r\)，\(s\) 是互质的正整数，则 \(r^d=64s^d\)，故 \(s^d\mid r^d\). 由 \(r\)，\(s\) 互质可得 \(s=1\)，所以 \(q\) 是正整数. 再由 \(q^d=64=2^6\)，正整数 \(q\) 只能为 \(2^k\)，且 \(kd=6\)，于是 \((q,d)\) 只能是 \((64,1)\)，\((8,2)\)，\((4,3)\) 或 \((2,6)\). 代入 \(q(6+d)=64\) 检验，只有 \(q=8\)，\(d=2\) 满足条件. 所以 \(a_n=3+2(n-1)=2n+1\)，\(b_n=8^{n-1}\).
 
 \item 由 \(a_n=2n+1\) 得
 \(S_n=\dfrac{n\left(a_1+a_n\right)}{2}=\dfrac{n(3+2n+1)}{2}=n(n+2)\). 因而
@@ -305,7 +584,7 @@ B，D
 \begin{enumerate}
 \item 以 \(OA\)，\(OB\)，\(OC\) 所在直线分别为 \(x\)，\(y\)，\(z\) 轴建立空间直角坐标系，则 \(O(0,0,0)\)，\(A(2,0,0)\)，\(B(0,2,0)\)，\(C(0,0,2)\). 由中点坐标公式，得 \(E(1,1,0)\)，\(F(1,0,1)\)，\(H\left(1,\dfrac{1}{2},\dfrac{1}{2}\right)\). 已知 \(OA_1=\dfrac{3}{2}\)，故 \(A_1\left(\dfrac{3}{2},0,0\right)\).
 
-平面 \(A_1EF\) 的方程为 \(2x+y+z=3\)，所以它与 \(OB\)，\(OC\) 的交点分别为 \(B_1(0,3,0)\)，\(C_1(0,0,3)\). 因此 \(\overrightarrow{B_1C_1}=(0,-3,3)\)，\(\overrightarrow{OA}=(2,0,0)\)，\(\overrightarrow{AH}=\left(-1,\dfrac{1}{2},\dfrac{1}{2}\right)\). 于是 \(\overrightarrow{B_1C_1}\cdot\overrightarrow{OA}=0\)，\(\overrightarrow{B_1C_1}\cdot\overrightarrow{AH}=0\). 直线 \(OA\) 与 \(AH\) 在平面 \(OAH\) 内相交，所以 \(B_1C_1\perp\) 平面 \(OAH\).
+平面 \(A_1EF\) 的方程为 \(2x+y+z=3\)，所以它与 \(OB\)，\(OC\) 的交点分别为 \(B_1(0,3,0)\)，\(C_1(0,0,3)\). 因此 \(\overrightarrow{B_1C_1}=(0,-3,3)\)，\(\overrightarrow{OA}=(2,0,0)\)，\(\overrightarrow{AH}=\left(-1,\dfrac{1}{2},\dfrac{1}{2}\right)\). 于是 \(\overrightarrow{B_1C_1}\cdot\overrightarrow{OA}=0\)，\(\overrightarrow{B_1C_1}\cdot\overrightarrow{AH}=0\). 由于 \(\overrightarrow{OA}\) 与 \(\overrightarrow{AH}\) 不共线，\(\overrightarrow{B_1C_1}\) 是平面 \(OAH\) 的法向量方向. 又平面 \(OAH\) 的方程为 \(z-y=0\)，点 \(Q\left(0,\frac32,\frac32\right)\) 同时在直线 \(B_1C_1\) 和平面 \(OAH\) 上，因此 \(B_1C_1\perp\) 平面 \(OAH\).
 
 \item 平面 \(OA_1B_1\) 的方程为 \(z=0\)，其一个法向量为 \(\bs{n}_1=(0,0,1)\). 平面 \(A_1B_1C_1\) 的方程为 \(2x+y+z=3\)，其一个法向量为 \(\bs{n}_2=(2,1,1)\). 设二面角 \(O-A_1B_1-C_1\) 的平面角为 \(\theta\)，取其锐角，则
 \(\cos\theta=\dfrac{|\bs{n}_1\cdot\bs{n}_2|}{|\bs{n}_1||\bs{n}_2|}=\dfrac{1}{\sqrt{6}}\). 因此 \(\tan\theta=\sqrt{5}\)，且 \(0<\theta<\dfrac{\pi}{2}\)，所以二面角的大小为 \(\arctan\sqrt{5}\).
@@ -351,8 +630,9 @@ B，D
 再证上界. 不妨设 \(u\leqslant v\leqslant w\). 若 \(u+v\geqslant6\)，则 \(v\geqslant3\)，\(w\geqslant3\)，从而 \(\dfrac{1}{\sqrt{1+v}}\leqslant\dfrac{1}{2}\)，\(\dfrac{1}{\sqrt{1+w}}\leqslant\dfrac{1}{2}\)，且 \(\dfrac{1}{\sqrt{1+u}}<1\)，故 \(f(x)<2\).
 
 若 \(u+v<6\)，因为 \(u>0\)，有 \(2\sqrt{1+u}<u+2\)，从而
-\(\dfrac{1}{\sqrt{1+u}}<\dfrac{u+2}{2(1+u)}=1-\dfrac{u}{2(1+u)}\)；同理，
-\(\dfrac{1}{\sqrt{1+v}}<1-\dfrac{v}{2(1+v)}\). 又由均值不等式，
+\(\dfrac{1}{\sqrt{1+u}}<\dfrac{u+2}{2(1+u)}=1-\dfrac{u}{2(1+u)}\). 对 \(v>0\) 同样有
+\(2\sqrt{1+v}<v+2\)，故
+\(\dfrac{1}{\sqrt{1+v}}<\dfrac{v+2}{2(1+v)}=1-\dfrac{v}{2(1+v)}\). 又由均值不等式，
 \(\dfrac{u}{2(1+u)}+\dfrac{v}{2(1+v)}\geqslant\sqrt{\dfrac{uv}{(1+u)(1+v)}}\).
 
 由于 \(u+v<6\)，有 \((1+u)(1+v)=uv+u+v+1<uv+8\). 再由 \(w=\dfrac{8}{uv}\)，得

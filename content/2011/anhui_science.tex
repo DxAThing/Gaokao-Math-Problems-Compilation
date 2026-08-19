@@ -6,7 +6,7 @@
 设 \(\i\) 是虚数单位，复数 \(\frac{1 + a\i}{2 - \i}\) 为纯虚数，则实数 \(a\) 为（\quad）
 
 \choices
-    {2}
+    {\(2\)}
     {\(-2\)}
     {\(-\frac{1}{2}\)}
     {\(\frac{1}{2}\)}
@@ -16,13 +16,21 @@
 A
 \end{answer}
 
+\begin{solution}
+分母乘以共轭复数，得
+\[
+\frac{1+a\i}{2-\i}=\frac{(1+a\i)(2+\i)}{5}=\frac{2-a+(1+2a)\i}{5}
+\]
+复数为纯虚数，所以实部为零，即 \(2-a=0\)，解得 \(a=2\)，故选 A.
+\end{solution}
+
 \begin{problem}
 双曲线 \(2x^{2} - y^{2} = 8\) 的实轴长是（\quad）
 
 \choices
-    {2}
+    {\(2\)}
     {\(2\sqrt{2}\)}
-    {4}
+    {\(4\)}
     {\(4\sqrt{2}\)}
 \end{problem}
 
@@ -30,39 +38,67 @@ A
 C
 \end{answer}
 
+\begin{solution}
+将方程化为标准形式：
+\[
+\frac{x^{2}}{4}-\frac{y^{2}}{8}=1
+\]
+因此双曲线的实半轴长为 \(2\)，实轴长为 \(2\times2=4\)，故选 C.
+\end{solution}
+
 \begin{problem}
 设 \( f(x) \) 是定义在 \( \R \) 上的奇函数，当 \( x \leqslant 0 \) 时，\( f(x) = 2x^2 - x \)，则 \( f(1) = \)（\quad）
 
 \choices
     {\(-3\)}
     {\(-1\)}
-    {1}
-    {3}
+    {\(1\)}
+    {\(3\)}
 \end{problem}
 
 \begin{answer}
 A
 \end{answer}
 
+\begin{solution}
+因为 \(-1\leqslant0\)，所以
+\[
+f(-1)=2(-1)^2-(-1)=3
+\]
+函数为奇函数，故 \(f(1)=-f(-1)=-3\)，故选 A.
+\end{solution}
+
 \begin{problem}
 设变量 \(x\)，\(y\) 满足 \(|x| + |y| \leqslant 1\)，则 \(x + 2y\) 的最大值和最小值分别为（\quad）
 
 \choices
-    {1, \(-1\)}
-    {2, \(-2\)}
-    {1, \(-2\)}
-    {2, \(-1\)}
+    {\(1\)，\(-1\)}
+    {\(2\)，\(-2\)}
+    {\(1\)，\(-2\)}
+    {\(2\)，\(-1\)}
 \end{problem}
 
 \begin{answer}
 B
 \end{answer}
 
+\begin{solution}
+由三角不等式，
+\[
+x+2y\leqslant |x|+2|y|=(|x|+|y|)+|y|\leqslant2
+\]
+当 \((x,y)=(0,1)\) 时取到上界. 类似地，
+\[
+x+2y\geqslant-|x|-2|y|\geqslant-2
+\]
+当 \((x,y)=(0,-1)\) 时取到下界. 因此最大值和最小值分别为 \(2\)，\(-2\)，故选 B.
+\end{solution}
+
 \begin{problem}
 在极坐标系中，点 \(\left(2, \frac{\pi}{3}\right)\) 到圆 \(\rho = 2\cos \theta\) 的圆心的距离为（\quad）
 
 \choices
-    {2}
+    {\(2\)}
     {\(\sqrt{4 + \frac{\pi^2}{9}}\)}
     {\(\sqrt{1 + \frac{\pi^2}{9}}\)}
     {\(\sqrt{3}\)}
@@ -72,49 +108,89 @@ B
 D
 \end{answer}
 
+\begin{solution}
+极坐标点 \(\left(2,\frac{\pi}{3}\right)\) 的直角坐标为
+\[
+\left(2\cos\frac{\pi}{3},2\sin\frac{\pi}{3}\right)=(1,\sqrt3)
+\]
+圆的方程满足 \(\rho^2=2\rho\cos\theta\)，所以其直角坐标方程为 \(x^2+y^2=2x\)，即 \((x-1)^2+y^2=1\)，圆心为 \((1,0)\). 所求距离为
+\[
+\sqrt{(1-1)^2+\left(\sqrt3-0\right)^2}=\sqrt3
+\]
+故选 D.
+\end{solution}
+
 \begin{problem}
 一个空间几何体的三视图如图所示，则该几何体的表面积为（\quad）
 
 \bitmapfigure[max width=0.62\linewidth]{img/2011/anhui_science/q6_fig1.png}
 
 \choices
-    {48}
+    {\(48\)}
     {\(32 + 8\sqrt{17}\)}
     {\(48 + 8\sqrt{17}\)}
-    {80}
+    {\(80\)}
 \end{problem}
 
 \begin{answer}
 C
 \end{answer}
 
+\begin{solution}
+由三视图可知，该几何体是以等腰梯形为底面的直棱柱. 等腰梯形的上底、下底和高分别为 \(2\)，\(4\)，\(4\)，直棱柱的高为 \(4\). 梯形两腰长为
+\[
+\sqrt{4^2+\left(\frac{4-2}{2}\right)^2}=\sqrt{17}
+\]
+因此一个底面的面积为
+\[
+\frac{2+4}{2}\times4=12
+\]
+两个底面的面积和为 \(24\)，四个侧面的面积和为
+\[
+4\left(2+4+2\sqrt{17}\right)=24+8\sqrt{17}
+\]
+所以表面积为 \(24+24+8\sqrt{17}=48+8\sqrt{17}\)，故选 C.
+\end{solution}
+
 \begin{problem}
-命题“所有能被 2 整除的整数都是偶数”的否定是（\quad）
+命题“所有能被 \(2\) 整除的整数都是偶数”的否定是（\quad）
 
 \choices
-    {所有不能被 2 整除的整数都是偶数}
-    {所有能被 2 整除的整数都不是偶数}
-    {存在一个不能被 2 整除的整数是偶数}
-    {存在一个能被 2 整除的整数不是偶数}
+    {所有不能被 \(2\) 整除的整数都是偶数}
+    {所有能被 \(2\) 整除的整数都不是偶数}
+    {存在一个不能被 \(2\) 整除的整数是偶数}
+    {存在一个能被 \(2\) 整除的整数不是偶数}
 \end{problem}
 
 \begin{answer}
 D
 \end{answer}
 
+\begin{solution}
+原命题是“对所有整数，若该整数能被 \(2\) 整除，则它是偶数”. 否定全称命题时，将“所有”改为“存在一个”，并否定结论，因此否定为“存在一个能被 \(2\) 整除的整数不是偶数”，故选 D.
+\end{solution}
+
 \begin{problem}
 设集合 \(A = \{1, 2, 3, 4, 5, 6\}\)，\(B = \{4, 5, 6, 7, 8\}\)，则满足 \(S \subseteq A\) 且 \(S \cap B \neq \varnothing\) 的集合 \(S\) 的个数是（\quad）
 
 \choices
-    {57}
-    {56}
-    {49}
-    {8}
+    {\(57\)}
+    {\(56\)}
+    {\(49\)}
+    {\(8\)}
 \end{problem}
 
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+集合 \(A\) 有 \(2^6=64\) 个子集. 因为 \(S\subseteq A\)，所以 \(S\cap B=S\cap\{4,5,6\}\). 不满足条件的子集必须不含 \(4\)，\(5\)，\(6\)，只能从 \(\{1,2,3\}\) 中取，计有 \(2^3=8\) 个. 因此满足条件的集合数为
+\[
+2^6-2^3=64-8=56
+\]
+故选 B.
+\end{solution}
 
 \begin{problem}
 已知函数 \( f(x) = \sin (2x + \varphi) \)，其中 \( \varphi \) 为实数，若 \( f(x) \leqslant \left|f\left(\frac{\pi}{6}\right)\right| \) 对 \( x \in \R \) 恒成立，且 \( f\left(\frac{\pi}{2}\right) > f(\pi) \)，则 \( f(x) \) 的单调递增区间是（\quad）
@@ -129,6 +205,28 @@ B
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+函数 \(f\) 的最大值为 \(1\)，由题设恒成立不等式可知
+\[
+1\leqslant\left|f\left(\frac{\pi}{6}\right)\right|\leqslant1
+\]
+故 \(\left|\sin\left(\frac{\pi}{3}+\varphi\right)\right|=1\)，从而
+\(\varphi=\frac{\pi}{6}+k\pi\)，\(k\in\Z\).
+又
+\(f\left(\frac{\pi}{2}\right)=-\sin\varphi\)，\(qquad f(\pi)=\sin\varphi\)
+由题设得 \(\sin\varphi<0\). 于是 \(k\) 为奇数，故可将 \(\varphi\) 写成 \(\frac{7\pi}{6}+2m\pi\).
+
+因为
+\[
+f'(x)=2\cos(2x+\varphi)
+\]
+所以函数递增当且仅当 \(-\frac{\pi}{2}+2j\pi\leqslant2x+\varphi\leqslant\frac{\pi}{2}+2j\pi\). 代入 \(\varphi=\frac{7\pi}{6}+2m\pi\)，并整理得
+\[
+j\pi-\frac{5\pi}{6}\leqslant x\leqslant j\pi-\frac{\pi}{3}
+\]
+将整数下标重新记为 \(k-1\)，递增区间为 \(\left[k\pi+\frac{\pi}{6},k\pi+\frac{2\pi}{3}\right]\)，故选 C.
+\end{solution}
 
 \begin{problem}
 函数 \( f(x) = ax^{m}(1 - x)^n \) 在区间 \([0,1]\) 上的图象如图所示，则 \(m\)，\(n\) 的值可能是（\quad）
@@ -146,6 +244,14 @@ C
 B
 \end{answer}
 
+\begin{solution}
+对候选的正整数 \(m\)，\(n\)，有
+\[
+f'(x)=a x^{m-1}(1-x)^{n-1}\bigl[m-(m+n)x\bigr]
+\]
+图象的最高点位于 \(0.5\) 左侧，因此极大值点应满足 \(\frac{m}{m+n}<\frac12\)，即 \(m<n\). 四个选项中只有 \(m=1\)，\(n=2\) 满足这一条件；并且此时右端点因子为 \((1-x)^2\)，图象在 \(x=1\) 处与横轴相切，与图形一致，故选 B.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -155,16 +261,30 @@ B
 \end{problem}
 
 \begin{answer}
-15
+\(15\)
 \end{answer}
+
+\begin{solution}
+初始时 \(T=0\)，\(k=0\). 每次先执行 \(T=T+k\)，若结果不超过 \(105\)，再令 \(k=k+1\) 并进入下一轮. 因此依次累加 \(0\)，\(1\)，\(\ldots\)，\(14\) 后，
+\[
+T=0+1+\cdots+14=\frac{14\times15}{2}=105
+\]
+此时条件 \(T>105\) 不成立，令 \(k=15\). 下一轮得到 \(T=105+15=120>105\)，所以输出 \(k=15\).
+\end{solution}
 
 \begin{problem}
 设 \((x - 1)^{21} = a_0 + a_1x + a_2x^2 + \dots + a_{21}x^{21}\)，则 \(a_{10} + a_{11} =\fillinblank{}\).
 \end{problem}
 
 \begin{answer}
-0
+\(0\)
 \end{answer}
+
+\begin{solution}
+由二项式定理，\(x^j\) 的系数为 \(a_j=\mathrm C_{21}^{j}(-1)^{21-j}\). 于是
+\(a_{10}=\mathrm C_{21}^{10}(-1)^{11}=-\mathrm C_{21}^{10}\)，\(a_{11}=\mathrm C_{21}^{11}(-1)^{10}=\mathrm C_{21}^{11}\).
+又 \(\mathrm C_{21}^{10}=\mathrm C_{21}^{11}\)，故 \(a_{10}+a_{11}=0\).
+\end{solution}
 
 \begin{problem}
 已知向量 \(\bs{a}\)，\(\bs{b}\) 满足 \((\bs{a} + 2\bs{b}) \cdot (\bs{a} - \bs{b}) = -6\)，且 \(|\bs{a}| = 1\)，\(|\bs{b}| = 2\)，则 \(\bs{a}\) 与 \(\bs{b}\) 的夹角为\fillinblank{}.
@@ -174,16 +294,43 @@ B
 \(\frac{\pi}{3}\)
 \end{answer}
 
+\begin{solution}
+展开数量积，得
+\[
+(\bs{a}+2\bs{b})\cdot(\bs{a}-\bs{b})=|\bs{a}|^2+\bs{a}\cdot\bs{b}-2|\bs{b}|^2
+\]
+代入已知条件，
+\[
+1+\bs{a}\cdot\bs{b}-2\times4=-6
+\]
+所以 \(\bs{a}\cdot\bs{b}=1\). 设两向量夹角为 \(\theta\)，则
+\[
+\cos\theta=\frac{\bs{a}\cdot\bs{b}}{|\bs{a}|\,|\bs{b}|}=\frac12
+\]
+由于 \(0\leqslant\theta\leqslant\pi\)，故 \(\theta=\frac{\pi}{3}\).
+\end{solution}
+
 \begin{problem}
-已知 \(\triangle ABC\) 的一个内角为 \(120^{\circ}\)，并且三边长构成公差为 4 的等差数列，则 \(\triangle ABC\) 的面积为\fillinblank{}.
+已知 \(\triangle ABC\) 的一个内角为 \(120^{\circ}\)，并且三边长构成公差为 \(4\) 的等差数列，则 \(\triangle ABC\) 的面积为\fillinblank{}.
 \end{problem}
 
 \begin{answer}
 \(15\sqrt{3}\)
 \end{answer}
 
+\begin{solution}
+设三边按从小到大排列为 \(x-4\)，\(x\)，\(x+4\)，其中最大边 \(x+4\) 对应最大角 \(120^{\circ}\). 由余弦定理，
+\[
+(x+4)^2=x^2+(x-4)^2-2x(x-4)\cos120^{\circ}=x^2+(x-4)^2+x(x-4)
+\]
+化简得 \(2x(x-10)=0\). 因边长为正且 \(x>4\)，所以 \(x=10\)，三边长为 \(6\)，\(10\)，\(14\). 因此面积为
+\[
+\frac12\times6\times10\times\sin120^{\circ}=15\sqrt3
+\]
+\end{solution}
+
 \begin{problem}
-在平面直角坐标系中，如果 \(x\) 与 \(y\) 都是整数，就称点 \((x, y)\) 为整点，下列命题中正确的是\fillinblank{}.（写出所有正确命题的编号）
+在平面直角坐标系中，如果 \(x\) 与 \(y\) 都是整数，就称点 \((x, y)\) 为整点，下列命题中正确的是\fillinblank{}. （写出所有正确命题的编号）
 
 \begin{circlelist}
 \item 存在这样的直线，既不与坐标轴平行又不经过任何整点；
@@ -198,6 +345,18 @@ B
 \(1\)，\(3\)，\(5\)
 \end{answer}
 
+\begin{solution}
+对命题 1，取直线 \(y=\sqrt2x+\frac12\). 它的斜率非零且有限，故不与坐标轴平行；当 \(x\) 为非零整数时，\(\sqrt2x+\frac12\) 为无理数，当 \(x=0\) 时纵坐标为 \(\frac12\)，所以该直线不经过任何整点，命题 1 正确.
+
+命题 2 不正确. 例如取 \(k=\sqrt2\)，\(b=1-\sqrt2\)，二者均为无理数，但直线经过整点 \((1,1)\).
+
+对命题 3，若直线经过无穷多个整点，必然经过其中两个不同的整点. 反之，若直线经过两个不同的整点 \((x_1,y_1)\)，\((x_2,y_2)\)，令 \(d=(x_2-x_1,y_2-y_1)\)，则对任意整数 \(t\)，点 \((x_1,y_1)+td\) 都是整点且在该直线上，并且随 \(t\) 取不同整数而互不相同，所以直线经过无穷多个整点，命题 3 正确.
+
+命题 4 不正确. 例如直线 \(y=\frac12x+\frac13\) 中的斜率和截距都是有理数，但若 \(x\)，\(y\) 都是整数，则 \(6y=3x+2\). 左边模 \(3\) 为 \(0\)，右边模 \(3\) 为 \(2\)，不可能相等，因此该直线没有整点，更不可能经过无穷多个整点.
+
+对命题 5，直线 \(y=\sqrt2x\) 经过整点 \((0,0)\). 若 \(x\) 是非零整数，则 \(y=\sqrt2x\) 是无理数，不可能为整数，因此它恰经过一个整点，命题 5 正确. 故正确命题的编号为 \(1\)，\(3\)，\(5\).
+\end{solution}
+
 \section{解答题}
 
 \begin{problem}
@@ -205,14 +364,26 @@ B
 
 \begin{enumerate}
 \item 当 \(a=\frac{4}{3}\) 时，求 \( f(x) \) 的极值点；
-\item 若 \( f(x) \) 为 \( \R \) 上的单调函数，求 \( a \) 的取值范围.
+\item 若 \( f(x) \) 为 \(\R\) 上的单调函数，求 \( a \) 的取值范围.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item 当 \(a=\frac{4}{3}\) 时，极大值点为 \(x=\frac{1}{2}\)，极小值点为 \(x=\frac{3}{2}\).
-\item 若 \(f(x)\) 为 \(\R\) 上的单调函数，则 \(0<a\leqslant 1\).
+\item 对任意 \(a>0\)，分母 \(1+ax^2>0\)，且
+\[
+f'(x)=\frac{\e^x\bigl(ax^2-2ax+1\bigr)}{(1+ax^2)^2}
+\]
+当 \(a=\frac43\) 时，
+\[
+ax^2-2ax+1=\frac13(2x-1)(2x-3)
+\]
+所以 \(f'(x)\) 在 \(\left(-\infty,\frac12\right)\) 和 \(\left(\frac32,+\infty\right)\) 上为正，在 \(\left(\frac12,\frac32\right)\) 上为负. 因此极值点分别为 \(\left(\frac12,\frac{3\sqrt{\e}}4\right)\) 和 \(\left(\frac32,\frac{\e^{3/2}}4\right)\)，前者为极大值点，后者为极小值点.
+\item 因为 \(\e^x\) 和分母的平方始终为正，\(f'(x)\) 的符号由
+\[
+q(x)=ax^2-2ax+1=a(x-1)^2+1-a
+\]
+决定. 当 \(0<a<1\) 时，\(q(x)>0\)；当 \(a=1\) 时，\(q(x)=(x-1)^2\geqslant0\)，故此时 \(f\) 在 \(\R\) 上单调递增. 当 \(a>1\) 时，\(q(x)=0\) 有两个根 \(1-\sqrt{1-\frac1a}\) 和 \(1+\sqrt{1-\frac1a}\)，且 \(q(x)\) 在两根之间为负、两根外为正，函数先增、后减、再增，不是单调函数. 因此 \(a\) 的取值范围为 \(0<a\leqslant1\).
 \end{enumerate}
 \end{solution}
 
@@ -229,13 +400,25 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item \(BC\parallel EF\).
-\item 棱锥 \(F-OBED\) 的体积为 \(\frac{3}{2}\).
+\item 建立直角坐标系，使 \(A=(0,0,0)\)，\(AD\) 为 \(x\) 轴，平面 \(ABED\) 为 \(xOy\) 平面，平面 \(ACFD\) 为 \(xOz\) 平面. 由 \(OA=1\)，\(OD=2\) 得
+\(O=(1,0,0)\)，\(D=(3,0,0)\).
+按图取各正三角形所在的一侧，则
+\(B=\left(\frac12,-\frac{\sqrt3}{2},0\right)\)，\(C=\left(\frac12,0,\frac{\sqrt3}{2}\right)\)
+\(E=(2,-\sqrt3,0)\)，\(F=(2,0,\sqrt3)\).
+于是
+\(\overrightarrow{BC}=\left(0,\frac{\sqrt3}{2},\frac{\sqrt3}{2}\right)\)，\(\overrightarrow{EF}=(0,\sqrt3,\sqrt3)=2\overrightarrow{BC}\)
+故 \(BC\parallel EF\).
+\item 底面 \(OBED\) 在平面 \(ABED\) 内. 沿对角线 \(OE\) 分成两个三角形，由坐标或底乘高公式，
+\(S_{\triangle OBE}=\frac12\left|\left(-\frac12\right)(-\sqrt3)-\left(-\frac{\sqrt3}{2}\right)(1)\right|=\frac{\sqrt3}{2}\)，\(S_{\triangle OED}=\frac12\times OD\times\sqrt3=\sqrt3\).
+所以底面积为 \(S_{OBED}=\frac{3\sqrt3}{2}\). 点 \(F\) 到底面所在平面的距离为 \(\sqrt3\)，故棱锥体积为
+\[
+V_{F-OBED}=\frac13S_{OBED}\cdot\sqrt3=\frac13\times\frac{3\sqrt3}{2}\times\sqrt3=\frac32
+\]
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-在数 1 和 100 之间插入 \(n\) 个实数，使得这 \(n + 2\) 个数构成递增的等比数列，将这 \(n + 2\) 个数的乘积记作 \(T_{n}\)，再令 \(a_{n} = \lg T_{n}\)，\(n \geqslant 1\).
+在数 \(1\) 和 \(100\) 之间插入 \(n\) 个实数，使得这 \(n + 2\) 个数构成递增的等比数列，将这 \(n + 2\) 个数的乘积记作 \(T_{n}\)，再令 \(a_{n} = \lg T_{n}\)，\(n \geqslant 1\).
 
 \begin{enumerate}
 \item 求数列 \(\{a_{n}\}\) 的通项公式；
@@ -245,8 +428,27 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item \(a_n=n+2\).
-\item \(S_n=\dfrac{\tan(n+3)-\tan 3}{\tan 1}-n\).
+\item 设等比数列的公比为 \(r\). 因为数列递增且首末两项为 \(1,100\)，所以 \(r>1\)，并且 \(r^{n+1}=100\)，从而 \(\lg r=\frac{2}{n+1}\). 这 \(n+2\) 项为 \(1\)，\(r\)，\(r^2\)，\(\ldots\)，\(r^{n+1}\)，故
+\[
+T_n=r^{0+1+\cdots+(n+1)}=r^{\frac{(n+1)(n+2)}2}
+\]
+因此
+\[
+a_n=\lg T_n=\frac{(n+1)(n+2)}2\lg r=n+2
+\]
+\item 由上式，\(b_n=\tan(n+2)\tan(n+3)\). 利用正切差角公式
+\[
+\tan1=\frac{\tan(j+1)-\tan j}{1+\tan(j+1)\tan j}
+\]
+得
+\[
+\tan j\tan(j+1)=\frac{\tan(j+1)-\tan j}{\tan1}-1
+\]
+令 \(j=3\)，\(4\)，\(\ldots\)，\(n+2\) 并求和，得到
+\[
+S_n=\sum_{j=3}^{n+2}\tan j\tan(j+1)
+=\frac{\tan(n+3)-\tan3}{\tan1}-n
+\]
 \end{enumerate}
 \end{solution}
 
@@ -259,13 +461,29 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 不等式成立.
-\item 不等式成立.
+\item 因为 \(xy>0\)，原不等式等价于
+\[
+x^2y^2-x^2y-xy^2+x+y-1\geqslant0
+\]
+左端可因式分解为
+\[
+(x-1)(y-1)(xy-1)
+\]
+由 \(x\geqslant1\)，\(y\geqslant1\) 可知三个因式均非负，所以原不等式成立.
+\item 令 \(u=\ln a\)，\(v=\ln b\)，\(w=\ln c\)，则 \(0<u\leqslant v\leqslant w\). 由换底公式，所要证明的不等式等价于
+\[
+\frac vu+\frac wv+\frac uw\leqslant\frac uv+\frac vw+\frac wu
+\]
+再令 \(x=\frac vu\geqslant1\)，\(y=\frac wv\geqslant1\)，则 \(\frac wu=xy\)，上式化为
+\[
+x+y+\frac1{xy}\leqslant\frac1x+\frac1y+xy
+\]
+这正是第（1）问已经证明的不等式，故原不等式成立.
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-工作人员需进入核电站完成某项具有高辐射危险的任务，每次只派一个人进去，且每个人只派一次，工作时间不超过 10 分钟，如果前一个人 10 分钟内不能完成任务则撤出，再派下一个人. 现在一共只有甲，乙，丙三个人可派. 他们各自能完成任务的概率分别 \(p_{1}\)，\(p_{2}\)，\(p_{3}\). 假设 \(p_{1}\)，\(p_{2}\)，\(p_{3}\) 互不相等，且假定各人能否完成任务的事件相互独立.
+工作人员需进入核电站完成某项具有高辐射危险的任务，每次只派一个人进去，且每个人只派一次，工作时间不超过 \(10\) 分钟，如果前一个人 \(10\) 分钟内不能完成任务则撤出，再派下一个人. 现在一共只有甲，乙，丙三个人可派. 他们各自能完成任务的概率分别 \(p_{1}\)，\(p_{2}\)，\(p_{3}\). 假设 \(p_{1}\)，\(p_{2}\)，\(p_{3}\) 互不相等，且假定各人能否完成任务的事件相互独立.
 
 \begin{enumerate}
 \item 如果按甲最先，乙次之，丙最后的顺序派人，求任务能被完成的概率. 若改变三个人被派出的先后顺序，任务能被完成的概率是否发生变化？
@@ -276,9 +494,24 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 任务能被完成的概率为 \(1-(1-p_1)(1-p_2)(1-p_3)\)，改变派出顺序不改变该概率.
-\item \(P(X=1)=q_1\)，\(P(X=2)=(1-q_1)q_2\)，\(P(X=3)=(1-q_1)(1-q_2)\)，\(E(X)=3-2q_1-q_2+q_1q_2\).
-\item 按 \(p_1,p_2,p_3\) 递减顺序派出，即先甲、再乙、后丙.
+\item 任务不能完成，当且仅当甲、乙、丙都没有完成任务. 由相互独立性，其概率为 \((1-p_1)(1-p_2)(1-p_3)\)，所以任务能完成的概率为
+\[
+1-(1-p_1)(1-p_2)(1-p_3)
+\]
+这个事件只由三个人是否成功决定，与派出顺序无关，因此改变顺序不会改变任务能被完成的概率.
+\item 当第一个人完成任务时，\(X=1\)，所以 \(P(X=1)=q_1\)；当第一个人失败而第二个人成功时，\(X=2\)，所以 \(P(X=2)=(1-q_1)q_2\)；当前两个人都失败时，必须派出第三个人，无论第三个人成功与否均有 \(X=3\)，所以 \(P(X=3)=(1-q_1)(1-q_2)\). 这三个概率之和为 \(1\)，故分布列由上述三式给出. 数学期望为
+\[
+E(X)=q_1+2(1-q_1)q_2+3(1-q_1)(1-q_2)=3-2q_1-q_2+q_1q_2
+\]
+\item 先比较前两人的顺序. 若交换前两人的成功概率，期望之差为
+\[
+E(q_1,q_2)-E(q_2,q_1)=q_2-q_1
+\]
+因此前两人的成功概率中较大的应放在前面. 再固定第一人的概率为 \(q_1<1\)，比较第二、第三人的顺序，有
+\[
+E(q_1,q_2)-E(q_1,q_3)=(q_3-q_2)(1-q_1)
+\]
+若 \(q_2>q_3\)，上式小于零，所以第二人应选成功概率较大的. 由 \(p_1>p_2>p_3\)，先甲、再乙、后丙时均值最小.
 \end{enumerate}
 \end{solution}
 
@@ -289,5 +522,23 @@ B
 \end{problem}
 
 \begin{solution}
-所求点 \(P\) 的轨迹方程为 \(y=2x-1\).
+设 \(B=(t,t^2)\)，并设 \(Q=(u,v)\). 由 \(\overrightarrow{BQ}=\lambda\overrightarrow{QA}\)，有
+\[
+(u-t,v-t^2)=\lambda(1-u,1-v)
+\]
+因此
+\(u=\frac{t+\lambda}{1+\lambda}\)，\(v=\frac{t^2+\lambda}{1+\lambda}\).
+过 \(Q\) 的竖直直线与抛物线交于 \(M=(u,u^2)\). 再由 \(\overrightarrow{QM}=\lambda\overrightarrow{MP}\)，设 \(P=(u,w)\)，则
+\(u^2-v=\lambda(w-u^2)\)，\(w=u^2+\frac{u^2-v}{\lambda}\).
+由 \(t=(1+\lambda)u-\lambda\)，可得
+\[
+v=\frac{\bigl((1+\lambda)u-\lambda\bigr)^2+\lambda}{1+\lambda}
+=(1+\lambda)u^2-2\lambda u+\lambda
+\]
+所以
+\(u^2-v=-\lambda(u-1)^2\)，\(w=u^2-(u-1)^2=2u-1\).
+点 \(P\) 的横坐标 \(u=\frac{t+\lambda}{1+\lambda}\) 随 \(t\) 取遍全体实数，故轨迹为整条直线
+\[
+y=2x-1
+\]
 \end{solution}

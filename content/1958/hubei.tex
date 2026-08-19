@@ -14,24 +14,32 @@
 
 \begin{solution}
 \begin{enumerate}
-\item 这个数列的通项公式为 \(a_n=nx^{n-1}\).
+\item 第 \(n\) 项中，系数为 \(n\)，\(x\) 的幂为 \(n-1\)，所以通项为
+\(a_n=nx^{n-1}\).
 
-\item 由求和公式
+\item 设前 \(n\) 项和为 \(s_n\)，则
 \[
 s_n=1+2x+3x^{2}+4x^{3}+\cdots+(n-1)x^{n-2}+nx^{n-1}
 \]
-上述两边同乘 \(x\) 得
+两边同乘 \(x\)，得
 \[
-xs_n=x+2x^{2}+3x^{3}+4x^{4}+\cdots+(n-2)x^{n-2}+(n-1)x^{n-1}+nx^{n}
+xs_n=x+2x^{2}+3x^{3}+4x^{4}+\cdots+(n-1)x^{n-1}+nx^{n}
 \]
-由前式减去后式，得 \(s_n-xs_n=\left( 1+x+x^{2}+x^{3}+\cdots+x^{n-2}+x^{n-1} \right)-nx^{n}\). 上式右边括号中是一个等比数列，首项为 \(1\)，公比为 \(x\)，末项为 \(x^{n-1}\)，由等比数列求和公式得 \((1-x)s_n=\frac{1-x\left( x^{n-1} \right)}{1-x}-nx^{n}\)，所以 \(s_n=\frac{1-x^{n}}{(1-x)^{2}}-\frac{nx^{n}}{1-x}\).
+用前式减去后式，得
+\[
+(1-x)s_n=1+x+x^{2}+\cdots+x^{n-1}-nx^{n}
+\]
+当 \(x\ne1\) 时，等比数列 \(1\)，\(x\)，\(x^{2}\)，\(\ldots\)，\(x^{n-1}\) 的和为 \(\dfrac{1-x^n}{1-x}\)，因此
+\[
+s_n=\frac{1-x^n}{(1-x)^2}-\frac{nx^n}{1-x}
+    =\frac{1-(n+1)x^n+nx^{n+1}}{(1-x)^2}
+\]
 
-\item 当 \(x=1\) 时，以上求和公式中分母为 \(0\)，公式无意义，由上式得
+\item 当 \(x=1\) 时，上面分式中的分母 \((1-x)^2\) 为 \(0\)，所以该分式形式不能直接成立. 此时原数列变为 \(1\)，\(2\)，\(3\)，\(\ldots\)，\(n\)，其前 \(n\) 项和为
 \[
-S_n=1+2+3+4+\cdots+(n-2)+(n-1)+n
+s_n=1+2+3+\cdots+(n-1)+n
+    =\frac{n(1+n)}{2}
 \]
-这是一个等差数列，首项为 \(1\)，公差为 \(1\)，末项为 \(n\)，由等差数列求和公式得
-\(S_n=\dfrac{n(n+1)}{2}\).
 \end{enumerate}
 \end{solution}
 
@@ -40,9 +48,20 @@ S_n=1+2+3+4+\cdots+(n-2)+(n-1)+n
 \end{problem}
 
 \begin{solution}
-因为 \(A+B+C=\pi\)，因此 \(C=\pi-(A+B)\). 故 \(\tan C=\tan\left[\pi-(A+B)\right]=-\left( \frac{\tan A+\tan B}{1-\tan A\cdot\tan B} \right)\).
-即得 \(\tan C\left( 1-\tan A\cdot\tan B \right)=-(\tan A+\tan B)\).
-展开移项得 \(\tan A+\tan B+\tan C=\tan A\cdot\tan B\cdot\tan C\).
+题式有意义时，\(A\)，\(B\)，\(C\) 均不是直角. 由三角形内角和
+\(A+B+C=\pi\)，得 \(C=\pi-(A+B)\)，于是
+\[
+\tan C=-\tan(A+B)
+       =-\frac{\tan A+\tan B}{1-\tan A\tan B}
+\]
+这里分母不为 \(0\)，因为若 \(1-\tan A\tan B=0\)，则 \(A+B=\dfrac{\pi}{2}\)，从而 \(C=\dfrac{\pi}{2}\)，与题式有意义矛盾. 将上式两边乘以 \(1-\tan A\tan B\)，得
+\[
+\tan C-\tan A\tan B\tan C=-\tan A-\tan B
+\]
+移项即得
+\[
+\tan A+\tan B+\tan C=\tan A\tan B\tan C
+\]
 \end{solution}
 
 \begin{problem}
@@ -50,10 +69,24 @@ S_n=1+2+3+4+\cdots+(n-2)+(n-1)+n
 \end{problem}
 
 \begin{solution}
-令 \(\log_x\sqrt{5}=y\)，则 \(\log_x\left(5\sqrt{5}\right)=\log_x\left((\sqrt{5})^{3}\right)=3y\).
-于是原方程变为 \(y^{2}+3y+\frac{5}{4}=0\)，即 \(4y^{2}+12y+5=0\)，因式分解得 \((2y+1)(2y+5)=0\).
-故 \(y=-\frac{1}{2}\) 或 \(y=-\frac{5}{2}\).
-于是所求的解是 \(x=\frac{1}{5}\) 和 \(x=\frac{1}{\sqrt[5]{5}}\).
+由对数定义，底数须满足 \(x>0\) 且 \(x\ne1\). 令
+\(y=\log_x\sqrt{5}\)，则 \(5\sqrt{5}=(\sqrt{5})^3\)，所以
+\[
+\log_x\left(5\sqrt{5}\right)=\log_x\left((\sqrt{5})^3\right)=3y
+\]
+原方程化为
+\[
+y^2+3y+\frac54=0
+\]
+即
+\[
+4y^2+12y+5=0=(2y+1)(2y+5)
+\]
+因此 \(y=-\dfrac12\) 或 \(y=-\dfrac52\).
+
+当 \(y=-\dfrac12\) 时，\(x^{-1/2}=\sqrt5\)，两边平方得 \(x^{-1}=5\)，所以 \(x=\dfrac15\).
+
+当 \(y=-\dfrac52\) 时，\(x^{-5/2}=\sqrt5\)，两边平方得 \(x^{-5}=5\)，所以 \(x=\dfrac{1}{\sqrt[5]{5}}\). 这两个数都满足 \(0<x<1\)，因而均符合对数定义域.
 \end{solution}
 
 \begin{problem}
@@ -65,29 +98,37 @@ S_n=1+2+3+4+\cdots+(n-2)+(n-1)+n
 
 \solutionfigure{\bitmapfigure[max width=0.35\linewidth]{img/1958/hubei/q4_fig1.png}}
 
-延长 \(AD\) 交 \(\triangle ABC\) 的外接圆于 \(E\)，连接 \(BE\)，则 \(\angle CAD=\angle CBE\).
-但 \(\angle CAD+\angle ABC=90^\circ\)，所以 \(\angle CBE+\angle ABC=90^\circ\).
-因而 \(AE\) 为圆之直径，即圆心在中线 \(AD\) 上.
+延长 \(AD\) 交 \(\triangle ABC\) 的外接圆于 \(E\)，连接 \(BE\). 因为 \(A\)，\(D\)，\(E\) 共线，圆周角 \(\angle CAD\) 与 \(\angle CBE\) 都对着弦 \(CE\)，所以
+\(\angle CAD=\angle CBE\). 题设给出 \(\angle CAD+\angle ABC=90^\circ\)，因此
+\(\angle CBE+\angle ABC=90^\circ\)，即 \(\angle ABE=90^\circ\). 由圆周角定理的逆定理，\(AE\) 是外接圆的直径，所以圆心 \(O\) 在直线 \(AD\) 上.
 
-若圆心和中点 \(D\) 重合，则 \(BC\) 为圆之直径，此时 \(\triangle ABC\) 是直角三角形.
+若 \(O=D\)，则 \(BC\) 经过圆心且两端点在圆上，故 \(BC\) 是直径，从而 \(\angle A=90^\circ\)，\(\triangle ABC\) 是直角三角形.
 
-若圆心和中点 \(D\) 不重合，则 \(AD\perp BC\)，故 \(AD\) 为 \(BC\) 的中垂线，因此 \(AB=AC\)，这时 \(\triangle ABC\) 是等腰三角形.
+若 \(O\ne D\)，则 \(OD\) 是圆心到弦 \(BC\) 的连线，且 \(D\) 是弦 \(BC\) 的中点，所以 \(OD\perp BC\). 又因 \(O\)，\(D\)，\(A\) 共线，得 \(AD\perp BC\). 于是 \(AD\) 是 \(BC\) 的中垂线，从而 \(AB=AC\)，\(\triangle ABC\) 是等腰三角形.
 
 三角解法：
-设 \(D\) 为 \(BC\) 边的中点，则 \(BD=DC\).
+
+设 \(D\) 为 \(BC\) 的中点，则 \(BD=DC\).
 
 \solutionfigure{\bitmapfigure[max width=0.34\linewidth]{img/1958/hubei/q4_fig2.png}}
 
-因为 \(\angle B+\angle CAD=90^\circ\)，所以 \(\angle C+\angle BAD=90^\circ\).
-因而 \(\sin\angle CAD=\cos B\)，\(\sin\angle BAD=\cos C\).
-在 \(\triangle ABC\) 与 \(\triangle ACD\) 中，依正弦定律分别有
-\(\frac{AD}{\sin B}=\frac{BD}{\sin\angle BAD}\)，\(\frac{AD}{\sin C}=\frac{DC}{\sin\angle CAB}\).
-由于 \(BD=DC\)，因此 \(\sin B\cdot\sin\angle CAD=\sin C\cdot\sin\angle BAD\).
-即 \(\sin B\cdot\cos B=\sin C\cdot\cos C\).
-因此 \(\sin 2B=\sin 2C\).
-于是 \(2\angle B=2\angle C\) 或 \(180^\circ-2\angle B=2\angle C\).
-即得 \(\angle B=\angle C\) 或 \(\angle B+\angle C=90^\circ\).
-即 \(\triangle ABC\) 为等腰三角形，或直角三角形.
+由 \(\angle B+\angle CAD=90^\circ\)，且 \(\angle A+\angle B+\angle C=180^\circ\)，得 \(\angle C+\angle BAD=90^\circ\). 因此
+\(\sin\angle CAD=\cos B\)，\(\sin\angle BAD=\cos C\).
+在 \(\triangle ABD\) 和 \(\triangle ACD\) 中分别使用正弦定理，得
+\(\frac{AD}{\sin B}=\frac{BD}{\sin\angle BAD}\)，\(\frac{AD}{\sin C}=\frac{DC}{\sin\angle CAD}\).
+将 \(BD=DC\) 代入，消去 \(AD\)，得
+\[
+\sin B\sin\angle CAD=\sin C\sin\angle BAD
+\]
+再代入互余关系，得到
+\[
+\sin B\cos B=\sin C\cos C
+\]
+即 \(\sin 2B=\sin 2C\). 于是
+\[
+0=\sin 2B-\sin 2C=2\cos(B+C)\sin(B-C)
+\]
+因为 \(0<B+C<\pi\)，所以或者 \(\sin(B-C)=0\)，即 \(B=C\)，此时 \(AB=AC\)，三角形为等腰三角形；或者 \(\cos(B+C)=0\)，即 \(B+C=\dfrac{\pi}{2}\)，此时 \(A=\dfrac{\pi}{2}\)，三角形为直角三角形.
 \end{solution}
 
 \begin{problem}
@@ -95,14 +136,18 @@ S_n=1+2+3+4+\cdots+(n-2)+(n-1)+n
 \end{problem}
 
 \begin{solution}
-如左图，\(\triangle ABC\) 是直角三角形，\(\angle B=90^\circ\).
+如图，设 \(\triangle ABC\) 是直角三角形，\(\angle B=90^\circ\)，斜边为 \(AC\).
 
 \solutionfigure{\bitmapfigure[max width=0.40\linewidth]{img/1958/hubei/q5_fig1.png}}
 
-现在过 \(P\) 点作一直线与三角形所在平面垂直，并与 \(\triangle ABC\) 所在的平面交于 \(D\) 点.
-则由 \(PA=PB=PC\) 即有 \(AD=BD=CD\)（等长线段的射影相等）.
-又因直角三角形斜边上的中点到各顶点的距离相等，故 \(D\) 点即 \(AC\) 中点.
-而 \(PD\) 正是连接 \(P\) 点和三角形斜边中点的直线.
+设 \(\Pi\) 是 \(\triangle ABC\) 所在的平面. 过 \(P\) 作 \(PD\perp\Pi\)，垂足为 \(D\). 因为 \(A\)，\(B\)，\(C\) 都在 \(\Pi\) 内，\(\triangle PDA\)，\(\triangle PDB\)，\(\triangle PDC\) 均为直角三角形，所以由勾股定理
+\(PA^2=PD^2+DA^2\)，\(PB^2=PD^2+DB^2\)，\(PC^2=PD^2+DC^2\).
+题设 \(PA=PB=PC\)，三式分别相减可得 \(DA^2=DB^2=DC^2\)，从而 \(DA=DB=DC\). 因此 \(D\) 是 \(\triangle ABC\) 的外心.
+
+直角三角形斜边中点到三个顶点的距离相等：设 \(M\) 是 \(AC\) 的中点，则 \(MA=MC\)，且由直角三角形斜边中线定理有 \(MB=MA=MC\). 所以 \(M\) 也是 \(\triangle ABC\) 的外心. 外心唯一，故 \(D=M\). 于是 \(PD\) 就是连接 \(P\) 与斜边中点 \(M\) 的直线，而按构造 \(PD\perp\Pi\)，所以
+\[
+PM\perp\Pi
+\]
 \end{solution}
 
 \section{补充题}
@@ -112,11 +157,24 @@ S_n=1+2+3+4+\cdots+(n-2)+(n-1)+n
 \end{problem}
 
 \begin{solution}
-因为 \(\lg100=2\)，
+由二项式定理，且各项均为正数，有
 \[
-\lg\left( \frac{21}{20} \right)^{100}=100\left( \lg21-\lg20 \right)=100\times0.0212=2.12
+\left(\frac{21}{20}\right)^{100}
+=\left(1+\frac1{20}\right)^{100}
 \]
-所以 \(\left( \frac{21}{20} \right)^{100}>100\).
+保留二项式展开的前七项，得
+\[
+\left(\frac{21}{20}\right)^{100}
+>1+\frac{\mathrm C_{100}^{1}}{20}+\frac{\mathrm C_{100}^{2}}{20^2}+\frac{\mathrm C_{100}^{3}}{20^3}+\frac{\mathrm C_{100}^{4}}{20^4}+\frac{\mathrm C_{100}^{5}}{20^5}+\frac{\mathrm C_{100}^{6}}{20^6}
+\]
+其中
+\(\frac{\mathrm C_{100}^{1}}{20}=5\)，\(\frac{\mathrm C_{100}^{2}}{20^2}=\frac{4950}{400}>12\)，\(\frac{\mathrm C_{100}^{3}}{20^3}=\frac{161700}{8000}>20\)
+\(\frac{\mathrm C_{100}^{4}}{20^4}=\frac{3921225}{160000}>24\)，\(\frac{\mathrm C_{100}^{5}}{20^5}=\frac{75287520}{3200000}>23\)，\(\frac{\mathrm C_{100}^{6}}{20^6}=\frac{1192052400}{64000000}>18\).
+所以
+\[
+\left(\frac{21}{20}\right)^{100}>1+5+12+20+24+23+18=103>100
+\]
+故 \(\left(\dfrac{21}{20}\right)^{100}>100\).
 \end{solution}
 
 \begin{problem}
@@ -124,8 +182,23 @@ S_n=1+2+3+4+\cdots+(n-2)+(n-1)+n
 \end{problem}
 
 \begin{solution}
-因为 \(\alpha^{2}+2\alpha b+b^{2}=9\alpha b\)，即 \(\left( \alpha+b \right)^{2}=9\alpha b\)，
-所以 \(\alpha+b=3\sqrt{\alpha b}\). 因为 \(\alpha>0\)，\(b>0\)，所以取正号. 即 \(\frac{\alpha+b}{3}=\sqrt{\alpha b}\). 取对数得 \(\lg\frac{\alpha+b}{3}=\frac{1}{2}\lg(\alpha b)\)，即 \(\lg\left( \frac{\alpha+b}{3} \right)=\frac{1}{2}(\lg\alpha+\lg b)\).
+题式中出现 \(\lg\alpha\) 和 \(\lg b\)，所以 \(\alpha>0\)，\(b>0\). 在已知等式两边加上 \(2\alpha b\)，得
+\[
+\alpha^2+2\alpha b+b^2=9\alpha b
+\]
+即
+\[
+(\alpha+b)^2=9\alpha b
+\]
+由于 \(\alpha+b>0\)，取平方根时取正号，得到
+\(\alpha+b=3\sqrt{\alpha b}\)，\(\frac{\alpha+b}{3}=\sqrt{\alpha b}>0\).
+两边取常用对数，得
+\[
+\lg\left(\frac{\alpha+b}{3}\right)=\lg\sqrt{\alpha b}
+ =\frac12\lg(\alpha b)
+ =\frac12\left(\lg\alpha+\lg b\right)
+\]
+这就是要证明的结论.
 \end{solution}
 
 \begin{problem}
@@ -133,12 +206,52 @@ S_n=1+2+3+4+\cdots+(n-2)+(n-1)+n
 \end{problem}
 
 \begin{solution}
-已知 \(\alpha+b+c=-p\)，\(\alpha b+bc+c\alpha=q\)，\(\alpha bc=-\gamma\)，又
-\(\frac{1}{\alpha}-\frac{1}{b}=\frac{1}{b}-\frac{1}{c}\). 从 \(\alpha bc=-\gamma\) 和
-\(\frac{1}{\alpha}-\frac{1}{b}=\frac{1}{b}-\frac{1}{c}\) 知
-\(b=\frac{2c\alpha}{\alpha+c}=\frac{q-c\alpha}{\alpha+c}\).
-故 \(2c\alpha=q-c\alpha\).
-即 \(q=3c\alpha\). 代入 \(\alpha bc=-\gamma\) 得 \(\frac{bq}{3}=-\gamma\)，即 \(b=-\frac{3\gamma}{q}\). 于是 \(\alpha+c=-p-b=\frac{3\gamma-qp}{q}\).
-但由 \(\frac{1}{\alpha}-\frac{1}{b}=\frac{1}{b}-\frac{1}{c}\)，\(c=\frac{q}{3\alpha}\). 代入得 \(3q\alpha^{2}-3(pq-3\gamma)+q^{2}=0\).
-解得 \(\alpha\). 代入 \(c=\frac{q}{3\alpha}\) 即得 \(c\).
+因为 \(\alpha\)，\(b\)，\(c\) 成调合级数，所以它们均非零. 由韦达定理
+\(\alpha+b+c=-P\)，\(\alpha b+bc+c\alpha=q\)，\(\alpha bc=-\gamma\).
+调合级数条件乘以非零数 \(\alpha bc\)，得
+\[
+bc-\alpha c=\alpha c-\alpha b
+\]
+即
+\[
+b(\alpha+c)=2\alpha c
+\]
+利用第二个韦达关系式，得到
+\[
+q=b(\alpha+c)+\alpha c=3\alpha c
+\]
+所以
+\[
+\alpha c=\frac q3
+\]
+由于 \(\alpha c\ne0\)，可知 \(q\ne0\). 再由 \(\alpha bc=-\gamma\)，得
+\[
+b=\frac{-\gamma}{\alpha c}=-\frac{3\gamma}{q}
+\]
+由第一个韦达关系式，得
+\[
+\alpha+c=-P-b=\frac{3\gamma-Pq}{q}
+\]
+
+因此 \(\alpha\) 和 \(c\) 是一元二次方程
+\[
+t^2-(\alpha+c)t+\alpha c=0
+\]
+的两个根，即
+\[
+3qt^2+3(Pq-3\gamma)t+q^2=0
+\]
+令
+\[
+\Delta=9(Pq-3\gamma)^2-12q^3
+\]
+则
+\(\{\alpha,c\} =\left\{ \frac{-3(Pq-3\gamma)+\sqrt{\Delta}}{6q}, \frac{-3(Pq-3\gamma)-\sqrt{\Delta}}{6q} \right\}\)，\(b=-\frac{3\gamma}{q}\).
+\(\alpha\) 与 \(c\) 可以互换，因为调合级数条件在交换两端项后仍保持不变. 题设已保证这些根存在，因此相应的 \(\Delta\) 满足实根所需的条件. 若只给定任意 \(P\)，\(q\)，\(\gamma\) 而不预先保证题设，还必须满足由调合条件得到的系数相容关系
+\[
+\left(-\frac{3\gamma}{q}\right)\left(\frac{3\gamma-Pq}{q}\right)=\frac{2q}{3},
+\qquad\text{即}\qquad
+9\gamma(Pq-3\gamma)=2q^3
+\]
+在题设条件下，该关系已经由三根的调合性自动满足；代回上述各式即可同时验得三个韦达关系式和原调合级数条件.
 \end{solution}

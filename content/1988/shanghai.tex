@@ -10,6 +10,10 @@
 \(2\)
 \end{answer}
 
+\begin{solution}
+令 \(u=2^x>0\)，则 \(4^x=u^2\)，\(2^{x+1}=2u\). 原方程化为 \(u^2-2u-8=0\)，即 \((u-4)(u+2)=0\). 由于 \(u>0\)，只能 \(u=4\)，所以 \(2^x=4=2^2\)，解得 \(x=2\).
+\end{solution}
+
 \begin{problem}
 \(y=\sqrt{x-1}\) 的反函数是\fillinblank{}.
 \end{problem}
@@ -18,6 +22,10 @@
 \(y=x^2+1\)（\(x\geqslant0\)）
 \end{answer}
 
+\begin{solution}
+原函数 \(y=\sqrt{x-1}\) 的定义域为 \(x\geqslant1\)，值域为 \(y\geqslant0\). 交换 \(x\)，\(y\) 得 \(x=\sqrt{y-1}\)，其中 \(x\geqslant0\). 两边平方，得 \(x^2=y-1\)，所以反函数为 \(y=x^2+1\)（\(x\geqslant0\)）.
+\end{solution}
+
 \begin{problem}
 在极坐标系中，以 \(\left( \frac{a}{2},\frac{\pi}{2} \right)\) 为圆心，\(\frac{a}{2}\) 为半径的圆的方程为\fillinblank{}.
 \end{problem}
@@ -25,6 +33,10 @@
 \begin{answer}
 \(\rho=a\sin\theta\)
 \end{answer}
+
+\begin{solution}
+极点为原点时，极坐标点 \(\left(\frac a2,\frac\pi2\right)\) 的直角坐标为 \(\left(0,\frac a2\right)\)，圆的半径为 \(\frac a2\). 因而圆的直角坐标方程为 \(x^2+\left(y-\frac a2\right)^2=\left(\frac a2\right)^2\)，即 \(x^2+y^2=ay\). 代入 \(x=\rho\cos\theta\)，\(y=\rho\sin\theta\)，得 \(\rho^2=a\rho\sin\theta\)，故该圆的极坐标方程可写为 \(\rho=a\sin\theta\).
+\end{solution}
 
 \begin{problem}
 参数方程 \(\begin{cases}
@@ -37,6 +49,14 @@ y=2t^2-t
 \(y=\frac{x^2-x}{2}\)
 \end{answer}
 
+\begin{solution}
+由 \(x=1-2t\) 得 \(t=\frac{1-x}{2}\). 代入 \(y=2t^2-t\)，得
+\[
+y=2\left(\frac{1-x}{2}\right)^2-\frac{1-x}{2}=\frac{(1-x)^2-(1-x)}2=\frac{x^2-x}{2}
+\]
+因此普通方程为 \(y=\frac{x^2-x}{2}\).
+\end{solution}
+
 \begin{problem}
 圆锥的侧面展开图是圆心角为 \(216^\circ\) 的扇形，则此圆锥的轴截面的半顶角的正弦是\fillinblank{}.
 \end{problem}
@@ -44,6 +64,14 @@ y=2t^2-t
 \begin{answer}
 \(\frac{3}{5}\)
 \end{answer}
+
+\begin{solution}
+设圆锥侧面展开扇形的半径（即圆锥母线）为 \(l\)，圆锥底面半径为 \(r\). 扇形弧长等于底面圆周长，所以
+\[
+\frac{216^\circ}{360^\circ}\cdot2\pi l=2\pi r
+\]
+从而 \(r=\frac35l\). 轴截面的半顶角记为 \(\varphi\)，在轴截面的一半中，\(\sin\varphi=\frac rl\)，故 \(\sin\varphi=\frac35\).
+\end{solution}
 
 \begin{problem}
 \(\displaystyle\lim_{n\to\infty}\frac{(-2)^{n+1}}{1-2+4-\cdots+(-2)^{n-1}}=\)\fillinblank{}.
@@ -53,6 +81,18 @@ y=2t^2-t
 \(6\)
 \end{answer}
 
+\begin{solution}
+分母是首项为 \(1\)，公比为 \(-2\) 的等比数列前 \(n\) 项和，因此
+\[
+1-2+4-\cdots+(-2)^{n-1}=\frac{1-(-2)^n}{3}
+\]
+原式为
+\[
+\frac{3(-2)^{n+1}}{1-(-2)^n}=\frac{6}{1-(-2)^{-n}}
+\]
+当 \(n\to\infty\) 时，\((-2)^{-n}\to0\)，所以极限为 \(6\).
+\end{solution}
+
 \begin{problem}
 函数 \(y=\cos\left( \frac{\pi}{2}x \right)\cos\left[ \frac{\pi}{2}(x-1) \right]\) 的最小正周期是\fillinblank{}.
 \end{problem}
@@ -60,6 +100,14 @@ y=2t^2-t
 \begin{answer}
 \(2\)
 \end{answer}
+
+\begin{solution}
+令 \(u=\frac\pi2x\)，则 \(\frac\pi2(x-1)=u-\frac\pi2\)，从而
+\[
+y=\cos u\cos\left(u-\frac\pi2\right)=\cos u\sin u=\frac12\sin(2u)=\frac12\sin(\pi x)
+\]
+函数 \(\sin(\pi x)\) 的周期为 \(2\)，且平移 \(1\) 后函数值变为相反数，所以不存在更小的正周期. 因此最小正周期为 \(2\).
+\end{solution}
 
 \begin{problem}
 在 \((1+x)^n\) 的展开式中，若第三项和第六项的系数相等，则 \(n=\)\fillinblank{}.
@@ -69,6 +117,14 @@ y=2t^2-t
 \(7\)
 \end{answer}
 
+\begin{solution}
+展开式的第三项和第六项分别为 \(\mathrm C_n^2x^2\) 与 \(\mathrm C_n^5x^5\)，故题设给出 \(\mathrm C_n^2=\mathrm C_n^5\)，且第六项存在要求 \(n\geqslant5\). 因此
+\[
+\frac{n(n-1)}2=\frac{n(n-1)(n-2)(n-3)(n-4)}{120}
+\]
+约去正因子 \(n(n-1)\)，得 \((n-2)(n-3)(n-4)=60\). 当 \(n=6\) 时左边为 \(24\)，当 \(n=7\) 时左边为 \(60\)，而 \(n\geqslant5\) 时左边随 \(n\) 严格增大，所以 \(n=7\).
+\end{solution}
+
 \begin{problem}
 到椭圆 \(\frac{x^2}{25}+\frac{y^2}{9}=1\) 右焦点的距离与直线 \(x=6\) 的距离相等的点的轨迹方程是\fillinblank{}.
 \end{problem}
@@ -77,6 +133,14 @@ y=2t^2-t
 \(y^2=-4(x-5)\)
 \end{answer}
 
+\begin{solution}
+椭圆的半长轴、半短轴分别为 \(5\)，\(3\)，故焦距参数满足 \(c=\sqrt{5^2-3^2}=4\)，右焦点为 \(F(4,0)\). 设动点为 \(P(x,y)\). 由题意，
+\[
+\sqrt{(x-4)^2+y^2}=|x-6|
+\]
+两边均非负，平方后得 \((x-4)^2+y^2=(x-6)^2\)，整理为 \(y^2=-4x+20=-4(x-5)\). 这正是所求轨迹方程.
+\end{solution}
+
 \begin{problem}
 从 \(6\) 个运动员中选出 \(4\) 人参加 \(4\times100\text{ 米}\)接力赛，如果甲，乙两人都不能跑第一棒，那末共有\fillinblank{} 种不同的参赛方案（要求结果用数字表达）.
 \end{problem}
@@ -84,6 +148,13 @@ y=2t^2-t
 \begin{answer}
 \(240\)
 \end{answer}
+
+\begin{solution}
+第一棒不能由甲、乙承担，所以第一棒有 \(4\) 种选法. 确定第一棒运动员后，从其余 \(5\) 人中选出另外 \(3\) 人并按第二至第四棒排列，有 \(\mathrm A_5^3=5\times4\times3\) 种. 因而不同参赛方案数为
+\[
+4\mathrm A_5^3=4\times5\times4\times3=240
+\]
+\end{solution}
 
 \section{单选题}
 
@@ -101,6 +172,14 @@ y=2t^2-t
 D
 \end{answer}
 
+\begin{solution}
+将方程因式分解：
+\[
+x^4-y^4-4x^2+4y^2=(x^2-y^2)(x^2+y^2-4)
+\]
+所以曲线由 \(x^2-y^2=0\) 和 \(x^2+y^2=4\) 组成，即两条相交直线 \(y=x\)，\(y=-x\) 与圆 \(x^2+y^2=4\). 故选 D.
+\end{solution}
+
 \begin{problem}
 在 \(\left[ -1,\frac{3}{2} \right]\) 上与函数 \(y=x\) 相同的函数是（\quad）
 
@@ -114,6 +193,10 @@ D
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+在 \(x\in[-1,\frac32]\) 上，因 \(-\frac\pi2<-1\leqslant x\leqslant\frac32<\frac\pi2\)，有 \(\arcsin(\sin x)=x\)，所以第二项与 \(y=x\) 的图象相同. 第一项在负数 \(x\) 上有 \(\arccos(\cos x)=-x\ne x\)；第三、四项的定义域分别只覆盖 \([-1,1]\)，不能覆盖给定区间. 故选 B.
+\end{solution}
 
 \begin{problem}
 函数 \(y=\frac{1+a^x}{1-a^x}\)（\(a>0\)，\(a\ne1\)）（\quad）
@@ -129,6 +212,14 @@ B
 A
 \end{answer}
 
+\begin{solution}
+函数定义域为 \(x\ne0\)，因为 \(a^x=1\) 当且仅当 \(x=0\). 对任意 \(x\ne0\)，
+\[
+f(-x)=\frac{1+a^{-x}}{1-a^{-x}}=\frac{a^x+1}{a^x-1}=-\frac{1+a^x}{1-a^x}=-f(x)
+\]
+因此函数是奇函数. 它不可能是偶函数，因为例如 \(f(1)\ne0\) 而 \(f(-1)=-f(1)\). 故选 A.
+\end{solution}
+
 \begin{problem}
 \(|x|\leqslant2\) 是 \(|x+1|<1\) 的（\quad）
 
@@ -142,6 +233,10 @@ A
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+条件 \(P:|x|\leqslant2\) 的解集为 \([-2,2]\)，条件 \(Q:|x+1|<1\) 的解集为 \((-2,0)\). 显然 \((-2,0)\subset[-2,2]\)，所以 \(Q\) 是 \(P\) 的充分条件，即 \(P\) 是 \(Q\) 的必要条件. 但 \(P\) 的解集不包含于 \(Q\)，例如 \(x=1\) 满足 \(P\) 而不满足 \(Q\)，所以不是充分条件. 故选 A.
+\end{solution}
 
 \begin{problem}
 下列命题中错误的是（\quad）
@@ -157,6 +252,12 @@ A
 C
 \end{answer}
 
+\begin{solution}
+第一项是直线垂直平面的定义所给出的性质；第二项中的平面含有另一平面的垂线，按两平面垂直的判定定理，两平面互相垂直；第四项是斜线与平面内直线垂直的逆定理，均正确.
+
+第三项不成立. 例如取平面为 \(z=0\)，取该平面的一条垂线为 \(z\) 轴，取 \(x\) 轴作为所述直线. \(x\) 轴垂直于 \(z\) 轴，但 \(x\) 轴在平面 \(z=0\) 内，并不平行于该平面. 因此错误命题是第三项，故选 C.
+\end{solution}
+
 \begin{problem}
 若 \(\sin\alpha=\frac{5}{13}\)，\(\alpha\) 为第二象限角，则 \(\tan\frac{\alpha}{2}\) 的值为（\quad）
 
@@ -170,6 +271,18 @@ C
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+由于 \(\alpha\) 为第二象限角，\(\cos\alpha<0\). 由 \(\sin\alpha=\frac5{13}\) 得
+\[
+\cos\alpha=-\sqrt{1-\sin^2\alpha}=-\frac{12}{13}
+\]
+半角公式给出
+\[
+\tan\frac\alpha2=\frac{\sin\alpha}{1+\cos\alpha}=\frac{\frac5{13}}{1-\frac{12}{13}}=5
+\]
+故选 B.
+\end{solution}
 
 \begin{problem}
 在半径为 \(a\) 的球中，高为 \(\frac{2}{3}a\) 的球冠面积与整个球面面积之和为（\quad）
@@ -185,6 +298,14 @@ B
 D
 \end{answer}
 
+\begin{solution}
+半径为 \(a\) 的球，高为 \(h\) 的球冠面积为 \(2\pi ah\). 取 \(h=\frac23a\)，球冠面积为 \(2\pi a\cdot\frac23a=\frac43\pi a^2\). 整个球面面积为 \(4\pi a^2\)，所以两者之和为
+\[
+\frac43\pi a^2+4\pi a^2=\frac{16}{3}\pi a^2
+\]
+故选 D.
+\end{solution}
+
 \begin{problem}
 下列函数图象中正确的是（\quad）
 
@@ -198,6 +319,12 @@ D
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+逐项核对图中的定义域、单调性、截距和渐近线. 第一幅图中直线 \(y=x+a\) 的纵截距标为 \(1\)，这将迫使 \(a=1\)，但 \(y=\log_a x\) 要求 \(a>0\) 且 \(a\ne1\)，故第一项错误. 第三幅图中直线的纵截距对应 \(a>1\)，而图示 \(y=x^a\) 却为凹向下曲线；凹向下要求 \(0<a<1\)，故第三项错误. 第四幅图中直线的纵截距为正，即 \(a>0\)，但图示 \(y=x^a\) 在正半轴上递减；对 \(a>0\)，有 \(\dfrac{\mathrm d}{\mathrm dx}x^a=ax^{a-1}>0\)（\(x>0\)），所以第四项错误.
+
+第二幅图与 \(0<a<1\) 时的性质一致：\(y=a^x>0\)，过点 \((0,1)\)，单调递减且以 \(y=0\) 为水平渐近线；直线 \(y=x+a\) 斜率为 \(1\)，纵截距 \(a\in(0,1)\). 因而正确图象为第二项，故选 B.
+\end{solution}
 
 \begin{problem}
 下列关系中正确的是（\quad）
@@ -213,6 +340,18 @@ B
 D
 \end{answer}
 
+\begin{solution}
+令 \(u=\left(\frac12\right)^{1/3}\)，\(v=\left(\frac15\right)^{1/3}\). 因为 \(0<\frac15<\frac12<1\)，所以 \(0<v<u<1\). 对 \(0<t<1\)，有 \(t^2<t\)，且平方保持正数大小关系. 因而
+\[
+v^2<u^2<u
+\]
+即
+\[
+\left(\frac15\right)^{2/3}<\left(\frac12\right)^{2/3}<\left(\frac12\right)^{1/3}
+\]
+故选 D.
+\end{solution}
+
 \begin{problem}
 方程 \(\sin x=\lg x\) 的实数根有（\quad）
 
@@ -226,6 +365,16 @@ D
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+方程要求 \(x>0\). 设 \(f(x)=\sin x-\lg x\). 当 \(0<x<1\) 时，\(\sin x>0\)，而 \(\lg x<0\)，故无根；\(x=1\) 时 \(f(1)=\sin1>0\).
+
+在 \([1,\frac\pi2]\) 上，\(\sin x\geqslant\sin1>\frac12\)，且 \(\lg x\leqslant\lg\frac\pi2<\lg2<\frac12\)，故 \(f(x)>0\). 在 \([\frac\pi2,\pi]\) 上，\(\sin x\) 严格递减而 \(\lg x\) 严格递增，且 \(f(\frac\pi2)>0\)，\(f(\pi)=-\lg\pi<0\)，所以恰有一个根.
+
+在 \((\pi,2\pi)\) 上 \(\sin x<0<\lg x\)，无根. 在 \((2\pi,3\pi)\) 上，\(f(2\pi)<0\)，\(f(\frac{5\pi}{2})=1-\lg\frac{5\pi}{2}>0\)，\(f(3\pi)=-\lg(3\pi)<0\). 先看 \((2\pi,\frac{5\pi}{2})\)：此时 \(\sin x\) 严格递增，而 \(\frac1{x^2\ln10}\) 严格递减，所以 \(f''(x)=-\sin x+\frac1{x^2\ln10}\) 严格递减；又 \(f''(2\pi)>0\)，\(f''(\frac{5\pi}{2})<0\)，故 \(f'\) 先增后减. 由于 \(f'(2\pi)=1-\frac1{2\pi\ln10}>0\)，且 \(f'(\frac{5\pi}{2})=-\frac1{(5\pi/2)\ln10}<0\)，\(f\) 先增后减. 在递减段上，\(f(x)\geqslant f(\frac{5\pi}{2})>0\)，而 \(f(2\pi)<0\)，所以该区间恰有一个根. 在 \((\frac{5\pi}{2},3\pi)\) 上，\(\cos x<0\)，从而 \(f'(x)=\cos x-\frac1{x\ln10}<0\)，结合两端函数值知恰有一个根. 因此 \((2\pi,3\pi)\) 上恰有两个根.
+
+当 \(3\pi\leqslant x\leqslant10\) 时，\(3\pi<10<\frac{7\pi}{2}\)，所以 \(\sin x\leqslant0<\lg x\)，无根；当 \(x>10\) 时，\(\lg x>1\geqslant\sin x\)，无根. 所以实数根总数为 \(1+2=3\)，故选 C.
+\end{solution}
 
 \section{解答题}
 
@@ -243,7 +392,7 @@ C
 
 \begin{solution}
 由 \(x\geqslant\frac{1}{x}\) 得 \(A=\left\{ x\mid -1\leqslant x<0,\text{或 }x\geqslant1,\ x\in\R \right\}\). 由 \(\sqrt{2x+1}<3\) 得 \(B=\left\{ x\mid -\frac{1}{2}\leqslant x<4,\ x\in\R \right\}\). 因此
-\[D=A\cap B=\left\{ x\mid -1\leqslant x<0,\text{或 }x\geqslant1 \right\}\cap\left\{ x\mid -\frac{1}{2}\leqslant x<4 \right\}=\left\{ x\mid -\frac{1}{2}\leqslant x<0,\text{或 }1\leqslant x<4 \right\}.\]
+\[D=A\cap B=\left\{ x\mid -1\leqslant x<0,\text{或 }x\geqslant1 \right\}\cap\left\{ x\mid -\frac{1}{2}\leqslant x<4 \right\}=\left\{ x\mid -\frac{1}{2}\leqslant x<0,\text{或 }1\leqslant x<4 \right\}\]
 \end{solution}
 
 \begin{problem}
@@ -292,21 +441,20 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item 连接 \(DF\)，设 \(G\) 为 \(DF\) 的中点，连接 \(GE\). 因为 \(AE=ED\)，\(FG=GD\)，所以 \(EG\parallel AF\). 故 \(\angle GEC\) 是异面直线 \(AF\) 与 \(CE\) 所成的角.
-设棱长为 \(a\). 则 \(AF=CE=\dfrac{\sqrt{3}}{2}a\)，\(EG=\dfrac{1}{2}AF=\dfrac{\sqrt{3}}{4}a\).
-连接 \(GC\)，则
+\item 连接 \(DF\)，设 \(G\) 为 \(DF\) 的中点，连接 \(GE\). 因为 \(AE=ED\)，\(FG=GD\)，所以 \(EG\parallel AF\). 故 \(\angle GEC\) 是异面直线 \(AF\) 与 \(CE\) 所成的角. 设棱长为 \(a\). 在正三角形 \(ABC\) 中，\(F\) 是 \(BC\) 的中点，所以 \(AF\perp BC\)，\(AF=\dfrac{\sqrt{3}}{2}a\)；在正三角形 \(ACD\) 中，\(E\) 是 \(AD\) 的中点，所以 \(CE=\dfrac{\sqrt{3}}{2}a\). 由中位线定理，\(EG=\dfrac{1}{2}AF=\dfrac{\sqrt{3}}{4}a\).
+在正三角形 \(BCD\) 中，\(F\) 是 \(BC\) 的中点，故 \(DF\perp BC\). 因为 \(G\in DF\)，\(FC\subset BC\)，所以 \(FG\perp FC\)，从而
 \[
 GC=\sqrt{FC^2+FG^2}=\sqrt{\frac{a^2}{4}+\frac{3a^2}{16}}=\frac{\sqrt{7}}{4}a
 \]
 由余弦定理得 \(\cos\angle GEC=\dfrac{EG^2+CE^2-GC^2}{2EG\cdot CE}=\dfrac{2}{3}\)，所以 \(\angle GEC=\arccos\dfrac{2}{3}\)
 即异面直线 \(AF\) 与 \(CE\) 所成角的大小为 \(\arccos\frac{2}{3}\).
 
-\item 作 \(EK\perp DF\)，垂足为 \(K\)，连接 \(KC\). 因为 \(AF\perp BC\)，\(DF\perp BC\)，所以 \(BC\perp\) 平面 \(ADF\). 又 \(BC\subset\) 平面 \(BCD\)，故平面 \(ADF\perp\) 平面 \(BCD\). 于是 \(EK\perp\) 平面 \(BCD\)，从而 \(\angle KCE\) 是 \(CE\) 与底面 \(BCD\) 所成的角.
-在 \(\triangle AFD\) 中，连接 \(EF\)，且 \(EF\perp AD\). 则
+\item 作 \(EK\perp DF\)，垂足为 \(K\)，连接 \(KC\). 由正三角形 \(ABC\) 和 \(BCD\) 的中线性质，\(AF\perp BC\)，\(DF\perp BC\)，且 \(AF\)，\(DF\) 是平面 \(ADF\) 内相交的两条直线，所以 \(BC\perp\) 平面 \(ADF\). 又 \(BC\subset\) 平面 \(BCD\)，故平面 \(ADF\perp\) 平面 \(BCD\). 两平面的交线为 \(DF\)，而 \(EK\) 在平面 \(ADF\) 内且 \(EK\perp DF\)，所以 \(EK\perp\) 平面 \(BCD\). 因而 \(CK\) 是 \(CE\) 在底面 \(BCD\) 上的射影，\(\angle KCE\) 是 \(CE\) 与底面 \(BCD\) 所成的角.
+在 \(\triangle AFD\) 中，\(AF=FD=\dfrac{\sqrt{3}}{2}a\)，所以它是以 \(F\) 为顶点的等腰三角形；又 \(E\) 是 \(AD\) 的中点，故中线 \(EF\perp AD\). 因此
 \[
 EF=\sqrt{FD^2-ED^2}=\sqrt{\frac{3a^2}{4}-\frac{a^2}{4}}=\frac{\sqrt{2}}{2}a
 \]
-又因为 \(EK\cdot FD=EF\cdot ED\)，所以
+由三角形 \(EFD\) 的面积分别以 \(EF\)，\(EK\) 为高，得 \(EK\cdot FD=EF\cdot ED\)，所以
 \(EK=\frac{EF\cdot ED}{FD}=\frac{\frac{\sqrt{2}}{2}a\cdot\frac{a}{2}}{\frac{\sqrt{3}}{2}a}=\frac{\sqrt{6}}{6}a\).
 于是
 \[
@@ -322,13 +470,13 @@ EF=\sqrt{FD^2-ED^2}=\sqrt{\frac{3a^2}{4}-\frac{a^2}{4}}=\frac{\sqrt{2}}{2}a
 \end{problem}
 
 \begin{solution}
-设 \(z_1=\cos\alpha+\i\sin\alpha\)，\(z_2=k\cos\beta+\i k\sin\beta\)，\(z_3=(2-k)\cos\gamma+\i(2-k)\sin\gamma\). 由 \(z_1+z_2+z_3=0\) 得
+由 \(|z_2|=k\)，\(|z_3|=2-k\) 且 \(z_2\)，\(z_3\) 有辐角可知 \(0<k<2\). 设 \(z_1=\cos\alpha+\i\sin\alpha\)，\(z_2=k\cos\beta+\i k\sin\beta\)，\(z_3=(2-k)\cos\gamma+\i(2-k)\sin\gamma\). 由 \(z_1+z_2+z_3=0\) 得
 \(\cos\alpha+k\cos\beta+(2-k)\cos\gamma=0\)，\(\sin\alpha+k\sin\beta+(2-k)\sin\gamma=0\)，
 即 \(\cos\alpha=(k-2)\cos\gamma-k\cos\beta\)，\(\sin\alpha=(k-2)\sin\gamma-k\sin\beta\).
 
 将上面两式两端平方后相加，得 \(1=(k-2)^2+k^2-2(k-2)k\cos(\gamma-\beta)\). 由题设可知 \(k\ne0\)，\(k\ne2\)，所以 \(\cos(\beta-\gamma)=\dfrac{(k-2)^2+k^2-1}{2k(k-2)}=1+\dfrac{3}{2(k-1)^2-2}\).
 
-又因为 \(\left| \cos(\beta-\gamma) \right|\leqslant1\)，故 \(-2\leqslant\dfrac{3}{2(k-1)^2-2}\leqslant0\)，解得 \(\dfrac{1}{2}\leqslant k\leqslant\dfrac{3}{2}\).
+又因为 \(\left| \cos(\beta-\gamma) \right|\leqslant1\)，故 \(-2\leqslant\dfrac{3}{2(k-1)^2-2}\leqslant0\)，解得 \(\dfrac{1}{2}\leqslant k\leqslant\dfrac{3}{2}\). 这些 \(k\) 值也确实可行，因为三角形三边 \(1\)，\(k\)，\(2-k\) 满足最大边不超过其余两边之和，且在端点处退化为共线情形.
 
 由上式可知，当 \(k=1\) 时，\(\left[ \cos(\beta-\gamma) \right]_{\max}=-\dfrac{1}{2}\)；当 \(k=\dfrac{1}{2}\) 或 \(k=\dfrac{3}{2}\) 时，\(\left[ \cos(\beta-\gamma) \right]_{\min}=-1\). 所以 \(\cos(\beta-\gamma)\) 的最大值为 \(-\dfrac{1}{2}\)，在 \(k=1\) 时取得；最小值为 \(-1\)，在 \(k=\dfrac{1}{2}\) 或 \(k=\dfrac{3}{2}\) 时取得.
 \end{solution}
@@ -344,26 +492,22 @@ EF=\sqrt{FD^2-ED^2}=\sqrt{\frac{3a^2}{4}-\frac{a^2}{4}}=\frac{\sqrt{2}}{2}a
 
 \begin{solution}
 \begin{enumerate}
-\item 法一：双曲线的实半轴 \(a=2\sqrt{3}\)，虚半轴 \(b=\sqrt{13}\)，半焦距 \(c=5\). 由双曲线的定义可得 \(\left| AF \right|=\dfrac{c}{a}y_1-a=\dfrac{5\sqrt{3}}{6}y_1-2\sqrt{3}\)，同理 \(\left| CF \right|=\dfrac{5\sqrt{3}}{6}y_2-2\sqrt{3}\). 又 \(\left| BF \right|=\sqrt{(\sqrt{26}-0)^2+(6-5)^2}=3\sqrt{3}\). 因为 \(\left| AF \right|\)，\(\left| BF \right|\)，\(\left| CF \right|\) 成等差数列，所以 \(\left| AF \right|+\left| CF \right|=2\left| BF \right|\)，于是 \(\left( \dfrac{5\sqrt{3}}{6}y_1-2\sqrt{3} \right)+\left( \dfrac{5\sqrt{3}}{6}y_2-2\sqrt{3} \right)=6\sqrt{3}\)，解得 \(y_1+y_2=12\).
-
-法二：因为 \(\left| BF \right|=\sqrt{(\sqrt{26}-0)^2+(6-5)^2}=\sqrt{26+1}=3\sqrt{3}\). 又 \(\left| AF \right|=\sqrt{x_1^2+(y_1-5)^2}\). 而 \(A(x_1,y_1)\) 在双曲线上，所以 \(x_1^2=\dfrac{13y_1^2-156}{12}\). 从而
+\item 双曲线的方程可写为 \(x^2=\dfrac{13}{12}(y^2-12)\). 因为 \(A\)，\(B\)，\(C\) 在同一上支上，所以 \(y_1\)，\(y_2\geqslant\sqrt{12}\). 对上支上的点 \(P(x,y)\)，
 \[
-\left| AF \right|^2=\frac{13y_1^2-156}{12}+y_1^2-10y_1+25=\frac{1}{12}(25y_1^2-120y_1+144)=\frac{1}{12}(5y_1-12)^2
+PF^2=x^2+(y-5)^2=\frac{13y^2-156}{12}+y^2-10y+25=\frac{(5y-12)^2}{12}
 \]
-由题设可知 \(y_1\geqslant\sqrt{12}\)，所以 \(5y_1-12>0\). 因此 \(\left| AF \right|=\dfrac{1}{\sqrt{12}}(5y_1-12)\). 同理可得 \(\left| CF \right|=\dfrac{1}{\sqrt{12}}(5y_2-12)\).
-因为 \(\left| AF \right|+\left| CF \right|=2\left| BF \right|\)，所以 \(\dfrac{1}{\sqrt{12}}(5y_1-12+5y_2-12)=6\sqrt{3}\)，即得 \(y_1+y_2=12\).
+由于 \(5y-12>0\)，所以 \(PF=\dfrac{5y-12}{\sqrt{12}}\). 因而
+\(AF=\frac{5y_1-12}{\sqrt{12}}\)，\(CF=\frac{5y_2-12}{\sqrt{12}}\).
+又 \(BF=\sqrt{(\sqrt{26}-0)^2+(6-5)^2}=3\sqrt{3}\). 由 \(AF\)，\(BF\)，\(CF\) 成等差数列，
+\[
+\frac{5y_1-12}{\sqrt{12}}+\frac{5y_2-12}{\sqrt{12}}=2\cdot3\sqrt{3}
+\]
+解得 \(y_1+y_2=12\).
 
-\item 法一：线段 \(AC\) 的中点为 \(\left( \dfrac{x_1+x_2}{2},6 \right)\)，故它的垂直平分线 \(l\) 的方程为 \(y-6=-\dfrac{x_1-x_2}{y_1-y_2}\left( x-\dfrac{x_1+x_2}{2} \right)\). 由双曲线的一支关于 \(y\) 轴对称可知，若 \(l\) 经过一定点，则该定点必在 \(y\) 轴上. 设 \(l\) 与 \(y\) 轴的交点为 \(D(0,y_0)\)，则 \(y_0-6=\dfrac{x_1^2-x_2^2}{2(y_1-y_2)}\).
+\item 由第（1）问，若 \(y_1=y_2\)，则 \(y_1=y_2=6\). 在双曲线的上支上，给定 \(y=6\) 时只有两个点 \((\sqrt{26},6)\) 和 \((-\sqrt{26},6)\)，其中一个是 \(B\)，这与 \(A\)，\(B\)，\(C\) 互不相同矛盾. 因此 \(y_1\ne y_2\). 线段 \(AC\) 的中点为 \(\left( \dfrac{x_1+x_2}{2},6 \right)\)，故它的垂直平分线 \(l\) 的方程为 \(y-6=-\dfrac{x_1-x_2}{y_1-y_2}\left( x-\dfrac{x_1+x_2}{2} \right)\). 设 \(l\) 与 \(y\) 轴的交点为 \(D(0,y_0)\)，则 \(y_0-6=\dfrac{x_1^2-x_2^2}{2(y_1-y_2)}\).
 因为 \(A(x_1,y_1)\)，\(C(x_2,y_2)\) 在双曲线上，所以 \(x_1^2=\dfrac{13}{12}(y_1^2-12)\)，\(x_2^2=\dfrac{13}{12}(y_2^2-12)\). 因此
 \[x_1^2-x_2^2=\frac{13}{12}(y_1^2-y_2^2)=\frac{13}{12}(y_1+y_2)(y_1-y_2)=13(y_1-y_2)\]
 代入上式得 \(y_0-6=\dfrac{13}{2}\)，所以 \(y_0=\dfrac{25}{2}\).
 因为 \(y_0\) 的值与 \(A\)，\(C\) 点的坐标无关，所以 \(D\) 为定点，即线段 \(AC\) 的垂直平分线经过定点 \(D\left( 0,\dfrac{25}{2} \right)\).
-
-法二：线段 \(AC\) 的中点为 \(\left( \dfrac{x_1+x_2}{2},6 \right)\)，由题设可知 \(y_1\ne y_2\)，故它的垂直平分线 \(l\) 的方程为 \(y-6=-\dfrac{x_1-x_2}{y_1-y_2}\left( x-\dfrac{x_1+x_2}{2} \right)\). 由双曲线的一支关于 \(y\) 轴的对称性可知，若线段 \(AC\) 的垂直平分线经过某一定点，则该点必在 \(y\) 轴上，因此只需证 \(AC\) 的垂直平分线与 \(y\) 轴的交点为定点即可.
-设 \(AC\) 的垂直平分线与 \(y\) 轴的交点为 \(D(0,y_0)\). 因为 \(\left| AD \right|=\left| CD \right|\)，所以 \(x_1^2+(y_1-y_0)^2=x_2^2+(y_2-y_0)^2\)，即
-\[
-\frac{13y_1^2-156}{12}+y_1^2-2y_1y_0+y_0^2=\frac{13y_2^2-156}{12}+y_2^2-2y_2y_0+y_0^2
-\]
-化简后得 \(25(y_1+y_2)(y_1-y_2)+24(y_2-y_1)y_0=0\). 由题设知 \(y_1\ne y_2\)，所以 \(25(y_1+y_2)-24y_0=0\)，解得 \(y_0=\dfrac{25\times12}{24}=\dfrac{25}{2}\). 因为 \(y_0\) 与 \(A\)，\(C\) 点的坐标无关，故 \(D\) 为定点，即线段 \(AC\) 的垂直平分线通过定点 \(D\left( 0,\dfrac{25}{2} \right)\).
 \end{enumerate}
 \end{solution}

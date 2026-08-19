@@ -18,6 +18,10 @@
 A
 \end{answer}
 
+\begin{solution}
+方程的判别式为 \(\Delta=6^{2}-4\times13=-16\)，所以两个根为 \(x=\dfrac{-6\pm\sqrt{-16}}{2}=-3\pm2\i\). 因此一个根为 \(-3+2\i\)，故选 A.
+\end{solution}
+
 \begin{problem}
 命题“\(\exists x_0 \in \complement_{\R} Q\)，\(x_0^3 \in Q\)”的否定是（\quad）
 
@@ -31,6 +35,10 @@ A
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+否定存在命题时，要把“存在”改为“任意”，并把结论“\(x_0^3\in Q\)”否定为“\(x^3\notin Q\)”. 因此原命题的否定为 \(\forall x\in\complement_{\R}Q\)，\(x^3\notin Q\)，故选 D.
+\end{solution}
 
 \begin{problem}
 已知二次函数 \( y = f(x) \) 的图象如图所示，则它与 \( x \) 轴所围成的图形的面积为（\quad）
@@ -48,6 +56,10 @@ D
 B
 \end{answer}
 
+\begin{solution}
+由图象可知抛物线顶点为 \((0,1)\)，与 \(x\) 轴交于 \((-1,0)\)，\((1,0)\)，故 \(f(x)=1-x^2\). 所围图形在 \([-1,1]\) 上，所以面积为 \(\displaystyle\int_{-1}^{1}(1-x^2)\,\mathrm{d}x=\left(x-\frac{x^3}{3}\right)\bigg|_{-1}^{1}=\frac{4}{3}\)，故选 B.
+\end{solution}
+
 \begin{problem}
 已知某几何体的三视图如图所示，则该几何体的体积为（\quad）
 
@@ -64,19 +76,31 @@ B
 B
 \end{answer}
 
+\begin{solution}
+俯视图为直径为 \(2\) 的圆，故底面为单位圆盘 \(D\)，其面积为 \(\pi\). 取正视图中对应的直径为 \(x\) 轴，则由正视图可知该直径两端的高度分别为 \(2\) 和 \(4\)，且上表面为平面，所以底面上点 \((x,y)\) 处的高度为 \(h(x,y)=3+x\)，其中 \(D\) 的方程为 \(x^2+y^2\leqslant1\). 因而几何体的体积为
+\[
+V=\iint_D(3+x)\,\mathrm{d}A=3\iint_D\mathrm{d}A+\iint_Dx\,\mathrm{d}A=3\pi
+\]
+最后一个积分因圆盘关于 \(y\) 轴对称而为 \(0\)，故选 B.
+\end{solution}
+
 \begin{problem}
 设 \(a \in \Z\)，且 \(0 \leqslant a < 13\)，若 \(5^{12012} + a\) 能被 13 整除，则 \(a =\)（\quad）
 
 \choices
-    {0}
-    {1}
-    {11}
-    {12}
+    {\(0\)}
+    {\(1\)}
+    {\(11\)}
+    {\(12\)}
 \end{problem}
 
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+因为 \(5^2=25\equiv-1\pmod {13}\)，所以 \(5^4\equiv1\pmod {13}\). 又 \(12012=4\times3003\)，从而 \(5^{12012}\equiv1\pmod {13}\). 题设要求 \(1+a\equiv0\pmod {13}\)，即 \(a\equiv12\pmod {13}\). 结合 \(0\leqslant a<13\)，得到 \(a=12\)，故选 D.
+\end{solution}
 
 \begin{problem}
 设 \(a\)，\(b\)，\(c\)，\(x\)，\(y\)，\(z\) 是正数，且 \(a^2 + b^2 + c^2 = 10\)，\(x^2 + y^2 + z^2 = 40\)，\(ax + by + cz = 20\)，则 \(\frac{a + b + c}{x + y + z} =\)（\quad）
@@ -91,6 +115,10 @@ D
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+由柯西不等式，\(ax+by+cz\leqslant\sqrt{a^2+b^2+c^2}\sqrt{x^2+y^2+z^2}=\sqrt{10}\sqrt{40}=20\). 题设等号成立，所以 \((x,y,z)\) 与 \((a,b,c)\) 同向，即存在正数 \(t\) 使 \(x=ta\)，\(y=tb\)，\(z=tc\). 由平方和得 \(40=t^2\times10\)，且 \(t>0\)，故 \(t=2\). 因此 \(x+y+z=2(a+b+c)\)，所求比值为 \(\frac12\)，故选 C.
+\end{solution}
 
 \begin{problem}
 定义在 \((- \infty, 0) \cup (0, +\infty)\) 上的函数 \(f(x)\)，如果对于任意给定的等比数列 \(\{a_n\}\)，\(\{f(a_n)\}\) 仍是等比数列，则称 \(f(x)\) 为“保等比数列函数”. 现有定义在 \((- \infty, 0) \cup (0, +\infty)\) 上的如下函数：
@@ -115,6 +143,12 @@ C
 C
 \end{answer}
 
+\begin{solution}
+设任意非零等比数列为 \(a_n=Aq^{n-1}\). 对于 \(f(x)=x^2\)，有 \(f(a_n)=A^2(q^2)^{n-1}\)，仍为等比数列. 对于 \(f(x)=\sqrt{|x|}\)，有 \(f(a_n)=\sqrt{|A|}\,|q|^{(n-1)/2}\)，也仍为等比数列.
+
+取等比数列 \(a_n=2^{n-1}\)，则 \(2^{a_n}=2\)，\(4\)，\(16\)，\(\ldots\)，前两项之比为 \(2\)，后两项之比为 \(4\)，所以 \(2^x\) 不保等比. 对同一数列，\(\ln|a_n|=(n-1)\ln2\)，其首项为 \(0\) 而第二项为 \(\ln2\neq0\)；若它是等比数列，则第二项应等于首项乘以公比，矛盾，所以 \(\ln|x|\) 也不保等比. 因此只有序号 \(1\)，\(3\) 符合，故选 C.
+\end{solution}
+
 \begin{problem}
 如图，在圆心角为直角的扇形 \(OAB\) 中，分别以 \(OA\)，\(OB\) 为直径作两个半圆. 在扇形 \(OAB\) 内随机取一点，则此点取自阴影部分的概率是（\quad）
 
@@ -131,19 +165,29 @@ C
 A
 \end{answer}
 
+\begin{solution}
+设 \(OA=OB=R\). 扇形面积为 \(S_0=\frac14\pi R^2\)，每个半圆的半径为 \(R/2\). 两个半圆的圆心距为 \(R/\sqrt2\)，两圆交叠部分对应的两个圆心角均为 \(\pi/2\)，故交叠面积为 \(S_I=2\left(\frac12\left(\frac R2\right)^2\frac\pi2-\frac12\left(\frac R2\right)^2\right)=\frac{\pi-2}{8}R^2\).
+
+阴影部分由两个半圆的交叠部分和扇形中两个半圆以外的部分组成. 由于两个半圆面积之和恰好等于扇形面积，阴影面积为 \(2S_I=\frac{\pi-2}{4}R^2\). 因此所求概率为 \(\displaystyle\frac{2S_I}{S_0}=\frac{\pi-2}{\pi}=1-\frac2\pi\)，故选 A.
+\end{solution}
+
 \begin{problem}
 函数 \( f(x) = x\cos x^2 \) 在区间 \([0, 4]\) 上的零点个数为（\quad）
 
 \choices
-    {4}
-    {5}
-    {6}
-    {7}
+    {\(4\)}
+    {\(5\)}
+    {\(6\)}
+    {\(7\)}
 \end{problem}
 
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+当 \(x=0\) 时 \(f(x)=0\). 当 \(x>0\) 时，零点满足 \(\cos x^2=0\)，即 \(x^2=\frac{(2k+1)\pi}{2}\). 在 \([0,4]\) 内要求 \(0<x^2\leqslant16\)，对应 \(k=0\)，\(1\)，\(2\)，\(3\)，\(4\)，因为 \(\frac{9\pi}{2}<16<\frac{11\pi}{2}\). 所以正零点有 \(5\) 个，加上 \(x=0\) 共 \(6\) 个，故选 C.
+\end{solution}
 
 \begin{problem}
 我国古代数学名著《九章算术》中“开立圆术”曰：置积尺数，以十六乘之，九而一，所得开立方除之，即立圆径. “开立圆术”相当于给出了已知球的体积 \(V\)，求其直径 \(d\) 的一个近似公式 \(d \approx \sqrt[3]{\frac{16}{9} V}\). 人们还用过一些类似的近似公式. 根据 \(\pi = 3.14159 \cdots\) 判断，下列近似公式中最精确的是（\quad）
@@ -159,6 +203,10 @@ C
 D
 \end{answer}
 
+\begin{solution}
+球体积满足 \(V=\frac\pi6d^3\)，所以准确公式为 \(d=\sqrt[3]{\frac6\pi V}\). 用 \(\pi\approx3.14159\) 得 \(\frac6\pi\approx1.90986\). 各选项的系数中，\(\frac{21}{11}\approx1.90909\)，\(\frac{300}{157}\approx1.91083\)，而 \(2\) 与 \(\frac{16}{9}\) 更远离 \(1.90986\). 进一步，\(\left|\frac6\pi-\frac{21}{11}\right|\approx0.00077<0.00097\approx\left|\frac{300}{157}-\frac6\pi\right|\)，故 \(\frac{21}{11}\) 最接近 \(\frac6\pi\)，相应公式最精确，故选 D.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -169,22 +217,30 @@ D
 \(\frac{2\pi}{3}\)
 \end{answer}
 
+\begin{solution}
+题设左边为 \((a+b)^2-c^2\). 由余弦定理 \(c^2=a^2+b^2-2ab\cos C\)，所以 \((a+b)^2-c^2=2ab(1+\cos C)\). 题设给出 \(2ab(1+\cos C)=ab\)，因 \(ab>0\)，得 \(\cos C=-\frac12\). 由于 \(0<C<\pi\)，故 \(C=\frac{2\pi}{3}\).
+\end{solution}
+
 \begin{problem}
 阅读如图所示的程序框图，运行相应的程序，
 
-\texfigure[max width=0.42\linewidth]{img_repaint/2012/hubei_science/q12_fig1.tex}
-
 输出的结果是\fillinblank{}.
+
+\texfigure[max width=0.42\linewidth]{img_repaint/2012/hubei_science/q12_fig1.tex}
 \end{problem}
 
 \begin{answer}
 9
 \end{answer}
 
+\begin{solution}
+初始值为 \(a=1\)，\(s=0\)，\(n=1\). 第一次循环后 \(s=1\)，\(a=3\)，因 \(n=1<3\)，令 \(n=2\)；第二次循环后 \(s=4\)，\(a=5\)，因 \(n=2<3\)，令 \(n=3\)；第三次循环后 \(s=9\)，\(a=7\)，此时 \(n=3\) 不满足 \(n<3\)，所以输出 \(s=9\).
+\end{solution}
+
 \begin{problem}
 回文数是指从左到右读与从右到左读都一样的正整数. 如 \(22\)，\(121\)，\(3443\)，\(94249\) 等. 显然 \(2\) 位回文数有 \(9\) 个：\(11\)，\(22\)，\(33\)，…，\(99\)；\(3\) 位回文数有 \(90\) 个：\(101\)，\(111\)，\(121\)，…，\(191\)，\(202\)，…，\(999\).
-
 \begin{enumerate}
+
 \item 4 位回文数有\fillinblank{} 个；
 \item \( 2n+1 \)（\( n \in \N^{*} \)）位回文数有\fillinblank{} 个.
 \end{enumerate}
@@ -194,8 +250,14 @@ D
 \(90\)；\(9\cdot 10^{n}\)
 \end{answer}
 
+\begin{solution}
+四位回文数的形式为 \(\overline{abba}\)，首位 \(a\) 有 \(9\) 种取法，第二位 \(b\) 有 \(10\) 种取法，所以共有 \(9\times10=90\) 个.
+
+\(2n+1\) 位回文数由前 \(n+1\) 位唯一确定，其中首位有 \(9\) 种，其余 \(n\) 位各有 \(10\) 种，因此共有 \(9\cdot10^n\) 个.
+\end{solution}
+
 \begin{problem}
-如图，双曲线 \(\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1\)（\(a, b > 0\)）的两顶点为 \(A_1\)，\(A_2\)，虚轴两端点为 \(B_1\)，\(B_2\)，两焦点为 \(F_1\)，\(F_2\). 若以 \(A_1A_2\) 为直径的圆内切于菱形 \(F_1B_1F_2B_2\)，切点分别为 \(A\)，\(B\)，\(C\)，\(D\). 则
+如图，双曲线 \(\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1\)（\(a\)，\(b > 0\)）的两顶点为 \(A_1\)，\(A_2\)，虚轴两端点为 \(B_1\)，\(B_2\)，两焦点为 \(F_1\)，\(F_2\). 若以 \(A_1A_2\) 为直径的圆内切于菱形 \(F_1B_1F_2B_2\)，切点分别为 \(A\)，\(B\)，\(C\)，\(D\). 则
 
 \begin{enumerate}
 \item 双曲线的离心率 \(e =\fillinblank{}\)；
@@ -209,6 +271,11 @@ D
 \(\frac{\sqrt{5}+1}{2}\)；\(\frac{\sqrt{5}+2}{2}\)
 \end{answer}
 
+\begin{solution}
+记双曲线焦距参数为 \(c\)，则 \(c^2=a^2+b^2\). 菱形的一条边所在直线可取过 \(F_2(c,0)\) 和 \(B_2(0,b)\) 的直线 \(bx+cy=bc\). 圆心为原点，半径为 \(a\)，所以原点到该直线的距离满足 \(\frac{bc}{\sqrt{b^2+c^2}}=a\). 平方并代入 \(c^2=a^2+b^2\)，得 \(a^2(a^2+2b^2)=b^2(a^2+b^2)\). 令 \(t=\frac{b^2}{a^2}>0\)，则 \(t^2-t-1=0\)，故 \(t=\frac{1+\sqrt5}{2}\). 于是 \(e^2=\frac{c^2}{a^2}=1+t=t^2\)，从而 \(e=t=\frac{\sqrt5+1}{2}\).
+
+切点 \(A\) 的坐标可由圆心到直线作垂线得到，其绝对坐标为 \(\left(\frac{b^2c}{b^2+c^2},\frac{bc^2}{b^2+c^2}\right)\)，故矩形面积为 \(S_2=4\frac{b^3c^3}{(b^2+c^2)^2}=\frac{4a^4}{bc}\). 菱形两条对角线长分别为 \(2c\)，\(2b\)，所以 \(S_1=2bc\). 因此 \(\frac{S_1}{S_2}=\frac{b^2c^2}{2a^4}=\frac{t(1+t)}{2}=\frac{t^3}{2}=\frac{\sqrt5+2}{2}\).
+\end{solution}
 
 \section{选考题：填空题}
 
@@ -222,6 +289,10 @@ D
 2
 \end{answer}
 
+\begin{solution}
+设弦 \(AB\) 的中点为 \(H\)，取弦所在直线为横轴，令 \(OH=h\)，\(HD=u\). 由 \(AB=4\) 得 \(AH=2\)，所以圆半径满足 \(R^2=OH^2+AH^2=h^2+4\). 又 \(OD^2=h^2+u^2\). 由于 \(DC\perp OD\)，在以 \(D\) 为端点、方向为 \(DC\) 的弦上，勾股关系给出 \(CD^2=R^2-OD^2=4-u^2\). 因为 \(D\) 在线段 \(AB\) 上，\(|u|\leqslant2\)，故 \(CD\leqslant2\)，且当 \(u=0\)，即 \(D=H\) 时取等号. 因此 \(CD\) 的最大值为 \(2\).
+\end{solution}
+
 \begin{problem}
 在直角坐标系 \(xOy\) 中，以原点 \(O\) 为极点，\(x\) 轴的正半轴为极轴建立极坐标系. 已知射线 \(\theta = \frac{\pi}{4}\) 与曲线 \(\begin{cases}
 x = t + 1,\\
@@ -232,6 +303,10 @@ y = (t - 1)^2,
 \begin{answer}
 \(\left(\frac{5}{2},\frac{5}{2}\right)\)
 \end{answer}
+
+\begin{solution}
+射线 \(\theta=\frac\pi4\) 在直角坐标系中满足 \(y=x\)，且取第一象限部分. 代入参数方程得 \((t-1)^2=t+1\)，即 \(t^2-3t=0\)，所以 \(t=0\) 或 \(t=3\). 对应交点分别为 \((1,1)\) 和 \((4,4)\)，故中点为 \(\left(\frac{1+4}{2},\frac{1+4}{2}\right)=\left(\frac52,\frac52\right)\).
+\end{solution}
 
 \section{解答题}
 
@@ -245,11 +320,17 @@ y = (t - 1)^2,
 \end{problem}
 
 \begin{solution}
-短答案：
-
 \begin{enumerate}
-\item 最小正周期为 \(\frac{6\pi}{5}\).
-\item 取值范围为 \(\left[-1-\sqrt{2},2-\sqrt{2}\right]\).
+\item 令 \(u=\omega x\)，则
+\[
+\bs a\cdot\bs b=(\cos u-\sin u)(-\cos u-\sin u)+2\sqrt3\sin u\cos u=-\cos2u+\sqrt3\sin2u=2\sin\left(2u-\frac\pi6\right)
+\]
+因此 \(f(x)=2\sin\left(2\omega x-\frac\pi6\right)+\lambda\). 设 \(g(x)=2\sin\left(2\omega x-\frac\pi6\right)+\lambda\)，则对任意实数 \(t\)，对称性给出 \(g(\pi+t)=g(\pi-t)\). 令 \(\phi=2\omega\pi-\frac\pi6\)，则
+\[
+\sin(\phi+2\omega t)-\sin(\phi-2\omega t)=2\cos\phi\sin(2\omega t)=0
+\]
+因 \(\omega>0\)，上式对任意 \(t\) 成立只能有 \(\cos\phi=0\)，所以 \(\phi=\frac\pi2+k\pi\)，其中 \(k\in\Z\). 从而 \(\omega=\frac13+\frac{k}{2}\). 由 \(\frac12<\omega<1\)，得 \(k=1\)，所以 \(\omega=\frac56\). 函数的最小正周期为 \(T=\frac{2\pi}{2\omega}=\frac\pi\omega=\frac{6\pi}{5}\).
+\item 由图象经过 \(\left(\frac\pi4,0\right)\)，得 \(0=2\sin\left(\frac{5\pi}{12}-\frac\pi6\right)+\lambda=\sqrt2+\lambda\)，所以 \(\lambda=-\sqrt2\). 于是 \(f(x)=2\sin\left(\frac53x-\frac\pi6\right)-\sqrt2\). 当 \(0\leqslant x\leqslant\frac{3\pi}{5}\) 时，相位 \(\frac53x-\frac\pi6\) 的范围为 \(\left[-\frac\pi6,\frac{5\pi}{6}\right]\). 在此区间内正弦函数的最小值为 \(-\frac12\)，最大值为 \(1\)，所以 \(f(x)\) 的取值范围为 \(\left[-1-\sqrt2,2-\sqrt2\right]\).
 \end{enumerate}
 \end{solution}
 
@@ -263,18 +344,23 @@ y = (t - 1)^2,
 \end{problem}
 
 \begin{solution}
-短答案：
-
 \begin{enumerate}
-\item \(a_n=3n-7\).
-\item \(\displaystyle \sum_{k=1}^{n}|a_k|=\begin{cases}
-4,&n=1,\\
-5,&n=2,\\
-\frac{3}{2}n^2-\frac{11}{2}n+10,&n\geqslant 3.
-\end{cases}\)
+\item 设公差为 \(d\)，并令前三项为 \(a_2-d\)，\(a_2\)，\(a_2+d\). 由前三项和为 \(-3\)，得 \(3a_2=-3\)，即 \(a_2=-1\). 再由积为 \(8\)，得 \((-1-d)(-1)(-1+d)=d^2-1=8\)，所以 \(d=3\) 或 \(d=-3\). 因此两种可能分别为 \(a_n=3n-7\) 和 \(a_n=5-3n\).
+\item 当 \(a_n=5-3n\) 时，\((a_2,a_3,a_1)=(-1,-4,2)\)，有 \((-4)^2\neq(-1)\times2\)，不成等比数列；当 \(a_n=3n-7\) 时，\((a_2,a_3,a_1)=(-1,2,-4)\)，满足 \(2^2=(-1)(-4)\)，故 \(a_n=3n-7\). 此时 \(a_1=-4\)，\(a_2=-1\)，且当 \(n\geqslant3\) 时 \(a_n=3n-7>0\). 记前 \(n\) 项和为 \(S_n\)，则 \(S_1=4\)；当 \(n\geqslant2\) 时，
+\[
+S_n=4+1+\sum_{k=3}^{n}(3k-7)=\frac32n^2-\frac{11}{2}n+10
+\]
+因此
+\[
+S_n=\begin{cases}
+4, & n=1,\\
+\frac32n^2-\frac{11}{2}n+10, & n\geqslant2.
+\end{cases}
+\]
 \end{enumerate}
 \end{solution}
 
+\setcounter{probnum}{19}
 \begin{problem}
 根据以往的经验，某工程施工期间的降水量 \(X\)（单位：\(\mathrm{mm}\)）对工期的影响如下表：
 
@@ -295,14 +381,13 @@ y = (t - 1)^2,
 \end{problem}
 
 \begin{solution}
-短答案：
-
 \begin{enumerate}
-\item \(E(Y)=3\)，\(D(Y)=9.8\).
-\item 概率为 \(\frac{6}{7}\).
+\item 由分布函数给出的概率，\(P(X<300)=0.3\)，\(P(300\leqslant X<700)=0.7-0.3=0.4\)，\(P(700\leqslant X<900)=0.9-0.7=0.2\)，\(P(X\geqslant900)=1-0.9=0.1\). 因此 \(Y\) 的分布为 \(0\)，\(2\)，\(6\)，\(10\)，对应概率为 \(0.3\)，\(0.4\)，\(0.2\)，\(0.1\). 于是 \(E(Y)=0\times0.3+2\times0.4+6\times0.2+10\times0.1=3\). 又 \(E(Y^2)=0^2\times0.3+2^2\times0.4+6^2\times0.2+10^2\times0.1=18.8\)，所以 \(D(Y)=E(Y^2)-[E(Y)]^2=18.8-9=9.8\).
+\item \(P(X\geqslant300)=1-0.3=0.7\). 在条件 \(X\geqslant300\) 下，工期延误不超过 \(6\) 天等价于 \(300\leqslant X<900\)，其概率为 \(0.9-0.3=0.6\). 因此条件概率为 \(\displaystyle P(Y\leqslant6\mid X\geqslant300)=\frac{0.6}{0.7}=\frac67\).
 \end{enumerate}
 \end{solution}
 
+\setcounter{probnum}{21}
 \begin{problem}
 已知函数 \( f(x) = rx - x^{r} + (1 - r) \) （\(x > 0\)），其中 \(r\) 为有理数，且 \(0 < r < 1\).
 
@@ -314,16 +399,14 @@ y = (t - 1)^2,
 \end{problem}
 
 \begin{solution}
-短答案：
-
 \begin{enumerate}
-\item 最小值为 \(0\).
-\item 命题成立.
-\item 一般形式为：设 \(a_1,\ldots,a_n\) 为非负实数，\(b_1,\ldots,b_n\) 为正有理数，且 \(b_1+\cdots+b_n=1\)，则
-\(a_1^{b_1}\cdots a_n^{b_n}\leqslant a_1b_1+\cdots+a_nb_n\). 该命题可用数学归纳法证明.
+\item \(f'(x)=r-rx^{r-1}=r(1-x^{r-1})\). 因为 \(r-1<0\)，当 \(0<x<1\) 时 \(x^{r-1}>1\)，故 \(f'(x)<0\)；当 \(x>1\) 时 \(x^{r-1}<1\)，故 \(f'(x)>0\). 所以 \(f(x)\) 在 \((0,1)\) 上递减，在 \((1,+\infty)\) 上递增，最小值在 \(x=1\) 处取得，且 \(f(1)=r-1+1-r=0\).
+\item 由（1）知对任意 \(x>0\)，有 \(rx-x^r+(1-r)\geqslant0\)，即 \(x^r\leqslant rx+1-r\). 若 \(a_1=0\) 或 \(a_2=0\)，因 \(b_1\)，\(b_2>0\)，左边为 \(0\)，而右边非负，所以不等式成立. 若 \(a_1\)，\(a_2>0\)，令 \(x=\frac{a_1}{a_2}\)，令 \(r=b_1\)，并利用 \(b_2=1-b_1\)，得 \(\left(\frac{a_1}{a_2}\right)^{b_1}\leqslant b_1\frac{a_1}{a_2}+b_2\). 两边乘以 \(a_2>0\)，得到 \(a_1^{b_1}a_2^{b_2}\leqslant a_1b_1+a_2b_2\).
+\item 推广命题为：若 \(a_1\)，\(\ldots\)，\(a_n\geqslant0\)，\(b_1\)，\(\ldots\)，\(b_n\) 为正有理数，且 \(b_1+\cdots+b_n=1\)，则 \(\displaystyle\prod_{i=1}^{n}a_i^{b_i}\leqslant\sum_{i=1}^{n}a_ib_i\). 用数学归纳法证明.\(n=1\) 时，\(b_1=1\)，两边均为 \(a_1\)，命题成立. 假设 \(n=k\) 时命题成立. 对 \(n=k+1\)，令 \(B=1-b_{k+1}\)，则 \(B>0\)，且 \(c_i=b_i/B\)（\(1\leqslant i\leqslant k\)）为正有理数并满足 \(\sum_{i=1}^kc_i=1\). 由归纳假设，\(\displaystyle\prod_{i=1}^{k}a_i^{c_i}\leqslant\frac{\sum_{i=1}^{k}a_ib_i}{B}\). 记 \(A=\frac{\sum_{i=1}^{k}a_ib_i}{B}\)，则 \(A\geqslant0\)，从而 \(\displaystyle\prod_{i=1}^{k+1}a_i^{b_i}=\left(\prod_{i=1}^{k}a_i^{c_i}\right)^B a_{k+1}^{b_{k+1}}\leqslant A^B a_{k+1}^{b_{k+1}}\). 对两个非负数 \(A\)，\(a_{k+1}\) 使用（2），权重为 \(B\)，\(b_{k+1}\)，得到 \(A^B a_{k+1}^{b_{k+1}}\leqslant BA+b_{k+1}a_{k+1}=\sum_{i=1}^{k+1}a_ib_i\). 故 \(n=k+1\) 时命题也成立，归纳可知推广命题对一切正整数 \(n\) 成立.
 \end{enumerate}
 \end{solution}
 
+\setcounter{probnum}{18}
 \begin{problem}
 如图 1，\(\angle ACB = 45^{\circ}\)，\(BC = 3\)，过动点 \(A\) 作 \(AD \perp BC\)，垂足 \(D\) 在线段 \(BC\) 上且异于点 \(B\)，连接 \(AB\). 沿 \(AD\) 将 \(\triangle ABD\) 折起，使 \(\angle BDC = 90^{\circ}\)（如图 2 所示）.
 
@@ -336,14 +419,15 @@ y = (t - 1)^2,
 \end{problem}
 
 \begin{solution}
-短答案：
-
 \begin{enumerate}
-\item 当 \(BD=1\) 时，三棱锥 \(A-BCD\) 的体积最大.
-\item \(DN=\frac{1}{2}\)，且 \(EN\) 与平面 \(BMN\) 所成角为 \(60^{\circ}\).
+\item 设 \(BD=x\)，则 \(CD=3-x\)，且 \(0<x<3\). 在折起前的直角三角形 \(ADC\) 中，\(\angle ACD=45^{\circ}\)，所以 \(AD=CD=3-x\). 折起后 \(AD\perp BD\)，又 \(AD\perp DC\)，且 \(BD\) 与 \(DC\) 相交于 \(D\)，故 \(AD\perp\) 平面 \(BCD\). 又 \(\angle BDC=90^{\circ}\)，所以 \(S_{\triangle BCD}=\frac12x(3-x)\). 三棱锥体积为 \(\displaystyle V(x)=\frac13AD\cdot S_{\triangle BCD}=\frac16x(3-x)^2\). 求导得 \(V'(x)=\frac12(x-1)(x-3)\). 在 \((0,1)\) 上 \(V'(x)>0\)，在 \((1,3)\) 上 \(V'(x)<0\)，所以体积在 \(x=1\) 时最大，即 \(BD=1\).
+\item 体积最大时 \(BD=1\)，且 \(AD=CD=2\). 以 \(D\) 为原点，分别以 \(DB\)，\(DC\)，\(DA\) 的方向为三个坐标轴，取 \(B=(1,0,0)\)，\(C=(0,2,0)\)，\(A=(0,0,2)\). 于是 \(E=\left(\frac12,1,0\right)\)，\(M=(0,1,1)\). 设 \(N=(0,t,0)\)，则 \(\overrightarrow{EN}=\left(-\frac12,t-1,0\right)\)，\(\overrightarrow{BM}=(-1,1,1)\). 由垂直条件 \(\overrightarrow{EN}\cdot\overrightarrow{BM}=0\)，得 \(\frac12+t-1=0\)，所以 \(t=\frac12\)，即 \(DN=\frac12\).
+
+取平面 \(BMN\) 的法向量 \(\bs n=(1,2,-1)\)，而 \(\overrightarrow{EN}=\left(-\frac12,-\frac12,0\right)\). 设直线 \(EN\) 与平面 \(BMN\) 所成的角为 \(\theta\)，则 \(\displaystyle\sin\theta=\frac{|\overrightarrow{EN}\cdot\bs n|}{|\overrightarrow{EN}|\,|\bs n|}=\frac{3/2}{(1/\sqrt2)\sqrt6}=\frac{\sqrt3}{2}\). 由于 \(0\leqslant\theta\leqslant\frac\pi2\)，故 \(\theta=\frac\pi3=60^{\circ}\).
 \end{enumerate}
 \end{solution}
 
+\setcounter{probnum}{20}
 \begin{problem}
 设 \(A\) 是单位圆 \(x^{2} + y^{2} = 1\) 上的任意一点，\(l\) 是过点 \(A\) 与 \(x\) 轴垂直的直线，\(D\) 是直线 \(l\) 与 \(x\) 轴的交点，点 \(M\) 在直线 \(l\) 上，且满足 \(|DM| = m|DA|\) （\(m > 0\) 且 \(m \neq 1\)）. 当点 \(A\) 在圆上运动时，记点 \(M\) 的轨迹为曲线 \(C\).
 
@@ -354,10 +438,8 @@ y = (t - 1)^2,
 \end{problem}
 
 \begin{solution}
-短答案：
-
 \begin{enumerate}
-\item 曲线 \(C\) 的方程为 \(x^2+\frac{y^2}{m^2}=1\). 当 \(0<m<1\) 时，焦点为 \(\left(\pm\sqrt{1-m^2},0\right)\)；当 \(m>1\) 时，焦点为 \(\left(0,\pm\sqrt{m^2-1}\right)\)，曲线均为椭圆.
-\item 存在，且 \(m=\sqrt{2}\).
+\item 设 \(A=(x_0,y_0)\)，\(M=(x,y)\). 因 \(l\) 垂直于 \(x\) 轴，故 \(x=x_0\)，而 \(|y|=m|y_0|\). 由 \(x_0^2+y_0^2=1\) 得 \(x^2+\frac{y^2}{m^2}=1\). 因此 \(C\) 是椭圆. 当 \(0<m<1\) 时，半长轴为 \(1\)，焦点为 \(\left(\pm\sqrt{1-m^2},0\right)\)；当 \(m>1\) 时，半长轴为 \(m\)，焦点为 \(\left(0,\pm\sqrt{m^2-1}\right)\).
+\item 设 \(P=(p,kp)\)，其中 \(p>0\)，则由中心对称性 \(Q=(-p,-kp)\)，且 \(N=(0,kp)\). 直线 \(QN\) 的斜率为 \(2k\)，故其方程为 \(y=2kx+kp\). 设该直线与椭圆的另一个交点为 \(H=(h,y_H)\). 将直线方程代入 \(x^2+y^2/m^2=1\)，所得关于 \(x\) 的二次方程的一个根为 \(-p\)，由两根之和可得 \(h=\frac{pm^2}{m^2+4k^2}\). 于是 \(y_H=2kh+kp\). 因此 \(PH\) 的斜率为 \(\displaystyle\frac{y_H-kp}{h-p}=\frac{2kh}{h-p}=-\frac{m^2}{2k}\)，而 \(PQ\) 的斜率为 \(k\). 所以 \(PQ\perp PH\) 的充要条件为 \(k\left(-\frac{m^2}{2k}\right)=-1\)，即 \(m^2=2\). 因为 \(m>0\)，取 \(m=\sqrt2\). 此值与 \(k\) 无关，故对任意 \(k>0\) 均成立，所求 \(m\) 存在且为 \(\sqrt2\).
 \end{enumerate}
 \end{solution}

@@ -1,7 +1,5 @@
 \chapter{1977年内蒙古卷（文）}
 
-\section{解答题}
-
 \begin{problem}
 \begin{enumerate}
 \item 计算 \(\sin\left(-990^\circ\right)\).
@@ -15,10 +13,13 @@
 
 \begin{solution}
 \begin{enumerate}
-\item \(\sin\left(-990^\circ\right)=-\sin990^\circ=-\sin\left(720^\circ+270^\circ\right)=-\sin270^\circ=1\).
+\item 利用正弦函数的周期性，\(-990^\circ+3\times360^\circ=90^\circ\)，所以
+\(\sin\left(-990^\circ\right)=\sin90^\circ=1\).
 
-\item \(\sqrt{4-12a+9a^2}=\sqrt{\left(2-3a\right)^2}=\left|2-3a\right|\).
-因此
+\item 先因式分解被开方数，得
+\(4-12a+9a^2=\left(2-3a\right)^2\)，因此
+\(\sqrt{4-12a+9a^2}=\left|2-3a\right|\).
+再根据 \(2-3a\) 的符号分类讨论：当 \(a<\frac{2}{3}\) 时，\(2-3a>0\)；当 \(a=\frac{2}{3}\) 时，\(2-3a=0\)；当 \(a>\frac{2}{3}\) 时，\(2-3a<0\). 所以
 \[
 \sqrt{4-12a+9a^2}=
 \begin{cases}
@@ -28,15 +29,18 @@
 \end{cases}
 \]
 
-\item
+\item 因为 \((-9)^0=1\)，且
+\(\left(\frac{1}{16}\right)^{-\frac{1}{2}}=\sqrt{16}=4\)，所以根式的值为 \(\sqrt{4}=2\). 另外，
 \[
+\begin{gathered}
 \frac{(-27)^3\sqrt{\left(\frac{1}{16}\right)^{-\frac{1}{2}}}}{(-9)^0\left(\frac{3}{2}\right)^7\left(\frac{1}{2}\right)^{-5}}
-=\frac{(-3)^9\sqrt{4}}{3^7\cdot\left(\frac{1}{2}\right)^{7-5}}
-=-3^2\cdot2^3
-=-72
+=\frac{(-3)^9\cdot2}{3^7\left(\frac{1}{2}\right)^{7-5}}
+=\frac{-3^9\cdot2}{3^7\left(\frac{1}{2}\right)^2}\\
+=-3^2\cdot2\cdot4=-3^2\cdot2^3=-72.
+\end{gathered}
 \]
 
-\item 由换底公式知：
+\item 由于 \(\sqrt{10}>0\) 且 \(\sqrt{10}\ne1\)，可用换底公式计算：
 \[
 \begin{gathered}
 f\left(5\right)=\log_{\sqrt{10}}5
@@ -47,13 +51,18 @@ f\left(5\right)=\log_{\sqrt{10}}5
 =1.398
 \end{gathered}
 \]
-所以 \(f\left(5\right)=1.398\).
+其中 \(\lg10=1\)，故 \(f\left(5\right)=1.398\).
 
-\item 当 \(1-\frac{2}{3}x\ge0\) 且 \(3x-1\ne0\) 时，给出的函数才有定义. 因此 \(y=\frac{\sqrt{1-\frac{2}{3}x}}{\sqrt[3]{3x-1}}\) 的定义域为 \(x<\frac{1}{3}\) 及 \(\frac{1}{3}<x\le\frac{3}{2}\).
+\item 分子中的平方根有意义，必须满足 \(1-\frac{2}{3}x\ge0\)，解得 \(x\le\frac{3}{2}\). 分母中的立方根对任意实数都有意义，但分母不能为零，因此还需满足 \(3x-1\ne0\)，即 \(x\ne\frac{1}{3}\). 两个条件取交集，函数的定义域为
+\(\left(-\infty,\frac{1}{3}\right)\cup\left(\frac{1}{3},\frac{3}{2}\right]\).
 
-\item
+\item 令 \(u=\frac{\theta}{2}\)，则
 \[
-\left(\sin\frac{\theta}{2}-\cos\frac{\theta}{2}\right)^2=\sin^2\frac{\theta}{2}+\cos^2\frac{\theta}{2}-2\sin\frac{\theta}{2}\cos\frac{\theta}{2}=1-\sin\theta=1-0.6=0.4
+\begin{gathered}
+\left(\sin\frac{\theta}{2}-\cos\frac{\theta}{2}\right)^2
+=\sin^2\frac{\theta}{2}+\cos^2\frac{\theta}{2}-2\sin\frac{\theta}{2}\cos\frac{\theta}{2}\\
+=1-\sin\theta=1-0.6=0.4.
+\end{gathered}
 \]
 \end{enumerate}
 \end{solution}
@@ -67,19 +76,34 @@ f\left(5\right)=\log_{\sqrt{10}}5
 
 \begin{solution}
 \begin{enumerate}
-\item 证：因为 \(MN\parallel BC\parallel AD\)，因此 \(\frac{AM}{MB}=\frac{DN}{NC}\)，由合比定理有 \(\frac{AM+MB}{MB}=\frac{DN+NC}{NC}\)，即 \(\frac{AB}{MB}=\frac{DC}{NC}\).
+\item 因为 \(MN\parallel BC\parallel AD\)，三条平行线被两条截线 \(AB\)、\(CD\) 所截，所以由截比定理
+\(\frac{AM}{MB}=\frac{DN}{NC}\). 两边分别加上 \(1\)，得
+\(\frac{AM+MB}{MB}=\frac{DN+NC}{NC}\)，即
+\(\frac{AB}{MB}=\frac{DC}{NC}\).
 
-因为 \(\triangle BEM\sim\triangle BDA\)，\(\triangle CNE\sim\triangle CDA\)，所以 \(\frac{AD}{ME}=\frac{AB}{MB}\)，\(\frac{AD}{EN}=\frac{DC}{NC}\). 但 \(\frac{AB}{MB}=\frac{DC}{NC}\)，则 \(\frac{AD}{ME}=\frac{AD}{EN}\)，因此 \(ME=EN\).
+在三角形 \(BDA\) 中，\(M\) 在 \(BA\) 上且 \(EM\parallel AD\)，所以 \(\triangle BEM\sim\triangle BDA\)，从而
+\(\frac{ME}{AD}=\frac{BM}{BA}\)，即 \(\frac{AD}{ME}=\frac{AB}{MB}\). 同理，在三角形 \(CDA\) 中，\(N\) 在 \(CD\) 上且 \(EN\parallel AD\)，所以 \(\triangle CNE\sim\triangle CDA\)，从而
+\(\frac{EN}{AD}=\frac{CN}{CD}\)，即 \(\frac{AD}{EN}=\frac{DC}{NC}\).
+
+结合 \(\frac{AB}{MB}=\frac{DC}{NC}\)，可得 \(\frac{AD}{ME}=\frac{AD}{EN}\). 因为 \(AD>0\)，所以 \(ME=EN\).
 
 \solutionfigure{\bitmapfigure[max width=4.2cm]{img/1977/inner_mongolia_liberal/q2_solution_fig1.png}}
 
-\item 圆台的上底半径 \(R_1=\frac{12}{2}\mathrm{~cm}=6\mathrm{~cm}\)，下底半径 \(R_2=\frac{24}{2}\mathrm{~cm}=12\mathrm{~cm}\)，高 \(H=8\mathrm{~cm}\)，母线长 \(L=\sqrt{H^2+\left(R_2-R_1\right)^2}=\sqrt{64+36}=10\mathrm{~cm}\). 于是圆台的体积
+\item 圆台的上底半径、下底半径和高分别为
+\(R_1=\frac{12}{2}\mathrm{~cm}=6\mathrm{~cm}\)，\(R_2=\frac{24}{2}\mathrm{~cm}=12\mathrm{~cm}\)，\(H=8\mathrm{~cm}\). 轴截面中，母线、高和两底半径之差构成直角三角形，因此母线长为
+\(L=\sqrt{H^2+\left(R_2-R_1\right)^2}=\sqrt{8^2+6^2}=10\mathrm{~cm}\).
+
+圆台体积公式为 \(V=\frac{1}{3}\pi H\left(R_1^2+R_1R_2+R_2^2\right)\)，代入得
 \[
-V=\frac{1}{3}\pi H\left(R_1^2+R_2^2+R_1R_2\right)=\frac{8\pi}{3}\cdot\left(36+144+72\right)\approx 2110\mathrm{~cm}^3
+V=\frac{1}{3}\times3.14\times8\times\left(6^2+6\times12+12^2\right)
+=672\times3.14=2110.08\mathrm{~cm}^3\approx2110.1\mathrm{~cm}^3
 \]
-圆台的全面积
+
+全面积等于两个底面的面积与侧面积之和，故
 \[
-S=\pi\left(R_1^2+R_2^2+L\left(R_1+R_2\right)\right)=\pi\left(36+144+180\right)\approx 1130\mathrm{~cm}^2
+S=\pi\left(R_1^2+R_2^2+L\left(R_1+R_2\right)\right)
+=3.14\times\left(6^2+12^2+10\times(6+12)\right)
+=360\times3.14=1130.4\mathrm{~cm}^2
 \]
 \end{enumerate}
 \end{solution}
@@ -96,18 +120,20 @@ S=\pi\left(R_1^2+R_2^2+L\left(R_1+R_2\right)\right)=\pi\left(36+144+180\right)\a
 
 \begin{solution}
 \begin{enumerate}
-\item 解方程组
+\item 先解交点坐标. 由方程组
 \[
 \begin{cases}
 3x+y=5,\\
 2x-3y+4=0
 \end{cases}
 \]
-可得 \(A\) 点的坐标为 \(\left(1,2\right)\)，过 \(A\) 点且与 \(y\) 轴垂直的直线方程为 \(y=2\).
+将第一式化为 \(y=5-3x\)，代入第二式得 \(2x-3(5-3x)+4=0\)，即 \(11x-11=0\)，所以 \(x=1\)，从而 \(y=2\). 因此 \(A\) 点坐标为 \(\left(1,2\right)\). \(y\) 轴是竖直直线，与它垂直的直线为水平直线，所以过 \(A\) 点的所求直线为 \(y=2\).
 
-\item 直线 \(2x+y+1=0\) 的斜率为 \(-2\)，因此过 \(A\) 点与上直线平行的直线的斜率也为 \(-2\)，故其方程为 \(y-2=-2\left(x-1\right)\)，即 \(2x+y-4=0\).
+\item 直线 \(2x+y+1=0\) 化为 \(y=-2x-1\)，斜率为 \(-2\). 平行直线斜率相同，因此过 \(A\left(1,2\right)\) 的所求直线满足点斜式
+\(y-2=-2\left(x-1\right)\)，整理得 \(2x+y-4=0\).
 
-\item 过 \(A\) 点与 \(2x+y+1=0\) 垂直的直线的斜率与已知直线的斜率互为负倒数，故所求的直线方程为 \(y-2=\frac{1}{2}\left(x-1\right)\)，即 \(x-2y+3=0\).
+\item 已知直线的斜率为 \(-2\)，与它垂直的直线斜率为其负倒数 \(\frac{1}{2}\). 因此过 \(A\left(1,2\right)\) 的所求直线满足
+\(y-2=\frac{1}{2}\left(x-1\right)\)，化简得 \(x-2y+3=0\).
 \end{enumerate}
 \end{solution}
 
@@ -116,19 +142,22 @@ S=\pi\left(R_1^2+R_2^2+L\left(R_1+R_2\right)\right)=\pi\left(36+144+180\right)\a
 \end{problem}
 
 \begin{solution}
-设甲型拖拉机元月份产量为 \(x\)，乙型拖拉机每月增长率为 \(y\). 根据已给条件列方程如下：
+设甲型拖拉机元月份产量为 \(x\)，乙型拖拉机每月增长率为 \(y\)，则乙型拖拉机每月的增长倍数为 \(1+y\). 由于产量为正，\(1+y>0\). 二月份甲、乙两型拖拉机的产量分别为 \(x+10\)、\(16(1+y)\)，三月份分别为 \(x+20\)、\(16(1+y)^2\). 因而由题意得
 \[
 \begin{cases}
 \frac{x+10}{16\left(1+y\right)}=\frac{3}{2},\\
 16\left(1+y\right)^2+\left(x+20\right)=65.
 \end{cases}
 \]
-由第一个方程得 \(x=\frac{3}{2}\cdot16\left(1+y\right)-10=24\left(1+y\right)-10\).
 
-代入第二个方程得 \(16\left(1+y\right)^2+24\left(1+y\right)-10+20=65\)，即 \(16\left(1+y\right)^2+24\left(1+y\right)-55=0\).
+由第一个方程，得
+\(x=\frac{3}{2}\cdot16\left(1+y\right)-10=24\left(1+y\right)-10\). 代入第二个方程，得
+\(16\left(1+y\right)^2+24\left(1+y\right)-10+20=65\)，即
+\(16\left(1+y\right)^2+24\left(1+y\right)-55=0\).
 
-分解因式 \(\left[4\left(1+y\right)+11\right]\left[4\left(1+y\right)-5\right]=0\)，
-\(4\left(1+y\right)+11=0\)，\(y=-\frac{11}{4}-1\)，不合题意，舍去；\(4\left(1+y\right)-5=0\)，\(y=\frac{5}{4}-1=0.25=25\%\). 又 \(x=24\left(1+25\%\right)-10=20\).
+令 \(t=1+y\)，则 \(t>0\)，且方程化为 \(16t^2+24t-55=0\). 因式分解得
+\(\left(4t+11\right)\left(4t-5\right)=0\)，所以 \(t=-\frac{11}{4}\) 或 \(t=\frac{5}{4}\). 由于 \(t>0\)，舍去 \(t=-\frac{11}{4}\)，于是
+\(1+y=\frac{5}{4}\)，即 \(y=\frac{1}{4}=25\%\). 再由 \(x=24\left(1+y\right)-10\)，得 \(x=24\times\frac{5}{4}-10=20\).
 
-故甲型拖拉机元月份产 \(20\text{ 台}\)，乙型拖拉机每月增长率为 \(25\%\).
+验算：二月份两型产量为 \(30\text{ 台}\) 和 \(20\text{ 台}\)，比值为 \(3:2\)；三月份两型产量为 \(40\text{ 台}\) 和 \(25\text{ 台}\)，和为 \(65\text{ 台}\)，符合题意. 故甲型拖拉机元月份产 \(20\text{ 台}\)，乙型拖拉机每月增长率为 \(25\%\).
 \end{solution}

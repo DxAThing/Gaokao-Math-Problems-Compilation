@@ -15,7 +15,7 @@ C
 \end{answer}
 
 \begin{solution}
-由函数图象与 \(x\) 轴有两个交点，知 \(a\ne0\)，且关于 \(x\) 的方程 \(ax^{2}+bx+a=0\) 有两个不相等的实根. 因此判别式满足 \(\Delta=b^{2}-4a^{2}>0\)，即 \(b^{2}>4a^{2}\). 严格地说，完整条件是 \(a\ne0\) 且 \(b^{2}>4a^{2}\)，因为 \(a=0\) 时原函数退化为一次函数，不能与 \(x\) 轴有两个交点. 原卷选项 C 表示 \(b^{2}>4a^{2}\) 的两个区域，却未单独排除 \(a=0\) 的点；按原卷标准答案记为 C，但该题存在题面争议.
+函数图象与 \(x\) 轴有两个交点，等价于方程 \(ax^{2}+bx+a=0\) 是二次方程且有两个不相等的实根. 因此必须有 \(a\ne0\)，并且判别式满足 \(\Delta=b^{2}-4a^{2}>0\)，即 \(b^{2}>4a^{2}\). 于是严格的参数条件是 \(a\ne0\) 且 \(b^{2}>4a^{2}\). 选项 C 所表示的两个开区域对应 \(b^{2}>4a^{2}\)，所以按原卷标准答案选 C；但图示区域还包含 \(a=0\) 且 \(b\ne0\) 的点，这些点对应一次函数 \(y=bx\)，与“二次函数图象有两个交点”不符. 因此，严格解集还必须排除这条 \(b\) 轴，原题的图示与严格条件存在争议.
 \end{solution}
 
 \begin{problem}
@@ -53,9 +53,9 @@ D
 \begin{solution}
 因为 \(x\in\left(-\frac{\pi}{2},0\right)\)，所以 \(\sin x<0\). 由 \(\cos x=\frac45\) 得 \(\sin x=-\frac35\)，从而 \(\tan x=-\frac34\). 因此
 \[
-\tan 2x=\frac{2\tan x}{1-\tan^{2}x}=\frac{-\frac32}{1-\frac{9}{16}}=-\frac{24}{7},
+\tan 2x=\frac{2\tan x}{1-\tan^{2}x}=\frac{-\frac32}{1-\frac{9}{16}}=-\frac{24}{7}
 \]
-故选 D.
+其中 \(1-\tan^{2}x=\frac7{16}\ne0\)，故 \(\tan 2x\) 有定义，选 D.
 \end{solution}
 
 \begin{problem}
@@ -76,7 +76,7 @@ D
 \end{answer}
 
 \begin{solution}
-当 \(x\leqslant0\) 时，\(f(x)>1\) 等价于 \(2^{-x}-1>1\)，即 \(2^{-x}>2\)，所以 \(-x>1\)，从而 \(x<-1\). 当 \(x>0\) 时，\(f(x)>1\) 等价于 \(\sqrt{x}>1\)，所以 \(x>1\). 合并两种情况，得到 \(x_{0}\in(-\infty,-1)\cup(1,+\infty)\)，故选 D.
+当 \(x_{0}\leqslant0\) 时，\(f(x_{0})>1\) 等价于 \(2^{-x_{0}}-1>1\)，即 \(2^{-x_{0}}>2=2^{1}\). 因为底数 \(2>1\)，所以 \(-x_{0}>1\)，从而 \(x_{0}<-1\). 当 \(x_{0}>0\) 时，\(f(x_{0})=\sqrt{x_{0}}>1\)，而两边均为非负数，平方得 \(x_{0}>1\). 两种情形合并为 \(x_{0}\in(-\infty,-1)\cup(1,+\infty)\)，故选 D.
 \end{solution}
 
 \begin{problem}
@@ -95,10 +95,8 @@ B
 
 \begin{solution}
 设 \(\bs u=\frac{\overrightarrow{AB}}{|\overrightarrow{AB}|}\)，\(\bs v=\frac{\overrightarrow{AC}}{|\overrightarrow{AC}|}\). 其中 \(\bs u\) 和 \(\bs v\) 是从 \(A\) 出发、分别沿 \(AB\) 和 \(AC\) 方向的单位向量，因此 \(\bs u+\bs v\) 的方向是 \(\angle BAC\) 的内角平分线方向. 由题设
-\[
-\overrightarrow{AP}=\overrightarrow{OP}-\overrightarrow{OA}=\lambda(\bs u+\bs v),\qquad \lambda\geqslant0,
-\]
-可知 \(P\) 在从 \(A\) 出发的内角平分线射线上. 三角形的内心在三个内角平分线的交点上，且位于 \(A\) 的内角平分线射线上，所以该轨迹一定经过内心，故选 B.
+\(\overrightarrow{AP}=\overrightarrow{OP}-\overrightarrow{OA}=\lambda(\bs u+\bs v)\)，\(\lambda\geqslant0\)
+可知 \(P\) 在从 \(A\) 出发的内角平分线射线上. 设三角形内心为 \(I\). 因为 \(I\) 在 \(A\) 的内角平分线上且位于从 \(A\) 向三角形内部的方向，所以存在 \(\lambda_{0}>0\) 使得 \(\overrightarrow{AI}=\lambda_{0}(\bs u+\bs v)\). 取 \(\lambda=\lambda_{0}\) 即得 \(P=I\)，故轨迹一定经过内心，选 B.
 \end{solution}
 
 \begin{problem}
@@ -116,14 +114,16 @@ B
 \end{answer}
 
 \begin{solution}
-令原函数为 \(y=\ln\frac{x+1}{x-1}\)，其中 \(x>1\). 因为 \(\frac{x+1}{x-1}>1\)，所以函数值 \(y>0\). 由
+令原函数为 \(y=\ln\frac{x+1}{x-1}\)，其中 \(x>1\). 因为
+\[
+f'(x)=\frac{1}{x+1}-\frac{1}{x-1}=-\frac{2}{x^{2}-1}<0
+\]
+所以原函数在 \((1,+\infty)\) 上严格递减，反函数存在. 又因 \(\frac{x+1}{x-1}>1\)，所以函数值 \(y>0\)，且当 \(x\to1^{+}\) 时 \(y\to+\infty\)，当 \(x\to+\infty\) 时 \(y\to0^{+}\)，故值域为 \((0,+\infty)\). 由
 \[
 \e^{y}=\frac{x+1}{x-1}
 \]
 得 \(\e^{y}x-\e^{y}=x+1\)，即 \(x(\e^{y}-1)=\e^{y}+1\)，所以
-\[
-x=\frac{\e^{y}+1}{\e^{y}-1},\qquad y>0.
-\]
+\(x=\frac{\e^{y}+1}{\e^{y}-1}\)，\(y>0\).
 交换自变量与因变量，反函数为 \(y=\frac{\e^{x}+1}{\e^{x}-1}\)，定义域为 \(x\in(0,+\infty)\)，故选 B.
 \end{solution}
 
@@ -144,11 +144,11 @@ C
 \begin{solution}
 取正方体六个面的中心为 \(\left(\frac a2,0,0\right)\)，\(\left(-\frac a2,0,0\right)\)，\(\left(0,\frac a2,0\right)\)，\(\left(0,-\frac a2,0\right)\)，\(\left(0,0,\frac a2\right)\)，\(\left(0,0,-\frac a2\right)\). 由相邻面中心连成的棱长为
 \[
-\sqrt{\left(\frac a2\right)^2+\left(\frac a2\right)^2}=\frac{a}{\sqrt2}.
+\sqrt{\left(\frac a2\right)^2+\left(\frac a2\right)^2}=\frac{a}{\sqrt2}
 \]
 以四个 \(xOy\) 平面内的面心为顶点的正方形是八面体的中截面，其两条对角线长度均为 \(a\)，故中截面面积为 \(\frac{a^{2}}{2}\). 上、下两个顶点到该中截面的距离均为 \(\frac a2\)，所以八面体体积为
 \[
-2\times\frac13\times\frac{a^{2}}2\times\frac a2=\frac{a^{3}}6.
+2\times\frac13\times\frac{a^{2}}2\times\frac a2=\frac{a^{3}}6
 \]
 故选 C.
 \end{solution}
@@ -170,13 +170,13 @@ B
 \begin{solution}
 曲线 \(y=f(x)\) 在 \(x=x_{0}\) 处的切线斜率为 \(f'(x_{0})=2ax_{0}+b\). 由于切线倾斜角 \(\theta\in\left[0,\frac{\pi}{4}\right]\)，且 \(\tan\theta=f'(x_{0})\)，所以
 \[
-0\leqslant2ax_{0}+b\leqslant1.
+0\leqslant2ax_{0}+b\leqslant1
 \]
 抛物线的对称轴为 \(x=-\frac{b}{2a}\)，点 \(P\) 到该轴的距离为
 \[
-\left|x_{0}+\frac{b}{2a}\right|=\frac{|2ax_{0}+b|}{2a}.
+\left|x_{0}+\frac{b}{2a}\right|=\frac{|2ax_{0}+b|}{2a}
 \]
-因 \(2ax_{0}+b\in[0,1]\)，上述距离的取值范围为 \(\left[0,\frac{1}{2a}\right]\)，故选 B.
+由于 \(a>0\)，函数 \(2ax_{0}+b\) 随 \(x_{0}\) 连续变化，且题设给出的倾斜角范围使其恰好取遍 \([0,1]\). 因此上述距离恰好取遍 \(\left[0,\frac{1}{2a}\right]\)，故选 B.
 \end{solution}
 
 \begin{problem}
@@ -195,12 +195,10 @@ C
 
 \begin{solution}
 设四个根组成首项为 \(\frac14\)、公差为 \(d\) 的等差数列. 四次方程的四个根之和由韦达定理得为 \(4\)，而等差数列各项之和为 \(4\left(\frac14+\frac{3d}{2}\right)=1+6d\). 因此 \(d=\frac12\)，四个根为
-\[
-\frac14,\quad\frac34,\quad\frac54,\quad\frac74.
-\]
+\(\frac14\)，\(\frac34\)，\(\frac54\)，\(\frac74\).
 每个二次因式 \(x^{2}-2x+m\) 或 \(x^{2}-2x+n\) 的两个根之和均为 \(2\)，所以两因式分别对应根对 \(\left(\frac14,\frac74\right)\) 和 \(\left(\frac34,\frac54\right)\). 于是 \(\{m,n\}=\left\{\frac{7}{16},\frac{15}{16}\right\}\)，从而
 \[
-|m-n|=\frac{15}{16}-\frac{7}{16}=\frac12.
+|m-n|=\frac{15}{16}-\frac{7}{16}=\frac12
 \]
 故选 C.
 \end{solution}
@@ -211,8 +209,8 @@ C
 \choices
     {\(\frac{x^2}{3} - \frac{y^2}{4} = 1\)}
     {\(\frac{x^2}{4} - \frac{y^2}{3} = 1\)}
-    {\(\frac{x^2}{3} - \frac{y^2}{2} = 1\)}
-    {\(\frac{x^2}{4} - \frac{y^2}{5} = 1\)}
+    {\(\frac{x^2}{5} - \frac{y^2}{2} = 1\)}
+    {\(\frac{x^2}{2} - \frac{y^2}{5} = 1\)}
 \end{problem}
 
 \begin{answer}
@@ -222,17 +220,17 @@ D
 \begin{solution}
 设双曲线方程为 \(\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=1\). 由焦点为 \((\sqrt7,0)\)，得
 \[
-a^{2}+b^{2}=7.
+a^{2}+b^{2}=7
 \]
 将直线 \(y=x-1\) 代入双曲线，得到
 \[
-\left(\frac1{a^{2}}-\frac1{b^{2}}\right)x^{2}+\frac2{b^{2}}x-\left(1+\frac1{b^{2}}\right)=0.
+\left(\frac1{a^{2}}-\frac1{b^{2}}\right)x^{2}+\frac2{b^{2}}x-\left(1+\frac1{b^{2}}\right)=0
 \]
-设交点的横坐标为 \(x_{1},x_{2}\). 由根与系数的关系，
+设交点的横坐标为 \(x_{1}\)，\(x_{2}\). 由根与系数的关系，
 \[
-x_{1}+x_{2}=-\frac{2/b^{2}}{1/a^{2}-1/b^{2}}=\frac{2a^{2}}{a^{2}-b^{2}}.
+x_{1}+x_{2}=-\frac{2/b^{2}}{1/a^{2}-1/b^{2}}=\frac{2a^{2}}{a^{2}-b^{2}}
 \]
-因 \(MN\) 中点横坐标为 \(-\frac23\)，有 \(x_{1}+x_{2}=-\frac43\)，所以 \(b^{2}=\frac52a^{2}\). 联立 \(a^{2}+b^{2}=7\)，得 \(a^{2}=2\)，\(b^{2}=5\). 因此双曲线方程为 \(\frac{x^{2}}4-\frac{y^{2}}5=1\)，故选 D.
+因 \(MN\) 中点横坐标为 \(-\frac23\)，有 \(x_{1}+x_{2}=-\frac43\)，所以 \(b^{2}=\frac52a^{2}\). 联立 \(a^{2}+b^{2}=7\)，得 \(a^{2}=2\)，\(b^{2}=5\). 因此双曲线方程为 \(\frac{x^{2}}2-\frac{y^{2}}5=1\)，故选 D.
 \end{solution}
 
 \begin{problem}
@@ -250,15 +248,15 @@ C
 \end{answer}
 
 \begin{solution}
-设 \(t=\tan\theta\). 将长方形依次关于 \(BC\)、\(CD\)、\(DA\) 和 \(AB\) 展开，光线变为从 \(P_{0}=(1,0)\) 出发的直线 \(y=t(x-1)\). 展开图中，光线依次经过 \(x=2\)、\(y=1\)、\(x=4\)，最后到达 \(y=2\). 设它在最后一条边上的横坐标为 \(X_{4}\)，则
+设 \(t=\tan\theta\). 将每次反射后的长方形关于反射边展开，反射光线即可视为一条直线. 在展开图中，\(P_{0}=(1,0)\)，故光线方程为 \(y=t(x-1)\). 它先在 \(x=2\) 处到达 \(BC\)，再在 \(y=1\) 处到达 \(CD\)，随后在 \(x=4\) 处到达 \(DA\)，最后到达对应于 \(AB\) 的直线 \(y=2\). 设最后交点的横坐标为 \(X_{4}\)，则
 \[
-X_{4}=1+\frac2t.
+X_{4}=1+\frac2t
 \]
-经过前三次反射后的矩形是 \(4\leqslant x\leqslant6\)，其边 \(y=2\) 折回原矩形的 \(AB\)，故 \(P_{4}\) 的原坐标满足 \(x_{4}=X_{4}-4\). 于是 \(1<x_{4}<2\) 等价于
+经过前三次反射，最后一个展开矩形的横坐标范围为 \(4\leqslant x\leqslant6\)，其边 \(y=2\) 折回原矩形的 \(AB\)，所以 \(x_{4}=X_{4}-4\). 题设 \(1<x_{4}<2\) 等价于
 \[
-1<1+\frac2t-4<2,
+1<1+\frac2t-4<2
 \]
-即 \(4<\frac2t<5\)，所以 \(\frac25<t<\frac12\). 因此 \(\tan\theta\) 的取值范围为 \(\left(\frac25,\frac12\right)\)，故选 C.
+即 \(4<\frac2t<5\). 这里 \(t>0\)，不等号方向保持不变，故 \(\frac25<t<\frac12\). 该范围同时保证光线依次击中题设的四条边，因而 \(\tan\theta\) 的取值范围为 \(\left(\frac25,\frac12\right)\)，选 C.
 \end{solution}
 
 \begin{problem}
@@ -277,12 +275,10 @@ A
 
 \begin{solution}
 取正四面体的四个顶点为
-\[
-\left(r,r,r\right),\quad\left(r,-r,-r\right),\quad\left(-r,r,-r\right),\quad\left(-r,-r,r\right).
-\]
+\(\left(r,r,r\right)\)，\(\left(r,-r,-r\right)\)，\(\left(-r,r,-r\right)\)，\(\left(-r,-r,r\right)\).
 任意两点间的距离均为 \(2\sqrt2r\). 由棱长为 \(\sqrt2\)，得 \(r=\frac12\). 四个顶点到原点的距离均为 \(\sqrt3r=\frac{\sqrt3}{2}\)，所以外接球半径为 \(\frac{\sqrt3}{2}\). 其表面积为
 \[
-4\pi\left(\frac{\sqrt3}{2}\right)^{2}=3\pi,
+4\pi\left(\frac{\sqrt3}{2}\right)^{2}=3\pi
 \]
 故选 A.
 \end{solution}
@@ -299,11 +295,11 @@ A
 \begin{solution}
 展开式的通项为
 \[
-\mathrm C_{9}^{k}(x^{2})^{9-k}\left(-\frac1{2x}\right)^{k}=\mathrm C_{9}^{k}\left(-\frac12\right)^{k}x^{18-3k}.
+\mathrm C_{9}^{k}(x^{2})^{9-k}\left(-\frac1{2x}\right)^{k}=\mathrm C_{9}^{k}\left(-\frac12\right)^{k}x^{18-3k}
 \]
 要得到 \(x^{9}\)，必须满足 \(18-3k=9\)，所以 \(k=3\). 因此所求系数为
 \[
-\mathrm C_{9}^{3}\left(-\frac12\right)^{3}=84\times\left(-\frac18\right)=-\frac{21}{2}.
+\mathrm C_{9}^{3}\left(-\frac12\right)^{3}=84\times\left(-\frac18\right)=-\frac{21}{2}
 \]
 \end{solution}
 
@@ -318,18 +314,14 @@ A
 \begin{solution}
 三种型号轿车的总产量为 \(1200+6000+2000=9200\) 辆. 分层抽样时，各层抽样数与各层总体数成比例，抽样比例为
 \[
-\frac{46}{9200}=\frac1{200}.
+\frac{46}{9200}=\frac1{200}
 \]
-因此三种型号依次抽取
-\[
-1200\times\frac1{200}=6,\qquad 6000\times\frac1{200}=30,\qquad 2000\times\frac1{200}=10
-\]
-辆.
+因此三种型号依次抽取 \(1200\times\frac1{200}=6\) 辆，\(6000\times\frac1{200}=30\) 辆，\(2000\times\frac1{200}=10\) 辆，三数之和为 \(46\)，所以填 \(6\)，\(30\)，\(10\).
 \end{solution}
 
 \begin{problem}
 某城市在中心广场建造一个花圃，花圃分为 \(6\) 个部分（如图）. 现要栽种 \(4\) 种不同颜色的花，每部分栽种一种且相邻部分不能栽种同样颜色的花，不同的栽种方法有\fillinblank{}种.
-\bitmapinlinefigure[6.0cm][max width=6.0cm]{img/2003/jiangsu/q15_fig1.png}
+\bitmapfigure[max width=6.0cm]{img/2003/jiangsu/q15_fig1.png}
 \end{problem}
 
 \begin{answer}
@@ -364,11 +356,11 @@ A
 
 命题 1 中，\(AB=AC\) 给出
 \[
-\left|\overrightarrow{OA}+\bs u\right|^{2}=\left|\overrightarrow{OA}-\bs u\right|^{2},
+\left|\overrightarrow{OA}+\bs u\right|^{2}=\left|\overrightarrow{OA}-\bs u\right|^{2}
 \]
 从而 \(\overrightarrow{OA}\cdot\bs u=0\). 同理，\(BD=CD\) 给出 \(\overrightarrow{OD}\cdot\bs u=0\). 因此
 \[
-\overrightarrow{AD}\cdot\overrightarrow{BC}=(\overrightarrow{OD}-\overrightarrow{OA})\cdot(2\bs u)=0,
+\overrightarrow{AD}\cdot\overrightarrow{BC}=(\overrightarrow{OD}-\overrightarrow{OA})\cdot(2\bs u)=0
 \]
 故 \(AD\perp BC\)，命题 1 为真.
 
@@ -381,7 +373,7 @@ A
 命题 4 中，设 \(A\) 为原点，记 \(\overrightarrow{AB}=\bs b\)，\(\overrightarrow{AC}=\bs c\)，\(\overrightarrow{AD}=\bs d\). 条件 \(AB\perp CD\) 与 \(AC\perp BD\) 分别给出 \(\bs b\cdot(\bs d-\bs c)=0\)，\(\bs c\cdot(\bs d-\bs b)=0\)，
 即 \(\bs b\cdot\bs d=\bs b\cdot\bs c\)，\(\bs c\cdot\bs d=\bs c\cdot\bs b\). 因而
 \[
-\overrightarrow{BC}\cdot\overrightarrow{AD}=(\bs c-\bs b)\cdot\bs d=\bs c\cdot\bs d-\bs b\cdot\bs d=0,
+\overrightarrow{BC}\cdot\overrightarrow{AD}=(\bs c-\bs b)\cdot\bs d=\bs c\cdot\bs d-\bs b\cdot\bs d=0
 \]
 故 \(BC\perp AD\)，命题 4 为真. 所以真命题的序号为 \(1\)，\(4\).
 \end{solution}
@@ -410,22 +402,20 @@ A
 \begin{solution}
 因为 \(f(x)\) 是偶函数，所以对任意 \(x\in\R\)，有 \(f(x)=f(-x)\). 从而
 \[
-\sin(\omega x+\varphi)-\sin(-\omega x+\varphi)=2\cos\varphi\sin\omega x=0.
+\sin(\omega x+\varphi)-\sin(-\omega x+\varphi)=2\cos\varphi\sin\omega x=0
 \]
 由于 \(\omega>0\)，\(\sin\omega x\) 不恒为零，故 \(\cos\varphi=0\). 结合 \(0\leqslant\varphi\leqslant\pi\)，得到 \(\varphi=\frac{\pi}{2}\)，于是 \(f(x)=\cos\omega x\).
 
 点 \(M\left(\frac{3\pi}{4},0\right)\) 是图象的对称中心. 对图象上的点作关于 \(M\) 的中心对称，函数关系为 \(f\left(\frac{3\pi}{2}-x\right)=-f(x)\). 令 \(x=\frac{3\pi}{4}\)，可得 \(f\left(\frac{3\pi}{4}\right)=0\)，即
 \[
-\cos\frac{3\pi\omega}{4}=0.
+\cos\frac{3\pi\omega}{4}=0
 \]
 因此 \(\frac{3\pi\omega}{4}=\frac{(2k+1)\pi}{2}\)，其中 \(k\in\Z\)，从而 \(\omega=\frac{2(2k+1)}{3}\). 由 \(\omega>0\) 知 \(k\geqslant0\).
 
 对于这些候选值，有 \(2\omega\cdot\frac{3\pi}{4}=(2k+1)\pi\)，从而 \(f\left(\frac{3\pi}{2}-x\right)=\cos\left((2k+1)\pi-\omega x\right)=-\cos\omega x=-f(x)\)，所以候选值确实满足图象关于 \(M\) 中心对称.
 
-又 \(f'(x)=-\omega\sin\omega x\). 若 \(0<\omega\leqslant2\)，则当 \(0\leqslant x\leqslant\frac{\pi}{2}\) 时，\(0\leqslant\omega x\leqslant\pi\)，所以 \(f'(x)\leqslant0\)，函数在该区间上单调. 若 \(\omega>2\)，则 \(\frac{\pi}{\omega}<\frac{\pi}{2}\)，导数在 \(\left(0,\frac{\pi}{\omega}\right)\) 内为负、在 \(\left(\frac{\pi}{\omega},\frac{\pi}{2}\right)\) 的一部分内为正，函数不单调. 因此 \(\omega\leqslant2\). 在 \(\omega=\frac{2(2k+1)}{3}\) 中只可能有 \(k=0,1\)，故
-\[
-\omega=\frac{2}{3}\text{ 或 }\omega=2,\qquad\varphi=\frac{\pi}{2}.
-\]
+又 \(f'(x)=-\omega\sin\omega x\). 若 \(0<\omega\leqslant2\)，则当 \(0\leqslant x\leqslant\frac{\pi}{2}\) 时，\(0\leqslant\omega x\leqslant\pi\)，所以 \(f'(x)\leqslant0\)，函数在该区间上单调. 若 \(\omega>2\)，则 \(\frac{\pi}{\omega}<\frac{\pi}{2}\)，在 \(\left(0,\frac{\pi}{\omega}\right)\) 内有 \(f'(x)<0\)，而区间 \(\left(\frac{\pi}{\omega},\min\left\{\frac{2\pi}{\omega},\frac{\pi}{2}\right\}\right)\) 非空且其中 \(f'(x)>0\)，所以函数不单调. 因此 \(\omega\leqslant2\). 在 \(\omega=\frac{2(2k+1)}{3}\) 中只可能有 \(k=0\)，\(1\)，故
+\(\omega=\frac{2}{3}\text{ 或 }\omega=2\)，\(\varphi=\frac{\pi}{2}\).
 \end{solution}
 
 \begin{problem}
@@ -436,29 +426,29 @@ A
 \item 求点 \(A_{1}\) 到平面 \(AED\) 的距离.
 \end{enumerate}
 
-\bitmapinlinefigure[6.0cm][max width=6.0cm]{img/2003/jiangsu/q19_fig1.png}
+\bitmapfigure[max width=6.0cm]{img/2003/jiangsu/q19_fig1.png}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
 \item 设等腰直角三角形的两条直角边长为 \(b\). 取 \(C\) 为原点，令 \(A=(b,0,0)\)，\(B=(0,b,0)\)，\(C_{1}=(0,0,2)\)，则 \(A_{1}=(b,0,2)\)，\(D=(0,0,1)\)，\(E=\left(\frac b2,\frac b2,1\right)\). 三角形 \(ABD\) 的重心为 \(G=\left(\frac b3,\frac b3,\frac13\right)\)，所以
 \[
-\overrightarrow{GE}=\left(\frac b6,\frac b6,\frac23\right).
+\overrightarrow{GE}=\left(\frac b6,\frac b6,\frac23\right)
 \]
 由 \(\overrightarrow{AB}=(-b,b,0)\)，\(\overrightarrow{AD}=(-b,0,1)\)，知平面 \(ABD\) 的一个法向量为 \((1,1,b)\). 因 \(E\) 在平面 \(ABD\) 上的射影为 \(G\)，所以 \(\overrightarrow{GE}\) 垂直于平面 \(ABD\)，即与该法向量平行. 比较第三个分量与第一个分量，得到 \(\frac{4}{b}=b\). 由于 \(b>0\)，所以 \(b=2\).
 
 此时 \(\overrightarrow{A_{1}B}=(-2,2,-2)\)，平面 \(ABD\) 的法向量可取 \(\bs n=(1,1,2)\). 设直线 \(A_{1}B\) 与平面 \(ABD\) 所成的角为 \(\alpha\)，则
 \[
-\sin\alpha=\frac{|\overrightarrow{A_{1}B}\cdot\bs n|}{|\overrightarrow{A_{1}B}|\,|\bs n|}=\frac{4}{2\sqrt3\,\sqrt6}=\frac{\sqrt2}{3}.
+\sin\alpha=\frac{|\overrightarrow{A_{1}B}\cdot\bs n|}{|\overrightarrow{A_{1}B}|\,|\bs n|}=\frac{4}{2\sqrt3\,\sqrt6}=\frac{\sqrt2}{3}
 \]
 所以 \(\alpha=\arcsin\frac{\sqrt2}{3}\).
 \item 由 \(A=(2,0,0)\)，\(E=(1,1,1)\)，\(D=(0,0,1)\)，可得平面 \(AED\) 的一个法向量为
 \[
-\overrightarrow{AE}\times\overrightarrow{AD}=(-1,1,1)\times(-2,0,1)=(1,-1,2).
+\overrightarrow{AE}\times\overrightarrow{AD}=(-1,1,1)\times(-2,0,1)=(1,-1,2)
 \]
 故平面 \(AED\) 的方程为 \(x-y+2z-2=0\). 将 \(A_{1}=(2,0,2)\) 代入点到平面的距离公式，得到
 \[
-d=\frac{|2-0+2\times2-2|}{\sqrt{1^{2}+(-1)^{2}+2^{2}}}=\frac{4}{\sqrt6}=\frac{2\sqrt6}{3}.
+d=\frac{|2-0+2\times2-2|}{\sqrt{1^{2}+(-1)^{2}+2^{2}}}=\frac{4}{\sqrt6}=\frac{2\sqrt6}{3}
 \]
 \end{enumerate}
 \end{solution}
@@ -468,7 +458,7 @@ d=\frac{|2-0+2\times2-2|}{\sqrt{1^{2}+(-1)^{2}+2^{2}}}=\frac{4}{\sqrt6}=\frac{2\
 \end{problem}
 
 \begin{solution}
-设交点 \(P=(x,y)\). 第一条直线上的点可表示为 \(t(\lambda,a)\)，第二条直线上的点可表示为 \(A+s(1,-2a\lambda)\)，其中 \(t,s\in\R\). 由两种表示相同，得
+设交点 \(P=(x,y)\). 第一条直线上的点可表示为 \(t(\lambda,a)\)，第二条直线上的点可表示为 \(A+s(1,-2a\lambda)\)，其中 \(t\)，\(s\in\R\). 由两种表示相同，得
 \[
 \begin{cases}
 t\lambda=s\\
@@ -477,7 +467,7 @@ ta=a-2a\lambda s
 \]
 代入 \(s=t\lambda\)，并利用 \(a>0\)，可得 \(t(1+2\lambda^{2})=1\). 因此
 \[
-P=\left(\frac{\lambda}{1+2\lambda^{2}},\frac{a}{1+2\lambda^{2}}\right).
+P=\left(\frac{\lambda}{1+2\lambda^{2}},\frac{a}{1+2\lambda^{2}}\right)
 \]
 于是 \(y>0\)，且 \(\lambda=\frac{ax}{y}\). 消去参数得到
 \[
@@ -485,7 +475,7 @@ P=\left(\frac{\lambda}{1+2\lambda^{2}},\frac{a}{1+2\lambda^{2}}\right).
 \]
 即
 \[
-2a^{2}x^{2}+\left(y-\frac a2\right)^{2}=\frac{a^{2}}{4}.
+2a^{2}x^{2}+\left(y-\frac a2\right)^{2}=\frac{a^{2}}{4}
 \]
 这是一条中心为 \(\left(0,\frac a2\right)\) 的椭圆，除去未被有限参数取到的点 \(O=(0,0)\) 外，参数 \(\lambda\in\R\) 取遍该椭圆的其余部分. 椭圆的横、纵半轴分别为 \(\frac{1}{2\sqrt2}\) 和 \(\frac a2\)，故按两个半轴的大小分类讨论其焦点.
 
@@ -499,11 +489,11 @@ E=\left(-\frac12\sqrt{\frac12-a^{2}},\frac a2\right)
 \]
 以及
 \[
-F=\left(\frac12\sqrt{\frac12-a^{2}},\frac a2\right).
+F=\left(\frac12\sqrt{\frac12-a^{2}},\frac a2\right)
 \]
 此时对椭圆上（从而对所有可取的 \(P\)）的点都有
 \[
-|PE|+|PF|=2\cdot\frac{1}{2\sqrt2}=\frac{1}{\sqrt2}.
+|PE|+|PF|=2\cdot\frac{1}{2\sqrt2}=\frac{1}{\sqrt2}
 \]
 
 当 \(a>\frac{\sqrt2}{2}\) 时，纵轴为长轴，焦距的一半为
@@ -516,14 +506,14 @@ E=\left(0,\frac{a-\sqrt{a^{2}-\frac12}}2\right)
 \]
 以及
 \[
-F=\left(0,\frac{a+\sqrt{a^{2}-\frac12}}2\right).
+F=\left(0,\frac{a+\sqrt{a^{2}-\frac12}}2\right)
 \]
 此时
 \[
-|PE|+|PF|=2\cdot\frac a2=a.
+|PE|+|PF|=2\cdot\frac a2=a
 \]
 
-当 \(a=\frac{\sqrt2}{2}\) 时，轨迹是圆而不是具有两个不同焦点的椭圆. 因而若 \(E\)、\(F\) 要求为两个不同定点，则不存在这样的 \(E\)、\(F\)；若允许两点重合，则可取圆心 \(E=F=\left(0,\frac a2\right)\)，此时距离和恒为圆的直径. 按题意取两个不同定点，临界情形的结论为不存在.
+当 \(a=\frac{\sqrt2}{2}\) 时，轨迹是以 \(\left(0,\frac a2\right)\) 为圆心的圆. 若 \(E\)、\(F\) 是两个不同定点，则具有定和性质的轨迹应是长半轴大于焦距的椭圆，而圆对应焦距为 \(0\)，两个焦点必须重合于圆心，故不存在符合题意的两个不同定点. 若题意允许两定点重合，则可取 \(E=F=\left(0,\frac a2\right)\)，此时距离和恒为圆的直径；按通常将两个焦点视为不同定点的题意，临界情形的结论为不存在.
 \end{solution}
 
 \begin{problem}
@@ -539,67 +529,74 @@ F=\left(0,\frac{a+\sqrt{a^{2}-\frac12}}2\right).
 \begin{enumerate}
 \item 当 \(n=1\) 时，\(y=x-a\)，所以 \(y'=1=1\cdot(x-a)^{0}\). 若对某个正整数 \(n\) 有 \(\frac{\mathrm d}{\mathrm dx}(x-a)^{n}=n(x-a)^{n-1}\)，则
 \[
-\frac{\mathrm d}{\mathrm dx}(x-a)^{n+1}=\frac{\mathrm d}{\mathrm dx}\bigl((x-a)^{n}(x-a)\bigr)=n(x-a)^{n-1}(x-a)+(x-a)^{n}=(n+1)(x-a)^{n}.
+\frac{\mathrm d}{\mathrm dx}(x-a)^{n+1}=\frac{\mathrm d}{\mathrm dx}\bigl((x-a)^{n}(x-a)\bigr)=n(x-a)^{n-1}(x-a)+(x-a)^{n}=(n+1)(x-a)^{n}
 \]
 由数学归纳法，结论对所有正整数 \(n\) 成立.
 \item 由上面的求导结论，\(f_n'(x)=n\left[x^{n-1}-(x-a)^{n-1}\right]\). 当 \(n=1\) 时，\(f_1(x)=a\)，所以 \(f_1'(1)=0\)，而 \(f_2'(2)=2a>0=2f_1'(1)\)，结论成立.
 
 以下设 \(n\geqslant2\). 利用恒等式 \(u^r-v^r=(u-v)\sum_{k=0}^{r-1}u^{r-1-k}v^k\)，并注意 \(n\geqslant a\)，得到
 \[
-\frac{f_{n+1}'(n+1)}{n+1}=a\sum_{k=0}^{n-1}(n+1)^{n-1-k}(n+1-a)^k,
+\frac{f_{n+1}'(n+1)}{n+1}=a\sum_{k=0}^{n-1}(n+1)^{n-1-k}(n+1-a)^k
 \]
 以及
 \[
-f_n'(n)=na\sum_{k=0}^{n-2}n^{n-2-k}(n-a)^k.
+f_n'(n)=na\sum_{k=0}^{n-2}n^{n-2-k}(n-a)^k
 \]
 对 \(0\leqslant k\leqslant n-2\)，有 \(n+1>n\) 且 \(n+1-a\geqslant n-a\geqslant0\)，因此
+        \[
+        (n+1)^{n-1-k}(n+1-a)^k>n^{n-1-k}(n-a)^k
+        =n\cdot n^{n-2-k}(n-a)^k
+        \]
+        对 \(0\leqslant k\leqslant n-2\) 的每一项都已有严格不等式，且左边的求和还多出非负项 \(k=n-1\)，所以
+        \[
+        \frac{f_{n+1}'(n+1)}{n+1}
+        >na\sum_{k=0}^{n-2}n^{n-2-k}(n-a)^k
+        =f_n'(n)
+        \]
+        即
 \[
-(n+1)^{n-1-k}(n+1-a)^k>n^{n-1-k}(n-a)^k.
-\]
-左边的求和还多出一个正项 \(k=n-1\)，所以 \(\frac{f_{n+1}'(n+1)}{n+1}>f_n'(n)\)，即
-\[
-f_{n+1}'(n+1)>(n+1)f_n'(n).
+f_{n+1}'(n+1)>(n+1)f_n'(n)
 \]
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-设 \(a > 0\)，如图，已知直线 \(l: y = ax\) 及曲线 \(C: y = x^2\)，\(C\) 上的点 \(Q_1\) 的横坐标为 \(a_1\)（\(0 < a_1 < a\)）. 从 \(C\) 上的点 \(Q_n\)（\(n \geqslant 1\)）作直线平行于 \(x\) 轴，交直线 \(l\) 于点 \(P_{n+1}\)，再从点 \(P_{n+1}\) 作直线平行于 \(y\) 轴，交曲线 \(C\) 于点 \(Q_{n+1}\). \(Q_n\)（\(n = 1, 2, 3, \cdots\)）的横坐标构成数列 \(\{a_n\}\).
+设 \(a > 0\)，如图，已知直线 \(l: y = ax\) 及曲线 \(C: y = x^2\)，\(C\) 上的点 \(Q_1\) 的横坐标为 \(a_1\)（\(0 < a_1 < a\)）. 从 \(C\) 上的点 \(Q_n\)（\(n \geqslant 1\)）作直线平行于 \(x\) 轴，交直线 \(l\) 于点 \(P_{n+1}\)，再从点 \(P_{n+1}\) 作直线平行于 \(y\) 轴，交曲线 \(C\) 于点 \(Q_{n+1}\). \(Q_n\)（\(n = 1\)，\(2\)，\(3\)，\(\cdots\)）的横坐标构成数列 \(\{a_n\}\).
 
 \begin{enumerate}
 \item 试求 \(a_{n+1}\) 与 \(a_n\) 的关系，并求 \(\{a_n\}\) 的通项公式；
 \item 当 \(a = 1\)，\(a_1 \leqslant \frac{1}{2}\) 时，证明：\(\sum_{k=1}^{n} (a_k - a_{k+1}) a_{k+2} < \frac{1}{32}\)；
-\item 当 \(a = 1\) 时，证明：\(\sum_{k=1}^{n-1} (a_k - a_{k+1}) a_{k+2} < \frac{1}{3}\).
+\item 当 \(a = 1\) 时，证明：\(\sum_{k=1}^{n} (a_k - a_{k+1}) a_{k+2} < \frac{1}{3}\).
 \end{enumerate}
 
-\bitmapinlinefigure[8.8cm][max width=8.8cm]{img/2003/jiangsu/q22_fig1.png}
+\bitmapfigure[max width=8.8cm]{img/2003/jiangsu/q22_fig1.png}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
 \item 由 \(Q_n=(a_n,a_n^2)\)，过 \(Q_n\) 作水平线后，交 \(l:y=ax\) 于 \(P_{n+1}=\left(\frac{a_n^2}{a},a_n^2\right)\). 再过 \(P_{n+1}\) 作竖直线交 \(C:y=x^2\)，所以
 \[
-a_{n+1}=\frac{a_n^2}{a}.
+a_{n+1}=\frac{a_n^2}{a}
 \]
 令 \(r_n=\frac{a_n}{a}\)，则 \(r_{n+1}=r_n^2\). 反复代入得 \(r_n=r_1^{2^{n-1}}\)，从而
 \[
-a_n=a\left(\frac{a_1}{a}\right)^{2^{n-1}}.
+a_n=a\left(\frac{a_1}{a}\right)^{2^{n-1}}
 \]
 \item 当 \(a=1\) 且 \(a_1\leqslant\frac12\) 时，\(a_{k+1}=a_k^2\)，并且 \(0<a_k<1\). 因此
 \[
-(a_k-a_{k+1})a_{k+2}=(a_k-a_k^2)a_k^4=a_k^5-a_k^6<a_k^5-a_k^{10}=a_k^5-a_{k+1}^5.
+(a_k-a_{k+1})a_{k+2}=(a_k-a_k^2)a_k^4=a_k^5-a_k^6<a_k^5-a_k^{10}=a_k^5-a_{k+1}^5
 \]
-对 \(k=1,2,\ldots,n\) 求和，得到
+对 \(k=1\)，\(2\)，\(\ldots\)，\(n\) 求和，得到
 \[
-\sum_{k=1}^{n}(a_k-a_{k+1})a_{k+2}<a_1^5-a_{n+1}^5<a_1^5\leqslant\frac1{32}.
+\sum_{k=1}^{n}(a_k-a_{k+1})a_{k+2}<a_1^5-a_{n+1}^5<a_1^5\leqslant\frac1{32}
 \]
 \item 当 \(a=1\) 时仍有 \(a_{k+1}=a_k^2\)，且 \(0<a_k<1\). 对每个 \(k\)，有
 \[
-(a_k-a_{k+1})a_{k+2}=a_k^5(1-a_k)<\frac13\left(a_k^3-a_k^6\right)=\frac13\left(a_k^3-a_{k+1}^3\right).
+(a_k-a_{k+1})a_{k+2}=a_k^5(1-a_k)<\frac13\left(a_k^3-a_k^6\right)=\frac13\left(a_k^3-a_{k+1}^3\right)
 \]
 这里不等式等价于 \(3a_k^2<1+a_k+a_k^2\)，即 \((2a_k+1)(a_k-1)<0\)，确实成立. 于是
 \[
-\sum_{k=1}^{n-1}(a_k-a_{k+1})a_{k+2}<\frac13\sum_{k=1}^{n-1}(a_k^3-a_{k+1}^3)=\frac13(a_1^3-a_n^3)<\frac13.
+\sum_{k=1}^{n}(a_k-a_{k+1})a_{k+2}<\frac13\sum_{k=1}^{n}(a_k^3-a_{k+1}^3)=\frac13(a_1^3-a_{n+1}^3)<\frac13
 \]
 \end{enumerate}
 \end{solution}

@@ -13,31 +13,37 @@
 \end{problem}
 
 \begin{solution}
+根据分母 \(x\) 是否为零，分三种情形讨论：
+
 \begin{enumerate}
-\item 当 \( x>0 \) 时，\( \frac{|x|}{x}=1 \).
-\item 当 \( x<0 \) 时，\( \frac{|x|}{x}=-1 \).
-\item 当 \( x=0 \) 时，\( \frac{|x|}{x} \) 无意义.
+\item 当 \(x>0\) 时，\(|x|=x\)，所以 \(\frac{|x|}{x}=1\)，故第（1）问的解为 \(x>0\).
+\item 当 \(x<0\) 时，\(|x|=-x\)，所以 \(\frac{|x|}{x}=-1\)，故第（2）问的解为 \(x<0\).
+\item 当 \(x=0\) 时分母为零，\(\frac{|x|}{x}\) 没有意义，故第（3）问的解为 \(x=0\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-不查表求：\( \lg2-2\lg4+\lg5+\lg16 \) 的值.
+不查表求：\(\lg2-2\lg4+\lg5+\lg16\) 的值.
 \end{problem}
 
 \begin{solution}
-原式 \( =\lg2-4\lg2+\lg10-\lg2+4\lg2=1 \).
+由对数的幂运算法则，\(\lg4=\lg\left(2^2\right)=2\lg2\)，\(\lg16=\lg\left(2^4\right)=4\lg2\). 又因为 \(\lg5=\lg\frac{10}{2}=\lg10-\lg2=1-\lg2\)，所以
+
+\[
+\lg2-2\lg4+\lg5+\lg16=\lg2-4\lg2+(1-\lg2)+4\lg2=1
+\]
 \end{solution}
 
 \begin{problem}
-计算：\( \cot\left( -60^\circ \right)\sin240^\circ-2\cos\left( -60^\circ \right)+\tan^2 150^\circ \).
+计算：\(\cot\left( -60^\circ \right)\sin240^\circ-2\cos\left( -60^\circ \right)+\tan^2 150^\circ\).
 \end{problem}
 
 \begin{solution}
+利用诱导公式，\(\cot\left( -60^\circ \right)=-\cot60^\circ=-\frac{\sqrt{3}}{3}\)，\(\sin240^\circ=-\sin60^\circ=-\frac{\sqrt{3}}{2}\)，\(\cos\left( -60^\circ \right)=\cos60^\circ=\frac{1}{2}\)，并且 \(\tan150^\circ=-\tan30^\circ=-\frac{\sqrt{3}}{3}\). 因此
+
 \[
 \begin{gathered}
-\text{原式}=-\cot60^\circ\sin\left( 180^\circ+60^\circ \right)-2\cos60^\circ+\tan^2\left( 180^\circ-30^\circ \right) \\
-=\cot60^\circ\sin60^\circ-2\cos60^\circ+\left( -\tan30^\circ \right)^2 \\
-=\frac{\sqrt{3}}{3}\cdot\frac{\sqrt{3}}{2}-2\cdot\frac{1}{2}+\left( -\frac{\sqrt{3}}{3} \right)^2 \\
+\text{原式}=\left(-\frac{\sqrt{3}}{3}\right)\left(-\frac{\sqrt{3}}{2}\right)-2\cdot\frac{1}{2}+\left(-\frac{\sqrt{3}}{3}\right)^2\\
 =\frac{1}{2}-1+\frac{1}{3}=-\frac{1}{6}
 \end{gathered}
 \]
@@ -48,15 +54,23 @@
 \end{problem}
 
 \begin{solution}
-原式 \( =\frac{9}{4}+\left( 3^4 \right)^{\frac{3}{4}}-1\div\frac{1}{5}+\frac{1}{\left( -2 \right)^3}=\frac{9}{4}+27-5-\frac{1}{8}=24\frac{1}{8} \).
+先逐项化简：\(\left(-1\frac{1}{2}\right)^2=\left(-\frac{3}{2}\right)^2=\frac{9}{4}\)，\(81^{\frac{3}{4}}=\left(3^4\right)^{\frac{3}{4}}=3^3=27\)，\(\left(-1\right)^0\div0.2=1\div\frac{1}{5}=5\)，以及 \(\left(-2\right)^{-3}=\frac{1}{\left(-2\right)^3}=-\frac{1}{8}\).
+
+所以原式 \(=\frac{9}{4}+27-5-\frac{1}{8}=22+\frac{18}{8}-\frac{1}{8}=\frac{193}{8}=24\frac{1}{8}\).
 \end{solution}
 
 \begin{problem}
-求 \( A(7,5) \) 和 \( B(1,-3) \) 两点间的距离.
+求 \(A\left(7,5\right)\) 和 \(B\left(1,-3\right)\) 两点间的距离.
 \end{problem}
 
 \begin{solution}
-\( |AB|=\sqrt{\left( 7-1 \right)^2+\left( 5+3 \right)^2}=10 \).
+由两点间的距离公式，
+
+\[
+|AB|=\sqrt{\left(7-1\right)^2+\left(5-\left(-3\right)\right)^2}=\sqrt{6^2+8^2}=\sqrt{100}=10
+\]
+
+所以两点 \(A\left(7,5\right)\) 和 \(B\left(1,-3\right)\) 间的距离为 \(10\).
 \end{solution}
 
 \begin{problem}
@@ -64,7 +78,21 @@
 \end{problem}
 
 \begin{solution}
-设实际每天生产 \( x\text{ 台} \) 车床，则原计划每天生产 \( \left( x-12 \right)\text{ 台} \) 车床，按原计划完成 \(360\text{ 台}\) 车床需 \( \frac{360}{x-12}\text{ 天} \)，实际完成 \(360\text{ 台}\) 车床用了 \( \frac{360}{x}\text{ 天} \). 依题意，得 \( \frac{360}{x-12}-\frac{360}{x}=8\text{ 天} \). 去分母，得 \( 8x^2-96x-360\times12=0 \). 即 \( x^2-12x-540=0 \). 所以 \( \left( x-30 \right)\left( x+18 \right)=0 \). 因此 \( x_1=-18 \)（不合题意，舍去），\( x_2=30 \). 把 \( x=30 \) 代入分母 \( x\left( x-12 \right) \)，所得的值不等于零，所以 \( 30 \) 是原方程的根. 答：实际每天生产 \(30\text{ 台}\) 车床.
+设实际每天生产 \(x\text{ 台}\) 车床，则原计划每天生产 \(\left(x-12\right)\text{ 台}\). 由于原计划的日产量为正且实际日产量更多，必须有 \(x>12\). 按原计划需要 \(\frac{360}{x-12}\) 天，按实际计划需要 \(\frac{360}{x}\) 天.
+
+由实际比原计划提前 \(8\) 天，得
+
+\[
+\frac{360}{x-12}-\frac{360}{x}=8
+\]
+
+因为 \(x>12\)，分母 \(x\left(x-12\right)\ne0\)，可以去分母，得到 \(360x-360\left(x-12\right)=8x\left(x-12\right)\)，即 \(8x^2-96x-4320=0\). 两边同除以 \(8\)，得
+
+\(x^2-12x-540=0\)，\(\left(x-30\right)\left(x+18\right)=0\)
+
+所以 \(x=30\) 或 \(x=-18\). 因为 \(x>12\)，舍去 \(x=-18\)，保留 \(x=30\). 代回检验时，原计划日产量为 \(30-12=18\) 台，原计划用时 \(360\div18=20\) 天，实际用时 \(360\div30=12\) 天，确实提前 \(20-12=8\) 天.
+
+答：实际每天生产 \(30\text{ 台}\) 车床.
 \end{solution}
 
 \begin{problem}
@@ -74,13 +102,11 @@
 \end{problem}
 
 \begin{solution}
-连接 \(EM\)，\(EN\)，\(FM\)，\(FN\). 在 \( \triangle ACD \) 中，因为 \(E\)，\(N\) 分别是 \(AC\)，\(CD\) 的中点，所以 \( EN \parallel AD \)，且 \( EN=\frac{1}{2}AD \).
+连接 \(EM\)，\(EN\)，\(FM\)，\(FN\). 在三角形 \(ACD\) 中，\(E\) 和 \(N\) 分别是边 \(AC\) 和 \(CD\) 的中点. 由三角形中位线定理，\(EN\parallel AD\)，且 \(EN=\frac{1}{2}AD\).
 
-在 \( \triangle ABD \) 中，因为 \(M\)，\(F\) 分别是 \(AB\) 和 \(BD\) 的中点，所以 \( MF \parallel AD \)，且 \( MF=\frac{1}{2}AD \).
+在三角形 \(ABD\) 中，\(M\) 和 \(F\) 分别是边 \(AB\) 和 \(BD\) 的中点. 由三角形中位线定理，\(MF\parallel AD\)，且 \(MF=\frac{1}{2}AD\). 因此 \(MF\parallel EN\) 且 \(MF=EN\). 四边形 \(MFNE\) 有一组对边平行且相等，所以是平行四边形.
 
-所以 \( MF \parallel EN \)，且 \( MF=EN \). 故四边形 \(MFNE\) 为平行四边形.
-
-又因 \(MN\)，\(EF\) 是它的对角线，所以 \(MN\) 与 \(EF\) 互相平分.
+在平行四边形 \(MFNE\) 中，\(MN\) 和 \(FE\) 正好是两条对角线. 平行四边形的两条对角线互相平分，所以 \(EF\) 与 \(MN\) 互相平分.
 \end{solution}
 
 \begin{problem}
@@ -90,7 +116,21 @@
 \end{problem}
 
 \begin{solution}
-连接 \(DO\)，\(AO\). 因为 \( V-ABCD \) 是正四棱锥，所以高的垂足在正方形 \(ABCD\) 对角线的交点上. \( \angle DOA=90^\circ \)，\( AO=DO \). 由勾股定理，得 \( AO^2+DO^2=AD^2 \). 所以 \( 2AO^2=6^2 \). 因此 \( AO^2=18 \). 由已知 \( VA=2VO \)，而 \( VA^2-VO^2=AO^2 \)，因此 \( 4VO^2-VO^2=18 \). 所以 \( VO=\sqrt{6}\text{ 厘米} \). 从而 \( V_{\text{棱锥}}=\frac{1}{3}\times6^2\times\sqrt{6}=12\sqrt{6}\text{ 立方厘米}\approx29.3\text{ 立方厘米} \). 答：这棱锥的体积约为 \(29.3\text{ 立方厘米}\).
+设正四棱锥为 \(V\text{-}ABCD\)，底面中心为 \(O\)，高为 \(VO\). 因为底面 \(ABCD\) 是边长为 \(6\text{ 厘米}\) 的正方形，且 \(O\) 是其对角线交点，正方形的两条对角线互相垂直且平分，所以在直角三角形 \(AOD\) 中，\(AO=DO\)，\(\angle AOD=90^\circ\)，从而
+
+\(2AO^2=AD^2=6^2\)，\(AO^2=18\)
+
+在直角三角形 \(VOA\) 中，侧棱是高的 \(2\) 倍，即 \(VA=2VO\)，由勾股定理有 \(VA^2=VO^2+AO^2\). 因此 \(4VO^2=VO^2+18\)，解得 \(VO^2=6\)，由于高为正，\(VO=\sqrt{6}\text{ 厘米}\).
+
+棱锥的底面积为 \(6^2=36\text{ 平方厘米}\)，所以体积为
+
+\[
+V_{\text{棱锥}}=\frac{1}{3}\times36\times\sqrt{6}=12\sqrt{6}\text{ 立方厘米}\approx29.3939\text{ 立方厘米}
+\]
+
+精确到 \(0.1\text{ 立方厘米}\) 时，\(29.3939\ldots\) 应四舍五入为 \(29.4\).
+
+答：这棱锥的体积约为 \(29.4\text{ 立方厘米}\).
 \end{solution}
 
 \begin{problem}
@@ -100,155 +140,96 @@
 \end{problem}
 
 \begin{solution}
-设矩形的宽为 \( x \)，零件的面积为 \( S \). 那末半圆的周长 \( =\frac{\pi}{2}x \)，矩形的高 \( =\frac{1}{2}\left( P-\frac{\pi x}{2}-x \right)=\frac{2P-\left( \pi+2 \right)x}{4} \). 半圆的面积 \( =\frac{\pi}{2}\left( \frac{x}{2} \right)^2=\frac{\pi}{8}x^2 \). 矩形的面积 \( =x\cdot\frac{2P-\left( \pi+2 \right)x}{4}=\frac{2Px-\left( \pi+2 \right)x^2}{4} \). 所以零件的面积 \( S=\frac{\pi}{8}x^2+\frac{2Px-\left( \pi+2 \right)x^2}{4}=-\frac{\pi+4}{8}x^2+\frac{P}{2}x \).
+设半圆的直径（也是矩形的宽）为 \(x\)，矩形的高为 \(h\)，零件面积为 \(S\). 半圆的弧长为 \(\frac{\pi x}{2}\)，所以周长条件给出 \(\frac{\pi x}{2}+x+2h=P\)，即
 
-这是面积 \(S\) 关于 \( x \) 的二次函数. 因为 \( a=-\frac{\pi+4}{8}<0 \)，\( b=\frac{P}{2} \)，因此当
 \[
-x=-\frac{b}{2a}=-\frac{\frac{P}{2}}{2\times\left( -\frac{\pi+4}{8} \right)}=\frac{2P}{\pi+4}
+h=\frac{1}{2}\left(P-\frac{\pi x}{2}-x\right)=\frac{2P-\left(\pi+2\right)x}{4}
 \]
-时，\(S\) 有极大值. 这时，矩形的高为 \( \frac{2P-\left( \pi+2 \right)\frac{2P}{\pi+4}}{4}=\frac{P}{\pi+4} \). 所以矩形的宽：矩形的高 \( =\frac{2P}{\pi+4}:\frac{P}{\pi+4}=2:1 \).
 
-答：应当使矩形的宽和高的比为 \( 2:1 \) 时，冲出的零件面积最大.
+由于周长 \(P>0\)，且 \(x>0\) 与 \(h>0\)，变量范围为 \(0<x<\frac{2P}{\pi+2}\). 半圆面积为 \(\frac{\pi}{8}x^2\)，矩形面积为 \(xh\)，因此
+
+\[
+\begin{gathered}
+S=\frac{\pi}{8}x^2+x\cdot\frac{2P-\left(\pi+2\right)x}{4}\\
+=-\frac{\pi+4}{8}x^2+\frac{P}{2}x\\
+=-\frac{\pi+4}{8}\left(x-\frac{2P}{\pi+4}\right)^2+\frac{P^2}{2\left(\pi+4\right)}
+\end{gathered}
+\]
+
+因为 \(\pi+4>0\)，平方项前的系数为负，所以当 \(x=\frac{2P}{\pi+4}\) 时面积取得最大值. 这个值满足可行范围，因为 \(\pi+4>\pi+2\). 此时矩形的高为
+
+\[
+h=\frac{2P-\left(\pi+2\right)\frac{2P}{\pi+4}}{4}=\frac{P}{\pi+4}
+\]
+
+于是矩形的宽与高之比为 \(x:h=\frac{2P}{\pi+4}:\frac{P}{\pi+4}=2:1\).
+
+答：当矩形的宽与高之比为 \(2:1\) 时，冲出的零件面积最大.
 \end{solution}
 
 \section{选作题}
 
 \begin{problem}
-解方程组 \( \begin{cases}
-\sqrt[3]{\left( x+y \right)^2}+2\sqrt[3]{\left( x-y \right)^2}=3\sqrt[3]{x^2-y^2},\\
-3x-2y=13.
-\end{cases} \).
+解方程组 \(\begin{cases}
+\sqrt[3]{\left(x+y\right)^2}+2\sqrt[3]{\left(x-y\right)^2}=3\sqrt[3]{x^2-y^2},\\
+3x-2y=13
+\end{cases}\).
 \end{problem}
 
 \begin{solution}
-原方程组等价于
-\[
-\begin{cases}
-\sqrt[3]{\left( x+y \right)^2}-\sqrt[3]{x^2-y^2}-2\left( \sqrt[3]{x^2-y^2}-\sqrt[3]{\left( x-y \right)^2} \right)=0,\\
-3x-2y=13.
-\end{cases}
-\]
-即
-\[
-\begin{cases}
-\sqrt[3]{x+y}\left( \sqrt[3]{x+y}-\sqrt[3]{x-y} \right)-2\sqrt[3]{x-y}\left( \sqrt[3]{x+y}-\sqrt[3]{x-y} \right)=0,\\
-3x-2y=13.
-\end{cases}
-\]
-所以
-\[
-\begin{cases}
-\left( \sqrt[3]{x+y}-\sqrt[3]{x-y} \right)\left( \sqrt[3]{x+y}-2\sqrt[3]{x-y} \right)=0,\\
-3x-2y=13.
-\end{cases}
-\]
+设 \(a=\sqrt[3]{x+y}\)，\(b=\sqrt[3]{x-y}\). 因为 \(x^2-y^2=\left(x+y\right)\left(x-y\right)\)，且实数的立方根满足乘法关系，所以
+\(\sqrt[3]{\left(x+y\right)^2}=a^2\)，\(\sqrt[3]{\left(x-y\right)^2}=b^2\)，\(\sqrt[3]{x^2-y^2}=ab\). 原方程组等价于
 
-因此原方程组的解可分为下面二个方程组的解：
 \[
 \begin{cases}
-\sqrt[3]{x+y}-\sqrt[3]{x-y}=0,\\
-3x-2y=13
-\end{cases}
-\quad\text{和}\quad
-\begin{cases}
-\sqrt[3]{x+y}-2\sqrt[3]{x-y}=0,\\
-3x-2y=13.
-\end{cases}
-\]
-
-对于第一组方程组，
-\[
-\begin{cases}
-\sqrt[3]{x+y}-\sqrt[3]{x-y}=0,\\
+a^2+2b^2=3ab,\\
 3x-2y=13
 \end{cases}
 \]
-即
+
+将第一式移项并因式分解，得 \(a^2-3ab+2b^2=0\)，即 \(\left(a-b\right)\left(a-2b\right)=0\). 所以需要分别求解下面两种情形.
+
+\begin{enumerate}
+\item 当 \(a-b=0\) 时，\(a=b\). 立方根函数在实数上单调递增，因此 \(x+y=x-y\)，从而 \(y=0\). 代入第二个方程得 \(3x=13\)，所以 \(x=\frac{13}{3}\). 这一情形给出 \(\left(x,y\right)=\left(\frac{13}{3},0\right)\).
+\item 当 \(a-2b=0\) 时，\(a=2b\). 两边立方得 \(x+y=8\left(x-y\right)\)，即 \(7x-9y=0\). 联立第二个方程，得
+
 \[
 \begin{cases}
-x+y=x-y,\\
-3x-2y=13.
+7x-9y=0,\\
+3x-2y=13,
 \end{cases}
-\]
-所以
-\[
-\begin{cases}
-x=\frac{13}{3},\\
-y=0.
-\end{cases}
+\qquad y=\frac{7x}{9},
+\qquad 3x-\frac{14x}{9}=13,
+\qquad x=9,\qquad y=7
 \]
 
-对于第二组方程组，
-\[
-\begin{cases}
-\sqrt[3]{x+y}-2\sqrt[3]{x-y}=0,\\
-3x-2y=13
-\end{cases}
-\]
-即
-\[
-\begin{cases}
-x+y=8\left( x-y \right),\\
-3x-2y=13.
-\end{cases}
-\]
-所以
-\[
-\begin{cases}
-x=9,\\
-y=7.
-\end{cases}
-\]
+得到 \(\left(x,y\right)=\left(9,7\right)\). 直接代入核对：当 \(\left(x,y\right)=\left(\frac{13}{3},0\right)\) 时 \(a=b\)；当 \(\left(x,y\right)=\left(9,7\right)\) 时 \(x+y=16\)，\(x-y=2\)，故 \(a=\sqrt[3]{16}=2\sqrt[3]{2}=2b\). 两组解都满足 \(3x-2y=13\)，所以没有遗漏.
+\end{enumerate}
 
-经检验，以上所得的两组解都是原方程组的解，所以原方程组的解为
-\[
-\begin{cases}
-x_1=\frac{13}{3},\\
-y_1=0
-\end{cases}
-\quad\text{和}\quad
-\begin{cases}
-x_2=9,\\
-y_2=7.
-\end{cases}
-\]
+答：原方程组的解为 \(\left(x,y\right)=\left(\frac{13}{3},0\right)\) 或 \(\left(x,y\right)=\left(9,7\right)\).
 \end{solution}
 
 \begin{problem}
-线段 \(AB\) 之三等分点依次为 \(C\)，\(D\)，以 \(CD\) 为直径画圆，在圆周上任取一点 \(P\). 求证 \( \tan\angle APC\cdot\tan\angle BPD=\frac{1}{4} \).
+线段 \(AB\) 之三等分点依次为 \(C\)，\(D\)，以 \(CD\) 为直径画圆，在圆周上任取一点 \(P\). 求证 \(\tan\angle APC\cdot\tan\angle BPD=\frac{1}{4}\).
 
 \bitmapfigure[max width=8.0cm]{img/1977/guangxi_science/q11_fig1.png}
 \end{problem}
 
 \begin{solution}
-证明1：记 \(PC\) 和 \(CD\) 的夹角为 \( \theta \)，并假定 \( AC=CD=DB=a \). 作 \( PE\perp AB \)，交 \(AB\) 于 \(E\). 因为 \(CD\) 是圆的直径，所以 \( \angle CPD=90^\circ \). 因此 \( PD=a\sin\theta \)，\( PC=a\cos\theta \)，\( PE=PC\cdot\sin\theta=a\sin\theta\cos\theta \). 又 \( CE=PC\cdot\cos\theta=a\cos^2\theta \)，\( DE=a-CE=a\left( 1-\cos^2\theta \right)=a\sin^2\theta \).
-所以
-\[
-\tan A=\frac{PE}{AE}=\frac{PE}{a+CE}=\frac{a\sin\theta\cos\theta}{a\left( 1+\cos^2\theta \right)}=\frac{\tan\theta}{2+\tan^2\theta}
-\]
-又
-\[
-\tan B=\frac{PE}{BE}=\frac{PE}{a+DE}=\frac{a\sin\theta\cos\theta}{a\left( 1+\sin^2\theta \right)}=\frac{\tan\theta}{1+2\tan^2\theta}
-\]
-而
-\[
-\tan\angle APC=\tan\left( \theta-A \right)=\frac{\tan\theta-\tan A}{1+\tan\theta\cdot\tan A}=\frac{\tan\theta}{2}
-\]
-并且
-\[
-\begin{gathered}
-\tan\angle BPD
-=\tan\left( \angle PDC-\angle B \right)=\tan\left( 90^\circ-\theta-B \right) \\
-=\cot\left( \theta+B \right)=\frac{1-\tan\theta\tan B}{\tan\theta+\tan B}=\frac{1}{2\tan\theta}
-\end{gathered}
-\]
-所以
-\[
-\tan\angle APC\cdot\tan\angle BPD=\frac{\tan\theta}{2}\cdot\frac{1}{2\tan\theta}=\frac{1}{4}
-\]
+以下取 \(P\notin\{C,D\}\)，否则题中的正切无意义. 设 \(AC=CD=DB=a\)，于是 \(AD=2a\)，\(BC=2a\). 因为 \(CD\) 是所作圆的直径，且 \(P\) 在圆周上，由圆周角定理得 \(\angle CPD=90^\circ\)，即 \(PC\perp PD\).
 
-证明2：作 \( DE \parallel CP \) 交 \(PB\) 于 \(E\)，作 \( CF \parallel DP \) 交 \(AP\) 于 \(F\). 因为 \(P\) 在以 \(CD\) 为直径的圆周上，所以 \( \angle CPD=90^\circ \). 又因为 \( AC=CD=DB \)，所以 \( DE=\frac{1}{2}CP \)，\( CF=\frac{1}{2}DP \). 并且 \( \angle PDE=\angle CPD=\angle PCF=90^\circ \). 所以
+过 \(D\) 作 \(DE\parallel CP\)，交 \(PB\) 于 \(E\). 在三角形 \(BCP\) 中，\(D\) 在 \(BC\) 上，\(E\) 在 \(BP\) 上，且 \(DE\parallel CP\)，所以三角形 \(BDE\) 与三角形 \(BCP\) 相似. 相似比为
+\(\frac{BD}{BC}=\frac{a}{2a}=\frac{1}{2}\)，从而 \(DE=\frac{1}{2}CP\). 又因 \(DE\parallel CP\) 且 \(CP\perp PD\)，所以 \(DE\perp PD\)，三角形 \(PDE\) 是直角三角形，故
+\(\tan\angle BPD=\frac{DE}{PD}\).
+
+过 \(C\) 作 \(CF\parallel DP\)，交 \(PA\) 于 \(F\). 在三角形 \(ADP\) 中，\(C\) 在 \(AD\) 上，\(F\) 在 \(AP\) 上，且 \(CF\parallel DP\)，所以三角形 \(ACF\) 与三角形 \(ADP\) 相似. 相似比为
+\(\frac{AC}{AD}=\frac{a}{2a}=\frac{1}{2}\)，从而 \(CF=\frac{1}{2}DP\). 又因 \(CF\parallel DP\) 且 \(DP\perp PC\)，所以 \(CF\perp PC\)，三角形 \(PCF\) 是直角三角形，故 \(\tan\angle APC=\frac{CF}{PC}\).
+
+因此
+
 \[
 \tan\angle APC\cdot\tan\angle BPD=\frac{CF}{PC}\cdot\frac{DE}{PD}=\frac{\frac{1}{2}DP}{PC}\cdot\frac{\frac{1}{2}CP}{PD}=\frac{1}{4}
 \]
+
+证毕.
 \end{solution}

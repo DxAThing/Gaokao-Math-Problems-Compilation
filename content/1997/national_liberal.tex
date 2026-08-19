@@ -16,6 +16,10 @@
 B
 \end{answer}
 
+\begin{solution}
+由 \(x^{2}-2x-3=(x+1)(x-3)\)，得 \(N=(-1,3)\). 与 \(M=[0,2)\) 取交集，得到 \(M\cap N=[0,2)\)，故选 B.
+\end{solution}
+
 \begin{problem}
 如果直线 \(ax + 2y + 2 = 0\) 与直线 \(3x - y - 2 = 0\) 平行，那么系数 \(a =\)（\(\quad\)）
 
@@ -30,6 +34,11 @@ B
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+两直线化为斜截式后，斜率分别为 \(-\frac a2\) 和 \(3\).
+平行时斜率相等，所以 \(-a/2=3\)，从而 \(a=-6\)，故选 B.
+\end{solution}
 
 \begin{problem}
 函数 \(y = \tan \left(\frac{1}{2}x - \frac{\pi}{3}\right)\) 在一个周期内的图象是（\(\quad\)）
@@ -46,6 +55,18 @@ B
 A
 \end{answer}
 
+\begin{solution}
+令 \(u=\frac x2-\frac\pi3\). 由于正切函数的最小正周期为 \(\pi\)，原函数的最小正周期为 \(4\pi\). 相邻两条渐近线满足
+\[
+\frac x2-\frac\pi3=\frac\pi2+k\pi
+\],
+故可取 \(x=-\frac\pi3\) 与 \(x=\frac{5\pi}{3}\)；零点满足 \(u=0\)，可取 \(x=\frac{2\pi}{3}\). 又
+\[
+y'=\frac12\sec^{2}\left(\frac x2-\frac\pi3\right)>0
+\],
+所以图象在两条渐近线之间单调递增，并在 \(x=\frac{2\pi}{3}\) 处过 \(x\) 轴. 符合这些特征的是第一幅图，故选第一幅图.
+\end{solution}
+
 \begin{problem}
 已知三棱锥 \(D - ABC\) 的三个侧面与底面全等，且 \(AB = AC = \sqrt{3}\)，\(BC = 2\)，则以 \(BC\) 为棱，以面 \(BCD\) 与面 \(BCA\) 为面的二面角的大小是（\(\quad\)）
 
@@ -60,6 +81,16 @@ A
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+底面 \(ABC\) 的边长为 \(\sqrt3\)，\(\sqrt3\)，\(2\). 因为三个侧面都与底面全等，面 \(DBC\) 含有边 \(BC=2\)，故 \(DB=DC=\sqrt3\)；再由面 \(DAB\) 或 \(DAC\) 的边长组成，得 \(DA=2\).
+
+取坐标 \(B=(0,0,0)\)，\(C=(2,0,0)\)，\(A=(1,\sqrt2,0)\)，设 \(D=(u,v,w)\). 由 \(DB=DC=\sqrt3\) 得 \(u=1\)，且 \(v^2+w^2=2\). 由 \(DA=2\) 得
+\[
+(v-\sqrt2)^2+w^2=4
+\]
+两式相减得 \(v=0\)，从而 \(w^2=2\)，即 \(D=(1,0,\pm\sqrt2)\). 两种情形关于平面 \(z=0\) 对称，所求二面角相同，不妨取 \(D=(1,0,\sqrt2)\). 于是面 \(BCA\) 是 \(z=0\)，面 \(BCD\) 是 \(y=0\). 两面的法向量分别可取 \((0,0,1)\) 和 \((0,1,0)\)，相互垂直. 因此二面角为 \(\frac\pi2\)，故选 C.
+\end{solution}
 
 \begin{problem}
 函数 \(y = \sin \left(\frac{\pi}{3} - 2x\right) + \sin 2x\) 的最小正周期是（\(\quad\)）
@@ -76,6 +107,16 @@ C
 B
 \end{answer}
 
+\begin{solution}
+利用和差化积公式：
+\[
+\sin\left(\frac\pi3-2x\right)+\sin2x
+=2\sin\frac\pi6\cos\left(\frac\pi6-2x\right)
+=\cos\left(\frac\pi6-2x\right)
+\]
+余弦函数的自变量系数为 \(-2\)，所以最小正周期为 \(\frac{2\pi}{2}=\pi\)，故选 B.
+\end{solution}
+
 \begin{problem}
 满足 \(\tan \alpha \geqslant \cot \alpha\) 的 \(\alpha\) 的一个取值区间是（\(\quad\)）
 
@@ -90,6 +131,15 @@ B
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+在 \(\tan\alpha\) 与 \(\cot\alpha\) 有定义时，令 \(t=\tan\alpha\)，则 \(t\ne0\)，且
+\[
+t\geqslant\frac1t
+\iff \frac{t^2-1}{t}\geqslant0
+\]
+当 \(\alpha\in\left[\frac\pi4,\frac\pi2\right)\) 时，\(t\geqslant1\)，上式成立，而 \(\alpha=\frac\pi2\) 处正切无定义. 因此该区间满足条件，故选 C.
+\end{solution}
 
 \begin{problem}
 设函数 \(y = f(x)\) 定义在实数集上，则函数 \(y = f(x - 1)\) 与 \(y = f(1 - x)\) 的图象关于（\(\quad\)）
@@ -106,6 +156,14 @@ C
 D
 \end{answer}
 
+\begin{solution}
+在曲线 \(y=f(x-1)\) 上取点 \((1+u,f(u))\). 关于直线 \(x=1\) 对称后得到点 \((1-u,f(u))\)，而该点满足
+\[
+f(1-(1-u))=f(u)
+\],
+所以它在曲线 \(y=f(1-x)\) 上. 反过来，曲线 \(y=f(1-x)\) 上任一点 \((1-u,f(u))\) 关于 \(x=1\) 对称后为 \((1+u,f(u))\)，满足 \(f((1+u)-1)=f(u)\)，故在曲线 \(y=f(x-1)\) 上. 两图象关于 \(x=1\) 对称，选 D.
+\end{solution}
+
 \begin{problem}
 长方体一个顶点上三条棱的长分别是 \(3\)，\(4\)，\(5\)，且它的八个顶点都在同一个球面上，这个球的表面积是（\(\quad\)）
 
@@ -120,6 +178,18 @@ D
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+长方体的空间对角线为
+\[
+d=\sqrt{3^2+4^2+5^2}=5\sqrt2
+\]
+球心是长方体的中心，球的直径为 \(d\)，所以半径 \(R=\frac{5\sqrt2}{2}\). 球的表面积为
+\[
+4\pi R^2=4\pi\cdot\frac{50}{4}=50\pi
+\],
+故选 C.
+\end{solution}
 
 \begin{problem}
 如果直线 \(l\) 将圆 \(x^{2} + y^{2} - 2x - 4y = 0\) 平分，且不通过第四象限，那么 \(l\) 的斜率的取值范围是（\(\quad\)）
@@ -136,6 +206,22 @@ C
 A
 \end{answer}
 
+\begin{solution}
+圆方程化为
+\[
+(x-1)^2+(y-2)^2=5
+\],
+所以圆心为 \(O=(1,2)\). 直线平分圆的面积，当且仅当它经过圆心. 非竖直直线可写为
+\[
+y-2=k(x-1)
+\]
+若 \(k<0\)，取足够大的正 \(x\) 可得 \(y<0\)，直线经过第四象限；若 \(k>2\)，取 \(0<x<1-\frac2k\)，也可得 \(y<0\). 当 \(0\leqslant k\leqslant2\) 时，对任意 \(x>0\)，有
+\[
+y=kx+2-k\geqslant0
+\],
+故不经过第四象限. 竖直直线的斜率不存在，因此斜率范围为 \([0,2]\)，选 A.
+\end{solution}
+
 \begin{problem}
 函数 \(y = \cos^2 x - 3\cos x + 2\) 的最小值为（\(\quad\)）
 
@@ -150,6 +236,14 @@ A
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+令 \(t=\cos x\)，则 \(t\in[-1,1]\)，且
+\[
+y=t^2-3t+2=(t-1)(t-2)
+\]
+在 \([-1,1]\) 上，该二次函数的导数 \(2t-3<0\)，故最小值在 \(t=1\) 处取得，最小值为 \(1-3+2=0\)，选 B.
+\end{solution}
 
 \begin{problem}
 椭圆 \(C\) 与椭圆 \(\frac{(x - 3)^2}{9} + \frac{(y - 2)^2}{4} = 1\) 关于直线 \(x + y = 0\) 对称，椭圆 \(C\) 的方程是（\(\quad\)）
@@ -166,6 +260,18 @@ B
 A
 \end{answer}
 
+\begin{solution}
+关于直线 \(x+y=0\) 的对称变换为
+\[
+(x,y)\longmapsto(-y,-x)
+\]
+原椭圆的中心 \((3,2)\) 变为 \((-2,-3)\)；原来的水平半轴长为 \(3\)，对称后成为竖直半轴，原来的竖直半轴长为 \(2\)，对称后成为水平半轴. 因此椭圆 \(C\) 的方程为
+\[
+\frac{(x+2)^2}{2^2}+\frac{(y+3)^2}{3^2}=1
+\],
+即选 A.
+\end{solution}
+
 \begin{problem}
 圆台上、下底面分别为 \(\pi\)、\(4\pi\)，侧面积为 \(6\pi\)，这个圆台的体积是（\(\quad\)）
 
@@ -180,6 +286,24 @@ A
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+设圆台上下底面半径分别为 \(r\)，\(R\). 由 \(\pi r^2=\pi\) 和 \(\pi R^2=4\pi\) 得 \(r=1\)，\(R=2\). 由圆台侧面积公式
+\[
+\pi(R+r)l=6\pi
+\]
+得母线 \(l=2\). 圆台的高为
+\[
+h=\sqrt{l^2-(R-r)^2}=\sqrt3
+\]
+因此体积为
+\[
+V=\frac13\pi h(R^2+Rr+r^2)
+=\frac13\pi\sqrt3(4+2+1)
+=\frac{7\sqrt3\pi}{3}
+\],
+故选 D.
+\end{solution}
 
 \begin{problem}
 定义在区间 \((-\infty, +\infty)\) 的奇函数 \(f(x)\) 为增函数，偶函数 \(g(x)\) 在区间 \([0, +\infty)\) 的图象与 \(f(x)\) 的图象重合，设 \(a > b > 0\)，给出下列不等式：
@@ -203,6 +327,21 @@ D
 C
 \end{answer}
 
+\begin{solution}
+由奇函数性质 \(f(0)=0\). 因为 \(f\) 是增函数且 \(a>b>0\)，所以 \(f(a)>f(b)>f(0)=0\).
+
+又 \(f\) 为奇函数，\(g\) 为偶函数，并且在非负半轴上 \(g=f\)，故 \(f(-a)=-f(a)\)，\(f(-b)=-f(b)\)，\(g(a)=f(a)\)，\(g(b)=f(b)\)，\(g(-a)=g(a)=f(a)\)，\(g(-b)=g(b)=f(b)\).
+于是
+\[
+f(b)-f(-a)=f(a)+f(b)>f(a)-f(b)=g(a)-g(-b)
+\],
+第 1 个不等式成立. 由同一组关系，
+\[
+f(a)-f(-b)=f(a)+f(b)>f(b)-f(a)=g(b)-g(-a)
+\],
+第 3 个不等式成立. 正确序号为 1、3，故选 C.
+\end{solution}
+
 \begin{problem}
 不等式组 \(\begin{cases}
 x > 0,\\
@@ -221,6 +360,28 @@ x > 0,\\
 C
 \end{answer}
 
+\begin{solution}
+因 \(x>0\)，分母 \(2+x\)，\(3+x\) 均为正. 先取 \(0<x<2\)，此时
+\[
+\left|\frac{2-x}{2+x}\right|=\frac{2-x}{2+x}
+\],
+且
+\[
+\frac{3-x}{3+x}>\frac{2-x}{2+x}
+\iff (3-x)(2+x)>(2-x)(3+x)
+\iff 2x>0
+\],
+所以整个区间 \(0<x<2\) 都满足.
+
+当 \(2\leqslant x<3\) 时，不等式变为
+\[
+\frac{3-x}{3+x}>\frac{x-2}{x+2}
+\iff (3-x)(2+x)>(x-2)(3+x)
+\iff x^2<6
+\]
+当 \(x\geqslant3\) 时，左端不大于 \(0\)，右端为非负数，不等式不成立. 因此这部分给出 \(2\leqslant x<\sqrt6\). 合并两部分，解集为 \(0<x<\sqrt6\)，故选 C.
+\end{solution}
+
 \begin{problem}
 四面体的一个顶点为 \(A\)，从其他顶点与各棱的中点中取 \(3\) 个点，使它们和点 \(A\) 在同一平面上，不同的取法共有（\(\quad\)）
 
@@ -236,6 +397,31 @@ C
 B
 \end{answer}
 
+\begin{solution}
+    取 \(A\) 为原点，令 \(B\)，\(C\)，\(D\) 的位置向量分别为三个线性无关向量 \(e_1\)，\(e_2\)，\(e_3\). 记 \(BC\)，\(BD\)，\(CD\) 的中点分别为 \(M_{12}\)，\(M_{13}\)，\(M_{23}\). 其余九个可选点的向量为
+\(e_1\)，\(e_2\)，\(e_3\)，\(\frac12e_1\)，\(\frac12e_2\)，\(\frac12e_3\)，\(\frac12(e_1+e_2)\)，\(\frac12(e_1+e_3)\)，\(\frac12(e_2+e_3)\)
+三点和 \(A\) 共面，当且仅当这三个向量线性相关. 坐标面 \(z=0\) 上的可选点是 \(e_1\)，\(e_2\)，\(\frac12e_1\)，\(\frac12e_2\)，\(\frac12(e_1+e_2)\)，共 \(5\) 个；坐标面 \(y=0\) 上的可选点是 \(e_1\)，\(e_3\)，\(\frac12e_1\)，\(\frac12e_3\)，\(\frac12(e_1+e_3)\)，共 \(5\) 个；坐标面 \(x=0\) 上的可选点是 \(e_2\)，\(e_3\)，\(\frac12e_2\)，\(\frac12e_3\)，\(\frac12(e_2+e_3)\)，共 \(5\) 个. 因此坐标面内的取法共有
+\[
+3\mathrm C_5^3=30
+\]
+种. 不同坐标面的交集是一条坐标轴，而每条坐标轴上只有两个可选点，所以不可能有三点同时落在两个坐标面内，以上取法没有重复.
+
+下面检查不属于坐标面的取法. 将三个棱中点记为 \(p_{12}=\frac12(e_1+e_2)\)、\(p_{13}=\frac12(e_1+e_3)\)、\(p_{23}=\frac12(e_2+e_3)\)，并按所取点中坐标轴点的个数分类.
+
+若取三个坐标轴点：每条坐标轴上只有 \(e_i\) 和 \(\frac12e_i\) 两个可选点. 若有两个点在同一坐标轴上，第三点在另一个坐标轴上，则三点已落在一个坐标面内；若三点分别在三个坐标轴上，则三点的三个坐标分别只有一个非零分量，因 \(e_1\)，\(e_2\)，\(e_3\) 线性无关，三点线性无关.
+
+若取两个坐标轴点：当两点在同一坐标轴上时，第三点若为含该坐标轴的棱中点，则三点已落在坐标面内；只有第三点为不含该坐标轴的棱中点时，才产生新的取法. 具体三组分别为 \(\{e_1,\frac12e_1,p_{23}\}\)、\(\{e_2,\frac12e_2,p_{13}\}\)、\(\{e_3,\frac12e_3,p_{12}\}\). 每组中前两个向量线性相关，故这三组均应计入.
+
+当两点在不同坐标轴上时，第三点若为这两轴对应的棱中点，则已计入坐标面取法；否则，例如取 \(e_1\)，\(e_2\) 与 \(p_{13}\) 或 \(p_{23}\)，三阶行列式的绝对值均为 \(\frac12\)，将 \(e_1\)，\(e_2\) 换成 \(\frac12e_1\)，\(\frac12e_2\) 时绝对值分别变为 \(\frac14\) 或 \(\frac18\)，均不为零.
+
+若取一个坐标轴点和两个棱中点，以 \(e_1\) 为例，三种棱中点组合的行列式绝对值分别为 \(\left|\det(e_1,p_{12},p_{13})\right|=\frac14\)，\(\left|\det(e_1,p_{12},p_{23})\right|=\frac14\)，\(\left|\det(e_1,p_{13},p_{23})\right|=\frac14\).
+若坐标轴点换成 \(\frac12e_1\)，上述绝对值均为 \(\frac18\)；换用另外两个坐标轴点时结论相同，故均不为零. 若三个点都是棱中点，则
+\[
+\det\begin{pmatrix}\frac12&\frac12&0\\\frac12&0&\frac12\\0&\frac12&\frac12\end{pmatrix}=-\frac14\ne0
+\]
+因此除上述三组外没有新的线性相关取法. 总数为 \(30+3=33\)，选 B.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -246,6 +432,20 @@ B
 4
 \end{answer}
 
+\begin{solution}
+展开式的通项中，若第二项取了 \(k\) 次，则该项为
+\[
+\mathrm C_9^k\left(\frac ax\right)^{9-k}
+\left(-\sqrt{\frac x2}\right)^k
+\],
+其中 \(x\) 的幂为 \(-9+\frac32k\). 令其等于 \(3\)，得 \(k=8\). 此时对应项为
+\[
+\mathrm C_9^8\frac ax\left(-\sqrt{\frac x2}\right)^8
+=9a\frac{x^3}{16}
+\]
+所以 \(x^3\) 的系数为 \(\frac{9a}{16}\). 由 \(\frac{9a}{16}=\frac94\)，得 \(a=4\).
+\end{solution}
+
 \begin{problem}
 已知直线 \(x - y = 2\) 与抛物线 \(y^{2} = 4x\) 交于 \(A\)，\(B\) 两点，那么线段 \(AB\) 的中点坐标是\fillinblank{}.
 \end{problem}
@@ -254,6 +454,22 @@ B
 \((4,2)\)
 \end{answer}
 
+\begin{solution}
+由直线方程得 \(y=x-2\). 代入抛物线方程：
+\[
+(x-2)^2=4x
+\iff x^2-8x+4=0
+\]
+设两交点的横坐标为 \(x_1\)，\(x_2\)，则 \(x_1+x_2=8\). 对应纵坐标为 \(y_i=x_i-2\)，所以
+\[
+y_1+y_2=x_1+x_2-4=4
+\]
+故线段中点为
+\[
+\left(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2}\right)=(4,2)
+\]
+\end{solution}
+
 \begin{problem}
 \(\frac{\sin 7^{\circ} + \cos 15^{\circ}\sin 8^{\circ}}{\cos 7^{\circ} - \sin 15^{\circ}\sin 8^{\circ}}\) 的值为\fillinblank{}.
 \end{problem}
@@ -261,6 +477,24 @@ B
 \begin{answer}
 \(2 - \sqrt{3}\)
 \end{answer}
+
+\begin{solution}
+由 \(7^\circ=15^\circ-8^\circ\)，有
+\[
+\sin7^\circ=\sin15^\circ\cos8^\circ-\cos15^\circ\sin8^\circ
+\],
+所以分子为 \(\sin15^\circ\cos8^\circ\). 另一方面，由余弦差公式
+\[
+\cos7^\circ=\cos15^\circ\cos8^\circ+\sin15^\circ\sin8^\circ
+\],
+所以分母为 \(\cos15^\circ\cos8^\circ\). 原式等于
+\[
+\tan15^\circ
+=\frac{\tan45^\circ-\tan30^\circ}{1+\tan45^\circ\tan30^\circ}
+=\frac{1-\frac1{\sqrt3}}{1+\frac1{\sqrt3}}
+=2-\sqrt3
+\]
+\end{solution}
 
 \begin{problem}
 已知 \(m\)，\(l\) 是直线，\(\alpha\)，\(\beta\) 是平面，给出下列命题：
@@ -278,6 +512,20 @@ B
 \(\circled{1}\)，\(\circled{4}\)
 \end{answer}
 
+\begin{solution}
+第 1 个命题正确：若一条直线垂直于平面内两条相交直线，则由直线与平面垂直的判定定理，\(l\perp\alpha\).
+
+第 2 个命题错误. 取 \(\alpha\) 为 \(z=0\)，取直线 \(l=\{(t,0,1)\mid t\in\R\}\). 则 \(l\parallel\alpha\)，但 \(\alpha\) 内的直线 \(n=\{(0,t,0)\mid t\in\R\}\) 与 \(l\) 不平行，故该命题不成立.
+
+第 3 个命题错误. 取 \(\alpha\) 为 \(z=0\)，\(\beta\) 为 \(x+z=0\)，取 \(m=\{(t,0,0)\mid t\in\R\}\subset\alpha\) 和 \(l=\{(0,t,0)\mid t\in\R\}\subset\beta\). 此时 \(l\perp m\)，但两平面的法向量可取为 \((0,0,1)\) 与 \((1,0,1)\)，内积为 \(1\ne0\)，故两平面不垂直，该命题不成立.
+
+第 4 个命题正确：若 \(\beta\) 内有直线 \(l\perp\alpha\)，则由平面与平面垂直的判定定理，\(\beta\perp\alpha\).
+
+第 5 个命题错误. 取 \(\alpha\) 为 \(z=0\)，\(\beta\) 为 \(z=1\)，取 \(m=\{(t,0,0)\mid t\in\R\}\subset\alpha\) 和 \(l=\{(0,t,1)\mid t\in\R\}\subset\beta\). 虽然 \(\alpha\parallel\beta\)，但 \(m\) 与 \(l\) 方向不同且不相交，二者并不平行.
+
+因此正确的序号是 \(1\)，\(4\).
+\end{solution}
+
 \section{解答题}
 
 \begin{problem}
@@ -285,15 +533,43 @@ B
 \end{problem}
 
 \begin{solution}
-复数 \(z\omega+z\omega^3\) 的模为 \(\sqrt{2}\)，辐角主值为 \(\frac{5\pi}{6}\).
+由 \(z=\e^{\i\pi/3}\)，\(\omega=\e^{\i\pi/4}\)，
+得
+\[
+z\omega+z\omega^3
+=z\omega(1+\omega^2)
+=z\omega(1+\i)
+=\sqrt2\,z\omega^2
+=\sqrt2\,\e^{\i(\pi/3+\pi/2)}
+=\sqrt2\,\e^{\i5\pi/6}
+\]
+因此该复数的模为 \(\sqrt2\)，辐角主值为 \(\frac{5\pi}{6}\).
 \end{solution}
 
 \begin{problem}
-设 \(S_{n}\) 是等差数列 \(\{a_{n}\}\) 前 \(n\) 项的和. 已知 \(\frac{S_{1}}{3}\) 与 \(\frac{S_{4}}{4}\) 的等比中项为 \(\frac{S_{1}}{5}\)，\(\frac{S_{3}}{3}\) 与 \(\frac{S_{4}}{4}\) 的等差中项为 \(1\). 求等差数列 \(\{a_{n}\}\) 的通项 \(a_{n}\).
+设 \(S_{n}\) 是等差数列 \(\{a_{n}\}\) 前 \(n\) 项的和. 已知 \(\frac{S_{3}}{3}\) 与 \(\frac{S_{4}}{4}\) 的等比中项为 \(\frac{S_{1}}{5}\)，\(\frac{S_{3}}{3}\) 与 \(\frac{S_{4}}{4}\) 的等差中项为 \(1\). 求等差数列 \(\{a_{n}\}\) 的通项 \(a_{n}\).
 \end{problem}
 
 \begin{solution}
-\(a_{n}=1\)，或 \(a_{n}=\frac{32}{5}-\frac{12}{5}n\).
+设首项为 \(a\)，公差为 \(d\)，则 \(\frac{S_3}{3}=a+d\)，\(\frac{S_4}{4}=a+\frac32d\)，\(\frac{S_1}{5}=\frac a5\).
+等比中项条件给出
+\[
+\left(\frac a5\right)^2=(a+d)\left(a+\frac32d\right)
+\],
+即
+\[
+48a^2+125ad+75d^2=0
+\]
+等差中项条件给出
+\[
+\frac12\left(a+d+a+\frac32d\right)=1
+\iff a+\frac54d=1
+\]
+代入 \(a=1-\frac54d\)，得
+\[
+25d^2-20d-192=0
+\],
+所以 \(d=\frac{16}{5}\) 或 \(d=-\frac{12}{5}\). 这里等比中项条件使用的是中项平方等于两端乘积，公比允许为负，因此两组根都要保留. 相应地，\(a=-3\) 或 \(a=4\). 因此，当 \(a=-3\)，\(d=\frac{16}{5}\) 时，\(a_n=\frac{16n-31}{5}\)；当 \(a=4\)，\(d=-\frac{12}{5}\) 时，\(a_n=\frac{32-12n}{5}\).
 \end{solution}
 
 \begin{problem}
@@ -306,8 +582,24 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item \(y=S\left(\frac{a}{v}+bv\right)\)，\(v\in(0,c]\).
-\item 当 \(\sqrt{\frac{a}{b}}\leqslant c\) 时，行驶速度为 \(\sqrt{\frac{a}{b}}\)；当 \(\sqrt{\frac{a}{b}}>c\) 时，行驶速度为 \(c\).
+\item 汽车以速度 \(v\) 行驶全程所需时间为 \(S/v\). 每小时成本为 \(a+bv^2\)，所以全程成本为
+\[
+y=(a+bv^2)\frac Sv=S\left(\frac av+bv\right)
+\]
+由于汽车须以正速度行驶且速度不超过 \(c\)，函数定义域为 \(v\in(0,c]\).
+
+\item 由成本系数的意义，\(a>0\)，\(b>0\). 在 \(v>0\) 时
+\[
+y'(v)=S\left(-\frac a{v^2}+b\right)
+\]
+令 \(y'(v)=0\)，得临界速度 \(v_0=\sqrt{a/b}\). 当 \(0<v<v_0\) 时 \(y'(v)<0\)，当 \(v>v_0\) 时 \(y'(v)>0\). 因此若 \(v_0\leqslant c\)，最小成本在 \(v=v_0\) 处取得；若 \(v_0>c\)，函数在 \((0,c]\) 上递减，最小成本在端点 \(v=c\) 处取得. 故
+\[
+v=
+\begin{cases}
+\sqrt{\dfrac ab},&\sqrt{\dfrac ab}\leqslant c,\\[4pt]
+c,&\sqrt{\dfrac ab}>c.
+\end{cases}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -324,7 +616,44 @@ B
 \end{problem}
 
 \begin{solution}
-\(AE\) 与 \(D_{1}F\) 所成的角为 \(\frac{\pi}{2}\)，三棱锥 \(F-A_{1}ED_{1}\) 的体积为 \(\frac{4}{3}\).
+设正方体棱长为 \(t\)，取坐标 \(A=(0,0,0)\)，\(B=(t,0,0)\)，\(C=(t,t,0)\)，\(D=(0,t,0)\)，\(A_1=(0,0,t)\)，\(D_1=(0,t,t)\)，\(E=(t,0,\tfrac t2)\)，\(F=(\tfrac t2,t,0)\).
+\begin{enumerate}
+\item
+\(\overrightarrow{AD}=(0,t,0)\)，\(\overrightarrow{D_1F}=(\tfrac t2,0,-t)\)，
+\[
+\overrightarrow{AD}\cdot\overrightarrow{D_1F}=0
+\],
+所以 \(AD\perp D_1F\).
+
+\item
+\[
+\overrightarrow{AE}=(t,0,\tfrac t2)
+\],
+从而
+\[
+\overrightarrow{AE}\cdot\overrightarrow{D_1F}
+=t\cdot\frac t2+\frac t2\cdot(-t)=0
+\]
+因此 \(AE\perp D_1F\)，两异面直线所成的锐角为 \(\frac\pi2\).
+
+\item \(AD\) 与 \(AE\) 是平面 \(AED\) 内相交的两条直线，而 \(D_1F\) 同时垂直于它们，所以 \(D_1F\perp\) 平面 \(AED\). 又 \(D_1F\subset\) 平面 \(A_1FD_1\)，由平面与平面垂直的判定定理，平面 \(AED\perp\) 平面 \(A_1FD_1\).
+
+\item 当 \(t=2\) 时，\(A_1=(0,0,2)\)，\(D_1=(0,2,2)\)，\(E=(2,0,1)\)，\(F=(1,2,0)\).
+取三角形 \(A_1ED_1\) 为底面，有
+\(\overrightarrow{A_1E}=(2,0,-1)\)，\(\overrightarrow{A_1D_1}=(0,2,0)\)，
+\[
+\left|\overrightarrow{A_1E}\times\overrightarrow{A_1D_1}\right|
+=2\sqrt5
+\],
+故底面积为 \(\sqrt5\). 底面所在平面方程为 \(x+2z=4\)，点 \(F\) 到此平面的距离为
+\[
+h=\frac{|1+2\cdot0-4|}{\sqrt{1^2+2^2}}=\frac3{\sqrt5}
+\]
+所以三棱锥体积为
+\[
+V=\frac13\cdot\sqrt5\cdot\frac3{\sqrt5}=1
+\]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -337,7 +666,28 @@ B
 \end{problem}
 
 \begin{solution}
-点 \(A\) 的坐标为 \(\left(\sqrt[3]{3},\log_{8}\sqrt[3]{3}\right)\).
+设 \(A=(x_1,\log_8x_1)\)，\(B=(x_2,\log_8x_2)\). 由于 \(O\)，\(A\)，\(B\) 共线，
+\[
+\frac{\log_8x_1}{x_1}=\frac{\log_8x_2}{x_2}
+\]
+先说明 \(x_1\)，\(x_2>1\). 过原点的直线写成 \(y=kx\)，与曲线的交点横坐标满足 \(\log_8x/x=k\). 在 \(0<x<1\) 上，函数 \(\log_8x/x\) 严格递增且取负值；在 \(x=1\) 时对应曲线上的点为 \((1,0)\)，且只会对应斜率 \(k=0\)；在 \(x>1\) 上该比值为正. 因此同一条过原点的直线不可能同时在 \(0<x\leqslant1\) 和 \(x>1\) 上取得交点，也不可能在 \(0<x\leqslant1\) 上取得两个不同交点，题设的两个交点只能满足 \(x_1\)，\(x_2>1\).
+
+过 \(A\)，\(B\) 作 \(y\) 轴的平行线，与 \(y=\log_2x\) 的交点为 \(C=(x_1,\log_2x_1)\) 和 \(D=(x_2,\log_2x_2)\). 由于 \(\log_2x=3\log_8x\)，所以 \(OC\) 的斜率为 \(3\frac{\log_8x_1}{x_1}\)，\(OD\) 的斜率为 \(3\frac{\log_8x_2}{x_2}\).
+这两个斜率相等，所以 \(O\)，\(C\)，\(D\) 共线，第一问得证.
+
+当 \(BC\parallel x\) 轴时，\(B\)，\(C\) 的纵坐标相等，故
+\[
+\log_8x_2=\log_2x_1=3\log_8x_1
+\],
+从而 \(x_2=x_1^3\). 代入 \(O\)，\(A\)，\(B\) 共线条件，得
+\[
+\frac{\log_8x_1}{x_1}
+=\frac{3\log_8x_1}{x_1^3}
+\]
+因 \(x_1>1\)，\(\log_8x_1\ne0\)，所以 \(x_1^2=3\)，即 \(x_1=\sqrt3\). 因此
+\[
+A=\left(\sqrt3,\log_8\sqrt3\right)
+\]
 \end{solution}
 
 \begin{problem}
@@ -351,5 +701,41 @@ B
 \end{problem}
 
 \begin{solution}
-所求圆的方程是 \((x+1)^2+(y+1)^2=2\)，或 \((x-1)^2+(y-1)^2=2\).
+设圆心为 \(P(a,b)\)，半径为 \(r\). 圆截 \(y\) 轴所得弦长为 \(2\)，故
+\[
+2\sqrt{r^2-a^2}=2
+\iff r^2=a^2+1
+\]
+圆被 \(x\) 轴截出的两段圆弧长度之比为 \(3:1\)，所以相应的圆心角之比为 \(3:1\)，两圆心角分别为 \(3\pi/2\) 与 \(\pi/2\). 较短弧所对的弦长为 \(\sqrt2r\)，而这也是 \(x\) 轴截得的弦长，因此
+\[
+2\sqrt{r^2-b^2}=\sqrt2r
+\iff r^2=2b^2
+\]
+于是
+\[
+2b^2-a^2=1
+\]
+由圆心到直线 \(x-2y=0\) 的距离条件，
+\[
+\frac{|a-2b|}{\sqrt5}=\frac{\sqrt5}{5}
+\iff |a-2b|=1
+\]
+若 \(a-2b=1\)，则 \(a=2b+1\)，代入 \(2b^2-a^2=1\) 得
+\[
+2b^2-(2b+1)^2=1
+\iff -2(b+1)^2=0
+\]
+所以 \(b=-1\)，\(a=-1\). 若 \(a-2b=-1\)，则 \(a=2b-1\)，代入 \(2b^2-a^2=1\) 得
+\[
+2b^2-(2b-1)^2=1
+\iff -2(b-1)^2=0
+\]
+所以 \(b=1\)，\(a=1\). 两种情形均有 \(r^2=2\)，故所求圆的方程为
+\[
+(x+1)^2+(y+1)^2=2
+\]
+或
+\[
+(x-1)^2+(y-1)^2=2
+\]
 \end{solution}

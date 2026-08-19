@@ -17,7 +17,7 @@ A
 \end{answer}
 
 \begin{solution}
-集合 \(B\) 已包含区间 \([-1,2]\)，集合 \(A\) 包含所有大于 \(0\) 的实数，所以它们的并集包含所有满足 \(x\geqslant -1\) 的实数. 反之，若 \(x<-1\)，则 \(x\notin A\) 且 \(x\notin B\). 因此 \(A\cup B=\{x\mid x\geqslant -1\}\)，故选 A.
+由 \(B=\{x\mid -1\leqslant x\leqslant2\}\)，可知 \(B\) 中的每个数都满足 \(x\geqslant-1\)，而 \(A=\{x\mid x>0\}\) 中的数也都满足 \(x\geqslant-1\)，所以 \(A\cup B\subseteq\{x\mid x\geqslant-1\}\). 反之，当 \(-1\leqslant x\leqslant2\) 时 \(x\in B\)，当 \(x>2\) 时 \(x\in A\)，故每个满足 \(x\geqslant-1\) 的数都属于 \(A\cup B\). 因而 \(A\cup B=\{x\mid x\geqslant-1\}\)，选择 A.
 \end{solution}
 
 \begin{problem}
@@ -35,8 +35,7 @@ B
 \end{answer}
 
 \begin{solution}
-利用倍角公式，\(\left(\sin x+\cos x\right)^2+1=\sin^2x+\cos^2x+2\sin x\cos x+1=2+\sin 2x\).
-函数 \(\sin 2x\) 的最小正周期为 \(\pi\)，所以原函数的最小正周期为 \(\pi\)，故选 B.
+展开并使用 \(\sin^2x+\cos^2x=1\) 及 \(2\sin x\cos x=\sin2x\)，得 \(y=1+2\sin x\cos x+1=2+\sin2x\). 因为 \(\sin2x\) 的周期为 \(\pi\)，且不存在比 \(\pi\) 更小的正数 \(T\) 使 \(\sin(2x+2T)=\sin2x\) 对所有 \(x\) 成立，所以原函数的最小正周期为 \(\pi\)，选择 B.
 \end{solution}
 
 \begin{problem}
@@ -54,7 +53,7 @@ D
 \end{answer}
 
 \begin{solution}
-条件 \(a^2>b^2\) 不一定推出 \(a>b\)，例如取 \(a=-2\)，\(b=1\)，则 \(a^2>b^2\)，但 \(a<b\). 反过来，条件 \(a>b\) 也不一定推出 \(a^2>b^2\)，例如取 \(a=1\)，\(b=-2\)，则 \(a>b\)，但 \(a^2<b^2\). 因此两个条件互不推出，故选 D.
+先验证 \(a^2>b^2\) 不能推出 \(a>b\)：取 \(a=-2\)，\(b=1\)，则 \(a^2=4>b^2=1\)，但 \(a<b\). 再验证 \(a>b\) 不能推出 \(a^2>b^2\)：取 \(a=1\)，\(b=-2\)，则 \(a>b\)，但 \(a^2=1<b^2=4\). 两个条件都不能推出另一个条件，所以“\(a^2>b^2\)”是“\(a>b\)”的既不充分也不必要条件，选择 D.
 \end{solution}
 
 \begin{problem}
@@ -72,8 +71,7 @@ D
 \end{answer}
 
 \begin{solution}
-由等比数列的通项关系，\(\frac{a_5}{a_2}=q^{5-2}=q^3\).
-代入已知条件得 \(q^3=\dfrac{1/4}{2}=\dfrac18\)，所以 \(q=\dfrac12\)，故选 D.
+等比数列满足 \(a_5=a_2q^{5-2}\)，所以 \(2q^3=\frac14\)，即 \(q^3=\frac18\). 实数立方函数在 \(\R\) 上单调递增，故 \(q=\frac12\)，选择 D.
 \end{solution}
 
 \begin{problem}
@@ -91,8 +89,7 @@ C
 \end{answer}
 
 \begin{solution}
-由 \(\left(a-b\right)^2\geqslant0\) 以及 \(a+b=2\)，得 \(4=(a+b)^2\geqslant4ab\)，所以 \(ab\leqslant1\). 又 \(a^2+b^2=(a+b)^2-2ab=4-2ab\geqslant2\).
-因此选项 C 恒成立. 取 \(a=b=1\) 可知选项 A 不恒成立，取 \(a=0\)，\(b=2\) 可知选项 B 与选项 D 均不恒成立，故选 C.
+由 \((a-b)^2\geqslant0\)，得 \((a+b)^2\geqslant4ab\)，从而 \(4\geqslant4ab\)，即 \(ab\leqslant1\). 又由 \(a^2+b^2=(a+b)^2-2ab=4-2ab\)，可得 \(a^2+b^2\geqslant2\)，所以选项 C 恒成立. 取 \(a=b=1\) 时 \(ab=1>\frac12\)，故 A 不恒成立；取 \(a=0\)，\(b=2\) 时 \(ab=0<\frac12\)，故 B 不恒成立，同时 \(a^2+b^2=4>3\)，故 D 不恒成立. 因此选择 C.
 \end{solution}
 
 \begin{problem}
@@ -110,7 +107,7 @@ A
 \end{answer}
 
 \begin{solution}
-要得到含 \(x^4\) 的项，必须从五个因式中选出四个因式的 \(x\)，再从剩下的一个因式中选取常数项. 因此该项的系数为 \(-(1+2+3+4+5)=-15\)，故选 A.
+每个因式 \((x-k)\) 只含一次 \(x\). 要得到次数为 \(4\) 的项，必须从五个因式中有四个取 \(x\)，另一个取常数项 \(-k\). 因而 \(x^4\) 的系数为 \((-1)+(-2)+(-3)+(-4)+(-5)=-15\)，选择 A.
 \end{solution}
 
 \begin{problem}
@@ -128,8 +125,7 @@ C
 \end{answer}
 
 \begin{solution}
-由诱导公式，\(\cos\left(\frac{x}{2}+\frac{3\pi}{2}\right)=\sin\frac{x}{2}\). 当 \(x\in[0,2\pi]\) 时，\(\dfrac{x}{2}\in[0,\pi]\). 方程 \(\sin\frac{x}{2}=\frac12\).
-在该区间内的解为 \(\dfrac{x}{2}=\dfrac\pi6\) 或 \(\dfrac{5\pi}{6}\)，即 \(x=\dfrac\pi3\) 或 \(x=\dfrac{5\pi}{3}\). 所以交点有 \(2\) 个，故选 C.
+由 \(\cos\left(t+\frac{3\pi}{2}\right)=\sin t\)，令 \(t=\frac{x}{2}\)，原函数为 \(y=\sin\frac{x}{2}\). 当 \(x\in[0,2\pi]\) 时，\(\frac{x}{2}\in[0,\pi]\)，所以交点的横坐标满足 \(\sin\frac{x}{2}=\frac12\). 在 \([0,\pi]\) 内，方程的两个解为 \(\frac{x}{2}=\frac\pi6\) 和 \(\frac{x}{2}=\frac{5\pi}{6}\)，对应 \(x=\frac\pi3\) 和 \(x=\frac{5\pi}{3}\). 因而交点有 \(2\) 个，选择 C.
 \end{solution}
 
 \begin{problem}
@@ -147,9 +143,9 @@ D
 \end{answer}
 
 \begin{solution}
-设双曲线的半实轴长为 \(a\)，焦半距为 \(c\)，离心率为 \(e=\dfrac ca\)，则其准线为 \(x=\dfrac ae\) 或 \(x=-\dfrac ae\). 取准线 \(x=\dfrac ae\)，两个焦点为 \((c,0)\)，\((-c,0)\)，它们到该准线的距离分别为 \(c-\dfrac ae\) 和 \(c+\dfrac ae\). 由于 \(c=ae\)，令 \(t=\dfrac{a/e}{c}=\dfrac1{e^2}\)，则
-\(\frac{1+t}{1-t}=\frac32\).
-解得 \(2+2t=3-3t\)，所以 \(t=\dfrac15\)，即 \(e^2=5\). 双曲线的离心率为正，故 \(e=\sqrt5\)，选 D.
+设双曲线的半实轴长、焦半距和离心率分别为 \(a\)，\(c\)，\(e\)，则 \(c=ae\)，且双曲线的右准线为 \(x=\frac{a}{e}\). 因为双曲线的离心率满足 \(e>1\)，所以 \(c>\frac{a}{e}\). 两个焦点 \((c,0)\)，\((-c,0)\) 到右准线的距离分别为 \(c-\frac{a}{e}\) 和 \(c+\frac{a}{e}\). 令 \(t=\frac{a/e}{c}=\frac1{e^2}\)，则 \(0<t<1\)，并且由题意
+\[\frac{1+t}{1-t}=\frac32\]
+解得 \(2+2t=3-3t\)，所以 \(t=\frac15\)，即 \(e^2=5\). 由于离心率为正，故 \(e=\sqrt5\)，选择 D.
 \end{solution}
 
 \begin{problem}
@@ -167,7 +163,9 @@ B
 \end{answer}
 
 \begin{solution}
-过直线 \(a\) 作一个平面 \(\alpha\)，使平面 \(\alpha\) 的方向包含直线 \(b\) 的方向. 若 \(a\)，\(b\) 异面，这就是“过一条直线作与另一条直线平行的平面”；若 \(a\)，\(b\) 平行，则可取过 \(a\) 且不含 \(b\) 的同方向平面. 由于 \(a\)，\(b\) 不相交，直线 \(b\) 不在平面 \(\alpha\) 内，且其方向平行于平面 \(\alpha\)，所以 \(b\parallel\alpha\)，故选 B.
+若 \(a\)，\(b\) 异面，过直线 \(a\) 上任一点作直线 \(b'\parallel b\)，则相交直线 \(a\) 与 \(b'\) 确定平面 \(\alpha\). 因为 \(b'\subset\alpha\)，所以 \(b\) 的方向平行于平面 \(\alpha\). 若 \(b\subset\alpha\)，则 \(a\)，\(b\) 共面且不相交，从而应有 \(a\parallel b\)，与异面矛盾，所以 \(b\not\subset\alpha\)，即 \(b\parallel\alpha\).
+
+若 \(a\parallel b\)，在所有经过 \(a\) 的平面中取一个不包含 \(b\) 的平面 \(\alpha\). 由于 \(b\) 的方向与 \(a\) 平行，故其方向平行于 \(\alpha\)；又 \(b\not\subset\alpha\) 且 \(a\)，\(b\) 不相交，所以 \(b\) 与 \(\alpha\) 无公共点，从而 \(b\parallel\alpha\). 因此总能使 \(a\subset\alpha\)，\(b\parallel\alpha\)，选择 B.
 \end{solution}
 
 \begin{problem}
@@ -189,9 +187,7 @@ C
 \end{answer}
 
 \begin{solution}
-变量 \((x,y)\) 的取值区域是三角形，包含顶点 \((0,0)\)，\((1,0)\)，\((0,1)\). 因为 \(a\)，\(b\geqslant0\)，线性函数 \(ax+by\) 在这个三角形上的最大值为顶点函数值的最大者. 因此题设恒成立当且仅当 \(a\leqslant1\)，\(b\leqslant1\).
-事实上，必要性由分别代入 \((x,y)=(1,0)\) 和 \((0,1)\) 得到；充分性由 \(0\leqslant a,b\leqslant1\) 得 \(ax+by\leqslant x+y\leqslant1\).
-结合 \(a\geqslant0\)，\(b\geqslant0\)，点 \(P(a,b)\) 的区域为正方形 \([0,1]\times[0,1]\)，面积为 \(1\)，故选 C.
+变量 \((x,y)\) 的取值区域是顶点为 \((0,0)\)，\((1,0)\)，\((0,1)\) 的三角形. 代入顶点 \((1,0)\) 和 \((0,1)\)，题设恒成立的必要条件分别为 \(a\leqslant1\) 和 \(b\leqslant1\). 反之，若 \(0\leqslant a\leqslant1\)，\(0\leqslant b\leqslant1\)，则对任意满足题设条件的 \((x,y)\)，有 \(ax+by\leqslant x+y\leqslant1\)，所以这两个条件也充分. 因而点 \(P(a,b)\) 的区域为 \(0\leqslant a\leqslant1\)，\(0\leqslant b\leqslant1\) 围成的正方形，面积为 \(1\)，选择 C.
 \end{solution}
 
 \section{填空题}
@@ -205,7 +201,7 @@ C
 \end{answer}
 
 \begin{solution}
-\(f(1)=1^2+|1-2|=1+1=2\).
+把 \(x=1\) 代入函数式，得 \(f(1)=1^2+|1-2|=1+1=2\)，所以填 \(2\).
 \end{solution}
 
 \begin{problem}
@@ -217,7 +213,7 @@ C
 \end{answer}
 
 \begin{solution}
-由诱导公式，\(\sin\left(\dfrac\pi2+\theta\right)=\cos\theta\)，所以 \(\cos\theta=\dfrac35\). 于是 \(\cos2\theta=2\cos^2\theta-1=2\left(\frac35\right)^2-1=-\frac7{25}\).
+由诱导公式 \(\sin\left(\frac\pi2+\theta\right)=\cos\theta\)，得 \(\cos\theta=\frac35\). 再由二倍角公式 \(\cos2\theta=2\cos^2\theta-1\)，得 \(\cos2\theta=2\left(\frac35\right)^2-1=\frac{18}{25}-\frac{25}{25}=-\frac7{25}\)，所以填 \(-\frac7{25}\).
 \end{solution}
 
 \begin{problem}
@@ -229,9 +225,7 @@ C
 \end{answer}
 
 \begin{solution}
-椭圆的长半轴为 \(5\)，所以对椭圆上任意点 \(X\)，都有 \(|F_1X|+|F_2X|=2\times5=10\).
-分别对 \(A\)，\(B\) 使用椭圆的焦点定义，得 \(|F_2A|=10-|F_1A|\)，\(|F_2B|=10-|F_1B|\).
-由于直线 \(AB\) 经过椭圆内部的焦点 \(F_1\)，点 \(F_1\) 在线段 \(AB\) 上，所以 \(|F_1A|+|F_1B|=|AB|\). 因此 \(12=|F_2A|+|F_2B|=20-|AB|\)，解得 \(|AB|=8\).
+由椭圆方程可知长半轴为 \(5\)，所以椭圆的焦点定义给出，对任意椭圆上的点 \(X\)，都有 \(|F_1X|+|F_2X|=10\). 因而 \(|F_2A|=10-|F_1A|\)，\(|F_2B|=10-|F_1B|\). 又因为直线 \(AB\) 经过椭圆内部的焦点 \(F_1\)，所以 \(F_1\) 在线段 \(AB\) 上，从而 \(|F_1A|+|F_1B|=|AB|\). 代入已知条件，得 \(12=|F_2A|+|F_2B|=20-|AB|\)，解得 \(|AB|=8\)，所以填 \(8\).
 \end{solution}
 
 \begin{problem}
@@ -243,17 +237,7 @@ C
 \end{answer}
 
 \begin{solution}
-由余弦定理，\(\cos A=\frac{b^2+c^2-a^2}{2bc}\)，\(\cos C=\frac{a^2+b^2-c^2}{2ab}\).
-代入已知等式并约去分母，得到下式：
-\[
-(\sqrt3 b-c)(b^2+c^2-a^2)=c(a^2+b^2-c^2)
-\]
-展开化简为下式：
-\[
-\sqrt3 b(b^2+c^2-a^2)-2b^2c=0
-\]
-由于 \(b>0\)，可得 \(\sqrt3(b^2+c^2-a^2)=2bc\). 再利用 \(b^2+c^2-a^2=2bc\cos A\)，有 \(2\sqrt3bc\cos A=2bc\)，
-所以 \(\cos A=\frac1{\sqrt3}=\frac{\sqrt3}{3}\).
+由正弦定理，存在 \(R>0\)，使 \(a=2R\sin A\)，\(b=2R\sin B\)，\(c=2R\sin C\). 将这些关系代入题设并约去正数 \(2R\)，得 \((\sqrt3\sin B-\sin C)\cos A=\sin A\cos C\). 移项后，\(\sqrt3\sin B\cos A=\sin C\cos A+\sin A\cos C=\sin(A+C)\). 因为三角形内角满足 \(A+B+C=\pi\)，所以 \(\sin(A+C)=\sin(\pi-B)=\sin B\). 又 \(0<B<\pi\)，故 \(\sin B>0\)，可以约去 \(\sin B\)，得到 \(\sqrt3\cos A=1\). 因此 \(\cos A=\frac1{\sqrt3}=\frac{\sqrt3}{3}\)，所以填 \(\frac{\sqrt3}{3}\).
 \end{solution}
 
 \begin{problem}
@@ -267,15 +251,7 @@ C
 \end{answer}
 
 \begin{solution}
-建立空间直角坐标系，使 \(A=(0,0,0)\)，平面 \(ABC\) 为 \(z=0\)，并取 \(B=(\sqrt3,0,0)\)，\(C=(\sqrt3,\sqrt3,0)\).
-由 \(DA\perp\) 平面 \(ABC\) 且 \(DA=\sqrt3\)，可取 \(D=(0,0,\sqrt3)\). 设球心为 \(O=(u,v,w)\). 因为 \(OA=OB\)，得 \(u=\dfrac{\sqrt3}{2}\)；因为 \(OB=OC\)，得 \(v=\dfrac{\sqrt3}{2}\)；因为 \(OA=OD\)，得 \(w=\dfrac{\sqrt3}{2}\). 所以球半径满足下式：
-\[
-r^2=OA^2=u^2+v^2+w^2=3\left(\frac{\sqrt3}{2}\right)^2=\frac94
-\]
-即 \(r=\dfrac32\). 故球的体积为下式：
-\[
-V=\frac43\pi r^3=\frac43\pi\left(\frac32\right)^3=\frac{9\pi}{2}
-\]
+由 \(AB\perp BC\) 及 \(AB=BC=\sqrt3\)，得 \(AC^2=AB^2+BC^2=6\). 又因为 \(DA\perp\) 平面 \(ABC\)，所以 \(DA\perp AC\)，从而 \(\triangle DAC\) 是直角三角形，且 \(DC^2=DA^2+AC^2=3+6=9\)，即 \(DC=3\). 另外，\(DA\perp BC\) 且 \(AB\perp BC\)，所以 \(BD\perp BC\)，从而 \(\triangle DBC\) 也是直角三角形. 因此 \(A\)，\(B\) 都在以 \(DC\) 为直径的球面上；又因 \(A\)，\(B\)，\(C\) 不共线且 \(D\notin\) 平面 \(ABC\)，所以 \(A\)，\(B\)，\(C\)，\(D\) 不共面，过这四点的球唯一，从而给定球面就是以 \(DC\) 为直径的球面. 球半径为 \(r=\frac{DC}{2}=\frac32\)，所以体积为 \(V=\frac43\pi r^3=\frac43\pi\left(\frac32\right)^3=\frac{9\pi}{2}\)，所以填 \(\frac{9\pi}{2}\).
 \end{solution}
 
 \begin{problem}
@@ -287,9 +263,7 @@ V=\frac43\pi r^3=\frac43\pi\left(\frac32\right)^3=\frac{9\pi}{2}
 \end{answer}
 
 \begin{solution}
-由已知条件，\(\bs{a}\cdot\bs{b}-|\bs{b}|^2=0\)，即 \(\bs{a}\cdot\bs{b}=|\bs{b}|^2\). 令 \(t=|\bs{b}|\geqslant0\)，由柯西不等式，\(t^2=\bs{a}\cdot\bs{b}\leqslant|\bs{a}|\,|\bs{b}|=t\)，
-所以 \(0\leqslant t\leqslant1\). 反之，对任意 \(t\in(0,1]\)，在平面内取与 \(\bs{a}\) 垂直的单位向量 \(\bs{c}\)，令 \(\bs{u}=t\bs{a}+\sqrt{1-t^2}\,\bs{c}\)，\(\bs{b}=t\bs{u}\).
-则 \(|\bs{u}|=1\)，\(|\bs{b}|=t\)，且 \(\bs{a}\cdot\bs{b}=t^2=|\bs{b}|^2\)，满足题设条件；当 \(t=0\) 时取 \(\bs{b}=\bs{0}\). 因此 \(|\bs{b}|\) 的取值范围为 \([0,1]\).
+由 \(\bs{b}\cdot(\bs{a}-\bs{b})=0\)，得 \(\bs{a}\cdot\bs{b}=|\bs{b}|^2\). 令 \(t=|\bs{b}|\geqslant0\)，因为 \(|\bs{a}|=1\)，由柯西不等式得 \(t^2=\bs{a}\cdot\bs{b}\leqslant|\bs{a}|\,|\bs{b}|=t\)，所以 \(0\leqslant t\leqslant1\). 反过来，任取 \(t\in[0,1]\)，在该平面内取与 \(\bs{a}\) 垂直的单位向量 \(\bs{c}\)，令 \(\bs{b}=t\left(t\bs{a}+\sqrt{1-t^2}\,\bs{c}\right)\). 由于 \(\bs{a}\perp\bs{c}\) 且 \(|\bs{a}|=|\bs{c}|=1\)，有 \(\left|t\bs{a}+\sqrt{1-t^2}\,\bs{c}\right|=1\)，从而 \(|\bs{b}|=t\). 同时 \(\bs{a}\cdot\bs{b}=t^2=|\bs{b}|^2\)，满足题设条件. 因此所有 \(t\in[0,1]\) 都能取得，所求范围为 \([0,1]\).
 \end{solution}
 
 \begin{problem}
@@ -301,11 +275,11 @@ V=\frac43\pi r^3=\frac43\pi\left(\frac32\right)^3=\frac{9\pi}{2}
 \end{answer}
 
 \begin{solution}
-六个数字中有三个奇数 \(1,3,5\) 和三个偶数 \(2,4,6\). 相邻数字奇偶性不同，所以奇偶性只能按 \(\text{奇偶奇偶奇偶}\) 或 \(\text{偶奇偶奇偶奇}\) 排列.
+六个数字中奇数有 \(1\)，\(3\)，\(5\) 三个，偶数有 \(2\)，\(4\)，\(6\) 三个. 相邻数字奇偶性不同，故奇偶位置只有“奇、偶、奇、偶、奇、偶”和“偶、奇、偶、奇、偶、奇”两种排列.
 
-对于第一种排列，数字 \(1\) 位于三个奇数位置时，与数字 \(2\) 相邻的偶数位置数分别为 \(1,2,2\)，故 \(1\)，\(2\) 的相邻安排有 \(5\) 种. 确定它们后，剩余两个奇数和两个偶数分别排列，有 \(2!\times2!\) 种，因此共有 \(5\times2!\times2!=20\) 个.
+先考虑第一种位置模式. 数字 \(1\) 放在第 1，3，5 个位置时，分别有 \(1\)，\(2\)，\(2\) 个相邻的偶数位置可放数字 \(2\)，所以数字 \(1\)，\(2\) 相邻的放法有 \(1+2+2=5\) 种. 放好 \(1\)，\(2\) 后，剩下两个奇数和两个偶数各自排列，有 \(2!\times2!=4\) 种，故共有 \(5\times2!\times2!=20\) 个.
 
-对于第二种排列，同理数字 \(1\) 与数字 \(2\) 的相邻安排数为 \(2+2+1=5\)，所以也有 \(20\) 个. 总数为 \(20+20=40\).
+第二种位置模式中，数字 \(1\) 放在第 2，4，6 个位置时，可选的相邻偶数位置数为 \(2\)，\(2\)，\(1\)，同样有 \(5\times2!\times2!=20\) 个. 两种模式互斥，所以总数为 \(20+20=40\)，填 \(40\).
 \end{solution}
 
 \section{解答题}
@@ -321,17 +295,13 @@ V=\frac43\pi r^3=\frac43\pi\left(\frac32\right)^3=\frac{9\pi}{2}
 
 \begin{solution}
 \begin{enumerate}
-\item 由通项公式，得 \(x_{1}=2p+q\)，\(x_{4}=16p+4q\)，\(x_{5}=32p+5q\). 由 \(x_{1}=3\) 可得
-\(2p+q=3\).
-因为 \(x_{1}\)，\(x_{4}\)，\(x_{5}\) 成等差数列，所以 \(x_{1}+x_{5}=2x_{4}\)，即
-\((2p+q)+(32p+5q)=2(16p+4q)\).
-化简得 \(p=q\). 结合 \(2p+q=3\)，得 \(3q=3\)，所以 \(q=1\)，从而 \(p=1\).
+\item 由通项公式，得 \(x_1=2p+q\)，\(x_4=16p+4q\)，\(x_5=32p+5q\). 由首项条件 \(x_1=3\)，得 \(2p+q=3\). 因为 \(x_1\)，\(x_4\)，\(x_5\) 成等差数列，所以中间项满足 \(x_1+x_5=2x_4\)，即 \((2p+q)+(32p+5q)=2(16p+4q)\). 化简得 \(p=q\). 与 \(2p+q=3\) 联立，得 \(3p=3\)，所以 \(p=q=1\).
 
-\item 由 \(p=q=1\)，得 \(x_{k}=2^{k}+k\). 因此，下式成立：
+\item 由 \(p=q=1\)，得对任意 \(k\in\N^*\)，\(x_k=2^k+k\). 因此
 \[
-S_{n}=\sum_{k=1}^{n}x_{k}=\sum_{k=1}^{n}2^{k}+\sum_{k=1}^{n}k=(2^{n+1}-2)+\frac{n(n+1)}{2}
+S_n=\sum_{k=1}^{n}x_k=\sum_{k=1}^{n}2^k+\sum_{k=1}^{n}k=(2^{n+1}-2)+\frac{n(n+1)}{2}
 \]
-所以 \(S_{n}=2^{n+1}-2+\dfrac{n(n+1)}{2}\).
+故 \(S_n=2^{n+1}-2+\dfrac{n(n+1)}{2}\).
 \end{enumerate}
 \end{solution}
 
@@ -345,15 +315,12 @@ S_{n}=\sum_{k=1}^{n}x_{k}=\sum_{k=1}^{n}2^{k}+\sum_{k=1}^{n}k=(2^{n+1}-2)+\frac{
 \end{problem}
 
 \begin{solution}
-设袋中黑球、白球、红球的个数分别为 \(b\)，\(w\)，\(r\). 由题意，\(b+w+r=10\)，且 \(\frac{b}{10}=\frac{2}{5}\)，
-所以 \(b=4\)，从而 \(w+r=6\).
+设袋中黑球、白球、红球的个数分别为 \(b\)，\(w\)，\(r\). 由题意，\(b+w+r=10\)，且从中任取一个球得到黑球的概率为 \(\frac{b}{10}=\frac25\)，所以 \(b=4\)，从而 \(w+r=6\).
 
 \begin{enumerate}
-\item 从 \(10\) 个球中任意摸出 \(2\) 个球，共有 \(\mathrm C_{10}^{2}\) 种等可能结果. 摸出的 \(2\) 个球都是黑球的结果有 \(\mathrm C_{4}^{2}\) 种，所以所求概率为 \(\frac{\mathrm C_{4}^{2}}{\mathrm C_{10}^{2}}=\frac{6}{45}=\frac{2}{15}\).
+\item 任取两个球的所有结果等可能，共有 \(\mathrm C_{10}^{2}=45\) 种. 两个球都是黑球的结果有 \(\mathrm C_{4}^{2}=6\) 种，所以所求概率为 \(\frac{\mathrm C_4^2}{\mathrm C_{10}^2}=\frac6{45}=\frac2{15}\).
 
-\item 摸出的 \(2\) 个球至少有 \(1\) 个白球的对立事件是没有摸到白球，因此 \(P(\text{没有白球})=1-\frac{7}{9}=\frac{2}{9}\).
-没有白球时，只能从 \(10-w\) 个非白球中摸出 \(2\) 个，所以 \(\frac{\mathrm C_{10-w}^{2}}{\mathrm C_{10}^{2}}=\frac{2}{9}\)，即 \(\mathrm C_{10-w}^{2}=10\).
-于是 \((10-w)(9-w)=20\)，即 \(w^{2}-19w+70=0\)，解得 \(w=5\) 或 \(w=14\). 由于 \(0\leqslant w\leqslant10\)，故 \(w=5\).
+\item 设事件 \(E\) 为任取两个球至少有一个白球，则其对立事件 \(\overline E\) 为两个球中没有白球. 因而 \(P(\overline E)=1-P(E)=1-\frac79=\frac29\). 没有白球时，两个球必须从 \(10-w\) 个非白球中取出，所以 \(\frac{\mathrm C_{10-w}^{2}}{\mathrm C_{10}^{2}}=\frac29\)，即 \(\mathrm C_{10-w}^{2}=10\). 于是 \((10-w)(9-w)=20\)，化为 \(w^2-19w+70=0\)，解得 \(w=5\) 或 \(w=14\). 因为白球个数满足 \(0\leqslant w\leqslant10\)，所以 \(w=5\).
 \end{enumerate}
 所以袋中白球有 \(5\) 个.
 \end{solution}
@@ -371,32 +338,27 @@ S_{n}=\sum_{k=1}^{n}x_{k}=\sum_{k=1}^{n}2^{k}+\sum_{k=1}^{n}k=(2^{n+1}-2)+\frac{
 
 \begin{solution}
 \begin{enumerate}
-\item 在梯形 \(BEFC\) 所在平面内，过点 \(E\) 作 \(EG\perp CF\)，垂足为 \(G\). 由 \(BE\parallel CF\) 且 \(BC\perp CF\)，可知 \(EG\parallel BC\). 又因为 \(G\) 在直线 \(CF\) 上，所以四边形 \(BCGE\) 是平行四边形，从而 \(EG=BC\). 矩形 \(ABCD\) 中 \(AD\parallel BC\)，且 \(AD=BC\)，所以 \(AD\parallel EG\) 且 \(AD=EG\). 因此四边形 \(ADGE\) 是平行四边形，故 \(AE\parallel DG\).
+\item 在梯形 \(BEFC\) 所在平面内，过 \(E\) 作 \(EG\perp CF\)，垂足为 \(G\). 因为 \(BE\parallel CF\) 且 \(BC\perp CF\)，而 \(EG\) 也垂直于 \(CF\)，所以 \(EG\parallel BC\). 又因 \(G\in CF\)，有 \(CG\parallel BE\)，故四边形 \(BCGE\) 是平行四边形，从而 \(EG=BC\). 矩形 \(ABCD\) 给出 \(AD\parallel BC\) 且 \(AD=BC\)，所以 \(AD\parallel EG\) 且 \(AD=EG\)，四边形 \(ADGE\) 是平行四边形，进而 \(AE\parallel DG\). 由于 \(D\)，\(G\)，\(C\)，\(F\) 共面且 \(G\in CF\)，所以 \(DG\subset\) 平面 \(DCF\). 又平面 \(ABCD\) 与平面 \(DCF\) 的交线为 \(DC\)，而 \(A\notin DC\)，故 \(A\notin\) 平面 \(DCF\). 由直线与平面平行的判定，\(AE\parallel\) 平面 \(DCF\).
 
-由于 \(D\)，\(C\)，\(F\) 确定平面 \(DCF\)，且 \(G\in CF\)，所以 \(DG\subset\text{平面 }DCF\). 又因平面 \(ABCD\) 与平面 \(DCF\) 的交线为 \(DC\)，而 \(A\notin DC\)，所以 \(A\notin\text{平面 }DCF\). 因而 \(AE\parallel\text{平面 }DCF\).
+\item 取梯形 \(BEFC\) 所在平面为 \(z=0\)，以 \(B\) 为原点、\(BC\) 所在直线为 \(x\) 轴，建立空间直角坐标系. 由 \(AD=BC=\sqrt3\)，以及 \(BE\parallel CF\)，\(BC\perp CF\)，可设 \(B=(0,0,0)\)，\(C=(\sqrt3,0,0)\)，\(E=(0,m,0)\)，\(F=(\sqrt3,n,0)\)，其中 \(m=BE>0\)，\(n=CF>0\). 矩形所在平面与梯形所在平面垂直，且矩形中 \(AB\perp BC\)，所以 \(AB\perp\) 梯形所在平面. 设 \(h=AB>0\)，则可取 \(A=(0,0,h)\)，\(D=(\sqrt3,0,h)\).
 
-\item 取梯形 \(BEFC\) 所在平面为 \(z=0\)，以 \(B\) 为原点、\(BC\) 所在直线为 \(x\) 轴，建立空间直角坐标系. 由 \(AD=BC=\sqrt{3}\)，以及 \(BE\parallel CF\)、\(BC\perp CF\)，可设 \(B=(0,0,0)\)，\(C=(\sqrt{3},0,0)\)，\(E=(0,m,0)\)，\(F=(\sqrt{3},n,0)\)，
-其中 \(m=BE>0\)，\(n=CF>0\). 矩形所在平面与梯形所在平面垂直，且 \(AB\perp BC\)，所以 \(AB\perp\) 梯形所在平面. 设 \(h=AB\)，则可取 \(A=(0,0,h)\)，\(D=(\sqrt{3},0,h)\).
+由 \(EF=2\)，得 \(3+(n-m)^2=4\)，即 \((n-m)^2=1\). 又因为 \(\angle CEF=90^\circ\)，所以
+\[
+\overrightarrow{EC}\cdot\overrightarrow{EF}=(\sqrt3,-m,0)\cdot(\sqrt3,n-m,0)=3-m(n-m)=0
+\]
+因此 \(m(n-m)=3>0\). 结合 \(m>0\) 和 \((n-m)^2=1\)，得 \(n-m=1\)，从而 \(m=3\)，\(n=4\).
 
-由 \(EF=2\)，得 \(3+(n-m)^2=4\). 又因为 \(\angle CEF=90^\circ\)，所以有下式：
+平面 \(CEF\) 的一个法向量为 \(\bs{n}_1=(0,0,1)\). 平面 \(AEF\) 的两个方向向量可取 \(\overrightarrow{AE}=(0,3,-h)\) 和 \(\overrightarrow{AF}=(\sqrt3,4,-h)\)，所以其法向量可取
 \[
-\overrightarrow{EC}\cdot\overrightarrow{EF}=(\sqrt{3},-m,0)\cdot(\sqrt{3},n-m,0)=3-m(n-m)=0
+\bs{n}_2=\overrightarrow{AE}\times\overrightarrow{AF}=(0,3,-h)\times(\sqrt3,4,-h)=(h,-\sqrt3h,-3\sqrt3)
 \]
-因此 \(m(n-m)=3>0\). 结合 \((n-m)^2=1\) 和 \(m>0\)，可得 \(n-m=1\)，从而 \(m=3\)，\(n=4\).
-
-平面 \(CEF\) 的一个法向量为 \(\bs{n}_1=(0,0,1)\). 平面 \(AEF\) 的一个法向量如下：
+设二面角 \(A-EF-C\) 的大小为 \(\theta\). 二面角的平面角等于两侧平面法向量的锐角夹角，因此
 \[
-\bs{n}_2=\overrightarrow{AE}\times\overrightarrow{AF}=(0,3,-h)\times(\sqrt{3},4,-h)=(h,-\sqrt{3}h,-3\sqrt{3})
+\cos\theta=\frac{|\bs{n}_1\cdot\bs{n}_2|}{|\bs{n}_1|\,|\bs{n}_2|}=\frac{3\sqrt3}{\sqrt{4h^2+27}}
 \]
-设二面角 \(A-EF-C\) 的大小为 \(\theta\)，则两平面夹角的余弦如下：
-\[
-\cos\theta=\frac{|\bs{n}_1\cdot\bs{n}_2|}{|\bs{n}_1|\,|\bs{n}_2|}=\frac{3\sqrt{3}}{\sqrt{4h^2+27}}
-\]
-当 \(\theta=60^\circ\) 时，有下式：
-\[
-\frac{3\sqrt{3}}{\sqrt{4h^2+27}}=\frac{1}{2},\quad 4h^2+27=108,\quad h^2=\frac{81}{4}
-\]
-因为 \(h=AB>0\)，所以 \(AB=\dfrac{9}{2}\). 因此，当 \(AB=\dfrac{9}{2}\) 时，二面角 \(A-EF-C\) 的大小为 \(60^\circ\).
+当 \(\theta=60^\circ\) 时，
+\(\frac{3\sqrt3}{\sqrt{4h^2+27}}=\frac12\)，\(4h^2+27=108\)，\(h^2=\frac{81}{4}\).
+因为 \(h=AB>0\)，所以 \(AB=\frac92\). 因而当 \(AB=\frac92\) 时，二面角 \(A-EF-C\) 的大小为 \(60^\circ\).
 \end{enumerate}
 \end{solution}
 
@@ -413,7 +375,14 @@ S_{n}=\sum_{k=1}^{n}x_{k}=\sum_{k=1}^{n}2^{k}+\sum_{k=1}^{n}k=(2^{n+1}-2)+\frac{
 \begin{enumerate}
 \item 由 \(f(x)=x^{3}-ax^{2}\)，得 \(f'(x)=3x^{2}-2ax\). 由 \(f'(1)=3\)，得 \(3-2a=3\)，所以 \(a=0\). 此时 \(f(x)=x^{3}\)，点 \((1,f(1))=(1,1)\)，且切线斜率为 \(f'(1)=3\). 因此切线方程为 \(y-1=3(x-1)\)，即 \(y=3x-2\).
 
-\item 第二问沿用第一问所确定的参数值 \(a=0\)，所以 \(f(x)=x^{3}\)，且 \(f'(x)=3x^{2}\geqslant0\)（\(0\leqslant x\leqslant2\)）. 因此 \(f(x)\) 在区间 \([0,2]\) 上单调递增，最大值在 \(x=2\) 处取得. 由于 \(f(2)=2^{3}=8\)，所以 \(f(x)\) 在区间 \([0,2]\) 上的最大值为 \(8\).
+\item 第二问中的 \(a\) 仍为任意实数，不能把第一问附加的条件 \(f'(1)=3\) 当作本问条件. 对 \(f(x)=x^3-ax^2\) 求导，得 \(f'(x)=x(3x-2a)\). 在区间 \([0,2]\) 内，临界点除端点 \(x=0\) 外为 \(x=\frac{2a}{3}\). 当 \(a\leqslant0\) 时，\(f'(x)\geqslant0\)（\(0\leqslant x\leqslant2\)），函数单调递增，最大值为 \(f(2)=8-4a\). 当 \(a\geqslant3\) 时，\(f'(x)\leqslant0\)（\(0\leqslant x\leqslant2\)），函数单调递减，最大值为 \(f(0)=0\). 当 \(0<a<3\) 时，函数在 \([0,\frac{2a}{3}]\) 上递减，在 \([\frac{2a}{3},2]\) 上递增，因此最大值只能在两个端点取得. 比较 \(f(0)=0\) 与 \(f(2)=8-4a\)：当 \(0<a\leqslant2\) 时最大值为 \(8-4a\)，当 \(2<a<3\) 时最大值为 \(0\). 综合各情形，
+\[
+\max_{x\in[0,2]}f(x)=
+\begin{cases}
+8-4a,&a\leqslant2,\\
+0,&a>2.
+\end{cases}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -430,29 +399,26 @@ S_{n}=\sum_{k=1}^{n}x_{k}=\sum_{k=1}^{n}2^{k}+\sum_{k=1}^{n}k=(2^{n+1}-2)+\frac{
 
 \begin{solution}
 \begin{enumerate}
-\item 设曲线 \(C\) 上任意一点为 \(M(x,y)\). 由点到点的距离和点到直线的距离相等，得下式：
+\item 设曲线 \(C\) 上任意一点为 \(M(x,y)\). 点 \(M\) 到点 \(P\) 的距离为 \(\sqrt{\left(x+\frac12\right)^2+\left(y-\frac38\right)^2}\)，到直线 \(y=-\frac58\) 的距离为 \(\left|y+\frac58\right|\). 由题意，
 \[
-\left(x+\frac{1}{2}\right)^{2}+\left(y-\frac{3}{8}\right)^{2}=\left(y+\frac{5}{8}\right)^{2}
+\left(x+\frac12\right)^2+\left(y-\frac38\right)^2=\left(y+\frac58\right)^2
 \]
-展开并化简，得 \(\left(x+\dfrac{1}{2}\right)^{2}-2y-\dfrac{1}{4}=0\)，所以
-\(y=\frac{x^{2}+x}{2}\).
-故曲线 \(C\) 的方程为 \(y=\dfrac{x^{2}+x}{2}\).
+展开得 \(x^2+x+\frac14+y^2-\frac34y+\frac9{64}=y^2+\frac54y+\frac{25}{64}\)，整理为 \(x^2+x=2y\). 所以曲线 \(C\) 的方程为 \(y=\frac{x^2+x}{2}\).
 
-\item 若直线 \(l\) 垂直于 \(x\) 轴，则一般点 \(M\) 的竖直线不能与 \(l\) 相交，点 \(B\) 不存在，所以 \(l\) 不垂直于 \(x\) 轴. 设 \(l\) 的斜率为 \(k\)，则
-\(l:y=k(x+1)\).
-由 \(MB\perp x\) 轴，得 \(B=(x,k(x+1))\)，从而
-\(|QB|^{2}=(1+k^{2})(x+1)^{2}\).
+\item 若 \(l\perp x\) 轴，则 \(l\) 为竖直直线 \(x=-1\). 对于 \(C\) 上不在 \(l\) 上的点 \(M\)，过 \(M\) 的竖直线与 \(l\) 平行，不能交于点 \(B\)，故 \(l\) 不是竖直线. 设其斜率为 \(k\)，则 \(l:y=k(x+1)\). 由 \(MB\perp x\) 轴，得 \(B=(x,k(x+1))\)，因此 \(|QB|^2=(1+k^2)(x+1)^2\).
 
-取 \((1,k)\) 为直线 \(l\) 的方向向量. 因为 \(MA\perp l\)，向量 \(\overrightarrow{QA}\) 是 \(\overrightarrow{QM}=(x+1,y)\) 在方向向量 \((1,k)\) 上的投影，所以
-\(\overrightarrow{QA}=\frac{x+1+ky}{1+k^{2}}(1,k)\)，且 \(|QA|=\frac{|x+1+ky|}{\sqrt{1+k^{2}}}\).
-代入 \(y=\dfrac{x(x+1)}{2}\)，得
-\(x+1+ky=(x+1)\left(1+\frac{kx}{2}\right)\).
-因此有下式：
+取 \((1,k)\) 为 \(l\) 的方向向量. 因为 \(MA\perp l\)，点 \(A\) 是 \(M\) 在直线 \(l\) 上的正投影，故 \(\overrightarrow{QA}\) 是 \(\overrightarrow{QM}=(x+1,y)\) 在 \((1,k)\) 上的投影：
+\(\overrightarrow{QA}=\frac{x+1+ky}{1+k^2}(1,k)\)，\(|QA|=\frac{|x+1+ky|}{\sqrt{1+k^2}}\).
+代入曲线方程，得 \(x+1+ky=(x+1)\left(1+\frac{kx}{2}\right)\)，从而
 \[
-\frac{|QB|^{2}}{|QA|}=(1+k^{2})^{3/2}\frac{|x+1|}{\left|1+\dfrac{kx}{2}\right|}
+\frac{|QB|^2}{|QA|}=(1+k^2)^{3/2}\frac{|x+1|}{\left|1+\frac{kx}{2}\right|}
 \]
-若 \(k=0\)，上式随 \(x\) 变化，不可能恒为常数；故 \(k\ne0\). 要使上式对曲线 \(C\) 上的动点 \(M\) 恒为常数，两个一次式 \(x+1\) 与 \(1+\dfrac{kx}{2}\) 必须成比例. 比较它们的零点，得 \(-1=-\dfrac{2}{k}\)，所以 \(k=2\). 反之，当 \(k=2\) 时，\(1+\dfrac{kx}{2}=x+1\)，且 \(M\notin l\) 排除了使分式无意义的点，故
-\(\frac{|QB|^{2}}{|QA|}=5^{3/2}=5\sqrt{5}\)，
-确为常数. 所以所求直线为 \(l:y=2x+2\).
+若 \(k=0\)，上式为 \(|x+1|\)，随曲线上的动点变化，不可能为常数. 因此 \(k\ne0\). 对于 \(k\ne0\)，若比值对所有允许的动点恒定，则在除去有限个交点后，对无穷多个 \(x\) 有 \(\frac{|x+1|}{|1+\frac{kx}{2}|}\) 为常数. 两边平方并交叉相乘，得到的两个二次多项式在无穷多个点相等，因而恒等；所以两个一次式 \(x+1\) 与 \(1+\frac{kx}{2}\) 必须成比例. 比较它们的零点，得 \(-1=-\frac2k\)，所以 \(k=2\).
+
+还需排除分母为零而 \(M\notin l\) 的情形. 当 \(k\ne2\) 时，取 \(x=-\frac2k\)，曲线 \(C\) 上相应点的纵坐标为 \(\frac{2-k}{k^2}\)，而直线 \(l\) 在该横坐标处的纵坐标为 \(k-2\). 若该点在 \(l\) 上，则
+\[
+\frac{2-k}{k^2}=k-2
+\]
+即 \((k-2)(k^2+1)=0\)，这与 \(k\ne2\) 矛盾. 所以该点不在 \(l\) 上，却使 \(|QA|=0\)，题设比值无意义，故 \(k\ne2\) 的情形均不合适. 当 \(k=2\) 时，分母为零只发生在 \(x=-1\)，对应点 \(Q\)，而题设已排除 \(M\in l\). 此时 \(1+\frac{kx}{2}=x+1\)，所以 \(\frac{|QB|^2}{|QA|}=5^{3/2}=5\sqrt5\) 为常数. 因而所求直线为 \(l:y=2x+2\).
 \end{enumerate}
 \end{solution}

@@ -3,7 +3,7 @@
 \begin{problem}
 化简下列各题.
 
-\begin{enumerate}[label=（\arabic*）]
+\begin{enumerate}
 \item \( \frac{1}{\sqrt{2}+1}-\frac{1}{\sqrt{2}-1} \)；
 
 \item \( \frac{(a^2-b^2)^3}{a^3+b^3}\div\frac{(b+a)^2}{a^2-ab+b^2}\times\frac{1}{(b-a)^3} \)；
@@ -16,36 +16,35 @@
 
 \begin{solution}
 \begin{enumerate}
-\item 原式
-\(
-=\frac{(\sqrt{2}-1)-(\sqrt{2}+1)}{(\sqrt{2}+1)(\sqrt{2}-1)}
-=(\sqrt{2}-1)-(\sqrt{2}+1)
-=-2
-\).
-
-\item 原式
-\(
-=\frac{(a+b)^3(a-b)^3}{(a+b)(a^2-ab+b^2)}
-\cdot\frac{a^2-ab+b^2}{(a+b)^2}
-\cdot\frac{1}{-(a-b)^3}
-=-1
-\).
-
-\item 原式
-\(
-=\frac{\lg\frac{6^2}{3}}{\lg 10+\lg 0.6+\lg 2}
-=\frac{\lg 12}{\lg\left(10\times0.6\times2\right)}
-=\frac{\lg 12}{\lg 12}
-=1
-\).
-
-\item
+\item 有理化分母，得
 \[
-\begin{aligned}
-\text{原式}&=\frac{(x^2+1)^2-x^2}{(x-1)(x^2+x+1)}+\frac{(x-2)(x-2)}{(x-2)(x-1)}\\
-&=\frac{(x^2-x+1)(x^2+x+1)}{(x-1)(x^2+x+1)}+\frac{x-2}{x-1}\\
-&=\frac{x^2-x+1}{x-1}+\frac{x-2}{x-1}=\frac{x^2-1}{x-1}=x+1.
-\end{aligned}
+\frac{1}{\sqrt{2}+1}-\frac{1}{\sqrt{2}-1}
+=\frac{\left(\sqrt{2}-1\right)-\left(\sqrt{2}+1\right)}{\left(\sqrt{2}+1\right)\left(\sqrt{2}-1\right)}
+=\frac{-2}{2-1}=-2
+\]
+
+\item 在实数范围内，原式有意义需要 \(a^3+b^3\ne0\)、\(a^2-ab+b^2\ne0\)、\(\dfrac{(a+b)^2}{a^2-ab+b^2}\ne0\) 且 \(a\ne b\). 又因为 \(a^2-ab+b^2=\dfrac{1}{2}\left((a-b)^2+a^2+b^2\right)\)，所以在这些条件下等价于 \(a+b\ne0\) 且 \(a\ne b\). 利用 \(a^2-b^2=(a+b)(a-b)\)、\(a^3+b^3=(a+b)(a^2-ab+b^2)\) 以及 \((b-a)^3=-(a-b)^3\)，得
+\[
+\frac{(a^2-b^2)^3}{a^3+b^3}\cdot\frac{a^2-ab+b^2}{(a+b)^2}\cdot\frac{1}{(b-a)^3}
+=\frac{(a+b)^3(a-b)^3}{(a+b)(a^2-ab+b^2)}\cdot\frac{a^2-ab+b^2}{(a+b)^2}\cdot\frac{1}{-(a-b)^3}=-1
+\]
+
+\item 因为 \(0.36=0.6^2\)、\(8=2^3\) 且 \(1=\lg 10\)，所以分子为 \(2\lg6-\lg3=\lg\dfrac{6^2}{3}=\lg12\)，分母为
+\[
+1+\frac{1}{2}\lg0.36+\frac{1}{3}\lg8
+=\lg10+\lg0.6+\lg2
+=\lg\left(10\times0.6\times2\right)=\lg12
+\]
+因此原式 \(=\dfrac{\lg12}{\lg12}=1\).
+
+\item 原式有意义时，\(x^3-1\ne0\) 且 \(x^2-3x+2\ne0\)，即 \(x\ne1\)，\(2\). 在此条件下，
+\[
+\begin{gathered}
+\text{原式}=\frac{(x^2+1)^2-x^2}{(x-1)(x^2+x+1)}+\frac{(x-2)^2}{(x-2)(x-1)}\\
+=\frac{(x^2-x+1)(x^2+x+1)}{(x-1)(x^2+x+1)}+\frac{x-2}{x-1}
+=\frac{x^2-x+1+x-2}{x-1}\\
+=\frac{x^2-1}{x-1}=x+1.
+\end{gathered}
 \]
 \end{enumerate}
 \end{solution}
@@ -53,8 +52,8 @@
 \begin{problem}
 作下列各题.
 
-\begin{enumerate}[label=（\arabic*）]
-\item 当 \(a,b,c>0\) 时，求证：\( \log_a b\cdot\log_b c\cdot\log_c a=1 \).
+\begin{enumerate}
+\item 当 \(a\)，\(b\)，\(c>0\) 时，求证：\( \log_a b\cdot\log_b c\cdot\log_c a=1 \).
 
 \item 已知 \( y=\lg \frac{1}{1-\sqrt{1-x}} \)，求定义域.
 
@@ -64,28 +63,25 @@
 
 \begin{solution}
 \begin{enumerate}
-\item
-因为 \(a,b,c>0\)，所以 \(\log_a b=\frac{\lg b}{\lg a}\)，\(\log_b c=\frac{\lg c}{\lg b}\)，\(\log_c a=\frac{\lg a}{\lg c}\).
-
-\(\log_a b\cdot\log_b c\cdot\log_c a=\frac{\lg b}{\lg a}\cdot\frac{\lg c}{\lg b}\cdot\frac{\lg a}{\lg c}=1\).
-
-\item
-要使 \( y=\lg \frac{1}{1-\sqrt{1-x}} \) 有意义，必须
-\(
-\begin{cases}
-1-\sqrt{1-x}>0\\
-1-x\ge0
-\end{cases}
-\).
-解此不等式组，得 \( 0<x\le1 \). 因此函数 \( y=\lg \frac{1}{1-\sqrt{1-x}} \) 的定义域为 \( 0<x\le1 \).
-
-\item
-设甲，乙两地间的距离为 \(m\text{ 公里}\)，往返平均速度为 \(\overline{V}\text{ 公里/小时}\)，则上行时间为 \(t_1=\frac{m}{30}\)，下行时间为 \(t_2=\frac{m}{60}\).
+\item 题中三个对数有定义时，除 \(a\)，\(b\)，\(c>0\) 外还需 \(a\)，\(b\)，\(c\ne1\). 在此条件下，换底公式给出
+\(\log_a b=\dfrac{\lg b}{\lg a}\)，\(\log_b c=\dfrac{\lg c}{\lg b}\)，\(\log_c a=\dfrac{\lg a}{\lg c}\). 因而
 \[
-\overline{V}
-=\frac{2\cdot m}{t_1+t_2}
-=\frac{2\cdot m}{\frac{m}{30}+\frac{m}{60}}
-=40\text{ 公里/小时}
+\log_a b\cdot\log_b c\cdot\log_c a
+=\frac{\lg b}{\lg a}\cdot\frac{\lg c}{\lg b}\cdot\frac{\lg a}{\lg c}=1
+\]
+
+\item 根式有意义且对数的真数为正，必须满足
+\[
+\begin{cases}
+1-x\ge0,\\
+\dfrac{1}{1-\sqrt{1-x}}>0.
+\end{cases}
+\]
+由于分子为正，第二个条件等价于 \(1-\sqrt{1-x}>0\). 于是 \(\sqrt{1-x}<1\)，从而 \(x>0\)，再与 \(x\le1\) 合并，得到定义域为 \(0<x\le1\).
+
+\item 设甲、乙两地之间的距离为 \(m\text{ 公里}\)，其中 \(m>0\). 则上行和下行的路程都为 \(m\)，所用时间分别为 \(t_1=\dfrac{m}{30}\text{ 小时}\) 和 \(t_2=\dfrac{m}{60}\text{ 小时}\). 往返平均速度等于总路程除以总时间，所以
+\[
+\overline{V}=\frac{2m}{t_1+t_2}=\frac{2m}{\frac{m}{30}+\frac{m}{60}}=\frac{2m}{\frac{m}{20}}=40\text{ 公里/小时}
 \]
 答：往返平均速度为 \(40\text{ 公里/小时}\).
 \end{enumerate}
@@ -98,27 +94,21 @@
 
 求证：
 
-\begin{enumerate}[label=（\arabic*）]
-\item \(MN\parallel AD\)，\(MN\parallel BC\).
+\begin{enumerate}
+\item \(MN\parallel AD\)，\(MN\parallel BC\)；
 \item \(MN=\frac{1}{2}(AD+BC)\).
 \end{enumerate}
 
 \begin{center}
-\bitmapfigure[trim=0.95cm 0 0 0,clip,max width=5.2cm]{img/1977/shanxi/q3_fig1.png}
+\bitmapfigure[float=inline,width=4.2cm]{img/1977/shanxi/q3_fig1.png}
 \end{center}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item
-连接 \(DM\) 并延长交底边 \(BC\) 的延长线于 \(E\).
-因为 \(M\)，\(N\) 为 \(AB\)，\(DC\) 之中点，所以 \( AM=BM \)（已知），\( \angle EMB=\angle AMD \)（对顶角相等），\( \angle MBE=\angle MAD \)（内错角相等），所以 \( \triangle EBM\cong\triangle DAM \)（\(a,s,a\)）.
-因此 \( AD=BE \)（全等三角形的对应边相等），\( EM=DM \)（全等三角形的对应边相等）.
-又因为 \( EM=DM \)，\( DN=NC \)，所以 \(MN\) 为 \( \triangle DEC \) 的中位线.
-所以 \( MN\parallel BC\parallel AD \).
+\item 连接 \(DM\)，并延长 \(DM\) 交底边 \(BC\) 的延长线于 \(E\). 因为 \(M\) 是 \(AB\) 的中点，所以 \(AM=BM\). 又因为直线 \(DM\) 与直线 \(AB\) 相交，故 \(\angle EMB=\angle AMD\)；由 \(AD\parallel BE\)，得 \(\angle MBE=\angle MAD\). 因而 \(\triangle EBM\) 与 \(\triangle DAM\) 有两角及其夹边分别相等，所以 \(\triangle EBM\cong\triangle DAM\). 从而 \(BE=AD\)，\(EM=DM\). 由于 \(D\)，\(M\)，\(E\) 三点共线，\(EM=DM\) 说明 \(M\) 是 \(DE\) 的中点；又因 \(N\) 是 \(DC\) 的中点，所以在 \(\triangle DEC\) 中，\(MN\) 是中位线. 因此 \(MN\parallel EC\). 由于 \(E\)，\(B\)，\(C\) 三点共线，\(EC\) 与 \(BC\) 为同一直线，所以 \(MN\parallel BC\)；再结合已知的 \(AD\parallel BC\)，得到 \(MN\parallel AD\).
 
-\item
-由 \(MN\) 为 \( \triangle DEC \) 的中位线，得
+\item 由三角形中位线定理，\(MN=\dfrac{1}{2}EC\). 按图中点的次序，\(E\)，\(B\)，\(C\) 三点共线且 \(B\) 在 \(EC\) 上，因此 \(EC=EB+BC\). 又由全等三角形得到 \(EB=AD\)，所以
 \[
 MN=\frac{1}{2}EC=\frac{1}{2}(EB+BC)=\frac{1}{2}(AD+BC)
 \]
@@ -130,15 +120,18 @@ MN=\frac{1}{2}EC=\frac{1}{2}(EB+BC)=\frac{1}{2}(AD+BC)
 \end{problem}
 
 \begin{solution}
-要从这块白铁皮剪得最大圆材料，则此圆必须是这个直角三角形的内切圆.
-设此内切圆的半径为 \( r \)，直角三角形三边分别为 \( a=6 \)，\( c=10 \)，\( b=\sqrt{c^2-a^2}=\sqrt{10^2-6^2}=8 \).
-三角形的半周长 \( s=\frac{1}{2}(6+8+10)=12 \).
+设直角三角形的两直角边为 \(a\)，\(b\)，斜边为 \(c\). 由勾股定理，另一条直角边为 \(b=\sqrt{10^2-6^2}=8\mathrm{~dm}\)，所以三角形面积为 \(S=\dfrac{1}{2}\times6\times8=24\mathrm{~dm}^2\)，半周长为 \(s=\dfrac{6+8+10}{2}=12\mathrm{~dm}\).
+
+设任意一个完全位于三角形内的圆半径为 \(\rho\)，圆心到三边的距离分别为 \(d_1\)，\(d_2\)，\(d_3\). 因为圆在三角形内，\(d_i\ge\rho\)（\(i=1\)，\(2\)，\(3\)）. 以圆心为顶点把三角形分成三个三角形，得
 \[
-r=\sqrt{\frac{(s-a)(s-b)(s-c)}{s}}
-=\sqrt{\frac{(12-6)(12-8)(12-10)}{12}}
-=2
+S=\frac{1}{2}(6d_1+8d_2+10d_3)\ge\frac{1}{2}(6+8+10)\rho=12\rho
 \]
-故此内切圆的面积为 \(\pi r^2\approx3.14\times2^2=12.56\mathrm{~dm}^2\).
+所以 \(\rho\le\dfrac{S}{s}=2\mathrm{~dm}\). 三角形的内切圆半径满足 \(S=rs\)，故 \(r=\dfrac{24}{12}=2\mathrm{~dm}\)，此圆达到上述上界，因而它就是能剪出的最大圆材料.
+
+因此圆材料的面积为
+\[
+\pi r^2\approx3.14\times2^2=12.56\mathrm{~dm}^2
+\]
 答：剪得的最大圆材料的面积约为 \(12.56\mathrm{~dm}^2\).
 \end{solution}
 
@@ -147,15 +140,17 @@ r=\sqrt{\frac{(s-a)(s-b)(s-c)}{s}}
 \end{problem}
 
 \begin{solution}
+在等式左边有意义的条件下，利用诱导公式
+\(\sin(180^\circ-\alpha)=\sin\alpha\)，\(\cos(180^\circ+\alpha)=-\cos\alpha\)，\(\sin(180^\circ+\alpha)=-\sin\alpha\)，\(\cos(\alpha-360^\circ)=\cos\alpha\)，左边化为
 \[
-\begin{aligned}
-\text{左边}&=\frac{1+\sin\alpha+\cos\alpha+2\sin\alpha\cos\alpha}{1+\sin\alpha+\cos\left(360^\circ-\alpha\right)}\\
-&=\frac{\sin^2\alpha+\cos^2\alpha+2\sin\alpha\cos\alpha+\sin\alpha+\cos\alpha}{1+\sin\alpha+\cos\alpha}\\
-&=\frac{(\sin\alpha+\cos\alpha)^2+(\sin\alpha+\cos\alpha)}{1+\sin\alpha+\cos\alpha}\\
-&=\frac{(\sin\alpha+\cos\alpha)(1+\sin\alpha+\cos\alpha)}{1+\sin\alpha+\cos\alpha}=\sin\alpha+\cos\alpha=\text{右边}.
-\end{aligned}
+\frac{1+\sin\alpha+\cos\alpha+\sin2\alpha}{1+\sin\alpha+\cos\alpha}
 \]
-所以等式成立.
+令 \(u=\sin\alpha+\cos\alpha\)，则由 \(\sin^2\alpha+\cos^2\alpha=1\) 和二倍角公式，\(u^2=1+\sin2\alpha\). 因而
+\[
+\frac{1+\sin\alpha+\cos\alpha+\sin2\alpha}{1+\sin\alpha+\cos\alpha}
+=\frac{u^2+u}{1+u}=\frac{u(1+u)}{1+u}=u=\sin\alpha+\cos\alpha
+\]
+这里分母有意义正好保证 \(1+u\ne0\)，所以约分合法，恒等式得证.
 \end{solution}
 
 \begin{problem}
@@ -163,12 +158,11 @@ r=\sqrt{\frac{(s-a)(s-b)(s-c)}{s}}
 \end{problem}
 
 \begin{solution}
-因为 \( \tan\alpha \)，\( \tan\beta \) 是方程 \( x^2-5x+6=0 \) 的两个根，因此根据韦达定理，有 \( \tan\alpha+\tan\beta=5 \)，\( \tan\alpha\cdot\tan\beta=6 \).
-而
+因式分解方程得 \(x^2-5x+6=(x-2)(x-3)=0\)，所以 \(\tan\alpha\) 和 \(\tan\beta\) 分别为 \(2\) 和 \(3\)，从而 \(\tan\alpha+\tan\beta=5\)，\(\tan\alpha\tan\beta=6\). 由于三角形内角在 \(0^\circ\) 与 \(180^\circ\) 之间且正切值为正，\(\alpha\)、\(\beta\) 都是锐角，故 \(\alpha+\beta=180^\circ-\gamma\). 于是
 \[
-\tan\gamma=\tan\left[ 180^\circ-(\alpha+\beta) \right]=-\tan\left(\alpha+\beta\right)=-\frac{\tan\alpha+\tan\beta}{1-\tan\alpha\tan\beta}=-\frac{5}{1-6}=1
+\tan\gamma=-\tan(\alpha+\beta)=-\frac{\tan\alpha+\tan\beta}{1-\tan\alpha\tan\beta}=-\frac{5}{1-6}=1
 \]
-所以 \( \gamma=45^\circ \).
+又 \(0^\circ<\gamma<180^\circ\)，且 \(\tan\gamma>0\)，所以 \(\gamma\) 为锐角，得到 \(\gamma=45^\circ\).
 \end{solution}
 
 \begin{problem}
@@ -176,9 +170,7 @@ r=\sqrt{\frac{(s-a)(s-b)(s-c)}{s}}
 \end{problem}
 
 \begin{solution}
-因为抛物线的顶点在原点，对称轴为 \( y \) 轴，所以此抛物线的标准方程为 \( x^2=-2py \).
-抛物线过点 \((1,-1)\)，则 \(1^2=-2p\times(-1)\)，所以 \(p=\frac{1}{2}\).
-因此抛物线的方程为 \( x^2=-y \)，焦点坐标为 \( \left( 0,-\frac{1}{4} \right) \)，准线方程为 \( y=\frac{1}{4} \)，抛物线开口向下.
+顶点在原点且对称轴为 \(y\) 轴的抛物线可设为 \(x^2=4ay\). 代入已知点 \((1,-1)\)，得 \(1=4a(-1)\)，所以 \(a=-\dfrac{1}{4}\). 因而抛物线方程为 \(x^2=-y\). 对标准式 \(x^2=4ay\)，焦点为 \((0,a)\)，准线为 \(y=-a\)，所以焦点坐标为 \(\left(0,-\dfrac{1}{4}\right)\)，准线方程为 \(y=\dfrac{1}{4}\). 因为 \(a<0\)，抛物线开口向下.
 \end{solution}
 
 \begin{problem}
@@ -186,17 +178,13 @@ r=\sqrt{\frac{(s-a)(s-b)(s-c)}{s}}
 \end{problem}
 
 \begin{solution}
-解方程组
-\[
-\begin{cases}
-kx-y-3=0\\
-2x^2+2y^2-9=0
-\end{cases}
-\]
-得直线和圆的交点坐标，其中 \(x=\frac{6k\pm3\sqrt{2\left(k^2-1\right)}}{2\left(k^2+1\right)}\)，\(y=\frac{-6\pm3k\sqrt{2\left(k^2-1\right)}}{2\left(k^2+1\right)}\).
-当 \(2\left(k^2-1\right)=0\)，即 \(k=\pm1\) 时，直线和圆相切，其切点坐标为 \(\left(\frac{3}{2},-\frac{3}{2}\right)\) 和 \(\left(-\frac{3}{2},-\frac{3}{2}\right)\).
-\end{solution}
+圆的方程可化为 \(x^2+y^2=\dfrac{9}{2}\)，所以圆心为原点，半径为 \(r=\dfrac{3}{\sqrt{2}}\). 直线 \(kx-y-3=0\) 到原点的距离为
+\(d=\frac{3}{\sqrt{k^2+1}}\).
+直线与圆相切当且仅当 \(d=r\)，故
+\(\frac{3}{\sqrt{k^2+1}}=\frac{3}{\sqrt2}\)，\(\Longrightarrow\)，\(k^2+1=2\)，\(\Longrightarrow\)，\(k=\pm1\).
 
+切点是圆心到切线的垂足. 当 \(k=1\) 时，切线为 \(y=x-3\)，过原点的半径垂直于它，故所在直线为 \(y=-x\). 联立得 \(x=\dfrac{3}{2}\)，\(y=-\dfrac{3}{2}\)，切点为 \(\left(\dfrac{3}{2},-\dfrac{3}{2}\right)\). 当 \(k=-1\) 时，切线为 \(y=-x-3\)，过原点的半径所在直线为 \(y=x\). 联立得 \(x=-\dfrac{3}{2}\)，\(y=-\dfrac{3}{2}\)，切点为 \(\left(-\dfrac{3}{2},-\dfrac{3}{2}\right)\).
+\end{solution}
 
 \section{参考题}
 
@@ -205,26 +193,30 @@ kx-y-3=0\\
 \end{problem}
 
 \begin{solution}
-\( f'(x)=\ln(2-x)-\frac{x}{2-x}+\frac{3x}{\sqrt{1+3x^2}} \).
-所以 \( f'(1)=\ln 1-\frac{1}{2-1}+\frac{3}{2}=\frac{1}{2} \).
+函数的定义域为 \(x<2\)，且 \(1\) 在定义域内. 由乘积法则、链式法则，
+\[
+f'(x)=\ln(2-x)+x\left(-\frac{1}{2-x}\right)+\frac{3x}{\sqrt{1+3x^2}}=\ln(2-x)-\frac{x}{2-x}+\frac{3x}{\sqrt{1+3x^2}}
+\]
+代入 \(x=1\)，得
+\[
+f'(1)=\ln1-\frac{1}{2-1}+\frac{3}{\sqrt{1+3}}=0-1+\frac{3}{2}=\frac{1}{2}
+\]
 \end{solution}
 
 \begin{problem}
-一水库的水闸为一等腰梯形，上底为 \(8\text{ 米}\)，下底为 \(4\text{ 米}\)，高为 \(10\text{ 米}\). 求当水面与上底相齐时水闸所受的压力.（已知水的比重为 \(1\text{ 吨重}/\text{立方米}\)）
+一水库的水闸为一等腰梯形，上底为 \(8\text{ 米}\)，下底为 \(4\text{ 米}\)，高为 \(10\text{ 米}\). 求当水面与上底相齐时水闸所受的压力.（已知水的比重为 \(1\text{ 吨重/立方米}\)）
 
-\begin{center}
 \bitmapfigure[float=inline,width=5.8cm]{img/1977/shanxi/q15_fig1.png}
-\end{center}
 \end{problem}
 
 \begin{solution}
-我们知道，压力 \(F\) 等于压强 \(P\) 乘以面积 \(S\).
-根据物理学知识，水面以下 \(x\text{ 米}\) 处的压强等于深度 \(x\) 与水的比重的乘积，即 \(P=x\text{ 吨重/平方米}\).
-假定这个压强作用在闸的一个水平面积元上（如图），其高为 \(\mathrm{d}x\)，长为 \(8-\frac{8-4}{10}x=8-\frac{2}{5}x\)，那么，此面积元所受的压力为
-\(\mathrm{d}F=P\left(8-\frac{2}{5}x\right)\mathrm{d}x=x\left(8-\frac{2}{5}x\right)\mathrm{d}x\).
-因此，总压力为
+取水面为深度 \(x=0\)，向下为正方向，令 \(x\) 的单位为米. 水的比重为 \(1\text{ 吨重/立方米}\)，所以深度为 \(x\text{ 米}\) 处的压强为 \(P=x\text{ 吨重/平方米}\). 在深度 \(x\) 到 \(x+\mathrm{d}x\) 之间取一条水平薄片，则其宽度随深度线性变化，由上底宽 \(8\) 米、下底宽 \(4\) 米和高 \(10\) 米可得
+\(w(x)=8-\frac{8-4}{10}x=8-\frac{2}{5}x\text{ 米}\). 薄片面积为 \(w(x)\mathrm{d}x\)，所受压力为 \(\mathrm{d}F=P\,w(x)\mathrm{d}x=x\left(8-\frac{2}{5}x\right)\mathrm{d}x\).
+把深度从 \(0\) 米累加到 \(10\) 米，得到水闸所受总压力
 \[
-F=\int \mathrm{d}F=\int_0^{10}x\left(8-\frac{2}{5}x\right)\mathrm{d}x=\left(4x^2-\frac{2x^3}{15}\right)\Big|_0^{10}=\frac{800}{3}\text{ 吨}
+F=\int_0^{10}x\left(8-\frac{2}{5}x\right)\mathrm{d}x
+=\left(4x^2-\frac{2}{15}x^3\right)\Big|_0^{10}
+=400-\frac{2000}{15}=\frac{800}{3}\text{ 吨重}
 \]
-水闸所受的压力为 \(\frac{800}{3}\text{ 吨}\).
+答：水闸所受的压力为 \(\dfrac{800}{3}\text{ 吨重}\).
 \end{solution}

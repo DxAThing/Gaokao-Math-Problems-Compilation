@@ -18,6 +18,10 @@
 D
 \end{answer}
 
+\begin{solution}
+要使根式有意义，必须同时满足 \(1-x\geqslant0\) 和 \(x\geqslant0\)，即 \(x\leqslant1\) 且 \(x\geqslant0\). 因此函数的定义域为 \([0,1]\)，故选 D.
+\end{solution}
+
 \begin{problem}
 汽车经过启动，加速行驶，匀速行驶，减速行驶之后停车，若把这一过程中汽车的行驶路程 \(s\) 看作时间 \(t\) 的函数，其图象可能是（\quad）
 
@@ -31,6 +35,10 @@ D
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+行驶路程 \(s\) 随时间 \(t\) 增大而不减. 启动、加速行驶时速度逐渐增大，所以图像上升且斜率逐渐增大；匀速行驶时斜率保持不变；减速行驶时斜率逐渐减小；停车后路程保持不变，图像应为水平线. 四个图像中只有图 A 依次呈现这些变化，故选 A.
+\end{solution}
 
 \begin{problem}
 \(\left(1 + \frac{x}{2}\right)^5\) 的展开式中 \(x^2\) 的系数为（\quad）
@@ -46,6 +54,18 @@ A
 C
 \end{answer}
 
+\begin{solution}
+由二项式定理，
+\[
+\left(1+\frac{x}{2}\right)^5=\sum_{k=0}^{5}\mathrm C_5^k\left(\frac{x}{2}\right)^k
+\]
+其中 \(x^2\) 项对应 \(k=2\)，其系数为
+\[
+\mathrm C_5^2\left(\frac{1}{2}\right)^2=10\times\frac14=\frac52
+\]
+因此选 C.
+\end{solution}
+
 \begin{problem}
 曲线 \( y = x^{3} - 2x + 4 \) 在点 \((1, 3)\) 处的切线的倾斜角为（\quad）
 
@@ -59,6 +79,14 @@ C
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+函数的导数为 \(y'=3x^2-2\)，所以在 \(x=1\) 处切线的斜率为
+\[
+k=y'\big|_{x=1}=3-2=1
+\]
+设切线的倾斜角为 \(\alpha\)，则 \(0\leqslant\alpha<\pi\) 且 \(\tan\alpha=k=1\)，从而 \(\alpha=45^{\circ}\). 故选 B.
+\end{solution}
 
 \begin{problem}
 在 \(\triangle ABC\) 中，\(\overrightarrow{AB} = \bs{c}\)，\(\overrightarrow{AC} = \bs{b}\). 若点 \(D\) 满足 \(\overrightarrow{BD} = 2\overrightarrow{DC}\)，则 \(\overrightarrow{AD} =\)（\quad）
@@ -74,6 +102,24 @@ B
 A
 \end{answer}
 
+\begin{solution}
+由 \(\overrightarrow{BD}=2\overrightarrow{DC}\)，得
+\[
+\overrightarrow{BC}=\overrightarrow{BD}+\overrightarrow{DC}=3\overrightarrow{DC}
+\]
+所以 \(\overrightarrow{BD}=\frac23\overrightarrow{BC}\). 又
+\[
+\overrightarrow{BC}=\overrightarrow{AC}-\overrightarrow{AB}=\bs b-\bs c
+\]
+故
+\[
+\overrightarrow{AD}=\overrightarrow{AB}+\overrightarrow{BD}
+=\bs c+\frac23(\bs b-\bs c)
+=\frac23\bs b+\frac13\bs c
+\]
+因此选 A.
+\end{solution}
+
 \begin{problem}
 \(y = (\sin x - \cos x)^{2} - 1\) 是（\quad）
 
@@ -87,6 +133,18 @@ A
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+展开得
+\[
+y=\sin^2x-2\sin x\cos x+\cos^2x-1=-2\sin x\cos x=-\sin2x
+\]
+因为 \(\sin2x\) 的最小正周期为 \(\pi\)，所以 \(y\) 的最小正周期也是 \(\pi\). 令 \(f(x)=-\sin2x\)，则
+\[
+f(-x)=-\sin(-2x)=\sin2x=-f(x)
+\]
+故函数为奇函数，选 D.
+\end{solution}
 
 \begin{problem}
 已知等比数列 \(\{a_{n}\}\) 满足 \(a_{1} + a_{2} = 3\)，\(a_{2} + a_{3} = 6\)，则 \(a_{7} =\)（\quad）
@@ -102,6 +160,18 @@ D
 A
 \end{answer}
 
+\begin{solution}
+设等比数列的公比为 \(q\). 由
+\[
+a_2+a_3=q(a_1+a_2)
+\]
+及题设，得 \(3q=6\)，所以 \(q=2\). 再由 \(a_1+a_2=a_1(1+q)=3\)，得 \(a_1=1\). 因而
+\[
+a_7=a_1q^6=2^6=64
+\]
+故选 A.
+\end{solution}
+
 \begin{problem}
 若函数 \( y = f(x) \) 的图象与函数 \( y = \ln \sqrt{x} + 1 \) 的图象关于直线 \( y = x \) 对称，则 \( f(x) = \)（\quad）
 
@@ -115,6 +185,16 @@ A
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+原函数可写为
+\[
+y=\ln\sqrt{x}+1=\frac12\ln x+1
+\]
+其定义域为 \(x>0\). 由反函数图象关于 \(y=x\) 对称，设原式中的变量为 \(u\)，则
+\(v=\frac12\ln u+1\)，\(\Longrightarrow\)，\(\ln u=2v-2\)，\(\Longrightarrow\)，\(u=\e^{2v-2}\).
+交换变量 \(u\)，\(v\)，得到 \(f(x)=\e^{2x-2}\). 故选 A.
+\end{solution}
 
 \begin{problem}
 为得到函数 \( y = \cos \left( x + \frac{\pi}{3} \right) \) 的图象，只需将函数 \( y = \sin x \) 的图象（\quad）
@@ -130,6 +210,17 @@ A
 C
 \end{answer}
 
+\begin{solution}
+利用恒等式 \(\cos u=\sin\left(u+\frac{\pi}{2}\right)\)，有
+\[
+\cos\left(x+\frac{\pi}{3}\right)
+=\sin\left(x+\frac{\pi}{3}+\frac{\pi}{2}\right)
+=\sin\left(x+\frac{5\pi}{6}\right)
+\]
+将 \(y=\sin x\) 的图象向左平移 \(\frac{5\pi}{6}\) 个长度单位后，函数变为
+\(y=\sin\left(x+\frac{5\pi}{6}\right)\)，所以选 C.
+\end{solution}
+
 \begin{problem}
 若直线 \(\frac{x}{a} + \frac{y}{b} = 1\) 与圆 \(x^{2} + y^{2} = 1\) 有公共点，则（\quad）
 
@@ -144,6 +235,26 @@ C
 D
 \end{answer}
 
+\begin{solution}
+由于直线使用截距式，必须有 \(a\ne0\)，\(b\ne0\). 将方程化为一般式，得
+\[
+bx+ay-ab=0
+\]
+圆心为原点，圆的半径为 \(1\)，所以直线与圆有公共点，当且仅当圆心到直线的距离不超过半径，即
+\[
+\frac{|ab|}{\sqrt{a^2+b^2}}\leqslant1
+\]
+两边平方并利用 \(a^2+b^2>0\)，得
+\[
+a^2b^2\leqslant a^2+b^2
+\]
+再除以正数 \(a^2b^2\)，得到
+\[
+\frac{1}{a^2}+\frac{1}{b^2}\geqslant1
+\]
+因此选 D.
+\end{solution}
+
 \begin{problem}
 已知三棱柱 \(ABC - A_{1}B_{1}C_{1}\) 的侧棱与底面边长都相等，\(A_{1}\) 在底面 \(ABC\) 内的射影为 \(\triangle ABC\) 的中心，则 \(AB_{1}\) 与底面 \(ABC\) 所成角的正弦值等于（\quad）
 
@@ -157,6 +268,32 @@ D
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+设正三角形 \(ABC\) 的边长为 \(s\)，中心为 \(O\). 因为三棱柱的侧棱与底面边长都相等，所以
+\[
+A_1A=A_1B_1=s
+\]
+又因为 \(A_1O\perp\) 底面 \(ABC\)，且 \(O\) 是正三角形的中心，故
+\(AO=\frac{s\sqrt{3}}{3}\)，\(A_1O^2=A_1A^2-AO^2=s^2-\frac{s^2}{3}=\frac{2s^2}{3}\).
+在点 \(A_1\) 处，向量 \(\overrightarrow{A_1A}\) 和 \(\overrightarrow{A_1B_1}\) 的水平投影分别为 \(\overrightarrow{OA}\) 和 \(\overrightarrow{AB}\). 又
+\(|OA|=\frac{s}{\sqrt{3}}\)，\(\angle\left(\overrightarrow{OA},\overrightarrow{AB}\right)=150^\circ\)
+所以
+\[
+\overrightarrow{OA}\cdot\overrightarrow{AB}=-\frac{s^2}{2}
+\]
+而这两个向量的长度都为 \(s\)，所以
+\(\cos\angle AA_1B_1=-\frac12\)，\(\angle AA_1B_1=120^\circ\).
+在三角形 \(AA_1B_1\) 中由余弦定理，
+\[
+AB_1^2=AA_1^2+A_1B_1^2-2AA_1\cdot A_1B_1\cos120^\circ=3s^2
+\]
+即 \(AB_1=s\sqrt{3}\). 设 \(AB_1\) 与底面所成角为 \(\theta\)，则其垂直于底面的分量为 \(A_1O\)，所以
+\[
+\sin\theta=\frac{A_1O}{AB_1}=\frac{s\sqrt{2/3}}{s\sqrt{3}}=\frac{\sqrt{2}}{3}
+\]
+故选 B.
+\end{solution}
 
 \begin{problem}
 将 \(1\)，\(2\)，\(3\) 填入 \(3 \times 3\) 的方格中，要求每行，每列都没有重复数字，下面是一种填法，则不同的填写方法共有（\quad）
@@ -184,6 +321,14 @@ B
 B
 \end{answer}
 
+\begin{solution}
+第一行必须是 \(1\)，\(2\)，\(3\) 的一个排列，共有 \(3!=6\) 种选法. 固定第一行后，第二行不能在任一列与第一行重复，因此第二行只有两种循环排列可选：一种是图中第二行，另一种是它的逆循环排列. 第二行确定后，第三行在每一列都只能填入尚未出现的那个数字，因而被唯一确定. 所以不同的填写方法共有
+\[
+3!\times2=12
+\]
+种，故选 B.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -198,6 +343,18 @@ x - y + 3 \geqslant 0,\\
 \(9\)
 \end{answer}
 
+\begin{solution}
+由约束条件
+\(x+y\geqslant0\)，\(\Longrightarrow\)，\(y\geqslant-x\)
+以及
+\(x-y+3\geqslant0\)，\(\Longrightarrow\)，\(y\leqslant x+3\).
+目标函数为 \(z=2x-y\). 对固定的 \(x\)，为了使 \(z\) 最大，应取允许的最小 \(y\)，即 \(y=-x\). 此时
+\[
+z=2x-(-x)=3x
+\]
+由 \(0\leqslant x\leqslant3\)，知 \(z\leqslant9\). 取 \(x=3\)，\(y=-3\) 时，三个约束分别满足，且 \(z=9\)，所以最大值为 \(9\).
+\end{solution}
+
 \begin{problem}
 已知抛物线 \( y = ax^2 - 1 \) 的焦点是坐标原点，则以抛物线与两坐标轴的三个交点为顶点的三角形面积为\fillinblank{}.
 \end{problem}
@@ -205,6 +362,19 @@ x - y + 3 \geqslant 0,\\
 \begin{answer}
 \(2\)
 \end{answer}
+
+\begin{solution}
+抛物线与 \(y\) 轴交于 \(P(0,-1)\). 设其与 \(x\) 轴交于 \(Q(r,0)\) 和 \(R(-r,0)\)，则由 \(0=ar^2-1\) 得 \(r^2=\frac1a\)，因此必须有 \(a>0\).
+将方程写成
+\[
+x^2=\frac1a(y+1)
+\]
+与标准形式 \(x^2=4p(y+1)\) 比较，得 \(4p=\frac1a\). 抛物线焦点为 \((0,-1+p)\)，题设焦点为原点，故 \(p=1\)，从而 \(a=\frac14\).
+于是 \(r=2\)，三个交点为 \((0,-1)\)，\((2,0)\)，\((-2,0)\). 以横轴上的两点为底，底长为 \(4\)，高为 \(1\)，所以三角形面积为
+\[
+\frac12\times4\times1=2
+\]
+\end{solution}
 
 \begin{problem}
 在 \(\triangle ABC\) 中，\(\angle A = 90^{\circ}\)，\(\tan B = \frac{3}{4}\)，若以 \(A\)，\(B\) 为焦点的椭圆经过点 \(C\)，则该椭圆的离心率 \(e = \)\fillinblank{}.
@@ -214,6 +384,19 @@ x - y + 3 \geqslant 0,\\
 \(\frac{1}{2}\)
 \end{answer}
 
+\begin{solution}
+由 \(\angle A=90^{\circ}\) 及 \(\tan B=\frac{AC}{AB}=\frac34\)，可设
+\(AC=3k\)，\(AB=4k\)，\(BC=5k\)，\((k>0)\).
+椭圆的两个焦点为 \(A\)，\(B\)，且点 \(C\) 在椭圆上，所以椭圆的长轴长满足
+\[
+2a=CA+CB=3k+5k=8k
+\]
+两焦点间距离为 \(AB=4k=2c\)，故 \(c=2k\). 因而离心率为
+\[
+e=\frac{c}{a}=\frac{2k}{4k}=\frac12
+\]
+\end{solution}
+
 \begin{problem}
 已知菱形 \(ABCD\) 中，\(AB = 2\)，\(\angle A = 120^{\circ}\)，沿对角线 \(BD\) 将 \(\triangle ABD\) 折起，使二面角 \(A - BD - C\) 为 \(120^{\circ}\)，则点 \(A\) 到 \(\triangle BCD\) 所在平面的距离等于\fillinblank{}.
 \end{problem}
@@ -221,6 +404,23 @@ x - y + 3 \geqslant 0,\\
 \begin{answer}
 \(\frac{\sqrt{3}}{2}\)
 \end{answer}
+
+\begin{solution}
+设菱形两条对角线交于 \(O\). 由 \(AB=AD=2\)、\(\angle BAD=120^{\circ}\)，在三角形 \(ABD\) 中由余弦定理得
+\[
+BD^2=AB^2+AD^2-2AB\cdot AD\cos120^{\circ}=4+4+4=12
+\]
+所以 \(BD=2\sqrt3\)，且 \(BO=DO=\sqrt3\). 同理，另一条对角线
+\[
+AC^2=AB^2+BC^2+2AB\cdot BC\cos120^{\circ}=4
+\]
+故 \(AC=2\)，从而 \(AO=CO=1\). 菱形的对角线互相垂直，因此 \(AO\perp BD\).
+
+折起后，取过 \(AO\) 且垂直于 \(BD\) 的截面. 在这个截面内，\(AO\) 是面 \(ABD\) 与棱 \(BD\) 的垂线，\(OC\) 是面 \(BCD\) 与棱 \(BD\) 的垂线，所以 \(\angle AOC\) 等于二面角 \(A-BD-C\)，为 \(120^{\circ}\). 点 \(A\) 到平面 \(BCD\) 的距离等于点 \(A\) 到截面内直线 \(OC\) 的距离，故
+\[
+d=AO\sin120^{\circ}=1\times\frac{\sqrt3}{2}=\frac{\sqrt3}{2}
+\]
+\end{solution}
 
 \section{解答题}
 
@@ -440,7 +640,7 @@ y=-\frac{a}{b}(x-c)
 \).
 分别与两条渐近线联立，得到 \(A\left(\frac{a^2}{c},\frac{ab}{c}\right)\) 和 \(B\left(\frac{a^2c}{a^2-b^2},-\frac{abc}{a^2-b^2}\right)\).
 
-向量 \(\overrightarrow{FA}\) 的横坐标为负. 由 \(\overrightarrow{BF}\) 与 \(\overrightarrow{FA}\) 同向，点 \(B\) 必在 \(F\) 的右侧，从而 \(a>b\)，以下分母 \(a^2-b^2\) 为正. 由坐标计算
+向量 \(\overrightarrow{FA}\) 的横坐标为负. 若 \(a=b\)，则该直线与 \(l_2\) 平行，不存在交点 \(B\)，所以由题设 \(a\ne b\). 由 \(\overrightarrow{BF}\) 与 \(\overrightarrow{FA}\) 同向，点 \(B\) 必在 \(F\) 的右侧，从而 \(a>b\)，以下分母 \(a^2-b^2\) 为正. 由坐标计算
 \(
 \left|\overrightarrow{OA}\right|=\sqrt{\left(\frac{a^2}{c}\right)^2+\left(\frac{ab}{c}\right)^2}=a
 \).

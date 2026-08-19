@@ -7,15 +7,15 @@
 \end{problem}
 
 \begin{solution}
-【法一】
+在实数范围内，原式有意义且分母不为零时，因式中含有 \(a^{-2}\) 和 \(b^{-2}\)，知 \(a\neq0\)，\(b\neq0\). 四次根式要求 \(a^{-2}b^3\geqslant0\)，从而 \(b>0\)；六次根式要求 \(a^5b^{-2}\geqslant0\)，从而 \(a>0\). 因此可以使用正数幂的运算律，将各根式化为十二次根式，得
 \[
-\text{原式}=\frac{\sqrt[12]{a^{-6}b^9a^{16}b^{-8}}}{\sqrt[12]{a^{10}b^{-4}}}=\sqrt[12]{\frac{a^{10}b}{a^{10}b^{-4}}}=\sqrt[12]{b^5}
-\]
-
-【法二】
-\[
-\text{原式}=a^{-\frac{2}{4}}b^{\frac{3}{4}}\cdot a^{\frac{4}{3}}b^{-\frac{2}{3}}\cdot a^{-\frac{5}{6}}b^{\frac{2}{6}}
-=b^{\frac{5}{12}}=\sqrt[12]{b^5}
+\begin{aligned}
+\text{原式}
+&=\frac{\sqrt[12]{a^{-6}b^9}\cdot\sqrt[12]{a^{16}b^{-8}}}{\sqrt[12]{a^{10}b^{-4}}} \\
+&=\sqrt[12]{\frac{a^{-6}b^9\cdot a^{16}b^{-8}}{a^{10}b^{-4}}}
+=\sqrt[12]{\frac{a^{10}b}{a^{10}b^{-4}}}
+=\sqrt[12]{b^5}.
+\end{aligned}
 \]
 \end{solution}
 
@@ -24,19 +24,11 @@
 \end{problem}
 
 \begin{solution}
-【法一】
+因为 \(\cos\frac{\pi}{4}=\frac{\sqrt2}{2}=2^{-1/2}>0\)，\(\sin\frac{\pi}{6}=\frac12=2^{-1}>0\)，所以两个对数都有意义. 代入对数的幂运算公式，得
 \[
-\text{原式}=\log_2\frac{\sqrt{2}}{2}-\log_2\frac{1}{2}=\frac{1}{2}\log_2 2-\log_2 2-\log_2 1+\log_2 2=\frac{1}{2}-1-0+1=\frac{1}{2}
-\]
-
-【法二】
-\[
-\text{原式}=\log_2 2^{-\frac{1}{2}}-\log_2 2^{-1}=-\frac{1}{2}-\left(-1\right)=\frac{1}{2}
-\]
-
-【法三】
-\[
-\text{原式}=\log_2\left(\frac{\sqrt{2}}{2}\div\frac{1}{2}\right)=\log_2\sqrt{2}=\frac{1}{2}
+\text{原式}
+=\log_2 2^{-1/2}-\log_2 2^{-1}
+=-\frac12-(-1)=\frac12
 \]
 \end{solution}
 
@@ -45,25 +37,25 @@
 \end{problem}
 
 \begin{solution}
-【法一】
+由题意知 \(a^2-b^2\neq0\). 先由平方关系计算余弦的平方：
 \[
-\sec^2\alpha=1+\tan^2\alpha=1+\frac{4a^2b^2}{\left(a^2-b^2\right)^2}=\frac{\left(a^2+b^2\right)^2}{\left(a^2-b^2\right)^2}
+\begin{aligned}
+\cos^2\alpha
+&=\frac{1}{1+\tan^2\alpha}
+=\frac{1}{1+\dfrac{4a^2b^2}{(a^2-b^2)^2}} \\
+&=\frac{(a^2-b^2)^2}{(a^2-b^2)^2+4a^2b^2}
+=\frac{(a^2-b^2)^2}{(a^2+b^2)^2}.
+\end{aligned}
 \]
-
-所以 \(\sec\alpha=\pm\dfrac{a^2+b^2}{a^2-b^2}\)，故 \(\cos\alpha=\pm\dfrac{a^2-b^2}{a^2+b^2}\). 因此
+由于 \(a^2+b^2>0\)，可写成
+\(\cos\alpha=\varepsilon\frac{a^2-b^2}{a^2+b^2}\)，\(\varepsilon\in\{1,-1\}\).
+于是
 \[
-\sin\alpha=\tan\alpha\cdot\cos\alpha=\frac{2ab}{a^2-b^2}\cdot\left(\pm\frac{a^2-b^2}{a^2+b^2}\right)=\pm\frac{2ab}{a^2+b^2}
+\sin\alpha=\tan\alpha\cos\alpha
+=\frac{2ab}{a^2-b^2}\cdot\varepsilon\frac{a^2-b^2}{a^2+b^2}
+=\varepsilon\frac{2ab}{a^2+b^2}
 \]
-
-【法二】
-\[
-\begin{cases}
-\dfrac{\sin\alpha}{\cos\alpha}=\dfrac{2ab}{a^2-b^2},\\
-\sin^2\alpha+\cos^2\alpha=1.
-\end{cases}
-\]
-
-由第一式得 \(\cos\alpha=\dfrac{a^2-b^2}{2ab}\sin\alpha\). 代入第二式，得 \(\sin^2\alpha=\dfrac{4a^2b^2}{\left(a^2+b^2\right)^2}\). 所以 \(\sin\alpha=\pm\dfrac{2ab}{a^2+b^2}\).
+因此，在未给出 \(\alpha\) 所在象限时，\(\sin\alpha=\pm\dfrac{2ab}{a^2+b^2}\)；若已知象限，则按象限确定正负号.
 \end{solution}
 
 \begin{problem}
@@ -76,20 +68,11 @@
 \end{problem}
 
 \begin{solution}
-【法一】
-\begin{enumerate}
-\item
+因为分式有意义，所以 \(m\neq0\). 将已知等式乘以 \(m\)，得
 \[
-m^2+\frac{1}{m^2}=\left(m+\frac{1}{m}\right)^2-2m\cdot\frac{1}{m}=2^2-2=2
+m^2-2m+1=0
 \]
-
-\item
-\[
-m^3+\frac{1}{m^3}=\left(m+\frac{1}{m}\right)^3-3m\cdot\frac{1}{m}\left(m+\frac{1}{m}\right)=2^3-3\cdot2=2
-\]
-\end{enumerate}
-
-【法二】由已知等式 \(m+\dfrac{1}{m}=2\)，可得 \(m^2-2m+1=0\)，即 \(\left(m-1\right)^2=0\). 因此 \(m=1\)，故
+即 \((m-1)^2=0\)，所以 \(m=1\). 因而
 \begin{enumerate}
 \item \(m^2+\dfrac{1}{m^2}=1^2+\dfrac{1}{1^2}=2\)；
 \item \(m^3+\dfrac{1}{m^3}=1^3+\dfrac{1}{1^3}=2\).
@@ -103,11 +86,21 @@ m^3+\frac{1}{m^3}=\left(m+\frac{1}{m}\right)^3-3m\cdot\frac{1}{m}\left(m+\frac{1
 \end{problem}
 
 \begin{solution}
-已知：\(AB\) 为直径，\(\angle ABC=90^\circ\)，\(AC\) 与圆相交于 \(D\)，\(DE\) 是圆的切线.
+连接 \(BD\). 因为 \(AB\) 是圆的直径且 \(D\) 在圆上，由圆周角定理，\(\angle ADB=90^\circ\). 又因 \(A\)，\(D\)，\(C\) 共线，所以 \(\angle CDB=90^\circ\).
 
-求证：\(EB=CE\).
-
-证明：连接 \(BD\)，则 \(\angle ADB=90^\circ\). 因为 \(\angle ABC=90^\circ\)，\(AB\) 又是直径，所以 \(EB\) 是圆的切线，因此 \(ED=EB\). 所以 \(\angle 3=\angle 4\). 又因为 \(\angle 1+\angle 3=90^\circ\)，\(\angle 2+\angle 4=90^\circ\)，而 \(\angle 3=\angle 4\)，所以 \(\angle 1=\angle 2\). 从而 \(CE=ED\)，故 \(EB=CE\).
+由 \(\angle ABC=90^\circ\)，知 \(AB\perp BC\). 圆心在直径 \(AB\) 的中点上，故半径在 \(B\) 点与直线 \(BC\) 垂直，\(BE\) 是圆在 \(B\) 点的切线. 题设中的 \(DE\) 也是切线，因此从圆外一点 \(E\) 引圆的两条切线，切线段相等，即
+\[
+ED=EB
+\]
+于是三角形 \(EDB\) 为等腰三角形，设
+\[
+\angle EDB=\angle DBE=\delta
+\]
+再设 \(\angle CDE=\gamma\)，\(\angle DCE=\eta\). 由于 \(\angle CDB=90^\circ\)，有 \(\gamma+\delta=90^\circ\)；由于 \(C\)，\(E\)，\(B\) 共线，且三角形 \(CDB\) 在 \(D\) 点直角，有 \(\eta+\delta=90^\circ\). 因此 \(\gamma=\eta\)，三角形 \(CDE\) 的两角相等，从而
+\[
+CE=ED
+\]
+结合 \(ED=EB\)，得到 \(EB=CE\).
 \end{solution}
 
 \begin{problem}
@@ -115,17 +108,27 @@ m^3+\frac{1}{m^3}=\left(m+\frac{1}{m}\right)^3-3m\cdot\frac{1}{m}\left(m+\frac{1
 \end{problem}
 
 \begin{solution}
-设 \(P\left(x,y\right)\) 是到 \(A\)，\(B\) 等距离的点，则 \(\left|PA\right|=\left|PB\right|\). 由两点间的距离公式得
+设动点为 \(P(x,y)\). 由等距条件，
 \[
-\sqrt{\left(x-1\right)^2+\left(y-2\right)^2}=\sqrt{\left(x-4\right)^2+\left(y-1\right)^2}
+PA=PB
 \]
-
-两边平方，得
+使用两点间距离公式，得
 \[
-\left(x-1\right)^2+\left(y-2\right)^2=\left(x-4\right)^2+\left(y-1\right)^2
+\sqrt{(x-1)^2+(y-2)^2}=\sqrt{(x-4)^2+(y-1)^2}
 \]
-
-整理化简后得 \(P\left(x,y\right)\) 的轨迹方程为 \(3x-y-6=0\)，或者写成 \(y=3x-6\).
+两边均为非负数，可以平方，得到
+\[
+(x-1)^2+(y-2)^2=(x-4)^2+(y-1)^2
+\]
+展开并整理：
+\[
+x^2-2x+1+y^2-4y+4=x^2-8x+16+y^2-2y+1
+\]
+所以 \(6x-2y-12=0\)，即
+\[
+3x-y-6=0
+\]
+因此所求轨迹是直线 \(3x-y-6=0\)，也可写成 \(y=3x-6\).
 \end{solution}
 
 \begin{problem}
@@ -133,27 +136,35 @@ m^3+\frac{1}{m^3}=\left(m+\frac{1}{m}\right)^3-3m\cdot\frac{1}{m}\left(m+\frac{1
 \end{problem}
 
 \begin{solution}
-设窗子的宽为 \(x\mathrm{~m}\)，则长为 \(\left(4-x\right)\mathrm{~m}\). 窗子的面积 \(S=x\left(4-x\right)=-\left(x-2\right)^2+4\).
+设矩形窗子的宽为 \(x\mathrm{~m}\)，长为 \(y\mathrm{~m}\)，其中 \(x>0\)，\(y>0\). 木料长度等于窗框周长，所以
+\(2(x+y)=8\)，\(y=4-x\)，\(0<x<4\).
+窗子透过的光线多少与窗子的面积成正比，故只需使面积
+\[
+S=xy=x(4-x)=-(x-2)^2+4
+\]
+最大. 因为 \(-(x-2)^2\leqslant0\)，且当且仅当 \(x=2\) 时取等号，所以 \(S\) 的最大值为 \(4\mathrm{~m^2}\). 此时 \(y=4-x=2\).
 
-所以，当 \(x=2\) 时，\(S\) 有极大值 \(4\). 这时，宽为 \(4-x=2\). 故窗子为边长 \(2\mathrm{~m}\) 的正方形时，透过的光线最多.
-
-答：当窗子的长和宽相等，且都为 \(2\mathrm{~m}\) 时，才能使透过的光线最多.
+因此长和宽都应取 \(2\mathrm{~m}\)，窗子为边长 \(2\mathrm{~m}\) 的正方形.
 \end{solution}
 
 \begin{problem}
-求 \(\lim\limits_{n\to\infty}\sin a\left(1+\cos a+\cos^2a+\cdots+\cos^na\right)\)（其中 \(a\) 为任意实常数，\(0<a<\dfrac{\pi}{2}\)）.
+求 \(\displaystyle\lim\limits_{n\to\infty}\sin a\left(1+\cos a+\cos^2a+\cdots+\cos^na\right)\)（其中 \(a\) 为任意实常数，\(0<a<\dfrac{\pi}{2}\)）.
 \end{problem}
 
 \begin{solution}
-数列 \(1\)，\(\cos a\)，\(\cos^2a\)，\(\ldots\)，\(\cos^na\)，\(\ldots\) 为无穷递缩等比数列，其公比 \(0<q=\cos a<1\). 因此
+由 \(0<a<\dfrac{\pi}{2}\)，有 \(0<\cos a<1\). 对有限项等比数列求和，
 \[
-\lim\limits_{n\to\infty}\left(1+\cos a+\cdots+\cos^na\right)=\frac{1}{1-\cos a}
+1+\cos a+\cos^2a+\cdots+\cos^na=\frac{1-\cos^{n+1}a}{1-\cos a}
 \]
-故原式的极限为
+由于 \(0<\cos a<1\)，所以 \(\displaystyle\lim\limits_{n\to\infty}\cos^{n+1}a=0\). 因而
 \[
-\lim\limits_{n\to\infty}\sin a\left(1+\cos a+\cdots+\cos^na\right)
-=\sin a\cdot\frac{1}{1-\cos a}
-=\frac{\sin a}{1-\cos a}=\cot\frac{a}{2}
+\begin{aligned}
+\text{原式}
+&=\lim\limits_{n\to\infty}\frac{\sin a\left(1-\cos^{n+1}a\right)}{1-\cos a} \\
+&=\frac{\sin a}{1-\cos a}
+=\frac{1+\cos a}{\sin a}
+=\cot\frac{a}{2}.
+\end{aligned}
 \]
 \end{solution}
 
@@ -162,22 +173,38 @@ m^3+\frac{1}{m^3}=\left(m+\frac{1}{m}\right)^3-3m\cdot\frac{1}{m}\left(m+\frac{1
 \end{problem}
 
 \begin{solution}
-根据一元二次方程根与系数的关系，\(\tan\alpha+\tan\beta=-p\)，\(\tan\alpha\cdot\tan\beta=q\).
+令 \(u=\tan\alpha\)，\(v=\tan\beta\). 由根与系数的关系，
+\(u+v=-p\)，\(uv=q\).
+记 \(S=\alpha+\beta\). 先讨论 \(q\neq1\) 的情形. 因为 \(\tan\alpha\) 与 \(\tan\beta\) 有意义，\(\cos\alpha\cos\beta\neq0\)，且
+\[
+\cos S=\cos\alpha\cos\beta(1-uv)=\cos\alpha\cos\beta(1-q)\neq0
+\]
+故 \(\tan S\) 有意义，并且
+\[
+\tan S=\frac{u+v}{1-uv}=-\frac{p}{1-q}
+\]
+原式可写为
+\[
+\cos^2S\left(\tan^2S+p\tan S+q\right)
+\]
+又 \(\cos^2S=\dfrac{1}{1+\tan^2S}\)，所以
+\[
+\text{原式}=\frac{\tan^2S+p\tan S+q}{1+\tan^2S}
+\]
+代入 \(\tan S=-\dfrac{p}{1-q}\)，分子为
+\[
+\frac{p^2}{(1-q)^2}-\frac{p^2}{1-q}+q
+=\frac{q\left(p^2+(1-q)^2\right)}{(1-q)^2}
+\]
+而分母为
+\[
+1+\frac{p^2}{(1-q)^2}=\frac{p^2+(1-q)^2}{(1-q)^2}
+\]
+由于 \(q\neq1\)，有 \(p^2+(1-q)^2>0\)，所以约去相同因子后，原式等于 \(q\).
 
-当 \(q\ne1\) 时，得 \(\tan\left(\alpha+\beta\right)=\dfrac{\tan\alpha+\tan\beta}{1-\tan\alpha\tan\beta}=\dfrac{-p}{1-q}\). 因此
-\[
-\text{原式}=\cos^2\left(\alpha+\beta\right)\left[\tan^2\left(\alpha+\beta\right)+p\tan\left(\alpha+\beta\right)+q\right].
-\]
-又因 \(\cos^2\left(\alpha+\beta\right)=\dfrac{1}{1+\tan^2\left(\alpha+\beta\right)}\)，所以
-\[
-\text{原式}=\frac{\tan^2\left(\alpha+\beta\right)+p\tan\left(\alpha+\beta\right)+q}{1+\tan^2\left(\alpha+\beta\right)}.
-\]
-代入 \(\tan\left(\alpha+\beta\right)=\dfrac{-p}{1-q}\)，通分得
-\[
-\text{原式}=\frac{p^2-p^2\left(1-q\right)+q\left(1-q\right)^2}{p^2+\left(1-q\right)^2}=q.
-\]
+当 \(q=1\) 时，\(uv=1\)，从而 \(\cos S=\cos\alpha\cos\beta(1-uv)=0\). 此时 \(\sin^2S=1\)，且含有 \(\cos S\) 的另外两项均为零，所以原式仍为 \(1=q\).
 
-当 \(q=1\) 时，\(\cos\left(\alpha+\beta\right)=0\)，\(\sin\left(\alpha+\beta\right)=\pm1\)，因此原式 \(=1\).
+综上，所求值为 \(q\).
 \end{solution}
 
 \begin{problem}
@@ -185,22 +212,43 @@ m^3+\frac{1}{m^3}=\left(m+\frac{1}{m}\right)^3-3m\cdot\frac{1}{m}\left(m+\frac{1
 \end{problem}
 
 \begin{solution}
-将 \(c\) 化成直角坐标方程：\(y=\dfrac{2xy}{x^2+y^2}\)，即 \(\dfrac{2x}{x^2+y^2}=1\)，或者写成 \(c:\left(x-1\right)^2+y^2=1\).
-
-把 \(y=ax-1\) 代入 \(\left(x-1\right)^2+y^2=1\)，整理后得
+在非原点处，由极坐标与直角坐标的关系 \(x=r\cos\theta\)，\(y=r\sin\theta\)，\(r^2=x^2+y^2\)，原极坐标方程给出
 \[
-\left(1+a^2\right)x^2-2\left(a+1\right)x+1=0
+y=r\sin\theta=2\sin\theta\cos\theta=\frac{2xy}{x^2+y^2}
+\]
+原点也满足原极坐标方程（取 \(\theta=0\)）. 因此不能约去 \(y\)，否则会漏掉 \(y=0\) 这一整支. 两边相乘并整理，得
+\[
+y\left(x^2+y^2-2x\right)=0
+\]
+所以曲线 \(c\) 是两部分的并集：
+\(c_1:y=0\)，\(c_2:x^2+y^2-2x=0,\qquad\text{即}\quad (x-1)^2+y^2=1\).
+
+先考察直线 \(L\) 与 \(c_1\) 的关系. 当 \(a=0\) 时，\(L:y=-1\)，它与 \(c_1\) 不相交；当 \(a\neq0\) 时，令 \(y=0\)，得交点
+\[
+P\left(\frac1a,0\right)
 \]
 
-当这个方程的判别式 \(\Delta>0\) 时，表示 \(L\) 与 \(c\) 有两个交点，即相交；当 \(\Delta=0\) 时，表示 \(L\) 与 \(c\) 只有一个交点，即相切；当 \(\Delta<0\) 时，表示 \(L\) 与 \(c\) 没有交点，即不相交.
+再考察直线 \(L\) 与圆 \(c_2\) 的关系. 代入圆方程，得
+\[
+(x-1)^2+(ax-1)^2=1
+\]
+即
+\[
+(1+a^2)x^2-2(a+1)x+1=0
+\]
+其判别式为
+\[
+\Delta=\left[-2(a+1)\right]^2-4(1+a^2)=8a
+\]
+因此，当 \(a>0\) 时，直线与圆有两个交点；当 \(a=0\) 时，直线与圆相切于 \((1,-1)\)；当 \(a<0\) 时，直线与圆没有交点.
 
-当 \(\Delta>0\) 时，即 \(4\left(a+1\right)^2-4\left(1+a^2\right)>0\)，即 \(8a>0\)，因此 \(a>0\) 时相交.
-
-当 \(\Delta=0\) 时，即 \(4\left(a+1\right)^2-4\left(1+a^2\right)=0\)，即 \(8a=0\)，因此 \(a=0\) 时相切.
-
-当 \(\Delta<0\) 时，即 \(4\left(a+1\right)^2-4\left(1+a^2\right)<0\)，即 \(8a<0\)，因此 \(a<0\) 时不相交.
-
-故当 \(a>0\) 时，\(L\) 与 \(c\) 相交；\(a=0\) 时相切；\(a<0\) 时不相交.
+合并两部分可得：
+\begin{enumerate}
+\item 当 \(a<0\) 时，\(L\) 与 \(c\) 在 \(\left(\frac1a,0\right)\) 相交，且不与圆支相交；
+\item 当 \(a=0\) 时，\(L\) 与 \(c\) 相切于 \((1,-1)\)；
+\item 当 \(a>0\) 时，\(L\) 与圆支有两个交点，并且还与 \(y=0\) 有交点 \(\left(\frac1a,0\right)\). 当 \(a=\frac12\) 时，该点是圆支交点 \((2,0)\) 之一，故共有两个不同交点；当 \(a>0\) 且 \(a\neq\frac12\) 时，共有三个不同交点.
+\end{enumerate}
+因此，按原极坐标方程的完整轨迹理解，\(a\neq0\) 时均有相交情形，\(a=0\) 时相切，没有不相交的情形. 约去 \(y\) 只能得到圆支，不能据此代替原曲线的完整分类.
 \end{solution}
 
 \section{参考题}
@@ -210,29 +258,40 @@ m^3+\frac{1}{m^3}=\left(m+\frac{1}{m}\right)^3-3m\cdot\frac{1}{m}\left(m+\frac{1
 \end{problem}
 
 \begin{solution}
-把极坐标化为直角坐标：\(E=\ln\sqrt{x^2+y^2}\). 求在点 \(\left(3,4\right)\) 处，沿 \(\left(3,4\right)\) 至 \(\left(0,10\right)\) 方向上的 \(E\) 的变化率.
-
-\solutionfigure{\bitmapfigure[max width=4.2cm]{img/1977/guizhou/q11_solution_fig1.png}}
-
-从 \(\left(3,4\right)\) 至 \(\left(0,10\right)\) 的方向记为 \(\bs{L}\)，则 \(\bs{L}=\left(0-3\right)\bs{i}+\left(10-4\right)\bs{j}=-3\bs{i}+6\bs{j}\). 其中 \(\bs{i}\)，\(\bs{j}\) 分别表示横轴，纵轴上的单位向量. 问题的实质是求 \(E\) 在 \(\bs{L}\) 方向上的方向导数 \(\dfrac{\partial E}{\partial\bs{L}}\). 求方向导数的计算公式为
+因为 \(\theta=\arcsin0.8\) 是第一象限角，所以 \(\sin\theta=0.8\)，\(\cos\theta=0.6\). 起点的直角坐标为
 \[
-\frac{\partial E}{\partial\bs{L}}=\frac{\partial E}{\partial x}\cos\alpha+\frac{\partial E}{\partial y}\cos\beta
+P=(5\cos\theta,5\sin\theta)=(3,4)
+\]
+终点的直角坐标为
+\[
+Q=\left(10\cos\frac\pi2,10\sin\frac\pi2\right)=(0,10)
 \]
 
-其中 \(\cos\alpha\)，\(\cos\beta\) 是 \(\bs{L}\) 的方向余弦.
-\[
-\frac{\partial E}{\partial x}=\frac{\partial\left(\ln\sqrt{x^2+y^2}\right)}{\partial x}=\frac{x}{x^2+y^2},\qquad \frac{\partial E}{\partial y}=\frac{\partial\left(\ln\sqrt{x^2+y^2}\right)}{\partial y}=\frac{y}{x^2+y^2}
-\]
-\[
-\cos\alpha=\frac{\bs{L}\cdot\bs{i}}{\left|\bs{L}\right|\left|\bs{i}\right|}=\frac{-3}{\sqrt{\left(-3\right)^2+6^2}}=-\frac{1}{\sqrt5},\qquad \cos\beta=\frac{\bs{L}\cdot\bs{j}}{\left|\bs{L}\right|\left|\bs{j}\right|}=\frac{6}{\sqrt{\left(-3\right)^2+6^2}}=\frac{2}{\sqrt5}
-\]
+\solutionfigure{\bitmapfigure[width=4.2cm]{img/1977/guizhou/q11_solution_fig1.png}}
 
-因此 \(\dfrac{\partial E}{\partial\bs{L}}=-\dfrac{1}{\sqrt5}\cdot\dfrac{x}{x^2+y^2}+\dfrac{2}{\sqrt5}\cdot\dfrac{y}{x^2+y^2}\). 在点 \(\left(3,4\right)\) 处，
+把 \(E=\ln\rho\) 写成直角坐标函数，得
 \[
-\frac{\partial E}{\partial\bs{L}}=-\frac{1}{\sqrt5}\cdot\frac{3}{25}+\frac{2}{\sqrt5}\cdot\frac{4}{25}=\frac{\sqrt5}{25}
+E(x,y)=\ln\sqrt{x^2+y^2}
 \]
-
-答：\(E\) 在点 \(\rho=5\)，\(\theta=\arcsin0.8\) 处，沿此点至 \(\rho=10\)，\(\theta=\dfrac{\pi}{2}\) 方向上的变化率为 \(\dfrac{\sqrt5}{25}\).
+因此
+\(\frac{\partial E}{\partial x}=\frac{x}{x^2+y^2}\)，\(\frac{\partial E}{\partial y}=\frac{y}{x^2+y^2}\).
+从 \(P\) 指向 \(Q\) 的方向向量为
+\(\overrightarrow{PQ}=(-3,6)\)，\(\left|\overrightarrow{PQ}\right|=3\sqrt5\)
+所以对应的单位方向向量为
+\[
+\bs{u}=\frac{\overrightarrow{PQ}}{\left|\overrightarrow{PQ}\right|}
+=\left(-\frac1{\sqrt5},\frac2{\sqrt5}\right)
+\]
+于是，方向导数为
+\[
+\begin{aligned}
+D_{\bs{u}}E(P)
+&=\left(\frac{\partial E}{\partial x},\frac{\partial E}{\partial y}\right)_{(3,4)}\cdot\bs{u} \\
+&=\left(\frac3{25},\frac4{25}\right)\cdot\left(-\frac1{\sqrt5},\frac2{\sqrt5}\right)
+=\frac{\sqrt5}{25}.
+\end{aligned}
+\]
+因此，所求变化率为 \(\dfrac{\sqrt5}{25}\).
 \end{solution}
 
 \begin{problem}
@@ -240,16 +299,25 @@ m^3+\frac{1}{m^3}=\left(m+\frac{1}{m}\right)^3-3m\cdot\frac{1}{m}\left(m+\frac{1
 \end{problem}
 
 \begin{solution}
-因为 \(S_n-S_{n-1}=\dfrac{1}{n^2}>0\)，所以此数列是单调上升数列. 又因为
+对任意 \(n\geqslant1\)，有
 \[
-S_n=1+\frac{1}{2^2}+\frac{1}{3^2}+\cdots+\frac{1}{n^2}<1+\frac{1}{1\cdot2}+\frac{1}{2\cdot3}+\cdots+\frac{1}{\left(n-1\right)n}
+S_{n+1}-S_n=\frac{1}{(n+1)^2}>0
 \]
-同时有
-\[
-1+\frac{1}{1\cdot2}+\frac{1}{2\cdot3}+\cdots+\frac{1}{\left(n-1\right)n}
-=1+\left(1-\frac{1}{2}\right)+\left(\frac{1}{2}-\frac{1}{3}\right)+\cdots+\left(\frac{1}{n-1}-\frac{1}{n}\right)
-=2-\frac{1}{n}<2
-\]
+所以数列 \(\{S_n\}\) 单调递增.
 
-此数列又有上界，单调上升而又有上界的数列必收敛. 故 \(\{S_n\}\) 收敛.
+当 \(n\geqslant2\) 时，对每个 \(k=2\)，\(3\)，\(\ldots\)，\(n\)，都有 \(k^2>k(k-1)>0\)，从而
+\[
+\frac1{k^2}<\frac1{k(k-1)}=\frac1{k-1}-\frac1k
+\]
+因此
+\[
+\begin{aligned}
+S_n
+&=1+\sum_{k=2}^{n}\frac1{k^2}
+<1+\sum_{k=2}^{n}\left(\frac1{k-1}-\frac1k\right) \\
+&=1+\left(1-\frac12\right)+\left(\frac12-\frac13\right)+\cdots+\left(\frac1{n-1}-\frac1n\right) \\
+&=2-\frac1n<2.
+\end{aligned}
+\]
+而 \(S_1=1<2\)，所以整个数列有上界 \(2\). 单调递增且有上界的数列必收敛，故 \(\{S_n\}\) 是收敛数列.
 \end{solution}

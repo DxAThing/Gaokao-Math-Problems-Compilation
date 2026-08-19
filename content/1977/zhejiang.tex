@@ -7,11 +7,12 @@
 \end{problem}
 
 \begin{solution}
+因为 \(8=2^3\)，且 \(\left(\dfrac{1}{8}\right)^0=1\)，所以原式为
 \[
-\text{原式}
-=\sqrt[6]{2^{15}}\div\sqrt{2^3}\times\sqrt[3]{2^3}\div 1
-=4\sqrt{2}\div 2\sqrt{2}\times 2\div 1
-=4
+\frac{\sqrt[6]{2^{15}}}{\sqrt{2^3}}\times\sqrt[3]{2^3}
+=\frac{2^{15/6}}{2^{3/2}}\times2^{3/3}
+=\frac{2^{5/2}}{2^{3/2}}\times2
+=2\times2=4
 \]
 \end{solution}
 
@@ -20,11 +21,19 @@
 \end{problem}
 
 \begin{solution}
+由于 \(4\)，\(25\)，\(10\) 和 \(\sqrt{1000}\) 都为正数，可以使用常用对数的运算法则. 分子为
 \[
-\text{原式}
-=\frac{\lg \frac{4\times 25}{10}}{\lg 10^{\frac{3}{2}}}
-=\frac{\lg 10}{\frac{3}{2}\lg 10}
-=\frac{2}{3}
+\lg4+\lg25-\lg10
+=\lg\left(\frac{4\times25}{10}\right)
+=\lg10
+\]
+又因为 \(\sqrt{1000}=\sqrt{10^3}=10^{3/2}\)，所以分母为
+\[
+\lg\sqrt{1000}=\lg10^{3/2}=\frac{3}{2}\lg10
+\]
+因此原式
+\[
+=\frac{\lg10}{\frac{3}{2}\lg10}=\frac{2}{3}
 \]
 \end{solution}
 
@@ -33,35 +42,55 @@
 \end{problem}
 
 \begin{solution}
+对任意 \(n\) 有
 \[
-\begin{gathered}
-\text{原式}=\left( \frac{1}{100}-\frac{1}{101} \right)+\left( \frac{1}{101}-\frac{1}{102} \right)+\left( \frac{1}{102}-\frac{1}{103} \right)+\cdots+\left( \frac{1}{149}-\frac{1}{150} \right)\\
-\text{原式}=\frac{1}{100}-\frac{1}{150}=\frac{1}{300}
-\end{gathered}
+\frac{1}{n\left(n+1\right)}=\frac{1}{n}-\frac{1}{n+1}
+\]
+因此原式为
+\[
+\left(\frac{1}{100}-\frac{1}{101}\right)+\left(\frac{1}{101}-\frac{1}{102}\right)+\cdots+\left(\frac{1}{149}-\frac{1}{150}\right)
+\]
+中间各项首尾相消，得到
+\[
+\frac{1}{100}-\frac{1}{150}=\frac{150-100}{100\times150}=\frac{1}{300}
 \]
 \end{solution}
 
 \begin{problem}
-已知 \( \tan\alpha=\sqrt{2} \)，求 \( \frac{\cos\alpha+\sin\alpha}{\cos\alpha-\sin\alpha} \) 的值.
+已知 \(\tan\alpha=\sqrt{2}\)，求 \(\frac{\cos\alpha+\sin\alpha}{\cos\alpha-\sin\alpha}\) 的值.
 \end{problem}
 
 \begin{solution}
+因为 \(\tan\alpha\) 有定义，所以 \(\cos\alpha\ne0\). 又 \(\tan\alpha=\sqrt2\ne1\)，故题中分母不为零. 分子、分母同除以 \(\cos\alpha\)，得
 \[
-\begin{gathered}
-\frac{\cos\alpha+\sin\alpha}{\cos\alpha-\sin\alpha}=\frac{\cos\alpha\left( 1+\frac{\sin\alpha}{\cos\alpha} \right)}{\cos\alpha\left( 1-\frac{\sin\alpha}{\cos\alpha} \right)}=\frac{1+\tan\alpha}{1-\tan\alpha}\\
-\frac{\cos\alpha+\sin\alpha}{\cos\alpha-\sin\alpha}=\frac{1+\sqrt{2}}{1-\sqrt{2}}=-3-2\sqrt{2}
-\end{gathered}
+\frac{\cos\alpha+\sin\alpha}{\cos\alpha-\sin\alpha}
+=\frac{1+\tan\alpha}{1-\tan\alpha}
+=\frac{1+\sqrt2}{1-\sqrt2}
+\]
+分子、分母同乘 \(1+\sqrt2\)，有
+\[
+\frac{1+\sqrt2}{1-\sqrt2}
+=\frac{\left(1+\sqrt2\right)^2}{1-2}
+=-\left(3+2\sqrt2\right)=-3-2\sqrt2
 \]
 \end{solution}
 
 \begin{problem}
-求 \( \sin^2 62^\circ+\tan54^\circ\cdot\tan45^\circ\cdot\tan36^\circ+\sin^2 28^\circ \) 的值.
+求 \(\sin^2 62^\circ+\tan54^\circ\cdot\tan45^\circ\cdot\tan36^\circ+\sin^2 28^\circ\) 的值.
 \end{problem}
 
 \begin{solution}
+由于 \(28^\circ=90^\circ-62^\circ\)，所以 \(\sin28^\circ=\cos62^\circ\)，从而
 \[
-\text{原式}=\sin^2 62^\circ+\cos^2 62^\circ+\tan54^\circ\cdot\tan45^\circ\cdot\cot54^\circ=1+1=2
+\sin^2 62^\circ+\sin^2 28^\circ
+=\sin^2 62^\circ+\cos^2 62^\circ=1
 \]
+又 \(\tan45^\circ=1\)，且 \(36^\circ=90^\circ-54^\circ\)，所以 \(\tan36^\circ=\cot54^\circ\). 因此
+\[
+\tan54^\circ\tan36^\circ
+=\tan54^\circ\cot54^\circ=1
+\]
+因此原式的值为 \(1+1=2\).
 \end{solution}
 
 \begin{problem}
@@ -71,142 +100,232 @@
 \end{problem}
 
 \begin{solution}
-若以 \( h_1 \)，\( h_2 \) 分别表示圆柱的高和上面圆锥的高，则“粮仓”的容积
+设圆柱和圆锥的公共底面半径为 \(r=1.5\text{ 米}\)，圆柱高为 \(h_1=3\text{ 米}\)，圆锥高为 \(h_2=0.6\text{ 米}\). 土圆仓由一个圆柱和一个圆锥组成，所以
 \[
-\begin{gathered}
-V=V_{\text{圆柱}}+V_{\text{圆锥}}=\pi r^2 h_1+\frac{1}{3}\pi r^2 h_2=\pi r^2\left( h_1+\frac{1}{3}h_2 \right)\\
-V=3.14\times 1.5^2\left( 3+\frac{1}{3}\times 0.6 \right)\approx22.6
-\end{gathered}
+V=\pi r^2h_1+\frac{1}{3}\pi r^2h_2
+=\pi r^2\left(h_1+\frac{h_2}{3}\right)
 \]
-
-答：“土圆仓”的容积约为 \(22.6\text{ 立方米}\).
+代入 \(\pi\approx3.14\) 以及题中数据，得
+\[
+V\approx3.14\times1.5^2\times\left(3+\frac{0.6}{3}\right)
+=3.14\times2.25\times3.2
+=22.608\text{ 立方米}
+\]
+精确到 \(0.1\text{ 立方米}\)，土圆仓的容积约为 \(22.6\text{ 立方米}\).
 \end{solution}
 
 \begin{problem}
-求平行直线 \( 3x+2y-3=0 \) 和 \( 3x+2y+2=0 \) 之间的距离.
+求平行直线 \(3x+2y-3=0\) 和 \(3x+2y+2=0\) 之间的距离.
 \end{problem}
 
 \begin{solution}
-点 \( P(1,0) \) 是直线 \( 3x+2y-3=0 \) 上的点. 点 \(P\) 到直线 \( 3x+2y+2=0 \) 的距离为 \( d=\frac{|3\times 1+2\times 0+2|}{\sqrt{3^2+2^2}}=\frac{5\sqrt{13}}{13} \). 因为这两条直线平行，所求得的 \( d=\frac{5\sqrt{13}}{13} \) 就是这两条平行直线间的距离.
+在直线 \(3x+2y-3=0\) 上取点 \(P=\left(1,0\right)\)，因为 \(3\times1+2\times0-3=0\). 点 \(P\) 到直线 \(3x+2y+2=0\) 的距离公式给出
+\[
+d=\frac{|3\times1+2\times0+2|}{\sqrt{3^2+2^2}}
+=\frac{5}{\sqrt{13}}
+=\frac{5\sqrt{13}}{13}
+\]
+两直线平行，任取第一条直线上的点到第二条直线的垂距都相等，因此这就是两平行直线之间的距离，即
+\[
+d=\frac{5\sqrt{13}}{13}
+\]
 \end{solution}
 
 \begin{problem}
-已知 \( \alpha \) 和 \( \beta \) 是三角形的两个内角，并且 \( \alpha \) 是锐角，而 \( \cos\alpha=\frac{3}{5} \)，\( \sin\beta=\frac{5}{13} \)，求 \( \sin(\alpha+\beta) \) 的值.
+已知 \(\alpha\) 和 \(\beta\) 是三角形的两个内角，并且 \(\alpha\) 是锐角，而 \(\cos\alpha=\frac{3}{5}\)，\(\sin\beta=\frac{5}{13}\)，求 \(\sin\left(\alpha+\beta\right)\) 的值.
 \end{problem}
 
 \begin{solution}
-因为 \( \alpha \) 为锐角，且 \( \cos\alpha=\frac{3}{5} \)，所以 \( \sin\alpha=\frac{4}{5} \).
-
-因为 \( \sin\beta=\frac{5}{13} \)，\( \beta \) 可能是锐角，也可能是钝角，所以 \( \cos\beta=\pm\frac{12}{13} \).
-
-当 \( \beta \) 为锐角时，\( \cos\beta=\frac{12}{13} \)，
+因为 \(\alpha\) 是锐角，所以 \(\sin\alpha>0\). 由平方关系
 \[
-\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta=\frac{4}{5}\cdot\frac{12}{13}+\frac{3}{5}\cdot\frac{5}{13}=\frac{63}{65}
+\sin\alpha=\sqrt{1-\cos^2\alpha}=\sqrt{1-\left(\frac{3}{5}\right)^2}=\frac{4}{5}
+\]
+由于 \(\beta\) 是三角形内角，\(0^\circ<\beta<180^\circ\). 已知 \(\sin\beta=\frac{5}{13}\)，故 \(\beta\) 可能为锐角或钝角，分别讨论如下.
+
+当 \(\beta\) 为锐角时，\(\cos\beta>0\)，于是
+\[
+\cos\beta=\sqrt{1-\sin^2\beta}=\frac{12}{13}
+\]
+由两角和正弦公式，
+\[
+\sin\left(\alpha+\beta\right)=\sin\alpha\cos\beta+\cos\alpha\sin\beta
+=\frac{4}{5}\times\frac{12}{13}+\frac{3}{5}\times\frac{5}{13}
+=\frac{63}{65}
 \]
 
-当 \( \beta \) 为钝角时，\( \cos\beta=-\frac{12}{13} \)，
+当 \(\beta\) 为钝角时，\(\cos\beta<0\)，于是 \(\cos\beta=-\frac{12}{13}\). 这时
 \[
-\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta=\frac{4}{5}\cdot\left( -\frac{12}{13} \right)+\frac{3}{5}\cdot\frac{5}{13}=-\frac{33}{65}
+\sin\left(\alpha+\beta\right)=\frac{4}{5}\times\left(-\frac{12}{13}\right)+\frac{3}{5}\times\frac{5}{13}
+=-\frac{33}{65}
 \]
-
-因为 \( \alpha \)，\( \beta \) 是三角形两内角，\( 0^\circ<\alpha+\beta<180^\circ \)，\( \sin(\alpha+\beta) \) 不可能是负值，所以 \( \beta \) 为钝角这种情况应舍去.
-
-故 \( \sin(\alpha+\beta)=\frac{63}{65} \).
+但是 \(\alpha\)、\(\beta\) 是三角形的两个内角，所以 \(0^\circ<\alpha+\beta<180^\circ\)，从而 \(\sin\left(\alpha+\beta\right)>0\)，钝角情形不可能. 因此
+\[
+\sin\left(\alpha+\beta\right)=\frac{63}{65}
+\]
 \end{solution}
 
 \begin{problem}
-解不等式：\( \log_5\left( x^2-2x-15 \right)<\log_5\left( x+13 \right) \).
+解不等式：\(\log_5\left( x^2-2x-15 \right)<\log_5\left( x+13 \right)\).
 \end{problem}
 
 \begin{solution}
-根据对数的定义和性质，要使原不等式成立，\( x \) 必须同时满足下列不等式：
+因为对数的底数 \(5>1\)，对数函数 \(\log_5 t\) 在 \(t>0\) 上单调递增，所以原不等式等价于
 \[
 \begin{cases}
 x^2-2x-15<x+13\\
 x^2-2x-15>0\\
 x+13>0
 \end{cases}
-\Leftrightarrow
-\begin{cases}
-(x+4)(x-7)<0\\
-(x+3)(x-5)>0\\
-x>-13
-\end{cases}
-\Leftrightarrow
-\begin{cases}
--4<x<7\\
-x>5\text{ 或者 }x<-3\\
-x>-13
-\end{cases}
 \]
-所以原不等式的解为：\( 5<x<7 \) 和 \( -4<x<-3 \).
+逐项化简：
+\[
+x^2-2x-15<x+13
+\Longleftrightarrow \left(x-7\right)\left(x+4\right)<0
+\Longleftrightarrow -4<x<7
+\]
+\[
+x^2-2x-15>0
+\Longleftrightarrow \left(x-5\right)\left(x+3\right)>0
+\Longleftrightarrow x<-3\text{ 或 }x>5
+\]
+以及 \(x+13>0\Longleftrightarrow x>-13\). 取三组条件的公共部分，得
+\[
+\left(-4,7\right)\cap\left(\left(-\infty,-3\right)\cup\left(5,+\infty\right)\right)\cap\left(-13,+\infty\right)
+=\left(-4,-3\right)\cup\left(5,7\right)
+\]
+所以原不等式的解集为 \(x\in\left(-4,-3\right)\cup\left(5,7\right)\).
 \end{solution}
 
 \begin{problem}
-点 \(O\) 为 \( \triangle ABC \) 内任意一点，连接 \(AO\) 并延长交 \(BC\) 于点 \(D\)，连接 \(BO\) 并延长交 \(AC\) 于点 \(E\)，连接 \(CO\) 并延长交 \(AB\) 于点 \(F\)，则 \( \frac{OD}{AD}+\frac{OE}{BE}+\frac{OF}{CF}=1 \).
+点 \(O\) 为 \(\triangle ABC\) 内任意一点，连接 \(AO\) 并延长交 \(BC\) 于点 \(D\)，连接 \(BO\) 并延长交 \(AC\) 于点 \(E\)，连接 \(CO\) 并延长交 \(AB\) 于点 \(F\)，则 \(\frac{OD}{AD}+\frac{OE}{BE}+\frac{OF}{CF}=1\).
 
 \bitmapfigure[float=inline,max width=6.2cm]{img/1977/zhejiang/q10_fig1.png}
 \end{problem}
 
 \begin{solution}
-作 \( \triangle ABC \) 和 \( \triangle OBC \) 的高 \(AK\) 和 \(OH\).
-因此 \( \mathrm{Rt}\triangle AKD\sim \mathrm{Rt}\triangle OHD \)，\( \frac{OH}{AK}=\frac{OD}{AD} \).
-所以
+记三角形 \(XYZ\) 的面积为 \(S_{XYZ}\). 过 \(A\)、\(O\) 分别向 \(BC\) 作垂线，垂足为 \(K\)、\(H\). 由于 \(A\)、\(O\)、\(D\) 共线且 \(K\)、\(H\)、\(D\) 共线，两个直角三角形相似：
 \[
-\frac{\triangle OBC\text{面积}}{\triangle ABC\text{面积}}
-=\frac{\frac{1}{2}BC\cdot OH}{\frac{1}{2}BC\cdot AK}
-=\frac{OH}{AK}=\frac{OD}{AD}
+\triangle AKD\sim\triangle OHD
+\]
+因此 \(\frac{OH}{AK}=\frac{OD}{AD}\)，以 \(BC\) 为底计算面积，得到
+\[
+\frac{S_{OBC}}{S_{ABC}}
+=\frac{\frac12BC\cdot OH}{\frac12BC\cdot AK}
+=\frac{OH}{AK}
+=\frac{OD}{AD}
 \]
 
-同理，有 \( \frac{\triangle OAC\text{面积}}{\triangle ABC\text{面积}}=\frac{OE}{BE} \)，\( \frac{\triangle OAB\text{面积}}{\triangle ABC\text{面积}}=\frac{OF}{CF} \).
-所以
+为比较另外两组线段，过 \(O\)、\(B\) 分别向 \(AC\) 作垂线，垂足为 \(G\)、\(J\). 因为 \(B\)、\(O\)、\(E\) 共线且 \(E\) 在 \(AC\) 上，直角三角形 \(\triangle OGE\) 与 \(\triangle BJE\) 有一组相等的锐角，故两三角形相似，从而
 \[
-\frac{OD}{AD}+\frac{OE}{BE}+\frac{OF}{CF}=\frac{\triangle OBC\text{面积}+\triangle OAC\text{面积}+\triangle OAB\text{面积}}{\triangle ABC\text{面积}}=\frac{\triangle ABC\text{面积}}{\triangle ABC\text{面积}}=1
+\frac{OG}{BJ}=\frac{OE}{BE}
 \]
-即 \( \frac{OD}{AD}+\frac{OE}{BE}+\frac{OF}{CF}=1 \).
+又以 \(AC\) 为底，\(OG\)、\(BJ\) 分别是三角形 \(OAC\)、\(ABC\) 的高，所以
+\[
+\frac{S_{OAC}}{S_{ABC}}
+=\frac{\frac12AC\cdot OG}{\frac12AC\cdot BJ}
+=\frac{OG}{BJ}
+=\frac{OE}{BE}
+\]
+
+再过 \(O\)、\(C\) 分别向 \(AB\) 作垂线，垂足为 \(L\)、\(M\). 因为 \(C\)、\(O\)、\(F\) 共线且 \(F\) 在 \(AB\) 上，直角三角形 \(\triangle OLF\) 与 \(\triangle CMF\) 相似，所以
+\[
+\frac{OL}{CM}=\frac{OF}{CF}
+\]
+以 \(AB\) 为底，\(OL\)、\(CM\) 分别是三角形 \(OAB\)、\(ABC\) 的高，故
+\[
+\frac{S_{OAB}}{S_{ABC}}
+=\frac{\frac12AB\cdot OL}{\frac12AB\cdot CM}
+=\frac{OL}{CM}
+=\frac{OF}{CF}
+\]
+
+由于 \(O\) 在三角形 \(ABC\) 内部，三个三角形 \(OBC\)、\(OCA\)、\(OAB\) 将三角形 \(ABC\) 分成三个不重叠部分，所以
+\[
+S_{OBC}+S_{OAC}+S_{OAB}=S_{ABC}
+\]
+将前三个面积比相加，得到
+\[
+\frac{OD}{AD}+\frac{OE}{BE}+\frac{OF}{CF}
+=\frac{S_{OBC}+S_{OAC}+S_{OAB}}{S_{ABC}}=1
+\]
 \end{solution}
 
 \begin{problem}
-设 \( x \)，\( y \)，\( z \) 为三个互不相等的实数，且 \( x+\frac{1}{y}=y+\frac{1}{z}=z+\frac{1}{x} \)，求证：\( x^2y^2z^2=1 \).
+设 \(x\)，\(y\)，\(z\) 为三个互不相等的实数，且 \(x+\frac{1}{y}=y+\frac{1}{z}=z+\frac{1}{x}\)，求证：\(x^2y^2z^2=1\).
 \end{problem}
 
 \begin{solution}
-由 \( x+\frac{1}{y}=y+\frac{1}{z} \)，得 \( x-y=\frac{1}{z}-\frac{1}{y}=\frac{y-z}{yz} \)，即 \( yz=\frac{y-z}{x-y} \).
-同理可得 \( xy=\frac{x-y}{z-x} \)，\( zx=\frac{z-x}{y-z} \).
-所以 \( yz\cdot xy\cdot zx=\frac{y-z}{x-y}\cdot\frac{x-y}{z-x}\cdot\frac{z-x}{y-z}=1 \).
-即 \( x^2y^2z^2=1 \).
+由题设中的倒数可知 \(x\)，\(y\)，\(z\) 均不为零；又因为三数互不相等，所以 \(x-y\)，\(y-z\)，\(z-x\) 均不为零. 由前两个相等式，
+\[
+x+\frac{1}{y}=y+\frac{1}{z}
+\Longrightarrow x-y=\frac{1}{z}-\frac{1}{y}=\frac{y-z}{yz}
+\]
+故
+\[
+yz=\frac{y-z}{x-y}
+\]
+再由 \(y+\frac{1}{z}=z+\frac{1}{x}\)，有
+\[
+y-z=\frac{1}{x}-\frac{1}{z}=\frac{z-x}{zx}
+\]
+于是 \(zx=\frac{z-x}{y-z}\).
+再由 \(z+\frac{1}{x}=x+\frac{1}{y}\)，有
+\[
+z-x=\frac{1}{y}-\frac{1}{x}=\frac{x-y}{xy}
+\]
+于是 \(xy=\frac{x-y}{z-x}\).
+三式相乘，所有差因子均非零且约去，得
+\[
+yz\cdot zx\cdot xy
+=\frac{y-z}{x-y}\cdot\frac{z-x}{y-z}\cdot\frac{x-y}{z-x}=1
+\]
+左边为 \(x^2y^2z^2\)，因此
+\[
+x^2y^2z^2=1
+\]
 \end{solution}
 
 \section{参考题}
 
-
 \begin{problem}
-将抛物线 \( y=x^2 \)，直线 \( x=2 \) 与 \( x \) 轴围成的曲边三角形，绕 \( x \) 轴旋转一周形成一个旋转体，求此旋转体的体积.
+将抛物线 \(y=x^2\)，直线 \(x=2\) 与 \(x\) 轴围成的曲边三角形，绕 \(x\) 轴旋转一周形成一个旋转体，求此旋转体的体积.
 \end{problem}
 
 \begin{solution}
-旋转体的体积
+抛物线与 \(x\) 轴交于 \(x=0\)，直线 \(x=2\) 给出右端点，所以所围区域在 \(0\leq x\leq2\) 上位于 \(x\) 轴与曲线 \(y=x^2\) 之间. 绕 \(x\) 轴旋转时，位置 \(x\) 处截得半径为 \(y=x^2\) 的圆盘，其面积为 \(\pi y^2=\pi x^4\). 因此
 \[
-V=\int_0^2 \pi y^2\mathrm{d}x
-=\int_0^2 \pi x^4\mathrm{d}x
-=\left. \frac{\pi x^5}{5} \right|_0^2
-=\frac{32}{5}\pi
+V=\int_0^2\pi x^4\,\mathrm{d}x
+=\left.\frac{\pi x^5}{5}\right|_0^2
+=\frac{\pi\times2^5}{5}=\frac{32}{5}\pi
 \]
 \end{solution}
 
 \begin{problem}
-求不定积分 \(\int \frac{6x^2+22x+18}{(x+1)(x+2)(x+3)}\mathrm{d}x\).
+求不定积分 \(\int \frac{6x^2+22x+18}{\left(x+1\right)\left(x+2\right)\left(x+3\right)}\,\mathrm{d}x\).
 \end{problem}
 
 \begin{solution}
+先设有理函数作部分分式分解：
 \[
-\begin{gathered}
-\int \frac{6x^2+22x+18}{(x+1)(x+2)(x+3)}\mathrm{d}x
-=\int \left( \frac{1}{x+1}+\frac{2}{x+2}+\frac{3}{x+3} \right)\mathrm{d}x\\
-=\ln\left| x+1 \right|+2\ln\left| x+2 \right|+3\ln\left| x+3 \right|+C\\
-=\ln\left| (x+1)(x+2)^2(x+3)^3 \right|+C
-\end{gathered}
+\frac{6x^2+22x+18}{\left(x+1\right)\left(x+2\right)\left(x+3\right)}
+=\frac{A}{x+1}+\frac{B}{x+2}+\frac{C}{x+3}
 \]
-
-其中 \(C\) 是任意常数.
+两边同乘 \(\left(x+1\right)\left(x+2\right)\left(x+3\right)\)，得到
+\[
+6x^2+22x+18=A\left(x+2\right)\left(x+3\right)+B\left(x+1\right)\left(x+3\right)+C\left(x+1\right)\left(x+2\right)
+\]
+分别令 \(x=-1\)，\(x=-2\)，\(x=-3\)，可得 \(2A=2\)，\(-B=-2\)，\(2C=6\).
+所以 \(A=1\)，\(B=2\)，\(C=3\). 因而
+\[
+\int \frac{6x^2+22x+18}{\left(x+1\right)\left(x+2\right)\left(x+3\right)}\,\mathrm{d}x
+=\int\left(\frac{1}{x+1}+\frac{2}{x+2}+\frac{3}{x+3}\right)\,\mathrm{d}x
+\]
+\[
+\int\left(\frac{1}{x+1}+\frac{2}{x+2}+\frac{3}{x+3}\right)\,\mathrm{d}x
+=\ln|x+1|+2\ln|x+2|+3\ln|x+3|+C
+\]
+其中 \(x\ne-1\)，\(-2\)，\(-3\)，\(C\) 为任意常数. 也可合并写成
+\[
+\ln\left|\left(x+1\right)\left(x+2\right)^2\left(x+3\right)^3\right|+C
+\]
 \end{solution}

@@ -16,6 +16,14 @@
 C
 \end{answer}
 
+\begin{solution}
+由交集的定义，元素必须同时属于 \(M\) 和 \(N\). 集合 \(M\) 表示开区间 \((-3,1)\)，所以 \(N\) 中的 \(-3\) 和 \(1\) 不属于 \(M\)，而 \(-2\)，\(-1\)，\(0\) 属于 \(M\). 因此
+\[
+M\cap N=\{-2,-1,0\}
+\]
+所以选项 C 正确.
+\end{solution}
+
 \begin{problem}
 \(\left|\frac{2}{1 + \i}\right| =\)（\quad）
 
@@ -29,6 +37,14 @@ C
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+利用复数模的乘除法，有
+\[
+\left|\frac{2}{1+\i}\right|=\frac{|2|}{|1+\i|}=\frac{2}{\sqrt{1^2+1^2}}=\frac{2}{\sqrt{2}}=\sqrt{2}
+\]
+所以选项 C 正确.
+\end{solution}
 
 \begin{problem}
 设 \(x\)，\(y\) 满足约束条件 \(\begin{cases}
@@ -48,6 +64,15 @@ x \leqslant 3,
 B
 \end{answer}
 
+\begin{solution}
+约束条件等价于 \(y\leqslant x+1\)，\(y\geqslant1-x\)，\(x\leqslant3\).
+由 \(1-x\leqslant x+1\) 得 \(x\geqslant0\)，所以可行域中 \(0\leqslant x\leqslant3\). 对于固定的 \(x\)，\(z=2x-3y\) 随 \(y\) 增大而减小，因此取 \(y=x+1\) 时最小. 此时
+\[
+z=2x-3(x+1)=-x-3
+\]
+在 \(0\leqslant x\leqslant3\) 上，\(-x-3\) 的最小值为 \(-6\)，在点 \((3,4)\) 处取得. 所以选项 B 正确.
+\end{solution}
+
 \begin{problem}
 \(\triangle ABC\) 的内角 \(A\)，\(B\)，\(C\) 的对边分别为 \(a\)，\(b\)，\(c\). 已知 \(b = 2\)，\(B = \frac{\pi}{6}\)，\(C = \frac{\pi}{4}\)，则 \(\triangle ABC\) 的面积为（\quad）
 
@@ -61,6 +86,25 @@ B
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+由三角形内角和
+\[
+A=\pi-B-C=\pi-\frac{\pi}{6}-\frac{\pi}{4}=\frac{7\pi}{12}
+\]
+由正弦定理，
+\[
+c=\frac{b\sin C}{\sin B}=\frac{2\sin(\pi/4)}{\sin(\pi/6)}=2\sqrt{2}
+\]
+用边 \(b\)，\(c\) 及其夹角 \(A\) 求面积，得
+\[
+S_{\triangle ABC}=\frac12bc\sin A
+=2\sqrt{2}\sin\frac{7\pi}{12}
+=2\sqrt{2}\cdot\frac{\sqrt{6}+\sqrt{2}}{4}
+=\sqrt{3}+1
+\]
+所以选项 B 正确.
+\end{solution}
 
 \begin{problem}
 设椭圆 \(C: \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\)（\(a > b > 0\)）的左，右焦点分别为 \(F_1\)，\(F_2\)，\(P\) 是 \(C\) 上的点，\(PF_2 \perp F_1F_2\)，\(\angle PF_1F_2 = 30^\circ\)，则 \(C\) 的离心率为（\quad）
@@ -76,6 +120,20 @@ B
 D
 \end{answer}
 
+\begin{solution}
+设椭圆的焦距参数为 \(c\)，则 \(F_1F_2=2c\). 因为 \(PF_2\perp F_1F_2\)，三角形 \(PF_1F_2\) 在 \(F_2\) 处为直角，又因为 \(\angle PF_1F_2=30^\circ\)，所以 \(PF_1=\frac{2c}{\cos30^\circ}=\frac{4c}{\sqrt{3}}\)，且 \(PF_2=\frac{2c}{\sqrt{3}}\).
+椭圆定义给出 \(PF_1+PF_2=2a\)，于是
+\[
+2a=\frac{6c}{\sqrt{3}}=2\sqrt{3}c
+\]
+所以 \(a=\sqrt{3}c\).
+因此离心率
+\[
+e=\frac{c}{a}=\frac{1}{\sqrt{3}}=\frac{\sqrt{3}}{3}
+\]
+所以选项 D 正确.
+\end{solution}
+
 \begin{problem}
 已知 \(\sin 2\alpha = \frac{2}{3}\)，则 \(\cos^2\left(\alpha + \frac{\pi}{4}\right) =\)（\quad）
 
@@ -89,6 +147,17 @@ D
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+利用二倍角公式，
+\[
+\cos^2\left(\alpha+\frac{\pi}{4}\right)
+=\frac{1+\cos\left(2\alpha+\frac{\pi}{2}\right)}{2}
+=\frac{1-\sin2\alpha}{2}
+=\frac{1-\frac23}{2}=\frac16
+\]
+所以选项 A 正确.
+\end{solution}
 
 \begin{problem}
 执行如图的程序框图，如果输入的 \(N = 4\)，那么输出的 \(S =\)（\quad）
@@ -106,6 +175,11 @@ A
 B
 \end{answer}
 
+\begin{solution}
+程序开始时 \(k=1\)，\(S=0\)，\(T=1\). 每次循环先执行 \(T\leftarrow T/k\)，再执行 \(S\leftarrow S+T\)，最后令 \(k\leftarrow k+1\). 当 \(N=4\) 时，循环依次得到：当 \(k=1\) 时，\(T=1\)，\(S=1\)；当 \(k=2\) 时，\(T=\frac12\)，\(S=1+\frac12\)；当 \(k=3\) 时，\(T=\frac{1}{3\times2}\)，\(S=1+\frac12+\frac{1}{3\times2}\)；当 \(k=4\) 时，\(T=\frac{1}{4\times3\times2}\)，\(S=1+\frac12+\frac{1}{3\times2}+\frac{1}{4\times3\times2}\).
+此时 \(k=5>N\)，输出最后一个 \(S\). 所以选项 B 正确.
+\end{solution}
+
 \begin{problem}
 设 \(a = \log_{3} 2\)，\(b = \log_{5} 2\)，\(c = \log_{2} 3\)，则（\quad）
 
@@ -119,6 +193,15 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+因为 \(3>2>1\)，所以 \(a=\frac{\ln2}{\ln3}<1\)，\(b=\frac{\ln2}{\ln5}<1\)，\(c=\log_2 3>1\).
+又因 \(\ln3<\ln5\)，故
+\[
+a=\frac{\ln2}{\ln3}>\frac{\ln2}{\ln5}=b
+\]
+因此 \(c>a>b\)，选项 D 正确.
+\end{solution}
 
 \begin{problem}
 一个四面体的顶点在空间直角坐标系 \(O - xyz\) 中的坐标分别是 \( (1,0,1) \)， \( (1,1,0) \)， \( (0,1,1) \)， \( (0,0,0) \)，画该四面体三视图中的正视图时，以 \(zOx\) 平面为投影面，则得到正视图可以为（\quad）
@@ -134,6 +217,11 @@ D
 A
 \end{answer}
 
+\begin{solution}
+以 \(zOx\) 平面为投影面时，投影只保留点的 \(x\) 坐标和 \(z\) 坐标，四个顶点的投影为 \((1,1)\)，\((1,0)\)，\((0,1)\)，\((0,0)\).
+这四点构成一个正方形. 四面体的六条棱投影后包含正方形的四条边和两条对角线，其中一条对角线在正视图中应画为虚线. 与此相符的图形是选项 A.
+\end{solution}
+
 \begin{problem}
 设抛物线 \(C: y^{2} = 4x\) 的焦点为 \(F\)，直线 \(l\) 过 \(F\) 且与 \(C\) 交于 \(A\)，\(B\) 两点，若 \(|AF| = 3|BF|\)，则 \(l\) 的方程为（\quad）
 
@@ -147,6 +235,29 @@ A
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+抛物线 \(y^2=4x\) 的焦点为 \(F=(1,0)\). 若直线 \(l\) 不是竖直线，设其斜率为 \(m\)，则 \(l\) 的方程为 \(y=m(x-1)\). 代入抛物线方程，得
+\[
+m^2(x-1)^2=4x
+\]
+这时交点横坐标是方程
+\[
+x^2-\left(2+\frac{4}{m^2}\right)x+1=0
+\]
+的两个根. 设两根为 \(x_1<x_2\)，则 \(x_1x_2=1\)，且一个小于 \(1\)，另一个大于 \(1\). 因为 \(A\)，\(B\) 在同一直线上，距离焦点的比等于相应横坐标到 \(1\) 的距离比. 由 \(|AF|=3|BF|\)，较大的根对应 \(A\)，于是
+\[
+\frac{x_2-1}{1-x_1}=3
+\]
+又 \(x_2=1/x_1\)，所以 \(\frac{1/x_1-1}{1-x_1}=\frac1{x_1}=3\)，从而 \(x_1=\frac13\)，\(x_2=3\).
+因此两根之和为 \(10/3\)，从而
+由韦达定理，\(2+\frac{4}{m^2}=\frac{10}{3}\)，所以 \(m^2=3\).
+竖直直线 \(x=1\) 与抛物线的两个交点到 \(F\) 的距离相等，不满足题设比值. 故
+\[
+l:\ y=\sqrt{3}(x-1)\quad\text{或}\quad y=-\sqrt{3}(x-1)
+\]
+所以选项 C 正确.
+\end{solution}
 
 \begin{problem}
 已知函数 \( f(x) = x^{3} + ax^{2} + bx + c \)，下列结论中错误的是（\quad）
@@ -162,6 +273,29 @@ C
 C
 \end{answer}
 
+\begin{solution}
+设 \(f(x)=x^3+ax^2+bx+c\). 因为 \(\lim_{x\to-\infty}f(x)=-\infty\)，\(\lim_{x\to+\infty}f(x)=+\infty\)，
+而 \(f\) 在 \(\mathbb R\) 上连续，所以由零点存在定理，至少存在一个 \(x_0\in\mathbb R\) 使 \(f(x_0)=0\)，结论正确.
+
+令 \(h=-a/3\)，作平移 \(x=u+h\)，三次项和二次项合并后可写成
+\[
+f(h+u)=u^3+pu+q
+\]
+的形式，其中 \(p\)，\(q\) 为常数. 因此
+\[
+f(h+u)+f(h-u)=2q
+\]
+与 \(u\) 无关，图象关于点 \((h,q)\) 中心对称，结论正确.
+
+结论 D 是费马定理的直接应用：多项式在每一点都可导，若 \(x_0\) 是极值点，则 \(f'(x_0)=0\)，结论正确.
+
+结论 C 不一定成立. 例如取 \(f(x)=x^3-3x\)，则
+\[
+f'(x)=3(x^2-1)
+\]
+\(x_0=1\) 是极小值点，但在区间 \((-\infty,-1)\) 上 \(f'(x)>0\)，函数递增，故 \(f(x)\) 不在 \((-\infty,1)\) 上单调递减. 因此错误的结论是 C.
+\end{solution}
+
 \begin{problem}
 若存在正数 \(x\) 使 \(2^{x} (x - a) < 1\) 成立，则 \(a\) 的取值范围是（\quad）
 
@@ -176,6 +310,30 @@ C
 D
 \end{answer}
 
+\begin{solution}
+因为 \(2^x>0\)，原不等式等价于
+\[
+x-a<2^{-x}
+\]
+即
+\[
+a>x-2^{-x}
+\]
+令 \(g(x)=x-2^{-x}\)，则
+\[
+g'(x)=1+(\ln2)2^{-x}>0
+\]
+所以 \(g(x)\) 在 \((0,+\infty)\) 上递增，且
+\[
+\lim_{x\to0^+}g(x)=-1
+\]
+若 \(a\leqslant-1\)，则对任意 \(x>0\)，都有 \(g(x)>-1\geqslant a\)，不可能满足 \(a>g(x)\). 若 \(a>-1\)，由 \(g(x)\to-1\)（\(x\to0^+\)），可取充分小的正数 \(x\) 使 \(g(x)<a\)，于是原不等式成立. 因此
+\[
+a\in(-1,+\infty)
+\]
+所以选项 D 正确.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -186,6 +344,17 @@ D
 0.2
 \end{answer}
 
+\begin{solution}
+从 \(1\)，\(2\)，\(3\)，\(4\)，\(5\) 中任取两个不同的数，所有等可能结果共有
+\[
+\mathrm C_5^2=10
+\]
+种. 和为 \(5\) 的结果只有 \((1,4)\) 和 \((2,3)\)，共 \(2\) 种. 因此所求概率为
+\[
+\frac{2}{10}=\frac15=0.2
+\]
+\end{solution}
+
 \begin{problem}
 已知正方形 \(ABCD\) 的边长为 \(2\)，\(E\) 为 \(CD\) 的中点，则 \(\overrightarrow{AE} \cdot \overrightarrow{BD} =\)\fillinblank{}.
 \end{problem}
@@ -193,6 +362,18 @@ D
 \begin{answer}
 2
 \end{answer}
+
+\begin{solution}
+建立直角坐标系，取 \(A=(0,0)\)，\(B=(2,0)\)，\(C=(2,2)\)，\(D=(0,2)\). 因为 \(E\) 是 \(CD\) 的中点，所以
+\[
+E=(1,2)
+\]
+于是 \(\overrightarrow{AE}=(1,2)\)，\(\overrightarrow{BD}=(-2,2)\)，
+从而
+\[
+\overrightarrow{AE}\cdot\overrightarrow{BD}=1\times(-2)+2\times2=2
+\]
+\end{solution}
 
 \begin{problem}
 已知正四棱锥 \(O - ABCD\) 的体积为 \(\frac{3\sqrt{2}}{2}\)，底面边长为 \(\sqrt{3}\)，则以 \(O\) 为球心，\(OA\) 为半径的球的表面积为\fillinblank{}.
@@ -202,6 +383,26 @@ D
 \(24\pi\)
 \end{answer}
 
+\begin{solution}
+底面是边长为 \(\sqrt{3}\) 的正方形，面积为 \(3\). 设正四棱锥的高为 \(h\)，由体积公式
+\[
+\frac13\cdot3h=\frac{3\sqrt{2}}{2}
+\]
+得
+\[
+h=\frac{3\sqrt{2}}{2}
+\]
+设底面中心为 \(H\)，则 \(OH\perp\) 底面，且 \(H A\) 是正方形的外接半径，所以 \(HA^2=\left(\frac{\sqrt{3}}{\sqrt{2}}\right)^2=\frac32\)，且 \(OH^2=h^2=\frac92\).
+在直角三角形 \(OHA\) 中，
+\[
+OA^2=OH^2+HA^2=\frac92+\frac32=6
+\]
+以 \(O\) 为球心、\(OA\) 为半径的球的表面积为
+\[
+4\pi OA^2=4\pi\cdot6=24\pi
+\]
+\end{solution}
+
 \begin{problem}
 函数 \( y = \cos (2x + \varphi) \) （\(- \pi \leqslant \varphi < \pi\)）的图象向右平移 \( \frac{\pi}{2} \) 个单位后，与函数 \( y = \sin \left(2x + \frac{\pi}{3}\right) \) 的图象重合，则 \( \varphi =\)\fillinblank{}.
 \end{problem}
@@ -209,6 +410,32 @@ D
 \begin{answer}
 \(\frac{5\pi}{6}\)
 \end{answer}
+
+\begin{solution}
+函数向右平移 \(\frac{\pi}{2}\) 后，所得函数为
+\[
+y=\cos\left(2\left(x-\frac{\pi}{2}\right)+\varphi\right)
+=\cos(2x+\varphi-\pi)
+\]
+另一方面，
+\[
+\sin\left(2x+\frac{\pi}{3}\right)
+=\cos\left(\frac{\pi}{2}-2x-\frac{\pi}{3}\right)
+=\cos\left(2x-\frac{\pi}{6}\right)
+\]
+要使两条余弦曲线对任意 \(x\) 重合，应有
+\[
+\varphi-\pi\equiv-\frac{\pi}{6}\pmod{2\pi}
+\]
+所以
+\[
+\varphi\equiv\frac{5\pi}{6}\pmod{2\pi}
+\]
+结合 \(-\pi\leqslant\varphi<\pi\)，得到
+\[
+\varphi=\frac{5\pi}{6}
+\]
+\end{solution}
 
 \section{解答题}
 
@@ -224,20 +451,20 @@ D
 \begin{enumerate}
 \item 设等差数列的公差为 \(d\)，则 \(a_{11}=25+10d\)，\(a_{13}=25+12d\). 由 \(a_1\)，\(a_{11}\)，\(a_{13}\) 成等比数列，得
 \[
-(25+10d)^2=25(25+12d).
+(25+10d)^2=25(25+12d)
 \]
 化简得 \(100d(d+2)=0\). 因为公差不为零，所以 \(d=-2\)，从而
 \[
-a_n=25+(n-1)(-2)=27-2n.
+a_n=25+(n-1)(-2)=27-2n
 \]
-\item 由上式，对于 \(k=1,2,\ldots,n\)，有
+\item 由上式，对于 \(k=1\)，\(2\)，\(\ldots\)，\(n\)，有
 \[
-a_{3k-2}=27-2(3k-2)=31-6k.
+a_{3k-2}=27-2(3k-2)=31-6k
 \]
 这些项构成首项为 \(25\)，末项为 \(31-6n\) 的等差数列，因此
 \[
 a_1+a_4+a_7+\cdots+a_{3n-2}
-=\frac{n\left[25+(31-6n)\right]}{2}=n(28-3n).
+=\frac{n\left[25+(31-6n)\right]}{2}=n(28-3n)
 \]
 \end{enumerate}
 \end{solution}
@@ -255,22 +482,26 @@ a_1+a_4+a_7+\cdots+a_{3n-2}
 
 \begin{solution}
 \begin{enumerate}
-\item 由 \(\overrightarrow{BC_1}=\overrightarrow{DC}+\overrightarrow{DA_1}\)，且 \(\overrightarrow{DC}\) 与 \(\overrightarrow{DA_1}\) 都是平面 \(A_1CD\) 内的向量，知 \(\overrightarrow{BC_1}\) 平行于平面 \(A_1CD\). 又 \(B\notin\) 平面 \(A_1CD\)，所以 \(BC_1\parallel\) 平面 \(A_1CD\).
+\item 由
+\[
+\overrightarrow{BC_1}=\overrightarrow{DC}+\overrightarrow{DA_1}
+\]
+且 \(\overrightarrow{DC}\) 与 \(\overrightarrow{DA_1}\) 都是平面 \(A_1CD\) 内的向量，知 \(BC_1\) 的方向向量平行于平面 \(A_1CD\). 再证明 \(B\) 不在该平面：若 \(B\) 在平面 \(A_1CD\) 内，则不共线的三点 \(B\)，\(C\)，\(D\) 所在的平面就是该平面，从而 \(A_1\) 也在底面 \(ABC\) 内，与直三棱柱的性质矛盾. 因此直线 \(BC_1\) 不在平面 \(A_1CD\) 内，且与该平面无公共点，故
+\[
+BC_1\parallel\text{平面 }A_1CD
+\]
 \item 由 \(AC=CB=2\)，\(AB=2\sqrt{2}\)，知 \(\angle ACB=\frac{\pi}{2}\)，底面三角形 \(ABC\) 的面积为
 \[
-S_{\triangle ABC}=\frac12 AC\cdot CB=2.
+S_{\triangle ABC}=\frac12 AC\cdot CB=2
 \]
-取 \(C\) 为原点，令 \(A=(2,0,0)\)，\(B=(0,2,0)\)，并令棱柱的高方向为 \(z\) 轴. 因为 \(AA_1=2\)，所以
-\[
-A_1=(2,0,2),\qquad D=(1,1,0),\qquad E=(0,2,1).
-\]
+取 \(C\) 为原点，令 \(A=(2,0,0)\)，\(B=(0,2,0)\)，并令棱柱的高方向为 \(z\) 轴. 因为 \(AA_1=2\)，所以 \(A_1=(2,0,2)\)，\(D=(1,1,0)\)，\(E=(0,2,1)\).
 于是三棱锥 \(C-A_1DE\) 的体积为
 \[
 V=\frac16\left|\begin{vmatrix}
 2&0&2\\
 1&1&0\\
 0&2&1
-\end{vmatrix}\right|=1.
+\end{vmatrix}\right|=1
 \]
 \end{enumerate}
 \end{solution}
@@ -290,7 +521,7 @@ V=\frac16\left|\begin{vmatrix}
 \begin{enumerate}
 \item 当 \(100\leqslant X\leqslant 130\) 时，售出 \(X\mathrm{~t}\)，未售出 \(130-X\mathrm{~t}\)，所以
 \[
-T=500X-300(130-X)=800X-39000.
+T=500X-300(130-X)=800X-39000
 \]
 当 \(130<X\leqslant 150\) 时，购进的产品全部售出，所以 \(T=500\times130=65000\). 因此
 \[
@@ -301,13 +532,13 @@ T=\begin{cases}
 \]
 \item 当 \(100\leqslant X\leqslant130\) 时，\(T\geqslant57000\) 等价于
 \[
-800X-39000\geqslant57000,
+800X-39000\geqslant57000
 \]
 即 \(X\geqslant120\). 当 \(130<X\leqslant150\) 时，\(T=65000\geqslant57000\)，所以所求事件为 \(X\geqslant120\).
 
 由直方图可知，五个组的组距均为 \(10\mathrm{~t}\)，各组频率分别为 \(0.10\)，\(0.20\)，\(0.30\)，\(0.25\)，\(0.15\). 因而
 \[
-P(X\geqslant120)=0.30+0.25+0.15=0.70.
+P(X\geqslant120)=0.30+0.25+0.15=0.70
 \]
 所以利润 \(T\) 不少于 \(57000\) 元的概率约为 \(0.70\).
 \end{enumerate}
@@ -319,7 +550,7 @@ P(X\geqslant120)=0.30+0.25+0.15=0.70.
 在平面直角坐标系 \(xOy\) 中，已知圆 \(P\) 在 \(x\) 轴上截得线段长为 \(2\sqrt{2}\)，在 \(y\) 轴上截得线段长为 \(2\sqrt{3}\).
 \begin{enumerate}
 \item 求圆心 \(P\) 的轨迹方程；
-\item 若 \(P\) 点到直线 \(y = x\) 的距离为 \(\frac{\sqrt{3}}{2}\)，求圆 \(P\) 的方程.
+\item 若 \(P\) 点到直线 \(y = x\) 的距离为 \(\frac{\sqrt{2}}{2}\)，求圆 \(P\) 的方程.
 \end{enumerate}
 \end{problem}
 
@@ -327,46 +558,38 @@ P(X\geqslant120)=0.30+0.25+0.15=0.70.
 \begin{enumerate}
 \item 设圆心 \(P=(u,v)\)，半径为 \(r\). 圆在 \(x\) 轴上的弦长为 \(2\sqrt{2}\)，故圆心到 \(x\) 轴的距离为 \(|v|\)，从而
 \[
-r^2-v^2=2.
+r^2-v^2=2
 \]
 同理，圆在 \(y\) 轴上的弦长为 \(2\sqrt{3}\)，所以
 \[
-r^2-u^2=3.
+r^2-u^2=3
 \]
 两式相减得 \(v^2-u^2=1\)，即圆心 \(P\) 的轨迹方程为
 \[
-y^2-x^2=1.
+y^2-x^2=1
 \]
 反之，轨迹上任意一点都可取 \(r^2=u^2+3=v^2+2\)，能够得到题设两条弦长，故这就是圆心的完整轨迹.
 \item 由点 \(P=(u,v)\) 到直线 \(y=x\) 的距离条件，得
 \[
-\frac{|v-u|}{\sqrt{2}}=\frac{\sqrt{3}}{2},
+\frac{|v-u|}{\sqrt{2}}=\frac{\sqrt{2}}{2}
 \]
-所以 \((v-u)^2=\frac{3}{2}\). 又因为
+所以 \((v-u)^2=1\). 又因为
 \[
-(v-u)(v+u)=v^2-u^2=1,
+(v-u)(v+u)=v^2-u^2=1
 \]
-令 \(s=v-u\)，\(t=v+u\)，则
-\[
-(s,t)=\left(\sqrt{\frac{3}{2}},\sqrt{\frac{2}{3}}\right)\quad\text{或}\quad
-(s,t)=\left(-\sqrt{\frac{3}{2}},-\sqrt{\frac{2}{3}}\right).
-\]
-由 \(u=\frac{t-s}{2}\)，\(v=\frac{s+t}{2}\)，得到两个圆心
-\[
-P_1=\left(-\frac{\sqrt{6}}{12},\frac{5\sqrt{6}}{12}\right),\qquad
-P_2=\left(\frac{\sqrt{6}}{12},-\frac{5\sqrt{6}}{12}\right).
-\]
+令 \(s=v-u\)，\(t=v+u\)，则 \((s,t)=(1,1)\quad\text{或}\quad(s,t)=(-1,-1)\).
+由 \(u=\frac{t-s}{2}\)，\(v=\frac{s+t}{2}\)，得到两个圆心 \(P_1=(0,1)\)，\(P_2=(0,-1)\).
 由 \(r^2=u^2+3\)，两圆的半径平方均为
 \[
-r^2=\frac{1}{24}+3=\frac{73}{24}.
+r^2=3
 \]
 因此圆 \(P\) 的方程为
 \[
-\left(x+\frac{\sqrt{6}}{12}\right)^2+\left(y-\frac{5\sqrt{6}}{12}\right)^2=\frac{73}{24}
+x^2+(y-1)^2=3
 \]
 或
 \[
-\left(x-\frac{\sqrt{6}}{12}\right)^2+\left(y+\frac{5\sqrt{6}}{12}\right)^2=\frac{73}{24}.
+x^2+(y+1)^2=3
 \]
 \end{enumerate}
 \end{solution}
@@ -383,37 +606,29 @@ r^2=\frac{1}{24}+3=\frac{73}{24}.
 \begin{enumerate}
 \item 因为 \(\e^{-x}>0\)，所以
 \[
-f'(x)=2x\e^{-x}-x^2\e^{-x}=x(2-x)\e^{-x}.
+f'(x)=2x\e^{-x}-x^2\e^{-x}=x(2-x)\e^{-x}
 \]
-当 \(x<0\) 时，\(f'(x)<0\)；当 \(0<x<2\) 时，\(f'(x)>0\)；当 \(x>2\) 时，\(f'(x)<0\). 因此 \(f(x)\) 在 \((-\infty,0)\) 上单调递减，在 \((0,2)\) 上单调递增，在 \((2,+\infty)\) 上单调递减.
-
-又因为 \(f(x)=x^2\e^{-x}\geqslant0\)，且 \(f(0)=0\)，所以 \(f(x)\) 的极小值为 \(0\). 在 \(x=2\) 处取得极大值
+当 \(x<0\) 时，\(f'(x)<0\)；当 \(0<x<2\) 时，\(f'(x)>0\)；当 \(x>2\) 时，\(f'(x)<0\). 因此 \(f(x)\) 在 \((-\infty,0)\) 上单调递减，在 \((0,2)\) 上单调递增，在 \((2,+\infty)\) 上单调递减. 于是 \(x=0\) 是极小值点，\(x=2\) 是极大值点，且
+\(f(0)=0\)，\(f(2)=4\e^{-2}=\frac{4}{\e^2}\).
+所以极小值为 \(0\)，极大值为 \(\frac{4}{\e^2}\). 这里的极大值是局部极大值；事实上 \(f(x)\to+\infty\)（\(x\to-\infty\)），故函数在整个实数域上没有全局最大值.
+\item 设切线 \(l\) 与曲线相切于点 \(\left(t,f(t)\right)\). 切线斜率为负数等价于 \(f'(t)<0\)，由上面的符号分析知 \(t<0\) 或 \(t>2\). 因为此时 \(t\ne0\)，\(2\)，切线与 \(x\) 轴的交点横坐标 \(x_l\) 满足
 \[
-f(2)=4\e^{-2}=\frac{4}{\e^2}.
-\]
-\item 设切线 \(l\) 与曲线相切于点 \(\left(t,f(t)\right)\). 切线斜率为负数等价于 \(f'(t)<0\)，由上面的符号分析知 \(t<0\) 或 \(t>2\). 因为此时 \(t\ne0,2\)，切线与 \(x\) 轴的交点横坐标 \(x_l\) 满足
-\[
-0=f(t)+f'(t)(x_l-t),
+0=f(t)+f'(t)(x_l-t)
 \]
 所以
 \[
-x_l=t-\frac{f(t)}{f'(t)}=t-\frac{t}{2-t}=\frac{t(1-t)}{2-t}.
+x_l=t-\frac{f(t)}{f'(t)}=t-\frac{t}{2-t}=\frac{t(1-t)}{2-t}
 \]
 记 \(\phi(t)=\frac{t(1-t)}{2-t}\). 则
 \[
-\phi'(t)=\frac{t^2-4t+2}{(2-t)^2}.
+\phi'(t)=\frac{t^2-4t+2}{(2-t)^2}
 \]
 当 \(t<0\) 时，\(\phi'(t)>0\)，且 \(\phi(t)\) 从 \(-\infty\) 增至 \(0\)，故 \(x_l\in(-\infty,0)\).
 
-当 \(t>2\) 时，\(\phi'(t)=0\) 的点为 \(t=2+\sqrt{2}\)，函数在 \((2,2+\sqrt{2})\) 上递减，在 \((2+\sqrt{2},+\infty)\) 上递增. 又
-\[
-\lim_{t\to2^+}\phi(t)=+\infty,\qquad
-\phi(2+\sqrt{2})=3+2\sqrt{2},\qquad
-\lim_{t\to+\infty}\phi(t)=+\infty.
-\]
+当 \(t>2\) 时，\(\phi'(t)=0\) 的点为 \(t=2+\sqrt{2}\)，函数在 \((2,2+\sqrt{2})\) 上递减，在 \((2+\sqrt{2},+\infty)\) 上递增. 又 \(\lim_{t\to2^+}\phi(t)=+\infty\)，\(\phi(2+\sqrt{2})=3+2\sqrt{2}\)，\(\lim_{t\to+\infty}\phi(t)=+\infty\).
 所以 \(x_l\in[3+2\sqrt{2},+\infty)\). 综上，截距的取值范围为
 \[
-(-\infty,0)\cup[3+2\sqrt{2},+\infty).
+(-\infty,0)\cup[3+2\sqrt{2},+\infty)
 \]
 \end{enumerate}
 \end{solution}
@@ -433,56 +648,49 @@ x_l=t-\frac{f(t)}{f'(t)}=t-\frac{t}{2-t}=\frac{t(1-t)}{2-t}.
 \begin{enumerate}
 \item 设三角形 \(ABC\) 的内角 \(A\)，\(B\)，\(C\) 分别为 \(\angle CAB\)，\(\angle ABC\)，\(\angle ACB\). 由 \(B\)，\(E\)，\(F\)，\(C\) 四点共圆，点 \(A\) 对该圆的两条割线给出
 \[
-AB\cdot AE=AC\cdot AF.
+AB\cdot AE=AC\cdot AF
 \]
 结合题设 \(BC\cdot AE=DC\cdot AF\)，可得
 \[
-\frac{DC}{AC}=\frac{BC}{AB}.
+\frac{DC}{AC}=\frac{BC}{AB}
 \]
 
 由切线与弦 \(CB\) 所成的角等于弦 \(CB\) 所对的圆周角，得 \(\angle DCB=A\). 又因 \(D\)，\(B\)，\(A\) 三点依次共线，\(\angle DBC=\pi-B\)，所以在三角形 \(DBC\) 中
 \[
-\angle BDC=B-A.
+\angle BDC=B-A
 \]
-由正弦定理以及三角形 \(ABC\) 的正弦定理，分别有
-\[
-\frac{DC}{BC}=\frac{\sin B}{\sin(B-A)},\qquad
-\frac{AC}{BC}=\frac{\sin B}{\sin A}.
-\]
+由正弦定理以及三角形 \(ABC\) 的正弦定理，分别有 \(\frac{DC}{BC}=\frac{\sin B}{\sin(B-A)}\)，\(\frac{AC}{BC}=\frac{\sin B}{\sin A}\).
 因此
 \[
-\frac{DC}{AC}=\frac{\sin A}{\sin(B-A)}.
+\frac{DC}{AC}=\frac{\sin A}{\sin(B-A)}
 \]
 另一方面，\(\frac{BC}{AB}=\frac{\sin A}{\sin C}\)，结合前面的长度关系可得
 \[
-\sin(B-A)=\sin C.
+\sin(B-A)=\sin C
 \]
 由于 \(B-A=\angle BDC\in(0,\pi)\)，且 \(C\in(0,\pi)\)，所以或者 \(B-A=C\)，或者 \(B-A+C=\pi\). 后一种情形与 \(A+B+C=\pi\) 联立会得到 \(A=0\)，不合题意，故 \(B-A=C\). 从而 \(2B=\pi\)，即 \(B=\frac{\pi}{2}\). 因此 \(\angle CBA=\frac{\pi}{2}\)，由圆周角为直角的弦是直径，得 \(CA\) 是三角形 \(ABC\) 外接圆的直径.
-\item 由相似变换不改变所求面积比，令 \(DB=BE=EA=1\). 取 \(AB\) 为 \(x\) 轴，设
-\[
-D=(-1,0),\quad B=(0,0),\quad E=(1,0),\quad A=(2,0).
-\]
+\item 由相似变换不改变所求面积比，令 \(DB=BE=EA=1\). 取 \(AB\) 为 \(x\) 轴，设 \(D=(-1,0)\)，\(B=(0,0)\)，\(E=(1,0)\)，\(A=(2,0)\).
 由第（1）问，\(\angle CBA=\frac{\pi}{2}\)，故设 \(C=(0,h)\)，其中 \(h>0\). 三角形 \(ABC\) 外接圆以 \(AC\) 为直径，圆心为 \(O=(1,\frac h2)\). 因为 \(CD\) 是该圆在 \(C\) 处的切线，所以半径 \(OC\) 垂直于 \(CD\)，即
 \[
-\overrightarrow{OC}\cdot\overrightarrow{DC}=\left(-1,\frac h2\right)\cdot\left(-1,-h\right)=1-\frac{h^2}{2}=0.
+\overrightarrow{OC}\cdot\overrightarrow{CD}=\left(-1,\frac h2\right)\cdot\left(-1,-h\right)=1-\frac{h^2}{2}=0
 \]
 于是 \(h^2=2\).
 
 圆 \(BEFC\) 经过 \(B\)，\(E\)，\(C\)，其圆心在 \(BE\) 和 \(BC\) 的垂直平分线上，因此圆心为
 \[
-O_1=\left(\frac12,\frac h2\right)=\left(\frac12,\frac{\sqrt2}{2}\right),
+O_1=\left(\frac12,\frac h2\right)=\left(\frac12,\frac{\sqrt2}{2}\right)
 \]
 半径平方为
 \[
-R_1^2=O_1B^2=\frac14+\frac{h^2}{4}=\frac34.
+R_1^2=O_1B^2=\frac14+\frac{h^2}{4}=\frac34
 \]
 三角形 \(ABC\) 外接圆的半径平方为
 \[
-R^2=OA^2=1+\frac{h^2}{4}=\frac32.
+R^2=OA^2=1+\frac{h^2}{4}=\frac32
 \]
 所以两圆面积之比为
 \[
-\frac{\pi R_1^2}{\pi R^2}=\frac{3/4}{3/2}=\frac12.
+\frac{\pi R_1^2}{\pi R^2}=\frac{3/4}{3/2}=\frac12
 \]
 \end{enumerate}
 \end{solution}
@@ -502,22 +710,22 @@ y = 2\sin t,
 \begin{enumerate}
 \item 由参数条件，点 \(P\)，\(Q\) 的坐标分别为
 \[
-P=(2\cos\alpha,2\sin\alpha).
+P=(2\cos\alpha,2\sin\alpha)
 \]
 \(Q=(2\cos2\alpha,2\sin2\alpha)\).
 设 \(M=(x,y)\)，因为 \(M\) 是 \(PQ\) 的中点，所以
 \[
-x=\cos\alpha+\cos2\alpha.
+x=\cos\alpha+\cos2\alpha
 \]
 \(y=\sin\alpha+\sin2\alpha\)，且 \(0<\alpha<2\pi\).
 这就是 \(M\) 的轨迹的参数方程. 也可利用和差化积写成
 \[
-x=2\cos\frac{3\alpha}{2}\cos\frac\alpha2.
+x=2\cos\frac{3\alpha}{2}\cos\frac\alpha2
 \]
 \(y=2\sin\frac{3\alpha}{2}\cos\frac\alpha2\)，且 \(0<\alpha<2\pi\).
 \item 由上式
 \[
-d^2=x^2+y^2=2+2\cos\alpha=4\cos^2\frac\alpha2.
+d^2=x^2+y^2=2+2\cos\alpha=4\cos^2\frac\alpha2
 \]
 因为 \(d\geqslant0\)，所以 \(d=2\left|\cos\frac\alpha2\right|\).
 当 \(0<\alpha<2\pi\) 时，\(d=0\) 等价于 \(\cos\frac\alpha2=0\)，从而 \(\alpha=\pi\). 此时 \(P=(-2,0)\)，\(Q=(2,0)\)，\(M=(0,0)\)，所以 \(M\) 的轨迹经过坐标原点.
@@ -536,23 +744,23 @@ d^2=x^2+y^2=2+2\cos\alpha=4\cos^2\frac\alpha2.
 \begin{enumerate}
 \item 因为
 \[
-(a-b)^2+(b-c)^2+(c-a)^2\geqslant0,
+(a-b)^2+(b-c)^2+(c-a)^2\geqslant0
 \]
 所以 \(a^2+b^2+c^2\geqslant ab+bc+ca\). 于是
 \[
-1=(a+b+c)^2=a^2+b^2+c^2+2ab+2bc+2ca\geqslant3(ab+bc+ca),
+1=(a+b+c)^2=a^2+b^2+c^2+2ab+2bc+2ca\geqslant3(ab+bc+ca)
 \]
 从而
 \[
-ab+bc+ca\leqslant\frac13.
+ab+bc+ca\leqslant\frac13
 \]
 \item 由柯西不等式
 \[
-\left(\frac{a^2}{b}+\frac{b^2}{c}+\frac{c^2}{a}\right)(b+c+a)\geqslant(a+b+c)^2.
+\left(\frac{a^2}{b}+\frac{b^2}{c}+\frac{c^2}{a}\right)(b+c+a)\geqslant(a+b+c)^2
 \]
 由于 \(a\)，\(b\)，\(c\) 均为正数，\(a+b+c=1\)，且各分母均有意义，故两边除以 \(b+c+a=1\)，得到
 \[
-\frac{a^2}{b}+\frac{b^2}{c}+\frac{c^2}{a}\geqslant1.
+\frac{a^2}{b}+\frac{b^2}{c}+\frac{c^2}{a}\geqslant1
 \]
 \end{enumerate}
 \end{solution}

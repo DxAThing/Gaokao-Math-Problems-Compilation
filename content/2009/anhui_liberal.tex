@@ -35,7 +35,11 @@ B
 \end{answer}
 
 \begin{solution}
-由 \((2x+1)(x-3)<0\) 的两个根为 \(-\frac{1}{2}\) 和 \(3\)，且二次项系数为正，得 \(-\frac{1}{2}<x<3\)，所以 \(A=\left(-\frac{1}{2},3\right)\). 又 \(B=\{1,2,3,4,5\}\)，从而 \(A\cap B=\{1,2\}\)，故选 B.
+由 \((2x+1)(x-3)<0\) 的两个根为 \(-\frac{1}{2}\) 和 \(3\)，且二次项系数为正，得
+\[
+-\frac{1}{2}<x<3
+\]
+所以 \(A=\left(-\frac{1}{2},3\right)\). 由 \(x\in\N_+\) 且 \(x\leqslant5\)，得 \(B=\{1,2,3,4,5\}\). 因此 \(A\cap B=\{1,2\}\)，故选 B.
 \end{solution}
 
 \begin{problem}
@@ -59,7 +63,13 @@ C
 \end{answer}
 
 \begin{solution}
-两直线 \(x+3y=4\) 与 \(3x+y=4\) 的交点满足 \(x=y=1\). 当 \(x=0\) 时，两直线分别给出 \(y=\frac{4}{3}\) 和 \(y=4\)，所以所表示区域是顶点为 \((0,\frac{4}{3})\)，\((0,4)\)，\((1,1)\) 的三角形. 其面积为 \(\frac{1}{2}\times\left(4-\frac{4}{3}\right)\times1=\frac{4}{3}\)，故选 C.
+边界直线 \(x+3y=4\) 与 \(3x+y=4\) 的交点为 \((1,1)\). 由 \(x\geqslant0\)，区域还被 \(y\) 轴截得；令 \(x=0\)，两条边界分别给出 \(y=\frac{4}{3}\) 与 \(y=4\). 结合不等式方向，区域是顶点为 \((0,\frac{4}{3})\)、\((0,4)\)、\((1,1)\) 的三角形.
+
+其底边在 \(y\) 轴上，长为 \(4-\frac{4}{3}=\frac{8}{3}\)，顶点 \((1,1)\) 到 \(y\) 轴的高为 \(1\)，所以面积为
+\[
+\frac{1}{2}\cdot\frac{8}{3}\cdot1=\frac{4}{3}
+\]
+故选 C.
 \end{solution}
 
 \begin{problem}
@@ -185,7 +195,11 @@ A
 \end{answer}
 
 \begin{solution}
-把六个面中心分别记为 \((\pm1,0,0)\)，\((0,\pm1,0)\)，\((0,0,\pm1)\). 任取三个面中心有两种情况：若三个点分别来自三组相对面，则任意两点之间的距离都为 \(\sqrt{2}\)，所得三角形为等边三角形；剩下的三个点也分别来自三组相对面，同样组成等边三角形. 若三个点中包含一对相对面中心，则第三个点来自另一组相对面，所得三角形的三边为 \(2\)，\(\sqrt{2}\)，\(\sqrt{2}\)；剩下的三个点也包含一对相对面中心，且三边同样为 \(2\)，\(\sqrt{2}\)，\(\sqrt{2}\). 因而无论哪种取法，两个三角形都全等，事件必然发生，概率为 \(1\)，故选 A.
+把六个面中心分别记为 \((\pm1,0,0)\)，\((0,\pm1,0)\)，\((0,0,\pm1)\). 任取三个点有两种情形.
+
+若三个点分别来自三组相对面，则任意两点的距离都为 \(\sqrt{2}\)，第一个三角形是边长为 \(\sqrt{2}\) 的等边三角形；剩余三个点也分别来自三组相对面，组成同样的等边三角形.
+
+若三个点中含有一对相对面中心，则第三个点来自另一组相对面，三边为 \(2\)，\(\sqrt{2}\)，\(\sqrt{2}\). 剩余三个点也含有一对相对面中心，三边仍为 \(2\)，\(\sqrt{2}\)，\(\sqrt{2}\). 所以无论怎样选取，两个三角形都全等，事件必然发生，概率为 \(1\)，故选 A.
 \end{solution}
 
 \section{填空题}
@@ -199,7 +213,9 @@ A
 \end{answer}
 
 \begin{solution}
-设 \(M=(0,t,0)\)，则 \(MA^2=(0-1)^2+(t-0)^2+(0-2)^2=t^2+5\)，\(MB^2=(0-1)^2+(t+3)^2+(0-1)^2=t^2+6t+11\). 由 \(MA=MB\)，得 \(t^2+5=t^2+6t+11\)，所以 \(t=-1\). 因此 \(M=(0,-1,0)\).
+设 \(M=(0,t,0)\). 由空间两点间距离公式，
+\(MA^2=(0-1)^2+t^2+(0-2)^2=t^2+5\)，\(MB^2=(0-1)^2+(t+3)^2+(0-1)^2=t^2+6t+11\).
+因为 \(MA=MB\)，所以 \(MA^2=MB^2\)，从而 \(t^2+5=t^2+6t+11\)，解得 \(t=-1\). 因此 \(M=(0,-1,0)\).
 \end{solution}
 
 \begin{problem}
@@ -213,7 +229,9 @@ A
 \end{answer}
 
 \begin{solution}
-由流程图，初值为 \(a_0=1\)，每循环一次先将 \(a\) 更新为 \(2a+1\)，再判断是否满足 \(a>100\). 记更新 \(k\) 次后的数为 \(a_k\)，则 \(a_{k+1}=2a_k+1\). 因而 \(a_{k+1}+1=2(a_k+1)\)，从而 \(a_k+1=2^k(a_0+1)=2^{k+1}\)，即 \(a_k=2^{k+1}-1\). 计算得 \(a_5=63\leqslant100\)，而 \(a_6=127>100\)，所以流程图输出 \(127\).
+流程图先取 \(a=1\)，然后反复执行 \(a\leftarrow2a+1\)，直到 \(a>100\) 时输出 \(a\). 设第 \(k\) 次更新后的数为 \(a_k\)，则 \(a_0=1\)，且
+\(a_{k+1}=2a_k+1\)，\(a_{k+1}+1=2(a_k+1)\).
+所以 \(a_k+1=2^k(a_0+1)=2^{k+1}\)，即 \(a_k=2^{k+1}-1\). 逐次计算得 \(a_5=63\leqslant100\)，\(a_6=127>100\)，故第一次满足判断条件时输出 \(127\).
 \end{solution}
 
 \begin{problem}
@@ -225,7 +243,13 @@ A
 \end{answer}
 
 \begin{solution}
-从四条线段中任取三条共有 \(\mathrm C_4^3=4\) 种取法. 三条线段能构成三角形的条件是最长边小于另外两边之和. 四种取法 \(\{2,3,4\}\)，\(\{2,3,5\}\)，\(\{2,4,5\}\)，\(\{3,4,5\}\) 中，只有 \(2+3=5\) 的取法不能构成三角形，其余三种均能构成三角形. 因此所求概率为 \(\frac{3}{4}\).
+从四条线段中任取三条，基本事件数为
+\[
+\mathrm C_4^3=4
+\]
+三条线段构成三角形的充要条件是最长边小于另外两边之和. 四种取法及判断如下：
+\(\{2,3,4\}:2+3>4\)，\(\{2,3,5\}:2+3=5\)，\(\{2,4,5\}:2+4>5\)，\(\{3,4,5\}:3+4>5\).
+因此只有 \(\{2,3,5\}\) 不能构成三角形，有利事件数为 \(3\)，所求概率为 \(\frac{3}{4}\).
 \end{solution}
 
 \begin{problem}
@@ -237,11 +261,17 @@ A
 \end{answer}
 
 \begin{solution}
-以 \(A\) 为原点，令 \(\overrightarrow{AB}=\bs{b}\)，\(\overrightarrow{AD}=\bs{d}\)，则 \(\overrightarrow{AC}=\bs{b}+\bs{d}\). 因为 \(E\)，\(F\) 分别是 \(CD\)，\(BC\) 的中点，所以 \(\overrightarrow{AE}=\frac{1}{2}\bs{b}+\bs{d}\)，\(\overrightarrow{AF}=\bs{b}+\frac{1}{2}\bs{d}\). 代入题设得
+以 \(A\) 为原点，令 \(\overrightarrow{AB}=\bs{b}\)，\(\overrightarrow{AD}=\bs{d}\). 则
+\(\overrightarrow{AC}=\bs{b}+\bs{d}\)，\(\overrightarrow{AE}=\frac{1}{2}\bs{b}+\bs{d}\)，\(\overrightarrow{AF}=\bs{b}+\frac{1}{2}\bs{d}\).
+代入题设得
 \[
-\bs{b}+\bs{d}=\lambda\left(\frac{1}{2}\bs{b}+\bs{d}\right)+\mu\left(\bs{b}+\frac{1}{2}\bs{d}\right).
+\bs{b}+\bs{d}
+=\lambda\left(\frac{1}{2}\bs{b}+\bs{d}\right)
++\mu\left(\bs{b}+\frac{1}{2}\bs{d}\right)
 \]
-比较 \(\bs{b}\)，\(\bs{d}\) 的系数，得到 \(\frac{\lambda}{2}+\mu=1\)，\(\lambda+\frac{\mu}{2}=1\). 两式相减得 \(\lambda=\mu\)，所以 \(\lambda=\mu=\frac{2}{3}\)，从而 \(\lambda+\mu=\frac{4}{3}\).
+由于 \(\bs{b}\)，\(\bs{d}\) 不共线，比较系数得
+\(\frac{\lambda}{2}+\mu=1\)，\(\lambda+\frac{\mu}{2}=1\).
+两式相减得 \(\lambda=\mu\)，代回得 \(\lambda=\mu=\frac{2}{3}\)，所以 \(\lambda+\mu=\frac{4}{3}\).
 \end{solution}
 
 \begin{problem}
@@ -286,31 +316,31 @@ A
 \begin{enumerate}
 \item 由三角形内角和以及 \(C-A=\frac{\pi}{2}\)，得
 \[
-B=\pi-A-C=\frac{\pi}{2}-2A.
+B=\pi-A-C=\frac{\pi}{2}-2A
 \]
 因为 \(A>0\)，\(B>0\)，所以 \(0<A<\frac{\pi}{4}\). 于是
 \[
 \sin B=\sin\left(\frac{\pi}{2}-2A\right)=\cos 2A
-=1-2\sin^2 A=\frac{1}{3}.
+=1-2\sin^2 A=\frac{1}{3}
 \]
 故 \(\sin^2 A=\frac{1}{3}\). 又 \(A\) 为三角形内角，\(\sin A>0\)，所以
 \[
-\sin A=\frac{\sqrt{3}}{3}.
+\sin A=\frac{\sqrt{3}}{3}
 \]
 \item 设 \(a=BC\)，\(b=CA=\sqrt{6}\)，\(c=AB\). 由正弦定理，
 \[
-\frac{b}{\sin B}=\frac{\sqrt{6}}{1/3}=3\sqrt{6}.
+\frac{b}{\sin B}=\frac{\sqrt{6}}{1/3}=3\sqrt{6}
 \]
 又
 \[
 \sin C=\sin\left(A+\frac{\pi}{2}\right)=\cos A
-=\sqrt{1-\sin^2 A}=\frac{\sqrt{6}}{3},
+=\sqrt{1-\sin^2 A}=\frac{\sqrt{6}}{3}
 \]
 所以 \(c=3\sqrt{6}\cdot\frac{\sqrt{6}}{3}=6\). 因此
 \[
 S_{\triangle ABC}=\frac{1}{2}\,AC\cdot AB\cdot\sin A
 =\frac{1}{2}\cdot\sqrt{6}\cdot6\cdot\frac{\sqrt{3}}{3}
-=3\sqrt{2}.
+=3\sqrt{2}
 \]
 \end{enumerate}
 \end{solution}
@@ -376,7 +406,7 @@ S_{\triangle ABC}=\frac{1}{2}\,AC\cdot AB\cdot\sin A
 
 \begin{solution}
 \begin{enumerate}
-\item 以数据的百位和十位组成茎，以个位作为叶. 例如 \(357\) 记作茎 \(35\)、叶 \(7\)，\(359\) 记作茎 \(35\)、叶 \(9\). 对全部数据按茎从小到大排列，并将同一茎上的叶按从小到大排列，得到完整茎叶图：
+\item 以数据的百位和十位组成茎，以个位作为叶. 例如 \(357\) 记作茎 \(35\)、叶 \(7\)，\(359\) 记作茎 \(35\)、叶 \(9\). 原 PDF 虽写两种小麦各种植了 \(25\) 亩，但实际列出的两组数据各有 \(24\) 个；以下严格按原 PDF 列出的数据完成茎叶图. 对全部数据按茎从小到大排列，并将同一茎上的叶按从小到大排列，得到完整茎叶图：
 
 \begin{center}
 \begin{tabular}{p{3.5cm}|c|p{3.5cm}}
@@ -412,36 +442,27 @@ S_{\triangle ABC}=\frac{1}{2}\,AC\cdot AB\cdot\sin A
 \begin{enumerate}
 \item 由题意，圆的半径为 \(b\). 直线 \(y=x+2\) 化为 \(x-y+2=0\)，原点到该直线的距离为
 \[
-\frac{2}{\sqrt{1^2+(-1)^2}}=\sqrt{2}.
+\frac{2}{\sqrt{1^2+(-1)^2}}=\sqrt{2}
 \]
 因为圆与直线相切，所以 \(b=\sqrt{2}\). 设椭圆的半焦距为 \(c\)，则
-\[
-\frac{c}{a}=\frac{\sqrt{3}}{3},\qquad c^2=a^2-b^2.
-\]
+\(\frac{c}{a}=\frac{\sqrt{3}}{3}\)，\(c^2=a^2-b^2\).
 于是
-\[
-\frac{a^2-b^2}{a^2}=\frac{1}{3},\qquad
-\frac{b^2}{a^2}=\frac{2}{3}.
-\]
+\(\frac{a^2-b^2}{a^2}=\frac{1}{3}\)，\(\frac{b^2}{a^2}=\frac{2}{3}\).
 代入 \(b^2=2\)，得 \(a^2=3\)，所以
-\[
-a=\sqrt{3},\qquad b=\sqrt{2}.
-\]
+\(a=\sqrt{3}\)，\(b=\sqrt{2}\).
 \item 由上问 \(c=\sqrt{a^2-b^2}=1\)，故 \(F_{1}(-1,0)\)，\(F_{2}(1,0)\). 直线 \(l_{1}\) 的方程为 \(x=1\). 设动直线 \(l_{2}\) 为 \(y=t\)，则
 \[
-P=(1,t).
+P=(1,t)
 \]
 设交点 \(M=(x,t)\). 因为 \(M\) 在 \(PF_{1}\) 的垂直平分线上，所以 \(MP=MF_{1}\)，从而
 \[
-(x-1)^2=(x+1)^2+t^2.
+(x-1)^2=(x+1)^2+t^2
 \]
 化简得
-\[
--4x=t^2,\qquad x=-\frac{t^2}{4}.
-\]
+\(-4x=t^2\)，\(x=-\frac{t^2}{4}\).
 又 \(M\) 的坐标满足 \(y=t\)，消去参数 \(t\)，得到
 \[
-y^2=-4x.
+y^2=-4x
 \]
 因此 \(M\) 的轨迹是顶点在原点、开口向左、焦点在 \(x\) 轴上的抛物线.
 \end{enumerate}
@@ -462,7 +483,7 @@ y^2=-4x.
 \[
 a_n=S_n-S_{n-1}
 =\left(2n^2+2n\right)-\left(2(n-1)^2+2(n-1)\right)
-=4n.
+=4n
 \]
 所以对一切 \(n\in\N_+\)，都有 \(a_n=4n\).
 
@@ -470,25 +491,23 @@ a_n=S_n-S_{n-1}
 \[
 b_n=T_n-T_{n-1}
 =\left(2-b_n\right)-\left(2-b_{n-1}\right)
-=b_{n-1}-b_n,
+=b_{n-1}-b_n
 \]
 所以 \(2b_n=b_{n-1}\)，即 \(b_n=\frac{1}{2}b_{n-1}\). 递推可得
 \[
-b_n=\frac{1}{2^{n-1}}=2^{1-n}.
+b_n=\frac{1}{2^{n-1}}=2^{1-n}
 \]
 因此
-\[
-a_n=4n,\qquad b_n=2^{1-n}.
-\]
+\(a_n=4n\)，\(b_n=2^{1-n}\).
 \item 由上问，
 \[
-c_n=a_n^2b_n=(4n)^2\cdot2^{1-n}.
+c_n=a_n^2b_n=(4n)^2\cdot2^{1-n}
 \]
 因为 \(c_n>0\)，所以
 \[
 \frac{c_{n+1}}{c_n}
 =\frac{16(n+1)^2\cdot2^{-n}}{16n^2\cdot2^{1-n}}
-=\frac{(n+1)^2}{2n^2}.
+=\frac{(n+1)^2}{2n^2}
 \]
 于是
 \[
@@ -498,9 +517,9 @@ c_{n+1}<c_n
 \Longleftrightarrow
 (n+1)^2<2n^2
 \Longleftrightarrow
-n^2-2n-1>0.
+n^2-2n-1>0
 \]
-由于 \(n\in\N_+\)，上式等价于 \(n>1+\sqrt{2}\)，也等价于 \(n\geqslant3\). 当 \(n=1,2\) 时不等式不成立，故当且仅当 \(n\geqslant3\) 时，\(c_{n+1}<c_n\).
+由于 \(n\in\N_+\)，上式等价于 \(n>1+\sqrt{2}\)，也等价于 \(n\geqslant3\). 当 \(n=1\)，\(2\) 时不等式不成立，故当且仅当 \(n\geqslant3\) 时，\(c_{n+1}<c_n\).
 \end{enumerate}
 \end{solution}
 
@@ -518,46 +537,42 @@ n^2-2n-1>0.
 \begin{solution}
 \begin{enumerate}
 \item 建立空间直角坐标系，令平面 \(ABCD\) 为 \(z=0\)，并取
-\[
-A=(0,0,0),\quad B=(2,0,0),\quad D=(0,2,0),\quad C=(2,2,0).
-\]
+\(A=(0,0,0)\)，\(B=(2,0,0)\)，\(D=(0,2,0)\)，\(C=(2,2,0)\).
 设 \(E'=(u,v,0)\). 由 \(EA=ED\)，且 \(EE'\perp\) 平面 \(ABCD\)，得 \(E'A=E'D\)，所以
 \[
-u^2+v^2=u^2+(v-2)^2,
+u^2+v^2=u^2+(v-2)^2
 \]
-从而 \(v=1\). 同理，设 \(F'=(r,s,0)\)，由 \(FB=FC\) 得 \(F'B=F'C\)，于是
+从而 \(v=1\). 设 \(F'=(r,s,0)\)，由 \(FB=FC\) 得 \(F'B=F'C\)，于是
 \[
-(r-2)^2+s^2=(r-2)^2+(s-2)^2,
+(r-2)^2+s^2=(r-2)^2+(s-2)^2
 \]
 从而 \(s=1\). 因此 \(E'\)，\(F'\) 都在平面内的直线 \(y=1\) 上. 由于 \(E\)，\(F\) 是直线 \(l\) 上的两个不同点，且 \(l\) 平行于平面 \(ABCD\)，故 \(E'\ne F'\)，所以直线 \(E'F'\) 就是 \(y=1\). 它经过 \(AD\) 的中点 \((0,1,0)\)，且 \(AD\) 的方向为 \(y\) 轴方向，故 \(E'F'\perp AD\)，并且平分 \(AD\).
 \item 设 \(EE'=h\). 因为 \(l\parallel\) 平面 \(ABCD\)，所以 \(E\) 与 \(F\) 到平面的距离相等. 由上问，\(E'\) 的坐标可写为 \((u,1,0)\)，于是 \(E=(u,1,h)\)，且
 \[
-AE=\sqrt{u^2+1+h^2}.
+AE=\sqrt{u^2+1+h^2}
 \]
 由 \(\angle EAD=60^\circ\)，有
 \[
 \cos\angle EAD
 =\frac{\overrightarrow{AE}\cdot\overrightarrow{AD}}{AE\cdot AD}
-=\frac{1}{AE}=\frac{1}{2},
+=\frac{1}{AE}=\frac{1}{2}
 \]
 所以 \(AE=2\). 再由 \(\angle EAB=60^\circ\)，得
 \[
 \cos\angle EAB
 =\frac{\overrightarrow{AE}\cdot\overrightarrow{AB}}{AE\cdot AB}
-=\frac{u}{AE}=\frac{1}{2},
+=\frac{u}{AE}=\frac{1}{2}
 \]
 从而 \(u=1\). 代入 \(AE^2=u^2+1+h^2\)，得
-\[
-4=1+1+h^2,\qquad h=\sqrt{2}.
-\]
-由第一问，\(E'F'\parallel AB\)，而 \(EF\) 是其在平行平面上的对应线段，所以 \(EF\parallel AB\). 按图中 \(E,F\) 的取向，\(\overrightarrow{EF}=\overrightarrow{AB}\)；又 \(EF=AB=2\)，因此 \(F\) 是将 \(E\) 沿 \(AB\) 方向平移 \(2\) 个单位得到的点，多面体 \(ABCDEF\) 是以 \(\triangle ADE\) 为底、以 \(EF\) 为棱的三棱柱. 由上面得到 \(AE=2\)，所以
+\(4=1+1+h^2\)，\(h=\sqrt{2}\).
+由第一问，\(E'F'\parallel AB\)，而 \(EF\) 是其在平行平面上的对应线段，所以 \(EF\parallel AB\). 结合原图中 \(E\)，\(F\) 的位置，\(F\) 是将 \(E\) 沿 \(AB\) 方向平移 \(2\) 个单位得到的点；因此 \(ABCDEF\) 是以 \(\triangle ADE\) 为底、以 \(EF\) 为侧棱的三棱柱. 由上面得到 \(AE=2\)，所以
 \[
 S_{\triangle ADE}=\frac{1}{2}\cdot AD\cdot AE\cdot\sin\angle EAD
-=\frac{1}{2}\cdot2\cdot2\cdot\sin60^{\circ}=\sqrt{3}.
+=\frac{1}{2}\cdot2\cdot2\cdot\sin60^{\circ}=\sqrt{3}
 \]
 故
 \[
-V_{ABCDEF}=S_{\triangle ADE}\cdot EF=\sqrt{3}\cdot2=2\sqrt{3}.
+V_{ABCDEF}=S_{\triangle ADE}\cdot EF=\sqrt{3}\cdot2=2\sqrt{3}
 \]
 \end{enumerate}
 \end{solution}
@@ -566,16 +581,16 @@ V_{ABCDEF}=S_{\triangle ADE}\cdot EF=\sqrt{3}\cdot2=2\sqrt{3}.
 已知函数 \(f(x) = x - \frac{2}{x} + 1 - a \ln x\)，\(a > 0\).
 \begin{enumerate}
 \item 讨论 \( f(x) \) 的单调性；
-\item 设 \(a = 3\)，求 \(f(x)\) 在区间 \([1, \e^2]\) 上值域，其中 \(\e = 2.71828 \cdots\) 是自然对数的底数.
+\item 设 \(a = 3\)，求 \(f(x)\) 在区间 \([1, \e^2]\) 上值域，其中 \(\e = 0.71828 \cdots\) 是自然对数的底数.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item 函数的定义域为 \(x>0\)，且
+\item 题干原 PDF 将自然对数的底数的近似值印作 \(0.71828\cdots\)，这与自然对数底数的定义矛盾；若照此数值，则 \(e^2<1\)，题中的 \([1,e^2]\) 不能作为通常意义下的非空区间. 以下按数学定义 \(\e=2.71828\cdots\) 计算，并保留这一题面冲突. 函数的定义域为 \(x>0\)，且
 \[
 f'(x)=1+\frac{2}{x^2}-\frac{a}{x}
-=\frac{x^2-ax+2}{x^2}.
+=\frac{x^2-ax+2}{x^2}
 \]
 因为 \(x^2>0\)，所以 \(f'(x)\) 的符号由 \(g(x)=x^2-ax+2\) 决定.
 
@@ -584,29 +599,26 @@ f'(x)=1+\frac{2}{x^2}-\frac{a}{x}
 当 \(a=2\sqrt{2}\) 时，\(g(x)=(x-\sqrt{2})^2\geqslant0\)，所以 \(f(x)\) 在 \((0,+\infty)\) 上单调递增.
 
 当 \(a>2\sqrt{2}\) 时，令
-\[
-x_1=\frac{a-\sqrt{a^2-8}}{2},\qquad
-x_2=\frac{a+\sqrt{a^2-8}}{2},
-\]
+\(x_1=\frac{a-\sqrt{a^2-8}}{2}\)，\(x_2=\frac{a+\sqrt{a^2-8}}{2}\)
 则 \(0<x_1<x_2\)，并且
 \[
-g(x)=(x-x_1)(x-x_2).
+g(x)=(x-x_1)(x-x_2)
 \]
 所以 \(f(x)\) 在 \((0,x_1)\) 和 \((x_2,+\infty)\) 上单调递增，在 \((x_1,x_2)\) 上单调递减.
 \item 当 \(a=3\) 时，
 \[
 f'(x)=\frac{x^2-3x+2}{x^2}
-=\frac{(x-1)(x-2)}{x^2}.
+=\frac{(x-1)(x-2)}{x^2}
 \]
 因此 \(f(x)\) 在 \([1,2]\) 上单调递减，在 \([2,+\infty)\) 上单调递增. 考察区间 \([1,\e^2]\) 上的端点和极值点：
+\(f(1)=0\)，\(f(2)=2-3\ln2\)，\(f(\e^2)=\e^2-\frac{2}{\e^2}-5\).
+由于 \(\ln2>\frac{1}{2}\)，有 \(f(2)=2-3\ln2<0=f(1)\). 令 \(h(t)=t-\frac{2}{t}-5\)，则 \(h'(t)=1+\frac{2}{t^2}>0\). 又 \(\e>2.7\)，故 \(\e^2>7.29\)，从而
 \[
-f(1)=0,\qquad
-f(2)=2-3\ln2,\qquad
-f(\e^2)=\e^2-\frac{2}{\e^2}-5.
+h(\e^2)=f(\e^2)>h\left(\frac{729}{100}\right)=\frac{729}{100}-\frac{200}{729}-5>0=f(1)
 \]
-其中 \(2-3\ln2\approx-0.0794\)，\(\e^2-\frac{2}{\e^2}-5\approx2.118\)，故最小值为 \(2-3\ln2\)，最大值为 \(\e^2-\frac{2}{\e^2}-5\). 所以值域为
+结合单调性，最小值为 \(2-3\ln2\)，最大值为 \(\e^2-\frac{2}{\e^2}-5\). 所以值域为
 \[
-\left[2-3\ln2,\e^2-\frac{2}{\e^2}-5\right].
+\left[2-3\ln2,\e^2-\frac{2}{\e^2}-5\right]
 \]
 \end{enumerate}
 \end{solution}

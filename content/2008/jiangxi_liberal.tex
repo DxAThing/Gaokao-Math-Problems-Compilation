@@ -16,6 +16,10 @@
 B
 \end{answer}
 
+\begin{solution}
+若 \(x=y\)，则两边取绝对值得 \( |x|=|y| \)，所以 \(x=y\) 是 \( |x|=|y| \) 的充分条件.反之，\( |x|=|y| \) 只说明 \(x=y\) 或 \(x=-y\)，例如 \(x=1\)，\(y=-1\) 时前者成立而后者不成立.因此 \( |x|=|y| \) 是 \(x=y\) 的必要不充分条件，正确选项为 B.
+\end{solution}
+
 \begin{problem}
 定义集合运算： \( A * B = \{z \mid z = xy, x \in A, y \in B\} \). 设 \( A = \{1, 2\} \)，\( B = \{0, 2\} \)，则集合 \( A * B \) 的所有元素之和为（\quad）
 
@@ -29,6 +33,10 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+分别计算 \(x\in A\)，\(y\in B\) 时的乘积，得到 \(1\cdot0=0\)，\(1\cdot2=2\)，\(2\cdot0=0\)，\(2\cdot2=4\)，所以 \(A*B=\{0,2,4\}\).其所有元素之和为 \(0+2+4=6\)，正确选项为 D.
+\end{solution}
 
 \begin{problem}
 若函数 \( y = f(x) \) 的定义域是 \([0, 2]\)，则函数 \( g(x) = \frac{f(2x)}{x - 1} \) 的定义域是（\quad）
@@ -44,6 +52,10 @@ D
 B
 \end{answer}
 
+\begin{solution}
+要使 \(f(2x)\) 有意义，必须有 \(2x\in[0,2]\)，即 \(x\in[0,1]\).同时分母不能为零，所以 \(x\ne1\).因此 \(g(x)\) 的定义域为 \([0,1)\)，正确选项为 B.
+\end{solution}
+
 \begin{problem}
 若 \(0 < x < y < 1\)，则（\quad）
 
@@ -57,6 +69,10 @@ B
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+因为 \(3>1\)，指数函数 \(3^t\) 在 \(\mathbb R\) 上递增，所以 \(3^x<3^y\)，选项 A 错误.又因为 \(0<x<y<1\)，有 \(\ln x<\ln y<0\)，从而 \(\log_x3=\dfrac{\ln3}{\ln x}>\dfrac{\ln3}{\ln y}=\log_y3\)，选项 B 错误.由于 \(4>1\)，对数函数 \(\log_4t\) 递增，故 \(\log_4x<\log_4y\)，选项 C 正确.最后 \(0<\frac14<1\)，所以 \(\left(\frac14\right)^x>\left(\frac14\right)^y\)，选项 D 错误.因此正确选项为 C.
+\end{solution}
 
 \begin{problem}
 在数列 \(\{a_{n}\}\) 中，\(a_{1} = 2\)，\(a_{n+1} = a_{n} + \ln \left(1 + \frac{1}{n}\right)\)，则 \(a_{n} =\)（\quad）
@@ -72,6 +88,10 @@ C
 A
 \end{answer}
 
+\begin{solution}
+由递推式，逐项相加得 \(a_n=a_1+\displaystyle\sum_{k=1}^{n-1}\ln\left(1+\frac1k\right)=2+\ln\displaystyle\prod_{k=1}^{n-1}\frac{k+1}{k}\).乘积裂项后为 \(n\)，所以 \(a_n=2+\ln n\)，正确选项为 A.
+\end{solution}
+
 \begin{problem}
 函数 \( f(x) = \frac{\sin x}{\sin x + 2\sin \frac{x}{2}} \) 是（\quad）
 
@@ -85,6 +105,10 @@ A
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+有 \(\sin x+2\sin\frac x2=2\sin\frac x2\left(\cos\frac x2+1\right)\).在定义域内可约去公因式，得到 \(f(x)=\dfrac{\cos(x/2)}{1+\cos(x/2)}\)，其中原函数的定义域排除了分母为零的点.因为余弦函数为偶函数，\(f(-x)=f(x)\)，所以 \(f\) 为偶函数.\(\cos(x/2)\) 的最小正周期为 \(4\pi\)，而代入 \(x+2\pi\) 会将 \(\cos(x/2)\) 变为其相反数，函数不保持不变，故最小正周期为 \(4\pi\).正确选项为 A.
+\end{solution}
 
 \begin{problem}
 已知 \(F_{1}\)，\(F_{2}\) 是椭圆的两个焦点，满足 \(\overrightarrow{MF_{1}} \cdot \overrightarrow{MF_{2}} = 0\) 的点 \(M\) 总在椭圆内部，则椭圆离心率的取值范围是（\quad）
@@ -100,6 +124,12 @@ A
 C
 \end{answer}
 
+\begin{solution}
+设椭圆的半长轴、半短轴和半焦距分别为 \(a\)，\(b\)，\(c\)，则 \(a>b>0\)，且 \(c^2=a^2-b^2\).取焦点为 \(F_1(-c,0)\)，\(F_2(c,0)\)，设 \(M(x,y)\)，则 \(\overrightarrow{MF_1}\cdot\overrightarrow{MF_2}=(-c-x,-y)\cdot(c-x,-y)=x^2+y^2-c^2\).
+
+因此满足垂直条件的点在圆 \(x^2+y^2=c^2\) 上.圆上点在椭圆中的表达式 \(\frac{x^2}{a^2}+\frac{y^2}{b^2}\) 的最大值为 \(\frac{c^2}{b^2}\)，要使圆上所有点都在椭圆内部，必须且只须 \(\frac{c^2}{b^2}<1\).于是 \(a^2-b^2<b^2\)，即 \(a^2<2b^2\).用离心率 \(e=\frac ca\) 表示，得 \(e^2<1-e^2\)，所以 \(0<e<\frac{\sqrt2}{2}\).正确选项为 C.
+\end{solution}
+
 \begin{problem}
 \((1 + x)^{10}\left(1 + \frac{1}{x}\right)^{10}\) 展开式中的常数项为（\quad）
 
@@ -113,6 +143,10 @@ C
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+将式子化为 \((1+x)^{10}\left(1+\frac1x\right)^{10}=x^{-10}(1+x)^{20}\).常数项来自 \((1+x)^{20}\) 中的 \(x^{10}\) 项，其系数为 \(\mathrm C_{20}^{10}\)，正确选项为 D.
+\end{solution}
 
 \begin{problem}
 设直线 \(m\) 与平面 \(\alpha\) 相交但不垂直，则下列说法中正确的是（\quad）
@@ -128,6 +162,12 @@ D
 B
 \end{answer}
 
+\begin{solution}
+设 \(P=m\cap\alpha\)，取坐标使 \(\alpha\) 为 \(z=0\)，并令 \(P=(0,0,0)\)，\(m\) 的方向向量为 \((u,0,v)\)，其中 \(u\ne0\)，\(v\ne0\).\(m\) 在 \(\alpha\) 上的射影方向为 \((u,0,0)\).若过 \(m\) 的平面 \(\beta\) 垂直于 \(\alpha\)，则 \(\beta\cap\alpha\) 必须是过 \(P\) 且垂直于该射影的直线，因而 \(\beta\) 被 \(m\) 和这条射影唯一确定.例如 \(\beta:y=0\)，所以选项 B 正确.
+
+选项 A 中，\(\alpha\) 内所有方向为 \((0,1,0)\) 的直线都与 \(m\) 所成的角为直角，存在无数条，故不能说有且只有一条.选项 C 可取直线 \(l\) 的方向为 \((0,1,0)\)，并令 \(l\) 位于 \(z=1\) 的平面内，则 \(l\perp m\) 且 \(l\parallel\alpha\)，故 C 错误.选项 D 可取平面 \(\gamma:y=1\)，其方向包含 \((u,0,v)\)，所以 \(\gamma\parallel m\)，且 \(\gamma\perp\alpha\)，故 D 错误.因此正确选项为 B.
+\end{solution}
+
 \begin{problem}
 函数 \( y = \tan x + \sin x - |\tan x - \sin x| \) 在区间 \(\left(\frac{\pi}{2}, \frac{3\pi}{2}\right)\) 内的图象大致是 （\quad）
 
@@ -141,6 +181,10 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+在 \(\left(\frac\pi2,\pi\right)\) 内，\(\tan x-\sin x<0\)，所以 \(y=2\tan x\).该分支从 \(x\to\frac\pi2+\) 时的负无穷递增到 \(x\to\pi-\) 时的 \(0\).在 \(\left(\pi,\frac{3\pi}2\right)\) 内，\(\tan x-\sin x>0\)，所以 \(y=2\sin x\)，它从 \((\pi,0)\) 递减并在右端趋近 \(-2\).因此图象应为左侧从负无穷上升至原点、右侧从原点下降至 \(\left(\frac{3\pi}2,-2\right)\) 附近的图形，正确选项为 D.
+\end{solution}
 
 \begin{problem}
 电子钟一天显示的时间是从 \(00{:}00\) 到 \(23{:}59\)，每一时刻都由四个数字组成，则一天中任一时刻显示的四个数字之和为 \(23\) 的概率为（\quad）
@@ -156,6 +200,12 @@ D
 C
 \end{answer}
 
+\begin{solution}
+一天共有 \(24\times60=1440\) 个等可能时刻.设时、分四位数字分别为 \(a\)，\(b\)，\(c\)，\(d\)，其中 \(a\)，\(b\) 为小时的十位和个位，\(c\)，\(d\) 为分钟的十位和个位.当小时为 \(00\) 至 \(09\) 时，\(a=0\)，需 \(b+c+d=23\).因 \(b\leqslant9\)，且 \(c+d\leqslant14\)，所以必须 \(b=9\)，再由 \(c+d=14\) 得 \(c=5\)，\(d=9\)，只有 \(09{:}59\) 满足，共 \(1\) 个时刻.当小时为 \(10\) 至 \(19\) 时，\(a=1\)，需 \(b+c+d=22\).由 \(c+d\leqslant14\) 得 \(b\geqslant8\).当 \(b=8\) 时，\(c+d=14\)，只有 \((c,d)=(5,9)\)；当 \(b=9\) 时，\(c+d=13\)，有 \((c,d)=(4,9)\)，\((5,8)\)，共 \(3\) 个时刻.当小时为 \(20\) 至 \(23\) 时，四位数字之和的最大值为 \(2+3+5+9=19<23\)，没有满足条件的时刻.
+
+所以所求概率为 \(\dfrac{1+3}{1440}=\dfrac1{360}\)，正确选项为 C.
+\end{solution}
+
 \begin{problem}
 已知函数 \( f(x) = 2x^{2} + (4 - m)x + 4 - m \)，\( g(x) = mx \)，若对于任一实数 \( x \)，\( f(x) \) 与 \( g(x) \) 的值至少有一个为正数，则实数 \( m \) 的取值范围是（\quad）
 
@@ -170,6 +220,14 @@ C
 C
 \end{answer}
 
+\begin{solution}
+条件“对任一实数 \(x\)，\(f(x)\) 与 \(g(x)\) 至少有一个为正数”等价于不存在某个 \(x\) 使二者都不大于零.若 \(m<0\)，当 \(x<0\) 时 \(g(x)>0\)，当 \(x\geqslant0\) 时 \(4-m>0\)，从而 \(f(x)=2x^2+(4-m)x+4-m>0\).\(m=0\) 时，\(g(x)=0\)，且 \(f(x)=2(x+1)^2+2>0\)，也满足条件.
+
+若 \(0<m<4\)，对 \(x\leqslant0\) 令 \(t=-x\geqslant0\)，则 \(f(x)=2t^2-(4-m)t+(4-m)\).其最小值为 \((4-m)-\frac{(4-m)^2}{8}=\frac{(4-m)(4+m)}8>0\)，故仍满足条件；对 \(x>0\) 有 \(g(x)>0\).
+
+当 \(m=4\) 时，取 \(x=0\)，有 \(f(0)=g(0)=0\)，条件不成立；当 \(m>4\) 时同样取 \(x=0\)，有 \(f(0)=4-m<0\)，而 \(g(0)=0\)，条件也不成立.因此 \(m<4\)，正确选项为 C.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -180,13 +238,22 @@ C
 \([-3,1]\)
 \end{answer}
 
+\begin{solution}
+因为底数 \(2>1\)，所以指数不等式等价于 \(x^2+2x-4\leqslant-1\)，即 \(x^2+2x-3\leqslant0\).因式分解得 \((x+3)(x-1)\leqslant0\)，所以解集为 \([-3,1]\).
+\end{solution}
+
 \begin{problem}
-已知双曲线 \(\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1\)（\(a > 0, b > 0\)）的两条渐近线方程为 \(y = \pm \frac{\sqrt{3}}{3} x\)，若顶点到渐近线的距离为 \(1\)，则双曲线方程为\fillinblank{}.
+已知双曲线 \(\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1\)（\(a > 0\)，\(b > 0\)）的两条渐近线方程为 \(y = \pm \frac{\sqrt{3}}{3} x\)，若顶点到渐近线的距离为 \(1\)，则双曲线方程为\fillinblank{}.
 \end{problem}
 
 \begin{answer}
 \(\frac{x^2}{4} - \frac{3y^2}{4} = 1\)
 \end{answer}
+
+\begin{solution}
+双曲线的渐近线斜率为 \(\frac ba\)，所以 \(\frac ba=\frac{\sqrt3}{3}\)，即 \(b=\frac a{\sqrt3}\).右顶点为 \((a,0)\)，它到渐近线 \(\frac{\sqrt3}{3}x-y=0\) 的距离为
+\(\dfrac{a/\sqrt3}{\sqrt{1/3+1}}=\dfrac a2\).由题意 \(a=2\)，从而 \(b^2=\frac43\).代入双曲线方程，得 \(\frac{x^2}{4}-\frac{3y^2}{4}=1\).
+\end{solution}
 
 \begin{problem}
 连结球面上两点的线段称为球的弦. 半径为 \(4\) 的球的两条弦 \(AB\)，\(CD\) 的长度分别等于 \(2\sqrt{7}\)，\(4\sqrt{3}\)，每条弦的两端都在球面上运动，则两弦中点之间距离的最大值为\fillinblank{}.
@@ -195,6 +262,11 @@ C
 \begin{answer}
 \(5\)
 \end{answer}
+
+\begin{solution}
+设球心为 \(O\)，两弦中点分别为 \(M\)，\(N\).球心到弦中点的连线垂直于弦，所以
+\(OM=\sqrt{4^2-\left(\frac{2\sqrt7}{2}\right)^2}=3\)，\(ON=\sqrt{4^2-\left(\frac{4\sqrt3}{2}\right)^2}=2\).两弦可在球面上任意转动，故 \(M\)，\(N\) 的方向可以相反，且由三角不等式 \(MN\leqslant OM+ON=5\).当 \(M\)，\(O\)，\(N\) 共线且 \(O\) 在 \(MN\) 之间时取等号，因此最大值为 \(5\).
+\end{solution}
 
 \begin{problem}
 如图，正六边形 \(ABCDEF\) 中，有下列四个命题：
@@ -213,6 +285,15 @@ C
 A，B，D
 \end{answer}
 
+\begin{solution}
+取正六边形边长为 \(1\)，建立直角坐标系，令 \(A=(0,0)\)，\(B=(1,0)\)，则 \(C=(\frac32,\frac{\sqrt3}{2})\)，\(D=(1,\sqrt3)\)，\(E=(0,\sqrt3)\)，\(F=(-\frac12,\frac{\sqrt3}{2})\).于是
+\(\overrightarrow{AC}=(\frac32,\frac{\sqrt3}{2})\)，\(\overrightarrow{AF}=(-\frac12,\frac{\sqrt3}{2})\)，\(\overrightarrow{BC}=(\frac12,\frac{\sqrt3}{2})\)，从而 \(\overrightarrow{AC}+\overrightarrow{AF}=(1,\sqrt3)=2\overrightarrow{BC}\)，命题 A 正确.
+
+又 \(\overrightarrow{AD}=(1,\sqrt3)\)，所以 \(2\overrightarrow{AB}+2\overrightarrow{AF}=(2,0)+(-1,\sqrt3)=(1,\sqrt3)=\overrightarrow{AD}\)，命题 B 正确.数量积为 \(\overrightarrow{AC}\cdot\overrightarrow{AD}=3\)，而 \(\overrightarrow{AD}\cdot\overrightarrow{AB}=1\)，命题 C 错误.
+
+最后，\(\overrightarrow{AD}\cdot\overrightarrow{AF}=1\)，\(\overrightarrow{EF}=(-\frac12,-\frac{\sqrt3}{2})\)，且 \(\overrightarrow{AF}\cdot\overrightarrow{EF}=-\frac12\).因此左边等于 \(\overrightarrow{EF}\)，右边等于 \(-\frac12\overrightarrow{AD}=\overrightarrow{EF}\)，命题 D 正确.故真命题的代号为 A，B，D.
+\end{solution}
+
 \section{解答题}
 
 \begin{problem}
@@ -225,8 +306,10 @@ A，B，D
 
 \begin{solution}
 \begin{enumerate}
-\item \(\tan(\alpha+\beta)=1\).
-\item 函数的最大值为 \(\sqrt{5}\).
+\item 因为 \(\alpha\in(0,\pi)\) 且 \(\tan\alpha<0\)，所以 \(\alpha\in(\frac\pi2,\pi)\)，从而 \(\sin\alpha=\frac1{\sqrt{10}}\)，\(\cos\alpha=-\frac3{\sqrt{10}}\).又因为 \(\beta\in(0,\pi)\) 且 \(\cos\beta=\frac{\sqrt5}{5}>0\)，所以 \(\beta\in(0,\frac\pi2)\)，\(\sin\beta=\frac2{\sqrt5}\)，\(\tan\beta=2\).因此
+\(\tan(\alpha+\beta)=\frac{\tan\alpha+\tan\beta}{1-\tan\alpha\tan\beta}=\frac{-\frac13+2}{1-(-\frac13)\cdot2}=1\).
+\item 展开函数得
+\(f(x)=(\sqrt2\cos\alpha-\sin\beta)\sin x+(-\sqrt2\sin\alpha+\cos\beta)\cos x\).代入上面的三角函数值，得到 \(\sqrt2\cos\alpha-\sin\beta=-\sqrt5\)，且 \(-\sqrt2\sin\alpha+\cos\beta=0\)，所以 \(f(x)=-\sqrt5\sin x\).由于 \(-1\leqslant\sin x\leqslant1\)，函数的最大值为 \(\sqrt5\).
 \end{enumerate}
 \end{solution}
 
@@ -240,8 +323,8 @@ A，B，D
 
 \begin{solution}
 \begin{enumerate}
-\item 两年后柑桔产量恰好达到灾前产量的概率为 \(0.2\).
-\item 两年后柑桔产量超过灾前产量的概率为 \(0.48\).
+\item 两年后产量恰好为灾前产量的情形只有两种：第一年为 \(1.0\) 倍、第二年乘 \(1.0\) 倍，概率为 \(0.2\times0.4\)；第一年为 \(0.8\) 倍、第二年乘 \(1.25\) 倍，概率为 \(0.4\times0.3\).由独立性，所求概率为 \(0.2\times0.4+0.4\times0.3=0.08+0.12=0.20\).
+\item 两年后产量超过灾前产量的组合为 \(1.0\times1.5\)，\(1.0\times1.25\)，\(0.9\times1.5\)，\(0.9\times1.25\)，\(0.8\times1.5\).由独立性，所求概率为 \(0.2\times0.3+0.2\times0.3+0.4\times0.3+0.4\times0.3+0.4\times0.3=0.06+0.06+0.12+0.12+0.12=0.48\).
 \end{enumerate}
 \end{solution}
 
@@ -255,9 +338,11 @@ A，B，D
 
 \begin{solution}
 \begin{enumerate}
-\item \(a_n=2n+1\)，\(b_n=8^{n-1}\).
-\item \(\displaystyle \frac{1}{S_1}+\frac{1}{S_2}+\cdots+\frac{1}{S_n}
- =\frac{3}{4}-\frac{2n+3}{2(n+1)(n+2)}\).
+\item 设等差数列 \(\{a_n\}\) 的公差为 \(d\)，等比数列 \(\{b_n\}\) 的公比为 \(q\).因为各项 \(a_n\) 都是整数且 \(a_1=3\)，所以 \(d\) 为整数.由 \(a_2=3+d\)，\(a_3=3+2d\)，得 \(S_2=6+d\)，\(S_3=9+3d=3(3+d)\).又 \(b_2=q\)，\(b_3=q^2\)，所以
+\(q(6+d)=64\)，\(3q^2(3+d)=960\).消去 \(q\) 得 \(64(3+d)=5(6+d)^2\)，即 \(5d^2-4d-12=0\)，解得 \(d=2\) 或 \(d=-\frac65\).由于 \(d\) 为整数，故 \(d=2\)，再由 \(q(6+d)=64\) 得 \(q=8\).因此 \(a_n=3+2(n-1)=2n+1\)，\(b_n=8^{n-1}\).
+\item 由 \(a_k=2k+1\)，前 \(k\) 项和为 \(S_k=\frac{k(3+2k+1)}2=k(k+2)\).于是
+\(\displaystyle\frac1{S_1}+\cdots+\frac1{S_n}=\sum_{k=1}^n\frac1{k(k+2)}=\frac12\sum_{k=1}^n\left(\frac1k-\frac1{k+2}\right)\).
+相邻项消去后得到 \(\displaystyle\frac12\left(1+\frac12-\frac1{n+1}-\frac1{n+2}\right)=\frac34-\frac{2n+3}{2(n+1)(n+2)}\).
 \end{enumerate}
 \end{solution}
 
@@ -274,8 +359,11 @@ A，B，D
 
 \begin{solution}
 \begin{enumerate}
-\item \(B_1C_1\perp\) 平面 \(OAH\).
-\item 二面角 \(O-A_1B_1-C_1\) 的大小为 \(\arctan\sqrt{5}\).
+\item 建立空间直角坐标系，取 \(O=(0,0,0)\)，\(A=(2,0,0)\)，\(B=(0,2,0)\)，\(C=(0,0,2)\).则 \(E=(1,1,0)\)，\(F=(1,0,1)\)，\(H=(1,\frac12,\frac12)\).过 \(E\)，\(F\)，\(A_1\) 的平面设为 \(ux+vy+wz=1\).由 \(A_1=(\frac32,0,0)\)，\(E\)，\(F\) 在此平面上，得到 \(u=\frac23\)，\(v=w=\frac13\)，所以平面方程为 \(2x+y+z=3\).因此 \(B_1=(0,3,0)\)，\(C_1=(0,0,3)\).
+
+向量 \(\overrightarrow{B_1C_1}=(0,-3,3)\)，而平面 \(OAH\) 内两条相交方向向量可取 \(\overrightarrow{OA}=(2,0,0)\) 与 \(\overrightarrow{OH}=(1,\frac12,\frac12)\).有 \(\overrightarrow{B_1C_1}\cdot\overrightarrow{OA}=0\)，且 \(\overrightarrow{B_1C_1}\cdot\overrightarrow{OH}=0\)，故 \(\overrightarrow{B_1C_1}\) 垂直于平面 \(OAH\) 的两个独立方向.又平面 \(OAH\) 的方程为 \(y=z\)，直线 \(B_1C_1\) 可写为 \((0,3-3t,3t)\)，在 \(t=\frac12\) 时与该平面交于 \((0,\frac32,\frac32)\).因此 \(B_1C_1\) 与平面 \(OAH\) 相交且方向垂直于该平面，从而 \(B_1C_1\perp\) 平面 \(OAH\).
+\item 平面 \(OA_1B_1\) 的方程为 \(z=0\)，取其法向量 \(\mathbf{n}_1=(0,0,1)\).平面 \(A_1B_1C_1\) 的方程仍为 \(2x+y+z=3\)，取法向量 \(\mathbf{n}_2=(2,1,1)\).设二面角为 \(\theta\)，则
+\(\cos\theta=\frac{|\mathbf{n}_1\cdot\mathbf{n}_2|}{|\mathbf{n}_1||\mathbf{n}_2|}=\frac1{\sqrt6}\).由于二面角取锐角，\(\tan\theta=\sqrt5\)，故 \(\theta=\arctan\sqrt5\).
 \end{enumerate}
 \end{solution}
 
@@ -289,13 +377,17 @@ A，B，D
 
 \begin{solution}
 \begin{enumerate}
-\item 函数的递增区间为 \((-2a,0)\) 与 \((a,+\infty)\)，递减区间为 \((-\infty,-2a)\) 与 \((0,a)\).
-\item \(0<a<1\) 或 \(a>\sqrt[4]{\frac{12}{7}}\).
+\item 求导得 \(f'(x)=x^3+ax^2-2a^2x=x(x+2a)(x-a)\).因为 \(a>0\)，临界点按顺序为 \(-2a\)，\(0\)，\(a\).在 \((-\infty,-2a)\)，\((-2a,0)\)，\((0,a)\)，\((a,+\infty)\) 上，\(f'(x)\) 的符号依次为负、正、负、正.因此函数的递增区间为 \((-2a,0)\) 与 \((a,+\infty)\)，递减区间为 \((-\infty,-2a)\) 与 \((0,a)\).
+\item 由上面的单调性以及 \(\lim_{x\to\pm\infty}f(x)=+\infty\)，计算三个极值点的函数值：\(f(-2a)=-\frac53a^4\)，\(f(0)=a^4\)，\(f(a)=\frac7{12}a^4\).左侧极小值始终小于 \(1\).
+
+若 \(a^4<1\)，则中间极大值也小于 \(1\)，图象在左侧下降支和右侧上升支各与 \(y=1\) 相交一次，共两个交点.若 \(a^4=1\)，还会在极大值点产生交点，不符合恰有两个交点的要求.若 \(a^4>1\)，左侧下降支和中间上升支已经各有一个交点；此时只有当右侧极小值高于 \(1\)，即 \(\frac7{12}a^4>1\) 时，右侧两支没有交点.等号时右侧极小值本身还会产生一个交点，也不符合要求.
+
+所以必须且只须 \(a^4<1\) 或 \(a^4>\frac{12}{7}\)，即 \(0<a<1\) 或 \(a>\sqrt[4]{\frac{12}{7}}\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-已知抛物线 \(y = x^2\) 和三个点 \(M(x_0, y_0)\)，\(P(0, y_0)\)，\(N(-x_0, y_0)\)（\(y_0 \neq x_0^2\)，\(y_0 > 0\)），过点 \(M\) 的一条直线交抛物线于 \(A\)，\(B\) 两点，\(AP\)，\(BP\) 的延长线分别交曲线 \(C\) 于 \(E\)，\(F\).
+已知抛物线 \(y = x^2\) 和三个点 \(M(x_0, y_0)\)，\(P(0, y_0)\)，\(N(-x_0, y_0)\)（\(y_0 \neq x_0^2\)，\(y_0 > 0\)），过点 \(M\) 的一条直线交抛物线于 \(A\)，\(B\) 两点，\(AP\)，\(BP\) 的延长线分别交抛物线于 \(E\)，\(F\).
 
 \begin{enumerate}
 \item 证明 \(E\)，\(F\)，\(N\) 三点共线；
@@ -307,7 +399,14 @@ A，B，D
 
 \begin{solution}
 \begin{enumerate}
-\item \(E\)，\(F\)，\(N\) 三点共线.
-\item 存在这样的 \(y_0\)，其取值范围为 \(y_0\geqslant 1\)，交点到直线 \(AB\) 的距离为 \(1\).
+\item 设 \(A=(u,u^2)\)，\(B=(v,v^2)\)，其中 \(u\ne v\).由于 \(E\)，\(F\) 是相应直线与抛物线的另一交点，\(u\ne0\)，\(v\ne0\)；否则相应的直线 \(AP\) 或 \(BP\) 为 \(x=0\)，只与抛物线相切于原交点.连接抛物线上横坐标为 \(u\)，\(v\) 的两点所得弦所在直线方程为 \(y=(u+v)x-uv\)，因为 \(M\) 在该直线上，所以 \(y_0=(u+v)x_0-uv\).
+
+设 \(E=(e,e^2)\).直线 \(AE\) 的方程为 \(y=(u+e)x-ue\)，而它经过 \(P=(0,y_0)\)，故 \(-ue=y_0\)，即 \(e=-\frac{y_0}{u}\).再设 \(F=(f,f^2)\).直线 \(BF\) 的方程为 \(y=(v+f)x-vf\)，代入 \(P=(0,y_0)\) 得 \(-vf=y_0\)，即 \(f=-\frac{y_0}{v}\).于是 \(E\)，\(F\) 所在直线的方程为 \(y=(e+f)x-ef\).在 \(x=-x_0\) 处，该直线的纵坐标为 \(\displaystyle(e+f)(-x_0)-ef=\frac{y_0(u+v)x_0-y_0^2}{uv}=\frac{y_0((u+v)x_0-y_0)}{uv}=y_0\).因此点 \(N=(-x_0,y_0)\) 在直线 \(EF\) 上，故 \(E\)，\(F\)，\(N\) 三点共线.
+
+\item 因 \(M\)，\(N\) 为题中两个不同点，四点共线时 \(x_0\ne0\).由 \(M\)，\(N\) 都在直线 \(AB\) 上，分别代入弦方程，得 \(y_0=(u+v)x_0-uv\) 和 \(y_0=-(u+v)x_0-uv\)，从而 \(u+v=0\).因此 \(v=-u\)，且 \(y_0=-uv=u^2\)，直线 \(AB\) 为 \(y=y_0\)，其端点为 \((u,y_0)\) 与 \((-u,y_0)\).
+
+以 \(AB\) 为直径的圆的圆心为 \((0,y_0)\)，半径平方为 \(u^2=y_0\)，方程为 \(x^2+(y-y_0)^2=y_0\).将 \(y=x^2\) 代入，得 \(x^2+(x^2-y_0)^2=y_0\)，即 \((x^2-y_0)(x^2-y_0+1)=0\).第一因子给出原来的点 \(A\)，\(B\)，第二因子给出异于 \(A\)，\(B\) 的交点，要求 \(x^2=y_0-1\geqslant0\)，所以存在这样的交点当且仅当 \(y_0\geqslant1\).
+
+当 \(y_0=1\) 时新增交点为 \((0,0)\)；当 \(y_0>1\) 时新增交点为 \((\pm\sqrt{y_0-1},y_0-1)\).这些交点到直线 \(AB:y=y_0\) 的距离均为 \(y_0-(y_0-1)=1\).
 \end{enumerate}
 \end{solution}

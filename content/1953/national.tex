@@ -7,7 +7,7 @@
 \end{problem}
 
 \begin{solution}
-将原方程整化得 \(6\left( x^{2} + 1 \right) = 10\left( x^{2} - 1 \right)\)，故 \(4x^{2} = 16\)，\(x = \pm 2\).
+由分式有意义，得 \(x\ne1\) 且 \(x\ne-1\). 在此条件下，原方程两边同乘 \(3\left(x-1\right)\left(x+1\right)\)，得 \(3\left(x+1\right)^2+3\left(x-1\right)^2=10\left(x^2-1\right)\)，即 \(6\left(x^2+1\right)=10\left(x^2-1\right)\). 整理得 \(4x^2=16\)，所以 \(x=\pm2\). 这两个值均不等于 \(\pm1\)，代回原方程也成立，故原方程的解为 \(x=\pm2\).
 \end{solution}
 
 \begin{problem}
@@ -15,7 +15,7 @@
 \end{problem}
 
 \begin{solution}
-原方程二根相等之条件为 \(k^2 - 4 \times 3 \times 12 = 0\)，即 \(k^{2} = 12^{2}\)，\(k = \pm 12\).
+题中方程是关于 \(x\) 的二次方程，且二次项系数 \(3\ne0\). 两根相等的充要条件是判别式为零，因此 \(\Delta=k^2-4\cdot3\cdot12=0\). 于是 \(k^2=144\)，解得 \(k=12\) 或 \(k=-12\)，即 \(k=\pm12\). 此时重根为 \(-k/6\)，确实为实数，条件满足.
 \end{solution}
 
 \begin{problem}
@@ -23,7 +23,7 @@
 \end{problem}
 
 \begin{solution}
-\(\text{原行列式}=3 \times 4 \times 5 - 6 \times 7 - 4 \times 7 + 2 \times 5=60 - 42 - 28 + 10=0\).
+按第一行展开，原行列式等于 \(3\left(4\cdot5-6\cdot0\right)-\left(-1\right)\left(2\cdot5-6\cdot7\right)+1\left(2\cdot0-4\cdot7\right)\). 因而其值为 \(60+\left(10-42\right)-28=60-32-28=0\).
 \end{solution}
 
 \begin{problem}
@@ -31,23 +31,23 @@
 \end{problem}
 
 \begin{solution}
-\(\text{原式}=\log_{10}\left( \frac{300}{7}\times \frac{700}{3}\times 1 \right)=\log_{10}10000=4\).
+三个真数均为正数，可以使用对数的乘法公式，且 \(\log_{10}1=0\). 所以原式 \(=\log_{10}\left(\frac{300}{7}\cdot\frac{700}{3}\cdot1\right)=\log_{10}10000=4\).
 \end{solution}
 
 \begin{problem}
-求 \(\tan \left( 870^{\circ} \right)\).
+求 \(\tan\left(870^{\circ}\right)\).
 \end{problem}
 
 \begin{solution}
-\(\tan 870^{\circ}=\tan \left( 900^{\circ} - 30^{\circ} \right)=\tan \left( -30^{\circ} \right)=-\tan 30^{\circ}=-\frac{1}{\sqrt{3}}\).
+因为 \(870^{\circ}=5\cdot180^{\circ}-30^{\circ}\)，而正切函数的周期为 \(180^{\circ}\)，所以 \(\tan870^{\circ}=\tan\left(-30^{\circ}\right)=-\tan30^{\circ}=-\frac{1}{\sqrt{3}}\).
 \end{solution}
 
 \begin{problem}
-若 \(\cos 2x = \frac{1}{2}\)，求 \(x\) 之通值.
+若 \(\cos2x=\frac{1}{2}\)，求 \(x\) 之通值.
 \end{problem}
 
 \begin{solution}
-因 \(\cos 2x = \frac{1}{2}\)，故 \(2x = 2n\pi \pm \frac{\pi}{3}\)，\(x = n\pi \pm \frac{\pi}{6}\).
+在一个周期内，满足 \(\cos\theta=\frac12\) 的角为 \(\theta=2n\pi\pm\frac\pi3\)，其中 \(n\in\Z\). 令 \(\theta=2x\)，得 \(2x=2n\pi\pm\frac\pi3\)，两边除以 \(2\)，所以 \(x=n\pi\pm\frac\pi6\)，其中 \(n\in\Z\). 该表达式已经包含余弦函数的全部周期性解.
 \end{solution}
 
 \begin{problem}
@@ -55,8 +55,13 @@
 \end{problem}
 
 \begin{solution}
-两三角形相似的条件有以下三种：\(\angle A = \angle A'\)，\(\angle B = \angle B'\)；\(\angle A = \angle A'\)，\(AB:A'B' = AC:A'C'\)；\(AB:A'B' = AC:A'C' = BC:B'C'\).
-三者各为 \(\triangle ABC \sim \triangle A'B'C'\) 之条件.
+设对应顶点为 \(A\leftrightarrow A'\)、\(B\leftrightarrow B'\)、\(C\leftrightarrow C'\)，则两三角形相似的判定条件有以下三种：
+\begin{enumerate}
+\item 两个角分别相等，即 \(\angle A=\angle A'\)、\(\angle B=\angle B'\). 此时第三个角也相等，因为三角形内角和均为 \(180^{\circ}\)，所以由两角判定两三角形相似.
+\item 一个角相等，且这个角的两边分别成比例，即 \(\angle A=\angle A'\)，且 \(AB:A'B'=AC:A'C'\). 这里相等的角是两组比例边的夹角，由两边及其夹角判定两三角形相似.
+\item 三组对应边分别成比例，即 \(AB:A'B'=AC:A'C'=BC:B'C'\). 由三边判定两三角形相似.
+\end{enumerate}
+三者分别是两角、两边及其夹角、三边的相似判定条件，均可推出 \(\triangle ABC\sim\triangle A'B'C'\).
 \end{solution}
 
 \begin{problem}
@@ -64,7 +69,7 @@
 \end{problem}
 
 \begin{solution}
-对角线为 \(\sqrt{12^2 + 3^2 + 4^2} = \sqrt{169} = 13\text{ 寸}\).
+先取长方体底面的对角线，其长度为 \(\sqrt{12^2+3^2}=\sqrt{153}\text{ 寸}\). 该底面对角线与高 \(4\text{ 寸}\) 又构成直角三角形，因此长方体对角线 \(d\) 满足 \(d^2=12^2+3^2+4^2=144+9+16=169\). 由于长度取正值，得 \(d=13\text{ 寸}\).
 \end{solution}
 
 \begin{problem}
@@ -72,7 +77,7 @@
 \end{problem}
 
 \begin{solution}
-因 \(3^{2} + 4^{2} = 5^{2}\)，故底面为直角三角形，其面积为 \(\frac{1}{2} \times 3 \times 4\text{ 方寸} = 6\text{ 方寸}\). （或用“底面积 \(= \frac{1}{4}\sqrt{\left( 3 + 4 + 5 \right)\left( 3 + 4 - 5 \right)\left( 3 - 4 + 5 \right)\left( -3 + 4 + 5 \right)}\text{ 方寸} = 6\text{ 方寸}\)”亦可）棱柱体积 \(= 6\times 6\text{ 立方寸} = 36\text{ 立方寸}\).
+底面三边满足 \(3^2+4^2=5^2\)，所以底面是以 \(3\text{ 寸}\)、\(4\text{ 寸}\) 为直角边的直角三角形. 底面积为 \(S_{\text{底}}=\frac12\cdot3\cdot4=6\text{ 平方寸}\). 直棱柱体积等于底面积乘高，因此 \(V=S_{\text{底}}h=6\cdot6=36\text{ 立方寸}\).
 \end{solution}
 
 \begin{problem}
@@ -80,7 +85,7 @@
 \end{problem}
 
 \begin{solution}
-设球的半径为 \(R\text{ 寸}\)，则 \(4\pi R^{2} = 36\pi\)，因此 \(R = 3\). 球的体积为 \(\frac{4}{3}\pi R^3 = 36\pi\text{ 立方寸}\).
+设球半径为 \(r\text{ 寸}\)，则 \(r>0\). 由球的表面积公式，\(4\pi r^2=36\pi\)，所以 \(r^2=9\). 因为半径为正，故 \(r=3\text{ 寸}\). 于是球的体积为 \(V=\frac43\pi r^3=\frac43\pi\cdot3^3=36\pi\text{ 立方寸}\).
 \end{solution}
 
 \begin{problem}
@@ -91,16 +96,13 @@ x^{2} - 2xy + 3y^{2} = 9,\\
 \end{problem}
 
 \begin{solution}
-原方程组消去常数项，得 \(2x^{2} + 5xy - 12y^{2} = 0\). 将此方程左边分解因式，得 \(\left( x + 4y \right)\left( 2x - 3y \right) = 0\)，即 \(x + 4y = 0\)，或 \(2x - 3y = 0\).
-当 \(x + 4y = 0\) 时，方程组为 \(\begin{cases}
- x^{2} - 2xy + 3y^{2} = 9,\\
- x + 4y = 0.
-\end{cases}\)，解得 \(x_{1} = \frac{4}{3}\sqrt{3}\)，\(y_{1} = -\frac{1}{3}\sqrt{3}\)；\(x_{2} = -\frac{4}{3}\sqrt{3}\)，\(y_{2} = \frac{1}{3}\sqrt{3}\).
+将第一式乘以 \(10\)，第二式乘以 \(3\)，两式相减并消去常数项，得 \(-2x^2-5xy+12y^2=0\)，即 \(2x^2+5xy-12y^2=0\). 因式分解得 \(\left(x+4y\right)\left(2x-3y\right)=0\)，所以必须分两种情形讨论.
 
-当 \(2x - 3y = 0\) 时，方程组为 \(\begin{cases}
- x^{2} - 2xy + 3y^{2} = 9,\\
- 2x - 3y = 0.
-\end{cases}\)，解得 \(x_{3} = 3\)，\(y_{3} = 2\)；\(x_{4} = -3\)，\(y_{4} = -2\).
+当 \(x+4y=0\) 时，\(x=-4y\). 代入第一式，得 \(16y^2+8y^2+3y^2=9\)，即 \(27y^2=9\)，所以 \(y=\pm\frac{\sqrt3}{3}\)，相应地 \(x=\mp\frac{4\sqrt3}{3}\). 得到两组解 \(\left(\frac{4\sqrt3}{3},-\frac{\sqrt3}{3}\right)\) 和 \(\left(-\frac{4\sqrt3}{3},\frac{\sqrt3}{3}\right)\).
+
+当 \(2x-3y=0\) 时，\(x=\frac32y\). 代入第一式，得 \(\frac94y^2-3y^2+3y^2=9\)，即 \(\frac94y^2=9\)，所以 \(y=\pm2\)，相应地 \(x=\pm3\). 得到两组解 \(\left(3,2\right)\) 和 \(\left(-3,-2\right)\).
+
+上述各组解均满足第一式，并且它们满足由两原式线性消元所得的关系 \(10\times\text{第一式}-3\times\text{第二式}=0\)，所以代回即有第二式成立. 因此原方程组的解为 \(\left(x,y\right)=\left(\frac{4\sqrt3}{3},-\frac{\sqrt3}{3}\right)\)、\(\left(-\frac{4\sqrt3}{3},\frac{\sqrt3}{3}\right)\)、\(\left(3,2\right)\)、\(\left(-3,-2\right)\).
 \end{solution}
 
 \begin{problem}
@@ -113,10 +115,10 @@ x^{2} - 2xy + 3y^{2} = 9,\\
 \begin{solution}
 \begin{enumerate}
 \item
-\(\text{原式}=\sqrt{\frac{3\times 2^{2}}{5^{2}}} + \sqrt[4]{3^{2}\times 10^{4}} + \sqrt[6]{\frac{2^{6}}{3^{3}}}=\frac{2}{5}\sqrt{3} + 10\sqrt{3} + \frac{2}{3}\sqrt{3}=\frac{166}{15}\sqrt{3}\).
+因为 \(12=3\cdot2^2\)、\(25=5^2\)、\(90000=3^2\cdot10^4\)、\(64=2^6\)、\(27=3^3\)，且各根号取算术根，所以
+\(\sqrt{\frac{12}{25}}=\frac25\sqrt3\)，\(\sqrt[4]{90000}=\sqrt[4]{3^2\cdot10^4}=10\sqrt3\)，\(\sqrt[6]{\frac{64}{27}}=\sqrt[6]{\frac{2^6}{3^3}}=\frac{2}{\sqrt3}=\frac23\sqrt3\). 因而原式 \(=\left(\frac25+10+\frac23\right)\sqrt3=\frac{166}{15}\sqrt3\).
 
-\item
-由二项展开式的通项公式，\(T_{r+1} = \mathrm C_{12}^{r}\left( 2x^{3} \right)^{12-r}\left( \frac{1}{x} \right)^{r} = \mathrm C_{12}^{r}\cdot 2^{12-r}\cdot x^{36-4r}\). 令 \(36 - 4r = 0\)，因此 \(r = 9\). 故常数项为 \(\mathrm C_{12}^{9} \cdot 2^{12-9} = \mathrm C_{12}^{3} \cdot 2^{3} = 1760\).
+\item 由于式中含有 \(\frac1x\)，须有 \(x\ne0\). 二项式展开的通项为 \(T_{r+1}=\mathrm C_{12}^{r}\left(2x^3\right)^{12-r}\left(\frac1x\right)^r=\mathrm C_{12}^{r}2^{12-r}x^{36-4r}\)，其中 \(r=0\)，\(1\)，\(\ldots\)，\(12\). 要成为常数项，必须有 \(36-4r=0\)，所以 \(r=9\)，且该值在允许范围内. 因此常数项为 \(\mathrm C_{12}^{9}2^{12-9}=\mathrm C_{12}^{3}2^3=220\cdot8=1760\).
 \end{enumerate}
 \end{solution}
 
@@ -125,7 +127,13 @@ x^{2} - 2xy + 3y^{2} = 9,\\
 \end{problem}
 
 \begin{solution}
-由于 \(AD\perp BC\)，\(BE\perp CA\)，因此点 \(A\)，\(B\)，\(D\)，\(E\) 共圆，故 \(\angle ADE = \angle ABE\). 又因点 \(F\)，\(B\)，\(C\)，\(E\) 共圆，因此 \(\angle FBE = \angle FCE\). 又因点 \(C\)，\(A\)，\(F\)，\(D\) 共圆，因此 \(\angle FCA = \angle FDA\). 综上可得 \(\angle ADE = \angle FDA\)，即 \(AD\) 平分 \(\angle EDF\). 又因 \(H\)，\(D\)，\(A\) 共线，故 \(HD\) 亦平分 \(\angle EDF\).
+由 \(AD\perp BC\)、\(BE\perp CA\)，可知 \(\angle ADB=\angle AEB=90^{\circ}\)，所以 \(A\)、\(B\)、\(D\)、\(E\) 共圆. 因同弦 \(AE\) 所对的圆周角相等，得 \(\angle ADE=\angle ABE\).
+
+又因为 \(CF\perp AB\)、\(BE\perp AC\)，所以 \(\angle BFC=\angle BEC=90^{\circ}\)，从而 \(F\)、\(B\)、\(C\)、\(E\) 共圆. 由于 \(A\)、\(F\)、\(B\) 共线，且 \(A\)、\(E\)、\(C\) 共线，有 \(\angle ABE=\angle FBE\)、\(\angle FCE=\angle FCA\). 在圆 \(FBCE\) 中，同弦 \(FE\) 所对的圆周角相等，因此 \(\angle FBE=\angle FCE\).
+
+再由 \(AD\perp BC\)、\(CF\perp AB\)，得 \(\angle CDA=\angle CFA=90^{\circ}\)，所以 \(C\)、\(A\)、\(F\)、\(D\) 共圆. 在圆 \(CAFD\) 中，同弦 \(FA\) 所对的圆周角相等，故 \(\angle FCA=\angle FDA\). 综合以上等式，\(\angle ADE=\angle ABE=\angle FBE=\angle FCE=\angle FCA=\angle FDA\)，所以直线 \(AD\) 平分 \(\angle EDF\).
+
+由于三角形 \(ABC\) 为锐角三角形，垂心 \(H\) 在线段 \(AD\) 上，且从点 \(D\) 看，射线 \(DH\) 与射线 \(DA\) 重合，因此 \(HD\) 也平分 \(\angle EDF\).
 
 \solutionfigure{\bitmapfigure[max width=4cm]{img/1953/national/q4_solution_fig1.png}}
 \end{solution}
@@ -135,7 +143,10 @@ x^{2} - 2xy + 3y^{2} = 9,\\
 \end{problem}
 
 \begin{solution}
-已知 \(\angle B = 45^{\circ}\)，\(\angle C = 60^{\circ}\)，于是 \(\angle A = 75^{\circ}\). 由正弦定理得 \(\frac{AC}{\sin 45^{\circ}} = \frac{1}{\sin 75^{\circ}}\). 所以
-\[AC=\frac{\sin 45^{\circ}}{\sin 75^{\circ}}=\frac{\frac{\sqrt{2}}{2}}{\frac{\sqrt{2}}{2}\left( \frac{\sqrt{3}}{2}+\frac{1}{2} \right)}=\left( \sqrt{3}-1 \right)\text{ 尺}\]
-\(\triangle ABC\) 的面积为 \(S=\frac{1}{2}\times 1\times \left( \sqrt{3}-1 \right)\cdot \sin 60^{\circ}=\frac{1}{4}\left( 3-\sqrt{3} \right)\text{ 平方尺}\).
+设三角形为 \(\triangle ABC\)，令 \(\angle B=45^{\circ}\)、\(\angle C=60^{\circ}\)，则夹在这两个角之间的边为 \(BC=1\text{ 尺}\)，且 \(\angle A=180^{\circ}-45^{\circ}-60^{\circ}=75^{\circ}\). 三角形中最小的角是 \(\angle B\)，所以最小边是其对边 \(AC\).
+
+由正弦定理，\(\frac{AC}{\sin45^{\circ}}=\frac{BC}{\sin75^{\circ}}=\frac{1}{\sin75^{\circ}}\)，于是
+\(AC=\frac{\sin45^{\circ}}{\sin75^{\circ}}=\frac{\frac{\sqrt2}{2}}{\sin\left(45^{\circ}+30^{\circ}\right)}=\frac{\frac{\sqrt2}{2}}{\frac{\sqrt2}{2}\cdot\frac{\sqrt3}{2}+\frac{\sqrt2}{2}\cdot\frac12}=\frac{2}{\sqrt3+1}=\sqrt3-1\text{ 尺}\).
+
+以 \(BC\) 和 \(CA\) 为两边，夹角为 \(\angle C=60^{\circ}\)，所以三角形面积为 \(S=\frac12\cdot BC\cdot CA\cdot\sin60^{\circ}=\frac12\cdot1\cdot\left(\sqrt3-1\right)\cdot\frac{\sqrt3}{2}=\frac{3-\sqrt3}{4}\text{ 平方尺}\).
 \end{solution}

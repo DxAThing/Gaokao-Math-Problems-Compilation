@@ -6,208 +6,193 @@
 \begin{enumerate}
 \item 化简：\(\sqrt{4-12a+9a^2}\).
 
-\item 计算：\(\frac{(-27)^3\sqrt{\left(\frac{1}{16}\right)^{-\frac{1}{2}}}}{(-9)^0\left(\frac{3}{2}\right)^7\left(\frac{1}{2}\right)^{-5}}\).
+\item 计算：\(\dfrac{\left(-27\right)^3\sqrt{\left(\dfrac{1}{16}\right)^{-\frac{1}{2}}}}{\left(-9\right)^0\left(\dfrac{3}{2}\right)^7\left(\dfrac{1}{2}\right)^{-5}}\).
 
 \item 已知 \(\lg2=0.3010\)，\(f\left(x\right)=\log_{\sqrt{10}}x\)，求 \(f\left(5\right)\).
 
-\item 求函数 \(y=\frac{\sqrt{1-\frac{2}{3}x}}{\sqrt[3]{3x-1}}\) 的定义域.
+\item 求函数 \(y=\dfrac{\sqrt{1-\frac{2}{3}x}}{\sqrt[3]{3x-1}}\) 的定义域.
 
-\item 已知 \(\cos\theta=0.6\)，\(270^\circ<\theta<360^\circ\)，求 \(\left(\sin\frac{\theta}{2}-\cos\frac{\theta}{2}\right)^2\) 的值.
+\item 已知 \(\cos\theta=0.6\)，\(270^\circ<\theta<360^\circ\)，求 \(\left(\sin\dfrac{\theta}{2}-\cos\dfrac{\theta}{2}\right)^2\) 的值.
 
-\item 把点 \(P\) 的极坐标 \(\left(-4,-\frac{4\pi}{3}\right)\) 化成直角坐标.
+\item 把点 \(P\) 的极坐标 \(\left(-4,-\dfrac{4\pi}{3}\right)\) 化成直角坐标.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item
+\item 先配成完全平方式，得 \(4-12a+9a^2=\left(2-3a\right)^2\). 因为平方根表示算术平方根，所以 \(\sqrt{\left(2-3a\right)^2}=\left|2-3a\right|\). 当 \(a\leq\frac{2}{3}\) 时，\(2-3a\geq0\)，当 \(a>\frac{2}{3}\) 时，\(2-3a<0\)，故
 \[
-\sqrt{4-12a+9a^2}=\sqrt{\left(2-3a\right)^2}
-=
+\sqrt{4-12a+9a^2}=\left|2-3a\right|=
 \begin{cases}
-2-3a, & a\le\frac{2}{3}\text{时},\\
-3a-2, & a>\frac{2}{3}\text{时}.
+2-3a,&a\leq\frac{2}{3},\\
+3a-2,&a>\frac{2}{3}.
 \end{cases}
 \]
 
-\item
+\item 因为 \((-27)^3=-3^9\)，\(\left(\dfrac{1}{16}\right)^{-\frac12}=4\)，所以
 \[
-\frac{(-27)^3\sqrt{\left(\frac{1}{16}\right)^{-\frac{1}{2}}}}{(-9)^0\left(\frac{3}{2}\right)^7\left(\frac{1}{2}\right)^{-5}}
-=\frac{-3^9\cdot2}{1\cdot3^7\cdot2^{-7}\cdot2^5}
-=\frac{-3^9\cdot2}{3^7\cdot2^{-2}}
-=-3^2\cdot2^3=-72
+\begin{gathered}
+\frac{(-27)^3\sqrt{\left(\frac{1}{16}\right)^{-\frac12}}}{(-9)^0\left(\frac32\right)^7\left(\frac12\right)^{-5}}
+=\frac{-3^9\cdot2}{1\cdot\frac{3^7}{2^7}\cdot2^5}
+=\frac{-3^9\cdot2}{3^7\cdot2^{-2}}\\
+=-3^2\cdot2^3=-72.
+\end{gathered}
 \]
 
-\item
+\item 由换底公式，\(f\left(5\right)=\dfrac{\lg5}{\lg\sqrt{10}}\). 又因为 \(\lg5=\lg\dfrac{10}{2}=\lg10-\lg2=1-0.3010=0.6990\)，且 \(\lg\sqrt{10}=\dfrac12\lg10=\dfrac12\)，所以
 \[
-f\left(5\right)=\log_{\sqrt{10}}5
-=\frac{\lg5}{\lg\sqrt{10}}
-=\frac{\lg\frac{10}{2}}{\lg\sqrt{10}}
-=\frac{\lg10-\lg2}{\frac{1}{2}\lg10}
-=\frac{1-0.3010}{\frac{1}{2}\times1}=1.398
+f\left(5\right)=\frac{\lg5}{\lg\sqrt{10}}=\frac{1-0.3010}{\frac12}=1.398
 \]
 
-\item
-要使这个函数有意义，自变量 \(x\) 必须满足下面的不等式组
+\item 分式有意义，必须同时满足根号内非负和分母不为零，即
 \[
 \begin{cases}
-1-\frac{2}{3}x\ge0,\\
-3x-1\ne0.
+1-\dfrac23x\geq0,\\
+3x-1\neq0.
 \end{cases}
 \]
-所以 \(x\le\frac{3}{2}\)，且 \(x\ne\frac{1}{3}\). 因此，函数 \(y=\frac{\sqrt{1-\frac{2}{3}x}}{\sqrt[3]{3x-1}}\) 的定义域为 \(\frac{1}{3}<x\le\frac{3}{2}\) 和 \(x<\frac{1}{3}\).
-
-\item
-因为 \(270^\circ<\theta<360^\circ\)，所以 \(\sin\theta\) 是负值，所以
+第一式给出 \(x\leq\dfrac32\)，第二式给出 \(x\neq\dfrac13\). 因此定义域为
 \[
-\sin\theta=-\sqrt{1-\cos^2\theta}=-\sqrt{1-0.6^2}=-0.8
-\]
-因此
-\[
-\left(\sin\frac{\theta}{2}-\cos\frac{\theta}{2}\right)^2
-=\sin^2\frac{\theta}{2}+\cos^2\frac{\theta}{2}-2\sin\frac{\theta}{2}\cos\frac{\theta}{2}
-=1-\sin\theta=1+0.8=1.8
+\left(-\infty,\frac13\right)\cup\left(\frac13,\frac32\right]
 \]
 
-\item
-极坐标和直角坐标的变换公式是 \(x=\rho\cos\theta\)，\(y=\rho\sin\theta\). 因此，\(P\) 点的横坐标为
+\item 因为 \(270^\circ<\theta<360^\circ\)，所以 \(\sin\theta<0\). 由 \(\sin^2\theta+\cos^2\theta=1\)，得 \(\sin\theta=-\sqrt{1-0.6^2}=-0.8\). 因此
 \[
-x=-4\cos\left(-\frac{4\pi}{3}\right)
-=-4\cos\left(\pi+\frac{\pi}{3}\right)
-=-4\left(-\cos\frac{\pi}{3}\right)
-=-4\left(-\frac{1}{2}\right)=2
+\begin{gathered}
+\left(\sin\frac\theta2-\cos\frac\theta2\right)^2
+=\sin^2\frac\theta2+\cos^2\frac\theta2-2\sin\frac\theta2\cos\frac\theta2\\
+=1-\sin\theta=1+0.8=1.8.
+\end{gathered}
 \]
-纵坐标为
+
+\item 设极坐标为 \((\rho,\varphi)\)，则直角坐标满足 \(x=\rho\cos\varphi\)，\(y=\rho\sin\varphi\). 对于 \(\rho=-4\)，\(\varphi=-\dfrac{4\pi}{3}\)，有
 \[
-y=-4\sin\left(-\frac{4\pi}{3}\right)
-=4\sin\left(\pi+\frac{\pi}{3}\right)
-=-4\sin\frac{\pi}{3}
-=-4\times\frac{\sqrt{3}}{2}
-=-2\sqrt{3}
+x=-4\cos\left(-\frac{4\pi}{3}\right)=-4\cos\left(\pi+\frac\pi3\right)=-4\left(-\frac12\right)=2
 \]
-所以，\(P\) 点的直角坐标是 \(\left(2,-2\sqrt{3}\right)\).
+又因为 \(\sin\left(-\dfrac{4\pi}{3}\right)=-\sin\dfrac{4\pi}{3}=\dfrac{\sqrt3}{2}\)，所以
+\[
+y=-4\sin\left(-\frac{4\pi}{3}\right)=-4\cdot\frac{\sqrt3}{2}=-2\sqrt3
+\]
+故点 \(P\) 的直角坐标为 \(\left(2,-2\sqrt3\right)\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
 \begin{enumerate}
-\item 已知：梯形 \(ABCD\)，\(AD\parallel BC\)，对角线 \(AC\) 和 \(BD\) 相交于 \(E\) 点，过 \(E\) 点作平行于底的直线，交 \(AB\) 于 \(M\) 点，交 \(CD\) 于 \(N\) 点，求证：\(ME=EN\).
+\item 已知梯形 \(ABCD\)，\(AD\parallel BC\)，对角线 \(AC\) 和 \(BD\) 相交于点 \(E\)，过点 \(E\) 作平行于底的直线，交 \(AB\) 于点 \(M\)，交 \(CD\) 于点 \(N\)，求证：\(ME=EN\).
 
-\item 圆台上底直径为 \(12\mathrm{~cm}\)，下底直径为 \(24\mathrm{~cm}\)，高为 \(8\mathrm{~cm}\)，求圆台的全面积. （\(\pi=3.14\)，精确到 \(0.1\mathrm{~cm}^2\)）
+\item 圆台上底直径为 \(12\mathrm{~cm}\)，下底直径为 \(24\mathrm{~cm}\)，高为 \(8\mathrm{~cm}\)，求圆台的全面积.（\(\pi=3.14\)，精确到 \(0.1\mathrm{~cm}^2\)）
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item
-因为 \(AD\parallel MN\parallel BC\).
+\item 由题意，\(AD\parallel MN\parallel BC\). 在两条截线上应用平行线分线段成比例定理，得
+\[
+\frac{AM}{AB}=\frac{DN}{DC}
+\]
 
 \solutionfigure{\bitmapfigure[max width=4.9cm]{img/1977/inner_mongolia_science/q2_solution_fig1.png}}
 
-所以 \(\frac{AM}{AB}=\frac{DN}{DC}\)，\(\frac{ME}{BC}=\frac{AM}{AB}\)，\(\frac{EN}{BC}=\frac{DN}{DC}\). 因此 \(\frac{ME}{BC}=\frac{EN}{BC}\)，所以 \(ME=EN\).
+在 \(\triangle ABC\) 中，因 \(ME\parallel BC\)，所以 \(\triangle AME\sim\triangle ABC\)，从而 \(\dfrac{ME}{BC}=\dfrac{AM}{AB}\). 在 \(\triangle DBC\) 中，因 \(EN\parallel BC\)，所以 \(\triangle DEN\sim\triangle DBC\)，从而 \(\dfrac{EN}{BC}=\dfrac{DN}{DC}\). 结合前面的比例式，得到 \(\dfrac{ME}{BC}=\dfrac{EN}{BC}\)，故 \(ME=EN\).
 
-\item
-由已知，上底半径 \(r_1=\frac{1}{2}\cdot12\mathrm{~cm}=6\mathrm{~cm}\)，下底半径 \(r_2=\frac{1}{2}\times24\mathrm{~cm}=12\mathrm{~cm}\)，圆台的高 \(h=8\mathrm{~cm}\). 由此得圆台的母线 \(L=\sqrt{h^2+\left(r_2-r_1\right)^2}=\sqrt{8^2+\left(12-6\right)^2}=10\mathrm{~cm}\).
-因此，圆台的全面积
+\item 上、下底半径分别为 \(r_1=\dfrac12\times12\mathrm{~cm}=6\mathrm{~cm}\) 和 \(r_2=\dfrac12\times24\mathrm{~cm}=12\mathrm{~cm}\)，高为 \(h=8\mathrm{~cm}\). 圆台的母线长为
+\[
+L=\sqrt{h^2+\left(r_2-r_1\right)^2}=\sqrt{8^2+\left(12-6\right)^2}=10\mathrm{~cm}
+\]
+圆台的全面积等于两个底面面积与侧面积之和，因此
 \[
 S=\pi\left[r_1^2+r_2^2+\left(r_1+r_2\right)L\right]
 \approx3.14\left[6^2+12^2+\left(6+12\right)\times10\right]
-=3.14\times360\approx1130.4\mathrm{~cm}^2
+=3.14\times360=1130.4\mathrm{~cm}^2
 \]
-
-答：圆台的全面积约为 \(1130.4\mathrm{~cm}^2\).
+所以圆台的全面积约为 \(1130.4\mathrm{~cm}^2\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-
-红旗拖拉机厂今年元月份生产出一批甲，乙两种型号的拖拉机，其中生产乙型 \(16\text{ 台}\). 从二月份起，甲型每月增产 \(10\text{ 台}\)，而乙型按每月相同增长率逐步递增. 又知二月份甲，乙两型拖拉机产量之比是 \(3:2\)，三月份甲，乙两型拖拉机产量之和是 \(65\text{ 台}\). 求乙型拖拉机每月的增长率及甲型拖拉机元月份的产量.
+红旗拖拉机厂今年元月份生产出一批甲、乙两种型号的拖拉机，其中生产乙型 \(16\text{ 台}\). 从二月份起，甲型每月增产 \(10\text{ 台}\)，而乙型按每月相同增长率逐步递增. 又知二月份甲、乙两型拖拉机产量之比是 \(3:2\)，三月份甲、乙两型拖拉机产量之和是 \(65\text{ 台}\). 求乙型拖拉机每月的增长率及甲型拖拉机元月份的产量.
 \end{problem}
 
 \begin{solution}
-设乙型拖拉机每月的增长率为 \(x\)，甲型拖拉机元月份的产量为 \(y\text{ 台}\). 依题意得方程组：
+设乙型拖拉机每月的增长率为 \(x\)，甲型拖拉机元月份的产量为 \(y\text{ 台}\). 因为乙型二月份和三月份的产量分别为 \(16\left(1+x\right)\) 和 \(16\left(1+x\right)^2\)，甲型二月份和三月份的产量分别为 \(y+10\) 和 \(y+20\)，所以依题意得
 \[
 \begin{cases}
-\frac{y+10}{16\left(1+x\right)}=\frac{3}{2},\\
+\dfrac{y+10}{16\left(1+x\right)}=\dfrac32,\\
 y+20+16\left(1+x\right)^2=65.
 \end{cases}
 \]
-由第一式得 \(y=24x+14\). 把 \(y=24x+14\) 代入第二式得 \(16x^2+56x-15=0\)，即 \(\left(4x-1\right)\left(4x+15\right)=0\). 解得 \(x_1=\frac{1}{4}=25\%\)，\(x_2=-\frac{15}{4}\)（不合题意，舍去）. 由 \(x=\frac{1}{4}\) 得 \(y=24x+14=24\times\frac{1}{4}+14=20\text{ 台}\). 经检验，\(x=\frac{1}{4}\)，\(y=20\) 是原方程组的解.
-
-答：红旗拖拉机厂生产的乙型拖拉机每月的增长率为 \(25\%\)，甲型拖拉机元月份的产量为 \(20\text{ 台}\).
+第一式化为 \(y+10=24\left(1+x\right)\)，即 \(y=24x+14\). 代入第二式，得
+\[
+16x^2+56x-15=0
+\]
+因式分解得 \(\left(4x-1\right)\left(4x+15\right)=0\).
+所以 \(x=\dfrac14\) 或 \(x=-\dfrac{15}{4}\). 由于产量按增长率递增，必须有 \(1+x>0\)，且元月份产量 \(y\) 应为正数，故舍去 \(x=-\dfrac{15}{4}\)，取 \(x=\dfrac14=25\%\). 此时
+\[
+y=24\times\frac14+14=20
+\]
+验算：二月份两型产量为 \(30\text{ 台}\) 和 \(20\text{ 台}\)，比为 \(3:2\)；三月份两型产量为 \(40\text{ 台}\) 和 \(25\text{ 台}\)，和为 \(65\text{ 台}\)，满足题意. 因此乙型拖拉机每月的增长率为 \(25\%\)，甲型拖拉机元月份的产量为 \(20\text{ 台}\).
 \end{solution}
 
 \begin{problem}
-
-已知：直线 \(3x+y=5\) 及 \(2x-3y+4=0\) 交于 \(A\) 点.
-求：
+已知直线 \(3x+y=5\) 及 \(2x-3y+4=0\) 交于点 \(A\). 求：
 \begin{enumerate}
-\item 过 \(A\) 点且与 \(y\) 轴垂直的直线方程；
-\item 过 \(A\) 点且与圆 \(x^2+y^2=1\) 相切的直线方程.
+\item 过点 \(A\) 且与 \(y\) 轴垂直的直线方程；
+\item 过点 \(A\) 且与圆 \(x^2+y^2=1\) 相切的直线方程.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
-先求出交点 \(A\) 的坐标 \(\left(x,y\right)\). 因为 \(A\) 既是直线 \(3x+y=5\) 上的点，也是直线 \(2x-3y+4=0\) 上的点，因此 \(A\) 的坐标 \(\left(x,y\right)\) 应适合方程组
+点 \(A\) 同时在两条已知直线上，所以其坐标满足
 \[
 \begin{cases}
 3x+y=5,\\
 2x-3y+4=0.
 \end{cases}
 \]
-解之，得 \(x=1\)，\(y=2\). 所以 \(A\) 的坐标是 \(\left(1,2\right)\).
+由第一式得 \(y=5-3x\)，代入第二式得 \(2x-3\left(5-3x\right)+4=0\)，即 \(11x-11=0\)，所以 \(x=1\)，\(y=2\). 故 \(A\left(1,2\right)\).
 
 \begin{enumerate}
-\item
-过 \(A\) 点与 \(y\) 轴垂直的直线方程是 \(y=2\).
+\item 与 \(y\) 轴垂直的直线是水平直线，过 \(A\left(1,2\right)\) 的方程为 \(y=2\).
 
-\item 设所求直线和圆 \(x^2+y^2=1\) 相切于 \(P\left(x,y\right)\) 点. 因为切线过 \(A\left(1,2\right)\) 点，所以所求切线的斜率是 \(k_1=\frac{y-2}{x-1}\). 而过切点 \(P\) 的圆的直径所在直线的斜率是 \(k_2=\frac{y}{x}\). 根据平面几何知识，这样两条直线是互相垂直的，因此它们的斜率的积应等于 \(-1\)，即 \(k_1\cdot k_2=\left(\frac{y-2}{x-1}\right)\frac{y}{x}=-1\).
-而 \(P\left(x,y\right)\) 是圆上的点，又有 \(x^2+y^2=1\). 由上两式解得
+\item 设切点为 \(P\left(u,v\right)\). 因为 \(P\) 在圆上，所以 \(u^2+v^2=1\). 半径 \(OP\) 垂直于切线 \(AP\)，故向量 \(\overrightarrow{OP}=\left(u,v\right)\) 与向量 \(\overrightarrow{PA}=\left(1-u,2-v\right)\) 的内积为零，即
 \[
-\begin{cases}
-x_1=1,\\
-y_1=0
-\end{cases}
-\quad\text{和}\quad
-\begin{cases}
-x_2=-\frac{3}{5},\\
-y_2=\frac{4}{5}.
-\end{cases}
+u(1-u)+v(2-v)=0
 \]
-由两点式，可得所求的直线有两条：\(L_1:\frac{y-2}{x-1}=\frac{2-\frac{4}{5}}{1+\frac{3}{5}}\)，即 \(3x-4y+5=0\)，和 \(L_2:\frac{x-1}{y-2}=\frac{1-1}{2-0}\)，即 \(x=1\).
+结合 \(u^2+v^2=1\)，化简得 \(u+2v=1\). 于是 \(u=1-2v\)，代入圆方程得
+\(\left(1-2v\right)^2+v^2=1\)，\(5v^2-4v=0\)，\(v\left(5v-4\right)=0\).
+因此切点有两个：\(P_1\left(1,0\right)\) 和 \(P_2\left(-\dfrac35,\dfrac45\right)\).
+
+圆 \(x^2+y^2=1\) 在点 \(P\left(u,v\right)\) 处的切线方程为 \(ux+vy=1\). 对于 \(P_1\)，切线为 \(x=1\)；对于 \(P_2\)，切线为 \(-\dfrac35x+\dfrac45y=1\)，即 \(3x-4y+5=0\). 所求直线为 \(x=1\) 和 \(3x-4y+5=0\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-
-甲，乙两船，甲船在某岛 \(B\) 的正南方向 \(A\) 处，\(AB=10\text{ 海里}\)，甲船自 \(A\) 处以 \(4\text{ 海里/小时}\) 的速度向正北方向航行；同时，乙船以 \(6\text{ 海里/小时}\) 的速度自岛 \(B\) 出发，向岛的北 \(60^\circ\) 西方向驶去，问几分钟后两船相距最近？（精确到 \(1\text{ 分}\)）
+甲、乙两船，甲船在某岛 \(B\) 的正南方向 \(A\) 处，\(AB=10\text{ 海里}\)，甲船自 \(A\) 处以 \(4\text{ 海里/小时}\) 的速度向正北方向航行；同时，乙船以 \(6\text{ 海里/小时}\) 的速度自岛 \(B\) 出发，向岛的北 \(60^\circ\) 西方向驶去. 问几分钟后两船相距最近？（精确到 \(1\text{ 分}\)）
 \end{problem}
 
 \begin{solution}
-设经过 \(x\) 小时后，甲船航行到 \(C\) 点，乙船航行到 \(D\) 点（如图），因此 \(AC=4x\text{ 海里}\)，\(BC=AB-AC=10-4x\text{ 海里}\)，\(BD=6x\text{ 海里}\).
+设经过 \(t\) 小时后，甲船航行到 \(C\) 点，乙船航行到 \(D\) 点，并取 \(B\) 为原点、正北方向为 \(y\) 轴正方向. 则
+\(C\left(0,4t-10\right)\)，\(D\left(-6t\sin60^\circ,6t\cos60^\circ\right)=\left(-3\sqrt3t,3t\right)\).
 
-\solutionfigure{\bitmapfigure[max width=3.8cm,max height=5.0cm]{img/1977/inner_mongolia_science/q5_solution_fig1.png}}
+\solutionfigure{\bitmapfigure[max width=3.8cm]{img/1977/inner_mongolia_science/q5_solution_fig1.png}}
 
-在 \(\triangle BCD\) 中，\(\angle DBC=180^\circ-60^\circ=120^\circ\). 所以甲，乙船间的距离的平方
+无论甲船是否已经越过 \(B\)，两船距离的平方都可以由坐标直接求得：
 \[
-DC^2=BD^2+BC^2-2\cdot BD\cdot BC\cdot\cos120^\circ
-=\left(6x\right)^2+\left(10-4x\right)^2
--2\cdot6x\cdot\left(10-4x\right)\cdot\left(-\frac{1}{2}\right).
+\begin{gathered}
+DC^2=\left(3\sqrt3t\right)^2+\left(3t-(4t-10)\right)^2
+=27t^2+(10-t)^2\\
+=28t^2-20t+100
+=28\left(t-\frac5{14}\right)^2+\frac{675}{7}.
+\end{gathered}
 \]
-\[
-DC^2=28x^2-20x+100=28\left(x-\frac{5}{14}\right)^2+\frac{675}{7}
-\]
-因此当 \(x=\frac{5}{14}\text{ 小时}\approx21\text{ 分}\) 时，\(DC^2\) 取最小值，即 \(DC\) 取最小值.
-
-答：大约 \(21\text{ 分钟}\) 后，两船相距最近.
+因为 \(t\geq0\)，且 \(\dfrac5{14}>0\)，所以当 \(t=\dfrac5{14}\) 小时，\(DC^2\) 取得最小值，从而 \(DC\) 取得最小值. 换算为分钟，\(\dfrac5{14}\times60=\dfrac{150}{7}\approx21.4\) 分钟，按题意精确到 \(1\) 分为 \(21\) 分钟.
 \end{solution}
 
 \begin{problem}
-
-已知：在 \(\triangle ABC\) 中，\(a\)，\(b\)，\(c\) 是三内角 \(A\)，\(B\)，\(C\) 的对边，\(\lg\sin A\)，\(\lg\sin B\)，\(\lg\sin C\) 成等差数列.
-
+已知在 \(\triangle ABC\) 中，\(a\)，\(b\)，\(c\) 是三个内角 \(A\)，\(B\)，\(C\) 的对边，\(\lg\sin A\)，\(\lg\sin B\)，\(\lg\sin C\) 成等差数列.
 \begin{enumerate}
-\item 求证：\(\frac{\sin^2 A}{\sin^2 B}=\frac{a}{c}\)；
+\item 求证：\(\dfrac{\sin^2 A}{\sin^2 B}=\dfrac{a}{c}\)；
 
 \item 又若方程 \(cx^2+2cx+a=0\) 有相等两实根，求证：\(\sin A=\sin B=\sin C\).
 \end{enumerate}
@@ -215,54 +200,81 @@ DC^2=28x^2-20x+100=28\left(x-\frac{5}{14}\right)^2+\frac{675}{7}
 
 \begin{solution}
 \begin{enumerate}
-\item 因为 \(\lg\sin A\)，\(\lg\sin B\)，\(\lg\sin C\) 成等差数列，所以 \(2\lg\sin B=\lg\sin A+\lg\sin C\)，得 \(\sin^2 B=\sin A\cdot\sin C\). 又根据正弦定理，有 \(\sin C=\frac{c\sin A}{a}\). 把上式代入 \(\sin^2 B=\sin A\cdot\sin C\)，得 \(\sin^2 B=\sin A\cdot\frac{c\sin A}{a}\)，即 \(\frac{\sin^2 A}{\sin^2 B}=\frac{a}{c}\).
+\item 三角形内角均在 \(\left(0,\pi\right)\) 内，所以各正弦值均为正数，取对数不会改变等式的合法性. 由三项成等差数列，得
+\[
+2\lg\sin B=\lg\sin A+\lg\sin C
+\]
+从而 \(\sin^2B=\sin A\sin C\). 由正弦定理，\(\dfrac{a}{\sin A}=\dfrac{c}{\sin C}\)，即 \(\sin C=\dfrac{c}{a}\sin A\). 代入前式，得
+\[
+\sin^2B=\frac{c}{a}\sin^2A
+\]
+所以 \(\dfrac{\sin^2A}{\sin^2B}=\dfrac{a}{c}\).
 
-\item 因为方程 \(cx^2+2cx+a=0\) 有相等两实根，所以 \(\left(2c\right)^2-4ac=0\)，即 \(4c\left(c-a\right)=0\). 故 \(c=0\)（舍去）或 \(c=a\)，从而得 \(\angle C=\angle A\)，\(\sin C=\sin A\). 由前一结论知 \(\sin^2 B=\sin A\sin C=\sin^2 A\)，所以 \(\sin B=\sin A\). 因此 \(\sin A=\sin B=\sin C\).
+\item 方程有相等两实根，所以判别式为零：
+\[
+\Delta=\left(2c\right)^2-4ca=4c\left(c-a\right)=0
+\]
+由于 \(c\) 是三角形边长，\(c>0\)，故 \(c=a\). 由正弦定理，\(a=c\) 得 \(\sin A=\sin C\). 再由前面得到的关系 \(\sin^2B=\sin A\sin C\)，可得 \(\sin^2B=\sin^2A\). 因为 \(A\)、\(B\) 是三角形内角，正弦值均为正数，所以 \(\sin B=\sin A\). 因此 \(\sin A=\sin B=\sin C\).
 \end{enumerate}
 \end{solution}
 
 \section{附加题}
 
 \begin{problem}
-
 在 \(\triangle ABC\) 中，求证 \(\sin^2 A+\sin^2 B+\cos^2 C+2\sin A\sin B\cos\left(A+B\right)=1\).
 \end{problem}
 
 \begin{solution}
+因为 \(A+B+C=\pi\)，所以 \(\cos^2C=\cos^2\left(A+B\right)\). 因此左边为
 \[
 \begin{gathered}
-\sin^2 A+\sin^2 B+\cos^2 C+2\sin A\sin B\cos\left(A+B\right)
-\\
-=\sin^2 A+\sin^2 B+\cos^2\left(A+B\right)+2\sin A\sin B\cos\left(A+B\right)
+\sin^2A+\sin^2B+\cos^2\left(A+B\right)+2\sin A\sin B\cos\left(A+B\right)\\
+=\sin^2A+\sin^2B+\left(\cos A\cos B-\sin A\sin B\right)^2\\
+\quad+2\sin A\sin B\left(\cos A\cos B-\sin A\sin B\right)\\
+=\sin^2A+\sin^2B+\cos^2A\cos^2B-\sin^2A\sin^2B\\
+=\sin^2A\left(1-\sin^2B\right)+\sin^2B+\cos^2A\cos^2B\\
+=\sin^2A\cos^2B+\sin^2B+\cos^2A\cos^2B\\
+=\cos^2B\left(\sin^2A+\cos^2A\right)+\sin^2B=1.
 \end{gathered}
 \]
-\[
-=\sin^2 A+\sin^2 B+\left(\cos A\cos B-\sin A\sin B\right)^2
-+2\sin A\sin B\cos A\cos B-2\sin^2 A\sin^2 B
-\]
-\[
-=\sin^2 A+\sin^2 B+\cos^2 A\cos^2 B-\sin^2 A\sin^2 B
-=\sin^2 A\left(1-\sin^2 B\right)+\sin^2 B+\cos^2 A\cos^2 B
-\]
-\[
-=\sin^2 A\cos^2 B+\sin^2 B+\cos^2 A\cos^2 B
-=\cos^2 B\left(\sin^2 A+\cos^2 A\right)+\sin^2 B
-=\cos^2 B+\sin^2 B=1
-\]
+故等式成立.
 \end{solution}
 
 \begin{problem}
-
-已知：椭圆的中心点在原点，长轴和短轴都在坐标轴上，离心率 \(e=0.8\)，一条准线方程为 \(y=-\frac{25}{4}\)，求内接于椭圆的最大矩形面积.
+已知椭圆的中心在原点，长轴和短轴都在坐标轴上，离心率 \(e=0.8\)，一条准线方程为 \(y=-\dfrac{25}{4}\)，求内接于椭圆的最大矩形面积.
 \end{problem}
 
 \begin{solution}
-因为准线方程是 \(y=-\frac{25}{4}\)，它与 \(x\) 轴平行，而中心在原点，所以长轴在 \(y\) 轴上，短轴在 \(x\) 轴上，所以椭圆的方程有如下形式：\(\frac{x^2}{b^2}+\frac{y^2}{a^2}=1\)（其中 \(a\) 是半长轴，\(b\) 是半短轴）. 由已知可得方程组
+准线 \(y=-\dfrac{25}{4}\) 平行于 \(x\) 轴，故椭圆的长轴在 \(y\) 轴上、短轴在 \(x\) 轴上. 设半长轴为 \(a\)，半短轴为 \(b\)，半焦距为 \(c\)，则椭圆方程为
+\(\frac{x^2}{b^2}+\frac{y^2}{a^2}=1\)，\(a>b>0\).
+由离心率和准线方程，得
+\(\frac{c}{a}=0.8=\frac45\)，\(\frac{a^2}{c}=\frac{25}{4}\).
+于是 \(c=\dfrac45a\)，代入第二式得 \(\dfrac54a=\dfrac{25}{4}\)，所以 \(a=5\)，\(c=4\). 再由 \(b^2=a^2-c^2\)，得 \(b=\sqrt{25-16}=3\)，椭圆方程为
 \[
-\begin{cases}
-\frac{c}{a}=0.8,\\
--\frac{a^2}{c}=-\frac{25}{4}.
-\end{cases}
+\frac{x^2}{3^2}+\frac{y^2}{5^2}=1
 \]
-解之，得 \(a=5\)，\(c=4\). 所以 \(b=\sqrt{a^2-c^2}=\sqrt{5^2-4^2}=3\). 因此，椭圆的方程是 \(\frac{x^2}{3^2}+\frac{y^2}{5^2}=1\). 其内接最大矩形的长和宽，应分别是 \(\sqrt{2}a\) 和 \(\sqrt{2}b\)（参阅陕西参考题1的解），即长和宽是 \(5\sqrt{2}\) 和 \(3\sqrt{2}\)，所以得内接最大矩形的面积为 \(S=3\sqrt{2}\times5\sqrt{2}=30\).
+
+下面求内接矩形的最大面积. 椭圆的方程写成 \(Q\left(x,y\right)=\dfrac{x^2}{b^2}+\dfrac{y^2}{a^2}=1\). 若内接矩形中心为 \(M\)，取其一条对角线方向向量为 \(w\)，则两个对角顶点为 \(M+w\) 和 \(M-w\)，它们都在椭圆上. 将这两个点分别代入 \(Q=1\) 并相减，得
+\[
+\frac{M_xw_x}{b^2}+\frac{M_yw_y}{a^2}=0
+\]
+两条对角线方向向量不共线，因此对两条对角线同时成立时只能有 \(M_x=M_y=0\)，即矩形中心为椭圆中心.
+
+设矩形的两个半边向量为 \(\left(u_1,u_2\right)\) 和 \(\left(v_1,v_2\right)\). 矩形的四个顶点为 \(\pm\left(u_1,u_2\right)\pm\left(v_1,v_2\right)\)，且两半边向量垂直，所以 \(u_1v_1+u_2v_2=0\). 又因为顶点 \(\left(u_1,u_2\right)+\left(v_1,v_2\right)\) 和 \(\left(u_1,u_2\right)-\left(v_1,v_2\right)\) 都在椭圆上，代入椭圆方程并相减，得
+\[
+\frac{u_1v_1}{b^2}+\frac{u_2v_2}{a^2}=0
+\]
+结合 \(u_1v_1+u_2v_2=0\) 及 \(a\neq b\)，可得 \(u_1v_1=0\)，\(u_2v_2=0\). 因此矩形的边平行于坐标轴. 设其半长、半宽分别为 \(p\)、\(q\)，则
+\[
+\frac{p^2}{b^2}+\frac{q^2}{a^2}=1
+\]
+且 \(S=4pq\).
+由均值不等式，
+\[
+1=\frac{p^2}{b^2}+\frac{q^2}{a^2}\geq2\frac{pq}{ab}
+\]
+所以 \(S=4pq\leq2ab\). 当 \(\dfrac{p}{b}=\dfrac{q}{a}=\dfrac1{\sqrt2}\) 时取等号，此时矩形的两边分别为 \(2p=3\sqrt2\) 和 \(2q=5\sqrt2\)，故最大面积为
+\[
+S_{\max}=2ab=2\times3\times5=30
+\]
 \end{solution}

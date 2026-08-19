@@ -1,84 +1,65 @@
 \chapter{1977年湖南卷}
 
+\section{解答题}
+
 \begin{problem}
 \begin{enumerate}
     \item \( \log_x 3\frac{3}{8}=-1\frac{1}{2} \)，求 \( x \).
-    \item \( \lg 4+\lg 9+2\sqrt{\left( \lg 6 \right)^2-2\lg 6+1}=? \)
+    \item \(\lg 4+\lg 9+2\sqrt{\left(\lg 6\right)^2-2\lg 6+1}=?\)
     \item 求函数 \( y=\frac{\sqrt{3-x}}{\sqrt{x-2}} \) 的定义域（即自变量 \( x \) 的取值范围）.
-    \item 解不等式：\( x^2-3x-28<0 \).
-    \item 证明 \( \cos 15^\circ+\sin 15^\circ=\frac{\sqrt{6}}{2} \).
-    \item 求中心在原点，焦点在 \( x \) 轴上，且经过 \( A\left( 5,0 \right) \)，\( B\left( 4,\frac{12}{5} \right) \) 两点的椭圆方程.
+    \item 解不等式：\(x^2-3x-28<0\).
+    \item 证明 \(\cos 15^\circ+\sin 15^\circ=\frac{\sqrt{6}}{2}\).
+    \item 求中心在原点，焦点在 \(x\) 轴上，且经过 \(A\left(5,0\right)\)，\(B\left(4,\frac{12}{5}\right)\) 两点的椭圆方程.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item 由对数定义得 \(x^{-\frac{3}{2}}=\frac{27}{8}\)，即 \(\left( x^{\frac{1}{2}} \right)^{-3}=\left( \frac{2}{3} \right)^{-3}\)，所以 \(x^{\frac{1}{2}}=\frac{2}{3}\)，\(x=\frac{4}{9}\).
+\item 对数的底数必须满足 \(x>0\) 且 \(x\ne1\)，并且
+\(3\frac{3}{8}=\frac{27}{8}\)，\(-1\frac{1}{2}=-\frac{3}{2}\). 由对数定义，得
+\(x^{-\frac{3}{2}}=\frac{27}{8}=\left(\frac{3}{2}\right)^3\). 两边取倒数并开立方，得 \(x^{\frac{3}{2}}=\left(\frac{2}{3}\right)^3\)，所以 \(x^{\frac{1}{2}}=\frac{2}{3}\)，从而 \(x=\frac{4}{9}\). 该值满足 \(x>0\) 且 \(x\ne1\)，故原方程的解为 \(x=\frac{4}{9}\).
 
-\item
-\[
-\begin{aligned}
-&\lg 4+\lg 9+2\sqrt{\left( \lg 6 \right)^2-2\lg 6+1} \\
-&=\lg 4+\lg 9+2\sqrt{\left( \lg 6-1 \right)^2} \\
-&=\lg 4+\lg 9+2\left( 1-\lg 6 \right)=\lg 36+2-\lg 6^2=2.
-\end{aligned}
-\]
+\item 因为 \(6<10\)，所以 \(\lg 6<1\). 因而
+\(\sqrt{\left(\lg 6\right)^2-2\lg 6+1}=\sqrt{\left(\lg 6-1\right)^2}=1-\lg 6\). 于是原式
+\(=\lg 4+\lg 9+2-2\lg 6=\lg 36+2-\lg 36=2\).
 
-\item
-要使函数 \( y=\frac{\sqrt{3-x}}{\sqrt{x-2}} \) 有意义，自变量 \( x \) 必须满足不等式组
+\item 分式有意义，必须使分子根式的被开方数非负，同时使分母根式的被开方数严格为正，因此 \(x\) 满足
 \[
 \begin{cases}
-3-x\ge 0,\\
+3-x\ge0,\\
 x-2>0.
 \end{cases}
 \]
+由第一式得 \(x\le3\)，由第二式得 \(x>2\)，两者取交集得 \(2<x\le3\). 所以函数的定义域为 \((2,3]\).
 
-解之，得 \( 2<x\le 3 \). 因此函数 \( y=\frac{\sqrt{3-x}}{\sqrt{x-2}} \) 的定义域是 \( 2<x\le 3 \).
+\item 将多项式因式分解，得
+\(x^2-3x-28=(x-7)(x+4)\). 因此原不等式等价于 \((x-7)(x+4)<0\). 两个因式的零点为 \(-4\) 和 \(7\)，在 \(x<-4\)、\(-4<x<7\)、\(x>7\) 三个区间上，乘积的符号依次为正、负、正；又因不等式是严格不等式，两个零点不能取. 所以解集为 \((-4,7)\)，即 \(-4<x<7\).
 
-\item
-因为 \(x^2-3x-28=\left( x-7 \right)\left( x+4 \right)\)，所以原不等式化为 \(\left( x-7 \right)\left( x+4 \right)<0\). 因此
+\item 设 \(u=\cos15^\circ+\sin15^\circ\). 则
 \[
-\begin{cases}
-x-7>0,\\
-x+4<0
-\end{cases}
+u^2=\cos^2 15^\circ+\sin^2 15^\circ+2\sin15^\circ\cos15^\circ
+=1+\sin30^\circ=1+\frac12=\frac32
 \]
-或者
+由于 \(15^\circ\) 在第一象限，\(\cos15^\circ>0\) 且 \(\sin15^\circ>0\)，故 \(u>0\). 因而 \(u=\sqrt{\frac32}=\frac{\sqrt6}{2}\)，即
+\(\cos15^\circ+\sin15^\circ=\frac{\sqrt6}{2}\).
+
+也可以利用和差化积公式：
 \[
-\begin{cases}
-x-7<0,\\
-x+4>0.
-\end{cases}
+\cos15^\circ+\sin15^\circ=\sin75^\circ+\sin15^\circ
+=2\sin45^\circ\cos30^\circ
 \]
-
-第一个不等式组无解，第二个不等式组的解是 \( -4<x<7 \). 所以原不等式的解是 \( -4<x<7 \).
-
-\item
-【法一】
 \[
-\left( \cos 15^\circ+\sin 15^\circ \right)^2
-=\sin^2 15^\circ+\cos^2 15^\circ+2\sin 15^\circ\cos 15^\circ
-=1+\sin 30^\circ=\frac{3}{2}
+2\sin45^\circ\cos30^\circ
+=2\cdot\frac{\sqrt2}{2}\cdot\frac{\sqrt3}{2}
+=\frac{\sqrt6}{2}
 \]
 
-因为 \( \cos 15^\circ+\sin 15^\circ>0 \)，所以 \(\cos 15^\circ+\sin 15^\circ=\sqrt{\frac{3}{2}}=\frac{\sqrt{6}}{2}\).
-
-【法二】
-\[
-\begin{aligned}
-\cos 15^\circ+\sin 15^\circ
-&=\sin 75^\circ+\sin 15^\circ
-=2\sin \frac{75^\circ+15^\circ}{2}\cos \frac{75^\circ-15^\circ}{2} \\
-&=2\sin 45^\circ\cos 30^\circ=2\cdot\frac{\sqrt{2}}{2}\cdot\frac{\sqrt{3}}{2}=\frac{\sqrt{6}}{2}.
-\end{aligned}
-\]
-
-\item
-因为椭圆的中心在原点，焦点在 \( x \) 轴上，可设所求的椭圆方程是 \(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\)，其中 \( a \) 为长半轴，\( b \) 为短半轴.
-
-已知椭圆过点 \( \left( 5,0 \right) \)，因而可求得 \( a=5 \). 又知椭圆还过点 \( \left( 4,\frac{12}{5} \right) \)，所以此点的坐标应满足方程 \(\frac{x^2}{25}+\frac{y^2}{b^2}=1\)，即 \(\frac{4^2}{25}+\frac{\left( \frac{12}{5} \right)^2}{b^2}=1\).
-
-求得 \( b=4 \). 所以所求的椭圆方程是 \(\frac{x^2}{5^2}+\frac{y^2}{4^2}=1\).
+\item 因为椭圆的中心在原点且焦点在 \(x\) 轴上，可设其标准方程为
+\(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\)，其中 \(a>b>0\). 点 \(A(5,0)\) 在椭圆上，所以
+\(\frac{25}{a^2}=1\)，从而 \(a=5\). 将点 \(B\left(4,\frac{12}{5}\right)\) 代入，得
+\(\frac{4^2}{25}+\frac{\left(\frac{12}{5}\right)^2}{b^2}=1\)，\(\frac{16}{25}+\frac{144}{25b^2}=1\).
+因此 \(\frac{144}{25b^2}=\frac9{25}\)，即 \(b^2=16\). 由 \(b>0\)，得 \(b=4\). 所以所求椭圆方程为
+\(\frac{x^2}{25}+\frac{y^2}{16}=1\).
 \end{enumerate}
 \end{solution}
 
@@ -87,15 +68,15 @@ x+4>0.
 \end{problem}
 
 \begin{solution}
-设安排加工甲种部件的有 \( x \) 人，加工乙种部件的有 \( y \) 人，加工丙种部件的有 \( z \) 人，依题意，得到下面方程组：
+设安排加工甲、乙、丙三种部件的工人数分别为 \(x\)、\(y\)、\(z\). 工人总数为 \(86\)，而甲、乙、丙三种部件的产量分别为 \(15x\)、\(12y\)、\(9z\)，所以由配套条件得
 \[
 \begin{cases}
 x+y+z=86,\\
-15x=3\times 9z,\\
-12y=2\times 9z.
+15x=3\cdot9z,\\
+12y=2\cdot9z.
 \end{cases}
 \]
-即
+将后两式分别约去公因数，化为
 \[
 \begin{cases}
 x+y+z=86,\\
@@ -103,295 +84,209 @@ x+y+z=86,\\
 2y-3z=0.
 \end{cases}
 \]
-
-将第一个方程乘 \(2\) 减去第三个方程，得
-\[
-2x+5z=172
-\]
-
-将上式乘 \(5\) 减去第二个方程乘 \(2\)，得 \(43z=172\times 5\)，因此 \(z=20\).
-
-把 \(z=20\) 代入第三个方程，得 \(y=30\).
-
-把 \(y=30\)，\(z=20\) 代入第一个方程，得 \(x=36\).
-
-即原方程组的解是
-\[
-\begin{cases}
-x=36,\\
-y=30,\\
-z=20.
-\end{cases}
-\]
-
-答：加工甲种部件安排 \(36\) 人，加工乙种部件安排 \(30\) 人，加工丙种部件安排 \(20\) 人.
+将第一式乘以 \(2\) 后减去第三式，得 \(2x+5z=172\). 再将这个等式乘以 \(5\)，减去第二式的 \(2\) 倍，得
+\(43z=860\)，所以 \(z=20\). 代入 \(2y-3z=0\)，得 \(y=30\). 再由第一式得 \(x=86-30-20=36\). 三个数均为非负整数，且代回原条件可得产量分别为 \(540\)、\(360\)、\(180\)，恰为 \(3:2:1\). 因此应安排甲、乙、丙三种部件工人分别为 \(36\) 人、\(30\) 人、\(20\) 人.
 \end{solution}
 
 \begin{problem}
-已知方程 \( ax^2-\left( 2a+1 \right)x+\left( a+1 \right)=0 \).
-
+已知方程 \(ax^2-(2a+1)x+(a+1)=0\).
 \begin{enumerate}
-    \item 有一个根为 \( 0 \)；
-    \item 两个根的和为 \( 0 \)；
-    \item 两个根的乘积为 \( 2 \).
+    \item 有一个根为 \(0\)；
+    \item 两个根的和为 \(0\)；
+    \item 两个根的乘积为 \(2\).
 \end{enumerate}
-
-分别求 \( a \) 的值.
+分别求 \(a\) 的值.
 \end{problem}
 
 \begin{solution}
+由于题目给出的是二次方程，必须有 \(a\ne0\).
 \begin{enumerate}
-\item 因为 \( 0 \) 是方程的一个根，所以 \( x=0 \) 代入方程应成立，得 \(a+1=0\)，所以 \(a=-1\).
+\item 若 \(0\) 是方程的一个根，将 \(x=0\) 代入得 \(a+1=0\)，所以 \(a=-1\). 此时二次项系数不为零，条件确实成立.
 
-\item 设方程的两个根为 \( x_1 \)，\( x_2 \). 已知两根和为 \( 0 \)，根据韦达定理，\(x_1+x_2=\frac{2a+1}{a}=0\)，所以 \(a=-\frac{1}{2}\).
+\item 设方程的两个根为 \(x_1\)、\(x_2\). 由韦达定理，
+\(x_1+x_2=\frac{2a+1}{a}\). 当两根的和为 \(0\) 时，\(\frac{2a+1}{a}=0\). 因为 \(a\ne0\)，所以 \(2a+1=0\)，得 \(a=-\frac12\). 此时方程为 \(-\frac12x^2+\frac12=0\)，确有两个根 \(1\)、\(-1\)，条件成立.
 
-\item 已知两根的积为 \( 2 \)，即 \(x_1x_2=\frac{a+1}{a}=2\)，所以 \(a=1\).
+\item 同样由韦达定理，\(x_1x_2=\frac{a+1}{a}\). 令其等于 \(2\)，得 \(a+1=2a\)，所以 \(a=1\). 此时方程为 \(x^2-3x+2=0=(x-1)(x-2)\)，两个根的乘积确为 \(2\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-把表面积分别是 \(36\pi\text{ 平方厘米}\)，\(64\pi\text{ 平方厘米}\) 和 \(100\pi\text{ 平方厘米}\) 的三个锡球熔成一个大锡球，求这个大锡球的半径.
+把表面积分别是 \(36\pi\mathrm{~cm}^2\)、\(64\pi\mathrm{~cm}^2\) 和 \(100\pi\mathrm{~cm}^2\) 的三个锡球熔成一个大锡球，求这个大锡球的半径.
 \end{problem}
 
 \begin{solution}
-设大锡球的半径为 \(R\)，三个小锡球的半径分别为 \( r_1 \)，\( r_2 \)，\( r_3 \)，则 \(r_1=\sqrt{\frac{36\pi}{4\pi}}=\sqrt{9}=3\)，\(r_2=\sqrt{\frac{64\pi}{4\pi}}=\sqrt{16}=4\)，\(r_3=\sqrt{\frac{100\pi}{4\pi}}=\sqrt{25}=5\).
-
-三个小锡球熔成一个大锡球，那末三个小锡球的体积和应等于大锡球的体积，即 \(\frac{4}{3}\pi R^3=\frac{4}{3}\pi \left( r_1^3+r_2^3+r_3^3 \right)\). 所以 \(R=\sqrt[3]{r_1^3+r_2^3+r_3^3}=\sqrt[3]{3^3+4^3+5^3}=6\).
-
-答：这个大锡球的半径应为 \(6\text{ 厘米}\).
+设大锡球的半径为 \(R\)，三个小锡球的半径分别为 \(r_1\)、\(r_2\)、\(r_3\). 由球的表面积公式 \(S=4\pi r^2\)，有
+\(r_1=\sqrt{\frac{36\pi}{4\pi}}=3\)，\(r_2=\sqrt{\frac{64\pi}{4\pi}}=4\)，\(r_3=\sqrt{\frac{100\pi}{4\pi}}=5\).
+熔化过程中没有材料损失，因此体积守恒. 由球的体积公式 \(V=\frac43\pi r^3\)，得
+\[
+\frac43\pi R^3=\frac43\pi\left(r_1^3+r_2^3+r_3^3\right)
+\]
+约去 \(\frac43\pi\)，并代入三个半径，得
+\(R^3=3^3+4^3+5^3=27+64+125=216\). 由于半径为正，\(R=6\). 所以这个大锡球的半径为 \(6\mathrm{~cm}\).
 \end{solution}
 
 \begin{problem}
-已知四边形 \(ABCD\) 中，\( \angle A \)，\( \angle B \)，\( \angle C \)，\( \angle D \) 成等差数列，且 \( \angle C=3\angle A \)，求 \( \angle A \)，\( \angle B \)，\( \angle C \)，\( \angle D \) 的度数.
+已知四边形 \(ABCD\) 中，\(\angle A\)、\(\angle B\)、\(\angle C\)、\(\angle D\) 成等差数列，且 \(\angle C=3\angle A\)，求 \(\angle A\)、\(\angle B\)、\(\angle C\)、\(\angle D\) 的度数.
 \end{problem}
 
 \begin{solution}
-设 \( \angle A \)，\( \angle B \)，\( \angle C \)，\( \angle D \) 的度数分别为 \( x \)，\( x+d \)，\( x+2d \)，\( x+3d \)（\( d \) 为公差）.
-
-由已知 \( \angle C=3\angle A \)，则 \( x+2d=3x \)，所以 \( d=x \). 因此，\( \angle A \)，\( \angle B \)，\( \angle C \)，\( \angle D \) 的度数分别为 \( x \)，\( 2x \)，\( 3x \)，\( 4x \).
-
-因为四边形的四个内角和等于 \( 360^\circ \)，所以 \(x+2x+3x+4x=360^\circ\)，因此 \(x=36^\circ\).
-
-因此，\( \angle A=36^\circ \)，\( \angle B=72^\circ \)，\( \angle C=108^\circ \)，\( \angle D=144^\circ \).
-
-答：\( \angle A=36^\circ \)，\( \angle B=72^\circ \)，\( \angle C=108^\circ \)，\( \angle D=144^\circ \).
+设等差数列的首项为 \(x\)，公差为 \(d\)，则
+\(\angle A=x\)、\(\angle B=x+d\)、\(\angle C=x+2d\)、\(\angle D=x+3d\). 由 \(\angle C=3\angle A\)，得 \(x+2d=3x\)，即 \(d=x\). 所以四个角依次为 \(x\)、\(2x\)、\(3x\)、\(4x\). 四边形内角和为 \(360^\circ\)，故
+\(x+2x+3x+4x=360^\circ\)，解得 \(x=36^\circ\). 因而
+\(\angle A=36^\circ\)、\(\angle B=72^\circ\)、\(\angle C=108^\circ\)、\(\angle D=144^\circ\).
 \end{solution}
 
 \begin{problem}
-在 \( \triangle ABC \) 中，用 \( a \)，\( b \)，\( c \) 依次表示 \( \angle A \)，\( \angle B \)，\( \angle C \) 的对边，已知 \( \angle B=45^\circ \)，\( b=10 \)，\( c=5\sqrt{6} \)，不查表求 \(C\)，\(A\)，\( a \).
+在 \(\triangle ABC\) 中，用 \(a\)、\(b\)、\(c\) 依次表示 \(\angle A\)、\(\angle B\)、\(\angle C\) 的对边，已知 \(\angle B=45^\circ\)、\(b=10\)、\(c=5\sqrt6\)，不查表求 \(C\)、\(A\)、\(a\).
 \end{problem}
 
 \begin{solution}
-由正弦定理得
+由正弦定理，\(\frac{c}{\sin C}=\frac{b}{\sin B}\)，所以
 \[
-\begin{aligned}
-\sin C
-  &=\frac{c\sin B}{b}
-  =\frac{5\sqrt{6}\sin 45^\circ}{10} \\
-  &=\frac{5\sqrt{6}\times \frac{\sqrt{2}}{2}}{10}=\frac{\sqrt{3}}{2}.
-\end{aligned}
+\sin C=\frac{c\sin B}{b}
+=\frac{5\sqrt6\cdot\frac{\sqrt2}{2}}{10}
+=\frac{\sqrt3}{2}
+\]
+三角形内角满足 \(0^\circ<C<180^\circ\)，故 \(\sin C=\frac{\sqrt3}{2}\) 给出两种可能：\(C=60^\circ\) 或 \(C=120^\circ\).
+
+当 \(C=60^\circ\) 时，\(A=180^\circ-45^\circ-60^\circ=75^\circ\). 再由正弦定理，
+\[
+a=\frac{b\sin A}{\sin B}
+=\frac{10\sin75^\circ}{\sin45^\circ}
+=\frac{10\cdot\frac{\sqrt6+\sqrt2}{4}}{\frac{\sqrt2}{2}}
+=5(\sqrt3+1)
 \]
 
-因此 \( \angle C=60^\circ \) 或者 \( \angle C=120^\circ \).
-
-当 \( \angle C=60^\circ \) 时，\(\angle A=180^\circ-45^\circ-60^\circ=75^\circ\).
-所以
+当 \(C=120^\circ\) 时，\(A=180^\circ-45^\circ-120^\circ=15^\circ\). 同理
 \[
-\begin{aligned}
-a&=\frac{b\sin A}{\sin B}
-  =\frac{10\sin 75^\circ}{\sin 45^\circ} \\
-  &=\frac{10\times \frac{\sqrt{6}+\sqrt{2}}{4}}{\frac{\sqrt{2}}{2}}=5\left( \sqrt{3}+1 \right).
-\end{aligned}
+a=\frac{b\sin A}{\sin B}
+=\frac{10\sin15^\circ}{\sin45^\circ}
+=\frac{10\cdot\frac{\sqrt6-\sqrt2}{4}}{\frac{\sqrt2}{2}}
+=5(\sqrt3-1)
 \]
-
-当 \( \angle C=120^\circ \) 时，\(\angle A=180^\circ-\left( 45^\circ+120^\circ \right)=15^\circ\).
-所以
-\[
-\begin{aligned}
-a&=\frac{b\sin A}{\sin B}
-  =\frac{10\sin 15^\circ}{\sin 45^\circ} \\
-  &=\frac{10\times \frac{\sqrt{6}-\sqrt{2}}{4}}{\frac{\sqrt{2}}{2}}=5\left( \sqrt{3}-1 \right).
-\end{aligned}
-\]
-
-答：\( \angle C=60^\circ \)，\( \angle A=75^\circ \)，\( a=5\left( \sqrt{3}+1 \right) \)；或者是 \( \angle C=120^\circ \)，\( \angle A=15^\circ \)，\( a=5\left( \sqrt{3}-1 \right) \).
+两种情形下的第三角均为正，均能构成三角形. 因此答案为
+\(C=60^\circ\)，\(A=75^\circ\)，\(a=5(\sqrt3+1)\)，或
+\(C=120^\circ\)，\(A=15^\circ\)，\(a=5(\sqrt3-1)\).
 \end{solution}
 
 \begin{problem}
-已知圆内接四边形 \(ABCD\) 中，\( \angle A=60^\circ \)，\( \angle B=90^\circ \)，\( AB=2 \)，\( CD=1 \). 求 \(BC\) 和 \(DA\).
+已知圆内接四边形 \(ABCD\) 中，\(\angle A=60^\circ\)、\(\angle B=90^\circ\)、\(AB=2\)、\(CD=1\). 求 \(BC\) 和 \(DA\).
 
 \bitmapfigure[max width=4.8cm]{img/1977/hunan/q7_fig1.png}
 \end{problem}
 
 \begin{solution}
-【法一】因为 \( \angle B=90^\circ \)，所以 \(AC\) 是外接圆的直径. 从而知 \( \angle D=90^\circ \)，\(\angle C=360^\circ-90^\circ-60^\circ-90^\circ=120^\circ\).
+方法一：由圆周角定理，\(\angle B=90^\circ\) 所对的弦 \(AC\) 是外接圆的直径. 因此同弦 \(AC\) 所对的圆周角 \(\angle D=90^\circ\). 四边形内角和为 \(360^\circ\)，所以 \(\angle C=360^\circ-\angle A-\angle B-\angle D=120^\circ\).
 
-设 \( BC=x \)，\( DA=y \)，则由勾股定理，可推得 \(AB^2+BC^2=AD^2+DC^2\)，即
+设 \(BC=x>0\)、\(DA=y>0\). 在直角三角形 \(ABC\) 和 \(ADC\) 中，斜边都是 \(AC\)，由勾股定理分别得 \(AC^2=AB^2+BC^2=4+x^2\) 与 \(AC^2=AD^2+DC^2=y^2+1\)，从而
+\(4+x^2=y^2+1\).
+
+对三角形 \(ABD\) 使用余弦定理，得 \(BD^2=AB^2+AD^2-2AB\cdot AD\cos60^\circ=4+y^2-2y\). 对三角形 \(BCD\) 使用余弦定理，得 \(BD^2=BC^2+CD^2-2BC\cdot CD\cos120^\circ=x^2+1+x\). 比较两个 \(BD^2\) 的表达式，得 \(4+y^2-2y=x^2+1+x\).
+
+由第一式得 \(x^2=y^2-3\)，代入第二式，得 \(4+y^2-2y=y^2-2+x\)，即 \(x+2y=6\). 因而 \(x=6-2y\). 代入 \(x^2=y^2-3\)，得
 \[
-4+x^2=y^2+1. \tag{1}
+(6-2y)^2=y^2-3
+\quad\Longleftrightarrow\quad
+3y^2-24y+39=0
+\quad\Longleftrightarrow\quad
+(y-4)^2=3
 \]
+所以 \(y=4\pm\sqrt3\). 当 \(y=4+\sqrt3\) 时，\(x=6-2y=-2-2\sqrt3<0\)，不符合边长为正的条件；故取 \(y=4-\sqrt3\)，此时 \(x=6-2y=2\sqrt3-2\). 因此
+\(BC=2\sqrt3-2\)，\(DA=4-\sqrt3\).
 
-由余弦定理，又可推得
-\[
-AB^2+AD^2-2AB\cdot AD\cos A=BC^2+CD^2-2BC\cdot CD\cos C
-\]
-即
-\[
-4+y^2-2y=x^2+1+x. \tag{2}
-\]
-
-解由上面两个方程组成的方程组，可得
-\[
-\begin{cases}
-x_1=2\sqrt{3}-2,\\
-y_1=4-\sqrt{3}
-\end{cases}
-\]
-和
-\[
-\begin{cases}
-x_2=-2\sqrt{3}-2,\\
-y_2=4+\sqrt{3}.
-\end{cases}
-\]
-
-因为 \( x \) 为负值，不合题意，舍去. 故 \(BC=2\sqrt{3}-2\)，\(DA=4-\sqrt{3}\).
-
-【法二】由 \( \angle B=90^\circ \)，可知 \(AC\) 为外接圆直径，因而 \( \angle D=90^\circ \)，\( \angle C=120^\circ \).
-
-过 \(B\) 点作 \( BE\perp AD \)，交 \(AD\) 于 \(E\)；过 \(C\) 点作 \( CF\perp BE \)，交 \(BE\) 于 \(F\)，这样 \(CDEF\) 是个矩形.
+方法二：由上面的圆周角关系，\(\angle D=90^\circ\)、\(\angle C=120^\circ\). 过 \(B\) 作 \(BE\perp AD\)，垂足为 \(E\)；过 \(C\) 作 \(CF\perp BE\)，垂足为 \(F\). 因为 \(BE\perp AD\) 且 \(CF\perp BE\)，而 \(CD\perp AD\)，所以四边形 \(CDEF\) 为矩形，进而 \(ED=CF\)、\(FE=CD=1\).
 
 \solutionfigure{\bitmapfigure[max width=4.9cm]{img/1977/hunan/q7_solution_fig1.png}}
 
-在直角 \( \triangle ABE \) 中，因为 \( \angle ABE=30^\circ \)，所以 \(AE=\frac{1}{2}AB=1\).
+在直角三角形 \(ABE\) 中，\(\angle ABE=90^\circ-\angle A=30^\circ\)，故
+\(AE=AB\sin30^\circ=2\cdot\frac12=1\)，且 \(BE=AB\cos30^\circ=2\cdot\frac{\sqrt3}{2}=\sqrt3\).
 
-又 \(BE=AB\sin 60^\circ=2\times \sin 60^\circ=\sqrt{3}\).
-
-在直角 \( \triangle BCF \) 中，\( \angle CBF=90^\circ-30^\circ=60^\circ \)，\(BF=BE-FE=BE-CD=\sqrt{3}-1\). 所以 \(BC=\frac{BF}{\cos 60^\circ}=\frac{\sqrt{3}-1}{\frac{1}{2}}=2\left( \sqrt{3}-1 \right)\).
-
-又 \(CF=BF\tan 60^\circ=\left( \sqrt{3}-1 \right)\sqrt{3}=3-\sqrt{3}\).
-
-因此 \(AD=AE+ED=AE+CF=1+3-\sqrt{3}=4-\sqrt{3}\).
-
-答：\( BC=2\left( \sqrt{3}-1 \right) \)，\( AD=4-\sqrt{3} \).
+在直角三角形 \(BCF\) 中，\(BF=BE-FE=\sqrt3-1\). 又 \(\angle CBF=90^\circ-\angle ABE=60^\circ\)，所以
+\(BC=\frac{BF}{\cos60^\circ}=2(\sqrt3-1)\). 另外
+\(CF=BF\tan60^\circ=(\sqrt3-1)\sqrt3=3-\sqrt3\). 因为 \(AD=AE+ED=AE+CF\)，所以 \(AD=1+3-\sqrt3=4-\sqrt3\). 这与方法一所得结果一致.
 \end{solution}
-
 
 \section{参考题}
 
 \begin{problem}
-用数学归纳法或其他方法证明： \(1^4+2^4+3^4+\dots+n^4=\frac{n\left( n+1 \right)\left( 2n+1 \right)\left( 3n^2+3n-1 \right)}{30}.\)
+用数学归纳法或其他方法证明：\(1^4+2^4+3^4+\dots+n^4=\frac{n(n+1)(2n+1)(3n^2+3n-1)}{30}\).
 \end{problem}
 
 \begin{solution}
+方法一：数学归纳法. 设命题 \(P(n)\) 为
+\(1^4+2^4+\dots+n^4=\frac{n(n+1)(2n+1)(3n^2+3n-1)}{30}\)，其中 \(n\) 为正整数.
 
+当 \(n=1\) 时，左边为 \(1^4=1\)，右边为
+\(\frac{1\cdot2\cdot3\cdot5}{30}=1\)，所以 \(P(1)\) 成立.
 
-方法一，用数学归纳法.
-
-当 \( n=1 \) 时，左边 \( =1^4=1 \)，右边 \( =\frac{1\times 2\times 3\times 5}{30}=1 \)，因此等式成立.
-
-假定当 \( n=k \) 时，等式成立，即有
+假设 \(P(k)\) 成立，即
+\(1^4+2^4+\dots+k^4=\frac{k(k+1)(2k+1)(3k^2+3k-1)}{30}\). 则
 \[
-1^4+2^4+3^4+\dots+k^4=\frac{k\left( k+1 \right)\left( 2k+1 \right)\left( 3k^2+3k-1 \right)}{30}
+\begin{aligned}
+1^4+2^4+\dots+k^4+(k+1)^4
+&=\frac{k(k+1)(2k+1)(3k^2+3k-1)+30(k+1)^4}{30}\\
+&=\frac{(k+1)(6k^4+39k^3+91k^2+89k+30)}{30}\\
+&=\frac{(k+1)(k+2)(6k^3+27k^2+37k+15)}{30}\\
+&=\frac{(k+1)(k+2)(2k+3)(3k^2+9k+5)}{30}\\
+&=\frac{(k+1)((k+1)+1)(2(k+1)+1)\left(3(k+1)^2+3(k+1)-1\right)}{30}.
+\end{aligned}
 \]
+这里用到的因式分解可直接验证：
+\(6k^4+39k^3+91k^2+89k+30=(k+2)(2k+3)(3k^2+9k+5)\). 因此 \(P(k+1)\) 成立. 由数学归纳法，对任意正整数 \(n\)，原等式成立.
 
-那末
-\begin{align*}
-&1^4+2^4+3^4+\dots+k^4+\left( k+1 \right)^4 \\
-=\;&\frac{k\left( k+1 \right)\left( 2k+1 \right)\left( 3k^2+3k-1 \right)}{30}+\left( k+1 \right)^4 \\
-=\;&\frac{\left( k+1 \right)\left[ k\left( 2k+1 \right)\left( 3k^2+3k-1 \right)+30\left( k+1 \right)^3 \right]}{30} \\
-=\;&\frac{\left( k+1 \right)\left( 6k^4+39k^3+91k^2+89k+30 \right)}{30} \\
-=\;&\frac{\left( k+1 \right)\left( k+2 \right)\left( 6k^3+27k^2+37k+15 \right)}{30} \\
-=\;&\frac{\left( k+1 \right)\left( k+2 \right)\left( 2k+3 \right)\left( 3k^2+9k+5 \right)}{30} \\
-=\;&\frac{\left( k+1 \right)\left[ \left( k+1 \right)+1 \right]\left[ 2\left( k+1 \right)+1 \right]\left[ 3\left( k+1 \right)^2+3\left( k+1 \right)-1 \right]}{30}
-\end{align*}
-
-即证明了当 \( n=k+1 \) 时，等式也成立. 因而，对于任意自然数 \( n \)，成立等式
+方法二：利用递推式. 对正整数 \(r\) 记 \(S_r=1^r+2^r+\dots+n^r\). 对任意正整数 \(k\)，由二项式定理，对每个 \(j=1\)，\(2\)，\(\dots\)，\(n\) 有
 \[
-1^4+2^4+3^4+\dots+n^4=\frac{n\left( n+1 \right)\left( 2n+1 \right)\left( 3n^2+3n-1 \right)}{30}
+(j+1)^{k+1}-j^{k+1}-1
+=\mathrm C_{k+1}^1j^k+\mathrm C_{k+1}^2j^{k-1}+\dots+\mathrm C_{k+1}^kj
 \]
-
-方法二，我们把自 \( 1 \) 开始 \( n \) 个自然数的 \( k \) 次方之和记作 \( S_k \)，即 \(S_k=1^k+2^k+\dots+n^k\).
-
-先证明有如下的递推公式
+对 \(j=1\) 到 \(n\) 求和，左边望远镜相消，得到
 \[
-\mathrm C_{k+1}^{k}S_k+\mathrm C_{k+1}^{k-1}S_{k-1}+\dots+\mathrm C_{k+1}^{1}S_1=\left( n+1 \right)^{k+1}-\left( n+1 \right). \tag{2}
+\mathrm C_{k+1}^1S_k+\mathrm C_{k+1}^2S_{k-1}+\dots+\mathrm C_{k+1}^kS_1
+=(n+1)^{k+1}-(n+1)
 \]
-
-事实上
-\begin{align*}
-&\mathrm C_{k+1}^{k}S_k+\mathrm C_{k+1}^{k-1}S_{k-1}+\dots+\mathrm C_{k+1}^{1}S_1 \\
-=\;&\left( \mathrm C_{k+1}^{k}+\mathrm C_{k+1}^{k-1}+\dots+\mathrm C_{k+1}^{1} \right) \\
-&+\left( 2^k\mathrm C_{k+1}^{k}+2^{k-1}\mathrm C_{k+1}^{k-1}+\dots+2\mathrm C_{k+1}^{1} \right) \\
-&+\dots+\left( n^k\mathrm C_{k+1}^{k}+n^{k-1}\mathrm C_{k+1}^{k-1}+\dots+n\mathrm C_{k+1}^{1} \right) \\
-=\;&\left[ \left( 1+1 \right)^{k+1}-2 \right]+\left[ \left( 2+1 \right)^{k+1}-1-2^{k+1} \right]+\dots \\
-&+\left[ \left( n+1 \right)^{k+1}-1-n^{k+1} \right] \\
-=\;&2^{k+1}+3^{k+1}+\dots+\left( n+1 \right)^{k+1}-2^{k+1}-\dots-n^{k+1}-\left( n+1 \right) \\
-=\;&\left( n+1 \right)^{k+1}-\left( n+1 \right)
-\end{align*}
-
-因此，该递推公式成立. 在该式中令 \( k=1 \)，得 \(S_1=\frac{\left( n+1 \right)^2-\left( n+1 \right)}{\mathrm C_2^1}=\frac{n\left( n+1 \right)}{2}\).
-
-令 \( k=2 \)，得
+依次令 \(k=1\)，\(2\)，\(3\)，\(4\)，可得
+\(S_1=\frac{n(n+1)}2\)，\(S_2=\frac{n(n+1)(2n+1)}6\)，\(S_3=\frac{n^2(n+1)^2}{4}\).
+当 \(k=4\) 时，代入前三式，得
 \[
-S_2=\frac{\left( n+1 \right)^3-\left( n+1 \right)-\mathrm C_3^1S_1}{\mathrm C_3^2}
-=\frac{n\left( n+1 \right)\left( 2n+1 \right)}{6}
-\]
-
-令 \( k=3 \)，得
-\[
-S_3=\frac{\left( n+1 \right)^4-\left( n+1 \right)-\mathrm C_4^1S_1-\mathrm C_4^2S_2}{\mathrm C_4^3}
-=\frac{n^2\left( n+1 \right)^2}{4}
-\]
-
-令 \( k=4 \)，得
-\begin{align*}
+\begin{aligned}
 S_4
-=\;&\frac{\left( n+1 \right)^5-\left( n+1 \right)-\mathrm C_5^1S_1-\mathrm C_5^2S_2-\mathrm C_5^3S_3}{\mathrm C_5^4} \\
-=\;&\frac{\left( n+1 \right)^5-\left( n+1 \right)-\frac{5}{2}n\left( n+1 \right)-\frac{5}{3}n\left( n+1 \right)\left( 2n+1 \right)-\frac{5}{2}n^2\left( n+1 \right)^2}{5} \\
-=\;&\frac{n\left( n+1 \right)\left( 2n+1 \right)\left( 3n^2+3n-1 \right)}{30}
-\end{align*}
-即
-\[
-1^4+2^4+3^4+\dots+n^4=\frac{n\left( n+1 \right)\left( 2n+1 \right)\left( 3n^2+3n-1 \right)}{30}
+&=\frac{(n+1)^5-(n+1)-5S_1-10S_2-10S_3}{5}\\
+&=\frac{(n+1)^5-(n+1)-\frac52n(n+1)-\frac53n(n+1)(2n+1)-\frac52n^2(n+1)^2}{5}\\
+&=\frac{n(n+1)(2n+1)(3n^2+3n-1)}{30}.
+\end{aligned}
 \]
-
-注：也可以利用
-\[
-\left( n+1 \right)^{k+1}-n^{k+1}=\mathrm C_{k+1}^{1}n^k+\mathrm C_{k+1}^{2}n^{k-1}+\dots+1
-\]
-
-令 \( k=2 \)，\( 3 \)，\( 4 \)，即可分别求出 \(S_2\)，\(S_3\)，\(S_4\) 等.
+所以 \(S_4=1^4+2^4+\dots+n^4\) 等于题中所给表达式.
 \end{solution}
 
 \begin{problem}
 计算下列积分：
-
 \begin{enumerate}
-\item \( \int_0^1 xe^{-x}\,dx \)；
-\item \( \int_0^a x^2\sqrt{a^2-x^2}\,dx \)（\( a>0 \)）.
+\item \(\int_0^1 xe^{-x}\,dx\)；
+\item \(\int_0^a x^2\sqrt{a^2-x^2}\,dx\)（\(a>0\)）.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item
-\begin{align*}
+\item 由分部积分，取 \(u=x\)，\(dv=e^{-x}\,dx\)，则 \(du=dx\)，\(v=-e^{-x}\). 因而
+\[
 \int_0^1 xe^{-x}\,dx
-=\;&-\int_0^1 x\,d\e^{-x} \\
-=\;&-xe^{-x}\bigg|_0^1+\int_0^1 \e^{-x}\,dx \\
-=\;&-\frac{1}{\e}-\e^{-x}\bigg|_0^1 \\
-=\;&-\frac{1}{\e}-\frac{1}{\e}+1=1-\frac{2}{\e}
-\end{align*}
+=\left[-xe^{-x}\right]_0^1+\int_0^1e^{-x}\,dx
+=-\frac1{\e}+\left[-\e^{-x}\right]_0^1
+=1-\frac2{\e}
+\]
 
-\item 令 \( x=a\sin t \)（\( 0\le t\le \frac{\pi}{2} \)），则 \( dx=a\cos t\,dt \)，\( \sqrt{a^2-x^2}=a\cos t \). 因此
-\begin{align*}
+\item 因为 \(a>0\)，令 \(x=a\sin t\)，其中 \(0\le t\le\frac\pi2\). 则 \(dx=a\cos t\,dt\)，且
+\(\sqrt{a^2-x^2}=\sqrt{a^2-a^2\sin^2t}=a\cos t\). 当 \(x=0\) 时 \(t=0\)，当 \(x=a\) 时 \(t=\frac\pi2\)，所以
+\[
+\begin{aligned}
 \int_0^a x^2\sqrt{a^2-x^2}\,dx
-=\;&\int_0^{\frac{\pi}{2}} \left( a\sin t \right)^2\left( a\cos t \right)\left( a\cos t \right)\,dt \\
-=\;&\int_0^{\frac{\pi}{2}} a^4\sin^2 t\cos^2 t\,dt \\
-=\;&\frac{a^4}{4}\int_0^{\frac{\pi}{2}} \sin^2 2t\,dt \\
-=\;&\frac{a^4}{8}\int_0^{\frac{\pi}{2}} \left( 1-\cos 4t \right)\,dt \\
-=\;&\frac{a^4}{8}\left( t-\frac{1}{4}\sin 4t \right)\bigg|_0^{\frac{\pi}{2}}=\frac{a^4\pi}{16}
-\end{align*}
+&=a^4\int_0^{\frac\pi2}\sin^2t\cos^2t\,dt
+=\frac{a^4}{4}\int_0^{\frac\pi2}\sin^2 2t\,dt\\
+&=\frac{a^4}{8}\int_0^{\frac\pi2}(1-\cos4t)\,dt
+=\frac{a^4}{8}\left[t-\frac14\sin4t\right]_0^{\frac\pi2}
+=\frac{a^4\pi}{16}.
+\end{aligned}
+\]
 \end{enumerate}
 \end{solution}

@@ -12,8 +12,14 @@
 
 \begin{answer}D\end{answer}
 
+\begin{solution}
+由 \(\lvert x\rvert<3\) 且 \(x\in\Z\)，得 \(I=\{-2,-1,0,1,2\}\). 因此
+\(\complement_I B=\{0,1\}\)，从而
+\(A\cup(\complement_I B)=\{1,2\}\cup\{0,1\}=\{0,1,2\}\)，故选 D.
+\end{solution}
+
 \begin{problem}
-设复数：\(z_1=1+\i\)，\(z_2=x+2\i\)（\(x\in\R\)）.若 \(z_1z_2\) 为实数，则 \(x=\)（\quad）
+设复数：\(z_1=1+\i\)，\(z_2=x+2\i\)（\(x\in\R\)）. 若 \(z_1z_2\) 为实数，则 \(x=\)（\quad）
 
 \choices
     {\(-2\)}
@@ -23,6 +29,10 @@
 \end{problem}
 
 \begin{answer}A\end{answer}
+
+\begin{solution}
+由乘法得 \(z_1z_2=(1+\i)(x+2\i)=x-2+(x+2)\i\). 要使 \(z_1z_2\) 为实数，虚部必须为零，即 \(x+2=0\)，所以 \(x=-2\)，故选 A.
+\end{solution}
 
 \begin{problem}
 “\(a=b\)”是“直线 \(y=x+2\) 与圆 \((x-a)^2+(y+b)^2=2\) 相切”的（\quad）
@@ -36,6 +46,20 @@
 
 \begin{answer}D\end{answer}
 
+\begin{solution}
+圆心为 \(C(a,-b)\)，半径为 \(\sqrt2\). 直线 \(y=x+2\) 可写成 \(x-y+2=0\)，所以圆心到直线的距离为
+\[
+\frac{\lvert a+b+2\rvert}{\sqrt2}
+\]
+直线与圆相切当且仅当
+\[
+\frac{\lvert a+b+2\rvert}{\sqrt2}=\sqrt2
+\]
+即 \(a+b=0\) 或 \(a+b=-4\).
+
+若 \(a=b\)，只能得到 \(a=b=0\) 或 \(a=b=-2\) 时相切，因而“\(a=b\)”不是充分条件；例如 \(a=b=1\) 时不相切. 另一方面，取 \(a=1\)，\(b=-1\)，圆与直线相切但 \(a\ne b\)，所以“\(a=b\)”也不是必要条件. 故选 D.
+\end{solution}
+
 \begin{problem}
 \((\sqrt{x}+\sqrt[3]{x})^{12}\) 的展开式中，含 \(x\) 的正整数次幂的项共有（\quad）
 
@@ -47,6 +71,12 @@
 \end{problem}
 
 \begin{answer}B\end{answer}
+
+\begin{solution}
+展开式的通项为
+\(\mathrm C_{12}^{k}(\sqrt{x})^{12-k}(\sqrt[3]{x})^{k}=\mathrm C_{12}^{k}x^{6-\frac{k}{6}}\)，\(k=0\)，\(1\)，\(\ldots\)，\(12\).
+其幂为正整数时，必须有 \(k\) 是 \(6\) 的倍数；在 \(0\leqslant k\leqslant12\) 内，\(k=0\)，\(6\)，\(12\)，对应幂次分别为 \(6\)，\(5\)，\(4\)，均为正整数. 因此共有 \(3\) 项，故选 B.
+\end{solution}
 
 \begin{problem}
 设函数 \(f(x)=\sin 3x+|\sin 3x|\)，则 \(f(x)\) 为（\quad）
@@ -60,6 +90,18 @@
 
 \begin{answer}B\end{answer}
 
+\begin{solution}
+令 \(t=3x\)，则 \(f(x)=\sin t+\lvert\sin t\rvert\). 当 \(\sin t\geqslant0\) 时，\(f(x)=2\sin t\)；当 \(\sin t<0\) 时，\(f(x)=0\).
+
+记 \(h(t)=\sin t+\lvert\sin t\rvert\). 则 \(h(t)>0\) 当且仅当
+\(t\in(2m\pi,(2m+1)\pi)\)（\(m\in\mathbb Z\)），其余位置 \(h(t)=0\).
+因而 \(2\pi\) 是 \(h(t)\) 的一个周期. 若 \(T>0\) 是 \(h(t)\) 的周期，则零点区间的端点集合
+\(\pi\mathbb Z\) 平移后仍为自身，所以 \(T\) 必为 \(\pi\) 的整数倍. 但
+\(h\left(\dfrac{\pi}{2}\right)=2\)，而
+\(h\left(\dfrac{\pi}{2}+\pi\right)=0\)，故 \(\pi\) 不是周期；因此 \(h(t)\) 的最小正周期为
+\(2\pi\). 由于 \(t=3x\)，\(f(x)\) 的最小正周期为 \(\dfrac{2\pi}{3}\)，选 B.
+\end{solution}
+
 \begin{problem}
 已知向量 \(\bs{a}=(1,2)\)，\(\bs{b}=(-2,-4)\)，\(|\bs{c}|=\sqrt{5}\)，若 \((\bs{a}+\bs{b})\cdot\bs{c}=\frac{5}{2}\)，则 \(\bs{a}\) 与 \(\bs{c}\) 的夹角为（\quad）
 
@@ -71,6 +113,16 @@
 \end{problem}
 
 \begin{answer}C\end{answer}
+
+\begin{solution}
+\(\bs{a}+\bs{b}=(-1,-2)=-\bs{a}\)，所以
+\((\bs{a}+\bs{b})\cdot\bs{c}=\frac52\)，\(\Longrightarrow\)，\(\bs{a}\cdot\bs{c}=-\frac52\).
+又 \(\lvert\bs{a}\rvert=\sqrt5\)，\(\lvert\bs{c}\rvert=\sqrt5\). 设 \(\bs{a}\) 与 \(\bs{c}\) 的夹角为 \(\theta\)，则
+\[
+\cos\theta=\frac{\bs{a}\cdot\bs{c}}{\lvert\bs{a}\rvert\lvert\bs{c}\rvert}=\frac{-5/2}{5}=-\frac12
+\]
+由于 \(0\leqslant\theta\leqslant\pi\)，得 \(\theta=120^{\circ}\)，故选 C.
+\end{solution}
 
 \begin{problem}
 已知函数 \(y=xf'(x)\) 的图象如图所示（其中 \(f'(x)\) 是函数 \(f(x)\) 的导函数），下面四个图象中，\(y=f(x)\) 的图象大致是（\quad）
@@ -86,6 +138,19 @@
 
 \begin{answer}C\end{answer}
 
+\begin{solution}
+由图可知，\(xf'(x)\) 在四个区间上的符号为
+\(xf'(x)<0\ (x<-1)\)，\(xf'(x)>0\ (-1<x<0)\)
+\(xf'(x)<0\ (0<x<1)\)，\(xf'(x)>0\ (x>1)\).
+结合 \(x\) 的符号，得到
+\(f'(x)>0\ (x<-1)\)，\(f'(x)<0\ (-1<x<0)\)，\(f'(x)<0\ (0<x<1)\)，\(f'(x)>0\ (x>1)\).
+函数 \(f\) 可导，因而在 \(x=0\) 处连续. 对任意 \(-1<x_1<0<x_2<1\)，
+由中值定理分别在 \([x_1,0]\) 和 \([0,x_2]\) 上可得
+\(f(x_1)>f(0)>f(x_2)\). 所以 \(f(x)\) 在 \((-1,1)\) 上递减，在
+\((-\infty,-1)\) 和 \((1,+\infty)\) 上递增，因而在 \(x=-1\) 处有极大值，在
+\(x=1\) 处有极小值. 四个图象中只有选项 C 符合，故选 C.
+\end{solution}
+
 \begin{problem}
 若 \(\displaystyle\lim_{x\to 1}\frac{f(x-1)}{x-1}=1\)，则 \(\displaystyle\lim_{x\to 1}\frac{x-1}{f(2-2x)}=\)（\quad）
 
@@ -98,6 +163,25 @@
 
 \begin{answer}C\end{answer}
 
+\begin{solution}
+令 \(t=x-1\)，则 \(t\to0\)，且 \(2-2x=-2t\). 由已知
+\[
+\lim_{t\to0}\frac{f(t)}{t}=1
+\]
+可得
+\[
+\lim_{t\to0}\frac{f(-2t)}{-2t}=1
+\]
+于是
+\[
+\lim_{x\to1}\frac{x-1}{f(2-2x)}
+=\lim_{t\to0}\frac{t}{f(-2t)}
+=\lim_{t\to0}\frac{t}{-2t}\cdot\frac{-2t}{f(-2t)}
+=-\frac12
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
 矩形 \(ABCD\) 中，\(AB=4\)，\(BC=3\)，沿 \(AC\) 将矩形 \(ABCD\) 折成一个直二面角 \(B-AC-D\)，则四面体 \(ABCD\) 的外接球的体积为（\quad）
 
@@ -109,6 +193,18 @@
 \end{problem}
 
 \begin{answer}C\end{answer}
+
+\begin{solution}
+折叠后，三角形 \(ABC\) 与三角形 \(ADC\) 分别位于二面角的两个面内，且两者都以 \(AC\) 为斜边. 由矩形的性质，
+\[
+AC=\sqrt{AB^{2}+BC^{2}}=\sqrt{4^{2}+3^{2}}=5
+\]
+因为两个三角形都是直角三角形，所以它们的外接圆圆心都是 \(AC\) 的中点，半径均为 \(\dfrac{AC}{2}=\dfrac52\). 这两个外接圆所在平面互相垂直，但圆心相同，故四面体 \(ABCD\) 的外接球半径为 \(\dfrac52\). 因此
+\[
+V=\frac43\pi\left(\frac52\right)^3=\frac{125}{6}\pi
+\]
+故选 C.
+\end{solution}
 
 \begin{problem}
 已知实数 \(a\)，\(b\) 满足等式 \(\left(\frac{1}{2}\right)^a=\left(\frac{1}{3}\right)^b\)，下列五个关系式：
@@ -132,6 +228,16 @@
 
 \begin{answer}B\end{answer}
 
+\begin{solution}
+由
+\[
+\left(\frac12\right)^a=\left(\frac13\right)^b
+\]
+两边取自然对数，得
+\(a\ln2=b\ln3\)，\(b=\frac{\ln2}{\ln3}a\).
+由于 \(0<\dfrac{\ln2}{\ln3}<1\)，当 \(a>0\) 时有 \(0<b<a\)，当 \(a<0\) 时有 \(a<b<0\)；当 \(a=0\) 时有 \(b=0\)，所以 \(a=b\) 也可能成立. 因此第1、2、5种关系均可能成立，而第3、4种关系不可能成立，共有 \(2\) 个，故选 B.
+\end{solution}
+
 \begin{problem}
 在 \(\triangle OAB\) 中，\(O\) 为坐标原点，\(A(1,\cos\theta)\)，\(B(\sin\theta,1)\)，\(\theta\in\left(0,\frac{\pi}{2}\right]\)，则 \(\triangle OAB\) 的面积达到最大值时，\(\theta=\)（\quad）
 
@@ -143,6 +249,15 @@
 \end{problem}
 
 \begin{answer}D\end{answer}
+
+\begin{solution}
+三角形面积为
+\[
+S_{\triangle OAB}=\frac12\left|\begin{vmatrix}1&\cos\theta\\ \sin\theta&1\end{vmatrix}\right|
+=\frac12\left(1-\sin\theta\cos\theta\right)
+\]
+在 \(\theta\in\left(0,\dfrac{\pi}{2}\right]\) 内，\(\sin\theta\cos\theta\geqslant0\)，且在 \(\theta=\dfrac{\pi}{2}\) 时取到最小值 \(0\). 所以面积在 \(\theta=\dfrac{\pi}{2}\) 时取得最大值，故选 D.
+\end{solution}
 
 \begin{problem}
 将 \(1\)，\(2\)，\(\cdots\)，\(9\) 这 \(9\) 个数平均分成三组，则每组的三个数都成等差数列的概率为（\quad）
@@ -156,6 +271,28 @@
 
 \begin{answer}A\end{answer}
 
+\begin{solution}
+把三组看作无序组，所有分组数为
+\[
+\frac{\mathrm C_{9}^{3}\mathrm C_{6}^{3}\mathrm C_{3}^{3}}{3!}=280
+\]
+含有数字 \(1\) 的三项等差数列只能是 \((1,2,3)\)、\((1,3,5)\)、\((1,4,7)\)、\((1,5,9)\). 逐一检查余下六个数的等差三元组及其补集：当含 \(1\) 的一组为 \((1,2,3)\) 时，余下集合为 \(\{4,5,6,7,8,9\}\)，其中可能的等差三元组为 \((4,5,6)\)、\((5,6,7)\)、\((6,7,8)\)、\((7,8,9)\)、\((4,6,8)\)、\((5,7,9)\)，只有 \((4,5,6)\) 与 \((7,8,9)\)、\((4,6,8)\) 与 \((5,7,9)\) 互为补集且均为等差三元组. 当含 \(1\) 的一组为 \((1,3,5)\) 时，余下集合为 \(\{2,4,6,7,8,9\}\)，可能的等差三元组为 \((2,4,6)\)、\((4,6,8)\)、\((6,7,8)\)、\((7,8,9)\)，只有 \((2,4,6)\) 与 \((7,8,9)\) 互为补集. 当含 \(1\) 的一组为 \((1,4,7)\) 时，余下集合为 \(\{2,3,5,6,8,9\}\)，只有 \((2,5,8)\) 与 \((3,6,9)\) 互为补集. 当含 \(1\) 的一组为 \((1,5,9)\) 时，余下集合为 \(\{2,3,4,6,7,8\}\)，可能的等差三元组为 \((2,3,4)\)、\((2,4,6)\)、\((4,6,8)\)、\((6,7,8)\)，只有 \((2,3,4)\) 与 \((6,7,8)\) 互为补集. 因此只有以下五种：
+\[
+\begin{gathered}
+\{(1,2,3),(4,5,6),(7,8,9)\},\\
+\{(1,2,3),(4,6,8),(5,7,9)\},\\
+\{(1,3,5),(2,4,6),(7,8,9)\},\\
+\{(1,4,7),(2,5,8),(3,6,9)\},\\
+\{(1,5,9),(2,3,4),(6,7,8)\}.
+\end{gathered}
+\]
+因此所求概率为
+\[
+\frac5{280}=\frac1{56}
+\]
+故选 A.
+\end{solution}
+
 \section{填空题}
 \begin{problem}
 若函数 \(f(x)=\log_{a}\left(x+\sqrt{x^{2}+2a^{2}}\right)\) 是奇函数，则 \(a=\)\fillinblank{}.
@@ -163,15 +300,54 @@
 
 \begin{answer}\(\frac{\sqrt{2}}{2}\)\end{answer}
 
+\begin{solution}
+要使对数有意义，必须有 \(a>0\) 且 \(a\ne1\). 记
+\[
+g(x)=x+\sqrt{x^{2}+2a^{2}}
+\]
+因为 \(\sqrt{x^{2}+2a^{2}}>|x|\)，所以 \(g(x)>0\)，函数定义域为 \(\R\). 又
+\[
+g(x)g(-x)=\left(x+\sqrt{x^{2}+2a^{2}}\right)
+\left(-x+\sqrt{x^{2}+2a^{2}}\right)=2a^{2}
+\]
+函数为奇函数的充要条件是
+\[
+f(x)+f(-x)=\log_a\bigl(g(x)g(-x)\bigr)=\log_a(2a^{2})=0
+\]
+因此 \(2a^{2}=1\). 结合 \(a>0\)，得
+\[
+a=\frac{\sqrt2}{2}
+\]
+且该值不等于 \(1\)，满足对数的底数条件.
+\end{solution}
+
 \begin{problem}
 设实数 \(x\)，\(y\) 满足 \(\begin{cases}
 x-y-2\leqslant 0,\\
- x+2y-4\geqslant 0,\\
+ x+2y-4>0,\\
 2y-3\leqslant 0
 \end{cases}\)，则 \(\frac{y}{x}\) 的最大值是\fillinblank{}.
 \end{problem}
 
-\begin{answer}\(\frac{3}{2}\)\end{answer}
+\begin{answer}不存在（上确界为 \(\frac{3}{2}\)）\end{answer}
+
+\begin{solution}
+约束条件等价于
+\(y\geqslant x-2\)，\(y>2-\frac{x}{2}\)，\(y\leqslant\frac32\).
+由 \(y>2-\frac{x}{2}\) 且 \(y\leqslant\frac32\)，可知
+\[
+2-\frac{x}{2}<\frac32
+\]
+即 \(x>1\). 另一方面，由 \(y\geqslant x-2\) 且 \(y\leqslant\frac32\)，得 \(x\leqslant\dfrac72\). 因此可行域中的点满足 \(1<x\leqslant\dfrac72\)，从而 \(x>0\).
+
+固定 \(x\) 时，\(\dfrac yx\) 随 \(y\) 增大而增大，所以
+\[
+\frac yx\leqslant\frac{3}{2x}<\frac32
+\]
+另一方面，对任意 \(0<\varepsilon\leqslant\dfrac52\)，取 \(x=1+\varepsilon\)，\(y=\dfrac32\)，三个约束均满足，且
+\(\frac yx=\frac{3}{2(1+\varepsilon)}\longrightarrow\frac32\)，\((\varepsilon\to0^+)\).
+所以 \(\dfrac yx\) 的上确界为 \(\dfrac32\)，但这个值不能取得，故不存在最大值.
+\end{solution}
 
 \begin{problem}
 如图，在直三棱柱 \(ABC-A_{1}B_{1}C_{1}\) 中，\(AB=BC=\sqrt{2}\)，\(BB_{1}=2\)，\(\angle ABC=90^{\circ}\)，\(E\)，\(F\) 分别为 \(AA_{1}\)，\(C_{1}B_{1}\) 的中点，沿棱柱的表面从 \(E\) 到 \(F\) 两点的最短路径的长度为\fillinblank{}.
@@ -180,6 +356,32 @@ x-y-2\leqslant 0,\\
 \end{problem}
 
 \begin{answer}\(\frac{3\sqrt{2}}{2}\)\end{answer}
+
+\begin{solution}
+把侧面 \(AA_{1}C_{1}C\) 与上底面三角形 \(A_{1}B_{1}C_{1}\) 沿公共棱 \(A_{1}C_{1}\) 展开到同一平面内.
+
+因为 \(AB=BC=\sqrt2\)，且 \(\angle ABC=90^{\circ}\)，所以 \(AC=2\). 上底面三角形 \(A_{1}B_{1}C_{1}\) 是以 \(A_{1}C_{1}\) 为斜边的等腰直角三角形，故 \(B_{1}\) 到 \(A_{1}C_{1}\) 的高为 \(1\)，垂足是 \(A_{1}C_{1}\) 的中点.
+
+在展开图中取 \(A_{1}=(0,0)\)，\(C_{1}=(2,0)\)，并令侧面 \(AA_{1}C_{1}C\) 位于 \(A_{1}C_{1}\) 下方. 由于 \(AA_{1}=2\)，且 \(E\) 是 \(AA_{1}\) 的中点，所以 \(E=(0,-1)\)；又 \(F\) 是 \(C_{1}B_{1}\) 的中点，故 \(B_{1}=(1,1)\)，\(F=\left(\dfrac32,\dfrac12\right)\).
+
+展开图中连接 \(E\)，\(F\) 的线段在穿过 \(A_{1}C_{1}\) 时仍位于这两个面的展开区域内，所以它对应一条可行的表面最短路径，其长度为
+\[
+EF=\sqrt{\left(\frac32\right)^2+\left(\frac32\right)^2}
+=\frac{3\sqrt2}{2}
+\]
+为核对其他相邻面的展开路线，将侧面 \(AA_{1}B_{1}B\) 与上底面沿 \(A_{1}B_{1}\) 展开，所得距离的平方为
+\(\frac72+\sqrt2>\frac92\)；将侧面 \(AA_{1}C_{1}C\) 与侧面 \(BB_{1}C_{1}C\) 沿 \(CC_{1}\) 展开，所得距离为
+\[
+\sqrt{\left(2+\frac{\sqrt2}{2}\right)^2+1}>\frac{3\sqrt2}{2}
+\]
+将侧面 \(AA_{1}B_{1}B\) 与侧面 \(BB_{1}C_{1}C\) 沿 \(BB_{1}\) 展开，所得距离为
+\[
+\sqrt{\left(\sqrt2+\frac{\sqrt2}{2}\right)^2+1}
+=\sqrt{\frac{11}{2}}>\frac{3\sqrt2}{2}
+\]
+这四种展开分别对应两端点所在面的四种组合. 若路径绕经底面，则其高度坐标从 \(1\) 降至 \(0\) 后再升至 \(2\)，路径长度至少为 \(1+2=3>\frac{3\sqrt2}{2}\). 因此最短路径长度为
+\(\frac{3\sqrt2}{2}\).
+\end{solution}
 
 \begin{problem}
 以下四个关于圆锥曲线的命题中：
@@ -191,10 +393,41 @@ x-y-2\leqslant 0,\\
 \item 双曲线 \(\frac{x^{2}}{25}-\frac{y^{2}}{9}=1\) 与椭圆 \(\frac{x^{2}}{35}+y^{2}=1\) 有相同的焦点.
 \end{circlelist}
 
-其中真命题的序号为\fillinblank{}.（写出所有真命题的序号）
+其中真命题的序号为\fillinblank{}. （写出所有真命题的序号）
 \end{problem}
 
 \begin{answer}\(\circled{3}\circled{4}\)\end{answer}
+
+\begin{solution}
+对于命题1，双曲线定义还要求两个定点间距离大于 \(\lvert k\rvert\)；题目只说明 \(k\ne0\)，当 \(\lvert k\rvert\) 不满足该条件时轨迹可能为空，因此命题1不一定成立.
+
+对于命题2，设圆 \(C\) 的圆心为 \(O_{0}\)，半径为 \(R\)，则
+\[
+\overrightarrow{OP}=\frac12\left(\overrightarrow{OA}+\overrightarrow{OB}\right)
+\]
+意味着 \(P\) 是定点 \(A\) 与动点 \(B\) 的中点. 于是
+\[
+\overrightarrow{O_{0}P}
+=\frac12\overrightarrow{O_{0}A}+\frac12\overrightarrow{O_{0}B}
+\]
+所以 \(P\) 的轨迹是圆心固定、半径为 \(\dfrac R2\) 的圆，而不是椭圆，命题2不真.
+
+命题3的方程两根为
+\[
+x=\frac{5\pm\sqrt{25-16}}4=\frac{5\pm3}{4}
+\]
+即 \(2\) 和 \(\dfrac12\). 其中 \(\dfrac12\) 可作为椭圆的离心率，\(2\) 可作为双曲线的离心率，故命题3为真.
+
+双曲线 \(\dfrac{x^{2}}{25}-\dfrac{y^{2}}9=1\) 的焦半距满足
+\[
+c^{2}=25+9=34
+\]
+椭圆 \(\dfrac{x^{2}}{35}+y^{2}=1\) 的焦半距满足
+\[
+c^{2}=35-1=34
+\]
+两者的焦点均为 \((\pm\sqrt{34},0)\)，故命题4为真. 因此真命题的序号为 \(3\)，\(4\).
+\end{solution}
 
 \section{解答题}
 \begin{problem}
@@ -224,7 +457,7 @@ x-y-2\leqslant 0,\\
 \]
 解得 \(a=-1\)，\(b=2\)，所以 \(f(x)=\dfrac{x^{2}}{2-x}\)，其中 \(x\ne2\). 直接计算得
 \[
-f(x)-x+12=\frac{x^{2}}{2-x}-x+12=\frac{2(x-3)(x-4)}{2-x},
+f(x)-x+12=\frac{x^{2}}{2-x}-x+12=\frac{2(x-3)(x-4)}{2-x}
 \]
 故原方程的两个实根确为 \(3\)，\(4\).
 
@@ -234,7 +467,7 @@ f(x)-x+12=\frac{x^{2}}{2-x}-x+12=\frac{2(x-3)(x-4)}{2-x},
 \quad\Longleftrightarrow\quad
 \frac{x^{2}-(k+1)x+k}{2-x}<0
 \quad\Longleftrightarrow\quad
-\frac{(x-1)(x-k)}{2-x}<0.
+\frac{(x-1)(x-k)}{2-x}<0
 \]
 当 \(1<k\leqslant2\) 时，关键点的顺序为 \(1<k\leqslant2\)，作符号判断得 \(x\in(1,k)\cup(2,+\infty)\). 当 \(k>2\) 时，关键点的顺序为 \(1<2<k\)，作符号判断得 \(x\in(1,2)\cup(k,+\infty)\). 因此不等式的解集为
 \[
@@ -258,11 +491,11 @@ x\in
 \]
 及 \(\sqrt{2}\sin\left(t+\dfrac{\pi}{4}\right)=\sin t+\cos t\)，得
 \[
-f(x)=2\cos t\left(\sin t+\cos t\right)-1=\sin x+\cos x.
+f(x)=2\cos t\left(\sin t+\cos t\right)-1=\sin x+\cos x
 \]
 因此 \(f'(x)=\cos x-\sin x\)，从而
 \[
-f(x)+f'(x)=2\cos x.
+f(x)+f'(x)=2\cos x
 \]
 若 \(f(x)+f'(x)=0\)，则 \(\cos x=0\)，在 \([0,\pi]\) 内只能有 \(x=\dfrac{\pi}{2}\). 但该值不在函数定义域内，故不存在满足条件的实数 \(x\).
 \end{solution}
@@ -279,26 +512,26 @@ f(x)+f'(x)=2\cos x.
 \begin{solution}
 设前 \(n\) 次投掷中正面和反面出现的次数分别为 \(m\)，\(r\). 某人赢得全部五张卡片时，正面与反面的次数之差的绝对值为 \(5\)，所以在游戏未因达到九次而终止时，必须有 \(n\geqslant5\)，且 \(n\) 与 \(5\) 同奇偶. 结合最多投掷九次，得到
 \[
-\xi\in\{5,7,9\}.
+\xi\in\{5,7,9\}
 \]
 
 当 \(\xi=5\) 时，前五次必须全为正面或全为反面，共有 \(2\) 个等可能序列，因此
 \[
-P(\xi=5)=2\left(\frac12\right)^5=\frac1{16}.
+P(\xi=5)=2\left(\frac12\right)^5=\frac1{16}
 \]
 
 当 \(\xi=7\) 时，以正面为例，七次中应有六次正面和一次反面，且反面必须出现在前五次中的一个位置，否则前五次正面会使 \(A\) 提前赢得全部卡片. 反面的位置有 \(5\) 种；以反面为主的情形同理，故共有 \(10\) 个等可能序列，从而
 \[
-P(\xi=7)=10\left(\frac12\right)^7=\frac5{64}.
+P(\xi=7)=10\left(\frac12\right)^7=\frac5{64}
 \]
 
 其余情形均在第九次终止，所以
 \[
-P(\xi=9)=1-P(\xi=5)-P(\xi=7)=1-\frac1{16}-\frac5{64}=\frac{55}{64}.
+P(\xi=9)=1-P(\xi=5)-P(\xi=7)=1-\frac1{16}-\frac5{64}=\frac{55}{64}
 \]
 因此
 \[
-E(\xi)=5P(\xi=5)+7P(\xi=7)+9P(\xi=9)=\frac{275}{32}.
+E(\xi)=5P(\xi=5)+7P(\xi=7)+9P(\xi=9)=\frac{275}{32}
 \]
 \end{solution}
 
@@ -315,38 +548,44 @@ E(\xi)=5P(\xi=5)+7P(\xi=7)+9P(\xi=9)=\frac{275}{32}.
 \end{problem}
 
 \begin{solution}
-建立空间直角坐标系，取 \(A=(0,0,0)\)，\(B=(2,0,0)\)，\(D=(0,1,0)\)，\(A_{1}=(0,0,1)\). 于是 \(C=(2,1,0)\)，\(D_{1}=(0,1,1)\). 设 \(AE=t\)，则 \(E=(t,0,0)\)，且 \(0\leqslant t\leqslant2\).
+建立空间直角坐标系，取 \(D=(0,0,0)\)，\(A=(1,0,0)\)，\(B=(1,2,0)\)，\(C=(0,2,0)\)，\(A_{1}=(1,0,1)\)，\(D_{1}=(0,0,1)\). 设 \(AE=t\)，则
+\(E=(1,t,0)\)，\(0\leqslant t\leqslant2\).
 
 \begin{enumerate}
-\item \(\overrightarrow{D_{1}E}=(t,-1,-1)\)，\(\overrightarrow{A_{1}D}=(0,1,-1)\)，所以
+\item \(\overrightarrow{D_{1}E}=(1,t,-1)\)，\(\overrightarrow{A_{1}D}=(-1,0,-1)\)，所以
 \[
-\overrightarrow{D_{1}E}\cdot\overrightarrow{A_{1}D}=0-1+1=0.
+\overrightarrow{D_{1}E}\cdot\overrightarrow{A_{1}D}=-1+1=0
 \]
 因此 \(D_{1}E\perp A_{1}D\).
 
-\item 平面 \(ACD_{1}\) 的一个法向量为
+\item
+\(\overrightarrow{AC}=(-1,2,0)\)，\(\overrightarrow{AD_{1}}=(-1,0,1)\)
+故平面 \(ACD_{1}\) 的一个法向量为
 \[
-\overrightarrow{AC}\times\overrightarrow{AD_{1}}=(1,-2,2)
+\overrightarrow{AC}\times\overrightarrow{AD_{1}}=(2,1,2)
 \]
-故其方程为 \(x-2y+2z=0\). 当 \(E\) 为 \(AB\) 的中点时，\(E=(1,0,0)\)，所以点 \(E\) 到平面 \(ACD_{1}\) 的距离为
+由于 \(A=(1,0,0)\) 在该平面上，平面方程为
 \[
-\frac{|1-2\cdot0+2\cdot0|}{\sqrt{1^2+(-2)^2+2^2}}=\frac13.
+2x+y+2z-2=0
+\]
+当 \(E\) 为 \(AB\) 的中点时，\(t=1\)，\(E=(1,1,0)\)，所以点 \(E\) 到平面 \(ACD_{1}\) 的距离为
+\[
+\frac{|2\cdot1+1+2\cdot0-2|}{\sqrt{2^{2}+1^{2}+2^{2}}}=\frac13
 \]
 
-\item 平面 \(ECD\) 是底面，法向量可取 \(\bs n_0=(0,0,1)\). 平面 \(D_{1}EC\) 的两个方向向量为 \(\overrightarrow{EC}=(2-t,1,0)\)，\(\overrightarrow{ED_{1}}=(-t,1,1)\)，故可取法向量
+\item 平面 \(ECD\) 是底面，法向量可取 \(\bs n_0=(0,0,1)\). 平面 \(D_{1}EC\) 的两个方向向量为
+\(\overrightarrow{EC}=(-1,2-t,0)\)，\(\overrightarrow{ED_{1}}=(-1,-t,1)\)
+故可取法向量
 \[
-\bs n_1=\overrightarrow{EC}\times\overrightarrow{ED_{1}}=(1,t-2,2).
+\bs n_1=\overrightarrow{EC}\times\overrightarrow{ED_{1}}=(2-t,1,2)
 \]
 设二面角 \(D_{1}-EC-D\) 为 \(\varphi\)，则
 \[
-\cos\varphi=\frac{|\bs n_0\cdot\bs n_1|}{|\bs n_0||\bs n_1|}=\frac{2}{\sqrt{5+(t-2)^2}}.
+\cos\varphi=\frac{|\bs n_0\cdot\bs n_1|}{|\bs n_0||\bs n_1|}
+=\frac{2}{\sqrt{(2-t)^2+5}}
 \]
 当 \(\varphi=\dfrac{\pi}{4}\) 时，
-\[
-\frac{2}{\sqrt{5+(t-2)^2}}=\frac{\sqrt2}{2}
-\quad\Longrightarrow\quad
-(t-2)^2=3.
-\]
+\(\frac{2}{\sqrt{(2-t)^2+5}}=\frac{\sqrt2}{2}\)，\(\Longrightarrow\)，\((2-t)^2=3\).
 由于 \(0\leqslant t\leqslant2\)，得 \(t=2-\sqrt3\). 所以 \(AE=2-\sqrt3\).
 \end{enumerate}
 \end{solution}
@@ -363,24 +602,20 @@ E(\xi)=5P(\xi=5)+7P(\xi=7)+9P(\xi=9)=\frac{275}{32}.
 \begin{solution}
 \begin{enumerate}
 \item 因为 \(0<a_0=1<2\)，设对某个 \(n\) 有 \(0<a_n<2\). 则
-\[
-a_{n+1}=\frac12a_n(4-a_n)>0,
-\qquad
-2-a_{n+1}=2-\frac12a_n(4-a_n)=\frac12(2-a_n)^2>0,
-\]
+\(a_{n+1}=\frac12a_n(4-a_n)>0\)，\(2-a_{n+1}=2-\frac12a_n(4-a_n)=\frac12(2-a_n)^2>0\)
 所以 \(0<a_{n+1}<2\). 又
 \[
-a_{n+1}-a_n=\frac12a_n(4-a_n)-a_n=\frac12a_n(2-a_n)>0,
+a_{n+1}-a_n=\frac12a_n(4-a_n)-a_n=\frac12a_n(2-a_n)>0
 \]
 故 \(a_n<a_{n+1}<2\). 由数学归纳法，对一切 \(n\in\mathbf N\) 命题成立.
 
 \item 令 \(b_n=1-\dfrac{a_n}{2}\)，则
 \[
-b_{n+1}=1-\frac{a_{n+1}}2=1-a_n+\frac{a_n^2}{4}=\left(1-\frac{a_n}{2}\right)^2=b_n^2.
+b_{n+1}=1-\frac{a_{n+1}}2=1-a_n+\frac{a_n^2}{4}=\left(1-\frac{a_n}{2}\right)^2=b_n^2
 \]
 又 \(b_0=\dfrac12\)，所以 \(b_n=\left(\dfrac12\right)^{2^n}\). 因此
 \[
-a_n=2(1-b_n)=2\left(1-\left(\frac12\right)^{2^n}\right).
+a_n=2(1-b_n)=2\left(1-\left(\frac12\right)^{2^n}\right)
 \]
 \end{enumerate}
 \end{solution}
@@ -402,55 +637,45 @@ a_n=2(1-b_n)=2\left(1-\left(\frac12\right)^{2^n}\right).
 r^2-2pr+p-2=0
 \]
 的两个根，从而
-\[
-u+v=2p,
-\qquad uv=p-2.
-\]
+\(u+v=2p\)，\(uv=p-2\).
+该方程的判别式为 \(4(p^2-p+2)=4\left((p-\frac12)^2+\frac74\right)>0\)，所以任意 \(p\in\R\) 都确有两条不同的切线，后面的消元不会额外限制轨迹参数.
 
 \begin{enumerate}
 \item 设三角形 \(APB\) 的重心为 \(G=(X,Y)\). 由重心坐标公式，
 \[
-X=\frac{p+u+v}{3}=p,
+X=\frac{p+u+v}{3}=p
 \]
 且
 \[
-Y=\frac{p-2+u^2+v^2}{3}=\frac{p-2+(u+v)^2-2uv}{3}=\frac{4p^2-p+2}{3}.
+Y=\frac{p-2+u^2+v^2}{3}=\frac{p-2+(u+v)^2-2uv}{3}=\frac{4p^2-p+2}{3}
 \]
 由于 \(X=p\)，消去 \(p\) 得重心 \(G\) 的轨迹方程为
 \[
-Y=\frac{4X^2-X+2}{3}.
+Y=\frac{4X^2-X+2}{3}
 \]
 即 \(G\) 的轨迹方程为 \(4x^2-x+2-3y=0\).
 
 \item 抛物线的焦点为 \(F=(0,\frac14)\). 记
-\[
-\bs{e}_u=\frac{\overrightarrow{FA}}{|FA|},
-\qquad
-\bs{e}_v=\frac{\overrightarrow{FB}}{|FB|}.
-\]
+\(\bs{e}_u=\frac{\overrightarrow{FA}}{|FA|}\)，\(\bs{e}_v=\frac{\overrightarrow{FB}}{|FB|}\).
 由
 \[
-|FA|=\sqrt{u^2+\left(u^2-\frac14\right)^2}=u^2+\frac14,
+|FA|=\sqrt{u^2+\left(u^2-\frac14\right)^2}=u^2+\frac14
 \]
 可得
-\[
-\bs{e}_u=\frac{\left(u,u^2-\frac14\right)}{u^2+\frac14},
-\qquad
-\bs{e}_v=\frac{\left(v,v^2-\frac14\right)}{v^2+\frac14}.
-\]
+\(\bs{e}_u=\frac{\left(u,u^2-\frac14\right)}{u^2+\frac14}\)，\(\bs{e}_v=\frac{\left(v,v^2-\frac14\right)}{v^2+\frac14}\).
 令 \(S=u+v\)，\(Q=uv\)，则 \(S=2p\)，\(Q=p-2\)，即 \(2Q=S-4\). 记 \(D=(u^2+\frac14)(v^2+\frac14)>0\)，直接通分得
 \[
-\bs{e}_u+\bs{e}_v=\frac{\left(S\left(Q+\frac14\right),2Q^2-\frac18\right)}{D}.
+\bs{e}_u+\bs{e}_v=\frac{\left(S\left(Q+\frac14\right),2Q^2-\frac18\right)}{D}
 \]
 由 \(Q=\dfrac{S-4}{2}\) 及 \(\overrightarrow{FP}=\left(\dfrac S2,\dfrac{2S-9}{4}\right)\)，有
 \[
-\bs{e}_u+\bs{e}_v=\frac{2S-7}{2D}\overrightarrow{FP}.
+\bs{e}_u+\bs{e}_v=\frac{2S-7}{2D}\overrightarrow{FP}
 \]
 当 \(2S-7\ne0\) 时，\(FP\) 平行于两条单位向量 \(\bs{e}_u\)，\(\bs{e}_v\) 之和，故直线 \(FP\) 是两射线 \(FA\)，\(FB\) 的角平分线，因而 \(\angle PFA=\angle PFB\).
 
 当 \(2S-7=0\) 时，\(p=\dfrac74\)，且 \(u\)，\(v\) 满足 \(4r^2-14r-1=0\). 此时 \(\overrightarrow{FP}=\left(\dfrac74,-\dfrac12\right)\)，并且对 \(r=u\) 或 \(r=v\)，均有
 \[
-\overrightarrow{FP}\cdot\left(r,r^2-\frac14\right)=\frac{14r-4r^2+1}{8}=0.
+\overrightarrow{FP}\cdot\left(r,r^2-\frac14\right)=\frac{14r-4r^2+1}{8}=0
 \]
 所以 \(FP\perp FA\)，且 \(FP\perp FB\)，两个角都等于 \(\dfrac\pi2\). 综上，\(\angle PFA=\angle PFB\).
 \end{enumerate}

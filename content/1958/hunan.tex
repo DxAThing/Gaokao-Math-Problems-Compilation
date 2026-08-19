@@ -1,15 +1,17 @@
 \chapter{1958年湖南卷}
 
+\section{解答题}
+
 \begin{problem}
 不用除法证明 \(\left(2+x\right)^{2n-1}+x^{2n-1}+x+1\) 能被 \(x+1\) 整除（\(n\) 为正整数）.
 \end{problem}
 
 \begin{solution}
-设 \(f\left(x\right)=\left(2+x\right)^{2n-1}+x^{2n-1}+x+1\)，则
+令 \(f(x)=\left(2+x\right)^{2n-1}+x^{2n-1}+x+1\). 因为 \(n\) 为正整数，所以 \(2n-1\) 是奇数. 代入 \(x=-1\)，得
 \[
-f\left(-1\right)=\left(2-1\right)^{2n-1}+\left(-1\right)^{2n-1}-1+1=1-1-1+1=0
+f(-1)=\left(2-1\right)^{2n-1}+\left(-1\right)^{2n-1}-1+1=1-1-1+1=0
 \]
-根据多项式 \(f(x)\) 能被 \(x-\alpha\) 整除之重要条件 \(f(\alpha)=0\)，故原式能被 \(x+1\) 整除.
+根据因式定理，多项式 \(f(x)\) 在 \(x=-1\) 时的值为零，等价于一次式 \(x-(-1)=x+1\) 是 \(f(x)\) 的因式. 因此原式能被 \(x+1\) 整除，且上述证明没有使用多项式除法.
 \end{solution}
 
 \begin{problem}
@@ -17,38 +19,38 @@ f\left(-1\right)=\left(2-1\right)^{2n-1}+\left(-1\right)^{2n-1}-1+1=1-1-1+1=0
 \end{problem}
 
 \begin{solution}
-设原方程之两个根为 \(x_1\)，\(x_2\)，由根与系数的关系得
+设原方程的两个根为 \(x_{1}\)，\(x_{2}\). 由根与系数的关系，
+\(x_{1}+x_{2}=\frac{1}{6}\)，\(x_{1}x_{2}=-\frac{1}{3}\).
+因为 \(x_{1}x_{2}\ne0\)，所以两个根均不为零. 令它们的倒数分别为 \(y_{1}=\frac{1}{x_{1}}\)，\(y_{2}=\frac{1}{x_{2}}\)，则
+\(y_{1}+y_{2}=\frac{x_{1}+x_{2}}{x_{1}x_{2}}=\frac{\frac{1}{6}}{-\frac{1}{3}}=-\frac{1}{2}\)，\(y_{1}y_{2}=\frac{1}{x_{1}x_{2}}=\frac{1}{-\frac{1}{3}}=-3\).
+以 \(y_{1}\)，\(y_{2}\) 为根的二次方程应为
 \[
-\begin{cases}
-x_1+x_2=\frac{1}{6},\\
-x_1x_2=-\frac{1}{3}.
-\end{cases}
+y^{2}-\left(y_{1}+y_{2}\right)y+y_{1}y_{2}=0
 \]
-则
+代入上面求出的和与积，得
 \[
-\begin{cases}
-\frac{1}{x_1}+\frac{1}{x_2}=\frac{x_2+x_1}{x_1x_2}=\frac{\frac{1}{6}}{-\frac{1}{3}}=-\frac{1}{2},\\
-\frac{1}{x_1}\cdot\frac{1}{x_2}=\frac{1}{x_1x_2}=\frac{1}{-\frac{1}{3}}=-3.
-\end{cases}
+y^{2}+\frac{1}{2}y-3=0
 \]
-故所求方程为 \(x^2+\frac{1}{2}x-3=0\)，或 \(2x^2+x-6=0\).
+将方程两边同乘以 \(2\)，再把未知数改记为 \(x\)，得到所求方程
+\[
+2x^{2}+x-6=0
+\]
 \end{solution}
 
 \begin{problem}
-求证 \(\sin 75^{\circ}=\frac{1}{4}\left( \sqrt{6}+\sqrt{2} \right)\).
+求证 \(\sin75^{\circ}=\frac{1}{4}\left(\sqrt{6}+\sqrt{2}\right)\).
 \end{problem}
 
 \begin{solution}
+由正弦的和角公式，
 \[
-\sin 75^{\circ}=\sin \left(45^{\circ}+30^{\circ}\right)
-=\sin 45^{\circ}\cos 30^{\circ}+\cos 45^{\circ}\sin 30^{\circ}
+\sin75^{\circ}=\sin\left(45^{\circ}+30^{\circ}\right)=\sin45^{\circ}\cos30^{\circ}+\cos45^{\circ}\sin30^{\circ}
 \]
+又因为 \(\sin45^{\circ}=\cos45^{\circ}=\frac{\sqrt{2}}{2}\)，\(\cos30^{\circ}=\frac{\sqrt{3}}{2}\)，\(\sin30^{\circ}=\frac{1}{2}\)，所以
 \[
-\sin 45^{\circ}\cos 30^{\circ}+\cos 45^{\circ}\sin 30^{\circ}
-=\frac{\sqrt{2}}{2}\cdot\frac{\sqrt{3}}{2}+\frac{\sqrt{2}}{2}\cdot\frac{1}{2}
-=\frac{\sqrt{6}}{4}+\frac{\sqrt{2}}{4}
-=\frac{1}{4}\left(\sqrt{6}+\sqrt{2}\right)
+\sin75^{\circ}=\frac{\sqrt{2}}{2}\cdot\frac{\sqrt{3}}{2}+\frac{\sqrt{2}}{2}\cdot\frac{1}{2}=\frac{\sqrt{6}}{4}+\frac{\sqrt{2}}{4}=\frac{1}{4}\left(\sqrt{6}+\sqrt{2}\right)
 \]
+故等式成立.
 \end{solution}
 
 \begin{problem}
@@ -56,32 +58,53 @@ x_1x_2=-\frac{1}{3}.
 \end{problem}
 
 \begin{solution}
-由题知三角形的最大角与最小角相差 \(30^{\circ}\)，且三个角成等差数列.
-设三角形的一个角为 \(a\)，则另两个角必为 \(a-15^{\circ}\) 与 \(a+15^{\circ}\).
-由三角形内角和定理得 \(a+\left( a-15^{\circ} \right)+\left( a+15^{\circ} \right)=180^{\circ}\)，
-故 \(3a=180^{\circ}\)，于是 \(a=60^{\circ}\)，\(a-15^{\circ}=45^{\circ}\)，\(a+15^{\circ}=75^{\circ}\).
-\solutionfigure{\bitmapfigure[max width=0.42\linewidth]{img/1958/hunan/q4_solution_fig1.png}}
-第 \(3\) 题已证得 \(\sin 75^{\circ}=\frac{1}{4}\left( \sqrt{6}+\sqrt{2} \right)\).
-由正弦定理，\(\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}\)，故
+将三角形的三个角按从小到大记为 \(A\)，\(B\)，\(C\). 因为三个角成等差数列，所以 \(A+C=2B\). 又因为 \(A+B+C=180^{\circ}\)，所以 \(3B=180^{\circ}\)，即 \(B=60^{\circ}\). 由最大角与最小角相差 \(30^{\circ}\)，得 \(C-A=30^{\circ}\). 因而
+\(A+C=180^{\circ}-B=120^{\circ}\)，\(C-A=30^{\circ}\).
+两式相加、相减，得到 \(C=75^{\circ}\)，\(A=45^{\circ}\).
+
+设 \(a\)，\(b\)，\(c\) 分别为角 \(A\)，\(B\)，\(C\) 所对的边. 由正弦定理，
 \[
-a:b:c=\sin 45^{\circ}:\sin 60^{\circ}:\sin 75^{\circ}
-=\frac{\sqrt{2}}{2}:\frac{\sqrt{3}}{2}:\frac{\sqrt{6}+\sqrt{2}}{4}
-=2\sqrt{2}:2\sqrt{3}:\left(\sqrt{6}+\sqrt{2}\right)
+a:b:c=\sin45^{\circ}:\sin60^{\circ}:\sin75^{\circ}
 \]
+其中 \(\sin45^{\circ}=\frac{\sqrt{2}}{2}\)，\(\sin60^{\circ}=\frac{\sqrt{3}}{2}\)，并且由和角公式
+\[
+\sin75^{\circ}=\sin\left(45^{\circ}+30^{\circ}\right)=\frac{\sqrt{2}}{2}\cdot\frac{\sqrt{3}}{2}+\frac{\sqrt{2}}{2}\cdot\frac{1}{2}=\frac{\sqrt{6}+\sqrt{2}}{4}
+\]
+所以
+\[
+a:b:c=\frac{\sqrt{2}}{2}:\frac{\sqrt{3}}{2}:\frac{\sqrt{6}+\sqrt{2}}{4}=2\sqrt{2}:2\sqrt{3}:\left(\sqrt{6}+\sqrt{2}\right)
+\]
+这正是题目所要求的三边之比.
+
+\solutionfigure{\bitmapfigure[max width=0.42\linewidth]{img/1958/hunan/q4_solution_fig1.png}}
 \end{solution}
 
 \begin{problem}
-一矩形内接于圆，它的面积是 \(48\text{ 平方厘米}\)，圆半径是 \(5\text{ 厘米}\)，求矩形的两邻边.
+一矩形内接于圆，它的面积是 \(48\mathrm{~cm}^{2}\)，圆半径是 \(5\mathrm{~cm}\)，求矩形的两邻边.
 \end{problem}
 
 \begin{solution}
 \solutionfigure{\bitmapfigure[max width=0.42\linewidth]{img/1958/hunan/q5_solution_fig1.png}}
-如图，矩形 \(ABCD\) 内接于 \(\odot O\)，连接 \(AC\)，则 \(AC=10\text{ 厘米}\)，为 \(\odot O\) 的直径.
-由题意知 \(AB\cdot BC=48\)，又 \(AB^{2}+BC^{2}=AC^{2}=100\).
-由 \(\left( AB^{2}+BC^{2} \right)+\left( AB\cdot BC \right)\times 2\) 得 \(AB^{2}+2AB\cdot BC+BC^{2}=100+2\times 48\)，
-即 \(\left( AB+BC \right)^{2}=196\)，
-故 \(AB+BC=14\)（只取正值）.
-联立 \(AB\cdot BC=48\) 与 \(AB+BC=14\) 解之得 \(AB=6\text{ 厘米}\)（或 \(8\text{ 厘米}\)），\(BC=8\text{ 厘米}\)（或 \(6\text{ 厘米}\)）.
+
+设矩形的两邻边为 \(AB=x\)，\(BC=y\)，其中 \(x>0\)，\(y>0\). 矩形的两条对角线相等且互相平分，所以外接圆的圆心是两条对角线的交点，\(AC\) 是圆的直径. 因此
+\[
+AC=2\times5\mathrm{~cm}=10\mathrm{~cm}
+\]
+由矩形面积和勾股定理，分别得到
+\(xy=48\)，\(x^{2}+y^{2}=AC^{2}=100\).
+于是
+\[
+(x+y)^{2}=x^{2}+2xy+y^{2}=100+2\times48=196
+\]
+因为 \(x>0\)，\(y>0\)，所以 \(x+y>0\)，从而 \(x+y=14\). 因此 \(x\)，\(y\) 是方程
+\[
+t^{2}-14t+48=0
+\]
+的两个根. 因式分解得
+\[
+(t-6)(t-8)=0
+\]
+故 \(\{x,y\}=\{6,8\}\). 所以矩形的两邻边为 \(6\mathrm{~cm}\) 和 \(8\mathrm{~cm}\)，顺序可以互换.
 \end{solution}
 
 \begin{problem}
@@ -90,16 +113,42 @@ a:b:c=\sin 45^{\circ}:\sin 60^{\circ}:\sin 75^{\circ}
 
 \begin{solution}
 \solutionfigure{\bitmapfigure[max width=0.42\linewidth]{img/1958/hunan/q6_solution_fig1.png}}
-如图，连接 \(OD\)，\(OE\).
-因为 \(AD\)，\(BE\)，\(DE\) 均与 \(\odot O\) 相切，
-所以 \(\angle OAD=\angle OFE=\angle OBE=90^{\circ}\).
-于是 \(\angle OBE+\angle OFE=180^{\circ}\)，
-故 \(B\)，\(O\)，\(F\)，\(E\) 四点共圆（对角互补的四边形四顶点共圆）.
-故 \(\angle AOF=\angle BEF\)（圆内接四边形外角等于内对角）.
-又 \(\angle BEO=\angle FEO\)，\(\angle AOD=\angle FOD\)，
-故 \(\angle AOD=\angle BEO\).
-故直角三角形 \(BOE\) 相似于直角三角形 \(DAO\)，则 \(\frac{BE}{AO}=\frac{BO}{AD}\).
-又 \(AO=BO=FO\)，即 \(AD\cdot BE=AO\cdot BO=OF^{2}\).
+
+先核对题面中的等式. 原件的题干印作 \(AB\cdot BE=OF^{2}\)，但同页原解答的末行印作 \(AD\cdot BE=OF^{2}\). 前一个等式按题面构型并不恒成立：取 \(F\) 为与直径 \(AB\) 垂直的直径端点，记 \(OF=r\). 建立直角坐标系，使 \(O\) 为原点，\(OF\) 为负的横轴方向，则可取
+\(A=(0,r)\)，\(B=(0,-r)\)，\(F=(-r,0)\).
+三点处的切线分别为 \(y=r\)，\(y=-r\)，\(x=-r\)，所以 \(D=(-r,r)\)，\(E=(-r,-r)\). 从而 \(AD=BE=OF=r\)，而 \(AB=2r\)，所以
+\[
+AB\cdot BE=2r^{2}\ne r^{2}=OF^{2}
+\]
+因此原题的题干与原解答存在客观冲突，不能把题干中的 \(AB\cdot BE=OF^{2}\) 当作恒成立命题. 下面完整证明原解答末行给出的正确关系 \(AD\cdot BE=OF^{2}\).
+
+半径垂直于切线，所以 \(OA\perp AD\)，\(OF\perp DE\)，\(OB\perp BE\). 从同一点向圆所作的两条切线长相等，故
+\(DA=DF\)，\(EB=EF\).
+考虑直角三角形 \(AOD\) 与 \(FOD\). 它们有公共斜边 \(OD\)，且 \(OA=OF\) 都是圆的半径，所以两三角形全等，从而 \(OD\) 平分 \(\angle AOF\)，即
+\[
+\angle AOD=\frac{1}{2}\angle AOF
+\]
+同理，直角三角形 \(BOE\) 与 \(FOE\) 全等，故 \(OE\) 平分 \(\angle BOF\)，即
+\[
+\angle BOE=\frac{1}{2}\angle BOF
+\]
+由于 \(A\)，\(O\)，\(B\) 共线，\(\angle AOF+\angle BOF=180^{\circ}\). 因此
+\[
+\angle BOE=90^{\circ}-\angle AOD
+\]
+又因为 \(\angle OBE=90^{\circ}\)，在直角三角形 \(BOE\) 中有
+\[
+\angle BEO=90^{\circ}-\angle BOE=\angle AOD
+\]
+所以直角三角形 \(AOD\) 与 \(BOE\) 相似，对应关系为 \(A\leftrightarrow B\)，\(O\leftrightarrow E\)，\(D\leftrightarrow O\). 于是
+\[
+\frac{AD}{BO}=\frac{AO}{BE}
+\]
+从而
+\[
+AD\cdot BE=AO\cdot BO=OF^{2}
+\]
+故由题面所给的 \(AB\cdot BE=OF^{2}\) 不能得到证明；能够由该构型恒成立并由原解答证明的是 \(AD\cdot BE=OF^{2}\).
 \end{solution}
 
 \begin{problem}
@@ -108,28 +157,30 @@ a:b:c=\sin 45^{\circ}:\sin 60^{\circ}:\sin 75^{\circ}
 
 \begin{solution}
 \solutionfigure{\bitmapfigure[max width=0.42\linewidth]{img/1958/hunan/q7_solution_fig1.png}}
-如图，正六棱锥 \(P-ABCDEF\) 的底面的边长
+
+设正六棱锥为 \(P\text{-}ABCDEF\)，底面中心为 \(O\)，高为 \(PO\). 在底面内过 \(O\) 作 \(OM\perp AB\)，垂足为 \(M\)，并连接 \(OA\)，\(OB\)，\(PM\). 因为 \(PO\perp\) 底面，且 \(OM\perp AB\)，由三垂线定理得 \(PM\perp AB\). 所以 \(\angle PMO\) 是侧面与底面所成二面角的平面角，从而
 \[
-AB=BC=CD=DE=EF=FA=4\mathrm{~cm}
+\angle PMO=45^{\circ}
 \]
-高 \(PO\perp\) 底面 \(ABCDEF\)，\(O\) 为底面中心，在底面过 \(O\) 作 \(OM\perp AB\) 交 \(AB\) 于 \(M\)，连接 \(OA\)，\(OB\)，\(PM\)，则 \(PM\perp AB\)（三垂线定理）.
-显然 \(\triangle AOB\) 为等边三角形，即 \(OA=OB=AB=4\mathrm{~cm}\)，\(AM=MB=2\mathrm{~cm}\).
-在直角三角形 \(BOM\) 中，
+正六边形可分成六个全等的正三角形，因此
+\(OA=OB=AB=4\mathrm{~cm}\)，\(AM=MB=2\mathrm{~cm}\).
+在直角三角形 \(BOM\) 中，由勾股定理
 \[
-OM=\sqrt{OB^{2}-MB^{2}}=\sqrt{4^{2}-2^{2}}=\sqrt{12}=2\sqrt{3}\mathrm{~cm}
+OM=\sqrt{OB^{2}-MB^{2}}=\sqrt{4^{2}-2^{2}}=2\sqrt{3}\mathrm{~cm}
 \]
-因为 \(PM\perp AB\)，\(OM\perp AB\)，
-所以侧面与底面所成二面角之平面角 \(\angle PMO=45^{\circ}\).
-在直角三角形 \(POM\) 中，
+又因为 \(PO\perp\) 底面，所以 \(PO\perp OM\)，三角形 \(POM\) 在 \(O\) 处为直角. 已知 \(\angle PMO=45^{\circ}\)，所以另一个锐角 \(\angle OPM=45^{\circ}\)，从而
 \[
-\angle OPM=90^{\circ}-\angle PMO=90^{\circ}-45^{\circ}=45^{\circ}=\angle PMO
+PO=OM=2\sqrt{3}\mathrm{~cm}
 \]
-故 \(PO=OM=2\sqrt{3}\mathrm{~cm}\).
-六棱锥的底面积
+底面正六边形的面积为六个三角形 \(AOB\) 的面积之和，即
 \[
-S=6\times \frac{1}{2}AB\cdot OM=3\times 4\times 2\sqrt{3}=24\sqrt{3}\mathrm{~cm}^{2}
+S_{\text{底}}=6\times\frac{1}{2}\times AB\times OM=6\times\frac{1}{2}\times4\times2\sqrt{3}=24\sqrt{3}\mathrm{~cm}^{2}
 \]
-故六棱锥的体积 \(V=\frac{1}{3}S\cdot PO=\frac{1}{3}\times 24\sqrt{3}\times 2\sqrt{3}=48\mathrm{~cm}^{3}\).
+所以棱锥体积为
+\[
+V=\frac{1}{3}S_{\text{底}}\cdot PO=\frac{1}{3}\times24\sqrt{3}\times2\sqrt{3}=48\mathrm{~cm}^{3}
+\]
+故棱锥体积为 \(48\mathrm{~cm}^{3}\).
 \end{solution}
 
 \begin{problem}
@@ -138,13 +189,22 @@ S=6\times \frac{1}{2}AB\cdot OM=3\times 4\times 2\sqrt{3}=24\sqrt{3}\mathrm{~cm}
 
 \begin{solution}
 \solutionfigure{\bitmapfigure[max width=0.42\linewidth]{img/1958/hunan/q8_solution_fig1.png}}
-已知：平面 \(P\) 平分由平面 \(M\) 和平面 \(N\) 组成的二面角，\(A\) 为平面 \(P\) 上任意一点. \(AD\perp\) 平面 \(M\)，\(AE\perp\) 平面 \(N\).
 
-求证：\(AD=AE\).
+设二面角的两个面为平面 \(M\)，平面 \(N\)，棱为 \(BC\)，平分面为平面 \(P\). 在平面 \(P\) 内取任意一点 \(A\)，从 \(A\) 向平面 \(M\)，平面 \(N\) 分别作垂线，垂足为 \(D\)，\(E\)，于是
+\(AD\perp\text{平面 }M\)，\(AE\perp\text{平面 }N\).
+在平面 \(P\) 内过 \(A\) 作 \(AF\perp BC\)，其中 \(F\in BC\). 因为 \(BC\) 同时在平面 \(M\) 和平面 \(N\) 内，所以 \(AD\perp BC\)，\(AE\perp BC\). 过点 \(A\) 且含有直线 \(AD\) 和 \(AE\) 的截面平面垂直于 \(BC\)，它与 \(BC\) 的交点就是 \(F\)，故 \(A\)，\(D\)，\(E\)，\(F\) 共面.
 
-在平面 \(P\) 内过 \(A\) 作 \(AF\perp BC\) 交 \(BC\) 于 \(F\)，连接 \(DF\) 和 \(EF\)，则 \(DF\perp BC\)，\(EF\perp BC\)（三垂线定理），而 \(\angle DFE\) 为二面角的平面角.
-因平面 \(P\) 平分平面 \(M\) 和平面 \(N\) 组成的二面角，故在平面 \(ADFE\) 内，\(\angle DFA=\angle EFA\)（两个二面角相等，则它们的平面角也相等）.
-又 \(AD\perp\) 平面 \(M\)，\(AE\perp\) 平面 \(N\)（已知），
-故 \(AD\perp DF\)，\(AE\perp EF\)（平面的垂线必垂直于平面上过垂足的任一直线）.
-故 \(AD=DE\)（角平分线上的任一点到两边的距离相等）.
+在这个截面平面内，\(DF\) 是平面 \(M\) 的截线，\(EF\) 是平面 \(N\) 的截线，\(AF\) 是平面 \(P\) 的截线. 因为平面 \(P\) 是原二面角的平分面，所以 \(AF\) 平分截面内的角 \(DFE\)，从而
+\[
+\angle DFA=\angle AFE
+\]
+又因为 \(AD\perp\) 平面 \(M\)，\(DF\subset\) 平面 \(M\)，以及 \(AE\perp\) 平面 \(N\)，\(EF\subset\) 平面 \(N\)，所以
+\[
+\angle ADF=\angle AEF=90^{\circ}
+\]
+因此直角三角形 \(ADF\) 与 \(AEF\) 有公共斜边 \(AF\)，且有一个锐角相等，故两三角形全等. 对应的直角边相等，即
+\[
+AD=AE
+\]
+而 \(AD\)，\(AE\) 分别是点 \(A\) 到两个面的距离，所以二面角的平分面内任意一点到二面角两个面的距离相等.
 \end{solution}

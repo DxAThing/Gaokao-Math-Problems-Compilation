@@ -16,6 +16,12 @@
 D
 \end{answer}
 
+\begin{solution}
+将分子、分母同乘分母的共轭复数，得
+\(\dfrac{5\i}{2-\i}=\dfrac{5\i(2+\i)}{(2-\i)(2+\i)}=\dfrac{-5+10\i}{5}=-1+2\i\).
+因此选 D.
+\end{solution}
+
 \begin{problem}
 设变量 \(x\)，\(y\) 满足约束条件 \(\begin{cases}
 x + y \geqslant 3,\\
@@ -34,11 +40,15 @@ x - y \geqslant -1,\\
 B
 \end{answer}
 
+\begin{solution}
+三条边界直线两两相交，得到可行域的三个顶点. 由 \(x+y=3\) 与 \(x-y=-1\) 得 \((x,y)=(1,2)\)；由 \(x+y=3\) 与 \(2x-y=3\) 得 \((x,y)=(2,1)\)；由 \(x-y=-1\) 与 \(2x-y=3\) 得 \((x,y)=(4,5)\). 在这三个顶点处分别计算目标函数：\(z=2+6=8\)，\(z=4+3=7\)，\(z=8+15=23\). 所以最小值为 \(7\)，选 B.
+\end{solution}
+
 \begin{problem}
 命题“存在 \(x_0 \in \R\)，\(2^{x_0} \leqslant 0\)”的否定是（\quad）
 
 \choices
-    {不存在 \(x_0 \in \R, 2^{x_0} > 0\)}
+    {不存在 \(x_0 \in \R\)，\(2^{x_0} > 0\)}
     {存在 \(x_0 \in \R\)，\(2^{x_0} \geqslant 0\)}
     {对任意的 \(x \in \R\)，\(2^x \leqslant 0\)}
     {对任意的 \(x \in \R\)，\(2^x > 0\)}
@@ -47,6 +57,10 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+“存在 \(x_0\in\R\)，\(2^{x_0}\leqslant0\)”的否定是“对任意 \(x\in\R\)，\(2^x>0\)”. 由于底数 \(2>1\)，对任意实数 \(x\) 都有 \(2^x>0\)，故选 D.
+\end{solution}
 
 \begin{problem}
 设函数 \( f(x) = \frac{1}{3} x - \ln x \)（\(x > 0\)），则 \( y = f(x) \)（\quad）
@@ -62,10 +76,14 @@ D
 D
 \end{answer}
 
+\begin{solution}
+函数在 \((0,+\infty)\) 上连续，且 \(f'(x)=\dfrac{1}{3}-\dfrac{1}{x}=\dfrac{x-3}{3x}\). 因为 \(1/e<x<e<3\) 时 \(f'(x)<0\)，所以 \(f(x)\) 在 \((1/e,e)\) 上严格递减. 又 \(f(1/e)=\dfrac{1}{3e}+1>0\)，\(f(1)=\dfrac{1}{3}>0\)，故 \((1/e,1)\) 内无零点；而 \(f(e)=\dfrac{e}{3}-1<0\)，由零点存在性定理，\((1,e)\) 内有零点. 因此选 D.
+\end{solution}
+
 \begin{problem}
 阅读如图的程序框图，则输出的 \(S =\)（\quad）
 
-\bitmapinlinefigure[0.34\linewidth][max width=0.34\linewidth]{img/2009/tianjin_science/q5_fig1.png}
+\bitmapfigure[max width=0.34\linewidth]{img/2009/tianjin_science/q5_fig1.png}
 
 \choices
     {\(26\)}
@@ -77,6 +95,10 @@ D
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+循环开始时 \(i=1\)，每次先计算 \(T=3i-1\)，再将 \(T\) 加入 \(S\)，最后令 \(i\) 增加 \(1\). 当 \(i=1\)，\(2\)，\(3\)，\(4\)，\(5\) 时，依次得到 \(T=2\)，\(5\)，\(8\)，\(11\)，\(14\)，所以 \(S=2+5+8+11+14=40\). 此时 \(i=6>5\)，循环结束，故选 C.
+\end{solution}
 
 \begin{problem}
 设 \(a > 0\)，\(b > 0\). 若 \(\sqrt{3}\) 是 \(3^{a}\) 与 \(3^{b}\) 的等比中项，则 \(\frac{1}{a} + \frac{1}{b}\) 的最小值为（\quad）
@@ -92,6 +114,12 @@ C
 B
 \end{answer}
 
+\begin{solution}
+由等比中项的定义，\((\sqrt{3})^2=3^a\cdot3^b\)，所以 \(a+b=1\). 因为 \(a\)，\(b>0\)，由基本不等式得 \(ab\leqslant\left(\dfrac{a+b}{2}\right)^2=\dfrac14\). 因而
+\(\dfrac1a+\dfrac1b=\dfrac{a+b}{ab}=\dfrac1{ab}\geqslant4\).
+当且仅当 \(a=b=\dfrac12\) 时取等号，所以最小值为 \(4\)，选 B.
+\end{solution}
+
 \begin{problem}
 已知函数 \( f(x) = \sin \left( \omega x + \frac{\pi}{4} \right) \)（\(x \in \R\)，\(\omega > 0\)）的最小正周期为 \( \pi \). 为了得到函数 \( g(x) = \cos \omega x \) 的图象，只要将 \( y = f(x) \) 的图象（\quad）
 
@@ -105,6 +133,12 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+函数的最小正周期满足 \(\dfrac{2\pi}{\omega}=\pi\)，故 \(\omega=2\). 于是
+\(f(x)=\sin\left(2x+\dfrac\pi4\right)=\cos\left(2x-\dfrac\pi4\right)\).
+将其图象向左平移 \(h\) 个单位后，所得函数为 \(f(x+h)=\cos\left(2x+2h-\dfrac\pi4\right)\). 要使它等于 \(g(x)=\cos2x\)，取 \(2h-\dfrac\pi4=0\)，得 \(h=\dfrac\pi8\). 因此应向左平移 \(\dfrac\pi8\) 个单位长度，选 A.
+\end{solution}
 
 \begin{problem}
 已知函数 \( f(x) = \begin{cases}
@@ -123,6 +157,12 @@ x^2 + 4x, & x \geqslant 0,\\
 C
 \end{answer}
 
+\begin{solution}
+当 \(x<0\) 时，\(f'(x)=4-2x>0\)；当 \(x\geqslant0\) 时，\(f'(x)=2x+4>0\)，且分段函数在 \(x=0\) 处连续. 因此 \(f(x)\) 在 \(\R\) 上严格递增. 于是
+\(f(2-a^2)>f(a)\iff2-a^2>a\iff(a+2)(a-1)<0\).
+所以 \(-2<a<1\)，选 C.
+\end{solution}
+
 \begin{problem}
 设抛物线 \( y^{2} = 2x \) 的焦点为 \(F\)，过点 \( M(\sqrt{3}, 0) \) 的直线与抛物线相交于 \(A\)，\(B\) 两点，与抛物线的准线相交于 \(C\)，\(|BF| = 2\)，则 \( \triangle BCF \) 与 \( \triangle ACF \) 的面积之比 \( \frac{S_{\triangle BCF}}{S_{\triangle ACF}} = \)（\quad）
 
@@ -137,6 +177,16 @@ C
 A
 \end{answer}
 
+\begin{solution}
+抛物线 \(y^2=2x\) 的焦点为 \(F\left(\dfrac12,0\right)\)，准线为 \(x=-\dfrac12\). 将抛物线上的点参数化为 \(P_t\left(\dfrac{t^2}{2},t\right)\)，则
+\(\lvert P_tF\rvert=\sqrt{\left(\dfrac{t^2-1}{2}\right)^2+t^2}=\dfrac{t^2+1}{2}\).
+由 \(\lvert BF\rvert=2\) 得 \(t_B^2=3\). 关于 \(x\) 轴对称时面积比不变，取 \(t_B=\sqrt3\). 过参数为 \(t_A\)，\(t_B\) 的两点的弦所在直线为 \(2x-(t_A+t_B)y+t_At_B=0\). 由于它过 \(M(\sqrt3,0)\)，有 \(t_At_B=-2\sqrt3\)，从而 \(t_A=-2\). 因此 \(A=(2,-2)\)，\(B=\left(\dfrac32,\sqrt3\right)\).
+
+设直线 \(AB\) 与准线交于 \(C\). 在弦方程中令 \(x=-\dfrac12\)，得 \(y_C=8+5\sqrt3\). 点 \(A\)，\(B\)，\(C\) 共线，三角形 \(BCF\) 与 \(ACF\) 以 \(CF\) 为公共底边，所以
+\(\dfrac{S_{\triangle BCF}}{S_{\triangle ACF}}=\dfrac{CB}{CA}=\dfrac{y_C-\sqrt3}{y_C+2}=\dfrac{8+4\sqrt3}{10+5\sqrt3}=\dfrac45\).
+故选 A.
+\end{solution}
+
 \begin{problem}
 \(0 < b < 1 + a\). 若关于 \(x\) 的不等式 \((x - b)^2 > (ax)^2\) 的解集中的整数恰有\(3\)个，则（\quad）
 
@@ -148,8 +198,18 @@ A
 \end{problem}
 
 \begin{answer}
-D
+C
 \end{answer}
+
+\begin{solution}
+将不等式因式分解为
+\((x-b)^2-(ax)^2=\bigl((1-a)x-b\bigr)\bigl((1+a)x-b\bigr)>0\).
+若 \(a\leqslant1\)，则解集包含一个无界区间，含有无穷多个整数；若 \(a<-1\)，条件 \(0<b<1+a\) 不可能成立. 因此必须有 \(a>1\).
+
+此时两个根为 \(-\dfrac{b}{a-1}\) 和 \(\dfrac{b}{a+1}\)，且 \(0<\dfrac{b}{a+1}<1\)，所以不等式的解集为
+\(\left(-\dfrac{b}{a-1},\dfrac{b}{a+1}\right)\).
+令 \(R=\dfrac{b}{a-1}\). 该解集中的整数必为 \(0\)，\(-1\)，\(-2\)，\(\ldots\)，恰有三个整数当且仅当 \(-1,-2\) 在解集中而 \(-3\) 不在解集中，即 \(2<R\leqslant3\). 因而 \(2(a-1)<b\leqslant3(a-1)\). 与 \(b<a+1\) 合并，得到 \(2(a-1)<a+1\)，即 \(a<3\). 再结合 \(a>1\)，得 \(1<a<3\)，选 C.
+\end{solution}
 
 \section{填空题}
 
@@ -161,6 +221,10 @@ D
 \(40\)
 \end{answer}
 
+\begin{solution}
+专业 \(C\) 的学生人数为 \(1200-380-420=400\). 分层抽样时每名学生被抽到的概率相同，抽样比为 \(\dfrac{120}{1200}=\dfrac1{10}\)，所以专业 \(C\) 应抽取 \(400\times\dfrac1{10}=40\) 名学生.
+\end{solution}
+
 \begin{problem}
 如图是一个几何体的三视图，若它的体积是 \(3 \sqrt{3}\)，则 \(a =\)\fillinblank{}.
 
@@ -170,6 +234,10 @@ D
 \begin{answer}
 \(\sqrt{3}\)
 \end{answer}
+
+\begin{solution}
+由三视图可知该几何体是底面为等腰三角形的三棱柱，棱柱的长度为 \(3\)，三角形底面长为 \(2\)，高为 \(a\). 因而其体积为 \(V=\dfrac12\times2\times a\times3=3a\). 由 \(V=3\sqrt3\)，得 \(a=\sqrt3\).
+\end{solution}
 
 \begin{problem}
 设直线 \(l_{1}\) 的参数方程为 \(\begin{cases}
@@ -182,6 +250,10 @@ y = 1 + 3t.
 \(\frac{3\sqrt{10}}{5}\)
 \end{answer}
 
+\begin{solution}
+由参数方程 \(x=1+t\)，\(y=1+3t\) 消去参数，得直线 \(l_1\) 的方程为 \(3x-y-2=0\). 将 \(l_2\) 写成 \(3x-y+4=0\). 两平行直线间的距离为 \(\dfrac{|(-2)-4|}{\sqrt{3^2+(-1)^2}}=\dfrac6{\sqrt{10}}=\dfrac{3\sqrt{10}}5\).
+\end{solution}
+
 \begin{problem}
 若圆 \(x^{2} + y^{2} = 4\) 与圆 \(x^{2} + y^{2} + 2ay - 6 = 0\)（\(a > 0\)）的公共弦的长为 \(2\sqrt{3}\)，则 \(a = \)\fillinblank{}.
 \end{problem}
@@ -189,6 +261,10 @@ y = 1 + 3t.
 \begin{answer}
 \(1\)
 \end{answer}
+
+\begin{solution}
+两圆方程相减，得公共弦所在直线 \(ay=1\)，即 \(y=\dfrac1a\). 第一圆的半径为 \(2\)，公共弦长为 \(2\sqrt3\)，设圆心到公共弦的距离为 \(d\)，则 \(d^2+\left(\sqrt3\right)^2=2^2\)，从而 \(d=1\). 又 \(d=\dfrac1a\)，且 \(a>0\)，故 \(a=1\).
+\end{solution}
 
 \begin{problem}
 在四边形 \(ABCD\) 中，\(\overrightarrow{AB} = \overrightarrow{DC} = (1,1)\)，\(\frac{1}{|\overrightarrow{BA}|} \overrightarrow{BA} + \frac{1}{|\overrightarrow{BC}|} \overrightarrow{BC} = \frac{\sqrt{3}}{|\overrightarrow{BD}|} \overrightarrow{BD}\)，则四边形 \(ABCD\) 的面积为\fillinblank{}.
@@ -198,6 +274,12 @@ y = 1 + 3t.
 \(\sqrt{3}\)
 \end{answer}
 
+\begin{solution}
+由 \(\overrightarrow{AB}=\overrightarrow{DC}\)，四边形 \(ABCD\) 是平行四边形，且 \(\lvert\overrightarrow{BA}\rvert=\sqrt2\). 设 \(\bs e_1=\dfrac{\overrightarrow{BA}}{|\overrightarrow{BA}|}\)，\(\bs e_2=\dfrac{\overrightarrow{BC}}{|\overrightarrow{BC}|}\). 题设等式左边的模为 \(\sqrt3\)，故 \(\lvert\bs e_1+\bs e_2\rvert^2=2+2\bs e_1\cdot\bs e_2=3\)，从而 \(\angle ABC=60^\circ\).
+
+在平行四边形中，\(\overrightarrow{BD}=\overrightarrow{BA}+\overrightarrow{BC}=|\overrightarrow{BA}|\bs e_1+|\overrightarrow{BC}|\bs e_2\). 题设等式还说明 \(\overrightarrow{BD}\) 与 \(\bs e_1+\bs e_2\) 同向. 由于 \(\bs e_1\)，\(\bs e_2\) 不共线，只能有 \(|\overrightarrow{BA}|=|\overrightarrow{BC}|\)，所以 \(|\overrightarrow{BC}|=\sqrt2\). 因而 \(S_{ABCD}=|\overrightarrow{BA}|\,|\overrightarrow{BC}|\sin60^\circ=\sqrt2\times\sqrt2\times\dfrac{\sqrt3}{2}=\sqrt3\).
+\end{solution}
+
 \begin{problem}
 用数字 \(0\)，\(1\)，\(2\)，\(3\)，\(4\)，\(5\)，\(6\) 组成没有重复数字的四位数，其中个位，十位和百位上的数字之和为偶数的四位数共有\fillinblank{} 个. （用数字作答）
 \end{problem}
@@ -205,6 +287,16 @@ y = 1 + 3t.
 \begin{answer}
 \(324\)
 \end{answer}
+
+\begin{solution}
+个位、十位、百位上的数字之和为偶数，当且仅当这三个数字中有三个偶数或一个偶数、两个奇数. 数字集合中有四个偶数 \(0\)，\(2\)，\(4\)，\(6\) 和三个奇数 \(1\)，\(3\)，\(5\).
+
+若后三位全为偶数：后三位中含 \(0\) 时有 \(\mathrm C_3^2\times3!=18\) 种，千位有 \(4\) 种选法；后三位不含 \(0\) 时有 \(3!=6\) 种，千位有 \(3\) 种选法，共有 \(18\times4+6\times3=90\) 个.
+
+若后三位中有一个偶数、两个奇数：当选取的偶数是 \(0\) 时，后三位有 \(\mathrm C_3^2\times3!=18\) 种，千位有 \(4\) 种选法；当选取的偶数不是 \(0\) 时，后三位有 \(3\times\mathrm C_3^2\times3!=54\) 种，千位有 \(3\) 种选法，共有 \(18\times4+54\times3=234\) 个.
+
+所以所求四位数共有 \(90+234=324\) 个.
+\end{solution}
 
 \section{解答题}
 
@@ -219,8 +311,9 @@ y = 1 + 3t.
 
 \begin{solution}
 \begin{enumerate}
-\item \(AB=2\sqrt{5}\).
-\item \(\sin\left(2A-\frac{\pi}{4}\right)=\frac{\sqrt{2}}{10}\).
+\item 由正弦定理，\(\dfrac{AB}{\sin C}=\dfrac{BC}{\sin A}\). 结合 \(\sin C=2\sin A\) 和 \(BC=\sqrt5\)，得 \(AB=2BC=2\sqrt5\).
+\item 由余弦定理，\(\cos A=\dfrac{AC^2+AB^2-BC^2}{2\cdot AC\cdot AB}=\dfrac{9+20-5}{12\sqrt5}=\dfrac{2\sqrt5}{5}\). 因为 \(A\) 是三角形内角，\(\sin A=\sqrt{1-\cos^2A}=\dfrac{\sqrt5}{5}\). 因此 \(\sin2A=2\sin A\cos A=\dfrac45\)，\(\cos2A=\cos^2A-\sin^2A=\dfrac35\). 所以
+\(\sin\left(2A-\dfrac\pi4\right)=\sin2A\cos\dfrac\pi4-\cos2A\sin\dfrac\pi4=\dfrac{4-3}{5\sqrt2}=\dfrac{\sqrt2}{10}\).
 \end{enumerate}
 \end{solution}
 
@@ -235,8 +328,12 @@ y = 1 + 3t.
 
 \begin{solution}
 \begin{enumerate}
-\item \(P(X=k)=\dfrac{\mathrm C_3^k\mathrm C_7^{3-k}}{\mathrm C_{10}^3}\)（\(k=0,1,2,3\)），即 \(P(X=0)=\frac{7}{24}\)，\(P(X=1)=\frac{21}{40}\)，\(P(X=2)=\frac{7}{40}\)，\(P(X=3)=\frac{1}{120}\)，\(E(X)=\frac{9}{10}\).
-\item 所求概率为 \(\frac{31}{120}\).
+\item 任取 \(3\) 件产品的基本事件总数为 \(\mathrm C_{10}^3\). 当一等品恰有 \(k\) 件时，取法数为 \(\mathrm C_3^k\mathrm C_7^{3-k}\)，所以
+\(P(X=k)=\dfrac{\mathrm C_3^k\mathrm C_7^{3-k}}{\mathrm C_{10}^3}\)，其中 \(k=0\)，\(1\)，\(2\)，\(3\). 逐项计算得 \(P(X=0)=\dfrac7{24}\)，\(P(X=1)=\dfrac{21}{40}\)，\(P(X=2)=\dfrac7{40}\)，\(P(X=3)=\dfrac1{120}\). 因而
+\(E(X)=0\times\dfrac7{24}+1\times\dfrac{21}{40}+2\times\dfrac7{40}+3\times\dfrac1{120}=\dfrac9{10}\).
+\item 设一等品、二等品、三等品的取出件数分别为 \(x\)，\(y\)，\(z\)，则 \(x+y+z=3\)，且 \(x>y\) 的互斥情形为 \((x,y,z)=(1,0,2)\)，\((2,0,1)\)，\((2,1,0)\)，\((3,0,0)\). 对应的取法数总和为
+\(\mathrm C_3^1\mathrm C_4^0\mathrm C_3^2+\mathrm C_3^2\mathrm C_4^0\mathrm C_3^1+\mathrm C_3^2\mathrm C_4^1\mathrm C_3^0+\mathrm C_3^3\mathrm C_4^0\mathrm C_3^0=9+9+12+1=31\).
+因此所求概率为 \(\dfrac{31}{\mathrm C_{10}^3}=\dfrac{31}{120}\).
 \end{enumerate}
 \end{solution}
 
@@ -254,9 +351,13 @@ y = 1 + 3t.
 
 \begin{solution}
 \begin{enumerate}
-\item 异面直线 \(BF\) 与 \(DE\) 所成的角为 \(60^\circ\).
-\item 平面 \(AMD \perp\) 平面 \(CDE\).
-\item 二面角 \(A-CD-E\) 的余弦值为 \(\frac{\sqrt{3}}{3}\).
+\item 令 \(AF=AB=BC=FE=s\)，则 \(AD=2s\). 建立直角坐标系，取
+\(A=(0,0,0)\)，\(D=(2s,0,0)\)，\(B=(0,s,0)\)，\(C=(s,s,0)\)，\(F=(0,0,s)\)，\(E=(s,0,s)\). 于是 \(\overrightarrow{BF}=(0,-s,s)\)，\(\overrightarrow{DE}=(-s,0,s)\)，所以
+\(\cos\theta=\dfrac{\overrightarrow{BF}\cdot\overrightarrow{DE}}{|\overrightarrow{BF}|\,|\overrightarrow{DE}|}=\dfrac{s^2}{(\sqrt2s)(\sqrt2s)}=\dfrac12\).
+因此异面直线 \(BF\) 与 \(DE\) 所成的角为 \(60^\circ\).
+\item 由坐标可得 \(\overrightarrow{CE}=(0,-s,s)\)，\(\overrightarrow{AD}=(2s,0,0)\)，\(\overrightarrow{AM}=(s,\dfrac{s}{2},\dfrac{s}{2})\). 于是 \(\overrightarrow{CE}\cdot\overrightarrow{AD}=0\)，且 \(\overrightarrow{CE}\cdot\overrightarrow{AM}=0\). 直线 \(AD\)，\(AM\) 是平面 \(AMD\) 内相交的两条直线，所以 \(CE\perp\) 平面 \(AMD\). 又 \(CE\) 在平面 \(CDE\) 内，故平面 \(AMD\perp\) 平面 \(CDE\).
+\item 平面 \(ACD\) 的一个法向量可取 \(\bs n_1=(0,0,1)\). 由 \(\overrightarrow{CD}=(s,-s,0)\)，\(\overrightarrow{CE}=(0,-s,s)\)，平面 \(CDE\) 的一个法向量可取 \(\bs n_2=(1,1,1)\). 因此二面角 \(A-CD-E\) 的余弦值为
+\(\dfrac{|\bs n_1\cdot\bs n_2|}{|\bs n_1|\,|\bs n_2|}=\dfrac1{\sqrt3}=\dfrac{\sqrt3}{3}\).
 \end{enumerate}
 \end{solution}
 
@@ -271,8 +372,13 @@ y = 1 + 3t.
 
 \begin{solution}
 \begin{enumerate}
-\item 当 \(a=0\) 时，切线的斜率为 \(3\e\).
-\item 当 \(a>\frac{2}{3}\) 时，\(f(x)\) 在 \(\left(-\infty,-2a\right)\)，\(\left(a-2,+\infty\right)\) 上单调递增，在 \(\left(-2a,a-2\right)\) 上单调递减，在 \(x=-2a\) 处取得极大值 \(3a\e^{-2a}\)，在 \(x=a-2\) 处取得极小值 \((4-3a)\e^{a-2}\)；当 \(a<\frac{2}{3}\) 时，\(f(x)\) 在 \(\left(-\infty,a-2\right)\)，\(\left(-2a,+\infty\right)\) 上单调递增，在 \(\left(a-2,-2a\right)\) 上单调递减，在 \(x=a-2\) 处取得极大值 \((4-3a)\e^{a-2}\)，在 \(x=-2a\) 处取得极小值 \(3a\e^{-2a}\).
+\item 当 \(a=0\) 时，\(f(x)=x^2\e^x\)，所以 \(f'(x)=(x^2+2x)\e^x\). 因而切线斜率为 \(f'(1)=3\e\).
+\item 令 \(P(x)=x^2+ax-2a^2+3a\)，则
+\(f'(x)=\bigl(P'(x)+P(x)\bigr)\e^x=(x+2a)(x-a+2)\e^x\).
+因为 \(\e^x>0\)，只需讨论两个根 \(-2a\) 与 \(a-2\) 的大小规律. 当 \(a>\dfrac23\) 时，\(-2a<a-2\)，故 \(f(x)\) 在 \(\left(-\infty,-2a\right)\) 和 \(\left(a-2,+\infty\right)\) 上单调递增，在 \(\left(-2a,a-2\right)\) 上单调递减. 又
+\(f(-2a)=3a\e^{-2a}\)，\(f(a-2)=(4-3a)\e^{a-2}\)，所以在 \(x=-2a\) 处取得极大值 \(3a\e^{-2a}\)，在 \(x=a-2\) 处取得极小值 \((4-3a)\e^{a-2}\).
+
+当 \(a<\dfrac23\) 时，\(a-2<-2a\)，故 \(f(x)\) 在 \(\left(-\infty,a-2\right)\) 和 \(\left(-2a,+\infty\right)\) 上单调递增，在 \(\left(a-2,-2a\right)\) 上单调递减. 此时在 \(x=a-2\) 处取得极大值 \((4-3a)\e^{a-2}\)，在 \(x=-2a\) 处取得极小值 \(3a\e^{-2a}\).
 \end{enumerate}
 \end{solution}
 
@@ -288,9 +394,22 @@ y = 1 + 3t.
 
 \begin{solution}
 \begin{enumerate}
-\item 椭圆的离心率为 \(\frac{\sqrt{3}}{3}\).
-\item 直线 \(AB\) 的斜率为 \(\pm\frac{\sqrt{2}}{3}\).
-\item 当斜率为 \(\frac{\sqrt{2}}{3}\) 时，\(\frac{n}{m}=-\frac{2\sqrt{2}}{5}\)；当斜率为 \(-\frac{\sqrt{2}}{3}\) 时，\(\frac{n}{m}=\frac{2\sqrt{2}}{5}\).
+\item 因为 \(E\)，\(A\)，\(B\) 共线且 \(F_1A\parallel F_2B\)，所以三角形 \(EAF_1\) 与三角形 \(EBF_2\) 相似. 由 \(|F_1A|=2|F_2B|\)，得
+\(\dfrac{EF_1}{EF_2}=2\). 又 \(E\left(\dfrac{a^2}{c},0\right)\)，故 \(EF_1=\dfrac{a^2+c^2}{c}\)，\(EF_2=\dfrac{a^2-c^2}{c}\). 因此 \(\dfrac{a^2+c^2}{a^2-c^2}=2\)，即 \(a^2=3c^2\). 所以椭圆的离心率为 \(e=\dfrac ca=\dfrac{\sqrt3}{3}\).
+\item 由 \(b^2=a^2-c^2=2c^2\)，椭圆方程化为 \(2x^2+3y^2=6c^2\)，且 \(E=(3c,0)\). 设直线 \(AB\) 的斜率为 \(k\)，方程为 \(y=k(x-3c)\). 设 \(A=(x_1,y_1)\)，\(B=(x_2,y_2)\). 相似三角形还给出 \(EA=2EB\)，因 \(E\) 在椭圆外且 \(B\) 位于 \(E\)，\(A\) 之间，所以 \(B\) 是线段 \(EA\) 的中点，即 \(x_1+3c=2x_2\).
+
+将直线方程代入椭圆方程，得关于 \(x\) 的方程
+\((2+3k^2)x^2-18k^2cx+(27k^2-6)c^2=0\).
+由韦达定理，\(x_1+x_2=\dfrac{18k^2c}{2+3k^2}\)，\(x_1x_2=\dfrac{(27k^2-6)c^2}{2+3k^2}\). 令 \(u=k^2\)，由 \(x_1+3c=2x_2\) 得
+\(\dfrac{x_2}{c}=\dfrac{2+9u}{2+3u}\)，且 \(\dfrac{x_1}{c}=\dfrac{9u-2}{2+3u}\). 代入乘积关系，得
+\(\dfrac{(2+9u)(9u-2)}{(2+3u)^2}=\dfrac{27u-6}{2+3u}=\dfrac{3(9u-2)}{2+3u}\).
+因此 \((9u-2)(-4)=0\)，即 \(u=\dfrac29\). 所以 \(k=\pm\dfrac{\sqrt2}{3}\).
+\item 由上面的计算，\(x_2=\dfrac32c\)，并且 \(x_1=0\). 于是
+\(A=(0,-3kc)\)，\(B=\left(\dfrac32c,-\dfrac32kc\right)\)，\(C=(0,3kc)\)，其中 \(k=\pm\dfrac{\sqrt2}{3}\).
+
+三角形 \(AF_1C\) 的外接圆过 \(A\)，\(C\)，\(F_1=(-c,0)\). 设其方程为 \(x^2+y^2+Dx+Ey+G=0\). 代入关于原点对称的点 \(A\)，\(C\)，得 \(E=0\)，\(G=-9k^2c^2=-2c^2\)；再代入 \(F_1\)，得 \(D=-c\). 所以外接圆方程为 \(x^2+y^2-cx-2c^2=0\).
+
+直线 \(F_2B\) 的方程为 \(y=-3k(x-c)\). 将 \(H(m,n)\) 代入圆方程，利用 \(9k^2=2\)，得 \(m(3m-5c)=0\). 由 \(m\neq0\)，有 \(m=\dfrac53c\)，进而 \(n=-2kc\)，所以 \(\dfrac nm=-\dfrac{6k}{5}\). 当 \(k=\dfrac{\sqrt2}{3}\) 时，\(\dfrac nm=-\dfrac{2\sqrt2}{5}\)；当 \(k=-\dfrac{\sqrt2}{3}\) 时，\(\dfrac nm=\dfrac{2\sqrt2}{5}\).
 \end{enumerate}
 \end{solution}
 
@@ -306,8 +425,36 @@ y = 1 + 3t.
 
 \begin{solution}
 \begin{enumerate}
-\item \(S_{3}=55\).
-\item \((1-q)S_{2n}-(1+q)T_{2n}=\dfrac{2dq\left(1-q^{2n}\right)}{1-q^{2}}\).
-\item \(c_{1}\neq c_{2}\).
+\item 由等差数列通项公式，\(a_n=a_1+(n-1)d=1+2(n-1)=2n-1\)；由等比数列通项公式，\(b_n=b_1q^{n-1}=3^{n-1}\). 因而
+\[
+S_3=a_1b_1+a_2b_2+a_3b_3=1\cdot1+3\cdot3+5\cdot9=55
+\]
+\item 由于 \(b_1=1\)，有 \(b_j=q^{j-1}\)，且 \(a_j=a_1+(j-1)d\). 当 \(j\) 为奇数时，\((1-q)-(1+q)(-1)^{j-1}=-2q\)；当 \(j\) 为偶数时，该系数为 \(2\). 因而将奇、偶两项配对可得
+\[
+(1-q)S_{2n}-(1+q)T_{2n}=2\sum_{j=1}^{n}\bigl(a_{2j}b_{2j}-q a_{2j-1}b_{2j-1}\bigr)
+\]
+因为 \(b_{2j}=q b_{2j-1}\)，且 \(a_{2j}-a_{2j-1}=d\)，所以
+\[
+a_{2j}b_{2j}-q a_{2j-1}b_{2j-1}
+=q b_{2j-1}(a_{2j}-a_{2j-1})=dq^{2j-1}
+\]
+故
+\[
+(1-q)S_{2n}-(1+q)T_{2n}=2d\sum_{j=1}^{n}q^{2j-1}
+=2dq\frac{1-q^{2n}}{1-q^2}
+\]
+这正是所证结论.
+\item 令 \(r_j=k_j-l_j\). 由于 \(k_1\)，\(\ldots\)，\(k_n\) 与 \(l_1\)，\(\ldots\)，\(l_n\) 是两个不同的排列，\(r_1\)，\(\ldots\)，\(r_n\) 不全为零，且 \(|r_j|\leq n-1\). 由等差数列通项公式及 \(b_j=b_1q^{j-1}\)，有
+\[
+c_1-c_2=\sum_{j=1}^{n}(a_{k_j}-a_{l_j})b_j
+=d b_1\sum_{j=1}^{n}r_jq^{j-1}
+\]
+这里 \(d\ne0\)，且因 \(q\) 是等比数列的公比，首项 \(b_1\ne0\)，故 \(d b_1\ne0\). 设 \(m\) 是使 \(r_m\ne0\) 的最大下标. 若上式中的加权和为零，则
+\[
+|r_m|q^{m-1}\leq\sum_{j=1}^{m-1}|r_j|q^{j-1}
+\leq(n-1)\frac{q^{m-1}-1}{q-1}
+\leq q^{m-1}-1<q^{m-1}
+\]
+这与 \(|r_m|\geq1\) 矛盾. 因而 \(\sum_{j=1}^{n}r_jq^{j-1}\ne0\)，从而 \(c_1-c_2\ne0\)，即 \(c_1\ne c_2\).
 \end{enumerate}
 \end{solution}

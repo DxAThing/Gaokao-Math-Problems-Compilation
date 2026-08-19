@@ -16,6 +16,14 @@
 D.
 \end{answer}
 
+\begin{solution}
+由 \(A\) 的定义，\(x\) 必须满足 \(-2\leqslant x\leqslant3\)；由 \(B\) 的定义，\(x<-1\) 或 \(x>4\). 在 \([-2,3]\) 内不可能有 \(x>4\)，所以
+\[
+A\cap B=\{x\mid -2\leqslant x\leqslant3\}\cap\{x\mid x<-1\}=\{x\mid -2\leqslant x<-1\}
+\]
+因此选 D.
+\end{solution}
+
 \begin{problem}
 若 \(a = \log_3 \pi < b = \log_7 6\)，\(c = \log_2 0.8\)，则（\quad）
 
@@ -29,6 +37,13 @@ D.
 \begin{answer}
 A.
 \end{answer}
+
+\begin{solution}
+因为 \(\pi>3\)，且对数函数 \(\log_3 x\) 在正数范围内递增，所以
+\(a=\log_3\pi>\log_3 3=1\). 又因为 \(0<6<7\)，所以
+\(0<b=\log_7 6<1\). 最后 \(0<0.8<1\)，从而 \(c=\log_2 0.8<0\). 因此
+\(a>b>c\)，选 A.
+\end{solution}
 
 \begin{problem}
 “双曲线的方程为 \( \frac{x^{2}}{9}-\frac{y^{2}}{16}=1 \) ”是“双曲线的准线方程为 \( x=\pm\frac{9}{5} \) ”的（\quad）
@@ -44,6 +59,21 @@ A.
 A.
 \end{answer}
 
+\begin{solution}
+对双曲线 \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\)，有
+\(c^2=a^2+b^2\)、\(e=\dfrac ca\)，其准线为 \(x=\pm\dfrac ae\). 对于题给双曲线，
+\(a=3\)，\(b=4\)，\(c=5\)，故 \(e=\dfrac53\)，准线为
+\[
+x=\pm\frac{a}{e}=\pm\frac{3}{5/3}=\pm\frac95
+\]
+所以前一个命题能推出后一个命题. 反过来，双曲线
+\[
+\frac{x^2}{36}-\frac{y^2}{364}=1
+\]
+其中 \(c=\sqrt{36+364}=20\)，离心率为 \(e=20/6\)，其准线也是
+\(x=\pm\dfrac{6}{20/6}=\pm\dfrac95\)，但它不是题给双曲线. 因此后一个命题不能推出前一个命题，选 A.
+\end{solution}
+
 \begin{problem}
 已知 \(\triangle ABC\) 中，\(a = \sqrt{2}\)，\(b = \sqrt{3}\)，\(B = 60^{\circ}\)，那么角 \(A\) 等于（\quad）
 
@@ -58,6 +88,14 @@ A.
 C.
 \end{answer}
 
+\begin{solution}
+由正弦定理，
+\(\frac{a}{\sin A}=\frac{b}{\sin B}\)，\(\sin A=\frac{a\sin B}{b}=\frac{\sqrt2\cdot\frac{\sqrt3}{2}}{\sqrt3}=\frac{\sqrt2}{2}\).
+所以 \(A=45^{\circ}\) 或 \(135^{\circ}\). 但三角形内角和要求
+\(A+B<180^{\circ}\)，故 \(A<120^{\circ}\)，排除 \(135^{\circ}\)，得到
+\(A=45^{\circ}\)，选 C.
+\end{solution}
+
 \begin{problem}
 函数 \( f(x) = (x - 1)^2 + 1 \)（\(x < 1\)）的反函数为（\quad）
 
@@ -71,6 +109,16 @@ C.
 \begin{answer}
 B.
 \end{answer}
+
+\begin{solution}
+令 \(y=(x-1)^2+1\)，则 \(y-1=(x-1)^2\). 原函数的定义域为 \(x<1\)，因此只能取
+\(x-1=-\sqrt{y-1}\)，从而
+\[
+x=1-\sqrt{y-1}
+\]
+当 \(x<1\) 时，\(y>1\)，所以反函数为
+\(f^{-1}(x)=1-\sqrt{x-1}\)（\(x>1\)），选 B.
+\end{solution}
 
 \begin{problem}
 若实数 \(x\)，\(y\) 满足 \(\begin{cases}
@@ -90,6 +138,17 @@ x \leqslant 0,
 A.
 \end{answer}
 
+\begin{solution}
+由约束条件得
+\(y\leqslant x+1\)，\(y\geqslant-x\)，\(x\leqslant0\).
+要使可行的 \(y\) 存在，必须有 \(-x\leqslant x+1\)，即 \(x\geqslant-\frac12\). 因此
+\(-\frac12\leqslant x\leqslant0\). 对固定的 \(x\)，由于 \(z=x+2y\) 随 \(y\) 增大而增大，故取最小的 \(y=-x\)，得到
+\[
+z=x+2(-x)=-x
+\]
+在 \([-\frac12,0]\) 上，\(-x\) 的最小值在 \(x=0\) 时取得，且为 \(0\)，选 A.
+\end{solution}
+
 \begin{problem}
 已知等差数列 \(\{a_{n}\}\) 中，\(a_{2} = 6\)，\(a_{5} = 15\)，若 \(b_{n} = a_{2n}\)，则数列 \(\{b_{n}\}\) 的前5项和等于（\quad）
 
@@ -103,6 +162,18 @@ A.
 \begin{answer}
 C.
 \end{answer}
+
+\begin{solution}
+设等差数列的公差为 \(d\)，则
+\(a_5-a_2=3d=15-6=9\)，\(d=3\).
+于是 \(a_2=6\)，且
+\(b_1\)，\(b_2\)，\(b_3\)，\(b_4\)，\(b_5=a_2\)，\(a_4\)，\(a_6\)，\(a_8\)，\(a_{10}=6\)，\(12\)，\(18\)，\(24\)，\(30\).
+故前5项和为
+\[
+6+12+18+24+30=90
+\]
+选 C.
+\end{solution}
 
 \begin{problem}
 如图，动点 \(P\) 在正方体 \(ABCD - A_{1}B_{1}C_{1}D_{1}\) 的对角线 \(BD_{1}\) 上. 过点 \(P\) 作垂直于平面 \(BB_{1}D_{1}D\) 的直线. 与正方体表面相交于 \(MN\). 设 \(BP = x\)，\(MN = y\). 则函数 \(y = f(x)\) 的图象大致是（\quad）
@@ -120,6 +191,20 @@ C.
 B.
 \end{answer}
 
+\begin{solution}
+将正方体棱长取为 \(1\)，建立坐标系，令 \(A=(0,0,0)\)，\(B=(1,0,0)\)，\(D=(0,1,0)\)，\(D_1=(0,1,1)\).
+设 \(P\) 将线段 \(BD_1\) 按比例 \(t\) 分割，其中 \(0\leqslant t\leqslant1\)，则
+\(P=(1-t,t,t)\)，\(BP=\sqrt3t\).
+平面 \(BB_1D_1D\) 的方程为 \(x+y=1\)，所以过 \(P\) 的垂线方向可取 \((1,1,0)\). 该直线上的点可写为
+\[
+P+s(1,1,0)=(1-t+s,t+s,t)
+\]
+要使点在正方体内，参数必须同时满足 \(t-1\leqslant s\leqslant t\) 和 \(-t\leqslant s\leqslant1-t\).
+当 \(0\leqslant t\leqslant\frac12\) 时，参数区间为 \([-t,t]\)，故
+\(MN=2t\sqrt2\)；当 \(\frac12\leqslant t\leqslant1\) 时，参数区间为 \([t-1,1-t]\)，故
+\(MN=2(1-t)\sqrt2\). 因此 \(y\) 随 \(x=\sqrt3t\) 先线性增加，在中点达到最大值，再线性减少到 \(0\)，图象为三角形折线，选 B.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -130,6 +215,14 @@ B.
 \(\frac{4}{3}\).
 \end{answer}
 
+\begin{solution}
+由终边上的点 \(P(1,-2)\) 得 \(\tan\alpha=-2\). 利用正切二倍角公式，
+\[
+\tan2\alpha=\frac{2\tan\alpha}{1-\tan^2\alpha}
+ =\frac{2(-2)}{1-(-2)^2}=\frac{-4}{-3}=\frac43
+\]
+\end{solution}
+
 \begin{problem}
 不等式 \(\frac{x - 1}{x + 2} > 1\) 的解集是\fillinblank{}.
 \end{problem}
@@ -137,6 +230,15 @@ B.
 \begin{answer}
 \(x < -2\).
 \end{answer}
+
+\begin{solution}
+先注意定义域为 \(x\ne-2\). 移项并通分，得
+\[
+\frac{x-1}{x+2}-1=\frac{x-1-(x+2)}{x+2}=\frac{-3}{x+2}>0
+\]
+由于分子 \(-3<0\)，分式为正当且仅当分母为负，即 \(x+2<0\). 故解集为
+\(x<-2\).
+\end{solution}
 
 \begin{problem}
 已知向量 \(\bs{a}\) 与 \(\bs{b}\) 的夹角为 \(120^{\circ}\)，且 \(|\bs{a}| = |\bs{b}| = 4\)，那么 \(\bs{a} \cdot \bs{b}\) 的值为\fillinblank{}.
@@ -146,41 +248,97 @@ B.
 \(-8\).
 \end{answer}
 
+\begin{solution}
+由数量积公式，
+\[
+\bs{a}\cdot\bs{b}=|\bs{a}|\,|\bs{b}|\cos120^{\circ}
+ =4\cdot4\cdot\left(-\frac12\right)=-8
+\]
+\end{solution}
+
 \begin{problem}
 \(\left(x^{2} + \frac{1}{x^{3}}\right)^{5}\) 的展开式中常数项为\fillinblank{}；各项系数之和为\fillinblank{}. （用数字作答）
 \end{problem}
 
 \begin{answer}
-\(10\).
+\(10\)，\(32\).
 \end{answer}
+
+\begin{solution}
+展开式的通项可取 \(\dfrac1{x^3}\) 的 \(k\) 次，写成
+\(\mathrm C_5^k(x^2)^{5-k}\left(\frac1{x^3}\right)^k =\mathrm C_5^k x^{10-5k}\)，\(k=0\)，\(1\)，\(\ldots\)，\(5\).
+常数项要求 \(10-5k=0\)，故 \(k=2\)，其系数为
+\(\mathrm C_5^2=10\). 各项系数之和等于令 \(x=1\) 时的展开式值，因而为
+\[
+\left(1+1\right)^5=32
+\]
+\end{solution}
 
 \begin{problem}
 如图，函数 \( f(x) \) 的图象是折线段 \(ABC\)，其中 \(A\)，\(B\)，\(C\) 的坐标分别为 \((0,4)\)，\((2,0)\)，\((6,4)\).
 
-\bitmapfigure[max width=0.42\linewidth]{img/2008/beijing_liberal/q13_fig1.png}
-
 则 \( f(f(0)) = \)\fillinblank{}；函数 \( f(x) \) 在 \( x = 1 \) 处的导数 \( f'(1) = \)\fillinblank{}.
+
+\begin{center}\bitmapfigure[max width=0.42\linewidth]{img/2008/beijing_liberal/q13_fig1.png}\end{center}
 \end{problem}
 
 \begin{answer}
 \(2\)，\(-2\).
 \end{answer}
 
+\begin{solution}
+由点 \(A=(0,4)\) 得 \(f(0)=4\). 在线段 \(BC\) 上，斜率为
+\[
+\frac{4-0}{6-2}=1
+\]
+所以 \(f(x)=x-2\)（\(2\leqslant x\leqslant6\)），从而
+\(f(f(0))=f(4)=4-2=2\). 在线段 \(AB\) 上，斜率为
+\[
+f'(1)=\frac{0-4}{2-0}=-2
+\]
+\end{solution}
+
 \begin{problem}
 已知函数 \( f(x) = x^2 - \cos x \)，对于 \( \left[-\frac{\pi}{2}, \frac{\pi}{2}\right] \) 上的任意 \(x_1\)，\(x_2\)，有如下条件：
 
-\begin{circlelist}[itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]
+\begin{circlelist}
 \item \( x_1 > x_2 \)；
 \item \( x_1^2 > x_2^2 \)；
 \item \( |x_1| > x_2 \).
 \end{circlelist}
 
-其中能使 \( f(x_1) > f(x_2) \) 恒成立的条件序号是\fillinblank{}. \( T(a) \) 表示非负实数 \( a \) 的整数部分，例如 \( T(2.6) = 2 \)，\( T(0.2) = 0 \). 按此方案，第6棵树种植点的坐标应为\fillinblank{}；第2008棵树种植点的坐标应为\fillinblank{}.
+其中能使 \( f(x_1) > f(x_2) \) 恒成立的条件序号是\fillinblank{}.
+
+某校数学课外小组在坐标纸上为学校的一块空地设计植树方案如下：第 \( k \) 棵树种植在点 \( P_k(x_k,y_k) \) 处，其中 \( x_1=1 \)，\( y_1=1 \). 当 \( k\geqslant2 \) 时，
+\(\begin{cases}
+x_k=x_{k-1}+1-5\left[T\left(\dfrac{k-1}{5}\right)-T\left(\dfrac{k-2}{5}\right)\right],\\
+y_k=y_{k-1}+T\left(\dfrac{k-1}{5}\right)-T\left(\dfrac{k-2}{5}\right).
+\end{cases}\)
+
+\( T(a) \) 表示非负实数 \( a \) 的整数部分，例如 \( T(2.6)=2 \)，\( T(0.2)=0 \). 按此方案，第6棵树种植点的坐标应为\fillinblank{}；第2008棵树种植点的坐标应为\fillinblank{}.
 \end{problem}
 
 \begin{answer}
 \(\circled{2}\)，\((1,2)\)，\((3,402)\).
 \end{answer}
+
+\begin{solution}
+先处理函数部分. 因为
+\[
+f'(x)=2x+\sin x
+\]
+当 \(x>0\) 时 \(2x+\sin x>0\)，当 \(x<0\) 时 \(2x+\sin x<0\)，所以 \(f\) 在 \([-\frac\pi2,0]\) 上递减，在 \([0,\frac\pi2]\) 上递增. 又 \(f(-x)=f(x)\)，故在给定区间内，\(f(x)\) 随 \(|x|\) 严格增大.
+
+第2个条件等价于 \(|x_1|>|x_2|\)，因此必有 \(f(x_1)>f(x_2)\). 第1个条件和第3个条件都不能保证这一点，例如取 \(x_1=0\)，\(x_2=-1\)，此时两条件分别满足 \(x_1>x_2\) 与 \(|x_1|>x_2\)，但 \(|x_1|<|x_2|\)，从而 \(f(x_1)<f(x_2)\). 所以应选第2个条件.
+
+植树部分中，令 \(d_k=T\left(\dfrac{k-1}{5}\right)-T\left(\dfrac{k-2}{5}\right)\)（\(k\geqslant2\)）. 由于 \(T\) 表示非负实数的整数部分，当且仅当 \(k\equiv1\pmod 5\) 时 \(d_k=1\)，其余情形 \(d_k=0\). 由递推式逐项累加，
+\[
+\sum_{j=2}^{k}d_j=T\left(\dfrac{k-1}{5}\right)
+\]
+从而
+\(x_k=1+\sum_{j=2}^{k}(1-5d_j)=k-5T\left(\dfrac{k-1}{5}\right)\)，\(y_k=1+\sum_{j=2}^{k}d_j=1+T\left(\dfrac{k-1}{5}\right)\).
+当 \(k=6\) 时，\(T(5/5)=1\)，所以 \(x_6=6-5=1\)，\(y_6=1+1=2\)，第6棵树的坐标为 \((1,2)\). 当 \(k=2008\) 时，\(T(2007/5)=401\)，所以 \(x_{2008}=2008-5\times401=3\)，\(y_{2008}=1+401=402\)，第2008棵树的坐标为 \((3,402)\).
+\end{solution}
 
 \section{解答题}
 
@@ -195,8 +353,25 @@ B.
 
 \begin{solution}
 \begin{enumerate}
-\item \(\omega=1\).
-\item 函数 \(f(x)\) 在 \(\left[0,\frac{2\pi}{3}\right]\) 上的取值范围为 \(\left[0,\frac{3}{2}\right]\).
+\item 令 \(t=\omega x\). 由 \(\sin(t+\frac\pi2)=\cos t\)，有
+\[
+f(x)=\sin^2t+\sqrt3\sin t\cos t
+ =\frac12-\frac12\cos2t+\frac{\sqrt3}{2}\sin2t
+ =\frac12+\sin\left(2t-\frac\pi6\right)
+\]
+这是关于 \(x\) 的正弦型函数，其最小正周期为 \(\dfrac{2\pi}{2\omega}=\dfrac\pi\omega\). 由题设 \(\dfrac\pi\omega=\pi\)，得 \(\omega=1\).
+\item 此时
+\[
+f(x)=\frac12+\sin\left(2x-\frac\pi6\right)
+\]
+当 \(0\leqslant x\leqslant\dfrac{2\pi}{3}\) 时，
+\[
+-\frac\pi6\leqslant2x-\frac\pi6\leqslant\frac{7\pi}{6}
+\]
+该区间包含正弦函数取最大值 \(1\) 的点 \(\frac\pi2\)，但不包含取最小值 \(-1\) 的点 \(\frac{3\pi}{2}\)；两端点的正弦值均为 \(-\frac12\)，故正弦值范围为 \([-\frac12,1]\). 因此
+\[
+f(x)\in\left[\frac12-\frac12,\frac12+1\right]=\left[0,\frac32\right]
+\]
 \end{enumerate}
 \end{solution}
 
@@ -204,7 +379,7 @@ B.
 如图，在三棱锥 \(P - ABC\) 中，\(AC = BC = 2\)，\(\angle ACB = 90^\circ\)，\(AP = BP = AB\)，\(PC \perp AC\).
 
 \begin{enumerate}
-\item 求证： \(PC \perp AB\)；
+\item 求证：\(PC \perp AB\)；
 \item 求二面角 \(B - AP - C\) 的大小.
 \end{enumerate}
 
@@ -213,8 +388,24 @@ B.
 
 \begin{solution}
 \begin{enumerate}
-\item \(PC\perp AB\).
-\item 二面角 \(B-AP-C\) 的大小为 \(\arccos\frac{\sqrt{3}}{3}\).
+\item 建立空间直角坐标系，令 \(C=(0,0,0)\)，\(A=(2,0,0)\)，\(B=(0,2,0)\).
+由 \(PC\perp AC\)，设 \(P=(0,u,v)\). 又因为 \(AP=BP\)，有
+\(AP^2=4+u^2+v^2\)，\(BP^2=(u-2)^2+v^2\).
+令两式相等，得
+\(4+u^2+v^2=u^2-4u+4+v^2\)，\(u=0\).
+所以 \(P=(0,0,v)\). 于是 \(\overrightarrow{PC}=(0,0,-v)\)，而
+\(\overrightarrow{AB}=(-2,2,0)\)，故
+\[
+\overrightarrow{PC}\cdot\overrightarrow{AB}=0
+\]
+因此 \(PC\perp AB\).
+\item 由 \(AC=2\)，\(\angle ACB=90^\circ\)，得 \(AB=2\sqrt2\). 又 \(AP=AB=2\sqrt2\)，所以
+\(AP^2=AC^2+CP^2=8\)，所以 \(CP=2\)，即 \(v=\pm2\). 取 \(P=(0,0,2)\)；若 \(v=-2\)，下述法向量的第三个分量变号，所得二面角相同. 平面 \(CAP\) 的方程为 \(y=0\)，可取法向量 \(\bs n_2=(0,1,0)\)；平面 \(BAP\) 经过 \(A=(2,0,0)\)、\(B=(0,2,0)\)、\(P=(0,0,2)\)，方程为 \(x+y+z=2\)，可取法向量 \(\bs n_1=(1,1,1)\).
+\[
+\cos\theta=\frac{|\bs n_1\cdot\bs n_2|}{|\bs n_1|\,|\bs n_2|}=\frac1{\sqrt3}=\frac{\sqrt3}{3}
+\]
+故二面角 \(B-AP-C\) 的大小为
+\(\displaystyle\arccos\frac{\sqrt3}{3}\).
 \end{enumerate}
 \end{solution}
 
@@ -229,8 +420,20 @@ B.
 
 \begin{solution}
 \begin{enumerate}
-\item \(a=0\)，\(c=2\).
-\item 当 \(b<0\) 时，函数在 \(\left(-\infty,-\sqrt{-b}\right)\) 和 \(\left(\sqrt{-b},+\infty\right)\) 上单调递增，在 \(\left(-\sqrt{-b},\sqrt{-b}\right)\) 上单调递减；当 \(b>0\) 时，函数在 \(\R\) 上单调递增.
+\item
+\[
+g(x)=x^3+ax^2+3bx+c-2
+\]
+奇函数的偶次项系数及常数项都必须为零，因此 \(a=0\)，\(c-2=0\)，即 \(c=2\).
+\item 此时 \(f(x)=x^3+3bx+2\)，所以
+\[
+f'(x)=3x^2+3b=3(x^2+b)
+\]
+当 \(b>0\) 时，\(x^2+b>0\) 对任意实数 \(x\) 成立，故 \(f\) 在 \(\R\) 上单调递增.
+
+当 \(b<0\) 时，令 \(f'(x)=0\)，得 \(x=\pm\sqrt{-b}\). 在
+\(\left(-\infty,-\sqrt{-b}\right)\) 和 \(\left(\sqrt{-b},+\infty\right)\) 上 \(f'(x)>0\)，在
+\(\left(-\sqrt{-b},\sqrt{-b}\right)\) 上 \(f'(x)<0\). 所以函数在前两个区间上单调递增，在中间区间上单调递减.
 \end{enumerate}
 \end{solution}
 
@@ -245,8 +448,22 @@ B.
 
 \begin{solution}
 \begin{enumerate}
-\item \(\frac{1}{40}\).
-\item \(\frac{9}{10}\).
+\item 由于四个岗位都有人，五人分配的岗位人数只能是 \(2\)，\(1\)，\(1\)，\(1\). 满足每个岗位至少一人的分配总数为：先选出同岗的两人，再选其岗位并安排其余三人，故
+\[
+\mathrm C_5^2\cdot4\cdot3!=240
+\]
+甲、乙同时在 A 岗位时，另外三人必须分别在 B、C、D 岗位，分配数为 \(3!=6\). 所以所求概率为
+\[
+\frac6{240}=\frac1{40}
+\]
+\item 甲、乙在同一岗位时，先选这个岗位，再将其余三人分别安排到另外三个岗位，分配数为
+\[
+4\cdot3!=24
+\]
+故甲、乙在同一岗位的概率为 \(\dfrac{24}{240}=\dfrac1{10}\)，不在同一岗位的概率为
+\[
+1-\frac1{10}=\frac9{10}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -261,25 +478,95 @@ B.
 
 \begin{solution}
 \begin{enumerate}
-\item \(AB=2\sqrt{2}\)，\(\triangle ABC\) 的面积为 \(2\).
-\item \(AB\) 所在直线的方程为 \(y=x-1\).
+\item 因为 \(AB\parallel l\)，所以 \(AB\) 的斜率为 \(1\). 又因其过原点，直线 \(AB\) 为 \(y=x\). 代入椭圆方程得
+\(x^2+3x^2=4\)，\(x=\pm1\).
+故两端点为 \((1,1)\)、\((-1,-1)\)，从而
+\[
+AB=\sqrt{(2)^2+(2)^2}=2\sqrt2
+\]
+直线 \(AB\) 为 \(y-x=0\)，直线 \(l\) 为 \(y-x=2\)，两平行线间的距离为 \(\dfrac2{\sqrt2}=\sqrt2\). 因此
+\[
+S_{\triangle ABC}=\frac12\cdot2\sqrt2\cdot\sqrt2=2
+\]
+\item 设 \(AB\) 所在直线为 \(y=x+k\). 将其代入椭圆方程，得到交点横坐标满足
+\[
+x^2+3(x+k)^2=4
+\]
+两根之差的平方为 \(\dfrac{16-3k^2}{4}\)，所以
+\[
+AB^2=2\cdot\frac{16-3k^2}{4}=\frac{16-3k^2}{2}
+\]
+因为 \(\angle ABC=90^\circ\)，且 \(AB\) 斜率为 \(1\)，所以 \(BC\) 斜率为 \(-1\). 设 \(B=(x_B,x_B+k)\)，则过 \(B\) 且垂直于 \(AB\) 的直线与 \(l:y=x+2\) 的交点为 \(C\)，解得
+\[
+C=\left(x_B+\frac{k}{2}-1,\ x_B+\frac{k}{2}+1\right)
+\]
+因此
+\[
+BC^2=2\left(\frac{k}{2}-1\right)^2=\frac{(k-2)^2}{2}
+\]
+由勾股定理，
+\[
+AC^2=AB^2+BC^2
+ =\frac{16-3k^2+(k-2)^2}{2}
+ =11-(k+1)^2
+\]
+故 \(AC\) 最大当且仅当 \(k=-1\)，此时所求直线为
+\[
+y=x-1
+\]
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-数列 \(\{a_{n}\}\) 满足 \(a_1 = 1\)，\(a_{n+1} = (n^2 + n - \lambda)a_n\)（\(n = 1, 2, \cdots\)），\(\lambda\) 是常数.
+数列 \(\{a_{n}\}\) 满足 \(a_1 = 1\)，\(a_{n+1} = (n^2 + n - \lambda)a_n\)（\(n = 1\)，\(2\)，\(\cdots\)），\(\lambda\) 是常数.
 
 \begin{enumerate}
 \item 当 \( a_{2} = -1 \) 时，求 \( \lambda \) 及 \( a_{3} \) 的值；
-\item 数列 \(\{a_{n}\}\) 是否可能为等差数列？若可能，求出它的通项公式；若不可能，说明理由；
+\item 数列 \(\{a_n\}\) 是否可能为等差数列？若可能，求出它的通项公式；若不可能，说明理由；
 \item 求 \( \lambda \) 的取值范围，使得存在正整数 \(m\)，当 \( n > m \) 时总有 \( a_{n} < 0 \).
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item \(\lambda=3\)，\(a_{3}=-3\).
-\item 数列 \(\{a_n\}\) 不可能为等差数列.
-\item \(\lambda\) 的取值范围为 \(\displaystyle\bigcup_{k\in\N^{*}}\left(4k^{2}-2k,4k^{2}+2k\right)\).
+\item 取 \(n=1\)，得
+\[
+a_2=(2-\lambda)a_1=2-\lambda=-1
+\]
+所以 \(\lambda=3\). 再取 \(n=2\)，
+\[
+a_3=(6-\lambda)a_2=(6-3)(-1)=-3
+\]
+\item 若数列为等差数列，设公差为 \(d\). 由 \(a_1=1\) 及递推式，
+\(a_2=2-\lambda\)，\(d=a_2-a_1=1-\lambda\).
+等差数列还应满足 \(a_3=1+2d=3-2\lambda\)，而递推式给出
+\[
+a_3=(6-\lambda)(2-\lambda)
+\]
+令两式相等，得
+\((6-\lambda)(2-\lambda)=3-2\lambda\)，\((\lambda-3)^2=0\)
+故只能有 \(\lambda=3\). 但此时
+\(a_1=1\)，\(a_2=-1\)，\(a_3=-3\)，公差为 \(-2\)，而
+\[
+a_4=(12-3)a_3=9(-3)=-27\ne-5=a_3-2
+\]
+矛盾. 因此该数列不可能为等差数列.
+\item 由递推式
+\(a_n=\prod_{j=1}^{n-1}\bigl(j(j+1)-\lambda\bigr)\)，\(n\geqslant2\).
+当 \(j\) 足够大时，因子 \(j(j+1)-\lambda\) 为正. 若 \(\lambda\leqslant0\)，所有因子均为正，数列不可能最终为负. 若 \(\lambda=j(j+1)\) 对某个正整数 \(j\) 成立，则从 \(a_{j+1}\) 起各项为零，不满足严格小于零；这些端点也必须排除.
+
+设恰有 \(r\) 个因子 \(j(j+1)-\lambda\) 为负，则
+\[
+r(r+1)<\lambda<(r+1)(r+2)
+\]
+且在最后一个负因子之后所有因子均为正，所以数列最终符号为 \((-1)^r\). 要使最终各项为负，必须且只须 \(r\) 为奇数. 令 \(r=2k-1\)，其中 \(k\in\mathbb N^*\)，便得到
+\[
+(2k-1)(2k)<\lambda<(2k)(2k+1)
+\]
+即
+\[
+\lambda\in\bigcup_{k\in\mathbb N^*}\left(4k^2-2k,\,4k^2+2k\right)
+\]
+在这些区间内，取 \(m=2k\) 即可保证对所有 \(n>m\) 有 \(a_n<0\)；反之不满足奇数个负因子或落在端点时，都不可能最终严格为负.
 \end{enumerate}
 \end{solution}

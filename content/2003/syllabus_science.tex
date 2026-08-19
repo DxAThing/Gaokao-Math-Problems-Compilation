@@ -16,6 +16,14 @@
 D
 \end{answer}
 
+\begin{solution}
+因为 \(x\in\left(-\frac{\pi}{2},0\right)\)，所以 \(\sin x<0\)，由 \(\cos x=\frac45\) 得 \(\sin x=-\frac35\)，从而 \(\tan x=-\frac34\). 因此
+\[
+\tan 2x=\frac{2\tan x}{1-\tan^2x}=\frac{-\frac32}{1-\frac9{16}}=-\frac{24}{7}
+\]
+所以选 D.
+\end{solution}
+
 \begin{problem}
 圆锥曲线 \(\rho = \frac{8\sin\theta}{\cos^2\theta}\) 的准线方程是（\quad）
 
@@ -27,8 +35,16 @@ D
 \end{problem}
 
 \begin{answer}
-C
+D
 \end{answer}
+
+\begin{solution}
+令直角坐标为 \(X=\rho\cos\theta\)，\(Y=\rho\sin\theta\). 将题给极坐标方程两边乘以 \(\rho\cos^2\theta\)，得
+\[
+X^2=\rho^2\cos^2\theta=8\rho\sin\theta=8Y
+\]
+这是抛物线 \(X^2=4pY\)，其中 \(p=2\)，所以其焦点为 \((0,2)\)，准线为 \(Y=-2\). 因而准线方程为 \(\rho\sin\theta=-2\)，对应选项 D.
+\end{solution}
 
 \begin{problem}
 设函数 \( f(x) = \begin{cases}
@@ -47,6 +63,10 @@ x^{\frac{1}{2}}, & x > 0,
 D
 \end{answer}
 
+\begin{solution}
+当 \(x_0\leqslant0\) 时，\(f(x_0)>1\) 等价于 \(2^{-x_0}-1>1\)，即 \(2^{-x_0}>2\)，所以 \(x_0<-1\). 当 \(x_0>0\) 时，\(f(x_0)>1\) 等价于 \(\sqrt{x_0}>1\)，所以 \(x_0>1\). 因此 \(x_0\) 的取值范围为 \((-\infty,-1)\cup(1,+\infty)\)，选 D.
+\end{solution}
+
 \begin{problem}
 函数 \( y = 2\sin x (\sin x + \cos x) \) 的最大值为（\quad）
 
@@ -60,6 +80,14 @@ D
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+由 \(\sin^2x=\frac{1-\cos2x}{2}\) 和 \(2\sin x\cos x=\sin2x\)，有
+\[
+y=2\sin^2x+2\sin x\cos x=1-\cos2x+\sin2x=1+\sqrt2\sin\left(2x-\frac\pi4\right)
+\]
+因为正弦函数的最大值为 \(1\)，所以 \(y_{\max}=1+\sqrt2\)，选 A.
+\end{solution}
 
 \begin{problem}
 已知圆 \(C: (x - a)^2 + (y - 2)^2 = 4\)（\(a > 0\)）及直线 \(l: x - y + 3 = 0\)，当直线 \(l\) 被 \(C\) 截得的弦长为 \(2\sqrt{3}\) 时，\(a\) 的值等于（\quad）
@@ -75,6 +103,14 @@ A
 C
 \end{answer}
 
+\begin{solution}
+圆 \(C\) 的圆心为 \((a,2)\)，半径为 \(2\). 圆心到直线 \(l\) 的距离为
+\[
+d=\frac{|a-2+3|}{\sqrt2}=\frac{a+1}{\sqrt2}
+\]
+弦长为 \(2\sqrt3\)，所以 \(2\sqrt{2^2-d^2}=2\sqrt3\)，即 \(d^2=1\). 因而 \((a+1)^2=2\). 由 \(a>0\) 得 \(a=\sqrt2-1\)，选 C.
+\end{solution}
+
 \begin{problem}
 已知圆锥的底面半径为 \(R\)，高为 \(3R\)，在它的所有内接圆柱中，全面积的最大值是（\quad）
 
@@ -88,6 +124,22 @@ C
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+设内接圆柱的高为 \(h\)，底面半径为 \(r\). 由圆锥轴截面中的相似三角形，得
+\[
+r=R-\frac h3
+\]
+令 \(t=\frac{h}{3R}\)，则 \(0\leqslant t\leqslant1\)，且 \(r=R(1-t)\). 圆柱的全面积为
+\[
+S=2\pi r^2+2\pi rh=2\pi R^2(1-t)(1+2t)=2\pi R^2(1+t-2t^2)
+\]
+二次函数 \(1+t-2t^2\) 在 \([0,1]\) 上于 \(t=\frac14\) 处取得最大值 \(\frac98\)，所以
+\[
+S_{\max}=\frac94\pi R^2
+\]
+故选 B.
+\end{solution}
 
 \begin{problem}
 已知方程 \((x^{2} - 2x + m)(x^{2} - 2x + n) = 0\) 的四个根组成一个首项为 \(\frac{1}{4}\) 的等差数列，则 \(|m - n| =\)（\quad）
@@ -103,6 +155,12 @@ B
 C
 \end{answer}
 
+\begin{solution}
+设四个根按从小到大组成等差数列，首项为 \(\frac14\)，公差为 \(d\). 两个二次因式各贡献两个根，且每个因式的两个根之和为 \(2\)，所以四根总和为 \(4\). 另一方面，四根总和为 \(1+6d\)，故 \(d=\frac12\)，四个根为 \(\frac14\)，\(\frac34\)，\(\frac54\)，\(\frac74\). 能组成两个根和为 \(2\) 的配对只能是 \(\left(\frac14,\frac74\right)\) 和 \(\left(\frac34,\frac54\right)\). 因此 \(m\)，\(n\) 分别为
+\(\frac14\cdot\frac74=\frac7{16}\)，\(\frac34\cdot\frac54=\frac{15}{16}\)
+从而 \(|m-n|=\frac12\)，选 C.
+\end{solution}
+
 \begin{problem}
 已知双曲线中心在原点且一个焦点为 \(F(\sqrt{7}, 0)\)，直线 \(y = x - 1\) 与其相交于 \(M\)，\(N\) 两点，\(MN\) 中点的横坐标为 \(-\frac{2}{3}\)，则此双曲线的方程是（\quad）
 
@@ -116,6 +174,18 @@ C
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+设双曲线方程为 \(\frac{x^2}{a^2}-\frac{y^2}{b^2}=1\)，则由焦点为 \((\sqrt7,0)\) 得 \(a^2+b^2=7\). 将 \(y=x-1\) 代入双曲线方程，得到关于交点横坐标的方程
+\[
+(b^2-a^2)x^2+2a^2x-a^2(1+b^2)=0
+\]
+两根的平均值是弦 \(MN\) 中点的横坐标，因此
+\[
+-\frac{a^2}{b^2-a^2}=-\frac23
+\]
+即 \(5a^2=2b^2\). 联立 \(a^2+b^2=7\)，得 \(a^2=2\)，\(b^2=5\). 所以双曲线方程为 \(\frac{x^2}{2}-\frac{y^2}{5}=1\)，选 D.
+\end{solution}
 
 \begin{problem}
 函数 \(f(x) = \sin x\)，\(x \in \left[\frac{\pi}{2}, \frac{3\pi}{2}\right]\) 的反函数 \( f^{-1}(x) = \)（\quad）
@@ -131,6 +201,10 @@ D
 D
 \end{answer}
 
+\begin{solution}
+在区间 \(\left[\frac\pi2,\frac{3\pi}2\right]\) 上，函数 \(\sin x\) 单调递减，值域为 \([-1,1]\). 对任意 \(u\in[-1,1]\)，满足 \(\sin x=u\) 且 \(x\in\left[\frac\pi2,\frac{3\pi}2\right]\) 的唯一解为 \(x=\pi-\arcsin u\). 因此 \(f^{-1}(x)=\pi-\arcsin x\)，\(x\in[-1,1]\)，选 D.
+\end{solution}
+
 \begin{problem}
 已知长方形的四个顶点 \(A(0,0)\)，\(B(2,0)\)，\(C(2,1)\) 和 \(D(0,1)\)，一质点从 \(AB\) 的中点 \(P_0\) 沿与 \(AB\) 的夹角 \(\theta\) 的方向射到 \(BC\) 上的点 \(P_1\) 后，依次反射到 \(CD\)，\(DA\) 和 \(AB\) 上的点 \(P_2\)，\(P_3\) 和 \(P_4\)（入射角等于反射角）. 设 \(P_4\) 的坐标为 \((x_4,0)\). 若 \(1 < x_4 < 2\)，则 \(\tan \theta\) 的取值范围是（\quad）
 
@@ -144,6 +218,22 @@ D
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+设 \(t=\tan\theta\). 由于质点先从 \(P_0=(1,0)\) 射向右侧，必须有 \(t>0\). 直线 \(P_0P_1\) 的方程为 \(y=t(x-1)\)，所以第一次碰撞点为 \(P_1=(2,t)\). 要使 \(P_1\) 在线段 \(BC\) 上，先有 \(0<t<1\).
+
+在 \(P_1\) 处水平分速度反向，故到达上边 \(CD\) 的直线斜率为 \(-t\)，从而第二次碰撞点的横坐标满足 \(1=-t(x_2-2)+t\)，即 \(x_2=3-\frac1t\). 要使 \(P_2\in CD\)，需 \(0\leqslant x_2\leqslant2\)，这给出 \(\frac13\leqslant t\leqslant1\).
+
+在 \(P_2\) 处竖直分速度反向，向左到达左边 \(DA\) 时，纵坐标为 \(y_3=1-tx_2=2-3t\). 条件 \(P_3\in DA\) 给出 \(0\leqslant2-3t\leqslant1\)，即 \(\frac13\leqslant t\leqslant\frac23\). 在左边反射后，质点向右下方运动，第四次到达 \(AB\) 时
+\[
+x_4=\frac{y_3}{t}=\frac{2-3t}{t}=\frac2t-3
+\]
+结合题设 \(1<x_4<2\)，且此时 \(t>0\)，有
+\[
+1<\frac2t-3<2\quad\Longleftrightarrow\quad \frac25<t<\frac12
+\]
+该区间包含在前面各次碰撞的允许范围内，故 \(\tan\theta\in\left(\frac25,\frac12\right)\)，选 C.
+\end{solution}
 
 \begin{problem}
 \(\displaystyle\lim_{n\to \infty}\frac{\mathrm C_2^2 + \mathrm C_3^2 + \mathrm C_4^2 + \cdots + \mathrm C_n^2}{n(\mathrm C_2^1 + \mathrm C_3^1 + \mathrm C_4^1 + \cdots + \mathrm C_n^1)} =\)（\quad）
@@ -159,6 +249,16 @@ C
 B
 \end{answer}
 
+\begin{solution}
+利用 \(\mathrm C_k^2=\frac{k(k-1)}2\) 和 \(\mathrm C_k^1=k\)，有
+\(\sum_{k=2}^n\mathrm C_k^2=\frac16n(n+1)(n-1)\)，\(\sum_{k=2}^n\mathrm C_k^1=\frac{n(n+1)}2-1\).
+因此
+\[
+\lim_{n\to\infty}\frac{\sum_{k=2}^n\mathrm C_k^2}{n\sum_{k=2}^n\mathrm C_k^1}=\lim_{n\to\infty}\frac{n(n+1)(n-1)/6}{n\left(n(n+1)/2-1\right)}=\frac13
+\]
+故选 B.
+\end{solution}
+
 \begin{problem}
 一个四面体的所有棱长都为 \(\sqrt{2}\)，四个顶点在同一球面上，则此球的表面积为（\quad）
 
@@ -173,6 +273,22 @@ B
 A
 \end{answer}
 
+\begin{solution}
+这是正四面体，设其棱长为 \(s=\sqrt2\). 设底面三角形的重心为 \(G\)，顶点到底面的垂足为 \(G\). 正三角形底面的外接圆半径为 \(\frac{s}{\sqrt3}\)，且由勾股定理，正四面体的高为
+\[
+h=\sqrt{s^2-\left(\frac{s}{\sqrt3}\right)^2}=s\sqrt{\frac23}=\frac2{\sqrt3}
+\]
+四个顶点到球心距离相等，球心在高上；设球心到顶点的距离为 \(R\)，则球心到顶点的轴向距离为 \(R\)，到对面底面的距离为 \(h-R\). 取底面任一顶点到高的垂足，得到
+\[
+\left(\frac{s}{\sqrt3}\right)^2+(h-R)^2=R^2
+\]
+化简得 \(R=\frac{s^2/3+h^2}{2h}=\frac{s^2}{2h}=\frac{\sqrt3}{2}\)，等价地也可由正四面体重心把高按 \(3:1\) 分割得到球心到基面的距离 \(h/4=1/(2\sqrt3)\). 因而
+\[
+R^2=\frac23+\frac1{12}=\frac34
+\]
+所以球的表面积为 \(4\pi R^2=3\pi\)，选 A.
+\end{solution}
+
 \section{填空题}
 \begin{problem}
 \(\left(x^{2} - \frac{1}{2x}\right)^{9}\) 的展开式中 \(x^{9}\) 系数是\fillinblank{}.
@@ -182,6 +298,13 @@ A
 \(-\frac{21}{2}\)
 \end{answer}
 
+\begin{solution}
+展开式通项中，若从九个因子中取出 \(j\) 个 \(-\frac1{2x}\)，则该项的幂次为 \(2(9-j)-j=18-3j\). 要得到 \(x^9\)，必须有 \(18-3j=9\)，即 \(j=3\). 所以所求系数为
+\[
+\mathrm C_9^3\left(-\frac12\right)^3=-\frac{21}{2}
+\]
+\end{solution}
+
 \begin{problem}
 使 \(\log_2(-x) < x + 1\) 成立的 \(x\) 的取值范围是\fillinblank{}.
 \end{problem}
@@ -189,6 +312,10 @@ A
 \begin{answer}
 \((-1,0)\)
 \end{answer}
+
+\begin{solution}
+由对数定义必须有 \(x<0\). 令 \(t=-x>0\)，原不等式化为 \(\log_2t<1-t\)，即 \(g(t)=\log_2t+t-1<0\). 因为 \(g'(t)=\frac1{t\ln2}+1>0\)，所以 \(g(t)\) 在 \((0,+\infty)\) 上严格递增，且 \(g(1)=0\). 因而 \(0<t<1\)，即 \(-1<x<0\).
+\end{solution}
 
 \begin{problem}
 如图，一个地区分为 5 个行政区域，现给地图着色，要求相邻地区不得使用同一颜色，现有 4 种颜色可供选择，则不同的着色方法共有\fillinblank{}种.
@@ -201,6 +328,10 @@ A
 72
 \end{answer}
 
+\begin{solution}
+中心区域 \(1\) 先选颜色，有 \(4\) 种方法. 四个外围区域按顺时针排列成一个四边形环，每个外围区域还不能与中心区域同色，因此可用的颜色有 \(3\) 种. 固定左上区域的颜色后，右上区域有 \(2\) 种选择；固定这两个颜色后，右下区域取左上区域的颜色时，左下区域有 \(2\) 种选择，右下区域取第三种颜色时，左下区域有 \(1\) 种选择，所以外围区域共有 \(3\times2\times(2+1)=18\) 种着色方法. 总数为 \(4\times18=72\).
+\end{solution}
+
 \begin{problem}
 下列 5 个正方体图形中，\(l\) 是正方体的一条对角线，点 \(M\)，\(N\)，\(P\) 分别为其所在棱的中点，能得出 \(l \perp \text{面 } MNP\) 的图形的序号是\fillinblank{}.
 
@@ -212,13 +343,44 @@ A
 \(\circled{1}\circled{4}\circled{5}\)
 \end{answer}
 
+\begin{solution}
+取正方体棱长为 \(1\)，以一个顶点为原点，三条互相垂直的棱为坐标轴. 五个图形中的对角线 \(l\) 方向均可取为 \(\bs d=(1,-1,-1)\)；方向向量取反不影响垂直性. 对每个图形，取平面 \(MNP\) 内两条相交向量 \(\overrightarrow{MN}\)、\(\overrightarrow{MP}\). 若这两个向量都与 \(\bs d\) 垂直，则由直线垂直于平面的判定可得 \(l\perp\text{面 }MNP\).
+
+图形 \(1\) 中，按图中三条棱的中点坐标可取
+\(M=\left(0,\frac12,1\right)\)，\(N=\left(0,1,\frac12\right)\)，\(P=\left(\frac12,1,1\right)\).
+于是 \(\overrightarrow{MN}=\left(0,\frac12,-\frac12\right)\)，\(\overrightarrow{MP}=\left(\frac12,\frac12,0\right)\)，从而
+\(\bs d\cdot\overrightarrow{MN}=0\)，\(\bs d\cdot\overrightarrow{MP}=0\).
+其余图形的中点坐标和点积如下：
+\begin{center}
+\begin{tabular}{c|c|c}
+图形 & \(M\)，\(N\)，\(P\) & \(\left(\bs d\cdot\overrightarrow{MN},\bs d\cdot\overrightarrow{MP}\right)\)\\ \hline
+1 & \(\left(0,\frac12,1\right)\)，\(\left(0,1,\frac12\right)\)，\(\left(\frac12,1,1\right)\) & \((0,0)\)\\
+2 & \(\left(0,0,\frac12\right)\)，\(\left(1,1,\frac12\right)\)，\(\left(\frac12,0,0\right)\) & \((0,1)\)\\
+3 & \(\left(0,0,\frac12\right)\)，\(\left(1,\frac12,0\right)\)，\(\left(\frac12,1,1\right)\) & \((1,-1)\)\\
+4 & \(\left(0,0,\frac12\right)\)，\(\left(1,1,\frac12\right)\)，\(\left(0,\frac12,0\right)\) & \((0,0)\)\\
+5 & \(\left(0,\frac12,0\right)\)，\(\left(1,1,\frac12\right)\)，\(\left(\frac12,0,1\right)\) & \((0,0)\)
+\end{tabular}
+\end{center}
+例如图形 \(2\) 中 \(\overrightarrow{MN}=(1,1,0)\)，\(\overrightarrow{MP}=\left(\frac12,0,-\frac12\right)\)，对应点积为 \(0,1\)；图形 \(3\) 中 \(\overrightarrow{MN}=\left(1,\frac12,-\frac12\right)\)，\(\overrightarrow{MP}=\left(\frac12,1,\frac12\right)\)，对应点积为 \(1,-1\). 图形 \(4\) 中 \(\overrightarrow{MN}=(1,1,0)\)，\(\overrightarrow{MP}=\left(0,\frac12,-\frac12\right)\)，对应点积为 \(0,0\)；图形 \(5\) 中 \(\overrightarrow{MN}=\left(1,\frac12,\frac12\right)\)，\(\overrightarrow{MP}=\left(\frac12,-\frac12,1\right)\)，对应点积为 \(0,0\). 因此图形 \(2\)、\(3\) 中至少有一条平面内直线不垂直于 \(l\)，图形 \(1\)、\(4\)、\(5\) 中两条相交直线都垂直于 \(l\). 符合条件的图形序号为 \(\circled{1}\)、\(\circled{4}\)、\(\circled{5}\).
+\end{solution}
+
 \section{解答题}
 \begin{problem}
 已知复数 \(z\) 的辐角为 \(60^{\circ}\)，且 \(|z - 1|\) 是 \(|z|\) 和 \(|z - 2|\) 的等比中项，求 \(|z|\).
 \end{problem}
 
 \begin{solution}
-短答案：\(\sqrt{2}-1\).
+设 \(z=r\left(\cos60^{\circ}+\i\sin60^{\circ}\right)\)，其中 \(r=|z|>0\). 因为 \(|z-1|\) 是 \(|z|\) 和 \(|z-2|\) 的等比中项，所以
+\[
+|z-1|^2=|z|\,|z-2|
+\]
+又因为 \(\operatorname{Re}z=\frac r2\)，所以
+\(|z-1|^2=|z|^2-2\operatorname{Re}z+1=r^2-r+1\)，\(|z-2|^2=|z|^2-4\operatorname{Re}z+4=r^2-2r+4\).
+原等式两边非负，可以平方而不引入符号歧义，得到
+\[
+(r^2-r+1)^2=r^2(r^2-2r+4)
+\]
+展开并消去 \(r^4-2r^3\)，得 \(r^2+2r-1=0\). 解得 \(r=-1\pm\sqrt2\)，由 \(r=|z|>0\) 只能取 \(r=\sqrt2-1\)，即 \(|z|=\sqrt2-1\).
 \end{solution}
 
 \begin{problem}
@@ -234,10 +396,30 @@ A
 \end{problem}
 
 \begin{solution}
-短答案：
+建立空间直角坐标系，令 \(C=(0,0,0)\)，\(A=(a,0,0)\)，\(B=(0,a,0)\)，其中 \(a=AC=BC>0\)，并令竖直方向为 \(z\) 轴. 于是
+\(A_1=(a,0,2)\)，\(D=(0,0,1)\)，\(E=\left(\frac a2,\frac a2,1\right)\)，\(G=\left(\frac a3,\frac a3,\frac13\right)\).
+由题意，\(EG\) 垂直于平面 \(ABD\)，所以它分别垂直于 \(AB\) 和 \(AD\). 其中 \(\overrightarrow{AB}=(-a,a,0)\) 自动满足 \(\overrightarrow{EG}\cdot\overrightarrow{AB}=0\)，而
+\(\overrightarrow{EG}=\left(-\frac a6,-\frac a6,-\frac23\right)\)，\(\overrightarrow{AD}=(-a,0,1)\).
+因此 \(\overrightarrow{EG}\cdot\overrightarrow{AD}=\frac{a^2}{6}-\frac23=0\)，得 \(a=2\). 此时
+\(A=(2,0,0)\)，\(B=(0,2,0)\)，\(D=(0,0,1)\)，\(E=(1,1,1)\)，\(A_1=(2,0,2)\).
 \begin{enumerate}
-\item \(\arcsin\frac{\sqrt{2}}{3}\).
-\item \(\frac{\sqrt{6}}{3}\).
+\item 取平面 \(ABD\) 的法向量
+\[
+\bs n=\overrightarrow{AB}\times\overrightarrow{AD}=(2,2,4)
+\]
+而 \(\overrightarrow{A_1B}=(-2,2,-2)\). 设所成锐角为 \(\alpha\)，则
+\[
+\sin\alpha=\frac{|\overrightarrow{A_1B}\cdot\bs n|}{|\overrightarrow{A_1B}|\,|\bs n|}=\frac8{2\sqrt3\cdot2\sqrt6}=\frac{\sqrt2}{3}
+\]
+所以 \(\alpha=\arcsin\frac{\sqrt2}{3}\).
+\item 平面 \(AED\) 的一个法向量为
+\[
+\bs m=\overrightarrow{DE}\times\overrightarrow{DA}=(-1,1,-2)
+\]
+其方程为 \(-x+y-2z+2=0\). 因此点 \(A_1=(2,0,2)\) 到该平面的距离为
+\[
+\frac{|-2+0-4+2|}{\sqrt{(-1)^2+1^2+(-2)^2}}=\frac4{\sqrt6}=\frac{2\sqrt6}{3}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -246,7 +428,14 @@ A
 \end{problem}
 
 \begin{solution}
-短答案：\(\left(0,\frac{1}{2}\right]\cup[1,+\infty)\).
+因为 \(c>0\)，函数 \(y=c^x\) 在 \(\R\) 上单调递减当且仅当 \(0<c<1\)，所以命题 \(P\) 正确的充要条件是 \(0<c<1\). 对命题 \(Q\)，分情况讨论
+\[
+x+|x-2c|=\begin{cases}
+2c, & x<2c,\\
+2x-2c, & x\geqslant2c.
+\end{cases}
+\]
+故该函数在 \(\R\) 上的最小值为 \(2c\)，不等式的解集为 \(\R\) 当且仅当 \(2c>1\)，即 \(c>\frac12\). 因而 \(P\) 正确而 \(Q\) 不正确时，\(0<c\leqslant\frac12\)；\(P\) 不正确而 \(Q\) 正确时，\(c\geqslant1\). 所以 \(c\) 的取值范围为 \(\left(0,\frac12\right]\cup[1,+\infty)\).
 \end{solution}
 
 \begin{problem}
@@ -257,7 +446,19 @@ A
 \end{problem}
 
 \begin{solution}
-短答案：\(12\text{ 小时}\).
+以城市 \(O\) 为原点，正东方向为 \(x\) 轴正向，正北方向为 \(y\) 轴正向. 因为 \(\cos\theta=\frac{\sqrt2}{10}\)，所以台风中心初始坐标为
+\[
+P=(300\cos\theta,-300\sin\theta)=(30\sqrt2,-210\sqrt2)
+\]
+台风以 \(20\mathrm{~km}/\mathrm h\) 的速度向西偏北 \(45^{\circ}\) 移动，经过 \(t\) 小时后中心坐标为
+\[
+P_t=((30-10t)\sqrt2,(-210+10t)\sqrt2)
+\]
+此时台风半径为 \(60+10t\). 城市开始受到侵袭的临界条件是 \(OP_t=60+10t\)，因此
+\[
+2(30-10t)^2+2(210-10t)^2=(60+10t)^2
+\]
+化简得 \(t^2-36t+288=0\)，解得 \(t=12\) 或 \(t=24\). 开始受到侵袭对应较早的时刻，所以为 \(12\) 小时.
 \end{solution}
 
 \begin{problem}
@@ -268,14 +469,30 @@ A
 \end{problem}
 
 \begin{solution}
-短答案：
+建立直角坐标系，取 \(A=(-2,0)\)，\(B=(2,0)\)，\(C=(2,4a)\)，\(D=(-2,4a)\)，则 \(O=(0,0)\). 设
+\(k=\frac{BE}{BC}=\frac{CF}{CD}=\frac{DG}{DA}\)，\(0\leqslant k\leqslant1\).
+于是 \(E=(2,4ak)\)，\(F=(2-4k,4a)\)，\(G=(-2,4a-4ak)\). 设交点 \(P=(x,y)\). 由 \(P\in OF\) 和 \(P\in GE\)，分别得到
+\(y(1-2k)=2ax\)，\(y-2a=a(2k-1)x\).
+令 \(u=1-2k\)，则 \(-1\leqslant u\leqslant1\)，上式化为 \(uy=2ax\) 与 \(y-2a=-aux\). 消去 \(u\)，得到
 \[
-\begin{cases}
-\text{不存在符合条件的两个定点}, & a^{2}=\frac{1}{2},\\
-\text{定点为 }\left(-\sqrt{\frac{1}{2}-a^{2}},a\right)\text{、}\left(\sqrt{\frac{1}{2}-a^{2}},a\right)\text{，距离和为 }\sqrt{2}, & 0<a^{2}<\frac{1}{2},\\
-\text{定点为 }\left(0,a-\sqrt{a^{2}-\frac{1}{2}}\right)\text{、}\left(0,a+\sqrt{a^{2}-\frac{1}{2}}\right)\text{，距离和为 }2a, & a^{2}>\frac{1}{2}.
-\end{cases}
+2a^2x^2+(y-a)^2=a^2
 \]
+所以
+\[
+2x^2+\frac{(y-a)^2}{a^2}=1
+\]
+事实上，由 \(uy=2ax\) 和 \(y-2a=-aux\) 可进一步得到
+\(y=\frac{4a}{2+u^2}\)，\(x=\frac{2u}{2+u^2}\)，\(-1\leqslant u\leqslant1\)
+所以点 \(P\) 随 \(u\) 变化，在该曲线上连续地运动并形成一段非退化弧. 该曲线以 \((0,a)\) 为中心；当两个半轴不相等时，对椭圆弧上的点使用椭圆焦点定义即可得到距离和为定值.
+\begin{enumerate}
+\item 当 \(0<a^2<\frac12\) 时，长半轴为 \(\frac1{\sqrt2}\)，短半轴为 \(a\)，焦距的一半为 \(\sqrt{\frac12-a^2}\). 两个定点为
+\(\left(-\sqrt{\frac12-a^2},a\right)\)，\(\left(\sqrt{\frac12-a^2},a\right)\)
+距离和为两倍长半轴，即 \(\sqrt2\).
+\item 当 \(a^2=\frac12\) 时，轨迹方程化为 \(x^2+(y-a)^2=\frac12\)，且 \(P\) 仍在该圆的一段非退化弧上. 按本题通常约定，所说的两个定点应是彼此不同的点；若两个定点不同，距离和为定值的轨迹是以这两个点为焦点的非圆椭圆，不可能包含这段圆弧. 因此不存在符合题意的两个定点.
+\item 当 \(a^2>\frac12\) 时，长半轴为 \(a\)，短半轴为 \(\frac1{\sqrt2}\)，焦距的一半为 \(\sqrt{a^2-\frac12}\). 两个定点为
+\(\left(0,a-\sqrt{a^2-\frac12}\right)\)，\(\left(0,a+\sqrt{a^2-\frac12}\right)\)
+距离和为两倍长半轴，即 \(2a\).
+\end{enumerate}
 \end{solution}
 
 \section{附加题：解答题}
@@ -298,10 +515,17 @@ A
 \end{problem}
 
 \begin{solution}
-短答案：
+固定最大指数 \(t\)，该行的数为 \(2^t+2^s\)，其中 \(s=0\)，\(1\)，\(\ldots\)，\(t-1\). 该行最大值为 \(2^t+2^{t-1}=3\cdot2^{t-1}\)，下一行最小值为 \(2^{t+1}+1\)，且
+\[
+3\cdot2^{t-1}<2^{t+1}+1
+\]
+因此这些行正好按 \(t=1\)，\(2\)，\(3\)，\(\ldots\) 的顺序排列；第 \(t\) 行有 \(t\) 个数，且从左到右对应 \(s=0\)，\(1\)，\(\ldots\)，\(t-1\).
 \begin{enumerate}
-\item 第四行：\(17,18,20,24\)；第五行：\(33,34,36,40,48\).
-\item \(a_{100}=16640\).
+\item 第四行对应 \(t=4\)，各数为 \(2^4+2^0\)，\(2^4+2^1\)，\(2^4+2^2\)，\(2^4+2^3\)，即 \(17\)，\(18\)，\(20\)，\(24\). 第五行对应 \(t=5\)，各数为 \(33\)，\(34\)，\(36\)，\(40\)，\(48\).
+\item 前十三行共有 \(1+2+\cdots+13=91\) 个数，所以 \(a_{100}\) 是第十四行的第 \(9\) 个数. 第十四行按 \(s=0\)，\(1\)，\(\ldots\)，\(13\) 排列，第 \(9\) 个数对应 \(s=8\)，故
+\[
+a_{100}=2^{14}+2^8=16384+256=16640
+\]
 \end{enumerate}
 \end{solution}
 
@@ -310,5 +534,12 @@ A
 \end{problem}
 
 \begin{solution}
-短答案：\(k=145\).
+因为 \(1160=1024+128+8=2^{10}+2^7+2^3\)，所以 \(b_k\) 对应的三个指数为 \(3\)，\(7\)，\(10\). 最大指数小于 \(10\) 的数共有
+\[
+\mathrm C_{10}^3=120
+\]
+个，并且都小于 \(1160\). 最大指数等于 \(10\) 时，数形如 \(2^{10}+2^s+2^r\)，其中 \(0\leqslant r<s<10\). 要小于 \(1160\)，需满足 \(2^s+2^r<136\). 当 \(s\leqslant6\) 时有 \(1+2+\cdots+6=21\) 个；当 \(s=7\) 时需 \(2^r<8\)，有 \(r=0\)，\(1\)，\(2\) 共 \(3\) 个；当 \(s\geqslant8\) 时不可能. 因而小于 \(1160\) 的数共有 \(120+21+3=144\) 个，故
+\[
+k=144+1=145
+\]
 \end{solution}

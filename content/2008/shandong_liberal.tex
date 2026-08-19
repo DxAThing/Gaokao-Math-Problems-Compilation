@@ -16,6 +16,14 @@
 B
 \end{answer}
 
+\begin{solution}
+集合 \(M\) 必须含有 \(a_1\)、\(a_2\)，且不能含有 \(a_3\). 元素 \(a_4\) 可以取，也可以不取，因此
+\[
+M=\{a_1,a_2\}\quad\text{或}\quad M=\{a_1,a_2,a_4\}
+\]
+所以满足条件的集合共有 \(2\) 个，选 B.
+\end{solution}
+
 \begin{problem}
 设 \(z\) 的共轭复数是 \(\overline{z}\)，若 \(z + \overline{z} = 4\)，\(z\overline{z} = 8\)，则 \(\frac{\overline{z}}{z}\) 等于（\quad）
 
@@ -29,6 +37,24 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+设 \(z=x+y\i\)，则
+\[
+z+\overline{z}=2x=4
+\]
+，所以 \(x=2\). 又
+\[
+z\overline{z}=x^2+y^2=8
+\]
+给出 \(y^2=4\)，即 \(y=\pm2\). 于是 \(z=2\pm2\i\)，从而
+\[
+\frac{\overline z}{z}
+ =\frac{2\mp2\i}{2\pm2\i}
+ =\mp\i
+\]
+故 \(\frac{\overline z}{z}=\pm\i\)，选 D.
+\end{solution}
 
 \begin{problem}
 函数 \(y = \ln \cos x\)（\(-\frac{\pi}{2} < x < \frac{\pi}{2}\)）的图象是（\quad）
@@ -44,6 +70,14 @@ D
 A
 \end{answer}
 
+\begin{solution}
+在给定定义域内，
+\[
+f(-x)=\ln\cos(-x)=\ln\cos x=f(x)
+\]
+，所以图象关于 \(y\) 轴对称. 又因为 \(0<\cos x\leqslant1\)，所以 \(f(x)\leqslant0\)，且 \(f(0)=0\). 当 \(x\to\pm\frac{\pi}{2}\) 时，\(\cos x\to0^+\)，故 \(f(x)\to-\infty\). 因此图象在原点取得最大值，向两端均下降，符合选项 A.
+\end{solution}
+
 \begin{problem}
 给出命题：若函数 \( y = f(x) \) 是幂函数，则函数 \( y = f(x) \) 的图象不过第四象限. 在它的逆命题，否命题，逆否命题三个命题中，真命题的个数是（\quad）
 
@@ -57,6 +91,12 @@ A
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+设原命题为 \(P\Rightarrow Q\)，其中 \(P\) 表示“\(f\) 是幂函数”，\(Q\) 表示“图象不过第四象限”. 幂函数在其定义域内的图象不会出现 \(x>0\)，\(y<0\) 的点，因此原命题为真，故其逆否命题也为真.
+
+逆命题 \(Q\Rightarrow P\) 不成立，例如函数 \(y=x^2+1\) 的图象不过第四象限，但它不是幂函数. 否命题 \(\lnot P\Rightarrow\lnot Q\) 与逆命题等价，也为假. 因此三个命题中只有一个真命题，选 C.
+\end{solution}
 
 \begin{problem}
 设函数 \( f(x) = \begin{cases}
@@ -75,10 +115,15 @@ x^2 + x - 2, & x > 1,
 A
 \end{answer}
 
+\begin{solution}
+因 \(2>1\)，先用第二段定义计算，得 \(f(2)=2^2+2-2=4\)，所以 \(\frac{1}{f(2)}=\frac14\). 由于 \(\frac14\leqslant1\)，再用第一段定义，得 \(f\left(\frac14\right)=1-\left(\frac14\right)^2=\frac{15}{16}\).
+故选 A.
+\end{solution}
+
 \begin{problem}
 如图是一个几何体的三视图，根据图中数据，可得该几何体的表面积是（\quad）
 
-\bitmapinlinefigure[0.5\linewidth][max width=0.5\linewidth]{img/2008/shandong_liberal/q6_fig1.png}
+\bitmapfigure[max width=0.5\linewidth]{img/2008/shandong_liberal/q6_fig1.png}
 
 \choices
     {\(9\pi\)}
@@ -90,6 +135,15 @@ A
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+由三视图可知，该几何体由半径为 \(1\)、高为 \(3\) 的圆柱和半径为 \(1\) 的球组成，球与圆柱顶面相切，因此圆柱的两个底面均属于外表面. 故表面积为
+\[
+S_{\text{球}}+S_{\text{圆柱侧}}+2S_{\text{圆柱底}}
+ =4\pi+2\pi\cdot1\cdot3+2\pi\cdot1^2
+ =12\pi
+\] 故选 D.
+\end{solution}
 
 \begin{problem}
 不等式 \(\frac{x + 5}{(x - 1)^2} \geqslant 2\) 的解集（\quad）
@@ -105,6 +159,11 @@ D
 D
 \end{answer}
 
+\begin{solution}
+因为 \((x-1)^2>0\)（\(x\neq1\)），不等式等价于 \(x+5\geqslant2(x-1)^2\)，即 \(2x^2-5x-3\leqslant0\). 因式分解得 \((2x+1)(x-3)\leqslant0\)，所以 \(-\frac12\leqslant x\leqslant3\). 再去掉原式无意义的 \(x=1\)，解集为 \(\left[-\frac12,1\right)\cup(1,3]\).
+故选 D.
+\end{solution}
+
 \begin{problem}
 已知 \(a\)，\(b\)，\(c\) 为 \(\triangle ABC\) 的三个内角 \(A\)，\(B\)，\(C\) 的对边，向量 \(\bs{m} = (\sqrt{3}, -1)\)，\(\bs{n} = (\cos A, \sin A)\). 若 \(\bs{m} \perp \bs{n}\)，且 \(a \cos B + b \cos A = c \sin C\)，则角 \(A\)，\(B\) 的大小分别为（\quad）
 
@@ -118,6 +177,13 @@ D
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+由 \(\bs{m}\perp\bs{n}\)，得 \(\bs{m}\cdot\bs{n}=\sqrt3\cos A-\sin A=0\). 由于 \(0<A<\pi\)，所以 \(\tan A=\sqrt3\)，从而 \(A=\frac\pi3\).
+
+由正弦定理 \(a=2R\sin A\)，\(b=2R\sin B\)，\(c=2R\sin C\)，原等式化为 \(2R(\sin A\cos B+\sin B\cos A)=2R\sin^2C\). 左边为 \(2R\sin(A+B)=2R\sin C\)，故 \(\sin C=\sin^2C\). 三角形中 \(0<C<\pi\)，所以 \(\sin C>0\)，只能有 \(\sin C=1\)，即 \(C=\frac\pi2\). 于是 \(B=\pi-A-C=\frac\pi6\).
+故 \(A=\frac\pi3\)，\(B=\frac\pi6\)，选 C.
+\end{solution}
 
 \begin{problem}
 从某项综合能力测试中抽取 \(100\) 人的成绩，统计如表，则这 \(100\) 人成绩的标准差为（\quad）
@@ -141,6 +207,22 @@ C
 B
 \end{answer}
 
+\begin{solution}
+设成绩的平均数为 \(\overline{x}\)，则
+\[
+\overline{x}=\frac{5\cdot20+4\cdot10+3\cdot30+2\cdot30+1\cdot10}{100}=3
+\]
+方差为
+\[
+\frac{20(5-3)^2+10(4-3)^2+30(3-3)^2+30(2-3)^2+10(1-3)^2}{100}
+ =\frac{160}{100}=\frac85
+\]
+所以标准差为
+\[
+\sqrt{\frac85}=\frac{2\sqrt{10}}5
+\]选 B.
+\end{solution}
+
 \begin{problem}
 已知 \(\cos \left( \alpha - \frac{\pi}{6} \right) + \sin \alpha = \frac{4}{5} \sqrt{3}\)，则 \(\sin \left( \alpha + \frac{7\pi}{6} \right)\) 的值是（\quad）
 
@@ -154,6 +236,26 @@ B
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+展开已知等式，得
+\[
+\frac{\sqrt3}{2}\cos\alpha+\frac12\sin\alpha+\sin\alpha
+ =\frac{4\sqrt3}{5}
+\]
+两边乘以 \(\frac2{\sqrt3}\)，得到
+\[
+\cos\alpha+\sqrt3\sin\alpha=\frac85
+\]
+另一方面，
+\[
+\sin\left(\alpha+\frac{7\pi}{6}\right)
+ =-\frac12\cos\alpha-\frac{\sqrt3}{2}\sin\alpha
+ =-\frac12\left(\cos\alpha+\sqrt3\sin\alpha\right)
+ =-\frac45
+\]
+故选 C.
+\end{solution}
 
 \begin{problem}
 若圆 \(C\) 的半径为 \(1\)，圆心在第一象限，且与直线 \(4x - 3y = 0\) 和 \(x\) 轴相切，则该圆的标准方程是（\quad）
@@ -169,10 +271,18 @@ C
 B
 \end{answer}
 
+\begin{solution}
+设圆心为 \((h,k)\). 圆与 \(x\) 轴相切且半径为 \(1\)，圆心在第一象限，所以 \(k=1\). 又圆心到直线 \(4x-3y=0\) 的距离为 \(1\)，因此 \(\frac{|4h-3|}{5}=1\)，即 \(|4h-3|=5\). 解得 \(h=2\) 或 \(h=-\frac12\). 因圆心在第一象限，取 \(h=2\)，故圆的标准方程为
+\[
+(x-2)^2+(y-1)^2=1
+\]
+选 B.
+\end{solution}
+
 \begin{problem}
 已知函数 \( f(x)=\log_{a}(2^{x}+b-1) \)（\(a>0\)，\(a\neq1\)）的图象如图所示，则 \(a\)，\(b\) 满足的关系是（\quad）
 
-\bitmapinlinefigure[6.0cm][max width=6.0cm]{img/2008/shandong_liberal/q12_fig1.png}
+\bitmapfigure[max width=6.0cm]{img/2008/shandong_liberal/q12_fig1.png}
 
 \choices
     {\(0 < a^{-1} < b < 1\)}
@@ -185,6 +295,18 @@ B
 A
 \end{answer}
 
+\begin{solution}
+由图象单调递增，知 \(a>1\). 图象在 \(y\) 轴上的截距位于 \(-1\) 与 \(0\) 之间，所以
+\[
+-1< f(0)=\log_a b<0
+\]
+由于 \(a>1\) 时对数函数单调递增，且 \(\log_a(a^{-1})=-1\)、\(\log_a1=0\)，故
+\[
+a^{-1}<b<1
+\]
+结合 \(b>0\)，得到 \(0<a^{-1}<b<1\)，选 A.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -195,15 +317,43 @@ A
 \(\frac{x^{2}}{4} - \frac{y^{2}}{12} = 1\)
 \end{answer}
 
+\begin{solution}
+将圆方程配方，得
+\[
+(x-3)^2+(y-2)^2=5
+\]
+它与 \(x\) 轴的交点满足 \(y=0\)，故
+\[
+(x-3)^2+4=5
+\]交点为 \((2,0)\)、\((4,0)\). 当 \(x=0\) 时，圆方程化为 \(y^2-4y+8=0\)，其判别式为 \(-16\)，所以圆与 \(y\) 轴没有交点. 对于标准形式的水平双曲线，焦半距满足 \(c>a>0\)，因此只能取 \((2,0)\) 为双曲线的顶点、\((4,0)\) 为同一支的焦点，从而 \(a=2\)，\(c=4\). 由 \(c^2=a^2+b^2\)，得 \(b^2=16-4=12\). 所以标准方程为
+\[
+\frac{x^2}{4}-\frac{y^2}{12}=1
+\]
+\end{solution}
+
 \begin{problem}
 执行下面的程序框图，若 \(p = 0.8\)，则输出的 \(n =\)\fillinblank{}.
 
-\bitmapinlinefigure[0.72\linewidth][max width=0.72\linewidth]{img/2008/shandong_liberal/q14_fig1.png}
+\bitmapfigure[max width=0.72\linewidth]{img/2008/shandong_liberal/q14_fig1.png}
 \end{problem}
 
 \begin{answer}
 \(4\)
 \end{answer}
+
+\begin{solution}
+初始时 \(n=1\)，\(S=0\). 逐次判断并更新：
+\begin{center}
+\begin{tabular}{c|c|c}
+\(n\) & \(S\) & \(S<p?\) \\ \hline
+\(1\) & \(0\) & \(0<0.8\)，更新为 \(S=\frac12\)，\(n=2\) \\
+\(2\) & \(\frac12\) & \(\frac12<0.8\)，更新为 \(S=\frac34\)，\(n=3\) \\
+\(3\) & \(\frac34\) & \(\frac34<0.8\)，更新为 \(S=\frac34+\frac18=\frac78\)，\(n=4\) \\
+\(4\) & \(\frac78\) & \(\frac78=0.875>0.8\)，停止
+\end{tabular}
+\end{center}
+因此输出 \(n=4\).
+\end{solution}
 
 \begin{problem}
 已知 \( f(3^{x}) = 4x \log_{2} 3 + 233 \)，则 \( f(2) + f(4) + f(8) + \cdots + f(2^{8}) \) 的值等于\fillinblank{}.
@@ -212,6 +362,17 @@ A
 \begin{answer}
 \(2008\)
 \end{answer}
+
+\begin{solution}
+令 \(t=3^x\)，则 \(x=\log_3t\). 由换底公式，\(\log_2 3\cdot\log_3t=\log_2t\)，所以 \(f(t)=4\log_2t+233\).
+当 \(t=2^k\) 时，\(f(2^k)=4k+233\). 因此
+\[
+f(2)+f(4)+\cdots+f(2^8)
+=\sum_{k=1}^{8}(4k+233)
+=4\cdot\frac{8\cdot9}{2}+8\cdot233
+ =2008
+\]
+\end{solution}
 
 \begin{problem}
 设 \(x\)，\(y\) 满足约束条件 \(\begin{cases}
@@ -223,13 +384,18 @@ y \geqslant 0.
 \end{problem}
 
 \begin{answer}
-11
+\(11\)
 \end{answer}
+
+\begin{solution}
+约束条件给出可行域的边界 \(y=x+2\)，\(y=5x-10\)，\(x=0\)，\(y=0\). 其顶点为 \((0,0)\)、\((0,2)\)、两直线交点 \((3,5)\) 以及 \((2,0)\). 在这些顶点处计算目标函数 \(z=2x+y\)，所得值依次为 \(0\)，\(2\)，\(11\)，\(4\).
+线性目标函数在多边形顶点处取得最大值，所以最大值为 \(11\).
+\end{solution}
 
 \section{解答题}
 
 \begin{problem}
-已知函数 \( f(x) = \sqrt{3}\sin (\omega x + \varphi) - \cos (\omega x + \varphi) \)（\(0 < \varphi < \pi\)，\(\omega > 0\)）为偶函数，且函数 \( y = f(x) \) 图象的两相邻对称轴间的距离为 \( \frac{\pi}{2} \). 
+已知函数 \( f(x) = \sqrt{3}\sin (\omega x + \varphi) - \cos (\omega x + \varphi) \)（\(0 < \varphi < \pi\)，\(\omega > 0\)）为偶函数，且函数 \( y = f(x) \) 图象的两相邻对称轴间的距离为 \( \frac{\pi}{2} \).
 \begin{enumerate}
 \item 求 \( f\left(\frac{\pi}{8}\right) \) 的值；
 \item 将函数 \( y = f(x) \) 的图象向右平移 \( \frac{\pi}{6} \) 个单位后，得到函数 \( y = g(x) \) 的图象，求 \( g(x) \) 的单调递减区间.
@@ -238,13 +404,14 @@ y \geqslant 0.
 
 \begin{solution}
 \begin{enumerate}
-\item \(f\left(\frac{\pi}{8}\right)=\sqrt{2}\).
-\item \(g(x)\) 的单调递减区间为 \(\left[k\pi+\frac{\pi}{6},k\pi+\frac{2\pi}{3}\right]\)（\(k\in\Z\)）.
+\item 先合并同角三角函数，得 \(f(x)=2\sin\left(\omega x+\varphi-\frac{\pi}{6}\right)\). 令 \(\delta=\varphi-\frac\pi6\). 因 \(f\) 为偶函数，对任意 \(x\) 有 \(0=f(x)-f(-x)=4\cos\delta\sin(\omega x)\). 由于 \(\omega>0\)，这对任意 \(x\) 成立只能有 \(\cos\delta=0\). 又 \(-\frac\pi6<\delta<\frac{5\pi}6\)，故 \(\delta=\frac\pi2\)，从而 \(\varphi=\frac{2\pi}3\)，并且 \(f(x)=2\cos(\omega x)\). 函数 \(2\cos(\omega x)\) 的相邻对称轴间距为 \(\frac\pi\omega\)，所以 \(\frac\pi\omega=\frac\pi2\)，即 \(\omega=2\). 于是 \(f\left(\frac\pi8\right)=2\cos\frac\pi4=\sqrt2\).
+
+\item 图象向右平移 \(\frac\pi6\) 后，\(g(x)=f\left(x-\frac\pi6\right)=2\cos\left(2x-\frac\pi3\right)\)，从而 \(g'(x)=-4\sin\left(2x-\frac\pi3\right)\). 因此 \(g\) 递减当且仅当 \(\sin\left(2x-\frac\pi3\right)>0\)，即存在 \(k\in\Z\)，使 \(2k\pi<2x-\frac\pi3<(2k+1)\pi\). 所以 \(g(x)\) 的单调递减区间为 \(\left(k\pi+\frac\pi6,k\pi+\frac{2\pi}3\right)\). 按通常教材将端点并入单调区间的记法，写为 \(\left[k\pi+\frac\pi6,k\pi+\frac{2\pi}3\right]\)，其中 \(k\in\Z\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-现有 \(8\) 名奥运会志愿者，其中志愿者 \(A_{1}\)，\(A_{2}\)，\(A_{3}\) 通晓日语，\(B_{1}\)，\(B_{2}\)，\(B_{3}\) 通晓俄语，\(C_{1}\)，\(C_{2}\) 通晓韩语. 从中选出通晓日语，俄语和韩语的志愿者各 \(1\) 名，组成一个小组. 
+现有 \(8\) 名奥运会志愿者，其中志愿者 \(A_{1}\)，\(A_{2}\)，\(A_{3}\) 通晓日语，\(B_{1}\)，\(B_{2}\)，\(B_{3}\) 通晓俄语，\(C_{1}\)，\(C_{2}\) 通晓韩语. 从中选出通晓日语，俄语和韩语的志愿者各 \(1\) 名，组成一个小组.
 \begin{enumerate}
 \item 求 \(A_{1}\) 被选中的概率；
 \item 求 \(B_{1}\) 和 \(C_{1}\) 不全被选中的概率.
@@ -253,8 +420,10 @@ y \geqslant 0.
 
 \begin{solution}
 \begin{enumerate}
-\item \(\frac{1}{3}\).
-\item \(\frac{5}{6}\).
+\item 每个小组由一名日语、一名俄语和一名韩语志愿者组成，共有 \(3\cdot3\cdot2=18\) 个等可能的小组. 包含 \(A_1\) 时，俄语和韩语志愿者分别有 \(3\) 种和 \(2\) 种选法，共 \(6\) 个小组，因此 \(P(A_1\text{ 被选中})=\frac6{18}=\frac13\).
+
+\item 同时选中 \(B_1\)、\(C_1\) 时，日语志愿者有 \(3\) 种选法，所以该事件有 \(3\) 个小组，概率为 \(\frac3{18}=\frac16\). 因此 \(B_1\)、\(C_1\) 不全被选中的概率为
+\(1-\frac16=\frac56\).
 \end{enumerate}
 \end{solution}
 
@@ -265,13 +434,38 @@ y \geqslant 0.
 \item 求四棱锥 \(P-ABCD\) 的体积.
 \end{enumerate}
 
-\bitmapinlinefigure[0.40\linewidth][max width=0.40\linewidth]{img/2008/shandong_liberal/q19_fig1.png}
+\bitmapfigure[max width=0.40\linewidth]{img/2008/shandong_liberal/q19_fig1.png}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item 平面 \(MBD \perp\) 平面 \(PAD\).
-\item 四棱锥 \(P-ABCD\) 的体积为 \(16\sqrt{3}\).
+\item 由 \(BD=2AD=8\)，得 \(AD=4\)，\(BD=8\). 又 \(AB=4\sqrt5\)，故
+\[
+AB^2=(4\sqrt5)^2=80=4^2+8^2=AD^2+BD^2
+\]
+在三角形 \(ABD\) 中，由勾股定理的逆定理知 \(AD\perp BD\). 直线 \(BD\) 在平面 \(ABCD\) 内，且平面 \(PAD\perp\) 平面 \(ABCD\)，两平面的交线为 \(AD\)，所以平面 \(ABCD\) 内垂直于 \(AD\) 的直线 \(BD\) 垂直于平面 \(PAD\). 由于直线 \(BD\) 在平面 \(MBD\) 内，可得平面 \(MBD\perp\) 平面 \(PAD\).
+
+\item 先求底面面积. 建立平面直角坐标系，取 \(A=(0,0)\)、\(B=(4\sqrt5,0)\)，设 \(D=(u,h)\). 因 \(AB\parallel DC\) 且四边形为凸四边形，可取 \(C=(u+2\sqrt5,h)\). 由 \(AD=4\)、\(BD=8\)，有
+\[
+\begin{cases}
+u^2+h^2=16,\\
+(u-4\sqrt5)^2+h^2=64
+\end{cases}
+\]
+两式相减得 \(u=\frac4{\sqrt5}\)，代回得 \(h=\frac8{\sqrt5}\). 所以梯形 \(ABCD\) 的面积为
+\[
+S_{ABCD}=\frac{4\sqrt5+2\sqrt5}{2}\cdot\frac8{\sqrt5}=24
+\]
+等边三角形 \(PAD\) 的边长为 \(AD=4\). 设 \(O\) 为 \(AD\) 的中点，则
+\[
+PO=\sqrt{4^2-2^2}=2\sqrt3
+\]
+又 \(PO\perp AD\)，且 \(PO\) 在平面 \(PAD\) 内，故由两平面垂直的性质 \(PO\perp\) 平面 \(ABCD\)，它就是四棱锥的高. 因此
+\[
+V_{P-ABCD}=\frac13S_{ABCD}\cdot PO
+ =\frac13\cdot24\cdot2\sqrt3
+ =16\sqrt3
+\]
 \end{enumerate}
 \end{solution}
 
@@ -285,7 +479,7 @@ y \geqslant 0.
 \(a_7\) & \(a_8\) & \(a_9\) & \(a_{10}\)
 \end{tabular}
 \end{center}
-记表中的第一列数 \(a_1\)，\(a_2\)，\(a_4\)，\(a_7\)，\(\cdots\) 构成的数列为 \(\{b_n\}\)，\(b_1 = a_1 = 1\). \(S_n\) 为数列 \(\{b_n\}\) 的前 \(n\) 项和，且满足 \(\frac{2b_n}{b_n S_n - S_n^{2}} = 1\)（\(n \geqslant 2\)）. 
+记表中的第一列数 \(a_1\)，\(a_2\)，\(a_4\)，\(a_7\)，\(\cdots\) 构成的数列为 \(\{b_n\}\)，\(b_1 = a_1 = 1\). \(S_n\) 为数列 \(\{b_n\}\) 的前 \(n\) 项和，且满足 \(\frac{2b_n}{b_n S_n - S_n^{2}} = 1\)（\(n \geqslant 2\)）.
 \begin{enumerate}
 \item 证明数列 \(\left\{\frac{1}{S_n}\right\}\) 成等差数列，并求数列 \(\{b_n\}\) 的通项公式；
 \item 上表中，若从第三行起，每一行中的数按从左到右的顺序均构成等比数列，且公比为同一个正数. 当 \(a_{81} = -\frac{4}{91}\) 时，求上表中第 \(k\)（\(k \geqslant 3\)）行所有项和的和.
@@ -294,19 +488,41 @@ y \geqslant 0.
 
 \begin{solution}
 \begin{enumerate}
-\item 数列 \(\left\{\frac{1}{S_n}\right\}\) 是首项为 \(1\)、公差为 \(\frac{1}{2}\) 的等差数列，且
+\item 由 \(b_n=S_n-S_{n-1}\)，原条件可化为
+\[
+2b_n=b_nS_n-S_n^2=S_n(b_n-S_n)=-S_nS_{n-1}
+\]
+题设分式有意义，所以 \(S_n\neq0\). 若 \(S_{n-1}=0\)，上式将给出 \(b_n=0\)，进而 \(S_n=S_{n-1}+b_n=0\)，矛盾；故 \(S_nS_{n-1}\neq0\)，可以相除，得到
+\[
+\frac1{S_n}-\frac1{S_{n-1}}=\frac12
+\]
+而 \(S_1=b_1=1\)，所以 \(\left\{\frac1{S_n}\right\}\) 是首项为 \(1\)、公差为 \(\frac12\) 的等差数列，
+\[
+\frac1{S_n}=1+\frac{n-1}{2}=\frac{n+1}{2}
+\]
+于是 \(S_n=\frac2{n+1}\).
+
 \[
 b_n=\begin{cases}
 1, & n=1,\\
--\dfrac{2}{n(n+1)}, & n\geqslant 2.
+-\dfrac{2}{n(n+1)}, & n\geqslant 2
 \end{cases}
 \]
-\item 第 \(k\) 行所有项和为 \(\dfrac{2(1-2^k)}{k(k+1)}\)（\(k\geqslant 3\)）.
+\item 第 \(k\) 行的第一个数是 \(b_k\). 因为前 \(12\) 行共有
+\[
+1+2+\cdots+12=78
+\]
+项，而前 \(13\) 行共有 \(91\) 项，所以 \(a_{81}\) 是第 \(13\) 行从左数第 \(3\) 项. 由 \(b_{13}=-\frac1{91}\)，设各行公比为 \(q>0\)，则
+\[
+a_{81}=b_{13}q^2=-\frac4{91}
+\]
+从而 \(q^2=4\)，即 \(q=2\). 因此第 \(k\) 行的和为
+\(T_k=b_k(1+q+\cdots+q^{k-1}) =-\frac2{k(k+1)}(1+2+\cdots+2^{k-1}) =\frac{2(1-2^k)}{k(k+1)}\)，\((k\geqslant3)\)
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-设函数 \( f(x) = x^{2}\e^{x - 1} + ax^{3} + bx^{2} \)，已知 \( x = -2 \) 和 \( x = 1 \) 为 \( f(x) \) 的极值点. 
+设函数 \( f(x) = x^{2}\e^{x - 1} + ax^{3} + bx^{2} \)，已知 \( x = -2 \) 和 \( x = 1 \) 为 \( f(x) \) 的极值点.
 \begin{enumerate}
 \item 求 \(a\) 和 \(b\) 的值；
 \item 讨论 \( f(x) \) 的单调性；
@@ -316,14 +532,44 @@ b_n=\begin{cases}
 
 \begin{solution}
 \begin{enumerate}
-\item \(a=-\frac{1}{3}\)，\(b=-1\).
-\item \(f(x)\) 在 \((-2,0)\) 和 \((1,+\infty)\) 上单调递增，在 \((-\infty,-2)\) 和 \((0,1)\) 上单调递减.
-\item 对任意 \(x\in(-\infty,+\infty)\)，都有 \(f(x)\geqslant g(x)\).
+\item 求导得
+\[
+f'(x)=(x^2+2x)\e^{x-1}+3ax^2+2bx
+\]
+由于 \(-2\)、\(1\) 是极值点，必有 \(f'(-2)=f'(1)=0\). 代入得
+\[
+\begin{cases}
+12a-4b=0,\\
+3+3a+2b=0
+\end{cases}
+\]
+解得
+\(a=-\frac13\)，\(b=-1\)
+\item 代入 \(a\)、\(b\)，并因式分解：
+\[
+f'(x)=(x^2+2x)\e^{x-1}-x^2-2x
+=x(x+2)(\e^{x-1}-1)
+\]
+所以 \(f'(x)\) 的零点为 \(-2\)、\(0\)、\(1\). 按各因子的符号讨论，得
+\begin{center}
+\begin{tabular}{c|cccc}
+\(x\) & \((-\infty,-2)\) & \((-2,0)\) & \((0,1)\) & \((1,+\infty)\) \\ \hline
+\(f'(x)\) & \(-\) & \(+\) & \(-\) & \(+\)
+\end{tabular}
+\end{center}
+故 \(f\) 在 \((-\infty,-2)\)、\((0,1)\) 上单调递减，在 \((-2,0)\)、\((1,+\infty)\) 上单调递增.
+\item
+\[
+f(x)-g(x)
+=x^2\e^{x-1}-\frac13x^3-x^2-\left(\frac23x^3-x^2\right)
+=x^2(\e^{x-1}-x)
+\]
+令 \(h(x)=\e^{x-1}-x\)，则 \(h'(x)=\e^{x-1}-1\). 因此 \(h\) 在 \(x=1\) 处取得最小值，且 \(h(1)=0\)，从而 \(h(x)\geqslant0\). 又 \(x^2\geqslant0\)，所以对任意实数 \(x\)，都有 \(f(x)-g(x)\geqslant0\)，即 \(f(x)\geqslant g(x)\)，且等号当且仅当 \(x=0\) 或 \(x=1\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-已知曲线 \(C_1: \frac{|x|}{a} + \frac{|y|}{b} = 1\)（\(a > b > 0\)）所围成的封闭图形的面积为 \(4\sqrt{5}\)，曲线 \(C_1\) 的内切圆半径为 \(\frac{2\sqrt{5}}{3}\). 记 \(C_2\) 为以曲线 \(C_1\) 与坐标轴的交点为顶点的椭圆. 
+已知曲线 \(C_1: \frac{|x|}{a} + \frac{|y|}{b} = 1\)（\(a > b > 0\)）所围成的封闭图形的面积为 \(4\sqrt{5}\)，曲线 \(C_1\) 的内切圆半径为 \(\frac{2\sqrt{5}}{3}\). 记 \(C_2\) 为以曲线 \(C_1\) 与坐标轴的交点为顶点的椭圆.
 \begin{enumerate}
 \item 求椭圆 \(C_{2}\) 的标准方程；
 \item 设 \(AB\) 是过椭圆 \(C_{2}\) 中心的任意弦，\(l\) 是线段 \(AB\) 的垂直平分线. \(M\) 是 \(l\) 上异于椭圆中心的点.
@@ -336,11 +582,57 @@ b_n=\begin{cases}
 
 \begin{solution}
 \begin{enumerate}
-\item 椭圆 \(C_2\) 的标准方程为 \(\frac{x^2}{5}+\frac{y^2}{4}=1\).
+\item 曲线 \(C_1\) 与坐标轴的交点为 \((\pm a,0)\)、\((0,\pm b)\)，其围成的图形面积为 \(2ab\). 由面积公式，\(2ab=4\sqrt5\)，所以 \(ab=2\sqrt5\). 该菱形的边长为 \(\sqrt{a^2+b^2}\)，半周长为 \(2\sqrt{a^2+b^2}\)，故内切圆半径满足
+\[
+\frac{2ab}{2\sqrt{a^2+b^2}}=\frac{2\sqrt5}{3}
+\]
+代入 \(ab=2\sqrt5\)，得 \(a^2+b^2=9\). 于是 \(a^2\)、\(b^2\) 是方程
+\[
+t^2-9t+20=0
+\]
+的两个根，即 \(a^2=5\)，\(b^2=4\). 因此椭圆方程为
+\[
+\frac{x^2}{5}+\frac{y^2}{4}=1
+\]
 \item
 \begin{enumerate}
-\item 点 \(M\) 的轨迹方程为 \(\frac{x^2}{4}+\frac{y^2}{5}=\lambda^2\)（\(\lambda\neq 0\)）.
-\item \(\triangle AMB\) 的面积最小值为 \(\frac{40}{9}\).
+\item 设 \(A=(u,v)\)，则 \(B=(-u,-v)\)，且 \(u^2/5+v^2/4=1\). 因为 \(l\) 是 \(AB\) 的垂直平分线，所以 \(OM\perp OA\). 取垂直于 \(OA\) 的方向向量 \((-v,u)\)，由 \(|MO|=\lambda|OA|\) 可设
+\[
+M=\pm\lambda(-v,u)
+\]
+若 \(M=(x,y)\)，则 \(x^2=\lambda^2v^2\)、\(y^2=\lambda^2u^2\). 结合椭圆方程，得到
+\[
+\frac{x^2}{4}+\frac{y^2}{5}
+=\lambda^2\left(\frac{v^2}{4}+\frac{u^2}{5}\right)
+=\lambda^2
+\]
+故轨迹方程为 \(\frac{x^2}{4}+\frac{y^2}{5}=\lambda^2\)，其中 \(\lambda>0\).
+
+\item 设 \(M=(u,v)\)，则 \(u^2/5+v^2/4=1\). 弦 \(AB\) 所在直线过原点且垂直于 \(OM\)，其方向向量可取 \((-v,u)\). 令弦端点为 \(\pm t(-v,u)\)，代入椭圆方程得
+\[
+t^2\left(\frac{v^2}{5}+\frac{u^2}{4}\right)=1
+\]
+故
+\[
+AB=\frac{2\sqrt{u^2+v^2}}{\sqrt{v^2/5+u^2/4}}
+\]
+从而
+\[
+S_{\triangle AMB}=\frac{u^2+v^2}{\sqrt{v^2/5+u^2/4}}
+\]
+令 \(s=u^2\)，则 \(0\leqslant s\leqslant5\)，且由椭圆方程 \(v^2=4-\frac45s\). 于是
+\[
+S_{\triangle AMB}=\frac{2(20+s)}{\sqrt{80+9s}}
+\]
+令 \(H(s)=S_{\triangle AMB}^{\,2}=\dfrac{4(20+s)^2}{80+9s}\)，则
+\[
+H'(s)=\frac{4(20+s)(9s-20)}{(80+9s)^2}
+\]
+因为 \(20+s>0\) 且 \(80+9s>0\)，所以 \(H'(s)\) 的符号由 \(9s-20\) 决定，面积在 \(s=\frac{20}{9}\) 时取得最小值. 代入得
+\[
+S_{\min}=\frac{2\left(20+\frac{20}{9}\right)}{\sqrt{80+9\cdot\frac{20}{9}}}
+=\frac{40}{9}
+\]
 \end{enumerate}
 \end{enumerate}
 \end{solution}

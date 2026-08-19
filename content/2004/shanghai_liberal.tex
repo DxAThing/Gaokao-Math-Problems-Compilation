@@ -9,8 +9,13 @@
 \end{answer}
 
 \begin{solution}
-由正切和角公式，得
-\(\tan\left(\alpha+\frac{\pi}{4}\right)=\frac{\tan\alpha+\tan\frac{\pi}{4}}{1-\tan\alpha\tan\frac{\pi}{4}}=\frac{\frac{1}{2}+1}{1-\frac{1}{2}\cdot1}=3\).
+因为 \(\tan\dfrac{\pi}{4}=1\)，且
+\(1-\tan\alpha\tan\dfrac{\pi}{4}=1-\dfrac{1}{2}\ne0\)，所以由正切和角公式
+\[
+\tan\left(\alpha+\frac{\pi}{4}\right)
+=\frac{\tan\alpha+\tan\frac{\pi}{4}}{1-\tan\alpha\tan\frac{\pi}{4}}
+=\frac{\frac{1}{2}+1}{1-\frac{1}{2}}=3
+\]
 \end{solution}
 
 \begin{problem}
@@ -22,7 +27,10 @@
 \end{answer}
 
 \begin{solution}
-抛物线的顶点为 \(\left(2,0\right)\)，准线为 \(x=-1\)，所以顶点到准线的距离为 \(3\). 抛物线的焦点在顶点与准线相反的一侧，且与顶点的距离为 \(3\)，故焦点坐标为 \(\left(5,0\right)\).
+抛物线的轴垂直于准线，因此轴为 \(x\) 轴. 设焦点为 \(F\left(p,0\right)\)，则顶点是焦点与准线的中点，故
+\[
+\frac{p+(-1)}{2}=2
+\]解得 \(p=5\)，所以焦点坐标为 \(\left(5,0\right)\).
 \end{solution}
 
 \begin{problem}
@@ -34,7 +42,13 @@
 \end{answer}
 
 \begin{solution}
-因为 \(A\cap B=\{2\}\)，所以 \(2\in A\). 又 \(5\in A\) 且 \(5\ne2\)，故 \(2=\log_{2}(a+3)\)，从而 \(a+3=4\)，得 \(a=1\). 此时 \(A=\{2,5\}\). 为使 \(2\in B=\{1,b\}\)，必须有 \(b=2\)，因此 \(A\cup B=\{1,2,5\}\).
+由 \(A\cap B=\{2\}\)，知 \(2\in A\). 集合 \(A\) 的一个元素已经是 \(5\)，且 \(5\ne2\)，所以只能有
+\[
+\log_{2}(a+3)=2
+\]于是 \(a+3=2^2=4\)，得 \(a=1\)，并且 \(A=\{2,5\}\). 又因为 \(2\in B=\{1,b\}\)，故 \(b=2\). 因此
+\[
+A\cup B=\{1,2,5\}
+\]
 \end{solution}
 
 \begin{problem}
@@ -46,11 +60,18 @@
 \end{answer}
 
 \begin{solution}
-奇数项构成首项为 \(a_{1}\)、公比为 \(q^{2}=\frac{1}{4}\) 的等比数列，因此
+奇数项组成首项为 \(a_{1}\)、公比为
 \[
-\lim_{n\to\infty}\left(a_{1}+a_{3}+\cdots+a_{2n-1}\right)=\frac{a_{1}}{1-\frac{1}{4}}=\frac{4a_{1}}{3}.
+q^2=\left(-\frac{1}{2}\right)^2=\frac{1}{4}
 \]
-由题设 \(\frac{4a_{1}}{3}=\frac{8}{3}\)，解得 \(a_{1}=2\).
+的等比数列. 因此前 \(n\) 个奇数项的和为
+\[
+a_{1}+a_{3}+\cdots+a_{2n-1}
+=a_{1}\frac{1-(\frac14)^n}{1-\frac14}
+\]因为 \(\left|\frac14\right|<1\)，令 \(n\to\infty\) 得
+\[
+\frac{a_{1}}{1-\frac14}=\frac{4a_{1}}{3}=\frac{8}{3}
+\]所以 \(a_{1}=2\).
 \end{solution}
 
 \begin{problem}
@@ -64,7 +85,12 @@
 \end{answer}
 
 \begin{solution}
-由图可知，在 \([0,5]\) 上，函数在 \((0,2)\) 内为正，在 \(x=0\) 和 \(x=2\) 时为零，在 \((2,5]\) 内为负. 因为 \(f\) 是奇函数，当 \(x\in[-5,0]\) 时，\(f(x)<0\) 等价于 \(f(-x)>0\)，这给出 \(-2<x<0\). 合并正半轴上的解，得 \(x\in\left(-2,0\right)\cup\left(2,5\right]\).
+由题图，在 \([0,5]\) 上，\(f(0)=f(2)=0\)，且
+\(f(x)>0\)，\((0<x<2)\)，\(f(x)<0\)，\((2<x\leqslant5)\)
+当 \(-5\leqslant x<0\) 时，由奇函数性质 \(f(x)=-f(-x)\). 因而 \(f(x)<0\) 等价于 \(f(-x)>0\)，即 \(0<-x<2\)，所以 \(-2<x<0\). 结合正半轴上的解，并排除零点 \(-2\)，\(0\)，\(2\)，得
+\[
+x\in\left(-2,0\right)\cup\left(2,5\right]
+\]
 \end{solution}
 
 \begin{problem}
@@ -76,8 +102,13 @@
 \end{answer}
 
 \begin{solution}
-由 \(\overrightarrow{AB}=3\bs{a}\)，得 \(\overrightarrow{AB}=3\left(2,3\right)=\left(6,9\right)\). 又 \(\overrightarrow{AB}=\left(x_{B}+1,y_{B}-5\right)\)，所以 \(x_{B}+1=6\)，\(y_{B}-5=9\).
-解得 \(x_{B}=5\)，\(y_{B}=14\)，故 \(B\) 的坐标为 \(\left(5,14\right)\).
+由 \(\overrightarrow{AB}=3\bs{a}\)，先得
+\[
+\overrightarrow{AB}=3(2,3)=(6,9)
+\]设 \(B=(x_B,y_B)\)，则
+\[
+\overrightarrow{AB}=(x_B-(-1),y_B-5)=(x_B+1,y_B-5)
+\]比较对应坐标，得 \(x_B+1=6\)、\(y_B-5=9\)，从而 \(x_B=5\)、\(y_B=14\). 因此 \(B\) 的坐标为 \(\left(5,14\right)\).
 \end{solution}
 
 \begin{problem}
@@ -93,7 +124,11 @@ x + y \leqslant 8
 \end{answer}
 
 \begin{solution}
-由于目标函数为 \(k=3x-2y\)，在可行域内应先使 \(y\) 尽量小. 由 \(y\geqslant3\)，取 \(y=3\)；此时约束 \(x+y\leqslant8\) 给出 \(x\leqslant5\)，再结合 \(2\leqslant x\leqslant4\)，可取最大的 \(x=4\). 点 \((4,3)\) 满足全部约束，且 \(k_{\max}=3\cdot4-2\cdot3=6\).
+由约束条件 \(x\leqslant4\)、\(y\geqslant3\)，可得
+\[
+k=3x-2y\leqslant3\cdot4-2\cdot3=6
+\]
+点 \((4,3)\) 满足 \(2\leqslant x\leqslant4\)、\(y\geqslant3\) 以及 \(x+y=7\leqslant8\)，所以这个上界可以取得. 因此目标函数的最大值为 \(6\).
 \end{solution}
 
 \begin{problem}
@@ -105,8 +140,15 @@ x + y \leqslant 8
 \end{answer}
 
 \begin{solution}
-设圆心为 \(C\left(2,c\right)\). 因为 \(A\left(0,-4\right)\)、\(B\left(0,-2\right)\) 是圆与 \(y\) 轴的交点，圆心到两点的距离相等，故 \((c+4)^2=(c+2)^2\). 解得 \(c=-3\)，所以圆心为 \(\left(2,-3\right)\). 半径的平方为 \(CA^2=\left(0-2\right)^2+\left(-4+3\right)^2=5\).
-因此圆 \(C\) 的方程为 \(\left(x-2\right)^2+\left(y+3\right)^2=5\).
+设圆心为 \(C_0=(2,c)\)，因为圆心在直线 \(x=2\) 上. 由 \(A\)、\(B\) 都在圆上，半径相等，得
+\[
+(2-0)^2+(c+4)^2=(2-0)^2+(c+2)^2
+\]
+所以 \((c+4)^2=(c+2)^2\)，解得 \(c=-3\). 圆心为 \((2,-3)\)，半径平方为
+\[
+r^2=(2-0)^2+(-3+4)^2=5
+\]
+故圆的方程为 \(\left(x-2\right)^2+\left(y+3\right)^2=5\).
 \end{solution}
 
 \begin{problem}
@@ -118,11 +160,13 @@ x + y \leqslant 8
 \end{answer}
 
 \begin{solution}
-二项式展开式共有 \(11\) 项，任取一项时每一项被取到的概率相同. 由二项式定理，展开式为
+由二项式定理，\((x+1)^{10}\) 的第 \(k+1\) 项（\(k=0\)，\(1\)，\(\ldots\)，\(10\)）为
 \[
-(x+1)^{10}=x^{10}+10x^{9}+45x^{8}+120x^{7}+210x^{6}+252x^{5}+210x^{4}+120x^{3}+45x^{2}+10x+1.
+\mathrm C_{10}^{k}x^{10-k}
 \]
-其中系数为奇数的项是系数为 \(1\)、\(45\)、\(45\)、\(1\) 的四项，所以所求概率为 \(\frac{4}{11}\).
+所以共有 \(11\) 项，且任取一项时各项等可能. 各项系数依次为
+\(1\)，\(10\)，\(45\)，\(120\)，\(210\)，\(252\)，\(210\)，\(120\)，\(45\)，\(10\)，\(1\)
+其中奇数系数为 \(1\)，\(45\)，\(45\)，\(1\)，共 \(4\) 项，故所求概率为 \(\dfrac{4}{11}\).
 \end{solution}
 
 \begin{problem}
@@ -134,10 +178,22 @@ x + y \leqslant 8
 \end{answer}
 
 \begin{solution}
-若 \(b\leqslant0\)，则对所有 \(x\geqslant0\) 都有 \(x-b\geqslant0\)，于是 \(f(x)=a(x-b)+2=ax-ab+2\).
-要使它在 \([0,+\infty)\) 上为增函数，必须且只需 \(a>0\).
+分两种情况讨论.
 
-若 \(b>0\)，则在 \([0,b]\) 上有 \(f(x)=a(b-x)+2\)，在 \([b,+\infty)\) 上有 \(f(x)=a(x-b)+2\). 前一段递增要求 \(a<0\)，后一段递增要求 \(a>0\)，不可能同时成立. 因此实数的取值范围为 \(a>0\)，\(b\leqslant0\).
+当 \(b\leqslant0\) 时，对任意 \(x\geqslant0\)，都有 \(x-b\geqslant0\)，于是
+\[
+f(x)=a(x-b)+2=ax-ab+2
+\]
+该一次函数在 \([0,+\infty)\) 上严格递增，当且仅当 \(a>0\).
+
+当 \(b>0\) 时，在 \([0,b]\) 上
+\[
+f(x)=a(b-x)+2
+\]要递增需 \(-a>0\)，即 \(a<0\)；在 \([b,+\infty)\) 上
+\[
+f(x)=a(x-b)+2
+\]
+要递增需 \(a>0\). 两个条件不能同时成立. 因而实数的取值范围为 \(a>0\)，\(b\leqslant0\).
 \end{solution}
 
 \begin{problem}
@@ -149,7 +205,7 @@ x + y \leqslant 8
 \end{answer}
 
 \begin{solution}
-解析几何把点、直线和曲线等几何对象用坐标或方程表示，再通过代数运算研究它们的位置关系和性质. 因此这两章内容体现出的解析几何本质是用代数的方法研究图形的几何性质.
+解析几何先把点、直线、圆锥曲线等几何对象用坐标或方程表示，再利用代数运算研究这些对象的位置关系和几何性质. 因此其本质是用代数的方法研究图形的几何性质.
 \end{solution}
 
 \begin{problem}
@@ -170,15 +226,29 @@ x + y \leqslant 8
 \end{answer}
 
 \begin{solution}
-对第 \(\circled{1}\) 组，由 \(S_{1}=a_{1}\)、\(S_{2}=a_{1}+a_{2}\)，可得 \(a_{1}=S_{1}\)、\(a_{2}=S_{2}-S_{1}\). 当 \(a_{1}\ne0\) 时，\(q=a_{2}/a_{1}\)，从而整个数列唯一确定；当 \(a_{1}=0\) 时，等比数列的各项均为零，数列同样唯一确定.
+对第 \(\circled{1}\) 组，\(S_1=a_1\)，所以 \(a_1\) 已确定；又
+\[
+a_2=S_2-S_1
+\]
+若 \(a_1\ne0\)，则 \(q=a_2/a_1\)，从而首项和公比都确定. 若 \(a_1=0\)，则等比数列的每一项都为零，数列仍唯一确定. 因此第 \(\circled{1}\) 组一定可以唯一确定数列.
 
-第 \(\circled{2}\) 组不能唯一确定数列. 例如取 \(a_{2}=1\)、\(S_{3}=4\)，则 \(a_{1}q=1\)，且 \(a_{1}+q+1=4\)，即 \(a_{1}+q=3\). 因此 \(a_{1}\)、\(q\) 可以分别为 \(\frac{3+\sqrt{5}}{2}\)、\(\frac{3-\sqrt{5}}{2}\)，也可以交换二者，得到两个不同的等比数列.
+第 \(\circled{2}\) 组不一定能唯一确定. 例如取 \(a_2=1\)、\(S_3=4\). 由 \(a_1q=1\) 及
+\[
+S_3=a_1+a_1q+a_1q^2=a_1+1+q=4
+\]
+得 \(a_1+q=3\)、\(a_1q=1\). 因而 \(a_1\)、\(q\) 是方程 \(t^2-3t+1=0\) 的两个根，可以交换，得到两个不同的等比数列.
 
-第 \(\circled{3}\) 组也不能保证唯一. 例如当 \(n=3\)、\(a_{1}=1\)、\(a_{3}=1\) 时，公比可以为 \(q=1\) 或 \(q=-1\)，所得数列分别为 \(1,1,1,\ldots\) 和 \(1,-1,1,\ldots\).
+第 \(\circled{3}\) 组也不一定能唯一确定. 取允许的 \(n=3\)，并令 \(a_1=a_3=1\). 此时 \(q^2=1\)，所以 \(q=1\) 或 \(q=-1\)，分别得到 \(1\)，\(1\)，\(1\)，\(\ldots\) 和 \(1\)，\(-1\)，\(1\)，\(\ldots\)，数列不唯一.
 
-对第 \(\circled{4}\) 组，已知 \(q\) 和 \(a_{n}\)，由 \(a_{n}=a_{1}q^{n-1}\) 得
-\(a_{1}=\frac{a_{n}}{q^{n-1}}\).
-于是首项和公比都确定，数列唯一确定. 所以符合要求的组号为 \(\circled{1}\)、\(\circled{4}\).
+对第 \(\circled{4}\) 组，按等比数列公比的定义 \(q\ne0\). 已知 \(q\) 和 \(a_n\)，由
+\[
+a_n=a_1q^{n-1}
+\]
+得
+\[
+a_1=\frac{a_n}{q^{n-1}}
+\]
+因此首项和公比均确定，整个数列唯一确定. 所以符合要求的组号为 \(\circled{1}\)、\(\circled{4}\).
 \end{solution}
 
 \section{单选题}
@@ -197,9 +267,9 @@ B
 \end{answer}
 
 \begin{solution}
-直线 \(l\perp\beta\) 时，直线 \(l\) 的方向垂直于平面 \(\beta\) 内任意与其相交的直线. 又因为 \(\alpha\parallel\beta\)，两平面的法线方向相同，所以 \(l\perp\alpha\)，选项 B 正确.
+若 \(l\perp\beta\)，则 \(l\) 的方向是平面 \(\beta\) 的法线方向. 当 \(\alpha\parallel\beta\) 时，平面 \(\alpha\) 与 \(\beta\) 的法线方向相同，所以 \(l\) 也垂直于 \(\alpha\)，选项 B 正确.
 
-其他选项不一定成立. 例如取 \(\beta:z=0\)、\(\alpha:y=0\)，则两平面垂直. 取直线 \(l:y=1,z=0\)，它在 \(\beta\) 内但不垂直于 \(\alpha\)，故 A 错；取 \(l:x=0,y=0\)，它垂直于 \(\beta\) 但包含在 \(\alpha\) 内，故 C 错；取交线 \(m:y=z=0\) 及直线 \(l:y=0,z=1\)，虽有 \(l\parallel m\)，但 \(l\) 包含在 \(\alpha\) 内而不是平行于 \(\alpha\)，故 D 错.
+其余命题不一定成立. 例如取 \(\beta:z=0\)、\(\alpha:y=0\)，则 \(\alpha\perp\beta\). 取 \(l:y=1\)，\(z=0\)，有 \(l\subset\beta\)，但 \(l\) 的方向平行于 \(\alpha\)，不垂直于 \(\alpha\)，所以第一项不成立. 取 \(l:x=0\)，\(y=0\)，则 \(l\perp\beta\)，但 \(l\subset\alpha\)，不满足 \(l\parallel\alpha\)，所以第三项不成立. 对第四项，取交线 \(m:y=z=0\)，再取 \(l:y=0\)，\(z=1\)，则 \(l\parallel m\)，但 \(l\subset\alpha\)，而不是与 \(\alpha\) 无公共点的平行直线，所以第四项也不成立. 因此正确选项为 B.
 \end{solution}
 
 \begin{problem}
@@ -217,7 +287,13 @@ C
 \end{answer}
 
 \begin{solution}
-由 \(\sin\left(\frac{\pi}{2}-x\right)=\cos x\)，原方程化为 \(2\cos x=1\)，即 \(\cos x=\frac{1}{2}\). 因此 \(x=2k\pi\pm\frac{\pi}{3}\)，\(k\in\Z\)，故解集对应选项 C.
+利用余函数关系 \(\sin\left(\frac{\pi}{2}-x\right)=\cos x\)，原方程化为
+\[
+2\cos x=1,\qquad\text{即}\qquad \cos x=\frac{1}{2}
+\]
+余弦值为 \(\frac12\) 的所有实数解为
+\(x=2k\pi\pm\frac{\pi}{3}\)，\(k\in\Z\).
+这正是选项 C 所表示的解集，故选 C.
 \end{solution}
 
 \begin{problem}
@@ -235,8 +311,17 @@ A
 \end{answer}
 
 \begin{solution}
-关于直线 \(x-y=0\)，即 \(y=x\) 对称等价于取反函数. 对 \(y=\lg(x+1)\)，有 \(x=\lg(y+1)\Longleftrightarrow 10^{x}=y+1\Longleftrightarrow y=10^{x}-1\).
-所以 \(f(x)=10^{x}-1\)，选项 A 正确.
+直线 \(x-y=0\) 即 \(y=x\). 图象关于 \(y=x\) 对称后，横、纵坐标互换，因此所得函数是原函数的反函数. 由
+\[
+y=\lg(x+1)
+\]
+交换变量并求解，得
+\[
+x=\lg(y+1)
+\Longleftrightarrow 10^x=y+1
+\Longleftrightarrow y=10^x-1
+\]
+所以 \(f(x)=10^x-1\)，对应选项 A.
 \end{solution}
 
 \begin{problem}
@@ -276,10 +361,23 @@ B
 \end{answer}
 
 \begin{solution}
-用应聘人数与招聘人数的比值衡量就业形势时，比值越小，表示竞争相对越小，就业形势越好. 由于表格分别列出前五名，未列入应聘人数前五名的行业，其应聘人数不超过 \(65280\)；未列入招聘人数前五名的行业，其招聘人数不超过 \(70436\).
+设某行业的应聘人数与招聘人数之比为 \(r\). \(r\) 越小，表示同一招聘岗位对应的竞争人数越少，因而就业形势越好. 由表格的“前 5 个”可知，未进入应聘人数前五名的行业，其应聘人数不超过 \(65280\)；未进入招聘人数前五名的行业，其招聘人数不超过 \(70436\).
 
-对建筑行业和物流行业，建筑行业的比值满足 \(\frac{\text{建筑应聘人数}}{76516}\leqslant\frac{65280}{76516}\)，而物流行业的比值满足 \(\frac{74570}{\text{物流招聘人数}}\geqslant\frac{74570}{70436}\).
-又因为 \(\frac{65280}{76516}<\frac{74570}{70436}\)，所以建筑行业的比值一定小于物流行业，就业形势一定好于物流行业. 其他选项均涉及未列出的行业数据，或由表中比值不能推出“最紧张”，故选 B.
+建筑行业未列入应聘人数前五名，但招聘人数为 \(76516\)，所以
+\[
+r_{\text{建筑}}\leqslant\frac{65280}{76516}
+\]
+物流行业的应聘人数为 \(74570\)，但未列入招聘人数前五名，所以
+\[
+r_{\text{物流}}\geqslant\frac{74570}{70436}
+\]
+而
+\[
+\frac{65280}{76516}<\frac{74570}{70436}
+\]
+故无论两个未列出的实际人数如何，均有 \(r_{\text{建筑}}<r_{\text{物流}}\)，建筑行业就业形势一定好于物流行业.
+
+其余选项都涉及至少一个未列出的人数，或者仅凭表中数据不能推出“最紧张”的全体比较，因此不能保证成立. 故选 B.
 \end{solution}
 
 \section{解答题}
@@ -288,16 +386,30 @@ B
 \end{problem}
 
 \begin{solution}
-由 \((1+\i)z_{1}=-1+5\i\)，得
+由 \((1+\i)z_1=-1+5\i\)，两边同除以 \(1+\i\)，并乘以共轭复数 \(1-\i\)，得
 \[
-z_{1}=\frac{-1+5\i}{1+\i}=\frac{\left(-1+5\i\right)\left(1-\i\right)}{\left(1+\i\right)\left(1-\i\right)}=2+3\i.
+z_1=\frac{-1+5\i}{1+\i}
+=\frac{(-1+5\i)(1-\i)}{(1+\i)(1-\i)}
+=\frac{4+6\i}{2}=2+3\i
 \]
-又因为 \(z_{2}=a-2-\i\)，所以 \(\overline{z_{2}}=a-2+\i\)，从而
+又 \(z_2=a-2-\i\)，所以 \(\overline{z_2}=a-2+\i\). 从而
 \[
-z_{1}-\overline{z_{2}}=\left(2+3\i\right)-\left(a-2+\i\right)=4-a+2\i.
+z_1-\overline{z_2}
+=(2+3\i)-(a-2+\i)=4-a+2\i
 \]
-因此 \(\left|z_{1}-\overline{z_{2}}\right|^{2}=(4-a)^{2}+4\)，而 \(|z_{1}|^{2}=2^{2}+3^{2}=13\). 原不等式等价于 \((4-a)^{2}+4<13\)，
-即 \((a-4)^{2}<9\). 所以 \(1<a<7\).
+利用复数模的平方公式，原不等式等价于
+\[
+\left|z_1-\overline{z_2}\right|^2<|z_1|^2
+\]
+即
+\[
+(4-a)^2+2^2<2^2+3^2
+\]
+化简得 \((a-4)^2<9\)，所以
+\[
+-3<a-4<3
+\]
+即 \(1<a<7\).
 \end{solution}
 
 \begin{problem}
@@ -308,29 +420,51 @@ z_{1}-\overline{z_{2}}=\left(2+3\i\right)-\left(a-2+\i\right)=4-a+2\i.
 \end{problem}
 
 \begin{solution}
-原件在本题中同时把 \(x\)、\(y\) 的单位写成 \(\mathrm{m}\)，把总面积写成 \(8 \mathrm{~cm}^{2}\)，两者量纲不一致. 结合题目要求精确到 \(0.001 \mathrm{~m}\) 以及原题数值解的量级，以下按题设数值条件理解为总面积为 \(8 \mathrm{~m}^{2}\)，并保留题干原件的单位表述.
+原 PDF 将 \(x\)、\(y\) 的单位写为 \(\mathrm{m}\)，却将总面积写为 \(8\mathrm{~cm}^{2}\)，这造成量纲矛盾. 结合题目要求精确到 \(0.001\mathrm{~m}\) 及公开答案的数值，以下按原题的数值条件将总面积按 \(8\mathrm{~m}^{2}\) 计算，并保留原题单位矛盾说明.
 
-设上部等腰直角三角形的斜边为 \(x\)，则两条直角边均为 \(\dfrac{x}{\sqrt{2}}\)，所以框架围成的面积满足
+由图可知，上部等腰直角三角形的底边是矩形的上边，长度为 \(x\)，且该底边是斜边. 因此三角形的两条直角边均为 \(\dfrac{x}{\sqrt2}\)，其面积为
 \[
-xy+\frac{1}{2}\left(\frac{x}{\sqrt{2}}\right)^{2}=xy+\frac{x^{2}}{4}=8.
+\frac12\left(\frac{x}{\sqrt2}\right)^2=\frac{x^2}{4}
 \]
-由于 \(x>0\)，得 \(y=\dfrac{8}{x}-\dfrac{x}{4}\). 框架用料包括矩形的四条边和三角形的两条斜边，故用料长度
+框架围成的总面积为
 \[
-L=2x+2y+2\cdot\frac{x}{\sqrt{2}}=\left(2+\sqrt{2}\right)x+2y=\left(\frac{3}{2}+\sqrt{2}\right)x+\frac{16}{x}.
+xy+\frac{x^2}{4}=8
 \]
-由基本不等式，
+由于 \(x>0\)，可表示为
 \[
-L\geqslant2\sqrt{\left(\frac{3}{2}+\sqrt{2}\right)x\cdot\frac{16}{x}},
+y=\frac8x-\frac{x}{4}
 \]
-当且仅当 \(\left(\frac{3}{2}+\sqrt{2}\right)x=\dfrac{16}{x}\) 时取等号. 因此
-\(x=\frac{4}{\sqrt{\frac{3}{2}+\sqrt{2}}}=8-4\sqrt{2}\)，\(y=\frac{8}{x}-\frac{x}{4}=2\sqrt{2}\).
-所以当 \(x\approx2.343 \mathrm{~m}\)，\(y\approx2.828 \mathrm{~m}\) 时，用料最省.
+同时 \(y>0\) 要求 \(0<x<4\sqrt2\).
+
+用料长度包括矩形四条边和三角形的两条斜边，矩形上边与三角形底边重合，不重复计算. 因而
+\[
+L=2x+2y+2\cdot\frac{x}{\sqrt2}
+=(2+\sqrt2)x+2y
+=\left(\frac32+\sqrt2\right)x+\frac{16}{x}
+\]
+令 \(A=\frac32+\sqrt2>0\)，则由基本不等式
+\[
+L=Ax+\frac{16}{x}\geqslant2\sqrt{16A}=8\sqrt A
+\]
+等号成立的条件为 \(Ax=\dfrac{16}{x}\)，即
+\[
+x=\frac4{\sqrt A}
+=\frac4{\sqrt{\frac32+\sqrt2}}
+=8-4\sqrt2
+\]
+代回面积约束，得
+\[
+y=\frac8x-\frac{x}{4}=2\sqrt2
+\]
+这两个值满足 \(0<x<4\sqrt2\)，所以确实可取到最小值. 数值上
+\(x\approx2.343\mathrm{~m}\)，\(y\approx2.828\mathrm{~m}\).
+故用料最省时，\(x=2.343\mathrm{~m}\)、\(y=2.828\mathrm{~m}\)（精确到 \(0.001\mathrm{~m}\)）.
 \end{solution}
 
 \begin{problem}
 记函数 \(f(x) = \sqrt{2 - \frac{x + 3}{x + 1}}\) 的定义域为 \(A\)，\(g(x) = \lg\left[\left(x - a - 1\right)\left(2a - x\right)\right]\)（\(a < 1\)）的定义域为 \(D\).
 
-\begin{enumerate}[itemsep=0pt,topsep=0pt]
+\begin{enumerate}
 \item 求 \(A\)；
 \item 若 \(B \subseteq A\)，求实数 \(a\) 的取值范围.
 \end{enumerate}
@@ -338,22 +472,40 @@ L\geqslant2\sqrt{\left(\frac{3}{2}+\sqrt{2}\right)x\cdot\frac{16}{x}},
 
 \begin{solution}
 \begin{enumerate}
-\item 由根式有意义且分母不为零，得 \(2-\frac{x+3}{x+1}=\frac{x-1}{x+1}\geqslant0\)，且 \(x\ne-1\).
-由符号变化可知 \(x<-1\) 或 \(x\geqslant1\)，所以
-\(A=\left(-\infty,-1\right)\cup\left[1,+\infty\right)\).
+\item 根式有意义要求
+\[
+2-\frac{x+3}{x+1}\geqslant0
+\]
+同时分母要求 \(x\ne-1\). 化简根式内的式子，得
+\[
+2-\frac{x+3}{x+1}=\frac{x-1}{x+1}
+\]
+在数轴上考察关键点 \(-1\)、\(1\)：当 \(x<-1\) 或 \(x\geqslant1\) 时，\(\dfrac{x-1}{x+1}\geqslant0\)，而 \(-1<x<1\) 时该式小于零. 因此
+\[
+A=\left(-\infty,-1\right)\cup\left[1,+\infty\right)
+\]
 
-\item 题目第二问中的 \(B\) 指 \(g(x)\) 的定义域，题干前一行将该定义域记为 \(D\). 由对数真数为正，得 \((x-a-1)(2a-x)>0\).
-因为 \(a<1\)，所以 \(2a<a+1\)，从而该不等式的解集为
-\(D=\left(2a,a+1\right)\).
-要使 \(D\subseteq A\)，开区间 \(D\) 必须完全落在 \(\left(-\infty,-1\right)\) 或 \(\left[1,+\infty\right)\) 中. 前一种情形要求 \(a+1\leqslant-1\)，即 \(a\leqslant-2\)；后一种情形要求 \(2a\geqslant1\)，即 \(a\geqslant\dfrac{1}{2}\). 结合 \(a<1\)，得实数 \(a\) 的取值范围为
-\(\left(-\infty,-2\right]\cup\left[\frac{1}{2},1\right)\).
+\item 题干前文把 \(g(x)\) 的定义域记为 \(D\)，第二问却写成 \(B\subseteq A\). 以下按第二问中的 \(B\) 指 \(g(x)\) 的定义域 \(D\) 处理. 由对数真数必须为正，得
+\[
+(x-a-1)(2a-x)>0
+\]
+因 \(a<1\)，有 \(2a<a+1\)，所以该不等式的解集为
+\[
+D=\left(2a,a+1\right)
+\]
+要使 \(D\subseteq A\)，由于 \(D\) 是一个区间而 \(A\) 是两段互不相交的集合，\(D\) 只能完全落在 \((-\infty,-1)\) 或 \([1,+\infty)\) 中.
+
+若 \(D\subset(-\infty,-1)\)，需 \(a+1\leqslant-1\)，即 \(a\leqslant-2\). 若 \(D\subset[1,+\infty)\)，需 \(2a\geqslant1\)，即 \(a\geqslant\dfrac12\). 再结合 \(a<1\)，得到
+\[
+a\in\left(-\infty,-2\right]\cup\left[\frac12,1\right)
+\]
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
 如图，直线 \(y = \frac{1}{2}x\) 与抛物线 \(y = \frac{1}{8}x^2 - 4\) 交于 \(A\)，\(B\) 两点，线段 \(AB\) 的垂直平分线与直线 \(y = -5\) 交于 \(Q\) 点.
 
-\begin{enumerate}[itemsep=0pt,topsep=0pt]
+\begin{enumerate}
 \item 求点 \(Q\) 的坐标；
 \item 当 \(P\) 为抛物线上位于线段 \(AB\) 下方（含 \(A\)，\(B\)）的动点时，求 \(\triangle OPQ\) 面积的最大值.
 \end{enumerate}
@@ -365,23 +517,47 @@ L\geqslant2\sqrt{\left(\frac{3}{2}+\sqrt{2}\right)x\cdot\frac{16}{x}},
 \begin{enumerate}
 \item 联立直线与抛物线方程，得
 \[
-\frac{x}{2}=\frac{x^{2}}{8}-4\Longleftrightarrow x^{2}-4x-32=0\Longleftrightarrow\left(x-8\right)\left(x+4\right)=0.
+\frac{x}{2}=\frac{x^2}{8}-4
+\Longleftrightarrow x^2-4x-32=0
+\Longleftrightarrow (x-8)(x+4)=0
 \]
-所以 \(A\left(-4,-2\right)\)，\(B\left(8,4\right)\)，线段 \(AB\) 的中点为 \(M\left(2,1\right)\). 直线 \(AB\) 的斜率为 \(\dfrac{1}{2}\)，故其垂直平分线为 \(y-1=-2(x-2)\)，
-即 \(y=-2x+5\). 令 \(y=-5\)，得 \(x=5\)，所以 \(Q\left(5,-5\right)\).
-
-\item 设 \(P\left(x,\dfrac{x^{2}}{8}-4\right)\). 因为 \(P\) 位于线段 \(AB\) 下方（含端点），所以 \(-4\leqslant x\leqslant8\). 直线 \(OQ\) 的方程为 \(x+y=0\)，于是
+对应的交点为 \(A=(-4,-2)\)、\(B=(8,4)\)，其中点为
 \[
-S_{\triangle OPQ}=\frac{1}{2}\left|-5x-5\left(\frac{x^{2}}{8}-4\right)\right|=\frac{5}{2}\left|\frac{(x+4)^{2}}{8}-6\right|.
+M=\left(\frac{-4+8}{2},\frac{-2+4}{2}\right)=(2,1)
 \]
-当 \(-4\leqslant x\leqslant8\) 时，\(\dfrac{(x+4)^{2}}{8}-6\) 的取值范围为 \([-6,12]\)，故其绝对值的最大值为 \(12\). 因此 \(\triangle OPQ\) 面积的最大值为 \(\dfrac{5}{2}\times12=30\)，此时 \(x=8\)，即 \(P=B\).
+直线 \(AB\) 的斜率为 \(\frac12\)，故其垂直平分线斜率为 \(-2\)，方程为
+\[
+y-1=-2(x-2),\qquad\text{即}\qquad y=-2x+5
+\]
+令 \(y=-5\)，解得 \(x=5\)，所以 \(Q=(5,-5)\).
+
+\item 设动点
+\[
+P=\left(x,\frac{x^2}{8}-4\right)
+\]
+抛物线与弦 \(AB\) 的差为
+\[
+\left(\frac{x^2}{8}-4\right)-\frac{x}{2}
+=\frac{(x-8)(x+4)}{8}
+\]
+所以点在弦 \(AB\) 下方（含端点）等价于 \(-4\leqslant x\leqslant8\). 由 \(O=(0,0)\)、\(Q=(5,-5)\)，三角形面积为
+\[
+S_{\triangle OPQ}
+=\frac12\left|\begin{vmatrix}x&\frac{x^2}{8}-4\\5&-5\end{vmatrix}\right|
+=\frac52\left|x+\frac{x^2}{8}-4\right|
+=\frac52\left|\frac{(x+4)^2}{8}-6\right|
+\]
+当 \(-4\leqslant x\leqslant8\) 时，\((x+4)^2/8\) 的取值范围为 \([0,18]\)，故括号内的量取遍 \([-6,12]\). 其绝对值最大为 \(12\)，在 \(x=8\) 时取得. 因此
+\[
+S_{\triangle OPQ,\max}=\frac52\cdot12=30
+\]
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
 如图，\(P-ABC\) 是底面边长为 \(1\) 的正三棱锥，\(D\)，\(E\)，\(F\) 分别为棱长 \(PA\)，\(PB\)，\(PC\) 上的点，截面 \(DEF \parallel\) 底面 \(ABC\)，且棱台 \(DEF-ABC\) 与棱锥 \(P-ABC\) 的棱长和相等.（棱长和是指多面体中所有棱的长度之和）
 
-\begin{enumerate}[itemsep=0pt,topsep=0pt]
+\begin{enumerate}
 \item 证明： \(P-ABC\) 为正四面体；
 \item 若 \(PD = \frac{1}{2}PA\)，求二面角 \(D-BC-A\) 的大小.（结果用反三角函数值表示）
 \item 设棱台 \(DEF-ABC\) 的体积为 \(V\)，是否存在体积为 \(V\) 且各棱长均相等的直平行六面体，使得它与棱台 \(DEF-ABC\) 有相同的棱长和？ 若存在，请具体构造出这样的一个直平行六面体，并给出证明；若不存在，请说明理由.
@@ -394,26 +570,84 @@ S_{\triangle OPQ}=\frac{1}{2}\left|-5x-5\left(\frac{x^{2}}{8}-4\right)\right|=\f
 \begin{enumerate}
 \item 设正三棱锥的侧棱长为 \(s\)，并令
 \[
-t=\frac{PD}{PA}=\frac{PE}{PB}=\frac{PF}{PC}.
+t=\frac{PD}{PA}=\frac{PE}{PB}=\frac{PF}{PC}
 \]
-由截面平行于底面，三角形 \(DEF\) 与三角形 \(ABC\) 相似，所以 \(DE=EF=FD=t\)，且 \(AD=BE=CF=(1-t)s\). 因为截面位于棱锥内部，\(0<t<1\). 棱台的棱长和为 \(3\cdot1+3t+3(1-t)s\)，棱锥的棱长和为 \(3+3s\). 由题设二者相等，得 \(3+3t+3(1-t)s=3+3s\Longrightarrow3t(1-s)=0\).
-结合 \(0<t<1\)，可得 \(s=1\). 于是正三棱锥的六条棱长均为 \(1\)，所以 \(P-ABC\) 为正四面体.
-
-\item 取 \(BC\) 的中点 \(M\). 由于三角形 \(ABC\) 和三角形 \(PBC\) 都是边长为 \(1\) 的等边三角形，有 \(MA=MP=\frac{\sqrt{3}}{2}\). 又因为 \(PD=\dfrac{1}{2}PA\)，所以 \(D\) 是 \(PA\) 的中点. 由 \(PB=PC\)、\(AB=AC\) 以及中线定理，得 \(DB=DC\)，所以 \(DM\perp BC\). 在等腰三角形 \(AMP\) 中，\(MD\) 是底边 \(AP\) 上的中线，也是顶角 \(\angle AMP\) 的角平分线. 由余弦定理，\(AP^{2}=AM^{2}+PM^{2}-2AM\cdot PM\cos\angle AMP\)，即 \(1=\frac{3}{4}+\frac{3}{4}-\frac{3}{2}\cos\angle AMP\)，所以 \(\cos\angle AMP=\frac{1}{3}\). 因为 \(AM\perp BC\)，且 \(DM\perp BC\)，所以 \(\angle DMA\) 是二面角 \(D-BC-A\) 的平面角. 因此 \(\angle DMA=\frac{1}{2}\arccos\frac{1}{3}=\arcsin\frac{\sqrt{3}}{3}\).
-
-\item 由相似体积比，设正四面体 \(P-ABC\) 的体积为 \(V_{0}\)，则 \(V=V_{0}(1-t^{3})\)，其中 \(V_{0}=\frac{1}{3}\cdot\frac{\sqrt{3}}{4}\cdot\sqrt{\frac{2}{3}}=\frac{\sqrt{2}}{12}\). 所以 \(0<V<\dfrac{\sqrt{2}}{12}\)，从而 \(0<8V<\dfrac{2\sqrt{2}}{3}<1\). 令 \(\theta=\arcsin(8V)\). 在空间中取三个向量 \(\bs{u}=\left(\frac{1}{2},0,0\right)\)、\(\bs{v}=\left(\frac{1}{2}\cos\theta,\frac{1}{2}\sin\theta,0\right)\)、\(\bs{w}=\left(0,0,\frac{1}{2}\right)\)，
-以它们为从同一顶点出发的三条棱构造直平行六面体. 三个向量的长度均为 \(\dfrac{1}{2}\)，且 \(\bs{w}\) 垂直于底面，所以这是各棱长均为 \(\dfrac{1}{2}\) 的直平行六面体. 它的棱长和为 \(12\times\dfrac{1}{2}=6\)，而体积为
+因为截面 \(DEF\parallel ABC\)，由相似三角形得相似比为 \(t\)，从而
 \[
-\left|\bs{u}\times\bs{v}\cdot\bs{w}\right|=\frac{1}{8}\sin\theta=\frac{1}{8}\sin\left(\arcsin(8V)\right)=V.
+DE=EF=FD=t\cdot1=t
 \]
-因此存在满足条件的直平行六面体，上述构造即为所求.
+以及
+\[
+AD=BE=CF=(1-t)s
+\]
+截面位于棱锥内部，所以 \(0<t<1\). 棱台的棱长和为
+\[
+3\cdot1+3t+3(1-t)s
+\]
+棱锥的棱长和为 \(3+3s\). 根据题设，
+\[
+3+3t+3(1-t)s=3+3s
+\Longleftrightarrow 3t(1-s)=0
+\]
+由于 \(t>0\)，得 \(s=1\). 底面三条棱长本来均为 \(1\)，所以正三棱锥的六条棱长均为 \(1\)，即 \(P-ABC\) 为正四面体.
+
+\item 取 \(BC\) 的中点 \(M\). 由第（1）问，\(P-ABC\) 是边长为 \(1\) 的正四面体，所以三角形 \(ABC\)、\(PBC\) 都是边长为 \(1\) 的等边三角形，进而
+\[
+AM=PM=\frac{\sqrt3}{2}
+\]
+又 \(PD=\dfrac12PA\)，故 \(D\) 是 \(PA\) 的中点. 在等腰三角形 \(PBC\) 中，\(PM\perp BC\)；在等腰三角形 \(ABC\) 中，\(AM\perp BC\). 由于 \(PB=PC\)、\(AB=AC\)，且 \(PA\) 为公共边，所以 \(\triangle PAB\cong\triangle PAC\). 全等关系把 \(B\) 对应到 \(C\)，而 \(D\) 是公共边 \(PA\) 的中点，故 \(DB=DC\)，从而 \(DM\perp BC\). 因而 \(\angle DMA\) 是二面角 \(D-BC-A\) 的平面角.
+
+在等腰三角形 \(AMP\) 中，\(D\) 是底边 \(AP\) 的中点，所以 \(MD\) 也是顶角 \(\angle AMP\) 的角平分线. 由余弦定理，
+\[
+AP^2=AM^2+PM^2-2AM\cdot PM\cos\angle AMP
+\]
+即
+\[
+1=\frac34+\frac34-\frac32\cos\angle AMP
+\]
+所以
+\[
+\cos\angle AMP=\frac13
+\]
+于是
+\[
+\sin\angle DMA
+=\sin\left(\frac12\angle AMP\right)
+=\sqrt{\frac{1-\cos\angle AMP}{2}}
+=\frac{\sqrt3}{3}
+\]
+因此二面角的大小为 \(\arcsin\dfrac{\sqrt3}{3}\).
+
+\item 由相似体积比，设正四面体 \(P-ABC\) 的体积为 \(V_0\)，则棱锥 \(P-DEF\) 与 \(P-ABC\) 的相似比为 \(t\)，所以
+\[
+V=V_0-t^3V_0=V_0(1-t^3)
+\]
+正四面体的高为 \(\sqrt{\frac23}\)，底面面积为 \(\frac{\sqrt3}{4}\)，故
+\[
+V_0=\frac13\cdot\frac{\sqrt3}{4}\cdot\sqrt{\frac23}=\frac{\sqrt2}{12}
+\]
+由于 \(0<t<1\)，有
+\(0<V<\frac{\sqrt2}{12}\)，\(0<8V<\frac{2\sqrt2}{3}<1\).
+令 \(\theta=\arcsin(8V)\)，则 \(0<\theta<\frac{\pi}{2}\). 在空间中取
+\(\bs u=\left(\frac12,0,0\right)\)，\(\bs v=\left(\frac12\cos\theta,\frac12\sin\theta,0\right)\)，\(\bs w=\left(0,0,\frac12\right)\).
+以同一顶点为起点，以 \(\bs u\)，\(\bs v\)，\(\bs w\) 为三条棱构造平行六面体. 三个向量长度均为 \(\frac12\)，且 \(\bs w\) 垂直于 \(\bs u\)，\(\bs v\) 所在的底面，所以该平行六面体是直平行六面体，且各棱长均为 \(\frac12\). 它的棱长和为
+\[
+12\cdot\frac12=6
+\]
+其体积为
+\[
+\left|(\bs u\times\bs v)\cdot\bs w\right|
+=\frac18\sin\theta
+=\frac18\sin\left(\arcsin(8V)\right)=V
+\]
+故这样的直平行六面体存在，上述构造同时满足体积和棱长和条件.
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
 设 \(P_{1}\left(x_{1},y_{1}\right)\)，\(P_{2}\left(x_{2},y_{2}\right)\)，\(\cdots\)，\(P_{n}\left(x_{n},y_{n}\right)\)（\(n \geqslant 3\)，\(n \in \N\)）是二次曲线 \(C\) 上的点，且 \(a_{1} = |OP_{1}|^{2}\)，\(a_{2} = |OP_{2}|^{2}\)，\(\cdots\)，\(a_{n} = |OP_{n}|^{2}\) 构成了一个公差为 \(d\)（\(d \neq 0\)）的等差数列，其中 \(O\) 是坐标原点. 记 \(S_{n} = a_{1} + a_{2} + \cdots + a_{n}\).
 
-\begin{enumerate}[itemsep=0pt,topsep=0pt]
+\begin{enumerate}
 \item 若 \(C\) 的方程为 \(\frac{x^2}{9} - y^2 = 1\)，\(n = 3\). 点 \(P_{1}\left(3,0\right)\) 及 \(S_{3} = 162\)，求点 \(P_{3}\) 的坐标；（只需写出一个）
 \item 若 \(C\) 的方程为 \(y^{2} = 2px\)（\(p \neq 0\)）. 点 \(P_{1}\left(0,0\right)\)，对于给定的自然数 \(n\)，证明： \((x_{1} + p)^{2}\)，\((x_{2} + p)^{2}\)，\(\cdots\)，\((x_{n} + p)^{2}\) 成等差数列；
 \item 若 \(C\) 的方程为 \(\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\)（\(a > b > 0\)）. 点 \(P_{1}\left(a,0\right)\)，对于给定的自然数 \(n\)，当公差 \(d\) 变化时，求 \(S_{n}\) 的最小值.
@@ -422,29 +656,94 @@ t=\frac{PD}{PA}=\frac{PE}{PB}=\frac{PF}{PC}.
 
 \begin{solution}
 \begin{enumerate}
-\item 因为 \(P_{1}\left(3,0\right)\)，所以 \(a_{1}=|OP_{1}|^{2}=3^{2}=9\). 等差数列的前三项和为 \(S_{3}=\frac{3}{2}\left(a_{1}+a_{3}\right)\). 故 \(162=\dfrac{3}{2}(9+a_{3})\)，解得 \(a_{3}=99\). 又因为 \(P_{3}\) 在双曲线 \(\dfrac{x^{2}}{9}-y^{2}=1\) 上，所以 \(x_{3}^{2}-9y_{3}^{2}=9\)，\(x_{3}^{2}+y_{3}^{2}=99\). 两式相减，得 \(10y_{3}^{2}=90\)，即 \(y_{3}^{2}=9\)，从而 \(x_{3}^{2}=90\). 因此点 \(P_{3}\) 可以取为 \(\left(3\sqrt{10},3\right)\).
+\item 因为 \(P_1=(3,0)\)，所以
+\[
+a_1=|OP_1|^2=3^2=9
+\]
+对前三项等差数列，
+\[
+S_3=\frac32(a_1+a_3)
+\]
+代入 \(S_3=162\)，得
+\(162=\frac32(9+a_3)\)，\(a_3=99\).
+设 \(P_3=(x_3,y_3)\). 由点在双曲线 \(\dfrac{x^2}{9}-y^2=1\) 上，
+\[
+x_3^2-9y_3^2=9
+\]
+又由 \(a_3=|OP_3|^2\)，
+\[
+x_3^2+y_3^2=99
+\]
+两式相减得 \(10y_3^2=90\)，所以 \(y_3^2=9\)，再得 \(x_3^2=90\). 取正号即可得到一个符合条件的点
+\[
+P_3=(3\sqrt{10},3)
+\]
 
-\item 对任意 \(1\leqslant k\leqslant n\)，由 \(P_{k}\) 在抛物线 \(y^{2}=2px\) 上，得
+\item 对任意 \(1\leqslant k\leqslant n\)，因为 \(P_k\) 在抛物线 \(y^2=2px\) 上，所以
 \[
-a_{k}=|OP_{k}|^{2}=x_{k}^{2}+y_{k}^{2}=x_{k}^{2}+2px_{k}=(x_{k}+p)^{2}-p^{2}.
+y_k^2=2px_k
 \]
-又因为 \(P_{1}\left(0,0\right)\)，所以 \(a_{1}=0\). 由 \(a_{1},a_{2},\cdots,a_{n}\) 成等差数列，得 \(a_{k}=(k-1)d\). 于是 \((x_{k}+p)^{2}=p^{2}+a_{k}=p^{2}+(k-1)d\). 因此 \((x_{1}+p)^{2}\)，\((x_{2}+p)^{2}\)，\(\cdots\)，\((x_{n}+p)^{2}\) 是首项为 \(p^{2}\)、公差为 \(d\) 的等差数列.
+于是
+\[
+a_k=|OP_k|^2=x_k^2+y_k^2=x_k^2+2px_k=(x_k+p)^2-p^2
+\]
+又 \(P_1=(0,0)\)，故 \(a_1=0\). 由于 \(a_1\)，\(a_2\)，\(\ldots\)，\(a_n\) 是公差为 \(d\) 的等差数列，
+\[
+a_k=a_1+(k-1)d=(k-1)d
+\]
+因此
+\[
+(x_k+p)^2=p^2+a_k=p^2+(k-1)d
+\]
+右端关于 \(k\) 是首项为 \(p^2\)、公差为 \(d\) 的等差式，故
+\((x_1+p)^2\)，\((x_2+p)^2\)，\(\ldots\)，\((x_n+p)^2\) 成等差数列.
 
-\item 由椭圆方程，点 \(P_{i}\) 的坐标满足 \(\frac{x_{i}^{2}}{a^{2}}+\frac{y_{i}^{2}}{b^{2}}=1\). 因为 \(a>b>0\)，可得
+\item 对椭圆上的任意点 \(P_i=(x_i,y_i)\)，有
 \[
-|OP_{i}|^{2}=x_{i}^{2}+y_{i}^{2}=a^{2}-\frac{a^{2}-b^{2}}{b^{2}}y_{i}^{2}\leqslant a^{2},
+\frac{x_i^2}{a^2}+\frac{y_i^2}{b^2}=1
 \]
-同理可得 \(|OP_{i}|^{2}\geqslant b^{2}\). 所以每一项都满足 \(b^{2}\leqslant a_{i}\leqslant a^{2}\). 又因 \(P_{1}\left(a,0\right)\)，有 \(a_{1}=a^{2}\)，故等差数列的公差必须满足 \(d<0\) 且 \(a^{2}+(n-1)d=a_{n}\geqslant b^{2}\)，即 \(d\geqslant\dfrac{b^{2}-a^{2}}{n-1}\). 于是
+由 \(x_i^2=a^2\left(1-\dfrac{y_i^2}{b^2}\right)\)，得
 \[
-S_{n}=na^{2}+\frac{n(n-1)}{2}d\geqslant na^{2}+\frac{n(n-1)}{2}\cdot\frac{b^{2}-a^{2}}{n-1}=\frac{n}{2}\left(a^{2}+b^{2}\right).
+a_i=x_i^2+y_i^2
+=a^2-\frac{a^2-b^2}{b^2}y_i^2\leqslant a^2
 \]
-当 \(d=\dfrac{b^{2}-a^{2}}{n-1}\) 时，数列各项从 \(a^{2}\) 等差递减到 \(b^{2}\)，每一项均属于 \([b^{2},a^{2}]\). 对任意 \(r\in[b^{2},a^{2}]\)，取椭圆参数方程 \(x=a\cos t\)、\(y=b\sin t\)，则
+由 \(y_i^2=b^2\left(1-\dfrac{x_i^2}{a^2}\right)\) 可得
 \[
-|OP|^{2}=x^{2}+y^{2}=a^{2}\cos^{2}t+b^{2}\sin^{2}t=b^{2}+(a^{2}-b^{2})\cos^{2}t,
+a_i=x_i^2+y_i^2=b^2+\frac{a^2-b^2}{a^2}x_i^2\geqslant b^2
 \]
-随着 \(\cos^{2}t\) 在 \([0,1]\) 内取值，该平方距离可以取得 \([b^{2},a^{2}]\) 内的每一个数. 因而上述等差数列的每一项都能由椭圆上的点实现，下界能够取得. 故 \(S_{n}\) 的最小值为
+所以
 \[
-\boxed{\frac{n}{2}\left(a^{2}+b^{2}\right)}.
+b^2\leqslant a_i\leqslant a^2
+\]
+而 \(P_1=(a,0)\)，故 \(a_1=a^2\). 因 \(d\ne0\)，若 \(d>0\) 则 \(a_2>a_1=a^2\)，与上界矛盾，所以 \(d<0\). 又
+\[
+a_n=a^2+(n-1)d\geqslant b^2
+\]
+从而
+\[
+d\geqslant\frac{b^2-a^2}{n-1}
+\]
+等差数列前 \(n\) 项和为
+\[
+S_n=na^2+\frac{n(n-1)}2d
+\]
+由于系数 \(\frac{n(n-1)}2>0\)，\(S_n\) 在允许的 \(d\) 中随 \(d\) 增大而增大，因此最小值在
+\[
+d=\frac{b^2-a^2}{n-1}
+\]
+时取得，并且
+\[
+S_n\geqslant na^2+\frac{n(n-1)}2\cdot\frac{b^2-a^2}{n-1}
+=\frac n2(a^2+b^2)
+\]
+最后说明等号可取. 在椭圆参数方程 \(x=a\cos t\)、\(y=b\sin t\) 下，
+\[
+|OP|^2=a^2\cos^2t+b^2\sin^2t
+=b^2+(a^2-b^2)\cos^2t
+\]
+当 \(\cos^2t\) 在 \([0,1]\) 内变化时，\(|OP|^2\) 可取得 \([b^2,a^2]\) 内每一个值. 当公差取上述值时，数列各项从 \(a^2\) 等差递减到 \(b^2\)，每一项都能由椭圆上的点实现，所以该下界确实取得. 因此
+\[
+\boxed{S_{n,\min}=\frac n2(a^2+b^2)}
 \]
 \end{enumerate}
 \end{solution}

@@ -16,6 +16,14 @@
 C
 \end{answer}
 
+\begin{solution}
+由全集定义，\(\complement_U B=\{3,4,5\}\)，所以
+\[
+A\cap\left(\complement_U B\right)=\{2,3,4\}\cap\{3,4,5\}=\{3,4\}
+\]
+因此选 C.
+\end{solution}
+
 \begin{problem}
 等比数列 \(\{a_n\}\) 中，\(a_4 = 4\)，则 \(a_2 \cdot a_6\) 等于（\quad）
 
@@ -29,6 +37,14 @@ C
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+设等比数列的公比为 \(q\). 由 \(a_4=a_2q^2\)，\(a_6=a_4q^2\)，得
+\[
+a_2a_6=a_2a_4q^2=a_4^2=4^2=16
+\]
+因此选 C.
+\end{solution}
 
 \begin{problem}
 \(\sin 15^\circ \cos 75^\circ + \cos 15^\circ \sin 105^\circ\) 等于（\quad）
@@ -44,6 +60,15 @@ C
 D
 \end{answer}
 
+\begin{solution}
+利用诱导公式，\(\cos75^\circ=\sin15^\circ\)，\(\sin105^\circ=\cos15^\circ\). 因而
+\[
+\sin15^\circ\cos75^\circ+\cos15^\circ\sin105^\circ
+=\sin^2 15^\circ+\cos^2 15^\circ=1
+\]
+因此选 D.
+\end{solution}
+
 \begin{problem}
 “\(|x| < 2\)”是“\(x^2 - x - 6 < 0\)”的（\quad）
 
@@ -58,6 +83,14 @@ D
 A
 \end{answer}
 
+\begin{solution}
+由 \(|x|<2\) 得 \(-2<x<2\). 又
+\[
+x^2-x-6=(x-3)(x+2)
+\]
+所以 \(x^2-x-6<0\) 的解集为 \((-2,3)\). 因此 \(|x|<2\) 能推出 \(x^2-x-6<0\)，但反之不成立，例如 \(x=\frac52\) 满足 \(-2<x<3\)，却不满足 \(|x|<2\). 故前者是后者的充分而不必要条件，选 A.
+\end{solution}
+
 \begin{problem}
 函数 \(f(x) = \sin \left( 2x + \frac{\pi}{3} \right)\) 的图象（\quad）
 
@@ -71,6 +104,17 @@ A
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+对任意实数 \(u\)，有
+\[
+f\left(\frac{\pi}{3}+u\right)=\sin\left(\pi+2u\right)=-\sin2u
+\]
+\[
+f\left(\frac{\pi}{3}-u\right)=\sin\left(\pi-2u\right)=\sin2u
+\]
+两式相加为零，故图象上这两个横坐标相反于 \(\frac{\pi}{3}\) 的点的纵坐标也相反，它们的中点为 \(\left(\frac{\pi}{3},0\right)\). 因此图象关于点 \(\left(\frac{\pi}{3},0\right)\) 对称，选 A.
+\end{solution}
 
 \begin{problem}
 如图，在正方体 \(ABCD - A_1B_1C_1D_1\) 中，\(E\)，\(F\)，\(G\)，\(H\) 分别为 \(AA_1\)，\(AB\)，\(BB_1\)，\(B_1C_1\) 的中点，则异面直线 \(EF\) 与 \(GH\) 所成的角等于（\quad）
@@ -88,6 +132,20 @@ A
 B
 \end{answer}
 
+\begin{solution}
+取正方体棱长为 \(2\)，建立直角坐标系：
+\(A=(0,0,0)\)，\(B=(2,0,0)\)，\(C=(2,2,0)\)，\(D=(0,2,0)\)
+且 \(A_1=(0,0,2)\)，\(B_1=(2,0,2)\)，\(C_1=(2,2,2)\). 于是
+\(E=(0,0,1)\)，\(F=(1,0,0)\)，\(G=(2,0,1)\)，\(H=(2,1,2)\).
+取两直线的方向向量
+\(\overrightarrow{EF}=(1,0,-1)\)，\(\overrightarrow{GH}=(0,1,1)\).
+它们的内积为 \(-1\)，长度均为 \(\sqrt2\). 设异面直线所成的锐角为 \(\theta\)，则
+\[
+\cos\theta=\frac{|\overrightarrow{EF}\cdot\overrightarrow{GH}|}{|\overrightarrow{EF}|\,|\overrightarrow{GH}|}=\frac{1}{2}
+\]
+所以 \(\theta=60^\circ\)，选 B.
+\end{solution}
+
 \begin{problem}
 已知 \(f(x)\) 为 \(\R\) 上的减函数，则满足 \(f\left( \frac{1}{x} \right) > f(1)\) 的实数 \(x\) 的取值范围是（\quad）
 
@@ -101,6 +159,18 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+因 \(f\) 在 \(\R\) 上为减函数，故
+\[
+f\left(\frac1x\right)>f(1)\Longleftrightarrow \frac1x<1
+\]
+同时必须有 \(x\neq0\). 当 \(x<0\) 时，不等式 \(\frac1x<1\) 恒成立；当 \(x>0\) 时，等价于 \(x>1\). 因此
+\[
+x\in(-\infty,0)\cup(1,+\infty)
+\]
+选 D.
+\end{solution}
 
 \begin{problem}
 对于向量 \(\bs{a}\)，\(\bs{b}\)，\(\bs{c}\) 和实数 \(\lambda\)，下列命题中真命题的是（\quad）
@@ -116,6 +186,12 @@ D
 B
 \end{answer}
 
+\begin{solution}
+若 \(\lambda\bs{a}=0\) 且 \(\lambda\neq0\)，则两边同除以非零实数 \(\lambda\)，得到 \(\bs{a}=0\)，所以必有 \(\lambda=0\) 或 \(\bs{a}=0\)，命题 B 正确.
+
+命题 A 不成立，例如取 \(\bs{a}=(1,0)\)，\(\bs{b}=(0,1)\)，则 \(\bs{a}\cdot\bs{b}=0\)，但两向量都不是零向量. 命题 C 仅能说明两向量长度相等，例如上述两个向量长度相等，却既不相等也不互为相反向量. 命题 D 也不成立，例如取 \(\bs{a}=(1,0)\)，\(\bs{b}=(0,1)\)，\(\bs{c}=(0,2)\)，则 \(\bs{a}\cdot\bs{b}=\bs{a}\cdot\bs{c}=0\)，但 \(\bs{b}\neq\bs{c}\). 因此选 B.
+\end{solution}
+
 \begin{problem}
 已知 \(m\)，\(n\) 为两条不同的直线，\(\alpha\)，\(\beta\) 为两个不同的平面，则下列命题中正确的是（\quad）
 
@@ -129,6 +205,12 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+命题 D 中，若 \(n\parallel m\) 且 \(n\perp\alpha\)，则与 \(n\) 平行的直线 \(m\) 也垂直于平面 \(\alpha\)，所以 D 正确.
+
+其余命题均不能成立. 例如在 \(\alpha:z=0\)，\(\beta:y=0\) 时，取 \(m:y=1\)，\(z=0\) 和 \(n:y=2\)，\(z=0\)，则 \(m\)，\(n\subset\alpha\) 且都平行于 \(\beta\)，但 \(\alpha\) 与 \(\beta\) 相交，故 A 不成立. 取 \(\alpha:z=0\)，\(\beta:z=1\)，再取 \(m\) 为 \(\alpha\) 内的 \(x\) 轴、\(n\) 为 \(\beta\) 内的 \(y\) 轴，则 \(m\) 与 \(n\) 不平行，故 B 不成立. 对 C，取 \(m\) 为 \(z\) 轴，\(\alpha:z=0\)，取 \(n\) 为 \(\alpha\) 内的 \(x\) 轴，则 \(m\perp\alpha\) 且 \(m\perp n\)，但 \(n\subset\alpha\) 而不是 \(n\parallel\alpha\). 因此选 D.
+\end{solution}
 
 \begin{problem}
 以双曲线 \(x^2 - y^2 = 2\) 的右焦点为圆心，且与其右准线相切的圆的方程是（\quad）
@@ -144,6 +226,22 @@ D
 B
 \end{answer}
 
+\begin{solution}
+双曲线可写为
+\[
+\frac{x^2}{2}-\frac{y^2}{2}=1
+\]
+故 \(a^2=2\)，\(b^2=2\)，\(c^2=a^2+b^2=4\)，右焦点为 \((2,0)\)，右准线方程为
+\[
+x=\frac{a^2}{c}=1
+\]
+以 \((2,0)\) 为圆心且与直线 \(x=1\) 相切的圆，半径为圆心到准线的距离 \(1\)，所以
+\[
+(x-2)^2+y^2=1
+\]
+即 \(x^2+y^2-4x+3=0\). 因此选 B.
+\end{solution}
+
 \begin{problem}
 已知对任意实数 \(x\)，有 \(f(-x) = -f(x)\)，\(g(-x) = g(x)\)，且 \(x > 0\) 时，\(f'(x) > 0\)，\(g'(x) > 0\)，则 \(x < 0\) 时（\quad）
 
@@ -157,6 +255,20 @@ B
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+对 \(f(-x)=-f(x)\) 两边求导，得
+\[
+-f'(-x)=-f'(x)
+\]
+所以 \(f'(-x)=f'(x)\). 当 \(x<0\) 时 \(-x>0\)，从而 \(f'(x)=f'(-x)>0\).
+
+对 \(g(-x)=g(x)\) 两边求导，得
+\[
+-g'(-x)=g'(x)
+\]
+所以 \(g'(x)=-g'(-x)<0\). 因此选 B.
+\end{solution}
 
 \begin{problem}
 某通讯公司推出一组手机号码，卡号的前七位数字固定，从“××××××× \(0000\)”到“×××××××\(9999\)”共 \(10000\) 个号码. 公司限定：凡卡号的后四位带有数字“\(4\)”或“\(7\)”的一律作为“优惠卡”，则这组号码中“优惠卡”的个数为（\quad）
@@ -172,6 +284,14 @@ B
 C
 \end{answer}
 
+\begin{solution}
+后四位每一位都有 \(10\) 种取法，共有 \(10^4=10000\) 个号码. 不含数字 \(4\) 和 \(7\) 时，每一位有 \(8\) 种取法，共有 \(8^4=4096\) 个号码. 因而至少含有一个数字 \(4\) 或 \(7\) 的号码数为
+\[
+10000-4096=5904
+\]
+因此选 C.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -181,6 +301,17 @@ C
 \begin{answer}
 15
 \end{answer}
+
+\begin{solution}
+在展开式中，设从六个因式中选出 \(k\) 个取 \(x^2\)，其余取 \(x^{-1}\)，则对应项的幂为
+\[
+2k-(6-k)=3k-6
+\]
+要得到常数项，必须有 \(3k-6=0\)，即 \(k=2\). 因此常数项的系数为
+\[
+\mathrm C_6^2=15
+\]
+\end{solution}
 
 \begin{problem}
 已知实数 \(x\)，\(y\) 满足 \(\begin{cases}
@@ -194,6 +325,16 @@ x - y \leqslant 2,\\
 \(\left[-5, 7\right]\)
 \end{answer}
 
+\begin{solution}
+由约束条件得
+\(2-y\leqslant x\leqslant y+2\)，\(0\leqslant y\leqslant3\).
+因此对固定的 \(y\)，有
+\[
+4-3y=2(2-y)-y\leqslant2x-y\leqslant2(y+2)-y=y+4
+\]
+当 \(0\leqslant y\leqslant3\) 时，左端的最小值为 \(-5\)，右端的最大值为 \(7\). 取 \(y=3\) 时，\(-1\leqslant x\leqslant5\)，从而 \(2x-y\) 恰好取得区间 \([-5,7]\) 内的所有值. 所以取值范围为 \(\left[-5,7\right]\).
+\end{solution}
+
 \begin{problem}
 已知长方形 \(ABCD\)，\(AB = 4\)，\(BC = 3\)，则以 \(A\)，\(B\) 为焦点，且过 \(C\)，\(D\) 两点的椭圆的离心率为\fillinblank{}.
 \end{problem}
@@ -201,6 +342,15 @@ x - y \leqslant 2,\\
 \begin{answer}
 \(\frac{1}{2}\)
 \end{answer}
+
+\begin{solution}
+在长方形中，\(AC=\sqrt{AB^2+BC^2}=\sqrt{4^2+3^2}=5\)，\(BC=3\). 因为 \(A\)，\(B\) 是椭圆的两个焦点且 \(C\) 在椭圆上，所以
+\(2a=AC+BC=5+3=8\)，\(a=4\).
+又两焦点间距离 \(AB=2c=4\)，故 \(c=2\). 因此离心率
+\[
+e=\frac ca=\frac24=\frac12
+\]
+\end{solution}
 
 \begin{problem}
 中学数学中存在许多关系，比如“相等关系”“平行关系”等等. 如果集合 \(A\) 中元素之间的一个关系“\(\sim\)”满足以下三个条件：
@@ -218,6 +368,10 @@ x - y \leqslant 2,\\
 \(\text{图形的全等、图形的相似}\)
 \end{answer}
 
+\begin{solution}
+可取“图形的全等关系”和“图形的相似关系”. 对任意图形，它都与自身全等、相似，所以满足自反性；若图形 \(X\) 与图形 \(Y\) 全等（或相似），则交换两者仍成立，所以满足对称性；若图形 \(X\) 与图形 \(Y\) 全等（或相似），且图形 \(Y\) 与图形 \(Z\) 全等（或相似），则将对应的全等变换合成（或将相似比相乘）可得图形 \(X\) 与图形 \(Z\) 全等（或相似），所以满足传递性. 因此这两个关系都是等价关系.
+\end{solution}
+
 \section{解答题}
 
 \begin{problem}
@@ -234,25 +388,25 @@ x - y \leqslant 2,\\
 \item 因为 \(A\)，\(B\) 是三角形的内角，且 \(\tan A>0\)，\(\tan B>0\)，所以 \(A\)，\(B\) 都是锐角. 因此
 \[
 \tan(A+B)=\frac{\tan A+\tan B}{1-\tan A\tan B}
- =\frac{\frac14+\frac35}{1-\frac14\cdot\frac35}=1.
+ =\frac{\frac14+\frac35}{1-\frac14\cdot\frac35}=1
 \]
 又 \(0<A+B<\pi\)，且 \(\tan(A+B)>0\)，所以 \(0<A+B<\frac{\pi}{2}\)，从而 \(A+B=\frac{\pi}{4}\). 因此
 \[
-C=\pi-(A+B)=\frac{3\pi}{4}=135^{\circ}.
+C=\pi-(A+B)=\frac{3\pi}{4}=135^{\circ}
 \]
 \item 由 \(\tan A=\frac14\) 且 \(A\) 为锐角，得
 \[
-\sin A=\frac{\tan A}{\sqrt{1+\tan^2 A}}=\frac{1}{\sqrt{1+4^{2}}}=\frac{1}{\sqrt{17}}.
+\sin A=\frac{\tan A}{\sqrt{1+\tan^2 A}}=\frac{1}{\sqrt{1+4^{2}}}=\frac{1}{\sqrt{17}}
 \]
 由正弦定理，
 \[
-\frac{BC}{\sin A}=\frac{AB}{\sin C},
+\frac{BC}{\sin A}=\frac{AB}{\sin C}
 \]
 所以
 \[
 BC=AB\frac{\sin A}{\sin C}
  =\sqrt{17}\cdot\frac{1}{\sqrt{17}}\cdot\frac{1}{\frac{\sqrt{2}}{2}}
- =\sqrt{2}.
+ =\sqrt{2}
 \]
 故 \(BC=\sqrt{2}\).
 \end{enumerate}
@@ -264,7 +418,7 @@ BC=AB\frac{\sin A}{\sin C}
 \begin{enumerate}
 \item 甲试跳三次，第三次才成功的概率.
 \item 甲，乙两人在第一次试跳中至少有一人成功的概率.
-\item 甲，乙各试跳两次，甲比乙的成功次数恰好一次的概率.
+\item 甲，乙各试跳两次，甲比乙的成功次数恰好多一次的概率.
 \end{enumerate}
 \end{problem}
 
@@ -272,23 +426,23 @@ BC=AB\frac{\sin A}{\sin C}
 \begin{enumerate}
 \item 甲前两次试跳失败、第三次试跳成功，且各次试跳相互独立，所以所求概率为
 \[
-P=(1-0.7)^2\cdot0.7=0.063.
+P=(1-0.7)^2\cdot0.7=0.063
 \]
 \item 甲、乙两人在第一次试跳中至少有一人成功的对立事件是两人都失败，因此所求概率为
 \[
-P=1-(1-0.7)(1-0.6)=1-0.3\cdot0.4=0.88.
+P=1-(1-0.7)(1-0.6)=1-0.3\cdot0.4=0.88
 \]
 \item 设甲、乙各试跳两次的成功次数分别为 \(X\)，\(Y\). 事件 \(X=Y+1\) 分为互斥的两种情形：
 \[
-(X=1,Y=0)\quad\text{或}\quad(X=2,Y=1).
+(X=1,Y=0)\quad\text{或}\quad(X=2,Y=1)
 \]
 因此
 \[
 P(X=Y+1)=\mathrm C_2^1(0.7)(0.3)\cdot(0.4)^2
- +(0.7)^2\cdot\mathrm C_2^1(0.6)(0.4).
+ +(0.7)^2\cdot\mathrm C_2^1(0.6)(0.4)
 \]
 \[
-P(X=Y+1)=0.42\cdot0.16+0.49\cdot0.48=0.3024.
+P(X=Y+1)=0.42\cdot0.16+0.49\cdot0.48=0.3024
 \]
 故所求概率为 \(0.3024\).
 \end{enumerate}
@@ -299,7 +453,7 @@ P(X=Y+1)=0.42\cdot0.16+0.49\cdot0.48=0.3024.
 
 \begin{enumerate}
 \item 求证：\(AB_1 \perp\) 平面 \(A_1BD\).
-\item 求二面角 \(A - AD_1 - B\) 的大小.
+\item 求二面角 \(A-A_1D-B\) 的大小.
 \end{enumerate}
 
 \bitmapfigure[max width=0.42\linewidth]{img/2007/fujian_liberal/q19_fig1.png}
@@ -307,37 +461,37 @@ P(X=Y+1)=0.42\cdot0.16+0.49\cdot0.48=0.3024.
 
 \begin{solution}
 \begin{enumerate}
-\item 建立空间直角坐标系，取 \(A=(0,0,0)\)，\(B=(2,0,0)\)，\(C=(1,\sqrt{3},0)\). 另取 \(A_1=(0,0,2)\)，\(B_1=(2,0,2)\)，\(C_1=(1,\sqrt{3},2)\). 因为 \(D\) 是 \(CC_1\) 的中点，所以 \(D=(1,\sqrt{3},1)\). 从而 \(\overrightarrow{AB_1}=(2,0,2)\)，\(\overrightarrow{BA_1}=(-2,0,2)\)，\(\overrightarrow{BD}=(-1,\sqrt{3},1)\). 于是
+\item 建立空间直角坐标系，取 \(A=(0,0,0)\)，\(B=(2,0,0)\)，\(C=(1,\sqrt{3},0)\). 另取 \(A_1=(0,0,2)\)，\(B_1=(2,0,2)\)，\(C_1=(1,\sqrt{3},2)\). 因为 \(D\) 是 \(CC_1\) 的中点，所以 \(D=(1,\sqrt{3},1)\). 从而
+\(\overrightarrow{AB_1}=(2,0,2)\)，\(\overrightarrow{BA_1}=(-2,0,2)\)，\(\overrightarrow{BD}=(-1,\sqrt{3},1)\).
+有
+\(\overrightarrow{AB_1}\cdot\overrightarrow{BA_1}=-4+4=0\)，\(\overrightarrow{AB_1}\cdot\overrightarrow{BD}=-2+2=0\).
+再由
 \[
-\overrightarrow{AB_1}\cdot\overrightarrow{BA_1}=-4+4=0.
+\overrightarrow{BA_1}\times\overrightarrow{BD}=(-2\sqrt{3},0,-2\sqrt{3})
 \]
-又
+知 \(\overrightarrow{AB_1}\) 平行于平面 \(A_1BD\) 的法向量. 该平面过点 \(B\)，故方程为 \(x+z=2\)；直线 \(AB_1\) 可表示为 \((x,y,z)=(2s,0,2s)\)，在 \(s=\frac12\) 时经过点 \((1,0,1)\)，且该点满足平面方程. 所以直线 \(AB_1\) 与平面 \(A_1BD\) 相交且方向垂直于该平面，即
 \[
-\overrightarrow{AB_1}\cdot\overrightarrow{BD}=-2+2=0.
+AB_1\perp\text{平面 }A_1BD
 \]
-直线 \(BA_1\)，\(BD\) 是平面 \(A_1BD\) 内相交的两条直线，所以
-\[
-AB_1\perp\text{平面 }A_1BD.
-\]
-\item 原 PDF 此处的二面角记号印作 \(A-AD_1-B\)，但题干和题图只定义了点 \(D\)，且该记号不能构成标准二面角. 按题图和顶点关系的唯一最小修正，将其理解为二面角 \(A-A_1D-B\). 设其大小为 \(\theta\).
+\item 设二面角 \(A-A_1D-B\) 的大小为 \(\theta\). 其两个半平面所在的平面分别为 \(AA_1D\) 和 \(BA_1D\).
 
 平面 \(AA_1D\) 的一个法向量和平面 \(A_1BD\) 的一个法向量分别可取
 \[
 n_1=\overrightarrow{AA_1}\times\overrightarrow{AD}
- =(-2\sqrt{3},2,0),
+ =(-2\sqrt{3},2,0)
 \]
 \[
 n_2=\overrightarrow{A_1B}\times\overrightarrow{A_1D}
- =(2\sqrt{3},0,2\sqrt{3}).
+ =(2\sqrt{3},0,2\sqrt{3})
 \]
 因此 \(\lVert n_1\rVert=4\)，\(\lVert n_2\rVert=2\sqrt{6}\)，\(\left|n_1\cdot n_2\right|=12\).
 由两平面所成角与其法向量所成锐角相等，得
 \[
-\cos\theta=\frac{12}{4\cdot2\sqrt{6}}=\frac{\sqrt{6}}{4}.
+\cos\theta=\frac{12}{4\cdot2\sqrt{6}}=\frac{\sqrt{6}}{4}
 \]
 所以
 \[
-\theta=\arccos\frac{\sqrt{6}}{4}.
+\theta=\arccos\frac{\sqrt{6}}{4}
 \]
 \end{enumerate}
 \end{solution}
@@ -355,27 +509,23 @@ n_2=\overrightarrow{A_1B}\times\overrightarrow{A_1D}
 \begin{enumerate}
 \item 配方得
 \[
-f(x)=t\left(x+t\right)^2-t^3+t-1.
+f(x)=t\left(x+t\right)^2-t^3+t-1
 \]
 因为 \(t>0\)，所以当 \(x=-t\) 时，\(f(x)\) 取得最小值，故
 \[
-h(t)=-t^3+t-1.
+h(t)=-t^3+t-1
 \]
 \item 条件
-\[
-h(t)<-2t+m\quad\left(t\in(0,2)\right)
-\]
+\(h(t)<-2t+m\)，\(\left(t\in(0,2)\right)\)
 等价于
-\[
-m>-t^3+3t-1\quad\left(t\in(0,2)\right).
-\]
+\(m>-t^3+3t-1\)，\(\left(t\in(0,2)\right)\).
 令 \(\varphi(t)=-t^3+3t-1\)，则
 \[
-\varphi'(t)=3(1-t^2).
+\varphi'(t)=3(1-t^2)
 \]
 所以 \(\varphi(t)\) 在 \((0,1)\) 上递增，在 \((1,2)\) 上递减，且
 \[
-\max_{0<t<2}\varphi(t)=\varphi(1)=1.
+\max_{0<t<2}\varphi(t)=\varphi(1)=1
 \]
 由于 \(t=1\) 属于给定区间且原不等式为严格不等式，必须有 \(m>1\). 反之，当 \(m>1\) 时，对任意 \(t\in(0,2)\) 都有 \(m>\varphi(t)\)，条件成立.
 
@@ -396,43 +546,39 @@ m>-t^3+3t-1\quad\left(t\in(0,2)\right).
 \begin{enumerate}
 \item 由递推关系得 \(a_2=2S_1=2\). 对 \(n\geqslant2\)，有
 \[
-a_{n+1}-a_n=2S_n-2S_{n-1}=2a_n,
+a_{n+1}-a_n=2S_n-2S_{n-1}=2a_n
 \]
 即 \(a_{n+1}=3a_n\). 因此
-\[
-a_n=2\cdot3^{n-2}\quad(n\geqslant2).
-\]
+\(a_n=2\cdot3^{n-2}\)，\((n\geqslant2)\).
 再结合 \(a_1=1\)，得 \(a_1=1\)，且当 \(n\geqslant2\) 时 \(a_n=2\cdot3^{n-2}\).
 \item 当 \(n\geqslant2\) 时，
 \[
 T_n=\sum_{k=1}^{n}ka_k
- =1+2\sum_{k=2}^{n}k3^{k-2}.
+ =1+2\sum_{k=2}^{n}k3^{k-2}
 \]
 记
 \[
-U_n=\sum_{k=2}^{n}k3^{k-2}.
+U_n=\sum_{k=2}^{n}k3^{k-2}
 \]
 将 \(3U_n\) 的下标向后移一项后与 \(U_n\) 相减，得
 \[
 2U_n=n3^{n-1}-2-\sum_{j=3}^{n}3^{j-2}
- =n3^{n-1}-2-\frac{3^{n-1}-3}{2}.
+ =n3^{n-1}-2-\frac{3^{n-1}-3}{2}
 \]
 \[
-2U_n=\frac{(2n-1)3^{n-1}-1}{2}.
+2U_n=\frac{(2n-1)3^{n-1}-1}{2}
 \]
 所以
 \[
 U_n=\sum_{k=2}^{n}k3^{k-2}
- =\frac{(2n-1)3^{n-1}-1}{4}.
+ =\frac{(2n-1)3^{n-1}-1}{4}
 \]
 所以
 \[
-T_n=\frac{(2n-1)3^{n-1}+1}{2}.
+T_n=\frac{(2n-1)3^{n-1}+1}{2}
 \]
 当 \(n=1\) 时，上式也给出 \(T_1=1\)，故
-\[
-T_n=\frac{(2n-1)3^{n-1}+1}{2}\quad(n\in\N^*).
-\]
+\(T_n=\frac{(2n-1)3^{n-1}+1}{2}\)，\((n\in\N^*)\).
 \end{enumerate}
 \end{solution}
 
@@ -443,10 +589,10 @@ T_n=\frac{(2n-1)3^{n-1}+1}{2}\quad(n\in\N^*).
 \item 求动点 \(P\) 的轨迹 \(C\) 的方程.
 \item 过点 \(F\) 的直线交轨迹 \(C\) 于 \(A\)，\(B\) 两点，交直线 \(l\) 于点 \(M\).
 
-\begin{circlelist}
+\begin{enumerate}
 \item 已知 \(\overrightarrow{MA} = \lambda_1 \overrightarrow{AF}\)，\(\overrightarrow{MB} = \lambda_2 \overrightarrow{BF}\)，求 \(\lambda_1 + \lambda_2\) 的值；
 \item 求 \(\left| \overrightarrow{MA} \right| \cdot \left| \overrightarrow{MB} \right|\) 的最小值.
-\end{circlelist}
+\end{enumerate}
 \end{enumerate}
 
 \bitmapfigure[max width=0.28\linewidth]{img/2007/fujian_liberal/q22_fig1.png}
@@ -455,68 +601,62 @@ T_n=\frac{(2n-1)3^{n-1}+1}{2}\quad(n\in\N^*).
 \begin{solution}
 \begin{enumerate}
 \item 设 \(P=(x,y)\). 因为 \(PQ\perp l\)，而 \(l:x=-1\)，所以 \(Q=(-1,y)\). 于是
-\[
-\overrightarrow{QP}=(x+1,0),\quad
-\overrightarrow{QF}=(2,-y),
-\]
-\[
-\overrightarrow{FP}=(x-1,y),\quad
-\overrightarrow{FQ}=(-2,y).
-\]
+\(\overrightarrow{QP}=(x+1,0)\)，\(\overrightarrow{QF}=(2,-y)\)
+\(\overrightarrow{FP}=(x-1,y)\)，\(\overrightarrow{FQ}=(-2,y)\).
 代入已知数量积关系，得
 \[
-2(x+1)=-2(x-1)+y^2,
+2(x+1)=-2(x-1)+y^2
 \]
 即
 \[
-y^2=4x.
+y^2=4x
 \]
 故动点 \(P\) 的轨迹 \(C\) 的方程为 \(y^2=4x\).
 \item 设过 \(F\) 的直线斜率为 \(k\). 因为该直线与 \(l\) 相交且与轨迹交于两个不同的点，所以 \(k\neq0\)，其方程可写为
 \[
-y=k(x-1).
+y=k(x-1)
 \]
 设它与抛物线的交点横坐标为 \(x_1\)，\(x_2\)，则
 \[
-k^2(x-1)^2=4x,
+k^2(x-1)^2=4x
 \]
 即
 \[
-k^2x^2-(2k^2+4)x+k^2=0.
+k^2x^2-(2k^2+4)x+k^2=0
 \]
 由韦达定理，\(x_1+x_2=2+\frac{4}{k^2}\)，\(x_1x_2=1\).
-因为两交点不同，\(x_1,x_2\) 是上述方程的两个实根；又 \(x_1x_2>0\) 且 \(x_1+x_2>0\)，所以 \(x_1,x_2>0\).
+因为两交点不同，\(x_1\)，\(x_2\) 是上述方程的两个实根；又 \(x_1x_2>0\) 且 \(x_1+x_2>0\)，所以 \(x_1\)，\(x_2>0\).
 \begin{enumerate}
-\item 直线与 \(l\) 的交点为 \(M=(-1,-2k)\). 设这两个交点为 \(X_i=(x_i,k(x_i-1))\)（\(i=1,2\)），并令 \(X_1=A\)，\(X_2=B\). 对于横坐标为 \(x_i\) 的交点，有
+\item 直线与 \(l\) 的交点为 \(M=(-1,-2k)\). 设这两个交点为 \(X_i=(x_i,k(x_i-1))\)（\(i=1\)，\(2\)），并令 \(X_1=A\)，\(X_2=B\). 对于横坐标为 \(x_i\) 的交点，有
 \[
-\overrightarrow{MX_i}=(x_i+1)(1,k).
+\overrightarrow{MX_i}=(x_i+1)(1,k)
 \]
 \[
-\overrightarrow{X_iF}=(1-x_i)(1,k).
+\overrightarrow{X_iF}=(1-x_i)(1,k)
 \]
 由 \(\overrightarrow{MX_i}=\lambda_i\overrightarrow{X_iF}\)，得
 \[
-\lambda_i=\frac{x_i+1}{1-x_i}=-1+\frac{2}{1-x_i}.
+\lambda_i=\frac{x_i+1}{1-x_i}=-1+\frac{2}{1-x_i}
 \]
 因此
 \[
 \lambda_1+\lambda_2=-2+2\left(\frac{1}{1-x_1}+\frac{1}{1-x_2}\right)
- =-2+2\cdot\frac{2-(x_1+x_2)}{1-(x_1+x_2)+x_1x_2}=0.
+ =-2+2\cdot\frac{2-(x_1+x_2)}{1-(x_1+x_2)+x_1x_2}=0
 \]
 故 \(\lambda_1+\lambda_2=0\).
 \item 因为
 \[
-|MX_i|=|x_i+1|\sqrt{1+k^2},
+|MX_i|=|x_i+1|\sqrt{1+k^2}
 \]
 所以
 \[
 |\overrightarrow{MA}|\cdot|\overrightarrow{MB}|
  =(1+k^2)(x_1+1)(x_2+1)
- =4(1+k^2)\left(1+\frac{1}{k^2}\right).
+ =4(1+k^2)\left(1+\frac{1}{k^2}\right)
 \]
 \[
 |\overrightarrow{MA}|\cdot|\overrightarrow{MB}|
- =4\left(k^2+2+\frac{1}{k^2}\right)\geqslant16.
+ =4\left(k^2+2+\frac{1}{k^2}\right)\geqslant16
 \]
 由基本不等式 \(k^2+\dfrac{1}{k^2}\geqslant2\)，当且仅当 \(k^2=1\) 时取等号，因此 \(\left|\overrightarrow{MA}\right|\cdot\left|\overrightarrow{MB}\right|\) 的最小值为 \(16\).
 \end{enumerate}

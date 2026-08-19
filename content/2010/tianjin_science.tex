@@ -13,6 +13,15 @@
 \begin{answer}
 A
 \end{answer}
+\begin{solution}
+将分子、分母同乘分母的共轭复数，得
+\[
+\frac{-1+3\i}{1+2\i}
+=\frac{(-1+3\i)(1-2\i)}{(1+2\i)(1-2\i)}
+=\frac{5+5\i}{5}=1+\i
+\]
+因此选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -26,6 +35,11 @@ A
 \begin{answer}
 B
 \end{answer}
+\begin{solution}
+函数 \(f(x)=2^x+3x\) 在 \(\R\) 上连续，且
+\(f(-1)=\frac12-3=-\frac52<0\)，\(f(0)=1>0\).
+由零点存在定理，\(f(x)\) 在区间 \((-1,0)\) 内至少有一个零点，因此选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -39,6 +53,9 @@ B
 \begin{answer}
 B
 \end{answer}
+\begin{solution}
+设命题“\(f(x)\) 是奇函数”为 \(p\)，命题“\(f(-x)\) 是奇函数”为 \(q\). 原命题是 \(p\Rightarrow q\)，其否命题为 \(\lnot p\Rightarrow\lnot q\)，即“若 \(f(x)\) 不是奇函数，则 \(f(-x)\) 不是奇函数”. 因此选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -54,10 +71,19 @@ B
 \begin{answer}
 D
 \end{answer}
+\begin{solution}
+程序开始时 \(i=1\)，\(s=2\). 每次判断为真时，先执行 \(s\leftarrow s-i\)，再执行 \(i\leftarrow i+2\).
+
+若判断条件为 \(i<6\)，循环中的数值依次为
+\[
+(i,s)=(1,2)\longmapsto(3,1)\longmapsto(5,-2)\longmapsto(7,-7)
+\]
+此时 \(i<6\) 不成立，输出 \(s=-7\). 而条件分别为 \(i<3\)、\(i<4\)、\(i<5\) 时，输出值分别为 \(1\)、\(-2\)、\(-2\)，均不符合题意. 因此选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
-已知双曲线 \(\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1\)（\(a > 0, b > 0\)）的一条渐近线方程是 \(y = \sqrt{3} x\)，它的一个焦点在抛物线 \(y^2 = 24x\) 的准线上，则双曲线的方程为（\quad）
+已知双曲线 \(\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1\)（\(a > 0\)，\(b > 0\)）的一条渐近线方程是 \(y = \sqrt{3} x\)，它的一个焦点在抛物线 \(y^2 = 24x\) 的准线上，则双曲线的方程为（\quad）
 
 \choices
     {\(\frac{x^2}{36} - \frac{y^2}{108} = 1\)}
@@ -67,6 +93,19 @@ D
 \begin{answer}
 B
 \end{answer}
+\begin{solution}
+双曲线的渐近线为 \(y=\pm\dfrac ba x\)，故
+\(\frac ba=\sqrt3\)，\(qquad b^2=3a^2\).
+抛物线 \(y^2=24x=4\cdot6x\) 的准线为 \(x=-6\)，所以双曲线焦点到原点的距离满足 \(c=6\). 又
+\[
+c^2=a^2+b^2=4a^2
+\]
+从而 \(a^2=9\)，\(b^2=27\). 因此双曲线方程为
+\[
+\frac{x^2}{9}-\frac{y^2}{27}=1
+\]
+选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -80,6 +119,17 @@ B
 \begin{answer}
 C
 \end{answer}
+\begin{solution}
+设等比数列的公比为 \(q\). 因为首项为 \(1\)，所以
+\(S_3=1+q+q^2\)，\(S_6=S_3(1+q^3)\).
+又 \(S_3=1+q+q^2=\left(q+\frac12\right)^2+\frac34>0\). 由 \(9S_3=S_6\)，得 \(1+q^3=9\)，即 \(q=2\). 因此
+\[
+\sum_{n=1}^{5}\frac1{a_n}
+=1+\frac12+\frac14+\frac18+\frac1{16}
+=\frac{31}{16}
+\]
+因此选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -93,6 +143,18 @@ C
 \begin{answer}
 A
 \end{answer}
+\begin{solution}
+由正弦定理，
+\(\frac cb=\frac{\sin C}{\sin B}=2\sqrt3\)，\(qquad c=2\sqrt3b\).
+代入已知条件得
+\(a^2-b^2=\sqrt3bc=6b^2\)，\(a^2=7b^2\).
+再由余弦定理，
+\[
+a^2=b^2+c^2-2bc\cos A
+=13b^2-4\sqrt3b^2\cos A
+\]
+所以 \(7=13-4\sqrt3\cos A\)，即 \(\cos A=\dfrac{\sqrt3}{2}\). 因为 \(0<A<\pi\)，故 \(A=30^\circ\)，选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -109,6 +171,21 @@ A
 \begin{answer}
 C
 \end{answer}
+\begin{solution}
+因 \(f(a)\) 与 \(f(-a)\) 均有意义，故 \(a\ne0\).
+
+当 \(a>0\) 时，
+\(f(a)=\log_2a\)，\(qquad f(-a)=\log_{1/2}a=-\log_2a\).
+不等式化为 \(\log_2a>0\)，从而 \(a>1\).
+
+当 \(a<0\) 时，令 \(u=-a>0\)，则
+\(f(a)=\log_{1/2}u=-\log_2u\)，\(qquad f(-a)=\log_2u\).
+不等式化为 \(\log_2u<0\)，所以 \(0<u<1\)，即 \(-1<a<0\). 综合得
+\[
+a\in(-1,0)\cup(1,+\infty)
+\]
+选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -122,6 +199,19 @@ C
 \begin{answer}
 D
 \end{answer}
+\begin{solution}
+由集合定义，
+\(A=(a-1,a+1)\)，\(B=(-\infty,b-2)\cup(b+2,+\infty)\).
+区间 \(A\) 连通，若 \(A\subset B\)，则它必须完全落在 \(B\) 的某一个分支内. 因而或者
+\[
+a+1\le b-2
+\]
+得到 \(b-a\ge3\)；或者
+\[
+a-1\ge b+2
+\]
+得到 \(a-b\ge3\). 综上 \(|a-b|\ge3\)，选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -137,6 +227,19 @@ D
 \begin{answer}
 B
 \end{answer}
+\begin{solution}
+由图可知，上方三角形为 \(\triangle ADE\)，下方三角形为 \(\triangle BCF\)，并且对应竖直线段为 \(AB\)，\(DC\)，\(EF\). 先给 \(A\)，\(D\)，\(E\) 涂色，有
+\[
+4\cdot3\cdot2=24
+\]
+种方法.
+
+固定 \(A\)，\(D\)，\(E\) 的颜色分别为 \(1\)，\(2\)，\(3\)，记第4种颜色为 \(4\). 下面按 \(B\) 的颜色分类计数. \(B\) 不能取颜色 \(1\). 当 \(B=2\) 时，\(C\) 可取 \(1\)，\(3\)，\(4\)：若 \(C=1\)，则 \(F\) 有1种取法；若 \(C=3\)，则 \(F\) 有2种取法；若 \(C=4\)，则 \(F\) 有1种取法，共4种. 当 \(B=3\) 时，\(C\) 可取 \(1,4\)，对应的 \(F\) 各有2种取法，共4种. 当 \(B=4\) 时，\(C\) 可取 \(1,3\)，对应的 \(F\) 分别有1种、2种取法，共3种. 因而固定上方三点颜色后，下方三点有
+\[
+4+4+3=11
+\]
+种涂法. 故总涂色方法数为 \(24\cdot11=264\)，选 B.
+\end{solution}
 \end{problem}
 
 \section{填空题}
@@ -157,6 +260,13 @@ B
 \begin{answer}
 \(24\)，\(23\)
 \end{answer}
+\begin{solution}
+从茎叶图读出甲的数据为
+\(19\)，\(18\)，\(20\)，\(21\)，\(23\)，\(22\)，\(20\)，\(31\)，\(31\)，\(35\)
+其和为 \(240\)，所以甲的平均数为 \(240/10=24\). 乙的数据为
+\(19\)，\(17\)，\(21\)，\(24\)，\(22\)，\(24\)，\(30\)，\(32\)，\(30\)，\(11\)
+其和为 \(230\)，所以乙的平均数为 \(230/10=23\). 因此两人的平均数分别为 \(24\) 和 \(23\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -166,6 +276,13 @@ B
 \begin{answer}
 \(\frac{10}{3}\)
 \end{answer}
+\begin{solution}
+由三视图可知，该几何体由一个底面边长为 \(1\)、高为 \(2\) 的正方体柱和一个底面边长为 \(2\)、高为 \(1\) 的四棱锥组成. 因而体积为
+\[
+V=1^2\cdot2+\frac13\cdot2^2\cdot1
+=2+\frac43=\frac{10}{3}
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -176,6 +293,16 @@ y = 1 + t,
 \begin{answer}
 \(\left(x+1\right)^2+y^2=2\)
 \end{answer}
+\begin{solution}
+圆心在 \(x\) 轴上，所以由 \(y=1+t=0\) 得 \(t=-1\)，圆心为 \((-1,0)\). 圆与直线 \(x+y+3=0\) 相切，故半径为圆心到该直线的距离：
+\[
+r=\frac{|-1+0+3|}{\sqrt{1^2+1^2}}=\sqrt2
+\]
+所以圆的方程为
+\[
+(x+1)^2+y^2=2
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -185,6 +312,27 @@ y = 1 + t,
 \begin{answer}
 \(\frac{\sqrt{6}}{6}\)
 \end{answer}
+\begin{solution}
+由圆内接四边形的割线定理，
+\[
+PA\cdot PB=PC\cdot PD
+\]
+设 \(PA=1\)，则 \(PB=\dfrac12\)，且由 \(PC=\dfrac{PD}{3}\) 得
+\(\frac12=\frac{PD^2}{3}\)，\(qquad PD=\sqrt{\frac32}\)，\(qquad PC=\frac1{\sqrt6}\).
+设 \(\angle BPC=\angle APD=\theta\). 由余弦定理，
+\[
+BC^2=\frac14+\frac16-\frac1{\sqrt6}\cos\theta
+=\frac5{12}-\frac{\cos\theta}{\sqrt6}
+\]
+\[
+AD^2=1+\frac32-\sqrt6\cos\theta
+=\frac52-\sqrt6\cos\theta=6BC^2
+\]
+故
+\[
+\frac{BC}{AD}=\frac1{\sqrt6}=\frac{\sqrt6}{6}
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -194,6 +342,25 @@ y = 1 + t,
 \begin{answer}
 \(\sqrt{3}\)
 \end{answer}
+\begin{solution}
+由 \(D\in BC\)，有
+\[
+\overrightarrow{BD}=\overrightarrow{AD}-\overrightarrow{AB}
+\]
+因此
+\[
+\overrightarrow{AC}=\overrightarrow{AB}+\overrightarrow{BC}
+=\overrightarrow{AB}+\sqrt3\overrightarrow{BD}
+=(1-\sqrt3)\overrightarrow{AB}+\sqrt3\overrightarrow{AD}
+\]
+又因 \(AD\perp AB\) 且 \(|\overrightarrow{AD}|=1\)，所以
+\[
+\overrightarrow{AC}\cdot\overrightarrow{AD}
+=(1-\sqrt3)\overrightarrow{AB}\cdot\overrightarrow{AD}
++\sqrt3\left|\overrightarrow{AD}\right|^2
+=\sqrt3
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -201,6 +368,32 @@ y = 1 + t,
 \begin{answer}
 \(\left(-\infty,-\frac{\sqrt{3}}{2}\right]\cup\left[\frac{\sqrt{3}}{2},+\infty\right)\)
 \end{answer}
+\begin{solution}
+因题中含有 \(f(x/m)\)，必须有 \(m\ne0\). 将 \(f(x)=x^2-1\) 代入不等式并移项，得
+\(Q_m(x):=\left(\frac1{m^2}-4m^2-1\right)x^2+2x+3\le0\)，\(x\ge\frac32\).
+记 \(A_m=\dfrac1{m^2}-4m^2-1\). 若 \(A_m\ge0\)，则 \(Q_m(x)\) 在充分大的 \(x\) 处为正，不可能恒成立. 设 \(A_m<0\). 若二次函数顶点 \(-1/A_m\ge3/2\)，则其在定义区间内的最大值为
+\[
+Q_m\left(-\frac1{A_m}\right)=3-\frac1{A_m}>0
+\]
+仍不可能恒成立. 所以顶点必须在区间左侧. 此时对 \(x\ge3/2\) 有 \(Q_m'(x)=2A_mx+2<0\)，故 \(Q_m\) 在该区间上递减，只需令端点处的最大值不大于零：
+\(Q_m\left(\frac32\right)=\frac94A_m+6\le0\)，\(A_m\le-\frac83\).
+于是
+\[
+\frac1{m^2}-4m^2+\frac53\le0
+\]
+令 \(t=m^2>0\)，乘以正数 \(3t\) 得
+\[
+12t^2-5t-3\ge0
+\]
+该二次式的根为 \(-\dfrac13\)，\(\dfrac34\)，故 \(t\ge\dfrac34\)，即
+\[
+|m|\ge\frac{\sqrt3}{2}
+\]
+所以 \(m\) 的取值范围为
+\[
+\left(-\infty,-\frac{\sqrt3}{2}\right]\cup\left[\frac{\sqrt3}{2},+\infty\right)
+\]
+\end{solution}
 \end{problem}
 
 \section{解答题}
@@ -340,7 +533,7 @@ P(\xi=6)=\left(\frac{2}{3}\right)^3=\frac{8}{27}
 \[
 \frac{x^2}{4}+y^2=1
 \]
-\item 由（1）知 \(A=(-2,0)\). 设直线 \(l\) 的斜率为 \(k\)，则 \(l\) 的方程为 \(y=k(x+2)\). 设另一交点为 \(B=(x_1,y_1)\)，将直线方程代入椭圆方程，得
+\item 由（1）知 \(A=(-2,0)\). 过椭圆左顶点 \(A\) 的竖直直线 \(x=-2\) 是椭圆在 \(A\) 处的切线，不会与椭圆交于不同的两点，因此可设直线 \(l\) 的斜率为 \(k\)，从而 \(l\) 的方程为 \(y=k(x+2)\). 设另一交点为 \(B=(x_1,y_1)\)，将直线方程代入椭圆方程，得
 \[
 (1+4k^2)x^2+16k^2x+16k^2-4=0
 \]
@@ -354,7 +547,12 @@ P(\xi=6)=\left(\frac{2}{3}\right)^3=\frac{8}{27}
 \[
 4+y_0^2=x_1^2+(y_1-y_0)^2
 \]
-代入 \(x_1\)，\(y_1\) 并化简，得到
+消去 \(y_0^2\) 后，代入 \(x_1\)，\(y_1\) 得
+\[
+2y_1y_0=x_1^2+y_1^2-4
+=-\frac{48k^2}{(1+4k^2)^2}
+\]
+由于 \(y_1=\dfrac{4k}{1+4k^2}\ne0\)，所以
 \[
 y_0=-\frac{6k}{1+4k^2}
 \]
@@ -437,25 +635,31 @@ a_{2k+1}^{2}=4k^2(k+1)^2=a_{2k}a_{2k+2}
 所以 \(a_{2k}\)，\(a_{2k+1}\)，\(a_{2k+2}\) 成等比数列.
 \item
 \begin{enumerate}
-\item 由等比数列的定义，
-\(a_{2k+1}=q_ka_{2k}\)，\(a_{2k+2}=q_k^2a_{2k}\).
-又由下一组三项成等差数列，
+\item 由“公比为 \(q_k\)”的定义，\(a_{2k+1}=q_ka_{2k}\)，\(a_{2k+2}=q_ka_{2k+1}=q_k^2a_{2k}\). 又由下一组三项成等差数列，
 \[
 a_{2k+3}=2a_{2k+2}-a_{2k+1}=q_k(2q_k-1)a_{2k}
 \]
-因此
+若 \(q_k\ne0\)，则 \(a_{2k+2}=q_k^2a_{2k}\ne0\)，故下一组三项的公比可写为
 \[
 q_{k+1}=\frac{a_{2k+3}}{a_{2k+2}}=\frac{2q_k-1}{q_k}=2-\frac{1}{q_k}
 \]
-第一组三项中 \(a_1=0\)，故 \(a_3=2a_2\)，结合 \(q_1\ne1\) 得 \(q_1=2\). 由此递推并归纳可得 \(q_k=\frac{k+1}{k}\)，故各 \(q_k\ne0,1\)，并且
+第一组三项中 \(a_1=0\)，故 \(a_3=2a_2\). 又因 \(q_1\) 是三项 \(a_2\)，\(a_3\)，\(a_4\) 的公比，按公比定义 \(a_2\ne0\)，且 \(a_3=q_1a_2\)，从而 \(q_1=2\). 于是 \(q_1\ne0\)，上面的递推式首先给出 \(q_2\). 若已知 \(q_k=\dfrac{k+1}{k}\)，则 \(q_k\ne0\)，且
+\[
+q_{k+1}=2-\frac{k}{k+1}=\frac{k+2}{k+1}
+\]
+由数学归纳法，
+\(q_k=\frac{k+1}{k}\)，\((k\in\N^*)\)
+故各 \(q_k\ne0\)，\(1\)，并且
 \[
 \frac{1}{q_{k+1}-1}=\frac{1}{1-1/q_k}=\frac{q_k}{q_k-1}=1+\frac{1}{q_k-1}
 \]
 所以数列 \(\left\{\frac{1}{q_k-1}\right\}\) 是公差为 \(1\) 的等差数列.
 \item 由 \(a_2=2\) 和第一组三项的等差关系，得 \(a_3=4\)，故 \(q_1=2\). 由（i）可知
 \(\frac{1}{q_k-1}=k\)，\(q_k=\frac{k+1}{k}\).
-利用等比关系并归纳可得
-\(a_{2k}=2k^2\)，\(a_{2k+1}=2k(k+1)\)（\(k\geqslant1\)）.
+先有 \(a_2=2\)，且 \(a_3=q_1a_2=4\). 若 \(a_{2k}=2k^2\)，则由等比关系
+\(a_{2k+1}=q_ka_{2k}=\frac{k+1}{k}\cdot2k^2=2k(k+1)\)，\(a_{2k+2}=q_k^2a_{2k}=\left(\frac{k+1}{k}\right)^2\cdot2k^2=2(k+1)^2\).
+由 \(k=1\) 的初值开始归纳，得到
+\(a_{2k}=2k^2\)，\(a_{2k+1}=2k(k+1)\)，\((k\geqslant1)\).
 因此，对 \(k\geqslant2\)，
 \[
 \frac{k^2}{a_k}=\begin{cases}

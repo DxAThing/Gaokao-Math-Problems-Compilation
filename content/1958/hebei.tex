@@ -7,8 +7,11 @@
 \end{problem}
 
 \begin{solution}
-由余式定理，余数为
-\(f(-1)=(-1)^{376}-2(-1)^{223}+5(-1)^{145}-3(-1)^{28}+3=1-2(-1)+5(-1)-3\cdot1+3=1+2-5-3+3=-2\).
+令 \(f(x)=x^{376}-2x^{223}+5x^{145}-3x^{28}+3\). 由余式定理，用 \(x+1\) 除 \(f(x)\) 所得的余数为 \(f(-1)\). 因为偶次幂的 \((-1)\) 次方为 \(1\)，奇次幂的 \((-1)\) 次方为 \(-1\)，所以
+\[
+f(-1)=(-1)^{376}-2(-1)^{223}+5(-1)^{145}-3(-1)^{28}+3=1+2-5-3+3=-2
+\]
+因此余数为 \(-2\).
 \end{solution}
 
 \begin{problem}
@@ -16,7 +19,8 @@
 \end{problem}
 
 \begin{solution}
-\(T=\frac{2\pi}{\omega}=\frac{2\pi}{2}=\pi\).
+函数 \(y=\sin 2x\) 的角频率为 \(\omega=2\)，因此周期为 \(T=\frac{2\pi}{\lvert\omega\rvert}=\pi\). 取 \([0,\pi]\) 为一个周期，在该区间内依次计算
+\(y(0)=0\)，\(y\left(\frac{\pi}{4}\right)=1\)，\(y\left(\frac{\pi}{2}\right)=0\)，\(y\left(\frac{3\pi}{4}\right)=-1\)，\(y(\pi)=0\). 将这五个点按正弦曲线顺次连接，即得一个周期内的图象.
 
 \solutionfigure{\bitmapfigure[max width=0.42\linewidth]{img/1958/hebei/q2_fig1.png}}
 \end{solution}
@@ -26,16 +30,19 @@
 \end{problem}
 
 \begin{solution}
-由二项式定理，展开式的第 \(k+1\) 项为
-\(T_{k+1}=\mathrm C_7^k \left( x^{\frac{1}{2}} \right)^k \left( x^{-\frac{1}{3}} \right)^{7-k}\).
-依题意，
-\(\mathrm C_7^k \left( x^{\frac{1}{2}} \right)^k \left( x^{-\frac{1}{3}} \right)^{7-k}=x\).
-所以 \(\frac{k}{2}-\frac{1}{3}(7-k)=1\). 从而 \(3k-2(7-k)=6\). \(5k=20\). \(k=4\).
-故
+由二项式定理，记 \(k=0\)，\(1\)，\(\ldots\)，\(7\)，展开式的第 \(k+1\) 项为
 \[
-\mathrm C_7^k=\mathrm C_7^4=\mathrm C_7^3=\frac{7\cdot6\cdot5}{1\cdot2\cdot3}=35
+T_{k+1}=\mathrm C_7^k\left(x^{-\frac{1}{3}}\right)^{7-k}\left(x^{\frac{1}{2}}\right)^k=\mathrm C_7^k x^{-\frac{1}{3}(7-k)+\frac{k}{2}}
 \]
-所以含 \(x\) 的一次幂的项为 \(35x\).
+要使该项含有 \(x\) 的一次幂，只需令幂指数等于 \(1\)，即
+\[
+-\frac{1}{3}(7-k)+\frac{k}{2}=1
+\]
+两边乘以 \(6\)，得 \(-2(7-k)+3k=6\)，所以 \(5k=20\)，从而 \(k=4\). 于是相应项的系数为
+\[
+\mathrm C_7^4=\mathrm C_7^3=\frac{7\cdot6\cdot5}{1\cdot2\cdot3}=35
+\]
+因此含 \(x\) 的一次幂的项为 \(35x\).
 \end{solution}
 
 \begin{problem}
@@ -45,12 +52,18 @@
 \end{problem}
 
 \begin{solution}
-大圆锥的侧面积为 \(S_{\text{大圆锥侧}}=\frac{1}{2}\cdot2\pi r\cdot l=\pi rl\).
-
-小圆锥的侧面积为 \(S_{\text{小圆锥侧}}=\frac{\pi rl}{2}=\pi r'l'\).
-因为 \(\triangle VO'A'\sim\triangle VOA\)，所以 \(\frac{r'}{r}=\frac{l'}{l}\)，即 \(r'=\frac{rl'}{l}\). 代入上式，
-\(\frac{\pi rl}{2}=\pi\cdot\frac{rl'}{l}\cdot l'\).
-所以 \(l'^2=\frac{l^2}{2}\)，故 \(l'=\frac{\sqrt{2}}{2}l\).
+设小圆锥的底面半径和母线长分别为 \(r'\) 和 \(l'\). 原圆锥的侧面积为 \(\pi rl\)，小圆锥的侧面积为 \(\pi r'l'\). 由截面平行于底面，小圆锥与原圆锥相似，所以
+\[
+\frac{r'}{r}=\frac{l'}{l}
+\]
+又由题意，
+\[
+\pi r'l'=\frac{1}{2}\pi rl
+\]
+由相似关系得 \(r'=\frac{rl'}{l}\)，代入面积关系并约去正数 \(\pi r\)，得 \(\frac{l'^2}{l}=\frac{l}{2}\)，即 \(l'^2=\frac{l^2}{2}\). 因为母线长为正数，所以
+\[
+l'=\frac{\sqrt{2}}{2}l
+\]
 \end{solution}
 
 \begin{problem}
@@ -66,20 +79,29 @@
 
 \begin{solution}
 \begin{enumerate}
-\item 分别由 \(O\) 及 \(A\) 作 \(BC\) 的高 \(h_{1}\) 及 \(h\). 则
-\(\frac{\triangle OBC}{\triangle ABC}
-=\frac{\frac{1}{2}\cdot BC\cdot h_{1}}{\frac{1}{2}\cdot BC\cdot h}
-=\frac{h_{1}}{h}\).
-因为 \(\triangle DOA_{1}\sim\triangle EAA_{1}\)，所以 \(\frac{h_{1}}{h}=\frac{OA_{1}}{AA_{1}}\). 因而 \(\frac{\triangle OBC}{\triangle ABC}=\frac{OA_{1}}{AA_{1}}\).
+\item 设从 \(O\)、\(A\) 分别向 \(BC\) 作垂线，垂足为 \(D\)、\(E\)，对应的高分别为 \(h_1\)、\(h\). 因为两个三角形以同一条 \(BC\) 为底，所以
+\[
+\frac{\triangle OBC}{\triangle ABC}=\frac{\frac{1}{2}BC\cdot h_1}{\frac{1}{2}BC\cdot h}=\frac{h_1}{h}
+\]
+又因为 \(\triangle DOA_1\) 与 \(\triangle EAA_1\) 都是直角三角形，且在 \(A_1\) 处有一个锐角相等，所以两三角形相似，从而 \(\frac{h_1}{h}=\frac{OA_1}{AA_1}\). 因此 \(\frac{\triangle OBC}{\triangle ABC}=\frac{OA_1}{AA_1}\).
 
-\item 分别由 \(O\) 及 \(B\) 作 \(AC\) 的高，可得 \(\frac{\triangle OCA}{\triangle ABC}=\frac{OB_{1}}{BB_{1}}\). 分别由 \(O\) 及 \(C\) 作 \(AB\) 的高，可得 \(\frac{\triangle OAB}{\triangle ABC}=\frac{OC_{1}}{CC_{1}}\).
-所以
-\(
-\frac{OA_{1}}{AA_{1}}+\frac{OB_{1}}{BB_{1}}+\frac{OC_{1}}{CC_{1}}
-=\frac{\triangle OBC}{\triangle ABC}+\frac{\triangle OCA}{\triangle ABC}+\frac{\triangle OAB}{\triangle ABC} 
-=\frac{\triangle ABC}{\triangle ABC} 
-=1
-\)
+\item 设从 \(O\)、\(B\) 分别向 \(AC\) 作垂线，垂足为 \(F\)、\(G\)，对应的高分别为 \(h_2\)、\(h_B\). 以 \(AC\) 为底可得
+\[
+\frac{\triangle OCA}{\triangle ABC}=\frac{h_2}{h_B}
+\]
+由于点 \(F\)、\(O\)、\(B_1\) 和点 \(G\)、\(B\)、\(B_1\) 分别在两条垂线及同一直线 \(BB_1\) 上，直角三角形 \(\triangle FOB_1\) 与 \(\triangle GBB_1\) 相似，所以 \(\frac{h_2}{h_B}=\frac{OB_1}{BB_1}\)，从而 \(\frac{\triangle OCA}{\triangle ABC}=\frac{OB_1}{BB_1}\). 再设从 \(O\)、\(C\) 分别向 \(AB\) 作垂线，垂足为 \(H\)、\(I\)，对应的高分别为 \(h_3\)、\(h_C\). 以 \(AB\) 为底可得
+\[
+\frac{\triangle OAB}{\triangle ABC}=\frac{h_3}{h_C}
+\]
+直角三角形 \(\triangle HOC_1\) 与 \(\triangle ICC_1\) 相似，因此 \(\frac{h_3}{h_C}=\frac{OC_1}{CC_1}\)，从而 \(\frac{\triangle OAB}{\triangle ABC}=\frac{OC_1}{CC_1}\).
+由于 \(O\) 在三角形内部，三角形 \(OBC\)、\(OCA\)、\(OAB\) 恰好把 \(\triangle ABC\) 分成三个部分，所以
+\[
+\begin{aligned}
+\frac{OA_1}{AA_1}+\frac{OB_1}{BB_1}+\frac{OC_1}{CC_1}
+&=\frac{\triangle OBC+\triangle OCA+\triangle OAB}{\triangle ABC}\\
+&=\frac{\triangle ABC}{\triangle ABC}=1.
+\end{aligned}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -91,16 +113,14 @@ x+y=\arccos\left( \frac{1}{2} \right) &\circled{2}
 \end{problem}
 
 \begin{solution}
-由第二个方程得 \(\cos(x+y)=\frac{1}{2}\).
-所以 \(x+y=2\pi n\pm\frac{\pi}{3}\)，记作 \(\circled{3}\)，其中 \(n\) 为任意整数.
-由第一个方程并注意到 \(\cos(x+y)=\frac{1}{2}\)，得 \(2\cos(x+y)\cos(x-y)=\frac{\sqrt{3}}{2}\)
-即 \(2\cdot\frac{1}{2}\cos(x-y)=\frac{\sqrt{3}}{2}\)
-所以 \(\cos(x-y)=\frac{\sqrt{3}}{2}\). 因而 \(x-y=2\pi m\pm\frac{\pi}{6}\)，记作 \(\circled{4}\)，其中 \(m\) 为任意整数.
-联立 \(\circled{3}\) 与 \(\circled{4}\)，其中 \(n\) 不一定等于 \(m\)，得
-\(x_{1}=(n+m)\pi+\frac{\pi}{4}\)，\(y_{1}=(n-m)\pi+\frac{\pi}{12}\)；
-\(x_{2}=(n+m)\pi+\frac{\pi}{12}\)，\(y_{2}=(n-m)\pi+\frac{\pi}{4}\)；
-\(x_{3}=(n+m)\pi-\frac{\pi}{12}\)，\(y_{3}=(n-m)\pi-\frac{\pi}{6}\)；
-\(x_{4}=(n+m)\pi-\frac{\pi}{6}\)，\(y_{4}=(n-m)\pi+\frac{\pi}{12}\).
+由反余弦函数的定义，\(\arccos\left(\frac{1}{2}\right)=\frac{\pi}{3}\)，所以第二个方程给出 \(x+y=\frac{\pi}{3}\). 利用和差化积公式，第一式左端为
+\[
+\cos 2x+\cos 2y=2\cos(x+y)\cos(x-y)=2\cdot\frac{1}{2}\cos(x-y)=\cos(x-y)
+\]
+因此 \(\cos(x-y)=\frac{\sqrt{3}}{2}\)，从而
+\(x-y=2k\pi\pm\frac{\pi}{6}\)，\(k\in\Z\).
+当 \(x-y=2k\pi+\frac{\pi}{6}\) 时，联立 \(x+y=\frac{\pi}{3}\) 得 \(x=\frac{\pi}{4}+k\pi\)，\(y=\frac{\pi}{12}-k\pi\). 当 \(x-y=2k\pi-\frac{\pi}{6}\) 时，联立得 \(x=\frac{\pi}{12}+k\pi\)，\(y=\frac{\pi}{4}-k\pi\). 这两族解均满足原方程组，因此方程组的解为
+\(\left(x,y\right)=\left(\frac{\pi}{4}+k\pi,\frac{\pi}{12}-k\pi\right)\quad\text{或}\quad \left(\frac{\pi}{12}+k\pi,\frac{\pi}{4}-k\pi\right)\)，\(k\in\Z\).
 \end{solution}
 
 \begin{problem}
@@ -108,13 +128,11 @@ x+y=\arccos\left( \frac{1}{2} \right) &\circled{2}
 \end{problem}
 
 \begin{solution}
-设全部麦子为 \(1\)，乙机每天打麦的效率为 \(x\). 甲机每天打麦的效率为 \(2x\).
-依题意，列出方程
-\(\frac{\frac{2}{3}}{2x}+\frac{\frac{1}{3}}{x}-4=\frac{1}{2x+x}\).
-化简，得 \(\frac{1}{3x}=4\). 解得 \(x=\frac{1}{12}\).
-
-答：单用甲机打完全部麦子需要 \(\frac{1}{2x}=6\)（天）.
-单用乙机打完全部麦子需要 \(\frac{1}{x}=12\)（天）.
+设全部麦子为 \(1\)，乙机每天的工作量为 \(x\)，则 \(x>0\)，甲机每天的工作量为 \(2x\). 先用甲机完成 \(\frac{2}{3}\) 的工作量，再用乙机完成 \(\frac{1}{3}\) 的工作量，所需时间为 \(\frac{2/3}{2x}+\frac{1/3}{x}\). 两机同时工作时每天完成 \(3x\)，完成全部工作量所需时间为 \(\frac{1}{3x}\). 根据题意，
+\[
+\frac{2/3}{2x}+\frac{1/3}{x}=\frac{1}{3x}+4
+\]
+左端化为 \(\frac{2}{3x}\)，所以 \(\frac{2}{3x}=\frac{1}{3x}+4\)，即 \(\frac{1}{3x}=4\)，解得 \(x=\frac{1}{12}\). 因此，单用甲机完成全部麦子需要 \(\frac{1}{2x}=6\) 天，单用乙机完成全部麦子需要 \(\frac{1}{x}=12\) 天.
 \end{solution}
 
 \begin{problem}
@@ -122,9 +140,9 @@ x+y=\arccos\left( \frac{1}{2} \right) &\circled{2}
 \end{problem}
 
 \begin{solution}
-如方程 \(4x^{2}-(4\cos\theta)x+1=0\) 有实根，则 \(\Delta=(-4\cos\theta)^{2}-4\cdot4\cdot1\geqslant0\).
-化简，得 \(\cos^{2}\theta\geqslant1\).
-由余弦函数的性质，\(\left|\cos\theta\right|\leqslant1\).
-故只能有 \(\cos^{2}\theta=1\)，\(\cos\theta=\pm1\).
-故 \(\theta=k\pi\)（\(k\) 为任意整数）.
+这是关于 \(x\) 的一元二次方程，且二次项系数 \(4\neq0\). 方程有实根的必要且充分条件是判别式不小于 \(0\)，即
+\[
+\Delta=(-4\cos\theta)^2-4\cdot4\cdot1=16\cos^2\theta-16\geqslant0
+\]
+所以 \(\cos^2\theta\geqslant1\). 又因为对任意实数 \(\theta\) 都有 \(\lvert\cos\theta\rvert\leqslant1\)，故只能是 \(\cos^2\theta=1\)，即 \(\cos\theta=\pm1\). 因而 \(\theta=k\pi\)，其中 \(k\in\Z\). 反过来，当 \(\theta=k\pi\) 时 \(\Delta=0\)，方程确有实根，所以全部可能值为 \(\theta=k\pi\)，\(k\in\Z\).
 \end{solution}

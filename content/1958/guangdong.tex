@@ -7,7 +7,14 @@
 \end{problem}
 
 \begin{solution}
-解 \(x^{3}\) 项系数为 \(\mathrm C_{5}^{3}\cdot 3^{2}\cdot 2^{3}=\frac{5\times 4}{1\times 2}\cdot 3^{2}\cdot 2^{3}=720\).
+解 由二项式定理，
+\[
+\left(3+2x\right)^{5}=\sum_{k=0}^{5}\mathrm C_{5}^{k}3^{5-k}\left(2x\right)^{k}
+\]
+其中含 \(x^{3}\) 的项对应 \(k=3\)，所以 \(x^{3}\) 的系数为
+\[
+\mathrm C_{5}^{3}3^{5-3}2^{3}=\frac{5\times4}{1\times2}\cdot3^{2}\cdot2^{3}=720
+\]
 \end{solution}
 
 \begin{problem}
@@ -15,17 +22,17 @@
 \end{problem}
 
 \begin{solution}
-证明 因为 \(x\neq k\pi\)（\(k\) 为任意整数），故右式恒有意义.
+证明 因为 \(x\neq k\pi\)（\(k\) 为任意整数），所以 \(\sin x\neq0\)，右式有意义. 连续应用三次倍角公式，得
 \[
 \begin{gathered}
 \frac{\sin 8x}{8\sin x}
 =\frac{2\sin 4x\cdot\cos 4x}{8\sin x}
 =\frac{4\sin 2x\cdot\cos 2x\cdot\cos 4x}{8\sin x}\\
-{}=\frac{8\sin x\cdot\cos x\cdot\cos 2x\cdot\cos 4x}{8\sin x}
-=\cos x\cdot\cos 2x\cdot\cos 4x
+=\frac{8\sin x\cdot\cos x\cdot\cos 2x\cdot\cos 4x}{8\sin x}
+=\cos x\cdot\cos 2x\cdot\cos 4x.
 \end{gathered}
 \]
-故右边 \(=\) 左边.
+因此等式成立.
 \end{solution}
 
 \begin{problem}
@@ -33,11 +40,10 @@
 \end{problem}
 
 \begin{solution}
-证 如图，\(\angle 1\) 为 \(\frac{1}{2}\left(\widehat{AE}+\widehat{BD}\right)\) 所度.
+证明 如图，设 \(\angle 1=\angle AMN\)，\(\angle 2=\angle ANM\). 由两弦相交所成的角等于所对两弧和的一半，
 \solutionfigure{\bitmapfigure[max width=0.34\linewidth]{img/1958/guangdong/q3_solution_fig1.png}}
-\(\angle 2\) 为 \(\frac{1}{2}\left(\widehat{AD}+\widehat{EC}\right)\) 所度.
-但 \(\widehat{AE}=\widehat{EC}\)，\(\widehat{AD}=\widehat{BD}\).
-所以 \(\angle 1=\angle 2\)，\(AM=AN\).
+\(\angle 1=\frac{1}{2}\left(\widehat{AE}+\widehat{BD}\right)\)，\(\angle 2=\frac{1}{2}\left(\widehat{AD}+\widehat{EC}\right)\).
+因为 \(D\) 是弧 \(\widehat{AB}\) 的中点，\(E\) 是弧 \(\widehat{AC}\) 的中点，所以 \(\widehat{AD}=\widehat{BD}\)，\(\widehat{AE}=\widehat{EC}\). 因而 \(\angle 1=\angle 2\). 在三角形 \(AMN\) 中，\(\angle AMN=\angle ANM\)，所以 \(AM=AN\).
 \end{solution}
 
 \begin{problem}
@@ -45,9 +51,9 @@
 \end{problem}
 
 \begin{solution}
-证 正四面体 \(ABCD\)（如图）顶点 \(A\) 在底面内的射影是底面正三角形 \(BCD\) 的中心 \(O\). 因此棱 \(AD\) 在底面内的射影为 \(DO\).
+证明 如图，设顶点 \(A\) 在平面 \(BCD\) 内的射影为 \(O\). 由于正四面体的三条棱 \(AB\)，\(AC\)，\(AD\) 相等，直角三角形 \(AOB\)，\(AOC\)，\(AOD\) 具有公共直角边 \(AO\) 和相等的斜边，故 \(OB=OC=OD\). 因此 \(O\) 是正三角形 \(BCD\) 的中心，且 \(DO\perp BC\). 棱 \(AD\) 在平面 \(BCD\) 内的射影为 \(DO\).
 \solutionfigure{\bitmapfigure[max width=0.30\linewidth]{img/1958/guangdong/q4_solution_fig1.png}}
-而 \(DO\perp BC\)，依三垂线定理，\(AD\perp BC\). 同理 \(AC\perp BD\)，\(AB\perp CD\).
+由于 \(BC\) 在平面 \(BCD\) 内且 \(DO\perp BC\)，由三垂线定理得 \(AD\perp BC\). 又因为 \(O\) 是正三角形 \(BCD\) 的中心，所以 \(CO\perp BD\)，\(BO\perp CD\). 棱 \(AC\)，\(AB\) 在平面 \(BCD\) 内的射影分别为 \(CO\)，\(BO\)，由三垂线定理分别得 \(AC\perp BD\)，\(AB\perp CD\). 所以正四面体的每一对相对棱都互相垂直.
 \end{solution}
 
 
@@ -56,7 +62,18 @@
 \end{problem}
 
 \begin{solution}
-解 以 \(2\) 除各项得 \(\frac{1}{2}\sin x-\frac{\sqrt{3}}{2}\cos x=0\). 即 \(\sin x\cos\frac{\pi}{3}-\cos x\sin\frac{\pi}{3}=0\). 故 \(\sin\left(x-\frac{\pi}{3}\right)=0\)，\(x-\frac{\pi}{3}=n\pi\)，其中 \(n\) 为整数. 故 \(x=n\pi+\frac{\pi}{3}\).
+解 原方程等价于
+\[
+\frac{1}{2}\sin x-\frac{\sqrt{3}}{2}\cos x=0
+\]
+又因为 \(\cos\frac{\pi}{3}=\frac{1}{2}\)，\(\sin\frac{\pi}{3}=\frac{\sqrt{3}}{2}\)，所以
+\[
+\frac{1}{2}\sin x-\frac{\sqrt{3}}{2}\cos x
+=\sin x\cos\frac{\pi}{3}-\cos x\sin\frac{\pi}{3}
+=\sin\left(x-\frac{\pi}{3}\right)
+\]
+于是 \(\sin\left(x-\frac{\pi}{3}\right)=0\)，从而 \(x-\frac{\pi}{3}=n\pi\)，其中 \(n\in\Z\). 因此方程的解为
+\(x=n\pi+\frac{\pi}{3}\)，\(\left(n\in\Z\right)\).
 \end{solution}
 
 \begin{problem}
@@ -67,7 +84,26 @@
 \end{problem}
 
 \begin{solution}
-解 设 \(\sqrt{x+\frac{1}{y}}=X\)，\(\sqrt{x+2y-1}=Y\). 并且 \(X\)，\(Y\) 非负数，则有 \(X+Y=4\)，\(\left(x+\frac{1}{y}\right)+\left(x+2y-1\right)=8\). 后式可写为 \(X^{2}+Y^{2}=8\). 对 \(X+Y=4\) 两边平方，得 \(X^{2}+2XY+Y^{2}=16\). 由 \(2\left(X^{2}+Y^{2}\right)-\left(X^{2}+2XY+Y^{2}\right)=0\)，得 \(\left(X-Y\right)^{2}=0\). 所以 \(X=Y\)，代入 \(X+Y=4\)，得 \(2X=4\). 所以 \(X=Y=2\). 即 \(\sqrt{x+\frac{1}{y}}=2\)，\(\sqrt{x+2y-1}=2\). 平方之：\(x+\frac{1}{y}=4\)，\(x+2y-1=4\). 两式相减得 \(2y-\frac{1}{y}-1=0\)，即 \(2y^{2}-y-1=0\). 故 \(\left(y-1\right)\left(2y+1\right)=0\). 因此 \(y_{1}=1\)，\(y_{2}=-\frac{1}{2}\). 代入 \(x+\frac{1}{y}=4\)：\(x_{1}=3\)，\(x_{2}=6\). 经检验，\(x_{1}=3\)，\(y_{1}=1\)；\(x_{2}=6\)，\(y_{2}=-\frac{1}{2}\) 是原方程组的解.
+解 由分式有意义知 \(y\neq0\). 设
+\(X=\sqrt{x+\frac{1}{y}}\)，\(Y=\sqrt{x+2y-1}\).
+则 \(X\geq0\)，\(Y\geq0\)，且第一式给出 \(X+Y=4\). 由第二式，
+\[
+X^{2}+Y^{2}=\left(x+\frac{1}{y}\right)+\left(x+2y-1\right)=2x+2y+\frac{1}{y}-1=8
+\]
+因此
+\[
+\left(X-Y\right)^{2}=2\left(X^{2}+Y^{2}\right)-\left(X+Y\right)^{2}=2\times8-4^{2}=0
+\]
+所以 \(X=Y\). 联立 \(X+Y=4\)，得 \(X=Y=2\). 于是
+\(x+\frac{1}{y}=4\)，\(x+2y-1=4\).
+两式相减，得 \(2y-1-\frac{1}{y}=0\). 因为 \(y\neq0\)，两边乘以 \(y\)，得
+\(2y^{2}-y-1=0\)，\(\left(y-1\right)\left(2y+1\right)=0\).
+故 \(y=1\) 或 \(y=-\frac{1}{2}\). 代入 \(x+\frac{1}{y}=4\)，分别得到 \(x=3\) 和 \(x=6\). 直接检验：当 \(x=3\)，\(y=1\) 时，两个根式的被开方数均为 \(4\)，且
+\(\sqrt{4}+\sqrt{4}=4\)，\(2\cdot3+2\cdot1+1=9\).
+当 \(x=6\)，\(y=-\frac{1}{2}\) 时，两个根式的被开方数也均为 \(4\)，且
+\(\sqrt{4}+\sqrt{4}=4\)，\(2\cdot6+2\left(-\frac{1}{2}\right)-2=9\).
+所以两组数均满足原方程组，解为
+\(\left(x,y\right)=\left(3,1\right)\)，\(\left(6,-\frac{1}{2}\right)\).
 \end{solution}
 
 \begin{problem}
@@ -75,11 +111,21 @@
 \end{problem}
 
 \begin{solution}
-解 如右图，在直角 \(\triangle OAD\) 中，\(OD=R\sin\alpha\)，\(AD=R\cos\alpha\).
+解 如图，\(AD\perp BC\)，且 \(O\)，\(D\) 在直径 \(BC\) 上，所以三角形 \(OAD\) 在 \(D\) 处为直角. 又 \(OA=R\)，\(\angle OAD=\alpha\)，故
+\(OD=R\sin\alpha\)，\(AD=R\cos\alpha\).
 \solutionfigure{\bitmapfigure[max width=0.32\linewidth]{img/1958/guangdong/q7_solution_fig1.png}}
-在直角 \(\triangle A'AE\) 中，\(AE=\left(R-r\right)\cos\alpha\)，\(ED=AD-AE=R\cos\alpha-\left(R-r\right)\cos\alpha=r\cos\alpha\).
-（或作 \(A'D'\perp OD\)，则有 \(ED=A'D'=r\cos\alpha\)）
-在直角 \(\triangle OED\) 中，\(OE=\sqrt{OD^{2}+ED^{2}}=\sqrt{R^{2}\sin^{2}\alpha+r^{2}\cos^{2}\alpha}\).
+因为 \(A'\) 在 \(OA\) 上，\(AA'=R-r\)，且 \(A'E\perp AD\)，所以三角形 \(A'AE\) 在 \(E\) 处为直角，\(\angle A'AE=\alpha\). 从而
+\[
+AE=AA'\cos\alpha=\left(R-r\right)\cos\alpha
+\]
+按作图，\(E\) 在线段 \(AD\) 上，因此
+\[
+ED=AD-AE=R\cos\alpha-\left(R-r\right)\cos\alpha=r\cos\alpha
+\]
+又 \(ED\subset AD\)，\(OD\subset BC\)，而 \(AD\perp BC\)，所以三角形 \(OED\) 在 \(D\) 处为直角. 因此
+\[
+OE=\sqrt{OD^{2}+ED^{2}}=\sqrt{R^{2}\sin^{2}\alpha+r^{2}\cos^{2}\alpha}
+\]
 \end{solution}
 
 \begin{problem}
@@ -87,13 +133,22 @@
 \end{problem}
 
 \begin{solution}
-作法 延长 \(AB\) 至 \(D\)，使 \(BD=\dfrac{AB}{2}=BM\). 作 \(AB\) 与 \(BM\) 的比例中项 \(x\). 在 \(BC\) 上截取 \(BT=x\). 过 \(A\)，\(M\)，\(T\) 作圆 \(O\) 即为所求.
+作法 延长 \(AB\) 至 \(D\)，使 \(BD=BM=\frac{AB}{2}\). 以 \(AD\) 为直径作半圆，过 \(B\) 作 \(AD\) 的垂线，交半圆于 \(U\)，令 \(x=BU\). 由于 \(B\) 是直角三角形 \(AUD\) 的斜边 \(AD\) 上的高的垂足，由射影定理，
+\[
+x^{2}=BU^{2}=AB\cdot BD=AB\cdot BM
+\]
+在直线 \(BC\) 上取点 \(T\)，使 \(BT=x\)；若线段 \(BC\) 的长度不足，则在其延长线上取 \(T\). 过不共线的三点 \(A\)，\(M\)，\(T\) 作圆 \(\omega\).
 \solutionfigure{\bitmapfigure[max width=0.42\linewidth]{img/1958/guangdong/q8_solution_fig1.png}}
 
-证明 由圆幂定理，设由圆外一点，作一切线与一割线，则此切线为割线及其圆外部分之比例中项.
-
-今由作图，\(BT^{2}=BE^{2}=DB\cdot BA=BM\cdot AB\).
-所以 \(T\) 为所求作的圆的切点，而此圆过 \(A\)，\(M\)，\(T\)，即为所求.
+证明 由作图，\(B\)，\(M\)，\(A\) 共线，且
+\[
+BT^{2}=x^{2}=AB\cdot BM
+\]
+对圆 \(\omega\)，过点 \(B\) 的割线 \(BMA\) 给出点 \(B\) 的幂为 \(BM\cdot BA\)，故
+\[
+BM\cdot BA=BT^{2}
+\]
+因为 \(BM\cdot BA=BT^{2}>0\)，点 \(B\) 在圆 \(\omega\) 外. 由圆幂定理的逆定理，直线 \(BT\)，也就是直线 \(BC\)，是圆 \(\omega\) 在 \(T\) 点的切线. 因而圆 \(\omega\) 经过 \(A\) 及 \(AB\) 的中点 \(M\)，并与 \(BC\) 相切，作法正确.
 \end{solution}
 
 \begin{problem}
@@ -101,7 +156,43 @@
 \end{problem}
 
 \begin{solution}
-解 设 \(\angle A=x\).
+证明 设直角三角形的斜边为 \(c\)，两直角边分别为 \(a\)，\(b\)，斜边上的高为 \(h\). 先取一个锐角 \(\angle A=x\)，令 \(a\) 为 \(\angle A\) 的对边，\(b\) 为另一条直角边. 由题意 \(c=2\)，\(h=\frac{\sqrt{3}}{2}\).
 \solutionfigure{\bitmapfigure[max width=0.34\linewidth]{img/1958/guangdong/q9_solution_fig1.png}}
-则 \(a=2\sin x\)，\(b=\frac{\sqrt{3}}{2\sin x}\). 依勾股定理，\(c^{2}=a^{2}+b^{2}\)，故得 \(4\sin^{2}x+\frac{3}{4\sin^{2}x}=4\). 左边配方，\(\left(2\sin x+\frac{\sqrt{3}}{2\sin x}\right)^{2}=4+2\sqrt{3}\). 注意到 \(x\) 为锐角，故 \(2\sin x+\frac{\sqrt{3}}{2\sin x}>0\)，又右边 \(4+2\sqrt{3}=1+2\sqrt{3}+3=\left(1+\sqrt{3}\right)^{2}\). 故将方程两边开方，得 \(2\sin x+\frac{\sqrt{3}}{2\sin x}=1+\sqrt{3}\). 以 \(\frac{1}{2}\sin x\) 乘之并移项，得 \(\sin^{2}x-\frac{1+\sqrt{3}}{2}\sin x+\frac{\sqrt{3}}{4}=0\). 若设 \(\angle B=x\)，则由 \(c^{2}=a^{2}+b^{2}\) 亦得前式. 故两锐角均满足上述方程.
+由正弦定义，\(a=c\sin x=2\sin x\). 又直角三角形的面积既等于 \(\frac{1}{2}ab\)，又等于 \(\frac{1}{2}ch\)，所以
+\[
+ab=ch=2\cdot\frac{\sqrt{3}}{2}=\sqrt{3}
+\]
+因为 \(x\) 是锐角，\(\sin x>0\)，故
+\[
+b=\frac{\sqrt{3}}{2\sin x}
+\]
+由勾股定理，
+\[
+4\sin^{2}x+\frac{3}{4\sin^{2}x}=4
+\]
+将等式左边配方，得到
+\[
+\left(2\sin x+\frac{\sqrt{3}}{2\sin x}\right)^{2}=4+2\sqrt{3}=\left(1+\sqrt{3}\right)^{2}
+\]
+由于 \(x\) 为锐角，\(2\sin x+\frac{\sqrt{3}}{2\sin x}>0\)，所以开平方时取正值，得
+\[
+2\sin x+\frac{\sqrt{3}}{2\sin x}=1+\sqrt{3}
+\]
+两边乘以 \(\frac{1}{2}\sin x\)，再移项，得
+\[
+\sin^{2}x-\frac{1+\sqrt{3}}{2}\sin x+\frac{\sqrt{3}}{4}=0
+\]
+若取另一个锐角 \(\angle B=x\)，令 \(b\) 为 \(\angle B\) 的对边，\(a\) 为另一条直角边，则由正弦定义 \(b=2\sin x\). 面积关系仍给出 \(ab=\sqrt{3}\)，所以 \(a=\frac{\sqrt{3}}{2\sin x}\). 代入勾股定理得
+\[
+4\sin^{2}x+\frac{3}{4\sin^{2}x}=4
+\]
+同样利用 \(x\) 为锐角，左边配方并取正平方根，得到
+\[
+2\sin x+\frac{\sqrt{3}}{2\sin x}=1+\sqrt{3}
+\]
+两边乘以 \(\frac{1}{2}\sin x\) 并移项，仍得
+\[
+\sin^{2}x-\frac{1+\sqrt{3}}{2}\sin x+\frac{\sqrt{3}}{4}=0
+\]
+因此三角形的两个锐角都满足所给三角方程，即都是该方程的根.
 \end{solution}

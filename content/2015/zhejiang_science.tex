@@ -39,7 +39,7 @@ C
 \end{answer}
 
 \begin{solution}
-由三视图可知，该几何体由一个底面边长为 \(2\)，高为 \(2\) 的正方体和一个底面边长为 \(2\)，高为 \(2\) 的四棱锥组成. 因此其体积为
+由正视图和侧视图可知，该几何体的下部是棱长为 \(2\) 的正方体；由俯视图可知，上部四棱锥的底面是边长为 \(2\) 的正方形，且由正视图可知其高为 \(2\). 因此其体积为
 \(V=2^3+\dfrac{1}{3}\times2^2\times2=\dfrac{32}{3}\mathrm{~cm}^3\). 所以选 C.
 \end{solution}
 
@@ -110,7 +110,8 @@ A
 \(PF^2=(x-1)^2+y^2=(x-1)^2+4x=(x+1)^2\). 因为抛物线上点满足 \(x\geqslant0\)，所以 \(PF=x+1\)，即
 \(x=PF-1\).
 
-三点 \(A\)，\(B\)，\(C\) 共线，且 \(C\) 在 \(y\) 轴上. 三角形 \(BCF\) 与 \(ACF\) 以同一直线上的 \(BC\)，\(AC\) 为底边，它们的高相同，因此
+设 \(A\)，\(B\) 的横坐标分别为 \(x_A\)，\(x_B\). 三点 \(A\)，\(B\)，\(C\) 共线，且 \(C\) 在 \(y\) 轴上，所以同一直线上各线段长度之比等于其横坐标差的绝对值之比；又 \(x_C=0\)，从而
+\(\dfrac{BC}{AC}=\dfrac{x_B}{x_A}\). 三角形 \(BCF\) 与 \(ACF\) 以同一直线上的 \(BC\)，\(AC\) 为底边，它们的高相同，因此
 \(\dfrac{S_{\triangle BCF}}{S_{\triangle ACF}}=\dfrac{BC}{AC}=\dfrac{x_B}{x_A}=\dfrac{|BF|-1}{|AF|-1}\). 因此选 A.
 \end{solution}
 
@@ -191,7 +192,8 @@ B
 \begin{solution}
 设 \(\theta=\angle A'DC\). 折叠不改变 \(\triangle ACD\) 的形状，所以 \(\angle A'DC=\angle ADC=\theta\). 又 \(A\)，\(D\)，\(B\) 共线，故 \(\angle BDC=\pi-\theta\).
 
-在过 \(D\) 且垂直于 \(CD\) 的平面内，分别取 \(DA'\)，\(DB\) 在该平面上的投影. 根据二面角平面角的定义，这两个投影的夹角为 \(\alpha\). 将 \(DA'\)，\(DB\) 的单位方向向量沿 \(CD\) 和垂直于 \(CD\) 的方向分解，得
+取沿 \(DC\) 的单位向量为 \(\bs{e}\)，并将 \(DA'\)，\(DB\) 的单位方向向量分别分解为沿 \(DC\) 与垂直于 \(DC\) 的分量. 由 \(\angle A'DC=\theta\) 和 \(\angle BDC=\pi-\theta\)，这两个单位向量可写成
+\(\cos\theta\,\bs{e}+\sin\theta\,\bs{u}\) 和 \(-\cos\theta\,\bs{e}+\sin\theta\,\bs{v}\)，其中 \(\bs{u}\)，\(\bs{v}\) 是相应的垂直分量方向. 过 \(D\) 作垂直于 \(CD\) 的截面，根据二面角平面角的定义，\(\bs{u}\cdot\bs{v}=\cos\alpha\). 因而
 \(\cos\angle A'DB=-\cos^2\theta+\sin^2\theta\cos\alpha\).
 
 因此
@@ -255,7 +257,7 @@ x + \frac{2}{x} - 3, & x \geqslant 1,\\
 \end{solution}
 
 \begin{problem}
-若 \(a = \log_{4} 3\)，则 \(2^a + 2^{-a} =\fillinblank{}.\)
+若 \(a = \log_{4} 3\)，则 \(2^a + 2^{-a} =\fillinblank{}\).
 \end{problem}
 
 \begin{answer}
@@ -306,8 +308,8 @@ x + \frac{2}{x} - 3, & x \geqslant 1,\\
 \end{answer}
 
 \begin{solution}
-令 \(u=2x+y-2\)，\(v=6-x-3y\). 由绝对值不等式，
-\(|u|+|v|\geqslant-u+v=8-3x-4y\).
+令 \(u=2x+y-2\)，\(v=6-x-3y\). 由三角不等式，
+\(|u|+|v|\geqslant|v-u|\geqslant v-u=8-3x-4y\).
 
 又由柯西不等式及 \(x^2+y^2\leqslant1\)，
 \(3x+4y\leqslant\sqrt{3^2+4^2}\sqrt{x^2+y^2}\leqslant5\). 因此
@@ -318,7 +320,7 @@ x + \frac{2}{x} - 3, & x \geqslant 1,\\
 \end{solution}
 
 \begin{problem}
-已知 \(\bs{e}_{1}\)，\(\bs{e}_{2}\) 是空间单位向量，\(\bs{e}_{1} \cdot \bs{e}_{2} = \frac{1}{2}\)，若空间向量 \( \bs{b} \) 满足 \( \bs{b} \cdot \bs{e}_{1} = 2\)，\( \bs{b} \cdot \bs{e}_{2} = \frac{5}{2}\)，且对于任意 \(x\)，\(y \in \R\)，\(\left|\bs{b} - (x \bs{e}_{1} + y \bs{e}_{2})\right| \geqslant \left|\bs{b} - (x_{0} \bs{e}_{1} + y_{0} \bs{e}_{2})\right| = 1\)（\(x_{0}, y_{0} \in \R\)），则 \(x_{0} =\)\fillinblank{}，\(y_{0} =\)\fillinblank{}，\(|\bs{b}| =\)\fillinblank{}.
+已知 \(\bs{e}_{1}\)，\(\bs{e}_{2}\) 是空间单位向量，\(\bs{e}_{1} \cdot \bs{e}_{2} = \frac{1}{2}\)，若空间向量 \( \bs{b} \) 满足 \( \bs{b} \cdot \bs{e}_{1} = 2\)，\( \bs{b} \cdot \bs{e}_{2} = \frac{5}{2}\)，且对于任意 \(x\)，\(y \in \R\)，\(\left|\bs{b} - (x \bs{e}_{1} + y \bs{e}_{2})\right| \geqslant \left|\bs{b} - (x_{0} \bs{e}_{1} + y_{0} \bs{e}_{2})\right| = 1\)（\(x_{0}\)，\(y_{0} \in \R\)），则 \(x_{0} =\)\fillinblank{}，\(y_{0} =\)\fillinblank{}，\(|\bs{b}| =\)\fillinblank{}.
 \end{problem}
 
 \begin{answer}
@@ -381,17 +383,15 @@ x_0+\dfrac{y_0}{2}=2,\\
 \begin{enumerate}
 \item 设 \(O\) 为 \(BC\) 的中点. 由 \(AB=AC=2\)，\(\angle BAC=90^{\circ}\)，得 \(BC=2\sqrt{2}\)，\(AO=\sqrt{2}\). 由于 \(A_1\) 在底面 \(ABC\) 的射影为 \(O\)，所以 \(A_1O\perp\) 平面 \(ABC\)，且在直角三角形 \(AA_1O\) 中，\(A_1A=4\)，从而 \(A_1O=\sqrt{14}\).
 
-以 \(OB\)，\(OA\)，\(OA_1\) 所在直线分别为 \(x\)，\(y\)，\(z\) 轴建立空间直角坐标系，则
-\(A_1(0,0,\sqrt{14})\)，\(B(\sqrt{2},0,0)\)，\(C(-\sqrt{2},0,0)\). 由三棱柱的平移关系，\(D\) 为 \(B_1C_1\) 的中点，故 \(D(0,-\sqrt{2},\sqrt{14})\).
+以 \(OB\)，\(OA\)，\(OA_1\) 所在直线分别为 \(x\)，\(y\)，\(z\) 轴建立空间直角坐标系，并取
+\(A(0,\sqrt{2},0)\). 则
+\(A_1(0,0,\sqrt{14})\)，\(B(\sqrt{2},0,0)\)，\(C(-\sqrt{2},0,0)\). 由三棱柱的平移关系，平移向量为
+\(\overrightarrow{AA_1}=(0,-\sqrt{2},\sqrt{14})\)，所以 \(B_1=(\sqrt{2},-\sqrt{2},\sqrt{14})\)，\(C_1=(-\sqrt{2},-\sqrt{2},\sqrt{14})\). 因而 \(D\) 为 \(B_1C_1\) 的中点，即 \(D(0,-\sqrt{2},\sqrt{14})\).
 
 于是 \(\overrightarrow{A_1D}=(0,-\sqrt{2},0)\)，而平面 \(A_1BC\) 内的两条相交直线可取 \(BC\) 和 \(OA_1\)，它们的方向向量分别为 \((-2\sqrt{2},0,0)\) 和 \((0,0,\sqrt{14})\). 这两个向量都与 \(\overrightarrow{A_1D}\) 垂直，所以 \(A_1D\perp\) 平面 \(A_1BC\).
 
 \item 取 \(\bs{u}=\overrightarrow{BD}=(-\sqrt{2},-\sqrt{2},\sqrt{14})\)，则 \(|\bs{u}|^2=18\). 将 \(\overrightarrow{BA_1}=(-\sqrt{2},0,\sqrt{14})\) 和 \(\overrightarrow{BB_1}=(0,-\sqrt{2},\sqrt{14})\) 分别投影到垂直于 \(BD\) 的方向上，得到平面 \(A_1BD\) 和平面 \(B_1BD\) 内分别指向 \(A_1\) 和 \(B_1\) 的向量
-\[
-\bs{p}=\overrightarrow{BA_1}-\frac{\overrightarrow{BA_1}\cdot\bs{u}}{|\bs{u}|^2}\bs{u}=\left(-\frac{\sqrt{2}}{9},\frac{8\sqrt{2}}{9},\frac{\sqrt{14}}{9}\right),
-\quad
-\bs{q}=\overrightarrow{BB_1}-\frac{\overrightarrow{BB_1}\cdot\bs{u}}{|\bs{u}|^2}\bs{u}=\left(\frac{8\sqrt{2}}{9},-\frac{\sqrt{2}}{9},\frac{\sqrt{14}}{9}\right),
-\]
+\(\bs{p}=\overrightarrow{BA_1}-\frac{\overrightarrow{BA_1}\cdot\bs{u}}{|\bs{u}|^2}\bs{u}=\left(-\frac{\sqrt{2}}{9},\frac{8\sqrt{2}}{9},\frac{\sqrt{14}}{9}\right)\)，\(\bs{q}=\overrightarrow{BB_1}-\frac{\overrightarrow{BB_1}\cdot\bs{u}}{|\bs{u}|^2}\bs{u}=\left(\frac{8\sqrt{2}}{9},-\frac{\sqrt{2}}{9},\frac{\sqrt{14}}{9}\right)\)
 其中 \(\overrightarrow{BA_1}\cdot\bs{u}=\overrightarrow{BB_1}\cdot\bs{u}=16\). 直接计算得 \(\bs{p}\cdot\bs{q}=-\frac{2}{9}\)，且 \(|\bs{p}|=|\bs{q}|=\frac{4}{3}\). 因而二面角 \(A_1-BD-B_1\) 的平面角余弦为
 \(\dfrac{\bs{p}\cdot\bs{q}}{|\bs{p}|\,|\bs{q}|}=-\dfrac{1}{8}\).
 \end{enumerate}
@@ -412,7 +412,7 @@ x_0+\dfrac{y_0}{2}=2,\\
 
 \item 由 \(M(a,b)\leqslant2\)，得 \(|b|=|f(0)|\leqslant2\)，且
 \[
-|a|+|1+b|=\max\{|1+b+a|,|1+b-a|\}\leqslant2.
+|a|+|1+b|=\max\{|1+b+a|,|1+b-a|\}\leqslant2
 \]
 当 \(b\geqslant0\) 时，\(|a|+|b|\leqslant1\). 当 \(-1\leqslant b<0\) 时，由 \(|a|\leqslant1-b\)，得 \(|a|+|b|\leqslant1-2b\leqslant3\). 当 \(-2\leqslant b<-1\) 时，由 \(|a|\leqslant3+b\)，得 \(|a|+|b|\leqslant3\). 因此总有 \(|a|+|b|\leqslant3\).
 
@@ -434,17 +434,18 @@ x_0+\dfrac{y_0}{2}=2,\\
 \(A=P+t(m,-1)\)，\(B=P-t(m,-1)\). 将这两点代入椭圆方程并相减，得到 \(um=2y\)，其中 \(y=mu+\frac{1}{2}\). 因而 \(mu=-1\)，所以 \(m\neq0\)，且
 \(P=\left(-\frac{1}{m},-\frac{1}{2}\right)\).
 
-记 \(Q(x,y)=\frac{x^2}{2}+y^2\)，记 \(v=(m,-1)\). 由中点条件，二次项的交叉项为零，故
+将上式写成二次型的交叉项计算为
+\(Q(P+t(m,-1))-Q(P-t(m,-1))=4t\left(\dfrac{um}{2}-y\right)=0\)，这也直接验证了 \(um=2y\).
+
+记 \(v=(m,-1)\). 由于 \(A\)，\(B\) 在椭圆上且交叉项已经为零，故
 \[
-t^2=\frac{1-Q(P)}{Q(v)}=\frac{1-\frac{1}{2m^2}-\frac14}{\frac{m^2}{2}+1}=\frac{3m^2-2}{2m^2(m^2+2)}.
+t^2=\frac{1-Q(P)}{Q(v)}=\frac{1-\frac{1}{2m^2}-\frac14}{\frac{m^2}{2}+1}=\frac{3m^2-2}{2m^2(m^2+2)}
 \]
 因为 \(t>0\)，必须且只需 \(m^2>\frac{2}{3}\)，所以 \(m\) 的取值范围为 \(\left(-\infty,-\frac{\sqrt{6}}{3}\right)\cup\left(\frac{\sqrt{6}}{3},+\infty\right)\).
 
 \item 设 \(T\) 为 \(\triangle AOB\) 的面积，则
 \(T=\frac12|\det(A,B)|=t|\det(P,v)|=t\frac{m^2+2}{2|m|}\). 令 \(z=m^2\)，由上式得
-\[
-T^2=\frac{(3z-2)(z+2)}{8z^2},\qquad z>\frac23.
-\]
+\(T^2=\frac{(3z-2)(z+2)}{8z^2}\)，\(z>\frac23\).
 又 \(T^2-\frac12=-\dfrac{(z-2)^2}{8z^2}\leqslant0\)，当且仅当 \(z=2\)，即 \(m=\pm\sqrt{2}\) 时取等号. 因此 \(\triangle AOB\) 面积的最大值为 \(\frac{\sqrt{2}}{2}\).
 \end{enumerate}
 \end{solution}
@@ -464,18 +465,14 @@ T^2=\frac{(3z-2)(z+2)}{8z^2},\qquad z>\frac23.
 
 \item 令 \(g(x)=x(1-x)\). 在 \(\left[0,\frac12\right]\) 上，\(g'(x)=1-2x\geqslant0\)，所以 \(g\) 递增. 证明对任意 \(n\in\N^*\) 有
 \[
-\frac{1}{2n}\leqslant a_n\leqslant\frac{1}{n+1}.
+\frac{1}{2n}\leqslant a_n\leqslant\frac{1}{n+1}
 \]
 当 \(n=1\) 时成立. 若对某个 \(n\) 成立，则由 \(g\) 的单调性，
-\[
-a_{n+1}=g(a_n)\geqslant g\left(\frac{1}{2n}\right)=\frac{2n-1}{4n^2}\geqslant\frac{1}{2(n+1)},
-\quad
-a_{n+1}=g(a_n)\leqslant g\left(\frac{1}{n+1}\right)=\frac{n}{(n+1)^2}\leqslant\frac{1}{n+2}.
-\]
+\(a_{n+1}=g(a_n)\geqslant g\left(\frac{1}{2n}\right)=\frac{2n-1}{4n^2}\geqslant\frac{1}{2(n+1)}\)，\(a_{n+1}=g(a_n)\leqslant g\left(\frac{1}{n+1}\right)=\frac{n}{(n+1)^2}\leqslant\frac{1}{n+2}\).
 故上述不等式对所有正整数 \(n\) 成立. 又由 \(a_k-a_{k+1}=a_k^2\)，数列 \(\{a_n^2\}\) 的前 \(n\) 项和满足
 \(S_n=\sum_{k=1}^{n}a_k^2=\sum_{k=1}^{n}(a_k-a_{k+1})=\frac12-a_{n+1}\). 因此
 \[
-\frac{n}{2(n+2)}=\frac12-\frac{1}{n+2}\leqslant S_n\leqslant\frac12-\frac{1}{2(n+1)}=\frac{n}{2(n+1)}.
+\frac{n}{2(n+2)}=\frac12-\frac{1}{n+2}\leqslant S_n\leqslant\frac12-\frac{1}{2(n+1)}=\frac{n}{2(n+1)}
 \]
 两边同除以正数 \(n\)，即得 \(\dfrac{1}{2(n+2)}\leqslant\dfrac{S_n}{n}\leqslant\dfrac{1}{2(n+1)}\).
 \end{enumerate}

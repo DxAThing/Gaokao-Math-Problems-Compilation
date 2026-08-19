@@ -18,218 +18,368 @@
 
 \begin{solution}
 \begin{enumerate}
-\item
-\( \log_3 \frac{1}{27}=\log_3 3^{-3}=-3 \).
+\item 因为 \(27=3^3\)，所以 \(\dfrac{1}{27}=3^{-3}\)，从而
+\(\log_3\dfrac{1}{27}=\log_3 3^{-3}=-3\).
 
-\item
-\( \log_{10}\left( \log_{10}10 \right)=\log_{10}1=0 \).
+\item 先计算内层对数：\(\log_{10}10=1\). 因为 \(1>0\)，外层对数有意义，且
+\(\log_{10}\left(\log_{10}10\right)=\log_{10}1=0\).
 \end{enumerate}
 \end{solution}
 
 \section{解答题}
 
 \begin{problem}
-当 \( a \) 取什么值时，方程 \( x^2-2x+\lg a=0 \) 有实数根.
+当 \(a\) 取什么值时，方程 \(x^2-2x+\lg a=0\) 有实数根.
 \end{problem}
 
 \begin{solution}
-要使方程 \( x^2-2x+\lg a=0 \) 有实数根，这个方程的判别式必须不小于零，即
-\( \left( -2 \right)^2-4\lg a\ge 0 \).
-得 \( \lg a\le 1 \)，\( a\le 10 \).
-又因为 \( a \) 是真数，所以 \( a>0 \).
-综合以上条件，得 \( 0<a\le 10 \).
-因此当 \( 0<a\le 10 \) 时，方程 \( x^2-2x+\lg a=0 \) 有实数根.
+要使 \(\lg a\) 有意义，必须先满足 \(a>0\). 在此条件下，原式是关于 \(x\) 的一元二次方程，其判别式为
+\[
+\Delta=(-2)^2-4\lg a=4-4\lg a=4\left(1-\lg a\right)
+\]
+一元二次方程有实数根的充要条件是 \(\Delta\geq0\)，因此
+\[
+4\left(1-\lg a\right)\geq0\quad\Longleftrightarrow\quad \lg a\leq1
+\]
+由于常用对数函数在正数范围内递增，且 \(1=\lg10\)，所以 \(\lg a\leq1\) 等价于 \(a\leq10\). 与定义域条件 \(a>0\) 合并，得到
+\[
+0<a\leq10
+\]
+反过来，若 \(0<a\leq10\)，则 \(\lg a\) 有意义，并且 \(\lg a\leq1\)，于是 \(\Delta=4(1-\lg a)\geq0\)，原方程确有实数根. 因此所求取值范围为 \(0<a\leq10\).
 \end{solution}
 
 \begin{problem}
-解方程：\( 7^{\left( 2x^2+x-6 \right)}=1 \).
+解方程：\(7^{\left(2x^2+x-6\right)}=1\).
 \end{problem}
 
 \begin{solution}
-\( 7^{\left( 2x^2+x-6 \right)}=1 \) 可化为 \( 7^{\left( 2x^2+x-6 \right)}=7^0 \). 所以
-\( 2x^2+x-6=0 \).
-解此方程得到 \( x_1=\frac{3}{2} \)，\( x_2=-2 \).
+因为 \(7>0\) 且 \(7\neq1\)，指数函数 \(7^t\) 在实数范围内是单调函数，故 \(7^t=1=7^0\) 当且仅当 \(t=0\). 因此原方程等价于
+\[
+2x^2+x-6=0
+\]
+将左边因式分解，得
+\[
+2x^2+x-6=(2x-3)(x+2)=0
+\]
+所以 \(2x-3=0\) 或 \(x+2=0\)，即
+\[
+x=\frac32\quad\text{或}\quad x=-2
+\]
+这两个值都使指数 \(2x^2+x-6\) 等于 \(0\)，代回原方程均成立. 所以原方程的解为 \(x=\frac32\) 或 \(x=-2\).
 \end{solution}
 
 \begin{problem}
-求等比数列 \( \sqrt[6]{3} \)，\( \sqrt[3]{3} \)，\( \sqrt{3} \)，\(\ldots\) 的公比 \( q \)，并写出它的第六项 \( a_6 \).
+求等比数列 \(\sqrt[6]{3}\)，\(\sqrt[3]{3}\)，\(\sqrt{3}\)，\(\ldots\) 的公比 \(q\)，并写出它的第六项 \(a_6\).
 \end{problem}
 
 \begin{solution}
-\( q=\frac{\sqrt[3]{3}}{\sqrt[6]{3}}=\sqrt[6]{3} \).
-\( a_6=a_1q^5=\sqrt[6]{3}\cdot \left( \sqrt[6]{3} \right)^5=3 \).
+将前三项写成以 \(3\) 为底的幂，得到
+\(a_1=3^{\frac16}\)，\(a_2=3^{\frac26}\)，\(a_3=3^{\frac36}\).
+于是
+\(\frac{a_2}{a_1}=3^{\frac26-\frac16}=3^{\frac16}\)，\(\frac{a_3}{a_2}=3^{\frac36-\frac26}=3^{\frac16}\)
+两相邻项之比相同，故公比为
+\[
+q=3^{\frac16}=\sqrt[6]{3}
+\]
+等比数列的第六项满足 \(a_6=a_1q^5\)，所以
+\[
+a_6=3^{\frac16}\left(3^{\frac16}\right)^5=3^{\frac66}=3
+\]
+因此 \(q=\sqrt[6]{3}\)，\(a_6=3\).
 \end{solution}
 
 \begin{problem}
-在底边为 \(2\text{ 尺}\)，高为 \(1.6\text{ 尺}\)的三角形内截一个最大面积的矩形，并使其一边在三角形的底边上，求矩形的长和宽各是多少？
+在底边为 \(2\text{ 尺}\)，高为 \(1.6\text{ 尺}\) 的三角形内截一个最大面积的矩形，并使其一边在三角形的底边上，求矩形的长和宽各是多少？
 \end{problem}
 
 \begin{solution}
-如图，矩形的一边 \(FG\) 在 \( \triangle ABC \) 的 \(BC\) 边上，因此 \( EH\parallel BC \).
+如图，设三角形为 \(\triangle ABC\)，底边为 \(BC\)，高为 \(AD\)，矩形为 \(EFGH\)，其中 \(FG\) 在 \(BC\) 上. 由于矩形的上边 \(EH\parallel BC\)，令 \(K=EH\cap AD\)，并设矩形的长 \(EH=x\text{ 尺}\). 由相似三角形
 
 \solutionfigure{\bitmapfigure[max width=5.8cm]{img/1977/xinjiang_science/q5_solution_fig1.png}}
 
-从而有 \( \triangle AEH\sim\triangle ABC \). 因此
-\( \frac{EH}{BC}=\frac{AK}{AD} \).
-现设矩形的长 \( EH=x\text{ 尺} \)，则 \( \frac{x}{2}=\frac{AK}{1.6} \)，\( AK=0.8x \).
-那末矩形的宽 \( HG=KD=1.6-0.8x \).
-因此矩形面积
+\(\triangle AEH\sim\triangle ABC\)，\(\frac{EH}{BC}=\frac{AK}{AD}\)，\(\frac{x}{2}=\frac{AK}{1.6}\).
+因此 \(AK=0.8x\). 矩形的宽为
 \[
-S=x\left( 1.6-0.8x \right)=-0.8x^2+1.6x=-0.8\left( x-1 \right)^2+0.8
+HG=KD=AD-AK=1.6-0.8x
 \]
-所以当 \( x=1 \) 时，函数 \( S=-0.8x^2+1.6x \) 有极大值. 此时
-\( HG=KD=1.6-0.8\times 1=0.8 \).
-
-答：当矩形的长为 \(1\text{ 尺}\)，宽为 \(0.8\text{ 尺}\)时，所截矩形面积最大.
+矩形完全位于三角形内时 \(0\leq x\leq2\)，其面积为
+\[
+S=x\left(1.6-0.8x\right)=-0.8x^2+1.6x=-0.8\left(x-1\right)^2+0.8
+\]
+因为 \(\left(x-1\right)^2\geq0\)，所以 \(S\leq0.8\)，且当且仅当 \(x=1\) 时取等号. 此时
+\[
+HG=1.6-0.8\times1=0.8
+\]
+故矩形的长为 \(1\text{ 尺}\)，宽为 \(0.8\text{ 尺}\) 时，面积最大.
 \end{solution}
 
 \begin{problem}
-求 \( \cot\left( -1200^\circ \right) \) 的值.
+求 \(\cot\left(-1200^\circ\right)\) 的值.
 \end{problem}
 
 \begin{solution}
+利用余切函数的奇偶性与周期性，先有
 \[
-\cot\left( -1200^\circ \right)=-\cot\left( 1200^\circ \right)=-\cot\left( 360^\circ\times 3+120^\circ \right)=-\cot 120^\circ.
+\cot\left(-1200^\circ\right)=-\cot1200^\circ=-\cot\left(3\times360^\circ+120^\circ\right)=-\cot120^\circ
 \]
+又因为 \(120^\circ=180^\circ-60^\circ\)，所以
 \[
-\cot\left( -1200^\circ \right)=-\cot\left( 180^\circ-60^\circ \right)=\cot 60^\circ=\frac{\sqrt{3}}{3}.
+\cot120^\circ=\frac{\cos120^\circ}{\sin120^\circ}
+=\frac{-\frac12}{\frac{\sqrt3}{2}}=-\frac{\sqrt3}{3}
 \]
-\end{solution}
-
-\begin{problem}
-已知 \( \sin\alpha=-\frac{12}{13} \)，并且 \( \pi<\alpha<\frac{3\pi}{2} \)，求 \( \cos \frac{\alpha}{2} \).
-\end{problem}
-
-\begin{solution}
-因为 \( \pi<\alpha<\frac{3\pi}{2} \)，所以 \( \frac{\pi}{2}<\frac{\alpha}{2}<\frac{3\pi}{4} \)，\( \cos\alpha \) 和 \( \cos \frac{\alpha}{2} \) 都是负值，则
-\( \cos \frac{\alpha}{2}=-\sqrt{\frac{1+\cos\alpha}{2}} \).
-而
+从而
 \[
-\cos\alpha=-\sqrt{1-\sin^2\alpha}=-\sqrt{1-\left( -\frac{12}{13} \right)^2}=-\frac{5}{13}
-\]
-因此
-\[
-\cos \frac{\alpha}{2}=-\sqrt{\frac{1+\cos\alpha}{2}}=-\sqrt{\frac{1-\frac{5}{13}}{2}}=-\frac{2\sqrt{13}}{13}
+\cot\left(-1200^\circ\right)=-\left(-\frac{\sqrt3}{3}\right)=\frac{\sqrt3}{3}
 \]
 \end{solution}
 
 \begin{problem}
-三角形的三边长分别是 \( 4 \mathrm{~cm} \)，\( 5 \mathrm{~cm} \)，\( \sqrt{61} \mathrm{~cm} \)，求这个三角形内最大角的度数.
+已知 \(\sin\alpha=-\frac{12}{13}\)，并且 \(\pi<\alpha<\frac{3\pi}{2}\)，求 \(\cos\frac{\alpha}{2}\).
 \end{problem}
 
 \begin{solution}
-在一个三角形内，三内角中最长边所对的角最大. 因此这个三角形内边长为 \( \sqrt{61} \mathrm{~cm} \) 的边所对的角最大.
-设 \( \sqrt{61} \mathrm{~cm} \) 的这条边所对的角为 \( \alpha \)，由余弦定理得
+由 \(\pi<\alpha<\frac{3\pi}{2}\)，知 \(\alpha\) 在第三象限，所以 \(\cos\alpha<0\). 由平方关系
 \[
-\cos\alpha=\frac{-\left( \sqrt{61} \right)^2+4^2+5^2}{2\times 4\times 5}=\frac{-61+16+25}{40}=-\frac{1}{2}
+\cos^2\alpha=1-\sin^2\alpha=1-\left(-\frac{12}{13}\right)^2=1-\frac{144}{169}=\frac{25}{169}
 \]
-故 \( \alpha=120^\circ \).
-答：这个三角形内最大的角是 \( 120^\circ \).
+并结合 \(\cos\alpha<0\)，得到
+\[
+\cos\alpha=-\frac5{13}
+\]
+将 \(\pi<\alpha<\frac{3\pi}{2}\) 同除以 \(2\)，得
+\[
+\frac\pi2<\frac\alpha2<\frac{3\pi}{4}
+\]
+因此 \(\frac\alpha2\) 在第二象限，\(\cos\frac\alpha2<0\). 由半角公式
+\[
+\cos\frac\alpha2=-\sqrt{\frac{1+\cos\alpha}{2}}
+=-\sqrt{\frac{1-\frac5{13}}{2}}
+=-\sqrt{\frac4{13}}
+=-\frac{2\sqrt{13}}{13}
+\]
 \end{solution}
 
 \begin{problem}
-求经过圆 \( 2x^2-20x+2y^2+18=0 \) 上一点 \( P\left( 3,2\sqrt{3} \right) \) 的切线方程.
+三角形的三边长分别是 \(4\mathrm{~cm}\)，\(5\mathrm{~cm}\)，\(\sqrt{61}\mathrm{~cm}\)，求这个三角形内最大角的度数.
 \end{problem}
 
 \begin{solution}
-因为 \( P\left( 3,2\sqrt{3} \right) \) 是圆 \( 2x^2-20x+2y^2+18=0 \) 上一点，所以过 \(P\) 点圆的切线方程为
-\( 2\left( 3x \right)-20\left( \frac{3+x}{2} \right)+2\left( 2\sqrt{3}\,y \right)+18=0 \).
-化简后得
-\( \sqrt{3}\,y-x-3=0 \).
+先验证三条线段可以组成三角形. 因为 \(\sqrt{61}>5\)，只需检查最长边对应的不等式：
+\[
+\sqrt{61}<4+5=9
+\]
+另外 \(4+\sqrt{61}>5\) 和 \(5+\sqrt{61}>4\) 显然成立，所以三条边确能组成三角形.
+
+三角形中最长边所对的角最大. 设边长 \(\sqrt{61}\mathrm{~cm}\) 所对的最大角为 \(\alpha\)，由余弦定理
+\[
+\cos\alpha=\frac{4^2+5^2-\left(\sqrt{61}\right)^2}{2\times4\times5}
+=\frac{16+25-61}{40}=-\frac12
+\]
+因为 \(0^\circ<\alpha<180^\circ\)，余弦函数在该区间内严格递减，且 \(\cos120^\circ=-\frac12\)，所以 \(\alpha=120^\circ\). 故这个三角形内最大的角是 \(120^\circ\).
 \end{solution}
 
 \begin{problem}
-圆弧拱桥的拱跨径 \( AB=16\text{ 米} \)，主拱高为 \( 2.5\text{ 米} \)，计算圆弧 \(\widehat{AB}\) 的半径是多少米？
+求经过圆 \(2x^2-20x+2y^2+18=0\) 上一点 \(P\left(3,2\sqrt3\right)\) 的切线方程.
 \end{problem}
 
 \begin{solution}
-如图，是圆弧拱桥. 跨径 \(AB\) 是圆弧 \( \widehat{AB} \) 之弦，主拱 \( CD\perp AB \)，并且主拱 \(CD\) 延长通过圆弧 \( \widehat{AB} \) 的圆心.
+将圆的方程配方，得
+\[
+2x^2-20x+2y^2+18=0
+\quad\Longleftrightarrow\quad
+2\left(x-5\right)^2+2y^2=32
+\quad\Longleftrightarrow\quad
+\left(x-5\right)^2+y^2=16
+\]
+所以圆心为 \(O(5,0)\)，半径为 \(4\). 代入 \(P\left(3,2\sqrt3\right)\) 验证：
+\[
+\left(3-5\right)^2+\left(2\sqrt3\right)^2=4+12=16
+\]
+故 \(P\) 确在圆上.
+
+半径方向向量为
+\[
+\overrightarrow{OP}=\left(-2,2\sqrt3\right)
+\]
+设切线上的任意一点为 \(Q(x,y)\)，则 \(\overrightarrow{PQ}=\left(x-3,y-2\sqrt3\right)\). 因为切线垂直于半径，故
+\[
+\overrightarrow{OP}\cdot\overrightarrow{PQ}=0
+\]
+即
+\[
+\left(-2,2\sqrt3\right)\cdot\left(x-3,y-2\sqrt3\right)=0
+\]
+展开并化简，得
+\[
+-2\left(x-3\right)+2\sqrt3\left(y-2\sqrt3\right)=0
+\quad\Longleftrightarrow\quad
+\sqrt3\,y-x-3=0
+\]
+所以所求切线方程为 \(\sqrt3\,y-x-3=0\).
+\end{solution}
+
+\begin{problem}
+圆弧拱桥的拱跨径 \(AB=16\text{ 米}\)，主拱高为 \(2.5\text{ 米}\)，计算圆弧 \(\widehat{AB}\) 的半径是多少米？
+\end{problem}
+
+\begin{solution}
+如图，\(AB\) 是圆弧 \(\widehat{AB}\) 的弦，\(CD\) 是主拱高，且 \(CD\perp AB\) 并经过圆心 \(O\). 过圆心且垂直于弦的直线平分弦，所以
 
 \solutionfigure{\bitmapfigure[max width=6.2cm]{img/1977/xinjiang_science/q10_solution_fig1.png}}
 
-故 \(CD\) 平分 \(AB\)（垂直于弦的直径平分这条弦）. 即得
 \[
-AD=DB=\frac{1}{2}AB=8
+AD=DB=\frac12AB=8\text{ 米}
 \]
-设圆弧 \( \widehat{AB} \) 的半径为 \(R\)，圆心为 \(O\)，则 \( OB=R \)，\( OD=R-CD=R-2.5 \).
-
-由勾股定理得
-\( R^2=\left( R-2.5 \right)^2+8^2 \).
-\( R^2=R^2-5R+6.25+64 \).
-\( 5R=70.25 \).
-所以 \( R=14.05\text{ 米} \).
-答：圆弧 \(\widehat{AB}\) 的半径是 \(14.05\text{ 米}\).
+设圆弧 \(\widehat{AB}\) 的半径为 \(R\text{ 米}\). 因为主拱高 \(CD=2.5\text{ 米}\)，且 \(OC=R\)，所以
+\[
+OD=OC-CD=R-2.5
+\]
+在直角三角形 \(ODB\) 中，\(OB=R\)，\(DB=8\)，由勾股定理
+\[
+R^2=(R-2.5)^2+8^2
+=R^2-5R+6.25+64
+\]
+约去两边的 \(R^2\)，得
+\(5R=70.25\)，\(R=14.05\).
+因此圆弧 \(\widehat{AB}\) 的半径是 \(14.05\text{ 米}\).
 \end{solution}
 
 \section{参考题}
 
 \begin{problem}
-解方程：\( \log_{16-3x}\left( x-2 \right)=\log_8\left( 2\sqrt{2} \right) \).
+解方程：\(\log_{16-3x}\left(x-2\right)=\log_8\left(2\sqrt2\right)\).
 \end{problem}
 
 \begin{solution}
-\( \log_8\left( 2\sqrt{2} \right)=\log_8 8^{\frac{1}{2}}=\frac{1}{2} \).
+对数有意义要求真数为正、底数为正且底数不为 \(1\)，所以
+\(x-2>0\)，\(16-3x>0\)，\(16-3x\neq1\).
+这给出定义域
+\(2<x<\frac{16}{3}\)，\(x\neq5\).
+又因为 \(2\sqrt2=2^{\frac32}=\left(2^3\right)^{\frac12}=8^{\frac12}\)，所以
+\[
+\log_8\left(2\sqrt2\right)=\log_8 8^{\frac12}=\frac12
+\]
+原方程化为
+\[
+\log_{16-3x}\left(x-2\right)=\frac12
+\]
+在上述定义域内，依据对数的定义，这等价于
+\[
+x-2=\left(16-3x\right)^{\frac12}
+\]
+由于定义域给出 \(x-2>0\)，两边平方不会引入符号不满足原式的解，得
+\[
+16-3x=(x-2)^2=x^2-4x+4
+\]
+即
+\[
+x^2-x-12=0=(x-4)(x+3)
+\]
+候选值为 \(x=4\) 或 \(x=-3\). 其中 \(x=-3\) 不满足 \(x-2>0\)，舍去；\(x=4\) 满足 \(2<x<\frac{16}{3}\)，且底数 \(16-3x=4\neq1\)，代回原方程成立. 因此原方程的解为 \(x=4\).
+\end{solution}
+
+\begin{problem}
+已知 \(0^\circ<x<45^\circ\)，且有
+\(\lg\tan x-\lg\sin x=\lg\cos x-\lg\cot x+2\lg3-\frac32\lg2\)，试求 \(\sin x-\cos x\) 的值.
+\end{problem}
+
+\begin{solution}
+由 \(0^\circ<x<45^\circ\)，知 \(\sin x>0\)、\(\cos x>0\)、\(\tan x>0\)、\(\cot x>0\)，所以题中各个对数均有意义. 利用对数的商的运算性质和 \(\tan x=\frac{\sin x}{\cos x}\)，左边为
+\[
+\lg\tan x-\lg\sin x
+=\lg\frac{\tan x}{\sin x}
+=\lg\frac{1}{\cos x}
+\]
+右边利用 \(\cot x=\frac{\cos x}{\sin x}\)、\(2\lg3=\lg9\) 和 \(\frac32\lg2=\lg2^{\frac32}=\lg(2\sqrt2)\)，得
+\[
+\lg\cos x-\lg\cot x+2\lg3-\frac32\lg2
+=\lg\frac{\cos x}{\cot x}+\lg9-\lg(2\sqrt2)
+=\lg\frac{9\sin x}{2\sqrt2}
+\]
 因此
-\( \log_{16-3x}\left( x-2 \right)=\frac{1}{2} \).
-根据对数定义，有
-\( \left( 16-3x \right)^{\frac{1}{2}}=x-2 \).
-两边平方，
-\( 16-3x=x^2-4x+4 \).
-即
-\(x^2-x-12=0\)，\(\left( x-4 \right)\left( x+3 \right)=0\).
-解得 \( x_1=4 \)，\( x_2=-3 \). 其中 \( x=-3 \) 是增根，舍去.
-因此原方程的解是 \( x=4 \).
+\[
+\lg\frac1{\cos x}=\lg\frac{9\sin x}{2\sqrt2}
+\]
+两边真数均为正，且 \(\lg t\) 在正数范围内为一一对应函数，故
+\(\frac1{\cos x}=\frac{9\sin x}{2\sqrt2}\)，\(\sin x\cos x=\frac{2\sqrt2}{9}\).
+由 \(0^\circ<x<45^\circ\) 得 \(\sin x<\cos x\)，所以 \(\sin x-\cos x<0\). 又
+\[
+\left(\sin x-\cos x\right)^2
+=\sin^2x+\cos^2x-2\sin x\cos x
+=1-2\sin x\cos x
+=1-\frac{4\sqrt2}{9}
+\]
+于是
+\[
+\sin x-\cos x=-\sqrt{1-\frac{4\sqrt2}{9}}
+=-\frac{\sqrt{9-4\sqrt2}}{3}
+\]
+注意到 \(9-4\sqrt2=(2\sqrt2-1)^2\)，且 \(2\sqrt2-1>0\)，所以
+\[
+\sin x-\cos x=-\frac{2\sqrt2-1}{3}=\frac{1-2\sqrt2}{3}
+\]
 \end{solution}
 
 \begin{problem}
-已知 \( 0^\circ<x<45^\circ \)，且有
-\( \lg \tan x-\lg \sin x=\lg \cos x-\lg \cot x+2\lg 3-\frac{3}{2}\lg 2 \)，试求 \( \sin x-\cos x \) 的值.
+应用导数，求过曲线 \(x^2+y^2-8x-2y+12=0\) 上一点 \(P\left(5,3\right)\) 的切线方程.
 \end{problem}
 
 \begin{solution}
-利用对数的性质，已知等式可变换成
-\( \lg \frac{\tan x}{\sin x}=\lg \frac{\cos x\cdot 3^2}{\cot x\cdot 2^{\frac{3}{2}}} \).
-即
-\( \lg \frac{1}{\cos x}=\lg \frac{9\sin x}{2\sqrt{2}} \).
-所以
-\( \frac{1}{\cos x}=\frac{9\sin x}{2\sqrt{2}} \)，
-从而
-\( \sin x\cos x=\frac{2\sqrt{2}}{9} \).
-因为 \( 0^\circ<x<45^\circ \)，所以 \( \sin x<\cos x \)，也就是 \( \sin x-\cos x<0 \). 因此
-\( \sin x-\cos x=-\sqrt{\left( \sin x-\cos x \right)^2} \).
-\( \sin x-\cos x=-\sqrt{1-2\sin x\cos x} \).
-\( \sin x-\cos x=-\sqrt{1-2\cdot \frac{2\sqrt{2}}{9}} \).
-\( \sin x-\cos x=-\frac{\sqrt{9-4\sqrt{2}}}{3} \).
-\( \sin x-\cos x=-\frac{2\sqrt{2}-1}{3} \).
-\( \sin x-\cos x=\frac{1-2\sqrt{2}}{3} \).
+先验证给定点在曲线上：
+\[
+5^2+3^2-8\times5-2\times3+12=25+9-40-6+12=0
+\]
+所以 \(P\left(5,3\right)\) 确在曲线上. 将 \(y\) 看作 \(x\) 的函数，对曲线方程两边关于 \(x\) 求导，得到
+\[
+2x+2y\,y'-8-2y'=0
+\]
+移项并合并含 \(y'\) 的项，得
+\((2y-2)y'=8-2x\)，\(y'=\frac{8-2x}{2y-2}=\frac{4-x}{y-1}\).
+在点 \(P\left(5,3\right)\) 处，分母 \(y-1=2\neq0\)，切线斜率为
+\[
+k=\left.\frac{4-x}{y-1}\right|_{(x,y)=(5,3)}=-\frac12
+\]
+由点斜式，切线方程为
+\[
+y-3=-\frac12\left(x-5\right)
+\]
+整理得
+\[
+y=-\frac12x+\frac{11}{2}
+\]
 \end{solution}
 
 \begin{problem}
-应用导数，求过曲线 \( x^2+y^2-8x-2y+12=0 \) 上一点 \( P\left(5,3\right) \) 的切线方程.
+利用定积分，求椭圆 \(4x^2+25y^2=100\) 的面积.
 \end{problem}
 
 \begin{solution}
-对曲线方程 \( x^2+y^2-8x-2y+12=0 \) 两边求导：
-\( 2x+2yy'-8-2y'=0 \).
-解出
-\( y'=\frac{4-x}{y-1} \).
-过曲线上 \( P\left(5,3\right) \) 点的切线的斜率
-\( k=\left. \frac{4-x}{y-1} \right|_{x=5,\ y=3}=-\frac{1}{2} \).
-因此，所求的切线方程是
-\( y-3=-\frac{1}{2}\left( x-5 \right) \).
-或者写为
-\( y=-\frac{1}{2}x+\frac{11}{2} \).
-\end{solution}
-
-\begin{problem}
-利用定积分，求椭圆 \( 4x^2+25y^2=100 \) 的面积.
-\end{problem}
-
-\begin{solution}
-椭圆的方程可以写成
-\( \frac{x^2}{5^2}+\frac{y^2}{2^2}=1 \).
-因此，椭圆的面积
-\( S=4\int_0^5 2\sqrt{1-\frac{x^2}{5^2}}\,\mathrm{d}x=\frac{8}{5}\int_0^5 \sqrt{5^2-x^2}\,\mathrm{d}x \).
-\( =\frac{4}{5}\left( x\sqrt{5^2-x^2}+5^2\arcsin \frac{x}{5} \right)\bigg|_0^5=10\pi \).
-答：椭圆 \( 4x^2+25y^2=100 \) 的面积是 \( 10\pi \).
+将椭圆方程两边除以 \(100\)，得
+\[
+\frac{x^2}{25}+\frac{y^2}{4}=1
+\]
+当 \(-5\leq x\leq5\) 时，上、下半椭圆分别为
+\(y=2\sqrt{1-\frac{x^2}{25}}\)，\(y=-2\sqrt{1-\frac{x^2}{25}}\).
+因此椭圆面积等于上、下半椭圆纵坐标之差的定积分：
+\[
+S=\int_{-5}^{5}4\sqrt{1-\frac{x^2}{25}}\,\mathrm{d}x
+=8\int_0^5\sqrt{1-\frac{x^2}{25}}\,\mathrm{d}x
+=\frac85\int_0^5\sqrt{25-x^2}\,\mathrm{d}x
+\]
+令 \(x=5\sin t\)，则 \(\mathrm{d}x=5\cos t\,\mathrm{d}t\). 当 \(x=0\) 时 \(t=0\)，当 \(x=5\) 时 \(t=\frac\pi2\)，且在此区间内 \(\cos t\geq0\)，所以 \(\sqrt{25-x^2}=5\cos t\). 从而
+\[
+\int_0^5\sqrt{25-x^2}\,\mathrm{d}x
+=25\int_0^{\frac\pi2}\cos^2t\,\mathrm{d}t
+\]
+利用 \(\cos^2t=\frac{1+\cos2t}{2}\)，有
+\[
+25\int_0^{\frac\pi2}\cos^2t\,\mathrm{d}t
+=25\left[\frac t2+\frac{\sin2t}{4}\right]_0^{\frac\pi2}
+=25\cdot\frac\pi4
+\]
+因此
+\[
+S=\frac85\cdot\frac{25\pi}{4}=10\pi
+\]
+故椭圆 \(4x^2+25y^2=100\) 的面积是 \(10\pi\).
 \end{solution}

@@ -13,6 +13,11 @@
 \begin{answer}
 B
 \end{answer}
+\begin{solution}
+纯虚数的实部必须为 \(0\)，虚部必须不为 \(0\)，所以
+\(a^{2}-3a+2=0\) 且 \(a-1\neq0\). 由
+\(a^{2}-3a+2=(a-1)(a-2)\)，得 \(a=1\) 或 \(a=2\)，再由 \(a-1\neq0\) 排除 \(a=1\)，故 \(a=2\)，选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -26,6 +31,10 @@ B
 \begin{answer}
 A
 \end{answer}
+\begin{solution}
+由 \(\dfrac{x}{x-1}<0\)，分界点为 \(0\) 和 \(1\). 逐段判断符号可得
+\(A=(0,1)\)，而题设给出 \(B=(0,3)\). 于是 \(A\subsetneq B\)：若 \(m\in A\)，必有 \(m\in B\)，但取 \(m=2\) 可知 \(m\in B\) 不一定推出 \(m\in A\). 因此“\(m\in A\)”是“\(m\in B\)”的充分而不必要条件，选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -36,49 +45,20 @@ A
     {\(64\)}
     {\(127\)}
     {\(128\)}
-\end{problem}
-
+\begin{answer}
+按原题面无对应选项
+\end{answer}
 \begin{solution}
-设等比数列的公比为 \(q\)，则 \(q>0\). 由 \(a_5=a_1q^4\)，得
+设公比为 \(q\)，则 \(q>0\)，且 \(a_5=a_1q^4\) 给出 \(q^4=\dfrac{16}{7}\). 由于
+\(\left(\dfrac{6}{5}\right)^4=\dfrac{1296}{625}<\dfrac{16}{7}<\dfrac{625}{256}=\left(\dfrac{5}{4}\right)^4\)，所以 \(\dfrac{6}{5}<q<\dfrac{5}{4}\).
 
+令 \(S_7=7(1+q+q^2+\cdots+q^6)\). 对 \(q>0\)，右端随 \(q\) 严格增大，因此
 \[
-q^4=\frac{a_5}{a_1}=\frac{16}{7}.
+35\left[\left(\frac{6}{5}\right)^7-1\right]<S_7<28\left[\left(\frac{5}{4}\right)^7-1\right]
 \]
-
-又因为
-
-\[
-\left(\frac{6}{5}\right)^4=\frac{1296}{625}<\frac{16}{7}<\frac{625}{256}=\left(\frac{5}{4}\right)^4,
-\]
-
-所以
-
-\[
-\frac{6}{5}<q<\frac{5}{4}.
-\]
-
-又因为 \(q>1\)，所以 \(S_7=7\left(1+q+q^2+\cdots+q^6\right)\) 随 \(q\) 严格增大，从而
-
-\[
-35\left[\left(\frac{6}{5}\right)^7-1\right]
-<S_7
-<28\left[\left(\frac{5}{4}\right)^7-1\right].
-\]
-
-其中
-
-\[
-35\left[\left(\frac{6}{5}\right)^7-1\right]=\frac{7063385}{78125}>64.
-\]
-
-并且
-
-\[
-28\left[\left(\frac{5}{4}\right)^7-1\right]=\frac{1728748}{16384}<127.
-\]
-
-故 \(64<S_7<127\)，而选项只有 \(63\)、\(64\)、\(127\)、\(128\)，没有一个与 \(S_7\) 相等. 因此，按原试卷的题面，题设条件与选项不相容，无法确定选择项.
+其中左端为 \(\dfrac{7063385}{78125}>64\)，右端为 \(\dfrac{1728748}{16384}<127\)，故 \(64<S_7<127\). 这说明按原 PDF 的题面，\(S_7\) 不等于选项中的 \(63\)，\(64\)，\(127\)，\(128\) 中任何一个，题设与选项不相容，故无对应选择项.
 \end{solution}
+\end{problem}
 
 \begin{problem}
 函数 \( f(x) = x^3 + \sin x + 1 \)（\(x \in \R\)），若 \( f(a) = 2 \)，则 \( f(-a) \) 的值为（\quad）
@@ -91,6 +71,10 @@ q^4=\frac{a_5}{a_1}=\frac{16}{7}.
 \begin{answer}
 B
 \end{answer}
+\begin{solution}
+由 \(f(a)=2\)，得 \(a^3+\sin a+1=2\)，即 \(a^3+\sin a=1\). 因此
+\(f(-a)=(-a)^3+\sin(-a)+1=-a^3-\sin a+1=0\)，选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -104,6 +88,14 @@ B
 \begin{answer}
 B
 \end{answer}
+\begin{solution}
+4 粒种子中恰有 2 粒发芽的情形共有 \(\mathrm C_4^2\) 种. 每一种情形的概率都是
+\(\left(\dfrac45\right)^2\left(1-\dfrac45\right)^2=\left(\dfrac45\right)^2\left(\dfrac15\right)^2\)，故所求概率为
+\[
+\mathrm C_4^2\left(\frac45\right)^2\left(\frac15\right)^2=6\cdot\frac{16}{625}=\frac{96}{625}
+\]
+选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -119,6 +111,15 @@ B
 \begin{answer}
 D
 \end{answer}
+\begin{solution}
+建立直角坐标系，令 \(A(0,0,0)\)，\(B(2,0,0)\)，\(C(2,2,0)\)，\(D(0,2,0)\)，并令竖直方向为 \(z\) 轴，则 \(C_1(2,2,1)\)，所以直线 \(BC_1\) 的方向向量可取 \(\bs v=(0,2,1)\).
+
+平面 \(BB_1D_1D\) 内有方向向量 \(\overrightarrow{BB_1}=(0,0,1)\) 和 \(\overrightarrow{BD}=(-2,2,0)\)，故其法向量可取 \(\bs n=(1,1,0)\). 直线与平面所成角记为 \(\theta\)，则
+\[
+\sin\theta=\frac{|\bs v\cdot\bs n|}{|\bs v|\,|\bs n|}=\frac{2}{\sqrt5\sqrt2}=\frac{\sqrt{10}}5
+\]
+故选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -132,6 +133,13 @@ D
 \begin{answer}
 A
 \end{answer}
+\begin{solution}
+从 6 人中任取 4 人共有 \(\mathrm C_6^4\) 种. 扣除没有女生、即 4 名男生全被选中的 \(\mathrm C_4^4\) 种，得到
+\[
+\mathrm C_6^4-\mathrm C_4^4=15-1=14
+\]
+故选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -148,6 +156,13 @@ x > 0,\\
 \begin{answer}
 C
 \end{answer}
+\begin{solution}
+由 \(x-y+1\leqslant0\) 得 \(y\geqslant x+1\). 因为 \(x>0\)，所以
+\[
+\frac yx\geqslant\frac{x+1}{x}=1+\frac1x>1
+\]
+任取 \(r>1\)，取 \(x=\dfrac1{r-1}>0\)，再取 \(y=rx=x+1\)，便有 \(y/x=r\). 因此 \(y/x\) 的取值范围恰为 \((1,+\infty)\)，选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -161,6 +176,10 @@ C
 \begin{answer}
 A
 \end{answer}
+\begin{solution}
+\(f'(x)=-\sin x\)，所以 \(-f'(x)=\sin x\). 图象 \(y=f(x)=\cos x\) 按向量 \((m,0)\) 平移后变为
+\(y=f(x-m)=\cos(x-m)\). 要使它与 \(y=\sin x=\cos\left(x-\dfrac\pi2\right)\) 重合，需有 \(m=\dfrac\pi2+2k\pi\)，其中 \(k\in\Z\). 选项中只有 \(m=\dfrac\pi2\)，故选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -174,6 +193,13 @@ A
 \begin{answer}
 D
 \end{answer}
+\begin{solution}
+由余弦定理，\(b^2=a^2+c^2-2ac\cos B\)，所以 \(a^2+c^2-b^2=2ac\cos B\). 代入题设并注意 \(\tan B\) 有定义，得
+\[
+2ac\cos B\tan B=\sqrt3ac
+\]
+由于 \(a\)，\(c>0\)，且 \(\cos B\neq0\)，上式化为 \(2\sin B=\sqrt3\)，即 \(\sin B=\dfrac{\sqrt3}{2}\). 三角形内角满足 \(0<B<\pi\)，故 \(B=\dfrac\pi3\) 或 \(B=\dfrac{2\pi}3\)，选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -187,6 +213,15 @@ D
 \begin{answer}
 B
 \end{answer}
+\begin{solution}
+设 \(d_1=|PF_1|\)，\(d_2=|PF_2|\). 题设给出 \(d_1=2d_2\). 双曲线的焦点距离为 \(F_1F_2=2c\)，且双曲线上任一点满足焦点距离之差的绝对值为 \(2a\)，于是
+\[
+d_1-d_2=2a
+\]
+从而 \(d_2=2a\)，\(d_1=4a\). 在三角形 \(PF_1F_2\) 中，三角不等式给出 \(2c\leqslant4a+2a\)，所以离心率 \(e=c/a\leqslant3\). 又因 \(b>0\)，有 \(c^2=a^2+b^2>a^2\)，故 \(e>1\).
+
+当 \(1<e<3\) 时，长度 \(2c\)，\(4a\)，\(2a\) 能构成非退化三角形，因两焦点距离之差为 \(2a\)，所构成的点在该双曲线上；当 \(e=3\) 时，取顶点可得焦点距离分别为 \(4a\)，\(2a\)，条件仍成立. 因此 \(e\in(1,3]\)，选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -202,15 +237,28 @@ B
 \begin{answer}
 D
 \end{answer}
+\begin{solution}
+由导函数图象可见，在 \(x_0\) 左侧有 \(f'(x)>g'(x)\)，在 \(x_0\) 右侧有 \(f'(x)<g'(x)\)，且 \(f'(x)\) 递减、\(g'(x)\) 递增. 因此 \(f(x)-g(x)\) 先增后减，在 \(x_0\) 处取得极大值；同时 \(f\) 的图象应向下弯，\(g\) 的图象应向上弯. 四个选项中只有 D 的相对位置和弯曲方向同时满足这些条件，故选 D.
+\end{solution}
 \end{problem}
 
 \section{填空题}
 
 \begin{problem}
-若 \((x - 2)^{5} = a_{5}x^{5} + a_{4}x^{4} + a_{3}x^{3} + a_{2}x^{2} + a_{1}x + a_{0}\)，则 \(a_1 + a_2 + a_3 + a_4 + a_5 =\fillinblank{}.\)
+若 \((x - 2)^{5} = a_{5}x^{5} + a_{4}x^{4} + a_{3}x^{3} + a_{2}x^{2} + a_{1}x + a_{0}\)，则 \(a_1 + a_2 + a_3 + a_4 + a_5 =\fillinblank{}\).
 \begin{answer}
 31
 \end{answer}
+\begin{solution}
+由二项式展开式
+\[
+(x-2)^5=x^5-10x^4+40x^3-80x^2+80x-32
+\]
+可得 \(a_5=1\)，\(a_4=-10\)，\(a_3=40\)，\(a_2=-80\)，\(a_1=80\). 因而
+\[
+a_1+a_2+a_3+a_4+a_5=80-80+40-10+1=31
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -221,6 +269,13 @@ y = -2 + \sin \theta,
 \begin{answer}
 \(m<0\) 或 \(m>10\)
 \end{answer}
+\begin{solution}
+参数方程表示的圆为 \((x-1)^2+(y+2)^2=1\)，圆心为 \(C(1,-2)\)，半径为 \(1\). 圆心到直线 \(3x+4y+m=0\) 的距离为
+\[
+d=\frac{|3\cdot1+4\cdot(-2)+m|}{\sqrt{3^2+4^2}}=\frac{|m-5|}{5}
+\]
+直线与圆没有公共点当且仅当 \(d>1\)，即 \(|m-5|>5\). 解得 \(m<0\) 或 \(m>10\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -228,6 +283,16 @@ y = -2 + \sin \theta,
 \begin{answer}
 \(9\pi\)
 \end{answer}
+\begin{solution}
+设三棱锥顶点为 \(P\)，底面顶点为 \(A\)，\(B\)，\(C\). 三个侧面两两垂直，因此它们的两两交线 \(PA\)、\(PB\)、\(PC\) 两两垂直. 取
+\(P(0,0,0)\)，\(A(\sqrt3,0,0)\)，\(B(0,\sqrt3,0)\)，\(C(0,0,\sqrt3)\).
+
+外接球心到四个顶点距离相等. 由对称性球心为 \(O\left(\dfrac{\sqrt3}{2},\dfrac{\sqrt3}{2},\dfrac{\sqrt3}{2}\right)\)，所以外接球半径满足
+\[
+R^2=\left(\frac{\sqrt3}{2}\right)^2+\left(\frac{\sqrt3}{2}\right)^2+\left(\frac{\sqrt3}{2}\right)^2=\frac94
+\]
+故其表面积为 \(4\pi R^2=9\pi\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -244,6 +309,27 @@ y = -2 + \sin \theta,
 \begin{answer}
 \(3\)、\(4\)
 \end{answer}
+\begin{solution}
+命题一不成立，因为整数集对除法不封闭，例如 \(2\)，\(1\in\Z\)，但 \(1/2\notin\Z\). 命题二不成立，例如 \(M=\mathbf Q\cup\{\sqrt2\}\) 含有 \(\mathbf Q\)，但 \(\sqrt2+\sqrt2=2\sqrt2\notin M\)，所以不一定是数域.
+
+证明命题三：取数域 \(P\) 中两个不同的数 \(u\)，\(v\)，则 \(d=u-v\in P\) 且 \(d\neq0\). 由除法封闭性，\(1=d/d\in P\)，再由加法封闭性，所有正整数都属于 \(P\)，从而 \(P\) 是无限集.
+
+证明命题四：对每个正素数 \(p\)，集合
+\[
+P_p=\{r+s\sqrt p\mid r,s\in\mathbf Q\}
+\]
+是数域. 确实，和、差、积仍为此形式. 若分母 \(r+s\sqrt p\neq0\)，则 \(r^2-ps^2\neq0\)，否则 \(s=0\) 时有 \(r=0\)，或 \(s\neq0\) 时 \(\sqrt p=r/s\in\mathbf{Q}\)，均与分母非零矛盾. 因此
+\[
+\frac{u+v\sqrt p}{r+s\sqrt p}=\frac{(u+v\sqrt p)(r-s\sqrt p)}{r^2-ps^2}
+\]
+其中 \(r^2-ps^2\neq0\)，结果仍属于 \(P_p\). 不同的素数给出不同的数域. 先说明：若 \(p\) 是素数，则 \(\sqrt p\notin\mathbf{Q}\). 否则设 \(\sqrt p=u/v\)，其中 \(u\)，\(v\in\Z\)、\(v\neq0\) 且 \(\gcd(u,v)=1\)，则 \(pv^2=u^2\)，从而 \(p\mid u\)，再代回可得 \(p\mid v\)，与互素矛盾.
+
+事实上，若 \(p\neq q\) 且 \(\sqrt p\in P_q\)，则存在 \(r\)，\(s\in\mathbf{Q}\)，使得
+\[
+\sqrt p=r+s\sqrt q
+\]
+两边平方得 \(p=r^2+2rs\sqrt q+qs^2\). 因为 \(\sqrt q\notin\mathbf{Q}\)，所以 \(rs=0\). 若 \(s=0\)，则 \(\sqrt p=r\in\mathbf{Q}\)，矛盾；若 \(r=0\)，则 \(p=qs^2\). 写 \(s=u/v\)（\(u\)，\(v\) 互素且 \(v\neq0\)），便有 \(pv^2=qu^2\). 因为 \(p\neq q\)，由素数整除性得 \(p\mid u\)，再代回得 \(p\mid v\)，与 \(u\)，\(v\) 互素矛盾. 因此 \(\sqrt p\notin P_q\)，从而 \(P_p\neq P_q\). 因而存在无穷多个数域，正确命题的序号为 \(3\)、\(4\).
+\end{solution}
 \end{problem}
 
 \section{解答题}
@@ -260,17 +346,17 @@ y = -2 + \sin \theta,
 \begin{enumerate}
 \item 由 \(\bs{m} \cdot \bs{n} = 1\)，得
 \[
-\sqrt{3}\sin A-\cos A=1.
+\sqrt{3}\sin A-\cos A=1
 \]
 注意到 \(\sqrt{3}\sin A-\cos A=2\sin\left(A-\frac{\pi}{6}\right)\)，故
 \[
-\sin\left(A-\frac{\pi}{6}\right)=\frac{1}{2}.
+\sin\left(A-\frac{\pi}{6}\right)=\frac{1}{2}
 \]
 因为 \(A\) 为锐角，所以 \(A-\frac{\pi}{6}\in\left(-\frac{\pi}{6},\frac{\pi}{3}\right)\)，在此范围内只有 \(A-\frac{\pi}{6}=\frac{\pi}{6}\) 满足条件，从而 \(A=\frac{\pi}{3}\).
 
 \item 代入 \(\cos A=\frac{1}{2}\)，得
 \[
-f(x)=\cos 2x+2\sin x=1-2\sin^2x+2\sin x=\frac{3}{2}-2\left(\sin x-\frac{1}{2}\right)^2.
+f(x)=\cos 2x+2\sin x=1-2\sin^2x+2\sin x=\frac{3}{2}-2\left(\sin x-\frac{1}{2}\right)^2
 \]
 令 \(t=\sin x\)，则 \(t\in[-1,1]\). 上式在 \(t=\frac{1}{2}\) 时取得最大值 \(\frac{3}{2}\)，在 \(t=-1\) 时取得最小值 \(-3\). 因此，函数 \(f(x)\) 的值域为 \(\left[-3,\frac{3}{2}\right]\).
 \end{enumerate}
@@ -289,33 +375,26 @@ f(x)=\cos 2x+2\sin x=1-2\sin^2x+2\sin x=\frac{3}{2}-2\left(\sin x-\frac{1}{2}\ri
 \end{problem}
 
 \begin{solution}
-建立空间直角坐标系，使底面 \(ABCD\) 在 \(xOy\) 平面内，并取
-\(A(0,0,0)\)，\(D(2,0,0)\)，\(B(0,1,0)\)，\(C(1,1,0)\).
-则 \(O(1,0,0)\). 由 \(PAD\perp ABCD\)，平面 \(PAD\) 可取为 \(xOz\) 平面；又因为 \(PA=PD\)，且 \(O\) 是 \(AD\) 的中点，所以 \(PO\perp AD\). 于是 \(PO\perp\) 平面 \(ABCD\). 另外，\(AO=1\)，故
+\begin{enumerate}
+\item 建立空间直角坐标系，使底面 \(ABCD\) 在 \(xOy\) 平面内，并取 \(A(0,0,0)\)，\(D(2,0,0)\)，\(B(0,1,0)\)，\(C(1,1,0)\). 于是 \(O(1,0,0)\). 在等腰三角形 \(PAD\) 中，\(O\) 是底边 \(AD\) 的中点，所以 \(PO\perp AD\). 又因为平面 \(PAD\perp\) 平面 \(ABCD\)，且两平面的交线为 \(AD\)，故平面 \(PAD\) 内垂直于 \(AD\) 的直线 \(PO\) 垂直于平面 \(ABCD\). 另外，\(AO=1\)，从而
 \[
-PO=\sqrt{PA^2-AO^2}=\sqrt{2-1}=1.
+PO=\sqrt{PA^2-AO^2}=\sqrt{2-1}=1
 \]
 取 \(P(1,0,1)\).
 
-\begin{enumerate}
-\item 上述论证已证明 \(PO\perp\) 平面 \(ABCD\).
-
-\item 取直线 \(PD\) 和 \(CD\) 的方向向量分别为
-\(\overrightarrow{DP}=(-1,0,1)\) 和 \(\overrightarrow{DC}=(-1,1,0)\). 设异面直线所成的角为 \(\theta\)，则
+\item 取直线 \(PD\) 和 \(CD\) 的方向向量分别为 \(\overrightarrow{DP}=(-1,0,1)\) 和 \(\overrightarrow{DC}=(-1,1,0)\). 设异面直线所成的角为 \(\theta\)，则
 \[
-\cos\theta=\frac{\left|\overrightarrow{DP}\cdot\overrightarrow{DC}\right|}{|\overrightarrow{DP}|\,|\overrightarrow{DC}|}=\frac{1}{\sqrt{2}\cdot\sqrt{2}}=\frac{1}{2}.
+\cos\theta=\frac{\left|\overrightarrow{DP}\cdot\overrightarrow{DC}\right|}{|\overrightarrow{DP}|\,|\overrightarrow{DC}|}=\frac{1}{\sqrt{2}\cdot\sqrt{2}}=\frac{1}{2}
 \]
 因此 \(\theta=\frac{\pi}{3}\).
 
-\item 设 \(Q(q,0,0)\)，其中 \(0\leqslant q\leqslant2\). 由
-\(\overrightarrow{PC}=(0,1,-1)\) 和 \(\overrightarrow{PD}=(1,0,-1)\)，
-可取平面 \(PCD\) 的一个法向量为 \((1,1,1)\)，故平面 \(PCD\) 的方程为 \(x+y+z=2\). 于是
+\item 设 \(Q(q,0,0)\)，其中 \(0\leqslant q\leqslant2\). 由 \(\overrightarrow{PC}=(0,1,-1)\) 和 \(\overrightarrow{PD}=(1,0,-1)\)，可取平面 \(PCD\) 的一个法向量为 \((1,1,1)\)，故平面 \(PCD\) 的方程为 \(x+y+z=2\). 因而
 \[
-d(Q,\text{平面 }PCD)=\frac{|q-2|}{\sqrt{3}}=\frac{2-q}{\sqrt{3}}.
+d(Q,\text{平面 }PCD)=\frac{|q-2|}{\sqrt{3}}=\frac{2-q}{\sqrt{3}}
 \]
 令其等于 \(\frac{\sqrt{3}}{2}\)，得 \(q=\frac{1}{2}\)，此时
 \[
-\frac{AQ}{QD}=\frac{q}{2-q}=\frac{1/2}{3/2}=\frac{1}{3}.
+\frac{AQ}{QD}=\frac{q}{2-q}=\frac{1/2}{3/2}=\frac{1}{3}
 \]
 所以存在这样的点 \(Q\)，且 \(\frac{AQ}{QD}=\frac{1}{3}\).
 \end{enumerate}
@@ -334,19 +413,19 @@ d(Q,\text{平面 }PCD)=\frac{|q-2|}{\sqrt{3}}=\frac{2-q}{\sqrt{3}}.
 \begin{enumerate}
 \item 点 \((a_n,a_{n+1}^2-2a_{n+1})\) 在 \(y=f'(x)\) 的图象上，等价于
 \[
-a_{n+1}^2-2a_{n+1}=a_n^2+2a_n.
+a_{n+1}^2-2a_{n+1}=a_n^2+2a_n
 \]
 整理得
 \[
-(a_{n+1}-1)^2=(a_n+1)^2.
+(a_{n+1}-1)^2=(a_n+1)^2
 \]
 因此 \(a_{n+1}-1=a_n+1\) 或 \(a_{n+1}-1=-(a_n+1)\). 第二种情形给出 \(a_{n+1}=-a_n<0\)，与数列各项为正数矛盾，所以 \(a_{n+1}=a_n+2\). 结合 \(a_1=3\)，得
 \[
-a_n=3+2(n-1)=2n+1.
+a_n=3+2(n-1)=2n+1
 \]
 从而
 \[
-S_n=\frac{n(a_1+a_n)}{2}=\frac{n(3+2n+1)}{2}=n^2+2n=f'(n).
+S_n=\frac{n(a_1+a_n)}{2}=\frac{n(3+2n+1)}{2}=n^2+2n=f'(n)
 \]
 故点 \((n,S_n)\) 在 \(y=f'(x)\) 的图象上.
 
@@ -367,24 +446,24 @@ S_n=\frac{n(a_1+a_n)}{2}=\frac{n(3+2n+1)}{2}=n^2+2n=f'(n).
 \begin{enumerate}
 \item 不需要补考就获得证书，必须第一次参加科目 \(A\) 和第一次参加科目 \(B\) 都合格，所以所求概率为
 \[
-\frac{2}{3}\times\frac{1}{2}=\frac{1}{3}.
+\frac{2}{3}\times\frac{1}{2}=\frac{1}{3}
 \]
 
 \item 科目 \(A\) 至少参加一次，且只有第一次不合格时才参加补考，因此参加科目 \(A\) 的次数的数学期望为
 \[
-1+\frac{1}{3}=\frac{4}{3}.
+1+\frac{1}{3}=\frac{4}{3}
 \]
 科目 \(A\) 在两次机会内至少合格一次的概率为
 \[
-1-\left(\frac{1}{3}\right)^2=\frac{8}{9}.
+1-\left(\frac{1}{3}\right)^2=\frac{8}{9}
 \]
 只有科目 \(A\) 合格后才参加科目 \(B\). 在已经参加科目 \(B\) 的条件下，第一次考试必然参加，第一次不合格的概率为 \(\frac{1}{2}\)，所以参加科目 \(B\) 的次数的条件数学期望为
 \[
-1+\frac{1}{2}=\frac{3}{2}.
+1+\frac{1}{2}=\frac{3}{2}
 \]
 因此参加科目 \(B\) 的次数的数学期望为 \(\frac{8}{9}\times\frac{3}{2}=\frac{4}{3}\). 由期望的可加性，
 \[
-E(\xi)=\frac{4}{3}+\frac{4}{3}=\frac{8}{3}.
+E(\xi)=\frac{4}{3}+\frac{4}{3}=\frac{8}{3}
 \]
 \end{enumerate}
 \end{solution}
@@ -403,48 +482,48 @@ E(\xi)=\frac{4}{3}+\frac{4}{3}=\frac{8}{3}.
 \begin{solution}
 设椭圆半焦距为 \(c\). 因为焦点为 \(F(1,0)\)，所以 \(c=1\)，从而
 \[
-a^2-b^2=1.
+a^2-b^2=1
 \]
 \begin{enumerate}
 \item 设短轴的两个三等分点为 \(M\left(0,\frac{b}{3}\right)\) 和 \(N\left(0,-\frac{b}{3}\right)\)，取焦点 \(F(1,0)\). 则 \(MN=\frac{2b}{3}\)，\(FM=FN=\sqrt{1+\frac{b^2}{9}}\).
 三角形 \(FMN\) 为正三角形，所以
 \[
-\frac{2b}{3}=\sqrt{1+\frac{b^2}{9}}.
+\frac{2b}{3}=\sqrt{1+\frac{b^2}{9}}
 \]
 两边平方得 \(\frac{4b^2}{9}=1+\frac{b^2}{9}\)，即 \(b^2=3\). 由 \(a^2-b^2=1\)，得 \(a^2=4\). 因为 \(a>0\)，所以椭圆方程为
 \[
-\frac{x^2}{4}+\frac{y^2}{3}=1.
+\frac{x^2}{4}+\frac{y^2}{3}=1
 \]
 
-\item 设过点 \(F\) 的直线 \(l\) 的单位方向向量为 \((u,v)\)，其中 \(u^2+v^2=1\)，则直线上的点可表示为 \((1+ut,vt)\). 设它与椭圆交于对应参数 \(t_1,t_2\) 的点 \(A,B\)，并令
+\item 设过点 \(F\) 的直线 \(l\) 的单位方向向量为 \((u,v)\)，其中 \(u^2+v^2=1\)，则直线上的点可表示为 \((1+ut,vt)\). 设它与椭圆交于对应参数 \(t_1\)，\(t_2\) 的点 \(A\)，\(B\)，并令
 \[
-K=b^2u^2+a^2v^2=a^2-u^2.
+K=b^2u^2+a^2v^2=a^2-u^2
 \]
 将直线参数式代入椭圆方程，并利用 \(a^2-b^2=1\)，得
 \[
-Kt^2+2b^2ut-b^4=0.
+Kt^2+2b^2ut-b^4=0
 \]
 所以 \(t_1+t_2=-\frac{2b^2u}{K}\)，\(t_1t_2=-\frac{b^4}{K}\).
 又因为 \(|OA|^2=1+2ut_1+t_1^2\)，\(|OB|^2=1+2ut_2+t_2^2\)，\(|AB|^2=(t_1-t_2)^2\)，
 题设不等式等价于
 \[
-1+u(t_1+t_2)+t_1t_2<0.
+1+u(t_1+t_2)+t_1t_2<0
 \]
 代入根与系数的关系，得到
 \[
-a^2-b^4-(1+2b^2)u^2<0.
+a^2-b^4-(1+2b^2)u^2<0
 \]
 左端关于 \(u^2\) 单调递减，而直线任意转动时 \(u^2\in[0,1]\)，故对所有直线恒成立的充要条件是 \(u=0\) 时也成立，即
 \[
-a^2-b^4<0.
+a^2-b^4<0
 \]
 代入 \(b^2=a^2-1\)，得
 \[
-(a^2-1)^2>a^2.
+(a^2-1)^2>a^2
 \]
 令 \(z=a^2\)，且 \(z>1\)，则 \(z^2-3z+1>0\). 该不等式的根为 \(\frac{3-\sqrt{5}}{2}\) 和 \(\frac{3+\sqrt{5}}{2}\)，结合 \(z>1\)，可得
 \[
-a^2>\frac{3+\sqrt{5}}{2}.
+a^2>\frac{3+\sqrt{5}}{2}
 \]
 因此 \(a\) 的取值范围为 \(\left(\sqrt{\frac{3+\sqrt{5}}{2}},+\infty\right)\).
 \end{enumerate}
@@ -466,57 +545,53 @@ a^2>\frac{3+\sqrt{5}}{2}.
 \begin{enumerate}
 \item 函数定义域为 \((-1,+\infty)\)，且
 \[
-f'(x)=\frac{1}{1+x}-1=-\frac{x}{1+x}.
+f'(x)=\frac{1}{1+x}-1=-\frac{x}{1+x}
 \]
 当 \(-1<x<0\) 时，\(f'(x)>0\)；当 \(x>0\) 时，\(f'(x)<0\). 因此 \(f(x)\) 在 \((-1,0)\) 上单调递增，在 \((0,+\infty)\) 上单调递减.
 
 \item 因为 \(f(x)\) 在 \([0,+\infty)\) 上单调递减，所以对任意 \(n\in\N^*\)，其在 \([0,\pi]\) 上的最小值为
 \[
-b_n=f(\pi)=\ln(1+\pi)-\pi.
+b_n=f(\pi)=\ln(1+\pi)-\pi
 \]
 令
 \[
-d=\pi-\ln(1+\pi)>0,
+d=\pi-\ln(1+\pi)>0
 \]
 则
 \[
-a_n=\ln(1+n)-b_n=d+\ln(1+n)>0.
+a_n=\ln(1+n)-b_n=d+\ln(1+n)>0
 \]
 
 \begin{enumerate}
 \item 因为 \(a_{n+2}>a_n>0\)，原不等式等价于
 \[
-c<a_{n+2}-\sqrt{a_na_{n+2}}=:h_n.
+c<a_{n+2}-\sqrt{a_na_{n+2}}=:h_n
 \]
 又
 \[
-h_n=(a_{n+2}-a_n)\frac{\sqrt{a_{n+2}}}{\sqrt{a_{n+2}}+\sqrt{a_n}},
+h_n=(a_{n+2}-a_n)\frac{\sqrt{a_{n+2}}}{\sqrt{a_{n+2}}+\sqrt{a_n}}
 \]
 所以
 \[
-0<h_n<a_{n+2}-a_n=\ln\frac{n+3}{n+1}.
+0<h_n<a_{n+2}-a_n=\ln\frac{n+3}{n+1}
 \]
 由 \(\displaystyle\lim_{n\to+\infty}\ln\frac{n+3}{n+1}=0\)，若 \(c>0\)，则对充分大的 \(n\) 有 \(h_n<c\)，原不等式不能对一切 \(n\) 成立. 若 \(c\leqslant0\)，则 \(c<h_n\) 对一切 \(n\in\N^*\) 成立. 因此
 \[
-c\in(-\infty,0].
+c\in(-\infty,0]
 \]
 
-\item 按原题面，第二问中的不等式并不成立. 取 \(n=2\)，由
+\item 按原题面，第二问中的不等式并不成立. 取 \(n=2\). 先用 \(3.14<\pi<3.15\)、\(1.42<\ln(1+\pi)<1.43\) 得 \(1.71<d<1.73\)，再用
+\(0.69<\ln2<0.70\)、\(1.09<\ln3<1.10\)、\(1.38<\ln4<1.39\)、\(1.60<\ln5<1.61\)，得到
+\(2.40<a_1<2.43\)，\(2.80<a_2<2.83\)，\(3.09<a_3<3.12\)，\(3.31<a_4<3.34\).
+所有这些数均为正，因此左端满足
 \[
-a_1=d+\ln2\approx2.413659,\quad a_2=d+\ln3\approx2.819125,
+\frac{a_1}{a_2}+\frac{a_1a_3}{a_2a_4}>\frac{2.40}{2.83}+\frac{2.40\times3.09}{2.83\times3.34}>1.63
 \]
+而右端满足
 \[
-a_3=d+\ln4\approx3.106807,\quad a_4=d+\ln5\approx3.329950,
+\sqrt{2a_2+1}-1<\sqrt{2\times2.83+1}-1=\sqrt{6.66}-1<2.59-1=1.59
 \]
-左端为
-\[
-\frac{a_1}{a_2}+\frac{a_1a_3}{a_2a_4}\approx1.654974,
-\]
-而右端为
-\[
-\sqrt{2a_2+1}-1\approx1.576480.
-\]
-于是左端大于右端，所要求证的不等式在 \(n=2\) 时已经不成立. 因此按原题清晰题面，第二问存在排印或版本错误，不能给出其所要求的不等式证明.
+所以左端大于右端，所要求证的不等式在 \(n=2\) 时已经不成立. 因此按原题清晰题面，第二问存在排印或版本错误，不能给出其所要求的不等式证明.
 \end{enumerate}
 \end{enumerate}
 \end{solution}

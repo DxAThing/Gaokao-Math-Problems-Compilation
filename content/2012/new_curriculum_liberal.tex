@@ -14,6 +14,11 @@
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+由 \((x-2)(x+1)<0\)，得 \(-1<x<2\)，所以
+\(A=(-1,2)\). 又 \(B=(-1,1)\)，且例如 \(\frac{3}{2}\in A\) 而 \(\frac{3}{2}\notin B\)，故 \(B\subsetneq A\)，应选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -28,10 +33,15 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+分子、分母同乘分母的共轭复数，得
+\(z=\dfrac{(-3+\i)(2-\i)}{(2+\i)(2-\i)}=\dfrac{-5+5\i}{5}=-1+\i\). 因此 \(\overline{z}=-1-\i\)，应选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
-在一组样本数据 \((x_{1}, y_{1})\)，\((x_{2}, y_{2})\)，\(\cdots\)，\((x_{n}, y_{n})\)（\(n \geqslant 2\)，\(x_{1}\)，\(x_{2}\)，\(\cdots\)，\(x_{n}\) 不全相等）的散点图中，若所有样本点 \((x_{i}, y_{i})\)（\(i = 1, 2, \cdots, n\)）都在直线 \(y = \frac{1}{2}x + 1\) 上，则这组样本数据的样本相关系数为（\quad）
+在一组样本数据 \((x_{1}, y_{1})\)，\((x_{2}, y_{2})\)，\(\cdots\)，\((x_{n}, y_{n})\)（\(n \geqslant 2\)，\(x_{1}\)，\(x_{2}\)，\(\cdots\)，\(x_{n}\) 不全相等）的散点图中，若所有样本点 \((x_{i}, y_{i})\)（\(i = 1\)，\(2\)，\(\cdots\)，\(n\)）都在直线 \(y = \frac{1}{2}x + 1\) 上，则这组样本数据的样本相关系数为（\quad）
 
 \choices
     {\(-1\)}
@@ -42,6 +52,14 @@ D
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+记样本相关系数为 \(r\)，由 \(y_i=\frac12x_i+1\) 及 \(\overline{y}=\frac12\overline{x}+1\)，有 \(y_i-\overline{y}=\frac12(x_i-\overline{x})\). 由于 \(x_1\)，\(x_2\)，\(\ldots\)，\(x_n\) 不全相等，\(\sum_{i=1}^n(x_i-\overline{x})^2>0\)，从而
+\[
+r=\frac{\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})}{\sqrt{\sum_{i=1}^n(x_i-\overline{x})^2\sum_{i=1}^n(y_i-\overline{y})^2}}=\frac{\frac12\sum_{i=1}^n(x_i-\overline{x})^2}{\sqrt{\sum_{i=1}^n(x_i-\overline{x})^2\cdot\frac14\sum_{i=1}^n(x_i-\overline{x})^2}}=1
+\]
+故应选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -56,6 +74,11 @@ D
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+设椭圆半焦距为 \(c\)，则 \(F_1=(-c,0)\)，\(F_2=(c,0)\)，且 \(c=ae\). 等腰三角形的两个底角为 \(30^{\circ}\)，所以顶角为 \(120^{\circ}\). 由于 \(P\) 的横坐标为 \(\frac{3a}{2}>c\)，有 \(PF_1>PF_2\)，且 \(PF_1\geqslant\frac{3a}{2}+c>2c=F_1F_2\)，故等腰三角形的两腰只能是 \(PF_2\) 和 \(F_1F_2\)，即 \(PF_2=F_1F_2=2c\)，另一腰 \(PF_1=2\sqrt{3}c\). 在 \(F_1\) 处向 \(F_1F_2\) 作投影可得
+\(\frac{3a}{2}+c=PF_1\cos30^{\circ}=3c\). 于是 \(c=\frac{3a}{4}\)，故离心率 \(e=\frac{c}{a}=\frac34\)，应选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -70,6 +93,11 @@ C
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+由 \(AB=2\)，且 \(C\) 在第一象限，正三角形的第三个顶点为 \(C(1+\sqrt3,2)\). 线性函数 \(z=-x+y\) 在三角形闭区域上的最大、最小值分别在顶点处取得，而
+\(z_A=0\)，\(z_B=2\)，\(z_C=1-\sqrt3\). 由于题目取三角形内部，不包含边界，故 \(1-\sqrt3<z<2\)，应选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -86,6 +114,10 @@ A
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+初始化时 \(A=B=a_1\). 每次循环令 \(x=a_k\)：若 \(x>A\)，就把 \(A\) 更新为 \(x\)，所以循环后 \(A\) 是已经读入数据中的最大值；若 \(x<B\)，就把 \(B\) 更新为 \(x\)，所以循环后 \(B\) 是已经读入数据中的最小值. 循环读完 \(a_1\)，\(a_2\)，\(\ldots\)，\(a_N\) 后，\(A\) 和 \(B\) 分别为这些数中的最大值和最小值，应选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -102,6 +134,10 @@ C
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+由三视图可知，该几何体为三棱锥，俯视图为底面. 底面是斜边长为 \(6\)、高为 \(3\) 的等腰直角三角形，面积为 \(\frac12\times6\times3=9\)；由另一视图可知三棱锥的高为 \(3\). 因此体积为 \(\frac13\times9\times3=9\)，应选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -116,6 +152,10 @@ B
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+设球的半径为 \(R\). 球心、截面圆心和截面圆上一点构成直角三角形，所以 \(R^2=1^2+(\sqrt2)^2=3\)，即 \(R=\sqrt3\). 故球的体积为 \(\frac43\pi R^3=\frac43\pi(\sqrt3)^3=4\sqrt3\pi\)，应选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -130,6 +170,10 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+相邻对称轴之间的距离等于半个周期，因此 \(\frac{\pi}{\omega}=\frac{5\pi}{4}-\frac{\pi}{4}=\pi\)，得 \(\omega=1\). 对正弦函数而言，对称轴满足 \(x+\varphi=\frac\pi2+k\pi\). 由 \(0<\varphi<\pi\) 及 \(x=\frac\pi4\)，只有 \(\frac\pi4+\varphi=\frac\pi2\) 可能，故 \(\varphi=\frac\pi4\)，应选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -144,6 +188,10 @@ A
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+抛物线 \(y^2=16x\) 的准线为 \(x=-4\). 设等轴双曲线为 \(x^2-y^2=a^2\)，则两交点的横坐标均为 \(-4\)，由 \(|AB|=4\sqrt3\) 得交点纵坐标为 \(\pm2\sqrt3\). 代入双曲线方程，得 \(16-12=a^2\)，所以 \(a=2\). 等轴双曲线的实轴长为 \(2a=4\)，应选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -158,6 +206,11 @@ C
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+因为 \(0<x\leqslant\frac12<1\) 且 \(4^x>0\)，要使 \(\log_a x>4^x>0\)，必须有 \(0<a<1\). 此时 \(\ln a<0\)，原不等式等价于 \(\ln x<4^x\ln a\)，即 \(\ln a>\frac{\ln x}{4^x}\). 令 \(g(x)=\frac{\ln x}{4^x}\)，则
+\(g'(x)=4^{-x}\left(\frac1x-\ln4\ln x\right)>0\) 在 \(0<x\leqslant\frac12\) 上成立，所以 \(g(x)\leqslant g(\frac12)=-\frac12\ln2=-\ln\sqrt2\). 因此需且只需 \(\ln a>-\ln\sqrt2\)，即 \(\frac{\sqrt2}{2}<a<1\)，应选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -172,6 +225,12 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+当 \(n=2k-1\) 时，递推式为 \(a_{2k}-a_{2k-1}=4k-3\)；当 \(n=2k\) 时，递推式为 \(a_{2k+1}+a_{2k}=4k-1\). 令 \(u_k=a_{2k-1}\)，则由前式得 \(a_{2k}=u_k+4k-3\)，代入后式得 \(u_{k+1}=2-u_k\). 于是 \(u_k=a_1\)（\(k\) 为奇数），\(u_k=2-a_1\)（\(k\) 为偶数）. 对每个 \(j=1\)，\(2\)，\(\ldots\)，\(15\)，有
+\(a_{4j-3}+a_{4j-2}+a_{4j-1}+a_{4j}=16j-6\). 所以
+\(\sum_{n=1}^{60}a_n=\sum_{j=1}^{15}(16j-6)=16\cdot\frac{15\cdot16}{2}-6\cdot15=1830\)，应选 D.
+\end{solution}
 \end{problem}
 
 \section{填空题}
@@ -182,6 +241,10 @@ D
 \begin{answer}
 \(y = 4x - 3\)
 \end{answer}
+
+\begin{solution}
+由 \(y=x(3\ln x+1)\) 得 \(y'=3\ln x+4\)，所以在 \(x=1\) 处的切线斜率为 \(4\). 利用点斜式，切线方程为 \(y-1=4(x-1)\)，即 \(y=4x-3\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -190,6 +253,11 @@ D
 \begin{answer}
 \(-2\)
 \end{answer}
+
+\begin{solution}
+设首项为 \(a_1\)，公比为 \(q\). 由 \(S_3=a_1(1+q+q^2)\)、\(S_2=a_1(1+q)\)，且等比数列首项非零，得
+\(0=S_3+3S_2=a_1(1+q+q^2+3+3q)=a_1(q+2)^2\). 因此 \(q=-2\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -198,6 +266,11 @@ D
 \begin{answer}
 \(3\sqrt{2}\)
 \end{answer}
+
+\begin{solution}
+设 \(|\bs{b}|=t\). 由夹角为 \(45^{\circ}\)，得 \(\bs{a}\cdot\bs{b}=|\bs{a}|\,|\bs{b}|\cos45^{\circ}=\frac{t}{\sqrt2}\). 于是
+\(10=|2\bs{a}-\bs{b}|^2=4|\bs{a}|^2-4\bs{a}\cdot\bs{b}+|\bs{b}|^2=4-2\sqrt2t+t^2\). 即 \(t^2-2\sqrt2t-6=0\)，解得 \(t=3\sqrt2\) 或 \(t=-\sqrt2\). 因为 \(t>0\)，所以 \(|\bs{b}|=3\sqrt2\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -206,6 +279,10 @@ D
 \begin{answer}
 2
 \end{answer}
+
+\begin{solution}
+将函数化为 \(f(x)=1+\dfrac{2x+\sin x}{x^2+1}\). 令 \(g(x)=\dfrac{2x+\sin x}{x^2+1}\)，则 \(g(-x)=-g(x)\)，所以 \(g\) 的最大值与最小值互为相反数. 函数 \(g\) 连续且当 \(|x|\to+\infty\) 时趋于 \(0\)，故其最大值、最小值存在. 若分别记为 \(G\)、\(-G\)，则 \(M=1+G\)，\(m=1-G\)，从而 \(M+m=2\).
+\end{solution}
 \end{problem}
 
 \section{解答题}
@@ -221,8 +298,8 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item \(A = \dfrac{\pi}{3}\).
-\item \(b = c = 2\).
+\item 由三角形的边角关系，\(b=a\cos C+c\cos A\). 代入题设，得 \(\sqrt3a\sin C=c(1+\cos A)\). 再由正弦定理 \(\dfrac ca=\dfrac{\sin C}{\sin A}\)，并注意 \(\sin C>0\)，可得 \(\sqrt3\sin A=1+\cos A\). 于是 \(\sqrt3=\dfrac{1+\cos A}{\sin A}=\cot\dfrac A2\)，所以 \(\tan\dfrac A2=\dfrac1{\sqrt3}\). 因为 \(0<A<\pi\)，故 \(A=\dfrac\pi3\).
+\item 由面积公式，\(\sqrt3=\frac12bc\sin\frac\pi3=\frac{\sqrt3}{4}bc\)，所以 \(bc=4\). 由余弦定理，\(a^2=b^2+c^2-2bc\cos A\)，即 \(4=b^2+c^2-bc\)，从而 \(b^2+c^2=8\). 因此 \((b-c)^2=b^2+c^2-2bc=0\)，得 \(b=c\). 结合 \(bc=4\)，得 \(b=c=2\).
 \end{enumerate}
 \end{solution}
 
@@ -230,7 +307,7 @@ D
 某花店每天以每枝 \(5\) 元的价格从农场购进若干枝玫瑰花，然后以每枝 \(10\) 元的价格出售，如果当天卖不完，剩下的玫瑰花作垃圾处理.
 
 \begin{enumerate}
-\item 若花店一天购进 \(17\) 枝玫瑰花，当天的利润 \(y\)（单位：元）关于当天需求量 \(n\)（单位：枝，\(n \in \N\)）的函数解析式；
+\item 若花店一天购进 \(16\) 枝玫瑰花，当天的利润 \(y\)（单位：元）关于当天需求量 \(n\)（单位：枝，\(n \in \N\)）的函数解析式；
 \item 花店记录了 \(100\) 天玫瑰花的需求量（单位：枝），整理得下表：
 
 \begin{center}
@@ -255,14 +332,18 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item \(y = \begin{cases}
-10n - 85, & n < 17,\\
-85, & n \geqslant 17.
-\end{cases}\)
+\item 当 \(n<16\) 时卖出 \(n\) 枝，利润为 \(10n-5\cdot16=10n-80\)；当 \(n\geqslant16\) 时卖出全部 \(16\) 枝，利润为 \(10\cdot16-5\cdot16=80\). 所以
+\[
+y=\begin{cases}
+10n-80,&n<16,\\
+80,&n\geqslant16.
+\end{cases}
+\]
 \item
 \begin{enumerate}
-\item 日利润的平均数为 \(76.4\) 元.
-\item 概率为 \(0.7\).
+\item 当日需求量为 \(14\)，\(15\)，\(16\) 时，利润分别为 \(55\)，\(65\)，\(75\) 元；当需求量不小于 \(17\) 时，利润为 \(85\) 元. 因此日利润的平均数为
+\(\dfrac{10\times55+20\times65+16\times75+(16+15+13+10)\times85}{100}=76.4\) 元.
+\item 当日利润不少于 \(75\) 元，当且仅当需求量 \(n\geqslant16\). 相应频数为 \(16+16+15+13+10=70\)，所以所求概率为 \(\dfrac{70}{100}=0.7\).
 \end{enumerate}
 \end{enumerate}
 \end{solution}
@@ -280,8 +361,8 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item 平面 \(BDC_{1} \perp\) 平面 \(BDC\).
-\item 两部分体积的比为 \(1:1\).
+\item 取 \(AC=BC=1\)，则 \(AA_1=2\). 建立空间直角坐标系，令 \(C(0,0,0)\)，\(A(1,0,0)\)，\(B(0,1,0)\)，\(C_1(0,0,2)\)，\(A_1(1,0,2)\)，则 \(D(1,0,1)\). 于是 \(\overrightarrow{DC_1}=(-1,0,1)\)，\(\overrightarrow{BC}=(0,-1,0)\)，\(\overrightarrow{DC}=(-1,0,-1)\)，从而 \(\overrightarrow{DC_1}\cdot\overrightarrow{BC}=0\)，\(\overrightarrow{DC_1}\cdot\overrightarrow{DC}=0\). 直线 \(BC\)、\(DC\) 相交且都在平面 \(BDC\) 内，故 \(DC_1\perp\) 平面 \(BDC\). 又 \(DC_1\subset\) 平面 \(BDC_1\)，由面面垂直的判定定理，得平面 \(BDC_1\perp\) 平面 \(BDC\).
+\item 上述坐标下，三棱柱的体积为 \(V=\frac12\times1\times1\times2=1\). 被平面分出的含底面 \(ABC\) 的部分可分为四面体 \(ABCD\) 和四面体 \(BCC_1D\)，其体积分别为 \(\frac13\times\frac12\times1=\frac16\) 和 \(\frac13\times(\frac12\times1\times2)\times1=\frac13\)，故该部分体积为 \(\frac12\). 另一部分体积为 \(1-\frac12=\frac12\)，所以两部分体积之比为 \(1:1\).
 \end{enumerate}
 \end{solution}
 
@@ -296,8 +377,9 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item \(p=2\)，圆 \(F\) 的方程为 \(x^{2}+(y-1)^{2}=8\).
-\item 坐标原点到 \(m\)，\(n\) 的距离比为 \(3\).
+\item 抛物线的准线为 \(l:y=-\frac p2\)，焦点为 \(F(0,\frac p2)\). 由于圆心为 \(F\) 且 \(B\)，\(D\in l\)，又 \(\angle BFD=90^{\circ}\)，三角形 \(BFD\) 是等腰直角三角形. 点 \(F\) 到直线 \(BD\) 的距离为 \(p\)，而等腰直角三角形中直角顶点到斜边的高等于斜边的一半，所以 \(BD=2p\)，且 \(FB=FD=p\sqrt2\). 因此圆的半径为 \(p\sqrt2\). 由抛物线的定义，点 \(A\) 到准线 \(l\) 的距离等于 \(FA=p\sqrt2\). 因此
+\(4\sqrt2=S_{\triangle ABD}=\frac12\cdot BD\cdot FA=\frac12\cdot2p\cdot p\sqrt2=p^2\sqrt2\)，得 \(p=2\). 此时 \(F(0,1)\)，半径为 \(2\sqrt2\)，故圆 \(F\) 的方程为 \(x^2+(y-1)^2=8\).
+\item 设 \(A\)、\(B\)、\(F\) 共线. 由于 \(FA=FB\)，且 \(F\) 为圆心，\(F\) 是线段 \(AB\) 的中点. 设 \(A=(x,y)\)，则 \(B=(-x,p-y)\). 又 \(B\in l\)，所以 \(p-y=-\frac p2\)，即 \(y=\frac{3p}{2}\). 代入抛物线方程得 \(x^2=3p^2\)，可取 \(x=\sqrt3p\). 于是直线 \(m=AF\) 的方程为 \(y=\frac{x}{\sqrt3}+\frac p2\)，其到原点的距离为 \(d_m=\frac{\sqrt3p}{4}\). 设与 \(m\) 平行的直线为 \(n:y=\frac{x}{\sqrt3}+b\)，代入 \(x^2=2py\) 得关于 \(x\) 的二次方程. 恰有一个公共点等价于判别式为零，即 \(\frac{4p^2}{3}+8pb=0\)，所以 \(b=-\frac p6\)，从而 \(d_n=\frac{\sqrt3p}{12}\). 因此 \(d_m:d_n=3:1\)，所求比值为 \(3\).
 \end{enumerate}
 \end{solution}
 
@@ -312,8 +394,9 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item 当 \(a \leqslant 0\) 时，\(f(x)\) 在 \(\R\) 上单调递增；当 \(a > 0\) 时，\(f(x)\) 在 \((-\infty,\ln a)\) 上单调递减，在 \((\ln a,+\infty)\) 上单调递增.
-\item \(k\) 的最大值为 \(2\).
+\item \(f'(x)=\e^x-a\). 当 \(a\leqslant0\) 时，\(f'(x)>0\) 对一切 \(x\in\R\) 成立，所以 \(f(x)\) 在 \(\R\) 上单调递增；当 \(a>0\) 时，\(f'(x)<0\) 在 \((-\infty,\ln a)\) 上成立，\(f'(x)>0\) 在 \((\ln a,+\infty)\) 上成立，所以 \(f(x)\) 在 \((-\infty,\ln a)\) 上单调递减，在 \((\ln a,+\infty)\) 上单调递增.
+\item 当 \(a=1\) 时，因 \(x>0\) 有 \(\e^x-1>0\)，原不等式等价于
+\(k<g(x)=x+\dfrac{x+1}{\e^x-1}=\dfrac{x\e^x+1}{\e^x-1}\). 求导得 \(g'(x)=\dfrac{\e^x(\e^x-x-2)}{(\e^x-1)^2}\). 令 \(h(x)=\e^x-x-2\)，则 \(h'(x)=\e^x-1>0\)（\(x>0\)），且 \(h(1)=\e-3<0\)，\(h(2)=\e^2-4>0\)，所以存在唯一的 \(\alpha\in(1,2)\) 使 \(h(\alpha)=0\). 于是 \(g\) 在 \((0,\alpha)\) 上递减，在 \((\alpha,+\infty)\) 上递增，最小值为 \(g(\alpha)=\alpha+1\in(2,3)\). 故整数 \(k\) 必须满足 \(k<\alpha+1\)，其最大值为 \(2\).
 \end{enumerate}
 \end{solution}
 
@@ -330,8 +413,8 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item \(CD = BC\).
-\item \(\triangle BCD \sim \triangle GBD\).
+\item 因为 \(D\)，\(E\) 分别为 \(AB\)，\(AC\) 的中点，所以 \(DE\parallel BC\)，从而 \(DF\parallel BC\). 又已知 \(CF\parallel AB\)，而 \(B\)，\(D\)，\(A\) 共线，所以四边形 \(BDFC\) 是平行四边形，得 \(CF=BD\). 由 \(AD=DB\)，可得 \(CF=AD\)，且 \(CF\parallel AD\)，所以四边形 \(ADCF\) 是平行四边形，进而 \(AF=CD\). 四边形 \(ABCF\) 为圆内接梯形且 \(AB\parallel CF\)，故为等腰梯形，得 \(AF=BC\). 因此 \(CD=BC\).
+\item 由 \(CD=BC\)，三角形 \(BCD\) 为等腰三角形，故 \(\angle DBC=\angle BDC\). 点 \(D\) 是弦 \(AB\) 的内点，所以在直线 \(GDF\) 上，\(D\) 位于 \(G\)、\(F\) 之间. 又 \(GF\parallel BC\)，所以 \(\angle BDG=\angle DBC=\angle BDC\). 在圆内接四边形 \(BCFG\) 中，对角互补；同时 \(CF\parallel BD\)，故 \(\angle BGF+\angle BCF=180^{\circ}\)，\(\angle BCF+\angle DBC=180^{\circ}\)，从而 \(\angle BGD=\angle BGF=\angle DBC=\angle BDC\). 因此有两组对应角相等，\(\triangle BCD\sim\triangle GBD\).
 \end{enumerate}
 \end{solution}
 
@@ -349,8 +432,18 @@ y = 3\sin \varphi,
 
 \begin{solution}
 \begin{enumerate}
-\item \(A(1,\sqrt{3})\)，\(B(-\sqrt{3},1)\)，\(C(-1,-\sqrt{3})\)，\(D(\sqrt{3},-1)\).
-\item \([32,52]\).
+\item 因为正方形内接于半径为 \(2\) 的圆，相邻顶点的极角相差 \(\frac\pi2\). 由逆时针顺序，四点的极坐标依次为 \(\left(2,\frac\pi3\right)\)、\(\left(2,\frac{5\pi}{6}\right)\)、\(\left(2,\frac{4\pi}{3}\right)\)、\(\left(2,\frac{11\pi}{6}\right)\)，所以 \(A(1,\sqrt3)\)，\(B(-\sqrt3,1)\)，\(C(-1,-\sqrt3)\)，\(D(\sqrt3,-1)\).
+\item 设 \(P=(2\cos\varphi,3\sin\varphi)\). 正方形四个顶点的向量和为零，且每个顶点到原点的距离均为 \(2\)，所以
+\[
+T=|PA|^2+|PB|^2+|PC|^2+|PD|^2
+ =4|P|^2+\bigl(|A|^2+|B|^2+|C|^2+|D|^2\bigr)-2\overrightarrow{OP}\cdot(\overrightarrow{OA}+\overrightarrow{OB}+\overrightarrow{OC}+\overrightarrow{OD})
+\]
+
+又
+\[
+T=4\left(4\cos^2\varphi+9\sin^2\varphi\right)+16=32+20\sin^2\varphi
+\]
+由于 \(0\leqslant\sin^2\varphi\leqslant1\)，故 \(T\in[32,52]\).
 \end{enumerate}
 \end{solution}
 
@@ -365,7 +458,7 @@ y = 3\sin \varphi,
 
 \begin{solution}
 \begin{enumerate}
-\item \(\{x \mid x \leqslant 1\text{ 或 }x \geqslant 4\}\).
-\item \(a \in [-3,0]\).
+\item 当 \(x\leqslant2\) 时，\(|x-3|+|x-2|=5-2x\)，不等式给出 \(x\leqslant1\)；当 \(2\leqslant x\leqslant3\) 时，左端为 \(1<3\)，无解；当 \(x\geqslant3\) 时，左端为 \(2x-5\)，不等式给出 \(x\geqslant4\). 故解集为 \((-\infty,1]\cup[4,+\infty)\).
+\item 因为要求解集包含 \([1,2]\)，所以对任意 \(x\in[1,2]\) 都有 \(|x+a|+|x-2|\leqslant|x-4|\). 此时 \(|x-2|=2-x\)，\(|x-4|=4-x\)，故等价于 \(|x+a|\leqslant2\)，即 \(-2-x\leqslant a\leqslant2-x\). 对 \(x\in[1,2]\) 恒成立时，左端的最大值为 \(-3\)，右端的最小值为 \(0\)，所以 \(-3\leqslant a\leqslant0\).
 \end{enumerate}
 \end{solution}

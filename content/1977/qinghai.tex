@@ -7,9 +7,16 @@
 \end{problem}
 
 \begin{solution}
+由题设，\(a-b\neq0\)、\(a+b\neq0\)，且
+\(a^2-b^2=(a-b)(a+b)\). 因此
 \[
-\text{原式}=\frac{a\left( a+b \right)-b\left( a-b \right)+2ab}{\left( a-b \right)\left( a+b \right)}=\frac{a^2+b^2+2ab}{\left( a-b \right)\left( a+b \right)}=\frac{\left( a+b \right)^2}{\left( a-b \right)\left( a+b \right)}=\frac{a+b}{a-b}
+\text{原式}=\frac{a(a+b)-b(a-b)+2ab}{(a-b)(a+b)}
+ =\frac{a^2+b^2+2ab}{(a-b)(a+b)}
 \]
+\[
+\text{原式}=\frac{(a+b)^2}{(a-b)(a+b)}=\frac{a+b}{a-b}
+\]
+这里约去的因式 \(a+b\) 非零，所以化简合法.
 \end{solution}
 
 \begin{problem}
@@ -19,31 +26,61 @@
 \end{problem}
 
 \begin{solution}
-连接 \(AD\).
-因为 \(AB\) 是直径，所以 \( \angle ADB=90^\circ \). 又因为 \( \angle ABC=45^\circ \)，所以 \( \angle BAD=45^\circ \). 所以 \(BD=AD\).
-因为 \(AC\) 是切线，所以 \( \angle BAC=90^\circ \). 所以 \( \angle DAC=45^\circ \). 而 \( \angle C=90^\circ-45^\circ=45^\circ \). 所以 \(DC=AD\).
-从而得 \(BD=DC\).
+连接 \(AD\). 因为 \(AB\) 是圆的直径，所以由直径所对的圆周角为直角，得
+\(\angle ADB=90^\circ\). 又因为 \(B\)，\(D\)，\(C\) 共线，
+\(\angle ABD=\angle ABC=45^\circ\)，所以在三角形 \(ABD\) 中
+\[
+\angle BAD=180^\circ-\angle ADB-\angle ABD=45^\circ
+\]
+从而 \(\angle BAD=\angle ABD\)，故 \(BD=AD\).
+
+由于 \(AC\) 是圆在 \(A\) 点的切线，半径 \(OA\) 垂直于 \(AC\)；又 \(A\)，\(O\)，\(B\) 共线，所以 \(AB\perp AC\)，即 \(\angle BAC=90^\circ\). 因而
+\[
+\angle DAC=\angle BAC-\angle BAD=45^\circ
+\]
+在三角形 \(ABC\) 中，
+\[
+\angle ACB=180^\circ-\angle BAC-\angle ABC=45^\circ
+\]
+由于 \(D\) 在 \(BC\) 上，\(\angle ACD=\angle ACB=45^\circ\). 所以在三角形 \(ADC\) 中，\(\angle DAC=\angle ACD\)，从而 \(DC=AD\). 结合 \(BD=AD\)，得到 \(BD=DC\).
 \end{solution}
 
 \begin{problem}
-已知长方体 \(ABCD-A'B'C'D'\) 的对角线 \(AC'\) 与 \(A'C\) 的夹角 \( \angle AOC=120^\circ \)，底面边长 \(AB=4\mathrm{~cm}\)，\(BC=3\mathrm{~cm}\). 求此长方体的体积.
+已知长方体 \(ABCD-A'B'C'D'\) 的对角线 \(AC'\) 与 \(A'C\) 的夹角 \(\angle AOC=120^\circ\)，底面边长 \(AB=4\mathrm{~cm}\)，\(BC=3\mathrm{~cm}\). 求此长方体的体积.
 
 \bitmapfigure[max width=5.8cm]{img/1977/qinghai/q3_fig1.png}
 \end{problem}
 
 \begin{solution}
-因为 \( \angle AOC=120^\circ \)，所以 \( \angle COC'=180^\circ-120^\circ=60^\circ \). 又因为 \(CO=C'O\)，所以 \( \angle OCC'=\angle OC'C=60^\circ \).
-连接 \(AC\)，在 \(\mathrm{Rt}\triangle ACC'\) 中，\(\angle C'AC=90^\circ-60^\circ=30^\circ\)，所以 \(AC'=2C'C\).
-根据勾股定理，
+设长方体的体对角线交点为 \(O\)，令 \(h=C'C\). 因为 \(A\)，\(O\)，\(C'\) 共线且 \(OA\)、\(OC'\) 是反向射线，所以
 \[
-AC=\sqrt{AB^2+BC^2}=\sqrt{4^2+3^2}=5
+\angle COC'=180^\circ-\angle AOC=60^\circ
 \]
-于是 \((2C'C)^2-5^2=C'C^2\)，即 \(3C'C^2=25\). 所以 \(C'C=\frac{5\sqrt{3}}{3}\mathrm{~cm}\). 所以求得长方体的体积
+点 \(O\) 是长方体的中心，中心到各个顶点的距离相等，故 \(OC=OC'\). 在等腰三角形 \(OCC'\) 中，顶角为 \(60^\circ\)，所以
 \[
-V=AB\times BC\times C'C=4\times3\times\frac{5\sqrt{3}}{3}
-=20\sqrt{3}\mathrm{~cm}^3
+\angle OC'C=\angle OCC'=60^\circ
 \]
-答：长方体的体积为 \(20\sqrt{3}\mathrm{~cm}^3\).
+又因 \(A\)，\(O\)，\(C'\) 共线，故 \(\angle AC'C=60^\circ\). 底面内的对角线 \(AC\) 垂直于棱 \(CC'\)，所以三角形 \(ACC'\) 在 \(C\) 点为直角，进而
+\(\angle C'AC=90^\circ-\angle AC'C=30^\circ\)，\(AC'=2C'C=2h\).
+
+底面对角线长为
+\[
+AC=\sqrt{AB^2+BC^2}=\sqrt{4^2+3^2}=5\mathrm{~cm}
+\]
+在直角三角形 \(ACC'\) 中使用勾股定理，得
+\[
+(2h)^2=5^2+h^2
+\]
+所以 \(3h^2=25\)，长度取正值，得
+\[
+h=\frac{5\sqrt{3}}{3}\mathrm{~cm}
+\]
+长度取正值，所以舍去负平方根. 因而长方体的体积为
+\[
+V=AB\times BC\times C'C
+ =4\times3\times\frac{5\sqrt{3}}{3}
+ =20\sqrt{3}\mathrm{~cm}^3
+\]
 \end{solution}
 
 \begin{problem}
@@ -57,8 +94,10 @@ V=AB\times BC\times C'C=4\times3\times\frac{5\sqrt{3}}{3}
 
 \begin{solution}
 \begin{enumerate}
-    \item 函数 \( y=\frac{7x}{x+1} \) 的定义域为：\(x\) 不等于 \(-1\) 的任意实数.
-    \item 函数 \( y=\frac{1}{\sqrt{2-x}} \) 的定义域为 \(x<2\) 的实数.
+    \item 分式有意义的条件是分母不为零，即 \(x+1\neq0\). 所以 \(x\neq-1\)，定义域为
+    \(\{x\in\R\mid x\neq-1\}\).
+    \item 根式有意义要求 \(2-x\geqslant0\)，但它在分母中，故还必须有 \(\sqrt{2-x}\neq0\). 合并得
+    \(2-x>0\)，即 \(x<2\). 所以定义域为 \(\{x\in\R\mid x<2\}\).
 \end{enumerate}
 \end{solution}
 
@@ -67,8 +106,23 @@ V=AB\times BC\times C'C=4\times3\times\frac{5\sqrt{3}}{3}
 \end{problem}
 
 \begin{solution}
+以下按实数范围讨论. 因为 \(a^{5/2}\) 为实数，必须有 \(a\geqslant0\). 先考虑 \(b>0\). 此时
+\(\sqrt[4]{b^{\frac{4}{3}}}=b^{\frac{1}{3}}\)，\(b^{-\frac{1}{3}}\sqrt[4]{b^{\frac{4}{3}}}=1\).
+所以
 \[
-\text{原式}=\left[ 27a^{\frac{5}{2}}\left( ab^{-\frac{1}{3}}b^{\frac{1}{3}} \right)^{\frac{1}{2}} \right]^{\frac{1}{3}}=\left[ 27a^{\frac{5}{2}}a^{\frac{1}{2}} \right]^{\frac{1}{3}}=\left( 27a^3 \right)^{\frac{1}{3}}=3a
+\text{原式}=\left(27a^{\frac{5}{2}}\sqrt{a}\right)^{\frac{1}{3}}
+ =\left(27a^3\right)^{\frac{1}{3}}=3a
+\]
+
+若 \(b<0\)，令 \(t=\sqrt[3]{b}<0\). 则
+\[
+b^{-\frac{1}{3}}\sqrt[4]{b^{\frac{4}{3}}}
+ =\frac{1}{t}\sqrt[4]{t^4}
+ =\frac{|t|}{t}=-1
+\]
+根式中的被开方数为 \(-a\). 结合前面的 \(a\geqslant0\)，要使该根式为实数只能有 \(a=0\)，此时原式等于 \(0=3a\). 因而在题设的实数定义范围内，原式统一化简为
+\[
+3a
 \]
 \end{solution}
 
@@ -77,36 +131,80 @@ V=AB\times BC\times C'C=4\times3\times\frac{5\sqrt{3}}{3}
 \end{problem}
 
 \begin{solution}
-原式 \(=\left( \lg2+\lg7 \right)-2\left( \lg7-\lg3 \right)+\lg7-\left( 2\lg3+\lg2 \right)=0\).
+各对数的真数均为正，可以使用对数的运算性质. 由
+\(\lg14=\lg2+\lg7\)，\(2\lg\frac{7}{3}=2\left(\lg7-\lg3\right)\)，\(\lg18=\lg\left(2\times3^2\right)=\lg2+2\lg3\).
+可得
+\[
+\text{原式}=\left(\lg2-\lg2\right)+\left(\lg7-2\lg7+\lg7\right)
+ +\left(2\lg3-2\lg3\right)=0
+\]
 \end{solution}
 
 \begin{problem}
-求 \( \sin435^\circ \) 的值.
+求 \(\sin435^\circ\) 的值.
 \end{problem}
 
 \begin{solution}
+利用正弦函数的周期性，
 \[
-\begin{gathered}
-\sin435^\circ=\sin\left( 360^\circ+75^\circ \right)=\sin75^\circ=\sin\left( 45^\circ+30^\circ \right)\\
-{}=\sin45^\circ\cos30^\circ+\cos45^\circ\sin30^\circ=\frac{\sqrt{2}}{2}\cdot\frac{\sqrt{3}}{2}+\frac{\sqrt{2}}{2}\cdot\frac{1}{2}=\frac{\sqrt{6}+\sqrt{2}}{4}
-\end{gathered}
+\sin435^\circ=\sin\left(360^\circ+75^\circ\right)=\sin75^\circ
+\]
+再用正弦的和角公式，
+\[
+\sin75^\circ=\sin\left(45^\circ+30^\circ\right)
+ =\sin45^\circ\cos30^\circ+\cos45^\circ\sin30^\circ
+\]
+\[
+\sin75^\circ=\frac{\sqrt{2}}{2}\cdot\frac{\sqrt{3}}{2}
+ +\frac{\sqrt{2}}{2}\cdot\frac{1}{2}
+ =\frac{\sqrt{6}+\sqrt{2}}{4}
 \]
 \end{solution}
 
 \begin{problem}
 \begin{enumerate}
-    \item 当锐角 \( \theta \) 为何值时，方程 \( \left( 3\sin \theta \right)x^2-\left( 4\cos \theta \right)x+2=0 \) 有两个相等的实数根？
+    \item 当锐角 \(\theta\) 为何值时，方程 \( \left( 3\sin\theta \right)x^2-\left( 4\cos\theta \right)x+2=0 \) 有两个相等的实数根？
     \item 并求出这个方程的实数根.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-    \item 要使方程有两个相等的实数根，必须使其判别式为 \(0\). 即 \((4\cos\theta)^2-8(3\sin\theta)=0\). 所以 \(16\cos^2\theta-24\sin\theta=0\). 即 \(2\cos^2\theta-3\sin\theta=0\).
-又因为 \(\cos^2\theta=1-\sin^2\theta\)，所以 \(2(1-\sin^2\theta)-3\sin\theta=0\). 即 \(2\sin^2\theta+3\sin\theta-2=0\). 因此 \((2\sin\theta-1)(\sin\theta+2)=0\).
-所以 \(\sin\theta=\frac12\) 或者 \(\sin\theta=-2\)（不适合，舍去）. 已知 \(\theta\) 是锐角，所以 \(\theta=30^\circ\).
-    \item 这时，原方程就化为 \(\frac32x^2-2\sqrt3x+2=0\). 或者写成 \(3x^2-4\sqrt3x+4=0\). 即 \((\sqrt3x-2)^2=0\). 所以 \(x=\frac{2}{\sqrt3}=\frac{2\sqrt3}{3}\). 答：当 \(\theta=30^\circ\) 时，原方程有两个相等的实数根. 这两个相等的实数根是 \(\frac{2\sqrt3}{3}\).
-    \end{enumerate}
+    \item 因为 \(\theta\) 是锐角，所以 \(\sin\theta>0\)，方程确实是关于 \(x\) 的二次方程. 它有两个相等的实数根，当且仅当判别式为零：
+    \[
+    \left(-4\cos\theta\right)^2-4\left(3\sin\theta\right)\cdot2=0
+    \]
+    整理得
+    \[
+    16\cos^2\theta-24\sin\theta=0
+    \quad\Longleftrightarrow\quad
+    2\cos^2\theta-3\sin\theta=0
+    \]
+    令 \(s=\sin\theta\)，并使用 \(\cos^2\theta=1-s^2\)，则
+    \[
+    2(1-s^2)-3s=0
+    \quad\Longleftrightarrow\quad
+    2s^2+3s-2=0
+    \quad\Longleftrightarrow\quad
+    (2s-1)(s+2)=0
+    \]
+    因为 \(0<\sin\theta<1\)，只能取 \(s=\frac{1}{2}\). 锐角范围内正弦函数单调递增，所以 \(\theta=30^\circ\).
+
+    \item 代入 \(\theta=30^\circ\)，原方程为
+    \[
+    \frac{3}{2}x^2-2\sqrt{3}x+2=0
+    \]
+    两边乘以 \(2\)，并配方得
+    \[
+    3x^2-4\sqrt{3}x+4=0
+    \quad\Longleftrightarrow\quad
+    \left(\sqrt{3}x-2\right)^2=0
+    \]
+    因而两个相等的实数根都是
+    \[
+    x=\frac{2}{\sqrt{3}}=\frac{2\sqrt{3}}{3}
+    \]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -114,7 +212,18 @@ V=AB\times BC\times C'C=4\times3\times\frac{5\sqrt{3}}{3}
 \end{problem}
 
 \begin{solution}
-抛物线 \( y^2=-2x \) 的焦点是 \( \left( -\frac{1}{2},0 \right) \)，直线 \( 2x-y-1=0 \) 的斜率为 \(2\)，因此所求的直线过 \( \left( -\frac{1}{2},0 \right) \) 点，而且斜率为 \( -\frac{1}{2} \). 由点斜式直线方程可求得所求的直线是 \( y-0=-\frac{1}{2}\left( x+\frac{1}{2} \right) \)，即 \( 2x+4y+1=0 \).
+抛物线的标准形式为 \(y^2=2px\). 与 \(y^2=-2x\) 对比得 \(p=-1\)，所以其焦点为
+\[
+F\left(\frac{p}{2},0\right)=\left(-\frac{1}{2},0\right)
+\]
+已知直线可写为 \(y=2x-1\)，斜率为 \(2\). 所求直线与它垂直，故斜率为 \(-\frac{1}{2}\). 由点斜式，所求直线满足
+\[
+y=-\frac{1}{2}\left(x+\frac{1}{2}\right)
+\]
+化为一般式得
+\[
+2x+4y+1=0
+\]
 \end{solution}
 
 \begin{problem}
@@ -122,34 +231,56 @@ V=AB\times BC\times C'C=4\times3\times\frac{5\sqrt{3}}{3}
 \end{problem}
 
 \begin{solution}
-设平均每年的增长率为 \(x\)，则 \(1000(1+x)^6=1765.5\). 所以 \((1+x)^6=1.7655\approx1.766\). 于是 \(6\lg(1+x)=\lg1.766=0.2470\). 所以 \(\lg(1+x)=\frac16\times0.2470=0.0412\). 因此 \(1+x=1.100\)，所以 \(x=0.100\approx10.0\%\).
-
-答：平均每年的增长率约为 \(10.0\%\).
+从 \(1971\) 年到今年 \(1977\) 年共有 \(6\) 个年度增长区间. 设平均每年的增长率为 \(x\)，则今年的产量满足
+\[
+1000(1+x)^6=1765.5
+\]
+因此
+\[
+(1+x)^6=1.7655\approx1.766
+\]
+两边取常用对数，利用题设数据得
+\(6\lg(1+x)=\lg1.766=0.2470\)，\(\lg(1+x)=\frac{0.2470}{6}=0.0412\).
+题设又给出 \(\lg A=0.0412\) 时 \(A=1.100\)，所以
+\(1+x=1.100\)，\(x=0.100=10.0\%\).
+由于产量数据在计算中作了近似，平均每年的增长率约为 \(10.0\%\).
 \end{solution}
 
 \section{参考题}
 
 \begin{problem}
-
-若齐次线性方程组 \(\begin{cases}
+若齐次线性方程组
+\(\begin{cases}
 x+ay+a^2z=0,\\
 ax+a^2y+z=0,\\
 a^2x+y+az=0
-\end{cases}\) 有非零解，那末 \(a\) 应为何值？
+\end{cases}\)
+有非零解，那末 \(a\) 应为何值？
 \end{problem}
 
 \begin{solution}
-齐次线性方程组有非零解，其充要条件是系数行列式等于 \(0\). 即要求
+把方程组的系数矩阵记为 \(M\). 齐次线性方程组有非零解的充要条件是系数行列式为零，因此
 \[
-\begin{vmatrix}1 & a & a^2 \\ a & a^2 & 1 \\ a^2 & 1 & a\end{vmatrix}=0
+\det M=
+\begin{vmatrix}
+1&a&a^2\\
+a&a^2&1\\
+a^2&1&a
+\end{vmatrix}=0
 \]
+按第一行展开，
 \[
-\text{而}\quad
-\begin{vmatrix}1 & a & a^2 \\ a & a^2 & 1 \\ a^2 & 1 & a\end{vmatrix}=a^3+a^3+a^3-a^6-1-a^3=2a^3-a^6-1
+\det M
+=a^3-1-a\left(a^2-a^2\right)+a^2\left(a-a^4\right)
+=2a^3-a^6-1
 \]
-所以 \(2a^3-a^6-1=0\)，即 \((a^3-1)^2=0\). 所以 \(a=1\).
-
-答：当 \(a=1\) 时，这个齐次线性方程组有非零解.
+所以
+\[
+2a^3-a^6-1=0
+\quad\Longleftrightarrow\quad
+\left(a^3-1\right)^2=0
+\]
+从而 \(a^3=1\). 在实数范围内，\(a=1\). 代入时三个方程都化为 \(x+y+z=0\)，例如 \((x,y,z)=(1,-1,0)\) 是非零解，故该值确实满足题意.
 \end{solution}
 
 \begin{problem}
@@ -157,13 +288,19 @@ a^2x+y+az=0
 \end{problem}
 
 \begin{solution}
-所求的体积
+曲线与 \(x\) 轴的相邻交点满足 \(2\cos x=0\)，取围成中间区域的两个交点
+\(x=-\frac{\pi}{2}\) 和 \(x=\frac{\pi}{2}\). 旋转后在位置 \(x\) 处的截面是半径为 \(y=2\cos x\) 的圆，所以
 \[
-\begin{gathered}
-V=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\pi y^2 \mathrm{d}x
-=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}4\pi\cos^2x\mathrm{d}x\\
-=\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}2\pi(1+\cos2x)\mathrm{d}x
-=\left.(2\pi x+\pi\sin2x)\right|_{-\frac{\pi}{2}}^{\frac{\pi}{2}}=2\pi^2
-\end{gathered}
+V=\pi\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}y^2\,\mathrm{d}x
+=4\pi\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\cos^2x\,\mathrm{d}x
+\]
+利用恒等式 \(\cos^2x=\frac{1+\cos2x}{2}\)，得
+\[
+V=2\pi\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\left(1+\cos2x\right)\,\mathrm{d}x
+=\left(2\pi x+\pi\sin2x\right)\bigg|_{-\frac{\pi}{2}}^{\frac{\pi}{2}}
+\]
+代入上下限时，\(\sin\pi=\sin(-\pi)=0\)，因此
+\[
+V=2\pi\left(\frac{\pi}{2}-\left(-\frac{\pi}{2}\right)\right)=2\pi^2
 \]
 \end{solution}

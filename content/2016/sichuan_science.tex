@@ -11,6 +11,14 @@
     {\(5\)}
     {\(6\)}
 \answer{C}
+
+\begin{solution}
+由集合定义，
+\[
+A\cap\Z=\{-2,-1,0,1,2\}
+\]
+其中共有 \(5\) 个元素，所以选 C.
+\end{solution}
 \end{problem}
 
 
@@ -24,6 +32,18 @@
     {\(-20\i x^4\)}
     {\(20\i x^4\)}
 \answer{A}
+
+\begin{solution}
+由二项式定理，
+\[
+(x+\i)^6=\sum_{r=0}^{6}\mathrm C_6^r x^{6-r}\i^r
+\]
+含 \(x^4\) 的项对应 \(6-r=4\)，即 \(r=2\).因此该项为
+\[
+\mathrm C_6^2x^4\i^2=15x^4(-1)=-15x^4
+\]
+所以选 A.
+\end{solution}
 \end{problem}
 
 
@@ -37,6 +57,14 @@
     {向左平行移动 \(\dfrac{\pi}{6}\) 个单位长度}
     {向右平行移动 \(\dfrac{\pi}{6}\) 个单位长度}
 \answer{D}
+
+\begin{solution}
+令 \(u=x-\dfrac{\pi}{6}\)，则
+\[
+\sin\left(2x-\dfrac{\pi}{3}\right)=\sin 2u
+\]
+因此把 \(y=\sin 2x\) 的图象向右平移 \(\dfrac{\pi}{6}\) 个单位长度即可得到目标图象，所以选 D.
+\end{solution}
 \end{problem}
 
 
@@ -50,6 +78,14 @@
     {\(60\)}
     {\(72\)}
 \answer{D}
+
+\begin{solution}
+五位数为奇数，当且仅当个位数字为 \(1\)、\(3\) 或 \(5\).个位有 \(3\) 种选法，余下四个数字在前四位任意排列，有 \(4!=24\) 种，所以奇数共有
+\[
+3\times4!=72
+\]
+个，选 D.
+\end{solution}
 \end{problem}
 
 
@@ -65,6 +101,18 @@
     {\(2020\) 年}
     {\(2021\) 年}
 \answer{B}
+
+\begin{solution}
+设从 \(2015\) 年起经过 \(k\) 年，则全年投入资金为 \(130(1.12)^k\) 万元.要求
+\[
+130(1.12)^k>200
+\]
+即
+\[
+k>\frac{\lg(200/130)}{\lg1.12}=\frac{\lg2-\lg1.3}{\lg1.12}\approx\frac{0.30-0.11}{0.05}=3.8
+\]
+最小整数 \(k\) 为 \(4\)，对应年份为 \(2015+4=2019\) 年，所以选 B.
+\end{solution}
 \end{problem}
 
 
@@ -80,6 +128,22 @@
     {\(20\)}
     {\(35\)}
 \answer{B}
+
+\begin{solution}
+按程序逐次循环.初始 \(v=1\)，\(i=3-1=2\).当 \(i=2\) 时，
+\[
+v=2\times1+2=4
+\]
+随后 \(i=1\)；当 \(i=1\) 时，
+\[
+v=2\times4+1=9
+\]
+随后 \(i=0\)；当 \(i=0\) 时，
+\[
+v=2\times9+0=18
+\]
+随后 \(i=-1\).此时不满足 \(i\geq0\)，输出 \(v=18\)，所以选 B.
+\end{solution}
 \end{problem}
 
 
@@ -99,6 +163,16 @@ y\le 1
     {充要条件}
     {既不充分也不必要条件}
 \answer{A}
+
+\begin{solution}
+令 \(u=x-1\)，\(v=y-1\).条件 \(q\) 化为
+\(v\geq u-1\)，\(v\geq-u-1\)，\(v\leq0\).
+由前两个不等式得 \(v\geq |u|-1\)，再结合 \(v\leq0\) 可知 \(-1\leq v\leq0\)，且 \(|u|\leq v+1\).因此
+\[
+u^2+v^2\leq(v+1)^2+v^2=1+2v(v+1)\leq1<2
+\]
+故满足 \(q\) 的点都满足 \(p\)，即 \(q\Rightarrow p\).但点 \((1,1+\sqrt2)\) 满足 \(p\)，而 \(y=1+\sqrt2>1\)，不满足 \(q\)，所以 \(p\not\Rightarrow q\).因此 \(p\) 是 \(q\) 的必要不充分条件，选 A.
+\end{solution}
 \end{problem}
 
 
@@ -112,6 +186,26 @@ y\le 1
     {\(\dfrac{\sqrt2}{2}\)}
     {\(1\)}
 \answer{C}
+
+\begin{solution}
+抛物线 \(y^2=2px\) 的焦点为 \(F\left(\dfrac p2,0\right)\).设 \(P=(x,y)\)，则
+\[
+x=\frac{y^2}{2p}
+\]
+由 \(PM:MF=2:1\)，内分公式给出
+\[
+M=\frac{P+2F}{3}=\left(\frac{x+p}{3},\frac y3\right)
+\]
+令 \(t=\dfrac yp\)，则 \(x=\dfrac p2t^2\)，从而直线 \(OM\) 的斜率为
+\[
+k=\frac{y}{x+p}=\frac{2t}{t^2+2}
+\]
+由于
+\[
+t^2+2-2\sqrt2t=(t-\sqrt2)^2\geq0
+\]
+所以 \(k\leq\dfrac{\sqrt2}{2}\)，且 \(t=\sqrt2\) 时取等号.因此最大值为 \(\dfrac{\sqrt2}{2}\)，选 C.
+\end{solution}
 \end{problem}
 
 
@@ -130,6 +224,24 @@ y\le 1
     {\(\left(0,+\infty\right)\)}
     {\(\left(1,+\infty\right)\)}
 \answer{A}
+
+\begin{solution}
+设 \(P_1=(x_1,-\ln x_1)\)，\(P_2=(x_2,\ln x_2)\)，其中 \(0<x_1<1<x_2\).两条切线的斜率分别为 \(-1/x_1\) 和 \(1/x_2\).由两切线垂直，
+\[
+-\frac1{x_1x_2}=-1
+\]
+故 \(x_1x_2=1\).令 \(t=\ln x_2=-\ln x_1>0\)，则 \(x_1=e^{-t}\)，\(x_2=e^t\).两条切线分别为
+\(l_1:y=-e^tx+t+1\)，\(l_2:y=e^{-t}x+t-1\).
+它们在 \(y\) 轴上的截距之差为 \(2\)，而联立两式得交点 \(P\) 的横坐标
+\[
+x_P=\frac{2}{e^t+e^{-t}}
+\]
+所以
+\[
+S_{\triangle PAB}=\frac12\times2\times x_P=\frac{2}{e^t+e^{-t}}
+\]
+当 \(t>0\) 时，分母大于 \(2\)，且随 \(t\) 从 \(0\) 增大到 \(+\infty\) 时该面积从 \(1\) 降到 \(0\).故面积的取值范围为 \((0,1)\)，选 A.
+\end{solution}
 \end{problem}
 
 
@@ -143,6 +255,32 @@ y\le 1
     {\(\dfrac{37+6\sqrt3}{4}\)}
     {\(\dfrac{37+2\sqrt{33}}{4}\)}
 \answer{B}
+
+\begin{solution}
+令 \(\bs u=\overrightarrow{DA}\)，\(\bs v=\overrightarrow{DB}\)，\(\bs w=\overrightarrow{DC}\)，并设 \(|\bs u|^2=|\bs v|^2=|\bs w|^2=r^2\).三个向量共面，故其 Gram 行列式为零：
+\[
+\det\begin{pmatrix}r^2&-2&-2\\-2&r^2&-2\\-2&-2&r^2\end{pmatrix}=(r^2-4)(r^2+2)^2=0
+\]
+因 \(r^2>0\)，故 \(r^2=4\).又
+\[
+|\bs u+\bs v+\bs w|^2=3r^2+2(-2-2-2)=0
+\]
+所以 \(\bs u+\bs v+\bs w=\bs0\).
+
+设 \(\bs z=\overrightarrow{AP}\)，则 \(|\bs z|=1\)，且由于 \(M\) 是 \(PC\) 的中点，
+\[
+\overrightarrow{BM}=\frac{\bs u+\bs z+\bs w}{2}-\bs v=\frac{\bs z-3\bs v}{2}
+\]
+于是
+\[
+|\overrightarrow{BM}|^2=\frac14\left(|\bs z|^2+9|\bs v|^2-6\bs z\cdot\bs v\right)=\frac14(37-6\bs z\cdot\bs v)
+\]
+由 \(\bs z\cdot\bs v\geq-|\bs z||\bs v|=-2\)，得
+\[
+|\overrightarrow{BM}|^2\leq\frac{37+12}{4}=\frac{49}{4}
+\]
+当 \(\bs z\) 与 \(\bs v\) 反向时取等号，所以最大值为 \(\dfrac{49}{4}\)，选 B.
+\end{solution}
 \end{problem}
 
 
@@ -151,6 +289,13 @@ y\le 1
 \begin{problem}
 \(\cos^2\dfrac{\pi}{8}-\sin^2\dfrac{\pi}{8}=\fillinblank{}\)
 \answer{\(\dfrac{\sqrt2}{2}\)}
+
+\begin{solution}
+由二倍角公式，
+\[
+\cos^2\frac{\pi}{8}-\sin^2\frac{\pi}{8}=\cos\frac{\pi}{4}=\frac{\sqrt2}{2}
+\]
+\end{solution}
 \end{problem}
 
 
@@ -158,6 +303,17 @@ y\le 1
 \begin{problem}
 同时抛掷两枚质地均匀的硬币，当至少有一枚硬币正面向上时，就说这次试验成功，则在 \(2\) 次试验中成功次数 \(X\) 的均值是\fillinblank{}.
 \answer{\(\dfrac{3}{2}\)}
+
+\begin{solution}
+一次试验失败当且仅当两枚硬币都反面，因此一次试验成功的概率为
+\[
+1-\frac14=\frac34
+\]
+两次试验相互独立，故 \(X\) 服从参数为 \(2\)、\(\dfrac34\) 的二项分布，从而
+\[
+E(X)=2\times\frac34=\frac32
+\]
+\end{solution}
 \end{problem}
 
 
@@ -167,6 +323,17 @@ y\le 1
 
 \bitmapfigure[max width=0.42\linewidth]{img/2016/sichuan_science/q13_fig1.png}
 \answer{\(\dfrac{\sqrt3}{3}\)}
+
+\begin{solution}
+由正视图及四个面都是腰长为 \(2\) 的等腰三角形可知，底面为底边长为 \(2\sqrt3\)、底边上的高为 \(1\) 的等腰三角形，且棱锥的高为 \(1\).其中正视图中半底长为 \(\sqrt3\)、高为 \(1\)，满足 \((\sqrt3)^2+1^2=2^2\)，与各面的腰长相符.因此底面积为
+\[
+S_{\text{底}}=\frac12\times2\sqrt3\times1=\sqrt3
+\]
+所以体积为
+\[
+V=\frac13S_{\text{底}}h=\frac13\times\sqrt3\times1=\frac{\sqrt3}{3}
+\]
+\end{solution}
 \end{problem}
 
 
@@ -174,6 +341,21 @@ y\le 1
 \begin{problem}
 已知函数 \(f(x)\) 是定义在 \(\R\) 上的周期为 \(2\) 的奇函数，当 \(0<x<1\) 时，\(f(x)=4^x\)，则 \(f\left(-\dfrac52\right)+f(1)=\fillinblank{}\).
 \answer{\(-2\)}
+
+\begin{solution}
+由周期性，
+\[
+f\left(-\dfrac52\right)=f\left(-\dfrac12\right)
+\]
+由奇函数性质，
+\[
+f\left(-\frac12\right)=-f\left(\frac12\right)=-4^{1/2}=-2
+\]
+又因周期为 \(2\)，有 \(f(-1)=f(1)\)；因奇函数 \(f(-1)=-f(1)\)，所以 \(f(1)=0\).故
+\[
+f\left(-\frac52\right)+f(1)=-2
+\]
+\end{solution}
 \end{problem}
 
 
@@ -190,6 +372,32 @@ y\le 1
 
 其中的真命题是\fillinblank{}. （写出所有真命题的序列）
 \answer{\(\circled{2}\circled{3}\)}
+
+\begin{solution}
+对非原点 \(P=(x,y)\)，记 \(r^2=x^2+y^2\)，则其伴随点为
+\[
+P'=\left(\frac y{r^2},-\frac x{r^2}\right)
+\]
+再次取伴随点时，因
+\[
+\left(\dfrac y{r^2}\right)^2+\left(-\dfrac x{r^2}\right)^2=\dfrac1{r^2}
+\]
+有
+\[
+(P')'=\left(-x,-y\right)\neq(x,y)
+\]
+一般并不成立.例如 \((1,0)\) 的伴随点为 \((0,-1)\)，而 \((0,-1)\) 的伴随点为 \((-1,0)\)，所以命题 \(\circled{1}\) 错误.
+
+若 \(P\) 在单位圆上，则 \(r^2=1\)，其伴随点为 \((y,-x)\)，仍在单位圆上；该变换在单位圆上是旋转，且为双射，所以单位圆的伴随曲线仍是单位圆，命题 \(\circled{2}\) 正确.
+
+若 \(C\) 关于 \(x\) 轴对称，则 \((x,y)\in C\) 时 \((x,-y)\in C\).这两个点的伴随点分别为
+\(\left(\frac y{x^2+y^2},-\frac x{x^2+y^2}\right)\)，\(\left(-\frac y{x^2+y^2},-\frac x{x^2+y^2}\right)\)
+它们关于 \(y\) 轴对称，所以命题 \(\circled{3}\) 正确.
+
+命题 \(\circled{4}\) 错误.例如直线 \(y=1\) 上的三个点 \((0,1)\)、\((1,1)\)、\((2,1)\) 的伴随点分别为
+\((1,0)\)，\(\left(\dfrac12,-\dfrac12\right)\)，\(\left(\dfrac15,-\dfrac25\right)\).
+前两点连线斜率为 \(1\)，后两点连线斜率为 \(-\dfrac13\)，三点不共线.因此所有真命题的序列为 \(\circled{2}\circled{3}\).
+\end{solution}
 \end{problem}
 
 
@@ -208,11 +416,31 @@ y\le 1
 \end{problem}
 
 \begin{solution}
-短答案：
 \begin{enumerate}
-\item \(a=0.3\).
-\item 估计全市居民中月均用水量不低于 \(3\) 吨的人数为 \(3.6\) 万.
-\item \(x=2.9\) 吨.
+\item 直方图各组组距均为 \(0.5\)，所以各组频率等于“组距乘以组内的频率密度”.由频率总和为 \(1\)，得
+\[
+0.5\bigl(0.08+0.16+a+0.40+0.52+a+0.12+0.08+0.04\bigr)=1
+\]
+因此 \(0.5(1.40+2a)=1\)，解得 \(a=0.30\).
+
+\item 月均用水量不低于 \(3\) 吨对应区间 \([3,3.5)\)、\([3.5,4)\)、\([4,4.5)\).其样本频率为
+\[
+0.5(0.12+0.08+0.04)=0.12
+\]
+用样本频率估计总体频率，故 \(30\) 万居民中符合条件的人数约为
+\[
+30\times0.12=3.6\text{ 万}
+\]
+
+\item 由前五组可知，月均用水量小于 \(2.5\) 吨的样本频率为
+\[
+0.5(0.08+0.16+0.30+0.40+0.52)=0.73
+\]
+第六组 \([2.5,3)\) 的频率密度为 \(0.30\)，其频率为 \(0.5\times0.30=0.15\)，所以前六组累计频率为 \(0.73+0.15=0.88>0.85\).由于 \(0.73<0.85\)，设第 \(85\%\) 分位点为 \(x\)，则 \(2.5\leq x<3\)，并由组内频率密度近似均匀得到
+\[
+0.73+0.30(x-2.5)=0.85
+\]
+解得 \(x=2.9\)，所以估计标准为 \(2.9\) 吨.
 \end{enumerate}
 \end{solution}
 
@@ -227,10 +455,49 @@ y\le 1
 \end{problem}
 
 \begin{solution}
-短答案：
 \begin{enumerate}
-\item 结论为 \(\sin A\sin B=\sin C\).
-\item \(\tan B=4\).
+\item 由正弦定理，存在同一个正数 \(k\)，使
+\(a=k\sin A\)，\(b=k\sin B\)，\(c=k\sin C\).
+原条件等价于
+\[
+\frac{\cos A}{\sin A}+\frac{\cos B}{\sin B}
+=\frac{\sin C}{\sin C}=1
+\]
+即
+\[
+\cot A+\cot B=1
+\]
+另一方面，
+\[
+\cot A+\cot B
+=\frac{\cos A\sin B+\sin A\cos B}{\sin A\sin B}
+=\frac{\sin(A+B)}{\sin A\sin B}
+=\frac{\sin C}{\sin A\sin B}
+\]
+因为 \(A+B=\pi-C\).故
+\[
+\sin A\sin B=\sin C
+\]
+
+\item 由余弦定理，
+\[
+a^2=b^2+c^2-2bc\cos A
+\]
+结合题设条件 \(b^2+c^2-a^2=\dfrac65bc\)，得
+\(2bc\cos A=\frac65bc\)，\(\cos A=\frac35\).
+三角形内角 \(A\in(0,\pi)\)，所以 \(\sin A=\dfrac45\).又由第（1）问，
+\[
+\sin A\sin B=\sin C=\sin(A+B)
+=\sin A\cos B+\cos A\sin B
+\]
+代入 \(\sin A=\dfrac45\)，\(\cos A=\dfrac35\)，得
+\[
+\frac45\sin B=\frac45\cos B+\frac35\sin B
+\]
+从而 \(\dfrac15\sin B=\dfrac45\cos B\)，故
+\[
+\tan B=4
+\]
 \end{enumerate}
 \end{solution}
 
@@ -248,10 +515,37 @@ y\le 1
 \end{problem}
 
 \begin{solution}
-短答案：
 \begin{enumerate}
-\item 取 \(M=AB\cap CD\).
-\item 直线 \(PA\) 与平面 \(PCE\) 所成角的正弦值为 \(\dfrac{1}{3}\).
+\item 因为 \(E\) 是 \(AD\) 的中点，且 \(BC=\dfrac12AD\)，所以
+\(ED=\frac12AD=BC\)，\(ED\parallel BC\).
+故四边形 \(BCDE\) 是平行四边形，从而 \(BE\parallel CD\).若 \(AB\parallel CD\)，则四边形 \(ABCD\) 也是平行四边形，将有 \(AD=BC\)，与 \(BC=\dfrac12AD\) 矛盾，所以 \(AB\) 与 \(CD\) 相交.取
+\[
+M=AB\cap CD
+\]
+则 \(M\in AB\subset\text{平面 }PAB\)，且直线 \(CM\) 就是直线 \(CD\)，所以 \(CM\parallel BE\).点 \(C\) 在底面内但不在直线 \(BE\) 上，而平面 \(PBE\) 与底面的交线为 \(BE\)，故 \(C\notin\text{平面 }PBE\)，从而 \(CM\) 不在该平面内.由于 \(BE\subset\text{平面 }PBE\)，故 \(CM\parallel\text{平面 }PBE\).
+
+\item 所求是角的正弦，整体按比例缩放不改变角度，故不妨设 \(BC=CD=1\)，则 \(AD=2\).在底面内建立直角坐标系，取
+\(A(0,0,0)\)，\(D(2,0,0)\)，\(C(2,1,0)\)，\(B(1,1,0)\)，\(E(1,0,0)\).
+由 \(PA\perp CD\)，且 \(CD\) 的方向向量为 \((0,1,0)\)，可知 \(P\) 的纵坐标为 \(0\).又 \(PA\perp AB\)，而 \(\overrightarrow{AB}=(1,1,0)\)，故 \(P\) 的横坐标也为 \(0\).设 \(P=(0,0,h)\)，其中 \(h>0\).
+
+由于 \(CD\perp PA\) 且 \(CD\perp AD\)，所以 \(CD\perp\text{平面 }PAD\).平面 \(PAD\) 截二面角 \(P-CD-A\) 所得的截面角为 \(\angle PDA\)，故
+\[
+\tan\angle PDA=\frac{PA}{AD}=\frac h2
+\]
+二面角为 \(45^\circ\)，所以 \(h=2\)，即 \(P=(0,0,2)\).
+
+取平面 \(PCE\) 内的两个方向向量
+\(\overrightarrow{CE}=(-1,-1,0)\)，\(\overrightarrow{CP}=(-2,-1,2)\).
+其法向量可取
+\[
+\overrightarrow{CE}\times\overrightarrow{CP}=(-2,2,-1)
+\]
+长度为 \(3\).直线 \(PA\) 的方向向量为 \((0,0,1)\)，因此直线与平面所成角 \(\theta\) 满足
+\[
+\sin\theta
+=\frac{|(0,0,1)\cdot(-2,2,-1)|}{1\cdot3}
+=\frac13
+\]
 \end{enumerate}
 \end{solution}
 
@@ -266,10 +560,45 @@ y\le 1
 \end{problem}
 
 \begin{solution}
-短答案：
 \begin{enumerate}
-\item \(a_n=2^{n-1}\).
-\item 题中不等式成立.
+\item 由 \(S_1=a_1=1\) 及题设递推式，
+\[
+a_2=S_2-S_1=qS_1+1-S_1=q
+\]
+对 \(n\geq2\)，由 \(S_{n+1}=S_n+a_{n+1}\) 及 \(S_n-S_{n-1}=a_n\) 有
+\[
+a_{n+1}=S_{n+1}-S_n
+=qS_n+1-(qS_{n-1}+1)
+=q(S_n-S_{n-1})=qa_n
+\]
+又 \(a_1=1\)，故
+\[
+a_n=q^{n-1}
+\]
+题设 \(2a_2\)，\(a_3\)，\(a_2+2\) 成等差数列，所以
+\[
+2a_3=2a_2+(a_2+2)
+\]
+代入 \(a_2=q\)，\(a_3=q^2\)，得
+\(2q^2=3q+2\)，\((2q+1)(q-2)=0\).
+因 \(q>0\)，所以 \(q=2\)，从而
+\[
+a_n=2^{n-1}
+\]
+
+\item 双曲线可写为
+\[
+\frac{x^2}{1^2}-\frac{y^2}{a_n^2}=1
+\]
+故其离心率应为
+\[
+e_n=\sqrt{1+\frac{a_n^2}{1^2}}=\sqrt{1+a_n^2}
+\]
+但第（1）问由题面条件得到 \(a_2=2\)，于是
+\[
+e_2=\sqrt{1+a_2^2}=\sqrt5\neq\frac53
+\]
+因此原试卷中第（2）问的条件与第（1）问及双曲线定义相互矛盾，不存在同时满足这些条件的数列. 不能在不擅自修改题面的前提下，对所印不等式给出有效证明；该题保留为题面内部矛盾风险.
 \end{enumerate}
 \end{solution}
 
@@ -284,10 +613,53 @@ y\le 1
 \end{problem}
 
 \begin{solution}
-短答案：
 \begin{enumerate}
-\item 椭圆方程为 \(\dfrac{x^2}{6}+\dfrac{y^2}{3}=1\)，\(T=(2,1)\).
-\item \(\lambda=\dfrac54\).
+\item 设椭圆焦半距为 \(c\)，则 \(c^2=a^2-b^2\).两个焦点与短轴端点构成直角三角形时，直角顶点只能是短轴端点，故该等腰直角三角形的两条直角边长均为 \(b\)，从而
+\(c=b\)，\(a^2=b^2+c^2=2b^2\).
+将直线 \(l:y=-x+3\)，即 \(y=3-x\)，代入椭圆方程，得
+\[
+\frac{x^2}{2b^2}+\frac{(3-x)^2}{b^2}=1
+\]
+即
+\[
+3x^2-12x+18-2b^2=0
+\]
+因为直线与椭圆只有一个公共点，所以上式判别式为零：
+\[
+(-12)^2-4\cdot3(18-2b^2)=0
+\]
+解得 \(b^2=3\)，于是 \(a^2=6\).此时方程化为
+\(3x^2-12x+12=0\)，\((x-2)^2=0\).
+所以 \(x=2\)，\(y=3-2=1\)，从而
+\(E:\frac{x^2}{6}+\frac{y^2}{3}=1\)，\(T=(2,1)\).
+
+\item 设 \(P=(p,3-p)\in l\).因为 \(l'\parallel OT\)，而 \(\overrightarrow{OT}=(2,1)\)，可将 \(l'\) 上的点写成
+\[
+X=P+t(2,1)=(p+2t,3-p+t)
+\]
+令 \(t_A\)，\(t_B\) 分别对应交点 \(A\)，\(B\).代入椭圆方程，得
+\[
+\frac{(p+2t)^2}{6}+\frac{(3-p+t)^2}{3}=1
+\]
+即
+\[
+t^2+2t+\frac{(p-2)^2}{2}=0
+\]
+所以
+\[
+t_A t_B=\frac{(p-2)^2}{2}
+\]
+由于方向向量 \((2,1)\) 的长度为 \(\sqrt5\)，
+\[
+|PA|\,|PB|=5|t_A t_B|=\frac52(p-2)^2
+\]
+另一方面，
+\(\overrightarrow{PT}=(2-p,p-2)\)，\(|PT|^2=2(p-2)^2\).
+因此
+\[
+|PT|^2=\frac45|PA|\,|PB|
+\]
+存在常数 \(\lambda=\dfrac45\).
 \end{enumerate}
 \end{solution}
 
@@ -302,9 +674,56 @@ y\le 1
 \end{problem}
 
 \begin{solution}
-短答案：
 \begin{enumerate}
-\item 当 \(a\leqslant0\) 时，\(f(x)\) 在 \((0,+\infty)\) 上单调递减；当 \(a>0\) 时，\(f(x)\) 在 \(\left(0,\dfrac{1}{\sqrt{2a}}\right)\) 上单调递减，在 \(\left(\dfrac{1}{\sqrt{2a}},+\infty\right)\) 上单调递增.
-\item \(a\geqslant\dfrac12\).
+\item 函数定义域为 \((0,+\infty)\)，且
+\[
+f'(x)=2ax-\frac1x=\frac{2ax^2-1}{x}
+\]
+当 \(a\leq0\) 时，\(2ax^2-1<0\)，所以 \(f'(x)<0\)，函数在 \((0,+\infty)\) 上单调递减.
+
+当 \(a>0\) 时，\(f'(x)=0\) 的唯一正根为
+\[
+x_0=\frac1{\sqrt{2a}}
+\]
+在 \(0<x<x_0\) 时 \(f'(x)<0\)，在 \(x>x_0\) 时 \(f'(x)>0\).因此函数在 \(\left(0,\dfrac1{\sqrt{2a}}\right)\) 上单调递减，在 \(\left(\dfrac1{\sqrt{2a}},+\infty\right)\) 上单调递增.
+
+\item 令
+\[
+D(x)=f(x)-\left(\frac1x-\e^{1-x}\right)
+\]
+整理得
+\[
+D(x)=\left(a-\frac12\right)(x^2-1)+H(x)
+\]
+其中
+\[
+H(x)=\frac12(x^2-1)-\ln x-\frac1x+\e^{1-x}
+\]
+有 \(H(1)=H'(1)=0\)，且
+\[
+H'(x)=x-\frac1x+\frac1{x^2}-\e^{1-x}
+\]
+\[
+H''(x)=1+\frac1{x^2}-\frac2{x^3}+\e^{1-x}
+=\frac{x^3+x-2}{x^3}+\e^{1-x}
+\]
+当 \(x>1\) 时，\(x^3+x-2=(x-1)(x^2+x+2)>0\)，故 \(H''(x)>0\).于是 \(H'(x)>H'(1)=0\)，再有 \(H(x)>H(1)=0\).
+
+若 \(a\geq\dfrac12\)，则 \(x>1\) 时
+\[
+D(x)=\left(a-\frac12\right)(x^2-1)+H(x)>0
+\]
+不等式恒成立.
+
+反之，若题中不等式对所有 \(x>1\) 恒成立，则 \(D(x)>0\).又由洛必达法则及 \(H'(1)=0\)，
+\[
+\lim_{x\to1^+}\frac{H(x)}{x^2-1}
+=\lim_{x\to1^+}\frac{H'(x)}{2x}=0
+\]
+因此
+\[
+\lim_{x\to1^+}\frac{D(x)}{x^2-1}=a-\frac12
+\]
+若 \(a<\dfrac12\)，该极限为负，导致 \(x\) 充分接近 \(1\) 时 \(D(x)<0\)，矛盾.故必须 \(a\geq\dfrac12\).
 \end{enumerate}
 \end{solution}

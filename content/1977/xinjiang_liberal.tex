@@ -7,10 +7,9 @@
 \end{problem}
 
 \begin{solution}
-\( \dfrac{x-1}{x+1}-\dfrac{5}{1-x}=\dfrac{4}{x^2-1} \)
-去分母，得 \( x^2-2x+1+5x+5=4 \)，即 \( x^2+3x+2=0 \).
-因此 \( x=-2 \) 或 \( x=-1 \).
-经检验，\( x=-2 \) 是原方程的根，\( x=-1 \) 是增根，故舍去.
+由分母不为零，得 \(x\ne -1\)，\(x\ne 1\)，所以原方程的定义域为 \(x\ne\pm1\). 在此条件下，两边同乘 \(x^2-1\)，得 \(\left(x-1\right)^2+5\left(x+1\right)=4\)，即 \(x^2-2x+1+5x+5=4\)，整理得 \(x^2+3x+2=0\)，所以 \(\left(x+1\right)\left(x+2\right)=0\)，从而 \(x=-1\) 或 \(x=-2\).
+
+其中 \(x=-1\) 不在原方程的定义域内，应舍去. 代入检验 \(x=-2\)：左边为 \(3-\frac{5}{3}=\frac{4}{3}\)，右边为 \(\frac{4}{3}\)，等式成立. 因此原方程的解为 \(x=-2\).
 \end{solution}
 
 \begin{problem}
@@ -18,16 +17,17 @@
 \end{problem}
 
 \begin{solution}
-设平均每年的增长率为 \( x \)，依题意有 \( 1200=200\left( 1+x \right)^2 \)，即 \( \left( 1+x \right)^2=6 \).
-所以 \( 1+x=\pm \sqrt{6}\approx \pm 2.45 \)，得 \( x_1=1.45=145\% \)，\( x_2=-3.45 \)（不合题意，舍去）.
+设平均每年的增长率为 \(x\). 增长率不能为负，因此 \(x\geq0\). 从 1974 年底到 1976 年底经过两年，按每年增长率均为 \(x\) 计算，猪数满足 \(1200=200\left(1+x\right)^2\)，约去 \(200\) 得 \(\left(1+x\right)^2=6\). 由于 \(1+x>0\)，所以只能取正平方根，得到 \(1+x=\sqrt{6}\)，即 \(x=\sqrt{6}-1\).
 
-答：平均每年的增长率为 \( 145\% \).
+计算得 \(\sqrt{6}\approx2.44949\)，故 \(x\approx1.44949=144.949\%\). 精确到 \(1\%\) 为 \(145\%\).
+
+答：平均每年的增长率为 \(145\%\).
 \end{solution}
 
 \begin{problem}
 计算：
 
-\begin{enumerate}[label=（\arabic*）]
+\begin{enumerate}
 \item 化简：\( \frac{\frac{3}{4}\left( ab \right)^{-\frac{1}{3}}\left( \frac{4}{9}a^4b^{\frac{2}{3}} \right)^{\frac{1}{2}}}{2a^3\sqrt{a^2}} \).
 
 \item 已知 \( \lg 2=0.3010 \)，求 \( \lg \sqrt{800} \).
@@ -35,12 +35,10 @@
 \end{problem}
 
 \begin{solution}
-\begin{enumerate}[label=（\arabic*）]
-\item
-\[\text{原式}=\frac{\frac{3}{4}a^{-\frac{1}{3}}b^{-\frac{1}{3}}\cdot \frac{2}{3}a^{4\times \frac{1}{2}}b^{\frac{2}{3}\times \frac{1}{2}}}{2a^3\cdot a}=\frac{1}{4}a^{-\frac{1}{3}+2-3-1}b^{-\frac{1}{3}+\frac{1}{3}}=\frac{1}{4a^{\frac{7}{3}}}=\frac{\sqrt[3]{a^2}}{4a^3}\]
+\begin{enumerate}
+\item 按题目中分数指数幂的通常定义，取 \(a>0\)，\(b>0\)，于是 \(\sqrt{a^2}=a\). 利用幂的运算性质，\(\left(ab\right)^{-\frac{1}{3}}=a^{-\frac{1}{3}}b^{-\frac{1}{3}}\)，且 \(\left(\frac{4}{9}a^4b^{\frac{2}{3}}\right)^{\frac{1}{2}}=\frac{2}{3}a^2b^{\frac{1}{3}}\). 因此原式的系数为 \(\frac{3}{4}\times\frac{2}{3}\div2=\frac14\)，\(a\) 的指数为 \(-\frac13+2-3-1=-\frac73\)，\(b\) 的指数为 \(-\frac13+\frac13=0\)，从而原式为 \(\frac{1}{4}a^{-\frac73}=\frac{1}{4a^{\frac73}}=\frac{\sqrt[3]{a^2}}{4a^3}\).
 
-\item
-\[\lg \sqrt{800}=\lg \sqrt{2^3\times 10^2}=\lg 10+\frac{3}{2}\lg 2=1+\frac{3}{2}\times 0.3010=1.4515\]
+\item 因为 \(800=2^3\times10^2\)，所以 \(\lg\sqrt{800}=\frac{1}{2}\lg800=\frac{1}{2}\lg\left(2^3\times10^2\right)=\frac{3}{2}\lg2+\lg10=\frac{3}{2}\times0.3010+1=1.4515\).
 \end{enumerate}
 \end{solution}
 
@@ -51,16 +49,7 @@
 \end{problem}
 
 \begin{solution}
-已知 \(F\)，\(M\)，\(N\)，\(E\) 分别为四边形 \(ABCD\) 四边的中点.
-
-求证 \(EM\) 与 \(FN\) 互相平分.
-
-证明：分别连 \(FM\)，\(MN\)，\(NE\)，\(EF\) 及 \(BD\).
-在 \( \triangle BCD \) 中，\( MN\parallel BD \)，且 \( MN=\frac{1}{2}BD \)（\(\triangle\)中位线定理）.
-同理，\( EF\parallel BD \)，且 \( EF=\frac{1}{2}BD \).
-故 \( EF\parallel MN \)，且 \( EF=MN \).
-因此 \(FMNE\) 是平行四边形（有一组对边平行而且相等的四边形是平行四边形）.
-故 \(EM\) 与 \(FN\) 互相平分（平行四边形的对角线互相平分）.
+连接 \(BD\). 因为 \(M\)，\(N\) 分别是 \(BC\)，\(CD\) 的中点，所以在 \(\triangle BCD\) 中，依据中位线定理有 \(MN\parallel BD\)，且 \(MN=\frac{1}{2}BD\). 因为 \(F\)，\(E\) 分别是 \(AB\)，\(AD\) 的中点，所以在 \(\triangle BAD\) 中，依据中位线定理有 \(FE\parallel BD\)，且 \(FE=\frac{1}{2}BD\). 于是 \(MN\parallel FE\)，且 \(MN=FE\). 四边形 \(FMNE\) 的一组对边 \(MN\) 和 \(FE\) 平行且相等，因此 \(FMNE\) 是平行四边形. 平行四边形的对角线 \(FN\) 与 \(ME\) 互相平分，所以 \(EM\) 与 \(FN\) 互相平分，命题得证.
 \end{solution}
 
 \begin{problem}
@@ -71,28 +60,31 @@
 \end{problem}
 
 \begin{solution}
-由 \(2x-3y=9\)，\(3x+4y=5\)，将第一个式子乘 \(3\) 减去第二个式子乘 \(2\)，得 \( -17y=17 \)，所以 \( y=-1 \). 代入第一个式子，得 \( 2x-3\left( -1 \right)=9 \)，所以 \( x=3 \). 方程组的解是 \(x=3\)，\(y=-1\).
+将第一个方程乘以 \(3\)，得到 \(6x-9y=27\)；将第二个方程乘以 \(2\)，得到 \(6x+8y=10\). 两式相减，得 \(-17y=17\)，所以 \(y=-1\). 代入第一个方程，得 \(2x-3\left(-1\right)=9\)，即 \(2x=6\)，所以 \(x=3\).
+
+回代检验：\(2\times3-3\times\left(-1\right)=9\)，\(3\times3+4\times\left(-1\right)=5\)，两式均成立. 因此方程组的解为 \(x=3\)，\(y=-1\).
 \end{solution}
 
 \begin{problem}
-红升人民公社小水库拦水坝的横断面为梯形，坝顶宽\(2.5\text{ 米}\)，坝高\(4\text{ 米}\)，迎水坡，背水坡与水平面的夹角分别是 \(30^\circ\) 和 \(45^\circ\)，求坝底的宽.（精确到\(0.1\text{ 米}\)）
+红升人民公社小水库拦水坝的横断面为梯形，坝顶宽\(2.5\text{ 米}\)，坝高\(4\text{ 米}\)，迎水坡，背水坡与水平面的夹角分别是 \(30^\circ\) 和 \(45^\circ\)，求坝底的宽（精确到\(0.1\text{ 米}\)）.
 \end{problem}
 
 \begin{solution}
-分别由 \(A\)，\(D\) 作 \( AE\perp BC \)，\( DF\perp BC \).
+分别由 \(A\)，\(D\) 作 \(AE\perp BC\)，\(DF\perp BC\). 则 \(AE\) 和 \(DF\) 都是梯形的高，所以 \(AE=DF=4\text{ 米}\).
 
 \solutionfigure{\bitmapfigure[max width=0.64\linewidth]{img/1977/xinjiang_liberal/q6_fig1.png}}
 
-则 \( AE=DF=4 \). 所以 \( BE=AE\cot30^\circ=4\sqrt{3} \)（米），\( CF=DF=4 \).
-又 \( EF=AD=2.5 \)，故 \( BC=4\sqrt{3}+4+2.5=13.4 \)（米）.
+在直角三角形 \(ABE\) 中，\(\angle ABE=30^\circ\)，故 \(\tan30^\circ=\frac{AE}{BE}\)，所以 \(BE=\frac{4}{\tan30^\circ}=4\sqrt{3}\text{ 米}\). 在直角三角形 \(DCF\) 中，\(\angle DCF=45^\circ\)，故 \(\tan45^\circ=\frac{DF}{CF}=1\)，所以 \(CF=DF=4\text{ 米}\). 又因为 \(AE\perp BC\)，\(DF\perp BC\)，所以 \(AE\parallel DF\)；结合 \(AD\parallel BC\) 及 \(EF\subset BC\)，可知四边形 \(AEFD\) 是矩形，从而 \(EF=AD=2.5\text{ 米}\). 于是 \(BC=BE+EF+FC=4\sqrt{3}+2.5+4\approx13.428\text{ 米}\).
 
-答：坝底宽\(13.4\text{ 米}\).
+精确到 \(0.1\text{ 米}\)，得 \(BC\approx13.4\text{ 米}\).
+
+答：坝底宽为 \(13.4\text{ 米}\).
 \end{solution}
 
 \begin{problem}
 已知直线过 \( A\left( 2,-5 \right) \) 和 \( B\left( -3,0 \right) \) 两点.
 
-\begin{enumerate}[label=（\arabic*）]
+\begin{enumerate}
 \item 求此直线方程；
 \item 指出直线的斜率 \(K\)；
 \item 求直线与 \(OX\) 轴正方向的夹角 \(\alpha\).
@@ -102,10 +94,9 @@
 \end{problem}
 
 \begin{solution}
-\begin{enumerate}[label=（\arabic*）]
-\item 直线 \(AB\) 的方程为 \( \dfrac{y-0}{-5-0}=\dfrac{x-\left( -3 \right)}{2-\left( -3 \right)} \)，即 \( 5y=-5x-15 \)，化简得 \( y=-x-3 \).
-\item 直线的斜率为 \(K=-1\).
-
-\item 直线与 \(OX\) 轴正方向的夹角为 \(\alpha=135^\circ\).
+\begin{enumerate}
+\item 由两点式，直线满足 \(\frac{y-0}{-5-0}=\frac{x-\left(-3\right)}{2-\left(-3\right)}\)，即 \(5y=-5x-15\)，所以直线方程为 \(y=-x-3\).
+\item 由斜率定义，\(K=\frac{-5-0}{2-\left(-3\right)}=-1\)，所以直线的斜率为 \(K=-1\).
+\item 由直线的斜率定义，直线与 \(OX\) 轴正方向的倾角 \(\alpha\) 满足 \(\tan\alpha=K=-1\)，且 \(0^\circ\leq\alpha<180^\circ\). 由于直线斜率为负，倾角为钝角，故 \(\alpha=135^\circ\).
 \end{enumerate}
 \end{solution}

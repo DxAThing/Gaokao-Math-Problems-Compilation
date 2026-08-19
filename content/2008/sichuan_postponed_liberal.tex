@@ -15,6 +15,10 @@
 B
 \end{answer}
 
+\begin{solution}
+要使子集含有元素 \(0\)，元素 \(0\) 必须选入；另外两个元素 \(-1\)，\(1\) 可以分别选入或不选入，因此共有 \(2^2=4\) 个这样的子集，分别为 \(\{0\}\)，\(\{-1,0\}\)，\(\{0,1\}\)，\(\{-1,0,1\}\). 故选 B.
+\end{solution}
+
 \begin{problem}
 函数 \( y=\sqrt{1-x}+\lg x \) 的定义域为（\quad）
 
@@ -28,6 +32,10 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+平方根有意义要求 \(1-x\geq 0\)，即 \(x\leq 1\)；对数 \(\lg x\) 有意义要求 \(x>0\). 两个条件取交集，得定义域为 \((0,1]\). 故选 D.
+\end{solution}
 
 \begin{problem}
 \( \left(1+\frac{1}{x}\right)\left(1+x\right)^{4} \) 的展开式中含 \( x^{2} \) 项的系数（\quad）
@@ -43,6 +51,10 @@ D
 C
 \end{answer}
 
+\begin{solution}
+展开式中 \(x^2\) 项有两种来源：从 \((1+x)^4\) 中取 \(x^2\) 项，系数为 \(\mathrm C_4^2=6\)；从 \(\dfrac{1}{x}(1+x)^4\) 中取 \(x^2\) 项，须从 \((1+x)^4\) 中取 \(x^3\) 项，系数为 \(\mathrm C_4^3=4\). 所以 \(x^2\) 项的系数为 \(6+4=10\). 故选 C.
+\end{solution}
+
 \begin{problem}
 不等式 \( |x-2|<1 \) 的解集为（\quad）
 
@@ -56,6 +68,10 @@ C
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+由绝对值不等式的定义，\(|x-2|<1\) 等价于 \(-1<x-2<1\). 不等式两边同加 \(2\)，得 \(1<x<3\)，所以解集为 \(\{x\mid 1<x<3\}\). 故选 A.
+\end{solution}
 
 \begin{problem}
 已知 \( \tan\alpha=\frac{1}{2} \)，则 \( \frac{(\sin\alpha+\cos\alpha)^{2}}{\cos2\alpha}= \)（\quad）
@@ -71,6 +87,14 @@ A
 C
 \end{answer}
 
+\begin{solution}
+由 \(\tan\alpha=\dfrac{1}{2}\)，且正切有意义，知 \(\cos\alpha\ne0\). 因而
+\[
+\frac{(\sin\alpha+\cos\alpha)^2}{\cos2\alpha}=\frac{\cos^2\alpha(\tan\alpha+1)^2}{\cos^2\alpha-\sin^2\alpha}=\frac{\left(\frac12+1\right)^2}{1-\left(\frac12\right)^2}=\frac{9}{4}\mathbin{/}\frac{3}{4}=3
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
 一个三棱锥的底面边长等于一个球的半径，该正三棱锥的高等于是这个球的直径，则球的体积与正三棱锥的体积的比值为（\quad）
 
@@ -84,6 +108,18 @@ C
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+设球的半径为 \(r\)，球的体积记为 \(V_1\)，正三棱锥的体积记为 \(V_2\). 球的体积为 \(V_1=\dfrac{4}{3}\pi r^3\). 正三棱锥的底面是边长为 \(r\) 的正三角形，底面积为 \(\dfrac{\sqrt3}{4}r^2\)，高为球的直径 \(2r\)，所以其体积为
+\[
+V_2=\frac13\cdot\frac{\sqrt3}{4}r^2\cdot2r=\frac{\sqrt3}{6}r^3
+\]
+于是
+\[
+\frac{V_1}{V_2}=\frac{\frac43\pi r^3}{\frac{\sqrt3}{6}r^3}=\frac{8\sqrt3\pi}{3}
+\]
+故选 A.
+\end{solution}
 
 \begin{problem}
 若点 \(P(2,0)\) 到双曲线 \( \frac{x^{2}}{a^{2}} - \frac{y^{2}}{b^{2}} = 1 \) 的一条渐近线的距离为 \( \sqrt{2} \)，则双曲线的离心率为（\quad）
@@ -99,6 +135,18 @@ A
 A
 \end{answer}
 
+\begin{solution}
+双曲线的一条渐近线可写为 \(y=\dfrac{b}{a}x\)，即 \(bx-ay=0\)，其中 \(a>0\)，\(b>0\). 点 \(P(2,0)\) 到该直线的距离为
+\[
+\frac{|2b|}{\sqrt{a^2+b^2}}=\sqrt2
+\]
+两边平方得 \(\dfrac{4b^2}{a^2+b^2}=2\)，即 \(b^2=a^2\). 双曲线的离心率满足
+\[
+e=\frac{c}{a}=\sqrt{1+\frac{b^2}{a^2}}=\sqrt2
+\]
+故选 A.
+\end{solution}
+
 \begin{problem}
 在一次读书活动中，一个同学从 \(4\) 本不同的科技书和 \(2\) 本不同的文艺书中任选 \(3\) 本，则所选的书中既有科技书又有文艺书的概率为（\quad）
 
@@ -112,6 +160,14 @@ A
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+从 \(6\) 本不同的书中任选 \(3\) 本，共有 \(\mathrm C_6^3=20\) 种选法. 既有科技书又有文艺书时，分为选 \(2\) 本科技书和 \(1\) 本文艺书，或选 \(1\) 本科技书和 \(2\) 本文艺书两类，故有
+\[
+\mathrm C_4^2\mathrm C_2^1+\mathrm C_4^1\mathrm C_2^2=12+4=16
+\]
+种. 所求概率为 \(\dfrac{16}{20}=\dfrac45\). 故选 D.
+\end{solution}
 
 \begin{problem}
 过点 \((0,1)\) 的直线与圆 \(x^{2} + y^{2} = 4\) 相交于 \(A\)，\(B\) 两点，则 \(|AB|\) 的最小值为（\quad）
@@ -127,6 +183,18 @@ D
 B
 \end{answer}
 
+\begin{solution}
+圆心为原点，半径为 \(2\). 过点 \(P(0,1)\) 的任意直线到圆心的距离 \(d\) 满足 \(0\leq d\leq OP=1\)，且当直线垂直于 \(OP\) 时取最大值 \(d=1\). 该直线截圆所得弦长为
+\[
+|AB|=2\sqrt{2^2-d^2}
+\]
+要使弦长最小，应使 \(d\) 最大，因此
+\[
+|AB|_{\min}=2\sqrt{4-1}=2\sqrt3
+\]
+故选 B.
+\end{solution}
+
 \begin{problem}
 已知两个单位向量 \(\bs{a}\) 与 \(\bs{b}\) 的夹角为 \( \frac{\pi}{3} \)， \(\bs{a} + \lambda \bs{b} \) 与 \(\lambda \bs{a} - \bs{b} \) 互相垂直的充要条件是（\quad）
 
@@ -140,6 +208,14 @@ B
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+由 \(|\bs a|=|\bs b|=1\) 及夹角为 \(\dfrac\pi3\)，得 \(\bs a\cdot\bs b=\cos\dfrac\pi3=\dfrac12\). 两向量互相垂直的充要条件是数量积为零，所以
+\[
+(\bs a+\lambda\bs b)\cdot(\lambda\bs a-\bs b)=\lambda-\frac12+\frac{\lambda^2}{2}-\lambda=\frac{\lambda^2-1}{2}=0
+\]
+因此 \(\lambda=\pm1\)，即 \(\lambda=-1\) 或 \(\lambda=1\). 故选 C.
+\end{solution}
 
 \begin{problem}
 设函数 \( y = f(x) \)（\( x \in \R \)）的图像关于直线 \(x = 0\) 及直线 \(x = 1\) 对称，且 \( x \in [0,1] \) 时， \( f(x) = x^2 \)，则 \( f\left(-\frac{3}{2}\right) = \)（\quad）
@@ -155,6 +231,14 @@ C
 B
 \end{answer}
 
+\begin{solution}
+关于直线 \(x=0\) 对称，故 \(f\left(-\dfrac32\right)=f\left(\dfrac32\right)\). 再关于直线 \(x=1\) 对称，点 \(\dfrac32\) 关于该直线的对称点为 \(\dfrac12\)，所以 \(f\left(\dfrac32\right)=f\left(\dfrac12\right)\). 由于 \(\dfrac12\in[0,1]\)，有
+\[
+f\left(-\frac32\right)=f\left(\frac12\right)=\left(\frac12\right)^2=\frac14
+\]
+故选 B.
+\end{solution}
+
 \begin{problem}
 在正方体 \( ABCD-A_{1}B_{1}C_{1}D_{1} \) 中，\(E\) 是棱 \(A_{1}B_{1}\) 的中点，则 \(A_{1}B\) 与 \(D_{1}E\) 所成角的余弦值为（\quad）
 
@@ -169,6 +253,17 @@ B
 B
 \end{answer}
 
+\begin{solution}
+设正方体棱长为 \(l\)，建立坐标系
+取 \(A(0,0,0)\)，\(B(l,0,0)\)，\(A_1(0,0,l)\)，\(D_1(0,l,l)\)，\(E\left(\frac l2,0,l\right)\).
+于是 \(\overrightarrow{A_1B}=(l,0,-l)\)，\(\overrightarrow{D_1E}=\left(\frac l2,-l,0\right)\).
+它们的数量积为 \(\dfrac{l^2}{2}\)，长度分别为 \(l\sqrt2\) 和 \(\dfrac{l\sqrt5}{2}\). 因而两直线所成角的余弦值为
+\[
+\frac{\left|\overrightarrow{A_1B}\cdot\overrightarrow{D_1E}\right|}{|\overrightarrow{A_1B}|\,|\overrightarrow{D_1E}|}=\frac{\frac{l^2}{2}}{l\sqrt2\cdot\frac{l\sqrt5}{2}}=\frac{\sqrt{10}}{10}
+\]
+故选 B.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -179,6 +274,14 @@ B
 \( y=\ln(x+1)-1 \)（\(x>-1\)）
 \end{answer}
 
+\begin{solution}
+由 \(y=\e^{x+1}-1\)，得 \(y+1=\e^{x+1}\)，所以 \(x=\ln(y+1)-1\). 交换 \(x\)，\(y\) 得反函数
+\[
+y=\ln(x+1)-1
+\]
+原函数的值域由 \(\e^{x+1}>0\) 得为 \((-1,+\infty)\)，故反函数的定义域为 \(x>-1\).
+\end{solution}
+
 \begin{problem}
 函数 \( f(x)=\sqrt{3}\sin x-\cos^{2}x \) 的最大值是\fillinblank{}.
 \end{problem}
@@ -186,6 +289,16 @@ B
 \begin{answer}
 \( \sqrt{3} \)
 \end{answer}
+
+\begin{solution}
+令 \(t=\sin x\)，则 \(t\in[-1,1]\)，且 \(\cos^2x=1-t^2\). 因而
+\[
+f(x)=\sqrt3t-(1-t^2)=t^2+\sqrt3t-1
+\]
+这是关于 \(t\) 的开口向上的二次函数，其对称轴为 \(t=-\dfrac{\sqrt3}{2}\)，所以在区间 \([-1,1]\) 上的最大值出现在端点. 计算得
+\(\left.t^2+\sqrt3t-1\right|_{t=1}=\sqrt3\)，\(\left.t^2+\sqrt3t-1\right|_{t=-1}=-\sqrt3\).
+故函数的最大值为 \(\sqrt3\).
+\end{solution}
 
 \begin{problem}
 设等差数列 \( \left\{a_{n}\right\} \) 的前 \(n\) 项和为 \( S_{n} \)，且 \( S_{5}=a_{5} \). 若 \( a_{4}\neq0 \)，则 \( \frac{a_{7}}{a_{4}}= \)\fillinblank{}.
@@ -195,6 +308,16 @@ B
 \(3\)
 \end{answer}
 
+\begin{solution}
+设等差数列的首项为 \(a_1\)，公差为 \(d\). 则 \(S_5=\frac52(2a_1+4d)=5a_1+10d\)，\(a_5=a_1+4d\).
+由 \(S_5=a_5\) 得 \(4a_1+6d=0\)，即 \(a_1=-\dfrac32d\). 因而
+\(a_4=a_1+3d=\frac32d\)，\(a_7=a_1+6d=\frac92d\).
+题设 \(a_4\ne0\) 保证 \(d\ne0\)，所以
+\[
+\frac{a_7}{a_4}=\frac{\frac92d}{\frac32d}=3
+\]
+\end{solution}
+
 \begin{problem}
 已知 \( \angle AOB = 90^\circ \)， \(C\) 为空间中一点，且 \( \angle AOC = \angle BOC = 60^\circ \). 则直线 \(OC\) 与 \(AOB\) 平面所成角的正弦值为\fillinblank{}.
 \end{problem}
@@ -202,6 +325,15 @@ B
 \begin{answer}
 \( \frac{\sqrt{2}}{2} \)
 \end{answer}
+
+\begin{solution}
+取单位向量 \(\bs u\)，\(\bs v\) 分别沿 \(OA\)，\(OB\) 方向. 因为 \(\angle AOB=90^\circ\)，所以 \(\bs u\)，\(\bs v\) 是平面 \(AOB\) 内的互相垂直单位向量. 设 \(\bs w\) 为沿 \(OC\) 方向的单位向量，有 \(\bs w\cdot\bs u=\cos60^\circ=\frac12\)，\(\bs w\cdot\bs v=\cos60^\circ=\frac12\).
+因此 \(\bs w\) 在平面 \(AOB\) 上的正投影长度的平方为
+\[
+\left(\frac12\right)^2+\left(\frac12\right)^2=\frac12
+\]
+由于 \(|\bs w|=1\)，其垂直于平面 \(AOB\) 的分量长度为 \(\sqrt{1-\frac12}=\dfrac{\sqrt2}{2}\). 直线与平面所成角的正弦等于单位方向向量的法向分量长度，故所求值为 \(\dfrac{\sqrt2}{2}\).
+\end{solution}
 
 \section{解答题}
 
@@ -217,9 +349,9 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 由题设及正弦定理，有 \(\sin^2 A+\sin^2 B=2\sin^2 B=1\)，故 \(\sin^2 C=\cos^2 A\). 因为 \(A\) 为钝角，所以 \(\sin C=-\cos A\). 由 \(\cos A=\cos\left(\pi-\frac{\pi}{4}-C\right)\)，可得 \(\sin C=\sin\left(\frac{\pi}{4}-C\right)\)，得 \(C=\frac{\pi}{8}\)，\(A=\frac{5\pi}{8}\).
+\item 由题设 \(a^2+b^2=2b^2\)，得 \(a^2=b^2\). 因为三角形边长为正数，所以 \(a=b\). 由正弦定理，\(a=b\) 等价于 \(\sin A=\sin B\). 又 \(A+B<\pi\)，故不可能有 \(A=\pi-B\)，只能有 \(A=B\). 当 \(B=\dfrac\pi4\) 时得到 \(A=\dfrac\pi4\)，这与 \(A\) 为钝角矛盾. 所以按原 PDF 题面，本小问不存在满足条件的三角形.
 
-\item 由余弦定理及条件 \(b^2=\frac{1}{2}(a^2+c^2)\)，有 \(\cos B=\frac{a^2+c^2}{4ac}\). 因为 \(a^2+c^2\ge 2ac\)，所以 \(\cos B\ge \frac{1}{2}\)，故 \(\sin B\le \frac{\sqrt{3}}{2}\). 当 \(a=c\) 时，等号成立. 从而，\(\sin B\) 的最大值为 \(\frac{\sqrt{3}}{2}\).
+\item 仍由 \(a=b\) 得 \(A=B\). 由三角形内角和，\(C=\pi-2B>0\)，所以 \(0<B<\dfrac\pi2\). 从而 \(\sin B<1\). 另一方面，对任意 \(B\in\left(0,\dfrac\pi2\right)\)，取 \(A=B\)，\(C=\pi-2B\)，并按正弦定理取边长比 \(a:b:c=\sin B:\sin B:\sin2B\)，即可得到满足 \(a=b\) 的非退化三角形. 令 \(B\to\dfrac\pi2^{-}\)，则 \(\sin B\to1\). 因此 \(\sin B\) 没有最大值，上确界为 \(1\).
 \end{enumerate}
 \end{solution}
 
@@ -235,12 +367,16 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 设 \(A_i\) 表示事件“在一次抽检中抽到的第 \(i\) 件产品为 \(A\) 类品”，\(i=1,2\). \(B_i\) 表示事件“在一次抽检中抽到的第 \(i\) 件产品为 \(B\) 类品”，\(i=1,2\). 设 \(C\) 表示事件“一次抽检后，设备不需要调整”. 则 \(C=A_1A_2+A_1B_2+B_1A_2\). 由已知 \(P(A_i)=0.9\)，\(P(B_i)=0.05\)，\(i=1,2\). 所以所求概率为
+\item 设 \(A_i\) 表示第 \(i\) 件产品为 \(A\) 类品，\(B_i\) 表示第 \(i\) 件产品为 \(B\) 类品，其中 \(i=1\)，\(2\). 设事件 \(E\) 表示一次抽检后设备不需要调整. 由题意，只有抽到 \(AA\)，\(AB\) 或 \(BA\) 时不需要调整，因此
 \[
-P(C)=P(A_1A_2)+P(A_1B_2)+P(B_1A_2)=0.9^2+2\times 0.9\times 0.05=0.9
+P(E)=P(A_1\cap A_2)+P(A_1\cap B_2)+P(B_1\cap A_2)
+=0.9^2+0.9\times0.05+0.05\times0.9=0.9
 \]
 
-\item 由（1）知，一次抽检后设备不需要调整的概率为 \(P(C)=0.9\). 故所求概率为 \(1-0.9^3=0.271\).
+\item 由（1）知，每次抽检不需要调整的概率为 \(0.9\). 各件产品质量情况相互独立，故三次抽检的结果也相互独立. 一天中至少有一次需要调整设备是“一天三次都不属于事件 \(E\)”的对立事件，所以所求概率为
+\[
+1-P(E)^3=1-0.9^3=1-0.729=0.271
+\]
 \end{enumerate}
 \end{solution}
 
@@ -260,7 +396,7 @@ P(C)=P(A_1A_2)+P(A_1B_2)+P(B_1A_2)=0.9^2+2\times 0.9\times 0.05=0.9
 \begin{enumerate}
 \item 证明：因为 \(AD=BC_0=BD=1\)，\(AB=C_0D=\sqrt{2}\)，所以 \(\angle DBC_0=90^\circ\)，\(\angle ADB=90^\circ\). 因为折叠过程中，\(\angle DBC=\angle DBC_0=90^\circ\)，所以 \(DB \perp BC\)，又 \(DB \perp BC_0\)，故 \(DB \perp\) 平面 \(CBC_0\). 又 \(DB \subset\) 平面 \(ABC_0D\)，所以平面 \(ABC_0D \perp\) 平面 \(CBC_0\).
 
-\item 解法一：如图，由（1）知 \(BC \perp DB\)，\(BC_0 \perp DB\)，所以 \(\angle CBC_0\) 是二面角 \(C-BD-C_0\) 的平面角. 由已知得 \(\angle CBC_0=60^\circ\). 作 \(CF \perp C_0B\)，垂足为 \(F\). 由 \(BC=BC_0=1\)，可得 \(CF=\frac{\sqrt{3}}{2}\)，\(BF=\frac{1}{2}\). 连结 \(AF\)，在 \(\triangle ABF\) 中，
+\item 解法一：如图，由（1）知 \(BC \perp DB\)，\(BC_0 \perp DB\)，所以 \(\angle CBC_0\) 是二面角 \(C-BD-C_0\) 的平面角. 因为 \(A\) 与 \(C_0\) 在直线 \(BD\) 两侧，二面角 \(A-BD-C\) 与 \(C_0-BD-C\) 互为补角，故由已知 \(\angle A-BD-C=120^\circ\) 得 \(\angle CBC_0=60^\circ\). 作 \(CF \perp C_0B\)，垂足为 \(F\). 由 \(BC=BC_0=1\)，可得 \(CF=\frac{\sqrt{3}}{2}\)，\(BF=\frac{1}{2}\). 又由 \(\triangle ADB\) 为等腰直角三角形得 \(\angle ABD=45^\circ\)，结合 \(BD \perp BC_0\) 得 \(\angle ABF=\angle ABC_0=135^\circ\). 连结 \(AF\)，在 \(\triangle ABF\) 中，
 \[
 AF^2=\left(\sqrt{2}\right)^2+\left(\frac{1}{2}\right)^2-2\times \sqrt{2}\times \frac{1}{2}\times \cos 135^\circ=\frac{13}{4}
 \]
@@ -269,9 +405,9 @@ AF^2=\left(\sqrt{2}\right)^2+\left(\frac{1}{2}\right)^2-2\times \sqrt{2}\times \
 AC=\sqrt{AF^2+CF^2}=\sqrt{\frac{13}{4}+\frac{3}{4}}=2
 \]
 
-解法二：由已知得 \(\angle ADB=\angle DBC_0=90^\circ\). 以 \(D\) 为坐标原点，射线 \(DA\)，\(DB\) 分别为 \(x\) 轴，\(y\) 轴的正半轴，建立如图的空间直角坐标系 \(D-xyz\). 则 \(A(1,0,0)\)，\(B(0,1,0)\)，\(C_0(-1,1,0)\)，\(D(0,0,0)\). 由（1）知 \(BC \perp DB\)，\(BC_0 \perp DB\)，所以 \(\angle CBC_0\) 是二面角 \(C-BD-C_0\) 的平面角. 由已知得 \(\angle CBC_0=60^\circ\)，故 \(C\left(\frac{1}{2},1,\frac{\sqrt{3}}{2}\right)\). 所以
+解法二：由已知得 \(\angle ADB=\angle DBC_0=90^\circ\). 以 \(D\) 为坐标原点，射线 \(DA\)，\(DB\) 分别为 \(x\) 轴，\(y\) 轴的正半轴，建立如图的空间直角坐标系 \(D-xyz\). 则 \(A(1,0,0)\)，\(B(0,1,0)\)，\(C_0(-1,1,0)\)，\(D(0,0,0)\). 由（1）知 \(BC \perp DB\)，\(BC_0 \perp DB\)，所以 \(\angle CBC_0\) 是二面角 \(C-BD-C_0\) 的平面角；由上面的补角关系，\(\angle CBC_0=60^\circ\)，故 \(C\left(-\frac{1}{2},1,\frac{\sqrt{3}}{2}\right)\). 所以
 
-\(\left| \overrightarrow{AC} \right|=\sqrt{\left(\frac{1}{2}-1\right)^2+1^2+\left(\frac{\sqrt{3}}{2}\right)^2}=2\).
+\(\left| \overrightarrow{AC} \right|=\sqrt{\left(-\frac{1}{2}-1\right)^2+1^2+\left(\frac{\sqrt{3}}{2}\right)^2}=2\).
 即 \(AC\) 的长为 \(2\).
 \end{enumerate}
 \FigureLayoutDeclare{img/2008/sichuan_postponed_liberal/q19_solution_fig1.png}{7.0cm}{26bp 19bp 69bp 19bp}
@@ -293,25 +429,52 @@ AC=\sqrt{AF^2+CF^2}=\sqrt{\frac{13}{4}+\frac{3}{4}}=2
 
 \begin{solution}
 \begin{enumerate}
-\item 由条件得 \(\frac{a_{n+1}}{(n+1)^2}=\frac{1}{2}\cdot \frac{a_n}{n^2}\). 又 \(n=1\) 时，\(\frac{a_n}{n^2}=1\)，故数列 \(\left\{\frac{a_n}{n^2}\right\}\) 构成首项为 \(1\)，公比为 \(\frac{1}{2}\) 的等比数列. 从而 \(\frac{a_n}{n^2}=\frac{1}{2^{n-1}}\)，即 \(a_n=\frac{n^2}{2^{n-1}}\).
-
-\item 由
+\item 由递推式
 \[
-b_n=a_{n+1}-\frac{1}{2}a_n=\frac{(n+1)^2}{2^n}-\frac{n^2}{2^n}=\frac{2n+1}{2^n}
+2a_{n+1}=\left(\frac{n+1}{n}\right)^2a_n
 \]
-得 \(S_n=\frac{3}{2}+\frac{5}{2^2}+\cdots+\frac{2n+1}{2^n}\). 于是
-\(\frac{1}{2}S_n=\frac{3}{2^2}+\frac{5}{2^3}+\cdots+\frac{2n-1}{2^n}+\frac{2n+1}{2^{n+1}}\).
-两式相减得
-\(\frac{1}{2}S_n=\frac{3}{2}+2\left(\frac{1}{2^2}+\frac{1}{2^3}+\cdots+\frac{1}{2^n}\right)-\frac{2n+1}{2^{n+1}}\)，所以 \(S_n=5-\frac{2n+5}{2^n}\).
+得
+\[
+\frac{a_{n+1}}{(n+1)^2}=\frac12\frac{a_n}{n^2}
+\]
+因此数列 \(\left\{\dfrac{a_n}{n^2}\right\}\) 的相邻两项之比恒为 \(\dfrac12\). 又 \(a_1=1\)，所以其首项为 \(\dfrac{a_1}{1^2}=1\)，从而 \(\frac{a_n}{n^2}=\frac{1}{2^{n-1}}\)，\(a_n=\frac{n^2}{2^{n-1}}\).
 
-\item 由 \(S_n=(a_2+a_3+\cdots+a_{n+1})-\frac{1}{2}(a_1+a_2+\cdots+a_n)\) 得
-\(T_n-a_1+a_{n+1}-\frac{1}{2}T_n=S_n\).
-所以 \(T_n=2S_n+2a_1-2a_{n+1}=12-\frac{n^2+4n+6}{2^{n-1}}\).
+\item 由（1）
+\[
+b_n=a_{n+1}-\frac12a_n=\frac{(n+1)^2}{2^n}-\frac{n^2}{2^n}=\frac{2n+1}{2^n}
+\]
+所以
+\[
+S_n=\frac32+\frac5{2^2}+\frac7{2^3}+\cdots+\frac{2n+1}{2^n}
+\]
+两边乘以 \(\dfrac12\)，得
+\[
+\frac12S_n=\frac3{2^2}+\frac5{2^3}+\frac7{2^4}+\cdots+\frac{2n-1}{2^n}+\frac{2n+1}{2^{n+1}}
+\]
+两式相减，得到
+\[
+\frac12S_n=\frac32+2\left(\frac1{2^2}+\frac1{2^3}+\cdots+\frac1{2^n}\right)-\frac{2n+1}{2^{n+1}}
+\]
+又 \(\displaystyle\frac1{2^2}+\frac1{2^3}+\cdots+\frac1{2^n}=\frac12-\frac1{2^n}\)，
+于是 \(\frac12S_n=\frac52-\frac{2}{2^n}-\frac{2n+1}{2^{n+1}}\)，从而 \(S_n=5-\frac{2n+5}{2^n}\).
+
+\item 由定义
+\[
+S_n=\sum_{k=1}^n\left(a_{k+1}-\frac12a_k\right)=\left(a_2+a_3+\cdots+a_{n+1}\right)-\frac12\left(a_1+a_2+\cdots+a_n\right)
+\]
+令 \(T_n=a_1+a_2+\cdots+a_n\)，则
+\[
+S_n=(T_n-a_1+a_{n+1})-\frac12T_n=\frac12T_n-a_1+a_{n+1}
+\]
+因此
+\[
+T_n=2S_n+2a_1-2a_{n+1}=2S_n+2-2\frac{(n+1)^2}{2^n}=12-\frac{n^2+4n+6}{2^{n-1}}
+\]
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-已知椭圆 \(C_1\) 的中心和抛物线 \(C_2\) 的顶点都在坐标原点 \(O\)，\(C_1\) 和 \(C_2\) 有公共焦点 \(F\)，点 \(F\) 在 \(x\) 轴上，且在 \(C_1\) 的长半轴上，且 \(C_1\) 的长轴长，短轴长及点 \(F\) 到 \(C_1\) 右准线的距离成等比数列.
+已知椭圆 \(C_1\) 的中心和抛物线 \(C_2\) 的顶点都在坐标原点 \(O\)，\(C_1\) 和 \(C_2\) 有公共焦点 \(F\)，点 \(F\) 在 \(x\) 轴上，且在 \(C_1\) 的长轴上，且 \(C_1\) 的长轴长，短轴长及点 \(F\) 到 \(C_1\) 右准线的距离成等比数列.
 
 \begin{enumerate}
 \item 当 \(C_2\) 的准线与 \(C_1\) 右准线间的距离为 \(15\) 时，求 \(C_1\) 及 \(C_2\) 的方程；
@@ -322,39 +485,50 @@ b_n=a_{n+1}-\frac{1}{2}a_n=\frac{(n+1)^2}{2^n}-\frac{n^2}{2^n}=\frac{2n+1}{2^n}
 
 \begin{solution}
 \begin{enumerate}
-\item 设 \(C_1:\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\)（\(a>0,b>0\)），其半焦距为 \(c\)（\(c>0\)）. 则 \(C_2:y^2=4cx\). 由条件知 \((2b)^2=2a\left(\frac{a^2}{c}-c\right)\)，得 \(a=2c\). \(C_1\) 的右准线方程为 \(x=\frac{a^2}{c}\)，即 \(x=4c\). \(C_2\) 的准线方程为 \(x=-c\). 由条件知 \(5c=15\)，所以 \(c=3\)，故 \(a=6\)，\(b=3\sqrt{3}\). 从而 \(C_1:\frac{x^2}{36}+\frac{y^2}{27}=1\)，\(C_2:y^2=12x\).
+\item 设 \(C_1:\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\)（\(a>b>0\)），其半焦距为 \(c\)（\(c>0\)）. 则 \(C_2:y^2=4cx\). 由条件知 \((2b)^2=2a\left(\frac{a^2}{c}-c\right)\)，得 \(a=2c\). \(C_1\) 的右准线方程为 \(x=\frac{a^2}{c}\)，即 \(x=4c\). \(C_2\) 的准线方程为 \(x=-c\). 由条件知 \(5c=15\)，所以 \(c=3\)，故 \(a=6\)，\(b=3\sqrt{3}\). 从而 \(C_1:\frac{x^2}{36}+\frac{y^2}{27}=1\)，\(C_2:y^2=12x\).
 
-\item 由（1）知 \(C_1:\frac{x^2}{4c^2}+\frac{y^2}{3c^2}=1\)，即 \(3x^2+4y^2=12c^2\).
-由题设知 \(l:y=x-c\). 设 \(M(x_1,y_1)\)，\(N(x_2,y_2)\)，\(P(x_3,y_3)\)，\(Q(x_4,y_4)\).
+\item 由初始条件，设椭圆半焦距为 \(c\). 由第（1）问中的关系仍有 \(a=2c\)、\(b=\sqrt3c\)，故 \(C_1:3x^2+4y^2=12c^2\)，\(C_2:y^2=4cx\).
+焦点为 \(F(c,0)\)，过 \(F\) 且斜率为 \(1\) 的直线为 \(l:y=x-c\).
 
-由下列方程组可知
+先求椭圆弦 \(PQ\). 将 \(y=x-c\) 代入椭圆方程，得
 \[
-\begin{cases}
-3x^2+4y^2=12c^2,\\
- y=x-c,
-\end{cases}
+3x^2+4(x-c)^2=12c^2
 \]
-\(x_3,x_4\) 满足 \(7x^2-8cx-8c^2=0\).
-
-从而
+即
 \[
-|PQ|=\sqrt{(x_3-x_4)^2+(y_3-y_4)^2}=\sqrt{2}|x_3-x_4|=\frac{24}{7}c.
+7x^2-8cx-8c^2=0
 \]
-
-由条件 \(|PQ|=\frac{36}{7}\)，得 \(c=\frac{3}{2}\).
-
-故 \(C_2:y^2=6x\).
-
-由下列方程组可知
+设其两个根为 \(x_3\)，\(x_4\)，由求根公式，或由根的判别式，
 \[
-\begin{cases}
-y^2=6x,\\
-y=x-\frac{3}{2},
-\end{cases}
+|x_3-x_4|=\frac{\sqrt{(-8c)^2-4\cdot7\cdot(-8c^2)}}{7}
+=\frac{12\sqrt2}{7}c
 \]
-得 \(x^2-9x+\frac{9}{4}=0\)，所以 \(x_1+x_2=9\).
+直线 \(l\) 的斜率为 \(1\)，所以两交点的纵坐标差等于横坐标差，从而
+\[
+|PQ|=\sqrt{(x_3-x_4)^2+(y_3-y_4)^2}
+=\sqrt2|x_3-x_4|=\frac{24}{7}c
+\]
 
-于是 \(|MN|=|MF|+|FN|=x_1+x_2+2c=12\).
+再求抛物线弦 \(MN\). 将 \(y=x-c\) 代入 \(C_2\)，得
+\[
+(x-c)^2=4cx
+\]
+即
+\[
+x^2-6cx+c^2=0
+\]
+设其两个根为 \(x_1\)，\(x_2\). 则
+\[
+|x_1-x_2|=\sqrt{(-6c)^2-4c^2}=4\sqrt2c
+\]
+同样因为直线斜率为 \(1\)，
+\[
+|MN|=\sqrt2|x_1-x_2|=8c
+\]
+题设 \(|MN|=8\)，故 \(c=1\). 因此
+\[
+|PQ|=\frac{24}{7}c=\boxed{\frac{24}{7}}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -381,6 +555,16 @@ a+b\le 3,\\
 4a+b\le 3.
 \end{cases}
 \]
-由线性规划知，\(a-b\) 的最大值为 \(7\).
+令 \(u=a+b\)，\(v=4a+b\).
+约束条件等价于 \(-3\le u\le3\)、\(-3\le v\le3\). 由 \(v-u=3a\)，\(4u-v=3b\)，
+可得
+\[
+a-b=\frac{v-u}{3}-\frac{4u-v}{3}=\frac{2v-5u}{3}
+\]
+因为 \(v\le3\) 且 \(u\ge-3\)，所以
+\[
+a-b=\frac{2v-5u}{3}\le\frac{2\cdot3-5\cdot(-3)}{3}=7
+\]
+当 \(u=-3\)，\(v=3\) 时，\(a=\dfrac{v-u}{3}=2\)，\(b=\dfrac{4u-v}{3}=-5\)，满足全部约束，且 \(a-b=7\). 因此 \(a-b\) 的最大值为 \(7\).
 \end{enumerate}
 \end{solution}

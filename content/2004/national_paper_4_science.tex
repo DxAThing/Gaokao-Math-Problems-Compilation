@@ -15,7 +15,11 @@ D
 \end{answer}
 
 \begin{solution}
-由 \(N=\{2a\mid a\in\{0,1,2\}\}=\{0,2,4\}\)，所以 \(M\cap N=\{0,2\}\)，故选 D.
+由 \(a\in M=\{0,1,2\}\)，逐一代入 \(x=2a\)，得
+\[
+N=\{2\times0,2\times1,2\times2\}=\{0,2,4\}
+\]
+与 \(M=\{0,1,2\}\) 比较，公共元素为 \(0\) 和 \(2\)，所以 \(M\cap N=\{0,2\}\)，故选 D.
 \end{solution}
 
 \begin{problem}
@@ -33,7 +37,9 @@ C
 \end{answer}
 
 \begin{solution}
-由 \(y=\e^{2x}\) 得 \(\ln y=2x\)，所以 \(x=\frac12\ln y\). 交换 \(x\)，\(y\) 后，反函数为 \(y=\frac12\ln x\)，其定义域为 \(x>0\)，故选 C.
+原函数的值域为 \(y>0\). 由 \(y=\e^{2x}\) 两边取自然对数，得 \(\ln y=2x\)，从而 \(x=\frac12\ln y\). 交换自变量与因变量后，反函数为
+\(y=\frac12\ln x\)，\(x>0\).
+这与第三个选项一致，故选 C.
 \end{solution}
 
 \begin{problem}
@@ -51,7 +57,11 @@ A
 \end{answer}
 
 \begin{solution}
-直线 \(x-2y+3=0\) 的斜率为 \(\frac12\)，所以所求垂线的斜率为 \(-2\). 过 \((-1,3)\) 的直线方程为 \(y-3=-2(x+1)\)，整理得 \(2x+y-1=0\)，故选 A.
+原直线可化为 \(y=\frac12x+\frac32\)，斜率为 \(\frac12\). 垂直直线的斜率为 \(-2\)，所以过 \((-1,3)\) 的所求直线为
+\[
+y-3=-2\bigl(x-(-1)\bigr)=-2(x+1)
+\]
+整理得 \(2x+y-1=0\)，故选 A.
 \end{solution}
 
 \begin{problem}
@@ -69,12 +79,20 @@ D
 \end{answer}
 
 \begin{solution}
-直接平方并利用 \((1+\i)^2=2\i\)，得
+由 \(\i^2=-1\)，有
+\[
+(1-\sqrt3\i)^2=1-2\sqrt3\i+3\i^2=-2-2\sqrt3\i
+\]
+并且
+\[
+(1+\i)^2=1+2\i+\i^2=2\i
+\]
+因此
 \[
 \left(\frac{1-\sqrt{3}\i}{1+\i}\right)^2
 =\frac{(1-\sqrt{3}\i)^2}{(1+\i)^2}
 =\frac{-2-2\sqrt{3}\i}{2\i}
-=-\sqrt{3}+\i.
+=-\sqrt{3}+\i
 \]
 故选 D.
 \end{solution}
@@ -94,7 +112,7 @@ A
 \end{answer}
 
 \begin{solution}
-临界点为 \(-2\)，\(0\) 和分母零点 \(3\). 在区间 \(\left(-\infty,-2\right)\)，\((-2,0)\)，\((0,3)\)，\(\left(3,+\infty\right)\) 上分别判断符号，分式的符号依次为负、正、负、正. 因为不等式是严格不等式，故解集为 \(\{x\mid x<-2\text{或}0<x<3\}\)，选 A.
+临界点来自分子零点 \(x=-2\)，\(0\) 和分母零点 \(x=3\). 在四个区间分别取测试值：取 \(x=-3\) 时分式为负，取 \(x=-1\) 时为正，取 \(x=1\) 时为负，取 \(x=4\) 时为正. 因而分式符号依次为负、正、负、正. 由于原不等式为严格不等式，\(x=-2\)，\(0\) 不取，且 \(x=3\) 不在定义域内，所以解集为 \(\{x\mid x<-2\text{或}0<x<3\}\)，选 A.
 \end{solution}
 
 \begin{problem}
@@ -112,9 +130,20 @@ B
 \end{answer}
 
 \begin{solution}
-等差数列中，三个连续项的和等于中间项的三倍，因此 \(3a_{2}=-24\)，得 \(a_{2}=-8\)，又 \(3a_{19}=78\)，得 \(a_{19}=26\). 于是公差 \(d=\frac{a_{19}-a_{2}}{17}=2\)，从而 \(a_{1}=-10\)，\(a_{20}=28\). 所以
+设公差为 \(d\). 由等差数列的对称性，三个连续项的和等于中间项的三倍，因此
 \[
-S_{20}=\frac{20(a_{1}+a_{20})}{2}=10\times18=180.
+3a_2=a_1+a_2+a_3=-24
+\]
+以及
+\[
+3a_{19}=a_{18}+a_{19}+a_{20}=78
+\]
+所以 \(a_2=-8\)，\(a_{19}=26\)，进而
+\(d=\frac{a_{19}-a_2}{19-2}=\frac{26-(-8)}{17}=2\)，\(a_1=a_2-d=-10\)，\(a_{20}=a_1+19d=28\).
+上式还给出 \(a_1=a_2-d=-10\) 和 \(a_{20}=a_1+19d=28\).
+所以
+\[
+S_{20}=\frac{20(a_{1}+a_{20})}{2}=10\times18=180
 \]
 故选 B.
 \end{solution}
@@ -134,7 +163,13 @@ C
 \end{answer}
 
 \begin{solution}
-在选项 C 中，\(n\parallel\alpha\)，所以 \(n\) 与 \(\alpha\) 没有公共点. 因为 \(m\subset\alpha\)，若共面的两直线 \(m\)，\(n\) 不平行，则它们必相交；交点同时属于 \(n\) 和 \(\alpha\)，矛盾. 因此 \(m\parallel n\)，选项 C 正确. 选项 A、B 中，异面直线与平面的关系既可能是平行，也可能相交；选项 D 中，两条都平行于同一平面的共面直线仍可能相交，故 A、B、D 均不成立.
+选项 C 正确. 因为 \(m\subset\alpha\)，且 \(n\parallel\alpha\)，所以 \(n\) 与 \(\alpha\) 没有公共点. 又因为 \(m\)，\(n\) 共面，若它们不平行，则必相交；但交点将同时属于 \(n\) 和 \(\alpha\)，这与 \(n\parallel\alpha\) 矛盾. 因而 \(m\parallel n\).
+
+选项 A 不正确. 取 \(\alpha:z=0\)，\(m:y=z=0\)，再取 \(n:x=0\)，\(\ y=1\). 此时 \(n\) 与 \(\alpha\) 相交于 \((0,1,0)\)，该点不在 \(m\) 上；并且 \(m\) 的方向向量、\(n\) 的方向向量以及两直线间的连接向量线性无关，所以 \(m\)，\(n\) 异面. 因而 \(n\) 不平行于 \(\alpha\)，A 不成立.
+
+选项 B 不正确. 仍取 \(\alpha:z=0\)，\(m:y=z=0\)，但取 \(n:x=0\)，\(\ z=1\). 此时 \(n\parallel\alpha\)，且 \(n\) 与 \(m\) 异面，所以 \(n\) 不与 \(\alpha\) 相交，B 不成立.
+
+选项 D 也不正确. 取平面 \(z=1\) 内的两条相交直线 \(m:y=0\)，\(\ z=1\) 和 \(n:x=0\)，\(\ z=1\)，它们都平行于平面 \(z=0\)，但相交于 \((0,0,1)\). 故选 C.
 \end{solution}
 
 \begin{problem}
@@ -173,7 +208,7 @@ B
 分两种情况计数. 若选出 \(2\) 位男教师和 \(1\) 位女教师，先选人再分配到班级，方案数为 \(\mathrm C_{5}^{2}\mathrm C_{4}^{1}\mathrm A_{3}^{3}\). 若选出 \(1\) 位男教师和 \(2\) 位女教师，方案数为 \(\mathrm C_{5}^{1}\mathrm C_{4}^{2}\mathrm A_{3}^{3}\). 因而总方案数为
 \[
 \mathrm C_{5}^{2}\mathrm C_{4}^{1}\mathrm A_{3}^{3}+\mathrm C_{5}^{1}\mathrm C_{4}^{2}\mathrm A_{3}^{3}
-=10\times4\times6+5\times6\times6=420.
+=10\times4\times6+5\times6\times6=420
 \]
 故选 B.
 \end{solution}
@@ -195,7 +230,7 @@ A
 \begin{solution}
 设球半径为 \(R\)，由 \(4\pi R^2=20\pi\)，得 \(R=\sqrt5\). 设三角形 \(ABC\) 外接圆半径为 \(r\). 由 \(AB=AC=2\)，\(BC=2\sqrt3\)，可知从 \(A\) 向 \(BC\) 作高，其高为 \(\sqrt{2^2-(\sqrt3)^2}=1\)，所以三角形面积为 \(\sqrt3\). 因此
 \[
-r=\frac{AB\cdot AC\cdot BC}{4[\triangle ABC]}=\frac{2\times2\times2\sqrt3}{4\sqrt3}=2.
+r=\frac{AB\cdot AC\cdot BC}{4[\triangle ABC]}=\frac{2\times2\times2\sqrt3}{4\sqrt3}=2
 \]
 球心到平面 \(ABC\) 的垂线、球半径和该平面内的外接圆半径构成直角三角形. 设球心到平面的距离为 \(h\)，则 \(R^2=h^2+r^2\)，从而 \(h^2=5-4=1\)，即 \(h=1\)，选 A.
 \end{solution}
@@ -223,7 +258,7 @@ B
 \[
 b^2=a^2+c^2-2ac\cos30^{\circ}
 =(a+c)^2-(2+\sqrt3)ac
-=4b^2-6(2+\sqrt3).
+=4b^2-6(2+\sqrt3)
 \]
 所以 \(b^2=2(2+\sqrt3)=4+2\sqrt3=(1+\sqrt3)^2\). 因为边长为正，故 \(b=1+\sqrt3\)，选 B.
 \end{solution}
@@ -259,7 +294,7 @@ C
 展开式的通项为
 \[
 \mathrm C_{8}^{k}x^{8-k}\left(-\frac1{\sqrt{x}}\right)^k
-=(-1)^k\mathrm C_{8}^{k}x^{8-\frac32k}.
+=(-1)^k\mathrm C_{8}^{k}x^{8-\frac32k}
 \]
 令指数满足 \(8-\frac32k=5\)，得 \(k=2\). 因此所求系数为 \((-1)^2\mathrm C_{8}^{2}=28\).
 \end{solution}
@@ -276,11 +311,11 @@ C
 展开数量积，得
 \[
 (\bs{a}-\bs{b})\cdot(2\bs{a}+\bs{b})
-=2|\bs{a}|^2-\bs{a}\cdot\bs{b}-|\bs{b}|^2=-4.
+=2|\bs{a}|^2-\bs{a}\cdot\bs{b}-|\bs{b}|^2=-4
 \]
 代入 \(|\bs{a}|=2\)，\(|\bs{b}|=4\)，得到 \(8-\bs{a}\cdot\bs{b}-16=-4\)，所以 \(\bs{a}\cdot\bs{b}=-4\). 设夹角为 \(\theta\)，则
 \[
-\cos\theta=\frac{\bs{a}\cdot\bs{b}}{|\bs{a}|\,|\bs{b}|}=\frac{-4}{2\times4}=-\frac12.
+\cos\theta=\frac{\bs{a}\cdot\bs{b}}{|\bs{a}|\,|\bs{b}|}=\frac{-4}{2\times4}=-\frac12
 \]
 \end{solution}
 
@@ -295,9 +330,9 @@ C
 \begin{solution}
 令 \(t=\cos x\)，则 \(-1\leqslant t\leqslant1\)，且 \(\cos2x=2t^2-1\). 所以
 \[
-f(x)=t-\frac12(2t^2-1)=\frac34-\left(t-\frac12\right)^2\leqslant\frac34.
+f(x)=t-\frac12(2t^2-1)=\frac34-\left(t-\frac12\right)^2\leqslant\frac34
 \]
-当 \(t=\frac12\) 时等号成立，故最大值为 \(\frac34\).
+取 \(x=\frac{\pi}{3}\) 时 \(t=\cos x=\frac12\)，等号确实可以取得，故最大值为 \(\frac34\).
 \end{solution}
 
 \begin{problem}
@@ -322,17 +357,21 @@ y \geqslant 0.
 \end{problem}
 
 \begin{solution}
-因为 \(\alpha\) 为第二象限角，且 \(\sin\alpha=\frac{\sqrt{15}}4\)，所以 \(\cos\alpha=-\frac14\). 从而
+由 \(\alpha\) 为第二象限角，知 \(\cos\alpha<0\). 又由
 \[
-\sin\left(\alpha+\frac\pi4\right)=\frac{\sin\alpha+\cos\alpha}{\sqrt2}=\frac{\sqrt{15}-1}{4\sqrt2},
+\cos^2\alpha=1-\sin^2\alpha=1-\frac{15}{16}=\frac1{16}
+\]
+所以 \(\cos\alpha=-\frac14\). 从而
+\[
+\sin\left(\alpha+\frac\pi4\right)=\frac{\sin\alpha+\cos\alpha}{\sqrt2}=\frac{\sqrt{15}-1}{4\sqrt2}
 \]
 并且 \(\sin2\alpha=2\sin\alpha\cos\alpha=-\frac{\sqrt{15}}8\)，\(\cos2\alpha=\cos^2\alpha-\sin^2\alpha=-\frac78\). 因此
 \[
-\sin2\alpha+\cos2\alpha+1=\frac{1-\sqrt{15}}8.
+\sin2\alpha+\cos2\alpha+1=\frac{1-\sqrt{15}}8
 \]
 所求值为
 \[
-\frac{\dfrac{\sqrt{15}-1}{4\sqrt2}}{\dfrac{1-\sqrt{15}}8}=-\sqrt2.
+\frac{\dfrac{\sqrt{15}-1}{4\sqrt2}}{\dfrac{1-\sqrt{15}}8}=-\sqrt2
 \]
 \end{solution}
 
@@ -341,15 +380,15 @@ y \geqslant 0.
 \end{problem}
 
 \begin{solution}
-函数在 \([0,2]\) 上可导，且
+函数定义域包含 \([0,2]\)，并在该区间上可导. 求导得
 \[
-f'(x)=\frac1{1+x}-\frac{x}{2}=\frac{2-x-x^2}{2(1+x)}=-\frac{(x+2)(x-1)}{2(x+1)}.
+f'(x)=\frac1{1+x}-\frac{x}{2}=\frac{2-x-x^2}{2(1+x)}=-\frac{(x+2)(x-1)}{2(x+1)}
 \]
-由于 \(x+1>0\)，所以 \(f'(x)>0\) 在 \([0,1)\) 上成立，\(f'(x)<0\) 在 \((1,2]\) 上成立. 因此函数在 \(x=1\) 处取得最大值
+由于 \(x+1>0\)，且 \(x+2>0\)，所以 \(f'(x)>0\) 在 \([0,1)\) 上成立，\(f'(1)=0\)，\(f'(x)<0\) 在 \((1,2]\) 上成立. 因此函数先增后减，在 \(x=1\) 处取得最大值
 \[
-f(1)=\ln2-\frac14.
+f(1)=\ln2-\frac14
 \]
-再比较端点值，\(f(0)=0\)，\(f(2)=\ln3-1>0\)，所以最小值为 \(0\). 故最大值为 \(\ln2-\frac14\)，最小值为 \(0\).
+再比较端点值，\(f(0)=0\)，\(f(2)=\ln3-1>0\). 这里 \(\ln3>1\)（因为 \(3>\e\)），所以最小值为 \(0\). 故最大值为 \(\ln2-\frac14\)，最小值为 \(0\).
 \end{solution}
 
 \begin{problem}
@@ -362,20 +401,26 @@ f(1)=\ln2-\frac14.
 \end{problem}
 
 \begin{solution}
-设答对题数为 \(K\)，则 \(K\sim B\left(3,\frac45\right)\)，且总得分为 \(\xi=100K-100(3-K)=200K-300\). 因此
+设答对题数为 \(K\). 由于每题答对的概率为 \(\frac45\)，且各题相互独立，故 \(K\) 的可能取值为 \(0\)，\(1\)，\(2\)，\(3\)，并且
+\(P(K=k)=\mathrm C_{3}^{k}\left(\frac45\right)^k\left(\frac15\right)^{3-k}\)，\((k=0,1,2,3)\).
+总得分为
+\[
+\xi=100K-100(3-K)=200K-300
+\]
+当 \(K=0\)，\(1\)，\(2\)，\(3\) 时，分别有 \(\xi=-300\)，\(-100\)，\(100\)，\(300\). 逐项计算得
 \begin{center}
 \begin{tabular}{c|cccc}
 \(\xi\) & \(-300\) & \(-100\) & \(100\) & \(300\) \\ \hline
 \(P\) & \(\dfrac1{125}\) & \(\dfrac{12}{125}\) & \(\dfrac{48}{125}\) & \(\dfrac{64}{125}\)
 \end{tabular}
 \end{center}
-其中各概率分别由 \(P(K=k)=\mathrm C_{3}^{k}\left(\frac45\right)^k\left(\frac15\right)^{3-k}\) 得到. 数学期望为
+具体地，\(P(\xi=-300)=P(K=0)=\left(\frac15\right)^3=\frac1{125}\)，\(P(\xi=-100)=P(K=1)=\mathrm C_3^1\frac45\left(\frac15\right)^2=\frac{12}{125}\)，\(P(\xi=100)=P(K=2)=\mathrm C_3^2\left(\frac45\right)^2\frac15=\frac{48}{125}\)，\(P(\xi=300)=P(K=3)=\left(\frac45\right)^3=\frac{64}{125}\). 因此数学期望为
 \[
-E(\xi)=(-300)\frac1{125}+(-100)\frac{12}{125}+100\frac{48}{125}+300\frac{64}{125}=180.
+E(\xi)=(-300)\frac1{125}+(-100)\frac{12}{125}+100\frac{48}{125}+300\frac{64}{125}=180
 \]
-当 \(\xi\geqslant0\) 时，必须有 \(K\geqslant2\)，故
+也可由单题得分的期望核对：每题得分的期望为 \(100\times\frac45-100\times\frac15=60\)，三题总期望为 \(3\times60=180\). 当 \(\xi\geqslant0\) 时，因 \(\xi=200K-300\)，必须且只需 \(K\geqslant2\)，故
 \[
-P(\xi\geqslant0)=P(K=2)+P(K=3)=\frac{48+64}{125}=\frac{112}{125}.
+P(\xi\geqslant0)=P(K=2)+P(K=3)=\frac{48+64}{125}=\frac{112}{125}
 \]
 \end{solution}
 
@@ -388,27 +433,44 @@ P(\xi\geqslant0)=P(K=2)+P(K=3)=\frac{48+64}{125}=\frac{112}{125}.
 \end{enumerate}
 
 \begin{center}
-\bitmapfigure[max width=0.42\linewidth]{img/2004/national_paper_4_science/q20_fig1.png}
+\bitmapfigure[width=0.42\linewidth]{img/2004/national_paper_4_science/q20_fig1.png}
 \end{center}
 \end{problem}
 
 \begin{solution}
-设 \(M\) 为 \(AD\) 的中点. 因为 \(\triangle PAD\) 为边长 \(4\sqrt3\) 的等边三角形，所以 \(PM\perp AD\)，且 \(PM=\frac{\sqrt3}{2}AD=6\). 过 \(PM\) 作垂直于 \(AD\) 的截面，截得的两平面夹角为 \(60^{\circ}\). 因而点 \(P\) 到底面的距离为
+设 \(M\) 为 \(AD\) 的中点. 因为 \(\triangle PAD\) 是边长为 \(4\sqrt3\) 的等边三角形，所以 \(PM\perp AD\)，且
 \[
-h=PM\sin60^{\circ}=6\times\frac{\sqrt3}{2}=3\sqrt3.
+PM=\sqrt{\left(4\sqrt3\right)^2-\left(2\sqrt3\right)^2}=6
 \]
+设 \(H\) 为 \(P\) 在底面的射影，并连接 \(MH\). 因为 \(PH\perp\) 底面，\(PM\perp AD\)，且 \(PH\perp AD\)，所以截面 \(PMH\) 垂直于棱 \(AD\). 因此 \(\angle PMH\) 就是侧面 \(PAD\) 与底面所成的二面角，故 \(\angle PMH=60^{\circ}\). 记 \(h=PH\)，于是
+\[
+h=PH=PM\sin60^{\circ}=6\times\frac{\sqrt3}{2}=3\sqrt3
+\]
+同时 \(MH=PM\cos60^{\circ}=3\). 按原图所示的四棱锥构型，\(H\) 位于从 \(M\) 向 \(B\) 的方向上，所以 \(H\) 在底面内沿 \(AB\) 方向距 \(M\) 为 \(3\) 的位置.
 底面面积为 \(8\times4\sqrt3=32\sqrt3\)，所以四棱锥体积为
 \[
-V=\frac13\times32\sqrt3\times3\sqrt3=96.
+V=\frac13\times32\sqrt3\times3\sqrt3=96
 \]
 
-建立直角坐标系，使 \(A=(0,0,0)\)，\(B=(8,0,0)\)，\(D=(0,4\sqrt3,0)\)，且 \(z\) 轴垂直于底面. 由上面的截面关系，点 \(P\) 在底面的射影为 \(H=(3,2\sqrt3,0)\)，故 \(P=(3,2\sqrt3,3\sqrt3)\). 于是
+建立空间直角坐标系，使 \(A=(0,0,0)\)，\(B=(8,0,0)\)，\(D=(0,4\sqrt3,0)\)，且 \(z\) 轴垂直于底面. 由 \(M=(0,2\sqrt3,0)\) 及 \(MH=3\)，得
 \[
-\overrightarrow{AP}=(3,2\sqrt3,3\sqrt3),\qquad \overrightarrow{BD}=(-8,4\sqrt3,0),
+H=(3,2\sqrt3,0)
+\]
+又 \(PH=3\sqrt3\)，所以
+\[
+P=(3,2\sqrt3,3\sqrt3)
+\]
+所以
+\[
+\overrightarrow{AP}=(3,2\sqrt3,3\sqrt3)
+\]
+并且
+\[
+\overrightarrow{BD}=(-8,4\sqrt3,0)
 \]
 从而
 \[
-\overrightarrow{AP}\cdot\overrightarrow{BD}=3\times(-8)+2\sqrt3\times4\sqrt3=0.
+\overrightarrow{AP}\cdot\overrightarrow{BD}=3\times(-8)+2\sqrt3\times4\sqrt3=0
 \]
 因此 \(AP\perp BD\)，即 \(PA\perp BD\).
 \end{solution}
@@ -418,28 +480,38 @@ V=\frac13\times32\sqrt3\times3\sqrt3=96.
 \end{problem}
 
 \begin{solution}
-直线 \(l\) 的方程为 \(\frac{x}{a}+\frac{y}{b}=1\)，即 \(bx+ay-ab=0\). 由于 \(a>1\)，两点到直线的距离之和为
+直线 \(l\) 过 \((a,0)\) 和 \((0,b)\)，所以
 \[
-s=\frac{b(a-1)}{\sqrt{a^2+b^2}}+\frac{b(a+1)}{\sqrt{a^2+b^2}}=\frac{2ab}{c},
+\frac{x}{a}+\frac{y}{b}=1
+\]
+即 \(bx+ay-ab=0\). 双曲线的焦点距为 \(2c\)，故
+\[
+c^2=a^2+b^2
+\]
+由点到直线的距离公式，且 \(a>1\)，有
+\[
+s=\frac{|b-ab|}{\sqrt{a^2+b^2}}+\frac{|-b-ab|}{\sqrt{a^2+b^2}}
+ =\frac{b(a-1)+b(a+1)}{c}=\frac{2ab}{c}
 \]
 其中双曲线满足 \(c^2=a^2+b^2\). 代入题设不等式，得
 \[
 \frac{2ab}{c}\geqslant\frac45c
-\Longleftrightarrow 5ab\geqslant2(a^2+b^2).
+\Longleftrightarrow 5ab\geqslant2(a^2+b^2)
 \]
-令 \(t=\frac ba>0\)，约去 \(a^2\) 后得到
+令 \(t=\frac ba>0\). 因为 \(a>0\)，约去 \(a^2\) 后得到
 \[
 2t^2-5t+2\leqslant0
-\Longleftrightarrow (2t-1)(t-2)\leqslant0,
+\Longleftrightarrow (2t-1)(t-2)\leqslant0
 \]
 所以 \(\frac12\leqslant t\leqslant2\). 双曲线离心率为
 \[
-e=\frac ca=\sqrt{1+\frac{b^2}{a^2}}=\sqrt{1+t^2}.
+e=\frac ca=\sqrt{1+\frac{b^2}{a^2}}=\sqrt{1+t^2}
 \]
 由于 \(t>0\)，该函数在所给区间上递增，故
 \[
-\frac{\sqrt5}{2}=\sqrt{1+\frac14}\leqslant e\leqslant\sqrt5.
+\frac{\sqrt5}{2}=\sqrt{1+\frac14}\leqslant e\leqslant\sqrt5
 \]
+由于 \(a\) 只要求大于 \(1\)，取任意 \(a>1\) 并令 \(b=\frac12a\) 或 \(b=2a\)，均能达到 \(t=\frac12\) 或 \(t=2\)，且满足原不等式的等号条件. 故端点均可取，离心率的取值范围为 \(\left[\frac{\sqrt5}{2},\sqrt5\right]\).
 \end{solution}
 
 \begin{problem}
@@ -455,28 +527,37 @@ e=\frac ca=\sqrt{1+\frac{b^2}{a^2}}=\sqrt{1+t^2}.
 \begin{enumerate}
 \item 对函数求导，得
 \[
-f'(x)=-\e^{-x}(\cos x+\sin x)+\e^{-x}(-\sin x+\cos x)=-2\e^{-x}\sin x.
+f'(x)=-\e^{-x}(\cos x+\sin x)+\e^{-x}(-\sin x+\cos x)=-2\e^{-x}\sin x
 \]
-因为 \(\e^{-x}\ne0\)，所以正数零点满足 \(\sin x=0\)，从而 \(x_n=n\pi\)（\(n=1,2,\ldots\)）. 因此
+因为 \(\e^{-x}>0\)，所以正数零点满足且只满足 \(\sin x=0\). 正数解依次为 \(x_n=n\pi\)（\(n=1\)，\(2\)，\(\ldots\)）. 因此
 \[
-f(x_n)=\e^{-n\pi}\cos(n\pi)=(-1)^n\e^{-n\pi},
+f(x_n)=\e^{-n\pi}\cos(n\pi)=(-1)^n\e^{-n\pi}
 \]
-且 \(\frac{f(x_{n+1})}{f(x_n)}=-\e^{-\pi}\) 为常数，所以 \(\{f(x_n)\}\) 是等比数列，首项为 \(-\e^{-\pi}\)，公比为 \(-\e^{-\pi}\).
+且
+\[
+\frac{f(x_{n+1})}{f(x_n)}=\frac{(-1)^{n+1}\e^{-(n+1)\pi}}{(-1)^n\e^{-n\pi}}=-\e^{-\pi}
+\]
+与 \(n\) 无关，所以 \(\{f(x_n)\}\) 是等比数列，首项和公比均为 \(-\e^{-\pi}\).
 
 \item 由 \(x_n=n\pi\)，有
 \[
-S_n=\sum_{k=1}^{n}x_kf(x_k)=\pi\sum_{k=1}^{n}k(-\e^{-\pi})^k.
+S_n=\sum_{k=1}^{n}x_kf(x_k)=\pi\sum_{k=1}^{n}kq^k
 \]
-由于 \(\sum_{k=1}^{\infty}k\e^{-k\pi}\) 收敛，故 \(S_n\) 收敛，且
+其中 \(q=-\e^{-\pi}\).
+因为 \(|q|=\e^{-\pi}<1\)，级数 \(\sum_{k=1}^{\infty}kq^k\) 绝对收敛. 对 \(|q|<1\)，由等比级数求导可得
+\[
+\sum_{k=1}^{\infty}kq^k=\frac{q}{(1-q)^2}
+\]
+故 \(S_n\) 收敛，且
 \[
 \lim_{n\to\infty}S_n
 =\pi\sum_{k=1}^{\infty}k(-\e^{-\pi})^k
-=\pi\frac{-\e^{-\pi}}{\left(1+\e^{-\pi}\right)^2}.
+=\pi\frac{-\e^{-\pi}}{\left(1+\e^{-\pi}\right)^2}
 \]
-数列 \(S_n\) 收敛时，其算术平均数也收敛到同一极限，因此
+若 \(S_n\to L\)，则其算术平均数也趋于 \(L\). 这里取 \(L=-\dfrac{\pi\e^{-\pi}}{(1+\e^{-\pi})^2}\)，所以
 \[
 \lim_{n\to\infty}\frac{S_1+S_2+\cdots+S_n}{n}
-=-\frac{\pi\e^{-\pi}}{\left(1+\e^{-\pi}\right)^2}.
+=-\frac{\pi\e^{-\pi}}{\left(1+\e^{-\pi}\right)^2}
 \]
 \end{enumerate}
 \end{solution}

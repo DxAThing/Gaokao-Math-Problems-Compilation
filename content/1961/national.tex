@@ -1,74 +1,73 @@
 \chapter{1961年全国卷}
 
+\section{解答题}
+
 \begin{problem}
-\begin{enumerate}[label=（\arabic*）]
-\item 求 \( \left( 2-x \right)^{10} \) 展开式里 \( x^7 \) 的系数.
+\begin{enumerate}
+\item 求 \(\left(2-x\right)^{10}\) 展开式里 \(x^7\) 的系数.
 
-\item 解方程 \( 2\lg x=\lg \left( x+12 \right) \). （注：\( \lg \) 是以 \( 10 \) 为底的对数的符号.）
+\item 解方程 \(2\lg x=\lg\left(x+12\right)\). （注：\(\lg\) 是以 \(10\) 为底的对数的符号.）
 
-\item 求函数 \( y=\frac{\sqrt{x-1}}{x-5} \) 的自变量 \( x \) 的允许值的范围.
+\item 求函数 \(y=\frac{\sqrt{x-1}}{x-5}\) 的自变量 \(x\) 的允许值的范围.
 
-\item 求 \( \sin \frac{\pi}{12}\sin \frac{5\pi}{12} \) 的值.
+\item 求 \(\sin\frac{\pi}{12}\sin\frac{5\pi}{12}\) 的值.
 
 \item 一个水平放着的圆柱形排水管，内半径是 \(12\text{ 厘米}\). 排水管的圆截面上被水淹没部分的弧含有 \(150^\circ\)（如图）. 求这个截面上有水部分的面积. （取 \(\pi=3.14\)）
 
-\item 已知 \( \triangle ABC \) 的一边 \(BC\) 在平面 \(N\) 内，\( \triangle ABC \) 所在的平面与平面 \(N\) 组成二面角 \( a \)（\( a<90^\circ \)）. 从 \(A\) 点作平面 \(N\) 的垂线 \(AA'\)，\(A'\) 是垂足. 设 \( \triangle ABC \) 的面积是 \(S\)，求证 \( \triangle A'BC \) 的面积是 \( S\cos a \).
+\item 已知 \(\triangle ABC\) 的一边 \(BC\) 在平面 \(N\) 内，\(\triangle ABC\) 所在的平面与平面 \(N\) 组成二面角 \(a\)（\(a<90^\circ\)）. 从 \(A\) 点作平面 \(N\) 的垂线 \(AA'\)，\(A'\) 是垂足. 设 \(\triangle ABC\) 的面积是 \(S\)，求证 \(\triangle A'BC\) 的面积是 \(S\cos a\).
+\end{enumerate}
 
 \FigureLayoutDeclare{img/1961/national/q1_5_fig1.png}{5.5cm}{0bp 0bp 0bp 0bp}
 \bitmapfigure[max width=6.0cm]{img/1961/national/q1_5_fig1.png}
-
-\end{enumerate}
 \end{problem}
 
 \begin{solution}
-\begin{enumerate}[label=（\arabic*）]
-\item 在这个展开式里含有 \( x^7 \) 的项是第八项. 它的系数是
+\begin{enumerate}
+\item 二项式展开式的通项为 \(\mathrm C_{10}^{r}2^{10-r}(-x)^r\)，其中 \(r=0\)，\(1\)，\(\ldots\)，\(10\). 要得到 \(x^7\)，必须取 \(r=7\)，所以所求系数为
 \[
-\mathrm C_{10}^7(-1)^7\cdot2^3=-\mathrm C_{10}^3\cdot8=-\frac{10\cdot9\cdot8}{1\cdot2\cdot3}\cdot8=-960
+\mathrm C_{10}^{7}2^3(-1)^7=-\mathrm C_{10}^{3}\cdot8=-\frac{10\cdot9\cdot8}{1\cdot2\cdot3}\cdot8=-960
 \]
 
-\item \( 2\lg x=\lg \left( x+12 \right) \)，\( \lg x^2=\lg \left( x+12 \right) \).
-所以 \( x^2=x+12 \)，\( x^2-x-12=0 \)，\( \left( x-4 \right)\left( x+3 \right)=0 \).
-所以 \( x_1=4 \)，\( x_2=-3 \). 当 \( x=-3 \) 时，\( \lg x \) 没有意义，舍去. 所以 \( x=4 \) 为原方程的解.
+\item 由对数的定义，原方程有意义必须满足 \(x>0\)，且此时 \(x+12>0\) 自动成立. 在此条件下，\(2\lg x=\lg x^2\)，故原方程等价于 \(\lg x^2=\lg\left(x+12\right)\)，从而 \(x^2=x+12\). 因此
+\(x^2-x-12=0\)，\(\left(x-4\right)\left(x+3\right)=0\).
+解得 \(x=4\) 或 \(x=-3\). 其中 \(x=-3\) 不满足 \(x>0\)，代回原方程也使 \(\lg x\) 无意义，舍去；\(x=4\) 满足定义域且代入原方程成立. 所以原方程的解为 \(x=4\).
 
-\item 根据根式的定义，\( x-1\ge0 \). 所以 \( x\ge1 \).
-又根据分母不能为零，\( x-5\neq0 \). 所以 \( x\neq5 \).
-所以自变量 \( x \) 的允许值的范围是 \( x\ge1 \)，但 \( x\neq5 \).
+\item 根式有意义要求 \(x-1\geq0\)，即 \(x\geq1\). 分母不能为零，要求 \(x-5\neq0\)，即 \(x\neq5\). 因此自变量 \(x\) 的允许值的范围为 \(x\in\left[1,5\right)\cup\left(5,+\infty\right)\).
 
-\item 解法一：
+\item 因为 \(\frac{5\pi}{12}=\frac{\pi}{2}-\frac{\pi}{12}\)，所以 \(\sin\frac{5\pi}{12}=\cos\frac{\pi}{12}\). 从而
 \[
-\sin \frac{\pi}{12}\sin \frac{5\pi}{12}=\sin \frac{\pi}{12}\cos \frac{\pi}{12}=\frac{1}{2}\sin \frac{\pi}{6}=\frac{1}{4}
+\sin\frac{\pi}{12}\sin\frac{5\pi}{12}=\sin\frac{\pi}{12}\cos\frac{\pi}{12}=\frac{1}{2}\sin\frac{\pi}{6}=\frac{1}{4}
 \]
 
-解法二：
+也可以利用积化和差公式：
 \[
-\sin \frac{\pi}{12}\sin \frac{5\pi}{12}=\frac{1}{2}\left( \cos \frac{\pi}{3}-\cos \frac{\pi}{2} \right)=\frac{1}{2}\left( \frac{1}{2}-0 \right)=\frac{1}{4}
+\sin\frac{\pi}{12}\sin\frac{5\pi}{12}=\frac{1}{2}\left(\cos\frac{\pi}{3}-\cos\frac{\pi}{2}\right)=\frac{1}{2}\left(\frac{1}{2}-0\right)=\frac{1}{4}
 \]
 
-解法三：
+\item 设圆心为 \(O\)，水面弦的端点为 \(A\)、\(B\)，水淹没的弧为弧 \(ACB\). 因为弧 \(ACB\) 所对的圆心角为 \(150^\circ\)，所以扇形 \(O\text{-}ACB\) 的面积为
 \[
-\sin \frac{\pi}{12}=\sqrt{\frac{1-\cos \frac{\pi}{6}}{2}}=\sqrt{\frac{1-\frac{\sqrt{3}}{2}}{2}}=\frac{1}{2}\sqrt{2-\sqrt{3}}
+\frac{150}{360}\pi\cdot12^2=60\pi\text{ 平方厘米}
 \]
+三角形 \(OAB\) 的两边 \(OA=OB=12\)，夹角为 \(150^\circ\)，所以
 \[
-\sin \frac{5\pi}{12}=\sqrt{\frac{1-\cos \frac{5\pi}{6}}{2}}=\sqrt{\frac{1+\frac{\sqrt{3}}{2}}{2}}=\frac{1}{2}\sqrt{2+\sqrt{3}}
+S_{\triangle OAB}=\frac{1}{2}\cdot12^2\sin150^\circ=36\text{ 平方厘米}
 \]
-所以 \(\sin \frac{\pi}{12}\sin \frac{5\pi}{12} = \frac{1}{2}\sqrt{2-\sqrt{3}}\cdot\frac{1}{2}\sqrt{2+\sqrt{3}} = \frac{1}{4}\).
+水面以下的部分是扇形 \(O\text{-}ACB\) 减去三角形 \(OAB\)，故其面积为
+\[
+60\pi-36=60\times3.14-36=152.4\text{ 平方厘米}
+\]
+所以这个截面上有水部分的面积是 \(152.4\text{ 平方厘米}\).
 
-\item 解法一：弧 \(ACB\) 的长是 \(12\times\frac{5\pi}{6}=10\pi\text{ 厘米}\).
-扇形 \( O-ACB \) 的面积是 \(\frac{1}{2}\times12\times10\pi=60\pi\text{ 平方厘米}\).
-\( \triangle OAB \) 的面积是 \(\frac{1}{2}\times12^2\times\sin 150^\circ=36\text{ 平方厘米}\).
-所以截面上有水部分的面积是 \(60\pi-36=60\times3.14-36=152.4\text{ 平方厘米}\).
+\item 作 \(AD\perp BC\) 于 \(D\)，并连接 \(A'D\). 由于 \(AD\) 在平面 \(N\) 上的正投影为 \(A'D\)，而 \(AD\perp BC\)，且 \(BC\) 是平面 \(N\) 与平面 \(ABC\) 的交线，所以 \(A'D\perp BC\). 因而由两平面分别作出的垂直于交线的直线可知，\(\angle ADA'\) 是二面角的平面角，故 \(\angle ADA'=a\).
 
-解法二：扇形 \( O-ACB \) 的面积是 \(\frac{150}{360}\times\pi\times12^2=60\pi\text{ 平方厘米}\).
-\( \triangle OAB \) 的面积是 \(\frac{1}{2}\times12^2\times\sin 150^\circ=36\text{ 平方厘米}\).
-所以截面上有水部分的面积是 \(60\pi-36=60\times3.14-36=152.4\text{ 平方厘米}\).
-
-\item 作 \( AD\perp BC \) 于 \(D\)，连 \(A'D\).
-
-因为 \(A'D\) 是 \(AD\) 在平面 \(N\) 上的射影，所以 \( A'D\perp BC \). \( \angle ADA' \) 是二面角的平面角，等于 \( a \). 因为 \( \triangle AA'D \) 是直角三角形，所以 \( A'D=AD\cos a \).
-所以 \( \triangle A'BC \) 的面积是\(\frac{1}{2}BC\cdot A'D = \frac{1}{2}BC\cdot AD\cos a = S\cos a\).
-\end{enumerate}
 \solutionfigure{\bitmapfigure[max width=4.2cm]{img/1961/national/q1_6_solution_fig1.png}}
+
+因为 \(AA'\perp\) 平面 \(N\)，所以 \(AA'\perp A'D\)，三角形 \(AA'D\) 是直角三角形，且 \(AD\) 是斜边. 因此 \(A'D=AD\cos a\). 又 \(AD\) 是三角形 \(ABC\) 对底边 \(BC\) 的高，所以
+\[
+S_{\triangle A'BC}=\frac{1}{2}BC\cdot A'D=\frac{1}{2}BC\cdot AD\cos a=S\cos a
+\]
+故三角形 \(A'BC\) 的面积为 \(S\cos a\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -76,43 +75,39 @@
 \end{problem}
 
 \begin{solution}
-解法一：设原计划第一，二，三年生产机器的千台数分别为 \(x\)，\(x+y\)，\(x+2y\). 依题意，得方程组
+解法一：设原计划第一、二、三年生产机器的台数分别为 \(x\text{ 千台}\)、\((x+y)\text{ 千台}\)、\((x+2y)\text{ 千台}\)，则新计划第三年为 \((x+2y+1)\text{ 千台}\). 原计划每年增加 \(y\text{ 千台}\)，因此新计划第一年到第二年的增长率为 \(\frac{y}{x}\)，第二年到第三年的增长率为 \(\frac{y+1}{x+y}\). 题意给出这两个增长率相同，所以
 \[
-\begin{cases}
-\frac{\left( x+y \right)-x}{x}=\frac{\left( x+2y+1 \right)-\left( x+y \right)}{x+y},\\
-x+2y+1=\frac{1}{2}\left[ x+\left( x+y \right)+\left( x+2y \right) \right].
-\end{cases}
+\frac{y}{x}=\frac{y+1}{x+y}
 \]
-这个方程组经过变形后，得方程组
+交叉相乘得 \(y(x+y)=x(y+1)\)，即 \(y^2=x\). 又因为新计划第三年产量等于原计划三年总产量的一半，所以
+\[
+x+2y+1=\frac{1}{2}\left[x+(x+y)+(x+2y)\right]
+\]
+化简得 \(x-y-2=0\). 因而需要解
 \[
 \begin{cases}
 y^2-x=0,\\
 x-y-2=0.
 \end{cases}
 \]
-解这个方程组，得 \( x_1=4 \)，\( y_1=2 \)；\( x_2=1 \)，\( y_2=-1 \).
-由第一组解，得 \( x=4 \)，\( x+y=6 \)，\( x+2y=8 \). 第二组解不合题意，舍去.
+由 \(x=y+2\)，代入第一式得 \(y^2-y-2=0\)，即 \((y-2)(y+1)=0\). 所以 \(y=2\) 或 \(y=-1\). 当 \(y=2\) 时，\(x=4\)，三年的产量依次为 \(4\text{ 千台}\)、\(6\text{ 千台}\)、\(8\text{ 千台}\)；当 \(y=-1\) 时，三年的产量为 \(1\text{ 千台}\)、\(0\text{ 千台}\)、\(-1\text{ 千台}\)，且增长率中的分母 \(x+y=0\)，不符合生产计划的实际意义，舍去.
 
-答：原计划第一，二，三年各生产机器 \(4\text{ 千台}\)，\(6\text{ 千台}\)，\(8\text{ 千台}\).
-
-解法二：设原计划第一，二，三年生产机器的千台数分别为 \(x-y\)，\(x\)，\(x+y\). 依题意，得方程组
+解法二：设原计划第一、二、三年生产机器的台数分别为 \((x-y)\text{ 千台}\)、\(x\text{ 千台}\)、\((x+y)\text{ 千台}\)，则新计划第三年为 \((x+y+1)\text{ 千台}\). 由相邻两年的增长率相同，得
 \[
-\begin{cases}
-x^2=\left( x-y \right)\left( x+y+1 \right),\\
-x+y+1=\frac{1}{2}\left[ \left( x-y \right)+x+\left( x+y \right) \right].
-\end{cases}
+\frac{y}{x-y}=\frac{y+1}{x}
 \]
-这个方程组经过变形后，得方程组
+即 \(xy=(x-y)(y+1)\)，化简为 \(y^2+y-x=0\). 又由总产量条件，得
+\[
+x+y+1=\frac{1}{2}\left[(x-y)+x+(x+y)\right]
+\]
+所以 \(x-2y-2=0\). 于是
 \[
 \begin{cases}
 y^2+y-x=0,\\
 x-2y-2=0.
 \end{cases}
 \]
-解这个方程组，得 \( x_1=6 \)，\( y_1=2 \)；\( x_2=0 \)，\( y_2=-1 \).
-由第一组解，得 \( x-y=4 \)，\( x=6 \)，\( x+y=8 \). 第二组解不合题意，舍去.
-
-答：原计划第一，二，三年各生产机器 \(4\text{ 千台}\)，\(6\text{ 千台}\)，\(8\text{ 千台}\).
+由 \(x=2y+2\)，代入第一式得 \(y^2-y-2=0\)，所以 \(y=2\) 或 \(y=-1\). 当 \(y=2\) 时，\(x=6\)，原计划产量为 \(4\text{ 千台}\)、\(6\text{ 千台}\)、\(8\text{ 千台}\)；当 \(y=-1\) 时，原计划第二、三年产量不符合题意，舍去. 因此原计划第一、二、三年各生产机器 \(4\text{ 千台}\)、\(6\text{ 千台}\)、\(8\text{ 千台}\).
 \end{solution}
 
 \begin{problem}
@@ -123,58 +118,79 @@ x-2y-2=0.
 \end{problem}
 
 \begin{solution}
-水桶上口的半径为 \(\frac{1}{5}\times75=15\text{ 厘米}\).
-水桶下底的半径为 \(\frac{1}{5}\times45=9\text{ 厘米}\).
-水桶的斜高为 \(75-45=30\text{ 厘米}\).
-水桶的高为 \(\sqrt{30^2-\left( 15-9 \right)^2}=12\sqrt6\text{ 厘米}\).
-所以水桶的容积是 \(\frac{1}{3}\cdot12\sqrt6\pi\left( 15^2+9^2+15\times9 \right)=1764\sqrt6\pi\text{ 立方厘米}\).
-
-答：水桶的容积是 \(1764\sqrt6\pi\text{ 立方厘米}\).
+将圆环形铁皮的五分之一卷成圆台侧面时，内、外圆弧分别成为水桶下底和上底的圆周. 因此水桶下底半径为
+\[
+r=\frac{1}{5}\times45=9\text{ 厘米}
+\]
+上底半径为
+\[
+R=\frac{1}{5}\times75=15\text{ 厘米}
+\]
+圆台的母线就是圆环的宽度，所以母线长为 \(75-45=30\text{ 厘米}\). 过圆台轴作截面，得到直角三角形，其斜边为母线，另一直角边为两底半径之差 \(R-r=6\text{ 厘米}\). 因此圆台的高为
+\[
+h=\sqrt{30^2-6^2}=\sqrt{864}=12\sqrt6\text{ 厘米}
+\]
+圆台容积为
+\[
+V=\frac{1}{3}\pi h\left(R^2+Rr+r^2\right)=\frac{1}{3}\pi\cdot12\sqrt6\left(15^2+15\times9+9^2\right)=1764\sqrt6\pi\text{ 立方厘米}
+\]
+所以水桶的容积是 \(1764\sqrt6\pi\text{ 立方厘米}\).
 \end{solution}
 
 \begin{problem}
-在平地上有 \(A\)，\(B\) 两点. \(A\) 在山的正东. \(B\) 在山的东南，且在 \(A\) 的西 \(65^\circ\) 南 \(300\text{ 米}\) 的地方. 在 \(A\) 测得山顶的仰角是 \(30^\circ\)，求山高. （\(\sin 70^\circ=0.940\)，精确到 \(10\text{ 米}\).）
+在平地上有 \(A\)、\(B\) 两点. \(A\) 在山的正东. \(B\) 在山的东南，且在 \(A\) 的西 \(65^\circ\) 南 \(300\text{ 米}\) 的地方. 在 \(A\) 测得山顶的仰角是 \(30^\circ\)，求山高. （\(\sin70^\circ=0.940\)，精确到 \(10\text{ 米}\).）
 \end{problem}
 
 \begin{solution}
-设 \(CD\) 为山的高.
+设山顶为 \(D\)，山脚在平地上的垂足为 \(C\)，则 \(CD\) 是山高. 由 \(A\) 在山的正东、\(B\) 在山的东南，得地面三角形 \(ABC\) 中 \(\angle ACB=45^\circ\). 又由 \(B\) 在 \(A\) 的西 \(65^\circ\) 南，得 \(\angle CAB=65^\circ\). 因而
+\[
+\angle ABC=180^\circ-45^\circ-65^\circ=70^\circ
+\]
+在三角形 \(ABC\) 中，已知 \(AB=300\text{ 米}\)，由正弦定理
+\[
+\frac{AC}{\sin70^\circ}=\frac{AB}{\sin45^\circ}
+\]
+所以 \(AC=\frac{300\sin70^\circ}{\sin45^\circ}=300\sqrt2\sin70^\circ\text{ 米}\).
+在直角三角形 \(ACD\) 中，\(\angle CAD=30^\circ\)，所以
+\[
+CD=AC\tan30^\circ=300\sqrt2\sin70^\circ\cdot\frac{1}{\sqrt3}=100\sqrt6\sin70^\circ\text{ 米}
+\]
+代入 \(\sin70^\circ=0.940\)，并取 \(\sqrt6\approx2.45\)，得 \(CD\approx100\times2.45\times0.940=230.3\text{ 米}\). 按题意精确到 \(10\text{ 米}\)，山高为 \(230\text{ 米}\).
 
 \solutionfigure{\bitmapfigure[max width=4.2cm]{img/1961/national/q4_solution_fig1.png}}
-
-在 \( \triangle ABC \) 中，\( \angle ACB=45^\circ \)，\( \angle CAB=65^\circ \). 所以 \( \angle ABC=180^\circ-\left( 45^\circ+65^\circ \right)=70^\circ \).
-又 \(AB=300\text{ 米}\)，所以 \(AC=\frac{AB\sin 70^\circ}{\sin 45^\circ}=300\sqrt2\sin 70^\circ\text{ 米}\).
-在直角三角形 \(ACD\) 中，\(\angle CAD=30^\circ\). 所以 \(CD=AC\tan 30^\circ=100\sqrt6\sin 70^\circ\text{ 米}\).
-因为 \(\sin 70^\circ=0.940\)，所以 \(CD\approx100\times2.45\times0.940=230\text{ 米}\).
-
-答：山高是 \(230\text{ 米}\).
 \end{solution}
 
 \section{选作题}
 
 \begin{problem}
-\( k \) 是什么实数的时候，方程 \( x^2-2\left( k+3 \right)x+3k^2+1=0 \) 有实数根？
+\(k\) 是什么实数的时候，方程 \(x^2-2\left(k+3\right)x+3k^2+1=0\) 有实数根？
 \end{problem}
 
 \begin{solution}
-解法一：当这个方程的判别式 \(\Delta=0\) 或者 \(\Delta>0\) 的时候，原方程有实数根.
-并且 \(\left( k+3 \right)^2-\left( 3k^2+1 \right)=-2k^2+6k+8\).
-解 \( -2k^2+6k+8=0 \)，即 \( k^2-3k-4=0 \)，得 \( k=-1 \) 或者 \( k=4 \).
-解 \( -2k^2+6k+8>0 \)，即 \( -k^2+3k+4>0 \)，得 \( -1<k<4 \).
-所以在 \( -1\le k\le4 \) 的时候，原方程有实数根.
-
-解法二：这个方程有实数根的条件是 \(\left( k+3 \right)^2-\left( 3k^2+1 \right)\ge0\). 化简得 \(-k^2+3k+4\ge0\)，\(k^2-3k-4\le0\)，\(\left( k+1 \right)\left( k-4 \right)\le0\).
-所以在 \( -1\le k\le4 \) 的时候，方程有实数根.
+因为二次项系数为 \(1\)，方程有实数根的充要条件是判别式不小于零. 这里
+\[
+\Delta=\left[-2\left(k+3\right)\right]^2-4\left(3k^2+1\right)
+=4\left[\left(k+3\right)^2-\left(3k^2+1\right)\right]
+=4\left(-2k^2+6k+8\right)
+\]
+所以 \(\Delta\geq0\) 等价于 \(-2k^2+6k+8\geq0\). 两边同除以 \(-2\) 时不等号方向改变，得
+\(k^2-3k-4\leq0\)，\(\left(k+1\right)\left(k-4\right)\leq0\).
+因此 \(-1\leq k\leq4\). 当 \(k=-1\) 或 \(k=4\) 时判别式为零，有重实根；当 \(-1<k<4\) 时判别式为正，有两个不相等的实根. 所以所求实数范围为 \(\left[-1,4\right]\).
 \end{solution}
 
 \begin{problem}
-设方程 \( 8x^2-\left( 8\sin a \right)x+2+\cos 2a=0 \) 的两个根相等，求 \( a \).
+设方程 \(8x^2-\left(8\sin a\right)x+2+\cos2a=0\) 的两个根相等，求 \(a\).
 \end{problem}
 
 \begin{solution}
-因为方程的两个根相等，所以 \(\left( 8\sin a \right)^2-4\cdot8\left( 2+\cos 2a \right)=0\).
-化简得 \(2\sin^2 a-\left( 2+\cos 2a \right)=0\)，再得 \(2\sin^2 a-\left( 3-2\sin^2 a \right)=0\)，从而 \(4\sin^2 a-3=0\).
-所以 \( \sin a=\pm\frac{\sqrt3}{2} \).
-由 \( \sin a=\frac{\sqrt3}{2} \)，得 \( a=n\pi+\left( -1 \right)^n\frac{\pi}{3} \)（\( n\in\Z \)）.
-由 \( \sin a=-\frac{\sqrt3}{2} \)，得 \( a=n\pi-\left( -1 \right)^n\frac{\pi}{3} \)（\( n\in\Z \)）.
-所以 \( a=n\pi\pm\frac{\pi}{3} \)（\( n\in\Z \)）.
+该方程是关于 \(x\) 的二次方程，且二次项系数 \(8\neq0\). 两根相等的充要条件是判别式为零，因此
+\[
+\left(8\sin a\right)^2-4\cdot8\left(2+\cos2a\right)=0
+\]
+两边除以 \(32\)，得 \(2\sin^2a-\left(2+\cos2a\right)=0\). 利用 \(\cos2a=1-2\sin^2a\)，可得
+\(2\sin^2a-\left(3-2\sin^2a\right)=0\)，\(4\sin^2a-3=0\).
+所以 \(\sin a=\pm\frac{\sqrt3}{2}\).
+
+当 \(\sin a=\frac{\sqrt3}{2}\) 时，\(a=n\pi+\left(-1\right)^n\frac{\pi}{3}\)，其中 \(n\in\Z\)；当 \(\sin a=-\frac{\sqrt3}{2}\) 时，\(a=n\pi-\left(-1\right)^n\frac{\pi}{3}\)，其中 \(n\in\Z\). 合并两类解，得到
+\(a=n\pi\pm\frac{\pi}{3}\)，\(n\in\Z\).
 \end{solution}

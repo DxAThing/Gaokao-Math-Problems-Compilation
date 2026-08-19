@@ -16,6 +16,14 @@
 
 \answer{A}
 
+\begin{solution}
+由 \(A=(-1,2)\)，\(B=(0,3)\)，两区间有公共部分，且左端点为 \(-1\)，右端点为 \(3\)，所以
+\[
+A\cup B=(-1,3)
+\]
+故选 A.
+\end{solution}
+
 \begin{problem}
 若 \(a\) 为实数，且 \(\frac{2 + a\i}{1 + \i} = 3 + \i\)，则 \(a =\)（\quad）
 
@@ -27,6 +35,14 @@
 \end{problem}
 
 \answer{D}
+
+\begin{solution}
+由复数等式得
+\[
+2+a\i=(3+\i)(1+\i)=2+4\i
+\]
+比较虚部，得 \(a=4\). 故选 D.
+\end{solution}
 
 \begin{problem}
 根据下面给出的 \(2004\) 年至 \(2013\) 年我国二氧化硫年排放量（单位：万吨）柱形图，以下结论中不正确的是（\quad）
@@ -42,6 +58,10 @@
 
 \answer{D}
 
+\begin{solution}
+由柱形图可见，\(2006\) 年以后排放量总体下降，虽然 \(2011\) 年较 \(2010\) 年略有上升；逐年比较相邻年份的下降量，\(2008\) 年的下降最明显. 因此 A、B、C 均可由图得到，而“排放量与年份正相关”与总体下降趋势相矛盾. 故选 D.
+\end{solution}
+
 \begin{problem}
 已知 \(\bs{a} = (1, -1)\)，\(\bs{b} = (-1, 2)\)，则 \((2\bs{a} + \bs{b}) \cdot \bs{a} =\)（\quad）
 
@@ -54,6 +74,17 @@
 
 \answer{C}
 
+\begin{solution}
+\[
+2\bs{a}+\bs{b}=2(1,-1)+(-1,2)=(1,0)
+\]
+所以
+\[
+(2\bs{a}+\bs{b})\cdot\bs{a}=(1,0)\cdot(1,-1)=1
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
 设 \(S_{n}\) 是等差数列 \(\{a_{n}\}\) 的前 \(n\) 项和. 若 \(a_{1} + a_{3} + a_{5} = 3\)，则 \(S_{5} =\)（\quad）
 
@@ -65,6 +96,18 @@
 \end{problem}
 
 \answer{A}
+
+\begin{solution}
+等差数列中 \(a_{1}+a_{5}=2a_{3}\)，所以
+\[
+a_{1}+a_{3}+a_{5}=3a_{3}=3
+\]
+从而 \(a_{3}=1\). 又等差数列前五项的平均数为中间项 \(a_{3}\)，故
+\[
+S_{5}=5a_{3}=5
+\]
+故选 A.
+\end{solution}
 
 \begin{problem}
 一个正方体被一个平面截去一部分后，剩余部分的三视图如图，则截去部分体积与剩余部分体积的比值为（\quad）
@@ -80,6 +123,22 @@
 
 \answer{D}
 
+\begin{solution}
+设正方体棱长为 \(a\). 由三个三视图中的对角线可知，截去部分是以正方体一个顶点为直角顶点、三条互相垂直的棱长均为 \(a\) 的三棱锥. 以其中两条棱为底边，底面积为 \(a^{2}/2\)，第三条棱为高，因此
+\[
+V_{\text{截去}}=\frac{1}{3}\cdot\frac{a^{2}}{2}\cdot a=\frac{a^{3}}{6}
+\]
+剩余部分体积为
+\[
+V_{\text{剩余}}=a^{3}-\frac{a^{3}}{6}=\frac{5a^{3}}{6}
+\]
+所以体积比为
+\[
+\frac{V_{\text{截去}}}{V_{\text{剩余}}}=\frac{a^{3}/6}{5a^{3}/6}=\frac{1}{5}
+\]
+故选 D.
+\end{solution}
+
 \begin{problem}
 已知三点 \(A(1,0)\)，\(B(0,\sqrt{3})\)，\(C(2,\sqrt{3})\)，则 \(\triangle ABC\) 外接圆的圆心到原点的距离为（\quad）
 
@@ -91,6 +150,18 @@
 \end{problem}
 
 \answer{B}
+
+\begin{solution}
+因为 \(BC\) 是水平线段，且其中点为 \((1,\sqrt{3})\)，所以三角形外接圆圆心在直线 \(x=1\) 上. 设圆心为 \(P(1,p)\)，由 \(PA=PB\) 得
+\[
+p^{2}=1+(p-\sqrt{3})^{2}
+\]
+解得 \(p=\dfrac{2\sqrt{3}}{3}\)，故
+\[
+OP=\sqrt{1+\left(\frac{2\sqrt{3}}{3}\right)^{2}}=\frac{\sqrt{21}}{3}
+\]
+故选 B.
+\end{solution}
 
 \begin{problem}
 下边程序框图的算法思路源于我国古代数学名著《九章算术》中的“更相减损术”. 执行该程序框图，若输入的 \(a\)，\(b\) 分别为 \(14\)，\(18\)，则输出的 \(a =\)（\quad）
@@ -106,8 +177,16 @@
 
 \answer{B}
 
+\begin{solution}
+程序每次在 \(a\ne b\) 时用较大数减去较小数. 初始为 \((a,b)=(14,18)\)，依次得到
+\[
+(14,18)\to(14,4)\to(10,4)\to(6,4)\to(2,4)\to(2,2)
+\]
+此时 \(a=b\)，程序输出 \(a=2\). 故选 B.
+\end{solution}
+
 \begin{problem}
-已知等比数列 \(\{a_{n}\}\) 满足 \(a_{1} = \frac{1}{4}\)，\(a_{1}a_{5} = 4(a_{4} - 1)\)，则 \(a_{2} =\)（\quad）
+已知等比数列 \(\{a_{n}\}\) 满足 \(a_{1} = \frac{1}{4}\)，\(a_{3}a_{5} = 4(a_{4} - 1)\)，则 \(a_{2} =\)（\quad）
 
 \choices
     {2}
@@ -117,6 +196,20 @@
 \end{problem}
 
 \answer{C}
+
+\begin{solution}
+设等比数列的公比为 \(q\). 则
+\(a_{3}=\frac{q^{2}}{4}\)，\(a_{4}=\frac{q^{3}}{4}\)，\(a_{5}=\frac{q^{4}}{4}\).
+代入条件，得
+\[
+\frac{q^{6}}{16}=4\left(\frac{q^{3}}{4}-1\right)=q^{3}-4
+\]
+即
+\[
+(q^{3}-8)^{2}=0
+\]
+所以 \(q=2\)，从而 \(a_{2}=a_{1}q=\dfrac12\). 故选 C.
+\end{solution}
 
 \begin{problem}
 已知 \(A\)，\(B\) 是球 \(O\) 的球面上两点，\(\angle AOB = 90^{\circ}\)，\(C\) 为该球面上的动点，若三棱锥 \(O-ABC\) 体积的最大值为 \(36\)，则球 \(O\) 的表面积为（\quad）
@@ -129,6 +222,22 @@
 \end{problem}
 
 \answer{C}
+
+\begin{solution}
+设球 \(O\) 的半径为 \(R\). 以三角形 \(OAB\) 为底面、点 \(C\) 为顶点，则
+\[
+S_{\triangle OAB}=\frac12 OA\cdot OB\sin\angle AOB=\frac{R^{2}}{2}
+\]
+平面 \(OAB\) 经过球心，球面上点 \(C\) 到该平面的距离最大为 \(R\)，因此三棱锥体积的最大值为
+\[
+V_{\max}=\frac13\cdot\frac{R^{2}}{2}\cdot R=\frac{R^{3}}{6}
+\]
+由 \(V_{\max}=36\) 得 \(R=6\)，所以球的表面积为
+\[
+4\pi R^{2}=144\pi
+\]
+故选 C.
+\end{solution}
 
 \begin{problem}
 如图，长方形 \(ABCD\) 的边 \(AB = 2\)，\(BC = 1\)，\(O\) 是 \(AB\) 的中点，点 \(P\) 沿着边 \(BC\)，\(CD\) 与 \(DA\) 运动，记 \(\angle BOP = x\). 将动点 \(P\) 到 \(A\)，\(B\) 两点距离之和表示为 \(x\) 的函数 \(f(x)\)，则 \(y = f(x)\) 的图象大致为（\quad）
@@ -144,6 +253,24 @@
 
 \answer{B}
 
+\begin{solution}
+取 \(A=(0,0)\)，\(B=(2,0)\)，\(C=(2,1)\)，\(D=(0,1)\)，则 \(O=(1,0)\). 当 \(P\) 沿 \(BC\) 运动时，令 \(P=(2,t)\)，有 \(0\leqslant t\leqslant1\)，且 \(t=\tan x\)，于是
+\(f(x)=\sqrt{4+\tan^{2}x}+\tan x\)，\(0\leqslant x\leqslant\frac{\pi}{4}\)
+该段严格递增.
+
+当 \(P\) 沿 \(CD\) 运动时，令 \(P=(u,1)\)，则 \(x\) 从 \(\dfrac{\pi}{4}\) 增加到 \(\dfrac{3\pi}{4}\)，且
+\[
+f(x)=\sqrt{u^{2}+1}+\sqrt{(u-2)^{2}+1}
+\]
+记右端为 \(F(u)\)，则
+\[
+F''(u)=\frac{1}{(u^{2}+1)^{3/2}}+\frac{1}{((u-2)^{2}+1)^{3/2}}>0
+\]
+所以 \(F(u)\) 严格凸，且 \(F(2-u)=F(u)\)，从而在 \(u=1\) 时取得最小值 \(2\sqrt2\). 点 \(P=(u,1)\) 关于直线 \(x=1\) 对称时，\(\angle BOP\) 分别为 \(x\) 与 \(\pi-x\)，故这一段图象关于 \(x=\dfrac\pi2\) 对称，先下降后上升.
+
+当 \(P\) 沿 \(DA\) 运动时，\(x\) 从 \(\dfrac{3\pi}{4}\) 增加到 \(\pi\)，点 \(P\) 逐渐靠近 \(A\)，故距离和递减，且在 \(A\) 处为 \(2\). 因而图象从 \(x=0\) 处的 \(2\) 上升，在 \(\dfrac\pi2\) 附近下降后再上升，最后下降到 \(x=\pi\) 处的 \(2\)，符合选项 B. 故选 B.
+\end{solution}
+
 \begin{problem}
 设函数 \( f(x) = \ln (1 + |x|) - \frac{1}{1 + x^2} \)，则使得 \( f(x) > f(2x - 1) \) 成立的 \(x\) 的取值范围是（\quad）
 
@@ -156,12 +283,45 @@
 
 \answer{A}
 
+\begin{solution}
+令
+\(g(t)=\ln(1+t)-\frac{1}{1+t^{2}}\)，\(t\geqslant0\).
+则
+\[
+g'(t)=\frac{1}{1+t}+\frac{2t}{(1+t^{2})^{2}}>0
+\]
+所以 \(g(t)\) 在 \([0,+\infty)\) 上严格递增. 又 \(f(x)=g(|x|)\)，故
+\[
+f(x)>f(2x-1)\Longleftrightarrow |x|>|2x-1|
+\]
+两边平方并整理，得
+\[
+x^{2}>(2x-1)^{2}\Longleftrightarrow 3x^{2}-4x+1<0
+\]
+该二次式的两个根为 \(\dfrac13\) 和 \(1\)，所以
+\[
+\frac13<x<1
+\]
+故选 A.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
 已知函数 \( f(x) = ax^3 - 2x \) 的图象过点 \((-1,4)\)，则 \(a =\)\fillinblank{}.
-\answer{-2}
 \end{problem}
+
+\begin{answer}
+-2
+\end{answer}
+
+\begin{solution}
+将点 \((-1,4)\) 代入函数方程，得
+\[
+4=a(-1)^{3}-2(-1)=-a+2
+\]
+所以 \(a=-2\).
+\end{solution}
 
 \begin{problem}
 若 \(x\)，\(y\) 满足约束条件 \(\begin{cases}
@@ -169,18 +329,69 @@ x + y - 5 \leqslant 0,\\
 2x - y - 1 \geqslant 0,\\
 x - 2y + 1 \leqslant 0,
 \end{cases}\) 则 \(z = 2x + y\) 的最大值为\fillinblank{}.
-\answer{8}
 \end{problem}
+
+\begin{answer}
+8
+\end{answer}
+
+\begin{solution}
+三个边界直线分别为
+\(y=5-x\)，\(y=2x-1\)，\(y=\frac{x+1}{2}\).
+它们两两相交得到可行域的三个顶点
+\((2,3)\)，\((3,2)\)，\((1,1)\).
+在这三个顶点处，目标函数 \(z=2x+y\) 的值分别为 \(7\)，\(8\)，\(3\). 线性目标函数在三角形可行域上取最大值于顶点，故最大值为 \(8\).
+\end{solution}
 
 \begin{problem}
 已知双曲线过点 \((4, \sqrt{3})\)，且渐近线方程为 \(y = \pm \frac{1}{2}x\)，则该双曲线的标准方程为\fillinblank{}.
-\answer{\(\dfrac{x^{2}}{4}-y^{2}=1\)}
 \end{problem}
+
+\begin{answer}
+\(\dfrac{x^{2}}{4}-y^{2}=1\)
+\end{answer}
+
+\begin{solution}
+若双曲线为横轴型 \(\dfrac{x^{2}}{a^{2}}-\dfrac{y^{2}}{b^{2}}=1\)，其渐近线斜率为 \(\pm\dfrac{b}{a}\)，故 \(b=\dfrac{a}{2}\). 代入点 \((4,\sqrt{3})\)，得
+\[
+\frac{16}{a^{2}}-\frac{3}{a^{2}/4}=1
+\]
+从而 \(a^{2}=4\)，\(b^{2}=1\).
+
+若为纵轴型，则方程为 \(\dfrac{y^{2}}{a^{2}}-\dfrac{x^{2}}{b^{2}}=1\)，且由渐近线斜率有 \(a^{2}/b^{2}=1/4\). 代入点 \((4,\sqrt{3})\) 后左端为
+\[
+\frac{3}{a^{2}}-\frac{16}{b^{2}}=\frac{3}{a^{2}}-\frac{4}{a^{2}}=-\frac{1}{a^{2}}<0
+\]
+不可能等于 \(1\). 因而双曲线的方程为
+\[
+\frac{x^{2}}{4}-y^{2}=1
+\]
+\end{solution}
 
 \begin{problem}
 已知曲线 \( y = x + \ln x \) 在点 \((1, 1)\) 处的切线与曲线 \( y = ax^2 + (a + 2)x + 1 \) 相切，则 \(a =\)\fillinblank{}.
-\answer{8}
 \end{problem}
+
+\begin{answer}
+8
+\end{answer}
+
+\begin{solution}
+曲线 \(y=x+\ln x\) 在 \(x=1\) 处的导数为 \(1+\dfrac11=2\)，所以切线为
+\(y-1=2(x-1)\)，\(y=2x-1\).
+令该直线与第二条曲线相交，得
+\[
+ax^{2}+(a+2)x+1=2x-1
+\]
+即
+\[
+ax^{2}+ax+2=0
+\]
+相切要求有重根，且 \(a=0\) 时方程退化为 \(2=0\)，没有交点，因此 \(a\ne0\). 由判别式为零，得
+\[
+a^{2}-8a=0\Longrightarrow a=8
+\]
+\end{solution}
 
 \section{解答题}
 
@@ -194,8 +405,24 @@ x - 2y + 1 \leqslant 0,
 
 \begin{solution}
 \begin{enumerate}
-\item \(\dfrac{\sin\angle B}{\sin\angle C}=2\)；
-\item \(\angle B=30^{\circ}\).
+\item 由角平分线定理，
+\[
+\frac{AB}{AC}=\frac{BD}{DC}=2
+\]
+在 \(\triangle ABC\) 中由正弦定理，\(\dfrac{AB}{AC}=\dfrac{\sin\angle C}{\sin\angle B}\)，所以
+\[
+\frac{\sin\angle B}{\sin\angle C}=\frac12
+\]
+
+\item 设 \(\angle B=\beta\)，则 \(\angle C=120^{\circ}-\beta\). 由第（1）问，
+\[
+\frac{\sin\beta}{\sin(120^{\circ}-\beta)}=\frac12
+\]
+利用正弦差角公式，得
+\[
+2\sin\beta=\sin(120^{\circ}-\beta)=\frac{\sqrt3}{2}\cos\beta+\frac12\sin\beta
+\]
+从而 \(3\sin\beta=\sqrt3\cos\beta\)，即 \(\tan\beta=\dfrac{\sqrt3}{3}\). 因为三角形内角满足 \(0^{\circ}<\beta<120^{\circ}\)，故 \(\beta=30^{\circ}\)，所以 \(\angle B=30^{\circ}\).
 \end{enumerate}
 \end{solution}
 
@@ -235,8 +462,38 @@ x - 2y + 1 \leqslant 0,
 
 \begin{solution}
 \begin{enumerate}
-\item \(B\) 地区用户满意度评分的平均值高于 \(A\) 地区，\(B\) 地区评分较集中，而 \(A\) 地区评分较分散；
-\item \(A\) 地区用户满意度等级为不满意的概率估计值为 \(0.6\)，\(B\) 地区为 \(0.25\)，所以 \(A\) 地区的概率较大.
+\item 每组组距均为 \(10\). 由频数除以样本数得到 \(B\) 地区各组频率，再除以组距，频率分布直方图各柱高依次为
+\(0.005\)，\(0.020\)，\(0.035\)，\(0.025\)，\(0.015\)
+对应的评分区间依次为 \([50,60)\)，\([60,70)\)，\([70,80)\)，\([80,90)\)，\([90,100]\).
+
+用各组组中值估计平均分，\(A\) 地区的平均分为
+\[
+45\times0.10+55\times0.20+65\times0.30+75\times0.20+85\times0.15+95\times0.05=67.5
+\]
+\(B\) 地区的平均分为
+\[
+55\times0.05+65\times0.20+75\times0.35+85\times0.25+95\times0.15=77.5
+\]
+所以 \(B\) 地区的平均满意度评分较高. 以组中值估计方差，两个地区分别为
+\[
+\begin{aligned}
+s_A^2&=0.10(45-67.5)^2+0.20(55-67.5)^2+0.30(65-67.5)^2\\
+&\quad+0.20(75-67.5)^2+0.15(85-67.5)^2+0.05(95-67.5)^2=178.75,\\
+s_B^2&=0.05(55-77.5)^2+0.20(65-77.5)^2+0.35(75-77.5)^2\\
+&\quad+0.25(85-77.5)^2+0.15(95-77.5)^2=118.75.
+\end{aligned}
+\]
+因此 \(s_B^2<s_A^2\)，\(B\) 地区评分的分散程度较小.
+
+\item \(A\) 地区评分低于 \(70\) 分的频率估计为
+\[
+0.10+0.20+0.30=0.60
+\]
+\(B\) 地区评分低于 \(70\) 分的频率为
+\[
+\frac{2+8}{40}=0.25
+\]
+因为 \(0.60>0.25\)，所以估计 \(A\) 地区用户的满意度等级为不满意的概率较大.
 \end{enumerate}
 \end{solution}
 
@@ -252,7 +509,22 @@ x - 2y + 1 \leqslant 0,
 \end{problem}
 
 \begin{solution}
-平面 \(\alpha\) 把长方体分成的两部分体积之比为 \(\dfrac{7}{9}\).
+在 \(AB\) 上取点 \(K\)，在 \(DC\) 上取点 \(L\)，使 \(AK=DL=10\)，连接 \(EK\)，\(FL\)，则交线围成的正方形为 \(EFKL\). 事实上，\(EF=KL=BC=10\)，且在侧面 \(ABB_{1}A_{1}\) 中
+\[
+EK=\sqrt{(10-4)^{2}+8^{2}}=10
+\]
+同理 \(FL=10\)，并且 \(EF\) 与 \(EK\) 垂直，所以该截面为边长 \(10\) 的正方形.
+
+取坐标系使 \(A=(0,0,0)\)，\(B=(16,0,0)\)，\(D=(0,10,0)\)，\(A_{1}=(0,0,8)\). 则
+\(E=(4,0,8)\)，\(F=(4,10,8)\)，\(K=(10,0,0)\)，\(L=(10,10,0)\).
+平面 \(\alpha\) 的方程为 \(4x+3z=40\). 其下方一侧的体积为
+\[
+V_{1}=4\times10\times8+\int_{4}^{10}10\cdot\frac{40-4x}{3}\,\mathrm{d}x=320+240=560
+\]
+长方体体积为 \(16\times10\times8=1280\)，另一侧体积为 \(V_{2}=1280-560=720\). 因此两部分体积之比为
+\[
+V_{1}:V_{2}=560:720=7:9
+\]
 \end{solution}
 
 \begin{problem}
@@ -265,8 +537,42 @@ x - 2y + 1 \leqslant 0,
 
 \begin{solution}
 \begin{enumerate}
-\item \(C\) 的方程为 \(\dfrac{x^{2}}{8}+\dfrac{y^{2}}{4}=1\)；
-\item 直线 \(OM\) 的斜率与直线 \(l\) 的斜率乘积为 \(1\).
+\item 设椭圆半长轴、半短轴和半焦距分别为 \(a\)，\(b\)，\(c\). 由离心率得
+\(\frac{c}{a}=\frac{\sqrt2}{2}\)，\(b^{2}=a^{2}-c^{2}=\frac{a^{2}}{2}\).
+又因为 \((2,\sqrt2)\) 在椭圆上，
+\[
+\frac{4}{a^{2}}+\frac{2}{b^{2}}=1
+\]
+代入 \(b^{2}=a^{2}/2\)，得 \(a^{2}=8\)，\(b^{2}=4\). 所以
+\[
+C:\frac{x^{2}}{8}+\frac{y^{2}}{4}=1
+\]
+
+\item 设直线 \(l\) 的方程为 \(y=kx+m\). 因为 \(l\) 不平行于坐标轴且不过原点，所以 \(k\ne0\)，\(m\ne0\). 设 \(A(x_{1},y_{1})\)，\(B(x_{2},y_{2})\)，则 \(x_{1}\)，\(x_{2}\) 是方程
+\[
+x^{2}+2(kx+m)^{2}=8
+\]
+的两个根，即
+\[
+(1+2k^{2})x^{2}+4kmx+2m^{2}-8=0
+\]
+由韦达定理及中点坐标公式，
+\[
+x_{M}=\frac{x_{1}+x_{2}}{2}=-\frac{2km}{1+2k^{2}}
+\]
+且
+\[
+y_{M}=kx_{M}+m=\frac{m}{1+2k^{2}}
+\]
+因此
+\[
+k_{OM}=\frac{y_{M}}{x_{M}}=-\frac{1}{2k}
+\]
+从而直线 \(OM\) 与直线 \(l\) 的斜率乘积为
+\[
+k_{OM}\cdot k=-\frac12
+\]
+故该定值为 \(-\dfrac12\).
 \end{enumerate}
 \end{solution}
 
@@ -280,8 +586,24 @@ x - 2y + 1 \leqslant 0,
 
 \begin{solution}
 \begin{enumerate}
-\item 当 \(a\leqslant0\) 时，\(f(x)\) 在 \((0,+\infty)\) 上单调递增；当 \(a>0\) 时，\(f(x)\) 在 \(\left(0,\dfrac{1}{a}\right)\) 上单调递增，在 \(\left(\dfrac{1}{a},+\infty\right)\) 上单调递减；
-\item \(a\in(0,1)\).
+\item 定义域为 \((0,+\infty)\)，且
+\[
+f'(x)=\frac1x-a=\frac{1-ax}{x}
+\]
+当 \(a\leqslant0\) 时，\(f'(x)>0\)，所以 \(f(x)\) 在 \((0,+\infty)\) 上单调递增. 当 \(a>0\) 时，\(f'(x)>0\) 在 \(\left(0,\dfrac1a\right)\) 上成立，\(f'(x)<0\) 在 \(\left(\dfrac1a,+\infty\right)\) 上成立，所以 \(f(x)\) 先增后减.
+
+\item 当 \(a\leqslant0\) 时，\(f(x)\) 在无穷远处趋于 \(+\infty\)，没有最大值. 因此必须有 \(a>0\)，此时最大值为
+\[
+f\left(\frac1a\right)=-\ln a+a-1
+\]
+条件给出
+\[
+-\ln a+a-1>2a-2\Longleftrightarrow \ln a+a<1
+\]
+函数 \(h(a)=\ln a+a\) 在 \((0,+\infty)\) 上严格递增，且 \(h(1)=1\)，所以
+\[
+0<a<1
+\]
 \end{enumerate}
 \end{solution}
 
@@ -300,8 +622,43 @@ x - 2y + 1 \leqslant 0,
 
 \begin{solution}
 \begin{enumerate}
-\item \(EF\parallel BC\)；
-\item 四边形 \(EBCF\) 的面积为 \(\dfrac{16\sqrt{3}}{3}\).
+\item 因为 \(ABC\) 是等腰三角形，\(AD\) 是顶角平分线，也是对称轴. 圆与 \(AB\)，\(AC\) 分别相切于 \(E\)，\(F\)，故圆心 \(O\) 到两腰的距离相等，且 \(O\) 在 \(AD\) 上. 于是直角三角形 \(AOE\) 与 \(AOF\) 全等，从而 \(AE=AF\). 又 \(AB=AC\)，所以
+\[
+\frac{AE}{AB}=\frac{AF}{AC}
+\]
+由三角形相似的逆定理，得 \(EF\parallel BC\).
+
+\item 设圆的半径为 \(r\). 由图中 \(G\) 为 \(AD\) 上圆的上交点，且 \(AG=r\)，又 \(OG=r\)，所以
+\[
+AO=AG+GO=2r
+\]
+由于 \(AE\) 是从点 \(A\) 引圆的切线，\(OE\perp AB\)，在直角三角形 \(AOE\) 中
+\[
+AE^{2}=AO^{2}-OE^{2}=4r^{2}-r^{2}=3r^{2}
+\]
+代入 \(AE=2\sqrt3\)，得 \(r=2\)，从而 \(AO=4\).
+
+弦 \(MN=2\sqrt3\)，且圆心到弦的垂线为 \(OD\)，所以
+\[
+OD=\sqrt{r^{2}-\left(\frac{MN}{2}\right)^{2}}=\sqrt{4-3}=1
+\]
+因此 \(AD=AO+OD=5\). 在直角三角形 \(AOE\) 中，\(\sin\angle OAE=OE/AO=1/2\)，故 \(\angle BAD=30^{\circ}\). 于是
+\(AB=\frac{AD}{\cos30^{\circ}}=\frac{10\sqrt3}{3}\)，\(BC=2BD=2AD\tan30^{\circ}=\frac{10\sqrt3}{3}\).
+由 \(EF\parallel BC\)，三角形 \(AEF\) 与三角形 \(ABC\) 相似，且相似比为
+\[
+\frac{AE}{AB}=\frac{2\sqrt3}{10\sqrt3/3}=\frac35
+\]
+所以
+\[
+S_{\triangle ABC}=\frac12\cdot\frac{10\sqrt3}{3}\cdot5=\frac{25\sqrt3}{3}
+\]
+\[
+S_{\triangle AEF}=\left(\frac35\right)^{2}S_{\triangle ABC}=3\sqrt3
+\]
+故
+\[
+S_{EBCF}=S_{\triangle ABC}-S_{\triangle AEF}=\frac{16\sqrt3}{3}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -318,8 +675,32 @@ y = t\sin \alpha,
 
 \begin{solution}
 \begin{enumerate}
-\item 交点的直角坐标为 \((0,0)\)，\(\left(\dfrac{\sqrt{3}}{2},\dfrac{3}{2}\right)\)；
-\item \(|AB|\) 的最大值为 \(4\).
+\item 由极坐标与直角坐标的关系，\(\rho\sin\theta=y\)，\(\rho\cos\theta=x\). 因而
+\(C_{2}:x^{2}+y^{2}=2y\)，\(C_{3}:x^{2}+y^{2}=2\sqrt3x\).
+两式相减得 \(y=\sqrt3x\). 代回第一式，得
+\[
+4x^{2}=2\sqrt3x
+\]
+所以 \(x=0\) 或 \(x=\dfrac{\sqrt3}{2}\). 对应的交点为
+\((0,0)\)，\(\left(\frac{\sqrt3}{2},\frac32\right)\).
+
+\item 由参数方程，\(C_{1}\) 上的点可写为 \((t\cos\alpha,t\sin\alpha)\). 将其代入 \(C_{2}\) 的直角坐标方程，且 \(t\ne0\)，得
+\[
+t^{2}=2t\sin\alpha\Longrightarrow t_{A}=2\sin\alpha
+\]
+同理，将其代入 \(C_{3}\)，得
+\[
+t^{2}=2\sqrt3t\cos\alpha\Longrightarrow t_{B}=2\sqrt3\cos\alpha
+\]
+两点在同一直线 \(C_{1}\) 上，故
+\[
+|AB|=|t_{A}-t_{B}|=2|\sin\alpha-\sqrt3\cos\alpha|
+\]
+由柯西不等式，
+\[
+|\sin\alpha-\sqrt3\cos\alpha|\leqslant\sqrt{1+3}=2
+\]
+等号可在 \(\alpha=\dfrac{5\pi}{6}\) 时取得，所以 \(|AB|\) 的最大值为 \(4\).
 \end{enumerate}
 \end{solution}
 
@@ -333,7 +714,28 @@ y = t\sin \alpha,
 
 \begin{solution}
 \begin{enumerate}
-\item \(\sqrt{a}+\sqrt{b}>\sqrt{c}+\sqrt{d}\)；
-\item \(\sqrt{a}+\sqrt{b}>\sqrt{c}+\sqrt{d}\) 是 \(|a-b|<|c-d|\) 的充要条件.
+\item 因为四个数均为正数，可以对两边平方. 又由 \(a+b=c+d\)，有
+\((\sqrt a+\sqrt b)^{2}=a+b+2\sqrt{ab}\)，\((\sqrt c+\sqrt d)^{2}=c+d+2\sqrt{cd}\).
+条件 \(ab>cd\) 给出 \(\sqrt{ab}>\sqrt{cd}\)，从而
+\[
+(\sqrt a+\sqrt b)^{2}>(\sqrt c+\sqrt d)^{2}
+\]
+两边均为正数，所以 \(\sqrt a+\sqrt b>\sqrt c+\sqrt d\).
+
+\item 仍由 \(a+b=c+d=:s\)，有
+\((a-b)^{2}=s^{2}-4ab\)，\((c-d)^{2}=s^{2}-4cd\).
+因此
+\[
+|a-b|<|c-d|\Longleftrightarrow ab>cd
+\]
+另一方面，由上面的平方展开式，
+\[
+\sqrt a+\sqrt b>\sqrt c+\sqrt d\Longleftrightarrow ab>cd
+\]
+所以
+\[
+\sqrt a+\sqrt b>\sqrt c+\sqrt d
+\Longleftrightarrow |a-b|<|c-d|
+\]
 \end{enumerate}
 \end{solution}

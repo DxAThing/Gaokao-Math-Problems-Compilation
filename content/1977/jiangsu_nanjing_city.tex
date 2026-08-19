@@ -5,7 +5,7 @@
 \begin{problem}
 写出下列各题的正确结果：
 
-\begin{enumerate}[label=（\arabic*）]
+\begin{enumerate}
     \item \(\sqrt{\left(\sqrt{2}-\sqrt{3}\right)^2}\)；
     \item \(0.2^7\times5^7\)；
     \item \(\log_3 27^{-1}\)；
@@ -15,63 +15,30 @@
 
 \begin{solution}
 \begin{enumerate}
-    \item 因为 \(\sqrt{3}>\sqrt{2}\)，所以 \(\sqrt{2}-\sqrt{3}<0\). 因此
-    \[
-    \sqrt{\left(\sqrt{2}-\sqrt{3}\right)^2}=\left|\sqrt{2}-\sqrt{3}\right|=\sqrt{3}-\sqrt{2}.
-    \]
-    \item
-    \[
-    0.2^7\times5^7=\left(0.2\times5\right)^7=1^7=1.
-    \]
-    \item 因为 \(27^{-1}=3^{-3}\)，所以
-    \[
-    \log_3 27^{-1}=\log_3 3^{-3}=-3.
-    \]
-    \item 利用 \(\tan70^\circ=\cot20^\circ=\dfrac{1}{\tan20^\circ}\) 和 \(\tan80^\circ=\cot10^\circ=\dfrac{1}{\tan10^\circ}\)，得
-    \[
-    \tan10^\circ\tan20^\circ\tan70^\circ\tan80^\circ=1.
-    \]
+    \item 因为 \(\sqrt{3}>\sqrt{2}\)，所以 \(\sqrt{2}-\sqrt{3}<0\)，从而 \(\sqrt{\left(\sqrt{2}-\sqrt{3}\right)^2}=\left|\sqrt{2}-\sqrt{3}\right|=\sqrt{3}-\sqrt{2}\).
+    \item 利用幂的乘法公式 \(a^n b^n=(ab)^n\)，得 \(0.2^7\times5^7=(0.2\times5)^7=1^7=1\).
+    \item 因为 \(27=3^3\)，所以 \(27^{-1}=3^{-3}\)，从而 \(\log_3 27^{-1}=\log_3 3^{-3}=-3\).
+    \item 由 \(\tan(90^\circ-\alpha)=\cot\alpha=\dfrac{1}{\tan\alpha}\)，得 \(\tan70^\circ=\dfrac{1}{\tan20^\circ}\)，\(\tan80^\circ=\dfrac{1}{\tan10^\circ}\). 因此 \(\tan10^\circ\tan20^\circ\tan70^\circ\tan80^\circ=\tan10^\circ\tan20^\circ\dfrac{1}{\tan20^\circ}\dfrac{1}{\tan10^\circ}=1\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
 用“\(<\)”或“\(>\)”符号把下列各组的值连接起来：
 
-\begin{enumerate}[label=（\arabic*）]
-    \item \(\log_2\frac{3.14}{\pi}\) 与 \(0\)；
+\begin{enumerate}
+    \item \(\log_2\dfrac{3.14}{\pi}\) 与 \(0\)；
     \item \(\cos40^\circ\) 与 \(\sin40^\circ\)；
-    \item \(\left(\frac{2}{5}\right)^{-2/3}\) 与 \(\left(\frac{2}{5}\right)^{-1/2}\)；
-    \item \(0.\dot{3}\) 与 \(\frac{3}{10}\).
+    \item \(\left(\dfrac{2}{5}\right)^{-2/3}\) 与 \(\left(\dfrac{2}{5}\right)^{-1/2}\)；
+    \item \(0.\dot{3}\) 与 \(\dfrac{3}{10}\).
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-    \item 因为 \(3.14<\pi\)，所以 \(0<\dfrac{3.14}{\pi}<1\). 又因为对数的底数 \(2>1\)，故
-    \[
-    \log_2\frac{3.14}{\pi}<\log_2 1=0.
-    \]
-    \item
-    \[
-    \cos40^\circ=\sin\left(90^\circ-40^\circ\right)=\sin50^\circ.
-    \]
-    因为正弦函数在 \(\left[0^\circ,90^\circ\right]\) 上递增，且 \(50^\circ>40^\circ\)，所以 \(\cos40^\circ>\sin40^\circ\).
-    \item
-    \[
-    \left(\frac{2}{5}\right)^{-2/3}=\left(\frac{5}{2}\right)^{2/3}.
-    \]
-    以及
-    \[
-    \left(\frac{2}{5}\right)^{-1/2}=\left(\frac{5}{2}\right)^{1/2}.
-    \]
-    因为 \(\dfrac{5}{2}>1\)，且 \(\dfrac{2}{3}>\dfrac{1}{2}\)，所以
-    \[
-    \left(\frac{2}{5}\right)^{-2/3}>\left(\frac{2}{5}\right)^{-1/2}.
-    \]
-    \item
-    \[
-    0.\dot{3}=\frac{3}{10}+\frac{3}{10^2}+\frac{3}{10^3}+\cdots=\frac{\frac{3}{10}}{1-\frac{1}{10}}=\frac{1}{3}>\frac{3}{10}.
-    \]
+    \item 因为 \(3.14<\pi\)，且两者均为正数，所以 \(0<\dfrac{3.14}{\pi}<1\). 又因为对数函数 \(y=\log_2 x\) 的底数 \(2>1\)，在正数范围内是增函数，故 \(\log_2\dfrac{3.14}{\pi}<\log_2 1=0\).
+    \item 由余函数关系式，\(\cos40^\circ=\sin(90^\circ-40^\circ)=\sin50^\circ\). 正弦函数在 \([0^\circ,90^\circ]\) 上递增，且 \(50^\circ>40^\circ\)，所以 \(\sin50^\circ>\sin40^\circ\)，即 \(\cos40^\circ>\sin40^\circ\).
+    \item 将负指数化为正指数，得 \(\left(\dfrac{2}{5}\right)^{-2/3}=\left(\dfrac{5}{2}\right)^{2/3}\)，\(\left(\dfrac{2}{5}\right)^{-1/2}=\left(\dfrac{5}{2}\right)^{1/2}\). 因为底数 \(\dfrac{5}{2}>1\)，幂函数 \(y=\left(\dfrac{5}{2}\right)^t\) 关于指数 \(t\) 递增，且 \(\dfrac{2}{3}>\dfrac{1}{2}\)，所以 \(\left(\dfrac{2}{5}\right)^{-2/3}>\left(\dfrac{2}{5}\right)^{-1/2}\).
+    \item 设 \(0.\dot{3}=0.333\cdots\). 将它看作首项为 \(\dfrac{3}{10}\)、公比为 \(\dfrac{1}{10}\) 的无穷等比数列的和，得 \(0.\dot{3}=\dfrac{\frac{3}{10}}{1-\frac{1}{10}}=\dfrac{1}{3}\). 因为 \(\dfrac{1}{3}>\dfrac{3}{10}\)，所以 \(0.\dot{3}>\dfrac{3}{10}\).
 \end{enumerate}
 \end{solution}
 
@@ -80,112 +47,59 @@
 \end{problem}
 
 \begin{solution}
-由和差角公式，
-\[
-\begin{gathered}
-\sin165^\circ=\sin15^\circ=\sin\left(45^\circ-30^\circ\right)\\
-=\sin45^\circ\cos30^\circ-\cos45^\circ\sin30^\circ=\frac{\sqrt{6}-\sqrt{2}}{4},
-\end{gathered}
-\]
-并且
-\[
-\begin{gathered}
-\cos255^\circ=-\cos75^\circ=-\cos\left(45^\circ+30^\circ\right)\\
-=-\left(\cos45^\circ\cos30^\circ-\sin45^\circ\sin30^\circ\right)=\frac{\sqrt{2}-\sqrt{6}}{4}.
-\end{gathered}
-\]
+因为 \(165^\circ=180^\circ-15^\circ\)，所以 \(\sin165^\circ=\sin15^\circ\). 再由 \(15^\circ=45^\circ-30^\circ\) 及正弦差角公式，得 \(\sin165^\circ=\sin(45^\circ-30^\circ)=\sin45^\circ\cos30^\circ-\cos45^\circ\sin30^\circ=\dfrac{\sqrt{2}}{2}\cdot\dfrac{\sqrt{3}}{2}-\dfrac{\sqrt{2}}{2}\cdot\dfrac{1}{2}=\dfrac{\sqrt{6}-\sqrt{2}}{4}\).
+
+又因为 \(255^\circ=180^\circ+75^\circ\)，所以 \(\cos255^\circ=-\cos75^\circ\). 由 \(75^\circ=45^\circ+30^\circ\) 及余弦和角公式，得 \(\cos255^\circ=-\cos(45^\circ+30^\circ)=-\left(\cos45^\circ\cos30^\circ-\sin45^\circ\sin30^\circ\right)=-\left(\dfrac{\sqrt{2}}{2}\cdot\dfrac{\sqrt{3}}{2}-\dfrac{\sqrt{2}}{2}\cdot\dfrac{1}{2}\right)=\dfrac{\sqrt{2}-\sqrt{6}}{4}\).
 \end{solution}
 
 \begin{problem}
 求极限值：
 
-\begin{enumerate}[label=（\arabic*）]
-    \item \(\displaystyle\lim_{x\to2}\frac{2x^2-3x-2}{x-2}\)；
-    \item \(\displaystyle\lim_{x\to\infty}\frac{3x^2-4x+5}{2x^2+x-1}\).
+\begin{enumerate}
+    \item \(\displaystyle\lim_{x\to2}\dfrac{2x^2-3x-2}{x-2}\)；
+    \item \(\displaystyle\lim_{x\to\infty}\dfrac{3x^2-4x+5}{2x^2+x-1}\).
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-    \item 因为 \(2x^2-3x-2=\left(2x+1\right)\left(x-2\right)\)，所以当 \(x\ne2\) 时，
-    \[
-    \frac{2x^2-3x-2}{x-2}=2x+1.
-    \]
-    因此
-    \[
-    \lim_{x\to2}\frac{2x^2-3x-2}{x-2}=\lim_{x\to2}\left(2x+1\right)=5.
-    \]
-    \item 分子、分母同除以 \(x^2\)，得
-    \[
-    \lim_{x\to\infty}\frac{3x^2-4x+5}{2x^2+x-1}=\lim_{x\to\infty}\frac{3-\frac{4}{x}+\frac{5}{x^2}}{2+\frac{1}{x}-\frac{1}{x^2}}=\frac{3}{2},
-    \]
-    其中利用了 \(\displaystyle\lim_{x\to\infty}\frac{1}{x}=0\) 和 \(\displaystyle\lim_{x\to\infty}\frac{1}{x^2}=0\).
+    \item 因式分解分子，得 \(2x^2-3x-2=(2x+1)(x-2)\). 当 \(x\ne2\) 时，\(\dfrac{2x^2-3x-2}{x-2}=2x+1\)，因此 \(\displaystyle\lim_{x\to2}\dfrac{2x^2-3x-2}{x-2}=\lim_{x\to2}(2x+1)=2\times2+1=5\).
+    \item 分子、分母同除以 \(x^2\)，得 \(\displaystyle\lim_{x\to\infty}\dfrac{3x^2-4x+5}{2x^2+x-1}=\lim_{x\to\infty}\dfrac{3-\frac{4}{x}+\frac{5}{x^2}}{2+\frac{1}{x}-\frac{1}{x^2}}\). 当 \(x\to\infty\) 时，\(\dfrac{1}{x}\to0\)，\(\dfrac{1}{x^2}\to0\)，且分母的极限为 \(2\ne0\)，所以原极限等于 \(\dfrac{3-0+0}{2+0-0}=\dfrac{3}{2}\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
 解方程组
 \(\begin{cases}
-\dfrac{3x-5y}{2xy}=1\frac{1}{3},\\
+\dfrac{3x-5y}{2xy}=1\dfrac{1}{3},\\
 \dfrac{3}{x}+\dfrac{1}{y}=4.
 \end{cases}\)
 \end{problem}
 
 \begin{solution}
-因为原方程组的分母中有 \(x\) 和 \(y\)，所以 \(x\ne0\)，\(y\ne0\). 将第一式拆开，得
-\[
-\frac{3x-5y}{2xy}=\frac{3}{2y}-\frac{5}{2x}=\frac{4}{3}.
-\]
-令 \(u=\dfrac{1}{x}\)，\(v=\dfrac{1}{y}\)，则方程组化为
+由原方程组中的分母可知 \(x\ne0\)，\(y\ne0\). 又 \(1\dfrac{1}{3}=\dfrac{4}{3}\)，并且 \(\dfrac{3x-5y}{2xy}=\dfrac{3}{2y}-\dfrac{5}{2x}\). 令 \(u=\dfrac{1}{x}\)，\(v=\dfrac{1}{y}\)，则 \(u\ne0\)，\(v\ne0\)，原方程组化为
 \[
 \begin{cases}
 3v-5u=\dfrac{8}{3},\\
 3u+v=4.
 \end{cases}
 \]
-由第二式得 \(v=4-3u\). 代入第一式，得
-\[
-3\left(4-3u\right)-5u=\frac{8}{3},\qquad 12-14u=\frac{8}{3},\qquad u=\frac{2}{3}.
-\]
-    从而 \(v=4-3\times\dfrac{2}{3}=2\)，所以
-\[
-x=\frac{1}{u}=\frac{3}{2}.
-\]
-以及
-\[
-y=\frac{1}{v}=\frac{1}{2}.
-\]
-代回原方程组检验：
-\[
-\frac{3x-5y}{2xy}=\frac{\frac{9}{2}-\frac{5}{2}}{\frac{3}{2}}=\frac{4}{3}.
-\]
-\[
-\frac{3}{x}+\frac{1}{y}=2+2=4,
-\]
-故方程组的解为 \(x=\dfrac{3}{2}\)，\(y=\dfrac{1}{2}\).
+由第二式得 \(v=4-3u\). 代入第一式，得 \(3(4-3u)-5u=\dfrac{8}{3}\)，即 \(12-14u=\dfrac{8}{3}\)，所以 \(u=\dfrac{2}{3}\). 于是 \(v=4-3\times\dfrac{2}{3}=2\)，从而 \(x=\dfrac{1}{u}=\dfrac{3}{2}\)，\(y=\dfrac{1}{v}=\dfrac{1}{2}\).
+
+检验得 \(\dfrac{3x-5y}{2xy}=\dfrac{\frac{9}{2}-\frac{5}{2}}{\frac{3}{2}}=\dfrac{4}{3}=1\dfrac{1}{3}\)，且 \(\dfrac{3}{x}+\dfrac{1}{y}=2+2=4\)，同时 \(x\ne0\)，\(y\ne0\). 故方程组的解为 \(x=\dfrac{3}{2}\)，\(y=\dfrac{1}{2}\).
 \end{solution}
 
 \begin{problem}
-在 \(\odot O\) 中，直径 \(AB\) 和弦 \(AC\) 的夹角为 \(15^\circ\)，过 \(C\) 点的切线和 \(AB\) 的延长线相交于 \(P\)，已知 \(OP=24 \mathrm{~cm}\)，求 \(\odot O\) 的半径.
+在 \(\odot O\) 中，直径 \(AB\) 和弦 \(AC\) 的夹角为 \(15^\circ\)，过 \(C\) 点的切线和 \(AB\) 的延长线相交于 \(P\)，已知 \(OP=24\mathrm{~cm}\)，求 \(\odot O\) 的半径.
 
 \FigureLayoutDeclare{img/1977/jiangsu_nanjing_city/q6_fig1.png}{7.0cm}{6bp 0bp 62bp 10bp}
 \bitmapfigure[max width=5.2cm]{img/1977/jiangsu_nanjing_city/q6_fig1.png}
 \end{problem}
 
 \begin{solution}
-连接 \(OC\). 因为 \(AB\) 是直径，所以由圆周角定理，\(\angle ACB=90^\circ\). 又因为 \(\angle CAB=15^\circ\)，所以
-\[
-\angle ABC=90^\circ-15^\circ=75^\circ.
-\]
-同弧所对的圆心角等于圆周角的两倍，因此 \(\angle AOC=2\angle ABC=150^\circ\). 由于 \(A,O,P\) 三点共线且 \(O\) 在 \(A\)，\(P\) 之间，所以
-\[
-\angle COP=180^\circ-\angle COA=30^\circ.
-\]
-过 \(C\) 的直线 \(CP\) 是切线，故 \(OC\perp CP\). 在直角三角形 \(OCP\) 中，\(OP=24\mathrm{~cm}\)，所以
-\[
-OC=OP\cos\angle COP=24\cos30^\circ=12\sqrt{3}\mathrm{~cm}.
-\]
-因此 \(\odot O\) 的半径为 \(12\sqrt{3}\mathrm{~cm}\).
+连接 \(OC\). 因为 \(AB\) 是直径，所以由直径所对的圆周角为直角，得 \(\angle ACB=90^\circ\). 题设给出 \(\angle CAB=15^\circ\)，故在 \(\triangle ABC\) 中，\(\angle ABC=180^\circ-90^\circ-15^\circ=75^\circ\). 同弧 \(AC\) 所对的圆心角等于圆周角的两倍，所以 \(\angle AOC=2\angle ABC=150^\circ\). 由图中 \(A\)、\(O\)、\(P\) 三点共线且 \(O\) 在 \(A\)、\(P\) 之间，射线 \(OA\) 与射线 \(OP\) 方向相反，故 \(\angle COP=180^\circ-\angle COA=30^\circ\).
+
+因为 \(CP\) 是过 \(C\) 的切线，所以半径 \(OC\perp CP\)，\(\triangle OCP\) 是直角三角形，且 \(OP\) 为斜边. 因此 \(OC=OP\cos\angle COP=24\cos30^\circ=12\sqrt{3}\mathrm{~cm}\). 所以 \(\odot O\) 的半径为 \(12\sqrt{3}\mathrm{~cm}\).
 \end{solution}
 
 \begin{problem}
@@ -193,23 +107,9 @@ OC=OP\cos\angle COP=24\cos30^\circ=12\sqrt{3}\mathrm{~cm}.
 \end{problem}
 
 \begin{solution}
-设两直线的斜率分别为 \(m_1\) 和 \(m_2\). 解方程
-\[
-6x^2-x-1=0
-\]
-得
-\[
-m_1=\frac{1+5}{12}=\frac{1}{2}.
-\]
-以及
-\[
-m_2=\frac{1-5}{12}=-\frac{1}{3}.
-\]
-两直线交角 \(\theta\) 的正切值为
-\[
-\tan\theta=\left|\frac{m_1-m_2}{1+m_1m_2}\right|=\left|\frac{\frac{1}{2}+\frac{1}{3}}{1-\frac{1}{6}}\right|=\frac{\frac{5}{6}}{\frac{5}{6}}=1.
-\]
-交角取锐角，故 \(\theta=45^\circ\).
+设两直线的斜率分别为 \(m_1\) 和 \(m_2\). 方程 \(6x^2-x-1=0\) 的判别式为 \(\Delta=(-1)^2-4\times6\times(-1)=25\)，所以两个根为 \(m_1=\dfrac{1+\sqrt{25}}{12}=\dfrac{1}{2}\) 和 \(m_2=\dfrac{1-\sqrt{25}}{12}=-\dfrac{1}{3}\).
+
+设两直线的锐交角为 \(\theta\). 因为 \(1+m_1m_2=1-\dfrac{1}{6}=\dfrac{5}{6}\ne0\)，两直线不垂直；由两直线夹角公式，\(\tan\theta=\left|\dfrac{m_1-m_2}{1+m_1m_2}\right|=\left|\dfrac{\frac{1}{2}-\left(-\frac{1}{3}\right)}{1-\frac{1}{6}}\right|=\dfrac{\frac{5}{6}}{\frac{5}{6}}=1\). 锐角 \(\theta\) 满足 \(\tan\theta=1\)，故 \(\theta=45^\circ\).
 \end{solution}
 
 \begin{problem}
@@ -217,18 +117,7 @@ m_2=\frac{1-5}{12}=-\frac{1}{3}.
 \end{problem}
 
 \begin{solution}
-由极坐标与直角坐标的关系 \(x=\rho\cos\theta\)，\(y=\rho\sin\theta\)，\(x^2+y^2=\rho^2\)，将原方程两边乘以 \(\rho\)，得
-\[
-\rho^2=4\rho\sin\theta=4y.
-\]
-因此直角坐标方程为
-\[
-x^2+y^2=4y,
-\]
-即
-\[
-x^2+\left(y-2\right)^2=4.
-\]
+由极坐标与直角坐标的关系 \(x=\rho\cos\theta\)，\(y=\rho\sin\theta\)，以及 \(\rho^2=x^2+y^2\)，将方程 \(\rho=4\sin\theta\) 两边同乘以 \(\rho\)，得 \(\rho^2=4\rho\sin\theta=4y\). 因此直角坐标方程为 \(x^2+y^2=4y\). 配方可得 \(x^2+y^2-4y=0\)，即 \(x^2+(y-2)^2=4\).
 \end{solution}
 
 \begin{problem}
@@ -236,25 +125,15 @@ x^2+\left(y-2\right)^2=4.
 \end{problem}
 
 \begin{solution}
-设该船去时速度为 \(v\text{ 公里/小时}\)，则返航速度为 \(\left(v-4\right)\text{ 公里/小时}\)，且 \(v>4\). 去时和返航时的时间分别为 \(\dfrac{12}{v}\) 小时和 \(\dfrac{12}{v-4}\) 小时. 根据返航比去时多用 \(30\) 分钟，即 \(\dfrac{1}{2}\) 小时，列方程
-\[
-\frac{12}{v-4}-\frac{12}{v}=\frac{1}{2}.
-\]
-因为 \(v>4\)，所以可以通分，得
-\[
-\frac{48}{v\left(v-4\right)}=\frac{1}{2},\qquad v\left(v-4\right)=96,\qquad v^2-4v-96=0.
-\]
-因式分解得
-\[
-\left(v-12\right)\left(v+8\right)=0,
-\]
-所以 \(v=12\) 或 \(v=-8\). 速度必须为正数，且满足 \(v>4\)，故舍去 \(v=-8\)，得到该船去时速度为 \(12\text{ 公里/小时}\).
+设该船去时的速度为 \(v\text{ 公里/小时}\)，则返航速度为 \((v-4)\text{ 公里/小时}\). 返航速度必须为正，所以 \(v>4\). 去时用时为 \(\dfrac{12}{v}\) 小时，返航用时为 \(\dfrac{12}{v-4}\) 小时；又 \(30\) 分钟等于 \(\dfrac{1}{2}\) 小时，因此由题意列方程 \(\dfrac{12}{v-4}-\dfrac{12}{v}=\dfrac{1}{2}\).
+
+因为 \(v>4\)，分母均不为零，可以通分，得 \(\dfrac{48}{v(v-4)}=\dfrac{1}{2}\)，所以 \(v(v-4)=96\)，即 \(v^2-4v-96=0\). 因式分解得 \((v-12)(v+8)=0\)，故 \(v=12\) 或 \(v=-8\). 由 \(v>4\) 舍去 \(v=-8\)，所以该船去时速度为 \(12\text{ 公里/小时}\).
 \end{solution}
 
 \begin{problem}
 在 \(\triangle ABC\) 中，\(\angle A\) 的正切是 \(2\)，\(\angle B\) 的正切是 \(3\)，
 
-\begin{enumerate}[label=（\arabic*）]
+\begin{enumerate}
     \item 求 \(\angle C\) 的正切；
     \item 这个三角形是钝角三角形，锐角三角形，还是直角三角形？为什么？
     \item 设这个三角形最短边是 \(1\)，求它的最长边.
@@ -263,28 +142,10 @@ x^2+\left(y-2\right)^2=4.
 
 \begin{solution}
 \begin{enumerate}
-    \item 三角形内角 \(A\)，\(B\) 均在 \(0^\circ\) 与 \(180^\circ\) 之间，且正切值为正，所以 \(A\)，\(B\) 都是锐角. 因而 \(A+B\) 的正切可以用和角公式计算：
-    \[
-    \tan\left(A+B\right)=\frac{\tan A+\tan B}{1-\tan A\tan B}=\frac{2+3}{1-2\times3}=-1.
-    \]
-    因为 \(A+B\in\left(0^\circ,180^\circ\right)\)，且正切值为负，所以 \(90^\circ<A+B<180^\circ\). 在此范围内满足正切值为 \(-1\) 的角为 \(135^\circ\)，故 \(C=180^\circ-135^\circ=45^\circ\)，从而 \(\tan C=1\).
-    \item 由上面可知 \(C=45^\circ\)，而 \(A\)，\(B\) 均为锐角，所以这个三角形是锐角三角形.
-    \item 因为正切函数在 \(\left(0^\circ,90^\circ\right)\) 上递增，且
-    \[
-    \tan B=3>\tan A=2>\tan C=1,
-    \]
-    所以 \(B>A>C\). 三角形中大角所对的边较长，故 \(AC\) 是最长边，\(AB\) 是最短边. 设 \(b=AC\)，\(c=AB\)，则 \(c=1\). 因为 \(B\) 是锐角，
-    \[
-    \cos B=\frac{1}{\sqrt{1+\tan^2B}}=\frac{1}{\sqrt{10}}.
-    \]
-    从而
-    \[
-    \sin B=\tan B\cos B=\frac{3}{\sqrt{10}}.
-    \]
-    由正弦定理，
-    \[
-    \frac{b}{c}=\frac{\sin B}{\sin C}=\frac{\frac{3}{\sqrt{10}}}{\frac{\sqrt{2}}{2}}=\frac{3}{\sqrt{5}}.
-    \]
-    因此最长边 \(AC=b=\dfrac{3}{\sqrt{5}}=\dfrac{3\sqrt{5}}{5}\).
+    \item 记三个内角为 \(A\)、\(B\)、\(C\). 因为三角形内角满足 \(0^\circ<A<180^\circ\)，\(0^\circ<B<180^\circ\)，且 \(\tan A=2>0\)，\(\tan B=3>0\)，所以 \(A\)、\(B\) 均为锐角. 由正切和角公式，\(\tan(A+B)=\dfrac{\tan A+\tan B}{1-\tan A\tan B}=\dfrac{2+3}{1-2\times3}=-1\). 又 \(0^\circ<A+B<180^\circ\)，而正切值为负，故 \(90^\circ<A+B<180^\circ\). 在此范围内 \(\tan(A+B)=-1\) 的角为 \(135^\circ\)，所以 \(A+B=135^\circ\)，从而 \(C=180^\circ-(A+B)=45^\circ\)，故 \(\tan C=1\).
+    \item 由第一问得 \(C=45^\circ\)，且前面已知 \(A\)、\(B\) 均为锐角，所以 \(A\)、\(B\)、\(C\) 全部小于 \(90^\circ\). 因此这个三角形是锐角三角形.
+    \item 设 \(a=BC\)，\(b=CA\)，\(c=AB\)，分别为 \(A\)、\(B\)、\(C\) 的对边. 因为正切函数在 \((0^\circ,90^\circ)\) 上递增，且 \(\tan B=3>\tan A=2>\tan C=1\)，所以 \(B>A>C\)，从而 \(b>a>c\). 因此最短边为 \(c=AB\)，由题意 \(c=1\)，最长边为 \(b=CA\).
+
+    因为 \(B\) 是锐角，且 \(\tan B=3\)，由 \(1+\tan^2B=\dfrac{1}{\cos^2B}\) 得 \(\cos B=\dfrac{1}{\sqrt{1+3^2}}=\dfrac{1}{\sqrt{10}}\)，所以 \(\sin B=\tan B\cos B=\dfrac{3}{\sqrt{10}}\). 又 \(C=45^\circ\)，故 \(\sin C=\dfrac{\sqrt{2}}{2}\). 根据正弦定理，\(\dfrac{b}{c}=\dfrac{\sin B}{\sin C}=\dfrac{\frac{3}{\sqrt{10}}}{\frac{\sqrt{2}}{2}}=\dfrac{3}{\sqrt{5}}\). 代入 \(c=1\)，得最长边 \(b=\dfrac{3}{\sqrt{5}}=\dfrac{3\sqrt{5}}{5}\).
 \end{enumerate}
 \end{solution}

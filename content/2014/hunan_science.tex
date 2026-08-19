@@ -15,6 +15,14 @@
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+因为分式有意义，所以 \(z\ne0\). 由题意得 \(z+\i=\i z\)，即 \((1-\i)z=-\i\). 因此
+\[
+z=\frac{-\i}{1-\i}=\frac{-\i(1+\i)}{(1-\i)(1+\i)}=\frac{1-\i}{2}=\frac{1}{2}-\frac{1}{2}\i
+\]
+故选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -28,6 +36,10 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+简单随机抽样中每个个体被抽中的概率为 \(n/N\). 系统抽样保证每个个体等可能被抽取，所以被抽中的概率也为 \(n/N\). 分层抽样按各层个体数比例抽取，各个体被抽中的概率同样为 \(n/N\). 因而 \(p_1=p_2=p_3\)，故选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -41,6 +53,14 @@ D
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+把题设等式中的 \(x\) 换成 \(-x\)，并利用 \(f\) 为偶函数、\(g\) 为奇函数，得
+\[
+f(x)+g(x)=(-x)^3+(-x)^2+1=-x^3+x^2+1
+\]
+令 \(x=1\)，得到 \(f(1)+g(1)=-1+1+1=1\)，故选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -54,6 +74,15 @@ C
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+要得到 \(x^2y^3\)，需从五个因式中取两次 \(\frac{x}{2}\)，取三次 \(-2y\). 因而所求系数为
+\[
+\mathrm C_5^3\left(\frac{1}{2}\right)^2(-2)^3
+=10\cdot\frac{1}{4}\cdot(-8)=-20
+\]
+故选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -76,6 +105,12 @@ A
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+若 \(x>y\)，两边同乘以 \(-1\) 后不等号方向改变，必有 \(-x<-y\)，所以命题 \(p\) 为真. 命题 \(q\) 不恒真，例如取 \(x=0\)，\(y=-1\)，则 \(x>y\)，但 \(x^2=0<1=y^2\)，所以 \(q\) 为假，\(\neg q\) 为真.
+
+因此，命题 \(p\wedge q\) 为假，\(p\vee q\) 为真，\(p\wedge(\neg q)\) 为真，\((\neg p)\vee q\) 为假. 真命题为第 \(2\)、第 \(3\) 个，故选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -84,13 +119,19 @@ C
 \bitmapfigure[max width=0.34\linewidth]{img/2014/hunan_science/q6_fig1.png}
 
 \choices
-    {\([-6, - 2]\)}
-    {\([-5, - 1]\)}
+    {\([-6, -2]\)}
+    {\([-5, -1]\)}
     {\([-4, 5]\)}
     {\([-3, 6]\)}
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+当 \(t\geqslant0\) 时，程序直接输出 \(S=t-3\)，所以 \(S\in[-3,-1]\). 当 \(-2\leqslant t<0\) 时，程序先把 \(t\) 更新为 \(2t^2+1\). 此时 \(2t^2+1>0\)，下一次判断直接进入输出分支，于是 \(S=2t^2-2\). 因为 \(t^2\in(0,4]\)，所以 \(S\in(-2,6]\).
+
+合并两种情况得 \(S\in[-3,6]\)，故选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -106,6 +147,14 @@ D
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+由三视图可知，该几何体是棱长为 \(12\) 的直三棱柱，三棱柱的直角三角形底面的两条直角边长分别为 \(6\)、\(8\)，斜边长为 \(10\). 这个三角形的内切圆半径为
+\[
+r_0=\frac{6+8-10}{2}=2
+\]
+任意内接球在垂直于棱柱侧棱的截面上都是内接于该直角三角形的圆，所以球半径不超过 \(2\). 另一方面，将球心取在三角形内心且位于棱柱长度方向的中点，半径为 \(2\) 的球到两个端面的距离均为 \(6\)，能完整置于棱柱内. 因而最大半径为 \(2\)，故选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -119,6 +168,18 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+设第一年初生产总值为 \(G\)，两年平均增长率为 \(r\). 两年后生产总值一方面为 \(G(1+p)(1+q)\)，另一方面为 \(G(1+r)^2\). 因此
+\[
+(1+r)^2=(1+p)(1+q)
+\]
+由于连续两年增长，取正平方根得 \(1+r=\sqrt{(1+p)(1+q)}\)，所以
+\[
+r=\sqrt{(1+p)(1+q)}-1
+\]
+故选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -132,6 +193,19 @@ D
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+由积分条件得
+\[
+0=\int_0^{2\pi/3}\sin(x-\varphi)\,\mathrm{d}x
+=\cos\varphi-\cos\left(\frac{2\pi}{3}-\varphi\right)
+\]
+利用余弦差公式，\(\sin(\varphi-\frac{\pi}{3})=0\)，故 \(\varphi=\frac{\pi}{3}+k\pi\)，其中 \(k\in\Z\). 于是 \(f(x)=(-1)^k\sin(x-\frac{\pi}{3})\). 正弦函数的对称轴满足 \(x-\frac{\pi}{3}=\frac{\pi}{2}+n\pi\)，所以本题函数的一条对称轴为
+\[
+x=\frac{5\pi}{6}
+\]
+故选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -145,6 +219,22 @@ A
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+取函数 \(f\) 图象上的点 \((x,f(x))\)，其中 \(x<0\). 其关于 \(y\) 轴的对称点为 \((-x,f(x))\)，要在 \(g\) 的图象上，就必须满足
+\[
+x^2+\e^x-\frac12=x^2+\ln(a-x)
+\]
+因此
+\(a=x+\exp\left(\e^x-\frac12\right)\)，\(x<0\).
+记 \(h(x)=x+\exp(\e^x-\frac12)\). 则
+\[
+h'(x)=1+\e^x\exp\left(\e^x-\frac12\right)>0
+\]
+所以 \(h\) 在 \((-\infty,0)\) 上严格递增. 又
+\(\lim_{x\to-\infty}h(x)=-\infty\)，\(\lim_{x\to0^-}h(x)=\exp\left(\frac12\right)=\sqrt{\e}\).
+由于 \(x=0\) 不在取值范围内，\(h\) 的值域为 \((-\infty,\sqrt{\e})\). 故选 B.
+\end{solution}
 \end{problem}
 
 \section{填空题}
@@ -157,6 +247,18 @@ y = 1 + \sin \alpha.
 \begin{answer}
 \(\rho(\cos\theta-\sin\theta)=1\)
 \end{answer}
+
+\begin{solution}
+曲线 \(C\) 是圆 \((x-2)^2+(y-1)^2=1\)，圆心为 \((2,1)\)，半径为 \(1\). 弦长 \(|AB|=2\) 等于直径，所以直线 \(l\) 经过圆心. 其倾斜角为 \(\pi/4\)，斜率为 \(1\)，故
+\[
+y-1=x-2
+\]
+即 \(y=x-1\). 代入 \(x=\rho\cos\theta\)，\(y=\rho\sin\theta\)，得
+\[
+\rho\sin\theta=\rho\cos\theta-1
+\]
+所以直线的极坐标方程为 \(\rho(\cos\theta-\sin\theta)=1\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -166,6 +268,22 @@ y = 1 + \sin \alpha.
 \begin{answer}
 \(\frac{3}{2}\)
 \end{answer}
+
+\begin{solution}
+设 \(M\) 为弦 \(BC\) 的中点. 因为圆心到弦的垂线平分弦，所以 \(AO\perp BC\) 使得 \(A\)，\(O\)，\(M\) 共线，且
+\[
+BM=\frac{BC}{2}=\sqrt{2}
+\]
+在直角三角形 \(ABM\) 中，
+\[
+AM^2=AB^2-BM^2=3-2=1
+\]
+所以 \(AM=1\). 设圆半径为 \(R\)，\(OM=u\). 在直角三角形 \(OMB\) 中，\(R^2=u^2+2\)，从而 \(R>u\). 若 \(O\) 在 \(A\)、\(M\) 之间，则 \(R+u=1\)；若三点不按此顺序排列，则 \(R-u=1\). 结合
+\[
+R^2-u^2=2
+\]
+分别得到 \(R-u=2\) 或 \(R+u=2\)，两种情形均有 \(2R=3\). 因而 \(R=\frac{3}{2}\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -173,6 +291,14 @@ y = 1 + \sin \alpha.
 \begin{answer}
 \(-3\)
 \end{answer}
+
+\begin{solution}
+由绝对值不等式得
+\[
+-3<ax-2<3
+\]
+即 \(-1<ax<5\). 若 \(a=0\)，则不等式恒成立，解集为 \(\R\)，与题设不符. 若 \(a>0\)，则解集为 \(\left(-\frac{1}{a},\frac{5}{a}\right)\)，其左端点与右端点的绝对值之比为 \(1:5\)，与题给解集不符. 因而 \(a<0\)，除以 \(a\) 时不等号方向改变，解集为 \(\left(\frac{5}{a},-\frac{1}{a}\right)\). 比较端点得 \(\frac{5}{a}=-\frac{5}{3}\)，所以 \(a=-3\)，并且右端点也确为 \(-1/a=1/3\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -184,6 +310,14 @@ y \geqslant k,
 \begin{answer}
 \(-2\)
 \end{answer}
+
+\begin{solution}
+由 \(y\leqslant x\) 及目标函数中 \(x\) 的系数为正，对固定的 \(y\)，使 \(z=2x+y\) 取得最小值时应取 \(x=y\). 于是 \(z\geqslant3y\). 约束还给出 \(y\geqslant k\)，所以在可行域内
+\[
+z\geqslant3y\geqslant3k
+\]
+取 \(x=y=k\) 时，第三个约束和第一个约束均满足；只要可行域存在，还需 \(2k\leqslant4\)，本题所得 \(k\) 满足这一条件. 因而最小值为 \(3k\)，由 \(3k=-6\) 得 \(k=-2\). 此时 \((x,y)=(-2,-2)\) 可行，故结论成立.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -193,13 +327,35 @@ y \geqslant k,
 \begin{answer}
 \(1+\sqrt{2}\)
 \end{answer}
+
+\begin{solution}
+建立如图所示的直角坐标系，令 \(AD\) 在 \(x\) 轴上且正方形 \(ABCD\) 位于其下方，则
+\(A\left(-\frac a2,0\right)\)，\(D\left(\frac a2,0\right)\)，\(C\left(\frac a2,-a\right)\)，\(F\left(\frac a2+b,b\right)\).
+把点 \(C\) 代入抛物线方程，得 \(a^2=2p\cdot\frac a2=pa\)，所以 \(p=a\). 再把点 \(F\) 代入，得
+\[
+b^2=2a\left(\frac a2+b\right)=a^2+2ab
+\]
+令 \(r=b/a\)，由 \(a>0\) 得 \(r^2=1+2r\)，即 \(r^2-2r-1=0\). 因为 \(b>a\)，取正根，故 \(\frac ba=1+\sqrt2\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
-在平面直角坐标系中， \(O\) 为原点， \(A(-1,0)\)，\(B(0,\sqrt{3})\)，\(C(3,0)\)，动点 \(D\) 满足 \(\left|\overrightarrow{CD}\right| = 1\)，则 \(\left|\overrightarrow{OA} +\overrightarrow{OB} +\overrightarrow{OD}\right|\) 的最大值是\fillinblank{}.
+在平面直角坐标系中， \(O\) 为原点，\(A(-1,0)\)，\(B(0,\sqrt{3})\)，\(C(3,0)\)，动点 \(D\) 满足 \(\left|\overrightarrow{CD}\right| = 1\)，则 \(\left|\overrightarrow{OA} +\overrightarrow{OB} +\overrightarrow{OD}\right|\) 的最大值是\fillinblank{}.
 \begin{answer}
 \(1+\sqrt{7}\)
 \end{answer}
+
+\begin{solution}
+由点的坐标得
+\[
+\overrightarrow{OA}+\overrightarrow{OB}+\overrightarrow{OC}=(-1,0)+(0,\sqrt3)+(3,0)=(2,\sqrt3)
+\]
+又因为 \(|\overrightarrow{CD}|=1\)，可写成 \(\overrightarrow{OD}=\overrightarrow{OC}+\overrightarrow{CD}\)，故
+\[
+\overrightarrow{OA}+\overrightarrow{OB}+\overrightarrow{OD}=(2,\sqrt3)+\overrightarrow{CD}
+\]
+由三角不等式，该向量的模不超过 \(\sqrt{2^2+(\sqrt3)^2}+1=\sqrt7+1\). 当 \(\overrightarrow{CD}\) 与 \((2,\sqrt3)\) 同方向时等号成立，所以最大值为 \(1+\sqrt7\).
+\end{solution}
 \end{problem}
 
 \section{解答题}
@@ -213,18 +369,31 @@ y \geqslant k,
 \end{enumerate}
 
 \begin{solution}
-\begin{enumerate}
-\item 短答案：概率为 \(\frac{13}{15}\).
-\item 短答案：可获利 \(X\) 的分布列为
+设事件 \(E\) 为甲组研发成功，事件 \(F\) 为乙组研发成功. 则
+\(P(E)=\frac23\)，\(P(\overline E)=\frac13\)，\(P(F)=\frac35\)，\(P(\overline F)=\frac25\).
+由于两组研发相互独立，至少有一种新产品成功的对立事件是两种产品都失败，所以
+\[
+P(E\cup F)=1-P(\overline E\cap\overline F)=1-\frac13\cdot\frac25=\frac{13}{15}
+\]
+
+设企业利润为随机变量 \(X\)，单位为万元. 两种产品的成败组合互斥且完备，故
+\[
+P(X=0)=P(\overline E\cap\overline F)=\frac{2}{15}
+\]
+\(P(X=100)=P(\overline E\cap F)=\frac{3}{15}\)，\(P(X=120)=P(E\cap\overline F)=\frac{4}{15}\)，\(P(X=220)=P(E\cap F)=\frac{6}{15}\).
+因此分布列为
 \begin{center}
-\begin{tabular}{c|c|c|c|c}
+\begin{tabular}{c|cccc}
 \(X\) & \(0\) & \(100\) & \(120\) & \(220\)\\
 \hline
 \(P\) & \(\frac{2}{15}\) & \(\frac{3}{15}\) & \(\frac{4}{15}\) & \(\frac{6}{15}\)
 \end{tabular}
 \end{center}
-数学期望为 \(140\text{ 万元}\).
-\end{enumerate}
+数学期望为
+\[
+E(X)=0\cdot\frac{2}{15}+100\cdot\frac{3}{15}+120\cdot\frac{4}{15}+220\cdot\frac{6}{15}=140
+\]
+所以企业可获利的数学期望为 \(140\text{ 万元}\).
 \end{solution}
 \end{problem}
 
@@ -239,10 +408,38 @@ y \geqslant k,
 \bitmapfigure[max width=0.34\linewidth]{img/2014/hunan_science/q18_fig1.png}
 
 \begin{solution}
-\begin{enumerate}
-\item 短答案：\(\cos\angle CAD=\frac{2}{7}\).
-\item 短答案：\(BC=\frac{3}{2}\).
-\end{enumerate}
+在三角形 \(ACD\) 中，由余弦定理得
+\[
+CD^2=AC^2+AD^2-2AC\cdot AD\cos\angle CAD
+\]
+代入已知数据，得到
+\[
+4=7+1-2\sqrt7\cos\angle CAD
+\]
+所以
+\[
+\cos\angle CAD=\frac{2\sqrt7}{7}
+\]
+
+设 \(\alpha=\angle BAD\)，\(\beta=\angle CAD\). 由已知条件及角的范围，
+\(\sin\alpha=\sqrt{1-\left(-\frac{\sqrt7}{14}\right)^2}=\frac{3\sqrt{21}}{14}\)，\(\sin\beta=\sqrt{1-\left(\frac{2\sqrt7}{7}\right)^2}=\frac{\sqrt{21}}{7}\).
+由图中射线 \(AC\) 位于 \(\angle BAD\) 内，\(\angle BAC=\alpha-\beta\)，故
+\[
+\sin\angle BAC
+=\sin(\alpha-\beta)
+=\sin\alpha\cos\beta-\cos\alpha\sin\beta
+=\frac{3\sqrt{21}}{14}\cdot\frac{2\sqrt7}{7}
+-\left(-\frac{\sqrt7}{14}\right)\cdot\frac{\sqrt{21}}{7}
+=\frac{\sqrt3}{2}
+\]
+在三角形 \(ABC\) 中使用正弦定理，得
+\[
+\frac{BC}{\sin\angle BAC}=\frac{AC}{\sin\angle CBA}
+\]
+从而
+\[
+BC=\frac{\sqrt7\cdot\frac{\sqrt3}{2}}{\frac{\sqrt{21}}{6}}=3
+\]
 \end{solution}
 \end{problem}
 
@@ -254,13 +451,32 @@ y \geqslant k,
 \item 若 \(\angle CBA = 60^{\circ}\)，求二面角 \(C_{1} - OB_{1} - D\) 的余弦值.
 \end{enumerate}
 
-\bitmapinlinefigure[0.38\linewidth]{img/2014/hunan_science/q19_fig1.png}
+\bitmapfigure[width=0.38\linewidth]{img/2014/hunan_science/q19_fig1.png}
 
 \begin{solution}
-\begin{enumerate}
-\item 短答案：\(O_{1}O\perp\) 底面 \(ABCD\).
-\item 短答案：二面角余弦为 \(\frac{2\sqrt{57}}{19}\).
-\end{enumerate}
+因为四边形 \(ACC_1A_1\) 是矩形，所以 \(CC_1\perp AC\). 同理，由矩形 \(BDD_1B_1\) 得 \(DD_1\perp BD\). 四棱柱的侧棱互相平行，故 \(CC_1\parallel DD_1\)，于是同一方向的直线同时垂直于底面内相交的两条直线 \(AC\)、\(BD\)，从而 \(CC_1\perp\) 底面 \(ABCD\). 又 \(OO_1\parallel CC_1\)，所以 \(OO_1\perp\) 底面 \(ABCD\).
+
+设四棱柱的棱长为 \(l\). 以 \(O\) 为原点，取 \(AC\)、\(BD\) 所在直线为坐标轴，并令底面为 \(z=0\)，可设
+\(A\left(-\frac l2,0,0\right)\)，\(C\left(\frac l2,0,0\right)\)，\(B\left(0,-\frac{\sqrt3l}{2},0\right)\)，\(D\left(0,\frac{\sqrt3l}{2},0\right)\).
+这些点构成边长为 \(l\) 且 \(\angle CBA=60^{\circ}\) 的菱形. 由第一问及侧棱长为 \(l\)，有
+\(C_1\left(\frac l2,0,l\right)\)，\(B_1\left(0,-\frac{\sqrt3l}{2},l\right)\).
+平面 \(C_1OB_1\) 的一个法向量为
+\[
+\overrightarrow{OC_1}\times\overrightarrow{OB_1}
+=l^2\left(\frac{\sqrt3}{2},-\frac12,-\frac{\sqrt3}{4}\right)
+\]
+平面 \(OB_1D\) 的一个法向量为
+\[
+\overrightarrow{OB_1}\times\overrightarrow{OD}
+=l^2\left(-\frac{\sqrt3}{2},0,0\right)
+\]
+所以二面角的余弦值为
+\[
+\frac{\left|\left(\frac{\sqrt3}{2},-\frac12,-\frac{\sqrt3}{4}\right)\cdot\left(-\frac{\sqrt3}{2},0,0\right)\right|}
+{\sqrt{\frac34+\frac14+\frac{3}{16}}\cdot\frac{\sqrt3}{2}}
+=\frac{\frac34}{\frac{\sqrt{19}}4\cdot\frac{\sqrt3}{2}}
+=\frac{2\sqrt{57}}{19}
+\]
 \end{solution}
 \end{problem}
 
@@ -273,10 +489,32 @@ y \geqslant k,
 \end{enumerate}
 
 \begin{solution}
-\begin{enumerate}
-\item 短答案：\(p=\frac{1}{3}\).
-\item 短答案：\(a_n=\frac{4}{3}-\frac{(-1)^{n-1}}{3\cdot 2^{n-1}}\).
-\end{enumerate}
+因为 \(p^n=|a_{n+1}-a_n|\geqslant0\) 对任意正整数 \(n\) 成立，且第一问中的数列递增，所以 \(p>0\). 于是
+\(a_2=1+p\)，\(a_3=1+p+p^2\).
+三个数 \(a_1\)，\(2a_2\)，\(3a_3\) 成等差数列，故
+\[
+4a_2=a_1+3a_3
+\]
+代入上式得 \(4(1+p)=1+3(1+p+p^2)\)，即 \(p(1-3p)=0\). 由 \(p>0\)，得 \(p=\frac13\).
+
+第二问中令 \(d_n=a_{n+1}-a_n\)，则 \(|d_n|=2^{-n}\). 由奇数项组成的数列递增，
+\[
+d_{2n-1}+d_{2n}=a_{2n+1}-a_{2n-1}>0
+\]
+由于 \(|d_{2n-1}|=2|d_{2n}|\)，只能有 \(d_{2n-1}=2^{-(2n-1)}\). 由偶数项组成的数列递减，
+\[
+d_{2n}+d_{2n+1}=a_{2n+2}-a_{2n}<0
+\]
+由于 \(|d_{2n}|=2|d_{2n+1}|\)，只能有 \(d_{2n}=-2^{-2n}\). 因而对所有 \(n\geqslant1\)，
+\[
+d_n=\frac{(-1)^{n+1}}{2^n}
+\]
+于是
+\[
+a_n=1+\sum_{k=1}^{n-1}\frac{(-1)^{k+1}}{2^k}
+=1+\frac{1}{3}\left(1-\left(-\frac12\right)^{n-1}\right)
+=\frac43-\frac{(-1)^{n-1}}{3\cdot2^{n-1}}
+\]
 \end{solution}
 \end{problem}
 
@@ -291,10 +529,57 @@ y \geqslant k,
 \bitmapfigure[max width=0.42\linewidth]{img/2014/hunan_science/q21_fig1.png}
 
 \begin{solution}
-\begin{enumerate}
-\item 短答案：\(C_{1}:\frac{x^{2}}{2}+y^{2}=1\)，\(C_{2}:\frac{x^{2}}{2}-y^{2}=1\).
-\item 短答案：四边形 \(APBQ\) 面积的最小值为 \(2\).
-\end{enumerate}
+设椭圆和双曲线的焦距参数分别为
+\(c=\sqrt{a^2-b^2}\)，\(d=\sqrt{a^2+b^2}\).
+则 \(e_1=c/a\)，\(e_2=d/a\)，从而
+\(e_1^2+e_2^2=\frac{c^2+d^2}{a^2}=2\)，\(e_1^2e_2^2=\frac34\).
+所以 \(e_1^2\)、\(e_2^2\) 是方程 \(u^2-2u+\frac34=0\) 的两个根，即 \(\frac12\)、\(\frac32\). 由于椭圆离心率小于 \(1\)，有
+\(e_1=\frac{1}{\sqrt2}\)，\(e_2=\sqrt{\frac32}\).
+又因为 \(F_2=(c,0)\)，\(F_4=(d,0)\)，所以
+\[
+a(e_2-e_1)=d-c=\sqrt3-1
+\]
+而 \(e_2-e_1=\frac{\sqrt3-1}{\sqrt2}\)，故 \(a=\sqrt2\). 于是 \(c=1\)，\(b^2=a^2-c^2=1\)，即
+\(C_1:\frac{x^2}{2}+y^2=1\)，\(C_2:\frac{x^2}{2}-y^2=1\).
+
+第二问先设弦 \(AB\) 的斜率为 \(k\)，由于题设排除了垂直于 \(y\) 轴的水平弦，故 \(k\ne0\). 直线方程为 \(y=k(x+1)\). 与椭圆联立得
+\[
+(1+2k^2)x^2+4k^2x+2k^2-2=0
+\]
+由根与系数的关系，弦中点为
+\[
+M\left(-\frac{2k^2}{1+2k^2},\frac{k}{1+2k^2}\right)
+\]
+因此直线 \(OM\) 的方向向量可取 \((-2k,1)\). 令该直线上的点为 \((x,y)=t(-2k,1)\)，代入 \(C_2\) 得
+\[
+(2k^2-1)t^2=1
+\]
+由于题设要求有两个交点，必须有 \(k^2>\frac12\)，此时
+\[
+PQ=\frac{2\sqrt{4k^2+1}}{\sqrt{2k^2-1}}
+\]
+设椭圆交点的横坐标之差的绝对值为 \(|\Delta x|\). 由上面二次方程的判别式，
+\[
+|\Delta x|=\frac{2\sqrt{2(1+k^2)}}{1+2k^2}
+\]
+所以
+\[
+AB=|\Delta x|\sqrt{1+k^2}=\frac{2\sqrt2(1+k^2)}{1+2k^2}
+\]
+四边形 \(APBQ\) 的两条对角线为 \(AB\)、\(PQ\)，且交点为 \(M\). 因此用向量行列式计算面积，注意
+\[
+\det\begin{pmatrix}1&k\\-2k&1\end{pmatrix}=1+2k^2
+\]
+得到
+\[
+S=\frac12|\Delta x|\cdot\frac{2}{\sqrt{2k^2-1}}(1+2k^2)
+=\frac{2\sqrt{2(1+k^2)}}{\sqrt{2k^2-1}}
+\]
+有限斜率下
+\[
+S^2=\frac{8(1+k^2)}{2k^2-1}=4+\frac{12}{2k^2-1}>4
+\]
+还需考虑 \(AB\parallel y\) 轴的情形，此时弦为 \(x=-1\)，其中点为 \(M=(-1,0)\)，直线 \(OM\) 为 \(x\) 轴，与双曲线交于 \((-\sqrt2,0)\)、\((\sqrt2,0)\). 此时 \(AB=\sqrt2\)，\(PQ=2\sqrt2\)，故 \(S=2\). 因而四边形 \(APBQ\) 面积的最小值为 \(2\).
 \end{solution}
 \end{problem}
 
@@ -307,9 +592,49 @@ y \geqslant k,
 \end{enumerate}
 
 \begin{solution}
-\begin{enumerate}
-\item 短答案：当 \(a\geqslant 1\) 时，\(f(x)\) 在 \((0,+\infty)\) 上单调递增；当 \(0<a<1\) 时，\(f(x)\) 在 \(\left(0,2\sqrt{\frac{1-a}{a}}\right)\) 上单调递减，在 \(\left(2\sqrt{\frac{1-a}{a}},+\infty\right)\) 上单调递增.
-\item 短答案：\(a\in\left(\frac{1}{2},1\right)\).
-\end{enumerate}
+函数定义域为 \(\left(-\frac1a,+\infty\right)\)，并且要排除 \(x=-2\)（当该点属于上述区间时）. 在 \((0,+\infty)\) 上，
+\[
+f'(x)=\frac{a}{1+ax}-\frac{4}{(x+2)^2}
+=\frac{ax^2+4a-4}{(1+ax)(x+2)^2}
+\]
+在所讨论区间内分母恒为正.
+
+当 \(a\geqslant1\) 时，\(ax^2+4a-4>0\)，所以 \(f(x)\) 在 \((0,+\infty)\) 上单调递增. 当 \(0<a<1\) 时，令分子为零，得
+\[
+x_0=2\sqrt{\frac{1-a}{a}}
+\]
+此时在 \(0<x<x_0\) 上有 \(f'(x)<0\)，在 \(x>x_0\) 上有 \(f'(x)>0\)，所以 \(f(x)\) 在 \(\left(0,2\sqrt{\frac{1-a}{a}}\right)\) 上单调递减，在 \(\left(2\sqrt{\frac{1-a}{a}},+\infty\right)\) 上单调递增.
+
+若存在两个极值点，导数方程的两个根必须都在定义域内. 当 \(0<a<1\) 时令
+\[
+t=2\sqrt{\frac{1-a}{a}}>0
+\]
+导数的两个零点为 \(-t\)、\(t\). 当 \(a\ne\frac12\) 时，
+\[
+t<\frac1a
+\quad\Longleftrightarrow\quad
+4a(1-a)<1
+\quad\Longleftrightarrow\quad
+(2a-1)^2>0
+\]
+所以 \(-t>-\frac1a\)，且 \(t\ne2\)，故 \(\pm t\) 均在定义域内；在定义域内除去可能的 \(x=-2\) 后，分母为正，故 \(f'(x)\) 的符号由 \(a(x^2-t^2)\) 决定，\(-t\) 处由正变负、\(t\) 处由负变正，二者确为极值点. 当 \(a=\frac12\) 时，\(-t=-2\) 不在定义域内，只剩一个极值点. 因而存在两个极值点当且仅当 \(0<a<1\) 且 \(a\ne\frac12\). 计算函数值之和：
+\[
+f(-t)+f(t)=\ln(1-a^2t^2)+\frac{4t^2}{4-t^2}
+\]
+由 \(t^2=4(1-a)/a\)，可化为
+\[
+f(-t)+f(t)=2\ln|2a-1|+\frac{4(1-a)}{2a-1}
+\]
+当 \(\frac12<a<1\) 时，令 \(u=2a-1\in(0,1)\)，上式为
+\[
+2\left(\ln u+\frac1u-1\right)
+\]
+函数 \(\ln u+1/u-1\) 在 \((0,1)\) 上为正，因为其在 \(u=1\) 的值为零，且导数 \((u-1)/u^2<0\). 因而此时函数值之和大于零.
+
+当 \(0<a<\frac12\) 时，令 \(u=1-2a\in(0,1)\)，上式为
+\[
+2\ln u-\frac2u-2<0
+\]
+所以满足条件的参数范围为 \(a\in\left(\frac12,1\right)\).
 \end{solution}
 \end{problem}

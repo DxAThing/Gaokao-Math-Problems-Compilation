@@ -14,6 +14,16 @@
 C
 \end{answer}
 
+\begin{solution}
+集合 \(A\) 中的整数为 \(-10\)，\(-9\)，\(\ldots\)，\(-1\)，集合 \(B\) 中的整数为 \(-5\)，\(-4\)，\(\ldots\)，\(0\)，\(\ldots\)，\(5\). 因而
+
+\(
+A\cup B=\{-10,-9,\ldots,-1,0,1,\ldots,5\}
+\)
+
+共有 \(10+5+1=16\) 个元素，所以选 C.
+\end{solution}
+
 \begin{problem}
 设 \(\bs{a}\)，\(\bs{b}\)，\(\bs{c}\) 是任意的非零平面向量，且相互不共线，则有下列命题：
 
@@ -34,8 +44,36 @@ C
 \end{problem}
 
 \begin{answer}
-B
+D
 \end{answer}
+
+\begin{solution}
+逐一判断四个命题.
+
+\begin{enumerate}
+\item 取 \(\bs{a}=(1,0)\)，\(\bs{b}=(0,1)\)，\(\bs{c}=(1,1)\)，三向量均非零且相互不共线. 此时
+\(
+(\bs{a}\cdot\bs{b})\bs{c}-(\bs{c}\cdot\bs{a})\bs{b}=-\bs{b}\ne\bs{0}
+ \)，故第一个命题是假命题.
+
+\item 由三角不等式，
+\(
+|\bs{a}|\leqslant|\bs{a}-\bs{b}|+|\bs{b}|
+ \)，从而 \(|\bs{a}|-|\bs{b}|\leqslant|\bs{a}-\bs{b}|\). 等号成立时 \(\bs{a}-\bs{b}\) 与 \(\bs{b}\) 同向，进而 \(\bs{a}\) 与 \(\bs{b}\) 共线，这与题设矛盾，所以不等式严格成立，第二个命题是真命题.
+
+\item 令 \(\bs{v}=(\bs{b}\cdot\bs{c})\bs{a}-(\bs{c}\cdot\bs{a})\bs{b}\). 则
+\(
+\bs{v}\cdot\bs{c}=(\bs{b}\cdot\bs{c})(\bs{a}\cdot\bs{c})-(\bs{c}\cdot\bs{a})(\bs{b}\cdot\bs{c})=0
+ \)，所以 \(\bs{v}\) 与 \(\bs{c}\) 垂直，第三个命题是假命题.
+
+\item 利用数量积的分配律，
+\(
+(3\bs{a}+2\bs{b})\cdot(3\bs{a}-2\bs{b})=9|\bs{a}|^{2}-6\bs{a}\cdot\bs{b}+6\bs{b}\cdot\bs{a}-4|\bs{b}|^{2}=9|\bs{a}|^{2}-4|\bs{b}|^{2}
+ \)，第四个命题是真命题.
+\end{enumerate}
+
+真命题为第2、4个，所以选 D.
+\end{solution}
 
 \begin{problem}
 一个长方体共一顶点的三个面的面积分别是 \(\sqrt{2}\)，\(\sqrt{3}\)，\(\sqrt{6}\)，这个长方体对角线的长是（\quad）
@@ -48,8 +86,25 @@ B
 \end{problem}
 
 \begin{answer}
-C
+D
 \end{answer}
+
+\begin{solution}
+设从同一顶点出发的三条棱长分别为 \(x\)，\(y\)，\(z\)，则
+\(
+xy=\sqrt{2},\quad yz=\sqrt{3},\quad zx=\sqrt{6}
+\).
+
+三式相乘得 \((xyz)^{2}=6\)，所以 \(xyz=\sqrt{6}\). 于是
+\(
+x=\frac{xyz}{yz}=\sqrt{2},\quad y=\frac{xyz}{zx}=1,\quad z=\frac{xyz}{xy}=\sqrt{3}
+\).
+
+长方体的对角线长为
+\(
+\sqrt{x^{2}+y^{2}+z^{2}}=\sqrt{2+1+3}=\sqrt{6}
+\)，所以选 D.
+\end{solution}
 
 \begin{problem}
 已知 \(\sin \alpha > \sin \beta\)，那么下列命题成立的是（\quad）
@@ -65,6 +120,14 @@ C
 D
 \end{answer}
 
+\begin{solution}
+在第一象限，正弦函数递增而余弦函数递减；在第二象限，正弦函数递减而正切函数递增；在第三象限，正弦函数递减而余弦函数递增；在第四象限，正弦函数递增且正切函数递增.
+
+若 \(\alpha\)，\(\beta\) 均为第一象限角，由 \(\sin\alpha>\sin\beta\) 得 \(\alpha>\beta\)，于是 \(\cos\alpha<\cos\beta\)，命题\(\circled{1}\)所述不成立. 若二者均为第二象限角，则 \(\alpha<\beta\)，从而 \(\tan\alpha<\tan\beta\)，命题\(\circled{2}\)不成立. 若二者均为第三象限角，同样由正弦函数的单调性得 \(\alpha<\beta\)，于是 \(\cos\alpha<\cos\beta\)，命题\(\circled{3}\)不成立.
+
+若二者均为第四象限角，由正弦函数递增得 \(\alpha>\beta\)，再由正切函数递增得 \(\tan\alpha>\tan\beta\)，所以命题\(\circled{4}\)成立，选 D.
+\end{solution}
+
 \begin{problem}
 函数 \(y = -x\cos x\) 的部分图象是（\quad）
 
@@ -78,6 +141,12 @@ D
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+函数满足 \(y(0)=0\)，且在 \(x=0\) 附近有 \(\cos x>0\)，所以当 \(x>0\) 足够小时 \(y=-x\cos x<0\)，当 \(x<0\) 足够小时 \(y>0\). 另外，\(y=0\) 的零点满足 \(x=0\) 或 \(\cos x=0\)，相邻零点之间曲线的正负号由 \(-x\cos x\) 的符号确定.
+
+因此图象经过原点，并在原点右侧先位于 \(x\) 轴下方、在原点左侧位于 \(x\) 轴上方；各振荡区间的振幅随 \(|x|\) 增大而增大. 四个图象中只有 D 符合，所以选 D.
+\end{solution}
 
 \begin{problem}
 《中华人民共和国个人所得税法》规定，公民全月工资、薪金所得不超过 \(800\text{ 元}\) 的部分不必纳税. 超过 \(800\text{ 元}\) 的部分为全月应纳税所得额，此项税款按下表分段累进计算：
@@ -111,6 +180,26 @@ D
 C
 \end{answer}
 
+\begin{solution}
+设当月工资、薪金所得为 \(w\) 元，应纳税所得额为 \(u=w-800\). 若 \(u\leqslant500\)，应交税款至多为 \(500\times5\%=25\) 元，与 \(26.78\) 元矛盾；若 \(u>2000\)，应交税款至少为
+\(
+500\times5\%+1500\times10\%=175
+\)
+元，同样不可能. 因此 \(500<u\leqslant2000\)，税款为前 \(500\) 元按 \(5\%\) 计、其余部分按 \(10\%\) 计. 于是
+\(
+25+10\%(u-500)=26.78
+\)，所以
+\(
+u=517.8,\qquad w=u+800=1317.8.
+\)
+
+所得 \(1317.8\) 元落在
+\(
+1200<1317.8<1500
+\).
+因此选 C.
+\end{solution}
+
 \begin{problem}
 若 \(a > b > 1\)，\(P = \sqrt{\lg a \cdot \lg b}\)，\(Q = \frac{1}{2} \left(\lg a + \lg b\right)\)，\(R = \lg \left(\frac{a + b}{2}\right)\)，则（\quad）
 
@@ -124,6 +213,24 @@ C
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+令 \(u=\lg a\)，\(v=\lg b\). 因为 \(a>b>1\)，所以 \(u>v>0\). 由算术平均数不小于几何平均数，
+\(
+P=\sqrt{uv}<\frac{u+v}{2}=Q
+\)，其中不等号严格成立是因为 \(u\ne v\).
+
+又由 \(a>b>0\)，有
+\(
+\frac{a+b}{2}>\sqrt{ab}
+\).
+对数函数 \(\lg x\) 在正数范围内递增，因此
+\(
+R=\lg\frac{a+b}{2}>\lg\sqrt{ab}=\frac{\lg a+\lg b}{2}=Q
+\).
+
+故 \(P<Q<R\)，选 B.
+\end{solution}
 
 \begin{problem}
 已知两条直线 \(l_{1}: y = x\)，\(l_{2}: ax - y = 0\)，其中 \(a\) 为实数. 当这两条直线的夹角在 \(\left(0, \frac{\pi}{12}\right)\) 内变动时，\(a\) 的取值范围是（\quad）
@@ -139,6 +246,21 @@ B
 C
 \end{answer}
 
+\begin{solution}
+直线 \(l_{1}\) 的倾角为 \(\frac{\pi}{4}\). 直线 \(l_{2}\) 的斜率为 \(a\)，其倾角按模 \(\pi\) 计. 两直线的夹角小于 \(\frac{\pi}{12}\)，等价于 \(l_{2}\) 的倾角落在
+\(
+\left(\frac{\pi}{4}-\frac{\pi}{12},\frac{\pi}{4}+\frac{\pi}{12}\right)=\left(\frac{\pi}{6},\frac{\pi}{3}\right)
+\)
+内，但不能等于 \(l_{1}\) 的倾角，否则夹角为 \(0\).
+
+正切函数在该区间内递增，所以
+\(
+a\in\left(\tan\frac{\pi}{6},\tan\frac{\pi}{3}\right),\quad a\ne1,\qquad a\in\left(\frac{\sqrt{3}}{3},1\right)\cup(1,\sqrt{3})
+\).
+
+因此选 C.
+\end{solution}
+
 \begin{problem}
 一个圆柱的侧面展开图是一个正方形，这个圆柱的全面积与侧面积的比是（\quad）
 
@@ -152,6 +274,22 @@ C
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+设圆柱的高为 \(h\)，底面半径为 \(r\). 侧面展开为正方形，故
+\(
+h=2\pi r
+\).
+
+圆柱的侧面积为 \(S_{\text{侧}}=2\pi rh=h^{2}\)，两个底面的面积之和为
+\(
+2\pi r^{2}=2\pi\left(\frac{h}{2\pi}\right)^{2}=\frac{h^{2}}{2\pi}
+\).
+于是全面积与侧面积之比为
+\(
+\frac{S_{\text{全}}}{S_{\text{侧}}}=\frac{h^{2}+\frac{h^{2}}{2\pi}}{h^{2}}=\frac{1+2\pi}{2\pi}
+\)，所以选 A.
+\end{solution}
 
 \begin{problem}
 过原点的直线与圆 \(x^{2} + y^{2} + 4x + 3 = 0\) 相切，若切点在第三象限，则该直线的方程是（\quad）
@@ -167,6 +305,21 @@ A
 C
 \end{answer}
 
+\begin{solution}
+圆的方程可化为
+\(
+(x+2)^{2}+y^{2}=1
+\)，所以圆心为 \((-2,0)\)，半径为 \(1\). 过原点的切线设为 \(y=mx\)，即 \(mx-y=0\). 圆心到此直线的距离等于半径，故
+\(
+\frac{|-2m|}{\sqrt{m^{2}+1}}=1
+\).
+
+平方并整理得 \(4m^{2}=m^{2}+1\)，从而 \(m=\pm\frac{\sqrt{3}}{3}\). 当 \(m=\frac{\sqrt{3}}{3}\) 时，直线在第三象限有点，因为 \(x<0\) 时 \(y<0\)；当 \(m=-\frac{\sqrt{3}}{3}\) 时，切点位于第二象限. 所求直线为
+\(
+y=\frac{\sqrt{3}}{3}x
+\)，所以选 C.
+\end{solution}
+
 \begin{problem}
 过抛物线 \(y = ax^2\)（\(a > 0\)）的焦点 \(F\) 作一条直线交抛物线于 \(P\)，\(Q\) 两点，若线段 \(PF\) 与 \(FQ\) 的长分别是 \(p\)，\(q\)，则 \(\frac{1}{p} + \frac{1}{q}\) 等于（\quad）
 
@@ -180,6 +333,32 @@ C
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+把抛物线写成标准形式
+\(
+x^{2}=\frac{1}{a}y=4p_{0}y
+\)，得标准参数 \(p_{0}=\frac{1}{4a}\)，焦点为 \(F\left(0,\frac{1}{4a}\right)\).
+
+由于直线与抛物线交于两个点，所作直线不是竖直直线，故可设其方程为 \(y=kx+\frac{1}{4a}\). 设交点为 \(P(x_{1},ax_{1}^{2})\)，\(Q(x_{2},ax_{2}^{2})\)，代入得
+\(
+ax^{2}-kx-\frac{1}{4a}=0
+\)，所以
+\(
+x_{1}x_{2}=-\frac{1}{4a^{2}},\qquad |x_{1}-x_{2}|=\frac{\sqrt{k^{2}+1}}{a}
+\).
+
+点 \(P\) 或 \(Q\) 到焦点的水平坐标差为 \(|x_i|\)，而直线斜率为 \(k\)，故
+\(
+PF=|x_{1}|\sqrt{k^{2}+1},\qquad FQ=|x_{2}|\sqrt{k^{2}+1}
+\).
+因 \(x_{1}x_{2}<0\)，有 \(|x_{1}|+|x_{2}|=|x_{1}-x_{2}|\). 因而
+\(
+\frac{1}{p}+\frac{1}{q}=\frac{|x_{1}|+|x_{2}|}{|x_{1}x_{2}|\sqrt{k^{2}+1}}=\frac{\frac{\sqrt{k^{2}+1}}{a}}{\frac{1}{4a^{2}}\sqrt{k^{2}+1}}=4a
+\).
+
+所以选 C.
+\end{solution}
 
 \begin{problem}
 二项式 \(\left(\sqrt{2} + \sqrt[3]{3x}\right)^{50}\) 的展开式中系数为有理数的项共有（\quad）
@@ -195,6 +374,19 @@ C
 D
 \end{answer}
 
+\begin{solution}
+展开式的第 \(k+1\) 项为
+\(
+\mathrm C_{50}^{k}(\sqrt{2})^{50-k}(\sqrt[3]{3x})^{k}
+=\mathrm C_{50}^{k}2^{\frac{50-k}{2}}3^{\frac{k}{3}}x^{\frac{k}{3}},\qquad k=0,1,\ldots,50.
+\)
+
+组合数为整数，所以该项的系数为有理数，当且仅当 \(\frac{50-k}{2}\) 和 \(\frac{k}{3}\) 都为整数，即 \(k\) 同时为偶数和 \(3\) 的倍数，也就是 \(k\) 为 \(6\) 的倍数. 满足条件的 \(k\) 为
+\(
+0,6,12,18,24,30,36,42,48
+\)，共 \(9\) 个，所以选 D.
+\end{solution}
+
 \section{填空题}
 \begin{problem}
 从含有 \(500\) 个个体的总体中一次性地抽取 \(25\) 个个体，假定其中每个个体被抽到的概率相等，那么总体中的每个个体被抽取的概率等于\fillinblank{}.
@@ -204,6 +396,17 @@ D
 \(\frac{25}{500}\)
 \end{answer}
 
+\begin{solution}
+设总体中的一个固定个体为 \(X\). 一次抽取的 \(25\) 个体中，被抽到的个体数总是 \(25\)，而总体共有 \(500\) 个个体；由题设每个个体被抽到的概率相等，故
+\(
+500P(X)=25
+\).
+因此
+\(
+P(X)=\frac{25}{500}=\frac{1}{20}
+\).
+\end{solution}
+
 \begin{problem}
 椭圆 \(\frac{x^2}{9} + \frac{y^2}{4} = 1\) 的焦点 \(F_1\)，\(F_2\)，点 \(P\) 为其上的动点，当 \(\angle F_1PF_2\) 为钝角时，点 \(P\) 横坐标的取值范围是\fillinblank{}.
 \end{problem}
@@ -212,6 +415,40 @@ D
 \(\left(-\frac{3}{\sqrt{5}},\frac{3}{\sqrt{5}}\right)\)
 \end{answer}
 
+\begin{solution}
+由椭圆方程知半长轴 \(a=3\)，半短轴 \(b=2\)，故焦半距
+\(
+c=\sqrt{a^{2}-b^{2}}=\sqrt{5}
+\).
+设 \(P=(x,y)\)，则
+\(
+F_{1}=(-\sqrt{5},0),\qquad F_{2}=(\sqrt{5},0)
+\).
+
+角 \(F_{1}PF_{2}\) 为钝角，当且仅当
+\(
+\overrightarrow{PF_{1}}\cdot\overrightarrow{PF_{2}}<0
+\).
+计算得
+\(
+\overrightarrow{PF_{1}}\cdot\overrightarrow{PF_{2}}
+=(-\sqrt{5}-x,-y)\cdot(\sqrt{5}-x,-y)
+=x^{2}+y^{2}-5
+\).
+所以钝角条件等价于 \(x^{2}+y^{2}<5\). 又因 \(P\) 在椭圆上，
+\(
+y^{2}=4\left(1-\frac{x^{2}}{9}\right)
+\)，从而
+\(
+x^{2}+y^{2}=4+\frac{5}{9}x^{2}<5
+\).
+于是 \(x^{2}<\frac{9}{5}\)，即
+\(
+-\frac{3}{\sqrt{5}}<x<\frac{3}{\sqrt{5}}
+\).
+端点对应直角而不是钝角，故取开区间.
+\end{solution}
+
 \begin{problem}
 设 \(\{a_{n}\}\) 是首项为 \(1\) 的正项数列，且 \((n + 1)a_{n + 1}^{2} - na_{n}^{2} + a_{n + 1}a_{n} = 0\)（\(n = 1\)，\(2\)，\(3\)，\(\dots\)），则它的通项公式是 \(a_{n} =\fillinblank{}\).
 \end{problem}
@@ -219,6 +456,31 @@ D
 \begin{answer}
 \(\frac{1}{n}\)
 \end{answer}
+
+\begin{solution}
+由 \(a_n>0\)，可令
+\(
+r_n=\frac{a_{n+1}}{a_n}>0
+\).
+将 \(a_{n+1}=r_na_n\) 代入递推式并除以 \(a_n^2\)，得
+\(
+(n+1)r_n^{2}+r_n-n=0
+\).
+因式分解为
+\(
+\bigl((n+1)r_n-n\bigr)(r_n+1)=0
+\).
+由于 \(r_n>0\)，不能取 \(r_n=-1\)，所以
+\(
+\frac{a_{n+1}}{a_n}=r_n=\frac{n}{n+1}
+\).
+
+由 \(a_1=1\)，逐次相乘得
+\(
+a_n=a_1\prod_{k=1}^{n-1}\frac{k}{k+1}
+=\frac{1}{n}
+\).
+\end{solution}
 
 \begin{problem}
 如图，\(E\)，\(F\) 分别为正方体面 \(ADD_{1}A_{1}\)，面 \(BCC_{1}B_{1}\) 的中心，则四边形 \(BFD_{1}E\) 在该正方体的面上的射影可能是\fillinblank{}.
@@ -249,6 +511,27 @@ D
 \(\circled{2}\circled{3}\)
 \end{answer}
 
+\begin{solution}
+取正方体棱长为 \(1\)，建立坐标系
+\(
+A=(0,0,0),\quad B=(1,0,0),\quad C=(1,1,0),\quad D=(0,1,0)
+\)
+以及
+\(
+A_{1}=(0,0,1),\quad B_{1}=(1,0,1),\quad C_{1}=(1,1,1),\quad D_{1}=(0,1,1)
+\).
+由 \(E\)，\(F\) 分别为两个侧面的中心，得
+\(
+E=\left(0,\frac12,\frac12\right),\qquad F=\left(1,\frac12,\frac12\right)
+\).
+
+把 \(B\)，\(F\)，\(D_{1}\)，\(E\) 正投影到 \(z=0\) 或 \(z=1\) 的面上，或者投影到 \(y=0\) 或 \(y=1\) 的面上，所得四点依次构成一个平行四边形，图形为 \(\circled{2}\).
+
+投影到 \(x=0\) 的面时，\(B\) 与 \(F\) 分别投影到 \(A\) 与 \(E\)，而 \(D_{1}\)，\(E\) 不动；由于 \(E\) 是 \(AD_{1}\) 的中点，四个投影点共线. 投影到 \(x=1\) 的面时，\(D_{1}\) 与 \(E\) 分别投影到 \(C_{1}\) 与 \(F\)，且 \(F\) 是 \(BC_{1}\) 的中点，四个投影点也共线，图形为 \(\circled{3}\).
+
+因此可能的图序号为 \(\circled{2}\)、\(\circled{3}\).
+\end{solution}
+
 \section{解答题}
 \begin{problem}
 甲、乙二人参加普法知识竞答，共有 \(10\) 个不同的题目，其中选择题 \(6\) 个，判断题 \(4\) 个，甲、乙二人依次各抽一题.
@@ -261,8 +544,19 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item \(\dfrac{4}{15}\).
-\item \(\dfrac{13}{15}\).
+\item 甲抽到选择题、乙抽到判断题的有利结果数为 \(6\times4\)，而甲、乙依次抽取两题的等可能结果总数为 \(10\times9\). 所以所求概率为
+\(
+\frac{6\times4}{10\times9}=\frac{4}{15}
+\).
+
+\item 用对立事件计算. 甲、乙二人中至少有一人抽到选择题的对立事件是两人都抽到判断题，其概率为
+\(
+\frac{4}{10}\cdot\frac{3}{9}=\frac{2}{15}
+\).
+因此所求概率为
+\(
+1-\frac{2}{15}=\frac{13}{15}
+\).
 \end{enumerate}
 \end{solution}
 
@@ -282,9 +576,44 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item \(\overline{BN}=\sqrt{3}\).
-\item \(\cos\langle\overrightarrow{BA_{1}},\overrightarrow{CB_{1}}\rangle=\dfrac{\sqrt{30}}{10}\).
-\item \(A_{1}B\perp C_{1}M\).
+\item 以 \(C\) 为原点，分别以 \(\overrightarrow{CA}\)，\(\overrightarrow{CB}\)，\(\overrightarrow{CC_{1}}\) 的方向为三个坐标轴正方向，建立空间直角坐标系. 则
+\(
+A=(1,0,0),\quad B=(0,1,0),\quad A_{1}=(1,0,2),\quad C=(0,0,0)
+\).
+由于 \(N\) 是 \(A_{1}A\) 的中点，\(N=(1,0,1)\). 因而
+\(
+\overrightarrow{BN}=(1,-1,1)
+\)，所以
+\(
+\overline{BN}=\sqrt{1^{2}+(-1)^{2}+1^{2}}=\sqrt{3}
+\).
+
+\item 由 \(B_{1}=(0,1,2)\)，得
+\(
+\overrightarrow{BA_{1}}=(1,-1,2),\qquad \overrightarrow{CB_{1}}=(0,1,2)
+\).
+于是
+\(
+\overrightarrow{BA_{1}}\cdot\overrightarrow{CB_{1}}=3
+\)，且
+\(
+|\overrightarrow{BA_{1}}|=\sqrt{6},\qquad |\overrightarrow{CB_{1}}|=\sqrt{5}
+\).
+所以
+\(
+\cos\langle\overrightarrow{BA_{1}},\overrightarrow{CB_{1}}\rangle
+=\frac{3}{\sqrt{6}\sqrt{5}}=\frac{\sqrt{30}}{10}
+\).
+
+\item \(M\) 是 \(A_{1}B_{1}\) 的中点，故 \(M=\left(\frac12,\frac12,2\right)\)，而 \(C_{1}=(0,0,2)\). 因此可取
+\(
+\overrightarrow{BA_{1}}=(1,-1,2),\qquad \overrightarrow{C_{1}M}=\left(\frac12,\frac12,0\right)
+\).
+两向量的数量积为
+\(
+\overrightarrow{BA_{1}}\cdot\overrightarrow{C_{1}M}=\frac12-\frac12+0=0
+\).
+所以 \(A_{1}B\perp C_{1}M\).
 \end{enumerate}
 \end{solution}
 
@@ -306,8 +635,46 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item \(C_{1}C\perp BD\).
-\item \(\dfrac{CD}{CC_{1}}=1\).
+\item 设
+\(
+\bs{u}=\overrightarrow{CB},\qquad \bs{v}=\overrightarrow{CD},\qquad \bs{w}=\overrightarrow{CC_{1}}
+\)，
+并记 \(s=|\bs{u}|=|\bs{v}|=CD\)，\(h=|\bs{w}|=CC_{1}\)，以及 \(\theta=\angle BCD\). 由题设三个角相等，有
+\(
+\bs{u}\cdot\bs{v}=s^{2}\cos\theta,\qquad
+\bs{w}\cdot\bs{u}=hs\cos\theta,\qquad
+\bs{w}\cdot\bs{v}=hs\cos\theta
+\).
+于是
+\(
+\overrightarrow{CC_{1}}\cdot\overrightarrow{BD}
+=\bs{w}\cdot(\bs{v}-\bs{u})
+=0
+\).
+故 \(C_{1}C\perp BD\).
+
+\item 取 \(C\) 为原点，则
+\(
+\overrightarrow{CA_{1}}=\bs{u}+\bs{v}+\bs{w},\qquad
+\overrightarrow{BC_{1}}=\bs{w}-\bs{u},\qquad
+\overrightarrow{BD}=\bs{v}-\bs{u}
+\).
+直接计算得
+\(
+\overrightarrow{CA_{1}}\cdot\overrightarrow{BD}
+=(\bs{u}+\bs{v}+\bs{w})\cdot(\bs{v}-\bs{u})
+=(\bs{u}\cdot\bs{v}-s^{2})+(s^{2}-\bs{u}\cdot\bs{v})+\bs{w}\cdot(\bs{v}-\bs{u})=0
+\).
+另外
+\(\overrightarrow{CA_{1}}\cdot\overrightarrow{BC_{1}}=(\bs{u}+\bs{v}+\bs{w})\cdot(\bs{w}-\bs{u})=h^{2}-s^{2}+hs\cos\theta-s^{2}\cos\theta=(h-s)(h+s+s\cos\theta)\).
+由于 \(0<\theta<\pi\)，所以 \(h+s+s\cos\theta=h+s(1+\cos\theta)>0\). 因而 \(CA_{1}\perp BC_{1}\) 当且仅当 \(h=s\). 当 \(h=s\) 时，直线 \(A_{1}C\) 同时垂直于平面 \(C_{1}BD\) 内相交的两条直线 \(BD\)，\(BC_{1}\)，故
+\(
+A_{1}C\perp\text{ 平面 }C_{1}BD
+\).
+所以
+\(
+\frac{CD}{CC_{1}}=\frac{s}{h}=1
+\).
 \end{enumerate}
 \end{solution}
 
@@ -318,7 +685,32 @@ D
 \end{problem}
 
 \begin{solution}
-\(T_{n}=\dfrac{1}{4}n^{2}-\dfrac{9}{4}n\).
+设等差数列 \(\{a_n\}\) 的首项为 \(a\)，公差为 \(d\). 由
+\(
+S_n=na+\frac{n(n-1)}{2}d
+\)
+以及题设，得
+\(
+7a+21d=7,\qquad 15a+105d=75
+\).
+化简为
+\(
+a+3d=1,\qquad a+7d=5
+\)，相减得 \(d=1\)，再得 \(a=-2\).
+
+所以
+\(
+S_n=-2n+\frac{n(n-1)}{2}=\frac{n(n-5)}{2}
+\)，从而
+\(
+\frac{S_n}{n}=\frac{n-5}{2}
+\).
+数列 \(\left\{\frac{S_n}{n}\right\}\) 是首项 \(-2\)、公差 \(\frac12\) 的等差数列，故
+\(
+T_n=\frac{n}{2}\left(2(-2)+(n-1)\frac12\right)
+=\frac{n(n-9)}{4}
+=\frac14n^{2}-\frac94n
+\).
 \end{solution}
 
 \begin{problem}
@@ -332,8 +724,31 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item 当 \(0<a<1\) 时，解集为 \(\left[0,\dfrac{2a}{1-a^{2}}\right]\)；当 \(a\geqslant1\) 时，解集为 \([0,+\infty)\).
-\item 函数在 \([0,+\infty)\) 上是单调递减函数.
+\item 当 \(x<0\) 时，\(\sqrt{x^{2}+1}>1\) 且 \(-ax>0\)，所以 \(f(x)>1\)，不等式无负数解；\(x=0\) 时等号成立. 当 \(x\geqslant0\) 时，\(ax+1>0\)，原不等式等价于
+\(
+\sqrt{x^{2}+1}\leqslant ax+1
+\)
+以及
+\(
+x^{2}+1\leqslant(ax+1)^{2}
+\).
+整理得
+\(
+x\bigl((1-a^{2})x-2a\bigr)\leqslant0
+\).
+
+当 \(0<a<1\) 时，第二个因式的零点为 \(\frac{2a}{1-a^{2}}>0\)，所以解集为
+\(
+\left[0,\frac{2a}{1-a^{2}}\right]
+\).
+当 \(a\geqslant1\) 时，对 \(x\geqslant0\) 有 \((1-a^{2})x-2a<0\)，所以解集为
+\(
+[0,+\infty)
+\).
+
+\item 任取 \(0\leqslant x<y\). 有理化得
+\(f(y)-f(x)=\sqrt{y^{2}+1}-\sqrt{x^{2}+1}-a(y-x)=(y-x)\left(\frac{x+y}{\sqrt{y^{2}+1}+\sqrt{x^{2}+1}}-a\right)\).
+由于 \(\sqrt{y^{2}+1}>y\)，\(\sqrt{x^{2}+1}>x\)，故括号内的第一项小于 \(1\). 当 \(a\geqslant1\) 时，整个括号小于 \(1-a\leqslant0\)，从而 \(f(y)<f(x)\). 因此 \(f(x)\) 在 \([0,+\infty)\) 上单调递减.
 \end{enumerate}
 \end{solution}
 
@@ -342,7 +757,35 @@ D
 \end{problem}
 
 \begin{solution}
-容器的高为 \(1.2\mathrm{~m}\) 时容积最大，最大容积为 \(1.8\mathrm{~m}^{3}\).
+设底面较短的一边为 \(x\mathrm{~m}\)，则另一边为 \((x+0.5)\mathrm{~m}\). 由长方体框架的总棱长得
+\(
+4\bigl(x+x+0.5+h\bigr)=14.8
+\)，所以高
+\(
+h=3.2-2x
+\).
+由 \(x>0\) 且 \(h>0\)，得 \(0<x<1.6\). 容积为
+\(
+V(x)=x(x+0.5)(3.2-2x)
+=-2x^{3}+2.2x^{2}+1.6x
+\).
+
+求导得
+\(
+V'(x)=-6x^{2}+4.4x+1.6
+\).
+令 \(V'(x)=0\)，得
+\(
+15x^{2}-11x-4=0
+\)，所以 \(x=1\) 或 \(x=-\frac{4}{15}\). 定义域内只有 \(x=1\)，且 \(V'(x)\) 在 \(0<x<1\) 时为正、在 \(1<x<1.6\) 时为负，故 \(x=1\) 时容积取得最大值.
+
+此时
+\(
+h=3.2-2=1.2\mathrm{~m}
+\)，且
+\(
+V_{\max}=1\times1.5\times1.2=1.8\mathrm{~m}^{3}
+\).
 \end{solution}
 
 \begin{problem}
@@ -352,5 +795,59 @@ D
 \end{problem}
 
 \begin{solution}
-\(\sqrt{7}\leqslant e\leqslant\sqrt{10}\).
+设双曲线的焦点为 \(A(-c,0)\)，\(B(c,0)\)，则 \(AB=2c\). 双曲线的对称轴为 \(x\) 轴. 由于 \(CD\parallel AB\)，且双曲线关于 \(y\) 轴对称，故 \(C\)，\(D\) 关于 \(y\) 轴对称，可设
+\(
+C=\left(\frac{c}{2},h\right),\qquad D=\left(-\frac{c}{2},h\right)
+\).
+这里使用了 \(|AB|=2|CD|\)，因为 \(|CD|=c\). 设双曲线的实半轴为 \(a\)，则其方程为
+\(
+\frac{x^{2}}{a^{2}}-\frac{y^{2}}{c^{2}-a^{2}}=1
+\).
+
+按定比分点的含义，\(\frac{AE}{EC}=\lambda\). 令
+\(
+t=\frac{AE}{AC}=\frac{\lambda}{1+\lambda}
+\)，
+则
+\(
+E=A+t(C-A)=\left(-c+\frac{3ct}{2},th\right)
+\).
+由 \(C\) 在双曲线上，得
+\(
+\frac{c^{2}}{4a^{2}}-\frac{h^{2}}{c^{2}-a^{2}}=1
+\)，
+即
+\(
+\frac{h^{2}}{c^{2}-a^{2}}=\frac{c^{2}}{4a^{2}}-1
+\).
+将 \(E\) 的坐标代入双曲线方程并利用上式，得到
+\(
+c^{2}\left(-1+\frac{3t}{2}\right)^{2}
+-t^{2}\left(\frac{c^{2}}{4}-a^{2}\right)=a^{2}
+\).
+化简为
+\(
+c^{2}(1-t)(1-2t)=a^{2}(1-t^{2})
+\).
+因为 \(0<t<\frac12\)，可约去 \(1-t\)，从而
+\(
+\frac{a^{2}}{c^{2}}=\frac{1-2t}{1+t}
+\)， 即
+\(
+e^{2}=\frac{c^{2}}{a^{2}}=\frac{1+t}{1-2t}
+=\frac{1+2\lambda}{1-\lambda}
+\).
+
+函数 \(\frac{1+2\lambda}{1-\lambda}\) 在 \(\lambda<1\) 时递增，且
+\(
+\left.\frac{1+2\lambda}{1-\lambda}\right|_{\lambda=\frac23}=7,\qquad
+\left.\frac{1+2\lambda}{1-\lambda}\right|_{\lambda=\frac34}=10
+\).
+因此
+\(
+7\leqslant e^{2}\leqslant10
+\)，又 \(e>0\)，故
+\(
+\sqrt{7}\leqslant e\leqslant\sqrt{10}
+\).
 \end{solution}

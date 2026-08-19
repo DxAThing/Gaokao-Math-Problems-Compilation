@@ -16,6 +16,12 @@
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+由 \(x^2<4\) 得 \(-2<x<2\)，所以
+\(Q=\{x\mid -2<x<2\}\). 与 \(P=\{x\mid x<1\}\) 取交集，得到
+\(P\cap Q=\{x\mid -2<x<1\}\)，故选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -30,6 +36,12 @@ D
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+函数有定义必须满足 \(x+1>0\). 由 \(f(\alpha)=1\) 得
+\(\log_2(\alpha+1)=1\)，于是 \(\alpha+1=2^1=2\)，所以
+\(\alpha=1\)，故选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -44,6 +56,16 @@ B
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+分母 \(1+\i\) 的共轭复数为 \(1-\i\)，因此
+\[
+\frac{5-\i}{1+\i}=\frac{(5-\i)(1-\i)}{(1+\i)(1-\i)}
+=\frac{5-5\i-\i+\i^2}{2}
+=\frac{4-6\i}{2}=2-3\i
+\]
+故选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -60,6 +82,14 @@ C
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+初始时 \(S=1\)，\(k=1\). 每循环一次先令 \(k=k+1\)，再令
+\(S=2S+k\)，所以各次循环后的数值依次为
+\((S,k)=(4,2)\)，\((11,3)\)，\((26,4)\)，\((57,5)\).
+当输出 \(S=57\) 时，判断框必须在 \(k=5\) 时回答“是”，因此判断条件可为
+\(k>4\)，故选 A. 若条件为 \(k>5\)、\(k>6\) 或 \(k>7\)，则在 \(k=5\) 时不能输出 \(57\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -74,6 +104,25 @@ A
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+设等比数列的公比为 \(q\). 按等比数列的定义，\(q\ne0\). 因为所求比值有意义，所以
+\(S_2\ne0\). 若 \(a_2=0\)，则 \(a_1=a_2/q=0\)，从而 \(S_2=0\)，矛盾，故
+\(a_2\ne0\). 又
+\(a_5=a_2q^3\)，由题设得
+\[
+8a_2+a_5=a_2(8+q^3)=0
+\]
+所以 \(q^3=-8\)，即 \(q=-2\). 因而
+\[
+\frac{S_5}{S_2}
+=\frac{a_1(1-q^5)/(1-q)}{a_1(1-q^2)/(1-q)}
+=\frac{1-q^5}{1-q^2}
+=\frac{1-(-2)^5}{1-(-2)^2}
+=\frac{33}{-3}=-11
+\]
+故选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -88,6 +137,25 @@ A
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+记命题甲为“\(x\sin^2x<1\)”，记命题乙为“\(x\sin x<1\)”.
+由于 \(0<x<\frac{\pi}{2}\)，有 \(0<\sin x<1\)，故
+\[
+x\sin^2x<x\sin x
+\]
+所以命题乙成立时必有命题甲成立，即命题甲是命题乙的必要条件.
+
+下面说明命题甲不是命题乙的充分条件. 函数 \(g(x)=x\sin x\) 在
+\(\left(0,\frac{\pi}{2}\right)\) 上严格递增，因为
+\(g'(x)=\sin x+x\cos x>0\). 又 \(g(1)=\sin1<1\)，而
+\(g\left(\frac{\pi}{2}\right)=\frac{\pi}{2}>1\)，所以存在唯一的
+\(x_0\in\left(1,\frac{\pi}{2}\right)\) 使 \(g(x_0)=1\). 此时
+\(x_0\sin^2x_0=\sin x_0<1\). 由连续性，取 \(x>x_0\) 且足够接近 \(x_0\)，仍有
+\(x\sin^2x<1\)，但因 \(g\) 严格递增而有 \(x\sin x>1\). 因此命题甲不充分.
+
+所以“\(x\sin^2x<1\)”是“\(x\sin x<1\)”的必要而不充分条件，故选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -106,6 +174,19 @@ x - y + 1 \geqslant 0,
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+由 \(2x-y-3\leqslant0\) 得 \(y\geqslant2x-3\)，由
+\(x-y+1\geqslant0\) 得 \(y\leqslant x+1\). 因而
+\[
+2x-3\leqslant x+1
+\]
+即 \(x\leqslant4\). 再由 \(y\leqslant x+1\) 得
+\[
+x+y\leqslant2x+1\leqslant9
+\]
+当 \(x=4\)，\(y=5\) 时，三条约束分别为 \(16\geqslant0\)、\(0\leqslant0\)、\(0\geqslant0\)，故该点可行且 \(x+y=9\). 所以最大值为 \(9\)，故选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -122,6 +203,27 @@ A
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+由三视图可知，该几何体由一个高为 \(2\mathrm{~cm}\)、底面边长为
+\(4\mathrm{~cm}\) 的正方柱，和一个高为 \(2\mathrm{~cm}\)、上底边长为
+\(4\mathrm{~cm}\)、下底边长为 \(8\mathrm{~cm}\) 的正方台组成.
+
+正方柱的体积为
+\[
+V_1=4^2\times2=32\mathrm{~cm}^3
+\]
+正方台的上下底面积分别为 \(16\mathrm{~cm}^2\) 和 \(64\mathrm{~cm}^2\)，所以
+\[
+V_2=\frac{2}{3}\left(16+64+\sqrt{16\times64}\right)
+=\frac{2}{3}(16+64+32)=\frac{224}{3}\mathrm{~cm}^3
+\]
+因此
+\[
+V=V_1+V_2=32+\frac{224}{3}=\frac{320}{3}\mathrm{~cm}^3
+\]
+故选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -136,10 +238,24 @@ B
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+因为 \(2^x>0\)，当 \(x<1\) 时又有 \(\frac{1}{1-x}>0\)，所以零点只能满足 \(x_0>1\). 对 \(x>1\)，有
+\[
+f(x)=2^x-\frac{1}{x-1}
+=\frac{2^x(x-1)-1}{x-1}
+\]
+令 \(g(x)=2^x(x-1)\). 则
+\(g'(x)=2^x\bigl((x-1)\ln2+1\bigr)>0\)，\((x>1)\)
+所以 \(g\) 在 \((1,+\infty)\) 上严格递增. 由 \(f(x_0)=0\) 得
+\(g(x_0)=1\). 因此，当 \(1<x_1<x_0\) 时 \(g(x_1)<1\)，从而
+\(f(x_1)<0\)；当 \(x_2>x_0\) 时 \(g(x_2)>1\)，从而
+\(f(x_2)>0\). 故选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
-设 \(O\) 为坐标原点，\(F_1\)，\(F_2\) 是双曲线 \(\frac{x^{2}}{a^{2}} - \frac{y^{2}}{b^{2}} = 1\) （\(a > 0, b > 0\)）的焦点. 若在双曲线上存在点 \(P\)，满足 \(\angle F_1PF_2 = 60^{\circ}\)，\(|OP| = \sqrt{7}a\)，则该双曲线的渐近线方程为（\quad）
+设 \(O\) 为坐标原点，\(F_1\)，\(F_2\) 是双曲线 \(\frac{x^{2}}{a^{2}} - \frac{y^{2}}{b^{2}} = 1\) （\(a > 0\)，\(b > 0\)）的焦点. 若在双曲线上存在点 \(P\)，满足 \(\angle F_1PF_2 = 60^{\circ}\)，\(|OP| = \sqrt{7}a\)，则该双曲线的渐近线方程为（\quad）
 
 \choices
     {\(x \pm \sqrt{3} y = 0\)}
@@ -150,6 +266,34 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+设 \(PF_1=r_1\)，\(PF_2=r_2\)，双曲线半焦距为 \(c\)，则
+\(c^2=a^2+b^2\). 由
+\(OP=\sqrt7a\) 以及两焦点关于原点对称，得
+\[
+r_1^2+r_2^2=2(OP^2+c^2)=14a^2+2c^2
+\]
+又因双曲线的定义，
+\[
+|r_1-r_2|=2a
+\]
+故
+\[
+r_1r_2=\frac{r_1^2+r_2^2-4a^2}{2}=5a^2+c^2
+\]
+在三角形 \(F_1PF_2\) 中，
+\(F_1F_2=2c\)，且 \(\angle F_1PF_2=60^{\circ}\). 由余弦定理，
+\[
+4c^2=r_1^2+r_2^2-2r_1r_2\cos60^{\circ}
+=r_1^2+r_2^2-r_1r_2
+=9a^2+c^2
+\]
+所以 \(c^2=3a^2\)，从而 \(b^2=c^2-a^2=2a^2\)，即
+\(\frac ba=\sqrt2\). 双曲线的渐近线为
+\(y=\pm\frac ba x=\pm\sqrt2x\)，即
+\(\sqrt2x\pm y=0\)，故选 D.
+\end{solution}
 \end{problem}
 
 \section{填空题}
@@ -163,8 +307,8 @@ D
 \hline
 \(8\) & 2 & \(9\) \\
 \(9\quad 1\) & 3 & \(5\quad 5\) \\
-\(2\quad 5\) & 4 & \(8\quad 2\quad 6\) \\
-\(7\quad 8\quad 5\) & 5 & \(3\quad 5\) \\
+\(2\quad 5\) & 4 & \(8\)，\(2\)，\(6\) \\
+\(7\)，\(8\)，\(5\) & 5 & \(3\quad 5\) \\
 \(6\) & 6 & \(7\)
 \end{tabular}
 \end{center}
@@ -172,6 +316,14 @@ D
 \begin{answer}
 \(45\)，\(46\)
 \end{answer}
+
+\begin{solution}
+甲组数据共有 \(9\) 个，按从小到大排列为
+\(28\)，\(31\)，\(39\)，\(42\)，\(45\)，\(55\)，\(57\)，\(58\)，\(66\).
+所以甲组的中位数是第 \(5\) 个数，即 \(45\). 乙组数据按从小到大排列为
+\(29\)，\(35\)，\(35\)，\(42\)，\(46\)，\(48\)，\(53\)，\(55\)，\(67\).
+所以乙组的中位数是第 \(5\) 个数，即 \(46\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -180,6 +332,15 @@ D
 \begin{answer}
 \(\frac{\pi}{2}\)
 \end{answer}
+
+\begin{solution}
+利用恒等式 \(\sin^2t=\frac{1-\cos2t}{2}\)，有
+\[
+f(x)=\frac{1-\cos\left(4x-\frac{\pi}{2}\right)}{2}
+\]
+余弦函数的最小正周期为 \(2\pi\)，所以要求
+\(4T=2\pi\)，得到 \(T=\frac{\pi}{2}\). 该周期由余弦函数的最小正周期得到，因而是最小正周期.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -188,6 +349,22 @@ D
 \begin{answer}
 \(\sqrt{10}\)
 \end{answer}
+
+\begin{solution}
+由 \(\alpha\perp(\alpha-2\beta)\)，得
+\[
+\alpha\cdot(\alpha-2\beta)=0
+\]
+代入 \(|\alpha|=1\)，可得
+\(1-2\alpha\cdot\beta=0\)，\(\alpha\cdot\beta=\frac12\).
+于是
+\[
+|2\alpha+\beta|^2
+=4|\alpha|^2+4\alpha\cdot\beta+|\beta|^2
+=4+4\times\frac12+4=10
+\]
+长度非负，所以 \(|2\alpha+\beta|=\sqrt{10}\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -198,6 +375,22 @@ D
 \begin{answer}
 \(n^2+n\)
 \end{answer}
+
+\begin{solution}
+记表中第 \(i\) 行第 \(j\) 列的数为 \(a_{ij}\). 由第一列可知
+\(a_{i1}=i\)，由第二列可知 \(a_{i2}=2i\). 由于第 \(i\) 行成等差数列，该行公差为
+\[
+a_{i2}-a_{i1}=2i-i=i
+\]
+因此
+\[
+a_{ij}=a_{i1}+(j-1)i=i+(j-1)i=ij
+\]
+所以第 \(n\) 行第 \(n+1\) 列的数为
+\[
+a_{n,n+1}=n(n+1)=n^2+n
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -206,6 +399,30 @@ D
 \begin{answer}
 \(18\)
 \end{answer}
+
+\begin{solution}
+由题设
+\[
+xy-2x-y=6
+\]
+所以
+\[
+(x-1)(y-2)=8
+\]
+若 \(0<x<1\)，则 \(-1<x-1<0\)，从而
+\(y-2=\frac{8}{x-1}<-8\)，即 \(y<-6\)，与 \(y>0\) 矛盾；\(x=1\) 也不满足
+\((x-1)(y-2)=8\). 因此 \(x>1\)，从而 \(y-2=\frac{8}{x-1}>0\). 令
+\(u=x-1>0\)，\(v=y-2>0\)，则 \(uv=8\)，且
+\[
+xy=(u+1)(v+2)=uv+2u+v+2=10+2u+v
+\]
+由均值不等式，
+\[
+2u+v=2u+\frac{8}{u}\geqslant8
+\]
+等号当且仅当 \(u=2\)，即 \(v=4\). 因此
+\(xy\geqslant18\). 当 \(x=3\)，\(y=6\) 时满足原条件且 \(xy=18\)，所以最小值为 \(18\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -214,6 +431,26 @@ D
 \begin{answer}
 \(20\)
 \end{answer}
+
+\begin{solution}
+设 \(t=1+\frac{x}{100}\). 则七月份和八月份的销售额分别为
+\(500t\) 万元和 \(500t^2\) 万元，九、十月份销售总额为
+\(500t+500t^2\) 万元. 因而一月至十月份的销售总额为
+\[
+3860+500+2(500t+500t^2)=4360+1000t+1000t^2
+\]
+由总额至少为 \(7000\) 万元，得
+\[
+25t^2+25t-66\geqslant0
+\]
+因 \(t>0\)，解得
+\[
+t\geqslant\frac65
+\]
+所以
+\(1+\frac{x}{100}\geqslant\frac65\)，\(x\geqslant20\).
+当 \(x=20\) 时恰好达到下界，故 \(x\) 的最小值为 \(20\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -224,6 +461,32 @@ D
 \begin{answer}
 \(\frac{3}{4}\)
 \end{answer}
+
+\begin{solution}
+以 \(O\) 为原点，设 \(\overrightarrow{OA}=\bs{a}\)，
+\(\overrightarrow{OB}=\bs{b}\). 由于平行四边形的对角线互相平分，
+\(\overrightarrow{OC}=-\bs{a}\)，\(\overrightarrow{OD}=-\bs{b}\).
+所以 \(E\) 对应的系数只能是
+\(1\)，\(\frac12\)，\(-\frac12\)，\(-1\)，即
+\(\overrightarrow{OE}=s\bs{a}\)，其中
+\(s\in\left\{1,\frac12,-\frac12,-1\right\}\). 同理
+\(\overrightarrow{OF}=t\bs{b}\)，其中
+\(t\in\left\{1,\frac12,-\frac12,-1\right\}\). 因而
+\[
+\overrightarrow{OG}=s\bs{a}+t\bs{b}
+\]
+
+在基底 \(\bs{a}\)，\(\bs{b}\) 下，平行四边形 \(ABCD\) 的四个顶点为
+\((1,0)\)，\((0,1)\)，\((-1,0)\)，\((0,-1)\)，其内部及边界为
+\(|s|+|t|\leqslant1\). 当且仅当
+\(|s|=|t|=\frac12\) 时，\(|s|+|t|=1\)，对应 \(2\times2=4\) 个选择，所得点在边界上，不计入外部. 其余 \(16-4=12\) 个选择满足
+\(|s|+|t|>1\)，所得点在平行四边形外部.
+
+因此所求概率为
+\[
+\frac{12}{16}=\frac34
+\]
+\end{solution}
 \end{problem}
 
 \section{解答题}
@@ -294,7 +557,7 @@ D
 \end{solution}
 
 \begin{problem}
-已知函数 \(f(x) = (x - a)^2(x - b)\) （\(a, b \in \R, a < b\)）.
+已知函数 \(f(x) = (x - a)^2(x - b)\) （\(a\)，\(b \in \R\)，\(a < b\)）.
 
 \begin{enumerate}
 \item 当 \(a = 1\)，\(b = 2\) 时，求曲线 \(y = f(x)\) 在点 \((2, f(2))\) 处的切线方程；
@@ -307,7 +570,12 @@ D
 \item 当 \(a=1\)，\(b=2\) 时，\(f(x)=(x-1)^2(x-2)\)，所以
 \(f'(x)=2(x-1)(x-2)+(x-1)^2=(x-1)(3x-5)\). 又 \(f(2)=0\)，\(f'(2)=1\)，故曲线在点 \((2,0)\) 处的切线方程为 \(y-0=1\cdot(x-2)\)，即 \(y=x-2\).
 \item 对一般的 \(a<b\)，有
-\(f'(x)=2(x-a)(x-b)+(x-a)^2=(x-a)(3x-a-2b)\). 因此 \(f(x)\) 的两个极值点的横坐标为 \(a\) 和 \(\frac{a+2b}{3}\). 而 \(f(x)=0\) 的零点为 \(a\) 和 \(b\)，其中 \(a\) 是二重零点. 由题设 \(x_3\neq x_1\) 且 \(x_3\neq x_2\)，可知 \(x_3=b\).
+\(f'(x)=2(x-a)(x-b)+(x-a)^2=(x-a)(3x-a-2b)\). 因此 \(f(x)\) 的两个极值点的横坐标为
+\(a\) 和 \(\frac{a+2b}{3}\). 事实上，当 \(x<a\) 时 \(f'(x)>0\)，当
+\(a<x<\frac{a+2b}{3}\) 时 \(f'(x)<0\)，当 \(x>\frac{a+2b}{3}\) 时
+\(f'(x)>0\)，所以这两个驻点确为极值点. 而 \(f(x)=0\) 的零点为 \(a\) 和
+\(b\)，其中 \(a\) 是二重零点. 由题设 \(x_3\neq x_1\) 且 \(x_3\neq x_2\)，可知
+\(x_3=b\).
 
 由于 \(a<b\)，有
 \(a<\frac{2a+b}{3}<\frac{a+2b}{3}<b\)，并且相邻两数之差均为 \(\frac{b-a}{3}\). 所以按 \(a\)，\(\frac{2a+b}{3}\)，\(\frac{a+2b}{3}\)，\(b\) 的顺序排列时，四个数成等差数列，故 \(x_4=\frac{2a+b}{3}\).
@@ -330,7 +598,7 @@ D
 \item 抛物线 \(y^2=2px\) 的焦点为 \(F\left(\frac{p}{2},0\right)\). 由于焦点在直线 \(l\) 上，代入直线方程得
 \(\frac{p}{2}-\frac{m^2}{2}=0\)，所以 \(p=m^2\). 当 \(m=2\) 时，\(p=4\)，故抛物线 \(C\) 的方程为 \(y^2=8x\).
 \item 由 \(p=m^2\)，可知 \(F=\left(\frac{m^2}{2},0\right)\)，抛物线的准线为 \(x=-\frac{m^2}{2}\). 设 \(A=(x_A,y_A)\)，\(B=(x_B,y_B)\). 由直线 \(l\) 得 \(x=my+\frac{m^2}{2}\)，代入抛物线方程，得到
-\(y^2=2m^2\left(my+\frac{m^2}{2}\right)=2m^3y+m^4\). 因此 \(y_A,y_B\) 是方程 \(y^2-2m^3y-m^4=0\) 的两个根，从而
+\(y^2=2m^2\left(my+\frac{m^2}{2}\right)=2m^3y+m^4\). 因此 \(y_A\)，\(y_B\) 是方程 \(y^2-2m^3y-m^4=0\) 的两个根，从而
 \(y_A+y_B=2m^3\)，\(y_Ay_B=-m^4\).
 
 过 \(A\)，\(B\) 作准线的垂线都是水平线，所以 \(A_1=\left(-\frac{m^2}{2},y_A\right)\)，\(B_1=\left(-\frac{m^2}{2},y_B\right)\). 根据三角形重心坐标公式，得

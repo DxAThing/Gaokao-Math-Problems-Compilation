@@ -15,6 +15,11 @@
 \begin{answer}
 D
 \end{answer}
+\begin{solution}
+由 \(x^2<1\) 得 \(-1<x<1\)，所以
+\(N=(-1,1)\)，\(M\cap N=[0,1)\).
+因此选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -28,6 +33,10 @@ D
 \begin{answer}
 B
 \end{answer}
+\begin{solution}
+余弦函数的最小正周期为 \(2\pi\). 对于 \(f(x)=\cos(2x+\frac{\pi}{4})\)，横坐标的伸缩系数为 \(2\)，故 \(T=\frac{2\pi}{2}=\pi\).
+因此选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -41,12 +50,19 @@ B
 \begin{answer}
 A
 \end{answer}
+\begin{solution}
+复数 \(z=2-\i\) 的共轭复数为 \(\overline{z}=2+\i\)，所以
+\[
+z\overline{z}=(2-\i)(2+\i)=4-\i^2=4+1=5
+\]
+因此选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
 根据如图所示的框图，对大于 2 的整数 \(N\)，输出的数列的通项公式是（\quad）
 
-\texfigure[max width=0.30\linewidth]{img_repaint/2014/shaanxi_liberal/q4_fig1.tex}
+\bitmapfigure[max width=0.30\linewidth]{img/2014/shaanxi_liberal/q4_fig1.png}
 
 \choices
     {\(a_{n} = 2n\)}
@@ -56,6 +72,9 @@ A
 \begin{answer}
 C
 \end{answer}
+\begin{solution}
+程序开始时 \(S=1\)，每次循环先计算 \(a_i=2S\)，再令 \(S=a_i\)，因此每次循环都使 \(S\) 变为原来的 \(2\) 倍. 第一次循环得到 \(a_1=2=2^1\). 若第 \(k\) 次循环前 \(S=2^{k-1}\)，则第 \(k\) 次循环得到 \(a_k=2S=2^k\). 由数学归纳法，输出数列的通项为 \(a_n=2^n\). 因此选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -69,6 +88,10 @@ C
 \begin{answer}
 C
 \end{answer}
+\begin{solution}
+正方形绕一条边旋转一周，所得几何体是底面半径 \(r=1\)、高 \(h=1\) 的圆柱. 圆柱的侧面积为 \(S=2\pi rh=2\pi\).
+因此选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -82,6 +105,10 @@ C
 \begin{answer}
 C
 \end{answer}
+\begin{solution}
+任取 \(2\) 个点共有 \(\mathrm C_5^2=10\) 种等可能结果. 正方形的四条边对应的 \(4\) 对顶点距离等于边长，两条对角线对应的 \(2\) 对顶点距离大于边长；中心与任一顶点的距离为边长的 \(\frac{\sqrt{2}}{2}\)，不符合条件. 因此符合条件的有 \(4+2=6\) 种，所求概率为 \(P=\frac{6}{10}=\frac35\).
+因此选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -95,6 +122,13 @@ C
 \begin{answer}
 D
 \end{answer}
+\begin{solution}
+逐项检验函数关系. 取 \(x=y=1\) 时，\(f(x)=x^{1/2}\) 给出 \(f(2)=\sqrt2\ne1=f(1)f(1)\)，\(f(x)=x^3\) 给出 \(f(2)=8\ne1=f(1)f(1)\)，所以 A、B 均不满足题设关系. \(f(x)=(\frac12)^x\) 满足 \(f(x+y)=f(x)f(y)\)，但底数在 \((0,1)\) 内，所以它是单调递减函数. 对于 \(f(x)=3^x\)，有
+\[
+f(x+y)=3^{x+y}=3^x3^y=f(x)f(y)
+\]
+且底数 \(3>1\)，所以它是单调递增函数. 因此选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -106,8 +140,11 @@ D
     {真，真，假}
     {假，假，假}
 \begin{answer}
-B
+A
 \end{answer}
+\begin{solution}
+记命题的前件为 \(P\)，后件为 \(Q\)，其中 \(P\) 表示对任意 \(n\in\mathbf N_+\) 有 \(\frac{a_n+a_{n+1}}2<a_n\)，\(Q\) 表示数列 \(\{a_n\}\) 为递减数列. 由 \(\frac{a_n+a_{n+1}}2<a_n\) 可得 \(a_{n+1}<a_n\)，反过来也成立，所以 \(P\) 与 \(Q\) 等价. 因此原命题、逆命题、否命题和逆否命题均为真，所求判断为“真，真，真”，选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -121,6 +158,18 @@ B
 \begin{answer}
 D
 \end{answer}
+\begin{solution}
+下月工资记为 \(x_i'=x_i+100\). 其均值为
+\[
+\overline{x'}=\frac1{10}\sum_{i=1}^{10}(x_i+100)=\overline{x}+100
+\]
+又因为 \(x_i'-\overline{x'}=x_i-\overline{x}\)，所以方差为
+\[
+s'^2=\frac1{10}\sum_{i=1}^{10}(x_i'-\overline{x'})^2
+=\frac1{10}\sum_{i=1}^{10}(x_i-\overline{x})^2=s^2
+\]
+因此选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -136,6 +185,11 @@ D
 \begin{answer}
 A
 \end{answer}
+\begin{solution}
+设三次函数为 \(f(x)=Ax^3+Bx^2+Cx+D\). 由图可知曲线在 \(O(0,0)\) 处与直线 \(y=-x\) 相切，在 \((2,0)\) 处与直线 \(y=3x-6\) 相切，所以 \(f(0)=0\)，\(f'(0)=-1\)，\(f(2)=0\)，\(f'(2)=3\).
+于是 \(D=0\)，\(C=-1\)，并且 \(8A+4B-2=0\)，\(12A+4B-1=3\)，即 \(4A+2B=1\)，\(3A+B=1\). 解得 \(A=\frac12\)，\(B=-\frac12\). 因此 \(f(x)=\frac12x^3-\frac12x^2-x\).
+所以选 A.
+\end{solution}
 \end{problem}
 
 \section{填空题}
@@ -145,6 +199,9 @@ A
 \begin{answer}
 \(x=-1\)
 \end{answer}
+\begin{solution}
+抛物线标准方程为 \(y^2=4px\)，与 \(y^2=4x\) 比较得 \(p=1\). 其准线方程为 \(x=-p\)，所以准线方程为 \(x=-1\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -152,6 +209,12 @@ A
 \begin{answer}
 \(\sqrt{10}\)
 \end{answer}
+\begin{solution}
+由 \(4^a=2\) 得 \(2^{2a}=2^1\)，从而 \(a=\frac12\). 又 \(\lg x=a\)，所以
+\[
+x=10^a=10^{1/2}=\sqrt{10}
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -159,6 +222,9 @@ A
 \begin{answer}
 \(\frac{1}{2}\)
 \end{answer}
+\begin{solution}
+由向量数量积为零，得 \(\bs{a}\cdot\bs{b}=\sin 2\theta-\cos^2\theta=0\). 利用 \(\sin 2\theta=2\sin\theta\cos\theta\)，有 \(\cos\theta(2\sin\theta-\cos\theta)=0\). 因为 \(0<\theta<\frac\pi2\)，所以 \(\cos\theta>0\)，从而 \(2\sin\theta=\cos\theta\)，即 \(\tan\theta=\frac12\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -166,6 +232,18 @@ A
 \begin{answer}
 \(\frac{x}{2014x+1}\)
 \end{answer}
+\begin{solution}
+先证明 \(f_n(x)=\frac{x}{1+nx}\). 由于 \(x\geqslant0\) 且 \(n\in\mathbf N_+\)，有 \(1+nx>0\)，所以各步分式均有意义. 当 \(n=1\) 时，\(f_1(x)=f(x)=\frac{x}{1+x}\)，结论成立. 若 \(f_n(x)=\frac{x}{1+nx}\)，则
+\[
+f_{n+1}(x)=f\left(\frac{x}{1+nx}\right)
+=\frac{\frac{x}{1+nx}}{1+\frac{x}{1+nx}}
+=\frac{x}{1+(n+1)x}
+\]
+由数学归纳法，\(f_n(x)=\frac{x}{1+nx}\) 对一切 \(n\in\mathbf N_+\) 成立. 因此
+\[
+f_{2014}(x)=\frac{x}{1+2014x}=\frac{x}{2014x+1}
+\]
+\end{solution}
 \end{problem}
 
 \section{选考题}
@@ -175,16 +253,38 @@ A
 \begin{answer}
 \(\sqrt{5}\)
 \end{answer}
+\begin{solution}
+由柯西不等式，
+\[
+5=ma+nb\leqslant\sqrt{m^2+n^2}\sqrt{a^2+b^2}
+=\sqrt5\sqrt{m^2+n^2}
+\]
+所以 \(\sqrt{m^2+n^2}\geqslant\sqrt5\). 当 \(m=a\)，\(n=b\) 时，题设两式均成立，且 \(\sqrt{m^2+n^2}=\sqrt5\)，故最小值为 \(\sqrt5\).
+\end{solution}
 \end{problem}
 
 \reuseproblemnumber
 \begin{problem}[B]
-如图，\(\triangle ABC\) 中，\(BC = 6\)，以 \(BC\) 为直径的半圆分别交 \(AB\)，\(AC\) 于点 \(E\)，\(F\)，若 \(AC = 2AE\)，则 \(EF =\fillinblank{}.\)
+如图，\(\triangle ABC\) 中，\(BC = 6\)，以 \(BC\) 为直径的半圆分别交 \(AB\)，\(AC\) 于点 \(E\)，\(F\)，若 \(AC = 2AE\)，则 \(EF =\fillinblank{}\).
 
 \bitmapfigure[max width=0.42\linewidth]{img/2014/shaanxi_liberal/q15_fig1.png}
 \begin{answer}
 \(3\)
 \end{answer}
+\begin{solution}
+因为 \(E\)，\(F\) 在以 \(BC\) 为直径的圆上，所以 \(\angle BEC=\angle BFC=90^\circ\). 设 \(AE=t\)，则 \(AC=2t\). 在直角三角形 \(AEC\) 中，\(\cos A=\frac{AE}{AC}=\frac12\)，所以 \(A=60^\circ\).
+由点 \(A\) 关于该圆的幂，
+\[
+AE\cdot AB=AF\cdot AC
+\]
+代入 \(AC=2AE\) 得 \(AB=2AF\)，所以 \(AF=\frac12AB\). 取 \(A\) 为原点，令 \(AB\) 在 \(x\) 轴正向，设 \(AB=s\). 则 \(B=(s,0)\)，\(C=(t,\sqrt3t)\)，\(E=(t,0)\)，\(F=\left(\frac{s}{4},\frac{\sqrt3s}{4}\right)\).
+于是
+\[
+EF^2=\left(\frac{s}{4}-t\right)^2+\left(\frac{\sqrt3s}{4}\right)^2
+=\frac14(s^2+4t^2-2st)=\frac14BC^2=9
+\]
+因为 \(EF>0\)，所以 \(EF=3\).
+\end{solution}
 \end{problem}
 
 \reuseproblemnumber
@@ -193,6 +293,10 @@ A
 \begin{answer}
 \(1\)
 \end{answer}
+\begin{solution}
+由极坐标与直角坐标的关系 \(x=\rho\cos\theta\)，\(y=\rho\sin\theta\)，直线方程化为 \(\rho\left(\sin\theta\cos\frac\pi6-\cos\theta\sin\frac\pi6\right)=1\)，即 \(\frac{\sqrt3}{2}y-\frac12x=1\)，从而 \(\sqrt3y-x=2\).
+点 \(\left(2,\frac\pi6\right)\) 的直角坐标为 \((\sqrt3,1)\). 因此点到直线 \(x-\sqrt3y+2=0\) 的距离为 \(d=\frac{|\sqrt3-\sqrt3+2|}{\sqrt{1+3}}=1\).
+\end{solution}
 \end{problem}
 
 \section{解答题}
@@ -205,7 +309,11 @@ A
 \item 若 \(a\)，\(b\)，\(c\) 成等比数列，且 \(c = 2a\)，求 \(\cos B\) 的值.
 \end{enumerate}
 \begin{solution}
-\(\cos B=\frac{3}{4}\).
+\begin{enumerate}
+\item 由正弦定理，存在 \(k>0\) 使 \(a=k\sin A\)，\(b=k\sin B\)，\(c=k\sin C\). 因为 \(a\)，\(b\)，\(c\) 成等差数列，所以 \(a+c=2b\)，从而 \(\sin A+\sin C=2\sin B\). 又 \(A+B+C=\pi\)，故 \(\sin B=\sin(A+C)\)，所以 \(\sin A+\sin C=2\sin(A+C)\).
+
+\item 因为 \(a\)，\(b\)，\(c\) 为三角形的边，均为正数. 设等比数列公比为 \(q>0\)，则 \(b=aq\)，\(c=aq^2\). 由 \(c=2a\) 得 \(q^2=2\)，所以 \(b=\sqrt2a\)，\(c=2a\). 在三角形 \(ABC\) 中对角 \(B\) 使用余弦定理，\(b^2=a^2+c^2-2ac\cos B\). 代入边长关系得 \(2a^2=a^2+4a^2-4a^2\cos B\)，所以 \(\cos B=\frac34\).
+\end{enumerate}
 \end{solution}
 \end{problem}
 
@@ -219,8 +327,17 @@ A
 \bitmapfigure[max width=0.55\linewidth]{img/2014/shaanxi_liberal/q17_fig1.png}
 \begin{solution}
 \begin{enumerate}
-\item \(\frac{2}{3}\)；
-\item 四边形 \(EFGH\) 是矩形.
+\item 由三视图可知，\(AD\perp BD\)，\(AD\perp DC\)，\(BD\perp DC\)，且 \(AD=1\)，\(BD=DC=2\). 因为 \(BD\)、\(DC\) 是平面 \(BDC\) 内相交的两条直线，所以直线 \(AD\) 垂直于平面 \(BDC\). 因而以三角形 \(BDC\) 为底，\(AD\) 为高，四面体体积为
+\[
+V=\frac13\cdot\frac12BD\cdot DC\cdot AD
+=\frac13\cdot\frac12\cdot2\cdot2\cdot1=\frac23
+\]
+
+\item 平面 \(EFGH\) 平行于 \(AD\) 和 \(BC\). 在三角形 \(ABD\) 中，过 \(E\) 的截线 \(EF\parallel AD\)，且 \(E\) 为 \(AB\) 的中点，所以 \(F\) 为 \(BD\) 的中点. 在三角形 \(ABC\) 中，截线 \(EH\parallel BC\)，所以 \(H\) 为 \(AC\) 的中点.
+
+平面 \(BDC\) 与平面 \(EFGH\) 的交线为 \(FG\)，且 \(FG\parallel BC\). 由三角形 \(BDC\) 的中位线定理，\(G\) 为 \(DC\) 的中点. 又在三角形 \(ADC\) 中，\(H\)，\(G\) 分别为 \(AC\)，\(DC\) 的中点，所以 \(HG\parallel AD\). 因此 \(EF\parallel HG\)，\(EH\parallel FG\)，四边形 \(EFGH\) 为平行四边形.
+
+由 \(AD\perp BC\)，且 \(EF\parallel AD\)，\(FG\parallel BC\)，得 \(EF\perp FG\). 该平行四边形有一个直角，所以四边形 \(EFGH\) 是矩形.
 \end{enumerate}
 \end{solution}
 \end{problem}
@@ -234,8 +351,21 @@ A
 \end{enumerate}
 \begin{solution}
 \begin{enumerate}
-\item \(2\sqrt{2}\)；
-\item \(m-n=y-x\)，且 \(m-n\) 的最大值为 \(1\).
+\item \(\overrightarrow{AB}=(1,2)\)，\(\overrightarrow{AC}=(2,1)\). 当 \(m=n=\frac23\) 时，
+\[
+\overrightarrow{OP}=\frac23(1,2)+\frac23(2,1)=(2,2)
+\]
+所以 \(\left|\overrightarrow{OP}\right|=\sqrt{2^2+2^2}=2\sqrt2\).
+
+\item 由
+\[
+(x,y)=m(1,2)+n(2,1)=(m+2n,2m+n)
+\]
+两式相减得 \(m-n=y-x\). 设 \(P\) 在三角形 \(ABC\) 内的重心坐标为 \(P=\alpha A+\beta B+\gamma C\)，其中 \(\alpha+\beta+\gamma=1\)，且 \(\alpha\)，\(\beta\)，\(\gamma\geqslant0\). 在三个顶点处，\(y-x\) 的值分别为 \(0\)，\(1\)，\(-1\)，所以
+\[
+m-n=y-x=0\alpha+1\beta-1\gamma\leqslant1
+\]
+当 \(P=B\) 时取等号，故 \(m-n\) 的最大值为 \(1\).
 \end{enumerate}
 \end{solution}
 \end{problem}
@@ -260,8 +390,15 @@ A
 \end{enumerate}
 \begin{solution}
 \begin{enumerate}
-\item \(0.27\)；
-\item \(0.24\).
+\item 样本总车辆数为 \(500+130+100+150+120=1000\). 赔付金额大于 \(2800\) 元的车辆数为 \(150+120=270\)，所以估计概率为
+\[
+\frac{270}{1000}=0.27
+\]
+
+\item 样本中新司机车辆数为 \(0.1\times1000=100\) 辆；在赔付 \(4000\) 元的 \(120\) 辆车中，新司机车辆数为 \(0.2\times120=24\) 辆. 因此在新司机中获赔 \(4000\) 元的概率估计为
+\[
+\frac{24}{100}=0.24
+\]
 \end{enumerate}
 \end{solution}
 \end{problem}
@@ -277,8 +414,40 @@ A
 \bitmapfigure[max width=0.42\linewidth]{img/2014/shaanxi_liberal/q20_fig1.png}
 \begin{solution}
 \begin{enumerate}
-\item \(\frac{x^2}{4}+\frac{y^2}{3}=1\)；
-\item \(y=-\frac{1}{2}x+\frac{\sqrt{3}}{3}\) 或 \(y=-\frac{1}{2}x-\frac{\sqrt{3}}{3}\).
+\item 因为椭圆经过 \((0,\sqrt3)\)，所以 \(\frac{3}{b^2}=1\)，即 \(b^2=3\). 又离心率 \(e=\frac ca=\frac12\)，且 \(c^2=a^2-b^2\)，故 \(\frac{a^2}{4}=a^2-3\)，即 \(a^2=4\).
+因此椭圆方程为
+\[
+\frac{x^2}{4}+\frac{y^2}{3}=1
+\]
+
+\item 以 \(y=-\frac12x+m\) 代入椭圆方程，得
+\[
+\frac{x^2}{4}+\frac{\left(-\frac12x+m\right)^2}{3}=1
+\]
+即
+\[
+x^2-mx+m^2-3=0
+\]
+设两交点的横坐标为 \(x_1\)，\(x_2\)，则
+\(x_1+x_2=m\)，\(x_1x_2=m^2-3\)，\((x_1-x_2)^2=3(4-m^2)\).
+所以弦 \(AB\) 的长度为
+\[
+|AB|=\sqrt{1+\left(-\frac12\right)^2}|x_1-x_2|=\frac{\sqrt{15}}2\sqrt{4-m^2}
+\]
+
+由 \(c^2=a^2-b^2=1\)，以 \(F_1F_2\) 为直径的圆为 \(x^2+y^2=1\). 直线 \(l\) 到原点的距离为 \(d=\frac{2|m|}{\sqrt5}\)，故弦 \(CD\) 的长度为
+\[
+|CD|=2\sqrt{1-d^2}=\frac2{\sqrt5}\sqrt{5-4m^2}
+\]
+由题设，
+\[
+\frac{|AB|}{|CD|}=\frac{5\sqrt3}{4}\sqrt{\frac{4-m^2}{5-4m^2}}=\frac{5\sqrt3}{4}
+\]
+由于 \(A\)、\(B\) 和 \(C\)、\(D\) 均为两个交点，需有 \(4-m^2>0\) 且 \(5-4m^2>0\). 从而 \(4-m^2=5-4m^2\)，即 \(m^2=\frac13\)，所得两个值均满足上述相交条件，故
+\[
+m=\pm\frac{\sqrt3}{3}
+\]
+所求直线为 \(y=-\frac12x+\frac{\sqrt3}{3}\) 或 \(y=-\frac12x-\frac{\sqrt3}{3}\).
 \end{enumerate}
 \end{solution}
 \end{problem}
@@ -293,9 +462,42 @@ A
 \end{enumerate}
 \begin{solution}
 \begin{enumerate}
-\item 极小值为 \(2\)；
-\item 当 \(m>\frac{2}{3}\) 时有 \(0\) 个零点；当 \(m=\frac{2}{3}\) 或 \(m\leqslant0\) 时有 \(1\) 个零点；当 \(0<m<\frac{2}{3}\) 时有 \(2\) 个零点；
-\item \(m\in\left[\frac{1}{4},+\infty\right)\).
+\item 当 \(m=\e\) 时，\(x>0\)，且
+\[
+f'(x)=\frac1x-\frac{\e}{x^2}=\frac{x-\e}{x^2}
+\]
+因此 \(f'(x)<0\) 在 \((0,\e)\) 上成立，\(f'(x)>0\) 在 \((\e,+\infty)\) 上成立，故 \(x=\e\) 处取得极小值. 其值为
+\[
+f(\e)=\ln\e+\frac{\e}{\e}=1+1=2
+\]
+
+\item \(x>0\) 时
+\[
+g(x)=\frac1x-\frac{m}{x^2}-\frac{x}{3}
+\]
+由于 \(3x^2>0\)，\(g(x)=0\) 等价于
+\[
+m=\varphi(x):=x-\frac{x^3}{3}
+\]
+又
+\[
+\varphi'(x)=1-x^2
+\]
+所以 \(\varphi\) 在 \((0,1)\) 上递增，在 \((1,+\infty)\) 上递减，且 \(\varphi(0^+)=0\)，\(\varphi(1)=\frac23\)，\(\varphi(x)\to-\infty\)（\(x\to+\infty\)）. 因此，当 \(m>\frac23\) 时有 \(0\) 个零点；当 \(m=\frac23\) 或 \(m\leqslant0\) 时有 \(1\) 个零点；当 \(0<m<\frac23\) 时有 \(2\) 个零点.
+\item 令 \(h(x)=f(x)-x\). 题设不等式等价于对任意 \(b>a>0\) 有 \(h(b)<h(a)\)，即 \(h\) 在 \((0,+\infty)\) 上严格递减. 求导得
+\[
+h'(x)=\frac1x-\frac{m}{x^2}-1=-\frac{x^2-x+m}{x^2}
+\]
+当 \(m\geqslant\frac14\) 时，
+\[
+x^2-x+m=\left(x-\frac12\right)^2+m-\frac14\geqslant0
+\]
+所以 \(h'(x)\leqslant0\)，且至多在一个点取零. 对任意 \(b>a>0\)，\(h(b)-h(a)=\int_a^b h'(x)\,\mathrm dx<0\)，故 \(h\) 严格递减，题设成立.
+
+当 \(m<\frac14\) 时，\(x^2-x+m\) 在 \(x=\frac12\) 处为负，故在该点附近 \(h'(x)>0\)，可以取 \(b>a>0\) 使 \(h(b)>h(a)\)，题设不成立. 因此
+\[
+m\in\left[\frac14,+\infty\right)
+\]
 \end{enumerate}
 \end{solution}
 \end{problem}

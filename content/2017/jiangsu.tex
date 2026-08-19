@@ -12,7 +12,13 @@
 \end{answer}
 
 \begin{solution}
-因为 \(A\cap B=\{1\}\)，所以 \(1\in B\). 因而 \(a=1\) 或 \(a^2+3=1\). 后一种情况给出 \(a^2=-2\)，不可能；所以 \(a=1\). 此时 \(B=\{1,4\}\)，确有 \(A\cap B=\{1\}\)，故填 \(1\).
+因为 \(A\cap B=\{1\}\)，所以 \(1\) 必须是集合 \(B\) 的元素. 由 \(B=\{a,a^2+3\}\)，可分两种可能：
+\[
+a=1\qquad\text{或}\qquad a^2+3=1
+\]
+第二种可能给出 \(a^2=-2\)，在实数范围内无解，因此只能有 \(a=1\). 此时
+\(B=\{1,4\}\)，\(A\cap B=\{1,2\}\cap\{1,4\}=\{1\}\)
+满足题设条件，故填 \(1\).
 \end{solution}
 
 
@@ -26,9 +32,13 @@
 \end{answer}
 
 \begin{solution}
-由复数乘法得 \(z=(1+\i)(1+2\i)=1+3\i+2\i^2=-1+3\i\). 因此
+由复数乘法及 \(\i^2=-1\)，
 \[
-|z|=\sqrt{(-1)^2+3^2}=\sqrt{10}.
+z=(1+\i)(1+2\i)=1+2\i+\i+2\i^2=-1+3\i
+\]
+因此 \(z\) 的实部为 \(-1\)，虚部为 \(3\). 对于复数 \(u+v\i\)，其模为 \(\sqrt{u^2+v^2}\)，故
+\[
+|z|=\sqrt{(-1)^2+3^2}=\sqrt{10}
 \]
 \end{solution}
 
@@ -43,11 +53,19 @@
 \end{answer}
 
 \begin{solution}
-四种型号产品的总产量为 \(200+400+300+100=1000\) 件，分层抽样的抽样比为 \(60/1000\). 因而应从丙种型号产品中抽取
+四种型号产品的总产量为
 \[
-300\times\frac{60}{1000}=18
+200+400+300+100=1000
 \]
-件.
+件. 分层抽样要求各层采用相同的抽样比，因此抽样比为
+\[
+\frac{60}{1000}=\frac3{50}
+\]
+丙种型号有 \(300\) 件，所以应抽取
+\[
+300\times\frac3{50}=18
+\]
+件，故填 \(18\).
 \end{solution}
 
 
@@ -63,9 +81,11 @@
 \end{answer}
 
 \begin{solution}
-因为输入值 \(x=\dfrac1{16}\le1\)，流程进入分支 \(y=2+\log_2x\). 所以
+输入 \(x=\dfrac1{16}<1\)，所以判断框中的条件 \(x\ge1\) 不成立，流程沿否定分支进入 \(y=2+\log_2x\). 又因为
+\(\frac1{16}=2^{-4}\)，\(\log_2\frac1{16}=-4\)
+所以
 \[
-y=2+\log_2\frac1{16}=2-4=-2.
+y=2+\log_2\frac1{16}=2-4=-2
 \]
 \end{solution}
 
@@ -80,11 +100,16 @@ y=2+\log_2\frac1{16}=2-4=-2.
 \end{answer}
 
 \begin{solution}
-设 \(t=\tan\alpha\). 由正切的差角公式，得
+设 \(t=\tan\alpha\). 由于题设中的 \(\tan(\alpha-\frac\pi4)\) 有意义，且题目要求的 \(\tan\alpha\) 也有意义，差角公式的分母不为零. 于是
 \[
-\frac{t-1}{1+t}=\frac16.
+\tan\left(\alpha-\frac\pi4\right)
+=\frac{\tan\alpha-\tan\frac\pi4}{1+\tan\alpha}
+=\frac{t-1}{1+t}=\frac16
 \]
-解得 \(6t-6=1+t\)，即 \(5t=7\)，所以 \(\tan\alpha=t=\dfrac75\).
+交叉相乘得 \(6t-6=1+t\)，即 \(5t=7\)，所以
+\[
+\tan\alpha=t=\frac75
+\]
 \end{solution}
 
 
@@ -100,14 +125,13 @@ y=2+\log_2\frac1{16}=2-4=-2.
 \end{answer}
 
 \begin{solution}
-设球的半径为 \(r\). 球与圆柱的上、下底面相切，所以圆柱的高为 \(2r\)；球与圆柱的母线相切，所以圆柱的底面半径也为 \(r\). 因而
+设球的半径为 \(r>0\). 球与圆柱的上、下底面分别相切，故圆柱的高为 \(2r\). 在过圆柱轴线的截面内，球与圆柱的母线相切，故圆柱底面圆的半径也为 \(r\). 因而
+\(V_1=\pi r^2\cdot2r=2\pi r^3\)，\(V_2=\frac43\pi r^3\).
+消去 \(r\) 后
 \[
-V_1=\pi r^2\cdot2r=2\pi r^3,\qquad V_2=\frac43\pi r^3.
+\frac{V_1}{V_2}=\frac{2\pi r^3}{\frac43\pi r^3}=\frac32
 \]
-所以
-\[
-\frac{V_1}{V_2}=\frac{2\pi r^3}{\frac43\pi r^3}=\frac32.
-\]
+故填 \(\dfrac32\).
 \end{solution}
 
 
@@ -123,11 +147,11 @@ V_1=\pi r^2\cdot2r=2\pi r^3,\qquad V_2=\frac43\pi r^3.
 \begin{solution}
 要使根式有意义，必须有 \(6+x-x^2\ge0\)，即
 \[
-(x+2)(x-3)\le0.
+(x+2)(x-3)\le0
 \]
 因此 \(D=[-2,3]\). 在 \([-4,5]\) 上等可能取数时，事件 \(x\in D\) 对应区间长度为 \(5\)，样本区间长度为 \(9\)，故所求概率为
 \[
-\frac{3-(-2)}{5-(-4)}=\frac59.
+\frac{3-(-2)}{5-(-4)}=\frac59
 \]
 \end{solution}
 
@@ -142,13 +166,17 @@ V_1=\pi r^2\cdot2r=2\pi r^3,\qquad V_2=\frac43\pi r^3.
 \end{answer}
 
 \begin{solution}
-双曲线的标准参数为 \(a^2=3\)，\(b^2=1\)，所以 \(c=\sqrt{a^2+b^2}=2\). 右准线方程为 \(x=\dfrac{a^2}{c}=\dfrac32\)，两条渐近线为 \(y=\pm\dfrac{x}{\sqrt3}\). 因此
+将双曲线与标准方程 \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\) 对照，得 \(a^2=3\)，\(b^2=1\). 因而
 \[
-P=\left(\frac32,\frac{\sqrt3}{2}\right),\qquad Q=\left(\frac32,-\frac{\sqrt3}{2}\right).
+c=\sqrt{a^2+b^2}=2
 \]
-双曲线的两个焦点为 \(F_1=(-2,0)\)，\(F_2=(2,0)\). 四边形 \(F_1PF_2Q\) 的两条对角线 \(F_1F_2\) 与 \(PQ\) 互相垂直，且长度分别为 \(4\) 与 \(\sqrt3\)，所以面积为
+右准线为 \(x=\dfrac{a^2}{c}=\dfrac32\)，两条渐近线为 \(y=\pm\dfrac ba x=\pm\dfrac{x}{\sqrt3}\). 所以
+\(P=\left(\frac32,\frac{\sqrt3}{2}\right)\)，\(Q=\left(\frac32,-\frac{\sqrt3}{2}\right)\).
+双曲线的两个焦点为 \(F_1=(-2,0)\)，\(F_2=(2,0)\). 四边形 \(F_1PF_2Q\) 的两条对角线 \(F_1F_2\) 与 \(PQ\) 分别水平、竖直，互相垂直，且
+\(\lvert F_1F_2\rvert=4\)，\(\lvert PQ\rvert=\sqrt3\).
+所以其面积为
 \[
-\frac12\cdot4\cdot\sqrt3=2\sqrt3.
+\frac12\lvert F_1F_2\rvert\,\lvert PQ\rvert=\frac12\cdot4\cdot\sqrt3=2\sqrt3
 \]
 \end{solution}
 
@@ -163,13 +191,19 @@ P=\left(\frac32,\frac{\sqrt3}{2}\right),\qquad Q=\left(\frac32,-\frac{\sqrt3}{2}
 \end{answer}
 
 \begin{solution}
-设等比数列的公比为 \(q\). 前三项与后三项分别相差三个位置，所以
+设等比数列的首项为 \(a_1\)，公比为 \(q\). 前六项可分成前后三项，后三项分别是前三项的 \(q^3\) 倍，因此
 \[
-S_6=S_3+q^3S_3=S_3(1+q^3).
+S_6=S_3+q^3S_3=S_3(1+q^3)
 \]
-由已知得 \(1+q^3=\dfrac{S_6}{S_3}=9\)，从而 \(q=2\). 又 \(S_3=a_1(1+q+q^2)=7a_1=\dfrac74\)，故 \(a_1=\dfrac14\). 因此
+由 \(S_3=\dfrac74\ne0\) 及 \(S_6=\dfrac{63}{4}\)，得
+\(1+q^3=\frac{S_6}{S_3}=9\)，\(q^3=8\).
+因为 \(q\) 为实数，所以 \(q=2\). 再由
 \[
-a_8=a_1q^7=\frac14\cdot2^7=32.
+S_3=a_1(1+q+q^2)=a_1(1+2+4)=7a_1=\frac74
+\]
+得 \(a_1=\dfrac14\). 因此
+\[
+a_8=a_1q^7=\frac14\cdot2^7=32
 \]
 \end{solution}
 
@@ -184,15 +218,19 @@ a_8=a_1q^7=\frac14\cdot2^7=32.
 \end{answer}
 
 \begin{solution}
-因为每次购买 \(x\) 吨，一年购买 \(600\) 吨，所以购买次数为 \(600/x\)，其中 \(x>0\). 一年的总费用为
+每次购买 \(x\) 吨，全年购买 \(600\) 吨，故购买次数为 \(\dfrac{600}{x}\)，并且 \(x>0\). 一年的总运费与总存储费用之和为
 \[
-T(x)=6\cdot\frac{600}{x}+4x=\frac{3600}{x}+4x.
+T(x)=6\cdot\frac{600}{x}+4x=\frac{3600}{x}+4x
 \]
-由基本不等式，
+由基本不等式，两个加数均为正，故
 \[
-T(x)=\frac{3600}{x}+4x\ge2\sqrt{\frac{3600}{x}\cdot4x}=240.
+T(x)\ge2\sqrt{\frac{3600}{x}\cdot4x}=240
 \]
-当且仅当 \(\dfrac{3600}{x}=4x\) 时取等号，即 \(x^2=900\). 因为 \(x>0\)，所以 \(x=30\).
+等号成立当且仅当
+\[
+\frac{3600}{x}=4x,\qquad\text{即}\qquad x^2=900
+\]
+结合 \(x>0\)，得 \(x=30\)，此时总费用达到下界，所以所求为 \(30\).
 \end{solution}
 
 
@@ -206,22 +244,29 @@ T(x)=\frac{3600}{x}+4x\ge2\sqrt{\frac{3600}{x}\cdot4x}=240.
 \end{answer}
 
 \begin{solution}
-函数 \(f\) 是奇函数，因为 \(x^3-2x\) 与 \(\e^x-\e^{-x}\) 都是奇函数. 且
+函数 \(x^3-2x\) 与 \(\e^x-\e^{-x}\) 都是奇函数，因此 \(f\) 是奇函数. 求导得
 \[
-f'(x)=3x^2-2+\e^x+\e^{-x}=3x^2+\left(\e^{x/2}-\e^{-x/2}\right)^2\ge0,
+f'(x)=3x^2-2+\e^x+\e^{-x}=3x^2+\left(\e^{x/2}-\e^{-x/2}\right)^2\ge0
 \]
-等号只在 \(x=0\) 时成立，所以 \(f\) 在 \(\R\) 上严格递增.
+等号只在 \(x=0\) 时成立. 任意非退化区间上 \(f'\) 不恒为零，所以 \(f\) 在 \(\R\) 上严格递增.
 
-令 \(u=a-1\)，则由奇性有 \(-f(u)=f(-u)=f(1-a)\). 因此
+由奇性有
 \[
-f(a-1)+f(2a^2)\le0
-\Longleftrightarrow f(2a^2)\le f(1-a).
+-f(a-1)=f(1-a)
 \]
-由 \(f\) 严格递增，以上不等式等价于 \(2a^2\le1-a\)，即
+因此原不等式等价于
 \[
-2a^2+a-1\le0.
+f(2a^2)\le -f(a-1)=f(1-a)
 \]
-解得 \(a\in\left[-1,\dfrac12\right]\).
+再由 \(f\) 严格递增，得到
+\[
+2a^2\le1-a,\qquad\text{即}\qquad
+2a^2+a-1\le0
+\]
+因式分解为 \((2a-1)(a+1)\le0\)，故
+\[
+a\in\left[-1,\frac12\right]
+\]
 \end{solution}
 
 
@@ -237,25 +282,21 @@ f(a-1)+f(2a^2)\le0
 \end{answer}
 
 \begin{solution}
-由 \(\tan\alpha=7\) 且 \(\alpha\) 为图中两向量的夹角，得
-\[
-\cos\alpha=\frac1{\sqrt{50}}=\frac1{5\sqrt2},\qquad \sin\alpha=\frac7{\sqrt{50}}=\frac7{5\sqrt2}.
-\]
-图中 \(\overrightarrow{OA}\) 与 \(\overrightarrow{OB}\) 分居 \(\overrightarrow{OC}\) 两侧，且 \(\angle BOC=45^\circ\)，所以
+由 \(\tan\alpha=7\) 且 \(\alpha\) 为夹角，得
+\(\cos\alpha=\frac1{\sqrt{1+\tan^2\alpha}}=\frac1{\sqrt{50}}=\frac1{5\sqrt2}\)，\(\sin\alpha=\frac7{\sqrt{50}}=\frac7{5\sqrt2}\).
+图中 \(\overrightarrow{OA}\)、\(\overrightarrow{OB}\) 分居 \(\overrightarrow{OC}\) 两侧，且 \(\angle BOC=45^\circ\)，所以 \(\angle AOB=\alpha+45^\circ\). 由于 \(\overrightarrow{OA}\)、\(\overrightarrow{OB}\) 的模均为 \(1\)，
 \[
 \overrightarrow{OA}\cdot\overrightarrow{OB}=\cos(\alpha+45^\circ)
-=\frac{1-7}{10}=-\frac35.
+=\frac{\cos\alpha-\sin\alpha}{\sqrt2}=-\frac35
 \]
 又因为 \(|\overrightarrow{OC}|=\sqrt2\)，故
-\[
-\overrightarrow{OC}\cdot\overrightarrow{OA}=\sqrt2\cos\alpha=\frac15,qquad
-\overrightarrow{OC}\cdot\overrightarrow{OB}=\sqrt2\cos45^\circ=1.
-\]
+\(\overrightarrow{OC}\cdot\overrightarrow{OA}=\sqrt2\cos\alpha=\frac15\)，\(qquad \overrightarrow{OC}\cdot\overrightarrow{OB}=\sqrt2\cos45^\circ=1\).
 将 \(\overrightarrow{OC}=m\overrightarrow{OA}+n\overrightarrow{OB}\) 分别与 \(\overrightarrow{OA}\)、\(\overrightarrow{OB}\) 作数量积，得
+\(m-\frac35n=\frac15\)，\(qquad -\frac35m+n=1\).
+两式分别乘以 \(5\) 后相加，得到 \(2m+2n=6\)，所以
 \[
-m-\frac35n=\frac15,qquad -\frac35m+n=1.
+m+n=3
 \]
-解得 \(m=\dfrac54\)，\(n=\dfrac74\)，所以 \(m+n=3\).
 \end{solution}
 
 
@@ -271,23 +312,23 @@ m-\frac35n=\frac15,qquad -\frac35m+n=1.
 \begin{solution}
 设 \(P=(x,y)\). 则
 \[
-\overrightarrow{PA}\cdot\overrightarrow{PB}=(-12-x,-y)\cdot(-x,6-y)=x^2+y^2+12x-6y=50+12x-6y.
+\overrightarrow{PA}\cdot\overrightarrow{PB}=(-12-x,-y)\cdot(-x,6-y)=x^2+y^2+12x-6y=50+12x-6y
 \]
 条件等价于 \(12x-6y\le-30\)，即 \(y\ge2x+5\).
 
 由 \(P\) 在圆 \(x^2+y^2=50\) 上，必有 \(x\ge-\sqrt{50}=-5\sqrt2\). 若 \(x>1\)，则 \(2x+5>0\)，由 \(y\ge2x+5\) 可平方得
 \[
-50-x^2=y^2\ge(2x+5)^2,
+50-x^2=y^2\ge(2x+5)^2
 \]
 从而 \(5x^2+20x-25\le0\)，即 \((x-1)(x+5)\le0\)，这与 \(x>1\) 矛盾，所以 \(x\le1\).
 
 反之，任取 \(x\in[-5\sqrt2,1]\)，取圆的上半圆点 \(y=\sqrt{50-x^2}\). 当 \(x\le-\dfrac52\) 时，\(2x+5\le0\le y\)；当 \(-\dfrac52<x\le1\) 时，\(2x+5>0\)，且
 \[
-50-x^2-(2x+5)^2=5(x+5)(1-x)\ge0,
+50-x^2-(2x+5)^2=5(x+5)(1-x)\ge0
 \]
 故 \(y\ge2x+5\). 因而所有 \(x\in[-5\sqrt2,1]\) 都能取到，所求范围为
 \[
-[-5\sqrt2,1].
+[-5\sqrt2,1]
 \]
 \end{solution}
 
@@ -305,17 +346,18 @@ x,&x\notin D,
 \end{answer}
 
 \begin{solution}
-设 \(x=k+t\)，其中 \(k=\lfloor x\rfloor\) 为非负整数，\(0\le t<1\). 当 \(0<x<1\) 时，\(\lg x<0\)，而 \(f(x)=f(t)\ge0\)，所以没有解. 当 \(x\ge10\) 时，\(\lg x\ge1\)，而 \(0\le f(t)<1\)，也没有解. 因此只需考虑 \(k=1,2,\ldots,9\).
+设 \(x=k+t\)，其中 \(k=\lfloor x\rfloor\) 为非负整数，\(0\le t<1\). 当 \(0<x<1\) 时，\(\lg x<0\)，而 \(f(x)=f(t)\ge0\)，所以没有解. 当 \(x\ge10\) 时，\(\lg x\ge1\)，而 \(0\le f(t)<1\)，也没有解. 因此只需考虑 \(k=1\)，\(2\)，\(\ldots\)，\(9\).
 
 先看 \(t=0\). 此时 \(f(t)=0\)，方程要求 \(\lg k=0\)，故 \(k=1\)，得到解 \(x=1\).
 
 若 \(0<t<1\) 且 \(t\in D\)，则 \(t=1-\dfrac1n\)（\(n\ge2\)），所以 \(t\) 和 \(t^2\) 都是介于 \(0\) 与 \(1\) 之间的有理数. 无论 \(f(t)=t\) 还是 \(f(t)=t^2\)，若方程成立，都有 \(k+t=10^{f(t)}\). 但对任意 \(0<r<1\) 的有理数 \(r\)，\(10^r\) 是无理数，这与 \(k+t\) 为有理数矛盾. 因此所有 \(0<t<1\) 的解都满足 \(t\notin D\)，从而 \(f(t)=t\).
+这里若 \(r=p/q\) 为既约分数，则 \(q\ge2\)；若 \(10^{p/q}\) 为有理数，其 \(q\) 次方的质因数分解中 \(2\) 和 \(5\) 的指数都应能被 \(q\) 整除，但这两个指数均为 \(p\)，矛盾. 因此上述无理性结论成立.
 
 对每个 \(k\ge1\)，令 \(h_k(t)=\lg(k+t)-t\). 因为
 \[
-h_k'(t)=\frac1{(k+t)\ln10}-1<0,
+h_k'(t)=\frac1{(k+t)\ln10}-1<0
 \]
-所以 \(h_k\) 严格递减. 当 \(k=1\) 时，\(h_1(0)=0\)，除 \(t=0\) 外没有根；当 \(k=2,3,\ldots,8\) 时，\(h_k(0)=\lg k>0\)，且 \(h_k(1)=\lg(k+1)-1<0\)，所以每个 \(k\) 恰有一个 \(t\in(0,1)\) 使 \(h_k(t)=0\)，共得到 \(7\) 个解. 当 \(k=9\) 时，\(h_9(0)>0\)，\(h_9(1)=\lg10-1=0\)，故在 \(0\le t<1\) 内没有根.
+所以 \(h_k\) 严格递减. 当 \(k=1\) 时，\(h_1(0)=0\)，且 \(h_1\) 严格递减，所以除 \(t=0\) 外没有根；当 \(k=2\)，\(3\)，\(\ldots\)，\(8\) 时，\(h_k(0)=\lg k>0\)，且 \(h_k(1)=\lg(k+1)-1<0\)，由连续性和严格递减性，每个 \(k\) 恰有一个 \(t\in(0,1)\) 使 \(h_k(t)=0\). 这个根不属于 \(D\)，否则与上面的无理性矛盾，因此它确实是原方程的根，共得到 \(7\) 个解. 当 \(k=9\) 时，\(h_9(0)>0\)，\(h_9(1)=\lg10-1=0\)，严格递减性说明 \(0\le t<1\) 内没有根.
 
 综上，方程共有 \(1+7=8\) 个解.
 \end{solution}
@@ -333,13 +375,13 @@ h_k'(t)=\frac1{(k+t)\ln10}-1<0,
 \item \(AD\perp AC\).
 \end{enumerate}
 
-\bitmapinlinefigure[8.1cm][]{img/2017/jiangsu/q15_fig1.png}
+\bitmapfigure[width=8.1cm]{img/2017/jiangsu/q15_fig1.png}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item 直线 \(EF\) 在平面 \(ABD\) 内，且 \(EF\perp AD\). 又因为 \(AB\perp AD\)，所以在平面 \(ABD\) 内，过点 \(E\) 的直线 \(EF\) 与 \(AB\) 平行，即 \(EF\parallel AB\). 由于 \(AB\) 在平面 \(ABC\) 内，且 \(EF\) 不在平面 \(ABC\) 内，因此 \(EF\parallel\) 平面 \(ABC\).
-\item 平面 \(ABD\perp\) 平面 \(BCD\)，两平面的交线为 \(BD\). 又 \(BC\subset\) 平面 \(BCD\)，且 \(BC\perp BD\)，所以 \(BC\perp\) 平面 \(ABD\)，从而 \(BC\perp AD\). 已知 \(AB\perp AD\)，而 \(AB\)，\(BC\) 是平面 \(ABC\) 内相交的两条直线，所以 \(AD\perp\) 平面 \(ABC\)，故 \(AD\perp AC\).
+\item 直线 \(EF\) 在平面 \(ABD\) 内，且 \(EF\perp AD\). 又 \(AB\perp AD\)，所以平面 \(ABD\) 内过点 \(E\) 的 \(AD\) 垂线 \(EF\) 与 \(AB\) 平行，即 \(EF\parallel AB\). 两平面 \(ABD\) 与 \(ABC\) 的交线为 \(AB\)，而 \(E\) 在 \(AD\) 上且 \(E\ne A\)，故 \(EF\) 不在平面 \(ABC\) 内. 因此由线面平行的判定定理，\(EF\parallel\) 平面 \(ABC\).
+\item 平面 \(ABD\perp\) 平面 \(BCD\)，两平面的交线为 \(BD\). 直线 \(BC\) 在平面 \(BCD\) 内且 \(BC\perp BD\)，所以由面面垂直的性质，\(BC\perp\) 平面 \(ABD\). 由于 \(AD\) 在平面 \(ABD\) 内，得到 \(BC\perp AD\). 又已知 \(AB\perp AD\)，而 \(AB\)、\(BC\) 是平面 \(ABC\) 内相交的两条直线，故 \(AD\perp\) 平面 \(ABC\). 最后 \(AC\subset\) 平面 \(ABC\)，所以 \(AD\perp AC\).
 \end{enumerate}
 \end{solution}
 
@@ -357,7 +399,7 @@ h_k'(t)=\frac1{(k+t)\ln10}-1<0,
 \begin{enumerate}
 \item 由 \(\bs{a}\parallel\bs{b}\)，得
 \[
-\begin{vmatrix}\cos x&\sin x\\3&-\sqrt3\end{vmatrix}=0,
+\begin{vmatrix}\cos x&\sin x\\3&-\sqrt3\end{vmatrix}=0
 \]
 即 \(\sqrt3\cos x+3\sin x=0\). 因为 \(x\in[0,\pi]\)，所以 \(x\) 在第二象限，且 \(\tan x=-\dfrac{1}{\sqrt3}\)，故 \(x=\dfrac{5\pi}{6}\).
 \item \(f(x)=\bs{a}\cdot\bs{b}=3\cos x-\sqrt3\sin x=2\sqrt3\cos\left(x+\dfrac{\pi}{6}\right)\). 当 \(x\in[0,\pi]\) 时，\(x+\dfrac{\pi}{6}\in\left[\dfrac{\pi}{6},\dfrac{7\pi}{6}\right]\). 因此最大值在 \(x=0\) 处取得，为 \(f(0)=3\)；最小值在 \(x=\dfrac{5\pi}{6}\) 处取得，为 \(f\left(\dfrac{5\pi}{6}\right)=-2\sqrt3\).
@@ -381,20 +423,16 @@ h_k'(t)=\frac1{(k+t)\ln10}-1<0,
 \begin{enumerate}
 \item 设椭圆的半焦距为 \(c\). 由离心率 \(\dfrac ca=\dfrac12\)，得右准线方程为 \(x=\dfrac{a^2}{c}=2a\)，所以两准线之间的距离为 \(4a=8\)，从而 \(a=2\)，\(c=1\). 因此 \(b^2=a^2-c^2=3\)，椭圆的标准方程为
 \[
-\dfrac{x^2}{4}+\dfrac{y^2}{3}=1.
+\dfrac{x^2}{4}+\dfrac{y^2}{3}=1
 \]
 \item 由 \(a=2\)，\(c=1\)，得 \(F_1=(-1,0)\)，\(F_2=(1,0)\). 设 \(P=(x,y)\)，则 \(x>0\)，\(y>0\)，且 \(\dfrac{x^2}{4}+\dfrac{y^2}{3}=1\). 设 \(Q=(u,v)\). 因为 \(l_1\perp PF_1\)，\(l_2\perp PF_2\)，所以
-\[
-(u+1)(x+1)+vy=0,\qquad (u-1)(x-1)+vy=0.
-\]
+\((u+1)(x+1)+vy=0\)，\((u-1)(x-1)+vy=0\).
 两式相减得 \(u=-x\)，代入第一式得 \(v=\dfrac{x^2-1}{y}\). 又因为 \(Q\) 在椭圆上，所以
 \[
-\dfrac{x^2}{4}+\dfrac{(1-x^2)^2}{3y^2}=1.
+\dfrac{x^2}{4}+\dfrac{(1-x^2)^2}{3y^2}=1
 \]
 由 \(y^2=3\left(1-\dfrac{x^2}{4}\right)\)，化简得
-\[
-\dfrac{x^2}{4}+\dfrac{4(1-x^2)^2}{9(4-x^2)}=1,\qquad 7x^4+40x^2-128=0.
-\]
+\(\dfrac{x^2}{4}+\dfrac{4(1-x^2)^2}{9(4-x^2)}=1\)，\(7x^4+40x^2-128=0\).
 令 \(t=x^2\)，则 \(7t^2+40t-128=0\)，解得 \(t=\dfrac{16}{7}\) 或 \(t=-8\). 因为 \(x>0\)，所以 \(x=\dfrac{4\sqrt7}{7}\)，再由椭圆方程得 \(y=\dfrac{3\sqrt7}{7}\). 故 \(P\) 的坐标为 \(\left(\dfrac{4\sqrt7}{7},\dfrac{3\sqrt7}{7}\right)\).
 \end{enumerate}
 \end{solution}
@@ -408,30 +446,30 @@ h_k'(t)=\frac1{(k+t)\ln10}-1<0,
 \item 将 \(l\) 放在容器 \(II\) 中，\(l\) 的一端置于点 \(E\) 处，另一端置于侧棱 \(GG_1\) 上，求 \(l\) 没入水中部分的长度.
 \end{enumerate}
 
-\bitmapinlinefigure[11.2cm][]{img/2017/jiangsu/q18_fig1.png}
+\bitmapfigure[width=11.2cm]{img/2017/jiangsu/q18_fig1.png}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
 \item 设玻璃棒的另一端在侧棱 \(CC_1\) 上，且该端到容器 \(I\) 底面的距离为 \(h\). 由于容器 \(I\) 为直棱柱，玻璃棒的水平投影长度为底面对角线 \(AC=10\sqrt7\text{ cm}\)，所以
 \[
-(10\sqrt7)^2+h^2=40^2,
+(10\sqrt7)^2+h^2=40^2
 \]
 解得 \(h=30\text{ cm}\). 玻璃棒从底面上的点 \(A\) 出发，水面高度为 \(12\text{ cm}\)，因此没入水中的长度为
 \[
-40\cdot\dfrac{12}{30}=16\text{ cm}.
+40\cdot\dfrac{12}{30}=16\text{ cm}
 \]
 \item 设玻璃棒的另一端在侧棱 \(GG_1\) 上，设该端的高度为 \(32t\text{ cm}\)，其中 \(0\le t\le1\). 正四棱台的底面和顶面中心重合，且对应顶点的连线为侧棱，所以从底面顶点 \(G\) 到该端点的水平位移沿对角线方向. 底面对角线的一半为 \(7\text{ cm}\)，顶面对角线的一半为 \(31\text{ cm}\)，故点 \(E\) 到该端点的水平距离为
 \[
-7+(7+24t)=14+24t\text{ cm}.
+7+(7+24t)=14+24t\text{ cm}
 \]
 由玻璃棒长度为 \(40\text{ cm}\)，得
 \[
-(14+24t)^2+(32t)^2=40^2,
+(14+24t)^2+(32t)^2=40^2
 \]
 即 \(400t^2+168t-351=0\). 因为 \(0\le t\le1\)，解得 \(t=\dfrac34\)，所以玻璃棒另一端的高度为 \(24\text{ cm}\). 水面高度为 \(12\text{ cm}\)，玻璃棒为直线段，长度与竖直方向的高度成正比，故没入水中的长度为
 \[
-40\cdot\dfrac{12}{24}=20\text{ cm}.
+40\cdot\dfrac{12}{24}=20\text{ cm}
 \]
 \end{enumerate}
 \end{solution}
@@ -452,47 +490,41 @@ h_k'(t)=\frac1{(k+t)\ln10}-1<0,
 
 \begin{solution}
 \begin{enumerate}
-\item 设等差数列 \(\{a_n\}\) 的公差为 \(d\)，则对 \(j=1,2,3\)，都有 \(a_{n-j}+a_{n+j}=2a_n\). 因此
+\item 设等差数列 \(\{a_n\}\) 的公差为 \(d\)，则对 \(j=1\)，\(2\)，\(3\)，都有 \(a_{n-j}+a_{n+j}=2a_n\). 因此
 \[
-a_{n-3}+a_{n-2}+a_{n-1}+a_{n+1}+a_{n+2}+a_{n+3}=6a_n,
+a_{n-3}+a_{n-2}+a_{n-1}+a_{n+1}+a_{n+2}+a_{n+3}=6a_n
 \]
 所以 \(\{a_n\}\) 是 \(P(3)\) 数列.
 \item 对任意 \(n>3\)，将 \(P(3)\) 的等式减去 \(P(2)\) 的等式，得
 \[
-a_{n-3}+a_{n+3}=2a_n.
+a_{n-3}+a_{n+3}=2a_n
 \]
 令 \(u=a_4-a_1\)，\(v=a_5-a_2\)，\(w=a_6-a_3\). 由上式递推可得，对任意非负整数 \(q\)，
-\[
-a_{3q+1}=a_1+qu,\qquad a_{3q+2}=a_2+qv,\qquad a_{3q+3}=a_3+qw.
-\]
+\(a_{3q+1}=a_1+qu\)，\(a_{3q+2}=a_2+qv\)，\(a_{3q+3}=a_3+qw\).
 在 \(P(2)\) 等式中取 \(n=3q+3\)，有
 \[
-(a_1+qu)+(a_2+qv)+(a_1+(q+1)u)+(a_2+(q+1)v)=4(a_3+qw),
+(a_1+qu)+(a_2+qv)+(a_1+(q+1)u)+(a_2+(q+1)v)=4(a_3+qw)
 \]
 比较一次项系数得 \(u+v=2w\). 取 \(n=3q+1\)（\(q\ge1\)），有
 \[
-(a_2+(q-1)v)+(a_3+(q-1)w)+(a_2+qv)+(a_3+qw)=4(a_1+qu),
+(a_2+(q-1)v)+(a_3+(q-1)w)+(a_2+qv)+(a_3+qw)=4(a_1+qu)
 \]
 比较一次项系数得 \(v+w=2u\). 取 \(n=3q+2\)（\(q\ge1\)），有
 \[
-(a_3+(q-1)w)+(a_1+qu)+(a_3+qw)+(a_1+(q+1)u)=4(a_2+qv),
+(a_3+(q-1)w)+(a_1+qu)+(a_3+qw)+(a_1+(q+1)u)=4(a_2+qv)
 \]
 比较一次项系数得 \(w+u=2v\). 因而
-\[
-u+v=2w,\qquad v+w=2u,\qquad w+u=2v.
-\]
+\(u+v=2w\)，\(v+w=2u\)，\(w+u=2v\).
 由前两式相减得 \(u=w\)，再由任一式得 \(u=v=w\). 记其公共值为 \(\delta\). 在 \(P(2)\) 等式中取 \(n=5\)，得
 \[
-a_3+a_4+a_6+a_7=4a_5.
+a_3+a_4+a_6+a_7=4a_5
 \]
 代入 \(a_4=a_1+\delta\)，\(a_5=a_2+\delta\)，\(a_6=a_3+\delta\)，\(a_7=a_1+2\delta\)，可得 \(a_1+a_3=2a_2\). 令 \(d=a_2-a_1\)，则 \(a_3=a_1+2d\). 再在 \(P(2)\) 等式中取 \(n=3\)，得
 \[
-a_1+a_2+a_4+a_5=4a_3,
+a_1+a_2+a_4+a_5=4a_3
 \]
 代入上述各式可得 \(\delta=3d\). 因而对三个剩余类分别有
-\[
-a_{3q+1}=a_1+3qd,\qquad a_{3q+2}=a_1+(3q+1)d,\qquad a_{3q+3}=a_1+(3q+2)d.
-\]
+\(a_{3q+1}=a_1+3qd\)，\(a_{3q+2}=a_1+(3q+1)d\)，\(a_{3q+3}=a_1+(3q+2)d\).
 这正说明 \(a_n=a_1+(n-1)d\)，所以 \(\{a_n\}\) 是等差数列.
 \end{enumerate}
 \end{solution}
@@ -512,26 +544,24 @@ a_{3q+1}=a_1+3qd,\qquad a_{3q+2}=a_1+(3q+1)d,\qquad a_{3q+3}=a_1+(3q+2)d.
 \begin{enumerate}
 \item \(f'(x)=3x^2+2ax+b\) 的极值点为 \(x=-\dfrac a3\). 由该点是 \(f(x)\) 的零点，得
 \[
-0=f\left(-\dfrac a3\right)=-\dfrac{a^3}{27}+\dfrac{a^3}{9}-\dfrac{ab}{3}+1=\dfrac{2a^3}{27}-\dfrac{ab}{3}+1.
+0=f\left(-\dfrac a3\right)=-\dfrac{a^3}{27}+\dfrac{a^3}{9}-\dfrac{ab}{3}+1=\dfrac{2a^3}{27}-\dfrac{ab}{3}+1
 \]
 因为 \(a>0\)，所以
 \[
-b=\dfrac{2a^3+27}{9a}=\dfrac{2a^2}{9}+\dfrac3a.
+b=\dfrac{2a^3+27}{9a}=\dfrac{2a^2}{9}+\dfrac3a
 \]
 又因为三次函数 \(f(x)\) 有极值，所以二次方程 \(f'(x)=0\) 有两个不相等的实根，即 \(a^2-3b>0\). 代入上式得 \(a^2>\dfrac{2a^2}{3}+\dfrac9a\)，从而 \(a^3>27\). 因此定义域为 \(a>3\).
 \item 由 \(a>3\)，有
 \[
-b^2-3a=\left(\dfrac{2a^2}{9}+\dfrac3a\right)^2-3a=\dfrac{(a^3-27)(4a^3-27)}{81a^2}>0.
+b^2-3a=\left(\dfrac{2a^2}{9}+\dfrac3a\right)^2-3a=\dfrac{(a^3-27)(4a^3-27)}{81a^2}>0
 \]
 故 \(b^2>3a\).
 \item 由
 \[
-f'(x)=3\left(x+\dfrac a3\right)^2+b-\dfrac{a^2}{3},
+f'(x)=3\left(x+\dfrac a3\right)^2+b-\dfrac{a^2}{3}
 \]
 知 \(f'(x)\) 的极小值为 \(b-\dfrac{a^2}{3}\). 设 \(f'(x)=0\) 的两个根为 \(r_1\)，\(r_2\)，则它们是 \(f(x)\) 的两个极值点，且
-\[
-r_1+r_2=-\dfrac{2a}{3},\qquad r_1r_2=\dfrac b3.
-\]
+\(r_1+r_2=-\dfrac{2a}{3}\)，\(r_1r_2=\dfrac b3\).
 于是
 \[
 \begin{aligned}
@@ -541,11 +571,11 @@ f(r_1)+f(r_2)&=(r_1+r_2)^3-3r_1r_2(r_1+r_2)+a\left((r_1+r_2)^2-2r_1r_2\right)+b(
 \]
 所以两个函数的所有极值之和为 \(b-\dfrac{a^2}{3}=\dfrac{27-a^3}{9a}\). 由题意
 \[
-\dfrac{27-a^3}{9a}\ge-\dfrac72,
+\dfrac{27-a^3}{9a}\ge-\dfrac72
 \]
 即 \(2a^3-63a-54\le0\). 因为
 \[
-2a^3-63a-54=(a-6)(2a^2+12a+9),
+2a^3-63a-54=(a-6)(2a^2+12a+9)
 \]
 且 \(a>3\) 时 \(2a^2+12a+9>0\)，所以 \(3<a\le6\). 故 \(a\) 的取值范围是 \((3,6]\).
 \end{enumerate}
@@ -569,7 +599,7 @@ f(r_1)+f(r_2)&=(r_1+r_2)^3-3r_1r_2(r_1+r_2)+a\left((r_1+r_2)^2-2r_1r_2\right)+b(
 \item 因为 \(PC\) 是半圆在点 \(C\) 处的切线，所以 \(OC\perp PC\). 又已知 \(AP\perp PC\)，故 \(AP\parallel OC\). 在等腰三角形 \(AOC\) 中，\(OA=OC\)，所以 \(\angle OAC=\angle OCA\). 由于 \(A\)，\(O\)，\(B\) 共线，且射线 \(AO\) 与射线 \(AB\) 同向，故 \(\angle CAB=\angle OAC\). 又由 \(AP\parallel OC\)，得 \(\angle PAC=\angle OCA\). 因此 \(\angle PAC=\angle CAB\).
 \item 因为 \(AB\) 是半圆的直径，所以 \(\angle ACB=90^\circ\). 又 \(AP\perp PC\)，所以 \(\angle APC=90^\circ\). 结合第（1）问，得 \(\triangle APC\sim\triangle ACB\). 因而
 \[
-\dfrac{AP}{AC}=\dfrac{AC}{AB},
+\dfrac{AP}{AC}=\dfrac{AC}{AB}
 \]
 即 \(AC^2=AP\cdot AB\).
 \end{enumerate}
@@ -590,11 +620,11 @@ f(r_1)+f(r_2)&=(r_1+r_2)^3-3r_1r_2(r_1+r_2)+a\left((r_1+r_2)^2-2r_1r_2\right)+b(
 \begin{enumerate}
 \item
 \[
-AB=\begin{pmatrix}0&1\\1&0\end{pmatrix}\begin{pmatrix}1&0\\0&2\end{pmatrix}=\begin{pmatrix}0&2\\1&0\end{pmatrix}.
+AB=\begin{pmatrix}0&1\\1&0\end{pmatrix}\begin{pmatrix}1&0\\0&2\end{pmatrix}=\begin{pmatrix}0&2\\1&0\end{pmatrix}
 \]
 \item 设曲线 \(C_1\) 上任意一点 \((x,y)\) 在矩阵 \(AB\) 对应的变换下变为 \((X,Y)\)，则
 \[
-\begin{pmatrix}X\\Y\end{pmatrix}=AB\begin{pmatrix}x\\y\end{pmatrix}=\begin{pmatrix}2y\\x\end{pmatrix}.
+\begin{pmatrix}X\\Y\end{pmatrix}=AB\begin{pmatrix}x\\y\end{pmatrix}=\begin{pmatrix}2y\\x\end{pmatrix}
 \]
 所以 \(x=Y\)，\(y=\dfrac X2\). 代入 \(C_1\) 的方程得 \(Y^2+4\left(\dfrac X2\right)^2=8\)，即 \(X^2+Y^2=8\). 因此将坐标字母改回 \(x\)，\(y\)，得 \(C_2:x^2+y^2=8\).
 \end{enumerate}
@@ -617,7 +647,7 @@ y=2\sqrt2\,s
 \begin{solution}
 直线 \(l\) 的参数方程消去参数 \(t\) 得 \(x-2y+8=0\). 设曲线 \(C\) 上的点为 \(P=(2s^2,2\sqrt2s)\)，则点 \(P\) 到直线 \(l\) 的距离为
 \[
-d(s)=\dfrac{\left|2s^2-4\sqrt2s+8\right|}{\sqrt5}=\dfrac{2\left((s-\sqrt2)^2+2\right)}{\sqrt5}.
+d(s)=\dfrac{\left|2s^2-4\sqrt2s+8\right|}{\sqrt5}=\dfrac{2\left((s-\sqrt2)^2+2\right)}{\sqrt5}
 \]
 当且仅当 \(s=\sqrt2\) 时，距离取得最小值 \(\dfrac4{\sqrt5}\). 此时 \(P=(4,4)\)，所以所求最小值为 \(\dfrac4{\sqrt5}\).
 \end{solution}
@@ -631,9 +661,13 @@ d(s)=\dfrac{\left|2s^2-4\sqrt2s+8\right|}{\sqrt5}=\dfrac{2\left((s-\sqrt2)^2+2\r
 \begin{solution}
 由柯西不等式，
 \[
-ac+bd\le\sqrt{a^2+b^2}\sqrt{c^2+d^2}=\sqrt4\sqrt{16}=8.
+(ac+bd)^2\le(a^2+b^2)(c^2+d^2)=4\cdot16=64
 \]
-所以 \(ac+bd\le8\).
+于是 \(\lvert ac+bd\rvert\le8\)，从而必有
+\[
+ac+bd\le\lvert ac+bd\rvert\le8
+\]
+故 \(ac+bd\le8\).
 \end{solution}
 
 
@@ -652,28 +686,24 @@ ac+bd\le\sqrt{a^2+b^2}\sqrt{c^2+d^2}=\sqrt4\sqrt{16}=8.
 
 \begin{solution}
 建立空间直角坐标系：原点取为 \(A\)，\(x\) 轴沿 \(AB\)，\(y\) 轴在平面 \(ABCD\) 内且垂直于 \(AB\)，\(z\) 轴沿 \(AA_1\). 由已知条件，
-\[
-A=(0,0,0),\quad B=(2,0,0),\quad D=(-1,\sqrt3,0),\quad C=(1,\sqrt3,0),
-\]
-\[
-A_1=(0,0,\sqrt3),\quad C_1=(1,\sqrt3,\sqrt3).
-\]
+\(A=(0,0,0)\)，\(B=(2,0,0)\)，\(D=(-1,\sqrt3,0)\)，\(C=(1,\sqrt3,0)\)
+\(A_1=(0,0,\sqrt3)\)，\(C_1=(1,\sqrt3,\sqrt3)\).
 \begin{enumerate}
 \item 直线 \(A_1B\) 和 \(AC_1\) 的方向向量可分别取为 \((2,0,-\sqrt3)\) 和 \((1,\sqrt3,\sqrt3)\). 因此它们的数量积为 \(-1\)，长度均为 \(\sqrt7\). 异面直线所成角取锐角，故其余弦值为
 \[
-\dfrac{|-1|}{\sqrt7\sqrt7}=\dfrac17.
+\dfrac{|-1|}{\sqrt7\sqrt7}=\dfrac17
 \]
 \item 平面 \(BA_1D\) 的一个法向量为
 \[
-\bs{n}_1=(2,0,-\sqrt3)\times(-1,\sqrt3,-\sqrt3)=(3,3\sqrt3,2\sqrt3),
+\bs{n}_1=(2,0,-\sqrt3)\times(-1,\sqrt3,-\sqrt3)=(3,3\sqrt3,2\sqrt3)
 \]
 平面 \(AA_1D\) 的一个法向量为
 \[
-\bs{n}_2=(0,0,-\sqrt3)\times(-1,\sqrt3,-\sqrt3)=(3,\sqrt3,0).
+\bs{n}_2=(0,0,-\sqrt3)\times(-1,\sqrt3,-\sqrt3)=(3,\sqrt3,0)
 \]
 设二面角 \(B-A_1D-A\) 的大小为 \(\theta\)，则
 \[
-\left|\cos\theta\right|=\dfrac{|\bs{n}_1\cdot\bs{n}_2|}{|\bs{n}_1||\bs{n}_2|}=\dfrac{18}{4\sqrt3\cdot2\sqrt3}=\dfrac34.
+\left|\cos\theta\right|=\dfrac{|\bs{n}_1\cdot\bs{n}_2|}{|\bs{n}_1||\bs{n}_2|}=\dfrac{18}{4\sqrt3\cdot2\sqrt3}=\dfrac34
 \]
 所以 \(\sin\theta=\sqrt{1-\dfrac9{16}}=\dfrac{\sqrt7}{4}\).
 \end{enumerate}
@@ -681,7 +711,7 @@ A_1=(0,0,\sqrt3),\quad C_1=(1,\sqrt3,\sqrt3).
 
 
 \begin{problem}
-已知一个口袋有 \(m\) 个白球，\(n\) 个黑球（\(m,n\in \N^*\)，\(n\ge 2\)），这些球除颜色外全部相同. 现将口袋中的球随机地逐个取出，并放入如图所示的编号为 \(1\)，\(2\)，\(3\)，\(\ldots\)，\(m+n\) 的抽屉内，其中第 \(k\) 次取出的球放入编号为 \(k\) 的抽屉（\(k=1\)，\(2\)，\(3\)，\(\ldots\)，\(m+n\)）.
+已知一个口袋有 \(m\) 个白球，\(n\) 个黑球（\(m\)，\(n\in \N^*\)，\(n\ge 2\)），这些球除颜色外全部相同. 现将口袋中的球随机地逐个取出，并放入如图所示的编号为 \(1\)，\(2\)，\(3\)，\(\ldots\)，\(m+n\) 的抽屉内，其中第 \(k\) 次取出的球放入编号为 \(k\) 的抽屉（\(k=1\)，\(2\)，\(3\)，\(\ldots\)，\(m+n\)）.
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
@@ -699,29 +729,30 @@ A_1=(0,0,\sqrt3),\quad C_1=(1,\sqrt3,\sqrt3).
 
 \begin{solution}
 \begin{enumerate}
-\item 在 \(m+n\) 个抽屉中，\(n\) 个黑球的位置等可能地从所有位置组合中产生，所以编号为 \(2\) 的抽屉内放黑球的概率为
+\item 令 \(N=m+n\). 随机逐个取球等价于在 \(N\) 个抽屉中等可能地选择 \(n\) 个位置放置黑球，共有 \(\mathrm C_N^n\) 种位置组合. 若编号为 \(2\) 的抽屉放黑球，其余 \(n-1\) 个黑球可从剩下的 \(N-1\) 个位置中任选，因此
 \[
-p=\dfrac{n}{m+n}.
+p=\frac{\mathrm C_{N-1}^{n-1}}{\mathrm C_N^n}
+=\frac{n}{N}=\frac{n}{m+n}
 \]
-\item 令 \(N=m+n\)，设最后一个黑球所在的抽屉编号为 \(K\)，则 \(X=\dfrac1K\). 当 \(k=n,n+1,\ldots,N\) 时，事件 \(K=k\) 等价于第 \(k\) 个抽屉放黑球，且前 \(k-1\) 个抽屉中有其余的 \(n-1\) 个黑球，因此
+\item 令 \(N=m+n\)，设最后一个黑球所在的抽屉编号为 \(K\)，则 \(X=\dfrac1K\). 当 \(k=n\)，\(n+1\)，\(\ldots\)，\(N\) 时，事件 \(K=k\) 等价于第 \(k\) 个抽屉放黑球，且前 \(k-1\) 个抽屉中有其余的 \(n-1\) 个黑球，因此
 \[
-P(K=k)=\dfrac{\mathrm C_{k-1}^{n-1}}{\mathrm C_N^n}.
+P(K=k)=\dfrac{\mathrm C_{k-1}^{n-1}}{\mathrm C_N^n}
 \]
 于是
 \[
-E(X)=\dfrac1{\mathrm C_N^n}\sum_{k=n}^{N}\dfrac{\mathrm C_{k-1}^{n-1}}{k}.
+E(X)=\dfrac1{\mathrm C_N^n}\sum_{k=n}^{N}\dfrac{\mathrm C_{k-1}^{n-1}}{k}
 \]
 由于 \(n\ge2\)，对每个 \(k\ge n\) 都有 \(\dfrac1k<\dfrac1{k-1}\)，从而
 \[
-E(X)<\dfrac1{\mathrm C_N^n}\sum_{k=n}^{N}\dfrac{\mathrm C_{k-1}^{n-1}}{k-1}=\dfrac1{(n-1)\mathrm C_N^n}\sum_{k=n}^{N}\mathrm C_{k-2}^{n-2}.
+E(X)<\dfrac1{\mathrm C_N^n}\sum_{k=n}^{N}\dfrac{\mathrm C_{k-1}^{n-1}}{k-1}=\dfrac1{(n-1)\mathrm C_N^n}\sum_{k=n}^{N}\mathrm C_{k-2}^{n-2}
 \]
 由组合数的累加公式，
 \[
-\sum_{k=n}^{N}\mathrm C_{k-2}^{n-2}=\mathrm C_{N-1}^{n-1}.
+\sum_{k=n}^{N}\mathrm C_{k-2}^{n-2}=\mathrm C_{N-1}^{n-1}
 \]
 因此
 \[
-E(X)<\dfrac{\mathrm C_{N-1}^{n-1}}{(n-1)\mathrm C_N^n}=\dfrac{n}{N(n-1)}=\dfrac{n}{(m+n)(n-1)}.
+E(X)<\dfrac{\mathrm C_{N-1}^{n-1}}{(n-1)\mathrm C_N^n}=\dfrac{n}{N(n-1)}=\dfrac{n}{(m+n)(n-1)}
 \]
 \end{enumerate}
 \end{solution}

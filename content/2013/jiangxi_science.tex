@@ -16,6 +16,14 @@
 C
 \end{answer}
 
+\begin{solution}
+因为 \(1\)，\(2\notin N\)，而 \(M\cap N=\{4\}\)，所以 \(z\i=4\). 两边同除以 \(\i\)，得
+\[
+z=\frac{4}{\i}=-4\i
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
 函数 \( y = \sqrt{x} \ln (1 - x) \) 的定义域为（\quad）
 
@@ -29,6 +37,14 @@ C
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+根式有意义要求 \(x\geqslant0\)，对数有意义要求 \(1-x>0\)，即 \(x<1\). 两条件同时成立时
+\[
+x\in[0,1)
+\]
+故选 B.
+\end{solution}
 
 \begin{problem}
 等比数列 \(x\)，\(3x + 3\)，\(6x + 6\)，\(\cdots\) 的第四项等于（\quad）
@@ -44,6 +60,22 @@ B
 A
 \end{answer}
 
+\begin{solution}
+等比数列相邻两项的比必须有意义，所以 \(x\ne0\)，且 \(3x+3\ne0\). 由前两次比值相等，
+\[
+\frac{3x+3}{x}=\frac{6x+6}{3x+3}
+\]
+交叉相乘并整理：
+\[
+(3x+3)^2=x(6x+6)
+\Longleftrightarrow
+3(x+1)(x+3)=0
+\]
+候选值为 \(x=-1\)，\(-3\). 当 \(x=-1\) 时第二项、第三项均为 \(0\)，相邻项的比无意义，不能构成题设等比数列；故 \(x=-3\). 此时数列为
+\(-3\)，\(-6\)，\(-12\)，\(-24\).
+故第四项为 \(-24\)，选 A.
+\end{solution}
+
 \begin{problem}
 总体由编号为 01，02，…，19，20 的 20 个个体组成. 利用下面的随机数表选取 5 个个体，选取方法从随机数表第 1 行的第 5 列和第 6 列数字开始，由左到右依次选取两个数字，则选出来的第 5 个个体的编号为（\quad）
 
@@ -57,8 +89,16 @@ A
 \end{problem}
 
 \begin{answer}
-C
+D
 \end{answer}
+
+\begin{solution}
+从第 5、6 列开始，每次取相邻两位，得到
+\(65\)，\(\ 72\)，\(\ 08\)，\(\ 02\)，\(\ 63\)，\(\ 14\)，\(\ 07\)，\(\ 02\)，\(\ 43\)，\(\ 69\)，\(\ 97\)，\(\ 28\)，\(\ 01\)，\(\ldots\)
+编号必须在 \(01\) 到 \(20\) 之间，且已经选过的编号不能重复. 因此依次保留
+\(08\)，\(02\)，\(14\)，\(07\)，\(01\).
+第五个个体的编号为 \(01\)，故选 D.
+\end{solution}
 
 \begin{problem}
 \(\left(x^{2} - \frac{2}{x^{3}}\right)^{5}\) 展开式中的常数项为（\quad）
@@ -71,11 +111,25 @@ C
 \end{problem}
 
 \begin{answer}
-D
+C
 \end{answer}
 
+\begin{solution}
+从展开式中取 \(k\) 个 \(x^2\)，取 \(5-k\) 个 \(-2x^{-3}\)，所得项为
+\[
+\mathrm C_5^k(x^2)^k\left(-2x^{-3}\right)^{5-k}
+=\mathrm C_5^k(-2)^{5-k}x^{2k-3(5-k)}
+=\mathrm C_5^k(-2)^{5-k}x^{5k-15}
+\]
+成为常数项必须满足 \(5k-15=0\)，所以 \(k=3\). 常数项系数为
+\[
+\mathrm C_5^3(-2)^2=10\cdot4=40
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
-若 \(S_{1} = \int_{1}^{3} x^{2} \mathrm{d}x\)，\(S_{2} = \int_{1}^{2} \frac{1}{x} \mathrm{d}x\)，\(S_{3} = \int_{1}^{2} \e^{x} \mathrm{d}x\)，则 \(S_{1}\)，\(S_{2}\)，\(S_{3}\) 的大小关系为（\quad）
+若 \(S_{1} = \int_{1}^{2} x^{2} \mathrm{d}x\)，\(S_{2} = \int_{1}^{2} \frac{1}{x} \mathrm{d}x\)，\(S_{3} = \int_{1}^{2} \e^{x} \mathrm{d}x\)，则 \(S_{1}\)，\(S_{2}\)，\(S_{3}\) 的大小关系为（\quad）
 
 \choices
     {\(S_{1} < S_{2} < S_{3}\)}
@@ -88,10 +142,26 @@ D
 B
 \end{answer}
 
+\begin{solution}
+分别计算三个积分：
+\(S_1=\left.\frac{x^3}{3}\right|_1^2=\frac{7}{3}\)，\(S_2=\left.\ln x\right|_1^2=\ln2\)
+\[
+S_3=\left.\e^x\right|_1^2=\e^2-\e=\e(\e-1)
+\]
+在 \(1<x<2\) 时有 \(0<1/x<1\)，故 \(0<S_2<1<S_1\). 又由指数函数的展开式
+\(\e^x=1+x+\frac{x^2}{2}+\cdots\)，在 \(1\leqslant x\leqslant2\) 时有
+\(\e^x\geqslant1+x+\frac{x^2}{2}\)，\(1+x+\frac{x^2}{2}-x^2=1+x\left(1-\frac{x}{2}\right)\geqslant1>0\)
+故 \(\e^x>x^2\)，从而 \(S_3>S_1\). 因此
+\[
+S_2<S_1<S_3
+\]
+故选 B.
+\end{solution}
+
 \begin{problem}
 阅读如图所示程序框图，如果输出 \(i = 5\)，那么在空白矩形框中应填入的语句为（\quad）
 
-\texfigure[max width=5.8cm]{img_repaint/2013/jiangxi_science/q7_fig1.tex}
+\bitmapfigure[max width=5.8cm]{img/2013/jiangxi_science/q7_fig1.png}
 
 \choices
     {\(S = 2 * i - 2\)}
@@ -103,6 +173,14 @@ B
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+程序开始时 \(i=1\)，\(S=0\)，每次循环先令 \(i\leftarrow i+1\). 当 \(i\) 为偶数时，框图中的语句令 \(S=2i+1\)；当 \(i\) 为奇数时执行空白语句.
+
+若空白语句为 \(S=2i\)，逐次计算得到：当 \(i=2\)，\(3\)，\(4\)，\(5\) 时，
+\(S\) 分别为 \(5\)，\(6\)，\(9\)，\(10\).
+在 \(i=2\)，\(3\)，\(4\) 时均有 \(S<10\)，到 \(i=5\) 时 \(S=10\)，程序输出 \(i=5\)，符合题意. 其余三个选项分别使程序在 \(i=6\)，\(6\)，\(3\) 时输出，均不符合题意. 因此空白语句为 \(S=2*i\)，选 C.
+\end{solution}
 
 \begin{problem}
 如图，正方体的底面与正四面体的底面在同一平面 \(\alpha\) 上，且 \(AB \parallel CD\)，正方体的六个面所在的平面与直线 \(CE\)，\(EF\) 相交的平面个数分别记为 \(m\)，\(n\)，那么 \(m + n =\)（\quad）
@@ -120,6 +198,20 @@ C
 A
 \end{answer}
 
+\begin{solution}
+正方体的两个水平面分别为底面 \(\alpha\) 和顶面，另有四个竖直侧面.
+
+直线 \(CE\) 在 \(\alpha\) 内，且正三角形 \(CDE\) 中 \(\angle DCE=60^{\circ}\). 由于 \(CD\parallel AB\)，\(CE\) 不平行于正方体的任一组侧棱方向，所以它与四个竖直侧面所在平面均相交；它包含在底面 \(\alpha\) 内，并与顶面平行，故 \(m=4\).
+
+设 \(F\) 在 \(\alpha\) 上的射影为 \(H\). 正四面体的高线 \(FH\) 通过底面中心，因此 \(EH\perp CD\parallel AB\). 直线 \(EF\) 的水平投影垂直于 \(AB\)，所以它与其中两个竖直侧面所在平面平行，与另外两个竖直侧面所在平面相交；同时它与两个水平面相交，故 \(n=4\).
+
+所以
+\[
+m+n=4+4=8
+\]
+故选 A.
+\end{solution}
+
 \begin{problem}
 过点 \((\sqrt{2}, 0)\) 引直线 \(l\) 与曲线 \(y = \sqrt{1 - x^{2}}\) 相交于 \(A\)，\(B\) 两点，\(O\) 为坐标原点，当 \(\triangle AOB\) 的面积取最大值时，直线 \(l\) 的斜率等于（\quad）
 
@@ -133,6 +225,40 @@ A
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+曲线是单位圆的上半圆. 设直线 \(l\) 与原点的距离为 \(d\)，则弦 \(AB\) 的长为
+\[
+AB=2\sqrt{1-d^2}
+\]
+以 \(AB\) 为底，原点到 \(AB\) 的距离为高，所以
+\[
+[\triangle AOB]=\frac12 AB\cdot d=d\sqrt{1-d^2}
+\]
+令 \(u=d^2\)，则
+\[
+[\triangle AOB]^2=u(1-u)\leqslant\frac14
+\]
+等号当且仅当 \(d=1/\sqrt2\).
+
+设直线斜率为 \(k\)，其方程为 \(y=k(x-\sqrt2)\)，于是
+\[
+d=\frac{|k|\sqrt2}{\sqrt{k^2+1}}
+\]
+代入 \(d^2=1/2\)：
+\[
+\frac{2k^2}{k^2+1}=\frac12
+\Longrightarrow
+3k^2=1
+\Longrightarrow
+k=\pm\frac{\sqrt3}{3}
+\]
+当 \(k>0\) 时，单位上半圆的横坐标满足 \(x\leqslant1<\sqrt2\)，从而 \(y=k(x-\sqrt2)<0\)，不能与上半圆有两个交点；故只能取
+\[
+k=-\frac{\sqrt3}{3}
+\]
+故选 B.
+\end{solution}
 
 \begin{problem}
 如图，半径为 1 的半圆 \(O\) 与等边三角形 \(ABC\) 夹在两平行线 \(l_{1}\)，\(l_{2}\) 之间，\(l \parallel l_{1}\)，\(l\) 与半圆相交于 \(F\)，\(G\) 两点，与三角形 \(ABC\) 两边相交于 \(E\)，\(D\) 两点. 设弧 \(FG\) 的长为 \(x\)（\(0 < x < \pi\)），\(y = EB + BC + CD\)，若 \(l\) 从 \(l_{1}\) 平行移动到 \(l_{2}\)，则函数 \(y = f(x)\) 的图象大致是（\quad）
@@ -151,6 +277,24 @@ B
 D
 \end{answer}
 
+\begin{solution}
+取 \(l_1\) 为半圆最低处所在的水平线，令 \(t\) 为直线 \(l\) 到 \(l_1\) 的距离. 两条平行线间距为半径 \(1\)，所以等边三角形的高也为 \(1\)，其边长为
+\[
+s=\frac{2}{\sqrt3}=\frac{2\sqrt3}{3}
+\]
+由相似三角形，直线 \(l\) 上移的高度为 \(t\) 时，
+\(EB=CD=\frac{2t}{\sqrt3}\)，\(y=s+\frac{4t}{\sqrt3}\).
+半径为 \(1\) 的下半圆中，若弧 \(FG\) 的长为 \(x\)，则
+\[
+t=1-\cos\frac{x}{2}
+\]
+因此
+\(f(x)=\frac{2\sqrt3}{3} +\frac{4}{\sqrt3}\left(1-\cos\frac{x}{2}\right)\)，\(0<x<\pi\).
+于是
+\(f'(x)=\frac{2}{\sqrt3}\sin\frac{x}{2}>0\)，\(f''(x)=\frac{1}{\sqrt3}\cos\frac{x}{2}>0\).
+函数递增且图象向上凸，故选 D.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -161,6 +305,18 @@ D
 \(\pi\)
 \end{answer}
 
+\begin{solution}
+利用 \(\sin^2x=(1-\cos2x)/2\)，得
+\[
+y=\sin2x+\sqrt3(1-\cos2x)
+=\sqrt3+\sin2x-\sqrt3\cos2x
+\]
+后两项是角频率为 \(2\) 的非零正弦型函数，故最小正周期为
+\[
+T=\frac{2\pi}{2}=\pi
+\]
+\end{solution}
+
 \begin{problem}
 \(\bs{e}_{1}\)，\(\bs{e}_{2}\) 为单位向量，且 \(\bs{e}_{1}\)，\(\bs{e}_{2}\) 的夹角为 \(\frac{\pi}{3}\)，若 \(\bs{a} = \bs{e}_{1} + 3\bs{e}_{2}\)，\(\bs{b} = 2\bs{e}_{1}\)，则向量 \(\bs{a}\) 在 \(\bs{b}\) 方向上的射影为\fillinblank{}.
 \end{problem}
@@ -168,6 +324,20 @@ D
 \begin{answer}
 \(\frac{5}{2}\)
 \end{answer}
+
+\begin{solution}
+向量 \(\bs a\) 在 \(\bs b\) 方向上的射影为
+\[
+\frac{\bs a\cdot\bs b}{|\bs b|}
+\]
+由 \(|\bs e_1|=1\)，且 \(\angle(\bs e_1,\bs e_2)=\pi/3\)，有
+\[
+\bs e_1\cdot\bs e_2=\cos\frac{\pi}{3}=\frac12
+\]
+因此
+\(\bs a\cdot\bs b =(\bs e_1+3\bs e_2)\cdot2\bs e_1 =2+6\cdot\frac12=5\)，\(|\bs b|=2\).
+所求射影为 \(5/2\).
+\end{solution}
 
 \begin{problem}
 设函数 \(f(x)\) 在 \((0, +\infty)\) 内可导，且 \(f(\e^x) = x + \e^x\)，则 \(f'(1) =\)\fillinblank{}.
@@ -177,6 +347,17 @@ D
 \(2\)
 \end{answer}
 
+\begin{solution}
+对恒等式 \(f(\e^x)=x+\e^x\) 两边关于 \(x\) 求导，得
+\[
+\e^x f'(\e^x)=1+\e^x
+\]
+令 \(x=0\)，则 \(\e^x=1\)，从而
+\[
+f'(1)=1+1=2
+\]
+\end{solution}
+
 \begin{problem}
 抛物线 \(x^{2} = 2py\)（\(p > 0\)）的焦点为 \(F\)，其准线与双曲线 \(\frac{x^{2}}{3} - \frac{y^{2}}{3} = 1\) 相交于 \(A\)，\(B\) 两点，若 \(\triangle ABF\) 为等边三角形，则 \(p =\)\fillinblank{}.
 \end{problem}
@@ -184,6 +365,32 @@ D
 \begin{answer}
 \(6\)
 \end{answer}
+
+\begin{solution}
+抛物线 \(x^2=2py\) 的焦点为 \(F(0,p/2)\)，准线为 \(y=-p/2\). 令 \(y=-p/2\) 代入双曲线，得
+\[
+\frac{x^2}{3}-\frac{p^2}{12}=1
+\Longrightarrow
+x^2=3+\frac{p^2}{4}
+\]
+所以可设
+\(A\left(-\sqrt{3+\frac{p^2}{4}},-\frac p2\right)\)，\(B\left(\sqrt{3+\frac{p^2}{4}},-\frac p2\right)\).
+于是
+\[
+AB^2=4\left(3+\frac{p^2}{4}\right)=12+p^2
+\]
+而
+\[
+AF^2=3+\frac{p^2}{4}+p^2=3+\frac{5p^2}{4}
+\]
+等边三角形要求 \(AF=AB\)，故
+\[
+3+\frac{5p^2}{4}=12+p^2
+\Longrightarrow
+\frac{p^2}{4}=9
+\]
+由于 \(p>0\)，得 \(p=6\).
+\end{solution}
 
 \begin{problem}
 设曲线 \(C\) 的参数方程为 \(\begin{cases}
@@ -196,6 +403,23 @@ y = t^2
 \(\rho\cos^2\theta - \sin\theta = 0\)
 \end{answer}
 
+\begin{solution}
+极坐标与直角坐标的关系为
+\(x=\rho\cos\theta\)，\(y=\rho\sin\theta\).
+参数方程消去参数得到 \(y=x^2\)，代入极坐标关系：
+\[
+\rho\sin\theta=(\rho\cos\theta)^2
+\]
+对非原点点可化为
+\[
+\rho\cos^2\theta-\sin\theta=0
+\]
+原点可取 \(\rho=0\)，\(\theta=0\) 表示，故所求方程为
+\[
+\rho\cos^2\theta-\sin\theta=0
+\]
+\end{solution}
+
 \begin{problem}
 在实数范围内，不等式 \(||x - 2| - 1| \leqslant 1\) 的解集为\fillinblank{}.
 \end{problem}
@@ -203,6 +427,22 @@ y = t^2
 \begin{answer}
 \([0,4]\)
 \end{answer}
+
+\begin{solution}
+令 \(u=|x-2|\)，则 \(u\geqslant0\). 原不等式化为
+\[
+|u-1|\leqslant1
+\Longleftrightarrow
+-1\leqslant u-1\leqslant1
+\Longleftrightarrow
+0\leqslant u\leqslant2
+\]
+因此 \(|x-2|\leqslant2\)，即
+\[
+0\leqslant x\leqslant4
+\]
+故解集为 \([0,4]\).
+\end{solution}
 
 \section{解答题}
 
@@ -216,7 +456,53 @@ y = t^2
 \end{problem}
 
 \begin{solution}
-短答案：\(B=\frac{\pi}{3}\)；\(b\in\left[\frac{1}{2},1\right)\).
+\begin{enumerate}
+\item 因为 \(A+B+C=\pi\)，所以
+\[
+\cos C=-\cos(A+B)=-\cos A\cos B+\sin A\sin B
+\]
+代入已知条件：
+\[
+0=-\cos A\cos B+\sin A\sin B
++(\cos A-\sqrt3\sin A)\cos B
+\]
+整理得
+\[
+0=\sin A(\sin B-\sqrt3\cos B)
+\]
+三角形内角 \(A\in(0,\pi)\)，故 \(\sin A>0\)，从而
+\[
+\sin B-\sqrt3\cos B=0
+\]
+又 \(B\in(0,\pi)\)，只能有 \(\tan B=\sqrt3\)，所以
+\[
+B=\frac{\pi}{3}
+\]
+
+\item 由余弦定理及 \(\cos B=1/2\)，
+\[
+b^2=a^2+c^2-2ac\cos B
+=a^2+c^2-ac
+=(a+c)^2-3ac
+=1-3ac
+\]
+因为 \(a\)，\(c>0\) 且 \(a+c=1\)，有
+\[
+0<ac\leqslant\frac14
+\]
+因此
+\[
+\frac14\leqslant b^2<1
+\]
+从而
+\[
+\frac12\leqslant b<1
+\]
+端点 \(b=1/2\) 在 \(a=c=1/2\) 时可以取得；\(b=1\) 需要 \(ac=0\)，不符合三角形边长为正，故
+\[
+b\in\left[\frac12,1\right)
+\]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -229,7 +515,49 @@ y = t^2
 \end{problem}
 
 \begin{solution}
-短答案：\(a_n=2n\)；\(T_n<\frac{5}{64}\).
+\begin{enumerate}
+\item 记 \(m=n^2+n\)，则题设方程为
+\[
+S_n^2-(m-1)S_n-m=(S_n-m)(S_n+1)=0
+\]
+由于数列各项为正，\(S_n>0\)，故
+\[
+S_n=n^2+n
+\]
+当 \(n=1\) 时 \(a_1=S_1=2\)；当 \(n\geqslant2\) 时，
+\[
+a_n=S_n-S_{n-1}
+=(n^2+n)-\bigl((n-1)^2+(n-1)\bigr)=2n
+\]
+所以
+\(a_n=2n\)，\((n\in\N^*)\).
+
+\item 代入 \(a_n=2n\)：
+\[
+b_n=\frac{n+1}{4n^2(n+2)^2}
+\]
+又
+\[
+\frac1{n^2}-\frac1{(n+2)^2}
+=\frac{4(n+1)}{n^2(n+2)^2}
+\]
+故
+\[
+b_n=\frac1{16}\left(\frac1{n^2}-\frac1{(n+2)^2}\right)
+\]
+于是
+\[
+T_n=\frac1{16}\sum_{k=1}^n
+\left(\frac1{k^2}-\frac1{(k+2)^2}\right)
+=\frac1{16}\left(1+\frac14-\frac1{(n+1)^2}-\frac1{(n+2)^2}\right)
+\]
+因此
+\[
+T_n=\frac5{64}-\frac1{16}\left(\frac1{(n+1)^2}+\frac1{(n+2)^2}\right)
+<\frac5{64}
+\]
+证毕.
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -244,8 +572,29 @@ y = t^2
 \end{problem}
 
 \begin{solution}
-短答案：\(P(X=0)=\frac{2}{7}\)；\(X\) 的分布列为
-\(P(X=-2)=\frac{1}{14}\)，\(P(X=-1)=\frac{5}{14}\)，\(P(X=0)=\frac{2}{7}\)，\(P(X=1)=\frac{2}{7}\)，且 \(E(X)=\frac{3}{14}\).
+由图可知 \(\overrightarrow{OA_1}=(1,0)\)，\(\overrightarrow{OA_2}=(1,1)\)，\(\overrightarrow{OA_3}=(0,1)\)，\(\overrightarrow{OA_4}=(-1,1)\)；\(\overrightarrow{OA_5}=(-1,0)\)，\(\overrightarrow{OA_6}=(-1,-1)\)，\(\overrightarrow{OA_7}=(0,-1)\)，\(\overrightarrow{OA_8}=(1,-1)\).
+
+从 8 个点中任取两个点，共有 \(\mathrm C_8^2=28\) 个等可能的点对. 逐一计算两向量的数量积，可按点对计数：
+当 \(X=-2\) 时，点对为 \((A_2,A_6)\)、\((A_4,A_8)\)，共 \(2\) 对.
+当 \(X=-1\) 时，点对为 \((A_1,A_4)\)、\((A_1,A_5)\)、\((A_1,A_6)\)、\((A_2,A_5)\)、\((A_2,A_7)\)、\((A_3,A_6)\)、\((A_3,A_7)\)、\((A_3,A_8)\)、\((A_4,A_7)\)、\((A_5,A_8)\)，共 \(10\) 对.
+当 \(X=0\) 时，点对为 \((A_1,A_3)\)、\((A_1,A_7)\)、\((A_2,A_4)\)、\((A_2,A_8)\)、\((A_3,A_5)\)、\((A_4,A_6)\)、\((A_5,A_7)\)、\((A_6,A_8)\)，共 \(8\) 对.
+当 \(X=1\) 时，点对为 \((A_1,A_2)\)、\((A_1,A_8)\)、\((A_2,A_3)\)、\((A_3,A_4)\)、\((A_4,A_5)\)、\((A_5,A_6)\)、\((A_6,A_7)\)、\((A_7,A_8)\)，共 \(8\) 对.
+
+\begin{enumerate}
+\item
+\[
+P(X=0)=\frac8{28}=\frac27
+\]
+
+\item
+\(P(X=-2)=\frac1{14}\)，\(P(X=-1)=\frac5{14}\)，\(P(X=0)=\frac27\)，\(P(X=1)=\frac27\).
+因此
+\[
+E(X)=(-2)\frac1{14}+(-1)\frac5{14}
++0\cdot\frac27+1\cdot\frac27
+=-\frac3{14}
+\]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -260,7 +609,56 @@ y = t^2
 \end{problem}
 
 \begin{solution}
-短答案：\(AD\perp\) 平面 \(CFG\)；平面 \(BCP\) 与平面 \(DCP\) 的夹角的余弦值为 \(\frac{\sqrt{2}}{4}\).
+在底面内建立平面直角坐标系，取
+\(A=(0,0,0)\)，\(B=(1,0,0)\).
+因为 \(E\) 是 \(BD\) 的中点，且 \(EA=EB=AB=1\)，三角形 \(AEB\) 为等边三角形. 取
+\(E=\left(\frac12,\frac{\sqrt3}{2},0\right)\)，\(D=2E-B=(0,\sqrt3,0)\).
+由 \(\triangle DAB\cong\triangle DCB\)，对应边给出 \(DC=DA=\sqrt3\)，\(CB=BA=1\). 取图示位置可得
+\[
+C=\left(\frac32,\frac{\sqrt3}{2},0\right)
+\]
+直线 \(CE\) 为 \(y=\sqrt3/2\)，直线 \(AD\) 为 \(x=0\)，故
+\[
+F=\left(0,\frac{\sqrt3}{2},0\right)
+\]
+又 \(PA\perp\) 平面 \(ABCD\)，\(PA=3/2\)，所以可取
+\(P=\left(0,0,\frac32\right)\)，\(G=\left(0,\frac{\sqrt3}{2},\frac34\right)\).
+
+\begin{enumerate}
+\item
+\(\overrightarrow{CF}=\left(-\frac32,0,0\right)\)，\(\overrightarrow{FG}=\left(0,0,\frac34\right)\)，\(\overrightarrow{AD}=(0,\sqrt3,0)\).
+因此
+\(\overrightarrow{AD}\cdot\overrightarrow{CF}=0\)，\(\overrightarrow{AD}\cdot\overrightarrow{FG}=0\).
+直线 \(CF\) 与 \(FG\) 相交于 \(F\)，且都在平面 \(CFG\) 内，所以
+\[
+AD\perp\text{平面 }CFG
+\]
+
+\item 取平面 \(BCP\) 的两个方向向量
+\(\overrightarrow{BC}=\left(\frac12,\frac{\sqrt3}{2},0\right)\)，\(\overrightarrow{BP}=\left(-1,0,\frac32\right)\)
+可取其法向量
+\[
+\bs n_1=\overrightarrow{BC}\times\overrightarrow{BP}
+=\left(\frac{3\sqrt3}{4},-\frac34,\frac{\sqrt3}{2}\right)
+\]
+同理，平面 \(DCP\) 的两个方向向量可取
+\(\overrightarrow{DC}=\left(\frac32,-\frac{\sqrt3}{2},0\right)\)，\(\overrightarrow{DP}=\left(0,-\sqrt3,\frac32\right)\)
+可取其法向量
+\[
+\bs n_2=\overrightarrow{DC}\times\overrightarrow{DP}
+=\left(-\frac{3\sqrt3}{4},-\frac94,-\frac{3\sqrt3}{2}\right)
+\]
+取其相反方向的法向量
+\[
+\bs n_2=\left(\frac{3\sqrt3}{4},\frac94,\frac{3\sqrt3}{2}\right)
+\]
+故两平面的夹角余弦为
+\[
+\frac{|\bs n_1\cdot\bs n_2|}{|\bs n_1|\,|\bs n_2|}
+=\frac{9/4}{\sqrt3\cdot\frac{3\sqrt6}{2}}
+=\frac{\sqrt2}{4}
+\]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -275,7 +673,63 @@ y = t^2
 \end{problem}
 
 \begin{solution}
-短答案：椭圆 \(C\) 的方程为 \(\frac{x^2}{4}+\frac{y^2}{3}=1\)；存在常数 \(\lambda=2\).
+\begin{enumerate}
+\item 由离心率条件
+\(\frac ca=\frac12\)，\(c^2=a^2-b^2\)
+得 \(c=a/2\)，从而 \(b^2=3a^2/4\). 将点 \(P(1,3/2)\) 代入椭圆方程：
+\[
+\frac1{a^2}+\frac{(3/2)^2}{3a^2/4}=1
+\Longrightarrow
+\frac1{a^2}+\frac3{a^2}=1
+\]
+所以 \(a^2=4\)，\(b^2=3\)，椭圆方程为
+\[
+\frac{x^2}{4}+\frac{y^2}{3}=1
+\]
+
+\item 右焦点为 \(F=(1,0)\). 直线 \(AB\) 不可能为竖直线，因为竖直线 \(x=1\) 不与 \(x=4\) 相交于有限点 \(M\). 设
+\[
+AB:\ y=k(x-1)
+\]
+令 \(t=x-1\)，将 \(x=t+1\) 和 \(y=kt\) 代入椭圆方程，得
+\[
+\frac{(t+1)^2}{4}+\frac{k^2t^2}{3}=1
+\Longleftrightarrow
+(3+4k^2)t^2+6t-9=0
+\]
+设交点 \(A\)，\(B\) 对应的根为 \(t_1\)，\(t_2\)，则
+\(t_1+t_2=-\frac6{3+4k^2}\)，\(t_1t_2=-\frac9{3+4k^2}\)
+从而
+\[
+\frac1{t_1}+\frac1{t_2}
+=\frac{t_1+t_2}{t_1t_2}
+=\frac23
+\]
+由于 \(P=(1,3/2)\)，
+\(k_1=k-\frac{3}{2t_1}\)，\(k_2=k-\frac{3}{2t_2}\)
+所以
+\[
+k_1+k_2
+=2k-\frac32\left(\frac1{t_1}+\frac1{t_2}\right)
+=2k-1
+\]
+直线 \(AB\) 与 \(x=4\) 交于
+\[
+M=(4,3k)
+\]
+故
+\[
+k_3=\frac{3k-3/2}{4-1}=k-\frac12
+\]
+因此
+\[
+k_1+k_2=2k-1=2\left(k-\frac12\right)=2k_3
+\]
+存在所求常数，且
+\[
+\lambda=2
+\]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -289,5 +743,72 @@ y = t^2
 \end{problem}
 
 \begin{solution}
-短答案：函数图象关于直线 \(x=\frac{1}{2}\) 对称；二阶周期点存在时，\(a>\frac{1}{2}\)；当 \(a\in\left(\frac{1}{2},\frac{1+\sqrt{2}}{2}\right)\) 时，\(S(a)\) 单调递减，当 \(a\in\left(\frac{1+\sqrt{2}}{2},+\infty\right)\) 时，\(S(a)\) 单调递增.
+\begin{enumerate}
+\item 对任意 \(x\)，有
+\[
+f(1-x)
+=a\left(1-2\left|1-x-\frac12\right|\right)
+=a\left(1-2\left|x-\frac12\right|\right)
+=f(x)
+\]
+因此函数图象关于直线 \(x=1/2\) 对称.
+
+\item 将函数写成分段形式：
+\[
+f(x)=
+\begin{cases}
+2ax,&x\leqslant\frac12,\\
+2a(1-x),&x\geqslant\frac12.
+\end{cases}
+\]
+设一个非平凡二循环的两个点为 \(u<v\)，即 \(f(u)=v\)，\(f(v)=u\). 若 \(u\)，\(v\leqslant1/2\)，由于 \(f\) 在 \((-\infty,1/2]\) 上递增，有 \(v=f(u)\leqslant f(v)=u\)，与 \(u<v\) 矛盾. 若 \(u\)，\(v\geqslant1/2\)，则
+\(v=2a(1-u)\)，\(u=2a(1-v)\).
+两式相减得 \((1-2a)(v-u)=0\). 因 \(u\ne v\)，只能有 \(a=1/2\)，此时两式又给出 \(u+v=1\)，不可能有两个不同的点都大于等于 \(1/2\). 所以非平凡二循环必满足 \(u<1/2<v\).
+
+于是
+\(x_2=f(x_1)=2ax_1\)，\(x_1=f(x_2)=2a(1-x_2)\).
+解得
+\(x_1=\frac{2a}{1+4a^2}\)，\(x_2=\frac{4a^2}{1+4a^2}\).
+当 \(a\ne1/2\) 时有 \(x_1<1/2\)；并且 \(x_2>1/2\) 当且仅当 \(a>1/2\). 在 \(a=1/2\) 时两点重合，不能构成非平凡二循环；在 \(0<a<1/2\) 时 \(x_2<1/2\)，不满足二循环两点分居 \(1/2\) 两侧的条件，也不存在这样的二循环. 因此
+\[
+a\in\left(\frac12,+\infty\right)
+\]
+
+\item 对 \(a>1/2\)，函数 \(f\) 的最大值为 \(a\)，所以 \(f(f(x))\leqslant a\). 等号当且仅当 \(f(x)=1/2\)，其两个最大值点为
+\(\frac1{4a}\)，\(1-\frac1{4a}\).
+由于 \(f(f(x_1))=x_1\)，\(f(f(x_2))=x_2\)，故
+\(A=(x_1,x_1)\)，\(B=(x_2,x_2)\).
+题面把最大值点记为单个 \(x_3\)，但这里实际有两个最大值点，故需分别讨论.
+
+若取较小的最大值点 \(x_3=1/(4a)\)，则三点构成的面积为
+\(C=\left(\frac1{4a},0\right)\)，\(S(a)=\frac12(x_2-x_1)x_3 =\frac12\cdot\frac{2a(2a-1)}{1+4a^2}\cdot\frac1{4a} =\frac{2a-1}{4(1+4a^2)}\).
+求导：
+\[
+S'(a)
+=\frac{2+8a-8a^2}{4(1+4a^2)^2}
+=\frac{-2(4a^2-4a-1)}{4(1+4a^2)^2}
+\]
+在 \(a>1/2\) 时，临界点为
+\[
+a_0=\frac{1+\sqrt2}{2}
+\]
+因此
+\[
+S(a)\text{ 在 }\left(\frac12,\frac{1+\sqrt2}{2}\right)\text{ 上单调递增，}
+\]
+\[
+S(a)\text{ 在 }\left(\frac{1+\sqrt2}{2},+\infty\right)\text{ 上单调递减.}
+\]
+并在 \(a=a_0\) 时取得最大值.
+
+若取较大的最大值点 \(x_3=1-\frac1{4a}\)，则
+\[
+\widetilde S(a)
+=\frac12(x_2-x_1)\left(1-\frac1{4a}\right)
+=\frac{(2a-1)(4a-1)}{4(1+4a^2)}
+\]
+求导得
+\(\widetilde S'(a) =\frac{2(12a^2+4a-3)}{4(1+4a^2)^2}>0\)，\(\left(a>\frac12\right)\)
+所以此时 \(\widetilde S(a)\) 在 \((1/2,+\infty)\) 上单调递增. 由此可见，若不补充 \(x_3\) 取哪一个最大值点，第 3 问的 \(S(a)\) 并不能唯一确定；上面的两种结论分别对应两种合法选择.
+\end{enumerate}
 \end{solution}

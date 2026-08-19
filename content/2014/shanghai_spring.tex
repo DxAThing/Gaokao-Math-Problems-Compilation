@@ -15,6 +15,10 @@
 \(2\)
 \end{answer}
 
+\begin{solution}
+因为 \(16=4^2\)，且指数函数 \(4^x\) 在 \(\R\) 上是单调函数，所以 \(4^x=4^2\) 等价于 \(x=2\).
+\end{solution}
+
 \begin{problem}
 计算：\(\i(1+\i)=\)\fillinblank{}（\(\i\) 为虚数单位）.
 \end{problem}
@@ -22,6 +26,14 @@
 \begin{answer}
 \(-1+\i\)
 \end{answer}
+
+\begin{solution}
+利用 \(\i^2=-1\)，得
+\[
+\i(1+\i)=\i+\i^2=\i-1=-1+\i
+\]
+因此填 \(-1+\i\).
+\end{solution}
 
 \begin{problem}
 \(1\)，\(1\)，\(2\)，\(2\)，\(5\) 这五个数的中位数是\fillinblank{}.
@@ -31,6 +43,10 @@
 \(2\)
 \end{answer}
 
+\begin{solution}
+这五个数已经按非降序排列，中间的第三个数是 \(2\)，所以中位数为 \(2\).
+\end{solution}
+
 \begin{problem}
 若函数 \( f(x)=x^{3}+a \) 为奇函数，则实数 \( a=\)\fillinblank{}.
 \end{problem}
@@ -38,6 +54,10 @@
 \begin{answer}
 \(0\)
 \end{answer}
+
+\begin{solution}
+奇函数满足 \(f(0)=0\). 由 \(f(0)=0^3+a=a\)，得 \(a=0\).
+\end{solution}
 
 \begin{problem}
 点 \( O(0,0) \) 到直线 \( x + y - 4 = 0 \) 的距离是\fillinblank{}.
@@ -47,6 +67,13 @@
 \(2\sqrt{2}\)
 \end{answer}
 
+\begin{solution}
+点 \(O(0,0)\) 到直线 \(x+y-4=0\) 的距离为
+\[
+\frac{|0+0-4|}{\sqrt{1^2+1^2}}=\frac{4}{\sqrt{2}}=2\sqrt{2}
+\]
+\end{solution}
+
 \begin{problem}
 函数 \( y=\frac{1}{x+1} \) 的反函数为\fillinblank{}.
 \end{problem}
@@ -54,6 +81,12 @@
 \begin{answer}
 \(y=\frac{1}{x}-1\)
 \end{answer}
+
+\begin{solution}
+设 \(y=\dfrac{1}{x+1}\)，则原函数的定义域为 \(x\ne-1\). 交换 \(x\)，\(y\)，得
+\(x=\frac{1}{y+1}\)，\(\Longrightarrow\)，\(x(y+1)=1\)，\(\Longrightarrow\)，\(y=\frac{1}{x}-1\).
+反函数的定义域为 \(x\ne0\)，故反函数为 \(y=\dfrac{1}{x}-1\).
+\end{solution}
 
 \begin{problem}
 已知等差数列 \( \left\{a_{n}\right\} \) 的首项为 \(1\)，公差为 \(2\)，则该数列的前 \(n\) 项和 \(S_{n}= \)\fillinblank{}.
@@ -63,6 +96,17 @@
 \(n^2\)
 \end{answer}
 
+\begin{solution}
+等差数列的第 \(n\) 项为
+\[
+a_n=1+(n-1)\cdot2=2n-1
+\]
+因此
+\[
+S_n=\frac{n(a_1+a_n)}{2}=\frac{n(1+2n-1)}{2}=n^2
+\]
+\end{solution}
+
 \begin{problem}
 已知 \( \cos\alpha=\frac{1}{3} \)，则 \( \cos2\alpha= \)\fillinblank{}.
 \end{problem}
@@ -71,13 +115,28 @@
 \(-\frac{7}{9}\)
 \end{answer}
 
+\begin{solution}
+由二倍角公式，
+\[
+\cos2\alpha=2\cos^2\alpha-1=2\left(\frac13\right)^2-1=-\frac79
+\]
+\end{solution}
+
 \begin{problem}
-已知 \(a,b\in\R^+\). 若 \(a+b=1\)，则 \(ab\) 的最大值是\fillinblank{}.
+已知 \(a\)，\(b\in\R^+\). 若 \(a+b=1\)，则 \(ab\) 的最大值是\fillinblank{}.
 \end{problem}
 
 \begin{answer}
 \(\frac{1}{4}\)
 \end{answer}
+
+\begin{solution}
+由 \(a+b=1\) 及平方非负性，
+\[
+0\le(a-b)^2=(a+b)^2-4ab=1-4ab
+\]
+所以 \(ab\le\dfrac14\). 当 \(a=b=\dfrac12\) 时取等号，且满足 \(a\)，\(b\in\R^+\). 因此 \(ab\) 的最大值为 \(\dfrac14\).
+\end{solution}
 
 \begin{problem}
 在 \(10\) 件产品中，有 \(3\) 件次品，从中随机取出 \(5\) 件，则恰含 \(1\) 件次品的概率是\fillinblank{}（结果用数值表示）.
@@ -87,6 +146,14 @@
 \(\frac{5}{12}\)
 \end{answer}
 
+\begin{solution}
+从 \(10\) 件产品中任取 \(5\) 件共有 \(\mathrm C_{10}^{5}\) 种取法. 恰含 \(1\) 件次品时，要从 \(3\) 件次品中取 \(1\) 件，再从 \(7\) 件正品中取 \(4\) 件，因此所求概率为
+\[
+\frac{\mathrm C_{3}^{1}\mathrm C_{7}^{4}}{\mathrm C_{10}^{5}}
+=\frac{3\cdot35}{252}=\frac5{12}
+\]
+\end{solution}
+
 \begin{problem}
 某货船在 \(O\) 处看灯塔 \(M\) 在北偏东 \(30^{\circ}\) 方向，它以每小时 \(18\text{ 海里}\) 的速度向正北方向航行，经过 \(40\text{ 分钟}\) 到达 \(B\) 处，看到灯塔 \(M\) 在北偏东 \(75^{\circ}\) 方向，此时货船到灯塔 \(M\) 的距离为\fillinblank{}\(\text{海里}\).
 \end{problem}
@@ -95,6 +162,15 @@
 \(6\sqrt{2}\)
 \end{answer}
 
+\begin{solution}
+货船从 \(O\) 到 \(B\) 航行的距离为
+\[
+|OB|=18\times\frac{40}{60}=12\text{ 海里}
+\]
+在三角形 \(OBM\) 中，\(\angle BOM=30^\circ\)，而 \(BO\) 的方向为正南、\(BM\) 为北偏东 \(75^\circ\)，所以 \(\angle OBM=105^\circ\)，从而 \(\angle OMB=45^\circ\). 由正弦定理，
+\(\frac{|BM|}{\sin30^\circ}=\frac{|OB|}{\sin45^\circ}\)，\(\Longrightarrow\)，\(|BM|=12\cdot\frac{\sin30^\circ}{\sin45^\circ}=6\sqrt2\text{ 海里}\).
+\end{solution}
+
 \begin{problem}
 已知函数 \(f(x)=\frac{x-2}{x-1}\) 与 \(g(x)=mx+1-m\) 的图像相交于 \(A\)，\(B\) 两点. 若动点 \(P\) 满足 \(\left|\overrightarrow{PA}+\overrightarrow{PB}\right|=2\)，则 \(P\) 的轨迹方程为\fillinblank{}.
 \end{problem}
@@ -102,6 +178,23 @@
 \begin{answer}
 \((x-1)^2+(y-1)^2=1\)
 \end{answer}
+
+\begin{solution}
+令 \(t=x-1\). 交点的横坐标满足
+\(1-\frac1t=1+mt\)，\(\Longrightarrow\)，\(mt^2=-1\).
+因为有两个交点，所以 \(m<0\)，两个根 \(t_1\)，\(t_2\) 互为相反数. 交点的纵坐标为 \(1+mt\)，故若点 \(A\)，点 \(B\) 分别对应 \(t_1\)，\(t_2\)，则
+\(x_A+x_B=2+t_1+t_2=2\)，\(y_A+y_B=2+m(t_1+t_2)=2\).
+设 \(P(x,y)\)，则
+\[
+\overrightarrow{PA}+\overrightarrow{PB}
+=(x_A+x_B-2x,\,y_A+y_B-2y)
+=2(1-x,\,1-y)
+\]
+题设条件等价于 \(4((x-1)^2+(y-1)^2)=4\)，所以 \(P\) 的轨迹方程为
+\[
+(x-1)^2+(y-1)^2=1
+\]
+\end{solution}
 
 \section{单选题}
 
@@ -119,6 +212,10 @@
 B
 \end{answer}
 
+\begin{solution}
+两条异面直线不能平行，因此它们所成的较小角不为 \(0\)；但它们的方向可以互相垂直，所以可以取到 \(\dfrac{\pi}{2}\). 故所成角的范围是 \(\left(0,\dfrac{\pi}{2}\right]\)，选 B.
+\end{solution}
+
 \begin{problem}
 复数 \(2+\i\)（\(\i\) 为虚数单位）的共轭复数为（\quad）
 
@@ -132,6 +229,10 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+复数 \(u+v\i\) 的共轭复数为 \(u-v\i\). 因此 \(2+\i\) 的共轭复数是 \(2-\i\)，选 A.
+\end{solution}
 
 \begin{problem}
 右图是下列函数中某个函数的部分图像，则该函数是（\quad）
@@ -149,6 +250,10 @@ A
 B
 \end{answer}
 
+\begin{solution}
+从图像可读出函数过原点，在 \(x=\dfrac{\pi}{4}\) 附近取得最大值 \(1\)，在 \(x=\dfrac{\pi}{2}\) 处过 \(x\) 轴，在 \(x=\dfrac{3\pi}{4}\) 附近取得最小值 \(-1\)，并在 \(x=\pi\) 处再次过 \(x\) 轴. 这正是 \(y=\sin2x\) 的图像特征，故选 B.
+\end{solution}
+
 \begin{problem}
 在 \( (x+1)^{4} \) 的二项展开式中，\( x^{2} \) 项的系数为（\quad）
 
@@ -162,6 +267,10 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+由二项式定理，\((x+1)^4=\sum_{k=0}^{4}\mathrm C_4^k x^k\). 其中 \(x^2\) 项的系数为 \(\mathrm C_4^2=6\)，故选 A.
+\end{solution}
 
 \begin{problem}
 下列函数中，在 \( \R \) 上为增函数的是（\quad）
@@ -177,6 +286,10 @@ A
 D
 \end{answer}
 
+\begin{solution}
+函数 \(x^2\) 在 \(\R\) 上先减后增，函数 \(|x|\) 也在 \(0\) 左右改变单调性，函数 \(\sin x\) 在 \(\R\) 上周期变化，均不是增函数. 对任意 \(x_1<x_2\)，有 \(x_2^3-x_1^3=(x_2-x_1)(x_2^2+x_1x_2+x_1^2)>0\)，所以 \(y=x^3\) 在 \(\R\) 上为增函数，选 D.
+\end{solution}
+
 \begin{problem}
 \(\begin{vmatrix}\cos\theta & -\sin\theta \\ \sin\theta & \cos\theta\end{vmatrix} =\)（\quad）
 
@@ -190,6 +303,10 @@ D
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+按二阶行列式定义计算，\(\begin{vmatrix}\cos\theta & -\sin\theta \\ \sin\theta & \cos\theta\end{vmatrix}=\cos^2\theta-(-\sin\theta)\sin\theta=\cos^2\theta+\sin^2\theta=1\)，故选 C.
+\end{solution}
 
 \begin{problem}
 设 \( x_{0} \) 为函数 \( f(x)=2^{x}+x-2 \) 的零点，则 \( x_{0}\in \)（\quad）
@@ -205,6 +322,10 @@ C
 C
 \end{answer}
 
+\begin{solution}
+函数 \(f(x)=2^x+x-2\) 是 \(\R\) 上的增函数，因为 \(2^x\) 和 \(x\) 都是增函数. 又 \(f(0)=1+0-2=-1<0\)，\(f(1)=2+1-2=1>0\). 由连续性，零点在 \((0,1)\) 内；由增性知零点唯一. 因此 \(x_0\in(0,1)\)，选 C.
+\end{solution}
+
 \begin{problem}
 若 \( a > b \)，\( c \in \R \)，则下列不等式中恒成立的是（\quad）
 
@@ -218,6 +339,10 @@ C
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+因为 \(c^2+1>0\)，所以不等式 \(a>b\) 两边同除以 \(c^2+1\) 后不改变方向，得到 \(\dfrac{a}{c^2+1}>\dfrac{b}{c^2+1}\). 其余选项均不恒成立：取 \(a=1\)，\(b=-1\) 可否定 A，取 \(a=1\)，\(b=-2\) 可否定 B，取 \(c=0\) 可否定 C. 因此选 D.
+\end{solution}
 
 \begin{problem}
 若两个球的体积之比为 \(8:27\)，则它们的表面积之比为（\quad）
@@ -233,6 +358,10 @@ D
 B
 \end{answer}
 
+\begin{solution}
+球的体积与半径的三次方成正比，所以由体积比 \(8:27\) 得半径比为 \(2:3\). 球的表面积与半径的平方成正比，因此表面积之比为 \(2^2:3^2=4:9\)，选 B.
+\end{solution}
+
 \begin{problem}
 已知数列 \( \left\{a_{n}\right\} \) 是以 \(q\) 为公比的等比数列，若 \( b_{n}=-2a_{n} \)，则数列 \( \left\{b_{n}\right\} \) 是（\quad）
 
@@ -247,6 +376,10 @@ B
 A
 \end{answer}
 
+\begin{solution}
+由 \(a_{n+1}=qa_n\) 及 \(b_n=-2a_n\)，有 \(b_{n+1}=-2a_{n+1}=-2qa_n=qb_n\). 所以 \(\{b_n\}\) 仍是以 \(q\) 为公比的等比数列，选 A.
+\end{solution}
+
 \begin{problem}
 若点 \(P\) 的坐标为 \((a,b)\)，曲线 \(C\) 的方程为 \(F(x,y)=0\)，则“\(F(a,b)=0\)”是“点 \(P\) 在曲线 \(C\) 上”的（\quad）
 
@@ -260,6 +393,10 @@ A
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+曲线 \(C\) 的方程 \(F(x,y)=0\) 的定义就是曲线上点的坐标必须满足该方程. 因此 \(P(a,b)\) 在 \(C\) 上当且仅当 \(F(a,b)=0\)，两个条件可以互相推出，故为充分必要条件，选 C.
+\end{solution}
 
 \begin{problem}
 如图，在底面半径和高均为 \(1\) 的圆锥中，\(AB\)，\(CD\) 是底面圆 \(O\) 的两条互相垂直的直径，\(E\) 是母线 \(PB\) 的中点. 已知过 \(CD\) 与 \(E\) 的平面与圆锥侧面的交线是以 \(E\) 为顶点的抛物线的一部分，则该抛物线的焦点到圆锥顶点 \(P\) 的距离为（\quad）
@@ -277,6 +414,18 @@ C
 D
 \end{answer}
 
+\begin{solution}
+建立空间直角坐标系，取圆锥顶点 \(P=(0,0,1)\)，底面圆心 \(O=(0,0,0)\)，并令 \(A=(1,0,0)\)，\(B=(-1,0,0)\)，\(C=(0,1,0)\)，\(D=(0,-1,0)\). 则 \(E\) 是 \(PB\) 的中点，故 \(E=\left(-\dfrac12,0,\dfrac12\right)\). 圆锥满足 \(x^2+y^2=(1-z)^2\)，平面 \(CDE\) 的方程为 \(x+z=0\). 代入 \(z=-x\)，得截线方程 \(y^2=2\left(x+\dfrac12\right)\).
+
+在平面 \(CDE\) 内，以 \(E\) 为原点，取单位轴方向 \(\bs{e}_1=\dfrac{(1,0,-1)}{\sqrt2}\)，另一个单位轴方向为 \(\bs{e}_2=(0,1,0)\). 令相应坐标为 \(u\)，\(v\)，则 \(u=\sqrt2\left(x+\dfrac12\right)\)，\(v=y\)，所以
+
+\(v^2=\sqrt2\,u=4pu\)，\(p=\frac{\sqrt2}{4}\).
+抛物线焦点 \(F_0\) 到顶点 \(E\) 的距离为 \(EF_0=p\). 又 \(P-E=\left(\dfrac12,0,\dfrac12\right)\) 垂直于平面 \(CDE\)，所以 \(PE=\dfrac1{\sqrt2}\)，且 \(PE\perp EF_0\). 因而
+
+\(PF_0^2=PE^2+EF_0^2=\frac12+\frac18=\frac58\)，\(PF_0=\frac{\sqrt{10}}4\).
+故选 D.
+\end{solution}
+
 \section{解答题}
 
 \begin{problem}
@@ -284,7 +433,12 @@ D
 \end{problem}
 
 \begin{solution}
-\(\frac{x-2}{x+1}<0\) 的解集是 \(A=(-1,2)\). 由 \(x-1>0\)，得 \(x>1\)，即 \(B=(1,+\infty)\). 因此，\(A\cap B=(1,2)\).
+不等式的关键点为 \(x=-1\) 和 \(x=2\). 当 \(x<-1\) 或 \(x>2\) 时，\(\dfrac{x-2}{x+1}>0\)；当 \(-1<x<2\) 时，分子为负、分母为正，故 \(\dfrac{x-2}{x+1}<0\). 因而 \(A=(-1,2)\).
+
+由对数真数必须为正，函数 \(y=\lg(x-1)\) 的定义域满足 \(x-1>0\)，所以 \(B=(1,+\infty)\). 因此
+\[
+A\cap B=(-1,2)\cap(1,+\infty)=(1,2)
+\]
 \end{solution}
 
 \begin{problem}
@@ -292,7 +446,11 @@ D
 \end{problem}
 
 \begin{solution}
-由 \(f(1)=1-4+a=2\)，得 \(a=5\)，\(f(x)=x^2-4x+5=(x-2)^2+1\). 因为当 \(x\in[-3,2]\) 时，\(f(x)\) 单调递减；当 \(x\in[2,3]\) 时，\(f(x)\) 单调递增. 由于 \(f(-3)=26\)，\(f(2)=1\)，\(f(3)=2\)，所以当 \(x\in[-3,3]\) 时，\(f(x)_{\max}=26\)，\(f(x)_{\min}=1\).
+由 \(f(1)=1-4+a=2\)，得 \(a=5\). 因而
+\[
+f(x)=x^2-4x+5=(x-2)^2+1
+\]
+在区间 \([-3,3]\) 上，抛物线顶点横坐标为 \(2\)，所以最小值在 \(x=2\) 处取得，\(f(2)=1\). 最大值只需比较两个端点，\(f(-3)=26\)，\(f(3)=2\)，故最大值为 \(26\)，最小值为 \(1\).
 \end{solution}
 
 \begin{problem}
@@ -302,7 +460,21 @@ D
 \end{problem}
 
 \begin{solution}
-由 \(V=\frac{1}{3}S_{\triangle ABC}\cdot|PA|=\frac{1}{3}\times\frac{1}{2}\times1\times|AC|\times1=\frac{1}{3}\)，得 \(|AC|=2\). 因为 \(EF\parallel PA\)，所以异面直线 \(EF\) 与 \(PC\) 所成的角为 \(\angle APC\). 由直角三角形 \(PAC\)，则 \(\tan\angle APC=2\)，异面直线 \(EF\) 与 \(PC\) 所成角为 \(\arctan 2\).
+因为 \(\angle BAC=\dfrac{\pi}{2}\)，所以
+\[
+S_{\triangle ABC}=\frac12|AB||AC|=\frac12|AC|
+\]
+由三棱锥体积公式及 \(PA=1\)，得
+\[
+\frac13=\frac13S_{\triangle ABC}|PA|=\frac13\cdot\frac12|AC|\cdot1
+\]
+所以 \(|AC|=2\). 在三角形 \(PAB\) 中，\(E\)，\(F\) 分别是 \(PB\)，\(AB\) 的中点，由中位线定理 \(EF\parallel PA\). 因而异面直线 \(EF\) 与 \(PC\) 所成的角等于直线 \(PA\) 与 \(PC\) 所成的锐角，即 \(\angle APC\).
+
+又因为 \(PA\perp\) 平面 \(ABC\)，所以 \(PA\perp AC\)，三角形 \(PAC\) 在 \(A\) 处为直角. 于是
+\[
+\tan\angle APC=\frac{|AC|}{|PA|}=2
+\]
+故所求角为 \(\arctan 2\).
 \end{solution}
 
 \begin{problem}
@@ -316,24 +488,38 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item 易知 \(B(0,1)\)，\(F(-\sqrt{a^2-1},0)\)，所以 \(\overrightarrow{FB}=(\sqrt{a^2-1},1)\). 又因为 \(\left(1,\frac{\sqrt{3}}{3}\right)\) 是直线 \(FB\) 的一个方向向量，所以 \(\frac{\sqrt{3}}{3}\sqrt{a^2-1}=1\). 因为 \(a>1\)，所以 \(a=2\).
+\item 椭圆的上顶点为 \(B(0,1)\)，左焦点为 \(F(-\sqrt{a^2-1},0)\)，所以
+\[
+\overrightarrow{FB}=(\sqrt{a^2-1},1)
+\]
+给定方向向量 \(\left(1,\dfrac{\sqrt3}{3}\right)\) 与 \(\overrightarrow{FB}\) 平行，因此
+\[
+\frac{1}{\sqrt{a^2-1}}=\frac{\sqrt3}{3}
+\]
+由 \(a>1\) 得 \(\sqrt{a^2-1}=\sqrt3\)，从而 \(a^2=4\)，所以 \(a=2\).
 
-\item 由 \(a=\sqrt{2}\)，知 \(F(-1,0)\). 联立
+\item 当 \(a=\sqrt2\) 时，左焦点为 \(F(-1,0)\). 将 \(y=kx-2\) 代入椭圆方程，得
+\(\frac{x^2}{2}+(kx-2)^2=1\)，\(\Longrightarrow\)，\((1+2k^2)x^2-8kx+6=0\).
+设 \(M(x_1,y_1)\)，\(N(x_2,y_2)\). 由韦达定理，
+\(x_1+x_2=\frac{8k}{1+2k^2}\)，\(x_1x_2=\frac{6}{1+2k^2}\).
+又 \(y_1=kx_1-2\)，\(y_2=kx_2-2\)，所以
 \[
-\begin{cases}
-y=kx-2,\\
-\frac{x^2}{2}+y^2=1
-\end{cases}
-\]
-得 \((1+2k^2)x^2-8kx+6=0\). 设 \(M(x_1,y_1)\)，\(N(x_2,y_2)\)，则 \(\overrightarrow{FM}=(x_1+1,y_1)\)，\(\overrightarrow{FN}=(x_2+1,y_2)\)，\(x_1+x_2=\frac{8k}{1+2k^2}\)，\(x_1x_2=\frac{6}{1+2k^2}\).
-\[
-\begin{aligned}
 \overrightarrow{FM}\cdot\overrightarrow{FN}
-&=(x_1+1)(x_2+1)+y_1y_2=(x_1+1)(x_2+1)+(kx_1-2)(kx_2-2)\\
-&=(1+k^2)x_1x_2+(1-2k)(x_1+x_2)+5=\frac{8k+11}{1+2k^2}=3.
-\end{aligned}
+=(x_1+1)(x_2+1)+(kx_1-2)(kx_2-2)
 \]
-解得 \(k=2\) 或 \(k=-\frac{2}{3}\). 又因为 \(\Delta>0\)，故 \(k=2\).
+整理并代入韦达定理，得
+\[
+\overrightarrow{FM}\cdot\overrightarrow{FN}
+=(1+k^2)x_1x_2+(1-2k)(x_1+x_2)+5
+=\frac{8k+11}{1+2k^2}
+\]
+由题设
+\(\frac{8k+11}{1+2k^2}=3\)，\(\Longrightarrow\)，\(3k^2-4k-4=0\)
+解得 \(k=2\) 或 \(k=-\dfrac23\). 因为 \(M\)，\(N\) 是两个不同交点，故交点方程的判别式
+\[
+\Delta=(-8k)^2-4(1+2k^2)\cdot6=16k^2-24
+\]
+必须大于 \(0\). 当 \(k=2\) 时 \(\Delta=40>0\)，当 \(k=-\dfrac23\) 时 \(\Delta<0\)，所以 \(k=2\).
 \end{enumerate}
 \end{solution}
 
@@ -355,85 +541,146 @@ y=kx-2,\\
 
 \begin{solution}
 \begin{enumerate}
-\item 由题意，\(a_n+a_{n+1}=4n-1\)，则 \(a_{n+1}+a_{n+2}=4n+3\). 两式相减，得 \(a_{n+2}-a_n=4\). 所以 \(\{a_{2k-1}\}\) 是以 1 为首项，4 为公差的等差数列，得 \(a_{2k-1}=1+4(k-1)=4k-3\)； \(\{a_{2k}\}\) 是以 2 为首项，4 为公差的等差数列，得 \(a_{2k}=2+4(k-1)=4k-2\). 所以
+\item 双曲线 \(C_n\) 的半实轴、半虚轴分别为 \(\sqrt{a_n}\)，\(\sqrt{a_{n+1}}\)，所以焦距参数满足
+\[
+c_n^2=a_n+a_{n+1}
+\]
+由 \(c_n=\sqrt{4n-1}\)，得
+\[
+a_n+a_{n+1}=4n-1
+\]
+将 \(n\) 换成 \(n+1\)，得 \(a_{n+1}+a_{n+2}=4n+3\). 两式相减，得到 \(a_{n+2}-a_n=4\). 因而奇数项和偶数项分别构成公差为 \(4\) 的等差数列：
+\(a_{2k-1}=a_1+4(k-1)=4k-3\)，\(a_{2k}=a_2+4(k-1)=4k-2\).
+所以
 \[
 a_n=
 \begin{cases}
-2n-1, & n=2k-1,\\
-2n-2, & n=2k,
+2n-1,&n=2k-1,\\
+2n-2,&n=2k,
 \end{cases}
+\qquad k\in\N^*
 \]
-其中 \(k\in\N^*\).
 
-\item 由题意，\(\frac{x_{P_n}^2}{a_n}-\frac{n^2}{a_{n+1}}=1\)，所以 \(x_{P_n}=\sqrt{\frac{a_n}{a_{n+1}}n^2+a_n}\). 双曲线的渐近线 \(l_{OQ_n}:y=\sqrt{\frac{a_{n+1}}{a_n}}x\)，所以 \(x_{Q_n}=\sqrt{\frac{a_n}{a_{n+1}}}n\). 因而
+\item 点 \(P_n(x_{P_n},n)\) 在双曲线 \(C_n\) 上，故
 \[
-\begin{aligned}
-\lim\limits_{n\to\infty}S_n
-&=\frac{1}{2}\lim\limits_{n\to\infty}n\left(\sqrt{\frac{a_n}{a_{n+1}}n^2+a_n}-\sqrt{\frac{a_n}{a_{n+1}}}n\right)\\
-&=\frac{1}{2}\lim\limits_{n\to\infty}
-\frac{na_n}{\sqrt{\frac{a_n}{a_{n+1}}n^2+a_n}+\sqrt{\frac{a_n}{a_{n+1}}}n}\\
-&=\frac{1}{2}\lim\limits_{n\to\infty}
-\frac{a_n}{\sqrt{\frac{a_n}{a_{n+1}}+\frac{a_n}{n^2}}+\sqrt{\frac{a_n}{a_{n+1}}}}\\
-&=\frac{1}{2}\lim\limits_{n\to\infty}
-\frac{\lim\limits_{n\to\infty}a_n}
-{\sqrt{\dfrac{\lim\limits_{n\to\infty}a_n}{\lim\limits_{n\to\infty}a_{n+1}}+\lim\limits_{n\to\infty}a_n\cdot\lim\limits_{n\to\infty}\dfrac{1}{n^2}}+\sqrt{\dfrac{\lim\limits_{n\to\infty}a_n}{\lim\limits_{n\to\infty}a_{n+1}}}}=\frac{1}{2}.
-\end{aligned}
+\frac{x_{P_n}^2}{a_n}-\frac{n^2}{a_{n+1}}=1
 \]
-所以 \(\lim\limits_{n\to\infty}S_n=\frac{1}{2}\).
+以下按第2小题明示的条件 \(\lim\limits_{n\to\infty}a_n=2\) 计算.
+由于 \(P_n\) 在右支，\(x_{P_n}>0\)，所以
+\[
+x_{P_n}=\sqrt{\frac{a_n}{a_{n+1}}n^2+a_n}
+\]
+双曲线的第一象限渐近线为 \(y=\sqrt{\dfrac{a_{n+1}}{a_n}}x\). 由于 \(Q_n\) 的纵坐标也是 \(n\)，得
+\[
+x_{Q_n}=n\sqrt{\frac{a_n}{a_{n+1}}}
+\]
+三角形 \(OP_nQ_n\) 以 \(P_nQ_n\) 为底，底边长为 \(x_{P_n}-x_{Q_n}\)，高为 \(n\)，因此
+\[
+S_n=\frac n2\left(\sqrt{\frac{a_n}{a_{n+1}}n^2+a_n}-n\sqrt{\frac{a_n}{a_{n+1}}}\right)
+\]
+有理化得
+\[
+S_n=\frac12\cdot
+\frac{a_n}{\sqrt{\dfrac{a_n}{a_{n+1}}+\dfrac{a_n}{n^2}}+\sqrt{\dfrac{a_n}{a_{n+1}}}}
+\]
+由 \(\lim\limits_{n\to\infty}a_n=2\)，也有 \(\lim\limits_{n\to\infty}a_{n+1}=2\)，且 \(\lim\limits_{n\to\infty}\dfrac{a_n}{n^2}=0\). 于是
+\[
+\lim\limits_{n\to\infty}S_n
+=\frac12\cdot\frac{2}{\sqrt{1+0}+\sqrt1}
+=\frac12
+\]
 \end{enumerate}
 \end{solution}
 
 \section{附加题}
 
 \begin{problem}
-已知直角三角形 \(ABC\) 的两直角边 \(AC\)，\(BC\) 的边长分别为 \(b\)，\(a\)，如图，过 \(AC\) 边的 \(n\) 等分点 \(A_{i}\) 作 \(AC\) 边的垂线 \(d_{i}\)，过 \(BC\) 边的 \(n\) 等分点 \(B_{i}\) 和顶点 \(A\) 作直线 \(l_{i}\)，记 \(d_{i}\) 与 \(l_{i}\) 的交点为 \(P_{i}\)（\(i=1,2,\cdots,n-1\)）. 是否存在一条圆锥曲线，对任意的正整数 \(n\ge2\)，点 \(P_{i}\)（\(i=1,2,\cdots,n-1\)）都在这条曲线上？说明理由.
+已知直角三角形 \(ABC\) 的两直角边 \(AC\)，\(BC\) 的边长分别为 \(b\)，\(a\)，如图，过 \(AC\) 边的 \(n\) 等分点 \(A_{i}\) 作 \(AC\) 边的垂线 \(d_{i}\)，过 \(BC\) 边的 \(n\) 等分点 \(B_{i}\) 和顶点 \(A\) 作直线 \(l_{i}\)，记 \(d_{i}\) 与 \(l_{i}\) 的交点为 \(P_{i}\)（\(i=1\)，\(2\)，\(\cdots\)，\(n-1\)）. 是否存在一条圆锥曲线，对任意的正整数 \(n\ge2\)，点 \(P_{i}\)（\(i=1\)，\(2\)，\(\cdots\)，\(n-1\)）都在这条曲线上？说明理由.
 
 \bitmapfigure[width=0.56\linewidth]{img/2014/shanghai_spring/q30_fig1.png}
 \end{problem}
 
 \begin{solution}
-以 \(A\) 为坐标原点，\(AC\) 方向为 \(x\) 轴，过 \(A\) 作 \(AC\) 的垂线为 \(y\) 轴建立直角坐标系；则 \(A_i\left(\frac{i}{n}b,0\right)\)，\(B_i\left(b,\frac{i}{n}a\right)\)，\(1\le i\le n-1\)（\(i\in\N^*\)）；所以 \(l_i:y=\frac{ai}{bn}x\)，\(d_i:x=\frac{i}{n}b\).
+以 \(A\) 为坐标原点，\(AC\) 方向为 \(x\) 轴，过 \(A\) 作 \(AC\) 的垂线为 \(y\) 轴建立直角坐标系. 对 \(1\le i\le n-1\)，有
+\(A_i=\left(\frac{ib}{n},0\right)\)，\(B_i=\left(b,\frac{ia}{n}\right)\).
+因此，直线 \(l_i=AB_i\) 的方程为 \(y=\dfrac{ai}{bn}x\)，直线 \(d_i\) 的方程为 \(x=\dfrac{ib}{n}\). 联立两式，得
 \[
-\begin{cases}
-y=\frac{ai}{bn}x,\\
-x=\frac{i}{n}b
-\end{cases}
-\Rightarrow P_i\left(\frac{i}{n}b,\frac{i^2}{n^2}a\right)
-\Rightarrow y=\frac{a}{b^2}x^2
+P_i=\left(\frac{ib}{n},\frac{ai^2}{n^2}\right)
 \]
-存在满足条件的圆锥曲线，且为抛物线 \(y=\frac{a}{b^2}x^2\).
+设 \(P_i=(x_i,y_i)\)，则 \(x_i=\dfrac{ib}{n}\)，从而
+\[
+y_i=\frac{ai^2}{n^2}=\frac{a}{b^2}x_i^2
+\]
+所以对于任意正整数 \(n\ge2\) 及所有 \(i=1\)，\(2\)，\(\ldots\)，\(n-1\)，点 \(P_i\) 都在同一条抛物线
+\[
+y=\frac{a}{b^2}x^2
+\]
+上. 故所求圆锥曲线存在，且为该抛物线.
 \end{solution}
 
 \begin{problem}
-某人造卫星在地球赤道平面绕地球飞行，甲，乙两个监测点分别位于赤道上东经 \(131^{\circ}\) 和 \(147^{\circ}\)，在某时刻测得甲监测点到卫星的距离为 \(1537.45\text{ 千米}\)，乙监测点到卫星的距离为 \(887.64\text{ 千米}\). 假设地球赤道是一个半径为 \(6378\text{ 千米}\) 的圆，求此时卫星所在位置的高度（结果精确到 \(0.01\text{ 千米}\)）和经度（结果精确到 \(0.01^{\circ}\)）.
+某人造卫星在地球赤道平面绕地球飞行，甲，乙两个监测点分别位于赤道上东经 \(131^{\circ}\) 和 \(147^{\circ}\)，在某时刻测得甲监测点到卫星的距离为 \(1537.45\text{ 千米}\)，乙监测点到卫星的距离为 \(887.64\text{ 千米}\). 假设地球赤道是一个半径为 \(6378\text{ 千米}\) 的圆，求此时卫星所在位置的高度（结果精确到 \(0.01\text{ 千米}\)）和经度（结果精确到 \(0.01^{\circ}\)).
 \end{problem}
 
 \begin{solution}
-如图，建立赤道截面平面图，其中 \(O\) 为球心，\(A\)，\(B\) 分别为甲，乙监测点，\(C\) 为卫星所在位置，\(D\) 为卫星在地球赤道上的投影（由于题目中未说明 \(C\) 的位置，且 \(AC>BC\)，故有以下三种情况）.
+如图建立赤道截面平面图，其中 \(O\) 为地心，\(A\)，\(B\) 分别为甲、乙监测点，\(C\) 为卫星位置. 由经度差可得
+\(|OA|=|OB|=6378\)，\(\angle AOB=147^\circ-131^\circ=16^\circ\)
+且
+\(|AC|=1537.45\)，\(|BC|=887.64\).
 
 \solutionfigure{\bitmapfigure[width=0.92\linewidth]{img/2014/shanghai_spring/q31_solution_fig1.png}}
 
-易得 \(|OA|=|OB|=|OD|=6378\)，\(\angle AOB=16^\circ\)，\(|AC|=1537.45\)，\(|BC|=887.64\).
-
-在 \(\triangle AOB\) 中，\(|AB|=\sqrt{|OA|^2+|OB|^2-2|OA||OB|\cos\angle AOB}\approx1775.292>|AC|>|BC|\).
-
-因此，在 \(\triangle ABC\) 中，\(\angle ACB\) 最大，即 \(\angle BAC\)，\(\angle ABC\) 都是锐角，所以选择第三张图.
-
-\[\cos\angle BAC=\frac{|AB|^2+|AC|^2-|BC|^2}{2|AB||AC|}\approx\frac{\sqrt{3}}{2}\Rightarrow \angle BAC\approx30.000^\circ\Rightarrow \angle OAC\approx112.000^\circ\]
-
-在三角形 \(AOC\) 中，
+先在 \(\triangle AOB\) 中用余弦定理求弦长：
 \[
-|OC|=\sqrt{|AC|^2+|AO|^2-2|AC||AO|\cos\angle OAC}\approx7098.543
+|AB|=\sqrt{6378^2+6378^2-2\cdot6378^2\cos16^\circ}
+\approx1775.292
+\]
+于是 \(|AB|>|AC|>|BC|\)，所以在 \(\triangle ABC\) 中，\(\angle ACB\) 最大；由余弦定理
+\[
+\cos\angle BAC
+=\frac{|AB|^2+|AC|^2-|BC|^2}{2|AB||AC|}
+\approx0.8660
+\]
+从而
+\[
+\angle BAC\approx30.00^\circ
 \]
 
-因此，\(h=|OC|-|OD|\approx720.543\)，即卫星高度为 \(720.54\text{ 千米}\).
-
-在三角形 \(BOC\) 中，
+在等腰三角形 \(AOB\) 中，
 \[
-\cos\angle BOC=\frac{|OB|^2+|OC|^2-|BC|^2}{2|OB||OC|}\approx0.997\Rightarrow \angle BOC\approx4.415^\circ
+\angle OAB=\frac{180^\circ-16^\circ}{2}=82^\circ
 \]
+因此根据卫星 \(C\) 所在的两种几何分支，\(\angle OAC\) 可能约为
+\[
+82^\circ-30^\circ=52^\circ
+\quad\text{或}\quad
+82^\circ+30^\circ=112^\circ
+\]
+若 \(\angle OAC\approx52^\circ\)，由 \(\triangle AOC\) 的余弦定理得 \(|OC|\approx5564.93<6378\)，卫星位于地球内部，不合题意；故取 \(\angle OAC\approx112^\circ\).
 
-因此，\(147^\circ-4.415^\circ\approx142.58^\circ\)，即卫星位于赤道上东经 \(142.58^\circ\).
+再次在 \(\triangle AOC\) 中用余弦定理：
+\[
+|OC|
+=\sqrt{|AO|^2+|AC|^2-2|AO||AC|\cos112^\circ}
+\approx7098.543
+\]
+卫星高度为
+\[
+h=|OC|-6378\approx720.543
+\]
+所以高度为 \(720.54\text{ 千米}\).
+
+由上面的几何位置，\(C\) 位于 \(A\)，\(B\) 两点对应的东经之间. 在 \(\triangle BOC\) 中，
+\[
+\cos\angle BOC
+=\frac{|OB|^2+|OC|^2-|BC|^2}{2|OB||OC|}
+\approx0.9970
+\]
+从而 \(\angle BOC\approx4.415^\circ\). 等价地，由 \(\triangle AOC\) 的余弦定理可得 \(\angle AOC\approx11.585^\circ<16^\circ\)，这也验证了 \(C\) 确实位于 \(A\)，\(B\) 之间. 因此卫星经度为
+\[
+147^\circ-4.415^\circ\approx142.58^\circ
+\]
+即东经 \(142.58^\circ\).
 \end{solution}
 
 \begin{problem}
@@ -447,33 +694,36 @@ x=\frac{i}{n}b
 
 \begin{solution}
 \begin{enumerate}
-\item
-\begin{enumerate}
-\item 当函数 \(y=f(x)\) 是单调递增函数时，则 \(f(x+1)>f(x)\) 对任意 \(x\) 恒成立. 因此，存在非零常数 \(c=1\)，使得对任意 \(x\) 都有 \(f(x+c)>f(x)\) 成立. 因此，\(y=f(x)\) 是“\(Z\) 函数”.
+\item 若 \(f\) 在 \(\R\) 上严格递增，则对任意 \(x\)，有 \(x+1>x\)，从而 \(f(x+1)>f(x)\). 取非零常数 \(c=1\)，即得 \(f(x+c)>f(x)\). 若 \(f\) 在 \(\R\) 上严格递减，则对任意 \(x\)，有 \(x-1<x\)，从而 \(f(x-1)>f(x)\). 取非零常数 \(c=-1\)，同样满足定义. 因此严格单调函数都是 \(Z\) 函数.
 
-\item 当函数 \(y=f(x)\) 是单调递减函数时，则 \(f(x-1)>f(x)\) 对任意 \(x\) 恒成立. 因此，存在非零常数 \(c=-1\)，使得对任意 \(x\) 都有 \(f(x+c)>f(x)\) 成立. 因此，\(y=f(x)\) 是“\(Z\) 函数”.
-\end{enumerate}
-
-\item 由题意，若函数 \(g(x)=ax^3+bx^2\) 是“\(Z\) 函数”，则存在非零常数 \(c\)，对于定义域 \(\R\) 上的任意 \(x\)，都有 \(g(x+c)>g(x)\) 恒成立，即 \(a(x+c)^3+b(x+c)^2>ax^3+bx^2\). 化简后，得 \(3acx^2+(3ac^2+2bc)x+(ac^3+bc^2)>0\) 恒成立；则
+\item 若 \(g\) 是 \(Z\) 函数，则存在 \(c\ne0\)，使得对任意 \(x\in\R\)，
 \[
-\begin{cases}
-3ac>0,\\
-\Delta=(3ac^2+2bc)^2-4\cdot 3ac(ac^3+bc^2)<0.
-\end{cases}
+g(x+c)-g(x)
+=3acx^2+(3ac^2+2bc)x+(ac^3+bc^2)>0
 \]
-化简后，得
+这是关于 \(x\) 的二次式. 要使它对所有实数都严格为正，必须且只须满足二次项系数为正且判别式为负，即
+\(3ac>0\)，\(\Delta=(3ac^2+2bc)^2-12ac(ac^3+bc^2)<0\).
+将判别式因式分解：
 \[
-\begin{cases}
-a>0,\\
-c>\frac{2\sqrt{3}}{3}\cdot\frac{|b|}{a}\ge0
-\end{cases}
-\text{或}
-\begin{cases}
-a<0,\\
-c<-\frac{2\sqrt{3}}{3}\cdot\frac{|b|}{a}\le0
-\end{cases}
+\Delta=c^2\left(4b^2-3a^2c^2\right)
 \]
+因为 \(c\ne0\)，所以
+\(|c|>\frac{2\sqrt3\,|b|}{3|a|}\)，\(ac>0\).
+若 \(a>0\)，可取满足
+\[
+c>\frac{2\sqrt3\,|b|}{3a}
+\]
+的正数 \(c\)；若 \(a<0\)，可取满足
+\[
+c<-\frac{2\sqrt3\,|b|}{3|a|}
+\]
+的负数 \(c\). 这说明 \(a\ne0\) 时，对任意 \(b\in\R\) 总能找到合适的 \(c\).
 
-因此，只需满足条件 \(a\neq0\)，\(b\in\R\).
+反之，若 \(a=0\)，则
+\[
+g(x+c)-g(x)=2bcx+bc^2
+\]
+当 \(b\ne0\) 时这是非常数一次式，不可能对所有实数 \(x\) 恒为正；当 \(b=0\) 时恒为零，也不满足严格不等式. 因此 \(a=0\) 时不存在这样的 \(c\). 综上，所求条件为
+\(a\ne0\)，\(b\in\R\).
 \end{enumerate}
 \end{solution}

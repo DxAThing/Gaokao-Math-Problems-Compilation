@@ -13,8 +13,8 @@
 
 \begin{solution}
 \begin{enumerate}
-\item \(A \cup B=\R\).
-\item \(A \cap B=\varnothing\).
+\item 任意实数或者是有理数，或者是无理数，因此 \(A\cup B\) 包含全体实数；反过来，\(A\) 和 \(B\) 都是实数的子集，所以 \(A\cup B\) 不包含实数以外的数. 故 \(A\cup B=\R\).
+\item 一个数不可能同时是有理数和无理数，因此 \(A\) 与 \(B\) 没有公共元素. 故 \(A\cap B=\varnothing\).
 \end{enumerate}
 \end{solution}
 
@@ -23,11 +23,26 @@
 \end{problem}
 
 \begin{solution}
-\(\frac{8}{3}(b-a)b^2\).
+原式有意义时，需满足 \(b>0\)、\(a\ne0\)、\(a+b\ne0\) 且 \(a\ne b\). 先分别化简各因式，得
+\(\left[-\frac{a^7b^2}{\sqrt{3}(a+b)^2}\right]^2=\frac{a^{14}b^4}{3(a+b)^4}\)，\(\left[\frac{a^2-b^2}{a^2\sqrt b}\right]^4=\frac{(a^2-b^2)^4}{a^8b^2}\)
+以及
+\[
+\left[\frac{a^2(b-a)}{2}\right]^3=\frac{a^6(b-a)^3}{8}
+\]
+所以原式
+\[
+=\frac{a^{14}b^4}{3(a+b)^4}\cdot\frac{(a^2-b^2)^4}{a^8b^2}\cdot\frac{8}{a^6(b-a)^3}
+=\frac{8b^2(a^2-b^2)^4}{3(a+b)^4(b-a)^3}
+\]
+由 \(a^2-b^2=(a-b)(a+b)=-(b-a)(a+b)\)，有
+\[
+(a^2-b^2)^4=(b-a)^4(a+b)^4
+\]
+约去非零因式后，原式 \(=\dfrac{8}{3}(b-a)b^2\).
 \end{solution}
 
 \begin{problem}
-在 \(A\)，\(B\)，\(C\)，\(D\) 四位候选人中，
+在 A，B，C，D 四位候选人中，
 
 \begin{enumerate}
 \item 如果选举正，副班长各 \(1\text{ 人}\)，共有几种选法？写出所有可能的选举结果；
@@ -37,8 +52,16 @@
 
 \begin{solution}
 \begin{enumerate}
-\item 选法种数为 \(12\) 种. 所有可能的选举结果为 \(\mathrm{AB}\)，\(\mathrm{AC}\)，\(\mathrm{AD}\)，\(\mathrm{BC}\)，\(\mathrm{BD}\)，\(\mathrm{CD}\)，\(\mathrm{BA}\)，\(\mathrm{CA}\)，\(\mathrm{DA}\)，\(\mathrm{CB}\)，\(\mathrm{DB}\)，\(\mathrm{DC}\).
-\item 选法种数为 \(4\) 种. 所有可能的选举结果为 \(\mathrm{ABC}\)，\(\mathrm{ABD}\)，\(\mathrm{ACD}\)，\(\mathrm{BCD}\).
+\item 正班长有 \(4\) 种选法；正班长确定后，副班长有 \(3\) 种选法. 因此选法种数为
+\[
+4\times3=12
+\]
+以下把两个字母依次记为正班长和副班长，所有可能的选举结果为 AB、AC、AD、BA、BC、BD、CA、CB、CD、DA、DB、DC.
+\item 只需从四位候选人中选出三人，先不区分三人的顺序，因此选法种数为
+\[
+\mathrm C_4^3=\frac{4\times3\times2}{3\times2\times1}=4
+\]
+所有可能的选举结果为 ABC、ABD、ACD、BCD.
 \end{enumerate}
 \end{solution}
 
@@ -47,7 +70,15 @@
 \end{problem}
 
 \begin{solution}
-最大值为 \(\sqrt{2}\).
+由三角函数的和角公式，
+\[
+f(x)=\sin x+\cos x=\sqrt{2}\sin\left(x+\frac{\pi}{4}\right)
+\]
+因为正弦函数的值不超过 \(1\)，所以对区间内任意 \(x\)，都有 \(f(x)\le\sqrt{2}\). 当 \(x=\dfrac{\pi}{4}\) 时，\(x\in(-\pi,\pi)\)，且
+\[
+f\left(\frac{\pi}{4}\right)=\sin\frac{\pi}{4}+\cos\frac{\pi}{4}=\sqrt{2}
+\]
+因此，函数在给定区间上的最大值为 \(\sqrt{2}\).
 \end{solution}
 
 \begin{problem}
@@ -55,7 +86,29 @@
 \end{problem}
 
 \begin{solution}
-在一个任意三角形中，各边和它所对角的正弦的比相等，即 \(\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}\).
+在 \(\triangle ABC\) 中，记 \(BC=a\)、\(CA=b\)、\(AB=c\)，则正弦定理为
+\[
+\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}
+\]
+
+不妨设钝角为 \(C\)，即 \(C>\dfrac{\pi}{2}\). 从点 \(A\) 向直线 \(BC\) 作垂线，垂足为 \(D\)；从点 \(B\) 向直线 \(AC\) 作垂线，垂足为 \(E\). 因为 \(C\) 是钝角，\(D\) 在射线 \(CB\) 的反向延长线上，\(E\) 在射线 \(CA\) 的反向延长线上.
+
+在直角三角形 \(ACD\) 和 \(ABD\) 中，分别有
+\(AD=b\sin(\pi-C)=b\sin C\)，\(AD=c\sin B\).
+于是
+\[
+\frac{b}{\sin B}=\frac{c}{\sin C}
+\]
+又在直角三角形 \(ABE\) 和 \(BCE\) 中，分别有
+\(BE=c\sin A\)，\(BE=a\sin(\pi-C)=a\sin C\).
+于是
+\[
+\frac{a}{\sin A}=\frac{c}{\sin C}
+\]
+合并两式，即得
+\[
+\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}
+\]
 \end{solution}
 
 \begin{problem}
@@ -63,7 +116,17 @@
 \end{problem}
 
 \begin{solution}
-顶点 \(B\) 和 \(D\) 的坐标分别为 \(B(4,1)\) 和 \(D(-2,3)\).
+设正方形两条对角线的交点为 \(O\). 因为对角线互相平分，
+\[
+O=\left(\frac{0+2}{2},\frac{-1+5}{2}\right)=(1,2)
+\]
+于是
+\[
+\overrightarrow{OA}=(-1,-3)
+\]
+正方形的两条对角线互相垂直且长度相等，所以从 \(O\) 指向 \(B\) 或 \(D\) 的向量应当与 \(\overrightarrow{OA}\) 垂直，且长度相等. 将 \(\overrightarrow{OA}\) 旋转 \(90^{\circ}\)，得到两个可能的向量 \((3,-1)\) 和 \((-3,1)\)，故两个端点的无序集合为 \(\{(4,1),(-2,3)\}\). 按 \(A\)，\(B\)，\(C\)，\(D\) 逆时针编号的通常约定，取 \(\overrightarrow{OB}=(3,-1)\)、\(\overrightarrow{OD}=(-3,1)\)，因而
+\(B=O+(3,-1)=(4,1)\)，\(D=O+(-3,1)=(-2,3)\).
+故顶点 \(B\) 和 \(D\) 的坐标分别为 \(B(4,1)\) 和 \(D(-2,3)\).
 \end{solution}
 
 \begin{problem}
@@ -96,8 +159,36 @@
 
 \begin{solution}
 \begin{enumerate}
-\item 到 \(2000\) 年底我国人口将达到 \(14.859\text{ 亿}\).
-\item 每年比上年人口平均递增率最高是 \(0.92\%\).
+\item 设人口数的单位为亿. 从 \(1980\) 年底到 \(2000\) 年底共有 \(20\) 年，因此人口数为等比数列的第 \(21\) 项：
+\[
+N=10(1+0.02)^{20}=10(1.0200)^{20}
+\]
+取常用对数，利用题给数据得
+\[
+\lg N=1+20\lg1.0200=1+20\times0.00860=1.17200
+\]
+又因为 \(\lg1.4859=0.17200\)，所以
+\[
+N=10\times1.4859=14.859
+\]
+故到 \(2000\) 年底我国人口将达到 \(14.859\text{ 亿}\).
+\item 设每年比上年平均递增率为 \(r\)，则 \(r\ge0\)，且
+\[
+10(1+r)^{20}\le12
+\]
+即 \((1+r)^{20}\le1.2000\). 由于常用对数函数单调递增，
+\[
+20\lg(1+r)\le\lg1.2000=0.07918
+\]
+从而
+\[
+\lg(1+r)\le\frac{0.07918}{20}=0.003959
+\]
+因此严格的最大值在等号成立时取得：
+\[
+r=1.2^{1/20}-1\approx0.0091577558=0.91577558\%
+\]
+因此严格的最大递增率为 \(0.91577558\%\)；按题给对数表和通常保留百分数小数点后两位的报告精度，答案写作 \(0.92\%\).
 \end{enumerate}
 \end{solution}
 
@@ -106,7 +197,18 @@
 \end{problem}
 
 \begin{solution}
-截面 \(ACB_{1}\perp\) 对角面 \(DBB_{1}D_{1}\).
+设 \(O=AC\cap BD\)，并记对角面 \(DBB_{1}D_{1}\) 为平面 \(\Pi\). 因为 \(ABCD\) 是正方形，所以两条对角线互相垂直，即
+\[
+AC\perp BD
+\]
+过 \(O\) 作直线 \(l\parallel BB_{1}\). 因为 \(O\) 在 \(DB\) 上，且平面 \(\Pi\) 包含直线 \(DB\) 和直线 \(BB_{1}\)，所以 \(l\subset\Pi\). 又因为正四棱柱的侧棱垂直于底面 \(ABCD\)，所以 \(l\perp AC\). 因此，直线 \(AC\) 垂直于平面 \(\Pi\) 内经过 \(O\) 的两条相交直线 \(BD\) 和 \(l\)，从而
+\[
+AC\perp\Pi
+\]
+而 \(AC\) 在截面平面 \(ACB_{1}\) 内，所以截面平面 \(ACB_{1}\) 与平面 \(DBB_{1}D_{1}\) 垂直，即
+\[
+ACB_{1}\perp DBB_{1}D_{1}
+\]
 \end{solution}
 
 \begin{problem}
@@ -118,7 +220,44 @@
 
 \begin{solution}
 \begin{enumerate}
-\item \(k=-4\).
-\item \(P(5,0)\) 或 \(P(-1,0)\).
+\item 将抛物线参数化为
+\[
+Q(t)=(t^2,2t)
+\]
+因为 \(y^2=4x\). 交点参数 \(t_1\)，\(t_2\) 满足直线方程，故
+\[
+2t=2t^2+k
+\]
+即
+\[
+t^2-t+\frac{k}{2}=0
+\]
+所以
+\[
+t_1+t_2=1
+\]
+两交点为 \(Q(t_1)\)、\(Q(t_2)\)，弦长的平方为
+\[
+\left|Q(t_1)Q(t_2)\right|^2=\left(t_1^2-t_2^2\right)^2+\left(2t_1-2t_2\right)^2=\left(t_1-t_2\right)^2\left(\left(t_1+t_2\right)^2+4\right)=5\left(t_1-t_2\right)^2
+\]
+由弦长为 \(3\sqrt5\)，得 \(5(t_1-t_2)^2=45\)，即 \((t_1-t_2)^2=9\). 又由韦达定理，
+\[
+(t_1-t_2)^2=(t_1+t_2)^2-4t_1t_2=1-4\cdot\frac{k}{2}=1-2k
+\]
+因此 \(1-2k=9\)，解得 \(k=-4\). 此时交点参数为 \(2,-1\)，确有两个实交点，且弦长为 \(3\sqrt5\)，检验成立.
+\item 当 \(k=-4\) 时，弦所在直线为 \(y=2x-4\)，交点为
+\(Q(2)=(4,4)\)，\(Q(-1)=(1,-2)\)
+所以底边长为 \(3\sqrt5\). 设 \(P=(u,0)\)，则点 \(P\) 到底边所在直线 \(2x-y-4=0\) 的距离为
+\[
+h=\frac{|2u-4|}{\sqrt5}
+\]
+由三角形面积为 \(9\)，有
+\[
+9=\frac12\cdot3\sqrt5\cdot\frac{|2u-4|}{\sqrt5}=\frac32|2u-4|
+\]
+于是 \(|2u-4|=6\)，解得 \(u=5\) 或 \(u=-1\). 故
+\[
+P=(5,0)\quad\text{或}\quad P=(-1,0)
+\]
 \end{enumerate}
 \end{solution}

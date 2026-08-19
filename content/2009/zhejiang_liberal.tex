@@ -18,6 +18,15 @@
 B
 \end{answer}
 
+\begin{solution}
+由 \(A=\{x\mid x>0\}\)，\(B=\{x\mid x>1\}\)，得
+\(\complement_U B=\{x\mid x\leqslant 1\}\)，因此
+\[
+A\cap\complement_U B=\{x\mid 0<x\leqslant 1\}
+\]
+对应选项 B.
+\end{solution}
+
 \begin{problem}
 “\(x > 0\)”是“\(x \ne 0\)”的（\quad）
 
@@ -32,6 +41,11 @@ B
 A
 \end{answer}
 
+\begin{solution}
+若 \(x>0\)，则必有 \(x\neq0\)，所以“\(x>0\)”是“\(x\neq0\)”的充分条件.
+但 \(x=-1\) 时 \(x\neq0\) 而 \(x>0\) 不成立，故它不是必要条件，选 A.
+\end{solution}
+
 \begin{problem}
 设 \(z = 1 + \i\) （\(\i\) 是虚数单位），则 \(\frac{2}{z} + z^2 =\)（\quad）
 
@@ -43,8 +57,20 @@ A
 \end{problem}
 
 \begin{answer}
-D
+A
 \end{answer}
+
+\begin{solution}
+\[
+\frac{2}{z}=\frac{2}{1+\i}=\frac{2(1-\i)}{(1+\i)(1-\i)}=1-\i
+\]
+且 \(z^2=(1+\i)^2=2\i\).
+所以
+\[
+\frac{2}{z}+z^2=(1-\i)+2\i=1+\i
+\]
+对应选项 A.
+\end{solution}
 
 \begin{problem}
 设 \(\alpha\)，\(\beta\) 是两个不同的平面，\(l\) 是一条直线. 以下命题正确的是（\quad）
@@ -60,6 +86,21 @@ D
 C
 \end{answer}
 
+\begin{solution}
+若 \(l\perp\alpha\)，则 \(l\) 的方向垂直于平面 \(\alpha\) 内的任意直线.
+当 \(\alpha\parallel\beta\) 时，两平面的法向方向相同，所以同一条直线
+垂直于 \(\alpha\) 也垂直于 \(\beta\)，选 C.
+选项 A 不是必然成立. 例如取 \(\alpha:z=0\)、\(\beta:y=1\)，
+\(l\) 为 \(z\) 轴，则 \(l\perp\alpha\)、\(\alpha\perp\beta\)，但
+\(l\) 不在平面 \(\beta\) 内. 选项 B 也不成立：取
+\(\alpha:z=0\)、\(\beta:z=1\)，取 \(l\) 为平面 \(z=2\) 内平行于
+\(x\) 轴的直线，则 \(l\parallel\alpha\)、\(\alpha\parallel\beta\)，
+但 \(l\) 不在平面 \(\beta\) 内. 选项 D 不成立：取
+\(\alpha:z=0\)、\(\beta:x=0\)，取 \(x=1\)，\(z=1\) 内平行于 \(y\) 轴的直线
+\(l\)，则 \(l\parallel\alpha\)、\(\alpha\perp\beta\)，而 \(l\parallel\beta\)，
+所以 \(l\) 不垂直于 \(\beta\).
+\end{solution}
+
 \begin{problem}
 已知向量 \(\bs{a} = (1, 2)\)，\(\bs{b} = (2, -3)\). 若向量 \(\bs{c}\) 满足 \((\bs{c} + \bs{a}) \parallel \bs{b}\)，\(\bs{c} \perp (\bs{a} + \bs{b})\)，则 \(\bs{c} =\)（\quad）
 
@@ -74,6 +115,29 @@ C
 D
 \end{answer}
 
+\begin{solution}
+设 \(\bs c=(x,y)\). 由 \(\bs a+\bs b=(3,-1)\)，
+\(\bs c\perp(\bs a+\bs b)\) 得
+\[
+3x-y=0
+\]
+又因为 \((\bs c+\bs a)\parallel\bs b\)，所以
+\[
+\begin{vmatrix}x+1&y+2\\2&-3\end{vmatrix}=0
+\]
+展开得 \(-3(x+1)-2(y+2)=0\)，
+即
+\[
+3x+2y+7=0
+\]
+由上式得 \(y=3x\)，代入前一式得 \(9x+7=0\).
+于是 \(x=-\frac79\)，\(y=-\frac73\)，故
+\[
+\bs c=\left(-\frac79,-\frac73\right)
+\]
+选 D.
+\end{solution}
+
 \begin{problem}
 已知椭圆 \(\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\)（\(a > b > 0\)）的左焦点为 \(F\)，右顶点为 \(A\)，点 \(B\) 在椭圆上，且 \(BF \perp x\) 轴. 直线 \(AB\) 交 \(y\) 轴于点 \(P\). 若 \(\overrightarrow{AP} = 2\overrightarrow{PB}\)，则椭圆的离心率是（\quad）
 
@@ -87,6 +151,27 @@ D
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+记椭圆半焦距为 \(c=\sqrt{a^2-b^2}\)，则
+\(F=(-c,0)\)，\(A=(a,0)\)，由 \(BF\perp x\) 轴，设
+\(B=(-c,y_B)\)，代入椭圆方程得
+\[
+\frac{c^2}{a^2}+\frac{y_B^2}{b^2}=1
+\]
+从而 \(y_B^2=\frac{b^4}{a^2}\).
+条件 \(\overrightarrow{AP}=2\overrightarrow{PB}\) 表明 \(P\) 将 \(AB\) 内分为
+\(AP:PB=2:1\)，故
+\[
+P=A+\frac23(B-A)
+\]
+从而 \(x_P=\frac{a-2c}{3}\).
+由于 \(P\) 在 \(y\) 轴上，\(x_P=0\)，从而 \(a=2c\)，因此椭圆的离心率为
+\[
+e=\frac ca=\frac12
+\]
+选 D.
+\end{solution}
 
 \begin{problem}
 某程序框图如图所示，该程序运行后输出的 \(k\) 的值是（\quad）
@@ -104,6 +189,15 @@ D
 A
 \end{answer}
 
+\begin{solution}
+程序开始时 \(k=0\)，\(S=0\)，每次循环先将 \(S\) 更新为 \(S+2^S\)，再令
+\(k\) 增加 1，逐次得到
+\[
+(S,k)=(0,0)\to(1,1)\to(3,2)\to(11,3)\to(2059,4)
+\]
+其中 \(11+2^{11}=2059\geqslant100\)，循环结束并输出 \(k=4\)，选 A.
+\end{solution}
+
 \begin{problem}
 若函数 \( f(x) = x^2 + \frac{a}{x} \)（\(a \in \R\)），则下列结论正确的是（\quad）
 
@@ -118,6 +212,21 @@ A
 C
 \end{answer}
 
+\begin{solution}
+函数定义域为 \(\{x\in\R\mid x\ne0\}\). 取 \(a=0\) 时，
+\(f(x)=x^2\)，且 \(f(-x)=f(x)\)，所以存在 \(a\) 使 \(f\) 为偶函数，
+选项 C 正确.
+
+选项 A 不成立，例如 \(a=1\) 时
+\(f'(x)=2x-1/x^2\)，在正半轴上既有负值又有正值；选项 B 不成立，
+因为 \(a=0\) 时 \(x^2\) 在正半轴上递增. 若 \(f\) 为奇函数，则对任意
+\(x\neq0\) 有
+\[
+f(x)+f(-x)=2x^2=0
+\]
+矛盾，所以 D 也不成立.
+\end{solution}
+
 \begin{problem}
 已知三角形的三边长分别为 3， 4， 5，则它的边与半径为 1 的圆的公共点个数最多为（\quad）
 
@@ -129,8 +238,56 @@ C
 \end{problem}
 
 \begin{answer}
-C
+B
 \end{answer}
+
+\begin{solution}
+将直角三角形置于坐标平面内，取三个顶点为
+\(O=(0,0)\)、\(U=(3,0)\)、\(V=(0,4)\)，三边所在的线段分别为
+\(OU\)、\(OV\) 和 \(UV\)，其中斜边所在直线为
+\[
+4x+3y=12
+\]
+
+设圆心为 \(C=(u,v)\)，半径为 1. 圆与每一条边所在直线至多有两个
+公共点.
+
+先考虑圆与两条直角边均有两个公共点的情形. 与 \(OU\) 的两个交点
+均在线段 \(OU\) 上，因而 \(|v|<1\) 且 \(u>0\)；与 \(OV\) 的两个交点
+均在线段 \(OV\) 上，因而 \(|u|<1\) 且 \(v>0\).
+所以必有 \(0<u<1\)、\(0<v<1\). 此时圆心到斜边所在直线的距离为
+\[
+\frac{12-4u-3v}{5}>\frac{12-4-3}{5}=1
+\]
+所以圆与 \(UV\) 没有公共点，公共点总数至多为 4.
+
+若公共点总数超过 4，则由于每条边至多贡献两个点，必有一条直角边
+有两个公共点，斜边也有两个公共点，另一条直角边至少有一个公共点.
+不妨先设 \(OU\) 有两个公共点.
+这时 \(|v|<1\) 且 \(u>0\). 若 \(OV\) 没有公共点，则总数至多为 4；
+若 \(OV\) 至少有一个公共点，则圆心到直线 \(OV\) 的距离不超过 1，
+从而 \(u\leqslant1\). 因此
+\(4u+3v\leqslant4+3v<7\)，从而
+\(\frac{12-4u-3v}{5}>1\).
+这说明圆与 \(UV\) 没有公共点，与斜边有两个公共点矛盾.
+
+若 \(OV\) 有两个公共点，则同理有 \(|u|<1\) 且 \(v>0\). 若 \(OU\)
+没有公共点，则总数至多为 4；若 \(OU\) 至少有一个公共点，则
+\(v\leqslant1\)，于是
+\(4u+3v<4+3=7\)，从而
+\(\frac{12-4u-3v}{5}>1\)，
+同样不可能与 \(UV\) 有两个公共点. 所以公共点总数不超过 4.
+
+最后给出 4 个公共点的构造. 取圆心 \(C=(0,\frac52)\)，半径为 1.
+它与 \(OV\) 的两个交点为
+\((0,\frac32)\)、\((0,\frac72)\)，且到直线 \(UV\) 的距离为
+\(\frac9{10}<1\)，与 \(UV\) 的两个交点为
+\[
+\left(\frac{18}{25}\pm\frac{3\sqrt{19}}{50},
+\frac{76}{25}\mp\frac{2\sqrt{19}}{25}\right)
+\]
+这两点均在线段 \(UV\) 上；圆与 \(OU\) 没有公共点. 因此最多为 4 个，选 B.
+\end{solution}
 
 \begin{problem}
 已知 \(a\) 是实数，则函数 \(f(x) = 1 + a \sin ax\) 的图象不可能是（\quad）
@@ -146,6 +303,17 @@ C
 D
 \end{answer}
 
+\begin{solution}
+当 \(a=0\) 时，函数恒为 \(1\)，对应选项 C 的水平图象.
+当 \(a\neq0\) 时，函数的振幅为 \(|a|\)，周期为
+\[
+T=\frac{2\pi}{|a|}
+\]
+图 D 的最大值超过 2、最小值小于 0，所以其振幅大于 1，即
+\(|a|>1\)；但图 D 所示的周期又大于 \(2\pi\). 这与
+\(|a|>1\Rightarrow T<2\pi\) 矛盾，故图 D 不可能，选 D.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -156,6 +324,19 @@ D
 15
 \end{answer}
 
+\begin{solution}
+由 \(q=\frac12\)，有
+\[
+S_4=a_1\left(1+\frac12+\frac14+\frac18\right)
+\]
+且 \(a_4=\frac{a_1}{8}\).
+题目中的比值有意义，所以 \(a_4\ne0\)，从而 \(a_1\ne0\).
+因此
+\[
+\frac{S_4}{a_4}=8\left(1+\frac12+\frac14+\frac18\right)=15
+\]
+\end{solution}
+
 \begin{problem}
 若某几何体的三视图（单位：\(\mathrm{cm}\)）如图所示，则此几何体的体积是\fillinblank{} \(\mathrm{cm}^{3}\).
 
@@ -165,6 +346,18 @@ D
 \begin{answer}
 18
 \end{answer}
+
+\begin{solution}
+由三视图可知，该几何体是一个高为 \(3\) 的直棱柱，底面为 \(T\) 形图形.
+\(T\) 形底面的面积为上横条和竖条面积之和：
+\[
+S_{\text{底}}=3\times1+1\times3=6\ \mathrm{cm}^{2}
+\]
+所以几何体的体积为
+\[
+V=S_{\text{底}}\times3=6\times3=18\ \mathrm{cm}^{3}
+\]
+\end{solution}
 
 \begin{problem}
 若实数 \(x\)，\(y\) 满足不等式组 \(\begin{cases}
@@ -178,6 +371,25 @@ x - y \geqslant 0,
 4
 \end{answer}
 
+\begin{solution}
+不等式组等价于 \(y\geqslant2-x\)，\(y\geqslant2x-4\)，
+\(y\leqslant x\).
+三条边界直线的交点为
+\((1,1)\)，\((2,0)\)，\((4,4)\).
+在三个顶点处，目标函数 \(2x+3y\) 的值分别为
+\(5\)，\(4\)，\(20\).
+在边 \(y=2-x\)（\(1\le x\le2\)）上，
+\[
+2x+3y=6-x\ge4
+\]
+在边 \(y=2x-4\)（\(2\le x\le4\)）上，
+\[
+2x+3y=8x-12\ge4
+\]
+在边 \(y=x\)（\(1\le x\le4\)）上，目标函数为 \(5x\ge5\).
+因此三条边上的最小值中最小者为 \(4\)，所以最小值为 \(4\).
+\end{solution}
+
 \begin{problem}
 某个容量为 100 的样本的频率分布直方图如下，则在区间 \([4, 5)\) 上的数据的频数为\fillinblank{}.
 
@@ -187,6 +399,15 @@ x - y \geqslant 0,
 \begin{answer}
 30
 \end{answer}
+
+\begin{solution}
+从直方图读得区间 \([4,5)\) 上的频率密度为 \(0.30\)，该组组距为
+\(5-4=1\)，因此该组频率为 \(0.30\times1=0.30\)，样本容量为
+100，故频数为
+\[
+100\times0.30=30
+\]
+\end{solution}
 
 \begin{problem}
 某地区居民生活用电分为高峰和低谷两个时间段进行分时计价. 该地区的电网销售电价表如下：
@@ -230,6 +451,23 @@ x - y \geqslant 0,
 148.4
 \end{answer}
 
+\begin{solution}
+高峰时段用电 \(200\text{ 千瓦时}\) 的电费为
+\[
+50\times0.568+(200-50)\times0.598
+=28.4+89.7=118.1\text{ 元}
+\]
+低谷时段用电 \(100\text{ 千瓦时}\) 的电费为
+\[
+50\times0.288+(100-50)\times0.318
+=14.4+15.9=30.3\text{ 元}
+\]
+所以本月电费为
+\[
+118.1+30.3=148.4\text{ 元}
+\]
+\end{solution}
+
 \begin{problem}
 设等差数列 \(\{a_{n}\}\) 的前 \(n\) 项和为 \(S_{n}\)，则 \(S_{4}\)，\(S_{8} - S_{4}\)，\(S_{12} - S_{8}\)，\(S_{16} - S_{12}\) 成等差数列. 类比以上结论有：设等比数列 \(\{b_{n}\}\) 的前 \(n\) 项积为 \(T_{n}\)，则 \(T_{4}\)，\fillinblank{}，\fillinblank{}，\(\frac{T_{16}}{T_{12}}\) 成等比数列.
 \end{problem}
@@ -238,6 +476,22 @@ x - y \geqslant 0,
 \(\frac{T_{8}}{T_{4}}\)，\(\frac{T_{12}}{T_{8}}\)
 \end{answer}
 
+\begin{solution}
+令
+\(U_j=b_{4j-3}b_{4j-2}b_{4j-1}b_{4j}\)，\((j=1,2,3,4)\).
+若等比数列 \(\{b_n\}\) 的公比为 \(q\)，则
+从 \(U_j\) 到 \(U_{j+1}\) 的每一个因子都向后移动 4 项，所以有恒等式
+\[
+U_{j+1}=q^{16}U_j
+\]
+该恒等式对所有 \(j=1\)，\(2\)，\(3\) 都成立，即使某个 \(U_j=0\) 也无需相除，
+因此 \(U_1\)，\(U_2\)，\(U_3\)，\(U_4\) 成等比数列. 其中 \(T_0=1\)，故
+\(U_1=T_4\)；在题目中的比值有定义时，
+\(U_2=\frac{T_8}{T_4}\)，\(U_3=\frac{T_{12}}{T_8}\)，
+\(U_4=\frac{T_{16}}{T_{12}}\).
+故两空依次为 \(\frac{T_8}{T_4}\)、\(\frac{T_{12}}{T_8}\).
+\end{solution}
+
 \begin{problem}
 有 20 张卡片，每张卡片上分别标有两个连续的自然数 \(k\)，\(k + 1\)，其中 \(k = 0\)，\(1\)，\(2\)，\(\cdots\)，\(19\). 从这 20 张卡片中任取一张，记事件“该卡片上两个数的各位数字之和（例如：若取到标有 9, 10 的卡片，则卡片上两个数的各位数字之和为 \(9 + 1 + 0 = 10\)）不小于 14”为 \(A\)，则 \(P(A)\) =\fillinblank{}.
 \end{problem}
@@ -245,6 +499,22 @@ x - y \geqslant 0,
 \begin{answer}
 \(\frac{1}{4}\)
 \end{answer}
+
+\begin{solution}
+记 \(s(n)\) 为 \(n\) 的各位数字之和. 对 \(k=0\)，\(1\)，\(\ldots\)，\(8\)，有
+\(s(k)+s(k+1)=2k+1\)，所以满足不小于 14 的只有 \(k=7\)，\(8\).
+此外 \(k=9\) 时和为 \(9+1+0=10\).
+
+对 \(k=10\)，\(11\)，\(\ldots\)，\(18\)，有
+\[
+s(k)+s(k+1)=(k-9)+(k-8)=2k-17
+\]
+所以满足条件的为 \(k=16\)，\(17\)，\(18\). \(k=19\) 时和为
+\(1+9+2=12\). 因此共有 \(2+3=5\) 张符合条件的卡片，
+\[
+P(A)=\frac5{20}=\frac14
+\]
+\end{solution}
 
 \section{解答题}
 
@@ -258,8 +528,28 @@ x - y \geqslant 0,
 
 \begin{solution}
 \begin{enumerate}
-\item \(2\).
-\item \(a=2\sqrt{5}\).
+\item 由半角公式，
+\[
+\cos A=2\cos^2\frac A2-1
+=2\left(\frac{2\sqrt5}{5}\right)^2-1=\frac35
+\]
+且
+\[
+\sin A=\frac45
+\]
+又因为 \(\overrightarrow{AB}\) 与 \(\overrightarrow{AC}\) 的夹角为 \(A\)，
+\(bc\cos A=3\)，从而 \(bc=5\).
+所以
+\[
+S_{\triangle ABC}=\frac12bc\sin A
+=\frac12\times5\times\frac45=2
+\]
+\item 若 \(c=1\)，由 \(bc=5\) 得 \(b=5\)，由余弦定理，
+\[
+a^2=b^2+c^2-2bc\cos A
+=25+1-2\times5\times\frac35=20
+\]
+因为 \(a>0\)，故 \(a=2\sqrt5\).
 \end{enumerate}
 \end{solution}
 
@@ -275,8 +565,35 @@ x - y \geqslant 0,
 
 \begin{solution}
 \begin{enumerate}
-\item \(PQ\parallel\) 平面 \(ACD\).
-\item \(\dfrac{\sqrt{5}}{5}\).
+\item 在三角形 \(AEB\) 中，\(P\)，\(Q\) 分别为 \(AE\)，\(AB\) 的中点，
+由中位线定理得 \(PQ\parallel EB\). 又 \(EB\parallel DC\)，且
+\(DC\subset\) 平面 \(ACD\)，所以 \(PQ\parallel DC\). 平面 \(ACD\) 与
+平面 \(ABC\) 的交线为 \(AC\)，而 \(B\) 不在直线 \(AC\) 上. 若 \(Q\) 在平面
+\(ACD\) 内，则 \(A\)，\(Q\) 都在该平面内，从而直线 \(AB\) 及点 \(B\) 也在
+该平面内，矛盾. 因此 \(PQ\) 不在该平面内，从而
+\[
+PQ\parallel DC
+\]
+所以 \(PQ\) 平行于平面 \(ACD\).
+\item 建立空间直角坐标系，取 \(C=(0,0,0)\)，\(B=(2,0,0)\)，
+\(A=(-1,\sqrt3,0)\)，\(D=(0,0,1)\)，\(E=(2,0,2)\).
+则 \(\overrightarrow{AD}=(1,-\sqrt3,1)\)，
+\(\overrightarrow{AB}=(3,-\sqrt3,0)\)，
+\(\overrightarrow{AE}=(3,-\sqrt3,2)\).
+取平面 \(ABE\) 的一个法向量
+\[
+\bs{n}=\overrightarrow{AB}\times\overrightarrow{AE}
+=(-2\sqrt3,-6,0)
+\]
+直线与平面所成角的正弦为方向向量在法向方向上的投影长度与方向向量
+长度之比，因此
+\[
+\sin\theta
+=\frac{|\overrightarrow{AD}\cdot\bs{n}|}
+{|\overrightarrow{AD}|\,|\bs{n}|}
+=\frac{|4\sqrt3|}{\sqrt5\cdot4\sqrt3}
+=\frac{\sqrt5}{5}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -284,14 +601,37 @@ x - y \geqslant 0,
 设 \(S_{n}\) 为数列 \(\{a_{n}\}\) 的前 \(n\) 项和，\(S_{n} = kn^{2} + n\)，\(n \in \N^{*}\)，其中 \(k\) 是常数.
 \begin{enumerate}
 \item 求 \( a_{1} \) 及 \( a_{n} \)；
-\item 若对于任意的 \(m \in \N^*\)，\(a_{mn}\)，\(a_{2mn}\)，\(a_{4mn}\) 成等比数列，求 \(k\) 的值.
+\item 若对于任意的 \(m \in \N^*\)，\(a_m\)，\(a_{2m}\)，\(a_{4m}\) 成等比数列，求 \(k\) 的值.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item \(a_{1}=k+1\)，\(a_{n}=2kn-k+1\).
-\item \(k=0\) 或 \(k=1\).
+\item
+\[
+a_1=S_1=k+1
+\]
+且对 \(n\geqslant2\)，
+\[
+a_n=S_n-S_{n-1}
+=kn^2+n-k(n-1)^2-(n-1)=2kn-k+1
+\]
+该公式对 \(n=1\) 也成立.
+\item 对任意 \(m\in\N^*\)，等比条件为
+\[
+a_{2m}^{\,2}=a_ma_{4m}
+\]
+代入通项，令 \(d=1-k\)，得 \(a_m=2km+d\)，
+\(a_{2m}=4km+d\)，\(a_{4m}=8km+d\).
+于是
+\[
+a_{2m}^{\,2}-a_ma_{4m}
+=(4km+d)^2-(2km+d)(8km+d)
+=2km(k-1)
+\]
+由于 \(m\geqslant1\)，故 \(k=0\) 或 \(k=1\). 反之，\(k=0\) 时三项均为
+1，\(k=1\) 时三项为 \(2m\)，\(4m\)，\(8m\)，均满足等比条件. 因此
+\(k=0\) 或 \(k=1\).
 \end{enumerate}
 \end{solution}
 
@@ -305,8 +645,36 @@ x - y \geqslant 0,
 
 \begin{solution}
 \begin{enumerate}
-\item \(a=-3\) 或 \(a=1\)，\(b=0\).
-\item \(a\in\left(-5,-\frac{1}{2}\right)\cup\left(-\frac{1}{2},1\right)\).
+\item \(f(0)=0\)，故 \(b=0\)，又
+\[
+f'(x)=3x^2+2(1-a)x-a(a+2)
+\]
+所以 \(f'(0)=-a(a+2)=-3\)，即
+\[
+a^2+2a-3=0
+\]
+即 \((a-1)(a+3)=0\).
+故 \(a=-3\) 或 \(a=1\)，且 \(b=0\).
+\item 将导函数因式分解：
+\[
+f'(x)=3(x-a)\left(x+\frac{a+2}{3}\right)
+\]
+其两个零点为 \(a\) 和 \(-\frac{a+2}{3}\)，二次项系数为正时，导函数
+在两相异零点之间为负，在外部为正. 当 \(a\leqslant-5\) 时，
+\(a\leqslant-5<-1<1\leqslant-\frac{a+2}{3}\)，所以 \(f'(x)<0\)
+在 \((-1,1)\) 上恒成立，函数单调；当 \(a\geqslant1\) 时，
+\(-\frac{a+2}{3}\leqslant-1<1\leqslant a\)，同样有 \(f'(x)<0\)
+在 \((-1,1)\) 上恒成立，函数单调.
+
+因此只有在 \(-5<a<1\) 时，至少有一个零点落在 \((-1,1)\) 内；两根
+不重合时，导函数在该区间内变号，函数不单调. 条件分别给出
+\(a\in(-1,1)\)，\(-\frac{a+2}{3}\in(-1,1)\)，第二个条件等价于
+\(a\in(-5,1)\)，合并得 \(-5<a<1\). 当两根重合时
+\(a=-\frac12\)，此时 \(f'(x)=3(x+\frac12)^2\geqslant0\)，函数单调；
+端点 \(a=-5\)，\(1\) 时导函数在开区间内也不变号，故
+\[
+a\in\left(-5,-\frac12\right)\cup\left(-\frac12,1\right)
+\]
 \end{enumerate}
 \end{solution}
 
@@ -322,7 +690,60 @@ x - y \geqslant 0,
 
 \begin{solution}
 \begin{enumerate}
-\item \(p=\frac{1}{2}\)，\(m=\pm2\).
-\item \(t_{\min}=\frac{2}{3}\).
+\item 抛物线 \(x^2=2py\) 的焦点为
+\(F=(0,\frac p2)\)，准线为 \(y=-\frac p2\)，点 \(A=(m,4)\) 到准线的
+距离为 \(4+\frac p2\)，由抛物线的定义等于到焦点的距离 \(\frac{17}{4}\)，
+故
+\[
+4+\frac p2=\frac{17}{4}
+\]
+所以 \(p=\frac12\).
+又 \(A\) 在抛物线上，故
+\[
+m^2=2p\cdot4=4
+\]
+所以 \(m=\pm2\).
+\item 此时抛物线为 \(y=x^2\). 设
+\(P=(t,t^2)\)，\(Q=(u,u^2)\)，其中 \(u\neq t\).
+并记 \(s=t+u\). 若 \(s=0\)，则 \(u=-t\)，直线 \(PQ\) 为水平直线
+\(y=t^2>0\)，不可能与 \(x\) 轴相交；由于题设给出了交点 \(M\)，故 \(s\ne0\).
+直线 \(PQ\) 的斜率为 \(s\)，与 \(x\) 轴交于
+\[
+M=\left(\frac{tu}{s},0\right)
+\]
+过 \(Q\) 作 \(PQ\) 的垂线，其斜率为 \(-1/s\). 设它与抛物线的另一交点为
+\(N=(n,n^2)\)，则
+\[
+n+u=-\frac1s
+\]
+所以 \(n=-u-\frac1s\).
+先考虑 \(n=0\) 的情形. 此时 \(N\) 为原点，条件
+\(n+u=-1/s\) 化为 \(us=-1\). 由于 \(s=t+u\)，故
+\(u^2+tu+1=0\)，其判别式为 \(t^2-4\)，从而 \(t\geqslant2\).
+又 \(M\) 的横坐标为 \(tu/s=-tu^2\neq0\)，所以 \(MN\) 就是
+\(x\) 轴，确为原点处的切线. 这一情形不能给出比后面更小的 \(t\).
+
+下面设 \(n\neq0\). 抛物线在 \(N\) 处的切线斜率为 \(2n\)，与 \(x\) 轴的交点横坐标为
+\(n/2\). 由于 \(MN\) 是该切线，得到
+\[
+\frac{tu}{s}=\frac n2
+\]
+代入 \(u=s-t\) 和 \(n=-u-1/s\)，化简得
+\[
+s^2+ts-2t^2+1=0
+\]
+把它看作关于 \(s\) 的二次方程，其判别式为
+\[
+\Delta=t^2-4(1-2t^2)=9t^2-4
+\]
+因为 \(t>0\)，必须有 \(t\geqslant\frac23\). 当
+\(t=\frac23\) 时取 \(s=-\frac13\)，则 \(u=-1\)，\(n=4\)，从而
+\(P=\left(\frac23,\frac49\right)\)，\(Q=(-1,1)\)，
+\(M=(2,0)\)，\(N=(4,16)\).
+此时 \(PQ\) 斜率为 \(-\frac13\)，\(QN\) 斜率为 \(3\)，且 \(MN\) 为
+点 \(N\) 处切线，条件确实满足. 因此
+\[
+t_{\min}=\frac23
+\]
 \end{enumerate}
 \end{solution}

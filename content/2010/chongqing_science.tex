@@ -16,7 +16,8 @@ A
 \end{answer}
 
 \begin{solution}
-由等比数列的递推关系，\(a_{2010}=a_{2007}q^3\). 因为题设给出 \(a_{2010}=8a_{2007}\)，所以 \(q^3=8\)，解得 \(q=2\).
+由等比数列的递推关系，\(a_{2010}=a_{2007}q^3\)，所以题设等式等价于
+\(a_{2007}(q^3-8)=0\). 按本题通常采用的非零项命题约定 \(a_{2007}\ne0\)，可得 \(q^3=8\)，从而 \(q=2\)，故选 A. 若允许全零数列，则题设等式对任意 \(q\) 都成立，公比将不能唯一确定；本题按标准答案取非零项情形.
 \end{solution}
 \end{problem}
 
@@ -54,8 +55,10 @@ B
 \begin{solution}
 将分式通分，得
 \[
-\frac{4}{x^2-4}-\frac{1}{x-2}=\frac{4-(x+2)}{(x-2)(x+2)}=-\frac{1}{x+2}.
+\frac{4}{x^2-4}-\frac{1}{x-2}=\frac{4-(x+2)}{(x-2)(x+2)}
+=\frac{-(x-2)}{(x-2)(x+2)}=-\frac{1}{x+2}
 \]
+其中 \(x\ne2\)，所以约分不改变 \(x\to2\) 时的极限.
 因此
 \[
 \displaystyle\lim_{x\to2}\left(\frac{4}{x^2-4}-\frac{1}{x-2}\right)=\lim_{x\to2}\left(-\frac{1}{x+2}\right)=-\frac14
@@ -82,7 +85,8 @@ C
 \end{answer}
 
 \begin{solution}
-由约束条件得 \(x\geqslant y-1\)，\(x\leqslant 3-y\)，并且 \(y\geqslant0\). 固定 \(y\) 时，\(z=2x+y\) 随 \(x\) 增大而增大，所以取 \(x=3-y\). 此时 \(z=2(3-y)+y=6-y\leqslant6\)，当 \(y=0\)，\(x=3\) 时等号成立，故最大值为 \(6\)，选 C.
+由约束条件得 \(x\geqslant y-1\)，\(x\leqslant 3-y\)，并且 \(y\geqslant0\). 由两条关于 \(x\) 的界可知 \(y-1\leqslant3-y\)，故 \(0\leqslant y\leqslant2\). 固定 \(y\) 时，\(z=2x+y\) 随 \(x\) 增大而增大，所以取 \(x=3-y\). 此时
+\(z=2(3-y)+y=6-y\leqslant6\). 当 \(y=0\)，\(x=3\) 时满足全部约束且取等号，故最大值为 \(6\)，选 C.
 \end{solution}
 \end{problem}
 
@@ -105,7 +109,7 @@ D
 \end{problem}
 
 \begin{problem}
-已知函数 \(y = \sin\left(\omega x + \varphi\right)\)（\(\omega > 0, |\varphi| < \frac{\pi}{2}\)）的部分图象如图所示. 则（\quad）
+已知函数 \(y = \sin\left(\omega x + \varphi\right)\)（\(\omega > 0\)，\(|\varphi| < \frac{\pi}{2}\)）的部分图象如图所示. 则（\quad）
 
 \bitmapfigure[max width=0.42\linewidth]{img/2010/chongqing_science/q6_fig1.png}
 
@@ -159,7 +163,15 @@ C
 \end{answer}
 
 \begin{solution}
-圆心为 \(D(\sqrt{3},1)\)，半径为 \(\sqrt{3}\). 设直线与圆的垂足为 \(H\)，则直线的方向向量可取 \((\sqrt{3},1)\)，而从 \(D\) 指向 \(H\) 的方向向量可取 \((-1,\sqrt{3})\). 将直线方程写成 \(\frac{\sqrt{3}}{3}x-y+\sqrt{2}=0\)，可得圆心到直线的距离为 \(\frac{\sqrt{6}}{2}\)，故弦的一半长为 \(\sqrt{3-\frac{3}{2}}=\frac{\sqrt{6}}{2}\). 由垂足方向和弦方向相加、相减可得两条半径的方向向量可取 \((3\sqrt{2}-\sqrt{6},3\sqrt{2}+\sqrt{6})\) 和 \((-(3\sqrt{2}+\sqrt{6}),3\sqrt{2}-\sqrt{6})\)，它们的倾斜角分别为 \(\frac{5\pi}{12}\) 和 \(\frac{11\pi}{12}\)，所以倾斜角之和为 \(\frac{4\pi}{3}\)，选 C.
+圆心为 \(D(\sqrt{3},1)\)，半径为 \(r=\sqrt{3}\). 设直线与圆的垂足为 \(H\)，将直线写成 \(\frac{\sqrt{3}}{3}x-y+\sqrt{2}=0\). 于是圆心到直线的距离为
+\[
+d=\frac{\left|\frac{\sqrt{3}}{3}\cdot\sqrt{3}-1+\sqrt{2}\right|}{\sqrt{\frac13+1}}=\frac{\sqrt{6}}{2}
+\]
+弦的一半长为
+\[
+AH=BH=\sqrt{r^2-d^2}=\sqrt{3-\frac32}=\frac{\sqrt{6}}2=DH
+\]
+直线的方向角为 \(\frac\pi6\)，而 \(\overrightarrow{DH}\) 垂直于该直线且指向直线，方向角为 \(\frac{2\pi}{3}\). 在直角三角形 \(DHA\) 和 \(DHB\) 中，\(DH=AH=BH\)，故两条半径与正 \(x\) 轴的夹角分别为 \(\frac{2\pi}{3}-\frac\pi4=\frac{5\pi}{12}\) 和 \(\frac{2\pi}{3}+\frac\pi4=\frac{11\pi}{12}\). 因而倾斜角之和为 \(\frac{4\pi}{3}\)，选 C.
 \end{solution}
 \end{problem}
 
@@ -183,7 +195,7 @@ C
 
 丙排在 10 月 1 日且丁排在 10 月 7 日时，甲、乙整体在第 2 至第 6 天中有 4 种相邻放法，故有 \(4\cdot2\cdot3!\) 种安排. 由容斥原理，不同的安排方案数为
 \[
-6!\cdot2-2\cdot5\cdot2\cdot4!+4\cdot2\cdot3!=1440-480+48=1008.
+6!\cdot2-2\cdot5\cdot2\cdot4!+4\cdot2\cdot3!=1440-480+48=1008
 \]
 故选 C.
 \end{solution}
@@ -206,14 +218,11 @@ D
 设过第一条直线且平行于第二条直线的平面为 \(\pi\)，把第二条直线在 \(\pi\) 上的正投影记为 \(l_2'\). 由于两条异面直线互相垂直，\(l_2'\) 与第一条直线在平面 \(\pi\) 内相交且互相垂直. 设两条直线之间的距离为 \(h\)，则 \(h>0\).
 
 在平面 \(\pi\) 内建立直角坐标系，使第一条直线为 \(x\) 轴，\(l_2'\) 为 \(y\) 轴. 对平面 \(\pi\) 内任一点 \(P(x,y)\)，有
-\[
-d(P,l_1)=|y|,
-\qquad d(P,l_2)^2=d(P,l_2')^2+h^2=x^2+h^2.
-\]
+\(d(P,l_1)=|y|\)，\(d(P,l_2)^2=d(P,l_2')^2+h^2=x^2+h^2\).
 题设条件给出
 \[
 |y|=\sqrt{x^2+h^2},
-\quad\text{即}\quad y^2-x^2=h^2.
+\quad\text{即}\quad y^2-x^2=h^2
 \]
 这是以坐标轴方向为渐近线的双曲线，故选 D.
 \end{solution}
@@ -243,7 +252,7 @@ d(P,l_1)=|y|,
 \begin{solution}
 由 \(\complement_U A=\{1,2\}\)，知 \(A=\{0,3\}\). 对任意实数 \(m\)，\(0^2+m\cdot0=0\)，所以 \(0\in A\) 自动成立. 又因为 \(3\in A\)，应满足
 \[
-3^2+3m=0,
+3^2+3m=0
 \]
 解得 \(m=-3\). 此时 \(1^2-3=-2\ne0\)，\(2^2-6=-2\ne0\)，确有 \(A=\{0,3\}\)，故 \(m=-3\).
 \end{solution}
@@ -257,7 +266,11 @@ d(P,l_1)=|y|,
 \end{answer}
 
 \begin{solution}
-设每次罚球命中的概率为 \(p\)，则两次罚球都命中的概率为 \(p^2\). 由“至多命中一次”的对立事件为“两次都命中”，得 \(1-p^2=\frac{16}{25}\)，所以 \(p^2=\frac{9}{25}\). 由于 \(0\leqslant p\leqslant1\)，故 \(p=\frac{3}{5}\).
+按高考中重复试验的通常模型，将两次罚球视为相互独立，设每次罚球命中的概率为 \(p\)，则两次都命中的概率为 \(p^2\). “至多命中一次”的对立事件是“两次都命中”，所以 \(1-p^2=\frac{16}{25}\)，即 \(p^2=\frac{9}{25}\). 由于概率满足 \(0\leqslant p\leqslant1\)，故 \(p=\frac35\).
+
+若只按题面“命中率相同”而不补充独立性，则只能得到两次都命中的概率为 \(\frac{9}{25}\). 设两次命中事件分别为 \(X_1\)，\(X_2\)，则
+\(P(X_1\cap X_2^{\complement})=P(X_1^{\complement}\cap X_2)=p-\frac{9}{25}\)，且
+\(P(X_1^{\complement}\cap X_2^{\complement})=1-2p+\frac{9}{25}\)，非负性只给出 \(\frac{9}{25}\leqslant p\leqslant\frac{17}{25}\)，不能唯一确定 \(p\). 因此本题答案 \(\frac35\) 采用上述独立重复试验模型.
 \end{solution}
 \end{problem}
 
@@ -274,30 +287,30 @@ d(P,l_1)=|y|,
 设 \(A\left(\frac{u^2}{4},u\right)\)，\(B\left(\frac{v^2}{4},v\right)\). 由 \(\overrightarrow{AF}=3\overrightarrow{FB}\)，比较纵坐标得
 \[
 0-u=3(v-0),
-\quad\text{即}\quad u=-3v.
+\quad\text{即}\quad u=-3v
 \]
 比较横坐标得
 \[
-1-\frac{u^2}{4}=3\left(\frac{v^2}{4}-1\right).
+1-\frac{u^2}{4}=3\left(\frac{v^2}{4}-1\right)
 \]
 代入 \(u=-3v\)，得
 \[
 1-\frac{9v^2}{4}=\frac{3v^2}{4}-3,
-\quad\text{即}\quad 3v^2=4.
+\quad\text{即}\quad 3v^2=4
 \]
 所以 \(x_A=\frac{u^2}{4}=3\)，\(x_B=\frac{v^2}{4}=\frac13\). 弦 \(AB\) 的中点横坐标为
 \[
-x_M=\frac{x_A+x_B}{2}=\frac{3+\frac13}{2}=\frac53.
+x_M=\frac{x_A+x_B}{2}=\frac{3+\frac13}{2}=\frac53
 \]
 因此中点到准线 \(x=-1\) 的距离为
 \[
-x_M-(-1)=\frac53+1=\frac83.
+x_M-(-1)=\frac53+1=\frac83
 \]
 \end{solution}
 \end{problem}
 
 \begin{problem}
-已知函数 \( f(x) \) 满足： \(f(1) = \frac{1}{4}\)，\(4f(x)f(y) = f(x + y) + f(x - y)\) （\(x, y \in \R\)），则 \( f(2010) = \)\fillinblank{}.
+已知函数 \( f(x) \) 满足： \(f(1) = \frac{1}{4}\)，\(4f(x)f(y) = f(x + y) + f(x - y)\) （\(x\)，\(y \in \R\)），则 \( f(2010) = \)\fillinblank{}.
 
 \begin{answer}
 \(\frac{1}{2}\)
@@ -306,35 +319,27 @@ x_M-(-1)=\frac53+1=\frac83.
 \begin{solution}
 令 \(y=0\)，原函数方程变为
 \[
-4f(x)f(0)=f(x)+f(x)=2f(x).
+4f(x)f(0)=f(x)+f(x)=2f(x)
 \]
 取 \(x=1\)，由 \(f(1)=\frac14\ne0\) 得 \(f(0)=\frac12\). 再令 \(x=0\)，可得
 \[
-4f(0)f(y)=f(y)+f(-y),
+4f(0)f(y)=f(y)+f(-y)
 \]
 从而 \(f(-y)=f(y)\).
 
 令 \(y=1\)，利用 \(4f(1)=1\)，得到
 \[
-f(x+1)+f(x-1)=f(x).
+f(x+1)+f(x-1)=f(x)
 \]
 对整数依次取值，结合 \(f(0)=\frac12\)、\(f(1)=\frac14\)，有
 \[
-f(2)=f(1)-f(0)=-\frac14,
+f(2)=f(1)-f(0)=-\frac14
 \]
+\(f(3)=f(2)-f(1)=-\frac12\)，\(f(4)=f(3)-f(2)=-\frac14\)
+\(f(5)=f(4)-f(3)=\frac14\)，\(f(6)=f(5)-f(4)=\frac12\).
+由递推式可得 \(f(7)=f(6)-f(5)=\frac14=f(1)\)，于是令 \(g(n)=f(n+6)-f(n)\)，有 \(g(0)=0\)，\(g(1)=0\). 对任意非负整数 \(n\)，递推式分别作用于 \(n+1\) 和 \(n+7\) 给出 \(g(n+2)=g(n+1)-g(n)\)，因此由归纳法知 \(g(n)=0\)，即 \(f(n+6)=f(n)\). 而 \(2010=6\cdot335\)，所以
 \[
-f(3)=f(2)-f(1)=-\frac12,
-\qquad
-f(4)=f(3)-f(2)=-\frac14,
-\]
-\[
-f(5)=f(4)-f(3)=\frac14,
-\qquad
-f(6)=f(5)-f(4)=\frac12.
-\]
-该递推关系给出 \(f(n+6)=f(n)\)（例如由 \(f(7)=f(6)-f(5)=\frac14=f(1)\)、\(f(8)=f(7)-f(6)=-\frac14=f(2)\) 可归纳得到），而 \(2010=6\cdot335\)，所以
-\[
-f(2010)=f(0)=\frac12.
+f(2010)=f(0)=\frac12
 \]
 \end{solution}
 \end{problem}
@@ -362,12 +367,12 @@ f(2010)=f(0)=\frac12.
 
 \begin{enumerate}
 \item 甲、乙两单位的演出序号至少有一个为奇数的概率；
-\item 甲，乙两单位之间的演出单位个数 \(\xi\) 的分布列与期望.
+\item 甲、乙两单位之间的演出单位个数 \(\xi\) 的分布列与期望.
 \end{enumerate}
 
 \begin{solution}
 \begin{enumerate}
-\item 甲、乙两单位的演出序号是从 \(1,2,\ldots,6\) 中随机取出的两个不同序号. 两序号都为偶数的概率为 \(\frac{\mathrm C_3^2}{\mathrm C_6^2}=\frac{1}{5}\)，所以至少有一个为奇数的概率为 \(1-\frac{1}{5}=\frac{4}{5}\).
+\item 甲、乙两单位的演出序号是从 \(1\)，\(2\)，\(\ldots\)，\(6\) 中随机取出的两个不同序号. 两序号都为偶数的概率为 \(\frac{\mathrm C_3^2}{\mathrm C_6^2}=\frac{1}{5}\)，所以至少有一个为奇数的概率为 \(1-\frac{1}{5}=\frac{4}{5}\).
 \item 两单位的演出序号之差为 \(d\) 时，满足条件的无序位置对有 \(6-d\) 个，全部无序位置对有 \(\mathrm C_6^2=15\) 个. 由于 \(\xi=d-1\)，所以 \(\xi\) 的分布列为
 \begin{center}
 \begin{tabular}{c|ccccc}
@@ -394,7 +399,7 @@ f(2010)=f(0)=\frac12.
 \item 当 \(a=2\) 时，\(f(0)=-\frac{1}{2}\)，且 \(f'(x)=\frac{3}{(x+2)^2}+\frac{1}{x+1}\)，所以 \(f'(0)=\frac{7}{4}\). 因此曲线在 \((0,f(0))=\left(0,-\frac{1}{2}\right)\) 处的切线方程为 \(y+\frac{1}{2}=\frac{7}{4}x\)，即 \(y=\frac{7}{4}x-\frac{1}{2}\).
 \item 因为函数在 \(x=1\) 处取得极值，且 \(x=1\) 必须属于定义域，所以 \(a\neq-1\). 又 \(f'(1)=\frac{1}{a+1}+\frac{1}{2}=0\)，解得 \(a=-3\). 此时定义域为 \((-1,3)\cup(3,+\infty)\)，并且
 \[
-f'(x)=\frac{-2}{(x-3)^2}+\frac{1}{x+1}=\frac{(x-1)(x-7)}{(x-3)^2(x+1)}.
+f'(x)=\frac{-2}{(x-3)^2}+\frac{1}{x+1}=\frac{(x-1)(x-7)}{(x-3)^2(x+1)}
 \]
 由于定义域内分母为正，故 \(f'(x)>0\) 在 \((-1,1)\) 和 \((7,+\infty)\) 上成立，\(f'(x)<0\) 在 \((1,3)\) 和 \((3,7)\) 上成立. 因此 \(f(x)\) 在 \((-1,1)\)、\((7,+\infty)\) 上单调递增，在 \((1,3)\)、\((3,7)\) 上单调递减.
 \end{enumerate}
@@ -433,9 +438,7 @@ f'(x)=\frac{-2}{(x-3)^2}+\frac{1}{x+1}=\frac{(x-1)(x-7)}{(x-3)^2(x+1)}.
 \begin{enumerate}
 \item 设双曲线的标准方程为 \(\frac{x^2}{a^2}-\frac{y^2}{b^2}=1\)，其中 \(a>0\)，\(b>0\)，焦半距为 \(c\). 由题意，\(c=\sqrt{5}\)，\(e=\frac{c}{a}=\frac{\sqrt{5}}{2}\)，所以 \(a=2\). 又 \(b^2=c^2-a^2=5-4=1\)，故双曲线方程为 \(\frac{x^2}{4}-y^2=1\)，渐近线方程为 \(y=\pm\frac{x}{2}\).
 \item 设 \(E(x_E,y_E)\) 为两直线的交点. 因为 \(E\in l_1\cap l_2\)，所以 \(x_1x_E+4y_1y_E=4\)，\(x_2x_E+4y_2y_E=4\). 这说明 \(M(x_1,y_1)\)、\(N(x_2,y_2)\) 均在直线 \(x_E x+4y_E y=4\) 上，故直线 \(MN\) 的方程为 \(x_E x+4y_E y=4\). 分别联立渐近线 \(y=\frac{x}{2}\) 和 \(y=-\frac{x}{2}\)，得
-\[
-G\left(\frac{4}{x_E+2y_E},\frac{2}{x_E+2y_E}\right),\qquad H\left(\frac{4}{x_E-2y_E},-\frac{2}{x_E-2y_E}\right).
-\]
+\(G\left(\frac{4}{x_E+2y_E},\frac{2}{x_E+2y_E}\right)\)，\(H\left(\frac{4}{x_E-2y_E},-\frac{2}{x_E-2y_E}\right)\).
 于是 \(S_{\triangle OGH}=\frac{1}{2}\left|x_Gy_H-y_Gx_H\right|=\frac{8}{|x_E^2-4y_E^2|}\). 又因为 \(E\) 在双曲线上，满足 \(\frac{x_E^2}{4}-y_E^2=1\)，即 \(x_E^2-4y_E^2=4\)，所以 \(S_{\triangle OGH}=2\).
 \end{enumerate}
 \end{solution}
@@ -454,7 +457,7 @@ G\left(\frac{4}{x_E+2y_E},\frac{2}{x_E+2y_E}\right),\qquad H\left(\frac{4}{x_E-2
 \item 令 \(b_n=\frac{a_n}{c^n}\). 由递推式得 \(b_{n+1}=\frac{a_{n+1}}{c^{n+1}}=\frac{a_n}{c^n}+2n+1=b_n+2n+1\)，且 \(b_1=\frac{1}{c}\). 因此 \(b_n=\frac{1}{c}+\sum_{j=1}^{n-1}(2j+1)=\frac{1}{c}+n^2-1\)，从而 \(a_n=c^n b_n=c^{n-1}\left(c(n^2-1)+1\right)\).
 \item 由通项公式，
 \[
-a_{2k}-a_{2k-1}=c^{2k-2}\left((4k^2-1)c^2+(-4k^2+4k+1)c-1\right).
+a_{2k}-a_{2k-1}=c^{2k-2}\left((4k^2-1)c^2+(-4k^2+4k+1)c-1\right)
 \]
 由于 \(c^{2k-2}>0\)，条件等价于 \(D_k(c)>0\)，其中 \(D_k(c)=(4k^2-1)c^2+(-4k^2+4k+1)c-1\). 特别地，\(D_1(c)=3c^2+c-1>0\)，所以 \(c<\frac{-1-\sqrt{13}}{6}\) 或 \(c>\frac{-1+\sqrt{13}}{6}\). 另一方面，直接计算得 \(D_k(c)=D_1(c)+4(k-1)c((k+1)c-k)\). 当 \(c<\frac{-1-\sqrt{13}}{6}<0\) 时，后加项为正，故所有 \(D_k(c)>0\). 当 \(c\geqslant1\) 时，\(D_1(c)>0\)，且后加项非负，故所有 \(D_k(c)>0\). 若 \(0<c<1\)，则 \(D_k(c)/(4k^2)\to c^2-c<0\)，故充分大的 \(k\) 使 \(D_k(c)<0\)；若 \(\frac{-1-\sqrt{13}}{6}\leqslant c\leqslant0\)，则 \(D_1(c)\leqslant0\)，也不满足严格不等式. 综上，\(c\) 的取值范围为 \(\left(-\infty,\frac{-1-\sqrt{13}}{6}\right)\cup[1,+\infty)\).
 \end{enumerate}

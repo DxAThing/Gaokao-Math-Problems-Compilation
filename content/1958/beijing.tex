@@ -7,9 +7,7 @@
 \end{problem}
 
 \begin{solution}
-由原方程得 \(x^2-10x+25=x+7\)，即 \(x^2-11x+18=0\)，\(\left( x-2 \right)\left( x-9 \right)=0\). 所以 \(x_1=2\)，\(x_2=9\).
-
-经检验，\(x=2\) 是增根，\(x=9\) 是原方程的解.
+因为右边是平方根，所以 \(x+7\geq 0\)；又因为右边非负，原方程左边也必须非负，故 \(x-5\geq 0\)，即 \(x\geq 5\). 在这个条件下两边平方不改变方程的解集，得 \(x^2-10x+25=x+7\)，即 \(x^2-11x+18=0\). 因式分解得 \(\left( x-2 \right)\left( x-9 \right)=0\)，所以候选值为 \(x=2\) 或 \(x=9\). 逐一代回原方程：\(2-5=-3\neq 3=\sqrt{9}\)，故 \(x=2\) 是增根；\(9-5=4=\sqrt{16}\)，故 \(x=9\) 满足原方程. 所以原方程的解为 \(x=9\).
 \end{solution}
 
 \begin{problem}
@@ -17,16 +15,11 @@
 \end{problem}
 
 \begin{solution}
+设 \(N=2^7\cdot 8^{11}\cdot 5^{10}\). 由 \(8=2^3\) 及 \(5^{10}=10^{10}/2^{10}\)，得 \(N=2^7\cdot 2^{33}\cdot 10^{10}/2^{10}=2^{30}\cdot 10^{10}\). 因而
 \[
-\lg\left( 2^7\cdot 8^{11}\cdot 5^{10} \right)
-=\lg\left( 2^7\cdot 2^{33}\cdot \frac{10^{10}}{2^{10}} \right)
-=\lg\left( 2^{30}\cdot 10^{10} \right)
+\lg N=30\lg 2+10=30\times 0.3010+10=19.030
 \]
-\[
-30\lg 2+10=9.030+10=19.03
-\]
-
-\(2^7\cdot 8^{11}\cdot 5^{10}\)是\(20\)位数字的数.
+于是 \(10^{19}<N<10^{20}\). 正整数的位数等于其常用对数的整数部分加 \(1\)，所以 \(N\) 是 \(20\) 位数.
 \end{solution}
 
 \begin{problem}
@@ -34,7 +27,11 @@
 \end{problem}
 
 \begin{solution}
-\(\mathrm C_{50}^{47}=\mathrm C_{50}^3=\frac{50\times 49\times 48}{3\times 2\times 1}=19600\)（种）.
+从 \(50\) 个元素中选出 \(47\) 个，等价于从中选出未被选取的 \(3\) 个元素，因此选法数为
+\[
+\mathrm C_{50}^{47}=\mathrm C_{50}^{3}=\frac{50\times 49\times 48}{3\times 2\times 1}=19600
+\]
+所以共有 \(19600\) 种选法.
 \end{solution}
 
 \begin{problem}
@@ -42,22 +39,11 @@
 \end{problem}
 
 \begin{solution}
-令 \(\arctan \frac{5}{6}=\alpha\)，\(\arctan \frac{3}{8}=\beta\)，则 \(\tan \alpha=\frac{5}{6}\)，\(\tan \beta=\frac{3}{8}\).
+令 \(\alpha=\arctan\frac{5}{6}\)，\(\beta=\arctan\frac{3}{8}\)，则 \(\tan\alpha=\frac{5}{6}\)，\(\tan\beta=\frac{3}{8}\). 由正切的差角公式，且 \(1+\tan\alpha\tan\beta=1+\frac{5}{6}\cdot\frac{3}{8}\neq 0\)，有
 \[
-\tan\left( \alpha-\beta \right)
-=\frac{\tan \alpha-\tan \beta}{1+\tan \alpha\cdot \tan \beta}
-=\frac{\frac{5}{6}-\frac{3}{8}}{1+\frac{5}{6}\cdot \frac{3}{8}}
-=\frac{22}{63}
+\tan\left(\alpha-\beta\right)=\frac{\tan\alpha-\tan\beta}{1+\tan\alpha\tan\beta}=\frac{\frac{5}{6}-\frac{3}{8}}{1+\frac{5}{6}\cdot\frac{3}{8}}=\frac{\frac{11}{24}}{\frac{63}{48}}=\frac{22}{63}
 \]
 所以 \(\tan\left( \arctan \frac{5}{6}-\arctan \frac{3}{8} \right)=\frac{22}{63}\).
-
-又解
-\[
-\text{原式}
-=\frac{\tan\left( \arctan \frac{5}{6} \right)-\tan\left( \arctan \frac{3}{8} \right)}{1+\tan\left( \arctan \frac{5}{6} \right)\cdot \tan\left( \arctan \frac{3}{8} \right)}
-=\frac{\frac{5}{6}-\frac{3}{8}}{1+\frac{5}{6}\times \frac{3}{8}}
-=\frac{22}{63}
-\]
 \end{solution}
 
 \begin{problem}
@@ -65,7 +51,7 @@
 \end{problem}
 
 \begin{solution}
-\(\angle C=180^\circ-(135^\circ+15^\circ)=30^\circ\). 由正弦定理得 \(\frac{BC}{\sin 135^\circ}=\frac{1}{\sin 30^\circ}\). 最大边 \(BC=\frac{\sin 135^\circ}{\sin 30^\circ}=\frac{\sin 45^\circ}{\sin 30^\circ}=\sqrt{2}\).
+三角形内角和为 \(180^\circ\)，所以 \(\angle C=180^\circ-135^\circ-15^\circ=30^\circ\). 因为 \(\angle A=135^\circ\) 最大，所以其对边 \(BC\) 是三角形的最大边. 题中 \(c=AB=1\)，而 \(AB\) 是 \(\angle C\) 的对边，由正弦定理得 \(\frac{BC}{\sin135^\circ}=\frac{AB}{\sin30^\circ}=\frac{1}{\sin30^\circ}\)，因此 \(BC=\frac{\sin135^\circ}{\sin30^\circ}=\frac{\sqrt{2}/2}{1/2}=\sqrt{2}\). 所以三角形的最大边长为 \(\sqrt{2}\).
 \end{solution}
 
 \begin{problem}
@@ -73,9 +59,7 @@
 \end{problem}
 
 \begin{solution}
-如果这两个点的连线不过球心，只能作一个大圆，因为两个不同的点与圆心只决定一个平面，这个平面与球只交出一个大圆.
-
-如果球心在两点的连线上，那么过这条直线可作无数个平面，与球交出无数个大圆.
+设球心为 \(O\)，两点为 \(P\)，\(Q\). 若直线 \(PQ\) 不经过 \(O\)，则不共线的三点 \(O\)，\(P\)，\(Q\) 唯一确定一个平面，该平面与球面的交线是一个以 \(O\) 为圆心、以球半径为半径的大圆，因此只能作一个大圆. 若 \(P\)，\(Q\) 是一对对径点，则 \(O\) 在线段 \(PQ\) 上，过直线 \(PQ\) 可以作无数个不同的平面；每个这样的平面都与球面交出一个大圆，因此能作无数个大圆.
 \end{solution}
 
 \begin{problem}
@@ -83,11 +67,11 @@
 \end{problem}
 
 \begin{solution}
-作 \(BC\perp MN\)，连接 \(AC\)，则 \(AC\perp MN\)（三垂线定理）. 因此 \(\angle ACB\) 是二面角的平面角，\(\angle ACB=30^\circ\).
+设二面角的棱为 \(MN\). 在另一个面内过 \(B\) 作 \(BC\perp MN\)，垂足为 \(C\)，连接 \(AC\). 因为 \(AB\perp\) 另一个面，且 \(BC\) 是 \(AC\) 在该面上的射影，所以由三垂线定理的逆定理，得 \(AC\perp MN\). 因而 \(\angle ACB\) 是二面角的平面角，故 \(\angle ACB=30^\circ\). 又因为 \(AB\perp\) 另一个面，故 \(AB\perp BC\)，从而 \(\triangle ABC\) 是以 \(AC\) 为斜边的直角三角形.
 
 \solutionfigure{\bitmapfigure[max width=0.42\linewidth]{img/1958/beijing/q7_solution_fig1.png}}
 
-在直角 \(\triangle ABC\) 中，\(AB=a\)，\(\angle ACB=30^\circ\)，\(\angle ABC=90^\circ\). 所以 \(AC=2a\)（直角三角形中，斜边是 \(30^\circ\) 角所对边长的 \(2\) 倍）. 故 \(A\) 点到二面角的棱的距离为 \(2a\).
+在直角三角形 \(ABC\) 中，\(AB\) 是 \(30^\circ\) 角的对边，所以 \(AB=AC\sin30^\circ=AC/2\). 代入 \(AB=a\)，得 \(AC=2a\). 由于 \(AC\) 垂直于二面角的棱，且经过点 \(A\)，它就是点 \(A\) 到棱 \(MN\) 的距离. 所以所求距离为 \(2a\).
 \end{solution}
 
 \begin{problem}
@@ -102,60 +86,57 @@
 
 \begin{solution}
 \begin{enumerate}
-\item 由 \(3+2x-x^2>0\) 得 \(x^2-2x-3<0\)，即 \(\left( x+1 \right)\left( x-3 \right)<0\)，所以 \(-1<x<3\).
-由 \(3+2x-x^2<0\) 得 \(x^2-2x-3>0\)，即 \(\left( x+1 \right)\left( x-3 \right)>0\)，所以 \(x<-1\) 或 \(x>3\).
-故当 \(x\) 在 \(\left( -1,3 \right)\) 范围内 \(y>0\)，而 \(x\) 在 \(\left( -\infty,-1 \right)\)，\(\left( 3,+\infty \right)\) 的范围内 \(y<0\).
+\item 当 \(y>0\) 时，\(3+2x-x^2>0\)，即 \(x^2-2x-3<0\). 因式分解得 \(\left( x+1 \right)\left( x-3 \right)<0\)，所以 \(-1<x<3\). 当 \(y<0\) 时，\(3+2x-x^2<0\)，即 \(\left( x+1 \right)\left( x-3 \right)>0\)，所以 \(x<-1\) 或 \(x>3\). 因此，\(y>0\) 的范围为 \(\left( -1,3 \right)\)，\(y<0\) 的范围为 \(\left( -\infty,-1 \right)\cup\left( 3,+\infty \right)\).
 
-\item \(y=3+2x-x^2=-(x-1)^2+4\). 顶点是 \((1,4)\). 对称轴方程是 \(x=1\).
+\item 配方得 \(y=3+2x-x^2=-\left( x-1 \right)^2+4\). 因为 \(\left( x-1 \right)^2\geq 0\)，所以抛物线的最高点在 \(x=1\) 时取得，顶点坐标为 \((1,4)\)，对称轴方程为 \(x=1\).
 
-\item 函数图象如图所示.
+\item 该抛物线开口向下，与 \(x\) 轴交于 \((-1,0)\)，\((3,0)\)，与 \(y\) 轴交于 \((0,3)\)，顶点为 \((1,4)\)，对称轴为 \(x=1\). 根据这些点和开口方向即可画出函数图象.
 \end{enumerate}
 
 \solutionfigure{\bitmapfigure[max width=0.36\linewidth]{img/1958/beijing/q8_solution_fig1.png}}
 \end{solution}
 
 \begin{problem}
-设 \(\sin \alpha\) 和 \(\sin \beta\) 是方程 \(x^2-\left( \sqrt{2}\cos 20^\circ \right)x+\left( \cos^2 20^\circ-\frac{1}{2} \right)=0\) 的两根，其中 \(\alpha\)，\(\beta\) 是锐角，求 \(\alpha\)，\(\beta\) 的度数.
+设 \(\sin\alpha\) 和 \(\sin\beta\) 是方程 \(x^2-\left( \sqrt{2}\cos20^\circ \right)x+\left( \cos^2 20^\circ-\frac{1}{2} \right)=0\) 的两根，其中 \(\alpha\)，\(\beta\) 是锐角，求 \(\alpha\)，\(\beta\) 的度数.
 \end{problem}
 
 \begin{solution}
+方程的判别式为 \(\Delta=2\cos^2 20^\circ-4\left( \cos^2 20^\circ-\frac{1}{2} \right)=2\sin^2 20^\circ\). 因为 \(20^\circ\) 为锐角，所以 \(\sqrt{\Delta}=\sqrt{2}\sin20^\circ\). 由求根公式，方程的两个根为
 \[
-x=\frac{\sqrt{2}\cos 20^\circ\pm \sqrt{2\cos^2 20^\circ-4\cos^2 20^\circ+2}}{2}
-=\frac{\sqrt{2}\cos 20^\circ\pm \sqrt{2\left( 1-\cos^2 20^\circ \right)}}{2}
+x=\frac{\sqrt{2}\cos20^\circ\pm\sqrt{2\cos^2 20^\circ-4\cos^2 20^\circ+2}}{2}=\frac{\sqrt{2}}{2}\left(\cos20^\circ\pm\sin20^\circ\right)
 \]
+利用 \(\cos20^\circ=\sin70^\circ\)，可将两根写成
 \[
-x=\frac{\sqrt{2}}{2}\left( \cos 20^\circ\pm \sin 20^\circ \right)
-=\frac{\sqrt{2}}{2}\left( \sin 70^\circ\pm \sin 20^\circ \right)
+x=\frac{\sqrt{2}}{2}\left(\sin70^\circ\pm\sin20^\circ\right)
 \]
-
-不妨令
+取正号时，由和差化积公式，
 \[
-\sin \alpha
-=\frac{\sqrt{2}}{2}\left( \sin 70^\circ+\sin 20^\circ \right)
-=\sqrt{2}\sin 45^\circ\cdot \cos 25^\circ
-=\cos 25^\circ
-=\sin 65^\circ
+\frac{\sqrt{2}}{2}\left(\sin70^\circ+\sin20^\circ\right)=\frac{\sqrt{2}}{2}\cdot 2\sin45^\circ\cos25^\circ=\cos25^\circ=\sin65^\circ
 \]
-所以 \(\alpha=65^\circ\).
+取负号时，
 \[
-\sin \beta
-=\frac{\sqrt{2}}{2}\left( \sin 70^\circ-\sin 20^\circ \right)
-=\sqrt{2}\cos 45^\circ\cdot \sin 25^\circ
-=\sin 25^\circ
+\frac{\sqrt{2}}{2}\left(\sin70^\circ-\sin20^\circ\right)=\frac{\sqrt{2}}{2}\cdot 2\cos45^\circ\sin25^\circ=\sin25^\circ
 \]
-所以 \(\beta=25^\circ\).
+所以 \(\{\sin\alpha,\sin\beta\}=\{\sin65^\circ,\sin25^\circ\}\). 因为 \(\alpha\)，\(\beta\) 都是锐角，而正弦函数在 \((0^\circ,90^\circ)\) 上单调递增，故 \(\{\alpha,\beta\}=\{65^\circ,25^\circ\}\). 即 \(\alpha\)，\(\beta\) 的度数分别为 \(65^\circ\)，\(25^\circ\)，次序不定.
 \end{solution}
 
 \begin{problem}
-有甲，乙两容器，甲容器是直圆柱形，高 \(2\text{ 尺}\)，底半径 \(1\text{ 尺}\)，乙容器是直圆锥形（锥底向上），高 \(2\text{ 尺}\)，底面半径 \(2\sqrt{3}\text{ 尺}\)，若将甲容器灌满水，然后把甲容器的一部分水倒入乙容器，使得甲乙两个容器的水面一样高，问这时水面的高度是多少？
+有甲，乙两容器，甲容器是直圆柱形，高 \(2\text{ 寸}\)，底半径 \(1\text{ 寸}\)，乙容器是直圆锥形（锥底向上），高 \(2\text{ 寸}\)，底面半径 \(2\sqrt{3}\text{ 寸}\)，若将甲容器灌满水，然后把甲容器的一部分水倒入乙容器，使得甲乙两个容器的水面一样高，问这时水面的高度是多少？
 \end{problem}
 
 \begin{solution}
-设甲容器的容积为 \(V\)，甲倒入乙剩下来的体积为 \(V_1\)，倒入乙容器内水的体积为 \(V_2\)，并设这时水面高度为 \(h\).
+设两容器共同的水面高度为 \(h\text{ 寸}\)，且设乙容器中水面处的半径为 \(R\text{ 寸}\). 由于乙容器是锥底向上，水面处的截面与底面相似，所以
+\(\frac{R}{2\sqrt{3}}=\frac{h}{2}\)，从而 \(R=\sqrt{3}h\). 甲容器中剩余水的体积为圆柱体积 \(V_1=\pi\cdot 1^2\cdot h=\pi h\)，乙容器中水的体积为以水面为底的圆锥体积
+\[
+V_2=\frac{1}{3}\pi R^2h=\frac{1}{3}\pi\left(\sqrt{3}h\right)^2h=\pi h^3
+\]
+甲容器原来装满水，水的总体积为 \(2\pi\)，所以体积守恒给出 \(\pi h+\pi h^3=2\pi\)，即 \(h^3+h-2=0\). 因为 \(h=1\) 是该方程的根，且
+\[
+h^3+h-2=\left( h-1 \right)\left( h^2+h+2 \right)
+\]
+而 \(h^2+h+2=\left( h+\frac{1}{2} \right)^2+\frac{7}{4}>0\)，所以方程只有实根 \(h=1\). 该值满足 \(0<h<2\)，符合容器高度限制. 因此水面的高度为 \(1\text{ 寸}\).
 
 \solutionfigure{\bitmapfigure[max width=0.62\linewidth]{img/1958/beijing/q10_solution_fig1.png}}
-
-乙容器内水面的半径 \(R\) 满足 \(\frac{R}{2\sqrt{3}}=\frac{h}{2}\)，所以 \(R=\sqrt{3}h\). 所以 \(V_1=\pi\cdot 1^2\cdot h=\pi h\)，\(V_2=\frac{1}{3}\pi(\sqrt{3}h)^2\cdot h=\pi h^3\). 又 \(V_1+V_2=V\)，即 \(\pi h+\pi h^3=\pi\cdot 1^2\cdot 2=2\pi\)，故 \(h^3+h-2=0\). 设 \(f(h)=h^3+h-2\). 因为 \(f(1)=0\)，所以 \(h=1\) 是方程 \(h^3+h-2=0\) 的一个根. \(h^3+h-2=(h-1)(h^2+h+2)=0\). 而方程 \(h^2+h+2=0\) 无实根，故 \(h^3+h-2=0\) 只有一个实数根 \(h=1\). 所以甲乙容器水面一样高时，这时水面高度是 \(1\text{ 尺}\).
 \end{solution}
 
 \begin{problem}
@@ -163,13 +144,17 @@ x=\frac{\sqrt{2}}{2}\left( \cos 20^\circ\pm \sin 20^\circ \right)
 \end{problem}
 
 \begin{solution}
-因为 \(\widehat{AB}\) 是 \(120^\circ\) 的弧，所以 \(\angle AOC=60^\circ\)，\(\angle ACO=30^\circ\). 因此 \(OC=2R\)（在直角三角形中，斜边等于 \(30^\circ\) 角所对边长的 \(2\) 倍），所以 \(CM=2R-(R+r)=R-r\).
+设 \(\odot O\) 的半径为 \(R\)，\(\odot M\) 的半径为 \(r\)，并设 \(\odot M\) 与 \(AC\) 相切于 \(N\). 由于 \(CA\)、\(CB\) 是从点 \(C\) 引出的切线，故 \(CA=CB\)；又 \(OA=OB\)，所以直角三角形 \(OAC\) 与 \(OBC\) 全等，直线 \(OC\) 同时平分 \(\angle AOB\) 和 \(\angle ACB\). 因为弧 \(\widehat{AB}\) 含 \(120^\circ\)，所以 \(\angle AOC=60^\circ\). 又 \(OA\perp AC\)，故 \(\triangle AOC\) 是直角三角形，\(\angle ACO=30^\circ\)，从而 \(OC=2R\).
 
 \solutionfigure{\bitmapfigure[max width=0.45\linewidth]{img/1958/beijing/q11_solution_fig1.png}}
 
-\(\triangle CNM\sim \triangle AOC\). 所以 \(\frac{r}{R}=\frac{R-r}{2R}\). 因此 \(r=\frac{R}{3}\). 设 \(\odot M\) 的周长为 \(C_{\odot M}\)，\(\odot O\) 的周长为 \(C_{\odot O}\). 则
+由于 \(\odot M\) 同时与 \(AC\)、\(BC\) 相切，圆心 \(M\) 在 \(\angle ACB\) 的平分线上；因此 \(C\)、\(O\)、\(M\) 共线. 小圆位于 \(C\) 与大圆之间并与 \(\odot O\) 外切，所以两圆心及切点共线，且 \(OM=R+r\)，从而 \(CM=CO-OM=2R-(R+r)=R-r\). 由于 \(MN\perp AC\)，而 \(OA\perp AC\)，有 \(MN\parallel OA\). 于是 \(\angle CNM=\angle CAO=90^\circ\)，且 \(\angle NCM=\angle ACO\)，所以 \(\triangle CNM\sim\triangle AOC\). 对应边给出
 \[
-C_{\odot M}=2\pi r=2\pi\cdot \frac{R}{3}=\frac{2\pi R}{3}=\frac{C_{\odot O}}{3}
+\frac{r}{R}=\frac{MN}{OA}=\frac{CM}{CO}=\frac{R-r}{2R}
+\]
+解得 \(2r=R-r\)，即 \(r=\frac{R}{3}\). 若记两圆周长分别为 \(L_M\)，\(L_O\)，则
+\[
+L_M=2\pi r=2\pi\cdot\frac{R}{3}=\frac{2\pi R}{3}=\frac{L_O}{3}
 \]
 所以 \(\odot M\) 的周长等于 \(\odot O\) 的周长的 \(\frac{1}{3}\).
 \end{solution}

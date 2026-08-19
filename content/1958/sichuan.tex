@@ -1,16 +1,17 @@
 \chapter{1958年四川卷}
 
+\section{解答题}
+
 \begin{problem}
 化简 \(2^{-\frac{1}{2}}+\cos225^{\circ}+\lg 5-\lg \sin30^{\circ}+8^{\frac{2}{3}}\).
 \end{problem}
 
 \begin{solution}
+由 \(\sin30^{\circ}=\frac{1}{2}\)，\(\cos225^{\circ}=-\cos45^{\circ}=-\frac{1}{\sqrt{2}}\)，且 \(8^{\frac{2}{3}}=4\)，得
 \[
-\text{原式}=2^{-\frac{1}{2}}+\cos225^{\circ}+\lg 5-\lg \sin30^{\circ}+8^{\frac{2}{3}}
-=\frac{1}{\sqrt{2}}-\cos45^{\circ}+\lg 5-\lg \frac{1}{2}+4
-\]
-\[
-=\frac{1}{\sqrt{2}}-\frac{1}{\sqrt{2}}+\lg 5-\left(\lg 5-\lg 10\right)+4=1+4=5.
+\text{原式}=\frac{1}{\sqrt{2}}-\frac{1}{\sqrt{2}}+\lg 5-\lg\frac{1}{2}+4
+ =\lg 5-\left(\lg 5-\lg 10\right)+4
+ =\lg 10+4=5
 \]
 \end{solution}
 
@@ -19,70 +20,87 @@
 \end{problem}
 
 \begin{solution}
-\(\frac{x+1}{x-1}>1\)，即 \(1+\frac{2}{x-1}>1\)，所以 \(\frac{2}{x-1}>0\).
-故 \(x-1>0\)，所以 \(x>1\).
+首先，原不等式要求 \(x\ne1\). 在此条件下，移项并通分可得
+\[
+\frac{x+1}{x-1}>1
+\Longleftrightarrow
+\frac{x+1-(x-1)}{x-1}>0
+\Longleftrightarrow
+\frac{2}{x-1}>0
+\]
+由于分子 \(2>0\)，上式成立当且仅当 \(x-1>0\)，所以不等式的解集为 \(x>1\).
 \end{solution}
 
 \begin{problem}
-证明 \(\tan\left(x+\frac{\pi}{4}\right)+\tan\left(x-\frac{\pi}{4}\right)=2\tan 2x\).
+证明 \(\tan\left(x+\frac{\pi}{4}\right)+\tan\left(x-\frac{\pi}{4}\right)=2\tan2x\).
 \end{problem}
 
 \begin{solution}
+等式的定义域要求 \(\cos2x\ne0\). 因为
 \[
-\begin{aligned}
+\cos\left(x+\frac{\pi}{4}\right)\cos\left(x-\frac{\pi}{4}\right)
+=\frac{1}{2}\cos2x
+\]
+所以在该定义域内，利用 \(\tan u+\tan v=\frac{\sin(u+v)}{\cos u\cos v}\)，有
+\[
 \tan\left(x+\frac{\pi}{4}\right)+\tan\left(x-\frac{\pi}{4}\right)
-&=\frac{\tan x+\tan\frac{\pi}{4}}{1-\tan x\cdot\tan\frac{\pi}{4}}
-+\frac{\tan x-\tan\frac{\pi}{4}}{1+\tan x\cdot\tan\frac{\pi}{4}} \\
-&=\frac{\tan x+1}{1-\tan x}+\frac{\tan x-1}{1+\tan x} \\
-&=\frac{\left(\tan x+1\right)^{2}-\left(\tan x-1\right)^{2}}{\left(1-\tan x\right)\left(1+\tan x\right)} \\
-&=\frac{\left[\left(\tan x+1\right)+\left(\tan x-1\right)\right]\left[\left(\tan x+1\right)-\left(\tan x-1\right)\right]}{1-\tan^{2}x}
-=\frac{4\tan x}{1-\tan^{2}x}
-\end{aligned}
+ =\frac{\sin2x}{\cos\left(x+\frac{\pi}{4}\right)\cos\left(x-\frac{\pi}{4}\right)}
+ =\frac{\sin2x}{\frac{1}{2}\cos2x}=2\tan2x
 \]
-右边 \(=2\cdot\frac{2\tan x}{1-\tan^{2}x}=\frac{4\tan x}{1-\tan^{2}x}\). 因此左边等于右边.
+当 \(\cos2x=0\) 时，右边无定义，且左边两项中至少有一项无定义，因此上述定义域已经完整，等式得证.
 \end{solution}
 
 \begin{problem}
-若 \(\tan\alpha\) 和 \(\tan\beta\) 是方程 \(x^{2}+px+q=0\) 的根，用 \(p\)，\(q\) 来表示 \(\tan 2\left(\alpha+\beta\right)\).
+若 \(\tan\alpha\) 和 \(\tan\beta\) 是方程 \(x^{2}+px+q=0\) 的根，用 \(p\)，\(q\) 来表示 \(\tan2\left(\alpha+\beta\right)\).
 \end{problem}
 
 \begin{solution}
-由根与系数的关系（韦达定理）知，\(\tan\alpha+\tan\beta=-p\)，\(\tan\alpha\cdot\tan\beta=q\).
-所以 \(\tan\left(\alpha+\beta\right)=\frac{\tan\alpha+\tan\beta}{1-\tan\alpha\cdot\tan\beta}=\frac{-p}{1-q}\).
-于是
+设 \(u=\tan\alpha\)，\(v=\tan\beta\). 由根与系数的关系，
+\(u+v=-p\)，\(uv=q\).
+令 \(S=\alpha+\beta\). 因为 \(\tan\alpha\) 和 \(\tan\beta\) 有定义，所以 \(\cos\alpha\cos\beta\ne0\)，从和角公式得
+\(\sin S=(u+v)\cos\alpha\cos\beta\)，\(\cos S=(1-uv)\cos\alpha\cos\beta\).
+只要题目所求的 \(\tan2S\) 有定义，即 \(\cos2S\ne0\)，便有
 \[
-\tan 2\left(\alpha+\beta\right)
-=\frac{2\tan\left(\alpha+\beta\right)}{1-\tan^{2}\left(\alpha+\beta\right)} 
-=\frac{2\left(\frac{-p}{1-q}\right)}{1-\left(\frac{-p}{1-q}\right)^{2}} 
-=\frac{2p(1-q)}{p^{2}-(1-q)^{2}}
+\tan2S=\frac{2\sin S\cos S}{\cos^{2}S-\sin^{2}S}
+ =\frac{2(u+v)(1-uv)}{(1-uv)^{2}-(u+v)^{2}}
 \]
+代入 \(u+v=-p\)，\(uv=q\)，得到
+\[
+\tan2S=\frac{-2p(1-q)}{(1-q)^{2}-p^{2}}
+ =\frac{2p(1-q)}{p^{2}-(1-q)^{2}}
+\]
+因此
+\[
+\tan2\left(\alpha+\beta\right)=\frac{2p(1-q)}{p^{2}-(1-q)^{2}}
+\]
+其中分母为零时，题目所求的正切值无定义.
 \end{solution}
 
 \begin{problem}
-在等腰梯形 \(ABCD\) 中，\(AB\parallel CD\)，
-\(\angle A=\angle B=60^{\circ}\)，上底，腰，下底成等差数列，
-设上底 \(CD=a-d\)，腰 \(AD=BC=a\)，下底 \(AB=a+d\)，
-梯形的面积为 \(2\sqrt{2}\)，求梯形的各边.
+在等腰梯形 \(ABCD\) 中，\(AB\parallel CD\)，\(\angle A=\angle B=60^{\circ}\)，上底、腰、下底成等差数列，设上底 \(CD=a-d\)，腰 \(AD=BC=a\)，下底 \(AB=a+d\)，梯形的面积为 \(2\sqrt{2}\)，求梯形的各边.
+
 \end{problem}
 
 \begin{solution}
-过 \(D\) 点作 \(DE\perp AB\)，垂足为 \(E\).
+过 \(D\) 作 \(DE\perp AB\)，垂足为 \(E\). 在直角三角形 \(ADE\) 中，
 
 \solutionfigure{\bitmapfigure[max width=0.34\linewidth]{img/1958/sichuan/q5_solution_fig1.png}}
 
-在直角三角形 \(ADE\) 中，\(\sin A=\frac{DE}{AD}\)，\(\cos A=\frac{AE}{AD}\).
-因为 \(\angle A=60^{\circ}\)，且 \(AD=BC=a\)，所以 \(DE=a\sin60^{\circ}=\frac{\sqrt{3}}{2}a\)，\(AE=a\cos60^{\circ}=\frac{1}{2}a\).
-
-故梯形面积
+\(DE=AD\sin60^{\circ}=\frac{\sqrt{3}}{2}a\)，\(AE=AD\cos60^{\circ}=\frac{a}{2}\).
+等腰梯形关于两底的中垂线对称，故两腰在下底方向的投影相等，从而
 \[
-s=\frac{1}{2}\left(CD+AB\right)\cdot DE
-=\frac{1}{2}\left[\left(a-d\right)+\left(a+d\right)\right]\cdot\frac{\sqrt{3}}{2}a
+AB-CD=2AE=a
+\]
+另一方面，由所设两底之和为 \(2a\)，梯形面积满足
+\[
+2\sqrt{2}=\frac{CD+AB}{2}\cdot DE
+=a\cdot\frac{\sqrt{3}}{2}a
 =\frac{\sqrt{3}}{2}a^{2}
 \]
-即 \(\frac{\sqrt{3}}{2}a^{2}=2\sqrt{2}\)，所以 \(a^{2}=\frac{2\sqrt{2}}{\frac{\sqrt{3}}{2}}=4\sqrt{\frac{2}{3}}\). 从而 \(a=2\sqrt[4]{\frac{2}{3}}\)（只取正值）.
-
-由对称关系（等腰梯形），\(AB-CD=2AE\)，即 \(\left(a+d\right)-\left(a-d\right)=2\cdot\frac{1}{2}a\)，所以 \(2d=a\)，\(d=\frac{a}{2}\).
-故 \(CD=a-d=\frac{a}{2}=\sqrt[4]{\frac{2}{3}}\)，\(AD=BC=a=2\sqrt[4]{\frac{2}{3}}\)，\(AB=a+d=\frac{3a}{2}=3\sqrt[4]{\frac{2}{3}}\)，即 \(CD=\frac{\sqrt[4]{54}}{3}\)，\(AD=BC=\frac{2\sqrt[4]{54}}{3}\)，\(AB=\sqrt[4]{54}\).
+所以
+\(a^{2}=4\sqrt{\frac{2}{3}}\)，\(a=2\sqrt[4]{\frac{2}{3}}\)
+其中只取正值. 由 \(AB-CD=(a+d)-(a-d)=2d=a\)，得 \(d=\frac{a}{2}=\sqrt[4]{\frac{2}{3}}\). 因此
+\(CD=a-d=\sqrt[4]{\frac{2}{3}}\)，\(AD=BC=2\sqrt[4]{\frac{2}{3}}\)，\(AB=a+d=3\sqrt[4]{\frac{2}{3}}\).
 \end{solution}
 
 \begin{problem}
@@ -90,11 +108,19 @@ s=\frac{1}{2}\left(CD+AB\right)\cdot DE
 \end{problem}
 
 \begin{solution}
-\(9^{x}-10\cdot3^{x+1}+81=0\)，即 \(3^{2x}-30\cdot3^{x}+81=0\).
-令 \(t=3^{x}\)，则 \(t^{2}-30t+81=0\).
-因式分解得 \(\left(t-3\right)\left(t-27\right)=0\)，所以 \(t=3\) 或 \(t=27\).
-于是 \(3^{x}=3\)，\(x=1\)；\(3^{x}=27\)，\(x=3\).
-经验算得知，\(x_{1}=1\)，\(x_{2}=3\) 都是原方程的根.
+将各项化为底数为 \(3\) 的幂，原方程化为
+\[
+3^{2x}-30\cdot3^{x}+81=0
+\]
+令 \(t=3^{x}\)，则 \(t>0\)，且方程变为
+\[
+t^{2}-30t+81=0
+\Longleftrightarrow
+(t-3)(t-27)=0
+\]
+由于两个根 \(3\)，\(27\) 都满足 \(t>0\)，分别代回 \(t=3^{x}\)，得
+\(3^{x}=3\Longrightarrow x=1\)，\(3^{x}=27=3^{3}\Longrightarrow x=3\).
+代回原方程可知两值均成立，所以原方程的解为 \(x=1\) 或 \(x=3\).
 \end{solution}
 
 \begin{problem}
@@ -108,53 +134,67 @@ s=\frac{1}{2}\left(CD+AB\right)\cdot DE
 
 \begin{solution}
 \begin{enumerate}
-\item 因为 \(M\)，\(N\) 分别为 \(AC\)，\(BC\) 的中点，所以在 \(\triangle ABC\) 中，\(MN \parallel AB\)，且 \(MN=\frac{1}{2}AB\).
-又因为 \(P\)，\(Q\) 分别为 \(BD\)，\(AD\) 的中点，所以在 \(\triangle ABD\) 中，\(PQ \parallel AB\)，且 \(PQ=\frac{1}{2}AB\).
-所以 \(MN \parallel PQ\)，且 \(MN=PQ\). 故 \(MNPQ\) 为平行四边形.
+\item 在 \(\triangle ABC\) 中，\(M\)，\(N\) 分别是 \(AC\)，\(BC\) 的中点. 由三角形中位线定理，
+\(MN\parallel AB\)，\(MN=\frac{1}{2}AB\).
+同理，在 \(\triangle ABD\) 中，\(P\)，\(Q\) 分别是 \(BD\)，\(AD\) 的中点，所以
+\(PQ\parallel AB\)，\(PQ=\frac{1}{2}AB\).
+因此 \(MN\parallel PQ\) 且 \(MN=PQ\). 一组对边平行且相等的四边形是平行四边形，故 \(MNPQ\) 为平行四边形.
 
-\item 设 \(\triangle ABC\) 底边 \(AB\) 上的高线长为 \(h_{1}\)，\(\triangle ABD\) 底边 \(AB\) 上的高线长为 \(h_{2}\). 过 \(N\) 作 \(NE\perp AB\)，垂足为 \(E\)；又过 \(Q\) 作 \(QF\perp AB\)，垂足为 \(F\)，且 \(NE\) 交 \(PQ\) 的延长线于 \(G\)，则 \(NG\perp PG\)，即 \(NG\) 是 \(\square MNPQ\) 中 \(PQ\) 边上的高.
-因为 \(N\) 是 \(BC\) 边的中点，所以 \(NE=\frac{1}{2}h_{1}\). 又因为 \(Q\) 是 \(AD\) 边的中点，所以 \(QF=\frac{1}{2}h_{2}\). 故 \(NG=NE-GE=NE-QF=\frac{1}{2}h_{1}-\frac{1}{2}h_{2}\). 因此
+\item 设 \(C\)，\(D\) 到直线 \(AB\) 的距离分别为 \(h_C\)，\(h_D\). 因为 \(M\)，\(N\) 是相应边的中点，且 \(A\)，\(B\) 在直线 \(AB\) 上，所以直线 \(MN\) 到直线 \(AB\) 的距离为 \(\frac{h_C}{2}\)；同理，直线 \(PQ\) 到直线 \(AB\) 的距离为 \(\frac{h_D}{2}\). 两三角形同侧，故平行线 \(MN\)，\(PQ\) 之间的距离为 \(\frac{1}{2}\lvert h_C-h_D\rvert\). 以 \(PQ\) 为底，平行四边形的高为该距离，于是
 \[
-\begin{aligned}
-S_{\square MNPQ}
-&=PQ\cdot NG
-=\frac{1}{2}AB\cdot\left(\frac{1}{2}h_{1}-\frac{1}{2}h_{2}\right) \\
-&=\frac{1}{2}\left(\frac{1}{2}AB\cdot h_{1}-\frac{1}{2}AB\cdot h_{2}\right)
-=\frac{1}{2}\left(S_{\triangle ABC}-S_{\triangle ABD}\right)
-\end{aligned}
+S_{MNPQ}=PQ\cdot\frac{\lvert h_C-h_D\rvert}{2}
+=\frac{AB}{2}\cdot\frac{\lvert h_C-h_D\rvert}{2}
+=\frac{AB\lvert h_C-h_D\rvert}{4}
 \]
+又
+\(S_{\triangle ABC}=\frac{1}{2}ABh_C\)，\(S_{\triangle ABD}=\frac{1}{2}ABh_D\)
+所以
+\[
+S_{MNPQ}=\frac{1}{2}\left\lvert S_{\triangle ABC}-S_{\triangle ABD}\right\rvert
+\]
+这正是两三角形面积之差（取大面积减小面积）的一半.
 \end{enumerate}
 \solutionfigure{\bitmapfigure[max width=0.55\linewidth]{img/1958/sichuan/q7_solution_fig1.png}}
 \end{solution}
 
 \begin{problem}
-如图所示，某圆锥形人造卫星的轴截面为等腰三角形 \(ABC\)，
-\(\odot O\) 为其内切圆，\(CA=CB\)，\(D\) 为 \(AB\) 边上的切点.
-已知球形仓的体积为圆锥体积的一半，求 \(\angle A\)，即圆锥母线与底面的夹角.
+如图所示，某圆锥形人造卫星的轴截面为等腰三角形 \(ABC\)，\(\odot O\) 为其内切圆，\(CA=CB\)，\(D\) 为 \(AB\) 边上的切点. 已知球形仓的体积为圆锥体积的一半，求 \(\angle A\)，即圆锥母线与底面的夹角.
 
 \bitmapfigure[max width=0.34\linewidth]{img/1958/sichuan/q8_fig1.png}
 \end{problem}
 
 \begin{solution}
-过 \(C\) 作 \(CD\perp AB\)，垂足为 \(D\). 因为 \(CA=CB\)，\(\odot O\) 为等腰 \(\triangle ABC\) 的内切圆，所以 \(CD\) 必通过圆心 \(O\)，且 \(AD=BD\).
-连接 \(OA\). 因为三角形内心与角的顶点的连线平分这个角，所以 \(OA\) 平分 \(\angle A\).
-设圆锥的底面半径 \(AD=R\)，内切球的半径 \(OD=r\). 在直角三角形 \(AOD\) 中，\(\tan\frac{A}{2}=\frac{OD}{AD}\)，所以 \(r=R\tan\frac{A}{2}\).
-又在直角三角形 \(ACD\) 中，\(\tan A=\frac{CD}{AD}\)，所以圆锥高 \(h=CD=R\tan A\).
+过 \(C\) 作 \(CD\perp AB\)，垂足为 \(D\). 因为 \(CA=CB\)，等腰三角形的对称轴 \(CD\) 同时是中线和内切圆圆心所在的直线，所以 \(O\) 在 \(CD\) 上且 \(AD=DB\). 设圆锥底面半径 \(AD=R\)，内切球半径 \(OD=r\)，圆锥高 \(CD=h\)，并记 \(\alpha=\angle A\).
 
-由体积计算公式，\(V_{\text{圆锥}}=\frac{1}{3}\pi R^{2}h=\frac{1}{3}\pi R^{3}\tan A\)，
+连接 \(OA\). 内心在角平分线上，故 \(OA\) 平分 \(\angle A\)，从而 \(\angle OAD=\frac{\alpha}{2}\). 在直角三角形 \(AOD\) 中，
 \[
-V_{\text{球形仓}}=\frac{4}{3}\pi r^{3}=\frac{4}{3}\pi\left(R\tan\frac{A}{2}\right)^{3}=\frac{4}{3}\pi R^{3}\tan^{3}\frac{A}{2}
+r=OD=AD\tan\frac{\alpha}{2}=R\tan\frac{\alpha}{2}
 \]
-根据题意，\(\frac{4}{3}\pi R^{3}\tan^{3}\frac{A}{2}=\frac{1}{6}\pi R^{3}\tan A\). 化简得 \(8\tan^{3}\frac{A}{2}=\tan A\). 又由半角公式，
+在直角三角形 \(ACD\) 中，
+\(\tan\alpha=\frac{CD}{AD}=\frac{h}{R}\)，\(h=R\tan\alpha\).
+由于 \(0<\alpha<\frac{\pi}{2}\)，各量均为正. 于是圆锥和球形仓的体积分别为
+\(V_{\text{锥}}=\frac{1}{3}\pi R^{2}h=\frac{1}{3}\pi R^{3}\tan\alpha\)，\(V_{\text{球}}=\frac{4}{3}\pi r^{3}=\frac{4}{3}\pi R^{3}\tan^{3}\frac{\alpha}{2}\).
+由 \(V_{\text{球}}=\frac{1}{2}V_{\text{锥}}\)，约去正因子 \(\frac{1}{6}\pi R^{3}\)，得
 \[
-\tan^{2}\frac{A}{2}=\frac{1-\cos A}{1+\cos A},\qquad
-\tan\frac{A}{2}=\frac{\sin A}{1+\cos A}=\frac{1-\cos A}{\sin A}
+8\tan^{3}\frac{\alpha}{2}=\tan\alpha
 \]
-代入 \(8\tan\frac{A}{2}\cdot\tan^{2}\frac{A}{2}=\tan A\) 得
+令 \(c=\cos\alpha\). 由半角公式 \(\tan\frac{\alpha}{2}=\frac{\sin\alpha}{1+c}\)，代入上式并利用 \(\sin\alpha>0\)，得
 \[
-8\times \frac{\sin A}{1+\cos A}\times \frac{1-\cos A}{1+\cos A}=\frac{\sin A}{\cos A}
+8\frac{\sin^{3}\alpha}{(1+c)^{3}}=\frac{\sin\alpha}{c}
+\Longleftrightarrow
+8c\sin^{2}\alpha=(1+c)^{3}
 \]
-即 \(\frac{8\left(1-\cos A\right)}{\left(1+\cos A\right)^{2}}=\frac{1}{\cos A}\). 于是 \(8\cos A\left(1-\cos A\right)=\left(1+\cos A\right)^{2}\)，\(8\cos A-8\cos^{2}A=1+2\cos A+\cos^{2}A\)，整理得 \(9\cos^{2}A-6\cos A+1=0\)
-即 \(\left(3\cos A-1\right)^{2}=0\)，所以 \(\cos A=\frac{1}{3}\).
-故 \(A=\arccos\frac{1}{3}=70^{\circ}32'\)，即圆锥母线与底面的夹角约为 \(70^{\circ}32'\).
+再用 \(\sin^{2}\alpha=(1-c)(1+c)\)，并注意 \(1+c>0\)，可约去一个 \(1+c\)，得到
+\[
+8c(1-c)=(1+c)^{2}
+\Longleftrightarrow
+9c^{2}-6c+1=0
+\Longleftrightarrow
+(3c-1)^{2}=0
+\]
+所以 \(\cos\alpha=\frac{1}{3}\)，从而
+\[
+\angle A=\alpha=\arccos\frac{1}{3}\approx70^{\circ}32'
+\]
+即圆锥母线与底面的夹角约为 \(70^{\circ}32'\).
 \end{solution}

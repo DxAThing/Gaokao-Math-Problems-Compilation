@@ -16,6 +16,14 @@
 B
 \end{answer}
 
+\begin{solution}
+在全集 \(U\) 中，\(\complement_U A\) 是去掉 \(A\) 中元素后剩下的集合，\(\complement_U B\) 是去掉 \(B\) 中元素后剩下的集合. 因此交集中的元素既不属于 \(A\)，也不属于 \(B\). 由 \(A\cup B=\{0,1,2,3,4,5,6,8\}\)，全集 \(U\) 中未出现在这个并集里的元素只有 \(7,9\)，故
+\[
+(\complement_U A)\cap(\complement_U B)=\{7,9\}
+\]
+故选 B.
+\end{solution}
+
 \begin{problem}
 复数 \(\frac{2 - \i}{2 + \i} =\)（\quad）
 
@@ -29,6 +37,14 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+分子、分母同乘分母的共轭复数 \(2-\i\)，得
+\[
+\frac{2-\i}{2+\i}=\frac{(2-\i)^2}{(2+\i)(2-\i)}=\frac{4-4\i-1}{4+1}=\frac35-\frac45\i
+\]
+故选 A.
+\end{solution}
 
 \begin{problem}
 已知两个非零向量 \(\bs{a}\)，\(\bs{b}\) 满足 \(|\bs{a} + \bs{b}| = |\bs{a} - \bs{b}|\). 则下面结论正确的是（\quad）
@@ -44,19 +60,36 @@ A
 B
 \end{answer}
 
+\begin{solution}
+两边平方并利用向量数量积，得
+\[
+|\bs{a}+\bs{b}|^2=|\bs{a}|^2+2\bs{a}\cdot\bs{b}+|\bs{b}|^2
+\]
+\[
+|\bs{a}-\bs{b}|^2=|\bs{a}|^2-2\bs{a}\cdot\bs{b}+|\bs{b}|^2
+\]
+由两式相等可得 \(4\bs{a}\cdot\bs{b}=0\)，所以 \(\bs{a}\cdot\bs{b}=0\). 由于两个向量均非零，这等价于 \(\bs{a}\perp\bs{b}\). 故选 B.
+\end{solution}
+
 \begin{problem}
-已知命题 \(p: \forall x_1,x_2 \in \R\)，\((f(x_2) - f(x_1))(x_2 - x_1) \geqslant 0\)，则 \(\neg p\) 是（\quad）
+已知命题 \(p: \forall x_1\)，\(x_2 \in \R\)，\((f(x_2) - f(x_1))(x_2 - x_1) \geqslant 0\)，则 \(\neg p\) 是（\quad）
 
 \choices
     {\(\exists x_{1}, x_{2} \in \R, (f(x_{2}) - f(x_{1}))(x_{2} - x_{1}) \leqslant 0\)}
-    {\(\forall x_{1},x_{2} \in \R,\ (f(x_{2}) - f(x_{1}))(x_{2} - x_{1}) \leqslant 0\)}
-    {\(\exists x_{1},x_{2} \in \R,\ (f(x_{2}) - f(x_{1}))(x_{2} - x_{1}) < 0\)}
-    {\(\forall x_{1},x_{2} \in \R,\ (f(x_{2}) - f(x_{1}))(x_{2} - x_{1}) < 0\)}
+    {\(\forall x_{1}\)，\(x_{2} \in \R\)，\(\ (f(x_{2}) - f(x_{1}))(x_{2} - x_{1}) \leqslant 0\)}
+    {\(\exists x_{1}\)，\(x_{2} \in \R\)，\(\ (f(x_{2}) - f(x_{1}))(x_{2} - x_{1}) < 0\)}
+    {\(\forall x_{1}\)，\(x_{2} \in \R\)，\(\ (f(x_{2}) - f(x_{1}))(x_{2} - x_{1}) < 0\)}
 \end{problem}
 
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+全称命题的否定要把“对任意”改为“存在”，并把不等式 \(\geqslant 0\) 否定为 \(<0\). 因此
+\(\neg p:\ \exists x_1\)，\(x_2\in\R\)，\((f(x_2)-f(x_1))(x_2-x_1)<0\).
+故选 C.
+\end{solution}
 
 \begin{problem}
 一排\(9\) 个座位坐了\(3\) 个三口之家，若每家人坐在一起，则不同的坐法种数（\quad）
@@ -72,6 +105,14 @@ C
 C
 \end{answer}
 
+\begin{solution}
+把每个家庭的三个人看成一个整体，三个家庭整体在一排座位上的排列数为 \(3!\). 每个家庭内部的三个人还可以各自排列 \(3!\) 种，三个家庭内部共有 \((3!)^3\) 种排法. 因此总数为
+\[
+3!\cdot(3!)^3=(3!)^4
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
 在等差数列 \(\{a_{n}\}\) 中，已知 \(a_{4} + a_{8} = 16\)，则该数列前 \(11\) 项和 \(S_{11} =\)（\quad）
 
@@ -86,6 +127,18 @@ C
 B
 \end{answer}
 
+\begin{solution}
+等差数列中，等距两项之和等于中间项的两倍，所以
+\[
+a_4+a_8=2a_6=16
+\]
+从而 \(a_6=8\). 前 \(11\) 项关于第 \(6\) 项对称，故
+\[
+S_{11}=11a_6=11\times8=88
+\]
+故选 B.
+\end{solution}
+
 \begin{problem}
 已知 \(\sin \alpha - \cos \alpha = \sqrt{2}\)，\(\alpha \in (0, \pi)\)，则 \(\tan \alpha =\)（\quad）
 
@@ -99,6 +152,18 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+将已知等式平方，得
+\[
+\sin^2\alpha+\cos^2\alpha-2\sin\alpha\cos\alpha=2
+\]
+所以 \(\sin\alpha\cos\alpha=-\dfrac12\)，即 \(\sin 2\alpha=-1\). 由于 \(\alpha\in(0,\pi)\)，故 \(2\alpha\in(0,2\pi)\)，从而 \(2\alpha=\dfrac{3\pi}{2}\)，即 \(\alpha=\dfrac{3\pi}{4}\). 因此
+\[
+\tan\alpha=-1
+\]
+故选 A.
+\end{solution}
 
 \begin{problem}
 设变量 \(x\)，\(y\) 满足 \(\begin{cases}
@@ -118,6 +183,18 @@ x - y \leqslant 10,\\
 D
 \end{answer}
 
+\begin{solution}
+令 \(u=x+y\)，则目标式为
+\[
+2x+3y=2(x+y)+y=2u+y
+\]
+由约束条件 \(u\leqslant20\)，\(y\leqslant15\)，有
+\[
+2x+3y=2u+y\leqslant2\times20+15=55
+\]
+取 \(u=20\)，\(y=15\)，即 \(x=5\) 时，\(x-y=-10\leqslant10\)，其余约束也满足，且目标值为 \(55\). 故最大值为 \(55\)，选 D.
+\end{solution}
+
 \begin{problem}
 执行如图所示的程序框图，则输出的 \(S\) 值是（\quad）
 
@@ -134,6 +211,16 @@ D
 D
 \end{answer}
 
+\begin{solution}
+初始时 \(S=4\)，\(i=1\). 循环中只要 \(i<9\) 就执行
+\(S\leftarrow\frac{2}{2-S}\)，\(i\leftarrow i+1\).
+连续计算得到
+\[
+4\longmapsto-1\longmapsto\frac23\longmapsto\frac32\longmapsto4
+\]
+这四步构成一个循环. 由于从 \(i=1\) 到 \(i=8\) 共执行 \(8\) 次，恰好完成两个循环，随后 \(i=9\) 不满足 \(i<9\)，输出 \(S=4\). 故选 D.
+\end{solution}
+
 \begin{problem}
 在长为 \(12 \mathrm{~cm}\) 的线段 \(AB\) 上任取一点 \(C\). 现作一矩形，邻边长分别等于线段 \(AC\)，\(CB\) 的长，则该矩形面积小于 \(32 \mathrm{~cm}^{2}\) 的概率为（\quad）
 
@@ -147,6 +234,22 @@ D
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+设 \(AC=x\)，则 \(CB=12-x\)，且 \(0\leqslant x\leqslant12\). 矩形面积为
+\[
+S=x(12-x)
+\]
+条件 \(S<32\) 等价于
+\[
+x(12-x)<32\iff x^2-12x+32>0\iff (x-4)(x-8)>0
+\]
+所以 \(x\in[0,4)\cup(8,12]\)，其长度为 \(8\). 由于点在线段上均匀选取，所求概率为
+\[
+\frac{8}{12}=\frac23
+\]
+故选 C.
+\end{solution}
 
 \begin{problem}
 设函数 \(f(x)\)（\(x \in \R\)）满足 \(f(-x) = f(x)\)，\(f(x) = f(2 - x)\)，且当 \(x \in [0,1]\) 时，\(f(x) = x^3\). 又函数 \(g(x) = |x\cos(\pi x)|\)，则函数 \(h(x) = g(x) - f(x)\) 在 \(\left[-\frac{1}{2}, \frac{3}{2}\right]\) 上的零点个数为（\quad）
@@ -162,6 +265,23 @@ C
 B
 \end{answer}
 
+\begin{solution}
+由 \(f(-x)=f(x)\) 可知 \(f\) 为偶函数. 把 \(f(x)=f(2-x)\) 中的 \(x\) 换成 \(-x\)，得 \(f(2+x)=f(-x)=f(x)\)，所以 \(f\) 以 \(2\) 为周期. 于是
+\[
+f(x)=
+\begin{cases}
+(-x)^3,&-\dfrac12\leqslant x\leqslant0,\\
+x^3,&0\leqslant x\leqslant1,\\
+(2-x)^3,&1\leqslant x\leqslant\dfrac32.
+\end{cases}
+\]
+在 \(\left[-\dfrac12,0\right)\) 上令 \(t=-x\)，则方程 \(g(x)=f(x)\) 化为 \(\cos(\pi t)=t^2\). 左边严格递减，右边严格递增，且两端符号相反，故有且只有一个根；端点 \(x=0\) 也是一个根.
+
+在 \([0,\frac12]\) 上，除 \(x=0\) 外方程为 \(\cos(\pi x)=x^2\). 当 \(x\) 从 \(0\) 增至 \(\frac12\) 时，左边严格递减且从 \(1\) 变为 \(0\)，右边严格递增且从 \(0\) 变为 \(\frac14\)，所以该区间内除 \(x=0\) 外恰有一个根. 在 \([\frac12,1]\) 上，方程为 \(-\cos(\pi x)=x^2\). 令 \(F(x)=-\cos(\pi x)-x^2\)，则 \(F(\frac12)<0\)，\(F(\frac34)=\frac{\sqrt2}{2}-\frac9{16}>0\)，\(F(1)=0\)，且 \(F''(x)=\pi^2\cos(\pi x)-2<0\). 因此 \(F\) 严格凹，在该区间至多有两个零点；结合介值定理，恰有一个内部零点和端点零点 \(x=1\).
+
+在 \([1,\frac32]\) 上，方程为 \(-x\cos(\pi x)=(2-x)^3\). 令 \(G(x)=-x\cos(\pi x)-(2-x)^3\)，则 \(G(1)=0\)，\(G(\frac54)=\frac{5\sqrt2}{8}-\frac{27}{64}>0\)，\(G(\frac32)<0\)，并且 \(G''(x)=2\pi\sin(\pi x)+\pi^2x\cos(\pi x)-6(2-x)<0\). 因此严格凹函数 \(G\) 在 \((1,\frac32)\) 内恰有一个零点，另有端点零点 \(x=1\). 合并各段并去掉重复计数的端点 \(0,1\)，零点总数为 \(6\). 故选 B.
+\end{solution}
+
 \begin{problem}
 若 \(x \in [0, +\infty)\)，则下列不等式恒成立的是（\quad）
 
@@ -176,6 +296,20 @@ B
 C
 \end{answer}
 
+\begin{solution}
+令 \(\phi(x)=\cos x-1+\dfrac{x^2}{2}\). 因为 \(\phi'(x)=x-\sin x\)，而 \(x-\sin x\) 的导数为 \(1-\cos x\geqslant0\)，且 \(x-\sin x=0\)（当 \(x=0\) 时），所以 \(x-\sin x\geqslant0\). 于是 \(\phi'(x)\geqslant0\)，再由 \(\phi(0)=0\)，得 \(\phi(x)\geqslant0\)，即 \(\cos x\geqslant1-\dfrac{x^2}{2}\) 对所有 \(x\geqslant0\) 恒成立.
+
+其余选项均可由反例排除. 取 \(x=2\)，由指数函数的级数展开，\(\e^2>1+2+2+\dfrac43+\dfrac23=7\)，故 A 不恒成立. 取 \(x=\dfrac14\)，则 \(\dfrac1{\sqrt{1+x}}=\dfrac2{\sqrt5}\)，而
+\[
+\left(\frac2{\sqrt5}\right)^2=\frac45>\frac{3249}{4096}=\left(\frac{57}{64}\right)^2
+\]
+所以 \(\dfrac2{\sqrt5}>\dfrac{57}{64}=1-\dfrac18+\dfrac1{64}\)，故 B 不恒成立. 取 \(x=1\)，由
+\[
+\e^{3/4}>1+\frac34+\frac{(3/4)^2}{2}+\frac{(3/4)^3}{6}>2
+\]
+得 \(\ln2<\dfrac34<\dfrac78\)，故 D 不恒成立. 因此选 C.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -188,13 +322,38 @@ C
 \(38\)
 \end{answer}
 
+\begin{solution}
+由三视图可知，该几何体是在长为 \(4\)、宽为 \(3\)、高为 \(1\) 的长方体中沿高方向挖去一个半径为 \(1\) 的圆柱. 长方体表面积为
+\[
+2(4\times3+4\times1+3\times1)=38
+\]
+挖去圆柱后，长方体内原有的两个圆形截面被去掉，面积减少 \(2\pi\)；同时增加圆柱内壁面积 \(2\pi\times1\times1=2\pi\)，两者抵消. 因此几何体表面积仍为 \(38\).
+\end{solution}
+
 \begin{problem}
-已知等比数列 \( \{a_{n}\} \) 为递增数列，且 \(a_{3}^{2}=a_{10}\)，\(2(a_{n}+a_{n+2})=5a_{n+1}\)，则数列 \( \{a_{n}\} \) 的通项公式 \( a_{n}= \)\fillinblank{}.
+已知等比数列 \( \{a_{n}\} \) 为递增数列，且 \(a_{5}^{2}=a_{10}\)，\(2(a_{n}+a_{n+2})=5a_{n+1}\)，则数列 \( \{a_{n}\} \) 的通项公式 \( a_{n}= \)\fillinblank{}.
 \end{problem}
 
 \begin{answer}
-\(a_{n}=2^{n+4}\)
+\(a_{n}=2^{n}\)
 \end{answer}
+
+\begin{solution}
+设等比数列的公比为 \(q\). 由题设
+\[
+2(a_n+a_{n+2})=5a_{n+1}
+\]
+得 \(2q^2-5q+2=0\)，所以 \(q=2\) 或 \(q=\dfrac12\).
+
+由 \(a_5^2=a_{10}=a_5q^5\) 可知 \(a_5\neq0\)，从而 \(a_5=q^5>0\). 若 \(q=\dfrac12\)，则 \(a_6=a_5q<a_5\)，与数列递增矛盾，故 \(q=2\). 于是
+\[
+a_5=q^5=32=2^5
+\]
+因此
+\[
+a_n=a_5q^{n-5}=2^5\cdot2^{n-5}=2^n
+\]
+\end{solution}
 
 \begin{problem}
 已知 \(P\)，\(Q\) 为抛物线 \(x^{2} = 2y\) 上两点，点 \(P\)，\(Q\) 的横坐标分别为 4，\(-2\)，过 \(P\)，\(Q\) 分别作抛物线的切线. 两切线交于 \(A\)，则点 \(A\) 的纵坐标为\fillinblank{}.
@@ -204,6 +363,10 @@ C
 \(-4\)
 \end{answer}
 
+\begin{solution}
+抛物线方程为 \(y=\dfrac{x^2}{2}\). 在横坐标为 \(u\) 的点处，切线斜率为 \(u\)，切线方程为 \(y=ux-\dfrac{u^2}{2}\). 因此过 \(P\) 的切线为 \(y=4x-8\)，过 \(Q\) 的切线为 \(y=-2x-2\). 联立得 \(x=1\)，代回得 \(y=-4\). 所以点 \(A\) 的纵坐标为 \(-4\).
+\end{solution}
+
 \begin{problem}
 已知正三棱锥 \(P - ABC\)，点 \(P\)，\(A\)，\(B\)，\(C\) 都在半径为 \(\sqrt{3}\) 的球面上. 若 \(PA\)，\(PB\)，\(PC\) 两两互相垂直，则球心到截面 \(ABC\) 的距离为\fillinblank{}.
 \end{problem}
@@ -211,6 +374,15 @@ C
 \begin{answer}
 \(\dfrac{\sqrt{3}}{3}\)
 \end{answer}
+
+\begin{solution}
+设 \(PA=PB=PC=l\). 以 \(P\) 为原点，分别以 \(PA\)，\(PB\)，\(PC\) 所在直线为三个坐标轴，则可取
+\(P=(0,0,0)\)，\(A=(l,0,0)\)，\(B=(0,l,0)\)，\(C=(0,0,l)\).
+球心到四个顶点的距离相等，故球心为 \(O=(\frac l2,\frac l2,\frac l2)\). 由球半径为 \(\sqrt3\)，得 \(\frac{\sqrt3}{2}l=\sqrt3\)，所以 \(l=2\). 平面 \(ABC\) 的方程为 \(x+y+z=2\)，于是
+\[
+d(O,ABC)=\frac{|1+1+1-2|}{\sqrt3}=\frac{\sqrt3}{3}
+\]
+\end{solution}
 
 \section{解答题}
 
@@ -225,8 +397,18 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item \(\cos B=\dfrac{1}{2}\).
-\item \(\sin A\sin C=\dfrac{3}{4}\).
+\item 由 \(A\)，\(B\)，\(C\) 成等差数列，得 \(A+C=2B\). 又 \(A+B+C=\pi\)，所以 \(3B=\pi\)，即 \(B=\dfrac\pi3\)，从而
+\[
+\cos B=\cos\frac\pi3=\frac12
+\]
+\item 由正弦定理，存在正数 \(k\)，使得 \(a=k\sin A\)，\(b=k\sin B\)，\(c=k\sin C\). 因 \(a\)，\(b\)，\(c\) 成等比数列，故 \(b^2=ac\)，代入并约去 \(k^2\)，得
+\[
+\sin^2B=\sin A\sin C
+\]
+由 \(B=\dfrac\pi3\)，所以
+\[
+\sin A\sin C=\sin^2\frac\pi3=\frac34
+\]
 \end{enumerate}
 \end{solution}
 
@@ -242,7 +424,32 @@ C
 \end{problem}
 
 \begin{solution}
-\(\lambda=\sqrt{2}\).
+\begin{enumerate}
+\item 取 \(AA'=1\)，建立直角坐标系，使
+\(A=(0,0,0)\)，\(B=(\lambda,0,0)\)，\(C=(0,\lambda,0)\)
+\(A'=(0,0,1)\)，\(B'=(\lambda,0,1)\)，\(C'=(0,\lambda,1)\).
+由中点公式
+\(M=\left(\frac\lambda2,0,\frac12\right)\)，\(N=\left(\frac\lambda2,\frac\lambda2,1\right)\).
+平面 \(A'ACC'\) 的方程为 \(x=0\)，而
+\[
+\overrightarrow{MN}=\left(0,\frac\lambda2,\frac12\right)
+\]
+的方向向量平行于该平面，且直线 \(MN\) 不在该平面内，故 \(MN\parallel\) 平面 \(A'ACC'\).
+\item 平面 \(A'MN\) 与平面 \(CMN\) 的公共直线为 \(MN\). 取与 \(\overrightarrow{MN}\) 同方向的向量 \(\bs{u}=(0,\lambda,1)\)，并取
+\(\bs{v}_1=2\overrightarrow{MA'}=(-\lambda,0,1)\)，\(\bs{v}_2=2\overrightarrow{MC}=(-\lambda,2\lambda,-1)\).
+两平面的法向量可分别取
+\[
+\bs{n}_1=\bs{u}\times\bs{v}_1=\lambda(1,-1,\lambda)
+\]
+\[
+\bs{n}_2=\bs{u}\times\bs{v}_2=\lambda(-3,-1,\lambda)
+\]
+二面角为直二面角等价于两法向量垂直，因此
+\[
+\bs{n}_1\cdot\bs{n}_2=\lambda^2(\lambda^2-2)=0
+\]
+由 \(\lambda>0\)，得 \(\lambda=\sqrt2\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -277,7 +484,11 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item 由频率分布直方图可知，列联表为
+\item 由频率分布直方图，各组频率等于组距乘以矩形高. 不低于 \(40\) 分钟的两组频率为 \(0.20\) 和 \(0.05\)，所以体育迷人数为
+\[
+100(0.20+0.05)=25
+\]
+女体育迷为 \(10\) 人，女观众共 \(55\) 人，故女非体育迷为 \(45\) 人；男观众为 \(100-55=45\) 人，男体育迷为 \(25-10=15\) 人，男非体育迷为 \(30\) 人. 列联表为
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
@@ -293,8 +504,16 @@ C
 \end{tabular}
 \end{center}
 
-没有理由认为“体育迷”与性别有关.
-\item \(X\sim B\left(3,\dfrac{1}{4}\right)\)，且
+取 \(a=30\)，\(b=15\)，\(c=45\)，\(d=10\)，则
+\[
+\chi^2=\frac{100(30\times10-15\times45)^2}{45\times55\times75\times25}=\frac{100}{33}\approx3.03<3.841
+\]
+在显著性水平 \(0.05\) 下，没有充分证据认为“体育迷”与性别有关.
+\item 体育迷的频率为 \(\dfrac{25}{100}=\dfrac14\)，且三次抽取相互独立，所以 \(X\sim B\left(3,\dfrac{1}{4}\right)\). 对 \(k=0\)，\(1\)，\(2\)，\(3\)，有
+\[
+P(X=k)=\mathrm C_3^k\left(\frac14\right)^k\left(\frac34\right)^{3-k}
+\]
+因此分布列为
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
@@ -304,7 +523,8 @@ C
 \hline
 \end{tabular}
 \end{center}
-\(E(X)=\dfrac{3}{4}\)，\(D(X)=\dfrac{9}{16}\).
+二项分布的期望和方差分别为
+\(E(X)=np=3\times\frac14=\frac34\)，\(D(X)=np(1-p)=3\times\frac14\times\frac34=\frac9{16}\).
 \end{enumerate}
 \end{solution}
 
@@ -313,7 +533,7 @@ C
 
 \begin{enumerate}
 \item 求直线 \(AA_{1}\) 与直线 \(A_{2}B\) 交点 \(M\) 的轨迹方程.
-\item 设动圆 \(C: x^{2} + y^{2} = t_{2}^{2}\) 与 \(C_{0}\) 相交于 \(A'\)，\(B'\)，\(C'\)，\(D'\) 四点，其中 \(b < t_{2} < a\)，\(t_{1} \neq t_{2}\). 若矩形 \(ABCD\) 与矩形 \(A'B'C'D'\) 的面积相等，证明：\(t_{1}^{2} + t_{2}^{2}\) 为定值.
+\item 设动圆 \(C_{2}: x^{2} + y^{2} = t_{2}^{2}\) 与 \(C_{0}\) 相交于 \(A'\)，\(B'\)，\(C'\)，\(D'\) 四点，其中 \(b < t_{2} < a\)，\(t_{1} \neq t_{2}\). 若矩形 \(ABCD\) 与矩形 \(A'B'C'D'\) 的面积相等，证明：\(t_{1}^{2} + t_{2}^{2}\) 为定值.
 \end{enumerate}
 
 \FigureLayoutDeclare{img/2012/liaoning_science/q20_fig1.png}{8.0cm}{51bp 50bp 12bp 65bp}
@@ -322,8 +542,38 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item \( \dfrac{x^{2}}{a^{2}}-\dfrac{y^{2}}{b^{2}}=1 \)，其中 \(x<-a\)，\(y<0\).
-\item \(t_{1}^{2}+t_{2}^{2}=a^{2}+b^{2}\).
+\item 设椭圆与圆在左上方的交点为 \(A=(x,y)\)，则 \(-a<x<0\)，\(y>0\)，且由对称性 \(B=(x,-y)\). 两顶点为 \(A_1=(-a,0)\)，\(A_2=(a,0)\).
+
+直线 \(AA_1\) 的方程为 \(Y=\dfrac{y}{x+a}(X+a)\)，直线 \(A_2B\) 的方程为 \(Y=\dfrac{y}{a-x}(X-a)\). 联立两式，得
+\(X=\frac{a^2}{x}\)，\(Y=\frac{ay}{x}\).
+于是
+\[
+\frac{X^2}{a^2}-\frac{Y^2}{b^2}
+=\frac{a^2}{x^2}-\frac{a^2y^2}{b^2x^2}
+=\frac{a^2}{x^2}\left(1-\frac{y^2}{b^2}\right)
+\]
+由 \(\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}=1\)，有 \(1-\dfrac{y^2}{b^2}=\dfrac{x^2}{a^2}\)，故
+\[
+\frac{X^2}{a^2}-\frac{Y^2}{b^2}=1
+\]
+又 \(x<0\)，\(y>0\)，所以 \(X<-a\)，\(Y<0\). 轨迹为双曲线 \(\dfrac{X^2}{a^2}-\dfrac{Y^2}{b^2}=1\) 的左下支.
+\item 设第一动圆与椭圆的交点为 \((\pm u_1,\pm v_1)\)，第二动圆与椭圆的交点为 \((\pm u_2,\pm v_2)\)，其中 \(u_i\)，\(v_i>0\). 则矩形面积分别为 \(4u_1v_1\) 和 \(4u_2v_2\). 由
+\(\frac{u_i^2}{a^2}+\frac{v_i^2}{b^2}=1\)，\(u_i^2+v_i^2=t_i^2\)
+解得
+\(u_i^2=\frac{a^2(t_i^2-b^2)}{a^2-b^2}\)，\(v_i^2=\frac{b^2(a^2-t_i^2)}{a^2-b^2}\).
+面积相等且各量为正，故平方后有
+\[
+(t_1^2-b^2)(a^2-t_1^2)=(t_2^2-b^2)(a^2-t_2^2)
+\]
+展开并移项，得
+\[
+(t_1^2-t_2^2)(a^2+b^2-t_1^2-t_2^2)=0
+\]
+由 \(t_1\ne t_2\)，可知 \(t_1^2\ne t_2^2\)，所以
+\[
+t_1^2+t_2^2=a^2+b^2
+\]
+为定值.
 \end{enumerate}
 \end{solution}
 
@@ -337,13 +587,58 @@ C
 \end{problem}
 
 \begin{solution}
-\(a=0\)，\(b=-1\).
+\begin{enumerate}
+\item 因为曲线经过 \((0,0)\)，所以 \(f(0)=1+b=0\)，得 \(b=-1\). 又
+\[
+f'(x)=\frac1{x+1}+\frac1{2\sqrt{x+1}}+a
+\]
+而在 \((0,0)\) 处相切意味着 \(f'(0)=\dfrac32\)，故
+\[
+1+\frac12+a=\frac32
+\]
+从而 \(a=0\).
+\item 由上问，\(f(x)=\ln(1+x)+\sqrt{1+x}-1\). 先证明对 \(u>1\)，有
+\[
+\ln u<\frac{u-u^{-1}}2
+\]
+事实上，令 \(\phi(u)=\dfrac{u-u^{-1}}2-\ln u\)，则
+\[
+\phi'(u)=\frac{(u-1)^2}{2u^2}>0
+\]
+且 \(\phi(1)=0\)，所以不等式成立. 取 \(u=1+x\)，得
+\[
+\ln(1+x)<\frac{x(x+2)}{2(x+1)}
+\]
+令 \(t=\sqrt{1+x}\)，则 \(1<t<\sqrt3\)，并且
+\[
+\frac{x(x+2)}{2(x+1)}+\sqrt{1+x}-1
+=x\left(\frac{x+2}{2(x+1)}+\frac1{t+1}\right)
+\]
+下面证明
+\[
+\frac{x+2}{2(x+1)}+\frac1{t+1}<\frac9{x+6}
+\]
+将其化为关于 \(t\) 的不等式，右边减去左边后通分，分母 \(2t^2(t+1)(t^2+5)>0\)，分子为
+\[
+18t^2(t+1)-(t^2+1)(t+1)(t^2+5)-2t^2(t^2+5)
+=(t-1)(-t^4-4t^3+8t^2+10t+5)
+\]
+因为 \(1<t<\sqrt3<2\)，有 \(-t^4>-3t^2\)，\(-4t^3>-12t\)，所以
+\[
+-t^4-4t^3+8t^2+10t+5>5t^2-2t+5>0
+\]
+故该分子为正，从而上述不等式成立. 于是
+\[
+f(x)<\frac{x(x+2)}{2(x+1)}+\sqrt{1+x}-1<\frac{9x}{x+6}
+\]
+证毕.
+\end{enumerate}
 \end{solution}
 
 \section{选考题：解答题}
 
 \begin{problem}
-如图，\(\odot O\) 和 \(\odot O'\) 相交于 \(A\)，\(B\) 两点，过 \(A\) 作两圆的切线分别交两圆于 \(C\)，\(D\) 两点，连接 \(DB\) 并延长交 \(\odot O'\) 于点 \(E\). 证明：
+如图，\(\odot O\) 和 \(\odot O'\) 相交于 \(A\)，\(B\) 两点，过 \(A\) 作两圆的切线分别交两圆于 \(C\)，\(D\) 两点，连接 \(DB\) 并延长交 \(\odot O\) 于点 \(E\). 证明：
 
 \begin{enumerate}
 \item \(AC \cdot BD = AD \cdot AB\).
@@ -355,8 +650,32 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item \(AC\cdot BD=AD\cdot AB\).
-\item \(AC=AE\).
+\item 由 \(AC\) 是圆 \(\odot O'\) 在 \(A\) 处的切线，利用弦切角定理得
+\[
+\angle CAB=\angle ADB
+\]
+由 \(AD\) 是圆 \(\odot O\) 在 \(A\) 处的切线，得
+\[
+\angle ACB=\angle DAB
+\]
+所以 \(\triangle CAB\sim\triangle ADB\)，从而
+\[
+\frac{AC}{AD}=\frac{AB}{BD}
+\]
+即 \(AC\cdot BD=AD\cdot AB\).
+\item 由上面的相似三角形，得 \(\angle CBA=\angle ABD\). 又因为 \(B\)，\(D\)，\(E\) 三点共线，故
+\[
+\angle ABE=180^\circ-\angle ABD=180^\circ-\angle CBA
+\]
+四点 \(A\)，\(B\)，\(C\)，\(E\) 共圆，所以圆内接四边形的对角互补，得
+\[
+\angle CEA=180^\circ-\angle CBA=\angle ABE
+\]
+在同一圆中，\(\angle ABE\) 与 \(\angle ACE\) 同弦 \(AE\)，故 \(\angle ABE=\angle ACE\). 于是
+\[
+\angle CEA=\angle ACE
+\]
+所以 \(\triangle ACE\) 为等腰三角形，得 \(AC=AE\).
 \end{enumerate}
 \end{solution}
 
@@ -371,14 +690,23 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item \(C_{1}\)：\(\rho=2\)，\(C_{2}\)：\(\rho=4\cos\theta\)；交点坐标为 \(\left(2,\dfrac{\pi}{3}\right)\)，\(\left(2,\dfrac{5\pi}{3}\right)\).
-\item 公共弦的参数方程为
+\item 由 \(x=\rho\cos\theta\)，\(y=\rho\sin\theta\)，圆 \(C_1\) 的方程化为 \(\rho^2=4\)，即 \(\rho=2\). 圆 \(C_2\) 的方程化为
+\[
+\rho^2-4\rho\cos\theta+4=4
+\]
+所以 \(\rho=4\cos\theta\). 交点同时满足两式，故 \(2=4\cos\theta\)，从而 \(\theta=\dfrac\pi3\) 或 \(\dfrac{5\pi}3\)，交点的极坐标为
+\(\left(2,\frac\pi3\right)\)，\(\left(2,\frac{5\pi}3\right)\).
+\item 两圆方程相减，得
+\[
+\left(x-2\right)^2+y^2-(x^2+y^2)=0\Longrightarrow x=1
+\]
+代入 \(C_1\) 得 \(1+y^2=4\)，所以 \(-\sqrt3\leqslant y\leqslant\sqrt3\). 令 \(y=t\)，公共弦的参数方程为
 \[
 \begin{cases}
 x=1,\\
 y=t,
 \end{cases}
-\qquad -\sqrt{3}\leqslant t\leqslant\sqrt{3}.
+\qquad -\sqrt{3}\leqslant t\leqslant\sqrt{3}
 \]
 \end{enumerate}
 \end{solution}
@@ -393,5 +721,21 @@ y=t,
 \end{problem}
 
 \begin{solution}
-\(a=2\)，且 \(k\geqslant 1\).
+\begin{enumerate}
+\item 不等式 \(|ax+1|\leqslant3\) 的解集中心为 \(-\dfrac1a\)，半长为 \(\dfrac3{|a|}\). 题设区间的中心和半长分别为
+\(\frac{-2+1}{2}=-\frac12\)，\(\frac{1-(-2)}2=\frac32\).
+所以 \(-\dfrac1a=-\dfrac12\)，从而 \(a=2\)；此时半长 \(\dfrac3{|a|}=\dfrac32\) 也相符.
+\item 由 \(a=2\)，有
+\(f(x)=|2x+1|\)，\(f\left(\frac x2\right)=|x+1|\).
+利用绝对值不等式 \(\bigl||u|-|v|\bigr|\leqslant|u-v|\)，取 \(u=2x+1\)，\(v=2x+2\)，得
+\[
+\left|f(x)-2f\left(\frac x2\right)\right|
+=\bigl||2x+1|-2|x+1|\bigr|
+=\bigl||2x+1|-|2x+2|\bigr|\leqslant1
+\]
+当 \(x=0\) 时，左端等于 \(|1-2|=1\)，故最大值为 \(1\). 因此恒成立的充要条件为
+\[
+k\geqslant1
+\]
+\end{enumerate}
 \end{solution}

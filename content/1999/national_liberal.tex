@@ -63,6 +63,7 @@ A
 
 \begin{problem}
 函数 \(f(x) = M \sin (\omega x + \varphi)\)（\(\omega > 0\)）在区间 \([a, b]\) 上是增函数，且 \(f(a) = -M\)，\(f(b) = M\)，则函数 \(g(x) = M \cos (\omega x + \varphi)\) 在 \([a, b]\) 上（\quad）
+
 \choices
     {是增函数}
     {是减函数}
@@ -75,7 +76,7 @@ C
 \end{answer}
 
 \begin{solution}
-记 \(u=\omega x+\varphi\). 由于 \(f\) 在 \([a,b]\) 上递增，且在端点分别取得最小值 \(-M\) 和最大值 \(M\)，相位从正弦函数的谷值沿递增支变化到峰值. 因而可写成
+因为 \(f\) 在 \([a,b]\) 上递增且 \(f(a)=-M<f(b)=M\)，所以 \(M>0\). 记 \(u=\omega x+\varphi\). 由于 \(f\) 在 \([a,b]\) 上递增，且在端点分别取得最小值 \(-M\) 和最大值 \(M\)，相位从正弦函数的谷值沿递增支变化到峰值. 因而可写成
 \(u(a)=\frac{3\pi}{2}+2k\pi\)，\(u(b)=\frac{5\pi}{2}+2k\pi\)，其中 \(k\in\Z\)，并且 \(u\) 在该区间内递增.
 
 于是 \(g(x)=M\cos u\) 在此过程中经历从 \(0\) 到 \(M\) 再回到 \(0\) 的变化，故可以取得最大值 \(M\)，选 C.
@@ -143,7 +144,7 @@ B
 圆柱内水的体积为
 \(V=\pi\cdot2^2\cdot6=24\pi\ \mathrm{cm}^3\).
 
-设倒圆锥中水面的半径为 \(r\)，水面高度为 \(h\). 由于倒圆锥的轴截面为正三角形，圆锥的底面直径与高满足 \(2r=h\sqrt3\)，即 \(r=h/\sqrt3\). 因而水的体积为
+设倒圆锥中水面的半径为 \(r\)，水面高度为 \(h\). 水面以下的小圆锥与原倒圆锥相似，其轴截面是正三角形，且该截面的底边为 \(2r\)，所以 \(h=\frac{\sqrt3}{2}\cdot2r=\sqrt3r\)，即 \(r=h/\sqrt3\). 因而水的体积为
 \(V=\frac13\pi r^2h=\frac13\pi\cdot\frac{h^2}{3}\cdot h=\frac{\pi h^3}{9}\).
 
 由体积不变，得 \(\frac{\pi h^3}{9}=24\pi\)，所以 \(h^3=216\)，从而 \(h=6\ \mathrm{cm}\). 因此选 B.
@@ -211,7 +212,11 @@ D
 \end{answer}
 
 \begin{solution}
-由题设距离条件知，上棱 \(EF\) 所在的平面与底面 \(ABCD\) 的距离为 \(2\). 对于底面固定、上棱平行于 \(AB\) 且长度固定的这个多面体，在与底面平行的任一高度处，截面由底面正方形和上棱的相应缩短线段合成；若该高度占总高的比例为 \(t\)，则截面的两边长分别为 \(3(1-t)+\frac32t\) 和 \(3(1-t)\)，所以截面面积与上棱的水平位置无关. 因而可作等积变换，令 \(E\) 在 \(D\) 的正上方，且 \(ED\perp\) 平面 \(ABCD\)，\(ED=2\).
+由题图可知，\(EF\) 到底面 \(ABCD\) 的距离为 \(2\). 设从底面起高为 \(2t\)（\(0\leqslant t\leqslant1\)）的截面面积为 \(A_t\). 该截面在 \(EF\) 方向的边长为 \(3(1-t)+\frac32t\)，在垂直于 \(EF\) 的方向的边长为 \(3(1-t)\)，所以
+\[
+A_t=\left(3(1-t)+\frac32t\right)3(1-t)
+\]
+这个面积只由 \(t\) 决定，与 \(EF\) 在底面上的水平位置无关. 因此由卡瓦列里原理，可将 \(EF\) 平行于底面平移到 \(E\) 在 \(D\) 的正上方的位置而不改变多面体体积；此时 \(ED\perp\) 平面 \(ABCD\)，且 \(ED=2\).
 
 此时该多面体可按公共面 \(FAD\) 分成四棱锥 \(F-ABCD\) 与三棱锥 \(F-ADE\). 四棱锥 \(F-ABCD\) 的高为 \(2\)，其体积为
 \(V_{F-ABCD}=\frac13\cdot3^2\cdot2=6\).
@@ -268,7 +273,7 @@ D
 \[
 \frac{S_{\text{上}}}{S_{\text{下}}}
 =\frac{5+\frac{R+5}{2}}{\frac{R+5}{2}+R}
-=\frac{R+15}{3R+5}=\frac12.
+=\frac{R+15}{3R+5}=\frac12
 \]
 解得 \(2R+30=3R+5\)，所以 \(R=25\). 因此选 D.
 \end{solution}
@@ -328,10 +333,10 @@ C
 \end{answer}
 
 \begin{solution}
-设购买软件 \(x\) 片、磁盘 \(y\) 盒，则 \(x,y\in\Z\)，且
+设购买软件 \(x\) 片、磁盘 \(y\) 盒，则 \(x\)，\(y\in\Z\)，且
 \(x\geqslant3\)，\(y\geqslant2\)，\(60x+70y\leqslant500\).
 
-固定 \(x\) 计数. 当 \(x=3\) 时，\(140\leqslant70y\leqslant320\)，所以 \(y=2,3,4\)，有 \(3\) 种；当 \(x=4\) 时，\(140\leqslant70y\leqslant260\)，所以 \(y=2,3\)，有 \(2\) 种；当 \(x=5\) 时，\(y=2\)，有 \(1\) 种；当 \(x=6\) 时，\(y=2\)，有 \(1\) 种；当 \(x\geqslant7\) 时，即使 \(y=2\) 也超过 \(500\) 元.
+固定 \(x\) 计数. 当 \(x=3\) 时，\(140\leqslant70y\leqslant320\)，所以 \(y=2\)，\(3\)，\(4\)，有 \(3\) 种；当 \(x=4\) 时，\(140\leqslant70y\leqslant260\)，所以 \(y=2\)，\(3\)，有 \(2\) 种；当 \(x=5\) 时，\(y=2\)，有 \(1\) 种；当 \(x=6\) 时，\(y=2\)，有 \(1\) 种；当 \(x\geqslant7\) 时，即使 \(y=2\) 也超过 \(500\) 元.
 
 所以不同选购方式共有 \(3+2+1+1=7\) 种，选 C.
 \end{solution}
@@ -366,7 +371,7 @@ C
 
 \begin{solution}
 设种植 \(A\) 和 \(B\) 的垄号分别为 \(i\) 和 \(j\)，不妨设 \(i<j\). “间隔不少于 \(6\) 垄”表示两垄之间至少有 \(6\) 垄，因此 \(j-i\geqslant7\). 可行的无序垄号对为
-\((1,8),(1,9),(1,10),(2,9),(2,10),(3,10)\)，共 \(6\) 对.
+\((1,8)\)，\((1,9)\)，\((1,10)\)，\((2,9)\)，\((2,10)\)，\((3,10)\)，共 \(6\) 对.
 
 每一对垄号中，\(A\)，\(B\) 的种植顺序有 \(2\) 种，所以不同的选垄方法共有 \(6\times2=12\) 种.
 \end{solution}
@@ -380,11 +385,11 @@ C
 \end{answer}
 
 \begin{solution}
-令 \(p=ab\). 由题设 \(a+b=p-3\). 因为 \(a,b\) 是方程
+令 \(p=ab\). 由题设 \(a+b=p-3\). 因为 \(a\)，\(b\) 是方程
 \(u^2-(p-3)u+p=0\) 的两个正根，所以其判别式必须满足
 \((p-3)^2-4p\geqslant0\)，即 \((p-1)(p-9)\geqslant0\).
 
-又因 \(a,b>0\)，有 \(p=ab=a+b+3>3\)，所以不可能有 \(p\leqslant1\)，从而 \(p\geqslant9\). 反之，对任意 \(p\geqslant9\)，上述方程的两根和 \(p-3>0\)、积 \(p>0\)，且判别式非负，故两根均为正数，能够满足题设. 因此 \(ab\in[9,+\infty)\).
+又因 \(a\)，\(b>0\)，有 \(p=ab=a+b+3>3\)，所以不可能有 \(p\leqslant1\)，从而 \(p\geqslant9\). 反之，对任意 \(p\geqslant9\)，上述方程的两根和 \(p-3>0\)、积 \(p>0\)，且判别式非负，故两根均为正数，能够满足题设. 因此 \(ab\in[9,+\infty)\).
 \end{solution}
 
 \begin{problem}
@@ -417,7 +422,7 @@ C
 \begin{solution}
 由根式有意义，得 \(x>0\) 且 \(3\lg x-2\geqslant0\). 令 \(t=\sqrt{3\lg x-2}\)，则 \(t\geqslant0\)，且 \(3\lg x-2=t^2\). 原方程化为
 \[
-t-t^2+2=0\quad\Longleftrightarrow\quad (t-2)(t+1)=0.
+t-t^2+2=0\quad\Longleftrightarrow\quad (t-2)(t+1)=0
 \]
 由于 \(t\geqslant0\)，所以 \(t=2\)，从而 \(3\lg x-2=4\)，即 \(\lg x=2\)，得 \(x=100\). 经检验，\(x=100\) 满足原方程，因此原方程的解为 \(x=100\).
 \end{solution}
@@ -429,22 +434,22 @@ t-t^2+2=0\quad\Longleftrightarrow\quad (t-2)(t+1)=0.
 \begin{solution}
 当 \(n\geqslant2\) 时，由 \(a_n=S_n-S_{n-1}\) 及已知条件，得
 \[
-a_n-a_{n-1}=5(S_n-S_{n-1})=5a_n,
+a_n-a_{n-1}=5(S_n-S_{n-1})=5a_n
 \]
 所以 \(a_n=-\frac14a_{n-1}\). 当 \(n=1\) 时，\(S_1=a_1\)，于是
 \[
-a_1=5S_1-3=5a_1-3,
+a_1=5S_1-3=5a_1-3
 \]
 解得 \(a_1=\frac34\). 因此数列 \(\{a_n\}\) 是首项为 \(\frac34\)、公比为 \(-\frac14\) 的等比数列.
 
 于是奇数项组成首项为 \(a_1=\frac34\)、公比为 \(\left(-\frac14\right)^2=\frac1{16}\) 的等比数列，故
 \[
-a_1+a_3+\cdots+a_{2n-1}=\frac34\cdot\frac{1-\left(\frac1{16}\right)^n}{1-\frac1{16}}.
+a_1+a_3+\cdots+a_{2n-1}=\frac34\cdot\frac{1-\left(\frac1{16}\right)^n}{1-\frac1{16}}
 \]
 所以
 \[
 \lim_{n\to\infty}(a_1+a_3+\cdots+a_{2n-1})
-=\frac34\cdot\frac1{1-\frac1{16}}=\frac45.
+=\frac34\cdot\frac1{1-\frac1{16}}=\frac45
 \]
 \end{solution}
 
@@ -455,23 +460,23 @@ a_1+a_3+\cdots+a_{2n-1}=\frac34\cdot\frac{1-\left(\frac1{16}\right)^n}{1-\frac1{
 \begin{solution}
 由 \(0<\theta<\frac\pi2\) 知 \(z\) 在第一象限，设 \(\alpha=\arg z\)，则 \(0<\alpha<\frac\pi2\)，且
 \[
-\tan\alpha=\frac{2\sin\theta}{3\cos\theta}=\frac23\tan\theta.
+\tan\alpha=\frac{2\sin\theta}{3\cos\theta}=\frac23\tan\theta
 \]
-因此 \(0<y=\theta-\alpha<\frac\pi2\). 令 \(t=\tan\theta>0\)，利用正切差角公式，得
+因为正切函数在 \(\left(0,\frac\pi2\right)\) 上递增，且 \(\frac23\tan\theta<\tan\theta\)，所以 \(0<\alpha<\theta\)，从而 \(0<y=\theta-\alpha<\frac\pi2\). 令 \(t=\tan\theta>0\)，利用正切差角公式，得
 \[
-\tan y=\frac{t-\frac23t}{1+\frac23t^2}=\frac{t}{3+2t^2}.
+\tan y=\frac{t-\frac23t}{1+\frac23t^2}=\frac{t}{3+2t^2}
 \]
 又因为
 \[
-\frac{3+2t^2}{t}=\frac3t+2t\geqslant2\sqrt6,
+\frac{3+2t^2}{t}=\frac3t+2t\geqslant2\sqrt6
 \]
 所以
 \[
-0<\tan y=\frac{t}{3+2t^2}\leqslant\frac1{2\sqrt6}=\frac{\sqrt6}{12}.
+0<\tan y=\frac{t}{3+2t^2}\leqslant\frac1{2\sqrt6}=\frac{\sqrt6}{12}
 \]
 等号成立当且仅当 \(\frac3t=2t\)，即 \(t=\sqrt{\frac32}=\frac{\sqrt6}{2}\). 由于正切函数在 \(\left(0,\frac\pi2\right)\) 上单调递增，故函数 \(y\) 的最大值为
 \[
-\arctan\frac{\sqrt6}{12},
+\arctan\frac{\sqrt6}{12}
 \]
 对应的 \(\theta=\arctan\frac{\sqrt6}{2}\).
 \end{solution}
@@ -492,18 +497,18 @@ a_1+a_3+\cdots+a_{2n-1}=\frac34\cdot\frac{1-\left(\frac1{16}\right)^n}{1-\frac1{
 \begin{enumerate}
 \item 设 \(O=AC\cap BD\)，连接 \(EO\). 因为 \(ABCD\) 是正方形，所以 \(DO\perp AC\). 又 \(ED\perp\) 底面 \(ABCD\)，所以 \(ED\perp AC\). 直线 \(ED\) 与 \(DO\) 是平面 \(EDO\) 内相交的两条直线，且都垂直 \(AC\)，故 \(AC\perp\) 平面 \(EDO\)，从而 \(EO\perp AC\). 因此 \(\angle EOD\) 是平面 \(EAC\) 与底面 \(ABCD\) 所成二面角的平面角，故 \(\angle EOD=45^\circ\). 在直角三角形 \(EOD\) 中，\(DO=\frac{\sqrt2}{2}a\)，所以
 \[
-EO=DO\sec45^\circ=a.
+EO=DO\sec45^\circ=a
 \]
 又 \(AC=\sqrt2a\)，故
 \[
-S_{\triangle EAC}=\frac12AC\cdot EO=\frac{\sqrt2}{2}a^2.
+S_{\triangle EAC}=\frac12AC\cdot EO=\frac{\sqrt2}{2}a^2
 \]
 
 \item 由于 \(A_1A\perp\) 底面 \(ABCD\)，所以 \(A_1A\perp AC\)，又 \(A_1A\perp A_1B_1\)，故 \(A_1A\) 是异面直线 \(A_1B_1\) 与 \(AC\) 的公垂线.
 
 在平面 \(D_1DB\) 内，平面 \(EAC\) 与它的交线为 \(EO\). 由 \(D_1B\parallel\) 平面 \(EAC\)，得 \(D_1B\parallel EO\). 在三角形 \(D_1DB\) 中，\(O\) 是 \(DB\) 的中点，且 \(EO\parallel D_1B\)，所以 \(E\) 是 \(D_1D\) 的中点. 由中位线定理，\(D_1B=2EO=2a\). 又 \(DB=\sqrt2a\)，且 \(D_1D\perp DB\)，于是
 \[
-D_1D=\sqrt{D_1B^2-DB^2}=\sqrt{4a^2-2a^2}=\sqrt2a.
+D_1D=\sqrt{D_1B^2-DB^2}=\sqrt{4a^2-2a^2}=\sqrt2a
 \]
 正四棱柱的高 \(A_1A=D_1D\)，故异面直线 \(A_1B_1\) 与 \(AC\) 之间的距离为 \(\sqrt2a\).
 
@@ -511,16 +516,16 @@ D_1D=\sqrt{D_1B^2-DB^2}=\sqrt{4a^2-2a^2}=\sqrt2a.
 \(A(0,0,0)\)，\(C(a,a,0)\)，\(E\left(0,a,\frac{a}{\sqrt2}\right)\)，\(B_1(a,0,\sqrt2a)\).
 由三点 \(A\)，\(C\)，\(E\) 得平面 \(EAC\) 的方程为
 \[
-x-y+\sqrt2z=0.
+x-y+\sqrt2z=0
 \]
 点 \(B_1\) 到该平面的距离为
 \[
-h=\frac{\left|a-0+\sqrt2\cdot\sqrt2a\right|}{\sqrt{1+1+2}}=\frac{3a}{2}.
+h=\frac{\left|a-0+\sqrt2\cdot\sqrt2a\right|}{\sqrt{1+1+2}}=\frac{3a}{2}
 \]
 因此
 \[
 V_{B_1-EAC}=\frac13S_{\triangle EAC}\cdot h
-=\frac13\cdot\frac{\sqrt2}{2}a^2\cdot\frac{3a}{2}=\frac{\sqrt2}{4}a^3.
+=\frac13\cdot\frac{\sqrt2}{2}a^2\cdot\frac{3a}{2}=\frac{\sqrt2}{4}a^3
 \]
 \end{enumerate}
 \end{solution}
@@ -546,22 +551,22 @@ V_{B_1-EAC}=\frac13S_{\triangle EAC}\cdot h
 \end{center}
 
 \FigureLayoutDeclare{img/1999/national_liberal/q23_fig1.png}{7.5cm}{38bp 44bp 27bp 34bp}
-\bitmapfigure[float=inline,width=0.95\linewidth]{img/1999/national_liberal/q23_fig1.png}
+\bitmapfigure[float=inline,width=0.90\linewidth]{img/1999/national_liberal/q23_fig1.png}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
 \item 设安装 \(n\) 对轧辊后带钢的厚度为 \(t_n\). 每对轧辊的减薄率不超过 \(r_0\)，所以每经过一对轧辊，厚度至少保留原来的 \(1-r_0\)，从而
 \[
-t_n\geqslant\alpha(1-r_0)^n.
+t_n\geqslant\alpha(1-r_0)^n
 \]
 要使带钢厚度能够减薄到不超过 \(\beta\)，必须有
 \[
-\alpha(1-r_0)^n\leqslant\beta.
+\alpha(1-r_0)^n\leqslant\beta
 \]
 由于 \(0<1-r_0<1\)，两边取对数并注意 \(\lg(1-r_0)<0\)，得
 \[
-n\geqslant\frac{\lg\beta-\lg\alpha}{\lg(1-r_0)}.
+n\geqslant\frac{\lg\beta-\lg\alpha}{\lg(1-r_0)}
 \]
 因此至少需要安装
 \[
@@ -571,11 +576,11 @@ n_{\min}=\left\lceil\frac{\lg\beta-\lg\alpha}{\lg(1-r_0)}\right\rceil
 
 \item 设带钢宽度为 \(w\)，第 \(k\) 对轧辊出口处的厚度为 \(t_k=\alpha(0.8)^k\). 第 \(k\) 对轧辊压出的两个相邻疵点之间的带钢长度为 \(1600\mathrm{~mm}\)，其体积为 \(1600t_kw\). 经过第 \(4\) 对轧辊后，这段带钢的长度为 \(L_k\)，厚度为 \(t_4=\alpha(0.8)^4\)，体积为 \(L_kt_4w\). 因为轧钢过程中不考虑损耗，且带钢宽度不变，所以
 \[
-1600t_kw=L_kt_4w,
+1600t_kw=L_kt_4w
 \]
 即
 \[
-L_k=1600\frac{t_k}{t_4}=1600\cdot(0.8)^{k-4}.
+L_k=1600\frac{t_k}{t_4}=1600\cdot(0.8)^{k-4}
 \]
 因此 \(L_1=3125\mathrm{~mm}\)，\(L_2=2500\mathrm{~mm}\)，\(L_3=2000\mathrm{~mm}\).
 \end{enumerate}
@@ -590,12 +595,12 @@ L_k=1600\frac{t_k}{t_4}=1600\cdot(0.8)^{k-4}.
 \begin{solution}
 先设 \(B=(-1,t)\)，其中 \(t\in\R\)，并记 \(OB=r=\sqrt{1+t^2}\). 当 \(t\neq0\) 时，在三角形 \(AOB\) 中，由角平分线定理
 \[
-\frac{AC}{CB}=\frac{AO}{OB}=\frac ar.
+\frac{AC}{CB}=\frac{AO}{OB}=\frac ar
 \]
 因此点 \(C\) 的坐标为内分点坐标
 \[
 C\left(\frac{r\cdot a+a\cdot(-1)}{a+r},\frac{a\cdot t}{a+r}\right)
-=\left(\frac{a(r-1)}{a+r},\frac{at}{a+r}\right).
+=\left(\frac{a(r-1)}{a+r},\frac{at}{a+r}\right)
 \]
 记 \(C(x,y)\)，则
 \(x=\frac{a(r-1)}{a+r}\)，\(y=\frac{at}{a+r}\).
@@ -610,15 +615,23 @@ C\left(\frac{r\cdot a+a\cdot(-1)}{a+r},\frac{a\cdot t}{a+r}\right)
 \]
 所以点 \(C\) 的轨迹方程为
 \[
-(1-a)x^2-2ax+(1+a)y^2=0.
+(1-a)x^2-2ax+(1+a)y^2=0
 \]
 当 \(t=0\) 时，\(B=(-1,0)\)，此时 \(AB\) 与 \(OA\) 共线，角平分线与 \(AB\) 交于 \(O\)，仍得到 \(C=(0,0)\). 因此轨迹方程应结合条件 \(0\leqslant x<a\) 取值.
 
-反过来，对满足该方程及 \(0<x<a\) 的点，令 \(r=\dfrac{a(1+x)}{a-x}\)，再由 \(t=\dfrac{y(a+r)}a\) 定义 \(B=(-1,t)\)，可验证 \(r^2=1+t^2\)，故这些点均可由相应的动点 \(B\) 得到；当 \(x=0\) 时，方程给出 \(y=0\)，正对应于上面的 \(B=(-1,0)\). 所以轨迹为上述方程在 \(0\leqslant x<a\) 内的部分.
+反过来，取满足该方程及 \(0<x<a\) 的点 \(C(x,y)\)，令 \(r=\dfrac{a(1+x)}{a-x}\)，并令 \(t=\dfrac{y(a+r)}a\). 由
+\(r-1=\frac{(a+1)x}{a-x}\)，\(a+r=\frac{a(a+1)}{a-x}\)
+可得 \(t=\dfrac{(a+1)y}{a-x}\). 又由轨迹方程 \((a+1)y^2=(a-1)x^2+2ax\)，有
+\[
+r^2-1=\frac{a^2(1+x)^2-(a-x)^2}{(a-x)^2}=\frac{(a+1)\bigl((a-1)x^2+2ax\bigr)}{(a-x)^2}=t^2
+\]
+故 \(r^2=1+t^2\)，点 \(B=(-1,t)\) 确实满足 \(OB=r\). 另外
+\(\frac{a(r-1)}{a+r}=x\)，\(\frac{at}{a+r}=y\)
+所以由角平分线定理得到的交点正是 \(C(x,y)\). 当 \(x=0\) 时，方程给出 \(y=0\)，正对应于上面的 \(B=(-1,0)\). 所以轨迹为上述方程在 \(0\leqslant x<a\) 内的部分.
 
 当 \(0<a<1\) 时，方程可化为
 \[
-(1-a)\left(x-\frac{a}{1-a}\right)^2+(1+a)y^2=\frac{a^2}{1-a},
+(1-a)\left(x-\frac{a}{1-a}\right)^2+(1+a)y^2=\frac{a^2}{1-a}
 \]
 表示椭圆的一段.
 
@@ -626,7 +639,7 @@ C\left(\frac{r\cdot a+a\cdot(-1)}{a+r},\frac{a\cdot t}{a+r}\right)
 
 当 \(a>1\) 时，方程可化为
 \[
-(a-1)\left(x+\frac{a}{a-1}\right)^2-(a+1)y^2=\frac{a^2}{a-1},
+(a-1)\left(x+\frac{a}{a-1}\right)^2-(a+1)y^2=\frac{a^2}{a-1}
 \]
 表示双曲线的一段.
 \end{solution}

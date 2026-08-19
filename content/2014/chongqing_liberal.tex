@@ -13,6 +13,9 @@
 \begin{answer}
 B
 \end{answer}
+\begin{solution}
+该复数为 \(z=-2+\i\)，所以它在复平面内对应的点为 \((-2,1)\). 实部为负、虚部为正，故该点位于第二象限，选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -26,6 +29,15 @@ B
 \begin{answer}
 B
 \end{answer}
+\begin{solution}
+设等差数列的公差为 \(d\)，则 \(a_n=2+(n-1)d\). 由题意，
+
+\[
+a_3+a_5=(2+2d)+(2+4d)=4+6d=10
+\]
+
+解得 \(d=1\)，所以 \(a_7=2+6d=8\)，选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -39,6 +51,15 @@ B
 \begin{answer}
 A
 \end{answer}
+\begin{solution}
+全校学生人数为 \(3500+1500=5000\)，高中生所占比例为 \(\frac{3500}{5000}=\frac{7}{10}\). 分层抽样保持抽取比例相同，因此
+
+\[
+\frac{70}{n}=\frac{7}{10}
+\]
+
+解得 \(n=100\)，选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -52,12 +73,25 @@ A
 \begin{answer}
 D
 \end{answer}
+\begin{solution}
+逐项检验偶函数条件 \(f(-x)=f(x)\). 取 \(x=1\)，前三个函数分别有
+
+\(f(1)=0\ne f(-1)=-2\)，\(f(1)=2\ne f(-1)=0\)，\(f(1)=2-\frac12\ne f(-1)=\frac12-2\)，
+
+因此前三项都不是偶函数. 对第四个函数，
+
+\[
+f(-x)=2^{-x}+2^x=2^x+2^{-x}=f(x)
+\]
+
+所以第四个函数是偶函数，选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
 执行如图所示的程序框图，则输出 \(s\) 的值为（\quad）
 
-\texfigure[width=0.42\linewidth]{img_repaint/2014/chongqing_liberal/q5_fig1.tex}
+\bitmapfigure[width=0.42\linewidth]{img/2014/chongqing_liberal/q5_fig1.png}
 
 \choices
     {10}
@@ -67,6 +101,15 @@ D
 \begin{answer}
 C
 \end{answer}
+\begin{solution}
+按流程执行，初始 \(k=2\)，\(s=0\). 每次满足 \(k<10\) 时先把当前的 \(k\) 加入 \(s\)，再令 \(k=2k-1\)：
+
+\[
+(k,s):(2,0)\to(3,2)\to(5,5)\to(9,10)\to(17,19)
+\]
+
+此时 \(k=17\)，不再满足 \(k<10\)，而题干要求输出的是 \(s\)，故输出 \(s=19\)，选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -80,6 +123,9 @@ C
 \begin{answer}
 A
 \end{answer}
+\begin{solution}
+对任意实数 \(x\)，均有 \(|x|\geqslant0\)，所以命题 \(p\) 为真. 将 \(x=1\) 代入方程 \(x+2=0\) 得 \(3\ne0\)，故 \(q\) 为假，\(\neg q\) 为真. 因此 \(p\wedge\neg q\) 为真，选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -95,6 +141,23 @@ A
 \begin{answer}
 C
 \end{answer}
+\begin{solution}
+由三视图可还原出：俯视图的底面是直角三角形，直角边长分别为 \(4\) 和 \(3\)，几何体在较低处的高度为 \(2\)，在直角三角形的一条长为 \(3\) 的直角边上方的高度为 \(5\).
+
+先把高度为 \(2\) 的部分看作三棱柱，其体积为
+
+\[
+V_1=\frac12\cdot4\cdot3\cdot2=12
+\]
+
+剩余部分是以俯视图中长为 \(3\) 的直角边对应的竖直矩形为底的棱锥. 这个矩形的两条边长分别为 \(3\) 与 \(5-2=3\)，棱锥顶点对应俯视图中的另一个顶点. 该棱锥的高等于俯视图中从该顶点到长为 \(3\) 的直角边的距离，即 \(4\)，所以
+
+\[
+V_2=\frac13\cdot(3\cdot3)\cdot4=12
+\]
+
+故几何体的体积为 \(V=V_1+V_2=24\)，选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -108,6 +171,25 @@ C
 \begin{answer}
 D
 \end{answer}
+\begin{solution}
+双曲线的焦距为 \(2c\)，对双曲线上任一点 \(P\)，两焦点距离之差的绝对值恒为 \(2a\)，故
+
+\[
+(|PF_1|-|PF_2|)^2=(2a)^2=4a^2
+\]
+
+由题设 \(b^2-3ab=4a^2\). 因 \(a>0\)，\(b>0\)，令 \(t=\frac ba>0\)，得
+
+\(t^2-3t-4=0\)，\((t-4)(t+1)=0\)
+
+所以 \(t=4\)，即 \(b=4a\). 由 \(c^2=a^2+b^2\)，双曲线的离心率为
+
+\[
+e=\frac ca=\sqrt{1+\frac{b^2}{a^2}}=\sqrt{17}
+\]
+
+选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -121,6 +203,25 @@ D
 \begin{answer}
 D
 \end{answer}
+\begin{solution}
+由对数的定义域，需有 \(ab>0\) 且 \(3a+4b>0\). 两式相等且底数均为 \(2\) 的幂，化为
+
+\[
+\frac12\log_2(3a+4b)=\frac12\log_2(ab)
+\]
+
+所以 \(ab=3a+4b\). 因 \(ab>0\) 且 \(3a+4b>0\)，不能有 \(a\)，\(b\) 同为负数，故 \(a\)，\(b>0\). 由
+
+\[
+b(a-4)=3a>0
+\]
+
+知 \(a>4\). 令 \(x=a-4>0\)，则
+
+\(b=3+\frac{12}{x}\)，\(a+b=7+x+\frac{12}{x} \geqslant7+2\sqrt{12}=7+4\sqrt3\).
+
+等号在 \(x=2\sqrt3\) 时取得，故最小值为 \(7+4\sqrt3\)，选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -137,6 +238,43 @@ x, & x \in (0,1]
 \begin{answer}
 A
 \end{answer}
+\begin{solution}
+当 \(x\in(-1,0]\) 时，令 \(t=x+1\)，则 \(t\in(0,1]\)，且
+
+\[
+g(x)=\frac1{x+1}-3-m(x+1)=\frac1t-3-mt
+\]
+
+因此左段零点对应于
+
+\(m=\frac{1-3t}{t^2}=:h(t)\)，\(t\in(0,1]\).
+
+有
+
+\[
+h'(t)=\frac{3t-2}{t^3}
+\]
+
+所以 \(h(t)\) 在 \((0,\frac23)\) 上递减，在 \((\frac23,1]\) 上递增，且
+
+\(h\left(\frac23\right)=-\frac94\)，\(h(1)=-2\).
+
+由上述单调性和端点值可知：当 \(m\in(-\frac94,-2]\) 时，左段有两个零点；当 \(m=-\frac94\) 时有一个零点；当 \(m<-\frac94\) 时没有零点；当 \(m>-2\) 时有一个零点.
+
+当 \(x\in(0,1]\) 时，\(f(x)=x\)，故
+
+\[
+g(x)=(1-m)x-m
+\]
+
+其零点为 \(x=\frac{m}{1-m}\). 要求 \(0<x\leqslant1\)，得到 \(0<m\leqslant\frac12\)，此时右段恰有一个零点；左段也恰有一个零点. 因此总共有两个不同零点时
+
+\[
+m\in\left(-\frac94,-2\right]\cup\left(0,\frac12\right]
+\]
+
+选 A.
+\end{solution}
 \end{problem}
 
 \section{填空题}
@@ -146,6 +284,9 @@ A
 \begin{answer}
 \(\{3,5,13\}\)
 \end{answer}
+\begin{solution}
+交集由同时属于 \(A\) 和 \(B\) 的元素组成. 逐项比较可得公共元素为 \(3\)，\(5\)，\(13\)，所以 \(A\cap B=\{3,5,13\}\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -153,13 +294,45 @@ A
 \begin{answer}
 10
 \end{answer}
+\begin{solution}
+由数量积公式
+
+\[
+\bs a\cdot\bs b=|\bs a|\,|\bs b|\cos60^\circ
+\]
+
+又 \(|\bs a|=\sqrt{(-2)^2+(-6)^2}=2\sqrt{10}\)，所以
+
+\[
+\bs a\cdot\bs b=2\sqrt{10}\cdot\sqrt{10}\cdot\frac12=10
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
-将函数 \( f(x) = \sin (\omega x + \varphi) \)（\(\omega > 0, -\frac{\pi}{2} \leqslant \varphi < \frac{\pi}{2}\)）图象上每一点的横坐标缩短为原来的一半，纵坐标不变，再向右平移 \(\frac{\pi}{6}\) 个单位长度得到 \( y = \sin x \) 的图象，则 \( f\left(\frac{\pi}{6}\right) = \)\fillinblank{}.
+将函数 \( f(x) = \sin (\omega x + \varphi) \)（\(\omega > 0\)，\(-\frac{\pi}{2} \leqslant \varphi < \frac{\pi}{2}\)）图象上每一点的横坐标缩短为原来的一半，纵坐标不变，再向右平移 \(\frac{\pi}{6}\) 个单位长度得到 \( y = \sin x \) 的图象，则 \( f\left(\frac{\pi}{6}\right) = \)\fillinblank{}.
 \begin{answer}
 \(\frac{\sqrt{2}}{2}\)
 \end{answer}
+\begin{solution}
+横坐标缩短为原来的一半后，函数图象变为 \(y=\sin(2\omega x+\varphi)\)；再向右平移 \(\frac\pi6\)，得到
+
+\[
+y=\sin\left(2\omega\left(x-\frac\pi6\right)+\varphi\right)
+\]
+
+它与 \(y=\sin x\) 的图象相同，因此 \(2\omega=1\)，且
+
+\[
+\varphi-\frac\pi6=2k\pi
+\]
+
+由 \(-\frac\pi2\leqslant\varphi<\frac\pi2\) 可知只能取 \(k=0\)，从而 \(\omega=\frac12\)，\(\varphi=\frac\pi6\). 于是
+
+\[
+f\left(\frac\pi6\right)=\sin\left(\frac12\cdot\frac\pi6+\frac\pi6\right)=\sin\frac\pi4=\frac{\sqrt2}{2}
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -167,13 +340,43 @@ A
 \begin{answer}
 \(0\) 或 \(6\)
 \end{answer}
+\begin{solution}
+将圆方程配方得
+
+\[
+(x+1)^2+(y-2)^2=9
+\]
+
+所以圆心 \(C=(-1,2)\)，半径 \(r=3\). 条件 \(AC\perp BC\) 表明圆心角 \(\angle ACB=90^\circ\)，故弦 \(AB\) 到圆心的距离为
+
+\[
+\sqrt{r^2-\left(\frac{AB}{2}\right)^2}=\frac r{\sqrt2}=\frac3{\sqrt2}
+\]
+
+直线 \(x-y+a=0\) 到 \(C\) 的距离为
+
+\[
+\frac{|{-1}-2+a|}{\sqrt2}=\frac{|a-3|}{\sqrt2}
+\]
+
+令两距离相等，得 \(|a-3|=3\)，所以 \(a=0\) 或 \(a=6\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
-某校早上 \(8{:}00\) 上课，假设该校学生小张与小王在早上 \(7{:}30\text{--}7{:}50\) 之间到校，且每人在该时间段的任何时刻到校是等可能的，则小张比小王至少早 \(5\text{ 分钟}\) 到校的概率为\fillinblank{}.（用数字作答）
+某校早上 \(8{:}00\) 上课，假设该校学生小张与小王在早上 \(7{:}30\text{--}7{:}50\) 之间到校，且每人在该时间段的任何时刻到校是等可能的，则小张比小王至少早 \(5\text{ 分钟}\) 到校的概率为\fillinblank{}. （用数字作答）
 \begin{answer}
 \(\frac{9}{32}\)
 \end{answer}
+\begin{solution}
+以 \(7{:}30\) 为计时起点，设小张、小王到校时间分别为 \(X\)，\(Y\)，则 \(X\)，\(Y\) 独立且均匀分布在 \([0,20]\) 上. 样本点 \((X,Y)\) 均匀分布在面积为 \(20^2=400\) 的正方形内.
+
+小张至少早 \(5\) 分钟到校表示 \(Y-X\geqslant5\)，对应正方形内直角三角形区域，边长为 \(20-5=15\)，面积为 \(\frac12\cdot15^2\). 因此所求概率为
+
+\[
+P=\frac{\frac12\cdot15^2}{20^2}=\frac{225}{800}=\frac9{32}
+\]
+\end{solution}
 \end{problem}
 
 \section{解答题}
@@ -188,7 +391,38 @@ A
 \end{problem}
 
 \begin{solution}
-短答案：\(a_{n}=2n-1\)，\(S_{n}=n^{2}\)；\(b_{n}=2\cdot 4^{n-1}\)，\(T_{n}=\frac{2}{3}(4^{n}-1)\).
+\begin{enumerate}
+\item 等差数列的通项为
+
+\[
+a_n=a_1+(n-1)d=1+2(n-1)=2n-1
+\]
+
+因此
+
+\[
+S_n=\frac{n(a_1+a_n)}2=\frac{n[1+(2n-1)]}{2}=n^2
+\]
+
+\item 由 \(a_4=2\cdot4-1=7\)，\(S_4=4^2=16\)，公比 \(q\) 满足
+
+\[
+q^2-(a_4+1)q+S_4=q^2-8q+16=(q-4)^2=0
+\]
+
+所以 \(q=4\). 又 \(b_1=2\)，故
+
+\[
+b_n=b_1q^{n-1}=2\cdot4^{n-1}
+\]
+
+其前 \(n\) 项和为
+
+\[
+T_n=\frac{b_1(q^n-1)}{q-1}
+=\frac{2(4^n-1)}3
+\]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -200,11 +434,41 @@ A
 \item 从成绩在 \( [50,70) \) 的学生中任选 2 人，求此 2 人的成绩都在 \( [60,70) \) 中的概率.
 \end{enumerate}
 
-\texfigure[max width=0.46\linewidth]{img_repaint/2014/chongqing_liberal/q17_fig1.tex}
+\bitmapfigure[width=0.46\linewidth]{img/2014/chongqing_liberal/q17_fig1.png}
 \end{problem}
 
 \begin{solution}
-短答案：\(a=\frac{1}{200}=0.005\)；成绩在 \([50,60)\) 与 \([60,70)\) 中的学生人数分别为 \(2\) 人和 \(6\) 人；所求概率为 \(\frac{15}{28}\).
+\begin{enumerate}
+\item 由直方图可知五个组距为 \(10\)，对应的频率密度依次为 \(2a\)，\(3a\)，\(7a\)，\(6a\)，\(2a\). 频率总和为 \(1\)，所以
+
+\[
+10(2a+3a+7a+6a+2a)=1
+\]
+
+解得 \(a=\frac1{200}=0.005\).
+
+\item 成绩在 \([50,60)\) 内的频率为
+
+\[
+10\cdot2a=\frac1{10}
+\]
+
+所以学生人数为 \(20\cdot\frac1{10}=2\).
+
+成绩在 \([60,70)\) 内的频率为
+
+\[
+10\cdot3a=\frac3{20}
+\]
+
+所以学生人数为 \(20\cdot\frac3{20}=3\).
+
+\item 成绩在 \([50,70)\) 内共有 \(2+3=5\) 人，其中成绩在 \([60,70)\) 内的有 \(3\) 人. 从这 \(5\) 人中任选 \(2\) 人，基本事件总数为 \(\mathrm C_5^2\)，有利事件数为 \(\mathrm C_3^2\)，故所求概率为
+
+\[
+\frac{\mathrm C_3^2}{\mathrm C_5^2}=\frac3{10}
+\]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -217,7 +481,50 @@ A
 \end{problem}
 
 \begin{solution}
-短答案：\(\cos C=-\frac{1}{5}\)；\(a=3\)，\(b=5\).
+\begin{enumerate}
+\item 由 \(a+b+c=8\)，得
+
+\[
+c=8-2-\frac52=\frac72
+\]
+
+由余弦定理，
+
+\[
+\cos C=\frac{a^2+b^2-c^2}{2ab}
+=\frac{2^2+\left(\frac52\right)^2-\left(\frac72\right)^2}{2\cdot2\cdot\frac52}
+=-\frac15
+\]
+
+\item 利用半角公式，题设左端的两倍为
+
+\[
+\sin A(1+\cos B)+\sin B(1+\cos A)
+=\sin A+\sin B+\sin(A+B)
+\]
+
+因为 \(A+B=\pi-C\)，所以 \(\sin(A+B)=\sin C\). 题设从而给出
+
+\[
+\sin A+\sin B+\sin C=4\sin C
+\]
+
+即 \(\sin A+\sin B=3\sin C\). 由正弦定理，\(\sin A:\sin B:\sin C=a:b:c\)，故 \(a+b=3c\). 结合 \(a+b+c=8\)，得 \(c=2\)，\(a+b=6\).
+
+又由三角形面积公式和题设，
+
+\[
+\frac12ab\sin C=\frac92\sin C
+\]
+
+因 \(0<C<\pi\)，\(\sin C>0\)，所以 \(ab=9\). 于是 \(a\)，\(b\) 是方程
+
+\[
+t^2-6t+9=0
+\]
+
+的两个正根，该方程为 \((t-3)^2=0\)，故 \(a=b=3\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -230,7 +537,37 @@ A
 \end{problem}
 
 \begin{solution}
-短答案：\(a=\frac{5}{4}\)；\(f(x)\) 在 \((0,5)\) 上单调递减，在 \((5,+\infty)\) 上单调递增，极小值为 \(-\ln 5\)，无极大值.
+\begin{enumerate}
+\item 函数的定义域为 \((0,+\infty)\)，且
+
+\[
+f'(x)=\frac14-\frac{a}{x^2}-\frac1x
+\]
+
+直线 \(y=\frac12x\) 的斜率为 \(\frac12\)，与其垂直的直线斜率为 \(-2\). 因此
+
+\[
+f'(1)=\frac14-a-1=-2
+\]
+
+解得 \(a=\frac54\).
+
+\item 代入 \(a=\frac54\)，得
+
+\[
+f'(x)=\frac14-\frac5{4x^2}-\frac1x
+=\frac{x^2-4x-5}{4x^2}
+=\frac{(x-5)(x+1)}{4x^2}
+\]
+
+在定义域 \(x>0\) 内，\(4x^2>0\) 且 \(x+1>0\)，所以 \(f'(x)<0\) 当 \(0<x<5\)，\(f'(x)>0\) 当 \(x>5\). 故 \(f(x)\) 在 \((0,5)\) 上单调递减，在 \((5,+\infty)\) 上单调递增，并在 \(x=5\) 处取得极小值
+
+\[
+f(5)=\frac54+\frac{5}{4\cdot5}-\ln5-\frac32=-\ln5
+\]
+
+函数没有极大值.
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -245,7 +582,71 @@ A
 \end{problem}
 
 \begin{solution}
-短答案：\(BC\perp\) 平面 \(POM\)；四棱锥 \(P-ABMO\) 的体积为 \(\frac{5}{16}\).
+\begin{enumerate}
+\item 菱形的对角线互相垂直且平分，且对角线 \(BD\) 平分角 \(ABC\). 由 \(AB=2\)、\(\angle BAD=\frac\pi3\)，得
+
+\[
+OB=\frac{BD}{2}=AB\sin\frac{\angle BAD}{2}
+=2\sin\frac\pi6=1
+\]
+
+又 \(BM=\frac12\)，且因 \(O\) 在对角线 \(BD\) 上、\(BD\) 平分 \(\angle ABC=\frac{2\pi}{3}\)，有 \(\angle OBM=\frac\pi3\)，所以在 \(\triangle OBM\) 中
+
+\[
+OM^2=OB^2+BM^2-2\cdot OB\cdot BM\cos\frac\pi3
+=1+\frac14-\frac12=\frac34
+\]
+
+从而 \(OB^2=OM^2+BM^2\)，所以 \(OM\perp BM\). 因 \(BM\subset BC\)，故 \(OM\perp BC\). 又 \(PO\perp\) 底面 \(ABCD\)，所以 \(PO\perp BC\). 直线 \(OM\) 与 \(PO\) 相交且都在平面 \(POM\) 内，因此 \(BC\perp\) 平面 \(POM\).
+
+\item 菱形的另一条对角线给出
+
+\[
+OA=\frac{AC}{2}=AB\cos\frac{\angle BAD}{2}
+=2\cos\frac\pi6=\sqrt3
+\]
+
+设 \(PO=h\). 由 \(PO\perp\) 底面，
+
+\(PA^2=h^2+OA^2=h^2+3\)，\(PM^2=h^2+OM^2=h^2+\frac34\).
+
+在底面三角形 \(ABM\) 中，\(\angle ABM=\frac{2\pi}{3}\)，故
+
+\[
+AM^2=AB^2+BM^2-2\cdot AB\cdot BM\cos\frac{2\pi}{3}
+=4+\frac14+1=\frac{21}{4}
+\]
+
+由 \(MP\perp AP\)，\(\triangle AMP\) 在 \(P\) 处为直角三角形，因此
+
+\[
+PA^2+PM^2=AM^2
+\]
+
+即
+
+\[
+2h^2+3+\frac34=\frac{21}{4}
+\]
+
+解得 \(h=\frac{\sqrt3}{2}\).
+
+四边形 \(ABMO\) 可由对角线 \(BO\) 分成两个直角三角形，故
+
+\[
+S_{ABMO}=\frac12OA\cdot OB+\frac12BM\cdot OM
+=\frac{\sqrt3}{2}+\frac{\sqrt3}{8}
+=\frac{5\sqrt3}{8}
+\]
+
+所以四棱锥 \(P-ABMO\) 的体积为
+
+\[
+V=\frac13S_{ABMO}\cdot PO
+=\frac13\cdot\frac{5\sqrt3}{8}\cdot\frac{\sqrt3}{2}
+=\frac5{16}
+\]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -260,5 +661,94 @@ A
 \end{problem}
 
 \begin{solution}
-短答案：椭圆的标准方程为 \(\frac{x^2}{2}+y^2=1\)；存在，圆的方程为 \(x^2+\left(y-\frac{5}{3}\right)^2=\frac{32}{9}\).
+\begin{enumerate}
+\item 设椭圆焦距的一半为 \(c\)，则 \(F_1F_2=2c\). 因为 \(DF_1\perp F_1F_2\)，三角形 \(DF_1F_2\) 在 \(F_1\) 处为直角. 由题设比值，
+
+\[
+\frac{2c}{DF_1}=2\sqrt2
+\]
+
+得 \(DF_1=\frac{c}{\sqrt2}\). 于是
+
+\[
+S_{\triangle DF_1F_2}
+=\frac12\cdot\frac{c}{\sqrt2}\cdot2c
+=\frac{c^2}{\sqrt2}
+=\frac{\sqrt2}{2}
+\]
+
+所以 \(c^2=1\). 又 \(a^2-b^2=c^2=1\).
+
+由于 \(F_1F_2\) 在 \(x\) 轴上，且 \(DF_1\perp F_1F_2\)，点 \(D\) 的横坐标为 \(-c\)，且 \(|y_D|=DF_1=\frac1{\sqrt2}\). 代入椭圆方程得
+
+\(\frac1{a^2}+\frac1{2b^2}=1\)，\(a^2-b^2=1\).
+
+令 \(b^2=t>0\)，则 \(a^2=t+1\)，从而
+
+\[
+\frac1{t+1}+\frac1{2t}=1
+\Longrightarrow 2t^2-t-1=0
+\]
+
+因 \(t>0\)，得 \(t=1\)，所以 \(a^2=2\)，\(b^2=1\)，椭圆的标准方程为
+
+\[
+\frac{x^2}{2}+y^2=1
+\]
+
+\item 设两个交点分别为左、右点 \(P_{-}=(-u,y)\)、\(P_{+}=(u,y)\)，其中 \(u>0\)、\(y>0\). 由于圆心在 \(y\) 轴上，圆和椭圆都关于 \(y\) 轴对称，且题设只取 \(x\) 轴上方的两个交点，所以这两个交点必关于 \(y\) 轴对称. 记 \(F_1=(-1,0)\)，\(F_2=(1,0)\).
+
+先考虑左、右交点处的切线分别经过同侧焦点 \(F_1\)、\(F_2\). 两条切线相互垂直，故
+
+\[
+\overrightarrow{F_1P_{-}}\cdot\overrightarrow{F_2P_{+}}
+=(1-u,y)\cdot(u-1,y)=0
+\]
+
+即 \(y^2=(u-1)^2\). 又 \(P_{-}\) 在椭圆上，所以
+
+\[
+\frac{u^2}{2}+y^2=1
+\Longrightarrow \frac{u^2}{2}+(u-1)^2=1
+\Longrightarrow u(3u-4)=0
+\]
+
+因 \(u>0\)，得 \(u=\frac43\)，从而 \(y=\frac13\). 若左、右交点处的切线分别经过异侧焦点 \(F_2\)、\(F_1\)，则
+
+\[
+\overrightarrow{F_2P_{-}}\cdot\overrightarrow{F_1P_{+}}
+=(-u-1,y)\cdot(u+1,y)=0
+\]
+
+即 \(y^2=(u+1)^2\). 因 \(u>0\)，此时 \(y=u+1>1\)，与椭圆上点满足 \(y^2\leqslant1\) 矛盾. 因此只有同侧对应的情形.
+
+设圆心为 \(C=(0,y_0)\). 圆在 \(P_{-}\) 处的半径 \(CP_{-}\) 垂直切线 \(F_1P_{-}\)，所以
+
+\[
+\overrightarrow{CP_{-}}\cdot\overrightarrow{F_1P_{-}}
+=\left(-\frac43,\frac13-y_0\right)\cdot\left(-\frac13,\frac13\right)=0
+\]
+
+解得 \(y_0=\frac53\). 圆的半径满足
+
+\[
+r^2=CP_{-}^2
+=\left(-\frac43\right)^2+\left(\frac13-\frac53\right)^2
+=\frac{32}{9}
+\]
+
+因此所求圆存在，方程为
+
+\[
+x^2+\left(y-\frac53\right)^2=\frac{32}{9}
+\]
+
+为验证没有遗漏的交点，将圆方程与椭圆方程联立，消去 \(x\) 得
+
+\[
+9y^2+30y-11=0=(3y-1)(3y+11)
+\]
+
+椭圆上 \(|y|\leqslant1\)，所以只能有 \(y=\frac13\)，相应的 \(x=\pm\frac43\). 两个交点的纵坐标均为 \(\frac13>0\)，故所求圆确实在 \(x\) 轴上方与椭圆恰有这两个交点，条件满足.
+\end{enumerate}
 \end{solution}

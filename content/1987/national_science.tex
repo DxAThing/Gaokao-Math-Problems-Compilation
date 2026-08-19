@@ -18,7 +18,7 @@ D
 \end{answer}
 
 \begin{solution}
-因为 \(X=S\cap T\subseteq S\)，所以 \(S\cup X=S\)，故选 D.
+由交集定义，\(X=S\cap T\) 的每个元素都属于 \(S\)，所以 \(X\subseteq S\). 因而由集合的吸收律，\(S\cup X=S\)，故选 D.
 \end{solution}
 
 \begin{problem}
@@ -37,7 +37,8 @@ C
 \end{answer}
 
 \begin{solution}
-椭圆的离心率为 \(e=\dfrac{c}{a}\)，其准线垂直于长轴，且到中心的距离为 \(\dfrac{a}{e}=\dfrac{a^2}{c}\). 因此准线方程为 \(x=\pm\dfrac{a^2}{c}\)，故选 C.
+椭圆的焦点为 \(\left(\pm c,0\right)\)，离心率为 \(e=\dfrac{c}{a}\). 由于长轴在 \(x\) 轴上，准线垂直于长轴，所以准线是两条竖直直线；每条准线到中心的距离为
+\(\dfrac{a}{e}=\dfrac{a}{c/a}=\dfrac{a^2}{c}\). 因此准线方程为 \(x=\pm\dfrac{a^2}{c}\)，故选 C.
 \end{solution}
 
 \begin{problem}
@@ -56,9 +57,8 @@ B
 \end{answer}
 
 \begin{solution}
-由 \(ab<0\) 得
-\((a+b)^2-(a-b)^2=4ab<0\).
-由于两边均为非负数，所以 \(|a+b|<|a-b|\)，故选 B. 又因 \(a\)、\(b\) 异号，\(|a-b|=|a|+|b|\)，所以其余选项均不成立.
+由 \(ab<0\) 可知 \(a\)、\(b\) 异号. 计算两边平方之差，得
+\((a+b)^2-(a-b)^2=4ab<0\). 由于两个平方根均非负，所以 \(|a+b|<|a-b|\)，第二个选项正确. 又因为 \(a\)、\(b\) 异号，\(|a-b|=|a|+|b|\)，故选项 D 的严格不等式不成立；反三角不等式给出 \(|a-b|\geqslant\bigl||a|-|b|\bigr|\)，故选项 C 也不成立，选项 A 与第二个选项矛盾.
 \end{solution}
 
 \begin{problem}
@@ -77,9 +77,9 @@ A
 \end{answer}
 
 \begin{solution}
-若点 \(E\)、\(F\)、\(G\)、\(H\) 不共面，而直线 \(EF\) 与 \(GH\) 相交，则相交的两条直线确定一个平面，四个端点都在这个平面内，矛盾. 所以甲能推出乙.
+若甲成立而直线 \(EF\) 与 \(GH\) 相交，则两条相交直线确定一个平面；\(E\)，\(F\) 在直线 \(EF\) 上，\(G\)，\(H\) 在直线 \(GH\) 上，于是四点都在这个平面内，与甲矛盾. 因此甲能推出乙，甲是乙的充分条件.
 
-反之，四点可以共面而使直线 \(EF\) 与 \(GH\) 平行且不相交，因此乙不能推出甲. 故甲是乙的充分条件但不是必要条件，选 A.
+反之，取同一平面内的两条平行直线，令 \(E\)，\(F\) 在其中一条直线上，\(G\)，\(H\) 在另一条直线上，则四点共面，但 \(EF\) 与 \(GH\) 不相交. 所以乙不能推出甲，甲不是乙的必要条件. 故选 A.
 \end{solution}
 
 \begin{problem}
@@ -98,9 +98,11 @@ B
 \end{answer}
 
 \begin{solution}
-在 \((-\infty,0)\) 上，选项 A 中 \(y=-\log_{\frac12}(-x)=\dfrac{\ln(-x)}{\ln2}\)，故 \(y'=\dfrac{1}{x\ln2}<0\)，不是增函数.
+在 \((-\infty,0)\) 上，选项 A 可化为
+\(y=-\log_{\frac12}\left(-x\right)=\dfrac{\ln\left(-x\right)}{\ln2}\)，所以 \(y'=\dfrac{1}{x\ln2}<0\)，不是增函数.
 
-选项 B 中 \(y=\dfrac{x}{1-x}\)，故 \(y'=\dfrac{1}{(1-x)^2}>0\)，在该区间上为增函数. 选项 C 的导数 \(-2(x+1)\) 变号，选项 D 的导数 \(2x<0\)，故选 B.
+选项 B 中
+\(y'=\dfrac{(1-x)+x}{(1-x)^2}=\dfrac{1}{(1-x)^2}>0\)，所以它在整个 \((-\infty,0)\) 上为增函数. 选项 C 的导数为 \(-2(x+1)\)，在 \(x=-1\) 两侧变号，不能在整个区间上递增；选项 D 的导数为 \(2x<0\)，为减函数. 故选 B.
 \end{solution}
 
 \begin{problem}
@@ -119,7 +121,8 @@ D
 \end{answer}
 
 \begin{solution}
-\(y=\sin\left(2x-\dfrac{\pi}{3}\right)=\sin\left(2\left(x-\dfrac{\pi}{6}\right)\right)\). 因此这是将 \(y=\sin2x\) 的图象向右平行移动 \(\dfrac{\pi}{6}\) 得到的，故选 D.
+将自变量写成平移后的形式：
+\(y=\sin\left(2x-\dfrac{\pi}{3}\right)=\sin\left(2\left(x-\dfrac{\pi}{6}\right)\right)\). 若 \(f(x)=\sin2x\)，则新函数为 \(f\left(x-\dfrac{\pi}{6}\right)\)，其图象由 \(y=f(x)\) 向右平移 \(\dfrac{\pi}{6}\) 得到. 故选 D.
 \end{solution}
 
 \begin{problem}
@@ -138,9 +141,11 @@ B
 \end{answer}
 
 \begin{solution}
-由极坐标与直角坐标的关系 \(\rho\sin\theta=y\)、\(\rho\cos\theta=x\)，原方程两边乘以 \(\rho\) 得
-\(\rho^2=y+2x\). 于是 \(x^2+y^2=y+2x\)，即 \((x-1)^2+\left(y-\frac12\right)^2=\frac54\).
-这是一个圆，故选 B.
+由极坐标与直角坐标的关系 \(x=\rho\cos\theta\)、\(y=\rho\sin\theta\)，原方程两边乘以 \(\rho\)，得
+\(\rho^2=\rho\sin\theta+2\rho\cos\theta=y+2x\). 又有 \(\rho^2=x^2+y^2\)，所以
+\(x^2+y^2=y+2x\)，即
+\(\left(x-1\right)^2+\left(y-\dfrac12\right)^2=\dfrac54\).
+这是圆心为 \(\left(1,\dfrac12\right)\)、半径为 \(\dfrac{\sqrt5}{2}\) 的圆，故选 B.
 \end{solution}
 
 \begin{problem}
@@ -159,7 +164,8 @@ A
 \end{answer}
 
 \begin{solution}
-在 \(\left[-\dfrac{\pi}{2},\dfrac{\pi}{2}\right]\) 上有 \(\cos x\geq0\)，并且 \(\arccos(\cos x)=|x|\). 所以函数图象由 \(y=-x\)（\(-\dfrac{\pi}{2}\leq x\leq0\)）和 \(y=x\)（\(0\leq x\leq\dfrac{\pi}{2}\)）组成，是顶点在原点、两端点纵坐标均为 \(\dfrac{\pi}{2}\) 的折线，故选 A.
+在 \(\left[-\dfrac{\pi}{2},\dfrac{\pi}{2}\right]\) 上，\(\cos x\) 的值属于 \([0,1]\)，且反余弦的值域为 \([0,\pi]\). 对 \(x\geqslant0\)，有 \(\arccos(\cos x)=x\)；对 \(x\leqslant0\)，有 \(\arccos(\cos x)=-x\). 因而
+\(y=\left|x\right|\)，即图象由 \(y=-x\)（\(-\dfrac{\pi}{2}\leq x\leqslant0\)）和 \(y=x\)（\(0\leq x\leq\dfrac{\pi}{2}\)）组成. 它是顶点在原点、两端点纵坐标均为 \(\dfrac{\pi}{2}\) 的折线，故选 A.
 \end{solution}
 
 \section{解答题}
@@ -170,8 +176,8 @@ A
 \end{problem}
 
 \begin{solution}
-设周期为 \(T>0\). 因为正切函数的最小正周期为 \(\pi\)，所以应有
-\(\dfrac{2(x+T)}{3}-\dfrac{2x}{3}=\pi\). 解得 \(T=\dfrac{3\pi}{2}\)，故函数的周期为 \(\dfrac{3\pi}{2}\).
+设 \(T>0\) 是该函数的最小正周期. 正切函数的最小正周期为 \(\pi\)，因此要求自变量 \(x\) 增加 \(T\) 后，正切函数的自变量增加 \(\pi\)，即
+\(\dfrac{2(x+T)}{3}-\dfrac{2x}{3}=\dfrac{2T}{3}=\pi\). 解得 \(T=\dfrac{3\pi}{2}\)，故函数的最小正周期为 \(\dfrac{3\pi}{2}\).
 \end{solution}
 
 \begin{problem}
@@ -180,9 +186,10 @@ A
 \end{problem}
 
 \begin{solution}
-分母不能为零，所以 \(\lambda\ne-2,-1\). 当 \(2+\lambda\) 与 \(1+\lambda\) 同号时，方程的两个二次项异号，方程表示双曲线；当 \(2+\lambda>0\)、\(1+\lambda<0\) 时，两个二次项同号，方程表示椭圆；当 \(2+\lambda<0\)、\(1+\lambda>0\) 时，方程无实数解.
+首先分母不能为零，所以 \(\lambda\ne-2\)，\(-1\). 当 \(2+\lambda\) 与 \(1+\lambda\) 同号时，方程左边的两个二次项符号相反，移项后可化为一个正项减去一个正项等于 \(1\)，表示双曲线. 当 \(2+\lambda>0\)、\(1+\lambda<0\) 时，两个二次项都为正，方程表示椭圆；当 \(2+\lambda<0\)、\(1+\lambda>0\) 时，左边两项都为负，不可能等于 \(1\).
 
-因此 \((\lambda+2)(\lambda+1)>0\)，解得 \(\lambda<-2\) 或 \(\lambda>-1\).
+所以表示双曲线的充要条件为
+\((\lambda+2)(\lambda+1)>0\). 解此不等式，得 \(\lambda<-2\) 或 \(\lambda>-1\).
 \end{solution}
 
 \begin{problem}
@@ -191,9 +198,10 @@ A
 \end{problem}
 
 \begin{solution}
-由二项式定理，\(x\) 的系数为 \(\mathrm C_n^1=n\)，\(x^3\) 的系数为 \(\mathrm C_n^3\). 题设给出
+按二项式展开的题意，\(n\) 取正整数. 若 \(n=1\) 或 \(n=2\)，则 \(x^3\) 的系数为 \(0\)，而 \(x\) 的系数为 \(n>0\)，不满足题设，所以 \(n\geqslant3\). 由二项式定理，\(x\) 的系数为 \(\mathrm C_n^1=n\)，\(x^3\) 的系数为 \(\mathrm C_n^3\). 因而
 \(\mathrm C_n^3=7\mathrm C_n^1\)，即 \(\dfrac{n(n-1)(n-2)}{6}=7n\).
-因为 \(x^3\) 的系数存在，\(n\geqslant3\)，故 \(n>0\)，可以约去 \(n\)，得到 \((n-1)(n-2)=42\)，即 \(n^2-3n-40=0\). 所以 \(n=8\) 或 \(n=-5\)，而 \(n\) 为非负整数，故 \(n=8\).
+
+因为 \(n>0\)，可约去 \(n\)，得到 \((n-1)(n-2)=42\)，即 \(n^2-3n-40=0\). 解得 \(n=8\) 或 \(n=-5\)，只有正整数解 \(n=8\).
 \end{solution}
 
 \begin{problem}
@@ -202,9 +210,10 @@ A
 \end{problem}
 
 \begin{solution}
-将分子中的各项合并，得
-\(\dfrac{1+2+\cdots+2n}{n^2+1}=\dfrac{n(2n+1)}{n^2+1}\). 分子分母同除以 \(n^2\)，得到 \(\dfrac{2+\frac1n}{1+\frac1{n^2}}\longrightarrow2\).
-所以原极限为 \(2\).
+由于每一项的分母相同，先合并分子：
+\(\dfrac{1+2+\cdots+2n}{n^2+1}=\dfrac{\dfrac{2n(2n+1)}{2}}{n^2+1}=\dfrac{n(2n+1)}{n^2+1}\). 分子、分母同除以 \(n^2\)，得到
+\(\dfrac{2+\frac1n}{1+\frac1{n^2}}\). 当 \(n\to\infty\) 时，\(\dfrac1n\to0\)、\(\dfrac1{n^2}\to0\)，故原极限为
+\(\dfrac{2+0}{1+0}=2\).
 \end{solution}
 
 \begin{problem}
@@ -217,9 +226,9 @@ A
 \[
 d(P,l)=\frac{|4x-4x^2-5|}{\sqrt{17}}
 =\frac{4x^2-4x+5}{\sqrt{17}}
-=\frac{4\left(x-\frac12\right)^2+4}{\sqrt{17}}.
+=\frac{4\left(x-\frac12\right)^2+4}{\sqrt{17}}
 \]
-当且仅当 \(x=\dfrac12\) 时距离取得最小值，此时 \(y=4x^2=1\). 因此所求点为 \(\left(\dfrac12,1\right)\).
+这里 \(4x^2-4x+5=4\left(x-\dfrac12\right)^2+4>0\)，所以绝对值确实可以按上式去掉. 由平方项的非负性，距离在且仅在 \(x=\dfrac12\) 时取得最小值；此时 \(y=4x^2=1\). 因此所求点为 \(\left(\dfrac12,1\right)\).
 \end{solution}
 
 \begin{problem}
@@ -228,9 +237,9 @@ d(P,l)=\frac{|4x-4x^2-5|}{\sqrt{17}}
 \end{problem}
 
 \begin{solution}
-先不限制 \(1\) 和 \(2\) 的位置，五个不同数字的排列共有 \(5!=120\) 个. 若 \(1\) 和 \(2\) 相邻，把它们看作一个整体，这个整体内部有 \(12\)、\(21\) 两种排列，整体与其余三个数字共有 \(4!\) 种排列，所以相邻的五位数有 \(2\cdot4!=48\) 个.
+先不限制 \(1\) 和 \(2\) 是否相邻，五个互不相同的数字全排列共有 \(5!=120\) 个. 若 \(1\) 和 \(2\) 相邻，就把它们看作一个整体；这个整体内部有 \(12\)、\(21\) 两种次序，整体与数字 \(3\)，\(4\)，\(5\) 共四个对象，排列数为 \(4!\). 所以相邻的五位数有 \(2\cdot4!=48\) 个.
 
-因此 \(1\) 和 \(2\) 不相邻的五位数共有 \(120-48=72\) 个.
+“不相邻”是“总数”去掉“相邻”，故所求五位数共有 \(5!-2\cdot4!=120-48=72\) 个.
 \end{solution}
 
 \begin{problem}
@@ -239,9 +248,11 @@ d(P,l)=\frac{|4x-4x^2-5|}{\sqrt{17}}
 \end{problem}
 
 \begin{solution}
-正三棱台的上下底边长分别为 \(10 \mathrm{~cm}\) 和 \(4 \mathrm{~cm}\). 正三角形面积为边长平方的 \(\dfrac{\sqrt3}{4}\) 倍，所以两底面积之差为
-\(\dfrac{\sqrt3}{4}\left(10^2-4^2\right)=21\sqrt3 \mathrm{~cm}^2\). 设斜高为 \(l\). 棱台的侧面积等于上下底周长和的一半乘斜高，故侧面积为 \(\dfrac{30+12}{2}l=21l \mathrm{~cm}^2\).
-由题设 \(21l=21\sqrt3\)，得 \(l=\sqrt3 \mathrm{~cm}\).
+正三棱台的下底、上底都是正三角形，故它们的边长分别为
+\(\dfrac{30}{3}=10\mathrm{~cm}\)、\(\dfrac{12}{3}=4\mathrm{~cm}\). 正三角形面积为边长平方的 \(\dfrac{\sqrt3}{4}\) 倍，所以两底面积之差为
+\(\dfrac{\sqrt3}{4}\left(10^2-4^2\right)=21\sqrt3\mathrm{~cm}^2\).
+设斜高为 \(l\). 棱台的侧面积等于上下底周长和的一半乘斜高，故侧面积为
+\(\dfrac{30+12}{2}l=21l\mathrm{~cm}^2\). 由题设 \(21l=21\sqrt3\)，得 \(l=\sqrt3\mathrm{~cm}\).
 \end{solution}
 
 \begin{problem}
@@ -252,12 +263,15 @@ d(P,l)=\frac{|4x-4x^2-5|}{\sqrt{17}}
 \begin{solution}
 利用恒等式
 \[
-4\sin\theta\sin(60^\circ+\theta)\sin(60^\circ-\theta)
+4\sin\theta\sin\left(60^\circ+\theta\right)\sin\left(60^\circ-\theta\right)
 =4\sin\theta\left(\sin^2 60^\circ-\sin^2\theta\right)
 =3\sin\theta-4\sin^3\theta
-=\sin3\theta.
+=\sin3\theta
 \]
-取 \(\theta=10^\circ\)，得 \(4\sin10^\circ\sin70^\circ\sin50^\circ=\sin30^\circ=\frac12\). 所以 \(\sin10^\circ\sin30^\circ\sin50^\circ\sin70^\circ=\frac12\cdot\frac18=\frac1{16}\).
+恒等式中用到了 \(\sin(\alpha+\beta)\sin(\alpha-\beta)=\sin^2\alpha-\sin^2\beta\). 取 \(\theta=10^\circ\)，得
+\(4\sin10^\circ\sin70^\circ\sin50^\circ=\sin30^\circ=\dfrac12\)，所以
+\(\sin10^\circ\sin50^\circ\sin70^\circ=\dfrac18\). 再乘以 \(\sin30^\circ=\dfrac12\)，得到
+\(\sin10^\circ\sin30^\circ\sin50^\circ\sin70^\circ=\dfrac12\cdot\dfrac18=\dfrac1{16}\).
 \end{solution}
 
 \begin{problem}
@@ -266,13 +280,18 @@ d(P,l)=\frac{|4x-4x^2-5|}{\sqrt{17}}
 \end{problem}
 
 \begin{solution}
-取 \(ED\) 的方向为 \(z\) 轴，取 \(PA\) 和 \(BC\) 的方向分别为 \(x\) 轴和 \(y\) 轴. 设
-\(E=(0,0,0)\)，\(D=(0,0,h)\)，\(A=(p-L,0,0)\)，\(P=(p,0,0)\)，\(B=(0,q,h)\)，\(C=(0,q+L,h)\).
-这样既有 \(PA=BC=L\)，又有 \(ED=h\). 三棱锥的体积为
-\(V=\frac16\left|\overrightarrow{PA}\cdot\left(\overrightarrow{PB}\times\overrightarrow{PC}\right)\right|\). 其中 \(\overrightarrow{PA}=(-L,0,0)\)，\(\overrightarrow{PB}=(-p,q,h)\)，\(\overrightarrow{PC}=(-p,q+L,h)\). 计算向量积的第一坐标即可得到 \(\overrightarrow{PB}\times\overrightarrow{PC}=(-hL,0,-pL)\)，从而
+由于 \(ED\) 是 \(PA\) 与 \(BC\) 的公垂线，故 \(ED\perp PA\)、\(ED\perp BC\)；再结合 \(PA\perp BC\)，这三条方向彼此垂直. 取 \(ED\)、\(PA\)、\(BC\) 的方向分别为 \(z\) 轴、\(x\) 轴、\(y\) 轴，并令
+\(E=(0,0,0)\)，\(D=(0,0,h)\)，\(A=(p-L,0,0)\)，\(P=(p,0,0)\)，\(B=(0,q,h)\)，\(C=(0,q+L,h)\)，其中 \(p\)，\(q\) 为实数. 这些坐标满足 \(PA=BC=L\) 且 \(ED=h\).
+
+由四面体的向量体积公式，
+\(V=\frac16\left|\overrightarrow{PA}\cdot\left(\overrightarrow{PB}\times\overrightarrow{PC}\right)\right|\). 这里 \(\overrightarrow{PA}=(-L,0,0)\)，\(\overrightarrow{PB}=(-p,q,h)\)，\(\overrightarrow{PC}=(-p,q+L,h)\)，所以
 \[
-V=\frac16\left|(-L,0,0)\cdot(-hL,0,-pL)\right|=\frac16L^2h.
+\overrightarrow{PB}\times\overrightarrow{PC}
+=\left(qh-h(q+L),\ h(-p)-(-p)h,\ (-p)(q+L)-q(-p)\right)
+=(-hL,0,-pL)
 \]
+因此
+\(V=\frac16\left|(-L,0,0)\cdot(-hL,0,-pL)\right|=\frac16L^2h\)，命题得证.
 \end{solution}
 
 \begin{problem}
@@ -281,13 +300,22 @@ V=\frac16\left|(-L,0,0)\cdot(-hL,0,-pL)\right|=\frac16L^2h.
 \end{problem}
 
 \begin{solution}
-首先要求各对数真数为正，即 \(\dfrac{a+1}{a}>0\)，所以 \(a>0\) 或 \(a<-1\). 令
-\(r=\dfrac{2a}{a+1}\)，\(B=\log_2 r\).
-在上述定义域内 \(r>0\)，并且
-\(\log_2\dfrac{4(a+1)}a=\log_2\dfrac8r=3-B\)，\(\log_2\dfrac{(a+1)^2}{4a^2}=\log_2\dfrac1{r^2}=-2B\). 原不等式左边化为关于 \(x\) 的二次式 \(f(x)=(3-B)x^2+2Bx-2B\). 要使 \(f(x)>0\) 对所有实数 \(x\) 恒成立，必须且只需 \(3-B>0\) 且 \(\Delta=(2B)^2-4(3-B)(-2B)=4B(6-B)<0\).
-第一条件给出 \(B<3\)，第二条件给出 \(B<0\) 或 \(B>6\)，合并得 \(B<0\)，即 \(0<r<1\).
+首先要求三个对数的真数均为正. 这三个条件等价于
+\(\dfrac{a+1}{a}>0\)，所以 \(a>0\) 或 \(a<-1\)，并且 \(a\ne0\)，\(-1\). 令
+\(r=\dfrac{2a}{a+1}\)，\(B=\log_2 r\). 在上述定义域内 \(r>0\)，且
+\(\log_2\dfrac{4(a+1)}a=\log_2\dfrac8r=3-B\)，
+\(\log_2\dfrac{(a+1)^2}{4a^2}=\log_2\dfrac1{r^2}=-2B\).
 
-若 \(a<-1\)，则 \(r-1=\dfrac{a-1}{a+1}>0\)，不可能满足 \(r<1\). 若 \(a>0\)，则 \(r<1\) 等价于 \(a<1\). 因而 \(a\) 的取值范围为 \(0<a<1\).
+于是原不等式左边为关于 \(x\) 的二次式
+\(f(x)=(3-B)x^2+2Bx-2B\). 要使 \(f(x)>0\) 对所有实数 \(x\) 恒成立，二次项系数必须为正，且判别式必须小于零；否则二次式在某处不正. 因而
+\(3-B>0\)，且
+\(\Delta=(2B)^2-4(3-B)(-2B)=4B(6-B)<0\).
+
+第一条件给出 \(B<3\)，第二条件给出 \(B<0\) 或 \(B>6\)，合并得 \(B<0\). 因为底数 \(2>1\)，这等价于 \(0<r<1\).
+
+若 \(a<-1\)，则
+\(r-1=\dfrac{2a-(a+1)}{a+1}=\dfrac{a-1}{a+1}>0\)，与 \(r<1\) 矛盾. 若 \(a>0\)，则
+\(\dfrac{2a}{a+1}<1\Longleftrightarrow 2a<a+1\Longleftrightarrow a<1\). 因而 \(a\) 的取值范围为 \(0<a<1\).
 \end{solution}
 
 \begin{problem}
@@ -302,9 +330,15 @@ V=\frac16\left|(-L,0,0)\cdot(-hL,0,-pL)\right|=\frac16L^2h.
 
 \begin{solution}
 \begin{enumerate}
-\item 在已知等式两边加上 \(|A|^2\)，得 \(z_1\overline{z_2}+\overline A z_1+A\overline{z_2}+|A|^2=|A|^2\). 左边可以因式分解为 \((z_1+A)\overline{(z_2+A)}=|A|^2\). 两边取绝对值得 \(|z_1+A|\,|z_2+A|=|A|^2\)，因为 \(A\ne0\)，这就证明了第（1）问，并且说明 \(z_1+A\ne0\) 且 \(z_2+A\ne0\).
+\item 在已知等式两边加上 \(|A|^2=A\overline A\)，得到
+\(z_1\overline{z_2}+\overline A z_1+A\overline{z_2}+|A|^2=|A|^2\). 左边正好因式分解为
+\((z_1+A)\overline{(z_2+A)}=|A|^2\). 两边取绝对值，利用 \(|uv|=|u||v|\)，得
+\(|z_1+A|\,|z_2+A|=|A|^2\). 由于 \(A\ne0\)，右边大于零，所以 \(z_1+A\ne0\)、\(z_2+A\ne0\).
 
-\item 令 \(w=\dfrac{z_1+A}{z_2+A}\). 利用上面的因式分解式，\(w=\dfrac{(z_1+A)\overline{(z_2+A)}}{|z_2+A|^2}=\dfrac{|A|^2}{|z_2+A|^2}>0\). 另一方面，由第（1）问 \(|w|=\dfrac{|z_1+A|}{|z_2+A|}=\dfrac{|A|^2}{|z_2+A|^2}\). 所以 \(w=|w|\)，即 \(\dfrac{z_1+A}{z_2+A}=\left|\dfrac{z_1+A}{z_2+A}\right|\).
+\item 因为 \(z_2+A\ne0\)，可令 \(w=\dfrac{z_1+A}{z_2+A}\). 分子、分母同乘 \(\overline{z_2+A}\)，并利用上面的因式分解式，得
+\(w=\dfrac{(z_1+A)\overline{(z_2+A)}}{|z_2+A|^2}=\dfrac{|A|^2}{|z_2+A|^2}>0\). 正实数的绝对值等于自身；也可由第（1）问直接算得
+\(|w|=\dfrac{|z_1+A|}{|z_2+A|}=\dfrac{|A|^2}{|z_2+A|^2}=w\). 因而
+\(\dfrac{z_1+A}{z_2+A}=w=|w|=\left|\dfrac{z_1+A}{z_2+A}\right|\).
 \end{enumerate}
 \end{solution}
 
@@ -322,10 +356,18 @@ V=\frac16\left|(-L,0,0)\cdot(-hL,0,-pL)\right|=\frac16L^2h.
 \begin{solution}
 \begin{enumerate}
 \item 由 \(S_n-S_{n-1}=a_n\)，并分别代入已知关系，得
-\(a_n=-ba_n+ba_{n-1}+\dfrac{1}{(1+b)^{n-1}}-\dfrac{1}{(1+b)^n}\). 右端最后两项之差为 \(\dfrac{b}{(1+b)^n}\)，所以 \((1+b)a_n=ba_{n-1}+\dfrac{b}{(1+b)^n}\)，即 \(a_n=\dfrac{b}{1+b}a_{n-1}+\dfrac{b}{(1+b)^{n+1}}\)，且 \(n\geqslant2\).
+\(a_n=-ba_n+ba_{n-1}+\dfrac{1}{(1+b)^{n-1}}-\dfrac{1}{(1+b)^n}\). 右端最后两项之差为
+\(\dfrac{b}{(1+b)^n}\)，所以
+\((1+b)a_n=ba_{n-1}+\dfrac{b}{(1+b)^n}\). 由于 \(b\ne-1\)，可以除以 \(1+b\)，得
+\(a_n=\dfrac{b}{1+b}a_{n-1}+\dfrac{b}{(1+b)^{n+1}}\)，其中 \(n\geqslant2\).
 \item 取 \(n=1\)，由 \(S_1=a_1\) 得
-\(a_1=-ba_1+1-\dfrac{1}{1+b}=-ba_1+\dfrac{b}{1+b}\)，从而 \(a_1=\dfrac{b}{(1+b)^2}\). 令 \(u_n=(1+b)^{n+1}a_n\)，则第（1）问的关系式化为 \(u_n=bu_{n-1}+b\)，且 \(u_1=b\). 依次迭代可得 \(u_n=b+b^2+\cdots+b^n\)，故 \(a_n=\dfrac{b+b^2+\cdots+b^n}{(1+b)^{n+1}}\).
-\item 当 \(0<b<1\) 时，\(\dfrac{b+b^2+\cdots+b^n}{(1+b)^{n+1}}\to0\)，且 \(\dfrac{1}{(1+b)^n}\to0\). 代回已知关系，得到
+\(a_1=-ba_1+1-\dfrac{1}{1+b}=-ba_1+\dfrac{b}{1+b}\)，从而
+\(a_1=\dfrac{b}{(1+b)^2}\). 令 \(u_n=(1+b)^{n+1}a_n\)，则第（1）问的关系式化为
+\(u_n=bu_{n-1}+b\)，且 \(u_1=(1+b)^2a_1=b\). 若 \(u_k=b+b^2+\cdots+b^k\)，则
+\(u_{k+1}=bu_k+b=b^2+b^3+\cdots+b^{k+1}+b=b+b^2+\cdots+b^{k+1}\). 结合 \(u_1=b\)，由数学归纳法得
+\(u_n=b+b^2+\cdots+b^n\)，故
+\(a_n=\dfrac{b+b^2+\cdots+b^n}{(1+b)^{n+1}}\).
+\item 当 \(0<b<1\) 时，\(0<b+b^2+\cdots+b^n<\dfrac{b}{1-b}\)，而 \((1+b)^{n+1}\to+\infty\)，所以 \(a_n\to0\)；同时 \(\dfrac{1}{(1+b)^n}\to0\). 代回已知关系，得到
 \(\displaystyle\lim_{n\to\infty}S_n=1\).
 \end{enumerate}
 \end{solution}
@@ -338,9 +380,16 @@ V=\frac16\left|(-L,0,0)\cdot(-hL,0,-pL)\right|=\frac16L^2h.
 \begin{solution}
 设 \(A=(u^2,u)\)、\(B=(v^2,v)\)，其中 \(u\)、\(v\) 为实数. 由 \(AB=3\)，得
 \(9=(u^2-v^2)^2+(u-v)^2=(u-v)^2\left((u+v)^2+1\right)\). 记 \(s=u+v\)、\(d=u-v\)，则 \(d^2=\dfrac{9}{s^2+1}\). 中点 \(M\) 的横坐标为 \(x_M=\dfrac{u^2+v^2}{2}=\dfrac{s^2+d^2}{4}=\dfrac14\left(s^2+\dfrac{9}{s^2+1}\right)\).
-由于 \(x_M\geq0\)，点 \(M\) 到 \(y\) 轴的距离就是 \(x_M\). 令 \(t=s^2\geq0\)，则 \(x_M=\dfrac14\left(t+\dfrac{9}{t+1}\right)\)，\(\dfrac{\mathrm d x_M}{\mathrm dt}=\dfrac14\left(1-\dfrac{9}{(t+1)^2}\right)\).
-当 \(0\leq t<2\) 时导数为负，当 \(t>2\) 时导数为正，所以最小值在 \(t=2\) 处取得. 此时 \(x_M=\dfrac14\left(2+\dfrac93\right)=\dfrac54\).
-又 \(s=\pm\sqrt2\)，且 \(d^2=3\)，所以中点的纵坐标 \(y_M=\dfrac{s}{2}\) 为 \(\pm\dfrac{\sqrt2}{2}\). 因而最短距离为 \(\dfrac54\)，此时 \(M=\left(\dfrac54,\dfrac{\sqrt2}{2}\right)\) 或 \(M=\left(\dfrac54,-\dfrac{\sqrt2}{2}\right)\).
+因为 \(x_M\geqslant0\)，点 \(M\) 到 \(y\) 轴的距离就是 \(x_M\). 令 \(t=s^2\geqslant0\)，则
+\(x_M=\dfrac14\left(t+\dfrac{9}{t+1}\right)\)，且
+\(\dfrac{\mathrm d x_M}{\mathrm dt}=\dfrac14\left(1-\dfrac{9}{(t+1)^2}\right)\).
+当 \(0\leqslant t<2\) 时导数为负，当 \(t>2\) 时导数为正，所以 \(t=2\) 给出全局最小值. 此时
+\(x_M=\dfrac14\left(2+\dfrac93\right)=\dfrac54\).
+
+又 \(s=\pm\sqrt2\)，且 \(d^2=\dfrac9{2+1}=3\)，故中点纵坐标
+\(y_M=\dfrac{s}{2}=\pm\dfrac{\sqrt2}{2}\). 取 \(s=\sqrt2\)、\(d=\sqrt3\) 时，
+\(u=\dfrac{s+d}{2}\)、\(v=\dfrac{s-d}{2}\) 均为实数，并且前面的长度等式给出 \(AB=3\)，所以该最小值确实可以取得. 因此最短距离为 \(\dfrac54\)，此时
+\(M=\left(\dfrac54,\dfrac{\sqrt2}{2}\right)\) 或 \(M=\left(\dfrac54,-\dfrac{\sqrt2}{2}\right)\).
 \end{solution}
 
 
@@ -352,13 +401,14 @@ V=\frac16\left|(-L,0,0)\cdot(-hL,0,-pL)\right|=\frac16L^2h.
 \end{problem}
 
 \begin{solution}
-题面把极限下标印作 \(n\to\infty\)，而括号内变量为 \(x\)；按题意将趋于无穷的变量统一记为 \(x\). 令 \(u=-\dfrac{1}{2x}\)，则 \(u\to0\)，且 \(x=-\dfrac{1}{2u}\). 因此
+题面把极限下标印作 \(n\to\infty\)，而括号和指数中使用的变量为 \(x\). 按该表达式的含义，将趋于 \(+\infty\) 的变量统一记为 \(x\). 当 \(x\to+\infty\) 时，令 \(u=-\dfrac{1}{2x}\)，则 \(u\to0^-\)，且 \(x=-\dfrac{1}{2u}\). 因此
 \[
 \left(1-\frac{1}{2x}\right)^x
 =(1+u)^{-\frac{1}{2u}}
 =\left((1+u)^{\frac1u}\right)^{-\frac12}
-\longrightarrow\e^{-\frac12}.
+\longrightarrow\e^{-\frac12}
 \]
+这里使用了基本极限 \(\displaystyle\lim_{u\to0^-}(1+u)^{1/u}=\e\)，且当 \(x\) 足够大时 \(1-\dfrac1{2x}>0\)，幂式有定义. 所以极限为 \(\e^{-\frac12}\).
 \end{solution}
 
 \begin{problem}
@@ -369,8 +419,9 @@ V=\frac16\left|(-L,0,0)\cdot(-hL,0,-pL)\right|=\frac16L^2h.
 \begin{solution}
 由乘积求导法则和复合函数求导法则，
 \[
-y'=x'\ln(1+x^2)+x\left(\ln(1+x^2)\right)'
-=\ln(1+x^2)+x\frac{2x}{1+x^2}
-=\ln(1+x^2)+\frac{2x^2}{1+x^2}.
+y'=x'\ln\left(1+x^2\right)+x\left(\ln\left(1+x^2\right)\right)'
+=\ln\left(1+x^2\right)+x\frac{2x}{1+x^2}
+=\ln\left(1+x^2\right)+\frac{2x^2}{1+x^2}
 \]
+因此 \(y'=\ln\left(1+x^2\right)+\dfrac{2x^2}{1+x^2}\).
 \end{solution}

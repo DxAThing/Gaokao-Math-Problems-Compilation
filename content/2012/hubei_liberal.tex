@@ -16,6 +16,10 @@
 D
 \end{answer}
 
+\begin{solution}
+由 \(x^{2}-3x+2=(x-1)(x-2)\)，得 \(A=\{1,2\}\). 又因为 \(x\) 为正整数且 \(0<x<5\)，所以 \(B=\{1,2,3,4\}\). 集合 \(C\) 必须包含 \(1,2\)，而 \(3,4\) 可以分别选入或不选入，因此共有 \(2^{2}=4\) 个，故选 D.
+\end{solution}
+
 \begin{problem}
 容量为 \(20\) 的样本数据，分组后的频数如下表：
 
@@ -40,6 +44,10 @@ D
 B
 \end{answer}
 
+\begin{solution}
+区间 \([10,40)\) 包含前三组，样本数为 \(2+3+4=9\). 样本总容量为 \(20\)，所以频率为 \(\dfrac{9}{20}=0.45\)，故选 B.
+\end{solution}
+
 \begin{problem}
 函数 \( f(x) = x \cos 2x \) 在区间 \([0, 2\pi]\) 上的零点的个数为（\quad）
 
@@ -53,6 +61,12 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+按原 PDF 清晰题面，\(f(x)=x\cos(2x)\). 因为 \(x\in[0,2\pi]\)，所以 \(f(x)=0\) 当且仅当 \(x=0\)，或 \(\cos(2x)=0\). 后一种情况给出
+\(2x=\frac{\pi}{2}+k\pi\)，\(x=\frac{\pi}{4}+\frac{k\pi}{2}\).
+在 \([0,2\pi]\) 内，需满足 \(0\leqslant \frac{\pi}{4}+\frac{k\pi}{2}\leqslant2\pi\)，故 \(k=0\)，\(1\)，\(2\)，\(3\)，得到 4 个正数零点. 再加上 \(x=0\)，零点共有 5 个，故选 D.
+\end{solution}
 
 \begin{problem}
 命题“存在一个无理数，它的平方是有理数”的否定是（\quad）
@@ -68,6 +82,10 @@ D
 B
 \end{answer}
 
+\begin{solution}
+原命题可写成“存在无理数 \(x\)，使 \(x^{2}\) 为有理数”. 否定存在命题要把“存在”改为“任意”，并否定结论“\(x^{2}\) 为有理数”，得到“任意一个无理数，它的平方不是有理数”，故选 B.
+\end{solution}
+
 \begin{problem}
 过点 \(P(1,1)\) 的直线，将圆形区域 \(\{(x,y) | x^2 + y^2 \leqslant 4\}\) 分为两部分，使得这两部分的面积之差最大，则该直线的方程为（\quad）
 
@@ -81,6 +99,18 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+设圆心为 \(O\)，半径为 \(R=2\)，过圆内点 \(P\) 的直线到圆心的距离为 \(d\). 较小圆弓形的面积为
+\[
+S(d)=R^{2}\arccos\frac dR-d\sqrt{R^{2}-d^{2}}
+\]
+所以两部分面积之差为 \(\pi R^{2}-2S(d)\). 由于本题中 \(0\leqslant d\leqslant\sqrt{2}<R\)，直接求导得
+\[
+S'(d)=-\frac{R^{2}}{\sqrt{R^{2}-d^{2}}}-\sqrt{R^{2}-d^{2}}+\frac{d^{2}}{\sqrt{R^{2}-d^{2}}}=-2\sqrt{R^{2}-d^{2}}
+\]
+所以两部分面积之差的导数为 \(4\sqrt{R^{2}-d^{2}}>0\)，因而随 \(d\) 增大而增大. 对所有过 \(P\) 的直线，\(d\leqslant OP=\sqrt{2}\)，且当直线垂直于 \(OP\) 时取等号. 因此所求直线是过 \(P(1,1)\) 且垂直于 \(OP\) 的直线，其法向量可取 \((1,1)\)，方程为 \(x+y-2=0\)，故选 A.
+\end{solution}
 
 \begin{problem}
 已知定义在区间 \([0,2]\) 上的函数 \(y=f(x)\) 的图象如图所示，则 \(y=-f(2-x)\) 的图象为（\quad）
@@ -97,6 +127,10 @@ A
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+令原图象上的点为 \((t,f(t))\)，则变换后对应的点为 \((2-t,-f(t))\). 这表示先关于直线 \(x=1\) 对称，再关于 \(x\) 轴对称. 原图象经过 \((0,0)\)、\((1,1)\)，并在 \(1\leqslant x\leqslant2\) 上为 \(y=1\)，变换后经过 \((2,0)\)、\((1,-1)\)，并在 \(0\leqslant x\leqslant1\) 上为 \(y=-1\)，故图象为选项 B.
+\end{solution}
 
 \begin{problem}
 定义在 \((- \infty, 0) \cup (0, +\infty)\) 上的函数 \(f(x)\)，如果对于任意给定的等比数列 \(\{a_{n}\}\)，\(\{f(a_{n})\}\) 仍是等比数列，则称 \(f(x)\) 为“保等比数列函数”. 现有定义在 \((- \infty, 0) \cup (0, +\infty)\) 上的如下函数：
@@ -119,6 +153,18 @@ B
 C
 \end{answer}
 
+\begin{solution}
+设任意非零等比数列为 \(a_n=a_1q^{n-1}\)，其中 \(a_1q^{n-1}\neq0\). 对函数 \(f(x)=x^{2}\)，
+\[
+f(a_n)=a_1^{2}(q^{2})^{n-1}
+\]
+仍为等比数列；对函数 \(f(x)=\sqrt{|x|}\)，
+\[
+f(a_n)=\sqrt{|a_1|}\bigl(\sqrt{|q|}\bigr)^{n-1}
+\]
+也仍为等比数列. 对函数 \(f(x)=2^{x}\)，取 \(a_n=2^{n-1}\)，则 \(f(a_n)=2^{2^{n-1}}\)，相邻两项的比不恒定，故不是保等比数列函数. 对函数 \(f(x)=\ln|x|\)，取 \(a_n=\e^{n}\)，则 \(f(a_n)=n\)，这是等差数列而不是等比数列. 所以符合条件的是第1、3项，故选 C.
+\end{solution}
+
 \begin{problem}
 设 \(\triangle ABC\) 的内角 \(A\)，\(B\)，\(C\) 所对的边分别为 \(a\)，\(b\)，\(c\). 若三边的长为连续的三个正整数，且 \(A > B > C\)，\(3b = 20a\cos A\)，则 \(\sin A: \sin B: \sin C\) 为（\quad）
 
@@ -133,6 +179,18 @@ C
 D
 \end{answer}
 
+\begin{solution}
+由 \(A>B>C\) 知 \(a>b>c\). 设连续三个正整数为 \(c=n\)、\(b=n+1\)、\(a=n+2\). 由余弦定理，
+\[
+\cos A=\frac{b^{2}+c^{2}-a^{2}}{2bc}=\frac{(n+1)^{2}+n^{2}-(n+2)^{2}}{2n(n+1)}=\frac{n-3}{2n}
+\]
+代入 \(3b=20a\cos A\)，得
+\[
+3(n+1)=20(n+2)\frac{n-3}{2n}
+\]
+即 \(7n^{2}-13n-60=(n-4)(7n+15)=0\). 因此 \(n=4\) 或 \(n=-\dfrac{15}{7}\)，因 \(n\) 为正整数，取 \(n=4\)，故 \((a,b,c)=(6,5,4)\). 由正弦定理 \(\sin A:\sin B:\sin C=a:b:c\)，所以 \(\sin A:\sin B:\sin C=6:5:4\)，故选 D.
+\end{solution}
+
 \begin{problem}
 设 \(a\)，\(b\)，\(c \in \R_{+}\)，则“\(abc = 1\)”是“\(\frac{1}{\sqrt{a}} + \frac{1}{\sqrt{b}} + \frac{1}{\sqrt{c}} \leqslant a + b + c\)”的（\quad）
 
@@ -146,6 +204,19 @@ D
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+若 \(abc=1\)，令 \(x=\sqrt a\)、\(y=\sqrt b\)、\(z=\sqrt c\)，则 \(xyz=1\)，从而
+\[
+\frac1{\sqrt a}+\frac1{\sqrt b}+\frac1{\sqrt c}=yz+zx+xy
+\]
+而
+\[
+x^{2}+y^{2}+z^{2}-xy-yz-zx
+ =\frac12\bigl((x-y)^{2}+(y-z)^{2}+(z-x)^{2}\bigr)\geqslant0
+\]
+所以题中的不等式成立，说明 \(abc=1\) 是充分条件. 但它不是必要条件，例如 \(a=b=c=2\) 时不等式成立而 \(abc=8\neq1\). 故选 A.
+\end{solution}
 
 \begin{problem}
 如图，在圆心角为直角的扇形 \(OAB\) 中，分别以 \(OA\)，\(OB\) 为直径作两个半圆. 在扇形 \(OAB\) 内随机取一点，则此点取自阴影部分的概率是（\quad）
@@ -163,6 +234,25 @@ A
 C
 \end{answer}
 
+\begin{solution}
+设 \(OA=OB=r\). 两个半圆的半径均为 \(r/2\)，它们的面积之和为
+\[
+2\cdot\frac12\pi\left(\frac r2\right)^{2}=\frac{\pi r^{2}}4
+\]
+恰好等于四分之一圆扇形的面积. 设两个半圆的重叠面积为 \(I\)，则扇形内不属于两个半圆的部分面积也为 \(I\). 图中阴影由这两部分组成，阴影面积为 \(2I\).
+
+两个半圆所在圆的半径为 \(r/2\)，圆心距为 \(r/\sqrt2\). 因此
+\[
+I=2\left(\frac r2\right)^{2}\arccos\frac1{\sqrt2}-\frac12\frac r{\sqrt2}\sqrt{r^{2}-\frac{r^{2}}2}
+ =r^{2}\left(\frac\pi8-\frac14\right)
+\]
+扇形面积为 \(\pi r^{2}/4\)，故阴影概率为
+\[
+\frac{2I}{\pi r^{2}/4}=\frac{r^{2}(\pi-2)/4}{\pi r^{2}/4}=1-\frac2\pi
+\]
+故选 C.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -173,6 +263,10 @@ C
 \(6\)
 \end{answer}
 
+\begin{solution}
+分层抽样时男、女运动员的抽样比例相同. 男运动员抽取 \(8/56=1/7\)，所以女运动员应抽取 \(42\cdot\dfrac17=6\) 人.
+\end{solution}
+
 \begin{problem}
 若 \(\frac{3 + bi}{1 - i} = a + bi\)（\(a\)，\(b\) 为实数，\(i\) 为虚数单位），则 \(a + b =\)\fillinblank{}.
 \end{problem}
@@ -180,6 +274,18 @@ C
 \begin{answer}
 \(3\)
 \end{answer}
+
+\begin{solution}
+分子分母同乘以 \(1+i\)，得
+\[
+\frac{3+bi}{1-i}=\frac{(3+bi)(1+i)}2=\frac{3-b+(3+b)i}{2}
+\]
+与 \(a+bi\) 比较虚部，
+\[
+b=\frac{3+b}{2}
+\]
+所以 \(b=3\)，再得 \(a=(3-b)/2=0\). 因此 \(a+b=3\).
+\end{solution}
 
 \begin{problem}
 已知向量 \(\bs{a} = (1,0)\)，\(\bs{b} = (1,1)\)，则
@@ -192,6 +298,17 @@ C
 \begin{answer}
 \(\left(\frac{3\sqrt{10}}{10},\frac{\sqrt{10}}{10}\right)\)；\(-\frac{2\sqrt{5}}{5}\)
 \end{answer}
+
+\begin{solution}
+\(2\bs a+\bs b=2(1,0)+(1,1)=(3,1)\)，其模为 \(\sqrt{3^{2}+1^{2}}=\sqrt{10}\)，所以同向单位向量为
+\[
+\frac{2\bs a+\bs b}{|2\bs a+\bs b|}=\left(\frac3{\sqrt{10}},\frac1{\sqrt{10}}\right)=\left(\frac{3\sqrt{10}}{10},\frac{\sqrt{10}}{10}\right)
+\]
+又 \(\bs b-3\bs a=(1,1)-3(1,0)=(-2,1)\)，故
+\[
+\cos\theta=\frac{(\bs b-3\bs a)\cdot\bs a}{|\bs b-3\bs a|\,|\bs a|}=\frac{(-2,1)\cdot(1,0)}{\sqrt5\cdot1}=-\frac2{\sqrt5}=-\frac{2\sqrt5}{5}
+\]
+\end{solution}
 
 \begin{problem}
 若变量 \(x\)，\(y\) 满足约束条件 \(\begin{cases}
@@ -206,6 +323,20 @@ x + y \geqslant 1,\\
 \(2\)
 \end{answer}
 
+\begin{solution}
+约束条件等价于 \(y\leqslant x+1\)、\(y\geqslant1-x\)、\(y\geqslant3x-3\). 三条边界直线的交点为
+\((0,1)\)，\((2,3)\)，\((1,0)\).
+可行域的下边界由 \(y=1-x\)（\(0\leqslant x\leqslant1\)）和 \(y=3x-3\)（\(1\leqslant x\leqslant2\)）组成. 在前一段，
+\[
+z=2x+3(1-x)=3-x\geqslant2;
+\]
+在后一段，
+\[
+z=2x+3(3x-3)=11x-9\geqslant2
+\]
+两式均在 \(x=1\)、\(y=0\) 时取到 \(2\)，因此最小值为 \(2\).
+\end{solution}
+
 \begin{problem}
 已知某几何体的三视图如图所示，则该几何体的体积为\fillinblank{}.
 
@@ -216,6 +347,13 @@ x + y \geqslant 1,\\
 \(12\pi\)
 \end{answer}
 
+\begin{solution}
+结合三视图，正视图两侧的 \(1\times4\) 矩形和中央的 \(4\times2\) 矩形，配合侧视图中直径分别为 \(4\) 和 \(2\) 的外圆、内圆，可知该几何体由两个底面直径为 \(4\)、高为 \(1\) 的圆柱，以及一个底面直径为 \(2\)、高为 \(4\) 的圆柱组成. 因此体积为
+\[
+V=2\cdot\pi\left(\frac42\right)^{2}\cdot1+\pi\left(\frac22\right)^{2}\cdot4=8\pi+4\pi=12\pi
+\]
+\end{solution}
+
 \begin{problem}
 阅读如图所示的程序框图，运行相应的程序，输出的结果 \(s =\)\fillinblank{}.
 
@@ -225,6 +363,10 @@ x + y \geqslant 1,\\
 \begin{answer}
 \(9\)
 \end{answer}
+
+\begin{solution}
+初始时 \(a=1\)、\(s=0\)、\(n=1\). 第一次循环得到 \(s=0+1=1\)、\(a=3\)、\(n=2\)；第二次循环得到 \(s=1+3=4\)、\(a=5\)、\(n=3\)；第三次循环得到 \(s=4+5=9\)、\(a=7\). 此时 \(n<3\) 不成立，程序输出 \(s=9\).
+\end{solution}
 
 \begin{problem}
 传说古希腊毕达哥拉斯学派的数学家经常在沙滩上画点或用小石子表示数. 他们研究过如图所示的三角形数：
@@ -242,6 +384,18 @@ x + y \geqslant 1,\\
 \(5030\)；\(\frac{5k(5k-1)}{2}\)
 \end{answer}
 
+\begin{solution}
+三角形数满足 \(a_n=1+2+\cdots+n=\dfrac{n(n+1)}2\). 因为 \(2\) 与 \(5\) 互质，\(a_n\) 能被 \(5\) 整除当且仅当 \(n(n+1)\) 能被 \(5\) 整除，即
+\[
+n\equiv0\pmod5\quad\text{或}\quad n\equiv4\pmod5
+\]
+所以相应的下标依次为 \(4\)，\(5\)，\(9\)，\(10\)，\(\ldots\). 对奇数项，\(b_{2k-1}=a_{5k-1}\)，从而
+\[
+b_{2k-1}=\frac{(5k-1)(5k)}2=\frac{5k(5k-1)}2
+\]
+又 \(2012=2\times1006\)，故 \(b_{2012}=a_{5\times1006}=a_{5030}\)，即它是数列 \(\{a_n\}\) 的第 \(5030\) 项.
+\end{solution}
+
 \section{解答题}
 
 \begin{problem}
@@ -253,7 +407,41 @@ x + y \geqslant 1,\\
 \end{problem}
 
 \begin{solution}
-短答案：\(\frac{6\pi}{5}\)；\([-2-\sqrt{2},2-\sqrt{2}]\)
+由三角恒等式，
+\[
+f(x)=\sin^{2}\omega x-\cos^{2}\omega x+2\sqrt3\sin\omega x\cos\omega x+\lambda
+\]
+再由 \(\sin^{2}u-\cos^{2}u=-\cos(2u)\) 及 \(2\sin u\cos u=\sin(2u)\)，得
+\[
+f(x)=-\cos(2\omega x)+\sqrt3\sin(2\omega x)+\lambda
+    =2\sin\left(2\omega x-\frac\pi6\right)+\lambda
+\]
+
+\begin{enumerate}
+\item 若图象关于直线 \(x=\pi\) 对称，则对任意 \(t\)，有 \(f(\pi+t)=f(\pi-t)\). 代入上式并利用正弦差公式，得
+\[
+4\cos\left(2\omega\pi-\frac\pi6\right)\sin(2\omega t)=0
+\]
+由于 \(\omega>0\)，这对任意 \(t\) 成立的条件是
+\[
+\cos\left(2\omega\pi-\frac\pi6\right)=0
+\]
+于是 \(2\omega\pi-\dfrac\pi6=\dfrac\pi2+k\pi\)，即 \(\omega=\dfrac13+\dfrac k2\). 结合 \(\dfrac12<\omega<1\)，得 \(k=1\)，所以 \(\omega=\dfrac56\). 函数的最小正周期为
+\[
+T=\frac{2\pi}{2\omega}=\frac\pi\omega=\frac{6\pi}{5}
+\]
+
+\item 由图象经过 \(\left(\dfrac\pi4,0\right)\)，得
+\[
+0=2\sin\left(\frac{\omega\pi}{2}-\frac\pi6\right)+\lambda
+ =2\sin\frac\pi4+\lambda=\sqrt2+\lambda
+\]
+所以 \(\lambda=-\sqrt2\). 因为正弦函数的值域为 \([-1,1]\)，故
+\[
+-2-\sqrt2\leqslant f(x)=2\sin\left(\frac53x-\frac\pi6\right)-\sqrt2\leqslant2-\sqrt2
+\]
+因此函数 \(f(x)\) 的值域为 \([-2-\sqrt2,2-\sqrt2]\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -267,7 +455,25 @@ x + y \geqslant 1,\\
 \end{problem}
 
 \begin{solution}
-短答案：\(484\text{ 元}\)
+\begin{enumerate}
+\item 设下、上两个正方形的中心分别为 \(O_{1}\)、\(O\). 由两个底面是平行且同心的正方形，\(O_{1}\in B_{1}D_{1}\)，\(O\in AC\)，且 \(O_{1}O\) 垂直于底面. 上部四棱柱的侧棱垂直于底面，故平面 \(ACC_{2}A_{2}\) 包含过 \(O\) 的竖直方向，从而 \(O_{1}\) 也在平面 \(ACC_{2}A_{2}\) 内.
+
+正方形的两条对角线互相垂直，且 \(A_{1}C_{1}\parallel AC\)，所以 \(B_{1}D_{1}\perp AC\). 在平面 \(ACC_{2}A_{2}\) 内过 \(O_{1}\) 作直线 \(l_{1}\parallel AC\)，则 \(B_{1}D_{1}\perp l_{1}\). 又 \(B_{1}D_{1}\) 位于水平底面内，而 \(O_{1}O\) 为竖直方向，所以 \(B_{1}D_{1}\perp O_{1}O\). 直线 \(l_{1}\) 与 \(O_{1}O\) 在 \(O_{1}\) 处相交，故由直线与平面垂直的判定定理，\(B_{1}D_{1}\perp\) 平面 \(ACC_{2}A_{2}\).
+
+\item 四棱台每个侧面是等腰梯形，其两底分别为 \(20\) 和 \(10\)，腰为 \(13\). 梯形的高为
+\[
+l=\sqrt{13^{2}-\left(\frac{20-10}{2}\right)^{2}}=\sqrt{169-25}=12
+\]
+所以四个侧面的总面积为
+\[
+S_{1}=4\cdot\frac{10+20}{2}\cdot12=720\text{ cm}^{2}
+\]
+下部四棱台的下底面面积为 \(20^{2}=400\text{ cm}^{2}\). 上部四棱柱的四个侧面面积为 \(4\cdot10\cdot30=1200\text{ cm}^{2}\)，其上底面面积为 \(10^{2}=100\text{ cm}^{2}\). 两个几何体的接触面不属于外表面，因此需处理的总表面积为
+\[
+S=720+400+1200+100=2420\text{ cm}^{2}
+\]
+加工处理费为 \(2420\times0.20=484\) 元.
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -279,11 +485,46 @@ x + y \geqslant 1,\\
 \end{problem}
 
 \begin{solution}
-短答案：\(a_n=3n+5\) 或 \(a_n=3n-7\)；
-\(S_n=\begin{cases}
+\begin{enumerate}
+\item 设首项为 \(a_1=a\)，公差为 \(d\). 前三项为 \(a-d\)、\(a\)、\(a+d\)，由和的条件得
+\[
+3a=-3
+\]
+所以 \(a=-1\). 于是前三项的积满足
+\[
+(-1-d)(-1)(-1+d)=8
+\]
+即 \(d^{2}-1=8\)，得 \(d=\pm3\). 因此等差数列有两种可能：
+\[
+a_n=-1+3(n-2)=3n-7,
+\qquad\text{或}\qquad
+a_n=-1-3(n-2)=5-3n
+\]
+
+若 \(a_{2}\)，\(a_{3}\)，\(a_{1}\) 成等比数列，则应满足 \(a_{3}^{2}=a_{2}a_{1}\). 对 \(a_n=3n-7\)，前三项为 \((-4,-1,2)\)，有 \(2^{2}=(-1)(-4)\)，满足条件；对 \(a_n=5-3n\)，前三项为 \((2,-1,-4)\)，有 \((-4)^{2}\neq(-1)\cdot2\)，不满足条件. 所以只能取 \(a_n=3n-7\).
+
+此时
+\[
+|a_n|=|3n-7|
+\]
+其中 \(|a_1|=4\)、\(|a_2|=1\)，且当 \(n\geqslant3\) 时 \(|a_n|=3n-7\). 因而
+\[
+S_1=4
+\]
+而当 \(n>1\) 时
+\[
+S_n=4+1+\sum_{k=3}^{n}(3k-7)
+ =5+3\left(\frac{n(n+1)}2-3\right)-7(n-2)
+ =\frac32n^{2}-\frac{11}{2}n+10
+\]
+所以
+\[
+S_n=\begin{cases}
 4,&n=1,\\
-\frac{3}{2}n^2-\frac{11}{2}n+10,&n>1.
-\end{cases}\)
+\dfrac32n^{2}-\dfrac{11}{2}n+10,&n>1.
+\end{cases}
+\]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -295,7 +536,45 @@ x + y \geqslant 1,\\
 \end{problem}
 
 \begin{solution}
-短答案：\(x^2+\frac{y^2}{m^2}=1\)；当 \(0<m<1\) 时焦点为 \(\left(\pm\sqrt{1-m^2},0\right)\)，当 \(m>1\) 时焦点为 \(\left(0,\pm\sqrt{m^2-1}\right)\)；存在，\(m=\sqrt{2}\).
+\begin{enumerate}
+\item 设 \(A=(x_A,y_A)\). 因为 \(A\) 在单位圆上，所以 \(x_A^{2}+y_A^{2}=1\)，且 \(D=(x_A,0)\). 直线 \(l\) 垂直于 \(x\) 轴，故 \(M\) 的横坐标为 \(x_A\)，并且
+\[
+|y_M|=|DM|=m|DA|=m|y_A|
+\]
+当 \(A\) 遍历单位圆时，\(M\) 的两个可能位置合起来满足
+\[
+x_M^{2}+\frac{y_M^{2}}{m^{2}}=x_A^{2}+y_A^{2}=1
+\]
+反过来，方程上任一点都可由 \(A=(x_M,y_M/m)\) 或 \(A=(x_M,-y_M/m)\) 取得，所以曲线 \(C\) 的方程为
+\[
+x^{2}+\frac{y^{2}}{m^{2}}=1
+\]
+由于 \(m\neq1\)，它是椭圆. 当 \(0<m<1\) 时长半轴为 \(1\)，焦距参数为 \(c=\sqrt{1-m^{2}}\)，焦点为 \(\left(\pm\sqrt{1-m^{2}},0\right)\)；当 \(m>1\) 时长半轴为 \(m\)，焦距参数为 \(c=\sqrt{m^{2}-1}\)，焦点为 \(\left(0,\pm\sqrt{m^{2}-1}\right)\).
+
+\item 设过原点的直线为 \(y=kx\)，其中 \(k>0\). 令
+\[
+p=\frac1{\sqrt{1+k^{2}/m^{2}}}>0
+\]
+则 \(P=(p,kp)\)、\(Q=(-p,-kp)\)，且 \(N=(0,kp)\). 直线 \(QN\) 的方程为 \(y=2kx+kp\). 设它与椭圆的另一交点为 \(H=(h_x,h_y)\). 将直线方程代入椭圆方程，关于 \(x\) 的二次方程为
+\[
+\left(1+\frac{4k^{2}}{m^{2}}\right)x^{2}+\frac{4k^{2}p}{m^{2}}x+\frac{k^{2}p^{2}}{m^{2}}-1=0
+\]
+其中一个根为 \(-p\)，由韦达定理，另一个根为
+\[
+h_x=p-\frac{4k^{2}p}{m^{2}+4k^{2}}=\frac{m^{2}p}{m^{2}+4k^{2}}
+\]
+于是
+\[
+h_y=2kh_x+kp=\frac{kp(3m^{2}+4k^{2})}{m^{2}+4k^{2}}
+\]
+向量 \(\overrightarrow{PQ}\) 与 \((1,k)\) 同向，因此
+\[
+\overrightarrow{PH}\cdot(1,k)
+=(h_x-p)+k(h_y-kp)
+=\frac{2k^{2}p(m^{2}-2)}{m^{2}+4k^{2}}
+\]
+因为 \(k>0\)、\(p>0\)，上式对任意 \(k>0\) 恒为零当且仅当 \(m^{2}=2\). 又 \(m>0\)，故存在且唯一的取值为 \(m=\sqrt2\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -308,5 +587,34 @@ x + y \geqslant 1,\\
 \end{problem}
 
 \begin{solution}
-短答案：\(a=1,\ b=0\)；\(\frac{n^n}{(n+1)^{n+1}}\)
+\begin{enumerate}
+\item 因为 \(f(1)=b\)，而切点为 \((1,f(1))\)，又切线 \(x+y=1\) 在 \(x=1\) 处的纵坐标为 \(0\)，所以 \(b=0\). 求导得
+\[
+f'(x)=a\left(nx^{n-1}(1-x)-x^n\right)=a x^{n-1}\bigl(n-(n+1)x\bigr)
+\]
+切线斜率为 \(-1\)，故 \(f'(1)=-a=-1\)，从而 \(a=1\).
+
+\item 此时 \(f(x)=x^n(1-x)\). 当 \(x\geqslant1\) 时 \(f(x)\leqslant0\)；当 \(0<x<1\) 时，
+\[
+f'(x)=x^{n-1}\bigl(n-(n+1)x\bigr)
+\]
+所以 \(f\) 在 \(\left(0,\dfrac n{n+1}\right)\) 上递增，在 \(\left(\dfrac n{n+1},+\infty\right)\) 上递减. 最大值在 \(x=\dfrac n{n+1}\) 处取得，为
+\[
+f\left(\frac n{n+1}\right)=\left(\frac n{n+1}\right)^n\frac1{n+1}=\frac{n^n}{(n+1)^{n+1}}
+\]
+
+\item 若 \(x\geqslant1\)，则 \(f(x)\leqslant0<\dfrac1{n\e}\). 若 \(0<x<1\)，由上一步，
+\[
+f(x)\leqslant\frac{n^n}{(n+1)^{n+1}}
+\]
+又因为
+\[
+\ln\left(1+\frac1n\right)=\int_{0}^{1/n}\frac{1}{1+t}\,\mathrm dt>\frac{1/n}{1+1/n}=\frac1{n+1}
+\]
+所以 \((n+1)\ln(1+1/n)>1\)，即 \(\left(1+\dfrac1n\right)^{n+1}>\e\). 这等价于
+\[
+\frac{n^n}{(n+1)^{n+1}}<\frac1{n\e}
+\]
+因此对所有 \(x>0\)，都有 \(f(x)<\dfrac1{n\e}\).
+\end{enumerate}
 \end{solution}

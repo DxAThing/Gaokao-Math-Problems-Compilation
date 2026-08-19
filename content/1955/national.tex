@@ -5,7 +5,6 @@
 \FigureLayoutDeclare{img/1955/national/q1_solution_fig1.png}{2.8cm}{0bp 0bp 0bp 0bp}
 \FigureLayoutDeclare{img/1955/national/q1_solution_fig2.png}{4.4cm}{0bp 0bp 0bp 0bp}
 \FigureLayoutDeclare{img/1955/national/q3_solution_fig1.png}{5.8cm}{0bp 0bp 0bp 0bp}
-\FigureLayoutDeclare{img/1955/national/q5_solution_fig1.png}{4.3cm}{15bp 22bp 1bp 7bp}
 
 \begin{problem}
 \begin{enumerate}
@@ -19,33 +18,24 @@
 \begin{solution}
 \begin{enumerate}
 \item
-设方程 \(x^{2}-3x-1=0\) 的二根为 \(\alpha\)，\(\beta\)，则 \(\alpha+\beta=3\)，\(\alpha\beta=-1\).
-\[
-\alpha^{2}+\beta^{2}=\left( \alpha+\beta \right)^{2}-2\alpha\beta=3^{2}-2\left( -1 \right)=11
-\]
-又 \(\alpha^{2}\beta^{2}=\left( \alpha\beta \right)^{2}=1\). 因此所求的二次方程为 \(y^{2}-11y+1=0\).
+设方程 \(x^{2}-3x-1=0\) 的两根为 \(\alpha\)、\(\beta\)，由韦达定理得 \(\alpha+\beta=3\)，\(\alpha\beta=-1\). 以 \(\alpha^{2}\)、\(\beta^{2}\) 为根的二次方程的根和为 \(\alpha^{2}+\beta^{2}=\left(\alpha+\beta\right)^{2}-2\alpha\beta=3^{2}-2\left(-1\right)=11\)，根积为 \(\alpha^{2}\beta^{2}=\left(\alpha\beta\right)^{2}=1\). 因此所求方程为 \(y^{2}-11y+1=0\).
 
 \item
-设 \(\triangle ABC\) 中 \(AB=AC=4BC\)，\(AD\) 为 \(BC\) 边上的高，则各角的余弦为：
+设 \(\triangle ABC\) 中 \(AB=AC=4BC\)，\(AD\perp BC\). 由于三角形为等腰三角形，\(D\) 是 \(BC\) 的中点，因此 \(BD=DC=\frac{1}{2}BC\).
 
-\bitmapfigure[max width=2.4cm]{img/1955/national/q1_solution_fig1.png}
+\solutionfigure{\bitmapfigure[max width=2.4cm]{img/1955/national/q1_solution_fig1.png}}
 
-\[
-\cos A=\frac{AB^{2}+AC^{2}-BC^{2}}{2AB\cdot AC}=\frac{16BC^{2}+16BC^{2}-BC^{2}}{2\cdot 4BC\cdot 4BC}=\frac{31}{32}
-\]
-\[
-\cos B=\cos C=\frac{CD}{CA}=\frac{\frac{1}{2}BC}{4BC}=\frac{1}{8}
-\]
+由余弦定理，\(\cos A=\dfrac{AB^{2}+AC^{2}-BC^{2}}{2AB\cdot AC}=\dfrac{16BC^{2}+16BC^{2}-BC^{2}}{2\cdot 4BC\cdot 4BC}=\dfrac{31}{32}\). 在直角三角形 \(ACD\) 中，\(\cos C=\dfrac{CD}{CA}=\dfrac{\frac{1}{2}BC}{4BC}=\dfrac{1}{8}\)，又因 \(B=C\)，所以 \(\cos B=\cos C=\dfrac{1}{8}\).
 
 \item
-设 \(S-ABCD\) 为一正四棱锥，\(SH\) 为其高，底边的长为 \(a\)，\(\angle SAH=45^{\circ}\).
+设 \(S-ABCD\) 为正四棱锥，\(H\) 为正方形底面 \(ABCD\) 的中心，\(SH\) 为棱锥的高. 由于 \(SH\perp\) 底面，\(AH\) 是侧棱 \(SA\) 在底面上的射影，所以侧棱与底面的交角为 \(\angle SAH=45^{\circ}\).
 
-\bitmapfigure[max width=3.6cm]{img/1955/national/q1_solution_fig2.png}
+\solutionfigure{\bitmapfigure[max width=3.6cm]{img/1955/national/q1_solution_fig2.png}}
 
-则 \(\triangle SHA\) 为一等腰直角三角形，所以 \(SH=AH\). 但 \(AH\) 为其底的对角线的一半，且其底边的长为 \(a\)，所以 \(AH=\frac{a\sqrt{2}}{2}\)，从而 \(SH=\frac{a\sqrt{2}}{2}\).
+在直角三角形 \(SHA\) 中，\(\angle SHA=90^{\circ}\)，且 \(\angle SAH=45^{\circ}\)，故 \(\angle ASH=45^{\circ}\)，从而 \(\triangle SHA\) 为等腰直角三角形，\(SH=AH\). 正方形底面的对角线为 \(a\sqrt{2}\)，而 \(H\) 是其中心，所以 \(AH=\dfrac{a\sqrt{2}}{2}\). 因此棱锥的高为 \(SH=\dfrac{a\sqrt{2}}{2}\).
 
 \item
-自二面角的棱上一点在其各面上作棱的垂线，此二垂线所夹的角叫做该二面角的平面角.
+在二面角的棱上任取一点，在二面角的两个面内分别过该点作棱的垂线；这两条垂线在两个面内所夹的角，叫做这个二面角的平面角.
 \end{enumerate}
 \end{solution}
 
@@ -60,7 +50,9 @@
 \end{problem}
 
 \begin{solution}
-因为 \(x^{3}+bx^{2}+cx+d\) 可被 \(x-1\) 整除，被 \(x-3\) 除余 \(2\)，且被 \(x+2\) 除与被 \(x-2\) 除时余数相等，所以 \(1+b+c+d=0\)，\(27+9b+3c+d=2\)，\(-8+4b-2c+d=8+4b+2c+d\). 由第三式得 \(c=-4\). 代入前两式，得 \(b+d=3\)，\(9b+d=-13\). 解得 \(8b=-16\)，所以 \(b=-2\)，\(d=5\).
+设 \(P(x)=x^{3}+bx^{2}+cx+d\). 由余式定理，\(P(x)\) 被 \(x-1\) 整除，所以 \(P(1)=0\)，即 \(1+b+c+d=0\). 又因 \(P(x)\) 被 \(x-3\) 除时余数为 \(2\)，所以 \(P(3)=2\)，即 \(27+9b+3c+d=2\). 第三个条件给出 \(P(-2)=P(2)\)，即 \(-8+4b-2c+d=8+4b+2c+d\).
+
+化简第三个等式得 \(-16-4c=0\)，所以 \(c=-4\). 代入前两个等式，分别得到 \(b+d=3\) 和 \(9b+d=-13\). 两式相减得 \(8b=-16\)，从而 \(b=-2\)，再由 \(b+d=3\) 得 \(d=5\). 因此 \((b,c,d)=(-2,-4,5)\).
 \end{solution}
 
 \begin{problem}
@@ -69,7 +61,13 @@
 
 \begin{solution}
 \solutionfigure{\bitmapfigure[max width=4.6cm]{img/1955/national/q3_solution_fig1.png}}
-连结 \(QA\)，\(QB\)，则 \(\angle AQB\) 为一直角，而 \(EQ\) 为直角三角形 \(AQB\) 弦上的高，所以 \(EQ\) 为 \(EA\) 与 \(EB\) 的比例中项. 又因为 \(\angle 1=\angle 2\)（均与 \(\angle ABF\) 互余），所以 \(\triangle AED \sim \triangle FEB\). 所以 \(EA:EF=ED:EB\). 所以 \(EA\cdot EB=EF\cdot ED\). 所以 \(EQ^{2}=EF\cdot ED\)，即 \(EQ\) 为 \(ED\) 与 \(EF\) 的比例中项.
+由题意，\(\triangle ABC\) 在 \(C\) 处为直角，\(AB\) 是其斜边，\(D\) 在直角边 \(AC\) 上，且 \(DE\perp AB\)，\(F\) 在直角边 \(BC\) 的延长线上，\(Q\) 是直线 \(DE\) 与外接圆的交点. 因为 \(\triangle ABC\) 是直角三角形，\(AB\) 是其外接圆的直径，所以 \(\angle AQB=90^{\circ}\). 又 \(QE\perp AB\)，故 \(QE\) 是直角三角形 \(AQB\) 斜边 \(AB\) 上的高.
+
+连结 \(QA\)、\(QB\). 由 \(\triangle AQE\sim\triangle QEB\)，得 \(\dfrac{EA}{QE}=\dfrac{QE}{EB}\)，所以 \(EQ^{2}=EA\cdot EB\). 这说明 \(EQ\) 是 \(EA\) 与 \(EB\) 的比例中项.
+
+再证第二个结论. 因为 \(AD\) 与 \(AC\) 共线，所以 \(\angle EAD=\angle CAB\). 又 \(BF\) 与 \(BC\) 共线，故 \(\angle ABF=\angle ABC\). 在直角三角形 \(ABC\) 中，\(\angle CAB+\angle ABC=90^{\circ}\). 另一方面，\(FE\perp AB\)，所以 \(\angle EFB+\angle ABF=90^{\circ}\). 因而 \(\angle EAD=\angle EFB\)，并且 \(\angle AED=\angle FEB=90^{\circ}\)，从而 \(\triangle AED\sim\triangle FEB\).
+
+对应边成比例，故 \(\dfrac{EA}{EF}=\dfrac{ED}{EB}\)，即 \(EA\cdot EB=ED\cdot EF\). 结合前面得到的 \(EQ^{2}=EA\cdot EB\)，可得 \(EQ^{2}=ED\cdot EF\). 由于各线段长度均为正，\(EQ\) 是 \(ED\) 与 \(EF\) 的比例中项.
 \end{solution}
 
 \begin{problem}
@@ -77,9 +75,17 @@
 \end{problem}
 
 \begin{solution}
-\(\cos 2x=\cos x+\sin x\). 即 \(\cos^{2}x-\sin^{2}x=\cos x+\sin x\)，所以
-\(\left( \cos x+\sin x \right)\left( \cos x-\sin x-1 \right)=0\).
-从而 \(\cos x+\sin x=0\)，\(\cos x-\sin x-1=0\). 由第一式得 \(\tan x=-1\)，所以 \(x=n\pi-\frac{\pi}{4}\). 由第二式得 \(\frac{1}{\sqrt{2}}\cos x-\frac{1}{\sqrt{2}}\sin x=\frac{1}{\sqrt{2}}\)，即 \(\cos\left( x+\frac{\pi}{4} \right)=\cos\frac{\pi}{4}\)，所以 \(x+\frac{\pi}{4}=2n\pi\pm\frac{\pi}{4}\). 所以 \(x=2n\pi\) 或 \(x=2n\pi-\frac{\pi}{2}\).
+由 \(\cos 2x=\cos^{2}x-\sin^{2}x\)，原方程等价于 \(\cos^{2}x-\sin^{2}x-\cos x-\sin x=0\). 因式分解得 \(\left(\cos x+\sin x\right)\left(\cos x-\sin x-1\right)=0\).
+
+因此分两种情况讨论.
+
+当 \(\cos x+\sin x=0\) 时，\(\sqrt{2}\sin\left(x+\dfrac{\pi}{4}\right)=0\)，所以 \(x+\dfrac{\pi}{4}=n\pi\)，即 \(x=n\pi-\dfrac{\pi}{4}\)，其中 \(n\in\Z\).
+
+当 \(\cos x-\sin x-1=0\) 时，\(\cos x-\sin x=1\). 两边同除以 \(\sqrt{2}\)，得 \(\cos\left(x+\dfrac{\pi}{4}\right)=\dfrac{1}{\sqrt{2}}=\cos\dfrac{\pi}{4}\).
+
+所以 \(x+\dfrac{\pi}{4}=2n\pi\pm\dfrac{\pi}{4}\)，从而 \(x=2n\pi\) 或 \(x=2n\pi-\dfrac{\pi}{2}\)，其中 \(n\in\Z\).
+
+综上，方程的通解为 \(x=n\pi-\dfrac{\pi}{4}\)，或 \(x=2n\pi\)，或 \(x=2n\pi-\dfrac{\pi}{2}\)，其中 \(n\in\Z\).
 \end{solution}
 
 \begin{problem}
@@ -87,8 +93,11 @@
 \end{problem}
 
 \begin{solution}
-设 \(\triangle ABC\) 即此三角形，\(CA\)，\(AB\)，\(BC\) 各边的长为 \(x\text{ 尺}\)，\(\left( x-y \right)\text{ 尺}\)，\(\left( x+y \right)\text{ 尺}\). 则由周长得 \(x+y+x+x-y=12\). 又由面积得
-\(\sqrt{6\left[ 6-\left( x+y \right) \right]\left( 6-x \right)\left[ 6-\left( x-y \right) \right]}=6\).
-由 \(x+y+x+x-y=12\) 得 \(x=4\). 代入上式，得 \(6\left( 6-4-y \right)\left( 6-4 \right)\left( 6-4+y \right)=36\)，即 \(12\left( 2-y \right)\left( 2+y \right)=36\). 因此 \(4-y^{2}=3\)，\(y^{2}=1\)，所以 \(y=\pm 1\). 故此三角形各边的长为 \(3\text{ 尺}\)，\(4\text{ 尺}\)，\(5\text{ 尺}\). 因为 \(3^{2}+4^{2}=5^{2}\)，所以 \(\triangle BAC\) 为一直角三角形.
-\solutionfigure{\bitmapfigure[max width=3.2cm]{img/1955/national/q5_solution_fig1.png}}
+设三角形三边按等差数列的顺序为 \(x-y\)、\(x\)、\(x+y\)（单位均为 \(\text{尺}\)），其中 \(x\) 是中项，\(y\) 是公差. 由周长为 \(12\text{ 尺}\)，得 \((x-y)+x+(x+y)=12\)，所以 \(3x=12\)，即 \(x=4\).
+
+三角形半周长为 \(s=6\text{ 尺}\). 由海伦公式 \(S^{2}=s\left(s-(x-y)\right)\left(s-x\right)\left(s-(x+y)\right)\)，代入面积 \(S=6\text{ 平方尺}\) 和 \(s=6\text{ 尺}\)，得 \(36=6(6-x+y)(6-x)(6-x-y)\).
+
+代入 \(x=4\)，得 \(36=6(2+y)\cdot 2\cdot(2-y)=12(4-y^{2})\)，所以 \(y^{2}=1\)，即 \(y=\pm1\). 当 \(y=1\) 时三边为 \(3\text{ 尺}\)、\(4\text{ 尺}\)、\(5\text{ 尺}\)；当 \(y=-1\) 时三边只是顺序相反，仍为 \(3\text{ 尺}\)、\(4\text{ 尺}\)、\(5\text{ 尺}\).
+
+最后，\(3^{2}+4^{2}=9+16=25=5^{2}\). 由勾股定理的逆定理，最长边为 \(5\text{ 尺}\) 的这个三角形为直角三角形.
 \end{solution}

@@ -6,7 +6,7 @@
 \end{problem}
 
 \begin{solution}
-配方得 \(y=2x^{2}-x+1=2\left(x-\frac{1}{4}\right)^{2}+\frac{7}{8}\). 因为 \(2\left(x-\frac{1}{4}\right)^{2}\geqslant0\)，所以当 \(x=\frac{1}{4}\) 时，\(y\) 取得极小值 \(\frac{7}{8}\).
+配方得 \(y=2x^{2}-x+1=2\left(x-\frac{1}{4}\right)^{2}+\frac{7}{8}\). 因为 \(2\left(x-\frac{1}{4}\right)^{2}\geqslant0\)，所以对任意实数 \(x\)，都有 \(y\geqslant\frac{7}{8}\). 当且仅当 \(x=\frac{1}{4}\) 时等号成立，因此函数的极小值为 \(\frac{7}{8}\)，此时 \(x=\frac{1}{4}\).
 \end{solution}
 
 \begin{problem}
@@ -14,15 +14,16 @@
 \end{problem}
 
 \begin{solution}
-由平方差公式及 \(\sin^2\theta+\cos^2\theta=1\)，有
+由平方差公式及 \(\sin^2\theta+\cos^2\theta=1\)，原式的第一个因式为
 \[
-(1+\sin^2\theta)^2-\cos^4\theta=(1+\sin^2\theta-\cos^2\theta)(1+\sin^2\theta+\cos^2\theta)=4\sin^2\theta.
+(1+\sin^2\theta)^2-\cos^4\theta=(1+\sin^2\theta-\cos^2\theta)(1+\sin^2\theta+\cos^2\theta)
 \]
-同理，
+又 \(1+\sin^2\theta-\cos^2\theta=1+\sin^2\theta-(1-\sin^2\theta)=2\sin^2\theta\)，\(1+\sin^2\theta+\cos^2\theta=2\)，所以第一个因式等于 \(4\sin^2\theta\). 第二个因式也使用平方差公式，且有
 \[
-(1+\cos^2\theta)^2-\sin^4\theta=(1+\cos^2\theta-\sin^2\theta)(1+\cos^2\theta+\sin^2\theta)=4\cos^2\theta.
+(1+\cos^2\theta)^2-\sin^4\theta=(1+\cos^2\theta-\sin^2\theta)(1+\cos^2\theta+\sin^2\theta)
 \]
-所以原式 \(=16\sin^2\theta\cos^2\theta=4\sin^2 2\theta\).
+又 \(1+\cos^2\theta-\sin^2\theta=1+\cos^2\theta-(1-\cos^2\theta)=2\cos^2\theta\)，\(1+\cos^2\theta+\sin^2\theta=2\)，所以第二个因式等于 \(4\cos^2\theta\).
+因此原式 \(=4\sin^2\theta\cdot4\cos^2\theta=16\sin^2\theta\cos^2\theta=4\sin^2 2\theta\).
 \end{solution}
 
 \begin{problem}
@@ -30,23 +31,19 @@
 \end{problem}
 
 \begin{solution}
-甲中纯酒精的质量为 \(\dfrac{m_{1}V_{1}}{m_{1}+n_{1}}\)，水的质量为 \(\dfrac{n_{1}V_{1}}{m_{1}+n_{1}}\)；乙中纯酒精的质量为 \(\dfrac{m_{2}V_{2}}{m_{2}+n_{2}}\)，水的质量为 \(\dfrac{n_{2}V_{2}}{m_{2}+n_{2}}\).
+甲中纯酒精与水的总质量为 \(V_{1}\)，且二者的质量和对应于 \(m_{1}+n_{1}\)，所以甲中纯酒精的质量为 \(\dfrac{m_{1}V_{1}}{m_{1}+n_{1}}\)，水的质量为 \(\dfrac{n_{1}V_{1}}{m_{1}+n_{1}}\). 乙中纯酒精与水的质量和对应于 \(m_{2}+n_{2}\)，所以乙中纯酒精的质量为 \(\dfrac{m_{2}V_{2}}{m_{2}+n_{2}}\)，水的质量为 \(\dfrac{n_{2}V_{2}}{m_{2}+n_{2}}\).
 
-因此，混合后纯酒精的总质量为
+混合后纯酒精的总质量为
 \[
-M_{\text{酒精}}=\frac{m_{1}V_{1}}{m_{1}+n_{1}}+\frac{m_{2}V_{2}}{m_{2}+n_{2}}.
+M_{\text{酒精}}=\frac{m_{1}V_{1}}{m_{1}+n_{1}}+\frac{m_{2}V_{2}}{m_{2}+n_{2}}=\frac{m_{1}V_{1}(m_{2}+n_{2})+m_{2}V_{2}(m_{1}+n_{1})}{(m_{1}+n_{1})(m_{2}+n_{2})}
 \]
-通分得
+混合后水的总质量为
 \[
-M_{\text{酒精}}=\frac{m_{1}V_{1}(m_{2}+n_{2})+m_{2}V_{2}(m_{1}+n_{1})}{(m_{1}+n_{1})(m_{2}+n_{2})}.
+M_{\text{水}}=\frac{n_{1}V_{1}}{m_{1}+n_{1}}+\frac{n_{2}V_{2}}{m_{2}+n_{2}}=\frac{n_{1}V_{1}(m_{2}+n_{2})+n_{2}V_{2}(m_{1}+n_{1})}{(m_{1}+n_{1})(m_{2}+n_{2})}
 \]
-同理，混合后水的总质量为
+两种总质量的分式具有相同的正分母，在比值中约去该分母，故混合后纯酒精与水之比为
 \[
-M_{\text{水}}=\frac{n_{1}V_{1}(m_{2}+n_{2})+n_{2}V_{2}(m_{1}+n_{1})}{(m_{1}+n_{1})(m_{2}+n_{2})}.
-\]
-两式的公共分母在比值中约去，所以混合后纯酒精与水之比为
-\[
-\bigl[m_{1}V_{1}(m_{2}+n_{2})+m_{2}V_{2}(m_{1}+n_{1})\bigr]:\bigl[n_{1}V_{1}(m_{2}+n_{2})+n_{2}V_{2}(m_{1}+n_{1})\bigr].
+\bigl[m_{1}V_{1}(m_{2}+n_{2})+m_{2}V_{2}(m_{1}+n_{1})\bigr]:\bigl[n_{1}V_{1}(m_{2}+n_{2})+n_{2}V_{2}(m_{1}+n_{1})\bigr]
 \]
 \end{solution}
 
@@ -57,11 +54,11 @@ M_{\text{水}}=\frac{n_{1}V_{1}(m_{2}+n_{2})+n_{2}V_{2}(m_{1}+n_{1})}{(m_{1}+n_{
 \begin{solution}
 勾股定理：在直角三角形 \(ABC\) 中，若 \(\angle C=90^\circ\)，则斜边 \(AB\) 的平方等于两条直角边 \(AC\)、\(BC\) 的平方和，即 \(AB^2=AC^2+BC^2\).
 
-证明：过直角顶点 \(C\) 作 \(CD\perp AB\)，垂足为 \(D\). 因为 \(\angle ADC=\angle ACB=90^\circ\)，且 \(\angle CAD=\angle CAB\)，所以 \(\triangle ACD\sim\triangle ABC\). 由相似三角形对应边成比例，得 \(\dfrac{AC}{AB}=\dfrac{AD}{AC}\)，即 \(AC^2=AB\cdot AD\).
+过直角顶点 \(C\) 作斜边 \(AB\) 的垂线，垂足为 \(D\)，即 \(CD\perp AB\). 因为 \(\angle ADC=90^\circ=\angle ACB\)，且 \(A\)，\(D\)，\(B\) 共线，所以 \(\angle CAD=\angle CAB\)，从而 \(\triangle ACD\sim\triangle ABC\). 按对应边的顺序，得到 \(\dfrac{AC}{AB}=\dfrac{AD}{AC}\)，即 \(AC^2=AB\cdot AD\).
 
-同理，\(\angle BDC=\angle ACB=90^\circ\)，且 \(\angle CBD=\angle CBA\)，所以 \(\triangle BCD\sim\triangle ABC\). 因而 \(\dfrac{BC}{AB}=\dfrac{BD}{BC}\)，即 \(BC^2=AB\cdot BD\).
+对于三角形 \(BCD\)，\(\angle BDC=90^\circ=\angle ACB\)，且 \(B\)，\(D\)，\(A\) 共线，所以 \(\angle CBD=\angle CBA\)，从而 \(\triangle BCD\sim\triangle ABC\). 因而 \(\dfrac{BC}{AB}=\dfrac{BD}{BC}\)，即 \(BC^2=AB\cdot BD\).
 
-将两式相加，并利用 \(AD+BD=AB\)，可得 \(AC^2+BC^2=AB(AD+BD)=AB^2\). 定理得证.
+由于 \(D\) 在线段 \(AB\) 上，\(AD+DB=AB\). 将上面两式相加，得 \(AC^2+BC^2=AB\cdot AD+AB\cdot BD=AB(AD+BD)=AB^2\)，所以勾股定理得证.
 \end{solution}
 
 \begin{problem}
@@ -69,27 +66,21 @@ M_{\text{水}}=\frac{n_{1}V_{1}(m_{2}+n_{2})+n_{2}V_{2}(m_{1}+n_{1})}{(m_{1}+n_{
 \end{problem}
 
 \begin{solution}
-设船到海岸线 \(AB\) 的距离为 \(d\)，则三角形 \(ABP\) 的面积一方面为 \(\dfrac{1}{2}Sd\)，另一方面由正弦定理为
+设从船所在点 \(P\) 向海岸线 \(AB\) 作垂线，垂足为 \(C\)，并设船到海岸线的距离为 \(PC=d\). 在三角形 \(ABP\) 中，\(\angle BAP=\alpha\)，\(\angle ABP=\beta\)，故 \(\angle APB=180^\circ-(\alpha+\beta)\). 由正弦定理，\(AP=\dfrac{S\sin\beta}{\sin(\alpha+\beta)}\). 另有 \(BP=\dfrac{S\sin\alpha}{\sin(\alpha+\beta)}\).
 
+三角形 \(ABP\) 的面积一方面为 \(\dfrac{1}{2}Sd\)，另一方面为 \(\dfrac{1}{2}AP\cdot BP\sin(\alpha+\beta)\). 代入上面的两条边长，得
 \[
-\frac{1}{2}AP\cdot BP\sin(\alpha+\beta)=\frac{1}{2}\left(\frac{S\sin\beta}{\sin(\alpha+\beta)}\right)\left(\frac{S\sin\alpha}{\sin(\alpha+\beta)}\right)\sin(\alpha+\beta).
+\frac{1}{2}Sd=\frac{1}{2}\left(\frac{S\sin\beta}{\sin(\alpha+\beta)}\right)\left(\frac{S\sin\alpha}{\sin(\alpha+\beta)}\right)\sin(\alpha+\beta)
+\]
+所以 \(d=\dfrac{S\sin\alpha\sin\beta}{\sin(\alpha+\beta)}\). 于是
+\[
+\frac{S}{d}=\frac{\sin(\alpha+\beta)}{\sin\alpha\sin\beta}=\frac{\sin\alpha\cos\beta+\cos\alpha\sin\beta}{\sin\alpha\sin\beta}=\cot\alpha+\cot\beta
 \]
 
-因此
+船进入离海岸线 \(D\text{ 里}\) 以内的区域，当且仅当 \(d\leqslant D\). 因为 \(S\)、\(d\)、\(D\) 均为正数，这个条件等价于 \(\dfrac{S}{d}\geqslant\dfrac{S}{D}\)，因此应满足的不等式为
 \[
-d=\frac{S\sin\alpha\sin\beta}{\sin(\alpha+\beta)}.
+\boxed{\cot\alpha+\cot\beta\geqslant\frac{S}{D}}
 \]
-
-从而
-\[
-\cot\alpha+\cot\beta=\frac{\sin(\alpha+\beta)}{\sin\alpha\sin\beta}=\frac{S}{d}.
-\]
-
-船只进入禁入区域的条件是 \(d\leqslant D\)，所以
-\[
-\cot\alpha+\cot\beta\geqslant\frac{S}{D}.
-\]
-所以，当 \(\cot\alpha+\cot\beta\geqslant\dfrac{S}{D}\) 时，应向该船发出警告.
 \end{solution}
 
 \begin{problem}
@@ -97,19 +88,9 @@ d=\frac{S\sin\alpha\sin\beta}{\sin(\alpha+\beta)}.
 \end{problem}
 
 \begin{solution}
-设每年的物价增长率为 \(x\). 经过 \(40\text{ 年}\) 后，物价由 \(100\) 变为 \(500\)，所以
-\[
-100(1+x)^{40}=500,
-\]
-即 \((1+x)^{40}=5\). 两边取自然对数，得
-\[
-40\ln(1+x)=\ln 5.
-\]
-由 \(\lg 5=\lg 10-\lg 2=1-0.3=0.7\)，以及换底关系 \(\ln 5=\ln 10\cdot\lg 5\)，得 \(\ln 5=2.3\times0.7=1.61\). 因为题设给出 \(\ln(1+x)\approx x\)，所以
-\[
-x\approx\frac{\ln 5}{40}=\frac{1.61}{40}=0.04025.
-\]
-因此每年物价增长约为 \(4\%\).
+设每年的物价增长率为 \(x\)，则 \(x>0\). 从 \(1939\) 年到 \(1979\) 年共经过 \(40\) 年，所以物价满足 \(100(1+x)^{40}=500\)，即 \((1+x)^{40}=5\). 两边取自然对数，得到 \(40\ln(1+x)=\ln5\).
+
+由 \(\lg 5=\lg10-\lg2=1-0.3=0.7\)，再由换底关系 \(\ln5=\ln10\cdot\lg5\)，得 \(\ln5=2.3\times0.7=1.61\). 因为题设允许使用 \(\ln(1+x)\approx x\)，所以 \(x\approx\dfrac{1.61}{40}=0.04025\). 这个数确实小于 \(0.1\)，与近似条件相符，因此每年的物价增长率约为 \(0.04025\times100\%=4.025\%\)，按题目精度约为 \(4\%\).
 \end{solution}
 
 \begin{problem}
@@ -119,23 +100,13 @@ x\approx\frac{\ln 5}{40}=\frac{1.61}{40}=0.04025.
 \end{problem}
 
 \begin{solution}
-连接 \(C,D\). 因为 \(\angle CFD=90^\circ\)，所以由圆周角定理的逆定理，\(CD\) 是该圆的直径. 切线在切点 \(D\) 处垂直于半径，故 \(CD\perp AB\).
+连接 \(C\)，\(D\). 因为 \(CEDF\) 是圆内接矩形，\(\angle CFD=90^\circ\). 由圆周角定理的逆定理，弦 \(CD\) 是该圆的直径，因此直线 \(CD\) 是过 \(D\) 的半径所在直线. 又因为 \(AB\) 是圆在 \(D\) 点的切线，所以 \(CD\perp AB\).
 
-又因为 \(A,C,E\) 共线，\(B,C,F\) 共线，且矩形的邻边 \(CE\perp CF\)，所以 \(\angle ACB=90^\circ\). 在直角三角形 \(ABC\) 中，\(CD\) 是斜边 \(AB\) 上的高. 由相似三角形 \(\triangle ACD\sim\triangle ABC\) 和 \(\triangle BCD\sim\triangle BAC\)，分别得到
-\[
-AC^2=AD\cdot AB.
-\]
-\[
-BC^2=BD\cdot BA.
-\]
-因此
-\[
-\frac{BD}{AD}=\frac{BC^2}{AC^2}.
-\]
+由 \(A\)，\(C\)，\(E\) 共线、\(B\)，\(C\)，\(F\) 共线，以及矩形相邻边 \(CE\perp CF\)，可得 \(\angle ACB=90^\circ\). 因而在直角三角形 \(ABC\) 中，\(CD\) 是从直角顶点 \(C\) 向斜边 \(AB\) 作出的高. 由 \(\triangle ACD\sim\triangle ABC\)，有 \(\dfrac{AC}{AB}=\dfrac{AD}{AC}\)，所以 \(AC^2=AD\cdot AB\). 由 \(\triangle BCD\sim\triangle ABC\)，有 \(\dfrac{BC}{AB}=\dfrac{BD}{BC}\)，所以 \(BC^2=BD\cdot AB\). 两式相除，得到 \(\dfrac{BD}{AD}=\dfrac{BC^2}{AC^2}\).
 
-由切线与割线定理，从点 \(A\) 引出的切线和割线给出 \(AD^2=AE\cdot AC\)；从点 \(B\) 引出的切线和割线给出 \(BD^2=BF\cdot BC\). 所以
+由点 \(A\) 的切线割线定理，\(AD^2=AE\cdot AC\)；由点 \(B\) 的切线割线定理，\(BD^2=BF\cdot BC\). 因此
 \[
-\frac{BF}{AE}=\frac{BD^2/BC}{AD^2/AC}=\left(\frac{BD}{AD}\right)^2\frac{AC}{BC}=\left(\frac{BC^2}{AC^2}\right)^2\frac{AC}{BC}=\frac{BC^3}{AC^3}.
+\frac{BF}{AE}=\frac{BD^2/BC}{AD^2/AC}=\left(\frac{BD}{AD}\right)^2\frac{AC}{BC}=\left(\frac{BC^2}{AC^2}\right)^2\frac{AC}{BC}=\frac{BC^3}{AC^3}
 \]
 命题得证.
 \end{solution}
@@ -145,38 +116,30 @@ BC^2=BD\cdot BA.
 \end{problem}
 
 \begin{solution}
-设割线 \(OP_{1}P_{2}\) 的方向角为 \(\varphi\)，用参数 \(t\) 表示该直线上的点：\(x=t\cos\varphi\)，\(y=t\sin\varphi\). 代入圆方程，得
+设所作直线的一个单位方向向量为 \((\cos\varphi,\sin\varphi)\)，则直线上的点可参数表示为 \(x=t\cos\varphi\)，\(y=t\sin\varphi\). 代入圆方程，并使用 \(\cos^2\varphi+\sin^2\varphi=1\)，得到
 \[
-t^2-2t(\cos\varphi+2\sin\varphi)+4=0.
+t^2-2t(\cos\varphi+2\sin\varphi)+4=0
 \]
-这个方程的两个根 \(t_{1}\)、\(t_{2}\) 分别对应 \(P_{1}\)、\(P_{2}\)，由根与系数的关系，\(t_{1}+t_{2}=2(\cos\varphi+2\sin\varphi)\). 因为 \(P\) 是弦 \(P_{1}P_{2}\) 的中点，所以
+记 \(k=\cos\varphi+2\sin\varphi\)，设上式的两个根为 \(t_1\)，\(t_2\)，它们分别对应交点 \(P_1\)，\(P_2\). 由根与系数的关系，\(t_1+t_2=2k\)，所以弦中点 \(P\) 的坐标为
 \[
-P=\left(\frac{t_{1}+t_{2}}{2}\cos\varphi,\frac{t_{1}+t_{2}}{2}\sin\varphi\right).
+P=\left(\frac{t_1+t_2}{2}\cos\varphi,\frac{t_1+t_2}{2}\sin\varphi\right)=(k\cos\varphi,k\sin\varphi)
 \]
-设 \(P\) 的坐标为 \((x,y)\)，于是
+设 \(P=(x,y)\)，则 \(x=k\cos\varphi\)，\(y=k\sin\varphi\)，从而 \(x^2+y^2=k^2=k(\cos\varphi+2\sin\varphi)=x+2y\). 配方得
 \[
-x=(\cos\varphi+2\sin\varphi)\cos\varphi.
-\]
-\[
-y=(\cos\varphi+2\sin\varphi)\sin\varphi.
-\]
-利用 \(\cos^2\varphi+\sin^2\varphi=1\)，可得
-\[
-x^2+y^2=(\cos\varphi+2\sin\varphi)^2=x+2y.
-\]
-配方得
-\[
-\left(x-\frac{1}{2}\right)^2+(y-1)^2=\frac{5}{4}.
+\left(x-\frac{1}{2}\right)^2+(y-1)^2=\frac{5}{4}
 \]
 
-原圆的圆心为 \(M(1,2)\)，半径为 \(1\). 由于 \(P_{1}\)、\(P_{2}\) 是两个不同的交点，代入二次方程的判别式可知
-\[
-\bigl(\cos\varphi+2\sin\varphi\bigr)^2>4.
-\]
-将直线方向取向圆的一侧，可令 \(\cos\varphi+2\sin\varphi>2\). 又因为 \(\cos\varphi+2\sin\varphi\leqslant\sqrt{5}\)，所以对应的中点满足
-\[
-2<OP=\cos\varphi+2\sin\varphi\leqslant\sqrt{5}.
-\]
+还需确定这条圆上的实际轨迹范围. 直线与原圆有两个不同交点的条件是上面关于 \(t\) 的二次方程判别式为正，即 \(4(k^2-4)>0\)，所以 \(|k|>2\). 直线的方向可以反向而不改变这条直线及弦中点，故取方向使 \(k>0\)，于是 \(k>2\). 又由柯西不等式，\(k=\cos\varphi+2\sin\varphi\leqslant\sqrt{5}\)，所以 \(2<OP=k\leqslant\sqrt{5}\).
 
-上式所表示的圆以 \(OM\) 为直径；对其中任一点 \(P\)，有 \(MP\perp OP\). 由 \(OM^2=5\) 及勾股定理，\(MP^2=5-OP^2\)，故 \(2<OP\leqslant\sqrt{5}\) 等价于 \(MP<1\). 因此这部分圆弧位于原圆内部，直线 \(OP\) 到圆心 \(M\) 的距离小于原圆半径，必与原圆交于两个点，且垂足 \(P\) 正是这条弦的中点. 所以所求轨迹是圆 \(\left(x-\frac{1}{2}\right)^2+(y-1)^2=\frac{5}{4}\) 在所给圆内的一段弧，两端切线对应的端点不计.
+反过来，圆 \(\left(x-\frac{1}{2}\right)^2+(y-1)^2=\frac{5}{4}\) 上满足 \(OP>2\) 的点，取 \(OP\) 所在直线作为所作直线，即可令 \((\cos\varphi,\sin\varphi)=\left(\frac{x}{OP},\frac{y}{OP}\right)\). 由该圆的方程有 \(x^2+y^2=x+2y\)，故此时 \(k=(x+2y)/OP=OP>2\)，二次方程判别式为正，确实得到两个交点. 因此上述范围没有多余点.
+
+原圆可化为 \((x-1)^2+(y-2)^2=1\)，其圆心为 \(M(1,2)\). 轨迹圆是以 \(OM\) 为直径的圆；对其上任意点 \(P\)，有 \(OP^2+MP^2=OM^2=5\). 因而 \(OP>2\) 等价于 \(MP<1\). 所以所求轨迹为
+\[
+\left(x-\frac{1}{2}\right)^2+(y-1)^2=\frac{5}{4}
+\]
+且
+\[
+(x-1)^2+(y-2)^2<1
+\]
+即以 \(OM\) 为直径的圆位于原圆内部的一段弧，原圆与轨迹圆的两个交点（对应切线）不属于轨迹.
 \end{solution}

@@ -16,6 +16,10 @@
 C
 \end{answer}
 
+\begin{solution}
+由复数模的乘法性质，\(\lvert z\rvert\lvert 1+\i\rvert=\lvert 2\i\rvert\). 又 \(\lvert 1+\i\rvert=\sqrt{1^2+1^2}=\sqrt{2}\)，\(\lvert 2\i\rvert=2\)，所以 \(\lvert z\rvert\sqrt{2}=2\)，即 \(\lvert z\rvert=\sqrt{2}\). 因此选 C.
+\end{solution}
+
 \begin{problem}
 设全集为 \(\R\)，集合 \(A = \{x \mid x^2 - 9 < 0\}\)，\(B = \{x \mid -1 < x \leqslant 5\}\)，则 \(A \cap (\complement_{\R} B) =\)（\quad）
 
@@ -30,6 +34,11 @@ C
 C
 \end{answer}
 
+\begin{solution}
+由 \(x^2-9<0\) 得 \((x-3)(x+3)<0\)，所以 \(-3<x<3\)，即 \(A=(-3,3)\). 又 \(-1<x\leqslant5\)，故 \(B=(-1,5]\)，从而 \(\complement_{\R}B=(-\infty,-1]\cup(5,+\infty)\). 因此
+\(A\cap(\complement_{\R}B)=(-3,3)\cap\bigl((-\infty,-1]\cup(5,+\infty)\bigr)=(-3,-1]\). 故选 C.
+\end{solution}
+
 \begin{problem}
 掷两颗均匀的骰子，则点数之和为 5 的概率等于（\quad）
 
@@ -43,6 +52,10 @@ C
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+两颗骰子的结果用有序数对表示，共有 \(6\times6=36\) 个等可能的基本事件. 点数之和为 5 的结果为 \((1,4)\)、\((2,3)\)、\((3,2)\)、\((4,1)\)，共有 4 个. 所以所求概率为 \(\dfrac{4}{36}=\dfrac{1}{9}\)，故选 B.
+\end{solution}
 
 \begin{problem}
 已知函数 \(f(x) = \begin{cases}
@@ -61,6 +74,10 @@ a \cdot 2^x, & x \geqslant 0,\\
 A
 \end{answer}
 
+\begin{solution}
+因为 \(-1<0\)，所以由第二段定义得 \(f(-1)=2^{-(-1)}=2\). 又 \(f(-1)=2\geqslant0\)，由第一段定义得 \(f[f(-1)]=f(2)=a\cdot2^2=4a\). 由题设 \(4a=1\)，得 \(a=\dfrac14\)，故选 A.
+\end{solution}
+
 \begin{problem}
 在 \(\triangle ABC\) 中，内角 \(A\)，\(B\)，\(C\) 所对的边分别为 \(a\)，\(b\)，\(c\)，若 \(3a = 2b\)，则 \(\frac{2\sin^2 B - \sin^2 A}{\sin^2 A}\) 的值为（\quad）
 
@@ -75,6 +92,11 @@ A
 D
 \end{answer}
 
+\begin{solution}
+由正弦定理，\(\dfrac{a}{\sin A}=\dfrac{b}{\sin B}\)，所以 \(\dfrac{\sin B}{\sin A}=\dfrac{b}{a}\). 由 \(3a=2b\) 得 \(\dfrac{b}{a}=\dfrac32\)，从而 \(\sin^2B=\dfrac94\sin^2A\). 因此
+\(\dfrac{2\sin^2B-\sin^2A}{\sin^2A}=2\times\dfrac94-1=\dfrac72\). 故选 D.
+\end{solution}
+
 \begin{problem}
 下列叙述中正确的是（\quad）
 
@@ -88,6 +110,16 @@ D
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+选项 A 不正确. 取 \(a=-1\)，\(b=0\)，\(c=-1\)，则 \(b^2-4ac=-4\leqslant0\)，但 \(ax^2+bx+c=-x^2-1<0\)，所以判别式条件不是该不等式恒成立的充分条件.
+
+选项 B 不正确. 取 \(b=0\)，\(a=1\)，\(c=0\)，则 \(a>c\) 成立，而 \(ab^2>cb^2\) 化为 \(0>0\)，不成立，所以二者不可能等价.
+
+选项 C 不正确. 全称命题“对任意 \(x\in\R\)，有 \(x^2\geqslant0\)”的否定应为“存在 \(x\in\R\)，有 \(x^2<0\)”，题中把不等号方向写反了.
+
+选项 D 正确. 直线 \(l\perp\alpha\) 且 \(l\perp\beta\)，所以 \(\alpha\)、\(\beta\) 的法向方向都与 \(l\) 平行，从而两平面的法向方向平行. 两平面又不重合，故 \(\alpha\parallel\beta\). 因此选 D.
+\end{solution}
 
 \begin{problem}
 某人研究中学生的性别与成绩，视力，智商，阅读量这4个变量之间的关系，随机抽查了52名中学生，得到统计数据如表1至表4，则与性别有关联的可能性最大的变量是（\quad）
@@ -173,6 +205,14 @@ D
 D
 \end{answer}
 
+\begin{solution}
+对一个 \(2\times2\) 列联表，记四个格子的频数为 \(a\)，\(b\)，\(c\)，\(d\)，则独立性检验统计量为
+\(\chi^2=\dfrac{n(ad-bc)^2}{(a+b)(c+d)(a+c)(b+d)}\). 统计量越大，说明关联性越强.
+
+四张表的总人数以及行、列边际总数都相同，故分母 \((a+b)(c+d)(a+c)(b+d)\) 以及 \(n\) 均相同，只需比较 \(\lvert ad-bc\rvert\). 四张表依次得到
+\(\lvert6\times22-14\times10\rvert=8\)，\(\lvert4\times20-16\times12\rvert=112\)，\(\lvert8\times24-12\times8\rvert=96\)，\(\lvert14\times30-6\times2\rvert=408\). 最大值对应阅读量，所以选 D.
+\end{solution}
+
 \begin{problem}
 阅读如下程序框图，运行相应的程序，则程序运行后输出的结果为（\quad）
 
@@ -189,6 +229,13 @@ D
 B
 \end{answer}
 
+\begin{solution}
+初始时 \(i=1\)，\(S=0\). 第 \(k\) 次循环所加的项依次为 \(\lg\dfrac13\)，\(\lg\dfrac35\)，\(\ldots\)，\(\lg\dfrac{2k-1}{2k+1}\)，所以循环 \(k\) 次后
+\(S=\lg\dfrac13+\lg\dfrac35+\cdots+\lg\dfrac{2k-1}{2k+1}=\lg\dfrac1{2k+1}\).
+
+当第 4 次循环使用 \(i=7\) 时，\(S=\lg\dfrac19>-1\)，不满足输出条件，随后 \(i\) 增加到 9. 第 5 次循环使用 \(i=9\) 后，\(S=\lg\dfrac1{11}<-1\)，满足条件并输出当前的 \(i=9\). 故选 B.
+\end{solution}
+
 \begin{problem}
 过双曲线 \(C: \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1\) 的右顶点作 \(x\) 轴的垂线与 \(C\) 的一条渐近线相交于 \(A\). 若以 \(C\) 的右焦点为圆心，半径为 4 的圆经过 \(A\)，\(O\) 两点 （\(O\) 为坐标原点），则双曲线 \(C\) 的方程为（\quad）
 
@@ -202,6 +249,14 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+设双曲线的右焦点为 \(F(c,0)\)，则 \(c^2=a^2+b^2\). 以 \(F\) 为圆心、半径为 4 的圆经过原点 \(O\)，所以 \(c=FO=4\)，从而 \(a^2+b^2=16\).
+
+双曲线的右顶点为 \((a,0)\)，其渐近线可取 \(y=\dfrac ba x\). 直线 \(x=a\) 与该渐近线交于 \(A(a,b)\). 因为 \(A\) 也在圆上，所以
+\((a-4)^2+b^2=16\).
+将 \(a^2+b^2=16\) 代入并相减，得 \(a^2-8a+16+b^2-(a^2+b^2)=0\)，即 \(16-8a=0\)，所以 \(a=2\)，进而 \(b^2=16-a^2=12\). 故双曲线方程为 \(\dfrac{x^2}{4}-\dfrac{y^2}{12}=1\)，选 A.
+\end{solution}
 
 \begin{problem}
 在同一直角坐标系中，函数 \( y = ax^{2} - x + \frac{a}{2} \) 与 \( y = a^{2}x^{3} - 2ax^{2} + x + a \) （\( a \in \R \)） 的图象不可能的是（\quad）
@@ -217,6 +272,13 @@ A
 B
 \end{answer}
 
+\begin{solution}
+记第二个函数为 \(y_2=a^2x^3-2ax^2+x+a\). 当 \(a\ne0\) 时，
+\(y_2'=3a^2x^2-4ax+1=(ax-1)(3ax-1)\)，所以两个极值点的横坐标为 \(\dfrac1a\) 和 \(\dfrac1{3a}\). 这两个数同号，故第二个函数的两个极值点必在 \(y\) 轴的同一侧.
+
+三次函数图象中两个极值点分别位于 \(y\) 轴两侧，与上述结论矛盾，因此该图象不可能. 另外，当 \(a=0\) 时两函数分别为 \(y=-x\) 和 \(y=x\)，可得到选项 D 所示的情形. 故选 B.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -227,6 +289,10 @@ B
 \(\left(\e,\e\right)\)
 \end{answer}
 
+\begin{solution}
+曲线的定义域为 \(x>0\). 对 \(y=x\ln x\) 求导，得 \(y'=\ln x+1\). 直线 \(2x-y+1=0\) 化为 \(y=2x+1\)，斜率为 2. 由切线平行，得 \(\ln x+1=2\)，所以 \(x=\e\). 代入曲线方程得 \(y=\e\ln\e=\e\)，故 \(P\) 的坐标为 \(\left(\e,\e\right)\).
+\end{solution}
+
 \begin{problem}
 已知单位向量 \(\bs{e}_1\) 与 \(\bs{e}_2\) 的夹角为 \(\alpha\)，且 \(\cos \alpha = \frac{1}{3}\)，向量 \(\bs{a} = 3\bs{e}_1 - 2\bs{e}_2\)，则 \(|\bs{a}| = \)\fillinblank{}.
 \end{problem}
@@ -234,6 +300,11 @@ B
 \begin{answer}
 \(3\)
 \end{answer}
+
+\begin{solution}
+因为 \(\bs{e}_1\)、\(\bs{e}_2\) 是单位向量，所以 \(\lvert\bs{e}_1\rvert=\lvert\bs{e}_2\rvert=1\)，且 \(\bs{e}_1\mathbin{\cdot}\bs{e}_2=\cos\alpha=\dfrac13\). 由向量模长平方公式，
+\(\lvert\bs{a}\rvert^2=\lvert3\bs{e}_1-2\bs{e}_2\rvert^2=9\lvert\bs{e}_1\rvert^2+4\lvert\bs{e}_2\rvert^2-12\bs{e}_1\mathbin{\cdot}\bs{e}_2=9+4-12\times\dfrac13=9\). 因为模长非负，故 \(\lvert\bs{a}\rvert=3\).
+\end{solution}
 
 \begin{problem}
 在等差数列 \(\{a_{n}\}\) 中，\(a_{1} = 7\)，公差为 \(d\)，前 \(n\) 项和为 \(S_{n}\)，当且仅当 \(n = 8\) 时 \(S_{n}\) 取最大值，则 \(d\) 的取值范围为\fillinblank{}.
@@ -243,6 +314,13 @@ B
 \(\left(-1,-\frac{7}{8}\right)\)
 \end{answer}
 
+\begin{solution}
+因为 \(S_n-S_{n-1}=a_n\)，要使 \(S_8\) 严格大于相邻的前后两项，必须有 \(a_8=S_8-S_7>0\) 且 \(a_9=S_9-S_8<0\). 又 \(a_n=7+(n-1)d\)，所以
+\(7+7d>0\)，\(7+8d<0\)，即 \(-1<d<-\dfrac78\).
+
+反过来，若 \(-1<d<-\dfrac78\)，则 \(d<0\)，数列 \(\{a_n\}\) 递减，且 \(a_8>0\)，\(a_9<0\). 因而 \(a_1\)，\(\ldots\)，\(a_8>0\)，\(a_9\)，\(a_{10}\)，\(\ldots<0\)，所以 \(S_n\) 先增后减，在 \(n=8\) 时取得唯一最大值. 当 \(d=-1\) 或 \(d=-\dfrac78\) 时，分别有 \(a_8=0\) 或 \(a_9=0\)，会出现相邻两项和相等，不符合“当且仅当”. 故 \(d\in\left(-1,-\dfrac78\right)\).
+\end{solution}
+
 \begin{problem}
 设椭圆 \(C: \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\)（\(a > b > 0\)） 的左右焦点为 \(F_1\)，\(F_2\)，过 \(F_2\) 作 \(x\) 轴的垂线与 \(C\) 交于 \(A\)，\(B\) 两点，\(F_1B\) 与 \(y\) 轴交于点 \(D\)，若 \(AD \perp F_1B\)，则椭圆 \(C\) 的离心率等于\fillinblank{}.
 \end{problem}
@@ -251,6 +329,17 @@ B
 \(\frac{\sqrt{3}}{3}\)
 \end{answer}
 
+\begin{solution}
+设椭圆焦距的一半为 \(c\)，则 \(c^2=a^2-b^2\)，离心率为 \(e=\dfrac ca\). 取 \(F_1=(-c,0)\)，\(F_2=(c,0)\). 过 \(F_2\) 的垂线为 \(x=c\)，代入椭圆方程得
+\(\dfrac{c^2}{a^2}+\dfrac{y^2}{b^2}=1\)，所以 \(y^2=\dfrac{b^4}{a^2}\). 记 \(q=\dfrac{b^2}{a}>0\)，则 \(A=(c,q)\)，\(B=(c,-q)\).
+
+直线 \(F_1B\) 与 \(y\) 轴交于 \(D\left(0,-\dfrac q2\right)\). 因而可取
+\(\overrightarrow{DA}=\left(c,\dfrac{3q}{2}\right)\)，\(\overrightarrow{F_1B}=(2c,-q)\). 由 \(AD\perp F_1B\)，得
+\(\overrightarrow{DA}\mathbin{\cdot}\overrightarrow{F_1B}=2c^2-\dfrac32q^2=0\)，即 \(4c^2=3q^2\).
+
+又 \(c=ae\)，且 \(q=\dfrac{b^2}{a}=a(1-e^2)\)，所以 \(4e^2=3(1-e^2)^2\). 令 \(u=e^2\)，得 \(3u^2-10u+3=0\)，即 \(u=3\) 或 \(u=\dfrac13\). 因为 \(0<e<1\)，只能取 \(e^2=\dfrac13\)，故 \(e=\dfrac{\sqrt3}{3}\).
+\end{solution}
+
 \begin{problem}
 已知 \(x\in\R\)，\(y\in\R\). 若 \(|x| + |y| + |x - 1| + |y - 1| \leqslant 2\)，则 \(x + y\) 的取值范围为\fillinblank{}.
 \end{problem}
@@ -258,6 +347,12 @@ B
 \begin{answer}
 \([0,2]\)
 \end{answer}
+
+\begin{solution}
+由三角不等式，\(\lvert x\rvert+\lvert x-1\rvert\geqslant\lvert x-(x-1)\rvert=1\)，且等号当且仅当 \(x\in[0,1]\). 同理，\(\lvert y\rvert+\lvert y-1\rvert\geqslant1\)，且等号当且仅当 \(y\in[0,1]\). 题设左端至少为 2，而又不超过 2，所以两部分都必须取等号，从而 \(0\leqslant x\leqslant1\)，\(0\leqslant y\leqslant1\). 因此 \(0\leqslant x+y\leqslant2\).
+
+反过来，对任意 \(t\in[0,2]\)，取 \(x=y=\dfrac t2\)，则 \(x\)，\(y\in[0,1]\)，题设不等式成立且 \(x+y=t\). 所以 \(x+y\) 的取值范围为 \([0,2]\).
+\end{solution}
 
 \section{解答题}
 
@@ -271,8 +366,15 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 因为 \(f(x)\) 是奇函数，所以对任意 \(x\) 都有 \(f(x)+f(-x)=0\). 由 \(\cos(2x+\theta)+\cos(\theta-2x)=2\cos\theta\cos2x\)，得 \(f(x)+f(-x)=2(a+2\cos^2x)\cos\theta\cos2x\). 因为 \((a+2\cos^2x)\cos2x\) 不恒为 \(0\)，所以 \(\cos\theta=0\). 又 \(\theta\in(0,\pi)\)，故 \(\theta=\frac{\pi}{2}\). 此时 \(f\left(\frac{\pi}{4}\right)=(a+1)\cos\pi=-(a+1)=0\)，所以 \(a=-1\). 因而 \(f(x)=(-1+2\cos^2x)\cos\left(2x+\frac{\pi}{2}\right)=-\cos2x\sin2x=-\frac{1}{2}\sin4x\).
-\item 由上面的函数表达式以及题设，得 \(-\frac{1}{2}\sin\alpha=f\left(\frac{\alpha}{4}\right)=-\frac{2}{5}\)，所以 \(\sin\alpha=\frac{4}{5}\). 因为 \(\alpha\in\left(\frac{\pi}{2},\pi\right)\)，故 \(\cos\alpha=-\frac{3}{5}\). 因此 \(\sin\left(\alpha+\frac{\pi}{3}\right)=\sin\alpha\cos\frac{\pi}{3}+\cos\alpha\sin\frac{\pi}{3}=\frac{4}{5}\cdot\frac{1}{2}-\frac{3}{5}\cdot\frac{\sqrt{3}}{2}=\frac{4-3\sqrt{3}}{10}\).
+\item 因为 \(f(x)\) 是奇函数，所以对任意 \(x\) 都有 \(f(x)+f(-x)=0\). 由 \(\cos(2x+\theta)+\cos(\theta-2x)=2\cos\theta\cos2x\)，得
+\(f(x)+f(-x)=2(a+2\cos^2x)\cos\theta\cos2x\).
+
+上式对任意 \(x\) 恒为 0，而 \((a+2\cos^2x)\cos2x\) 不恒为 0. 事实上，当 \(a\ne-2\) 时取 \(x=0\)，当 \(a=-2\) 时取 \(x=\dfrac{\pi}{6}\)，均可使该因子非 0. 因此 \(\cos\theta=0\). 结合 \(\theta\in(0,\pi)\)，得 \(\theta=\dfrac{\pi}{2}\).
+
+此时 \(f\left(\dfrac{\pi}{4}\right)=(a+1)\cos\pi=-(a+1)=0\)，所以 \(a=-1\). 于是
+\(f(x)=(-1+2\cos^2x)\cos\left(2x+\dfrac{\pi}{2}\right)=-\cos2x\sin2x=-\dfrac12\sin4x\).
+\item 由上式以及题设，\(-\dfrac12\sin\alpha=f\left(\dfrac{\alpha}{4}\right)=-\dfrac25\)，所以 \(\sin\alpha=\dfrac45\). 由于 \(\alpha\in\left(\dfrac{\pi}{2},\pi\right)\)，有 \(\cos\alpha=-\dfrac35\). 因此
+\(\sin\left(\alpha+\dfrac{\pi}{3}\right)=\sin\alpha\cos\dfrac{\pi}{3}+\cos\alpha\sin\dfrac{\pi}{3}=\dfrac45\cdot\dfrac12-\dfrac35\cdot\dfrac{\sqrt3}{2}=\dfrac{4-3\sqrt3}{10}\).
 \end{enumerate}
 \end{solution}
 
@@ -286,8 +388,11 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 当 \(n\geqslant2\) 时，\(a_n=S_n-S_{n-1}=\frac{3n^2-n-\left(3(n-1)^2-(n-1)\right)}{2}=3n-2\). 又 \(a_1=S_1=1=3\times1-2\)，所以对任意 \(n\in\N^*\)，都有 \(a_n=3n-2\).
-\item 对任意 \(n>1\)，取 \(m=3n^2-4n+2\). 因为 \(n\geqslant2\)，所以 \(m=n(3n-4)+2\in\N^*\). 由通项公式，\(a_1=1\)，\(a_n=3n-2\)，且 \(a_m=3m-2=9n^2-12n+4=(3n-2)^2\). 从而 \(a_n^2=a_1a_m\)，即 \(a_1\)，\(a_n\)，\(a_m\) 成等比数列.
+\item 当 \(n\geqslant2\) 时，
+\(a_n=S_n-S_{n-1}=\dfrac{3n^2-n-\left(3(n-1)^2-(n-1)\right)}{2}=3n-2\). 又 \(a_1=S_1=\dfrac{3-1}{2}=1=3\times1-2\)，所以对任意 \(n\in\N^*\)，都有 \(a_n=3n-2\).
+\item 对任意 \(n>1\)，取 \(m=3n^2-4n+2=n(3n-4)+2\). 因为 \(n\geqslant2\)，所以 \(m\in\N^*\). 由通项公式，\(a_1=1\)，\(a_n=3n-2\)，且
+\(a_m=3m-2=9n^2-12n+4=(3n-2)^2=a_n^2\).
+因此 \(a_n^2=a_1a_m\)，且三项均为正数，故 \(a_1\)，\(a_n\)，\(a_m\) 成等比数列.
 \end{enumerate}
 \end{solution}
 
@@ -301,10 +406,24 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 当 \(a=-4\) 时，\(f(x)=(2x-4)^2\sqrt{x}\)，定义域为 \(x\geqslant0\). 当 \(x>0\) 时，\(f'(x)=\frac{20x^2-48x+16}{2\sqrt{x}}=\frac{2(5x-2)(x-2)}{\sqrt{x}}\). 因此在 \(0<x<\frac{2}{5}\) 时 \(f'(x)>0\)，在 \(\frac{2}{5}<x<2\) 时 \(f'(x)<0\)，在 \(x>2\) 时 \(f'(x)>0\). 又 \(f(0)=0\)，所以 \(f(x)\) 的单调递增区间为 \(\left[0,\frac{2}{5}\right]\) 和 \([2,+\infty)\).
-\item 将函数写成 \(f(x)=(2x+a)^2\sqrt{x}\). 当 \(-8\leqslant a\leqslant-2\) 时，\(x=-\frac{a}{2}\in[1,4]\)，从而 \(f\left(-\frac{a}{2}\right)=0\)，最小值不可能为 \(8\). 当 \(-2<a<0\) 时，\(f'(x)=\frac{q(x)}{2\sqrt{x}}\)，其中 \(q(x)=20x^2+12ax+a^2\). 此时 \(q(1)=(a+2)(a+10)>0\)，且 \(q'(x)=40x+12a>0\)（\(x\geqslant1\)），所以 \(f\) 在 \([1,4]\) 上递增，最小值为 \(f(1)=(a+2)^2<4\)，也不符合题意.
+\item 当 \(a=-4\) 时，\(f(x)=(2x-4)^2\sqrt{x}\)，定义域为 \(x\geqslant0\). 对 \(x>0\) 求导，得
+\(f'(x)=\dfrac{20x^2-48x+16}{2\sqrt{x}}=\dfrac{2(5x-2)(x-2)}{\sqrt{x}}\).
 
-当 \(-10<a<-8\) 时，\(q(x)=20\left(x+\frac{a}{10}\right)\left(x+\frac{a}{2}\right)\)，且 \(-\frac{a}{10}<1<4<-\frac{a}{2}\)，故 \(f\) 在 \([1,4]\) 上递减，最小值为 \(f(4)=2(a+8)^2<8\). 当 \(a=-10\) 时，\(f\) 在 \([1,4]\) 上递减，且 \(f(4)=2(8-10)^2=8\). 当 \(a<-10\) 时，\(f\) 在区间内部的驻点 \(x=-\frac{a}{10}\) 处由增转减，故最小值只能在端点处取得；但 \(f(1)=(a+2)^2>64\)，\(f(4)=2(a+8)^2>8\)，不可能等于 \(8\). 综上，\(a=-10\).
+因此 \(f'(x)>0\) 在 \(0<x<\dfrac25\) 和 \(x>2\) 时成立，\(f'(x)<0\) 在 \(\dfrac25<x<2\) 时成立. 函数在 \(x=0\) 连续且 \(f(0)=0\)，所以单调递增区间为 \(\left[0,\dfrac25\right]\) 和 \([2,+\infty)\).
+\item 将函数写成 \(f(x)=(2x+a)^2\sqrt{x}\). 对 \(x>0\) 求导，得
+\(f'(x)=\dfrac{(2x+a)(10x+a)}{2\sqrt{x}}\).
+
+由于 \(a<0\)，两个驻点为 \(-\dfrac a{10}\) 和 \(-\dfrac a2\)，且 \(-\dfrac a{10}<-\dfrac a2\). 分情况讨论如下.
+
+当 \(-8\leqslant a\leqslant-2\) 时，\(-\dfrac a2\in[1,4]\)，而 \(f\left(-\dfrac a2\right)=0\)，故最小值不可能为 8.
+
+当 \(-2<a<0\) 时，两个驻点均小于 1，\(f\) 在 \([1,4]\) 上递增，最小值为 \(f(1)=(a+2)^2<4\)，不符合题意.
+
+当 \(-10<a<-8\) 时，\(-\dfrac a{10}<1<4<-\dfrac a2\)，所以 \(f\) 在 \([1,4]\) 上递减，最小值为 \(f(4)=2(a+8)^2<8\). 当 \(a=-10\) 时，同样有 \(f\) 在 \([1,4]\) 上递减，且 \(f(4)=2(-2)^2=8\).
+
+当 \(a<-10\) 时，\(-\dfrac a{10}>1\)，而 \(-\dfrac a2>5\). 若 \(-\dfrac a{10}\in(1,4)\)，该点使导数由正变负，是区间内的极大值；若 \(-\dfrac a{10}\geqslant4\)，则函数在 \([1,4]\) 上单调递增. 因而两种情况下最小值都只能在端点取得. 但 \(f(1)=(a+2)^2>64\)，\(f(4)=2(a+8)^2>8\)，所以最小值大于 8.
+
+综上，\(a=-10\).
 \end{enumerate}
 \end{solution}
 
@@ -320,8 +439,16 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 设 \(\bs{v}=\overrightarrow{AA_1}=\overrightarrow{BB_1}=\overrightarrow{CC_1}\)，\(\bs{b}=\overrightarrow{AB}\)，\(\bs{c}=\overrightarrow{AC}\). 则 \(\overrightarrow{BC}=\bs{c}-\bs{b}\)，\(\overrightarrow{A_1B}=\bs{b}-\bs{v}\). 由 \(AA_1\perp BC\) 和 \(A_1B\perp BB_1\)，分别得到 \(\bs{v}\mathbin{\cdot}(\bs{c}-\bs{b})=0\) 和 \((\bs{b}-\bs{v})\mathbin{\cdot}\bs{v}=0\). 因而 \(\bs{v}\mathbin{\cdot}\bs{c}=\bs{v}\mathbin{\cdot}\bs{b}=|\bs{v}|^2\). 又 \(\overrightarrow{A_1C}=\bs{c}-\bs{v}\)，\(\overrightarrow{CC_1}=\bs{v}\)，所以 \(\overrightarrow{A_1C}\mathbin{\cdot}\overrightarrow{CC_1}=(\bs{c}-\bs{v})\mathbin{\cdot}\bs{v}=0\)，即 \(A_1C\perp CC_1\).
-\item 因为 \(AB^2+AC^2=2^2+(\sqrt{3})^2=7=BC^2\)，所以 \(\triangle ABC\) 在 \(A\) 处为直角三角形，底面积为 \(\frac{1}{2}AB\cdot AC=\sqrt{3}\). 取 \(A=(0,0,0)\)，\(B=(2,0,0)\)，\(C=(0,\sqrt{3},0)\)，设 \(\bs{v}=(r,s,t)\)，并记 \(h=AA_1=|\bs{v}|\). 由 \(AA_1\perp BC\)，有 \((r,s,t)\mathbin{\cdot}(-2,\sqrt{3},0)=0\)，即 \(s=\frac{2r}{\sqrt{3}}\). 由 \(A_1B\perp BB_1\)，有 \((2-r,-s,-t)\mathbin{\cdot}(r,s,t)=0\)，即 \(2r=h^2\). 因而 \(r=\frac{h^2}{2}\)，\(s=\frac{h^2}{\sqrt{3}}\)，从而 \(t^2=h^2-r^2-s^2=h^2-\frac{7h^4}{12}=h^2\left(1-\frac{7h^2}{12}\right)\). 三棱柱两底面间的距离为 \(|t|\)，所以体积 \(V=\sqrt{3}|t|\)，进而 \(V^2=3h^2-\frac{7}{4}h^4\). 令 \(u=h^2\)，则 \(V^2=3u-\frac{7}{4}u^2=\frac{9}{7}-\frac{7}{4}\left(u-\frac{6}{7}\right)^2\leqslant\frac{9}{7}\). 当且仅当 \(u=\frac{6}{7}\)，即 \(AA_1=\sqrt{\frac{6}{7}}\) 时取等号，此时 \(V_{\max}=\frac{3}{\sqrt{7}}\).
+\item 设 \(\bs{v}=\overrightarrow{AA_1}=\overrightarrow{BB_1}=\overrightarrow{CC_1}\)，\(\bs{b}=\overrightarrow{AB}\)，\(\bs{c}=\overrightarrow{AC}\). 则 \(\overrightarrow{BC}=\bs{c}-\bs{b}\)，\(\overrightarrow{A_1B}=\bs{b}-\bs{v}\). 由 \(AA_1\perp BC\) 和 \(A_1B\perp BB_1\)，分别得到 \(\bs{v}\mathbin{\cdot}(\bs{c}-\bs{b})=0\) 和 \((\bs{b}-\bs{v})\mathbin{\cdot}\bs{v}=0\). 因而 \(\bs{v}\mathbin{\cdot}\bs{c}=\bs{v}\mathbin{\cdot}\bs{b}=|\bs{v}|^2\). 又 \(\overrightarrow{A_1C}=\bs{c}-\bs{v}\)，\(\overrightarrow{CC_1}=\bs{v}\)，所以
+\(\overrightarrow{A_1C}\mathbin{\cdot}\overrightarrow{CC_1}=(\bs{c}-\bs{v})\mathbin{\cdot}\bs{v}=0\)，即 \(A_1C\perp CC_1\).
+\item 因为 \(AB^2+AC^2=2^2+(\sqrt3)^2=7=BC^2\)，所以 \(\triangle ABC\) 在 \(A\) 处为直角三角形，底面积为 \(\dfrac12 AB\cdot AC=\sqrt3\). 取 \(A=(0,0,0)\)，\(B=(2,0,0)\)，\(C=(0,\sqrt3,0)\)，设 \(\bs{v}=(r,s,t)\)，并记 \(h=AA_1=|\bs{v}|\).
+
+由 \(AA_1\perp BC\)，有 \((r,s,t)\mathbin{\cdot}(-2,\sqrt3,0)=0\)，即 \(s=\dfrac{2r}{\sqrt3}\). 由 \(A_1B\perp BB_1\)，有 \((2-r,-s,-t)\mathbin{\cdot}(r,s,t)=0\)，即 \(2r=h^2\). 因而 \(r=\dfrac{h^2}{2}\)，\(s=\dfrac{h^2}{\sqrt3}\)，从而
+\(t^2=h^2-r^2-s^2=h^2-\dfrac{7h^4}{12}=h^2\left(1-\dfrac{7h^2}{12}\right)\).
+
+三棱柱两底面间的距离为 \(\lvert t\rvert\)，所以体积 \(V=\sqrt3\lvert t\rvert\)，进而 \(V^2=3h^2-\dfrac74h^4\). 令 \(u=h^2\)，则
+\(V^2=3u-\dfrac74u^2=\dfrac97-\dfrac74\left(u-\dfrac67\right)^2\leqslant\dfrac97\).
+当且仅当 \(u=\dfrac67\)，即 \(AA_1=\sqrt{\dfrac67}\) 时取等号，此时 \(V_{\max}=\dfrac3{\sqrt7}\).
 \end{enumerate}
 \end{solution}
 
@@ -334,11 +461,19 @@ B
 \bitmapfigure[max width=0.62\linewidth,float=inline]{img/2014/jiangxi_liberal/q20_fig1.png}
 \end{problem}
 
-
 \begin{solution}
 \begin{enumerate}
-\item 设抛物线上的点用参数表示为 \(P(t)=(2t,t^2)\)，并设 \(A=P(u)\)，\(B=P(v)\). 过 \(A\)，\(B\) 的直线方程为 \(y=\frac{u+v}{2}x-uv\). 因为该直线过 \(M(0,2)\)，所以 \(-uv=2\)，即 \(uv=-2\). 直线 \(AO\) 的方程为 \(y=\frac{u}{2}x\)，过 \(B\) 作的竖线为 \(x=2v\)，故 \(D=(2v,uv)=(2v,-2)\). 因此动点 \(D\) 在定直线 \(y=-2\) 上.
-\item 设切线 \(l\) 为抛物线在参数 \(t\) 处的切线. 因为不含 \(x\) 轴，所以 \(t\neq0\)，且切线方程为 \(y=tx-t^2\). 令 \(y=2\)，得到 \(N_1=\left(\frac{t^2+2}{t},2\right)=\left(t+\frac{2}{t},2\right)\)；令 \(y=-2\)，得到 \(N_2=\left(\frac{t^2-2}{t},-2\right)=\left(t-\frac{2}{t},-2\right)\). 于是 \(|MN_1|^2=\left(t+\frac{2}{t}\right)^2\)，\(|MN_2|^2=\left(t-\frac{2}{t}\right)^2+4^2\)，从而 \(|MN_2|^2-|MN_1|^2=\left(t-\frac{2}{t}\right)^2+16-\left(t+\frac{2}{t}\right)^2=8\). 所以所求定值为 \(8\).
+\item 抛物线 \(x^2=4y\) 上的点可参数化为 \(P(t)=(2t,t^2)\). 设 \(A=P(u)\)，\(B=P(v)\). 过 \(A\)，\(B\) 的直线斜率为
+\(\dfrac{v^2-u^2}{2v-2u}=\dfrac{u+v}{2}\)，故其方程为 \(y=\dfrac{u+v}{2}x-uv\). 该直线过 \(M(0,2)\)，所以 \(-uv=2\)，即 \(uv=-2\).
+
+直线 \(AO\) 的斜率为 \(\dfrac{u^2}{2u}=\dfrac u2\)，方程为 \(y=\dfrac u2x\). 过 \(B\) 作的竖线为 \(x=2v\)，代入得 \(D=(2v,uv)=(2v,-2)\). 因而动点 \(D\) 始终在定直线 \(y=-2\) 上.
+\item 设切线 \(l\) 为抛物线在参数 \(t\) 处的切线. 由于 \(l\) 不含 \(x\) 轴，\(t\ne0\). 由切线斜率可得切线方程为 \(y=tx-t^2\).
+
+令 \(y=2\)，得 \(N_1=\left(\dfrac{t^2+2}{t},2\right)=\left(t+\dfrac2t,2\right)\). 令 \(y=-2\)，得 \(N_2=\left(\dfrac{t^2-2}{t},-2\right)=\left(t-\dfrac2t,-2\right)\). 因为 \(M=(0,2)\)，所以
+\(|MN_1|^2=\left(t+\dfrac2t\right)^2\)，\(|MN_2|^2=\left(t-\dfrac2t\right)^2+4^2\).
+
+于是
+\(|MN_2|^2-|MN_1|^2=\left(t-\dfrac2t\right)^2+16-\left(t+\dfrac2t\right)^2=8\). 所以所求定值为 8.
 \end{enumerate}
 \end{solution}
 
@@ -353,19 +488,23 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 从 \(1\) 到 \(100\) 的连接数中，数字 \(0\) 出现在 \(10,20,\ldots,90\) 中各一次，在 \(100\) 中出现两次，所以共有 \(9+2=11\) 个数字 \(0\). 又 \(F(100)=9+90\times2+3=192\)，故 \(p(100)=\frac{11}{192}\).
-\item 当 \(1\leqslant n\leqslant9\) 时，全部是 \(1\) 位数，所以 \(F(n)=n\). 当 \(10\leqslant n\leqslant99\) 时，前面有 \(9\) 个 \(1\) 位数和 \(n-9\) 个 \(2\) 位数，所以 \(F(n)=9+2(n-9)=2n-9\). 当 \(100\leqslant n\leqslant999\) 时，前面共有 \(9+90\times2=189\) 位，另有 \(n-99\) 个 \(3\) 位数，所以 \(F(n)=189+3(n-99)=3n-108\). 当 \(1000\leqslant n\leqslant2014\) 时，前面共有 \(9+90\times2+900\times3=2889\) 位，另有 \(n-999\) 个 \(4\) 位数，所以 \(F(n)=2889+4(n-999)=4n-1107\). 因而
-
+\item 从 1 到 100 连接成的数中，数字 0 在 \(10\)，\(20\)，\(\ldots\)，\(90\) 中各出现 1 次，在 \(100\) 中出现 2 次，所以共有 \(9+2=11\) 个数字 0. 又
+\(F(100)=9+90\times2+3=192\)，故 \(p(100)=\dfrac{11}{192}\).
+\item 当 \(1\leqslant n\leqslant9\) 时，全部是 1 位数，所以 \(F(n)=n\). 当 \(10\leqslant n\leqslant99\) 时，前面有 9 个 1 位数和 \(n-9\) 个 2 位数，所以 \(F(n)=9+2(n-9)=2n-9\). 当 \(100\leqslant n\leqslant999\) 时，前面共有 \(9+90\times2=189\) 位，另有 \(n-99\) 个 3 位数，所以 \(F(n)=189+3(n-99)=3n-108\). 当 \(1000\leqslant n\leqslant2014\) 时，前面共有 \(9+90\times2+900\times3=2889\) 位，另有 \(n-999\) 个 4 位数，所以 \(F(n)=2889+4(n-999)=4n-1107\). 因而
 \(F(n)=\begin{cases}
 n,&1\leqslant n\leqslant9,\\
 2n-9,&10\leqslant n\leqslant99,\\
 3n-108,&100\leqslant n\leqslant999,\\
 4n-1107,&1000\leqslant n\leqslant2014.
 \end{cases}\)
-\item 先看 \(n\leqslant9\). 只有 \(n=9\) 时 \(h(n)=1\). 对 \(10\leqslant n\leqslant99\)，写成 \(n=10k+r\)，其中 \(1\leqslant k\leqslant9\)，\(0\leqslant r\leqslant9\). 从 \(10\) 到 \(10k-1\) 的每个完整十位组中，个位数字 \(0\) 和 \(9\) 各出现一次，贡献相互抵消；当 \(k\leqslant8\) 时，当前十位数字不是 \(9\)，所以 \(r\leqslant8\) 时当前组个位的 \(0\) 使 \(h(10k+r)=0\)，而 \(r=9\) 时再增加一个 \(9\)，使 \(h(10k+9)=1\). 当 \(k=9\) 时，数字 \(9\) 作为十位数字出现 \(r+1\) 次，因此 \(h(90+r)=r+1\)（\(0\leqslant r\leqslant8\)），而 \(h(99)=11\). 于是 \(S=\{9,19,29,39,49,59,69,79,89,90\}\).
+\item 当 \(n\leqslant9\) 时，只有 \(n=9\) 使 \(h(n)=1\). 对 \(10\leqslant n\leqslant99\)，写成 \(n=10k+r\)，其中 \(1\leqslant k\leqslant9\)，\(0\leqslant r\leqslant9\).
 
-对 \(n=10k+9\)（\(1\leqslant k\leqslant8\)），数字 \(0\) 恰在 \(10,20,\ldots,10k\) 中出现，所以 \(g(n)=k\)，且 \(F(n)=20k+9\)，从而 \(p(n)=\frac{k}{20k+9}\). 因为
+从 1 到 9 的数字中，9 比 0 多 1 个. 对每个完整的十位组 \(10j\)，\(\ldots\)，\(10j+9\)（\(1\leqslant j\leqslant8\)），个位数字 0 和 9 各出现 1 次，净贡献为 0. 因此在 \(n=10k+r\) 且 \(1\leqslant k\leqslant8\) 时，当前十位组先加入一个 0；当 \(r=0\)，\(1\)，\(\ldots\)，\(8\) 时，\(h(n)=0\)，当 \(r=9\) 时再加入一个 9，\(h(n)=1\). 当 \(k=9\) 时，\(h(90)=1\)，每加入 \(91\)，\(\ldots\)，\(98\) 中的一个数就增加 1 个数字 9，而 \(h(99)=11\). 所以
+\(S=\{9,19,29,39,49,59,69,79,89,90\}\).
 
-\(\frac{k+1}{20k+29}-\frac{k}{20k+9}=\frac{9}{(20k+29)(20k+9)}>0\)，所以这些数中的最大值为 \(p(89)=\frac{8}{169}\). 另有 \(g(90)=9\)，\(F(90)=171\)，故 \(p(90)=\frac{9}{171}=\frac{1}{19}>\frac{8}{169}\)，而 \(p(9)=0\). 因此当 \(n\in S\) 时，\(p(n)\) 的最大值为 \(\frac{1}{19}\).
+对 \(n=10k+9\)（\(1\leqslant k\leqslant8\)），数字 0 恰在 \(10\)，\(20\)，\(\ldots\)，\(10k\) 中出现，所以 \(g(n)=k\)，且 \(F(n)=20k+9\). 从而 \(p(n)=\dfrac{k}{20k+9}\). 并且
+\(\dfrac{k+1}{20k+29}-\dfrac{k}{20k+9}=\dfrac{9}{(20k+29)(20k+9)}>0\)，所以这些候选数中的最大值为 \(p(89)=\dfrac8{169}\).
+
+另有 \(g(90)=9\)，\(F(90)=171\)，故 \(p(90)=\dfrac9{171}=\dfrac1{19}>\dfrac8{169}\)，而 \(p(9)=0\). 因此当 \(n\in S\) 时，\(p(n)\) 的最大值为 \(\dfrac1{19}\).
 \end{enumerate}
 \end{solution}

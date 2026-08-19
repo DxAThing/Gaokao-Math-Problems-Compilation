@@ -8,6 +8,14 @@
 \(3\)
 \end{answer}
 
+\begin{solution}
+由 \(\log_{9}x=\dfrac{1}{2}\)，得
+\[
+x=9^{1/2}=3
+\]
+因为对数的真数必须为正，且 \(3>0\)，所以所求 \(x\) 为 \(3\).
+\end{solution}
+
 \begin{problem}
 设数列 \(\{a_n\}\) 的首项 \(a_1=-7\)，且满足 \(a_{n+1}=a_n+2\)（\(n\in\N\)），则 \(a_1+a_2+\cdots+a_{17}=\fillinblank{}\).
 \end{problem}
@@ -15,6 +23,18 @@
 \begin{answer}
 \(153\)
 \end{answer}
+
+\begin{solution}
+由递推关系可知 \(\{a_n\}\) 是首项为 \(-7\)、公差为 \(2\) 的等差数列，因此
+\[
+a_{17}=a_1+16\times2=-7+32=25
+\]
+于是
+\[
+a_1+a_2+\cdots+a_{17}=\frac{17(a_1+a_{17})}{2}=\frac{17(-7+25)}{2}=153
+\]
+所以填 \(153\).
+\end{solution}
 
 \begin{problem}
 设 \(P\) 为双曲线 \(\frac{x^2}{4}-y^2=1\) 上一动点，\(O\) 为坐标原点，\(M\) 为线段 \(OP\) 的中点，则点 \(M\) 的轨迹方程为\fillinblank{}.
@@ -24,6 +44,18 @@
 \(x^2-4y^2=1\)
 \end{answer}
 
+\begin{solution}
+设动点 \(P\) 的坐标为 \((u,v)\)，则中点 \(M\) 的坐标为 \((x,y)=\left(\dfrac{u}{2},\dfrac{v}{2}\right)\)，即 \(u=2x\)，\(v=2y\). 由 \(P\) 在双曲线上，得
+\[
+\frac{(2x)^2}{4}-(2y)^2=1
+\]
+化简为
+\[
+x^2-4y^2=1
+\]
+反过来，若 \((x,y)\) 满足该方程，则点 \((2x,2y)\) 满足原双曲线方程，且 \((x,y)\) 是原点与该点的中点. 因此轨迹方程为 \(x^2-4y^2=1\).
+\end{solution}
+
 \begin{problem}
 设集合 \(A=\{x\mid 2\lg x=\lg(8x-15),x\in\R\}\)，\(B=\{x\mid \cos\frac{x}{2}>0,x\in\R\}\)，则 \(A\cap B\) 的元素个数为\fillinblank{}\(\text{个}\).
 \end{problem}
@@ -31,6 +63,22 @@
 \begin{answer}
 \(1\)
 \end{answer}
+
+\begin{solution}
+由对数真数的限制，必须有 \(x>0\) 且 \(8x-15>0\)，即 \(x>\dfrac{15}{8}\). 在此条件下，
+\[
+2\lg x=\lg x^2
+\]
+所以
+\[
+x^2=8x-15\Longleftrightarrow (x-3)(x-5)=0
+\]
+两个根 \(3,5\) 均满足定义域条件，故 \(A=\{3,5\}\).
+
+又因为 \(B=\left\{x\mid\cos\dfrac{x}{2}>0\right\}\)，有
+\(\cos\frac{3}{2}>0\)，\(\cos\frac{5}{2}<0\)
+其中前者是因为 \(0<\dfrac32<\dfrac\pi2\)，后者是因为 \(\dfrac\pi2<\dfrac52<\pi\). 因而 \(A\cap B=\{3\}\)，元素个数为 \(1\).
+\end{solution}
 
 \begin{problem}
 抛物线 \(x^2-4y-3=0\) 的焦点坐标为\fillinblank{}.
@@ -40,6 +88,17 @@
 \(\left(0,\frac{1}{4}\right)\)
 \end{answer}
 
+\begin{solution}
+将方程整理为
+\[
+x^2=4\left(y+\frac{3}{4}\right)
+\]
+与抛物线标准方程 \(x^2=4p(y-y_0)\) 比较，得顶点为 \(\left(0,-\dfrac34\right)\)，且 \(p=1\). 因此焦点为
+\[
+\left(0,-\frac34+1\right)=\left(0,\frac14\right)
+\]
+\end{solution}
+
 \begin{problem}
 设数列 \(\{a_n\}\) 是公比 \(q>0\) 的等比数列，\(S_n\) 是它的前 \(n\) 项和. \(\displaystyle\lim_{n\to\infty}S_n=7\)，则此数列的首项 \(a_1\) 的取值范围是\fillinblank{}.
 \end{problem}
@@ -48,6 +107,14 @@
 \((0,7)\)
 \end{answer}
 
+\begin{solution}
+若等比数列的前 \(n\) 项和有有限极限，则必须有 \(0<q<1\). 此时
+\(S_n=\frac{a_1(1-q^n)}{1-q}\)，\(\lim_{n\to\infty}S_n=\frac{a_1}{1-q}=7\)
+从而 \(a_1=7(1-q)\). 当 \(0<q<1\) 时，\(0<a_1<7\).
+
+反过来，任取 \(a_1\in(0,7)\)，令 \(q=1-\dfrac{a_1}{7}\)，则 \(0<q<1\)，且 \(\lim S_n=7\). 所以 \(a_1\) 的取值范围为 \((0,7)\).
+\end{solution}
+
 \begin{problem}
 某餐厅供应客饭，每位顾客可以在餐厅提供的菜肴中任选 \(2\) 荤 \(2\) 素共 \(4\) 种不同的品种. 现在餐厅准备了 \(5\) 种不同的荤菜，若要保证每位顾客有 \(200\) 种以上不同的选择，则餐厅至少还需要准备不同的素菜品种\fillinblank{}\(\text{种}\)（结果用数值表示）.
 \end{problem}
@@ -55,6 +122,14 @@
 \begin{answer}
 \(7\)
 \end{answer}
+
+\begin{solution}
+设素菜有 \(n\) 种，则每位顾客的选择数为
+\[
+\mathrm C_5^2\mathrm C_n^2=10\cdot\frac{n(n-1)}{2}=5n(n-1)
+\]
+题意要求 \(5n(n-1)>200\)，即 \(n(n-1)>40\). 当 \(n=6\) 时，选择数为 \(5\times6\times5=150\)，不超过 \(200\)；当 \(n=7\) 时，选择数为 \(5\times7\times6=210>200\). 因此至少需要准备 \(7\) 种素菜.
+\end{solution}
 
 \begin{problem}
 在代数式 \(\left(x-\frac{1}{x^2}\right)^5\) 的展开式中，常数项为\fillinblank{}.
@@ -66,10 +141,8 @@
 
 \begin{solution}
 展开式的通项为
-\[
-\mathrm C_5^k x^{5-k}\left(-\frac{1}{x^2}\right)^k=(-1)^k\mathrm C_5^k x^{5-3k},\quad k=0,1,2,3,4,5.
-\]
-当 \(k=0,1,2,3,4,5\) 时，幂指数依次为 \(5,2,-1,-4,-7,-10\)，其中没有 \(0\)，所以展开式中没有常数项，常数项为 \(0\).
+\(\mathrm C_5^k x^{5-k}\left(-\frac{1}{x^2}\right)^k=(-1)^k\mathrm C_5^k x^{5-3k}\)，\(k=0\)，\(1\)，\(2\)，\(3\)，\(4\)，\(5\).
+当 \(k=0\)，\(1\)，\(2\)，\(3\)，\(4\)，\(5\) 时，幂指数依次为 \(5\)，\(2\)，\(-1\)，\(-4\)，\(-7\)，\(-10\)，其中没有 \(0\)，所以展开式中没有常数项，常数项为 \(0\).
 \end{solution}
 
 \begin{problem}
@@ -79,6 +152,18 @@
 \begin{answer}
 \(\left[0,\frac{2\pi}{3}\right]\)
 \end{answer}
+
+\begin{solution}
+在区间 \(\left[-\dfrac\pi6,\dfrac{5\pi}{6}\right]\) 内，正弦函数在 \(\alpha=\dfrac\pi2\) 处取得最大值 \(1\)，在左端点处取得最小值 \(-\dfrac12\). 因而
+\[
+x=\sin\alpha\in\left[-\frac12,1\right]
+\]
+反余弦函数在 \([-1,1]\) 上单调递减，所以
+\[
+\arccos x\in\left[\arccos1,\arccos\left(-\frac12\right)\right]
+=\left[0,\frac{2\pi}{3}\right]
+\]
+\end{solution}
 
 \begin{problem}
 利用下列盈利表中的数据进行决策，应选择的方案是\fillinblank{}.
@@ -104,6 +189,23 @@
 \(A_3\)
 \end{answer}
 
+\begin{solution}
+按概率加权计算各方案的期望盈利：
+\[
+E(A_1)=0.25\times50+0.30\times65+0.45\times26=43.7
+\]
+\[
+E(A_2)=0.25\times70+0.30\times26+0.45\times16=32.5
+\]
+\[
+E(A_3)=0.25\times(-20)+0.30\times52+0.45\times78=45.7
+\]
+\[
+E(A_4)=0.25\times98+0.30\times82+0.45\times(-10)=44.6
+\]
+其中最大值为 \(E(A_3)=45.7\)，所以应选择方案 \(A_3\).
+\end{solution}
+
 \begin{problem}
 已知两个圆：
 \begin{circlelist}
@@ -116,6 +218,18 @@
 \begin{answer}
 若两圆方程为 \((x-a)^2+(y-b)^2=r^2\) 与 \((x-c)^2+(y-d)^2=r^2\)，且 \(a\ne c\) 或 \(b\ne d\)，则由两式相减可得两圆的对称轴方程.
 \end{answer}
+
+\begin{solution}
+将两个圆的方程分别记为
+\((x-a)^2+(y-b)^2=r^2\)，\((x-c)^2+(y-d)^2=r^2\)
+其中两个圆心不同. 两式相减，二次项和半径项消去，得到
+\[
+2(c-a)x+2(d-b)y+a^2+b^2-c^2-d^2=0
+\]
+这是一条直线，其法向量为 \((c-a,d-b)\)，所以它垂直于两圆心连线；代入圆心连线中点 \(\left(\dfrac{a+c}{2},\dfrac{b+d}{2}\right)\) 可验证该中点在此直线上. 因而这条直线就是两圆的对称轴.
+
+当 \(a=b=0\)，\(c=0\)，\(d=3\)，\(r=1\) 时，上式化为 \(6y-9=0\)，即 \(y=\dfrac32\)，正好得到题设结论. 所以该推广包含原命题.
+\end{solution}
 
 \begin{problem}
 据报道，我国目前已成为世界上受荒漠化危害最严重的国家之一. 下左图表示我国土地沙化总面积在上个世纪五六十年代，七八十年代，九十年代的变化情况. 由图中的相关信息，可将上述有关年代中，我国年平均土地沙化面积在下右图中图示为：\fillinblank{}
@@ -147,6 +261,22 @@
 C
 \end{answer}
 
+\begin{solution}
+若 \(a=3\)，两直线方程分别为
+\(3x+2y+9=0\)，\(3x+2y+4=0\).
+它们的斜率相同，且常数项不同，因此平行且不重合，故 \(a=3\) 是该命题的充分条件.
+
+反过来，两直线平行的充要条件为
+\[
+a(a-1)-3\times2=0
+\]
+即
+\[
+a^2-a-6=0\Longleftrightarrow (a-3)(a+2)=0
+\]
+当 \(a=-2\) 时，两式都化为直线 \(-x+y-3=0\)，两直线重合，不符合“不重合”的条件；所以平行且不重合只能有 \(a=3\). 因而 \(a=3\) 也是必要条件，选 C.
+\end{solution}
+
 \begin{problem}
 在平行六面体 \(ABCD-A_1B_1C_1D_1\) 中，\(M\) 为 \(AC\) 与 \(BD\) 的交点，若 \(\overrightarrow{A_1B_1}=\bs{a}\)，\(\overrightarrow{A_1D_1}=\bs{b}\)，\(\overrightarrow{A_1A}=\bs{c}\)，则下列向量中与 \(\overrightarrow{B_1M}\) 相等的向量是（\quad）
 
@@ -160,6 +290,21 @@ C
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+以 \(A_1\) 为原点，用 \(\bs a\)，\(\bs b\)，\(\bs c\) 分别表示 \(\overrightarrow{A_1B_1}\)，\(\overrightarrow{A_1D_1}\)，\(\overrightarrow{A_1A}\). 则
+\(\overrightarrow{A_1B_1}=\bs a\)，\(\overrightarrow{A_1A}=\bs c\)，\(\overrightarrow{A_1C}=\bs a+\bs b+\bs c\).
+因为平行四边形 \(ABCD\) 的对角线互相平分，\(M\) 是 \(AC\) 的中点，所以
+\[
+\overrightarrow{A_1M}=\frac12\left(\bs c+\bs a+\bs b+\bs c\right)=\frac12\bs a+\frac12\bs b+\bs c
+\]
+于是
+\[
+\overrightarrow{B_1M}=\overrightarrow{A_1M}-\overrightarrow{A_1B_1}
+=-\frac12\bs a+\frac12\bs b+\bs c
+\]
+对应选项 A.
+\end{solution}
 
 \begin{problem}
 已知 \(a\)，\(b\) 为两条不同的直线，\(\alpha\)，\(\beta\) 为两个不同的平面，且 \(a\perp\alpha\)，\(b\perp\beta\)，则下列命题中的假命题是（\quad）
@@ -175,6 +320,14 @@ A
 D
 \end{answer}
 
+\begin{solution}
+由于直线垂直于平面时，直线方向是该平面的法向方向：若 \(a\parallel b\)，则两个平面的法向方向平行，结合 \(\alpha\ne\beta\)，可得 \(\alpha\parallel\beta\)，所以 A 正确；若 \(\alpha\perp\beta\)，则两平面的法向方向垂直，所以 \(a\perp b\)，B 正确.
+
+若 \(a\)，\(b\) 相交而 \(\alpha\)，\(\beta\) 不相交，则两个不同平面必平行，从而其法向方向平行，导致 \(a\parallel b\)，与两条不同直线相交矛盾，因此 C 正确.
+
+D 不一定成立. 例如取 \(\alpha:z=0\)，\(\beta:y=0\)，两平面相交；取 \(a\) 为过 \((0,0,1)\) 且方向为 \((0,0,1)\) 的直线，取 \(b\) 为过 \((1,0,0)\) 且方向为 \((0,1,0)\) 的直线. 则 \(a\perp\alpha\)，\(b\perp\beta\)，但 \(a\)，\(b\) 不相交. 所以假命题是 D.
+\end{solution}
+
 \begin{problem}
 用计算器验算函数 \(y=\frac{\lg x}{x}\)（\(x>1\)）的若干个值，可以猜想下列命题中的真命题只能是（\quad）
 
@@ -189,6 +342,26 @@ D
 D
 \end{answer}
 
+\begin{solution}
+令 \(f(x)=\dfrac{\lg x}{x}\). 先比较几个定义域内的值：
+\(f(2)=\frac{\lg2}{2}\approx0.1505\)，\(f(3)=\frac{\lg3}{3}\approx0.1590\)
+所以函数在 \((1,+\infty)\) 上不可能单调递减，选项 A 错. 又
+\[
+f(2.7)=\frac{\lg2.7}{2.7}\approx0.15976>\frac{\lg3}{3}
+\]
+故选项 B 所给的值域上界也不正确. 对任意 \(x>1\)，有 \(f(x)>0\)，而 \(\displaystyle\lim_{x\to+\infty}f(x)=0\)，所以函数没有最小值，选项 C 错.
+
+利用对数函数增长速度低于一次函数，
+\[
+\lim_{x\to+\infty}\frac{\lg x}{x}=0
+\]
+取 \(x=n\in\N\) 即得
+\[
+\lim_{n\to\infty}\frac{\lg n}{n}=0
+\]
+因此只有选项 D 是真命题.
+\end{solution}
+
 \section{解答题}
 \begin{problem}
 已知 \(a\)，\(b\)，\(c\) 是 \(\triangle ABC\) 中 \(\angle A\)，\(\angle B\)，\(\angle C\) 的对边，\(S\) 是 \(\triangle ABC\) 的面积，若 \(a=4\)，\(b=5\)，\(S=5\sqrt{3}\)，求 \(c\) 的长度.
@@ -197,11 +370,11 @@ D
 \begin{solution}
 由三角形面积公式，
 \[
-S=\frac{1}{2}ab\sin C=10\sin C=5\sqrt{3},
+S=\frac{1}{2}ab\sin C=10\sin C=5\sqrt{3}
 \]
 所以 \(\sin C=\dfrac{\sqrt{3}}{2}\). 因为 \(0<C<\pi\)，所以 \(C=\dfrac{\pi}{3}\) 或 \(C=\dfrac{2\pi}{3}\). 由余弦定理，
 \[
-c^2=a^2+b^2-2ab\cos C=41-40\cos C.
+c^2=a^2+b^2-2ab\cos C=41-40\cos C
 \]
 当 \(C=\dfrac{\pi}{3}\) 时，\(c^2=41-20=21\)，得 \(c=\sqrt{21}\)；当 \(C=\dfrac{2\pi}{3}\) 时，\(c^2=41+20=61\)，得 \(c=\sqrt{61}\). 两个值均满足三角形三边关系，故 \(c=\sqrt{21}\) 或 \(c=\sqrt{61}\).
 \end{solution}
@@ -213,7 +386,7 @@ c^2=a^2+b^2-2ab\cos C=41-40\cos C.
 \begin{solution}
 设 \(r_1=|PF_1|\)，\(r_2=|PF_2|\). 椭圆的长半轴为 \(3\)，由椭圆定义得 \(r_1+r_2=6\)；焦距满足 \(c=\sqrt{3^2-2^2}=\sqrt{5}\)，所以 \(|F_1F_2|=2\sqrt{5}\)，即 \(|F_1F_2|^2=20\).
 
-当直角在 \(P\) 处时，勾股定理给出 \(r_1^2+r_2^2=20\). 结合 \((r_1+r_2)^2=36\)，得 \(r_1r_2=8\)，从而 \(r_1,r_2\) 是方程 \(t^2-6t+8=0\) 的两个根. 因为 \(r_1>r_2\)，所以 \(r_1=4\)，\(r_2=2\)，此时 \(\dfrac{r_1}{r_2}=2\).
+当直角在 \(P\) 处时，勾股定理给出 \(r_1^2+r_2^2=20\). 结合 \((r_1+r_2)^2=36\)，得 \(r_1r_2=8\)，从而 \(r_1\)，\(r_2\) 是方程 \(t^2-6t+8=0\) 的两个根. 因为 \(r_1>r_2\)，所以 \(r_1=4\)，\(r_2=2\)，此时 \(\dfrac{r_1}{r_2}=2\).
 
 当直角在 \(F_1\) 处时，\(r_2^2=r_1^2+20\). 联立 \(r_1+r_2=6\)，得 \(r_1=\dfrac{4}{3}\)，\(r_2=\dfrac{14}{3}\)，与 \(r_1>r_2\) 矛盾，故此情形不成立.
 
@@ -231,35 +404,31 @@ c^2=a^2+b^2-2ab\cos C=41-40\cos C.
 \begin{solution}
 \begin{enumerate}
 \item 建立空间直角坐标系，取 \(O=(0,0,0)\)，\(A=(a,0,0)\)，\(B=(a,a,0)\)，\(C=(0,a,0)\)，并取竖直方向为第三坐标轴. 设 \(AE=BF=t\)，其中 \(0\leqslant t\leqslant a\)，则
-\[
-E=(a,t,0),\quad F=(a-t,a,0),\quad A'=(a,0,a),\quad C'=(0,a,a).
-\]
+\(E=(a,t,0)\)，\(F=(a-t,a,0)\)，\(A'=(a,0,a)\)，\(C'=(0,a,a)\).
 于是
-\[
-\overrightarrow{A'F}=(-t,a,-a),\qquad \overrightarrow{C'E}=(a,t-a,-a),
-\]
+\(\overrightarrow{A'F}=(-t,a,-a)\)，\(\overrightarrow{C'E}=(a,t-a,-a)\)
 从而
 \[
-\overrightarrow{A'F}\cdot\overrightarrow{C'E}=-at+a(t-a)+a^2=0.
+\overrightarrow{A'F}\cdot\overrightarrow{C'E}=-at+a(t-a)+a^2=0
 \]
 所以 \(A'F\perp C'E\).
 \item 设 \(BF=AE=x\). 因为 \(EB=a-x\)，且 \(AB\perp BC\)，所以
 \[
-S_{\triangle BEF}=\frac{1}{2}x(a-x).
+S_{\triangle BEF}=\frac{1}{2}x(a-x)
 \]
 点 \(B'\) 到平面 \(BEF\)（即底面 \(OABC\)）的距离为 \(a\)，故三棱锥体积为
 \[
-V=\frac{1}{3}S_{\triangle BEF}\cdot a=\frac{a}{6}x(a-x).
+V=\frac{1}{3}S_{\triangle BEF}\cdot a=\frac{a}{6}x(a-x)
 \]
-由 \(x(a-x)\leqslant\dfrac{a^2}{4}\)，且等号当且仅当 \(x=\dfrac{a}{2}\)，可知体积最大时 \(E,F\) 分别为 \(AB,BC\) 的中点.
+由 \(x(a-x)\leqslant\dfrac{a^2}{4}\)，且等号当且仅当 \(x=\dfrac{a}{2}\)，可知体积最大时 \(E\)，\(F\) 分别为 \(AB\)，\(BC\) 的中点.
 
 此时 \(BE=BF=\dfrac{a}{2}\)，在直角三角形 \(BEF\) 中，设从 \(B\) 向 \(EF\) 作垂线，垂足为 \(H\). 则
 \[
-BH=\frac{BE\cdot BF}{EF}=\frac{(a/2)^2}{a/\sqrt{2}}=\frac{a}{2\sqrt{2}}.
+BH=\frac{BE\cdot BF}{EF}=\frac{(a/2)^2}{a/\sqrt{2}}=\frac{a}{2\sqrt{2}}
 \]
 过 \(B'B\) 和 \(BH\) 的平面垂直于 \(EF\)，其与两个侧面的交线分别为 \(B'H\) 和 \(BH\)，所以二面角 \(B'-EF-B\) 的平面角为 \(\angle B'HB\). 在直角三角形 \(B'BH\) 中，\(BB'=a\)，因此
 \[
-\tan\angle B'HB=\frac{BB'}{BH}=2\sqrt{2}.
+\tan\angle B'HB=\frac{BB'}{BH}=2\sqrt{2}
 \]
 故二面角的大小为 \(\arctan\left(2\sqrt{2}\right)\).
 \end{enumerate}
@@ -281,20 +450,34 @@ x+\frac{1}{x}=\sqrt{2}
 \]
 得
 \[
-x^2-\sqrt{2}x+1=0,
+x^2-\sqrt{2}x+1=0
 \]
-即 \(\left(x-\dfrac{\sqrt{2}}{2}\right)^2=0\)，所以 \(a=\dfrac{\sqrt{2}}{2}=\dfrac{1}{\sqrt{2}}\). 因而
+即
 \[
-M_a=\left\{\frac{1}{\sqrt{2}},\frac{1}{2\sqrt{2}},\frac{1}{4\sqrt{2}},\frac{1}{8\sqrt{2}},\ldots\right\}.
+\left(x-\frac{\sqrt{2}}{2}\right)^2+\frac{1}{2}=0
 \]
-其中每个元素都为正数，所以从中任取两个数时其和不可能为零，故 \(P=0\).
+所以方程的两个复数根为
+\[
+a=\frac{1+\i}{\sqrt{2}}\quad\text{或}\quad a=\frac{1-\i}{\sqrt{2}}
+\]
+若 \(a=(1+\i)/\sqrt{2}\)，则 \(a^2=\i\)；若 \(a=(1-\i)/\sqrt{2}\)，则 \(a^2=-\i\). 两种情形的奇次幂都得到同一组四个数，因而
+\[
+M_a=\left\{\frac{1+\i}{\sqrt{2}},\frac{-1+\i}{\sqrt{2}},\frac{-1-\i}{\sqrt{2}},\frac{1-\i}{\sqrt{2}}\right\}
+\]
+从这四个不同的数中任取两个，所有等可能的取法共有
+\(\mathrm C_4^2=6\) 种. 和为零的取法是互为相反数的两对：
+\(\left\{\frac{1+\i}{\sqrt{2}},\frac{-1-\i}{\sqrt{2}}\right\}\)，\(\left\{\frac{-1+\i}{\sqrt{2}},\frac{1-\i}{\sqrt{2}}\right\}\).
+因此
+\[
+P=\frac{2}{\mathrm C_4^2}=\frac{1}{3}
+\]
 \item 取
 \[
-z=\frac{1}{2}+\frac{\sqrt{3}}{2}\i.
+z=\frac{1}{2}+\frac{\sqrt{3}}{2}\i
 \]
 则 \(z^2=-\dfrac{1}{2}+\dfrac{\sqrt{3}}{2}\i\)，且 \((z^2)^3=1\)，而 \(z^2\ne1\). 于是 \(z^{2n-1}=z(z^2)^{n-1}\) 按三个值循环，具体为
 \[
-M_z=\left\{\frac{1}{2}+\frac{\sqrt{3}}{2}\i,-1,\frac{1}{2}-\frac{\sqrt{3}}{2}\i\right\},
+M_z=\left\{\frac{1}{2}+\frac{\sqrt{3}}{2}\i,-1,\frac{1}{2}-\frac{\sqrt{3}}{2}\i\right\}
 \]
 这三个数互不相同，所以 \(M_z\) 中恰有 \(3\) 个元素.
 \end{enumerate}
@@ -315,17 +498,17 @@ M_z=\left\{\frac{1}{2}+\frac{\sqrt{3}}{2}\i,-1,\frac{1}{2}-\frac{\sqrt{3}}{2}\i\
 \item 函数的定义域为 \([0,+\infty)\)，并且 \(f(0)=1\)，\(f(1)=\dfrac{1}{2}\). 由于用水越多，洗掉的农药越多，残留比例应在 \([0,+\infty)\) 上单调递减；又因为清洗后仍有农药残留，所以对任意 \(x\geqslant0\)，有 \(f(x)>0\). 因而 \(0<f(x)\leqslant1\).
 \item 设清洗前农药量为 \(A>0\). 一次使用全部水量时，清洗后残留量为
 \[
-A f(a)=\frac{A}{1+a^2}.
+A f(a)=\frac{A}{1+a^2}
 \]
 将水平均分成两份清洗两次时，每次用水 \(a/2\)，第一次清洗后残留量为 \(A f(a/2)\)，第二次清洗后残留量为
 \[
-A f\left(\frac{a}{2}\right)^2=\frac{A}{\left(1+\frac{a^2}{4}\right)^2}.
+A f\left(\frac{a}{2}\right)^2=\frac{A}{\left(1+\frac{a^2}{4}\right)^2}
 \]
 因为 \(A>0\)，两次清洗效果更好当且仅当
 \[
 \frac{1}{\left(1+\frac{a^2}{4}\right)^2}<\frac{1}{1+a^2}
 \Longleftrightarrow \left(1+\frac{a^2}{4}\right)^2>1+a^2
-\Longleftrightarrow a^2(a^2-8)>0.
+\Longleftrightarrow a^2(a^2-8)>0
 \]
 结合 \(a>0\)，得当 \(a>2\sqrt{2}\) 时两次清洗后残留较少；当 \(a=2\sqrt{2}\) 时两种方案效果相同；当 \(0<a<2\sqrt{2}\) 时一次清洗后残留较少.
 \end{enumerate}
@@ -345,27 +528,25 @@ A f\left(\frac{a}{2}\right)^2=\frac{A}{\left(1+\frac{a^2}{4}\right)^2}.
 \item 是否存在 \(x_0\)，在输入数据 \(x_0\) 时，该数列发生器产生一个各项均为负数的无穷数列？若存在，求出 \(x_0\) 的值；若不存在，请说明理由.
 \end{enumerate}
 
-\bitmapinlinefigure[6.2cm][max width=6.2cm]{img/2001/shanghai_liberal/q22_fig1.png}
+\bitmapfigure[max width=6.2cm]{img/2001/shanghai_liberal/q22_fig1.png}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
 \item 由于 \(f(x)=\dfrac{4x-2}{x+1}\) 的定义域为 \(D=\{x\in\R\mid x\ne-1\}\)，依次计算得
 \[
-x_1=f\left(\frac{49}{65}\right)=\frac{\frac{196}{65}-2}{\frac{49}{65}+1}=\frac{11}{19},
+x_1=f\left(\frac{49}{65}\right)=\frac{\frac{196}{65}-2}{\frac{49}{65}+1}=\frac{11}{19}
 \]
-\[
-x_2=f\left(\frac{11}{19}\right)=\frac{\frac{44}{19}-2}{\frac{11}{19}+1}=\frac{1}{5},\qquad x_3=f\left(\frac{1}{5}\right)=\frac{\frac{4}{5}-2}{\frac{1}{5}+1}=-1.
-\]
-因为 \(x_3=-1\notin D\)，发生器在输出 \(x_3\) 后结束，所以数列的所有项为 \(\dfrac{11}{19},\dfrac{1}{5},-1\).
+\(x_2=f\left(\frac{11}{19}\right)=\frac{\frac{44}{19}-2}{\frac{11}{19}+1}=\frac{1}{5}\)，\(x_3=f\left(\frac{1}{5}\right)=\frac{\frac{4}{5}-2}{\frac{1}{5}+1}=-1\).
+因为 \(x_3=-1\notin D\)，发生器在输出 \(x_3\) 后结束，所以数列的所有项为 \(\dfrac{11}{19}\)，\(\dfrac{1}{5}\)，\(-1\).
 \item 要得到无穷的常数数列，初始数据必须是函数的不动点，即 \(x_0=f(x_0)\). 因为 \(x_0\ne-1\)，所以
 \[
-x_0=\frac{4x_0-2}{x_0+1}\Longleftrightarrow x_0^2-3x_0+2=0\Longleftrightarrow (x_0-1)(x_0-2)=0.
+x_0=\frac{4x_0-2}{x_0+1}\Longleftrightarrow x_0^2-3x_0+2=0\Longleftrightarrow (x_0-1)(x_0-2)=0
 \]
 因此 \(x_0=1\) 或 \(x_0=2\)，这两个值均在定义域内，且确实分别产生恒为 \(1\)、恒为 \(2\) 的无穷常数数列.
 \item 不存在这样的 \(x_0\). 事实上，若某一项 \(x_n<0\)，分两种情况讨论：当 \(x_n<-1\) 时，分子和分母均为负数，故 \(x_{n+1}=f(x_n)>0\)；当 \(-1<x_n<0\) 时，分母为正数，且
 \[
-f(x_n)<-1\Longleftrightarrow 4x_n-2<-x_n-1\Longleftrightarrow 5x_n<1,
+f(x_n)<-1\Longleftrightarrow 4x_n-2<-x_n-1\Longleftrightarrow 5x_n<1
 \]
 所以 \(x_{n+1}<-1\)，再由前一种情况得 \(x_{n+2}>0\). 因此负数项之后至多再出现一项负数，不可能形成各项均为负数的无穷数列.
 \end{enumerate}

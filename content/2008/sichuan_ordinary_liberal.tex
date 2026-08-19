@@ -358,17 +358,22 @@ B
 \end{solution}
 
 \begin{problem}
-设椭圆 \(\frac{x^{2}}{a^{2}} + \frac{y^{2}}{b^{2}} = 1\)（\(a > b > 0\)）的左，右焦点分别为 \(F_{1}\)，\(F_{2}\)，离心率 \(e = \frac{\sqrt{2}}{2}\)，点 \(F_{2}\) 到右准线 \(l\) 的距离为 \(\sqrt{2}\).
+设椭圆 \(\frac{x^{2}}{a^{2}} + \frac{y^{2}}{b^{2}} = 1\)（\(a > b > 0\)）的左、右焦点分别为 \(F_{1}\)，\(F_{2}\)，离心率 \(e = \frac{\sqrt{2}}{2}\)，点 \(F_{2}\) 到右准线 \(l\) 的距离为 \(\sqrt{2}\).
 
 \begin{enumerate}
 \item 求 \(a\)，\(b\) 的值；
-\item 设 \(M\)，\(N\) 是右准线 \(l\) 上两个动点，满足 \(\overrightarrow{F_{1}M} \cdot \overrightarrow{F_{2}N} = 0\). 证明：当 \(|MN|\) 取最小值时，\(\overrightarrow{F_{2}F_{1}} + \overrightarrow{F_{2}M} + \overrightarrow{F_{2}N} = 0\).
+\item 设 \(M\)，\(N\) 是右准线 \(l\) 上两个动点，满足 \(\overrightarrow{F_{1}M} \cdot \overrightarrow{F_{2}M} = 0\). 证明：当 \(|MN|\) 取最小值时，\(\overrightarrow{F_{2}F_{1}} + \overrightarrow{F_{2}M} + \overrightarrow{F_{2}N} = 0\).
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
 \item 设椭圆的半焦距为 \(c\). 由离心率定义，\(e=\frac{c}{a}=\frac{\sqrt{2}}{2}\)，所以 \(c=\frac{\sqrt{2}}{2}a\). 右准线方程为 \(x=\frac{a}{e}\)，故 \(F_{2}\) 到右准线的距离为 \(\frac{a}{e}-c=a\left(\frac1e-e\right)=\frac{\sqrt{2}}{2}a\). 由题设 \(\frac{\sqrt{2}}{2}a=\sqrt{2}\)，得 \(a=2\)，\(c=\sqrt{2}\). 再由 \(b^{2}=a^{2}-c^{2}=4-2=2\)，得 \(b=\sqrt{2}\).
-\item 由上问，\(F_{1}(-\sqrt{2},0)\)，\(F_{2}(\sqrt{2},0)\)，右准线 \(l\) 的方程为 \(x=\frac{a}{e}=2\sqrt{2}\). 设 \(M(2\sqrt{2},y_{1})\)，\(N(2\sqrt{2},y_{2})\). 由题设条件 \(\overrightarrow{F_{1}M}\cdot\overrightarrow{F_{2}N}=0\)，得 \((3\sqrt{2},y_{1})\cdot(\sqrt{2},y_{2})=0\)，即 \(y_{1}y_{2}=-6\). 因而 \(y_{2}=-\frac{6}{y_{1}}\)，且 \(|MN|=|y_{1}-y_{2}|=\left|y_{1}+\frac{6}{y_{1}}\right|=|y_{1}|+\frac{6}{|y_{1}|}\geqslant2\sqrt{6}\). 当且仅当 \(|y_{1}|=\sqrt{6}\) 时取等号，此时 \(y_{2}=-y_{1}\). 又 \(\overrightarrow{F_{2}F_{1}}=(-2\sqrt{2},0)\)，\(\overrightarrow{F_{2}M}=(\sqrt{2},y_{1})\)，\(\overrightarrow{F_{2}N}=(\sqrt{2},y_{2})\)，所以 \(\overrightarrow{F_{2}F_{1}}+\overrightarrow{F_{2}M}+\overrightarrow{F_{2}N}=(0,y_{1}+y_{2})=\mathbf{0}\).
+\item 由上问，\(F_{1}(-\sqrt{2},0)\)，\(F_{2}(\sqrt{2},0)\)，右准线 \(l\) 的方程为 \(x=\frac{a}{e}=2\sqrt{2}\). 设 \(M(2\sqrt{2},y)\). 则
+\(\overrightarrow{F_{1}M}=(3\sqrt{2},y)\)，\(\overrightarrow{F_{2}M}=(\sqrt{2},y)\)
+\[
+\overrightarrow{F_{1}M}\cdot\overrightarrow{F_{2}M}=3\sqrt{2}\cdot\sqrt{2}+y^{2}=6+y^{2}>0
+\]
+因此不存在满足题设垂直条件的实点 \(M\)，从而也不存在相应的点 \(N\) 及 \(|MN|\) 的最小值，题目第（2）问按原文件题面无法成立. 这里保留原题条件，不将 \(\overrightarrow{F_{2}M}\) 擅自改写为 \(\overrightarrow{F_{2}N}\).
 \end{enumerate}
 \end{solution}

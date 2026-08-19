@@ -16,6 +16,12 @@
 C
 \end{answer}
 
+\begin{solution}
+由 \(x^2-4\leqslant0\)，得 \((x-2)(x+2)\leqslant0\)，所以
+\(M=\{x\mid -2\leqslant x\leqslant2\}\). 因为全集为 \(\R\)，补集取区间外的部分，故
+\(\complement_U M=\{x\mid x<-2\text{ 或 }x>2\}\)，所以选 C.
+\end{solution}
+
 \begin{problem}
 已知 \(\frac{a + 2\i}{\i} = b + \i\)，其中 \(\i\) 为虚数单位，则 \(a + b =\)（\quad）（\(a\)，\(b \in \R\)）
 
@@ -29,6 +35,15 @@ C
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+因为 \(\dfrac{1}{\i}=-\i\)，所以
+\[
+\frac{a+2\i}{\i}=a\frac{1}{\i}+2=-a\i+2
+\]
+与 \(b+\i\) 比较实部和虚部，得 \(b=2\)，\(-a=1\)，即 \(a=-1\). 因此
+\(a+b=-1+2=1\)，所以选 B.
+\end{solution}
 
 \begin{problem}
 函数 \(f(x) = \log_2(3^x + 1)\) 的值域为（\quad）
@@ -44,6 +59,13 @@ B
 A
 \end{answer}
 
+\begin{solution}
+当 \(x\in\R\) 时，\(3^x\in(0,+\infty)\)，从而 \(3^x+1\in(1,+\infty)\). 由于底数 \(2>1\)，对数函数 \(\log_2 t\) 在 \((0,+\infty)\) 上递增，因此
+\(f(x)=\log_2(3^x+1)\in(0,+\infty)\).
+
+反过来，任取 \(u>0\)，令 \(3^x=2^u-1>0\)，则存在实数 \(x\) 使等式成立，且 \(f(x)=u\). 所以值域为 \((0,+\infty)\)，选 A.
+\end{solution}
+
 \begin{problem}
 在空间，下列命题正确的是（\quad）
 
@@ -57,6 +79,16 @@ A
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+选项 A 不正确，因为两条平行直线的平行投影可以是两条不同的平行直线，不一定重合.
+
+选项 B 不正确，例如取相交平面 \(x=0\) 与 \(y=0\)，再取直线 \(x=1\)，\(y=1\)（方向为 \(z\) 轴方向）；该直线分别平行于两个平面，但两个平面相交.
+
+选项 C 不正确，例如取底面为 \(xOy\) 平面，则平面 \(x=0\) 与平面 \(y=0\) 都垂直于底面，但它们相交于 \(z\) 轴，不互相平行.
+
+若两条直线都垂直于同一平面，则它们的方向都与该平面的法向量平行，所以两条直线互相平行，选项 D 正确.
+\end{solution}
 
 \begin{problem}
 设 \(f(x)\) 为定义在 \(\R\) 上的奇函数，当 \(x \geqslant 0\) 时，\(f(x) = 2^x + 2x + b\)（\(b\) 为常数），则 \(f(-1) =\)（\quad）
@@ -72,6 +104,12 @@ D
 A
 \end{answer}
 
+\begin{solution}
+奇函数满足 \(f(0)=0\). 代入题设中 \(x=0\) 的表达式，得 \(1+b=0\)，所以 \(b=-1\).
+
+由题设在非负数上的表达式，\(f(1)=2^1+2\cdot1-1=3\). 又因为 \(f\) 为奇函数，\(f(-1)=-f(1)=-3\)，所以选 A.
+\end{solution}
+
 \begin{problem}
 在某项体育比赛中，七位裁判为一选手打出的分数如下：\(90\)，\(89\)，\(90\)，\(95\)，\(93\)，\(94\)，\(93\). 去掉一个最高分和一个最低分后，所剩数据的平均分值和方差分别为（\quad）
 
@@ -85,6 +123,18 @@ A
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+去掉最高分 \(95\) 和最低分 \(89\)，剩下的数据为 \(90\)，\(90\)，\(93\)，\(94\)，\(93\). 其平均数为
+\[
+\bar{x}=\frac{90+90+93+94+93}{5}=92
+\]
+相对于平均数 \(92\) 的偏差为 \(-2\)，\(-2\)，\(1\)，\(2\)，\(1\)，所以方差为
+\[
+s^2=\frac{(-2)^2+(-2)^2+1^2+2^2+1^2}{5}=\frac{14}{5}=2.8
+\]
+因此选 B.
+\end{solution}
 
 \begin{problem}
 设 \(\{a_n\}\) 是首项大于零的等比数列，则“\(a_1 < a_2\)”是“数列 \(\{a_n\}\) 是递增数列”的（\quad）
@@ -100,6 +150,14 @@ B
 C
 \end{answer}
 
+\begin{solution}
+设等比数列的公比为 \(q\). 因为 \(a_1>0\)，所以
+\[
+a_1<a_2=a_1q\quad\Longleftrightarrow\quad q>1
+\]
+当且仅当 \(q>1\) 时，\(a_{n+1}=a_nq>a_n\) 对所有 \(n\in\N^*\) 成立，即数列为递增数列. 因此“\(a_1<a_2\)”是“数列递增”的充分必要条件，选 C.
+\end{solution}
+
 \begin{problem}
 已知某生产厂家的年利润 \(y\)（单位：万元）与年产量 \(x\)（单位：万件）的函数关系式为 \(y = -\frac{1}{3}x^{3} + 81x - 234\)，则使该生产厂家获得最大年利润的年产量为（\quad）
 
@@ -113,6 +171,12 @@ C
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+年产量不能为负数，故取 \(x\geqslant0\). 令
+\(y(x)=-\frac{1}{3}x^3+81x-234\)，\(y'(x)=-x^2+81=(9-x)(9+x)\).
+当 \(0\leqslant x<9\) 时，\(y'(x)>0\)；当 \(x>9\) 时，\(y'(x)<0\). 因此 \(y(x)\) 在 \([0,9]\) 上递增，在 \([9,+\infty)\) 上递减，最大值在 \(x=9\) 时取得. 所以年产量为 \(9\) 万件，选 C.
+\end{solution}
 
 \begin{problem}
 已知抛物线 \(y^{2} = 2px\) （\(p > 0\)），过其焦点且斜率为 \(1\) 的直线交抛物线于 \(A\)，\(B\) 两点，若线段 \(AB\) 的中点的纵坐标为 \(2\)，则该抛物线的准线方程为（\quad）
@@ -128,6 +192,22 @@ C
 B
 \end{answer}
 
+\begin{solution}
+将 \(y^2=2px\) 写成标准形式 \(y^2=4ax\)，得 \(a=\dfrac p2\)，所以焦点为 \(\left(\dfrac p2,0\right)\)，准线为 \(x=-\dfrac p2\).
+
+过焦点且斜率为 \(1\) 的直线为 \(y=x-\dfrac p2\). 代入抛物线方程，得
+\[
+\left(x-\frac p2\right)^2=2px
+\quad\Longleftrightarrow\quad
+x^2-3px+\frac{p^2}{4}=0
+\]
+设交点的横坐标为 \(x_1\)，\(x_2\)，由韦达定理，\(x_1+x_2=3p\). 交点纵坐标分别为 \(x_1-\dfrac p2\)，\(x_2-\dfrac p2\)，故线段 \(AB\) 中点的纵坐标为
+\[
+\frac{1}{2}\left(x_1-\frac p2+x_2-\frac p2\right)=\frac{x_1+x_2-p}{2}=p
+\]
+由题意 \(p=2\)，所以准线方程为 \(x=-1\)，选 B.
+\end{solution}
+
 \begin{problem}
 观察 \((x^{2})^{\prime} = 2x\)，\((x^{4})^{\prime} = 4x^{3}\)，\((\cos x)^{\prime} = -\sin x\)，由归纳推理可得：若定义在 \(\R\) 上的函数 \(f(x)\) 满足 \(f(-x) = f(x)\)，记 \(g(x)\) 为 \(f(x)\) 的导函数，则 \(g(-x) =\)（\quad）
 
@@ -141,6 +221,14 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+对恒等式 \(f(-x)=f(x)\) 两边关于 \(x\) 求导，左边由链式法则得 \(-f'(-x)\)，右边得 \(f'(x)\). 因此
+\[
+-f'(-x)=f'(x)
+\]
+记 \(g(x)=f'(x)\)，则 \(g(-x)=-g(x)\)，所以选 D.
+\end{solution}
 
 \begin{problem}
 函数 \(y = 2^x - x^{2}\) 的图象大致是（\quad）
@@ -156,6 +244,14 @@ D
 A
 \end{answer}
 
+\begin{solution}
+记 \(F(x)=2^x-x^2\). 当 \(x<0\) 时，\(F'(x)=2^x\ln2-2x>0\)，所以 \(F(x)\) 在 \((-\infty,0)\) 上递增. 又 \(\displaystyle\lim_{x\to-\infty}F(x)=-\infty\)，且 \(F(0)=1>0\)，故在负半轴上恰有一个零点.
+
+当 \(x>0\) 时，\(F''(x)=2^x(\ln2)^2-2\) 严格递增，且 \(F''(0)<0\)，\(F''(3)>0\)，因此 \(F'(x)\) 先减后增. 由 \(F'(0)=\ln2>0\)，\(F'(1)=2\ln2-2<0\)，\(F'(3)=8\ln2-6<0\)，\(F'(4)=16\ln2-8>0\)，可知 \(F'\) 在 \((0,1)\) 和 \((3,4)\) 内各有一个零点，且除此之外没有正零点. 因而 \(F\) 在正半轴上先增、后减、再增.
+
+此外，\(F(1)=1>0\)，\(F(2)=0\)，\(F(3)=-1<0\)，\(F(4)=0\). 结合上述单调性，\(F\) 在 \((0,+\infty)\) 上恰有两个零点 \(x=2\) 和 \(x=4\)，在 \(x=2\) 处由正变负，在 \(x=4\) 处由负变正；再结合负半轴上的一个零点及两端变化，图象与选项 A 一致，所以选 A.
+\end{solution}
+
 \begin{problem}
 定义平面向量之间的一种运算“\(\odot\)”如下：对任意的 \(\bs{a} = (m, n)\)，\(\bs{b} = (p, q)\)，令 \(\bs{a} \odot \bs{b} = mq - np\). 下面说法错误的是（\quad）
 
@@ -170,6 +266,26 @@ A
 B
 \end{answer}
 
+\begin{solution}
+由定义，\(\bs{a}\odot\bs{b}=mq-np\) 是二维行列式. 若 \(\bs{a}\) 与 \(\bs{b}\) 共线，则 \(mq-np=0\)，所以选项 A 正确.
+
+交换两个向量后，
+\[
+\bs{b}\odot\bs{a}=pn-qm=-(mq-np)=-(\bs{a}\odot\bs{b})
+\]
+一般不等于 \(\bs{a}\odot\bs{b}\)，故选项 B 错误.
+
+对任意 \(\lambda\in\R\)，
+\[
+(\lambda\bs{a})\odot\bs{b}=(\lambda m)q-(\lambda n)p=\lambda(mq-np)=\lambda(\bs{a}\odot\bs{b})
+\]
+所以选项 C 正确. 另外
+\[
+(mq-np)^2+(mp+nq)^2=(m^2+n^2)(p^2+q^2)=|\bs{a}|^2|\bs{b}|^2
+\]
+所以选项 D 也正确. 因此错误的是 B.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -182,6 +298,16 @@ B
 \(-\frac{5}{4}\)
 \end{answer}
 
+\begin{solution}
+输入初值为 \(x_0=4\). 每轮先计算 \(y=\dfrac12x-1\)，再判断 \(|y-x|<1\)，若不满足则令 \(x=y\) 后继续.
+
+第一轮：\(y=\dfrac12\cdot4-1=1\)，且 \(|1-4|=3\geqslant1\)，故令 \(x=1\).
+
+第二轮：\(y=\dfrac12\cdot1-1=-\dfrac12\)，且 \(\left|-\dfrac12-1\right|=\dfrac32\geqslant1\)，故令 \(x=-\dfrac12\).
+
+第三轮：\(y=\dfrac12\cdot\left(-\dfrac12\right)-1=-\dfrac54\)，且 \(\left|-\dfrac54+\dfrac12\right|=\dfrac34<1\)，满足判断条件，输出 \(y=-\dfrac54\).
+\end{solution}
+
 \begin{problem}
 已知 \(x\)，\(y \in \R_+\)，且满足 \(\frac{x}{3} + \frac{y}{4} = 1\)，则 \(xy\) 的最大值为\fillinblank{}.
 \end{problem}
@@ -189,6 +315,18 @@ B
 \begin{answer}
 \(3\)
 \end{answer}
+
+\begin{solution}
+令 \(u=\dfrac{x}{3}\)，\(v=\dfrac{y}{4}\)，则 \(u\geqslant0\)，\(v\geqslant0\)，且 \(u+v=1\). 由基本不等式，
+\[
+uv\leqslant\left(\frac{u+v}{2}\right)^2=\frac14
+\]
+因此
+\[
+xy=(3u)(4v)=12uv\leqslant3
+\]
+当且仅当 \(u=v=\dfrac12\)，即 \(x=\dfrac32\)，\(y=2\) 时等号成立，所以 \(xy\) 的最大值为 \(3\).
+\end{solution}
 
 \begin{problem}
 在 \(\triangle ABC\) 中，\(A\)，\(B\)，\(C\) 所对的边分别为 \(a\)，\(b\)，\(c\). 若 \(a = \sqrt{2}\)，\(b = 2\)，\(\sin B + \cos B = \sqrt{2}\)，则角 \(A\) 的大小为\fillinblank{}.
@@ -198,6 +336,18 @@ B
 \(\frac{\pi}{6}\)
 \end{answer}
 
+\begin{solution}
+因为 \(B\in(0,\pi)\)，所以
+\[
+\sin B+\cos B=\sqrt2\sin\left(B+\frac\pi4\right)=\sqrt2
+\]
+此时 \(B+\dfrac\pi4\in\left(\dfrac\pi4,\dfrac{5\pi}{4}\right)\)，在该区间内正弦值为 \(1\) 只可能取在 \(\dfrac\pi2\)，故 \(B=\dfrac\pi4\).
+
+由正弦定理，
+\(\frac{a}{\sin A}=\frac{b}{\sin B}\)，\(\Longrightarrow\)，\(\sin A=\frac{a\sin B}{b}=\frac{\sqrt2\cdot\frac{\sqrt2}{2}}{2}=\frac12\).
+所以 \(A=\dfrac\pi6\) 或 \(A=\dfrac{5\pi}{6}\). 但三角形内角满足 \(A+B<\pi\)，而 \(B=\dfrac\pi4\)，故 \(A<\dfrac{3\pi}{4}\)，排除 \(\dfrac{5\pi}{6}\)，得到 \(A=\dfrac\pi6\).
+\end{solution}
+
 \begin{problem}
 已知圆 \(C\) 过点 \((1,0)\)，且圆心在 \(x\) 轴的正半轴上，直线 \(l: y = x - 1\) 被圆 \(C\) 所截得的弦长为 \(2\sqrt{2}\)，则过圆心且与直线 \(l\) 垂直的直线的方程为\fillinblank{}.
 \end{problem}
@@ -205,6 +355,18 @@ B
 \begin{answer}
 \(x+y-3=0\)
 \end{answer}
+
+\begin{solution}
+设圆心为 \(O=(r,0)\)，其中 \(r>0\). 因为圆过点 \((1,0)\)，所以半径为 \(R=|r-1|\). 直线 \(l\) 写成 \(x-y-1=0\)，圆心到直线的距离为
+\[
+d=\frac{|r-1|}{\sqrt2}=\frac{R}{\sqrt2}
+\]
+弦长公式给出
+\(2\sqrt{R^2-d^2}=2\sqrt2\)，\(\Longrightarrow\)，\(2\sqrt{R^2-\frac{R^2}{2}}=2\sqrt2\)，\(\Longrightarrow\)，\(R=2\).
+于是 \(|r-1|=2\)，得 \(r=3\) 或 \(r=-1\). 由 \(r>0\)，取 \(r=3\)，所以圆心为 \((3,0)\).
+
+直线 \(l\) 的斜率为 \(1\)，过圆心且垂直于 \(l\) 的直线斜率为 \(-1\)，方程为 \(y=-x+3\)，即 \(x+y-3=0\).
+\end{solution}
 
 \section{解答题}
 
@@ -444,7 +606,7 @@ f'(x)=-\frac{(x-1)^2}{2x^2}\leqslant0
 \frac{x^2}{2}+y^2=1
 \]
 
-\item 由上式可知焦点为 \(F_1=(-1,0)\)，\(F_2=(1,0)\). 设 \(P=(t,2-t)\)，则 \(t\ne2\). 在相关斜率有定义时，
+\item 由上式可知焦点为 \(F_1=(-1,0)\)，\(F_2=(1,0)\). 设 \(P=(t,2-t)\)，则 \(t\ne2\). 当 \(t\ne-1\)，\(1\)，\(2\) 时，直线 \(PF_1\)，\(PF_2\) 的斜率有定义，且
 
 \(k_1=\frac{2-t}{t+1}\)，\(k_2=\frac{2-t}{t-1}\).
 
@@ -455,9 +617,7 @@ f'(x)=-\frac{(x-1)^2}{2x^2}\leqslant0
 \frac{1}{k_1}-\frac{3}{k_2}=\frac{t+1}{2-t}-\frac{3(t-1)}{2-t}=2
 \]
 
-\item 设直线 \(PF_1\) 与椭圆的交点 \(A\)，\(B\) 的横坐标分别为 \(x_A\)，\(x_B\). 直线 \(PF_1\) 的方程为 \(y=k_1(x+1)\)，代入椭圆方程得
-
-由于题目要求直线 \(OA\)，\(OB\)，\(OC\)，\(OD\) 的斜率存在，需排除 \(t=-1\)，\(t=1\)，\(t=\frac{1}{2}\)，\(t=\frac{3}{2}\)，\(t=2\)：前两个值使 \(PF_1\) 或 \(PF_2\) 为竖直线，后两个值使相应交点的横坐标为 \(0\)，最后一个值使 \(P\) 在 \(x\) 轴上.
+\item 先设 \(t\ne-1\)，\(1\)，\(2\). 设直线 \(PF_1\) 与椭圆的交点 \(A\)，\(B\) 的横坐标分别为 \(x_A\)，\(x_B\). 直线 \(PF_1\) 的方程为 \(y=k_1(x+1)\)，代入椭圆方程得
 
 \[
 (1+2k_1^2)x^2+4k_1^2x+2k_1^2-2=0
@@ -497,7 +657,7 @@ k_{OC}+k_{OD}=k_2\left(2-\frac{x_C+x_D}{x_Cx_D}\right)=\frac{2k_2}{1-k_2^2}
 2(2-t)\left(\frac{t+1}{3(2t-1)}+\frac{t-1}{2t-3}\right)=0
 \]
 
-由于上述排除值保证各分母非零，且 \(t\ne2\)，所以
+由于题目要求四条直线 \(OA\)，\(OB\)，\(OC\)，\(OD\) 的斜率都存在，所以 \(x_Ax_Bx_Cx_D\ne0\). 由上面的积式，须有 \(k_1^2\ne1\)，\(k_2^2\ne1\)，即 \(t\ne\frac{1}{2}\)，\(\frac{3}{2}\). 因而在当前情形下各分母非零，所以
 
 \[
 (t+1)(2t-3)+3(t-1)(2t-1)=2t(4t-5)=0
@@ -505,7 +665,9 @@ k_{OC}+k_{OD}=k_2\left(2-\frac{x_C+x_D}{x_Cx_D}\right)=\frac{2k_2}{1-k_2^2}
 
 故 \(t=0\) 或 \(t=\frac{5}{4}\). 此时相应的点分别为 \(P=(0,2)\) 或 \(P=\left(\frac{5}{4},\frac{3}{4}\right)\).
 
-这两点均不在 \(x\) 轴上，且对应的四条直线 \(OA\)，\(OB\)，\(OC\)，\(OD\) 的斜率都有定义，代入上式可知均满足条件. 所以满足条件的点 \(P\) 为 \((0,2)\) 和 \(\left(\frac{5}{4},\frac{3}{4}\right)\).
+这两点均不在 \(x\) 轴上，且对应的四条直线 \(OA\)，\(OB\)，\(OC\)，\(OD\) 的斜率都有定义，代入上式可知均满足条件.
+
+还需检查 \(t=-1\) 和 \(t=1\) 两个未包含在上述斜率参数化中的情形. 当 \(t=-1\) 时，\(P=(-1,3)\)，直线 \(PF_1\) 为 \(x=-1\)，其与椭圆的交点为 \(\left(-1,\frac{\sqrt{2}}{2}\right)\)，\(\left(-1,-\frac{\sqrt{2}}{2}\right)\)，故 \(k_{OA}+k_{OB}=0\). 此时 \(k_2=-\frac{3}{2}\)，由上面对 \(PF_2\) 的韦达计算式得 \(k_{OC}+k_{OD}=\frac{2k_2}{1-k_2^2}=\frac{12}{5}\ne0\)，不满足条件. 当 \(t=1\) 时，\(P=(1,1)\)，直线 \(PF_2\) 为 \(x=1\)，故 \(k_{OC}+k_{OD}=0\)；此时 \(k_1=\frac{1}{2}\)，由上面对应的韦达计算式得 \(k_{OA}+k_{OB}=\frac{2k_1}{1-k_1^2}=\frac{4}{3}\ne0\)，也不满足条件. 因此满足条件的点 \(P\) 为 \((0,2)\) 和 \(\left(\frac{5}{4},\frac{3}{4}\right)\).
 \end{enumerate}
 \end{enumerate}
 \end{solution}

@@ -15,43 +15,50 @@
 
 \begin{solution}
 \begin{enumerate}
-\item
+\item 在实数范围内原式有意义时 \(a>0\)，\(b>0\). 因此
 \[
-\text{原式}=\left(a^{\frac{3}{2}}b^{-2}a^{\frac{1}{2}}b^{-\frac{3}{2}}b^{\frac{7}{2}}\right)^{\frac{1}{3}}=\left(a^{\frac{3}{2}+\frac{1}{2}}b^{-2-\frac{3}{2}+\frac{7}{2}}\right)^{\frac{1}{3}},
-\]
-\[
-\text{原式}=\left(a^{2}\cdot b^{0}\right)^{\frac{1}{3}}=a^{\frac{2}{3}}.
-\]
-
-\item
-原式可化为 \(\log x^{\frac{1}{6}}=\log a^{\frac{1}{3}}b^{2}c\)，于是有 \(x^{\frac{1}{6}}=a^{\frac{1}{3}}b^{2}c\)，所以 \(x=\left(a^{\frac{1}{3}}b^{2}c\right)^{6}=a^{2}b^{12}c^{6}\).
-
-\item
-由 \(\left(3.02\right)^{4}=\left(3+0.02\right)^{4}\) 展开得
-\[
-\begin{aligned}
-\left(3.02\right)^{4}
-&=3^{4}+4\times 3^{3}\times 0.02+6\times 3^{2}\times \left(0.02\right)^{2} \\
-&\quad+4\times 3\times \left(0.02\right)^{3}+\left(0.02\right)^{4}.
-\end{aligned}
-\]
-可知第4项的值已小于 \(0.01\)，所以，计算可到第3项为止，其误差必小于千分之一.
-\[
-\left(3.02\right)^{4}=3^{4}+4\times 3^{3}\times 0.02+6\times 3^{2}\times \left(0.02\right)^{2}=81+2.16+0.0216=83.182.
+\left[\left(a^{-\frac{3}{2}}b^{2}\right)^{-1}\left(ab^{-3}\right)^{\frac{1}{2}}\left(b^{\frac{1}{2}}\right)^{7}\right]^{\frac{1}{3}}
+=\left(a^{\frac{3}{2}}b^{-2}a^{\frac{1}{2}}b^{-\frac{3}{2}}b^{\frac{7}{2}}\right)^{\frac{1}{3}}
+=\left(a^{2}b^{0}\right)^{\frac{1}{3}}=a^{\frac{2}{3}}
 \]
 
-\item
-设直角三角形的勾为 \(a\)，股为 \(b\)，弦为 \(c\)，则有 \(c^{2}=a^{2}+b^{2}\). 所以弦上半圆的面积
+\item 对数的真数必须为正，故 \(x>0\)，\(a>0\)，\(b>0\)，\(c>0\). 由对数的运算性质，原方程等价于
 \[
-\frac{1}{2}\pi\left(\frac{c}{2}\right)^{2}=\frac{1}{2}\pi\cdot\frac{c^{2}}{4}=\frac{1}{2}\pi\cdot\frac{a^{2}+b^{2}}{4}=\frac{1}{2}\pi\left(\frac{a}{2}\right)^{2}+\frac{1}{2}\pi\left(\frac{b}{2}\right)^{2},
+\log\left(x^{\frac{1}{6}}\right)=\log\left(a^{\frac{1}{3}}b^{2}c\right)
 \]
-即弦上半圆面积等于勾上半圆面积与股上半圆的面积.
+由于对数函数在其定义域上具有单调性，得 \(x^{\frac{1}{6}}=a^{\frac{1}{3}}b^{2}c\). 两边均为正数，六次方后得到 \(x=\left(a^{\frac{1}{3}}b^{2}c\right)^{6}=a^{2}b^{12}c^{6}\).
 
-\item
-内接正方体的中心即该球的球心. 正方体过中心的对角线为该球的直径，故其长为 \(2r\). 若设正方体的边长为 \(a\)，则有 \(3a^{2}=4r^{2}\)，所以 \(a=\frac{2}{3}\sqrt{3}r\). 所以内接正方体的体积 \(V=a^{3}=\left(\frac{2}{3}\sqrt{3}r\right)^{3}=\frac{8}{9}\sqrt{3}r^{3}\).
+\item 由二项式定理，
+\[
+\left(3.02\right)^{4}=\left(3+0.02\right)^{4}
+=3^{4}+4\cdot3^{3}\cdot0.02+6\cdot3^{2}\cdot\left(0.02\right)^{2}
++4\cdot3\cdot\left(0.02\right)^{3}+\left(0.02\right)^{4}
+\]
+从第 4 项起的余项为 \(4\cdot3\cdot\left(0.02\right)^{3}+\left(0.02\right)^{4}=0.00009616<0.001\)，所以取前三项所得近似值的误差小于 \(\frac{1}{1000}\). 计算前三项得
+\[
+3^{4}+4\cdot3^{3}\cdot0.02+6\cdot3^{2}\cdot\left(0.02\right)^{2}=81+2.16+0.0216=83.1816
+\]
+因此可取 \(\left(3.02\right)^{4}\approx83.182\)，且 \(\left|83.182-\left(3.02\right)^{4}\right|=0.00030384<0.001\).
 
-\item
-由正弦定理可知 \(\frac{a}{\sin\left[180^{\circ}-\left(\beta+\gamma\right)\right]}=\frac{b}{\sin\beta}\)，所以 \(b=\frac{a\sin\beta}{\sin\left[180^{\circ}-\left(\beta+\gamma\right)\right]}=\frac{a\sin\beta}{\sin\left(\beta+\gamma\right)}\).
+\item 设直角三角形的两直角边，即勾和股，长分别为 \(a\)，\(b\)，斜边，即弦，长为 \(c\). 由勾股定理，\(c^{2}=a^{2}+b^{2}\). 直径为 \(d\) 的半圆面积为 \(\frac{\pi d^{2}}{8}\)，故
+\[
+\frac{\pi c^{2}}{8}=\frac{\pi\left(a^{2}+b^{2}\right)}{8}=\frac{\pi a^{2}}{8}+\frac{\pi b^{2}}{8}
+\]
+左边是弦上半圆的面积，右边两项分别是勾上半圆和股上半圆的面积，所以命题得证.
+
+\item 设内接正方体的棱长为 \(s\). 正方体的外接球球心是正方体中心，正方体的空间对角线两端是球面上的顶点，因此空间对角线等于球的直径 \(2r\). 由正方体空间对角线公式，\(\sqrt{3}s=2r\)，从而 \(s=\frac{2r}{\sqrt{3}}=\frac{2\sqrt{3}}{3}r\). 所以内接正方体的体积为
+\[
+V=s^{3}=\left(\frac{2r}{\sqrt{3}}\right)^{3}=\frac{8\sqrt{3}}{9}r^{3}
+\]
+
+\item 三角形内角满足 \(\beta>0\)，\(\gamma>0\)，\(\beta+\gamma<180^{\circ}\). 已知边 \(a\) 的对角为 \(180^{\circ}-\left(\beta+\gamma\right)\)，边 \(b\) 的对角为 \(\beta\). 由正弦定理，
+\[
+\frac{a}{\sin\left[180^{\circ}-\left(\beta+\gamma\right)\right]}=\frac{b}{\sin\beta}
+\]
+所以
+\[
+b=\frac{a\sin\beta}{\sin\left[180^{\circ}-\left(\beta+\gamma\right)\right]}=\frac{a\sin\beta}{\sin\left(\beta+\gamma\right)}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -65,18 +72,18 @@
 \end{problem}
 
 \begin{solution}
-将原方程变形，可得 \(\left(x-\frac{7}{6}\right)^{2}=\frac{1}{3}\left(y+\frac{61}{12}\right)\).
-于是，抛物线顶点为 \(\left(\frac{7}{6},-\frac{61}{12}\right)\)（如图）.
-抛物线与 \(x\) 轴的交点为：\(M\left(\frac{7-\sqrt{61}}{6},0\right)\)，\(N\left(\frac{7+\sqrt{61}}{6},0\right)\).
+配方得
+\[
+y=3\left(x-\frac{7}{6}\right)^{2}-\frac{61}{12}
+\]
+即 \(\left(x-\frac{7}{6}\right)^{2}=\frac{1}{3}\left(y+\frac{61}{12}\right)\). 因此抛物线开口向上，对称轴为 \(x=\frac{7}{6}\)，顶点为 \(V\left(\frac{7}{6},-\frac{61}{12}\right)\)，且与 \(y\) 轴交于 \((0,-1)\). 令 \(y=0\)，得
+\(3x^{2}-7x-1=0\)，\(x=\frac{7\pm\sqrt{61}}{6}\).
+所以抛物线与 \(x\) 轴的交点为 \(M\left(\frac{7-\sqrt{61}}{6},0\right)\) 和 \(N\left(\frac{7+\sqrt{61}}{6},0\right)\).
 
 \begin{enumerate}
-\item
-当 \(y>0\) 时，\(x\) 的取值范围为：
-\(\left(-\infty,\frac{7-\sqrt{61}}{6}\right)\cup\left(\frac{7+\sqrt{61}}{6},+\infty\right)\).
+\item 因为抛物线开口向上，故 \(y>0\) 时 \(x\) 在两个零点之外，即 \(x\in\left(-\infty,\frac{7-\sqrt{61}}{6}\right)\cup\left(\frac{7+\sqrt{61}}{6},+\infty\right)\).
 
-\item
-当 \(y<0\) 时，\(x\) 的取值范围为：
-\(\left(\frac{7-\sqrt{61}}{6},\frac{7+\sqrt{61}}{6}\right)\).
+\item 因为二次项系数 \(3>0\)，所以 \(y<0\) 时 \(x\) 在两个零点之间，即 \(x\in\left(\frac{7-\sqrt{61}}{6},\frac{7+\sqrt{61}}{6}\right)\).
 \end{enumerate}
 
 \solutionfigure{\bitmapfigure[max width=0.55\linewidth]{img/1954/national/q2_solution_fig1.png}}
@@ -87,8 +94,11 @@
 \end{problem}
 
 \begin{solution}
-设 \(\odot O_{1}\) 及 \(\odot O_{2}\) 为互相外切的二圆，其中一外公切线为 \(A_{1}A_{2}\)，切点 \(A_{1}\) 及 \(A_{2}\)（如图），令点 \(O\) 为连心线 \(O_{1}O_{2}\) 的中点，过 \(O\) 作 \(OA\perp A_{1}A_{2}\).
-因 \(OA=\frac{1}{2}\left(O_{1}A_{1}+O_{2}A_{2}\right)=\frac{1}{2}O_{1}O_{2}\)，因此，以 \(O_{1}O_{2}\) 为直径，即以 \(O\) 为圆心，\(OA\) 为半径的圆必与直线 \(A_{1}A_{2}\) 相切. 同理可证，此圆必切于 \(\odot O_{1}\) 及 \(\odot O_{2}\) 的另外一条外公切线.
+设 \(\odot O_{1}\) 和 \(\odot O_{2}\) 的半径分别为 \(r_{1}\) 和 \(r_{2}\)，两圆外切. 设一条外公切线为 \(A_{1}A_{2}\)，切点分别为 \(A_{1}\) 和 \(A_{2}\). 令 \(O\) 为 \(O_{1}O_{2}\) 的中点，并过 \(O\) 作 \(OA\perp A_{1}A_{2}\)，其中 \(A\) 是垂足. 因为外公切线与圆的半径垂直，且两个圆心在该切线的同侧，所以中点到该直线的距离为两圆心到该直线距离的平均值，从而
+\[
+OA=\frac{O_{1}A_{1}+O_{2}A_{2}}{2}=\frac{r_{1}+r_{2}}{2}
+\]
+两圆外切时，圆心距等于两半径之和，即 \(O_{1}O_{2}=r_{1}+r_{2}\)，故 \(OA=\frac{1}{2}O_{1}O_{2}\). 以 \(O_{1}O_{2}\) 为直径所作的圆，其圆心为 \(O\)，半径为 \(\frac{1}{2}O_{1}O_{2}=OA\). 由于圆心到直线 \(A_{1}A_{2}\) 的距离等于该圆半径，直线 \(A_{1}A_{2}\) 与此圆相切. 对另一条外公切线作同样论证，即得此圆也与另一条外公切线相切.
 
 \solutionfigure{\bitmapfigure[max width=0.55\linewidth]{img/1954/national/q3_solution_fig1.png}}
 \end{solution}
@@ -98,17 +108,21 @@
 \end{problem}
 
 \begin{solution}
-由原方程得 \(\frac{\cos x+\sin x}{\cos x-\sin x}=\left(\cos x+\sin x\right)^{2}\)，即 \(\cos x+\sin x=\left(\cos x+\sin x\right)^{2}\left(\cos x-\sin x\right)\). 整理为
+原方程有意义的条件是 \(\cos x\ne0\) 且 \(1-\tan x\ne0\)，也就是 \(\cos x\ne0\) 且 \(\cos x-\sin x\ne0\). 在此条件下，利用 \(\sin 2x=2\sin x\cos x\)，有
+\(\frac{1+\tan x}{1-\tan x}=\frac{\cos x+\sin x}{\cos x-\sin x}\)，\(1+\sin 2x=\left(\cos x+\sin x\right)^{2}\).
+因此
 \[
-\left(\cos x+\sin x\right)\left(1-\cos^{2}x+\sin^{2}x\right)=2\left(\cos x+\sin x\right)\cdot\sin^{2}x=0
+\cos x+\sin x=\left(\cos x+\sin x\right)^{2}\left(\cos x-\sin x\right)
 \]
-所以 \(\cos x+\sin x=0\)，或 \(\sin^{2}x=0\).
-
-由方程 \(\cos x+\sin x=0\) 得，\(\tan x=-1\). 因此 \(x=k\pi-\frac{\pi}{4}\)（\(k\) 为整数）.
-
-由方程 \(\sin^{2}x=0\)，得 \(x=k\pi\)（\(k\) 为整数）.
-
-由检验可知，\(x=k\pi-\frac{\pi}{4}\)，\(x=k\pi\)（\(k\) 为整数）均为方程的通解.
+即
+\[
+\left(\cos x+\sin x\right)\left[1-\left(\cos x+\sin x\right)\left(\cos x-\sin x\right)\right]=0
+\]
+由于 \(\left(\cos x+\sin x\right)\left(\cos x-\sin x\right)=\cos^{2}x-\sin^{2}x\)，上式化为
+\[
+2\left(\cos x+\sin x\right)\sin^{2}x=0
+\]
+于是分两类求解：\(\cos x+\sin x=0\) 时，\(\tan x=-1\)，所以 \(x=k\pi-\frac{\pi}{4}\)；\(\sin^{2}x=0\) 时，\(x=k\pi\)，其中 \(k\in\Z\). 对这两类值分别有 \(\tan x=-1\) 或 \(\tan x=0\)，均满足原方程的定义域，代入原方程也分别得到 \(0=0\) 和 \(1=1\). 故方程的通解为 \(x=k\pi-\frac{\pi}{4}\) 或 \(x=k\pi\)，其中 \(k\in\Z\).
 \end{solution}
 
 \begin{problem}
@@ -116,28 +130,50 @@
 \end{problem}
 
 \begin{solution}
-设直圆锥的高为 \(h\)，底面半径为 \(R\)，母线长为 \(l\)，则
-\(\frac{a}{a'}=\frac{\pi R\left(R+l\right)}{2\pi R\left(R+h\right)}=\frac{R+l}{2\left(R+h\right)}\).
-所以 \(2a\left(R+h\right)=a'\left(R+l\right)\). 由 \(R=\sqrt{l^{2}-h^{2}}\)，代入可得
-\(2a\left(\sqrt{l^{2}-h^{2}}+h\right)=a'\left(\sqrt{l^{2}-h^{2}}+l\right)\).
-即 \(\left(2a-a'\right)\sqrt{l^{2}-h^{2}}=a'l-2ah\). 两边同除以 \(l\)，可得
-\(\left(2a-a'\right)\sqrt{1-\left(\frac{h}{l}\right)^{2}}=a'-2a\cdot\frac{h}{l}\).
-等式两边平方：
-\(\left(2a-a'\right)^{2}\left(1-\left(\frac{h}{l}\right)^{2}\right)=a'^{2}-4aa'\cdot\frac{h}{l}+4a^{2}\left(\frac{h}{l}\right)^{2}\).
-\(\left(8a^{2}-4aa'+a'^{2}\right)\left(\frac{h}{l}\right)^{2}-4aa'\cdot\frac{h}{l}+\left(4aa'-4a^{2}\right)=0\).
-这是一个关于 \(\frac{h}{l}\) 的一元二次方程的判别式
+设直圆锥的高为 \(h\)，底面半径为 \(R\)，母线长为 \(l\)，则 \(l^{2}=R^{2}+h^{2}\)，且 \(0<h<l\). 圆锥和同底同高圆柱的全面积分别为
+\(a=\pi R\left(R+l\right)\)，\(a'=2\pi R\left(R+h\right)\).
+因此
 \[
-\begin{gathered}
-\Delta=\left(-4aa'\right)^{2}-4\left(8a^{2}-4aa'+a'^{2}\right)\left(4aa'-4a^{2}\right),\\
-\Delta=16a\left(2a-a'\right)^{3}>0
-\end{gathered}
+2a\left(R+h\right)=a'\left(R+l\right)
 \]
-因此该一元二次方程有两个实根，解得
+令 \(u=\frac{h}{l}\)，并记 \(D=2a-a'\). 由 \(R=\sqrt{l^{2}-h^{2}}\) 和上式，得
 \[
-\begin{gathered}
-\frac{h}{l}=\frac{4aa'\pm\sqrt{16a\left(2a-a'\right)^{3}}}{2\left(8a^{2}-4aa'+a'^{2}\right)},\\
-\frac{h}{l}=\frac{2aa'\pm 2\left(2a-a'\right)\sqrt{a\left(2a-a'\right)}}{4a^{2}+\left(2a-a'\right)^{2}}
-\end{gathered}
+D\sqrt{1-u^{2}}=a'-2au
 \]
-即为圆锥的高与母线的比.
+又由几何关系，
+\[
+D=2a-a'=2\pi R(l-h)>0
+\]
+此外，
+\[
+a'-a=\pi R\left(R+2h-l\right)>0
+\]
+因为 \((R+2h)^{2}-l^{2}=4Rh+3h^{2}>0\)，所以 \(R+2h-l>0\). 因而 \(a<a'<2a\)，从而 \(0<D<a\). 原方程左边为正，故右边也必须为正，即 \(a'-2au>0\). 两边平方，得到
+\[
+\left(4a^{2}+D^{2}\right)u^{2}-4aa'u+4a\left(a'-a\right)=0
+\]
+其判别式为
+\[
+\Delta=\left(-4aa'\right)^{2}-4\left(4a^{2}+D^{2}\right)4a\left(a'-a\right)=16aD^{3}
+\]
+所以平方后所得两根为
+\[
+u_{\pm}=\frac{2aa'\pm2D\sqrt{aD}}{4a^{2}+D^{2}}
+\]
+平方可能引入增根，必须回代未平方的方程. 对上述两根，
+\[
+a'-2au_{\pm}=\frac{D\left(Da'\mp4a\sqrt{aD}\right)}{4a^{2}+D^{2}}
+\]
+由于 \(0<D<a\) 且 \(a'<2a\)，有
+\[
+D(a')^{2}<a(2a)^{2}<16a^{3}
+\]
+即 \(Da'<4a\sqrt{aD}\). 因此 \(u_{+}\) 使 \(a'-2au_{+}<0\)，不满足未平方的方程.
+
+另一方面，\(a'>a>D>0\)，从而 \(a'>\sqrt{aD}\) 且 \(a>D\)，所以 \(aa'>D\sqrt{aD}\)，即 \(u_{-}>0\)，且
+\(u_{-}<\frac{2aa'}{4a^{2}+D^{2}}<1\)，\(4a^{2}+D^{2}-2aa'=D(2a+D)>0\).
+对 \(u_{-}\)，上式中的 \(a'-2au_{-}\) 为正；由于它满足平方后的方程，故同时满足原来的未平方方程. 所以唯一可行的比值为
+\[
+\boxed{\frac{h}{l}=\frac{2aa'-2\left(2a-a'\right)\sqrt{a\left(2a-a'\right)}}{4a^{2}+\left(2a-a'\right)^{2}}}
+\]
 \end{solution}

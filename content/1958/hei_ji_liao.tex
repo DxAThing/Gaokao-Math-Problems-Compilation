@@ -9,13 +9,22 @@
 \end{problem}
 
 \begin{solution}
-连接 \(AC\)，则由勾股定理知：
-\(AC^2=PC^2+PA^2\) 并且
-\(BD^2=PB^2+PD^2\).
-因此，\(AC^2+BD^2=PA^2+PB^2+PC^2+PD^2\).
-作直径 \(CE\)，连 \(AE\)，\(BD\). 又在 \(\triangle AEC\) 中及 \(\triangle PBD\) 中，\( \angle CAB=\angle CDB \)，\( \angle CAB+\angle BAE=\angle CDB+\angle PBD=90^\circ \).
-所以 \( \angle BAE=\angle ABD \)，即 \(\widehat{AED}=\widehat{EDB}\). 而 \(\widehat{AED}-\widehat{ED}=\widehat{BDE}-\widehat{ED}\)，即 \(\widehat{AE}=\widehat{BD}\)，所以 \(AE=BD\).
-在直角 \(\triangle AEC\) 中，\(EC^2=AC^2+AE^2=AC^2+BD^2\). 因此 \(CE^2=PA^2+PB^2+PC^2+PD^2\). 其定值为圆的直径的平方.
+设 \(PA=u\)，\(PB=v\)，\(PC=w\)，\(PD=z\)，其中 \(u\)，\(v\)，\(w\)，\(z>0\). 以 \(P\) 为原点，以 \(AB\)，\(CD\) 所在直线为坐标轴，则
+\(A=\left(-u,0\right)\)，\(B=\left(v,0\right)\)，\(C=\left(0,w\right)\)，\(D=\left(0,-z\right)\). 设圆的方程为
+\[
+x^2+y^2-2\lambda x-2\mu y+c=0
+\]
+将 \(A\)，\(B\) 的坐标代入，得到关于 \(x\) 的二次方程
+\(x^2-2\lambda x+c=0\)，其两个根为 \(-u\)，\(v\)，所以
+\(2\lambda=v-u\)，\(c=-uv\). 再将 \(C\)，\(D\) 的坐标代入，得到关于 \(y\) 的二次方程
+\(y^2-2\mu y+c=0\)，其两个根为 \(w\)，\(-z\)，所以 \(2\mu=w-z\)，\(c=-wz\). 因此 \(uv=wz\).
+
+圆心为 \(\left(\lambda,\mu\right)\)，设半径为 \(R\)，则 \(R^2=\lambda^2+\mu^2-c\). 从而
+\[
+4R^2=\left(v-u\right)^2+\left(w-z\right)^2+4uv=u^2+v^2+w^2+z^2+2uv-2wz=u^2+v^2+w^2+z^2
+\]
+代回 \(u\)，\(v\)，\(w\)，\(z\) 的定义，得
+\(PA^2+PB^2+PC^2+PD^2=4R^2\). 因而所求一定值为圆的直径的平方.
 \end{solution}
 
 \begin{problem}
@@ -25,8 +34,17 @@
 \end{problem}
 
 \begin{solution}
-如图所示，上底面的长，宽各为 \(a-2h\)，\(b-2h\)，\(S_1=ab\)，\(S_2=\left( a-2h \right)\left( b-2h \right)\).
-\(V=\frac13 h\left( S_1+\sqrt{S_1S_2}+S_2 \right)=\frac13 h\left[ ab+\sqrt{ab\left( a-2h \right)\left( b-2h \right)}+\left( a-2h \right)\left( b-2h \right) \right]\).
+在垂直于下底面一条边的截面内，侧面与地平面的夹角为 \(45^\circ\)，所以沙堆上升 \(h\text{ 米}\) 时，水平方向向内收进 \(h\text{ 米}\). 四个侧面都如此收进，故上底面的长，宽分别为
+\(c=a-2h\)，\(d=b-2h\)，并且应有 \(a\ge2h\)，\(b\ge2h\).
+
+将沙堆分解为一个底为 \(c\times d\)、高为 \(h\) 的直棱柱，沿 \(c\) 方向的两块底为直角三角形且两直角边均为 \(h\) 的三棱柱，沿 \(d\) 方向的另外两块同类三棱柱，以及四个底面为边长 \(h\) 的正方形、高为 \(h\) 的棱锥. 因此
+\[
+V=cdh+2\left(\frac12h^2c\right)+2\left(\frac12h^2d\right)+4\left(\frac13h^3\right)=h\left(a-2h\right)\left(b-2h\right)+h^2\left(a+b-4h\right)+\frac43h^3
+\]
+\[
+V=abh-(a+b)h^2+\frac43h^3
+\]
+所以沙堆体积为 \(abh-(a+b)h^2+\frac43h^3\text{ 立方米}\).
 \end{solution}
 
 \begin{problem}
@@ -34,7 +52,21 @@
 \end{problem}
 
 \begin{solution}
-\(\sqrt[3]{a}\cdot\sqrt{5-a}=\sqrt[6]{a^2}\cdot\sqrt[6]{\left( 5-a \right)^3}=\sqrt[6]{a^2\left( 5-a \right)^3}\).
+实数根式有意义的条件是 \(5-a\ge0\)，即 \(a\le5\). 当 \(0\le a\le5\) 时，\(\sqrt[3]{a}=\sqrt[6]{a^2}\)，于是
+\[
+\sqrt[3]{a}\sqrt{5-a}=\sqrt[6]{a^2}\sqrt[6]{\left(5-a\right)^3}=\sqrt[6]{a^2\left(5-a\right)^3}
+\]
+当 \(a<0\) 时，\(\sqrt[3]{a}=-\sqrt[6]{a^2}\)，而 \(\sqrt{5-a}=\sqrt[6]{(5-a)^3}>0\)，所以
+\[
+\sqrt[3]{a}\sqrt{5-a}=-\sqrt[6]{a^2\left(5-a\right)^3}
+\]
+因此，在实数范围内
+\[
+\sqrt[3]{a}\sqrt{5-a}=\begin{cases}
+\sqrt[6]{a^2\left(5-a\right)^3},&0\le a\le5,\\
+-\sqrt[6]{a^2\left(5-a\right)^3},&a<0.
+\end{cases}
+\]
 \end{solution}
 
 \begin{problem}
@@ -42,10 +74,13 @@
 \end{problem}
 
 \begin{solution}
-\(x^{1+\lg x}=100\)，两端取对数，得 \(\left( 1+\lg x \right)\lg x=2\).
-所以 \(\lg^2x+\lg x-2=0\)，\(\left( \lg x+2 \right)\left( \lg x-1 \right)=0\).
-所以 \(\lg x=1\)，\(\lg x=-2\). 故 \(x_1=10\)，\(x_2=\frac{1}{100}\)（对数定义）.
-检验后知：\(10\)，\(\frac{1}{100}\) 都是原方程的根.
+由对数的定义，\(20^{\log_{20}100}=100\)，所以原方程为 \(x^{1+\lg x}=100\). 令 \(t=\lg x\)，则定义域要求 \(x>0\)，且 \(x=10^t\). 于是
+\[
+10^{t\left(1+t\right)}=10^2
+\]
+从而 \(t(1+t)=2\)，即
+\(t^2+t-2=0\)，\(\left(t+2\right)\left(t-1\right)=0\).
+所以 \(t=1\) 或 \(t=-2\)，相应地 \(x=10\) 或 \(x=10^{-2}=\frac1{100}\). 两个数都大于零，并且分别代入可得 \(10^{1+1}=100\)，\(\left(10^{-2}\right)^{1-2}=10^2=100\)，故原方程的解为 \(x=10\)，\(x=\frac1{100}\).
 \end{solution}
 
 \begin{problem}
@@ -61,21 +96,52 @@ x-2y+3z=2a+1,\\
 
 \begin{solution}
 \begin{enumerate}
-\item 由第二式乘 \(3\) 得 \(3x-6y+9z=6a+3\). 由第三式减去上式，得 \(2x=23-10a-6a-3\)，所以 \(x=10-8a\). 把 \(x=10-8a\) 代入第一式，得 \(2\left( 10-8a \right)-5z=10-6a\)，所以 \(z=2-2a\). 把 \(x=10-8a\)，\(z=2-2a\) 代入第二式，得 \(10-8a-2y+3\left( 2-2a \right)=2a+1\)，\(y=\frac{15-16a}{2}\).
+\item 将第二式乘以 \(3\)，得 \(3x-6y+9z=6a+3\). 用第三式减去这个等式，得到
+\(2x=20-16a\)，所以 \(x=10-8a\). 代入第一式，得
+\(2\left(10-8a\right)-5z=10-6a\)，所以 \(z=2-2a\). 再将 \(x\)，\(z\) 代入第二式，得
+\[
+10-8a-2y+3\left(2-2a\right)=2a+1
+\]
+即 \(y=\frac{15-16a}{2}\). 因而方程组的解为
+\(x=10-8a\)，\(y=\frac{15-16a}{2}\)，\(z=2-2a\).
 
-\item 因为 \(x\) 为某直角三角形的斜边，\(y\) 及 \(z\) 为直角边，所以 \(x^2=y^2+z^2\). 即 \(\left( 10-8a \right)^2=\left( \frac{15-16a}{2} \right)^2+\left( 2-2a \right)^2\). 解方程 \(16a^2+8\times16a-159=0\)，得 \(a=\frac{-16\pm\sqrt{415}}{4}\).
+\item 三条边长必须为正，且由勾股定理
+\[
+(10-8a)^2=\left(\frac{15-16a}{2}\right)^2+(2-2a)^2
+\]
+两边乘以 \(4\)，并展开，得到
+\[
+400-640a+256a^2=225-480a+256a^2+16-32a+16a^2
+\]
+即 \(16a^2+128a-159=0\). 因而
+\[
+a=\frac{-128\pm\sqrt{128^2+4\cdot16\cdot159}}{32}
+=\frac{-128\pm8\sqrt{415}}{32}
+=\frac{-16\pm\sqrt{415}}4
+\]
+由于 \(20<\sqrt{415}<21\)，正根 \(a_+=\frac{-16+\sqrt{415}}4\) 满足 \(1<a_+<\frac54\)，于是 \(z=2-2a_+<0\)，且 \(y=\frac{15-16a_+}{2}<0\)，不符合直角边为边长的要求. 负根 \(a_-=\frac{-16-\sqrt{415}}4<-9\) 时，\(x=10-8a_->0\)，\(y=\frac{15-16a_-}{2}>0\)，\(z=2-2a_->0\)，且已经满足上面的勾股等式，因此有效. 故 \(a=\frac{-16-\sqrt{415}}4\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-已知：\(\alpha\)，\(\beta\) 皆为锐角，求证：\(\sin \left( \alpha+\beta \right) \leq \sin \alpha+\sin \beta\).
+已知：\(\alpha\)，\(\beta\) 皆为锐角，求证：\(\sin(\alpha+\beta)\leq\sin\alpha+\sin\beta\).
 \end{problem}
 
 \begin{solution}
-\(\sin \left( \alpha+\beta \right)=\sin \alpha\cdot\cos \beta+\cos \alpha\cdot\sin \beta\).
-因为 \(\alpha\)，\(\beta\) 皆为锐角，所以 \(\sin \alpha<1\)，\(\sin \beta<1\)，\(\cos \alpha<1\)，\(\cos \beta<1\).
-所以 \(\sin \alpha\cdot\cos \beta<\sin \alpha\)，\(\cos \alpha\cdot\sin \beta<\sin \beta\).
-所以 \(\sin \left( \alpha+\beta \right)<\sin \alpha+\sin \beta\)，从而 \(\sin \left( \alpha+\beta \right)\leq \sin \alpha+\sin \beta\).
+由两角和的正弦公式，
+\[
+\sin\left(\alpha+\beta\right)=\sin\alpha\cos\beta+\cos\alpha\sin\beta
+\]
+因为 \(\alpha\)，\(\beta\) 都是锐角，所以 \(\sin\alpha>0\)，\(\sin\beta>0\)，且 \(0<\cos\alpha<1\)，\(0<\cos\beta<1\). 因此
+\[
+\sin\alpha+\sin\beta-\sin\left(\alpha+\beta\right)
+=\sin\alpha\left(1-\cos\beta\right)+\sin\beta\left(1-\cos\alpha\right)>0
+\]
+这里 \(\sin\alpha\)，\(\sin\beta\)，\(1-\cos\alpha\)，\(1-\cos\beta\) 都为正数，所以
+\[
+\sin\left(\alpha+\beta\right)<\sin\alpha+\sin\beta
+\]
+严格不等式必然推出题中的不等式，故命题得证.
 \end{solution}
 
 \begin{problem}
@@ -83,36 +149,32 @@ x-2y+3z=2a+1,\\
 \end{problem}
 
 \begin{solution}
-设 \(n\) 个正方形面积总和为 \(S_n\).
-\(S_1=a^2\)，\(S_2=\left( \frac{\sqrt2}{2} \right)^2a^2=\frac{a^2}{2}\)，\(S_3=\left( \frac{a}{2} \right)^2=\frac{a^2}{4}\).
-\(\frac{S_2}{S_1}=q=\frac{\frac{a^2}{2}}{a^2}=\frac12\)
-\(S_n=\frac{a^2}{1-\frac12}=2a^2\).
+设第 \(n\) 个正方形的边长为 \(l_n\)，面积为 \(S_n\)，其中原正方形是第一个正方形. 在边长为 \(l_n\) 的正方形中，相邻两边中点的距离为
+\[
+l_{n+1}=\sqrt{\left(\frac{l_n}{2}\right)^2+\left(\frac{l_n}{2}\right)^2}=\frac{\sqrt2}{2}l_n
+\]
+所以相邻两个正方形的面积满足 \(S_{n+1}=\frac12S_n\)，且 \(S_1=a^2\). 前 \(N\) 个正方形的面积和为
+\[
+S_1+S_2+\cdots+S_N=a^2\frac{1-\left(\frac12\right)^N}{1-\frac12}=2a^2\left(1-\left(\frac12\right)^N\right)
+\]
+令 \(N\) 无限增大，\(\left(\frac12\right)^N\) 趋于 \(0\)，故这些正方形面积的总和为 \(2a^2\).
 \end{solution}
 
 \begin{problem}
-解不等式：\(2\cos^2 x-\left( 2+\sqrt3 \right)\cos x+\sqrt3<0\).
+解不等式：\(2\cos^2x-\left(2+\sqrt3\right)\cos x+\sqrt3<0\).
 \end{problem}
 
 \begin{solution}
-原式可变为 \(\left( \cos x-1 \right)\left( 2\cos x-\sqrt3 \right)<0\).
-由 \(\begin{cases}
-\cos x-1<0,\\
-2\cos x-\sqrt3>0
-\end{cases}\)
-得 \(\begin{cases}
-\cos x<1,\\
-\cos x>\frac{\sqrt3}{2}
-\end{cases}\)
-即 \(\frac{\sqrt3}{2}<\cos x<1\).
-由 \(\begin{cases}
-\cos x-1>0,\\
-2\cos x-\sqrt3<0
-\end{cases}\)
-得 \(\begin{cases}
-\cos x>1,\\
-\cos x<\frac{\sqrt3}{2}
-\end{cases}\)
-矛盾，无解.
-当\(\cos x=\frac{\sqrt3}{2}\) 时，\(x=2k\pi\pm\frac{\pi}{6}\).
-所以 \(2k\pi-\frac{\pi}{6}<x<2k\pi+\frac{\pi}{6}\)（\(k\) 为整数），且 \(x\neq 2k\pi\).
+令 \(t=\cos x\)，则 \(-1\le t\le1\)，并且
+\[
+2t^2-\left(2+\sqrt3\right)t+\sqrt3=(t-1)(2t-\sqrt3)
+\]
+因此原不等式等价于 \(\left(t-1\right)\left(2t-\sqrt3\right)<0\). 在 \(-1\le t\le1\) 内，始终有 \(t-1\le0\). 要使乘积为负，必须同时满足 \(t-1<0\) 和 \(2t-\sqrt3>0\)，即
+\[
+\frac{\sqrt3}{2}<\cos x<1
+\]
+由 \(\cos x>\frac{\sqrt3}{2}\)，得 \(2k\pi-\frac\pi6<x<2k\pi+\frac\pi6\)，其中 \(k\in\Z\). 条件 \(\cos x<1\) 排除各区间中心的 \(x=2k\pi\). 所以原不等式的解集为
+\[
+x\in\bigcup_{k\in\Z}\left[\left(2k\pi-\frac\pi6,2k\pi\right)\cup\left(2k\pi,2k\pi+\frac\pi6\right)\right]
+\]
 \end{solution}

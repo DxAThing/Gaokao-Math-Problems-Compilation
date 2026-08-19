@@ -85,7 +85,7 @@
 \begin{solution}
 将底数化为 \(1+\dfrac{2}{n+1}\)，则
 \[
-\displaystyle\lim_{n\to\infty}\left(\frac{n+3}{n+1}\right)^{n}=\lim_{n\to\infty}\left(1+\frac{2}{n+1}\right)^{n}=\lim_{n\to\infty}\left[\left(1+\frac{2}{n+1}\right)^{\frac{n+1}{2}}\right]^{\frac{2n}{n+1}}=\e^{2}.
+\displaystyle\lim_{n\to\infty}\left(\frac{n+3}{n+1}\right)^{n}=\lim_{n\to\infty}\left(1+\frac{2}{n+1}\right)^{n}=\lim_{n\to\infty}\left[\left(1+\frac{2}{n+1}\right)^{\frac{n+1}{2}}\right]^{\frac{2n}{n+1}}=\e^{2}
 \]
 \end{solution}
 
@@ -143,11 +143,11 @@
 \end{answer}
 
 \begin{solution}
-要判断奇偶性，先分别计算
-\(f(-x)=\sin(\varphi-x)=\sin\varphi\cos x-\cos\varphi\sin x\)，以及
-\(-f(x)=-\sin(x+\varphi)=-\sin\varphi\cos x-\cos\varphi\sin x\).
-因此，\(f(-x)=-f(x)\) 对任意 \(x\) 成立的充要条件是 \(\sin\varphi=0\)，即 \(\varphi=k\pi\)（\(k\in\Z\)）. 此时 \(f(x)=(-1)^k\sin x\) 是奇函数，所以命题（1）中“对任意的 \(\varphi\)，\(f(x)\) 都是非奇非偶函数”的结论不成立.
-故可填命题序号 \(1\)，并取 \(\varphi=k\pi\)（\(k\in\Z\)）.
+函数的定义域为 \(\R\)，故可直接按奇、偶函数定义判断. 先计算
+\(f(-x)=\sin(\varphi-x)=\sin\varphi\cos x-\cos\varphi\sin x\)，而
+\(-f(x)=-\sin(x+\varphi)=-\sin\varphi\cos x-\cos\varphi\sin x\)，\(f(x)=f(-x)\) 等价于 \(2\cos\varphi\sin x=0\) 对任意 \(x\) 成立，故 \(f\) 为偶函数的充要条件是 \(\cos\varphi=0\)，即 \(\varphi=\dfrac{\pi}{2}+k\pi\)（\(k\in\Z\)）. 同理，\(f(-x)=-f(x)\) 等价于 \(2\sin\varphi\cos x=0\) 对任意 \(x\) 成立，故 \(f\) 为奇函数的充要条件是 \(\sin\varphi=0\)，即 \(\varphi=k\pi\)（\(k\in\Z\)）. 两个条件不可能同时成立，因为 \(\sin\varphi\) 与 \(\cos\varphi\) 不可能同时为零.
+
+因此命题（2）正确，命题（3）正确，命题（4）错误，例如取 \(\varphi=\dfrac{\pi}{2}\) 时，\(f(x)=\cos x\) 是偶函数；命题（1）也错误，例如取 \(\varphi=0\) 时，\(f(x)=\sin x\) 是奇函数. 题目要求填写一个假命题，故可填命题序号 \(1\)，并取 \(\varphi=0\).
 \end{solution}
 
 \begin{problem}
@@ -224,7 +224,9 @@ D
 \end{answer}
 
 \begin{solution}
-建立空间直角坐标系，使 \(\alpha\colon z=0\)，\(\beta\colon x=0\)，则 \(l\) 为 \(x=0,\ z=0\)，取 \(P=(1,0,0)\). 过 \(P\) 且垂直于 \(l\) 的直线不止一条，例如直线 \(x=1,\ y=0\)，其方向向量为 \((0,0,1)\)，与 \(l\) 的方向向量 \((0,1,0)\) 垂直，但该直线不在平面 \(\alpha\) 内，所以第四项命题为假. 在同一坐标模型中，垂直于 \(\alpha\) 的直线方向为 \((0,0,1)\)，它平行于 \(\beta\)；垂直于 \(\beta\) 的直线方向为 \((1,0,0)\)，它在 \(\alpha\) 内；而以 \(l\) 为法线的平面与以 \((1,0,0)\) 为法线的 \(\beta\) 垂直，故其余命题均成立，选 D.
+建立空间直角坐标系，使 \(\alpha\colon z=0\)，\(\beta\colon x=0\)，则 \(l\) 为 \(x=0\)，\(z=0\)，其方向向量为 \((0,1,0)\). 取 \(P=(1,0,0)\). 过 \(P\) 且垂直于 \(l\) 的直线可以取直线 \(x=1\)，\(y=0\)，其方向向量为 \((0,0,1)\)，确实与 \(l\) 垂直，但这条直线不在 \(\alpha\) 内，因为除点 \(P\) 外的点都有 \(z\ne0\)，所以命题（D）为假.
+
+再验证其余命题. 过 \(P\) 且垂直于 \(\alpha\) 的直线方向向量为 \((0,0,1)\)，而 \(\beta\) 的方向向量可取 \((0,1,0)\)、\((0,0,1)\)，故该直线平行于 \(\beta\)，命题（A）正确. 过 \(P\) 且垂直于 \(l\) 的平面可取 \(y=0\)，其法向量为 \((0,1,0)\)，而 \(\beta\) 的法向量为 \((1,0,0)\)，两法向量垂直，所以这两个平面垂直，命题（B）正确. 过 \(P\) 且垂直于 \(\beta\) 的直线方向向量为 \((1,0,0)\)，它完全位于 \(z=0\) 的平面 \(\alpha\) 内，命题（C）正确. 因此假命题为（D），选 D.
 \end{solution}
 
 \begin{problem}
@@ -243,12 +245,9 @@ B
 \end{answer}
 
 \begin{solution}
-由 \(a_{n+8}=a_n\)，数列的项值只由下标模 \(8\) 的余数决定. 又因前 \(8\) 项的值各不相同，所以要取遍前 \(8\) 项的全部值，就必须使下标 \(mk+1\) 模 \(8\) 的余数取遍全部 \(8\) 个余数，其中 \(m\) 分别为选项中的 \(2\)，\(3\)，\(4\)，\(6\).
+由 \(a_{n+8}=a_n\)，下标相差 \(8\) 的项相等，所以项值只由下标模 \(8\) 的余数决定. 又因前 \(8\) 项的值各不相同，要取遍 \(a_1\)，\(a_2\)，\(\ldots\)，\(a_8\) 的全部值，就必须使所取下标模 \(8\) 的余数遍历 \(0\)，\(1\)，\(\ldots\)，\(7\). 对选项 \(\{a_{mk+1}\}\)，这等价于判断 \(mk+1\) 模 \(8\) 的余数是否遍历全部剩余类，其中 \(m\) 分别为 \(2\)，\(3\)，\(4\)，\(6\)，并取 \(k\in\N\).
 
-当 \(m=2\)，\(4\)，\(6\) 时，\(\gcd(m,8)>1\)，所得余数不能取遍全部余数；当 \(m=3\) 时，\(\gcd(3,8)=1\)，且
-\(3k+1\equiv1,4,7,2,5,0,3,6\pmod 8\)，正好取遍模 \(8\) 的全部余数.
-
-所以可取遍前 \(8\) 项值的数列为 \(\{a_{3k+1}\}\)，故选 B.
+当 \(m=2\) 时，\(2k+1\) 始终为奇数，只能得到四个余数；当 \(m=4\) 时，\(4k+1\) 只能得到两个余数；当 \(m=6\) 时，\(6k+1\) 只能得到四个余数，因此选项（A）、（C）、（D）都不能取遍前八项的值. 当 \(m=3\) 时，连续取 \(k=0\)，\(1\)，\(\ldots\)，\(7\)，有 \(3k+1\equiv1\)，\(4\)，\(7\)，\(2\)，\(5\)，\(0\)，\(3\)，\(6\pmod 8\)，正好遍历模 \(8\) 的全部余数. 因而可取遍前八项值的数列是 \(\{a_{3k+1}\}\)，故选 B.
 \end{solution}
 
 \section{解答题}
@@ -270,7 +269,7 @@ B
 \begin{solution}
 由于 \(\frac{\pi}{4}<\alpha<\frac{\pi}{2}\)，有 \(\sin\alpha>0\)，\(\cos\alpha>0\)，且 \(\sin\alpha+\cos\alpha>0\). 将 \(\sin2\alpha=2\sin\alpha\cos\alpha\) 和 \(\tan\alpha=\frac{\sin\alpha}{\cos\alpha}\) 代入已知式，得
 \[
-\frac{2\sin^{2}\alpha+\sin2\alpha}{1+\tan\alpha}=\frac{2\sin\alpha(\sin\alpha+\cos\alpha)}{\frac{\sin\alpha+\cos\alpha}{\cos\alpha}}=2\sin\alpha\cos\alpha=\sin2\alpha=k.
+\frac{2\sin^{2}\alpha+\sin2\alpha}{1+\tan\alpha}=\frac{2\sin\alpha(\sin\alpha+\cos\alpha)}{\frac{\sin\alpha+\cos\alpha}{\cos\alpha}}=2\sin\alpha\cos\alpha=\sin2\alpha=k
 \]
 又因为 \(\alpha\in\left(\frac{\pi}{4},\frac{\pi}{2}\right)\)，所以 \(\sin\alpha-\cos\alpha>0\). 因而
 \(\left(\sin\alpha-\cos\alpha\right)^{2}=\sin^{2}\alpha+\cos^{2}\alpha-2\sin\alpha\cos\alpha=1-k\)，故 \(\sin\alpha-\cos\alpha=\sqrt{1-k}\)，且由 \(\alpha\) 的范围知 \(0<k<1\).
@@ -286,7 +285,7 @@ B
 
 注：求解本题时，不计容器的厚度.
 
-\bitmapfigure[max width=6.0cm]{img/2001/shanghai_spring/q19_fig1.png}
+\bitmapfigure[width=0.42\linewidth]{img/2001/shanghai_spring/q19_fig1.png}
 \end{problem}
 
 \begin{solution}
@@ -304,7 +303,7 @@ B
 \item 若规定两个平面所成的角是这两个平面所组成的二面角中的锐角（或直角），则在空间中有定理：若两条直线分别垂直于两个平面，则这两条直线所成的角与这两个平面所成的角相等. 试根据上述定理，在 \(AB=4\)，\(AD=3\)，\(AA_{1}=5\) 时，求平面 \(AEF\) 与平面 \(D_{1}B_{1}BD\) 所成的角的大小.（用反三角函数值表示）
 \end{enumerate}
 
-\bitmapfigure[max width=6.0cm]{img/2001/shanghai_spring/q20_fig1.png}
+\bitmapfigure[width=0.42\linewidth]{img/2001/shanghai_spring/q20_fig1.png}
 \end{problem}
 
 \begin{solution}
@@ -317,7 +316,7 @@ B
 
 \item 平面 \(D_{1}B_{1}BD\) 内含有方向向量 \(\overrightarrow{BD}=(-4,3,0)\) 和竖直方向向量 \((0,0,1)\)，所以其法向量可取 \(\bs{n}=(3,4,0)\). 由第（1）问，\(\overrightarrow{A_{1}C}=(4,3,-5)\) 是平面 \(AEF\) 的法向量. 根据题设定理，所求两平面所成的角等于这两个法向量所成的锐角，设为 \(\theta\)，则
 \[
-\cos\theta=\frac{(4,3,-5)\cdot(3,4,0)}{\sqrt{4^{2}+3^{2}+(-5)^{2}}\sqrt{3^{2}+4^{2}}}=\frac{24}{5\sqrt{2}\cdot5}=\frac{12\sqrt{2}}{25}.
+\cos\theta=\frac{(4,3,-5)\cdot(3,4,0)}{\sqrt{4^{2}+3^{2}+(-5)^{2}}\sqrt{3^{2}+4^{2}}}=\frac{24}{5\sqrt{2}\cdot5}=\frac{12\sqrt{2}}{25}
 \]
 因此所求角为 \(\arccos\dfrac{12\sqrt{2}}{25}\).
 \end{enumerate}
@@ -340,16 +339,16 @@ B
 反过来，设点 \(Q=(x,y)\) 满足上述方程，且先设 \(Q\ne P\). 令 \(u=a-x\)，\(v=b-y\)，则 \(P=Q+(u,v)\)，且由轨迹方程有 \(2xu+yv=0\). 考虑过 \(Q\) 且方向向量为 \((u,v)\) 的直线，其参数方程为 \((X,Y)=(x+tu,y+tv)\). 记 \(F(X,Y)=X^{2}+\dfrac{Y^{2}}{2}-1\)，则
 
 \[
-F(x+tu,y+tv)=F(Q)+t(2xu+yv)+t^{2}\left(u^{2}+\frac{v^{2}}{2}\right)=F(Q)+t^{2}\left(u^{2}+\frac{v^{2}}{2}\right).
+F(x+tu,y+tv)=F(Q)+t(2xu+yv)+t^{2}\left(u^{2}+\frac{v^{2}}{2}\right)=F(Q)+t^{2}\left(u^{2}+\frac{v^{2}}{2}\right)
 \]
 
 又因为 \(P=Q+(u,v)\)，所以 \(F(P)=F(Q)+u^{2}+\dfrac{v^{2}}{2}\leqslant0\). 当 \(Q\ne P\) 时，\(u^{2}+\dfrac{v^{2}}{2}>0\)，从而 \(F(Q)<0\)，上述方程有两个相异的根
 
 \[
-t=\pm\sqrt{\frac{-F(Q)}{u^{2}+\frac{v^{2}}{2}}}.
+t=\pm\sqrt{\frac{-F(Q)}{u^{2}+\frac{v^{2}}{2}}}
 \]
 
-这两个根对应椭圆上的两个交点，且参数互为相反数，所以 \(Q\) 是线段 \(AB\) 的中点. 当 \(Q=P\) 时，轨迹方程仍成立；若 \(P\) 在椭圆内部，可取非零方向向量 \((r,s)\) 满足 \(2ar+bs=0\)，对直线 \((X,Y)=(a+tr,b+ts)\) 作同样计算，所得两个参数互为相反数，故 \(P\) 也可作为弦中点. 当 \(P\) 在椭圆边界上时，这个方向是椭圆在 \(P\) 点的切线方向，所得交点为 \(P\) 的二重交点，故按本题的交点计数约定，\(Q=P\) 也计入轨迹. 因此该方程确实给出点 \(Q\) 的轨迹.
+这两个根对应椭圆上的两个交点，且参数互为相反数，所以 \(Q\) 是线段 \(AB\) 的中点. 当 \(Q=P\) 且 \(P\) 在椭圆内部时，可取非零方向向量 \((r,s)\) 满足 \(2ar+bs=0\)，对直线 \((X,Y)=(a+tr,b+ts)\) 作同样计算，所得两个参数互为相反数且不等于零，故 \(P\) 也可作为弦中点. 当 \(P\) 在椭圆边界上时，方程中的点 \(Q=P\) 对应椭圆在 \(P\) 处的切线；按本题轨迹方程的标准代数口径，把切点视为重合的两个交点，故 \(Q=P\) 也计入轨迹. 因此点 \(Q\) 的轨迹方程为 \(2x^{2}+y^{2}-2ax-by=0\).
 
 \item 令轨迹方程中的 \(y=0\)，得 \(2x(x-a)=0\)，所以轨迹与 \(x\) 轴的交点为 \((0,0)\) 和 \((a,0)\). 令 \(x=0\)，得 \(y(y-b)=0\)，所以轨迹与 \(y\) 轴的交点为 \((0,0)\) 和 \((0,b)\). 当 \(P=(0,0)\) 时，除原点外的两个交点分别退化为原点，交点个数为 \(1\)；当 \(P\) 在坐标轴上且不为原点时，只有一个非原点交点，交点个数为 \(2\)；当 \(a\ne0\) 且 \(b\ne0\) 时，三个点 \((0,0)\)，\((a,0)\)，\((0,b)\) 互不相同，交点个数为 \(3\).
 \end{enumerate}
@@ -368,7 +367,7 @@ t=\pm\sqrt{\frac{-F(Q)}{u^{2}+\frac{v^{2}}{2}}}.
 \begin{enumerate}
 \item 等比数列的前 \(n\) 项和为 \(S_n=\dfrac{2\left(1-\left(\frac12\right)^n\right)}{1-\frac12}=4\left(1-2^{-n}\right)\). 因而 \(S_{n+1}=4\left(1-2^{-(n+1)}\right)=\dfrac12S_n+2\).
 
-\item 由上式知 \(S_{k+1}=\dfrac12S_k+2\)，且 \(S_k\) 随 \(k\) 增大而增大，并满足 \(2\leqslant S_k<4\). 若 \(S_k-c<0\)，当 \(c>S_{k+1}\) 时分子、分母都为负且分子大于分母，分式介于 \(0\) 与 \(1\) 之间；当 \(c=S_{k+1}\) 时分式为 \(0\)；当 \(S_k<c<S_{k+1}\) 时分式为负. 这些情形都不可能使分式大于 \(2\).
+\item 由上式知 \(S_{k+1}=\dfrac12S_k+2\)，且 \(S_k\) 随 \(k\) 增大而增大，并满足 \(2\leqslant S_k<4\). 若 \(S_k-c<0\)，当 \(c>S_{k+1}\) 时分子、分母都为负，且 \(S_{k+1}-c<S_k-c<0\)，所以分式介于 \(0\) 与 \(1\) 之间；当 \(c=S_{k+1}\) 时分式为 \(0\)；当 \(S_k<c<S_{k+1}\) 时分式为负. 这些情形都不可能使分式大于 \(2\).
 
 若 \(S_k-c>0\)，不等式等价于 \(S_{k+1}-c>2(S_k-c)\)，即 \(c>2S_k-S_{k+1}=\dfrac32S_k-2=4-6\cdot2^{-k}\). 当 \(k=1\) 时，正分母要求 \(c<2\)，而右端为 \(1\)，没有自然数 \(c\) 严格大于它；当 \(k=2\) 时，正分母要求 \(c<3\)，而右端为 \(\frac52\)，也没有符合条件的自然数；当 \(k\geqslant3\) 时，正分母要求自然数 \(c\leqslant3\)，而 \(4-6\cdot2^{-k}>3\)，仍不可能. 分母为零时原分式无意义. 所以不存在这样的自然数 \(c\) 和 \(k\).
 \end{enumerate}

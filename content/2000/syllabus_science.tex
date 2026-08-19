@@ -37,7 +37,9 @@ B
 顺时针旋转 \(\frac{\pi}{3}\) 相当于乘以
 \(\cos\frac{\pi}{3}-\i\sin\frac{\pi}{3}=\frac12-\frac{\sqrt{3}}2\i\). 因此所得复数为
 \[
-(3-\sqrt{3}\i)\left(\frac12-\frac{\sqrt{3}}2\i\right)=-2\sqrt{3}\i.
+(3-\sqrt{3}\i)\left(\frac12-\frac{\sqrt{3}}2\i\right)
+=\left(\frac32-\frac32\right)-\left(\frac{3\sqrt{3}}2+\frac{\sqrt{3}}2\right)\i
+=-2\sqrt{3}\i
 \]
 故选 B.
 \end{solution}
@@ -61,7 +63,7 @@ D
 \(xy=\sqrt{2}\)，\(yz=\sqrt{3}\)，\(zx=\sqrt{6}\). 由此得
 \(x^2=\frac{(xy)(xz)}{yz}=2\)，\(y^2=\frac{(xy)(yz)}{xz}=1\)，\(z^2=\frac{(xz)(yz)}{xy}=3\). 所以长方体对角线长为
 \[
-\sqrt{x^2+y^2+z^2}=\sqrt{2+1+3}=\sqrt{6}.
+\sqrt{x^2+y^2+z^2}=\sqrt{2+1+3}=\sqrt{6}
 \]
 故选 D.
 \end{solution}
@@ -137,7 +139,7 @@ C
 \begin{solution}
 设超过免税额的部分为 \(t\) 元，则工资、薪金所得为 \(t+800\) 元. 当 \(0\leqslant t\leqslant500\) 时，税款至多为 \(0.05\times500=25\) 元，不可能是 \(26.78\) 元. 因此 \(500<t\leqslant2000\)，税款为
 \[
-25+0.1(t-500)=26.78.
+25+0.1(t-500)=26.78
 \]
 解得 \(t=517.8\)，所以当月工资、薪金所得为 \(1317.8\) 元，介于 \(1200\) 元和 \(1500\) 元之间，故选 C.
 \end{solution}
@@ -159,11 +161,16 @@ B
 \begin{solution}
 令 \(u=\lg a\)，\(v=\lg b\). 因为 \(a>b>1\)，所以 \(u>v>0\). 由算术平均数不小于几何平均数，且 \(u\ne v\)，得
 \[
-P=\sqrt{uv}<\frac{u+v}{2}=Q.
+P=\sqrt{uv}<\frac{u+v}{2}=Q
 \]
-又由对数函数的凹性，或由算术平均数与几何平均数的关系，有
+因为 \(a\ne b\)，所以 \((a+b)^2>4ab\)，从而
 \[
-R=\lg\left(\frac{a+b}{2}\right)>\frac{\lg a+\lg b}{2}=Q.
+\frac{a+b}{2}>\sqrt{ab}
+\]
+对正数应用 \(\lg x\) 的单调性，得到
+\[
+R=\lg\left(\frac{a+b}{2}\right)>\lg\sqrt{ab}
+=\frac12\lg(ab)=\frac{\lg a+\lg b}{2}=Q
 \]
 因此 \(P<Q<R\)，故选 B.
 \end{solution}
@@ -183,9 +190,17 @@ C
 \end{answer}
 
 \begin{solution}
-极坐标点 \((1,1)\) 表示极径为 \(1\)、极角为 \(1\) 的点，圆的半径也为 \(1\). 以极坐标表示的圆心为 \((\rho_0,\theta_0)\)、半径为 \(\rho_0\) 的圆经过极点，其方程为 \(\rho=2\rho_0\cos(\theta-\theta_0)\). 代入 \(\rho_0=1\)，\(\theta_0=1\)，得
+极坐标点 \((1,1)\) 表示极径为 \(1\)、极角为 \(1\) 的点，故其直角坐标为 \((\cos1,\sin1)\). 设圆上任意一点的极坐标为 \((\rho,\theta)\)，由圆心距等于半径，有
 \[
-\rho=2\cos(\theta-1).
+(\rho\cos\theta-\cos1)^2+(\rho\sin\theta-\sin1)^2=1
+\]
+展开并利用 \(\sin^2 1+\cos^2 1=1\)，得
+\[
+\rho^2-2\rho(\cos\theta\cos1+\sin\theta\sin1)=0
+\]
+即 \(\rho^2-2\rho\cos(\theta-1)=0\). 除去表示极点的因子 \(\rho=0\)，圆的极坐标方程为
+\[
+\rho=2\cos(\theta-1)
 \]
 故选 C.
 \end{solution}
@@ -208,7 +223,7 @@ A
 设圆柱的底面半径为 \(r\)，高为 \(h\). 侧面展开图是正方形，所以 \(h=2\pi r\). 因此侧面积为 \(2\pi rh=4\pi^2r^2\)，两个底面的面积为 \(2\pi r^2\). 全面积与侧面积的比为
 \[
 \frac{4\pi^2r^2+2\pi r^2}{4\pi^2r^2}
-=\frac{1+2\pi}{2\pi}.
+=\frac{1+2\pi}{2\pi}
 \]
 故选 A.
 \end{solution}
@@ -230,9 +245,14 @@ C
 \begin{solution}
 将圆方程配方得 \((x+2)^2+y^2=1\)，所以圆心为 \((-2,0)\)，半径为 \(1\). 设过原点的切线为 \(y=kx\)，则圆心到直线的距离等于半径，故
 \[
-\frac{2|k|}{\sqrt{k^2+1}}=1,
+\frac{2|k|}{\sqrt{k^2+1}}=1
 \]
-从而 \(k^2=\frac13\)，即 \(k=\pm\frac{\sqrt{3}}3\). 当 \(k=\frac{\sqrt{3}}3\) 时，切点的横、纵坐标均为负，位于第三象限；当 \(k=-\frac{\sqrt{3}}3\) 时切点位于第二象限. 因此所求直线为 \(y=\frac{\sqrt{3}}3x\)，故选 C.
+从而 \(k^2=\frac13\)，即 \(k=\pm\frac{\sqrt{3}}3\). 对直线 \(kx-y=0\)，圆心 \((-2,0)\) 到直线的垂足为切点，故切点坐标为
+\[
+(-2,0)-\frac{-2k}{k^2+1}(k,-1)
+=\left(-\frac{2}{k^2+1},-\frac{2k}{k^2+1}\right)
+\]
+当 \(k=\frac{\sqrt{3}}3\) 时，切点为 \(\left(-\frac32,-\frac{\sqrt{3}}2\right)\)，在第三象限；当 \(k=-\frac{\sqrt{3}}3\) 时，切点为 \(\left(-\frac32,\frac{\sqrt{3}}2\right)\)，在第二象限. 因此所求直线为 \(y=\frac{\sqrt{3}}3x\)，故选 C.
 \end{solution}
 
 \begin{problem}
@@ -252,7 +272,7 @@ C
 \begin{solution}
 抛物线 \(y=ax^2\) 的焦点为 \(F\left(0,\frac1{4a}\right)\). 设过焦点的直线方程为
 \[
-y-\frac1{4a}=kx.
+y-\frac1{4a}=kx
 \]
 它与抛物线的两个交点的横坐标 \(x_1\)，\(x_2\) 是方程
 \[
@@ -260,14 +280,14 @@ ax^2-kx-\frac1{4a}=0
 \]
 的两个根. 因此 \(x_1x_2=-\frac1{4a^2}<0\)，两根异号，且
 \[
-|x_1-x_2|=\frac{\sqrt{k^2+1}}{a}.
+|x_1-x_2|=\frac{\sqrt{k^2+1}}{a}
 \]
 由于直线上横坐标相差 \(|x|\) 时距离相差 \(|x|\sqrt{1+k^2}\)，且 \(x_1\)，\(x_2\) 异号，所以 \(|x_1|+|x_2|=|x_1-x_2|\). 因而
 \[
 \frac1p+\frac1q
 =\frac1{\sqrt{1+k^2}}\left(\frac1{|x_1|}+\frac1{|x_2|}\right)
 =\frac{|x_1-x_2|}{|x_1x_2|\sqrt{1+k^2}}
-=4a.
+=4a
 \]
 故选 C.
 \end{solution}
@@ -292,21 +312,21 @@ D
 \begin{solution}
 设圆锥的高为 \(h\)，底面半径为 \(r\)，顶点为 \(V\)，并在含轴的截面内设底面圆周上的母线端点为 \(B\). 取轴为纵轴，令 \(V=(0,h)\)，\(O=(0,0)\)，\(B=(r,0)\). 设 \(A\) 为 \(O\) 到母线 \(VB\) 的垂足，记 \(A\) 到轴的距离为 \(x_A\). 直线 \(VB\) 的方程为 \(hx+ry=hr\)，由垂足坐标公式得
 \[
-x_A=\frac{rh^2}{r^2+h^2}.
+x_A=\frac{rh^2}{r^2+h^2}
 \]
 若 \(\theta\) 为母线与轴的夹角，则 \(\cos\theta=\frac{h}{\sqrt{r^2+h^2}}\)，所以 \(x_A=r\cos^2\theta\).
 
-旋转线段 \(OA\) 所得的曲面把原圆锥分成两个部分，其中含有轴截面三角形 \(VOA\) 的一部分由两个底面半径为 \(x_A\)、高分别为 \(y_A\) 和 \(h-y_A\) 的圆锥组成，其中 \(y_A\) 为点 \(A\) 的纵坐标. 因此该部分体积为
+旋转线段 \(OA\) 所得的曲面把原圆锥分成两部分. 含有轴截面三角形 \(VOA\) 的那一部分，在旋转后由以 \(O\)、\(V\) 为顶点、以过 \(A\) 的圆为底面的两个圆锥组成；它们的底面半径均为 \(x_A\)，高分别为 \(y_A\) 和 \(h-y_A\)，其中 \(y_A\) 为点 \(A\) 的纵坐标. 因此该部分体积为
 \[
-\frac13\pi x_A^2y_A+\frac13\pi x_A^2(h-y_A)=\frac13\pi h x_A^2.
+\frac13\pi x_A^2y_A+\frac13\pi x_A^2(h-y_A)=\frac13\pi h x_A^2
 \]
-原圆锥体积为 \(\frac13\pi h r^2\). 两部分体积相等，因此
+原圆锥体积为 \(\frac13\pi h r^2\). 由题意上述部分占原圆锥体积的一半，因此
 \[
-\frac{\frac13\pi h x_A^2}{\frac13\pi h r^2}=\frac12,
+\frac{\frac13\pi h x_A^2}{\frac13\pi h r^2}=\frac12
 \]
 从而 \(\frac{x_A}{r}=\frac1{\sqrt2}\). 于是 \(\cos^2\theta=\frac1{\sqrt2}\)，且 \(\theta\) 为锐角，故
 \[
-\cos\theta=\frac1{\sqrt[4]{2}}.
+\cos\theta=\frac1{\sqrt[4]{2}}
 \]
 故选 D.
 \end{solution}
@@ -341,25 +361,25 @@ x_A=\frac{rh^2}{r^2+h^2}.
 椭圆的长半轴为 \(3\)，短半轴为 \(2\)，所以 \(c=\sqrt{3^2-2^2}=\sqrt5\)，可设
 \(F_1=(-\sqrt5,0)\)，\(F_2=(\sqrt5,0)\)，\(P=(x,y)\). 角 \(\angle F_1PF_2\) 为钝角，当且仅当
 \[
-\overrightarrow{PF_1}\cdot\overrightarrow{PF_2}<0.
+\overrightarrow{PF_1}\cdot\overrightarrow{PF_2}<0
 \]
 而
 \[
 \overrightarrow{PF_1}\cdot\overrightarrow{PF_2}
-=(-\sqrt5-x)(\sqrt5-x)+y^2=x^2+y^2-5.
+=(-\sqrt5-x)(\sqrt5-x)+y^2=x^2+y^2-5
 \]
 因此钝角条件为 \(x^2+y^2<5\). 由椭圆方程得 \(y^2=4-\frac49x^2\)，代入可得
 \[
-4+\frac59x^2<5,
+4+\frac59x^2<5
 \]
 即 \(x^2<\frac95\). 所以点 \(P\) 的横坐标范围为
 \[
--\frac3{\sqrt5}<x<\frac3{\sqrt5}.
+-\frac3{\sqrt5}<x<\frac3{\sqrt5}
 \]
 \end{solution}
 
 \begin{problem}
-设 \(\{a_n\}\) 是首项为 \(1\) 的正项数列，且 \((n+1)a_{n+1}^2-na_n^2+a_{n+1}a_n=0\)（\(n=1,2,3,\dots\)），则它的通项公式是 \(a_n=\fillinblank{}\).
+设 \(\{a_n\}\) 是首项为 \(1\) 的正项数列，且 \((n+1)a_{n+1}^2-na_n^2+a_{n+1}a_n=0\)（\(n=1\)，\(2\)，\(3\)，\(\dots\)），则它的通项公式是 \(a_n=\fillinblank{}\).
 \end{problem}
 
 \begin{answer}
@@ -369,20 +389,20 @@ x_A=\frac{rh^2}{r^2+h^2}.
 \begin{solution}
 因为数列各项为正，令 \(r_n=\frac{a_{n+1}}{a_n}>0\). 将递推关系除以 \(a_n^2\)，得
 \[
-(n+1)r_n^2+r_n-n=0.
+(n+1)r_n^2+r_n-n=0
 \]
 这个关于 \(r_n\) 的方程判别式为 \(1+4n(n+1)=(2n+1)^2\)，所以
 \[
-r_n=\frac{-1+(2n+1)}{2(n+1)}=\frac{n}{n+1},
+r_n=\frac{-1+(2n+1)}{2(n+1)}=\frac{n}{n+1}
 \]
 另一个根为负数，不符合 \(r_n>0\). 于是
 \[
-a_{n+1}=\frac{n}{n+1}a_n.
+a_{n+1}=\frac{n}{n+1}a_n
 \]
 由 \(a_1=1\) 逐项相乘，得到
 \[
 a_n=a_1\prod_{k=1}^{n-1}\frac{k}{k+1}
-=\frac1n.
+=\frac1n
 \]
 故通项公式为 \(a_n=\frac1n\).
 \end{solution}
@@ -411,19 +431,12 @@ a_n=a_1\prod_{k=1}^{n-1}\frac{k}{k+1}
 
 \begin{solution}
 取正方体棱长为 \(1\)，设
-\[
-A=(0,0,0),\quad B=(1,0,0),\quad D_1=(0,1,1),\quad
-E=\left(0,\frac12,\frac12\right),\quad
-F=\left(1,\frac12,\frac12\right).
-\]
-在两个与面 \(ADD_1A_1\)、\(BCC_1B_1\) 平行的面上作射影时，\(E\) 与 \(F\) 的射影重合，\(B\) 与 \(D_1\) 的射影为该面的两个对角顶点，所以四边形的射影退化为一条对角线，对应图 \(\circled{3}\).
+\(A=(0,0,0)\)，\(B=(1,0,0)\)，\(D_1=(0,1,1)\)，\(E=\left(0,\frac12,\frac12\right)\)，\(F=\left(1,\frac12,\frac12\right)\).
+在两个与面 \(ADD_1A_1\)、\(BCC_1B_1\) 平行的面上作射影时，\(E\) 与 \(F\) 的射影重合，\(B\) 与 \(D_1\) 的射影分别为该面的两个对角顶点，所以四边形的射影退化为一条对角线，对应图 \(\circled{3}\).
 
-在其余四个面上作射影时，以相应面的两条棱为坐标轴，四个顶点的坐标可写成
-\[
-\left(1,0\right),\quad\left(1,\frac12\right),\quad
-\left(0,1\right),\quad\left(0,\frac12\right).
-\]
-所得图形为图 \(\circled{2}\) 所示的四边形. 因此可能的图序号为 \(\circled{2}\)、\(\circled{3}\).
+在其余四个面上作射影时，以相应面的两条棱为坐标轴，四个投影点按顶点顺序均可写成
+\(\left(1,0\right)\)，\(\left(1,\frac12\right)\)，\(\left(0,1\right)\)，\(\left(0,\frac12\right)\).
+相邻两点依次连接后，得到两条平行的短边和两条斜边，即图 \(\circled{2}\) 所示的四边形. 因此可能的图序号为 \(\circled{2}\)、\(\circled{3}\).
 \end{solution}
 
 \section{解答题}
@@ -443,19 +456,17 @@ F=\left(1,\frac12,\frac12\right).
 \[
 \sqrt{3}\sin x+\cos x
 =2\left(\frac{\sqrt{3}}{2}\sin x+\frac{1}{2}\cos x\right)
-=2\sin\left(x+\frac{\pi}{6}\right).
+=2\sin\left(x+\frac{\pi}{6}\right)
 \]
 由于正弦函数的最大值为 \(1\)，所以函数 \(y\) 的最大值为 \(2\). 当且仅当
-\[
-x+\frac{\pi}{6}=\frac{\pi}{2}+2k\pi\quad (k\in\Z)
-\]
+\(x+\frac{\pi}{6}=\frac{\pi}{2}+2k\pi\)，\((k\in\Z)\)
 时取到最大值，故自变量 \(x\) 的集合为
 \[
-\left\{\frac{\pi}{3}+2k\pi\mid k\in\Z\right\}.
+\left\{\frac{\pi}{3}+2k\pi\mid k\in\Z\right\}
 \]
 \item 先将 \(y=\sin x\) 的图象上各点的纵坐标伸长为原来的 \(2\) 倍，得到 \(y=2\sin x\) 的图象；再将所得图象向左平移 \(\frac{\pi}{6}\)，得到
 \[
-y=2\sin\left(x+\frac{\pi}{6}\right)=\sqrt{3}\sin x+\cos x.
+y=2\sin\left(x+\frac{\pi}{6}\right)=\sqrt{3}\sin x+\cos x
 \]
 因此，所求图象可由 \(y=\sin x\) 的图象先作纵向伸长，再向左平移 \(\frac{\pi}{6}\) 得到.
 \end{enumerate}
@@ -477,84 +488,75 @@ y=2\sin\left(x+\frac{\pi}{6}\right)=\sqrt{3}\sin x+\cos x.
 \begin{enumerate}
 \item 设 \(\bs{b}=\overrightarrow{CB}\)，\(\bs{d}=\overrightarrow{CD}\)，\(\bs{c}=\overrightarrow{CC_1}\). 由已知角相等，
 \[
-\bs{c}\cdot\bs{b}=|\bs{c}|\,|\bs{b}|\cos60^\circ=\bs{c}\cdot\bs{d}.
+\bs{c}\cdot\bs{b}=|\bs{c}|\,|\bs{b}|\cos60^\circ=\bs{c}\cdot\bs{d}
 \]
 又 \(\overrightarrow{BD}=\bs{d}-\bs{b}\)，所以
 \[
-\bs{c}\cdot\overrightarrow{BD}=\bs{c}\cdot(\bs{d}-\bs{b})=0.
+\bs{c}\cdot\overrightarrow{BD}=\bs{c}\cdot(\bs{d}-\bs{b})=0
 \]
 因此 \(C_1C\perp BD\).
 
 \item 由于 \(CB=CD=2\)，且 \(\angle BCD=60^\circ\)，所以三角形 \(BCD\) 为边长 \(2\) 的等边三角形. 设 \(M\) 为 \(BD\) 的中点，则
-\[
-CM\perp BD,\qquad CM=\sqrt{3}.
-\]
+\(CM\perp BD\)，\(CM=\sqrt{3}\).
 由 \(M\) 为 \(BD\) 的中点，
-\[
-\overrightarrow{CM}=\frac{\bs{b}+\bs{d}}{2},\qquad
-\bs{c}\cdot\overrightarrow{CM}=\frac{\bs{c}\cdot\bs{b}+\bs{c}\cdot\bs{d}}{2}=\frac{3}{2}.
-\]
+\(\overrightarrow{CM}=\frac{\bs{b}+\bs{d}}{2}\)，\(\bs{c}\cdot\overrightarrow{CM}=\frac{\bs{c}\cdot\bs{b}+\bs{c}\cdot\bs{d}}{2}=\frac{3}{2}\).
 于是
 \[
 \cos\angle C_1CM=\frac{\bs{c}\cdot\overrightarrow{CM}}{CC_1\cdot CM}
-=\frac{3/2}{(3/2)\sqrt{3}}=\frac{\sqrt{3}}{3}.
+=\frac{3/2}{(3/2)\sqrt{3}}=\frac{\sqrt{3}}{3}
 \]
 由于 \(C_1C\perp BD\) 且 \(CM\perp BD\)，直线 \(MC_1\) 也垂直于 \(BD\)，所以二面角 \(\alpha-BD-\beta\) 的平面角为 \(\angle C_1MC\). 在三角形 \(C_1CM\) 中，
 \[
 C_1M^2=CC_1^2+CM^2-2\cdot CC_1\cdot CM\cos\angle C_1CM
-=\frac94+3-3=\frac94,
+=\frac94+3-3=\frac94
 \]
 故 \(C_1M=\frac32=CC_1\). 从而
 \[
 \cos\angle C_1MC=\frac{C_1M^2+CM^2-CC_1^2}{2\cdot C_1M\cdot CM}
-=\frac{3}{3\sqrt{3}}=\frac{\sqrt{3}}{3}.
+=\frac{3}{3\sqrt{3}}=\frac{\sqrt{3}}{3}
 \]
 
 \item 设 \(CD=CB=s>0\)，\(CC_1=h>0\)，仍取 \(M\) 为 \(BD\) 的中点. 由等边三角形 \(BCD\)，
-\[
-CM=\frac{\sqrt{3}}{2}s,\qquad CM^2=\frac34s^2,
-\]
+\(CM=\frac{\sqrt{3}}{2}s\)，\(CM^2=\frac34s^2\)
 并且
 \[
-\bs{c}\cdot\overrightarrow{CM}=\frac{hs}{2}.
+\bs{c}\cdot\overrightarrow{CM}=\frac{hs}{2}
 \]
 由平行六面体的向量关系，
 \[
-\overrightarrow{CA_1}=\bs{b}+\bs{d}+\bs{c}=2\overrightarrow{CM}+\bs{c}.
+\overrightarrow{CA_1}=\bs{b}+\bs{d}+\bs{c}=2\overrightarrow{CM}+\bs{c}
 \]
 由第一问，\(\bs{c}\perp BD\). 又因底面 \(ABCD\) 为菱形，\(|\bs{b}|=|\bs{d}|\)，所以
 \[
-(\bs{b}+\bs{d})\cdot(\bs{d}-\bs{b})=|\bs{d}|^2-|\bs{b}|^2=0.
+(\bs{b}+\bs{d})\cdot(\bs{d}-\bs{b})=|\bs{d}|^2-|\bs{b}|^2=0
 \]
 因此 \(\bs{b}+\bs{d}\perp BD\)，从而
 \[
-\overrightarrow{CA_1}=\bs{b}+\bs{d}+\bs{c}\perp BD.
+\overrightarrow{CA_1}=\bs{b}+\bs{d}+\bs{c}\perp BD
 \]
 平面 \(C_1BD\) 内过 \(M\) 的两条相交直线可取 \(BD\) 与 \(MC_1\)，其中
 \[
-\overrightarrow{MC_1}=\bs{c}-\overrightarrow{CM}.
+\overrightarrow{MC_1}=\bs{c}-\overrightarrow{CM}
 \]
 因此，\(A_1C\perp\) 平面 \(C_1BD\) 的充要条件是
 \[
-\overrightarrow{CA_1}\cdot\overrightarrow{MC_1}=0.
+\overrightarrow{CA_1}\cdot\overrightarrow{MC_1}=0
 \]
 代入上式得
 \[
 \overrightarrow{CA_1}\cdot\overrightarrow{MC_1}
 =(2\overrightarrow{CM}+\bs{c})\cdot(\bs{c}-\overrightarrow{CM})
-=h^2+\frac{hs}{2}-\frac32s^2.
+=h^2+\frac{hs}{2}-\frac32s^2
 \]
 所以
 \[
-2h^2+hs-3s^2=0.
+2h^2+hs-3s^2=0
 \]
 令 \(r=\frac{s}{h}>0\)，则
-\[
-3r^2-r-2=0,\qquad (3r+2)(r-1)=0.
-\]
+\(3r^2-r-2=0\)，\((3r+2)(r-1)=0\).
 由于 \(r>0\)，只能有 \(r=1\)，即
 \[
-\frac{CD}{CC_1}=1.
+\frac{CD}{CC_1}=1
 \]
 反之，当该比值为 \(1\) 时上面的内积为 \(0\)，且 \(\overrightarrow{CA_1}\perp BD\)，故确实有 \(A_1C\perp\) 平面 \(C_1BD\).
 \end{enumerate}
@@ -573,23 +575,23 @@ CM=\frac{\sqrt{3}}{2}s,\qquad CM^2=\frac34s^2,
 \begin{enumerate}
 \item 原不等式等价于
 \[
-\sqrt{x^2+1}\leqslant 1+ax.
+\sqrt{x^2+1}\leqslant 1+ax
 \]
 由于左边非负，必须有 \(1+ax\geqslant0\). 在此条件下两边平方，得
 \[
-x^2+1\leqslant(1+ax)^2,
+x^2+1\leqslant(1+ax)^2
 \]
 即
 \[
-x\bigl((1-a^2)x-2a\bigr)\leqslant0.
+x\bigl((1-a^2)x-2a\bigr)\leqslant0
 \]
 \(0<a<1\) 时，第二个不等式的两个根为 \(0\) 和 \(\frac{2a}{1-a^2}>0\)，故其解集为 \(\left[0,\frac{2a}{1-a^2}\right]\)，且其中每个 \(x\) 都满足 \(1+ax>0\). 因此此时原不等式的解集为
 \[
-\left[0,\frac{2a}{1-a^2}\right].
+\left[0,\frac{2a}{1-a^2}\right]
 \]
 当 \(a=1\) 时，平方后的不等式为 \(-2x\leqslant0\)，结合 \(1+x\geqslant0\)，得到解集 \([0,+\infty)\). 当 \(a>1\) 时，平方后的不等式解为
 \[
-\left(-\infty,-\frac{2a}{a^2-1}\right]\cup[0,+\infty).
+\left(-\infty,-\frac{2a}{a^2-1}\right]\cup[0,+\infty)
 \]
 但 \(x\leqslant-\frac{2a}{a^2-1}\) 时有 \(1+ax<0\)，不符合平方前的必要条件，所以原不等式的解集仍为 \([0,+\infty)\). 综上，
 \[
@@ -600,17 +602,17 @@ x\bigl((1-a^2)x-2a\bigr)\leqslant0.
 \]
 \item 在 \(x\geqslant0\) 时，函数的导数为
 \[
-f'(x)=\frac{x}{\sqrt{x^2+1}}-a.
+f'(x)=\frac{x}{\sqrt{x^2+1}}-a
 \]
 又因为 \(0\leqslant\frac{x}{\sqrt{x^2+1}}<1\). 当 \(a\geqslant1\) 时，\(f'(x)<0\)，所以 \(f(x)\) 在 \([0,+\infty)\) 上单调递减.
 
 当 \(0<a<1\) 时，令
 \[
-x_0=\frac{a}{\sqrt{1-a^2}}>0.
+x_0=\frac{a}{\sqrt{1-a^2}}>0
 \]
 由 \(\frac{x_0}{\sqrt{x_0^2+1}}=a\)，可知 \(f'(x)<0\)（\(0\leqslant x<x_0\)），而 \(f'(x)>0\)（\(x>x_0\)）. 因此函数先减后增，不是单调函数. 故所求 \(a\) 的取值范围为
 \[
-a\geqslant1.
+a\geqslant1
 \]
 \end{enumerate}
 \end{solution}
@@ -626,24 +628,22 @@ a\geqslant1.
 \begin{enumerate}
 \item 记
 \[
-d_n=c_{n+1}-pc_n=(2-p)2^n+(3-p)3^n.
+d_n=c_{n+1}-pc_n=(2-p)2^n+(3-p)3^n
 \]
 若 \(\{d_n\}\) 为等比数列，则必满足 \(d_{n+1}^2=d_nd_{n+2}\). 令 \(A=2-p\)，\(B=3-p\)，则
 \[
 d_{n+1}^2-d_nd_{n+2}
 =(2A2^n+3B3^n)^2-(A2^n+B3^n)(4A2^n+9B3^n)
-=-AB6^n=-(2-p)(3-p)6^n.
+=-AB6^n=-(2-p)(3-p)6^n
 \]
 由于 \(6^n\ne0\)，必须有 \((2-p)(3-p)=0\)，所以 \(p=2\) 或 \(p=3\). 当 \(p=2\) 时 \(d_n=3^n\)，当 \(p=3\) 时 \(d_n=-2^n\)，二者均为等比数列，故这两个值都成立.
-\item 设 \(\{a_n\}\) 和 \(\{b_n\}\) 的公比分别为 \(r\) 和 \(s\)，其中 \(r\ne s\). 则
-\[
-c_{n+1}=ra_n+sb_n,\qquad c_{n+2}=r^2a_n+s^2b_n.
-\]
+\item 按等比数列的定义，设 \(\{a_n\}\) 和 \(\{b_n\}\) 的公比分别为 \(r\) 和 \(s\)，其中 \(r\ne s\)，且各项均非零. 则
+\(c_{n+1}=ra_n+sb_n\)，\(c_{n+2}=r^2a_n+s^2b_n\).
 于是
 \[
 c_{n+1}^2-c_nc_{n+2}
 =(ra_n+sb_n)^2-(a_n+b_n)(r^2a_n+s^2b_n)
-=-(r-s)^2a_nb_n.
+=-(r-s)^2a_nb_n
 \]
 由于两个等比数列的各项非零，且 \(r\ne s\)，右端不为 \(0\). 但是任一等比数列都满足 \(c_{n+1}^2=c_nc_{n+2}\)，矛盾. 因此 \(\{c_n\}\) 不是等比数列.
 \end{enumerate}
@@ -659,41 +659,41 @@ c_{n+1}^2-c_nc_{n+2}
 
 注：市场售价和种植成本的单位：\(\text{ 元}/10^{2}\mathrm{~kg}\)，时间单位：\(\text{天}\).
 
-\bitmapinlinefigure[0.75\linewidth][max width=0.75\linewidth]{img/2000/syllabus_science/q21_fig1.png}
+\bitmapfigure[max width=0.75\linewidth]{img/2000/syllabus_science/q21_fig1.png}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item 由图一，市场售价折线经过 \((0,300)\)、\((200,100)\)、\((300,300)\). 前一段斜率为 \(-1\)，后一段斜率为 \(2\)，所以
+\item 由图一，市场售价折线经过 \((0,300)\)、\((200,100)\)、\((300,300)\). 前一段斜率为
+\(\frac{100-300}{200-0}=-1\)，后一段斜率为
+\(\frac{300-100}{300-200}=2\)，所以
 \[
 p=f(t)=\begin{cases}
 300-t,&0\leqslant t\leqslant200,\\
 2t-300,&200<t\leqslant300.
 \end{cases}
 \]
-由图二，成本曲线的顶点为 \((150,100)\)，可设
+由图二，成本曲线的顶点为 \((150,100)\)，且经过 \((50,150)\)，可设
 \[
-Q=g(t)=k(t-150)^2+100.
+Q=g(t)=k(t-150)^2+100
 \]
-又曲线经过 \((50,150)\)，代入得
+代入 \((50,150)\)，得
 \[
-150=100+k(50-150)^2=100+10000k,
+150=100+k(50-150)^2=100+10000k
 \]
 所以 \(k=\frac{1}{200}\)，从而
-\[
-g(t)=\frac{1}{200}(t-150)^2+100\quad(0\leqslant t\leqslant300).
-\]
+\(g(t)=\frac{1}{200}(t-150)^2+100\)，\((0\leqslant t\leqslant300)\).
 \item 设纯收益为 \(H(t)=f(t)-g(t)\). 当 \(0\leqslant t\leqslant200\) 时，
 \[
 H(t)=300-t-\left[\frac{1}{200}(t-150)^2+100\right]
-=100-\frac{(t-50)^2}{200}.
+=100-\frac{(t-50)^2}{200}
 \]
 因此这一段的最大值在 \(t=50\) 时取得，最大值为 \(100\).
 
 当 \(200<t\leqslant300\) 时，
 \[
 H(t)=2t-300-\left[\frac{1}{200}(t-150)^2+100\right]
-=100-\frac{(t-350)^2}{200}.
+=100-\frac{(t-350)^2}{200}
 \]
 在区间 \((200,300]\) 内，\(t\) 越大，\((t-350)^2\) 越小，所以这一段的最大值在 \(t=300\) 时取得，等于 \(\frac{175}{2}\). 因为 \(100>\frac{175}{2}\)，故纯收益最大时 \(t=50\)，即从二月一日起第 \(50\) 天上市.
 \end{enumerate}
@@ -707,54 +707,47 @@ H(t)=2t-300-\left[\frac{1}{200}(t-150)^2+100\right]
 
 \begin{solution}
 设双曲线的中心为 \(O\)，焦点 \(A\)，\(B\) 分别为 \((-c,0)\)，\((c,0)\)，则 \(AB=2c\)，且双曲线方程可写为
+\(\frac{x^2}{a^2}-\frac{y^2}{b^2}=1\)，\(c^2=a^2+b^2\)，\(e=\frac{c}{a}\).
+由图中 \(CD\parallel AB\)，且 \(C\)，\(D\) 在双曲线的两支上，设它们的纵坐标均为 \(y_0\). 双曲线方程关于 \(y\) 轴对称，所以 \(C\)，\(D\) 的横坐标互为相反数. 又
 \[
-\frac{x^2}{a^2}-\frac{y^2}{b^2}=1,\qquad c^2=a^2+b^2,\qquad e=\frac{c}{a}.
-\]
-由图中 \(CD\parallel AB\)，且 \(C,D\) 在双曲线的两支上，设它们的纵坐标均为 \(y_0\). 双曲线方程关于 \(y\) 轴对称，所以 \(C,D\) 的横坐标互为相反数. 又
-\[
-CD=\frac{AB}{2}=c,
+CD=\frac{AB}{2}=c
 \]
 故可设
-\[
-C\left(\frac{c}{2},y_0\right),\qquad D\left(-\frac{c}{2},y_0\right).
-\]
+\(C\left(\frac{c}{2},y_0\right)\)，\(D\left(-\frac{c}{2},y_0\right)\).
 由点 \(C\) 在双曲线上，
 \[
-\frac{c^2}{4a^2}-\frac{y_0^2}{b^2}=1.
+\frac{c^2}{4a^2}-\frac{y_0^2}{b^2}=1
 \]
 由 \(\frac{AE}{EC}=\lambda\)，点 \(E\) 的坐标为内分点公式
 \[
 E=\frac{A+\lambda C}{1+\lambda}
-=\left(\frac{c(\lambda-2)}{2(1+\lambda)},\frac{\lambda y_0}{1+\lambda}\right).
+=\left(\frac{c(\lambda-2)}{2(1+\lambda)},\frac{\lambda y_0}{1+\lambda}\right)
 \]
 因为 \(E\) 也在双曲线上，
 \[
 \frac{c^2(\lambda-2)^2}{4a^2(1+\lambda)^2}
--\frac{\lambda^2y_0^2}{b^2(1+\lambda)^2}=1.
+-\frac{\lambda^2y_0^2}{b^2(1+\lambda)^2}=1
 \]
 令 \(e^2=\frac{c^2}{a^2}\)，由点 \(C\) 的关系得到
 \[
-\frac{y_0^2}{b^2}=\frac{e^2}{4}-1.
+\frac{y_0^2}{b^2}=\frac{e^2}{4}-1
 \]
 将其代入点 \(E\) 的关系，并乘以 \((1+\lambda)^2\)，得
 \[
-\frac{e^2(\lambda-2)^2}{4}-\lambda^2\left(\frac{e^2}{4}-1\right)=(1+\lambda)^2.
+\frac{e^2(\lambda-2)^2}{4}-\lambda^2\left(\frac{e^2}{4}-1\right)=(1+\lambda)^2
 \]
 化简可得
-\[
-e^2(1-\lambda)+\lambda^2=1+2\lambda+\lambda^2,\qquad
-e^2=\frac{1+2\lambda}{1-\lambda}.
-\]
+\(e^2(1-\lambda)+\lambda^2=1+2\lambda+\lambda^2\)，\(e^2=\frac{1+2\lambda}{1-\lambda}\).
 由于 \(\frac23\leqslant\lambda\leqslant\frac34<1\)，且
 \[
-\frac{\mathrm d}{\mathrm d\lambda}\left(\frac{1+2\lambda}{1-\lambda}\right)=\frac{3}{(1-\lambda)^2}>0,
+\frac{\mathrm d}{\mathrm d\lambda}\left(\frac{1+2\lambda}{1-\lambda}\right)=\frac{3}{(1-\lambda)^2}>0
 \]
 所以 \(e^2\) 随 \(\lambda\) 增大而增大. 因此
 \[
-e^2\in\left[\frac{1+2\cdot\frac23}{1-\frac23},\frac{1+2\cdot\frac34}{1-\frac34}\right]=[7,10].
+e^2\in\left[\frac{1+2\cdot\frac23}{1-\frac23},\frac{1+2\cdot\frac34}{1-\frac34}\right]=[7,10]
 \]
 由 \(e>0\)，得到
 \[
-\sqrt{7}\leqslant e\leqslant\sqrt{10}.
+\sqrt{7}\leqslant e\leqslant\sqrt{10}
 \]
 \end{solution}

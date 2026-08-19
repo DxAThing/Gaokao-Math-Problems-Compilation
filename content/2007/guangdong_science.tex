@@ -16,6 +16,14 @@
 C
 \end{answer}
 
+\begin{solution}
+函数 \(f(x)\) 有意义需要根式内为正且分母不为零，因此 \(1-x>0\)，即 \(x<1\)，所以 \(M=\{x\mid x<1\}\). 函数 \(g(x)=\ln(1+x)\) 有意义需要 \(1+x>0\)，所以 \(N=\{x\mid x>-1\}\). 因而
+\[
+M\cap N=\{x\mid -1<x<1\}
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
 若复数 \((1 + b\i)(2 + \i)\) 是纯虚数（\(\i\) 是虚数单位，\(b\) 是实数），则 \(b =\)（\quad）
 
@@ -29,6 +37,14 @@ C
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+展开复数得
+\[
+(1+b\i)(2+\i)=2+\i+2b\i+b\i^2=(2-b)+(1+2b)\i
+\]
+纯虚数的实部必须为零，因此 \(2-b=0\)，解得 \(b=2\). 此时虚部为 \(1+2b=5\ne0\)，确为纯虚数，故选 A.
+\end{solution}
 
 \begin{problem}
 若函数 \( f(x) = \sin^2 x - \frac{1}{2} \)（\(x \in \R\)），则 \( f(x) \) 是（\quad）
@@ -44,6 +60,14 @@ A
 D
 \end{answer}
 
+\begin{solution}
+利用降幂公式，
+\[
+f(x)=\sin^2x-\frac12=\frac{1-\cos2x}{2}-\frac12=-\frac12\cos2x
+\]
+由于 \(\cos2x\) 是偶函数，故 \(f(x)\) 是偶函数；\(\cos2x\) 的最小正周期为 \(\pi\)，且 \(f(x+\frac{\pi}{2})=-f(x)\) 不对所有 \(x\) 成立，所以 \(f(x)\) 的最小正周期不是 \(\frac{\pi}{2}\)，而是 \(\pi\). 故选 D.
+\end{solution}
+
 \begin{problem}
 客车从甲地以 \(60 \, \mathrm{km/h}\) 的速度匀速行驶 \(1\) 小时到达乙地，在乙地停留了半小时，然后以 \(80 \, \mathrm{km/h}\) 的速度匀速行驶 \(1\) 小时到达丙地. 下列描述客车从甲地出发，经过乙地，最后到达丙地所经过的路程 \(s\) 与时间 \(t\) 之间关系的图象中，正确的是（\quad）
 
@@ -58,6 +82,20 @@ D
 B
 \end{answer}
 
+\begin{solution}
+客车出发后前 \(1\) 小时行驶 \(60\) 千米，所以在 \(t=1\) 时 \(s=60\). 在乙地停留半小时，故 \(1\leqslant t\leqslant1.5\) 时路程保持为 \(60\). 随后以 \(80\,\mathrm{km/h}\) 行驶 \(1\) 小时，到达丙地时 \(t=2.5\)，总路程为 \(60+80=140\) 千米.
+
+因此路程函数为
+\[
+s=\begin{cases}
+60t,&0\leqslant t\leqslant1,\\
+60,&1\leqslant t\leqslant1.5,\\
+60+80(t-1.5),&1.5\leqslant t\leqslant2.5.
+\end{cases}
+\]
+图象应先以斜率 \(60\) 上升，再水平停留半小时，最后以更大的斜率 \(80\) 上升至 \((2.5,140)\)，故选 B.
+\end{solution}
+
 \begin{problem}
 已知数列 \(\{a_{n}\}\) 的前 \(n\) 项和 \(S_{n} = n^{2} - 9n\)，第 \(k\) 项满足 \(5 < a_{k} < 8\)，则 \(k =\)（\quad）
 
@@ -71,6 +109,18 @@ B
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+令 \(S_0=0\). 由前 \(n\) 项和得到
+\[
+a_k=S_k-S_{k-1}=k^2-9k-\bigl((k-1)^2-9(k-1)\bigr)=2k-10
+\]
+所以
+\[
+5<2k-10<8\quad\Longleftrightarrow\quad 15<2k<18\quad\Longleftrightarrow\quad \frac{15}{2}<k<9
+\]
+由于 \(k\) 是正整数，只能取 \(k=8\)，故选 B.
+\end{solution}
 
 \begin{problem}
 图1是某县参加2007年高考的学生身高条形统计图，从左到右的各条形表示的学生人数依次记为 \(A_{1}\)，\(A_{2}\)，\(\dots\)，\(A_{10}\) （如 \(A_{2}\) 表示身高（单位：\(\mathrm{cm}\)）在 \([150, 155)\) 内的学生人数）. 图2是统计图1中身高在一定范围内学生人数的一个算法流程图. 现要统计身高在 \(160 \sim 180 \mathrm{~cm}\) （含 \(160 \mathrm{~cm}\)，不含 \(180 \mathrm{~cm}\)）的学生人数，那么在流程图中的判断框内应填写的条件是（\quad）
@@ -89,6 +139,14 @@ B
 C
 \end{answer}
 
+\begin{solution}
+图1中 \(A_1\)，\(A_2\)，\(A_3\)，\(A_4\)，\(\ldots\) 分别对应区间 \([145,150)\)，\([150,155)\)，\([155,160)\)，\([160,165)\)，\(\ldots\). 因而身高在 \([160,180)\) 内的学生人数是
+\[
+A_4+A_5+A_6+A_7
+\]
+流程图先令 \(i=4\)，判断成立时累加 \(A_i\)，再令 \(i=i+1\). 为恰好累加 \(A_4\) 至 \(A_7\)，判断应在 \(i=4\)，\(5\)，\(6\)，\(7\) 时成立，在 \(i=8\) 时不成立，所以条件为 \(i<8\)，故选 C.
+\end{solution}
+
 \begin{problem}
 如图是某汽车维修公司的维修点环形分布图. 公司在年初分配给 \(A\)，\(B\)，\(C\)，\(D\) 四个维修点某种配件各 \(50\) 件. 在使用前发现需将 \(A\)，\(B\)，\(C\)，\(D\) 四个维修点的这批配件分别调整为 \(40\)，\(45\)，\(54\)，\(61\) 件，但调整只能在相邻维修点之间进行，那么要完成上述调整，最少的调动件次（\(n\) 件配件从一个维修点调整到相邻维修点的调动件次为 \(n\)）为（\quad）
 
@@ -106,6 +164,32 @@ C
 B
 \end{answer}
 
+\begin{solution}
+把环形维修点按 \(A\to B\to C\to D\to A\) 编号. 相对于每点原有的 \(50\) 件，所需变化量分别为
+\[
+(-10,-5,4,11)
+\]
+设沿上述方向在四条边上的净调动量依次为 \(u\)，\(v\)，\(w\)，\(z\)，正值表示沿箭头方向调动. 各点的流入量减流出量给出
+\[
+\begin{cases}
+z-u=-10\\
+u-v=-5\\
+v-w=4\\
+w-z=11
+\end{cases}
+\]
+令 \(u=t\)，解得 \(v=t+5\)，\(w=t+1\)，\(z=t-10\).
+同一条边上若有相反方向的调动，可以相互抵消而不增加调动件次，因此总调动件次至少且可以取为
+\[
+\Phi(t)=|t|+|t+5|+|t+1|+|t-10|
+\]
+当 \(-1\leqslant t\leqslant0\) 时，
+\[
+\Phi(t)=-t+(t+5)+(t+1)+(10-t)=16
+\]
+四个绝对值的折点为 \(-5\)，\(-1\)，\(0\)，\(10\)，而 \(\Phi(t)\) 在相邻折点区间上的斜率依次为 \(-4\)，\(-2\)，\(0\)，\(2\)，\(4\)，所以 \(\Phi(t)\) 在 \([-1,0]\) 上取得最小值 \(16\)，故选 B.
+\end{solution}
+
 \begin{problem}
 设 \(S\) 是至少含有两个元素的集合. 在 \(S\) 上定义了一个二元运算“*”（即对任意的 \(a\)，\(b \in S\)，对于有序元素对 \((a, b)\)，在 \(S\) 中有唯一确定的元素 \(a*b\) 与之对应）. 若对任意的 \(a\)，\(b \in S\)，有 \(a*(b*a)=b\)，则对任意的 \(a\)，\(b \in S\)，下列等式中不恒成立的是（\quad）
 
@@ -120,6 +204,34 @@ B
 A
 \end{answer}
 
+\begin{solution}
+已知运算满足
+\[
+a\ast(b\ast a)=b
+\]
+取其中的两个变量均为 \(b\)，立即得到
+\[
+b\ast(b\ast b)=b
+\]
+所以选项 C 恒成立.
+
+由已知式直接把 \(a\ast(b\ast a)\) 替换为 \(b\)，再对 \(b\ast(a\ast b)\) 使用已知式（取第一变量为 \(b\)，第二变量为 \(a\)），得
+\[
+[a\ast(b\ast a)]\ast(a\ast b)=b\ast(a\ast b)=a
+\]
+所以选项 B 恒成立. 对已知式取第一变量为 \(a\ast b\)，第二变量为 \(b\)，得
+\[
+(a\ast b)\ast[b\ast(a\ast b)]=b
+\]
+所以选项 D 恒成立.
+
+选项 A 不一定成立. 例如取 \(S=\{0,1\}\)，定义 \(u\ast v\) 为模 \(2\) 加法，则
+\[
+u\ast(v\ast u)=u+(v+u)\equiv v\pmod 2
+\]
+满足题设条件；但取 \(a=0\)，\(b=1\)，有 \((a\ast b)\ast a=1\ne0=a\). 故不恒成立的是 A.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -130,6 +242,13 @@ A
 \(\frac{1}{9}\)
 \end{answer}
 
+\begin{solution}
+从甲袋取到红球的概率为 \(\frac{4}{6}=\frac23\)，从乙袋取到红球的概率为 \(\frac{1}{6}\). 两袋分别取球相互独立，因此取出的两球都是红球的概率为
+\[
+\frac23\cdot\frac16=\frac19
+\]
+\end{solution}
+
 \begin{problem}
 若向量 \(\bs{a}\)，\(\bs{b}\) 满足 \(|\bs{a}| = |\bs{b}| = 1\)，\(\bs{a}\)，\(\bs{b}\) 的夹角为 \(120^{\circ}\)，则 \(\bs{a} \cdot \bs{a} + \bs{a} \cdot \bs{b} = \)\fillinblank{}.
 \end{problem}
@@ -137,6 +256,14 @@ A
 \begin{answer}
 \(\frac{1}{2}\)
 \end{answer}
+
+\begin{solution}
+由数量积定义，\(\bs{a}\cdot\bs{a}=|\bs{a}|^2=1\)，且 \(\bs{a}\cdot\bs{b}=|\bs{a}|\,|\bs{b}|\cos120^{\circ}=-\frac12\).
+所以
+\[
+\bs{a}\cdot\bs{a}+\bs{a}\cdot\bs{b}=1-\frac12=\frac12
+\]
+\end{solution}
 
 \begin{problem}
 在平面直角坐标系 \(xOy\) 中，有一定点 \(A(2,1)\). 若线段 \(OA\) 的垂直平分线过抛物线 \(y^{2} = 2px\)（\(p > 0\)）的焦点，则该抛物线的准线方程是\fillinblank{}.
@@ -146,6 +273,17 @@ A
 \(x=-\frac{5}{4}\)
 \end{answer}
 
+\begin{solution}
+线段 \(OA\) 的斜率为 \(\frac12\)，中点为 \((1,\frac12)\)，所以其垂直平分线为
+\[
+y-\frac12=-2(x-1)
+\]
+即 \(y=-2x+\frac52\). 抛物线 \(y^2=2px\) 的焦点为 \((\frac p2,0)\). 将 \(y=0\) 代入垂直平分线，得到焦点横坐标 \(\frac54\)，故 \(\frac p2=\frac54\)，从而 \(p=\frac52\). 对于 \(y^2=2px\)，准线方程为 \(x=-\frac p2\)，因此准线为
+\[
+x=-\frac54
+\]
+\end{solution}
+
 \begin{problem}
 如果一个凸多面体是 \(n\) 棱锥，那么这个凸多面体的所有顶点所确定的直线共有\fillinblank{} 条. 这些直线中共有 \(f(n)\) 对异面直线，则 \(f(4) =\fillinblank{}\)； \(f(n) =\fillinblank{}\)（答案用数字或 \(n\) 的解析式表示）
 \end{problem}
@@ -153,6 +291,19 @@ A
 \begin{answer}
 \(\frac{n(n+1)}{2}\)，\(12\)，\(\frac{n(n-1)(n-2)}{2}\)
 \end{answer}
+
+\begin{solution}
+\(n\) 棱锥有 \(n\) 个底面顶点和一个顶点，共有 \(n+1\) 个顶点. 任取两个顶点确定一条直线，所以直线总数为
+\[
+\frac{(n+1)n}{2}
+\]
+
+任取两条由顶点确定的直线：若两条都是底面顶点连线，则它们共面；若两条都是侧棱，则它们相交于棱锥顶点. 因此异面直线恰由一条底面顶点连线和一条侧棱组成. 先取底面的一条直线，有 \(\frac{n(n-1)}2\) 种；再从不在这条底面直线上的其余 \(n-2\) 个底面顶点中选一个，与棱锥顶点连成侧棱. 此时两直线不相交，且不可能共面，因而恰为异面直线. 故
+\[
+f(n)=\frac{n(n-1)}2(n-2)=\frac{n(n-1)(n-2)}2
+\]
+代入 \(n=4\)，得 \(f(4)=12\).
+\end{solution}
 
 \section{选考题：填空题}
 
@@ -170,6 +321,24 @@ y = 2\sin \theta + 2,
 \((0,2)\)，\(2\sqrt{2}\)
 \end{answer}
 
+\begin{solution}
+由圆的参数方程
+\[
+\begin{cases}
+x=2\cos\theta\\
+y=2\sin\theta+2
+\end{cases}
+\]
+可知圆心为 \(C_0(0,2)\). 直线 \(l\) 的参数方程相加得
+\[
+x+y=(t+3)+(3-t)=6
+\]
+所以其方程为 \(x+y-6=0\). 圆心到直线的距离为
+\[
+\frac{|0+2-6|}{\sqrt{1^2+1^2}}=2\sqrt2
+\]
+\end{solution}
+
 \begin{problem}
 设函数 \( f(x) = |2x - 1| + x + 3 \)，则 \( f(-2) =\fillinblank{} \)；若 \( f(x) \leqslant 5 \)，则 \( x \) 的取值范围是\fillinblank{}.
 \end{problem}
@@ -177,6 +346,21 @@ y = 2\sin \theta + 2,
 \begin{answer}
 \(6\)，\([-1,1]\)
 \end{answer}
+
+\begin{solution}
+\[
+f(-2)=|2(-2)-1|+(-2)+3=5+1=6
+\]
+再分情况解不等式. 当 \(x<\frac12\) 时，
+\[
+f(x)=1-2x+x+3=4-x\leqslant5
+\]
+所以 \(x\geqslant-1\)，得到 \([-1,\frac12)\). 当 \(x\geqslant\frac12\) 时，
+\[
+f(x)=2x-1+x+3=3x+2\leqslant5
+\]
+所以 \(x\leqslant1\)，得到 \([\frac12,1]\). 合并两种情况，\(x\) 的取值范围为 \([-1,1]\).
+\end{solution}
 
 \begin{problem}
 如图所示，圆 \(O\) 的直径 \(AB = 6\)，\(C\) 为圆周上一点，\(BC = 3\). 过点 \(C\) 作圆的切线 \(l\)，过 \(A\) 做 \(l\) 的垂线 \(AD\)，\(AD\) 分别与直线 \(l\)，圆交于点 \(D\)，\(E\)，则 \(\angle DAC =\)\fillinblank{}°，线段 \(AE\) 的长为\fillinblank{}.
@@ -186,6 +370,34 @@ y = 2\sin \theta + 2,
 \begin{answer}
 \(30\)，\(3\)
 \end{answer}
+
+\begin{solution}
+取圆心 \(O\) 为原点，令 \(A(-3,0)\)，\(B(3,0)\). 设 \(C=(u,v)\) 且 \(v>0\)，由 \(C\) 在圆上及 \(BC=3\) 得
+\[
+\begin{cases}
+u^2+v^2=9\\
+(u-3)^2+v^2=9
+\end{cases}
+\]
+两式相减得 \(u=\frac32\)，再代回得 \(v=\frac{3\sqrt3}{2}\). 因此 \(AC\) 的斜率为
+\[
+\frac{3\sqrt3/2}{3/2+3}=\frac1{\sqrt3}
+\]
+所以 \(AC\) 与 \(AB\) 的夹角为 \(30^{\circ}\).
+
+半径 \(OC\) 的斜率为 \(\sqrt3\)，故切线 \(l\) 的斜率为 \(-\frac1{\sqrt3}\). 由于 \(AD\perp l\)，直线 \(AD\) 的斜率为 \(\sqrt3\)，它与 \(AB\) 的夹角为 \(60^{\circ}\). 因而
+\[
+\angle DAC=60^{\circ}-30^{\circ}=30^{\circ}
+\]
+
+直线 \(AD\) 的单位方向向量可取 \(\left(\frac12,\frac{\sqrt3}{2}\right)\). 设从 \(A\) 出发沿此方向到达圆的另一交点 \(E\) 的距离为 \(r>0\)，则
+\[
+E=A+r\left(\frac12,\frac{\sqrt3}{2}\right)
+\]
+由 \(E\) 在半径为 \(3\) 的圆上，
+\(\left(-3+\frac r2\right)^2+\left(\frac{\sqrt3 r}{2}\right)^2=9\)，\(\Longrightarrow\)，\(r^2-3r=0\).
+除去对应于 \(A\) 的 \(r=0\)，得 \(AE=r=3\).
+\end{solution}
 
 \section{解答题}
 
@@ -202,7 +414,7 @@ y = 2\sin \theta + 2,
 \begin{enumerate}
 \item \(\overrightarrow{AB}=(-3,-4)\)，\(\overrightarrow{AC}=(2,-4)\)，所以
 \[
-\sin\angle A=\frac{\left|\overrightarrow{AB}\times\overrightarrow{AC}\right|}{|\overrightarrow{AB}|\,|\overrightarrow{AC}|}=\frac{|(-3)(-4)-(-4)\cdot2|}{5\cdot2\sqrt5}=\frac{2\sqrt5}{5}.
+\sin\angle A=\frac{\left|\overrightarrow{AB}\times\overrightarrow{AC}\right|}{|\overrightarrow{AB}|\,|\overrightarrow{AC}|}=\frac{|(-3)(-4)-(-4)\cdot2|}{5\cdot2\sqrt5}=\frac{2\sqrt5}{5}
 \]
 
 \item \(\overrightarrow{AB}=(-3,-4)\)，\(\overrightarrow{AC}=(c-3,-4)\). 当且仅当
@@ -238,31 +450,24 @@ y = 2\sin \theta + 2,
 \begin{enumerate}
 \item 散点图中的四个数据点为 \((3,2.5)\)，\((4,3)\)，\((5,4)\)，\((6,4.5)\). 在直角坐标系中描出这四个点，即得所求散点图.
 
-\item 样本平均数为
-\[
-\overline{x}=\frac{3+4+5+6}{4}=4.5,\qquad \overline{y}=\frac{2.5+3+4+4.5}{4}=3.5.
-\]
-由题给参考数值及数据表可得
-\[
-\sum_{i=1}^{4}x_i y_i=66.5,\qquad \sum_{i=1}^{4}x_i^2=3^2+4^2+5^2+6^2=86.
-\]
+\item 样本平均数为 \(\overline{x}=\frac{3+4+5+6}{4}=4.5\)，\(\overline{y}=\frac{2.5+3+4+4.5}{4}=3.5\). 由题给参考数值及数据表可得 \(\sum_{i=1}^{4}x_i y_i=66.5\)，\(\sum_{i=1}^{4}x_i^2=3^2+4^2+5^2+6^2=86\).
 因此，最小二乘法所得回归直线的斜率为
 \[
-\widehat{b}=\frac{\sum x_i y_i-4\overline{x}\,\overline{y}}{\sum x_i^2-4\overline{x}^{\,2}}=\frac{66.5-4\cdot4.5\cdot3.5}{86-4\cdot4.5^2}=\frac{3.5}{5}=0.7.
+\widehat{b}=\frac{\sum x_i y_i-4\overline{x}\,\overline{y}}{\sum x_i^2-4\overline{x}^{\,2}}=\frac{66.5-4\cdot4.5\cdot3.5}{86-4\cdot4.5^2}=\frac{3.5}{5}=0.7
 \]
 截距为
 \[
-\widehat{a}=\overline{y}-\widehat{b}\,\overline{x}=3.5-0.7\cdot4.5=0.35.
+\widehat{a}=\overline{y}-\widehat{b}\,\overline{x}=3.5-0.7\cdot4.5=0.35
 \]
 所以线性回归方程为 \(\widehat{y}=0.7x+0.35\).
 
 \item 当产量为 \(100\text{ 吨}\) 时，由回归方程预测生产能耗为
 \[
-\widehat{y}=0.7\times100+0.35=70.35\text{ 吨}.
+\widehat{y}=0.7\times100+0.35=70.35\text{ 吨}
 \]
 因此比技改前降低
 \[
-90-70.35=19.65\text{ 吨}.
+90-70.35=19.65\text{ 吨}
 \]
 \end{enumerate}
 \end{solution}
@@ -280,30 +485,30 @@ y = 2\sin \theta + 2,
 \begin{enumerate}
 \item 设圆心为 \(M(m,n)\). 因为圆在原点与直线 \(y=x\) 相切，所以半径 \(OM\) 垂直于直线 \(y=x\)，从而 \(m+n=0\). 又因为半径为 \(2\sqrt2\)，且原点在圆上，所以
 \[
-m^2+n^2=8.
+m^2+n^2=8
 \]
 由 \(m<0\)，\(n>0\)，得 \(M(-2,2)\)，故圆 \(C\) 的方程为
 \[
-(x+2)^2+(y-2)^2=8.
+(x+2)^2+(y-2)^2=8
 \]
 
 \item 椭圆上任一点到两焦点的距离之和为 \(2a\)，所以 \(2a=10\)，即 \(a=5\). 因而椭圆的焦半距为
 \[
-c=\sqrt{a^2-3^2}=\sqrt{25-9}=4,
+c=\sqrt{a^2-3^2}=\sqrt{25-9}=4
 \]
 椭圆右焦点为 \(F(4,0)\)，且 \(|OF|=4\).
 
 若存在符合条件的点 \(Q(x,y)\)，则它同时满足
 \[
-(x+2)^2+(y-2)^2=8,\qquad (x-4)^2+y^2=16.
+\begin{cases}
+(x+2)^2+(y-2)^2=8\\
+(x-4)^2+y^2=16
+\end{cases}
 \]
-两式分别化为 \(x^2+y^2+4x-4y=0\) 与 \(x^2+y^2-8x=0\)，相减得 \(y=3x\). 代入后得
-\[
-10x^2-8x=0,\qquad x=0\ \text{或}\ x=\frac45.
-\]
+两式分别化为 \(x^2+y^2+4x-4y=0\) 与 \(x^2+y^2-8x=0\)，相减得 \(y=3x\). 代入后得 \(10x^2-8x=0\)，所以 \(x=0\) 或 \(x=\frac45\).
 当 \(x=0\) 时得到原点 \(O\)，舍去；当 \(x=\frac45\) 时，\(y=\frac{12}{5}\). 因此存在异于原点的点，且
 \[
-Q\left(\frac45,\frac{12}{5}\right).
+Q\left(\frac45,\frac{12}{5}\right)
 \]
 \end{enumerate}
 \end{solution}
@@ -321,46 +526,37 @@ Q\left(\frac45,\frac{12}{5}\right).
 \end{problem}
 
 \begin{solution}
-建立空间直角坐标系，使 \(D\) 为原点，\(AB\) 在 \(xOy\) 平面内，取
-\[
-A(-3\sqrt6,0,0),\quad B(3\sqrt6,0,0),\quad C(0,3,0).
-\]
-因为 \(BE=x\)，且 \(E\) 在 \(BD\) 上，所以 \(E(3\sqrt6-x,0,0)\). 直线 \(BC\) 的斜率为 \(-\dfrac{1}{\sqrt6}\)，又 \(EF\perp AB\)，故
-\[
-F\left(3\sqrt6-x,\frac{x}{\sqrt6},0\right),\qquad EF=\frac{x}{\sqrt6},\qquad 0<x<3\sqrt6.
-\]
+\begin{enumerate}
+\item 建立空间直角坐标系，使 \(D\) 为原点，\(AB\) 在 \(xOy\) 平面内，取 \(A(-3\sqrt6,0,0)\)，\(B(3\sqrt6,0,0)\)，\(C(0,3,0)\).
+因为 \(BE=x\)，且 \(E\) 在 \(BD\) 上，所以 \(E(3\sqrt6-x,0,0)\). 直线 \(BC\) 的斜率为 \(-\dfrac{1}{\sqrt6}\)，又 \(EF\perp AB\)，故 \(F\left(3\sqrt6-x,\frac{x}{\sqrt6},0\right)\)，\(EF=\frac{x}{\sqrt6}\)，且 \(0<x<3\sqrt6\).
 
 折叠后，\(PE=BE=x\)，并且 \(PE\perp EF\). 由于 \(EF\) 的方向为 \(y\) 轴方向，设 \(P-E=(u,0,v)\). 又
 \[
-\overrightarrow{AC}=(3\sqrt6,3,0),\qquad PE\perp AC,
+\overrightarrow{AC}=(3\sqrt6,3,0)
 \]
-所以 \(3\sqrt6u=0\)，即 \(u=0\). 由 \(PE=x\) 得 \(|v|=x\)，取折起后点 \(P\) 在上方，故四棱锥的高为 \(x\).
+且 \(PE\perp AC\)，所以 \(3\sqrt6u=0\)，即 \(u=0\). 由 \(PE=x\) 得 \(|v|=x\)，故四棱锥的高为 \(x\).
 
 四边形 \(ACFE\) 与三角形 \(BEF\) 构成三角形 \(ABC\)，于是
 \[
-S_{ACFE}=S_{ABC}-S_{BEF}=\frac12\cdot6\sqrt6\cdot3-\frac12\cdot x\cdot\frac{x}{\sqrt6}=9\sqrt6-\frac{x^2}{2\sqrt6}.
+S_{ACFE}=S_{ABC}-S_{BEF}=\frac12\cdot6\sqrt6\cdot3-\frac12\cdot x\cdot\frac{x}{\sqrt6}=9\sqrt6-\frac{x^2}{2\sqrt6}
 \]
 因此
 \[
-V(x)=\frac13x\left(9\sqrt6-\frac{x^2}{2\sqrt6}\right)=\frac{x(54-x^2)}{6\sqrt6},\qquad 0<x<3\sqrt6.
+V(x)=\frac13x\left(9\sqrt6-\frac{x^2}{2\sqrt6}\right)=\frac{x(108-x^2)}{6\sqrt6}
 \]
+且 \(0<x<3\sqrt6\).
 
-\begin{enumerate}
-\item \(V(x)=\dfrac{x(54-x^2)}{6\sqrt6}\)，定义域为 \(0<x<3\sqrt6\).
-
-\item
+\item 对上式求导，得
 \[
-V'(x)=\frac{18-x^2}{2\sqrt6}.
+V'(x)=\frac{36-x^2}{2\sqrt6}
 \]
-当 \(0<x<3\sqrt2\) 时，\(V'(x)>0\)；当 \(3\sqrt2<x<3\sqrt6\) 时，\(V'(x)<0\). 所以当 \(x=3\sqrt2\) 时，\(V(x)\) 取得最大值.
+当 \(0<x<6\) 时，\(V'(x)>0\)；当 \(6<x<3\sqrt6\) 时，\(V'(x)<0\). 所以当 \(x=6\) 时，\(V(x)\) 取得最大值.
 
-\item 此时
+\item 当 \(x=6\) 时，
+\(F\left(3\sqrt6-6,\sqrt6,0\right)\)，\(P\left(3\sqrt6-6,0,6\right)\).
+取方向向量 \(\overrightarrow{AC}=(3\sqrt6,3,0)\)，\(\overrightarrow{PF}=(0,\sqrt6,-6)\)，则异面直线所成角的余弦为
 \[
-F\left(3\sqrt6-3\sqrt2,\sqrt3,0\right),\qquad P\left(3\sqrt6-3\sqrt2,0,3\sqrt2\right).
-\]
-取方向向量 \(\overrightarrow{AC}=(3\sqrt6,3,0)\)，\(\overrightarrow{PF}=(0,\sqrt3,-3\sqrt2)\)，则
-\[
-\cos\theta=\frac{|\overrightarrow{AC}\cdot\overrightarrow{PF}|}{|\overrightarrow{AC}|\,|\overrightarrow{PF}|}=\frac{3\sqrt3}{3\sqrt7\cdot\sqrt{21}}=\frac17.
+\cos\theta=\frac{|\overrightarrow{AC}\cdot\overrightarrow{PF}|}{|\overrightarrow{AC}|\,|\overrightarrow{PF}|}=\frac{3\sqrt6}{3\sqrt7\cdot\sqrt{42}}=\frac17
 \]
 \end{enumerate}
 \end{solution}
@@ -372,27 +568,27 @@ F\left(3\sqrt6-3\sqrt2,\sqrt3,0\right),\qquad P\left(3\sqrt6-3\sqrt2,0,3\sqrt2\r
 \begin{solution}
 方程 \(f(x)=0\) 可改写为
 \[
-a(2x^2-1)=3-2x.
+a(2x^2-1)=3-2x
 \]
 当 \(x=\pm\dfrac{1}{\sqrt2}\) 时，左边的系数 \(2x^2-1=0\)，而右边 \(3-2x\neq0\)，所以这两个点都不是方程的根. 对其余的 \(x\in[-1,1]\)，有
 \[
-a=g(x)=\frac{3-2x}{2x^2-1}.
+a=g(x)=\frac{3-2x}{2x^2-1}
 \]
 又
 \[
-g'(x)=\frac{4x^2-12x+2}{(2x^2-1)^2}.
+g'(x)=\frac{4x^2-12x+2}{(2x^2-1)^2}
 \]
 在区间 \(\left[-1,-\dfrac{1}{\sqrt2}\right)\) 上，\(g\) 递增，且 \(g(-1)=5\)，\(\displaystyle\lim_{x\to-1/\sqrt2^-}g(x)=+\infty\)，故此时 \(g(x)\) 的取值范围为 \([5,+\infty)\).
 
 在区间 \(\left(-\dfrac{1}{\sqrt2},\dfrac{1}{\sqrt2}\right)\) 上，\(g\) 在 \(x_0=\dfrac{3-\sqrt7}{2}\) 处取得最大值，并且两端的极限均为 \(-\infty\). 由
 \[
-g(x_0)=\frac{\sqrt7}{7-3\sqrt7}=-\frac{3+\sqrt7}{2},
+g(x_0)=\frac{\sqrt7}{7-3\sqrt7}=-\frac{3+\sqrt7}{2}
 \]
 可知此时的取值范围为 \(\left(-\infty,-\dfrac{3+\sqrt7}{2}\right]\).
 
 在区间 \(\left(\dfrac{1}{\sqrt2},1\right]\) 上，\(g\) 递减，且 \(g(1)=1\)，\(\displaystyle\lim_{x\to1/\sqrt2^+}g(x)=+\infty\)，故此时的取值范围为 \([1,+\infty)\). 合并上述范围，得
 \[
-a\in\left(-\infty,-\frac{3+\sqrt7}{2}\right]\cup[1,+\infty).
+a\in\left(-\infty,-\frac{3+\sqrt7}{2}\right]\cup[1,+\infty)
 \]
 \end{solution}
 
@@ -409,27 +605,33 @@ a\in\left(-\infty,-\frac{3+\sqrt7}{2}\right]\cup[1,+\infty).
 \begin{solution}
 \begin{enumerate}
 \item 由求根公式，得
-\[
-\alpha=\frac{-1+\sqrt5}{2},\qquad \beta=\frac{-1-\sqrt5}{2}.
-\]
+\(\alpha=\frac{-1+\sqrt5}{2}\)，\(\beta=\frac{-1-\sqrt5}{2}\).
 
 \item 因为 \(f'(x)=2x+1\)，递推式可化为
 \[
-a_{n+1}=a_n-\frac{a_n^2+a_n-1}{2a_n+1}=\frac{a_n^2+1}{2a_n+1}.
+a_{n+1}=a_n-\frac{a_n^2+a_n-1}{2a_n+1}=\frac{a_n^2+1}{2a_n+1}
 \]
 初始时 \(a_1=1>\alpha\). 假设 \(a_n>\alpha\)，则 \(2a_n+1>0\)，并利用 \(\alpha^2+\alpha-1=0\)，有
 \[
-a_{n+1}-\alpha=\frac{a_n^2+1-\alpha(2a_n+1)}{2a_n+1}=\frac{(a_n-\alpha)^2}{2a_n+1}>0.
+a_{n+1}-\alpha=\frac{a_n^2+1-\alpha(2a_n+1)}{2a_n+1}=\frac{(a_n-\alpha)^2}{2a_n+1}>0
 \]
 所以 \(a_{n+1}>\alpha\). 由数学归纳法，对任意正整数 \(n\)，都有 \(a_n>\alpha\).
 
-\item 同理，利用 \(\beta^2+\beta-1=0\)，可得
+\item 由递推式，
 \[
-a_{n+1}-\beta=\frac{(a_n-\beta)^2}{2a_n+1}.
+a_{n+1}-\beta
+=\frac{a_n^2+1-\beta(2a_n+1)}{2a_n+1}
+\]
+又因 \(\beta^2+\beta-1=0\)，即 \(1-\beta=\beta^2\)，所以
+\[
+a_{n+1}-\beta
+=\frac{a_n^2-2\beta a_n+1-\beta}{2a_n+1}
+=\frac{a_n^2-2\beta a_n+\beta^2}{2a_n+1}
+=\frac{(a_n-\beta)^2}{2a_n+1}
 \]
 由于 \(a_n>\alpha>\beta\)，两边均为正数，于是
 \[
-\frac{a_{n+1}-\beta}{a_{n+1}-\alpha}=\left(\frac{a_n-\beta}{a_n-\alpha}\right)^2.
+\frac{a_{n+1}-\beta}{a_{n+1}-\alpha}=\left(\frac{a_n-\beta}{a_n-\alpha}\right)^2
 \]
 取对数，得到 \(b_{n+1}=2b_n\)，所以 \(\{b_n\}\) 是首项为
 \[
@@ -437,7 +639,7 @@ b_1=\ln\frac{1-\beta}{1-\alpha}=\ln\frac{3+\sqrt5}{3-\sqrt5}
 \]
 且公比为 \(2\) 的等比数列. 因此
 \[
-S_n=b_1\left(1+2+\cdots+2^{n-1}\right)=(2^n-1)\ln\frac{3+\sqrt5}{3-\sqrt5}.
+S_n=b_1\left(1+2+\cdots+2^{n-1}\right)=(2^n-1)\ln\frac{3+\sqrt5}{3-\sqrt5}
 \]
 \end{enumerate}
 \end{solution}

@@ -1,4 +1,5 @@
 \chapter{2005年浙江卷（理）}
+
 \section{单选题}
 \begin{problem}
 极限 \(\displaystyle\lim_{n \to \infty} \frac{1+2+\cdots+n}{n^{2}}\) 的值是（\(\quad\)）
@@ -12,6 +13,16 @@
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+由等差数列求和公式，\(1+2+\cdots+n=\dfrac{n(n+1)}{2}\)，所以
+\[
+\displaystyle\lim_{n\to\infty}\frac{1+2+\cdots+n}{n^{2}}
+=\displaystyle\lim_{n\to\infty}\frac{n(n+1)}{2n^{2}}
+=\displaystyle\lim_{n\to\infty}\frac{n+1}{2n}=\frac{1}{2}
+\]
+故选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -26,12 +37,22 @@ C
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+点 \((x_0,y_0)\) 到直线 \(Ax+By+C=0\) 的距离为
+\(\dfrac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}\). 因此所求距离为
+\[
+\frac{|1-(-1)+1|}{\sqrt{1^2+(-1)^2}}
+=\frac{3}{\sqrt{2}}=\frac{3\sqrt{2}}{2}
+\]
+故选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
 设 \( f(x)=\begin{cases}
 |x-1|-2, & |x|\leqslant1,\\
-\frac{1}{1+x^{2}}, & |x|>1,
+\dfrac{1}{1+x^{2}}, & |x|>1,
 \end{cases} \) 则 \( f\left[f\left(\frac{1}{2}\right)\right]= \)（\(\quad\)）
 
 \choices
@@ -43,6 +64,21 @@ D
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+因为 \(\left|\frac{1}{2}\right|\leqslant1\)，所以应使用分段函数的第一段，得
+\[
+f\left(\frac{1}{2}\right)=\left|\frac{1}{2}-1\right|-2=-\frac{3}{2}
+\]
+又因为 \(\left|-\frac{3}{2}\right|>1\)，所以计算外层函数值时应使用第二段，得
+\[
+f\left[f\left(\frac{1}{2}\right)\right]
+=f\left(-\frac{3}{2}\right)
+=\frac{1}{1+\left(-\frac{3}{2}\right)^2}
+=\frac{4}{13}
+\]
+故选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -57,6 +93,23 @@ B
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+先将分式分母实数化，得
+\[
+\frac{\i}{1+\i}=\frac{\i(1-\i)}{(1+\i)(1-\i)}=\frac{1+\i}{2}
+\]
+又
+\[
+(1+\sqrt{3}\i)^2=1+2\sqrt{3}\i+3\i^2=-2+2\sqrt{3}\i
+\]
+所以原复数为
+\[
+\frac{1+\i}{2}-2+2\sqrt{3}\i
+=-\frac{3}{2}+\left(\frac{1}{2}+2\sqrt{3}\right)\i
+\]
+其实部为负，虚部为正，故对应的点位于第二象限，选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -71,6 +124,16 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+由二项式定理，\((1-x)^j\) 中 \(x^3\) 的系数为
+\(\mathrm C_j^3(-1)^3=-\mathrm C_j^3\). 因此原式中 \(x^3\) 的系数为
+\[
+-\left[\mathrm C_5^3+\mathrm C_6^3+\mathrm C_7^3+\mathrm C_8^3\right]
+=-(10+20+35+56)=-121
+\]
+故选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -90,10 +153,21 @@ D
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+命题\(\circled{1}\)不成立. 取 \(\alpha:z=0\)，\(\beta:z=1\)，并在其中分别取
+\(l=\{(t,0,0)\mid t\in\R\}\)，\(m=\{(0,t,1)\mid t\in\R\}\).
+此时 \(\alpha\parallel\beta\)，但两条直线的方向向量分别为 \((1,0,0)\) 和 \((0,1,0)\)，不平行，故命题\(\circled{1}\)是假命题.
+
+命题\(\circled{2}\)也不成立. 取 \(\alpha:z=0\)，\(\beta:z=x\)，并取
+\(l=\{(0,t,0)\mid t\in\R\}\)，\(m=\{(t,0,t)\mid t\in\R\}\).
+两条直线都经过原点，且方向向量的内积为
+\((0,1,0)\cdot(1,0,1)=0\)，所以 \(l\perp m\). 但两平面的法向量可分别取 \((0,0,1)\) 和 \((-1,0,1)\)，其内积为 \(1\)，两平面所成的锐二面角为 \(45^{\circ}\)，并非垂直. 故命题\(\circled{2}\)也是假命题，选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
-设集合 \(A = \{(x, y) \mid x, y, 1 - x - y\) 是三角形的三边长\(\}\)，则 \(A\) 所表示的平面区域（不含边界的阴影部分）是（\(\quad\)）
+设集合 \(A=\{(x,y)\mid x,y,1-x-y\text{ 是三角形的三边长}\}\)，则 \(A\) 所表示的平面区域（不含边界的阴影部分）是（\(\quad\)）
 
 \choices
     {\choicebitmap[width=0.15\paperwidth]{img/2005/zhejiang_science/q7_optA_nolabel.png}}
@@ -104,6 +178,15 @@ D
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+令三边长分别为 \(x\)，\(y\)，\(1-x-y\). 它们能构成三角形的充要条件是三者均为正数，且每一边都小于另外两边之和. 因此
+\(x>0\)，\(y>0\)，\(1-x-y>0\)，\(x<1-x\)，\(y<1-y\)，\(1-x-y<x+y\).
+化简得
+\(0<x<\frac{1}{2}\)，\(0<y<\frac{1}{2}\)，\(\frac{1}{2}<x+y<1\).
+其中 \(x<\frac{1}{2}\) 和 \(y<\frac{1}{2}\) 已推出 \(x+y<1\)，所以区域是正方形
+\(0<x<\frac{1}{2}\)，\(0<y<\frac{1}{2}\) 中直线 \(x+y=\frac{1}{2}\) 上方且不含边界的部分，对应图 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -118,10 +201,24 @@ A
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+令 \(t=\cos x\)，则 \(-1\leqslant t\leqslant1\)，且
+\[
+y=2t^2-1+k(t-1)=2t^2+kt-k-1
+\]
+记右侧为 \(h(t)\)，则
+\(h'(t)=4t+k\leqslant4+k<0\)，\((-1\leqslant t\leqslant1)\).
+所以 \(h(t)\) 在 \([-1,1]\) 上单调递减，最小值在 \(t=1\) 处取得. 因而
+\[
+y_{\min}=2+k-k-1=1
+\]
+故选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
-设 \( f(n) = 2n + 1\)（\(n \in \mathbf{N}\)），\( P = \{1, 2, 3, 4, 5\} \)，\( Q = \{3, 4, 5, 6, 7\} \)，记 \( \hat{P} = \{n \in \mathbf{N} \mid f(n) \in P\} \)，\( \hat{Q} = \{n \in \mathbf{N} \mid f(n) \in Q\} \)，则 \( \left(\hat{P} \cap \complement_{\mathbf{N}} \hat{Q}\right) \cup \left(\hat{Q} \cap \complement_{\mathbf{N}} \hat{P}\right) = \)（\(\quad\)）
+设 \( f(n) = 2n + 1\)（\(n \in \N\)），\( P = \{1, 2, 3, 4, 5\} \)，\( Q = \{3, 4, 5, 6, 7\} \)，记 \( \hat{P} = \{n \in \N \mid f(n) \in P\} \)，\( \hat{Q} = \{n \in \N \mid f(n) \in Q\} \)，则 \( \left(\hat{P} \cap \complement_{\N} \hat{Q}\right) \cup \left(\hat{Q} \cap \complement_{\N} \hat{P}\right) = \)（\(\quad\)）
 
 \choices
     {\(\{0, 3\}\)}
@@ -132,6 +229,19 @@ A
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+由 \(f(n)=2n+1\) 以及 \(0\in\N\)，可得
+\[
+\hat P=\{n\in\N\mid 2n+1\in\{1,2,3,4,5\}\}=\{0,1,2\}
+\]
+\[
+\hat Q=\{n\in\N\mid 2n+1\in\{3,4,5,6,7\}\}=\{1,2,3\}
+\]
+因此
+\(\hat P\cap\complement_{\N}\hat Q=\{0\}\)，\(\hat Q\cap\complement_{\N}\hat P=\{3\}\)
+从而所求集合为 \(\{0,3\}\)，选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -146,6 +256,23 @@ A
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+两边平方并利用 \(|\bs e|=1\)，得到对任意 \(t\in\R\)，
+\[
+|\bs a-t\bs e|^2-|\bs a-\bs e|^2
+=t^2-2t\bs a\cdot\bs e+2\bs a\cdot\bs e-1
+=(t-1)^2+2(t-1)(1-\bs a\cdot\bs e)\geqslant0
+\]
+令 \(t=1+h\)，则
+\(h^2+2h(1-\bs a\cdot\bs e)\geqslant0\)，\((h\in\R)\).
+若 \(1-\bs a\cdot\bs e\ne0\)，取充分小且符号相反的 \(h\)，上式将小于零，矛盾. 所以
+\(\bs a\cdot\bs e=1\). 因而
+\[
+\bs e\cdot(\bs a-\bs e)=\bs a\cdot\bs e-|\bs e|^2=1-1=0
+\]
+又因 \(\bs a\ne\bs e\)，故 \(\bs e\perp(\bs a-\bs e)\)，选 C.
+\end{solution}
 \end{problem}
 
 \section{填空题}
@@ -153,12 +280,23 @@ C
 函数 \( y = \frac{x}{x + 2} \)（\(x \in \R\)，且 \(x \neq -2\)）的反函数是\fillinblank{}.
 
 \begin{answer}
-\(y=\frac{2x}{1-x}\)，\(x\in\R\)，且 \(x\neq1\)
+\(y=\frac{2}{1-x}\)，\(x\in\R\)，且 \(x\neq1\)
 \end{answer}
+
+\begin{solution}
+由 \(y=\dfrac{x}{x+2}\) 得
+\(y(x+2)=x\)，\(\Longrightarrow\)，\(x(y-1)=-2\).
+由于原函数的值域为 \(\R\setminus\{1\}\)，所以 \(y\ne1\)，从而
+\[
+x=\frac{2}{1-y}
+\]
+交换 \(x\)，\(y\) 得反函数
+\(y=\frac{2}{1-x}\)，\(x\in\R\)，\(\ x\ne1\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
-设 \(M\)，\(N\) 是直角梯形 \(ABCD\) 两腰的中点，\(DE \perp AB\) 于 \(E\) （如图）. 现将 \(\triangle ADE\) 沿 \(DE\) 折起，使二面角 \(A - DE - B\) 为 \(45^{\circ}\)，此时点 \(A\) 在平面 \(BCDE\) 内的射影恰为点 \(B\)，则 \(M\)，\(N\) 的连线与 \(AE\) 所成角的大小等于\fillinblank{}.
+设 \(M\)，\(N\) 是直角梯形 \(ABCD\) 两腰的中点，\(DE \perp AB\) 于 \(E\)（如图）. 现将 \(\triangle ADE\) 沿 \(DE\) 折起，使二面角 \(A-DE-B\) 为 \(45^{\circ}\)，此时点 \(A\) 在平面 \(BCDE\) 内的射影恰为点 \(B\)，则 \(M\)，\(N\) 的连线与 \(AE\) 所成角的大小等于\fillinblank{}.
 
 \FigureLayoutDeclare{img/2005/zhejiang_science/q12_fig1.png}{11.0cm}{31bp 24bp 70bp 0bp}
 \bitmapfigure[max width=0.74\linewidth]{img/2005/zhejiang_science/q12_fig1.png}
@@ -166,6 +304,23 @@ C
 \begin{answer}
 \(90^{\circ}\)
 \end{answer}
+
+\begin{solution}
+建立空间直角坐标系，使平面 \(BCDE\) 为 \(z=0\) 平面，\(EB\) 为 \(x\) 轴正向，\(ED\) 为 \(y\) 轴正向. 设 \(EB=u>0\)，\(ED=v>0\)，则
+\(E=(0,0,0)\)，\(B=(u,0,0)\)，\(D=(0,v,0)\)，\(C=(u,v,0)\).
+点 \(A\) 在平面 \(BCDE\) 内的射影为 \(B\)，故可设 \(A=(u,0,h)\). 在垂直于 \(DE\) 的截面内，二面角 \(A-DE-B\) 是射线 \(EA\) 与 \(EB\) 的夹角. 该角为 \(45^{\circ}\)，所以 \(h=u\)，即 \(A=(u,0,u)\).
+
+由中点坐标公式，
+\(M=\left(\frac{u}{2},\frac{v}{2},\frac{u}{2}\right)\)，\(N=\left(u,\frac{v}{2},0\right)\).
+于是
+\(\overrightarrow{MN}=\left(\frac{u}{2},0,-\frac{u}{2}\right)\)，\(\overrightarrow{AE}=(-u,0,-u)\)
+且
+\[
+\overrightarrow{MN}\cdot\overrightarrow{AE}
+=-\frac{u^2}{2}+\frac{u^2}{2}=0
+\]
+所以 \(MN\perp AE\)，所成角为 \(90^{\circ}\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -174,6 +329,21 @@ C
 \begin{answer}
 \(2\)
 \end{answer}
+
+\begin{solution}
+设双曲线的半焦距为 \(c\)，则 \(c^2=a^2+b^2\)，左焦点为 \((-c,0)\). 直线 \(x=-c\) 与双曲线相交时，代入方程得
+\(\frac{c^2}{a^2}-\frac{y^2}{b^2}=1\)，\(\Longrightarrow\)，\(y^2=\frac{b^4}{a^2}\).
+所以 \(M\)，\(N\) 的纵坐标分别为 \(\frac{b^2}{a}\) 和 \(-\frac{b^2}{a}\)，以 \(MN\) 为直径的圆的圆心为 \((-c,0)\)，半径为 \(\frac{b^2}{a}\).
+
+双曲线右顶点为 \((a,0)\)，由题意
+\[
+a+c=\frac{b^2}{a}=\frac{c^2-a^2}{a}=\frac{(c-a)(c+a)}{a}
+\]
+因 \(c+a>0\)，约去 \(c+a\) 得 \(c-a=a\)，即 \(c=2a\). 因而离心率
+\[
+e=\frac{c}{a}=2
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -182,6 +352,23 @@ C
 \begin{answer}
 \(8424\)
 \end{answer}
+
+\begin{solution}
+先任取两个字母、两个数字，再将四个元素排列，总排法数为
+\[
+\mathrm C_5^2\mathrm C_{10}^2 4!=10\times45\times24=10800
+\]
+不合条件的排法分三类且互不相交：
+\begin{enumerate}
+\item 同时选中字母 \(O\)，\(Q\). 两个数字任取，有 \(\mathrm C_{10}^2\) 种选法，排法数为 \(\mathrm C_{10}^2 4!=1080\)；
+\item 选中 \(O\) 和数字 \(0\)，但未选中 \(Q\). 另一个字母有 \(3\) 种，另一个数字有 \(9\) 种，排法数为 \(3\times9\times4!=648\)；
+\item 选中 \(Q\) 和数字 \(0\)，但未选中 \(O\). 同理，排法数为 \(3\times9\times4!=648\).
+\end{enumerate}
+因此符合条件的排法数为
+\[
+10800-(1080+648+648)=8424
+\]
+\end{solution}
 \end{problem}
 
 \section{解答题}
@@ -194,8 +381,41 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item \(f\left(\frac{25\pi}{6}\right)=0\).
-\item \(\sin\alpha=\frac{1+3\sqrt{5}}{8}\).
+\item 因为 \(\frac{25\pi}{6}=4\pi+\frac{\pi}{6}\)，所以
+\(\sin\frac{25\pi}{6}=\frac{1}{2}\)，\(\cos\frac{25\pi}{6}=\frac{\sqrt{3}}{2}\).
+因此
+\[
+f\left(\frac{25\pi}{6}\right)
+=-\sqrt{3}\left(\frac{1}{2}\right)^2+\frac{1}{2}\cdot\frac{\sqrt{3}}{2}=0
+\]
+
+\item 令 \(\theta=\frac{\alpha}{2}\)，则 \(\theta\in\left(0,\frac{\pi}{2}\right)\). 利用半角公式，原条件化为
+\[
+-\sqrt{3}\frac{1-\cos\alpha}{2}+\frac{\sin\alpha}{2}
+=\frac{1}{4}-\frac{\sqrt{3}}{2}
+\]
+整理得
+\[
+\sin\alpha+\sqrt{3}\cos\alpha=\frac{1}{2}
+\]
+即
+\[
+2\sin\left(\alpha+\frac{\pi}{3}\right)=\frac{1}{2}
+\]
+令 \(\delta=\arcsin\frac{1}{4}\)，则 \(0<\delta<\frac{\pi}{6}\). 由于
+\(\alpha+\frac{\pi}{3}\in\left(\frac{\pi}{3},\frac{4\pi}{3}\right)\)，只有
+\[
+\alpha+\frac{\pi}{3}=\pi-\delta
+\]
+满足条件，所以 \(\alpha=\frac{2\pi}{3}-\delta\). 又
+\(\sin\delta=\frac14\)，\(\cos\delta=\frac{\sqrt{15}}4\)，从而
+\[
+\sin\alpha
+=\sin\left(\frac{2\pi}{3}-\delta\right)
+=\frac{\sqrt{3}}{2}\cdot\frac{\sqrt{15}}{4}
++\frac{1}{2}\cdot\frac{1}{4}
+=\frac{1+3\sqrt{5}}{8}
+\]
 \end{enumerate}
 \end{solution}
 \end{problem}
@@ -209,8 +429,31 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item \(g(x)=-x^{2}+2x\).
-\item 不等式的解集为 \(\left[-1,\frac{1}{2}\right]\).
+\item 图象关于原点对称意味着点 \((x,f(x))\) 关于原点的对称点 \((-x,-f(x))\) 在函数 \(g\) 的图象上. 因而
+\[
+g(x)=-f(-x)=-\left[(-x)^2+2(-x)\right]=-x^2+2x
+\]
+
+\item 将 \(f\)，\(g\) 的解析式代入不等式，得
+\[
+-x^2+2x\geqslant x^2+2x-|x-1|
+\quad\Longleftrightarrow\quad
+|x-1|\geqslant2x^2
+\]
+当 \(x\geqslant1\) 时，\(|x-1|=x-1\)，不等式化为
+\[
+2x^2-x+1\leqslant0
+\]
+其判别式为 \(1-8<0\)，故此时无解.
+
+当 \(x<1\) 时，\(|x-1|=1-x\)，不等式化为
+\[
+2x^2+x-1\leqslant0
+\quad\Longleftrightarrow\quad
+(2x-1)(x+1)\leqslant0
+\]
+所以 \(-1\leqslant x\leqslant\frac12\). 综合两种情况，解集为
+\(\left[-1,\frac12\right]\).
 \end{enumerate}
 \end{solution}
 \end{problem}
@@ -226,8 +469,37 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item 椭圆方程为 \(\frac{x^{2}}{4}+\frac{y^{2}}{3}=1\).
-\item \(Q\left(m,\pm\sqrt{m^{2}-1}\right)\).
+\item 设椭圆的长半轴为 \(a\)，半焦距为 \(c\). 由长轴长为 \(4\)，得 \(a=2\). 左顶点为 \(A_1=(-2,0)\)，左焦点为 \(F_1=(-c,0)\)，左准线为 \(x=-\frac{a^2}{c}=-\frac4c\). 因为 \(M\) 在左准线上，且 \(M\) 位于 \(A_1\) 左侧，所以
+\(|MA_1|=\frac4c-2\)，\(|A_1F_1|=2-c\).
+由比例条件
+\[
+\frac4c-2=2(2-c)
+\]
+得
+\(2c^2-6c+4=0\)，\(\Longrightarrow\)，\((c-1)(c-2)=0\).
+因椭圆要求 \(0<c<a=2\)，故 \(c=1\). 于是
+\(b^2=a^2-c^2=3\)，椭圆方程为
+\[
+\frac{x^2}{4}+\frac{y^2}{3}=1
+\]
+
+\item 由上问，\(F_1=(-1,0)\)，\(F_2=(1,0)\). 设 \(P=(m,y)\)，令 \(u=|y|\). 从 \(P\) 指向两焦点的两个向量的内积为
+\[
+(m^2-1)+y^2=m^2+u^2-1
+\]
+其行列式的绝对值为 \(2u\). 因为 \(|m|>1\)，所成角 \(\theta=\angle F_1PF_2\) 为锐角，故
+\[
+\tan\theta=\frac{2u}{m^2+u^2-1}
+\]
+对 \(u\geqslant0\) 求导，得
+\[
+\left(\frac{2u}{m^2+u^2-1}\right)'
+=\frac{2(m^2-1-u^2)}{(m^2+u^2-1)^2}
+\]
+所以当 \(u=\sqrt{m^2-1}\) 时该比值取得最大值，角 \(\theta\) 也取得最大值. 因此
+\[
+Q\left(m,\pm\sqrt{m^2-1}\right)
+\]
 \end{enumerate}
 \end{solution}
 \end{problem}
@@ -244,9 +516,52 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item \(OD\parallel\) 平面 \(PAB\)；
-\item 若 \(\theta\) 为所成角，则 \(\sin\theta=\frac{\sqrt{210}}{30}\)；
-\item \(k=1\).
+\item 在三角形 \(APC\) 中，\(O\)，\(D\) 分别是 \(AC\)，\(PC\) 的中点. 由三角形中位线定理，
+\[
+OD\parallel AP
+\]
+又 \(AP\subset\) 平面 \(PAB\)，所以 \(OD\parallel\) 平面 \(PAB\).
+
+\item 设 \(PA=p>0\)，令 \(s=AB=BC=kp\). 建立空间直角坐标系，取
+\(B=(0,0,0)\)，\(A=(s,0,0)\)，\(C=(0,s,0)\).
+由于 \(OP\perp\) 底面且 \(O\) 为 \(AC\) 的中点，设
+\[
+P=\left(\frac{s}{2},\frac{s}{2},h\right)
+\]
+由 \(|PA|=p\) 得
+\[
+h^2+\frac{s^2}{2}=p^2
+\]
+平面 \(PBC\) 的一个法向量为
+\[
+\bs n=\overrightarrow{BC}\times\overrightarrow{BP}
+=\left(sh,0,-\frac{s^2}{2}\right)
+\]
+取直线 \(PA\) 的方向向量 \(\bs v=\overrightarrow{AP}=\left(-\frac{s}{2},\frac{s}{2},h\right)\)，则
+\(|\bs v|=p\)，\(|\bs n|=s\sqrt{h^2+\frac{s^2}{4}}\)，\(|\bs v\cdot\bs n|=s^2h\).
+若直线 \(PA\) 与平面 \(PBC\) 所成的角为 \(\theta\)，则
+\[
+\sin\theta=\frac{|\bs v\cdot\bs n|}{|\bs v|\,|\bs n|}
+=\frac{sh}{p\sqrt{h^2+s^2/4}}
+\]
+当 \(k=\frac12\) 时，\(s=\frac p2\)，且
+\(h^2=p^2-\frac{s^2}{2}=\frac{7p^2}{8}\)，\(h=\frac{\sqrt{14}}{4}p\).
+代入得
+\[
+\sin\theta=\frac{\sqrt{14}}{2\sqrt{15}}=\frac{\sqrt{210}}{30}
+\]
+所以所成角为
+\(\displaystyle\theta=\arcsin\frac{\sqrt{210}}{30}\).
+
+\item 由上面的坐标设定，三角形 \(PBC\) 的重心为
+\[
+G=\frac{P+B+C}{3}=\left(\frac{s}{6},\frac{s}{2},\frac{h}{3}\right)
+\]
+而
+\(O=\left(\frac{s}{2},\frac{s}{2},0\right)\)，\(\overrightarrow{GO}=\left(\frac{s}{3},0,-\frac{h}{3}\right)\).
+仍取平面 \(PBC\) 的法向量 \(\bs n=\left(sh,0,-\frac{s^2}{2}\right)\). 点 \(O\) 在平面 \(PBC\) 内的射影为 \(G\) 的充要条件是 \(GO\perp\) 平面 \(PBC\)，即 \(\overrightarrow{GO}\parallel\bs n\). 因此
+\(\left(s,0,-h\right)\parallel\left(h,0,-\frac{s}{2}\right)\)，\(\Longrightarrow\)，\(h^2=\frac{s^2}{2}\).
+结合 \(h^2+s^2/2=p^2\)，得 \(s^2=p^2\). 因 \(s=kp>0\)，所以 \(k=1\). 反之，\(k=1\) 时上述平行关系成立，故此时射影确为重心.
 \end{enumerate}
 \end{solution}
 \end{problem}
@@ -264,18 +579,55 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item
+\item 设一次摸到红球和白球的概率分别为 \(r=\frac13\)，\(w=\frac23\).
 \begin{enumerate}
-\item \(\frac{8}{81}\).
-\item \(P(\xi=0)=\frac{32}{243}\)，\(P(\xi=1)=\frac{80}{243}\)，\(P(\xi=2)=\frac{80}{243}\).
+\item 恰好第 \(5\) 次停止，等价于前 \(4\) 次恰有 \(2\) 次摸到红球且第 \(5\) 次摸到红球. 因此
+\[
+P=\mathrm C_4^2r^2w^2r
+=6\left(\frac13\right)^3\left(\frac23\right)^2
+=\frac{8}{81}
+\]
+
+\item 当 \(\xi=0\)，\(1\)，\(2\) 时，在前 \(5\) 次中分别恰有 \(0\)，\(1\)，\(2\) 次红球，故
+\[
+P(\xi=0)=w^5=\frac{32}{243}
+\]
+\[
+P(\xi=1)=\mathrm C_5^1rw^4=\frac{80}{243}
+\]
+\[
+P(\xi=2)=\mathrm C_5^2r^2w^3=\frac{80}{243}
+\]
+当 \(\xi=3\) 时，第三次红球在第 \(3\)，\(4\) 或 \(5\) 次出现，所以
+\[
+P(\xi=3)=r^3+\mathrm C_3^2r^3w+\mathrm C_4^2r^3w^2
+=\frac{1}{27}+\frac{2}{27}+\frac{8}{81}
+=\frac{17}{81}=\frac{51}{243}
+\]
+所以分布列为
+\[
+\begin{tabular}{c|cccc}
+\(\xi\) & \(0\) & \(1\) & \(2\) & \(3\) \\
+\hline
+P & \(\dfrac{32}{243}\) & \(\dfrac{80}{243}\) & \(\dfrac{80}{243}\) & \(\dfrac{51}{243}\)
+\end{tabular}
+\]
+且
+\[
+E(\xi)=0\cdot\frac{32}{243}+1\cdot\frac{80}{243}+2\cdot\frac{80}{243}+3\cdot\frac{51}{243}=\frac{131}{81}
+\]
 \end{enumerate}
-\item \(p=\frac{13}{30}\).
+
+\item 设袋子 \(A\) 中有 \(N\) 个球，则袋子 \(B\) 中有 \(2N\) 个球. 两袋合并后红球总数为
+\(\frac N3+2Np\)，球总数为 \(3N\). 由题意
+\(\frac{\frac N3+2Np}{3N}=\frac25\)，\(\Longrightarrow\)，\(\frac19+\frac{2p}{3}=\frac25\).
+解得 \(p=\frac{13}{30}\).
 \end{enumerate}
 \end{solution}
 \end{problem}
 
 \begin{problem}
-设点 \(A_{n}(x_{n},0)\)，\(P_{n}(x_{n},2^{n - 1})\) 和抛物线 \(C_n: y = x^{2} + a_n x + b_n\)（\(n \in \mathbf{N}^{*}\)），其中 \(a_{n} = -2 - 4n - \frac{1}{2n - 1}\)，\(x_{n}\) 由以下方法得到： \(x_{1} = 1\)，点 \(P_{2}(x_{2},2)\) 在抛物线 \(C_{1}: y = x^{2} + a_{1}x + b_{1}\) 上，点 \(A_{1}(x_{1},0)\) 到 \(P_{2}\) 的距离是 \(A_{1}\) 到 \(C_{1}\) 上点的最短距离. \(\cdots\)，点 \(P_{n + 1}(x_{n + 1},2^{n})\) 在抛物线 \(C_{n}: y = x^{2} + a_{n}x + b_{n}\) 上，点 \(A_{n}(x_{n},0)\) 到 \(P_{n + 1}\) 的距离是 \(A_{n}\) 到 \(C_{n}\) 上点的最短距离.
+设点 \(A_{n}(x_{n},0)\)，\(P_{n}(x_{n},2^{n - 1})\) 和抛物线 \(C_n: y = x^{2} + a_n x + b_n\)（\(n \in \N^{*}\)），其中 \(a_{n} = -2 - 4n - \frac{1}{2^{n-1}}\)，\(x_{n}\) 由以下方法得到：\(x_{1} = 1\)，点 \(P_{2}(x_{2},2)\) 在抛物线 \(C_{1}: y = x^{2} + a_{1}x + b_{1}\) 上，点 \(A_{1}(x_{1},0)\) 到 \(P_{2}\) 的距离是 \(A_{1}\) 到 \(C_{1}\) 上点的最短距离. \(\cdots\)，点 \(P_{n + 1}(x_{n + 1},2^{n})\) 在抛物线 \(C_{n}: y = x^{2} + a_{n}x + b_{n}\) 上，点 \(A_{n}(x_{n},0)\) 到 \(P_{n + 1}\) 的距离是 \(A_{n}\) 到 \(C_{n}\) 上点的最短距离.
 \begin{enumerate}
 \item 求 \(x_{2}\) 及 \(C_{1}\) 的方程.
 \item 证明 \(\{x_{n}\}\) 是等差数列.
@@ -283,8 +635,36 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item \(x_{2}=3\)，\(C_{1}:y=x^{2}-7x+14\).
-\item \(x_{n}=2n-1\)，故 \(\{x_{n}\}\) 是等差数列.
+\item 由 \(a_1=-2-4-1=-7\)，知 \(C_1:y=x^2-7x+b_1\). 抛物线在点 \(P_2=(x_2,2)\) 处的切线方向向量为 \((1,2x_2-7)\)，而
+\(\overrightarrow{A_1P_2}=(x_2-1,2)\). 最短距离条件说明这两条方向相互垂直，因此
+\((x_2-1,2)\cdot(1,2x_2-7)=0\)，\(\Longrightarrow\)，\(x_2-1+2(2x_2-7)=0\).
+解得 \(x_2=3\). 再由 \(P_2\in C_1\)，得
+\[
+2=3^2-7\cdot3+b_1
+\]
+所以 \(b_1=14\)，从而
+\[
+C_1:y=x^2-7x+14
+\]
+
+\item 对任意 \(n\in\N^*\)，抛物线 \(C_n\) 在点 \(P_{n+1}\) 处的切线方向向量为
+\(\left(1,2x_{n+1}+a_n\right)\)，而
+\[
+\overrightarrow{A_nP_{n+1}}=\left(x_{n+1}-x_n,2^n\right)
+\]
+由最短距离条件，二者垂直，故
+\[
+x_{n+1}-x_n+2^n(2x_{n+1}+a_n)=0
+\]
+假设 \(x_n=2n-1\)，代入 \(a_n=-2-4n-2^{1-n}\)，得
+\[
+\left(1+2^{n+1}\right)x_{n+1}
+=2n-1+2^n\left(2+4n+2^{1-n}\right)
+=(2n+1)\left(1+2^{n+1}\right)
+\]
+因此 \(x_{n+1}=2n+1\). 又 \(x_1=1=2\times1-1\)，由数学归纳法
+\(x_n=2n-1\)，\((n\in\N^*)\).
+所以 \(x_{n+1}-x_n=2\)，即 \(\{x_n\}\) 是首项为 \(1\)，公差为 \(2\) 的等差数列.
 \end{enumerate}
 \end{solution}
 \end{problem}

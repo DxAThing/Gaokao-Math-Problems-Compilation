@@ -5,11 +5,17 @@
 \end{problem}
 
 \begin{solution}
+先化简各项，有
 \[
-\begin{gathered}
-\text{原式}=\sqrt{300}+\frac{10\sqrt[4]{3}}{\sqrt{2}}\cdot\frac{\sqrt[4]{3^3}}{\sqrt[4]{2^2}}-\frac{10}{2-\sqrt{3}} \\
-=10\sqrt{3}+15-10\left( 2+\sqrt{3} \right)=-5
-\end{gathered}
+\left( \frac{1}{300} \right)^{-\frac{1}{2}}=\sqrt{300}=10\sqrt{3}
+\]
+又
+\[
+\left( \frac{\sqrt{3}}{2} \right)^{\frac{1}{2}}\left( \frac{27}{4} \right)^{\frac{1}{4}}=\frac{\sqrt[4]{3}}{\sqrt{2}}\cdot\frac{\sqrt[4]{3^3}}{\sqrt{2}}=\frac{3}{2}
+\]
+由于 \(\left(2-\sqrt{3}\right)\left(2+\sqrt{3}\right)=1\)，所以 \(\left(2-\sqrt{3}\right)^{-1}=2+\sqrt{3}\). 因此原式为
+\[
+10\sqrt{3}+10\cdot\frac{3}{2}-10\left(2+\sqrt{3}\right)=10\sqrt{3}+15-20-10\sqrt{3}=-5
 \]
 \end{solution}
 
@@ -18,11 +24,16 @@
 \end{problem}
 
 \begin{solution}
+利用三角函数的周期性，\(480^\circ=360^\circ+120^\circ\)，\(960^\circ=2\cdot360^\circ+240^\circ\)，\(1920^\circ=5\cdot360^\circ+120^\circ\). 因而
 \[
 \begin{gathered}
-\text{原式}=\sin 120^\circ\cdot\cos 120^\circ\cdot\cos 240^\circ\cdot\cos 120^\circ \\
-=\frac{\sqrt{3}}{2}\left( -\frac{1}{2} \right)^3=-\frac{\sqrt{3}}{16}
+\sin480^\circ=\sin120^\circ=\frac{\sqrt{3}}{2},\qquad \cos480^\circ=\cos120^\circ=-\frac{1}{2},\\
+\cos960^\circ=\cos240^\circ=-\frac{1}{2},\qquad \cos1920^\circ=\cos120^\circ=-\frac{1}{2}.
 \end{gathered}
+\]
+所以原式为
+\[
+\frac{\sqrt{3}}{2}\left(-\frac{1}{2}\right)^3=-\frac{\sqrt{3}}{16}
 \]
 \end{solution}
 
@@ -31,13 +42,10 @@
 \end{problem}
 
 \begin{solution}
-因为 \( a<-5 \)，所以 \( 6-a>0 \)，\( 2a+1<0 \)，\( a+5<0 \). 因此
+由 \(a<-5\)，可得 \(6-a>0\)、\(2a+1<0\)、\(a+5<0\). 又
+\(a^2+10a+25=(a+5)^2\)，所以
 \[
-\begin{gathered}
-\left| 6-a \right|-\left| 2a+1 \right|+\sqrt{a^2+10a+25} \\
-=\left( 6-a \right)+\left( 2a+1 \right)+\sqrt{\left( a+5 \right)^2} \\
-=\left( 6-a \right)+\left( 2a+1 \right)-\left( a+5 \right)=2
-\end{gathered}
+\left|6-a\right|-\left|2a+1\right|+\sqrt{a^2+10a+25}=(6-a)+(2a+1)-\left(a+5\right)=2
 \]
 \end{solution}
 
@@ -46,22 +54,16 @@
 \end{problem}
 
 \begin{solution}
-由原不等式，得不等式组
+对数的真数必须为正，因此先得
+\(2x+1>0\)，\(5-x>0\)
+即 \(x>-\frac{1}{2}\) 且 \(x<5\). 在此定义域内，常用对数函数单调递增，故原不等式等价于
 \[
-\begin{cases}
-2x+1>5-x\\
-2x+1>0\\
-5-x>0
-\end{cases}
+2x+1>5-x,\qquad\text{即}\qquad x>\frac{4}{3}
 \]
+与定义域取交集，得到原不等式的解集为
 \[
-\begin{cases}
-x>\frac{4}{3}\\
-x>-\frac{1}{2}\\
-x<5
-\end{cases}
+\frac{4}{3}<x<5
 \]
-因此，原不等式的解是 \( \frac{4}{3}<x<5 \).
 \end{solution}
 
 \begin{problem}
@@ -69,13 +71,18 @@ x<5
 \end{problem}
 
 \begin{solution}
-因为 \(A\)，\(B\) 为锐角，所以 \( \cos A \)，\( \cos B \) 均为正值，可知 \( \cos A=\sqrt{1-\sin^2 A}=\sqrt{1-\left( \frac{3}{5} \right)^2}=\frac{4}{5} \)，\( \cos B=\sqrt{1-\sin^2 B}=\sqrt{1-\left( \frac{5}{13} \right)^2}=\frac{12}{13} \).
-于是
+因为 \(A\)、\(B\) 均为锐角，故余弦值为正，从而
+\(\cos A=\sqrt{1-\sin^2A}=\sqrt{1-\left(\frac{3}{5}\right)^2}=\frac{4}{5}\)，\(\cos B=\sqrt{1-\sin^2B}=\sqrt{1-\left(\frac{5}{13}\right)^2}=\frac{12}{13}\).
+由两角差公式，
 \[
-\begin{gathered}
-\tan\left( A-B \right)=\frac{\sin A\cos B-\cos A\sin B}{\cos A\cos B+\sin A\sin B} \\
-=\frac{\frac{3}{5}\cdot\frac{12}{13}-\frac{4}{5}\cdot\frac{5}{13}}{\frac{4}{5}\cdot\frac{12}{13}+\frac{3}{5}\cdot\frac{5}{13}}=\frac{16}{63}
-\end{gathered}
+\sin(A-B)=\frac{3}{5}\cdot\frac{12}{13}-\frac{4}{5}\cdot\frac{5}{13}=\frac{16}{65}
+\]
+\[
+\cos(A-B)=\frac{4}{5}\cdot\frac{12}{13}+\frac{3}{5}\cdot\frac{5}{13}=\frac{63}{65}>0
+\]
+因此
+\[
+\tan(A-B)=\frac{\sin(A-B)}{\cos(A-B)}=\frac{16/65}{63/65}=\frac{16}{63}
 \]
 \end{solution}
 
@@ -84,15 +91,35 @@ x<5
 \end{problem}
 
 \begin{solution}
-设方程的两根为 \( x_1 \)，\( x_2 \)，直角三角形一个锐角为 \( \alpha \)（\( 0<\alpha<\frac{\pi}{2} \)）.
-依题意，得 \( x_1=\sin \alpha \)，\( x_2=\sin \left( 90^\circ-\alpha \right)=\cos \alpha \).
-由韦达定理，\( \sin \alpha+\cos \alpha=-p \)，\( \sin \alpha\cos \alpha=q \).
-将第一个等式平方，得 \( \sin^2 \alpha+\cos^2 \alpha+2\sin \alpha\cos \alpha=p^2 \)，即 \( 1+2\sin \alpha\cos \alpha=p^2 \).
-将第二个等式代入上式，即得到 \( p \)，\( q \) 应满足的关系式 \( 1+2q=p^2 \).
-另外，根据前述两个等式有 \( p=-\left( \sin \alpha+\cos \alpha \right)=-\sqrt{2}\sin \left( \alpha+\frac{\pi}{4} \right) \)，\( q=\sin \alpha\cos \alpha=\frac{1}{2}\sin 2\alpha \).
-因为 \( 0<\alpha<\frac{\pi}{2} \)，所以 \( -\sqrt{2}\le-\sqrt{2}\sin \left( \alpha+\frac{\pi}{4} \right)<-1 \)，即 \( -\sqrt{2}\le p<-1 \)；\( 0<\frac{1}{2}\sin 2\alpha\le\frac{1}{2} \)，即 \( 0<q\le\frac{1}{2} \).
-上述关系和范围是 \( p \)，\( q \) 必须满足的条件.
-因此，\( p \)，\( q \) 应满足条件：\( 1+2q=p^2 \)，而且 \( -\sqrt{2}\le p<-1 \)，\( 0<q\le\frac{1}{2} \). 这时才能使方程 \( x^2+px+q=0 \) 的两根为一直角三角形两锐角的正弦.
+设直角三角形的一个锐角为 \(\alpha\)，则 \(0<\alpha<\frac{\pi}{2}\)，另一个锐角为 \(\frac{\pi}{2}-\alpha\). 若方程的两根为 \(x_1\)、\(x_2\)，则可取
+\(x_1=\sin\alpha\)，\(x_2=\sin\left(\frac{\pi}{2}-\alpha\right)=\cos\alpha\).
+由韦达定理，
+\(\sin\alpha+\cos\alpha=-p\)，\(\sin\alpha\cos\alpha=q\).
+将第一个等式平方，并利用 \(\sin^2\alpha+\cos^2\alpha=1\)，得到
+\[
+p^2=\left(\sin\alpha+\cos\alpha\right)^2=1+2\sin\alpha\cos\alpha=1+2q
+\]
+此外，\(0<\alpha<\frac{\pi}{2}\) 给出
+\(1<\sin\alpha+\cos\alpha\leq\sqrt{2}\)，\(0<\sin\alpha\cos\alpha\leq\frac{1}{2}\).
+因此必要条件为
+\(1+2q=p^2\)，\(-\sqrt{2}\leq p<-1\)，\(0<q\leq\frac{1}{2}\).
+
+再证这些条件充分. 设 \(s=-p\)，则 \(1<s\leq\sqrt{2}\)，且由关系式 \(q=\frac{s^2-1}{2}\). 原方程可写为
+\[
+x^2-sx+q=0
+\]
+它的判别式为
+\[
+\Delta=s^2-4q=s^2-2\left(s^2-1\right)=2-s^2\geq0
+\]
+设两根为 \(u\)、\(v\)，则 \(u+v=s>0\)、\(uv=q>0\)，所以 \(u\)、\(v\) 均为正数；又
+\[
+u^2+v^2=(u+v)^2-2uv=s^2-2q=1
+\]
+故 \(0<u<1\)、\(0<v<1\). 取锐角 \(\alpha\) 使 \(\sin\alpha=u\)，则 \(\cos\alpha=\sqrt{1-u^2}=v\)，所以两根确为 \(\sin\alpha\)、\(\cos\alpha\)，即为直角三角形两个锐角的正弦.
+
+所以所求条件是
+\(1+2q=p^2\)，\(-\sqrt{2}\leq p<-1\)，\(0<q\leq\frac{1}{2}\).
 \end{solution}
 
 \begin{problem}
@@ -100,18 +127,19 @@ x<5
 \end{problem}
 
 \begin{solution}
-如图，\(P\) 为已知 \( \triangle ABC \) 外任一点，\(A'\)，\(B'\)，\(C'\) 分别是 \(PA\)，\(PB\)，\(PC\) 的中点.
+如图，\(P\) 为已知 \(\triangle ABC\) 外任一点，\(A'\)、\(B'\)、\(C'\) 分别是 \(PA\)、\(PB\)、\(PC\) 的中点.
 \solutionfigure{\bitmapfigure[max width=5.2cm]{img/1977/shaanxi/q7_fig1.png}}
-根据三角形中位线的性质，有
+由中点的向量表示，
+\(\overrightarrow{A'B'}=\frac{1}{2}\overrightarrow{AB}\)，\(\overrightarrow{B'C'}=\frac{1}{2}\overrightarrow{BC}\)，\(\overrightarrow{A'C'}=\frac{1}{2}\overrightarrow{AC}\).
+因此
 \[
 \frac{A'B'}{AB}=\frac{B'C'}{BC}=\frac{A'C'}{AC}=\frac{1}{2}
 \]
-因此 \( \triangle A'B'C'\sim\triangle ABC \). 那么，这两个三角形面积之比，等于对应边比的平方，即
+从而 \(\triangle A'B'C'\sim\triangle ABC\). 相似三角形的面积比等于相似比的平方，所以
 \[
-\frac{S_{\triangle A'B'C'}}{S_{\triangle ABC}}=\left( \frac{A'B'}{AB} \right)^2=\left( \frac{1}{2} \right)^2=\frac{1}{4}
+\frac{S_{\triangle A'B'C'}}{S_{\triangle ABC}}=\left(\frac{1}{2}\right)^2=\frac{1}{4}
 \]
-所以 \( S_{\triangle A'B'C'}=\frac{1}{4}S_{\triangle ABC} \). 即所作的三角形的面积是原三角形面积的 \( \frac{1}{4} \).
-若 \(P\) 为已知 \( \triangle ABC \) 内或边上任意一点，结论相同.
+故所作三角形的面积是已知三角形面积的 \(\frac{1}{4}\). 这个结论与 \(P\) 在三角形外、内或边上的位置无关.
 \end{solution}
 
 \begin{problem}
@@ -119,27 +147,22 @@ x<5
 \end{problem}
 
 \begin{solution}
-半长轴 \( a=13 \)，半短轴 \( b=12 \)，因此
+椭圆的半长轴、半短轴分别为 \(a=13\)、\(b=12\)，故焦半距为
 \[
 c=\sqrt{a^2-b^2}=\sqrt{13^2-12^2}=5
 \]
-因为椭圆右侧焦点的坐标是 \( \left( 5,0 \right) \).
-设过焦点 \( \left( 5,0 \right) \) 与圆相切的直线的切点为 \( \left( x_1,y_1 \right) \). 则切线方程为 \( x_1x+y_1y=3^2 \). 因为切线过焦点 \( \left( 5,0 \right) \)，所以此点坐标适合该方程，即 \( 5x_1=9 \). 又因为切点 \( \left( x_1,y_1 \right) \) 在圆上，所以 \( x_1^2+y_1^2=9 \).
-解方程组
+所以右焦点为 \(F(5,0)\).
+
+设所求切线与圆的切点为 \(T(x_1,y_1)\). 圆 \(x^2+y^2=9\) 在 \(T\) 处的切线方程为
 \[
-\begin{cases}
-5x_1=9\\
-x_1^2+y_1^2=9
-\end{cases}
+x_1x+y_1y=9
 \]
-得
-\[
-\begin{cases}
-x_1=\frac{9}{5}\\
-y_1=\pm\frac{12}{5}
-\end{cases}
-\]
-代入切线方程，得所求的切线方程是 \( 9x+12y-45=0 \) 和 \( 9x-12y-45=0 \). 化简得 \( 3x+4y-15=0 \) 和 \( 3x-4y-15=0 \).
+由于切线经过 \(F(5,0)\)，有 \(5x_1=9\)；又因为 \(T\) 在圆上，有 \(x_1^2+y_1^2=9\). 解得
+\(x_1=\frac{9}{5}\)，\(y_1^2=9-\left(\frac{9}{5}\right)^2=\frac{144}{25}\)，\(y_1=\pm\frac{12}{5}\).
+分别代入切线方程，得到
+\(9x+12y-45=0\)，\(9x-12y-45=0\).
+将两式分别约去公因数 \(3\)，所求直线为
+\(3x+4y-15=0\)，\(3x-4y-15=0\).
 \end{solution}
 
 \begin{problem}
@@ -147,16 +170,26 @@ y_1=\pm\frac{12}{5}
 \end{problem}
 
 \begin{solution}
-设另一边长为 \( x \). 由余弦定理，
+设所求另一边长为 \(x\). 取已知的 \(30^\circ\) 为两已知邻边 \(4\)、\(x\) 的夹角，则由余弦定理，
 \[
-\left( \frac{5}{2} \right)^2=x^2+4^2-2\cdot x\cdot 4\cos 30^\circ
+\left(\frac{5}{2}\right)^2=x^2+4^2-2\cdot x\cdot4\cos30^\circ=x^2+16-4\sqrt{3}x
 \]
-即
+两边同乘以 \(4\)，整理得
 \[
 4x^2-16\sqrt{3}x+39=0
 \]
-所以 \( x=\frac{4\sqrt{3}\pm 3}{2} \).
-所以三角形另一边长为 \( \frac{4\sqrt{3}+3}{2} \) 或 \( \frac{4\sqrt{3}-3}{2} \).
+其判别式为
+\[
+\Delta=\left(-16\sqrt{3}\right)^2-4\cdot4\cdot39=144=12^2
+\]
+所以
+\[
+x=\frac{16\sqrt{3}\pm12}{8}=\frac{4\sqrt{3}\pm3}{2}
+\]
+两值均为正. 将任一正根作为一条邻边，与长度为 \(4\) 的邻边夹角取 \(30^\circ\)，即可构成非退化三角形；由上面的余弦定理，该三角形的对边正好为 \(\frac{5}{2}\)，所以两根均不需舍去. 故另一边长为
+\[
+\frac{4\sqrt{3}+3}{2}\quad\text{或}\quad\frac{4\sqrt{3}-3}{2}
+\]
 \end{solution}
 
 \begin{problem}
@@ -167,24 +200,45 @@ y_1=\pm\frac{12}{5}
 \item 如果象图 2 那样截出的一个正方形的料，它的面积为多大？这二种截法截下的正方形的料的面积哪个较大？
 \end{enumerate}
 
-\bitmapinlinefigure[0.42\linewidth][max width=4.6cm]{img/1977/shaanxi/q10_fig1.png}\hfill
-\bitmapinlinefigure[0.42\linewidth][max width=4.6cm]{img/1977/shaanxi/q10_fig2.png}
+\bitmapfigure[max width=4.6cm]{img/1977/shaanxi/q10_fig1.png}\hfill
+\bitmapfigure[max width=4.6cm]{img/1977/shaanxi/q10_fig2.png}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item 如图 1. 若 \( \odot O \) 与正方形 \(ABCD\) 的边 \(AB\)，\(BC\) 相切于 \(E\)，\(F\) 点，则 \(OEBF\) 为一正方形，圆心 \(O\) 在对角线 \(BD\) 上. 因为正方形 \(ABCD\) 的边长为 \( a \)，\( \odot O \) 的半径为 \( r \)，所以 \( BD=\sqrt{2}a \)，\( OB=\sqrt{2}r \). 则 \( B'D=BD-BB'=\sqrt{2}a-\left( \sqrt{2}r+r \right) \). 则截得正方形 \(A'B'C'D\) 的面积
+\item 如图 1. 设圆 \(\odot O\) 与正方形 \(ABCD\) 的边 \(AB\)、\(BC\) 分别相切于 \(E\)、\(F\). 则 \(OEBF\) 是正方形，且圆心 \(O\) 在对角线 \(BD\) 上. 因此
+\(BD=\sqrt{2}a\)，\(OB=\sqrt{2}r\).
+由于 \(B'\) 是对角线 \(BD\) 与圆的交点，且 \(O\) 位于 \(B\)、\(B'\) 之间，\(OB'=r\)，所以
+\(BB'=BO+OB'=\sqrt{2}r+r\)，\(qquad B'D=BD-BB'=\sqrt{2}a-(\sqrt{2}+1)r\).
+正方形 \(A'B'C'D\) 的对角线为 \(B'D\)，故其面积为
 \[
-\begin{gathered}
-S_{A'B'C'D}=\frac{1}{2}B'D^2\sin 90^\circ=\frac{1}{2}\left[ \sqrt{2}a-\left( \sqrt{2}r+r \right) \right]^2 \\
-=\left[ a-\left( 1+\frac{\sqrt{2}}{2} \right)r \right]^2
-\end{gathered}
+S_1=\frac{1}{2}(B'D)^2=\frac{1}{2}\left[\sqrt{2}a-(\sqrt{2}+1)r\right]^2=\left[a-\left(1+\frac{\sqrt{2}}{2}\right)r\right]^2
 \]
 
-\item 如图 2. 设 \( \odot O \) 与正方形 \(ABCD\) 的边 \(AB\)，\(BC\) 分别相切于 \(E\)，\(F\) 点，与正方形 \(A'B'C'D'\) 边 \(A'B'\) 相切于 \(G\) 点. 因为 \( A'B'=A'D' \)，且 \( A'B'\perp A'D' \)，\( AB\perp AD \)，所以 \( \angle AD'A'=\angle BA'B' \). 于是 \( \mathrm{Rt}\triangle AD'A'\cong\mathrm{Rt}\triangle A'BB' \). 则 \( AA'=BB'=r+FB' \). 又 \( A'G=A'E=AB-AA'-EB=a-\left( r+FB' \right)-r=a-2r-FB' \). 而 \( B'G=B'F \)，所以 \( A'B'=A'G+B'G=a-2r-FB'+FB'=a-2r \). 则所截的正方形 \(A'B'C'D'\) 的面积为 \( S_{A'B'C'D'}=\left( A'B' \right)^2=\left( a-2r \right)^2 \). 因为 \( \left( 1+\frac{\sqrt{2}}{2} \right)r<2r \)，所以 \( \left[ a-\left( 1+\frac{\sqrt{2}}{2} \right)r \right]^2>\left( a-2r \right)^2 \). 因此第一种截法（如图 1）截下的正方形料的面积较大.
+\item 如图 2. 设圆 \(\odot O\) 与 \(AB\)、\(BC\) 分别相切于 \(E\)、\(F\)，并与正方形 \(A'B'C'D'\) 的边 \(A'B'\) 相切于 \(G\). 由于 \(A'B'=A'D'\)，\(A'B'\perp A'D'\)，且 \(AB\perp AD\)，有 \(\angle AD'A'=\angle BA'B'\). 两个相应直角三角形全等，从而
+\[
+AA'=BB'=r+FB'
+\]
+从同一点 \(A'\) 向圆作的两条切线段相等，故 \(A'G=A'E\). 于是
+\[
+A'G=A'E=AB-AA'-EB=a-(r+FB')-r=a-2r-FB'
+\]
+同理，从点 \(B'\) 作圆的两条切线段相等，故 \(B'G=B'F\). 因而
+\[
+A'B'=A'G+B'G=a-2r-FB'+FB'=a-2r
+\]
+所截正方形的面积为
+\[
+S_2=(A'B')^2=(a-2r)^2
+\]
+
+因为 \(r>0\) 且 \(1+\frac{\sqrt{2}}{2}<2\)，又由题设可知两边长均为正，所以
+\[
+a-\left(1+\frac{\sqrt{2}}{2}\right)r>a-2r>0
+\]
+平方后得到 \(S_1>S_2\). 因此第一种截法截下的正方形料面积较大.
 \end{enumerate}
 \end{solution}
-
 
 \section{参考题}
 
@@ -195,16 +249,35 @@ S_{A'B'C'D}=\frac{1}{2}B'D^2\sin 90^\circ=\frac{1}{2}\left[ \sqrt{2}a-\left( \sq
 \end{problem}
 
 \begin{solution}
-设椭圆的方程为 \( \frac{x^2}{a^2}+\frac{y^2}{b^2}=1 \). 若内接矩形 \(ABCD\) 的长 \( AD=2x \)（如图），则矩形的宽 \( CD=\frac{2b}{a}\sqrt{a^2-x^2} \).
-这时矩形的面积
+设椭圆方程为 \(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\)，其中 \(a>b>0\). 先说明任意内接矩形的中心都是椭圆中心. 将坐标按 \(X=\frac{x}{a}\)、\(Y=\frac{y}{b}\) 作伸缩变换，椭圆变为单位圆，原矩形变为一个内接平行四边形. 圆内接平行四边形必为矩形，其对角线为直径，所以该平行四边形的中心是圆心，从而原矩形的中心是椭圆中心.
+
+设该矩形中心为原点，取从中心指向相邻顶点的两个半边向量的坐标分别为 \((u_1,u_2)\)、\((v_1,v_2)\). 因为矩形的两边垂直，
 \[
-\begin{gathered}
-S\left( x \right)=\frac{4b}{a}x\sqrt{a^2-x^2}=\frac{4b}{a}\sqrt{x^2\left( a^2-x^2 \right)} \\
-\le\frac{4b}{a}\cdot\frac{x^2+\left( a^2-x^2 \right)}{2}=2ab
-\end{gathered}
+u_1v_1+u_2v_2=0
 \]
-其中不等式中的等号，在 \( x^2=a^2-x^2 \) 时成立，即 \( x=\frac{\sqrt{2}}{2}a \) 时 \( S\left( x \right) \) 有最大值 \( 2ab \). 这时 \( AD=2x=\sqrt{2}a \)，\( CD=\frac{2b}{a}\sqrt{a^2-x^2}=\sqrt{2}b \).
-答：当内接矩形的长和宽分别是椭圆的半长轴和半短轴的 \( \sqrt{2} \) 倍时，面积最大.
+矩形的四个顶点为两向量的带符号和，且都在椭圆上. 比较点 \((u_1+v_1,u_2+v_2)\) 与 \((u_1-v_1,u_2-v_2)\) 的椭圆方程，得到
+\[
+\frac{u_1v_1}{a^2}+\frac{u_2v_2}{b^2}=0
+\]
+又因 \((v_1,v_2)=\lambda(-u_2,u_1)\)，其中 \(\lambda\ne0\)，代入上式可得
+\[
+\lambda u_1u_2\left(\frac{1}{b^2}-\frac{1}{a^2}\right)=0
+\]
+由于 \(a>b>0\)，所以 \(u_1u_2=0\). 因而矩形的两边分别平行于椭圆的两条坐标轴.
+
+设矩形的半长为 \(x\)，半宽为 \(y\)，则顶点 \((x,y)\) 在椭圆上，故
+\(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\)，\(qquad y=\frac{b}{a}\sqrt{a^2-x^2}\)，\(qquad 0\leq x\leq a\).
+于是矩形面积为
+\[
+S(x)=4xy=\frac{4b}{a}x\sqrt{a^2-x^2}=\frac{4b}{a}\sqrt{x^2\left(a^2-x^2\right)}
+\]
+由算术几何平均不等式，
+\[
+\sqrt{x^2\left(a^2-x^2\right)}\leq\frac{x^2+a^2-x^2}{2}=\frac{a^2}{2}
+\]
+所以 \(S(x)\leq2ab\). 当且仅当 \(x^2=a^2-x^2\)，即 \(x=\frac{\sqrt{2}}{2}a\) 时取等号；此时
+\(2x=\sqrt{2}a\)，\(2y=\sqrt{2}b\)，\(qquad S_{\max}=2ab\).
+因此，当内接矩形的长、宽分别为椭圆半长轴、半短轴的 \(\sqrt{2}\) 倍时，面积最大.
 \end{solution}
 
 \begin{problem}
@@ -213,11 +286,29 @@ S\left( x \right)=\frac{4b}{a}x\sqrt{a^2-x^2}=\frac{4b}{a}\sqrt{x^2\left( a^2-x^
 \end{problem}
 
 \begin{solution}
-在方程两边同乘以 \( \frac{1}{x} \)，得 \( \frac{\mathrm{d} y}{x\mathrm{d} x}-2y=2x^2 \)，即 \( \frac{\mathrm{d} y}{\mathrm{d} x^2}-y=x^2 \).
-令 \( x^2=t \)，方程就化为 \( \frac{\mathrm{d} y}{\mathrm{d} t}-y=t \)（*）.
-方程（*）是一个一阶常系数线性方程. 其相应的齐次方程 \( \frac{\mathrm{d} y}{\mathrm{d} t}-y=0 \) 的特征根是 \( 1 \). 因此齐次线性方程的通解是 \( y=c\e^t \)（其中 \( c \) 是任意常数）.
-容易验证，\( y=-t-1 \) 是方程（*）的一个特解，因此方程（*）的通解是 \( y=c\e^t-t-1 \).
-代回原变量 \( x \)，得到原方程的通解 \( y=c\e^{x^2}-x^2-1 \).
-代入初值条件 \( y\big|_{x=0}=1 \)，定出常数 \( c=2 \).
-所以原方程的初值问题的解是 \( y=2\e^{x^2}-x^2-1 \).
+原方程是一阶线性微分方程. 取积分因子 \(\e^{-x^2}\)，因为
+\[
+\frac{\mathrm{d}}{\mathrm{d}x}\e^{-x^2}=-2x\e^{-x^2}
+\]
+所以方程两边同乘以该积分因子后，左边恰为一个乘积的导数：
+\[
+\frac{\mathrm{d}}{\mathrm{d}x}\left(y\e^{-x^2}\right)=2x^3\e^{-x^2}
+\]
+令 \(u=x^2\)，则 \(\mathrm{d}u=2x\,\mathrm{d}x\)，从而
+\[
+\int2x^3\e^{-x^2}\,\mathrm{d}x=\int u\e^{-u}\,\mathrm{d}u=-(u+1)\e^{-u}+C=-(x^2+1)\e^{-x^2}+C
+\]
+因此
+\[
+y\e^{-x^2}=-(x^2+1)\e^{-x^2}+C
+\]
+即原方程的通解为
+\[
+y=C\e^{x^2}-x^2-1
+\]
+代入初值条件 \(y(0)=1\)，得 \(C-1=1\)，所以 \(C=2\). 故初值问题的解为
+\[
+y=2\e^{x^2}-x^2-1
+\]
+直接求导可得 \(y'=4x\e^{x^2}-2x\)，代回原方程有 \(y'-2xy=2x^3\)，且 \(y(0)=1\)，故该解满足题设.
 \end{solution}

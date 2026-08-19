@@ -311,7 +311,7 @@ C
 \end{answer}
 
 \begin{solution}
-设等比数列的首项为 \(a_1\)，公比为 \(q\). 则
+设等比数列的首项为 \(a_1\)，公比为 \(q\). 由等比数列的定义，\(a_1\ne0\)，且 \(q\ne0\). 则
 \(S_1=a_1\)，\(S_2=a_1(1+q)\)，\(S_3=a_1(1+q+q^2)\).
 因为 \(S_1\)，\(2S_2\)，\(3S_3\) 成等差数列，所以
 \(2\times2S_2=S_1+3S_3\). 代入上式并约去非零的 \(a_1\)，得
@@ -455,33 +455,31 @@ SA^2=(u-\sqrt{2})^2+2+v^2=3
 \(a_n=2n-1\)，\(b_n=2^{n-1}\).
 \item 由 \(\frac{a_k}{b_k}=\frac{2k-1}{2^{k-1}}\)，有
 \[
-S_n=\sum_{k=1}^n\frac{2k-1}{2^{k-1}}=2\sum_{k=1}^n\frac{k}{2^{k-1}}-\sum_{k=1}^n\frac{1}{2^{k-1}}.
+S_n=\sum_{k=1}^n\frac{2k-1}{2^{k-1}}=2\sum_{k=1}^n\frac{k}{2^{k-1}}-\sum_{k=1}^n\frac{1}{2^{k-1}}
 \]
 先由有限等比数列求和公式得
 \[
 \sum_{k=1}^n\frac{1}{2^{k-1}}
 =\frac{1-\left(\frac{1}{2}\right)^n}{1-\frac{1}{2}}
-=2-\frac{1}{2^{n-1}}.
+=2-\frac{1}{2^{n-1}}
 \]
 再由
-\[
-\sum_{k=1}^n r^k=\frac{r(1-r^n)}{1-r}\quad(r\ne1)
-\]
+\(\sum_{k=1}^n r^k=\frac{r(1-r^n)}{1-r}\)，\((r\ne1)\)
 两边对 \(r\) 求导，得
 \[
 \sum_{k=1}^nkr^{k-1}
-=\frac{1-(n+1)r^n+nr^{n+1}}{(1-r)^2}.
+=\frac{1-(n+1)r^n+nr^{n+1}}{(1-r)^2}
 \]
 令 \(r=\frac{1}{2}\)，可得
 \[
 \sum_{k=1}^n\frac{k}{2^{k-1}}
 =\frac{1-\frac{n+1}{2^n}+\frac{n}{2^{n+1}}}{\left(1-\frac{1}{2}\right)^2}
-=4-\frac{n+2}{2^{n-1}}.
+=4-\frac{n+2}{2^{n-1}}
 \]
 代入 \(S_n\) 的表达式，得
 \[
 S_n=2\left(4-\frac{n+2}{2^{n-1}}\right)-\left(2-\frac{1}{2^{n-1}}\right)
-=6-\frac{2n+3}{2^{n-1}}.
+=6-\frac{2n+3}{2^{n-1}}
 \]
 \end{enumerate}
 \end{solution}
@@ -498,43 +496,44 @@ S_n=2\left(4-\frac{n+2}{2^{n-1}}\right)-\left(2-\frac{1}{2^{n-1}}\right)
 \begin{solution}
 \begin{enumerate}
 \item 椭圆的焦半距满足 \(c^2=3-2=1\)，所以
-\(F_1=(-1,0)\)，\(F_2=(1,0)\). 若 \(P\) 不与 \(F_1\)，\(F_2\) 重合，则 \(\overrightarrow{PF_1}\) 与 \(\overrightarrow{PF_2}\) 分别沿 \(BD\)，\(AC\)，从而
+\(F_1=(-1,0)\)，\(F_2=(1,0)\). 因为 \(P\) 在直线 \(BD\) 和 \(AC\) 上，且 \(BD\perp AC\)，当 \(P\) 不与两焦点重合时，\(\overrightarrow{PF_1}\) 和 \(\overrightarrow{PF_2}\) 分别沿 \(BD\) 和 \(AC\)，所以
 \[
-\overrightarrow{PF_1}\cdot\overrightarrow{PF_2}=(-1-x_0)(1-x_0)+(-y_0)^2=x_0^2+y_0^2-1=0.
+\overrightarrow{PF_1}\cdot\overrightarrow{PF_2}=(-1-x_0)(1-x_0)+(-y_0)^2=x_0^2+y_0^2-1=0
 \]
-若 \(P=F_1\) 或 \(P=F_2\)，则 \(x_0^2+y_0^2=1\) 也显然成立. 因此
-\(x_0^2+y_0^2=1\)，从而
+若 \(P=F_1\) 或 \(P=F_2\)，也有 \(x_0^2+y_0^2=1\). 因此无论哪种情况都有
+\(x_0^2+y_0^2=1\)，于是
 \(\frac{x_0^2}{3}+\frac{y_0^2}{2}=\frac{1}{2}-\frac{x_0^2}{6}\leqslant\frac{1}{2}<1\).
-\item 先设直线 \(BD\) 不垂直于 \(x\) 轴，且斜率为 \(m\ne0\)，令 \(u=m^2>0\). 则
-\(BD:y=m(x+1)\)，与椭圆联立得
+\item 先设直线 \(BD\) 不垂直于 \(x\) 轴，且斜率为 \(m\ne0\)，令 \(u=m^2>0\). 因为 \(BD\) 过 \(F_1=(-1,0)\)，其方程为 \(y=m(x+1)\). 与椭圆联立得
 \[
-(2+3u)x^2+6ux+3u-6=0.
+(2+3u)x^2+6ux+3u-6=0
 \]
 该方程两根之差的绝对值为
 \[
-\frac{\sqrt{(6u)^2-4(2+3u)(3u-6)}}{2+3u}=\frac{4\sqrt{3(u+1)}}{2+3u}.
+\frac{\sqrt{(6u)^2-4(2+3u)(3u-6)}}{2+3u}=\frac{4\sqrt{3(u+1)}}{2+3u}
 \]
 设两根为 \(x_1\)，\(x_2\). 由于直线 \(BD\) 的斜率为 \(m\)，两交点的纵坐标之差为 \(m(x_1-x_2)\)，所以
 \[
 BD=\sqrt{(x_1-x_2)^2+\bigl(m(x_1-x_2)\bigr)^2}
 =\left|x_1-x_2\right|\sqrt{1+m^2}
-=\frac{4\sqrt{3}(u+1)}{2+3u}.
+=\frac{4\sqrt{3}(u+1)}{2+3u}
 \]
 直线 \(AC\) 的斜率为 \(-\frac{1}{m}\)，其斜率平方为 \(\frac{1}{u}\)，代入同一弦长公式，得
 \[
 AC=\frac{4\sqrt{3}\left(1+\frac{1}{u}\right)}{2+\frac{3}{u}}
-=\frac{4\sqrt{3}(u+1)}{2u+3}.
+=\frac{4\sqrt{3}(u+1)}{2u+3}
 \]
 
 四边形的两条对角线 \(AC\)，\(BD\) 垂直，故
 \[
-[ABCD]=\frac{1}{2}AC\cdot BD=\frac{24(u+1)^2}{(3u+2)(2u+3)}.
+[ABCD]=\frac{1}{2}AC\cdot BD=\frac{24(u+1)^2}{(3u+2)(2u+3)}
 \]
 又
 \[
 \frac{(u+1)^2}{(3u+2)(2u+3)}-\frac{4}{25}
-=\frac{(u-1)^2}{25(3u+2)(2u+3)}\geqslant0.
+=\frac{(u-1)^2}{25(3u+2)(2u+3)}\geqslant0
 \]
-所以 \([ABCD]\geqslant\frac{96}{25}\). 当 \(u=1\)，即 \(m=\pm1\) 时取等号；水平或竖直的特殊情形面积为 \(4\)，也不影响最小值. 因此四边形 \(ABCD\) 的面积最小值为 \(\frac{96}{25}\).
+所以 \([ABCD]\geqslant\frac{96}{25}\). 当 \(u=1\)，即 \(m=\pm1\) 时取等号.
+
+再看未包含在上述斜率讨论中的特殊方向：若 \(BD\) 水平，则 \(BD\) 是椭圆的长轴，故 \(BD=2\sqrt{3}\)；直线 \(AC\) 为过 \(F_2\) 的竖直弦，令 \(x=1\) 代入椭圆方程，得 \(y=\pm\frac{2}{\sqrt{3}}\)，所以 \(AC=\frac{4}{\sqrt{3}}\)，面积为 \(4\). 若 \(BD\) 竖直，则令 \(x=-1\) 得 \(BD=\frac{4}{\sqrt{3}}\)，而 \(AC\) 为长轴，故 \(AC=2\sqrt{3}\)，面积仍为 \(4\). 因为 \(4>\frac{96}{25}\)，所以四边形 \(ABCD\) 的面积最小值为 \(\frac{96}{25}\).
 \end{enumerate}
 \end{solution}

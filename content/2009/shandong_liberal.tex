@@ -16,6 +16,14 @@
 D
 \end{answer}
 
+\begin{solution}
+并集中的元素必须来自 \(0\)，\(1\)，\(2\)，\(a\)，\(a^2\). 已知 \(0\)，\(1\)，\(2\) 已出现，而并集中还需出现且只出现 \(4\)，\(16\)，因此
+\[
+\{a,a^2\}=\{4,16\}
+\]
+若 \(a=4\)，则 \(a^2=16\)，满足条件；若 \(a=16\)，则 \(a^2=256\)，不满足条件. 所以 \(a=4\)，选择 D.
+\end{solution}
+
 \begin{problem}
 复数 \(\frac{3 - \i}{1 - \i}\) 等于（\quad）
 
@@ -30,6 +38,14 @@ D
 C
 \end{answer}
 
+\begin{solution}
+分子、分母同乘以分母的共轭复数 \(1+\i\)，得
+\[
+\frac{3-\i}{1-\i}=\frac{(3-\i)(1+\i)}{(1-\i)(1+\i)}=\frac{4+2\i}{2}=2+\i
+\]
+因此选择 C.
+\end{solution}
+
 \begin{problem}
 将函数 \( y = \sin 2x \) 的图象向左平移 \( \frac{\pi}{4} \) 个单位，再向上平移 \(1\) 个单位，所得图象的函数解析式是（\quad）
 
@@ -43,6 +59,18 @@ C
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+函数图象向左平移 \(\frac\pi4\) 个单位后，横坐标 \(x\) 应替换为 \(x+\frac\pi4\)，所以得到
+\[
+y=\sin\left(2x+\frac\pi2\right)=\cos2x
+\]
+再向上平移 \(1\) 个单位，得到
+\[
+y=1+\cos2x=2\cos^2x
+\]
+因此选择 B.
+\end{solution}
 
 \begin{problem}
 一空间几何体的三视图如图所示，则该几何体的体积为（\quad）
@@ -60,6 +88,16 @@ B
 C
 \end{answer}
 
+\begin{solution}
+由三视图可知，该几何体由一个底面半径为 \(1\)、高为 \(2\) 的圆柱和一个四棱锥组成. 四棱锥的底面正方形内接于直径为 \(2\) 的圆，其对角线为 \(2\)，故底面边长为 \(\sqrt2\)，底面积为 \(2\). 四棱锥的侧棱长为 \(2\)，从顶点向底面对角线的交点作高，得
+\[
+h=\sqrt{2^2-1^2}=\sqrt3
+\]
+所以圆柱和四棱锥的体积分别为
+\(V_1=\pi\cdot1^2\cdot2=2\pi\)，\(V_2=\frac13\cdot2\cdot\sqrt3=\frac{2\sqrt3}{3}\).
+故总体积为 \(2\pi+\frac{2\sqrt3}{3}\)，选择 C.
+\end{solution}
+
 \begin{problem}
 在 \(\R\) 上定义运算 \(\odot: a \odot b = ab + 2a + b\)，则满足 \(x \odot (x - 2) < 0\) 的实数 \(x\) 的取值范围为（\quad）
 
@@ -74,6 +112,18 @@ C
 B
 \end{answer}
 
+\begin{solution}
+根据新运算的定义，
+\[
+x\odot(x-2)=x(x-2)+2x+(x-2)=x^2+x-2=(x+2)(x-1)
+\]
+因此
+\[
+(x+2)(x-1)<0
+\]
+的解在两个根 \(-2\)，\(1\) 之间，即 \(-2<x<1\). 所以选择 B.
+\end{solution}
+
 \begin{problem}
 函数 \( y = \frac{\e^x + \e^{-x}}{\e^x - \e^{-x}} \) 的图象大致为（\quad）
 
@@ -87,6 +137,16 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+函数的定义域为 \(x\ne0\). 当 \(x\to0^+\) 时，分母趋于 \(0^+\)，函数值趋于 \(+\infty\)；当 \(x\to0^-\) 时，分母趋于 \(0^-\)，函数值趋于 \(-\infty\). 又
+\(\lim_{x\to+\infty}\frac{\e^x+\e^{-x}}{\e^x-\e^{-x}}=1\)，\(\lim_{x\to-\infty}\frac{\e^x+\e^{-x}}{\e^x-\e^{-x}}=-1\).
+此外，对 \(x\ne0\) 求导得
+\[
+y'=\frac{\e^x(\e^x-\e^{-x})-(\e^x+\e^{-x})\e^x}{(\e^x-\e^{-x})^2}=-\frac{2}{(\e^x-\e^{-x})^2}<0
+\]
+所以图象在两支上均递减，且具有竖直渐近线 \(x=0\)，右支在 \(y=1\) 上方趋近于 \(1\)，左支在 \(y=-1\) 下方趋近于 \(-1\). 与图 A 相符，选择 A.
+\end{solution}
 
 \begin{problem}
 定义在 \(\R\) 上的函数 \(f(x)\) 满足 \(f(x) = \begin{cases}
@@ -105,6 +165,16 @@ f(x - 1) - f(x - 2), & x > 0.
 B
 \end{answer}
 
+\begin{solution}
+由递推式分别取 \(x=1\)，\(2\)，\(3\)，有
+\(f(1)=f(0)-f(-1)\)，\(f(2)=f(1)-f(0)\)，\(f(3)=f(2)-f(1)\).
+于是
+\[
+f(3)=\bigl(f(1)-f(0)\bigr)-f(1)=-f(0)
+\]
+由 \(f(0)=\log_2 4=2\)，得 \(f(3)=-2\)，选择 B.
+\end{solution}
+
 \begin{problem}
 设 \(P\) 是 \(\triangle ABC\) 所在平面内的一点，\(\overrightarrow{BC} + \overrightarrow{BA} = 2\overrightarrow{BP}\)，则（\quad）
 
@@ -118,6 +188,18 @@ B
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+设点 \(A\)，\(B\)，\(C\)，\(P\) 的位置向量分别为 \(\bs a\)，\(\bs b\)，\(\bs c\)，\(\bs p\). 由题设
+\[
+\overrightarrow{BC}+\overrightarrow{BA}=(\bs c-\bs b)+(\bs a-\bs b)=2(\bs p-\bs b)
+\]
+化简为 \(\bs a+\bs c=2\bs p\)，因此 \(P\) 是线段 \(AC\) 的中点. 所以
+\[
+\overrightarrow{PC}+\overrightarrow{PA}=(\bs c-\bs p)+(\bs a-\bs p)=\bs a+\bs c-2\bs p=0
+\]
+因此选择 C.
+\end{solution}
 
 \begin{problem}
 已知 \(\alpha\)，\(\beta\) 表示两个不同的平面，\(m\) 为平面 \(\alpha\) 内的一条直线，则“\(\alpha \perp \beta\)”是“\(m \perp \beta\)”的（\quad）
@@ -133,6 +215,12 @@ C
 B
 \end{answer}
 
+\begin{solution}
+若 \(m\perp\beta\)，而 \(m\subset\alpha\)，则平面 \(\alpha\) 内含有一条垂直于平面 \(\beta\) 的直线，根据两平面垂直的判定定理，\(\alpha\perp\beta\). 因此“\(\alpha\perp\beta\)”是“\(m\perp\beta\)”的必要条件.
+
+反之，\(\alpha\perp\beta\) 时，平面 \(\alpha\) 内只有特定方向的直线垂直于 \(\beta\)，任意给定的直线 \(m\subset\alpha\) 不一定具有该方向，所以不是充分条件. 因此选择 B.
+\end{solution}
+
 \begin{problem}
 设斜率为 \(2\) 的直线 \(l\) 过抛物线 \( y^{2} = ax \)（\(a \neq 0\)）的焦点 \(F\)，且和 \(y\) 轴交于点 \(A\). 若 \( \triangle OAF \)（\(O\) 为坐标原点）的面积为 \(4\)，则抛物线方程为（\quad）
 
@@ -146,6 +234,14 @@ B
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+设抛物线 \(y^2=ax\) 的标准参数为 \(p\)，则 \(a=4p\)，焦点为 \(F(p,0)\). 斜率为 \(2\) 且过 \(F\) 的直线为 \(y=2(x-p)\)，它与 \(y\) 轴交于 \(A(0,-2p)\). 因此 \(OA=2\lvert p\rvert\)，\(OF=\lvert p\rvert\)，且 \(OA\perp OF\)，从而
+\[
+S_{\triangle OAF}=\frac12\cdot OA\cdot OF=p^2=4
+\]
+所以 \(p=\pm2\)，即 \(a=\pm8\). 抛物线方程为 \(y^2=\pm8x\)，选择 B.
+\end{solution}
 
 \begin{problem}
 在区间 \(\left[-\frac{\pi}{2}, \frac{\pi}{2}\right]\) 上随机取一个数 \(x\)，\(\cos x\) 的值介于 \(0\) 到 \(\frac{1}{2}\) 之间的概率为（\quad）
@@ -161,6 +257,22 @@ B
 A
 \end{answer}
 
+\begin{solution}
+在区间 \(\left[-\frac\pi2,\frac\pi2\right]\) 内，\(\cos x\geqslant0\). 条件 \(0\leqslant\cos x\leqslant\frac12\) 等价于
+\[
+\lvert x\rvert\geqslant\frac\pi3
+\]
+所以满足条件的区间为
+\[
+\left[-\frac\pi2,-\frac\pi3\right]\cup\left[\frac\pi3,\frac\pi2\right]
+\]
+其长度为 \(\frac\pi3\)，原区间长度为 \(\pi\)，故所求概率为
+\[
+\frac{\frac\pi3}{\pi}=\frac13
+\]
+因此选择 A.
+\end{solution}
+
 \begin{problem}
 已知定义在 \(\R\) 上的奇函数 \(f(x)\) 满足 \(f(x - 4) = -f(x)\). 且在区间 \([0,2]\) 上是增函数，则（\quad）
 
@@ -175,6 +287,18 @@ A
 D
 \end{answer}
 
+\begin{solution}
+由奇函数性质，\(f(0)=0\). 由题设 \(f(x-4)=-f(x)\)，令 \(x\) 替换为 \(x+4\)，得 \(f(x+4)=-f(x)\)，从而 \(f(x+8)=f(x)\).
+
+利用周期性和反周期关系，
+\(f(-25)=f(-1)=-f(1)\)，\(f(11)=f(3)=f(1)\)，\(f(80)=f(0)=0\).
+由于 \(f\) 在 \([0,2]\) 上递增，\(f(1)>f(0)=0\)，所以
+\[
+f(-25)=-f(1)<f(80)=0<f(11)=f(1)
+\]
+因此选择 D.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -185,6 +309,18 @@ D
 \(13\).
 \end{answer}
 
+\begin{solution}
+设等差数列的公差为 \(d\). 由
+\[
+a_5-a_2=3d=6
+\]
+得 \(d=2\). 因而
+\[
+a_6=a_3+3d=7+3\times2=13
+\]
+所以填 \(13\).
+\end{solution}
+
 \begin{problem}
 若函数 \(f(x) = a^x - x - a\)（\(a > 0\) 且 \(a \neq 1\)）有两个零点，则实数 \(a\) 的取值范围是\fillinblank{}.
 \end{problem}
@@ -192,6 +328,22 @@ D
 \begin{answer}
 \(a > 1\).
 \end{answer}
+
+\begin{solution}
+令 \(f(x)=a^x-x-a\). 当 \(0<a<1\) 时，
+\[
+f'(x)=a^x\ln a-1<0
+\]
+所以 \(f\) 在 \(\R\) 上严格递减，至多有一个零点.
+
+当 \(a>1\) 时，\(f\) 连续，且
+\(f(0)=1-a<0\)，\(\lim_{x\to-\infty}f(x)=+\infty\)，\(\lim_{x\to+\infty}f(x)=+\infty\).
+因此在 \(0\) 的左右两侧各有一个零点. 又
+\[
+f''(x)=a^x(\ln a)^2>0
+\]
+函数严格凸，故零点不超过两个，恰有两个零点. 所以 \(a\) 的取值范围为 \(a>1\).
+\end{solution}
 
 \begin{problem}
 执行如图的程序框图，输出的 \(T =\)\fillinblank{}.
@@ -203,6 +355,16 @@ D
 \(30\).
 \end{answer}
 
+\begin{solution}
+按程序逐次执行. 初始 \(S=0\)，\(T=0\)，\(n=0\)，因为 \(T>S\) 不成立，执行一次循环后
+\[
+(S,n,T)=(5,2,2)
+\]
+继续执行得到
+\((S,n,T)=(10,4,6)\)，\((15,6,12)\)，\((20,8,20)\)，\((25,10,30)\).
+此时 \(T=30>S=25\)，程序输出 \(T=30\).
+\end{solution}
+
 \begin{problem}
 某公司租赁甲，乙两种设备生产 \(A\)，\(B\) 两类产品，甲种设备每天能生产 \(A\) 类产品 \(5\) 件和 \(B\) 类产品 \(10\) 件，乙种设备每天能生产 \(A\) 类产品 \(6\) 件和 \(B\) 类产品 \(20\) 件. 已知设备甲每天的租赁费为 \(200\) 元，设备乙每天的租赁费为 \(300\) 元. 现该公司至少要生产 \(A\) 类产品 \(50\) 件，\(B\) 类产品 \(140\) 件，所需租赁费最少为\fillinblank{}\text{元}.
 \end{problem}
@@ -210,6 +372,20 @@ D
 \begin{answer}
 \(2300\).
 \end{answer}
+
+\begin{solution}
+设租赁甲、乙两种设备的天数分别为 \(x\)，\(y\)，则 \(x\)，\(y\geqslant0\)，并满足
+\(5x+6y\geqslant50\)，\(10x+20y\geqslant140\)
+即
+\(5x+6y\geqslant50\)，\(x+2y\geqslant14\).
+租赁费为 \(200x+300y=100(2x+3y)\). 注意到
+\[
+2x+3y=\frac14(5x+6y)+\frac34(x+2y)
+\geqslant\frac14\times50+\frac34\times14=23
+\]
+所以租赁费至少为 \(100\times23=2300\) 元. 取 \(x=4\)，\(y=5\) 时，\(5x+6y=50\)，\(x+2y=14\)，同时达到两项产量要求，且租赁费为 \(200\times4+300\times5=2300\) 元.
+故最少租赁费为 \(2300\) 元.
+\end{solution}
 
 \section{解答题}
 
@@ -226,7 +402,7 @@ D
 \begin{enumerate}
 \item 由二倍角公式，得
 \[
-f(x)=\bigl(1+\cos\varphi\bigr)\sin x+\sin\varphi\cos x-\sin x=\sin(x+\varphi).
+f(x)=\bigl(1+\cos\varphi\bigr)\sin x+\sin\varphi\cos x-\sin x=\sin(x+\varphi)
 \]
 函数 \(\sin(x+\varphi)\) 的最小值为 \(-1\). 因为在 \(x=\pi\) 处取得最小值，所以 \(\sin(\pi+\varphi)=-1\). 又 \(0<\varphi<\pi\)，故 \(\pi+\varphi\in(\pi,2\pi)\)，从而 \(\pi+\varphi=\frac{3\pi}{2}\)，即 \(\varphi=\frac{\pi}{2}\).
 
@@ -234,7 +410,7 @@ f(x)=\bigl(1+\cos\varphi\bigr)\sin x+\sin\varphi\cos x-\sin x=\sin(x+\varphi).
 
 由正弦定理，\(\dfrac{b}{\sin B}=\dfrac{a}{\sin A}\)，所以 \(\sin B=\dfrac{b\sin A}{a}=\sqrt{2}\cdot\dfrac{1}{2}=\dfrac{\sqrt{2}}{2}\). 因此 \(B=\frac{\pi}{4}\) 或 \(B=\frac{3\pi}{4}\)，相应地
 \[
-C=\pi-A-B=\frac{7\pi}{12}\quad\text{或}\quad C=\frac{\pi}{12}.
+C=\pi-A-B=\frac{7\pi}{12}\quad\text{或}\quad C=\frac{\pi}{12}
 \]
 故 \(C=\frac{\pi}{12}\) 或 \(\frac{7\pi}{12}\).
 \end{enumerate}
@@ -257,17 +433,17 @@ C=\pi-A-B=\frac{7\pi}{12}\quad\text{或}\quad C=\frac{\pi}{12}.
 \begin{enumerate}
 \item 有 \(\overrightarrow{FC}=(1,\sqrt{3},0)\)，\(\overrightarrow{FC_{1}}=(1,\sqrt{3},2)\)，\(\overrightarrow{EE_{1}}=\left(-\frac{1}{2},-\frac{\sqrt{3}}{2},1\right)\). 直接计算得
 \[
-\overrightarrow{EE_{1}}=-\overrightarrow{FC}+\frac{1}{2}\overrightarrow{FC_{1}}.
+\overrightarrow{EE_{1}}=-\overrightarrow{FC}+\frac{1}{2}\overrightarrow{FC_{1}}
 \]
 所以直线 \(EE_{1}\) 的方向向量是平面 \(FCC_{1}\) 内两个相交向量的线性组合，故 \(EE_{1}\) 的方向平行于平面 \(FCC_{1}\). 另外，平面 \(FCC_{1}\) 的一个法向量为 \(\overrightarrow{FC}\times\overrightarrow{FC_{1}}=2(\sqrt{3},-1,0)\)，而 \(\overrightarrow{FE}=\left(-\frac{3}{2},\frac{\sqrt{3}}{2},0\right)\) 与该法向量的内积为 \(-4\sqrt{3}\ne0\)，所以 \(E\notin\text{平面 }FCC_{1}\). 因此直线 \(EE_{1}\parallel\) 平面 \(FCC_{1}\).
 
 \item 取平面 \(D_{1}AC\) 内的两个相交向量 \(\overrightarrow{AC}=(3,\sqrt{3},0)\)，\(\overrightarrow{AD_{1}}=(1,\sqrt{3},2)\)，则该平面的一个法向量为
 \[
-\bs{n}_{1}=\overrightarrow{AC}\times\overrightarrow{AD_{1}}=2(\sqrt{3},-3,\sqrt{3}).
+\bs{n}_{1}=\overrightarrow{AC}\times\overrightarrow{AD_{1}}=2(\sqrt{3},-3,\sqrt{3})
 \]
 平面 \(BB_{1}C_{1}C\) 内的两个相交向量可取 \(\overrightarrow{BC}=(-1,\sqrt{3},0)\)，\(\overrightarrow{BB_{1}}=(0,0,2)\)，故其一个法向量为
 \[
-\bs{n}_{2}=\overrightarrow{BC}\times\overrightarrow{BB_{1}}=2(\sqrt{3},1,0).
+\bs{n}_{2}=\overrightarrow{BC}\times\overrightarrow{BB_{1}}=2(\sqrt{3},1,0)
 \]
 于是 \(\bs{n}_{1}\cdot\bs{n}_{2}=4(3-3)=0\). 两平面的法向量互相垂直，所以平面 \(D_{1}AC\perp\) 平面 \(BB_{1}C_{1}C\).
 \end{enumerate}
@@ -301,13 +477,13 @@ C=\pi-A-B=\frac{7\pi}{12}\quad\text{或}\quad C=\frac{\pi}{12}.
 \begin{enumerate}
 \item A 类轿车共有 \(100+300=400\) 辆，B 类轿车共有 \(150+450=600\) 辆，全部轿车共有 \(1600+z\) 辆. 由分层抽样的比例相同，得
 \[
-\frac{400}{1600+z}=\frac{10}{50}=\frac{1}{5},
+\frac{400}{1600+z}=\frac{10}{50}=\frac{1}{5}
 \]
 解得 \(z=400\).
 
 \item C 类轿车共有 \(400+600=1000\) 辆，其中舒适型轿车有 \(400\) 辆，标准型轿车有 \(600\) 辆. 按比例抽取容量为 \(5\) 的样本，样本中舒适型轿车有 \(5\cdot\frac{400}{1000}=2\) 辆，标准型轿车有 \(3\) 辆. 从这 \(5\) 辆中任取 \(2\) 辆，至少有 \(1\) 辆舒适型轿车的概率为
 \[
-1-\frac{\mathrm C_{3}^{2}}{\mathrm C_{5}^{2}}=1-\frac{3}{10}=\frac{7}{10}.
+1-\frac{\mathrm C_{3}^{2}}{\mathrm C_{5}^{2}}=1-\frac{3}{10}=\frac{7}{10}
 \]
 
 \item 这 \(8\) 辆轿车的得分总和为 \(9.4+8.6+9.2+9.6+8.7+9.3+9.0+8.2=72\)，所以样本平均数为 \(\bar x=\frac{72}{8}=9\). 满足 \(\lvert x-\bar x\rvert\leqslant0.5\) 的得分应在区间 \([8.5,9.5]\) 内，其中有 \(9.4\)，\(8.6\)，\(9.2\)，\(8.7\)，\(9.3\)，\(9.0\)，共 \(6\) 个. 因而所求概率为 \(\frac{6}{8}=\frac{3}{4}\).
@@ -326,18 +502,16 @@ C=\pi-A-B=\frac{7\pi}{12}\quad\text{或}\quad C=\frac{\pi}{12}.
 \begin{solution}
 \begin{enumerate}
 \item 对 \(n\geqslant2\)，由 \(S_n=b^n+r\) 得 \(a_n=S_n-S_{n-1}=b^{n-1}(b-1)\). 特别地，\(a_2=b(b-1)\)，\(a_3=b^2(b-1)\)，所以等比数列的公比为 \(\frac{a_3}{a_2}=b\). 又 \(a_1=S_1=b+r\)，故
-\[
-a_2=ba_1\quad\Longrightarrow\quad b(b-1)=b(b+r).
-\]
+\(a_2=ba_1\)，\(\Longrightarrow\)，\(b(b-1)=b(b+r)\).
 因为 \(b>0\)，所以 \(r=-1\).
 
 \item 当 \(b=2\) 时，\(S_n=2^n-1\). 因而 \(a_1=S_1=1\)，且对 \(n\geqslant2\)，\(a_n=S_n-S_{n-1}=2^{n-1}\)，即对任意 \(n\in\mathbf N^*\)，\(a_n=2^{n-1}\). 所以
 \[
-b_n=\frac{n+1}{4a_n}=\frac{n+1}{2^{n+1}}.
+b_n=\frac{n+1}{4a_n}=\frac{n+1}{2^{n+1}}
 \]
 于是
 \[
-T_n=\sum_{k=1}^{n}\frac{k+1}{2^{k+1}}=\sum_{k=1}^{n}\frac{k}{2^{k+1}}+\sum_{k=1}^{n}\frac{1}{2^{k+1}}=1-\frac{n+2}{2^{n+1}}+\frac{1}{2}-\frac{1}{2^{n+1}}=\frac{3}{2}-\frac{n+3}{2^{n+1}}.
+T_n=\sum_{k=1}^{n}\frac{k+1}{2^{k+1}}=\sum_{k=1}^{n}\frac{k}{2^{k+1}}+\sum_{k=1}^{n}\frac{1}{2^{k+1}}=1-\frac{n+2}{2^{n+1}}+\frac{1}{2}-\frac{1}{2^{n+1}}=\frac{3}{2}-\frac{n+3}{2^{n+1}}
 \]
 \end{enumerate}
 \end{solution}
@@ -385,50 +559,46 @@ b\in
 \begin{enumerate}
 \item 由 \(\bs{a}\perp\bs{b}\)，得
 \[
-\bs{a}\cdot\bs{b}=mx^2+(y+1)(y-1)=0,
+\bs{a}\cdot\bs{b}=mx^2+(y+1)(y-1)=0
 \]
 即轨迹 \(E\) 的方程为 \(mx^2+y^2=1\). 当 \(m>0\) 时，这是以原点为中心的椭圆；当 \(m=0\) 时，这是两条平行直线 \(y=1\) 和 \(y=-1\)；当 \(m<0\) 时，方程可写为 \(y^2-\lvert m\rvert x^2=1\)，表示焦点在 \(y\) 轴上的双曲线.
 
 \item 当 \(m=\frac14\) 时，轨迹为椭圆 \(\frac{x^2}{4}+y^2=1\). 设圆的半径为 \(\rho\)，取该圆任意一条切线，写成
-\[
-ux+vy=\rho,\qquad u^2+v^2=1.
-\]
+\(ux+vy=\rho\)，\(u^2+v^2=1\).
 令切点到原点的垂足为 \(H=\rho(u,v)\)，取直线方向向量 \((-v,u)\)，则直线上的点可表示为
 \[
-(x,y)=\bigl(\rho u-tv,\rho v+tu\bigr).
+(x,y)=\bigl(\rho u-tv,\rho v+tu\bigr)
 \]
 将其代入椭圆方程，得关于 \(t\) 的二次方程
 \[
-\left(u^2+\frac{v^2}{4}\right)t^2+\frac{3}{2}\rho uv\,t+\rho^2\left(\frac{u^2}{4}+v^2\right)-1=0.
+\left(u^2+\frac{v^2}{4}\right)t^2+\frac{3}{2}\rho uv\,t+\rho^2\left(\frac{u^2}{4}+v^2\right)-1=0
 \]
-记两个交点对应的参数为 \(t_1,t_2\). 对应点的向量内积为
+记两个交点对应的参数为 \(t_1\)，\(t_2\). 对应点的向量内积为
 \[
-\overrightarrow{OP_1}\cdot\overrightarrow{OP_2}=\rho^2+t_1t_2.
+\overrightarrow{OP_1}\cdot\overrightarrow{OP_2}=\rho^2+t_1t_2
 \]
 若令 \(\rho^2=\frac45\)，则由 \(u^2+v^2=1\) 有
 \[
-\rho^2\left(\frac{u^2}{4}+v^2\right)-1=-\rho^2\left(u^2+\frac{v^2}{4}\right).
+\rho^2\left(\frac{u^2}{4}+v^2\right)-1=-\rho^2\left(u^2+\frac{v^2}{4}\right)
 \]
 由韦达定理，\(t_1t_2=-\rho^2\)，因而 \(\overrightarrow{OP_1}\cdot\overrightarrow{OP_2}=0\)，即 \(OP_1\perp OP_2\). 同时该二次方程的判别式为
 \[
-\left(\frac32\rho uv\right)^2+4\rho^2\left(u^2+\frac{v^2}{4}\right)^2>0,
+\left(\frac32\rho uv\right)^2+4\rho^2\left(u^2+\frac{v^2}{4}\right)^2>0
 \]
 所以每条切线与椭圆有两个不同交点. 因此所求圆为
 \[
-x^2+y^2=\frac45.
+x^2+y^2=\frac45
 \]
 
 \item 直线 \(l\) 与椭圆只有一个公共点，所以 \(l\) 是椭圆的切线. 仍将其写成 \(ux+vy=R\)，其中 \(u^2+v^2=1\)，且切点 \(A_1=R(u,v)\). 椭圆 \(\frac{x^2}{4}+y^2=1\) 在法向量 \((u,v)\) 方向的支撑函数为 \(\sqrt{4u^2+v^2}\)，故切线条件为
-\[
-R=\sqrt{4u^2+v^2},\qquad R^2=1+3u^2.
-\]
+\(R=\sqrt{4u^2+v^2}\)，\(R^2=1+3u^2\).
 因此 \(u^2=\frac{R^2-1}{3}\)，\(v^2=\frac{4-R^2}{3}\). 椭圆在该切线上的切点为 \(B_1=\left(\frac{4u}{R},\frac{v}{R}\right)\). 所以
 \[
-\lvert A_1B_1\rvert^2=\frac{(R^2-4)^2u^2+(R^2-1)^2v^2}{R^2}=\frac{(R^2-1)(4-R^2)}{R^2}.
+\lvert A_1B_1\rvert^2=\frac{(R^2-4)^2u^2+(R^2-1)^2v^2}{R^2}=\frac{(R^2-1)(4-R^2)}{R^2}
 \]
 令 \(t=R^2\)，则 \(1<t<4\)，且
 \[
-\lvert A_1B_1\rvert^2=\frac{(t-1)(4-t)}{t}=5-t-\frac4t.
+\lvert A_1B_1\rvert^2=\frac{(t-1)(4-t)}{t}=5-t-\frac4t
 \]
 其导数为 \(-1+\frac4{t^2}\)，在 \(1<t<4\) 内令导数为零，得 \(t=2\). 此时函数先增后减，故 \(\lvert A_1B_1\rvert^2\) 的最大值为 \(1\)，从而当 \(R=\sqrt2\) 时，\(\lvert A_1B_1\rvert\) 取得最大值，最大值为 \(1\).
 \end{enumerate}

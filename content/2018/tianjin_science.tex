@@ -16,6 +16,14 @@
 B
 \end{answer}
 
+\begin{solution}
+由 \(C_{\R}B=\{x\mid x<1\}\)，所以
+\[
+A\cap(C_{\R}B)=\{x\mid 0<x<2\}\cap\{x\mid x<1\}=\{x\mid 0<x<1\}
+\]
+故选 B.
+\end{solution}
+
 \begin{problem}
 设变量 \(x\)，\(y\) 满足约束条件
 \(\begin{cases}
@@ -37,6 +45,14 @@ y\ge0,
 C
 \end{answer}
 
+\begin{solution}
+将约束改写为
+\(y\ge 2x-4\)，\(y\le x+1\)，\(y\le5-x\)，\(y\ge0\).
+边界直线 \(y=0\) 与 \(y=x+1\) 相交于 \((-1,0)\)，与 \(y=2x-4\) 相交于 \((2,0)\)；直线 \(y=2x-4\) 与 \(y=5-x\) 相交于 \((3,2)\)，直线 \(y=x+1\) 与 \(y=5-x\) 相交于 \((2,3)\).这四个交点均满足全部约束，且构成可行域的四个顶点.目标函数在这些顶点处的值分别为
+\(-3\)，\(6\)，\(21\)，\(19\).
+因此目标函数的最大值为 \(21\)，故选 C.
+\end{solution}
+
 \begin{problem}
 阅读如图的程序框图，运行相应的程序，若输入 \(N\) 的值为 \(20\)，则输出 \(T\) 的值为（\quad）
 
@@ -53,6 +69,10 @@ C
 B
 \end{answer}
 
+\begin{solution}
+程序开始时 \(i=2\)，\(T=0\).当 \(i=2\) 时，\(20/i=10\) 为整数，故 \(T\) 变为 \(1\)，再令 \(i=3\).当 \(i=3\) 时，\(20/i\) 不是整数，不改变 \(T\)，再令 \(i=4\).当 \(i=4\) 时，\(20/i=5\) 为整数，故 \(T\) 变为 \(2\)，再令 \(i=5\).此时满足 \(i\ge5\)，程序输出 \(T=2\).故选 B.
+\end{solution}
+
 \begin{problem}
 设 \(x\in\R\)，则“\(\left\lvert x-\dfrac12\right\rvert<\dfrac12\)”是“\(x^3<1\)”的（\quad）
 
@@ -66,6 +86,16 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+由
+\[
+\left\lvert x-\frac12\right\rvert<\frac12
+\Longleftrightarrow -\frac12<x-\frac12<\frac12
+\Longleftrightarrow 0<x<1
+\]
+对任意实数 \(x\)，函数 \(x^3\) 单调递增，因此 \(x^3<1\Longleftrightarrow x<1\).所以 \(0<x<1\) 能推出 \(x^3<1\)，但 \(x^3<1\) 不能推出 \(x>0\)，例如 \(x=-1\) 满足 \(x^3<1\) 而不满足 \(0<x<1\).故前者是后者的充分而不必要条件，选 A.
+\end{solution}
 
 \begin{problem}
 已知 \(a=\log_2\e\)，\(b=\ln2\)，\(c=\log_{\frac12}\dfrac13\)，则 \(a\)，\(b\)，\(c\) 的大小关系为（\quad）
@@ -81,6 +111,20 @@ A
 D
 \end{answer}
 
+\begin{solution}
+因为 \(0<\ln2<1\)，所以
+\[
+a=\log_2\e=\frac1{\ln2}>\ln2=b
+\]
+又因为 \(\ln3>1\)，所以
+\[
+c=\log_{\frac12}\frac13
+ =\frac{\ln(1/3)}{\ln(1/2)}
+ =\frac{\ln3}{\ln2}>\frac1{\ln2}=a
+\]
+因此 \(c>a>b\)，故选 D.
+\end{solution}
+
 \begin{problem}
 将函数 \(y=\sin\left(2x+\dfrac{\pi}{5}\right)\) 的图象向右平移 \(\dfrac{\pi}{10}\) 个单位长度，所得图象对应的函数（\quad）
 
@@ -92,8 +136,16 @@ D
 \end{problem}
 
 \begin{answer}
-C
+A
 \end{answer}
+
+\begin{solution}
+向右平移 \(\frac\pi{10}\) 后，横坐标 \(x\) 应替换为 \(x-\frac\pi{10}\)，所以所得函数为
+\[
+y=\sin\left(2\left(x-\frac\pi{10}\right)+\frac\pi5\right)=\sin2x
+\]
+其导数为 \(y'=2\cos2x\).在区间 \([\frac{3\pi}{4},\frac{5\pi}{4}]\) 上，\(2x\in[\frac{3\pi}{2},\frac{5\pi}{2}]\)，从而 \(\cos2x\ge0\)，函数单调递增.选项 B 的区间上导数为正，故不可能单调递减；选项 C 的区间上导数为负，故不可能单调递增；选项 D 的区间包含导数变号点，函数不单调递减.因此选 A.
+\end{solution}
 
 \begin{problem}
 已知双曲线 \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\)（\(a>0\)，\(b>0\)）的离心率为 \(2\)，过右焦点且垂直于 \(x\) 轴的直线与双曲线交于 \(A\)，\(B\) 两点. 设 \(A\)，\(B\) 到双曲线同一条渐近线的距离分别为 \(d_1\) 和 \(d_2\)，且 \(d_1+d_2=6\)，则双曲线的方程为（\quad）
@@ -106,8 +158,22 @@ C
 \end{problem}
 
 \begin{answer}
-B
+C
 \end{answer}
+
+\begin{solution}
+设双曲线的半焦距为 \(c\).由离心率 \(e=2\)，有 \(c=2a\)，再由 \(c^2=a^2+b^2\) 得 \(b^2=3a^2\).右焦点为 \((2a,0)\)，故过右焦点且垂直于 \(x\) 轴的直线为 \(x=2a\).代入双曲线方程得
+\(4-\frac{y^2}{b^2}=1\)，\(y=\pm\sqrt3b=\pm3a\).
+取渐近线 \(y=\sqrt3x\)，两交点到该直线的距离之和为
+\[
+\frac{\lvert2\sqrt3a-3a\rvert}{2}+\frac{\lvert2\sqrt3a+3a\rvert}{2}=2\sqrt3a
+\]
+由 \(d_1+d_2=6\) 得 \(a=\sqrt3\)，进而 \(a^2=3\)，\(b^2=9\).所以双曲线方程为
+\[
+\frac{x^2}{3}-\frac{y^2}{9}=1
+\]
+故选 C.
+\end{solution}
 
 \begin{problem}
 如图，在平面四边形 \(ABCD\) 中，\(AB\perp BC\)，\(AD\perp CD\)，\(\angle BAD=120^\circ\)，\(AB=AD=1\). 若点 \(E\) 为边 \(CD\) 上的动点，则 \(\overrightarrow{AE}\cdot\overrightarrow{BE}\) 的最小值为（\quad）
@@ -125,6 +191,25 @@ B
 A
 \end{answer}
 
+\begin{solution}
+取 \(A=(0,0)\)，\(B=(1,0)\).由 \(\angle BAD=120^\circ\) 及 \(AD=1\)，可取 \(D=(-\frac12,\frac{\sqrt3}{2})\).由 \(BC\perp AB\) 及 \(CD\perp AD\)，得 \(C=(1,\sqrt3)\).设 \(E=D+s(C-D)\)，其中 \(0\le s\le1\)，则
+\[
+E=\left(-\frac12+\frac{3s}{2},\frac{\sqrt3(1+s)}2\right)
+\]
+于是
+\[
+\overrightarrow{AE}\cdot\overrightarrow{BE}
+=|E|^2-\overrightarrow{AE}\cdot\overrightarrow{AB}
+=3s^2+1-\left(-\frac12+\frac{3s}{2}\right)
+=3s^2-\frac32s+\frac32
+\]
+配方得
+\[
+3s^2-\frac32s+\frac32=3\left(s-\frac14\right)^2+\frac{21}{16}
+\]
+当 \(s=\frac14\) 时取到最小值 \(\frac{21}{16}\)，故选 A.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -135,6 +220,16 @@ A
 \(4-i\)
 \end{answer}
 
+\begin{solution}
+分子分母同乘 \(1-2i\)，得
+\[
+\frac{6+7i}{1+2i}
+=\frac{(6+7i)(1-2i)}{(1+2i)(1-2i)}
+=\frac{20-5i}{5}
+=4-i
+\]
+\end{solution}
+
 \begin{problem}
 在 \(\left(x-\dfrac1{2\sqrt{x}}\right)^5\) 的展开式中，\(x^2\) 的系数为\fillinblank{}.
 \end{problem}
@@ -142,6 +237,18 @@ A
 \begin{answer}
 \(\dfrac52\)
 \end{answer}
+
+\begin{solution}
+展开式的通项为
+\[
+\mathrm C_5^k x^{5-k}\left(-\frac1{2\sqrt{x}}\right)^k
+=\mathrm C_5^k(-1)^k2^{-k}x^{5-\frac32k}
+\]
+要得到 \(x^2\) 项，需要 \(5-\frac32k=2\)，解得 \(k=2\).因此 \(x^2\) 的系数为
+\[
+\mathrm C_5^2\left(-\frac12\right)^2=\frac{10}{4}=\frac52
+\]
+\end{solution}
 
 \begin{problem}
 已知正方体 \(ABCD-A_1B_1C_1D_1\) 的棱长为 \(1\)，除面 \(ABCD\) 外，该正方体其余各面的中心分别为点 \(E\)，\(F\)，\(G\)，\(H\)，\(M\)（如图），则四棱锥 \(M-EFGH\) 的体积为\fillinblank{}.
@@ -153,6 +260,19 @@ A
 \(\dfrac1{12}\)
 \end{answer}
 
+\begin{solution}
+建立直角坐标系，令正方体为 \(0\le x\)，\(y\)，\(z\le1\)，且 \(ABCD\) 在 \(z=0\) 平面上.则顶面中心 \(M=(\frac12,\frac12,1)\)，四个侧面中心 \(E\)，\(F\)，\(G\)，\(H\) 均在平面 \(z=\frac12\) 上.四边形 \(EFGH\) 是正方形，其两条对角线长度均为 \(1\)，故
+\[
+S_{EFGH}=\frac12
+\]
+点 \(M\) 到平面 \(EFGH\) 的距离为 \(\frac12\)，所以
+\[
+V_{M-EFGH}=\frac13S_{EFGH}\cdot\frac12
+=\frac13\cdot\frac12\cdot\frac12
+=\frac1{12}
+\]
+\end{solution}
+
 \begin{problem}
 已知圆 \(x^2+y^2-2x=0\) 的圆心为 \(C\)，直线 \(x=-1+\dfrac{\sqrt2}{2}t\)，\(y=3-\dfrac{\sqrt2}{2}t\)（\(t\) 为参数）与该圆相交于 \(A\)，\(B\) 两点，则 \(\triangle ABC\) 的面积为\fillinblank{}.
 \end{problem}
@@ -161,13 +281,46 @@ A
 \(\dfrac12\)
 \end{answer}
 
+\begin{solution}
+圆方程化为
+\[
+(x-1)^2+y^2=1
+\]
+所以圆心 \(C=(1,0)\)，半径为 \(1\).由参数方程消去 \(t\)，得直线 \(x+y=2\).圆心到直线的距离为
+\[
+d=\frac{|1+0-2|}{\sqrt2}=\frac1{\sqrt2}
+\]
+弦 \(AB\) 的长度为
+\[
+AB=2\sqrt{1-d^2}=2\sqrt{1-\frac12}=\sqrt2
+\]
+以 \(AB\) 为底，三角形 \(ABC\) 的高为 \(d\)，故
+\[
+S_{\triangle ABC}=\frac12\cdot\sqrt2\cdot\frac1{\sqrt2}=\frac12
+\]
+\end{solution}
+
 \begin{problem}
 已知 \(a\)，\(b\in\R\)，且 \(a-3b+6=0\)，则 \(2^a+\dfrac1{8^b}\) 的最小值为\fillinblank{}.
 \end{problem}
 
 \begin{answer}
-\(\dfrac{13}{4}\)
+\(\dfrac14\)
 \end{answer}
+
+\begin{solution}
+由 \(a-3b+6=0\)，得 \(a=3b-6\).令 \(t=2^{3b}>0\)，则
+\[
+2^a+\frac1{8^b}
+=2^{3b-6}+2^{-3b}
+=\frac{t}{64}+\frac1t
+\]
+由基本不等式，
+\[
+\frac{t}{64}+\frac1t\ge2\sqrt{\frac{t}{64}\cdot\frac1t}=\frac14
+\]
+当 \(\frac{t}{64}=\frac1t\)，即 \(t=8\) 时取等号，此时 \(b=1\)，\(a=-3\).所以最小值为 \(\frac14\).
+\end{solution}
 
 \begin{problem}
 已知 \(a>0\)，函数
@@ -181,6 +334,25 @@ x^2+2ax+a, & x\le0,\\
 \begin{answer}
 \((4,8)\)
 \end{answer}
+
+\begin{solution}
+当 \(x\le0\) 时，方程化为
+\[
+x^2+2ax+a=ax\Longleftrightarrow x^2+ax+a=0
+\]
+其判别式为 \(a(a-4)\).当 \(0<a<4\) 时无实根；当 \(a=4\) 时有一个重根 \(x=-2\)；当 \(a>4\) 时有两个根，且两根之和为 \(-a<0\)、积为 \(a>0\)，所以两根均为负数，均满足 \(x\le0\).
+
+当 \(x>0\) 时，方程化为
+\[
+-x^2+2ax-2a=ax\Longleftrightarrow x^2-ax+2a=0
+\]
+其判别式为 \(a(a-8)\).当 \(0<a<8\) 时无实根；当 \(a=8\) 时有一个正的重根 \(x=4\)；当 \(a>8\) 时两根之和为 \(a>0\)、积为 \(2a>0\)，且判别式为正，所以两根均为正数.
+
+合并两段的根数：\(0<a\le4\) 时不超过一个根，\(4<a<8\) 时恰有左段的两个根，\(a=8\) 时有三个根，\(a>8\) 时有四个根.因此恰有两个互异实根当且仅当
+\[
+a\in(4,8)
+\]
+\end{solution}
 
 \section{解答题}
 
@@ -196,8 +368,41 @@ x^2+2ax+a, & x\le0,\\
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(B=\dfrac\pi3\).
-\item 短答案：\(b=\sqrt7\)，\(\sin(2A-B)=\dfrac{3\sqrt3}{14}\).
+\item 在 \(\triangle ABC\) 中，由正弦定理，
+\[
+\frac{a}{\sin A}=\frac{b}{\sin B}
+\]
+所以 \(b\sin A=a\sin B\).结合题设得
+\[
+\sin B=\cos\left(B-\frac\pi6\right)
+=\frac{\sqrt3}{2}\cos B+\frac12\sin B
+\]
+即 \(\sin B=\sqrt3\cos B\).因为 \(B\in(0,\pi)\)，且上式使 \(\cos B>0\)，故
+\(\tan B=\sqrt3\)，\(B=\frac\pi3\).
+
+\item 由余弦定理，
+\[
+b^2=a^2+c^2-2ac\cos B
+=2^2+3^2-2\cdot2\cdot3\cdot\frac12=7
+\]
+所以 \(b=\sqrt7\).又由题设，
+\[
+\sin A=\frac{a}{b}\cos\left(B-\frac\pi6\right)
+=\frac{2}{\sqrt7}\cos\frac\pi6=\frac{\sqrt3}{\sqrt7}
+\]
+由余弦定理，
+\[
+\cos A=\frac{b^2+c^2-a^2}{2bc}
+=\frac{7+9-4}{6\sqrt7}=\frac2{\sqrt7}>0
+\]
+因此
+\(\sin2A=2\sin A\cos A=\frac{4\sqrt3}{7}\)，\(\cos2A=2\cos^2A-1=\frac17\).
+于是
+\[
+\sin(2A-B)=\sin2A\cos B-\cos2A\sin B
+=\frac{4\sqrt3}{7}\cdot\frac12-\frac17\cdot\frac{\sqrt3}{2}
+=\frac{3\sqrt3}{14}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -217,11 +422,31 @@ x^2+2ax+a, & x\le0,\\
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：甲、乙、丙三个部门分别抽取 \(3\)，\(2\)，\(2\) 人.
+\item 三个部门的员工人数之比为 \(24:16:16=3:2:2\).分层抽样时各层抽样比例相同，抽取总人数为 \(7\)，所以应从甲、乙、丙三个部门分别抽取 \(3\)，\(2\)，\(2\) 人.
 \item
 \begin{enumerate}
-\item 短答案：\(P(X=0)=\dfrac4{35}\)，\(P(X=1)=\dfrac{12}{35}\)，\(P(X=2)=\dfrac{18}{35}\)，\(P(X=3)=\dfrac4{35}\)，\(E(X)=\dfrac{12}{7}\).
-\item 短答案：\(P(A)=\dfrac67\).
+\item 随机变量 \(X\) 的所有可能取值为 \(0\)，\(1\)，\(2\)，\(3\).从 \(4\) 名睡眠不足员工和 \(3\) 名睡眠充足员工中抽取 \(3\) 人，故
+\(P(X=k)=\frac{\mathrm C_4^k\mathrm C_3^{3-k}}{\mathrm C_7^3}\)，\(k=0\)，\(1\)，\(2\)，\(3\).
+因此
+\begin{center}
+\begin{tabular}{c|cccc}
+\(X\)&\(0\)&\(1\)&\(2\)&\(3\)\\ \hline
+\(P\)&\(\frac1{35}\)&\(\frac{12}{35}\)&\(\frac{18}{35}\)&\(\frac4{35}\)
+\end{tabular}
+\end{center}
+并且
+\[
+E(X)=0\cdot\frac1{35}+1\cdot\frac{12}{35}
++2\cdot\frac{18}{35}+3\cdot\frac4{35}
+=\frac{12}{7}
+\]
+
+\item 事件 \(A\) 是抽取的 \(3\) 人中两类员工均出现.其对立事件是抽到的 \(3\) 人全为睡眠不足或全为睡眠充足，因此
+\[
+P(A)=1-\frac{\mathrm C_4^3+\mathrm C_3^3}{\mathrm C_7^3}
+=1-\frac{4+1}{35}
+=\frac67
+\]
 \end{enumerate}
 \end{enumerate}
 \end{solution}
@@ -242,9 +467,52 @@ x^2+2ax+a, & x\le0,\\
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(MN\parallel\) 平面 \(CDE\).
-\item 短答案：二面角 \(E-BC-F\) 的正弦值为 \(\dfrac{\sqrt{10}}{10}\).
-\item 短答案：\(DP=\dfrac{\sqrt3}{3}\).
+\item 以 \(D\) 为原点，分别以 \(\overrightarrow{DA}\)，\(\overrightarrow{DC}\)，\(\overrightarrow{DG}\) 的方向为 \(x\)，\(y\)，\(z\) 轴正方向建立空间直角坐标系.由题设
+\(D=(0,0,0)\)，\(A=(2,0,0)\)，\(C=(0,2,0)\)，\(G=(0,0,2)\)
+\(B=(1,2,0)\)，\(E=(2,0,2)\)，\(F=(0,1,2)\).
+于是
+\(M=\left(0,\frac32,1\right)\)，\(N=(1,0,2)\)
+从而
+\[
+\overrightarrow{MN}=\left(1,-\frac32,1\right)
+\]
+平面 \(CDE\) 内有 \(\overrightarrow{DC}=(0,2,0)\)，\(\overrightarrow{DE}=(2,0,2)\).取其法向量 \(\mathbf{n}=(1,0,-1)\)，则
+\[
+\overrightarrow{MN}\cdot\mathbf{n}=1-1=0
+\]
+又 \(M\) 不在平面 \(CDE\) 上，所以 \(MN\parallel\) 平面 \(CDE\).
+
+\item 由坐标可得
+\(\overrightarrow{BC}=(-1,0,0)\)，\(\overrightarrow{BE}=(1,-2,2)\)，\(\overrightarrow{BF}=(-1,-1,2)\).
+设平面 \(BCE\) 的法向量为 \(\mathbf{n}\)，则 \(\mathbf{n}\perp\overrightarrow{BC}\)，\(\overrightarrow{BE}\)，可取 \(\mathbf{n}=(0,1,1)\).设平面 \(BCF\) 的法向量为 \(\mathbf{m}\)，则 \(\mathbf{m}\perp\overrightarrow{BC}\)，\(\overrightarrow{BF}\)，可取 \(\mathbf{m}=(0,2,1)\).于是两平面夹角的余弦的绝对值为
+\[
+\left|\cos\theta\right|
+=\frac{|\mathbf{m}\cdot\mathbf{n}|}{|\mathbf{m}||\mathbf{n}|}
+=\frac{3}{\sqrt5\sqrt2}
+=\frac{3\sqrt{10}}{10}
+\]
+所以二面角 \(E-BC-F\) 的正弦值为
+\[
+\sin\theta=\sqrt{1-\frac9{10}}=\frac{\sqrt{10}}{10}
+\]
+
+\item 设 \(DP=h\)，则 \(0\le h\le2\)，且 \(P=(0,0,h)\).因此
+\[
+\overrightarrow{BP}=(-1,-2,h)
+\]
+平面 \(ADGE\) 为 \(y=0\) 平面，可取法向量 \(\overrightarrow{DC}=(0,2,0)\).直线与平面所成角为 \(60^\circ\)，所以
+\[
+\sin60^\circ
+=\frac{|\overrightarrow{BP}\cdot\overrightarrow{DC}|}
+{|\overrightarrow{BP}||\overrightarrow{DC}|}
+=\frac2{\sqrt{h^2+5}}
+\]
+解得
+\[
+\frac{\sqrt3}{2}=\frac2{\sqrt{h^2+5}}
+\Longrightarrow h^2=\frac13
+\]
+因 \(h\ge0\)，故 \(DP=h=\frac{\sqrt3}{3}\).
 \end{enumerate}
 \end{solution}
 
@@ -264,11 +532,57 @@ x^2+2ax+a, & x\le0,\\
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(a_n=2^{n-1}\)，\(b_n=n\).
+\item 设等比数列 \(\{a_n\}\) 的公比为 \(q\).由 \(a_1=1\) 及 \(a_3=a_2+2\)，得
+\[
+q^2=q+2\Longrightarrow(q-2)(q+1)=0
+\]
+因为 \(q>0\)，所以 \(q=2\)，从而
+\[
+a_n=2^{n-1}
+\]
+设等差数列 \(\{b_n\}\) 的首项为 \(b_1\)，公差为 \(d\).由 \(a_4=8=b_3+b_5\)，得
+\[
+8=(b_1+2d)+(b_1+4d)
+\]
+即 \(b_1+3d=4\).又由 \(a_5=16=b_4+2b_6\)，得
+\[
+16=(b_1+3d)+2(b_1+5d)
+\]
+即 \(3b_1+13d=16\).联立可得 \(d=1\)，\(b_1=1\)，所以
+\[
+b_n=n
+\]
+
 \item
 \begin{enumerate}
-\item 短答案：\(T_n=2^{n+1}-n-2\).
-\item 短答案：题中等式成立.
+\item 由 \(a_n=2^{n-1}\)，得
+\[
+S_n=\sum_{j=1}^n2^{j-1}=2^n-1
+\]
+因此
+\[
+T_n=\sum_{k=1}^nS_k
+=\sum_{k=1}^n(2^k-1)
+=2^{n+1}-n-2
+\]
+
+\item 由上式及 \(b_k=k\)，有
+\[
+T_k+b_k+2=(2^{k+1}-k-2)+k+2=2^{k+1}
+\]
+所以
+\[
+\frac{(T_k+b_k+2)b_k}{(k+1)(k+2)}
+=\frac{k2^{k+1}}{(k+1)(k+2)}
+=\frac{2^{k+2}}{k+2}-\frac{2^{k+1}}{k+1}
+\]
+对 \(k=1\)，\(2\)，\(\ldots\)，\(n\) 求和，得到
+\[
+\sum_{k=1}^n\frac{(T_k+b_k+2)b_k}{(k+1)(k+2)}
+=\sum_{k=1}^n\left(\frac{2^{k+2}}{k+2}-\frac{2^{k+1}}{k+1}\right)
+=\frac{2^{n+2}}{n+2}-\frac{2^2}{2}
+=\frac{2^{n+2}}{n+2}-2
+\]
 \end{enumerate}
 \end{enumerate}
 \end{solution}
@@ -287,8 +601,65 @@ x^2+2ax+a, & x\le0,\\
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：椭圆方程为 \(\dfrac{x^2}{9}+\dfrac{y^2}{4}=1\).
-\item 短答案：\(k=\dfrac12\) 或 \(k=\dfrac{11}{28}\).
+\item 设椭圆半焦距为 \(c\).由离心率
+\[
+\frac ca=\frac{\sqrt5}{3}
+\]
+及 \(a^2=b^2+c^2\)，得
+\[
+\frac{b^2}{a^2}=1-\frac{c^2}{a^2}=1-\frac59=\frac49
+\]
+所以 \(b=\frac{2a}{3}\).左焦点为 \(F=(-c,0)\)，上顶点为 \(B=(0,b)\)，故
+\[
+FB=\sqrt{c^2+b^2}=a
+\]
+又 \(A=(b,0)\)，所以
+\[
+AB=b\sqrt2
+\]
+由 \(FB\cdot AB=6\sqrt2\)，得 \(ab=6\).结合 \(b=\frac{2a}{3}\)，得 \(a=3\)，\(b=2\).所以椭圆方程为
+\[
+\frac{x^2}{9}+\frac{y^2}{4}=1
+\]
+
+\item 设 \(P=(x_1,y_1)\)，\(Q=(x_2,y_2)\).因为 \(P\)，\(Q\) 在同一条过原点的直线 \(y=kx\) 上，且 \(P\) 在椭圆第一象限内，所以 \(y_1>y_2>0\).直线 \(AB\) 为 \(x+y=2\)，且 \(\angle OAB=\frac\pi4\).因此
+\[
+|AQ|=\frac{y_2}{\sin\angle OAB}=\sqrt2y_2
+\]
+又 \(PQ\) 与 \(OQ\) 同方向，故
+\[
+|PQ|\sin\angle AOQ=y_1-y_2
+\]
+将这两式代入题设条件，得
+\[
+\sqrt2y_2=\frac{5\sqrt2}{4}(y_1-y_2)
+\Longrightarrow 5y_1=9y_2
+\]
+由 \(P\in y=kx\) 且 \(P\) 在椭圆上，
+\[
+\frac{x_1^2}{9}+\frac{k^2x_1^2}{4}=1
+\]
+从而
+\[
+y_1=kx_1=\frac{6k}{\sqrt{9k^2+4}}
+\]
+由 \(Q\in y=kx\) 且 \(x_2+y_2=2\)，得
+\[
+y_2=\frac{2k}{k+1}
+\]
+代入 \(5y_1=9y_2\)，并利用 \(k>0\)，得
+\[
+5(k+1)=3\sqrt{9k^2+4}
+\]
+两边平方并整理，得
+\[
+56k^2-50k+11=0
+\]
+所以
+\[
+k=\frac{50\pm6}{112}
+\]
+即 \(k=\frac12\) 或 \(k=\frac{11}{28}\).两值均为正，且均满足平方前的等式.
 \end{enumerate}
 \end{solution}
 
@@ -305,8 +676,81 @@ x^2+2ax+a, & x\le0,\\
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(h(x)\) 在 \((-\infty,0)\) 上单调递减，在 \((0,+\infty)\) 上单调递增.
-\item 短答案：\(x_1+g(x_2)=-\dfrac{2\ln\ln a}{\ln a}\).
-\item 短答案：当 \(a\ge e^{\frac1e}\) 时，存在直线 \(l\)，使 \(l\) 是曲线 \(y=f(x)\) 的切线，也是曲线 \(y=g(x)\) 的切线.
+\item 记 \(L=\ln a\)，则 \(L>0\)，且
+\[
+h'(x)=a^x\ln a-\ln a=L(a^x-1)
+\]
+因为 \(a^x<1\) 当 \(x<0\)，\(a^x=1\) 当 \(x=0\)，\(a^x>1\) 当 \(x>0\)，所以 \(h(x)\) 在 \((-\infty,0)\) 上单调递减，在 \((0,+\infty)\) 上单调递增.
+
+\item 两条切线平行，所以斜率相等.由
+\(f'(x_1)=a^{x_1}\ln a\)，\(g'(x_2)=\frac1{x_2\ln a}\)
+得
+\[
+a^{x_1}\ln a=\frac1{x_2\ln a}
+\]
+两边取自然对数，得
+\[
+x_1\ln a+\ln x_2+2\ln\ln a=0
+\]
+除以 \(\ln a\)，并注意 \(g(x_2)=\frac{\ln x_2}{\ln a}\)，可得
+\[
+x_1+g(x_2)=-\frac{2\ln\ln a}{\ln a}
+\]
+
+\item 仍记 \(L=\ln a\).在 \(x_1\) 处，曲线 \(y=f(x)\) 的切线为
+\[
+l_1:\ y=a^{x_1}+a^{x_1}L(x-x_1)
+\]
+在 \(x_2\) 处，曲线 \(y=g(x)\) 的切线为
+\[
+l_2:\ y=\frac{\ln x_2}{L}+\frac1{x_2L}(x-x_2)
+\]
+若两切线重合，首先必须有斜率相等，即
+\[
+a^{x_1}L=\frac1{x_2L}
+\]
+此时
+\[
+x_2=\frac1{a^{x_1}L^2}>0
+\]
+将其代入两条切线的截距相等条件，得到只含 \(x_1\) 的方程
+\[
+u(x_1)=a^{x_1}(1-Lx_1)+x_1+\frac1L+\frac{2\ln L}{L}=0
+\]
+其中
+\[
+u(x)=a^x(1-Lx)+x+\frac1L+\frac{2\ln L}{L}
+\]
+下面证明当 \(L\ge\frac1e\) 时 \(u\) 有零点.其导数为
+\[
+u'(x)=1-L^2xa^x
+\]
+当 \(x<0\) 时，\(u'(x)>0\).当 \(x>0\) 时，
+\[
+u''(x)=-L^2a^x(1+Lx)<0
+\]
+所以 \(u'(x)\) 在 \((0,+\infty)\) 上递减.又
+\(u'(0)=1>0\)，\(u'\left(\frac1{L^2}\right)=1-a^{1/L^2}<0\)
+故存在唯一的 \(x_0>0\) 使 \(u'(x_0)=0\)，且 \(u\) 在 \(x_0\) 处取得最大值.由 \(u'(x_0)=0\)，得
+\[
+L^2x_0a^{x_0}=1
+\]
+从而
+\[
+u(x_0)=\frac1{L^2x_0}+x_0+\frac{2\ln L}{L}
+\ge\frac2L+\frac{2\ln L}{L}
+=\frac{2(1+\ln L)}{L}\ge0
+\]
+另一方面，由 \(a^x=e^{Lx}\ge1+Lx\)，当 \(x>\frac1L\) 时有
+\[
+u(x)\le(1+Lx)(1-Lx)+x+\frac1L+\frac{2\ln L}{L}
+\]
+右端是关于 \(x\) 的二次式，且当 \(x\to+\infty\) 时趋于 \(-\infty\).因此可取充分大的 \(x_1>x_0\)，使 \(u(x_1)<0\).由连续函数零点定理，方程 \(u(x)=0\) 在 \(x_0\) 与该 \(x_1\) 之间有解.
+
+取这个解为 \(x_1\)，再令
+\[
+x_2=\frac1{a^{x_1}L^2}>0
+\]
+则两条切线斜率相等且截距相等，因而重合为同一直线.由 \(L\ge\frac1e\Longleftrightarrow a\ge e^{1/e}\)，结论得证.
 \end{enumerate}
 \end{solution}

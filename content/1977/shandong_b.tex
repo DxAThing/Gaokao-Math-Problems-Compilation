@@ -4,15 +4,21 @@
 
 \chapter{1977年山东B卷}
 
+\section{解答题}
+
 \begin{problem}
 \(\sqrt{\left( -a \right)^2}=?\)
 \end{problem}
 
 \begin{solution}
-\(\sqrt{\left( -a \right)^2}=\begin{cases}
-a, & a\geqslant 0,\\
--a, & a<0
-\end{cases}\).
+因为 \(\left( -a \right)^2=a^2\)，而算术平方根的值非负，所以
+\(\sqrt{\left( -a \right)^2}=\sqrt{a^2}=\lvert a\rvert\). 当 \(a\geqslant0\) 时，\(\lvert a\rvert=a\)；当 \(a<0\) 时，\(\lvert a\rvert=-a\). 因此
+\[
+\sqrt{\left( -a \right)^2}=\begin{cases}
+a, & a\geqslant0,\\
+-a, & a<0.
+\end{cases}
+\]
 \end{solution}
 
 \begin{problem}
@@ -20,22 +26,25 @@ a, & a\geqslant 0,\\
 \end{problem}
 
 \begin{solution}
-原式 \(=\log_{\frac{1}{2}}\left[ \left( 1-\frac{3}{4} \right)\cdot 1 \right]=2\).
+由 \(\cos\frac{\pi}{6}=\frac{\sqrt{3}}{2}\) 和 \(\cot\frac{\pi}{4}=1\)，得
+\(1-\cos^2\frac{\pi}{6}=1-\frac{3}{4}=\frac{1}{4}\)，\(\left( \cot\frac{\pi}{4} \right)^{-2}=1^{-2}=1\).
+所以原式 \(=\log_{\frac{1}{2}}\frac{1}{4}\). 又因为 \(\frac{1}{4}=\left(\frac{1}{2}\right)^2\)，故原式 \(=2\).
 \end{solution}
 
 \begin{problem}
 写出下列函数的定义域：
 
 \begin{enumerate}
-\item \(y=\frac{\sqrt{\left| x-3 \right|}}{x-2}\)；
+\item \(y=\frac{\sqrt{\lvert x-3\rvert}}{x-2}\)；
 \item \(y=\lg\left( x+3 \right)\).
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item \(x\neq 2\).
-\item \(x>-3\).
+\item 对任意实数 \(x\)，都有 \(\lvert x-3\rvert\geqslant0\)，所以根式始终有意义；分母不能为零，需满足 \(x-2\ne0\). 因此定义域为 \(\{x\in\R\mid x\ne2\}\).
+
+\item 对数的真数必须为正，需满足 \(x+3>0\)，所以定义域为 \(\{x\in\R\mid x>-3\}\).
 \end{enumerate}
 \end{solution}
 
@@ -44,7 +53,12 @@ a, & a\geqslant 0,\\
 \end{problem}
 
 \begin{solution}
-由直线方程的两点式，得 \(\frac{y-1}{3-1}=\frac{x-0}{2-0}\)，化简，得 \(x-y+1=0\).
+两点的横坐标不同，直线斜率为
+\[
+k=\frac{3-1}{2-0}=1
+\]
+由点斜式，所求直线满足 \(y-1=1\left( x-0 \right)\)，即
+\(y=x+1\)，或写成一般式 \(x-y+1=0\).
 \end{solution}
 
 \begin{problem}
@@ -52,7 +66,15 @@ a, & a\geqslant 0,\\
 \end{problem}
 
 \begin{solution}
-因为 \(a=4\)，\(b=3\)，所以渐近线方程为 \(\frac{x}{4}\pm\frac{y}{3}=0\).
+将方程写成标准形式
+\[
+\frac{x^2}{4^2}-\frac{y^2}{3^2}=1
+\]
+因此双曲线的参数为 \(a=4\)，\(b=3\). 对于双曲线 \(\frac{x^2}{a^2}-\frac{y^2}{b^2}=1\)，其渐近线为 \(y=\pm\frac{b}{a}x\). 代入 \(a\)，\(b\) 得
+\[
+y=\pm\frac{3}{4}x
+\]
+即渐近线方程为 \(\frac{x}{4}+\frac{y}{3}=0\) 和 \(\frac{x}{4}-\frac{y}{3}=0\).
 \end{solution}
 
 \begin{problem}
@@ -61,10 +83,8 @@ a, & a\geqslant 0,\\
 \bitmapfigure[float=inline,width=6.0cm]{img/1977/shandong_b/q6_fig1.png}
 \end{problem}
 
-\FloatBarrier
-
 \begin{solution}
-正四棱锥.
+图中的一个视图为正方形，另一个视图为以一个顶点为顶点、以正方形的一条边为底边的等腰三角形. 这说明几何体的底面是正方形，四个侧面都是以同一个顶点为公共顶点的三角形，且顶点在底面中心的正上方. 因此该几何体是正四棱锥.
 \end{solution}
 
 \begin{problem}
@@ -72,17 +92,33 @@ a, & a\geqslant 0,\\
 \end{problem}
 
 \begin{solution}
-\solutionfigure{\bitmapfigure[width=6.0cm]{img/1977/shandong_b/q7_solution_fig1.png}}
-
-因为 \(AB:AD=2:1\)，\(AM=\frac{1}{2}AB\)，所以 \(AM=AD\). 所以 \(\angle ADM=\angle AMD\). 又因为 \(AB\parallel DC\)，且 \(A\)，\(M\)，\(B\) 三点共线，所以 \(\angle AMD=\angle MDC\). 因此 \(\angle MDC=\frac{1}{2}\angle ADC\).
-
-又因为 \(M\) 为 \(AB\) 的中点，所以 \(MB=AM\). 而平行四边形 \(ABCD\) 中 \(AD=BC\)，又已知 \(AM=AD\)，所以 \(MB=BC\). 因此 \(\triangle MBC\) 为等腰三角形，\(\angle BMC=\angle MCB\). 又因为 \(MB\parallel DC\)，所以 \(\angle BMC=\angle MCD\). 因此 \(\angle BCD=\angle MCB+\angle MCD=2\angle MCD\)，即 \(\angle MCD=\frac{1}{2}\angle BCD\).
-
+由题意，\(AB:AD=2:1\)，且 \(M\) 是 \(AB\) 的中点，所以
 \[
-\angle MDC+\angle MCD=\frac{1}{2}\left( \angle ADC+\angle BCD \right)=\frac{1}{2}\pi=\frac{\pi}{2}
+AM=MB=\frac{1}{2}AB=AD
+\]
+在等腰三角形 \(ADM\) 中，\(AM=AD\)，故
+\(\angle ADM=\angle AMD\). 又因为 \(AB\parallel DC\)，且 \(A\)，\(M\)，\(B\) 三点共线，所以直线 \(AM\parallel DC\)，从而由平行线所成的角相等，\(\angle AMD=\angle MDC\). 因此
+\[
+\angle ADC=\angle ADM+\angle MDC=2\angle MDC
 \]
 
-所以 \(\angle DMC=\frac{\pi}{2}\).
+\solutionfigure{\bitmapfigure[width=6.0cm]{img/1977/shandong_b/q7_solution_fig1.png}}
+
+平行四边形的对边相等，故 \(AD=BC\)，于是 \(MB=BC\). 在等腰三角形 \(MBC\) 中，\(MB=BC\)，所以 \(\angle BMC=\angle MCB\). 由于 \(MB\parallel DC\)，有 \(\angle BMC=\angle MCD\)，从而
+\[
+\angle BCD=\angle MCB+\angle MCD=2\angle MCD
+\]
+
+平行四边形的邻角互补，即 \(\angle ADC+\angle BCD=\pi\). 因此
+\[
+\angle MDC+\angle MCD
+=\frac{1}{2}\left( \angle ADC+\angle BCD \right)
+=\frac{\pi}{2}
+\]
+在三角形 \(DMC\) 中，三角形内角和为 \(\pi\)，所以
+\[
+\angle DMC=\pi-\angle MDC-\angle MCD=\frac{\pi}{2}
+\]
 \end{solution}
 
 \begin{problem}
@@ -96,28 +132,59 @@ a, & a\geqslant 0,\\
 
 \begin{solution}
 \begin{enumerate}
-\item 因为方程有两个不相等的实数根，所以 \(b^2-4ac>0\)，即 \(1-\frac{\sin\alpha}{\cos\alpha}=1-\tan\alpha>0\)，亦即 \(\tan\alpha<1\). 因此 \(0<\alpha<\frac{\pi}{4}\) 时，方程有两个不相等的实数根.
-\item 当 \(0<\alpha<\frac{\pi}{4}\) 时，方程的根为 \(x=\frac{-1\pm\sqrt{1-\tan\alpha}}{\sin\alpha}\).
+\item 因为 \(0<\alpha<\frac{\pi}{2}\)，所以 \(\sin\alpha>0\)，\(\cos\alpha>0\)，该方程确为关于 \(x\) 的二次方程. 其二次项系数、一次项系数和常数项分别为
+\(A=\frac{\sin\alpha}{2}\)，\(B=1\)，\(C=\frac{1}{2\cos\alpha}\).
+方程有两个不相等的实数根的充要条件是判别式 \(\Delta=B^2-4AC>0\). 计算得
+\[
+\Delta=1-4\cdot\frac{\sin\alpha}{2}\cdot\frac{1}{2\cos\alpha}
+=1-\frac{\sin\alpha}{\cos\alpha}=1-\tan\alpha
+\]
+所以需要 \(\tan\alpha<1\). 在区间 \(\left(0,\frac{\pi}{2}\right)\) 内，正切函数递增，且 \(\tan\frac{\pi}{4}=1\)，故
+\[
+0<\alpha<\frac{\pi}{4}
+\]
+
+\item 当 \(0<\alpha<\frac{\pi}{4}\) 时，\(\Delta=1-\tan\alpha>0\). 由求根公式
+\[
+x=\frac{-B\pm\sqrt{\Delta}}{2A}
+=\frac{-1\pm\sqrt{1-\tan\alpha}}{\sin\alpha}
+\]
+因此两个不相等的实数根为
+\(x_1=\frac{-1+\sqrt{1-\tan\alpha}}{\sin\alpha}\)，\(x_2=\frac{-1-\sqrt{1-\tan\alpha}}{\sin\alpha}\).
 \end{enumerate}
 \end{solution}
-
 
 \begin{problem}
 试比较等底等高的正四棱锥和正圆锥的侧面积，看哪个的侧面积较小.
 \end{problem}
 
 \begin{solution}
-设正四棱锥和圆锥的底面积为 \(S\)，高为 \(h\). 则正四棱锥底面边长为 \(\sqrt{S}\)，斜高为 \(\sqrt{\frac{S}{4}+h^2}\). 圆锥的底面半径 \(r=\sqrt{\frac{S}{\pi}}\)，母线 \(l=\sqrt{\frac{S}{\pi}+h^2}\).
-
+设两几何体的底面积均为 \(S>0\)，高均为 \(h>0\). 对正四棱锥，设正方形底面的边长为 \(a\)，则 \(a^2=S\)，从顶点到底面某一边中点的斜高为
 \[
-S_{\text{正四棱锥侧}}=4\cdot\frac{1}{2}\cdot\sqrt{S}\cdot\sqrt{\frac{S}{4}+h^2}=\sqrt{S^2+4Sh^2}
+l_1=\sqrt{h^2+\left( \frac{a}{2} \right)^2}=\sqrt{h^2+\frac{S}{4}}
+\]
+因此正四棱锥的侧面积为
+\[
+S_1=4\cdot\frac{1}{2}a l_1
+=2\sqrt{S}\sqrt{h^2+\frac{S}{4}}
+\]
+从而
+\[
+S_1^2=S^2+4Sh^2
 \]
 
+对正圆锥，设底面半径为 \(r\)，母线长为 \(l_2\). 由 \(\pi r^2=S\) 和勾股定理，得
+\(r=\sqrt{\frac{S}{\pi}}\)，\(l_2=\sqrt{h^2+r^2}=\sqrt{h^2+\frac{S}{\pi}}\).
+所以正圆锥的侧面积为
 \[
-S_{\text{圆锥侧}}=\pi\cdot\sqrt{\frac{S}{\pi}}\cdot\sqrt{\frac{S}{\pi}+h^2}=\sqrt{S^2+\pi Sh^2}
+S_2=\pi r l_2
+\]
+从而
+\[
+S_2^2=\pi^2\cdot\frac{S}{\pi}\left( h^2+\frac{S}{\pi} \right)=S^2+\pi Sh^2
 \]
 
-因为 \(\pi<4\)，所以 \(S_{\text{圆锥侧}}<S_{\text{正四棱锥侧}}\).
+因为 \(\pi<4\) 且 \(S\)，\(h>0\)，所以 \(S_2^2<S_1^2\). 两个侧面积均为正数，故 \(S_2<S_1\). 因此正圆锥的侧面积较小.
 \end{solution}
 
 \begin{problem}
@@ -127,7 +194,29 @@ S_{\text{圆锥侧}}=\pi\cdot\sqrt{\frac{S}{\pi}}\cdot\sqrt{\frac{S}{\pi}+h^2}=\
 \begin{solution}
 \solutionfigure{\bitmapfigure[width=4.2cm]{img/1977/shandong_b/q10_solution_fig1.png}}
 
-在 \(\triangle ABS\) 中，\(AB=vt\)，\(\angle A=\alpha\)，\(\angle S=\beta-\alpha\). 由正弦定理得 \(\frac{BS}{\sin\alpha}=\frac{vt}{\sin\left( \beta-\alpha \right)}\)，所以 \(BS=\frac{vt\sin\alpha}{\sin\left( \beta-\alpha \right)}\).
+题面中的 \(\alpha\)、\(\beta\) 按度数表示.
+船从 \(A\) 到 \(B\) 向正北航行，所以
+\[
+AB=vt
+\]
+在三角形 \(ABS\) 中，\(AB\) 的方向是正北，故 \(\angle BAS=\alpha\). 在 \(B\) 点，射线 \(BA\) 指向正南，而射线 \(BS\) 是北 \(\beta\) 度东，所以
+\[
+\angle ABS=180^\circ-\beta
+\]
+由三角形内角和，
+\[
+\angle ASB=180^\circ-\angle BAS-\angle ABS
+=180^\circ-\alpha-\left( 180^\circ-\beta \right)=\beta-\alpha
+\]
+由图中灯塔位于航线东侧且在 \(B\) 的北方可知 \(\beta>\alpha\)，因此该角为正. 在三角形 \(ABS\) 中应用正弦定理，\(BS\) 对应角 \(\alpha\)，\(AB\) 对应角 \(\beta-\alpha\)，于是
+\[
+\frac{BS}{\sin\alpha}=\frac{AB}{\sin\left( \beta-\alpha \right)}
+=\frac{vt}{\sin\left( \beta-\alpha \right)}
+\]
+所以
+\[
+BS=\frac{vt\sin\alpha}{\sin\left( \beta-\alpha \right)}
+\]
 \end{solution}
 
 \begin{problem}
@@ -138,42 +227,58 @@ S_{\text{圆锥侧}}=\pi\cdot\sqrt{\frac{S}{\pi}}\cdot\sqrt{\frac{S}{\pi}+h^2}=\
 \item 最大面积是多少？
 \end{enumerate}
 
-（取 \(\pi\approx 3\)）（图尺寸单位：米）
+（取 \(\pi\approx3\)）（图尺寸单位：米）
 
-{\leftskip=0pt\relax
-\rightskip=0pt\relax
-\bitmapfigure[width=4.8cm]{img/1977/shandong_b/q11_fig1.png}}
+\bitmapfigure[width=4.8cm]{img/1977/shandong_b/q11_fig1.png}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item 设半圆的半径为 \(x\) 米，隧道横断面面积为 \(S\) 平方米. 则
-\(\displaystyle y\approx\left( 23-3x-0.5\times 2-2x \right)\times\frac{1}{2}=\left( 11-2.5x \right)\) 米
+\item 设半圆半径为 \(x\) 米，两侧直墙的高度为 \(y\) 米，横断面面积为 \(S\) 平方米. 按图中尺寸，半圆弧长取 \(\pi x\approx3x\). 底部边界由两段长度为 \(0.5\) 米的水平线、凹入部分的两条竖直边（每条长 \(0.5\) 米）以及凹入部分的上边组成；其水平边界总长为直径 \(2x\)，竖直边总长为 \(0.5\times2\). 因此周长条件给出
+\[
+23\approx3x+2y+2x+0.5\times2
+\]
+从而
+\[
+y\approx\frac{23-3x-2x-0.5\times2}{2}=11-2.5x
+\]
 
-\(\displaystyle S\approx\frac{3x^2}{2}+2x\left( 11-2.5x \right)-\left( 2x-1 \right)\times 0.5=-3.5x^2+21x+0.5\)
+隧道横断面面积等于上半圆面积加上两侧墙之间的矩形面积，再减去底部凹入的矩形面积. 其中凹入部分的宽为 \(2x-1\) 米，高为 \(0.5\) 米，所以
+\[
+S\approx\frac{3x^2}{2}+2xy-\left( 2x-1 \right)\times0.5
+\]
+代入 \(y=11-2.5x\)，化简得
+\[
+S\approx\frac{3x^2}{2}+2x\left( 11-2.5x \right)-\left( 2x-1 \right)\times0.5=-3.5x^2+21x+0.5
+\]
+几何尺寸还需满足 \(2x-1>0\) 且 \(y>0\)，即 \(\frac{1}{2}<x<\frac{22}{5}\). 在这个范围内，配方得
+\[
+S\approx-3.5\left( x-3 \right)^2+32
+\]
+因为 \(-3.5\left( x-3 \right)^2\leqslant0\)，且 \(x=3\) 在允许范围内，所以当 \(x=3\) 米时，面积取得最大值；此时
+\[
+y=11-2.5\times3=3.5\text{ 米}
+\]
 
-因为 \(-3.5<0\)，所以当 \(x=-\frac{21}{2\times\left( -3.5 \right)}=3\) 时，\(S\) 有最大值.
-
-当 \(x=3\) 时，\(y=11-2.5\times 3=3.5\) 米.
-
-\item
-\(\displaystyle S_{\max}=\frac{4\times\left( -3.5 \right)\times 0.5-21^2}{4\times\left( -3.5 \right)}=32\) 平方米
-
-答：当半圆的半径为 \(x=3\) 米，\(y=3.5\) 米时隧道的横断面面积最大，最大面积为 \(32\) 平方米.
+\item 由上式直接得到
+\[
+S_{\max}=32\text{ 平方米}
+\]
 \end{enumerate}
 \end{solution}
 
 \section{参考题}
 
 \begin{problem}
-求极限：\(\lim\limits_{x\to 0}\frac{\ln(1+x)}{x}\).
+求极限：\(\lim\limits_{x\to0}\frac{\ln\left( 1+x \right)}{x}\).
 \end{problem}
 
 \begin{solution}
+当 \(x\) 趋近于 \(0\) 时，\(1+x>0\)，所以对数函数在所需邻域内有定义. 此时分子 \(\ln\left( 1+x \right)\to0\)，分母 \(x\to0\)，且分子、分母在该邻域内可导. 由洛必达法则，
 \[
-\lim\limits_{x\to 0}\frac{\ln(1+x)}{x}
-=\lim\limits_{x\to 0}\frac{[\ln(1+x)]'}{x'}
-=\lim\limits_{x\to 0}\frac{1}{1+x}=1
+\lim\limits_{x\to0}\frac{\ln\left( 1+x \right)}{x}
+=\lim\limits_{x\to0}\frac{\dfrac{1}{1+x}}{1}
+=\lim\limits_{x\to0}\frac{1}{1+x}=1
 \]
 \end{solution}
 
@@ -182,24 +287,19 @@ S_{\text{圆锥侧}}=\pi\cdot\sqrt{\frac{S}{\pi}}\cdot\sqrt{\frac{S}{\pi}+h^2}=\
 \end{problem}
 
 \begin{solution}
-\begin{center}
-\bitmapfigure[float=inline,width=5.0cm]{img/1977/shandong_b/ref1_q2_solution_fig1.png}
-\end{center}
+\solutionfigure{\bitmapfigure[width=5.0cm]{img/1977/shandong_b/ref1_q2_solution_fig1.png}}
 
-设曲边形面积为 \(S\). 解方程组
+由 \(y^2=4x\) 和 \(x^2=4y\) 可知交点都在第一象限或原点. 联立两式，将 \(y=\frac{x^2}{4}\) 代入 \(y^2=4x\)，得
 \[
-\begin{cases}
-y^2=4x,\\
-x^2=4y.
-\end{cases}
+\frac{x^4}{16}=4x
+\quad\Longleftrightarrow\quad
+x\left( x^3-64 \right)=0
 \]
-得两交点的横坐标 \(x=0\) 与 \(x=4\).
-
+所以交点的横坐标为 \(x=0\) 和 \(x=4\). 在 \(0\leqslant x\leqslant4\) 上，上方曲线为 \(y=2\sqrt{x}\)，下方曲线为 \(y=\frac{x^2}{4}\). 因此所围成区域的面积为
 \[
-\begin{aligned}
-S&=\int_0^4 2\sqrt{x}\,\mathrm{d}x-\int_0^4 \frac{1}{4}x^2\,\mathrm{d}x
-=\left. \frac{4}{3}x^{\frac{3}{2}} \right|_0^4-\left. \frac{1}{12}x^3 \right|_0^4 \\
-&=\frac{32}{3}-\frac{16}{3}=\frac{16}{3}.
-\end{aligned}
+S=\int_0^4\left( 2\sqrt{x}-\frac{x^2}{4} \right)\,\mathrm{d}x
+=\left.\frac{4}{3}x^{\frac{3}{2}}\right|_0^4-\left.\frac{1}{12}x^3\right|_0^4
+=\frac{32}{3}-\frac{16}{3}=\frac{16}{3}
 \]
+所以曲边形面积为 \(\frac{16}{3}\) 平方单位.
 \end{solution}

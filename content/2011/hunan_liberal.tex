@@ -16,8 +16,14 @@
 B
 \end{answer}
 
+\begin{solution}
+因为 \(U=M\cup N\)，所以 \(\complement_U N\subseteq M\)，从而
+\(M\cap\complement_U N=\complement_U N=\{2,4\}\). 因此
+\(N=\complement_U\{2,4\}=\{1,3,5\}\)，故选 B.
+\end{solution}
+
 \begin{problem}
-若 \(a,b\in\R\)，\(\i\) 为虚数单位，且 \((a + \i)\i = b + \i\)，则（\quad）
+若 \(a\)，\(b\in\R\)，\(\i\) 为虚数单位，且 \((a + \i)\i = b + \i\)，则（\quad）
 
 \choices
     {\(a = 1\)，\(b = 1\)}
@@ -29,6 +35,12 @@ B
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+由 \(\i^2=-1\)，得
+\((a+\i)\i=a\i-1\). 与 \(b+\i\) 比较实部和虚部，得到
+\(b=-1\)，\(a=1\)，故选 C.
+\end{solution}
 
 \begin{problem}
 “\(x>1\)”是“\(|x|>1\)”的（\quad）
@@ -44,10 +56,15 @@ C
 A
 \end{answer}
 
+\begin{solution}
+若 \(x>1\)，则 \(|x|=x>1\)，所以 \(x>1\) 是 \(|x|>1\) 的充分条件.
+但 \(x=-2\) 时 \(|x|>1\) 成立而 \(x>1\) 不成立，所以它不是必要条件，故选 A.
+\end{solution}
+
 \begin{problem}
 如图是某几何体的三视图，则该几何体的体积为
 
-\bitmapfigure[max width=0.6\linewidth]{img/2011/hunan_liberal/q4_fig1.png}
+\bitmapfigure[width=0.6\linewidth]{img/2011/hunan_liberal/q4_fig1.png}
 
 \choices
     {\(9\pi + 42\)}
@@ -59,6 +76,11 @@ A
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+由三视图可知，该几何体由一个底面为边长 \(3\)、高为 \(2\) 的长方体和一个半径为 \(\frac32\) 的球组成，二者只有边界相接. 因此体积为
+\(3\times3\times2+\frac43\pi\left(\frac32\right)^3=18+\frac92\pi\)，故选 D.
+\end{solution}
 
 \begin{problem}
 通过随机询问 \(110\) 名性别不同的大学生是否爱好某项运动，得到如下的列联表：
@@ -93,6 +115,14 @@ D
 A
 \end{answer}
 
+\begin{solution}
+由题给数据，
+\[
+K^2=\frac{110(40\times30-20\times20)^2}{60\times50\times60\times50}\approx7.8
+\]
+因为 \(7.8>6.635\)，所以对应的概率小于 \(0.010\)，即在犯错误的概率不超过 \(1\%\) 的前提下，可以认为爱好该项运动与性别有关，故选 A.
+\end{solution}
+
 \begin{problem}
 设双曲线 \(\frac{x^2}{a^2} - \frac{y^2}{9} = 1 \) （\(a > 0\)）的渐近线方程为 \(3x \pm 2y = 0\)，则 \(a\) 的值为（\quad）
 
@@ -106,6 +136,13 @@ A
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+双曲线
+\(\frac{x^2}{a^2}-\frac{y^2}{9}=1\) 的渐近线为
+\(y=\pm\frac{3}{a}x\). 由题意，
+\(\frac{3}{a}=\frac32\)，且 \(a>0\)，所以 \(a=2\)，故选 C.
+\end{solution}
 
 \begin{problem}
 曲线 \( y = \frac{\sin x}{\sin x + \cos x} - \frac{1}{2} \) 在点 \( M\left(\frac{\pi}{4}, 0\right) \) 处的切线的斜率为（\quad）
@@ -121,6 +158,17 @@ C
 B
 \end{answer}
 
+\begin{solution}
+在定义域内，
+\[
+\left(\frac{\sin x}{\sin x+\cos x}\right)'
+=\frac{\cos x(\sin x+\cos x)-\sin x(\cos x-\sin x)}{(\sin x+\cos x)^2}
+=\frac{1}{(\sin x+\cos x)^2}
+\]
+因此在 \(x=\frac\pi4\) 处的切线斜率为
+\(\frac{1}{(\frac{\sqrt2}{2}+\frac{\sqrt2}{2})^2}=\frac12\)，故选 B.
+\end{solution}
+
 \begin{problem}
 已知函数 \(f(x) = \e^{x} - 1\)，\(g(x) = -x^{2} + 4x - 3\)，若有 \( f(a) = g(b) \)，则 \( b \) 的取值范围为（\quad）
 
@@ -135,6 +183,19 @@ B
 B
 \end{answer}
 
+\begin{solution}
+因为 \(f(a)=\e^a-1>-1\)，所以 \(g(b)>-1\). 又
+\[
+g(b)=-b^2+4b-3=1-(b-2)^2
+\]
+于是 \(1-(b-2)^2>-1\)，即 \((b-2)^2<2\)，故
+\(2-\sqrt2<b<2+\sqrt2\). 反之，当
+\(2-\sqrt2<b<2+\sqrt2\) 时，\(g(b)>-1\)，取
+\(a=\ln\bigl(g(b)+1\bigr)\in\R\)，便有
+\(f(a)=\e^{\ln(g(b)+1)}-1=g(b)\). 因而
+\(b\) 的取值范围为 \((2-\sqrt2,2+\sqrt2)\)，故选 B.
+\end{solution}
+
 \section{选做题}
 
 \begin{problem}
@@ -148,6 +209,18 @@ y = \sqrt{3}\sin \alpha,
 2
 \end{answer}
 
+\begin{solution}
+由极坐标与直角坐标的关系 \(x=\rho\cos\theta\)，\(y=\rho\sin\theta\)，曲线 \(C_2\) 的方程化为
+\(x-y+1=0\)，即 \(y=x+1\). 曲线 \(C_1\) 满足
+\[
+\frac{x^2}{4}+\frac{y^2}{3}=1
+\]
+代入 \(y=x+1\)，得
+\(\frac{x^2}{4}+\frac{(x+1)^2}{3}=1\)，即
+\(7x^2+8x-8=0\). 其判别式为
+\(8^2-4\times7\times(-8)=288>0\)，所以有两个不同实根，交点个数为 \(2\).
+\end{solution}
+
 \begin{problem}
 已知某试验范围为 \([10,90]\)，若用分数法进行 \(4\) 次优选试验，则第二次试点可以是\fillinblank{}.
 \end{problem}
@@ -156,17 +229,32 @@ y = \sqrt{3}\sin \alpha,
 \(40\) 或 \(60\)
 \end{answer}
 
+\begin{solution}
+试验区间长度为 \(90-10=80\). 设斐波那契数列满足
+\(F_0=F_1=1\)，\(F_{n+1}=F_n+F_{n-1}\)，则
+\(F_3=3\)，\(F_4=5\)，\(F_5=8\). 分数法进行 \(4\) 次试验时，首轮两个对称试点分别取区间的
+\(\frac{F_3}{F_5}=\frac38\) 和 \(\frac{F_4}{F_5}=\frac58\) 处分点；根据试验结果，第二次试点可能是其中任一个. 因此试点可以为
+\(10+\frac38\times80=40\)，\(10+\frac58\times80=60\).
+所以第二次试点可以是 \(40\) 或 \(60\).
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
 若执行如图所示的框图，输入 \(x_{1} = 1\)，\(x_{2} = 2\)，\(x_{3} = 4\)，\(x_{4} = 8\)，则输出的数等于\fillinblank{}.
 
-\texfigure[max width=0.30\linewidth]{img_repaint/2011/hunan_liberal/q11_fig1.tex}
+\bitmapfigure[width=0.30\linewidth]{img/2011/hunan_liberal/q11_fig1.png}
 \end{problem}
 
 \begin{answer}
 \(\frac{15}{4}\)
 \end{answer}
+
+\begin{solution}
+框图开始时 \(i=1\)，\(x=0\). 依次执行加法和判断：当 \(i=1\)，\(2\)，\(3\) 时，\(i<4\) 成立，分别把 \(x_1\)，\(x_2\)，\(x_3\) 加入 \(x\) 并令 \(i\) 加 \(1\)；此时 \(i=4\)，再把 \(x_4\) 加入后，条件 \(i<4\) 不成立. 因而
+\(x=1+2+4+8=15\)，\(x=\frac{x}{4}=\frac{15}{4}\).
+所以输出的数为 \(\frac{15}{4}\).
+\end{solution}
 
 \begin{problem}
 已知 \( f(x) \) 为奇函数，\( g(x) = f(x) + 9 \)，\( g(-2) = 3 \)，则 \( f(2) = \)\fillinblank{}.
@@ -176,6 +264,12 @@ y = \sqrt{3}\sin \alpha,
 6
 \end{answer}
 
+\begin{solution}
+由 \(g(-2)=3\) 和 \(g(x)=f(x)+9\)，得
+\(f(-2)+9=3\)，所以 \(f(-2)=-6\). 又因为 \(f\) 是奇函数，
+\(f(2)=-f(-2)=6\).
+\end{solution}
+
 \begin{problem}
 设向量 \(\bs{a}\)，\(\bs{b}\) 满足 \(|\bs{a}| = 2\sqrt{5}\)，\(\bs{b} = (2, 1)\)，且 \(\bs{a}\) 与 \(\bs{b}\) 的方向相反，则 \(\bs{a}\) 的坐标为\fillinblank{}.
 \end{problem}
@@ -183,6 +277,13 @@ y = \sqrt{3}\sin \alpha,
 \begin{answer}
 \((-4,-2)\)
 \end{answer}
+
+\begin{solution}
+因为 \(\bs{a}\) 与 \(\bs{b}\) 方向相反，存在 \(\lambda>0\)，使
+\(\bs{a}=-\lambda\bs{b}\). 由 \(|\bs{b}|=\sqrt{2^2+1^2}=\sqrt5\) 及
+\(|\bs{a}|=2\sqrt5\)，得 \(\lambda=2\). 因此
+\(\bs{a}=-2(2,1)=(-4,-2)\).
+\end{solution}
 
 \begin{problem}
 设 \(m > 1\)，在约束条件 \(\begin{cases}
@@ -196,6 +297,15 @@ x + y \leqslant 1
 3
 \end{answer}
 
+\begin{solution}
+由 \(y\geqslant x\) 和 \(y\leqslant mx\)，且 \(m>1\)，可知可行域中的 \(x\geqslant0\). 其顶点为
+\(O(0,0)\)，\(A\left(\frac12,\frac12\right)\)，\(B\left(\frac{1}{m+1},\frac{m}{m+1}\right)\).
+在这三个顶点处，目标函数 \(z=x+5y\) 的值分别为
+\(0\)，\(3\)，\(\frac{1+5m}{m+1}\).
+已知最大值为 \(4\)，而 \(3<4\)，所以
+\(\frac{1+5m}{m+1}=4\). 解得 \(1+5m=4m+4\)，即 \(m=3\)，满足 \(m>1\).
+\end{solution}
+
 \begin{problem}
 已知圆 \(C: x^{2} + y^{2} = 12\)，直线 \(l: 4x + 3y = 25\).
 \begin{enumerate}
@@ -207,6 +317,32 @@ x + y \leqslant 1
 \begin{answer}
 （1）\(5\)；（2）\(\frac{1}{6}\)
 \end{answer}
+
+\begin{solution}
+\begin{enumerate}
+\item 圆心为 \(O(0,0)\)，所以圆心到直线 \(l\) 的距离为
+\[
+\frac{|4\times0+3\times0-25|}{\sqrt{4^2+3^2}}=5
+\]
+\item 圆 \(C\) 的半径为 \(2\sqrt3\). 对圆上点 \(A(x,y)\)，因为
+\(4x+3y\leqslant5\cdot2\sqrt3<25\)，故
+\[
+d(A,l)=\frac{25-4x-3y}{5}
+\]
+条件 \(d(A,l)<2\) 等价于 \(4x+3y>15\). 令
+\(u=(4x+3y)/5\)，则 \(u\) 是半径方向上的坐标，且在圆周上可写为
+\(u=2\sqrt3\cos\varphi\). 因而
+\[
+2\sqrt3\cos\varphi>3
+\quad\Longleftrightarrow\quad
+\cos\varphi>\frac{\sqrt3}{2}
+\quad\Longleftrightarrow\quad
+|\varphi|<\frac{\pi}{6}
+\]
+满足条件的弧长对应圆心角为 \(\pi/3\)，所以所求概率为
+\(\frac{\pi/3}{2\pi}=\frac16\).
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 给定 \(k \in \N^*\)，设函数 \(f: \N^* \to \N^*\) 满足：对于任意大于 \(k\) 的正整数 \(n\)，\(f(n) = n - k\).
@@ -220,6 +356,14 @@ x + y \leqslant 1
 （1）\(a\in\N^*\)；（2）\(16\)
 \end{answer}
 
+\begin{solution}
+\begin{enumerate}
+\item 当 \(k=1\) 时，对于所有 \(n>1\)，函数值被确定为 \(f(n)=n-1\). 对 \(n=1\)，题设没有给出额外限制，只要求 \(f(1)\in\N^*\)，所以其中一个函数在 \(n=1\) 处的函数值可以是任意 \(a\in\N^*\).
+\item 当 \(k=4\) 时，\(n>4\) 的函数值也都被唯一确定为 \(f(n)=n-4\). 对 \(n=1\)，\(2\)，\(3\)，\(4\)，每个函数值都可独立取 \(2\) 或 \(3\)，共有
+\(2^4=16\) 个不同函数.
+\end{enumerate}
+\end{solution}
+
 \section{解答题}
 
 \begin{problem}
@@ -231,7 +375,33 @@ x + y \leqslant 1
 \end{problem}
 
 \begin{solution}
-短答案：\(C = \frac{\pi}{4}\)；最大值为 \(2\)，此时 \(A = \frac{\pi}{3}\)，\(B = \frac{5\pi}{12}\).
+\begin{enumerate}
+\item
+由正弦定理，存在外接圆半径 \(R\)，使
+\(a=2R\sin A\)，\(c=2R\sin C\).
+代入条件 \(c\sin A=a\cos C\)，得
+\[
+2R\sin C\sin A=2R\sin A\cos C
+\]
+三角形内 \(0<A<\pi\)，故 \(\sin A>0\)，从而
+\(\sin C=\cos C\). 又 \(0<C<\pi\)，所以
+\[
+C=\frac{\pi}{4}
+\]
+
+\item
+于是 \(A+B=\pi-C=\frac{3\pi}{4}\)，即
+\(B=\frac{3\pi}{4}-A\)，且 \(0<A<\frac{3\pi}{4}\). 目标式化为
+\[
+\sqrt3\sin A-\cos\left(B+\frac{\pi}{4}\right)
+=\sqrt3\sin A-\cos(\pi-A)
+=\sqrt3\sin A+\cos A
+=2\sin\left(A+\frac{\pi}{6}\right)
+\]
+由于 \(0<A+\frac{\pi}{6}<\frac{11\pi}{12}\)，且
+\(A+\frac{\pi}{6}\) 可以取 \(\frac{\pi}{2}\)，目标式最大值为 \(2\). 等号成立时
+\(A+\frac{\pi}{6}=\frac{\pi}{2}\)，\(A=\frac{\pi}{3}\)，\(B=\frac{3\pi}{4}-\frac{\pi}{3}=\frac{5\pi}{12}\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -253,7 +423,29 @@ x + y \leqslant 1
 \end{problem}
 
 \begin{solution}
-短答案：频率依次为 \(\frac{3}{20}\)，\(\frac{7}{20}\)，\(\frac{3}{20}\)；概率为 \(\frac{3}{10}\).
+\begin{enumerate}
+\item
+统计给出的 \(20\) 个数据中，\(110\) 出现 \(3\) 次，\(160\) 出现 \(7\) 次，\(200\) 出现 \(3\) 次，因此频率分布表中缺少的三项依次为
+\(\frac{3}{20}\)，\(\frac{7}{20}\)，\(\frac{3}{20}\).
+
+\item
+由题意，当 \(X=70\) 时 \(Y=460\)，且 \(X\) 每增加 \(10\)，\(Y\) 增加 \(5\)，所以
+\[
+Y=460+\frac{5}{10}(X-70)=425+\frac{X}{2}
+\]
+各个可能的 \(X\) 值对应
+\begin{center}
+\begin{tabular}{c|cccccc}
+\(X\) & \(70\) & \(110\) & \(140\) & \(160\) & \(200\) & \(220\) \\
+\hline
+\(Y\) & \(460\) & \(480\) & \(495\) & \(505\) & \(525\) & \(535\)
+\end{tabular}
+\end{center}
+条件 \(Y<490\) 或 \(Y>530\) 对应 \(X=70\)，\(110\)，\(220\). 因而所求概率为
+\[
+\frac{1+3+2}{20}=\frac{6}{20}=\frac{3}{10}
+\]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -264,11 +456,53 @@ x + y \leqslant 1
 \item 求直线 \(OC\) 和平面 \(PAC\) 所成角的正弦值.
 \end{enumerate}
 
-\bitmapfigure[max width=0.32\linewidth]{img/2011/hunan_liberal/q19_fig1.png}
+\bitmapfigure[width=0.32\linewidth]{img/2011/hunan_liberal/q19_fig1.png}
 \end{problem}
 
 \begin{solution}
-短答案：证明结论为 \(AC \perp\) 平面 \(POD\)；正弦值为 \(\frac{\sqrt{2}}{3}\).
+\begin{enumerate}
+\item
+在 \(\triangle ABC\) 中，\(AB\) 是直径，所以
+\(\angle ACB=90^\circ\). 又 \(\angle CAB=30^\circ\)，故
+\[
+AC=AB\cos30^\circ=2\cdot\frac{\sqrt3}{2}=\sqrt3
+\]
+因为 \(D\) 是弦 \(AC\) 的中点，\(O\) 是圆心，所以
+\(OD\perp AC\). 又 \(OA=OC\)，且 \(PO\) 垂直于底面，所以
+\[
+PA^2=PO^2+OA^2=PO^2+OC^2=PC^2
+\]
+即 \(PA=PC\). 因而 \(\triangle PAC\) 是等腰三角形，\(D\) 为底边
+\(AC\) 的中点，故 \(PD\perp AC\). 直线 \(OD\) 与 \(PD\) 相交且都在平面 \(POD\) 内，因此
+\[
+AC\perp\text{平面 }POD
+\]
+
+\item
+在直角三角形 \(AOC\) 中，\(OA=OC=1\)，且 \(D\) 是斜边 \(AC\) 的中点，所以
+\[
+OD=\sqrt{OA^2-AD^2}
+=\sqrt{1-\left(\frac{\sqrt3}{2}\right)^2}
+=\frac12
+\]
+又 \(PO\perp OD\)，从而
+\[
+PD=\sqrt{PO^2+OD^2}
+=\sqrt{2+\frac14}
+=\frac32
+\]
+在平面 \(POD\) 内作 \(OH\perp PD\). 由于平面 \(PAC\) 含有
+\(AC\)，而 \(AC\perp\) 平面 \(POD\)，所以平面 \(PAC\) 与平面 \(POD\) 的交线
+\(PD\) 垂直于 \(AC\)，两平面互相垂直. 因而 \(OH\perp PD\) 时
+\(OH\perp\text{平面 }PAC\). 由 \(\triangle OPD\) 的面积可得
+\(\frac12\,PO\cdot OD=\frac12\,PD\cdot OH\)，\(OH=\frac{PO\cdot OD}{PD} =\frac{\sqrt2\cdot\frac12}{\frac32} =\frac{\sqrt2}{3}\).
+由于 \(C\) 在平面 \(PAC\) 内，\(OC=1\)，直线 \(OC\) 与平面 \(PAC\) 所成角的正弦值为
+\[
+\frac{\operatorname{dist}(O,\text{平面 }PAC)}{OC}
+=\frac{OH}{OC}
+=\frac{\sqrt2}{3}
+\]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -280,10 +514,34 @@ x + y \leqslant 1
 \end{problem}
 
 \begin{solution}
-短答案：\(a_n = \begin{cases}
-130 - 10n, & n \leqslant 6,\\
-70\left(\frac{3}{4}\right)^{n-6}, & n \geqslant 7,
-\end{cases}\)；须在第\(9\)年初对 \(M\) 更新.
+\begin{enumerate}
+\item
+第 \(1\) 年初的价值为 \(a_1=120\). 从第 \(2\) 年到第 \(6\) 年，每年比上年初少 \(10\) 万元，所以
+\(a_n=120-10(n-1)=130-10n\)，\(1\leqslant n\leqslant6\).
+第 \(6\) 年初的价值为 \(a_6=70\)，从第 \(7\) 年开始按 \(75\%\) 递减，所以
+\(a_n=70\left(\frac34\right)^{n-6}\)，\(n\geqslant7\).
+故
+\[
+a_n=
+\begin{cases}
+130-10n,&1\leqslant n\leqslant6,\\
+70\left(\frac34\right)^{n-6},&n\geqslant7.
+\end{cases}
+\]
+
+\item
+对于 \(1\leqslant n\leqslant6\)，由等差数列求和公式，
+\(A_n=\frac{1}{n}\sum_{i=1}^{n}(130-10i) =\frac{130n-5n(n+1)}{n} =125-5n\geqslant95>80\)，\(1\leqslant n\leqslant6\).
+随后
+\(a_7=\frac{105}{2}\)，\(a_8=\frac{315}{8}\)，\(a_9=\frac{945}{32}\).
+因此
+\(A_7=\frac{\frac{1245}{2}}7=\frac{1245}{14}>80\)，\(A_8=\frac{\frac{5295}{8}}8=\frac{5295}{64}>80\)
+而
+\[
+A_9=\frac{\frac{22125}{32}}9=\frac{7375}{96}<80
+\]
+所以第 \(1\) 至第 \(8\) 年初均应继续使用，至第 \(9\) 年初时平均价值不超过 \(80\) 万元，须在第 \(9\) 年初更新设备.
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -295,17 +553,136 @@ x + y \leqslant 1
 \end{problem}
 
 \begin{solution}
-短答案：轨迹为 \(y^2 = 4x\)（\(x \geqslant 0\)）和 \(y = 0\)（\(x < 0\)）；最小值为 \(16\).
+\begin{enumerate}
+\item
+设动点 \(P(x,y)\). 由题意
+\[
+\sqrt{(x-1)^2+y^2}-|x|=1
+\]
+即
+\[
+\sqrt{(x-1)^2+y^2}=|x|+1
+\]
+两边都非负，平方得
+\((x-1)^2+y^2=(|x|+1)^2\)，\(y^2=2x+2|x|\).
+当 \(x\geqslant0\) 时，\(y^2=4x\)；当 \(x<0\) 时，\(y^2=0\)，即 \(y=0\). 反代可知这两部分都满足原方程，因此轨迹为
+\[
+C:\quad
+\begin{cases}
+y^2=4x,&x\geqslant0,\\
+y=0,&x<0.
+\end{cases}
+\]
+
+\item
+两条直线均过 \(F(1,0)\)，且斜率存在并互相垂直. 设 \(l_1\) 的斜率为 \(k\)，则 \(k\ne0\)，可写为
+\(l_1:y=k(x-1)\)，\(l_2:y=-\frac1k(x-1)\).
+负半轴部分 \(y=0\)，\(x<0\) 与任一条过 \(F\) 的直线没有交点；点 \(F\) 本身不在该部分上，所以四个交点均在抛物线上. 令
+\[
+Q(t)=(t^2,2t)
+\]
+表示抛物线 \(y^2=4x\) 上的点. 设
+\(A=Q(u)\)，\(B=Q(v)\)，\(D=Q(r)\)，\(E=Q(s)\).
+由两条直线的方程，\(u\)，\(v\) 是
+\[
+kt^2-2t-k=0
+\]
+的两根，\(r\)，\(s\) 是
+\[
+t^2+2kt-1=0
+\]
+的两根，因而
+\(u+v=\frac2k\)，\(uv=-1\)，\(r+s=-2k\)，\(rs=-1\).
+又
+\(\overrightarrow{AD}=(r-u)(r+u,2)\)，\(\overrightarrow{EB}=(v-s)(v+s,2)\).
+因此
+\[
+\begin{aligned}
+\overrightarrow{AD}\cdot\overrightarrow{EB}
+&=(r-u)(v-s)\bigl((r+u)(v+s)+4\bigr)\\
+&=(rv+us+2)^2,
+\end{aligned}
+\]
+其中使用了 \(uv=rs=-1\). 记
+\(X=rv+us\)，\(Y=ru+vs\).
+则
+\(X+Y=(r+s)(u+v)=-4\)，\(X+2=\frac{X-Y}{2}\).
+此外
+\[
+\begin{aligned}
+(X-Y)^2
+&=(r-s)^2(v-u)^2\\
+&=\bigl((r+s)^2-4rs\bigr)\bigl((u+v)^2-4uv\bigr)\\
+&=16\frac{(k^2+1)^2}{k^2}.
+\end{aligned}
+\]
+所以
+\[
+\overrightarrow{AD}\cdot\overrightarrow{EB}
+=(X+2)^2
+=4\frac{(k^2+1)^2}{k^2}
+=4\left(k+\frac1k\right)^2
+\]
+由于 \(k\ne0\)，
+\[
+\left(k+\frac1k\right)^2-4
+=\frac{(k^2-1)^2}{k^2}\geqslant0
+\]
+故内积的最小值为 \(16\)，当且仅当 \(k=\pm1\) 时取得.
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
 设函数 \( f(x) = x - \frac{1}{x} - a \ln x  \)（\(a \in \R\)）.
 \begin{enumerate}
 \item 讨论函数 \( f(x) \) 的单调性.
-\item 若 \( f(x) \) 有两个极值点 \( x_{1} \) 和 \( x_{2} \)，记过点 \( A(x_{1}, f(x_{1})) \)，\( B(x_{2}, f(x_{2})) \) 的直线斜率为 \( k \). 问：是否存在 \( a \)，使得 \( k = 2 - a^{2} \)？若存在，求出 \( a \) 的值；若不存在，请说明理由.
+\item 若 \( f(x) \) 有两个极值点 \( x_{1} \) 和 \( x_{2} \)，记过点 \( A(x_{1}, f(x_{1})) \)，\( B(x_{2}, f(x_{2})) \) 的直线斜率为 \( k \). 问：是否存在 \( a \)，使得 \( k = 2 - a \)？若存在，求出 \( a \) 的值；若不存在，请说明理由.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
-短答案：不存在满足条件的 \(a\).
+\begin{enumerate}
+\item
+函数定义域为 \(x>0\)，且
+\[
+f'(x)=1+\frac1{x^2}-\frac ax
+=\frac{x^2-ax+1}{x^2}
+\]
+因为分母 \(x^2>0\)，只需讨论
+\(x^2-ax+1\) 的符号.
+
+当 \(a\leqslant2\) 时，由
+\(x^2-ax+1=x\left(x+\frac1x-a\right)\)，\(x+\frac1x\geqslant2\)
+可知 \(x^2-ax+1\geqslant0\). 当 \(a<2\) 时导数处处为正；当 \(a=2\) 时仅在 \(x=1\) 处导数为 \(0\)，函数在 \((0,+\infty)\) 上仍为增函数.
+
+当 \(a>2\) 时，方程 \(x^2-ax+1=0\) 的两个根为
+\(x_1=\frac{a-\sqrt{a^2-4}}2\)，\(x_2=\frac{a+\sqrt{a^2-4}}2\)
+满足 \(0<x_1<x_2\)，且 \(x_1x_2=1\). 导数符号依次为正、负、正，所以
+\begin{center}
+\begin{tabular}{c|ccc}
+\(x\) & \((0,x_1)\) & \((x_1,x_2)\) & \((x_2,+\infty)\) \\
+\hline
+\(f'(x)\) & + & - & +
+\end{tabular}
+\end{center}
+函数在 \((0,x_1)\) 和 \((x_2,+\infty)\) 上递增，在 \((x_1,x_2)\) 上递减.
+
+\item
+若 \(f\) 有两个极值点，则必有 \(a>2\)，并令
+\(x_1=\e^{-t}\)，\(x_2=\e^t\)，\(t>0\).
+于是 \(a=x_1+x_2=2\cosh t\). 由 \(x_1x_2=1\)，
+\[
+\begin{aligned}
+k
+&=\frac{f(x_2)-f(x_1)}{x_2-x_1}\\
+&=2-a\frac{\ln(x_2/x_1)}{x_2-x_1}\\
+&=2-a\frac{t}{\sinh t}.
+\end{aligned}
+\]
+因为 \(t>0\) 时 \(\sinh t>t\)，所以
+\[
+k>2-a
+\]
+因此不可能有 \(k=2-a\)，不存在满足条件的 \(a\).
+\end{enumerate}
 \end{solution}

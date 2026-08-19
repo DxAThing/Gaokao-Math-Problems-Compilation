@@ -410,8 +410,11 @@ QF=\sqrt{\left(\dfrac p2-\dfrac p8\right)^2+\left(\dfrac p2\right)^2}=\dfrac{5p}
 由 \(y_1^2=2px_1\) 和 \(y_0^2=2px_0\)，相减得
 \((y_1-y_0)(y_1+y_0)=2p(x_1-x_0)\).
 因 \(PA\) 的斜率存在，\(x_1\neq x_0\)，所以
-\(k_1=\frac{y_1-y_0}{x_1-x_0}=\frac{2p}{y_1+y_0}\)，同理
-\(k_2=\frac{2p}{y_2+y_0}\).
+\(k_1=\frac{y_1-y_0}{x_1-x_0}=\frac{2p}{y_1+y_0}\). 同样，由
+\(y_2^2=2px_2\) 和 \(y_0^2=2px_0\) 得
+\((y_2-y_0)(y_2+y_0)=2p(x_2-x_0)\).
+因 \(PB\) 的斜率存在，\(x_2\neq x_0\)，从而
+\(k_2=\frac{y_2-y_0}{x_2-x_0}=\frac{2p}{y_2+y_0}\).
 两直线的倾斜角互补，故其斜率互为相反数，即 \(k_1=-k_2\). 于是
 \(\frac{2p}{y_1+y_0}=-\frac{2p}{y_2+y_0}\).
 因为 \(p>0\)，化简得 \(y_1+y_2=-2y_0\)，所以 \(\frac{y_1+y_2}{y_0}=-2\).
@@ -429,26 +432,31 @@ k_{AB}=\frac{y_1-y_2}{x_1-x_2}=\frac{2p}{y_1+y_2}=-\frac p{y_0}
 \end{solution}
 
 \begin{problem}
-函数 \(f(x)\) 是定义在 \([0,1]\) 上的增函数，满足 \(f(x)=2f\left(\dfrac{x}{2}\right)\) 且 \(f(1)=1\)，在每个区间 \(\left(\dfrac{1}{2^i},\dfrac{1}{2^{i-1}}\right]\)（\(i=1,2,\cdots\)）上，\(y=f(x)\) 的图象都是斜率为同一常数 \(k\) 的直线的一部分.
+函数 \(f(x)\) 是定义在 \([0,1]\) 上的增函数，满足 \(f(x)=2f\left(\dfrac{x}{2}\right)\) 且 \(f(1)=1\)，在每个区间 \(\left(\dfrac{1}{2^i},\dfrac{1}{2^{i-1}}\right]\)（\(i=1\)，\(2\)，\(\cdots\)）上，\(y=f(x)\) 的图象都是斜率为同一常数 \(k\) 的直线的一部分.
 
 \begin{enumerate}
-\item 求 \(f(0)\) 及 \(f\left(\dfrac{1}{2}\right)\)，\(f\left(\dfrac{1}{4}\right)\) 的值，并归纳出 \(f\left(\dfrac{1}{2^i}\right)\)（\(i=1,2,\cdots\)）的表达式；
-\item 设直线 \(x=\dfrac{1}{2^i}\)，\(x=\dfrac{1}{2^{i-1}}\)，\(x\) 轴及 \(y=f(x)\) 的图象围成的矩形的面积为 \(a_i\)（\(i=1,2,\cdots\)），记 \(S(k)=\lim\limits_{n\to\infty}(a_1+a_2+\cdots+a_n)\)，求 \(S(k)\) 的表达式，并写出其定义域和最小值.
+\item 求 \(f(0)\) 及 \(f\left(\dfrac{1}{2}\right)\)，\(f\left(\dfrac{1}{4}\right)\) 的值，并归纳出 \(f\left(\dfrac{1}{2^i}\right)\)（\(i=1\)，\(2\)，\(\cdots\)）的表达式；
+\item 设直线 \(x=\dfrac{1}{2^i}\)，\(x=\dfrac{1}{2^{i-1}}\)，\(x\) 轴及 \(y=f(x)\) 的图象围成的矩形的面积为 \(a_i\)（\(i=1\)，\(2\)，\(\cdots\)），记 \(S(k)=\lim\limits_{n\to\infty}(a_1+a_2+\cdots+a_n)\)，求 \(S(k)\) 的表达式，并写出其定义域和最小值.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
 \item
-由 \(f(x)=2f\left(\dfrac{x}{2}\right)\) 取 \(x=0\)，得 \(f(0)=2f(0)\)，所以 \(f(0)=0\). 取 \(x=1\)，得 \(f(1)=2f\left(\dfrac12\right)\)，从而 \(f\left(\dfrac12\right)=\dfrac12\). 再取 \(x=\dfrac12\)，得 \(f\left(\dfrac14\right)=\dfrac12f\left(\dfrac12\right)=\dfrac14\). 反复使用函数关系，可归纳得
-\(f\left(\dfrac1{2^i}\right)=\dfrac1{2^i}\qquad(i=1,2,\cdots)\).
+由 \(f(x)=2f\left(\dfrac{x}{2}\right)\) 取 \(x=0\)，得 \(f(0)=2f(0)\)，所以 \(f(0)=0\). 取 \(x=1\)，得 \(f(1)=2f\left(\dfrac12\right)\)，从而 \(f\left(\dfrac12\right)=\dfrac12\). 再取 \(x=\dfrac12\)，得 \(f\left(\dfrac14\right)=\dfrac12f\left(\dfrac12\right)=\dfrac14\). 下面验证一般项的归纳步骤：
+若已知 \(f\left(\dfrac1{2^i}\right)=\dfrac1{2^i}\)，在函数关系中取
+\(x=\dfrac1{2^i}\)，就有
+\(f\left(\dfrac1{2^{i+1}}\right)=\dfrac12f\left(\dfrac1{2^i}\right)=\dfrac1{2^{i+1}}\).
+结合 \(i=1\) 时的 \(f\left(\dfrac12\right)=\dfrac12\)，归纳得
+\(f\left(\dfrac1{2^i}\right)=\dfrac1{2^i}\)，\((i=1,2,\cdots)\).
 
 \item
 在区间 \(\left(\dfrac1{2^i},\dfrac1{2^{i-1}}\right]\) 上，直线段经过点 \(\left(\dfrac1{2^{i-1}},\dfrac1{2^{i-1}}\right)\)，所以其表达式为
 \(f(x)=\dfrac1{2^{i-1}}+k\left(x-\dfrac1{2^{i-1}}\right)\).
 当 \(x\) 从右侧趋近 \(\dfrac1{2^i}\) 时，函数值趋近
 \(\dfrac1{2^{i-1}}-\dfrac{k}{2^i}\).
-由于 \(f\) 是增函数，且 \(f\left(\dfrac1{2^i}\right)=\dfrac1{2^i}\)，必须有 \(\dfrac1{2^i}\leqslant\dfrac1{2^{i-1}}-\dfrac{k}{2^i}\). 这给出 \(k\leqslant1\). 又因为每段直线都表示增函数，\(k>0\). 因此 \(k\) 的定义域为 \(0<k\leqslant1\).
+由于 \(f\) 是增函数，且 \(f\left(\dfrac1{2^i}\right)=\dfrac1{2^i}\)，当区间内的 \(x\) 从右侧趋近 \(\dfrac1{2^i}\) 时，函数值不能小于端点处的函数值，因此必须有
+\(\dfrac1{2^i}\leqslant\dfrac1{2^{i-1}}-\dfrac{k}{2^i}\). 这给出 \(k\leqslant1\). 又因为每个区间上的图象是增函数的一段直线，其斜率必须为正数，故 \(k>0\). 因此 \(k\) 的定义域为 \(0<k\leqslant1\).
 
 该直线段在 \(x\) 从右侧趋近 \(\dfrac1{2^i}\) 时的高度为 \(\dfrac1{2^{i-1}}-\dfrac{k}{2^i}\)，在 \(x=\dfrac1{2^{i-1}}\) 处的高度为 \(\dfrac1{2^{i-1}}\). 单点处的函数值不影响面积. 两条竖边之间的距离为 \(\dfrac1{2^{i-1}}-\dfrac1{2^i}=\dfrac1{2^i}\)，所以
 \[

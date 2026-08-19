@@ -14,6 +14,14 @@
 C
 \end{answer}
 
+\begin{solution}
+由 \(x^2-16<0\)，得 \(-4<x<4\)，所以 \(P=(-4,4)\). 又 \(Q\) 是全体偶整数构成的集合，因此
+\[
+P\cap Q=\{-2,0,2\}
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
 已知非零向量 \(\bs{a}\)，\(\bs{b}\)，若 \(\bs{a} + 2\bs{b}\) 与 \(\bs{a} - 2\bs{b}\) 互相垂直，则 \(\frac{|\bs{a}|}{|\bs{b}|} =\)（\quad）
 
@@ -27,6 +35,22 @@ C
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+由题设两向量互相垂直，有
+\[
+(\bs{a}+2\bs{b})\cdot(\bs{a}-2\bs{b})=0
+\]
+展开并利用数量积的交换律，得
+\[
+|\bs{a}|^2-4|\bs{b}|^2=0
+\]
+由于 \(\bs{a}\)，\(\bs{b}\) 均为非零向量，故 \(|\bs{a}|=2|\bs{b}|\)，从而
+\[
+\frac{|\bs{a}|}{|\bs{b}|}=2
+\]
+故选 D.
+\end{solution}
 
 \begin{problem}
 已知 \(\sin 2\alpha = \frac{2}{3}\)，\(\alpha \in (0, \pi)\)，则 \(\sin \alpha + \cos \alpha =\)（\quad）
@@ -42,6 +66,21 @@ D
 A
 \end{answer}
 
+\begin{solution}
+因为 \(\alpha\in(0,\pi)\)，所以 \(2\alpha\in(0,2\pi)\). 又 \(\sin 2\alpha=\frac23>0\)，故 \(2\alpha\in(0,\pi)\)，即 \(\alpha\in(0,\frac\pi2)\). 因此 \(\sin\alpha+\cos\alpha>0\). 由
+\[
+(\sin\alpha+\cos\alpha)^2
+=\sin^2\alpha+\cos^2\alpha+2\sin\alpha\cos\alpha
+=1+\sin 2\alpha
+=\frac53
+\]
+得
+\[
+\sin\alpha+\cos\alpha=\sqrt{\frac53}=\frac{\sqrt{15}}{3}
+\]
+故选 A.
+\end{solution}
+
 \begin{problem}
 在等比数列 \(\{a_{n}\}\) 中，\(a_{1} = 1\)，\(a_{10} = 3\)，则 \(a_{2}a_{3}a_{4}a_{5}a_{6}a_{7}a_{8}a_{9} =\)（\quad）
 
@@ -56,6 +95,22 @@ A
 A
 \end{answer}
 
+\begin{solution}
+设等比数列的公比为 \(q\). 由 \(a_1=1\) 及 \(a_{10}=3\)，有
+\[
+q^9=3
+\]
+所求乘积为
+\[
+a_2a_3\cdots a_9
+=q^{1+2+\cdots+8}
+=q^{36}
+=(q^9)^4
+=3^4=81
+\]
+故选 A.
+\end{solution}
+
 \begin{problem}
 甲： \(A_{1}\)， \(A_{2}\) 是互斥事件；乙： \(A_{1}\)， \(A_{2}\) 是对立事件，那么（\quad）
 
@@ -69,6 +124,12 @@ A
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+对立事件一定互斥，因为对立事件满足 \(A_1\cap A_2=\varnothing\). 但是互斥事件只要求不能同时发生，还可能存在既不发生 \(A_1\) 也不发生 \(A_2\) 的第三种结果，因而不一定是对立事件. 例如样本空间含有三个基本结果，\(A_1\) 和 \(A_2\) 分别只含其中两个不同的基本结果时，它们互斥但不对立.
+
+所以“甲是乙的必要条件但不是充分条件”，故选 B.
+\end{solution}
 
 \begin{problem}
 关于直线 \(m\)，\(n\) 与平面 \(\alpha\)，\(\beta\)，有以下四个命题：
@@ -93,6 +154,20 @@ B
 D
 \end{answer}
 
+\begin{solution}
+逐一判断如下.
+
+命题 \(\circled{1}\) 不正确. 若两平面平行，分别平行于这两个平面的两条直线的方向可以不同，因此不能推出 \(m\parallel n\).
+
+命题 \(\circled{2}\) 正确. 两条分别垂直于两个平面的直线的方向分别与两个平面的法向量平行；而两互相垂直的平面的法向量互相垂直，所以 \(m\perp n\).
+
+命题 \(\circled{3}\) 正确. 由 \(m\perp\alpha\) 且 \(\alpha\parallel\beta\)，可得 \(m\perp\beta\)；又 \(n\parallel\beta\)，所以 \(m\perp n\).
+
+命题 \(\circled{4}\) 不正确. 由 \(n\perp\beta\) 且 \(\alpha\perp\beta\)，只能得到 \(n\) 的方向与平面 \(\alpha\) 平行；而 \(m\parallel\alpha\) 只说明 \(m\) 的方向在平面 \(\alpha\) 的方向范围内，不能推出 \(m\parallel n\).
+
+因此真命题的序号是 \(\circled{2}\)\(\circled{3}\)，故选 D.
+\end{solution}
+
 \begin{problem}
 设 \( f(x) = \lg \frac{2 + x}{2 - x} \)，则 \( f\left(\frac{x}{2}\right) + f\left(\frac{2}{x}\right) \) 的定义域为（\quad）
 
@@ -106,6 +181,29 @@ D
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+函数 \(f(t)\) 有意义的条件是
+\[
+\frac{2+t}{2-t}>0
+\]
+且分母不为零. 由于分子、分母同号的条件给出 \(-2<t<2\)，故 \(f(t)\) 的定义域为 \((-2,2)\).
+
+对 \(f(\frac{x}{2})\)，有
+\[
+-2<\frac{x}{2}<2\quad\Longleftrightarrow\quad -4<x<4
+\]
+对 \(f(\frac{2}{x})\)，先要求 \(x\ne0\)，再有
+\[
+-2<\frac{2}{x}<2
+\quad\Longleftrightarrow\quad x<-1\ \text{或}\ x>1
+\]
+两条件取交集，得到定义域
+\[
+(-4,-1)\cup(1,4)
+\]
+故选 B.
+\end{solution}
 
 \begin{problem}
 在 \(\left(\sqrt{x} - \frac{1}{\sqrt[3]{x}}\right)^{24}\) 的展开式中，\(x\) 的幂的指数是整数的项共有（\quad）
@@ -121,6 +219,20 @@ B
 C
 \end{answer}
 
+\begin{solution}
+由于式中含有 \(\sqrt{x}\)，且含有 \(\frac1{\sqrt[3]{x}}\)，展开前需有 \(x>0\). 在二项式展开式中，若从第一项取 \(k\) 次、从第二项取 \(24-k\) 次，则该项中 \(x\) 的幂为
+\[
+\left(\sqrt{x}\right)^k\left(-\frac1{\sqrt[3]{x}}\right)^{24-k}
+\]
+其指数为
+\[
+\frac{k}{2}-\frac{24-k}{3}=\frac{5k-48}{6}
+\]
+该指数为整数，当且仅当 \(5k-48\) 被 \(6\) 整除. 因为 \(5\equiv-1\pmod 6\)，所以这等价于 \(k\equiv0\pmod6\). 在 \(0\leqslant k\leqslant24\) 中，满足条件的 \(k\) 为
+\(k=0\)，\(6\)，\(12\)，\(18\)，\(24\)
+共有 \(5\) 个，因此共有 \(5\) 项. 故选 C.
+\end{solution}
+
 \begin{problem}
 设过点 \(P(x, y)\) 的直线分别与 \(x\) 轴的正半轴和 \(y\) 轴的正半轴交于 \(A\)，\(B\) 两点，点 \(Q\) 与点 \(P\) 关于 \(y\) 轴对称，\(O\) 为坐标原点，若 \(\overrightarrow{BP} = 2\overrightarrow{PA}\) 且 \(\overrightarrow{OQ} \cdot \overrightarrow{AB} = 1\)，则点 \(P\) 的轨迹方程是（\quad）
 
@@ -132,8 +244,33 @@ C
 \end{problem}
 
 \begin{answer}
-B
+D
 \end{answer}
+
+\begin{solution}
+设 \(A=(u,0)\)，\(B=(0,v)\)，其中 \(u>0\)，\(v>0\). 由
+\[
+\overrightarrow{BP}=2\overrightarrow{PA}
+\]
+得
+\[
+P-B=2(A-P)\quad\Longleftrightarrow\quad 3P=2A+B
+\]
+因此
+\[
+P=\left(\frac{2u}{3},\frac{v}{3}\right)
+\]
+从而 \(u=\frac{3x}{2}\)，\(v=3y\)，且 \(x>0\)，\(y>0\). 又因为 \(Q\) 关于 \(y\) 轴与 \(P\) 对称，所以 \(Q=(-x,y)\). 于是
+\(\overrightarrow{OQ}=(-x,y)\)，\(\overrightarrow{AB}=B-A=\left(-\frac{3x}{2},3y\right)\)
+由数量积条件
+\[
+\overrightarrow{OQ}\cdot\overrightarrow{AB}
+=(-x)\left(-\frac{3x}{2}\right)+y(3y)=1
+\]
+得到
+\(\frac{3}{2}x^2+3y^2=1\)，\(x>0\)，\(\ y>0\)
+故选 D.
+\end{solution}
 
 \begin{problem}
 关于 \(x\) 的方程 \((x^{2} - 1)^{2} - |x^{2} - 1| + k = 0\)，给出下列四个命题：
@@ -158,6 +295,29 @@ B
 A
 \end{answer}
 
+\begin{solution}
+令
+\[
+t=|x^2-1|\geqslant0
+\]
+原方程化为
+\[
+t^2-t+k=0
+\]
+对于每个给定的 \(t\)，当 \(t=0\) 时有 \(x=\pm1\)，产生 \(2\) 个根；当 \(0<t<1\) 时，\(x^2=1+t\) 或 \(x^2=1-t\)，产生 \(4\) 个根；当 \(t=1\) 时，\(x^2=0\) 或 \(x^2=2\)，产生 \(3\) 个根；当 \(t>1\) 时只有 \(x^2=1+t\)，产生 \(2\) 个根.
+
+分别取值即可验证四个命题均为真：
+\[
+\begin{aligned}
+k=-1&:\quad t=\frac{1+\sqrt5}{2}>1,\quad \text{实根个数为 }2;\\
+k=\frac14&:\quad t=\frac12,\quad \text{实根个数为 }4;\\
+k=0&:\quad t=0,1,\quad \text{实根个数为 }2+3=5;\\
+k=\frac18&:\quad t=\frac{1\pm\sqrt{1/2}}2\in(0,1),\quad \text{实根个数为 }4+4=8.
+\end{aligned}
+\]
+其中 \(k=0\) 时，\(t=0\) 产生 \(2\) 个根，\(t=1\) 对应 \(x=0\)，\(\pm\sqrt2\)，产生 \(3\) 个根，故共 \(5\) 个根. 因此四个命题都是真命题，假命题的个数为 \(0\). 故选 A.
+\end{solution}
+
 \section{填空题}
 \begin{problem}
 在 \(\triangle ABC\) 中，已知 \(a = \frac{4\sqrt{3}}{3}\)，\(b = 4\)，\(A = 30^{\circ}\)，则 \(\sin B =\fillinblank{}\).
@@ -167,6 +327,20 @@ A
 \(\frac{\sqrt{3}}{2}\)
 \end{answer}
 
+\begin{solution}
+由正弦定理，
+\[
+\frac{a}{\sin A}=\frac{b}{\sin B}
+\]
+所以
+\[
+\sin B=\frac{b\sin A}{a}
+=\frac{4\cdot\frac12}{\frac{4\sqrt3}{3}}
+=\frac{\sqrt3}{2}
+\]
+故填 \(\frac{\sqrt3}{2}\).
+\end{solution}
+
 \begin{problem}
 接种某疫苗后，出现发热反应的概率为 \(0.80\)，现有 \(5\) 人接种该疫苗，至少有 \(3\) 人出现发热反应的概率为\fillinblank{}.（精确到 \(0.01\)）
 \end{problem}
@@ -174,6 +348,20 @@ A
 \begin{answer}
 0.94
 \end{answer}
+
+\begin{solution}
+设出现发热反应的人数为 \(X\)，则 \(X\sim B(5,0.8)\)，不出现发热反应的概率为 \(0.2\). 至少有 \(3\) 人发热的概率为
+\[
+\begin{aligned}
+P(X\geqslant3)
+&=\mathrm C_5^3(0.8)^3(0.2)^2+\mathrm C_5^4(0.8)^4(0.2)+(0.8)^5\\
+&=10\times0.512\times0.04+5\times0.4096\times0.2+0.32768\\
+&=0.2048+0.4096+0.32768\\
+&=0.94208.
+\end{aligned}
+\]
+精确到 \(0.01\) 得 \(0.94\).
+\end{solution}
 
 \begin{problem}
 若直线 \( y = kx + 2 \) 与圆 \( (x - 2)^2 + (y - 3)^2 = 1 \) 有两个不同的交点，则 \( k \) 的取值范围是\fillinblank{}.
@@ -183,6 +371,30 @@ A
 \(\left(0,\frac{4}{3}\right)\)
 \end{answer}
 
+\begin{solution}
+圆心为 \((2,3)\)，半径为 \(1\). 直线写成
+\[
+kx-y+2=0
+\]
+直线与圆有两个不同的交点，当且仅当圆心到直线的距离小于半径，即
+\[
+\frac{|2k-3+2|}{\sqrt{k^2+1}}<1
+\]
+化简得
+\[
+\frac{|2k-1|}{\sqrt{k^2+1}}<1
+\quad\Longleftrightarrow\quad
+(2k-1)^2<k^2+1
+\]
+因此
+\[
+3k^2-4k<0
+\quad\Longleftrightarrow\quad
+0<k<\frac43
+\]
+故填 \(\left(0,\frac43\right)\).
+\end{solution}
+
 \begin{problem}
 安排 \(5\) 名歌手的演出顺序时，要求某名歌手不第一个出场，另一名歌手不最后一个出场，不同排法的总数是\fillinblank{}.（用数字作答）
 \end{problem}
@@ -190,6 +402,16 @@ A
 \begin{answer}
 78
 \end{answer}
+
+\begin{solution}
+先不加限制地排列 \(5\) 名歌手，共有 \(5!=120\) 种. 设第一位受限制的歌手为 \(A\)，第二位受限制的歌手为 \(B\). 不符合“\(A\) 不第一个”的排法有 \(4!=24\) 种；不符合“\(B\) 不最后”的排法有 \(4!=24\) 种；同时出现这两种不符合情形时，首位固定为 \(A\)、末位固定为 \(B\)，中间三人有 \(3!=6\) 种排法.
+
+由容斥原理，符合要求的排法数为
+\[
+5!-4!-4!+3!=120-24-24+6=78
+\]
+故填 \(78\).
+\end{solution}
 
 \begin{problem}
 半径为 \(r\) 的圆的面积 \(S(r) = \pi r^2\)，周长 \(C(r) = 2\pi r\)，若将 \(r\) 看作 \((0, +\infty)\) 上的变量，则 \((\pi r^2)^\prime = 2\pi r\) \(\circled{1}\)，
@@ -203,6 +425,16 @@ A
 \(\left(\frac{4}{3}\pi R^3\right)^\prime = 4\pi R^2\)；球的体积函数的导数等于球的表面积函数.
 \end{answer}
 
+\begin{solution}
+半径为 \(R\) 的球的体积函数和表面积函数分别为
+\(V(R)=\frac43\pi R^3\)，\(S(R)=4\pi R^2\)
+对体积函数求导，得
+\[
+\left(\frac43\pi R^3\right)'=4\pi R^2
+\]
+因此所求类似式为 \(\left(\frac43\pi R^3\right)'=4\pi R^2\)，其语言叙述为：球的体积函数的导数等于球的表面积函数.
+\end{solution}
+
 \section{解答题}
 \begin{problem}
 设向量 \(\bs{a} = (\sin x, \cos x)\)，\(\bs{b} = (\cos x, \cos x)\)，\(x \in \R\). 函数 \(f(x) = \bs{a} \cdot (\bs{a} + \bs{b})\).
@@ -214,9 +446,40 @@ A
 \end{problem}
 
 \begin{solution}
+由向量的数量积，
+\[
+\begin{aligned}
+f(x)
+&=(\sin x,\cos x)\cdot(\sin x+\cos x,2\cos x)\\
+&=\sin^2x+\sin x\cos x+2\cos^2x\\
+&=\frac32+\frac12(\sin 2x+\cos 2x)\\
+&=\frac32+\frac{\sqrt2}{2}\sin\left(2x+\frac\pi4\right).
+\end{aligned}
+\]
+
 \begin{enumerate}
-\item 函数 \(f(x)\) 的最大值为 \(\frac{3}{2} + \frac{\sqrt{2}}{2}\)，最小正周期为 \(\pi\).
-\item \(x\) 的取值集合为 \(\left\{x \mid k\pi - \frac{\pi}{8} \leqslant x \leqslant k\pi + \frac{3\pi}{8},\ k \in \Z\right\}\).
+\item 因为 \(-1\leqslant\sin(2x+\frac\pi4)\leqslant1\)，所以
+\[
+\frac32-\frac{\sqrt2}{2}\leqslant f(x)\leqslant\frac32+\frac{\sqrt2}{2}
+\]
+故 \(f(x)\) 的最大值为 \(\frac32+\frac{\sqrt2}{2}\). 由于 \(\sin(2x+\frac\pi4)\) 的最小正周期为 \(\pi\)，且系数不改变周期，故 \(f(x)\) 的最小正周期为 \(\pi\).
+
+\item 不等式 \(f(x)\geqslant\frac32\) 等价于
+\[
+\sin\left(2x+\frac\pi4\right)\geqslant0
+\]
+因此存在 \(k\in\Z\)，使得
+\[
+2k\pi\leqslant2x+\frac\pi4\leqslant(2k+1)\pi
+\]
+解得
+\[
+k\pi-\frac\pi8\leqslant x\leqslant k\pi+\frac{3\pi}{8}
+\]
+所以 \(x\) 的取值集为
+\[
+\left\{x\middle|k\pi-\frac\pi8\leqslant x\leqslant k\pi+\frac{3\pi}{8},\ k\in\Z\right\}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -230,9 +493,18 @@ A
 \end{problem}
 
 \begin{solution}
+设参加活动的职工总人数为 \(N\). 则登山组人数为 \(\frac N4\)，游泳组人数为 \(\frac{3N}{4}\). 全体职工中青年、中年、老年人数分别为 \(0.425N\)、\(0.475N\)、\(0.1N\). 登山组中三类职工人数分别为
+\(0.5\times\frac N4=0.125N\)，\(0.4\times\frac N4=0.1N\)，\(0.1\times\frac N4=0.025N\)
+所以游泳组中三类职工人数分别为
+\(0.425N-0.125N=0.3N\)，\(0.475N-0.1N=0.375N\)，\(0.1N-0.025N=0.075N\)
+
 \begin{enumerate}
-\item 游泳组中，青年人、中年人、老年人分别占 \(40\%\)，\(50\%\)，\(10\%\).
-\item 游泳组中，青年人、中年人、老年人分别应抽取 \(60\) 人、\(75\) 人、\(15\) 人.
+\item 游泳组总人数为 \(\frac{3N}{4}=0.75N\)，故游泳组中青年、中年、老年分别所占的比例为
+\(\frac{0.3N}{0.75N}=40\%\)，\(\frac{0.375N}{0.75N}=50\%\)，\(\frac{0.075N}{0.75N}=10\%\)
+
+\item 分层抽样时，各层抽取人数与该层职工总人数成比例. 以参加活动的全体职工为总体，容量为 \(200\)，所以游泳组中青年、中年、老年分别应抽取
+\(200\times0.3N/N=60\)，\(200\times0.375N/N=75\)，\(200\times0.075N/N=15\)
+人.
 \end{enumerate}
 \end{solution}
 
@@ -249,8 +521,44 @@ A
 
 \begin{solution}
 \begin{enumerate}
-\item 二面角 \(B_{1} - AM - N\) 的平面角的余弦值为 \(\frac{\sqrt{5}}{5}\).
-\item 点 \(B_{1}\) 到平面 \(AMN\) 的距离为 \(1\).
+\item 建立空间直角坐标系，取
+\(B=\left(-\frac12,0,0\right)\)，\(C=\left(\frac12,0,0\right)\)，\(A=\left(0,\frac{\sqrt3}{2},0\right)\)
+并令正三棱柱的侧棱方向为 \(z\) 轴正方向. 于是
+\(M=(0,0,0)\)，\(B_1=\left(-\frac12,0,1\right)\)
+由 \(CN=2C_1N\) 及 \(CC_1=1\)，得 \(C_1N=\frac13\)，所以
+\[
+N=\left(\frac12,0,\frac23\right)
+\]
+
+平面 \(AMB_1\) 内的两个不共线方向向量可取
+\(\overrightarrow{MA}=\left(0,\frac{\sqrt3}{2},0\right)\)，\(\overrightarrow{MB_1}=\left(-\frac12,0,1\right)\)
+由它们的叉积可取平面 \(AMB_1\) 的一个法向量为
+\[
+\bs{n}_1=(2,0,1)
+\]
+同理，平面 \(AMN\) 内的两个不共线方向向量为
+\(\overrightarrow{MA}=\left(0,\frac{\sqrt3}{2},0\right)\)，\(\overrightarrow{MN}=\left(\frac12,0,\frac23\right)\)
+可取其法向量为
+\[
+\bs{n}_2=(4,0,-3)
+\]
+所以二面角的平面角的余弦值为
+\[
+\frac{|\bs{n}_1\cdot\bs{n}_2|}{|\bs{n}_1||\bs{n}_2|}
+=\frac{|2\times4+1\times(-3)|}{\sqrt{2^2+1^2}\sqrt{4^2+(-3)^2}}
+=\frac5{\sqrt5\cdot5}
+=\frac{\sqrt5}{5}
+\]
+
+\item 由法向量 \(\bs{n}_2=(4,0,-3)\)，平面 \(AMN\) 的方程为
+\[
+4x-3z=0
+\]
+因为平面经过原点 \(M\). 因此点 \(B_1\) 到平面 \(AMN\) 的距离为
+\[
+\frac{|4\left(-\frac12\right)-3\times1|}{\sqrt{4^2+(-3)^2}}
+=\frac5{5}=1
+\]
 \end{enumerate}
 \end{solution}
 
@@ -259,7 +567,51 @@ A
 \end{problem}
 
 \begin{solution}
-\(a=-c\)，\(b=-2c-3\)，且 \(c\ne -3\). 当 \(c<-3\) 时，\(f(x)\) 在 \((-\infty,1]\) 和 \(\left[-\frac{2c+3}{3},+\infty\right)\) 上单调增加，在 \(\left[1,-\frac{2c+3}{3}\right]\) 上单调减少；当 \(c>-3\) 时，\(f(x)\) 在 \(\left(-\infty,-\frac{2c+3}{3}\right]\) 和 \([1,+\infty)\) 上单调增加，在 \(\left[-\frac{2c+3}{3},1\right]\) 上单调减少.
+因为 \(f(1)=-2\)，所以
+\[
+1-a+b+c=-2
+\]
+又因为 \(f(x)\) 在 \(x=1\) 处取得极值，故 \(f'(1)=0\). 而
+\[
+f'(x)=3x^2-2ax+b
+\]
+所以
+\[
+3-2a+b=0
+\]
+联立两式，先由第二式得 \(b=2a-3\)，代入第一式得
+\[
+1-a+2a-3+c=-2
+\]
+从而
+\(a=-c\)，\(b=-2c-3\)
+
+代入导函数，得
+\[
+f'(x)=3x^2+2cx-2c-3
+=(x-1)(3x+2c+3)
+\]
+另一个临界点为
+\[
+r=-\frac{2c+3}{3}
+\]
+若 \(c=-3\)，则 \(r=1\)，此时 \(f'(x)=3(x-1)^2\)，导函数在 \(x=1\) 两侧均为正，函数在该点不取得极值，故必须有 \(c\ne-3\).
+
+当 \(c<-3\) 时，\(r>1\). 此时由 \(f'(x)=(x-1)(3x+2c+3)\) 的符号可知，\(f(x)\) 在 \((-\infty,1]\) 和 \([r,+\infty)\) 上单调增加，在 \([1,r]\) 上单调减少，即
+\[
+\begin{cases}
+\text{在 }(-\infty,1]\text{ 和 }\left[-\dfrac{2c+3}{3},+\infty\right)\text{ 上单调增加},\\
+\text{在 }\left[1,-\dfrac{2c+3}{3}\right]\text{ 上单调减少}.
+\end{cases}
+\]
+
+当 \(c>-3\) 时，\(r<1\). 此时函数在 \((-\infty,r]\) 和 \([1,+\infty)\) 上单调增加，在 \([r,1]\) 上单调减少，即
+\[
+\begin{cases}
+\text{在 }\left(-\infty,-\dfrac{2c+3}{3}\right]\text{ 和 }[1,+\infty)\text{ 上单调增加},\\
+\text{在 }\left[-\dfrac{2c+3}{3},1\right]\text{ 上单调减少}.
+\end{cases}
+\]
 \end{solution}
 
 \begin{problem}
@@ -272,7 +624,46 @@ A
 \end{problem}
 
 \begin{solution}
-\(a_n=6n-5\ (n\in\N^{*})\)，使条件对所有 \(n\in\N^{*}\) 成立的最小正整数为 \(m=10\).
+由点 \(\left(n,\frac{S_n}{n}\right)\) 在直线 \(y=3x-2\) 上，得
+\(\frac{S_n}{n}=3n-2\)，\(S_n=3n^2-2n\)
+当 \(n=1\) 时，\(S_1=1\)，所以 \(a_1=1\). 当 \(n\geqslant2\) 时，
+\[
+\begin{aligned}
+a_n
+&=S_n-S_{n-1}\\
+&=(3n^2-2n)-\bigl(3(n-1)^2-2(n-1)\bigr)\\
+&=6n-5.
+\end{aligned}
+\]
+当 \(n=1\) 时，\(6n-5=1=a_1\)，故
+\(a_n=6n-5\)，\(n\in\N^{*}\)
+
+由此
+\[
+b_n=\frac{3}{(6n-5)(6n+1)}
+=\frac12\left(\frac1{6n-5}-\frac1{6n+1}\right)
+\]
+所以
+\[
+\begin{aligned}
+T_n
+&=\frac12\sum_{k=1}^{n}\left(\frac1{6k-5}-\frac1{6k+1}\right)\\
+&=\frac12\left(1-\frac1{6n+1}\right)\\
+&=\frac{3n}{6n+1}.
+\end{aligned}
+\]
+显然
+\[
+T_n=\frac{3n}{6n+1}<\frac12=\frac{10}{20}
+\]
+对一切 \(n\in\N^{*}\) 成立，因此 \(m=10\) 满足条件. 另一方面，若 \(m\leqslant9\)，取 \(n=2\)，则
+\[
+T_2=\frac6{13}>\frac9{20}\geqslant\frac m{20}
+\]
+不满足题设不等式. 因此所求最小正整数为
+\[
+m=10
+\]
 \end{solution}
 
 \begin{problem}
@@ -285,5 +676,64 @@ A
 \end{problem}
 
 \begin{solution}
-椭圆方程为 \(\frac{x^2}{4}+\frac{y^2}{3}=1\)，点 \(B\) 在以 \(MN\) 为直径的圆内.
+设椭圆的半焦距为 \(c\)，则焦距为 \(2c\). 由“长半轴长等于焦距”，得
+\[
+a=2c
+\]
+右准线方程为 \(x=\frac{a^2}{c}\)，又右准线为 \(x=4\)，所以
+\[
+\frac{a^2}{c}=4
+\]
+联立 \(a=2c\)，得 \(4c=4\)，从而 \(c=1\)，\(a=2\). 又
+\[
+b^2=a^2-c^2=4-1=3
+\]
+所以椭圆方程为
+\[
+\frac{x^2}{4}+\frac{y^2}{3}=1
+\]
+
+设 \(P=(4,t)\)，其中 \(t\ne0\)，且 \(A=(-2,0)\)，\(B=(2,0)\). 直线 \(AP\) 上的点可参数表示为
+\[
+X=A+\lambda(P-A)=(-2+6\lambda,\lambda t)
+\]
+将其代入椭圆方程，得
+\[
+\frac{(-2+6\lambda)^2}{4}+\frac{\lambda^2t^2}{3}=1
+\]
+其中 \(\lambda=0\) 对应点 \(A\)，另一个交点 \(M\) 对应
+\[
+\lambda=\frac{18}{t^2+27}
+\]
+因此
+\[
+M=\left(-2+\frac{108}{t^2+27},\frac{18t}{t^2+27}\right)
+\]
+
+同理，直线 \(BP\) 上的点可参数表示为
+\[
+Y=B+\mu(P-B)=(2+2\mu,\mu t)
+\]
+代入椭圆方程，其中 \(\mu=0\) 对应点 \(B\)，另一个交点 \(N\) 对应
+\[
+\mu=-\frac{6}{t^2+3}<0
+\]
+所以射线 \(BN\) 与射线 \(BP\) 方向相反.
+
+考察点 \(B\) 处的角. 由
+\(\overrightarrow{BM}=(-4+6\lambda,\lambda t)\)，\(\overrightarrow{BP}=(2,t)\)
+以及 \(\lambda=\frac{18}{t^2+27}\)，有
+\[
+\begin{aligned}
+\overrightarrow{BM}\cdot\overrightarrow{BP}
+&=(-4+6\lambda)\cdot2+\lambda t^2\\
+&=-8+\lambda(12+t^2)\\
+&=\frac{10t^2}{t^2+27}>0.
+\end{aligned}
+\]
+故 \(\angle MBP\) 为锐角. 由于射线 \(BN\) 与射线 \(BP\) 方向相反，所以
+\[
+\angle MBN=\pi-\angle MBP>\frac\pi2
+\]
+根据直径所对的圆周角为直角，角大于直角时顶点在以对应弦为直径的圆内，故点 \(B\) 在以 \(MN\) 为直径的圆内.
 \end{solution}

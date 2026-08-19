@@ -13,12 +13,13 @@
 \end{problem}
 
 \begin{solution}
-先提取公因式并利用平方差公式，得 \(x^{5}y-9xy^{5}=xy\left(x^{4}-9y^{4}\right)=xy\left(x^{2}-3y^{2}\right)\left(x^{2}+3y^{2}\right)\).
+先提取公因式，再利用平方差公式，得
+\(x^{5}y-9xy^{5}=xy\left(x^{4}-9y^{4}\right)=xy\left(x^{2}-3y^{2}\right)\left(x^{2}+3y^{2}\right)\).
 
 \begin{enumerate}
-\item 在有理数范围内，\(x^{2}-3y^{2}\) 的根为 \(x=\pm\sqrt{3}y\)，不是有理数倍的 \(y\)，而 \(x^{2}+3y^{2}\) 也没有有理数一次因式，因此分解为 \(xy\left(x^{2}-3y^{2}\right)\left(x^{2}+3y^{2}\right)\).
-\item 在实数范围内，\(x^{2}-3y^{2}=\left(x+\sqrt{3}y\right)\left(x-\sqrt{3}y\right)\)，而 \(x^{2}+3y^{2}\) 在实数范围内不能再分解，所以分解为 \(xy\left(x^{2}+3y^{2}\right)\left(x+\sqrt{3}y\right)\left(x-\sqrt{3}y\right)\).
-\item 在复数范围内，\(x^{2}+3y^{2}=\left(x+\sqrt{3}\i y\right)\left(x-\sqrt{3}\i y\right)\)，故完全分解为 \(xy\left(x+\sqrt{3}\i y\right)\left(x-\sqrt{3}\i y\right)\left(x+\sqrt{3}y\right)\left(x-\sqrt{3}y\right)\).
+\item 在有理数范围内，若 \(x^{2}-3y^{2}\) 有有理系数的一次因式，则其根应为 \(x=ry\)，其中 \(r\) 为有理数；但代入后得 \(r^{2}=3\)，这不可能，因为 \(\sqrt{3}\) 不是有理数. 类似地，\(x^{2}+3y^{2}=0\) 的根满足 \(x/y=\pm\sqrt{3}\i\)，不属于有理数范围. 因此不能再分解，结果为 \(xy\left(x^{2}-3y^{2}\right)\left(x^{2}+3y^{2}\right)\).
+\item 在实数范围内，\(x^{2}-3y^{2}=\left(x+\sqrt{3}y\right)\left(x-\sqrt{3}y\right)\). 另一方面，当 \(x\)，\(y\) 不全为零时，\(x^{2}+3y^{2}>0\)，因而它没有实数一次因式，所以结果为 \(xy\left(x^{2}+3y^{2}\right)\left(x+\sqrt{3}y\right)\left(x-\sqrt{3}y\right)\).
+\item 在复数范围内，\(x^{2}+3y^{2}=\left(x+\sqrt{3}\i y\right)\left(x-\sqrt{3}\i y\right)\)，同时 \(x^{2}-3y^{2}=\left(x+\sqrt{3}y\right)\left(x-\sqrt{3}y\right)\). 因此完全分解为 \(xy\left(x+\sqrt{3}\i y\right)\left(x-\sqrt{3}\i y\right)\left(x+\sqrt{3}y\right)\left(x-\sqrt{3}y\right)\).
 \end{enumerate}
 \end{solution}
 
@@ -35,9 +36,9 @@
 \end{problem}
 
 \begin{solution}
-设三角形为 \(\triangle ABC\). 取最长边 \(BC\) 所在直线为 \(x\) 轴，取过 \(A\) 且垂直于 \(BC\) 的高所在直线为 \(y\) 轴. 设 \(A=(0,a)\)，\(B=(b,0)\)，\(C=(c,0)\). 由于 \(BC\) 是最长边，点 \(A\) 的高足在边 \(BC\) 的内部，故可取 \(a>0\)，\(b<0<c\).
+设三角形为 \(\triangle ABC\). 取最长边 \(BC\) 所在直线为 \(x\) 轴，取过 \(A\) 且垂直于 \(BC\) 的高所在直线为 \(y\) 轴. 由于 \(BC\) 是最长边，\(\angle B\) 与 \(\angle C\) 都是锐角，所以点 \(A\) 的高足在边 \(BC\) 的内部. 设 \(A=(0,a)\)，\(B=(b,0)\)，\(C=(c,0)\)，并取坐标方向使得 \(a>0\)，于是 \(b<0<c\).
 
-直线 \(AB\) 的方程为 \(\frac{x}{b}+\frac{y}{a}=1\)，斜率为 \(-\frac{a}{b}\)，所以过 \(C\) 的高线方程为 \(y=\frac{b}{a}(x-c)\). 同理，直线 \(AC\) 的斜率为 \(-\frac{a}{c}\)，所以过 \(B\) 的高线方程为 \(y=\frac{c}{a}(x-b)\).
+直线 \(AB\) 的方程为 \(\frac{x}{b}+\frac{y}{a}=1\)，斜率为 \(-\frac{a}{b}\)，所以过 \(C\) 的高线斜率为 \(\frac{b}{a}\)，方程为 \(y=\frac{b}{a}(x-c)\). 同理，直线 \(AC\) 的斜率为 \(-\frac{a}{c}\)，所以过 \(B\) 的高线方程为 \(y=\frac{c}{a}(x-b)\).
 
 设这两条高线的交点为 \(D\). 联立两式，得 \(b(x-c)=c(x-b)\)，即 \((b-c)x=0\). 因为 \(b\neq c\)，所以 \(x=0\). 这说明 \(D\) 在 \(y\) 轴上，而 \(y\) 轴就是过 \(A\) 的高线. 因此三条高线交于同一点.
 \end{solution}
@@ -62,13 +63,13 @@
 \end{problem}
 
 \begin{solution}
-若平面 \(N\) 与平面 \(M\) 平行，则因 \(PA\perp M\)，有 \(PA\perp N\). 于是过点 \(P\) 的两条直线 \(PA\) 和 \(PB\) 都垂直于平面 \(N\)，它们必重合，从而 \(A\) 与 \(B\) 重合，这与题设 \(A\neq B\) 矛盾. 因此平面 \(N\) 必与平面 \(M\) 相交.
+若平面 \(N\) 与平面 \(M\) 平行或重合，则因 \(PA\perp M\)，有 \(PA\perp N\). 于是过点 \(P\) 的两条直线 \(PA\) 和 \(PB\) 都垂直于平面 \(N\)，由过一点有且只有一条直线垂直于一个平面，得 \(PA\) 与 \(PB\) 重合. 由于直线 \(PA\) 垂直于平面 \(M\)，它与平面 \(M\) 只有一个交点 \(A\)，故 \(B=A\)，这与题设 \(A\neq B\) 矛盾. 因此平面 \(N\) 必与平面 \(M\) 相交.
 
-设交线为 \(l\). 因为 \(l\subset M\)，且 \(PA\perp M\)，所以 \(PA\perp l\)；又因为 \(PB\perp N\)，且 \(l\subset N\)，所以 \(PB\perp l\). 将向量 \(\overrightarrow{PB}\) 正投影到平面 \(M\) 上，得到向量 \(\overrightarrow{AB}\). 直线 \(l\) 在平面 \(M\) 内，且 \(PB\perp l\)，所以其投影 \(AB\) 也垂直于 \(l\). 因而 \(l\perp AB\).
+设交线为 \(l\). 取 \(l\) 的方向向量为 \(\bs{v}\). 因为 \(l\subset M\)，且 \(PA\perp M\)，所以 \(\bs{v}\cdot\overrightarrow{PA}=0\)；又因为 \(l\subset N\)，且 \(PB\perp N\)，所以 \(\bs{v}\cdot\overrightarrow{PB}=0\). 由向量关系 \(\overrightarrow{PB}=\overrightarrow{PA}+\overrightarrow{AB}\)，可得 \(\bs{v}\cdot\overrightarrow{AB}=0\). 直线 \(l\) 与 \(AB\) 均在平面 \(M\) 内，且方向互相垂直，故两直线相交并且 \(l\perp AB\).
 \end{solution}
 
 \begin{problem}
-设三角函数 \(f(x)=\sin\left(\frac{kx}{5}+\frac{\pi}{3}\right)\)，其中 \(k\neq0\).
+设三角函数 \(f(x)=\sin\left(\frac{k\pi}{5}+\frac{\pi}{3}\right)\)，其中 \(k\neq0\).
 
 \begin{enumerate}
 \item 写出 \(f(x)\) 极大值 \(M\)，极小值 \(m\) 与最小正周期 \(T\)；
@@ -78,12 +79,8 @@
 
 \begin{solution}
 \begin{enumerate}
-\item 正弦函数的值域为 \([-1,1]\)，故 \(f(x)\) 的极大值为 \(M=1\)，极小值为 \(m=-1\). 其中 \(x\) 的系数为 \(\frac{k}{5}\)，所以最小正周期为 \(T=\frac{2\pi}{\left\lvert k/5\right\rvert}=\frac{10\pi}{\lvert k\rvert}\).
-\item 欲求最小正整数，以下设 \(k\in\Z_{>0}\). 在每一个长度为 \(T\) 的闭区间内，正弦函数的相位增加 \(2\pi\)，因此至少各出现一次最大值 \(M\) 和最小值 \(m\). 所以当 \(T\leq1\) 时，任意两个相邻整数 \(n\) 与 \(n+1\) 所确定的区间 \([n,n+1]\) 都包含其子区间 \([n,n+T]\)，从而其中至少各有一个值为 \(M\) 和 \(m\). 两个不相邻整数所确定的区间包含某个相邻整数区间，故同样满足题意.
-
-反过来设 \(T>1\). 函数取最大值的点为 \(x_j=\frac{5\pi}{6k}+jT\)（\(j\in\Z\)），相邻两点之间的距离为 \(T\). 令 \(n_j=\lfloor x_j\rfloor\). 因为 \(T>1\)，所以 \(n_{j+1}-n_j\geq1\). 若对所有 \(j\geq0\) 都有 \(n_{j+1}-n_j=1\)，则令 \(r_j=x_j-n_j\)，有 \(r_j=r_0+j(T-1)\)；当 \(j\) 足够大时 \(r_j\geq1\)，这与 \(0\leq r_j<1\) 矛盾. 因而存在某个 \(j\geq0\)，使 \(n_{j+1}-n_j\geq2\). 又因为 \(x_j=\frac{(5+60j)\pi}{6k}\) 不是整数，所以 \(x_j<n_j+1\)，且 \(x_{j+1}>n_j+2\). 因此闭区间 \([n_j+1,n_j+2]\) 完全位于相邻两个最大值点 \(x_j\)、\(x_{j+1}\) 之间，不含最大值 \(M\)，题意不成立. 所以题意的充要条件为 \(T\leq1\).
-
-于是 \(\frac{10\pi}{k}\leq1\)，即 \(k\geq10\pi\). 因为 \(31<10\pi<32\)，最小的正整数为 \(k=32\).
+\item 右端不含 \(x\)，所以对固定的 \(k\)，函数是常函数. 记 \(c=\sin\left(\frac{k\pi}{5}+\frac{\pi}{3}\right)\)，则对任意 \(x\) 都有 \(f(x)=c\)，从而 \(M=m=c\). 对任意 \(T>0\)，都有 \(f(x+T)=c=f(x)\)，所以所有正数都是它的周期，不存在最小正周期 \(T\).
+\item 按题面字面，函数在任意两个整数所确定的闭区间内恒取值 \(c\)，而 \(M=m=c\)，因此任意正整数 \(k\) 都满足“至少有一个值是 \(M\) 与一个值是 \(m\)”的字面条件，最小值为 \(k=1\). 但第（1）问要求不存在的最小正周期，说明原题扫描字面与可解版本存在冲突，不能据此恢复缺失的自变量项.
 \end{enumerate}
 \end{solution}
 
@@ -100,15 +97,13 @@
 \end{solution}
 
 \begin{problem}
-已知 \(0 < \alpha < \pi\)，证明：\(2\sin 2\alpha\leqslant\cot\frac{\alpha}{2}\)；并讨论 \(\alpha\) 为何值时等号成立.
+已知 \(0 < \alpha < \pi\)，证明：\(2\sin\alpha\leqslant\cot\frac{\alpha}{2}\)；并讨论 \(\alpha\) 为何值时等号成立.
 \end{problem}
 
 \begin{solution}
-因为 \(0<\alpha<\pi\)，所以 \(\sin\alpha>0\)，且 \(\cot\frac{\alpha}{2}=\frac{1+\cos\alpha}{\sin\alpha}\). 原不等式等价于 \(2\sin2\alpha\sin\alpha\leq1+\cos\alpha\).
+因为 \(0<\alpha<\pi\)，所以 \(\sin\alpha>0\)，且 \(\cot\frac{\alpha}{2}=\frac{1+\cos\alpha}{\sin\alpha}\). 取 \(\alpha=\frac\pi2\)，原不等式变为 \(2\leq1\)，不成立. 因此按本地原始页面的字面，题目中的不等式不能被证明.
 
-令 \(c=\cos\alpha\). 利用 \(\sin2\alpha=2\sin\alpha\cos\alpha\)，左端化为 \(4\sin^2\alpha\cos\alpha=4(1-c^2)c=4(1-c)(1+c)c\). 因此只需证明 \((1+c)\left[4(1-c)c-1\right]\leq0\). 而 \(1+c>0\)，并且 \(4(1-c)c-1=-(2c-1)^2\leq0\)，所以原不等式成立.
-
-等号成立当且仅当 \((2c-1)^2=0\)，即 \(\cos\alpha=\frac12\). 在 \(0<\alpha<\pi\) 内，得到 \(\alpha=\frac\pi3\).
+若只讨论该字面等式的解，则由 \(2\sin\alpha=\frac{1+\cos\alpha}{\sin\alpha}\)，得 \(2\sin^2\alpha=1+\cos\alpha\). 令 \(c=\cos\alpha\)，利用 \(\sin^2\alpha=1-c^2\)，有 \(2(1-c^2)=1+c\)，即 \(2c^2+c-1=0\)，所以 \(c=\frac12\) 或 \(c=-1\). 由于 \(0<\alpha<\pi\)，不能取 \(c=-1\)，故只能有 \(\alpha=\frac\pi3\). 代入原等式，左端为 \(2\sin\frac\pi3=\sqrt{3}\)，右端为 \(\cot\frac\pi6=\sqrt{3}\)，故 \(\alpha=\frac\pi3\) 确实为等号成立值. 但这不能消除原始页面与公开同题资料在题面上的冲突.
 \end{solution}
 
 \begin{problem}
@@ -119,7 +114,8 @@
 \begin{solution}
 设圆心为 \(C=(k,0)\)，则圆的方程为 \((x-k)^2+y^2=1\). 设圆与抛物线的一个交点为 \(P=(x_0,y_0)\). 在 \(P\) 点，圆的半径 \(CP\) 与圆的切线垂直；要使圆的切线与抛物线的切线垂直，充要条件是半径 \(CP\) 与抛物线在 \(P\) 点的切线平行.
 
-若 \(y_0=0\)，则 \(P=(0,0)\)，此时圆心在 \(x\) 轴上且 \(CP\) 平行于 \(x\) 轴，圆在 \(P\) 处的切线与抛物线在顶点处的切线均为 \(y\) 轴，不可能互相垂直，故以下 \(y_0\neq0\). 抛物线 \(y^2=2x\) 在 \(P\) 点的切线斜率为 \(\frac1{y_0}\)，可取方向向量 \((y_0,1)\)；圆在 \(P\) 点的切线可取方向向量 \((-y_0,x_0-k)\). 两切线垂直当且仅当 \((-y_0,x_0-k)\cdot(y_0,1)=0\)，即 \(y_0^2=x_0-k\). 又因 \(P\) 在抛物线上，\(y_0^2=2x_0\)，所以 \(k=-x_0\).
+若 \(y_0=0\)，则由抛物线方程得 \(P=(0,0)\). 此时圆心也在 \(x\) 轴上，所以半径 \(CP\) 平行于 \(x\) 轴，圆在 \(P\) 处的切线与抛物线在顶点处的切线均为 \(y\) 轴，不可能互相垂直，故以下设 \(y_0\neq0\). 抛物线 \(y^2=2x\) 在 \(P\) 点的切线斜率为 \(\frac1{y_0}\)，可取方向向量 \((y_0,1)\)；圆在 \(P\) 点的半径方向向量为 \((x_0-k,y_0)\)，故其切线可取方向向量 \((-y_0,x_0-k)\). 两切线垂直当且仅当
+\((-y_0,x_0-k)\cdot(y_0,1)=0\)，即 \(y_0^2=x_0-k\). 又因 \(P\) 在抛物线上，\(y_0^2=2x_0\)，所以 \(k=-x_0\).
 
 将 \(k=-x_0\) 代入圆的方程，得 \((2x_0)^2+2x_0=1\)，即 \(4x_0^2+2x_0-1=0\). 由于抛物线上的点满足 \(x_0\geq0\)，故 \(x_0=\frac{\sqrt{5}-1}{4}\)，从而 \(k=\frac{1-\sqrt{5}}{4}\).
 
@@ -129,7 +125,13 @@
 \section{附加题}
 
 \begin{problem}
-设直线 \(l\) 的参数方程是 \(\left\{\begin{aligned}x=t,\\ y=b+mt\end{aligned}\right.\)（\(t\) 是参数），椭圆 \(E\) 的参数方程是 \(\left\{\begin{aligned}x=1+a\cos\theta,\\ y=\sin\theta\end{aligned}\right.\)（\(a\neq0\)，\(\theta\) 是参数），问 \(a\)，\(b\) 应满足什么条件，使得对于任意 \(m\) 值来说，直线 \(l\) 与椭圆 \(E\) 总有公共点.
+设直线 \(l\) 的参数方程是 \(\begin{cases}
+x=t,\\
+y=b+mt
+\end{cases}\)（\(t\) 是参数），椭圆 \(E\) 的参数方程是 \(\begin{cases}
+x=1+a\cos\theta,\\
+y=\sin\theta
+\end{cases}\)（\(a\neq0\)，\(\theta\) 是参数），问 \(a\)，\(b\) 应满足什么条件，使得对于任意 \(m\) 值来说，直线 \(l\) 与椭圆 \(E\) 总有公共点.
 \end{problem}
 
 \begin{solution}

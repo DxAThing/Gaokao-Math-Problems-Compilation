@@ -17,12 +17,11 @@ C
 \end{answer}
 
 \begin{solution}
-复数的实部为 \(a\)，虚部为 \(1\)，所以
-\[
-|z|=\sqrt{a^2+1}.
-\]
-由 \(0<a<2\) 得 \(1<a^2+1<5\)，从而 \(1<|z|<\sqrt{5}\).
-故选 C.
+由复数模的定义，
+\( |z|=\sqrt{(\operatorname{Re}z)^2+(\operatorname{Im}z)^2}=\sqrt{a^2+1} \).
+因为 \(0<a<2\)，所以 \(0<a^2<4\)，从而
+\(1<a^2+1<5\).
+两边均为正数，开平方得 \(1<|z|<\sqrt{5}\)，故选 C.
 \end{solution}
 
 \begin{problem}
@@ -40,15 +39,12 @@ D
 \end{answer}
 
 \begin{solution}
-设等差数列的公差为 \(d\). 由前 \(4\) 项和公式，
-\[
-S_4=\frac{4}{2}(2a_1+3d)=2(1+3d)=20,
-\]
-所以 \(d=3\). 因此
-\[
-S_6=\frac{6}{2}(2a_1+5d)=3(1+15)=48.
-\]
-故选 D.
+设等差数列的公差为 \(d\). 由前 \(n\) 项和公式
+\(S_n=\frac{n}{2}\bigl(2a_1+(n-1)d\bigr)\)，得
+\(20=S_4=\frac{4}{2}\bigl(2\times\frac12+3d\bigr)=2(1+3d)\)，
+所以 \(d=3\).
+因此
+\(S_6=\frac{6}{2}\bigl(2\times\frac12+5\times3\bigr)=3(1+15)=48\)，故选 D.
 \end{solution}
 
 \begin{problem}
@@ -77,12 +73,13 @@ C
 \end{answer}
 
 \begin{solution}
-二年级女生人数为 \(0.19\times2000=380\)，所以二年级共有 \(380+370=750\) 人. 一年级共有 \(373+377=750\) 人，从而三年级共有 \(2000-750-750=500\) 人. 按分层抽样比例，三年级应抽取
-\[
-64\times\frac{500}{2000}=16
-\]
-人.
-故选 C.
+设二年级女生人数为 \(x\). 由抽到二年级女生的概率，
+\(\frac{x}{2000}=0.19\)，所以 \(x=380\).
+于是二年级共有 \(380+370=750\) 人，一年级共有
+\(373+377=750\) 人，三年级共有
+\(2000-750-750=500\) 人.
+分层抽样时各层抽取人数与该层人数成正比，所以三年级抽取
+\(64\times\frac{500}{2000}=16\) 人，故选 C.
 \end{solution}
 
 \begin{problem}
@@ -105,14 +102,27 @@ C
 \end{answer}
 
 \begin{solution}
-可行域的顶点为 \((0,0)\)，\((20,0)\)，\((10,20)\)，\((0,25)\). 目标函数 \(z=3x+2y\) 在这些顶点处的值依次为 \(0\)，\(60\)，\(70\)，\(50\). 因而最大值为 \(70\).
-故选 C.
+目标函数是线性的，最大值在可行域的顶点处取得.
+由 \(x\geqslant0\)，\(y\geqslant0\) 及两条约束直线可得四个顶点：
+坐标轴上的交点分别为 \((20,0)\) 和 \((0,25)\)，两条直线
+\(2x+y=40\)，\(x+2y=50\) 的交点由
+\[
+\begin{cases}
+2x+y=40,\\
+x+2y=50
+\end{cases}
+\]
+解得 \((x,y)=(10,20)\)，另一个顶点为 \((0,0)\).
+在四个顶点处，
+\(z(0,0)=0\)，\(z(20,0)=60\)，\(z(10,20)=70\)，
+\(z(0,25)=50\).
+因此最大值为 \(70\)，故选 C.
 \end{solution}
 
 \begin{problem}
 将正三棱柱截去三个角（如图1所示 \(A\)，\(B\)，\(C\) 分别是 \(\triangle GHI\) 三边的中点）得到几何体如图2，则该几何体按图2所示方向的侧视图（或称左视图）为（\quad）
 
-\bitmapinlinefigure[0.66\linewidth][max width=0.66\linewidth]{img/2008/guangdong_science/q5_condition.png}
+\bitmapfigure[max width=0.66\linewidth]{img/2008/guangdong_science/q5_condition.png}
 
 \choices
     {\choicebitmap[width=0.15\paperwidth]{img/2008/guangdong_science/q5_optA.png}}
@@ -126,8 +136,10 @@ A
 \end{answer}
 
 \begin{solution}
-沿图2所示方向作正投影后，重合的棱端点合并，所得外轮廓为左侧竖直、上边和下边水平、右侧为斜边的四边形；棱 \(EB\) 的投影为从左下方到右上方的内对角线. 四个图形中只有选项 A 同时具有上述外轮廓和内部投影线.
-故选 A.
+沿图2箭头方向作正投影，将投影方向上的重合点合并. 由图2各棱的相对位置，
+投影外轮廓的左边为竖直线段，上、下边分别为水平线段，右边为斜线段；
+同时，棱 \(EB\) 的投影是从左下顶点 \(E\) 到上部顶点 \(B\) 的内线段.
+逐一比较四个选项，只有选项 A 同时满足这个外轮廓和这条内投影线，故选 A.
 \end{solution}
 
 \begin{problem}
@@ -145,7 +157,12 @@ D
 \end{answer}
 
 \begin{solution}
-命题 \(p\)“所有有理数都是实数”为真. 命题 \(q\)“正数的对数都是负数”为假，例如 \(1\) 是正数而其对数为 \(0\)，不是负数. 因此 \(\neg p\) 为假，\(\neg q\) 为真，四个选项中只有 \((\neg p)\lor(\neg q)\) 为真.
+每个有理数都属于实数集，所以命题 \(p\) 为真，\(\neg p\) 为假.
+取正数 \(1\)，其任意合法底数的对数均为 \(0\)，不是负数，
+所以“正数的对数都是负数”的命题 \(q\) 为假，\(\neg q\) 为真.
+于是四个选项的真假依次为
+\((\neg p)\lor q\) 假，\(p\wedge q\) 假，
+\((\neg p)\wedge(\neg q)\) 假，\((\neg p)\lor(\neg q)\) 真.
 故选 D.
 \end{solution}
 
@@ -164,15 +181,18 @@ B
 \end{answer}
 
 \begin{solution}
-若 \(a\geqslant0\)，则 \(f'(x)=a\e^{ax}+3>0\)，函数没有极值点. 因此必须有 \(a<0\). 此时极值点满足
-\[
-f'(x)=a\e^{ax}+3=0,
-\]
-即 \(\e^{ax}=-\frac{3}{a}\). 令极值点为 \(x_0\)，则
-\[
-x_0=\frac{1}{a}\ln\left(-\frac{3}{a}\right).
-\]
-由于 \(a<0\)，要使 \(x_0>0\)，必须有 \(\ln(-3/a)<0\)，即 \(0<-3/a<1\)，所以 \(a<-3\). 又在此时 \(f''(x_0)=a^2\e^{ax_0}=-3a>0\)，确为极小值点. 故选 B.
+令 \(f(x)=\e^{ax}+3x\). 若 \(a\geqslant0\)，则
+\(f'(x)=a\e^{ax}+3>0\)，函数严格递增，不存在极值点.
+因此必须有 \(a<0\). 此时极值点应满足
+\(f'(x)=a\e^{ax}+3=0\)，即
+\(\e^{ax}=-\frac{3}{a}>0\)，从而
+\(x_0=\frac{1}{a}\ln\left(-\frac{3}{a}\right)\).
+由于 \(a<0\)，条件 \(x_0>0\) 等价于
+\(\ln\left(-\frac{3}{a}\right)<0\)，即 \(0<-\frac{3}{a}<1\)，
+进一步得到 \(a<-3\).
+当 \(a<-3\) 时，临界点确实存在，且
+\(f''(x_0)=a^2\e^{ax_0}=a^2\left(-\frac{3}{a}\right)=-3a>0\)，
+所以它是极小值点. 因此应选 B.
 \end{solution}
 
 \begin{problem}
@@ -190,21 +210,29 @@ B
 \end{answer}
 
 \begin{solution}
-以 \(O\) 为原点，设位置向量分别为 \(\overrightarrow{OA}\)，\(\overrightarrow{OB}\). 由平行四边形的对角线互相平分，\(\overrightarrow{OA}=-\frac12\bs{a}\)，\(\overrightarrow{OB}=-\frac12\bs{b}\)，\(\overrightarrow{OD}=\frac12\bs{b}\).
-由于 \(E\) 是 \(OD\) 的中点，\(\overrightarrow{OE}=\frac14\bs{b}\). 设 \(F\) 在直线 \(AE\) 上，写成
+以 \(O\) 为原点. 因为对角线互相平分，
+\(\overrightarrow{OA}=-\frac12\bs{a}\)，\(\overrightarrow{OC}=\frac12\bs{a}\)，
+\(\overrightarrow{OB}=-\frac12\bs{b}\)，\(\overrightarrow{OD}=\frac12\bs{b}\).
+又因 \(E\) 是 \(OD\) 的中点，
+\(\overrightarrow{OE}=\frac14\bs{b}\)，故
+\(\overrightarrow{AE}=\overrightarrow{OE}-\overrightarrow{OA}
+=\frac12\bs{a}+\frac14\bs{b}\).
+
+设 \(F\) 在直线 \(AE\) 上，则存在实数 \(t\) 使
 \[
-\overrightarrow{OF}=\overrightarrow{OA}+t\overrightarrow{AE}
-=-\frac12\bs{a}+t\left(\frac12\bs{a}+\frac14\bs{b}\right).
+\overrightarrow{OF}=-\frac12\bs{a}+t\left(\frac12\bs{a}+\frac14\bs{b}\right)
 \]
-另一方面，\(F\) 在 \(CD\) 上，故可写成
+又 \(F\in CD\)，而 \(\overrightarrow{CD}=\overrightarrow{OD}-\overrightarrow{OC}\)，
+故存在实数 \(s\) 使
 \[
-\overrightarrow{OF}=\frac12\bs{a}+s\left(\frac12\bs{b}-\frac12\bs{a}\right).
+\overrightarrow{OF}=\frac12\bs{a}+s\left(\frac12\bs{b}-\frac12\bs{a}\right)
 \]
-比较 \(\bs{a}\)，\(\bs{b}\) 的系数，得 \(t+s=2\)，\(t=2s\)，从而 \(t=\frac43\)，\(s=\frac23\). 因此
-\[
-\overrightarrow{AF}=\overrightarrow{OF}-\overrightarrow{OA}=\frac23\bs{a}+\frac13\bs{b}.
-\]
-故选 B.
+比较 \(\bs{a}\)，\(\bs{b}\) 的系数，得到
+\(t+s=2\)，\(t=2s\)，所以 \(t=\frac43\)，\(s=\frac23\).
+于是
+\(\overrightarrow{AF}=t\overrightarrow{AE}
+=\frac43\left(\frac12\bs{a}+\frac14\bs{b}\right)
+=\frac23\bs{a}+\frac13\bs{b}\)，故选 B.
 \end{solution}
 
 \section{填空题}
@@ -220,7 +248,12 @@ B
 \end{answer}
 
 \begin{solution}
-由程序框图，先令 \(i=1\)，再计算 \(a=mi\). 若 \(n\) 不整除 \(a\)，就令 \(i=i+1\) 后重新计算. 输入 \(m=4\)，\(n=6\) 时，\(i=1\) 得 \(a=4\)，\(6\) 不整除 \(4\)；令 \(i=2\) 得 \(a=8\)，\(6\) 不整除 \(8\)；令 \(i=3\) 得 \(a=12\)，\(6\) 整除 \(12\)，程序停止. 因此输出 \(a=12\)，\(i=3\).
+程序先赋值 \(i=1\)，再按 \(a=mi\) 计算 \(a\)，只有当 \(n\) 整除 \(a\) 时才输出.
+输入 \(m=4\)，\(n=6\) 后逐次计算：
+\(i=1\) 时 \(a=4\)，\(6\) 不能整除 \(4\)，故令 \(i=2\)；
+\(i=2\) 时 \(a=8\)，\(6\) 不能整除 \(8\)，故令 \(i=3\)；
+\(i=3\) 时 \(a=12\)，且 \(6\mid12\)，程序停止.
+因此输出 \(a=12\)，\(i=3\).
 \end{solution}
 
 \begin{problem}
@@ -232,11 +265,12 @@ B
 \end{answer}
 
 \begin{solution}
-展开式中 \(x^8\) 项来自取 \(4\) 个 \(kx^2\) 和 \(2\) 个 \(1\)，其系数为
-\[
-\mathrm C_6^4 k^4=15k^4.
-\]
-由题意 \(15k^4<120\)，所以 \(k^4<8\). 又 \(k\) 是正整数，只能取 \(k=1\).
+在二项式 \((1+kx^2)^6\) 中，若取 \(r\) 个 \(kx^2\)，所得项的次数为 \(2r\).
+要得到 \(x^8\)，必须有 \(2r=8\)，即 \(r=4\).
+所以 \(x^8\) 的系数为 \(\mathrm C_6^4 k^4=15k^4\).
+由题意 \(15k^4<120\)，得到 \(k^4<8\).
+由于 \(k\) 是正整数，若 \(k\geqslant2\)，则 \(k^4\geqslant16>8\)，
+故只能取 \(k=1\).
 \end{solution}
 
 \begin{problem}
@@ -248,7 +282,13 @@ B
 \end{answer}
 
 \begin{solution}
-将圆的方程配方得 \((x+1)^2+y^2=1\)，所以圆心 \(C=(-1,0)\). 直线 \(x+y=0\) 的斜率为 \(-1\)，与它垂直的直线斜率为 \(1\). 过圆心 \(C\) 的直线方程为 \(y=x+1\).
+将圆的方程配方：
+\(x^2+2x+y^2=0\Longleftrightarrow(x+1)^2+y^2=1\)，
+所以圆心为 \(C(-1,0)\).
+直线 \(x+y=0\) 化为 \(y=-x\)，斜率为 \(-1\)，
+与它垂直的直线斜率为 \(1\).
+过 \((-1,0)\) 的斜率为 \(1\) 的直线为
+\(y-0=1\bigl(x-(-1)\bigr)\)，即 \(y=x+1\).
 \end{solution}
 
 \begin{problem}
@@ -264,9 +304,13 @@ B
 \[
 f(x)=\sin^2x-\sin x\cos x
 =\frac{1-\cos2x}{2}-\frac{\sin2x}{2}
-=\frac12-\frac{\sqrt2}{2}\sin\left(2x+\frac{\pi}{4}\right).
+=\frac12-\frac{\sqrt2}{2}\sin\left(2x+\frac{\pi}{4}\right)
 \]
-其中正弦函数的自变量系数为 \(2\)，所以 \(f(x)\) 的周期为 \(\pi\). 因为正弦项的系数不为零，不能再缩短周期，故最小正周期为 \(\pi\).
+正弦项的自变量系数为 \(2\)，所以 \(\pi\) 是它的周期.
+若 \(T>0\) 是该函数的周期，则对任意 \(x\)，正弦项也必须满足
+\(\sin(2x+2T+\frac\pi4)=\sin(2x+\frac\pi4)\).
+这对所有自变量成立时，必须有 \(2T=2k\pi\)，其中 \(k\) 为正整数，
+故最小的正周期为 \(T=\pi\).
 \end{solution}
 
 \section{选考题：填空题}
@@ -280,7 +324,13 @@ f(x)=\sin^2x-\sin x\cos x
 \end{answer}
 
 \begin{solution}
-联立两条极坐标方程，得 \(4\cos^2\theta=3\). 由于 \(0\leqslant\theta<\frac{\pi}{2}\)，有 \(\cos\theta>0\)，所以 \(\cos\theta=\frac{\sqrt3}{2}\)，从而 \(\theta=\frac{\pi}{6}\). 再由 \(\rho=4\cos\theta\)，得 \(\rho=2\sqrt3\). 因此交点的极坐标为 \(\left(2\sqrt3,\frac{\pi}{6}\right)\).
+交点同时满足两条极坐标方程. 将 \(\rho=4\cos\theta\) 代入
+\(\rho\cos\theta=3\)，得 \(4\cos^2\theta=3\).
+由 \(0\leqslant\theta<\frac\pi2\)，知 \(\cos\theta>0\)，所以
+\(\cos\theta=\frac{\sqrt3}{2}\)，从而 \(\theta=\frac\pi6\).
+再代入 \(\rho=4\cos\theta\)，得到 \(\rho=2\sqrt3\)，
+且满足 \(\rho\geqslant0\). 因此交点的极坐标为
+\(\left(2\sqrt3,\frac\pi6\right)\).
 \end{solution}
 
 \begin{problem}
@@ -292,15 +342,25 @@ f(x)=\sin^2x-\sin x\cos x
 \end{answer}
 
 \begin{solution}
-关于 \(x\) 的二次方程有实根，当且仅当判别式满足
+记常数项为 \(c=\left|a-\frac14\right|+|a|\). 方程
+\(x^2+x+c=0\) 有实根，当且仅当
 \[
-\Delta=1-4\left(\left|a-\frac14\right|+|a|\right)\geqslant0,
+\Delta=1-4c\geqslant0,
+\qquad\text{即}\qquad
+\left|a-\frac14\right|+|a|\leqslant\frac14
 \]
-即
+分三段计算左端：
 \[
-\left|a-\frac14\right|+|a|\leqslant\frac14.
+\left|a-\frac14\right|+|a|=
+\begin{cases}
+\frac14-2a, & a<0,\\
+\frac14, & 0\leqslant a\leqslant\frac14,\\
+2a-\frac14, & a>\frac14.
+\end{cases}
 \]
-当 \(a<0\) 时，上式左边为 \(\frac14-2a>\frac14\)，不成立；当 \(0\leqslant a\leqslant\frac14\) 时，左边等于 \(\frac14\)，成立；当 \(a>\frac14\) 时，左边为 \(2a-\frac14>\frac14\)，不成立. 所以 \(a\) 的取值范围为 \(\left[0,\frac14\right]\).
+当 \(a<0\) 时左端大于 \(\frac14\)，当 \(a>\frac14\) 时左端也大于 \(\frac14\)，
+只有中间区间满足不等式. 所以 \(a\) 的取值范围为
+\(\left[0,\frac14\right]\).
 \end{solution}
 
 \begin{problem}
@@ -312,7 +372,14 @@ f(x)=\sin^2x-\sin x\cos x
 \end{answer}
 
 \begin{solution}
-由切线与割线定理，\(PA^2=PB\cdot PC\)，所以 \(4=1\cdot PC\)，得 \(PC=4\). 又 \(PA\) 是点 \(A\) 处的切线，\(OA\perp PA\)，而 \(A\)，\(O\)，\(C\) 共线，所以 \(PA\perp AC\). 在直角三角形 \(PAC\) 中，\(AC=\sqrt{PC^2-PA^2}=\sqrt{16-4}=2\sqrt3\). 由于 \(AC\) 是直径，\(2R=AC=2\sqrt3\)，故 \(R=\sqrt3\).
+由点 \(P\) 的切线与割线定理，
+\(PA^2=PB\cdot PC\). 代入 \(PA=2\)，\(PB=1\)，得
+\(4=1\cdot PC\)，所以 \(PC=4\).
+半径 \(OA\) 垂直切线 \(PA\)，而 \(A\)，\(O\)，\(C\) 共线，
+故 \(PA\perp AC\)，三角形 \(PAC\) 在 \(A\) 处为直角三角形.
+由勾股定理，
+\(AC=\sqrt{PC^2-PA^2}=\sqrt{4^2-2^2}=2\sqrt3\).
+又 \(AC\) 是直径，故 \(2R=AC=2\sqrt3\)，得到 \(R=\sqrt3\).
 \end{solution}
 
 \section{解答题}
@@ -328,9 +395,26 @@ f(x)=\sin^2x-\sin x\cos x
 
 \begin{solution}
 \begin{enumerate}
-\item 由于 \(A>0\)，函数 \(f(x)=A\sin(x+\varphi)\) 的最大值为 \(A\)，所以 \(A=1\). 又 \(\sin\left(\frac{\pi}{3}+\varphi\right)=\frac12\). 由 \(0<\varphi<\pi\)，得 \(\frac{\pi}{3}<\frac{\pi}{3}+\varphi<\frac{4\pi}{3}\). 在此区间内正弦值为 \(\frac12\) 的角只有 \(\frac{5\pi}{6}\)，故 \(\varphi=\frac{\pi}{2}\). 因此 \(f(x)=\sin\left(x+\frac{\pi}{2}\right)=\cos x\).
+\item 因为 \(\sin(x+\varphi)\) 的最大值为 \(1\)，且 \(A>0\)，
+所以 \(f(x)\) 的最大值为 \(A\). 由题设最大值为 \(1\)，得到 \(A=1\).
+点 \(M\left(\frac\pi3,\frac12\right)\) 在函数图象上，所以
+\(\sin\left(\frac\pi3+\varphi\right)=\frac12\).
+由 \(0<\varphi<\pi\)，有
+\(\frac\pi3<\frac\pi3+\varphi<\frac{4\pi}3\).
+在此区间内满足正弦值为 \(\frac12\) 的角只有 \(\frac{5\pi}6\)，
+故 \(\frac\pi3+\varphi=\frac{5\pi}6\)，即 \(\varphi=\frac\pi2\).
+因此 \(f(x)=\sin\left(x+\frac\pi2\right)=\cos x\).
 
-\item 由 \(f(\alpha)=\frac35\)，\(f(\beta)=\frac{12}{13}\)，以及 \(\alpha\)，\(\beta\in\left(0,\frac{\pi}{2}\right)\)，得 \(\cos\alpha=\frac35\)，\(\sin\alpha=\frac45\)，\(\cos\beta=\frac{12}{13}\)，\(\sin\beta=\frac5{13}\). 所以 \(f(\alpha-\beta)=\cos(\alpha-\beta)=\cos\alpha\cos\beta+\sin\alpha\sin\beta=\frac35\cdot\frac{12}{13}+\frac45\cdot\frac5{13}=\frac{56}{65}\).
+\item 由第一问，\(f(x)=\cos x\). 因为 \(\alpha\)，\(\beta\in\left(0,\frac\pi2\right)\)，
+两角的正弦均为正数. 于是
+\(\cos\alpha=\frac35\)，\(\sin\alpha=\sqrt{1-\frac9{25}}=\frac45\)，\(\cos\beta=\frac{12}{13}\)，\(\sin\beta=\sqrt{1-\frac{144}{169}}=\frac5{13}\).
+利用余弦差角公式，
+\(f(\alpha-\beta)=\cos(\alpha-\beta)
+=\cos\alpha\cos\beta+\sin\alpha\sin\beta\)，所以
+\[
+f(\alpha-\beta)=\frac35\cdot\frac{12}{13}+\frac45\cdot\frac5{13}
+=\frac{36+20}{65}=\frac{56}{65}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -346,23 +430,37 @@ f(x)=\sin^2x-\sin x\cos x
 
 \begin{solution}
 \begin{enumerate}
-\item \(\xi\) 的可能取值为 \(6\)，\(2\)，\(1\)，\(-2\)，相应的概率分别为 \(\frac{126}{200}=\frac{63}{100}\)，\(\frac{50}{200}=\frac14\)，\(\frac{20}{200}=\frac1{10}\)，\(\frac4{200}=\frac1{50}\). 因此分布列为
+\item 根据产品等级，\(\xi\) 的可能取值及其概率分别为
 \begin{center}
 \begin{tabular}{c|cccc}
-\(\xi\) & \(6\) & \(2\) & \(1\) & \(-2\) \\
+\(\xi\) & \(6\) & \(2\) & \(1\) & \(-2\)\\
 \hline
-\(P\) & \(\frac{63}{100}\) & \(\frac14\) & \(\frac1{10}\) & \(\frac1{50}\)
+\(P\) & \(\frac{126}{200}=\frac{63}{100}\)
+& \(\frac{50}{200}=\frac14\)
+& \(\frac{20}{200}=\frac1{10}\)
+& \(\frac4{200}=\frac1{50}\)
 \end{tabular}
 \end{center}
+因为 \(\frac{63}{100}+\frac14+\frac1{10}+\frac1{50}=1\)，
+这确实给出 \(\xi\) 的完整分布列.
 
-\item \(1\) 件产品的平均利润为
+\item 由数学期望定义，\(1\) 件产品的平均利润为
 \[
 E(\xi)=6\cdot\frac{63}{100}+2\cdot\frac14+1\cdot\frac1{10}-2\cdot\frac1{50}
 =\frac{217}{50}=4.34
 \]
 万元.
 
-\item 设技术革新后三等品率为 \(u\)，则二等品率为 \(1-70\%-1\%-u=29\%-u\). 此时平均利润为 \(6\cdot70\%+2(29\%-u)+u-2\cdot1\%=4.76-u\). 由题意 \(4.76-u\geqslant4.73\)，得 \(u\leqslant0.03=3\%\). 因此三等品率最多为 \(3\%\).
+\item 设技术革新后三等品率为 \(u\)，则二等品率为
+\(1-70\%-1\%-u=29\%-u\). 因为概率非负，需有 \(0\leqslant u\leqslant29\%\).
+此时平均利润为
+\[
+6\cdot70\%+2(29\%-u)+u-2\cdot1\%
+=4.76-u
+\]
+由平均利润不小于 \(4.73\) 万元，
+\(4.76-u\geqslant4.73\)，所以 \(u\leqslant0.03=3\%\).
+这个值满足概率非负条件，故三等品率最多为 \(3\%\).
 \end{enumerate}
 \end{solution}
 
@@ -379,13 +477,34 @@ E(\xi)=6\cdot\frac{63}{100}+2\cdot\frac14+1\cdot\frac1{10}-2\cdot\frac1{50}
 
 \begin{solution}
 \begin{enumerate}
-\item 椭圆的长半轴为 \(\sqrt2b\)，短半轴为 \(b\)，所以右焦点为 \(F_1(b,0)\). 由 \(G\) 在直线 \(y=b+2\) 上且在第一象限，代入抛物线方程得 \(x_G^2=8((b+2)-b)=16\)，故 \(G=(4,b+2)\). 对抛物线 \(x^2=8(y-b)\) 求导，得 \(2x=8y'\)，所以在 \(G\) 处的切线斜率为 \(1\)，切线方程为 \(y-(b+2)=x-4\)，即 \(y=x+b-2\). 该切线经过 \(F_1(b,0)\)，故 \(0=b+b-2\)，从而 \(b=1\). 因此椭圆方程为 \(\frac{x^2}{2}+y^2=1\)，抛物线方程为 \(x^2=8(y-1)\).
+\item 椭圆的长半轴、短半轴分别为 \(\sqrt2b\)、\(b\)，
+所以焦距半长为 \(\sqrt{(\sqrt2b)^2-b^2}=b\)，右焦点为 \(F_1(b,0)\).
+直线 \(y=b+2\) 与抛物线的第一象限交点满足
+\(x_G^2=8((b+2)-b)=16\)，所以 \(G=(4,b+2)\).
+对 \(x^2=8(y-b)\) 隐函数求导，得 \(2x=8y'\)，
+故在 \(G\) 处切线斜率为 \(y'=\frac{x_G}{4}=1\).
+切线方程为
+\(y-(b+2)=x-4\)，即 \(y=x+b-2\).
+因为该切线经过 \(F_1(b,0)\)，代入得 \(0=b+b-2\)，
+所以 \(b=1\). 因此椭圆方程为
+\(\frac{x^2}{2}+y^2=1\)，抛物线方程为 \(x^2=8(y-1)\).
 
-\item 由第一问，椭圆长轴端点为 \(A(-\sqrt2,0)\)，\(B(\sqrt2,0)\). 设抛物线上点 \(P(x,y)\).
+\item 由第一问，椭圆长轴端点为 \(A(-\sqrt2,0)\)，\(B(\sqrt2,0)\).
+设抛物线上点 \(P(x,y)\)，则 \(x^2=8(y-1)\)，从而 \(y\geqslant1\).
 
-若 \(\angle APB=90^\circ\)，则 \(\overrightarrow{PA}\cdot\overrightarrow{PB}=0\)，即 \(x^2+y^2=2\). 联立 \(x^2=8(y-1)\)，得 \(y^2+8y-10=0\). 因为抛物线上 \(y\geqslant1\)，所以 \(y=-4+\sqrt{26}\)，相应的 \(x\) 有两个相反的非零值，得到 \(2\) 个点.
+若直角在 \(P\)，则
+\(\overrightarrow{PA}\cdot\overrightarrow{PB}=0\)，即
+\(x^2+y^2=2\). 联立抛物线方程，得
+\(y^2+8y-10=0\)，所以
+\(y=-4\pm\sqrt{26}\). 由于 \(y\geqslant1\)，只能取
+\(y=-4+\sqrt{26}>1\). 此时
+\(x^2=8(y-1)>0\)，故有两个相反的 \(x\) 值，得到 \(2\) 个点.
 
-若 \(\angle PAB=90^\circ\)，则 \(\overrightarrow{AB}\cdot\overrightarrow{AP}=0\)，从而 \(x=-\sqrt2\). 代入抛物线方程得 \(y=\frac54\)，得到 \(1\) 个点. 同理，若 \(\angle PBA=90^\circ\)，则 \(x=\sqrt2\)，仍得 \(y=\frac54\)，得到 \(1\) 个点. 这三类点互不相同，所以共有 \(2+1+1=4\) 个这样的点.
+若直角在 \(A\)，则 \(\overrightarrow{AB}\cdot\overrightarrow{AP}=0\).
+因为 \(\overrightarrow{AB}=(2\sqrt2,0)\)，所以 \(x=-\sqrt2\)，
+代入抛物线方程得 \(y=1+\frac{2}{8}=\frac54\)，得到 \(1\) 个点.
+同理，若直角在 \(B\)，则 \(x=\sqrt2\)，仍得 \(y=\frac54\)，得到 \(1\) 个点.
+三类点的横坐标条件不同，互不重复，因此共有 \(2+1+1=4\) 个点.
 \end{enumerate}
 \end{solution}
 
@@ -397,13 +516,35 @@ E(\xi)=6\cdot\frac{63}{100}+2\cdot\frac14+1\cdot\frac1{10}-2\cdot\frac1{50}
 \end{problem}
 
 \begin{solution}
-当 \(x<1\) 时，\(F(x)=\frac{1}{1-x}-kx\)，所以 \(F'(x)=\frac{1}{(1-x)^2}-k\).
+当 \(x<1\) 时，
+\(F(x)=\frac1{1-x}-kx\)，所以
+\(F'(x)=\frac1{(1-x)^2}-k\).
+若 \(k\leqslant0\)，则 \(F'(x)>0\)，故 \(F\) 在
+\((-\infty,1)\) 上单调递增.
+若 \(k>0\)，令 \(F'(x)=0\)，得唯一临界点
+\(x_0=1-\frac1{\sqrt{k}}<1\). 因为
+\(\frac1{(1-x)^2}<k\) 等价于 \(x<x_0\)，所以
+\(F'(x)<0\)（\(x<x_0\)），\(F'(x)>0\)（\(x_0<x<1\)）.
+因此此时 \(F\) 在 \((-\infty,x_0)\) 上单调递减，在
+\((x_0,1)\) 上单调递增.
 
-当 \(k\leqslant0\) 时，\(F'(x)>0\)，故 \(F\) 在 \((-\infty,1)\) 上单调递增. 当 \(k>0\) 时，令 \(F'(x)=0\)，得 \(x_0=1-\frac1{\sqrt{k}}\). 此时 \(F'(x)<0\)（\(x<x_0\)），\(F'(x)>0\)（\(x_0<x<1\)），故 \(F\) 在 \((-\infty,x_0)\) 上单调递减，在 \((x_0,1)\) 上单调递增.
+当 \(x>1\) 时，
+\(F(x)=-\sqrt{x-1}-kx\)，所以
+\(F'(x)=-\frac1{2\sqrt{x-1}}-k\).
+若 \(k\geqslant0\)，则 \(F'(x)<0\)，并且
+\(F(1)=-k\)，故 \(F\) 在 \([1,+\infty)\) 上单调递减.
+若 \(k<0\)，令 \(F'(x)=0\)，得
+\(x_1=1+\frac1{4k^2}>1\). 此时
+\(F'(x)<0\)（\(1<x<x_1\)），\(F'(x)>0\)（\(x>x_1\)），
+所以 \(F\) 在 \([1,x_1]\) 上单调递减，在
+\([x_1,+\infty)\) 上单调递增.
 
-当 \(x>1\) 时，\(F(x)=-\sqrt{x-1}-kx\)，所以 \(F'(x)=-\frac1{2\sqrt{x-1}}-k\). 当 \(k\geqslant0\) 时，\(F'(x)<0\)，故 \(F\) 在 \([1,+\infty)\) 上单调递减. 当 \(k<0\) 时，令 \(F'(x)=0\)，得 \(x_1=1+\frac1{4k^2}\). 此时 \(F'(x)<0\)（\(1<x<x_1\)），\(F'(x)>0\)（\(x>x_1\)），故 \(F\) 在 \([1,x_1]\) 上单调递减，在 \([x_1,+\infty)\) 上单调递增.
-
-由于 \(\displaystyle\lim_{x\to1^-}F(x)=+\infty\)，而 \(F(1)=-k\)，函数在 \(x=1\) 处不连续，且上述左右两侧的单调区间不可能合并为一个跨过 \(1\) 的单调区间. 因此对任意 \(k\)，\(F\) 都不在整个 \(\R\) 上单调.
+最后，\(\displaystyle\lim_{x\to1^-}F(x)=+\infty\)，而 \(F(1)=-k\)，
+故函数在 \(x=1\) 处不连续. 当 \(k\leqslant0\) 时，左侧已递增但靠近 \(1\) 的函数值趋于
+\(+\infty\)，不可能与有限的 \(F(1)\) 组成整个实轴上的递增函数；
+同时左侧递增也排除了整个实轴上的递减函数；
+当 \(k>0\) 时，左侧在 \(x_0\) 两侧先减后增，已经不是单调函数.
+因此对任意 \(k\in\R\)，\(F\) 都不在整个 \(\R\) 上单调.
 \end{solution}
 
 \begin{problem}
@@ -418,11 +559,43 @@ E(\xi)=6\cdot\frac{63}{100}+2\cdot\frac14+1\cdot\frac1{10}-2\cdot\frac1{50}
 
 \begin{solution}
 \begin{enumerate}
-\item 在底面建立直角坐标系，取 \(B(-R,0,0)\)，\(D(R,0,0)\)，\(A\left(-\frac R2,\frac{\sqrt3R}{2},0\right)\)，\(C(0,-R,0)\). 这些坐标满足题设的圆内接四边形及两个角度条件. 因为 \(PD\) 垂直底面且 \(PD=2\sqrt2R\)，可取 \(P(R,0,2\sqrt2R)\). 平面 \(ABP\) 的一个法向量为 \(\overrightarrow{BA}\times\overrightarrow{BP}=R^2(\sqrt6,-\sqrt2,-\sqrt3)\)，其长度为 \(R^2\sqrt{11}\). 取 \(BD\) 的单位方向向量为 \(\bs{d}=(1,0,0)\)，则 \(\sin\theta=\frac{\sqrt6}{\sqrt{11}}\)，从而 \(\cos\theta=\sqrt{\frac5{11}}\)，故 \(\tan\theta=\sqrt{\frac65}\).
+\item 在底面内取圆心 \(O\) 为原点，令直径 \(BD\) 为 \(x\) 轴，
+取 \(B(-R,0,0)\)，\(D(R,0,0)\)，底面为 \(z=0\).
+由 \(\angle ABD=60^\circ\)，并取图示一侧的点，得
+\(A\left(-\frac R2,\frac{\sqrt3R}{2},0\right)\)；
+由 \(\angle BDC=45^\circ\)，得 \(C(0,-R,0)\).
+这些点均在圆 \(x^2+y^2=R^2\) 上，且满足题设角度条件.
+由于 \(PD\perp\) 底面且 \(PD=2\sqrt2R\)，可取
+\(P(R,0,2\sqrt2R)\).
 
-\item 设 \(t=\frac{PE}{EB}=\frac{DF}{FC}>0\)，则 \(\frac{PE}{PB}=\frac{t}{1+t}\). 由三角形 \(PBC\) 中 \(EG\parallel BC\)，得 \(\frac{PG}{PC}=\frac{PE}{PB}=\frac{t}{1+t}\). 由内分点公式，\(E\left(\frac{1-t}{1+t}R,0,\frac{2\sqrt2}{1+t}R\right)\)，\(F\left(\frac1{1+t}R,-\frac{t}{1+t}R,0\right)\)，\(G\left(\frac1{1+t}R,-\frac{t}{1+t}R,\frac{2\sqrt2}{1+t}R\right)\). 因此 \(\overrightarrow{EG}=\left(\frac{t}{1+t}R,-\frac{t}{1+t}R,0\right)\)，\(\overrightarrow{FG}=\left(0,0,\frac{2\sqrt2}{1+t}R\right)\)，两向量的内积为 \(0\)，所以 \(EG\perp FG\)，\(\triangle EFG\) 是以 \(G\) 为直角顶点的直角三角形.
+平面 \(ABP\) 的一个法向量为
+\(\bs{n}=\overrightarrow{BA}\times\overrightarrow{BP} =R^2(\sqrt6,-\sqrt2,-\sqrt3)\)，\(|\bs{n}|=R^2\sqrt{11}\).
+取 \(BD\) 的单位方向向量 \(\bs d=(1,0,0)\). 直线与平面所成角满足
+\(\sin\theta=\frac{|\bs d\cdot\bs n|}{|\bs d||\bs n|}\)，所以
+\(\sin\theta=\frac{\sqrt6}{\sqrt{11}}\)，
+\(\cos\theta=\sqrt{1-\frac6{11}}=\sqrt{\frac5{11}}\).
+因此 \(\tan\theta=\frac{\sin\theta}{\cos\theta}=\sqrt{\frac65}\).
 
-\item 当 \(t=\frac12\) 时，\(|BC|=\sqrt2R\)，所以 \(|EG|=\frac{t}{1+t}|BC|=\frac{\sqrt2R}{3}\)，\(|FG|=\frac1{1+t}PD=\frac{4\sqrt2R}{3}\). 故 \(S_{\triangle EFG}=\frac12|EG|\cdot|FG|=\frac{4R^2}{9}\).
+\item 设 \(t=\frac{PE}{EB}=\frac{DF}{FC}>0\). 则
+\(\frac{PE}{PB}=\frac{t}{1+t}\). 在三角形 \(PBC\) 中，
+由于 \(EG\parallel BC\)，所以相似三角形给出
+\(\frac{PG}{PC}=\frac{PE}{PB}=\frac{t}{1+t}\).
+由内分点公式，
+\(E\left(\frac{1-t}{1+t}R,0,\frac{2\sqrt2}{1+t}R\right)\)，\(F\left(\frac1{1+t}R,-\frac{t}{1+t}R,0\right)\)，\(G\left(\frac1{1+t}R,-\frac{t}{1+t}R,\frac{2\sqrt2}{1+t}R\right)\).
+于是
+\(\overrightarrow{EG}=\left(\frac{t}{1+t}R,-\frac{t}{1+t}R,0\right)\)，\(\overrightarrow{FG}=\left(0,0,\frac{2\sqrt2}{1+t}R\right)\).
+两向量的内积为 \(0\)，故 \(EG\perp FG\)，
+\(\triangle EFG\) 是以 \(G\) 为直角顶点的直角三角形.
+
+\item 当 \(t=\frac12\) 时，
+\(\frac{t}{1+t}=\frac13\)，且
+\(|BC|=\sqrt{(R-0)^2+(0+R)^2}=\sqrt2R\).
+因此 \(|EG|=\frac13|BC|=\frac{\sqrt2R}{3}\).
+又 \(|FG|=\frac1{1+t}PD=\frac23\cdot2\sqrt2R=\frac{4\sqrt2R}{3}\).
+由直角三角形面积公式，
+\(S_{\triangle EFG}=\frac12|EG||FG|
+=\frac12\cdot\frac{\sqrt2R}{3}\cdot\frac{4\sqrt2R}{3}
+=\frac{4R^2}{9}\).
 \end{enumerate}
 \end{solution}
 
@@ -438,16 +611,54 @@ E(\xi)=6\cdot\frac{63}{100}+2\cdot\frac14+1\cdot\frac1{10}-2\cdot\frac1{50}
 
 \begin{solution}
 \begin{enumerate}
-\item 由于 \(\alpha\)，\(\beta\) 是方程 \(x^2-px+q=0\) 的两个实根，故 \(x^2-px+q=(x-\alpha)(x-\beta)=x^2-(\alpha+\beta)x+\alpha\beta\). 比较同次项系数，得 \(\alpha+\beta=p\)，\(\alpha\beta=q\).
+\item 因为 \(\alpha\)，\(\beta\) 是方程的两个根，
+所以二次多项式可因式分解为
+\[
+x^2-px+q=(x-\alpha)(x-\beta)
+=x^2-(\alpha+\beta)x+\alpha\beta
+\]
+比较两种展开式中同次项的系数，得到
+\(\alpha+\beta=p\)，\(\alpha\beta=q\).
 
-\item 由上一问，\(\alpha\)，\(\beta\) 满足 \(r^2=pr-q\). 令 \(u_n=\sum_{j=0}^{n}\alpha^{n-j}\beta^j\)，则 \(u_1=\alpha+\beta=p=x_1\)，\(u_2=\alpha^2+\alpha\beta+\beta^2=p^2-q=x_2\). 另外，利用 \(\alpha^2=p\alpha-q\)，\(\beta^2=p\beta-q\)，可得 \(u_n=pu_{n-1}-qu_{n-2}\). 因此 \(u_n\) 与数列 \(\{x_n\}\) 的前两项及递推关系完全相同，故 \(x_n=u_n=\sum_{j=0}^{n}\alpha^{n-j}\beta^j\). 当 \(\alpha\ne\beta\) 时，这也可写为 \(x_n=\frac{\alpha^{n+1}-\beta^{n+1}}{\alpha-\beta}\)；当 \(\alpha=\beta\) 时，\(x_n=(n+1)\alpha^n\).
+\item 由第一问，\(\alpha^2=p\alpha-q\)，\(\beta^2=p\beta-q\).
+定义 \(u_n=\sum_{j=0}^{n}\alpha^{n-j}\beta^j\). 则
+\(u_1=\alpha+\beta=p=x_1\)，并且
+\(u_2=\alpha^2+\alpha\beta+\beta^2
+=(\alpha+\beta)^2-\alpha\beta=p^2-q=x_2\).
+再利用 \(p=\alpha+\beta\)，\(q=\alpha\beta\)，有
+\[
+\begin{aligned}
+pu_{n-1}-qu_{n-2}
+&=(\alpha+\beta)\sum_{j=0}^{n-1}\alpha^{n-1-j}\beta^j
+-\alpha\beta\sum_{j=0}^{n-2}\alpha^{n-2-j}\beta^j\\
+&=\sum_{j=0}^{n}\alpha^{n-j}\beta^j=u_n.
+\end{aligned}
+\]
+所以 \(\{u_n\}\) 与 \(\{x_n\}\) 具有相同的前两项和递推关系，
+由递推确定性知
+\[
+x_n=u_n=\sum_{j=0}^{n}\alpha^{n-j}\beta^j
+\]
+若 \(\alpha\ne\beta\)，这是等比和，故
+\(x_n=\frac{\alpha^{n+1}-\beta^{n+1}}{\alpha-\beta}\)；
+若 \(\alpha=\beta\)，则每项均为 \(\alpha^n\)，共有 \(n+1\) 项，
+故 \(x_n=(n+1)\alpha^n\).
 
-\item 当 \(p=1\)，\(q=\frac14\) 时，方程 \(x^2-x+\frac14=0\) 可化为 \(\left(x-\frac12\right)^2=0\)，所以 \(\alpha=\beta=\frac12\). 由上一问，\(x_n=\frac{n+1}{2^n}\). 因而
+\item 当 \(p=1\)，\(q=\frac14\) 时，根方程为
+\(x^2-x+\frac14=0\)，即
+\(\left(x-\frac12\right)^2=0\)，所以 \(\alpha=\beta=\frac12\).
+由第二问的重根情形，
+\(x_n=(n+1)\left(\frac12\right)^n=\frac{n+1}{2^n}\).
+因此
 \[
 S_n=\sum_{k=1}^{n}\frac{k+1}{2^k}
 =\sum_{k=1}^{n}\frac{k}{2^k}+\sum_{k=1}^{n}\frac1{2^k}
 =\left(2-\frac{n+2}{2^n}\right)+\left(1-\frac1{2^n}\right)
-=3-\frac{n+3}{2^n}.
+=3-\frac{n+3}{2^n}
 \]
+这里使用了有限和
+\(\sum_{k=1}^{n}\frac1{2^k}=1-\frac1{2^n}\) 以及
+\(\sum_{k=1}^{n}\frac{k}{2^k}=2-\frac{n+2}{2^n}\)，
+所以 \(S_n=3-\frac{n+3}{2^n}\).
 \end{enumerate}
 \end{solution}

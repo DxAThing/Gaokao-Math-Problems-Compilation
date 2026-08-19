@@ -19,11 +19,23 @@ B
 \end{answer}
 
 \begin{solution}
-由 \(x+1\geqslant2\) 得 \(x\geqslant1\)，所以 \(S\cap T=\{1,2\}\)，故选 B.
+由
+\[
+x+1\geqslant2
+\]
+得 \(x\geqslant1\)，所以 \(S=[1,+\infty)\). 在集合 \(T\) 的五个元素中，只有 \(1\) 和 \(2\) 属于 \(S\)，从而
+\[
+S\cap T=\{1,2\}
+\]
+因此选 B.
 \end{solution}
 
 \begin{problem}
-设变量 \(x\)，\(y\) 满足约束条件 \(\left\{\begin{aligned} x - y &\geqslant -1,\\ x + y &\leqslant 4,\\ y &\geqslant 2 \end{aligned}\right.\)，则目标函数 \(z = 2x + 4y\) 的最大值为（\quad）
+设变量 \(x\)，\(y\) 满足约束条件 \(\begin{cases}
+x-y\geqslant-1,\\
+x+y\leqslant4,\\
+y\geqslant2
+\end{cases}\)，则目标函数 \(z = 2x + 4y\) 的最大值为（\quad）
 
 \choices
     {\(10\)}
@@ -37,7 +49,19 @@ C
 \end{answer}
 
 \begin{solution}
-约束条件等价于 \(y-1\leqslant x\leqslant4-y\)，且 \(y\geqslant2\)，故可行域的顶点为 \((1,2)\)，\((2,2)\)，\((\frac32,\frac52)\). 在这三个顶点处，目标函数 \(z=2x+4y\) 的值分别为 \(10\)，\(12\)，\(13\)，所以最大值为 \(13\)，故选 C.
+由约束条件得
+\(x\geqslant y-1\)，\(x\leqslant4-y\)，\(y\geqslant2\).
+要存在这样的 \(x\)，必须有 \(y-1\leqslant4-y\)，即 \(y\leqslant\frac52\). 因而可行域满足
+\(2\leqslant y\leqslant\frac52\)，\(y-1\leqslant x\leqslant4-y\).
+对固定的 \(y\)，由于 \(z=2x+4y\) 中 \(x\) 的系数为正，\(z\) 在 \(x=4-y\) 时最大. 此时
+\[
+z=2(4-y)+4y=8+2y
+\]
+该式随 \(y\) 增大而增大，所以在 \(y=\frac52\)，\(x=\frac32\) 时取得最大值
+\[
+z_{\max}=2\cdot\frac32+4\cdot\frac52=13
+\]
+因此选 C.
 \end{solution}
 
 \begin{problem}
@@ -55,7 +79,11 @@ C
 \end{answer}
 
 \begin{solution}
-直线 \(ax+2y=0\) 的斜率为 \(-\frac a2\)，直线 \(x+y=1\) 的斜率为 \(-1\). 两直线平行当且仅当 \(-\frac a2=-1\)，即 \(a=2\)，因此“\(a=2\)”是题中结论的充分必要条件，故选 C.
+两条直线的 \(y\) 的系数都不为零，故可以比较斜率. 直线 \(ax+2y=0\) 的斜率为 \(-\frac a2\)，直线 \(x+y=1\) 的斜率为 \(-1\). 两直线平行当且仅当
+\[
+-\frac a2=-1
+\]
+这等价于 \(a=2\). 因此 \(a=2\) 既是两直线平行的充分条件，也是必要条件，故选 C.
 \end{solution}
 
 \begin{problem}
@@ -73,7 +101,19 @@ A
 \end{answer}
 
 \begin{solution}
-因为 \(a=\log_{\frac12}3<0\)，\(b=3^{-1/5}\) 满足 \(0<b<1\)，而 \(c=2^{1/3}>1\)，所以 \(a<b<c\)，故选 A.
+因为底数 \(\frac12\) 在 \((0,1)\) 内且真数 \(3>1\)，所以
+\[
+a=\log_{\frac12}3<0
+\]
+又
+\[
+b=\left(\frac13\right)^{0.2}=3^{-1/5}
+\]
+故 \(0<b<1\)，而 \(c=2^{1/3}>1\). 于是
+\[
+a<b<c
+\]
+因此选 A.
 \end{solution}
 
 \begin{problem}
@@ -91,7 +131,19 @@ C
 \end{answer}
 
 \begin{solution}
-由 \(y=\log_2(x+4)\) 得 \(2^y=x+4\)，即 \(x=2^y-4\). 原函数的定义域为 \(x>0\)，所以其值域为 \(y>2\). 交换 \(x\)，\(y\) 得反函数 \(y=2^x-4\)，定义域为 \(x>2\)，故选 C.
+原函数的定义域是 \(x>0\). 由于底数 \(2>1\)，函数严格递增，因此其值域为
+\[
+y>\log_2 4=2
+\]
+由原式解出原自变量：
+\[
+y=\log_2(x+4)
+\Longleftrightarrow 2^y=x+4
+\Longleftrightarrow x=2^y-4
+\]
+交换自变量和因变量，并把原函数的值域作为反函数的定义域，得到
+\(y=2^x-4\)，\(x>2\).
+因此选 C.
 \end{solution}
 
 \begin{problem}
@@ -109,7 +161,11 @@ D
 \end{answer}
 
 \begin{solution}
-两条直线与同一平面所成的角相等，不能推出两直线平行；分别平行于两个平行平面的两条直线也不一定平行；两个平面内的平行直线不能推出两个平面平行. 若 \(a\perp\alpha\)，\(b\perp\beta\)，且 \(\alpha\perp\beta\)，则 \(a\)，\(b\) 分别是两平面的法线，而互相垂直的两个平面的法线互相垂直，所以 \(a\perp b\)，故选 D.
+逐项判断. 若 \(a\)，\(b\) 都在平面 \(\alpha\) 内，则它们与 \(\alpha\) 所成的角都为 \(0\)，但这两条直线可以相交而不平行，所以 A 不成立.
+
+即使 \(\alpha\parallel\beta\)，分别与这两个平面平行的直线也可以取不同方向，因此 B 不能推出 \(a\parallel b\). 在两个不平行的平面中也可以取同一方向的两条平行直线分别作为 \(a\)，\(b\)，所以 C 不能推出 \(\alpha\parallel\beta\).
+
+若 \(a\perp\alpha\)，则 \(a\) 的方向是平面 \(\alpha\) 的法向方向；若 \(b\perp\beta\)，则 \(b\) 的方向是平面 \(\beta\) 的法向方向. 两个平面互相垂直时，它们的法向量也互相垂直，故 \(a\perp b\). 因此正确命题是 D.
 \end{solution}
 
 \begin{problem}
@@ -127,7 +183,22 @@ D
 \end{answer}
 
 \begin{solution}
-设双曲线的半焦距为 \(c\)，则 \(c^2=a^2+b^2\). 由离心率 \(\frac ca=\sqrt3\)，得 \(b^2=c^2-a^2=2a^2\). 抛物线 \(y^2=4x\) 的准线为 \(x=-1\)，而双曲线的准线为 \(x=\pm\frac{a^2}{c}=\pm\frac a{\sqrt3}\)，所以 \(\frac a{\sqrt3}=1\)，即 \(a^2=3\)，\(b^2=6\). 因而双曲线方程为 \(\frac{x^2}{3}-\frac{y^2}{6}=1\)，故选 D.
+设双曲线的半焦距为 \(c\). 由离心率和焦半距关系，
+\(\frac ca=\sqrt3\)，\(c^2=a^2+b^2\).
+所以 \(c^2=3a^2\)，从而
+\[
+b^2=c^2-a^2=2a^2
+\]
+
+将抛物线写成 \(y^2=4\cdot1\cdot x\)，其准线为 \(x=-1\). 双曲线的两条准线为
+\[
+x=\pm\frac{a^2}{c}=\pm\frac a{\sqrt3}
+\]
+其中一条与 \(x=-1\) 重合，因此 \(a/\sqrt3=1\)，即 \(a^2=3\)，进而 \(b^2=6\). 所求双曲线为
+\[
+\frac{x^2}{3}-\frac{y^2}{6}=1
+\]
+因此选 D.
 \end{solution}
 
 \begin{problem}
@@ -145,7 +216,27 @@ B
 \end{answer}
 
 \begin{solution}
-等差数列的通项为 \(a_n=a_1+(n-1)d=(n+8)d\). 由 \(a_k\) 是 \(a_1\) 与 \(a_{2k}\) 的等比中项，得 \(a_k^2=a_1a_{2k}\)，从而 \((k+8)^2d^2=9(2k+8)d^2\). 因为 \(d\ne0\)，所以 \(k^2-2k-8=0\)，即 \(k=4\) 或 \(k=-2\). 由于 \(k\in\N^*\)，故 \(k=4\)，选 B.
+等差数列的通项为
+\[
+a_n=a_1+(n-1)d=9d+(n-1)d=(n+8)d
+\]
+“\(a_k\) 是 \(a_1\) 与 \(a_{2k}\) 的等比中项”意味着
+\[
+a_k^2=a_1a_{2k}
+\]
+代入通项并利用 \(d\ne0\)，得
+\[
+(k+8)^2d^2=9d(2k+8)d
+\]
+即
+\[
+(k+8)^2=9(2k+8)
+\]
+展开整理为
+\[
+k^2-2k-8=0=(k-4)(k+2)
+\]
+所以 \(k=4\) 或 \(k=-2\). 由于数列下标 \(k\in\N^*\)，只能取 \(k=4\)，故选 B.
 \end{solution}
 
 \begin{problem}
@@ -163,7 +254,15 @@ A
 \end{answer}
 
 \begin{solution}
-令 \(u=x+\frac\pi3\)，则 \(f(x)=|\sin u|\). 当 \(x\in\left[\frac{2\pi}{3},\frac{7\pi}{6}\right]\) 时，\(u\in\left[\pi,\frac{3\pi}{2}\right]\)，于是 \(f(x)=-\sin u\)，且 \(\cos u\leqslant0\)，所以 \(f'(x)=-\cos u\geqslant0\). 因此 \(f(x)\) 在该区间上是增函数，故选 A.
+令
+\(u=x+\frac\pi3\)，\(f(x)=|\sin u|\).
+先看 A. 当 \(x\in[2\pi/3,7\pi/6]\) 时，\(u\in[\pi,3\pi/2]\)，所以 \(\sin u\leqslant0\)，有 \(f(x)=-\sin u\). 此时
+\[
+f'(x)=-\cos u\geqslant0
+\]
+故 A 中函数在该区间上递增.
+
+其余选项均不成立：B 对应 \(u\in[-2\pi/3,-\pi/6]\)，在 \(u=-\pi/2\) 两侧导数符号发生变化，函数先增后减；C 对应的区间跨过 \(u=\pi/2\)，函数先增后减；D 对应 \(u\in[2\pi/3,7\pi/6]\)，在 \(u=\pi\) 处由减变增. 因此只有 A 正确.
 \end{solution}
 
 \begin{problem}
@@ -181,16 +280,41 @@ A
 \end{answer}
 
 \begin{solution}
-由奇性，\(f(x)=\begin{cases}
--x^2, & x<0,\\
-x^2, & x\geqslant0,
-\end{cases}\) 因此 \(f\) 在 \(\R\) 上严格增，且对任意 \(x\) 有 \(2f(x)=f(\sqrt2x)\). 所以题中不等式等价于 \(x+t\geqslant\sqrt2x\)，即 \((\sqrt2-1)x\leqslant t\). 要使它对 \(x\in[t,t+2]\) 恒成立，只需且必须在最大值 \(x=t+2\) 处成立，于是
+由奇函数条件，在 \(x<0\) 时
+\[
+f(x)=-f(-x)=-(-x)^2=-x^2
+\]
+所以
+\[
+f(x)=\begin{cases}
+-x^2,&x<0,\\
+x^2,&x\geqslant0.
+\end{cases}
+\]
+这个函数在负半轴和正半轴上都严格递增，且负半轴函数值小于 \(0\)，正半轴函数值不小于 \(0\)，故 \(f\) 在整个 \(\R\) 上严格递增.
+
+对任意实数 \(x\)，按正负讨论都有
+\[
+f(\sqrt2x)=2f(x)
+\]
+于是原不等式等价于
+\[
+f(x+t)\geqslant f(\sqrt2x)
+\Longleftrightarrow x+t\geqslant\sqrt2x
+\Longleftrightarrow (\sqrt2-1)x\leqslant t
+\]
+因为 \(\sqrt2-1>0\)，左边随 \(x\) 增大而增大. 要使它对 \(x\in[t,t+2]\) 恒成立，只需且必须在最大端点 \(x=t+2\) 处成立，于是
 
 \[
-(\sqrt2-1)(t+2)\leqslant t,
+(\sqrt2-1)(t+2)\leqslant t
 \]
 
-解得 \(t\geqslant\sqrt2\)，故选 A.
+解得
+\[
+(2-\sqrt2)t\geqslant2(\sqrt2-1)
+\Longleftrightarrow t\geqslant\sqrt2
+\]
+故选 A.
 \end{solution}
 
 \section{填空题}
@@ -216,7 +340,19 @@ x^2, & x\geqslant0,
 \end{answer}
 
 \begin{solution}
-质量不小于 \(120\text{ 克}\) 的苹果有 \(10+3+1=14\) 只，总数为 \(20\) 只，所以所占百分比为 \(\frac{14}{20}\times100\%=70\%\).
+表中各组频数之和为
+\[
+1+2+3+10+3+1=20
+\]
+与苹果总数一致. 质量不小于 \(120\text{ 克}\) 的苹果属于后三组，数量为
+\[
+10+3+1=14
+\]
+因此所占百分比为
+\[
+\frac{14}{20}\times100\%=70\%
+\]
+所以填 \(70\).
 \end{solution}
 
 \begin{problem}
@@ -228,7 +364,17 @@ x^2, & x\geqslant0,
 \end{answer}
 
 \begin{solution}
-二项展开式的通项为 \(\mathrm C_9^k x^{9-k}\left(\frac{1}{x^2}\right)^k=\mathrm C_9^k x^{9-3k}\). 令 \(9-3k=0\)，得 \(k=3\)，所以常数项为 \(\mathrm C_9^3=84\).
+二项式通项为
+\(\mathrm C_9^k x^{9-k}\left(\frac1{x^2}\right)^k =\mathrm C_9^k x^{9-3k}\)，\(k=0\)，\(1\)，\(\ldots\)，\(9\).
+常数项的幂指数必须为零，因此
+\[
+9-3k=0\Longrightarrow k=3
+\]
+对应的系数为
+\[
+\mathrm C_9^3=\frac{9\cdot8\cdot7}{3\cdot2\cdot1}=84
+\]
+所以填 \(84\).
 \end{solution}
 
 \begin{problem}
@@ -240,7 +386,19 @@ x^2, & x\geqslant0,
 \end{answer}
 
 \begin{solution}
-长方体的外接球直径等于长方体的体对角线，所以球的半径为 \(r=\frac12\sqrt{1^2+2^2+3^2}=\frac{\sqrt{14}}2\). 因而球的表面积为 \(4\pi r^2=4\pi\cdot\frac{14}{4}=14\pi\).
+长方体的外接球球心是长方体的中心，连接一对相对顶点的体对角线经过该中心，且两个端点都在球面上，所以该体对角线就是球的直径. 由三条棱长得体对角线
+\[
+d=\sqrt{1^2+2^2+3^2}=\sqrt{14}
+\]
+因此球半径为
+\[
+r=\frac d2=\frac{\sqrt{14}}2
+\]
+球的表面积为
+\[
+4\pi r^2=4\pi\cdot\frac{14}{4}=14\pi
+\]
+所以填 \(14\pi\).
 \end{solution}
 
 \begin{problem}
@@ -252,7 +410,24 @@ x^2, & x\geqslant0,
 \end{answer}
 
 \begin{solution}
-将第二个圆的方程展开，得 \(x^2+y^2-2x-6y-10=0\). 两圆的公共弦所在直线为两圆方程相减所得的根轴，因此由 \(x^2+y^2=10\) 得 \(2x+6y=0\)，即 \(AB\) 的方程为 \(x+3y=0\).
+交点 \(A\)，\(B\) 同时满足两个圆的方程. 先将第二个圆展开：
+\[
+(x-1)^2+(y-3)^2=20
+\Longleftrightarrow x^2+y^2-2x-6y-10=0
+\]
+第一个圆的方程写成
+\[
+x^2+y^2-10=0
+\]
+两式相减，消去二次项，得到所有公共点都满足的直线方程
+\[
+-2x-6y=0
+\]
+即
+\[
+x+3y=0
+\]
+由于两个不同交点确定公共弦直线，故 \(AB\) 的方程为 \(x+3y=0\).
 \end{solution}
 
 \begin{problem}
@@ -264,10 +439,15 @@ x^2, & x\geqslant0,
 \end{answer}
 
 \begin{solution}
-取 \(A\) 为向量起点，记 \(\overrightarrow{AB}=\bs b\)，\(\overrightarrow{AC}=\bs c\). 因为 \(D\) 是 \(BC\) 的中点，所以 \(\overrightarrow{AD}=\frac{\bs b+\bs c}{2}\)，且 \(\overrightarrow{BC}=\bs c-\bs b\). 因此
+取 \(A\) 为向量起点，记
+\(\overrightarrow{AB}=\bs b\)，\(\overrightarrow{AC}=\bs c\).
+因为 \(D\) 是 \(BC\) 的中点，所以
+\(\overrightarrow{AD}=\frac{\bs b+\bs c}{2}\)，\(\overrightarrow{BC}=\overrightarrow{AC}-\overrightarrow{AB}=\bs c-\bs b\).
+于是
 \[
-\overrightarrow{AD}\cdot\overrightarrow{BC}=\frac{(\bs b+\bs c)\cdot(\bs c-\bs b)}2=\frac{|\bs c|^2-|\bs b|^2}{2}=\frac{AC^2-AB^2}{2}=\frac{9-4}{2}=\frac52.
+\overrightarrow{AD}\cdot\overrightarrow{BC}=\frac{(\bs b+\bs c)\cdot(\bs c-\bs b)}2=\frac{|\bs c|^2-|\bs b|^2}{2}=\frac{AC^2-AB^2}{2}=\frac{9-4}{2}=\frac52
 \]
+所以填 \(\frac52\).
 \end{solution}
 
 \begin{problem}
@@ -281,7 +461,23 @@ x^2, & x\geqslant0,
 \end{answer}
 
 \begin{solution}
-先给最左边的格子选颜色，有 \(6\) 种；再给第二个格子选颜色，有 \(5\) 种. 对于第三个格子，若它与第一个格子同色，则有 \(5\) 种选法；若它与第一个格子不同色，则有 \(4\) 种选法，而第四个格子的颜色必须与第一个格子不同. 因而在固定前两个格子颜色后，后三个格子的有效选法数为 \(1\times5+4\times4=21\)，总数为 \(6\times5\times21=630\).
+将四个格子从左到右编号为 \(1\)，\(2\)，\(3\)，\(4\). 第一个格子有 \(6\) 种选法；第二个格子必须与第一个不同，有 \(5\) 种选法.
+
+固定前两个格子的颜色后分情况选择第三、第四个格子：
+
+若第三个格子与第一个同色，则第四个格子只需避开这种颜色，既满足相邻不同，也满足两端不同，有 \(5\) 种；
+
+若第三个格子与第一个不同，则它还必须避开第二个格子的颜色，所以有 \(4\) 种. 此时第四个格子必须同时避开第三个格子和第一个格子的颜色，因这两种颜色不同，有 \(4\) 种.
+
+故固定前两个格子后有
+\[
+1\times5+4\times4=21
+\]
+种，全部涂色方法数为
+\[
+6\times5\times21=630
+\]
+所以填 \(630\).
 \end{solution}
 
 \section{解答题}
@@ -297,8 +493,34 @@ x^2, & x\geqslant0,
 
 \begin{solution}
 \begin{enumerate}
-\item 由 \(\cos A=-\frac45\) 且 \(A\) 为三角形内角，得 \(\sin A=\frac35\). 设 \(a=BC=3\)，\(b=CA=2\)，由正弦定理得 \(\frac{b}{\sin B}=\frac{a}{\sin A}\)，所以 \(\sin B=\frac{b\sin A}{a}=\frac25\). 又因为 \(A\) 为钝角，所以 \(B\) 为锐角，从而 \(\cos B=\sqrt{1-\sin^2B}=\frac{\sqrt{21}}5\).
-\item \(\sin2B=2\sin B\cos B=\frac{4\sqrt{21}}{25}\)，\(\cos2B=1-2\sin^2B=\frac{17}{25}\). 因此 \(\sin\left(2B+\frac{\pi}{6}\right)=\sin2B\cos\frac{\pi}{6}+\cos2B\sin\frac{\pi}{6}=\frac{4\sqrt{21}}{25}\cdot\frac{\sqrt3}{2}+\frac{17}{25}\cdot\frac12=\frac{12\sqrt7+17}{50}\).
+\item 因为 \(A\) 是三角形内角，\(\sin A>0\)，故由 \(\cos A=-\frac45\) 得
+\[
+\sin A=\sqrt{1-\cos^2A}=\sqrt{1-\frac{16}{25}}=\frac35
+\]
+记通常的边长为 \(a=BC=3\)，\(b=CA=2\). 由正弦定理
+\[
+\frac{a}{\sin A}=\frac{b}{\sin B}
+\]
+所以
+\[
+\sin B=\frac{b\sin A}{a}=\frac{2\cdot(3/5)}3=\frac25
+\]
+又因 \(\cos A<0\)，角 \(A\) 为钝角，故 \(B<\frac\pi2\)，从而 \(\cos B>0\). 因此
+\[
+\cos B=\sqrt{1-\sin^2B}=\sqrt{1-\frac4{25}}=\frac{\sqrt{21}}5
+\]
+\item 先由倍角公式计算
+\(\sin2B=2\sin B\cos B=\frac{4\sqrt{21}}{25}\)，\(\cos2B=1-2\sin^2B=1-\frac8{25}=\frac{17}{25}\).
+再用和角公式及特殊角值，得
+\[
+\begin{aligned}
+\sin\left(2B+\frac\pi6\right)
+&=\sin2B\cos\frac\pi6+\cos2B\sin\frac\pi6\\
+&=\frac{4\sqrt{21}}{25}\cdot\frac{\sqrt3}{2}+\frac{17}{25}\cdot\frac12\\
+&=\frac{6\sqrt7}{25}+\frac{17}{50}
+=\frac{12\sqrt7+17}{50}.
+\end{aligned}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -313,10 +535,26 @@ x^2, & x\geqslant0,
 
 \begin{solution}
 \begin{enumerate}
-\item 从甲盒取球的基本等可能结果数为 \(\mathrm C_7^2\)，从乙盒取球的基本等可能结果数为 \(\mathrm C_9^2\)，所以总数为 \(\mathrm C_7^2\mathrm C_9^2\). 取出的 \(4\) 个球均为红球的结果数为 \(\mathrm C_3^2\mathrm C_5^2\)，故所求概率为 \(P_1=\frac{\mathrm C_3^2\mathrm C_5^2}{\mathrm C_7^2\mathrm C_9^2}=\frac{30}{756}=\frac5{126}\).
-\item 恰有 \(1\) 个红球包括甲盒取 \(1\) 个红球且乙盒取 \(0\) 个红球，或甲盒取 \(0\) 个红球且乙盒取 \(1\) 个红球. 因而所求概率为
+\item 甲盒共有 \(7\) 个球，乙盒共有 \(9\) 个球. 各盒分别任取两个球时，基本等可能结果总数为
 \[
-P_2=\frac{\mathrm C_3^1\mathrm C_4^1\mathrm C_4^2+\mathrm C_4^2\mathrm C_5^1\mathrm C_4^1}{\mathrm C_7^2\mathrm C_9^2}=\frac{72+120}{756}=\frac{16}{63}.
+\mathrm C_7^2\mathrm C_9^2=21\cdot36=756
+\]
+四个球均为红球要求甲盒取出两个红球且乙盒取出两个红球，结果数为
+\[
+\mathrm C_3^2\mathrm C_5^2=3\cdot10=30
+\]
+所以所求概率为
+\[
+P_1=\frac{\mathrm C_3^2\mathrm C_5^2}{\mathrm C_7^2\mathrm C_9^2}
+=\frac{30}{756}=\frac5{126}
+\]
+\item 四个球中恰有一个红球有且只有两种互斥情形：
+
+甲盒取一个红球、一个黑球，乙盒取两个黑球；或者甲盒取两个黑球，乙盒取一个红球、一个黑球. 因此
+\[
+P_2=\frac{\mathrm C_3^1\mathrm C_4^1\mathrm C_4^2+\mathrm C_4^2\mathrm C_5^1\mathrm C_4^1}{\mathrm C_7^2\mathrm C_9^2}
+=\frac{3\cdot4\cdot6+6\cdot5\cdot4}{756}
+=\frac{72+120}{756}=\frac{16}{63}
 \]
 \end{enumerate}
 \end{solution}
@@ -334,34 +572,62 @@ P_2=\frac{\mathrm C_3^1\mathrm C_4^1\mathrm C_4^2+\mathrm C_4^2\mathrm C_5^1\mat
 \end{problem}
 
 \begin{solution}
-不妨设 \(PA=AB=BC=1\)，建立空间直角坐标系，使 \(A(0,0,0)\)，\(B(1,0,0)\)，\(P(0,0,1)\).
-由 \(BC=1\) 及 \(\angle ABC=60^\circ\)，可取 \(C\left(\frac12,\frac{\sqrt3}{2},0\right)\). 由 \(AB\perp AD\)，设 \(D=(0,d,0)\). 又因为
+不妨设 \(PA=AB=BC=1\). 以 \(A\) 为原点，以 \(AB\) 方向为 \(x\) 轴，以底面内垂直于 \(AB\) 的方向为 \(y\) 轴，以 \(AP\) 方向为 \(z\) 轴. 由 \(PA\perp\) 底面，可取
+\(A(0,0,0)\)，\(B(1,0,0)\)，\(P(0,0,1)\).
+向量 \(\overrightarrow{BA}=(-1,0,0)\)，且 \(|BC|=1\)，\(\angle ABC=60^\circ\)，所以在底面内可取
 \[
-\overrightarrow{AC}\cdot\overrightarrow{CD}=\left(\frac12,\frac{\sqrt3}{2},0\right)\cdot\left(-\frac12,d-\frac{\sqrt3}{2},0\right)=0,
+C\left(\frac12,\frac{\sqrt3}{2},0\right)
 \]
-所以 \(d=\frac2{\sqrt3}\)，即 \(D\left(0,\frac2{\sqrt3},0\right)\).
+此时 \(\overrightarrow{BA}\cdot\overrightarrow{BC}=\frac12\)，确实给出 \(60^\circ\). 由 \(AB\perp AD\)，设 \(D=(0,d,0)\). 又因为
+\[
+\overrightarrow{AC}\cdot\overrightarrow{CD}=\left(\frac12,\frac{\sqrt3}{2},0\right)\cdot\left(-\frac12,d-\frac{\sqrt3}{2},0\right)=0
+\]
+所以
+\[
+-\frac14+\frac{\sqrt3}{2}d-\frac34=0
+\Longrightarrow d=\frac2{\sqrt3}
+\]
+故 \(D\left(0,\frac2{\sqrt3},0\right)\).
 
 \begin{enumerate}
-\item 平面 \(PAD\) 的方程为 \(x=0\)，而 \(\overrightarrow{PB}=(1,0,-1)\). 设 \(PB\) 与平面 \(PAD\) 所成的角为 \(\theta\)，则
+\item 平面 \(PAD\) 由三个点 \(P(0,0,1)\)，\(A(0,0,0)\)，\(D(0,2/\sqrt3,0)\) 确定，所以方程为 \(x=0\)，其法向量可取 \(\bs n=(1,0,0)\). 而
 \[
-\sin\theta=\frac{|1|}{\sqrt{1^2+(-1)^2}}=\frac1{\sqrt2}.
+\overrightarrow{PB}=B-P=(1,0,-1)
 \]
-因此 \(\theta=\frac\pi4\).
-\item \(E\) 是 \(PC\) 的中点，所以 \(E\left(\frac14,\frac{\sqrt3}{4},\frac12\right)\). 于是
+设 \(PB\) 与平面 \(PAD\) 所成的角为 \(\theta\). 由直线与平面所成角的正弦等于方向向量与法向量夹角的余弦的绝对值，得
 \[
-\overrightarrow{AE}\cdot\overrightarrow{PC}=\left(\frac14,\frac{\sqrt3}{4},\frac12\right)\cdot\left(\frac12,\frac{\sqrt3}{2},-1\right)=0,
+\sin\theta=\frac{|\overrightarrow{PB}\cdot\bs n|}{|\overrightarrow{PB}|\,|\bs n|}=\frac1{\sqrt2}
+\]
+因为 \(0\leqslant\theta\leqslant\frac\pi2\)，所以 \(\theta=\frac\pi4\).
+\item \(E\) 是 \(PC\) 的中点，所以
+\[
+E\left(\frac14,\frac{\sqrt3}{4},\frac12\right)
+\]
+相应的方向向量为
+\(\overrightarrow{AE}=\left(\frac14,\frac{\sqrt3}{4},\frac12\right)\)，\(\overrightarrow{PC}=\left(\frac12,\frac{\sqrt3}{2},-1\right)\)，\(\overrightarrow{PD}=\left(0,\frac2{\sqrt3},-1\right)\).
+于是
+\[
+\overrightarrow{AE}\cdot\overrightarrow{PC}=\left(\frac14,\frac{\sqrt3}{4},\frac12\right)\cdot\left(\frac12,\frac{\sqrt3}{2},-1\right)=0
 \]
 \[
-\overrightarrow{AE}\cdot\overrightarrow{PD}=\left(\frac14,\frac{\sqrt3}{4},\frac12\right)\cdot\left(0,\frac2{\sqrt3},-1\right)=0.
+\overrightarrow{AE}\cdot\overrightarrow{PD}=\left(\frac14,\frac{\sqrt3}{4},\frac12\right)\cdot\left(0,\frac2{\sqrt3},-1\right)=0
 \]
-直线 \(PC\)，\(PD\) 是平面 \(PCD\) 内相交的两条直线，所以 \(AE\perp\) 平面 \(PCD\).
-\item 取平面 \(PAD\) 的法向量 \(\bs n_1=(1,0,0)\)，平面 \(PCD\) 的法向量为
+因为 \(E\in PC\)，所以 \(E\) 在平面 \(PCD\) 内；直线 \(PC\)，\(PD\) 是平面 \(PCD\) 内相交的两条直线，且 \(AE\) 同时垂直于它们，所以由直线垂直平面的判定定理，\(AE\perp\) 平面 \(PCD\).
+\item 二面角 \(A-PD-C\) 的两个侧面是平面 \(APD\) 和平面 \(CPD\). 取平面 \(APD\) 的法向量
 \[
-\bs n_2=\overrightarrow{PC}\times\overrightarrow{PD}=\left(\frac1{2\sqrt3},\frac12,\frac1{\sqrt3}\right).
+\bs n_1=(1,0,0)
 \]
-设二面角 \(A-PD-C\) 的大小为 \(\varphi\)，则
+平面 \(CPD\) 的法向量为
 \[
-\cos\varphi=\frac{|\bs n_1\cdot\bs n_2|}{|\bs n_1||\bs n_2|}=\frac{\frac1{2\sqrt3}}{\sqrt{\frac1{12}+\frac14+\frac13}}=\frac{\sqrt2}{4}.
+\bs n_2=\overrightarrow{PC}\times\overrightarrow{PD}=\left(\frac1{2\sqrt3},\frac12,\frac1{\sqrt3}\right)
+\]
+先求
+\[
+|\bs n_2|=\sqrt{\frac1{12}+\frac14+\frac13}=\sqrt{\frac23}
+\]
+设二面角 \(A-PD-C\) 的大小为 \(\varphi\)，取两法向量的夹角的锐角作为二面角，则
+\[
+\cos\varphi=\frac{|\bs n_1\cdot\bs n_2|}{|\bs n_1||\bs n_2|}=\frac{\frac1{2\sqrt3}}{\sqrt{\frac1{12}+\frac14+\frac13}}=\frac{\sqrt2}{4}
 \]
 所以二面角 \(A-PD-C\) 的大小为 \(\varphi=\arccos\frac{\sqrt2}{4}\).
 \end{enumerate}
@@ -379,20 +645,35 @@ P_2=\frac{\mathrm C_3^1\mathrm C_4^1\mathrm C_4^2+\mathrm C_4^2\mathrm C_5^1\mat
 
 \begin{solution}
 \begin{enumerate}
-\item 令 \(b_n=a_n-n\)，则 \(b_1=a_1-1=1\)，且
+\item 令
 \[
-b_{n+1}=a_{n+1}-(n+1)=4a_n-3n+1-n-1=4(a_n-n)=4b_n.
+b_n=a_n-n
 \]
-所以数列 \(\{a_n-n\}\) 是首项为 \(1\)，公比为 \(4\) 的等比数列.
+由 \(a_1=2\) 得 \(b_1=1\). 对任意 \(n\in\N^*\)，由递推关系有
+\[
+b_{n+1}=a_{n+1}-(n+1)=4a_n-3n+1-n-1=4(a_n-n)=4b_n
+\]
+因此 \(\{b_n\}=\{a_n-n\}\) 是首项为 \(1\)，公比为 \(4\) 的等比数列.
 \item 由上知 \(a_n-n=b_n=4^{n-1}\)，所以 \(a_n=4^{n-1}+n\). 因而
 \[
-S_n=\sum_{k=1}^{n}\left(4^{k-1}+k\right)=\frac{4^n-1}{3}+\frac{n(n+1)}2.
+S_n=\sum_{k=1}^{n}a_k
+=\sum_{k=1}^{n}\left(4^{k-1}+k\right)
+=\frac{4^n-1}{4-1}+\frac{n(n+1)}2
+=\frac{4^n-1}{3}+\frac{n(n+1)}2
 \]
-\item 由 \(S_{n+1}=S_n+a_{n+1}\)，不等式 \(S_{n+1}\leqslant4S_n\) 等价于 \(3S_n\geqslant a_{n+1}\). 又 \(a_{n+1}=4^n+n+1\)，故
+\item 由和的递推关系
+\[
+S_{n+1}=S_n+a_{n+1}
+\]
+所以要证 \(S_{n+1}\leqslant4S_n\)，等价于证明
+\[
+3S_n-a_{n+1}\geqslant0
+\]
+由通项公式，\(a_{n+1}=4^n+n+1\)，代入上面的 \(S_n\) 得
 \[
 3S_n-a_{n+1}=4^n-1+\frac{3n(n+1)}2-(4^n+n+1)=\frac{(3n+4)(n-1)}2\geqslant0
 \]
-对任意 \(n\in\N^*\) 成立，所以 \(S_{n+1}\leqslant4S_n\).
+因为 \(n\in\N^*\) 时 \(n-1\geqslant0\)，且 \(3n+4>0\)，上式确实非负，故对任意 \(n\in\N^*\) 都有 \(S_{n+1}\leqslant4S_n\).
 \end{enumerate}
 \end{solution}
 
@@ -408,21 +689,44 @@ S_n=\sum_{k=1}^{n}\left(4^{k-1}+k\right)=\frac{4^n-1}{3}+\frac{n(n+1)}2.
 
 \begin{solution}
 \begin{enumerate}
-\item 当 \(a=1\) 时，\(f(x)=-x(x-1)^2\)，所以 \(f(2)=-2\)，且 \(f'(x)=-3x^2+4x-1\)，从而 \(f'(2)=-5\). 因此所求切线方程为 \(y+2=-5(x-2)\)，即 \(y=-5x+8\).
-\item \(f'(x)=-(x-a)(3x-a)\)，所以驻点为 \(x=\frac a3\) 和 \(x=a\)，且
+\item 当 \(a=1\) 时，
 \[
-f\left(\frac a3\right)=-\frac{4a^3}{27},\qquad f(a)=0.
+f(x)=-x(x-1)^2=-x^3+2x^2-x
 \]
-当 \(a>0\) 时，\(f\) 在 \(x=\frac a3\) 处取得极小值 \(-\frac{4a^3}{27}\)，在 \(x=a\) 处取得极大值 \(0\)；当 \(a<0\) 时，\(f\) 在 \(x=a\) 处取得极小值 \(0\)，在 \(x=\frac a3\) 处取得极大值 \(-\frac{4a^3}{27}\).
+所以
+\(f(2)=-2\)，\(f'(x)=-3x^2+4x-1\)，\(f'(2)=-5\).
+曲线在 \((2,-2)\) 处的切线斜率为 \(-5\)，故切线为
+\[
+y-(-2)=-5(x-2)
+\]
+即 \(y=-5x+8\).
+\item 对一般的 \(a\)，
+\[
+f'(x)=-(x-a)(3x-a)
+\]
+故驻点为 \(x=a/3\) 和 \(x=a\)，且
+\(f\left(\frac a3\right)=-\frac{4a^3}{27}\)，\(f(a)=0\).
+当 \(a>0\) 时，临界点顺序为 \(a/3<a\). 在 \(x<a/3\) 时两个因子都为负，故 \(f'(x)<0\)；在 \(a/3<x<a\) 时两个因子异号，故 \(f'(x)>0\)；在 \(x>a\) 时两个因子都为正，故 \(f'(x)<0\). 因而 \(x=a/3\) 处为极小点，\(x=a\) 处为极大点，极小值和极大值分别为
+\(-\frac{4a^3}{27}\)，\(0\).
+
+当 \(a<0\) 时，临界点顺序为 \(a<a/3\). 在 \(x<a\) 时 \(f'(x)<0\)，在 \(a<x<a/3\) 时 \(f'(x)>0\)，在 \(x>a/3\) 时 \(f'(x)<0\). 因而 \(x=a\) 处为极小点，\(x=a/3\) 处为极大点，极小值和极大值分别为
+\(0\)，\(-\frac{4a^3}{27}\).
+这里的极大值、极小值均指局部极值；当 \(a\ne0\) 时三次函数在两端无界，不存在绝对最大值和绝对最小值.
 \item 取 \(k=-1\)，记 \(u=\cos x\)，则 \(u\in[-1,1]\)，并且
+\(k-u=-1-u\in[-2,0]\)，\(k^2-u^2=1-u^2\in[0,1]\).
+当 \(a>3\) 且 \(z\leqslant1\) 时，\(z-a<0\)，并且 \(3z-a\leqslant3-a<0\)，故
 \[
-k-u=-1-u\in[-2,0],\qquad k^2-u^2=1-u^2\in[0,1].
+f'(z)=-(z-a)(3z-a)<0
 \]
-当 \(a>3\) 且 \(z\leqslant1\) 时，\(z-a<0\)，\(3z-a<0\)，故 \(f'(z)=-(z-a)(3z-a)<0\)，即 \(f\) 在 \((-\infty,1]\) 上递减. 又
+所以 \(f\) 在 \((-\infty,1]\) 上严格递减. 又
 \[
-(k^2-u^2)-(k-u)=1-u^2+1+u=(2-u)(u+1)\geqslant0.
+(k^2-u^2)-(k-u)=1-u^2+1+u=(2-u)(u+1)\geqslant0
 \]
-所以 \(k-u\leqslant k^2-u^2\)，从而 \(f(k-u)\geqslant f(k^2-u^2)\). 由于 \(k=-1\in[-1,0]\)，结论成立.
+于是 \(k-u\leqslant k^2-u^2\)，且两端都不超过 \(1\). 由于 \(f\) 在该区间上递减，得到
+\[
+f(k-u)\geqslant f(k^2-u^2)
+\]
+将 \(u=\cos x\) 代回，即对任意 \(x\in\R\) 成立. 又 \(k=-1\in[-1,0]\)，故所需的 \(k\) 存在.
 \end{enumerate}
 \end{solution}
 
@@ -437,39 +741,93 @@ k-u=-1-u\in[-2,0],\qquad k^2-u^2=1-u^2\in[0,1].
 
 \begin{solution}
 \begin{enumerate}
-\item 设椭圆的半焦距为 \(c\)，则 \(F_1=(-c,0)\)，\(F_2=(c,0)\)，且 \(c^2=a^2-b^2\). 由 \(AF_2\perp F_1F_2\)，设 \(A=(c,y_0)\). 将 \(A\) 代入椭圆方程，得
+\item 设椭圆的半焦距为 \(c\)，则
+\(F_1=(-c,0)\)，\(F_2=(c,0)\)，\(c^2=a^2-b^2\).
+由于 \(F_1F_2\) 在 \(x\) 轴上，且 \(AF_2\perp F_1F_2\)，所以 \(AF_2\) 是竖直线，设 \(A=(c,y_0)\). 将 \(A\) 代入椭圆方程，得
 \[
-\frac{c^2}{a^2}+\frac{y_0^2}{b^2}=1,
+\frac{c^2}{a^2}+\frac{y_0^2}{b^2}=1
 \]
-从而 \(y_0^2=\frac{b^4}{a^2}\). 直线 \(AF_1\) 的方程为 \(y_0x-2cy+y_0c=0\)，所以原点到该直线的距离为 \(\frac{|cy_0|}{\sqrt{y_0^2+4c^2}}\). 由题意
+从而
 \[
-\frac{|cy_0|}{\sqrt{y_0^2+4c^2}}=\frac c3,
+y_0^2=b^2\left(1-\frac{c^2}{a^2}\right)=\frac{b^2(a^2-c^2)}{a^2}=\frac{b^4}{a^2}
 \]
-得 \(c^2=2y_0^2=\frac{2b^4}{a^2}\). 结合 \(c^2=a^2-b^2\)，有
+直线 \(AF_1\) 经过 \((-c,0)\) 和 \((c,y_0)\)，故其方程为
 \[
-a^4-a^2b^2-2b^4=0,
+y_0x-2cy+y_0c=0
 \]
-即 \((a^2-2b^2)(a^2+b^2)=0\). 因为 \(a>b>0\)，所以 \(a^2=2b^2\)，即 \(a=\sqrt2b\).
-\item 由（1）知椭圆方程化为 \(x^2+2y^2=2b^2\). 取圆 \(x^2+y^2=t^2\) 上任意一点 \(M(x_0,y_0)\)，则 \(x_0^2+y_0^2=t^2\)，且该点处的切线为 \(xx_0+yy_0=t^2\). 令 \(\bs d=(-y_0,x_0)\)，则切线上任意一点可表示为 \(M+s\bs d\). 设切线与椭圆的交点 \(Q_i=M+s_i\bs d\)，其中 \(s_1\)，\(s_2\) 是方程
+于是原点到该直线的距离为
+\[
+d=\frac{|cy_0|}{\sqrt{y_0^2+4c^2}}
+\]
+题设给出 \(d=\frac13|OF_1|=c/3\)，因此
+\[
+\frac{|cy_0|}{\sqrt{y_0^2+4c^2}}=\frac c3
+\]
+两边平方并约去正数 \(c^2\)，得
+\[
+9y_0^2=y_0^2+4c^2
+\Longrightarrow c^2=2y_0^2=\frac{2b^4}{a^2}
+\]
+结合 \(c^2=a^2-b^2\)，有
+\[
+a^4-a^2b^2-2b^4=0
+\]
+即
+\[
+(a^2-2b^2)(a^2+b^2)=0
+\]
+因为 \(a^2+b^2>0\)，所以 \(a^2=2b^2\). 又 \(a>0\)，故 \(a=\sqrt2b\).
+\item 由（1）知 \(a^2=2b^2\)，故椭圆方程化为
+\[
+\frac{x^2}{2b^2}+\frac{y^2}{b^2}=1
+\Longleftrightarrow x^2+2y^2=2b^2
+\]
+取圆 \(x^2+y^2=t^2\) 上任意一点 \(M(x_0,y_0)\)，则
+\[
+x_0^2+y_0^2=t^2
+\]
+圆在 \(M\) 处的切线方程为
+\[
+xx_0+yy_0=t^2
+\]
+令切线方向向量为 \(\bs d=(-y_0,x_0)\). 则 \(M\cdot\bs d=0\)，且 \(|\bs d|^2=t^2\)，切线上任意一点可表示为 \(M+s\bs d\). 设切线与椭圆的交点为
+\(Q_i=M+s_i\bs d\)，\((i=1,2)\).
+将
+\(x=x_0-sy_0\)，\(y=y_0+sx_0\)
+代入椭圆方程，得到关于 \(s\) 的二次方程
 \[
 (x_0-sy_0)^2+2(y_0+sx_0)^2=2b^2
 \]
-的两个根. 由韦达定理，
+的两个根 \(s_1\)，\(s_2\). 其二次项系数为 \(y_0^2+2x_0^2>0\)，由韦达定理，
 \[
-s_1s_2=\frac{x_0^2+2y_0^2-2b^2}{y_0^2+2x_0^2}.
+s_1s_2=\frac{x_0^2+2y_0^2-2b^2}{y_0^2+2x_0^2}
 \]
-又因为 \(M\cdot\bs d=0\) 且 \(|\bs d|^2=t^2\)，所以
+又因为 \(M\cdot\bs d=0\)，所以
 \[
-\overrightarrow{OQ_1}\cdot\overrightarrow{OQ_2}=(M+s_1\bs d)\cdot(M+s_2\bs d)=t^2(1+s_1s_2).
+\overrightarrow{OQ_1}\cdot\overrightarrow{OQ_2}=(M+s_1\bs d)\cdot(M+s_2\bs d)=t^2(1+s_1s_2)
 \]
-因此 \(OQ_1\perp OQ_2\) 当且仅当 \(s_1s_2=-1\)，这等价于
+由于 \(t>0\)，有
+\[
+OQ_1\perp OQ_2
+\Longleftrightarrow \overrightarrow{OQ_1}\cdot\overrightarrow{OQ_2}=0
+\Longleftrightarrow s_1s_2=-1
+\]
+代入韦达公式，这等价于
 \[
 \frac{x_0^2+2y_0^2-2b^2}{y_0^2+2x_0^2}=-1
 \quad\Longleftrightarrow\quad
 3(x_0^2+y_0^2)=2b^2
 \quad\Longleftrightarrow\quad
-3t^2=2b^2.
+3t^2=2b^2
 \]
-所以所求 \(t=\sqrt{\frac23}\,b\). 该值属于 \((0,b)\)，且 \(t<b\) 时切线经过椭圆内部点，故对圆上的任意 \(M\) 都与椭圆交于两点，命题确实成立.
+所以
+\[
+t=\sqrt{\frac23}\,b
+\]
+因为 \(0<\sqrt{2/3}<1\)，该值属于 \((0,b)\). 还需确认题设的两个交点确实存在. 对任意圆上点 \(M\)，
+\[
+x_0^2+2y_0^2\leqslant2(x_0^2+y_0^2)=2t^2=\frac43b^2<2b^2
+\]
+所以 \(M\) 在椭圆内部，过内部点的直线与椭圆相交于两个不同点. 故这个 \(t\) 对圆上的任意 \(M\) 都满足题设条件.
 \end{enumerate}
 \end{solution}

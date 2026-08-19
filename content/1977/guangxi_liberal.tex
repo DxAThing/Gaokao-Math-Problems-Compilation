@@ -12,32 +12,48 @@
 \item 分解 \( x^3-5x^2+4x \) 的因式.
 \item 化简 \( \frac{1}{\sin^2 \alpha}-\cot^2 \alpha \).
 \item 计算 \( \cot 135^\circ+\cos \left( -60^\circ \right)-\tan^2 60^\circ+\sin 30^\circ \).
-\item 不查表求 \( \lg\frac{3}{7}+\lg70-\lg3 \) 的值.
+\item 不查表求 \(\lg\frac{3}{7}+\lg70-\lg3\) 的值.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item
+\item 先计算括号内的值，并把除以 \(\frac{2}{5}\) 改写为乘以 \(\frac{5}{2}\)，得
 \[
-\text{原式}=5\frac{3}{4}-2\left[ \frac{1}{4}-2\frac{1}{4} \right]\times\frac{5}{2}=5\frac{3}{4}-2\times\left( -2 \right)\times\frac{5}{2}=5\frac{3}{4}+10=15\frac{3}{4}
+\begin{gathered}
+5\frac{3}{4}-2\left[ \left( \frac{1}{2} \right)^2-3\times\frac{3}{4} \right]\div\frac{2}{5}
+=5\frac{3}{4}-2\left(\frac{1}{4}-\frac{9}{4}\right)\times\frac{5}{2}\\
+=5\frac{3}{4}-2\times(-2)\times\frac{5}{2}=5\frac{3}{4}+10=15\frac{3}{4}
+\end{gathered}
 \]
 
-\item
-原式 \( =x\left( x^2-5x+4 \right)=x\left( x-4 \right)\left( x-1 \right) \).
-
-\item
+\item 先提取公因式 \(x\)，再分解所得二次三项式. 因为 \(1+4=5\)，且 \(1\times4=4\)，所以
 \[
-\text{原式}=\frac{1}{\sin^2 \alpha}-\frac{\cos^2 \alpha}{\sin^2 \alpha}=\frac{1-\cos^2 \alpha}{\sin^2 \alpha}=\frac{\sin^2 \alpha}{\sin^2 \alpha}=1
+x^3-5x^2+4x=x\left(x^2-5x+4\right)=x\left(x-1\right)\left(x-4\right)
 \]
 
-\item
+\item 原式有意义时 \(\sin\alpha\ne0\)，且 \(\cot\alpha=\frac{\cos\alpha}{\sin\alpha}\). 利用 \(1-\cos^2\alpha=\sin^2\alpha\)，得
 \[
-\text{原式}=-\cot 45^\circ+\cos 60^\circ-\tan^2 60^\circ+\sin 30^\circ=-1+\frac{1}{2}-\left( \sqrt{3} \right)^2+\frac{1}{2}=-3
+\frac{1}{\sin^2\alpha}-\cot^2\alpha
+=\frac{1}{\sin^2\alpha}-\frac{\cos^2\alpha}{\sin^2\alpha}
+=\frac{1-\cos^2\alpha}{\sin^2\alpha}
+=\frac{\sin^2\alpha}{\sin^2\alpha}=1
 \]
 
-\item
-原式 \( =\lg3-\lg7+\lg7+\lg10-\lg3=\lg10=1 \).
+\item 由三角函数的诱导公式和特殊角的三角函数值，\(\cot135^\circ=-1\)，\(\cos(-60^\circ)=\cos60^\circ=\frac{1}{2}\)，\(\tan60^\circ=\sqrt{3}\)，\(\sin30^\circ=\frac{1}{2}\). 因此
+\[
+\cot135^\circ+\cos(-60^\circ)-\tan^2 60^\circ+\sin30^\circ
+=-1+\frac{1}{2}-\left(\sqrt{3}\right)^2+\frac{1}{2}=-3
+\]
+
+\item 由于各对数的真数均为正数，可以使用对数的和、差公式. 又因为 \(70=7\times10\)，所以
+\[
+\begin{gathered}
+\lg\frac{3}{7}+\lg70-\lg3
+=\left(\lg3-\lg7\right)+\left(\lg7+\lg10\right)-\lg3\\
+=\lg10=1
+\end{gathered}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -48,22 +64,37 @@
 \begin{solution}
 \solutionfigure{\bitmapfigure[max width=4.2cm]{img/1977/guangxi_liberal/q2_solution_fig1.png}}
 
-证明：因为 \( \angle B=\angle A \)（同弧上的圆周角相等），\( \angle P \) 是公用角，所以 \( \triangle PDA\sim\triangle PCB \). 从而 \( \frac{PA}{PB}=\frac{PD}{PC} \)，所以 \( PA\cdot PC=PB\cdot PD \).
+由题意，点 \(P\)，\(D\)，\(B\) 共线，点 \(P\)，\(C\)，\(A\) 共线. 因为 \(PA\) 与 \(PC\) 在同一直线上，\(PB\) 与 \(PD\) 在同一直线上，所以 \(\angle DPA=\angle CPB\). 又因为 \(P\)，\(C\)，\(A\) 共线且 \(C\) 在线段 \(PA\) 上，\(P\)，\(D\)，\(B\) 共线且 \(D\) 在线段 \(PB\) 上，所以 \(\angle PAD=\angle CAD\)，\(\angle PBC=\angle DBC\). \(\angle CAD\) 与 \(\angle DBC\) 都是同一圆中对着弦 \(CD\) 的圆周角，故 \(\angle PAD=\angle PBC\).
+
+因此由两角分别相等，得 \(\triangle PDA\sim\triangle PCB\)，对应关系为 \(P\leftrightarrow P\)，\(A\leftrightarrow B\)，\(D\leftrightarrow C\). 于是
+\[
+\frac{PA}{PB}=\frac{PD}{PC}
+\]
+由于各线段长度均为正数，交叉相乘得
+\[
+PA\cdot PC=PB\cdot PD
+\]
 \end{solution}
 
 \begin{problem}
-\( m \) 是什么值的时候，方程 \( 3x^2-\left( 4m-1 \right)x+m^2+\frac{3}{4}=0 \) 有相等的两个实数根.
+\(m\) 是什么值的时候，方程 \(3x^2-\left(4m-1\right)x+m^2+\frac{3}{4}=0\) 有相等的两个实数根.
 \end{problem}
 
 \begin{solution}
-解
-\(\Delta=\left[ -\left( 4m-1 \right) \right]^2-4\times3\left( m^2+\frac{3}{4} \right)=16m^2-8m+1-12m^2-9=4m^2-8m-8\)
-
-当 \( 4m^2-8m-8=0 \)，即 \( m^2-2m-2=0 \) 时，方程有两个相等的实数根.
-
-解 \( m^2-2m-2=0 \) 得 \( m=\frac{-\left( -2 \right)\pm\sqrt{\left( -2 \right)^2-4\times1\times\left( -2 \right)}}{2}=1\pm\sqrt{3} \).
-
-答：当 \( m=1\pm\sqrt{3} \) 时，方程 \( 3x^2-\left( 4m-1 \right)x+m^2+\frac{3}{4}=0 \) 有相等的两个实数根.
+这是关于 \(x\) 的一元二次方程，二次项系数为 \(3\ne0\). 它有相等的两个实数根，当且仅当判别式等于零. 方程的系数为 \(a=3\)，\(b=-(4m-1)=1-4m\)，\(c=m^2+\frac{3}{4}\)，所以
+\[
+\begin{gathered}
+\Delta=b^2-4ac
+=(1-4m)^2-12\left(m^2+\frac{3}{4}\right)\\
+=16m^2-8m+1-12m^2-9\\
+=4m^2-8m-8=4\left(m^2-2m-2\right)
+\end{gathered}
+\]
+令 \(\Delta=0\)，得
+\[
+m^2-2m-2=0\quad\Longleftrightarrow\quad\left(m-1\right)^2=3
+\]
+因此 \(m=1+\sqrt{3}\) 或 \(m=1-\sqrt{3}\). 这两个值都使 \(\Delta=0\)，且二次项系数仍为 \(3\)，故方程确实有相等的两个实数根.
 \end{solution}
 
 \begin{problem}
@@ -71,17 +102,11 @@
 \end{problem}
 
 \begin{solution}
-【法一】设需胆矾 \(x\text{ 斤}\)，则生石灰为 \(2x\text{ 斤}\)，水为 \(240x\text{ 斤}\)，依题意得 \(486=x+2x+240x\)，解得 \(x=2\text{ 斤}\). 所以 \(2x=4\text{ 斤}\)，\(240x=480\text{ 斤}\).
+设胆矾的重量为 \(x\text{ 斤}\)，生石灰的重量为 \(y\text{ 斤}\)，水的重量为 \(z\text{ 斤}\). 由胆矾与生石灰的重量比为 \(1:2\)，得 \(y=2x\). 由生石灰与水的重量比为 \(1:120\)，得 \(z=120y=240x\).
 
-答：需胆矾 \(2\text{ 斤}\)，生石灰 \(4\text{ 斤}\)，水 \(480\text{ 斤}\).
+三种物质的总重量为 \(486\text{ 斤}\)，所以 \(x+y+z=x+2x+240x=486\)，从而 \(243x=486\)，解得 \(x=2\). 于是 \(y=2x=4\)，\(z=240x=480\).
 
-【法二】由胆矾与生石灰的重量比是 \(1:2\)，生石灰与水的重量比是 \(1:120\)，得胆矾，生石灰和水的连比是 \(1:2:240\). 则每份的重量是 \(486\div\left( 1+2+240 \right)=486\div243=2\text{ 斤}\).
-
-胆矾的重量是 \(2\times1=2\text{ 斤}\).
-
-生石灰的重量是 \(2\times2=4\text{ 斤}\).
-
-水的重量是 \(2\times240=480\text{ 斤}\).
+检验：\(2+4+480=486\)，且 \(2:4=1:2\)，\(4:480=1:120\)，符合题设条件.
 
 答：需胆矾 \(2\text{ 斤}\)，生石灰 \(4\text{ 斤}\)，水 \(480\text{ 斤}\).
 \end{solution}
@@ -93,13 +118,28 @@
 \end{problem}
 
 \begin{solution}
-以抛物线顶点为坐标原点，对称轴为 \( y \) 轴建立直角坐标系（如右图）. 则抛物线方程为 \( x^2=-2Py \). 因为 \(B\) 点的坐标是 \( \left( 6,-4 \right) \)，所以 \( 6^2=-2P\left( -4 \right) \)，解得 \( P=\frac{9}{2} \).
+以抛物线的顶点 \(O\) 为坐标原点，以对称轴为 \(y\) 轴建立直角坐标系. 桥面所在的直线为 \(y=-4\)，且由于 \(AB=12\text{ 米}\)，所以 \(A\)、\(B\) 的坐标分别为 \((-6,-4)\)、\((6,-4)\).
 
-抛物线的方程为 \( x^2=-9y \). 因此得 \(D_3\) 的坐标为 \( \left( 2,-\frac{4}{9} \right) \)，\(D_4\) 的坐标为 \( \left( 4,-\frac{16}{9} \right) \).
-\(\left| C_3D_3 \right|=4-\frac{4}{9}=\frac{32}{9}=3\frac{5}{9}\text{ 米}\)
-\(\left| C_4D_4 \right|=4-\frac{16}{9}=\frac{20}{9}=2\frac{2}{9}\text{ 米}\)
+设抛物线的标准方程为 \(x^2=-2py\)，其中 \(p>0\). 把点 \(B(6,-4)\) 代入，得 \(6^2=-2p\times(-4)\)，
+所以 \(p=\frac{9}{2}\)，抛物线方程为
+\[
+x^2=-9y
+\]
+从而 \(y=-\frac{x^2}{9}\).
 
-由抛物线的对称性，还有 \( \left| C_1D_1 \right|=2\frac{2}{9}\text{ 米} \)，\( \left| C_2D_2 \right|=3\frac{5}{9}\text{ 米} \).
+由图，四根撑梁的横坐标分别为 \(-4\)，\(-2\)，\(2\)，\(4\). 设撑梁底端在桥面 \(y=-4\) 上，横坐标为 \(t\) 的撑梁顶端在抛物线上，则顶端纵坐标为 \(-\frac{t^2}{9}\)，撑梁长度为
+\[
+\left(-\frac{t^2}{9}\right)-(-4)=4-\frac{t^2}{9}
+\]
 
-答：撑梁 \(C_1D_1\)，\(C_4D_4\) 长是 \( 2\frac{2}{9}\text{ 米} \)；\(C_2D_2\)，\(C_3D_3\) 长是 \( 3\frac{5}{9}\text{ 米} \).
+当 \(t=2\) 或 \(t=-2\) 时，撑梁长度为
+\[
+4-\frac{2^2}{9}=\frac{32}{9}=3\frac{5}{9}\text{ 米}
+\]
+当 \(t=4\) 或 \(t=-4\) 时，撑梁长度为
+\[
+4-\frac{4^2}{9}=\frac{20}{9}=2\frac{2}{9}\text{ 米}
+\]
+
+因此 \(C_1D_1=C_4D_4=2\frac{2}{9}\text{ 米}\)，\(C_2D_2=C_3D_3=3\frac{5}{9}\text{ 米}\).
 \end{solution}

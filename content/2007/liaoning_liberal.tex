@@ -18,7 +18,7 @@ C
 
 \begin{solution}
 原卷对第二个集合的定义使用了符号 \(N\)，而交集结论处印作 \(A\cap B\). 按原卷给出的集合定义计算，有
-\(A\cap N=\{1,3\}\cap\{2,3,4\}=\{3\}\). 因此按题面实际数据，选择 C.
+\(A\cap N=\{1,3\}\cap\{2,3,4\}=\{3\}\). 因此若按题面数值的通常命题意图，将交集处的 \(B\) 视为前面定义的第二个集合，选择 C. 严格按字面看，\(B\) 未定义，原题存在符号歧义.
 \end{solution}
 
 \begin{problem}
@@ -96,11 +96,7 @@ B
 
 \begin{solution}
 设等差数列首项为 \(a_1\)，公差为 \(d\). 由等差数列前 \(n\) 项和公式，
-\[
-S_3=3a_1+3d=9
-\qquad
-S_6=6a_1+15d=36
-\]
+\(S_3=3a_1+3d=9\)，\(S_6=6a_1+15d=36\).
 于是 \(a_1+d=3\)，\(2a_1+5d=12\). 由 \(a_1=3-d\) 代入第二式，得
 \(2(3-d)+5d=12\)，解得 \(d=2\)，从而 \(a_1=1\). 因此
 \[
@@ -174,11 +170,7 @@ A
 1+\frac{2}{x}\leqslant\frac{y}{x}\leqslant\frac{7}{x}-1
 \]
 左端随 \(x\) 增大而减小，右端也随 \(x\) 增大而减小，因此
-\[
-\frac{y}{x}\geqslant1+\frac{2}{5/2}=\frac{9}{5}
-\qquad
-\frac{y}{x}\leqslant\frac{7}{1}-1=6
-\]
+\(\frac{y}{x}\geqslant1+\frac{2}{5/2}=\frac{9}{5}\)，且 \(\frac{y}{x}\leqslant\frac{7}{1}-1=6\).
 区域连通且函数 \(y/x\) 连续，故值域为 \(\left[\frac{9}{5},6\right]\)，选择 A.
 \end{solution}
 
@@ -197,7 +189,11 @@ B
 \end{answer}
 
 \begin{solution}
-函数定义域由 \(x^2-5x+6=(x-2)(x-3)>0\) 给出，即 \(x<2\) 或 \(x>3\). 当 \(x>3\) 时，二次函数 \(x^2-5x+6\) 单调递增，而底数 \(\frac{1}{2}\) 的对数函数单调递减，所以复合函数在 \((3,+\infty)\) 上单调递减. 故选择 B.
+函数定义域由 \(x^2-5x+6=(x-2)(x-3)>0\) 给出，即 \(x<2\) 或 \(x>3\). 设 \(F(x)=\log_{\frac{1}{2}}(x^2-5x+6)\)，则
+\[
+F'(x)=\frac{2x-5}{(x^2-5x+6)\ln\frac{1}{2}}
+\]
+在 \((-\infty,2)\) 上，分子和 \(\ln\frac{1}{2}\) 均为负，故 \(F'(x)>0\)，函数单调递增；在 \((3,+\infty)\) 上，分子为正而 \(\ln\frac{1}{2}<0\)，故 \(F'(x)<0\)，函数单调递减. 所以单调减区间为 \((3,+\infty)\)，选择 B.
 \end{solution}
 
 \begin{problem}
@@ -245,7 +241,7 @@ x^2-\frac{5}{6}x+\frac{1}{6}=\frac{1}{6}(3x-1)(2x-1)
 \end{solution}
 
 \begin{problem}
-将数字 \(1\)，\(2\)，\(3\)，\(4\)，\(5\)，\(6\) 排成一列，记第 \(i\) 个数为 \(a_i\)（\(i=1,2,\cdots,6\)）. 若 \(a_1\neq1\)，\(a_3\neq3\)，\(a_5\neq5\)，\(a_1<a_3<a_5\)，则不同的排列方法种数为（\quad）
+将数字 \(1\)，\(2\)，\(3\)，\(4\)，\(5\)，\(6\) 排成一列，记第 \(i\) 个数为 \(a_i\)（\(i=1\)，\(2\)，\(\cdots\)，\(6\)）. 若 \(a_1\neq1\)，\(a_3\neq3\)，\(a_5\neq5\)，\(a_1<a_3<a_5\)，则不同的排列方法种数为（\quad）
 
 \choices
     {\(18\)}
@@ -283,10 +279,11 @@ B
 \[
 f(-2)-f(-3)=-f(2)+f(3)=f(3)-f(2)=1
 \]
+所以所求结果为 \(1\).
 \end{solution}
 
 \begin{problem}
-\(\left(\sqrt{x}+\frac{1}{\sqrt[4]{x}}\right)^8\) 展开式中含有 \(x\) 的整数次幂的项的系数之和为\fillinblank{}. （用数字作答）
+\(\left(\sqrt{x}+\frac{1}{\sqrt[4]{x}}\right)^8\) 展开式中含有 \(x\) 的整数次幂的项的系数之和为\fillinblank{}.
 \end{problem}
 
 \begin{answer}
@@ -295,15 +292,12 @@ f(-2)-f(-3)=-f(2)+f(3)=f(3)-f(2)=1
 
 \begin{solution}
 设通项中取 \(k\) 个因子 \(\frac{1}{\sqrt[4]{x}}\)，则该项为
-\[
-\mathrm C_8^k\left(\sqrt{x}\right)^{8-k}\left(\frac{1}{\sqrt[4]{x}}\right)^k
-=\mathrm C_8^k x^{4-\frac{3k}{4}}
-\qquad k=0,1,\cdots,8
-\]
-指数 \(4-\frac{3k}{4}\) 为整数，当且仅当 \(k\) 是 \(4\) 的倍数. 因此 \(k=0,4,8\)，对应项的系数之和为
+\(\mathrm C_8^k\left(\sqrt{x}\right)^{8-k}\left(\frac{1}{\sqrt[4]{x}}\right)^k =\mathrm C_8^k x^{4-\frac{3k}{4}}\)，\(k=0\)，\(1\)，\(\cdots\)，\(8\)
+指数 \(4-\frac{3k}{4}\) 为整数，当且仅当 \(k\) 是 \(4\) 的倍数. 因此 \(k=0\)，\(4\)，\(8\)，对应项的系数之和为
 \[
 \mathrm C_8^0+\mathrm C_8^4+\mathrm C_8^8=1+70+1=72
 \]
+所以所求系数之和为 \(72\).
 \end{solution}
 
 \begin{problem}
@@ -324,6 +318,7 @@ r^2=R^2+\left(\frac{\sqrt{6}}{2}\right)^2
 \[
 V=\frac{4}{3}\pi r^3=\frac{4}{3}\pi\left(\sqrt{3}\right)^3=4\pi\sqrt{3}
 \]
+所以此球的体积为 \(4\pi\sqrt{3}\).
 \end{solution}
 
 \begin{problem}
@@ -338,13 +333,13 @@ V=\frac{4}{3}\pi r^3=\frac{4}{3}\pi\left(\sqrt{3}\right)^3=4\pi\sqrt{3}
 椭圆的长半轴、短半轴分别为 \(a=5\)，\(b=4\)，故焦半距 \(c=\sqrt{a^2-b^2}=3\)，离心率 \(e=\frac{c}{a}=\frac{3}{5}\). 左准线方程为 \(x=-\frac{a}{e}=-\frac{25}{3}\)，左焦点为 \(F=(-3,0)\).
 
 设 \(P=(x,y)\). 由于 \(P\) 在椭圆上，\(-5\leqslant x\leqslant5\)，从而 \(x+\frac{25}{3}>0\). 点 \(P\) 到左准线的距离为 \(10\)，所以
-\[
-x+\frac{25}{3}=10,\qquad x=\frac{5}{3}
-\]
+\(x+\frac{25}{3}=10\)，所以 \(x=\frac{5}{3}\).
 代入椭圆方程，得
 \[
-\frac{(5/3)^2}{25}+\frac{y^2}{16}=1,\qquad \frac{1}{9}+\frac{y^2}{16}=1,\qquad y^2=\frac{128}{9}
+\frac{(5/3)^2}{25}+\frac{y^2}{16}=1
 \]
+即
+\(\frac{1}{9}+\frac{y^2}{16}=1\)，\(\Longrightarrow\)，\(y^2=\frac{128}{9}\)
 由向量关系，
 \[
 \overrightarrow{OM}=\frac{1}{2}\left((x,y)+(-3,0)\right)
@@ -360,7 +355,7 @@ x+\frac{25}{3}=10,\qquad x=\frac{5}{3}
 \section{解答题}
 
 \begin{problem}
-某公司在过去几年内使用某种型号的灯管 \(1000\) 支，该公司对这些灯管的使用寿命（单位：小时）进行了统计，统计结果如下表所示：
+某公司在过去几年内使用某种型号的灯管 \(1000\text{ 支}\)，该公司对这些灯管的使用寿命（单位：小时）进行了统计，统计结果如下表所示：
 
 \begin{center}\small
 \begin{tabular}{|c|c|c|c|c|}
@@ -388,8 +383,8 @@ x+\frac{25}{3}=10,\qquad x=\frac{5}{3}
 
 \begin{enumerate}
 \item 将各组的频率填入表中；
-\item 根据上述统计结果，计算灯管使用寿命不足 \(1500\) 小时的频率；
-\item 该公司某办公室新安装了这种型号的灯管 \(3\) 支，若将上述频率作为概率，试求至少有 \(2\) 支灯管的寿命不足 \(1500\) 小时的概率.
+\item 根据上述统计结果，计算灯管使用寿命不足 \(1500\text{ 小时}\) 的频率；
+\item 该公司某办公室新安装了这种型号的灯管 \(3\text{ 支}\)，若将上述频率作为概率，试求至少有 \(2\text{ 支}\) 灯管的寿命不足 \(1500\text{ 小时}\) 的概率.
 \end{enumerate}
 \end{problem}
 
@@ -397,15 +392,16 @@ x+\frac{25}{3}=10,\qquad x=\frac{5}{3}
 \begin{enumerate}
 \item 各组频率等于相应频数除以总数 \(1000\)，所以从左到右依次为
 \(0.048\)，\(0.121\)，\(0.208\)，\(0.223\)，\(0.193\)，\(0.165\)，\(0.042\). 这些数的和为 \(1\)，与总频率一致.
-\item 使用寿命不足 \(1500\) 小时包括前四组，因此其频率为
+\item 使用寿命不足 \(1500\text{ 小时}\) 包括前四组，因此其频率为
 \[
 \frac{48+121+208+223}{1000}=\frac{600}{1000}=0.6
 \]
-\item 设 \(X\) 表示 \(3\) 支灯管中寿命不足 \(1500\) 小时的支数，则 \(X\) 服从参数为 \(3\)，\(0.6\) 的二项分布. 于是
+\item 设 \(X\) 表示 \(3\text{ 支}\) 灯管中寿命不足 \(1500\text{ 小时}\) 的支数，则 \(X\) 服从参数为 \(3\)，\(0.6\) 的二项分布. 于是
 \[
 P(X\geqslant2)=\mathrm C_3^2(0.6)^2(0.4)+(0.6)^3
 =0.432+0.216=0.648
 \]
+所以所求概率为 \(0.648\).
 \end{enumerate}
 \end{solution}
 
@@ -422,22 +418,16 @@ P(X\geqslant2)=\mathrm C_3^2(0.6)^2(0.4)+(0.6)^3
 
 \begin{solution}
 建立空间直角坐标系，使 \(C=(0,0,0)\)，\(A=(a,0,0)\)，\(B=(0,a,0)\)，并设 \(AA_1=h\). 令 \(MA=m\)，则
-\[
-D=\left(\frac{a}{2},\frac{a}{2},0\right),
-\quad E=\left(0,\frac{a}{2},0\right),
-\]
-\[
-C_1=(0,0,h),
-\quad A_1=(a,0,h),
-\quad B_1=(0,a,h),
-\quad M=(a,0,m)
-\]
+\(D=\left(\frac{a}{2},\frac{a}{2},0\right)\)，\(E=\left(0,\frac{a}{2},0\right)\)，
+\(C_1=(0,0,h)\)，\(A_1=(a,0,h)\)，\(B_1=(0,a,h)\)，\(M=(a,0,m)\).
 
 \begin{enumerate}
 \item 有
 \[
-\overrightarrow{A_1B_1}=(-a,a,0),
-\qquad
+\overrightarrow{A_1B_1}=(-a,a,0)
+\]
+且
+\[
 \overrightarrow{C_1D}=\left(\frac{a}{2},\frac{a}{2},-h\right)
 \]
 因此
@@ -487,12 +477,7 @@ f(x)=2\sin t\cos\frac{\pi}{6}-\left(1+\cos t\right)=\sqrt{3}\sin t-\cos t-1=2\si
 \]
 函数值域为 \([-3,1]\).
 \item 当 \(f(x)=-1\) 时，\(\sin\left(\omega x-\frac{\pi}{6}\right)=0\)，所以交点横坐标满足
-\[
-\omega x-\frac{\pi}{6}=k\pi,
-\qquad
-x=\frac{k\pi+\pi/6}{\omega},
-\qquad k\in\Z
-\]
+\(\omega x-\frac{\pi}{6}=k\pi\)，\(x=\frac{k\pi+\pi/6}{\omega}\)，\(k\in\Z\)
 相邻交点间的距离为 \(\frac{\pi}{\omega}\). 由题设 \(\frac{\pi}{\omega}=\frac{\pi}{2}\)，得 \(\omega=2\). 于是
 \[
 f'(x)=4\cos\left(2x-\frac{\pi}{6}\right)
@@ -543,6 +528,7 @@ a_n=\frac{2n+1+2^{1-n}}{2}=n+\frac{1}{2}+2^{-n}
 \[
 \sum_{k=1}^{n}a_k=\sum_{k=1}^{n}\left(k+\frac{1}{2}+2^{-k}\right)=\frac{n(n+1)}{2}+\frac{n}{2}+\left(1-2^{-n}\right)=\frac{n(n+2)}{2}+1-2^{-n}
 \]
+所以前 \(n\) 项和为 \(\frac{n(n+2)}{2}+1-2^{-n}\).
 \end{enumerate}
 \end{solution}
 
@@ -559,19 +545,16 @@ a_n=\frac{2n+1+2^{1-n}}{2}=n+\frac{1}{2}+2^{-n}
 设 \(A=(u^2/2,u)\)，\(B=(v^2/2,v)\)，这是抛物线 \(y^2=2x\) 上点的参数表示.
 \begin{enumerate}
 \item 因为三角形 \(OAB\) 为正三角形，所以 \(OA=OB\). 于是
+\(\frac{u^4}{4}+u^2=\frac{v^4}{4}+v^2\)，\(\Longrightarrow\)，\((u^2-v^2)(u^2+v^2+4)=0\)
+第二个因式不可能为零，故 \(v^2=u^2\). 由于 \(A\neq B\)，有 \(v=-u\). 又因 \(O\)，\(A\)，\(B\) 是正三角形的三个不同顶点，所以 \(u\neq0\). 再由 \(OA=AB\)，得
+\(\frac{u^4}{4}+u^2=(2u)^2\)，\(\Longrightarrow\)，\(u^2\left(\frac{u^2}{4}-3\right)=0\)
+舍去退化情形 \(u=0\)，得 \(u^2=12\)，所以可以取
 \[
-\frac{u^4}{4}+u^2=\frac{v^4}{4}+v^2,
-\qquad
-(u^2-v^2)(u^2+v^2+4)=0
+A=(6,2\sqrt{3})
 \]
-第二个因式不可能为零，故 \(v^2=u^2\). 由于 \(A\neq B\)，有 \(v=-u\). 再由 \(OA=AB\)，得
+且
 \[
-\frac{u^4}{4}+u^2=(2u)^2,
-\qquad u^2=12
-\]
-所以可以取
-\[
-A=(6,2\sqrt{3}),\qquad B=(6,-2\sqrt{3})
+B=(6,-2\sqrt{3})
 \]
 正三角形的外心也是重心，故圆心
 \[
@@ -604,6 +587,7 @@ C=\frac{O+A+B}{3}=(4,0)
 \[
 \min\left(\overrightarrow{CE}\cdot\overrightarrow{CF}\right)=\frac{512}{64}-16=-8
 \]
+所以最大值为 \(-\frac{16}{9}\)，最小值为 \(-8\).
 \end{enumerate}
 \end{solution}
 
@@ -628,28 +612,68 @@ g(x)=2r(x-2)
 要使 \(g(x)\geqslant0\) 对所有 \(x\in[0,2]\) 成立，并使 \(g(x)\leqslant0\) 对所有 \(x\in[2,4]\) 成立，只需且必须有 \(r\leqslant0\). 结合 \(g(2)=0\)，可得
 \[
 \cos\alpha\geqslant\frac{1}{9}
-\qquad
+\]
+且
+\[
 48\cos\beta=-4r=4(9\cos\alpha-1)
 \]
-这些条件不能唯一确定 \(\alpha\)，\(\beta\)，也不能唯一确定 \(f(x)\). 例如：
+从而
 \[
-\cos\alpha=\frac{1}{9},\quad \cos\beta=0
+\cos\beta=\frac{9\cos\alpha-1}{12}
 \]
-时，\(g(x)=0\)，且
+所以所有满足题设的参数至少必须满足
+\[
+\cos\alpha\geqslant\frac{1}{9}
+\]
+且
+\[
+\cos\beta=\frac{9\cos\alpha-1}{12}
+\]
+反过来，若这些关系成立，则 \(r\leqslant0\)，从而 \(g(x)=2r(x-2)\) 在 \([0,2]\) 上非负、在 \([2,4]\) 上非正，故它们也充分. 因此这些条件不能唯一确定 \(\alpha\)，\(\beta\)，也不能唯一确定 \(f(x)\). 例如：
+取 \(\cos\alpha=\frac{1}{9}\)，\(\cos\beta=0\) 时，\(g(x)=0\)，且
 \[
 f(x)=18\left(1-\frac{1}{81}\right)=\frac{160}{9}
 \]
 而
-\[
-\cos\alpha=\frac{1}{3},\quad \cos\beta=\frac{1}{6}
-\]
-时，\(g(x)=-4x+8\)，同样满足题设两个符号条件，但
+另取 \(\cos\alpha=\frac{1}{3}\)，\(\cos\beta=\frac{1}{6}\) 时，\(g(x)=-4x+8\)，同样满足题设两个符号条件，但
 \[
 f(x)=-2x^2+8x+16
 \]
 两种合法结果不同，因此第（1）问按原题条件无唯一解析式.
 
-第（2）问也随所取参数而变，不能得到唯一的 \(x\) 的取值范围. 比如取 \(x=\frac{11}{10}>0\)，对 \(m\in[-26,6]\)，右端 \(x^2-mx-11\) 在 \(m=-26\) 时最大，最大值为
+第（2）问也随所取参数而变，不能得到唯一的 \(x\) 的取值范围. 为把这种不唯一性写清楚，令 \(u=\cos\alpha\)，则 \(u\in[\frac{1}{9},1]\)，且
+\[
+ f(x)=(1-9u)x^2+4(9u-1)x+18(1-u^2)
+\]
+对固定的 \(x\)，右端关于 \(m\) 是一次函数：当 \(x>0\) 时在 \(m=-26\) 处取得最大值 \(x^2+26x-11\)；当 \(x<0\) 时在 \(m=6\) 处取得最大值 \(x^2-6x-11\)；当 \(x=0\) 时右端恒为 \(-11\). 因而只需分别检验这两个端点.
+
+取第一组参数 \(u=\frac{1}{9}\)，即 \(f(x)=\frac{160}{9}\). 当 \(x\leqslant0\) 时，要求
+\[
+\frac{160}{9}\geqslant x^2-6x-11
+\]
+给出 \(3-\frac{2\sqrt{85}}{3}\leqslant x\leqslant0\)；当 \(x\geqslant0\) 时，要求
+\[
+\frac{160}{9}\geqslant x^2+26x-11
+\]
+给出 \(0\leqslant x\leqslant\frac{2\sqrt{445}-39}{3}\). 所以此时
+\[
+x\in\left[3-\frac{2\sqrt{85}}{3},\frac{2\sqrt{445}-39}{3}\right]
+\]
+
+取第二组参数 \(u=\frac{1}{3}\)，即 \(f(x)=-2x^2+8x+16\). 当 \(x\leqslant0\) 时，要求
+\[
+-2x^2+8x+16\geqslant x^2-6x-11
+\]
+给出 \(\frac{7-\sqrt{130}}{3}\leqslant x\leqslant0\)；当 \(x\geqslant0\) 时，要求
+\[
+-2x^2+8x+16\geqslant x^2+26x-11
+\]
+给出 \(0\leqslant x\leqslant3(\sqrt{2}-1)\). 所以此时
+\[
+x\in\left[\frac{7-\sqrt{130}}{3},3(\sqrt{2}-1)\right]
+\]
+
+上述两组参数都满足题设，但得到的 \(x\) 的取值范围不同，故原题第（2）问按现有题面也不存在唯一的 \(x\) 的取值范围. 例如取 \(x=\frac{11}{10}>0\)，右端在 \(m=-26\) 时的最大值为
 \[
 \left(\frac{11}{10}\right)^2+26\cdot\frac{11}{10}-11=\frac{1881}{100}
 \]

@@ -18,6 +18,10 @@
 A
 \end{answer}
 
+\begin{solution}
+纯虚数的实部为零且虚部不为零，因此必须满足 \(x^{2}-1=0\)，从而 \(x=-1\) 或 \(x=1\). 当 \(x=1\) 时，虚部 \(x-1=0\)，复数为零，不是纯虚数；当 \(x=-1\) 时虚部为 \(-2\)，符合条件. 所以选 A.
+\end{solution}
+
 \begin{problem}
 函数 \( y = \frac{\ln(x + 1)}{\sqrt{-x^2 - 3x + 4}} \) 的定义域为（\quad）
 
@@ -31,6 +35,10 @@ A
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+对数有意义要求 \(x+1>0\)，即 \(x>-1\). 分母中的根式有意义且不能为零，要求 \(-x^{2}-3x+4>0\)，即 \((x+4)(x-1)<0\)，所以 \(-4<x<1\). 两个条件取交集得定义域为 \((-1,1)\)，故选 C.
+\end{solution}
 
 \begin{problem}
 已知全集 \(U = A \cup B\) 中有 \(m\) 个元素，\((\complement_U A) \cup (\complement_U B)\) 中有 \(n\) 个元素. 若 \(A \cap B\) 非空，则 \(A \cap B\) 的元素个数为（\quad）
@@ -46,6 +54,16 @@ C
 D
 \end{answer}
 
+\begin{solution}
+由德摩根律，\((\complement_U A)\cup(\complement_U B)=\complement_U(A\cap B)\). 因为全集 \(U\) 有 \(m\) 个元素，而 \(\complement_U(A\cap B)\) 有 \(n\) 个元素，所以
+
+\[
+|A\cap B|=|U|-|\complement_U(A\cap B)|=m-n
+\]
+
+故选 D.
+\end{solution}
+
 \begin{problem}
 若函数 \(f(x) = (1 + \sqrt{3}\tan x)\cos x\)，\(0 \leqslant x < \frac{\pi}{2}\)，则 \( f(x) \) 的最大值为（\quad）
 
@@ -59,6 +77,16 @@ D
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+在给定区间内 \(\cos x>0\)，且 \(\tan x\) 有定义. 利用 \(\tan x\cos x=\sin x\)，得
+
+\[
+f(x)=\cos x+\sqrt3\sin x=2\cos\left(x-\frac\pi3\right)
+\]
+
+当 \(0\leqslant x<\frac\pi2\) 时，\(x-\frac\pi3\in\left[-\frac\pi3,\frac\pi6\right)\)，其中包含 \(0\)，所以余弦的最大值为 \(1\)，在 \(x=\frac\pi3\) 时取得. 因此 \(f(x)\) 的最大值为 \(2\)，故选 B.
+\end{solution}
 
 \begin{problem}
 设函数 \( f(x) = g(x) + x^2 \)，曲线 \( y = g(x) \) 在点 \((1, g(1))\) 处的切线方程为 \( y = 2x + 1 \)，则曲线 \( y = f(x) \) 在点 \((1, f(1))\) 处切线的斜率为（\quad）
@@ -74,6 +102,10 @@ B
 A
 \end{answer}
 
+\begin{solution}
+曲线 \(y=g(x)\) 在 \(x=1\) 处的切线斜率为 \(2\)，所以 \(g'(1)=2\). 由 \(f(x)=g(x)+x^2\)，得 \(f'(x)=g'(x)+2x\)，从而 \(f'(1)=2+2=4\). 因此所求斜率为 \(4\)，故选 A.
+\end{solution}
+
 \begin{problem}
 过椭圆 \(\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\)（\(a > b > 0\)）的左焦点 \(F_1\) 作 \(x\) 轴的垂线交椭圆于点 \(P\)，\(F_2\) 为右焦点，若 \(\angle F_1PF_2 = 60^\circ\)，则椭圆的离心率为（\quad）
 
@@ -87,6 +119,25 @@ A
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+设椭圆的焦半距为 \(c\)，则 \(F_1=(-c,0)\)，\(F_2=(c,0)\)，且 \(c^2=a^2-b^2\). 由于过 \(F_1\) 的垂线为 \(x=-c\)，设 \(P=(-c,y_0)\). 代入椭圆方程得
+
+\(\frac{c^2}{a^2}+\frac{y_0^2}{b^2}=1\)，\(|y_0|=\frac{b^2}{a}\).
+
+在点 \(P\) 处，\(\overrightarrow{PF_1}=(0,-y_0)\)，\(\overrightarrow{PF_2}=(2c,-y_0)\)，所以
+
+\[
+\cos60^\circ=\frac{\overrightarrow{PF_1}\cdot\overrightarrow{PF_2}}{|PF_1||PF_2|}
+=\frac{|y_0|}{\sqrt{4c^2+y_0^2}}
+\]
+
+于是 \(3y_0^2=4c^2\)，即 \(\frac{b^2}{a}=\frac{2c}{\sqrt3}\). 令 \(e=\frac ca\)，则
+
+\(1-e^2=\frac{2e}{\sqrt3}\)，\(\sqrt3e^2+2e-\sqrt3=0\).
+
+因为 \(0<e<1\)，故 \(e=\frac1{\sqrt3}=\frac{\sqrt3}{3}\). 所以选 B.
+\end{solution}
 
 \begin{problem}
 \((1 + ax + by)^{n}\) 展开式中不含 \(x\) 的项的系数绝对值的和为 \(243\)，不含 \(y\) 的项的系数绝对值的和为 \(32\)，则 \(a\)，\(b\)，\(n\) 的值可能为（\quad）
@@ -102,6 +153,10 @@ B
 D
 \end{answer}
 
+\begin{solution}
+展开式中不含 \(x\) 的各项，正好是令 \(x=0\) 后所得的 \((1+by)^n\). 因此这些项的系数绝对值之和为 \((1+|b|)^n\). 同理，不含 \(y\) 的各项的系数绝对值之和为 \((1+|a|)^n\). 逐项检验：当 \(a=2\)，\(b=-1\)，\(n=5\) 时，\((1+|b|)^n=2^5\ne243\)；当 \(a=-2\)，\(b=-1\)，\(n=6\) 时，\((1+|b|)^n=2^6\ne243\)；当 \(a=-1\)，\(b=2\)，\(n=6\) 时，\((1+|b|)^n=3^6\ne243\)；当 \(a=1\)，\(b=2\)，\(n=5\) 时，\((1+|b|)^n=3^5=243\)，且 \((1+|a|)^n=2^5=32\)，符合题设. 故选 D.
+\end{solution}
+
 \begin{problem}
 数列 \(\{a_{n}\}\) 的通项 \(a_{n} = n^{2}\left(\cos^{2}\frac{n\pi}{3} - \sin^{2}\frac{n\pi}{3}\right)\)，其前 \(n\) 项和为 \(S_{n}\)，则 \(S_{30}\) 为（\quad）
 
@@ -115,6 +170,20 @@ D
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+由 \(\cos^2t-\sin^2t=\cos2t\)，得 \(a_n=n^2\cos\frac{2n\pi}{3}\). 当 \(n\) 是 \(3\) 的倍数时，\(\cos\frac{2n\pi}{3}=1\)；否则该余弦值为 \(-\frac12\). 因而
+
+\[
+S_{30}=\sum_{k=1}^{10}(3k)^2-\frac12\sum_{\substack{1\leqslant n\leqslant30\\3\nmid n}}n^2
+\]
+
+又
+
+\(\sum_{n=1}^{30}n^2=\frac{30\times31\times61}{6}=9455\)，\(\sum_{k=1}^{10}(3k)^2=9\times385=3465\).
+
+所以非 \(3\) 的倍数的平方和为 \(9455-3465=5990\)，从而 \(S_{30}=3465-\frac12\times5990=470\). 故选 A.
+\end{solution}
 
 \begin{problem}
 如图，正四面体 \(ABCD\) 的顶点 \(A\)，\(B\)，\(C\) 分别在两两垂直的三条射线 \(Ox\)，\(Oy\)，\(Oz\) 上，则在下列命题中，错误的为（\quad）
@@ -132,6 +201,20 @@ A
 B
 \end{answer}
 
+\begin{solution}
+设 \(OA=OB=OC=r\). 这是因为 \(AB=AC=BC\)，而三条射线两两垂直，例如 \(AB^2=OA^2+OB^2\)，其余两式同理. 按图取 \(A=(r,0,0)\)，\(B=(0,r,0)\)，\(C=(0,0,r)\)，\(D=(r,r,r)\).
+
+三角形 \(ABC\) 的三边都为 \(\sqrt2r\)，且点 \(O\) 在平面 \(ABC\) 上的射影为该正三角形的中心，所以 \(O-ABC\) 是正三棱锥. 平面 \(ACD\) 内的两个方向向量可取 \(\overrightarrow{AC}=(-r,0,r)\) 和 \(\overrightarrow{AD}=(0,r,r)\)，其法向量可取 \(\bs{n}=(1,-1,1)\). 因为 \(\overrightarrow{OB}=(0,r,0)\) 与 \(\bs{n}\) 的内积不为零，所以 \(OB\) 不平行于平面 \(ACD\)，命题 B 错误.
+
+又 \(\overrightarrow{AD}=(0,r,r)\)，故
+
+\[
+\cos\angle(AD,OB)=\frac{r^2}{\sqrt2r\times r}=\frac1{\sqrt2}
+\]
+
+所以直线 \(AD\) 与 \(OB\) 所成的角为 \(45^\circ\). 平面 \(AOB\) 的方程为 \(z=0\)，平面 \(DOB\) 的方程为 \(x-z=0\)，两平面的法向量夹角为 \(45^\circ\)，故二面角 \(D-OB-A\) 也为 \(45^\circ\). 因此错误的命题为 B.
+\end{solution}
+
 \begin{problem}
 为了庆祝六一儿童节，某食品厂制作了 \(3\text{ 种}\) 不同的精美卡片，每袋食品随机装入一张卡片，集齐 \(3\text{ 种}\) 卡片可获奖，现购买该种食品 \(5\text{ 袋}\)，能获奖的概率为（\quad）
 
@@ -145,6 +228,17 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+5 袋食品的卡片共有 \(3^5\) 种等可能结果. 设事件 \(E\) 为三种卡片均至少出现一次. 用容斥原理，缺少一种卡片的结果有 \(\mathrm C_3^1 2^5\) 种，缺少两种卡片的结果有 \(\mathrm C_3^2 1^5\) 种，所以
+
+\[
+P(E)=\frac{3^5-\mathrm C_3^1 2^5+\mathrm C_3^2 1^5}{3^5}
+=\frac{243-96+3}{243}=\frac{50}{81}
+\]
+
+故选 D.
+\end{solution}
 
 \begin{problem}
 一个平面封闭区域内任意两点距离的最大值称为该区域的“直径”，封闭区域边界曲线的长度与区域直径之比称为区域的“周率”，下面四个平面区域（阴影部分）的周率从左到右依次记为 \(\tau_{1}\)，\(\tau_{2}\)，\(\tau_{3}\)，\(\tau_{4}\)，则下列关系正确的为（\quad）
@@ -162,6 +256,30 @@ D
 C
 \end{answer}
 
+\begin{solution}
+记每个小正方形的边长为 \(l\). 第一图由五个小正方形组成，按图逐段相加可得边界长度为 \(12l\)；其左下角与右上角两点的横、纵坐标差均为 \(3l\)，且这两点是区域内最远的两点，所以直径为 \(3\sqrt{2}l\). 因而
+
+\[
+\tau_1=\frac{12l}{3\sqrt{2}l}=2\sqrt{2}
+\]
+
+第二图的边界由两个半径相同的半圆弧组成，弧长之和为相应圆的周长，区域直径为该圆的直径，因此 \(\tau_2=\pi\). 第三图由两个边长为 \(l\) 的正三角形沿一个顶点拼成，边界长度为 \(6l\)，最远两点间的距离为 \(2l\)，所以 \(\tau_3=3\).
+
+第四图可看作在边长为 \(l\) 的正六边形每条边外各接一个边长为 \(l\) 的正三角形. 星形边界有 \(12\) 条长为 \(l\) 的边，两个相对外尖点的距离为 \(2\sqrt3l\)，故
+
+\[
+\tau_4=\frac{12l}{2\sqrt3l}=2\sqrt3
+\]
+
+因为 \(2\sqrt3>\pi>3>2\sqrt2\)，所以
+
+\[
+\tau_4>\tau_2>\tau_3>\tau_1
+\]
+
+因此只有选项 C 正确.
+\end{solution}
+
 \begin{problem}
 设函数 \( f(x) = \sqrt{ax^2 + bx + c}\) （\(a < 0\)） 的定义域为 \(D\)，若所有点 \( (s, f(t))\) （\(s\)，\(t \in D\)） 构成一个正方形区域，则 \( a \) 的值为（\quad）
 
@@ -176,6 +294,18 @@ C
 B
 \end{answer}
 
+\begin{solution}
+令 \(q(x)=ax^2+bx+c\). 因为 \(a<0\)，且定义域对应 \(q(x)\geqslant0\)，设 \(q\) 的最大值为 \(H>0\)，则可写成 \(q(x)=-\alpha(x-h)^2+H\)，其中 \(\alpha=-a>0\). 因此
+
+\(D=\left[h-\sqrt{\frac H\alpha},h+\sqrt{\frac H\alpha}\right]\)，\(|D|=2\sqrt{\frac H\alpha}\).
+
+函数值域为 \([0,\sqrt H]\). 所有点 \( (s,f(t)) \) 构成的区域是 \(D\times[0,\sqrt H]\)，其横向边长为 \(2\sqrt{H/\alpha}\)，纵向边长为 \(\sqrt H\). 该区域为正方形，所以
+
+\(2\sqrt{\frac H\alpha}=\sqrt H\)，\(\frac4\alpha=1\)，\(\alpha=4\).
+
+故 \(a=-\alpha=-4\)，选 B.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -186,6 +316,16 @@ B
 \(5\)
 \end{answer}
 
+\begin{solution}
+由 \(\bs{a}-\bs{c}=(3-k,-6)\)，而 \(\bs{b}=(1,3)\)，两向量平行当且仅当对应坐标的行列式为零，即
+
+\[
+\begin{vmatrix}3-k&-6\\1&3\end{vmatrix}=3(3-k)+6=0
+\]
+
+解得 \(k=5\).
+\end{solution}
+
 \begin{problem}
 正三棱柱 \(ABC - A_{1}B_{1}C_{1}\) 内接于半径为 \(2\) 的球，若 \(A\)，\(B\) 两点的球面距离为 \(\pi\)，则正三棱柱的体积为\fillinblank{}.
 \end{problem}
@@ -194,6 +334,24 @@ B
 \(8\)
 \end{answer}
 
+\begin{solution}
+设球心为 \(O\)，上下底面中心的连线为轴，设正三棱柱底面外接圆半径为 \(r\)，高为 \(h\). 设下底面中心为 \(O_1\)，则 \(OO_1\perp\) 底面，且 \(OA=OB=2\). 球面距离 \(AB=\pi\) 意味着圆心角 \(\angle AOB=\frac\pi2\)，由余弦定理得
+
+\[
+AB^2=OA^2+OB^2-2OA\cdot OB\cos\frac\pi2=8
+\]
+
+底面 \(ABC\) 是正三角形，所以 \(r=\frac{AB}{\sqrt3}=2\sqrt{\frac23}\). 在直角三角形 \(OO_1A\) 中，
+
+\(OO_1=\sqrt{4-r^2}=\sqrt{\frac43}=\frac2{\sqrt3}\)，\(h=2OO_1=\frac4{\sqrt3}\).
+
+底面面积为 \(\frac{\sqrt3}{4}AB^2=2\sqrt3\)，因此正三棱柱的体积为
+
+\[
+V=2\sqrt3\times\frac4{\sqrt3}=8
+\]
+\end{solution}
+
 \begin{problem}
 若不等式 \(\sqrt{9 - x^2} \leqslant k(x + 2) - \sqrt{2}\) 的解集为区间 \([a, b]\)，且 \(b - a = 2\)，则 \(k = \)\fillinblank{}.
 \end{problem}
@@ -201,6 +359,37 @@ B
 \begin{answer}
 \(\sqrt{2}\)
 \end{answer}
+
+\begin{solution}
+根式要求 \(-3\leqslant x\leqslant3\)，且右端必须非负. 若 \(k=0\)，右端恒为 \(-\sqrt2\)，无解. 若 \(k<0\)，右端非负要求
+
+\[
+x\leqslant x_0=\frac{\sqrt2}{k}-2<-2
+\]
+
+若 \(x_0<-3\)，则无解；若 \(-3\leqslant x_0<-2\)，所有解都包含在 \([-3,x_0]\) 内，该区间长度小于 \(1\)，不可能等于 \(b-a=2\). 因而 \(k>0\).
+
+此时右端 \(k(x+2)-\sqrt2\) 随 \(x\) 增大而增大. 若 \(x_0=\frac{\sqrt2}{k}-2>3\)，则无解；所以由题设解集非空可知 \(x_0\leqslant3\)，从而 \(x=3\) 满足原不等式. 因为解集是区间 \([a,b]\)，故 \(b=3\)，再由 \(b-a=2\) 得 \(a=1\).
+
+在右端非负的范围内平方，得
+
+\[
+9-x^2\leqslant\left(k(x+2)-\sqrt2\right)^2
+\]
+
+由于 \(x=1\) 是解集的左端点，且若右端在 \(x=1\) 处为零则原不等式左边为 \(2\sqrt2>0\)，不可能成立，所以在 \(x=1\) 处两边相等：
+
+\(\sqrt{9-1}=k(1+2)-\sqrt2\)，\(2\sqrt2=3k-\sqrt2\)
+
+所以 \(k=\sqrt2\). 反向验证：当 \(k=\sqrt2\) 时，右端为 \(\sqrt2(x+1)\)，故必须 \(x\geqslant-1\)，平方后得
+
+\[
+9-x^2\leqslant2(x+1)^2
+\Longleftrightarrow (3x+7)(x-1)\geqslant0
+\]
+
+与 \([-1,3]\) 取交集，解集恰为 \([1,3]\)，长度为 \(2\). 所以填 \(\sqrt2\).
+\end{solution}
 
 \begin{problem}
 设直线系 \(M: x \cos \theta + (y - 2) \sin \theta = 1\)（\(0 \leqslant \theta \leqslant 2\pi\)），对于下列四个命题：
@@ -223,11 +412,11 @@ BC
 令圆心为 \(O_{1}=(0,2)\)，则直线系中的直线可写为
 \(\overrightarrow{O_{1}X}\cdot(\cos\theta,\sin\theta)=1\)，所以 \(M\) 中的所有直线都是圆 \(x^{2}+(y-2)^{2}=1\) 的切线.
 
-取 \(\theta=0\) 和 \(\theta=\pi\)，所得两条直线分别为 \(x=1\) 和 \(x=-1\)，它们平行，因此所有直线不可能经过同一个定点，命题 \(\circled{1}\) 错误. 圆心 \(O_{1}\) 到 \(M\) 中任一直线的距离为 \(1\)，且 \(O_{1}\) 不在这些直线上，所以命题 \(\circled{2}\) 正确.
+取 \(\theta=0\) 和 \(\theta=\pi\)，所得两条直线分别为 \(x=1\) 和 \(x=-1\)，它们平行，因此所有直线不可能经过同一个定点，第一个命题错误. 圆心 \(O_{1}\) 到 \(M\) 中任一直线的距离为 \(1\)，且 \(O_{1}\) 不在这些直线上，所以第二个命题正确.
 
-对任意整数 \(n\geqslant3\)，取 \(n\) 条法向量方向依次相差 \(\frac{2\pi}{n}\) 的切线，即取 \(\theta_{j}=\theta_{0}+\frac{2j\pi}{n}\)（\(j=0,1,\ldots,n-1\)）. 这些切线围成一个以该圆为内切圆的正 \(n\) 边形，所以命题 \(\circled{3}\) 正确.
+对任意整数 \(n\geqslant3\)，取 \(n\) 条法向量方向依次相差 \(\frac{2\pi}{n}\) 的切线，即取 \(\theta_{j}=\theta_{0}+\frac{2j\pi}{n}\)（\(j=0\)，\(1\)，\(\ldots\)，\(n-1\)）. 这些切线围成一个以该圆为内切圆的正 \(n\) 边形，所以第三个命题正确.
 
-命题 \(\circled{4}\) 错误. 例如，取 \(\theta=0,\frac{2\pi}{3},\frac{4\pi}{3}\)，三条直线围成的正三角形边长为 \(2\sqrt{3}\)，面积为 \(3\sqrt{3}\). 取 \(\theta=0,\frac{\pi}{3},\frac{2\pi}{3}\)，三条直线也围成正三角形，但其边长为 \(\frac{2}{\sqrt{3}}\)，面积为 \(\frac{\sqrt{3}}{3}\). 两个面积不相等，所以真命题的代号为 \(BC\).
+第四个命题错误. 例如，取 \(\theta=0\)，\(\frac{2\pi}{3}\)，\(\frac{4\pi}{3}\)，三条直线围成的正三角形边长为 \(2\sqrt{3}\)，面积为 \(3\sqrt{3}\). 取 \(\theta=0\)，\(\frac{\pi}{3}\)，\(\frac{2\pi}{3}\)，三条直线也围成正三角形，但其边长为 \(\frac{2}{\sqrt{3}}\)，面积为 \(\frac{\sqrt{3}}{3}\). 两个面积不相等，所以真命题的代号为 BC.
 \end{solution}
 
 \section{解答题}
@@ -277,14 +466,12 @@ f'(x)+k(1-x)f(x)=\frac{\e^{x}(x-1)}{x^{2}}+k(1-x)\frac{\e^{x}}{x}
 \end{problem}
 
 \begin{solution}
-设第 \(i\) 位大学生获得的“支持”次数为 \(X_{i}\)（\(i=1,2,3\)）. 对每位大学生，两个专家的评审结果相互独立，故 \(P(X_{i}=0)=\frac14\)，\(P(X_{i}=1)=\frac12\)，\(P(X_{i}=2)=\frac14\).
+设第 \(i\) 位大学生获得的“支持”次数为 \(X_{i}\)（\(i=1\)，\(2\)，\(3\)）. 对每位大学生，两个专家的评审结果相互独立，故 \(P(X_{i}=0)=\frac14\)，\(P(X_{i}=1)=\frac12\)，\(P(X_{i}=2)=\frac14\).
 
 \begin{enumerate}
 \item
-每获得一次“支持”对应 \(5\) 万元资助，所以公司的资助总额满足 \(\xi=5(X_{1}+X_{2}+X_{3})\). 六次评审相互独立，令 \(K=X_{1}+X_{2}+X_{3}\)，则 \(K\) 服从参数为 \(6\)，\(\frac12\) 的二项分布. 因而
-\[
-P(\xi=5j)=P(K=j)=\mathrm C_{6}^{j}\left(\frac12\right)^{6}=\frac{\mathrm C_{6}^{j}}{64},\qquad j=0,1,\ldots,6
-\]
+以下表中金额的数值单位均为万元. 每获得一次“支持”对应 \(5\) 万元资助，所以公司的资助总额满足 \(\xi=5(X_{1}+X_{2}+X_{3})\). 六次评审相互独立，令 \(K=X_{1}+X_{2}+X_{3}\)，则 \(K\) 服从参数为 \(6\)，\(\frac12\) 的二项分布. 因而
+\(P(\xi=5j)=P(K=j)=\mathrm C_{6}^{j}\left(\frac12\right)^{6}=\frac{\mathrm C_{6}^{j}}{64}\)，\(j=0\)，\(1\)，\(\ldots\)，\(6\)
 \begin{center}
 \begin{tabular}{c|ccccccc}
 \(\xi\) & \(0\) & \(5\) & \(10\) & \(15\) & \(20\) & \(25\) & \(30\) \\
@@ -296,7 +483,7 @@ P(\xi=5j)=P(K=j)=\mathrm C_{6}^{j}\left(\frac12\right)^{6}=\frac{\mathrm C_{6}^{
 \item
 因此
 \[
-E(\xi)=5E(K)=5\times6\times\frac12=15
+E(\xi)=5E(K)=5\times6\times\frac12=15\text{ 万元}
 \]
 \end{enumerate}
 \end{solution}
@@ -327,10 +514,7 @@ E(\xi)=5E(K)=5\times6\times\frac12=15
 所以 \(3t^{2}=1\)，即 \(t=\frac1{\sqrt3}\)，故 \(C=\frac\pi3\).
 
 又由已知 \(\sin(B-A)=\cos C=\frac12\). 因为 \(\lvert B-A\rvert<A+B=\frac{2\pi}{3}\)，在此范围内只能有 \(B-A=\frac\pi6\). 因此
-\[
-A=\frac{(A+B)-(B-A)}2=\frac\pi4,\qquad
-B=\frac{(A+B)+(B-A)}2=\frac{5\pi}{12}
-\]
+\(A=\frac{(A+B)-(B-A)}2=\frac\pi4\)，\(B=\frac{(A+B)+(B-A)}2=\frac{5\pi}{12}\)
 
 \item
 设三角形外接圆半径为 \(R\). 由正弦定理，\(a=2R\sin A=\sqrt2R\)，\(c=2R\sin C=\sqrt3R\).
@@ -341,9 +525,7 @@ S_{\triangle ABC}=\frac12ac\sin B
 =\frac{3+\sqrt3}{4}R^{2}
 \]
 由题设面积为 \(3+\sqrt3\)，得 \(R^{2}=4\)，所以 \(R=2\). 因此
-\[
-a=2\sqrt2,\qquad c=2\sqrt3
-\]
+\(a=2\sqrt2\)，\(c=2\sqrt3\)
 \end{enumerate}
 \end{solution}
 
@@ -527,13 +709,9 @@ a_{n}=\frac{1+u_{n}}{1-u_{n}}
 题设条件因此等价于：当 \(m+n=p+q\) 时，\(u_{m}u_{n}=u_{p}u_{q}\).
 
 先取 \((m,n)=(1,n+1)\) 和 \((p,q)=(2,n)\)，得到
-\[
-u_{1}u_{n+1}=u_{2}u_{n}\qquad(n=1,2,\ldots).
-\]
+\(u_{1}u_{n+1}=u_{2}u_{n}\)，\((n=1,2,\ldots)\).
 若 \(u_{1}\neq0\)，令 \(r=\frac{u_{2}}{u_{1}}\)，则
-\[
-u_{n+1}=ru_{n},\qquad u_{n}=u_{1}r^{n-1}.
-\]
+\(u_{n+1}=ru_{n}\)，\(u_{n}=u_{1}r^{n-1}\).
 \begin{enumerate}
 \item
 当 \(a=\frac12\)，\(b=\frac45\) 时，
@@ -561,7 +739,7 @@ u_{1}u_{2n-1}=u_{n}^{2}
 \[
 \frac{1-\lvert u_{1}\rvert}{1+\lvert u_{1}\rvert}
 \leqslant a_{n}\leqslant
-\frac{1+\lvert u_{1}\rvert}{1-\lvert u_{1}\rvert}.
+\frac{1+\lvert u_{1}\rvert}{1-\lvert u_{1}\rvert}
 \]
 又
 \[
@@ -571,12 +749,12 @@ u_{1}u_{2n-1}=u_{n}^{2}
 a,&a\geqslant1,\\
 \frac1a,&0<a<1,
 \end{cases}
-=\max\left\{a,\frac1a\right\}.
+=\max\left\{a,\frac1a\right\}
 \]
 取
 \(\lambda=\max\left\{a,\frac1a\right\}\)，则对每个正整数 \(n\) 都有
 \[
-\frac1\lambda\leqslant a_{n}\leqslant\lambda.
+\frac1\lambda\leqslant a_{n}\leqslant\lambda
 \]
 这也包含 \(a=1\) 时的情形.
 \end{enumerate}

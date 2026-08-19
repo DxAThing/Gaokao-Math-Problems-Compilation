@@ -29,6 +29,17 @@
 \(\{0\}\)，\(\R\)，\(x>0\)，\(\R\).
 \end{answer}
 
+\begin{solution}
+逐行考察使函数有意义所需的条件：
+
+\begin{enumerate}
+\item 根式要求 \(-x^2\geqslant 0\)，即 \(x^2\leqslant 0\)，所以 \(x=0\)，定义域为 \(\{0\}\).
+\item 因为 \((-x)^2\geqslant 0\) 对任意实数 \(x\) 都成立，所以定义域为 \(\R\).
+\item 对数 \(\lg x\) 要求 \(x>0\)，而 \(10^{\lg x}\) 对每个这样的 \(x\) 都有意义，所以定义域为 \((0,+\infty)\).
+\item 对任意实数 \(x\)，都有 \(10^x>0\)，因此 \(\lg 10^x\) 对任意实数 \(x\) 都有意义，定义域为 \(\R\).
+\end{enumerate}
+\end{solution}
+
 \section{解答题}
 
 \begin{problem}
@@ -37,7 +48,15 @@
 \end{problem}
 
 \begin{solution}
-\(-38760\).
+二项式展开式的第 \(r+1\) 项为：
+\[
+T_{r+1}=\mathrm C_{20}^{r}(-1)^{20-r}\i^r
+\]
+第 \(15\) 项对应 \(r=14\)，故：
+\[
+T_{15}=\mathrm C_{20}^{14}(-1)^6\i^{14}=\mathrm C_{20}^{14}\i^{12}\i^2=-\mathrm C_{20}^{14}=-\mathrm C_{20}^{6}=-38760
+\]
+所以第 \(15\) 项的数值为 \(-38760\).
 \end{solution}
 
 \begin{problem}
@@ -67,8 +86,12 @@
 
 \begin{solution}
 \begin{enumerate}
-\item 椭圆；
-\item 直线.
+\item 将方程化为：
+\[
+ x^2+\frac{y^2}{4}=1
+\]
+这是中心在原点、长半轴为 \(2\) 且沿 \(y\) 轴、短半轴为 \(1\) 且沿 \(x\) 轴的椭圆. 它与坐标轴的交点为 \((\pm1,0)\) 和 \((0,\pm2)\)，取这四点并顺次作关于两坐标轴对称的椭圆，即得所求图形.
+\item 方程等价于 \(x=3\)，所以它表示一条经过点 \((3,0)\) 且平行于 \(y\) 轴的直线. 作出 \(x=3\) 即得所求图形.
 \end{enumerate}
 \end{solution}
 
@@ -78,7 +101,23 @@
 \end{problem}
 
 \begin{solution}
-\(\pm\frac{\sqrt{7}}{4}\).
+由 \(x-y=\frac12\) 得：
+\[
+ (x-y)^2=x^2-2xy+y^2=\frac14
+\]
+结合 \(x^2+y^2=1\)，可得：
+\[
+ 2xy=1-\frac14=\frac34
+\]
+于是：
+\[
+ (x+y)^2=x^2+2xy+y^2=1+\frac34=\frac74
+\]
+所以 \(x+y=\pm\frac{\sqrt7}{2}\). 因而：
+\[
+ x^2-y^2=(x-y)(x+y)=\frac12\left(\pm\frac{\sqrt7}{2}\right)=\pm\frac{\sqrt7}{4}
+\]
+两种符号分别对应实数解 \(\displaystyle (x,y)=\left(\frac{1\pm\sqrt7}{4},\frac{\pm\sqrt7-1}{4}\right)\)，其中两个 \(\pm\) 取同号，因此两个值都能取到.
 \end{solution}
 
 \begin{problem}
@@ -90,7 +129,13 @@
 \end{problem}
 
 \begin{solution}
-宽为 \(\frac{L}{6}\)，长为 \(\frac{L}{2}\) 时，最大面积为 \(\frac{L^2}{12}\).
+设垂直于墙的宽为 \(x\)，则两条侧边和中间隔栏共需 \(3x\) 的篱笆，沿墙方向的长为 \(L-3x\). 因为长、宽均为正数，所以 \(0<x<\frac{L}{3}\).
+
+场地面积为：
+\[
+ S=x(L-3x)=-3\left(x-\frac{L}{6}\right)^2+\frac{L^2}{12}
+\]
+因此当且仅当 \(x=\frac{L}{6}\) 时面积最大. 此时场地的长为 \(L-3x=L-3\cdot\frac{L}{6}=\frac{L}{2}\)，最大面积为 \(\frac{L^2}{12}\).
 \end{solution}
 
 \begin{problem}
@@ -105,8 +150,22 @@
 
 \begin{solution}
 \begin{enumerate}
-\item \(\frac{5}{6}a^3\)；
-\item \(60^\circ\).
+\item 取坐标 \(A=(0,0,0)\)、\(B=(a,0,0)\)、\(C=(a,a,0)\)、\(D=(0,a,0)\)，以及 \(A_1=(0,0,a)\)、\(B_1=(a,0,a)\)、\(C_1=(a,a,a)\)、\(D_1=(0,a,a)\).
+由 \(\overrightarrow{A_1B}=(a,0,-a)\) 和 \(\overrightarrow{A_1C_1}=(a,a,0)\) 的叉积可取平面法向量 \((1,-1,1)\)，所以平面 \(A_1BC_1\) 的方程为 \(x-y+z=a\). 代入 \(B_1\) 得左端为 \(2a>a\)，而 \(A\)，\(C\)，\(D\)，\(D_1\) 代入得值均小于 \(a\)，因此截去的部分是四面体 \(B_1A_1BC_1\). 从 \(B_1\) 出发的三条棱向量可取为 \(\overrightarrow{B_1A_1}=(-a,0,0)\)、\(\overrightarrow{B_1B}=(0,0,-a)\)、\(\overrightarrow{B_1C_1}=(0,a,0)\).
+所以截去部分的体积为：
+\[
+ V_{\mathrm{cut}}=\frac16\left|\begin{vmatrix}-a&0&0\\0&0&-a\\0&a&0\end{vmatrix}\right|=\frac{a^3}{6}
+\]
+正方体体积为 \(a^3\)，故剩余部分的体积为：
+\[
+ V=a^3-\frac{a^3}{6}=\frac56a^3
+\]
+\item 取直线 \(A_1B\) 和 \(B_1C\) 的方向向量分别为 \(\overrightarrow{A_1B}=(a,0,-a)\) 和 \(\overrightarrow{B_1C}=(0,a,-a)\).
+它们的内积为 \(a^2\)，两向量的长度均为 \(a\sqrt2\). 设两直线所成的锐角为 \(\varphi\)，则：
+\[
+ \cos\varphi=\frac{|a^2|}{a\sqrt2\cdot a\sqrt2}=\frac12
+\]
+由于 \(0^\circ\leqslant\varphi\leqslant90^\circ\)，得 \(\varphi=60^\circ\).
 \end{enumerate}
 \end{solution}
 
@@ -116,8 +175,29 @@
 \end{problem}
 
 \begin{solution}
-取 \(AB\) 所在直线为横轴，从 \(A\) 到 \(B\) 为正方向，以 \(AB\) 中点为原点，则轨迹方程为
-\(3x^2-10ax+3y^2+3a^2=0\)，表示圆.
+取 \(AB\) 所在直线为横轴，从 \(A\) 到 \(B\) 为正方向，以 \(AB\) 中点为原点，纵轴取为过原点且垂直于 \(AB\) 的直线. 于是
+\(A=(-a,0)\)、\(B=(a,0)\).
+设动点 \(P=(x,y)\)，由于比值有定义，\(P\neq B\). 由题意：
+\[
+ \frac{PA}{PB}=2
+\]
+即：
+\[
+ \frac{\sqrt{(x+a)^2+y^2}}{\sqrt{(x-a)^2+y^2}}=2
+\]
+两边均为非负数，平方得：
+\[
+ (x+a)^2+y^2=4\left((x-a)^2+y^2\right)
+\]
+展开并移项，得到轨迹方程：
+\[
+ 3x^2-10ax+3y^2+3a^2=0
+\]
+配方可得：
+\[
+ \left(x-\frac{5a}{3}\right)^2+y^2=\left(\frac{4a}{3}\right)^2
+\]
+所以轨迹是圆心为 \(\left(\frac{5a}{3},0\right)\)、半径为 \(\frac{4a}{3}\) 的圆.
 \end{solution}
 
 \begin{problem}
@@ -126,7 +206,25 @@
 \end{problem}
 
 \begin{solution}
-\(4\).
+利用诱导公式，\(\cot117^\circ=-\tan27^\circ\)、\(\tan243^\circ=\tan63^\circ\)、\(\cot351^\circ=-\cot9^\circ\).
+又因为 \(\tan63^\circ=\cot27^\circ\)，所以原式为：
+\[
+ \tan9^\circ+\cot9^\circ-\tan27^\circ-\cot27^\circ
+\]
+对任意使式子有意义的角 \(\alpha\)，有：
+\[
+ \tan\alpha+\cot\alpha=\frac{1}{\sin\alpha\cos\alpha}=\frac{2}{\sin2\alpha}
+\]
+故原式：
+\[
+ =\frac{2}{\sin18^\circ}-\frac{2}{\sin54^\circ}
+ =2\cdot\frac{\sin54^\circ-\sin18^\circ}{\sin18^\circ\sin54^\circ}
+\]
+又因为：
+\[
+ \sin54^\circ-\sin18^\circ=2\cos36^\circ\sin18^\circ=2\sin54^\circ\sin18^\circ
+\]
+所以原式等于 \(2\cdot2=4\).
 \end{solution}
 
 \begin{problem}
@@ -137,5 +235,21 @@
 \end{problem}
 
 \begin{solution}
-\(\displaystyle\frac{a^2b\sin\theta}{2\left(a+b\cos\theta\right)}\).
+令 \(A_0=A\)，\(B_0=B\)，并令 \(S_{n+1}\) 表示三角形 \(A_nB_nB_{n+1}\) 的面积. 由 \(AB_1\perp OB\)，有 \(AB_1=b\sin\theta\)、\(OB_1=b\cos\theta\)，从而 \(BB_1=a-b\cos\theta\)、\(S_1=\frac12b\sin\theta\left(a-b\cos\theta\right)\).
+
+由每次作出的平行线，三角形 \(OA_nB_n\) 与三角形 \(OAB\) 相似，所以 \(\frac{OA_n}{OB_n}=\frac{b}{a}\). 设 \(r=\frac{b}{a}\cos\theta\).
+在三角形 \(OA_nB_n\) 中，\(B_{n+1}\) 是 \(A_n\) 在 \(OB\) 上的垂足，所以 \(OB_{n+1}=OA_n\cos\theta=r\,OB_n\).
+因此相邻两个相似三角形的对应边长之比为 \(r\)，即 \(\frac{A_nB_n}{A_{n-1}B_{n-1}}=r\).
+同时，三角形 \(A_nB_nB_{n+1}\) 与三角形 \(A_{n-1}B_{n-1}B_n\) 的对应高和对应底边都按比例 \(r\) 缩小，所以 \(\frac{S_{n+1}}{S_n}=r^2=\left(\frac{b}{a}\cos\theta\right)^2\).
+因为 \(a\geqslant b>0\)，且 \(\theta\) 为锐角，所以 \(0<r<1\)，并且 \(a-b\cos\theta>0\)，面积数列是无穷等比数列. 于是：
+\[
+\sum_{n=1}^{\infty}S_n=\frac{S_1}{1-r^2}
+=\frac{\frac12b\sin\theta\left(a-b\cos\theta\right)}{1-\frac{b^2}{a^2}\cos^2\theta}
+\]
+又因为：
+\[
+\sum_{n=1}^{\infty}S_n
+=\frac{\frac12b\sin\theta\left(a-b\cos\theta\right)}{\frac{\left(a-b\cos\theta\right)\left(a+b\cos\theta\right)}{a^2}}
+=\frac{a^2b\sin\theta}{2\left(a+b\cos\theta\right)}
+\]
 \end{solution}

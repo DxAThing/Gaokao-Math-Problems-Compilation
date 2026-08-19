@@ -320,13 +320,6 @@
         {\captionof*{figure}{\tl_use:N \l__bitmap_solution_caption_tl}}
         {\captionof{figure}{}}
 }
-\NewDocumentCommand{\bitmapcaptiontext}{m}
-{
-    \bitmappreparecaption{#1}
-    \bool_if:NTF \l__bitmap_solution_caption_bool
-        {\tl_use:N \l__bitmap_solution_caption_tl}
-        {第\theprobnum 题图}
-}
 \ExplSyntaxOff
 
 \makeatletter
@@ -343,8 +336,8 @@
         \csname bitmaptrim@\detokenize{#1}\endcsname
         {#2}%
 }
-\InputIfFileExists{layout/generated_image_layout.tex}{}{}
-\InputIfFileExists{layout/manual_image_layout.tex}{}{}
+\InputIfFileExists{tools/typeset/generated_image_layout.tex}{}{}
+\InputIfFileExists{tools/crop/manual_image_layout.tex}{}{}
 
 \newcommand{\bitmapinclude}[2][]{%
     \begingroup
@@ -947,21 +940,6 @@
         (axis cs:#2,#3) -- ([xshift=#1]axis cs:#2,#3);
     \node[anchor=east,inner sep=1pt,font=\normalsize]
         at ([xshift=#1]axis cs:#2,#3) {#4};
-}
-
-\NewDocumentCommand{\bitmapinlinefigure}{O{0.42\linewidth} O{} m}
-{%
-    \begingroup
-    \bitmappreparecaption{#3}%
-    \makebox[#1][c]{%
-        \vtop{%
-            \hsize=#1\relax
-            \centering
-            \bitmapinclude[#2]{#3}\par
-            \small \bitmapcaptiontext{#3}\par
-        }%
-    }%
-    \endgroup
 }
 
 % 列表与枚举
@@ -1755,11 +1733,6 @@
 % ==============================================================================
 % 5.1 解析区行间公式归一化宏
 % ==============================================================================
-\NewDocumentCommand{\examdisplaymath}{+m}{%
-    \[
-    #1
-    \]
-}
 \NewDocumentCommand{\examdisplayaligned}{o +m}{%
     \[
     \IfValueTF{#1}{\begin{aligned}[#1]}{\begin{aligned}}

@@ -21,6 +21,17 @@
 D
 \end{answer}
 
+\begin{solution}
+由图可读出点 \(Z\) 的坐标为 \((3,1)\)，所以 \(z=3+\i\).于是
+\[
+\frac{z}{1+\i}
+=\frac{(3+\i)(1-\i)}{(1+\i)(1-\i)}
+=\frac{4-2\i}{2}
+=2-\i
+\]
+复数 \(2-\i\) 对应复平面内横坐标为 \(2\)、纵坐标为 \(-1\) 的点，即图中的 \(H\)，故选 D.
+\end{solution}
+
 \begin{problem}
 设集合 \(A = \left\{(x, y) \mid \frac{x^2}{4} + \frac{y^2}{16} = 1\right\}\)，\(B = \{(x, y) \mid y = 3^x\}\)，则 \(A \cap B\) 的子集的个数是（\quad）
 
@@ -34,6 +45,26 @@ D
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+因为 \(3^x>0\)，交点只能位于椭圆的上半部分.令
+\[
+\phi(x)=\frac{x^2}{4}+\frac{9^x}{16}
+\]
+交点的横坐标正好是方程 \(\phi(x)=1\) 的根.又
+\[
+\phi''(x)=\frac12+\frac{(\ln9)^2 9^x}{16}>0
+\]
+所以 \(\phi\) 严格凸，方程 \(\phi(x)=1\) 至多有两个根.
+
+另一方面，
+\(\phi(-2)=1+\frac1{144}>1\)，\(\phi(0)=\frac1{16}<1\)，\(\phi(1)=\frac{13}{16}<1\).
+当 \(x=\log_3 4\) 时，\(9^x=16\)，故
+\[
+\phi(\log_3 4)=\frac{(\log_3 4)^2}{4}+1>1
+\]
+由连续性，方程在 \((-2,0)\) 和 \((1,\log_3 4)\) 内各有一个根；结合至多两个根，恰有两个交点.因此 \(A\cap B\) 有两个元素，其子集个数为 \(2^2=4\)，故选 A.
+\end{solution}
 
 \begin{problem}
 在 \(\triangle ABC\) 中，\(a = 15\)，\(b = 10\)，\(A = 60^{\circ}\)，则 \(\cos B =\)（\quad）
@@ -49,6 +80,18 @@ A
 D
 \end{answer}
 
+\begin{solution}
+由正弦定理，
+\(\frac{a}{\sin A}=\frac{b}{\sin B}\)，\(\sin B=\frac{b\sin A}{a} =\frac{10\sin60^\circ}{15} =\frac{\sqrt3}{3}\).
+因 \(a>b\)，所以 \(A>B\)，从而 \(0<B<60^\circ\)，应取正的余弦值.因此
+\[
+\cos B=\sqrt{1-\sin^2B}
+=\sqrt{1-\frac13}
+=\frac{\sqrt6}{3}
+\]
+故选 D.
+\end{solution}
+
 \begin{problem}
 投掷一枚均匀硬币和一枚均匀骰子各一次，记“硬币正面向上”为事件 \(A\)，“骰子向上的点数是 3”为事件 \(B\)，则事件 \(A\)，\(B\) 中至少有一件发生的概率是（\quad）
 
@@ -62,6 +105,22 @@ D
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+事件 \(A\) 与 \(B\) 相互独立，且
+\(P(A)=\frac12\)，\(P(B)=\frac16\).
+用对立事件，
+\[
+\begin{aligned}
+P(A\cup B)
+&=1-P(\overline A\cap\overline B)\\
+&=1-P(\overline A)P(\overline B)\\
+&=1-\frac12\cdot\frac56
+=\frac7{12}.
+\end{aligned}
+\]
+故选 C.
+\end{solution}
 
 \begin{problem}
 已知 \(\triangle ABC\) 和点 \(M\) 满足 \(\overrightarrow{MA} + \overrightarrow{MB} + \overrightarrow{MC} = 0\). 若存在实数 \(m\) 使得 \(\overrightarrow{AB} + \overrightarrow{AC} = m\overrightarrow{AM}\) 成立，则 \(m =\)（\quad）
@@ -77,6 +136,30 @@ C
 B
 \end{answer}
 
+\begin{solution}
+设点 \(A\)，\(B\)，\(C\)，\(M\) 的位置向量分别为
+\(\bs{a}\)，\(\bs{b}\)，\(\bs{c}\)，\(\bs{m}\).由条件
+\[
+(\bs{a}-\bs{m})+(\bs{b}-\bs{m})
++(\bs{c}-\bs{m})=0
+\]
+得
+\[
+\bs{a}+\bs{b}+\bs{c}=3\bs{m}
+\]
+于是
+\[
+\begin{aligned}
+\overrightarrow{AB}+\overrightarrow{AC}
+&=(\bs{b}-\bs{a})+(\bs{c}-\bs{a})\\
+&=\bs{b}+\bs{c}-2\bs{a}\\
+&=3(\bs{m}-\bs{a})
+=3\overrightarrow{AM}.
+\end{aligned}
+\]
+与题设比较得到 \(m=3\)，故选 B.
+\end{solution}
+
 \begin{problem}
 将参加夏令营的 600 名学生编号为：\(001\)、\(002\)，…，\(600\). 采用系统抽样方法抽取一个容量为 50 的样本，且随机抽得的号码为 \(003\). 这 600 名学生分住在三个营区，从 \(001\) 到 \(300\) 在第 \(I\) 营区，从 \(301\) 到 \(495\) 住在第 \(II\) 营区，从 \(496\) 到 \(600\) 住在第 \(III\) 营区. 三个营区被抽中的人数依次为（\quad）
 
@@ -90,6 +173,22 @@ B
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+系统抽样的抽样间隔为
+\[
+\frac{600}{50}=12
+\]
+随机抽到的第一个号码为 \(003\)，所以样本号码为
+\(3\)，\(15\)，\(27\)，\(\ldots\)，\(3+49\times12=591\).
+第 \(I\) 营区中的号码满足 \(3+12j\leqslant300\)，即
+\(j=0\)，\(1\)，\(\ldots\)，\(24\)，共有 \(25\) 人.第 \(II\) 营区中的号码为
+\(303\)，\(315\)，\(\ldots\)，\(495\)
+共有 \(17\) 人；其余
+\(507\)，\(519\)，\(\ldots\)，\(591\)
+在第 \(III\) 营区，共有 \(8\) 人.因此人数依次为
+\((25,17,8)\)，故选 B.
+\end{solution}
 
 \begin{problem}
 如图，在半径为 \(r\) 的圆内作内接正六边形，再作正六边形的内切圆，又在此内切圆内作内接正六边形，如此无限继续下去，设 \( S_{n} \) 为前 \(n\) 个圆的面积之和，则 \( \lim\limits_{n\to\infty}S_{n}= \)（\quad）
@@ -107,6 +206,21 @@ B
 C
 \end{answer}
 
+\begin{solution}
+设第一个圆的半径为 \(r_1=r\)，以后各圆的半径依次为
+\(r_2\)，\(r_3\)，\(\ldots\).正六边形的内切圆半径等于该正六边形外接圆半径的
+\(\cos30^\circ\) 倍，所以
+\(r_{n+1}=\frac{\sqrt3}{2}r_n\)，\(\pi r_{n+1}^2=\frac34\pi r_n^2\).
+因此前 \(n\) 个圆的面积和是等比数列的前 \(n\) 项，首项为
+\(\pi r^2\)，公比为 \(\frac34\).于是
+\[
+\lim_{n\to\infty}S_n
+=\frac{\pi r^2}{1-\frac34}
+=4\pi r^2
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
 现安排甲，乙，丙，丁，戊5名同学参加上海世博会志愿者服务活动，每人从事翻译，导游，礼仪，司机四项工作之一，每项工作至少有一人参加. 甲，乙不会开车但能从事其他三项工作，丙，丁，戊都能胜任四项工作，则不同安排方案的种数是（\quad）
 
@@ -120,6 +234,32 @@ C
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+司机工作只能由丙、丁、戊承担.
+
+若有两人从事司机工作，先从这三人中选出两人，有
+\(\mathrm C_3^2\) 种；剩下三人分别从事另外三项工作，有 \(3!\) 种，共有
+\[
+\mathrm C_3^2\cdot3!=18
+\]
+种.
+
+若只有一人从事司机工作，先选出司机，有 \(\mathrm C_3^1\) 种.剩下四人安排到翻译、导游、礼仪三项工作且每项至少一人，利用容斥原理，安排数为
+\[
+3^4-\mathrm C_3^1 2^4+\mathrm C_3^2 1^4
+=81-48+3=36
+\]
+此时共有
+\[
+\mathrm C_3^1\cdot36=108
+\]
+种.因此总数为
+\[
+18+108=126
+\]
+故选 B.
+\end{solution}
 
 \begin{problem}
 若直线 \( y = x + b \) 与曲线 \( y = 3 - \sqrt{4x - x^2} \) 有公共点，则 \( b \) 的取值范围是（\quad）
@@ -135,6 +275,32 @@ B
 C
 \end{answer}
 
+\begin{solution}
+曲线的定义域为 \(0\leqslant x\leqslant4\).直线与曲线有公共点时，公共点的横坐标 \(x\) 满足
+\[
+b=3-x-\sqrt{4x-x^2}
+\]
+令 \(t=x-2\)，则 \(t\in[-2,2]\)，上式右端化为
+\[
+\psi(t)=1-t-\sqrt{4-t^2}
+\]
+在 \((-2,2)\) 内，
+\[
+\psi'(t)=-1+\frac{t}{\sqrt{4-t^2}}
+\]
+唯一的驻点为 \(t=\sqrt2\)，且函数在此处由减变增，取得最小值
+\[
+\psi(\sqrt2)=1-2\sqrt2
+\]
+端点处
+\(\psi(-2)=3\)，\(\psi(2)=-1\)
+故最大值为 \(3\).由连续性，\(b\) 的取值范围为
+\[
+1-2\sqrt2\leqslant b\leqslant3
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
 记实数 \(x_{1}\)，\(x_{2}\)，\(\cdots\)，\(x_{n}\) 中的最大数为 \(\max \{x_{1}, x_{2}, \cdots, x_{n}\}\)，最小数为 \(\min \{x_{1}, x_{2}, \cdots, x_{n}\}\). 已知 \(\triangle ABC\) 的三边边长为 \(a\)，\(b\)，\(c\)（\(a \leqslant b \leqslant c\)），定义它的倾斜度为 \(t = \max \left\{\frac{a}{b}, \frac{b}{c}, \frac{c}{a}\right\} \cdot \min \left\{\frac{a}{b}, \frac{b}{c}, \frac{c}{a}\right\}\)，则 \(t = 1\) 是 “\(\triangle ABC\) 为等边三角形”的（\quad）
 
@@ -149,6 +315,24 @@ C
 A
 \end{answer}
 
+\begin{solution}
+因为 \(a\leqslant b\leqslant c\)，所以
+\(\frac ca\) 是三个比值中的最大值，而最小值是
+\[
+\min\left\{\frac ab,\frac bc\right\}
+\]
+若 \(a=b=c\)，则三个比值都为 \(1\)，从而 \(t=1\)，所以
+\(t=1\) 是等边三角形的必要条件.
+
+但它不是充分条件.例如取 \(a=b=2\)，\(c=3\)，这三数满足三角形不等式，构成等腰但非等边三角形，且
+\[
+\max\left\{1,\frac23,\frac32\right\}
+\min\left\{1,\frac23,\frac32\right\}
+=\frac32\cdot\frac23=1
+\]
+故 \(t=1\) 必要而不充分，选 A.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -158,6 +342,15 @@ A
 \begin{answer}
 6
 \end{answer}
+
+\begin{solution}
+展开式的通项为
+\(T_{k+1}=\mathrm C_{20}^k x^{20-k}(\sqrt[4]{3}y)^k =\mathrm C_{20}^k3^{k/4}x^{20-k}y^k\)，\(k=0\)，\(1\)，\(\ldots\)，\(20\).
+由于 \(\mathrm C_{20}^k\) 是整数，系数为有理数当且仅当
+\(3^{k/4}\) 为有理数，即 \(k\) 是 \(4\) 的倍数.因此
+\(k=0\)，\(4\)，\(8\)，\(12\)，\(16\)，\(20\)
+共有 \(6\) 项.
+\end{solution}
 
 \begin{problem}
 已知 \(z = 2x - y\)，式中变量 \(x\)，\(y\) 满足约束条件 \(\begin{cases}
@@ -171,6 +364,21 @@ x \leqslant 2,
 5
 \end{answer}
 
+\begin{solution}
+由 \(x+y\geqslant1\) 得 \(y\geqslant1-x\).对于固定的 \(x\)，
+\(z=2x-y\) 随 \(y\) 增大而减小，所以要使 \(z\) 最大，应取最小的允许值
+\(y=1-x\).此时
+\[
+z=2x-(1-x)=3x-1
+\]
+条件 \(y\leqslant x\) 与 \(y=1-x\) 给出 \(x\geqslant\frac12\)，再结合
+\(x\leqslant2\)，可知 \(x\in[\frac12,2]\).故
+\[
+z=3x-1\leqslant3\cdot2-1=5
+\]
+当 \(x=2\)，\(y=-1\) 时，三个约束均满足，且 \(z=5\)，所以最大值为 \(5\).
+\end{solution}
+
 \begin{problem}
 圆柱形容器内部盛有高度为 \(8 \mathrm{~cm}\) 的水，若放入三个相同的球 （球半径与圆柱的底面半径相同） 后，水恰好淹没最上面的球 （如图所示）. 则球的半径是\fillinblank{} \(\mathrm{cm}\).
 \bitmapfigure[max width=0.24\linewidth]{img/2010/hubei_science/q13_fig1.png}
@@ -179,6 +387,18 @@ x \leqslant 2,
 \begin{answer}
 4
 \end{answer}
+
+\begin{solution}
+设球的半径以及圆柱的底面半径均为 \(r\).三个球竖直相切并放在容器底部，最上面球的顶部高度为 \(6r\).水恰好淹没最上面的球，所以放球后水和球共同占据的圆柱部分高度为 \(6r\)，三个球均完全浸没.
+
+由体积守恒，放球前水的体积等于放球后圆柱体积减去三个球的体积，即
+\[
+8\pi r^2
+=6\pi r^3-3\cdot\frac43\pi r^3
+=2\pi r^3
+\]
+因 \(r>0\)，得 \(r=4\)，所以球的半径为 \(4\mathrm{~cm}\).
+\end{solution}
 
 \begin{problem}
 某射手射击所得环数 \(\xi\) 的分布列如下：
@@ -197,6 +417,21 @@ x \leqslant 2,
 0.4
 \end{answer}
 
+\begin{solution}
+由概率和为 \(1\)，得
+\(x+0.1+0.3+y=1\)，\(x+y=0.6\).
+由期望公式，
+\[
+7x+8\times0.1+9\times0.3+10y=8.9
+\]
+即
+\[
+7x+10y=5.4
+\]
+与 \(x=0.6-y\) 联立，得
+\(7(0.6-y)+10y=5.4\)，\(y=0.4\).
+\end{solution}
+
 \begin{problem}
 设 \(a > 0\)，\(b > 0\). 称 \(\frac{2ab}{a + b}\) 为 \(a\)，\(b\) 的调和平均数. 如图，\(C\) 为线段 \(AB\) 上的点，且 \(AC = a\)，\(CB = b\)，\(O\) 为 \(AB\) 中点，以 \(AB\) 为直径做半圆. 过点 \(C\) 作 \(AB\) 的垂线交半圆于 \(D\). 连接 \(OD\)，\(AD\)，\(BD\). 过点 \(C\) 作 \(OD\) 的垂线，垂足为 \(E\). 则图中线段 \(OD\) 的长度是 \(a\)，\(b\) 的算术平均数，线段\fillinblank{} 的长度是 \(a\)，\(b\) 的几何平均数，线段\fillinblank{} 的长度是 \(a\)，\(b\) 的调和平均数.
 
@@ -204,8 +439,36 @@ x \leqslant 2,
 \end{problem}
 
 \begin{answer}
-\(CD\)；\(CE\)
+\(CD\)；\(DE\)
 \end{answer}
+
+\begin{solution}
+设 \(AB=a+b\)，取 \(A\) 为原点，令 \(AB\) 为 \(x\) 轴，则 \(C\) 的横坐标为
+\(a\)，\(O\) 的横坐标为 \(\frac{a+b}{2}\).因为 \(CD\perp AB\)，且 \(D\) 在以
+\(AB\) 为直径的半圆上，由圆的几何性质
+\[
+CD^2=AC\cdot CB=ab
+\]
+所以 \(CD=\sqrt{ab}\)，即为几何平均数.
+
+又因为 \(OD\) 是半圆半径，
+\[
+OD=\frac{AB}{2}=\frac{a+b}{2}
+\]
+即为算术平均数.
+
+在直角三角形 \(OCD\) 中，\(CE\perp OD\)，由射影定理
+\[
+OD\cdot DE=CD^2
+\]
+因此
+\[
+DE=\frac{CD^2}{OD}
+=\frac{ab}{(a+b)/2}
+=\frac{2ab}{a+b}
+\]
+即为调和平均数.故两空依次为 \(CD\)、\(DE\).
+\end{solution}
 
 \section{解答题}
 
@@ -219,7 +482,29 @@ x \leqslant 2,
 \end{problem}
 
 \begin{solution}
-短答案：函数 \(f(x)\) 的最小正周期为 \(\pi\)；\(h(x)\) 的最大值为 \(\frac{\sqrt{2}}{2}\)，取得最大值时 \(x\in\left\{k\pi-\frac{\pi}{8}\mid k\in\Z\right\}\).
+\begin{enumerate}
+\item 由积化和差公式，
+\[
+f(x)=\frac12\left[\cos\left(\frac{2\pi}{3}\right)+\cos2x\right]
+=\frac12\cos2x-\frac14
+\]
+函数 \(\cos2x\) 的最小正周期为 \(\pi\)，乘以非零常数并作常数平移不改变周期，所以 \(f(x)\) 的最小正周期为 \(\pi\).
+
+\item 由上式和 \(g(x)=\frac12\sin2x-\frac14\)，
+\[
+h(x)=f(x)-g(x)
+=\frac12(\cos2x-\sin2x)
+=\frac{\sqrt2}{2}\cos\left(2x+\frac\pi4\right)
+\]
+因此
+\[
+h(x)\leqslant\frac{\sqrt2}{2}
+\]
+最大值为 \(\frac{\sqrt2}{2}\).等号成立当且仅当
+\(2x+\frac\pi4=2k\pi\)，\(k\in\mathbb Z\)
+即
+\(x=k\pi-\frac\pi8\)，\(k\in\mathbb Z\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -232,7 +517,36 @@ x \leqslant 2,
 \end{problem}
 
 \begin{solution}
-短答案：\(k=40\)，\(f(x)=\dfrac{800}{3x+5}+6x\)；隔热层厚 \(5\text{ cm}\) 时总费用最小，最小值为 \(70\) 万元.
+\begin{enumerate}
+\item 不建隔热层时 \(x=0\)，所以
+\[
+C(0)=\frac{k}{5}=8
+\]
+得 \(k=40\).厚度为 \(x\) cm 时，隔热层建造费用为 \(6x\) 万元，\(20\) 年能源消耗费用为
+\[
+20C(x)=\frac{800}{3x+5}
+\]
+故
+\(f(x)=6x+\frac{800}{3x+5}\)，\(0\leqslant x\leqslant10\).
+
+\item 对 \(f(x)\) 求导，得
+\[
+f'(x)=6-\frac{2400}{(3x+5)^2}
+\]
+在给定区间内 \(3x+5>0\)，所以
+\[
+f'(x)=0
+\Longleftrightarrow (3x+5)^2=400
+\Longleftrightarrow x=5
+\]
+当 \(0\leqslant x<5\) 时 \(3x+5<20\)，故 \(f'(x)<0\)；当
+\(5<x\leqslant10\) 时 \(3x+5>20\)，故 \(f'(x)>0\).因此 \(f(x)\) 在
+\([0,5]\) 上递减、在 \([5,10]\) 上递增，最小值在 \(x=5\) 处取得，且
+\[
+f(5)=6\times5+\frac{800}{20}=70
+\]
+所以隔热层厚 \(5\mathrm{~cm}\) 时总费用最小，最小值为 \(70\) 万元.
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -247,7 +561,41 @@ x \leqslant 2,
 \end{problem}
 
 \begin{solution}
-短答案：\(\dfrac{AB}{AQ}=3\)；二面角 \(O-AC-B\) 的平面角余弦值为 \(\dfrac{\sqrt{15}}{5}\).
+建立空间直角坐标系，使 \(O\) 为原点，\(OA\) 在 \(x\) 轴正方向，\(OC\) 在
+\(z\) 轴正方向.由已知可取
+\(A(1,0,0)\)，\(B\left(-\frac12,\frac{\sqrt3}{2},0\right)\)，\(C(0,0,1)\).
+
+\begin{enumerate}
+\item 设 \(Q\) 将线段 \(AB\) 按比例 \(t\) 分割，即
+\(Q=A+t\overrightarrow{AB} =\left(1-\frac32t,\frac{\sqrt3}{2}t,0\right)\)，\(0\leqslant t\leqslant1\).
+点 \(P\) 为 \(AC\) 的中点，所以 \(P(\frac12,0,\frac12)\).于是
+\(\overrightarrow{PQ} =\left(\frac12-\frac32t,\frac{\sqrt3}{2}t,-\frac12\right)\)，\(\overrightarrow{OA}=(1,0,0)\).
+条件 \(PQ\perp OA\) 等价于
+\[
+\overrightarrow{PQ}\cdot\overrightarrow{OA}=0
+\]
+从而
+\(\frac12-\frac32t=0\)，\(t=\frac13\).
+这个 \(t\) 属于 \([0,1]\)，所以确有这样的点 \(Q\) 在 \(AB\) 上.又
+\(AQ=t\,AB\)，故
+\[
+\frac{AB}{AQ}=\frac1t=3
+\]
+
+\item 平面 \(OAC\) 的一个法向量可取
+\(\bs{n}_1=(0,1,0)\).平面 \(ABC\) 的两个方向向量为
+\(\overrightarrow{AB}=\left(-\frac32,\frac{\sqrt3}{2},0\right)\)，\(\overrightarrow{AC}=(-1,0,1)\)
+故其法向量可取
+\(\bs{n}_2=\overrightarrow{AB}\times\overrightarrow{AC} =\left(\frac{\sqrt3}{2},\frac32,\frac{\sqrt3}{2}\right)\)，\(|\bs{n}_2|=\frac{\sqrt{15}}2\).
+二面角的平面角取两平面的锐角，所以其余弦为两法向量夹角余弦的绝对值.于是
+\[
+\cos\theta
+=\frac{|\bs{n}_1\cdot\bs{n}_2|}
+{|\bs{n}_1|\,|\bs{n}_2|}
+=\frac{3/2}{\sqrt{15}/2}
+=\frac{\sqrt{15}}5
+\]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -260,7 +608,63 @@ x \leqslant 2,
 \end{problem}
 
 \begin{solution}
-短答案：曲线 \(C\) 的方程为 \(y^2=4x\)（\(x>0\)）；存在这样的正数 \(m\)，其取值范围为 \(3-\sqrt{5}<m<3+\sqrt{5}\).
+\begin{enumerate}
+\item 设 \(C\) 上任一点为 \(P(x,y)\).因 \(P\) 在 \(y\) 轴右侧，\(x>0\)，且点
+\(P\) 到 \(y\) 轴的距离为 \(x\).由题意，
+\[
+\sqrt{(x-1)^2+y^2}-x=1
+\]
+于是 \(\sqrt{(x-1)^2+y^2}=x+1>0\)，两边平方得
+\((x-1)^2+y^2=(x+1)^2\)，\(y^2=4x\).
+反过来，若 \(x>0\) 且 \(y^2=4x\)，则
+\[
+\sqrt{(x-1)^2+y^2}=\sqrt{(x+1)^2}=x+1
+\]
+满足原条件.因此曲线 \(C\) 的方程为
+\(y^2=4x\)，\(x>0\).
+
+\item 先设直线不垂直于 \(x\) 轴，写成 \(y=k(x-m)\).设它与 \(C\) 的两个交点为
+\(A(x_1,y_1)\)、\(B(x_2,y_2)\)，则
+\[
+k^2(x-m)^2=4x
+\]
+即
+\[
+k^2x^2-(2mk^2+4)x+m^2k^2=0
+\]
+由韦达定理，
+\(x_1+x_2=2m+\frac4{k^2}\)，\(x_1x_2=m^2\).
+又 \(y_i=k(x_i-m)\)，所以
+\[
+y_1y_2=k^2(x_1-m)(x_2-m)=-4m
+\]
+因此
+\[
+\begin{aligned}
+\overrightarrow{FA}\cdot\overrightarrow{FB}
+&=(x_1-1)(x_2-1)+y_1y_2\\
+&=x_1x_2-(x_1+x_2)+1+y_1y_2\\
+&=m^2-6m+1-\frac4{k^2}.
+\end{aligned}
+\]
+若 \(m^2-6m+1<0\)，上式必小于 \(0\)，所以所有这类直线都满足题设不等式.
+
+还需考虑垂直于 \(x\) 轴的直线 \(x=m\).它与 \(C\) 的两个交点为
+\((m,2\sqrt m)\)、\((m,-2\sqrt m)\)，且
+\[
+\overrightarrow{FA}\cdot\overrightarrow{FB}
+=(m-1)^2-4m=m^2-6m+1
+\]
+因此题设的严格不等式对任意直线成立，当且仅当
+\[
+m^2-6m+1<0
+\]
+解得
+\[
+3-2\sqrt2<m<3+2\sqrt2
+\]
+由于 \(3-2\sqrt2>0\)，这正是所求正数 \(m\) 的取值范围.
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -273,7 +677,44 @@ x \leqslant 2,
 \end{problem}
 
 \begin{solution}
-短答案：\(a_n=(-1)^{n-1}\sqrt{1-\frac{3}{4}\left(\frac{2}{3}\right)^{n-1}}\)，\(b_n=\frac{1}{4}\left(\frac{2}{3}\right)^{n-1}\)；\(\{b_n\}\) 中任意三项不成等差数列.
+\begin{enumerate}
+\item 由题设递推式交叉相乘，得
+\[
+3(1+a_{n+1})(1-a_{n+1})
+=2(1+a_n)(1-a_n)
+\]
+即
+\[
+1-a_{n+1}^2=\frac23(1-a_n^2)
+\]
+令 \(c_n=1-a_n^2\)，则 \(c_{n+1}=\frac23c_n\)，且
+\(c_1=1-\frac14=\frac34\).所以
+\(c_n=\frac34\left(\frac23\right)^{n-1}\)，\(a_n^2=1-\frac34\left(\frac23\right)^{n-1}\).
+由 \(a_1>0\) 以及 \(a_na_{n+1}<0\)，数列 \(\{a_n\}\) 的符号交替，故
+\[
+a_n=(-1)^{n-1}
+\sqrt{1-\frac34\left(\frac23\right)^{n-1}}
+\]
+再由 \(b_n=a_{n+1}^2-a_n^2\)，
+\[
+\begin{aligned}
+b_n
+&=\left[1-\frac34\left(\frac23\right)^n\right]
+-\left[1-\frac34\left(\frac23\right)^{n-1}\right]\\
+&=\frac14\left(\frac23\right)^{n-1}.
+\end{aligned}
+\]
+
+\item 由 \(b_n=\frac14\left(\frac23\right)^{n-1}\)，数列 \(\{b_n\}\) 严格递减.
+任取三个不同的项，设它们的下标为 \(i<j<k\)，并令
+\(p=j-i\)、\(r=k-i\)，则 \(1\leqslant p<r\).若三项成等差数列，由大小关系知
+中间项为 \(b_j\)，从而
+\(2b_j=b_i+b_k\)，\(2\left(\frac23\right)^p=1+\left(\frac23\right)^r\).
+右端大于 \(1\)，所以 \(2(\frac23)^p>1\)，只能有 \(p=1\).此时
+\(\left(\frac23\right)^r=\frac13\)，\(2^r=3^{r-1}\)
+但 \(r\geqslant2\) 时左边为偶数、右边为奇数，矛盾.因此
+\(\{b_n\}\) 中任意三项都不可能成等差数列.
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -287,5 +728,80 @@ x \leqslant 2,
 \end{problem}
 
 \begin{solution}
-短答案：\(b=a-1\)，\(c=1-2a\)；\(a\in\left[\frac{1}{2},+\infty\right)\)；题中不等式成立.
+\begin{enumerate}
+\item 因为切线 \(y=x-1\) 在 \(x=1\) 处，所以切点的纵坐标为 \(0\)，且切线斜率为 \(1\).由此
+\(f(1)=a+b+c=0\)，\(f'(1)=a-b=1\).
+解得
+\(b=a-1\)，\(c=1-2a\).
+
+\item 代入上面的 \(b\)，\(c\)，得
+\[
+f(x)=ax+\frac{a-1}{x}+1-2a
+\]
+令 \(G_a(x)=f(x)-\ln x\).将 \(a=\frac12\) 的情形分离出来，有
+\[
+G_a(x)=\left(\frac12x-\frac1{2x}-\ln x\right)
++\left(a-\frac12\right)\left(x+\frac1x-2\right)
+\]
+记
+\[
+G_{1/2}(x)=\frac12x-\frac1{2x}-\ln x
+\]
+则 \(G_{1/2}(1)=0\)，且
+\[
+G'_{1/2}(x)
+=\frac12+\frac1{2x^2}-\frac1x
+=\frac{(x-1)^2}{2x^2}\geqslant0
+\]
+所以当 \(x\geqslant1\) 时，\(G_{1/2}(x)\geqslant0\).又
+\[
+x+\frac1x-2=\frac{(x-1)^2}{x}\geqslant0
+\]
+故 \(a\geqslant\frac12\) 时 \(G_a(x)\geqslant0\)，即题设不等式恒成立.
+
+反之，若 \(0<a<\frac12\)，则
+\[
+\lim_{x\to1^+}
+\frac{G_{1/2}(x)}{x+\frac1x-2}
+=\lim_{x\to1^+}
+\frac{(x-1)^2/(2x^2)}{1-1/x^2}
+=\lim_{x\to1^+}\frac{x-1}{2(x+1)}
+=0
+\]
+因此当 \(x>1\) 充分接近 \(1\) 时，
+\[
+\frac{G_a(x)}{x+1/x-2}<0
+\]
+从而 \(G_a(x)<0\)，不可能在 \([1,+\infty)\) 上恒成立.故
+\[
+a\in\left[\frac12,+\infty\right)
+\]
+
+\item 对任意 \(k\geqslant1\)，由
+\[
+t-\ln(1+t)=\int_0^t\frac{u}{1+u}\,\mathrm du
+\]
+以及 \(0\leqslant u\leqslant t\)，有
+\(t-\ln(1+t)> \int_0^t\frac{u}{1+t}\,\mathrm du =\frac{t^2}{2(1+t)}\)，\((t>0)\).
+取 \(t=\frac1k\)，得到
+\[
+\frac1k-\ln\left(1+\frac1k\right)
+>\frac1{2k(k+1)}
+\]
+对 \(k=1\)，\(2\)，\(\ldots\)，\(n\) 求和，并注意
+\[
+\sum_{k=1}^n\ln\left(1+\frac1k\right)
+=\ln(n+1)
+\]
+便有
+\[
+\begin{aligned}
+1+\frac12+\cdots+\frac1n-\ln(n+1)
+&>\frac12\sum_{k=1}^n\left(\frac1k-\frac1{k+1}\right)\\
+&=\frac12\left(1-\frac1{n+1}\right)
+=\frac{n}{2(n+1)}.
+\end{aligned}
+\]
+即得所证不等式.
+\end{enumerate}
 \end{solution}

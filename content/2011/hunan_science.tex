@@ -3,7 +3,7 @@
 \section{单选题}
 
 \begin{problem}
-若 \(a,b \in \R\)，\(\i\) 为虚数单位，且 \((a + \i)\i = b + \i\)，则（\quad）
+若 \(a\)，\(b \in \R\)，\(\i\) 为虚数单位，且 \((a + \i)\i = b + \i\)，则（\quad）
 
 \choices
     {\(a = 1\)，\(b = 1\)}
@@ -15,6 +15,14 @@
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+将左边展开，得
+\[
+(a+\i)\i=a\i-1
+\]
+比较复数的实部和虚部，得到 \(b=-1\)，\(a=1\)，所以选 D.
+\end{solution}
 
 \begin{problem}
 设 \(M = \{1, 2\}\)，\(N = \{a^2\}\)，则 “\(a = 1\)” 是 “\(N \subseteq M\)” 的（\quad）
@@ -29,6 +37,12 @@ D
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+当 \(a=1\) 时，\(N=\{1\}\)，而 \(1\in M\)，所以 \(N\subseteq M\)，因此“\(a=1\)”是“\(N\subseteq M\)”的充分条件.
+
+反之，\(N\subseteq M\) 只说明 \(a^2\in\{1,2\}\)，例如 \(a=-1\) 时也有 \(N=\{1\}\subseteq M\)，但 \(a\ne1\). 因此该条件不是必要条件，故选 A.
+\end{solution}
 
 \begin{problem}
 如图是某几何体的三视图，则该几何体的体积为（\quad）
@@ -45,6 +59,14 @@ A
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+由三视图可知，该几何体由一个底面为边长 \(3\) 的正方形、高为 \(2\) 的长方体和一个半径为 \(\frac{3}{2}\) 的球组成，且球与长方体相切. 因而其体积为
+\[
+V=3\times3\times2+\frac{4}{3}\pi\left(\frac{3}{2}\right)^3=18+\frac{9}{2}\pi
+\]
+所以选 B.
+\end{solution}
 
 \begin{problem}
 通过随机询问 \(110\text{ 名}\) 性别不同的大学生是否爱好某项运动，得到如下的列联表：
@@ -82,6 +104,15 @@ B
 C
 \end{answer}
 
+\begin{solution}
+由列联表中的数据，
+\[
+K^2=\frac{110(40\times30-20\times20)^2}{60\times50\times60\times50}
+\approx7.8
+\]
+因为 \(7.8>6.635\)，所以 \(P(K^2\geqslant7.8)<0.010\)，据此有 \(99\%\) 以上的把握认为爱好该项运动与性别有关. 又因为 \(7.8<10.828\)，不能把结论提高到犯错误的概率不超过 \(0.1\%\). 故选 C.
+\end{solution}
+
 \begin{problem}
 设双曲线 \(\frac{x^2}{a^2} - \frac{y^2}{9} = 1\)（\(a > 0\)）的渐近线方程为 \(3x \pm 2y = 0\)，则 \(a\) 的值为（\quad）
 
@@ -96,6 +127,16 @@ C
 C
 \end{answer}
 
+\begin{solution}
+将双曲线方程化为渐近线对应的齐次方程，得
+\(\frac{x^2}{a^2}-\frac{y^2}{9}=0\)，\(y=\pm\frac{3}{a}x\).
+题设渐近线为 \(3x\pm2y=0\)，即 \(y=\pm\frac{3}{2}x\). 因此
+\[
+\frac{3}{a}=\frac{3}{2}
+\]
+又 \(a>0\)，所以 \(a=2\)，故选 C.
+\end{solution}
+
 \begin{problem}
 由直线 \(x = -\frac{\pi}{3}\)，\(x = \frac{\pi}{3}\)，\(y = 0\) 与曲线 \(y = \cos x\) 所围成的封闭图形的面积为（\quad）
 
@@ -109,6 +150,16 @@ C
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+在区间 \(\left[-\frac{\pi}{3},\frac{\pi}{3}\right]\) 上，\(\cos x\geqslant0\)，所以封闭图形面积为
+\[
+S=\int_{-\pi/3}^{\pi/3}\cos x\,\mathrm{d}x
+=\left.\sin x\right|_{-\pi/3}^{\pi/3}
+=\sqrt3
+\]
+故选 D.
+\end{solution}
 
 \begin{problem}
 设 \(m > 1\)，在约束条件 \(\begin{cases}
@@ -128,6 +179,24 @@ x + y \leqslant 1
 A
 \end{answer}
 
+\begin{solution}
+由 \(y\geqslant x\) 和 \(y\leqslant mx\)，且 \(m>1\)，若 \(x<0\)，则 \(mx<x\)，不可能同时满足这两个不等式，所以可行域中的点满足 \(x\geqslant0\). 可行域是三角形，其顶点为
+\((0,0)\)，\(\left(\frac12,\frac12\right)\)，\(\left(\frac{1}{m+1},\frac{m}{m+1}\right)\).
+在这三个顶点处，目标函数 \(z=x+my\) 的值分别为
+\(0\)，\(\frac{m+1}{2}\)，\(\frac{1+m^2}{m+1}\).
+由于
+\[
+\frac{1+m^2}{m+1}-\frac{m+1}{2}=\frac{(m-1)^2}{2(m+1)}>0
+\]
+故最大值为 \(\frac{1+m^2}{m+1}\). 题设要求
+\[
+\frac{1+m^2}{m+1}<2
+\quad\Longleftrightarrow\quad
+m^2-2m-1<0
+\]
+结合 \(m>1\)，得 \(1<m<1+\sqrt2\)，故选 A.
+\end{solution}
+
 \begin{problem}
 设直线 \(x = t\) 与函数 \(f(x) = x^2\)，\(g(x) = \ln x\) 的图象分别交于点 \(M\)，\(N\)，则当 \(|MN|\) 达到最小时 \(t\) 的值为（\quad）
 
@@ -142,6 +211,19 @@ A
 D
 \end{answer}
 
+\begin{solution}
+由于 \(g(x)=\ln x\) 的定义域为 \(x>0\)，故 \(t>0\). 两交点为 \(M=(t,t^2)\)，\(N=(t,\ln t)\)，所以
+令 \(\varphi(t)=t^2-\ln t\)，则
+\[
+\varphi'(t)=2t-\frac1t=\frac{2t^2-1}{t}
+\]
+当 \(0<t<\frac{\sqrt2}{2}\) 时，\(\varphi'(t)<0\)；当 \(t>\frac{\sqrt2}{2}\) 时，\(\varphi'(t)>0\). 因此 \(\varphi\) 在 \(t=\frac{\sqrt2}{2}\) 处取得最小值，且
+\[
+\varphi\left(\frac{\sqrt2}{2}\right)=\frac12+\frac12\ln2>0
+\]
+所以 \(|MN|=|t^2-\ln t|=\varphi(t)\)，其最小时 \(t=\frac{\sqrt2}{2}\)，故选 D.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -155,13 +237,39 @@ y = 1 + \sin \alpha
 2
 \end{answer}
 
+\begin{solution}
+由参数方程消去参数 \(\alpha\)，得
+\[
+x^2+(y-1)^2=\cos^2\alpha+\sin^2\alpha=1
+\]
+所以 \(C_1\) 是圆心为 \((0,1)\)、半径为 \(1\) 的圆. 又因为 \(x=\rho\cos\theta\)，\(y=\rho\sin\theta\)，曲线 \(C_2\) 的方程化为
+\[
+x-y+1=0
+\]
+该直线经过圆心 \((0,1)\)，与半径为 \(1\) 的圆相交于两个不同的点，因此交点个数为 \(2\).
+\end{solution}
+
 \begin{problem}
-设 \(x,y \in \R\)，且 \(xy \neq 0\)，则 \(\left(x^2 + \frac{1}{y^2}\right)\left(\frac{1}{x^2} + 4y^2\right)\) 的最小值为\fillinblank{}.
+设 \(x\)，\(y \in \R\)，且 \(xy \neq 0\)，则 \(\left(x^2 + \frac{1}{y^2}\right)\left(\frac{1}{x^2} + 4y^2\right)\) 的最小值为\fillinblank{}.
 \end{problem}
 
 \begin{answer}
 9
 \end{answer}
+
+\begin{solution}
+展开原式并令 \(u=x^2y^2\)，由于 \(xy\ne0\)，有 \(u>0\). 于是
+\[
+\left(x^2+\frac1{y^2}\right)\left(\frac1{x^2}+4y^2\right)
+=1+4x^2y^2+\frac1{x^2y^2}+4
+=5+4u+\frac1u
+\]
+由基本不等式，
+\[
+4u+\frac1u\geqslant2\sqrt{4u\cdot\frac1u}=4
+\]
+当且仅当 \(4u=\frac1u\)，即 \(u=\frac12\) 时等号成立. 因此原式的最小值为 \(5+4=9\). 例如取 \(x=1\)，\(y=\frac{1}{\sqrt2}\) 时 \(u=\frac12\)，等号确实可以取得.
+\end{solution}
 
 \begin{problem}
 如图，\(A\)，\(E\) 是半圆周上的两个三等分点，直径 \(BC=4\)，\(AD\perp BC\)，垂足为 \(D\)，\(BE\) 与 \(AD\) 相交于点 \(F\)，则 \(AF\) 的长为\fillinblank{}.
@@ -173,6 +281,21 @@ y = 1 + \sin \alpha
 \(\frac{2\sqrt{3}}{3}\)
 \end{answer}
 
+\begin{solution}
+半圆半径为 \(2\). 取 \(BC\) 为横轴，令圆心 \(O=(0,0)\)，则可取
+\(B=(-2,0)\)，\(C=(2,0)\).
+由图中 \(A\)，\(E\) 将半圆弧 \(BC\) 三等分，得
+\(A=(-1,\sqrt3)\)，\(E=(1,\sqrt3)\).
+因为 \(AD\perp BC\)，所以 \(D=(-1,0)\). 直线 \(BE\) 的斜率为
+\[
+\frac{\sqrt3-0}{1-(-2)}=\frac{\sqrt3}{3}
+\]
+故其方程为 \(y=\frac{\sqrt3}{3}(x+2)\). 当 \(x=-1\) 时，交点 \(F\) 的纵坐标为 \(\frac{\sqrt3}{3}\). 因而
+\[
+AF=\sqrt3-\frac{\sqrt3}{3}=\frac{2\sqrt3}{3}
+\]
+\end{solution}
+
 \begin{problem}
 设 \(S_{n}\) 是等差数列 \(\{a_{n}\}\)（\(n \in \mathbf{N}^{*}\)）的前 \(n\) 项和，且 \(a_{1} = 1\)，\(a_{4} = 7\)，则 \(S_{5} =\)\fillinblank{}.
 \end{problem}
@@ -180,6 +303,17 @@ y = 1 + \sin \alpha
 \begin{answer}
 25
 \end{answer}
+
+\begin{solution}
+设等差数列的公差为 \(d\). 由
+\[
+a_4=a_1+3d=1+3d=7
+\]
+得 \(d=2\). 所以前五项为 \(1\)，\(3\)，\(5\)，\(7\)，\(9\)，从而
+\[
+S_5=1+3+5+7+9=25
+\]
+\end{solution}
 
 \begin{problem}
 若执行如图所示的框图，输入 \(x_{1} = 1\)，\(x_{2} = 2\)，\(x_{3} = 3\)，\(\overline{x} = 2\)，则输出的数等于\fillinblank{}.
@@ -191,6 +325,25 @@ y = 1 + \sin \alpha
 \(\frac{2}{3}\)
 \end{answer}
 
+\begin{solution}
+按照框图计算：初始 \(i=1\)，\(S=0\). 第一次循环后
+\[
+S=0+(1-2)^2=1
+\]
+此时 \(i<3\)，令 \(i=2\). 第二次循环后
+\[
+S=1+(2-2)^2=1
+\]
+此时仍有 \(i<3\)，令 \(i=3\). 第三次循环后
+\[
+S=1+(3-2)^2=2
+\]
+此时 \(i<3\) 不成立，输出
+\[
+\frac{1}{i}S=\frac{1}{3}\times2=\frac{2}{3}
+\]
+\end{solution}
+
 \begin{problem}
 在边长为 1 的正三角形 \(ABC\) 中，设 \(\overrightarrow{BC} = 2\overrightarrow{BD}\)，\(\overrightarrow{CA} = 3\overrightarrow{CE}\)，则 \(\overrightarrow{AD} \cdot \overrightarrow{BE} =\)\fillinblank{}.
 \end{problem}
@@ -199,11 +352,28 @@ y = 1 + \sin \alpha
 \(-\frac{1}{4}\)
 \end{answer}
 
+\begin{solution}
+建立直角坐标系，取 \(B=(0,0)\)，\(C=(1,0)\)，\(A=\left(\frac12,\frac{\sqrt3}{2}\right)\). 由 \(\overrightarrow{BC}=2\overrightarrow{BD}\)，得
+\[
+D=\left(\frac12,0\right)
+\]
+由 \(\overrightarrow{CA}=3\overrightarrow{CE}\)，得
+\[
+E=C+\frac13(A-C)=\left(\frac56,\frac{\sqrt3}{6}\right)
+\]
+于是
+\(\overrightarrow{AD}=\left(0,-\frac{\sqrt3}{2}\right)\)，\(\overrightarrow{BE}=\left(\frac56,\frac{\sqrt3}{6}\right)\).
+所以
+\[
+\overrightarrow{AD}\cdot\overrightarrow{BE}=0\cdot\frac56-\frac{\sqrt3}{2}\cdot\frac{\sqrt3}{6}=-\frac14
+\]
+\end{solution}
+
 \begin{problem}
 如图所示，\(EFGH\) 是以 \(O\) 为圆心，半径为 1 的圆的内接正方形，将一颗豆子随机地扔到该圆内，用 \(A\) 表示事件“豆子落在正方形 \(EFGH\) 内”，\(B\) 表示事件“豆子落在扇形 \(OHE\)（阴影部分）内”，则
 \begin{enumerate}
 \item \(P(A)=\)\fillinblank{}；
-\item \(P(B|A)=\)\fillinblank{}.
+\item \(P(B\mid A)=\)\fillinblank{}.
 \end{enumerate}
 
 \bitmapfigure[max width=0.35\linewidth]{img/2011/hunan_science/q15_fig1.png}
@@ -212,6 +382,23 @@ y = 1 + \sin \alpha
 \begin{answer}
 \(\frac{2}{\pi}\)，\(\frac{1}{4}\)
 \end{answer}
+
+\begin{solution}
+\begin{enumerate}
+\item
+圆的面积为 \(\pi\). 内接正方形的对角线等于圆的直径 \(2\)，所以其边长为 \(\sqrt2\)，面积为 \(2\). 因此
+\[
+P(A)=\frac{2}{\pi}
+\]
+
+\item
+扇形 \(OHE\) 的圆心角为正方形相邻顶点对应的圆心角，即 \(\frac{\pi}{2}\). 事件 \(A\cap B\) 对应于三角形 \(OHE\)，其面积为
+\[
+\frac12\times OE\times OH\times\sin\frac{\pi}{2}=\frac12
+\]
+于是 \(P(B\mid A)=\frac{P(A\cap B)}{P(A)}=\frac{\text{面积}(A\cap B)}{\text{面积}(A)}=\frac{1/2}{2}=\frac14\).
+\end{enumerate}
+\end{solution}
 
 \begin{problem}
 对于 \(n \in \mathbf{N}^*\)，将 \(n\) 表示为 \(n = a_0 \times 2^k + a_1 \times 2^{k-1} + a_2 \times 2^{k-2} + \cdots + a_{k-1} \times 2^1 + a_k \times 2^0\). 当 \(i = 0\) 时，\(a_i = 1\)，当 \(1 \leqslant i \leqslant k\) 时，\(a_i\) 为 0 或 1. 记 \(I(n)\) 为上述表示中 \(a_i\) 为 0 的个数 （例如： \(1 = 1 \times 2^0\)，\(4 = 1 \times 2^2 + 0 \times 2^1 + 0 \times 2^0\)，则 \(I(1) = 0\)，\(I(4) = 2\)），则
@@ -225,26 +412,46 @@ y = 1 + \sin \alpha
 2，1093
 \end{answer}
 
+\begin{solution}
+\begin{enumerate}
+\item
+因为 \(12=1\times2^3+1\times2^2+0\times2^1+0\times2^0\)，其中有两个系数为 \(0\)，所以
+\[
+I(12)=2
+\]
+
+\item
+对二进制位数为 \(k+1\) 的数，其最高位固定为 \(1\)，其余 \(k\) 位可以任意取 \(0\) 或 \(1\). 对于剩余的每一位，取 \(1\) 时对 \(2^{I(n)}\) 的贡献因子为 \(1\)，取 \(0\) 时贡献因子为 \(2\)，故所有这 \(2^k\) 个数的 \(2^{I(n)}\) 之和为
+\[
+(1+2)^k=3^k
+\]
+当 \(n\) 从 \(1\) 到 \(127=2^7-1\) 时，二进制位数依次为 \(1\)，\(2\)，\(\ldots\)，\(7\)，即 \(k=0\)，\(1\)，\(\ldots\)，\(6\). 因此
+\[
+\sum_{n=1}^{127}2^{I(n)}=\sum_{k=0}^{6}3^k=\frac{3^7-1}{3-1}=\frac{2187-1}{2}=1093
+\]
+\end{enumerate}
+\end{solution}
+
 \section{解答题}
 
 \begin{problem}
 在 \(\triangle ABC\) 中，角 \(A\)，\(B\)，\(C\) 所对的边分别为 \(a\)，\(b\)，\(c\). 且满足 \(c \sin A = a \cos C\).
 \begin{enumerate}
 \item 求角 \(C\) 的大小；
-\item 求 \(\sqrt{3} \sin A - \cos \left(B + \frac{\pi}{4}\right)\) 的最大值，并求取得最大值时角 A，B 的大小.
+\item 求 \(\sqrt{3} \sin A - \cos \left(B + \frac{\pi}{4}\right)\) 的最大值，并求取得最大值时角 \(A\)，\(B\) 的大小.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 由正弦定理，存在正数 \(R\)，使得 \(a=2R\sin A\)，\(c=2R\sin C\). 因为 \(A\) 是三角形内角，\(\sin A>0\)，所以条件等价于
 \[
-2R\sin C\sin A=2R\sin A\cos C\quad\Longleftrightarrow\quad \sin C=\cos C.
+2R\sin C\sin A=2R\sin A\cos C\quad\Longleftrightarrow\quad \sin C=\cos C
 \]
 又 \(0<C<\pi\)，故 \(C=\frac{\pi}{4}\). 从而 \(A+B=\frac{3\pi}{4}\)，且 \(0<A<\frac{3\pi}{4}\).
 
 由 \(B=\frac{3\pi}{4}-A\)，有 \(B+\frac{\pi}{4}=\pi-A\)，因此
 \[
-\sqrt{3}\sin A-\cos\left(B+\frac{\pi}{4}\right)=\sqrt{3}\sin A+\cos A=2\cos\left(A-\frac{\pi}{3}\right)\leqslant 2.
+\sqrt{3}\sin A-\cos\left(B+\frac{\pi}{4}\right)=\sqrt{3}\sin A+\cos A=2\cos\left(A-\frac{\pi}{3}\right)\leqslant 2
 \]
 当且仅当 \(A=\frac{\pi}{3}\) 时等号成立，此时 \(B=\frac{5\pi}{12}\). 所以最大值为 \(2\)，取得最大值时 \(A=\frac{\pi}{3}\)，\(B=\frac{5\pi}{12}\).
 \end{solution}
@@ -274,15 +481,15 @@ y = 1 + \sin \alpha
 \begin{enumerate}
 \item 当天商品不进货的概率为
 \[
-P(Y=0)+P(Y=1)=\frac{1+5}{20}=\frac{3}{10}.
+P(Y=0)+P(Y=1)=\frac{1+5}{20}=\frac{3}{10}
 \]
 
 \item 第二天开始营业时，若 \(Y=1\)，存货为 \(2\) 件；若 \(Y=0\)，存货为 \(3\) 件；若 \(Y=2\) 或 \(Y=3\)，当天进货后存货补充至 \(3\) 件. 因此 \(X\) 只取 \(2\)，\(3\)，且
 \[
-P(X=2)=P(Y=1)=\frac{5}{20}=\frac{1}{4},
+P(X=2)=P(Y=1)=\frac{5}{20}=\frac{1}{4}
 \]
 \[
-P(X=3)=P(Y=0)+P(Y=2)+P(Y=3)=\frac{1+9+5}{20}=\frac{3}{4}.
+P(X=3)=P(Y=0)+P(Y=2)+P(Y=3)=\frac{1+9+5}{20}=\frac{3}{4}
 \]
 分布列为
 \begin{center}
@@ -294,7 +501,7 @@ P(X=3)=P(Y=0)+P(Y=2)+P(Y=3)=\frac{1+9+5}{20}=\frac{3}{4}.
 \end{center}
 所以
 \[
-E(X)=2\times\frac{1}{4}+3\times\frac{3}{4}=\frac{11}{4}.
+E(X)=2\times\frac{1}{4}+3\times\frac{3}{4}=\frac{11}{4}
 \]
 \end{enumerate}
 \end{solution}
@@ -321,11 +528,20 @@ E(X)=2\times\frac{1}{4}+3\times\frac{3}{4}=\frac{11}{4}.
 \(\overrightarrow{AP}=(1,0,\sqrt{2})\)，\(\overrightarrow{AC}=(1,1,0)\)，
 从而可取平面 \(PAC\) 的法向量为
 \[
-\bs{n}_2=\overrightarrow{AP}\times\overrightarrow{AC}=(-\sqrt{2},\sqrt{2},1).
+\bs{n}_2=\overrightarrow{AP}\times\overrightarrow{AC}=(-\sqrt{2},\sqrt{2},1)
 \]
+为确定由半平面 \(PAB\)、\(PAC\) 确定的二面角取锐角，分别将 \(\overrightarrow{AB}\)、\(\overrightarrow{AC}\) 投影到垂直于 \(PA\) 的平面上，得
+\[
+\bs{u}=\overrightarrow{AB}-\frac{\overrightarrow{AB}\cdot\overrightarrow{AP}}{|\overrightarrow{AP}|^2}\overrightarrow{AP}=\left(\frac43,0,-\frac{2\sqrt2}{3}\right)
+\]
+
+\[
+\bs{v}=\overrightarrow{AC}-\frac{\overrightarrow{AC}\cdot\overrightarrow{AP}}{|\overrightarrow{AP}|^2}\overrightarrow{AP}=\left(\frac23,1,-\frac{\sqrt2}{3}\right)
+\]
+由于 \(\bs{u}\cdot\bs{v}=\frac43>0\)，所求二面角为两平面夹角的锐角.
 设二面角 \(B-PA-C\) 的平面角为 \(\theta\)，则它是平面 \(PAB\) 与平面 \(PAC\) 的锐角，故
 \[
-\cos\theta=\frac{|\bs{n}_1\cdot\bs{n}_2|}{|\bs{n}_1||\bs{n}_2|}=\frac{\sqrt{2}}{\sqrt{5}}=\frac{\sqrt{10}}{5}.
+\cos\theta=\frac{|\bs{n}_1\cdot\bs{n}_2|}{|\bs{n}_1||\bs{n}_2|}=\frac{\sqrt{2}}{\sqrt{5}}=\frac{\sqrt{10}}{5}
 \]
 所以二面角 \(B-PA-C\) 的余弦值为 \(\frac{\sqrt{10}}{5}\).
 \end{enumerate}
@@ -352,20 +568,20 @@ E(X)=2\times\frac{1}{4}+3\times\frac{3}{4}=\frac{11}{4}.
 \begin{enumerate}
 \item 单位时间内，面 \(P\) 或其平行面的淋雨量为 \(\frac{1}{10}|v-c|S\)，其它面的淋雨量之和为 \(\frac{1}{2}\)，所以单位时间内的总淋雨量为
 \[
-\frac{1}{10}|v-c|S+\frac{1}{2}.
+\frac{1}{10}|v-c|S+\frac{1}{2}
 \]
 物体移动距离为 \(100\)，速度为 \(v\)，移动时间为 \(\frac{100}{v}\). 代入 \(S=\frac{3}{2}\)，得
 \[
-y=\frac{100}{v}\left(\frac{1}{10}|v-c|\cdot\frac{3}{2}+\frac{1}{2}\right)=\frac{15|v-c|+50}{v}.
+y=\frac{100}{v}\left(\frac{1}{10}|v-c|\cdot\frac{3}{2}+\frac{1}{2}\right)=\frac{15|v-c|+50}{v}
 \]
 
 \item 当 \(0<v<c\) 时，
 \[
-y=\frac{50+15c}{v}-15,
+y=\frac{50+15c}{v}-15
 \]
 该式随 \(v\) 增大而减小；当 \(c\leqslant v\leqslant 10\) 时，
 \[
-y=15+\frac{50-15c}{v}.
+y=15+\frac{50-15c}{v}
 \]
 
 当 \(0<c<\frac{10}{3}\) 时，\(50-15c>0\)，后一个式子随 \(v\) 增大而减小，故总淋雨量在 \(v=10\) 时最少.
@@ -395,7 +611,7 @@ y=15+\frac{50-15c}{v}.
 \item 设椭圆的半焦距为 \(c_0\). 由离心率条件 \(\frac{c_0}{a}=\frac{\sqrt{3}}{2}\) 和 \(c_0^2=a^2-b^2\)，
 得 \(b=\frac{a}{2}\). 曲线 \(C_2\) 与 \(x\) 轴的交点满足 \(x^2-b=0\)，所以截得线段的两个端点横坐标为 \(\pm\sqrt b\)，线段长为 \(2\sqrt b\). 由题意 \(2\sqrt b=a\)，即 \(a^2=4b\). 联立 \(b=\frac{a}{2}\) 和 \(a^2=4b\)，并由 \(a>0\) 得 \(a=2\)，\(b=1\). 因此 \(C_1:\frac{x^2}{4}+y^2=1\)，\(C_2:y=x^2-1\).
 
-\item 设直线 \(l\) 的斜率为 \(k\)，则 \(l:y=kx\). 竖直直线与 \(C_2\) 至多有一个交点，故能够与 \(C_2\) 交于两点的直线 \(l\) 确有斜率. 设 \(A\)，\(B\) 的横坐标分别为 \(t\)，\(s\)，则
+\item 设直线 \(l\) 的斜率为 \(k\)，则 \(l:y=kx\). 竖直直线与 \(C_2\) 至多有一个交点，故能够与 \(C_2\) 交于两点的直线 \(l\) 确有斜率. 设点 \(A\)，\(B\) 的横坐标分别为 \(t\)，\(s\)，则
 \(t^2-kt-1=0\)，\(t+s=k\)，\(ts=-1\).
 又 \(M=(0,-1)\)，故
 \(A=(t,t^2-1)\)，\(B=(s,s^2-1)\).
@@ -403,15 +619,15 @@ y=15+\frac{50-15c}{v}.
 \begin{enumerate}
 \item 设 \(T=(u,u^2-1)\) 是 \(C_2\) 上一点，直线 \(MT\) 上的点可表示为
 \[
-M+\lambda(T-M)=\left(\lambda u,-1+\lambda u^2\right).
+M+\lambda(T-M)=\left(\lambda u,-1+\lambda u^2\right)
 \]
 将其代入 \(C_1\) 的方程，得
 \[
-\frac{\lambda^2u^2}{4}+\left(-1+\lambda u^2\right)^2=1.
+\frac{\lambda^2u^2}{4}+\left(-1+\lambda u^2\right)^2=1
 \]
 除去对应于 \(M\) 的根 \(\lambda=0\)，另一个根满足
 \[
-\lambda\left(\lambda\left(\frac{u^2}{4}+u^4\right)-2u^2\right)=0,
+\lambda\left(\lambda\left(\frac{u^2}{4}+u^4\right)-2u^2\right)=0
 \]
 所以 \(\lambda=\frac{8}{4u^2+1}\). 因此
 \(\overrightarrow{MD}=\left(\frac{8t}{4t^2+1},\frac{8t^2}{4t^2+1}\right)\)，
@@ -419,27 +635,27 @@ M+\lambda(T-M)=\left(\lambda u,-1+\lambda u^2\right).
 于是
 \[
 \overrightarrow{MD}\cdot\overrightarrow{ME}
-=\frac{64ts(1+ts)}{(4t^2+1)(4s^2+1)}=0.
+=\frac{64ts(1+ts)}{(4t^2+1)(4s^2+1)}=0
 \]
 故 \(MD\perp ME\).
 
 \item 由行列式表示三角形面积，
 \[
-2S_1=\left|\det\begin{pmatrix}t&t^2\\s&s^2\end{pmatrix}\right|=|ts(s-t)|=|s-t|.
+2S_1=\left|\det\begin{pmatrix}t&t^2\\s&s^2\end{pmatrix}\right|=|ts(s-t)|=|s-t|
 \]
-同理，由上面得到的 \(\overrightarrow{MD}\)，\(\overrightarrow{ME}\)，有
+将上面得到的两个向量代入三角形面积的行列式公式，得
 \[
-2S_2=\frac{64|ts||s-t|}{(4t^2+1)(4s^2+1)}=\frac{64|s-t|}{(4t^2+1)(4s^2+1)}.
+2S_2=\frac{64|ts||s-t|}{(4t^2+1)(4s^2+1)}=\frac{64|s-t|}{(4t^2+1)(4s^2+1)}
 \]
 所以
 \[
 \frac{S_1}{S_2}=\frac{(4t^2+1)(4s^2+1)}{64}
 =\frac{16t^2s^2+4(t^2+s^2)+1}{64}
-=\frac{25+4k^2}{64},
+=\frac{25+4k^2}{64}
 \]
 其中使用了 \(ts=-1\) 及 \(t+s=k\). 若要求该比值为 \(\frac{17}{32}\)，则
 \[
-\frac{25+4k^2}{64}=\frac{17}{32}\quad\Longleftrightarrow\quad k^2=\frac{9}{4}.
+\frac{25+4k^2}{64}=\frac{17}{32}\quad\Longleftrightarrow\quad k^2=\frac{9}{4}
 \]
 取 \(k=\frac{3}{2}\) 或 \(k=-\frac{3}{2}\)，相应直线均能与 \(C_2\) 交于两点，故存在这样的直线 \(l\).
 \end{enumerate}
@@ -458,22 +674,22 @@ M+\lambda(T-M)=\left(\lambda u,-1+\lambda u^2\right).
 \begin{enumerate}
 \item 函数 \(g\) 的定义域为 \(x\geqslant0\). 令 \(u=\sqrt{x}\)，则 \(u\geqslant0\)，且
 \[
-h(x)=x^3-x-\sqrt{x}=u^6-u^2-u=u\left(u^5-u-1\right).
+h(x)=x^3-x-\sqrt{x}=u^6-u^2-u=u\left(u^5-u-1\right)
 \]
 记 \(\varphi(u)=u^5-u-1\). 当 \(u\geqslant0\) 时，
 \[
-\varphi'(u)=5u^4-1.
+\varphi'(u)=5u^4-1
 \]
 所以 \(\varphi\) 在 \(\left(0,5^{-1/4}\right)\) 上递减，在 \(\left(5^{-1/4},+\infty\right)\) 上递增. 又 \(\varphi(0)=-1\)，且 \(\varphi(u)\) 当 \(u\) 趋于正无穷时趋于正无穷，因此 \(\varphi(u)=0\) 有且只有一个正根，记为 \(u_0\). 所以 \(h(x)=0\) 的根为 \(x=0\) 和 \(x=u_0^2\)，共有两个.
 
 \item 由 \(a_1=a>0\) 及递推条件，所有 \(a_n>0\)，且
 \[
-a_{n+1}=\left(a_n+\sqrt{a_n}\right)^{1/3}.
+a_{n+1}=\left(a_n+\sqrt{a_n}\right)^{1/3}
 \]
 令 \(\alpha=u_0^2\)，则 \(\alpha^3=\alpha+\sqrt\alpha\). 记 \(T(x)=\left(x+\sqrt{x}\right)^{1/3}\)（\(x>0\)）.
 函数 \(T\) 在正半轴上单调递增，且 \(T(\alpha)=\alpha\). 由第一问中 \(h(x)\) 的符号可知，当 \(x\geqslant\alpha\) 时 \(x^3\geqslant x+\sqrt{x}\)，从而 \(T(x)\leqslant x\). 因此取
 \[
-M=\max\{a,\alpha\},
+M=\max\{a,\alpha\}
 \]
 则 \(a_1\leqslant M\)，并且由 \(T\) 的单调性及 \(M\geqslant\alpha\)，有 \(a_{n+1}=T(a_n)\leqslant T(M)\leqslant M\). 归纳可得，对任意 \(n\in\mathbf N^*\)，都有 \(a_n\leqslant M\).
 \end{enumerate}

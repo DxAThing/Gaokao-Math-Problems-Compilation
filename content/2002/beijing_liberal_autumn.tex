@@ -14,6 +14,10 @@
 C
 \end{answer}
 
+\begin{solution}
+并集等于 \(\{1,2,3\}\) 说明 \(M\subseteq\{1,2,3\}\)，且为使并集中出现 \(2,3\)，必须有 \(2\in M\)，\(3\in M\). 元素 \(1\) 已经属于另一个集合，故 \(1\) 可属于 \(M\)，也可不属于 \(M\). 因此 \(M\) 只有 \(\{2,3\}\) 和 \(\{1,2,3\}\) 两种，个数为 \(2\)，故选 C.
+\end{solution}
+
 \begin{problem}
 在平面直角坐标系中，已知两点 \(A(\cos80^\circ,\sin80^\circ)\)，\(B(\cos20^\circ,\sin20^\circ)\)，则 \(|AB|\) 的值是（\(\quad\)）
 
@@ -28,12 +32,16 @@ C
 D
 \end{answer}
 
+\begin{solution}
+由点的坐标可知 \(\lvert OA\rvert=\lvert OB\rvert=1\)，且 \(\angle AOB=80^\circ-20^\circ=60^\circ\). 由余弦定理，\(\lvert AB\rvert^2=1^2+1^2-2\cdot1\cdot1\cdot\cos60^\circ=1\). 由于距离非负，\(\lvert AB\rvert=1\)，故选 D.
+\end{solution}
+
 \begin{problem}
 下列四个函数中，以 \(\pi\) 为最小正周期，且在区间 \(\left(\dfrac{\pi}{2},\pi\right)\) 上为减函数的是（\(\quad\)）
 
 \choices
     {\(y=\cos x\)}
-    {\(y=2|\sin x|\)}
+    {\(y=2\lvert\sin x\rvert\)}
     {\(y=\cos \dfrac{x}{2}\)}
     {\(y=-\cot x\)}
 \end{problem}
@@ -41,6 +49,10 @@ D
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+\(y=\cos x\) 的最小正周期为 \(2\pi\)，不符合条件；\(y=\cos\dfrac{x}{2}\) 的最小正周期为 \(4\pi\)，也不符合条件. 对 \(y=2\lvert\sin x\rvert\)，有 \(f(x+\pi)=f(x)\)，而其零点为 \(k\pi\)（\(k\in\Z\)），相邻零点距离为 \(\pi\)，所以最小正周期为 \(\pi\)；在 \(\left(\dfrac{\pi}{2},\pi\right)\) 上，\(f(x)=2\sin x\)，且 \(f'(x)=2\cos x<0\)，故为减函数. 最后，\(y=-\cot x\) 的最小正周期虽为 \(\pi\)，但 \(y'=\csc^2x>0\)，在所给区间上为增函数. 因此只有选项 B 符合.
+\end{solution}
 
 \begin{problem}
 在下列四个正方体中，能得出 \(AB\perp CD\) 的是（\(\quad\)）
@@ -56,6 +68,20 @@ B
 A
 \end{answer}
 
+\begin{solution}
+以正方体的三条棱方向为坐标轴，并把棱长取为 \(1\). 对每个图分别按标注选取坐标系，四种情形中的点坐标依次为
+\(A=(0,1,1)\)，\(B=(1,0,0)\)，\(C=(1,0,1)\)，\(D=(1,1,0)\)；
+\(A=(0,1,1)\)，\(B=(0,0,0)\)，\(C=(0,0,1)\)，\(D=(1,0,0)\)；
+\(A=(0,0,1)\)，\(B=(0,1,0)\)，\(C=(1,1,1)\)，\(D=(1,1,0)\)；
+\(A=(0,1,1)\)，\(B=(1,0,0)\)，\(C=(1,1,1)\)，\(D=(1,1,0)\).
+于是四种情形中
+\(\overrightarrow{AB}\cdot\overrightarrow{CD}=(1,-1,-1)\cdot(0,1,-1)=0\)，
+\(\overrightarrow{AB}\cdot\overrightarrow{CD}=(0,-1,-1)\cdot(1,0,-1)=1\)，
+\(\overrightarrow{AB}\cdot\overrightarrow{CD}=(0,1,-1)\cdot(0,0,-1)=1\)，
+\(\overrightarrow{AB}\cdot\overrightarrow{CD}=(1,-1,-1)\cdot(0,0,-1)=1\).
+只有第一种情形的内积为零，因此只有图 A 能推出 \(AB\perp CD\)，故选 A.
+\end{solution}
+
 \begin{problem}
 \(64\) 个直径都为 \(\dfrac{a}{4}\) 的球，记它们的体积之和为 \(V_{\text{甲}}\)，表面积之和为 \(S_{\text{甲}}\)；一个直径为 \(a\) 的球，记其体积为 \(V_{\text{乙}}\)，表面积为 \(S_{\text{乙}}\)，则（\(\quad\)）
 
@@ -69,6 +95,11 @@ A
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+小球半径为 \(\dfrac{a}{8}\)，大球半径为 \(\dfrac{a}{2}\). 因此 \(V_{\text{甲}}=64\cdot\dfrac{4}{3}\pi\left(\dfrac{a}{8}\right)^3=\dfrac{\pi a^3}{6}\)，而 \(V_{\text{乙}}=\dfrac{4}{3}\pi\left(\dfrac{a}{2}\right)^3=\dfrac{\pi a^3}{6}\)，所以 \(V_{\text{甲}}=V_{\text{乙}}\).
+另一方面，\(S_{\text{甲}}=64\cdot4\pi\left(\dfrac{a}{8}\right)^2=4\pi a^2\)，\(S_{\text{乙}}=4\pi\left(\dfrac{a}{2}\right)^2=\pi a^2\)，故 \(S_{\text{甲}}>S_{\text{乙}}\). 因此选 C.
+\end{solution}
 
 \begin{problem}
 若直线 \(l:y=kx-\sqrt{3}\) 与直线 \(2x+3y-6=0\) 的交点位于第一象限，则直线 \(l\) 的倾斜角的取值范围是（\(\quad\)）
@@ -84,6 +115,11 @@ C
 B
 \end{answer}
 
+\begin{solution}
+直线 \(2x+3y-6=0\) 与两坐标轴的交点为 \((3,0)\) 和 \((0,2)\)，所以交点位于第一象限时，交点 \(Q=(x,y)\) 在这两个点之间且不取端点. 直线 \(l\) 经过定点 \(P=(0,-\sqrt{3})\)，故其斜率为
+\(k=\dfrac{y+\sqrt{3}}{x}\). 当 \(Q\) 趋近于 \((3,0)\) 时，\(k\) 趋近于 \(\dfrac{\sqrt{3}}{3}\)；当 \(Q\) 趋近于 \((0,2)\) 时，\(k\) 趋近于正无穷. 因此 \(k\in\left(\dfrac{\sqrt{3}}{3},+\infty\right)\). 设倾斜角为 \(\alpha\)，由于 \(k=\tan\alpha\) 且 \(0<\alpha<\dfrac{\pi}{2}\)，得 \(\alpha\in\left(\dfrac{\pi}{6},\dfrac{\pi}{2}\right)\)，故选 B.
+\end{solution}
+
 \begin{problem}
 \((1+\i)^8\) 等于（\(\quad\)）
 
@@ -97,6 +133,10 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+复数 \(1+\i\) 的模为 \(\sqrt{2}\)，辐角为 \(\dfrac{\pi}{4}\)，所以由棣莫弗公式，\((1+\i)^8=(\sqrt{2})^8\left(\cos\left(2\pi\right)+\i\sin\left(2\pi\right)\right)=16\). 故选 D.
+\end{solution}
 
 \begin{problem}
 若 \(\displaystyle \frac{\cot\theta-1}{2\cot\theta+1}=1\)，
@@ -113,6 +153,11 @@ D
 A
 \end{answer}
 
+\begin{solution}
+题设分式有意义，故 \(2\cot\theta+1\ne0\). 由等式可得 \(\cot\theta-1=2\cot\theta+1\)，从而 \(\cot\theta=-2\). 又因 \(\cot\theta\) 有意义，\(\sin\theta\ne0\)，可用二倍角公式
+\(\cos2\theta=\dfrac{\cot^2\theta-1}{\cot^2\theta+1}=\dfrac{4-1}{4+1}=\dfrac{3}{5}\). 故选 A.
+\end{solution}
+
 \begin{problem}
 \(5\) 本不同的书，全部分给四个学生，每个学生至少 \(1\) 本，则不同的分法的种数为（\(\quad\)）
 
@@ -127,6 +172,10 @@ A
 B
 \end{answer}
 
+\begin{solution}
+每个学生至少得到一本书，且共有 \(5\) 本书、\(4\) 名学生，所以分配数量必为 \(2\)，\(1\)，\(1\)，\(1\). 先选得到两本书的学生，有 \(4\) 种；再从 \(5\) 本不同的书中选出给他的两本，有 \(\mathrm C_5^2\) 种；剩下三本书分给另外三名学生，有 \(3!\) 种. 因此分法总数为 \(4\mathrm C_5^2\cdot3!=4\cdot10\cdot6=240\)，故选 B.
+\end{solution}
+
 \begin{problem}
 已知椭圆 \(\dfrac{x^{2}}{3m^{2}}+\dfrac{y^{2}}{5n^{2}}=1\) 和双曲线 \(\dfrac{x^{2}}{2m^{2}}-\dfrac{y^{2}}{3n^{2}}=1\) 有公共的焦点，那么双曲线的渐近线方程是（\(\quad\)）
 
@@ -140,6 +189,12 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+双曲线的焦点在 \(x\) 轴上，因此椭圆的焦点也在 \(x\) 轴上，椭圆的长轴为 \(x\) 轴. 于是椭圆的焦半距平方为 \(3m^2-5n^2\)，双曲线的焦半距平方为 \(2m^2+3n^2\). 由公共焦点，\(3m^2-5n^2=2m^2+3n^2\)，所以 \(m^2=8n^2\).
+双曲线的渐近线为 \(y=\pm\dfrac{\sqrt{3}\,n}{\sqrt{2}\,m}x\)，故
+\(y=\pm\sqrt{\dfrac{3n^2}{2m^2}}x=\pm\sqrt{\dfrac{3}{16}}x=\pm\dfrac{\sqrt{3}}{4}x\). 因此选 D.
+\end{solution}
 
 \begin{problem}
 已知 \(f(x)\) 是定义在 \((0,3)\) 上的函数，\(f(x)\) 的图象如图所示，那么不等式 \(f(x)\cos x<0\) 的解集是（\(\quad\)）
@@ -159,6 +214,10 @@ D
 C
 \end{answer}
 
+\begin{solution}
+由图可知，\(f(x)<0\) 在 \((0,1)\) 上成立，\(f(1)=0\)，\(f(x)>0\) 在 \((1,3)\) 上成立. 又因为 \(0<x<\dfrac{\pi}{2}\) 时 \(\cos x>0\)，而 \(\dfrac{\pi}{2}<x<3<\pi\) 时 \(\cos x<0\). 因此 \(f(x)\cos x<0\) 在 \((0,1)\) 和 \(\left(\dfrac{\pi}{2},3\right)\) 上成立；在 \(x=1\) 或 \(x=\dfrac{\pi}{2}\) 时乘积为零，不能取. 故解集为 \((0,1)\cup\left(\dfrac{\pi}{2},3\right)\)，选 C.
+\end{solution}
+
 \begin{problem}
 如图所示，\(f_{1}(x)\)，\(f_{2}(x)\)，\(f_{3}(x)\)，\(f_{4}(x)\) 是定义在 \([0,1]\) 上的四个函数，其中满足性质：“对 \([0,1]\) 中任意的 \(x_{1}\) 和 \(x_{2}\)，\(\displaystyle f\left(\frac{x_{1}+x_{2}}{2}\right)\leqslant \frac{1}{2}\bigl[f(x_{1})+f(x_{2})\bigr]\) 恒成立”的只有（\(\quad\)）
 
@@ -177,6 +236,10 @@ C
 A
 \end{answer}
 
+\begin{solution}
+题给条件是中点凸性条件：任取图象上的两点，函数在横坐标中点处的函数值不高于这两点连线在该处的函数值. 图中 \(f_1\) 的图象始终向上弯曲，故任意弦线都在图象上方；\(f_3\) 是直线，等号恒成立，所以 \(f_1\)，\(f_3\) 满足条件. \(f_2\) 在顶点附近向下弯曲，取顶点两侧的两点即可使中点处的图象高于弦线；\(f_4\) 在区间内改变弯曲方向，在其向下弯曲的局部也可取到使不等式失败的两点. 因此满足条件的只有 \(f_1(x)\)，\(f_3(x)\)，故选 A.
+\end{solution}
+
 \section{填空题}
 \begin{problem}
 \(\sin\dfrac{2\pi}{5}\)，\(\cos\dfrac{6\pi}{5}\)，\(\tan\dfrac{7\pi}{5}\) 从小到大的顺序是\fillinblank{}.
@@ -186,6 +249,10 @@ A
 \(\cos\dfrac{6\pi}{5}<\sin\dfrac{2\pi}{5}<\tan\dfrac{7\pi}{5}\)
 \end{answer}
 
+\begin{solution}
+\(\dfrac{6\pi}{5}=\pi+\dfrac{\pi}{5}\)，所以 \(\cos\dfrac{6\pi}{5}=-\cos\dfrac{\pi}{5}<0\). 又 \(0<\dfrac{2\pi}{5}<\dfrac{\pi}{2}\)，从而 \(0<\sin\dfrac{2\pi}{5}<1\). 此外，\(\tan\dfrac{7\pi}{5}=\tan\dfrac{2\pi}{5}\)，且 \(\dfrac{\pi}{4}<\dfrac{2\pi}{5}<\dfrac{\pi}{2}\)，故 \(\tan\dfrac{7\pi}{5}>1\). 因此从小到大的顺序为 \(\cos\dfrac{6\pi}{5}<\sin\dfrac{2\pi}{5}<\tan\dfrac{7\pi}{5}\).
+\end{solution}
+
 \begin{problem}
 等差数列 \(\{a_n\}\) 中，\(a_1=2\)，公差不为零，且 \(a_1\)，\(a_3\)，\(a_{11}\) 恰好是某等比数列的前三项，那么该等比数列公比的值等于\fillinblank{}.
 \end{problem}
@@ -193,6 +260,11 @@ A
 \begin{answer}
 \(4\)
 \end{answer}
+
+\begin{solution}
+设等差数列的公差为 \(d\). 则 \(a_3=2+2d\)，\(a_{11}=2+10d\). 由于 \(a_1\)，\(a_3\)，\(a_{11}\) 依次为等比数列的前三项，满足 \(a_3^2=a_1a_{11}\)，所以
+\((2+2d)^2=2(2+10d)\)，即 \(4d^2-12d=0\)，也就是 \(4d(d-3)=0\). 题设 \(d\ne0\)，故 \(d=3\). 等比数列公比为 \(q=\dfrac{a_3}{a_1}=\dfrac{2+2\cdot3}{2}=4\).
+\end{solution}
 
 \begin{problem}
 关于直角 \(AOB\) 在平面 \(\alpha\) 内的射影有如下判断：
@@ -212,6 +284,10 @@ A
 \(\circled{1}\circled{2}\circled{3}\circled{4}\circled{5}\)
 \end{answer}
 
+\begin{solution}
+取平面 \(\alpha\) 为 \(z=0\)，取 \(O\) 为原点. 任取 \(\varphi\in[0,\pi]\)，令射线 \(OA\)，\(OB\) 的方向向量分别为 \(\bs{u}=(1,0,1)\)，\(\bs{v}=(\cos\varphi,\sin\varphi,-\cos\varphi)\). 则 \(\bs{u}\cdot\bs{v}=\cos\varphi-\cos\varphi=0\)，所以原角 \(AOB\) 为直角. 两条射线在 \(\alpha\) 上的射影方向分别为 \((1,0,0)\) 和 \((\cos\varphi,\sin\varphi,0)\)，它们的夹角正好是 \(\varphi\). 当 \(\varphi=0\) 时射影为 \(0^\circ\) 的角；当 \(0<\varphi<\dfrac{\pi}{2}\) 时为锐角；当 \(\varphi=\dfrac{\pi}{2}\) 时为直角；当 \(\dfrac{\pi}{2}<\varphi<\pi\) 时为钝角；当 \(\varphi=\pi\) 时为 \(180^\circ\) 的角. 因此五个判断都正确.
+\end{solution}
+
 \begin{problem}
 \(x^{2}+y^{2}-2x-2y+1=0\) 上的动点 \(Q\) 到直线 \(3x+4y+8=0\) 的距离的最小值为\fillinblank{}.
 \end{problem}
@@ -220,13 +296,17 @@ A
 \(2\)
 \end{answer}
 
+\begin{solution}
+配方得 \((x-1)^2+(y-1)^2=1\)，所以圆心为 \(C=(1,1)\)，半径为 \(1\). 圆心到直线的距离为 \(d=\dfrac{|3\cdot1+4\cdot1+8|}{\sqrt{3^2+4^2}}=3\). 由于 \(d>1\)，圆与直线不相交；圆上点到该直线的最小距离等于圆心到直线的距离减去半径，故最小值为 \(3-1=2\).
+\end{solution}
+
 \section{解答题}
 \begin{problem}
 解不等式 \(\sqrt{2x-1}+2>x\).
 \end{problem}
 
 \begin{solution}
-\(\dfrac{1}{2}\leqslant x<5\).
+根式有意义要求 \(2x-1\geqslant0\)，即 \(x\geqslant\dfrac{1}{2}\). 令 \(t=\sqrt{2x-1}\)，则 \(t\geqslant0\)，且 \(x=\dfrac{t^2+1}{2}\). 原不等式等价于 \(t+2>\dfrac{t^2+1}{2}\)，即 \(t^2-2t-3<0\)，也就是 \((t-3)(t+1)<0\). 因此 \(-1<t<3\)，再结合 \(t\geqslant0\)，得 \(0\leqslant t<3\). 由于 \(x=\dfrac{t^2+1}{2}\)，所以 \(\dfrac{1}{2}\leqslant x<5\). 故原不等式的解集为 \(\left[\dfrac{1}{2},5\right)\).
 \end{solution}
 
 \begin{problem}
@@ -246,8 +326,19 @@ A
 
 \begin{solution}
 \begin{enumerate}
-\item 所求二面角的正切值为 \(\dfrac{2h}{b-d}\).
-\item \(V_{\text{估}}<V\)，且 \(V-V_{\text{估}}=\dfrac{h}{12}(a-c)(b-d)>0\).
+\item 在底面上建立直角坐标系，取
+\(A=(0,0,0)\)，\(B=(a,0,0)\)，\(C=(a,b,0)\)，\(D=(0,b,0)\). 设上底面相对于下底面的水平位移为 \((u,v)\)，则可写成
+\(A_1=(u,v,h)\)，\(B_1=(u+c,v,h)\)，\(C_1=(u+c,v+d,h)\)，\(D_1=(u,v+d,h)\).
+
+过 \(AB\) 的中点作垂直于 \(AB\) 的截面，侧面 \(ABB_1A_1\) 在该截面内的截线连接 \((0,0)\) 与 \((v,h)\)，所以其与底面的二面角的正切值为 \(h/\lvert v\rvert\). 对面 \(CDD_1C_1\) 的相应截线连接 \((b,0)\) 与 \((v+d,h)\)，由相对侧面所成二面角相等，得 \(\lvert v\rvert=\lvert v+d-b\rvert\). 平方后 \(v^2=(v+d-b)^2\)，因 \(b>d\)，得 \(2v=b-d\)，即 \(v=\dfrac{b-d}{2}\).
+
+同理，比较侧面 \(BCC_1B_1\) 和 \(DAA_1D_1\) 与底面所成的二面角，得 \(\lvert u+c-a\rvert=\lvert u\rvert\). 平方后 \(u^2=(u+c-a)^2\)，因 \(a>c\)，得 \(2u=a-c\)，即 \(u=\dfrac{a-c}{2}\). 因此上、下底面的中心线重合. 所求二面角记为 \(\beta\)，在上述截面内有
+\(\tan\beta=\dfrac{h}{(b-d)/2}=\dfrac{2h}{b-d}\).
+
+\item 设截面高度为 \(th\)，其中 \(0\leqslant t\leqslant1\). 由于侧棱为直线，截面上各顶点是对应上下底面顶点的线性插值，所以截面仍为矩形，其长、宽分别为 \((1-t)a+tc\) 与 \((1-t)b+td\). 取 \(t=\dfrac{1}{2}\)，得
+\(S_{\text{中截面}}=\dfrac{(a+c)(b+d)}{4}\). 又 \(S_{\text{下底面}}=ab\)，\(S_{\text{上底面}}=cd\)，所以
+\(V=\dfrac{h}{6}\left(ab+4S_{\text{中截面}}+cd\right)\)，而 \(V_{\text{估}}=hS_{\text{中截面}}\). 因此
+\(V-V_{\text{估}}=\dfrac{h}{6}\left(ab+cd-2S_{\text{中截面}}\right)=\dfrac{h}{6}\left(ab+cd-\dfrac{(a+c)(b+d)}{2}\right)=\dfrac{h}{12}(a-c)(b-d)\). 由 \(h>0\)，\(a>c\)，\(b>d\)，知 \(V-V_{\text{估}}>0\)，所以 \(V_{\text{估}}<V\).
 \end{enumerate}
 \end{solution}
 
@@ -262,8 +353,8 @@ A
 
 \begin{solution}
 \begin{enumerate}
-\item 对 \(n\geqslant2\)，\(x_n\geqslant\sqrt{a}\).
-\item 对 \(n\geqslant2\)，\(x_n\geqslant x_{n+1}\).
+\item 由 \(x_1=a>0\) 可知 \(x_1\) 为正数. 若 \(x_n>0\)，则 \(x_{n+1}=\dfrac{1}{2}\left(x_n+\dfrac{a}{x_n}\right)>0\)，所以归纳得到所有 \(x_n>0\). 对任意 \(n\geqslant1\)，由均值不等式，\(x_n+\dfrac{a}{x_n}\geqslant2\sqrt{x_n\cdot\dfrac{a}{x_n}}=2\sqrt a\)，从而 \(x_{n+1}\geqslant\sqrt a\). 令下标 \(n+1=2\)，\(3\)，\(\ldots\)，即得对所有 \(n\geqslant2\)，\(x_n\geqslant\sqrt a\).
+\item 对 \(n\geqslant2\)，由递推式，\(x_n-x_{n+1}=x_n-\dfrac{1}{2}\left(x_n+\dfrac{a}{x_n}\right)=\dfrac{x_n^2-a}{2x_n}\). 由第（1）问，\(x_n\geqslant\sqrt a\)，且 \(x_n>0\)，所以 \(x_n^2-a\geqslant0\)，从而 \(x_n-x_{n+1}\geqslant0\). 因此 \(x_n\geqslant x_{n+1}\).
 \end{enumerate}
 \end{solution}
 
@@ -311,8 +402,19 @@ A
 
 \begin{solution}
 \begin{enumerate}
-\item 当 \(n=4\) 时，至少需要 \(2\) 个单位时间.
-\item 当 \(n=128\) 时，至少需要 \(7\) 个单位时间.
+\item 一台机器开始时只含有一个初始数，一个单位时间内至多读取一台其他机器的数据，所以一个单位时间后它至多含有两个初始数，不可能在一个单位时间内得到四个数的总和. 下面的安排在两个单位时间后使四台机器都得到总和，第三单位时间不需要使用：
+\begin{center}
+\begin{tabular}{c|cc|cc|cc}
+机器号 & \multicolumn{2}{c|}{第一单位时间} & \multicolumn{2}{c|}{第二单位时间} & \multicolumn{2}{c}{第三单位时间}\\
+ & 被读机号 & 结果 & 被读机号 & 结果 & 被读机号 & 结果\\
+1 & 2 & \(v_1+v_2\) & 3 & \(v_1+v_2+v_3+v_4\) & &\\
+2 & 1 & \(v_2+v_1\) & 3 & \(v_1+v_2+v_3+v_4\) & &\\
+3 & 4 & \(v_3+v_4\) & 1 & \(v_1+v_2+v_3+v_4\) & &\\
+4 & 3 & \(v_4+v_3\) & 1 & \(v_1+v_2+v_3+v_4\) & &
+\end{tabular}
+\end{center}
+所以至少需要两个单位时间且两个单位时间可以完成，最少需要 \(2\) 个单位时间.
+\item 经过 \(t\) 个单位时间后，一台机器中的数据至多由 \(2^t\) 个初始数相加得到，因为每经过一个单位时间，所含初始数的数量至多翻倍. 若所有机器都得到总和，则每台机器都必须包含全部 \(128=2^7\) 个初始数，因此至少需要 \(7\) 个单位时间. 这个下界可以达到：第一轮把机器两两配对，每一对中的两台机器互读，得到含 \(2\) 个初始数的相同部分和；第二轮把含相同部分和的机器块两两配对，每台机器读取另一块中任意一台机器的数据. 如此每轮后每个机器块的大小和其中每台机器所含的初始数都翻倍，第 \(7\) 轮后每台机器都含有全部 \(128\) 个初始数，即得到 \(\sum_{i=1}^{128}v_i\). 因此最少需要 \(7\) 个单位时间.
 \end{enumerate}
 \end{solution}
 
@@ -327,9 +429,9 @@ A
 
 \begin{solution}
 \begin{enumerate}
-\item \(G\left(\dfrac{b+1}{3},\dfrac{c}{3}\right)\)，\(F\left(\dfrac{1}{2},\dfrac{b^{2}+c^{2}-b}{2c}\right)\)，\(H\left(b,\dfrac{b-b^{2}}{c}\right)\)，且 \(G\)，\(F\)，\(H\) 三点共线.
-\item 点 \(C\) 的轨迹是椭圆
-\(\dfrac{\left(x-\dfrac{1}{2}\right)^{2}}{\left(\dfrac{1}{2}\right)^{2}}+\dfrac{y^{2}}{\left(\dfrac{\sqrt{3}}{2}\right)^{2}}=1\)，除去 \((0,0)\)，\((1,0)\)，\(\left(\dfrac{1}{2},\dfrac{\sqrt{3}}{2}\right)\)，\(\left(\dfrac{1}{2},-\dfrac{\sqrt{3}}{2}\right)\) 四点.
+\item 由三角形三个顶点坐标的平均值，重心为 \(G\left(\dfrac{b+1}{3},\dfrac{c}{3}\right)\). 设外心为 \(F=(u,v)\). 由 \(FO=FB\)，有 \(u^2+v^2=(u-1)^2+v^2\)，所以 \(u=\dfrac{1}{2}\). 再由 \(FO=FC\)，得 \(\dfrac{1}{4}+v^2=\left(b-\dfrac{1}{2}\right)^2+(c-v)^2\)，化简得 \(2cv=b^2+c^2-b\). 由于 \(c\ne0\)，\(F\left(\dfrac{1}{2},\dfrac{b^2+c^2-b}{2c}\right)\). 垂心在过 \(C\) 且垂直于 \(OB\) 的高上，所以横坐标为 \(b\). 又因 \(OH\perp BC\)，有 \((b,y_H)\cdot(b-1,c)=0\)，即 \(b(b-1)+cy_H=0\)，故 \(H\left(b,\dfrac{b-b^2}{c}\right)\). 直接计算得 \(2F+H=(b+1,c)=3G\)，所以 \(G\)，\(F\)，\(H\) 三点共线.
+\item \(OB\) 是 \(x\) 轴，因此 \(FH\parallel OB\) 等价于 \(F\)，\(H\) 的纵坐标相等，即 \(\dfrac{b^2+c^2-b}{2c}=\dfrac{b-b^2}{c}\). 因 \(c\ne0\)，化简得 \(3b^2-3b+c^2=0\)，即 \(3\left(b-\dfrac{1}{2}\right)^2+c^2=\dfrac{3}{4}\). 令 \(C=(x,y)\)，得到椭圆
+\(\dfrac{\left(x-\dfrac{1}{2}\right)^2}{\left(\dfrac{1}{2}\right)^2}+\dfrac{y^2}{\left(\dfrac{\sqrt{3}}{2}\right)^2}=1\). 题设要求 \(c\ne0\)，故去掉 \((0,0)\)，\((1,0)\). 此外，在 \(\left(\dfrac{1}{2},\pm\dfrac{\sqrt{3}}{2}\right)\) 处有 \(F=H\)，直线 \(FH\) 无定义，也应去掉这两点. 因此，顶点 \(C\) 的轨迹是上述椭圆去掉 \((0,0)\)，\((1,0)\)，\(\left(\dfrac{1}{2},\dfrac{\sqrt{3}}{2}\right)\)，\(\left(\dfrac{1}{2},-\dfrac{\sqrt{3}}{2}\right)\) 后的部分.
 \end{enumerate}
 \end{solution}
 
@@ -345,8 +447,8 @@ A
 
 \begin{solution}
 \begin{enumerate}
-\item \(f(0)=0\)，\(f(1)=0\).
-\item \(f(x)\) 是奇函数.
-\item \(u_{n+1}>u_n\)（\(n\in\N\)）.
+\item 令 \(a=b=0\)，原式给出 \(f(0)=0\). 令 \(a=b=1\)，得 \(f(1)=2f(1)\)，所以 \(f(1)=0\).
+\item 令 \(a=b=-1\). 由 \(f(1)=0\) 得 \(0=-2f(-1)\)，故 \(f(-1)=0\). 再令 \(a=-1\)，\(b=x\)，则 \(f(-x)=-f(x)+xf(-1)=-f(x)\). 因此对任意 \(x\in\R\)，有 \(f(-x)=-f(x)\)，所以 \(f(x)\) 是奇函数.
+\item 由第（1）问，\(u_1=f(2)=2\). 对任意 \(n\in\N\)，在原函数方程中取 \(a=2\)，\(b=2^n\)，得到 \(u_{n+1}=2u_n+2^n f(2)=2u_n+2^{n+1}\). 下面用归纳法证明 \(u_n=n2^n\). 当 \(n=1\) 时，\(u_1=2=1\cdot2^1\)；若 \(u_n=n2^n\)，则 \(u_{n+1}=2n2^n+2^{n+1}=(n+1)2^{n+1}\)，故结论对所有 \(n\in\N\) 成立. 于是 \(u_{n+1}-u_n=(n+1)2^{n+1}-n2^n=(n+2)2^n>0\)，所以 \(u_{n+1}>u_n\).
 \end{enumerate}
 \end{solution}

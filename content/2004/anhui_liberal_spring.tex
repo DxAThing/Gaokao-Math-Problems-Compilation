@@ -17,7 +17,8 @@ D
 \end{answer}
 
 \begin{solution}
-由 \(x(x-1)=0\) 得 \(x=0\) 或 \(x=1\)，所以 \(N=\{0,1\}\). 因此 \(M\cap N=\{0,1\}\)，故选 D.
+由乘积为零得 \(x=0\) 或 \(x=1\)，所以 \(N=\{0,1\}\). 两个元素都属于 \(M=\{-1,0,1,2\}\)，故
+\(M\cap N=\{0,1\}\)，对应选项 D.
 \end{solution}
 
 \begin{problem}
@@ -35,7 +36,11 @@ A
 \end{answer}
 
 \begin{solution}
-由绝对值不等式得 \(-1\leqslant2x^{2}-1\leqslant1\)，即 \(0\leqslant x^{2}\leqslant1\)，所以 \(-1\leqslant x\leqslant1\)，故选 A.
+因为 \(\lvert u\rvert\leqslant1\) 等价于 \(-1\leqslant u\leqslant1\)，所以
+\[
+-1\leqslant2x^{2}-1\leqslant1
+\]
+两边分别加 \(1\) 并除以正数 \(2\)，得 \(0\leqslant x^{2}\leqslant1\). 这又等价于 \(-1\leqslant x\leqslant1\)，故选 A.
 \end{solution}
 
 \begin{problem}
@@ -53,7 +58,12 @@ C
 \end{answer}
 
 \begin{solution}
-设椭圆的半焦距为 \(c\)，则 \(F_{1}F_{2}=2c\). 因为 \(MF_{1}\) 垂直于 \(x\) 轴，而 \(F_{1}F_{2}\) 在 \(x\) 轴上，所以 \(\angle MF_{1}F_{2}=90^{\circ}\). 在直角三角形 \(MF_{1}F_{2}\) 中，\(\angle F_{1}MF_{2}=60^{\circ}\)，从而 \(\angle MF_{2}F_{1}=30^{\circ}\)，故 \(MF_{1}=\dfrac{1}{\sqrt{3}}F_{1}F_{2}=\dfrac{2c}{\sqrt{3}}\)，\(MF_{2}=\dfrac{2}{\sqrt{3}}F_{1}F_{2}=\dfrac{4c}{\sqrt{3}}\). 又由椭圆的焦点性质 \(MF_{1}+MF_{2}=2a\)，得 \(2a=2\sqrt{3}c\)，所以离心率 \(e=\dfrac{c}{a}=\dfrac{\sqrt{3}}{3}\)，故选 C.
+设椭圆的半焦距为 \(c\)，则 \(F_{1}F_{2}=2c\). 由于 \(F_{1}F_{2}\) 在 \(x\) 轴上，且 \(MF_{1}\perp x\) 轴，所以 \(\angle MF_{1}F_{2}=90^{\circ}\). 已知 \(\angle F_{1}MF_{2}=60^{\circ}\)，从而 \(\angle MF_{2}F_{1}=30^{\circ}\).
+
+在直角三角形 \(MF_{1}F_{2}\) 中，\(MF_{2}\) 是斜边，因此
+\(MF_{1}=F_{1}F_{2}\tan30^{\circ}=\frac{2c}{\sqrt{3}}\)，\(MF_{2}=\frac{F_{1}F_{2}}{\sin60^{\circ}}=\frac{4c}{\sqrt{3}}\).
+由椭圆的定义，\(MF_{1}+MF_{2}=2a\)，故 \(2a=2\sqrt{3}c\). 因而离心率
+\(e=\dfrac{c}{a}=\dfrac{\sqrt{3}}{3}\)，对应选项 C.
 \end{solution}
 
 \begin{problem}
@@ -71,7 +81,14 @@ D
 \end{answer}
 
 \begin{solution}
-由向量相等得 \(\lambda_{1}+2\lambda_{2}=3\)，\(2\lambda_{1}+3\lambda_{2}=4\). 将第一个等式乘以 \(2\) 后减去第二个等式，得 \(\lambda_{2}=2\)，代入第一个等式得 \(\lambda_{1}=-1\)，故选 D.
+由对应坐标相等，得方程组
+\[
+\begin{cases}
+\lambda_{1}+2\lambda_{2}=3,\\
+2\lambda_{1}+3\lambda_{2}=4.
+\end{cases}
+\]
+将第一式乘以 \(2\) 后减去第二式，得 \(\lambda_{2}=2\). 代回第一式，得 \(\lambda_{1}+4=3\)，即 \(\lambda_{1}=-1\)，故选 D.
 \end{solution}
 
 \begin{problem}
@@ -89,7 +106,18 @@ A
 \end{answer}
 
 \begin{solution}
-因为 \(M\)，\(N\) 分别是 \(AB\)，\(AC\) 的中点，所以 \(MN=2\)，且 \(\triangle AMN\) 与 \(\triangle ABC\) 都是等边三角形. 因此底面 \(MNCB\) 的面积为 \([ABC]-[AMN]=\dfrac{\sqrt{3}}{4}\cdot4^{2}-\dfrac{\sqrt{3}}{4}\cdot2^{2}=3\sqrt{3}\). 折起前，点 \(A\) 到棱 \(MN\) 的距离为 \(\triangle AMN\) 的高，即 \(\sqrt{3}\). 折起后四棱锥的高为该距离在底面法线方向上的分量，等于 \(\sqrt{3}\sin30^{\circ}=\dfrac{\sqrt{3}}{2}\). 所以体积为 \(\dfrac{1}{3}\cdot3\sqrt{3}\cdot\dfrac{\sqrt{3}}{2}=\dfrac{3}{2}\)，故选 A.
+因为 \(M\)，\(N\) 分别是 \(AB\)，\(AC\) 的中点，所以 \(MN\parallel BC\)，且 \(MN=\dfrac12BC=2\). 因而 \(\triangle AMN\) 和 \(\triangle ABC\) 都是等边三角形，底面四边形 \(MNCB\) 的面积为
+\[
+[MNCB]=[ABC]-[AMN]=\frac{\sqrt{3}}{4}\cdot4^{2}-\frac{\sqrt{3}}{4}\cdot2^{2}=3\sqrt{3}
+\]
+折起时，棱 \(MN\) 不变. 过 \(A\) 作垂直于 \(MN\) 的截面，截面内点 \(A\) 到 \(MN\) 的距离等于等边三角形 \(AMN\) 的高 \(\sqrt{3}\). 两平面的二面角为 \(30^{\circ}\)，所以点 \(A\) 到底面 \(MNCB\) 的距离为
+\(h=\sqrt{3}\sin30^{\circ}=\dfrac{\sqrt{3}}{2}\).
+
+于是四棱锥体积为
+\[
+V=\frac13[MNCB]h=\frac13\cdot3\sqrt{3}\cdot\frac{\sqrt{3}}2=\frac32
+\]
+故选 A.
 \end{solution}
 
 \begin{problem}
@@ -107,7 +135,10 @@ C
 \end{answer}
 
 \begin{solution}
-由题设，\(a_{1}=a_{0}=1\). 对于 \(n\geqslant1\)，有 \(a_{n+1}=a_{0}+a_{1}+\cdots+a_{n}=a_{n}+a_{n}=2a_{n}\). 因此数列从 \(a_{1}=1\) 开始按公比 \(2\) 成等比变化，得到 \(a_{n}=2^{n-1}\)，故选 C.
+由题设在 \(n=1\) 时得 \(a_{1}=a_{0}=1\). 对任意 \(n\geqslant1\)，分别写出相邻两项的定义式：
+\(a_{n+1}=a_{0}+a_{1}+\cdots+a_{n}\)，\(qquad a_{n}=a_{0}+a_{1}+\cdots+a_{n-1}\).
+相减得 \(a_{n+1}-a_{n}=a_{n}\)，即 \(a_{n+1}=2a_{n}\). 所以 \(\{a_n\}_{n\geqslant1}\) 是首项为 \(1\)、公比为 \(2\) 的等比数列，故
+\(a_{n}=1\cdot2^{n-1}=2^{n-1}\)，选 C.
 \end{solution}
 
 \begin{problem}
@@ -125,7 +156,18 @@ D
 \end{answer}
 
 \begin{solution}
-在平面 \(\beta\) 内取单位向量 \(\bs u\) 沿棱 \(l\)，取单位向量 \(\bs v\) 垂直于 \(l\). 取单位向量 \(\bs n\) 沿直线 \(m\)，则 \(\bs n\perp\alpha\) 且 \(\bs n\perp\bs u\). 由二面角为 \(120^{\circ}\)，可得 \(\lvert\bs n\cdot\bs v\rvert=\sin60^{\circ}=\dfrac{\sqrt{3}}{2}\). 平面 \(\beta\) 内任意直线的单位方向向量可写成 \(\bs d=\cos\varphi\,\bs u+\sin\varphi\,\bs v\). 设该直线与 \(m\) 所成的锐角为 \(\theta\)，则 \(\cos\theta=\lvert\bs n\cdot\bs d\rvert=\dfrac{\sqrt{3}}{2}\lvert\sin\varphi\rvert\)，所以 \(0\leqslant\cos\theta\leqslant\dfrac{\sqrt{3}}{2}\)，从而 \(30^{\circ}\leqslant\theta\leqslant90^{\circ}\)，故选 D.
+在平面 \(\beta\) 内取单位向量 \(\bs u\) 沿棱 \(l\)，取与 \(l\) 垂直的单位向量 \(\bs v\). 再取沿直线 \(m\) 的单位向量 \(\bs n\). 因为 \(m\perp\alpha\)，所以 \(\bs n\perp\alpha\)，从而 \(\bs n\perp\bs u\).
+
+二面角的锐角为 \(180^{\circ}-120^{\circ}=60^{\circ}\). 因而法向方向与平面 \(\beta\) 内垂直于棱的方向满足
+\(\lvert\bs n\cdot\bs v\rvert=\sin60^{\circ}=\dfrac{\sqrt{3}}2\). 平面 \(\beta\) 内任意直线的单位方向向量可写为
+\(\bs d=\cos\varphi\,\bs u+\sin\varphi\,\bs v\).
+
+若该直线与 \(m\) 所成的锐角为 \(\theta\)，则
+\[
+\cos\theta=\lvert\bs n\cdot\bs d\rvert
+=\frac{\sqrt{3}}2\lvert\sin\varphi\rvert
+\]
+因此 \(0\leqslant\cos\theta\leqslant\dfrac{\sqrt{3}}2\)，即 \(30^{\circ}\leqslant\theta\leqslant90^{\circ}\). 当直线平行于 \(v\) 或平行于 \(l\) 时分别取得两个端点，故选 D.
 \end{solution}
 
 \begin{problem}
@@ -143,7 +185,19 @@ D
 \end{answer}
 
 \begin{solution}
-利用和角公式，\(\sqrt{2}\cos\left(\dfrac{\pi}{4}-\alpha\right)=\cos\alpha+\sin\alpha\). 因此 \((\cos\alpha+\sin\alpha)^{2}=1+\sin2\alpha=1+\dfrac{24}{25}=\dfrac{49}{25}\)，所以 \(\cos\alpha+\sin\alpha=\pm\dfrac{7}{5}\). 题设不能确定其符号，故选 D.
+由余弦的差角公式，
+\[
+\sqrt{2}\cos\left(\frac\pi4-\alpha\right)
+=\sqrt{2}\left(\frac{\sqrt{2}}2\cos\alpha+\frac{\sqrt{2}}2\sin\alpha\right)
+=\cos\alpha+\sin\alpha
+\]
+于是
+\[
+(\cos\alpha+\sin\alpha)^2
+=\cos^2\alpha+\sin^2\alpha+2\sin\alpha\cos\alpha
+=1+\sin2\alpha=1+\frac{24}{25}=\frac{49}{25}
+\]
+所以 \(\cos\alpha+\sin\alpha=\pm\dfrac75\). 题设只给出 \(\sin2\alpha\)，不能确定 \(\sin\alpha\) 与 \(\cos\alpha\) 同为正还是同为负，故应取 \(\pm\dfrac75\)，选 D.
 \end{solution}
 
 \begin{problem}
@@ -161,7 +215,11 @@ D
 \end{answer}
 
 \begin{solution}
-共有 \(6\) 条竖直直线和 \(6\) 条水平直线. 确定一个矩形需要从竖直直线中选出 \(2\) 条作为对边，再从水平直线中选出 \(2\) 条作为对边，因此矩形数为 \(\mathrm C_{6}^{2}\mathrm C_{6}^{2}=15\times15=225\)，故选 D.
+因为 \(n=0\)，\(1\)，\(2\)，\(\ldots\)，\(5\)，所以共有 \(6\) 条竖直直线和 \(6\) 条水平直线. 一个矩形唯一由两条不同的竖直边界线和两条不同的水平边界线确定，故先从竖直直线中选出 \(2\) 条，再从水平直线中选出 \(2\) 条，矩形总数为
+\[
+\mathrm C_{6}^{2}\mathrm C_{6}^{2}=15\times15=225
+\]
+故选 D.
 \end{solution}
 
 \begin{problem}
@@ -179,7 +237,17 @@ B
 \end{answer}
 
 \begin{solution}
-圆心为 \(O(\sqrt{3},2)\)，半径为 \(1\). 直线与圆有两个不同的交点，当且仅当圆心到直线的距离小于半径，即 \(\dfrac{\lvert a\sqrt{3}+1\rvert}{\sqrt{a^{2}+1}}<1\). 两边平方并化简，得 \((a\sqrt{3}+1)^{2}<a^{2}+1\)，即 \(2a(a+\sqrt{3})<0\)，所以 \(-\sqrt{3}<a<0\)，故选 B.
+圆心为 \(O(\sqrt{3},2)\)，半径为 \(1\). 直线与圆有两个不同的交点，当且仅当圆心到直线的距离小于半径. 代入直线 \(ax+y-1=0\)，得
+\[
+\frac{\lvert a\sqrt{3}+2-1\rvert}{\sqrt{a^{2}+1}}<1
+\]
+即 \(\dfrac{\lvert a\sqrt{3}+1\rvert}{\sqrt{a^{2}+1}}<1\). 两边均非负，可以平方，得到
+\[
+(a\sqrt{3}+1)^2<a^2+1
+\quad\Longleftrightarrow\quad
+2a(a+\sqrt{3})<0
+\]
+因此 \(-\sqrt{3}<a<0\)，故选 B.
 \end{solution}
 
 \begin{problem}
@@ -197,7 +265,13 @@ D
 \end{answer}
 
 \begin{solution}
-令 \(t=\sin x\)，则 \(2-\cos2x=2-(1-2\sin^{2}x)=1+2t^{2}\)，所以 \(f(t)=1+2t^{2}\)（\(-1\leqslant t\leqslant1\)）. 因为 \(-1\leqslant\cos x\leqslant1\)，故 \(f(\cos x)=1+2\cos^{2}x=2+\cos2x\)，故选 D.
+令 \(t=\sin x\). 因为 \(\cos2x=1-2\sin^{2}x\)，所以
+\(f(t)=2-\cos2x=2-\left(1-2\sin^{2}x\right)=1+2t^{2}\)，\(-1\leqslant t\leqslant1\).
+又因为 \(-1\leqslant\cos x\leqslant1\)，可以把 \(\cos x\) 代入上式，得
+\[
+f(\cos x)=1+2\cos^{2}x=1+\left(1+\cos2x\right)=2+\cos2x
+\]
+故选 D.
 \end{solution}
 
 \begin{problem}
@@ -215,7 +289,19 @@ B
 \end{answer}
 
 \begin{solution}
-直线 \(l\) 与 \(l_{1}\) 的交点为 \(A(1,0)\). 在 \(l_{1}\) 上取点 \(B(0,-2)\). 将 \(B\) 关于 \(x-y-1=0\) 对称，利用点关于直线的对称公式，得 \(B'=(-1,-1)\). 因此 \(l_{2}\) 是过 \(A(1,0)\) 和 \(B'(-1,-1)\) 的直线，其斜率为 \(\dfrac{1}{2}\)，方程为 \(x-2y-1=0\)，故选 B.
+联立 \(l\) 与 \(l_{1}\) 的方程，得
+\[
+\begin{cases}
+x-y-1=0,\\
+2x-y-2=0,
+\end{cases}
+\qquad\Longrightarrow\qquad A=(1,0)
+\]
+在 \(l_{1}\) 上取点 \(B=(0,-2)\). 对于对称轴 \(x-y-1=0\)，点 \((x_{0},y_{0})\) 的对称点为
+\[
+\left(x_{0}-\frac{2(x_{0}-y_{0}-1)}2,\ y_{0}+\frac{2(x_{0}-y_{0}-1)}2\right)
+\]
+代入 \(B=(0,-2)\)，得其对称点 \(B'=(-1,-1)\). 因为对称轴上的交点 \(A\) 不动，所以 \(l_{2}\) 经过 \(A\) 和 \(B'\). 其斜率为 \(\dfrac{0-(-1)}{1-(-1)}=\dfrac12\)，故 \(y=\dfrac12(x-1)\)，即 \(x-2y-1=0\)，选 B.
 \end{solution}
 
 \section{填空题}
@@ -229,7 +315,7 @@ B
 \end{answer}
 
 \begin{solution}
-将抛物线方程与标准形式 \(y^{2}=2px\) 对比，得 \(2p=6\)，所以 \(p=3\). 抛物线 \(y^{2}=2px\) 的准线为 \(x=-\dfrac{p}{2}\)，故准线方程为 \(x=-\dfrac{3}{2}\).
+抛物线标准式为 \(y^{2}=2px\)，其中准线为 \(x=-\dfrac p2\). 将 \(y^{2}=6x\) 与标准式比较，得 \(2p=6\)，即 \(p=3\). 所以准线方程为 \(x=-\dfrac32\).
 \end{solution}
 
 \begin{problem}
@@ -241,7 +327,10 @@ B
 \end{answer}
 
 \begin{solution}
-从 \(5\) 名学生中任选 \(2\) 名共有 \(\mathrm C_{5}^{2}\) 种选法. 至少有 \(1\) 名女生的对立事件是选出的两人都是男生，共有 \(\mathrm C_{3}^{2}\) 种选法. 所求概率为 \(1-\dfrac{\mathrm C_{3}^{2}}{\mathrm C_{5}^{2}}=1-\dfrac{3}{10}=\dfrac{7}{10}\).
+从 \(5\) 名学生中任选 \(2\) 名，各种选法等可能，共有 \(\mathrm C_{5}^{2}=10\) 种. “至少有 \(1\) 名女生”的对立事件是“2 名学生都是男生”，有 \(\mathrm C_{3}^{2}=3\) 种. 因此所求概率为
+\[
+1-\frac{\mathrm C_{3}^{2}}{\mathrm C_{5}^{2}}=1-\frac3{10}=\frac7{10}
+\]
 \end{solution}
 
 \begin{problem}
@@ -253,7 +342,11 @@ B
 \end{answer}
 
 \begin{solution}
-配方得 \(x-x^{2}=-\left(x-\dfrac{1}{2}\right)^{2}+\dfrac{1}{4}\). 因为平方项不小于 \(0\)，所以函数的最大值为 \(\dfrac{1}{4}\).
+配方得
+\[
+y=x-x^{2}=-\left(x-\frac12\right)^{2}+\frac14
+\]
+因为 \(\left(x-\dfrac12\right)^2\geqslant0\)，所以 \(y\leqslant\dfrac14\)，且当 \(x=\dfrac12\) 时等号成立. 因此函数的最大值为 \(\dfrac14\).
 \end{solution}
 
 \begin{problem}
@@ -265,7 +358,15 @@ B
 \end{answer}
 
 \begin{solution}
-先将括号内的式子化为 \(x+\dfrac{1}{x}-2=\dfrac{(x-1)^{2}}{x}\)，于是原式为 \(x^{-n}(x-1)^{2n}\). 要得到常数项，需要从 \((x-1)^{2n}\) 中取 \(x^{n}\) 项，其系数为 \((-1)^{n}\mathrm C_{2n}^{n}\). 因此 \((-1)^{n}\mathrm C_{2n}^{n}=-20\)，这要求 \(n\) 为奇数. 当 \(n=1\) 时系数为 \(-2\)，当 \(n=3\) 时系数为 \(-\mathrm C_{6}^{3}=-20\)，而奇数 \(n\geqslant5\) 时 \(\mathrm C_{2n}^{n}>20\)，故 \(n=3\).
+先化简括号内的式子：
+\[
+x+\frac1x-2=\frac{x^2-2x+1}{x}=\frac{(x-1)^2}{x}
+\]
+因此原式为 \(x^{-n}(x-1)^{2n}\). 在 \((x-1)^{2n}\) 中取 \(x^n\) 项后再乘以 \(x^{-n}\)，才得到常数项；该项系数为 \((-1)^n\mathrm C_{2n}^{n}\). 所以
+\[
+(-1)^n\mathrm C_{2n}^{n}=-20
+\]
+右端为负数，故 \(n\) 必须为奇数. 当 \(n=1\) 时系数为 \(-\mathrm C_2^1=-2\)；当 \(n=3\) 时，系数为 \(-\mathrm C_6^3=-20\). 对奇数 \(n\geqslant5\)，有 \(\mathrm C_{2n}^{n}\geqslant\mathrm C_{10}^{5}=252>20\)，不可能满足条件. 因而 \(n=3\).
 \end{solution}
 
 \section{解答题}
@@ -275,7 +376,17 @@ B
 \end{problem}
 
 \begin{solution}
-由对数的定义域知 \(x>0\). 令 \(t=\log_a x\)，则不等式化为 \(t^{2}<2t\)，即 \(t(t-2)<0\)，所以 \(0<t<2\). 当 \(a>1\) 时，函数 \(y=a^t\) 递增，故 \(1<x<a^{2}\)；当 \(0<a<1\) 时，函数 \(y=a^t\) 递减，故 \(a^{2}<x<1\). 因此解集为
+由对数的定义域，必须有 \(x>0\). 令 \(t=\log_a x\)，则原不等式等价于
+\[
+t^2<2t
+\quad\Longleftrightarrow\quad
+t(t-2)<0
+\quad\Longleftrightarrow\quad
+0<t<2
+\]
+当 \(a>1\) 时，指数函数 \(y=a^t\) 在 \(\R\) 上递增，因而不等式 \(0<\log_a x<2\) 等价于
+\(a^0<x<a^2\)，即 \(1<x<a^2\). 当 \(0<a<1\) 时，指数函数递减，不等号方向改变，故
+\(a^2<x<a^0\)，即 \(a^2<x<1\). 因而解集为
 \[
 \begin{cases}
 (1,a^{2}),&a>1,\\
@@ -291,13 +402,20 @@ B
 \begin{solution}
 由 \(B_{n}-B_{n-1}=b_{n}\)（\(n\geqslant2\)）以及题设，得
 \[
-4b_{n}=(b_{n}+1)^{2}-(b_{n-1}+1)^{2}.
+4b_{n}=(b_{n}+1)^{2}-(b_{n-1}+1)^{2}
 \]
 移项并整理为 \((b_{n}-1)^{2}=(b_{n-1}+1)^{2}\)，所以
 \[
-b_{n}-1=\pm(b_{n-1}+1).
+b_{n}-1=\pm(b_{n-1}+1)
 \]
-因此对每个 \(n\geqslant2\)，都有两种可能：\(b_{n}=b_{n-1}+2\)，或 \(b_{n}=-b_{n-1}\). 例如一直取第一种可能得到 \(b_{n}=2n-1\)，而取 \(b_{2}=-b_{1}=-1\)，以后交替取相反数，可得到 \(1,-1,1,-1,\ldots\). 这两个数列都满足题设；事实上，上述两种递推关系反推回去即可保证 \(B_{n}=\dfrac{1}{4}(b_{n}+1)^{2}\). 所以按原题给出的条件，数列 \(\{b_{n}\}\) 不能唯一确定，因而不存在唯一的通项公式. 若题意另有未写出的条件 \(b_{n}>0\)，则只能取 \(b_{n}=b_{n-1}+2\)，此时才有 \(b_{n}=2n-1\).
+因此对每个 \(n\geqslant2\)，都有两种可能：
+\[
+b_{n}=b_{n-1}+2\quad\text{或}\quad b_{n}=-b_{n-1}
+\]
+这里的“或”不能被题设进一步排除. 例如始终取第一种递推，得到 \(b_n=2n-1\). 直接验证：其前 \(n\) 项和为 \(1+3+\cdots+(2n-1)=n^2\)，而
+\(\dfrac14(b_n+1)^2=\dfrac14(2n)^2=n^2\)，满足题设.
+
+另一方面，取 \(b_n=(-1)^{n-1}\)，则 \(B_n=1\)（\(n\) 为奇数）或 \(B_n=0\)（\(n\) 为偶数），而 \(\dfrac14(b_n+1)^2\) 也分别等于 \(1\) 或 \(0\)，同样满足题设. 因此原题条件允许至少两个不同数列，不能唯一确定通项公式. 若另有未写出的附加条件 \(b_n>0\)，则只能取 \(b_n=b_{n-1}+2\)，此时才有 \(b_n=2n-1\).
 \end{solution}
 
 \begin{problem}
@@ -315,16 +433,16 @@ b_{n}-1=\pm(b_{n-1}+1).
 \begin{enumerate}
 \item 有
 \[
-d_{1}^{2}+d_{2}^{2}=\frac{(kx-y)^{2}+(kx+y)^{2}}{k^{2}+1}=\frac{2(k^{2}x^{2}+y^{2})}{k^{2}+1}=a.
+d_{1}^{2}+d_{2}^{2}=\frac{(kx-y)^{2}+(kx+y)^{2}}{k^{2}+1}=\frac{2(k^{2}x^{2}+y^{2})}{k^{2}+1}=a
 \]
 故轨迹方程为
 \[
-\frac{x^{2}}{\dfrac{a(k^{2}+1)}{2k^{2}}}+\frac{y^{2}}{\dfrac{a(k^{2}+1)}{2}}=1.
+\frac{x^{2}}{\dfrac{a(k^{2}+1)}{2k^{2}}}+\frac{y^{2}}{\dfrac{a(k^{2}+1)}{2}}=1
 \]
 因为 \(a>0\)，该轨迹是椭圆；当且仅当两个分母相等，即 \(k=1\) 时，它是圆.
-\item 由恒等式 \(\lvert u-v\rvert+\lvert u+v\rvert=2\max\{\lvert u\rvert,\lvert v\rvert\}\)，得
+\item 令 \(u=kx\)，\(v=y\). 若 \(\lvert u\rvert\geqslant\lvert v\rvert\)，则 \(\lvert u-v\rvert+\lvert u+v\rvert=2\lvert u\rvert\)；若 \(\lvert v\rvert\geqslant\lvert u\rvert\)，则 \(\lvert u-v\rvert+\lvert u+v\rvert=2\lvert v\rvert\). 因而
 \[
-d_{1}+d_{2}=\frac{2\max\{k\lvert x\rvert,\lvert y\rvert\}}{\sqrt{k^{2}+1}}=c.
+d_{1}+d_{2}=\frac{2\max\{k\lvert x\rvert,\lvert y\rvert\}}{\sqrt{k^{2}+1}}=c
 \]
 所以轨迹满足 \(\max\{k\lvert x\rvert,\lvert y\rvert\}=\dfrac{c\sqrt{k^{2}+1}}{2}\)，即以原点为中心、边平行于坐标轴的矩形的边界，其中半长为 \(\dfrac{c\sqrt{k^{2}+1}}{2k}\)，半宽为 \(\dfrac{c\sqrt{k^{2}+1}}{2}\). 当 \(k=1\) 时，该矩形为正方形.
 \end{enumerate}
@@ -346,7 +464,7 @@ d_{1}+d_{2}=\frac{2\max\{k\lvert x\rvert,\lvert y\rvert\}}{\sqrt{k^{2}+1}}=c.
 \begin{solution}
 取底面 \(ABC\) 为水平面，建立空间直角坐标系，使 \(A=(0,0,0)\)，\(C=(a,0,0)\)，\(B=\left(\dfrac{a}{2},\dfrac{\sqrt{3}}{2}a,0\right)\). 因为侧面 \(A_{1}ACC_{1}\) 垂直于底面 \(ABC\)，且其与底面的交线为 \(AC\)，可设 \(\overrightarrow{AA_{1}}=(s,0,h)\). 由侧棱长为 \(a\)，有 \(s^{2}+h^{2}=a^{2}\). 又
 \[
-A_{1}B^{2}=\left(s-\frac{a}{2}\right)^{2}+\frac{3a^{2}}{4}+h^{2}=2a^{2}-as=\frac{6a^{2}}{4},
+A_{1}B^{2}=\left(s-\frac{a}{2}\right)^{2}+\frac{3a^{2}}{4}+h^{2}=2a^{2}-as=\frac{6a^{2}}{4}
 \]
 所以 \(s=\dfrac{a}{2}\)，进而 \(h=\dfrac{\sqrt{3}}{2}a\). 因此
 \(A_{1}=\left(\frac{a}{2},0,\frac{\sqrt{3}}{2}a\right)\)，\(B_{1}=\left(a,\frac{\sqrt{3}}{2}a,\frac{\sqrt{3}}{2}a\right)\)，\(C_{1}=\left(\frac{3a}{2},0,\frac{\sqrt{3}}{2}a\right)\).
@@ -354,7 +472,7 @@ A_{1}B^{2}=\left(s-\frac{a}{2}\right)^{2}+\frac{3a^{2}}{4}+h^{2}=2a^{2}-as=\frac
 \begin{enumerate}
 \item \(\overrightarrow{AC}=(a,0,0)\)，\(\overrightarrow{BC_{1}}=\left(a,-\dfrac{\sqrt{3}}{2}a,\dfrac{\sqrt{3}}{2}a\right)\)，所以
 \[
-\cos\theta=\frac{\overrightarrow{AC}\cdot\overrightarrow{BC_{1}}}{\lvert\overrightarrow{AC}\rvert\lvert\overrightarrow{BC_{1}}\rvert}=\frac{a^{2}}{a\cdot\dfrac{\sqrt{10}}{2}a}=\frac{\sqrt{10}}{5}.
+\cos\theta=\frac{\overrightarrow{AC}\cdot\overrightarrow{BC_{1}}}{\lvert\overrightarrow{AC}\rvert\lvert\overrightarrow{BC_{1}}\rvert}=\frac{a^{2}}{a\cdot\dfrac{\sqrt{10}}{2}a}=\frac{\sqrt{10}}{5}
 \]
 \item \(\overrightarrow{A_{1}B}=\left(0,\dfrac{\sqrt{3}}{2}a,-\dfrac{\sqrt{3}}{2}a\right)\)，\(\overrightarrow{AC}=(a,0,0)\)，\(\overrightarrow{AB_{1}}=\left(a,\dfrac{\sqrt{3}}{2}a,\dfrac{\sqrt{3}}{2}a\right)\). 因而 \(\overrightarrow{A_{1}B}\cdot\overrightarrow{AC}=0\)，且 \(\overrightarrow{A_{1}B}\cdot\overrightarrow{AB_{1}}=0\). 直线 \(AC\) 与 \(AB_{1}\) 相交于 \(A\)，且都在平面 \(AB_{1}C\) 内，所以 \(A_{1}B\perp\) 平面 \(AB_{1}C\).
 \end{enumerate}
@@ -365,11 +483,27 @@ A_{1}B^{2}=\left(s-\frac{a}{2}\right)^{2}+\frac{3a^{2}}{4}+h^{2}=2a^{2}-as=\frac
 \end{problem}
 
 \begin{solution}
-毛利润为销售收入减去进货支出，因此
+销售量不能为负，且零售价满足 \(p\geqslant0\). 因此先由
 \[
-L=(p-20)Q=(p-20)(8300-170p-p^{2})=-p^{3}-150p^{2}+11700p-166000.
+Q=8300-170p-p^2\geqslant0
 \]
-销售量非负且零售价非负时，\(p\) 在相应可行区间内. 对利润函数求导，得 \(L'(p)=-3p^{2}-300p+11700=-3(p-30)(p+130)\). 因此在 \(p\geqslant0\) 的可行区间内，\(0\leqslant p<30\) 时 \(L'(p)>0\)，\(p>30\) 时 \(L'(p)<0\)，所以 \(L\) 在 \(p=30\) 时取得最大值. 此时 \(Q=8300-170\times30-30^{2}=2300\)，故 \(L_{\max}=(30-20)\times2300=23000\text{ 元}\). 即零售价定为 \(30\text{ 元}\) 时毛利润最大，最大毛利润为 \(23000\text{ 元}\).
+确定可行范围. 整理得 \(p^2+170p-8300\leqslant0\)，其两个根为
+\(-85-5\sqrt{621}\) 和 \(-85+5\sqrt{621}\). 结合 \(p\geqslant0\)，可行范围为
+\(0\leqslant p\leqslant5\sqrt{621}-85\). 直接计算
+\(Q(30)=8300-170\times30-30^2=2300>0\)，所以 \(p=30\) 在可行范围内. 毛利润为销售收入减去进货支出，故
+\[
+L=(p-20)Q=(p-20)(8300-170p-p^2)
+=-p^3-150p^2+11700p-166000
+\]
+求导得
+\[
+L'(p)=-3p^2-300p+11700=-3(p-30)(p+130)
+\]
+在可行范围内 \(p\geqslant0\)，所以 \(p+130>0\). 当 \(0\leqslant p<30\) 时 \(L'(p)>0\)，当 \(p>30\) 时 \(L'(p)<0\). 因此 \(L\) 先增后减，在可行范围内于 \(p=30\) 取得最大值.
+
+此时
+\(Q=8300-170\times30-30^2=2300\)，\(L_{\max}=(30-20)\times2300=23000\).
+所以零售价定为 \(30\text{ 元}\) 时毛利润最大，最大毛利润为 \(23000\text{ 元}\).
 \end{solution}
 
 \begin{problem}
@@ -382,24 +516,29 @@ L=(p-20)Q=(p-20)(8300-170p-p^{2})=-p^{3}-150p^{2}+11700p-166000.
 \end{problem}
 
 \begin{solution}
-将抛物线方程配方得 \(y=(x+2)^{2}-\dfrac{1}{2}\). 设点 \(M\) 的横坐标为 \(x_{0}\)，记 \(t=x_{0}+2\)，则 \(M=(t-2,t^{2}-\dfrac{1}{2})\)，且切线斜率为 \(2t\).
+将抛物线方程配方得 \(y=(x+2)^{2}-\dfrac{1}{2}\). 设点 \(M\) 的横坐标为 \(x_{0}\)，记 \(t=x_{0}+2\)，则 \(M=(t-2,t^{2}-\dfrac{1}{2})\). 由求导或顶点式可知，点 \(M\) 处切线斜率为 \(2t\).
 
 \begin{enumerate}
-\item 法线斜率为 \(-\dfrac{1}{2}\)，所以切线斜率为 \(2\)，从而 \(2t=2\)，得 \(t=1\). 因此 \(x_{0}=-1\)，\(y_{0}=1-\dfrac{1}{2}=\dfrac{1}{2}\)，即 \(M\left(-1,\dfrac{1}{2}\right)\).
-\item 当 \(t=0\) 时，点为 \(M_{0}\left(-2,-\dfrac{1}{2}\right)\)，切线水平，法线为竖直直线 \(x=-2\)，所以它对任意实数 \(a\) 都经过 \(P(-2,a)\). 当 \(t\neq0\) 时，法线方程为
+\item 法线斜率为 \(-\dfrac{1}{2}\)，所以切线斜率为 \(2\)，从而 \(2t=2\)，得 \(t=1\). 因此 \(x_{0}=t-2=-1\)，\(y_{0}=t^2-\dfrac12=\dfrac12\)，即 \(M\left(-1,\dfrac12\right)\).
+\item 当 \(t=0\) 时，点为 \(M_{0}\left(-2,-\dfrac12\right)\)，切线水平，法线为竖直直线 \(x=-2\)，所以它对任意实数 \(a\) 都经过 \(P(-2,a)\). 当 \(t\neq0\) 时，法线斜率是切线斜率的负倒数，故法线方程为
 \[
-y-\left(t^{2}-\frac{1}{2}\right)=-\frac{1}{2t}(x+2-t).
+y-\left(t^{2}-\frac{1}{2}\right)=-\frac{1}{2t}(x+2-t)
 \]
-将 \(P(-2,a)\) 代入，得 \(a-\left(t^{2}-\dfrac{1}{2}\right)=\dfrac{1}{2}\)，即 \(a=t^{2}\). 当 \(a\leqslant0\) 时没有非顶点解，只有 \(M_{0}\)；当 \(a>0\) 时，\(t=\pm\sqrt{a}\)，除 \(M_{0}\) 外还有
-\(M_{+}=\left(-2+\sqrt{a},a-\frac{1}{2}\right)\)，\(M_{-}=\left(-2-\sqrt{a},a-\frac{1}{2}\right)\).
+将 \(P(-2,a)\) 代入，得到
+\[
+a-\left(t^{2}-\frac12\right)=\frac12,
+\qquad\Longleftrightarrow\qquad a=t^2
+\]
+若 \(a<0\)，方程 \(t^2=a\) 无实数解，只有顶点法线 \(x=-2\). 若 \(a=0\)，仍只有 \(t=0\)，所以只有 \(M_0\). 若 \(a>0\)，则 \(t=\pm\sqrt a\)，除 \(M_0\) 外还有
+\(M_{+}=\left(-2+\sqrt a,a-\frac12\right)\) 和 \(M_{-}=\left(-2-\sqrt a,a-\frac12\right)\).
 相应法线分别为
 \[
-y-\left(a-\frac{1}{2}\right)=-\frac{x+2-\sqrt{a}}{2\sqrt{a}},
+y-\left(a-\frac12\right)=-\frac{x+2-\sqrt a}{2\sqrt a}
 \]
 以及
 \[
-y-\left(a-\frac{1}{2}\right)=\frac{x+2+\sqrt{a}}{2\sqrt{a}}.
+y-\left(a-\frac12\right)=\frac{x+2+\sqrt a}{2\sqrt a}
 \]
-综上，法线总是存在：\(a\leqslant0\) 时只有 \(M_{0}\) 及其法线 \(x=-2\)；\(a>0\) 时有 \(M_{0}\)，\(M_{+}\)，\(M_{-}\) 及上述三条法线.
+综上，法线总是存在：当 \(a\leqslant0\) 时只有 \(M_0\) 及其法线 \(x=-2\)；当 \(a>0\) 时有 \(M_0\)，\(M_+\)，\(M_-\)，以及上述三条法线.
 \end{enumerate}
 \end{solution}

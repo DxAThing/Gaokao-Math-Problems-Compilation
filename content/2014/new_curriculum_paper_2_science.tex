@@ -16,6 +16,11 @@
 D
 \end{answer}
 
+\begin{solution}
+由 \(x^2-3x+2=(x-1)(x-2)\)，得 \(N=[1,2]\). 因此
+\(M\cap N=\{0,1,2\}\cap[1,2]=\{1,2\}\)，故选 D.
+\end{solution}
+
 \begin{problem}
 设复数 \(z_1\)，\(z_2\) 在复平面内的对应点关于虚轴对称，\(z_1=2+\i\)，则 \(z_1z_2=\)（\quad）
 
@@ -29,6 +34,11 @@ D
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+关于虚轴对称时，实部变号、虚部不变，所以 \(z_2=-2+\i\). 从而
+\(z_1z_2=(2+\i)(-2+\i)=-4+2\i-2\i-1=-5\)，故选 A.
+\end{solution}
 
 \begin{problem}
 设向量 \(\bs{a}\)，\(\bs{b}\) 满足 \(\left|\bs{a}+\bs{b}\right|=\sqrt{10}\)，\(\left|\bs{a}-\bs{b}\right|=\sqrt{6}\)，则 \(\bs{a}\cdot\bs{b}=\)（\quad）
@@ -44,6 +54,15 @@ A
 A
 \end{answer}
 
+\begin{solution}
+将两个模平方并相减，得
+\[
+\left|\bs{a}+\bs{b}\right|^2-\left|\bs{a}-\bs{b}\right|^2
+ =4\bs{a}\cdot\bs{b}
+\]
+代入已知数值，\(10-6=4\bs{a}\cdot\bs{b}\)，所以 \(\bs{a}\cdot\bs{b}=1\)，故选 A.
+\end{solution}
+
 \begin{problem}
 钝角三角形 \(ABC\) 的面积是 \(\frac{1}{2}\)，\(AB=1\)，\(BC=\sqrt{2}\)，则 \(AC=\)（\quad）
 
@@ -58,6 +77,17 @@ A
 B
 \end{answer}
 
+\begin{solution}
+设 \(\angle ABC=B\). 由三角形面积公式，
+\[
+\frac{1}{2}=\frac{1}{2}\cdot AB\cdot BC\sin B
+ =\frac{\sqrt{2}}{2}\sin B
+\]
+所以 \(\sin B=\dfrac{\sqrt{2}}{2}\)，即 \(B=45^{\circ}\) 或 \(135^{\circ}\).
+
+由余弦定理，\(AC^2=AB^2+BC^2-2AB\cdot BC\cos B=3-2\sqrt{2}\cos B\). 当 \(B=45^{\circ}\) 时，\(AC=1\)，此时 \(BC^2=AB^2+AC^2\)，三角形为直角三角形，不符合钝角条件；因此 \(B=135^{\circ}\). 于是 \(AC^2=3+2=5\)，故 \(AC=\sqrt{5}\)，选 B.
+\end{solution}
+
 \begin{problem}
 某地区空气质量监测资料表明，一天的空气质量为优良的概率是 \(0.75\)，连续两天为优良的概率是 \(0.6\)，已知某天的空气质量为优良，则随后一天的空气质量为优良的概率是（\quad）
 
@@ -71,6 +101,14 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+设某天和随后一天的空气质量均为优良分别为事件 \(A\) 和 \(B\). 已知 \(P(A)=0.75\)，\(P(AB)=0.6\)，所以
+\[
+P(B\mid A)=\frac{P(AB)}{P(A)}=\frac{0.6}{0.75}=0.8
+\]
+故选 A.
+\end{solution}
 
 \begin{problem}
 如图，网格纸上正方形小格的边长为 \(1\)（表示 \(1\mathrm{~cm}\)），图中粗线画出的是某零件的三视图，该零件由一个底面半径为 \(3\mathrm{~cm}\)，高为 \(6\mathrm{~cm}\) 的圆柱体毛坯切削得到，则切削掉的部分的体积与原来毛坯体积的比值为（\quad）
@@ -88,6 +126,18 @@ A
 C
 \end{answer}
 
+\begin{solution}
+由圆形视图可见两个同心圆的半径分别为 \(3\mathrm{~cm}\) 和 \(2\mathrm{~cm}\)，由两个矩形视图可见半径为 \(3\mathrm{~cm}\) 的圆柱部分高为 \(2\mathrm{~cm}\)，半径为 \(2\mathrm{~cm}\) 的圆柱部分高为 \(4\mathrm{~cm}\). 因此该零件是同轴的两个圆柱组成，体积为
+\[
+V=\pi\cdot3^2\cdot2+\pi\cdot2^2\cdot4=34\pi\mathrm{~cm}^3
+\]
+毛坯体积为 \(V_0=\pi\cdot3^2\cdot6=54\pi\mathrm{~cm}^3\)，切削掉的体积与毛坯体积之比为
+\[
+\frac{V_0-V}{V_0}=\frac{54\pi-34\pi}{54\pi}=\frac{10}{27}
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
 执行如图所示的程序框图，如果输入的 \(x\)，\(t\) 均为 \(2\)，则输出的 \(S=\)（\quad）
 
@@ -104,6 +154,12 @@ C
 D
 \end{answer}
 
+\begin{solution}
+输入后初始值为 \(M=1\)，\(S=3\)，\(k=1\). 当 \(k=1\) 时，更新得
+\(M=\dfrac{1}{1}\cdot2=2\)，\(S=2+3=5\)，随后 \(k=2\). 当 \(k=2\) 时，更新得
+\(M=\dfrac{2}{2}\cdot2=2\)，\(S=2+5=7\)，随后 \(k=3\). 此时 \(k>t=2\)，循环结束，输出 \(S=7\)，故选 D.
+\end{solution}
+
 \begin{problem}
 设曲线 \(y=ax-\ln\left(x+1\right)\) 在点 \((0,0)\) 处的切线方程为 \(y=2x\)，则 \(a=\)（\quad）
 
@@ -117,6 +173,14 @@ D
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+函数在 \(x=0\) 处的导数为
+\[
+y'(0)=\left.a-\frac{1}{x+1}\right|_{x=0}=a-1
+\]
+切线 \(y=2x\) 的斜率为 \(2\)，故 \(a-1=2\)，解得 \(a=3\)，选 D.
+\end{solution}
 
 \begin{problem}
 设 \(x\)，\(y\) 满足约束条件 \(\begin{cases}
@@ -136,6 +200,13 @@ x-3y+1\leqslant 0,\\
 B
 \end{answer}
 
+\begin{solution}
+约束边界三条直线分别为 \(x+y=7\)、\(x-3y=-1\) 和 \(3x-y=5\). 解三组联立方程，分别得：由 \(x+y=7\)、\(x-3y=-1\) 得 \((x,y)=(5,2)\)；由 \(x+y=7\)、\(3x-y=5\) 得 \((x,y)=(3,4)\)；由 \(x-3y=-1\)、\(3x-y=5\) 得 \((x,y)=(2,1)\).
+这三个点均满足约束条件，构成可行域的三个顶点. 在顶点处计算目标函数
+\(z(5,2)=8\)，\(z(3,4)=2\)，\(z(2,1)=3\).
+线性目标函数在多边形可行域上的最大值在顶点取得，所以最大值为 \(8\)，故选 B.
+\end{solution}
+
 \begin{problem}
 设 \(F\) 为抛物线 \(C:y^2=3x\) 的焦点，过 \(F\) 且倾斜角为 \(30^{\circ}\) 的直线交 \(C\) 于 \(A\)，\(B\) 两点，\(O\) 为坐标原点，则 \(\triangle OAB\) 的面积为（\quad）
 
@@ -149,6 +220,29 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+抛物线 \(y^2=3x\) 可写成 \(y^2=4px\)，故 \(p=\dfrac{3}{4}\)，焦点为 \(F\left(\dfrac{3}{4},0\right)\). 过焦点且倾斜角为 \(30^{\circ}\) 的直线为
+\[
+y=\frac{1}{\sqrt{3}}\left(x-\frac{3}{4}\right)
+\]
+将 \(x=\sqrt{3}y+\dfrac{3}{4}\) 代入抛物线方程，得
+\[
+4y^2-12\sqrt{3}y-9=0
+\]
+设交点纵坐标为 \(y_1\)，\(y_2\). 由一元二次方程根的差公式，
+\(\lvert y_1-y_2\rvert=\dfrac{\sqrt{(-12\sqrt{3})^2-4\cdot4\cdot(-9)}}{4}=\dfrac{24}{4}=6\). 直线与 \(x\) 轴夹角为 \(30^{\circ}\)，所以 \(|AB|=\dfrac{6}{\sin30^{\circ}}=12\).
+
+原点到该直线的距离为
+\[
+d=\frac{3/4}{\sqrt{1+3}}=\frac{3}{8}
+\]
+因此
+\[
+S_{\triangle OAB}=\frac{1}{2}|AB|d=\frac{1}{2}\cdot12\cdot\frac{3}{8}=\frac{9}{4}
+\]
+故选 D.
+\end{solution}
 
 \begin{problem}
 直三棱柱 \(ABC-A_1B_1C_1\) 中，\(\angle BCA=90^{\circ}\)，\(M\)，\(N\) 分别是 \(A_1B_1\)，\(A_1C_1\) 的中点，\(BC=CA=CC_1\)，则 \(BM\) 与 \(AN\) 所成角的余弦值为（\quad）
@@ -164,6 +258,20 @@ D
 C
 \end{answer}
 
+\begin{solution}
+取 \(C\) 为原点，令 \(CA\)、\(CB\)、\(CC_1\) 方向分别为三个坐标轴正方向，并由已知长度均为 \(1\) 取单位长度. 则
+\(A=(1,0,0)\)，\(B=(0,1,0)\)，\(A_1=(1,0,1)\)，\(B_1=(0,1,1)\)，\(C_1=(0,0,1)\).
+于是
+\(M=\left(\frac12,\frac12,1\right)\)，\(N=\left(\frac12,0,1\right)\).
+取 \(\overrightarrow{BM}=(\frac12,-\frac12,1)\)，\(\overrightarrow{AN}=(-\frac12,0,1)\)，则
+\(\overrightarrow{BM}\cdot\overrightarrow{AN}=\frac34\)，\(|\overrightarrow{BM}|=\frac{\sqrt{6}}{2}\)，\(|\overrightarrow{AN}|=\frac{\sqrt{5}}{2}\).
+所以两异面直线所成角的余弦为
+\[
+\frac{\frac34}{\frac{\sqrt{6}}{2}\cdot\frac{\sqrt{5}}{2}}=\frac{\sqrt{30}}{10}
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
 设函数 \(f(x)=\sqrt{3}\sin\frac{\pi x}{m}\)，若存在 \(f(x)\) 的极值点 \(x_0\) 满足 \(x_0^2+\left|f(x_0)\right|^2<m^2\)，则 \(m\) 的取值范围是（\quad）
 
@@ -178,6 +286,24 @@ C
 C
 \end{answer}
 
+\begin{solution}
+由于 \(m\ne0\)，有
+\[
+f'(x)=\frac{\sqrt{3}\pi}{m}\cos\frac{\pi x}{m}
+\]
+极值点满足 \(\cos\dfrac{\pi x}{m}=0\)，所以其横坐标为 \(x_k=(k+\frac12)m\)，其中 \(k\in\Z\)，并且在这些点上 \(|f(x_k)|=\sqrt{3}\). 任何极值点都满足 \(|x_k|\geqslant\dfrac{|m|}{2}\).
+
+若题设不等式对某个极值点成立，则
+\[
+m^2>x_0^2+|f(x_0)|^2\geqslant\frac{m^2}{4}+3
+\]
+从而 \(m^2>4\)，即 \(|m|>2\). 反之取 \(x_0=\dfrac{m}{2}\)，它是极值点，且
+\[
+x_0^2+|f(x_0)|^2=\frac{m^2}{4}+3<m^2
+\]
+在 \(|m|>2\) 时成立. 因此 \(m\in(-\infty,-2)\cup(2,+\infty)\)，故选 C.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -188,6 +314,14 @@ C
 \(\frac{1}{2}\)
 \end{answer}
 
+\begin{solution}
+二项式定理中 \(x^7\) 项来自选取 \(7\) 个 \(x\) 和 \(3\) 个 \(a\)，其系数为
+\[
+\mathrm C_{10}^{3}a^3=120a^3
+\]
+由题设 \(120a^3=15\)，得 \(a^3=\dfrac18\)，所以 \(a=\dfrac12\).
+\end{solution}
+
 \begin{problem}
 函数 \(f(x)=\sin\left(x+2\varphi\right)-2\sin\varphi\cos\left(x+\varphi\right)\) 的最大值为\fillinblank{}.
 \end{problem}
@@ -195,6 +329,16 @@ C
 \begin{answer}
 1
 \end{answer}
+
+\begin{solution}
+由和差化积公式，
+\[
+2\sin\varphi\cos(x+\varphi)
+=\sin(x+2\varphi)+\sin\bigl(\varphi-(x+\varphi)\bigr)
+=\sin(x+2\varphi)-\sin x
+\]
+所以 \(f(x)=\sin x\)，其最大值为 \(1\).
+\end{solution}
 
 \begin{problem}
 已知偶函数 \(f(x)\) 在 \(\left[0,+\infty\right)\) 单调递减，\(f(2)=0\)，若 \(f(x-1)>0\)，则 \(x\) 的取值范围是\fillinblank{}.
@@ -204,6 +348,14 @@ C
 \((-1,3)\)
 \end{answer}
 
+\begin{solution}
+在 \([0,+\infty)\) 上，函数单调递减且 \(f(2)=0\)，所以 \(f(t)>0\) 当且仅当 \(0\leqslant t<2\). 由偶性，推广到整个实数轴为
+\[
+f(t)>0\quad\Longleftrightarrow\quad |t|<2
+\]
+令 \(t=x-1\)，则 \(|x-1|<2\)，解得 \(-1<x<3\).
+\end{solution}
+
 \begin{problem}
 设点 \(M(x_0,1)\)，若在圆 \(O:x^2+y^2=1\) 上存在点 \(N\)，使得 \(\angle OMN=45^{\circ}\)，则 \(x_0\) 的取值范围是\fillinblank{}.
 \end{problem}
@@ -211,6 +363,27 @@ C
 \begin{answer}
 \([-1,1]\)
 \end{answer}
+
+\begin{solution}
+记 \(M=(x_0,1)\)，则 \(\overrightarrow{MO}=(-x_0,-1)\). 从 \(\overrightarrow{MO}\) 旋转 \(45^{\circ}\) 得到的两条候选直线方向向量可分别取为
+\(\bs d_1=(1-x_0,-1-x_0)\)，\(\bs d_2=(-1-x_0,x_0-1)\).
+这两条直线到原点的距离都等于
+\[
+\frac{|x_0^2+1|}{\sqrt{(1-x_0)^2+(1+x_0)^2}}
+=\frac{\sqrt{x_0^2+1}}{\sqrt2}
+\]
+若 \(\lvert x_0\rvert>1\)，上述两直线到原点的距离均大于 \(1\)，不可能与单位圆相交. 反之，令任一方向向量为 \(\bs d_i\)，交点写成 \(M+t\bs d_i\). 由 \(M\cdot\bs d_i=-(x_0^2+1)\)、\(\lvert\bs d_i\rvert^2=2(x_0^2+1)\)，交圆条件化为
+\[
+2(x_0^2+1)t^2-2(x_0^2+1)t+x_0^2=0
+\]
+当 \(\lvert x_0\rvert\leqslant1\) 时，该方程的判别式为 \(4(x_0^2+1)(1-x_0^2)\geqslant0\)，且两根的和为 \(1\)、积为 \(\dfrac{x_0^2}{2(x_0^2+1)}\geqslant0\). 若 \(x_0=0\)，两根为 \(0\) 和 \(1\)；若 \(0<\lvert x_0\rvert\leqslant1\)，两根均为正，因此总有一个严格正根 \(t\). 于是相交点 \(N=M+t\bs d_i\) 位于相应射线上，且 \(N\ne M\)，确实满足角度条件. 于是
+
+\[
+\frac{\sqrt{x_0^2+1}}{\sqrt2}\leqslant1
+\quad\Longleftrightarrow\quad x_0^2\leqslant1
+\]
+所以 \(x_0\in[-1,1]\).
+\end{solution}
 
 \section{解答题}
 
@@ -232,7 +405,7 @@ C
 \[
 \frac{1}{a_1}+\frac{1}{a_2}+\cdots+\frac{1}{a_n}
 \leqslant 1+\frac{1}{3}+\cdots+\frac{1}{3^{n-1}}
-<\frac{3}{2}.
+<\frac{3}{2}
 \]
 \end{enumerate}
 \end{solution}
@@ -260,7 +433,7 @@ C
 \(\overrightarrow{AE}=(0,\frac{\sqrt{3}}{2},\frac{1}{2})\)，\(\overrightarrow{AC}=(b,\sqrt{3},0)\)，所以平面 \(AEC\) 的一个法向量可取 \(\bs{n}_2=(\sqrt{3},-b,\sqrt{3}b)\). 由二面角为 \(60^{\circ}\)，得
 \[
 \frac{\left|\bs{n}_1\cdot\bs{n}_2\right|}{\left|\bs{n}_1\right|\left|\bs{n}_2\right|}
-=\frac{\sqrt{3}}{\sqrt{3+4b^2}}=\cos60^{\circ}=\frac{1}{2},
+=\frac{\sqrt{3}}{\sqrt{3+4b^2}}=\cos60^{\circ}=\frac{1}{2}
 \]
 故 \(b=\dfrac{3}{2}\).
 
@@ -298,7 +471,7 @@ C
 \item \(\bar t=4\)，\(\bar y=\dfrac{2.9+3.3+3.6+4.4+4.8+5.2+5.9}{7}=4.3\). 并且
 \(\sum_{i=1}^{7}(t_i-\bar t)^2=9+4+1+0+1+4+9=28\)，
 \[
-\sum_{i=1}^{7}(t_i-\bar t)(y_i-\bar y)=(-3)(-1.4)+(-2)(-1.0)+(-1)(-0.7)+0(0.1)+1(0.5)+2(0.9)+3(1.6)=14.
+\sum_{i=1}^{7}(t_i-\bar t)(y_i-\bar y)=(-3)(-1.4)+(-2)(-1.0)+(-1)(-0.7)+0(0.1)+1(0.5)+2(0.9)+3(1.6)=14
 \]
 所以 \(\hat b=\dfrac{14}{28}=0.5\)，\(\hat a=4.3-0.5\times4=2.3\)，线性回归方程为 \(\hat y=0.5t+2.3\).
 
@@ -318,20 +491,18 @@ C
 \begin{enumerate}
 \item 设椭圆焦距的一半为 \(c\)，则 \(c^2=a^2-b^2\)，焦点为 \(F_1(-c,0)\)，\(F_2(c,0)\). 由 \(MF_2\) 与 \(x\) 轴垂直，且斜率为正，可取 \(M=(c,\frac{b^2}{a})\). 因此
 \(k_{MN}=k_{MF_1}=\dfrac{b^2/a}{2c}=\dfrac{1-e^2}{2e}\)，其中 \(e=\dfrac{c}{a}\). 由题设 \(k_{MN}=\dfrac{3}{4}\)，得
-\[
-\frac{1-e^2}{2e}=\frac{3}{4},\qquad 2e^2+3e-2=0.
-\]
+\(\frac{1-e^2}{2e}=\frac{3}{4}\)，\(2e^2+3e-2=0\).
 因 \(0<e<1\)，故 \(e=\dfrac{1}{2}\).
 
 \item 仍设 \(c^2=a^2-b^2\). 由直线在 \(y\) 轴上的截距为正可知仍取
 \(M=\left(c,\frac{b^2}{a}\right)\). 在直线 \(F_1M\) 上取参数 \(t\)，使得
 \(X(t)=F_1+t\overrightarrow{F_1M}=(c(2t-1),\frac{b^2}{a}t)\). 把它代入椭圆方程并利用 \(a^2=b^2+c^2\)，得
 \[
-(4c^2+b^2)t^2-4c^2t-b^2=0.
+(4c^2+b^2)t^2-4c^2t-b^2=0
 \]
 其中一个根为 \(t=1\)，对应点 \(M\)，另一个根为 \(t_N=-\dfrac{b^2}{4c^2+b^2}\)，对应点 \(N\). 由于 \(F_1\) 对应 \(t=0\)，所以
 \[
-\frac{|MN|}{|F_1N|}=\frac{1-t_N}{-t_N}=2+\frac{4c^2}{b^2}=5,
+\frac{|MN|}{|F_1N|}=\frac{1-t_N}{-t_N}=2+\frac{4c^2}{b^2}=5
 \]
 从而 \(c^2=\dfrac{3}{4}b^2\)，即 \(a^2=\dfrac{7}{4}b^2\).
 
@@ -352,26 +523,25 @@ C
 \begin{enumerate}
 \item \(f'(x)=\e^x+\e^{-x}-2=(\e^{x/2}-\e^{-x/2})^2\geqslant0\)，且仅在 \(x=0\) 时等号成立，所以 \(f(x)\) 在 \(\R\) 上单调递增.
 
-\item 记 \(g(x)=f(2x)-4bf(x)\)，则 \(g(0)=0\)，且令 \(u=\e^x+\e^{-x}\)，有
+\item 记 \(g(x)=f(2x)-4bf(x)\)，则 \(g(0)=0\). 令 \(u=\e^x+\e^{-x}\)，当 \(x>0\) 时 \(u>2\)，并且
 \[
-g'(x)=2(\e^{2x}+\e^{-2x}-2)-4b(\e^x+\e^{-x}-2)=2(u-2)(u+2-2b).
+g'(x)=2(\e^{2x}+\e^{-2x}-2)-4b(\e^x+\e^{-x}-2)=2(u-2)(u+2-2b)
 \]
-当 \(b\leqslant2\) 且 \(x>0\) 时，\(u>2\) 且 \(u+2-2b>0\)，所以 \(g'(x)>0\)，从而 \(g(x)>g(0)=0\). 特别地，\(b=2\) 满足题设.
+当 \(b\leqslant2\) 且 \(x>0\) 时，\(u+2-2b\geqslant u-2>0\)，所以 \(g'(x)>0\)，从而 \(g(x)>g(0)=0\). 特别地，\(b=2\) 满足题设.
 
-若 \(b>2\)，则由 \(f(x)=\dfrac{x^3}{3}+o(x^3)\)（\(x\to0\)）可得
-\(\dfrac{f(2x)}{4f(x)}\to2\). 因此取充分小的正数 \(x\)，便有 \(f(2x)-4bf(x)<0\)，不满足题设. 故 \(b\) 的最大值为 \(2\).
+若 \(b>2\)，由于 \(u(x)\) 连续且 \(u(0)=2\)，可取充分小的正数 \(x\)，使得 \(u(x)+2-2b<0\). 此时 \(u(x)-2>0\)，故 \(g'(x)<0\). 由 \(g(0)=0\) 可知在这样的小正数范围内 \(g(x)<0\)，不满足题设. 因此满足条件的最大值为 \(b=2\).
 
 \item 令 \(L=\ln2\)，\(x_0=\ln\sqrt{2}=\dfrac{L}{2}\). 取 \(b=2\)，由（2）知 \(g(x_0)>0\)，而
 \(f(2x_0)=\dfrac{3}{2}-2L\)，\(f(x_0)=\dfrac{\sqrt{2}}{2}-L\)，所以
 \(\dfrac{3}{2}-4\sqrt{2}+6L>0\)，即
 \[
-L>\frac{8\sqrt{2}-3}{12}>\frac{8\times1.4142-3}{12}=0.6928.
+L>\frac{8\sqrt{2}-3}{12}>\frac{8\times1.4142-3}{12}=0.6928
 \]
 
 再取 \(b_0=1+\dfrac{3\sqrt{2}}{4}>2\). 函数 \(u(x)=\e^x+\e^{-x}\) 在 \((0,+\infty)\) 上递增，且 \(u(x_0)=\dfrac{3\sqrt{2}}{2}=2b_0-2\)，故当 \(0<x<x_0\) 时 \(g'(x)<0\)，从而 \(g(x_0)<g(0)=0\). 于是
 \(-\dfrac{3}{2}-2\sqrt{2}+(2+3\sqrt{2})L<0\)，即
 \[
-L<\frac{18+\sqrt{2}}{28}<\frac{18+1.4143}{28}<0.6934.
+L<\frac{18+\sqrt{2}}{28}<\frac{18+1.4143}{28}<0.6934
 \]
 因此 \(0.6928<L<0.6934\)，故 \(\ln2\) 精确到 \(0.001\) 的近似值为 \(0.693\).
 \end{enumerate}
@@ -417,7 +587,7 @@ L<\frac{18+\sqrt{2}}{28}<\frac{18+1.4143}{28}<0.6934.
 \begin{cases}
 x=1+\cos t,\\
 y=\sin t,
-\end{cases}\qquad 0\leqslant t\leqslant\pi.
+\end{cases}\qquad 0\leqslant t\leqslant\pi
 \]
 
 \item 由参数方程，\(\dfrac{dx}{dt}=-\sin t\)，\(\dfrac{dy}{dt}=\cos t\). 当 \(t=0\) 或 \(t=\pi\) 时切线为竖直线，均不满足与 \(l\) 垂直；当 \(0<t<\pi\) 时，切线斜率为 \(-\cot t\). 直线 \(l\) 的斜率为 \(\sqrt{3}\)，所以切线斜率为 \(-\dfrac{1}{\sqrt{3}}\)，从而

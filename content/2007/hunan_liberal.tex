@@ -16,6 +16,10 @@
 D.
 \end{answer}
 
+\begin{solution}
+移项并因式分解得 \(x^{2}-x=x(x-1)>0\). 当 \(x<0\) 或 \(x>1\) 时两因式同号，乘积为正；当 \(0\leqslant x\leqslant1\) 时乘积不为正. 因此解集为 \((-\infty,0)\cup(1,+\infty)\)，故选 D.
+\end{solution}
+
 \begin{problem}
 若 \(O\)，\(E\)，\(F\) 是不共线的任意三点，则以下各式中成立的是（\quad）
 
@@ -29,6 +33,10 @@ D.
 \begin{answer}
 B.
 \end{answer}
+
+\begin{solution}
+以 \(O\) 为起点的位矢分别记为 \(\overrightarrow{OE}\) 和 \(\overrightarrow{OF}\). 由向量的三角形法则，\(\overrightarrow{OE}+\overrightarrow{EF}=\overrightarrow{OF}\)，所以 \(\overrightarrow{EF}=\overrightarrow{OF}-\overrightarrow{OE}\)，故选 B.
+\end{solution}
 
 \begin{problem}
 设 \(p\)：\(b^2 - 4ac > 0\)（\(a \neq 0\)），\(q\)：关于 \(x\) 的方程 \(ax^2 + bx + c = 0\)（\(a \neq 0\)）有实根，则 \(p\) 是 \(q\) 的（\quad）
@@ -44,6 +52,10 @@ B.
 A.
 \end{answer}
 
+\begin{solution}
+关于 \(x\) 的一元二次方程有实根的充要条件是判别式 \(\Delta=b^{2}-4ac\geqslant0\). 命题 \(p\) 给出 \(b^{2}-4ac>0\)，因此必有 \(\Delta\geqslant0\)，即 \(p\) 是 \(q\) 的充分条件. 反过来，取 \(a=1\)，\(b=0\)，\(c=0\)，方程 \(x^{2}=0\) 有实根，但 \(b^{2}-4ac=0\)，命题 \(p\) 不成立，所以不是必要条件. 故选 A.
+\end{solution}
+
 \begin{problem}
 在等比数列 \(\{a_{n}\}\)（\(n \in \N^{*}\)）中，若 \(a_{1} = 1\)，\(a_{4} = \frac{1}{8}\)，则该数列的前 \(10\) 项和为（\quad）
 
@@ -58,6 +70,11 @@ A.
 B.
 \end{answer}
 
+\begin{solution}
+设等比数列的公比为 \(r\). 由 \(a_{4}=a_{1}r^{3}\) 得 \(r^{3}=\frac18\)，所以 \(r=\frac12\). 于是前 \(10\) 项和为
+\(S_{10}=\dfrac{1-r^{10}}{1-r}=\dfrac{1-2^{-10}}{1-2^{-1}}=2-\dfrac1{2^{9}}\)，故选 B.
+\end{solution}
+
 \begin{problem}
 在 \((1 + x)^n\)（\(n \in \N^*\)）的二项展开式中，只有其 \(x^5\) 的系数最大，则 \(n =\)（\quad）
 
@@ -71,6 +88,22 @@ B.
 \begin{answer}
 C.
 \end{answer}
+
+\begin{solution}
+展开式中 \(x^k\) 的系数为 \(\mathrm C_n^k\)，且
+\[
+\frac{\mathrm C_n^{k+1}}{\mathrm C_n^k}=\frac{n-k}{k+1}
+\]
+要使 \(x^5\) 项存在，必须有 \(n\geqslant5\). 当 \(n=5\) 时其系数为 \(1\)，
+而常数项的系数为 \(\mathrm C_5^0=1\)，最大系数不唯一，故不合题意.
+当 \(n\geqslant6\) 时，比较 \(x^5\) 项与相邻两项：
+\(\frac{\mathrm C_n^5}{\mathrm C_n^4}=\frac{n-4}{5}\)，\(\frac{\mathrm C_n^6}{\mathrm C_n^5}=\frac{n-5}{6}\).
+若 \(x^5\) 的系数是唯一最大值，必须同时满足
+\(\frac{n-4}{5}>1\)，\(\frac{n-5}{6}<1\)
+即 \(n>9\) 且 \(n<11\)，所以 \(n=10\). 直接验证
+\(\mathrm C_{10}^5/\mathrm C_{10}^4=6/5>1\)、\(\mathrm C_{10}^6/\mathrm C_{10}^5=5/6<1\)，
+并且二项式系数先增后减，故 \(x^5\) 项确为唯一最大项. 因此选 C.
+\end{solution}
 
 \begin{problem}
 如图，在正四棱柱 \(ABCD - A_{1}B_{1}C_{1}D_{1}\) 中，\(E\)，\(F\) 分别是 \(AB_{1}\)，\(BC_{1}\) 的中点，则以下结论中不成立的是（\quad）
@@ -88,6 +121,15 @@ C.
 D.
 \end{answer}
 
+\begin{solution}
+建立直角坐标系，设正方形底面的边长为 \(s>0\)，棱柱的高为 \(h>0\)，取
+\(A=(0,0,0)\)，\(B=(s,0,0)\)，\(C=(s,s,0)\)，\(D=(0,s,0)\)，\(B_{1}=(s,0,h)\)，\(C_{1}=(s,s,h)\). 则
+\(E=\left(\frac{s}{2},0,\frac{h}{2}\right)\)，\(F=\left(s,\frac{s}{2},\frac{h}{2}\right)\)，所以 \(\overrightarrow{EF}=\left(\frac{s}{2},\frac{s}{2},0\right)\).
+
+取各直线的方向向量，\(\overrightarrow{BB_{1}}=(0,0,h)\)，\(\overrightarrow{BD}=(-s,s,0)\)，\(\overrightarrow{CD}=(-s,0,0)\)，\(\overrightarrow{A_{1}C_{1}}=(s,s,0)\). 于是
+\(\overrightarrow{EF}\cdot\overrightarrow{BB_{1}}=0\)，\(\overrightarrow{EF}\cdot\overrightarrow{BD}=0\)，所以 \(EF\) 分别垂直于 \(BB_{1}\) 和 \(BD\). 直线 \(EF\) 上各点的 \(z\) 坐标为 \(h/2\)，而 \(CD\) 在 \(z=0\) 平面内，故二者不相交；又它们的方向向量不平行，所以 \(EF\) 与 \(CD\) 异面. 但 \(\overrightarrow{EF}\parallel\overrightarrow{A_{1}C_{1}}\)，两直线平行而非异面. 因此不成立的是 D.
+\end{solution}
+
 \begin{problem}
 根据某水文观测点的历史统计数据，得到某条河流水位的频率分布直方图（如图），从图中可以看出，该水文观测点平均至少一百年才遇到一次的洪水的最低水位是（\quad）
 
@@ -103,6 +145,10 @@ D.
 \begin{answer}
 C.
 \end{answer}
+
+\begin{solution}
+由直方图可读出水位区间 \([48,49)\)、\([49,50)\)、\([50,51)\) 的频率分别为 \(2\%\)、\(1\%\)、\(0.5\%\)，每个组距为 \(1\) 米. 水位至少为 \(49\) 米时的频率为 \(1\%+0.5\%=1.5\%>1\%\)，平均不到 \(100\) 年发生一次；水位至少为 \(50\) 米时的频率为 \(0.5\%\leqslant1\%\)，平均至少 \(100\) 年发生一次. 因此最低水位为 \(50\) 米，故选 C.
+\end{solution}
 
 \begin{problem}
 函数 \( f(x) = \begin{cases}
@@ -122,6 +168,15 @@ x^2 - 4x + 3, & x > 1,
 C.
 \end{answer}
 
+\begin{solution}
+由于 \(g(x)=\log_{2}x\) 的定义域为 \(x>0\)，先考察 \(0<x\leqslant1\). 令
+\(h_{1}(x)=4x-4-\log_{2}x\)，则
+\(h_{1}'(x)=4-\dfrac1{x\ln2}\)，\(h_{1}''(x)=\dfrac1{x^{2}\ln2}>0\). 因此 \(h_{1}'\) 严格递增，\(h_{1}\) 只有一个极小值点. 又 \(h_{1}(x)\to+\infty\)（\(x\to0^{+}\)），\(h_{1}(1)=0\)，且 \(h_{1}\left(\frac12\right)=-1<0\)，所以这一段有两个交点.
+
+再考察 \(x>1\)，令 \(h_{2}(x)=x^{2}-4x+3-\log_{2}x\). 有
+\(h_{2}'(x)=2x-4-\dfrac1{x\ln2}\)，\(h_{2}''(x)=2+\dfrac1{x^{2}\ln2}>0\). 函数 \(h_{2}'\) 严格递增，且 \(h_{2}'(1)<0\)，\(h_{2}(1)=0\)，故 \(h_{2}\) 在 \(1\) 的右邻域为负；又 \(h_{2}(x)\to+\infty\)（\(x\to+\infty\)），所以 \(h_{2}(x)=0\) 在 \(x>1\) 内恰有一个根. 两段合计有 \(2+1=3\) 个交点，故选 C.
+\end{solution}
+
 \begin{problem}
 设 \(F_{1}\)，\(F_{2}\) 分别是椭圆 \(\frac{x^{2}}{a^{2}} + \frac{y^{2}}{b^{2}} = 1\)（\(a > b > 1\)）的左，右焦点，\(P\) 是其右准线上纵坐标为 \(\sqrt{3} c\)（\(c\) 为半焦距）的点，且 \(|F_{1}F_{2}| = |F_{2}P|\)，则椭圆的离心率是（\quad）
 
@@ -135,6 +190,15 @@ C.
 \begin{answer}
 D.
 \end{answer}
+
+\begin{solution}
+设椭圆半焦距为 \(c\)，则右焦点 \(F_{2}=(c,0)\)，右准线方程为 \(x=\dfrac{a^{2}}c\)，故 \(P=\left(\dfrac{a^{2}}c,\sqrt3c\right)\). 由题设 \(|F_{1}F_{2}|=2c\)，而
+\[
+|F_{2}P|^{2}=\left(\frac{a^{2}}c-c\right)^{2}+3c^{2}=4c^{2}
+\]
+因此 \((a^{2}-c^{2})^{2}=c^{4}\). 因 \(a>c>0\)，得 \(a^{2}-c^{2}=c^{2}\)，即 \(a^{2}=2c^{2}\). 所以离心率
+\(e=\dfrac ca=\dfrac{\sqrt2}{2}\)，故选 D.
+\end{solution}
 
 \begin{problem}
 设集合 \(M = \{1, 2, 3, 4, 5, 6\}\)，\(S_1\)，\(S_2\)，\(\cdots\)，\(S_k\) 都是 \(M\) 的含两个元素的子集，且满足：对任意的 \(S_i = \{a_i, b_i\}\)，\(S_j = \{a_j, b_j\}\)（\(i \neq j\)，\(i\)，\(j \in \{1, 2, 3, \cdots, k\}\)），都有 \(\min \left\{\frac{a_i}{b_i}, \frac{b_i}{a_i}\right\} \neq \min \left\{\frac{a_j}{b_j}, \frac{b_j}{a_j}\right\}\)（\(\min \{x, y\}\) 表示两个数 \(x\)，\(y\) 中的较小者）. 则 \(k\) 的最大值是（\quad）
@@ -150,6 +214,11 @@ D.
 B.
 \end{answer}
 
+\begin{solution}
+设每个二元子集写成 \(\{i,j\}\)，其中 \(i<j\). 对应的数为 \(i/j\). 逐一列出 \(1\leqslant i<j\leqslant6\) 后，不同的数恰为
+\(\frac12\)，\(\frac13\)，\(\frac23\)，\(\frac14\)，\(\frac34\)，\(\frac15\)，\(\frac25\)，\(\frac35\)，\(\frac45\)，\(\frac16\)，\(\frac56\)，共 \(11\) 个. 每个不同的数至多选取一个子集；而这 \(11\) 个数均可由相应子集取得，所以最大值为 \(11\)，故选 B.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -160,6 +229,11 @@ B.
 \(\left(x-1\right)^2+\left(y-1\right)^2=2\).
 \end{answer}
 
+\begin{solution}
+圆心到直线 \(x+y-4=0\) 的距离为
+\(r=\dfrac{|1+1-4|}{\sqrt{1^{2}+1^{2}}}=\sqrt2\). 因此圆的方程为 \((x-1)^{2}+(y-1)^{2}=r^{2}=2\).
+\end{solution}
+
 \begin{problem}
 在 \(\triangle ABC\) 中，角 \(A\)，\(B\)，\(C\) 所对的边分别为 \(a\)，\(b\)，\(c\)，若 \(a = 1\)，\(c = \sqrt{3}\)，\(C = \frac{\pi}{3}\)，则 \(A =\)\fillinblank{}.
 \end{problem}
@@ -168,13 +242,22 @@ B.
 \(\frac{\pi}{6}\).
 \end{answer}
 
+\begin{solution}
+由正弦定理，\(\dfrac{a}{\sin A}=\dfrac{c}{\sin C}\)，所以
+\(\sin A=\dfrac{a\sin C}{c}=\dfrac{1\cdot\frac{\sqrt3}{2}}{\sqrt3}=\frac12\). 故 \(A=\frac{\pi}{6}\) 或 \(A=\frac{5\pi}{6}\). 但三角形内角满足 \(A+C<\pi\)，而 \(\frac{5\pi}{6}+\frac{\pi}{3}>\pi\)，舍去后者，故 \(A=\frac{\pi}{6}\).
+\end{solution}
+
 \begin{problem}
-若 \(a > 0\)，\(a^{\frac{3}{4}} = \frac{4}{9}\)，则 \(\log_{\frac{2}{3}} a =\)\fillinblank{}.
+若 \(a > 0\)，\(a^{\frac{2}{3}} = \frac{4}{9}\)，则 \(\log_{\frac{2}{3}} a =\)\fillinblank{}.
 \end{problem}
 
 \begin{answer}
 \(3\).
 \end{answer}
+
+\begin{solution}
+由 \(a^{\frac23}=\frac49=\left(\frac23\right)^{2}\)，且 \(a>0\)，两边同取 \(\frac32\) 次幂得 \(a=\left(\frac23\right)^{3}\). 因此 \(\log_{\frac23}a=3\).
+\end{solution}
 
 \begin{problem}
 设集合 \(A = \{(x, y) \mid y \geqslant |x - 2|, x \geqslant 0\}\)，\(B = \{(x, y) \mid y \leqslant -x + b\}\)，\(A \cap B \neq \emptyset\).
@@ -189,6 +272,21 @@ B.
 \(\left[2,+\infty\right)\)，\(\frac{9}{2}\).
 \end{answer}
 
+\begin{solution}
+要使 \(A\cap B\neq\emptyset\)，需存在 \(x\geqslant0\) 使
+\(|x-2|\leqslant -x+b\)，即 \(b\geqslant x+|x-2|\). 而
+\[
+x+|x-2|=\begin{cases}
+2,&0\leqslant x\leqslant2,\\
+2x-2,&x\geqslant2,
+\end{cases}
+\]
+其最小值为 \(2\)，所以 \(b\geqslant2\)，即 \(b\in[2,+\infty)\).
+
+对任意 \((x,y)\in A\cap B\)，有 \(y\leqslant-x+b\)，从而
+\(x+2y\leqslant x+2(-x+b)=2b-x\leqslant2b\). 当 \(x=0\)、\(y=b\) 时，只要 \(b\geqslant2\)，点 \((0,b)\) 同时属于 \(A\) 和 \(B\)，上述上界可以取得. 因此 \(x+2y\) 的最大值为 \(2b\). 由 \(2b=9\)，得 \(b=\frac92\).
+\end{solution}
+
 \begin{problem}
 棱长为 \(1\) 的正方体 \(ABCD - A_{1}B_{1}C_{1}D_{1}\) 的 \(8\) 个顶点都在球 \(O\) 的表面上，则球 \(O\) 的表面积是\fillinblank{}；设 \(E\)，\(F\) 分别是该正方体的棱 \(AA_{1}\)，\(DD_{1}\) 的中点，则直线 \(EF\) 被球 \(O\) 截得的线段长为\fillinblank{}.
 \end{problem}
@@ -196,6 +294,15 @@ B.
 \begin{answer}
 \(3\pi\)，\(\sqrt{2}\).
 \end{answer}
+
+\begin{solution}
+球心是正方体中心 \(O=\left(\frac12,\frac12,\frac12\right)\)，球的半径为正方体体对角线的一半：
+\(R=\dfrac{\sqrt3}{2}\). 所以球的表面积为 \(4\pi R^{2}=3\pi\).
+
+取 \(A=(0,0,0)\)，\(D=(0,1,0)\)，竖直方向为 \(z\) 轴，则
+\(E=\left(0,0,\frac12\right)\)，\(F=\left(0,1,\frac12\right)\). 直线 \(EF\) 上的点满足 \(x=0\)、\(z=\frac12\)，球心到该直线的距离为 \(d=\frac12\). 因此截得弦长为
+\(2\sqrt{R^{2}-d^{2}}=2\sqrt{\frac34-\frac14}=\sqrt2\).
+\end{solution}
 
 \section{解答题}
 
@@ -210,8 +317,23 @@ B.
 
 \begin{solution}
 \begin{enumerate}
-\item \(T=\pi\).
-\item 函数的单调递增区间为 \(\left[k\pi-\frac{\pi}{2},k\pi\right]\)（\(k\in\Z\)）.
+\item 令 \(u=x+\dfrac{\pi}{8}\)，则
+\[
+f(x)=1-2\sin ^2u+2\sin u\cos u
+=\cos 2u+\sin 2u
+=\sqrt{2}\cos\left(2u-\frac{\pi}{4}\right)
+=\sqrt{2}\cos 2x
+\]
+因此 \(f(x)\) 的最小正周期为 \(T=\pi\).
+\item 由 \(f'(x)=-2\sqrt{2}\sin 2x\)，函数递增当且仅当
+\(\sin 2x\leqslant0\). 于是
+\[
+2k\pi-\pi\leqslant2x\leqslant2k\pi
+\quad\Longleftrightarrow\quad
+k\pi-\frac{\pi}{2}\leqslant x\leqslant k\pi
+\]
+所以单调递增区间为
+\(\left[k\pi-\dfrac{\pi}{2},k\pi\right]\)，其中 \(k\in\Z\).
 \end{enumerate}
 \end{solution}
 
@@ -226,8 +348,18 @@ B.
 
 \begin{solution}
 \begin{enumerate}
-\item \(0.9\).
-\item \(0.972\).
+\item 设事件 \(A\) 为参加过财会培训，事件 \(B\) 为参加过计算机培训，则
+\(P(A)=0.6\)，\(P(B)=0.75\). 参加过至少一项培训的事件为
+\(A\cup B\)，故
+\[
+P(A\cup B)=1-P(\overline A\cap\overline B)
+=1-(1-0.6)(1-0.75)=1-0.1=0.9
+\]
+\item 由第一问，每个人参加过培训的概率为 \(p=0.9\)，未参加过培训的概率为
+\(1-p=0.1\). 三人中至少有两人参加过培训包括恰有两人和三人参加两种互斥情形，因此
+\[
+P=\mathrm C_3^2(0.9)^2(0.1)+(0.9)^3=3\times0.81\times0.1+0.729=0.972
+\]
 \end{enumerate}
 \end{solution}
 
@@ -245,8 +377,42 @@ B.
 
 \begin{solution}
 \begin{enumerate}
-\item \(BC\perp PQ\).
-\item 二面角 \(B-AC-P\) 的大小为 \(\arctan 2\).
+\item 建立直角坐标系，使 \(PQ\) 为 \(x\) 轴，平面 \(\alpha\) 为 \(xOy\) 平面，
+\(\beta\) 为 \(xOz\) 平面，并取 \(A=(0,0,0)\)、\(P=(p,0,0)\)（\(p>0\)）.
+由 \(\angle BAP=45^\circ\) 可设 \(B=(s,s,0)\)，其中 \(s>0\).
+设 \(C=(u,0,v)\). 由 \(CA=CB\) 得
+\[
+u^2+v^2=(u-s)^2+s^2+v^2
+\]
+从而 \(u=s\). 因此
+\(\overrightarrow{BC}=C-B=(0,-s,v)\)，\(\overrightarrow{PQ}=(1,0,0)\)
+两向量的数量积为 \(0\)，故 \(BC\perp PQ\).
+\item 点 \(C=(s,0,v)\) 在平面 \(\beta\) 内. 直线 \(CA\) 与平面 \(\alpha\) 所成角为
+\(30^\circ\)，而 \(CA\) 在 \(\alpha\) 上的射影为 \(AO\)，其中
+\(O=(s,0,0)\)，所以
+\(\tan30^\circ=\frac{|v|}{s}\)，\(|v|=\frac{s}{\sqrt3}\).
+取 \(v=s/\sqrt3\)（取相反方向只改变坐标符号，不改变二面角）.
+取过 \(A\) 且垂直于 \(AC\) 的平面作截面. 由于公共棱方向
+\(\overrightarrow{AC}\) 可约去比例 \(s\)，设
+\(\bs{d}=\left(1,0,\frac1{\sqrt3}\right)\)，\(\bs{b}=(1,1,0)\)，\(\bs{p}=(1,0,0)\).
+将 \(AB\)、\(AP\) 投影到垂直于 \(\bs{d}\) 的截面内，得
+\[
+\bs{w}_B=\bs{b}-\frac{\bs{b}\cdot\bs{d}}{\bs{d}\cdot\bs{d}}\bs{d}
+=\left(\frac14,1,-\frac{\sqrt3}{4}\right)
+\]
+\[
+\bs{w}_P=\bs{p}-\frac{\bs{p}\cdot\bs{d}}{\bs{d}\cdot\bs{d}}\bs{d}
+=\left(\frac14,0,-\frac{\sqrt3}{4}\right)
+\]
+这两个投影分别代表二面角两侧的射线，且
+\(\bs{w}_B\cdot\bs{w}_P=\frac14\)，\(|\bs{w}_B|=\frac{\sqrt5}{2}\)，\(|\bs{w}_P|=\frac12\).
+所以若二面角 \(B-AC-P\) 为 \(\theta\)，则
+\[
+\cos\theta=\frac{\bs{w}_B\cdot\bs{w}_P}{|\bs{w}_B||\bs{w}_P|}
+=\frac1{\sqrt5}
+\]
+故 \(\tan\theta=2\)，从而
+\(\theta=\arctan 2\).
 \end{enumerate}
 \end{solution}
 
@@ -262,8 +428,47 @@ B.
 
 \begin{solution}
 \begin{enumerate}
-\item \(\overrightarrow{CA}\cdot\overrightarrow{CB}=-1\).
-\item 点 \(M\) 的轨迹方程为 \(x^{2}-y^{2}=4\).
+\item 双曲线 \(x^2-y^2=2\) 可写为
+\(\dfrac{x^2}{2}-\dfrac{y^2}{2}=1\)，故
+\(a^2=b^2=2\)，焦半距满足 \(c^2=a^2+b^2=4\)，右焦点为
+\(F=(2,0)\). 对非竖直动直线写成
+\(y=k(x-2)\)，\(t=k^2\).
+代入双曲线方程，得
+\[
+(1-t)x^2+4tx-(4t+2)=0
+\]
+当 \(t=1\) 时方程退化为 \(4x-6=0\)，只有一个有限交点，不符合相交于
+两点的情形，故以下 \(t\ne1\). 设两交点的横坐标为 \(x_1\)，\(x_2\)，由韦达定理
+\(S=x_1+x_2=-\frac{4t}{1-t}\)，\(P=x_1x_2=-\frac{4t+2}{1-t}\).
+又 \(y_i=k(x_i-2)\)，所以
+\[
+\overrightarrow{CA}\cdot\overrightarrow{CB}
+=(x_1-1)(x_2-1)+y_1y_2
+=P-S+1+t\bigl(P-2S+4\bigr)=-1
+\]
+若动直线为竖直线 \(x=2\)，交点为 \((2,\sqrt2)\)、\((2,-\sqrt2)\)，此时
+\(\overrightarrow{CA}\cdot\overrightarrow{CB}=1-2=-1\). 因此该数量积恒为
+\(-1\).
+\item 设 \(M=(X,Y)\). 由
+\(\overrightarrow{CM}=\overrightarrow{CA}+\overrightarrow{CB}+\overrightarrow{CO}\)，
+其中 \(C=(1,0)\)、\(O=(0,0)\)，得到
+\(X-1=(x_1-1)+(x_2-1)-1=S-3\)，\(Y=y_1+y_2=k(S-4)\).
+因此
+\(X=S-2=\frac{2(t+1)}{t-1}\)，\(Y=\frac{4k}{t-1}\).
+从而
+\[
+X^2-Y^2
+=\frac{4(t+1)^2-16t}{(t-1)^2}=4
+\]
+竖直动直线时 \(M=(2,0)\)，也满足该方程. 反过来，若
+\(X^2-Y^2=4\)，则 \(X\leqslant-2\) 或 \(X\geqslant2\). 当 \(X=2\) 时
+\(Y=0\)，该点由竖直动直线取得；当 \(X\neq2\) 时，令
+\(t=\dfrac{X+2}{X-2}\)，则 \(t\geqslant0\)，并令
+\(k=\dfrac{Y(t-1)}4\)，可由 \(X^2-Y^2=4\) 验证 \(k^2=t\). 因而取斜率为
+\(k\) 的动直线即可取得该点，故轨迹方程为
+\[
+X^2-Y^2=4
+\]
 \end{enumerate}
 \end{solution}
 
@@ -278,8 +483,32 @@ B.
 
 \begin{solution}
 \begin{enumerate}
-\item \(a_{n+2}-a_n=6\)（\(n\geqslant2\)）.
-\item 取 \(a=3\)，则 \(b_n=a_{6\cdot7^{n-1}}\)（\(n\in\N^{*}\)）.
+\item 因为 \(S_n=S_{n-1}+a_n\)，原条件可化为
+\[
+(S_n-S_{n-1})(S_n+S_{n-1})=3n^2a_n
+\]
+又 \(S_n-S_{n-1}=a_n\ne0\)，所以
+\(S_n+S_{n-1}=3n^2\)，\(n\geqslant2\).
+分别写出上式中 \(n+1\) 与 \(n\) 的等式并相减，得
+\(a_n+a_{n+1}=S_{n+1}-S_{n-1}=3(2n+1)\)，\(n\geqslant2\).
+再将上式中的 \(n+1\) 与 \(n\) 两式相减，得到
+\(a_{n+2}-a_n=3(2n+3)-3(2n+1)=6\)，\(n\geqslant2\).
+因此数列 \(\{a_{n+2}-a_n\}\) 是常数数列，常数为 \(6\).
+\item 取奇数 \(a=a_1=3\). 令 \(n=2\) 代入上式，有
+\[
+S_2+S_1=(a_1+a_2)+a_1=12
+\]
+从而 \(a_2=6\). 再由 \(a_2+a_3=3(2\cdot2+1)=15\)，得 \(a_3=9\).
+结合 \(a_{n+2}=a_n+6\)，可归纳得
+\(a_n=3n\)，\(n\in\N^*\).
+确实，此时 \(S_n=\dfrac{3n(n+1)}2\)，有
+\(S_n+S_{n-1}=3n^2\)，\(S_n^2-S_{n-1}^2=a_n(S_n+S_{n-1})=9n^3=3n^2a_n\)
+满足题设递推式. 又
+\[
+b_n=18\cdot7^{n-1}=3\left(6\cdot7^{n-1}\right)
+=a_{6\cdot7^{n-1}}
+\]
+所以 \(b_n\) 是数列 \(\{a_n\}\) 的第 \(6\cdot7^{n-1}\) 项.
 \end{enumerate}
 \end{solution}
 
@@ -294,7 +523,38 @@ B.
 
 \begin{solution}
 \begin{enumerate}
-\item \(a^2-4b\) 的最大值为 \(16\).
-\item \(f(x)=\frac{1}{3}x^3-x^2-x\).
+\item \(f'(x)=x^2+ax+b\). 设 \(f'\) 的两个根分别为
+\(r_1\)，\(r_2\)，则由题意
+\[
+-1\leqslant r_1<1<r_2\leqslant3
+\]
+由于二次项系数为正，这两个根分别对应两个极值点，且
+\[
+a^2-4b=(r_2-r_1)^2
+\]
+由根所在区间，
+\[
+r_2-r_1\leqslant3-(-1)=4
+\]
+所以 \(a^2-4b\leqslant16\). 当 \(r_1=-1\)，\(r_2=3\) 时条件成立，
+且 \(a^2-4b=16\)，故最大值为 \(16\).
+\item 设切线为 \(l\)，令 \(g(x)=f(x)-l(x)\). 因为 \(l\) 是
+\(x=1\) 处的切线，所以 \(g(1)=g'(1)=0\)，且
+\[
+g'(x)=f'(x)-f'(1)
+=(x-1)(x+a+1)
+\]
+若 \(a\ne-2\)，则 \(x=1\) 是 \(g'\) 的单根，因而 \(g\) 在
+\(x=1\) 处取得局部极值，曲线不能在点 \(A\) 处从直线的一侧穿到另一侧.
+所以必须有 \(a=-2\). 此时
+\(a^2-4b=8\)，\(\Longrightarrow\)，\(4-4b=8\)，\(\Longrightarrow\)，\(b=-1\).
+于是
+\[
+f(x)=\frac13x^3-x^2-x
+\]
+验证 \(f'(x)=x^2-2x-1\) 的两个根为 \(1-\sqrt2\) 和 \(1+\sqrt2\)，
+分别属于 \([-1,1)\) 和 \((1,3]\). 又因 \(a=-2\)，
+\(g'(x)=(x-1)^2\)，\(g(x)=\frac13(x-1)^3\)
+它在 \(x=1\) 两侧异号，确实满足穿过条件.
 \end{enumerate}
 \end{solution}

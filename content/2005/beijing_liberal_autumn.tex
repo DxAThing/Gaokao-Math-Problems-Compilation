@@ -99,9 +99,14 @@ D
 \end{problem}
 
 \begin{solution}
-因为 \(\alpha\)，\(\beta\) 都是锐角，所以 \(\cos\alpha>0\)，\(\cos\beta>0\)，且 \(\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta<\cos\alpha\cos\beta<\cos\alpha+\cos\beta\). 因此 D 正确.
+因为 \(\alpha\)，\(\beta\) 都是锐角，所以
+\(\sin(\alpha+\beta)-\sin\alpha-\sin\beta
+=\sin\alpha(\cos\beta-1)+\sin\beta(\cos\alpha-1)<0\)，故 A 不成立.
 
-例如取 \(\alpha=\beta=30^{\circ}\)，可知前两项均不成立；取 \(\alpha=\beta=1^{\circ}\)，则 \(\cos(\alpha+\beta)>\sin\alpha+\sin\beta\)，故第三项也不是恒成立的，选 D.
+取 \(\alpha=\beta=30^{\circ}\)，则 \(\sin(\alpha+\beta)=\frac{\sqrt3}{2}<\sqrt3=\cos\alpha+\cos\beta\)，故 B 不成立. 取 \(\alpha=\beta=15^{\circ}\)，则 \(\cos(\alpha+\beta)=\frac{\sqrt3}{2}\)，而 \(\sin\alpha+\sin\beta=2\sin15^{\circ}=\frac{\sqrt6-\sqrt2}{2}<\frac{\sqrt3}{2}\)，故 C 也不成立.
+
+另一方面，\(\cos\alpha>0\)，\(\cos\beta>0\)，且
+\(\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta<\cos\alpha\cos\beta<\cos\alpha+\cos\beta\)，所以 D 正确.
 \end{solution}
 
 \begin{problem}
@@ -120,7 +125,7 @@ C
 \begin{solution}
 在正三角形 \(ABC\) 中，\(D\)，\(E\)，\(F\) 分别是 \(AB\)，\(BC\)，\(CA\) 的中点，所以 \(DF\parallel BC\). 又 \(P\notin\) 平面 \(ABC\)，而平面 \(PDF\) 与平面 \(ABC\) 的交线为 \(DF\)，故 \(C\notin\) 平面 \(PDF\). 因此 \(BC\parallel\) 平面 \(PDF\)，结论 A 成立.
 
-设 \(O\) 是正三角形 \(ABC\) 的中心. 因为 \(AE\perp BC\)，且正四面体的高 \(PO\perp\) 平面 \(ABC\)，又 \(O\in AE\)，所以 \(PO\) 是平面 \(PAE\) 内的一条直线. 由 \(DF\parallel BC\) 可得 \(DF\perp AE\)，同时 \(DF\perp PO\)，故 \(DF\perp\) 平面 \(PAE\)，结论 B 成立. 又因为 \(PO\subset\) 平面 \(PAE\) 且 \(PO\perp\) 平面 \(ABC\)，所以平面 \(PAE\perp\) 平面 \(ABC\)，结论 D 成立.
+设 \(O\) 是正三角形 \(ABC\) 的中心. 因为 \(AE\perp BC\)，且 \(DF\parallel BC\)，所以 \(DF\perp AE\). 又正四面体的高 \(PO\perp\) 平面 \(ABC\)，且 \(O\in AE\)，所以 \(PO\) 在平面 \(PAE\) 内. 令 \(Q=AE\cap DF\)，过 \(Q\) 作直线 \(q\parallel PO\)，则 \(q\subset\) 平面 \(PAE\)，并且 \(DF\perp q\). 直线 \(AE\) 与 \(q\) 在 \(Q\) 相交，故由直线与平面垂直的判定定理，\(DF\perp\) 平面 \(PAE\)，结论 B 成立. 又因为平面 \(PAE\) 内的直线 \(PO\perp\) 平面 \(ABC\)，所以平面 \(PAE\perp\) 平面 \(ABC\)，结论 D 成立.
 
 验证结论 C 不成立. 取棱长为 \(2\)，建立直角坐标系，使 \(B=(-1,0,0)\)，\(C=(1,0,0)\)，\(A=(0,\sqrt3,0)\)，\(P=(0,\frac{\sqrt3}{3},\frac{2\sqrt6}{3})\). 则 \(D=(-\frac12,\frac{\sqrt3}{2},0)\)，\(F=(\frac12,\frac{\sqrt3}{2},0)\)，从而 \(\overrightarrow{DF}=(1,0,0)\)，\(\overrightarrow{DP}=(\frac12,-\frac{\sqrt3}{6},\frac{2\sqrt6}{3})\). 平面 \(PDF\) 的一个法向量为 \(\overrightarrow{DF}\times\overrightarrow{DP}=(0,-\frac{2\sqrt6}{3},-\frac{\sqrt3}{6})\)，它与平面 \(ABC\) 的法向量 \((0,0,1)\) 的内积不为 \(0\)，故两平面不垂直. 因此不成立的是 C.
 \end{solution}
@@ -204,9 +209,9 @@ B
 \end{problem}
 
 \begin{solution}
-因为 \(f(x)=\lg x\) 的定义域为 \((0,+\infty)\). 结论 \(\circled{1}\) 一般不成立，例如取 \(x_1=1\)，\(x_2=2\) 时，左边为 \(\lg3\)，右边为 \(\lg2\). 结论 \(\circled{2}\) 成立，因为 \(\lg(x_1x_2)=\lg x_1+\lg x_2\).
+因为 \(f(x)=\lg x\) 的定义域为 \((0,+\infty)\). 结论 \(\circled{1}\) 一般不成立，例如取 \(x_1=1\)，\(x_2=2\) 时，左边为 \(\lg3>0\)，右边为 \(\lg1\cdot\lg2=0\). 结论 \(\circled{2}\) 成立，因为 \(\lg(x_1x_2)=\lg x_1+\lg x_2\).
 
-函数 \(f(x)=\lg x\) 在 \((0,+\infty)\) 上单调递增，所以当 \(x_1\neq x_2\) 时，\(\dfrac{\lg x_1-\lg x_2}{x_1-x_2}>0\)，结论 \(\circled{3}\) 成立. 又因为 \(\lg x\) 在 \((0,+\infty)\) 上是严格凹函数，所以 \(\lg\left(\dfrac{x_1+x_2}{2}\right)>\dfrac{\lg x_1+\lg x_2}{2}\)，结论 \(\circled{4}\) 的不等号方向相反. 因此正确结论的序号是 \(\circled{2}\)、\(\circled{3}\).
+函数 \(f(x)=\lg x\) 在 \((0,+\infty)\) 上单调递增，所以当 \(x_1\neq x_2\) 时，\(\dfrac{\lg x_1-\lg x_2}{x_1-x_2}>0\)，结论 \(\circled{3}\) 成立. 又因 \(x_1\)，\(x_2\) 为正数且 \(x_1\neq x_2\)，由算术—几何平均不等式得 \(\dfrac{x_1+x_2}{2}>\sqrt{x_1x_2}\)，从而 \(\lg\left(\dfrac{x_1+x_2}{2}\right)>\lg\sqrt{x_1x_2}=\dfrac{1}{2}\lg(x_1x_2)=\dfrac{\lg x_1+\lg x_2}{2}\)，结论 \(\circled{4}\) 的不等号方向相反. 因此正确结论的序号是 \(\circled{2}\)、\(\circled{3}\).
 \end{solution}
 
 \begin{problem}
@@ -221,9 +226,9 @@ B
 \end{problem}
 
 \begin{solution}
-按第一种算法，先计算 \(x_0^2,\ldots,x_0^{10}\)，所需乘法次数为 \(1+2+\cdots+9=45\). 随后计算 \(a_0x_0^{10},a_1x_0^9,\ldots,a_9x_0\)，还需 \(10\) 次乘法；把这 \(10\) 项与 \(a_{10}\) 相加，需 \(10\) 次加法. 因此总运算次数为 \(45+10+10=65\).
+按第一种算法，先计算 \(x_0^2\)，\(\ldots\)，\(x_0^{10}\)，所需乘法次数为 \(1+2+\cdots+9=45\). 随后计算 \(a_0x_0^{10}\)，\(a_1x_0^9\)，\(\ldots\)，\(a_9x_0\)，还需 \(10\) 次乘法；把这 \(10\) 项与 \(a_{10}\) 相加，需 \(10\) 次加法. 因此总运算次数为 \(45+10+10=65\).
 
-按递推算法，从 \(P_0(x_0)\) 逐步得到 \(P_1(x_0),\ldots,P_{10}(x_0)\)，每一步 \(P_{k+1}(x_0)=x_0P_k(x_0)+a_{k+1}\) 都需 \(1\) 次乘法和 \(1\) 次加法，共有 \(10\) 步，所以总运算次数为 \(10+10=20\).
+按递推算法，从 \(P_0(x_0)\) 逐步得到 \(P_1(x_0)\)，\(\ldots\)，\(P_{10}(x_0)\)，每一步 \(P_{k+1}(x_0)=x_0P_k(x_0)+a_{k+1}\) 都需 \(1\) 次乘法和 \(1\) 次加法，共有 \(10\) 步，所以总运算次数为 \(10+10=20\).
 \end{solution}
 
 \section{解答题}
@@ -297,7 +302,7 @@ B
 \begin{enumerate}
 \item 甲恰好击中 \(2\) 次的概率为 \(\mathrm C_3^2\left(\frac12\right)^2\left(\frac12\right)=\frac38\).
 \item 乙恰好击中 \(2\) 次的概率为 \(\mathrm C_3^2\left(\frac23\right)^2\frac13=\frac49\)，乙击中 \(3\) 次的概率为 \(\left(\frac23\right)^3=\frac{8}{27}\)，所以乙至少击中 \(2\) 次的概率为 \(\frac49+\frac{8}{27}=\frac{20}{27}\).
-\item 设甲、乙击中目标的次数分别为 \(X\)，\(Y\). 条件 \(Y-X=2\) 只有两种情况：\(X=0,Y=2\) 或 \(X=1,Y=3\). 因此所求概率为 \(\left(\frac12\right)^3\mathrm C_3^2\left(\frac23\right)^2\frac13+\mathrm C_3^1\frac12\left(\frac12\right)^2\left(\frac23\right)^3=\frac1{18}+\frac19=\frac16\).
+\item 设甲、乙击中目标的次数分别为 \(X\)，\(Y\). 条件 \(Y-X=2\) 只有两种情况：\(X=0\)，\(Y=2\) 或 \(X=1\)，\(Y=3\). 因此所求概率为 \(\left(\frac12\right)^3\mathrm C_3^2\left(\frac23\right)^2\frac13+\mathrm C_3^1\frac12\left(\frac12\right)^2\left(\frac23\right)^3=\frac1{18}+\frac19=\frac16\).
 \end{enumerate}
 \end{solution}
 
@@ -333,7 +338,7 @@ B
 \begin{enumerate}
 \item 当 \(x<0\) 时，\(kx<y<-kx\)，所以 \(W_1=\{(x,y)\mid kx<y<-kx,\ x<0\}\)；当 \(x>0\) 时，\(-kx<y<kx\)，所以 \(W_2=\{(x,y)\mid-kx<y<kx,\ x>0\}\).
 \item 两直线的方程分别为 \(kx-y=0\) 和 \(kx+y=0\)，所以点 \(P(x,y)\) 到它们的距离之积为 \(\dfrac{|kx-y||kx+y|}{k^2+1}\). 在区域 \(W\) 内有 \(y^2<k^2x^2\)，从而 \(k^2x^2-y^2=(k^2+1)d^2\)，即轨迹 \(C\) 的方程为 \(k^2x^2-y^2-(k^2+1)d^2=0\).
-\item 先设 \(l\) 不是竖直直线，写成 \(y=mx+b\). 因 \(l\) 不过原点，\(b\neq0\)；又因 \(l\) 与双曲线 \(C\) 有两个交点，\(m\neq\pm k\). 把 \(y=mx+b\) 代入 \(C\)，交点横坐标 \(x_1,x_2\) 是方程
+\item 先设 \(l\) 不是竖直直线，写成 \(y=mx+b\). 因 \(l\) 不过原点，\(b\neq0\)；又因 \(l\) 与双曲线 \(C\) 有两个交点，\(m\neq\pm k\). 把 \(y=mx+b\) 代入 \(C\)，交点横坐标 \(x_1\)，\(x_2\) 是方程
 \( (k^2-m^2)x^2-2mbx-\left[b^2+(k^2+1)d^2\right]=0 \)
 的两个根，所以 \(x_1+x_2=\dfrac{2mb}{k^2-m^2}\).
 

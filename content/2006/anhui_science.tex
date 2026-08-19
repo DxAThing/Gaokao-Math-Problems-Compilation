@@ -14,6 +14,17 @@
 A
 \end{answer}
 
+\begin{solution}
+将分子、分母同乘分母的共轭复数 \(\sqrt{3}+\i\)，得
+\[
+\frac{1+\sqrt{3}\i}{\sqrt{3}-\i}
+=\frac{(1+\sqrt{3}\i)(\sqrt{3}+\i)}{(\sqrt{3}-\i)(\sqrt{3}+\i)}
+=\frac{\sqrt{3}+\i+3\i-\sqrt{3}}{3+1}
+=\frac{4\i}{4}=\i
+\]
+因此选 A.
+\end{solution}
+
 \begin{problem}
 设集合 \(A = \{x \mid |x - 2| \leqslant 2, x \in \R\}\)，\(B = \{y \mid y = -x^2, -1 \leqslant x \leqslant 2\}\)，则 \(\complement_{\R}(A \cap B)\) 等于（\(\quad\)）
 
@@ -27,6 +38,12 @@ A
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+由 \(|x-2|\leqslant2\)，得 \(0\leqslant x\leqslant4\)，所以 \(A=[0,4]\).
+又因为 \(y=-x^2\)，且 \(-1\leqslant x\leqslant2\)，函数值的最大值为 \(0\)，最小值为 \(-4\)，所以 \(B=[-4,0]\).
+从而 \(A\cap B=\{0\}\)，其在 \(\R\) 中的补集为 \(\R\mathbin{\backslash}\{0\}\)，因此选 B.
+\end{solution}
 
 \begin{problem}
 若抛物线 \(y^{2} = 2px\) 的焦点与椭圆 \(\frac{x^2}{6} + \frac{y^2}{2} = 1\) 的右焦点重合，则 \(p\) 的值为（\(\quad\)）
@@ -42,6 +59,18 @@ B
 D
 \end{answer}
 
+\begin{solution}
+椭圆的半长轴平方、半短轴平方分别为 \(6\)、\(2\)，故
+\[
+c^2=6-2=4
+\]
+其右焦点为 \((2,0)\). 抛物线 \(y^2=2px\) 的焦点为 \((p/2,0)\)，由焦点重合得
+\[
+\frac p2=2
+\]
+所以 \(p=4\)，因此选 D.
+\end{solution}
+
 \begin{problem}
 设 \(a\)，\(b \in \R\)，已知命题 \(p\)：\(a = b\)，命题 \(q\)：\(\left(\frac{a + b}{2}\right)^2 \leqslant \frac{a^2 + b^2}{2}\)，则 \(p\) 是 \(q\) 成立的（\(\quad\)）
 
@@ -55,6 +84,15 @@ D
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+将命题 \(q\) 两边相减并通分，得到
+\[
+\frac{a^2+b^2}{2}-\left(\frac{a+b}{2}\right)^2
+=\frac{(a-b)^2}{4}\geqslant0
+\]
+所以对任意实数 \(a\)，\(b\)，命题 \(q\) 恒成立. 若 \(p\) 成立，即 \(a=b\)，当然有 \(q\) 成立；但 \(q\) 成立不要求 \(a=b\)，例如 \(a=1\)，\(b=0\) 时仍成立. 因此 \(p\) 是 \(q\) 成立的充分不必要条件，选 B.
+\end{solution}
 
 \begin{problem}
 函数 \(y = \begin{cases}
@@ -85,6 +123,19 @@ B
 C
 \end{answer}
 
+\begin{solution}
+原函数在 \(x\geqslant0\) 时的值域为 \([0,+\infty)\)，在 \(x<0\) 时的值域为 \(( -\infty,0)\).
+对反函数设自变量为 \(x\). 当 \(x\geqslant0\) 时，原式 \(x=2y\)，故 \(y=x/2\)；当 \(x<0\) 时，原式 \(x=-y^2\)，且原函数这一段要求 \(y<0\)，故 \(y=-\sqrt{-x}\).
+所以反函数为
+\[
+y=\begin{cases}
+\dfrac{x}{2},&x\geqslant0,\\
+-\sqrt{-x},&x<0,
+\end{cases}
+\]
+选 C.
+\end{solution}
+
 \begin{problem}
 将函数 \(y = \sin \omega x\)（\(\omega > 0\)）的图象按向量 \(\bs{a} = \left(-\frac{\pi}{6}, 0\right)\) 平移，平移后的图象如图所示，则平移后的图象所对应的函数解析式是（\(\quad\)）
 
@@ -101,6 +152,18 @@ C
 C
 \end{answer}
 
+\begin{solution}
+图象向左平移 \(\pi/6\) 后，原函数的自变量应替换为 \(x+\pi/6\)，故平移后的函数形式为
+\[
+y=\sin\omega\left(x+\frac{\pi}{6}\right)
+\]
+由图象相邻最高点与最低点的横坐标相差 \(\pi/2\)，这是半个周期，所以周期为 \(\pi\)，从而 \(2\pi/\omega=\pi\)，得 \(\omega=2\). 因此
+\[
+y=\sin\left(2x+\frac{\pi}{3}\right)
+\]
+选 C.
+\end{solution}
+
 \begin{problem}
 若曲线 \(y = x^4\) 的一条切线 \(l\) 与直线 \(x + 4y - 8 = 0\) 垂直，则 \(l\) 的方程为（\(\quad\)）
 
@@ -114,6 +177,18 @@ C
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+直线 \(x+4y-8=0\) 的斜率为 \(-1/4\)，所以与它垂直的切线斜率为 \(4\). 曲线 \(y=x^4\) 在点 \((x,x^4)\) 处的切线斜率为
+\[
+y'=4x^3
+\]
+令 \(4x^3=4\)，得 \(x=1\)，切点为 \((1,1)\). 切线方程为
+\[
+y-1=4(x-1)
+\]
+即 \(4x-y-3=0\)，选 A.
+\end{solution}
 
 \begin{problem}
 设 \(a > 0\)，对于函数 \(f(x) = \frac{\sin x + a}{\sin x}\)（\(0 < x < \pi\)），下列结论正确的是（\(\quad\)）
@@ -129,6 +204,18 @@ A
 B
 \end{answer}
 
+\begin{solution}
+因为 \(0<x<\pi\)，所以 \(0<\sin x\leqslant1\)，且 \(\sin x\) 在 \(x=\pi/2\) 时取最大值. 函数可写为
+\[
+f(x)=1+\frac{a}{\sin x}
+\]
+由于 \(a>0\)，有
+\[
+f(x)\geqslant1+a
+\]
+等号在 \(x=\pi/2\) 时成立，所以函数有最小值 \(1+a\). 当 \(x\to0^+\) 或 \(x\to\pi^-\) 时，\(\sin x\to0^+\)，故 \(f(x)\to+\infty\)，函数没有最大值. 因此选 B.
+\end{solution}
+
 \begin{problem}
 表面积为 \(2\sqrt{3}\) 的正八面体的各个顶点都在同一球面上，则此球的体积为（\(\quad\)）
 
@@ -142,6 +229,22 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+设正八面体的棱长为 \(s\). 正八面体有 \(8\) 个全等的正三角形面，故其表面积为
+\[
+8\cdot\frac{\sqrt{3}}{4}s^2=2\sqrt{3}s^2
+\]
+由题设表面积为 \(2\sqrt{3}\)，得 \(s=1\). 正八面体的中心到任一顶点的距离为外接球半径
+\[
+R=\frac{s}{\sqrt{2}}=\frac{1}{\sqrt{2}}
+\]
+所以球的体积为
+\[
+V=\frac{4}{3}\pi R^3=\frac{4}{3}\pi\left(\frac{1}{\sqrt{2}}\right)^3=\frac{\sqrt{2}}{3}\pi
+\]
+因此选 A.
+\end{solution}
 
 \begin{problem}
 如果实数 \(x\)，\(y\) 满足条件 \(\begin{cases}
@@ -161,6 +264,16 @@ x + y + 1 \leqslant 0,
 B
 \end{answer}
 
+\begin{solution}
+三个不等式分别给出
+\(y\leqslant x+1\)，\(y\geqslant-1\)，\(y\leqslant-x-1\).
+可行域是由三条边界直线围成的三角形，其顶点为
+\((-2,-1)\)，\((-1,0)\)，\((0,-1)\).
+目标函数 \(2x-y\) 在这些顶点处的值依次为
+\(-3\)，\(-2\)，\(1\).
+线性目标函数在多边形上的最大值在顶点取得，所以最大值为 \(1\)，选 B.
+\end{solution}
+
 \begin{problem}
 如果 \(\triangle A_{1}B_{1}C_{1}\) 的三个内角的余弦值分别等于 \(\triangle A_{2}B_{2}C_{2}\) 的三个内角的正弦值，则（\(\quad\)）
 
@@ -174,6 +287,26 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+三角形 \(A_1B_1C_1\) 的三个内角余弦都等于正数，因此其三个内角都小于 \(\pi/2\)，所以 \(\triangle A_1B_1C_1\) 是锐角三角形.
+
+若 \(\triangle A_2B_2C_2\) 也是锐角三角形，则各角都在 \((0,\pi/2)\) 内. 由
+\[
+\sin A_{2}=\cos A_{1}=\sin\left(\frac{\pi}{2}-A_{1}\right)
+\]
+以及正弦函数在 \((0,\pi/2)\) 上的单调性，得 \(A_2=\pi/2-A_1\). 对 \(B_2\) 同样有
+\[
+B_2=\frac{\pi}{2}-B_1
+\]
+同样由 \(\sin C_2=\cos C_1=\sin\left(\frac{\pi}{2}-C_1\right)\) 及正弦函数在 \((0,\pi/2)\) 上的单调性，得
+\[
+C_2=\frac{\pi}{2}-C_1
+\]
+于是 \(A_2+B_2+C_2=\pi/2\)，与三角形内角和为 \(\pi\) 矛盾. \(\triangle A_2B_2C_2\) 也不可能是直角三角形，因为若某个角为 \(\pi/2\)，其正弦为 \(1\)，则对应的 \(A_1\) 角余弦为 \(1\)，这要求 \(A_1=0\)，不可能.
+
+因此 \(\triangle A_2B_2C_2\) 是钝角三角形，选 D.
+\end{solution}
 
 \begin{problem}
 在正方体上任选 \(3\) 个顶点连成三角形，则所得的三角形是直角非等腰三角形的概率为（\(\quad\)）
@@ -189,6 +322,20 @@ D
 C
 \end{answer}
 
+\begin{solution}
+从正方体的 \(8\) 个顶点中任取 \(3\) 个，样本总数为
+\[
+\mathrm C_{8}^{3}=56
+\]
+固定一个顶点作为直角顶点. 从该顶点出发的三个棱方向两两垂直. 若另外两个顶点分别在从该顶点出发的两条棱上，则有 \(3\) 种选法，但所得两条直角边等长；若一个顶点在一条棱的另一端，另一个顶点在不含该棱的那个面对角线的对角端，则也有 \(3\) 种选法，且两条直角边长度分别为 \(1\) 和 \(\sqrt{2}\)，所得三角形为非等腰直角三角形.
+
+每个直角三角形的直角顶点唯一，故符合条件的三角形数为 \(8\times3=24\). 所求概率为
+\[
+\frac{24}{56}=\frac{3}{7}
+\]
+因此选 C.
+\end{solution}
+
 \section{填空题}
 \begin{problem}
 设常数 \(a > 0\)，\(\left(a x^2 + \frac{1}{\sqrt{x}}\right)^4\) 展开式中 \(x^3\) 的系数为 \(\frac{3}{2}\)，则 \(\displaystyle\lim_{n \to +\infty} (a + a^2 + \cdots + a^n) = \)\fillinblank{}.
@@ -198,6 +345,23 @@ C
 1
 \end{answer}
 
+\begin{solution}
+在展开式中，若取 \(k\) 个 \(ax^2\)，取 \(4-k\) 个 \(1/\sqrt{x}\)，则该项中 \(x\) 的指数为
+\[
+2k-\frac{4-k}{2}=\frac{5k-4}{2}
+\]
+令其等于 \(3\)，得 \(k=2\). 因此 \(x^3\) 的系数为
+\[
+\mathrm C_{4}^{2}a^2=6a^2=\frac{3}{2}
+\]
+从而 \(a^2=1/4\). 由 \(a>0\)，得 \(a=1/2\). 所以
+\[
+\lim_{n\to+\infty}(a+a^2+\cdots+a^n)
+=\lim_{n\to+\infty}\sum_{k=1}^{n}\left(\frac12\right)^k
+=\frac{1/2}{1-1/2}=1
+\]
+\end{solution}
+
 \begin{problem}
 在平行四边形 \(ABCD\) 中，\(\overrightarrow{AB} = \bs{a}\)，\(\overrightarrow{AD} = \bs{b}\)，\(\overrightarrow{AN} = 3\overrightarrow{NC}\)，\(M\) 为 \(BC\) 的中点，则 \(\overrightarrow{MN} =\)\fillinblank{}.
 
@@ -205,8 +369,33 @@ C
 \end{problem}
 
 \begin{answer}
-\(-\frac{3}{4}\bs{a}+\frac{1}{4}\bs{b}\)
+\(-\frac{1}{4}\bs{a}+\frac{1}{4}\bs{b}\)
 \end{answer}
+
+\begin{solution}
+取 \(A\) 为原点，则
+\(\overrightarrow{AB}=\bs{a}\)，\(\overrightarrow{AD}=\bs{b}\)，\(\overrightarrow{AC}=\bs{a}+\bs{b}\).
+由 \(\overrightarrow{AN}=3\overrightarrow{NC}\)，有
+\[
+\overrightarrow{AC}=\overrightarrow{AN}+\overrightarrow{NC}
+=4\overrightarrow{NC}
+\]
+所以
+\[
+\overrightarrow{AN}=\frac34(\bs{a}+\bs{b})
+\]
+又因为 \(M\) 是 \(BC\) 的中点，
+\[
+\overrightarrow{AM}=\overrightarrow{AB}+\frac12\overrightarrow{BC}
+=\bs{a}+\frac12\bs{b}
+\]
+因此
+\[
+\overrightarrow{MN}=\overrightarrow{AN}-\overrightarrow{AM}
+=\frac34(\bs{a}+\bs{b})-\left(\bs{a}+\frac12\bs{b}\right)
+=-\frac14\bs{a}+\frac14\bs{b}
+\]
+\end{solution}
 
 \begin{problem}
 函数 \(f(x)\) 对于任意实数 \(x\) 满足条件 \(f(x + 2) = \frac{1}{f(x)}\)，若 \(f(1) = -5\)，则 \(f(f(5)) = \)\fillinblank{}.
@@ -215,6 +404,25 @@ C
 \begin{answer}
 \(-\frac{1}{5}\)
 \end{answer}
+
+\begin{solution}
+由题设关系式可知函数值不为零，并且
+\[
+f(x+4)=\frac{1}{f(x+2)}=f(x)
+\]
+所以 \(f\) 以 \(4\) 为周期. 于是
+\[
+f(5)=f(1)=-5
+\]
+再由 \(f(1)=1/f(-1)\)，得
+\[
+f(-1)=-\frac15
+\]
+由于 \(-5=-1-4\)，利用周期性得到 \(f(-5)=f(-1)=-1/5\). 因此
+\[
+f(f(5))=f(-5)=-\frac15
+\]
+\end{solution}
 
 \begin{problem}
 多面体上，位于同一条棱两端的顶点称为相邻的. 如图，正方体的一个顶点 \(A\) 在平面 \(\alpha\) 内，其余顶点在 \(\alpha\) 的同侧，正方体上与顶点 \(A\) 相邻的三个顶点到 \(\alpha\) 的距离分别为 \(1\)，\(2\) 和 \(4\). \(P\) 是正方体的其余四个顶点中的一个，则 \(P\) 到平面 \(\alpha\) 的距离可能是：
@@ -229,12 +437,43 @@ C
 
 以上结论正确的是\fillinblank{}.（写出所有正确结论的编号）
 
+\begingroup
+\leftskip=0pt
+\rightskip=0pt
 \bitmapfigure[max width=0.42\linewidth]{img/2006/anhui_science/q16_fig1.png}
+\endgroup
 \end{problem}
 
 \begin{answer}
-1，3，4，5
+1, 3, 4, 5
 \end{answer}
+
+\begin{solution}
+以顶点 \(A\) 为原点，沿从 \(A\) 出发的三条棱取向量 \(\bs{u}\)，\(\bs{v}\)，\(\bs{w}\). 设带符号距离平面 \(\alpha\) 的有向距离函数为 \(d\)，则它是顶点坐标的仿射一次函数. 由题设
+\(d(A)=0\)，\(d(A+\bs{u})=1\)，\(d(A+\bs{v})=2\)，\(d(A+\bs{w})=4\).
+由于其余顶点均在平面 \(\alpha\) 的同侧，\(d\) 在这些顶点上取正值. 对任意实数 \(r\)，\(s\)，\(t\)，仿射一次函数满足
+\[
+d(A+r\bs{u}+s\bs{v}+t\bs{w})
+=d(A)+r\bigl(d(A+\bs{u})-d(A)\bigr)
++s\bigl(d(A+\bs{v})-d(A)\bigr)
++t\bigl(d(A+\bs{w})-d(A)\bigr)
+\]
+因此在各棱向量系数为 \(0\) 或 \(1\) 的顶点上，有向距离就是相应邻接顶点距离之和. 于是另外四个顶点到平面的距离分别为
+\[
+d(A+\bs{u}+\bs{v})=1+2=3
+\]
+\[
+d(A+\bs{u}+\bs{w})=1+4=5
+\]
+\[
+d(A+\bs{v}+\bs{w})=2+4=6
+\]
+以及
+\[
+d(A+\bs{u}+\bs{v}+\bs{w})=1+2+4=7
+\]
+所以可能的距离为 \(3\)，\(5\)，\(6\)，\(7\)，对应选项编号为 \(1\)，\(3\)，\(4\)，\(5\).
+\end{solution}
 
 \section{解答题}
 \begin{problem}
@@ -248,8 +487,40 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(\tan\alpha=-\frac{1}{3}\).
-\item 短答案：\(-\frac{5\sqrt{2}}{6}\).
+\item 令 \(t=\tan\alpha\). 由 \(\cot\alpha=1/t\)，题设给出
+\[
+t+\frac1t=-\frac{10}{3}
+\]
+因为 \(\tan\alpha\neq0\)，两边同乘 \(3t\)，得
+\[
+3t^2+10t+3=0
+\]
+即
+\[
+(3t+1)(t+3)=0
+\]
+所以 \(t=-1/3\) 或 \(t=-3\). 又因为 \(3\pi/4<\alpha<\pi\)，故 \(-1<\tan\alpha<0\)，舍去 \(-3\)，得到
+\[
+\tan\alpha=-\frac13
+\]
+
+\item 记 \(s=\sin(\alpha/2)\)，\(c=\cos(\alpha/2)\). 利用二倍角公式，分子为
+\[
+5s^2+8sc+11c^2-8
+=\frac52(1-\cos\alpha)+4\sin\alpha+\frac{11}{2}(1+\cos\alpha)-8
+=3\cos\alpha+4\sin\alpha
+\]
+分母为
+\[
+\sqrt2\sin\left(\alpha-\frac\pi2\right)=-\sqrt2\cos\alpha
+\]
+由于 \(\alpha\in(3\pi/4,\pi)\)，有 \(\cos\alpha\neq0\)，所以原式等于
+\[
+-\frac{3\cos\alpha+4\sin\alpha}{\sqrt2\cos\alpha}
+=-\frac{3+4\tan\alpha}{\sqrt2}
+=-\frac{3-4/3}{\sqrt2}
+=-\frac{5\sqrt2}{6}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -264,7 +535,7 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：
+\item 从 \(0\)，\(1\)，\(2\)，\(3\)，\(4\)，\(5\) 中任选两个不同的数，共有 \(\mathrm C_{6}^{2}=15\) 种等可能的选法. 各和的组合数如下，因此分布列为
 \begin{center}
 \begin{tabular}{c|ccccccccc}
 \(\xi\) & \(1\) & \(2\) & \(3\) & \(4\) & \(5\) & \(6\) & \(7\) & \(8\) & \(9\) \\
@@ -272,7 +543,10 @@ C
 \(P\) & \(\frac{1}{15}\) & \(\frac{1}{15}\) & \(\frac{2}{15}\) & \(\frac{2}{15}\) & \(\frac{3}{15}\) & \(\frac{2}{15}\) & \(\frac{2}{15}\) & \(\frac{1}{15}\) & \(\frac{1}{15}\)
 \end{tabular}
 \end{center}
-\item 短答案：\(E(\xi)=5\).
+\item 每个数在所有无序二元组中出现的次数相同，且任取一组的两个数的和的期望等于两个位置的平均数之和. 因此
+\[
+E(\xi)=2\cdot\frac{0+1+2+3+4+5}{6}=2\cdot\frac{15}{6}=5
+\]
 \end{enumerate}
 \end{solution}
 
@@ -289,8 +563,41 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(PA \perp BF\).
-\item 短答案：设二面角为 \(\theta\)，则 \(\theta=\pi-\arctan\frac{8\sqrt{21}}{9}\).
+\item 取正六边形所在平面为 \(z=0\)，令 \(O\) 为原点，并取坐标
+\(A=\left(\frac12,0,0\right)\)，\(B=\left(0,\frac{\sqrt3}{2},0\right)\)，\(F=\left(0,-\frac{\sqrt3}{2},0\right)\)，\(D=\left(-\frac32,0,0\right)\).
+因为 \(O\) 是点 \(P\) 在该平面内的射影，所以设 \(P=(0,0,h)\). 由 \(PA=1\) 得
+\[
+\left(\frac12\right)^2+h^2=1
+\]
+从而 \(h=\sqrt3/2\)，可取 \(P=(0,0,\sqrt3/2)\). 于是
+\(\overrightarrow{PA}=\left(\frac12,0,-\frac{\sqrt3}{2}\right)\)，\(\overrightarrow{BF}=\left(0,-\sqrt3,0\right)\).
+两向量的数量积为 \(0\)，故 \(PA\perp BF\).
+
+\item 设二面角为 \(\theta\). 两平面均以 \(PB\) 为交线，取
+\(\bs{u}=\overrightarrow{PA}=\left(\frac12,0,-\frac{\sqrt3}{2}\right)\)，\(\bs{v}=\overrightarrow{PB}=\left(0,\frac{\sqrt3}{2},-\frac{\sqrt3}{2}\right)\)
+\[
+\bs{w}=\overrightarrow{PD}=\left(-\frac32,0,-\frac{\sqrt3}{2}\right)
+\]
+平面 \(APB\) 和平面 \(DPB\) 的法向量可分别取
+\[
+\bs{n}_1=\bs{u}\times\bs{v}
+=\left(\frac34,\frac{\sqrt3}{4},\frac{\sqrt3}{4}\right)
+\]
+\[
+\bs{n}_2=\bs{w}\times\bs{v}
+=\left(\frac34,-\frac{3\sqrt3}{4},-\frac{3\sqrt3}{4}\right)
+\]
+因此
+\(\bs{n}_1\cdot\bs{n}_2=-\frac{9}{16}\)，\(|\bs{n}_1|=\frac{\sqrt{15}}4\)，\(|\bs{n}_2|=\frac{3\sqrt7}{4}\).
+按半平面 \(PBA\) 与 \(PBD\) 的取向，所求二面角 \(\theta\in(0,\pi)\) 对应于上述两个法向量的夹角，
+\[
+\cos\theta=\frac{\bs{n}_1\cdot\bs{n}_2}{|\bs{n}_1||\bs{n}_2|}
+=-\frac{3}{\sqrt{105}}
+\]
+又 \(0<\theta<\pi\)，故 \(\tan\theta=-4\sqrt6/3\)，从而
+\[
+\theta=\pi-\arctan\left(\frac{4\sqrt6}{3}\right)
+\]
 \end{enumerate}
 \end{solution}
 
@@ -309,12 +616,42 @@ hx, & x < 0,
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(f(0)=0\).
-\item 短答案：\(f(x)=\begin{cases}
-kx, & x\geqslant 0,\\
-hx, & x<0,
-\end{cases}\)，其中 \(k\) 和 \(h\) 均为常数.
-\item 短答案：当 \(0<x<1\) 时，\(g(x)\) 单调递减；当 \(x\geqslant 1\) 时，\(g(x)\) 单调递增，极小值为 \(k+\frac{1}{k}\)，在 \(x=1\) 时取得.
+\item 取任意正数 \(a\)，令 \(x=0\)，则
+\[
+f(0)=f(a\cdot0)=af(0)
+\]
+取 \(a=2\)，得 \(f(0)=2f(0)\)，所以 \(f(0)=0\).
+
+\item 令 \(k=f(1)\). 当 \(x>0\) 时，取题设中的 \(a=x\)，得到
+\[
+f(x)=f(x\cdot1)=xf(1)=kx
+\]
+令 \(h=-f(-1)\). 当 \(x<0\) 时取 \(a=-x>0\)，则
+\[
+f(x)=f((-x)(-1))=(-x)f(-1)=hx
+\]
+结合第（1）问，得到
+\[
+f(x)=\begin{cases}
+kx,&x\geqslant0,\\
+hx,&x<0,
+\end{cases}
+\]
+其中 \(k\)，\(h\) 均为常数.
+
+\item 当 \(k>0\) 且 \(x>0\) 时，\(f(x)=kx>0\)，所以
+\[
+g(x)=\frac{1}{kx}+kx
+\]
+求导得
+\[
+g'(x)=k-\frac{1}{kx^2}=\frac{k^2x^2-1}{kx^2}
+\]
+由于 \(kx>0\)，导数在 \(0<x<1/k\) 时为负，在 \(x>1/k\) 时为正. 因此 \(g(x)\) 在 \((0,1/k)\) 内单调递减，在 \((1/k,+\infty)\) 内单调递增，并在 \(x=1/k\) 处取得极小值
+\[
+g\left(\frac1k\right)=\frac{1}{k\cdot(1/k)}+k\cdot\frac1k=2
+\]
+当 \(x\to0^+\) 或 \(x\to+\infty\) 时，\(g(x)\to+\infty\)，所以没有最大值.
 \end{enumerate}
 \end{solution}
 
@@ -329,8 +666,53 @@ hx, & x<0,
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(\frac{n+1}{n}S_{n}-2S_{n-1}=n-1\)，\(S_{n}=\frac{n^{2}}{n+1}\).
-\item 短答案：\(b_{n}=np^{n}\)，且
+\item 由 \(a_n=S_n-S_{n-1}\) 及题设关系式，得
+\[
+S_n=n^2(S_n-S_{n-1})-n(n-1)
+\]
+即
+\((n^2-1)S_n-n^2S_{n-1}=n(n-1)\)，\(n\geqslant2\).
+等价地，递推关系为
+\[
+\frac{n+1}{n}S_n-\frac{n}{n-1}S_{n-1}=1
+\]
+令 \(u_n=S_n/n\)，则
+\[
+(n+1)u_n-nu_{n-1}=1
+\]
+又 \(u_1=S_1=1/2\). 用归纳法证明 \(u_n=n/(n+1)\)：当 \(n=1\) 时成立；若 \(u_{n-1}=(n-1)/n\)，则
+\[
+(n+1)u_n-n\cdot\frac{n-1}{n}=1
+\]
+从而 \(u_n=n/(n+1)\). 因此
+\[
+S_n=nu_n=\frac{n^2}{n+1}
+\]
+
+\item 由上式
+\[
+f_n(x)=\frac{S_n}{n}x^{n+1}=\frac{n}{n+1}x^{n+1}
+\]
+所以
+\[
+b_n=f_n'(p)=np^n
+\]
+于是 \(T_n=\sum_{k=1}^nkp^k\). 当 \(p\neq1\) 时，将等比数列求和式求导，或直接计算
+\[
+(1-p)T_n
+=\bigl(p+2p^2+\cdots+np^n\bigr)
+-\bigl(p^2+2p^3+\cdots+np^{n+1}\bigr)
+=p+p^2+\cdots+p^n-np^{n+1}
+\]
+得到
+\[
+T_n=\frac{p-(n+1)p^{n+1}+np^{n+2}}{(1-p)^2}
+\]
+当 \(p=1\) 时，
+\[
+T_n=1+2+\cdots+n=\frac{n(n+1)}2
+\]
+故
 \[
 T_{n}=\begin{cases}
 \displaystyle\frac{p-(n+1)p^{n+1}+np^{n+2}}{(1-p)^{2}}, & p\neq 1,\\
@@ -353,8 +735,52 @@ T_{n}=\begin{cases}
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(e^{2}-\lambda e-2=0\).
-\item 短答案：当 \(\lambda=1\) 时，双曲线方程为
-\(\displaystyle\frac{x^{2}}{9}-\frac{y^{2}}{27/4}=1\).
+\item 设双曲线右焦点为 \(F=(c,0)\)，其中
+\(c^2=a^2+b^2\)，\(e=\frac ca\).
+左、右准线分别为 \(x=-a^2/c\) 和 \(x=a^2/c\). 由四边形 \(OFPM\) 为平行四边形，得
+\(M=P-F\)，\(PM=OF=c\).
+设线段 \(PM\) 与右准线交于 \(H\). 由题设位置关系，\(M\)，\(H\)，\(P\) 依次位于该水平线上，且
+\(HM=\frac{a^2}{c}-\left(-\frac{a^2}{c}\right)=\frac{2a^2}{c}\)，\(PH=PM-HM=c-\frac{2a^2}{c}\).
+双曲线的离心率定义给出 \(PF=e\,PH\). 结合 \(PF=\lambda OF=\lambda c\)，得到
+\[
+\lambda c=e\left(c-\frac{2a^2}{c}\right)
+\]
+代入 \(c=ae\)，并约去 \(a\)，得
+\[
+\lambda e=e^2-2
+\]
+即
+\[
+e^2-\lambda e-2=0
+\]
+
+\item 当 \(\lambda=1\) 时，由 \(e>1\) 得 \(e=2\)，所以
+\(c=2a\)，\(b^2=c^2-a^2=3a^2\).
+由平行四边形关系及右准线位置，点 \(P\) 的横坐标为
+\[
+x_P=c-\frac{a^2}{c}=\frac{3a}{2}
+\]
+代入双曲线方程并取上方的点，得
+\(P=\left(\frac{3a}{2},\frac{\sqrt{15}a}{2}\right)\)，\(F=(2a,0)\).
+过 \(F\) 且平行于 \(OP\) 的直线为
+\[
+y=\frac{\sqrt{15}}{3}(x-2a)
+\]
+将其代入 \(x^2/a^2-y^2/(3a^2)=1\)，得到交点横坐标满足
+\[
+4x^2+20ax-29a^2=0
+\]
+两根之差为 \(3\sqrt6a\)，而直线斜率为 \(\sqrt{15}/3\)，所以两交点间距离为
+\[
+|AB|=3\sqrt6a\sqrt{1+\frac{15}{9}}=12a
+\]
+由 \(|AB|=12\)，得 \(a=1\)，进而 \(b^2=3\). 故双曲线方程为
+\[
+\frac{x^2}{1^2}-\frac{y^2}{3}=1
+\]
+即
+\[
+x^2-\frac{y^2}{3}=1
+\]
 \end{enumerate}
 \end{solution}

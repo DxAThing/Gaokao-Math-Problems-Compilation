@@ -16,6 +16,10 @@
 D
 \end{answer}
 
+\begin{solution}
+\(z=\i(-2-\i)=-2\i-\i^{2}=1-2\i\)，所以其对应点的横坐标为正，纵坐标为负，位于第四象限，故选 D.
+\end{solution}
+
 \begin{problem}
 若集合 \(A = \{x \in \R \mid ax^2 + ax + 1 = 0\}\) 中只有一个元素，则 \(a =\)（\quad）
 
@@ -29,6 +33,14 @@ D
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+当 \(a=0\) 时，方程化为 \(1=0\)，无解，不符合题意；当 \(a\ne0\) 时，方程为关于 \(x\) 的一元二次方程，其判别式为
+\[
+\Delta=a^{2}-4a=a(a-4)
+\]
+集合中只有一个元素等价于方程有一个实根，因此 \(\Delta=0\). 结合 \(a\ne0\)，得 \(a=4\)，故选 A.
+\end{solution}
 
 \begin{problem}
 若 \(\sin \frac{\alpha}{2} = \frac{\sqrt{3}}{3}\)，则 \(\cos \alpha =\)（\quad）
@@ -44,6 +56,16 @@ A
 C
 \end{answer}
 
+\begin{solution}
+由半角公式，
+\[
+\cos\alpha=1-2\sin^{2}\frac{\alpha}{2}
+ =1-2\left(\frac{\sqrt{3}}{3}\right)^{2}
+ =1-\frac{2}{3}=\frac{1}{3}
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
 集合 \(A = \{2, 3\}\)，\(B = \{1, 2, 3\}\)，从 \(A\)，\(B\) 中各任意取一个数，则这两数之和等于 4 的概率是（\quad）
 
@@ -57,6 +79,14 @@ C
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+从 \(A\) 中取数、从 \(B\) 中取数共有 \(2\times3=6\) 个等可能结果. 其中和为 \(4\) 的结果为 \((2,2)\) 和 \((3,1)\)，共有 \(2\) 个，因此所求概率为
+\[
+\frac{2}{6}=\frac{1}{3}
+\]
+故选 C.
+\end{solution}
 
 \begin{problem}
 总体由编号为 \(01\)，\(02\)，…，\(19\)，\(20\) 的 20 个个体组成. 利用下面的随机数表选取 5 个个体，选取方法从随机数表第 \(1\) 行的第 \(5\) 列和第 \(6\) 列数字开始由左到右依次选取两个数字，则选出来的第 \(5\) 个个体的编号为（\quad）
@@ -74,6 +104,14 @@ C
 D
 \end{answer}
 
+\begin{solution}
+从第 1 行第 5、6 列开始，每两个数字组成一个编号，依次得到
+\(65\)，\(72\)，\(08\)，\(02\)，\(63\)，\(14\)，\(07\)，\(02\)，\(43\)，\(69\)，\(97\)，\(28\)，\(01\)，\(98\)，\(32\)，\(04\)，\(\ldots\)
+其中只有 \(01\) 至 \(20\) 的编号有效，并且重复编号不再选取. 因此依次选出的个体编号为
+\(08\)，\(02\)，\(14\)，\(07\)，\(01\).
+第 5 个个体的编号为 \(01\)，故选 D.
+\end{solution}
+
 \begin{problem}
 下列选项中，使不等式 \(x < \frac{1}{x} < x^2\) 成立的 \(x\) 的取值范围是（\quad）
 
@@ -88,10 +126,27 @@ D
 A
 \end{answer}
 
+\begin{solution}
+由题意知 \(x\ne0\). 分别解两个不等式：
+\[
+x<\frac{1}{x}
+\iff \frac{x^{2}-1}{x}<0
+\iff x\in(-\infty,-1)\cup(0,1)
+\]
+以及
+\[
+\frac{1}{x}<x^{2}
+\iff \frac{1-x^{3}}{x}<0
+\iff x\in(-\infty,0)\cup(1,+\infty)
+\]
+两解集的交集为 \((-\infty,-1)\)，故选 A.
+\end{solution}
+
 \begin{problem}
 阅读如图所示程序框图，如果输出 \(i = 4\)，那么在空白的判断框中应填入的条件是（\quad）
 
-\texfigure[max width=0.34\linewidth]{img_repaint/2013/jiangxi_liberal/q7_fig1.tex}
+\texfigure[float=inline,max width=0.34\linewidth]{img_repaint/2013/jiangxi_liberal/q7_fig1.tex}
+\FloatBarrier
 
 \choices
     {\(S < 8\)}
@@ -104,11 +159,18 @@ A
 B
 \end{answer}
 
+\begin{solution}
+由程序框图逐步计算. 初始时 \(i=1\)，\(S=0\)，第一次循环后 \(i=2\)，此时按偶数分支得 \(S=2i+1=5\)；第二次循环后 \(i=3\)，按奇数分支得 \(S=2i+2=8\)；第三次循环后 \(i=4\)，按偶数分支得 \(S=2i+1=9\).
+
+要使输出为 \(i=4\)，应在 \(S=8\) 时继续循环而在 \(S=9\) 时停止，所以判断条件为 \(S<9\)，故选 B.
+\end{solution}
+
 \begin{problem}
 一几何体的三视图如图所示，则该几何体的体积为
 
 
-\bitmapfigure[max width=0.7\linewidth]{img/2013/jiangxi_liberal/q8_fig1.png}
+\bitmapfigure[float=inline,max width=0.7\linewidth]{img/2013/jiangxi_liberal/q8_fig1.png}
+\FloatBarrier
 
 （\quad）
 
@@ -122,6 +184,18 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+由三视图可知，该几何体由一个长、宽、高分别为 \(10\)，\(4\)，\(5\) 的长方体和一个直径为 \(6\)、高为 \(2\) 的半圆柱组成. 长方体体积为
+\[
+10\times4\times5=200
+\]
+半圆柱的底面半径为 \(3\)，体积为
+\[
+\frac{1}{2}\pi\times3^{2}\times2=9\pi
+\]
+所以几何体体积为 \(200+9\pi\)，故选 A.
+\end{solution}
 
 \begin{problem}
 已知点 \(A(2,0)\)，抛物线 \(C: x^2 = 4y\) 的焦点为 \(F\)，射线 \(FA\) 与抛物线 \(C\) 相交于点 \(M\)，与其准线相交于点 \(N\)，则 \(|FM|: |MN| =\)（\quad）
@@ -137,10 +211,29 @@ A
 C
 \end{answer}
 
+\begin{solution}
+抛物线 \(x^{2}=4y\) 的焦点为 \(F(0,1)\)，准线为 \(y=-1\). 设射线 \(FA\) 上点的参数方程为
+\((x,y)=(2t,1-t)\)，\(t\geqslant0\).
+点 \(A(2,0)\) 对应 \(t=1\). 代入抛物线方程得
+\[
+4t^{2}=4(1-t)\iff t^{2}+t-1=0
+\]
+由于 \(M\) 在射线 \(FA\) 上，取正根
+\[
+t=\frac{\sqrt5-1}{2}
+\]
+准线 \(y=-1\) 对应 \(1-t=-1\)，即 \(t=2\). 因为同一直线上距离与参数差成正比，
+\[
+\frac{|FM|}{|MN|}=\frac{t}{2-t}=\frac{1}{\sqrt5}
+\]
+故 \(|FM|:|MN|=1:\sqrt5\)，故选 C.
+\end{solution}
+
 \begin{problem}
 如图，已知 \(l_{1} \perp l_{2}\)，圆心在 \(l_{1}\) 上，半径为 \(1 \mathrm{~m}\) 的圆 \(O\) 在 \(t = 0\) 时与 \(l_{2}\) 相切于点 \(A\)，圆 \(O\) 沿 \(l_{1}\) 以 \(1 \mathrm{~m} / \mathrm{s}\) 的速度匀速向上移动，圆被直线 \(l_{2}\) 所截上方圆弧长记为 \(x\)，令 \(y = \cos x\)，则 \(y\) 与时间 \(t\)（\(0 \leqslant t \leqslant 1\)，单位：\(\mathrm{s}\)）的函数 \(y = f(t)\) 的图象大致为（\quad）
 
-\bitmapfigure[max width=0.65\linewidth]{img/2013/jiangxi_liberal/q10_fig1.png}
+\bitmapfigure[float=inline,max width=0.65\linewidth]{img/2013/jiangxi_liberal/q10_fig1.png}
+\FloatBarrier
 
 \choices
     {\choicebitmap[width=0.15\paperwidth]{img/2013/jiangxi_liberal/q10_opt_a.png}}
@@ -153,6 +246,21 @@ C
 B
 \end{answer}
 
+\begin{solution}
+取 \(l_{1}\) 为竖直方向. 圆心从与 \(l_{2}\) 相切的位置向上移动 \(t\) 后，圆心到 \(l_{2}\) 的距离为 \(1-t\). 设圆弧所对的圆心角为 \(x\)，则由直角三角形得
+\[
+\frac{x}{2}=\arccos(1-t)
+\]
+因此
+\[
+y=\cos x=\cos\bigl(2\arccos(1-t)\bigr)
+ =2(1-t)^{2}-1=2t^{2}-4t+1
+\]
+在 \(0\leqslant t\leqslant1\) 上，函数从 \(1\) 减到 \(-1\)，且
+\(y'=4t-4\leqslant0\)，\(y''=4>0\).
+所以图象单调下降且向上凸，与选项 B 相符，故选 B.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -163,13 +271,35 @@ B
 2
 \end{answer}
 
+\begin{solution}
+曲线在 \((1,2)\) 处的切线斜率为
+\[
+y'\big|_{x=1}=\alpha
+\]
+该切线还经过原点，因此其斜率为
+\[
+\frac{2-0}{1-0}=2
+\]
+故 \(\alpha=2\).
+\end{solution}
+
 \begin{problem}
 某住宅小区计划植树不少于 100 棵，若第一天植 2 棵，以后每天植树的棵数是前一天的 2 倍，则需要的最少天数 \(n\)（\(n \in \N^{*}\)）等于\fillinblank{}.
 \end{problem}
 
 \begin{answer}
-4
+6
 \end{answer}
+
+\begin{solution}
+第 \(j\) 天植树 \(2^{j}\) 棵，前 \(n\) 天植树总数为等比数列前 \(n\) 项和
+\[
+2+2^{2}+\cdots+2^{n}=2^{n+1}-2
+\]
+要求 \(2^{n+1}-2\geqslant100\). 由于
+\(2^{5+1}-2=62<100\)，\(2^{6+1}-2=126\geqslant100\)
+所以最少需要 \(n=6\) 天.
+\end{solution}
 
 \begin{problem}
 设 \( f(x) = \sqrt{3} \sin 3x + \cos 3x \)，若对任意实数 \( x \) 都有 \( |f(x)| \leqslant a \)，则实数 \( a \) 的取值范围是\fillinblank{}.
@@ -179,6 +309,18 @@ B
 \(a \in [2,+\infty)\)
 \end{answer}
 
+\begin{solution}
+由柯西不等式，
+\[
+|f(x)|=|\sqrt3\sin3x+\cos3x|
+ \leqslant\sqrt{(\sqrt3)^{2}+1^{2}}\sqrt{\sin^{2}3x+\cos^{2}3x}=2
+\]
+当 \(3x=\frac{\pi}{3}\) 时，\(\sin3x=\frac{\sqrt3}{2}\)，\(\cos3x=\frac12\)，从而 \(f(x)=2\)，故最大值确为 \(2\). 因此对任意实数 \(x\) 都有 \(|f(x)|\leqslant a\) 当且仅当 \(a\geqslant2\)，即
+\[
+a\in[2,+\infty)
+\]
+\end{solution}
+
 \begin{problem}
 若圆 \(C\) 经过坐标原点和点 \((4,0)\)，且与直线 \(y = 1\) 相切，则圆 \(C\) 的方程是\fillinblank{}.
 \end{problem}
@@ -186,6 +328,23 @@ B
 \begin{answer}
 \((x-2)^{2} + \left(y + \frac{3}{2}\right)^{2} = \frac{25}{4}\)
 \end{answer}
+
+\begin{solution}
+设圆心为 \((h,k)\)，半径为 \(r\). 由于圆经过 \((0,0)\) 和 \((4,0)\)，有
+\(h^{2}+k^{2}=r^{2}\)，\((h-4)^{2}+k^{2}=r^{2}\).
+两式相减得 \(h=2\)，所以圆心为 \((2,k)\)，且 \(r^{2}=4+k^{2}\). 圆与直线 \(y=1\) 相切，故圆心到该直线的距离等于半径：
+\[
+|k-1|=\sqrt{4+k^{2}}
+\]
+平方得
+\[
+(k-1)^{2}=4+k^{2}\iff k=-\frac32
+\]
+于是 \(r^{2}=4+\frac94=\frac{25}{4}\)，圆的方程为
+\[
+\left(x-2\right)^{2}+\left(y+\frac32\right)^{2}=\frac{25}{4}
+\]
+\end{solution}
 
 \begin{problem}
 如图，正方体的底面与正四面体的底面在同一平面 \(\alpha\) 上，且 \(AB \parallel CD\)，则直线 \(EF\) 与正方体的六个面所在的平面相交的平面个数为\fillinblank{}.
@@ -196,6 +355,16 @@ B
 \begin{answer}
 4
 \end{answer}
+
+\begin{solution}
+设正四面体顶点 \(F\) 在平面 \(\alpha\) 上的射影为正三角形 \(CDE\) 的中心 \(G\). 则直线 \(EF\) 在 \(\alpha\) 上的射影为 \(EG\)，而在正三角形中，中线 \(EG\perp CD\). 因此
+\[
+EF\perp CD
+\]
+又因 \(AB\parallel CD\)，所以 \(EF\perp AB\). 于是直线 \(EF\) 与正方体的两个底面棱平行于 \(AB\) 的侧面所在平面相交，与两个底面棱垂直于 \(AB\) 的侧面所在平面平行，不相交.
+
+此外，\(EF\) 在底面平面 \(\alpha\) 上经过点 \(E\)，并且不平行于正方体的上底面所在平面，故还与上下底面所在的两个平面相交. 所以相交的平面共有 \(2+2=4\) 个.
+\end{solution}
 
 \section{解答题}
 
@@ -208,7 +377,32 @@ B
 \end{problem}
 
 \begin{solution}
-短答案：\(a_{n} = 2n\)；\(T_{n} = \frac{n}{2(n+1)}\).
+\begin{enumerate}
+\item 原方程关于 \(a_n\) 的判别式为
+\[
+\Delta=(2n-1)^{2}+8n=(2n+1)^{2}
+\]
+因此
+\[
+a_n=\frac{2n-1\pm(2n+1)}{2}
+\]
+即 \(a_n=2n\) 或 \(a_n=-1\). 由于数列为正项数列，取正根，得
+\[
+a_n=2n
+\]
+\item 由 \(a_n=2n\)，
+\[
+b_n=\frac{1}{(n+1)a_n}=\frac{1}{2n(n+1)}
+ =\frac12\left(\frac1n-\frac1{n+1}\right)
+\]
+所以
+\[
+T_n=\sum_{k=1}^{n}b_k
+ =\frac12\sum_{k=1}^{n}\left(\frac1k-\frac1{k+1}\right)
+ =\frac12\left(1-\frac1{n+1}\right)
+ =\frac{n}{2(n+1)}
+\]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -220,7 +414,37 @@ B
 \end{problem}
 
 \begin{solution}
-短答案：\(a\)，\(b\)，\(c\) 成等差数列；\(\frac{a}{b} = \frac{3}{5}\).
+\begin{enumerate}
+\item 由已知条件，
+\[
+\sin B(\sin A+\sin C)=1-\cos2B=2\sin^{2}B
+\]
+三角形内角满足 \(0<B<\pi\)，所以 \(\sin B>0\)，从而
+\[
+\sin A+\sin C=2\sin B
+\]
+由正弦定理，\(\sin A:\sin B:\sin C=a:b:c\)，故
+\[
+a+c=2b
+\]
+即 \(a\)，\(b\)，\(c\) 成等差数列.
+\item 当 \(C=\frac{2\pi}{3}\) 时，\(A+B=\frac\pi3\). 令 \(t=\tan\frac A2\)，则 \(0<A<\frac\pi3\)，故 \(t>0\). 由 \(\sin A+\sin C=2\sin B\) 得
+\[
+2\sin A-\sqrt3\cos A+\frac{\sqrt3}{2}=0
+\]
+代入
+\(\sin A=\frac{2t}{1+t^{2}}\)，\(\cos A=\frac{1-t^{2}}{1+t^{2}}\)
+并整理得
+\[
+3\sqrt3t^{2}+8t-\sqrt3=0
+\]
+其根为 \(t=\frac{\sqrt3}{9}\) 和负根；由 \(t>0\)，取 \(t=\frac{\sqrt3}{9}\). 因而
+\(\sin A=\frac{3\sqrt3}{14}\)，\(\sin B=\sin\left(\frac\pi3-A\right)=\frac{5\sqrt3}{14}\).
+再由正弦定理，
+\[
+\frac ab=\frac{\sin A}{\sin B}=\frac35
+\]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -234,8 +458,19 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(X\) 的所有可能取值为 \(-2\)，\(-1\)，\(0\)，\(1\).
-\item 短答案：去下棋的概率为 \(\frac{7}{15}\)，不去唱歌的概率为 \(\frac{11}{15}\).
+\item 由图可取
+\(A_1=(1,0)\)，\(A_2=(1,-1)\)，\(A_3=(0,-1)\)，\(A_4=(0,1)\)
+\(A_5=(-1,1)\)，\(A_6=(-1,0)\).
+任取两个不同点，计算相应向量的数量积. 当点对为 \((A_2,A_5)\) 时，\(X=-2\)，共 1 种；当点对为 \((A_1,A_5)\)，\((A_1,A_6)\)，\((A_2,A_4)\)，\((A_2,A_6)\)，\((A_3,A_4)\)，\((A_3,A_5)\) 时，\(X=-1\)，共 6 种；当点对为 \((A_1,A_3)\)，\((A_1,A_4)\)，\((A_3,A_6)\)，\((A_4,A_6)\) 时，\(X=0\)，共 4 种；当点对为 \((A_1,A_2)\)，\((A_2,A_3)\)，\((A_4,A_5)\)，\((A_5,A_6)\) 时，\(X=1\)，共 4 种.
+所以 \(X\) 的所有可能取值为 \(-2\)，\(-1\)，\(0\)，\(1\).
+\item 两点的无序选法共有 \(\mathrm C_6^2=15\) 种；若按有序选取，则每个无序点对对应两个等可能的有序结果，概率相同. 由上述计数，\(X<0\) 有 \(1+6=7\) 种，故去下棋的概率为
+\[
+P(X<0)=\frac7{15}
+\]
+不去唱歌等价于 \(X\ne0\)，因此
+\[
+P(X\ne0)=1-\frac4{15}=\frac{11}{15}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -249,7 +484,39 @@ B
 \end{problem}
 
 \begin{solution}
-短答案：点 \(B_{1}\) 到平面 \(EA_{1}C_{1}\) 的距离为 \(\frac{\sqrt{10}}{5}\).
+\begin{enumerate}
+\item 建立空间直角坐标系，令
+\(A=(0,0,0)\)，\(B=(2,0,0)\)，\(D=(0,\sqrt2,0)\)，\(C=(4,\sqrt2,0)\)
+\(A_1=(0,0,3)\)，\(B_1=(2,0,3)\)，\(C_1=(4,\sqrt2,3)\)，\(E=(1,\sqrt2,0)\).
+则
+\(\overrightarrow{BE}=(-1,\sqrt2,0)\)，\(\overrightarrow{BC}=(2,\sqrt2,0)\)，\(\overrightarrow{BB_1}=(0,0,3)\).
+有
+\(\overrightarrow{BE}\cdot\overrightarrow{BC}=-2+2=0\)，\(\overrightarrow{BE}\cdot\overrightarrow{BB_1}=0\).
+直线 \(BC\) 与 \(BB_1\) 是平面 \(BB_1C_1C\) 内相交的两条直线，因此 \(BE\perp\) 平面 \(BB_1C_1C\).
+\item 取
+\(\overrightarrow{EA_1}=(-1,-\sqrt2,3)\)，\(\overrightarrow{EC_1}=(3,0,3)\).
+平面 \(EA_1C_1\) 的一个法向量可取
+\[
+(-\sqrt2,4,\sqrt2)
+\]
+因为
+\[
+\overrightarrow{EA_1}\times\overrightarrow{EC_1}=3(-\sqrt2,4,\sqrt2)
+\]
+所以其方程为
+\[
+-\sqrt2(x-1)+4(y-\sqrt2)+\sqrt2z=0
+\]
+即
+\[
+-\sqrt2x+4y+\sqrt2z-3\sqrt2=0
+\]
+点 \(B_1(2,0,3)\) 到此平面的距离为
+\[
+\frac{|-2\sqrt2+3\sqrt2-3\sqrt2|}{\sqrt{2+16+2}}
+ =\frac{2\sqrt2}{2\sqrt5}=\frac{\sqrt{10}}5
+\]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -262,7 +529,36 @@ B
 \end{problem}
 
 \begin{solution}
-短答案：椭圆 \(C\) 的方程为 \(\frac{x^{2}}{4} + y^{2} = 1\)；\(2m-k = \frac{1}{2}\).
+\begin{enumerate}
+\item 由离心率，
+\(e^{2}=\frac{c^{2}}{a^{2}}=\frac34\)，\(b^{2}=a^{2}-c^{2}=\frac14a^{2}\).
+因 \(a\)，\(b>0\)，有 \(b=\frac a2\). 再由 \(a+b=3\) 得 \(a=2\)，\(b=1\)，故椭圆方程为
+\[
+\frac{x^{2}}4+y^{2}=1
+\]
+\item 由图取椭圆顶点 \(A=(-2,0)\)，\(B=(2,0)\)，\(D=(0,1)\). 设直线 \(BP\) 的斜率为 \(k\). 因 \(P\) 不是顶点，\(k\) 为有限非零数，且 \(2k-1\ne0\)、\(2k+1\ne0\)：\(k=0\) 时 \(P=A\)，\(k=\frac12\) 时 \(P\) 为下顶点，\(k=-\frac12\) 时 \(P=D\)，均与题意矛盾. 因此下列除法均有意义. 直线 \(BP\) 的方程为 \(y=k(x-2)\)，与椭圆联立，除去交点 \(B\) 后得
+\[
+P=\left(\frac{2(4k^{2}-1)}{4k^{2}+1},-\frac{4k}{4k^{2}+1}\right)
+\]
+直线 \(AD\) 的方程为 \(y=\frac x2+1\)，所以
+\[
+M=AD\cap BP=\left(\frac{2(2k+1)}{2k-1},\frac{4k}{2k-1}\right)
+\]
+直线 \(DP\) 与 \(x\) 轴交于
+\[
+N=\left(\frac{2(2k-1)}{2k+1},0\right)
+\]
+于是 \(MN\) 的斜率为
+\[
+m=\frac{\dfrac{4k}{2k-1}}{\dfrac{2(2k+1)}{2k-1}-\dfrac{2(2k-1)}{2k+1}}
+ =\frac{2k+1}{4}
+\]
+因此
+\[
+2m-k=2\cdot\frac{2k+1}{4}-k=\frac12
+\]
+为定值.
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -279,8 +575,67 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(\frac{2}{3}\).
-\item 短答案：\(x_{1} = \frac{a}{-a^{2}+a+1}\)，\(x_{2} = \frac{1}{-a^{2}+a+1}\).
-\item 短答案：最大值为 \(\frac{1}{20}\)，最小值为 \(\frac{1}{33}\).
+\item 当 \(a=\frac12\) 时，\(\frac13\leqslant a\)，故
+\[
+f\left(\frac13\right)=2\cdot\frac13=\frac23
+\]
+又 \(\frac23>a\)，所以
+\[
+f\left(f\left(\frac13\right)\right)=f\left(\frac23\right)=2\left(1-\frac23\right)=\frac23
+\]
+\item 记 \(d=1+a-a^{2}\). 分段计算复合函数：
+\[
+f(f(x))=
+\begin{cases}
+\dfrac{x}{a^{2}},&0\leqslant x\leqslant a^{2},\\[4pt]
+\dfrac{a-x}{a(1-a)},&a^{2}<x\leqslant a,\\[4pt]
+\dfrac{x-a}{(1-a)^{2}},&a<x<1-a+a^{2},\\[4pt]
+\dfrac{1-x}{a(1-a)},&1-a+a^{2}\leqslant x\leqslant1.
+\end{cases}
+\]
+在第一段令 \(f(f(x))=x\)，只有固定点 \(x=0\)；第二段给出
+\[
+x=\frac{a}{1+a-a^{2}}=\frac ad;
+\]
+第三段给出固定点
+\[
+x=\frac{1}{2-a};
+\]
+第四段给出
+\[
+x=\frac{1}{1+a-a^{2}}=\frac1d
+\]
+由于 \(0<a<1\)，有
+\(a^{2}<\frac ad<a\)，\(a<\frac1{2-a}<1-a+a^{2}\)，\(1-a+a^{2}<\frac1d<1\)
+所以上述三个非零解分别确实落在对应分段内. 其中 \(x=0\) 和 \(x=\frac1{2-a}\) 满足 \(f(x)=x\)，不属于二阶周期点；而
+\(x_1=\frac ad\)，\(x_2=\frac1d\)
+分别落在第二、四段，并满足
+\(f(x_1)=x_2\)，\(f(x_2)=x_1\).
+由于 \(0<a<1\)，有 \(x_1\ne x_2\)，故它们正好是两个二阶周期点，且函数没有其他二阶周期点.
+\item 对上述两点，\(f(f(x_i))=x_i\)，所以
+\(A=(x_1,x_1)\)，\(B=(x_2,x_2)\)，\(C=(a^{2},0)\).
+由三角形面积的行列式公式，且 \(x_2>x_1\)，
+\[
+S(a)=\frac12\left|(x_2-x_1)(-x_1)-(x_2-x_1)(a^{2}-x_1)\right|
+ =\frac12(x_2-x_1)a^{2}
+\]
+又
+\[
+x_2-x_1=\frac{1-a}{d}
+\]
+故
+\[
+S(a)=\frac{a^{2}(1-a)}{2(1+a-a^{2})}
+\]
+求导得
+\[
+S'(a)=\frac{a(2-2a-2a^{2}+a^{3})}{2(1+a-a^{2})^{2}}
+\]
+当 \(a\in[\frac13,\frac12]\) 时，分母为正，且
+\[
+2-2a-2a^{2}+a^{3}\geqslant2-1-\frac12=\frac12>0
+\]
+所以 \(S(a)\) 在该区间上单调递增. 因此
+\(S_{\min}=S\left(\frac13\right)=\frac1{33}\)，\(S_{\max}=S\left(\frac12\right)=\frac1{20}\).
 \end{enumerate}
 \end{solution}

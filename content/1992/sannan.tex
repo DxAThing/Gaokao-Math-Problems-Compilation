@@ -16,11 +16,15 @@ C
 \end{answer}
 
 \begin{solution}
-由 \(\i^2=-1\)，得 \(z=-1+\sqrt{3}\i\)，所以 \(z\) 在第二象限，且
+由 \(\i^2=-1\)，得
 \[
-\tan\arg z=\frac{\sqrt{3}}{-1}=-\sqrt{3}.
+z=-1+\sqrt{3}\i
 \]
-因此主值 \(\arg z=\frac{2}{3}\pi\)，故选 C.
+它的实部为 \(-1\)，虚部为 \(\sqrt{3}>0\)，所以 \(z\) 位于第二象限. 设主值辐角为 \(\theta\)，则 \(\tan\theta=-\sqrt{3}\)，且 \(\theta\in(\frac{\pi}{2},\pi)\)，从而
+\[
+\theta=\frac{2\pi}{3}
+\]
+因此 \(\arg z=\frac{2\pi}{3}\)，故选 C.
 \end{solution}
 
 \begin{problem}
@@ -38,11 +42,11 @@ D
 \end{answer}
 
 \begin{solution}
-设底面半径为 \(r\)，则等边圆柱的高等于底面直径，即 \(h=2r\). 由圆柱体积公式，
+设底面半径为 \(r>0\)，高为 \(h\). 由等边圆柱的定义，底面直径等于母线，而圆柱的母线就是高，所以 \(h=2r\). 由圆柱体积公式，
 \[
-16\pi=\pi r^2h=2\pi r^3,
+16\pi=\pi r^2h=2\pi r^3
 \]
-所以 \(r^3=8\)，从而 \(r=2\mathrm{~cm}\)，故选 D.
+约去 \(2\pi\) 得 \(r^3=8\). 因为 \(r>0\)，所以 \(r=2\mathrm{~cm}\)，故选 D.
 \end{solution}
 
 \begin{problem}
@@ -60,13 +64,13 @@ A
 \end{answer}
 
 \begin{solution}
-由反三角函数的主值范围，
+由反三角函数的主值范围 \(\arcsin u\in[-\frac\pi2,\frac\pi2]\)、\(\arccos u\in[0,\pi]\)、\(\arctan u\in(-\frac\pi2,\frac\pi2)\)，有
+\(\arcsin\frac{\sqrt{3}}2=\frac\pi3\)，\(\arccos\left(-\frac12\right)=\frac{2\pi}3\)，\(\arctan(-\sqrt{3})=-\frac\pi3\).
+所以分子为 \(\frac\pi3-\frac{2\pi}3=-\frac\pi3\)，分母为 \(-\frac\pi3\)，原式为
 \[
-\arcsin\frac{\sqrt{3}}{2}=\frac{\pi}{3},\qquad
-\arccos\left(-\frac12\right)=\frac{2\pi}{3},\qquad
-\arctan(-\sqrt{3})=-\frac{\pi}{3}.
+\frac{-\frac\pi3}{-\frac\pi3}=1
 \]
-因此原式等于 \(\dfrac{-\frac{\pi}{3}}{-\frac{\pi}{3}}=1\)，故选 A.
+故选 A.
 \end{solution}
 
 \begin{problem}
@@ -84,11 +88,17 @@ B
 \end{answer}
 
 \begin{solution}
-交换原函数中的 \(x\) 与 \(y\)，得 \(x=\log_{\frac12}(1-y)\). 于是
+原函数的定义域为 \(x<1\)，此时 \(1-x>0\). 由于底数 \(\frac12\) 大于 \(0\) 且不等于 \(1\)，当 \(x\) 遍历 \((-\infty,1)\) 时，\(y\) 的值域为 \(\R\)，所以反函数的定义域为 \(\R\). 交换原函数中的 \(x\) 与 \(y\)，得
 \[
-\left(\frac12\right)^x=1-y,
+x=\log_{\frac12}(1-y)
 \]
-所以反函数为 \(y=1-2^{-x}\)，故选 B.
+由对数定义，
+\[
+\left(\frac12\right)^x=1-y
+\]
+于是
+\(y=1-\left(\frac12\right)^x=1-2^{-x}\)，\(x\in\R\).
+故选 B.
 \end{solution}
 
 \begin{problem}
@@ -107,14 +117,19 @@ C
 
 \begin{solution}
 取 \(A\) 为原点，令 \(AB\)、\(BC\)、\(AA_1\) 分别沿三个坐标轴正向，则
+\(A_1=(0,0,2a)\)，\(C=(a,a,0)\).
+设直线 \(A_1C\) 上的点为 \(P\)，用参数 \(t\) 表示为
 \[
-A_1=(0,0,2a),\qquad C=(a,a,0).
+P=A_1+t(C-A_1)=(ta,ta,2a(1-t))
 \]
-直线 \(A_1C\) 的方向向量可取 \(\bs{v}=(a,a,-2a)\)，而 \(\overrightarrow{A_1A}=(0,0,-2a)\). 点到直线的距离为
+于是
 \[
-d=\frac{\left|\overrightarrow{A_1A}\times\bs{v}\right|}{|\bs{v}|}
-=\frac{2\sqrt{2}a^2}{\sqrt{6}a}
-=\frac{2\sqrt{3}}{3}a.
+AP^2=a^2\bigl(t^2+t^2+4(1-t)^2\bigr)
+=a^2\left(6\left(t-\frac23\right)^2+\frac43\right)
+\]
+当 \(t=\frac23\) 时，\(AP^2\) 取得最小值 \(\frac43a^2\)，所以点 \(A\) 到直线 \(A_1C\) 的距离为
+\[
+d=\sqrt{\frac43a^2}=\frac{2\sqrt{3}}3a
 \]
 故选 C.
 \end{solution}
@@ -134,13 +149,13 @@ A
 \end{answer}
 
 \begin{solution}
-利用二倍角公式，原函数化为
+利用二倍角公式 \(\sin x\cos x=\frac12\sin 2x\) 和 \(\cos^2x=\frac{1+\cos 2x}{2}\)，原函数化为
 \[
 y=\frac12\sin2x+\frac{\sqrt{3}}{2}(1+\cos2x)-\frac{\sqrt{3}}2
 =\frac12\sin2x+\frac{\sqrt{3}}2\cos2x
-=\sin\left(2x+\frac{\pi}{3}\right).
+=\sin\left(2x+\frac{\pi}{3}\right)
 \]
-因此其最小正周期为 \(\dfrac{2\pi}{2}=\pi\)，故选 A.
+最后一步利用了 \(\sin(u+\frac\pi3)=\frac12\sin u+\frac{\sqrt3}{2}\cos u\). 因为正弦函数的最小正周期是 \(2\pi\)，故满足 \(2T=2\pi\) 的最小正周期为 \(T=\pi\)，故选 A.
 \end{solution}
 
 \begin{problem}
@@ -158,11 +173,15 @@ D
 \end{answer}
 
 \begin{solution}
-椭圆的极坐标方程可写成 \(\rho=\dfrac{p}{1-e\cos\theta}\)，其中 \(0<e<1\). 选项 D 可化为
+以焦点为极点的圆锥曲线极坐标方程可写成
 \[
-\rho=\frac{5/2}{1-\frac{\sqrt{3}}2\cos\theta},
+\rho=\frac{p}{1-e\cos\theta}
 \]
-其离心率为 \(e=\frac{\sqrt{3}}2<1\)，所以表示椭圆，故选 D.
+其中离心率满足：\(0<e<1\) 时为椭圆，\(e=1\) 时为抛物线，\(e>1\) 时为双曲线. 逐项比较，选项 A 中 \(e=\frac{2}{\sqrt3}>1\)，表示双曲线；选项 B 中 \(e=1\)，表示抛物线；选项 C 不是上述以 \(\rho\) 为分母的圆锥曲线标准形式. 选项 D 可化为
+\[
+\rho=\frac{5/2}{1-\frac{\sqrt{3}}2\cos\theta}
+\]
+其离心率为 \(e=\frac{\sqrt3}{2}\)，满足 \(0<e<1\)，所以表示椭圆，故选 D.
 \end{solution}
 
 \begin{problem}
@@ -180,12 +199,16 @@ B
 \end{answer}
 
 \begin{solution}
-由根式有意义知 \(x\geqslant2\). 在此条件下，
+根式有意义要求 \(x-2\geqslant0\)，即 \(x\geqslant2\). 在此定义域内，
 \[
 \left|\sqrt{x-2}-3\right|<1
-\Longleftrightarrow 2<\sqrt{x-2}<4.
+\Longleftrightarrow 2<\sqrt{x-2}<4
 \]
-两边平方得 \(4<x-2<16\)，即 \(6<x<18\)，故选 B.
+两端均为正数，可以平方而不改变不等号方向，得
+\[
+4<x-2<16
+\]
+即 \(6<x<18\). 这个区间已自动满足 \(x\geqslant2\)，所以解集为 \(\{x\mid6<x<18\}\)，故选 B.
 \end{solution}
 
 \begin{problem}
@@ -203,11 +226,15 @@ C
 \end{answer}
 
 \begin{solution}
-由等差数列前 \(n\) 项和的关系，
+令 \(S_0=0\). 由 \(a_n=S_n-S_{n-1}\)，有
 \[
-a_n=S_n-S_{n-1}=-n^2+(n-1)^2=-2n+1.
+a_n=S_n-S_{n-1}=-n^2+(n-1)^2=-2n+1
 \]
-因此 \(d=a_{n+1}-a_n=-2\)，故选 C.
+因此
+\[
+d=a_{n+1}-a_n=\bigl[-2(n+1)+1\bigr]-(-2n+1)=-2
+\]
+所以 \(a_n=-2n+1\)、\(d=-2\)，故选 C.
 \end{solution}
 
 \begin{problem}
@@ -225,15 +252,15 @@ A
 \end{answer}
 
 \begin{solution}
-令 \(u=\cos x\)，由 \(\cos2x=2\cos^2x-1\) 得
+令 \(u=\cos x\)，则 \(-1\leqslant u\leqslant1\). 由 \(\cos 2x=2\cos^2x-1\)，原方程变为
+\(2u^2-1=3u+1\)，\(2u^2-3u-2=0\).
+因式分解得
 \[
-2u^2-1=3u+1,\qquad 2u^2-3u-2=0.
+(2u+1)(u-2)=0
 \]
-即 \((2u+1)(u-2)=0\). 因为 \(|u|\leqslant1\)，只能有 \(u=-\frac12\)，所以
-\[
-x=2k\pi\pm\frac{2}{3}\pi,\qquad k\in\Z.
-\]
-故选 A.
+根 \(u=2\) 不符合 \(-1\leqslant u\leqslant1\)，故只能取 \(u=-\frac12\). 于是
+\(x=2k\pi\pm\frac{2}{3}\pi\)，\(k\in\Z\).
+这些值都满足 \(\cos x=-\frac12\)，故解集为选项 A，故选 A.
 \end{solution}
 
 \begin{problem}
@@ -251,11 +278,15 @@ A
 \end{answer}
 
 \begin{solution}
-球冠所在球面的半径为 \(R=2\). 弧的圆心角为 \(60^\circ\)，绕经过弧中点的直径旋转后，球冠的极角为 \(30^\circ\)，所以球冠高为
+旋转所得球面的半径等于原弧所在圆的半径，因此 \(R=2\). 原弧的圆心角为 \(60^\circ\)，而旋转轴是经过弧中点的直径，所以弧的两个端点与旋转轴的夹角都是 \(30^\circ\). 球冠的高为
 \[
-h=R-R\cos30^\circ=2-\sqrt{3}.
+h=R-R\cos30^\circ=2-\sqrt{3}
 \]
-球冠面积为 \(2\pi Rh=2\pi\cdot2(2-\sqrt{3})=4(2-\sqrt{3})\pi\)，故选 A.
+球冠面积公式为 \(2\pi Rh\)，故
+\[
+S=2\pi\cdot2(2-\sqrt3)=4(2-\sqrt3)\pi
+\]
+故选 A.
 \end{solution}
 
 \begin{problem}
@@ -273,7 +304,15 @@ D
 \end{answer}
 
 \begin{solution}
-按当选女生人数分类：恰有 \(1\) 名女生时有 \(\mathrm C_3^1\mathrm C_7^1=21\) 种，恰有 \(2\) 名女生时有 \(\mathrm C_3^2=3\) 种. 因此至少有 \(1\) 名女生当选的选法共有 \(21+3=24\) 种，故选 D.
+按当选女生人数分类，两个代表中恰有一名女生时，先从三名女生中选一名，再从七名男生中选一名，选法数为
+\[
+\mathrm C_3^1\mathrm C_7^1=3\times7=21
+\]
+两个代表都是女生时，选法数为
+\[
+\mathrm C_3^2=3
+\]
+这两类互不相交且正好覆盖“至少有一名女生”的情形，所以总数为 \(21+3=24\)，故选 D.
 \end{solution}
 
 \begin{problem}
@@ -293,17 +332,23 @@ B
 \begin{solution}
 因为 \(\sqrt{x^2}=|x|\)，所以
 \[
-M=\{x\mid x<-2\text{ 或 }x>2\}.
+M=\{x\mid |x|>2\}=\{x\mid x<-2\text{ 或 }x>2\}
 \]
-对集合 \(N\)，定义域要求 \(x>0\) 且 \(x\ne1\). 当 \(0<x<1\) 时，\(\log_x7<0<\log_37\)；当 \(x>1\) 时，由 \(\log_x7=\dfrac{\ln7}{\ln x}\) 得
+对集合 \(N\)，对数的定义域要求 \(x>0\) 且 \(x\ne1\). 当 \(0<x<1\) 时，\(\ln x<0\)，所以 \(\log_x7=\frac{\ln7}{\ln x}<0\)，而 \(\log_37>0\)，不满足不等式. 当 \(x>1\) 时，\(\ln x>0\)，且
 \[
-\log_x7>\log_37\Longleftrightarrow \ln x<\ln3\Longleftrightarrow 1<x<3.
+\log_x7>\log_37\Longleftrightarrow \frac{\ln7}{\ln x}>\frac{\ln7}{\ln3}
+\Longleftrightarrow \ln x<\ln3
+\Longleftrightarrow 1<x<3
 \]
-故 \(N=(1,3)\)，从而 \(\overline N=(-\infty,1]\cup[3,+\infty)\). 因此
+因此 \(N=(1,3)\). 全集为 \(\R\)，所以
 \[
-M\cap\overline N=(-\infty,-2)\cup[3,+\infty),
+\overline N=(-\infty,1]\cup[3,+\infty)
 \]
-故选 B.
+与 \(M\) 相交时，\(x<-2\) 全部保留；在 \(x>2\) 中只有 \(x\geqslant3\) 不属于 \(N\). 故
+\[
+M\cap\overline N=(-\infty,-2)\cup[3,+\infty)
+\]
+即 \(\{x\mid x<-2\text{ 或 }x\geqslant3\}\)，故选 B.
 \end{solution}
 
 \begin{problem}
@@ -321,14 +366,25 @@ B
 \end{answer}
 
 \begin{solution}
-设 \(a_1=A\)，则 \(a_n=A2^{n-1}\). 由已知条件，
+设首项为 \(a_1=A>0\)，则由公比 \(q=2\) 有 \(a_n=A2^{n-1}\). 于是
 \[
-A^{30}2^{0+1+\cdots+29}=2^{30},
+A^{30}2^{0+1+\cdots+29}=2^{30}
 \]
-所以 \(A^{30}=2^{-405}\)，因数列各项为正，得 \(A=2^{-27/2}\). 于是
+因为 \(0+1+\cdots+29=\frac{29\cdot30}{2}=435\)，所以
+\[
+A^{30}=2^{30-435}=2^{-405}
+\]
+又因 \(A>0\)，故 \(A=2^{-405/30}=2^{-27/2}\). 所求乘积含十项，因此
 \[
 a_3a_6\cdots a_{30}=A^{10}2^{(3-1)+(6-1)+\cdots+(30-1)}
-=2^{-135}2^{155}=2^{20}.
+\]
+其中
+\[
+(3-1)+(6-1)+\cdots+(30-1)=(3+6+\cdots+30)-10=3\cdot\frac{10\cdot11}{2}-10=155
+\]
+所以
+\[
+a_3a_6\cdots a_{30}=2^{-135}2^{155}=2^{20}
 \]
 故选 B.
 \end{solution}
@@ -348,7 +404,19 @@ D
 \end{answer}
 
 \begin{solution}
-若取 \(A=30^\circ\)，\(B=120^\circ\)，则 \(A<B\)，但 \(\tan A=\frac{\sqrt{3}}3>-\sqrt{3}=\tan B\)，所以 \(A<B\) 不是充分条件. 若取 \(A=120^\circ\)，\(B=30^\circ\)，则 \(\tan A=-\sqrt{3}<\frac{\sqrt{3}}3=\tan B\)，但 \(A<B\) 不成立，所以 \(A<B\) 不是必要条件. 故选 D.
+要判断“\(A<B\)”是否为“\(\tan A<\tan B\)”的充分或必要条件，分别构造反例即可.
+
+取 \(A=30^\circ\)、\(B=120^\circ\)，则第三个内角为 \(30^\circ\)，确实构成非直角三角形，并且 \(A<B\). 但是
+\[
+\tan A=\frac{\sqrt3}{3}>-\sqrt3=\tan B
+\]
+所以 \(A<B\) 不能推出 \(\tan A<\tan B\)，不是充分条件.
+
+再取 \(A=120^\circ\)、\(B=30^\circ\)，第三个内角为 \(30^\circ\)，仍是非直角三角形. 此时
+\[
+\tan A=-\sqrt3<\frac{\sqrt3}{3}=\tan B
+\]
+但 \(A<B\) 不成立，所以 \(A<B\) 也不是必要条件. 故选 D.
 \end{solution}
 
 \begin{problem}
@@ -366,11 +434,11 @@ C
 \end{answer}
 
 \begin{solution}
-因为 \(f\) 是奇函数，所以 \(f(-x)=-f(x)\). 因此
+因为 \(f\) 是奇函数，对任意 \(x\in\R\) 都有 \(f(-x)=-f(x)\)，于是
 \[
-f(x)f(-x)=-f(x)^2\leqslant0,
+f(x)f(-x)=-f(x)^2\leqslant0
 \]
-对任意 \(x\in\R\) 都成立，故选 C.
+其中等号允许在 \(f(x)=0\) 时成立，所以选项 C 对所有 \(x\in\R\) 都成立. 故选 C.
 \end{solution}
 
 \begin{problem}
@@ -388,17 +456,19 @@ A
 \end{answer}
 
 \begin{solution}
-设双曲线方程为 \(\dfrac{x^2}{a^2}-\dfrac{y^2}{b^2}=1\). 由渐近线斜率得
+由焦点在 \(x\) 轴上且渐近线关于两坐标轴对称，设双曲线方程为
+\(\frac{x^2}{a^2}-\frac{y^2}{b^2}=1\)，\(a>0\)，\(\ b>0\).
+其渐近线为 \(y=\pm\frac ba x\)，因此
+\(\frac{b}{a}=\frac32\)，\(b^2=\frac94a^2\).
+焦点横坐标为 \(c=\sqrt{26}\)，且双曲线满足 \(c^2=a^2+b^2\)，所以
+\(\frac{13}{4}a^2=26\)，\(a^2=8\).
+离心率为 \(e=\frac ca\)，故两条准线分别为
 \[
-\frac{b}{a}=\frac32,\qquad b^2=\frac94a^2.
+x=\pm\frac ae=\pm\frac{a^2}{c}
 \]
-又因焦点横坐标为 \(\sqrt{26}\)，所以
+所以两准线之间的距离为
 \[
-a^2+b^2=c^2=26,\qquad \frac{13}{4}a^2=26,\qquad a^2=8.
-\]
-双曲线准线为 \(x=\pm\dfrac{a^2}{c}\)，两准线距离为
-\[
-\frac{2a^2}{c}=\frac{16}{\sqrt{26}}=\frac{8\sqrt{26}}{13},
+\frac{2a^2}{c}=\frac{16}{\sqrt{26}}=\frac{8\sqrt{26}}{13}
 \]
 故选 A.
 \end{solution}
@@ -414,12 +484,18 @@ a^2+b^2=c^2=26,\qquad \frac{13}{4}a^2=26,\qquad a^2=8.
 \end{answer}
 
 \begin{solution}
-由半角公式，
+因为 \(\frac\pi8\in(0,\frac\pi2)\)，半角公式取正号，故
 \[
 \tan\frac{\pi}{8}=\sqrt{\frac{1-\cos\frac{\pi}{4}}{1+\cos\frac{\pi}{4}}}
 =\sqrt{\frac{1-\frac{\sqrt{2}}2}{1+\frac{\sqrt{2}}2}}
-=\sqrt{\left(\sqrt{2}-1\right)^2}=\sqrt{2}-1.
+ =\sqrt{\frac{2-\sqrt2}{2+\sqrt2}}
 \]
+将根式内的分式分子分母同乘 \(2-\sqrt2\)，得
+\[
+\frac{2-\sqrt2}{2+\sqrt2}
+=\frac{(2-\sqrt2)^2}{4-2}=3-2\sqrt2=(\sqrt2-1)^2
+\]
+由于 \(\sqrt2-1>0\)，所以 \(\tan\frac\pi8=\sqrt2-1\).
 \end{solution}
 
 \begin{problem}
@@ -434,15 +510,15 @@ y=3+\frac{\sqrt{3}}{2}t,
 \end{answer}
 
 \begin{solution}
-由参数方程消去参数 \(t\)：
+由参数方程的第一式，因 \(\frac12\ne0\)，可解得
 \[
-t=2(x-2),
+t=2(x-2)
 \]
-代入 \(y=3+\frac{\sqrt{3}}2t\)，得
+将其代入第二式，得
 \[
-y=3+\frac{\sqrt{3}}2\cdot2(x-2)=\sqrt{3}x+3-2\sqrt{3}.
+y=3+\frac{\sqrt{3}}2\cdot2(x-2)=\sqrt{3}x+3-2\sqrt{3}
 \]
-所以斜截式方程为 \(y=\sqrt{3}x+3-2\sqrt{3}\).
+由于 \(t\) 可取任意实数，参数方程上的所有点都满足上述直线方程，且反过来直线上每个 \(x\) 都对应 \(t=2(x-2)\). 所以斜截式方程为 \(y=\sqrt{3}x+3-2\sqrt{3}\).
 \end{solution}
 
 \begin{problem}
@@ -454,17 +530,19 @@ y=3+\frac{\sqrt{3}}2\cdot2(x-2)=\sqrt{3}x+3-2\sqrt{3}.
 \end{answer}
 
 \begin{solution}
-三角形三边长为
+先求三边长：
+\(OA=15\)，\(OB=8\)，\(AB=\sqrt{8^2+15^2}=17\).
+所以三角形是以 \(O\) 为直角顶点的直角三角形. 其内切圆半径为
 \[
-OA=15,\qquad OB=8,\qquad AB=\sqrt{8^2+15^2}=17.
+r=\frac{OA+OB-AB}{2}=\frac{15+8-17}{2}=3
 \]
-它是直角三角形，直角顶点为 \(O\). 设内心为 \(I\)，按内心坐标公式，
+再按内心坐标公式，内心坐标是以各顶点为权、权分别取对边长：
 \[
-I=\frac{17O+8A+15B}{17+8+15}=(-3,3).
+I=\frac{17O+8A+15B}{17+8+15}=(-3,3)
 \]
-内切圆半径等于内心到坐标轴的距离，即 \(r=3\). 因此内切圆方程为
+这也与内心到两条直角边所在坐标轴的距离相等相符. 因此内切圆方程为
 \[
-(x+3)^2+(y-3)^2=3^2,
+(x+3)^2+(y-3)^2=3^2
 \]
 即 \((x+3)^2+(y-3)^2=9\).
 \end{solution}
@@ -478,15 +556,18 @@ I=\frac{17O+8A+15B}{17+8+15}=(-3,3).
 \end{answer}
 
 \begin{solution}
-对任意正整数 \(k\)，
+对任意正整数 \(k\)，作部分分式分解：
 \[
-\frac{1}{(3k-2)(3k+1)}=\frac13\left(\frac{1}{3k-2}-\frac{1}{3k+1}\right).
+\frac{1}{(3k-2)(3k+1)}=\frac13\left(\frac{1}{3k-2}-\frac{1}{3k+1}\right)
 \]
-所以前 \(n\) 项和为
+因此前 \(n\) 项和为
 \[
-\frac13\left(1-\frac{1}{3n+1}\right).
+S_n=\frac13\left(1-\frac14+\frac14-\frac17+\cdots+\frac{1}{3n-2}-\frac{1}{3n+1}\right)=\frac13\left(1-\frac{1}{3n+1}\right)
 \]
-令 \(n\to\infty\)，得极限为 \(\frac13\).
+因为 \(\frac{1}{3n+1}\to0\)，所以
+\[
+\lim_{n\to\infty}S_n=\frac13
+\]
 \end{solution}
 
 \begin{problem}
@@ -498,15 +579,15 @@ I=\frac{17O+8A+15B}{17+8+15}=(-3,3).
 \end{answer}
 
 \begin{solution}
-因为 \(91=1-10\)，由二项式定理，
+写成 \(91=1-10\). 由二项式定理，
 \[
-91^{92}=(1-10)^{92}\equiv1-92\times10\pmod {100},
+91^{92}=(1-10)^{92}\equiv1-92\times10\pmod {100}
 \]
-其余各项均含有因子 \(10^2=100\). 因而
+因为从二次项开始每一项都含有因子 \(10^2=100\)，所以模 \(100\) 时均为零. 于是
 \[
-91^{92}\equiv1-920\equiv81\pmod {100},
+91^{92}\equiv1-920=-919\equiv81\pmod {100}
 \]
-余数为 \(81\).
+由于余数取 \(0\) 到 \(99\) 之间的整数，余数为 \(81\).
 \end{solution}
 
 \begin{problem}
@@ -518,19 +599,25 @@ I=\frac{17O+8A+15B}{17+8+15}=(-3,3).
 \end{answer}
 
 \begin{solution}
-设面 \(ABC\) 内垂直于 \(BC\) 的高为 \(h_1\)，面 \(DBC\) 内垂直于 \(BC\) 的高为 \(h_2\). 由三角形面积公式，
+设在平面 \(ABC\) 内从 \(A\) 向 \(BC\) 作垂线，垂足为 \(E\)，记 \(AE=h_1\)；在平面 \(DBC\) 内从 \(D\) 向 \(BC\) 作垂线，垂足为 \(F\)，记 \(DF=h_2\). 由三角形面积公式，
+\(h_1=\frac{2S_1}{a}\)，\(h_2=\frac{2S_2}{a}\).
+过 \(E\) 作一个垂直于 \(BC\) 的截面，记为 \(\gamma\). 平面 \(\gamma\) 与平面 \(ABC\) 的交线是 \(AE\)，与平面 \(DBC\) 的交线是过 \(E\) 的直线 \(g\)，两交线的夹角就是二面角 \(\alpha\). 设 \(H\) 为点 \(A\) 到平面 \(DBC\) 的垂足，则点 \(A\) 到平面 \(DBC\) 的距离等于点 \(A\) 到直线 \(g\) 的距离，为
 \[
-h_1=\frac{2S_1}{a},\qquad h_2=\frac{2S_2}{a}.
+AH=AE\sin\alpha=h_1\sin\alpha
 \]
-沿棱 \(BC\) 作垂直截面，截面内两条高的夹角为 \(\alpha\)，故三棱锥体积为
+以平面 \(DBC\) 为底面，三棱锥的体积为
 \[
-V=\frac16ah_1h_2\sin\alpha.
+V=\frac13S_2\cdot AH=\frac13\cdot\frac12ah_2\cdot h_1\sin\alpha
+=\frac16ah_1h_2\sin\alpha
 \]
-代入 \(h_1\)、\(h_2\)，得
+代入 \(h_1=\frac{2S_1}{a}\)、\(h_2=\frac{2S_2}{a}\)，得
 \[
-V=\frac{2S_1S_2}{3a}\sin\alpha,
+V=\frac{2S_1S_2}{3a}\sin\alpha
 \]
-所以 \(\sin\alpha=\frac{3aV}{2S_1S_2}\).
+从而
+\[
+\sin\alpha=\frac{3aV}{2S_1S_2}
+\]
 \end{solution}
 
 \section{解答题}
@@ -540,27 +627,40 @@ V=\frac{2S_1S_2}{3a}\sin\alpha,
 \end{problem}
 
 \begin{solution}
-指数式有意义且为指数函数的底数，须有 \(a>0\) 且 \(a\ne1\). 令 \(t=a^{x-1}\)，原方程化为
+指数方程的底数须满足 \(a>0\) 且 \(a\ne1\). 令
 \[
-2t^2-7t+3=0,
+t=a^{x-1}>0
+\]
+则 \(a^{2x-2}=t^2\)，原方程化为
+\[
+2t^2-7t+3=0
 \]
 即
 \[
-(2t-1)(t-3)=0.
+(2t-1)(t-3)=0
 \]
-因此 \(t=\frac12\) 或 \(t=3\). 已知 \(x=2\) 是方程的一个根，代入得 \(t=a\)，所以 \(a=\frac12\) 或 \(a=3\).
-
-当 \(a=\frac12\) 时，\(t=\frac12\) 给出已知根 \(x=2\)，另一个根满足
+所以 \(t=\frac12\) 或 \(t=3\). 已知 \(x=2\) 是一个根，此时 \(t=a^{2-1}=a\)，因此
 \[
-\left(\frac12\right)^{x-1}=3,
+a=\frac12\quad\text{或}\quad a=3
 \]
-故 \(x-1=\log_{\frac12}3\)，即 \(x=1+\log_{\frac12}3\).
 
-当 \(a=3\) 时，\(t=3\) 给出已知根 \(x=2\)，另一个根满足
+当 \(a=\frac12\) 时，\(t=\frac12\) 已给出根 \(x=2\)，另一个根对应 \(t=3\)，满足
 \[
-3^{x-1}=\frac12,
+\left(\frac12\right)^{x-1}=3
 \]
-故 \(x-1=\log_3\frac12=-\log_3 2\)，即 \(x=1-\log_3 2\).
+所以 \(x-1=\log_{\frac12}3\)，即
+\[
+x=1+\log_{\frac12}3
+\]
+
+当 \(a=3\) 时，\(t=3\) 已给出根 \(x=2\)，另一个根对应 \(t=\frac12\)，满足
+\[
+3^{x-1}=\frac12
+\]
+所以 \(x-1=\log_3\frac12=-\log_3 2\)，即
+\[
+x=1-\log_3 2
+\]
 \end{solution}
 
 \begin{problem}
@@ -568,9 +668,15 @@ V=\frac{2S_1S_2}{3a}\sin\alpha,
 \end{problem}
 
 \begin{solution}
-设 \(l=\alpha\cap\beta\). 在平面 \(\alpha\) 内过任意一点作直线 \(m\)，使 \(m\perp l\). 由于 \(\alpha\perp\beta\)，二面角的平面角为直角，所以 \(m\perp\beta\). 题设又给出 \(a\perp\beta\)，因此两条同垂直于平面的直线平行，即 \(a\parallel m\).
+设 \(l=\alpha\cap\beta\). 在平面 \(\alpha\) 内取一点 \(P\)，过 \(P\) 作直线 \(m\subset\alpha\)，使 \(m\perp l\). 由于两平面 \(\alpha\)、\(\beta\) 垂直，平面 \(\alpha\) 内垂直于交线 \(l\) 的直线垂直于平面 \(\beta\)，所以 \(m\perp\beta\). 题设又给出 \(a\perp\beta\)，两条垂直于同一平面的直线互相平行，故
+\[
+a\parallel m
+\]
 
-因为 \(m\subset\alpha\)，所以 \(a\) 的方向平行于平面 \(\alpha\). 若 \(a\) 与 \(\alpha\) 相交，则过交点且与 \(m\) 平行的直线应在平面 \(\alpha\) 内，从而 \(a\subset\alpha\)，这与直线 \(a\) 不在平面 \(\alpha\) 内矛盾. 因此 \(a\) 与 \(\alpha\) 不相交，故 \(a\parallel\alpha\).
+由于 \(m\subset\alpha\)，上式说明直线 \(a\) 的方向平行于平面 \(\alpha\). 若 \(a\) 与 \(\alpha\) 相交于 \(Q\)，则在平面 \(\alpha\) 内过 \(Q\) 且平行于 \(m\) 的直线唯一；而 \(a\) 也过 \(Q\) 且平行于 \(m\)，故 \(a\) 必在平面 \(\alpha\) 内，这与题设“直线 \(a\) 不在平面 \(\alpha\) 内”矛盾. 因此 \(a\) 不与 \(\alpha\) 相交，且方向平行于 \(\alpha\)，从而
+\[
+a\parallel\alpha
+\]
 \end{solution}
 
 \begin{problem}
@@ -580,14 +686,19 @@ V=\frac{2S_1S_2}{3a}\sin\alpha,
 \begin{solution}
 对任意正整数 \(k\)，有
 \[
-2\left(\sqrt{k}-\sqrt{k-1}\right)=\frac{2}{\sqrt{k}+\sqrt{k-1}}>\frac{1}{\sqrt{k}},
+2\left(\sqrt{k}-\sqrt{k-1}\right)=\frac{2}{\sqrt{k}+\sqrt{k-1}}>\frac{1}{\sqrt{k}}
 \]
-因为 \(2\sqrt{k}>\sqrt{k}+\sqrt{k-1}\). 因此逐项相加，得到
+其中最后一个严格不等式等价于
+\[
+2\sqrt{k}>\sqrt{k}+\sqrt{k-1}
+\Longleftrightarrow \sqrt{k}>\sqrt{k-1}
+\]
+对正整数 \(k\) 成立. 于是对 \(k=1\)，\(2\)，\(\ldots\)，\(n\) 逐项相加，得到
 \[
 1+\frac{1}{\sqrt{2}}+\cdots+\frac{1}{\sqrt{n}}
-<2\sum_{k=1}^{n}\left(\sqrt{k}-\sqrt{k-1}\right)=2\sqrt{n}.
+<2\sum_{k=1}^{n}\left(\sqrt{k}-\sqrt{k-1}\right)=2\sqrt{n}
 \]
-不等式得证.
+这里的和是望远镜和，右端的中间项全部消去，且 \(\sqrt0=0\). 所以不等式得证.
 \end{solution}
 
 \begin{problem}
@@ -596,47 +707,54 @@ V=\frac{2S_1S_2}{3a}\sin\alpha,
 
 \begin{solution}
 设抛物线方程为
+\((y-k)^2=4p(x-h)\)，\(p>0\).
+它的对称轴为 \(y=k\). 因为两个已知点的横坐标相同，且纵坐标为 \(6\)、\(-2\)，它们关于对称轴对称，所以
 \[
-(y-k)^2=4p(x-h),\qquad p>0.
+k=\frac{6+(-2)}2=2
 \]
-由于点 \((-1,6)\) 和 \((-1,-2)\) 的纵坐标关于对称轴对称，得
+将点 \((-1,6)\) 代入，得
+\(16=4p(-1-h)\)，\(p(-1-h)=4\).
+因此
 \[
-k=\frac{6+(-2)}2=2.
-\]
-代入点 \((-1,6)\)，得
-\[
-16=4p(-1-h),\qquad p(-1-h)=4.
+h=-1-\frac4p
 \]
 
-直线与抛物线的交点横坐标是方程
+直线 \(y=2x+7\) 与抛物线的交点横坐标满足
 \[
 (2x+7-2)^2=4p(x-h)
 \]
-的两个根，即
+，即
 \[
-4x^2+(20-4p)x+25+4ph=0.
+4x^2+(20-4p)x+25+4ph=0
 \]
-设两根为 \(x_1\)、\(x_2\). 直线斜率为 \(2\)，所以截得线段长为
+设两个交点的横坐标为 \(x_1\)，\(x_2\). 由于交点在斜率为 \(2\) 的直线上，横坐标之差对应的线段长度为
 \[
-\sqrt{1+2^2}|x_1-x_2|=\sqrt{5}|x_1-x_2|=4\sqrt{10},
+\sqrt{1+2^2}|x_1-x_2|=\sqrt{5}|x_1-x_2|=4\sqrt{10}
 \]
-从而 \(|x_1-x_2|=4\sqrt{2}\). 由二次方程根的差公式，
+所以
 \[
-|x_1-x_2|^2=p(p-10-4h).
+|x_1-x_2|=4\sqrt2
 \]
-故
+对二次方程 \(Ax^2+Bx+C=0\)，两根之差的平方为 \(\frac{B^2-4AC}{A^2}\). 在本题中
 \[
-p(p-10-4h)=32.
+|x_1-x_2|^2
+=\frac{(20-4p)^2-16(25+4ph)}{16}
+=p(p-10-4h)
 \]
-由 \(h=-1-\frac4p\)，得
+与 \(|x_1-x_2|^2=32\) 联立，得
 \[
-p^2-6p+16=32,\qquad p^2-6p-16=0.
+p(p-10-4h)=32
 \]
-因 \(p>0\)，所以 \(p=8\)，进而 \(h=-\frac32\). 因此抛物线方程为
+代入 \(h=-1-\frac4p\)，得
+\(p^2-6p+16=32\)，\(p^2-6p-16=0\).
+解得 \(p=8\) 或 \(p=-2\)，由 \(p>0\) 取 \(p=8\)，进而 \(h=-1-\frac48=-\frac32\). 因此抛物线方程为
 \[
-(y-2)^2=32\left(x+\frac32\right),
+(y-2)^2=32\left(x+\frac32\right)
 \]
-即 \((y-2)^2=32x+48\).
+即
+\[
+(y-2)^2=32x+48
+\]
 \end{solution}
 
 \begin{problem}
@@ -648,32 +766,36 @@ p^2-6p+16=32,\qquad p^2-6p-16=0.
 \end{problem}
 
 \begin{solution}
-设 \(z=x+y\i\)，其中 \(x,y\in\Z\)，且 \(z\ne0\). 因为
+设
+\(z=x+y\i\)，\(x\)，\(y\in\Z\)，\(z\ne0\).
+则
 \[
-z+\frac{10}{z}=x+y\i+\frac{10(x-y\i)}{x^2+y^2},
+z+\frac{10}{z}=x+y\i+\frac{10(x-y\i)}{x^2+y^2}
 \]
-其虚部为 \(y\left(1-\frac{10}{x^2+y^2}\right)\). 该式为实数，所以分两种情况讨论.
+其虚部为
+\[
+y\left(1-\frac{10}{x^2+y^2}\right)
+\]
+该式为零，所以分两种情况讨论.
 
-当 \(y=0\) 时，\(x\ne0\)，且题设不等式要求
+当 \(y=0\) 时，\(x\ne0\)，且
 \[
-1<x+\frac{10}{x}\leqslant6.
+1<x+\frac{10}{x}\leqslant6
 \]
-若 \(x<0\)，左端不可能大于 \(1\)；若 \(x>0\)，则
+若 \(x<0\)，则 \(x+\frac{10}{x}<0\)，不可能满足左侧不等式. 若 \(x>0\)，由基本不等式
 \[
-x+\frac{10}{x}\geqslant2\sqrt{10}>6,
+x+\frac{10}{x}\geqslant2\sqrt{10}>6
 \]
-也不满足条件. 因此此时无解.
+也不满足右侧不等式. 因此 \(y=0\) 时无解.
 
-当 \(x^2+y^2=10\) 时，由 \(x,y\in\Z\)，有
+另一种情况是 \(x^2+y^2=10\). 由于 \(x\)，\(y\) 为整数，平方和为 \(10=1+9\)，所以
 \[
-(x,y)=(\pm1,\pm3)\quad\text{或}\quad(\pm3,\pm1).
+(x,y)=(\pm1,\pm3)\quad\text{或}\quad(\pm3,\pm1)
 \]
-此时
+在这种情况下，
 \[
-z+\frac{10}{z}=x+y\i+\frac{10(x-y\i)}{10}=2x.
+z+\frac{10}{z}=x+y\i+\frac{10(x-y\i)}{10}=2x
 \]
-条件 \(1<2x\leqslant6\) 要求 \(x=1\) 或 \(x=3\). 所以所有复数为
-\[
-z=1+3\i,\quad 1-3\i,\quad 3+\i,\quad 3-\i.
-\]
+不等式变为 \(1<2x\leqslant6\)，即 \(\frac12<x\leqslant3\). 结合 \(x\in\{\pm1,\pm3\}\)，只能取 \(x=1\) 或 \(x=3\). 分别配上对应的 \(y=\pm3\) 或 \(y=\pm1\)，所以所有复数为
+\(z=1+3\i\)，\(1-3\i\)，\(3+\i\)，\(3-\i\).
 \end{solution}

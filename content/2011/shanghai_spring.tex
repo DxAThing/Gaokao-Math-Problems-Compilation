@@ -13,6 +13,14 @@
 \((2,+\infty)\)
 \end{answer}
 
+\begin{solution}
+对数的真数必须为正，因此
+\[
+x-2>0\Longrightarrow x>2
+\]
+所以函数的定义域为 \((2,+\infty)\).
+\end{solution}
+
 \begin{problem}
 若集合 \(A = \{x \mid x \geqslant 1\}\)，\(B = \{x \mid x^2 \leqslant 4\}\)，则 \(A \cap B = \)\fillinblank{}.
 \end{problem}
@@ -20,6 +28,17 @@
 \begin{answer}
 \(\{x\mid1\le x\le2\}\)
 \end{answer}
+
+\begin{solution}
+由 \(x^2\le4\) 得 \(-2\le x\le2\)，故
+\[
+B=\{x\mid-2\le x\le2\}
+\]
+再与 \(A=\{x\mid x\ge1\}\) 取交集，得到
+\[
+A\cap B=\{x\mid1\le x\le2\}
+\]
+\end{solution}
 
 \begin{problem}
 在 \(\triangle ABC\) 中，若 \(\tan A = \frac{\sqrt{2}}{3}\)，则 \(\sin A = \)\fillinblank{}.
@@ -29,6 +48,17 @@
 \(\frac{\sqrt{22}}{11}\)
 \end{answer}
 
+\begin{solution}
+因为 \(A\) 是三角形的内角，所以 \(0<A<\pi\). 又因 \(\tan A>0\)，故 \(A\) 为锐角，\(\sin A>0\)，\(\cos A>0\). 由
+\(\tan A=\frac{\sin A}{\cos A}=\frac{\sqrt{2}}{3}\)，\(\sin^2A+\cos^2A=1\)
+可得
+\[
+\sin A=\frac{\tan A}{\sqrt{1+\tan^2A}}
+ =\frac{\frac{\sqrt{2}}{3}}{\sqrt{1+\frac{2}{9}}}
+ =\frac{\sqrt{2}}{\sqrt{11}}=\frac{\sqrt{22}}{11}
+\]
+\end{solution}
+
 \begin{problem}
 若行列式 \( \begin{vmatrix}2^{x}&4\\1&2\end{vmatrix}=0 \)，则 \(x=\)\fillinblank{}.
 \end{problem}
@@ -36,6 +66,14 @@
 \begin{answer}
 \(1\)
 \end{answer}
+
+\begin{solution}
+二阶行列式为零等价于
+\[
+2\cdot2^x-4\cdot1=0
+\]
+于是 \(2^{x+1}=2^2\)，所以 \(x=1\).
+\end{solution}
 
 \begin{problem}
 若 \(\sin x = \frac{1}{3}\)，\(x \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right]\)，则 \( x = \)\fillinblank{}（结果用反三角函数值表示）.
@@ -45,6 +83,13 @@
 \(\arcsin\frac{1}{3}\)
 \end{answer}
 
+\begin{solution}
+反正弦函数在 \(\left[-\frac{\pi}{2},\frac{\pi}{2}\right]\) 上是正弦函数的反函数，并且题目已给出 \(x\) 属于该区间. 因此
+\[
+x=\arcsin\frac{1}{3}
+\]
+\end{solution}
+
 \begin{problem}
 \(\left(x + \frac{1}{x}\right)^6\) 的二项展开式的常数项为\fillinblank{}.
 \end{problem}
@@ -52,6 +97,15 @@
 \begin{answer}
 \(20\)
 \end{answer}
+
+\begin{solution}
+在二项式展开式的通项中，取 \(\frac{1}{x}\) 共 \(r\) 次，可得
+\(T_{r+1}=\mathrm C_6^r x^{6-r}\left(\frac{1}{x}\right)^r =\mathrm C_6^r x^{6-2r}\)，\(r=0\)，\(1\)，\(\ldots\)，\(6\).
+常数项要求 \(6-2r=0\)，所以 \(r=3\)，常数项为
+\[
+\mathrm C_6^3=20
+\]
+\end{solution}
 
 \begin{problem}
 两条直线 \(l_1: x - \sqrt{3} y + 2 = 0\) 与 \(l_2: x - y + 2 = 0\) 夹角的大小是\fillinblank{}.
@@ -61,6 +115,18 @@
 \(\frac{\pi}{12}\)
 \end{answer}
 
+\begin{solution}
+将两直线化为斜截式，得斜率
+\(m_1=\frac{1}{\sqrt{3}}\)，\(m_2=1\).
+设两直线的锐角夹角为 \(\theta\)，则
+\[
+\tan\theta=\left|\frac{m_2-m_1}{1+m_1m_2}\right|
+ =\frac{1-\frac{1}{\sqrt{3}}}{1+\frac{1}{\sqrt{3}}}
+ =2-\sqrt{3}=\tan\frac{\pi}{12}
+\]
+由于 \(0<\theta<\frac{\pi}{2}\)，所以 \(\theta=\frac{\pi}{12}\).
+\end{solution}
+
 \begin{problem}
 若 \( S_{n} \) 为等比数列 \( \{a_{n}\} \) 的前 \(n\) 项和，\( 8a_{2} + a_{5} = 0 \)，则 \( \frac{S_{6}}{S_{3}} = \)\fillinblank{}.
 \end{problem}
@@ -68,6 +134,20 @@
 \begin{answer}
 \(-7\)
 \end{answer}
+
+\begin{solution}
+设等比数列的公比为 \(q\). 因为题目中的比值有意义，所以 \(S_3\ne0\)，从而 \(a_1\ne0\)，进而 \(a_2\ne0\). 由 \(a_5=a_2q^3\) 及已知条件，得
+\[
+8a_2+a_5=a_2(8+q^3)=0
+\]
+从而 \(q^3=-8\)，即 \(q=-2\). 因此
+\[
+\frac{S_6}{S_3}
+ =\frac{a_1\frac{1-q^6}{1-q}}{a_1\frac{1-q^3}{1-q}}
+ =\frac{1-q^6}{1-q^3}
+ =\frac{1-64}{1-(-8)}=-7
+\]
+\end{solution}
 
 \begin{problem}
 若椭圆 \(C\) 的焦点和顶点分别是双曲线 \( \frac{x^{2}}{5}-\frac{y^{2}}{4}=1 \) 的顶点和焦点，则椭圆 \(C\) 的方程是\fillinblank{}.
@@ -77,6 +157,18 @@
 \(\frac{x^2}{9}+\frac{y^2}{4}=1\)
 \end{answer}
 
+\begin{solution}
+双曲线的实半轴、虚半轴分别为 \(\sqrt{5}\)、\(2\)，故其焦半距满足
+\[
+c=\sqrt{5+2^2}=3
+\]
+所以双曲线的顶点为 \((\pm3,0)\)，焦点为 \((\pm\sqrt{5},0)\). 题设说明椭圆的顶点为 \((\pm3,0)\)，焦点为 \((\pm\sqrt{5},0)\)，于是椭圆的长半轴 \(a=3\)，焦半距 \(c=\sqrt{5}\). 由 \(b^2=a^2-c^2\) 得
+\[
+b^2=9-5=4
+\]
+故椭圆方程为 \(\frac{x^2}{9}+\frac{y^2}{4}=1\).
+\end{solution}
+
 \begin{problem}
 若点 \(O\) 和点 \(F\) 分别为椭圆 \(\frac{x^2}{2} + y^2 = 1\) 的中心和左焦点，点 \(P\) 为椭圆上的任意一点，则 \(|OP|^2 + |PF|^2\) 的最小值为\fillinblank{}.
 \end{problem}
@@ -84,6 +176,21 @@
 \begin{answer}
 \(2\)
 \end{answer}
+
+\begin{solution}
+椭圆可写为 \(\frac{x^2}{2}+y^2=1\)，所以中心为 \(O=(0,0)\)，焦半距为 \(1\)，左焦点为 \(F=(-1,0)\). 设 \(P=(x,y)\)，则
+\[
+|OP|^2+|PF|^2=x^2+y^2+(x+1)^2+y^2
+\]
+由椭圆方程 \(y^2=1-\frac{x^2}{2}\)，代入得
+\[
+|OP|^2+|PF|^2
+ =2x^2+2y^2+2x+1
+ =x^2+2x+3
+ =(x+1)^2+2\ge2
+\]
+当 \(x=-1\) 且 \(y=\pm\frac{\sqrt{2}}{2}\) 时，点 \(P\) 在椭圆上并取到等号，故最小值为 \(2\).
+\end{solution}
 
 \begin{problem}
 根据如图所示的程序框图，输出结果 \(i=\)\fillinblank{}.
@@ -95,6 +202,12 @@
 \(7\)
 \end{answer}
 
+\begin{solution}
+初始化时 \(i=0\)，\(s=66\). 每次先判断 \(s\le0\)，若不成立就令 \(s\) 减去 \(10\)，再令 \(i\) 增加 \(1\). 经过 \(k\) 次循环后
+\(s=66-10k\)，\(i=k\).
+停止条件是 \(66-10k\le0\)，即 \(k\ge6.6\). 最小的整数 \(k\) 为 \(7\)，此时 \(s=-4\)，满足停止条件，故输出 \(i=7\).
+\end{solution}
+
 \begin{problem}
 2011年上海春季高考有8所高校招生，如果某3位同学恰好被其中2所高校录取，那么录取方法的种数为\fillinblank{}.
 \end{problem}
@@ -102,6 +215,13 @@
 \begin{answer}
 \(168\)
 \end{answer}
+
+\begin{solution}
+先从 \(8\) 所高校中选出恰好被录取的两所，有 \(\mathrm C_8^2\) 种选法. 对固定的两所高校，3 位有区别的同学分别选择其中一所共有 \(2^3\) 种分配方法；去掉全部被第一所录取和全部被第二所录取的两种情形，才能保证两所高校都录取到同学. 因此种数为
+\[
+\mathrm C_8^2(2^3-2)=28\times6=168
+\]
+\end{solution}
 
 \begin{problem}
 有一种多面体的饰品，其表面由6个正方形和8个正三角形组成（如图），\(AB\) 与 \(CD\) 所成角的大小是\fillinblank{}.
@@ -113,6 +233,21 @@
 \(\frac{\pi}{3}\)
 \end{answer}
 
+\begin{solution}
+该多面体是由正方形和正三角形组成的多面体. 取其中心为原点，并按边长作相似缩放，可将其顶点表示为
+\((\pm1,\pm1,0)\)，\((\pm1,0,\pm1)\)，\((0,\pm1,\pm1)\).
+根据图中四个顶点的相邻关系，可取
+\(A=(1,1,0)\)，\(B=(1,0,1)\)，\(C=(-1,1,0)\)，\(D=(0,1,1)\).
+于是
+\(\overrightarrow{AB}=(0,-1,1)\)，\(\overrightarrow{CD}=(1,0,1)\)
+且 \(|\overrightarrow{AB}|=|\overrightarrow{CD}|=\sqrt{2}\). 所以两异面直线所成的锐角 \(\theta\) 满足
+\[
+\cos\theta=\frac{|\overrightarrow{AB}\cdot\overrightarrow{CD}|}{|\overrightarrow{AB}|\,|\overrightarrow{CD}|}
+ =\frac{1}{2}
+\]
+由于 \(0<\theta<\frac{\pi}{2}\)，故 \(\theta=\frac{\pi}{3}\).
+\end{solution}
+
 \begin{problem}
 为求解方程 \(x^{5} - 1 = 0\) 的虚根，可以把原方程变形为 \((x - 1)(x^4 + x^3 + x^2 + x + 1) = 0\)，再变形为 \((x - 1)(x^2 + ax + 1)(x^2 + bx + 1) = 0\)，由此可得原方程的一个虚根为\fillinblank{}.
 \end{problem}
@@ -120,6 +255,23 @@
 \begin{answer}
 \(\frac{-1-\sqrt{5}\pm\sqrt{10-2\sqrt{5}}\i}{4}\)，\(\frac{-1+\sqrt{5}\pm\sqrt{10+2\sqrt{5}}\i}{4}\) 中的一个虚根
 \end{answer}
+
+\begin{solution}
+比较二次因式的系数，得到
+\(a+b=1\)，\(ab+2=1\)
+即 \(a+b=1\)，\(ab=-1\). 因而 \(a\)，\(b\) 是方程 \(t^2-t-1=0\) 的两个根，即
+\(a=\frac{1+\sqrt{5}}{2}\)，\(b=\frac{1-\sqrt{5}}{2}\).
+对因式 \(x^2+ax+1=0\)，有
+\[
+x=\frac{-a\pm\sqrt{a^2-4}}{2}
+ =\frac{-1-\sqrt{5}\pm\sqrt{10-2\sqrt{5}}\i}{4}
+\]
+因此取其中一个，例如
+\[
+x=\frac{-1-\sqrt{5}+\sqrt{10-2\sqrt{5}}\i}{4}
+\]
+就是原方程的一个虚根. 另一个二次因式给出题目答案中列出的另一对共轭虚根.
+\end{solution}
 
 \section{单选题}
 
@@ -137,6 +289,17 @@
 C
 \end{answer}
 
+\begin{solution}
+逐项计算可得
+\[
+\bs{a}\cdot\bs{b}=2\cdot1+0\cdot1=2\ne1
+\]
+\(|\bs{a}|=2\)，\(|\bs{b}|=\sqrt{2}\)
+所以前两项均不正确. 又
+\(\bs{a}-\bs{b}=(1,-1)\)，\(qquad (\bs{a}-\bs{b})\cdot\bs{b}=1-1=0\)
+故 \((\bs{a}-\bs{b})\perp\bs{b}\). 两向量的坐标不成比例，故 \(\bs{a}\) 不平行于 \(\bs{b}\). 因此选 C.
+\end{solution}
+
 \begin{problem}
 函数 \( f(x) = \frac{4^x - 1}{2^x} \) 的图像关于（\quad）
 
@@ -150,6 +313,18 @@ C
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+化简函数得
+\[
+f(x)=\frac{2^{2x}-1}{2^x}=2^x-2^{-x}
+\]
+于是
+\[
+f(-x)=2^{-x}-2^x=-f(x)
+\]
+所以函数为奇函数，函数图像关于原点对称，故选 A.
+\end{solution}
 
 \begin{problem}
 直线 \(l: y = k\left(x + \frac{1}{2}\right)\) 与圆 \(C: x^2 + y^2 = 1\) 的位置关系为（\quad）
@@ -165,6 +340,10 @@ A
 D
 \end{answer}
 
+\begin{solution}
+直线 \(l\) 恒过点 \(\left(-\frac12,0\right)\)，而该点到圆心 \(O=(0,0)\) 的距离为 \(\frac12<1\)，位于圆 \(C\) 的内部. 过圆内一点的直线必与圆有两个交点，因此直线与圆恒相交，故选 D.
+\end{solution}
+
 \begin{problem}
 若 \(\bs{a}_1\)，\(\bs{a}_2\)，\(\bs{a}_3\) 均为单位向量，则 \(\bs{a}_1 = \left(\frac{\sqrt{3}}{3}, \frac{\sqrt{6}}{3}\right)\) 是 \(\bs{a}_1 + \bs{a}_2 + \bs{a}_3 = (\sqrt{3}, \sqrt{6})\) 的（\quad）
 
@@ -178,6 +357,26 @@ D
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+记
+\(P:\bs{a}_1=\left(\frac{\sqrt{3}}{3},\frac{\sqrt{6}}{3}\right)\)，\(Q:\bs{a}_1+\bs{a}_2+\bs{a}_3=(\sqrt{3},\sqrt{6})\).
+若 \(Q\) 成立，则
+\[
+|\bs{a}_1+\bs{a}_2+\bs{a}_3|=\sqrt{3+6}=3
+\]
+三个单位向量的和的模不超过模的和 \(3\)，等号成立时三个向量方向相同，因此
+\[
+\bs{a}_1=\bs{a}_2=\bs{a}_3
+ =\frac{1}{3}(\sqrt{3},\sqrt{6})
+ =\left(\frac{\sqrt{3}}{3},\frac{\sqrt{6}}{3}\right)
+\]
+所以 \(P\) 是 \(Q\) 的必要条件. 但 \(P\) 不充分：例如取 \(\bs{a}_2=\bs{a}_3=-\bs{a}_1\)，则三个向量仍为单位向量，而
+\[
+\bs{a}_1+\bs{a}_2+\bs{a}_3=-\bs{a}_1\ne(\sqrt{3},\sqrt{6})
+\]
+故选 B.
+\end{solution}
 
 \section{解答题}
 
@@ -196,13 +395,18 @@ B
 f(x)=\bs{a}\cdot\bs{b}
 =\sin2x-1+2\cos^2x
 =\sin2x+\cos2x
-=\sqrt{2}\sin\left(2x+\frac{\pi}{4}\right)
+ =\sqrt{2}\sin\left(2x+\frac{\pi}{4}\right)
 \]
-所以函数 \(f(x)\) 的最小正周期 \(T=\pi\).
+正弦函数的最小正周期为 \(2\pi\)，所以要求 \(2T=2\pi\)，从而函数 \(f(x)\) 的最小正周期为 \(T=\pi\).
 
 \item
-\(x\in\left[0,\frac{\pi}{2}\right]\)，\(2x+\frac{\pi}{4}\in\left[\frac{\pi}{4},\frac{5\pi}{4}\right]\).
-当 \(2x+\frac{\pi}{4}=\frac{\pi}{2}\)，即 \(x=\frac{\pi}{8}\) 时，\(y_{\max}=\sqrt{2}\).
+当 \(x\in\left[0,\frac{\pi}{2}\right]\) 时，
+\[
+2x+\frac{\pi}{4}\in\left[\frac{\pi}{4},\frac{5\pi}{4}\right]
+\]
+该区间包含正弦函数取最大值 \(1\) 的点 \(\frac{\pi}{2}\). 当
+\(2x+\frac{\pi}{4}=\frac{\pi}{2}\)，\(x=\frac{\pi}{8}\)
+时，\(f(x)=\sqrt{2}\)，故最大值为 \(\sqrt{2}\).
 \end{enumerate}
 \end{solution}
 
@@ -214,10 +418,22 @@ f(x)=\bs{a}\cdot\bs{b}
 
 \begin{solution}
 设圆锥的底面半径为 \(r\)，高为 \(h\).
-由弧长关系得 \(2\pi r=\frac{2}{5}\pi\cdot10\)，所以 \(r=2\)，\(h=\sqrt{10^2-2^2}=4\sqrt{6}\).
-表面积 \(S=\frac{\pi\cdot10^2}{5}+2\pi\cdot2^2=28\pi\approx87.96\mathrm{~cm}^{2}\)，
-体积 \(V=\frac{1}{3}\pi\cdot2^2\cdot4\sqrt{6}+\frac{2}{3}\pi\cdot2^3
-=\frac{16}{3}(\sqrt{6}+1)\pi\approx57.80\mathrm{~cm}^{3}\).
+扇形蛋皮的半径是圆锥的母线长，扇形圆心角为 \(\frac{2\pi}{5}\). 因此由弧长相等得
+\(2\pi r=\frac{2\pi}{5}\cdot10\)，\(r=2\).
+由圆锥的母线、底面半径和高组成直角三角形，
+\[
+h=\sqrt{10^2-2^2}=4\sqrt{6}
+\]
+表面积不包含半球和圆锥的公共底面，故
+\[
+S=\frac{\pi\cdot10^2}{5}+2\pi\cdot2^2
+ =28\pi\approx87.96\mathrm{~cm}^{2}
+\]
+体积为圆锥体积与半球体积之和，
+\[
+V=\frac{1}{3}\pi\cdot2^2\cdot4\sqrt{6}+\frac{2}{3}\pi\cdot2^3
+ =\frac{16}{3}(\sqrt{6}+1)\pi\approx57.80\mathrm{~cm}^{3}
+\]
 故该蛋筒冰淇淋的表面积约为 \(87.96\mathrm{~cm}^{2}\)，体积约为 \(57.80\mathrm{~cm}^{3}\).
 \end{solution}
 
@@ -245,24 +461,24 @@ k_{AB}-k_{BC}+k_{CA}
 \[
 k_{PB}-k_{BC}+k_{CP}
 =\frac{y_B-y_P}{x_B-x_P}-\frac{y_C-y_B}{x_C-x_B}+\frac{y_P-y_C}{x_P-x_C}
-=\frac{x_P+x_B}{4}-\frac{x_B+x_C}{4}+\frac{x_C+x_P}{4}=\frac{x_P}{2}=1.
+=\frac{x_P+x_B}{4}-\frac{x_B+x_C}{4}+\frac{x_C+x_P}{4}=\frac{x_P}{2}=1
 \]
 
 \item 研究四边形 \(PBCD\).
 \[
 k_{PB}-k_{BC}+k_{CD}-k_{DP}
-=\frac{x_P+x_B}{4}-\frac{x_B+x_C}{4}+\frac{x_C+x_D}{4}-\frac{x_D+x_P}{4}=0.
+=\frac{x_P+x_B}{4}-\frac{x_B+x_C}{4}+\frac{x_C+x_D}{4}-\frac{x_D+x_P}{4}=0
 \]
 
 \item 研究五边形 \(PBCDE\).
 \[
 k_{PB}-k_{BC}+k_{CD}-k_{DE}+k_{EP}
-=\frac{x_P+x_B}{4}-\frac{x_B+x_C}{4}+\frac{x_C+x_D}{4}-\frac{x_D+x_E}{4}+\frac{x_E+x_P}{4}=\frac{x_P}{2}=1.
+=\frac{x_P+x_B}{4}-\frac{x_B+x_C}{4}+\frac{x_C+x_D}{4}-\frac{x_D+x_E}{4}+\frac{x_E+x_P}{4}=\frac{x_P}{2}=1
 \]
 
 \item 研究 \(n=2k\) 边形 \(P_1P_2\cdots P_{2k}\)（\(k\in\N\)，\(k\ge2\)），其中 \(P_1=P\). 有
 \[
-k_{P_1P_2}-k_{P_2P_3}+k_{P_3P_4}-\cdots+(-1)^{2k-1}k_{P_{2k}P_1}=0.
+k_{P_1P_2}-k_{P_2P_3}+k_{P_3P_4}-\cdots+(-1)^{2k-1}k_{P_{2k}P_1}=0
 \]
 证明：左边
 \[
@@ -274,7 +490,7 @@ k_{P_1P_2}-k_{P_2P_3}+k_{P_3P_4}-\cdots+(-1)^{2k-1}k_{P_{2k}P_1}=0.
 
 \item 研究 \(n=2k-1\) 边形 \(P_1P_2\cdots P_{2k-1}\)（\(k\in\N\)，\(k\ge2\)），其中 \(P_1=P\). 有
 \[
-k_{P_1P_2}-k_{P_2P_3}+k_{P_3P_4}-\cdots+(-1)^{2k-2}k_{P_{2k-1}P_1}=1.
+k_{P_1P_2}-k_{P_2P_3}+k_{P_3P_4}-\cdots+(-1)^{2k-2}k_{P_{2k-1}P_1}=1
 \]
 证明：左边
 \[
@@ -286,7 +502,7 @@ k_{P_1P_2}-k_{P_2P_3}+k_{P_3P_4}-\cdots+(-1)^{2k-2}k_{P_{2k-1}P_1}=1.
 
 \item 研究 \(n\) 边形 \(P_1P_2\cdots P_n\)（\(n\in\N\)，\(n\ge3\)），其中 \(P_1=P\). 有
 \[
-k_{P_1P_2}-k_{P_2P_3}+k_{P_3P_4}-\cdots+(-1)^{n-1}k_{P_nP_1}=\frac{1+(-1)^{n-1}}{2}.
+k_{P_1P_2}-k_{P_2P_3}+k_{P_3P_4}-\cdots+(-1)^{n-1}k_{P_nP_1}=\frac{1+(-1)^{n-1}}{2}
 \]
 证明：左边
 \[
@@ -307,38 +523,32 @@ x, & x \geqslant 0,\\
 \frac{1}{2} x, & x < 0.
 \end{cases}\) 证明：\(f(x)\in M\)；
 \item 写出一个函数 \(f(x)\)，使得 \(f(x)\notin M\)，并说明理由；
-\item 写出一个函数 \(f(x)\in M\)，使得数列极限 \(\displaystyle\lim_{n\to\infty}\frac{f(n)}{n^2}=1\)，\(\displaystyle\lim_{n\to\infty}\frac{f(-n)}{-n}=1.\)
+\item 写出一个函数 \(f(x)\in M\)，使得数列极限 \(\displaystyle\lim_{n\to\infty}\frac{f(n)}{n^2}=1\)，\(\displaystyle\lim_{n\to\infty}\frac{f(-n)}{-n}=1\).
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item 由题目给出的例子可知，当 \(x_1\le x_2\le0\) 或 \(0\le x_1\le x_2\) 时，有
-\(f\left(\frac{x_1+x_2}{2}\right)\le\frac{1}{2}\bigl(f(x_1)+f(x_2)\bigr)\)
-成立.
+\item 不妨设 \(x_1\le x_2\)，记 \(m=\frac{x_1+x_2}{2}\). 当 \(x_2\le0\) 或 \(x_1\ge0\) 时，三个数在同一个分段内，函数分别为一次函数 \(\frac12x\) 或 \(x\)，不等式均取等号.
 
-设 \(x_1\le0\le x_2\)，且 \(\frac{x_1+x_2}{2}<0\)，此时
+下面设 \(x_1\le0\le x_2\). 若 \(m<0\)，则
 \[
 \frac{f(x_1)+f(x_2)}{2}-f\left(\frac{x_1+x_2}{2}\right)
 =\frac{1}{2}\left(\frac{1}{2}x_1+x_2\right)-\frac{1}{2}\cdot\frac{x_1+x_2}{2}
 =\frac{x_2}{4}\ge0
 \]
-所以 \(f\left(\frac{x_1+x_2}{2}\right)\le\frac{1}{2}\bigl(f(x_1)+f(x_2)\bigr).\)
+故不等式成立. 若 \(m\ge0\)，则
 
-设 \(x_1\le0\le x_2\)，且 \(\frac{x_1+x_2}{2}\ge0\)，此时
 \[
 \frac{f(x_1)+f(x_2)}{2}-f\left(\frac{x_1+x_2}{2}\right)
 =\frac{1}{2}\left(\frac{1}{2}x_1+x_2\right)-\frac{x_1+x_2}{2}
 =-\frac{x_1}{4}\ge0
 \]
-所以 \(f\left(\frac{x_1+x_2}{2}\right)\le\frac{1}{2}\bigl(f(x_1)+f(x_2)\bigr).\)
+故不等式也成立. 所有实数对都已覆盖，所以 \(f(x)\in M\).
 
-综上所述 \(f(x)\in M\).
-
-\item 如函数 \(f(x)=-x^2\)，\(f(x)\notin M\).
-取 \(x_1=-1\)，\(x_2=1\)，那么 \(f(x_1)=-1\)，\(f(x_2)=-1\)，\(\frac{1}{2}\bigl(f(x_1)+f(x_2)\bigr)=-1\)，但是 \(f\left(\frac{x_1+x_2}{2}\right)=f(0)=0\)，
-所以 \(f\left(\frac{x_1+x_2}{2}\right)\le\frac{1}{2}\bigl(f(x_1)+f(x_2)\bigr)\)
-不成立.
+\item 取 \(f(x)=-x^2\). 令 \(x_1=-1\)，\(x_2=1\)，则
+\(f\left(\frac{x_1+x_2}{2}\right)=f(0)=0\)，\(\frac{f(x_1)+f(x_2)}{2}=-1\).
+于是 \(0\le-1\) 不成立，所以 \(f(x)\notin M\).
 
 \item 如函数
 \[
@@ -347,8 +557,39 @@ x^2,& x\ge1,\\
 x,& x<1,
 \end{cases}
 \]
-该函数为凸函数，满足 \(f(x)\in M\)，且 \(\displaystyle\lim_{n\to\infty}\frac{f(n)}{n^2}=1\)，
-\(\displaystyle\lim_{n\to\infty}\frac{f(-n)}{-n}=1.\)
+证明它属于 \(M\). 不妨设 \(x_1\le x_2\)，记 \(m=\frac{x_1+x_2}{2}\). 若 \(x_2\le1\)，则 \(f\) 在这三个点上均为 \(x\)，不等式取等号；若 \(x_1\ge1\)，则
+\[
+\frac{f(x_1)+f(x_2)}{2}-f(m)
+ =\frac{x_1^2+x_2^2}{2}-\left(\frac{x_1+x_2}{2}\right)^2
+ =\frac{(x_2-x_1)^2}{4}\ge0
+\]
+只需考虑 \(x_1<1<x_2\). 若 \(m<1\)，则
+\[
+\frac{f(x_1)+f(x_2)}{2}-f(m)
+ =\frac{x_1+x_2^2}{2}-\frac{x_1+x_2}{2}
+ =\frac{x_2(x_2-1)}{2}\ge0
+\]
+若 \(m\ge1\)，令 \(t=1-x_1>0\)，\(s=x_2-1>0\)，则 \(s\ge t\)，并且
+\[
+\begin{gathered}
+\frac{f(x_1)+f(x_2)}{2}-f(m)
+=\frac{(1-t)+(1+s)^2}{2}-\left(1+\frac{s-t}{2}\right)^2
+\\
+\frac{f(x_1)+f(x_2)}{2}-f(m)
+ =\frac{s^2+2st+2t-t^2}{4}
+ =\frac{(s-t)(s+t)+2t(s+1)}{4}.
+\end{gathered}
+\]
+因为 \(s\ge t>0\)，所以 \((s-t)(s+t)\ge0\) 且 \(2t(s+1)>0\)，故上式不小于 \(0\).
+所以该函数满足定义中的不等式，故 \(f(x)\in M\). 又当 \(n\to\infty\) 时，\(n\ge1\)，而 \(-n<1\)，所以
+\[
+\lim_{n\to\infty}\frac{f(n)}{n^2}
+=\lim_{n\to\infty}\frac{n^2}{n^2}=1
+\]
+\[
+\lim_{n\to\infty}\frac{f(-n)}{-n}
+ =\lim_{n\to\infty}\frac{-n}{-n}=1
+\]
 \end{enumerate}
 \end{solution}
 
@@ -363,38 +604,54 @@ x,& x<1,
 
 \begin{solution}
 \begin{enumerate}
-\item 经计算得 \(x_1=4.74\)，\(x_2=4.67\)，\(x_3=4.65\). 猜想 \(x_{n+1}<x_n\).
-
 \item
 \[
-\begin{gathered}
-x_n-x_{n+1}-\frac{1}{2}(x_{n-1}-x_n)
-=x_n-\frac{1}{2}\left(x_n+\sqrt{\frac{a}{x_n}}\right)-\frac{1}{2}x_{n-1}+\frac{1}{2}x_n \\
-=x_n-\frac{1}{2}\sqrt{\frac{a}{x_n}}-\frac{1}{2}x_{n-1}
-=\frac{1}{2}\sqrt{\frac{a}{x_{n-1}}}-\frac{1}{2}\sqrt{\frac{a}{x_n}} \\
-=\frac{\sqrt{a}\left(\sqrt{x_n}-\sqrt{x_{n-1}}\right)}{2\sqrt{x_{n-1}x_n}}<0.
-\end{gathered}
+x_1=\frac12\left(5+\sqrt{\frac{100}{5}}\right)=\frac{5+2\sqrt5}{2}\approx4.74
 \]
-由于 \(x_n>\sqrt[3]{a}\)，
+\(x_2=\frac12\left(x_1+\sqrt{\frac{100}{x_1}}\right)\approx4.67\)，\(x_3=\frac12\left(x_2+\sqrt{\frac{100}{x_2}}\right)\approx4.65\).
+由于题设 \(x_n>\sqrt[3]{a}>0\)，所以 \(x_n^3>a\)，从而
+\(x_n>\sqrt{\frac{a}{x_n}}\)，\(x_n-x_{n+1}=\frac12\left(x_n-\sqrt{\frac{a}{x_n}}\right)>0\).
+因此 \(x_n>x_{n+1}\).
+
+\item
+先证明上述大小关系. 因为 \(x_n>\sqrt[3]{a}>0\)，所以 \(x_n^3>a\)，从而
+\(x_n>\sqrt{\frac{a}{x_n}}\)，\(x_n-x_{n+1}=\frac12\left(x_n-\sqrt{\frac{a}{x_n}}\right)>0\).
+因此 \(x_n>x_{n+1}\). 令
 \[
-x_n-x_{n+1}=\frac{1}{2}\left(x_n-\sqrt{\frac{a}{x_n}}\right)=\frac{1}{2}\cdot\frac{\sqrt{x_n^3}-\sqrt{a}}{\sqrt{x_n}}>0.
+\delta_n=x_n-x_{n+1}>0
 \]
-所以 \(x_n>x_{n+1}\)，从而 \(x_n-x_{n+1}<\frac{1}{2}(x_{n-1}-x_n)\).
-
-\item 由前一问可知，
+当 \(n\ge1\) 时，利用递推式分别表示 \(x_n\) 和 \(x_{n+1}\)，得
 \[
-0<x_n-x_{n+1}<\frac{1}{2}(x_{n-1}-x_n)<\frac{1}{4}(x_{n-2}-x_{n-1})<\cdots<\frac{1}{2^{n-1}}(x_1-x_2)<\frac{1}{2^n}(x_0-x_1)
+\delta_n-\frac12\delta_{n-1}
+=x_n-\frac12\left(x_n+\sqrt{\frac{a}{x_n}}\right)-\frac12(x_{n-1}-x_n)
+=\frac12\left(\sqrt{\frac{a}{x_{n-1}}}-\sqrt{\frac{a}{x_n}}\right)<0
 \]
-只要 \(\frac{1}{2^n}(x_0-x_1)<10^{-4}\) 即可，即 \(2^n>10^4(x_0-x_1)\).
-\(x_0-x_1=\frac{1}{2}\left(x_0-\frac{10}{\sqrt{x_0}}\right)\)，
-且 \(x_0-\frac{10}{\sqrt{x_0}}\) 在 \([5,10]\) 上递增，所以 \(x_0-x_1\le\frac{10-\sqrt{10}}{2}\).
-故 \(n>\log_2\left(10^4\cdot\frac{10-\sqrt{10}}{2}\right)\approx15.1.\)
-所以 \(n=16\).
+最后一个不等号利用了 \(x_{n-1}>x_n>0\). 所以
+\[
+x_n-x_{n+1}<\frac12(x_{n-1}-x_n)
+\]
 
-说明：以上解法同样可得，因为 \(n>\log_2(10^4\times10)\approx16.61\)，所以 \(n=17\).
-
-在 \([5,10]\) 中取若干个值，由计算器计算可得，需要计算 \(11\) 次可保证结论成立，所以 \(n=10\).
-
-因为 \(x_n-x_{n+1}\) 关于 \(x_0\) 递增，所以只要考虑 \(x_0=10\) 时的计算次数. 由计算器计算可知 \(11\) 次可保证结论成立，所以 \(n=10\).
+\item 仍记 \(\delta_n=x_n-x_{n+1}\). 由上一问反复使用不等式，得到
+\[
+0<\delta_n<\frac{1}{2^n}\delta_0
+\]
+当 \(a=100\) 时，
+\[
+\delta_0=x_0-x_1
+ =\frac12\left(x_0-\frac{10}{\sqrt{x_0}}\right)
+\]
+函数 \(x_0-10x_0^{-1/2}\) 在 \([5,10]\) 上的导数为 \(1+5x_0^{-3/2}>0\)，所以
+\[
+\delta_0\le\frac{10-\sqrt{10}}{2}
+\]
+因此只要
+\[
+\frac{1}{2^n}\cdot\frac{10-\sqrt{10}}{2}<10^{-4}
+\]
+即
+\[
+n>\log_2\left(10^4\cdot\frac{10-\sqrt{10}}{2}\right)\approx15.06
+\]
+取整数 \(n=16\)，即可对所有 \(x_0\in[5,10]\) 保证 \(|x_n-x_{n+1}|<10^{-4}\). 这是由上述估计得到的统一充分次数.
 \end{enumerate}
 \end{solution}

@@ -1,48 +1,82 @@
 \chapter{1962年全国卷}
 
+\section{解答题}
+
 \begin{problem}
-某工厂第三年的产量比第一年的产量增长 \( 21\% \).
+某工厂第三年的产量比第一年的产量增长 \(21\%\).
 
 \begin{enumerate}
 \item 问平均每年比上一年增长百分之几？
-\item 第一年的产量是第三年的产量的百分之几？（精确到 \( 1\% \)）
+\item 第一年的产量是第三年的产量的百分之几？（精确到 \(1\%\)）
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
+设第一年的产量为 \(Q_1\)，第三年的产量为 \(Q_3\)，则 \(Q_3=1.21Q_1\).
+
 \begin{enumerate}
-\item
-设每年平均增长 \( x\% \)，则 \(\left( 1+\frac{x}{100} \right)^2=\frac{121}{100}\)，所以 \( 1+\frac{x}{100}=\frac{11}{10} \)，\( x=10 \).
+\item 设平均每年比上一年增长 \(x\%\). 每年的产量相对于上一年的增长因数为 \(1+\frac{x}{100}\)，连续增长两年后有
+\[
+\left(1+\frac{x}{100}\right)^2=\frac{Q_3}{Q_1}=1.21=\frac{121}{100}
+\]
+因为增长因数为正，所以 \(1+\frac{x}{100}=\frac{11}{10}\)，从而 \(x=10\). 因此平均每年比上一年增长 \(10\%\).
 
-答：每年平均增长 \( 10\% \).
-
-\item 第一年产量是第三年的 \( \frac{100}{121}\approx 0.83 \)，所以约为 \( 83\% \).
+\item 第一年的产量占第三年的比例为
+\[
+\frac{Q_1}{Q_3}=\frac{1}{1.21}=\frac{100}{121}=0.826446\ldots
+\]
+换算成百分数得 \(82.6446\ldots\%\)，精确到 \(1\%\) 为 \(83\%\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-求 \( \left( 1-2\i \right)^5 \) 的实部.
+求 \(\left(1-2\i\right)^5\) 的实部.
 \end{problem}
 
 \begin{solution}
-因为 \( \left( 1-2\i \right)^5=1-\mathrm C_5^1 2\i+\mathrm C_5^2 \left( 2\i \right)^2-\mathrm C_5^3 \left( 2\i \right)^3+\mathrm C_5^4 \left( 2\i \right)^4-\left( 2\i \right)^5 \)，所以 \( \left( 1-2\i \right)^5 \) 的实部是 \( 1+10\left( 2\i \right)^2+5\left( 2\i \right)^4=1-40+80=41 \).
+由二项式定理，
+\[
+\begin{aligned}
+\left(1-2\i\right)^5
+&=1+\mathrm C_5^1(-2\i)+\mathrm C_5^2(-2\i)^2+\mathrm C_5^3(-2\i)^3+\mathrm C_5^4(-2\i)^4+(-2\i)^5\\
+&=1-10\i-40+80\i+80-32\i=41+38\i.
+\end{aligned}
+\]
+所以 \(\left(1-2\i\right)^5\) 的实部为 \(41\).
 \end{solution}
 
 \begin{problem}
-解方程：\( \log \left( x-5 \right)+\log \left( x+3 \right)-2\log 2=\log \left( 2x-9 \right) \).
+解方程：\(\log\left(x-5\right)+\log\left(x+3\right)-2\log2=\log\left(2x-9\right)\).
 \end{problem}
 
 \begin{solution}
-原方程可以写成 \( \log \frac{\left( x-5 \right)\left( x+3 \right)}{4}=\log \left( 2x-9 \right) \)，或者 \( \left( x-5 \right)\left( x+3 \right)=4\left( 2x-9 \right) \). 化简得 \( x^2-10x+21=0 \)，即 \( \left( x-3 \right)\left( x-7 \right)=0 \). 所以 \( x_1=3 \)，\( x_2=7 \). 当 \( x=3 \) 时，\( x-5<0 \)，而 \( \log \left( x-5 \right) \) 无意义，所以 \( 3 \) 不是原方程的解. 经检验，\( x=7 \) 是原方程的解.
+原方程有意义必须满足 \(x-5>0\)，\(x+3>0\)，\(2x-9>0\).
+三个条件合起来得到定义域 \(x>5\). 在此定义域内，利用对数的运算性质，原方程等价于
+\[
+\log\frac{\left(x-5\right)\left(x+3\right)}{4}=\log\left(2x-9\right)
+\]
+因此
+\[
+\left(x-5\right)\left(x+3\right)=4\left(2x-9\right)
+\]
+展开并移项得 \(x^2-10x+21=0\)，即 \(\left(x-3\right)\left(x-7\right)=0\).
+候选根为 \(x=3\) 或 \(x=7\). 其中 \(x=3\) 不满足定义域 \(x>5\)，舍去；\(x=7\) 满足定义域，且代入原方程时两边均为 \(\log5\). 所以原方程的解为 \(x=7\).
 \end{solution}
 
 \begin{problem}
-求 \( \sin \left( 2\arcsin \frac{4}{5} \right) \) 的值.
+求 \(\sin\left(2\arcsin\frac45\right)\) 的值.
 \end{problem}
 
 \begin{solution}
-设 \( \arcsin \frac{4}{5}=a \)（\( 0<a<\frac{\pi}{2} \)），则 \( \sin a=\frac{4}{5} \)，\( \cos a=\sqrt{1-\left( \frac{4}{5} \right)^2}=\frac{3}{5} \).
-所以 \(\sin \left( 2\arcsin \frac{4}{5} \right)=\sin 2a=2\sin a\cos a=2\cdot \frac{4}{5}\cdot \frac{3}{5}=\frac{24}{25}\).
+设 \(a=\arcsin\frac45\). 按反正弦函数的值域，\(0<a<\frac{\pi}{2}\)，所以
+\(\sin a=\frac45\). 又因 \(0<a<\frac{\pi}{2}\)，所以
+\[
+\cos a=\sqrt{1-\sin^2a}=\sqrt{1-\left(\frac45\right)^2}=\frac35
+\]
+利用正弦的二倍角公式，
+\[
+\sin\left(2\arcsin\frac45\right)=\sin2a=2\sin a\cos a=2\cdot\frac45\cdot\frac35=\frac{24}{25}
+\]
 \end{solution}
 
 \begin{problem}
@@ -56,34 +90,31 @@
 
 \begin{solution}
 \begin{enumerate}
-\item 设 \(ABCD\) 为圆内接平行四边形. 因为平行四边形的对角相等，所以 \( \angle A=\angle C \). 又因圆内接四边形的对角互补，得 \( \angle A+\angle C=180^\circ \)，所以 \( \angle A=\angle C=90^\circ \). 因此 \(ABCD\) 是矩形.
+\item 设平行四边形 \(ABCD\) 内接于一个圆. 平行四边形的对角相等，所以 \(\angle A=\angle C\). 圆内接四边形的对角互补，所以 \(\angle A+\angle C=180^\circ\). 联立两式得 \(2\angle A=180^\circ\)，即 \(\angle A=\angle C=90^\circ\). 平行四边形有一个直角就是矩形，因此 \(ABCD\) 是矩形.
 
-\item 设平行四边形 \(ABCD\) 切圆于 \(E\)，\(F\)，\(G\)，\(H\)（如图），则因从圆外一点所作的两条切线等长，得
-\[
-\begin{cases}
-AE=AH,\\
-BE=BF,\\
-CG=CF,\\
-DG=DH.
-\end{cases}
-\]
-
-四式相加，得 \( AB+CD=AD+BC \). 又因平行四边形的对边相等，得 \( AB=CD \)，\( AD=BC \). 所以 \( AB=BC \). 因此 \(ABCD\) 是菱形.
-\end{enumerate}
 \FigureLayoutDeclare{img/1962/national/q5_solution_fig1.png}{2.5cm}{42bp 0bp 68bp 41bp}
 \solutionfigure{\bitmapfigure[max width=3.0cm]{img/1962/national/q5_solution_fig1.png}}
 
+\item 设平行四边形 \(ABCD\) 的四边分别与圆相切，切点 \(E\)，\(F\)，\(G\)，\(H\) 依次位于 \(AB\)，\(BC\)，\(CD\)，\(DA\) 上（如图）. 由同一点向圆所作的两条切线段相等，得 \(AE=AH\)，\(BE=BF\)，\(CG=CF\)，\(DG=DH\). 又因为 \(AB=AE+EB\)，\(CD=CG+GD\)，\(AD=AH+HD\)，\(BC=BF+FC\)，
+所以将四个切线段等式相加可得
+\[
+AB+CD=AE+EB+CG+GD=AH+BF+CF+HD=AD+BC
+\]
+平行四边形的对边相等，即 \(AB=CD\)，\(AD=BC\). 代入上式得 \(2AB=2BC\)，从而 \(AB=BC\). 平行四边形的四条边均相等，所以 \(ABCD\) 是菱形.
+
 \FigureLayoutDeclare{img/1962/national/q5_solution_fig2.png}{3.2cm}{41bp 59bp 83bp 109bp}
 \solutionfigure{\bitmapfigure[max width=3.0cm]{img/1962/national/q5_solution_fig2.png}}
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
-解方程组：
-\( \begin{cases}
+解方程组：\(
+\begin{cases}
 y^2-4x-2y+1=0,\\
-\displaystyle y=x+a.
-\end{cases} \)，
-并讨论：\( a \) 取哪些实数值时，这个方程组
+y=x+a.
+\end{cases}
+\)
+并讨论：\(a\) 取哪些实数值时，这个方程组
 
 \begin{enumerate}
 \item 有不同的两组实数解；
@@ -93,100 +124,140 @@ y^2-4x-2y+1=0,\\
 \end{problem}
 
 \begin{solution}
-由 \( y=x+a \)，得 \( x=y-a \). 代入 \( y^2-4x-2y+1=0 \)，得 \( y^2-4\left( y-a \right)-2y+1=0 \)，即 \( y^2-6y+4a+1=0 \).
-所以 \( y=3\pm \sqrt{9-\left( 4a+1 \right)}=3\pm 2\sqrt{2-a} \).
-代入 \( x=y-a \)，得 \( x=3-a\pm 2\sqrt{2-a} \).
-方程组的解为
+由第二个方程得 \(x=y-a\). 代入第一个方程，得到
+\[
+y^2-4\left(y-a\right)-2y+1=0
+\]
+即
+\[
+y^2-6y+4a+1=0
+\]
+这个关于 \(y\) 的二次方程的判别式为
+\[
+\Delta=(-6)^2-4\left(4a+1\right)=16\left(2-a\right)
+\]
+
+当 \(a\leq2\) 时，
+\[
+y=\frac{6\pm\sqrt{16\left(2-a\right)}}{2}=3\pm2\sqrt{2-a}
+\]
+再由 \(x=y-a\) 得相应的解为
 \[
 \begin{cases}
 x_1=3-a+2\sqrt{2-a},\\
 y_1=3+2\sqrt{2-a},
-\end{cases},
-\quad
+\end{cases}
+\qquad
 \begin{cases}
 x_2=3-a-2\sqrt{2-a},\\
 y_2=3-2\sqrt{2-a}.
 \end{cases}
 \]
 
-讨论：
-
 \begin{enumerate}
-\item 当 \( a<2 \) 时，方程组有不同的两组实数解.
+\item 当 \(a<2\) 时，\(\sqrt{2-a}>0\)，上述两组解的 \(y\) 值不同，因而方程组有不同的两组实数解.
 
-\item 当 \( a=2 \) 时，方程组有相同的两组实数解.
+\item 当 \(a=2\) 时，两个根重合，且两组解都为 \((x,y)=(1,3)\)，所以方程组有相同的两组实数解.
 
-\item 当 \( a>2 \) 时，方程组没有实数解.
+\item 当 \(a>2\) 时，\(\Delta<0\)，关于 \(y\) 的方程没有实根，因而方程组没有实数解.
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-\(ABCD\) 和 \(A'B'C'D'\) 都是正方形，而 \(A'\)，\(B'\)，\(C'\)，\(D'\) 顺次分 \(AB\)，\(BC\)，\(CD\)，\(DA\) 成 \( m:n \)，并设 \( AB=1 \).
+如图，\(ABCD\) 和 \(A'B'C'D'\) 都是正方形，而 \(A'\)，\(B'\)，\(C'\)，\(D'\) 顺次分 \(AB\)，\(BC\)，\(CD\)，\(DA\) 成 \(m:n\)，并设 \(AB=1\).
 
 \begin{enumerate}
 \item 求正方形 \(A'B'C'D'\) 的面积；
-\item 证明：正方形 \(A'B'C'D'\) 的面积不小于 \( \frac{1}{2} \).
+\item 证明：正方形 \(A'B'C'D'\) 的面积不小于 \(\frac12\).
 \end{enumerate}
 
 \bitmapfigure[max width=6.0cm]{img/1962/national/q7_fig1.png}
 \end{problem}
 
 \begin{solution}
-\begin{enumerate}
-\item 由于 \( AB=1 \)，\( AA':A'B=m:n \)，得 \( AA'=\frac{m}{m+n} \)，\( A'B=\frac{n}{m+n} \).
-又知 \( \triangle BA'B' \) 为直角三角形，所以
-\[
-A'B'
-=\sqrt{A'B^2+B'B^2}
-=\sqrt{A'B^2+A'A^2}
-=\sqrt{\frac{m^2+n^2}{\left( m+n \right)^2}}
-\]
-故正方形 \(A'B'C'D'\) 的面积为 \( A'B'^2=\frac{m^2+n^2}{\left( m+n \right)^2} \).
+由内分条件可知 \(m>0\)，\(n>0\). 对于点 \(A'\)，有
+\(AA':A'B=m:n\)，且 \(AA'+A'B=AB=1\)，
+故 \(AA'=\frac{m}{m+n}\)，\(A'B=\frac{n}{m+n}\).
+同理，点 \(B'\) 将 \(BC\) 按 \(m:n\) 内分，所以 \(BB'=\frac{m}{m+n}\). 因为 \(A'B\subset AB\)，\(BB'\subset BC\)，且 \(AB\perp BC\)，三角形 \(A'BB'\) 在 \(B\) 处为直角，\(A'B'\) 是正方形 \(A'B'C'D'\) 的边.
 
-\item 因为
+\begin{enumerate}
+\item 由勾股定理，
 \[
-\frac{m^2+n^2}{\left( m+n \right)^2}-\frac{1}{2}
-=\frac{2\left( m^2+n^2 \right)-\left( m+n \right)^2}{2\left( m+n \right)^2}
-=\frac{\left( m-n \right)^2}{2\left( m+n \right)^2}
-\ge 0
+A'B'^2=A'B^2+BB'^2
+=\left(\frac{n}{m+n}\right)^2+\left(\frac{m}{m+n}\right)^2
+=\frac{m^2+n^2}{\left(m+n\right)^2}
 \]
-所以 \( \frac{m^2+n^2}{\left( m+n \right)^2}\ge \frac{1}{2} \). 因此正方形 \(A'B'C'D'\) 的面积不小于 \( \frac{1}{2} \).
+所以正方形 \(A'B'C'D'\) 的面积为 \(\dfrac{m^2+n^2}{\left(m+n\right)^2}\).
+
+\item 将上述面积与 \(\frac12\) 作差，得
+\[
+\begin{aligned}
+\frac{m^2+n^2}{\left(m+n\right)^2}-\frac12
+&=\frac{2\left(m^2+n^2\right)-\left(m+n\right)^2}{2\left(m+n\right)^2}\\
+&=\frac{\left(m-n\right)^2}{2\left(m+n\right)^2}\geq0.
+\end{aligned}
+\]
+因此正方形 \(A'B'C'D'\) 的面积不小于 \(\frac12\). 当且仅当 \(m=n\) 时取等号.
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-\(D\) 是 \( \triangle ABC \) 内的一点，已知 \( AB=AC=1 \)，\( \angle CAB=63^\circ \)，\( \angle DAB=33^\circ \)，\( \angle DBA=27^\circ \)，求 \(CD\). （\( \sin 27^\circ=0.4540 \)，最后结果计算到小数点后两位.）
+\(D\) 是 \(\triangle ABC\) 内的一点，已知 \(AB=AC=1\)，\(\angle CAB=63^\circ\)，\(\angle DAB=33^\circ\)，\(\angle DBA=27^\circ\)，求 \(CD\). （\(\sin27^\circ=0.4540\)，最后结果计算到小数点后两位.）
 \end{problem}
 
 \begin{solution}
-在 \( \triangle ABD \) 内，\( \angle BDA=180^\circ-33^\circ-27^\circ=120^\circ \). 故根据正弦定理，\( \frac{AD}{\sin 27^\circ}=\frac{1}{\sin 120^\circ} \)，所以 \( AD=\frac{2}{\sqrt{3}}\sin 27^\circ \).
+在 \(\triangle ABD\) 中，
+\[
+\angle BDA=180^\circ-\angle DAB-\angle DBA=180^\circ-33^\circ-27^\circ=120^\circ
+\]
+由正弦定理，
+\[
+\frac{AD}{\sin27^\circ}=\frac{AB}{\sin120^\circ}=\frac{1}{\sqrt3/2}
+\]
+所以
+\[
+AD=\frac{2}{\sqrt3}\sin27^\circ
+\]
 
 \solutionfigure{\bitmapfigure[max width=3.0cm]{img/1962/national/q8_solution_fig1.png}}
 
-又 \( \angle DAC=63^\circ-33^\circ=30^\circ \). 故根据余弦定理，在 \( \triangle ADC \) 内，
+由于 \(D\) 在 \(\angle CAB\) 的内部，
 \[
-CD^2=1+AD^2-2AD\cos 30^\circ
-=1+\frac{4}{3}\sin^2 27^\circ-2\sin 27^\circ
-=1+2\sin 27^\circ \left( \frac{2}{3}\sin 27^\circ-1 \right)
+\angle DAC=\angle CAB-\angle DAB=63^\circ-33^\circ=30^\circ
 \]
+在 \(\triangle ADC\) 中使用余弦定理，并记 \(s=\sin27^\circ=0.4540\)，得
 \[
-CD^2=1+0.9080\times \left( 0.3027-1 \right)
-=1-0.9080\times 0.6973=1-0.6331=0.3669
+\begin{aligned}
+CD^2
+&=AC^2+AD^2-2AC\cdot AD\cos30^\circ\\
+&=1+\frac43s^2-2s=1+\frac43(0.4540)^2-2(0.4540)\\
+&=1+0.274821\ldots-0.9080=0.366821\ldots.
+\end{aligned}
 \]
-所以 \( CD=0.60 \).
+因此
+\[
+CD=\sqrt{0.366821\ldots}=0.605657\ldots
+\]
+按题意精确到小数点后两位，得 \(CD=0.61\).
 \end{solution}
 
 \begin{problem}
-由正方体 \( ABCD-A_1B_1C_1D_1 \) 的顶点 \(A\) 作这个正方体的对角线 \(A_1C\) 的垂线，垂足为 \(E\). 证明：\( A_1E:EC=1:2 \). （要求画图）
+由正方体 \(ABCD-A_1B_1C_1D_1\) 的顶点 \(A\) 作这个正方体的对角线 \(A_1C\) 的垂线，垂足为 \(E\). 证明：\(A_1E:EC=1:2\). （要求画图）
 \end{problem}
 
 \begin{solution}
-作 \(AC\).
+连接 \(AC\). 由于 \(AA_1\) 垂直于正方体的底面 \(ABCD\)，而 \(AC\) 在底面内，所以 \(AA_1\perp AC\). 因此 \(\triangle A_1AC\) 是以 \(A_1C\) 为斜边的直角三角形. 设正方体的棱长为 \(l\)，则
+\(A_1A=l\)，\(AC=\sqrt2l\).
 
 \solutionfigure{\bitmapfigure[max width=4.0cm]{img/1962/national/q9_fig1.png}}
 
-则 \( A_1A\perp AC \). 故 \( \triangle A_1AC \) 为直角三角形. 设正方体的棱长为 \( 1 \)，则 \( AC=\sqrt{2} \).
-在直角三角形 \(A_1AC\) 中，\( AE\perp A_1C \)，所以 \( A_1A^2=A_1E\cdot A_1C \)，即 \( 1=A_1E\cdot A_1C \). 同理 \( AC^2=EC\cdot A_1C \)，即 \( 2=EC\cdot A_1C \). 由此得 \( A_1E:EC=1:2 \).
+由题意，\(AE\perp A_1C\)，所以 \(AE\) 是直角三角形 \(A_1AC\) 斜边上的高. 根据直角三角形斜边上的高所分成的两个直角三角形与原三角形相似，得到射影定理
+\(A_1A^2=A_1E\cdot A_1C\)，\(AC^2=EC\cdot A_1C\).
+两式相除，消去正数 \(A_1C\)，得
+\[
+\frac{A_1E}{EC}=\frac{A_1A^2}{AC^2}=\frac{l^2}{\left(\sqrt2l\right)^2}=\frac12
+\]
+所以 \(A_1E:EC=1:2\).
 \end{solution}
 
 \begin{problem}
@@ -194,7 +265,13 @@ CD^2=1+0.9080\times \left( 0.3027-1 \right)
 \end{problem}
 
 \begin{solution}
-在这四条直线中，任取两条直线 \( a \)，\( b \)，设其交点为 \(P\). 因为四条直线不通过同一点，所以在另外两条直线中，至少有一条直线 \( c \) 不通过 \(P\)，直线 \( c \) 必与 \( a \)，\( b \) 分别交于不同的两点. 因此，\( c \) 必在 \( a \)，\( b \) 所决定的平面内.
+在四条直线中任取两条，记为 \(a\)，\(b\)，并设它们的交点为 \(P\). 由题意，另外两条直线不可能都通过 \(P\)，因此可以把其中一条记为 \(c\)，使得 \(c\) 不通过 \(P\).
 
-第四条直线 \( d \) 与 \( a \)，\( b \)，\( c \) 至少交于两个不同的点，所以 \( d \) 也在 \( a \)，\( b \) 所决定的平面内.
+由于各直线两两相交，\(c\) 分别与 \(a\)，\(b\) 相交. 设交点分别为 \(Q\)，\(R\). 若 \(Q=R\)，则这个交点同时在 \(a\) 和 \(b\) 上，只能是 \(a\) 与 \(b\) 的交点 \(P\)，这与 \(c\) 不通过 \(P\) 矛盾，所以 \(Q\neq R\). 直线 \(a\)，\(b\) 确定一个平面 \(\pi\)，且 \(Q\)，\(R\) 都在 \(\pi\) 内，因此直线 \(c\) 也在平面 \(\pi\) 内.
+
+设剩下的第四条直线为 \(d\). 若 \(d\) 通过 \(P\)，则 \(d\) 与 \(c\) 的交点记为 \(S\). 因为 \(c\) 不通过 \(P\)，所以 \(S\neq P\)，且 \(P\)，\(S\) 都在平面 \(\pi\) 内，从而直线 \(d\) 在平面 \(\pi\) 内.
+
+若 \(d\) 不通过 \(P\)，设 \(d\) 与 \(a\)，\(b\) 的交点分别为 \(U\)，\(V\). 两点都不等于 \(P\)，且若 \(U=V\)，则该点同时在 \(a\)，\(b\) 上，仍只能是 \(P\)，矛盾. 所以 \(U\neq V\)，而 \(U\)，\(V\) 都在平面 \(\pi\) 内，从而直线 \(d\) 也在平面 \(\pi\) 内.
+
+综上，四条直线 \(a\)，\(b\)，\(c\)，\(d\) 均在同一平面 \(\pi\) 内，命题得证.
 \end{solution}

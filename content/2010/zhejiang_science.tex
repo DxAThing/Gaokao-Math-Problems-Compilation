@@ -13,6 +13,12 @@
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+由 \(x^2<4\) 得 \(-2<x<2\)，所以 \(Q=\{x\mid -2<x<2\}\). 任取 \(x\in Q\)，都有 \(x<2<4\)，故 \(x\in P\)，从而 \(Q\subseteq P\).
+
+选项 A 不成立，因为 \(3\in P\) 但 \(3\notin Q\)；选项 C 不成立，因为 \(0\in P\cap Q\)；选项 D 不成立，因为 \(Q\) 中的每个元素都属于 \(P\)，不属于 \(\complement_{\R}P\). 因此选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -28,6 +34,12 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+程序开始时 \(S=1\)，\(k=1\). 每循环一次先令 \(k\) 增加 \(1\)，再令 \(S=2S+k\)，因此各次循环后的状态依次为
+\((k,S)=(2,4)\)，\(\ (3,11)\)，\(\ (4,26)\)，\(\ (5,57)\).
+当 \(k=5\) 时已经得到输出值 \(S=57\)，所以判断框在此时应为“是”，即判断条件应为 \(k>4\). 故选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -41,6 +53,25 @@ A
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+设等比数列的公比为 \(q\). 由于所求比值有意义，且等比数列的相邻项比值有定义，\(a_2\ne0\)，于是
+\[
+a_5=a_2q^3
+\]
+由题设
+\[
+8a_2+a_5=a_2(8+q^3)=0
+\]
+得 \(q=-2\). 因此
+\[
+\frac{S_5}{S_2}
+=\frac{a_1\dfrac{1-q^5}{1-q}}{a_1\dfrac{1-q^2}{1-q}}
+=\frac{1-(-2)^5}{1-(-2)^2}
+=\frac{33}{-3}=-11
+\]
+故选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -54,6 +85,20 @@ D
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+因为 \(0<x<\frac{\pi}{2}\)，所以 \(0<\sin x<1\)，从而
+\[
+x\sin^2x<x\sin x
+\]
+若 \(x\sin x<1\)，则必有 \(x\sin^2x<1\)，所以“\(x\sin x<1\)”是“\(x\sin^2x<1\)”的充分条件，即前一个条件是后一个条件的必要条件.
+
+再设 \(x_0\) 是方程 \(x\sin x=1\) 在 \((0,\frac\pi2)\) 内的根. 由于 \(x\sin x\) 连续，且在 \(x=1\) 时小于 \(1\)，在 \(x=\frac\pi2\) 时大于 \(1\)，这样的 \(x_0\) 存在. 此时
+\[
+x_0\sin^2x_0=\sin x_0<1
+\]
+但 \(x_0\sin x_0<1\) 不成立. 因此“\(x\sin^2x<1\)”不是“\(x\sin x<1\)”的充分条件，故选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -67,6 +112,22 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+因为 \(\overline z=x-y\i\)，所以
+\(z-\overline z=2y\i\)，\(|z-\overline z|=2|y|\).
+选项 A 在 \(y<0\) 时不成立. 又
+\[
+z^2=(x+y\i)^2=x^2-y^2+2xy\i
+\]
+通常不等于 \(x^2+y^2\)，故 B 错. 取 \(x=1\)，\(y=0\)，则 \(|z-\overline z|=0<2x\)，故 C 错.
+
+最后由复数模的三角不等式
+\[
+|z|=|x+y\i|\leqslant |x|+|y\i|=|x|+|y|
+\]
+所以 D 正确，故选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -80,6 +141,14 @@ D
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+选项 A 不成立：在平面 \(\alpha\) 内取两条相互垂直的直线作为 \(l\)，\(m\)，则 \(l\perp m\) 且 \(m\subset\alpha\)，但 \(l\) 不垂直于 \(\alpha\).
+
+若 \(l\perp\alpha\)，则 \(l\) 的方向是平面的法向方向；又 \(l\parallel m\)，所以 \(m\) 也具有该法向方向，从而 \(m\perp\alpha\)，故 B 正确.
+
+选项 C 中，取 \(\alpha:z=0\)，\(l\) 为 \(z=1\) 内沿 \(x\) 轴方向的直线，\(m\) 为 \(\alpha\) 内沿 \(y\) 轴方向的直线，则 \(l\parallel\alpha\)、\(m\subset\alpha\)，但 \(l\) 不平行于 \(m\). 选项 D 中，取 \(\alpha:z=0\)，\(l\) 为 \(z=1\) 内沿 \(x\) 轴方向的直线，\(m\) 为 \(z=2\) 内沿 \(y\) 轴方向的直线，则 \(l\parallel\alpha\)、\(m\parallel\alpha\)，但 \(l\) 与 \(m\) 不平行. 因此选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -97,10 +166,28 @@ x - my + 1 \geqslant 0,
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+只需检验四个选项. 若 \(m=-2\) 或 \(m=-1\)，取 \((x,y)=(t,2t)\). 当 \(t\) 足够大时，前两个不等式成立，且第三个左端分别为 \(5t+1\) 或 \(3t+1\)，也成立，而 \(x+y=3t\) 无上界，均不符合题意.
+
+当 \(m=1\) 时，第二个不等式给出 \(y\geqslant2x-3\)，第三个不等式给出 \(y\leqslant x+1\)，所以 \(x\leqslant4\). 于是
+\[
+x+y\leqslant x+(x+1)=2x+1\leqslant9
+\]
+点 \((4,5)\) 同时满足三个不等式，且 \(x+y=9\)，所以最大值确为 \(9\).
+
+当 \(m=2\) 时，第二、三个不等式分别给出
+\(y\geqslant2x-3\)，\(y\leqslant\frac{x+1}{2}\).
+因此 \(x\leqslant\frac73\)，从而
+\[
+x+y\leqslant x+\frac{x+1}{2}=\frac{3x+1}{2}\leqslant4
+\]
+且 \((x,y)=(\frac73,\frac53)\) 可取到最大值 \(4\)，也不符合题意. 故 \(m=1\)，选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
-设 \(F_{1}\)，\(F_{2}\) 分别为双曲线 \(\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1\)（\(a > 0, b > 0\)）的左、右焦点. 若在双曲线右支上存在点 \(P\)，满足 \(|PF_{2}| = |F_{1}F_{2}|\)，且 \(F_{2}\) 到直线 \(PF_{1}\) 的距离等于双曲线的实轴长，则该双曲线的渐近线方程为（\quad）
+设 \(F_{1}\)，\(F_{2}\) 分别为双曲线 \(\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1\)（\(a > 0\)，\(b > 0\)）的左、右焦点. 若在双曲线右支上存在点 \(P\)，满足 \(|PF_{2}| = |F_{1}F_{2}|\)，且 \(F_{2}\) 到直线 \(PF_{1}\) 的距离等于双曲线的实轴长，则该双曲线的渐近线方程为（\quad）
 
 \choices
     {\(3x \pm 4y = 0\)}
@@ -110,19 +197,85 @@ C
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+设双曲线焦距参数为 \(c\)，则 \(c^2=a^2+b^2\)，且
+\(|F_1F_2|=2c\)，\(|PF_2|=2c\).
+由于 \(P\) 在右支上，双曲线定义给出
+\[
+|PF_1|-|PF_2|=2a
+\]
+所以 \(|PF_1|=2(a+c)\). 三角形 \(PF_1F_2\) 的面积既可由边 \(PF_1\) 和到直线 \(PF_1\) 的距离求得，也可由底边 \(F_1F_2\) 和点 \(P\) 到该底边的距离求得. 设 \(\theta=\angle F_1PF_2\)，则
+\[
+\sin\theta=\frac{2a}{2c}=\frac ac
+\]
+又由余弦定理
+\[
+(2c)^2=[2(a+c)]^2+(2c)^2-2\cdot2(a+c)\cdot2c\cos\theta
+\]
+得
+\[
+\cos\theta=\frac{a+c}{2c}
+\]
+利用 \(\sin^2\theta+\cos^2\theta=1\)，有
+\[
+\frac{a^2}{c^2}+\frac{(a+c)^2}{4c^2}=1
+\]
+即
+\[
+4a^2+(a+c)^2=4c^2
+\]
+令 \(t=\frac ac\)，得 \(5t^2+2t-3=0\). 因为 \(0<t<1\)，所以 \(t=\frac35\)，从而 \(b/c=\frac45\)，即 \(b/a=\frac43\).
+
+双曲线的渐近线为 \(y=\pm\frac ba x\)，所以方程为 \(4x\pm3y=0\)，故选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
 设函数 \( f(x) = 4\sin (2x + 1) - x \)，则在下列区间中函数 \( f(x) \) 不存在零点的是（\quad）
 
 \choices
-    {\([-4, - 2]\)}
+    {\([-4, -2]\)}
     {\([-2,0]\)}
     {\([0,2]\)}
     {\([2,4]\)}
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+先说明在 \([-4,-2]\) 上没有零点. 令 \(x_0=\frac{-2\pi-1}{2}\). 当 \(-4\leqslant x\leqslant x_0\) 时，令 \(u=2x+1+2\pi\)，则 \(-1<u\leqslant0\)，并且 \(\sin(2x+1)=\sin u\geqslant u\). 于是
+\[
+f(x)\geqslant4u-x=7x+8\pi+4\geqslant8\pi-24>0
+\]
+当 \(x_0\leqslant x\leqslant\frac{-\pi-1}{2}\) 时，\(-2\pi\leqslant2x+1\leqslant-\pi\)，故 \(\sin(2x+1)\geqslant0\)，从而 \(f(x)>0\).
+
+剩下的区间 \(\frac{-\pi-1}{2}\leqslant x\leqslant-2\) 很短. 令 \(v=2x+1+\pi\)，则 \(0\leqslant v\leqslant\pi-3<\frac17\)，且 \(\sin(2x+1)=-\sin v\). 因此
+\[
+f(x)=-4\sin v-x\geqslant-4v+\frac{\pi+1-v}{2}>0
+\]
+其中用了 \(3<\pi<\frac{22}{7}\). 所以 \(f(x)>0\) 在 \([-4,-2]\) 上恒成立.
+
+函数连续. 由 \(0<\pi-3<\frac17\) 及 \(\sin t<t\;(t>0)\)，
+\[
+f(-2)=2-4\sin3=2-4\sin(\pi-3)>2-\frac47>0
+\]
+又因 \(\frac{\pi}{6}<1<\frac{\pi}{2}\)，有 \(\sin1>\frac12\)，从而
+\(f(-1)=1-4\sin1<-1<0\)，\(f(0)=4\sin1>0\).
+因此在 \([-2,0]\) 和 \([0,2]\) 内分别存在零点.
+
+再由 \(\frac{3\pi}{2}<5<2\pi\)，得 \(\sin5<0\)，所以
+\[
+f(2)=4\sin5-2<0
+\]
+令 \(\delta=8-\frac{5\pi}{2}\). 由 \(\frac{31}{10}<\pi<\frac{16}{5}\) 得 \(0<\delta<\frac14\)，于是
+\(\sin8=\cos\delta>1-\frac{\delta^2}{2}>\frac{31}{32}\)，\(f\left(\frac72\right)=4\sin8-\frac72>\frac38>0\).
+最后令 \(\varepsilon=9-\frac{5\pi}{2}\). 由 \(3<\pi<\frac{18}{5}\) 得 \(0<\varepsilon<\frac{\pi}{2}\)，故 \(\sin9=\cos\varepsilon<1\)，从而
+\[
+f(4)=4\sin9-4<0
+\]
+所以在 \([2,4]\) 内也存在零点. 故不含零点的区间是 \([-4,-2]\)，选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -136,6 +289,20 @@ A
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+逐一考查 \(a\) 的四个取值. 只有当 \(x+a>0\) 且 \(\log_2(x+a)+b\) 属于 \(\{-1,0,1\}\) 时，图象才经过集合 \(Q\) 中的点.
+
+对 \(a=-\frac12\)，在 \(x=-\frac12\)，\(0\)，\(\frac12\)，\(1\) 中只有 \(x=1\) 使 \(x+a>0\) 且 \(\log_2(x+a)=-1\)，所以任意 \(b\) 至多经过一个点. 对 \(a=0\)，\(x=\frac12\)，\(1\) 时的对数值分别为 \(-1,0\)，故 \(b=0\)，\(1\) 时恰好经过两个点，而 \(b=-1\) 时只有一个点.
+
+对 \(a=\frac12\)，\(x=0\)，\(\frac12\) 时的对数值分别为 \(-1,0\)，故 \(b=0\)，\(1\) 时恰好经过两个点，而 \(b=-1\) 时只有一个点. 对 \(a=1\)，四个横坐标对应的对数值依次为 \(-1\)，\(0\)，\(\log_2\frac32\)，\(1\). 因为 \(0<\log_2\frac32<1\)，所以 \(b=-1\) 时恰好有 \((0,-1)\)、\((1,0)\) 两个点，\(b=0\) 时有三个点，\(b=1\) 时恰好有 \((-\frac12,0)\)、\((0,1)\) 两个点.
+
+因此符合条件的函数共有
+\[
+0+2+2+2=6
+\]
+个，故选 B.
+\end{solution}
 \end{problem}
 
 \section{填空题}
@@ -145,16 +312,41 @@ B
 \begin{answer}
 \(\pi\)
 \end{answer}
+
+\begin{solution}
+利用 \(\sin^2x=\frac{1-\cos2x}{2}\) 及和角公式，得
+\[
+\begin{aligned}
+f(x)&=\frac{\sin2x-\cos2x}{\sqrt2}-\sqrt2(1-\cos2x)\\
+&=\frac{\sin2x+\cos2x}{\sqrt2}-\sqrt2\\
+&=\sin\left(2x+\frac\pi4\right)-\sqrt2.
+\end{aligned}
+\]
+正弦函数的自变量系数为 \(2\)，所以最小正周期为 \(\frac{2\pi}{2}=\pi\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
-若某几何体的三视图（单位：\(\mathrm{cm}\)）如图所示，
-则此几何体的体积是\fillinblank{}\(\mathrm{cm}^3\).
+若某几何体的三视图（单位：\(\mathrm{cm}\)）如图所示，则此几何体的体积是\fillinblank{}\(\mathrm{cm}^3\).
 
 \bitmapfigure[max width=0.76\linewidth]{img/2010/zhejiang_science/q12_fig1.png}
 \begin{answer}
 144
 \end{answer}
+
+\begin{solution}
+由三视图可知，几何体由一个底面为边长 \(8\mathrm{~cm}\)、上底面为边长 \(4\mathrm{~cm}\)、高为 \(3\mathrm{~cm}\) 的正四棱台，以及一个底面为 \(4\mathrm{~cm}\times4\mathrm{~cm}\)、高为 \(2\mathrm{~cm}\) 的长方体组成.
+
+正四棱台的体积为
+\[
+V_1=\frac{3}{3}\left(8^2+\sqrt{8^2\cdot4^2}+4^2\right)=64+32+16=112\mathrm{~cm}^3
+\]
+长方体的体积为
+\[
+V_2=4\times4\times2=32\mathrm{~cm}^3
+\]
+所以几何体的体积为 \(V_1+V_2=144\mathrm{~cm}^3\)，填 \(144\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -162,16 +354,64 @@ B
 \begin{answer}
 \(\frac{3\sqrt{2}}{4}\)
 \end{answer}
+
+\begin{solution}
+将 \(y^2=2px\) 与标准形式 \(y^2=4ax\) 比较，得焦点 \(F=(\frac p2,0)\)，准线为 \(x=-\frac p2\). 因此
+\[
+B=\left(\frac p4,1\right)
+\]
+因为 \(B\) 在抛物线上，所以
+\[
+1=2p\cdot\frac p4=\frac{p^2}{2}
+\]
+由 \(p>0\) 得 \(p=\sqrt2\)，从而 \(B=(\frac{\sqrt2}{4},1)\). 点 \(B\) 到准线的距离为
+\[
+\frac{\sqrt2}{4}-\left(-\frac{\sqrt2}{2}\right)=\frac{3\sqrt2}{4}
+\]
+故填 \(\frac{3\sqrt2}{4}\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
-设 \(n \geqslant 2\)，\(n \in \mathbf{N}\)，\(\left(2x + \frac{1}{2}\right)^n - \left(3x + \frac{1}{3}\right)^n = a_0 + a_1x + a_2x^2 + \cdots + a_nx^n\)，将 \(|a_k|\)（\(0 \leqslant k \leqslant n\)）的最小值记为 \(T_n\)，则 \(T_2 = 0\)，\(T_3 = \frac{1}{2^3} - \frac{1}{3^3}\)，\(T_4 = 0\)，\(T_5 = \frac{1}{2^5} - \frac{1}{3^5}\)，\(\cdots\)，\(T_n\)，\(\cdots\)，其中 \(T_n = \)\fillinblank{}.
+设 \(n \geqslant 2\)，\(n \in \N\)，\(\left(2x + \frac{1}{2}\right)^n - \left(3x + \frac{1}{3}\right)^n = a_0 + a_1x + a_2x^2 + \cdots + a_nx^n\)，将 \(|a_k|\)（\(0 \leqslant k \leqslant n\)）的最小值记为 \(T_n\)，则 \(T_2 = 0\)，\(T_3 = \frac{1}{2^3} - \frac{1}{3^3}\)，\(T_4 = 0\)，\(T_5 = \frac{1}{2^5} - \frac{1}{3^5}\)，\(\cdots\)，\(T_n\)，\(\cdots\)，其中 \(T_n = \)\fillinblank{}.
 \begin{answer}
 \(\begin{cases}
 0, & n\text{为偶数},\\
 \dfrac{1}{2^n}-\dfrac{1}{3^n}, & n\text{为奇数}
 \end{cases}\)
 \end{answer}
+
+\begin{solution}
+由二项式定理，\(x^k\) 的系数为
+\[
+a_k=\mathrm C_n^k\left(2^{2k-n}-3^{2k-n}\right)
+\]
+若 \(n\) 为偶数，取 \(k=\frac n2\)，则 \(a_k=\mathrm C_n^{n/2}(1-1)=0\)，故 \(T_n=0\).
+
+若 \(n\) 为奇数，当 \(0\leqslant k\leqslant\frac{n-1}{2}\) 时，令 \(r=n-2k\)，则 \(1\leqslant r\leqslant n\)，并且
+\[
+|a_k|=\mathrm C_n^k\left(\frac1{2^r}-\frac1{3^r}\right)
+\]
+并且
+\[
+\left(\frac1{2^r}-\frac1{3^r}\right)
+-\left(\frac1{2^{r+1}}-\frac1{3^{r+1}}\right)
+=\frac1{2^{r+1}}-\frac2{3^{r+1}}>0
+\]
+（\(r\geqslant1\)），所以数列 \(\frac1{2^r}-\frac1{3^r}\) 随正整数 \(r\) 增大而减小，其值不小于 \(\frac1{2^n}-\frac1{3^n}\)，再乘以 \(\mathrm C_n^k\geqslant1\) 后仍不小于该值.
+
+当 \(\frac{n+1}{2}\leqslant k\leqslant n\) 时，令 \(r=2k-n\geqslant1\)，则
+\[
+|a_k|=\mathrm C_n^k(3^r-2^r)\geqslant1>\frac1{2^n}-\frac1{3^n}
+\]
+而 \(k=0\) 时恰好有 \(|a_0|=\frac1{2^n}-\frac1{3^n}\). 因此
+\[
+T_n=\begin{cases}
+0, & n\text{为偶数},\\
+\dfrac1{2^n}-\dfrac1{3^n}, & n\text{为奇数}.
+\end{cases}
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -179,6 +419,27 @@ B
 \begin{answer}
 \(d \leqslant -2\sqrt{2}\) 或 \(d \geqslant 2\sqrt{2}\)
 \end{answer}
+
+\begin{solution}
+由等差数列前 \(n\) 项和公式，
+\(S_5=5(a_1+2d)\)，\(S_6=3(2a_1+5d)\).
+代入题设得
+\[
+15(a_1+2d)(2a_1+5d)+15=0
+\]
+即
+\[
+2a_1^2+9a_1d+10d^2+1=0
+\]
+把它看作关于 \(a_1\) 的一元二次方程，为使 \(a_1\) 有实数解，判别式应满足
+\[
+\Delta=(9d)^2-4\cdot2(10d^2+1)=d^2-8\geqslant0
+\]
+所以 \(|d|\geqslant2\sqrt2\)，即
+\[
+d\leqslant-2\sqrt2\quad\text{或}\quad d\geqslant2\sqrt2
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -186,6 +447,33 @@ B
 \begin{answer}
 \(\left(0,\frac{2\sqrt{3}}{3}\right]\)
 \end{answer}
+
+\begin{solution}
+设 \(r=|\alpha|>0\)，\(s=|\beta-\alpha|>0\). 由向量的夹角条件，
+\[
+\alpha\cdot(\beta-\alpha)=rs\cos120^{\circ}=-\frac{rs}{2}
+\]
+又 \(\beta=\alpha+(\beta-\alpha)\)，且 \(|\beta|=1\)，所以
+\[
+1=|\beta|^2=r^2+s^2+2\alpha\cdot(\beta-\alpha)=r^2+s^2-rs
+\]
+这是关于 \(s\) 的方程
+\[
+s^2-rs+r^2-1=0
+\]
+要有实数 \(s\)，必须
+\[
+r^2-4(r^2-1)=4-3r^2\geqslant0
+\]
+即 \(0<r\leqslant\frac{2\sqrt3}{3}\). 反之，在此范围内取
+\[
+s=\frac{r+\sqrt{4-3r^2}}{2}>0
+\]
+即可构成夹角为 \(120^{\circ}\) 且 \(|\beta|=1\) 的两个向量，因此所有这些 \(r\) 都能取到. 故填
+\[
+\left(0,\frac{2\sqrt3}{3}\right]
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -193,6 +481,24 @@ B
 \begin{answer}
 264
 \end{answer}
+
+\begin{solution}
+上午固定测试除“握力”外的四个项目，先把四位有区别的同学安排到上午，方法数为 \(4!\). 固定一种上午安排，记上午测试“台阶”的同学为甲，另外三位同学的上午项目分别为三个公共项目.
+
+下午测试三个公共项目和“握力”，且不能与本人上午项目重复. 若“握力”安排给甲，则三个公共项目需避开三位同学各自的项目，安排数为三阶错排数 \(!3=2\). 若“握力”安排给另外三位同学中的一位，有 \(3\) 种选法；剩下的三人分配三个公共项目，其中两人各有一个禁用项目，容斥计数为
+\[
+3!-2\cdot2!+1!=3
+\]
+所以固定上午安排时，下午有
+\[
+2+3\times3=11
+\]
+种安排. 总安排数为
+\[
+4!\times11=264
+\]
+故填 \(264\).
+\end{solution}
 \end{problem}
 
 \section{解答题}
@@ -206,7 +512,36 @@ B
 \end{enumerate}
 
 \begin{solution}
-短答案：\(\sin C=\frac{\sqrt{10}}{4}\)；\(b=\sqrt{6}\)，\(c=4\) 或 \(b=2\sqrt{6}\)，\(c=4\).
+\begin{enumerate}
+\item 因为 \(0<C<\pi\)，所以 \(\sin C>0\). 由二倍角公式
+\[
+\cos2C=1-2\sin^2C=-\frac14
+\]
+得
+\(\sin^2C=\frac58\)，\(\sin C=\frac{\sqrt{10}}4\).
+
+\item 由正弦定理及 \(a=2\)，\(2\sin A=\sin C\)，得
+\[
+\frac{c}{\sin C}=\frac{a}{\sin A}
+=\frac{2}{\sin C/2}=\frac4{\sin C}
+\]
+所以 \(c=4\). 又由 \(\cos2C=-\frac14\)，
+\(\cos^2C=\frac{1+\cos2C}{2}=\frac38\)，\(\cos C=\pm\frac{\sqrt6}{4}\).
+对三角形使用余弦定理，
+\[
+c^2=a^2+b^2-2ab\cos C
+\]
+即
+\[
+b^2-4b\cos C-12=0
+\]
+当 \(\cos C=\frac{\sqrt6}{4}\) 时，\(b^2-\sqrt6b-12=0\)，取正根得 \(b=2\sqrt6\)；当 \(\cos C=-\frac{\sqrt6}{4}\) 时，\(b^2+\sqrt6b-12=0\)，取正根得 \(b=\sqrt6\). 两组边长均满足三角形不等式.
+
+因此
+\[
+(b,c)=(\sqrt6,4)\quad\text{或}\quad(2\sqrt6,4)
+\]
+\end{enumerate}
 \end{solution}
 \end{problem}
 
@@ -221,7 +556,40 @@ B
 \bitmapfigure[max width=0.42\linewidth]{img/2010/zhejiang_science/q19_fig1.png}
 
 \begin{solution}
-短答案：\(P(\xi=50\%)=\frac{3}{16}\)，\(P(\xi=70\%)=\frac{3}{8}\)，\(P(\xi=90\%)=\frac{7}{16}\)，\(E(\xi)=\frac{3}{4}\)；\(P\{\eta=2\}=\frac{1701}{4096}\).
+逐一沿图中管道追踪，每次遇到叉口都有左右两种等可能选择. 将每条完整路径按其终点归类，树状图的计数为
+\begin{center}
+\begin{tabular}{c|ccc|c}
+终点 & \(A\) & \(B\) & \(C\) & 合计\\ \hline
+路径数 & \(3\) & \(6\) & \(7\) & \(16\)
+\end{tabular}
+\end{center}
+因此共有 \(16\) 个等可能结果，其中到达 \(A\)，\(B\)，\(C\) 的结果数分别为 \(3\)，\(6\)，\(7\). 因此
+\(P(A)=\frac3{16}\)，\(P(B)=\frac6{16}=\frac38\)，\(P(C)=\frac7{16}\).
+
+\begin{enumerate}
+\item 随机变量 \(\xi\) 的分布列为
+\begin{center}
+\begin{tabular}{c|ccc}
+\(\xi\)&\(50\%\)&\(70\%\)&\(90\%\)\\ \hline
+\(P\)&\(\dfrac3{16}\)&\(\dfrac38\)&\(\dfrac7{16}\)
+\end{tabular}
+\end{center}
+所以
+\[
+E(\xi)=50\%\cdot\frac3{16}+70\%\cdot\frac38+90\%\cdot\frac7{16}=\frac34
+\]
+
+\item 每人获得 1 等奖或 2 等奖的概率为
+\[
+p=P(A)+P(B)=\frac3{16}+\frac6{16}=\frac9{16}
+\]
+三人的投球相互独立，故 \(\eta\sim B(3,\frac9{16})\)，从而
+\[
+P\{\eta=2\}=\mathrm C_3^2\left(\frac9{16}\right)^2\left(1-\frac9{16}\right)
+=3\left(\frac9{16}\right)^2\frac7{16}
+=\frac{1701}{4096}
+\]
+\end{enumerate}
 \end{solution}
 \end{problem}
 
@@ -236,7 +604,43 @@ B
 \bitmapfigure[max width=0.86\linewidth]{img/2010/zhejiang_science/q20_fig1.png}
 
 \begin{solution}
-短答案：第（1）问二面角的余弦值为 \(\frac{\sqrt{3}}{3}\)；第（2）问 \(FM=\frac{21}{4}\).
+建立直角坐标系，使矩形所在平面为 \(z=0\)，取
+\(D=(0,0,0)\)，\(F=(0,6,0)\)，\(A=(0,10,0)\)，\(B=(8,10,0)\)
+\(C=(8,0,0)\)，\(E=(4,10,0)\).
+这里由 \(\frac23FD=4\) 得 \(FD=6\). 设 \(H\) 为 \(EF\) 的中点，则 \(H=(2,8,0)\). 因为 \(AE=AF\)，所以 \(AH\perp EF\)，且 \(AH=2\sqrt2\). 折叠后平面 \(A'EF\) 与原平面垂直，故可取
+\[
+A'=(2,8,2\sqrt2)
+\]
+
+\begin{enumerate}
+\item 平面 \(FDC\) 是 \(z=0\)，可取其法向量 \(\bs{n}_2=(0,0,1)\). 平面 \(A'FD\) 内的两个方向向量可取 \(\overrightarrow{FD}=(0,-6,0)\) 和 \(\overrightarrow{FA'}=(2,2,2\sqrt2)\)，故其法向量可取
+\[
+\bs{n}_1=\overrightarrow{FD}\times\overrightarrow{FA'}=(-12\sqrt2,0,12)
+\]
+因此二面角的余弦值为
+\[
+\frac{|\bs{n}_1\cdot\bs{n}_2|}{|\bs{n}_1||\bs{n}_2|}
+=\frac{12}{\sqrt{(12\sqrt2)^2+12^2}}=\frac{\sqrt3}{3}
+\]
+
+\item 设 \(FM=x\)，则 \(M=(0,6-x,0)\)，且 \(0\leqslant x\leqslant6\). 折叠绕直线 \(MN\) 进行，点 \(M\) 在折痕上不动，所以 \(CM=A'M\). 于是
+\[
+CM^2=8^2+(6-x)^2
+\]
+\[
+A'M^2=2^2+(8-(6-x))^2+(2\sqrt2)^2=(x+2)^2+12
+\]
+令两式相等，得
+\(64+(6-x)^2=(x+2)^2+12\)，\(x=\frac{21}{4}\).
+还需验证折痕可取在 \(BC\) 上. 令 \(N=(8,n,0)\)，由 \(CN=A'N\) 得
+\[
+n^2=6^2+(n-8)^2+(2\sqrt2)^2
+\]
+故 \(n=\frac{27}{4}\in[0,10]\)，确有 \(N\in BC\). 所以
+\[
+FM=\frac{21}{4}
+\]
+\end{enumerate}
 \end{solution}
 \end{problem}
 
@@ -251,7 +655,55 @@ B
 \bitmapfigure[max width=0.42\linewidth]{img/2010/zhejiang_science/q21_fig1.png}
 
 \begin{solution}
-短答案：第（1）问直线 \(l\) 的方程为 \(x-\sqrt{2}y-1=0\)；第（2）问 \(m\in(1,2)\).
+椭圆的焦点为 \(F_1=(-\sqrt{m^2-1},0)\)，\(F_2=(\sqrt{m^2-1},0)\).
+
+\begin{enumerate}
+\item 直线经过 \(F_2\)，所以
+\[
+\sqrt{m^2-1}-\frac{m^2}{2}=0
+\]
+令 \(t=m^2\)，则 \(t>1\)，且 \(\sqrt{t-1}=\frac t2\). 平方得
+\(t-1=\frac{t^2}{4}\)，\((t-2)^2=0\).
+所以 \(m=\sqrt2\)，直线方程为
+\[
+l:x-\sqrt2y-1=0
+\]
+
+\item 设 \(A=(x_1,y_1)\)，\(B=(x_2,y_2)\). 由直线方程
+\[
+x=my+\frac{m^2}{2}
+\]
+代入椭圆方程，得
+\[
+2y^2+my+\frac{m^2}{4}-1=0
+\]
+因此
+\(y_1+y_2=-\frac m2\)，\(y_1y_2=\frac{m^2}{8}-\frac12\).
+由于 \(F_1\)，\(F_2\) 的中点为原点，两个三角形的重心分别为
+\(G=\left(\frac{x_1}{3},\frac{y_1}{3}\right)\)，\(H=\left(\frac{x_2}{3},\frac{y_2}{3}\right)\).
+原点在以 \(GH\) 为直径的圆内，当且仅当
+\[
+\overrightarrow{OG}\cdot\overrightarrow{OH}<0
+\]
+即
+\[
+x_1x_2+y_1y_2<0
+\]
+利用 \(x_i=my_i+\frac{m^2}{2}\)，有
+\[
+\begin{aligned}
+x_1x_2+y_1y_2
+&=(m^2+1)y_1y_2+\frac{m^3}{2}(y_1+y_2)+\frac{m^4}{4}\\
+&=(m^2+1)\left(\frac{m^2}{8}-\frac12\right)-\frac{m^4}{4}+\frac{m^4}{4}\\
+&=\frac{(m^2+1)(m^2-4)}8.
+\end{aligned}
+\]
+因 \(m^2+1>0\)，上式小于零等价于 \(m^2<4\). 结合 \(m>1\)，得
+\[
+1<m<2
+\]
+此时交点确为两个不同点，因为二次方程判别式 \(8-m^2>0\).
+\end{enumerate}
 \end{solution}
 \end{problem}
 
@@ -264,6 +716,70 @@ B
 \end{enumerate}
 
 \begin{solution}
-短答案：第（1）问 \(b<-a\)；第（2）问存在，当 \(b=-a-3\) 时，\(x_4=a\pm2\sqrt{6}\)；当 \(b=-a-\frac{7+\sqrt{13}}{2}\) 时，\(x_4=a+\frac{1+\sqrt{13}}{2}\)；当 \(b=-a-\frac{7-\sqrt{13}}{2}\) 时，\(x_4=a+\frac{1-\sqrt{13}}{2}\).
+令
+\[
+g(x)=x^2+(b-a+3)x-ab+2b-a
+\]
+求导得
+\[
+f'(x)=\e^x(x-a)g(x)
+\]
+且
+\[
+\Delta_g=(b-a+3)^2-4(-ab+2b-a)=(a+b-1)^2+8>0
+\]
+所以 \(g\) 有两个不等实根.
+
+\begin{enumerate}
+\item 在 \(x=a\) 处，若 \(g(a)>0\)，则 \(f'\) 在该点左负右正，\(x=a\) 是极小值点；若 \(g(a)=0\)，则 \(x-a\) 至少是二重因子，导数在该点不变号，也不是极值点. 因此必须 \(g(a)<0\). 计算得
+\[
+g(a)=2(a+b)
+\]
+故
+\[
+b<-a
+\]
+
+\item 记 \(g\) 的两个根为 \(u<v\). 由 \(g(a)<0\) 知 \(u<a<v\)，所以三个极值点按大小规律为 \(u\)，\(a\)，\(v\). 令
+\(p=a-u>0\)，\(q=v-a>0\)，\(s=a+b\).
+将 \(g(a+t)\) 展开，得
+\[
+g(a+t)=t^2+(s+3)t+2s
+\]
+因此
+\(-pq=2s\)，\(-p+q=-(s+3)\)
+即
+\[
+q-p=\frac{pq}{2}-3. \tag{1}
+\]
+
+四个数形成等差数列时，按四项从小到大排列，\(u\)，\(a\)，\(v\) 只能占据以下三种位置类型.
+
+第一种，\(u\)，\(a\)，\(v\) 是连续的前三项或连续的后三项. 此时 \(p=q\)，由（1）得 \(p^2=6\)，所以
+\(s=-\frac{pq}{2}=-3\)，\(b=-a-3\).
+缺少的第四项为
+\[
+x_4=a-2\sqrt6\quad\text{或}\quad x_4=a+2\sqrt6
+\]
+
+第二种，排列为 \(u\)，\(a\)，\(x_4\)，\(v\). 此时 \(q=2p\)，代入（1）得
+\(p=p^2-3\)，\(p=\frac{1+\sqrt{13}}2\).
+于是
+\(b=-a+s=-a-p^2=-a-\frac{7+\sqrt{13}}2\)，\(x_4=a+p=a+\frac{1+\sqrt{13}}2\).
+
+第三种，排列为 \(u\)，\(x_4\)，\(a\)，\(v\). 此时 \(p=2q\)，代入（1）得
+\(-q=q^2-3\)，\(q=\frac{\sqrt{13}-1}{2}\).
+于是
+\(b=-a-q^2=-a-\frac{7-\sqrt{13}}2\)，\(x_4=a-q=a+\frac{1-\sqrt{13}}2\).
+
+以上各值均满足 \(b<-a\)，且三种位置类型已经涵盖 \(u\)，\(a\)，\(v\) 在四项等差数列中的全部可能位置. 因此确实存在，所有结果为
+\[
+\begin{aligned}
+b&=-a-3, &x_4&=a\pm2\sqrt6;\\
+b&=-a-\frac{7+\sqrt{13}}2, &x_4&=a+\frac{1+\sqrt{13}}2;\\
+b&=-a-\frac{7-\sqrt{13}}2, &x_4&=a+\frac{1-\sqrt{13}}2.
+\end{aligned}
+\]
+\end{enumerate}
 \end{solution}
 \end{problem}

@@ -16,6 +16,11 @@
 D
 \end{answer}
 
+\begin{solution}
+设 \(z=x+y\i\)，则 \(\bar z=x-y\i\). 由 \(\bar z+z=2\) 得 \(2x=2\)，所以 \(x=1\). 又
+\((z-\bar z)\i=(2y\i)\i=-2y=2\)，得 \(y=-1\). 因此 \(z=1-\i\)，故选 D.
+\end{solution}
+
 \begin{problem}
 函数 \( f(x) = \ln (x^2 - x) \) 的定义域为（\quad）
 
@@ -29,6 +34,10 @@ D
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+对数的真数必须为正，所以 \(x^2-x=x(x-1)>0\). 由数轴上两根 \(0\)，\(1\) 的符号可知 \(x<0\) 或 \(x>1\)，故定义域为 \((-\infty,0)\cup(1,+\infty)\)，选 C.
+\end{solution}
 
 \begin{problem}
 已知函数 \( f(x) = 5^{|x|} \)，\( g(x) = ax^{2} - x \)（\(a \in \R\)）. 若 \( f[g(1)] = 1 \)，则 \( a = \)（\quad）
@@ -44,6 +53,10 @@ C
 A
 \end{answer}
 
+\begin{solution}
+因为底数 \(5>1\)，所以 \(5^{|g(1)|}=1\) 当且仅当 \(|g(1)|=0\)，即 \(g(1)=0\). 又 \(g(1)=a-1\)，因此 \(a=1\)，故选 A.
+\end{solution}
+
 \begin{problem}
 在 \(\triangle ABC\) 中，内角 \(A\)，\(B\)，\(C\) 所对应的边分别为 \(a\)，\(b\)，\(c\). 若 \(c^2 = (a - b)^2 + 6\)，\(C = \frac{\pi}{3}\)，则 \(\triangle ABC\) 的面积是（\quad）
 
@@ -57,6 +70,18 @@ A
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+由余弦定理及 \(\cos C=\cos\frac{\pi}{3}=\frac12\)，有
+\[
+c^2=a^2+b^2-2ab\cos C=a^2+b^2-ab=(a-b)^2+ab
+\]
+与题设比较得 \(ab=6\). 因而
+\[
+S_{\triangle ABC}=\frac12ab\sin C=\frac12\cdot6\cdot\frac{\sqrt3}{2}=\frac{3\sqrt3}{2}
+\]
+故选 C.
+\end{solution}
 
 \begin{problem}
 一几何体的直观图如图所示，下列给出的四个俯视图中正确的是（\quad）
@@ -73,6 +98,10 @@ C
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+沿竖直方向把直观图投影到水平面，几何体的外轮廓为一个矩形. 上部各斜面的棱在水平面上的投影分别从矩形四个顶点汇向中部的一条水平线段，因此俯视图应有矩形外框及四条向中部线段汇聚的内部棱线. 四个图中只有 B 的外轮廓和内部棱线位置同时符合，故选 B.
+\end{solution}
 
 \begin{problem}
 某人研究中学生的性别与成绩，视力，智商，阅读量这 \(4\) 个变量之间的关系，随机抽查了 \(52\) 名中学生，得到统计数据如表 \(1\) 至表 \(4\)，则与性别有关联的可能性最大的变量是（\quad）
@@ -154,6 +183,14 @@ B
 D
 \end{answer}
 
+\begin{solution}
+对任一 \(2\times2\) 列联表，Pearson 独立性检验统计量可写为
+\[
+\chi^2=\frac{52(ad-bc)^2}{(a+b)(c+d)(a+c)(b+d)}
+\]
+四个表的行、列边际总数都相同，所以只需比较 \(|ad-bc|\)：成绩表为 \(|6\times22-14\times10|=8\)，视力表为 \(|4\times20-16\times12|=112\)，智商表为 \(|8\times24-12\times8|=96\)，阅读量表为 \(|14\times30-6\times2|=408\). 最大的是阅读量表，故与性别关联的可能性最大的是阅读量，选 D.
+\end{solution}
+
 \begin{problem}
 阅读如下程序框图，运行相应的程序，则程序运行后输出的结果为（\quad）
 
@@ -170,6 +207,16 @@ D
 B
 \end{answer}
 
+\begin{solution}
+程序开始时 \(i=1\)，\(S=0\)，每次循环后把 \(i\) 增加 \(2\). 第一次至第五次循环所加的项依次为
+\(\lg\frac13\)，\(\lg\frac35\)，\(\lg\frac57\)，\(\lg\frac79\)，\(\lg\frac9{11}\).
+前四次循环后 \(S=\lg\frac19=-\lg9>-1\)，继续循环；第五次循环后
+\[
+S=\lg\left(\frac13\cdot\frac35\cdot\frac57\cdot\frac79\cdot\frac9{11}\right)=\lg\frac1{11}=-\lg11<-1
+\]
+此时输出 \(i=9\)，故选 B.
+\end{solution}
+
 \begin{problem}
 若 \( f(x) = x^{2} + 2\int_{0}^{1}f(x)\mathrm{d}x \)，则 \( \int_{0}^{1}f(x)\mathrm{d}x = \)（\quad）
 
@@ -183,6 +230,14 @@ B
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+令 \(I=\int_0^1f(x)\,\mathrm{d}x\). 题设给出 \(f(x)=x^2+2I\)，两边在 \([0,1]\) 上积分，得
+\[
+I=\int_0^1x^2\,\mathrm{d}x+\int_0^1 2I\,\mathrm{d}x=\frac13+2I
+\]
+所以 \(I=-\frac13\)，故选 B.
+\end{solution}
 
 \begin{problem}
 在平面直角坐标系中，\(A\)，\(B\) 分别是 \(x\) 轴和 \(y\) 轴上的动点，若以 \(AB\) 为直径的圆 \(C\) 与直线 \(2x + y - 4 = 0\) 相切，则圆 \(C\) 面积的最小值为（\quad）
@@ -198,8 +253,28 @@ B
 A
 \end{answer}
 
+\begin{solution}
+设 \(A=(u,0)\)，\(B=(0,v)\)，记 \(q=u^2+v^2\). 以 \(AB\) 为直径的圆心和半径分别为 \(O'=(\frac u2,\frac v2)\) 和 \(r=\frac{\sqrt q}{2}\). 由圆与直线相切，圆心到直线的距离等于半径，即
+\[
+\frac{|u+\frac v2-4|}{\sqrt5}=\frac{\sqrt q}{2}
+\]
+从而令 \(p=2u+v\)，可得
+\[
+(p-8)^2=5q
+\]
+另一方面，由柯西不等式，\(p^2=(2u+v)^2\leqslant5(u^2+v^2)=5q\). 因而 \(p^2\leqslant(p-8)^2\)，即 \(p\leqslant4\). 所以
+\[
+q=\frac{(8-p)^2}{5}\geqslant\frac{16}{5}
+\]
+当 \(p=4\) 且 \((u,v)\) 与 \((2,1)\) 同向时等号成立，例如 \(u=\frac85\)，\(v=\frac45\). 因此
+\[
+S_C=\pi r^2=\frac{\pi q}{4}\geqslant\frac45\pi
+\]
+故最小值为 \(\frac45\pi\)，选 A.
+\end{solution}
+
 \begin{problem}
-如图，在长方体 \(ABCD - A_{1}B_{1}C_{1}D_{1}\) 中，\(AB = 11\)，\(AD = 7\)，\(AA_{1} = 12\)，一质点从顶点 \(A\) 射向点 \(E(4,3,12)\)，遇长方体的面反射（反射服从光的反射原理），将第 \(i - 1\) 次到第 \(i\) 次反射点之间的线段记为 \(l_{i}\)（\(i = 2,3,4\)），\(l_{1} = AE\)，将线段 \(l_{1}\)，\(l_{2}\)，\(l_{3}\)，\(l_{4}\) 竖直放置在同一水平线上，则大致的图形是（\quad）
+如图，在长方体 \(ABCD - A_{1}B_{1}C_{1}D_{1}\) 中，\(AB = 11\)，\(AD = 7\)，\(AA_{1} = 12\)，一质点从顶点 \(A\) 射向点 \(E(4,3,12)\)，遇长方体的面反射（反射服从光的反射原理），将第 \(i - 1\) 次到第 \(i\) 次反射点之间的线段记为 \(l_{i}\)（\(i = 2\)，\(3\)，\(4\)），\(l_{1} = AE\)，将线段 \(l_{1}\)，\(l_{2}\)，\(l_{3}\)，\(l_{4}\) 竖直放置在同一水平线上，则大致的图形是（\quad）
 
 \bitmapfigure[width=0.46\linewidth]{img/2014/jiangxi_science/q10_fig1.png}
 
@@ -213,6 +288,22 @@ A
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+取 \(A=(0,0,0)\)，令 \(x\)，\(y\)，\(z\) 轴分别沿 \(AB\)，\(AD\)，\(AA_1\)，则 \(E=(4,3,12)\). 因而
+\[
+l_1=AE=\sqrt{4^2+3^2+12^2}=13
+\]
+到达顶面 \(z=12\) 后，反射使 \(z\) 方向分量变为相反数，射线到达底面时水平位移仍为 \((4,3)\)，落点为 \((8,6,0)\)，所以 \(l_2=13\). 在底面反射后方向分量可按 \((4,3,12)\) 取比例；从 \((8,6,0)\) 出发，先到达 \(y=7\)，所需比例为 \(\frac13\)（到 \(x=11\) 所需比例为 \(\frac34\)），故
+\[
+l_3=\frac{13}{3}
+\]
+反射到 \(y=7\) 后方向可按 \((4,-3,12)\) 取比例. 从交点 \((\frac{28}{3},7,4)\) 出发，先到达 \(x=11\)，所需比例为 \(\frac{5}{12}\)，故
+\[
+l_4=\frac{65}{12}
+\]
+于是 \(l_1=l_2>l_4>l_3\)，与图形 C 一致，故选 C.
+\end{solution}
 
 \begin{problem}
 对任意 \(x\)，\(y \in \R\)，\(|x - 1| + |x| + |y - 1| + |y + 1|\) 的最小值为（\quad）
@@ -228,6 +319,12 @@ C
 C
 \end{answer}
 
+\begin{solution}
+由三角不等式，
+\(|x-1|+|x|\geqslant|1|=1\)，\(|y-1|+|y+1|\geqslant|2|=2\).
+当且仅当 \(0\leqslant x\leqslant1\)，\(-1\leqslant y\leqslant1\) 时两式同时取等号，所以原式的最小值为 \(1+2=3\)，故选 C.
+\end{solution}
+
 \begin{problem}
 若以直角坐标系的原点为极点，\(x\) 轴的非负半轴为极轴建立极坐标系，则线段 \(y = 1 - x\)（\(0 \leqslant x \leqslant 1\)）的极坐标方程为（\quad）
 
@@ -242,6 +339,12 @@ C
 A
 \end{answer}
 
+\begin{solution}
+由极坐标与直角坐标的关系 \(x=\rho\cos\theta\)，\(y=\rho\sin\theta\)，代入 \(y=1-x\) 得
+\(\rho\sin\theta=1-\rho\cos\theta\)，\(\rho=\frac1{\cos\theta+\sin\theta}\).
+该线段的两个端点为 \((1,0)\) 和 \((0,1)\)，均在第一象限，故 \(0\leqslant\theta\leqslant\frac\pi2\). 因此选 A.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -252,6 +355,13 @@ A
 \(\frac{1}{2}\)
 \end{answer}
 
+\begin{solution}
+从 \(7\) 件正品和 \(3\) 件次品中任取 \(4\) 件，等可能的取法总数为 \(\mathrm C_{10}^{4}\). 恰好取到 \(1\) 件次品的取法数为 \(\mathrm C_{3}^{1}\mathrm C_{7}^{3}\)，所以
+\[
+P=\frac{\mathrm C_{3}^{1}\mathrm C_{7}^{3}}{\mathrm C_{10}^{4}}=\frac{3\times35}{210}=\frac12
+\]
+\end{solution}
+
 \begin{problem}
 若曲线 \( y = \e^{-x} \) 上点 \(P\) 处的切线平行于直线 \( 2x + y + 1 = 0 \)，则点 \(P\) 的坐标是\fillinblank{}.
 \end{problem}
@@ -259,6 +369,12 @@ A
 \begin{answer}
 \((-\ln 2,2)\)
 \end{answer}
+
+\begin{solution}
+曲线 \(y=\e^{-x}\) 的导数为 \(y'=-\e^{-x}\). 直线 \(2x+y+1=0\) 的斜率为 \(-2\)，所以切点横坐标满足
+\(-\e^{-x}=-2\)，\(\e^{-x}=2\)，\(x=-\ln2\).
+再由 \(y=\e^{-x}\) 得 \(y=2\)，故 \(P=(-\ln2,2)\).
+\end{solution}
 
 \begin{problem}
 已知单位向量 \(\bs{e}_1\) 与 \(\bs{e}_2\) 的夹角为 \(\alpha\)，且 \(\cos \alpha = \frac{1}{3}\)，向量 \(\bs{a} = 3\bs{e}_1 - 2\bs{e}_2\) 与 \(\bs{b} = 3\bs{e}_1 - \bs{e}_2\) 的夹角为 \(\beta\)，则 \(\cos \beta =\)\fillinblank{}.
@@ -268,6 +384,18 @@ A
 \(\frac{2\sqrt{2}}{3}\)
 \end{answer}
 
+\begin{solution}
+由 \(|\bs e_1|=|\bs e_2|=1\)，\(\bs e_1\cdot\bs e_2=\cos\alpha=\frac13\)，有
+\[
+\bs a\cdot\bs b=(3\bs e_1-2\bs e_2)\cdot(3\bs e_1-\bs e_2)=9-9\cdot\frac13+2=8
+\]
+\(|\bs a|^2=9+4-12\cdot\frac13=9\)，\(|\bs b|^2=9+1-6\cdot\frac13=8\).
+因此
+\[
+\cos\beta=\frac{\bs a\cdot\bs b}{|\bs a||\bs b|}=\frac{8}{3\cdot2\sqrt2}=\frac{2\sqrt2}{3}
+\]
+\end{solution}
+
 \begin{problem}
 过点 \(M(1,1)\) 作斜率为 \(-\frac{1}{2}\) 的直线与椭圆 \(C: \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\)（\(a > b > 0\)）相交于 \(A\)，\(B\) 两点，若 \(M\) 是线段 \(AB\) 的中点，则椭圆 \(C\) 的离心率等于\fillinblank{}.
 \end{problem}
@@ -275,6 +403,19 @@ A
 \begin{answer}
 \(\frac{\sqrt{2}}{2}\)
 \end{answer}
+
+\begin{solution}
+过 \(M\) 的直线方程为 \(y-1=-\frac12(x-1)\). 令 \(x=1+t\)，则线上点的纵坐标为 \(y=1-\frac t2\). 代入椭圆方程，得
+\[
+\frac{(1+t)^2}{a^2}+\frac{(1-\frac t2)^2}{b^2}=1
+\]
+交点 \(A\)，\(B\) 关于 \(M\) 对称，所以对应的两个 \(t\) 值互为相反数，代入所得关于 \(t\) 的二次方程一次项系数必须为 \(0\). 展开一次项得
+\(\frac{2}{a^2}-\frac{1}{b^2}=0\)，\(a^2=2b^2\).
+椭圆离心率为
+\[
+e=\frac{\sqrt{a^2-b^2}}{a}=\sqrt{1-\frac{b^2}{a^2}}=\sqrt{1-\frac12}=\frac{\sqrt2}{2}
+\]
+\end{solution}
 
 \section{解答题}
 
@@ -294,25 +435,25 @@ A
 f(x)=\sin\left(x+\frac{\pi}{4}\right)+\sqrt{2}\cos\left(x+\frac{\pi}{2}\right)
 =\frac{\sin x+\cos x}{\sqrt{2}}-\sqrt{2}\sin x
 =\frac{\cos x-\sin x}{\sqrt{2}}
-=\cos\left(x+\frac{\pi}{4}\right).
+=\cos\left(x+\frac{\pi}{4}\right)
 \]
 当 \(0\leqslant x\leqslant\pi\) 时，\(\frac{\pi}{4}\leqslant x+\frac{\pi}{4}\leqslant\frac{5\pi}{4}\). 在此区间内，余弦函数的最大值为 \(\cos\frac{\pi}{4}=\frac{\sqrt{2}}{2}\)，最小值为 \(\cos\pi=-1\). 因此，\(f(x)\) 的最大值为 \(\frac{\sqrt{2}}{2}\)，最小值为 \(-1\).
 
 \item 由 \(f\left(\frac{\pi}{2}\right)=0\)，得
 \[
-\cos\theta-a\sin 2\theta=0.
+\cos\theta-a\sin 2\theta=0
 \]
 由 \(\theta\in\left(-\frac{\pi}{2},\frac{\pi}{2}\right)\) 可知 \(\cos\theta>0\)，所以 \(\sin\theta\neq 0\)，并且
 \[
-1=2a\sin\theta.
+1=2a\sin\theta
 \]
 所以 \(a=\frac{1}{2\sin\theta}\). 又由 \(f(\pi)=1\)，得
 \[
--\sin\theta-a\cos 2\theta=1.
+-\sin\theta-a\cos 2\theta=1
 \]
 令 \(s=\sin\theta\)，代入 \(a=\frac{1}{2s}\) 及 \(\cos 2\theta=1-2s^2\)，有
 \[
--s-\frac{1-2s^2}{2s}=1.
+-s-\frac{1-2s^2}{2s}=1
 \]
 两边乘以 \(2s\)，得 \(-2s^2-1+2s^2=2s\)，从而 \(s=-\frac{1}{2}\). 因为 \(\theta\in\left(-\frac{\pi}{2},\frac{\pi}{2}\right)\)，所以 \(\theta=-\frac{\pi}{6}\)，进而 \(a=-1\).
 \end{enumerate}
@@ -331,24 +472,24 @@ f(x)=\sin\left(x+\frac{\pi}{4}\right)+\sqrt{2}\cos\left(x+\frac{\pi}{2}\right)
 \begin{enumerate}
 \item 因为 \(b_n\neq 0\)，且 \(b_{n+1}\neq 0\)，原等式两边同除以 \(b_nb_{n+1}\)，得
 \[
-\frac{a_n}{b_n}-\frac{a_{n+1}}{b_{n+1}}+2=0.
+\frac{a_n}{b_n}-\frac{a_{n+1}}{b_{n+1}}+2=0
 \]
 由 \(c_n=\frac{a_n}{b_n}\)，可得 \(c_{n+1}=c_n+2\). 又 \(c_1=\frac{a_1}{b_1}=1\)，所以 \(\{c_n\}\) 是首项为 \(1\)、公差为 \(2\) 的等差数列，从而
 \[
-c_n=1+2(n-1)=2n-1.
+c_n=1+2(n-1)=2n-1
 \]
 
 \item 当 \(b_n=3^{n-1}\) 时，
 \[
-a_n=b_nc_n=(2n-1)3^{n-1}.
+a_n=b_nc_n=(2n-1)3^{n-1}
 \]
 令 \(F_k=(k-2)3^{k-1}\)，则
 \[
-F_{k+1}-F_k=(k-1)3^k-(k-2)3^{k-1}=(2k-1)3^{k-1}=a_k.
+F_{k+1}-F_k=(k-1)3^k-(k-2)3^{k-1}=(2k-1)3^{k-1}=a_k
 \]
 因此
 \[
-S_n=\sum_{k=1}^{n}a_k=\sum_{k=1}^{n}(F_{k+1}-F_k)=F_{n+1}-F_1=(n-1)3^n+1.
+S_n=\sum_{k=1}^{n}a_k=\sum_{k=1}^{n}(F_{k+1}-F_k)=F_{n+1}-F_1=(n-1)3^n+1
 \]
 所以 \(S_n=1+(n-1)3^n\).
 \end{enumerate}
@@ -367,23 +508,23 @@ S_n=\sum_{k=1}^{n}a_k=\sum_{k=1}^{n}(F_{k+1}-F_k)=F_{n+1}-F_1=(n-1)3^n+1.
 \begin{enumerate}
 \item 当 \(b=4\) 时，函数定义域为 \(x\leqslant\frac{1}{2}\)，且
 \[
-f(x)=(x+2)^2\sqrt{1-2x}.
+f(x)=(x+2)^2\sqrt{1-2x}
 \]
 当 \(x<\frac{1}{2}\) 时，
 \[
 f'(x)=2(x+2)\sqrt{1-2x}-\frac{(x+2)^2}{\sqrt{1-2x}}
-=\frac{-5x(x+2)}{\sqrt{1-2x}}.
+=\frac{-5x(x+2)}{\sqrt{1-2x}}
 \]
 所以在 \(x<\frac{1}{2}\) 时，\(f'(x)<0\) 对应 \(x<-2\) 或 \(0<x<\frac{1}{2}\)，\(f'(x)>0\) 对应 \(-2<x<0\). 因而函数先减后增再减，在 \(x=-2\) 处取得局部极小值 \(0\)，在 \(x=0\) 处取得局部极大值 \(4\). 又 \(f\left(\frac{1}{2}\right)=0\)，故在定义域上最小值为 \(0\)，在 \(x=-2\) 和 \(x=\frac{1}{2}\) 处取得；函数在定义域上无最大值.
 
 \item 对一般的 \(b\)，当 \(x<\frac{1}{2}\) 时，
 \[
 f'(x)=(2x+b)\sqrt{1-2x}-\frac{x^2+bx+b}{\sqrt{1-2x}}
-=\frac{x(2-5x-3b)}{\sqrt{1-2x}}.
+=\frac{x(2-5x-3b)}{\sqrt{1-2x}}
 \]
 在 \(0<x<\frac{1}{3}\) 内，\(x>0\)，且 \(\sqrt{1-2x}>0\)，所以 \(f\) 在该区间上单调递增，当且仅当 \(2-5x-3b\geqslant 0\) 对一切 \(x\in\left(0,\frac{1}{3}\right)\) 成立. 由于该一次式随 \(x\) 增大而减小，这一条件等价于
 \[
-2-\frac{5}{3}-3b\geqslant 0,
+2-\frac{5}{3}-3b\geqslant 0
 \]
 即 \(b\leqslant\frac{1}{9}\). 当 \(b=\frac{1}{9}\) 时，因区间右端点不取到，导数在区间内仍为正，所以 \(b=\frac{1}{9}\) 也满足条件，故 \(b\) 的取值范围为 \(\left(-\infty,\frac{1}{9}\right]\).
 \end{enumerate}
@@ -406,36 +547,32 @@ f'(x)=(2x+b)\sqrt{1-2x}-\frac{x^2+bx+b}{\sqrt{1-2x}}
 
 \item 设 \(AB=x\). 在直角三角形 \(PBC\) 中，\(\angle BPC=90^{\circ}\)，所以
 \[
-BC=\sqrt{PB^2+PC^2}=\sqrt{2+4}=\sqrt{6}.
+BC=\sqrt{PB^2+PC^2}=\sqrt{2+4}=\sqrt{6}
 \]
 因为 \(ABCD\) 为矩形，故 \(AD=BC=\sqrt{6}\). 建立空间直角坐标系，取
-\[
-A=(0,0,0),\quad B=(x,0,0),\quad D=(0,\sqrt{6},0),\quad C=(x,\sqrt{6},0).
-\]
+\(A=(0,0,0)\)，\(B=(x,0,0)\)，\(D=(0,\sqrt{6},0)\)，\(C=(x,\sqrt{6},0)\).
 由于 \(P\) 在平面 \(PAD\) 内，可设 \(P=(0,u,v)\)，其中 \(v>0\). 由 \(PB=\sqrt{2}\)，\(PC=2\)，分别得
 \(x^2+u^2+v^2=2\)，\(x^2+(u-\sqrt{6})^2+v^2=4\).
 两式相减，得 \(6-2\sqrt{6}u=2\)，所以 \(u=\frac{\sqrt{6}}{3}\)，进而
 \[
-x^2+v^2=\frac{4}{3}.
+x^2+v^2=\frac{4}{3}
 \]
 四棱锥的体积为
 \[
-V=\frac{1}{3}AB\cdot AD\cdot v=\frac{\sqrt{6}}{3}xv.
+V=\frac{1}{3}AB\cdot AD\cdot v=\frac{\sqrt{6}}{3}xv
 \]
 由 \(x^2+v^2=\frac{4}{3}\) 及均值不等式，
 \[
-xv\leqslant\frac{x^2+v^2}{2}=\frac{2}{3},
+xv\leqslant\frac{x^2+v^2}{2}=\frac{2}{3}
 \]
 当且仅当 \(x=v=\sqrt{\frac{2}{3}}\) 时等号成立. 因此体积最大时 \(AB=\sqrt{\frac{2}{3}}\).
 
 此时令 \(s=\sqrt{\frac{2}{3}}\)，则 \(\sqrt{6}=3s\)，可取
-\[
-B=(s,0,0),\quad C=(s,3s,0),\quad D=(0,3s,0),\quad P=(0,s,s).
-\]
+\(B=(s,0,0)\)，\(C=(s,3s,0)\)，\(D=(0,3s,0)\)，\(P=(0,s,s)\).
 平面 \(PBC\) 的两个方向向量可取 \(\overrightarrow{PB}=s(1,-1,-1)\)，\(\overrightarrow{PC}=s(1,2,-1)\)，故其法向量可取 \(\bs{n}_1=(1,0,1)\). 平面 \(DPC\) 的两个方向向量可取 \(\overrightarrow{DC}=s(1,0,0)\)，\(\overrightarrow{DP}=s(0,-2,1)\)，故其法向量可取 \(\bs{n}_2=(0,-1,-2)\). 因此两平面夹角的余弦为
 \[
 \frac{|\bs{n}_1\cdot\bs{n}_2|}{|\bs{n}_1||\bs{n}_2|}
-=\frac{2}{\sqrt{2}\sqrt{5}}=\frac{\sqrt{10}}{5}.
+=\frac{2}{\sqrt{2}\sqrt{5}}=\frac{\sqrt{10}}{5}
 \]
 \end{enumerate}
 \end{solution}
@@ -458,42 +595,42 @@ B=(s,0,0),\quad C=(s,3s,0),\quad D=(0,3s,0),\quad P=(0,s,s).
 因为 \(BF\parallel OA\)，向量 \(\overrightarrow{BF}=\left(c-t,\frac{t}{a}\right)\) 与 \(\overrightarrow{OA}=\left(c,\frac{c}{a}\right)\) 平行. 设比例系数为 \(\lambda\)，则 \(c-t=\lambda c\)，\(\frac{t}{a}=\lambda\frac{c}{a}\).
 由第二式得 \(t=\lambda c\)，代入第一式可得 \(\lambda=\frac{1}{2}\)，于是
 \[
-B=\left(\frac{c}{2},-\frac{c}{2a}\right).
+B=\left(\frac{c}{2},-\frac{c}{2a}\right)
 \]
 又因为 \(AB\perp OB\)，所以
 \[
 \overrightarrow{AB}\cdot\overrightarrow{OB}
 =\left(-\frac{c}{2},-\frac{3c}{2a}\right)\cdot\left(\frac{c}{2},-\frac{c}{2a}\right)
-=\frac{c^2}{4}\left(-1+\frac{3}{a^2}\right)=0.
+=\frac{c^2}{4}\left(-1+\frac{3}{a^2}\right)=0
 \]
 故 \(a^2=3\)，双曲线 \(C\) 的方程为
 \[
-\frac{x^2}{3}-y^2=1.
+\frac{x^2}{3}-y^2=1
 \]
 
 \item 由上问，\(F=(2,0)\)，直线 \(AF\) 为 \(x=2\). 因为 \(M\) 在直线 \(l\) 与 \(AF\) 的交点上，令 \(x=2\) 代入 \(l\) 的方程，得
 \[
-M=\left(2,\frac{\frac{2x_0}{3}-1}{y_0}\right).
+M=\left(2,\frac{\frac{2x_0}{3}-1}{y_0}\right)
 \]
 同理，令 \(x=\frac{3}{2}\)，得
 \[
-N=\left(\frac{3}{2},\frac{\frac{x_0}{2}-1}{y_0}\right).
+N=\left(\frac{3}{2},\frac{\frac{x_0}{2}-1}{y_0}\right)
 \]
 又因 \(P\in C\)，所以 \(y_0^2=\frac{x_0^2-3}{3}\). 因此
 \[
-|MF|^2=\frac{\left(\frac{2x_0}{3}-1\right)^2}{y_0^2}=\frac{(2x_0-3)^2}{3(x_0^2-3)}.
+|MF|^2=\frac{\left(\frac{2x_0}{3}-1\right)^2}{y_0^2}=\frac{(2x_0-3)^2}{3(x_0^2-3)}
 \]
 另一方面，
 \[
-|NF|^2=\frac{1}{4}+\frac{\left(\frac{x_0}{2}-1\right)^2}{y_0^2}=\frac{y_0^2+(x_0-2)^2}{4y_0^2}.
+|NF|^2=\frac{1}{4}+\frac{\left(\frac{x_0}{2}-1\right)^2}{y_0^2}=\frac{y_0^2+(x_0-2)^2}{4y_0^2}
 \]
 由 \(y_0^2=\frac{x_0^2-3}{3}\)，
 \[
-y_0^2+(x_0-2)^2=\frac{x_0^2-3}{3}+x_0^2-4x_0+4=\frac{(2x_0-3)^2}{3},
+y_0^2+(x_0-2)^2=\frac{x_0^2-3}{3}+x_0^2-4x_0+4=\frac{(2x_0-3)^2}{3}
 \]
 从而
 \[
-|NF|^2=\frac{(2x_0-3)^2}{4(x_0^2-3)}.
+|NF|^2=\frac{(2x_0-3)^2}{4(x_0^2-3)}
 \]
 由于 \(x_0^2\geqslant 3\)，且 \(2x_0-3=0\) 会导致 \(x_0^2<3\)，故上述分子不为零. 于是 \(\frac{|MF|^2}{|NF|^2}=\frac{4}{3}\)，从而 \(\frac{|MF|}{|NF|}=\frac{2}{\sqrt{3}}\). 所以该比值恒为 \(\frac{2}{\sqrt{3}}\).
 \end{enumerate}
@@ -521,7 +658,7 @@ y_0^2+(x_0-2)^2=\frac{x_0^2-3}{3}+x_0^2-4x_0+4=\frac{(2x_0-3)^2}{3},
 \end{center}
 所以
 \[
-E(\xi)=2\cdot\frac{1}{5}+3\cdot\frac{3}{10}+4\cdot\frac{3}{10}+5\cdot\frac{1}{5}=\frac{7}{2}.
+E(\xi)=2\cdot\frac{1}{5}+3\cdot\frac{3}{10}+4\cdot\frac{3}{10}+5\cdot\frac{1}{5}=\frac{7}{2}
 \]
 
 \item 先考虑 \(1\in A\)，\(2n\in B\) 的情形. 若 \(1\) 和 \(2n\) 在同一组，则该组的极差为 \(2n-1\)，另一组的极差小于 \(2n-1\)，不可能发生事件 \(C\). 因此事件 \(C\) 发生时，\(1\) 和 \(2n\) 必在不同组，且两种归属情形对称.
@@ -529,28 +666,28 @@ E(\xi)=2\cdot\frac{1}{5}+3\cdot\frac{3}{10}+4\cdot\frac{3}{10}+5\cdot\frac{1}{5}
 在 \(1\in A\)，\(2n\in B\) 时，令 \(p=a_2\)，\(q=b_1\). 条件 \(\xi=\eta\) 给出 \(p-1=2n-q\)，从而 \(q=2n+1-p\).
 若 \(p\leqslant q-2\)，则整数 \(p+1\) 至 \(q-1\) 既不能属于 \(A\) 组，也不能属于 \(B\) 组，矛盾，所以 \(p\geqslant n\). 当 \(p=n\) 时，唯一的分组为 \(A=\{1,2,\ldots,n\}\)，共有 \(1\) 种.
 
-当 \(p=n+1+j\)，其中 \(j=0,1,\ldots,n-2\) 时，\(q=n-j\). 小于 \(q\) 的数必须属于 \(A\)，大于 \(p\) 的数必须属于 \(B\)，并且 \(q\in B\)，\(p\in A\). 在 \(q+1\) 至 \(p-1\) 的 \(2j\) 个数中，恰需选出 \(j\) 个放入 \(A\)，所以有 \(\mathrm C_{2j}^{j}\) 种. 于是固定 \(1\in A\)，\(2n\in B\) 时的分组数为
+当 \(p=n+1+j\)，其中 \(j=0\)，\(1\)，\(\ldots\)，\(n-2\) 时，\(q=n-j\). 小于 \(q\) 的数必须属于 \(A\)，大于 \(p\) 的数必须属于 \(B\)，并且 \(q\in B\)，\(p\in A\). 在 \(q+1\) 至 \(p-1\) 的 \(2j\) 个数中，恰需选出 \(j\) 个放入 \(A\)，所以有 \(\mathrm C_{2j}^{j}\) 种. 于是固定 \(1\in A\)，\(2n\in B\) 时的分组数为
 \[
-T_n=1+\sum_{j=0}^{n-2}\mathrm C_{2j}^{j}.
+T_n=1+\sum_{j=0}^{n-2}\mathrm C_{2j}^{j}
 \]
 考虑 \(1\in B\)，\(2n\in A\) 的对称情形，事件 \(C\) 的分组数为 \(2T_n\). 因此
 \[
 P(C)=\frac{2T_n}{\mathrm C_{2n}^{n}}
-=\frac{2\left(1+\displaystyle\sum_{j=0}^{n-2}\mathrm C_{2j}^{j}\right)}{\mathrm C_{2n}^{n}}.
+=\frac{2\left(1+\displaystyle\sum_{j=0}^{n-2}\mathrm C_{2j}^{j}\right)}{\mathrm C_{2n}^{n}}
 \]
 
 \item 令
 \[
-D_n=\mathrm C_{2n}^{n}-4T_n.
+D_n=\mathrm C_{2n}^{n}-4T_n
 \]
 当 \(n=2\) 时，\(T_2=2\)，故
 \[
-P(C)=\frac{4}{6}=\frac{2}{3}>\frac{1}{3}=P(\overline C).
+P(C)=\frac{4}{6}=\frac{2}{3}>\frac{1}{3}=P(\overline C)
 \]
 当 \(n=3\) 时，\(T_3=4\)，从而 \(D_3=20-16=4>0\). 对 \(n\geqslant2\)，由 \(T_{n+1}=T_n+\mathrm C_{2n-2}^{n-1}\)，可得
 \[
 D_{n+1}-D_n=\mathrm C_{2n+2}^{n+1}-\mathrm C_{2n}^{n}-4\mathrm C_{2n-2}^{n-1}
-=\frac{2(4n+1)(n-1)}{n(n+1)}\mathrm C_{2n-2}^{n-1}>0.
+=\frac{2(4n+1)(n-1)}{n(n+1)}\mathrm C_{2n-2}^{n-1}>0
 \]
 所以对一切 \(n\geqslant3\)，都有 \(D_n>0\)，即 \(4T_n<\mathrm C_{2n}^{n}\). 结合上式中的概率公式，得到 \(P(C)<\frac{1}{2}\)，从而 \(P(\overline C)>P(C)\).
 \end{enumerate}

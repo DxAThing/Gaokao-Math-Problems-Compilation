@@ -25,19 +25,35 @@
 B
 \end{answer}
 
+\begin{solution}
+落在 \([31.5,43.5)\) 内的数据来自后三组，频数之和为 \(12+7+3=22\).因此所求概率约为
+\[
+\frac{22}{66}=\frac{1}{3}
+\]
+故选 B.
+\end{solution}
+
 \begin{problem}
 复数 \(-\i + \frac{1}{\i} =\)（\quad）
 
 \choices
     {\(-2\i\)}
     {\(\frac{1}{2}\i\)}
-    {0}
+    {\(0\)}
     {\(2\i\)}
 \end{problem}
 
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+因为 \(\i^2=-1\)，所以 \(\frac{1}{\i}=\frac{\i}{\i^2}=-\i\).于是
+\[
+-\i+\frac{1}{\i}=-\i-\i=-2\i
+\]
+故选 A.
+\end{solution}
 
 \begin{problem}
 \(l_{1}\)，\(l_{2}\)，\(l_{3}\) 是空间三条不同的直线，则下列命题正确的是（\quad）
@@ -53,13 +69,21 @@ A
 B
 \end{answer}
 
+\begin{solution}
+若两条直线平行，把其中一条直线平移到与另一条相交的位置，所成角不变.因此直线与其中一条直线垂直时，也与另一条平行直线垂直，故 B 正确.
+
+A 不正确，例如正方体同一顶点出发的三条棱可以两两垂直，但不必互相平行.C 不正确，三棱柱的三条侧棱互相平行，但不共面.D 不正确，三棱锥的三条侧棱共点，但不共面.
+
+故选 B.
+\end{solution}
+
 \begin{problem}
 如图，正六边形 \(ABCDEF\) 中，\(\overrightarrow{BA} + \overrightarrow{CD} + \overrightarrow{EF} =\)（\quad）
 
 \bitmapfigure[max width=0.30\linewidth]{img/2011/sichuan_science/q4_fig1.png}
 
 \choices
-    {0}
+    {\(0\)}
     {\(\overrightarrow{BE}\)}
     {\(\overrightarrow{AD}\)}
     {\(\overrightarrow{CF}\)}
@@ -69,8 +93,18 @@ B
 D
 \end{answer}
 
+\begin{solution}
+设正六边形的边长为 \(s\)，取水平方向为横轴.由图中各边的方向，
+\(\overrightarrow{BA}=(s,0)\)，\(\overrightarrow{CD}=\left(\frac{s}{2},\frac{\sqrt{3}s}{2}\right)\)，\(\overrightarrow{EF}=\left(\frac{s}{2},-\frac{\sqrt{3}s}{2}\right)\).
+所以
+\[
+\overrightarrow{BA}+\overrightarrow{CD}+\overrightarrow{EF}=(2s,0)
+\]
+而从 \(C\) 到 \(F\) 正好跨过两个水平边长的距离，故 \(\overrightarrow{CF}=(2s,0)\).因此原向量和为 \(\overrightarrow{CF}\)，选 D.
+\end{solution}
+
 \begin{problem}
-“函数 \(f(x)\) 在点 \(x = x_0\) 处有定义”是“\(f(x)\) 在点 \(x = x_0\) 处连续”的（\quad）
+“函数 \(f(x)\) 在点 \(x=x_0\) 处有定义”是“\(f(x)\) 在点 \(x=x_0\) 处连续”的（\quad）
 
 \choices
     {充分而不必要的条件}
@@ -82,6 +116,12 @@ D
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+函数在 \(x=x_0\) 处连续的定义包含两点：\(f(x_0)\) 有定义，且 \(\lim\limits_{x\to x_0}f(x)=f(x_0)\).所以连续必然推出有定义.
+
+反过来，仅有定义并不能保证连续.例如令 \(f(x)=0\)（\(x\neq x_0\)），而 \(f(x_0)=1\)，则函数在 \(x_0\) 处有定义，但不连续.因此“有定义”是“连续”的必要而不充分条件，选 B.
+\end{solution}
 
 \begin{problem}
 在 \(\triangle ABC\) 中，\(\sin^2 A \leqslant \sin^2 B + \sin^2 C - \sin B \sin C\)，则 \(A\) 的取值范围是（\quad）
@@ -97,6 +137,20 @@ B
 C
 \end{answer}
 
+\begin{solution}
+设三角形的外接圆半径为 \(R\)，边 \(a\)，\(b\)，\(c\) 分别对应角 \(A\)，\(B\)，\(C\).由正弦定理，
+\(\sin A=\frac{a}{2R}\)，\(\sin B=\frac{b}{2R}\)，\(\sin C=\frac{c}{2R}\).
+代入题设不等式并乘以正数 \(4R^2\)，得
+\[
+a^2\leqslant b^2+c^2-bc
+\]
+由余弦定理 \(a^2=b^2+c^2-2bc\cos A\)，于是
+\[
+b^2+c^2-2bc\cos A\leqslant b^2+c^2-bc
+\]
+因 \(b\)，\(c>0\)，可得 \(\cos A\geqslant\frac12\).又 \(0<A<\pi\)，所以 \(0<A\leqslant\frac{\pi}{3}\).故选 C.
+\end{solution}
+
 \begin{problem}
 已知 \( f(x) \) 是 \( \R \) 上的奇函数，且当 \( x > 0 \) 时，\( f(x) = \left(\frac{1}{2}\right)^x + 1 \)，则 \( f(x) \) 的反函数的图象大致是（\quad）
 
@@ -111,33 +165,69 @@ C
 A
 \end{answer}
 
+\begin{solution}
+当 \(x>0\) 时，\(f(x)=2^{-x}+1\)，其值域为 \((1,2)\)，且严格递减.反函数在 \(1<x<2\) 时为
+\[
+f^{-1}(x)=-\log_{2}(x-1)
+\]
+因而在第一象限内从上方递减到点 \((2,0)\) 附近.
+
+由于 \(f\) 是奇函数，反函数也关于原点中心对称，并且还经过原点.负半轴上的对应分支位于第三象限，形状与正半轴分支中心对称.四个图形中只有 A 符合这些性质，故选 A.
+\end{solution}
+
 \begin{problem}
 数列 \( \{a_{n}\} \) 的首项为 3，\( \{b_{n}\} \) 为等差数列且 \( b_{n}=a_{n+1}-a_{n} \)（\( n\in \N^{*} \)）. 若 \( b_{3}=-2 \)，\( b_{10}=12 \)，则 \( a_{8} =\)（\quad）
 
 \choices
-    {0}
-    {3}
-    {8}
-    {11}
+    {\(0\)}
+    {\(3\)}
+    {\(8\)}
+    {\(11\)}
 \end{problem}
 
 \begin{answer}
 B
 \end{answer}
 
+\begin{solution}
+设等差数列 \(\{b_n\}\) 的首项为 \(b_1\)，公差为 \(d\)，则
+\(b_1+2d=-2\)，\(b_1+9d=12\).
+相减得 \(7d=14\)，所以 \(d=2\)，再得 \(b_1=-6\).于是
+\[
+a_8=a_1+\sum_{k=1}^{7}b_k
+ =3+\frac{7(b_1+b_7)}{2}
+ =3+\frac{7(-6+6)}{2}=3
+\]
+故选 B.
+\end{solution}
+
 \begin{problem}
 某运输公司有 12 名驾驶员和 19 名工人，有 8 辆载重量为 10 吨的甲型卡车和 7 辆载重量为 6 吨的乙型卡车. 某天需运往 \(A\) 地至少 72 吨的货物，派用的每辆车需载满且只能送一次，派用的每辆甲型卡车需配 2 名工人，运送一次可得利润 450 元；派用的每辆乙型卡车需配 1 名工人，运送一次可得利润 350 元. 该公司合理计划当天派用甲，乙卡车的车辆数，可得最大利润 \(z =\)（\quad）
 
 \choices
-    {4650 元}
-    {4700 元}
-    {4900 元}
-    {5000 元}
+    {\(4650\text{ 元}\)}
+    {\(4700\text{ 元}\)}
+    {\(4900\text{ 元}\)}
+    {\(5000\text{ 元}\)}
 \end{problem}
 
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+设派用甲型卡车 \(x\) 辆，乙型卡车 \(y\) 辆，则
+\(0\leqslant x\leqslant8\)，\(0\leqslant y\leqslant7\)，\(x+y\leqslant12\)，\(2x+y\leqslant19\)，\(10x+6y\geqslant72\)
+且利润为 \(z=450x+350y\).利润系数均为正，所以对每个可行的整数 \(x\)，取允许的最大 \(y\).逐一计算可行的 \(x\) 得
+\begin{center}
+\begin{tabular}{c|cccccc}
+\(x\) & 3 & 4 & 5 & 6 & 7 & 8\\ \hline
+最大 \(y\) & 7 & 7 & 7 & 6 & 5 & 3\\
+\(z\) & 3800 & 4250 & 4700 & 4800 & 4900 & 4650
+\end{tabular}
+\end{center}
+其中 \(x=0\)，\(1\)，\(2\) 时无法达到 72 吨.因此最大利润为 \(4900\) 元，选 C.
+\end{solution}
 
 \begin{problem}
 在抛物线 \( y = x^{2} + ax - 5\) （\(a \neq 0\)）上取横坐标为 \(x_{1} = -4\)，\(x_{2} = 2\) 的两点，经过两点引一条割线，有平行于该割线的一条直线同时与抛物线和圆 \( 5x^{2} + 5y^{2} = 36 \) 相切，则抛物线顶点的坐标为（\quad）
@@ -153,19 +243,61 @@ C
 A
 \end{answer}
 
+\begin{solution}
+抛物线上两点的纵坐标分别为 \(11-4a\) 和 \(2a-1\)，所以割线斜率为
+\[
+\frac{(2a-1)-(11-4a)}{2-(-4)}=a-2
+\]
+抛物线的导数为 \(y'=2x+a\).与割线平行的抛物线切线满足
+\[
+2x+a=a-2
+\]
+故切点横坐标为 \(-1\)，切点为 \((-1,-a-4)\)，切线方程为
+\[
+y=(a-2)x-6
+\]
+即 \((a-2)x-y-6=0\).
+
+圆的圆心为原点，半径为 \(6/\sqrt5\).由直线与圆相切，
+\[
+\frac{6}{\sqrt{(a-2)^2+1}}=\frac{6}{\sqrt5}
+\]
+所以 \((a-2)^2=4\)，即 \(a=0\) 或 \(a=4\).因 \(a\neq0\)，得 \(a=4\).此时
+\[
+y=x^2+4x-5=(x+2)^2-9
+\]
+故顶点为 \((-2,-9)\)，选 A.
+\end{solution}
+
 \begin{problem}
-已知定义在 \( [0, +\infty) \) 上的函数 \( f(x) \) 满足 \( f(x) = 3f(x + 2) \)，当 \( x \in [0, 2) \) 时，\( f(x) = -x^{2} + 2x \). 设 \( f(x) \) 在 \( [2n - 2, 2n) \) 上的最大值为 \( a_{n} \) （\( n \in \mathbf{N}^{*} \)），且 \(\{a_{n}\}\) 的前 \(n\) 项和为 \(S_{n}\)，则 \(\lim\limits_{n\to\infty} S_{n} =\)（\quad）
+已知定义在 \( [0, +\infty) \) 上的函数 \( f(x) \) 满足 \( f(x) = 3f(x + 2) \)，当 \( x \in [0, 2) \) 时，\( f(x) = -x^{2} + 2x \). 设 \( f(x) \) 在 \( [2n - 2, 2n) \) 上的最大值为 \( a_{n} \) （\( n \in \N^{*} \)），且\(\{a_{n}\}\) 的前 \(n\) 项和为 \(S_{n}\)，则 \(\lim\limits_{n\to\infty} S_{n} =\)（\quad）
 
 \choices
-    {3}
+    {\(3\)}
     {\(\frac{5}{2}\)}
-    {2}
+    {\(2\)}
     {\(\frac{3}{2}\)}
 \end{problem}
 
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+由 \(f(x)=3f(x+2)\)，得 \(f(x+2)=\frac13f(x)\).在 \([0,2)\) 上，
+\[
+f(x)=-x^2+2x=1-(x-1)^2
+\]
+其最大值为 \(1\).因此在区间 \([2n-2,2n)\) 上，最大值为
+\[
+a_n=\frac{1}{3^{n-1}}
+\]
+所以
+\[
+S_n=\sum_{k=1}^{n}\frac{1}{3^{k-1}}=\frac{3}{2}\left(1-\frac{1}{3^n}\right)
+\]
+从而 \(\lim\limits_{n\to\infty}S_n=\frac32\)，选 D.
+\end{solution}
 
 \begin{problem}
 在集合 \(\{1, 2, 3, 4, 5\}\) 中任取一个偶数 \(a\) 和一个奇数 \(b\) 构成以原点为起点的向量 \(\alpha = (a,b)\). 从所有得到的以原点为起点的向量中任取两个向量作为邻边作平行四边形. 记所有作成的平行四边形的个数为 \(n\)，其中面积不超过 4 的平行四边形的个数为 \(m\)，则 \(\frac{m}{n}=\)（\quad）
@@ -181,6 +313,34 @@ D
 B
 \end{answer}
 
+\begin{solution}
+可得的向量共有 \(2\times3=6\) 个，因此任取两个向量作为邻边的总数为
+\[
+n=\mathrm C_6^2=15
+\]
+两向量 \((a_1,b_1)\)、\((a_2,b_2)\) 所成平行四边形的面积为
+\[
+\left|a_1b_2-a_2b_1\right|
+\]
+记这 6 个向量依次为 \(v_1=(2,1)\)、\(v_2=(2,3)\)、\(v_3=(2,5)\)、\(v_4=(4,1)\)、\(v_5=(4,3)\)、\(v_6=(4,5)\).各对向量所成平行四边形的面积为 \(\left|\det(v_i,v_j)\right|\)，计算得
+\begin{center}
+\begin{tabular}{c|ccccc}
+ & \(v_2\) & \(v_3\) & \(v_4\) & \(v_5\) & \(v_6\)\\ \hline
+\(v_1\) & 4 & 8 & 2 & 2 & 6\\
+\(v_2\) &  & 4 & 10 & 6 & 2\\
+\(v_3\) &  &  & 18 & 14 & 10\\
+\(v_4\) &  &  &  & 8 & 16\\
+\(v_5\) &  &  &  &  & 8
+\end{tabular}
+\end{center}
+
+其中不超过 4 的面积共有 \(m=5\) 个，故
+\[
+\frac{m}{n}=\frac{5}{15}=\frac13
+\]
+选 B.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -191,6 +351,12 @@ B
 \(-20\)
 \end{answer}
 
+\begin{solution}
+由对数运算，
+\(\lg\frac14-\lg25=\lg\frac{1}{100}=-2\)，\(100^{-\frac12}=\frac{1}{10}\).
+所以原式为 \((-2)\div\frac{1}{10}=-20\).
+\end{solution}
+
 \begin{problem}
 双曲线 \(\frac{x^2}{64} - \frac{y^2}{36} = 1\) 上一点 \(P\) 到双曲线右焦点的距离是 4，那么点 \(P\) 到左准线的距离是\fillinblank{}.
 \end{problem}
@@ -198,6 +364,23 @@ B
 \begin{answer}
 16
 \end{answer}
+
+\begin{solution}
+双曲线的半实轴为 \(a=8\)，半虚轴为 \(b=6\)，焦距参数满足 \(c=\sqrt{a^2+b^2}=10\)，所以离心率为 \(e=\frac54\).右准线为 \(x=\frac{a}{e}=\frac{32}{5}\)，左准线为 \(x=-\frac{32}{5}\).
+
+点 \(P\) 在右支上，因为左支上的点到右焦点的距离不可能为 4.由双曲线的焦点准线定义，
+\[
+PF_{\text{右}}=e\,d(P,\text{右准线})
+\]
+故
+\[
+d(P,\text{右准线})=\frac{4}{5/4}=\frac{16}{5}
+\]
+于是 \(x_P-\frac{32}{5}=\frac{16}{5}\)，即 \(x_P=\frac{48}{5}\).因此
+\[
+d(P,\text{左准线})=x_P+\frac{32}{5}=\frac{80}{5}=16
+\]
+\end{solution}
 
 \begin{problem}
 如图，半径为 \(R\) 的球 \(O\) 中有一内接圆柱. 当圆柱的侧面积最大时，球的表面积与该圆柱的侧面积之差是\fillinblank{}.
@@ -208,6 +391,24 @@ B
 \begin{answer}
 \(2\pi R^2\)
 \end{answer}
+
+\begin{solution}
+设内接圆柱的底面半径为 \(r\)，高为 \(h\).由轴截面为内接矩形，
+\(\left(\frac h2\right)^2+r^2=R^2\)，\(h=2\sqrt{R^2-r^2}\).
+圆柱侧面积为
+\[
+S=2\pi rh=4\pi r\sqrt{R^2-r^2}
+\]
+要使 \(S\) 最大，只需使 \(r^2(R^2-r^2)\) 最大.令 \(u=r^2\)，则
+\[
+u(R^2-u)\leqslant\left(\frac{R^2}{2}\right)^2
+\]
+等号在 \(r^2=R^2/2\) 时成立.因此圆柱侧面积最大值为
+\[
+S_{\max}=4\pi\cdot\frac{R}{\sqrt2}\cdot\frac{R}{\sqrt2}=2\pi R^2
+\]
+球的表面积为 \(4\pi R^2\)，所求差为 \(2\pi R^2\).
+\end{solution}
 
 \begin{problem}
 函数 \( f(x) \) 的定义域为 \(A\). 若 \(x_{1}\)，\(x_{2} \in A\) 且 \( f(x_{1}) = f(x_{2}) \) 时总有 \( x_{1} = x_{2} \)，则称 \( f(x) \) 为单函数. 例如，函数 \( f(x) = 2x + 1\) （\(x \in \R\)） 是单函数. 下列命题：
@@ -224,20 +425,43 @@ B
 \(\circled{2}\)，\(\circled{3}\)
 \end{answer}
 
+\begin{solution}
+命题 1 错误，因为 \(f(1)=f(-1)=1\)，但 \(1\neq-1\).
+
+命题 2 正是单函数定义的逆否命题，所以正确.命题 3 中，若某个 \(b\) 有两个不同原象，则由单函数定义这两个原象必须相等，矛盾，所以至多有一个原象，正确.
+
+命题 4 错误，因为只在某个区间上具有单调性不能保证在整个定义域上是单函数.例如 \(f(x)=x^2\) 在 \([0,+\infty)\) 上单调递增，但在整个 \(\R\) 上有 \(f(1)=f(-1)\)，所以不是单函数.因此真命题为第 2、3 项.
+\end{solution}
+
 \section{解答题}
 
 \begin{problem}
 已知函数 \(f(x) = \sin \left( x + \frac{7\pi}{4} \right) + \cos \left( x - \frac{3\pi}{4} \right)\)，\(x \in \R\).
 \begin{enumerate}
 \item 求 \( f(x) \) 的最小正周期和最小值；
-\item 已知 \(\cos(\beta-\alpha)=\frac{4}{5}\)，\(\cos(\beta+\alpha)=-\frac{4}{5}\)，\(0 < \alpha < \beta \leqslant \frac{\pi}{2}\)，求证： \(\left[f(\beta)\right]^2 - 2 = 0.\)
+\item 已知 \(\cos(\beta-\alpha)=\frac{4}{5}\)，\(\cos(\beta+\alpha)=-\frac{4}{5}\)，\(0 < \alpha < \beta \leqslant \frac{\pi}{2}\)，求证： \(\left[f(\beta)\right]^2 - 2 = 0\).
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：最小正周期为 \(2\pi\)，最小值为 \(-2\).
-\item 短答案：\(\beta=\frac{\pi}{2}\)，且 \(\left[f(\beta)\right]^2-2=0\).
+\item 由诱导公式，
+\(\sin\left(x+\frac{7\pi}{4}\right)=\sin\left(x-\frac{\pi}{4}\right)\)，\(\cos\left(x-\frac{3\pi}{4}\right)=\sin\left(x-\frac{\pi}{4}\right)\).
+因此
+\[
+f(x)=2\sin\left(x-\frac{\pi}{4}\right)
+\]
+故其最小正周期为 \(2\pi\)，最小值为 \(-2\).
+
+\item 两个已知式相加，得
+\[
+2\cos\beta\cos\alpha=\cos(\beta-\alpha)+\cos(\beta+\alpha)=0
+\]
+因 \(0<\alpha\leqslant\beta\leqslant\frac\pi2\)，有 \(\cos\alpha>0\)，所以 \(\cos\beta=0\)，从而 \(\beta=\frac\pi2\).于是
+\[
+f(\beta)=2\sin\left(\frac\pi2-\frac\pi4\right)=\sqrt2
+\]
+故 \(\left[f(\beta)\right]^2-2=2-2=0\).
 \end{enumerate}
 \end{solution}
 
@@ -250,23 +474,43 @@ B
 \end{problem}
 
 \begin{solution}
+记租车费用为 \(0\)、\(2\)、\(4\) 元，分别对应租车时间不超过两小时、超过两小时且不超过三小时、超过三小时且不超过四小时.由已知概率，甲的费用分布为
+\(P(X=0)=\frac14\)，\(P(X=2)=\frac12\)，\(P(X=4)=1-\frac14-\frac12=\frac14\)
+乙的费用分布为
+\(P(Y=0)=\frac12\)，\(P(Y=2)=\frac14\)，\(P(Y=4)=1-\frac12-\frac14=\frac14\).
+甲、乙相互独立.
+
 \begin{enumerate}
-\item 短答案：两人所付租车费用相同的概率为 \(\frac{5}{16}\).
-\item 短答案：\(\xi\) 的分布列为
+\item 两人费用相同包括两人都为 0 元、都为 2 元、都为 4 元三种互斥情形，所以
+\[
+P(X=Y)=\frac14\cdot\frac12+\frac12\cdot\frac14+\frac14\cdot\frac14=\frac5{16}
+\]
+
+\item 令 \(\xi=X+Y\)，则其分布列为
 \begin{center}
 \begin{tabular}{c|ccccc}
-\(\xi\)&\(0\)&\(2\)&\(4\)&\(6\)&\(8\)\\ \hline
-\(P\)&\(\frac18\)&\(\frac{5}{16}\)&\(\frac{5}{16}\)&\(\frac{3}{16}\)&\(\frac{1}{16}\)
+\(\xi\) & 0 & 2 & 4 & 6 & 8\\ \hline
+\(P\) & \(\frac18\) & \(\frac5{16}\) & \(\frac5{16}\) & \(\frac3{16}\) & \(\frac1{16}\)
 \end{tabular}
 \end{center}
-数学期望为 \(E(\xi)=3\).
+其中
+\(P(\xi=0)=\frac14\cdot\frac12=\frac18\)，\(P(\xi=2)=\frac14\cdot\frac14+\frac12\cdot\frac12=\frac5{16}\).
+此外，
+\[
+P(\xi=4)=\frac14\cdot\frac14+\frac12\cdot\frac14+\frac14\cdot\frac12=\frac5{16}
+\]
+\(P(\xi=6)=\frac12\cdot\frac14+\frac14\cdot\frac14=\frac3{16}\)，\(P(\xi=8)=\frac14\cdot\frac14=\frac1{16}\).
+所以
+\[
+E(\xi)=0\cdot\frac18+2\cdot\frac5{16}+4\cdot\frac5{16}+6\cdot\frac3{16}+8\cdot\frac1{16}=\frac72
+\]
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
 如图，在直三棱柱 \(ABC - A_{1}B_{1}C_{1}\) 中，\(\angle BAC = 90^{\circ}\)，\(AB = AC = AA_{1} = 1\). \(D\) 是棱 \(CC_{1}\) 上的一点，\(P\) 是 \(AD\) 的延长线与 \(A_{1}C_{1}\) 的延长线的交点，且 \(PB_{1} \parallel\) 平面 \(BDA_{1}\).
 \begin{enumerate}
-\item 求证： \(CD = C_{1}D\)；
+\item 求证：\(CD = C_{1}D\)；
 \item 求二面角 \(A - A_{1}D - B\) 的平面角的余弦值；
 \item 求点 \(C\) 到平面 \(B_{1}DP\) 的距离.
 \end{enumerate}
@@ -275,25 +519,92 @@ B
 \end{problem}
 
 \begin{solution}
+建立空间直角坐标系，令 \(A_{1}\) 为原点，\(A_{1}B_{1}\)、\(A_{1}C_{1}\)、\(A_{1}A\) 分别为 \(x\)、\(y\)、\(z\) 轴，则
+\(A_{1}(0,0,0)\)，\(\ B_{1}(1,0,0)\)，\(\ C_{1}(0,1,0)\)，\(\ A(0,0,1)\)，\(\ B(1,0,1)\)，\(\ C(0,1,1)\).
+设 \(C_{1}D=t\)，其中 \(0\leqslant t\leqslant1\).因题设中的交点 \(P\) 为有限点，\(t\ne1\)，故 \(D=(0,1,t)\)，且直线 \(AD\) 与 \(z=0\) 的交点为
+\[
+P=\left(0,\frac{1}{1-t},0\right)
+\]
+
+平面 \(BDA_{1}\) 的两个方向向量可取 \(\overrightarrow{A_{1}B}=(1,0,1)\) 和 \(\overrightarrow{A_{1}D}=(0,1,t)\)，其法向量可取
+\[
+\bs{n}=(-1,-t,1)
+\]
 \begin{enumerate}
-\item 短答案：\(CD=C_{1}D\).
-\item 短答案：二面角 \(A-A_{1}D-B\) 的平面角余弦值为 \(\frac{2}{3}\).
-\item 短答案：点 \(C\) 到平面 \(B_{1}DP\) 的距离为 \(\frac{1}{3}\).
+\item 又 \(\overrightarrow{PB_{1}}=\left(1,-\frac{1}{1-t},0\right)\).由 \(PB_{1}\parallel\) 平面 \(BDA_{1}\)，直线方向向量与平面法向量垂直，所以
+\[
+\overrightarrow{PB_{1}}\cdot\bs{n}=-1+\frac{t}{1-t}=0
+\]
+解得 \(t=\frac12\)，于是
+\[
+CD=1-t=\frac12=C_{1}D
+\]
+
+\item 此时 \(D=(0,1,\frac12)\).平面 \(AA_{1}D\) 的法向量可取 \(\bs{n}_{1}=(1,0,0)\)，平面 \(BA_{1}D\) 的法向量可取
+\[
+\bs{n}_{2}=(-1,-\tfrac12,1)
+\]
+因此二面角的平面角余弦的绝对值为
+\[
+\frac{|\bs{n}_{1}\cdot\bs{n}_{2}|}{|\bs{n}_{1}||\bs{n}_{2}|}
+ =\frac{1}{\sqrt{1+\frac14+1}}=\frac23
+\]
+
+\item 此时 \(P=(0,2,0)\).平面 \(B_{1}DP\) 的两个方向向量可取
+\(\overrightarrow{B_{1}D}=\left(-1,1,\frac12\right)\)，\(\overrightarrow{B_{1}P}=(-1,2,0)\).
+其法向量可取 \((2,1,2)\)，故平面方程为
+\[
+2x+y+2z-2=0
+\]
+代入 \(C(0,1,1)\)，点到平面的距离为
+\[
+\frac{|2\cdot0+1+2\cdot1-2|}{\sqrt{2^2+1^2+2^2}}=\frac13
+\]
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-设 \(d\) 为非零实数，\(a_{n} = \frac{1}{n}\left[\mathrm{C}_{n}^{1}d + 2\mathrm{C}_{n}^{2}d^{2} + \dots + (n - 1)\mathrm{C}_{n}^{n - 1}d^{n - 1} + n\mathrm{C}_{n}^{n}d^{n}\right]\) （\(n\in \mathbf{N}^{*}\)）.
+设 \(d\) 为非零实数，\(a_{n} = \frac{1}{n}\left[\mathrm C_n^1d + 2\mathrm C_n^2d^{2} + \dots + (n - 1)\mathrm C_n^{n - 1}d^{n - 1} + n\mathrm C_n^nd^{n}\right]\) （\(n\in \N^{*}\)）.
 \begin{enumerate}
 \item 写出 \(a_1\)，\(a_2\)，\(a_3\) 并判断 \(\{a_n\}\) 是否为等比数列. 若是，给出证明；若不是，说明理由；
-\item 设 \( b_n = nda_n \) （\( n \in \mathbf{N}^* \)），求数列 \( \{b_n\} \) 的前 \( n \) 项和 \( S_n \).
+\item 设 \( b_n = nda_n \) （\( n \in \N^{*} \)），求数列 \( \{b_n\} \) 的前 \( n \) 项和 \( S_n \).
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
+由恒等式 \(k\mathrm C_n^k=n\mathrm C_{n-1}^{k-1}\)，有
+\[
+a_n=\sum_{k=1}^{n}\mathrm C_{n-1}^{k-1}d^k
+ =d\sum_{k=1}^{n}\mathrm C_{n-1}^{k-1}d^{k-1}
+ =d(1+d)^{n-1}
+\]
 \begin{enumerate}
-\item 短答案：\(a_{1}=d\)，\(a_{2}=d(d+1)\)，\(a_{3}=d(d+1)^2\). 当 \(d\neq-1\) 时，\(\{a_n\}\) 是首项为 \(d\)、公比为 \(d+1\) 的等比数列；当 \(d=-1\) 时不是等比数列.
-\item 短答案：当 \(d=-1\) 时，\(S_n=1\)；当 \(d\neq-1\) 时，\(S_n=(d+1)^n(nd-1)+1\).
+\item 因而
+\(a_1=d\)，\(a_2=d(d+1)\)，\(a_3=d(d+1)^2\).
+当 \(d\neq-1\) 时，所有相邻项非零且
+\[
+\frac{a_{n+1}}{a_n}=d+1
+\]
+所以 \(\{a_n\}\) 是首项为 \(d\)、公比为 \(d+1\) 的等比数列.
+
+当 \(d=-1\) 时，\(a_1=-1\)，而 \(a_n=0\)（\(n\geqslant2\)），此时 \(a_3/a_2\) 无意义，不满足等比数列中相邻项之比为同一常数的定义，故不是等比数列.
+
+\item 因 \(b_n=nd a_n\)，所以
+\[
+b_n=nd^2(d+1)^{n-1}
+\]
+当 \(d=-1\) 时，\(b_1=1\)，其余各项为 0，故 \(S_n=1\).
+
+当 \(d\neq-1\) 时，令 \(r=d+1\)，利用
+\[
+\sum_{k=1}^{n}kr^{k-1}=\frac{1-(n+1)r^n+nr^{n+1}}{(1-r)^2}
+\]
+及 \(1-r=-d\)，得
+\[
+S_n=d^2\sum_{k=1}^{n}k(d+1)^{k-1}
+ =1-(n+1)(d+1)^n+n(d+1)^{n+1}
+ =(d+1)^n(nd-1)+1
+\]
 \end{enumerate}
 \end{solution}
 
@@ -301,16 +612,57 @@ B
 椭圆有两顶点 \(A(-1,0)\)，\(B(1,0)\)，过其焦点 \(F(0,1)\) 的直线 \(l\) 与椭圆交于 \(C\)，\(D\) 两点，并与 \(x\) 轴交于点 \(P\). 直线 \(AC\) 与直线 \(BD\) 交于点 \(Q\).
 \begin{enumerate}
 \item 当 \(|CD| = \frac{3}{2}\sqrt{2}\) 时，求直线 \(l\) 的方程.
-\item 当点 \(P\) 异于 \(A\)，\(B\) 两点时，求证： \(\overrightarrow{OP} \cdot \overrightarrow{OQ}\) 为定值.
+\item 当点 \(P\) 异于 \(A\)，\(B\) 两点时，求证：\(\overrightarrow{OP} \cdot \overrightarrow{OQ}\) 为定值.
 \end{enumerate}
 
 \bitmapfigure[max width=0.42\linewidth]{img/2011/sichuan_science/q21_fig1.png}
 \end{problem}
 
 \begin{solution}
+因焦点在 \(y\) 轴上，椭圆可写为
+\[
+2x^2+y^2=2
+\]
+其中半短轴为 1，焦距参数为 1，所以半长轴为 \(\sqrt2\).
+
 \begin{enumerate}
-\item 短答案：直线 \(l\) 的方程为 \(y=\sqrt{2}x+1\) 或 \(y=-\sqrt{2}x+1\).
-\item 短答案：\(\overrightarrow{OP}\cdot\overrightarrow{OQ}=1\).
+\item 直线 \(l\) 不可能为竖直线，否则弦长为 \(2\sqrt2\)，不符合题设.设 \(l:y=kx+1\)，交点 \(C\)，\(D\) 的横坐标为 \(x_1\)，\(x_2\).代入椭圆方程得
+\[
+ (k^2+2)x^2+2kx-1=0
+\]
+所以
+\[
+\left|x_1-x_2\right|=\frac{2\sqrt{2(k^2+1)}}{k^2+2}
+\]
+由于 \(C\)，\(D\) 在直线 \(l\) 上，
+\[
+|CD|=\sqrt{1+k^2}|x_1-x_2|=\frac{2\sqrt2(k^2+1)}{k^2+2}
+\]
+令其等于 \(\frac32\sqrt2\)，得
+\(\frac{2(k^2+1)}{k^2+2}=\frac32\)，\(k^2=2\).
+因此 \(l\) 的方程为 \(y=\sqrt2x+1\) 或 \(y=-\sqrt2x+1\).
+
+\item 设 \(l:y=kx+1\).因 \(P\) 为其与 \(x\) 轴的交点，\(P=(-1/k,0)\).这里 \(k\neq0\)，且 \(P\neq A\)，\(B\) 给出 \(k\neq1\)，\(-1\).竖直线会使 \(AC\parallel BD\)，不能产生题设中的交点 \(Q\)，故不需另行讨论.
+
+设 \(C=(x_1,y_1)\)，\(D=(x_2,y_2)\)，则
+\(y_i=kx_i+1\)，\(x_1+x_2=-\frac{2k}{k^2+2}\)，\(x_1x_2=-\frac{1}{k^2+2}\).
+令
+\(u=\frac{y_1}{x_1+1}\)，\(v=\frac{y_2}{x_2-1}\)
+则直线 \(AC\)、\(BD\) 分别为 \(y=u(x+1)\)、\(y=v(x-1)\).将 \(u\)，\(v\) 通分，并代入根的和与积，得
+\[
+(1-k)u+(1+k)v
+=\frac{2kx_1x_2+(1+k^2)(x_1+x_2)+2k}{(x_1+1)(x_2-1)}=0
+\]
+两直线联立，交点横坐标满足
+\[
+x_Q=-\frac{u+v}{u-v}=-k
+\]
+于是
+\[
+\overrightarrow{OP}\cdot\overrightarrow{OQ}
+ =\left(-\frac1k,0\right)\cdot(-k,y_Q)=1
+\]
+所以该数量为定值 1.
 \end{enumerate}
 \end{solution}
 
@@ -325,8 +677,69 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(F(x)\) 在 \(\left(0,\frac{9}{16}\right)\) 上单调递减，在 \(\left(\frac{9}{16},+\infty\right)\) 上单调递增，极小值为 \(\frac{1}{8}\).
-\item 短答案：当 \(1<a\leqslant4\) 时，\(x=3-\sqrt{5-a}\)；当 \(4<a<5\) 时，\(x=3\pm\sqrt{5-a}\)；当 \(a=5\) 时，\(x=3\)；当 \(a\leqslant1\) 或 \(a>5\) 时，无解.
-\item 短答案：\(f(100)h(100)-\displaystyle\sum_{k=1}^{100}h(k)>\frac{1}{6}\).
+\item 函数定义域为 \([0,+\infty)\).当 \(x>0\) 时，
+\[
+F'(x)=\frac23-\frac{1}{2\sqrt{x}}
+\]
+由 \(F'(x)=0\) 得 \(\sqrt{x}=\frac34\)，即 \(x=\frac9{16}\).故 \(F'(x)<0\) 于 \(\left(0,\frac9{16}\right)\)，\(F'(x)>0\) 于 \(\left(\frac9{16},+\infty\right)\).结合 \(F\) 在 \(x=0\) 处连续，所以 \(F\) 在 \(\left[0,\frac9{16}\right]\) 上单调递减，在 \(\left[\frac9{16},+\infty\right)\) 上单调递增，并在 \(x=\frac9{16}\) 处取得最小值
+\[
+F\left(\frac9{16}\right)=\frac23\cdot\frac9{16}+\frac12-\sqrt{\frac9{16}}=\frac18
+\]
+又因 \(F(x)\to+\infty\)（\(x\to+\infty\)），所以 \(F\) 无最大值.
+
+\item 先确定定义域.左边真数为
+\[
+\frac32f(x-1)-\frac34=x-1
+\]
+故必须有 \(x>1\).右边两项对数要求 \(a-x>0\) 且 \(4-x>0\).在此条件下，原方程化为
+\[
+\frac12\log_2(x-1)=\frac12\log_2\frac{a-x}{4-x}
+\]
+即
+\[
+(x-1)(4-x)=a-x
+\]
+整理得 \(x^2-6x+a+4=0\)，所以
+\[
+x=3\pm\sqrt{5-a}
+\]
+再结合定义域筛选：当 \(a\leqslant1\) 或 \(a>5\) 时无解；当 \(1<a\leqslant4\) 时只有
+\[
+x=3-\sqrt{5-a};
+\]
+当 \(4<a<5\) 时两个根都满足定义域，故
+\[
+x=3\pm\sqrt{5-a};
+\]
+当 \(a=5\) 时两根重合，解为 \(x=3\).
+
+\item 记
+\(S=\sum_{k=1}^{100}\sqrt{k}\)，\(T=\sum_{k=1}^{100}\frac{\sqrt{k-1}+\sqrt{k}}{2}=S-5\).
+对任意 \(k\geqslant1\)，令 \(u=\sqrt{k}\)，\(v=\sqrt{k-1}\)，由于 \(u^2-v^2=1\)，有 \(u-v=\frac{1}{u+v}\)，从而
+\[
+4(u^3-v^3)-3(u+v)=4(u-v)(u^2+uv+v^2)-3(u+v)
+\]
+令 \(s=u+v\)，\(q=u-v\)，则 \(q=\frac{1}{s}\)，且 \(u^2+uv+v^2=\frac{3s^2+q^2}{4}\).因此
+\[
+4(u^3-v^3)-3(u+v)=q(3s^2+q^2)-3s=q^3=\frac{1}{(u+v)^3}>0
+\]
+从而
+\[
+\frac{\sqrt{k-1}+\sqrt{k}}2<\frac23\left(k^{3/2}-(k-1)^{3/2}\right)
+\]
+单独取 \(k=1\)，并对 \(k=2\)，\(\ldots\)，\(100\) 使用上式，得
+\[
+T<\frac12+\frac23\sum_{k=2}^{100}\left(k^{3/2}-(k-1)^{3/2}\right)
+ =\frac12+\frac23(1000-1)=\frac{1333}{2}
+\]
+所以 \(S<\frac{1343}{2}\).又
+\[
+f(100)h(100)=\left(\frac{200}{3}+\frac12\right)10=\frac{2015}{3}
+\]
+于是
+\[
+f(100)h(100)-S>\frac{2015}{3}-\frac{1343}{2}=\frac16
+\]
+故该式大于 \(\frac16\).
 \end{enumerate}
 \end{solution}

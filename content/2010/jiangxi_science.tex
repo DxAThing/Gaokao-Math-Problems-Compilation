@@ -16,6 +16,14 @@
 D
 \end{answer}
 
+\begin{solution}
+展开得
+\[
+(x+\i)(1-\i)=x+1+(1-x)\i
+\]
+右端 \(y\) 为实数，所以虚部必须为零，即 \(1-x=0\)，从而 \(x=1\). 此时 \(y=x+1=2\)，故选 D.
+\end{solution}
+
 \begin{problem}
 已知集合 \(A = \{x \mid |x| \leqslant 1, x \in \R\}\)，\(B = \{y \mid y = x^2, x \in \R\}\)，则 \(A \cap B =\)（\quad）
 
@@ -29,6 +37,14 @@ D
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+由 \(|x|\leqslant1\) 得 \(A=[-1,1]\). 由于 \(B\) 中的元素都是实数平方，且任意非负数都可表示为实数的平方，所以 \(B=[0,+\infty)\). 因此
+\[
+A\cap B=[-1,1]\cap[0,+\infty)=[0,1]
+\]
+故选 C.
+\end{solution}
 
 \begin{problem}
 不等式 \(\left|\frac{x - 2}{x}\right| > \frac{x - 2}{x}\) 的解集是（\quad）
@@ -44,6 +60,14 @@ C
 A
 \end{answer}
 
+\begin{solution}
+先取定义域 \(x\neq0\). 对任意实数 \(u\)，\(|u|>u\) 当且仅当 \(u<0\)，所以原不等式等价于
+\[
+\frac{x-2}{x}<0
+\]
+分子、分母异号时成立，临界点为 \(0\) 和 \(2\)，故解集为 \((0,2)\)，选 A.
+\end{solution}
+
 \begin{problem}
 \(\displaystyle \lim\limits_{n\to\infty}\left(1 + \frac{1}{3} + \frac{1}{3^2} + \cdots + \frac{1}{3^n}\right) =\)（\quad）
 
@@ -57,6 +81,16 @@ A
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+括号内是首项为 \(1\)、公比为 \(\frac13\) 的等比数列前 \(n+1\) 项和，因此
+\[
+1+\frac13+\cdots+\frac1{3^n}
+=\frac{1-\left(\frac13\right)^{n+1}}{1-\frac13}
+=\frac32\left(1-\frac1{3^{n+1}}\right)
+\]
+令 \(n\to\infty\)，得极限为 \(\frac32\)，故选 B.
+\end{solution}
 
 \begin{problem}
 等比数列 \(\{a_n\}\) 中，\(a_1 = 2\)，\(a_8 = 4\)，函数 \(f(x) = x(x-a_1)(x-a_2)\cdots(x-a_8)\)，则 \(f'(0) =\)（\quad）
@@ -72,6 +106,21 @@ B
 C
 \end{answer}
 
+\begin{solution}
+将 \(f(x)\) 展开时，含有因子 \(x\) 的其他各项次数都至少为 \(2\)，所以 \(f'(0)\) 只由一次项决定，即
+\[
+f'(0)=(-a_1)(-a_2)\cdots(-a_8)=a_1a_2\cdots a_8
+\]
+设公比为 \(q\)，则 \(2q^7=4\)，从而 \(q^7=2\). 因此
+\[
+a_1a_2\cdots a_8
+=2^8q^{0+1+\cdots+7}
+=2^8(q^7)^4
+=2^8\cdot2^4=2^{12}
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
 在 \((2-\sqrt{x})^8\) 展开式中不含 \(x^4\) 项的系数的和为（\quad）
 
@@ -85,6 +134,16 @@ C
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+二项展开式的第 \(k+1\) 项为
+\(\mathrm C_8^k2^{8-k}(-1)^k x^{k/2}\)，\(k=0\)，\(1\)，\(\ldots\)，\(8\).
+当 \(k=8\) 时幂为 \(x^4\)，其系数为 \(1\). 令 \(x=1\)，所有项的系数和为
+\[
+(2-1)^8=1
+\]
+所以不含 \(x^4\) 项的其余各项系数和为 \(1-1=0\)，故选 B.
+\end{solution}
 
 \begin{problem}
 \(E\)，\(F\) 是等腰直角 \(\triangle ABC\) 斜边 \(AB\) 上的三等分点，则 \(\tan \angle ECF =\)（\quad）
@@ -100,6 +159,24 @@ B
 D
 \end{answer}
 
+\begin{solution}
+不妨令 \(AB=6\)，建立直角坐标系，使
+\(A=(-3,0)\)，\(B=(3,0)\)，\(C=(0,3)\).
+则三等分点可取 \(E=(-1,0)\)，\(F=(1,0)\). 于是
+\(\overrightarrow{CE}=(-1,-3)\)，\(\overrightarrow{CF}=(1,-3)\).
+设 \(\theta=\angle ECF\)，则
+\[
+\cos\theta
+=\frac{\overrightarrow{CE}\cdot\overrightarrow{CF}}{|\overrightarrow{CE}|\,|\overrightarrow{CF}|}
+=\frac{-1+9}{\sqrt{10}\sqrt{10}}=\frac45
+\]
+因为 \(\theta\) 为锐角，\(\sin\theta=\frac35\)，所以
+\[
+\tan\theta=\frac{\sin\theta}{\cos\theta}=\frac34
+\]
+故选 D.
+\end{solution}
+
 \begin{problem}
 直线 \(y = kx + 3\) 与圆 \((x - 3)^2 + (y - 2)^2 = 4\) 相交于 \(M\)，\(N\) 两点，若 \(|MN| \geqslant 2\sqrt{3}\)，则 \(k\) 的取值范围是（\quad）
 
@@ -113,6 +190,24 @@ D
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+圆心为 \(C=(3,2)\)，半径为 \(2\). 直线写成 \(kx-y+3=0\)，圆心到直线的距离为
+\[
+d=\frac{|3k-2+3|}{\sqrt{k^2+1}}=\frac{|3k+1|}{\sqrt{k^2+1}}
+\]
+由弦长公式
+\[
+|MN|=2\sqrt{4-d^2}
+\]
+条件 \(|MN|\geqslant2\sqrt3\) 等价于 \(d^2\leqslant1\)，即
+\[
+\frac{(3k+1)^2}{k^2+1}\leqslant1
+\Longleftrightarrow 8k^2+6k\leqslant0
+\Longleftrightarrow k(4k+3)\leqslant0
+\]
+因此 \(k\in\left[-\frac34,0\right]\)，故选 A.
+\end{solution}
 
 \begin{problem}
 给出下列三个命题：
@@ -138,6 +233,22 @@ A
 C
 \end{answer}
 
+\begin{solution}
+对命题 1，恒等式
+\[
+\frac{1-\cos x}{1+\cos x}=\tan^2\frac{x}{2}
+\]
+只在两边有意义时使用. 左式的定义域要求 \(\cos x\neq\pm1\)，而右式还要求 \(\tan\frac{x}{2}>0\)，两者定义域不同，所以命题 1 错误.
+
+对命题 2，设 \((u,v)\) 在 \(y=f(x)\) 的图象上. 由两图象关于 \(y=x\) 对称，\((v,u)\) 在 \(y=g(x)\) 的图象上，即 \(u=g(v)\). 令 \(u=2x\)，则 \(f(2x)=v\) 等价于 \(2x=g(v)\)，也就是 \(x=\frac12g(v)\). 因而 \(y=f(2x)\) 与 \(y=\frac12g(x)\) 的图象关于 \(y=x\) 对称，命题 2 正确.
+
+对命题 3，由题设和奇函数性质，对定义域内的相应 \(x\) 有
+\[
+f(x+2)=f\bigl(2-(x+2)\bigr)=f(-x)=-f(x)
+\]
+再代入 \(x+2\)，得 \(f(x+4)=-f(x+2)=f(x)\)，所以 \(4\) 是其一个周期，命题 3 正确. 因此真命题为 2，3，选 C.
+\end{solution}
+
 \begin{problem}
 过正方体 \(ABCD - A_1B_1C_1D_1\) 的顶点 \(A\) 作直线 \(l\)，使 \(l\) 与棱 \(AB\)，\(AD\)，\(AA_1\) 所成的角都相等，这样的直线 \(l\) 可以作（\quad）
 
@@ -154,6 +265,14 @@ C
 D
 \end{answer}
 
+\begin{solution}
+以 \(A\) 为原点，沿 \(AB\)，\(AD\)，\(AA_1\) 建立三个互相垂直的坐标轴. 设直线 \(l\) 的一个方向向量为 \((u,v,w)\). 直线与三条棱所成的角相等，且直线的夹角取锐角，故
+\[
+|u|=|v|=|w|
+\]
+所以方向比只能是 \((\pm1,\pm1,\pm1)\). 方向向量相反表示同一条直线，八种符号组合两两相反，得到 \(8\div2=4\) 条直线，故选 D.
+\end{solution}
+
 \begin{problem}
 一位国王的铸币大臣在每箱 100 枚的硬币中各掺入了一枚劣币，国王怀疑大臣作弊，他用两种方法来检测. 方法一：在 10 箱中各任意抽查一枚；方法二：在 5 箱中各任意抽查两枚. 国王用方法一，二能发现至少一枚劣币的概率分别记为 \(p_1\) 和 \(p_2\). 则（\quad）
 
@@ -168,10 +287,30 @@ D
 B
 \end{answer}
 
+\begin{solution}
+方法一中，每箱抽中的概率为 \(\frac1{100}\)，所以一枚劣币都没有抽到的概率为 \(\left(\frac{99}{100}\right)^{10}\)，从而
+\[
+p_1=1-\left(\frac{99}{100}\right)^{10}
+\]
+方法二中，一箱抽两枚且没有抽到劣币的概率为
+\[
+\frac{\mathrm C_{99}^{2}}{\mathrm C_{100}^{2}}=\frac{98}{100}=\frac{49}{50}
+\]
+五箱都没有抽到的概率为 \(\left(\frac{49}{50}\right)^5\)，所以
+\[
+p_2=1-\left(\frac{49}{50}\right)^5
+\]
+又因为 \(\left(\frac{99}{100}\right)^2=0.9801>0.98=\frac{49}{50}\)，所以
+\[
+\left(\frac{99}{100}\right)^{10}>\left(\frac{49}{50}\right)^5
+\]
+故 \(p_1<p_2\)，选 B.
+\end{solution}
+
 \begin{problem}
 如图，一个正五角星薄片（其对称轴与水面垂直）匀速地升出水面，记 \(t\) 时刻五角星露出水面部分的图形面积为 \(S(t)\)（\(S(0)=0\)），则导函数 \(y = S'(t)\) 的图象大致为（\quad）
 
-\bitmapinlinefigure[0.5\linewidth][max width=0.5\linewidth]{img/2010/jiangxi_science/q12_fig1.png}
+\bitmapfigure[max width=0.5\linewidth]{img/2010/jiangxi_science/q12_fig1.png}
 
 \choices
     {\choicebitmap[width=0.15\paperwidth]{img/2010/jiangxi_science/q12_optA.png}}
@@ -184,6 +323,14 @@ B
 A
 \end{answer}
 
+\begin{solution}
+设五角星上升速度为常数 \(v>0\). 在某一时刻，露出面积的增加量等于水面处五角星的水平截线长度乘以位移，所以
+\[
+S'(t)=v\times\text{水面处五角星的水平宽度}
+\]
+因此 \(S'(t)\geqslant0\)，开始露出和完全露出时水面截线长度都为零，故图象从零开始并回到零，排除 B，C. 随着水面穿过五角星的各个顶点和凹点，水平宽度先增大、再减小，并在凹点处发生斜率突变；按五角星的对称形状得到选项 A 所示图象，故选 A.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -194,6 +341,15 @@ A
 \(\sqrt{3}\)
 \end{answer}
 
+\begin{solution}
+由向量模长公式
+\[
+|\bs{a}-\bs{b}|^2=|\bs{a}|^2+|\bs{b}|^2-2|\bs{a}|\,|\bs{b}|\cos60^\circ
+=1+4-2\times1\times2\times\frac12=3
+\]
+模长非负，所以 \(|\bs{a}-\bs{b}|=\sqrt3\).
+\end{solution}
+
 \begin{problem}
 将 6 位志愿者分成 4 组，其中两个组各 2 人，另两个组各 1 人，分赴世博会的四个不同场馆服务，不同的分配方案有\fillinblank{} 种.（用数字作答）
 \end{problem}
@@ -202,6 +358,15 @@ A
 1080
 \end{answer}
 
+\begin{solution}
+先选出承担两人组的两个场馆，有 \(\mathrm C_4^2\) 种. 对这两个已确定的不同场馆，依次选人组成两人组，再把剩下两人分到两个单人场馆，方案数为
+\[
+\mathrm C_4^2\mathrm C_6^2\mathrm C_4^2\mathrm C_2^1
+=6\times15\times6\times2=1080
+\]
+故填 \(1080\).
+\end{solution}
+
 \begin{problem}
 点 \(A(x_0, y_0)\) 在双曲线 \(\frac{x^2}{4} - \frac{y^2}{32} = 1\) 的右支上，若点 \(A\) 到右焦点的距离等于 \(2x_0\)，则 \(x_0 =\)\fillinblank{}.
 \end{problem}
@@ -209,6 +374,16 @@ A
 \begin{answer}
 2
 \end{answer}
+
+\begin{solution}
+双曲线方程可化为 \(y_0^2=8x_0^2-32\). 右支上 \(x_0\geqslant2\)，右焦点为 \(F=(6,0)\)，所以
+\[
+AF^2=(x_0-6)^2+y_0^2
+=(x_0-6)^2+8x_0^2-32
+=(3x_0-2)^2
+\]
+由于 \(x_0\geqslant2\)，有 \(AF=3x_0-2\). 由题设 \(AF=2x_0\)，得 \(3x_0-2=2x_0\)，所以填 \(x_0=2\).
+\end{solution}
 
 \begin{problem}
 如图，在三棱锥 \(O - ABC\) 中，三条棱 \(OA\)，\(OB\)，\(OC\) 两两垂直，且 \(OA > OB > OC\)，分别经过三条棱 \(OA\)，\(OB\)，\(OC\) 作一个截面平分三棱锥的体积，截面面积依次为 \(S_1\)，\(S_2\)，\(S_3\)，则 \(S_1\)，\(S_2\)，\(S_3\) 的大小关系为\fillinblank{}.
@@ -219,6 +394,24 @@ A
 \begin{answer}
 \(S_3 < S_2 < S_1\)
 \end{answer}
+
+\begin{solution}
+设 \(OA=x\)，\(OB=y\)，\(OC=z\)，则 \(x>y>z>0\). 经过棱 \(OA\) 的截面与棱 \(BC\) 相交于其中点，原因是截面把以 \(O\) 为顶点的两个小棱锥分成等体积，而它们共有顶点 \(O\) 且底面在同一平面内，所以底面三角形面积相等. 因此该截面为连接 \(OA\) 与 \(BC\) 中点的三角形. 另外两种截面同理.
+
+设 \(D\)，\(E\)，\(F\) 分别为 \(BC\)，\(CA\)，\(AB\) 的中点. 由三条棱两两垂直，
+\[
+S_1=\frac12x\left|\frac{\overrightarrow{OB}+\overrightarrow{OC}}2\right|=\frac{x\sqrt{y^2+z^2}}4
+\]
+\(S_2=\frac{y\sqrt{x^2+z^2}}4\)，\(S_3=\frac{z\sqrt{x^2+y^2}}4\).
+比较平方得
+\[
+16(S_1^2-S_2^2)=z^2(x^2-y^2)>0
+\]
+\[
+16(S_2^2-S_3^2)=x^2(y^2-z^2)>0
+\]
+所以 \(S_1>S_2>S_3\)，填 \(S_3<S_2<S_1\).
+\end{solution}
 
 \section{解答题}
 
@@ -233,8 +426,29 @@ A
 
 \begin{solution}
 \begin{enumerate}
-\item \(\left[0,\frac{1+\sqrt{2}}{2}\right]\).
-\item \(m=-2\).
+\item 在给定区间内 \(\sin x\neq0\)，且当 \(m=0\) 时
+\[
+f(x)=(1+\cot x)\sin^2x=\sin^2x+\sin x\cos x
+=\frac12+\frac12\sin2x-\frac12\cos2x
+=\frac12+\frac{\sqrt2}{2}\sin\left(2x-\frac\pi4\right)
+\]
+令 \(t=2x-\frac\pi4\)，则 \(t\in\left[0,\frac{5\pi}{4}\right]\). 在此区间内，\(\sin t\) 的最大值为 \(1\)，最小值为 \(-\frac{\sqrt2}{2}\). 所以
+\[
+0\leqslant f(x)\leqslant\frac12+\frac{\sqrt2}{2}=\frac{1+\sqrt2}{2}
+\]
+故取值范围为 \(\left[0,\frac{1+\sqrt2}{2}\right]\).
+\item 由 \(\tan\alpha=2\) 得
+\(\sin^2\alpha=\frac45\)，\(\sin\alpha\cos\alpha=\frac25\).
+又
+\[
+\sin\left(\alpha+\frac\pi4\right)\sin\left(\alpha-\frac\pi4\right)
+=\sin^2\alpha-\sin^2\frac\pi4=\frac{3}{10}
+\]
+因此
+\[
+\frac65+m\cdot\frac3{10}=\frac35
+\]
+解得 \(m=-2\).
 \end{enumerate}
 \end{solution}
 
@@ -248,10 +462,18 @@ A
 \end{problem}
 
 \begin{solution}
-\begin{enumerate}
-\item \(\xi\) 的取值为 \(1\)，\(3\)，\(4\)，\(6\)，相应概率分别为 \(\frac{1}{3}\)，\(\frac{1}{6}\)，\(\frac{1}{6}\)，\(\frac{1}{3}\).
-\item \(E(\xi)=\frac{7}{2}\).
-\end{enumerate}
+第一次选中 1 号通道的概率为 \(\frac13\)，此时 \(\xi=1\). 第一次选中 2 号通道后，以概率 \(\frac12\) 选中 1 号通道，此时 \(\xi=2+1=3\)；以概率 \(\frac12\) 选中 3 号通道，之后只能走 1 号通道，此时 \(\xi=2+3+1=6\). 第一次选中 3 号通道后，以概率 \(\frac12\) 选中 1 号通道，此时 \(\xi=3+1=4\)；另一种情况的总时间为 \(3+2+1=6\). 因此
+\begin{center}
+\begin{tabular}{c|cccc}
+\(\xi\)&\(1\)&\(3\)&\(4\)&\(6\)\\
+\hline
+\(P\)&\(\frac13\)&\(\frac16\)&\(\frac16\)&\(\frac13\)
+\end{tabular}
+\end{center}
+各概率之和为 \(1\)，故分布列正确. 进一步
+\[
+E(\xi)=1\cdot\frac13+3\cdot\frac16+4\cdot\frac16+6\cdot\frac13=\frac72
+\]
 \end{solution}
 
 \begin{problem}
@@ -264,9 +486,25 @@ A
 \end{problem}
 
 \begin{solution}
+函数定义域为 \((0,2)\)，且
+\[
+f'(x)=\frac1x-\frac1{2-x}+a
+\]
 \begin{enumerate}
-\item 增区间为 \((0,\sqrt{2})\)，减区间为 \((\sqrt{2},2)\).
-\item \(a=\frac{1}{2}\).
+\item 当 \(a=1\) 时，
+\[
+f'(x)=\frac{2-x^2}{x(2-x)}
+\]
+在定义域内分母为正，所以当 \(0<x<\sqrt2\) 时 \(f'(x)>0\)，当 \(\sqrt2<x<2\) 时 \(f'(x)<0\). 因此增区间为 \((0,\sqrt2)\)，减区间为 \((\sqrt2,2)\).
+\item 当 \(0<x\leqslant1\) 时，
+\[
+\frac1x-\frac1{2-x}=\frac{2-2x}{x(2-x)}\geqslant0
+\]
+由于 \(a>0\)，故 \(f'(x)>0\)，函数在 \((0,1]\) 上递增，最大值在 \(x=1\) 处取得. 于是
+\[
+\frac12=f(1)=\ln1+\ln1+a=a
+\]
+所以 \(a=\frac12\).
 \end{enumerate}
 \end{solution}
 
@@ -281,9 +519,36 @@ A
 \end{problem}
 
 \begin{solution}
+建立空间直角坐标系，使平面 \(BCD\) 为 \(z=0\)，取
+\(C=(-1,0,0)\)，\(D=(1,0,0)\)，\(B=(0,\sqrt3,0)\).
+由于平面 \(MCD\perp\) 平面 \(BCD\)，可取 \(M=(0,0,\sqrt3)\)；又 \(AB\perp\) 平面 \(BCD\) 且 \(AB=2\sqrt3\)，故 \(A=(0,\sqrt3,2\sqrt3)\).
+
 \begin{enumerate}
-\item 点 \(A\) 到平面 \(MBC\) 的距离为 \(\frac{2\sqrt{15}}{5}\).
-\item 所求二面角的正弦值为 \(\frac{2\sqrt{5}}{5}\).
+\item 平面 \(MBC\) 的两个方向向量可取
+\(\overrightarrow{CB}=(1,\sqrt3,0)\)，\(\overrightarrow{CM}=(1,0,\sqrt3)\).
+其法向量为
+\[
+\overrightarrow{CB}\times\overrightarrow{CM}=(3,-\sqrt3,-\sqrt3)
+\]
+所以平面 \(MBC\) 的方程为
+\[
+3(x+1)-\sqrt3y-\sqrt3z=0
+\]
+将点 \(A\) 代入，得左端为 \(-6\)，法向量长度为 \(\sqrt{15}\)，故点到平面的距离为
+\[
+\frac{6}{\sqrt{15}}=\frac{2\sqrt{15}}5
+\]
+\item 平面 \(ACM\) 的一个法向量为
+\[
+\overrightarrow{AC}\times\overrightarrow{AM}=(-3,-\sqrt3,\sqrt3)
+\]
+其长度为 \(\sqrt{15}\). 平面 \(BCD\) 的法向量为 \((0,0,1)\). 设所求二面角为 \(\theta\)，则
+\[
+\sin\theta
+=\frac{\left|(-3,-\sqrt3,\sqrt3)\times(0,0,1)\right|}{\sqrt{15}}
+=\frac{\sqrt{9+3}}{\sqrt{15}}
+=\frac{2\sqrt5}{5}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -300,8 +565,45 @@ A
 
 \begin{solution}
 \begin{enumerate}
-\item \(C_1\) 的离心率为 \(\frac{\sqrt{2}}{2}\).
-\item 椭圆方程为 \(\frac{x^2}{16}+\frac{y^2}{4}=1\)，抛物线方程为 \(x^2+2y=4\).
+\item 设椭圆焦点为 \((\pm c,0)\)，则 \(c^2=a^2-b^2\). 由于 \((c,0)\) 在抛物线 \(C_2\) 上，得 \(c^2=b^2\)，即 \(c=b\). 所以 \(a^2=b^2+c^2=2b^2\)，离心率为
+\[
+e=\frac ca=\frac1{\sqrt2}=\frac{\sqrt2}{2}
+\]
+\item 两条曲线都关于 \(y\) 轴对称，且题设给出的非轴交点只有两个，所以设
+\(M=(x_1,y_1)\)，\(N=(-x_1,y_1)\)，\(x_1>0\).
+由 \(B\!\left(0,\frac34b\right)\) 为 \(\triangle AMN\) 的垂心，\(BM\perp AN\)，从而
+\[
+\overrightarrow{BM}\cdot\overrightarrow{AN}=0
+\Longrightarrow -x_1^2+\left(y_1-\frac34b\right)(y_1-b)=0
+\]
+又因 \(M\) 在抛物线 \(C_2\) 上，
+\[
+x_1^2+by_1=b^2
+\]
+消去 \(x_1^2\)，得
+\[
+y_1^2-\frac34by_1-\frac14b^2=0
+\Longrightarrow (y_1-b)\left(y_1+\frac14b\right)=0
+\]
+若 \(y_1=b\)，则由抛物线方程得 \(x_1=0\)，与 \(x_1>0\) 矛盾，所以
+\(y_1=-\frac14b\)，\(x_1^2=b^2-by_1=\frac54b^2\).
+\(\triangle QMN\) 的重心为
+\[
+G=\left(\frac{3\sqrt3+x_1-x_1}{3},\frac{\frac54b+2\left(-\frac14b\right)}3\right)
+=\left(\sqrt3,\frac14b\right)
+\]
+因 \(G\) 在 \(C_2\) 上，得
+\[
+3+b\cdot\frac14b=b^2
+\]
+所以 \(b^2=4\)，由 \(b>0\) 得 \(b=2\). 此时
+\(y_1=-\frac12\)，\(x_1^2=5\).
+将点 \(M\) 代入椭圆方程，得
+\[
+\frac5{a^2}+\frac{1}{16}=1
+\]
+从而 \(a^2=\frac{16}{3}\). 因此
+\(C_1:\frac{x^2}{16/3}+\frac{y^2}{4}=1\)，\(C_2:x^2+2y=4\).
 \end{enumerate}
 \end{solution}
 
@@ -309,14 +611,46 @@ A
 证明以下命题：
 
 \begin{enumerate}
-\item 对任一正整数 \(a\)，都存在整数 \(b\)，\(c\)（\(b<c\)），使得 \(a^{2}\)，\(b^{2}\)，\(c^{2}\) 成等差数列；
+\item 对任一正整数 \(a\)，都存在正整数 \(b\)，\(c\)（\(b<c\)），使得 \(a^{2}\)，\(b^{2}\)，\(c^{2}\) 成等差数列；
 \item 存在无穷多个互不相似的三角形 \(\Delta_{n}\)，其边长 \(a_{n}\)，\(b_{n}\)，\(c_{n}\) 为正整数且 \(a_{n}^{2}\)，\(b_{n}^{2}\)，\(c_{n}^{2}\) 成等差数列.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item 可取 \(b=5a\)，\(c=7a\).
-\item 对任意整数 \(n\geqslant 4\)，可取 \(a_n=n^2-2n-1\)，\(b_n=n^2+1\)，\(c_n=n^2+2n-1\).
+\item 对任意正整数 \(a\)，取
+\(b=5a\)，\(c=7a\).
+则 \(b<c\)，且
+\(b^2-a^2=25a^2-a^2=24a^2\)，\(c^2-b^2=49a^2-25a^2=24a^2\).
+所以 \(a^2\)，\(b^2\)，\(c^2\) 成等差数列.
+\item 对任意整数 \(n\geqslant4\)，定义
+\(a_n=n^2-2n-1\)，\(b_n=n^2+1\)，\(c_n=n^2+2n-1\).
+当 \(n\geqslant4\) 时，三者均为正整数，且
+\(b_n-a_n=2n+2>0\)，\(c_n-b_n=2n-2>0\).
+再由
+\[
+a_n^2+c_n^2
+=(n^2-1-2n)^2+(n^2-1+2n)^2
+=2(n^2-1)^2+8n^2
+=2(n^2+1)^2=2b_n^2
+\]
+可知三数的平方成等差数列.
+
+还需验证它们构成三角形. 最大边为 \(c_n\)，而
+\[
+a_n+b_n-c_n=n^2-4n+1\geqslant1>0
+\]
+对所有 \(n\geqslant4\) 成立，所以 \(a_n+b_n>c_n\)，确实构成三角形.
+
+最后证明这些三角形互不相似. 设 \(m>n\geqslant4\)，考虑最大边与中间边之比
+\[
+\frac{c_n}{b_n}=1+\frac{2(n-1)}{n^2+1}
+\]
+函数 \(\frac{n-1}{n^2+1}\) 在整数 \(n\geqslant4\) 上严格递减，因为
+\[
+\frac{n-1}{n^2+1}-\frac{m-1}{m^2+1}
+=\frac{(m-n)\bigl(mn-m-n-1\bigr)}{(n^2+1)(m^2+1)}>0
+\]
+故 \(\frac{c_n}{b_n}\neq\frac{c_m}{b_m}\). 相似三角形对应边之比应相等，所以 \(\triangle_n\) 两两不相似. 由于 \(n\geqslant4\) 有无穷多个，命题得证.
 \end{enumerate}
 \end{solution}

@@ -14,6 +14,12 @@
 C
 \end{answer}
 
+\begin{solution}
+对任意 \(x\in\R\)，都有 \(2^{-x}>0\)，所以 \(M\subset(0,+\infty)\). 反过来，任取 \(y>0\)，取 \(x=-\log_{2}y\)，便有 \(y=2^{-x}\)，故 \(M=(0,+\infty)\).
+
+由 \(y=\sqrt{x-1}\) 可知 \(x\geqslant1\)，且平方根的值满足 \(y\geqslant0\). 反过来，任取 \(y\geqslant0\)，令 \(x=y^{2}+1\)，即得 \(y=\sqrt{x-1}\)，所以 \(P=[0,+\infty)\). 因此 \(M\cap P=(0,+\infty)\)，对应选项为 C.
+\end{solution}
+
 \begin{problem}
 若 \(f(x)=\dfrac{x-1}{x}\)，则方程 \(f(4x)=x\) 的根是（\quad）
 
@@ -27,6 +33,18 @@ C
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+由函数定义可知 \(4x\ne0\)，即 \(x\ne0\). 代入函数表达式，原方程化为
+\[
+\dfrac{4x-1}{4x}=x
+\]
+由于 \(x\ne0\)，两边同乘 \(4x\)，得 \(4x-1=4x^{2}\)，即
+\[
+4x^{2}-4x+1=(2x-1)^{2}=0
+\]
+所以 \(x=\dfrac12\)，且它满足定义域条件，故方程的根为 \(\dfrac12\)，对应选项为 A.
+\end{solution}
 
 \begin{problem}
 设复数 \(z_{1}=-1+\i\)，\(z_{2}=\dfrac12+\dfrac{\sqrt3}{2}\i\)，则 \(\arg\dfrac{z_{1}}{z_{2}}=\)（\quad）
@@ -42,6 +60,18 @@ A
 C
 \end{answer}
 
+\begin{solution}
+复数 \(z_{1}=-1+\i\) 位于第二象限，且其辐角为 \(\dfrac{3\pi}{4}\)；又
+\[
+z_{2}=\cos\dfrac\pi3+\i\sin\dfrac\pi3
+\]
+其辐角为 \(\dfrac\pi3\)，因此
+\[
+\arg\dfrac{z_{1}}{z_{2}}\equiv\dfrac{3\pi}{4}-\dfrac\pi3=\dfrac{5\pi}{12}\pmod{2\pi}
+\]
+在选项给出的辐角中应取 \(\dfrac{5\pi}{12}\)，对应选项为 C.
+\end{solution}
+
 \begin{problem}
 函数 \(f(x)=\dfrac{1}{1-x(1-x)}\) 的最大值是（\quad）
 
@@ -55,6 +85,18 @@ C
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+分母可配方为
+\[
+1-x(1-x)=x^{2}-x+1=\left(x-\dfrac12\right)^{2}+\dfrac34\geqslant\dfrac34
+\]
+分母恒为正，所以
+\[
+f(x)=\dfrac1{x^{2}-x+1}\leqslant\dfrac{1}{\frac34}=\dfrac43
+\]
+当 \(x=\dfrac12\) 时分母取最小值 \(\dfrac34\)，等号成立. 因此最大值为 \(\dfrac43\)，对应选项为 D.
+\end{solution}
 
 \begin{problem}
 在同一坐标系中，方程 \(a^{2}x^{2}+b^{2}y^{2}=1\) 与 \(ax+by^{2}=0\)（\(a>b>0\)）的曲线大致是（\quad）
@@ -70,6 +112,16 @@ D
 D
 \end{answer}
 
+\begin{solution}
+第一个方程可写成
+\[
+\dfrac{x^{2}}{1/a^{2}}+\dfrac{y^{2}}{1/b^{2}}=1
+\]
+因为 \(a>b>0\)，所以 \(1/b>1/a\)，该椭圆的长轴在 \(y\) 轴上，且中心为原点.
+
+第二个方程可化为 \(x=-\dfrac ba y^{2}\). 它是顶点为原点、开口向左的抛物线. 四个图形中，只有选项 D 同时具有竖直椭圆和向左开口的抛物线，故选 D.
+\end{solution}
+
 \begin{problem}
 若 \(A\)，\(B\)，\(C\) 是 \(\triangle ABC\) 的三个内角，且 \(A<B<C\)（\(C\ne\dfrac\pi2\)），则下列结论中正确的是（\quad）
 
@@ -83,6 +135,18 @@ D
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+三角形内角满足 \(A+B+C=\pi\). 由 \(A<B<C\) 得 \(3A<\pi<3C\)，所以 \(A<\dfrac\pi3<C\).
+
+若 \(C<\dfrac\pi2\)，则 \(0<A<C<\dfrac\pi2\)，正弦函数在此区间上递增，因而 \(\sin A<\sin C\).
+
+若 \(C>\dfrac\pi2\)，则 \(A+B=\pi-C<\dfrac\pi2\)，且 \(A<A+B\)，所以
+\[
+\sin A<\sin(A+B)=\sin(\pi-C)=\sin C
+\]
+题设排除了 \(C=\dfrac\pi2\)，故总有 \(\sin A<\sin C\). 另外，余弦函数在 \((0,\pi)\) 上递减，所以 \(\cos A>\cos C\)；当 \(C>\dfrac\pi2\) 时 \(\tan C<0<\tan A\)，且余切函数在 \((0,\pi)\) 上递减，其余三个选项均不成立. 因此正确选项为 A.
+\end{solution}
 
 \begin{problem}
 椭圆
@@ -102,6 +166,15 @@ y=3\sin\varphi,
 D
 \end{answer}
 
+\begin{solution}
+由参数方程可知椭圆的中心为 \((4,0)\)，横、纵半轴长分别为 \(5\) 和 \(3\). 其焦距的一半为
+\[
+c=\sqrt{5^{2}-3^{2}}=4
+\]
+因此两个焦点分别为 \((4-4,0)=(0,0)\) 和 \((4+4,0)=(8,0)\).
+故正确选项为 D.
+\end{solution}
+
 \begin{problem}
 如图，在正三角形 \(ABC\) 中，\(D\)，\(E\)，\(F\) 分别为各边的中点，\(G\)，\(H\)，\(I\)，\(J\) 分别为 \(AF\)，\(AD\)，\(BE\)，\(DE\) 的中点. 将 \(\triangle ABC\) 沿 \(DE\)，\(EF\)，\(DF\) 折成三棱锥以后，\(GH\) 与 \(IJ\) 所成角的度数为（\quad）
 
@@ -118,6 +191,12 @@ D
 B
 \end{answer}
 
+\begin{solution}
+折叠后，原来的三个顶点 \(A\)，\(B\)，\(C\) 重合为三棱锥的顶点，记为 \(T\). 原三角形的四个小三角形都是正三角形，所以折成的三棱锥为正三棱锥.
+
+在正三角形 \(TDF\) 中，\(G\)，\(H\) 分别是 \(TF\)，\(TD\) 的中点，由中位线定理，\(GH\parallel DF\). 在正三角形 \(TDE\) 中，\(I\)，\(J\) 分别是 \(TE\)，\(DE\) 的中点，因此 \(IJ\parallel TD\). 所以 \(GH\) 与 \(IJ\) 所成的角等于 \(DF\) 与 \(DT\) 所成的角，即正三角形 \(TDF\) 的内角 \(\angle FDT=60^{\circ}\). 故选 B.
+\end{solution}
+
 \begin{problem}
 某班新年联欢会原定的 \(5\text{ 个}\)节目已排成节目单，开演前又增加了两个新节目. 如果将这两个节目插入原节目单中，那么不同插法的种数为（\quad）
 
@@ -131,6 +210,14 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+设两个新节目为 \(X\)，\(Y\). 先插入 \(X\)，原有的节目单形成 \(6\) 个可插位置；插入 \(X\) 后共有 \(6\) 个节目，插入 \(Y\) 时有 \(7\) 个位置. 因此插法总数为
+\[
+6\times7=42
+\]
+其中两个新节目插入同一空隙时，先后次序不同也计为不同插法，故答案为 \(42\)，对应选项为 A.
+\end{solution}
 
 \begin{problem}
 已知直线 \(ax+by+c=0\)（\(abc\ne0\)）与圆 \(x^{2}+y^{2}=1\) 相切，则三条边长分别为 \(|a|\)，\(|b|\)，\(|c|\) 的三角形（\quad）
@@ -146,6 +233,18 @@ A
 B
 \end{answer}
 
+\begin{solution}
+单位圆圆心为原点，圆心到直线 \(ax+by+c=0\) 的距离为
+\[
+\dfrac{|c|}{\sqrt{a^{2}+b^{2}}}
+\]
+相切时该距离等于半径 \(1\)，所以 \(c^{2}=a^{2}+b^{2}\)，即
+\[
+|c|^{2}=|a|^{2}+|b|^{2}
+\]
+又因 \(a\)，\(b\)，\(c\) 均不为零，三条边均为正，且最大的边为 \(|c|\). 由勾股定理的逆定理，以 \(|a|\)，\(|b|\)，\(|c|\) 为边的三角形是直角三角形，故选 B.
+\end{solution}
+
 \begin{problem}
 若不等式 \(|ax+2|<6\) 的解集为 \((-1,2)\)，则实数 \(a\) 等于（\quad）
 
@@ -160,6 +259,20 @@ B
 C
 \end{answer}
 
+\begin{solution}
+不等式 \(|ax+2|<6\) 的解集关于方程 \(ax+2=0\) 的解 \(-\dfrac2a\) 对称. 因此该解集的中点满足
+\[
+-\dfrac2a=\dfrac{-1+2}{2}=\dfrac12
+\]
+从而 \(a=-4\). 直接检验：
+\[
+|-4x+2|<6
+\Longleftrightarrow -6<-4x+2<6
+\Longleftrightarrow -1<x<2
+\]
+所以 \(a=-4\)，对应选项为 C.
+\end{solution}
+
 \begin{problem}
 在直角坐标系 \(xOy\) 中，已知 \(\triangle AOB\) 三边所在直线的方程分别为 \(x=0\)，\(y=0\)，\(2x+3y=30\)，则 \(\triangle AOB\) 内部和边上整点（即横，纵坐标均为整数的点）的总数是（\quad）
 
@@ -173,6 +286,24 @@ C
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+三角形的顶点为 \(O=(0,0)\)，\(A=(15,0)\)，\(B=(0,10)\). 其内部和边上整点恰好是满足
+\(x\geqslant0\)，\(y\geqslant0\)，\(2x+3y\leqslant30\)
+的整数点.
+
+固定整数 \(y\)，其中 \(0\leqslant y\leqslant10\)，可取的整数 \(x\) 有
+\[
+0\leqslant x\leqslant\left\lfloor\dfrac{30-3y}{2}\right\rfloor
+\]
+所以各行的点数依次为
+\(16\)，\(14\)，\(13\)，\(11\)，\(10\)，\(8\)，\(7\)，\(5\)，\(4\)，\(2\)，\(1\)
+总数为
+\[
+16+14+13+11+10+8+7+5+4+2+1=91
+\]
+故正确选项为 B.
+\end{solution}
 
 \section{填空题}
 \begin{problem}
@@ -189,11 +320,11 @@ B
 \begin{solution}
 铁球完全浸没后排开水的体积等于铁球的体积. 由于水面上升了 \(r\)，圆柱形量杯中水面上升部分的体积为 \(\pi R^2r\)，而铁球的体积为 \(\dfrac43\pi r^3\). 因而
 \[
-\pi R^2r=\dfrac43\pi r^3.
+\pi R^2r=\dfrac43\pi r^3
 \]
 因为 \(r>0\)，约去 \(\pi r^2\)，得
 \[
-\left(\dfrac Rr\right)^2=\dfrac43.
+\left(\dfrac Rr\right)^2=\dfrac43
 \]
 又 \(R>0\)，所以 \(\dfrac Rr=\dfrac{2\sqrt3}{3}\).
 \end{solution}
@@ -220,6 +351,19 @@ B
 \(140\)，\(85\)
 \end{answer}
 
+\begin{solution}
+年龄每增加 \(5\) 岁，收缩压依次增加 \(5\) 毫米，因此从 30 岁的 \(110\) 开始，60 岁对应
+\[
+110+\dfrac{60-30}{5}\times5=140
+\]
+
+舒张压的相邻增量按 \(+3\)，\(+2\)，\(+3\)，\(+2\)，\(\ldots\) 交替出现. 由 55 岁的 \(83\) 到 60 岁应增加 \(2\)，故 60 岁的舒张压为
+\[
+83+2=85
+\]
+所以表中两处应填 \(140\)，\(85\).
+\end{solution}
+
 \begin{problem}
 已知 \(F_{1}\)，\(F_{2}\) 分别为椭圆 \(\dfrac{x^{2}}{a^{2}}+\dfrac{y^{2}}{b^{2}}=1\) 的左，右焦点，点 \(P\) 在椭圆上，\(\triangle POF_{2}\) 是面积为 \(\sqrt3\) 的正三角形，则 \(b^{2}\) 的值是\fillinblank{}.
 \end{problem}
@@ -231,21 +375,21 @@ B
 \begin{solution}
 设椭圆的半焦距为 \(c\)，则 \(F_{2}=(c,0)\)，且 \(OF_{2}=c\). 由正三角形面积公式，
 \[
-\dfrac{\sqrt3}{4}c^2=\sqrt3,
+\dfrac{\sqrt3}{4}c^2=\sqrt3
 \]
 所以 \(c^2=4\)，从而 \(c=2\). 因此正三角形的两个可能顶点为 \(P=(1,\sqrt3)\) 或 \(P=(1,-\sqrt3)\)，两种情形代入椭圆方程所得结果相同.
 
 由椭圆的关系式 \(a^2-b^2=c^2\)，得 \(a^2=b^2+4\). 代入点 \(P\) 的坐标，得
 \[
-\dfrac1{a^2}+\dfrac3{b^2}=1.
+\dfrac1{a^2}+\dfrac3{b^2}=1
 \]
 令 \(u=b^2>0\)，则 \(a^2=u+4\)，故
 \[
-\dfrac1{u+4}+\dfrac3u=1.
+\dfrac1{u+4}+\dfrac3u=1
 \]
 两边同乘 \(u(u+4)>0\)，得
 \[
-u+3u+12=u^2+4u,
+u+3u+12=u^2+4u
 \]
 即 \(u^2=12\). 因为 \(u>0\)，所以 \(u=2\sqrt3\)，即 \(b^2=2\sqrt3\).
 \end{solution}
@@ -260,13 +404,9 @@ u+3u+12=u^2+4u,
 
 \begin{solution}
 令 \(t=px\). 因为 \(p>0\)，当 \(x\) 取遍 \(\R\) 时，\(t\) 也取遍 \(\R\)，题设可改写为
-\[
-f(t)=f\left(t-\dfrac p2\right)\qquad(t\in\R).
-\]
+\(f(t)=f\left(t-\dfrac p2\right)\)，\((t\in\R)\).
 令 \(u=t-\dfrac p2\)，则 \(u\) 取遍 \(\R\)，并且
-\[
-f\left(u+\dfrac p2\right)=f(u)\qquad(u\in\R).
-\]
+\(f\left(u+\dfrac p2\right)=f(u)\)，\((u\in\R)\).
 由周期的定义，且 \(\dfrac p2>0\)，可知 \(f(x)\) 的一个正周期为 \(\dfrac p2\).
 \end{solution}
 
@@ -277,12 +417,10 @@ f\left(u+\dfrac p2\right)=f(u)\qquad(u\in\R).
 
 \begin{solution}
 首先由对数真数为正，得
-\[
-x^2-x-2>0,\qquad x-1>0.
-\]
+\(x^2-x-2>0\)，\(x-1>0\).
 其中
 \[
-x^2-x-2=(x-2)(x+1),
+x^2-x-2=(x-2)(x+1)
 \]
 所以定义域为 \(x>2\).
 
@@ -290,19 +428,19 @@ x^2-x-2=(x-2)(x+1),
 \[
 \log_{\frac12}(x-1)-1
 =\log_{\frac12}(x-1)+\log_{\frac12}2
-=\log_{\frac12}\bigl(2(x-1)\bigr).
+=\log_{\frac12}\bigl(2(x-1)\bigr)
 \]
 因此原不等式等价于
 \[
-x^2-x-2<2(x-1),
+x^2-x-2<2(x-1)
 \]
 即
 \[
-x^2-3x<0,
+x^2-3x<0
 \]
 所以 \(0<x<3\). 与定义域 \(x>2\) 取交集，得
 \[
-2<x<3.
+2<x<3
 \]
 端点 \(x=2\) 使第一个对数的真数为零，端点 \(x=3\) 使不等式成为等式，均不能取. 故原不等式的解集为 \((2,3)\).
 \end{solution}
@@ -313,33 +451,31 @@ x^2-3x<0,
 
 \begin{solution}
 函数有意义的条件是 \(\cos2x\ne0\)，即
-\[
-x\ne\dfrac\pi4+k\dfrac\pi2\qquad(k\in\Z).
-\]
+\(x\ne\dfrac\pi4+k\dfrac\pi2\)，\((k\in\Z)\).
 所以定义域为
 \[
-D_f=\left\{x\in\R\,\middle|\,x\ne\dfrac\pi4+k\dfrac\pi2,\ k\in\Z\right\}.
+D_f=\left\{x\in\R\,\middle|\,x\ne\dfrac\pi4+k\dfrac\pi2,\ k\in\Z\right\}
 \]
 令 \(u=\sin^2x\)，则 \(0\leqslant u\leqslant1\)，且 \(\cos^2x=1-u\)，\(\cos2x=1-2u\). 因而
 \[
 6\cos^4x+5\sin^2x-4
 =6(1-u)^2+5u-4
 =6u^2-7u+2
-=(3u-2)(2u-1).
+=(3u-2)(2u-1)
 \]
 在定义域内 \(u\ne\dfrac12\)，故
 \[
-f(x)=\dfrac{(3u-2)(2u-1)}{1-2u}=2-3u=2-3\sin^2x.
+f(x)=\dfrac{(3u-2)(2u-1)}{1-2u}=2-3u=2-3\sin^2x
 \]
 由于定义域关于原点对称，且 \(\sin^2(-x)=\sin^2x\)，所以
 \[
-f(-x)=2-3\sin^2(-x)=2-3\sin^2x=f(x),
+f(-x)=2-3\sin^2(-x)=2-3\sin^2x=f(x)
 \]
 故 \(f(x)\) 是偶函数.
 
 当 \(0\leqslant u\leqslant1\) 时，\(2-3u\) 的取值范围为 \([-1,2]\). 但 \(u=\dfrac12\) 时原函数无定义，恰好去掉函数值 \(2-3\times\dfrac12=\dfrac12\). 因此值域为
 \[
-\left[-1,\dfrac12\right)\cup\left(\dfrac12,2\right].
+\left[-1,\dfrac12\right)\cup\left(\dfrac12,2\right]
 \]
 \end{solution}
 
@@ -356,53 +492,39 @@ f(-x)=2-3\sin^2(-x)=2-3\sin^2x=f(x),
 \end{problem}
 
 \begin{solution}
-设底面边长为 \(s=2\sqrt2\)，建立空间直角坐标系，使
-\[
-B=(0,0,0),\quad A=(s,0,0),\quad C=(0,s,0),\quad D=(s,s,0).
-\]
-于是
-\[
-B_1=(0,0,4),\quad D_1=(s,s,4),\quad E=(\sqrt2,0,0),\quad F=(0,\sqrt2,0).
-\]
+设底面边长为 \(s=2\sqrt2\)，建立空间直角坐标系，使 \(B=(0,0,0)\)，\(A=(s,0,0)\)，\(C=(0,s,0)\)，\(D=(s,s,0)\). 于是 \(B_1=(0,0,4)\)，\(D_1=(s,s,4)\)，\(E=(\sqrt2,0,0)\)，\(F=(0,\sqrt2,0)\).
 
 \begin{enumerate}
-\item 平面 \(B_1EF\) 内有两个不共线的向量
-\[
-\overrightarrow{EB_1}=(-\sqrt2,0,4),\qquad \overrightarrow{EF}=(-\sqrt2,\sqrt2,0).
-\]
+\item 平面 \(B_1EF\) 内有两个不共线的向量：\(\overrightarrow{EB_1}=(-\sqrt2,0,4)\) 和 \(\overrightarrow{EF}=(-\sqrt2,\sqrt2,0)\).
 向量 \(\bs{n}=(2\sqrt2,2\sqrt2,1)\) 同时垂直于这两个向量，所以它是平面 \(B_1EF\) 的一个法向量. 由点 \(E\) 在该平面上，平面 \(B_1EF\) 的方程为
 \[
-2\sqrt2x+2\sqrt2y+z-4=0.
+2\sqrt2x+2\sqrt2y+z-4=0
 \]
 平面 \(BDD_1B_1\) 中的点都满足 \(x=y\)，其一个法向量为 \(\bs{m}=(1,-1,0)\). 因为
 \[
-\bs{n}\cdot\bs{m}=2\sqrt2-2\sqrt2=0,
+\bs{n}\cdot\bs{m}=2\sqrt2-2\sqrt2=0
 \]
 所以两平面的法向量互相垂直，从而平面 \(B_1EF\perp\) 平面 \(BDD_1B_1\).
 
 \item 将 \(D_1=(2\sqrt2,2\sqrt2,4)\) 代入平面 \(B_1EF\) 的距离公式，得
 \[
 d=\dfrac{\left|2\sqrt2\cdot2\sqrt2+2\sqrt2\cdot2\sqrt2+4-4\right|}{\sqrt{(2\sqrt2)^2+(2\sqrt2)^2+1^2}}
-=\dfrac{16}{\sqrt{17}}.
+=\dfrac{16}{\sqrt{17}}
 \]
 
 \item 以 \(B_1\) 为顶点，取
-\[
-\overrightarrow{B_1E}=(\sqrt2,0,-4),\quad
-\overrightarrow{B_1F}=(0,\sqrt2,-4),\quad
-\overrightarrow{B_1D_1}=(2\sqrt2,2\sqrt2,0).
-\]
+\(\overrightarrow{B_1E}=(\sqrt2,0,-4)\)，\(\overrightarrow{B_1F}=(0,\sqrt2,-4)\)，\(\overrightarrow{B_1D_1}=(2\sqrt2,2\sqrt2,0)\).
 于是三棱锥的体积为
 \[
-V=\dfrac16\left|\left(\overrightarrow{B_1E}\times\overrightarrow{B_1F}\right)\cdot\overrightarrow{B_1D_1}\right|.
+V=\dfrac16\left|\left(\overrightarrow{B_1E}\times\overrightarrow{B_1F}\right)\cdot\overrightarrow{B_1D_1}\right|
 \]
 其中
 \[
-\overrightarrow{B_1E}\times\overrightarrow{B_1F}=(4\sqrt2,4\sqrt2,2),
+\overrightarrow{B_1E}\times\overrightarrow{B_1F}=(4\sqrt2,4\sqrt2,2)
 \]
 所以
 \[
-V=\dfrac16\left|(4\sqrt2,4\sqrt2,2)\cdot(2\sqrt2,2\sqrt2,0)\right|=\dfrac{32}{6}=\dfrac{16}{3}.
+V=\dfrac16\left|(4\sqrt2,4\sqrt2,2)\cdot(2\sqrt2,2\sqrt2,0)\right|=\dfrac{32}{6}=\dfrac{16}{3}
 \]
 \end{enumerate}
 \end{solution}
@@ -422,7 +544,7 @@ V=\dfrac16\left|(4\sqrt2,4\sqrt2,2)\cdot(2\sqrt2,2\sqrt2,0)\right|=\dfrac{32}{6}
 \begin{enumerate}
 \item 当月租金为 \(3600\text{ 元}\) 时，
 \[
-x=\dfrac{3600-3000}{50}=12,
+x=\dfrac{3600-3000}{50}=12
 \]
 所以能租出 \(100-12=88\) 辆车.
 
@@ -430,11 +552,11 @@ x=\dfrac{3600-3000}{50}=12,
 \[
 R(x)=(3000+50x)(100-x)-150(100-x)-50x
 =285000+2100x-50x^2
-=307050-50(x-21)^2.
+=307050-50(x-21)^2
 \]
 因为 \(0\leqslant x\leqslant100\)，且 \(x=21\) 是允许的整数，故当 \(x=21\) 时月收益最大. 此时每辆车的月租金为
 \[
-3000+50\times21=4050\text{ 元},
+3000+50\times21=4050\text{ 元}
 \]
 最大月收益为 \(307050\text{ 元}\).
 \end{enumerate}
@@ -454,38 +576,38 @@ R(x)=(3000+50x)(100-x)-150(100-x)-50x
 \begin{solution}
 设圆 \(O_n\) 的半径为 \(r_n\). 因为每个圆都与 \(AB\)，\(BC\) 相切，所以其圆心都在 \(\angle B\) 的平分线上. 又 \(\angle B=60^{\circ}\)，若圆心到点 \(B\) 的距离为 \(d_n\)，则
 \[
-r_n=d_n\sin30^{\circ}=\dfrac{d_n}{2},
+r_n=d_n\sin30^{\circ}=\dfrac{d_n}{2}
 \]
 即 \(d_n=2r_n\).
 
 圆 \(O_n\) 与圆 \(O_{n+1}\) 外切，且 \(O_{n+1}\) 位于 \(O_n\) 与点 \(B\) 之间，所以
 \[
-O_nO_{n+1}=d_n-d_{n+1}=2(r_n-r_{n+1}).
+O_nO_{n+1}=d_n-d_{n+1}=2(r_n-r_{n+1})
 \]
 另一方面，外切两圆的圆心距等于两半径之和，故
 \[
-2(r_n-r_{n+1})=r_n+r_{n+1},
+2(r_n-r_{n+1})=r_n+r_{n+1}
 \]
 从而 \(r_{n+1}=\dfrac13r_n\). 因此
 \[
-\dfrac{a_{n+1}}{a_n}=\dfrac{\pi r_{n+1}^2}{\pi r_n^2}=\dfrac19,
+\dfrac{a_{n+1}}{a_n}=\dfrac{\pi r_{n+1}^2}{\pi r_n^2}=\dfrac19
 \]
 所以 \(\{a_n\}\) 是首项为 \(a_1\)、公比为 \(\dfrac19\) 的等比数列.
 
 等边三角形边长为 \(l\) 时，内切圆半径为
 \[
-r_1=\dfrac{\sqrt3}{6}l,
+r_1=\dfrac{\sqrt3}{6}l
 \]
 所以
 \[
-a_1=\pi r_1^2=\dfrac{\pi l^2}{12}.
+a_1=\pi r_1^2=\dfrac{\pi l^2}{12}
 \]
 于是
 \[
 \lim_{n\to\infty}(a_1+a_2+\cdots+a_n)
 =\dfrac{a_1}{1-\frac19}
 =\dfrac{\pi l^2}{12}\cdot\dfrac98
-=\dfrac{3\pi l^2}{32}.
+=\dfrac{3\pi l^2}{32}
 \]
 \end{solution}
 
@@ -505,19 +627,19 @@ a_1=\pi r_1^2=\dfrac{\pi l^2}{12}.
 \begin{solution}
 设动圆圆心为 \(M(x,y)\)，则动圆半径既等于 \(MP\)，又等于点 \(M\) 到直线 \(l:x=-1\) 的距离. 因此
 \[
-\sqrt{(x-1)^2+y^2}=|x+1|.
+\sqrt{(x-1)^2+y^2}=|x+1|
 \]
 两边平方并整理，得
 \[
 (x-1)^2+y^2=(x+1)^2
-\quad\Longleftrightarrow\quad y^2=4x.
+\quad\Longleftrightarrow\quad y^2=4x
 \]
 故动圆圆心的轨迹 \(M\) 的方程为 \(y^2=4x\).
 
 \begin{enumerate}
 \item 过 \(P(1,0)\) 且斜率为 \(-\sqrt3\) 的直线方程为
 \[
-y=-\sqrt3(x-1).
+y=-\sqrt3(x-1)
 \]
 与 \(y^2=4x\) 联立，得
 \[
@@ -525,62 +647,51 @@ y=-\sqrt3(x-1).
 \quad\Longleftrightarrow\quad
 3x^2-10x+3=0
 \quad\Longleftrightarrow\quad
-(3x-1)(x-3)=0.
+(3x-1)(x-3)=0
 \]
-所以可取
-\[
-A=(3,-2\sqrt3),\qquad B=\left(\dfrac13,\dfrac{2\sqrt3}{3}\right).
-\]
+所以可取 \(A=(3,-2\sqrt3)\)，\(B=\left(\dfrac13,\dfrac{2\sqrt3}{3}\right)\).
 又因 \(C\in l\)，设 \(C=(-1,t)\).
 
 先求 \(AB\) 的长度：
 \[
-AB^2=\left(3-\dfrac13\right)^2+\left(-2\sqrt3-\dfrac{2\sqrt3}{3}\right)^2=\dfrac{256}{9}.
+AB^2=\left(3-\dfrac13\right)^2+\left(-2\sqrt3-\dfrac{2\sqrt3}{3}\right)^2=\dfrac{256}{9}
 \]
-若 \(\triangle ABC\) 为正三角形，则必有 \(CA=CB\). 而
-\[
-CA^2=t^2+4\sqrt3t+28,\qquad
-CB^2=t^2-\dfrac{4\sqrt3}{3}t+\dfrac{28}{9}.
-\]
-令两式相等，得
-\[
-\dfrac{16\sqrt3}{3}t=-\dfrac{224}{9},\qquad
-t=-\dfrac{14\sqrt3}{9}.
-\]
+若 \(\triangle ABC\) 为正三角形，则必有 \(CA=CB\). 而 \(CA^2=t^2+4\sqrt3t+28\)，\(CB^2=t^2-\dfrac{4\sqrt3}{3}t+\dfrac{28}{9}\).
+令两式相等，得 \(\dfrac{16\sqrt3}{3}t=-\dfrac{224}{9}\)，从而 \(t=-\dfrac{14\sqrt3}{9}\).
 将此值代入 \(CA^2\)，得
 \[
-CA^2=\dfrac{448}{27}\ne\dfrac{256}{9}=AB^2.
+CA^2=\dfrac{448}{27}\ne\dfrac{256}{9}=AB^2
 \]
 所以不存在同时满足 \(CA=CB=AB\) 的点 \(C\)，即 \(\triangle ABC\) 不能为正三角形.
 
 \item 由上面的坐标，三角形各顶点处的角可用向量内积判断. 有
 \[
 \overrightarrow{AB}\cdot\overrightarrow{AC}
-=\dfrac83(10+\sqrt3t),
+=\dfrac83(10+\sqrt3t)
 \]
 所以角 \(A\) 为钝角的条件是
 \[
-t<-\dfrac{10\sqrt3}{3}.
+t<-\dfrac{10\sqrt3}{3}
 \]
 又
 \[
 \overrightarrow{BA}\cdot\overrightarrow{BC}
-=\dfrac89(2-3\sqrt3t),
+=\dfrac89(2-3\sqrt3t)
 \]
 所以角 \(B\) 为钝角的条件是
 \[
-t>\dfrac{2\sqrt3}{9}.
+t>\dfrac{2\sqrt3}{9}
 \]
 最后
 \[
 \overrightarrow{CA}\cdot\overrightarrow{CB}
-=\left(t+\dfrac{2\sqrt3}{3}\right)^2\geqslant0,
+=\dfrac13\left(\sqrt3t+2\right)^2\geqslant0
 \]
 故角 \(C\) 不可能为钝角.
 
 还需排除三点共线的情形. 直线 \(AB\) 的方程就是 \(y=-\sqrt3(x-1)\)，它与 \(x=-1\) 的交点为 \((-1,2\sqrt3)\)，所以 \(t=2\sqrt3\) 时三角形退化，不能计入钝角三角形. 因而当 \(\triangle ABC\) 为钝角三角形时，点 \(C\) 的纵坐标取值范围为
 \[
-t\in\left(-\infty,-\dfrac{10\sqrt3}{3}\right)\cup\left(\dfrac{2\sqrt3}{9},2\sqrt3\right)\cup\left(2\sqrt3,+\infty\right).
+t\in\left(-\infty,-\dfrac{10\sqrt3}{3}\right)\cup\left(\dfrac{2\sqrt3}{9},2\sqrt3\right)\cup\left(2\sqrt3,+\infty\right)
 \]
 \end{enumerate}
 \end{solution}

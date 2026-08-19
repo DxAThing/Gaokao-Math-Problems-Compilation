@@ -9,6 +9,12 @@
     {\(2\sqrt{2} - \i\)}
     {\(-2\sqrt{2} + \i\)}
 \answer{A}
+
+\begin{solution}
+因为 \(\i^3=-\i\)，所以
+\(\sqrt{2}-\i^3=\sqrt{2}+\i\). 分子分母同乘分母的共轭复数 \(1+\sqrt{2}\i\)，得
+\(\displaystyle\frac{\sqrt{2}+\i}{1-\sqrt{2}\i}=\frac{(\sqrt{2}+\i)(1+\sqrt{2}\i)}{1+2}=\frac{3\i}{3}=\i\). 故选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -20,6 +26,11 @@
     {\(\complement_{I}S_{1}\cap \complement_{I}S_{2}\cap \complement_{I}S_{3} = \varnothing\)}
     {\(S_{1}\subseteq (\complement_{I}S_{2}\cup \complement_{I}S_{3})\)}
 \answer{C}
+
+\begin{solution}
+由 \(S_{1}\cup S_{2}\cup S_{3}=I\)，取补集并利用德 Morgan 定律，得
+\(\complement_{I}S_{1}\cap\complement_{I}S_{2}\cap\complement_{I}S_{3}=\complement_{I}(S_{1}\cup S_{2}\cup S_{3})=\complement_{I}I=\varnothing\). 因此正确的论断是 \(\circled{3}\)，故选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -31,17 +42,35 @@
     {\(4\sqrt{2}\pi\)}
     {\(4\pi\)}
 \answer{B}
+
+\begin{solution}
+设球的半径为 \(R\)，截得圆面的半径为 \(r\). 由圆面面积为 \(\pi\)，得 \(r=1\). 设球心为 \(O\)，截面圆心为 \(H\)，并在截面圆周上取一点 \(R_0\)，则 \(OH=1\)，且 \(R_0H\perp OH\)，所以在直角三角形 \(OHR_0\) 中，\(R^{2}=OH^{2}+R_0H^{2}=1^{2}+1^{2}=2\). 球的表面积为 \(4\pi R^{2}=8\pi\)，故选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
-已知直线 \(l\) 过点 \((-2,0)\)，当直线 \(l\) 与圆 \(x^{2}+y^{2}=2x\) 有两个交点时，其斜率 \(k\) 的取值范围是（\quad）
+已知直线 \(l\) 过点 \((-2,0)\)，当直线 \(l\) 与圆 \(y=1-\sqrt{1-x^{2}}\)（\(-1\leqslant x\leqslant1\)）有两个交点时，其斜率 \(k\) 的取值范围是（\quad）
 
 \choices
     {\((-2\sqrt{2}, 2\sqrt{2})\)}
     {\((-\sqrt{2}, \sqrt{2})\)}
-    {\(\left(-\frac{\sqrt{2}}{4}, \frac{\sqrt{2}}{4}\right)\)}
+    {\(\left(\frac{\sqrt{2}}{4}, \frac{\sqrt{2}}{4}\right)\)}
     {\(\left(-\frac{1}{8}, \frac{1}{8}\right)\)}
-\answer{C}
+\answer{\(0<k\leqslant\frac{1}{3}\)（题面与选项不一致）}
+
+\begin{solution}
+直线 \(l\) 的方程为 \(y=k(x+2)\). 题面所给曲线的函数值满足 \(0\leqslant y\leqslant1\)，而 \(-1\leqslant x\leqslant1\) 时 \(x+2>0\)，所以若有两个交点，必有 \(k>0\). 令
+\(g(x)=1-\sqrt{1-x^{2}}-k(x+2)\)，\(-1\leqslant x\leqslant1\).
+曲线与直线的交点正好是 \(g(x)=0\) 的根. 在 \(-1<x<1\) 内，
+\[
+g''(x)=\frac{1}{(1-x^{2})^{3/2}}>0
+\]
+所以 \(g\) 严格凸，因而至多有两个零点. 又
+\(g(-1)=1-k\)，\(g(0)=-2k\)，\(g(1)=1-3k\).
+当 \(0<k<\frac13\) 时，\(g(-1)>0\)、\(g(0)<0\)、\(g(1)>0\)，由介值定理在 \((-1,0)\) 和 \((0,1)\) 各有一个零点，恰有两个交点. 当 \(k=\frac13\) 时，\(g(-1)>0\)、\(g(0)<0\)、\(g(1)=0\)，交点为一个内点和端点 \((1,1)\)，仍有两个不同交点. 当 \(\frac13<k<1\) 时，\(g(0)<0\)、\(g(1)<0\)，严格凸性说明 \((0,1)\) 内无零点，左侧至多一个交点；当 \(k\geqslant1\) 时，\(g(-1)\leqslant0\)、\(g(1)<0\)，也不可能有两个交点. \(k=0\) 或 \(k<0\) 同样不满足两个交点条件.
+
+因此，按原试卷打印的曲线，斜率范围为 \(0<k\leqslant\frac13\)，与题中四个选项均不一致；该题的原试卷题面、选项与公开标准版本存在冲突，故按题面不能对应合法选项.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -56,6 +85,19 @@
     {\(\frac{4}{3}\)}
     {\(\frac{3}{2}\)}
 \answer{A}
+
+\begin{solution}
+建立空间直角坐标系，取正方形 \(ABCD\) 所在平面为 \(z=0\)，令
+\(A(0,0,0)\)，\(B(1,0,0)\)，\(C(1,1,0)\)，\(D(0,1,0)\). 设
+\(E=(u,\frac12,h)\)，则由 \(\triangle ADE\) 为正三角形，得
+\(u^{2}+\frac14+h^{2}=1\). 由于 \(EF\parallel AB\) 且 \(EF=2\)，可设 \(F=(u+2,\frac12,h)\). 由 \(\triangle BCF\) 为正三角形，得
+\((u+1)^{2}+\frac14+h^{2}=1\). 两式相减得 \(u=-\frac12\)，再代回得 \(h^{2}=\frac12\). 取 \(h=\frac{1}{\sqrt{2}}\).
+
+记 \(z=th\)（\(0\leqslant t\leqslant1\)）的水平截面为 \(K_t\). 该截面是底面正方形与顶面线段 \(EF\) 按比例 \(1-t:t\) 的凸组合，因此其两边长分别为
+\((1-t)\cdot1+t\cdot2=1+t\) 和 \((1-t)\cdot1=1-t\)，从而
+\(S_{K_t}=1-t^{2}\). 所以多面体体积为
+\(V=\displaystyle\int_{0}^{h}\left(1-\frac{z^{2}}{h^{2}}\right)\,\mathrm dz=\frac{2h}{3}=\frac{\sqrt{2}}{3}\). 故选 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -67,6 +109,11 @@
     {\(\frac{\sqrt{6}}{2}\)}
     {\(\frac{2\sqrt{3}}{3}\)}
 \answer{D}
+
+\begin{solution}
+双曲线 \(\displaystyle\frac{x^{2}}{a^{2}}-y^{2}=1\) 的半焦距满足 \(c^{2}=a^{2}+1\)，离心率为 \(e=\frac{c}{a}\)，其准线方程为 \(x=\pm\frac{a}{e}=\pm\frac{a^{2}}{c}\). 抛物线 \(y^{2}=-6x\) 写成 \(y^{2}=2px\)，其中 \(p=-3\)，故其准线为 \(x=-\frac p2=\frac32\). 因而
+\(\displaystyle\frac{a^{2}}{c}=\frac32\). 令 \(t=a^{2}\)，平方得 \(\displaystyle\frac{t^{2}}{t+1}=\frac94\)，即 \(4t^{2}-9t-9=0\). 由于 \(t>0\)，得 \(t=3\)，于是 \(c=2\)，\(e=\frac{2}{\sqrt3}=\frac{2\sqrt3}{3}\). 故选 D.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -78,19 +125,30 @@
     {\(4\)}
     {\(4\sqrt{3}\)}
 \answer{C}
+
+\begin{solution}
+当 \(0<x<\frac\pi2\) 时，\(\tan x>0\)，且
+\(\displaystyle f(x)=\frac{2\cos^{2}x+8\sin^{2}x}{2\sin x\cos x}=\frac{1+4\tan^{2}x}{\tan x}=\frac1{\tan x}+4\tan x\).
+令 \(t=\tan x>0\)，由基本不等式
+\(\displaystyle\frac1t+4t\geqslant2\sqrt{\frac1t\cdot4t}=4\)，等号当且仅当 \(t=\frac12\) 时成立. 因此最小值为 \(4\)，故选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
-设 \(b > 0\)，二次函数 \(y = ax^{2} + bx + a^{2} - 1\) 的图象为下列之一：
-
-则 \(a\) 的值为（\quad）
+设 \(b > 0\)，二次函数 \(y = ax^{2} + bx + a^{2} - 1\) 的图象为下列之一，则 \(a\) 的值为（\quad）
 
 \choices
     {\choicebitmap[width=0.15\paperwidth]{img/2005/national_paper_1_science/q8_optA.png}}
     {\choicebitmap[width=0.15\paperwidth]{img/2005/national_paper_1_science/q8_optB.png}}
     {\choicebitmap[width=0.15\paperwidth]{img/2005/national_paper_1_science/q8_optC.png}}
     {\choicebitmap[width=0.15\paperwidth]{img/2005/national_paper_1_science/q8_optD.png}}
-    \answer{B}
+\answer{C}
+
+\begin{solution}
+抛物线与 \(y\) 轴的交点纵坐标为 \(a^{2}-1\)，开口方向由 \(a\) 的符号决定，对称轴为 \(x=-\frac{b}{2a}\). 题图中前两幅图的对称轴为 \(y\) 轴，与 \(b>0\) 矛盾；第四幅图经过原点且在原点处向下穿过 \(x\) 轴，因而其一次项系数应为负，也与 \(b>0\) 矛盾.
+
+第三幅图开口向下且经过原点，所以 \(a^{2}-1=0\) 且 \(a<0\)，从而 \(a=-1\). 这时图象在原点处的斜率为 \(b>0\)，与第三幅图相符，故选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -102,6 +160,12 @@
     {\(\left(-\infty, \log_a 3\right)\)}
     {\((\log_a 3, +\infty)\)}
 \answer{C}
+
+\begin{solution}
+令 \(t=a^{x}>0\). 由于 \(0<a<1\)，函数 \(\log_{a}u\) 的定义域要求 \(u>0\)，且 \(\log_{a}u<0\) 等价于 \(u>1\). 因而
+\(f(x)<0\iff a^{2x}-2a^{x}-2>1\iff t^{2}-2t-3>0\iff (t-3)(t+1)>0\).
+因为 \(t>0\)，所以 \(t>3\)，即 \(a^{x}>3\). 由 \(0<a<1\) 时指数函数单调递减，得 \(x<\log_{a}3\). 这个条件自动保证真数 \(t^{2}-2t-2>0\)，故取值范围为 \((-\infty,\log_{a}3)\)，选 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -116,6 +180,14 @@ y\leqslant-3|x|+1
     {\(\frac{3\sqrt{2}}{2}\)}
     {\(2\)}
 \answer{B}
+
+\begin{solution}
+当 \(x\leqslant0\) 时，上界为 \(y=3x+1\)，下界为 \(y=x-1\)，两直线交于 \((-1,-2)\)，并在 \(x=0\) 处分别取 \(1\) 和 \(-1\). 这部分区域是底为 \(1\)、两端高为 \(0\) 和 \(2\) 的梯形，面积为 \(\frac{0+2}{2}\cdot1=1\).
+
+当 \(x\geqslant0\) 时，上界为 \(y=-3x+1\)，与下界 \(y=x-1\) 交于 \((\frac12,-\frac12)\). 这部分区域与左侧合并后应直接按分段积分计算：
+\(\displaystyle S=\int_{-1}^{0}\bigl[(3x+1)-(x-1)\bigr]\,\mathrm dx+\int_{0}^{1/2}\bigl[(-3x+1)-(x-1)\bigr]\,\mathrm dx=1+\frac12=\frac32\).
+因此平面区域面积为 \(\frac32\)，故选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -136,6 +208,15 @@ y\leqslant-3|x|+1
     {\(\circled{1}\circled{4}\)}
     {\(\circled{2}\circled{3}\)}
 \answer{B}
+
+\begin{solution}
+在三角形中 \(A+B=\pi-C\)，所以
+\(\displaystyle\tan\frac{A+B}{2}=\cot\frac C2=\sin C=2\sin\frac C2\cos\frac C2\). 因为 \(0<C<\pi\)，故 \(\sin\frac C2\) 与 \(\cos\frac C2\) 均为正，化简得 \(2\sin^{2}\frac C2=1\)，从而 \(C=\frac\pi2\)，即 \(A+B=\frac\pi2\).
+
+于是 \(\sin A+\sin B=2\sin\frac{A+B}{2}\cos\frac{A-B}{2}=\sqrt2\cos\frac{A-B}{2}\). 由于 \(A\)，\(B>0\)，有 \(0<\cos\frac{A-B}{2}\leqslant1\)，故 \(\circled{2}\) 正确. 又 \(\cos B=\sin A\)，所以 \(\cos^{2}A+\cos^{2}B=\cos^{2}A+\sin^{2}A=1=\sin^{2}C\)，故 \(\circled{4}\) 正确.
+
+例如取 \(A=\frac\pi6\)，\(B=\frac\pi3\)，则 \(C=\frac\pi2\)，题设条件成立，但 \(\tan A\cdot\cot B=\frac13\ne1\)，且 \(\sin^{2}A+\cos^{2}B=\frac12\ne1\)，故 \(\circled{1}\)、\(\circled{3}\) 不正确. 因此选 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -147,22 +228,45 @@ y\leqslant-3|x|+1
     {\(30\text{ 对}\)}
     {\(36\text{ 对}\)}
 \answer{D}
+
+\begin{solution}
+三棱柱的顶点记为 \(A\)，\(B\)，\(C\)，\(A'\)，\(B'\)，\(C'\). 任取两个顶点确定的直线共有 \(\mathrm C_{6}^{2}=15\) 条，可分为三条侧棱、六条三角形底面的边和六条侧面的对角线三类.
+
+以侧棱 \(AA'\) 为例，与它异面的直线为 \(BC\)、\(BC'\)、\(CB'\)、\(B'C'\)，共 \(4\) 条. 以底面边 \(AB\) 为例，与它异面的直线为 \(CA'\)、\(CB'\)、\(CC'\)、\(A'C'\)、\(B'C'\)，共 \(5\) 条. 以侧面上的对角线 \(AB'\) 为例，与它异面的直线为 \(BC\)、\(BC'\)、\(CA'\)、\(CC'\)、\(A'C'\)，共 \(5\) 条. 其余同类直线由三棱柱的对称性得到相同数量. 因而把每一对异面直线计算两次，异面直线对数为
+\(\displaystyle\frac{3\times4+6\times5+6\times5}{2}=36\). 故选 D.
+\end{solution}
 \end{problem}
 
 \section{填空题}
 \begin{problem}
 若正整数 \(m\) 满足 \(10^{m-1} < 2^{512} < 10^{m}\)，则 \(m =\fillinblank{}\).（\(\lg 2 \approx 0.3010\)）
 \answer{155}
+
+\begin{solution}
+对不等式取常用对数，得 \(m-1<512\lg2<m\). 由 \(\lg2\approx0.3010\)，有 \(512\lg2\approx154.112\)，所以 \(m-1<154.112<m\). 因为 \(m\) 为正整数，故 \(m=155\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
 \(\left(2x - \frac{1}{\sqrt{x}}\right)^9\) 的展开式中，常数项为\fillinblank{}.（用数字作答）
 \answer{672}
+
+\begin{solution}
+展开式的通项为 \(\displaystyle\mathrm C_{9}^{k}(2x)^{9-k}\left(-\frac1{\sqrt{x}}\right)^{k}\)，其中 \(k=0\)，\(1\)，\(\ldots\)，\(9\). 其 \(x\) 的指数为 \(9-k-\frac{k}{2}=9-\frac{3k}{2}\). 要得到常数项，须有 \(9-\frac{3k}{2}=0\)，故 \(k=6\). 常数项为
+\(\displaystyle\mathrm C_{9}^{6}2^{3}(-1)^{6}=84\times8=672\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
 \(\triangle ABC\) 的外接圆的圆心为 \(O\)，两条边上的高的交点为 \(H\)，\(\overrightarrow{OH} = m(\overrightarrow{OA} + \overrightarrow{OB} + \overrightarrow{OC})\)，则实数 \(m =\)\fillinblank{}.
 \answer{1}
+
+\begin{solution}
+以 \(O\) 为原点，记 \(\overrightarrow{OA}=\bs a\)，\(\overrightarrow{OB}=\bs b\)，\(\overrightarrow{OC}=\bs c\). 因为 \(A\)，\(B\)，\(C\) 在以 \(O\) 为圆心的圆上，所以 \(|\bs a|=|\bs b|=|\bs c|\). 令 \(\bs h=\bs a+\bs b+\bs c\)，取点 \(H_0\) 使 \(\overrightarrow{OH_0}=\bs h\). 则
+\(\overrightarrow{AH_0}=\bs h-\bs a=\bs b+\bs c\)，\(\overrightarrow{BC}=\bs c-\bs b\)，从而 \(\overrightarrow{AH_0}\cdot\overrightarrow{BC}=|\bs c|^{2}-|\bs b|^{2}=0\). 同理可得 \(BH_0\perp AC\)，所以点 \(H_0\) 是三角形的垂心，即 \(H_0=H\)，从而
+\(\overrightarrow{OH}=\bs a+\bs b+\bs c=\overrightarrow{OA}+\overrightarrow{OB}+\overrightarrow{OC}\).
+因此 \((m-1)\bs h=\bs0\). 当 \(\bs h\ne\bs0\)（即 \(ABC\) 不是等边三角形）时，\(m=1\)，故按题目预期答案填 1. 若 \(ABC\) 为等边三角形，则 \(\bs h=\bs0\)，题设等式对任意 \(m\) 都成立；题面未排除这一特殊情形.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -177,6 +281,18 @@ y\leqslant-3|x|+1
 
 以上结论正确的为\fillinblank{}.（写出所有正确结论的编号）
 \answer{\(\circled{1}\circled{3}\circled{4}\)}
+
+\begin{solution}
+设正方体棱长为 \(a\)，取坐标
+\(A(0,0,0)\)，\(B(a,0,0)\)，\(C(a,a,0)\)，\(D(0,a,0)\)，\(A'(0,0,a)\)，\(D'(0,a,a)\). 设 \(E=(0,0,ta)\)，其中 \(0\leqslant t\leqslant1\). 过 \(B\)，\(D'\)，\(E\) 的平面方程可写为
+\(tx+ty-y+z-ta=0\). 令 \(x=y=a\)，得到 \(F=(a,a,(1-t)a)\).
+
+于是 \(\overrightarrow{BF}=(0,a,(1-t)a)=\overrightarrow{ED'}\)，且 \(\overrightarrow{FD'}=(-a,0,ta)=\overrightarrow{BE}\)，所以四边形 \(BFD'E\) 一定是平行四边形，\(\circled{1}\) 正确. 它在底面 \(ABCD\) 上的投影四个顶点为 \(B\)，\(C\)，\(D\)，\(A\)，故投影一定是正方形，\(\circled{3}\) 正确.
+
+相邻两边的内积为 \(\overrightarrow{BF}\cdot\overrightarrow{FD'}=a^{2}t(1-t)\). 若平行四边形为正方形，须有 \(t=0\) 或 \(t=1\)，但此时两邻边长度分别为 \(a\) 与 \(a\sqrt2\)，不相等，所以 \(\circled{2}\) 不正确.
+
+平面 \(BFD'E\) 的一个法向量可取 \((t,t-1,1)\)，平面 \(BB'D\) 的一个法向量可取 \((1,1,0)\). 当 \(t=\frac12\) 时两法向量的内积为 \(0\)，故此时两平面垂直，\(\circled{4}\) 正确. 所以正确结论为 \(\circled{1}\)、\(\circled{3}\)、\(\circled{4}\).
+\end{solution}
 \end{problem}
 
 \section{解答题}
@@ -215,25 +331,19 @@ y\leqslant-3|x|+1
 \begin{enumerate}
 \item 由 \(PA\perp\) 底面 \(ABCD\)，知 \(PA\perp CD\). 又因为 \(AB\parallel DC\) 且 \(\angle DAB=90^{\circ}\)，所以 \(AD\perp CD\). 直线 \(PA\)，\(AD\) 是面 \(PAD\) 内相交的两条直线，且 \(CD\perp PA\)，\(CD\perp AD\)，故 \(CD\perp\) 面 \(PAD\). 由于 \(CD\) 在面 \(PCD\) 内，所以面 \(PAD\perp\) 面 \(PCD\).
 \item 建立空间直角坐标系，取 \(A\) 为原点，\(AB\)，\(AD\)，\(AP\) 所在方向分别为 \(x\) 轴，\(y\) 轴，\(z\) 轴，则 \(A(0,0,0)\)，\(B(2,0,0)\)，\(D(0,1,0)\)，\(C(1,1,0)\)，\(P(0,0,1)\). 于是
-\[
-\overrightarrow{AC}=(1,1,0),\qquad \overrightarrow{PB}=(2,0,-1).
-\]
+\(\overrightarrow{AC}=(1,1,0)\)，\(\overrightarrow{PB}=(2,0,-1)\).
 设 \(AC\) 与 \(PB\) 所成的角为 \(\theta\)，则
 \[
-\cos\theta=\frac{\left|\overrightarrow{AC}\cdot\overrightarrow{PB}\right|}{\left|\overrightarrow{AC}\right|\left|\overrightarrow{PB}\right|}=\frac{2}{\sqrt{2}\sqrt{5}}=\frac{\sqrt{10}}{5}.
+\cos\theta=\frac{\left|\overrightarrow{AC}\cdot\overrightarrow{PB}\right|}{\left|\overrightarrow{AC}\right|\left|\overrightarrow{PB}\right|}=\frac{2}{\sqrt{2}\sqrt{5}}=\frac{\sqrt{10}}{5}
 \]
 所以 \(AC\) 与 \(PB\) 所成的角为 \(\arccos\dfrac{\sqrt{10}}{5}\).
 \item 由 \(M\) 是 \(PB\) 的中点，得 \(M(1,0,\frac{1}{2})\). 设 \(N\) 为 \(CM\) 上使 \(AN\perp CM\) 的点. 由
-\[
-\overrightarrow{CM}=(0,-1,\tfrac{1}{2}),\qquad \overrightarrow{CA}=(-1,-1,0),\qquad \overrightarrow{CB}=(1,-1,0)
-\]
+\(\overrightarrow{CM}=(0,-1,\tfrac{1}{2})\)，\(\overrightarrow{CA}=(-1,-1,0)\)，\(\overrightarrow{CB}=(1,-1,0)\)
 可得 \(\overrightarrow{CA}\cdot\overrightarrow{CM}=\overrightarrow{CB}\cdot\overrightarrow{CM}=1\). 因此 \(A\)，\(B\) 在直线 \(CM\) 上的射影相同，\(N\) 同时也是 \(B\) 到 \(CM\) 的垂足. 由 \(AN\perp CM\) 得 \(N(1,\frac{1}{5},\frac{2}{5})\)，从而
-\[
-\overrightarrow{NA}=(-1,-\tfrac{1}{5},-\tfrac{2}{5}),\qquad \overrightarrow{NB}=(1,-\tfrac{1}{5},-\tfrac{2}{5}).
-\]
+\(\overrightarrow{NA}=(-1,-\tfrac{1}{5},-\tfrac{2}{5})\)，\(\overrightarrow{NB}=(1,-\tfrac{1}{5},-\tfrac{2}{5})\).
 又 \(BN\perp CM\)，故 \(\angle ANB\) 是所求二面角的平面角. 因此
 \[
-\cos\angle ANB=\frac{\overrightarrow{NA}\cdot\overrightarrow{NB}}{\left|\overrightarrow{NA}\right|\left|\overrightarrow{NB}\right|}=\frac{-1+\frac{1}{25}+\frac{4}{25}}{1+\frac{1}{25}+\frac{4}{25}}=-\frac{2}{3}.
+\cos\angle ANB=\frac{\overrightarrow{NA}\cdot\overrightarrow{NB}}{\left|\overrightarrow{NA}\right|\left|\overrightarrow{NB}\right|}=\frac{-1+\frac{1}{25}+\frac{4}{25}}{1+\frac{1}{25}+\frac{4}{25}}=-\frac{2}{3}
 \]
 所以所求二面角的大小为 \(\arccos\left(-\dfrac{2}{3}\right)\).
 \end{enumerate}
@@ -252,20 +362,20 @@ y\leqslant-3|x|+1
 \begin{enumerate}
 \item 因为 \(S_1=a_1>0\)，所以 \(a_1>0\). 当 \(q\ne1\) 时，
 \[
-S_n=a_1\frac{1-q^n}{1-q}.
+S_n=a_1\frac{1-q^n}{1-q}
 \]
 若 \(q\geqslant0\)，当 \(0\leqslant q<1\) 时分子、分母均为正，当 \(q>1\) 时分子、分母均为负，且 \(q=1\) 时 \(S_n=na_1>0\)，所以所有 \(q\geqslant0\) 均满足条件. 若 \(q<0\)，则奇数 \(n\) 时 \(1-q^n>0\)，而偶数 \(n\) 时必须有 \(1-q^n>0\)，即 \(|q|<1\). 因此 \(q\) 的取值范围为 \(q>-1\).
 \item 由 \(a_{n+1}=a_1q^n\)，得
 \[
-b_n=a_1q^n\left(q-\frac{3}{2}\right).
+b_n=a_1q^n\left(q-\frac{3}{2}\right)
 \]
 于是
 \[
-T_n=\left(q-\frac{3}{2}\right)\sum_{k=1}^{n}a_1q^k=q\left(q-\frac{3}{2}\right)S_n.
+T_n=\left(q-\frac{3}{2}\right)\sum_{k=1}^{n}a_1q^k=q\left(q-\frac{3}{2}\right)S_n
 \]
 因此
 \[
-S_n-T_n=\left[1-q\left(q-\frac{3}{2}\right)\right]S_n=\left(2-q\right)\left(q+\frac{1}{2}\right)S_n.
+S_n-T_n=\left[1-q\left(q-\frac{3}{2}\right)\right]S_n=\left(2-q\right)\left(q+\frac{1}{2}\right)S_n
 \]
 由于 \(S_n>0\)，所以
 \[
@@ -284,9 +394,7 @@ S_n>T_n,&-\dfrac{1}{2}<q<2.
 
 \begin{solution}
 一个坑内的 \(3\) 粒种子都不发芽的概率为 \(\left(1-0.5\right)^3=\dfrac{1}{8}\)，一个坑需要补种的概率为 \(\dfrac{1}{8}\)，不需要补种的概率为 \(\dfrac{7}{8}\). 设需要补种的坑数为 \(Y\)，则 \(Y\) 服从参数为 \(3\)，\(\dfrac{1}{8}\) 的二项分布，且 \(\xi=10Y\). 因此
-\[
-P(\xi=10k)=\mathrm C_3^k\left(\frac{1}{8}\right)^k\left(\frac{7}{8}\right)^{3-k}\quad(k=0,1,2,3).
-\]
+\(P(\xi=10k)=\mathrm C_3^k\left(\frac{1}{8}\right)^k\left(\frac{7}{8}\right)^{3-k}\)，\((k=0,1,2,3)\).
 故 \(\xi\) 的分布列为
 \begin{center}
 \begin{tabular}{c|cccc}
@@ -297,7 +405,7 @@ P(\xi=10k)=\mathrm C_3^k\left(\frac{1}{8}\right)^k\left(\frac{7}{8}\right)^{3-k}
 \end{center}
 于是
 \[
-E(\xi)=10E(Y)=10\cdot3\cdot\frac{1}{8}=\frac{15}{4}=3.75\text{ 元}.
+E(\xi)=10E(Y)=10\cdot3\cdot\frac{1}{8}=\frac{15}{4}=3.75\text{ 元}
 \]
 所以 \(\xi\) 的数学期望为 \(3.75\text{ 元}\).
 \end{solution}
@@ -315,47 +423,39 @@ E(\xi)=10E(Y)=10\cdot3\cdot\frac{1}{8}=\frac{15}{4}=3.75\text{ 元}.
 \begin{enumerate}
 \item 设椭圆方程为 \(\dfrac{x^2}{a_0^2}+\dfrac{y^2}{b_0^2}=1\)，其中 \(a_0>b_0>0\)，焦半距为 \(c\)，则 \(c^2=a_0^2-b_0^2\)，右焦点为 \(F(c,0)\). 由直线斜率为 \(1\)，该直线方程为 \(y=x-c\). 设它与椭圆的交点为 \(A(x_1,y_1)\)，\(B(x_2,y_2)\)，代入椭圆方程得
 \[
-(a_0^2+b_0^2)x^2-2a_0^2cx+a_0^2(c^2-b_0^2)=0.
+(a_0^2+b_0^2)x^2-2a_0^2cx+a_0^2(c^2-b_0^2)=0
 \]
 由韦达定理，
-\[
-x_1+x_2=\frac{2a_0^2c}{a_0^2+b_0^2},\qquad x_1x_2=\frac{a_0^2(c^2-b_0^2)}{a_0^2+b_0^2}.
-\]
+\(x_1+x_2=\frac{2a_0^2c}{a_0^2+b_0^2}\)，\(x_1x_2=\frac{a_0^2(c^2-b_0^2)}{a_0^2+b_0^2}\).
 又 \(y_i=x_i-c\)，所以
 \[
-y_1+y_2=-\frac{2b_0^2c}{a_0^2+b_0^2}.
+y_1+y_2=-\frac{2b_0^2c}{a_0^2+b_0^2}
 \]
 因 \(\overrightarrow{OA}+\overrightarrow{OB}\) 与 \((3,-1)\) 共线，故
 \[
-\frac{y_1+y_2}{x_1+x_2}=-\frac{1}{3}.
+\frac{y_1+y_2}{x_1+x_2}=-\frac{1}{3}
 \]
 因此 \(-\dfrac{b_0^2}{a_0^2}=-\dfrac{1}{3}\)，即 \(b_0^2=\dfrac{a_0^2}{3}\). 于是
 \[
-e=\frac{c}{a_0}=\sqrt{1-\frac{b_0^2}{a_0^2}}=\sqrt{\frac{2}{3}}=\frac{\sqrt{6}}{3}.
+e=\frac{c}{a_0}=\sqrt{1-\frac{b_0^2}{a_0^2}}=\sqrt{\frac{2}{3}}=\frac{\sqrt{6}}{3}
 \]
 \item 由 \(b_0^2=\dfrac{a_0^2}{3}\) 和 \(c^2=\dfrac{2a_0^2}{3}\)，可得
-\[
-x_1+x_2=\frac{3c}{2},\qquad x_1x_2=\frac{a_0^2}{4}.
-\]
+\(x_1+x_2=\frac{3c}{2}\)，\(x_1x_2=\frac{a_0^2}{4}\).
 所以
 \[
-(x_1-x_2)^2=(x_1+x_2)^2-4x_1x_2=\frac{a_0^2}{2}.
+(x_1-x_2)^2=(x_1+x_2)^2-4x_1x_2=\frac{a_0^2}{2}
 \]
 交换 \(A\)，\(B\) 只会交换 \(\lambda\)，\(\mu\)，不影响 \(\lambda^2+\mu^2\)，故不妨设 \(x_1-x_2=\dfrac{a_0}{\sqrt{2}}\). 因为 \(y_i=x_i-c\)，于是
-\[
-\overrightarrow{OA}+\overrightarrow{OB}=\left(\frac{3c}{2},-\frac{c}{2}\right),\qquad \overrightarrow{OA}-\overrightarrow{OB}=\left(\frac{a_0}{\sqrt{2}},\frac{a_0}{\sqrt{2}}\right).
-\]
+\(\overrightarrow{OA}+\overrightarrow{OB}=\left(\frac{3c}{2},-\frac{c}{2}\right)\)，\(\overrightarrow{OA}-\overrightarrow{OB}=\left(\frac{a_0}{\sqrt{2}},\frac{a_0}{\sqrt{2}}\right)\).
 记 \(s=\lambda+\mu\)，\(d=\lambda-\mu\)，则
 \[
-\overrightarrow{OM}=\frac{s}{2}\left(\overrightarrow{OA}+\overrightarrow{OB}\right)+\frac{d}{2}\left(\overrightarrow{OA}-\overrightarrow{OB}\right).
+\overrightarrow{OM}=\frac{s}{2}\left(\overrightarrow{OA}+\overrightarrow{OB}\right)+\frac{d}{2}\left(\overrightarrow{OA}-\overrightarrow{OB}\right)
 \]
 因此 \(M\) 的坐标为
-\[
-x_M=\frac{3cs}{4}+\frac{a_0d}{2\sqrt{2}},\qquad y_M=-\frac{cs}{4}+\frac{a_0d}{2\sqrt{2}}.
-\]
+\(x_M=\frac{3cs}{4}+\frac{a_0d}{2\sqrt{2}}\)，\(y_M=-\frac{cs}{4}+\frac{a_0d}{2\sqrt{2}}\).
 令 \(u=\dfrac{cs}{4}\)，\(v=\dfrac{a_0d}{2\sqrt{2}}\)，则由 \(M\) 在椭圆上以及 \(b_0^2=\dfrac{a_0^2}{3}\)，有
 \[
-1=\frac{x_M^2}{a_0^2}+\frac{y_M^2}{b_0^2}=\frac{(3u+v)^2+3(-u+v)^2}{a_0^2}=\frac{12u^2+4v^2}{a_0^2}=\frac{s^2+d^2}{2}.
+1=\frac{x_M^2}{a_0^2}+\frac{y_M^2}{b_0^2}=\frac{(3u+v)^2+3(-u+v)^2}{a_0^2}=\frac{12u^2+4v^2}{a_0^2}=\frac{s^2+d^2}{2}
 \]
 而 \(\dfrac{s^2+d^2}{2}=\dfrac{(\lambda+\mu)^2+(\lambda-\mu)^2}{2}=\lambda^2+\mu^2\)，所以 \(\lambda^2+\mu^2=1\)，为定值.
 \end{enumerate}
@@ -372,39 +472,33 @@ x_M=\frac{3cs}{4}+\frac{a_0d}{2\sqrt{2}},\qquad y_M=-\frac{cs}{4}+\frac{a_0d}{2\
 \begin{enumerate}
 \item 在 \(0<x<1\) 内，
 \[
-f'(x)=\log_2x-\log_2(1-x)=\log_2\frac{x}{1-x},
+f'(x)=\log_2x-\log_2(1-x)=\log_2\frac{x}{1-x}
 \]
 所以 \(f'(x)=0\) 当且仅当 \(x=\dfrac{1}{2}\). 又
 \[
-f''(x)=\frac{1}{\ln2}\left(\frac{1}{x}+\frac{1}{1-x}\right)>0,
+f''(x)=\frac{1}{\ln2}\left(\frac{1}{x}+\frac{1}{1-x}\right)>0
 \]
 故 \(f(x)\) 在 \(x=\dfrac{1}{2}\) 处取得最小值. 最小值为
 \[
-f\left(\frac{1}{2}\right)=\frac{1}{2}\log_2\frac{1}{2}+\frac{1}{2}\log_2\frac{1}{2}=-1.
+f\left(\frac{1}{2}\right)=\frac{1}{2}\log_2\frac{1}{2}+\frac{1}{2}\log_2\frac{1}{2}=-1
 \]
 \item 用数学归纳法证明. \(n=1\) 时，令 \(p_1=x\)，\(p_2=1-x\)，由第（1）问得
 \[
-p_1\log_2p_1+p_2\log_2p_2\geqslant-1.
+p_1\log_2p_1+p_2\log_2p_2\geqslant-1
 \]
-假设对 \(2^{n-1}\) 个正数 \(q_1,q_2,\cdots,q_{2^{n-1}}\)，当 \(\sum_{j=1}^{2^{n-1}}q_j=1\) 时，不等式
+假设对 \(2^{n-1}\) 个正数 \(q_1\)，\(q_2\)，\(\cdots\)，\(q_{2^{n-1}}\)，当 \(\sum_{j=1}^{2^{n-1}}q_j=1\) 时，不等式
 \[
 \sum_{j=1}^{2^{n-1}}q_j\log_2q_j\geqslant-(n-1)
 \]
 成立. 对 \(2^n\) 个正数作分组，令
-\[
-q_j=p_{2j-1}+p_{2j},\qquad t_j=\frac{p_{2j-1}}{q_j}\quad\left(j=1,2,\cdots,2^{n-1}\right).
-\]
+\(q_j=p_{2j-1}+p_{2j}\)，\(t_j=\frac{p_{2j-1}}{q_j}\)，\(\left(j=1,2,\cdots,2^{n-1}\right)\).
 则 \(0<t_j<1\)，\(\sum q_j=1\)，并且
 \[
-\begin{aligned}
-p_{2j-1}\log_2p_{2j-1}+p_{2j}\log_2p_{2j}
-&=q_j\log_2q_j+q_j\left[t_j\log_2t_j+(1-t_j)\log_2(1-t_j)\right]\\
-&\geqslant q_j\log_2q_j-q_j.
-\end{aligned}
+p_{2j-1}\log_2p_{2j-1}+p_{2j}\log_2p_{2j}=q_j\log_2q_j+q_j\left[t_j\log_2t_j+(1-t_j)\log_2(1-t_j)\right]\geqslant q_j\log_2q_j-q_j
 \]
-对 \(j=1,2,\cdots,2^{n-1}\) 求和，得到
+对 \(j=1\)，\(2\)，\(\cdots\)，\(2^{n-1}\) 求和，得到
 \[
-\sum_{i=1}^{2^n}p_i\log_2p_i\geqslant\sum_{j=1}^{2^{n-1}}q_j\log_2q_j-\sum_{j=1}^{2^{n-1}}q_j\geqslant-(n-1)-1=-n.
+\sum_{i=1}^{2^n}p_i\log_2p_i\geqslant\sum_{j=1}^{2^{n-1}}q_j\log_2q_j-\sum_{j=1}^{2^{n-1}}q_j\geqslant-(n-1)-1=-n
 \]
 因此不等式对任意正整数 \(n\) 成立.
 \end{enumerate}

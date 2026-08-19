@@ -5,15 +5,14 @@
 \end{problem}
 
 \begin{solution}
-不是同一个函数.
-因为
+两式的定义域都是 \(\R\)，但对任意 \(x\in\R\)，有
 \[
-y=2\sqrt{x^2}=\begin{cases}
+2\sqrt{x^2}=2\lvert x\rvert=\begin{cases}
 2x, & x\geq 0,\\
--2x, & x\leq 0.
+-2x, & x<0.
 \end{cases}
 \]
-所以 \(y=2\sqrt{x^2}\) 与 \(y=2x\) 并不恒等，不是同一个函数.
+当 \(x=-1\) 时，\(2\sqrt{x^2}=2\)，而 \(2x=-2\)，两式的函数值不相等. 因此 \(y=2\sqrt{x^2}\) 与 \(y=2x\) 不是同一个函数.
 \end{solution}
 
 \begin{problem}
@@ -28,17 +27,20 @@ y=2\sqrt{x^2}=\begin{cases}
 
 \begin{solution}
 \begin{enumerate}
-\item \(1-\sin 800^\circ=1-\sin\left(2\times 360^\circ+80^\circ\right)=1-\sin 80^\circ>0\).
+\item 因为 \(800^\circ=2\times 360^\circ+80^\circ\)，所以
+\(1-\sin 800^\circ=1-\sin 80^\circ\). 又因为 \(0<\sin 80^\circ<1\)，故 \(1-\sin 800^\circ>0\).
 
-\item \(\cos 20^\circ-\sin 20^\circ=\cos\left(90^\circ-70^\circ\right)-\sin 20^\circ=\sin 70^\circ-\sin 20^\circ>0\).
+\item \(\cos 20^\circ=\sin 70^\circ\)，所以
+\(\cos 20^\circ-\sin 20^\circ=\sin 70^\circ-\sin 20^\circ\). 由于 \(0<20^\circ<70^\circ<90^\circ\)，正弦函数在该区间上递增，故 \(\sin 70^\circ-\sin 20^\circ>0\).
 
-\item
+\item 由正切函数的周期性和诱导公式，
 \[
-\tan 288^\circ\cdot\tan 510^\circ=\tan\left(360^\circ-72^\circ\right)\cdot\tan\left(360^\circ+150^\circ\right)=-\tan 72^\circ\cdot\tan 150^\circ.
+\tan 288^\circ=\tan\left(360^\circ-72^\circ\right)=-\tan 72^\circ<0
 \]
 \[
--\tan 72^\circ\cdot\tan 150^\circ=-\tan 72^\circ\cdot\tan\left(180^\circ-30^\circ\right)=-\tan 72^\circ\left(-\tan 30^\circ\right)=\tan 72^\circ\cdot\tan 30^\circ>0.
+\tan 510^\circ=\tan\left(360^\circ+150^\circ\right)=\tan 150^\circ=-\tan 30^\circ<0
 \]
+两个负数的乘积为正，所以 \(\tan 288^\circ\cdot\tan 510^\circ>0\).
 \end{enumerate}
 \end{solution}
 
@@ -47,10 +49,15 @@ y=2\sqrt{x^2}=\begin{cases}
 \end{problem}
 
 \begin{solution}
-由 \(x\)，\(y\) 都是实数，且 \(\left(2x-1\right)^2+\left(y-8\right)^2=0\) 可知 \(\left(2x-1\right)^2=0\) 和 \(\left(y-8\right)^2=0\)，即 \(x=\frac{1}{2}\) 和 \(y=8\).
-所以
+两个平方数都非负，故
+\(\left(2x-1\right)^2+\left(y-8\right)^2\geq 0\). 结合题设不等式，只能有
 \[
-\log_2xy=\log_2\left(\frac{1}{2}\times 8\right)=\log_2 4=2\log_2 2=2.
+\left(2x-1\right)^2+\left(y-8\right)^2=0
+\]
+非负数之和为零时每一项都为零，因此
+\(2x-1=0\)，\(y-8=0\)，即 \(x=\frac{1}{2}\)，\(y=8\). 于是 \(xy=4>0\)，对数有意义，且
+\[
+\log_2xy=\log_2\left(\frac{1}{2}\times 8\right)=\log_2 4=2
 \]
 \end{solution}
 
@@ -59,20 +66,25 @@ y=2\sqrt{x^2}=\begin{cases}
 \end{problem}
 
 \begin{solution}
-原式 \(=\sqrt{\left(\log_3 20-3\right)^2}=\left|\log_3 20-3\right|\).
-
-而 \(3=\log_3 3^3=\log_3 27>\log_3 20\).
-
-所以原式 \(=\left|\log_3 20-3\right|=3-\log_3 20\).
+原式
+\[
+=\sqrt{\left(\log_3 20-3\right)^2}=\left\lvert\log_3 20-3\right\rvert
+\]
+因为底数 \(3>1\)，对数函数 \(\log_3x\) 递增，且
+\(3=\log_3 27>\log_3 20\)，所以 \(\log_3 20-3<0\). 因此
+\[
+\left\lvert\log_3 20-3\right\rvert=3-\log_3 20
+\]
 \end{solution}
 
 \begin{problem}
-已知 \(\log_{1.5}7=a\)，\(\log_{1.5}8=b\)，求 \(\log_{56}15\)？
+已知 \(\log_{1.5}7=a\)，\(\log_{1.5}8=b\)，求 \(\log_{56}1.5\)？
 \end{problem}
 
 \begin{solution}
+因为 \(1.5>0\) 且 \(1.5\neq 1\)，可用换底公式. 又 \(56=7\times 8\)，所以
 \[
-\log_{56}15=\frac{\log_{1.5}15}{\log_{1.5}56}=\frac{1}{\log_{1.5}\left(7\times 8\right)}=\frac{1}{\log_{1.5}7+\log_{1.5}8}=\frac{1}{a+b}.
+\log_{56}1.5=\frac{\log_{1.5}1.5}{\log_{1.5}56}=\frac{1}{\log_{1.5}(7\times 8)}=\frac{1}{\log_{1.5}7+\log_{1.5}8}=\frac{1}{a+b}
 \]
 \end{solution}
 
@@ -82,8 +94,27 @@ y=2\sqrt{x^2}=\begin{cases}
 \end{problem}
 
 \begin{solution}
+原式有意义需满足 \(x\neq 0\)，\(x^{-1}+1\neq 0\)，\(x^{-1}-1\neq 0\)，即
+\(x\in\R\mathbin{\backslash}\{-1,0,1\}\). 在此条件下，
 \[
-\text{原式}=\left(\frac{1-x}{1+x}-\frac{1+x}{1-x}\right)\cdot\left(\frac{1}{2}-\frac{1}{4x}-\frac{x}{4}\right)=\frac{-4x}{1-x^2}\cdot\frac{2x-1-x^2}{4x}=\frac{\left(x-1\right)^2}{1-x^2}=\frac{1-x}{1+x}.
+\frac{x^{-1}-1}{x^{-1}+1}-\frac{x^{-1}+1}{x^{-1}-1}
+=\frac{1-x}{1+x}-\frac{1+x}{1-x}
+=\frac{(1-x)^2-(1+x)^2}{1-x^2}
+=\frac{-4x}{1-x^2}
+\]
+并且
+\[
+2^{-1}-4^{-1}x^{-1}-4^{-1}x
+=\frac{1}{2}-\frac{1}{4x}-\frac{x}{4}
+=\frac{2x-1-x^2}{4x}
+=-\frac{(x-1)^2}{4x}
+\]
+所以原式
+\[
+=\frac{-4x}{1-x^2}\cdot\left(-\frac{(x-1)^2}{4x}\right)
+=\frac{(x-1)^2}{1-x^2}
+=\frac{(1-x)^2}{(1-x)(1+x)}
+=\frac{1-x}{1+x}
 \]
 \end{solution}
 
@@ -92,12 +123,18 @@ y=2\sqrt{x^2}=\begin{cases}
 \end{problem}
 
 \begin{solution}
-要使方程有两个不相等的实根，必须根的判别式大于 \(0\)，即
+将方程移项得
 \[
-\left(8h+1\right)^2-4\times 2h\times 8h>0.
+2hx^2+\left(8h+1\right)x+8h=0
 \]
-整理为 \(16h+1>0\). 还需 \(h\ne 0\)，否则方程退化为一次方程.
-所以 \(-\frac{1}{16}<h<0\) 或 \(h>0\) 时，方程有两个不相等的实根.
+要使它是关于 \(x\) 的二次方程，必须有 \(2h\neq 0\)，即 \(h\neq 0\). 此时判别式为
+\[
+\Delta=\left(8h+1\right)^2-4\times 2h\times 8h=16h+1
+\]
+方程有两个不相等的实根，当且仅当 \(\Delta>0\)，即 \(h>-\frac{1}{16}\). 再结合 \(h\neq 0\)，得到
+\[
+-\frac{1}{16}<h<0\quad\text{或}\quad h>0
+\]
 \end{solution}
 
 \begin{problem}
@@ -106,14 +143,27 @@ y=2\sqrt{x^2}=\begin{cases}
 \end{problem}
 
 \begin{solution}
+先考察左式的定义条件. 利用诱导公式，分母为
 \[
-\text{左式}=\frac{2\sin\theta\cdot\cos\theta-\cos\theta}{1-\sin\theta+\sin^2\theta-\cos^2\theta}=\frac{\left(2\sin\theta-1\right)\cos\theta}{2\sin^2\theta-\sin\theta}=\frac{\left(2\sin\theta-1\right)\cos\theta}{\left(2\sin\theta-1\right)\sin\theta}=\frac{\cos\theta}{\sin\theta}=\cot\theta.
+1-\sin\theta+\sin^2\theta-\cos^2\theta
+=2\sin^2\theta-\sin\theta
+=\sin\theta\left(2\sin\theta-1\right)
 \]
-右式 \(=\cot\theta\).
-所以左式 \(=\) 右式，从而
+因此在左式有意义时，\(\sin\theta\neq 0\) 且 \(2\sin\theta-1\neq 0\). 在此条件下，左式的分子为
 \[
-\frac{2\sin\theta\cdot\sin\left(\frac{\pi}{2}-\theta\right)+\sin\left(\frac{3\pi}{2}+\theta\right)}{1+\sin\left(\pi+\theta\right)+\sin^2\left(\pi-\theta\right)-\sin^2\left(\frac{\pi}{2}+\theta\right)}=\tan\left(\frac{\pi}{2}-\theta\right).
+2\sin\theta\cos\theta-\cos\theta
+=\left(2\sin\theta-1\right)\cos\theta
 \]
+于是左式
+\[
+=\frac{\left(2\sin\theta-1\right)\cos\theta}{\sin\theta\left(2\sin\theta-1\right)}
+=\frac{\cos\theta}{\sin\theta}
+\]
+另一方面，\(\sin\theta\neq 0\) 时
+\[
+\tan\left(\frac{\pi}{2}-\theta\right)=\frac{\cos\theta}{\sin\theta}
+\]
+所以左式等于右式，恒等式得证.
 \end{solution}
 
 \begin{problem}
@@ -125,26 +175,31 @@ y=2\sqrt{x^2}=\begin{cases}
 
 \begin{solution}
 \begin{enumerate}
-\item 连结 \(A\)，\(B\)，\(C\) 三点.
+\item 设三个圆心为 \(A\)，\(B\)，\(C\)，三个切点分别为 \(D\)，\(E\)，\(F\). 由于三个圆半径相等且两两外切，\(AB=BC=CA=2R\)，所以 \(\triangle ABC\) 是边长为 \(2R\) 的等边三角形，且三个圆弧分别对应圆心角 \(60^\circ\) 的三个扇形.
 
-由图可知，所求的面积 \(s\) 等于 \(\triangle ABC\) 的面积减去扇形 \(ADF\) 面积的 \(3\) 倍.
+由图可知，所求面积 \(s\) 等于 \(\triangle ABC\) 的面积减去三个扇形 \(ADF\)，\(BDE\)，\(CEF\) 的面积.
 
     \solutionfigure{\bitmapfigure[width=4.8cm]{img/1977/hunan_zhuzhou_pilot/q9_solution_fig1.png}}
 
+因此
 \[
-s=\frac{1}{2}AB\cdot AC\cdot\sin A-3\left(\frac{1}{6}\pi\cdot AD^2\right)=\frac{1}{2}\cdot 2R\cdot 2R\cdot\sin 60^\circ-\frac{1}{2}\pi R^2.
-\]
-\[
-=\sqrt{3}R^2-\frac{\pi}{2}R^2=\left(\sqrt{3}-\frac{\pi}{2}\right)R^2.
+s=\frac{1}{2}\cdot 2R\cdot 2R\cdot\sin 60^\circ-3\cdot\frac{\pi R^2}{6}
+=\sqrt{3}R^2-\frac{\pi}{2}R^2
+=\left(\sqrt{3}-\frac{\pi}{2}\right)R^2
 \]
 
-\item 如图，因为 \(\angle B=150^\circ\)，由菱形的性质可知 \(\angle A=30^\circ\)，依题意可得
+\item 菱形的邻角互补，所以若 \(\angle B=150^\circ\)，则 \(\angle A=30^\circ\). 以对角线分成的两个全等三角形计算面积，得到
 
     \solutionfigure{\bitmapfigure[width=5.6cm]{img/1977/hunan_zhuzhou_pilot/q9_solution_fig2.png}}
 
-\(2\left(\frac{1}{2}AB\cdot AD\cdot\sin A\right)=392\).
-因为 \(AB=AD\)，即 \(AB\cdot AB\cdot\sin 30^\circ=392\)，\(\frac{1}{2}AB^2=392\).
-所以 \(AB^2=784\)，\(AB=\sqrt{784}=28\mathrm{~cm}\).
+\[
+392=2\left(\frac{1}{2}AB\cdot AD\cdot\sin A\right)
+\]
+因为菱形的四边相等，\(AB=AD\)，代入 \(\angle A=30^\circ\) 得
+\[
+392=AB^2\sin 30^\circ=\frac{1}{2}AB^2
+\]
+所以 \(AB^2=784\)，且边长 \(AB=\sqrt{784}=28\mathrm{~cm}\).
 
 答：菱形边长为 \(28\mathrm{~cm}\).
 \end{enumerate}
@@ -155,25 +210,29 @@ s=\frac{1}{2}AB\cdot AC\cdot\sin A-3\left(\frac{1}{6}\pi\cdot AD^2\right)=\frac{
 \end{problem}
 
 \begin{solution}
-\solutionfigure{\bitmapfigure[width=5.8cm]{img/1977/hunan_zhuzhou_pilot/q10_solution_fig1.png}}
+设山顶为 \(P\)，山脚为 \(C\)，较远的船为 \(A\)，较近的船为 \(B\). 因为两船在正南方向，\(A\)，\(B\)，\(C\) 共线，且 \(PC=150\mathrm{~m}\). 俯角等于相应的仰角，所以
+\(AC=150\cot 15^\circ\)，\(BC=150\cot 75^\circ=150\tan 15^\circ\).
 
-两船的距离
+    \solutionfigure{\bitmapfigure[width=5.8cm]{img/1977/hunan_zhuzhou_pilot/q10_solution_fig1.png}}
+
+于是
 \[
-AB=AC-BC=150\tan\left(90^\circ-15^\circ\right)-150\tan\left(90^\circ-75^\circ\right)=150\left(\cot 15^\circ-\tan 15^\circ\right).
+AB=AC-BC=150\left(\cot 15^\circ-\tan 15^\circ\right)
 \]
-而
+利用 \(\cot\alpha=\frac{\cos\alpha}{\sin\alpha}\) 和 \(\tan\alpha=\frac{\sin\alpha}{\cos\alpha}\)，有
 \[
-\sin 15^\circ=\sin\left(45^\circ-30^\circ\right)=\sin 45^\circ\cos 30^\circ-\cos 45^\circ\sin 30^\circ=\frac{\sqrt{6}-\sqrt{2}}{4}.
+\cot 15^\circ-\tan 15^\circ
+=\frac{\cos^2 15^\circ-\sin^2 15^\circ}{\sin 15^\circ\cos 15^\circ}
+=\frac{\cos 30^\circ}{\frac{1}{2}\sin 30^\circ}
+=\frac{\frac{\sqrt{3}}{2}}{\frac{1}{4}}
+=2\sqrt{3}
 \]
+因此
 \[
-\cos 15^\circ=\cos\left(45^\circ-30^\circ\right)=\cos 45^\circ\cos 30^\circ+\sin 45^\circ\sin 30^\circ=\frac{\sqrt{6}+\sqrt{2}}{4}.
-\]
-所以
-\[
-AB=150\left(\frac{\sqrt{6}+\sqrt{2}}{\sqrt{6}-\sqrt{2}}-\frac{\sqrt{6}-\sqrt{2}}{\sqrt{6}+\sqrt{2}}\right)=150\sqrt{12}=300\sqrt{3}\approx 519\mathrm{~m}.
+AB=300\sqrt{3}\mathrm{~m}\approx 519.6\mathrm{~m}
 \]
 
-答：两船的距离约为 \(519\mathrm{~m}\).
+答：两船的距离为 \(300\sqrt{3}\mathrm{~m}\)，约为 \(519.6\mathrm{~m}\).
 \end{solution}
 
 \begin{problem}
@@ -181,11 +240,30 @@ AB=150\left(\frac{\sqrt{6}+\sqrt{2}}{\sqrt{6}-\sqrt{2}}-\frac{\sqrt{6}-\sqrt{2}}
 \end{problem}
 
 \begin{solution}
-设桶的容积为 \(x\text{ 升}\)，依题意得
-\(\frac{x-8-\frac{x-8}{x}\times 4}{8-\frac{8}{x}\times 4+4}=\frac{18}{7}\).
-即 \(\frac{x^2-12x+32}{12x-32}=\frac{18}{7}\).
-整理得 \(7x^2-300x+800=0\)，\(\left(7x-20\right)\left(x-40\right)=0\).
-所以 \(x_1=\frac{20}{7}\)（不合题意，舍去），\(x_2=40\).
+设木桶容积为 \(x\text{ 升}\). 由题意必须有 \(x>8\). 第一次倒出 \(8\text{ 升}\) 农药并补水后，桶内农药和水的体积分别为 \(x-8\) 和 \(8\)，所以混合液中农药、水的体积分数分别为 \(\frac{x-8}{x}\) 和 \(\frac{8}{x}\).
+
+第二次倒出 \(4\text{ 升}\) 混合液，倒出的农药为 \(\frac{x-8}{x}\times 4\)，倒出的水为 \(\frac{8}{x}\times 4\). 再次补入 \(4\text{ 升}\) 水后，桶内农药和水的体积分别为
+\[
+x-8-\frac{x-8}{x}\times 4
+=\frac{x^2-12x+32}{x}
+\]
+\[
+8-\frac{8}{x}\times 4+4
+=\frac{12x-32}{x}
+\]
+由农药与水之比为 \(18:7\)，得
+\[
+\frac{x^2-12x+32}{12x-32}=\frac{18}{7}
+\]
+交叉相乘并整理，得
+\[
+7x^2-300x+800=0
+\]
+因式分解得
+\[
+\left(7x-20\right)\left(x-40\right)=0
+\]
+所以 \(x=\frac{20}{7}\) 或 \(x=40\). 由于 \(x>8\)，舍去 \(\frac{20}{7}\)，取 \(x=40\).
 
 答：桶的容积为 \(40\text{ 升}\).
 \end{solution}
@@ -195,17 +273,37 @@ AB=150\left(\frac{\sqrt{6}+\sqrt{2}}{\sqrt{6}-\sqrt{2}}-\frac{\sqrt{6}-\sqrt{2}}
 \end{problem}
 
 \begin{solution}
-如图：在 \(\triangle ABC\) 中.
+设经过 \(t>0\) 小时两船在 \(C\) 点相遇. 乙船沿正北方向行驶，所以 \(BC=at\)；甲船的路程为 \(AC=\sqrt{3}at\). 由 \(AB\) 是北偏东 \(60^\circ\) 方向，且 \(BC\) 指向正北，得
+\[
+\angle B=180^\circ-60^\circ=120^\circ
+\]
 
-\solutionfigure{\bitmapfigure[width=5.0cm]{img/1977/hunan_zhuzhou_pilot/q12_solution_fig1.png}}
+    \solutionfigure{\bitmapfigure[width=5.0cm]{img/1977/hunan_zhuzhou_pilot/q12_solution_fig1.png}}
 
-\(\angle B=180^\circ-60^\circ=120^\circ\).
-设 \(t\) 小时后两船相遇于 \(C\). 则 \(AC=\sqrt{3}at\)，\(BC=at\)，根据正弦定理得 \(\frac{AC}{\sin B}=\frac{BC}{\sin A}\).
+令 \(L=AB>0\). 对任意可能的相遇时刻 \(t\)，乙船位于正北方向的点 \(C\)，且 \(BC=at\). 甲船在时刻 \(t\) 至多行驶 \(\sqrt{3}at\)，因此必须有 \(AC\leq\sqrt{3}at\). 由 \(\angle B=120^\circ\) 和余弦定理，
+\[
+AC^2=L^2+(at)^2-2L\cdot at\cos120^\circ=L^2+Lat+a^2t^2
+\]
 所以
 \[
-\sin A=\frac{BC\cdot\sin B}{AC}=\frac{at\sin 120^\circ}{\sqrt{3}at}=\frac{1}{2}.
+L^2+Lat+a^2t^2\leq 3a^2t^2
 \]
-因为 \(A\) 是锐角，所以 \(A=30^\circ\)，\(\angle NAC=60^\circ-30^\circ=30^\circ\).
+整理得
+\[
+(2at+L)(at-L)\geq 0
+\]
+由于 \(a>0\)、\(t\geq 0\) 且 \(L>0\)，有 \(2at+L>0\)，故 \(at\geq L\)，从而任何相遇时间都满足 \(t\geq L/a\). 当 \(t=L/a\) 时取等号，甲船沿 \(AC\) 以全速直线行驶即可相遇，因而这是最短相遇时间. 此时 \(AB=BC=L\)，\(AC=\sqrt{3}L\). 在 \(\triangle ABC\) 中由正弦定理，
+\[
+\frac{AC}{\sin B}=\frac{BC}{\sin A}
+\]
+因此
+\[
+\sin A=\frac{BC\sin B}{AC}=\frac{L\sin120^\circ}{\sqrt{3}L}=\frac{1}{2}
+\]
+又因为 \(A+B+C=180^\circ\)，且 \(B=120^\circ\)，所以 \(0<A<60^\circ\)，从而 \(A=30^\circ\). 故甲船航线与正北方向的夹角为
+\[
+\angle NAC=60^\circ-\angle BAC=60^\circ-30^\circ=30^\circ
+\]
 
 答：甲船应以北偏东 \(30^\circ\) 的方向前进，才能最快地与乙船相会.
 \end{solution}
@@ -215,25 +313,33 @@ AB=150\left(\frac{\sqrt{6}+\sqrt{2}}{\sqrt{6}-\sqrt{2}}-\frac{\sqrt{6}-\sqrt{2}}
 \end{problem}
 
 \begin{solution}
-设所求双曲线方程为
+双曲线的焦点在 \(x\) 轴或 \(y\) 轴上，需要分别讨论两种方向.
+
+若焦点在 \(x\) 轴上，设方程为
 \[
-\frac{x^2}{a^2}-\frac{y^2}{b^2}=1.
+\frac{x^2}{a^2}-\frac{y^2}{b^2}=1
 \]
-因为顶点间距 \(2a=12\)，所以 \(a=6\).
-又焦距 \(2c=14\)，所以 \(c=7\). 而 \(b^2=c^2-a^2=49-36=13\).
-故所求的方程为
+顶点间距离为 \(2a=12\)，故 \(a=6\)；焦距为 \(2c=14\)，故 \(c=7\). 双曲线参数满足 \(c^2=a^2+b^2\)，所以
 \[
-\frac{x^2}{36}-\frac{y^2}{13}=1.
+b^2=c^2-a^2=7^2-6^2=13
+\]
+因此方程为
+\[
+\frac{x^2}{36}-\frac{y^2}{13}=1
 \]
 
-\solutionfigure{\bitmapfigure[width=4.8cm]{img/1977/hunan_zhuzhou_pilot/q13_solution_fig1.png}}
+    \solutionfigure{\bitmapfigure[width=4.8cm]{img/1977/hunan_zhuzhou_pilot/q13_solution_fig1.png}}
 
-对于焦点在 \(y\) 轴上的双曲线，同理可求得方程为
+若焦点在 \(y\) 轴上，设方程为
+\[
+\frac{y^2}{a^2}-\frac{x^2}{b^2}=1
+\]
+同样由 \(2a=12\)，\(2c=14\) 得 \(a=6\)，\(c=7\)，再由 \(c^2=a^2+b^2\) 得 \(b^2=13\). 因此方程为
 
-\solutionfigure{\bitmapfigure[width=3.2cm]{img/1977/hunan_zhuzhou_pilot/q13_solution_fig2.png}}
+    \solutionfigure{\bitmapfigure[width=3.2cm]{img/1977/hunan_zhuzhou_pilot/q13_solution_fig2.png}}
 
 \[
-\frac{y^2}{36}-\frac{x^2}{13}=1.
+\frac{y^2}{36}-\frac{x^2}{13}=1
 \]
 \end{solution}
 
@@ -244,12 +350,24 @@ AB=150\left(\frac{\sqrt{6}+\sqrt{2}}{\sqrt{6}-\sqrt{2}}-\frac{\sqrt{6}-\sqrt{2}}
 \end{problem}
 
 \begin{solution}
-连结 \(BE\).
-
-因为 \(\angle ABC=\angle ACB\)，而 \(\angle AEB=\angle ACB\)（同弧上的圆周角相等），所以 \(\angle ABC=\angle AEB\).
-又 \(\angle BAE\) 是公共角，所以 \(\triangle ABD\sim\triangle AEB\).
-故 \(\frac{AE}{AB}=\frac{AB}{AD}\).
-即 \(AB^2=AD\cdot AE\).
+连接 \(BE\). 因为 \(\triangle ABC\) 是等腰三角形，\(AB=AC\)，所以
+\[
+\angle ABC=\angle ACB
+\]
+又因为 \(A\)，\(B\)，\(C\)，\(E\) 共圆，\(\angle AEB\) 与 \(\angle ACB\) 都是所对弦 \(AB\) 所对的圆周角，故
+\[
+\angle AEB=\angle ACB
+\]
+由于 \(D\) 在 \(BC\) 上、\(E\) 在直线 \(AD\) 上，有
+\[
+\angle ABD=\angle ABC=\angle AEB
+\]
+并且 \(\angle BAD=\angle EAB\).
+因此 \(\triangle ABD\sim\triangle AEB\). 对应边满足
+\[
+\frac{AB}{AE}=\frac{AD}{AB}
+\]
+从而 \(AB^2=AD\cdot AE\). 所以 \(AB\) 是 \(AD\) 和 \(AE\) 的比例中项.
 \end{solution}
 
 \begin{problem}
@@ -257,16 +375,22 @@ AB=150\left(\frac{\sqrt{6}+\sqrt{2}}{\sqrt{6}-\sqrt{2}}-\frac{\sqrt{6}-\sqrt{2}}
 \end{problem}
 
 \begin{solution}
-依题意，直角三角形三边为 \(a-d\)，\(a\)，\(a+d\)，公差为 \(d\)，如图所示.
-
-\solutionfigure{\bitmapfigure[width=4.4cm]{img/1977/hunan_zhuzhou_pilot/q15_solution_fig1.png}}
-
-因为 \(a^2+\left(a-d\right)^2=\left(a+d\right)^2\)，所以
+设三边按从小到大的顺序为 \(a-d\)，\(a\)，\(a+d\)，其中公差 \(d>0\)，且 \(a-d>0\). 最大边是斜边，所以由勾股定理
 \[
-a^2=\left(a+d\right)^2-\left(a-d\right)^2=a^2+2ad+d^2-a^2+2ad-d^2=4ad.
+a^2+\left(a-d\right)^2=\left(a+d\right)^2
 \]
-因此 \(d=\frac{a^2}{4a}=\frac{a}{4}\).
-三边的比是 \(\left(a-\frac{a}{4}\right):a:\left(a+\frac{a}{4}\right)=\frac{3a}{4}:a:\frac{5a}{4}=3:4:5\).
+移项并展开，得
+\[
+a^2=\left(a+d\right)^2-\left(a-d\right)^2
+=a^2+2ad+d^2-a^2+2ad-d^2=4ad
+\]
+由于 \(a>0\)，可除以 \(4a\)，得到 \(d=\frac{a}{4}\). 因此三边之比为
+\[
+\left(a-\frac{a}{4}\right):a:\left(a+\frac{a}{4}\right)
+=\frac{3a}{4}:a:\frac{5a}{4}=3:4:5
+\]
+
+    \solutionfigure{\bitmapfigure[width=4.4cm]{img/1977/hunan_zhuzhou_pilot/q15_solution_fig1.png}}
 \end{solution}
 
 \section{参考题}
@@ -276,13 +400,25 @@ a^2=\left(a+d\right)^2-\left(a-d\right)^2=a^2+2ad+d^2-a^2+2ad-d^2=4ad.
 \end{problem}
 
 \begin{solution}
-【法一】\(g(x)=x^2-x-462=0\) 的根是 \(x_1=22\) 和 \(x_2=-21\). 代入 \(f(x)\)：\(f(-21)\ne 0\)，不是公根；\(f(22)=0\). 因此 \(x=22\) 是 \(f(x)\) 和 \(g(x)\) 的公根.
-
-【法二】\(g(x)=x^2-x-462\) 的根是 \(x_1=22\) 和 \(x_2=-21\). 用综合除法，\(\frac{f(x)}{x+21}\) 余数不为 \(0\)，因此 \(x_2=-21\) 不是两者的公根. 而 \(\frac{f(x)}{x-22}\) 余数为 \(0\)，所以 \(x_1=22\) 是两者的公根.
-
-【法三】用辗转相除法求 \(f(x)\) 和 \(g(x)\) 的最高公因式，计算如下：\(f(x)=(x^2-x-462)(x^2-41x+856)-17973x+395406\)，\(g(x)=(x-22)(x+21)\)，\(-17973x+395406=-17973(x-22)\).
-所以 \(-x+22\) 是 \(f(x)\) 和 \(g(x)\) 的最高公因式.
-故 \(-x+22=0\)，即 \(x=22\) 是 \(f(x)\) 和 \(g(x)\) 的公根.
+先分解二次多项式：
+\[
+g(x)=x^2-x-462=(x-22)(x+21)
+\]
+所以公根只能是 \(22\) 或 \(-21\). 直接代入 \(f(x)\)，
+\[
+\begin{aligned}
+f(22)&=22^4-42\times22^3+435\times22^2+113\times22-66\\
+&=234256-447216+210540+2486-66=0,
+\end{aligned}
+\]
+而
+\[
+\begin{aligned}
+f(-21)&=(-21)^4-42\times(-21)^3+435\times(-21)^2+113\times(-21)-66\\
+&=194481+388962+191835-2373-66=772839\neq 0.
+\end{aligned}
+\]
+因此 \(22\) 是两个多项式的公根，\(-21\) 不是，所求公根为 \(x=22\).
 \end{solution}
 
 \begin{problem}
@@ -290,13 +426,26 @@ a^2=\left(a+d\right)^2-\left(a-d\right)^2=a^2+2ad+d^2-a^2+2ad-d^2=4ad.
 \end{problem}
 
 \begin{solution}
-由乘积求导法则，
+函数的定义域满足 \(2x+1\geq 0\)，即 \(x\geq-\frac{1}{2}\). 在可导区间 \(x>-\frac{1}{2}\) 上，令
 \[
-y'=\left(-\frac{1}{3}x+1\right)^3\cdot\frac{1}{2}\left(2x+1\right)^{-\frac{1}{2}}\cdot 2+\left(2x+1\right)^{\frac{1}{2}}\cdot 3\left(-\frac{1}{3}x+1\right)^2\cdot\left(-\frac{1}{3}\right).
+u=\left(2x+1\right)^{\frac{1}{2}}
 \]
-所以
+令
 \[
-y'=\left(1-\frac{x}{3}\right)^3\cdot\left(2x+1\right)^{-\frac{1}{2}}-\left(2x+1\right)^{\frac{1}{2}}\left(1-\frac{x}{3}\right)^2.
+v=\left(1-\frac{x}{3}\right)^3
+\]
+由链式法则，
+\[
+u'=\frac{1}{2}\left(2x+1\right)^{-\frac{1}{2}}\cdot 2=\left(2x+1\right)^{-\frac{1}{2}}
+\]
+并且
+\[
+v'=3\left(1-\frac{x}{3}\right)^2\cdot\left(-\frac{1}{3}\right)=-\left(1-\frac{x}{3}\right)^2
+\]
+再由乘积求导法则，
+\[
+y'=u'v+uv'
+=\left(1-\frac{x}{3}\right)^3\left(2x+1\right)^{-\frac{1}{2}}-\left(2x+1\right)^{\frac{1}{2}}\left(1-\frac{x}{3}\right)^2
 \]
 \end{solution}
 
@@ -305,20 +454,34 @@ y'=\left(1-\frac{x}{3}\right)^3\cdot\left(2x+1\right)^{-\frac{1}{2}}-\left(2x+1\
 \end{problem}
 
 \begin{solution}
-取如图所示的直角坐标系，设抛物线方程为 \(x^2=-2py\).
-
-\solutionfigure{\bitmapfigure[width=5.8cm,trim=0 0 0 1.2cm,clip]{img/1977/hunan_zhuzhou_pilot/q18_solution_fig1.png}}
-
-将 \(A\) 点坐标 \(\left(60,-30\right)\) 代入上方程得 \(60^2=-2p\left(-30\right)\)，得 \(p=60\).
-所以抛物线方程为 \(x^2=-2\times 60y\)，亦可变成 \(y=-\frac{1}{120}x^2\).
-
-图中所影部分面积为
+取顶点为原点，水平方向为 \(x\) 轴，竖直向上为 \(y\) 轴. 设抛物线方程为
 \[
-\int_0^{60}\frac{x^2}{120}\mathrm{d}x=\frac{1}{360}x^3\Big|_0^{60}=\frac{1}{360}\times 60^3=600.
+x^2=-2py
 \]
-窗户面积
+窗宽为 \(120\mathrm{~cm}\)，故右侧边的上端点坐标为 \(A(60,-30)\)，因为顶点比边高 \(180-150=30\mathrm{~cm}\). 代入抛物线方程，得
 \[
-S=2\left(180\times 60-600\right)=2\times 10200=20400\mathrm{~cm}^2=2.04\mathrm{~m}^2.
+60^2=-2p\times(-30)
+\]
+所以 \(p=60\).
+所以抛物线方程为
+\[
+x^2=-120y
+\]
+即 \(y=-\frac{x^2}{120}\).
+
+    \solutionfigure{\bitmapfigure[width=5.8cm,trim=0 0 0 1.2cm,clip]{img/1977/hunan_zhuzhou_pilot/q18_solution_fig1.png}}
+
+图中右半边阴影面积是曲线与 \(x\) 轴之间的面积，故
+\[
+\int_0^{60}\frac{x^2}{120}\,\mathrm{d}x
+=\left.\frac{x^3}{360}\right|_0^{60}
+=600\mathrm{~cm}^2
+\]
+整个窗户可看作宽为 \(120\mathrm{~cm}\)、高为 \(180\mathrm{~cm}\) 的矩形减去左右两个全等阴影区域，因此
+\[
+S=2\left(180\times 60-600\right)\mathrm{~cm}^2
+=20400\mathrm{~cm}^2
+=2.04\mathrm{~m}^2
 \]
 
 答：所求窗户的面积是 \(2.04\mathrm{~m}^2\).

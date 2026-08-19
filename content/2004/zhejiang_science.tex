@@ -15,7 +15,7 @@ D
 \end{answer}
 
 \begin{solution}
-由 \(M\cup N=\{1,2,3\}\)，得
+先求并集：\(M\cup N=\{1,2,3\}\). 补集中的元素必须属于全集 \(U\)，但不属于这个并集，因此
 \(\complement_U(M\cup N)=\{4\}\)，故选 D.
 \end{solution}
 
@@ -34,9 +34,12 @@ A
 \end{answer}
 
 \begin{solution}
-单位圆的半径为 \(1\)，所以点 \(P\) 运动的弧长等于所对应的圆心角，即
-\(\theta=\frac{2\pi/3}{1}=\frac{2\pi}{3}\). 从点 \((1,0)\) 沿逆时针方向转过此角后，
-\(Q=\left(\cos\frac{2\pi}{3},\sin\frac{2\pi}{3}\right)=\left(-\frac{1}{2},\frac{\sqrt{3}}{2}\right)\)，故选 A.
+单位圆的半径为 \(r=1\). 由弧长公式 \(s=r\theta\)，点 \(P\) 对应的圆心角为
+\(\theta=\frac{s}{r}=\frac{2\pi/3}{1}=\frac{2\pi}{3}\). 从 \((1,0)\) 沿逆时针方向转过 \(\frac{2\pi}{3}\) 后，
+\[
+Q=\left(\cos\frac{2\pi}{3},\sin\frac{2\pi}{3}\right)=\left(-\frac{1}{2},\frac{\sqrt{3}}{2}\right)
+\]
+故选 A.
 \end{solution}
 
 \begin{problem}
@@ -54,11 +57,14 @@ B
 \end{answer}
 
 \begin{solution}
-设等差数列的首项为 \(a_1\). 由公差为 \(2\)，得
-\(a_3=a_1+4\)，\(a_4=a_1+6\). 因为 \(a_1\)，\(a_3\)，\(a_4\) 成等比数列，所以
-\((a_1+4)^2=a_1(a_1+6)\)，即
-\(a_1^2+8a_1+16=a_1^2+6a_1\)，从而 \(a_1=-8\)，故
-\(a_2=a_1+2=-6\)，选 B.
+设首项为 \(a_1\). 由公差为 \(2\)，
+\(a_3=a_1+2\times2=a_1+4\)，\(a_4=a_1+3\times2=a_1+6\).
+三项 \(a_1\)，\(a_3\)，\(a_4\) 成等比数列，所以中项平方等于两端项之积，即
+\[
+(a_1+4)^2=a_1(a_1+6)
+\]
+展开并约去 \(a_1^2\)，得 \(8a_1+16=6a_1\)，从而 \(a_1=-8\). 因此
+\(a_2=a_1+2=-6\)，故选 B.
 \end{solution}
 
 \begin{problem}
@@ -76,8 +82,12 @@ C
 \end{answer}
 
 \begin{solution}
-将原曲线上点 \((x,y)\) 关于直线 \(x=2\) 对称，所得点的横坐标为 \(4-x\)，纵坐标仍为 \(y\). 记对称后的横坐标为 \(X\)，则 \(x=4-X\). 代入原方程 \(y^2=4x\)，得
-\(y^2=4(4-X)=16-4X\)，故对称曲线方程为 \(y^2=16-4x\)，选 C.
+设原曲线上任一点为 \((x,y)\). 关于直线 \(x=2\) 对称后，纵坐标不变，横坐标变为
+\(X=2\times2-x=4-x\)，所以 \(x=4-X\). 代入原方程得
+\[
+y^2=4x=4(4-X)=16-4X
+\]
+把对称后坐标的字母 \(X\) 改写为通常的 \(x\)，所得曲线方程为 \(y^2=16-4x\)，故选 C.
 \end{solution}
 
 \begin{problem}
@@ -98,10 +108,14 @@ A
 \end{answer}
 
 \begin{solution}
-令 \(u=x+y-3\)，\(v=x-2y\)，则 \(u\geqslant0\)，\(v\geqslant0\). 由
-\(x+y=3+u\) 与 \(x-2y=v\) 解得
-\(y=1+\frac{u-v}{3}\)，\(x=2+\frac{2u+v}{3}\). 因此
-\(z=x-y=1+\frac{u+2v}{3}\geqslant1\). 当 \(u=v=0\)，即 \(x=2\)，\(y=1\) 时取等号，所以 \(z\) 的最小值为 \(1\)，选 A.
+令 \(u=x+y-3\)，\(v=x-2y\)，则 \(u\geqslant0\)，\(v\geqslant0\)，且
+\(x+y=3+u\)，\(x-2y=v\).
+两式相减消去 \(x\)，得 \(3y=3+u-v\)，所以
+\(y=1+\frac{u-v}{3}\)，进而 \(x=2+\frac{2u+v}{3}\). 因此
+\[
+z=x-y=1+\frac{u+2v}{3}\geqslant1
+\]
+当 \(u=v=0\)，即 \((x,y)=(2,1)\) 时满足原条件且取等号，所以 \(z\) 的最小值为 \(1\)，故选 A.
 \end{solution}
 
 \begin{problem}
@@ -119,8 +133,12 @@ D
 \end{answer}
 
 \begin{solution}
-有 \(z_1z_2=(3+4\i)(t+\i)=(3t-4)+(3+4t)\i\).
-要使 \(z_1z_2\) 为实数，必须有虚部 \(3+4t=0\)，所以 \(t=-\frac{3}{4}\)，选 D.
+利用 \(\i^2=-1\)，
+\[
+z_1z_2=(3+4\i)(t+\i)=3t+3\i+4t\i+4\i^2=(3t-4)+(3+4t)\i
+\]
+复数为实数的充要条件是虚部为零，因此 \(3+4t=0\)，解得
+\(t=-\frac34\)，故选 D.
 \end{solution}
 
 \begin{problem}
@@ -138,9 +156,11 @@ C
 \end{answer}
 
 \begin{solution}
-在展开式中取 \(k\) 个 \(\frac{2}{\sqrt[3]{x}}\)，取 \(n-k\) 个 \(\sqrt{x}\)，所得一般项中 \(x\) 的指数为
-\(\frac{n-k}{2}-\frac{k}{3}=\frac{n}{2}-\frac{5k}{6}\). 存在常数项的条件是
-\(\frac{n}{2}-\frac{5k}{6}=0\)，即 \(3n=5k\). 因此 \(n\) 必须是 \(5\) 的倍数，给出的选项中只有 \(n=10\) 符合；此时 \(k=6\)，且 \(0\leqslant k\leqslant n\)，故选 C.
+在展开式的一般项中，若从第二项取 \(k\) 次，则从第一项取 \(n-k\) 次，其中 \(0\leqslant k\leqslant n\). 该项中 \(x\) 的指数为
+\[
+\frac{n-k}{2}-\frac{k}{3}=\frac{3n-5k}{6}
+\]
+常数项要求指数为零，所以 \(3n=5k\). 因为 \(3\) 与 \(5\) 互质，故 \(5\mid n\). 给出的正整数中只有 \(n=10\) 是 \(5\) 的倍数；此时 \(k=\frac{3n}{5}=6\)，满足 \(0\leqslant k\leqslant n\)，故选 C.
 \end{solution}
 
 \begin{problem}
@@ -158,8 +178,11 @@ B
 \end{answer}
 
 \begin{solution}
-在三角形中 \(0<A<\pi\)，故
-\(\sin A>\frac12\iff\frac{\pi}{6}<A<\frac{5\pi}{6}\). 这说明 \(\sin A>\frac12\) 必能推出 \(A>\frac{\pi}{6}\)，但反过来不成立，例如 \(A=\frac{5\pi}{6}\) 时仍有 \(A>\frac{\pi}{6}\)，而 \(\sin A=\frac12\). 所以“\(A>30^{\circ}\)”是“\(\sin A>\frac12\)”的必要而不充分条件，选 B.
+三角形内角满足 \(0<A<\pi\). 在此范围内，
+\[
+\sin A>\frac12\iff \frac{\pi}{6}<A<\frac{5\pi}{6}
+\]
+所以 \(\sin A>\frac12\) 一定能推出 \(A>\frac{\pi}{6}=30^{\circ}\)，即“\(A>30^{\circ}\)”是“\(\sin A>\frac12\)”的必要条件. 反过来不成立，例如取 \(A=\frac{5\pi}{6}=150^{\circ}\)，并令另外两个角均为 \(15^{\circ}\)，仍构成三角形，但 \(\sin A=\frac12\) 不满足严格不等式. 因此“\(A>30^{\circ}\)”是“\(\sin A>\frac12\)”的必要而不充分条件，故选 B.
 \end{solution}
 
 \begin{problem}
@@ -177,13 +200,18 @@ D
 \end{answer}
 
 \begin{solution}
-设椭圆的半焦距为 \(c\). 抛物线 \(y^2=2bx\) 可写成 \(y^2=4px\)，所以其焦点横坐标为
-\(p=\frac b2\). 由于该焦点在 \(F_1F_2\) 的中点右侧，故
-\(\frac{c+b/2}{c-b/2}=\frac53\). 于是
-\(3\left(c+\frac b2\right)=5\left(c-\frac b2\right)\)，解得 \(c=2b\).
-
-又由椭圆关系 \(a^2=b^2+c^2\)，得 \(a^2=5b^2\)，所以离心率
-\(e=\frac ca=\frac{2}{\sqrt5}=\frac{2\sqrt5}{5}\)，选 D.
+设椭圆的半焦距为 \(c\)，则焦点为 \(F_1(-c,0)\)，\(F_2(c,0)\). 将抛物线写成标准形式
+\(y^2=4px\)，由 \(4p=2b\) 得 \(p=\frac b2\)，所以其焦点为 \(S\left(\frac b2,0\right)\).
+由于 \(S\) 在线段 \(F_1F_2\) 上且将其分成 \(5:3\) 两段，
+\[
+\frac{SF_1}{SF_2}=\frac{c+b/2}{c-b/2}=\frac53
+\]
+于是 \(3c+\frac32b=5c-\frac52b\)，即 \(c=2b\). 椭圆参数满足
+\(a^2=b^2+c^2\)，故 \(a^2=5b^2\). 因而离心率为
+\[
+e=\frac ca=\frac{2b}{\sqrt5b}=\frac2{\sqrt5}=\frac{2\sqrt5}{5}
+\]
+故选 D.
 \end{solution}
 
 \begin{problem}
@@ -203,9 +231,18 @@ D
 \end{answer}
 
 \begin{solution}
-正三棱柱的侧棱垂直于底面. 平面 \(AA_1C_1C\) 包含直线 \(AC\) 和侧棱方向，因此 \(AD\) 垂直于该平面的分量，等于等边三角形 \(ABC\) 中从 \(B\) 到 \(AC\) 的高，即 \(\frac{\sqrt3}{2}\). 又
-\(AD=\sqrt{AB^2+BD^2}=\sqrt{1^2+1^2}=\sqrt2\). 设直线与平面所成的角为 \(\alpha\)，则
-\(\sin\alpha=\frac{\sqrt3/2}{\sqrt2}=\frac{\sqrt6}{4}\)，故选 D.
+建立直角坐标系，使底面在 \(xOy\) 平面内，取
+\(A=(0,0,0)\)，\(B=(1,0,0)\)，\(C=\left(\frac12,\frac{\sqrt3}{2},0\right)\).
+因为侧棱垂直于底面且 \(BD=1\)，可取 \(D=(1,0,1)\). 平面 \(AA_1C_1C\) 由方向向量
+\(\overrightarrow{AC}=\left(\frac12,\frac{\sqrt3}{2},0\right)\) 和竖直方向共同确定，因而可取其单位法向量
+\(\bs n=\left(\frac{\sqrt3}{2},-\frac12,0\right)\). 又
+\(\overrightarrow{AD}=(1,0,1)\)，所以
+\(|\overrightarrow{AD}\cdot\bs n|=\frac{\sqrt3}{2}\)，\(|AD|=\sqrt{1^2+1^2}=\sqrt2\).
+直线与平面所成角为 \(\alpha\) 时，\(\sin\alpha\) 等于方向向量在平面法向上的投影长度与方向向量长度之比，故
+\[
+\sin\alpha=\frac{\sqrt3/2}{\sqrt2}=\frac{\sqrt6}{4}
+\]
+因此 \(\alpha=\arcsin\frac{\sqrt6}{4}\)，故选 D.
 \end{solution}
 
 \begin{problem}
@@ -225,7 +262,9 @@ C
 \end{answer}
 
 \begin{solution}
-由图可知，\(f'(x)>0\) 时 \(x<0\) 或 \(x>2\)，\(f'(x)<0\) 时 \(0<x<2\)，且 \(f'(0)=f'(2)=0\). 因此 \(f(x)\) 在 \((-\infty,0)\) 上递增，在 \((0,2)\) 上递减，在 \((2,+\infty)\) 上递增，所以 \(x=0\) 是极大值点，\(x=2\) 是极小值点. 四个图象中只有第三个图象符合，故选 C.
+由图可读出 \(f'(0)=f'(2)=0\)，并且
+\(f'(x)>0\)，\((x<0\text{ 或 }x>2)\)，\(f'(x)<0\)，\((0<x<2)\).
+所以 \(f(x)\) 在 \((-\infty,0)\) 上递增，在 \((0,2)\) 上递减，在 \((2,+\infty)\) 上递增. 于是 \(x=0\) 处由增变减，是极大值点；\(x=2\) 处由减变增，是极小值点. 四个选项中只有 C 的图象同时具有这两个单调性特征，故选 C.
 \end{solution}
 
 \begin{problem}
@@ -243,8 +282,29 @@ B
 \end{answer}
 
 \begin{solution}
-设方程 \(x-f(g(x))=0\) 的一个实数解为 \(x_0\)，令 \(y_0=g(x_0)\)，则 \(x_0=f(y_0)\)，从而 \(g(f(y_0))=g(x_0)=y_0\). 因此，函数 \(g\circ f\) 必有实数不动点，即方程 \(g(f(x))=x\) 必有实数解. 逐项检验选项对应的函数：
-\(x^2+x-\frac{1}{5}=x\) 化为 \(x^2-\frac{1}{5}=0\)，有实数解；\(x^2+x+\frac{1}{5}=x\) 化为 \(x^2+\frac{1}{5}=0\)，无实数解；\(x^2-\frac{1}{5}=x\) 的判别式为 \(1+\frac{4}{5}>0\)，有实数解；\(x^2+\frac{1}{5}=x\) 的判别式为 \(1-\frac{4}{5}>0\)，也有实数解. 因此不可能的是 B.
+设方程 \(x-f(g(x))=0\) 的实数解为 \(x_0\)，则 \(x_0=f(g(x_0))\). 令 \(y_0=g(x_0)\)，便有 \(x_0=f(y_0)\)，从而
+\[
+g(f(y_0))=g(x_0)=y_0
+\]
+因此函数 \(g\circ f\) 必须有实数不动点，即方程 \(g(f(x))=x\) 必须有实数解.
+
+逐项判断：
+\[
+x^2+x-\frac15=x\iff x^2-\frac15=0
+\]
+有实数解；
+\[
+x^2+x+\frac15=x\iff x^2+\frac15=0
+\]
+无实数解；
+\[
+x^2-\frac15=x
+\]
+的判别式为 \(1+\frac45>0\)，有实数解；
+\[
+x^2+\frac15=x
+\]
+的判别式为 \(1-\frac45>0\)，也有实数解. 因此不可能的是 B.
 \end{solution}
 
 \section{填空题}
@@ -260,12 +320,18 @@ B
 \end{answer}
 
 \begin{solution}
-当 \(x\geqslant-2\) 时，\(f(x+2)=1\)，不等式化为
-\(x+(x+2)\leqslant5\)，即 \(x\leqslant\frac32\). 结合 \(x\geqslant-2\)，此时解为
-\(\left[-2,\frac32\right]\).
+分界点由 \(x+2=0\) 给出，即 \(x=-2\). 当 \(x\geqslant-2\) 时，
+\(f(x+2)=1\)，原不等式化为
+\[
+x+(x+2)\leqslant5\iff 2x\leqslant3\iff x\leqslant\frac32
+\]
+结合本段条件，得到 \(\left[-2,\frac32\right]\).
 
-当 \(x<-2\) 时，\(f(x+2)=-1\)，不等式化为
-\(x-(x+2)=-2\leqslant5\)，恒成立，所以此时解为 \((-\infty,-2)\). 合并得解集
+当 \(x<-2\) 时，\(f(x+2)=-1\)，左端为
+\[
+x-(x+2)=-2\leqslant5
+\]
+恒成立，所以得到 \((-\infty,-2)\). 合并两段解集，且 \(x=-2\) 已包含在第一段中，故解集为
 \(\left(-\infty,\frac32\right]\).
 \end{solution}
 
@@ -278,19 +344,19 @@ B
 \end{answer}
 
 \begin{solution}
-由首尾相接的向量关系
-\(\overrightarrow{AB}+\overrightarrow{BC}+\overrightarrow{CA}=\bs{0}\)，两边平方得
+记题目所求的量为 \(T\). 首尾相接的向量满足
+\(\overrightarrow{AB}+\overrightarrow{BC}+\overrightarrow{CA}=\bs{0}\). 两边取模平方，得
 \[
 0=|\overrightarrow{AB}|^2+|\overrightarrow{BC}|^2+|\overrightarrow{CA}|^2
   +2\left(\overrightarrow{AB}\cdot\overrightarrow{BC}
   +\overrightarrow{BC}\cdot\overrightarrow{CA}
-  +\overrightarrow{CA}\cdot\overrightarrow{AB}\right).
+  +\overrightarrow{CA}\cdot\overrightarrow{AB}\right)
 \]
-代入三条边长，得
+代入三条向量的模，并用 \(T\) 表示括号中的三项和，得
 \[
-0=3^2+4^2+5^2+2T=50+2T,
+0=3^2+4^2+5^2+2T=50+2T
 \]
-其中 \(T\) 表示题目所求的数量. 因此 \(T=-25\).
+所以 \(T=-25\).
 \end{solution}
 
 \begin{problem}
@@ -302,9 +368,12 @@ B
 \end{answer}
 
 \begin{solution}
-设向正方向跳的次数为 \(p\)，向负方向跳的次数为 \(q\). 由
-\(p+q=5\) 以及最终横坐标 \(p-q=3\)，解得 \(p=4\)，\(q=1\). 只需确定唯一一次向负方向跳动发生在 \(5\) 次跳动中的哪一次，因此运动方法共有
-\(\mathrm C_5^1=5\) 种.
+设向正方向跳的次数为 \(p\)，向负方向跳的次数为 \(q\). 总跳动次数和最终位移分别给出
+\(p+q=5\)，\(p-q=3\).
+两式相加、相减得 \(p=4\)，\(q=1\). 因而五次跳动中恰有一次为负方向跳动；确定这一次发生在第几次即可唯一确定整个运动方法，所以方法数为
+\[
+\mathrm C_5^1=5
+\]
 \end{solution}
 
 \begin{problem}
@@ -316,9 +385,14 @@ B
 \end{answer}
 
 \begin{solution}
-设点 \(A\) 在平面 \(\beta\) 内的射影与点 \(B\) 在平面 \(\alpha\) 内的射影均为 \(C\). 若 \(AC\neq0\)，则 \(A,C\in\alpha\) 且 \(AC\perp\beta\)，所以平面 \(\alpha\) 与平面 \(\beta\) 垂直. 若 \(AC=0\)，则 \(A=C\in l\). 又因 \(PA=1\)，\(PB=2\)，所以 \(B\neq C\)；此时 \(B,C\in\beta\) 且 \(BC\perp\alpha\)，仍可得 \(\alpha\perp\beta\). 于是可建立直角坐标系，使 \(l\) 为 \(z\) 轴，\(\alpha\) 为 \(xOz\) 平面，\(\beta\) 为 \(yOz\) 平面. 设 \(P=(x,y,z)\)，则
-\(PA=|y|=1\)，\(PB=|x|=2\). 点 \(P\) 到 \(l\) 的距离为
-\(\sqrt{x^2+y^2}=\sqrt{2^2+1^2}=\sqrt5\).
+设两个射影的重合点为 \(C\). 由 \(AC\perp\beta\)，且 \(A\)，\(C\in\alpha\)，若 \(A\ne C\)，则平面 \(\alpha\) 含有一条垂直于平面 \(\beta\) 的直线，所以 \(\alpha\perp\beta\). 若 \(A=C\)，则 \(C\in l\). 又 \(PA=1\ne2=PB\)，故 \(B\ne C\)；此时 \(B\)，\(C\in\beta\) 且 \(BC\perp\alpha\)，同样得到 \(\alpha\perp\beta\).
+
+建立直角坐标系，使交线 \(l\) 为 \(z\) 轴，\(\alpha\) 为 \(xOz\) 平面，\(\beta\) 为 \(yOz\) 平面. 设 \(P=(x,y,z)\)，则 \(P\) 到 \(\alpha\) 的垂距为 \(|y|\)，到 \(\beta\) 的垂距为 \(|x|\)，所以
+\(|y|=PA=1\)，\(|x|=PB=2\).
+点 \(P\) 到 \(z\) 轴，即到 \(l\) 的距离为
+\[
+\sqrt{x^2+y^2}=\sqrt{2^2+1^2}=\sqrt5
+\]
 \end{solution}
 
 \section{解答题}
@@ -332,25 +406,31 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 因为 \(A+B+C=\pi\)，所以
+\item 因为 \(A+B+C=\pi\)，所以 \(B+C=\pi-A\)，从而
 \[
 \sin^2\frac{B+C}{2}
 =\sin^2\left(\frac{\pi}{2}-\frac A2\right)
 =\cos^2\frac A2
 =\frac{1+\cos A}{2}
-=\frac23.
+=\frac23
 \]
-又
+另外，
 \[
-\cos 2A=2\cos^2A-1=2\left(\frac13\right)^2-1=-\frac79.
+\cos 2A=2\cos^2A-1=2\left(\frac13\right)^2-1=-\frac79
 \]
-因此所求的值为 \(\frac23-\frac79=-\frac19\).
-\item 由余弦定理及 \(\cos A=\frac13\)，得
+因此所求的值为
+\(\frac23-\frac79=-\frac19\).
+\item 由余弦定理及 \(\cos A=\frac13\)，且 \(a=\sqrt3\)，得
 \[
 3=a^2=b^2+c^2-2bc\cos A=b^2+c^2-\frac23bc
-=(b-c)^2+\frac43bc.
+=(b-c)^2+\frac43bc
 \]
-所以 \(bc=\frac34\left(3-(b-c)^2\right)\leqslant\frac94\). 当 \(b=c\) 时等号成立；此时由上式得 \(b=c=\frac32\)，确有 \(a=\sqrt3\). 因此 \(bc\) 的最大值为 \(\frac94\).
+所以
+\[
+bc=\frac34\left(3-(b-c)^2\right)\leqslant\frac94
+\]
+当且仅当 \(b=c\) 时等号成立. 代入上式，此时
+\(3=\frac43b^2\)，得 \(b=c=\frac32\)，且三角形条件成立. 因此 \(bc\) 的最大值为 \(\frac94\).
 \end{enumerate}
 \end{solution}
 
@@ -365,13 +445,10 @@ B
 \begin{solution}
 \begin{enumerate}
 \item 每次取到标号 \(1\)，\(2\)，\(5\) 的概率分别为
-\(\frac3{10}\)，\(\frac4{10}\)，\(\frac3{10}\). 由于取球后放回，两次取球相互独立. 随机变量 \(\varepsilon\) 的可能取值为 \(2\)，\(3\)，\(4\)，\(6\)，\(7\)，\(10\). 由各标号组合及独立性，得
-\(P(\varepsilon=2)=\frac3{10}\cdot\frac3{10}=\frac9{100}\)，
-\(P(\varepsilon=3)=2\cdot\frac3{10}\cdot\frac4{10}=\frac{24}{100}\)，
-\(P(\varepsilon=4)=\frac4{10}\cdot\frac4{10}=\frac{16}{100}\)，
-\(P(\varepsilon=6)=2\cdot\frac3{10}\cdot\frac3{10}=\frac{18}{100}\)，
-\(P(\varepsilon=7)=2\cdot\frac4{10}\cdot\frac3{10}=\frac{24}{100}\)，
-\(P(\varepsilon=10)=\frac3{10}\cdot\frac3{10}=\frac9{100}\). 所以分布列为
+\(\frac3{10}\)，\(\frac4{10}\)，\(\frac3{10}\). 由于取球后放回，两次取球相互独立. 设两次取到的标号分别为 \(\varepsilon_1\)，\(\varepsilon_2\)，则
+\(\varepsilon=\varepsilon_1+\varepsilon_2\) 的可能取值为 \(2\)，\(3\)，\(4\)，\(6\)，\(7\)，\(10\). 逐一按有序组合计算：
+\(P(\varepsilon=2)=\frac3{10}\cdot\frac3{10}=\frac9{100}\)，\(P(\varepsilon=3)=2\cdot\frac3{10}\cdot\frac4{10}=\frac{24}{100}\)，\(P(\varepsilon=4)=\frac4{10}\cdot\frac4{10}=\frac{16}{100}\). 又 \(P(\varepsilon=6)=2\cdot\frac3{10}\cdot\frac3{10}=\frac{18}{100}\)，\(P(\varepsilon=7)=2\cdot\frac4{10}\cdot\frac3{10}=\frac{24}{100}\)，\(P(\varepsilon=10)=\frac3{10}\cdot\frac3{10}=\frac9{100}\).
+这些概率之和为 \(1\)，故分布列为
 \begin{center}
 \begin{tabular}{c|cccccc}
 \hline
@@ -381,9 +458,18 @@ B
 \hline
 \end{tabular}
 \end{center}
-\item 设两次取到球的标号分别为 \(\varepsilon_1\)，\(\varepsilon_2\)，则
-\(E(\varepsilon_1)=E(\varepsilon_2)=1\cdot\frac3{10}+2\cdot\frac4{10}+5\cdot\frac3{10}=\frac{13}{5}\). 因此
-\(E(\varepsilon)=E(\varepsilon_1+\varepsilon_2)=E(\varepsilon_1)+E(\varepsilon_2)=\frac{26}{5}\).
+\item 对任意一次取球，标号的期望为
+\[
+E(\varepsilon_1)=E(\varepsilon_2)
+=1\cdot\frac3{10}+2\cdot\frac4{10}+5\cdot\frac3{10}
+=\frac{13}{5}
+\]
+由期望的线性性质，
+\[
+E(\varepsilon)=E(\varepsilon_1+\varepsilon_2)
+=E(\varepsilon_1)+E(\varepsilon_2)
+=\frac{26}{5}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -400,22 +486,22 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 取直角坐标系，使
-\(A=(-1,0,0)\)，\(C=(1,0,0)\)，正方形 \(ABCD\) 在 \(xOy\) 平面内，矩形 \(ACEF\) 在 \(xOz\) 平面内. 因为 \(AC=2\)，\(AB=\sqrt2\)，所以
-\(B=(0,1,0)\)，\(D=(0,-1,0)\). 又 \(AF=1\)，从而
+\item 取直角坐标系，使 \(A=(-1,0,0)\)，\(C=(1,0,0)\)，正方形 \(ABCD\) 在 \(xOy\) 平面内，矩形 \(ACEF\) 在 \(xOz\) 平面内. 因为 \(AC=2\)，\(AB=\sqrt2\)，可取
+\(B=(0,1,0)\)，\(D=(0,-1,0)\).
+又 \(AF=1\)，从而
 \(E=(1,0,1)\)，\(F=(-1,0,1)\)，\(M=(0,0,1)\).
-\(\overrightarrow{AM}=(1,0,1)\)，\(\overrightarrow{BD}=(0,-2,0)\)，\(\overrightarrow{BE}=(1,-1,1)\). 平面 \(BDE\) 的一个法向量为
-\(\overrightarrow{BD}\times\overrightarrow{BE}=(-2,0,2)\)，且
-\((1,0,1)\cdot(-2,0,2)=0\). 因此 \(AM\parallel\) 平面 \(BDE\).
-\item 平面 \(ADF\) 与平面 \(BDF\) 的法向量可分别取为
+\(\overrightarrow{AM}=(1,0,1)\)，\(\overrightarrow{BD}=(0,-2,0)\)，\(\overrightarrow{BE}=(1,-1,1)\).
+平面 \(BDE\) 的一个法向量为
 \[
-\bs n_1=\overrightarrow{DA}\times\overrightarrow{DF}=(1,1,0),\qquad
-\bs n_2=\overrightarrow{DB}\times\overrightarrow{DF}=(2,0,2),
+\overrightarrow{BD}\times\overrightarrow{BE}=(-2,0,2)
 \]
+因此平面 \(BDE\) 的方程为 \(z=x\). 由于 \(\overrightarrow{AM}\cdot(-2,0,2)=0\)，直线 \(AM\) 的方向平行于平面 \(BDE\)；又 \(A=(-1,0,0)\) 不满足 \(z=x\)，所以 \(A\) 不在该平面上，从而 \(AM\parallel\) 平面 \(BDE\).
+\item 平面 \(ADF\) 与平面 \(BDF\) 的法向量可分别取为
+\(\bs n_1=\overrightarrow{DA}\times\overrightarrow{DF}=(1,1,0)\)，\(\bs n_2=\overrightarrow{DB}\times\overrightarrow{DF}=(2,0,2)\)
 其中 \(\overrightarrow{DA}=(-1,1,0)\)，\(\overrightarrow{DB}=(0,2,0)\)，\(\overrightarrow{DF}=(-1,1,1)\). 所以二面角 \(A\mathord{-}DF\mathord{-}B\) 的余弦为
 \[
 \cos\theta=\frac{|\bs n_1\cdot\bs n_2|}{|\bs n_1||\bs n_2|}
-=\frac{2}{\sqrt2\cdot2\sqrt2}=\frac12.
+=\frac{2}{\sqrt2\cdot2\sqrt2}=\frac12
 \]
 因此二面角 \(A\mathord{-}DF\mathord{-}B=\frac{\pi}{3}\).
 \end{enumerate}
@@ -431,21 +517,26 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 因为 \(y'=-\e^{-x}\)，所以曲线在 \(M(t,\e^{-t})\) 处的切线斜率为 \(-\e^{-t}\). 切线 \(l\) 的方程为
+\item 因为 \(y'=-\e^{-x}\)，所以在 \(M(t,\e^{-t})\) 处的切线斜率为 \(-\e^{-t}\). 由点斜式，切线 \(l\) 的方程为
 \[
-y-\e^{-t}=-\e^{-t}(x-t),
+y-\e^{-t}=-\e^{-t}(x-t)
 \]
-即 \(y=\e^{-t}(t+1-x)\).
-\item 切线与 \(x\) 轴交于 \((t+1,0)\)，与 \(y\) 轴交于 \((0,(t+1)\e^{-t})\). 由于 \(t\geqslant0\)，这两个截距均非负，故
+整理得
 \[
-S(t)=\frac12(t+1)^2\e^{-t}.
+y=\e^{-t}(t+1-x)
 \]
-求导得
+\item 令 \(y=0\)，得切线与 \(x\) 轴交于 \((t+1,0)\)；令 \(x=0\)，得其与 \(y\) 轴交于 \((0,(t+1)\e^{-t})\). 由于 \(t\geqslant0\)，两个截距均非负，三角形面积为
 \[
-S'(t)=\frac12\e^{-t}(t+1)(1-t).
+S(t)=\frac12(t+1)^2\e^{-t}
 \]
-所以 \(S(t)\) 在 \([0,1]\) 上递增，在 \([1,+\infty)\) 上递减，最大值在 \(t=1\) 时取得，为
-\(S(1)=\frac2{\e}\).
+对 \(t\geqslant0\) 求导：
+\[
+S'(t)=\frac12\e^{-t}(t+1)(1-t)
+\]
+因为 \(\e^{-t}>0\)，\(t+1>0\)，所以 \(S'(t)>0\)（\(0\leqslant t<1\)），\(S'(1)=0\)，\(S'(t)<0\)（\(t>1\)）. 因而 \(S(t)\) 在 \([0,1]\) 上递增，在 \([1,+\infty)\) 上递减，最大值在 \(t=1\) 时取得，且
+\[
+S(1)=\frac12(1+1)^2\e^{-1}=\frac2{\e}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -461,33 +552,46 @@ S'(t)=\frac12\e^{-t}(t+1)(1-t).
 \begin{enumerate}
 \item 直线 \(AP\) 的方程为 \(y=k(x-1)\)，即 \(kx-y-k=0\). 由点到直线的距离公式，
 \[
-\frac{|k(m-1)|}{\sqrt{1+k^2}}=1,
+\frac{|k(m-1)|}{\sqrt{1+k^2}}=1
 \]
 所以
 \[
-|m-1|=\frac{\sqrt{1+k^2}}{|k|}=\sqrt{1+\frac1{k^2}}.
+|m-1|=\frac{\sqrt{1+k^2}}{|k|}=\sqrt{1+\frac1{k^2}}
 \]
 由 \(\frac{\sqrt3}{3}\leqslant|k|\leqslant\sqrt3\)，得
 \(\frac13\leqslant k^2\leqslant3\)，从而
 \(\frac{2}{\sqrt3}\leqslant|m-1|\leqslant2\). 因此
 \[
-m\in\left[-1,1-\frac{2\sqrt3}{3}\right]\cup\left[1+\frac{2\sqrt3}{3},3\right].
+m\in\left[-1,1-\frac{2\sqrt3}{3}\right]\cup\left[1+\frac{2\sqrt3}{3},3\right]
 \]
-\item 设双曲线方程为 \(x^2-\frac{y^2}{b^2}=1\)，其中 \(b>0\). 因为 \(M\) 是 \(\triangle APQ\) 的内心，\(AM\) 是顶点 \(A\) 处的内角平分线. 又 \(AM\) 为 \(x\) 轴，所以 \(P\)，\(Q\) 关于 \(x\) 轴对称. 设 \(P=(x,y)\)，\(Q=(x,-y)\)，其中 \(y>0\). 直线 \(PQ\) 为 \(x=x\)，且内心 \(M\) 到该边的距离为 \(1\). 由于 \(M\) 位于三角形内部，\(x>m\)，故
-\(x-m=1\)，即 \(x=2+\sqrt2\).
-
-直线 \(AP\) 的斜率为 \(k=\frac{y}{x-1}\). 利用已知的点到直线距离条件以及 \(m-1=\sqrt2\)，有
+\item 由于双曲线的右顶点为 \(A(1,0)\)，其方程可设为
+\(\frac{x^2}{1^2}-\frac{y^2}{b^2}=1\)，\(b>0\).
+内心 \(M\) 在顶点 \(A\) 的内角平分线上，而 \(AM\) 是 \(x\) 轴，所以两条射线 \(AP\)，\(AQ\) 关于 \(x\) 轴对称. 对称的两条直线与该双曲线除 \(A\) 外的交点横坐标相同，故可设
+\(P=(x,y)\)，\(Q=(x,-y)\)，\(y>0\).
+于是 \(PQ\) 为直线 \(x=x\). 因为内心在三角形内部，\(x>m\)，且内心到边 \(PQ\) 的距离为 \(1\)，所以
 \[
-\frac{|k|\sqrt2}{\sqrt{1+k^2}}=1,
+x-m=1
 \]
-解得 \(k^2=1\). 取 \(y>0\)，得 \(k=1\)，所以 \(y=x-1=1+\sqrt2\). 代入双曲线方程，得
+代入 \(m=\sqrt2+1\)，得 \(x=2+\sqrt2\).
+
+设直线 \(AP\) 的斜率为 \(k=\frac{y}{x-1}\). 由题设点到直线的距离为 \(1\)，以及 \(m-1=\sqrt2\)，有
+\[
+\frac{|k|\sqrt2}{\sqrt{1+k^2}}=1
+\]
+平方并整理得 \(2k^2=1+k^2\)，所以 \(k^2=1\). 由于 \(P\) 在上方且 \(x>1\)，取 \(k=1\)，从而
+\[
+y=k(x-1)=x-1=1+\sqrt2
+\]
+代入双曲线方程，得
 \[
 \frac1{b^2}=\frac{x^2-1}{y^2}
 =\frac{(2+\sqrt2)^2-1}{(1+\sqrt2)^2}
-=2\sqrt2-1.
+=2\sqrt2-1
 \]
 故所求双曲线方程为
-\(x^2-(2\sqrt2-1)y^2=1\).
+\[
+x^2-(2\sqrt2-1)y^2=1
+\]
 \end{enumerate}
 \end{solution}
 
@@ -499,7 +603,7 @@ m\in\left[-1,1-\frac{2\sqrt3}{3}\right]\cup\left[1+\frac{2\sqrt3}{3},3\right].
 \item 若记 \(b_{n} = y_{4n+4} - y_{4n}\)，\(n \in \N^*\)，证明 \(\{b_n\}\) 是等比数列.
 \end{enumerate}
 
-\bitmapfigure[width=0.32\linewidth]{img/2004/zhejiang_science/q22_fig1.png}
+\bitmapfigure[float=inline,width=0.32\linewidth]{img/2004/zhejiang_science/q22_fig1.png}
 \end{problem}
 
 \begin{solution}
@@ -507,29 +611,23 @@ m\in\left[-1,1-\frac{2\sqrt3}{3}\right]\cup\left[1+\frac{2\sqrt3}{3},3\right].
 \item 由中点坐标公式，
 \(P_1=\left(\frac12,1\right)\)，\(P_2=(0,1)\)，\(P_3=\left(\frac14,\frac12\right)\). 又
 \(y_4=\frac{y_1+y_2}{2}=1\)，\(y_5=\frac{y_2+y_3}{2}=\frac34\). 因此
-\[
-a_1=\frac12y_1+y_2+y_3=2,\qquad
-a_2=\frac12y_2+y_3+y_4=2,\qquad
-a_3=\frac12y_3+y_4+y_5=2.
-\]
+\(a_1=\frac12y_1+y_2+y_3=2\)，\(a_2=\frac12y_2+y_3+y_4=2\)，\(a_3=\frac12y_3+y_4+y_5=2\).
 由递推关系 \(y_{n+3}=\frac{y_n+y_{n+1}}2\)，有
 \[
 a_{n+1}=\frac12y_{n+1}+y_{n+2}+y_{n+3}
-=\frac12y_n+y_{n+1}+y_{n+2}=a_n.
+=\frac12y_n+y_{n+1}+y_{n+2}=a_n
 \]
 所以 \(a_n\) 是常数列，且 \(a_n=2\).
 \item 由 \(a_n=2\) 得
 \(y_{n+1}+y_{n+2}=2-\frac12y_n\). 另一方面，
 \(y_{n+4}=\frac{y_{n+1}+y_{n+2}}2\)，所以
-\[
-y_{n+4}=1-\frac14y_n,\qquad n\in\N^*.
-\]
+\(y_{n+4}=1-\frac14y_n\)，\(n\in\N^*\).
 \item 由上式，
 \[
 b_{n+1}=y_{4n+8}-y_{4n+4}
 =\left(1-\frac14y_{4n+4}\right)-\left(1-\frac14y_{4n}\right)
 =-\frac14\left(y_{4n+4}-y_{4n}\right)
-=-\frac14b_n.
+=-\frac14b_n
 \]
 又 \(y_4=1\)，\(y_5=y_6=\frac34\)，\(y_7=\frac78\)，\(y_8=\frac34\)，故
 \(b_1=y_8-y_4=-\frac14\ne0\). 因此 \(\{b_n\}\) 是等比数列，公比为 \(-\frac14\).

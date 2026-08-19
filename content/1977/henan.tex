@@ -5,13 +5,13 @@
 \end{problem}
 
 \begin{solution}
+由原式中幂为负的项可知，必须有 \(1-c^2>0\)，即 \(-1<c<1\). 在此条件下，
+\(\left[(1+c)(1-c)\right]^{\frac12}=(1-c^2)^{\frac12}\)，所以原式为
+\(\left(1-c^2\right)^{-\frac12}-\left(1-c^2\right)^{\frac12}-c^2\left(1-c^2\right)^{-\frac12}\). 将同类项合并，得
 \[
-\begin{gathered}
-\text{原式}=\left( 1-c^2 \right)^{- \frac{1}{2}}-\left\{ \left( 1-c^2 \right)^{\frac{1}{2}}+c^2\left( 1-c^2 \right)^{- \frac{1}{2}} \right\} \\
-=\left( 1-c^2 \right)^{- \frac{1}{2}}-\left( 1-c^2 \right)^{\frac{1}{2}}-c^2\left( 1-c^2 \right)^{- \frac{1}{2}} \\
-=\left( 1-c^2 \right)^{- \frac{1}{2}}\left[ 1-\left( 1-c^2 \right)-c^2 \right]=0
-\end{gathered}
+\left(1-c^2\right)^{-\frac12}\left[1-\left(1-c^2\right)-c^2\right]=0
 \]
+因此原式的值为 \(0\).
 \end{solution}
 
 \begin{problem}
@@ -19,13 +19,15 @@
 \end{problem}
 
 \begin{solution}
+因为 \(\lg16=4\lg2\)，\(\lg1=0\)，\(\lg10=1\)，且
+\(0.09=0.3^2\)，所以
+\(\frac14\lg16=\lg2\)，\(\sqrt{(\lg1-\lg10)^2}=\sqrt{(-1)^2}=1\)，以及
+\(\frac12\lg0.09=\lg0.3=\lg3-\lg10=\lg3-1\). 因此原式等于
 \[
-\begin{gathered}
-\text{原式}=\frac{\lg 3+\lg 2}{\lg 2+\sqrt{\left( 0-1 \right)^2}+\lg 0.3}
-=\frac{\lg 3+\lg 2}{\lg 2+1+\lg 3-\lg 10} \\
-=\frac{\lg 3+\lg 2}{\lg 2+1+\lg 3-1}=1
-\end{gathered}
+\frac{\lg3+\lg2}{\lg2+1+\lg3-1}
+=\frac{\lg3+\lg2}{\lg3+\lg2}=1
 \]
+这里分母为 \(\lg6>0\)，约分合法.
 \end{solution}
 
 \begin{problem}
@@ -33,7 +35,10 @@
 \end{problem}
 
 \begin{solution}
-由 \(5^{x^2-2x}=125=5^3\) 得 \(x^2-2x=3\)，因此 \(\left( x-3 \right)\left( x+1 \right)=0\)，所以 \(x_1=3\)，\(x_2=-1\).
+因为底数 \(5>0\) 且 \(5\ne1\)，指数函数 \(5^t\) 在实数范围内是单调函数，故由
+\(5^{x^2-2x}=125=5^3\) 可得 \(x^2-2x=3\). 于是
+\(x^2-2x-3=0\)，\(\left(x-3\right)\left(x+1\right)=0\).
+所以 \(x=3\) 或 \(x=-1\). 代回原方程，分别有 \(5^{9-6}=5^3\) 和 \(5^{1+2}=5^3\)，两值均成立，故解为 \(x_1=3\)，\(x_2=-1\).
 \end{solution}
 
 \begin{problem}
@@ -41,9 +46,8 @@
 \end{problem}
 
 \begin{solution}
-由正弦定理，\(\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}\).
-可知 \( a\sin B=b\sin A \)，\( a\sin C=c\sin A \)，\( b\sin C=c\sin B \).
-因此
+由正弦定理，\(\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}\). 交叉相乘可得
+\(a\sin B=b\sin A\)，\(a\sin C=c\sin A\)，\(b\sin C=c\sin B\). 因此
 \[
 \begin{gathered}
 a\left( \sin B-\sin C \right)+b\left( \sin C-\sin A \right)+c\left( \sin A-\sin B \right) \\
@@ -51,6 +55,7 @@ a\left( \sin B-\sin C \right)+b\left( \sin C-\sin A \right)+c\left( \sin A-\sin 
 =b\sin A-c\sin A+c\sin B-b\sin A+c\sin A-c\sin B=0
 \end{gathered}
 \]
+上式正是所要证明的等式，故命题成立.
 \end{solution}
 
 \begin{problem}
@@ -60,10 +65,16 @@ a\left( \sin B-\sin C \right)+b\left( \sin C-\sin A \right)+c\left( \sin A-\sin 
 \end{problem}
 
 \begin{solution}
-在 \( \mathrm{Rt}\triangle BCE \) 和 \( \mathrm{Rt}\triangle DCF \) 中，因为 \( BC=CD \)（正方形的边长相等），\( CE=CF \)（已知），所以 \( \triangle BCE \cong \triangle DCF \).
-所以 \( \angle GBC=\angle FDC \)（对应角相等）.
-又因为 \( \angle EBC+\angle BEC=90^\circ \)，而 \( \angle BEC=\angle DEG \)（对顶角相等），所以 \( \angle FDC+\angle DEG=90^\circ \).
-所以 \( \angle DGB=90^\circ \). 即 \( BG \perp DF \).
+设正方形边长为 \(s>0\)，取直角坐标系使
+\(B=(0,0)\)，\(C=(s,0)\)，\(D=(s,s)\). 设 \(CE=t\)，则 \(0\leq t\leq s\)，从而
+\(E=(s,t)\). 由于 \(F\) 在 \(BC\) 的延长线上且 \(CF=CE=t\)，有 \(F=(s+t,0)\).
+
+直线 \(BE\) 和 \(DF\) 的方向向量分别可取为
+\(\overrightarrow{BE}=(s,t)\) 和 \(\overrightarrow{DF}=(t,-s)\). 它们的内积为
+\[
+\overrightarrow{BE}\mathbin{\cdot}\overrightarrow{DF}=st-ts=0
+\]
+因此 \(BE\perp DF\). 又因为 \(G\) 在 \(BE\) 和 \(DF\) 上，\(BG\) 与 \(BE\) 共线，所以 \(BG\perp DF\). 当 \(t=0\) 或 \(t=s\) 时，以上方向向量仍然成立，分别对应 \(G=C\) 或 \(G=D\)，结论同样成立.
 \end{solution}
 
 \begin{problem}
@@ -71,15 +82,23 @@ a\left( \sin B-\sin C \right)+b\left( \sin C-\sin A \right)+c\left( \sin A-\sin 
 \end{problem}
 
 \begin{solution}
-
+在等式有意义的条件下，\(\sin\alpha\ne0\) 且 \(\cos\alpha\ne0\)，因而 \(\sin2\alpha\ne0\). 由平方差公式和二倍角公式，左边为
 \[
-\begin{gathered}
-\text{左边}=\tan^2\alpha-\cot^2\alpha=\frac{\sin^4\alpha-\cos^4\alpha}{\sin^2\alpha\cos^2\alpha} \\
-=\frac{\sin^2\alpha-\cos^2\alpha}{\sin^2\alpha\cos^2\alpha}=-\frac{\cos 2\alpha}{\frac{1}{4}\sin^2 2\alpha} \\
-=-\frac{4\cos 2\alpha\cdot\sin 2\alpha}{\sin^2 2\alpha\cdot\sin 2\alpha}=-\frac{2\sin 4\alpha}{\sin^3 2\alpha}=\text{右边}
-\end{gathered}
+\tan^2\alpha-\cot^2\alpha
+=\frac{\sin^2\alpha}{\cos^2\alpha}-\frac{\cos^2\alpha}{\sin^2\alpha}
+=\frac{\sin^4\alpha-\cos^4\alpha}{\sin^2\alpha\cos^2\alpha}
+=\frac{\sin^2\alpha-\cos^2\alpha}{\sin^2\alpha\cos^2\alpha}
 \]
-所以 \( \tan^2\alpha-\cot^2\alpha=-\frac{2\sin 4\alpha}{\sin^3 2\alpha} \).
+又因为 \(\sin^2\alpha-\cos^2\alpha=-\cos2\alpha\)，以及
+\(\sin^2\alpha\cos^2\alpha=\frac14\sin^22\alpha\)，所以
+再利用 \(\sin4\alpha=2\sin2\alpha\cos2\alpha\)，有
+\[
+\tan^2\alpha-\cot^2\alpha
+=-\frac{4\cos2\alpha}{\sin^22\alpha}
+=-\frac{4\cos2\alpha\sin2\alpha}{\sin^32\alpha}
+=-\frac{2\sin4\alpha}{\sin^32\alpha}
+\]
+这正是右边，故等式成立.
 \end{solution}
 
 \begin{problem}
@@ -89,11 +108,20 @@ a\left( \sin B-\sin C \right)+b\left( \sin C-\sin A \right)+c\left( \sin A-\sin 
 \end{problem}
 
 \begin{solution}
-\( AA_1=L\sin\alpha \)，\( AC=L\cos\alpha \).
-因此底面矩形 \(ABCD\) 的面积为 \(S=\frac{1}{2}AC^2\sin\beta=\frac{1}{2}L^2\cos^2\alpha\sin\beta\).
-因此长方体的体积
+设长方体的高为 \(AA_1\)，底面两条对角线为 \(AC\) 和 \(BD\). 空间对角线在底面上的射影是底面对角线 \(AC\)，所以在直角三角形 \(\triangle AA_1C\) 中，
+\(AA_1=L\sin\alpha\)，\(AC=L\cos\alpha\).
+
+矩形的两条对角线相等，且它们的夹角为 \(\beta\)，因此底面面积等于两条对角线所构成的四个三角形面积之和，即
 \[
-V=AA_1\times S=L\sin\alpha\cdot\frac{1}{2}L^2\cos^2\alpha\sin\beta=\frac{1}{2}L^3\cos^2\alpha\sin\alpha\sin\beta
+S=\frac12AC\cdot BD\sin\beta
+=\frac12AC^2\sin\beta
+=\frac12L^2\cos^2\alpha\sin\beta
+\]
+所以长方体的体积为
+\[
+V=AA_1\cdot S
+=L\sin\alpha\cdot\frac12L^2\cos^2\alpha\sin\beta
+=\frac12L^3\cos^2\alpha\sin\alpha\sin\beta
 \]
 \end{solution}
 
@@ -116,7 +144,8 @@ a_1-\frac{1}{2}+c=2,\\
 9a_1+\frac{3}{2}+c=2
 \end{cases}
 \]
-解这个方程组，得 \( a_1=-\frac{1}{4} \)，\( c=\frac{11}{4} \). 所以 \(f_1(x)=-\frac{1}{4}x^2+\frac{1}{2}x+\frac{11}{4}\).
+两式相减得 \(8a_1+2=0\)，所以 \(a_1=-\frac14\)；代入第一式，得 \(c=\frac{11}{4}\). 所以
+\(f_1(x)=-\frac14x^2+\frac12x+\frac{11}{4}\).
 
 对消耗函数 \( f_2(x) \) 来说，由 \( f_2(-1)=f_2(3)=2 \)，可得
 \[
@@ -125,14 +154,30 @@ a_2-b+\frac{5}{4}=2,\\
 9a_2+3b+\frac{5}{4}=2
 \end{cases}
 \]
-解这个方程组，得 \( a_2=\frac{1}{4} \)，\( b=-\frac{1}{2} \). 所以 \(f_2(x)=\frac{1}{4}x^2-\frac{1}{2}x+\frac{5}{4}\).
+两式相减并整理得 \(8a_2+4b=0\)，即 \(b=-2a_2\). 代入第一式得 \(3a_2=\frac34\)，所以 \(a_2=\frac14\)，\(b=-\frac12\). 因此
+\(f_2(x)=\frac14x^2-\frac12x+\frac54\).
 
-\item 因为
-\(f_1(x)=-\frac{1}{4}x^2+\frac{1}{2}x+\frac{11}{4}=-\frac{1}{4}\left( x-1 \right)^2+3\)，
-\(f_2(x)=\frac{1}{4}x^2-\frac{1}{2}x+\frac{5}{4}=\frac{1}{4}\left( x-1 \right)^2+1\)，
-所以指标函数 \( f_1(x) \) 在 \( x=1 \) 时有极大值 \( 3 \)，消耗函数 \( f_2(x) \) 在 \( x=1 \) 时有极小值 \( 1 \).
+将所得函数代回 \(x=-1\) 和 \(x=3\)，可得
+\(f_1(-1)=f_1(3)=f_2(-1)=f_2(3)=2\)，符合题设条件.
 
-\item 略图如下：
+\item 在 \(x\in\R\) 上，\(f_1(x)=-\frac14(x-1)^2+3\)，而 \((x-1)^2\geq0\)，所以 \(f_1(x)\leq3\)，当且仅当 \(x=1\) 时取等号. 因此 \(f_1\) 在 \(x=1\) 时有最大值 \(3\)，且没有最小值.
+
+对 \(f_2\) 配方，得
+\[
+f_2(x)=\frac14x^2-\frac12x+\frac54
+=\frac14\left(x^2-2x+1\right)+1
+=\frac14(x-1)^2+1
+\]
+因为 \((x-1)^2\geq0\)，所以 \(f_2(x)\geq1\)，当且仅当 \(x=1\) 时取等号. 因此 \(f_2\) 在 \(x=1\) 时有最小值 \(1\)，且没有最大值.
+
+\item 两个函数的对称轴都是 \(x=1\). 函数 \(f_1\) 的图象开口向下，顶点为 \((1,3)\)，函数 \(f_2\) 的图象开口向上，顶点为 \((1,1)\). 两个函数的交点满足
+\[
+-\frac14(x-1)^2+3=\frac14(x-1)^2+1
+\]
+所以
+\(\frac12(x-1)^2=2\)，\((x-1)^2=4\)，\(x=-1\text{ 或 }x=3\).
+代入任一函数可得交点的纵坐标为 \(2\)，故交点为 \((-1,2)\) 和 \((3,2)\). 又有
+\(f_1(0)=\frac{11}{4}\)，\(f_2(0)=\frac54\)，据此描点并分别作开口向下、向上的抛物线，略图如下：
 
 \end{enumerate}
 \solutionfigure{\bitmapfigure[max width=8.0cm]{img/1977/henan/q8_solution_fig1.png}}
@@ -150,23 +195,30 @@ a_2-b+\frac{5}{4}=2,\\
 
 \begin{solution}
 \begin{enumerate}
-\item 过点 \( P\left( 0,3\sqrt{2} \right) \)，且斜率为 \( k \) 的直线方程是 \(y-3\sqrt{2}=kx\).
-圆心在原点，半径为 \( 3 \) 的圆的方程是 \(x^2+y^2=9\).
-它们的交点坐标 \( \left( x,y \right) \) 应适合方程组
+\item 过点 \(P\left(0,3\sqrt{2}\right)\) 且斜率为 \(k\) 的直线方程是 \(y-3\sqrt{2}=kx\). 圆心在原点、半径为 \(3\) 的圆的方程是 \(x^2+y^2=9\). 交点坐标 \((x,y)\) 应满足方程组
 \[
 \begin{cases}
 y-3\sqrt{2}=kx,\\
 x^2+y^2=9
 \end{cases}
 \]
-解此方程组，得
+由 \(y=kx+3\sqrt{2}\)，代入圆的方程，得
 \[
-\begin{cases}
-x=\frac{-3\sqrt{2}k\pm3\sqrt{k^2-1}}{1+k^2},\\
-y=\frac{3\sqrt{2}\pm3k\sqrt{k^2-1}}{1+k^2}
-\end{cases}
+(1+k^2)x^2+6\sqrt{2}kx+9=0
 \]
-即交点 \(M\)，\(N\) 的坐标是
+由于题设中的 \(M\)，\(N\) 是两个不同的交点，故该关于 \(x\) 的二次方程有两个不等实根，其判别式为
+\[
+\Delta=(6\sqrt{2}k)^2-4(1+k^2)\cdot9=36(k^2-1)>0
+\]
+所以 \(k^2>1\). 由求根公式，
+\[
+x=\frac{-3\sqrt{2}k\pm3\sqrt{k^2-1}}{1+k^2}
+\]
+再由 \(y=kx+3\sqrt{2}\)，得到
+\[
+y=\frac{3\sqrt{2}\pm3k\sqrt{k^2-1}}{1+k^2}
+\]
+故交点 \(M\)，\(N\) 的坐标分别为
 \[
 \left( \frac{-3\sqrt{2}k+3\sqrt{k^2-1}}{1+k^2},\frac{3\sqrt{2}+3k\sqrt{k^2-1}}{1+k^2} \right)
 \]
@@ -175,14 +227,16 @@ y=\frac{3\sqrt{2}\pm3k\sqrt{k^2-1}}{1+k^2}
 \]
 
 \setcounter{enumi}{2}
-\item 当 \(M\)，\(N\) 两点重合时，这时 \( k^2-1=0 \)，\( k=\pm1 \).
-这时过 \(P\) 点的直线和圆相切. 这样的直线有两条：\( y=x+3\sqrt{2} \) 和 \( y=-x+3\sqrt{2} \).
-这两条与圆相切的直线的斜率互为负倒数，表示这两条直线垂直，因此这两条切线的夹角为 \( 90^\circ \).
+\item 当 \(M\)，\(N\) 两点重合时，二次方程的判别式为 \(0\)，故
+\(36(k^2-1)=0\)，即 \(k=\pm1\). 此时交点重合，过 \(P\) 点的直线与圆相切. 又因为
+\(OP=3\sqrt{2}>3\)，点 \(P\) 在圆外，故这样的切线恰有两条，分别为
+\(y=x+3\sqrt{2}\)，\(y=-x+3\sqrt{2}\).
+两条切线的斜率分别为 \(1\) 和 \(-1\)，互为负倒数，所以两条切线互相垂直，夹角为 \(90^\circ\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-某电管所为实现农业现代化，加强电力网的建设，沿着一条通往农村的新公路栽电杆. 已知一辆汽车每次从电管所运 \(3\text{ 根}\)电线杆，相邻两根电线杆相距 \(50\text{ 米}\)，汽车往返的总行程是 \(35.5\text{ 公里}\)，最后一根电线杆与电管所相距 \(2450\text{ 米}\).
+某电管所为实现农业现代化，加强电力网的建设，沿着一条通往农村的新公路栽电杆. 已知一辆汽车每次从电管所运 \(3\) 根电线杆，相邻两根电线杆相距 \(50\mathrm{~m}\)，汽车往返的总行程是 \(35.5\mathrm{~km}\)，最后一根电线杆与电管所相距 \(2450\mathrm{~m}\).
 
 \begin{enumerate}
 \item 第一根电线杆与电管所相距多少？
@@ -192,20 +246,25 @@ y=\frac{3\sqrt{2}\pm3k\sqrt{k^2-1}}{1+k^2}
 
 \begin{solution}
 \begin{enumerate}
-\item
-设第一根电线杆离电管站为 \(x\text{ 米}\)，共运电线杆 \(n\text{ 根}\)，汽车共走了 \( \frac{n}{3}\text{ 趟} \). 第一趟走的路程是 \(2\left( x+100 \right)\text{ 米}\)，以后每一趟都比前一趟多走 \(300\text{ 米}\)，最后一趟所走的路程是 \(2\times2450\text{ 米}\).
-因此，根据题意，得
+\item 设第一根电线杆与电管所相距 \(x\mathrm{~m}\)，共栽 \(n\) 根. 因为汽车每次运 \(3\) 根，所以往返次数为 \(\frac n3\)，其中 \(n\) 必须是 \(3\) 的倍数. 第一趟把三根电线杆运到距离分别为 \(x\)、\(x+50\)、\(x+100\) 的位置，故往返路程为 \(2(x+100)\mathrm{~m}\). 以后每趟最远的一根比前一趟多 \(150\mathrm{~m}\)，往返路程依次增加 \(300\mathrm{~m}\)，最后一趟路程为 \(2\times2450\mathrm{~m}\). 总行程 \(35.5\mathrm{~km}=35500\mathrm{~m}\).
+
+最后一根电线杆的位置给出
 \[
 \begin{cases}
 2450=x+\left( n-1 \right)50,\\
-35500=\frac{n}{3}\cdot\frac{2\left( x+100 \right)+2\times2450}{2}
+35500=\frac n3\cdot\frac{2(x+100)+2\times2450}{2}.
 \end{cases}
 \]
-解这个方程组，得 \( n_1=30 \)，\( x_1=1000 \)；\( n_2=71 \)，\( x_2=-1050 \)（不合题意，舍去）.
+由第一式得 \(x=2500-50n\). 代入第二式，并注意
+\(\frac{2(x+100)+2\times2450}{2}=x+2550=50(101-n)\)，可得
+\(35500=\frac n3\cdot50(101-n)\)，\(n(101-n)=2130\).
+于是
+\(n^2-101n+2130=0\)，\((n-30)(n-71)=0\)
+所以 \(n=30\) 或 \(n=71\). 当 \(n=30\) 时，\(x=1000\)；当 \(n=71\) 时，\(x=-1050\)，不符合距离为正的实际意义，且 \(71\) 也不是 \(3\) 的倍数，故舍去.
 
-第一根电线杆与电管所相距 \(1000\text{ 米}\).
+因此第一根电线杆与电管所相距 \(1000\mathrm{~m}\).
 
-\item 共栽了 \(30\text{ 根}\)电线杆.
+\item 共栽了 \(30\) 根电线杆.
 \end{enumerate}
 \end{solution}
 
@@ -216,16 +275,22 @@ y=\frac{3\sqrt{2}\pm3k\sqrt{k^2-1}}{1+k^2}
 \end{problem}
 
 \begin{solution}
-由 \( x+x^{-1}=2\cos\theta \) 可得 \(x^2-2\cos\theta x+1=0\).
-所以 \( x=\cos\theta\pm\i\sin\theta \).
-因此
+设 \(n\) 为非负整数，且 \(x\ne0\). 由 \(x+x^{-1}=2\cos\theta\)，两边乘以 \(x\)，得
+\(x^2-2\cos\theta x+1=0\). 将其配方可写为
+\(\left(x-\cos\theta\right)^2+\sin^2\theta=0\)，所以
+\(x=\cos\theta+\i\sin\theta\) 或 \(x=\cos\theta-\i\sin\theta\).
+
+若 \(x=\cos\theta+\i\sin\theta\)，则 \(x^{-1}=\cos\theta-\i\sin\theta\). 由棣莫弗定理，
 \[
-\begin{gathered}
-x^n+x^{-n}=\left( \cos\theta\pm\i\sin\theta \right)^n+\left( \cos\theta\pm\i\sin\theta \right)^{-n} \\
-=\cos n\theta\pm\i\sin n\theta+\cos\left( -n\theta \right)\pm\i\sin\left( -n\theta \right) \\
-=\cos n\theta\pm\i\sin n\theta+\cos n\theta\mp\i\sin n\theta=2\cos n\theta
-\end{gathered}
+x^n+x^{-n}
+=\left(\cos\theta+\i\sin\theta\right)^n
+  +\left(\cos\theta-\i\sin\theta\right)^n
+=\left(\cos n\theta+\i\sin n\theta\right)
+  +\left(\cos n\theta-\i\sin n\theta\right)
+=2\cos n\theta
 \]
+若 \(x=\cos\theta-\i\sin\theta\)，两项互换，和仍为 \(2\cos n\theta\). 故
+\(x^n+x^{-n}=2\cos n\theta\).
 \end{solution}
 
 \begin{problem}
@@ -238,15 +303,29 @@ x^n+x^{-n}=\left( \cos\theta\pm\i\sin\theta \right)^n+\left( \cos\theta\pm\i\sin
 
 \begin{solution}
 \begin{enumerate}
-\item 由求导法则，\( y'=\frac{1+\frac{2x}{2\sqrt{x^2-a^2}}}{x+\sqrt{x^2-a^2}}=\frac{1}{\sqrt{x^2-a^2}} \)，且 \(\frac{1}{\sqrt{x^2-a^2}}=\frac{\sqrt{x^2-a^2}}{x^2-a^2}\).
-
-\item
+\item 设 \(a\in\R\). 当 \(a\ne0\) 时，根式要求 \(x\geq|a|\)，且对 \(x\leq-|a|\) 有
+\(x+\sqrt{x^2-a^2}<0\)，不在对数函数定义域内，所以函数的定义域为 \([|a|,+\infty)\). 当 \(a=0\) 时，根式为 \(|x|\)，对数真数为 \(x+|x|\)，故定义域为 \((0,+\infty)\). 因而在定义域的内部 \(x>|a|\) 上，由复合函数求导法则，
 \[
-\begin{gathered}
-\int_0^{2p}\sqrt{2px}\,\mathrm{d}x
-=\frac{1}{2p}\int_0^{2p}\sqrt{2px}\,\mathrm{d}\left( 2px \right) \\
-=\frac{1}{3p}\left( 2px \right)^{\frac{3}{2}}\bigg|_0^{2p}=\frac{8}{3}p^2
-\end{gathered}
+y'=\frac{1+\dfrac{x}{\sqrt{x^2-a^2}}}{x+\sqrt{x^2-a^2}}
+=\frac{\sqrt{x^2-a^2}+x}{\sqrt{x^2-a^2}\left(x+\sqrt{x^2-a^2}\right)}
+=\frac{1}{\sqrt{x^2-a^2}}
 \]
+
+\item 先考虑 \(p>0\). 令 \(u=2px\)，则 \(\mathrm{d}u=2p\,\mathrm{d}x\)，且积分上下限分别变为 \(0\) 和 \(4p^2\). 因此
+\[
+\int_0^{2p}\sqrt{2px}\,\mathrm{d}x
+=\frac{1}{2p}\int_0^{4p^2}u^{\frac12}\,\mathrm{d}u
+=\frac{1}{3p}\left.u^{\frac32}\right|_0^{4p^2}
+=\frac{1}{3p}\left(4p^2\right)^{\frac32}
+=\frac{8}{3}p^2
+\]
+若 \(p=0\)，原积分为 \(0\). 若 \(p<0\)，同样令 \(u=2px\)，但此时 \(1/(2p)<0\)，所以
+\[
+\int_0^{2p}\sqrt{2px}\,\mathrm{d}x
+=\frac{1}{2p}\int_0^{4p^2}u^{\frac12}\,\mathrm{d}u
+=\frac{1}{3p}\left(4p^2\right)^{\frac32}
+=-\frac{8}{3}p^2
+\]
+因此在 \(p\in\R\) 时，积分值可统一写为 \(\frac83p\lvert p\rvert\)；若题目另有约定 \(p\geq0\)，则结果为 \(\frac83p^2\).
 \end{enumerate}
 \end{solution}

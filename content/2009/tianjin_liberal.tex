@@ -16,6 +16,14 @@
 D
 \end{answer}
 
+\begin{solution}
+分子、分母同乘以分母的共轭复数，得
+\[
+\frac{5\i}{2-\i}=\frac{5\i(2+\i)}{(2-\i)(2+\i)}=\frac{-5+10\i}{5}=-1+2\i
+\]
+因此选 D.
+\end{solution}
+
 \begin{problem}
 设变量 \(x\)，\(y\) 满足约束条件 \(\begin{cases}
 x + y \geqslant 3,\\
@@ -34,6 +42,14 @@ x - y \geqslant -1,\\
 B
 \end{answer}
 
+\begin{solution}
+可行域的三个顶点分别由边界直线两两相交得到：
+\((1,2)\)，\((2,1)\)，\((4,5)\).
+具体地，前三组边界方程分别为
+\(x+y=3\)，\(\ x-y=-1;\)，\(x+y=3\)，\(\ 2x-y=3;\)，\(x-y=-1\)，\(\ 2x-y=3\).
+可行域是这三个顶点组成的三角形，线性目标函数在其顶点处取得最值.在三个顶点处，\(z\) 的值依次为 \(8\)，\(7\)，\(23\)，所以最小值为 \(7\)，选 B.
+\end{solution}
+
 \begin{problem}
 设 \(x \in \R\)，则 \(x = 1\) 是“\(x^3 = x\)”的（\quad）
 
@@ -48,22 +64,34 @@ B
 A
 \end{answer}
 
+\begin{solution}
+当 \(x=1\) 时，确有 \(x^3=x\)，所以“\(x=1\)”是“\(x^3=x\)”的充分条件.另一方面，\(x^3=x\) 的解为 \(x=-1\)，\(0\)，\(1\)，不能推出 \(x=1\)，故不是必要条件.因此选 A.
+\end{solution}
+
 \begin{problem}
-设双曲线 \(\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1 \) （\(a > 0, b > 0\)）的虚轴长为 2，焦距为 \(2\sqrt{3}\)，则双曲线的渐近线方程为（\quad）
+设双曲线 \(\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1 \) （\(a > 0\)，\(b > 0\)）的虚轴长为 2，焦距为 \(2\sqrt{3}\)，则双曲线的渐近线方程为（\quad）
 
 \choices
     {\(y = \pm \sqrt{2} x\)}
     {\(y = \pm 2x\)}
-    {\( y = \pm \frac{\sqrt{2}}{2} x \)}
-    {\( y = \pm \frac{1}{2} x \)}
+    {\(y = \pm \frac{\sqrt{2}}{2} x\)}
+    {\(y = \pm \frac{1}{2} x\)}
 \end{problem}
 
 \begin{answer}
 C
 \end{answer}
 
+\begin{solution}
+虚轴长为 \(2b=2\)，所以 \(b=1\).焦距为 \(2c=2\sqrt{3}\)，所以 \(c=\sqrt{3}\).由双曲线关系 \(c^2=a^2+b^2\)，得 \(a=\sqrt{2}\).其渐近线为
+\[
+y=\pm\frac{b}{a}x=\pm\frac{\sqrt{2}}{2}x
+\]
+因此选 C.
+\end{solution}
+
 \begin{problem}
-设 \(a = \log_{\frac{1}{4}} 2\)，\(b = \log_{\frac{1}{4}} \frac{1}{3}\)，\(c = \left(\frac{1}{2}\right)^{0.3}\)，则（\quad）
+设 \(a = \log_{\frac{1}{3}} 2\)，\(b = \log_{\frac{1}{2}} \frac{1}{3}\)，\(c = \left(\frac{1}{2}\right)^{0.3}\)，则（\quad）
 
 \choices
     {\(a < b < c\)}
@@ -76,10 +104,18 @@ C
 B
 \end{answer}
 
+\begin{solution}
+因为 \(0<\frac13<1\)，所以 \(a=\log_{1/3}2<0\).又因为 \(0<c<1\)，故 \(a<c\).此外
+\[
+b=\log_{1/2}\frac13=\log_2 3>1>c
+\]
+所以 \(a<c<b\)，选 B.
+\end{solution}
+
 \begin{problem}
 阅读如图的程序框图，则输出的 \(S\) =（\quad）
 
-\bitmapinlinefigure[0.23\linewidth][max width=0.23\linewidth]{img/2009/tianjin_liberal/q6_fig1.png}
+\bitmapfigure[max width=0.23\linewidth]{img/2009/tianjin_liberal/q6_fig1.png}
 
 \choices
     {14}
@@ -92,8 +128,16 @@ B
 C
 \end{answer}
 
+\begin{solution}
+初始时 \(S=0\)，\(i=1\).每次循环先执行 \(S=S+i^2\)，再执行 \(i=i+1\)，当 \(i>4\) 时停止.因此依次累加
+\[
+1^2+2^2+3^2+4^2=30
+\]
+故输出 \(S=30\)，选 C.
+\end{solution}
+
 \begin{problem}
-已知函数 \( f(x) = \sin \left( \omega x + \frac{\pi}{4} \right) \) （\(x \in \R, \omega > 0\)）的最小正周期为 \(\pi\). 将 \( y = f(x) \) 的图象向左平移 \( \left| \varphi \right| \) 个单位长度，所得图象关于 \( y \) 轴对称，则 \( \varphi \) 的一个值是（\quad）
+已知函数 \( f(x) = \sin \left( \omega x + \frac{\pi}{4} \right) \) （\(x \in \R\)，\(\omega > 0\)）的最小正周期为 \(\pi\). 将 \( y = f(x) \) 的图象向左平移 \( \left| \varphi \right| \) 个单位长度，所得图象关于 \( y \) 轴对称，则 \( \varphi \) 的一个值是（\quad）
 
 \choices
     {\( \frac{\pi}{2} \)}
@@ -105,6 +149,18 @@ C
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+由周期公式 \(\frac{2\pi}{\omega}=\pi\)，得 \(\omega=2\).向左平移 \(\left|\varphi\right|\) 后，函数变为
+\[
+g(x)=\sin\left(2x+2\left|\varphi\right|+\frac{\pi}{4}\right)
+\]
+要使 \(g\) 关于 \(y\) 轴对称，展开正弦后 \(\sin 2x\) 的系数必须为零，即
+\[
+\cos\left(2\left|\varphi\right|+\frac{\pi}{4}\right)=0
+\]
+取 \(2\left|\varphi\right|+\frac{\pi}{4}=\frac{\pi}{2}\)，得 \(\left|\varphi\right|=\frac{\pi}{8}\)，故选 D.
+\end{solution}
 
 \begin{problem}
 设函数 \( f(x) = \begin{cases}
@@ -123,6 +179,14 @@ x + 6, & x < 0,
 A
 \end{answer}
 
+\begin{solution}
+先算得 \(f(1)=3\).当 \(x\geqslant0\) 时，
+\[
+x^2-4x+6>3\Longleftrightarrow (x-1)(x-3)>0
+\]
+故得到 \([0,1)\cup(3,+\infty)\).当 \(x<0\) 时，\(x+6>3\) 等价于 \(-3<x<0\).合并两种情形，解集为 \((-3,1)\cup(3,+\infty)\)，选 A.
+\end{solution}
+
 \begin{problem}
 设 \(x\)，\(y \in \R\)，\(a > 1\)，\(b > 1\). 若 \(a^x = b^y = 3\)，\(a + b = 2\sqrt{3}\)，则 \(\frac{1}{x} + \frac{1}{y}\) 的最大值为（\quad）
 
@@ -137,8 +201,18 @@ A
 C
 \end{answer}
 
+\begin{solution}
+由 \(a\)，\(b>1\) 及 \(a^x=b^y=3\)，知 \(x\)，\(y>0\)，且
+\(\frac1x=\log_3a\)，\(\frac1y=\log_3b\).
+因此
+\[
+\frac1x+\frac1y=\log_3(ab)\leqslant\log_3\left(\frac{a+b}{2}\right)^2=\log_3 3=1
+\]
+当且仅当 \(a=b=\sqrt3\) 时取等号，所以最大值为 \(1\)，选 C.
+\end{solution}
+
 \begin{problem}
-设函数 \( f(x) \) 在 \( \R \) 上的导函数为 \( f'(x) \)，且 \( 2f(x) + xf'(x) > x^2 \). 下面的不等式在 \( \R \) 内恒成立的是（\quad）
+设函数 \( f(x) \) 在 \(\R\) 上的导函数为 \( f'(x) \)，且 \( 2f(x) + xf'(x) > x^2 \). 下面的不等式在 \(\R\) 内恒成立的是（\quad）
 
 \choices
     {\(f(x) > 0\)}
@@ -151,6 +225,22 @@ C
 A
 \end{answer}
 
+\begin{solution}
+令 \(g(x)=x^2f(x)\)，则
+\[
+g'(x)=x\bigl(2f(x)+xf'(x)\bigr)
+\]
+当 \(x>0\) 时，\(g'(x)>x^3\)，从 \(0\) 积分到 \(x\)，得
+\[
+x^2f(x)=g(x)>\int_0^x t^3\,\mathrm{d}t=\frac{x^4}{4}
+\]
+所以 \(f(x)>\frac{x^2}{4}>0\).当 \(x<0\) 时，\(g'(x)<x^3\)，从 \(x\) 积分到 \(0\)，得
+\[
+-x^2f(x)=g(0)-g(x)<\int_x^0t^3\,\mathrm{d}t=-\frac{x^4}{4}
+\]
+同样得到 \(f(x)>\frac{x^2}{4}>0\).在 \(x=0\) 时，原不等式给出 \(2f(0)>0\).故恒有 \(f(x)>0\)，选 A.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -162,6 +252,14 @@ A
 2
 \end{answer}
 
+\begin{solution}
+由 \(AB\parallel A_1B_1\)，且 \(AA_1\)、\(BB_1\) 相交于 \(O\)，有对顶角 \(\angle AOB=\angle A_1OB_1\)，以及由平行线得到的对应角相等，故 \(\triangle AOB\sim\triangle A_1OB_1\)，相似比为
+\[
+\frac{A_1B_1}{AB}=2
+\]
+外接圆直径也按相似比放大，所以所求直径为 \(2\times1=2\).
+\end{solution}
+
 \begin{problem}
 如图是一个几何体的三视图，若它的体积是 \(3 \sqrt{3}\)，则 \(a =\)\fillinblank{}.
 
@@ -172,13 +270,32 @@ A
 \(\sqrt{3}\)
 \end{answer}
 
+\begin{solution}
+由三视图可知该几何体为底面是等腰三角形的直三棱柱，棱柱长为 \(3\)，三角形底边为 \(2\)，底边上的高为 \(a\).因此
+\[
+V=\frac12\times2\times a\times3=3a
+\]
+由 \(3a=3\sqrt3\)，得 \(a=\sqrt3\).
+\end{solution}
+
 \begin{problem}
-设全集 \(U = A \cup B = \{x \in \mathbf{N}^{*} \mid \lg x < 1\}\)，若 \(A \cap (\complement_U B) = \{m \mid m = 2n + 1, n = 0, 1, 2, 3, 4\}\)，则集合 \(B = \)\fillinblank{}.
+设全集 \(U = A \cup B = \{x \in \N^{*} \mid \lg x < 1\}\)，若 \(A \cap (\complement_U B) = \{m \mid m = 2n + 1, n = 0, 1, 2, 3, 4\}\)，则集合 \(B = \)\fillinblank{}.
 \end{problem}
 
 \begin{answer}
 \(\{2,4,6,8\}\)
 \end{answer}
+
+\begin{solution}
+由 \(\lg x<1\) 且 \(x\in\N^*\)，得 \(U=\{1,2,3,4,5,6,7,8,9\}\).已知
+\[
+A\cap(\complement_U B)=\{1,3,5,7,9\}
+\]
+所以奇数属于 \(A\) 且不属于 \(B\).对任一偶数 \(x\)，由 \(A\cup B=U\) 知 \(x\in A\) 或 \(x\in B\).若 \(x\in A\)，又因 \(x\) 不在已知的交集中 \(A\cap(\complement_U B)\)，可知 \(x\notin\complement_U B\)，从而 \(x\in B\)；若 \(x\notin A\)，则由并集条件直接有 \(x\in B\).因此所有偶数都属于 \(B\)，而奇数都不属于 \(B\)，故
+\[
+B=\{2,4,6,8\}
+\]
+\end{solution}
 
 \begin{problem}
 若圆 \(x^{2} + y^{2} = 4\) 与圆 \(x^{2} + y^{2} + 2ay - 6 = 0 \) （\(a > 0\)）的公共弦的长为 \(2\sqrt{3}\)，则 \(a = \)\fillinblank{}.
@@ -188,6 +305,16 @@ A
 1
 \end{answer}
 
+\begin{solution}
+两圆方程相减，得公共弦所在直线
+\(2ay-2=0\)，\(y=\frac1a\).
+该直线到圆心 \((0,0)\) 的距离为 \(\frac1a\)，而第一个圆的半径为 \(2\).由弦长公式
+\[
+2\sqrt{2^2-\left(\frac1a\right)^2}=2\sqrt3
+\]
+得 \(4-\frac{1}{a^2}=3\)，从而 \(a^2=1\).结合 \(a>0\)，得 \(a=1\).
+\end{solution}
+
 \begin{problem}
 若等边 \(\triangle ABC\) 的边长为 \(2\sqrt{3}\)，平面内一点 \(M\) 满足 \(\overrightarrow{CM} = \frac{1}{6}\overrightarrow{CB} + \frac{2}{3}\overrightarrow{CA}\)，则 \(\overrightarrow{MA} \cdot \overrightarrow{MB} = \)\fillinblank{}.
 \end{problem}
@@ -196,13 +323,44 @@ A
 \(-2\)
 \end{answer}
 
+\begin{solution}
+取直角坐标系使 \(C=(0,0)\)，\(A=(2\sqrt3,0)\)，\(B=(\sqrt3,3)\).则
+\[
+M=\frac16B+\frac23A=\left(\frac{3\sqrt3}{2},\frac12\right)
+\]
+于是
+\(\overrightarrow{MA}=\left(\frac{\sqrt3}{2},-\frac12\right)\)，\(\overrightarrow{MB}=\left(-\frac{\sqrt3}{2},\frac52\right)\)
+从而
+\[
+\overrightarrow{MA}\cdot\overrightarrow{MB}=-\frac34-\frac54=-2
+\]
+\end{solution}
+
 \begin{problem}
 若关于 \(x\) 的不等式 \((2x - 1)^2 < ax^2\) 的解集中的整数恰好有3个，则实数 \(a\) 的取值范围是\fillinblank{}.
 \end{problem}
 
 \begin{answer}
-\(\left(\frac{25}{9},\frac{49}{16}\right)\)
+\(\left(\frac{25}{9},\frac{49}{16}\right]\)
 \end{answer}
+
+\begin{solution}
+当 \(a\leqslant0\) 时不等式无解.当 \(a>4\) 时，对充分大的正整数 \(x\) 有 \((2-1/x)^2<a\)，解集中有无穷多个整数；当 \(a=4\) 时，所有正整数都满足不等式.因此恰有3个整数解时必有 \(0<a<4\).
+\((2x-1)^2-4x^2=1-4x>0\)，\((x<0)\)
+所以在 \(a<4\) 时不存在负整数解；\(x=0\) 也不满足不等式.对正整数 \(x\)，不等式等价于
+\[
+a>\left(2-\frac1x\right)^2
+\]
+数列 \(\left(2-\frac1x\right)^2\) 随正整数 \(x\) 严格递增.要使恰有 \(x=1\)，\(2\)，\(3\) 三个正整数解，必须且只需
+\[
+\left(2-\frac13\right)^2<a\leqslant\left(2-\frac14\right)^2
+\]
+即
+\[
+a\in\left(\frac{25}{9},\frac{49}{16}\right]
+\]
+上端点取等时 \(x=4\) 为等号，不属于严格不等式的解集，故上端点应取到.
+\end{solution}
 
 \section{解答题}
 
@@ -216,8 +374,22 @@ A
 
 \begin{solution}
 \begin{enumerate}
-\item \(AB=2\sqrt{5}\).
-\item \(\dfrac{\sqrt{2}}{10}\).
+\item 由正弦定理，
+\[
+\frac{AB}{\sin C}=\frac{BC}{\sin A}
+\]
+结合 \(\sin C=2\sin A\) 和 \(BC=\sqrt5\)，得 \(AB=2\sqrt5\).
+
+\item 由余弦定理，
+\[
+\cos A=\frac{AC^2+AB^2-BC^2}{2\,AC\,AB}=\frac{9+20-5}{12\sqrt5}=\frac{2\sqrt5}{5}
+\]
+因为 \(A\) 是三角形内角，\(\sin A=\frac{\sqrt5}{5}\).因此
+\(\sin2A=2\sin A\cos A=\frac45\)，\(\cos2A=\cos^2A-\sin^2A=\frac35\).
+所以
+\[
+\sin\left(2A-\frac\pi4\right)=\frac{\sqrt2}{2}(\sin2A-\cos2A)=\frac{\sqrt2}{10}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -231,8 +403,15 @@ A
 
 \begin{solution}
 \begin{enumerate}
-\item 2，3，2.
-\item \(\dfrac{11}{21}\).
+\item 三个区工厂总数为 \(18+27+18=63\)，抽样比例为 \(7/63=1/9\)，所以分别抽取 \(2\)，\(3\)，\(2\) 个工厂.
+
+\item 将抽取的工厂记为 \(A_1\)，\(A_2\)，\(B_1\)，\(B_2\)，\(B_3\)，\(C_1\)，\(C_2\).任取两个工厂共有 \(\mathrm C_7^2=21\) 种等可能结果.含有至少一个 \(A\) 区工厂的结果可明确列为
+\(\{A_1,A_2\}\)，\(\ \{A_1,B_1\}\)，\(\ \{A_1,B_2\}\)，\(\ \{A_1,B_3\}\)，\(\ \{A_1,C_1\}\)，\(\ \{A_1,C_2\}\)
+\(\{A_2,B_1\}\)，\(\ \{A_2,B_2\}\)，\(\ \{A_2,B_3\}\)，\(\ \{A_2,C_1\}\)，\(\ \{A_2,C_2\}\).
+共 \(11\) 种，因此所求概率为
+\[
+\frac{11}{21}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -247,10 +426,78 @@ A
 \end{problem}
 
 \begin{solution}
+建立空间直角坐标系，使 \(D=(0,0,0)\)，\(DB\) 在 \(x\) 轴上，底面为 \(z=0\).由于 \(AD\perp CD\) 且 \(DB\) 平分直角 \(\angle ADC\)，可取
+\(A=\left(\frac1{\sqrt2},\frac1{\sqrt2},0\right)\)，\(C=\left(\frac1{\sqrt2},-\frac1{\sqrt2},0\right)\)，\(B=(2\sqrt2,0,0)\)，\(P=(0,0,h)\)
+其中 \(h>0\).又因为 \(E\) 是 \(PC\) 的中点，
+\[
+E=\left(\frac1{2\sqrt2},-\frac1{2\sqrt2},\frac h2\right)
+\]
+
 \begin{enumerate}
-\item \(PA \parallel\) 平面 \(BDE\).
-\item \(AC \perp\) 平面 \(PBD\).
-\item \(\dfrac{1}{3}\).
+\item 有
+\(\overrightarrow{PA}=\left(\frac1{\sqrt2},\frac1{\sqrt2},-h\right)\)，\(\overrightarrow{DB}=(2\sqrt2,0,0)\)，\(\overrightarrow{DE}=\left(\frac1{2\sqrt2},-\frac1{2\sqrt2},\frac h2\right)\).
+直接计算得
+\[
+\overrightarrow{PA}=\frac12\overrightarrow{DB}-2\overrightarrow{DE}
+\]
+所以直线 \(PA\) 的方向向量在平面 \(BDE\) 内.若 \(A=\alpha\overrightarrow{DB}+\beta\overrightarrow{DE}\)，由其 \(z\) 坐标为零可得 \(\beta h/2=0\)，从而 \(\beta=0\)，但此时右端的 \(y\) 坐标为零而 \(A\) 的 \(y\) 坐标为 \(1/\sqrt2\)，矛盾，故 \(A\) 不在该平面内.因此 \(PA\parallel\) 平面 \(BDE\).
+
+\item \(\overrightarrow{AC}=(0,-\sqrt2,0)\)，而
+\(\overrightarrow{AC}\cdot\overrightarrow{DB}=0\)，\(\overrightarrow{AC}\cdot\overrightarrow{DP}=0\).
+直线 \(DB\)、\(DP\) 是平面 \(PBD\) 内相交的两条直线，因此 \(AC\perp\) 平面 \(PBD\).
+
+\item 平面 \(PBD\) 为 \(y=0\).向量
+\[
+\overrightarrow{BC}=\left(-\frac3{\sqrt2},-\frac1{\sqrt2},0\right)
+\]
+在该平面内的投影长度为 \(3/\sqrt2\)，垂直于该平面的分量长度为 \(1/\sqrt2\).设直线与平面所成的角为 \(\theta\)，则
+\[
+\tan\theta=\frac{1/\sqrt2}{3/\sqrt2}=\frac13
+\]
+\end{enumerate}
+\end{solution}
+
+\begin{problem}
+已知等差数列 \(\{a_{n}\}\) 的公差 \(d\) 不为 0，设 \(S_{n} = a_{1} + a_{2}q + \dots +a_{n}q^{n - 1}\)，\(T_{n} = a_{1} - a_{2}q + \dots +( -1)^{n - 1}a_{n}q^{n - 1}\)，\(q\neq 0\)，\(n\in \N^{*}\).
+\begin{enumerate}
+\item 若 \(q = 1\)，\(a_{1} = 1\)，\(S_{3} = 15\)，求数列 \(\{a_{n}\}\) 的通项公式；
+\item 若 \(a_{1} = d\)，\(S_{1}\)，\(S_{2}\)，\(S_{3}\) 成等比数列，求 \(q\) 的值.
+\item 若 \(q \neq \pm 1\)，证明 \((1 - q)S_{2n} - (1 + q)T_{2n} = \frac{2dq(1 - q^{2n})}{1 - q^2}\)，\(n \in \N^{*}\).
+\end{enumerate}
+\end{problem}
+
+\begin{solution}
+\begin{enumerate}
+\item 设公差为 \(d\)，则
+\[
+S_3=1+(1+d)+(1+2d)=3+3d=15
+\]
+所以 \(d=4\)，从而 \(a_n=1+(n-1)4=4n-3\).
+
+\item 由 \(a_1=d\)，得 \(a_2=2d\)，\(a_3=3d\).于是
+\(S_1=d\)，\(S_2=d(1+2q)\)，\(S_3=d(1+2q+3q^2)\).
+等比关系给出 \(S_2^2=S_1S_3\).因 \(d\ne0\)，约去 \(d^2\) 得
+\[
+(1+2q)^2=1+2q+3q^2
+\Longrightarrow q(q+2)=0
+\]
+结合 \(q\ne0\)，得 \(q=-2\).
+
+\item 将 \(S_{2n}\)、\(T_{2n}\) 按奇偶项分组，有
+\[
+S_{2n}=\sum_{r=1}^{n}\left(a_{2r-1}q^{2r-2}+a_{2r}q^{2r-1}\right)
+\]
+\[
+T_{2n}=\sum_{r=1}^{n}\left(a_{2r-1}q^{2r-2}-a_{2r}q^{2r-1}\right)
+\]
+因此
+\[
+(1-q)S_{2n}-(1+q)T_{2n}
+=2d\sum_{r=1}^n q^{2r-1}
+=2dq\sum_{r=0}^{n-1}q^{2r}
+=\frac{2dq(1-q^{2n})}{1-q^2}
+\]
+这里使用了等差数列关系 \(a_{2r}-a_{2r-1}=d\). 由于 \(q\ne\pm1\)，等比数列求和公式可用，结论成立.
 \end{enumerate}
 \end{solution}
 
@@ -259,15 +506,43 @@ A
 \begin{enumerate}
 \item 当 \(m = 1\) 时，求曲线 \(y = f(x)\) 在点 \((1, f(1))\) 处的切线的斜率；
 \item 求函数的单调区间与极值；
-\item 已知函数 \( f(x) \) 有三个互不相同的零点 \(0\)，\(x_1\)，\(x_2\)，且 \(x_1 < x_2\). 若对任意的 \( x \in [x_1, x_2] \)，\( f(x) > f(1) \) 恒成立，求 \( m \) 的取值范围.
+\item 已知函数 \(f(x)\) 有三个互不相同的零点 \(0\)，\(x_1\)，\(x_2\)，且 \(x_1 < x_2\). 若对任意的 \(x \in [x_1, x_2]\)，\(f(x) > f(1)\) 恒成立，求 \(m\) 的取值范围.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item \(1\).
-\item 在 \((-\infty,1-m)\) 和 \((1+m,+\infty)\) 内减函数，在 \((1-m,1+m)\) 内增函数；函数在 \(x=1+m\) 处取得极大值 \(f(1+m)=\dfrac{2}{3}m^3+m^2-\dfrac{1}{3}\)，在 \(x=1-m\) 处取得极小值 \(f(1-m)=-\dfrac{2}{3}m^3+m^2-\dfrac{1}{3}\).
-\item \(m\) 的取值范围是 \(\left(\dfrac{1}{2},\dfrac{\sqrt{3}}{3}\right)\).
+\item \(m=1\) 时，\(f'(x)=-x^2+2x\)，所以切线斜率为 \(f'(1)=1\).
+
+\item
+\[
+f'(x)=-x^2+2x+m^2-1=m^2-(x-1)^2
+\]
+因此 \(f'(x)<0\) 于 \((-\infty,1-m)\) 和 \((1+m,+\infty)\)，\(f'(x)>0\) 于 \((1-m,1+m)\).所以函数在前两个区间内分别为减函数，在中间区间内为增函数；在 \(x=1-m\) 处取得极小值，在 \(x=1+m\) 处取得极大值.代入得
+\(f(1-m)=-\frac23m^3+m^2-\frac13\)，\(f(1+m)=\frac23m^3+m^2-\frac13\).
+
+\item 因为
+\[
+f(x)=-\frac13x\bigl(x^2-3x+3-3m^2\bigr)
+\]
+所以另外两个零点是
+\[
+x_{1,2}=\frac{3\mp\sqrt{12m^2-3}}2
+\]
+三个零点互不相同首先要求 \(m>\frac12\)，且 \(m\ne1\).
+
+若 \(m>1\)，则 \(x_1<0<x_2\)，而题设区间包含零点端点，端点处 \(f(x_i)=0\)，同时 \(f(1)=m^2-\frac13>0\)，不可能有 \(f(x_i)>f(1)\).因此必须有 \(m<1\).此时 \(x_1\)，\(x_2>0\).在 \([x_1,x_2]\) 上，因
+\[
+f(x)=-\frac13x(x-x_1)(x-x_2)\geqslant0
+\]
+所以题设恒不等式成立的充要条件是 \(f(1)<0\).又
+\[
+f(1)=m^2-\frac13
+\]
+故
+\[
+\frac12<m<\frac{\sqrt3}{3}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -276,30 +551,71 @@ A
 \begin{enumerate}
 \item 求椭圆的离心率；
 \item 求直线 \(AB\) 的斜率；
-\item 设点 \(C\) 与点 \(A\) 关于坐标原点对称，直线 \(F_{2}B\) 上有一点 \(H(m, n)\)（\(m \neq 0\)）在 \(\triangle AF_{1}C\) 的外接圆上，求 \(\frac{n}{m}\) 的值.
+\item 设点 \(C\) 与点 \(A\) 关于坐标原点对称，直线 \(F_{2}B\) 上有一点 \(H(m, n)\)（\(m \neq 0\)）在 \(\triangle AF_{1}C\) 的外接圆上，求 \(\frac{n}{m} \) 的值.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item \(\dfrac{\sqrt{3}}{3}\).
-\item \(k=\pm\dfrac{\sqrt{2}}{2}\).
-\item \(\dfrac{n}{m}=\dfrac{2}{5}\).
-\end{enumerate}
-\end{solution}
+\item 因为 \(\overrightarrow{F_1A}\parallel\overrightarrow{F_2B}\) 且长度比为 \(2\)，设
+\(\overrightarrow{F_1A}=\lambda\overrightarrow{F_2B}\)，\(|\lambda|=2\).
+写 \(A=(x_A,y_A)\)、\(B=(x_B,y_B)\)，则
+\[
+A=\lambda B-(\lambda+1)(c,0)
+\]
+从而直线 \(AB\) 与 \(x\) 轴的交点横坐标为
+\[
+x_E=\frac{x_Ay_B-x_By_A}{y_B-y_A}=\frac{\lambda+1}{\lambda-1}c
+\]
+若 \(y_A=y_B\)，由 \(y_A=\lambda y_B\) 及 \(\lambda\ne1\) 可得 \(y_A=y_B=0\).此时 \(A\)、\(B\) 是椭圆在 \(x\) 轴上的两个交点，且 \(\lvert F_1A\rvert=\lvert F_2B\rvert\)，与题设矛盾，故 \(y_A\ne y_B\)，上式有意义.若 \(\lambda=-2\)，则 \(x_E=c/3<c\)，与 \(x_E=a^2/c>c\) 矛盾.因此 \(\lambda=2\)，于是 \(x_E=3c\).由 \(x_E=a^2/c\)，得 \(a^2=3c^2\)，所以离心率为
+\[
+e=\frac ca=\frac{\sqrt3}{3}
+\]
 
-\begin{problem}
-已知等差数列 \(\{a_{n}\}\) 的公差 \(d\) 不为 0，设 \(S_{n} = a_{1} + a_{2}q + \dots +a_{n}q^{n - 1}\)，\(T_{n} = a_{1} - a_{2}q + \dots +( -1)^{n - 1}a_{n}q^{n - 1}\)，\(q\neq 0\)，\(n\in \mathbf{N}^{*}\).
-\begin{enumerate}
-\item 若 \(q = 1\)，\(a_{1} = 1\)，\(S_{3} = 15\)，求数列 \(\{a_{n}\}\) 的通项公式；
-\item 若 \(a_{1} = d\)，\(S_{1}\)，\(S_{2}\)，\(S_{3}\) 成等比数列，求 \(q\) 的值.
-\item 若 \(q \neq \pm 1\)，证明 \((1 - q)S_{2n} - (1 + q)T_{2n} = \frac{2dq(1 - q^{2n})}{1 - q^2}\)，\(n \in \mathbf{N}^*\).
-\end{enumerate}
-\end{problem}
+\item 由 \(b^2=a^2-c^2=2c^2\)，椭圆方程化为
+\[
+2x^2+3y^2=6c^2
+\]
+由 \(\overrightarrow{F_1A}=2\overrightarrow{F_2B}\) 还得到 \(B\) 是线段 \(AE\) 的中点.设直线 \(AB\) 为
+\[
+y=k(x-3c)
+\]
+并设 \(A=(x_1,y_1)\)、\(B=(x_2,y_2)\).联立直线与椭圆方程，得
+\[
+(2+3k^2)x^2-18k^2cx+(27k^2-6)c^2=0
+\]
+由韦达定理，
+\(x_1+x_2=\frac{18k^2c}{2+3k^2}\)，\(x_1x_2=\frac{(27k^2-6)c^2}{2+3k^2}\).
+又因 \(B\) 是 \(AE\) 的中点，\(x_1+3c=2x_2\)，故
+\(x_1=\frac{(9k^2-2)c}{2+3k^2}\)，\(x_2=\frac{(9k^2+2)c}{2+3k^2}\).
+代入积的关系并约去 \(c^2\)，得
+\[
+\frac{81k^4-4}{(2+3k^2)^2}=\frac{27k^2-6}{2+3k^2}
+\]
+即 \(36k^2=8\).因此
+\[
+k=\pm\frac{\sqrt2}{3}
+\]
 
-\begin{solution}
-\begin{enumerate}
-\item \(a_n=4n-3\).
-\item \(q=-2\).
+\item 先取 \(k=-\frac{\sqrt2}{3}\).由上面的根式可得
+\(A=(0,\sqrt2c)\)，\(B=\left(\frac{3c}{2},\frac{\sqrt2c}{2}\right)\)，\(C=(0,-\sqrt2c)\).
+\(A\)，\(C\) 关于 \(x\) 轴对称，所以 \(\triangle AF_1C\) 的外接圆圆心在 \(x\) 轴上.设圆心为 \((u,0)\)，由它到 \(F_1(-c,0)\) 和 \(A(0,\sqrt2c)\) 的距离相等，得 \(u=c/2\)，外接圆方程为
+\[
+\left(x-\frac c2\right)^2+y^2=\frac{9c^2}{4}
+\]
+直线 \(F_2B\) 的方程为 \(y=\sqrt2(x-c)\).因此 \(H(m,n)\) 满足
+\[
+\begin{cases}
+\left(m-\frac c2\right)^2+n^2=\dfrac{9c^2}{4},\\
+n=\sqrt2(m-c).
+\end{cases}
+\]
+代入并整理得 \(m(3m-5c)=0\).由 \(m\ne0\)，得
+\(m=\frac{5c}{3}\)，\(n=\frac{2\sqrt2c}{3}\)，\(\frac nm=\frac{2\sqrt2}{5}\).
+当 \(k=\frac{\sqrt2}{3}\) 时，图形关于 \(x\) 轴对称，所对应的 \(n/m\) 为 \(-2\sqrt2/5\).因此按题面未限定 \(A\) 所在半平面时，所有可能值为
+\[
+\frac nm=\pm\frac{2\sqrt2}{5}
+\]
+若按通常解答约定取 \(k<0\)，则取正值 \(2\sqrt2/5\).
 \end{enumerate}
 \end{solution}

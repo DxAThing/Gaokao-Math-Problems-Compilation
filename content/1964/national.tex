@@ -1,46 +1,52 @@
 \FigureLayoutDeclare{img/1964/national/q6_fig1.png}{8.0cm}{0bp 0bp 0bp 0bp}
-\FigureLayoutDeclare{img/1964/national/q8_additional_solution_fig2.png}{6.0cm}{0bp 0bp 0bp 0bp}
 
 \chapter{1964年全国卷}
+
+\section{解答题}
 
 \begin{problem}
 化简：\(\frac{\sqrt[3]{3^{-\frac32}\left( \frac13 \right)^{-3}}}{\left( \sqrt3-1 \right)^2}\).
 \end{problem}
 
 \begin{solution}
-【法一】
+先化简根号内的幂：
 \[
-\text{原式}=\frac{\left[ 3^{-\frac32}\left( \frac13 \right)^{-3} \right]^{\frac13}}{\left( \sqrt3-1 \right)^2}
-=\frac{3^{-\frac12}\cdot3}{\left( \sqrt3-1 \right)^2}
-=\frac{\sqrt3}{\left( \sqrt3-1 \right)^2}
+3^{-\frac32}\left( \frac13 \right)^{-3}=3^{-\frac32}3^3=3^{\frac32}
 \]
+因此
+\[
+\frac{\sqrt[3]{3^{-\frac32}\left( \frac13 \right)^{-3}}}{\left( \sqrt3-1 \right)^2}
+=\frac{3^{\frac12}}{\left( \sqrt3-1 \right)^2}
+=\frac{\sqrt3}{4-2\sqrt3}
+=\frac{\sqrt3}{2\left( 2-\sqrt3 \right)}
+\]
+分母有理化，得
 \[
 \frac{\sqrt3}{2\left( 2-\sqrt3 \right)}
 =\frac{\sqrt3\left( 2+\sqrt3 \right)}{2\left( 2-\sqrt3 \right)\left( 2+\sqrt3 \right)}
 =\frac{2\sqrt3+3}{2}
 \]
-
-【法二】
-\[
-\text{原式}=\frac{\left[ 3^{-\frac32}\left( \frac13 \right)^{-3} \right]^{\frac13}}{\left( \sqrt3-1 \right)^2}
-=\frac{3^{-\frac12}\cdot3}{\left( \sqrt3-1 \right)^2}
-=\frac{\sqrt3}{\left( \sqrt3-1 \right)^2}
-\]
-\[
-\frac{\sqrt3\left( \sqrt3+1 \right)^2}{\left[ \left( \sqrt3-1 \right)\left( \sqrt3+1 \right) \right]^2}
-=\frac{\sqrt3\left( 4+2\sqrt3 \right)}{4}
-=\frac{2\sqrt3+3}{2}
-\]
 \end{solution}
 
 \begin{problem}
-甲乙二人在河的南岸 \(O\) 处，隔河在正北方向有一建筑物 \(P\). 甲向正东，乙向正西沿河岸而行，甲每分钟比乙多走 \(a\text{ 米}\). \(10\text{ 分钟}\) 后，甲望建筑物 \(P\) 在北 \(\alpha\text{ 度}\) 西（即北偏西 \(\alpha\text{ 度}\)），乙望建筑物 \(P\) 在北 \(\beta\text{ 度}\) 东（即北偏东 \(\beta\text{ 度}\)），求 \(O\) 与 \(P\) 之间的距离.
+甲乙二人在河的南岸 \(O\) 处，隔河在正北方向有一建筑物 \(P\). 甲向正东，乙向正西沿河岸而行，甲每分钟比乙多走 \(a\text{ 米}\). \(10\) 分钟后，甲望建筑物 \(P\) 在北 \(\alpha^\circ\) 西（即北偏西 \(\alpha^\circ\)），乙望建筑物 \(P\) 在北 \(\beta^\circ\) 东（即北偏东 \(\beta^\circ\)），求 \(O\) 与 \(P\) 之间的距离.
 \end{problem}
 
 \begin{solution}
-如图，设 \(OB=x\)，则 \(OA=x+10a\).
+设十分钟后甲、乙所在位置分别为 \(A\)、\(B\)，设 \(OB=x\)，则乙向正西走了 \(x\) 米，甲向正东走了 \(x+10a\) 米，所以 \(OA=x+10a\).
+
 \solutionfigure{\bitmapfigure[max width=0.42\linewidth]{img/1964/national/q2_solution_fig1.png}}
-再设 \(OP=h\)，则 \(h\tan\alpha=x+10a\)，\(h\tan\beta=x\). 因此 \(h\left( \tan\alpha-\tan\beta \right)=10a\)，所以 \(OP=h=\frac{10a}{\tan\alpha-\tan\beta}\).
+
+设 \(OP=h\). 过 \(A\)、\(B\) 分别作与 \(OP\) 同向的正北方向直线，则由北偏角的定义，\(\alpha\)、\(\beta\) 分别是 \(AP\)、\(BP\) 与这些正北方向直线的夹角. 因此在两个直角三角形中分别有
+\(\tan\alpha=\frac{OA}{OP}=\frac{x+10a}{h}\)，\(\tan\beta=\frac{OB}{OP}=\frac{x}{h}\)，即 \(h\tan\alpha=x+10a\)，\(h\tan\beta=x\).
+两式相减，得到
+\[
+h\left( \tan\alpha-\tan\beta \right)=10a
+\]
+所以
+\[
+OP=h=\frac{10a}{\tan\alpha-\tan\beta}
+\]
 \end{solution}
 
 \begin{problem}
@@ -48,27 +54,33 @@
 \end{problem}
 
 \begin{solution}
-【法一】原方程即 \(x^4=-1\)，也就是 \(x^4=\cos\left( 2k+1 \right)\pi+\i\sin\left( 2k+1 \right)\pi\)，所以 \(x=\cos\frac{2k+1}{4}\pi+\i\sin\frac{2k+1}{4}\pi\). 令 \(k=0\)，\(1\)，\(2\)，\(3\)，得到原方程的四个根：
-\begin{align*}
-x_1&=\cos\frac{\pi}{4}+\i\sin\frac{\pi}{4}=\frac{\sqrt2}{2}\left( 1+\i \right),\\
-x_2&=\cos\frac{3\pi}{4}+\i\sin\frac{3\pi}{4}=\frac{\sqrt2}{2}\left( -1+\i \right),\\
-x_3&=\cos\frac{5\pi}{4}+\i\sin\frac{5\pi}{4}=\frac{\sqrt2}{2}\left( -1-\i \right),\\
-x_4&=\cos\frac{7\pi}{4}+\i\sin\frac{7\pi}{4}=\frac{\sqrt2}{2}\left( 1-\i \right)
-\end{align*}
-记平面内表示这四个根的点为 \(M_1\)，\(M_2\)，\(M_3\)，\(M_4\). 因为 \(\left| x_1 \right|=\left| x_2 \right|=\left| x_3 \right|=\left| x_4 \right|=1\)，所以这四点都在单位圆上.
-\solutionfigure{\bitmapfigure[max width=0.38\linewidth]{img/1964/national/q3_solution_fig1.png}}
-又 \(\angle M_1OM_2=\frac{\pi}{2}\)，\(\angle M_2OM_3=\frac{\pi}{2}\)，\(\angle M_3OM_4=\frac{\pi}{2}\)，\(\angle M_4OM_1=\frac{\pi}{2}\). 因此 \(M_1M_2=M_2M_3=M_3M_4=M_4M_1\)，所以 \(M_1M_2M_3M_4\) 是一个正方形.
+将方程左边配方并作平方差分解：
+\[
+x^4+1=\left( x^2+1 \right)^2-2x^2
+=\left( x^2+\sqrt2x+1 \right)\left( x^2-\sqrt2x+1 \right)
+\]
+因此原方程等价于
+\[
+\left( x^2+\sqrt2x+1 \right)\left( x^2-\sqrt2x+1 \right)=0
+\]
+由求根公式，两个二次方程的根分别为
+\[
+x=\frac{-\sqrt2\pm\sqrt{-2}}{2}=\frac{\sqrt2}{2}\left( -1\pm\i \right)
+\]
+以及
+\[
+x=\frac{\sqrt2\pm\sqrt{-2}}{2}=\frac{\sqrt2}{2}\left( 1\pm\i \right)
+\]
+所以四个根可按逆时针顺序记为 \(x_1=\frac{\sqrt2}{2}\left( 1+\i \right)\)，\(x_2=\frac{\sqrt2}{2}\left( -1+\i \right)\)，\(x_3=\frac{\sqrt2}{2}\left( -1-\i \right)\)，\(x_4=\frac{\sqrt2}{2}\left( 1-\i \right)\).
+令 \(c=\frac{\sqrt2}{2}\)，并在复平面内分别以 \(M_1\)，\(M_2\)，\(M_3\)，\(M_4\) 表示这四个根，则
+\(M_1=(c,c)\)，\(M_2=(-c,c)\)，\(M_3=(-c,-c)\)，\(M_4=(c,-c)\).
+于是
+\[
+M_1M_2=M_2M_3=M_3M_4=M_4M_1=2c=\sqrt2
+\]
+且 \(M_1M_2\) 平行于实轴，\(M_2M_3\) 平行于虚轴，所以 \(\angle M_1M_2M_3=90^\circ\). 四边相等且有一个直角，故 \(M_1M_2M_3M_4\) 是正方形.
 
-【法二】
-\[
-x^4+1=\left( x^4+2x^2+1 \right)-2x^2=\left( x^2+1 \right)^2-\left( \sqrt2x \right)^2=\left( x^2+\sqrt2x+1 \right)\left( x^2-\sqrt2x+1 \right)
-\]
-因此原方程即 \(\left( x^2+\sqrt2x+1 \right)\left( x^2-\sqrt2x+1 \right)=0\)，它的根是 \(x_1=\frac{\sqrt2}{2}\left( 1+\i \right)\)，\(x_2=\frac{\sqrt2}{2}\left( -1+\i \right)\)，\(x_3=\frac{\sqrt2}{2}\left( -1-\i \right)\)，\(x_4=\frac{\sqrt2}{2}\left( 1-\i \right)\).
-由图可见，线段 \(M_2M_1\) 与 \(M_3M_4\) 都平行于 \(OX\) 轴，线段 \(M_4M_1\) 与 \(M_3M_2\) 都平行于 \(OY\) 轴. 又
-\[
-M_1M_2=M_2M_3=M_3M_4=M_4M_1=\frac{\sqrt2}{2}+\frac{\sqrt2}{2}=\sqrt2
-\]
-所以 \(M_1M_2M_3M_4\) 是一个正方形.
+\solutionfigure{\bitmapfigure[max width=0.38\linewidth]{img/1964/national/q3_solution_fig1.png}}
 \end{solution}
 
 \begin{problem}
@@ -76,24 +88,22 @@ M_1M_2=M_2M_3=M_3M_4=M_4M_1=\frac{\sqrt2}{2}+\frac{\sqrt2}{2}=\sqrt2
 \end{problem}
 
 \begin{solution}
-【法一】利用正弦定理 \(\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}=2R\)，得到 \(\sin A=\frac{a}{2R}\)，\(\sin B=\frac{b}{2R}\)，\(\sin C=\frac{c}{2R}\). 代入所要证明等式的右边，得 \(\frac{\sin^2B+\sin^2C-\sin^2A}{2\sin B\sin C}=\frac{b^2+c^2-a^2}{2bc}\). 由余弦定理，上式右边就是 \(\cos A\).
-
-【法二】利用 \(A=\pi-\left( B+C \right)\)，有
-\begin{align*}
-\sin^2B+\sin^2C-\sin^2A
-&=\sin^2B+\sin^2C-\sin^2\left( B+C \right)\\
-&=\sin^2B+\sin^2C-\left( \sin B\cos C+\cos B\sin C \right)^2\\
-&=\sin^2B+\sin^2C-\sin^2B\cos^2C-\cos^2B\sin^2C\\
-&\quad -2\sin B\sin C\cos B\cos C\\
-&=\sin^2B\left( 1-\cos^2C \right)+\sin^2C\left( 1-\cos^2B \right)\\
-&\quad -2\sin B\sin C\cos B\cos C\\
-&=2\sin^2B\sin^2C-2\sin B\sin C\cos B\cos C\\
-&=2\sin B\sin C\left( \sin B\sin C-\cos B\cos C \right)\\
-&=2\sin B\sin C\left[ -\cos\left( B+C \right) \right]\\
-&=2\sin B\sin C\cos\left[ \pi-\left( B+C \right) \right]\\
-&=2\sin B\sin C\cos A
-\end{align*}
-两边除以 \(2\sin B\sin C\)，得到 \(\frac{\sin^2B+\sin^2C-\sin^2A}{2\sin B\sin C}=\cos A\).
+设三角形的三边分别为 \(a\)、\(b\)、\(c\)，其中 \(a\)、\(b\)、\(c\) 分别与角 \(A\)、\(B\)、\(C\) 对应，外接圆半径为 \(R\). 由正弦定理，
+\[
+\frac{a}{\sin A}=\frac{b}{\sin B}=\frac{c}{\sin C}=2R
+\]
+即 \(\sin A=\frac{a}{2R}\)，\(\sin B=\frac{b}{2R}\)，\(\sin C=\frac{c}{2R}\).
+代入右端，得到
+\[
+\frac{\sin^2B+\sin^2C-\sin^2A}{2\sin B\sin C}
+=\frac{\frac{b^2}{4R^2}+\frac{c^2}{4R^2}-\frac{a^2}{4R^2}}{2\cdot\frac{b}{2R}\cdot\frac{c}{2R}}
+=\frac{b^2+c^2-a^2}{2bc}
+\]
+由余弦定理 \(a^2=b^2+c^2-2bc\cos A\)，所以
+\[
+\frac{b^2+c^2-a^2}{2bc}=\cos A
+\]
+又因为 \(B\)、\(C\) 是三角形内角，\(\sin B\sin C>0\)，上述除法合法，故原等式成立.
 \end{solution}
 
 \begin{problem}
@@ -101,22 +111,29 @@ M_1M_2=M_2M_3=M_3M_4=M_4M_1=\frac{\sqrt2}{2}+\frac{\sqrt2}{2}=\sqrt2
 \end{problem}
 
 \begin{solution}
-【法一】设这个方程的三个根为 \(\alpha\)，\(\alpha\)，\(\beta\). 根据已知条件和根与系数的关系，得
-\begin{equation}
-\begin{cases}
-2\alpha^2+\beta^2=6,\\
+设两个相等的正根为 \(\alpha\)、\(\alpha\)，另一个根为 \(\beta\)，其中 \(\alpha>0\). 由三个根的平方和为 \(6\)，得
+\[
+2\alpha^2+\beta^2=6
+\]
+由根与系数的关系，得
+\[
 \alpha^2+2\alpha\beta=-3
-\end{cases}
-\tag{1}
-\end{equation}
-第二式两边乘以 \(2\)，得 \(2\alpha^2+4\alpha\beta=-6\)，记作\(\circled{2}\).
-把\(\circled{1}\)中第一式与\(\circled{2}\)两边分别相加，得 \(4\alpha^2+4\alpha\beta+\beta^2=0\)，即 \(\left( 2\alpha+\beta \right)^2=0\)，所以 \(\beta=-2\alpha\). 代入 \(2\alpha^2+\beta^2=6\)，得 \(2\alpha^2+\left( -2\alpha \right)^2=6\)，即 \(6\alpha^2=6\)，所以 \(\alpha=\pm1\). \(\alpha=-1\) 不符合题意，舍去. 故 \(\alpha=1\)，\(\beta=-2\). 所以 \(m=-\left( 2\alpha+\beta \right)=0\)，\(n=-\alpha^2\beta=2\).
+\]
+将第二式乘以 \(2\)，再与第一式相加，得到
+\[
+\left( 2\alpha^2+\beta^2 \right)+2\left( \alpha^2+2\alpha\beta \right)=6-6=0
+\]
+即
+\[
+\left( 2\alpha+\beta \right)^2=0
+\]
+因此 \(\beta=-2\alpha\). 代入平方和条件，得 \(2\alpha^2+\left( -2\alpha \right)^2=6\)，即 \(6\alpha^2=6\).
+由于 \(\alpha>0\)，所以 \(\alpha=1\)，进而 \(\beta=-2\).
 
-【法二】同样有 \(\begin{cases}
-2\alpha^2+\beta^2=6,\\
-\alpha^2+2\alpha\beta=-3
-\end{cases}\).
-由第二式得 \(\beta=\frac{-3-\alpha^2}{2\alpha}\). 代入第一式，得 \(2\alpha^2+\left( \frac{-3-\alpha^2}{2\alpha} \right)^2=6\)，化简得 \(\alpha^4-2\alpha^2+1=0\)，即 \(\left( \alpha^2-1 \right)^2=0\)，所以 \(\alpha=\pm1\). \(\alpha=-1\) 不合题意，舍去. 故 \(\alpha=1\). 代入 \(\alpha^2+2\alpha\beta=-3\)，得 \(\beta=-2\). 所以 \(m=0\)，\(n=2\).
+再次由根与系数的关系，\(2\alpha+\beta=-m\)，\(\alpha^2\beta=-n\).
+代入 \(\alpha=1\)、\(\beta=-2\)，得
+\(m=0\)，\(n=2\).
+校验可得方程为 \(x^3-3x+2=\left( x-1 \right)^2\left( x+2 \right)=0\)，确有两个相等的正根 \(1\)，故 \(m=0\)，\(n=2\).
 \end{solution}
 
 \begin{problem}
@@ -126,12 +143,22 @@ M_1M_2=M_2M_3=M_3M_4=M_4M_1=\frac{\sqrt2}{2}+\frac{\sqrt2}{2}=\sqrt2
 \end{problem}
 
 \begin{solution}
-【法一】\(\widehat{AB}=2\pi\cdot15=30\pi\)，\(\widehat{CD}=2\pi\cdot10=20\pi\)，\(AD=30\). 延长 \(AD\)，\(BC\) 相交于 \(O\). 设 \(\angle COD=\theta\)，\(OD=x\)，则 \(\left( x+30 \right)\theta=30\pi\)，\(x\theta=20\pi\). 相减得 \(30\theta=10\pi\)，所以 \(\theta=\frac{\pi}{3}\)，\(x=\frac{20\pi}{\theta}=60\).
-\solutionfigure{\bitmapfigure[max width=0.4\linewidth]{img/1964/national/q6_solution_fig1.png}}
-因为 \(\triangle OAB\) 是一个等边三角形，所以 \(AB=OA=90\text{ 厘米}\).
-
-【法二】\(\widehat{AB}=2\pi\cdot15=30\pi\)，\(\widehat{CD}=2\pi\cdot10=20\pi\)，\(AD=30\).
-延长 \(AD\)，\(BC\) 相交于 \(O\). 设 \(OD=x\)，则 \(\frac{x+30}{x}=\frac{30\pi}{20\pi}\)，解得 \(x=60\). 再由 \(\theta=\frac{20\pi}{60}=\frac{\pi}{3}\)，得 \(\triangle OAB\) 是一个等边三角形，所以 \(AB=OA=90\text{ 厘米}\).
+设扇形的圆心为 \(O\)，延长 \(AD\) 与 \(BC\) 相交于 \(O\)，设 \(OD=x\text{ 厘米}\)，设 \(\angle COD=\theta\)，其中 \(\theta\) 用弧度表示. 展开后，外侧弧 \(\widehat{AB}\) 的长度等于铁桶上口周长，内侧弧 \(\widehat{CD}\) 的长度等于铁桶下底周长，因此由圆周长公式，\(\widehat{AB}=2\pi\cdot15=30\pi\text{ 厘米}\)，\(\widehat{CD}=2\pi\cdot10=20\pi\text{ 厘米}\).
+由弧长公式，得到
+\[
+\begin{cases}
+\left( x+30 \right)\theta=30\pi,\\
+x\theta=20\pi.
+\end{cases}
+\]
+两式相减，得 \(30\theta=10\pi\)，所以 \(\theta=\frac{\pi}{3}\). 再由 \(x\theta=20\pi\)，得
+\[
+x=\frac{20\pi}{\theta}=60
+\]
+于是 \(OA=OB=x+30=90\text{ 厘米}\)，且 \(\angle AOB=\theta=\frac{\pi}{3}\). 因而
+\[
+AB=2\cdot90\sin\frac{\theta}{2}=180\sin\frac{\pi}{6}=90\text{ 厘米}
+\]
 \end{solution}
 
 \begin{problem}
@@ -139,9 +166,15 @@ M_1M_2=M_2M_3=M_3M_4=M_4M_1=\frac{\sqrt2}{2}+\frac{\sqrt2}{2}=\sqrt2
 \end{problem}
 
 \begin{solution}
-如图，设 \(A_1\)，\(B_1\)，\(C_1\)，\(D_1\) 所在的直线为 \(l\). 过直线 \(l\) 与直线 \(AA_1\) 作一平面 \(P\)，则 \(P\) 必垂直于 \(M\). 显然 \(A\) 在平面 \(P\) 内. 又因 \(B_1\) 在平面 \(P\) 内，且直线 \(BB_1\) 垂直于平面 \(M\)，故 \(BB_1\) 必在平面 \(P\) 内，因此 \(B\) 也在平面 \(P\) 内. 同理，\(C\)，\(D\) 也都在平面 \(P\) 内.
+设 \(A_1\)、\(B_1\)、\(C_1\)、\(D_1\) 所在的直线为 \(l\). 过 \(l\) 和直线 \(AA_1\) 作平面 \(P\). 因为 \(l\subset M\)，且 \(AA_1\perp M\)，所以 \(P\perp M\). 显然 \(A\in P\). 对于点 \(B\)，由于 \(B_1\in l\subset P\)，且 \(BB_1\perp M\)，而平面 \(P\perp M\)，所以平面 \(P\) 内过 \(B_1\) 的垂线就是 \(BB_1\)，故 \(BB_1\subset P\)，从而 \(B\in P\). 同理，\(C\)、\(D\) 也在平面 \(P\) 内.
+
 \solutionfigure{\bitmapfigure[max width=0.5\linewidth]{img/1964/national/q7_solution_fig1.png}}
-因为 \(AA_2 \parallel DD_2\)，且 \(A_2B_2 \parallel D_2C_2\)，所以由 \(AA_2\) 与 \(A_2B_2\) 所决定的平面平行于由 \(DD_2\) 与 \(D_2C_2\) 所决定的平面. 又 \(P\) 与这两个平面的交线分别为 \(AB\) 与 \(CD\)，故 \(AB \parallel CD\). 同理 \(BC \parallel AD\). 因此 \(ABCD\) 是平行四边形.
+
+因为 \(AA_2\)、\(DD_2\) 都垂直于平面 \(N\)，所以 \(AA_2\parallel DD_2\). 又因为 \(A_2B_2C_2D_2\) 是平行四边形，所以 \(A_2B_2\parallel D_2C_2\). 设由直线 \(AA_2\)、\(A_2B_2\) 所确定的平面为 \(U\)，由直线 \(DD_2\)、\(D_2C_2\) 所确定的平面为 \(V\). 由于 \(A_2B_2\) 与 \(D_2C_2\) 是不重合的平行直线，且 \(AA_2\parallel DD_2\)，所以 \(U\) 与 \(V\) 是不重合的平行平面.
+
+由于 \(BB_2\parallel AA_2\)，且 \(B_2\in A_2B_2\)，有 \(B\in U\). 若 \(U=P\)，则 \(U\) 含有垂直于 \(N\) 的直线 \(AA_2\)，因而 \(U\perp N\)，且 \(U\cap N=A_2B_2\). 对于 \(C\)，\(D\in P=U\)，它们在 \(N\) 内的正射影 \(C_2\)，\(D_2\) 必在 \(U\cap N=A_2B_2\) 上，这与 \(A_2B_2C_2D_2\) 是平行四边形矛盾，故 \(U\ne P\). 同理 \(V\ne P\). 因此 \(U\cap P=AB\)，\(V\cap P=CD\). 平面 \(P\) 截两个平行平面所得的交线平行，因此 \(AB\parallel CD\).
+
+同样，由 \(AA_2\parallel BB_2\) 和 \(A_2D_2\parallel B_2C_2\)，由 \(AA_2\)、\(A_2D_2\) 所确定的平面与由 \(BB_2\)、\(B_2C_2\) 所确定的平面是两不重合的平行平面. 这两个平面与 \(P\) 的交线分别为 \(AD\)、\(BC\)，所以 \(AD\parallel BC\). 两组对边分别平行，故四边形 \(ABCD\) 是平行四边形.
 \end{solution}
 
 \begin{problem}
@@ -156,87 +189,160 @@ M_1M_2=M_2M_3=M_3M_4=M_4M_1=\frac{\sqrt2}{2}+\frac{\sqrt2}{2}=\sqrt2
 \end{problem}
 
 \begin{solution}
+设两圆半径分别为 \(r\)、\(r'\)，令 \(s=r+r'\). 建立直角坐标系，取 \(A=(0,0)\)、\(B=(1,0)\)、\(D=(0,1)\)，则 \(C=(1,1)\). 由于 \(\odot O\) 与 \(AB\)、\(AD\) 相切，\(O=(r,r)\)；由于 \(\odot O'\) 与 \(CB\)、\(CD\) 相切，\(O'=(1-r',1-r')\).
+
 \solutionfigure{\bitmapfigure[max width=0.4\linewidth]{img/1964/national/q8_solution_fig1.png}}
+
+由于两圆都在正方形内且分别与两边相切，\(0<r\)，\(r'\le\frac12\). 若 \(s=1\)，则 \(r=r'=\frac12\)，从而 \(O=O'=\left(\frac12,\frac12\right)\)，这与两圆外切矛盾，故 \(0<s<1\).
+
 \begin{enumerate}
-\item 【法一】设 \(\odot O\) 与 \(AB\) 相切于 \(P\)，\(\odot O'\) 与 \(BC\) 相切于 \(Q\). 连 \(OP\)，\(O'Q\). 作 \(O'R\perp AB\)，\(OS\perp O'R\). 令 \(r\) 与 \(r'\) 分别表示 \(\odot O\) 与 \(\odot O'\) 的半径，又令 \(s=r+r'\).
-容易看出，\(O\)，\(O'\) 在对角线 \(AC\) 上，\(\triangle OAP\) 是等腰直角三角形，\(O'RBQ\) 和 \(O'PRS\) 是矩形. 因此 \(AP=OP=r\)，\(RB=O'Q=r'\)，所以 \(OS=PR=1-\left( r+r' \right)=1-s\). 又 \(\triangle O'OS\) 也是等腰直角三角形，所以 \(OO'=\sqrt2OS=\sqrt2\left( 1-s \right)\). 但 \(OO'\) 是两圆连心线，所以 \(OO'=r+r'=s\). 故 \(s=\sqrt2\left( 1-s \right)\)，从而
-\(s=\frac{\sqrt2}{1+\sqrt2}=2-\sqrt2\)，记作\(\circled{1}\).
-
-【法二】\(AO=AP\sqrt2=r\sqrt2\)，\(OO'=r+r'\)，\(O'C=O'Q\sqrt2=r'\sqrt2\). 因为 \(AC=\sqrt2\)，所以 \(r\sqrt2+r+r'+r'\sqrt2=\sqrt2\)，即 \(\left( 1+\sqrt2 \right)\left( r+r' \right)=\sqrt2\). 令 \(s=r+r'\)，得 \(\left( 1+\sqrt2 \right)s=\sqrt2\)，所以 \(s=\frac{\sqrt2}{1+\sqrt2}=2-\sqrt2\).
-
-\item 【法一】由\(\circled{1}\)得 \(s=2-\sqrt2\). 两圆面积之和为
-\begin{equation}
-\begin{aligned}
-\pi\left( r^2+r'^2 \right)
-&=\pi\left[ r^2+\left( s-r \right)^2 \right]\\
-&=\pi\left[ r^2+\left( 2-\sqrt2-r \right)^2 \right]\\
-&=2\pi\left[ r^2-\left( 2-\sqrt2 \right)r+3-2\sqrt2 \right]\\
-&=2\pi\left[ \left( r-\frac{2-\sqrt2}{2} \right)^2+\frac{3-2\sqrt2}{2} \right]
-\end{aligned}
-\tag{2}
-\end{equation}
-因此，当 \(r=\frac{2-\sqrt2}{2}\)，\(r'=\frac{2-\sqrt2}{2}\) 时，面积之和最小.
-
-现在讨论面积之和最大时半径各多么长. 不妨设 \(r\ge r'\)，即 \(r\ge\frac{2-\sqrt2}{2}\). 又显然 \(r\le\frac12\). 由\(\circled{2}\)知，当 \(r=\frac12\)，\(r'=\frac32-\sqrt2\) 时，面积之和最大. 同理，当 \(r'=\frac12\)，\(r=\frac32-\sqrt2\) 时，面积之和也最大.
-
-【法二】两圆面积之和为
+\item 两圆外切，所以 \(OO'=r+r'=s\). 另一方面，
 \[
-\pi\left( r^2+r'^2 \right)=\frac12\pi\left[ \left( r+r' \right)^2+\left( r-r' \right)^2 \right]
+OO'=\sqrt{\left( 1-r'-r \right)^2+\left( 1-r'-r \right)^2}=\sqrt2\left( 1-s \right)
 \]
-记作\(\circled{3}\).
-因为 \(r+r'=2-\sqrt2\) 为定值，所以当 \(r-r'=0\)，即 \(r=r'=\frac{2-\sqrt2}{2}\) 时，两圆面积之和最小.
-
-现在讨论面积之和最大时半径各多么长. 不妨设 \(r\ge r'\)，即 \(r\ge\frac{s}{2}\). 由\(\circled{3}\)得
+因此 \(s=\sqrt2\left( 1-s \right)\)，解得
 \[
-\pi\left( r^2+r'^2 \right)=\frac{\pi}{2}\left[ s^2+\left( 2r-s \right)^2 \right].
+s=\frac{\sqrt2}{1+\sqrt2}=2-\sqrt2
 \]
-但显然 \(r\le\frac12\). 所以当 \(r=\frac12\)，\(r'=\frac32-\sqrt2\) 时，面积之和最大. 同理，当 \(r'=\frac12\)，\(r=\frac32-\sqrt2\) 时，面积之和也最大.
 
+\item 每个圆都在边长为 \(1\) 的正方形内并与两边相切，所以 \(0<r\le\frac12\)，\(0<r'\le\frac12\)，并且 \(r+r'=s=2-\sqrt2\).
+两圆面积之和为
+\[
+S=\pi\left( r^2+r'^2 \right)=\frac{\pi}{2}\left[ s^2+\left( r-r' \right)^2 \right]
+\]
+当且仅当 \(r-r'=0\) 时，\(S\) 取得最小值，所以
+\[
+r=r'=\frac{s}{2}=\frac{2-\sqrt2}{2}
+\]
+
+由 \(0<r\)，\(r'\le\frac12\) 及 \(r+r'=s\)，可知
+\[
+s-\frac12\le r\le\frac12
+\]
+在此区间上，\(\left( r-r' \right)^2=\left( 2r-s \right)^2\) 在端点处取得最大值. 因而面积之和最大时，一圆半径为 \(\frac12\)，另一圆半径为
+\[
+s-\frac12=\frac32-\sqrt2
+\]
+所以最大值在
+\[
+\left( r,r' \right)=\left( \frac12,\frac32-\sqrt2 \right)
+\]
+或两圆互换这两个半径时取得.
 \end{enumerate}
 \end{solution}
 
 \section{附加题}
 
 \begin{problem}
-如果把第 \(8\) 题中的正方形改成矩形，你能得什么结果？为什么？
+\begin{enumerate}
+\item 如果把第 \(8\) 题中的正方形改成矩形，你能得什么结果？为什么？
+
+\item 如果把第 \(8\) 题中的正方形改成棱长为 \(1\) 的正方体，把圆改成球，你能得到什么结果？为什么？
+\end{enumerate}
 \end{problem}
 
 \begin{solution}
-设 \(ABCD\) 为矩形，\(AB=a\)，\(BC=b\). 设 \(\odot O\) 与 \(\odot O'\) 互相外切，并且 \(\odot O\) 与 \(AB\)，\(AD\) 相切，\(\odot O'\) 与 \(CB\)，\(CD\) 相切. 令 \(\odot O\) 与 \(\odot O'\) 的半径分别为 \(r\) 与 \(r'\)，其和为 \(s\). 设 \(\odot O\) 切 \(AB\) 于 \(P\)，\(\odot O'\) 切 \(BC\) 于 \(Q\). 连 \(OO'\). 作 \(O'R\perp AB\)，\(OS\perp O'R\).
+\begin{enumerate}
+\item
+设矩形 \(ABCD\) 中 \(AB=a\)、\(BC=b\)，其中 \(a>0\)、\(b>0\). 设两圆半径分别为 \(r\)、\(r'\)，且令 \(s=r+r'\). 取 \(A=(0,0)\)、\(B=(a,0)\)、\(D=(0,b)\)，则两圆心分别为 \(O=(r,r)\) 和 \(O'=(a-r',b-r')\).
+
 \solutionfigure{\bitmapfigure[max width=0.5\linewidth]{img/1964/national/q8_additional_solution_fig1.png}}
-容易看出，\(AP=r\)，\(RB=O'Q=r'\). 因此 \(OS=PR=a-s\). 同样可得 \(O'S=b-s\). 又 \(\triangle OSO'\) 是直角三角形，而 \(OO'=r+r'=s\)，故 \(\left( a-s \right)^2+\left( b-s \right)^2=s^2\)，即 \(s^2-2\left( a+b \right)s+a^2+b^2=0\)，解得 \(s=a+b\pm\sqrt{2ab}\). 显然 \(s<a+b\)，故应取负号，因此 \(s=a+b-\sqrt{2ab}\)，记作\circled{4}.
 
-另一方面，两圆面积之和为
-\begin{equation}
-\pi\left( r^2+r'^2 \right)=\frac{\pi}{2}\left[ \left( r+r' \right)^2+\left( r-r' \right)^2 \right]=\frac{\pi}{2}\left[ s^2+\left( r-r' \right)^2 \right]
-\tag{5}
-\end{equation}
-显然当 \(r=r'=\frac12\left( a+b-\sqrt{2ab} \right)\) 时，面积之和最小.
+两圆外切，所以 \(OO'=s\). 由两圆心坐标，
+\[
+s^2=OO'^2=\left( a-r-r' \right)^2+\left( b-r-r' \right)^2
+=\left( a-s \right)^2+\left( b-s \right)^2
+\]
+整理得
+\[
+s^2-2\left( a+b \right)s+a^2+b^2=0
+\]
+解这个关于 \(s\) 的一元二次方程，得
+\[
+s=a+b\pm\sqrt{2ab}
+\]
+令 \(m=\min\{a,b\}\)、\(M=\max\{a,b\}\). 因为每个圆都在矩形内并分别与相邻两边相切，所以 \(0<r\le\frac{m}{2}\)，\(0<r'\le\frac{m}{2}\)，从而 \(0<s\le m\). 因此只能取较小的根：
+\[
+s=a+b-\sqrt{2ab}
+\]
+这个构型存在还必须满足
+\[
+a+b-\sqrt{2ab}\le m
+\]
+由于 \(a+b=M+m\)，上式等价于
+\[
+M\le\sqrt{2Mm}\iff M^2\le2Mm\iff M\le2m
+\]
+若 \(M>2m\)，则上述两圆构型不存在. 反之，当 \(M\le2m\) 时，取 \(r=r'=\frac{s}{2}\le\frac m2\)，两圆均在矩形内且满足外切条件，所以该条件也是充分的. 以下均在 \(M\le2m\) 的条件下讨论. 在此条件下，\(s-\frac m2>0\)，因为
+\[
+\left( M+\frac m2 \right)^2-2Mm=\left( M-\frac m2 \right)^2>0
+\]
 
-又由\(\circled{5}\)得 \(\pi\left( r^2+r'^2 \right)=\frac{\pi}{2}\left[ s^2+\left( 2r-s \right)^2 \right]\)，记作\(\circled{6}\).
-现在讨论面积之和最大时半径各多么长. 不妨设 \(r\ge r'\)，即 \(r\ge\frac{s}{2}\). 但 \(r\) 不能超过 \(\frac{a}{2}\) 与 \(\frac{b}{2}\) 中的较小者，设为 \(\frac{b}{2}\). 则由\(\circled{6}\)知，当 \(r=\frac{b}{2}\)，\(r'=a+\frac{b}{2}-\sqrt{2ab}\) 时，面积之和最大. 同理，当 \(r'=\frac{b}{2}\)，\(r=a+\frac{b}{2}-\sqrt{2ab}\) 时，面积之和也最大.
-\solutionfigure{\bitmapfigure[max width=0.34\linewidth]{img/1964/national/q8_additional_solution_fig2.png}}
+两圆面积之和为
+\[
+S=\pi\left( r^2+r'^2 \right)=\frac{\pi}{2}\left[ s^2+\left( r-r' \right)^2 \right]
+\]
+由于 \(s\) 是定值，当且仅当 \(r=r'=\frac{s}{2}\) 时面积之和最小，即
+\[
+r=r'=\frac{a+b-\sqrt{2ab}}{2}
+\]
 
-\end{solution}
+又因为 \(r\)，\(r'\le\frac{m}{2}\) 且 \(r+r'=s\)，可行范围为 \(s-\frac m2\le r\le\frac m2\)，且 \(r'=s-r\). 此时 \(r-r'=2r-s\) 随 \(r\) 增大而增大，所以 \(\lvert r-r'\rvert\) 在区间端点处取得最大值. 因而面积之和最大时，两圆半径为
+\[
+\left\{r,r'\right\}=\left\{\frac{m}{2},\ a+b-\sqrt{2ab}-\frac{m}{2}\right\}
+\]
+对应的最大面积之和为
+\[
+S_{\max}=\pi\left[\left( \frac{m}{2} \right)^2+\left( a+b-\sqrt{2ab}-\frac{m}{2} \right)^2\right]
+\]
 
-\begin{problem}
-如果把第 \(8\) 题中的正方形改成棱长为 \(1\) 的正方体，把圆改成球，你能得到什么结果？为什么？
-\end{problem}
+\item
+设两个球的半径分别为 \(r\)、\(r'\)，令 \(s=r+r'\). 建立直角坐标系，使正方体为 \([0,1]^3\)，并使第一个球与过顶点 \((0,0,0)\) 的三个面相切，第二个球与相对顶点 \((1,1,1)\) 的三个面相切. 则两球心分别为 \(O=(r,r,r)\) 和 \(O'=(1-r',1-r',1-r')\).
 
-\begin{solution}
-设球 \(O\) 与球 \(O'\) 互相外切，并且都在正方体 \(ABCD-B'A'C'D'\) 内部. 设球 \(O\) 与过 \(A\) 的三个面相切，球 \(O'\) 与 \(C'\) 的三个面相切. 设球 \(O\) 与球 \(O'\) 的半径分别为 \(r\) 与 \(r'\)，且 \(r+r'=s\).
 \solutionfigure{\bitmapfigure[max width=0.34\linewidth]{img/1964/national/q8_additional_solution_fig3.png}}
-和正方形的情形相仿，以 \(O\)，\(O'\) 为相对的两个顶点作正方体，使它的各面平行于原正方体的相应各面，可得 \(s=\sqrt3\left( 1-s \right)\)，所以 \(s=\frac{3-\sqrt3}{2}\).
 
-两球表面积之和为
-\[
-4\pi\left( r^2+r'^2 \right)=2\pi\left[ \left( r+r' \right)^2+\left( r-r' \right)^2 \right]=2\pi\left[ s^2+\left( r-r' \right)^2 \right]=2\pi\left[ s^2+\left( 2r-s \right)^2 \right]
-\]
-故当 \(r=r'=\frac{s}{2}=\frac{3-\sqrt3}{4}\) 时，表面积之和最小. 同样，当 \(r=\frac12\)，\(r'=\frac{2-\sqrt3}{2}\)，或 \(r'=\frac12\)，\(r=\frac{2-\sqrt3}{2}\) 时，表面积之和最大.
+由于两球都在正方体内且分别与三个面相切，\(0<r\)，\(r'\le\frac12\). 若 \(s=1\)，则 \(r=r'=\frac12\)，从而 \(O=O'=\left(\frac12,\frac12,\frac12\right)\)，这与两球外切矛盾，故 \(0<s<1\).
 
-两球体积之和为
+两球外切，故
 \[
-\frac43\pi\left( r^3+r'^3 \right)=\frac{4\pi}{3}s\left( r^2-rr'+r'^2 \right)=\frac{\pi}{3}s\left[ s^2+3\left( r-r' \right)^2 \right]=\frac{\pi}{3}s\left[ s^2+3\left( 2r-s \right)^2 \right]
+s^2=OO'^2=3\left( 1-r-r' \right)^2=3\left( 1-s \right)^2
 \]
-故当 \(r=r'=\frac{3-\sqrt3}{4}\) 时，体积之和最小. 同样，当 \(r=\frac12\)，\(r'=\frac{2-\sqrt3}{2}\)，或 \(r'=\frac12\)，\(r=\frac{2-\sqrt3}{2}\) 时，体积之和最大.
+由于 \(0<s<1\)，取正平方根得到 \(s=\sqrt3\left( 1-s \right)\)，解得
+\[
+s=\frac{\sqrt3}{1+\sqrt3}=\frac{3-\sqrt3}{2}
+\]
+
+由于 \(s=\frac{3-\sqrt3}{2}\) 且 \(\frac12<s<1\)，可行范围为
+\(s-\frac12\le r\le\frac12\)，\(r'=s-r\).
+
+两个球的表面积之和为
+\[
+S=4\pi\left( r^2+r'^2 \right)=2\pi\left[ s^2+\left( r-r' \right)^2 \right]
+\]
+因为 \(0<r\)，\(r'\le\frac12\) 且 \(r+r'=s\)，当且仅当
+\[
+r=r'=\frac{s}{2}=\frac{3-\sqrt3}{4}
+\]
+时表面积之和最小. 当一个半径取允许的最大值 \(\frac12\) 时，另一个半径为
+\[
+s-\frac12=\frac{2-\sqrt3}{2}
+\]
+在上述可行区间上，\(\lvert r-r'\rvert=\lvert 2r-s\rvert\) 在端点处取得最大值. 此时表面积之和最大. 也就是说最大值对应于
+\[
+\left( r,r' \right)=\left( \frac12,\frac{2-\sqrt3}{2} \right)
+\]
+或两球互换这两个半径.
+
+两个球的体积之和为
+\[
+V=\frac43\pi\left( r^3+r'^3 \right)
+=\frac43\pi s\left( r^2-rr'+r'^2 \right)
+=\frac{\pi s}{3}\left[ s^2+3\left( r-r' \right)^2 \right]
+\]
+其中用到了
+\[
+4\left( r^2-rr'+r'^2 \right)=s^2+3\left( r-r' \right)^2
+\]
+这里 \(s\) 为定值，所以体积之和也在 \(r=r'\) 时最小，在一个半径为 \(\frac12\)、另一个半径为 \(\frac{2-\sqrt3}{2}\) 时最大.
+\end{enumerate}
 \end{solution}

@@ -10,6 +10,14 @@
 \(-20\).
 \end{answer}
 
+\begin{solution}
+\(z_1-z_2=(4+29\i)-(6+9\i)=-2+20\i\)，所以
+\[
+(z_1-z_2)\i=(-2+20\i)\i=-2\i+20\i^2=-20-2\i
+\]
+因此该复数的实部为 \(-20\).
+\end{solution}
+
 \begin{problem}
 已知向量 \(\bs{a}\) 和向量 \(\bs{b}\) 的夹角为 \(30^\circ\)，\(|\bs{a}|=2\)，\(|\bs{b}|=\sqrt3\)，则向量 \(\bs{a}\) 和向量 \(\bs{b}\) 的数量积 \(\bs{a}\cdot\bs{b}=\fillinblank{}\).
 \end{problem}
@@ -18,6 +26,15 @@
 \(3\).
 \end{answer}
 
+\begin{solution}
+由向量数量积公式，
+\[
+\bs{a}\cdot\bs{b}=|\bs{a}|\,|\bs{b}|\cos30^\circ
+=2\cdot\sqrt3\cdot\frac{\sqrt3}{2}=3
+\]
+所以填 \(3\).
+\end{solution}
+
 \begin{problem}
 函数 \(f(x)=x^3-15x^2-33x+6\) 的单调减区间为\fillinblank{}.
 \end{problem}
@@ -25,6 +42,17 @@
 \begin{answer}
 \((-1,11)\).
 \end{answer}
+
+\begin{solution}
+\[
+f'(x)=3x^2-30x-33=3(x-11)(x+1)
+\]
+函数在 \(f'(x)<0\) 时单调递减. 由于
+\[
+(x-11)(x+1)<0\quad\Longleftrightarrow\quad -1<x<11
+\]
+所以函数的单调减区间为 \((-1,11)\).
+\end{solution}
 
 \begin{problem}
 函数 \(y=A\sin(\omega x+\varphi)\)（\(A\)，\(\omega\)，\(\varphi\) 为常数，\(A>0\)，\(\omega>0\)）在闭区间 \([-\pi,0]\) 上的图象如图所示，则 \(\omega=\fillinblank{}\).
@@ -36,6 +64,14 @@
 \(3\).
 \end{answer}
 
+\begin{solution}
+由图象可见，函数在 \(-\dfrac{2\pi}{3}\) 和 \(-\dfrac{\pi}{3}\) 处有相邻的两个零点，二者间距为 \(\dfrac{\pi}{3}\). 对于正弦函数，相邻零点的间距为 \(\dfrac{\pi}{\omega}\)，故
+\[
+\frac{\pi}{\omega}=\frac{\pi}{3}
+\]
+又 \(\omega>0\)，所以 \(\omega=3\).
+\end{solution}
+
 \begin{problem}
 现有 \(5\) 根竹竿，它们的长度（单位：\(\text{m}\)）分别为 \(2.5\)，\(2.6\)，\(2.7\)，\(2.8\)，\(2.9\). 若从中一次随机抽取 \(2\) 根竹竿，则它们的长度恰好相差 \(0.3\text{ m}\) 的概率为\fillinblank{}.
 \end{problem}
@@ -43,6 +79,17 @@
 \begin{answer}
 \(0.2\).
 \end{answer}
+
+\begin{solution}
+从 \(5\) 根竹竿中一次抽取 \(2\) 根，所有等可能结果共有
+\[
+\mathrm C_5^2=10
+\]
+个. 长度相差 \(0.3\text{ m}\) 的结果只有 \((2.5,2.8)\) 和 \((2.6,2.9)\)，共有 \(2\) 个. 因此所求概率为
+\[
+\frac{2}{10}=0.2
+\]
+\end{solution}
 
 \begin{problem}
 某校甲，乙两个班级各有 \(5\) 名编号为 \(1\)，\(2\)，\(3\)，\(4\)，\(5\) 的学生进行投篮练习，每人投 \(10\) 次，投中的次数如下表：
@@ -63,15 +110,40 @@
 \(0.4\).
 \end{answer}
 
+\begin{solution}
+甲班数据的平均数为
+\[
+\bar{x}_{\text{甲}}=\frac{6+7+7+8+7}{5}=7
+\]
+所以方差为
+\[
+s_{\text{甲}}^2=\frac{(6-7)^2+(7-7)^2+(7-7)^2+(8-7)^2+(7-7)^2}{5}=\frac25=0.4
+\]
+乙班数据的平均数也是 \(7\)，方差为
+\[
+s_{\text{乙}}^2=\frac{(6-7)^2+(7-7)^2+(6-7)^2+(7-7)^2+(9-7)^2}{5}=\frac65=1.2
+\]
+因此较小的方差为 \(0.4\).
+\end{solution}
+
 \begin{problem}
 如图是一个算法的流程图，最后输出的 \(W=\fillinblank{}\).
 
-\texfigure[max width=0.55\linewidth]{img_repaint/2009/jiangsu/q7_flow.tex}
+\bitmapfigure[max width=0.55\linewidth]{img/2009/jiangsu/q7_flow.png}
 \end{problem}
 
 \begin{answer}
 \(22\).
 \end{answer}
+
+\begin{solution}
+初始时 \(S=0\)，\(T=1\). 每次先作 \(S\leftarrow T^2-S\)，若 \(S<10\)，再作 \(T\leftarrow T+2\) 并重复计算. 因此各次计算得到
+\((S,T)=(1,1)\)，\((8,3)\)，\((17,5)\).
+前两次的 \(S\) 都小于 \(10\)，第三次得到 \(S=17\ge10\)，于是停止并输出
+\[
+W=S+T=17+5=22
+\]
+\end{solution}
 
 \begin{problem}
 在平面上，若两个正三角形的边长的比为 \(1:2\)，则它们的面积比为 \(1:4\)；类似地，在空间内，若两个正四面体的棱长的比为 \(1:2\)，则它们的体积比为\fillinblank{}.
@@ -81,6 +153,13 @@
 \(1:8\).
 \end{answer}
 
+\begin{solution}
+两个正四面体相似，且相似比等于棱长比 \(1:2\). 相似立体的体积比等于相似比的立方，因此体积比为
+\[
+1^3:2^3=1:8
+\]
+\end{solution}
+
 \begin{problem}
 在平面直角坐标系 \(xOy\) 中，点 \(P\) 在曲线 \(C:y=x^3-10x+3\) 上，且在第二象限内，已知曲线 \(C\) 在点 \(P\) 处的切线的斜率为 \(2\)，则点 \(P\) 的坐标为\fillinblank{}.
 \end{problem}
@@ -88,6 +167,20 @@
 \begin{answer}
 \((-2,15)\).
 \end{answer}
+
+\begin{solution}
+曲线方程为 \(y=x^3-10x+3\)，故其在点 \(P\) 处的切线斜率为
+\[
+y'=3x^2-10
+\]
+由斜率为 \(2\)，得
+\(3x^2-10=2\)，\(\Longrightarrow\)，\(x^2=4\)
+所以 \(x=\pm2\). 点 \(P\) 在第二象限，故 \(x=-2\)，再代入曲线方程得
+\[
+y=(-2)^3-10(-2)+3=15
+\]
+因此 \(P=(-2,15)\).
+\end{solution}
 
 \begin{problem}
 已知 \(a=\frac{\sqrt5-1}{2}\)，函数 \(f(x)=a^x\)，若实数 \(m\)，\(n\) 满足 \(f(m)>f(n)\)，则 \(m\)，\(n\) 的大小关系为\fillinblank{}.
@@ -97,6 +190,14 @@
 \(m<n\).
 \end{answer}
 
+\begin{solution}
+因为 \(1<\sqrt5<3\)，所以
+\[
+0<a=\frac{\sqrt5-1}{2}<1
+\]
+因此指数函数 \(f(x)=a^x\) 在 \(\R\) 上单调递减. 由 \(f(m)>f(n)\) 可知自变量的大小规律相反，所以 \(m<n\).
+\end{solution}
+
 \begin{problem}
 已知集合 \(A=\{x\mid \log_2 x\le2\}\)，\(B=(-\infty,a)\)，若 \(A\subseteq B\)，则实数 \(a\) 的取值范围是 \((c,+\infty)\)，其中 \(c=\fillinblank{}\).
 \end{problem}
@@ -104,6 +205,14 @@
 \begin{answer}
 \(4\).
 \end{answer}
+
+\begin{solution}
+由对数不等式及定义域，
+\[
+\log_2x\le2\quad\Longleftrightarrow\quad 0<x\le4
+\]
+所以 \(A=(0,4]\). 又 \(B=(-\infty,a)\) 不含端点 \(a\)，要使 \(A\subseteq B\)，必须且只需 \(a>4\). 因而题设中的 \(c=4\).
+\end{solution}
 
 \begin{problem}
 设 \(\alpha\) 和 \(\beta\) 为不重合的两个平面，给出下列命题：
@@ -122,6 +231,19 @@
 \(\circled{1}\circled{2}\).
 \end{answer}
 
+\begin{solution}
+\begin{enumerate}
+\item 设 \(\alpha\) 内的两条相交直线分别为 \(l_1\)，\(l_2\)，\(\beta\) 内的对应直线分别为 \(m_1\)，\(m_2\). 因为 \(l_1\) 与 \(l_2\) 相交，所以它们的方向不相同；又分别平行于 \(m_1\)，\(m_2\)，故 \(\alpha\) 与 \(\beta\) 含有两组对应的不同平行方向. 两平面若不平行则相交，而相交两平面只能共有一个方向，不可能含有两组不同的平行方向. 因此 \(\alpha\parallel\beta\)，命题为真.
+
+\item 直线 \(l\) 不在平面 \(\alpha\) 内，且平行于平面 \(\alpha\) 内的直线. 若 \(l\) 与 \(\alpha\) 相交于点 \(P\)，则过 \(P\) 可作平面 \(\alpha\) 内且与 \(l\) 平行的直线. 这条直线与 \(l\) 过同一点且平行，因而两直线重合，从而 \(l\subset\alpha\)，与 \(l\) 在 \(\alpha\) 外矛盾. 因此 \(l\) 与 \(\alpha\) 无公共点，即 \(l\parallel\alpha\)，命题为真.
+
+\item 该命题不成立. 例如取 \(\alpha:z=0\)，\(\beta:y=z\)，则两平面的交线为 \(x\) 轴. 平面 \(\alpha\) 内的 \(y\) 轴垂直于交线，但 \(\alpha\) 与 \(\beta\) 的夹角不是直角，所以不能推出 \(\alpha\perp\beta\).
+
+\item 直线垂直于平面的判定需要垂直于平面内两条相交直线，而题中没有相交条件. 取 \(\alpha:z=0\)，取 \(l\) 为 \(x\) 轴，再取平面 \(\alpha\) 内两条互相平行且平行于 \(y\) 轴的直线，则 \(l\) 分别垂直于这两条直线，但 \(l\) 在平面 \(\alpha\) 内，不可能垂直于平面 \(\alpha\). 因此命题为假.
+\end{enumerate}
+所以真命题的序号为 \(1\)、\(2\).
+\end{solution}
+
 \begin{problem}
 如图，在平面直角坐标系 \(xOy\) 中，\(A_1\)，\(A_2\)，\(B_1\)，\(B_2\) 为椭圆 \(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\) （\(a>b>0\)）的四个顶点，\(F\) 为其右焦点. 直线 \(A_1B_2\) 与直线 \(B_1F\) 相交于点 \(T\)，线段 \(OT\) 与椭圆的交点 \(M\) 恰为线段 \(OT\) 的中点，则该椭圆的离心率为\fillinblank{}.
 
@@ -132,13 +254,57 @@
 \(2\sqrt{7}-5\).
 \end{answer}
 
+\begin{solution}
+设 \(A_1=(-a,0)\)，\(B_2=(0,b)\)，\(B_1=(0,-b)\)，椭圆的右焦点为 \(F(c,0)\)，其中 \(c=\sqrt{a^2-b^2}\)，并记离心率为 \(e=\dfrac ca\). 由两点式，直线 \(A_1B_2\) 和直线 \(B_1F\) 分别可写为
+\(\frac{x}{a}-\frac{y}{b}=-1\)，\(\frac{x}{c}-\frac{y}{b}=1\).
+联立得交点
+\[
+T\left(\frac{2ac}{a-c},\frac{b(a+c)}{a-c}\right)
+\]
+因为 \(M\) 是线段 \(OT\) 的中点，所以
+\[
+M\left(\frac{ac}{a-c},\frac{b(a+c)}{2(a-c)}\right)
+\]
+将 \(M\) 代入椭圆方程，得
+\[
+\frac{c^2}{(a-c)^2}+\frac{(a+c)^2}{4(a-c)^2}=1
+\]
+整理为
+\[
+3a^2-10ac-c^2=0
+\]
+除以 \(a^2>0\)，得到
+\[
+e^2+10e-3=0
+\]
+又 \(0<e<1\)，故
+\[
+e=-5+2\sqrt7=2\sqrt7-5
+\]
+\end{solution}
+
 \begin{problem}
-设 \(\{a_n\}\) 是公比为 \(q\) 的等比数列，\(|q|>1\). 令 \(b_n=a_n+1\)（\(n=1,2,\cdots\)），若数列 \(\{b_n\}\) 有连续四项在集合 \(\{-53,-23,19,37,82\}\) 中，则 \(6q=\fillinblank{}\).
+设 \(\{a_n\}\) 是公比为 \(q\) 的等比数列，\(|q|>1\). 令 \(b_n=a_n+1\)（\(n=1\)，\(2\)，\(\cdots\)），若数列 \(\{b_n\}\) 有连续四项在集合 \(\{-53,-23,19,37,82\}\) 中，则 \(6q=\fillinblank{}\).
 \end{problem}
 
 \begin{answer}
 \(-9\).
 \end{answer}
+
+\begin{solution}
+令 \(x_n=a_n=b_n-1\). 题设集合中的四项对应的 \(x_n\) 属于
+\[
+\{-54,-24,18,36,81\}
+\]
+由于 \(|q|>1\)，且这四项均非零，连续四项的绝对值严格递增. 若首项绝对值为 \(18\)，第二项绝对值分别取 \(24\)，\(36\)，\(54\)，\(81\) 时，按相同公比继续得到的第三项绝对值分别为 \(32\)，\(72\)，\(162\)，\(\dfrac{729}{2}\)，均不在集合中. 若首项绝对值为 \(24\)，第二项绝对值为 \(36\) 时可继续得到 \(54,81\)，而第二项取 \(54\) 或 \(81\) 时第三项绝对值分别为 \(\dfrac{243}{2}\) 和 \(\dfrac{2187}{8}\)，均不在集合中. 若首项绝对值为 \(36\)，第二项取 \(54\) 时第四项绝对值为 \(\dfrac{243}{2}\)，取 \(81\) 时第三项绝对值为 \(\dfrac{729}{4}\)，也不能得到四项. 首项绝对值为 \(54\) 或 \(81\) 时更不可能得到四项. 因此只有
+\(24\)，\(36\)，\(54\)，\(81\)
+这一组，公比的绝对值为 \(\dfrac32\). 对应的四项必须按符号交替排列为
+\(-24\)，\(36\)，\(-54\)，\(81\)
+从而 \(q=-\dfrac32\). 这四项加上 \(1\) 后为 \(-23\)，\(37\)，\(-53\)，\(82\)，确实都在题设集合中. 故
+\[
+6q=6\left(-\frac32\right)=-9
+\]
+\end{solution}
 
 \section{解答题}
 
@@ -158,22 +324,22 @@
 \[
 0=\bs{a}\cdot(\bs{b}-2\bs{c})
 =4\cos\alpha(\sin\beta-2\cos\beta)
-+\sin\alpha(4\cos\beta+8\sin\beta).
++\sin\alpha(4\cos\beta+8\sin\beta)
 \]
 整理得
 \[
-0=4\bigl(\sin(\alpha+\beta)-2\cos(\alpha+\beta)\bigr).
+0=4\bigl(\sin(\alpha+\beta)-2\cos(\alpha+\beta)\bigr)
 \]
 若 \(\cos(\alpha+\beta)=0\)，上式不可能成立，所以
 \[
-\tan(\alpha+\beta)=2.
+\tan(\alpha+\beta)=2
 \]
 
 \item
 \[
 |\bs{b}+\bs{c}|^2
 =(\sin\beta+\cos\beta)^2+4^2(\cos\beta-\sin\beta)^2
-=17-15\sin2\beta\le32.
+=17-15\sin2\beta\le32
 \]
 当 \(\sin2\beta=-1\) 时等号成立，故 \(|\bs{b}+\bs{c}|\) 的最大值为 \(4\sqrt2\).
 
@@ -181,7 +347,7 @@
 \[
 \det(\bs{a},\bs{b})
 =4\cos\alpha\cdot4\cos\beta-\sin\alpha\sin\beta
-=\cos\alpha\cos\beta\bigl(16-\tan\alpha\tan\beta\bigr)=0.
+=\cos\alpha\cos\beta\bigl(16-\tan\alpha\tan\beta\bigr)=0
 \]
 因此 \(\bs{a}\parallel\bs{b}\).
 \end{enumerate}
@@ -221,24 +387,24 @@
 \(a_2=u-d\)，\(a_4=u+d\)，\(a_5=u+2d\).
 由题设
 \[
-(u-d)^2+u^2=(u+d)^2+(u+2d)^2,
+(u-d)^2+u^2=(u+d)^2+(u+2d)^2
 \]
 化简得 \(-4d(2u+d)=0\). 因为 \(d\ne0\)，所以 \(2a_3+d=0\)，即 \(2a_1+5d=0\). 另一方面，
 \[
-S_7=\frac{7}{2}(2a_1+6d)=7(a_1+3d)=7,
+S_7=\frac{7}{2}(2a_1+6d)=7(a_1+3d)=7
 \]
 所以 \(a_1+3d=1\). 解得 \(d=2\)，\(a_1=-5\). 因此
 \(a_n=a_1+(n-1)d=2n-7\)，\(S_n=\frac{n}{2}\bigl(2a_1+(n-1)d\bigr)=n^2-6n\).
 
 \item 由上问，
 \[
-\frac{a_ma_{m+1}}{a_{m+2}}=\frac{(2m-7)(2m-5)}{2m-3}.
+\frac{a_ma_{m+1}}{a_{m+2}}=\frac{(2m-7)(2m-5)}{2m-3}
 \]
 令 \(t=2m-3\)，则 \(t\) 是奇数且 \(t\ge-1\)，并且
 \[
-\frac{a_ma_{m+1}}{a_{m+2}}=\frac{(t-4)(t-2)}{t}=t+\frac{8}{t}-6.
+\frac{a_ma_{m+1}}{a_{m+2}}=\frac{(t-4)(t-2)}{t}=t+\frac{8}{t}-6
 \]
-若该数是数列中的项，则它必须是整数，所以 \(t\mid8\). 由于 \(t\) 是奇数，只可能有 \(t=1\) 或 \(t=-1\). 当 \(t=1\) 时，\(m=2\)，上式的值为 \(3=a_5\)；当 \(t=-1\) 时，\(m=1\)，上式的值为 \(-15\)，而数列的首项为 \(a_1=-5\)，不可能是数列中的项. 故所有满足条件的正整数为 \(m=2\).
+若该数是数列中的项，则它必须是整数，所以 \(t\mid8\). 由于 \(t\) 是奇数，只可能有 \(t=1\) 或 \(t=-1\). 当 \(t=1\) 时，\(m=2\)，上式的值为 \(3=a_5\)；当 \(t=-1\) 时，\(m=1\)，上式的值为 \(-15\). 但对任意正整数 \(k\)，\(a_k=2k-7\ge-5\)，所以 \(-15\) 不可能是数列中的项. 故所有满足条件的正整数为 \(m=2\).
 \end{enumerate}
 \end{solution}
 
@@ -255,29 +421,29 @@ S_7=\frac{7}{2}(2a_1+6d)=7(a_1+3d)=7,
 
 \begin{solution}
 \begin{enumerate}
-\item 设直线 \(l\) 的方程为 \(y=k(x-4)\)，即 \(kx-y-4k=0\). 圆 \(C_1\) 的半径为 \(2\)，弦长为 \(2\sqrt3\)，所以圆心 \((-3,1)\) 到直线 \(l\) 的距离为
+\item 直线 \(l\) 若为竖直直线，则为 \(x=4\)，圆心 \((-3,1)\) 到它的距离为 \(7>2\)，不能截得圆 \(C_1\) 的弦. 因此 \(l\) 非竖直时可设其方程为 \(y=k(x-4)\)，即 \(kx-y-4k=0\). 圆 \(C_1\) 的半径为 \(2\)，弦长为 \(2\sqrt3\)，所以圆心 \((-3,1)\) 到直线 \(l\) 的距离为
 \[
-\sqrt{2^2-\left(\frac{2\sqrt3}{2}\right)^2}=1.
+\sqrt{2^2-\left(\frac{2\sqrt3}{2}\right)^2}=1
 \]
 于是
 \[
-\frac{|-3k-1-4k|}{\sqrt{k^2+1}}=1,
+\frac{|-3k-1-4k|}{\sqrt{k^2+1}}=1
 \]
 即 \(24k^2+7k=0\). 因此 \(k=0\) 或 \(k=-\frac{7}{24}\)，所求直线为 \(y=0\) 或 \(7x+24y-28=0\).
 
-\item 设 \(P=(m,n)\). 对于非水平且非竖直的直线，设过 \(P\) 的直线 \(l_1\) 斜率为 \(k\)，则与之垂直的直线 \(l_2\) 斜率为 \(-\frac1k\)，它们的方程可写为
+\item 设 \(P=(m,n)\). 若 \(l_1\) 为竖直直线，则与之垂直的 \(l_2\) 为水平直线，二者分别由 \(P\) 唯一确定；反之亦然，因此这两种方向至多产生一对直线. 对于非水平且非竖直的直线，设过 \(P\) 的直线 \(l_1\) 斜率为 \(k\)，则与之垂直的直线 \(l_2\) 斜率为 \(-\frac1k\)，它们的方程可写为
 \[
-l_1:\ y-n=k(x-m).
+l_1:\ y-n=k(x-m)
 \]
 \[
-l_2:\ y-n=-\frac1k(x-m).
+l_2:\ y-n=-\frac1k(x-m)
 \]
 若存在无穷多对符合条件的直线，则符合条件的非零有限斜率 \(k\) 也有无穷多个，因为水平或竖直方向各只有一条直线.
 
 两圆半径相等，且两条直线截得的弦长相等，所以两圆心到相应直线的距离相等. 将 \(C_1=(-3,1)\)，\(C_2=(4,5)\) 代入点到直线的距离公式，得
 \[
 \frac{|-(m+3)k+n-1|}{\sqrt{k^2+1}}
-=\frac{|(n-5)k+m-4|}{\sqrt{k^2+1}}.
+=\frac{|(n-5)k+m-4|}{\sqrt{k^2+1}}
 \]
 因此
 \[
@@ -285,7 +451,7 @@ l_2:\ y-n=-\frac1k(x-m).
 \]
 或
 \[
-(m-n+8)k=m+n-5.
+(m-n+8)k=m+n-5
 \]
 关于 \(k\) 的方程只有在相应等式的两边恒为零时才有无穷多个解，所以
 \[
@@ -300,7 +466,11 @@ m+n-5=0.
 \end{cases}
 \]
 解得 \((m,n)=\left(\frac52,-\frac12\right)\) 或 \((m,n)=\left(-\frac32,\frac{13}{2}\right)\).
-对于这两个点，满足距离相等的方向中有无穷多个方向使公共距离不超过半径 \(2\)，故确实能分别与两圆相交. 所以所求点为 \(\left(-\frac32,\frac{13}{2}\right)\) 或 \(\left(\frac52,-\frac12\right)\).
+对于 \(P=\left(\frac52,-\frac12\right)\) 和 \(P=\left(-\frac32,\frac{13}{2}\right)\)，分别有
+\[
+\overrightarrow{PC_1}\cdot\overrightarrow{PC_2}=0
+\]
+取 \(l_1\) 平行于 \(PC_1\)，取 \(l_2\) 平行于 \(PC_2\)，则两条直线互相垂直，且它们分别过圆心 \(C_1\)，\(C_2\)，公共弦长均为直径. 又前面的恒等关系说明，将这组方向作充分小的连续改变时，弦长仍相等且两圆心到直线的距离仍小于半径 \(2\)，故有无穷多对满足条件的直线. 所以所求点为 \(\left(-\frac32,\frac{13}{2}\right)\) 或 \(\left(\frac52,-\frac12\right)\).
 \end{enumerate}
 \end{solution}
 
@@ -318,34 +488,34 @@ m+n-5=0.
 \begin{enumerate}
 \item 甲买进 \(A\) 的满意度为 \(\dfrac{12}{m_{\text{A}}+12}\)，卖出 \(B\) 的满意度为 \(\dfrac{m_{\text{B}}}{m_{\text{B}}+5}\)，所以
 \[
-h_{\text{甲}}=\sqrt{\frac{12m_{\text{B}}}{(m_{\text{A}}+12)(m_{\text{B}}+5)}}.
+h_{\text{甲}}=\sqrt{\frac{12m_{\text{B}}}{(m_{\text{A}}+12)(m_{\text{B}}+5)}}
 \]
 乙卖出 \(A\) 的满意度为 \(\dfrac{m_{\text{A}}}{m_{\text{A}}+3}\)，买进 \(B\) 的满意度为 \(\dfrac{20}{m_{\text{B}}+20}\)，所以
 \[
-h_{\text{乙}}=\sqrt{\frac{20m_{\text{A}}}{(m_{\text{A}}+3)(m_{\text{B}}+20)}}.
+h_{\text{乙}}=\sqrt{\frac{20m_{\text{A}}}{(m_{\text{A}}+3)(m_{\text{B}}+20)}}
 \]
 当 \(m_{\text{A}}=\frac35m_{\text{B}}\) 时，令 \(m_{\text{B}}=x>0\)，则
 \[
 h_{\text{甲}}^2=\frac{12x}{\left(\frac35x+12\right)(x+5)}
-=\frac{20x}{(x+20)(x+5)},
+=\frac{20x}{(x+20)(x+5)}
 \]
 \[
 h_{\text{乙}}^2=\frac{20\cdot\frac35x}{\left(\frac35x+3\right)(x+20)}
-=\frac{20x}{(x+20)(x+5)}.
+=\frac{20x}{(x+20)(x+5)}
 \]
 由于两者均为正数，故 \(h_{\text{甲}}=h_{\text{乙}}\).
 
 \item 仍令 \(m_{\text{B}}=x>0\). 由上面的化简，
 \[
-h_{\text{甲}}^2=h_{\text{乙}}^2=\frac{20x}{(x+20)(x+5)}.
+h_{\text{甲}}^2=h_{\text{乙}}^2=\frac{20x}{(x+20)(x+5)}
 \]
 又
 \[
-(x+20)(x+5)-45x=(x-10)^2\ge0,
+(x+20)(x+5)-45x=(x-10)^2\ge0
 \]
 所以
 \[
-h_{\text{甲}}^2=h_{\text{乙}}^2\le\frac49.
+h_{\text{甲}}^2=h_{\text{乙}}^2\le\frac49
 \]
 等号当且仅当 \(x=10\). 因而当 \(m_{\text{B}}=10\)，\(m_{\text{A}}=6\) 时，甲、乙两人的综合满意度同时取得最大值，且最大值为 \(\frac23\).
 
@@ -354,15 +524,15 @@ h_{\text{甲}}^2=h_{\text{乙}}^2\le\frac49.
 h_{\text{甲}}^2h_{\text{乙}}^2
 =\frac{12m_{\text{A}}}{(m_{\text{A}}+12)(m_{\text{A}}+3)}
 \cdot
-\frac{20m_{\text{B}}}{(m_{\text{B}}+5)(m_{\text{B}}+20)}.
+\frac{20m_{\text{B}}}{(m_{\text{B}}+5)(m_{\text{B}}+20)}
 \]
 而
 \[
-\frac{12m_{\text{A}}}{(m_{\text{A}}+12)(m_{\text{A}}+3)}\le\frac49.
+\frac{12m_{\text{A}}}{(m_{\text{A}}+12)(m_{\text{A}}+3)}\le\frac49
 \]
 以及
 \[
-\frac{20m_{\text{B}}}{(m_{\text{B}}+5)(m_{\text{B}}+20)}\le\frac49.
+\frac{20m_{\text{B}}}{(m_{\text{B}}+5)(m_{\text{B}}+20)}\le\frac49
 \]
 前一个不等式等价于 \((m_{\text{A}}-6)^2\ge0\)，后一个不等式等价于 \((m_{\text{B}}-10)^2\ge0\).
 于是 \(h_{\text{甲}}h_{\text{乙}}\le\frac49=h_0^2\). 若同时有 \(h_{\text{甲}}\ge h_0\) 和 \(h_{\text{乙}}\ge h_0\)，则必有 \(h_{\text{甲}}h_{\text{乙}}\ge h_0^2\)，从而两边均取等号. 这要求 \(m_{\text{A}}=6\)，\(m_{\text{B}}=10\)，此时 \(h_{\text{甲}}=h_{\text{乙}}=h_0\). 因此不存在使两个不等式同时成立而等号不同时成立的取值.
@@ -383,21 +553,21 @@ h_{\text{甲}}^2h_{\text{乙}}^2
 \begin{enumerate}
 \item 因为
 \[
-f(0)=-a|a|.
+f(0)=-a|a|
 \]
 当 \(a\ge0\) 时，\(-a^2\ge1\) 不可能；当 \(a<0\) 时，\(a^2\ge1\)，所以 \(a\le-1\).
 
 \item 当 \(x\ge a\) 时，
 \[
-f(x)=3x^2-2ax+a^2,
+f(x)=3x^2-2ax+a^2
 \]
 其顶点横坐标为 \(x=\frac a3\). 当 \(a\ge0\) 时，顶点不在区间 \([a,+\infty)\) 内，最小值在 \(x=a\) 处取得，为 \(2a^2\)；当 \(a<0\) 时，顶点在区间 \([a,+\infty)\) 内，最小值为 \(\frac{2a^2}{3}\).
 
 当 \(x<a\) 时，
 \[
-f(x)=x^2+2ax-a^2.
+f(x)=x^2+2ax-a^2
 \]
-当 \(a\ge0\) 时，顶点 \(x=-a\) 在该分支的定义域内，最小值为 \(-2a^2\)；当 \(a<0\) 时，该分支在 \(x<a\) 上递减，其下确界为在 \(x=a\) 处的函数值 \(2a^2\)，而右侧分支可在 \(x=a/3\) 处取得更小的值 \(2a^2/3\). 因此
+当 \(a>0\) 时，顶点 \(x=-a\) 在该分支的定义域内，最小值为 \(-2a^2\)；当 \(a=0\) 时，左支为 \(x^2\)，而 \(x=0\) 属于右支，故全局最小值为 \(0\)；当 \(a<0\) 时，该分支在 \(x<a\) 上递减，其下确界为在 \(x=a\) 处的函数值 \(2a^2\)，而右侧分支可在 \(x=a/3\) 处取得更小的值 \(2a^2/3\). 因此
 \[
 \min_{x\in\R}f(x)=
 \begin{cases}
@@ -408,11 +578,11 @@ f(x)=x^2+2ax-a^2.
 
 \item 因为 \(x\in(a,+\infty)\)，所以
 \[
-h(x)=3x^2-2ax+a^2.
+h(x)=3x^2-2ax+a^2
 \]
 不等式 \(h(x)\ge1\) 等价于
 \[
-3x^2-2ax+a^2-1\ge0.
+3x^2-2ax+a^2-1\ge0
 \]
 其判别式为 \(12-8a^2\)，根（存在时）分别为 \(r_-=\frac{a-\sqrt{3-2a^2}}{3}\) 和 \(r_+=\frac{a+\sqrt{3-2a^2}}{3}\).
 与定义域 \((a,+\infty)\) 结合，解集为
@@ -437,12 +607,13 @@ h(x)=3x^2-2ax+a^2.
 \end{problem}
 
 \begin{solution}
-由 \(\triangle ABC\cong\triangle BAD\)，得 \(\angle ACB=\angle BDA\)，\(\angle CAB=\angle DBA\).
-因此点 \(A\)，\(B\)，\(C\)，\(D\) 共圆. 在该圆中，同弦 \(CB\) 所对的圆周角相等，所以
+由全等三角形的对应角相等，\(\triangle ABC\cong\triangle BAD\) 给出 \(\angle ACB=\angle BDA\). 这两个角分别是线段 \(AB\) 在点 \(C\)，\(D\) 所对的圆周角，因此点 \(A\)，\(B\)，\(C\)，\(D\) 共圆.
+
+在这个圆中，同弦 \(CB\) 所对的圆周角相等，所以
 \[
-\angle CAB=\angle CDB.
+\angle CAB=\angle CDB
 \]
-于是 \(\angle DBA=\angle CDB\)，这是一对内错角相等，故 \(AB\parallel CD\).
+又由全等三角形的对应角相等，\(\angle CAB=\angle DBA\). 因而 \(\angle DBA=\angle CDB\)，这两角是直线 \(BD\) 被直线 \(AB\)，\(CD\) 所截形成的一对内错角. 根据内错角相等，两直线平行，故 \(AB\parallel CD\).
 \end{solution}
 
 \reuseproblemnumber
@@ -455,7 +626,7 @@ h(x)=3x^2-2ax+a^2.
 \[
 A\begin{bmatrix}p&q\\r&s\end{bmatrix}
 =\begin{bmatrix}3p+2r&3q+2s\\2p+r&2q+s\end{bmatrix}
-=\begin{bmatrix}1&0\\0&1\end{bmatrix},
+=\begin{bmatrix}1&0\\0&1\end{bmatrix}
 \]
 所以
 \[
@@ -468,7 +639,7 @@ A\begin{bmatrix}p&q\\r&s\end{bmatrix}
 \]
 解得 \(p=-1\)，\(q=2\)，\(r=2\)，\(s=-3\). 因此
 \[
-A^{-1}=\begin{bmatrix}-1&2\\2&-3\end{bmatrix}.
+A^{-1}=\begin{bmatrix}-1&2\\2&-3\end{bmatrix}
 \]
 \end{solution}
 
@@ -480,15 +651,15 @@ A^{-1}=\begin{bmatrix}-1&2\\2&-3\end{bmatrix}.
 \begin{solution}
 由参数方程得
 \[
-x^2=\left(\sqrt t-\frac1{\sqrt t}\right)^2=t+\frac1t-2.
+x^2=\left(\sqrt t-\frac1{\sqrt t}\right)^2=t+\frac1t-2
 \]
 所以 \(t+\frac1t=x^2+2\)，代入 \(y=3\left(t+\frac1t\right)\)，得
 \[
-y=3x^2+6,
+y=3x^2+6
 \]
 即曲线 \(C\) 的普通方程为
 \[
-3x^2-y+6=0.
+3x^2-y+6=0
 \]
 又因为 \(t>0\) 时 \(\sqrt t-1/\sqrt t\) 的取值范围为全体实数，所以该方程没有额外的取值限制.
 \end{solution}
@@ -502,15 +673,15 @@ y=3x^2+6,
 \[
 3a^3+2b^3-3a^2b-2ab^2
 =3a^2(a-b)-2b^2(a-b)
-=(a-b)(3a^2-2b^2).
+=(a-b)(3a^2-2b^2)
 \]
 因为 \(a\ge b>0\)，所以 \(a-b\ge0\)，且
 \[
-3a^2-2b^2\ge a^2>0.
+3a^2-2b^2\ge a^2>0
 \]
 故 \((a-b)(3a^2-2b^2)\ge0\)，从而
 \[
-3a^3+2b^3\ge3a^2b+2ab^2.
+3a^3+2b^3\ge3a^2b+2ab^2
 \]
 \end{solution}
 
@@ -532,38 +703,38 @@ y=3x^2+6,
 \begin{enumerate}
 \item 因为抛物线顶点在原点且焦点在 \(x\) 轴上，设其标准方程为 \(y^2=4px\)，则焦点为 \((p,0)\). 将 \(A(2,2)\) 代入得 \(4=8p\)，所以 \(p=\frac12\)，从而抛物线的标准方程为
 \[
-y^2=2x.
+y^2=2x
 \]
 
 \item 由 \(y^2=2x\) 可知焦点为 \(F\left(\frac12,0\right)\). 直线 \(OA\) 的斜率为 \(1\)，所以过 \(F\) 且垂直于 \(OA\) 的直线斜率为 \(-1\)，其方程为
 \[
-y=-\left(x-\frac12\right),
+y=-\left(x-\frac12\right)
 \]
 即 \(2x+2y-1=0\).
 
 \item 先考虑非竖直且非水平直线，设其斜率为 \(k\ne0\)，用参数 \(t\) 表示直线上的点：
 \[
-(x,y)=(m+t,kt).
+(x,y)=(m+t,kt)
 \]
 代入抛物线方程得
 \[
-k^2t^2=2(m+t),
+k^2t^2=2(m+t)
 \]
 即
 \[
-k^2t^2-2t-2m=0.
+k^2t^2-2t-2m=0
 \]
-设对应于 \(D,E\) 的根分别为 \(t_D,t_E\). 由韦达定理，\(t_D+t_E=\frac2{k^2}>0\)，\(t_Dt_E=-\frac{2m}{k^2}<0\).
+设对应于 \(D\)，\(E\) 的根分别为 \(t_D\)，\(t_E\). 由韦达定理，\(t_D+t_E=\frac2{k^2}>0\)，\(t_Dt_E=-\frac{2m}{k^2}<0\).
 所以两根异号. 由 \(ME=2DM\)，设 \(|t_D|=r\)，\(|t_E|=2r\)，其中 \(r>0\). 结合两根之和为正，必有 \(t_D=-r\)，\(t_E=2r\). 于是 \(r=\frac2{k^2}\)，\(-2r^2=-\frac{2m}{k^2}\).
 由第一式得 \(k^2=2/r\)，代入第二式得 \(r=m/2\)，从而 \(k^2=4/m\). 因此
 \[
 DE=|t_E-t_D|\sqrt{1+k^2}
 =3\frac m2\sqrt{1+\frac4m}
-=\frac32\sqrt{m(m+4)}.
+=\frac32\sqrt{m(m+4)}
 \]
 水平直线 \(y=0\) 与抛物线只有一个交点，不符合题设；竖直直线 \(x=m\) 与抛物线的两个交点关于 \(M\) 对称，满足 \(ME=DM\)，也不满足题设比例，因此不产生其他情形. 故
 \[
-f(m)=\frac32\sqrt{m(m+4)}.
+f(m)=\frac32\sqrt{m(m+4)}
 \]
 \end{enumerate}
 \end{solution}
@@ -581,31 +752,31 @@ f(m)=\frac32\sqrt{m(m+4)}.
 \begin{enumerate}
 \item 方程 \(x^2+2ax+b=0\) 有实数根的充要条件是判别式
 \[
-\Delta=(2a)^2-4b=4(a^2-b)\ge0,
+\Delta=(2a)^2-4b=4(a^2-b)\ge0
 \]
-即 \(b\le a^2\). 计算 \(T_{n^2}\) 时，令 \(a=i\)，\(b=j\)，其中 \(i,j\in\{1,2,\ldots,n^2\}\). 当 \(1\le i\le n\) 时，可取的 \(j\) 有 \(i^2\) 个；当 \(n+1\le i\le n^2\) 时，\(i^2\ge n^2\)，所有 \(n^2\) 个 \(j\) 均可取. 所以
+即 \(b\le a^2\). 计算 \(T_{n^2}\) 时，令 \(a=i\)，\(b=j\)，其中 \(i\)，\(j\in\{1,2,\ldots,n^2\}\). 当 \(1\le i\le n\) 时，可取的 \(j\) 有 \(i^2\) 个；当 \(n+1\le i\le n^2\) 时，\(i^2\ge n^2\)，所有 \(n^2\) 个 \(j\) 均可取. 所以
 \[
 T_{n^2}
 =\sum_{i=1}^{n}i^2+(n^2-n)n^2
 =\frac{n(n+1)(2n+1)}6+n^4-n^3
-=\frac{n(6n^3-4n^2+3n+1)}6.
+=\frac{n(6n^3-4n^2+3n+1)}6
 \]
 因此
 \[
 P_{n^2}=\frac{T_{n^2}}{n^4}
-=1-\frac{(n-1)(4n+1)}{6n^3}.
+=1-\frac{(n-1)(4n+1)}{6n^3}
 \]
 
-\item 在 \(a,b\in\{1,2,\ldots,n\}\) 时，不满足有实数根的数组必须满足 \(b>a^2\)，这要求 \(a^2<n\)，即 \(a<\sqrt n\). 这样的正整数 \(a\) 少于 \(\sqrt n\) 个，而每个 \(a\) 对应的不合格 \(b\) 数量小于 \(n\). 因此不合格数组总数严格小于 \(n\sqrt n\). 于是
+\item 在 \(a\)，\(b\in\{1,2,\ldots,n\}\) 时，不满足有实数根的数组必须满足 \(b>a^2\)，这要求 \(a^2<n\)，即 \(a<\sqrt n\). 这样的正整数 \(a\) 少于 \(\sqrt n\) 个，而每个 \(a\) 对应的不合格 \(b\) 数量小于 \(n\). 因此不合格数组总数严格小于 \(n\sqrt n\). 于是
 \[
 1-P_n
 =\frac{\text{不合格数组数}}{n^2}
 <\frac{n\sqrt n}{n^2}
-=\frac1{\sqrt n},
+=\frac1{\sqrt n}
 \]
 从而
 \[
-P_n>1-\frac1{\sqrt n}.
+P_n>1-\frac1{\sqrt n}
 \]
 \end{enumerate}
 \end{solution}

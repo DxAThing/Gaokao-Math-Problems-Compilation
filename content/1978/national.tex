@@ -4,93 +4,279 @@
 
 \begin{problem}
 \begin{enumerate}
-\item 分解因式： \(x^{2} - 4xy + 4y^{2} - 4z^{2}\).
+\item 分解因式：\(x^{2}-4xy+4y^{2}-4z^{2}\).
 \item 已知正方形的边长为 \(a\)，求侧面积等于这个正方形的面积，高等于这个正方形边长的直圆柱体的体积.
-\item 求函数 \(y = \sqrt{\lg(2 + x)}\) 的定义域.
+\item 求函数 \(y=\sqrt{\lg(2+x)}\) 的定义域.
 \item 不查表求 \(\cos80^{\circ}\cos35^{\circ}+\cos10^{\circ}\cos55^{\circ}\) 的值.
-\item 化简： \(\left(\frac{1}{4}\right)^{-\frac{1}{2}} \cdot \frac{\left(\sqrt{4ab^{-1}}\right)^{3}}{(0.1)^{-2}\left(a^{3}b^{-4}\right)^{\frac{1}{2}}}\).
+\item 化简：\(\left(\dfrac{1}{4}\right)^{-\frac{1}{2}}\cdot\dfrac{\left(\sqrt{4ab^{-1}}\right)^{3}}{(0.1)^{-2}\left(a^{3}b^{-4}\right)^{\frac{1}{2}}}\).
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item \((x-2y-2z)(x-2y+2z)\).
-\item \(\dfrac{a^{3}}{4\pi}\).
-\item \(x\geqslant-1\).
-\item \(\dfrac{\sqrt{2}}{2}\).
-\item \(\dfrac{4}{25}b^{\frac{1}{2}}\).
+\item 先把前面三项配成平方，再利用平方差公式，得
+\[
+x^{2}-4xy+4y^{2}-4z^{2}=(x-2y)^{2}-(2z)^{2}=(x-2y-2z)(x-2y+2z)
+\]
+所以分解结果为 \((x-2y-2z)(x-2y+2z)\).
+
+\item 设直圆柱的底面半径为 \(r\)，高为 \(h\). 由题意 \(h=a\)，且圆柱的侧面积等于正方形面积，因此 \(2\pi rh=a^{2}\). 代入 \(h=a\)，得 \(r=\dfrac{a}{2\pi}\). 所以圆柱体积为
+\[
+V=\pi r^{2}h=\pi\left(\frac{a}{2\pi}\right)^{2}a=\frac{a^{3}}{4\pi}
+\]
+故所求体积为 \(\dfrac{a^{3}}{4\pi}\).
+
+\item 要使对数有意义，必须有 \(2+x>0\)；要使平方根有意义，还必须有 \(\lg(2+x)\geqslant0\). 由于常用对数的底数 \(10>1\)，不等式 \(\lg(2+x)\geqslant0\) 等价于 \(2+x\geqslant1\)，即 \(x\geqslant-1\). 这个条件已经蕴含 \(2+x>0\)，所以函数的定义域为 \(\left[-1,+\infty\right)\).
+
+\item 利用余函数关系 \(\cos80^{\circ}=\sin10^{\circ}\) 和 \(\cos55^{\circ}=\sin35^{\circ}\)，原式为
+\[
+\sin10^{\circ}\cos35^{\circ}+\cos10^{\circ}\sin35^{\circ}=\sin45^{\circ}=\frac{\sqrt{2}}{2}
+\]
+故所求值为 \(\dfrac{\sqrt{2}}{2}\).
+
+\item 原式有意义时，分母中的根式不能为零，且根式内的量必须非负；结合其中出现的负整数次幂，可知这里应有 \(a>0\)，\(b>0\). 在此条件下，
+\(\left(\frac{1}{4}\right)^{-\frac{1}{2}}=2\)，\(\left(\sqrt{4ab^{-1}}\right)^{3}=\left(2a^{\frac{1}{2}}b^{-\frac{1}{2}}\right)^{3}=8a^{\frac{3}{2}}b^{-\frac{3}{2}}\)
+并且
+\((0.1)^{-2}=100\)，\(\left(a^{3}b^{-4}\right)^{\frac{1}{2}}=a^{\frac{3}{2}}b^{-2}\).
+因此原式等于
+\[
+2\cdot\frac{8a^{\frac{3}{2}}b^{-\frac{3}{2}}}{100a^{\frac{3}{2}}b^{-2}}
+=\frac{16}{100}b^{\frac{1}{2}}
+=\frac{4}{25}\sqrt{b}
+\]
+故化简结果为 \(\dfrac{4}{25}\sqrt{b}\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-已知方程 \(kx^{2} + y^{2} = 4\)，其中 \(k\) 为实数. 对于不同范围的 \(k\) 值，分别指出方程所代表图形的类型，并画出显示其数量特征的草图.
+已知方程 \(kx^{2}+y^{2}=4\)，其中 \(k\) 为实数. 对于不同范围的 \(k\) 值，分别指出方程所代表图形的类型，并画出显示其数量特征的草图.
 \end{problem}
 
 \begin{solution}
-\begin{enumerate}
-\item 当 \(k>1\) 时，是以原点为中心、长轴在 \(y\) 轴上的椭圆，半长轴为 \(2\)，半短轴为 \(\dfrac{2}{\sqrt{k}}\)；当 \(k=1\) 时，是半径为 \(2\) 的圆；当 \(0<k<1\) 时，是以原点为中心、长轴在 \(x\) 轴上的椭圆，半长轴为 \(\dfrac{2}{\sqrt{k}}\)，半短轴为 \(2\).
-\item 当 \(k=0\) 时，是两条平行于 \(x\) 轴的直线 \(y=2\) 和 \(y=-2\).
-\item 当 \(k<0\) 时，是以原点为中心、实轴在 \(y\) 轴上的双曲线，方程可写为 \(\dfrac{y^{2}}{4}-\dfrac{x^{2}}{4/\lvert k\rvert}=1\).
-\end{enumerate}
+当 \(k>0\) 时，方程可写为
+\[
+\frac{x^{2}}{4/k}+\frac{y^{2}}{4}=1
+\]
+因此图形都是以原点为中心的椭圆或圆.
+
+当 \(k>1\) 时，\(4/k<4\)，所以长轴在 \(y\) 轴上，半长轴为 \(2\)，半短轴为 \(\dfrac{2}{\sqrt{k}}\). 草图应经过 \((0,2)\)、\((0,-2)\)、\(\left(\dfrac{2}{\sqrt{k}},0\right)\) 和 \(\left(-\dfrac{2}{\sqrt{k}},0\right)\)，并关于两坐标轴对称.
+
+当 \(k=1\) 时，方程为 \(x^{2}+y^{2}=4\)，图形是以原点为圆心、半径为 \(2\) 的圆.
+
+当 \(0<k<1\) 时，\(4/k>4\)，所以长轴在 \(x\) 轴上，半长轴为 \(\dfrac{2}{\sqrt{k}}\)，半短轴为 \(2\). 草图应经过 \(\left(\dfrac{2}{\sqrt{k}},0\right)\)、\(\left(-\dfrac{2}{\sqrt{k}},0\right)\)、\((0,2)\) 和 \((0,-2)\)，并关于两坐标轴对称.
+
+当 \(k=0\) 时，方程退化为 \(y^{2}=4\)，即 \(y=2\) 或 \(y=-2\)，图形是两条平行于 \(x\) 轴的直线.
+
+当 \(k<0\) 时，令 \(\lvert k\rvert=-k\)，方程化为
+\[
+\frac{y^{2}}{4}-\frac{x^{2}}{4/\lvert k\rvert}=1
+\]
+图形是以原点为中心、实轴在 \(y\) 轴上的双曲线，顶点为 \((0,2)\) 和 \((0,-2)\)，渐近线为 \(y=\pm\sqrt{\lvert k\rvert}\,x\). 草图应画出关于两坐标轴对称、向上和向下张开的两支双曲线.
 \end{solution}
 
 \begin{problem}
-如图，\(AB\) 是半圆的直径，\(C\) 是半圆上一点，直线 \(MN\) 切半圆于 \(C\) 点，\(AM \perp MN\) 于 \(M\) 点，\(BN \perp MN\) 于 \(N\) 点，\(CD \perp AB\) 于 \(D\) 点，求证：
+如图，\(AB\) 是半圆的直径，\(C\) 是半圆上一点，直线 \(MN\) 切半圆于 \(C\) 点，\(AM\perp MN\) 于 \(M\) 点，\(BN\perp MN\) 于 \(N\) 点，\(CD\perp AB\) 于 \(D\) 点，求证：
 
 \begin{enumerate}
-\item \(CD = CM = CN\)；
-\item \(CD^{2} = AM\cdot BN\).
+\item \(CD=CM=CN\)；
+\item \(CD^{2}=AM\cdot BN\).
 \end{enumerate}
 
 \bitmapfigure[width=5.6cm]{img/1978/national/q3_fig1.png}
 \end{problem}
 
 \begin{solution}
-结论为 \(CD=CM=CN\)，且 \(CD^{2}=AM\cdot BN\).
+连接 \(CA\)、\(CB\). 因为 \(AB\) 是半圆的直径，所以 \(\angle ACB=90^{\circ}\).
+
+在直角三角形 \(ABC\) 中，\(\angle ABC+\angle BAC=90^{\circ}\). 又因为 \(CD\perp AB\)，所以 \(\angle ACD=90^{\circ}-\angle BAC=\angle ABC\). 由弦切角定理，弦 \(CA\) 与切线 \(CM\) 所夹的角等于同弧所对的圆周角，因此 \(\angle ACM=\angle ABC=\angle ACD\). 另外，\(AM\perp CM\)，\(AD\perp CD\)，所以 \(\angle AMC=\angle ADC=90^{\circ}\). 两个直角三角形 \(\triangle ACM\) 与 \(\triangle ADC\) 有一条公共斜边 \(AC\)，且有一组锐角相等，故全等，从而
+\(CM=CD\)，\(AM=AD\).
+
+同理，由弦切角定理得 \(\angle BCN=\angle BAC\)，而 \(\angle BCD=90^{\circ}-\angle ABC=\angle BAC\). 结合 \(BN\perp CN\)、\(BD\perp CD\)，可得直角三角形 \(\triangle BCN\) 与 \(\triangle BCD\) 全等，因此
+\(CN=CD\)，\(BN=BD\).
+于是 \(CD=CM=CN\)，第（1）问得证.
+
+在直角三角形 \(ABC\) 中，直角顶点向斜边作高，由射影定理得
+\[
+CD^{2}=AD\cdot DB
+\]
+再由上面的全等关系 \(AM=AD\)、\(BN=BD\)，代入可得
+\[
+CD^{2}=AM\cdot BN
+\]
+第（2）问得证.
 \end{solution}
 
 \begin{problem}
-已知 \(\log_{18}9 = a\)，\(18^{b} = 5\)，求 \(\log_{36}45\).
+已知 \(\log_{18}9=a\)，\(18^{b}=5\)，求 \(\log_{36}45\).
 \end{problem}
 
 \begin{solution}
-\(\log_{36}45=\dfrac{a+b}{2-a}\).
+由 \(\log_{18}9=a\) 和 \(18^{b}=5\)，得
+\(9=18^{a}\)，\(5=18^{b}\)，\(45=9\times5=18^{a+b}\).
+还因为 \(36=2\times18=4\times9\)，所以
+\[
+1+\log_{18}2=\log_{18}36=2\log_{18}2+\log_{18}9=2\log_{18}2+a
+\]
+从而 \(\log_{18}2=1-a\)，于是
+\[
+\log_{18}36=1+\log_{18}2=2-a
+\]
+令 \(x=\log_{36}45\)，则
+\[
+x=\frac{\log_{18}45}{\log_{18}36}=\frac{a+b}{2-a}
+\]
+因此 \(\log_{36}45=\dfrac{a+b}{2-a}\).
 \end{solution}
 
 \section{选做题}
 
 \begin{problem}
-已知 \(\triangle ABC\) 的三个内角的大小成等差数列，\(\tan A \tan C = 2 + \sqrt{3}\)，求角 \(A\)，\(B\)，\(C\) 的大小. 又已知顶点 \(C\) 的对边 \(c\) 上的高等于 \(4\sqrt{3}\)，求三角形各边 \(a\)，\(b\)，\(c\) 的长. （提示：必要时可验证 \((1 + \sqrt{3})^2 = 4 + 2\sqrt{3}\)）
+已知 \(\triangle ABC\) 的三个内角的大小成等差数列，\(\tan A\tan C=2+\sqrt{3}\)，求角 \(A\)，\(B\)，\(C\) 的大小. 又已知顶点 \(C\) 的对边 \(c\) 上的高等于 \(4\sqrt{3}\)，求三角形各边 \(a\)，\(b\)，\(c\) 的长. （提示：必要时可验证 \((1+\sqrt{3})^{2}=4+2\sqrt{3}\)）
 \end{problem}
 
 \begin{solution}
-若约定 \(A<C\)，则 \(A=45^{\circ}\)，\(B=60^{\circ}\)，\(C=75^{\circ}\)；\(a=8\)，\(b=4\sqrt{6}\)，\(c=4\sqrt{3}+4\). 原题未规定 \(A<C\)，若不作此约定，则 \(A\)、\(C\) 以及 \(a\)、\(c\) 可同时互换.
+由三个内角成等差数列，有 \(A+C=2B\). 又 \(A+B+C=180^{\circ}\)，所以 \(3B=180^{\circ}\)，即
+\(B=60^{\circ}\)，\(A+C=120^{\circ}\).
+由于 \(\tan A\tan C=2+\sqrt{3}>0\)，而 \(A+C=120^{\circ}\)，不可能有一个角为钝角，否则两个正切的乘积为负；因此 \(A\)，\(C\) 都是锐角. 令 \(u=\tan A\)，\(v=\tan C\). 由正切加法公式，
+\[
+\frac{u+v}{1-uv}=\tan120^{\circ}=-\sqrt{3}
+\]
+代入 \(uv=2+\sqrt{3}\)，得
+\[
+u+v=(1-uv)(-\sqrt{3})=(1-2-\sqrt{3})(-\sqrt{3})=3+\sqrt{3}
+\]
+所以 \(u\)、\(v\) 是方程
+\[
+t^{2}-(3+\sqrt{3})t+2+\sqrt{3}=0
+\]
+的两个根. 因为
+\[
+t^{2}-(3+\sqrt{3})t+2+\sqrt{3}=(t-1)(t-2-\sqrt{3})
+\]
+所以
+\[
+\{\tan A,\tan C\}=\{1,2+\sqrt{3}\}
+\]
+在锐角范围内，\(\tan45^{\circ}=1\)，\(\tan75^{\circ}=2+\sqrt{3}\)，故角的两种可能排列为
+\[
+(A,B,C)=(45^{\circ},60^{\circ},75^{\circ})
+\quad\text{或}\quad
+(A,B,C)=(75^{\circ},60^{\circ},45^{\circ})
+\]
+
+设从 \(C\) 向边 \(AB=c\) 作高，垂足为 \(D\)，则 \(CD=4\sqrt{3}\). 在两个直角三角形中，\(CD=a\sin B=b\sin A\)，并且 \(c=b\cos A+a\cos B\).
+
+若 \(A=45^{\circ}\)，\(C=75^{\circ}\)，则
+\(a=\frac{4\sqrt{3}}{\sin60^{\circ}}=8\)，\(b=\frac{4\sqrt{3}}{\sin45^{\circ}}=4\sqrt{6}\)
+以及
+\[
+c=b\cos45^{\circ}+a\cos60^{\circ}=4\sqrt{3}+4
+\]
+因此这一情形下 \((a,b,c)=(8,4\sqrt{6},4\sqrt{3}+4)\).
+
+若 \(A=75^{\circ}\)，\(C=45^{\circ}\)，则
+\(a=\frac{4\sqrt{3}}{\sin60^{\circ}}=8\)，\(b=\frac{4\sqrt{3}}{\sin75^{\circ}}=4\sqrt{3}\left(\sqrt{6}-\sqrt{2}\right)\)
+其中用了 \(\sin75^{\circ}=\dfrac{\sqrt{6}+\sqrt{2}}{4}\). 再由投影关系，
+\[
+c=b\cos75^{\circ}+a\cos60^{\circ}=8\sqrt{3}-8
+\]
+因此这一情形下 \((a,b,c)=\left(8,4\sqrt{3}\left(\sqrt{6}-\sqrt{2}\right),8\sqrt{3}-8\right)\).
+
+原题没有规定 \(A<C\)，所以两种角度排列和相应的两组边长都必须保留；第二组边长不能简单地把第一组的 \(a\)、\(c\) 对调，因为已知高固定为从 \(C\) 到边 \(c\) 的高.
 \end{solution}
 
 \begin{problem}
-已知 \(\alpha\)，\(\beta\) 为锐角，\(3\sin^2\alpha + 2\sin^2\beta = 1\)，\(3\sin 2\alpha - 2\sin 2\beta = 0\). 求证： \(\alpha + 2\beta = \frac{\pi}{2}\).
+已知 \(\alpha\)，\(\beta\) 为锐角，\(3\sin^{2}\alpha+2\sin^{2}\beta=1\)，\(3\sin2\alpha-2\sin2\beta=0\). 求证：\(\alpha+2\beta=\dfrac{\pi}{2}\).
 \end{problem}
 
 \begin{solution}
-结论为 \(\alpha+2\beta=\dfrac{\pi}{2}\).
+因为 \(\alpha\)、\(\beta\) 为锐角，故它们的正弦、余弦均为正. 令 \(u=\sin^{2}\alpha\)，\(v=\sin^{2}\beta\)，则第一式给出
+\[
+3u+2v=1
+\]
+第二式等价于 \(3\sin\alpha\cos\alpha=2\sin\beta\cos\beta\). 两边平方，得到
+\[
+9u(1-u)=4v(1-v)
+\]
+由 \(v=\dfrac{1-3u}{2}\)，有
+\[
+4v(1-v)=4\cdot\frac{1-3u}{2}\cdot\frac{1+3u}{2}=1-9u^{2}
+\]
+因此
+\(9u-9u^{2}=1-9u^{2}\)，\(u=\frac{1}{9}\).
+于是 \(v=\dfrac{1-3u}{2}=\dfrac{1}{3}\). 由锐角条件，
+\(\sin\alpha=\frac{1}{3}\)，\(\cos\alpha=\frac{2\sqrt{2}}{3}\)，\(\sin\beta=\frac{\sqrt{3}}{3}\)，\(\cos\beta=\frac{\sqrt{6}}{3}\).
+由于两边均为正，平方没有引入符号相反的情形；直接代入可得
+\(3\sin\alpha\cos\alpha=\dfrac{2\sqrt{2}}{3}=2\sin\beta\cos\beta\)，所以原来的第二个条件也得到满足.
+从而
+\(\cos2\beta=1-2\sin^{2}\beta=\frac{1}{3}\)，\(\sin2\beta=2\sin\beta\cos\beta=\frac{2\sqrt{2}}{3}\).
+所以
+\[
+\sin(\alpha+2\beta)=\sin\alpha\cos2\beta+\cos\alpha\sin2\beta
+=\frac{1}{3}\cdot\frac{1}{3}+\frac{2\sqrt{2}}{3}\cdot\frac{2\sqrt{2}}{3}=1
+\]
+又因为 \(0<\alpha<\dfrac{\pi}{2}\)、\(0<\beta<\dfrac{\pi}{2}\)，所以 \(0<\alpha+2\beta<\dfrac{3\pi}{2}\). 在这个范围内正弦值等于 \(1\) 只能发生在 \(\dfrac{\pi}{2}\)，故
+\[
+\alpha+2\beta=\frac{\pi}{2}
+\]
 \end{solution}
 
 \section{解答题}
 
 \begin{problem}
-已知函数 \(y = x^{2} + (2m + 1)x + m^{2} - 1\)（\(m\) 为实数）.
+已知函数 \(y=x^{2}+(2m+1)x+m^{2}-1\)（\(m\) 为实数）.
 
 \begin{enumerate}
-\item \(m\) 是什么数值时，\(y\) 的极值是 0？
+\item \(m\) 是什么数值时，\(y\) 的极值是 \(0\)？
 \item 求证：不论 \(m\) 是什么数值，函数图象（即抛物线）的顶点都在同一条直线 \(L_{1}\) 上，画出 \(m=-1\)，\(m=0\)，\(m=1\) 时抛物线的草图，来检验这个结论；
-\item 平行于 \(L_{1}\) 的直线中，哪些与抛物线相交，哪些不相交？ 求证：任一条平行于 \(L_{1}\) 而与抛物线相交的直线，被各抛物线截出的线段都相等.
+\item 平行于 \(L_{1}\) 的直线中，哪些与抛物线相交，哪些不相交？求证：任一条平行于 \(L_{1}\) 而与抛物线相交的直线，被各抛物线截出的线段都相等.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item \(m=-\dfrac{5}{4}\).
-\item 各抛物线的顶点都在直线 \(L_{1}\) 上，且直线 \(L_{1}\) 的方程为 \(x-y=\dfrac{3}{4}\).
-\item 设直线为 \(x-y=a\). 当 \(a\leqslant1\) 时相交，当 \(a>1\) 时不相交；相交时，被抛物线截出的线段长为 \(2\sqrt{2(1-a)}\)，与 \(m\) 无关.
+\item 配方得
+\[
+y=\left(x+m+\frac{1}{2}\right)^{2}-m-\frac{5}{4}
+\]
+因为二次项系数为正，函数的极小值为 \(-m-\dfrac{5}{4}\). 要使极值为 \(0\)，必须有
+\[
+-m-\frac{5}{4}=0
+\]
+所以 \(m=-\dfrac{5}{4}\).
+
+\item 由配方后的式子，抛物线顶点的横、纵坐标分别为
+\(x_{0}=-m-\frac{1}{2}\)，\(y_{0}=-m-\frac{5}{4}\).
+两式相减，得到
+\[
+x_{0}-y_{0}=\frac{3}{4}
+\]
+因此不论 \(m\) 取何值，顶点都在直线
+\[
+L_{1}:x-y=\frac{3}{4}
+\]
+上.
+
+当 \(m=-1\) 时，函数为 \(y=x^{2}-x=x(x-1)\)，顶点为 \(\left(\dfrac{1}{2},-\dfrac{1}{4}\right)\)，与 \(x\) 轴交于 \((0,0)\)、\((1,0)\). 当 \(m=0\) 时，函数为 \(y=x^{2}+x-1\)，顶点为 \(\left(-\dfrac{1}{2},-\dfrac{5}{4}\right)\)，与 \(x\) 轴交于 \(\left(\dfrac{-1-\sqrt{5}}{2},0\right)\)、\(\left(\dfrac{-1+\sqrt{5}}{2},0\right)\). 当 \(m=1\) 时，函数为 \(y=x^{2}+3x=x(x+3)\)，顶点为 \(\left(-\dfrac{3}{2},-\dfrac{9}{4}\right)\)，与 \(x\) 轴交于 \((-3,0)\)、\((0,0)\). 三条抛物线均开口向上，按上述顶点和交点描点，并分别关于相应的对称轴作对称，即可画出检验结论所需的草图.
+
+\item 直线 \(L_{1}\) 的斜率为 \(1\)，所以任意平行于它的直线可写为
+\[
+x-y=a
+\]
+其中 \(a\) 为实数，即 \(y=x-a\). 把它代入抛物线方程，得
+\[
+x-a=x^{2}+(2m+1)x+m^{2}-1
+\]
+整理为
+\[
+(x+m)^{2}=1-a
+\]
+当 \(a>1\) 时，右端为负，方程没有实数解，直线与任意一条抛物线都不相交. 当 \(a=1\) 时只有一个交点，直线与每条抛物线相切. 当 \(a<1\) 时有两个交点，直线与每条抛物线相交.
+
+当 \(a<1\) 时，令 \(s=\sqrt{1-a}>0\)，两交点的横坐标为 \(x_{1}=-m-s\)、\(x_{2}=-m+s\). 因为直线为 \(y=x-a\)，两交点的纵坐标之差也为 \(2s\)，所以截得的线段长度为
+\[
+\sqrt{(2s)^{2}+(2s)^{2}}=2\sqrt{2}\,s=2\sqrt{2(1-a)}
+\]
+这个长度与 \(m\) 无关，因此任一条与抛物线相交的平行线从各条抛物线截出的线段都相等；在相切的边界情形 \(a=1\) 时，相应退化线段长度为 \(0\).
 \end{enumerate}
 \end{solution}

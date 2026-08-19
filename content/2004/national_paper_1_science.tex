@@ -14,6 +14,10 @@
 D
 \end{answer}
 
+\begin{solution}
+\((1-\i)^2=1-2\i+\i^2=-2\i\)，所以 \((1-\i)^2\cdot\i=(-2\i)\cdot\i=2\). 因此选 D.
+\end{solution}
+
 \begin{problem}
 已知函数 \(f(x)=\lg \frac{1 - x}{1 + x}\)，若 \(f(a)=b\)，则 \(f(-a)=\)（\quad）
 
@@ -27,6 +31,14 @@ D
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+由 \(f(a)=b\) 可知 \(-1<a<1\). 于是
+\[
+f(-a)=\lg\frac{1+a}{1-a}=\lg\frac{1}{\frac{1-a}{1+a}}=-\lg\frac{1-a}{1+a}=-f(a)=-b
+\]
+因此选 B.
+\end{solution}
 
 \begin{problem}
 已知 \(\bs{a}\)，\(\bs{b}\) 均为单位向量，它们的夹角为 \(60^{\circ}\)，那么 \(|\bs{a} + 3\bs{b}| =\)（\quad）
@@ -42,6 +54,14 @@ B
 C
 \end{answer}
 
+\begin{solution}
+因为 \(\bs{a}\)，\(\bs{b}\) 都是单位向量，且夹角为 \(60^{\circ}\)，所以 \(\bs{a}\cdot\bs{b}=\cos60^{\circ}=\frac12\). 因而
+\[
+\lvert\bs{a}+3\bs{b}\rvert^2=\lvert\bs{a}\rvert^2+6\bs{a}\cdot\bs{b}+9\lvert\bs{b}\rvert^2=1+6\cdot\frac12+9=13
+\]
+由于模长非负，\(\lvert\bs{a}+3\bs{b}\rvert=\sqrt{13}\)，故选 C.
+\end{solution}
+
 \begin{problem}
 函数 \(y = \sqrt{x - 1} + 1\)（\(x \geqslant 1\)）的反函数是（\quad）
 
@@ -55,6 +75,12 @@ C
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+令原函数中的 \(x\)，\(y\) 互换，得 \(x=\sqrt{y-1}+1\). 反函数的自变量必须满足 \(x\geqslant1\)，于是 \(\sqrt{y-1}=x-1\)，从而
+\(y-1=(x-1)^2\)，\(y=x^2-2x+2\)，\(x\geqslant1\).
+因此选 B.
+\end{solution}
 
 \begin{problem}
 \(\left(2x^{3} - \frac{1}{\sqrt{x}}\right)^7\) 的展开式中常数项是（\quad）
@@ -70,6 +96,12 @@ B
 A
 \end{answer}
 
+\begin{solution}
+展开式的第 \(k+1\) 项为
+\(\mathrm C_7^k(2x^3)^{7-k}\left(-x^{-\frac12}\right)^k=\mathrm C_7^k2^{7-k}(-1)^kx^{21-\frac72k}\)，\(k=0\)，\(1\)，\(\ldots\)，\(7\).
+要取常数项，必须有 \(21-\frac72k=0\)，解得 \(k=6\). 此时常数项为 \(\mathrm C_7^6 2(-1)^6=14\)，故选 A.
+\end{solution}
+
 \begin{problem}
 设 \(A\)，\(B\)，\(I\) 均为非空集合，且满足 \(A \subseteq B \subseteq I\)，则下列各式中错误的是（\quad）
 
@@ -83,6 +115,18 @@ A
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+因为 \(A\subseteq B\subseteq I\)，所以 \((\complement_I A)\cup B=I\)，且 \(A\cap(\complement_I B)=\varnothing\). 另外
+\[
+(\complement_I A)\cap(\complement_I B)=\complement_I(A\cup B)=\complement_I B
+\]
+另一方面，\(A\cap B=A\)，所以
+\[
+(\complement_I A)\cup(\complement_I B)=\complement_I(A\cap B)=\complement_I A
+\]
+它不一定等于 \(I\). 例如取 \(A=B=I\) 时左式为空集，故错误的是 B.
+\end{solution}
 
 \begin{problem}
 椭圆 \(\frac{x^2}{4} + y^2 = 1\) 的两个焦点为 \(F_1\)，\(F_2\)，过 \(F_1\) 作垂直于 \(x\) 轴的直线与椭圆相交，一个交点为 \(P\)，则 \(|\overrightarrow{PF_2}| =\)（\quad）
@@ -98,6 +142,16 @@ B
 C
 \end{answer}
 
+\begin{solution}
+椭圆的长半轴为 \(2\)，短半轴为 \(1\)，所以焦半距满足 \(c^2=2^2-1^2=3\)，即 \(c=\sqrt3\). 取 \(F_1=(-\sqrt3,0)\)，过它的垂线为 \(x=-\sqrt3\). 代入椭圆方程得
+\(\frac34+y^2=1\)，\(y=\pm\frac12\).
+以 \(P=(-\sqrt3,\frac12)\) 为例，\(F_2=(\sqrt3,0)\)，于是
+\[
+\lvert\overrightarrow{PF_2}\rvert=\sqrt{(2\sqrt3)^2+\left(-\frac12\right)^2}=\sqrt{12+\frac14}=\frac72
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
 设抛物线 \( y^{2} = 8x \) 的准线与 \( x \) 轴交于点 \(Q\)，若过点 \(Q\) 的直线 \( l \) 与抛物线有公共点，则直线 \( l \) 的斜率的取值范围是（\quad）
 
@@ -111,6 +165,18 @@ C
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+将抛物线写成 \(y^2=4ax\) 的形式，得 \(a=2\)，所以准线为 \(x=-2\)，即 \(Q=(-2,0)\). 直线 \(l\) 若不是竖直线，可写为 \(y=k(x+2)\). 竖直线 \(x=-2\) 代入抛物线方程得 \(y^2=-16\)，没有实交点，因此不遗漏任何可行情形. 当 \(k=0\) 时，直线 \(y=0\) 与抛物线在顶点 \((0,0)\) 相交. 当 \(k\ne0\) 时，代入 \(y^2=8x\)，得
+\[
+k^2(x+2)^2=8x
+\]
+即 \(k^2x^2+(4k^2-8)x+4k^2=0\). 此时有公共点的充要条件是这个二次方程有实根，因此
+\[
+\Delta=(4k^2-8)^2-16k^4=64(1-k^2)\geqslant0
+\]
+所以当 \(k\ne0\) 时有 \(-1\leqslant k\leqslant1\)；结合 \(k=0\) 时确实有交点，得到 \(-1\leqslant k\leqslant1\)，故选 C.
+\end{solution}
 
 \begin{problem}
 为了得到函数 \( y = \sin \left(2x - \frac{\pi}{6}\right) \) 的图象，可以将函数 \( y = \cos 2x \) 的图象（\quad）
@@ -126,6 +192,14 @@ C
 B
 \end{answer}
 
+\begin{solution}
+利用 \(\sin t=\cos\left(\frac\pi2-t\right)\)，有
+\[
+\sin\left(2x-\frac\pi6\right)=\cos\left(\frac\pi2-2x+\frac\pi6\right)=\cos\left(2x-\frac{2\pi}3\right)=\cos2\left(x-\frac\pi3\right)
+\]
+因此由 \(y=\cos2x\) 的图象向右平移 \(\frac\pi3\) 个单位长度即可得到所求图象，故选 B.
+\end{solution}
+
 \begin{problem}
 已知正四面体 \(ABCD\) 的表面积为 \(S\)，其四个面的中心分别为 \(E\)，\(F\)，\(G\)，\(H\). 设四面体 \(EFGH\) 的表面积为 \(T\)，则 \(\frac{T}{S}\) 等于（\quad）
 
@@ -139,6 +213,14 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+设正四面体 \(ABCD\) 的棱长为 \(s\). 例如设 \(E\)，\(F\) 分别为面 \(BCD\)，\(ACD\) 的中心，则按三角形重心公式，\(\overrightarrow{EF}=\frac13\overrightarrow{BA}\)，所以 \(EF=\frac{s}{3}\). 任取两个不同的面，它们恰好有两个公共顶点，另两个顶点分别来自一条棱的两个端点；因此两个面中心的连线向量总是某条棱向量的 \(\frac13\) 或 \(-\frac13\)，六条边的长度均为 \(\frac{s}{3}\). 故 \(EFGH\) 是棱长为 \(\frac{s}{3}\) 的正四面体. 表面积与棱长的平方成正比，因此
+\[
+\frac{T}{S}=\left(\frac{s/3}{s}\right)^2=\frac19
+\]
+故选 A.
+\end{solution}
 
 \begin{problem}
 从数字 \(1\)，\(2\)，\(3\)，\(4\)，\(5\) 中，随机抽取 \(3\) 个数字（允许重复）组成一个三位数，其各位数字之和等于 \(9\) 的概率为（\quad）
@@ -154,6 +236,12 @@ A
 D
 \end{answer}
 
+\begin{solution}
+设抽到的三个数字为 \(x_1\)，\(x_2\)，\(x_3\)，则每个有序三元组等可能，共有 \(5^3=125\) 个. 令 \(u_i=x_i-1\)，则 \(0\leqslant u_i\leqslant4\)，且 \(x_1+x_2+x_3=9\) 等价于 \(u_1+u_2+u_3=6\).
+
+不考虑上界时，非负整数解有 \(\mathrm C_8^2=28\) 个. 若某个 \(u_i\geqslant5\)，令该变量减去 \(5\)，剩余和为 \(1\)，对应有 \(\mathrm C_3^2=3\) 个解；这样的变量有三个，且不可能同时有两个变量不小于 \(5\). 所以符合条件的有序三元组数为 \(28-3\times3=19\)，概率为 \(\frac{19}{125}\)，故选 D.
+\end{solution}
+
 \begin{problem}
 \(a^2 + b^2 = 1\)，\(b^2 + c^2 = 2\)，\(c^2 + a^2 = 2\)，\(ab + bc + ca\) 的最小值为（\quad）
 
@@ -168,6 +256,28 @@ D
 B
 \end{answer}
 
+\begin{solution}
+将三个条件分别相加减，得到
+\[
+2a^2=(a^2+b^2)+(a^2+c^2)-(b^2+c^2)=1
+\]
+同样，
+\[
+2b^2=(a^2+b^2)+(b^2+c^2)-(c^2+a^2)=1
+\]
+以及
+\[
+2c^2=(b^2+c^2)+(c^2+a^2)-(a^2+b^2)=3
+\]
+所以 \(b^2=\frac12\)，\(c^2=\frac32\). 因而 \(a\)，\(b\) 的绝对值均为 \(\frac1{\sqrt2}\)，\(c\) 的绝对值为 \(\sqrt{\frac32}\).
+
+若 \(a\)，\(b\) 异号，则 \(ab=-\frac12\) 且 \(a+b=0\)，从而 \(ab+bc+ca=-\frac12\). 若 \(a\)，\(b\) 同号，则 \(ab=\frac12\)，且 \(\lvert a+b\rvert=\sqrt2\). 取 \(c\) 与 \(a+b\) 异号时取得较小值
+\[
+ab+c(a+b)=\frac12-\sqrt{\frac32}\sqrt2=\frac12-\sqrt3
+\]
+因为 \(\frac12-\sqrt3<-\frac12\)，所以最小值为 \(\frac12-\sqrt3\)，故选 B.
+\end{solution}
+
 \section{填空题}
 \begin{problem}
 不等式 \( |x + 2| \geqslant |x| \) 的解集是\fillinblank{}.
@@ -177,6 +287,10 @@ B
 \(\left[-1,+\infty\right)\)
 \end{answer}
 
+\begin{solution}
+两边均非负，可以平方而不改变不等号方向，得 \((x+2)^2\geqslant x^2\). 展开并化简为 \(4x+4\geqslant0\)，所以 \(x\geqslant-1\). 因此解集为 \(\left[-1,+\infty\right)\).
+\end{solution}
+
 \begin{problem}
 由动点 \(P\) 向圆 \(x^{2} + y^{2} = 1\) 引两条切线 \(PA\)，\(PB\)，切点分别为 \(A\)，\(B\)，\(\angle APB = 60^{\circ}\)，则动点 \(P\) 的轨迹方程为\fillinblank{}.
 \end{problem}
@@ -184,6 +298,12 @@ B
 \begin{answer}
 \(x^{2}+y^{2}=4\)
 \end{answer}
+
+\begin{solution}
+设圆心为 \(O\). 因为半径与切线垂直，所以 \(OA\perp PA\)，\(OB\perp PB\). 四边形 \(OAPB\) 中，\(\angle OAP=\angle OBP=90^{\circ}\)，从而 \(\angle AOB+\angle APB=180^{\circ}\)，得 \(\angle AOB=120^{\circ}\).
+
+又因为从同一点引圆的两条切线长相等，\(PA=PB\)，且 \(OA=OB\)，所以 \(OP\) 平分 \(\angle APB\)，即 \(\angle APO=30^{\circ}\). 在直角三角形 \(AOP\) 中，\(OA=1\)，故 \(\sin30^{\circ}=\frac{OA}{OP}=\frac1{OP}\)，从而 \(OP=2\). 反过来，若 \(OP=2\)，则同样由直角三角形 \(AOP\) 得 \(\angle APO=30^{\circ}\)，再由 \(OP\) 平分 \(\angle APB\) 得 \(\angle APB=60^{\circ}\)，所以轨迹恰为以 \(O\) 为圆心、半径为 \(2\) 的圆，方程为 \(x^2+y^2=4\).
+\end{solution}
 
 \begin{problem}
 已知数列 \(\{a_{n}\}\)，满足 \(a_{1} = 1\)，\(a_{n} = a_{1} + 2a_{2} + 3a_{3} + \cdots + (n - 1)a_{n-1}\)（\(n \geqslant 2\)），则 \(\{a_{n}\}\) 的通项 \(a_{n} = \begin{cases}
@@ -195,6 +315,16 @@ B
 \begin{answer}
 \(\dfrac{n!}{2}\)
 \end{answer}
+
+\begin{solution}
+由递推式在 \(n=2\) 时得 \(a_2=a_1=1\). 对任意 \(n\geqslant3\)，将相邻两式相减，得
+\[
+a_n-a_{n-1}=(n-1)a_{n-1}
+\]
+所以 \(a_n=na_{n-1}\). 因此从 \(a_2=1\) 开始逐项相乘，得到
+\(a_n=n(n-1)\cdots3a_2=\frac{n!}{2}\)，\(n\geqslant2\).
+结合题设 \(a_1=1\)，通项为题中所填结果.
+\end{solution}
 
 \begin{problem}
 已知 \(a\)，\(b\) 为不垂直的异面直线，\(\alpha\) 是一个平面，则 \(a\)，\(b\) 在 \(\alpha\) 上的射影有可能是：
@@ -213,13 +343,40 @@ B
 \(\circled{1}\circled{2}\circled{4}\)
 \end{answer}
 
+\begin{solution}
+取投影平面为 \(\alpha:z=0\)，正交投影为 \((x,y,z)\mapsto(x,y,0)\). 以下构造均满足原直线异面且不垂直.
+
+对结论 \(\circled{1}\)，取直线 \(a:(t,0,t)\) 和 \(b:(s,1,2s)\).
+两直线的方向向量分别为 \(\bs{u}=(1,0,1)\)，\(\bs{v}=(1,0,2)\)，且 \(\bs{u}\cdot\bs{v}=3\ne0\). 取两直线上对应点之差 \(\bs{w}=(0,1,0)\)，则 \((\bs{u}\times\bs{v})\cdot\bs{w}=-1\ne0\)，所以两直线异面；它们的投影分别为 \(y=0\) 与 \(y=1\)，是两条平行直线. 因此结论 \(\circled{1}\) 有可能.
+
+对结论 \(\circled{2}\)，取直线 \(a:(t,0,t)\) 和 \(b:(0,s,s+1)\).
+两直线的方向向量分别为 \(\bs{u}=(1,0,1)\)，\(\bs{v}=(0,1,1)\)，有 \(\bs{u}\cdot\bs{v}=1\ne0\)，且以两条直线上点 \((0,0,0)\)，\((0,0,1)\) 之差为 \(\bs{w}=(0,0,1)\) 时，\((\bs{u}\times\bs{v})\cdot\bs{w}=1\ne0\)，所以两直线异面且不垂直. 它们的投影分别为 \(x\) 轴和 \(y\) 轴，是两条互相垂直的直线. 因此结论 \(\circled{2}\) 有可能.
+
+若两条异面直线的投影是同一条直线，则两条原直线都位于由该直线和投影方向确定的同一个竖直平面内. 在同一平面内，两条不平行直线必相交；若它们平行，则原直线不异面，所以结论 \(\circled{3}\) 不可能.
+
+对结论 \(\circled{4}\)，取直线 \(a:(0,0,t)\) 和 \(b:(s,1,s+1)\).
+两直线的方向向量分别为 \(\bs{u}=(0,0,1)\)，\(\bs{v}=(1,0,1)\)，有 \(\bs{u}\cdot\bs{v}=1\ne0\)，且取两直线上点之差 \(\bs{w}=(0,1,1)\) 时，\((\bs{u}\times\bs{v})\cdot\bs{w}=1\ne0\)，所以两直线异面且不垂直. 直线 \(a\) 的投影为点 \((0,0,0)\)，直线 \(b\) 的投影为 \(y=1\)，该点不在此直线上. 因此结论 \(\circled{4}\) 有可能，正确结论的编号为 \(1\)，\(2\)，\(4\).
+\end{solution}
+
 \section{解答题}
 \begin{problem}
 求函数 \( f(x) = \frac{\sin^4 x + \cos^4 x + \sin^2 x \cos^2 x}{2 - \sin 2x} \) 的最小正周期，最大值和最小值.
 \end{problem}
 
 \begin{solution}
-函数的最小正周期为 \(\pi\)，最大值为 \(\dfrac{3}{4}\)，最小值为 \(\dfrac{1}{4}\).
+令 \(u=\sin2x\). 先化简分子：
+\[
+\sin^4x+\cos^4x+\sin^2x\cos^2x=1-\sin^2x\cos^2x=1-\frac14\sin^22x=\frac{4-u^2}{4}
+\]
+由于 \(-1\leqslant u\leqslant1\)，分母 \(2-u\) 始终为正，故可以约去因式 \(2-u\)，得到
+\[
+f(x)=\frac{(2-u)(2+u)}{4(2-u)}=\frac{2+\sin2x}{4}=\frac12+\frac14\sin2x
+\]
+因此 \(f(x)\) 的最小正周期为正弦函数 \(\sin2x\) 的最小正周期 \(\pi\)，且
+\[
+\frac12-\frac14\leqslant f(x)\leqslant\frac12+\frac14
+\]
+所以最大值为 \(\dfrac34\)，最小值为 \(\dfrac14\).
 \end{solution}
 
 \begin{problem}
@@ -227,7 +384,11 @@ B
 \end{problem}
 
 \begin{solution}
-随机变量 \(\xi\) 的概率分布为
+令 \(X\) 表示电话 \(A\)，\(B\) 中占线的部数，令 \(Y\) 表示电话 \(C\)，\(D\) 中占线的部数，则 \(\xi=X+Y\). 由相互独立性，\(X\)，\(Y\) 相互独立. 由二项分布公式，
+对于 \(X\)，有 \(P(X=0)=0.5^2=0.25\)，\(P(X=1)=2\times0.5\times0.5=0.50\)，\(P(X=2)=0.5^2=0.25\). 对于 \(Y\)，有 \(P(Y=0)=0.6^2=0.36\)，\(P(Y=1)=2\times0.4\times0.6=0.48\)，\(P(Y=2)=0.4^2=0.16\).
+由 \(\xi=X+Y\) 及 \(X\)，\(Y\) 的独立性，
+\(P(\xi=0)=0.25\times0.36=0.09\)，\(P(\xi=1)=0.25\times0.48+0.50\times0.36=0.30\)，\(P(\xi=2)=0.25\times0.16+0.50\times0.48+0.25\times0.36=0.37\)，\(P(\xi=3)=0.50\times0.16+0.25\times0.48=0.20\)，\(P(\xi=4)=0.25\times0.16=0.04\).
+所以随机变量 \(\xi\) 的概率分布为
 \begin{center}
 \begin{tabular}{c|ccccc}
 \(\xi\) & \(0\) & \(1\) & \(2\) & \(3\) & \(4\) \\
@@ -235,7 +396,7 @@ B
 \(P\) & \(0.09\) & \(0.3\) & \(0.37\) & \(0.2\) & \(0.04\)
 \end{tabular}
 \end{center}
-且 \(E(\xi)=1.8\).
+又 \(E(\xi)=E(X)+E(Y)=2\times0.5+2\times0.4=1.8\).
 \end{solution}
 
 \begin{problem}
@@ -243,7 +404,11 @@ B
 \end{problem}
 
 \begin{solution}
-函数的单调区间为：
+因为 \(\e^{ax}>0\)，所以
+\[
+f'(x)=2x\e^{ax}+ax^2\e^{ax}=x(ax+2)\e^{ax}
+\]
+故只需讨论 \(x(ax+2)\) 的符号，临界点为 \(x=0\) 以及在 \(a\ne0\) 时的 \(x=-\frac2a\). 函数的单调区间为：
 \begin{enumerate}
 \item 当 \(a=0\) 时，在 \((-\infty,0)\) 内为减函数，在 \((0,+\infty)\) 内为增函数；
 \item 当 \(a>0\) 时，在 \(\left(-\infty,-\dfrac{2}{a}\right)\) 内为增函数，在 \(\left(-\dfrac{2}{a},0\right)\) 内为减函数，在 \((0,+\infty)\) 内为增函数；
@@ -266,8 +431,34 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 点 \(P\) 到平面 \(ABCD\) 的距离为 \(\dfrac{3}{2}\).
-\item 面 \(APB\) 与面 \(CPB\) 所成二面角的大小为 \(\pi-\arccos\dfrac{2\sqrt{7}}{7}\).
+\item 取底面 \(ABCD\) 为 \(z=0\)，令 \(A=(-1,0,0)\)，\(D=(1,0,0)\)，于是 \(AD=2\)，且 \(AD\) 的方向为 \(x\) 轴. 由于 \(PAD\) 是边长为 \(2\) 的正三角形，点 \(P\) 的 \(x\) 坐标为 \(0\)，并满足
+\[
+p_y^2+p_z^2=3
+\]
+又因为 \(PB\perp AD\)，而 \(P\) 的 \(x\) 坐标为 \(0\)，所以 \(B\) 的 \(x\) 坐标也为 \(0\). 由 \(AB=DB=2\) 得 \(B\) 的另外两个坐标满足 \(y_B^2=3\)，取图示方向可令 \(B=(0,\sqrt3,0)\)，从而 \(C=(2,\sqrt3,0)\).
+
+设 \(M\) 为 \(AD\) 的中点，则 \(M=(0,0,0)\). 平面 \(x=0\) 垂直于 \(AD\)，它与底面、侧面 \(PAD\) 的交线分别为 \(MB\)、\(MP\)，所以题设二面角的平面角为 \(\angle BMP=120^{\circ}\). 由 \(|MB|=\sqrt3\) 及 \(|MP|=\sqrt3\)，有
+\[
+\frac{\overrightarrow{MB}\cdot\overrightarrow{MP}}{|MB|\,|MP|}=\frac{\sqrt3p_y}{3}=\frac{p_y}{\sqrt3}=\cos120^{\circ}=-\frac12
+\]
+故 \(p_y=-\frac{\sqrt3}{2}\). 结合 \(p_y^2+p_z^2=3\)，并取 \(P\) 位于底面上方，得 \(p_z=\frac32\). 所以点 \(P\) 到平面 \(ABCD\) 的距离为 \(\frac32\).
+
+\item 由上述坐标，取 \(P=\left(0,-\frac{\sqrt3}{2},\frac32\right)\)，\(A=(-1,0,0)\)，\(B=(0,\sqrt3,0)\)，\(C=(2,\sqrt3,0)\).
+用同一倍数缩放向量不改变法向量夹角. 令
+\[
+\bs{n}_1=\left(2\overrightarrow{PA}\right)\times\left(2\overrightarrow{PB}\right)=6(\sqrt3,-1,-\sqrt3)
+\]
+则 \(\bs{n}_1\) 是平面 \(APB\) 的一个法向量；令
+\[
+\bs{n}_2=\left(2\overrightarrow{PC}\right)\times\left(2\overrightarrow{PB}\right)=12(0,1,\sqrt3)
+\]
+则 \(\bs{n}_2\) 是平面 \(CPB\) 的一个法向量. 去掉正的数值因子后，取 \(\bs{n}_1=(\sqrt3,-1,-\sqrt3)\)，\(\bs{n}_2=(0,1,\sqrt3)\).
+于是 \(\bs{n}_1\cdot\bs{n}_2=-4\)，\(\lvert\bs{n}_1\rvert=\sqrt7\)，\(\lvert\bs{n}_2\rvert=2\).
+因此两平面所成的相应二面角 \(\theta\) 满足
+\[
+\cos\theta=\frac{\bs{n}_1\cdot\bs{n}_2}{\lvert\bs{n}_1\rvert\lvert\bs{n}_2\rvert}=-\frac{2}{\sqrt7}
+\]
+从而 \(\theta=\arccos\left(-\frac{2}{\sqrt7}\right)=\pi-\arccos\frac{2\sqrt7}{7}\).
 \end{enumerate}
 \end{solution}
 
@@ -282,9 +473,42 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 双曲线 \(C\) 的离心率 \(e\) 的取值范围为
-\(\left(\dfrac{\sqrt{6}}{2},\sqrt{2}\right)\cup\left(\sqrt{2},+\infty\right)\).
-\item \(a=\dfrac{17}{13}\).
+\item 将 \(y=1-x\) 代入双曲线方程，得
+\[
+\frac{x^2}{a^2}-(1-x)^2=1
+\]
+即
+\[
+(1-a^2)x^2+2a^2x-2a^2=0
+\]
+当 \(a=1\) 时，上式退化为 \(2x-2=0\)，只有一个交点；当 \(a\ne1\) 时，方程有两个不同实根的充要条件是
+\[
+\Delta=(2a^2)^2-4(1-a^2)(-2a^2)=4a^2(2-a^2)>0
+\]
+结合 \(a>0\)，得到 \(0<a<\sqrt2\) 且 \(a\ne1\). 双曲线的离心率为
+\[
+e=\sqrt{1+\frac{1}{a^2}}
+\]
+当 \(0<a<1\) 时，\(e>\sqrt2\)；当 \(1<a<\sqrt2\) 时，\(\frac{\sqrt6}{2}<e<\sqrt2\). 因此
+\[
+e\in\left(\frac{\sqrt6}{2},\sqrt2\right)\cup\left(\sqrt2,+\infty\right)
+\]
+
+\item 直线 \(l\) 与 \(y\) 轴交于 \(P=(0,1)\). 直线上的点可表示为 \((x,1-x)=P+x(1,-1)\)，所以由 \(\overrightarrow{PA}=\frac5{12}\overrightarrow{PB}\) 可设 \(x_A=\frac5{12}t\)，\(x_B=t\)，其中 \(t\ne0\).
+
+上面的二次方程的两根就是 \(x_A\)，\(x_B\)，故由韦达定理
+\[
+x_A+x_B=x_Ax_B=-\frac{2a^2}{1-a^2}
+\]
+代入 \(x_A=\frac{5}{12}t\)，\(x_B=t\)，并利用 \(t\ne0\)，得 \(\frac{17}{12}t=\frac5{12}t^2\)，所以 \(t=\frac{17}{5}\). 于是
+\[
+x_Ax_B=\frac5{12}\left(\frac{17}{5}\right)^2=\frac{289}{60}
+\]
+因此
+\[
+-\frac{2a^2}{1-a^2}=\frac{289}{60}
+\]
+解得 \(120a^2=289a^2-289\)，即 \(a^2=\frac{289}{169}\). 由 \(a>0\)，得 \(a=\frac{17}{13}\).
 \end{enumerate}
 \end{solution}
 
@@ -299,7 +523,20 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item \(a_{3}=3\)，\(a_{5}=13\).
-\item 当 \(n\) 为奇数时，\(a_{n}=\dfrac{3^{\frac{n+1}{2}}}{2}+\dfrac{(-1)^{\frac{n-1}{2}}}{2}-1\)；当 \(n\) 为偶数时，\(a_{n}=\dfrac{3^{\frac{n}{2}}}{2}+\dfrac{(-1)^{\frac{n}{2}}}{2}-1\).
+\item 取 \(k=1\)，得 \(a_2=a_1+(-1)^1=1-1=0\)，再得 \(a_3=a_2+3^1=3\). 取 \(k=2\)，得 \(a_4=a_3+(-1)^2=4\)，再得 \(a_5=a_4+3^2=13\). 所以 \(a_3=3\)，\(a_5=13\).
+
+\item 设 \(n=2m+1\) 为奇数，其中 \(m\geqslant0\). 从 \(a_1\) 到 \(a_{2m+1}\) 逐组累加，得到
+\[
+a_{2m+1}=1+\sum_{k=1}^{m}\left((-1)^k+3^k\right)=1+\frac{(-1)^m-1}{2}+\frac{3^{m+1}-3}{2}=\frac{3^{m+1}+(-1)^m}{2}-1
+\]
+代入 \(m=\frac{n-1}{2}\)，得
+\(a_n=\frac{3^{\frac{n+1}{2}}}{2}+\frac{(-1)^{\frac{n-1}{2}}}{2}-1\)，\(n\text{ 为奇数}\).
+
+设 \(n=2m\) 为偶数，其中 \(m\geqslant1\). 这时最后一步是偶数项递推，所以
+\[
+a_{2m}=1+\sum_{k=1}^{m}(-1)^k+\sum_{k=1}^{m-1}3^k=1+\frac{(-1)^m-1}{2}+\frac{3^m-3}{2}=\frac{3^m+(-1)^m}{2}-1
+\]
+代入 \(m=\frac n2\)，得
+\(a_n=\frac{3^{\frac n2}}{2}+\frac{(-1)^{\frac n2}}{2}-1\)，\(n\text{ 为偶数}\).
 \end{enumerate}
 \end{solution}

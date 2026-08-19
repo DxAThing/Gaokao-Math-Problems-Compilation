@@ -16,6 +16,18 @@
 C
 \end{answer}
 
+\begin{solution}
+先计算向量和：
+\[
+\bs{a}+2\bs{b}=(1,-2)+2(-3,4)=(-5,6)
+\]
+因此
+\[
+(\bs{a}+2\bs{b})\cdot\bs{c}=(-5,6)\cdot(3,2)=-5\times3+6\times2=-3
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
 若非空集合 \(A\)，\(B\)，\(C\) 满足 \(A \cup B = C\)，且 \(B\) 不是 \(A\) 的子集，则（\quad）
 
@@ -29,6 +41,14 @@ C
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+由 \(A\cup B=C\)，可知 \(A\subseteq C\)，所以对任意 \(x\)，若 \(x\in A\)，则必有 \(x\in C\). 这说明“\(x\in C\)”是“\(x\in A\)”的必要条件.
+
+又因为 \(B\) 不是 \(A\) 的子集，存在 \(x_0\in B\) 且 \(x_0\notin A\). 由 \(x_0\in B\subseteq C\)，可得 \(x_0\in C\) 但 \(x_0\notin A\)，所以“\(x\in C\)”不是“\(x\in A\)”的充分条件.
+
+故选 B.
+\end{solution}
 
 \begin{problem}
 用与球心距离为\(1\)的平面去截球，所得的截面面积为 \(\pi\)，则球的体积为（\quad）
@@ -44,6 +64,18 @@ B
 B
 \end{answer}
 
+\begin{solution}
+设球的半径为 \(R\). 截面圆的半径由截面面积得到：
+\(\pi r^2=\pi\)，\(r=1\).
+球心到截面的距离为 \(1\)，由截面圆半径、球半径和球心距组成的直角三角形，有
+\(R^2=1^2+1^2=2\)，\(R=\sqrt{2}\).
+所以球的体积为
+\[
+V=\frac{4}{3}\pi R^3=\frac{4}{3}\pi(\sqrt{2})^3=\frac{8\sqrt{2}\pi}{3}
+\]
+故选 B.
+\end{solution}
+
 \begin{problem}
 函数 \( f(x) = \frac{1}{x} \ln \left( \sqrt{x^2 - 3x + 2} + \sqrt{-x^2 - 3x + 4} \right) \) 的定义域为（\quad）
 
@@ -57,6 +89,24 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+函数有意义必须同时满足两个根式的被开方数非负、对数真数为正以及分母不为零. 先由根式得到
+\[
+x^2-3x+2=(x-1)(x-2)\geqslant0
+\]
+即 \(x\leqslant1\) 或 \(x\geqslant2\)；另一个根式给出
+\[
+-x^2-3x+4=-(x+4)(x-1)\geqslant0
+\]
+即 \(-4\leqslant x\leqslant1\). 两者的交集为 \([-4,1]\).
+
+当 \(x=1\) 时两个根式都为 \(0\)，对数真数为 \(0\)，不能取；当 \(x=0\) 时分母为 \(0\)，也不能取. 在 \([-4,1]\) 中排除这两个值，得到定义域为
+\[
+[-4,0)\cup(0,1)
+\]
+故选 D.
+\end{solution}
 
 \begin{problem}
 将函数 \( y = 3\sin (x - \theta) \) 的图象 \(F\) 按向量 \( \left(\frac{\pi}{3}, 3\right) \) 平移得到图象 \(F'\)，若 \(F'\) 的一条对称轴是直线 \( x = \frac{\pi}{4} \)，则 \( \theta \) 的一个可能取值是（\quad）
@@ -72,6 +122,23 @@ D
 A
 \end{answer}
 
+\begin{solution}
+将图象按向量 \(\left(\frac{\pi}{3},3\right)\) 平移后，图象 \(F'\) 的函数关系式为
+\[
+y=3\sin\left(x-\frac{\pi}{3}-\theta\right)+3
+\]
+正弦函数在相位为 \(\frac{\pi}{2}+k\pi\)（\(k\in\Z\)）处取得极值，这些极值所在的直线是对称轴. 因此 \(F'\) 的对称轴满足
+\[
+\frac{\pi}{4}-\frac{\pi}{3}-\theta=\frac{\pi}{2}+k\pi
+\]
+解得
+\[
+\theta=-\frac{7\pi}{12}-k\pi
+\]
+取 \(k=-1\)，得到 \(\theta=\frac{5\pi}{12}\)，这是选项 A 的值.
+故选 A.
+\end{solution}
+
 \begin{problem}
 将 \(5\) 名志愿者分配到 \(3\) 个不同的奥运场馆参加接待工作，每个场馆至少分配一名志愿者的方案种数为（\quad）
 
@@ -85,6 +152,16 @@ A
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+把每名志愿者看作分别选择 \(3\) 个场馆中的一个，先不考虑“每个场馆至少一人”的限制，共有 \(3^5\) 种分配方案.
+
+若某一个指定场馆没有志愿者，则其余 \(5\) 人各有 \(2\) 种选择，共有 \(2^5\) 种；这样的场馆有 \(\mathrm C_3^1\) 个. 若指定的两个场馆都没有志愿者，则所有人只能去剩下的一个场馆，共有 \(1^5\) 种；这样的场馆组合有 \(\mathrm C_3^2\) 个. 由容斥原理，满足条件的方案数为
+\[
+3^5-\mathrm C_3^1 2^5+\mathrm C_3^2 1^5=243-3\times32+3=150
+\]
+故选 D.
+\end{solution}
 
 \begin{problem}
 若 \( f(x) = -\frac{1}{2} x^2 + b \ln (x + 2) \) 在 \((-1, +\infty)\) 上是减函数，则 \( b \) 的取值范围是（\quad）
@@ -100,6 +177,22 @@ D
 C
 \end{answer}
 
+\begin{solution}
+在区间 \((-1,+\infty)\) 上，\(x+2>0\)，所以
+\[
+f'(x)=-x+\frac{b}{x+2}=\frac{b-x(x+2)}{x+2}
+\]
+由于分母 \(x+2>0\)，要使函数在整个区间上为减函数，必须有
+\(b-x(x+2)\leqslant0\)，\((x>-1)\)
+即 \(b\leqslant x(x+2)=(x+1)^2-1\). 当 \(x>-1\) 时，\((x+1)^2>0\)，故 \(x(x+2)>-1\)，其下确界为 \(-1\).
+
+因此 \(b\leqslant-1\) 时，对所有 \(x>-1\) 都有 \(f'(x)<0\)，函数严格递减. 若 \(b>-1\)，取充分接近 \(-1\) 的 \(x>-1\)，可使 \(x(x+2)<b\)，从而 \(f'(x)>0\)，不可能在整个区间上为减函数. 所以
+\[
+b\in(-\infty,-1]
+\]
+故选 C.
+\end{solution}
+
 \begin{problem}
 已知 \(m \in \N^*\)，\(a\)，\(b \in \R\). 若 \(\displaystyle\lim_{x \to 0} \frac{(1 + x)^m + a}{x} = b\)，则 \(a \cdot b =\)（\quad）
 
@@ -114,6 +207,24 @@ C
 A
 \end{answer}
 
+\begin{solution}
+极限存在且为有限数时，分子在 \(x=0\) 时必须为 \(0\)，所以
+\(1+a=0\)，\(a=-1\).
+于是由二项式定理，
+\[
+(1+x)^m-1=mx+\mathrm C_m^2x^2+\cdots
+\]
+从而
+\[
+b=\lim_{x\to0}\frac{(1+x)^m-1}{x}=m
+\]
+因此
+\[
+a\cdot b=(-1)\cdot m=-m
+\]
+故选 A.
+\end{solution}
+
 \begin{problem}
 过点 \(A(11,2)\) 作圆 \(x^{2} + y^{2} + 2x - 4y - 164 = 0\) 的弦，其中弦长为整数的共有（\quad）
 
@@ -127,6 +238,29 @@ A
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+将圆的方程配方，得
+\[
+(x+1)^2+(y-2)^2=169
+\]
+所以圆心为 \(O'(-1,2)\)，半径为 \(R=13\)，且
+\[
+|O'A|=\sqrt{(11+1)^2+(2-2)^2}=12<13
+\]
+设过 \(A\) 的直线到圆心 \(O'\) 的距离为 \(d\). 该直线截得的弦长为
+\[
+L=2\sqrt{R^2-d^2}=2\sqrt{169-d^2}
+\]
+因为直线过圆内点 \(A\)，有 \(0\leqslant d\leqslant12\)，所以弦长的最小值和最大值分别为
+\(L_{\min}=2\sqrt{169-12^2}=10\)，\(L_{\max}=2\sqrt{169}=26\).
+长度为 \(10\) 的弦对应 \(d=12\)，只有一条；长度为 \(26\) 的弦对应 \(d=0\)，也只有一条. 对每个整数长度 \(11\)，\(12\)，\(\ldots\)，\(25\)，有 \(0<d<12\)，关于 \(O'A\) 对称的两条直线分别给出两条弦. 因此弦长为整数的弦共有
+\[
+1+15\times2+1=32
+\]
+条.
+故选 C.
+\end{solution}
 
 \begin{problem}
 如图所示，“嫦娥一号”探月卫星沿地月转移轨道飞向月球，在月球附近一点 \(P\) 轨进入以月球球心 \(F\) 为一个焦点的椭圆轨道 \(I\) 绕月飞行，之后卫星在 \(P\) 点第二次变轨进入仍以 \(F\) 为一个焦点的椭圆轨道 \(II\) 绕月飞行，最终卫星在 \(P\) 点第三次变轨进入以 \(F\) 为圆心的圆形轨道 \(III\) 绕月飞行，若用 \(2c_1\) 和 \(2c_2\) 分别表示椭圆轨道 \(I\) 和 \(II\) 的焦距，用 \(2a_1\) 和 \(2a_2\) 分别表示椭圆轨道 \(I\) 和 \(II\) 的长轴的长，给出下列式子：
@@ -151,6 +285,34 @@ C
 B
 \end{answer}
 
+\begin{solution}
+由图可知，第一条椭圆轨道在第二条椭圆轨道的外侧，且二者在 \(P\) 处有共同的顶点；焦点 \(F\) 位于 \(P\) 所在的一侧. 对于半长轴为 \(a_i\)、半焦距为 \(c_i\) 的椭圆，顶点 \(P\) 到同侧焦点 \(F\) 的距离为 \(a_i-c_i\). 由于两条轨道都经过同一点 \(P\)，有
+\[
+a_1-c_1=PF=a_2-c_2
+\]
+所以式\circled{2}正确.
+
+第一条轨道在第二条轨道外侧，故 \(a_1>a_2\). 结合上式可得
+\[
+c_1=a_1-PF>a_2-PF=c_2
+\]
+于是
+\[
+a_1+c_1>a_2+c_2
+\]
+所以式\circled{1}不正确.
+
+令 \(d=PF=a_1-c_1=a_2-c_2\)，则 \(c_i=a_i-d\)，从而
+\[
+c_1a_2-a_1c_2=(a_1-d)a_2-a_1(a_2-d)=d(a_1-a_2)>0
+\]
+故 \(c_1a_2>a_1c_2\)，式\circled{3}正确. 又因为 \(a_1\)，\(a_2>0\)，式\circled{3}等价于
+\[
+\frac{c_1}{a_1}>\frac{c_2}{a_2}
+\]
+与式\circled{4}相反. 因此正确式子的序号为\circled{2}\circled{3}，故选 B.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -161,6 +323,14 @@ B
 \(1\)
 \end{answer}
 
+\begin{solution}
+设 \(z_1=x+y\i\)，其中 \(x\)，\(y\in\R\)，则 \(\overline{z_1}=x-y\i\). 因此
+\[
+z_2=x+y\i-\i(x-y\i)=x+y\i-x\i-y=(x-y)+(y-x)\i
+\]
+已知 \(z_2\) 的实部为 \(-1\)，所以 \(x-y=-1\)，从而 \(y-x=1\). 故 \(z_2\) 的虚部为 \(1\).
+\end{solution}
+
 \begin{problem}
 在 \(\triangle ABC\) 中，三个角 \(A\)，\(B\)，\(C\) 的对边边长分别为 \(a = 3\)，\(b = 4\)，\(c = 6\)，则 \(bc \cos A + ca \cos B + ab \cos C\) 的值为\fillinblank{}.
 \end{problem}
@@ -168,6 +338,22 @@ B
 \begin{answer}
 \(\dfrac{61}{2}\)
 \end{answer}
+
+\begin{solution}
+由余弦定理的变形，
+\(\cos A=\frac{b^2+c^2-a^2}{2bc}\)，\(\cos B=\frac{c^2+a^2-b^2}{2ca}\)，\(\cos C=\frac{a^2+b^2-c^2}{2ab}\).
+分别相乘后相加，得
+\[
+bc\cos A+ca\cos B+ab\cos C
+=\frac{b^2+c^2-a^2+c^2+a^2-b^2+a^2+b^2-c^2}{2}
+=\frac{a^2+b^2+c^2}{2}
+\]
+代入 \(a=3\)，\(b=4\)，\(c=6\)，原式为
+\[
+\frac{3^2+4^2+6^2}{2}=\frac{61}{2}
+\]
+故填 \(\dfrac{61}{2}\).
+\end{solution}
 
 \begin{problem}
 已知函数 \( f(x) = x^2 + 2x + a \)，\( f(bx) = 9x^2 - 6x + 2 \)，其中 \( x \in \R \)，\(a\)，\(b\) 为常数，则方程 \( f(ax + b) = 0 \) 的解集为\fillinblank{}.
@@ -177,6 +363,24 @@ B
 \(\varnothing\)
 \end{answer}
 
+\begin{solution}
+由 \(f(x)=x^2+2x+a\)，有
+\[
+f(bx)=b^2x^2+2bx+a
+\]
+题设对任意 \(x\in\R\) 成立，因此比较同次幂系数，得到
+\(b^2=9\)，\(2b=-6\)，\(a=2\).
+由 \(2b=-6\) 确定 \(b=-3\). 于是
+\[
+f(ax+b)=f(2x-3)=(2x-3)^2+2(2x-3)+2=4x^2-8x+5
+\]
+配方得
+\[
+4x^2-8x+5=4(x-1)^2+1>0
+\]
+所以方程 \(f(ax+b)=0\) 没有实数解，解集为 \(\varnothing\).
+\end{solution}
+
 \begin{problem}
 已知函数 \( f(x) = 2^x \)，等差数列 \( \{a_n\} \) 的公差为 2. 若 \( f(a_2 + a_4 + a_6 + a_8 + a_{10}) = 4 \)，则 \( \log_2[f(a_1) \cdot f(a_2) \cdot f(a_3) \cdots f(a_{10})] = \)\fillinblank{}.
 \end{problem}
@@ -184,6 +388,34 @@ B
 \begin{answer}
 \(-6\)
 \end{answer}
+
+\begin{solution}
+由 \(f(x)=2^x\)，题设
+\[
+f(a_2+a_4+a_6+a_8+a_{10})=4=2^2
+\]
+给出
+\[
+a_2+a_4+a_6+a_8+a_{10}=2
+\]
+等差数列公差为 \(2\)，所以每个奇数项比其后面的偶数项少 \(2\)，即
+\[
+a_1+a_3+a_5+a_7+a_9
+=(a_2+a_4+a_6+a_8+a_{10})-5\times2
+=2-10=-8
+\]
+因此
+\[
+\sum_{i=1}^{10}a_i=-8+2=-6
+\]
+另一方面，\(f(a_i)=2^{a_i}\)，故
+\[
+\log_2\bigl[f(a_1)f(a_2)\cdots f(a_{10})\bigr]
+=\log_2 2^{\sum_{i=1}^{10}a_i}
+=\sum_{i=1}^{10}a_i=-6
+\]
+故填 \(-6\).
+\end{solution}
 
 \begin{problem}
 观察下列等式：
@@ -201,6 +433,46 @@ B
 \(\dfrac{k}{12}\)，\(0\)
 \end{answer}
 
+\begin{solution}
+由恒等式
+\[
+\sum_{i=1}^{n}i^k-\sum_{i=1}^{n-1}i^k=n^k
+\]
+比较关于 \(n\) 的幂的系数. 写出
+\[
+S_k(n)=a_{k+1}n^{k+1}+a_kn^k+a_{k-1}n^{k-1}+a_{k-2}n^{k-2}+\cdots
+\]
+在 \(S_k(n)-S_k(n-1)\) 中，比较 \(n^k\) 和 \(n^{k-1}\) 的系数，分别得到
+\((k+1)a_{k+1}=1\)，\(-\mathrm C_{k+1}^{2}a_{k+1}+ka_k=0\).
+所以 \(a_{k+1}=\frac1{k+1}\)，\(a_k=\frac12\)，与题中观察到的规律一致.
+
+继续比较 \(n^{k-2}\) 的系数，得到
+\[
+\mathrm C_{k+1}^{3}a_{k+1}-\mathrm C_{k}^{2}a_k+(k-1)a_{k-1}=0
+\]
+代入前两式，得
+\[
+\frac{k(k-1)}6-\frac{k(k-1)}4+(k-1)a_{k-1}=0
+\]
+从而
+\[
+a_{k-1}=\frac{k}{12}
+\]
+
+当 \(k\geqslant3\) 时，再比较 \(n^{k-3}\) 的系数：
+\[
+-\mathrm C_{k+1}^{4}a_{k+1}
++\mathrm C_{k}^{3}a_k
+-\mathrm C_{k-1}^{2}a_{k-1}
++(k-2)a_{k-2}=0
+\]
+代入 \(a_{k+1}=\frac1{k+1}\)、\(a_k=\frac12\)、\(a_{k-1}=\frac{k}{12}\)，前三项之和为 \(0\)，所以 \((k-2)a_{k-2}=0\)，即 \(a_{k-2}=0\). 当 \(k=2\) 时，题目已给出的
+\[
+\sum_{i=1}^{n}i^2=\frac13n^3+\frac12n^2+\frac16n
+\]
+直接表明 \(a_0=0\). 因此两空分别为 \(\dfrac{k}{12}\) 和 \(0\).
+\end{solution}
+
 \section{解答题}
 
 \begin{problem}
@@ -215,17 +487,17 @@ B
 \begin{enumerate}
 \item 当 \(x\in\left(\pi,\frac{17\pi}{12}\right]\) 时，\(-1<\sin x<0\)，\(-1<\cos x<0\). 因此
 \[
-f(\sin x)=\sqrt{\frac{(1-\sin x)^2}{\cos^2x}}=\frac{1-\sin x}{-\cos x}=\frac{\sin x-1}{\cos x},
+f(\sin x)=\sqrt{\frac{(1-\sin x)^2}{\cos^2x}}=\frac{1-\sin x}{-\cos x}=\frac{\sin x-1}{\cos x}
 \]
 且
 \[
-f(\cos x)=\sqrt{\frac{(1-\cos x)^2}{\sin^2x}}=\frac{1-\cos x}{-\sin x}=\frac{\cos x-1}{\sin x}.
+f(\cos x)=\sqrt{\frac{(1-\cos x)^2}{\sin^2x}}=\frac{1-\cos x}{-\sin x}=\frac{\cos x-1}{\sin x}
 \]
 代入 \(g(x)\)，得 \(g(x)=\sin x-1+\cos x-1=\sin x+\cos x-2=\sqrt{2}\sin\left(x+\frac{\pi}{4}\right)-2\). 所以 \(A=\sqrt{2}\)，\(\omega=1\)，\(\varphi=\frac{\pi}{4}\)，\(B=-2\).
 
 \item 令 \(u=x+\frac{\pi}{4}\)，则 \(u\in\left(\frac{5\pi}{4},\frac{5\pi}{3}\right]\). 在这个区间内，正弦函数在 \(\left(\frac{5\pi}{4},\frac{3\pi}{2}\right]\) 上递减，在 \(\left[\frac{3\pi}{2},\frac{5\pi}{3}\right]\) 上递增，故
 \[
--1\leqslant\sin u<\sin\frac{5\pi}{4}=-\frac{\sqrt{2}}{2}.
+-1\leqslant\sin u<\sin\frac{5\pi}{4}=-\frac{\sqrt{2}}{2}
 \]
 于是 \(-\sqrt{2}\leqslant\sin x+\cos x<-1\)，从而函数 \(g(x)\) 的值域为 \(\left[-2-\sqrt{2},-3\right)\).
 \end{enumerate}
@@ -278,26 +550,26 @@ f(\cos x)=\sqrt{\frac{(1-\cos x)^2}{\sin^2x}}=\frac{1-\cos x}{-\sin x}=\frac{\co
 
 平面 \(A_{1}BC\) 的一个法向量可取 \(\bs n_{1}=(0,-h,v)\)，侧面 \(A_{1}ABB_{1}\) 的一个法向量可取 \(\bs n_{2}=(v,-u,0)\). 由已知两平面互相垂直，得
 \[
-\bs n_{1}\cdot\bs n_{2}=hu=0.
+\bs n_{1}\cdot\bs n_{2}=hu=0
 \]
 由于 \(h>0\)，所以 \(u=0\). 于是 \(\overrightarrow{BA}=(0,v,0)\)，\(\overrightarrow{BC}=(c,0,0)\)，从而 \(\overrightarrow{BA}\cdot\overrightarrow{BC}=0\)，即 \(AB\perp BC\).
 
 \item 由上面的结论，可将点的坐标写为 \(A=(0,v,0)\)，\(C=(c,0,0)\)，\(A_{1}=(0,v,h)\). 直线 \(AC\) 的一个方向向量为 \(\overrightarrow{AC}=(c,-v,0)\)，平面 \(A_{1}BC\) 的一个法向量仍为 \(\bs n_{1}=(0,-h,v)\). 根据直线与平面所成角的定义，得
 \[
-\sin\theta=\frac{\left\lvert\overrightarrow{AC}\cdot\bs n_{1}\right\rvert}{\lvert\overrightarrow{AC}\rvert\lvert\bs n_{1}\rvert}=\frac{vh}{\sqrt{c^{2}+v^{2}}\sqrt{h^{2}+v^{2}}}.
+\sin\theta=\frac{\left\lvert\overrightarrow{AC}\cdot\bs n_{1}\right\rvert}{\lvert\overrightarrow{AC}\rvert\lvert\bs n_{1}\rvert}=\frac{vh}{\sqrt{c^{2}+v^{2}}\sqrt{h^{2}+v^{2}}}
 \]
 
 底面 \(ABC\) 的一个法向量为 \(\bs n_{0}=(0,0,1)\). 二面角 \(A_{1}-BC-A\) 的大小为两平面 \(A_{1}BC\) 与 \(ABC\) 的锐角，故
 \[
-\cos\varphi=\frac{\lvert\bs n_{1}\cdot\bs n_{0}\rvert}{\lvert\bs n_{1}\rvert\lvert\bs n_{0}\rvert}=\frac{v}{\sqrt{h^{2}+v^{2}}}.
+\cos\varphi=\frac{\lvert\bs n_{1}\cdot\bs n_{0}\rvert}{\lvert\bs n_{1}\rvert\lvert\bs n_{0}\rvert}=\frac{v}{\sqrt{h^{2}+v^{2}}}
 \]
 所以
 \[
-\sin\varphi=\frac{h}{\sqrt{h^{2}+v^{2}}}.
+\sin\varphi=\frac{h}{\sqrt{h^{2}+v^{2}}}
 \]
 因此
 \[
-\sin\theta=\frac{v}{\sqrt{c^{2}+v^{2}}}\sin\varphi<\sin\varphi,
+\sin\theta=\frac{v}{\sqrt{c^{2}+v^{2}}}\sin\varphi<\sin\varphi
 \]
 其中 \(c>0\). 由于 \(\theta\) 与 \(\varphi\) 均为锐角，正弦函数在锐角范围内递增，所以 \(\theta<\varphi\).
 \end{enumerate}
@@ -320,11 +592,11 @@ f(\cos x)=\sqrt{\frac{(1-\cos x)^2}{\sin^2x}}=\frac{1-\cos x}{-\sin x}=\frac{\co
 \(A=(-2,0)\)，\(B=(2,0)\)，\(D=(0,2)\).
 又因为 \(\angle POB=30^{\circ}\) 且 \(P\) 在上半圆上，所以 \(P=(2\cos30^{\circ},2\sin30^{\circ})=(\sqrt{3},1)\). 从而
 \[
-|PA|=\sqrt{(\sqrt{3}+2)^2+1}=\sqrt{6}+\sqrt{2}.
+|PA|=\sqrt{(\sqrt{3}+2)^2+1}=\sqrt{6}+\sqrt{2}
 \]
 且
 \[
-|PB|=\sqrt{(\sqrt{3}-2)^2+1}=\sqrt{6}-\sqrt{2}.
+|PB|=\sqrt{(\sqrt{3}-2)^2+1}=\sqrt{6}-\sqrt{2}
 \]
 故 \(\left||PA|-|PB|\right|=2\sqrt{2}\). 曲线 \(C\) 是以 \(A\)，\(B\) 为焦点，焦距的一半为 \(2\)，实半轴长为 \(\sqrt{2}\) 的双曲线. 由 \(b^{2}=c^{2}-a^{2}=4-2=2\)，得曲线 \(C\) 的方程为
 \[
@@ -334,32 +606,32 @@ f(\cos x)=\sqrt{\frac{(1-\cos x)^2}{\sin^2x}}=\frac{1-\cos x}{-\sin x}=\frac{\co
 
 \item 过 \(D\) 的直线 \(l\) 可设为 \(y=kx+2\). 将其代入曲线 \(C\) 的方程，得
 \[
-(1-k^{2})x^{2}-4kx-6=0.
+(1-k^{2})x^{2}-4kx-6=0
 \]
 设交点 \(E\)，\(F\) 的横坐标分别为 \(x_{1}\)，\(x_{2}\). 直线与曲线相交于不同的两点，必须有 \(k^{2}\neq1\)，且上面方程的判别式满足
 \[
-\Delta=(-4k)^{2}-4(1-k^{2})(-6)=8(3-k^{2})>0.
+\Delta=(-4k)^{2}-4(1-k^{2})(-6)=8(3-k^{2})>0
 \]
 由根的差与判别式的关系，得
 \[
-|x_{1}-x_{2}|=\frac{\sqrt{\Delta}}{|1-k^{2}|}=\frac{2\sqrt{2}\sqrt{3-k^{2}}}{|1-k^{2}|}.
+|x_{1}-x_{2}|=\frac{\sqrt{\Delta}}{|1-k^{2}|}=\frac{2\sqrt{2}\sqrt{3-k^{2}}}{|1-k^{2}|}
 \]
 
 因为 \(E=(x_{1},kx_{1}+2)\)，\(F=(x_{2},kx_{2}+2)\)，所以
 \[
-S_{\triangle OEF}=\frac12\left|x_{1}(kx_{2}+2)-x_{2}(kx_{1}+2)\right|=|x_{1}-x_{2}|.
+S_{\triangle OEF}=\frac12\left|x_{1}(kx_{2}+2)-x_{2}(kx_{1}+2)\right|=|x_{1}-x_{2}|
 \]
 由题设 \(S_{\triangle OEF}\geqslant2\sqrt{2}\)，得
 \[
-\frac{\sqrt{3-k^{2}}}{|1-k^{2}|}\geqslant1.
+\frac{\sqrt{3-k^{2}}}{|1-k^{2}|}\geqslant1
 \]
 结合 \(3-k^{2}>0\)，平方并整理得
 \[
-3-k^{2}\geqslant(1-k^{2})^{2}\quad\Longleftrightarrow\quad (k^{2}-2)(k^{2}+1)\leqslant0.
+3-k^{2}\geqslant(1-k^{2})^{2}\quad\Longleftrightarrow\quad (k^{2}-2)(k^{2}+1)\leqslant0
 \]
 所以 \(k^{2}\leqslant2\). 再排除 \(k^{2}=1\) 时直线只与双曲线有一个交点的情形，得直线 \(l\) 斜率的取值范围为
 \[
-[-\sqrt{2},-1)\cup(-1,1)\cup(1,\sqrt{2}].
+[-\sqrt{2},-1)\cup(-1,1)\cup(1,\sqrt{2}]
 \]
 \end{enumerate}
 \end{solution}
@@ -370,7 +642,7 @@ S_{\triangle OEF}=\frac12\left|x_{1}(kx_{2}+2)-x_{2}(kx_{1}+2)\right|=|x_{1}-x_{
 4(t - 10)(3t - 41) + 50, & 10 < t \leqslant 12.
 \end{cases}\)
 \begin{enumerate}
-\item 该水库的蓄水量小于 \(50\) 的时期称为枯水期. 以 \(i-1<t<i\) 表示第 \(i\) 月份（\(i=1,2,\dots,12\)），同一年内哪几个月份是枯水期？
+\item 该水库的蓄水量小于 \(50\) 的时期称为枯水期. 以 \(i-1<t<i\) 表示第 \(i\) 月份（\(i=1\)，\(2\)，\(\dots\)，\(12\)），同一年内哪几个月份是枯水期？
 \item 求一年内该水库的最大蓄水量 （取 \(e = 2.7\) 计算）.
 \end{enumerate}
 \end{problem}
@@ -379,21 +651,21 @@ S_{\triangle OEF}=\frac12\left|x_{1}(kx_{2}+2)-x_{2}(kx_{1}+2)\right|=|x_{1}-x_{
 \begin{enumerate}
 \item 当 \(0<t\leqslant10\) 时，\(\e^{t/4}>0\)，且
 \[
-V(t)-50=(-t^{2}+14t-40)\e^{t/4}=-(t-4)(t-10)\e^{t/4}.
+V(t)-50=(-t^{2}+14t-40)\e^{t/4}=-(t-4)(t-10)\e^{t/4}
 \]
 因此在这一段上，\(V(t)<50\) 当且仅当 \(0<t<4\). 当 \(10<t\leqslant12\) 时，\(t-10>0\)，\(3t-41\leqslant-5<0\)，所以
 \[
-V(t)-50=4(t-10)(3t-41)<0.
+V(t)-50=4(t-10)(3t-41)<0
 \]
 综上，枯水期对应的时间范围为 \(0<t<4\) 或 \(10<t\leqslant12\). 由于第 \(i\) 月份表示为 \(i-1<t<i\)，所以同一年内的枯水月份为第 \(1\)，\(2\)，\(3\)，\(4\)，\(11\)，\(12\) 月.
 
 \item 在 \(0<t<4\) 以及 \(10<t\leqslant12\) 时，已有 \(V(t)<50\)，故最大值只需在 \([4,10]\) 上考察. 对 \(0<t\leqslant10\) 的表达式求导，得
 \[
-V'(t)=\left(-2t+14+\frac{-t^{2}+14t-40}{4}\right)\e^{t/4}=-\frac14(t-8)(t+2)\e^{t/4}.
+V'(t)=\left(-2t+14+\frac{-t^{2}+14t-40}{4}\right)\e^{t/4}=-\frac14(t-8)(t+2)\e^{t/4}
 \]
 所以 \(V'(t)>0\) 当 \(0<t<8\)，\(V'(t)<0\) 当 \(8<t\leqslant10\)，函数在 \(t=8\) 时取得最大值. 此时
 \[
-V(8)=(-64+112-40)\e^{2}+50=8\e^{2}+50.
+V(8)=(-64+112-40)\e^{2}+50=8\e^{2}+50
 \]
 取 \(e=2.7\)，得一年内水库的最大蓄水量为 \(8\times2.7^{2}+50=108.32\) 亿立方米.
 \end{enumerate}
@@ -413,66 +685,58 @@ V(8)=(-64+112-40)\e^{2}+50=8\e^{2}+50.
 \begin{enumerate}
 \item 令 \(c_{n}=a_{n}-3n+21\). 由已知递推式，得
 \[
-c_{n+1}=a_{n+1}-3(n+1)+21=\frac23a_n+n-4-3n-3+21=\frac23c_n.
+c_{n+1}=a_{n+1}-3(n+1)+21=\frac23a_n+n-4-3n-3+21=\frac23c_n
 \]
 又 \(c_1=\lambda+18\)，所以
-\[
-c_n=(\lambda+18)\left(\frac23\right)^{n-1},
-\qquad
-a_n=3n-21+(\lambda+18)\left(\frac23\right)^{n-1}.
-\]
+\(c_n=(\lambda+18)\left(\frac23\right)^{n-1}\)，\(a_n=3n-21+(\lambda+18)\left(\frac23\right)^{n-1}\).
 
-由此 \(\displaystyle\lim_{n\to+\infty}\frac{a_n}{n}=3\)，所以 \(a_n\) 从某一项起恒不为零，且 \(\displaystyle\lim_{n\to+\infty}\frac{a_{n+1}}{a_n}=1\). 若 \(\{a_n\}\) 是等比数列，设其公比为 \(q\)，则由上式必须有 \(q=1\). 但此时数列应为常数列，而
+若 \(a_1=0\)，则由递推式 \(a_2=-3\)，所以 \(\{a_n\}\) 不可能是全零等比数列. 下面设 \(a_1\neq0\). 由此 \(\displaystyle\lim_{n\to+\infty}\frac{a_n}{n}=3\)，所以 \(a_n\) 从某一项起恒不为零，且 \(\displaystyle\lim_{n\to+\infty}\frac{a_{n+1}}{a_n}=1\). 若 \(\{a_n\}\) 是等比数列，设其公比为 \(q\)，则由上式必须有 \(q=1\). 但此时数列应为常数列，而
 \[
-a_{n+1}-a_n=3-\frac{\lambda+18}{3}\left(\frac23\right)^{n-1}\longrightarrow3,
+a_{n+1}-a_n=3-\frac{\lambda+18}{3}\left(\frac23\right)^{n-1}\longrightarrow3
 \]
 不可能对所有正整数 \(n\) 都等于零. 因此对任意实数 \(\lambda\)，数列 \(\{a_n\}\) 都不是等比数列.
 
 \item 由 \(c_n\) 的表达式，得
 \[
-b_n=(-1)^n c_n=(-1)^n(\lambda+18)\left(\frac23\right)^{n-1}.
+b_n=(-1)^n c_n=(-1)^n(\lambda+18)\left(\frac23\right)^{n-1}
 \]
 因此对任意 \(n\)，都有 \(b_{n+1}=-\frac23b_n\). 所以数列 \(\{b_n\}\) 是等比数列，公比为 \(-\frac23\). 当 \(\lambda=-18\) 时，\(b_n\) 为全零数列，上述递推关系仍然成立.
 
 \item 由等比数列前 \(n\) 项和公式，得
 \[
-S_n=b_1\frac{1-\left(-\frac23\right)^n}{1+\frac23}=-\frac35(\lambda+18)\left[1-\left(-\frac23\right)^n\right].
+S_n=b_1\frac{1-\left(-\frac23\right)^n}{1+\frac23}=-\frac35(\lambda+18)\left[1-\left(-\frac23\right)^n\right]
 \]
 记 \(L=-\frac35(\lambda+18)\). 因为 \(1-\left(-\frac23\right)^n>0\)，而题设要求所有 \(S_n>a>0\)，所以必须有 \(L>0\)，即 \(\lambda<-18\).
 
 当 \(n=2m\) 时，\(m\in\N^*\)，有
 \[
-S_{2m}=L\left[1-\left(\frac23\right)^{2m}\right]\geqslant L\left(1-\frac49\right)=\frac59L,
+S_{2m}=L\left[1-\left(\frac23\right)^{2m}\right]\geqslant L\left(1-\frac49\right)=\frac59L
 \]
 等号在 \(m=1\) 时成立. 当 \(n=2m-1\) 时，有
 \[
-S_{2m-1}=L\left[1+\left(\frac23\right)^{2m-1}\right]\leqslant L\left(1+\frac23\right)=\frac53L,
+S_{2m-1}=L\left[1+\left(\frac23\right)^{2m-1}\right]\leqslant L\left(1+\frac23\right)=\frac53L
 \]
 等号在 \(m=1\) 时成立. 同时，偶数项小于 \(L\)，奇数项大于 \(L\)，所以
 \[
-\min_{n\geqslant1}S_n=S_2=\frac59L.
+\min_{n\geqslant1}S_n=S_2=\frac59L
 \]
 并且
 \[
-\max_{n\geqslant1}S_n=S_1=\frac53L.
+\max_{n\geqslant1}S_n=S_1=\frac53L
 \]
 因此，对任意正整数 \(n\) 都有 \(a<S_n<b\) 的充要条件是
 \[
-a<\frac59L.
+a<\frac59L
 \]
 并且
 \[
-\frac53L<b.
+\frac53L<b
 \]
 代入 \(L=-\frac35(\lambda+18)\)，分别得到
-\[
-\lambda<-18-3a,
-\qquad
-\lambda>-18-b.
-\]
+\(\lambda<-18-3a\)，\(\lambda>-18-b\).
 所以当且仅当 \(b>3a\) 时存在满足条件的实数 \(\lambda\)，此时
 \[
--18-b<\lambda<-18-3a.
+-18-b<\lambda<-18-3a
 \]
 当 \(b\leqslant3a\) 时，上述开区间为空，不存在这样的实数 \(\lambda\).
 \end{enumerate}

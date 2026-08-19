@@ -16,6 +16,10 @@
 A
 \end{answer}
 
+\begin{solution}
+若 \(x\in A\cap B\)，则 \(-2<x<1\)，且 \(x<-1\) 或 \(x>3\).由于 \(x<1\)，不可能有 \(x>3\)，所以必须满足 \(-2<x<-1\).因此 \(A\cap B=\{x\mid -2<x<-1\}\)，故选 A.
+\end{solution}
+
 \begin{problem}
 若复数 \((1-\i)(a+\i)\) 在复平面内对应的点在第二象限，则实数 \(a\) 的取值范围是（\quad）
 
@@ -29,6 +33,13 @@ A
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+\[
+(1-\i)(a+\i)=a+\i-a\i-\i^2=(a+1)+(1-a)\i
+\]
+复数对应的点在第二象限，当且仅当实部小于零、虚部大于零，即 \(a+1<0\) 且 \(1-a>0\).两者合并得 \(a<-1\)，故选 B.
+\end{solution}
 
 \begin{problem}
 执行如图所示的程序框图，输出的 \(S\) 值为（\quad）
@@ -45,6 +56,12 @@ B
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+程序开始时 \(k=0\)，\(s=1\).每次先计算 \(s\leftarrow\dfrac{s+1}{s}\)，再令 \(k\leftarrow k+1\)，然后判断是否继续循环.因此各次循环后的数值为
+当 \(k=0\) 时，计算得 \(s=\frac{1+1}{1}=2\)，随后 \(k=1\)；当 \(k=1\) 时，计算得 \(s=\frac{2+1}{2}=\frac32\)，随后 \(k=2\)；当 \(k=2\) 时，计算得 \(s=\frac{\frac32+1}{\frac32}=\frac53\)，随后 \(k=3\).
+此时 \(k<3\) 不成立，输出 \(s=\dfrac53\)，故选 C.
+\end{solution}
 
 \begin{problem}
 若 \(x\)，\(y\) 满足约束条件 \(\begin{cases}
@@ -64,6 +81,14 @@ y\le x,
 D
 \end{answer}
 
+\begin{solution}
+由 \(y\le x\)，得
+\[
+x+2y\le x+2x=3x
+\]
+又由 \(x\le3\)，得 \(x+2y\le9\).当 \(x=3\)，\(y=3\) 时，三个约束分别满足 \(3\le3\)、\(3+3\ge2\) 和 \(3\le3\)，且 \(x+2y=9\).所以最大值为 \(9\)，故选 D.
+\end{solution}
+
 \begin{problem}
 已知函数 \(f(x)=3^x-\left(\dfrac13\right)^x\)，则 \(f(x)\)（\quad）
 
@@ -78,6 +103,18 @@ D
 A
 \end{answer}
 
+\begin{solution}
+因为
+\[
+f(-x)=3^{-x}-\left(\frac13\right)^{-x}=3^{-x}-3^x=-f(x)
+\]
+所以 \(f(x)\) 是奇函数.又
+\[
+f'(x)=\ln3\cdot3^x+\ln3\cdot3^{-x}=\ln3\left(3^x+3^{-x}\right)>0
+\]
+所以 \(f(x)\) 在 \(\R\) 上是增函数，故选 A.
+\end{solution}
+
 \begin{problem}
 设 \(\bs{m}\)，\(\bs{n}\) 为非零向量，则“存在负数 \(\lambda\)，使得 \(\bs{m}=\lambda\bs{n}\)”是“\(\bs{m}\cdot \bs{n}<0\)”的（\quad）
 
@@ -91,6 +128,14 @@ A
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+若存在负数 \(\lambda\) 使 \(\bs{m}=\lambda\bs{n}\)，则
+\[
+\bs{m}\cdot\bs{n}=\lambda\bs{n}\cdot\bs{n}=\lambda\lVert\bs{n}\rVert^2<0
+\]
+所以该条件是 \(\bs{m}\cdot\bs{n}<0\) 的充分条件.反之，取 \(\bs{n}=(1,0)\)，\(\bs{m}=(-1,1)\)，有 \(\bs{m}\cdot\bs{n}=-1<0\)，但 \(\bs{m}\) 不是 \(\bs{n}\) 的实数倍，故不是必要条件.因此选 A.
+\end{solution}
 
 \begin{problem}
 某四棱锥的三视图如图所示，则该四棱锥的最长棱的长度为（\quad）
@@ -108,6 +153,14 @@ A
 B
 \end{answer}
 
+\begin{solution}
+由三个视图还原可知，底面 \(ABCD\) 是边长为 \(2\) 的正方形，且顶点 \(P\) 在 \(C\) 的正上方，\(PC\perp\) 平面 \(ABCD\)，\(PC=2\).因此 \(AC=2\sqrt2\)，在直角三角形 \(PCA\) 中，
+\[
+PA^2=PC^2+CA^2=2^2+(2\sqrt2)^2=12
+\]
+所以 \(PA=2\sqrt3\).其余底面棱长为 \(2\)，\(PC=2\)，\(PB=PD=2\sqrt2\)，故最长棱为 \(PA\)，选 B.
+\end{solution}
+
 \begin{problem}
 根据有关资料，围棋状态空间复杂度的上限 \(M\) 约为 \(3^{361}\)，而可观测宇宙中普通物质的原子总数 \(N\) 约为 \(10^{80}\)，则下列各数中与 \(\dfrac{M}{N}\) 最接近的是（\quad）
 
@@ -124,6 +177,14 @@ B
 D
 \end{answer}
 
+\begin{solution}
+取常用对数，有
+\[
+\lg\frac{M}{N}=361\lg3-80\approx361\times0.48-80=93.28
+\]
+所以 \(\dfrac{M}{N}\) 约为 \(10^{93.28}\)，在所给各数中与 \(10^{93}\) 最接近，故选 D.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -134,6 +195,14 @@ D
 \(2\)
 \end{answer}
 
+\begin{solution}
+双曲线的标准形式中 \(a^2=1\)，\(b^2=m\)，且 \(c^2=a^2+b^2=1+m\).由离心率条件
+\[
+\frac{c}{a}=\sqrt3
+\]
+可得 \(\dfrac{c^2}{a^2}=3\)，即 \(1+m=3\)，所以 \(m=2\).
+\end{solution}
+
 \begin{problem}
 若等差数列 \(\{a_n\}\) 和等比数列 \(\{b_n\}\) 满足 \(a_1=b_1=-1\)，\(a_4=b_4=8\)，则 \(\dfrac{a_2}{b_2}=\fillinblank{}\).
 \end{problem}
@@ -141,6 +210,21 @@ D
 \begin{answer}
 \(1\)
 \end{answer}
+
+\begin{solution}
+设等差数列 \(\{a_n\}\) 的公差为 \(d\)，则
+\[
+-1+3d=8
+\]
+所以 \(d=3\)，从而 \(a_2=-1+3=2\).设等比数列 \(\{b_n\}\) 的公比为 \(q\)，则
+\[
+-1\cdot q^3=8
+\]
+所以 \(q=-2\)，从而 \(b_2=(-1)(-2)=2\).因此
+\[
+\frac{a_2}{b_2}=\frac22=1
+\]
+\end{solution}
 
 \begin{problem}
 在极坐标系中，点 \(A\) 在圆 \(\rho^2-2\rho\cos\theta-4\rho\sin\theta+4=0\) 上，点 \(P\) 的坐标为 \((1,0)\)，则 \(|AP|\) 的最小值为\fillinblank{}.
@@ -150,6 +234,18 @@ D
 \(1\)
 \end{answer}
 
+\begin{solution}
+利用 \(x=\rho\cos\theta\)，\(y=\rho\sin\theta\)，圆的方程化为
+\[
+x^2+y^2-2x-4y+4=0
+\]
+即
+\[
+(x-1)^2+(y-2)^2=1
+\]
+所以该圆的圆心为 \(C=(1,2)\)，半径为 \(1\).点 \(P\) 的直角坐标为 \((1,0)\)，故 \(|CP|=2\).点 \(A\) 在圆上时，三角不等式给出 \(|AP|\ge|CP|-|CA|=2-1=1\)，且当 \(A\) 位于线段 \(CP\) 上时取等号.因此 \(|AP|\) 的最小值为 \(1\).
+\end{solution}
+
 \begin{problem}
 在平面直角坐标系 \(xOy\) 中，角 \(\alpha\) 与角 \(\beta\) 均以 \(Ox\) 为始边，它们的终边关于 \(y\) 轴对称，若 \(\sin\alpha=\dfrac13\)，则 \(\cos(\alpha-\beta)=\fillinblank{}\).
 \end{problem}
@@ -158,6 +254,13 @@ D
 \(-\dfrac{7}{9}\)
 \end{answer}
 
+\begin{solution}
+终边关于 \(y\) 轴对称，所以 \(\sin\beta=\sin\alpha=\dfrac13\)，\(\cos\beta=-\cos\alpha\).由同角关系，\(\cos^2\alpha=1-\dfrac19=\dfrac89\).于是
+\[
+\cos(\alpha-\beta)=\cos\alpha\cos\beta+\sin\alpha\sin\beta=-\cos^2\alpha+\sin^2\alpha=-\frac89+\frac19=-\frac79
+\]
+\end{solution}
+
 \begin{problem}
 能够说明“设 \(a\)，\(b\)，\(c\) 是任意实数. 若 \(a>b>c\)，则 \(a+b>c\)”是假命题的一组整数 \(a\)，\(b\)，\(c\) 的值依次为\fillinblank{}.
 \end{problem}
@@ -165,6 +268,14 @@ D
 \begin{answer}
 \(-1\)，\(-2\)，\(-3\)
 \end{answer}
+
+\begin{solution}
+取 \(a=-1\)，\(b=-2\)，\(c=-3\)，则 \(a>b>c\) 成立，但
+\[
+a+b=-1+(-2)=-3=c
+\]
+不满足 \(a+b>c\).因此这组整数可以说明原命题是假命题.
+\end{solution}
 
 \begin{problem}
 三名工人加工同一种零件，他们在一天中的工作情况如图所示，其中点 \(A_i\) 的横，纵坐标分别为第 \(i\) 名工人上午的工作时间和加工的零件数，点 \(B_i\) 的横，纵坐标分别为第 \(i\) 名工人下午的工作时间和加工的零件数，\(i=1\)，\(2\)，\(3\).
@@ -181,6 +292,20 @@ D
 \(Q_1\)，\(p_2\)
 \end{answer}
 
+\begin{solution}
+设线段 \(A_iB_i\) 的中点为 \(T_i\).若 \(A_i=(u_i,v_i)\)，\(B_i=(s_i,t_i)\)，则
+\[
+Q_i=v_i+t_i=2y_{T_i}
+\]
+由图比较三个中点的纵坐标，\(T_1\) 的纵坐标最大，所以 \(Q_1\) 最大.
+
+又总工作时间为 \(u_i+s_i=2x_{T_i}\)，故
+\[
+p_i=\frac{Q_i}{u_i+s_i}=\frac{2y_{T_i}}{2x_{T_i}}=\frac{y_{T_i}}{x_{T_i}}
+\]
+因此 \(p_i\) 等于射线 \(OT_i\) 的斜率.由图可知射线 \(OT_2\) 的斜率最大，所以 \(p_2\) 最大.
+\end{solution}
+
 \section{解答题}
 
 \begin{problem}
@@ -194,8 +319,33 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item \(\dfrac{3\sqrt{3}}{14}\).
-\item 三角形 \(ABC\) 的面积为 \(6\sqrt{3}\).
+\item 由正弦定理，
+\[
+\frac{c}{\sin C}=\frac{a}{\sin A}
+\]
+所以
+\[
+\sin C=\frac{c}{a}\sin A=\frac37\cdot\frac{\sqrt3}{2}=\frac{3\sqrt3}{14}
+\]
+
+\item 当 \(a=7\) 时，\(c=3\).由 \(c<a\) 以及三角形中大边对大角可知 \(C<A=60^\circ\)，所以
+\[
+\cos C=\sqrt{1-\sin^2C}=\sqrt{1-\frac{27}{196}}=\frac{13}{14}
+\]
+于是
+\[
+\begin{aligned}
+\sin B&=\sin(180^\circ-A-C)=\sin(A+C)\\
+&=\sin A\cos C+\cos A\sin C\\
+&=\frac{\sqrt3}{2}\cdot\frac{13}{14}+\frac12\cdot\frac{3\sqrt3}{14}
+=\frac{4\sqrt3}{7}.
+\end{aligned}
+\]
+因此
+\[
+S_{\triangle ABC}=\frac12ac\sin B
+=\frac12\cdot7\cdot3\cdot\frac{4\sqrt3}{7}=6\sqrt3
+\]
 \end{enumerate}
 \end{solution}
 
@@ -213,10 +363,44 @@ D
 \end{problem}
 
 \begin{solution}
+建立空间直角坐标系如下：取 \(AD\) 的中点 \(G\) 为原点，以 \(AD\) 方向、\(AB\) 方向和垂直于底面的方向为三个坐标轴，并令
+\(A=(-2,0,0)\)，\(D=(2,0,0)\)，\(B=(-2,4,0)\)，\(C=(2,4,0)\).
+由于 \(PA=PD\)，有 \(PG\perp AD\)；又因平面 \(PAD\perp\) 平面 \(ABCD\)，所以 \(PG\perp\) 平面 \(ABCD\).由 \(PA^2=PG^2+AG^2\)，得 \(PG^2=6-4=2\)，故可取 \(P=(0,0,\sqrt2)\).
+
 \begin{enumerate}
-\item \(M\) 为 \(PB\) 的中点.
-\item 二面角 \(B-PD-A\) 的大小为 \(60^\circ\).
-\item 正弦值为 \(\dfrac{2\sqrt{6}}{9}\).
+\item 设 \(O=AC\cap BD\).正方形的对角线互相平分，所以 \(O\) 是 \(BD\) 的中点.平面 \(PBD\) 与平面 \(MAC\) 的交线为 \(OM\).因为 \(PD\subset\) 平面 \(PBD\)，且 \(PD\parallel\) 平面 \(MAC\)，所以 \(PD\parallel OM\).在 \(\triangle PBD\) 中，\(O\) 是 \(BD\) 的中点，且过 \(O\) 的直线 \(OM\) 平行于 \(PD\)，由三角形中位线的逆定理，\(M\) 是 \(PB\) 的中点.
+
+\item 由上问，
+\[
+M=\frac{P+B}{2}=\left(-1,2,\frac{\sqrt2}{2}\right)
+\]
+平面 \(PBD\) 内的两个方向向量可取
+\(\overrightarrow{PD}=(2,0,-\sqrt2)\)，\(\overrightarrow{PB}=(-2,4,-\sqrt2)\).
+取其叉积的一个法向量
+\[
+\bs{n}_1=(\sqrt2,\sqrt2,2)
+\]
+平面 \(PAD\) 的一个法向量为 \(\bs{n}_2=(0,1,0)\).因此两平面所成的锐角 \(\theta\) 满足
+\[
+\cos\theta=\frac{|\bs{n}_1\cdot\bs{n}_2|}{\lVert\bs{n}_1\rVert\lVert\bs{n}_2\rVert}
+=\frac{\sqrt2}{2\sqrt2}=\frac12
+\]
+故二面角 \(B-PD-A\) 的大小为 \(60^\circ\).
+
+\item 直线 \(MC\) 的一个方向向量为
+\[
+\overrightarrow{MC}=C-M=\left(3,2,-\frac{\sqrt2}{2}\right)
+\]
+设直线 \(MC\) 与平面 \(BDP\) 所成的角为 \(\varphi\).利用直线与平面夹角和法向量的关系，
+\[
+\sin\varphi=\frac{|\overrightarrow{MC}\cdot\bs{n}_1|}{\lVert\overrightarrow{MC}\rVert\lVert\bs{n}_1\rVert}
+\]
+其中
+\(\overrightarrow{MC}\cdot\bs{n}_1=4\sqrt2\)，\(\lVert\overrightarrow{MC}\rVert=\sqrt{9+4+\frac12}=\frac{3\sqrt6}{2}\)，\(\lVert\bs{n}_1\rVert=2\sqrt2\).
+所以
+\[
+\sin\varphi=\frac{4\sqrt2}{\frac{3\sqrt6}{2}\cdot2\sqrt2}=\frac{2\sqrt6}{9}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -234,9 +418,31 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item 概率为 \(\dfrac{3}{10}\).
-\item \(\xi\) 的分布列为 \(P(\xi=0)=\dfrac{1}{6}\)，\(P(\xi=1)=\dfrac{2}{3}\)，\(P(\xi=2)=\dfrac{1}{6}\)，且 \(E(\xi)=1\).
-\item 服药者指标 \(y\) 数据的方差大于未服药者.
+\item 由散点图可数得服药者中指标 \(y<60\) 的患者有 \(15\) 名.因此所求概率为
+\[
+P=\frac{15}{50}=\frac3{10}
+\]
+
+\item 由图可知，\(A\)、\(C\) 的指标 \(x>1.7\)，\(B\)、\(D\) 的指标 \(x<1.7\).从四人中任选两人的基本事件数为 \(\binom42=6\).所以
+\[
+P(\xi=0)=\frac{\binom22}{\binom42}=\frac16
+\]
+因为只有选中 \(B\)，\(D\) 时 \(\xi=0\)；
+\[
+P(\xi=2)=\frac{\binom22}{\binom42}=\frac16
+\]
+因为只有选中 \(A\)，\(C\) 时 \(\xi=2\)；
+\[
+P(\xi=1)=\frac{\binom21\binom21}{\binom42}=\frac46=\frac23
+\]
+因此 \(\xi\) 的分布列为
+\(P(\xi=0)=\frac16\)，\(P(\xi=1)=\frac23\)，\(P(\xi=2)=\frac16\).
+其数学期望为
+\[
+E(\xi)=0\cdot\frac16+1\cdot\frac23+2\cdot\frac16=1
+\]
+
+\item 从散点图看，服药者的指标 \(y\) 在纵轴方向上的分布比未服药者更分散，所以服药者指标 \(y\) 数据的方差大于未服药者指标 \(y\) 数据的方差.
 \end{enumerate}
 \end{solution}
 
@@ -251,8 +457,29 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item 抛物线方程为 \(y^2=x\)，焦点为 \(\left(\dfrac14,0\right)\)，准线为 \(x=-\dfrac14\).
-\item \(A\) 为线段 \(BM\) 的中点.
+\item 将 \(P(1,1)\) 代入 \(y^2=2px\)，得 \(1=2p\)，所以 \(p=\dfrac12\)，抛物线方程为 \(y^2=x\).写成 \(y^2=4ax\) 的形式可得 \(a=\dfrac14\)，所以焦点为 \(\left(\dfrac14,0\right)\)，准线方程为 \(x=-\dfrac14\).
+
+\item 直线 \(l\) 不能是竖直线或水平线，否则不可能与抛物线有两个不同交点，故可设其方程为
+\[
+y=kx+\frac12
+\]
+其中 \(k\ne0\).设 \(M=(x_1,y_1)\)，\(N=(x_2,y_2)\).由于 \(x=y^2\)，将直线方程改写为
+\[
+k y^2-y+\frac12=0
+\]
+所以由韦达定理，
+\(y_1+y_2=\frac1k\)，\(y_1y_2=\frac1{2k}\)
+从而 \(y_1+y_2=2y_1y_2\)，且 \(y_2\ne0\).
+
+直线 \(OP\) 的方程为 \(y=x\)，故过 \(M\) 的竖线与 \(OP\) 的交点为 \(A=(x_1,x_1)\).又直线 \(ON\) 的斜率为 \(\dfrac{y_2}{x_2}=\dfrac1{y_2}\)，所以
+\[
+B=\left(x_1,\frac{x_1}{y_2}\right)=\left(x_1,\frac{y_1^2}{y_2}\right)
+\]
+而
+\[
+y_1+\frac{y_1^2}{y_2}=\frac{y_1(y_1+y_2)}{y_2}=2y_1^2=2x_1
+\]
+因此 \(A\)、\(B\)、\(M\) 的横坐标相同，且 \(A\) 的纵坐标是 \(B\) 与 \(M\) 的纵坐标的平均值，即 \(A\) 为线段 \(BM\) 的中点.
 \end{enumerate}
 \end{solution}
 
@@ -267,8 +494,30 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item 切线方程为 \(y=1\).
-\item 最大值为 \(1\)，最小值为 \(-\dfrac{\pi}{2}\).
+\item
+\[
+f'(x)=\e^x(\cos x-\sin x)-1
+\]
+所以 \(f(0)=1\)，\(f'(0)=0\).切线过点 \((0,1)\)，斜率为 \(0\)，故切线方程为 \(y=1\).
+
+\item 令
+\[
+g(x)=f'(x)=\e^x(\cos x-\sin x)-1
+\]
+则
+\[
+g'(x)=-2\e^x\sin x
+\]
+当 \(x\in\left[0,\dfrac{\pi}{2}\right]\) 时，\(g'(x)\le0\)，所以 \(g(x)\) 在该区间上单调递减.又 \(g(0)=0\)，故对该区间内的 \(x\)，有 \(g(x)\le0\)，即 \(f'(x)\le0\).因此 \(f(x)\) 在 \(\left[0,\dfrac{\pi}{2}\right]\) 上单调递减.
+
+所以最大值为
+\[
+f(0)=1
+\]
+最小值为
+\[
+f\left(\frac\pi2\right)=\e^{\frac\pi2}\cos\frac\pi2-\frac\pi2=-\frac\pi2
+\]
 \end{enumerate}
 \end{solution}
 
@@ -283,7 +532,53 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item \(c_1=0\)，\(c_2=-1\)，\(c_3=-2\)，且 \(\{c_n\}\) 是等差数列.
-\item 题述两个结论至少有一个成立.
+\item 此时
+\[
+b_i-a_in=(2i-1)-in=1-n+(i-1)(2-n)
+\]
+当 \(n=1\) 时，\(c_1=0\)；当 \(n=2\) 时，所有候选值均为 \(-1\)，所以 \(c_2=-1\)；当 \(n\ge2\) 时，\(2-n\le0\)，候选值随 \(i\) 不增，最大值在 \(i=1\) 处取得，故 \(c_n=1-n\).特别地，\(c_3=-2\).于是
+\(c_1=0\)，\(c_2=-1\)，\(c_3=-2\)
+且对任意正整数 \(n\)，都有 \(c_{n+1}-c_n=-1\)，所以 \(\{c_n\}\) 是等差数列.
+
+\item 设 \(\{a_n\}\)、\(\{b_n\}\) 的公差分别为 \(d_a\)、\(d_b\).对固定的 \(n\)，记
+\(t_{i,n}=b_i-a_in\)，\((1\le i\le n)\).
+由等差数列通项公式，
+\[
+t_{i,n}=b_1-a_1n+(i-1)(d_b-nd_a)
+\]
+因此，当 \(d_b-nd_a\le0\) 时，\(c_n=t_{1,n}=b_1-a_1n\)；当 \(d_b-nd_a\ge0\) 时，\(c_n=t_{n,n}=b_n-a_nn\).
+
+若 \(d_a=0\)，则 \(d_b-nd_a=d_b\) 与 \(n\) 无关.如果 \(d_b\le0\)，则对所有 \(n\)，\(c_n=b_1-a_1n\)；如果 \(d_b>0\)，则对所有 \(n\)，\(c_n=b_n-a_1n\).这两种情形中的 \(c_n\) 都是关于 \(n\) 的一次式，所以取 \(m=1\) 即可.
+
+若 \(d_a>0\)，则存在正整数 \(m\)，使得当 \(n\ge m\) 时，\(d_b-nd_a\le0\).此时
+\(c_n=b_1-a_1n\)，\((n\ge m)\)
+所以 \(c_m\)，\(c_{m+1}\)，\(\dots\) 是等差数列.
+
+若 \(d_a<0\)，则存在正整数 \(m_0\)，使得当 \(n\ge m_0\) 时，\(d_b-nd_a>0\).此时
+\[
+\begin{aligned}
+c_n&=b_n-a_nn\\
+&=-d_an^2+(d_b-a_1+d_a)n+b_1-d_b,
+\end{aligned}
+\]
+从而
+\(\frac{c_n}{n}=An+B+\frac{C}{n}\)，\(A=-d_a>0\)，\(B=d_b-a_1+d_a\)，\(C=b_1-d_b\).
+现任取正数 \(M\).若 \(C\ge0\)，取
+\[
+m=\max\left\{m_0,\left\lfloor\frac{M-B}{A}\right\rfloor+1\right\};
+\]
+当 \(n\ge m\) 时，\(C/n\ge0\)，且
+\[
+\frac{c_n}{n}\ge An+B\ge Am+B>M
+\]
+若 \(C<0\)，取
+\[
+m=\max\left\{m_0,\left\lfloor\frac{M-B-C}{A}\right\rfloor+1\right\}
+\]
+当 \(n\ge m\) 时，因 \(n\ge1\) 且 \(C<0\)，有 \(C/n\ge C\)，故
+\[
+\frac{c_n}{n}\ge An+B+C\ge Am+B+C>M
+\]
+所以在 \(d_a<0\) 时，第一种结论成立.综上，题述两个结论至少有一个成立.
 \end{enumerate}
 \end{solution}

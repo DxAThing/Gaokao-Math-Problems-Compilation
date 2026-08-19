@@ -33,7 +33,11 @@ C
 \end{answer}
 
 \begin{solution}
-由指数运算律，\(f(x+y)=a^{x+y}=a^xa^y=f(x)f(y)\). 其他三个等式对任意实数 \(x\)，\(y\) 并不恒成立. 因此选 C.
+由指数运算律，对任意实数 \(x\)，\(y\) 都有
+\[
+f(x+y)=a^{x+y}=a^xa^y=f(x)f(y)
+\]
+其余选项均可排除：选 A 时取 \(x=2\)，\(y=3\)，则左边为 \(a^6\)，右边为 \(a^5\)，不相等；选 B 或 D 时取 \(x=y=0\)，则左边为 \(1\)，右边为 \(2\). 因此选 C.
 \end{solution}
 
 \begin{problem}
@@ -53,11 +57,11 @@ D
 \begin{solution}
 由组合数的阶乘表达式，
 \[
-\frac{\mathrm C_{2n}^{n}}{\mathrm C_{2n+2}^{n+1}}=\frac{(2n)!}{(n!)^2}\cdot\frac{((n+1)!)^2}{(2n+2)!}=\frac{n+1}{2(2n+1)}.
+\frac{\mathrm C_{2n}^{n}}{\mathrm C_{2n+2}^{n+1}}=\frac{(2n)!}{(n!)^2}\cdot\frac{((n+1)!)^2}{(2n+2)!}=\frac{n+1}{2(2n+1)}
 \]
-因此
+于是
 \[
-\lim_{n\to\infty}\frac{\mathrm C_{2n}^{n}}{\mathrm C_{2n+2}^{n+1}}=\lim_{n\to\infty}\frac{n+1}{2(2n+1)}=\frac14.
+\lim_{n\to\infty}\frac{\mathrm C_{2n}^{n}}{\mathrm C_{2n+2}^{n+1}}=\lim_{n\to\infty}\frac{n+1}{2(2n+1)}=\frac14
 \]
 所以选 D.
 \end{solution}
@@ -77,7 +81,11 @@ C
 \end{answer}
 
 \begin{solution}
-由 \(y=-\sqrt{1-x}\) 可知 \(y\leqslant0\)，且 \(y^2=1-x\)，从而 \(x=1-y^2\). 交换 \(x\)，\(y\) 得反函数 \(y=1-x^2\)，其定义域是原函数的值域 \(x\leqslant0\). 因此选 C.
+原函数的定义域为 \(x\leqslant1\)，且 \(y=-\sqrt{1-x}\leqslant0\)，所以其值域为 \((-\infty,0]\). 又
+\[
+y=-\sqrt{1-x}\Longleftrightarrow y^2=1-x\Longleftrightarrow x=1-y^2
+\]
+交换自变量与因变量，反函数为 \(y=1-x^2\)，定义域为原函数的值域 \(x\leqslant0\). 因此选 C.
 \end{solution}
 
 \begin{problem}
@@ -95,12 +103,16 @@ A
 \end{answer}
 
 \begin{solution}
-将极坐标方程化为直角坐标方程，得
+利用 \(x=\rho\cos\theta\)，\(y=\rho\sin\theta\)，将极坐标方程化为直角坐标方程，得
 \[
 x^2+y^2=4x+3y\Longleftrightarrow
-(x-2)^2+\left(y-\frac32\right)^2=\frac{25}{4}.
+(x-2)^2+\left(y-\frac32\right)^2=\frac{25}{4}
 \]
-所以圆心的直角坐标为 \((2,\frac32)\)，其极径为 \(\frac52\). 又圆心在第一象限，故极角满足 \(\sin\theta=\frac{3/2}{5/2}=\frac35\)，圆心的极坐标为 \(\left(\frac52,\arcsin\frac35\right)\). 因此选 A.
+所以圆心的直角坐标为 \(\left(2,\frac32\right)\)，极径为
+\[
+\rho=\sqrt{2^2+\left(\frac32\right)^2}=\frac52
+\]
+圆心在第一象限，故极角满足 \(\sin\theta=\frac{3/2}{5/2}=\frac35\)，圆心的极坐标为 \(\left(\frac52,\arcsin\frac35\right)\). 因此选 A.
 \end{solution}
 
 \begin{problem}
@@ -118,11 +130,11 @@ B
 \end{answer}
 
 \begin{solution}
-设 \(P=(1,t)\)，则 \(\overrightarrow{OP}=(1,t)\). 以 \(OP\) 为直角边作等腰直角三角形时，\(\overrightarrow{OQ}\) 是 \(\overrightarrow{OP}\) 旋转 \(90^\circ\) 所得的向量，因此
+设 \(P=(1,t)\)，其中 \(t\in\R\)，则 \(\overrightarrow{OP}=(1,t)\). 以 \(OP\) 为直角边、\(O\) 为直角顶点作等腰直角三角形时，\(\overrightarrow{OQ}\) 是 \(\overrightarrow{OP}\) 旋转 \(90^\circ\) 所得的向量，因此
 \[
-Q=(-t,1)\quad\text{或}\quad Q=(t,-1).
+Q=(-t,1)\quad\text{或}\quad Q=(t,-1)
 \]
-所以 \(Q\) 的轨迹是两条直线 \(y=1\) 与 \(y=-1\)，选 B.
+且 \(t\) 可取任意实数，所以 \(Q\) 的轨迹是两条直线 \(y=1\) 与 \(y=-1\)，选 B.
 \end{solution}
 
 \begin{problem}
@@ -140,11 +152,15 @@ D
 \end{answer}
 
 \begin{solution}
-因 \(x>0\)，令 \(u=x^6\)，则 \(u>0\)，且 \(x=u^{1/6}\). 因而
+由对数的定义域知 \(x>0\). 令 \(u=x^6\)，则 \(u>0\)，且 \(x=u^{1/6}\)，因而
 \[
-f(u)=\log_2u^{1/6}=\frac16\log_2u.
+f(u)=\log_2u^{1/6}=\frac16\log_2u
 \]
-取 \(u=8\)，得 \(f(8)=\frac16\log_2 8=\frac12\)，所以选 D.
+取 \(u=8\)，得
+\[
+f(8)=\frac16\log_2 8=\frac16\cdot3=\frac12
+\]
+所以选 D.
 \end{solution}
 
 \begin{problem}
@@ -162,9 +178,15 @@ B
 \end{answer}
 
 \begin{solution}
-因三角形 \(ABC\) 为锐角三角形，\(C<\frac\pi2\)，所以 \(A+B=\pi-C>\frac\pi2\). 因而 \(A>\frac\pi2-B\)，从而 \(\sin A>\cos B\)，点 \(P\) 的横坐标为负.
-
-同理 \(B>\frac\pi2-A\)，所以 \(\sin B>\cos A\)，点 \(P\) 的纵坐标为正. 因此 \(P\) 在第二象限，选 B.
+因为 \(\triangle ABC\) 是锐角三角形，所以 \(A+B=\pi-C>\frac\pi2\). 因而 \(A>\frac\pi2-B\)，在 \(\left(0,\frac\pi2\right)\) 内正弦函数递增，故
+\[
+\sin A>\sin\left(\frac\pi2-B\right)=\cos B
+\]
+所以 \(P\) 的横坐标为负. 由于 \(B>\frac\pi2-A\)，且正弦函数在 \(\left(0,\frac\pi2\right)\) 内递增，有
+\[
+\sin B>\sin\left(\frac\pi2-A\right)=\cos A
+\]
+所以 \(P\) 的纵坐标为正. 因此 \(P\) 在第二象限，选 B.
 \end{solution}
 
 \begin{problem}
@@ -182,9 +204,15 @@ C
 \end{answer}
 
 \begin{solution}
-设圆锥底面半径为 \(r\)，母线长为 \(l\). 侧面展开图为半径 \(l\) 的半圆，所以其弧长为 \(\pi l\)，这等于圆锥底面周长 \(2\pi r\). 因此 \(l=2r\).
-
-设圆锥轴截面顶角为 \(\varphi\). 在轴截面的一半中，\(\sin\frac\varphi2=\frac rl=\frac12\)，且 \(0<\frac\varphi2<\frac\pi2\)，所以 \(\frac\varphi2=30^\circ\)，即 \(\varphi=60^\circ\). 因此选 C.
+设圆锥底面半径为 \(r\)，母线长为 \(l\). 侧面展开图是半径为 \(l\) 的半圆，其弧长等于圆锥底面周长，所以
+\[
+\pi l=2\pi r\Longrightarrow l=2r
+\]
+设圆锥轴截面顶角为 \(\varphi\). 在轴截面的一半中，斜边为 \(l\)，与顶角对应的对边为 \(r\)，故
+\[
+\sin\frac\varphi2=\frac rl=\frac12
+\]
+由于 \(0<\frac\varphi2<\frac\pi2\)，所以 \(\frac\varphi2=30^\circ\)，即 \(\varphi=60^\circ\). 因此选 C.
 \end{solution}
 
 \begin{problem}
@@ -202,11 +230,11 @@ B
 \end{answer}
 
 \begin{solution}
-由基本不等式，
+因为 \(3^a\)，\(3^b\) 均为正数，由基本不等式，
 \[
-3^a+3^b\geqslant2\sqrt{3^a3^b}=2\cdot3^{(a+b)/2}=6.
+3^a+3^b\geqslant2\sqrt{3^a3^b}=2\cdot3^{(a+b)/2}=6
 \]
-当且仅当 \(3^a=3^b\)，即 \(a=b=1\) 时取等号. 所以最小值为 \(6\)，选 B.
+当且仅当 \(3^a=3^b\) 时取等号；由于 \(3>1\)，这等价于 \(a=b\)，再结合 \(a+b=2\) 得 \(a=b=1\). 所以最小值为 \(6\)，选 B.
 \end{solution}
 
 \begin{problem}
@@ -237,32 +265,24 @@ C
 
 \begin{solution}
 取正方体棱长为 \(1\)，以图中中央正方形 \(ABCD\) 所在平面为 \(z=0\)，令
-\[
-A=(0,0,0),\quad B=(1,0,0),\quad C=(1,1,0),\quad D=(0,1,0).
-\]
+\(A=(0,0,0)\)，\(B=(1,0,0)\)，\(C=(1,1,0)\)，\(D=(0,1,0)\).
 由展开图折成立方体后，可取 \(E=(0,0,1)\)，\(N=(0,1,1)\)，\(M=(1,1,1)\). 于是
-\[
-\overrightarrow{BM}=(0,1,1),\quad \overrightarrow{ED}=(0,1,-1),
-\]
+\(\overrightarrow{BM}=(0,1,1)\)，\(\overrightarrow{ED}=(0,1,-1)\)
 二者不平行，命题\(\circled{1}\)错误；又
 \[
-\overrightarrow{CN}=(-1,0,1)=\overrightarrow{BE},
+\overrightarrow{CN}=(-1,0,1)=\overrightarrow{BE}
 \]
 所以 \(CN\parallel BE\)，命题\(\circled{2}\)错误.
 
 此外，
-\[
-\overrightarrow{CN}\cdot\overrightarrow{BM}=1,\qquad |CN|=|BM|=\sqrt2,
-\]
+\(\overrightarrow{CN}\cdot\overrightarrow{BM}=1\)，\(|CN|=|BM|=\sqrt2\)
 故 \(CN\) 与 \(BM\) 所成的角为 \(60^\circ\)，命题\(\circled{3}\)正确. 最后
-\[
-\overrightarrow{DM}=(1,0,1),\qquad \overrightarrow{BN}=(-1,1,1),
-\]
+\(\overrightarrow{DM}=(1,0,1)\)，\(\overrightarrow{BN}=(-1,1,1)\)
 且 \(\overrightarrow{DM}\cdot\overrightarrow{BN}=0\)，所以命题\(\circled{4}\)正确. 因此正确命题的序号为 \(\circled{3}\)，\(\circled{4}\)，选 C.
 \end{solution}
 
 \begin{problem}
-根据市场调查结果，预测某种家用商品从年初开始的 \(n\) 个月内累积的需求量 \(S_{n}\)（\(\text{万件}\)）近似地满足 \(S_{n} = \frac{n}{90}(21n - n^{2} - 5)\)（\(n = 1,2,\cdots,12\)）. 按此预测，在本年度内，需求量超过 \(1.5\text{ 万件}\) 的月份是（\(\quad\)）
+根据市场调查结果，预测某种家用商品从年初开始的 \(n\) 个月内累积的需求量 \(S_{n}\)（\(\text{万件}\)）近似地满足 \(S_{n} = \frac{n}{90}(21n - n^{2} - 5)\)（\(n = 1\)，\(2\)，\(\cdots\)，\(12\)）. 按此预测，在本年度内，需求量超过 \(1.5\text{ 万件}\) 的月份是（\(\quad\)）
 
 \choices
     {\(5\text{ 月}\)，\(6\text{ 月}\)}
@@ -278,13 +298,13 @@ C
 \begin{solution}
 记第 \(n\) 个月的实际需求量为 \(T_n\)，并令 \(S_0=0\)，则 \(T_n=S_n-S_{n-1}\). 由题给式子，
 \[
-T_n=\frac{-n^2+15n-9}{30}.
+T_n=\frac{-n^2+15n-9}{30}
 \]
 需求量超过 \(1.5\) 万件等价于
 \[
-\frac{-n^2+15n-9}{30}>\frac32\quad\Longleftrightarrow\quad n^2-15n+54<0,
+\frac{-n^2+15n-9}{30}>\frac32\quad\Longleftrightarrow\quad n^2-15n+54<0
 \]
-也就是 \((n-6)(n-9)<0\). 因 \(n=1,2,\ldots,12\)，可得 \(n=7,8\). 所以需求量超过 \(1.5\) 万件的月份是 \(7\) 月、\(8\) 月，选 C.
+也就是 \((n-6)(n-9)<0\). 因 \(n=1\)，\(2\)，\(\ldots\)，\(12\)，可得 \(n=7\)，\(8\). 所以需求量超过 \(1.5\) 万件的月份是 \(7\) 月、\(8\) 月，选 C.
 \end{solution}
 
 \section{填空题}
@@ -299,7 +319,7 @@ T_n=\frac{-n^2+15n-9}{30}.
 \begin{solution}
 设正方体棱长为 \(s\). 由表面积条件，\(6s^2=S\). 球的直径等于正方体体对角线 \(s\sqrt3\)，所以球半径 \(r=\frac{\sqrt3}{2}s\)，从而 \(r^2=\frac S8\). 因此球体积为
 \[
-V=\frac43\pi r^3=\frac43\pi\left(\frac S8\right)^{3/2}=\frac{\pi S\sqrt{2S}}{24}.
+V=\frac43\pi r^3=\frac43\pi\left(\frac S8\right)^{3/2}=\frac{\pi S\sqrt{2S}}{24}
 \]
 \end{solution}
 
@@ -315,16 +335,14 @@ V=\frac43\pi r^3=\frac43\pi\left(\frac S8\right)^{3/2}=\frac{\pi S\sqrt{2S}}{24}
 椭圆的长轴端点为 \((\pm2,0)\). 不妨取 \(A=(2,0)\)，并设另一个顶点为 \(B=(2+u,v)\). 取 \(AC\) 为 \(AB\) 逆时针旋转 \(90^\circ\) 后得到的向量，则 \(C=(2-v,u)\)；顺时针情形关于 \(x\) 轴对称，面积相同.
 
 由 \(B\)，\(C\) 在椭圆上，分别得到
-\[
-u^2+4v^2+4u=0,\qquad 4u^2+v^2-4v=0.
-\]
+\(u^2+4v^2+4u=0\)，\(4u^2+v^2-4v=0\).
 用前式乘以 \(4\) 减去后式，得 \(15v^2+16u+4v=0\)，即 \(u=-\frac{v(15v+4)}{16}\). 代回前式并因式分解，得
 \[
-v(5v-4)(45v^2+60v+64)=0.
+v(5v-4)(45v^2+60v+64)=0
 \]
 由于 \(45v^2+60v+64\) 的判别式小于 \(0\)，且 \(v=0\) 给出退化三角形，所以 \(v=\frac45\)，进而 \(u=-\frac45\). 因此直角边 \(AB\) 的平方为
 \[
-AB^2=u^2+v^2=\frac{32}{25}.
+AB^2=u^2+v^2=\frac{32}{25}
 \]
 等腰直角三角形面积为 \(\frac12AB^2=\frac{16}{25}\).
 \end{solution}
@@ -340,15 +358,15 @@ AB^2=u^2+v^2=\frac{32}{25}.
 \begin{solution}
 令 \(x=\sin^2\alpha\)，\(y=\sin^2\beta\)，\(z=\sin^2\gamma\)，则 \(x+y+z=1\)，且 \(x\)，\(y\)，\(z\) 均为正数. 又
 \[
-\cos^2\alpha\cos^2\beta\cos^2\gamma=(1-x)(1-y)(1-z)=(y+z)(z+x)(x+y).
+\cos^2\alpha\cos^2\beta\cos^2\gamma=(1-x)(1-y)(1-z)=(y+z)(z+x)(x+y)
 \]
 三个正数 \(x+y\)，\(y+z\)，\(z+x\) 的和为 \(2\)，由基本不等式，
 \[
-(x+y)(y+z)(z+x)\leqslant\left(\frac23\right)^3.
+(x+y)(y+z)(z+x)\leqslant\left(\frac23\right)^3
 \]
 当 \(x=y=z=\frac13\) 时取等号，且对应的角均为锐角. 因此
 \[
-\cos\alpha\cos\beta\cos\gamma\leqslant\left(\frac23\right)^{3/2}=\frac{2\sqrt6}{9},
+\cos\alpha\cos\beta\cos\gamma\leqslant\left(\frac23\right)^{3/2}=\frac{2\sqrt6}{9}
 \]
 最大值为 \(\frac{2\sqrt6}{9}\).
 \end{solution}
@@ -375,7 +393,7 @@ AB^2=u^2+v^2=\frac{32}{25}.
 
 命题\(\circled{3}\)不成立. 若 \(m\) 在平面 \(\alpha\) 内且不垂直于 \(\alpha\)，则在 \(\alpha\) 内过 \(m\) 上各点分别作 \(m\) 的垂线，可得到无数条与 \(m\) 垂直的直线.
 
-命题\(\circled{4}\)成立. 直线 \(n\) 平行于平面 \(\alpha\cap\beta\) 的直线 \(m\)，且 \(n\) 不在 \(\alpha\)，所以 \(n\parallel\alpha\)；同理 \(n\parallel\beta\). 因此正确命题为 \(\circled{2}\)，\(\circled{4}\).
+命题\(\circled{4}\)成立. 直线 \(n\) 平行于平面 \(\alpha\cap\beta\) 的直线 \(m\)，且 \(n\) 不在 \(\alpha\)，所以 \(n\parallel\alpha\)；同样，\(n\parallel m\)，\(m\subset\beta\)，而 \(n\not\subset\beta\)，故 \(n\parallel\beta\). 因此正确命题为 \(\circled{2}\)，\(\circled{4}\).
 \end{solution}
 
 \section{解答题}
@@ -386,9 +404,9 @@ AB^2=u^2+v^2=\frac{32}{25}.
 \begin{solution}
 函数定义域为 \(x\neq-b\). 任取同一单调区间内的 \(x_1<x_2\)，则
 \[
-f(x_1)-f(x_2)=\frac{(x_1+a)(x_2+b)-(x_2+a)(x_1+b)}{(x_1+b)(x_2+b)}=\frac{(b-a)(x_1-x_2)}{(x_1+b)(x_2+b)}.
+f(x_1)-f(x_2)=\frac{(x_1+a)(x_2+b)-(x_2+a)(x_1+b)}{(x_1+b)(x_2+b)}=\frac{(b-a)(x_1-x_2)}{(x_1+b)(x_2+b)}
 \]
-因 \(a>b\)，有 \(b-a<0\). 当 \(x_1,x_2\in(-\infty,-b)\) 或 \(x_1,x_2\in(-b,+\infty)\) 时，\((x_1+b)(x_2+b)>0\)，而 \(x_1-x_2<0\)，所以 \(f(x_1)-f(x_2)>0\)，即 \(f(x_1)>f(x_2)\). 因此 \(f(x)\) 在 \((-\infty,-b)\) 和 \((-b,+\infty)\) 上均单调递减.
+因 \(a>b\)，有 \(b-a<0\). 当 \(x_1\)，\(x_2\in(-\infty,-b)\) 或 \(x_1\)，\(x_2\in(-b,+\infty)\) 时，\((x_1+b)(x_2+b)>0\)，而 \(x_1-x_2<0\)，所以 \(f(x_1)-f(x_2)>0\)，即 \(f(x_1)>f(x_2)\). 因此 \(f(x)\) 在 \((-\infty,-b)\) 和 \((-b,+\infty)\) 上均单调递减.
 \end{solution}
 
 \begin{problem}
@@ -402,17 +420,17 @@ f(x_1)-f(x_2)=\frac{(x_1+a)(x_2+b)-(x_2+a)(x_1+b)}{(x_1+b)(x_2+b)}=\frac{(b-a)(x
 \begin{solution}
 由 \(z^7=1\) 且 \(z\neq1\)，有
 \[
-0=z^7-1=(z-1)(1+z+z^2+z^3+z^4+z^5+z^6).
+0=z^7-1=(z-1)(1+z+z^2+z^3+z^4+z^5+z^6)
 \]
 因 \(z-1\neq0\)，所以 \(1+z+z^2+z^3+z^4+z^5+z^6=0\).
 
 又因 \(z\) 是单位复数，且 \(\arg z=\alpha\)，所以
 \[
-\cos\alpha+\cos2\alpha+\cos4\alpha=\mathop{\rm Re}(z+z^2+z^4).
+\cos\alpha+\cos2\alpha+\cos4\alpha=\mathop{\rm Re}(z+z^2+z^4)
 \]
 令 \(T=z+z^2+z^4\). 由 \(z^7=1\) 得 \(\overline z=z^6\)，于是
 \[
-\overline T=z^6+z^5+z^3.
+\overline T=z^6+z^5+z^3
 \]
 利用前一问结论，\(T+\overline T=z+z^2+\cdots+z^6=-1\). 因而 \(2\mathop{\rm Re}T=-1\)，所求值为 \(-\frac12\).
 \end{solution}
@@ -428,34 +446,34 @@ f(x_1)-f(x_2)=\frac{(x_1+a)(x_2+b)-(x_2+a)(x_1+b)}{(x_1+b)(x_2+b)}=\frac{(b-a)(x
 \end{problem}
 
 \begin{solution}
-建立直角坐标系，使 \(D=(0,0,0)\)，\(AB\) 为 \(x\) 轴，平面 \(ABC\) 为 \(z=0\). 记 \(CD=c\)，\(CN=r\)，\(VN=v\)，并取正方向使 \(C=(0,c,0)\)，\(N=(0,c-r,0)\)，\(V=(0,c-r,v)\)，其中 \(c,r,v>0\). 设 \(M\) 将 \(CV\) 按参数 \(t\) 分点，则
+建立直角坐标系，使 \(D=(0,0,0)\)，\(AB\) 为 \(x\) 轴，平面 \(ABC\) 为 \(z=0\). 记 \(CD=c\)，\(CN=r\)，\(VN=v\)，并取正方向使 \(C=(0,c,0)\)，\(N=(0,c-r,0)\)，\(V=(0,c-r,v)\)，其中 \(c\)，\(r\)，\(v>0\). 设 \(M\) 将 \(CV\) 按参数 \(t\) 分点，则
 \[
-M=(0,c-tr,tv).
+M=(0,c-tr,tv)
 \]
 
 因为 \(D\)，\(A\)，\(B\) 共线，\(\overrightarrow{DC}=(0,c,0)\) 在平面 \(ABC\) 内且垂直于 \(AB\)，而 \(\overrightarrow{DM}=(0,c-tr,tv)\) 在平面 \(MAB\) 内且也垂直于 \(AB\). 所以 \(\angle MDC\) 是二面角 \(M-AB-C\) 的平面角.
 
 在直角三角形 \(CVN\) 中，\(\tan\angle CVN=\frac rv\). 又
 \[
-\tan\angle MDC=\frac{tv}{c-tr}.
+\tan\angle MDC=\frac{tv}{c-tr}
 \]
 当两角相等时，\(\frac{tv}{c-tr}=\frac rv\)，即 \(tv^2=r(c-tr)\). 因而
 \[
-\overrightarrow{DM}\cdot\overrightarrow{CV}=-(c-tr)r+tv^2=0.
+\overrightarrow{DM}\cdot\overrightarrow{CV}=-(c-tr)r+tv^2=0
 \]
-又 \(VC\perp AB\)，所以 \(VC\) 垂直于平面 \(AMB\) 内相交的两条直线 \(AB\)，\(DM\)，即 \(VC\perp\) 平面 \(AMB\).
+由坐标可得 \(\overrightarrow{CV}=(0,-r,v)\)，而 \(\overrightarrow{AB}\) 的方向向量为 \((1,0,0)\)，故 \(VC\perp AB\). 上式又给出 \(VC\perp DM\)，且 \(AB\) 与 \(DM\) 是平面 \(AMB\) 内相交的两条直线，所以 \(VC\perp\) 平面 \(AMB\).
 
-令 \(L=VC=\sqrt{r^2+v^2}\). 由 \(\angle CVN=\theta\)，有 \(r=L\sin\theta\)，\(v=L\cos\theta\). 在垂直于 \(AB\) 的截面内，直线 \(VC\) 到 \(AB\) 的距离为
+令 \(L=VC=\sqrt{r^2+v^2}\). 由 \(\angle CVN=\theta\)，有 \(r=L\sin\theta\)，\(v=L\cos\theta\). 在垂直于 \(AB\) 的截面内，\(AB\) 变为过 \(D\) 的点，直线 \(VC\) 的方向向量为 \((-r,v)\)，由点到直线的距离公式，直线 \(VC\) 到 \(AB\) 的距离为
 \[
-h=\frac{cv}{L}=c\cos\theta,
+h=\frac{cv}{L}=c\cos\theta
 \]
 故 \(c=\frac{h}{\cos\theta}\). 由 \(tv^2=r(c-tr)\) 得 \(tL^2=rc\)，从而点 \(M\) 到平面 \(ABC\) 的距离为
 \[
-tv=\frac{rcv}{L^2}=c\sin\theta\cos\theta.
+tv=\frac{rcv}{L^2}=c\sin\theta\cos\theta
 \]
 于是
 \[
-V_{MABC}=\frac13\cdot\frac12ac\cdot c\sin\theta\cos\theta=\frac{ac^2\sin\theta\cos\theta}{6}=\frac{ah^2\tan\theta}{6}.
+V_{MABC}=\frac13\cdot\frac12ac\cdot c\sin\theta\cos\theta=\frac{ac^2\sin\theta\cos\theta}{6}=\frac{ah^2\tan\theta}{6}
 \]
 \end{solution}
 
@@ -469,26 +487,22 @@ V_{MABC}=\frac13\cdot\frac12ac\cdot c\sin\theta\cos\theta=\frac{ac^2\sin\theta\c
 
 \begin{solution}
 等比数列共有 \(n+2\) 项，首项为 \(1\)，末项为 \(2\)，设公比为 \(q\). 则 \(q^{n+1}=2\)，所以
-\[
-a_k=q^k=2^{\frac{k}{n+1}}\quad(k=1,2,\ldots,n).
-\]
+\(a_k=q^k=2^{\frac{k}{n+1}}\)，\((k=1,2,\ldots,n)\).
 因此
 \[
-A_n=q^{1+2+\cdots+n}=2^{\frac{n(n+1)}{2(n+1)}}=2^{n/2}.
+A_n=q^{1+2+\cdots+n}=2^{\frac{n(n+1)}{2(n+1)}}=2^{n/2}
 \]
 
 等差数列的公差为 \(\frac1{n+1}\)，所以
-\[
-b_k=1+\frac{k}{n+1}\quad(k=1,2,\ldots,n),
-\]
+\(b_k=1+\frac{k}{n+1}\)，\((k=1,2,\ldots,n)\)
 从而
 \[
-B_n=\sum_{k=1}^n\left(1+\frac{k}{n+1}\right)=n+\frac n2=\frac{3n}{2}.
+B_n=\sum_{k=1}^n\left(1+\frac{k}{n+1}\right)=n+\frac n2=\frac{3n}{2}
 \]
 
 当 \(n=7\) 时，\(2^n=128>\frac94n^2=\frac94\cdot49=\frac{441}{4}\). 对 \(n\geqslant3\)，有
 \[
-\frac{2^{n+1}/(n+1)^2}{2^n/n^2}=\frac{2n^2}{(n+1)^2}>1,
+\frac{2^{n+1}/(n+1)^2}{2^n/n^2}=\frac{2n^2}{(n+1)^2}>1
 \]
 所以 \(\frac{2^n}{n^2}\) 在 \(n\geqslant3\) 时递增. 因而对所有 \(n\geqslant7\)，都有 \(2^n>\frac94n^2\)，即 \(2^{n/2}>\frac{3n}{2}\). 所以 \(A_n>B_n\).
 \end{solution}
@@ -508,13 +522,13 @@ B_n=\sum_{k=1}^n\left(1+\frac{k}{n+1}\right)=n+\frac n2=\frac{3n}{2}.
 \]
 万元，年销售量为 \(1000(1+0.6x)\) 辆. 因此预计年利润为
 \[
-y=(1.2+0.9x-1-x)\cdot1000(1+0.6x)=200+20x-60x^2,
+y=(1.2+0.9x-1-x)\cdot1000(1+0.6x)=200+20x-60x^2
 \]
 其中 \(0<x<1\).
 
 上年度利润为 \((1.2-1)\times1000=200\) 万元. 要使本年度利润增加，需
 \[
-200+20x-60x^2>200,
+200+20x-60x^2>200
 \]
 即 \(20x(1-3x)>0\). 结合 \(0<x<1\)，得到 \(0<x<\frac13\).
 \end{solution}
@@ -529,33 +543,29 @@ y=(1.2+0.9x-1-x)\cdot1000(1+0.6x)=200+20x-60x^2,
 
 \begin{solution}
 直线 \(l\) 的方程为 \(y=x-a\)，即 \(x=y+a\). 设交点 \(A\)，\(B\) 的纵坐标分别为 \(y_1\)，\(y_2\)，代入抛物线方程得
-\[
-y^2=2p(y+a),\qquad y^2-2py-2pa=0.
-\]
+\(y^2=2p(y+a)\)，\(y^2-2py-2pa=0\).
 两交点不同等价于判别式 \(4p(p+2a)>0\)，所以 \(a>-\frac p2\). 又由韦达定理，
 \[
-|y_1-y_2|=2\sqrt{p(p+2a)}.
+|y_1-y_2|=2\sqrt{p(p+2a)}
 \]
 由于直线 \(l\) 的斜率为 \(1\)，有
 \[
-|AB|=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}=\sqrt2|y_1-y_2|=2\sqrt{2p(p+2a)}.
+|AB|=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}=\sqrt2|y_1-y_2|=2\sqrt{2p(p+2a)}
 \]
 由 \(|AB|\leqslant2p\)，得 \(a\leqslant-\frac p4\). 因此
 \[
--\frac p2<a\leqslant-\frac p4.
+-\frac p2<a\leqslant-\frac p4
 \]
 
 设 \(Q\) 为线段 \(AB\) 的中点. 由 \(y_1+y_2=2p\)，得
 \[
-Q=(a+p,p).
+Q=(a+p,p)
 \]
 线段 \(AB\) 的斜率为 \(1\)，所以其垂直平分线斜率为 \(-1\)，方程为 \(x+y=a+2p\). 它与 \(x\) 轴交于 \(N=(a+2p,0)\)，而 \(M=(a,0)\). 因此
-\[
-\overrightarrow{QM}=(-p,-p),\qquad \overrightarrow{QN}=(p,-p),
-\]
+\(\overrightarrow{QM}=(-p,-p)\)，\(\overrightarrow{QN}=(p,-p)\)
 两向量垂直且长度均为 \(p\sqrt2\)，所以 \(NQ=p\sqrt2\)，且 \(NQ\perp AB\). 于是
 \[
-S_{\triangle NAB}=\frac12|AB|\cdot NQ\leqslant\frac12\cdot2p\cdot p\sqrt2=\sqrt2p^2.
+S_{\triangle NAB}=\frac12|AB|\cdot NQ\leqslant\frac12\cdot2p\cdot p\sqrt2=\sqrt2p^2
 \]
 当 \(a=-\frac p4\) 时 \(|AB|=2p\)，等号成立. 所以面积的最大值为 \(\sqrt2p^2\).
 \end{solution}

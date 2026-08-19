@@ -9,11 +9,15 @@
     {\(A = B\)}
     {\(A \cap B = \varnothing\)}
     {\(A \not\subset B\)}
-    {\(B \not\subset A\)}
+    {\(B \subsetneq A\)}
 
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+因为 \(1\in A\) 而 \(1\notin B\)，所以 \(A\ne B\)，且 \(A\not\subset B\). 又因为 \(A\cap B=B=\{2,3\}\ne\varnothing\)，选项 B 错误；又因 \(B\) 中的每个元素都属于 \(A\)，并且 \(1\in A\setminus B\)，故 \(B\subsetneq A\)，所以选项 D 正确.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -28,6 +32,14 @@ D
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+设等差数列的公差为 \(d\)，则 \(a_{4}-a_{2}=2d\)，所以
+\[
+d=\frac{2-4}{2}=-1
+\]
+于是 \(a_{6}=a_{4}+2d=2-2=0\)，故答案为 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -54,6 +66,14 @@ B
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+由茎叶图，这组数据按从小到大排列为 \(8\)，\(9\)，\(12\)，\(15\)，\(18\)，\(20\)，\(20\)，\(23\)，\(23\)，\(28\)，\(31\)，\(32\)，共有 \(12\) 个数. 因此中位数为第 \(6\) 个数和第 \(7\) 个数的平均数，即
+\[
+\frac{20+20}{2}=20
+\]
+故答案为 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -68,6 +88,14 @@ B
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+因为对数函数 \(y=\log_{\frac12}x\) 在 \((0,+\infty)\) 上为减函数，且其真数须为正，所以
+\[
+\log_{\frac12}(x+2)<0\iff x+2>1\iff x>-1
+\]
+由 \(x>1\) 一定能推出 \(x>-1\)，但 \(x=0\) 满足 \(x>-1\) 而不满足 \(x>1\). 因此“\(x>1\)”是题中不等式的充分不必要条件，故答案为 B.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -84,6 +112,14 @@ B
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+由左视图可知，右侧部分是底面半径为 \(1\)、高为 \(2\) 的半圆柱；左侧部分是高为 \(1\) 的三棱锥，其底面三角形的底为 \(2\)、高为 \(1\)，底面积为 \(1\). 因此
+\[
+V=\frac13\left(\frac12\times1\times2\right)\times1+\frac12\pi\times1^2\times2=\frac13+\pi
+\]
+故答案为 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -98,10 +134,30 @@ A
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+设 \(\bs{a}\) 与 \(\bs{b}\) 的夹角为 \(\theta\)，并记 \(\left|\bs{b}\right|=m>0\). 由已知
+\[
+\left|\bs{a}\right|^2=\frac89m^2
+\]
+又由垂直条件，
+\[
+0=(\bs{a}-\bs{b})\cdot(3\bs{a}+2\bs{b})=3\left|\bs{a}\right|^2-\bs{a}\cdot\bs{b}-2\left|\bs{b}\right|^2
+\]
+所以
+\[
+\bs{a}\cdot\bs{b}=3\times\frac89m^2-2m^2=\frac23m^2
+\]
+于是
+\[
+\cos\theta=\frac{\bs{a}\cdot\bs{b}}{\left|\bs{a}\right|\left|\bs{b}\right|}=\frac{\frac23m^2}{\frac{2\sqrt2}{3}m^2}=\frac{\sqrt2}{2}
+\]
+因为 \(0\leqslant\theta\leqslant\pi\)，故 \(\theta=\frac\pi4\)，答案为 A.
+\end{solution}
 \end{problem}
 
 \begin{problem}
-执行如图所示的程序框图，若输入 \(k\) 的值为 \(8\)，则判断框内可填入的条件是（\quad）
+执行如图所示的程序框图，若输出 \(k\) 的值为 \(8\)，则判断框内可填入的条件是（\quad）
 
 \bitmapfigure[max width=0.50\linewidth]{img/2015/chongqing_science/q7_fig1.png}
 
@@ -114,6 +170,16 @@ A
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+程序每次先将 \(k\) 增加 \(2\)，再把 \(\frac1k\) 加到 \(s\) 中. 若最终输出 \(k=8\)，则循环应在 \(k=2\)，\(4\)，\(6\) 时继续，在 \(k=8\) 时停止. 相应地，
+\(s_2=\frac12\)，\(s_4=\frac12+\frac14=\frac34\)，\(s_6=\frac34+\frac16=\frac{11}{12}\)
+而再执行一次得到
+\[
+s_8=\frac{11}{12}+\frac18=\frac{25}{24}>\frac{11}{12}
+\]
+因此判断条件应为 \(s\leqslant\frac{11}{12}\)，故答案为 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -126,8 +192,24 @@ C
     {\(2\sqrt{10}\)}
 
 \begin{answer}
-B
+C
 \end{answer}
+
+\begin{solution}
+将圆方程配方得
+\[
+(x-2)^2+(y-1)^2=4
+\]
+所以圆心为 \(O(2,1)\)，半径为 \(2\). 圆的对称轴必须经过圆心，将 \(O\) 代入直线方程得 \(2+a-1=0\)，故 \(a=-1\). 于是 \(A(-4,-1)\)，从而
+\[
+OA=\sqrt{(-4-2)^2+(-1-1)^2}=2\sqrt{10}
+\]
+在切点 \(B\) 处，\(OB\perp AB\)，所以
+\[
+AB=\sqrt{OA^2-OB^2}=\sqrt{40-4}=6
+\]
+故答案为 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -142,6 +224,19 @@ B
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+记 \(\beta=\frac\pi5\)，则 \(\frac{3\pi}{10}=\frac\pi2-\beta\). 利用 \(\tan\alpha=2\tan\beta\) 及两角和差公式，得
+\[
+\cos\left(\alpha-\frac{3\pi}{10}\right)=\cos\alpha\sin\beta+\sin\alpha\cos\beta
+\]
+\[
+\sin\left(\alpha-\beta\right)=\sin\alpha\cos\beta-\cos\alpha\sin\beta
+\]
+又因为 \(\sin\alpha=2\tan\beta\cos\alpha\)，所以
+\(\cos\left(\alpha-\frac{3\pi}{10}\right)=3\sin\beta\cos\alpha\)，\(\sin\left(\alpha-\beta\right)=\sin\beta\cos\alpha\).
+分母不为零，故所求比值为 \(3\)，答案为 C.
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -156,6 +251,24 @@ C
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+记 \(c=\sqrt{a^2+b^2}\)，则右焦点和右顶点分别为 \(F(c,0)\)、\(A(a,0)\). 直线 \(BC\) 为 \(x=c\)，由双曲线方程得交点的纵坐标满足
+\(\frac{c^2}{a^2}-\frac{y^2}{b^2}=1\)，\(\Longrightarrow\)，\(y^2=\frac{b^4}{a^2}\).
+取 \(q=\frac{b^2}{a}>0\)，于是
+\(B(c,q)\)，\(C(c,-q)\).
+直线 \(AC\) 的斜率为 \(-\frac{q}{c-a}\)，直线 \(AB\) 的斜率为 \(\frac{q}{c-a}\)，其中 \(c-a>0\). 因此过 \(B\) 作 \(AC\) 的垂线、过 \(C\) 作 \(AB\) 的垂线，交点 \(D\) 满足
+\(y-q=\frac{c-a}{q}(x-c)\)，\(y+q=-\frac{c-a}{q}(x-c)\).
+两式相加得 \(y=0\)，再代入任一式得 \(x-c=-\frac{q^2}{c-a}\)，所以
+\[
+d(D,BC)=\frac{q^2}{c-a}=\frac{b^4/a^2}{c-a}=\frac{b^2(a+c)}{a^2}
+\]
+令 \(t=\frac ca>1\)，则 \(\frac{b^2}{a^2}=t^2-1\)，题设不等式化为
+\[
+a(t^2-1)(t+1)<a(t+1)
+\]
+即 \(1<t<\sqrt2\). 双曲线渐近线斜率为 \(\pm\frac ba=\pm\sqrt{t^2-1}\)，故其取值范围为 \((-1,0)\cup(0,1)\)，答案为 A.
+\end{solution}
 \end{problem}
 
 \section{填空题}
@@ -166,6 +279,13 @@ A
 \begin{answer}
 \(3\)
 \end{answer}
+
+\begin{solution}
+复数的模满足 \(\left|a+b\i\right|^2=(a+b\i)(a-b\i)\). 已知 \(\left|a+b\i\right|=\sqrt3\)，所以
+\[
+(a+b\i)(a-b\i)=\left|a+b\i\right|^2=3
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -174,6 +294,17 @@ A
 \begin{answer}
 \(\frac{5}{2}\)
 \end{answer}
+
+\begin{solution}
+设通项中取 \(\frac{1}{2\sqrt{x}}\) 的因子数为 \(k\)，则该项为
+\[
+\mathrm C_5^k\left(x^3\right)^{5-k}\left(\frac{1}{2\sqrt{x}}\right)^k
+\]
+其中 \(x\) 的指数为 \(3(5-k)-\frac{k}{2}=15-\frac{7k}{2}\). 令其等于 \(8\)，得 \(k=2\). 因此所求系数为
+\[
+\mathrm C_5^2\left(\frac12\right)^2=\frac{5}{2}
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -182,6 +313,28 @@ A
 \begin{answer}
 \(\sqrt{6}\)
 \end{answer}
+
+\begin{solution}
+设 \(AC=\sqrt2u\)，\(BC=\sqrt2v\)，其中 \(u\)，\(v>0\). 由 \(\angle B=120^\circ\) 及余弦定理，
+\[
+u^2=v^2+v+1
+\]
+由角平分线长公式
+\[
+AD^2=AB\cdot AC\left(1-\frac{BC^2}{(AB+AC)^2}\right)
+\]
+得
+\[
+3=2u\left(1-\frac{v^2}{(u+1)^2}\right)
+\]
+利用 \(v^2=u^2-v-1\) 化简上式，得
+\(2uv=-u^2+2u+3\)，\(qquad v=\frac{-u^2+2u+3}{2u}\).
+将此式代入 \(u^2=v^2+v+1\)，并通分化简得
+\[
+0=-\frac{3(u^2-3)(u+1)^2}{4u^2}
+\]
+由于 \(u>0\)，且 \(u+1\ne0\)，所以 \(u^2=3\)，从而 \(u=\sqrt3\). 此时由前式得 \(v=1>0\)，满足三角形条件，故 \(AC=\sqrt2u=\sqrt6\).
+\end{solution}
 \end{problem}
 
 \section{选做题}
@@ -194,6 +347,21 @@ A
 \begin{answer}
 \(2\)
 \end{answer}
+
+\begin{solution}
+由切线与割线定理，\(PA^2=PC\cdot PD\)，所以
+\[
+PD=\frac{PA^2}{PC}=\frac{36}{3}=12
+\]
+图中点的顺序为 \(P\)，\(C\)，\(E\)，\(D\)，故 \(CD=PD-PC=9\). 由 \(CE:ED=2:1\)，得 \(CE=6\)，\(ED=3\). 再由相交弦定理，
+\[
+AE\cdot BE=CE\cdot ED
+\]
+从而
+\[
+BE=\frac{6\times3}{9}=2
+\]
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -205,6 +373,18 @@ y = 1 + t,
 \begin{answer}
 \((2,\pi)\)
 \end{answer}
+
+\begin{solution}
+由直线的参数方程，消去参数得 \(y-x=2\)，即
+\[
+\rho(\sin\theta-\cos\theta)=2
+\]
+又因为 \(\rho^2\cos2\theta=4\)，所以
+\[
+-\rho^2(\sin\theta-\cos\theta)(\sin\theta+\cos\theta)=4
+\]
+代入直线关系，得 \(\rho(\sin\theta+\cos\theta)=-2\). 两式相加得 \(2\rho\sin\theta=0\)，由于 \(\rho>0\) 且 \(\frac{3\pi}{4}<\theta<\frac{5\pi}{4}\)，故 \(\theta=\pi\)，再由直线关系得 \(\rho=2\). 所以交点的极坐标为 \((2,\pi)\).
+\end{solution}
 \end{problem}
 
 \begin{problem}
@@ -213,6 +393,32 @@ y = 1 + t,
 \begin{answer}
 \(-6\) 或 \(4\)
 \end{answer}
+
+\begin{solution}
+当 \(a\geqslant-1\) 时，分三段展开：
+\[
+f(x)=
+\begin{cases}
+2a-3x-1, & x\leqslant-1,\\
+2a+1-x, & -1\leqslant x\leqslant a,\\
+3x+1-2a, & x\geqslant a.
+\end{cases}
+\]
+前两段的斜率分别为 \(-3\)、\(-1\)，后一段的斜率为 \(3\)，所以函数先递减后递增，最小值在 \(x=a\) 处取得，且 \(f(a)=a+1\). 令 \(a+1=5\)，得 \(a=4\).
+
+当 \(a\leqslant-1\) 时，分三段展开：
+\[
+f(x)=
+\begin{cases}
+2a-3x-1, & x\leqslant a,\\
+x-1-2a, & a\leqslant x\leqslant-1,\\
+3x+1-2a, & x\geqslant-1.
+\end{cases}
+\]
+三段的斜率分别为 \(-3\)、\(1\)、\(3\)，所以函数先递减后递增，最小值在 \(x=a\) 处取得，且 \(f(a)=-a-1\). 令 \(-a-1=5\)，得 \(a=-6\).
+
+因此 \(a=-6\) 或 \(a=4\).
+\end{solution}
 \end{problem}
 
 \section{解答题}
@@ -228,8 +434,32 @@ y = 1 + t,
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：三种粽子各取到 \(1\) 个的概率为 \(\frac{1}{4}\).
-\item 短答案：\(X\) 的分布列为 \(P(X=0)=\frac{7}{15}\)，\(P(X=1)=\frac{7}{15}\)，\(P(X=2)=\frac{1}{15}\)，数学期望为 \(E(X)=\frac{3}{5}\).
+\item 从 \(10\) 个粽子中任取 \(3\) 个的基本事件总数为 \(\mathrm C_{10}^{3}\). 三种粽子各取到 \(1\) 个的事件数为 \(\mathrm C_2^1\mathrm C_3^1\mathrm C_5^1\)，所以所求概率为
+\[
+P=\frac{\mathrm C_2^1\mathrm C_3^1\mathrm C_5^1}{\mathrm C_{10}^{3}}=\frac{2\times3\times5}{120}=\frac14
+\]
+\item 因为豆沙粽只有 \(2\) 个，所以 \(X\) 的可能取值为 \(0\)，\(1\)，\(2\). 分别计算得
+\[
+P(X=0)=\frac{\mathrm C_8^3}{\mathrm C_{10}^{3}}=\frac{56}{120}=\frac{7}{15}
+\]
+\[
+P(X=1)=\frac{\mathrm C_2^1\mathrm C_8^2}{\mathrm C_{10}^{3}}=\frac{56}{120}=\frac{7}{15}
+\]
+\[
+P(X=2)=\frac{\mathrm C_2^2\mathrm C_8^1}{\mathrm C_{10}^{3}}=\frac{8}{120}=\frac{1}{15}
+\]
+因此 \(X\) 的分布列为
+\begin{center}
+\begin{tabular}{c|ccc}
+\(X\) & \(0\) & \(1\) & \(2\) \\
+\hline
+\(P\) & \(\dfrac{7}{15}\) & \(\dfrac{7}{15}\) & \(\dfrac{1}{15}\)
+\end{tabular}
+\end{center}
+且
+\[
+E(X)=0\times\frac{7}{15}+1\times\frac{7}{15}+2\times\frac{1}{15}=\frac35
+\]
 \end{enumerate}
 \end{solution}
 
@@ -244,8 +474,16 @@ y = 1 + t,
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(f(x)\) 的最小正周期为 \(\pi\)，最大值为 \(1-\frac{\sqrt{3}}{2}\).
-\item 短答案：在 \(\left[\frac{\pi}{6},\frac{5\pi}{12}\right]\) 上单调递增，在 \(\left[\frac{5\pi}{12},\frac{2\pi}{3}\right]\) 上单调递减.
+\item 由诱导公式、二倍角公式，
+\[
+\begin{split}
+f(x)&=\sin x\cos x-\sqrt3\cos^2x\\
+&=\frac12\sin2x-\frac{\sqrt3}{2}(1+\cos2x)\\
+&=\sin\left(2x-\frac\pi3\right)-\frac{\sqrt3}{2}.
+\end{split}
+\]
+函数 \(\sin(2x-\frac\pi3)\) 的周期为 \(\pi\)，且不存在更小的正周期，因此 \(f(x)\) 的最小正周期为 \(\pi\). 因为正弦函数的最大值为 \(1\)，所以 \(f(x)\) 的最大值为 \(1-\frac{\sqrt3}{2}\).
+\item 当 \(x\in\left[\frac\pi6,\frac{2\pi}{3}\right]\) 时，令 \(u=2x-\frac\pi3\)，则 \(u\in[0,\pi]\). 正弦函数在 \([0,\frac\pi2]\) 上单调递增，在 \([\frac\pi2,\pi]\) 上单调递减，而 \(u=\frac\pi2\) 对应 \(x=\frac{5\pi}{12}\). 因此 \(f(x)\) 在 \(\left[\frac\pi6,\frac{5\pi}{12}\right]\) 上单调递增，在 \(\left[\frac{5\pi}{12},\frac{2\pi}{3}\right]\) 上单调递减.
 \end{enumerate}
 \end{solution}
 
@@ -263,8 +501,27 @@ y = 1 + t,
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(DE \perp\) 平面 \(PCD\).
-\item 短答案：二面角 \(A-PD-C\) 的余弦值为 \(\frac{\sqrt{3}}{6}\).
+\item 因为 \(PC\perp\) 平面 \(ABC\)，且 \(DE\) 在平面 \(ABC\) 内，所以 \(PC\perp DE\). 又在三角形 \(CDE\) 中，
+\[
+CD^2+DE^2=2+2=4=CE^2
+\]
+故 \(CD\perp DE\). 直线 \(PC\)、\(CD\) 是平面 \(PCD\) 内相交的两条直线，因而 \(DE\perp\) 平面 \(PCD\).
+\item 取 \(C\) 为原点，分别以 \(CB\)、\(CA\)、\(CP\) 所在直线为 \(x\)、\(y\)、\(z\) 轴的正方向. 由 \(CE=2\)、\(EB=1\)，得
+\(E(2,0,0)\)，\(B(3,0,0)\)，\(P(0,0,3)\).
+设 \(A(0,h,0)\)，因 \(D\in AB\)，可设 \(D=(3t,h(1-t),0)\). 由 \(CD=DE\)，
+\[
+9t^2+h^2(1-t)^2=(3t-2)^2+h^2(1-t)^2
+\]
+所以 \(t=\frac13\). 再由 \(CD^2=2\)，得 \(1+\frac49h^2=2\)，即 \(h=\frac32\). 故
+\(D(1,1,0)\)，\(A\left(0,\frac32,0\right)\).
+平面 \(APD\) 的一个法向量可取
+\[
+\overrightarrow{DA}\times\overrightarrow{DP}=\frac32(1,2,1)
+\]
+平面 \(CPD\) 的一个法向量可取 \(\overrightarrow{DP}\times\overrightarrow{DC}=3(1,-1,0)\). 因此二面角的余弦值为
+\[
+\frac{\left|(1,2,1)\cdot(1,-1,0)\right|}{\sqrt{1^2+2^2+1^2}\sqrt{1^2+(-1)^2}}=\frac{1}{\sqrt6\sqrt2}=\frac{\sqrt3}{6}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -279,8 +536,24 @@ y = 1 + t,
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(a=0\)，切线方程为 \(3x-\e y=0\).
-\item 短答案：\(a\in\left[-\frac{9}{2},+\infty\right)\).
+\item 对函数求导得
+\[
+f'(x)=\frac{-3x^2+(6-a)x+a}{\e^x}
+\]
+函数在 \(x=0\) 处取得极值，必须有 \(f'(0)=0\)，故 \(a=0\). 此时 \(f(x)=3x^2\e^{-x}\)，且 \(f(x)\geqslant0=f(0)\)，所以确实在 \(x=0\) 处取得极小值. 此时
+\(f(1)=\frac3\e\)，\(qquad f'(1)=\frac3\e\).
+由点斜式，切线方程为 \(y-\frac3\e=\frac3\e(x-1)\)，即 \(3x-\e y=0\).
+\item 因为 \(\e^x>0\)，所以 \(f(x)\) 在 \([3,+\infty)\) 上为减函数，当且仅当
+\(q(x)=-3x^2+(6-a)x+a\leqslant0\)，\((x\geqslant3)\).
+若 \(a\geqslant-12\)，则 \(q'(x)=6-a-6x\leqslant0\)（\(x\geqslant3\)），故只需且必须有
+\[
+q(3)=-9-2a\leqslant0
+\]
+即 \(a\geqslant-\frac92\). 若 \(a<-12\)，则二次函数 \(q\) 的顶点横坐标 \(1-\frac a6>3\)，且顶点函数值为
+\[
+q\left(1-\frac a6\right)=a+\frac{(6-a)^2}{12}=\frac{a^2}{12}+3>0
+\]
+不符合减函数条件. 因此 \(a\in\left[-\frac92,+\infty\right)\).
 \end{enumerate}
 \end{solution}
 
@@ -297,8 +570,33 @@ y = 1 + t,
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(\frac{x^2}{4}+y^2=1\).
-\item 短答案：\(e=\sqrt{6}-\sqrt{3}\).
+\item 由 \(PQ\perp PF_1\) 且 \(P\)，\(F_2\)，\(Q\) 共线，得 \(PF_1\perp PF_2\). 椭圆定义给出
+\[
+2a=PF_1+PF_2=(2+\sqrt2)+(2-\sqrt2)=4
+\]
+所以 \(a=2\). 在直角三角形 \(PF_1F_2\) 中，\(F_1F_2=2c\)，故
+\[
+4c^2=(2+\sqrt2)^2+(2-\sqrt2)^2=12
+\]
+从而 \(c=\sqrt3\)，\(b^2=a^2-c^2=1\). 因此椭圆标准方程为
+\[
+\frac{x^2}{4}+y^2=1
+\]
+\item 设 \(PF_1=PQ=n\)，\(PF_2=m\). 由椭圆定义，\(n+m=2a\). 由于 \(F_2\) 在线段 \(PQ\) 上，且 \(PQ\perp PF_1\)，在直角三角形 \(PF_1Q\) 中
+\(QF_1=\sqrt{PF_1^2+PQ^2}=\sqrt2n\)，\(qquad QF_2=PQ-PF_2=n-m\).
+再次利用椭圆定义，\(\sqrt2n+n-m=2a=n+m\)，所以 \(m=\frac{\sqrt2}{2}n\). 又由直角三角形 \(PF_1F_2\)，
+\[
+n^2+m^2=(2c)^2
+\]
+代入 \(m=\frac{\sqrt2}{2}n\) 得 \(n^2=\frac83c^2\). 另一方面，\(n+m=2a\) 给出
+\[
+n=\frac{2\sqrt2}{\sqrt2+1}a
+\]
+于是
+\[
+\frac83e^2=\frac{n^2}{a^2}=\frac{8}{(\sqrt2+1)^2}
+\]
+即 \(e^2=\frac{3}{3+2\sqrt2}=9-6\sqrt2=(\sqrt6-\sqrt3)^2\). 因为 \(e>0\)，故 \(e=\sqrt6-\sqrt3\).
 \end{enumerate}
 \end{solution}
 
@@ -307,13 +605,47 @@ y = 1 + t,
 
 \begin{enumerate}
 \item 若 \(\lambda = 0\)，\(\mu = -2\)，求数列 \(\{a_n\}\) 的通项公式；
-\item 若 \(\lambda = \frac{1}{k_0}\)（\(k_0 \in \mathbf{N}_+, k_0 \geqslant 2\)），\(\mu = -1\)，证明： \(2 + \frac{1}{3k_0 + 1} < a_{k_0 + 1} < 2 + \frac{1}{2k_0 + 1}\).
+\item 若 \(\lambda = \frac{1}{k_0}\)（\(k_0 \in \mathbf{N}_+\)，\(k_0 \geqslant 2\)），\(\mu = -1\)，证明： \(2 + \frac{1}{3k_0 + 1} < a_{k_0 + 1} < 2 + \frac{1}{2k_0 + 1}\).
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(a_n=3\cdot 2^{n-1}\).
-\item 短答案：\(2+\frac{1}{3k_0+1}<a_{k_0+1}<2+\frac{1}{2k_0+1}\).
+\item 当 \(\lambda=0\)、\(\mu=-2\) 时，递推式化为
+\[
+a_{n+1}a_n-2a_n^2=a_n(a_{n+1}-2a_n)=0
+\]
+因为 \(a_1=3\ne0\)，若 \(a_n\ne0\)，则上式必有 \(a_{n+1}=2a_n\ne0\). 由数学归纳法，所有 \(a_n\ne0\)，从而对每个 \(n\) 都有 \(a_{n+1}=2a_n\). 因此 \(\{a_n\}\) 是首项为 \(3\)、公比为 \(2\) 的等比数列，故
+\[
+a_n=3\cdot2^{n-1}
+\]
+\item 记 \(K=k_0\). 当 \(\lambda=\frac1K\)、\(\mu=-1\) 时，递推式为
+\[
+a_{n+1}\left(a_n+\frac1K\right)=a_n^2
+\]
+从而
+\[
+a_n-a_{n+1}=\frac{a_n}{Ka_n+1}=\frac{1}{K+\frac1{a_n}}
+\]
+先证明在 \(1\leqslant n\leqslant K+1\) 时有 \(2<a_n\leqslant3\). 初值为 \(a_1=3\). 若 \(2<a_n\leqslant3\)，则
+\[
+0<a_n-a_{n+1}=\frac{1}{K+1/a_n}<\frac1K
+\]
+所以 \(a_{n+1}<a_n\leqslant3\). 若已知前 \(n\) 项都大于 \(2\)，逐项累加上式的严格不等式，便有
+\[
+a_n>3-\frac{n-1}{K}\geqslant2
+\]
+且在 \(n\leqslant K+1\) 时严格大于 \(2\). 因此用归纳法得到所述范围内的 \(2<a_n\leqslant3\).
+因此对 \(1\leqslant n\leqslant K\)，
+\(\frac13\leqslant\frac1{a_n}<\frac12\)，\(\frac{2}{2K+1}<a_n-a_{n+1}\leqslant\frac{3}{3K+1}\).
+由于 \(K\geqslant2\)，且 \(a_2<a_1=3\)，故 \(n=2\) 时右侧不等式严格. 求和得到
+\[
+\frac{2K}{2K+1}<\sum_{n=1}^{K}(a_n-a_{n+1})=3-a_{K+1}<\frac{3K}{3K+1}
+\]
+整理得
+\[
+2+\frac{1}{3K+1}<a_{K+1}<2+\frac{1}{2K+1}
+\]
+代回 \(K=k_0\)，即得题中结论.
 \end{enumerate}
 \end{solution}

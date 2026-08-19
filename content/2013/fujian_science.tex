@@ -16,6 +16,10 @@
 D
 \end{answer}
 
+\begin{solution}
+对等式 \(\overline{z}=1+2\i\) 两边取共轭，得 \(z=1-2\i\). 因此 \(z\) 的实部为 \(1>0\)，虚部为 \(-2<0\)，它在复平面内对应的点位于第四象限，选 D.
+\end{solution}
+
 \begin{problem}
 已知集合 \(A = \{1, a\}\)，\(B = \{1, 2, 3\}\)，则“\(a = 3\)”是“\(A \subseteq B\)”的（\quad）
 
@@ -30,6 +34,10 @@ D
 A
 \end{answer}
 
+\begin{solution}
+当 \(a=3\) 时，\(A=\{1,3\}\subseteq B\)，所以“\(a=3\)”是“\(A\subseteq B\)”的充分条件. 反过来，若 \(A\subseteq B\)，只需 \(a\in B\)，故 \(a\) 可以取 \(1\)，\(2\)，\(3\)，不一定等于 \(3\). 因此该条件不是必要条件，选 A.
+\end{solution}
+
 \begin{problem}
 双曲线 \(\frac{x^{2}}{4} - y^{2} = 1\) 的顶点到渐近线的距离等于（\quad）
 
@@ -43,6 +51,14 @@ A
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+双曲线可写为 \(\frac{x^2}{2^2}-\frac{y^2}{1^2}=1\)，其顶点为 \((\pm2,0)\)，渐近线为 \(y=\pm\frac{x}{2}\). 取顶点 \((2,0)\) 和渐近线 \(x-2y=0\)，点到直线的距离为
+\[
+\frac{|2-2\cdot0|}{\sqrt{1^2+(-2)^2}}=\frac{2}{\sqrt5}=\frac{2\sqrt5}{5}
+\]
+另一顶点到渐近线的距离相同，故选 C.
+\end{solution}
 
 \begin{problem}
 某校从高一年级学生中随机抽取部分学生，将他们的模块测试成绩分成 \(6\) 组：\([40,50)\)，\([50,60)\)，\([60,70)\)，\([70,80)\)，\([80,90)\)，\([90,100)\) 加以统计，得到如图所示的频率分布直方图. 已知高一年级共有学生 \(600\) 名，据此估计，该模块测试成绩不少于 \(60\) 分的学生人数为（\quad）
@@ -60,8 +76,16 @@ C
 B
 \end{answer}
 
+\begin{solution}
+由频率分布直方图可读出成绩在 \([60,70)\)，\([70,80)\)，\([80,90)\)，\([90,100)\) 内的频率分别为 \(0.030\)，\(0.025\)，\(0.015\)，\(0.010\). 每组组距均为 \(10\)，所以成绩不少于 \(60\) 分的频率为
+\[
+10(0.030+0.025+0.015+0.010)=0.8
+\]
+据此估计人数为 \(600\times0.8=480\)，选 B.
+\end{solution}
+
 \begin{problem}
-满足 \(a,b \in \{-1, 0, 1, 2\}\)，且关于 \(x\) 的方程 \(ax^{2} + 2x + b = 0\) 有实数解的有序数对 \((a, b)\) 的个数为（\quad）
+满足 \(a\)，\(b \in \{-1, 0, 1, 2\}\)，且关于 \(x\) 的方程 \(ax^{2} + 2x + b = 0\) 有实数解的有序数对 \((a, b)\) 的个数为（\quad）
 
 \choices
     {14}
@@ -73,6 +97,14 @@ B
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+当 \(a=0\) 时，方程化为 \(2x+b=0\)，对四个可能的 \(b\) 均有实数解，共有 \(4\) 个有序数对. 当 \(a\ne0\) 时，判别式为
+\[
+\Delta=2^2-4ab=4(1-ab)
+\]
+有实数解的充要条件是 \(ab\leqslant1\). 对 \(a=-1\)，四个 \(b\) 均满足；对 \(a=1\)，有 \(b=-1\)，\(0\)，\(1\)，共 \(3\) 个；对 \(a=2\)，有 \(b=-1\)，\(0\)，共 \(2\) 个. 总数为 \(4+4+3+2=13\)，选 B.
+\end{solution}
 
 \begin{problem}
 阅读如图所示的程序框图，若输入的 \(k = 10\)，则该算法的功能是（\quad）
@@ -90,6 +122,10 @@ B
 A
 \end{answer}
 
+\begin{solution}
+程序开始时 \(S=0\)，\(i=1\). 每循环一次先执行 \(S\leftarrow1+2S\)，再执行 \(i\leftarrow i+1\)，当 \(i>k\) 时输出. 循环 \(j\) 次后，递推式给出 \(S_j=2^j-1=1+2+2^2+\cdots+2^{j-1}\). 输入 \(k=10\) 时，初始 \(i=1\)，依次循环至第 \(10\) 次后变为 \(i=11>10\)，故输出 \(S_{10}=1+2+\cdots+2^9\)，即数列 \(\{2^{n-1}\}\) 的前 \(10\) 项和，选 A.
+\end{solution}
+
 \begin{problem}
 在四边形 \(ABCD\) 中，\(\overrightarrow{AC} = (1, 2)\)，\(\overrightarrow{BD} = (-4, 2)\)，则该四边形的面积为（\quad）
 
@@ -104,11 +140,19 @@ A
 C
 \end{answer}
 
+\begin{solution}
+四边形面积等于两条对角线所成平行四边形面积的一半. 两条对角线的行列式为
+\[
+\begin{vmatrix}1&2\\-4&2\end{vmatrix}=1\times2-2\times(-4)=10
+\]
+因此四边形面积为 \(\frac12\times|10|=5\)，选 C.
+\end{solution}
+
 \begin{problem}
 设函数 \(f(x)\) 的定义域为 \(\R\)，\(x_0\)（\(x_0 \neq 0\)）是 \(f(x)\) 的极大值点，以下结论一定正确的是（\quad）
 
 \choices
-    {\(\forall x \in \R,\, f(x) \leqslant f(x_0)\)}
+    {\(\forall x \in \R, f(x) \leqslant f(x_0)\)}
     {\(-x_0\) 是 \(f(-x)\) 的极小值点}
     {\(-x_0\) 是 \(-f(x)\) 的极小值点}
     {\(-x_0\) 是 \(-f(-x)\) 的极小值点}
@@ -118,9 +162,17 @@ C
 D
 \end{answer}
 
+\begin{solution}
+由 \(x_0\) 是 \(f\) 的极大值点，存在 \(x_0\) 的邻域，使得当 \(u\) 在该邻域内时 \(f(u)\leqslant f(x_0)\). 令 \(u=-x\)，则当 \(x\) 在 \(-x_0\) 的相应邻域内时，
+\[
+-f(-x)\geqslant-f(x_0)=-f(-(-x_0))
+\]
+所以 \(-x_0\) 是 \(-f(-x)\) 的极小值点. 选项 A 把极大值点误作最大值点；选项 B 在自变量变换后仍对应极大值；选项 C 的函数值在 \(-x_0\) 附近没有必然关系. 故选 D.
+\end{solution}
+
 \begin{problem}
 已知等比数列 \(\{a_n\}\) 的公比为 \(q\)，记 \(b_n = a_{m(n-1)+1} + a_{m(n-1)+2} + \cdots + a_{m(n-1)+m}\)，\(c_n = a_{m(n-1)+1} \cdot a_{m(n-1)+2} \cdot \cdots \cdot a_{m(n-1)+m}\)
-（\(m, n \in \N^{*}\)），则以下结论一定正确的是（\quad）
+（\(m\)，\(n \in \N^{*}\)），则以下结论一定正确的是（\quad）
 
 \choices
     {数列 \(\{b_n\}\) 为等差数列，公差为 \(q^{m}\)}
@@ -132,6 +184,14 @@ D
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+由等比数列的通项关系，后一组中对应的每一项都等于前一组相应项的 \(q^m\) 倍. 因此 \(b_{n+1}=q^m b_n\)，但这并不能得到选项 A、B 所述的结论. 对乘积有
+\[
+c_{n+1}=\prod_{j=0}^{m-1}q^m a_{m(n-1)+1+j}=q^{m^2}c_n
+\]
+所以 \(\{c_n\}\) 为等比数列，公比为 \(q^{m^2}\)，选 C.
+\end{solution}
 
 \begin{problem}
 设 \(S\)，\(T\) 是 \(\R\) 的两个非空子集，如果存在一个从 \(S\) 到 \(T\) 的函数 \(y = f(x)\) 满足：
@@ -152,6 +212,17 @@ C
 D
 \end{answer}
 
+\begin{solution}
+选项 A 中，\(f(n)=n-1\) 是从 \(\N^{*}\) 到 \(\N\) 的严格递增双射. 选项 B 中，定义
+\(f(-1)=-8\)，且当 \(-1<x\leqslant3\) 时令 \(f(x)=\frac52(x+1)\)，则 \(f\) 严格递增，并将 \([-1,3]\) 双射到 \(\{-8\}\cup(0,10]\). 选项 C 中，函数
+\[
+f(x)=\ln\frac{x}{1-x}
+\]
+在 \((0,1)\) 上严格递增，且值域为 \(\R\)，所以这两集合保序同构.
+
+选项 D 不可能. 若存在严格递增双射 \(f:\Z\to\mathbb{Q}\)，则有 \(f(0)<f(1)\). 在两个有理数之间取有理数 \(r\)，由满射性存在 \(k\in\Z\) 使 \(f(k)=r\)，严格递增性又给出 \(0<k<1\)，这与 \(k\in\Z\) 矛盾. 故选 D.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -161,6 +232,10 @@ D
 \begin{answer}
 \(\frac{2}{3}\)
 \end{answer}
+
+\begin{solution}
+由 \(3a-1>0\) 得 \(a>\frac13\). 在区间 \([0,1]\) 上均匀取数时，事件对应区间 \((\frac13,1]\)，其长度为 \(\frac23\)，而样本区间长度为 \(1\)，所以所求概率为 \(\frac23\).
+\end{solution}
 
 \begin{problem}
 已知某一多面体内接于球构成一个简单组合体，如果该组合体的正视图，侧视图，俯视图均如图所示，且图中的四边形是边长为 \(2\) 的正方形，则该球的表面积是\fillinblank{}.
@@ -173,6 +248,14 @@ D
 \(12\pi\)
 \end{answer}
 
+\begin{solution}
+三个方向的正投影均为边长为 \(2\) 的正方形，故内接多面体的三个互相垂直方向的棱长均为 \(2\)，其空间对角线长为
+\[
+\sqrt{2^2+2^2+2^2}=2\sqrt3
+\]
+内接球经过多面体的顶点，球的直径等于该空间对角线，所以半径 \(R=\sqrt3\). 因而球的表面积为 \(4\pi R^2=4\pi\times3=12\pi\).
+\end{solution}
+
 \begin{problem}
 如图，在 \(\triangle ABC\) 中，已知点 \(D\) 在 \(BC\) 边上，\(AD \perp AC\)，\(\sin \angle BAC = \frac{2\sqrt{2}}{3}\)，\(AB = 3\sqrt{2}\)，\(AD = 3\)，则 \(BD\) 的长为\fillinblank{}.
 
@@ -183,6 +266,20 @@ D
 \(\sqrt{3}\)
 \end{answer}
 
+\begin{solution}
+因为点 \(D\) 在边 \(BC\) 上，射线 \(AD\) 位于 \(\angle BAC\) 内部，且 \(AD\perp AC\)，所以
+\(\angle BAC=\angle BAD+90^\circ\)，即 \(\angle BAD=\angle BAC-90^\circ\). 从而
+\[
+\cos\angle BAD=\cos\lvert\angle BAC-90^\circ\rvert=\sin\angle BAC=\frac{2\sqrt2}{3}
+\]
+在 \(\triangle ABD\) 中应用余弦定理，得
+\[
+BD^2=AB^2+AD^2-2\,AB\cdot AD\cos\angle BAD
+=(3\sqrt2)^2+3^2-2\cdot3\sqrt2\cdot3\cdot\frac{2\sqrt2}{3}=27-24=3
+\]
+因为 \(BD>0\)，所以 \(BD=\sqrt3\).
+\end{solution}
+
 \begin{problem}
 椭圆 \(\Gamma : \frac{x^{2}}{a^{2}} + \frac{y^{2}}{b^{2}} = 1\)（\(a > b > 0\)）的左右焦点分别为 \(F_1\)，\(F_2\)，焦距为 \(2c\)，若直线 \(y = \sqrt{3}(x + c)\) 与椭圆 \(\Gamma\) 的一个交点 \(M\) 满足 \(\angle MF_1F_2 = 2 \angle MF_2F_1\)，则该椭圆的离心率等于\fillinblank{}.
 \end{problem}
@@ -191,16 +288,41 @@ D
 \(\sqrt{3}-1\)
 \end{answer}
 
+\begin{solution}
+直线 \(y=\sqrt3(x+c)\) 经过左焦点 \(F_1=(-c,0)\). 从 \(F_1\) 出发的两条射线与正向焦点轴分别成 \(60^\circ\) 和 \(120^\circ\). 若 \(\angle MF_1F_2=120^\circ\)，则由题设 \(\angle MF_2F_1=60^\circ\)，三角形的第三个内角为 \(0^\circ\)，不可能. 因此 \(\angle MF_1F_2=60^\circ\)，从而 \(\angle MF_2F_1=30^\circ\)，故 \(\triangle MF_1F_2\) 在 \(M\) 处为直角三角形，且 \(F_1F_2=2c\) 为斜边. 因此
+\(MF_1=c\)，\(MF_2=\sqrt3c\).
+由椭圆定义，\(MF_1+MF_2=2a\)，于是 \(2a=(1+\sqrt3)c\). 所以离心率为
+\[
+e=\frac ca=\frac{2}{1+\sqrt3}=\sqrt3-1
+\]
+\end{solution}
+
 \begin{problem}
-当 \(x \in \R\)，\(|x| < 1\) 时，有如下表达式： \(1 + x + x^{2} + \cdots + x^{n} + \cdots = \frac{1}{1-x}.\)
+当 \(x \in \R\)，\(|x| < 1\) 时，有如下表达式： \(1 + x + x^{2} + \cdots + x^{n} + \cdots = \frac{1}{1-x}\).
 两边同时积分得： \(\int_{0}^{\frac{1}{2}} 1\,\text{d}x + \int_{0}^{\frac{1}{2}} x\,\text{d}x + \int_{0}^{\frac{1}{2}} x^{2}\,\text{d}x + \cdots + \int_{0}^{\frac{1}{2}} x^{n}\,\text{d}x + \cdots = \int_{0}^{\frac{1}{2}} \frac{1}{1-x}\,\text{d}x\)，
-从而得到如下等式： \(1 \times \frac{1}{2} + \frac{1}{2} \times \left(\frac{1}{2}\right)^{2} + \frac{1}{3} \times \left(\frac{1}{2}\right)^{3} + \cdots + \frac{1}{n+1} \times \left(\frac{1}{2}\right)^{n+1} + \cdots = \ln 2.\)
-请根据以上材料所蕴含的数学思想方法，计算： \(\mathrm C_{n}^{0} \times \frac{1}{2} + \frac{1}{2} \mathrm C_{n}^{1} \times \left(\frac{1}{2}\right)^{2} + \frac{1}{3} \mathrm C_{n}^{2} \times \left(\frac{1}{2}\right)^{3} + \cdots + \frac{1}{n+1} \mathrm C_{n}^{n} \times \left(\frac{1}{2}\right)^{n+1} =\fillinblank{}.\)
+从而得到如下等式： \(1 \times \frac{1}{2} + \frac{1}{2} \times \left(\frac{1}{2}\right)^{2} + \frac{1}{3} \times \left(\frac{1}{2}\right)^{3} + \cdots + \frac{1}{n+1} \times \left(\frac{1}{2}\right)^{n+1} + \cdots = \ln 2\).
+请根据以上材料所蕴含的数学思想方法，计算： \(\mathrm C_{n}^{0} \times \frac{1}{2} + \frac{1}{2} \mathrm C_{n}^{1} \times \left(\frac{1}{2}\right)^{2} + \frac{1}{3} \mathrm C_{n}^{2} \times \left(\frac{1}{2}\right)^{3} + \cdots + \frac{1}{n+1} \mathrm C_{n}^{n} \times \left(\frac{1}{2}\right)^{n+1} =\fillinblank{}\).
 \end{problem}
 
 \begin{answer}
 \(\dfrac{1}{n+1}\left[\left(\dfrac{3}{2}\right)^{n+1}-1\right]\)
 \end{answer}
+
+\begin{solution}
+利用二项式定理，在有限和中逐项积分：
+\[
+\int_0^{\frac12}(1+x)^n\,\mathrm{d}x
+=\int_0^{\frac12}\sum_{k=0}^{n}\mathrm C_n^k x^k\,\mathrm{d}x
+=\sum_{k=0}^{n}\frac{1}{k+1}\mathrm C_n^k\left(\frac12\right)^{k+1}
+\]
+另一方面，直接计算积分得
+\[
+\int_0^{\frac12}(1+x)^n\,\mathrm{d}x
+=\left.\frac{(1+x)^{n+1}}{n+1}\right|_0^{\frac12}
+=\frac{1}{n+1}\left[\left(\frac32\right)^{n+1}-1\right]
+\]
+这就是所求结果.
+\end{solution}
 
 \section{解答题}
 
@@ -215,8 +337,19 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item \(P(X \leqslant 3)=\frac{11}{15}\).
-\item 选择方案甲.
+\item 设小明、小红分别中奖的事件为 \(A\)、\(B\). 则 \(P(A)=\frac23\)，\(P(B)=\frac25\)，且二者相互独立. 累计得分 \(X\) 只有 \(0\)，\(2\)，\(3\)，\(5\) 四种可能；只有两人同时中奖时 \(X=5>3\). 因此
+\[
+P(X\leqslant3)=1-P(A\cap B)=1-\frac23\cdot\frac25=\frac{11}{15}
+\]
+\item 设一次抽奖所得分数为随机变量. 两人都选方案甲时，累计得分的数学期望为
+\[
+E_{\text{甲}}=2\times\left(2\cdot\frac23\right)=\frac83
+\]
+两人都选方案乙时，累计得分的数学期望为
+\[
+E_{\text{乙}}=2\times\left(3\cdot\frac25\right)=\frac{12}{5}
+\]
+因为 \(\frac83=\frac{40}{15}>\frac{36}{15}=\frac{12}{5}\)，所以选择方案甲时累计得分的数学期望较大.
 \end{enumerate}
 \end{solution}
 
@@ -230,9 +363,23 @@ D
 \end{problem}
 
 \begin{solution}
+函数定义域为 \(x>0\)，且
+\[
+f'(x)=1-\frac ax=\frac{x-a}{x}
+\]
 \begin{enumerate}
-\item 切线方程为 \(x+y-2=0\).
-\item 当 \(a\leqslant0\) 时无极值，当 \(a>0\) 时在 \(x=a\) 处取得极小值 \(a-a\ln a\)，无极大值.
+\item 当 \(a=2\) 时，\(f(1)=1\)，\(f'(1)=-1\). 因而切线为
+\[
+y-1=-1(x-1)
+\]
+即 \(x+y-2=0\).
+\item 当 \(a\leqslant0\) 时，对所有 \(x>0\) 有 \(x-a>0\)，所以 \(f'(x)>0\)，函数在定义域上递增，无极值. 当 \(a>0\) 时，
+\(f'(x)<0\)，\((0<x<a)\)，\(f'(x)>0\)，\((x>a)\).
+故函数在 \(x=a\) 处取得极小值
+\[
+f(a)=a-a\ln a
+\]
+且无极大值.
 \end{enumerate}
 \end{solution}
 
@@ -249,8 +396,22 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item 抛物线方程为 \(x^{2}=10y\).
-\item 直线 \(l\) 的方程为 \(y=\frac{3}{2}x+10\) 或 \(y=-\frac{3}{2}x+10\).
+\item 由正方形顶点坐标可知 \(B=(10,10)\). 十等分后 \(A_i=(i,0)\)，\(B_i=(10,i)\). 直线 \(OB_i\) 的方程为 \(y=\frac{i}{10}x\)，而过 \(A_i\) 的垂线方程为 \(x=i\). 联立得
+\[
+P_i=\left(i,\frac{i^2}{10}\right)
+\]
+因此 \(x_{P_i}^2=10y_{P_i}\)，所有点 \(P_i\) 均在抛物线 \(E:x^2=10y\) 上.
+\item 设直线 \(l\) 的方程为 \(y=kx+10\)，与 \(x^2=10y\) 联立得
+\[
+x^2-10kx-100=0
+\]
+设交点横坐标为 \(x_1\)，\(x_2\)，则
+\(x_1+x_2=10k\)，\(x_1x_2=-100\).
+以 \(OC\) 为共同底边，三角形面积等于 \(\frac12|OC|\) 乘以对应点到直线 \(OC\) 的距离，所以面积之比给出 \(|x_1|=4|x_2|\). 又因 \(x_1x_2<0\)，可设 \(x_1=-4x_2\). 代入乘积关系得 \(-4x_2^2=-100\)，即 \(x_2=\pm5\). 因而
+\[
+x_1+x_2=\pm15=10k
+\]
+得到 \(k=\pm\frac32\). 所求直线为 \(y=\frac32x+10\) 或 \(y=-\frac32x+10\).
 \end{enumerate}
 \end{solution}
 
@@ -268,12 +429,42 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item \(CD\perp\) 平面 \(ADD_1A_1\).
-\item \(k=1\).
-\item 共有 \(4\) 种拼接方案，且 \(f(k)=\begin{cases}
-72k^{2}+26k,&0<k\leqslant\frac{5}{18},\\
-36k^{2}+36k,&k>\frac{5}{18}.
-\end{cases}\)
+\item 取 \(CD\) 的中点 \(E\)，连接 \(BE\). 因为 \(AB\parallel DC\)，且 \(AB=3k=DE\)，所以四边形 \(ABED\) 是平行四边形，从而 \(BE\parallel AD\)，且 \(BE=AD=4k\). 在 \(\triangle BCE\) 中，\(CE=3k\)，\(BE=4k\)，\(BC=5k\)，故
+\[
+BE^2+CE^2=(4k)^2+(3k)^2=(5k)^2=BC^2
+\]
+所以 \(\angle BEC=90^\circ\)，即 \(BE\perp CD\). 又 \(BE\parallel AD\)，所以 \(AD\perp CD\). 因为 \(AA_1\perp\) 底面 \(ABCD\)，故 \(AA_1\perp CD\). 直线 \(AD\)、\(AA_1\) 相交且都在平面 \(ADD_1A_1\) 内，因此 \(CD\perp\) 平面 \(ADD_1A_1\).
+\item 以 \(D\) 为原点，以 \(DA\)、\(DC\)、\(DD_1\) 所在方向为坐标轴正方向，建立空间直角坐标系，则
+\(A=(4k,0,0)\)，\(C=(0,6k,0)\)，\(B=(4k,3k,0)\)，\(A_1=(4k,0,1)\)，\(B_1=(4k,3k,1)\).
+取平面 \(AB_1C\) 内的两个方向向量
+\(\overrightarrow{AC}=(-4k,6k,0)\)，\(\overrightarrow{AB_1}=(0,3k,1)\).
+设该平面的法向量为 \(\bs{n}=(x,y,z)\)，则
+\(-4kx+6ky=0\)，\(3ky+z=0\).
+取 \(y=2\)，得 \(\bs{n}=(3,2,-6k)\). 直线 \(AA_1\) 的方向向量为 \(\bs{d}=(0,0,1)\). 若直线与平面所成的角为 \(\theta\)，则
+\[
+    \sin\theta=\frac{|\bs{d}\cdot\bs{n}|}{|\bs{d}|\,|\bs{n}|}=\frac{6k}{\sqrt{36k^2+13}}=\frac67
+\]
+由 \(k>0\)，平方并化简得 \(49k^2=36k^2+13\)，所以 \(k=1\).
+\item 底面梯形的高为 \(AD=4k\)，故其面积为
+\[
+S_0=\frac{3k+6k}{2}\cdot4k=18k^2
+\]
+周长为 \(3k+4k+5k+6k=18k\). 按拼接面逐一考察并把全等、旋转或翻转后的相同情形合并，可得到 \(4\) 种新四棱柱：沿两个底面拼接的 \(1\) 种，以及沿侧面拼接的 \(3\) 种. 沿两个底面拼接时，新四棱柱的底面积仍为 \(S_0\)，高变为 \(2\)，所以其表面积为
+\[
+S_1=2S_0+2\cdot18k=36k^2+36k
+\]
+其余三种侧面拼接的高为 \(1\)，新底面面积为 \(2S_0=36k^2\)，两底面面积合计为 \(72k^2\). 设原底面周长为 \(P=18k\). 对应公共侧棱在新底面边界上被消去，所以三种不重复拼接所得新底面的周长分别为
+\(2P-2\cdot3k=30k\)、\(2P-2\cdot4k=28k\)、\(2P-2\cdot5k=26k\)；沿长度为 \(6k\) 的侧面拼接不形成题设的四棱柱. 因而三种侧面拼接的表面积中最小者为 \(S_2=72k^2+26k\). 比较
+\[
+S_2-S_1=36k^2-10k=2k(18k-5)
+\]
+因此
+\[
+f(k)=\begin{cases}
+72k^2+26k,&0<k\leqslant\frac{5}{18},\\
+36k^2+36k,&k>\frac{5}{18}.
+\end{cases}
+\]
 \end{enumerate}
 \end{solution}
 
@@ -289,9 +480,47 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item \(f(x)=\cos 2x\)，\(g(x)=\sin x\).
-\item 存在唯一的 \(x_0\).
-\item \(a=1\) 或 \(a=-1\)，且 \(n=1342\).
+\item 由周期公式 \(\frac{2\pi}{\omega}=\pi\)，得 \(\omega=2\). 对称中心的纵坐标为零，所以
+\[
+\sin\left(2\cdot\frac\pi4+\varphi\right)=0
+\]
+结合 \(0<\varphi<\pi\)，得 \(\varphi=\frac\pi2\)，从而 \(f(x)=\sin(2x+\frac\pi2)=\cos2x\). 横坐标伸长为原来的 \(2\) 倍后，函数变为 \(f(\frac x2)=\cos x\)；再向右平移 \(\frac\pi2\)，得到
+\[
+g(x)=\cos\left(x-\frac\pi2\right)=\sin x
+\]
+\item 令 \(t=\sin x\). 当 \(x\in(\frac\pi6,\frac\pi4)\) 时，
+\(\frac12<t<\frac{\sqrt2}{2}\)，\(0<\cos2x=1-2t^2<\frac12\).
+因此 \(0<f(x)g(x)<f(x)<g(x)\). 三个数按大小排列为 \(f(x)g(x)\)，\(f(x)\)，\(g(x)\)，它们成等差数列的充要条件为
+\[
+f(x)g(x)+g(x)=2f(x)
+\]
+代入 \(f(x)=1-2t^2\)、\(g(x)=t\)，得
+\[
+t(1-2t^2)+t=2(1-2t^2)
+\]
+即 \(p(t):=t^3-2t^2-t+1=0\). 在 \((\frac12,\frac{\sqrt2}{2})\) 上，\(p'(t)=3t^2-4t-1<0\)，故 \(p\) 严格递减；并且
+\(p\left(\frac12\right)=\frac18>0\)，\(p\left(\frac{\sqrt2}{2}\right)=-\frac{\sqrt2}{4}<0\).
+由零点存在定理，区间内恰有一个根，且 \(t=\sin x\) 在该区间严格递增，所以存在唯一的 \(x_0\).
+\item 由前一问，零点方程为
+\[
+\cos2x+a\sin x=0
+\]
+令 \(s=\sin x\)，则
+\[
+2s^2-as-1=0
+\]
+其两根为 \(s_+=\frac{a+\sqrt{a^2+8}}4>0\) 和 \(s_-=-\frac1{2s_+}<0\).
+
+由根的表达式可知，\(s_+\) 随 \(a\) 严格递增，且
+
+\(s_+\in(0,\tfrac12)\)，\(\ s_-<-1\)，\((a<-1);\)，\(s_+=\tfrac12\)，\(\ s_-=-1\)，\((a=-1);\)
+\(s_+\in(\tfrac12,1)\)，\(\ s_-\in(-1,-\tfrac12)\)，\((-1<a<1);\)，\(s_+=1\)，\(\ s_-=-\tfrac12\)，\((a=1);\)
+\(s_+>1\)，\(\ s_-\in(-\tfrac12,0)\)，\((a>1)\).
+
+当 \(a<-1\) 时，只有正根 \(s_+\in(0,\frac12)\) 可取；每个正弦为正的区间 \((2j\pi,(2j+1)\pi)\) 内有 \(2\) 个零点，所以总数为 \(2\lceil n/2\rceil\). 当 \(a>1\) 时，只有负根 \(s_-\in(-\frac12,0)\) 可取；每个正弦为负的区间 \(((2j+1)\pi,(2j+2)\pi)\) 内有 \(2\) 个零点，所以总数为 \(2\lfloor n/2\rfloor\). 当 \(-1<a<1\) 时，两根均在 \((-1,1)\) 内，每个长度为 \(\pi\) 的半周期内恰有 \(2\) 个零点，总数为 \(2n\). 因此 \(a\ne\pm1\) 时零点总数必为偶数，不能等于 \(2013\).
+
+当 \(a=1\) 时，根为 \(s=1\)，\(-\frac12\). 每个长度 \(2\pi\) 的区间内分别有 \(1\) 个和 \(2\) 个解，共 \(3\) 个解；当 \(a=-1\) 时，根为 \(s=\frac12\)，\(-1\)，每个长度 \(2\pi\) 的区间内也有 \(3\) 个解. 取 \(n=2m\) 为偶数时，零点数为 \(3m=\frac{3n}{2}\)，令其等于 \(2013\)，得 \(n=1342\). 若 \(n=2m+1\) 为奇数，则 \(a=1\) 时零点数为 \(3m+1\)，\(a=-1\) 时零点数为 \(3m+2\)，二者均不可能等于 \(2013\). 所以
+\(a=1\)，\(\ n=1342,\qquad\text{或}\qquad a=-1\)，\(\ n=1342\).
 \end{enumerate}
 \end{solution}
 
@@ -309,8 +538,19 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item \(a=1\)，\(b=-1\).
-\item 点 \(P\) 的坐标为 \((1,0)\).
+\item 设变换后点的坐标为 \((X,Y)\). 由矩阵变换
+\[
+\begin{pmatrix}X\\Y\end{pmatrix}=A\begin{pmatrix}x\\y\end{pmatrix}
+=\begin{pmatrix}x+2y\\y\end{pmatrix}
+\]
+得 \(x=X-2Y\)，\(y=Y\). 代入原直线方程，得到变换后直线
+\(a(X-2Y)+Y=1\)，\(aX+(1-2a)Y=1\).
+与 \(X+bY=1\) 比较系数，得 \(a=1\)，\(b=1-2a=-1\).
+\item 由不动点条件
+\[
+\begin{pmatrix}x_0+2y_0\\y_0\end{pmatrix}=\begin{pmatrix}x_0\\y_0\end{pmatrix}
+\]
+得 \(2y_0=0\)，即 \(y_0=0\). 又因 \(a=1\)，点 \(P\) 在直线 \(x+y=1\) 上，所以 \(x_0=1\). 故 \(P=(1,0)\).
 \end{enumerate}
 \end{solution}
 
@@ -328,8 +568,20 @@ y = \sin \alpha,
 
 \begin{solution}
 \begin{enumerate}
-\item \(a=\sqrt{2}\)，直线 \(l\) 的直角坐标方程为 \(x+y-2=0\).
-\item 直线 \(l\) 与圆 \(C\) 相交.
+\item 将点 \(A\) 的极坐标代入直线方程，得
+\[
+a=\sqrt2\cos\left(\frac\pi4-\frac\pi4\right)=\sqrt2
+\]
+又因为 \(x=\rho\cos\theta\)，\(y=\rho\sin\theta\)，所以
+\[
+\rho\cos\left(\theta-\frac\pi4\right)=\frac{x+y}{\sqrt2}
+\]
+代入 \(a=\sqrt2\)，得到直线的直角坐标方程 \(x+y-2=0\).
+\item 参数方程给出圆心为 \((1,0)\)，半径为 \(1\). 圆心到直线的距离为
+\[
+d=\frac{|1+0-2|}{\sqrt{1^2+1^2}}=\frac1{\sqrt2}<1
+\]
+因此直线与圆相交.
 \end{enumerate}
 \end{solution}
 
@@ -344,7 +596,23 @@ y = \sin \alpha,
 
 \begin{solution}
 \begin{enumerate}
-\item \(a=1\).
-\item 函数 \(f(x)\) 的最小值为 \(3\).
+\item 因为 \(\frac32\in A\)，所以
+\[
+\left|\frac32-2\right|=\frac12<a
+\]
+又因为 \(\frac12\notin A\)，所以
+\[
+\left|\frac12-2\right|=\frac32\geqslant a
+\]
+结合 \(a\in\N^*\)，得 \(\frac12<a\leqslant\frac32\)，从而 \(a=1\).
+\item 此时
+\[
+f(x)=|x+1|+|x-2|
+\]
+由三角不等式，
+\[
+|x+1|+|x-2|\geqslant|(x+1)-(x-2)|=3
+\]
+当 \(-1\leqslant x\leqslant2\) 时，两个差值符号相反，等号成立. 因此函数的最小值为 \(3\).
 \end{enumerate}
 \end{solution}

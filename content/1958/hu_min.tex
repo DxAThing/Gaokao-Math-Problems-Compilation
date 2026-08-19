@@ -7,33 +7,50 @@
 \end{problem}
 
 \begin{solution}
-由题意得判别式
-\[\Delta=b^{2}-4ac=[-(m-2)]^{2}-4\times 1\times [-(m-6)]=(m^{2}-4m+4)+4(m-6)=m^{2}-20\]
-由一元二次方程有二个不相等实根之条件，得 \(\Delta>0\)，即 \(m^{2}-20>0\)，所以 \(|m|>\sqrt{20}\).
-因此 \(m>\sqrt{20}\) 或 \(m<-\sqrt{20}\).
+该方程为关于 \(x\) 的一元二次方程，其判别式为
+\[
+\Delta=\left[-(m-2)\right]^{2}-4\times 1\times\left[-(m-6)\right]
+=(m-2)^{2}+4(m-6)=m^{2}-20
+\]
+方程有两个不相等的实根，当且仅当 \(\Delta>0\)，所以 \(m^{2}-20>0\)，即 \(m^{2}>20\). 因而 \(m<-\sqrt{20}\) 或 \(m>\sqrt{20}\). 故 \(m\) 的取值范围为 \(\left(-\infty,-\sqrt{20}\right)\cup\left(\sqrt{20},+\infty\right)\).
 \end{solution}
 
 \begin{problem}
 解方程组
 \(
 \begin{cases}
-\frac{1}{2}\lg x+\frac{1}{2}\lg y-\lg\left( 4-\sqrt{x} \right)=0,\\
-\left( 25^{\sqrt{x}} \right)^{\sqrt{y}}-125\times 5^{\sqrt{y}}=0
+\dfrac{1}{2}\lg x+\dfrac{1}{2}\lg y-\lg\left(4-\sqrt{x}\right)=0,\\
+\left(25^{\sqrt{x}}\right)^{\sqrt{y}}-125\times 5^{\sqrt{y}}=0.
 \end{cases}
 \)
 \end{problem}
 
 \begin{solution}
-由第一个式子得 \(\lg \frac{\sqrt{xy}}{4-\sqrt{x}}=\lg 1\)，即 \(\sqrt{x}\cdot \sqrt{y}=4-\sqrt{x}\). 所以 \(\sqrt{x}=\frac{4}{1+\sqrt{y}}\).
-又由第二个式子得 \(5^{2\sqrt{x}\cdot \sqrt{y}}-5^{3+\sqrt{y}}=0\)，即 \(2\sqrt{x}\cdot \sqrt{y}=3+\sqrt{y}\).
-将 \(\sqrt{x}=\frac{4}{1+\sqrt{y}}\) 代入 \(2\sqrt{x}\cdot \sqrt{y}=3+\sqrt{y}\)，得 \(\frac{8\sqrt{y}}{1+\sqrt{y}}=3+\sqrt{y}\).
-化简得 \(8\sqrt{y}=\left( 3+\sqrt{y} \right)\left( 1+\sqrt{y} \right)=3+4\sqrt{y}+y\)，即 \(y-4\sqrt{y}+3=0\).
-分解因式得 \(\left( \sqrt{y}-1 \right)\left( \sqrt{y}-3 \right)=0\).
-当 \(\sqrt{y}-1=0\) 时，\(\sqrt{y}=1\)，所以 \(y_{1}=1\).
-又 \(\sqrt{y}-3=0\) 时，\(\sqrt{y}=3\)，所以 \(y_{2}=9\).
-将 \(\sqrt{y}\) 之值代入关于 \(\sqrt{x}\) 的等式，所以 \(\sqrt{x_{1}}=\frac{4}{1+\sqrt{y_{1}}}=\frac{4}{1+1}=2\)，所以 \(x_{1}=4\).
-又 \(\sqrt{x_{2}}=\frac{4}{1+\sqrt{y_{2}}}=\frac{4}{1+3}=1\)，所以 \(x_{2}=1\).
-将 \(x_{1}\)，\(x_{2}\)，\(y_{1}\)，\(y_{2}\) 之值代入原方程检验适合，故原方程组的解为 \(x_{1}=4\)，\(y_{1}=1\) 和 \(x_{2}=1\)，\(y_{2}=9\).
+由对数式有意义，必须满足 \(x>0\)，\(y>0\)，且 \(4-\sqrt{x}>0\). 第一个方程化为
+\(\lg\frac{\sqrt{x}\cdot\sqrt{y}}{4-\sqrt{x}}=\lg 1\)，
+所以
+\(\frac{\sqrt{x}\cdot\sqrt{y}}{4-\sqrt{x}}=1\)，
+从而
+\(\sqrt{x}\left(1+\sqrt{y}\right)=4\)，
+即
+\(\sqrt{x}=\frac{4}{1+\sqrt{y}}\).
+
+第二个方程中，\(25=5^{2}\)，\(125=5^{3}\)，故
+\(5^{2\sqrt{x}\cdot\sqrt{y}}=5^{3+\sqrt{y}}\).
+由于底数 \(5>1\)，指数相等，即
+\(2\sqrt{x}\cdot\sqrt{y}=3+\sqrt{y}\).
+令 \(t=\sqrt{y}\)，则 \(t>0\)，代入上式中的 \(\sqrt{x}=\frac{4}{1+t}\)，得
+\(\frac{8t}{1+t}=3+t\).
+因 \(1+t>0\)，两边同乘 \(1+t\)，得
+\[
+8t=(3+t)(1+t)=3+4t+t^{2}
+\]
+整理得 \(t^{2}-4t+3=0\)，即 \((t-1)(t-3)=0\). 因此 \(t=1\) 或 \(t=3\).
+
+当 \(t=1\) 时，\(y=1\)，\(\sqrt{x}=4/(1+1)=2\)，所以 \(x=4\). 当 \(t=3\) 时，\(y=9\)，\(\sqrt{x}=4/(1+3)=1\)，所以 \(x=1\).
+
+检验：当 \((x,y)=(4,1)\) 时，\(\sqrt{x}\cdot\sqrt{y}=2=4-\sqrt{x}\)，且两个幂的指数均为 \(4\)；当 \((x,y)=(1,9)\) 时，\(\sqrt{x}\cdot\sqrt{y}=3=4-\sqrt{x}\)，且两个幂的指数均为 \(6\). 两组解都满足定义域条件，故原方程组的解为
+\(\left(x,y\right)=\left(4,1\right)\) 或 \(\left(x,y\right)=\left(1,9\right)\).
 \end{solution}
 
 \begin{problem}
@@ -41,9 +58,13 @@
 \end{problem}
 
 \begin{solution}
-设我国的钢产量每年平均增长率为 \(X\)，由题意得 \(500(1+X)^{4}=2000(1+4.24\%)^{4}\)，即 \(\left( \frac{1+X}{1+0.0424} \right)^{4}=2^{2}\).
-因 \(X>0\)，所以 \(1+X>0\). 将上式两边开四次方（只取正），得 \(\frac{1+X}{1+0.0424}=\sqrt{2}\).
-故 \(X=\sqrt{2}\times 1.0424-1\approx 0.4739=47.39\%\).
+设我国钢产量的年平均增长率为 \(X\)，则四年后我国钢产量为 \(500\left(1+X\right)^{4}\text{ 万吨}\)，英国钢产量为 \(2000\left(1+0.0424\right)^{4}\text{ 万吨}\). 由四年后两国钢产量相等，得
+\(500\left(1+X\right)^{4}=2000\left(1+0.0424\right)^{4}\).
+两边同除以 \(500\left(1.0424\right)^{4}\)，得
+\(\left(\frac{1+X}{1.0424}\right)^{4}=4\).
+增长率为正，故 \(1+X>0\)，取正的四次方根，得
+\(\frac{1+X}{1.0424}=\sqrt{2}\)，所以 \(X=1.0424\sqrt{2}-1\).
+计算得 \(X\approx0.474176\)，所以年平均增产率约为 \(47.4176\%\). 按题意精确到 \(0.01\%\)，得 \(X\approx47.42\%\).
 \end{solution}
 
 \begin{problem}
@@ -59,37 +80,32 @@
 
 \begin{solution}
 \begin{enumerate}
-\item 由题意，
+\item 记 \(f(x)=ax^{2}+bx+c\). 由题意，\(a\)，\(b\)，\(c\) 满足
 \[
 \begin{cases}
-f(1)=a+b+c=-1,\\
-f(2)=4a+2b+c=1,\\
-f(-2)=4a-2b+c=17.
+a+b+c=-1,\\
+4a+2b+c=1,\\
+4a-2b+c=17.
 \end{cases}
 \]
-第二个式子减去第三个式子，得 \(4b=-16\)，所以 \(b=-4\).
-第二个式子减去第一个式子，得 \(3a+b=2\)，所以
-\(a=\frac{2-b}{3}=\frac{2+4}{3}=2\).
-将 \(a=2\)，\(b=-4\) 代入第一个式子得
-\(c=-1-a-b=-1-2+4=1\).
-故函数式为 \(y=2x^{2}-4x+1\).
-
-\item 已知
+第二个方程减去第三个方程，得 \(4b=-16\)，所以 \(b=-4\). 第二个方程减去第一个方程，得 \(3a+b=2\)，于是
 \[
-y=2x^{2}-4x+1=2\left( x^{2}-2x \right)+1=2\left( x^{2}-2x+1 \right)+1-2=2\left( x-1 \right)^{2}-1
+a=\frac{2-b}{3}=\frac{2+4}{3}=2
 \]
-因为 \(\left( x-1 \right)^{2}\) 为正，所以当 \(x=1\) 时，有极小值 \(-1\).
-这是顶点为 \((1,-1)\)，对称轴为 \(x=1\)，开口向上的抛物线，故有极小值.
+将 \(a=2\)，\(b=-4\) 代入第一个方程，得 \(c=-1-a-b=-1-2+4=1\). 故函数式为 \(y=2x^{2}-4x+1\).
 
-\item 令 \(y=0\)，即 \(2x^{2}-4x+1=0\).
-所以
-\[x=\frac{4\pm \sqrt{(-4)^{2}-4\times 2\times 1}}{2\times 2}=\frac{4\pm \sqrt{16-8}}{4}=1\pm \frac{\sqrt{2}}{2}\]
-约为 \(1.707\) 或 \(0.293\).
-即当 \(x=1\pm \frac{\sqrt{2}}{2}\) 时，函数值为 \(0\).
+\item 将函数式配方，得
+\[
+y=2x^{2}-4x+1=2\left(x^{2}-2x+1\right)-1=2\left(x-1\right)^{2}-1
+\]
+因为 \(\left(x-1\right)^{2}\geq 0\)，所以 \(y\geq-1\)，且当且仅当 \(x=1\) 时取等号. 又因 \(x\) 的绝对值可以无限增大，\(y=2\left(x-1\right)^{2}-1\) 没有最大值. 因此函数有极小值 \(-1\)，没有极大值；极小值点为 \(\left(1,-1\right)\)，对称轴为 \(x=1\)，抛物线开口向上.
 
-\item
-\end{enumerate}
+\item 令 \(y=0\)，得 \(2x^{2}-4x+1=0\). 其判别式为 \(\Delta=(-4)^{2}-4\times2\times1=8\)，所以 \(x=\frac{4\pm\sqrt{8}}{4}=1\pm\frac{\sqrt{2}}{2}\).
+故当 \(x=1-\frac{\sqrt{2}}{2}\) 或 \(x=1+\frac{\sqrt{2}}{2}\) 时，函数值为 \(0\).
+
+\item 函数图像是开口向上的抛物线 \(y=2\left(x-1\right)^{2}-1\)，顶点为 \(\left(1,-1\right)\)，对称轴为 \(x=1\)，与 \(x\) 轴交于 \(\left(1-\frac{\sqrt{2}}{2},0\right)\) 和 \(\left(1+\frac{\sqrt{2}}{2},0\right)\)，与 \(y\) 轴交于 \(\left(0,1\right)\). 根据这些特征作图如下.
 \solutionfigure{\bitmapfigure[max width=0.30\linewidth]{img/1958/hu_min/q4_solution_fig1.png}}
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -97,24 +113,26 @@ y=2x^{2}-4x+1=2\left( x^{2}-2x \right)+1=2\left( x^{2}-2x+1 \right)+1-2=2\left( 
 \end{problem}
 
 \begin{solution}
-如图，在河的这边地势较平坦处选取 \(C\)，\(D\) 两点，使从 \(C\)，\(D\) 两点都能看见 \(A\)，\(B\)，并且能量得 \(CD=\alpha\)（\(C\)，\(D\) 一般叫基线）.
-假设测得 \(\angle ACD=a\)，\(\angle BCD=\beta\)，\(\angle BDC=\gamma\)，\(\angle ADC=\theta\).
+在河的这边选择地势平坦且能同时看见 \(A\)，\(B\) 的两点 \(C\)，\(D\)，把 \(CD\) 测出，记为 \(\alpha\). 线段 \(CD\) 称为基线. 再测量 \(\angle ACD=a\)，\(\angle BCD=\beta\)，\(\angle BDC=\gamma\)，\(\angle ADC=\theta\).
 \solutionfigure{\bitmapfigure[width=0.40\linewidth]{img/1958/hu_min/q5_solution_fig1.png}}
-在 \(\triangle ACD\) 中，由正弦定理得 \(\frac{AD}{\sin a}=\frac{\alpha}{\sin\left[ 180^{\circ}-(a+\theta) \right]}\)，所以 \(AD=\frac{\alpha\sin a}{\sin(a+\theta)}\).
-又在 \(\triangle BCD\) 中，由正弦定理得 \(\frac{BD}{\sin \beta}=\frac{\alpha}{\sin\left[ 180^{\circ}-(\beta+\gamma) \right]}\)，所以 \(BD=\frac{\alpha\sin \beta}{\sin(\beta+\gamma)}\).
-在 \(\triangle ADB\) 中，由余弦定理得 \(AB^{2}=AD^{2}+BD^{2}-2AD\cdot BD\cos \angle ADB\).
+在 \(\triangle ACD\) 中，\(\angle CAD=180^{\circ}-(a+\theta)\)，由正弦定理得
+\[
+\frac{AD}{\sin a}=\frac{CD}{\sin\left(180^{\circ}-(a+\theta)\right)}=\frac{\alpha}{\sin(a+\theta)}
+\]
+所以 \(AD=\dfrac{\alpha\sin a}{\sin(a+\theta)}\). 同理，在 \(\triangle BCD\) 中，\(\angle CBD=180^{\circ}-(\beta+\gamma)\)，由正弦定理得
+\[
+\frac{BD}{\sin\beta}=\frac{CD}{\sin\left(180^{\circ}-(\beta+\gamma)\right)}=\frac{\alpha}{\sin(\beta+\gamma)}
+\]
+所以 \(BD=\dfrac{\alpha\sin\beta}{\sin(\beta+\gamma)}\).
+
+由图中两条视线在 \(D\) 点形成的夹角，\(\angle ADB=\left|\gamma-\theta\right|\)，故在 \(\triangle ADB\) 中由余弦定理得
 \[
 \begin{aligned}
-AB^{2}
-&=\left( \frac{\alpha\sin a}{\sin(a+\theta)} \right)^{2}
-+\left( \frac{\alpha\sin \beta}{\sin(\beta+\gamma)} \right)^{2}
--2\left( \frac{\alpha\sin a}{\sin(a+\theta)} \right)\left( \frac{\alpha\sin \beta}{\sin(\beta+\gamma)} \right)\cos(\gamma-\theta)\\
-&=\frac{\alpha^{2}\sin^{2}a}{\sin^{2}(a+\theta)}
-+\frac{\alpha^{2}\sin^{2}\beta}{\sin^{2}(\beta+\gamma)}
--\frac{2\alpha^{2}\sin a \sin \beta \cos(\gamma-\theta)}{\sin(a+\theta)\sin(\beta+\gamma)}\\
-&=\alpha^{2}\left( \frac{\sin^{2}a}{\sin^{2}(a+\theta)}+\frac{\sin^{2}\beta}{\sin^{2}(\beta+\gamma)}-\frac{2\sin a \sin \beta \cos(\gamma-\theta)}{\sin(a+\theta)\sin(\beta+\gamma)} \right).
+AB^{2}&=AD^{2}+BD^{2}-2AD\cdot BD\cos\left(\gamma-\theta\right)\\
+&=\alpha^{2}\left(\frac{\sin^{2}a}{\sin^{2}(a+\theta)}+\frac{\sin^{2}\beta}{\sin^{2}(\beta+\gamma)}-\frac{2\sin a\sin\beta\cos\left(\gamma-\theta\right)}{\sin(a+\theta)\sin(\beta+\gamma)}\right).
 \end{aligned}
 \]
+因此，测得基线 \(CD=\alpha\) 和上述四个角后，取上式的正平方根，即可得到 \(AB\).
 \end{solution}
 
 \begin{problem}
@@ -122,28 +140,18 @@ AB^{2}
 \end{problem}
 
 \begin{solution}
-证明：第一法：如图，
-设直线 \(L_{3}\) 与圆 \(O\) 相切于 \(E\) 点，连接 \(OA\)，\(OC\)，\(OE\)，\(OD\)，\(OB\)，则
+设 \(L_{3}\) 与圆 \(O\) 相切于 \(E\)，连接 \(OA\)，\(OB\)，\(OE\)，\(OC\)，\(OD\). 由于半径垂直于切线，有
 \[
 \angle OAC=\angle OEC=\angle OED=\angle OBD=90^{\circ}
 \]
-所以 \(O\)，\(A\)，\(C\)，\(E\) 四点共圆（对角互补的四边形四顶点共圆）.
 \solutionfigure{\bitmapfigure[width=0.34\linewidth]{img/1958/hu_min/q6_solution_fig1.png}}
-所以 \(\angle AOE+\angle ACE=180^{\circ}\).
-又 \(L_{1}\parallel L_{2}\)（已知），所以 \(\angle BDE+\angle ACE=180^{\circ}\).
-故 \(\angle AOE=\angle BDE\).
-又 \(\angle AOC=\angle COE\)，\(\angle BDO=\angle ODE\)（圆外一点与圆心的连线平分过这点两切线的夹角和过切点两半径的夹角）.
-因此 \(\angle AOC=\angle BDO\)（等量的一半相等），则直角三角形 \(AOC\sim\) 直角三角形 \(BDO\)，故 \(\frac{AC}{OB}=\frac{OA}{BD}\).
-因此 \(AC\cdot BD=OA\cdot OB=\text{半径}^{2}\). 即无论 \(L_{3}\) 在何种位置，因两平行线间的距离一定，所以 \(\text{半径}^{2}\) 为常量，所以 \(AC\cdot BD=\text{常量}\).
+所以四边形 \(OACE\) 的一对对角互补，点 \(O\)，\(A\)，\(C\)，\(E\) 共圆. 于是 \(\angle AOE+\angle ACE=180^{\circ}\). 又因 \(L_{1}\parallel L_{2}\)，所以 \(\angle BDE+\angle ACE=180^{\circ}\)，
+从而 \(\angle AOE=\angle BDE\).
 
-第二法：
-因为 \(L_{1}\parallel L_{2}\)（已知），所以 \(\angle ACE+\angle EBD=180^{\circ}\).
-又 \(\angle ACO=\angle ECO\)，\(\angle BDO=\angle EDO\)，所以 \(\angle ECO+\angle EDO=90^{\circ}\).
-故在 \(\triangle COD\) 中，\(\angle COD=90^{\circ}\).
-又 \(OE\perp CD\)，所以 \(CE\cdot ED=OE^{2}=\text{半径}^{2}\).
-（直角三角形斜边上的高，是两直角边在斜边上的投影的比例中项）
-但 \(CE=AC\)，\(ED=BD\)（从圆外一点向圆引的两条切线长相等）.
-因此 \(AC\cdot BD=\text{半径}^{2}\). 即无论 \(L_{3}\) 在何种位置，两平行线间的距离一定，所以 \(\text{半径}^{2}\) 为常量，上式均成立，因此 \(AC\cdot BD=\text{常量}\).
+在直角三角形 \(AOC\) 与 \(EOC\) 中，\(OA=OE\)，且 \(OC\) 是公共斜边，所以两三角形全等，从而 \(\angle AOC=\angle COE\). 同理，在直角三角形 \(BDO\) 与 \(EDO\) 中，\(OB=OE\)，且 \(OD\) 是公共斜边，所以 \(\angle BDO=\angle ODE\). 于是 \(\angle AOE=2\angle COE\)，\(\angle BDE=2\angle ODE\)，结合 \(\angle AOE=\angle BDE\)，得 \(\angle COE=\angle ODE\)，进而 \(\angle AOC=\angle BDO\).
+
+在直角三角形 \(AOC\) 和 \(BDO\) 中，\(\angle OAC=\angle OBD=90^{\circ}\)，且 \(\angle AOC=\angle BDO\)，所以两三角形相似，从而 \(\frac{AC}{OB}=\frac{OA}{BD}\). 交叉相乘，得 \(AC\cdot BD=OA\cdot OB\). 设已知圆半径为 \(r\)，则 \(OA=OB=r\)，故 \(AC\cdot BD=r^{2}\).
+右边只由已知圆决定，与切线 \(L_{3}\) 的位置无关，所以 \(AC\cdot BD\) 是常量.
 \end{solution}
 
 \begin{problem}
@@ -151,17 +159,16 @@ AB^{2}
 \end{problem}
 
 \begin{solution}
-已知：如图，平面 \(S\) 内的 \(\triangle ABC\) 中，\(\angle ACB=90^{\circ}\)，\(BC=18\text{ 分米}\)，平面 \(S\) 外一点 \(P\) 到平面 \(S\) 的距离 \(PD=40\text{ 分米}\)，\(PE\perp AC\)，且 \(PA=PB=PC\)，求 \(PE\).
+如图，不妨将已知直角边记为 \(BC=18\text{ 分米}\)，并设 \(\angle ACB=90^{\circ}\). 设 \(D\) 是点 \(P\) 到平面 \(S\) 的垂足，\(E\) 是点 \(P\) 到另一直角边 \(AC\) 的垂足，则 \(PD=40\text{ 分米}\)，且要求 \(PE\).
 \solutionfigure{\bitmapfigure[width=0.42\linewidth]{img/1958/hu_min/q7_solution_fig1.png}}
-因为 \(PD\perp\) 平面 \(S\)，且 \(PA=PB=PC\)，故 \(PA\)，\(PB\)，\(PC\) 在平面 \(S\) 之内的射影长度相等（即 \(AD=BD=CD\)）.
-因为直角三角形斜边上的中线等于斜边长度之半，即 \(AB\) 的中点与 \(A\)，\(B\)，\(C\) 三点等距离，故垂足 \(D\) 必在斜边 \(AB\) 的中点上.
-因为 \(PA=PC\)，\(PE\perp AC\)（已知），所以 \(AE=EC\)（等腰三角形底边上的高又是底边上的中线）.
-连接 \(DE\)，则 \(DE=\frac{1}{2}BC=9\text{ 分米}\).
-（三角形中位线定理）
-又因为 \(PD\perp\) 平面 \(S\)（已知），所以 \(PD\perp ED\).
-（垂直于平面之直线必垂直于平面内过垂足的任何直线）
-在直角三角形 \(PDE\) 中，由勾股定理
+因为 \(PD\perp S\)，在直角三角形 \(PDA\)，\(PDB\)，\(PDC\) 中分别有 \(PA^{2}=PD^{2}+DA^{2}\)，\(PB^{2}=PD^{2}+DB^{2}\)，\(PC^{2}=PD^{2}+DC^{2}\).
+又因 \(PA=PB=PC\)，所以 \(DA=DB=DC\). 这说明 \(D\) 是三角形 \(ABC\) 的外心. 直角三角形的外心是斜边 \(AB\) 的中点，故 \(D\) 是 \(AB\) 的中点.
+
+由 \(PE\perp AC\) 以及 \(PA=PC\)，在直角三角形 \(PEA\) 和 \(PEC\) 中，斜边相等且有公共直角边 \(PE\)，所以 \(EA=EC\). 因而 \(E\) 是 \(AC\) 的中点. 在三角形 \(ABC\) 中，连接两个边中点 \(D\)，\(E\)，则
+\(DE\parallel BC\)，且 \(DE=\frac{1}{2}BC=9\text{ 分米}\).
+又因 \(PD\perp S\)，而 \(DE\) 在平面 \(S\) 内，所以 \(PD\perp DE\). 在直角三角形 \(PDE\) 中，\(PE\) 为斜边，由勾股定理
 \[
 PE=\sqrt{PD^{2}+DE^{2}}=\sqrt{40^{2}+9^{2}}=\sqrt{1600+81}=\sqrt{1681}=41\text{ 分米}
 \]
+故点 \(P\) 到另一直角边 \(AC\) 的距离为 \(41\text{ 分米}\).
 \end{solution}

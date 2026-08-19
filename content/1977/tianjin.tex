@@ -200,24 +200,24 @@ x+3y=-4
 \end{problem}
 
 \begin{solution}
-题中 \(n\) 视为固定参数，分 \(n\ne1\) 和 \(n=1\) 两种情况讨论.
+设 \(n\) 为题中固定的实数. 分子和分母在 \(x\to0\) 时都趋于零. 先求导数：
+\(\left(\e^x-\e^{-x}-2x\right)'=\e^x+\e^{-x}-2\)，\(\left(x-\sin(nx)\right)'=1-n\cos(nx)\).
 
-当 \(n\ne1\) 时，分子、分母都趋于零，且分母的一阶导数在 \(x=0\) 处为 \(1-n\ne0\). 由洛必达法则，
+当 \(n\ne1\) 时，分母导数在 \(x=0\) 处的值为 \(1-n\ne0\). 由洛必达法则，
 \[
-\lim_{x\to0}\frac{\e^x-\e^{-x}-2x}{x-\sin nx}
-=\lim_{x\to0}\frac{\e^x+\e^{-x}-2}{1-n\cos nx}
+\lim_{x\to0}\frac{\e^x-\e^{-x}-2x}{x-\sin(nx)}
+=\lim_{x\to0}\frac{\e^x+\e^{-x}-2}{1-n\cos(nx)}
 =\frac{1+1-2}{1-n}=0
 \]
 
-当 \(n=1\) 时，连续使用洛必达法则，得到
+当 \(n=1\) 时，第一次使用洛必达法则后仍是 \(0/0\). 再求导，有
+\(\left(\e^x+\e^{-x}-2\right)'=\e^x-\e^{-x}\)，\(\left(1-\cos x\right)'=\sin x\).
+第二次使用洛必达法则后仍是 \(0/0\)，再求一次导数并使用洛必达法则，得到
 \[
-\begin{gathered}
 \lim_{x\to0}\frac{\e^x-\e^{-x}-2x}{x-\sin x}
- =\lim_{x\to0}\frac{\e^x+\e^{-x}-2}{1-\cos x}
- =\lim_{x\to0}\frac{\e^x-\e^{-x}}{\sin x},\\
-\lim_{x\to0}\frac{\e^x-\e^{-x}}{\sin x}
- =\lim_{x\to0}\frac{\e^x+\e^{-x}}{\cos x}=2
-\end{gathered}
+=\lim_{x\to0}\frac{\e^x+\e^{-x}-2}{1-\cos x}
+=\lim_{x\to0}\frac{\e^x-\e^{-x}}{\sin x}
+=\lim_{x\to0}\frac{\e^x+\e^{-x}}{\cos x}=2
 \]
 因此原极限为
 \[
@@ -233,11 +233,16 @@ x+3y=-4
 \end{problem}
 
 \begin{solution}
-令 \(t=\sqrt{2x+1}\). 则 \(t>0\)，且由 \(t^2=2x+1\) 得 \(x=\dfrac{t^2-1}{2}\)，\(\mathrm{d}x=t\,\mathrm{d}t\)，\(x+2=\dfrac{t^2+3}{2}\).
-当 \(x=0\) 时 \(t=1\)；当 \(x=4\) 时 \(t=3\). 因此
+令 \(t=\sqrt{2x+1}\)，则 \(t>0\)，且
+\(t^2=2x+1\)，\(x=\frac{t^2-1}{2}\)，\(\mathrm{d}x=t\,\mathrm{d}t\)，\(x+2=\frac{t^2+3}{2}\).
+当 \(x=0\) 时 \(t=1\)，当 \(x=4\) 时 \(t=3\). 代换后分母 \(\sqrt{2x+1}\) 就是 \(t\)，所以
 \[
+\begin{aligned}
 \int_0^4\frac{x+2}{\sqrt{2x+1}}\,\mathrm{d}x
-=\frac{1}{2}\left[\frac{t^3}{3}+3t\right]_1^3
-=\frac{1}{2}\left(18-\frac{10}{3}\right)=\frac{22}{3}
+&=\int_1^3\frac{\frac{t^2+3}{2}}{t}\,t\,\mathrm{d}t
+=\frac12\int_1^3(t^2+3)\,\mathrm{d}t\\
+&=\frac12\left[\frac{t^3}{3}+3t\right]_1^3
+=\frac12\left(18-\frac{10}{3}\right)=\frac{22}{3}.
+\end{aligned}
 \]
 \end{solution}

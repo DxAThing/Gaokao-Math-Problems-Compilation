@@ -12,6 +12,17 @@
 
 \begin{answer}A\end{answer}
 
+\begin{solution}
+\[
+\frac{1-\i}{1+\i}=\frac{(1-\i)^2}{(1+\i)(1-\i)}=\frac{-2\i}{2}=-\i
+\]
+因此
+\[
+\left(\frac{1-\i}{1+\i}\right)^{10}=(-\i)^{10}=-1
+\]
+故选 A.
+\end{solution}
+
 \begin{problem}
 \(\tan 15^{\circ}+\cot 15^{\circ}\) 的值是（\(\quad\)）
 
@@ -23,6 +34,16 @@
 \end{problem}
 
 \begin{answer}C\end{answer}
+
+\begin{solution}
+由 \(\sin15^{\circ}\cos15^{\circ}=\frac{1}{2}\sin30^{\circ}=\frac14\)，有
+\[
+\tan15^{\circ}+\cot15^{\circ}
+ =\frac{\sin^2 15^{\circ}+\cos^2 15^{\circ}}{\sin15^{\circ}\cos15^{\circ}}
+ =\frac{1}{1/4}=4
+\]
+故选 C.
+\end{solution}
 
 \begin{problem}
 命题 \(p\)：若 \(a\)，\(b\in\R\)，则 \(|a|+|b|>1\) 是 \(|a+b|>1\) 的充要条件. 命题 \(q\)：函数 \(y=\sqrt{|x-1|-2}\) 的定义域是 \((-\infty,-1]\cup[3,+\infty)\). 则（\(\quad\)）
@@ -36,6 +57,18 @@
 
 \begin{answer}D\end{answer}
 
+\begin{solution}
+命题 \(p\) 不成立. 例如取 \(a=0.6\)，\(b=-0.6\)，则 \(|a|+|b|=1.2>1\)，而 \(|a+b|=0\)，所以二者不是充要条件.
+
+命题 \(q\) 中根式有意义的条件为
+\[
+|x-1|-2\geqslant0\Longleftrightarrow |x-1|\geqslant2
+\]
+即 \(x\leqslant-1\) 或 \(x\geqslant3\).  因而 \(q\) 成立.
+
+所以 \(p\) 假、\(q\) 真，故选 D.
+\end{solution}
+
 \begin{problem}
 已知 \(F_1\)，\(F_2\) 是椭圆的两个焦点，过 \(F_1\) 且与椭圆长轴垂直的直线交椭圆于 \(A\)，\(B\) 两点，若 \(\triangle ABF_2\) 是正三角形，则这个椭圆的离心率是（\(\quad\)）
 
@@ -46,7 +79,23 @@
     {\(\frac{\sqrt{3}}{2}\)}
 \end{problem}
 
-\begin{answer}A\end{answer}
+\begin{answer}B\end{answer}
+
+\begin{solution}
+设椭圆的标准方程为 \(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\)，焦点为 \(F_1(-c,0)\)，\(F_2(c,0)\)，其中 \(c=ae\).  直线 \(x=-c\) 与椭圆交于 \(A\)，\(B\)，故
+\[
+AB=2b\sqrt{1-\frac{c^2}{a^2}}=\frac{2b^2}{a}
+\]
+由于 \(F_1\) 是弦 \(AB\) 的中点，且 \(\triangle ABF_2\) 为正三角形，\(F_1F_2\) 是从 \(F_2\) 向边 \(AB\) 作出的高，所以
+\[
+2c=\frac{\sqrt3}{2}AB=\frac{\sqrt3 b^2}{a}
+\]
+除以 \(a\)，并用 \(b^2=a^2-c^2=a^2(1-e^2)\)，得
+\[
+2e=\sqrt3(1-e^2)
+\]
+即 \(\sqrt3e^2+2e-\sqrt3=0\).  由 \(0<e<1\)，得 \(e=\frac{\sqrt3}{3}\)，故选 B.
+\end{solution}
 
 \begin{problem}
 已知 \(m\)，\(n\) 是不重合的直线，\(\alpha\)，\(\beta\) 是不重合的平面，有下列命题：
@@ -69,6 +118,20 @@
 
 \begin{answer}B\end{answer}
 
+\begin{solution}
+逐项判断.
+
+命题 1 不成立. 例如取 \(\alpha:z=0\)，\(m:(x,y,z)=(t,0,0)\)，\(n:(x,y,z)=(0,t,1)\). 则 \(m\subset\alpha\)，\(n\parallel\alpha\)，但 \(m\) 与 \(n\) 异面，不能推出 \(m\parallel n\).
+
+命题 2 不成立. 例如取 \(\alpha:z=0\)，\(\beta:y=0\)，则 \(\alpha\cap\beta\) 是 \(x\) 轴. 取直线 \(m:(x,y,z)=(t,1,1)\)，则 \(m\) 的方向平行于 \(x\) 轴，且不与 \(\alpha\)，\(\beta\) 相交，所以 \(m\parallel\alpha\) 且 \(m\parallel\beta\)，但 \(\alpha\) 与 \(\beta\) 相交，不能推出 \(\alpha\parallel\beta\).
+
+命题 3 不成立. 仍取 \(\alpha:z=0\)，\(\beta:y=0\)，令 \(n=\alpha\cap\beta\) 为 \(x\) 轴，取 \(m:(x,y,z)=(t,1,0)\). 则 \(m\parallel n\) 且 \(m\subset\alpha\)，所以 \(m\) 不平行于平面 \(\alpha\)，不能推出 \(m\parallel\alpha\) 且 \(m\parallel\beta\).
+
+命题 4 成立. 同一直线垂直于两个平面，说明两个平面的法向量都与该直线平行，因而两个平面的法向量平行，所以两个不重合平面平行.
+
+因此真命题有 1 个，故选 B.
+\end{solution}
+
 \begin{problem}
 某校高二年级共有六个班级，现从外地转入 \(4\) 名学生，要安排到该年级的两个班级且每班安排 \(2\) 名，则不同的安排方案种数为（\(\quad\)）
 
@@ -79,7 +142,16 @@
     {\(2\mathrm A_6^2\)}
 \end{problem}
 
-\begin{answer}C\end{answer}
+\begin{answer}B\end{answer}
+
+\begin{solution}
+先从 6 个班中选出安排学生的两个班，共有 \(\mathrm C_6^2\) 种选法.  将选出的两个班按班号规定先后，先从 4 名学生中选出 2 名安排到前一个班，剩下 2 名安排到后一个班，共有 \(\mathrm C_4^2\) 种选法.  因而安排方案数为
+\[
+\mathrm C_6^2\mathrm C_4^2
+ =\frac12\mathrm A_6^2\mathrm C_4^2
+\]
+故选 B.
+\end{solution}
 
 \begin{problem}
 已知函数 \(y=\log_2 x\) 的反函数是 \(y=f^{-1}(x)\)，则函数 \(y=f^{-1}(1-x)\) 的图象是（\(\quad\)）
@@ -91,7 +163,15 @@
     {\choicebitmap[width=0.15\paperwidth]{img/2004/fujian_science/q7_optD_nolabel.png}}
 \end{problem}
 
-\begin{answer}B\end{answer}
+\begin{answer}C\end{answer}
+
+\begin{solution}
+由 \(y=\log_2x\) 的反函数为 \(y=f^{-1}(x)=2^x\)，所以
+\[
+y=f^{-1}(1-x)=2^{1-x}
+\]
+该函数单调递减，定义域为 \(\mathbb R\)，值域为 \((0,+\infty)\)，且过点 \((0,2)\) 和 \((1,1)\)，水平渐近线为 \(y=0\).  与选项图象比较，故选 C.
+\end{solution}
 
 \begin{problem}
 已知 \(\bs{a}\)，\(\bs{b}\) 是非零向量，且满足 \((\bs{a}-2\bs{b})\perp\bs{a}\)，\((\bs{b}-2\bs{a})\perp\bs{b}\)，则 \(\bs{a}\) 与 \(\bs{b}\) 的夹角是（\(\quad\)）
@@ -105,6 +185,23 @@
 
 \begin{answer}B\end{answer}
 
+\begin{solution}
+由垂直条件得
+\[
+(\bs a-2\bs b)\cdot\bs a=0\Longrightarrow |\bs a|^2=2\bs a\cdot\bs b
+\]
+\[
+(\bs b-2\bs a)\cdot\bs b=0\Longrightarrow |\bs b|^2=2\bs a\cdot\bs b
+\]
+所以 \(|\bs a|=|\bs b|\)，并且
+\[
+\cos\langle\bs a,\bs b\rangle
+ =\frac{\bs a\cdot\bs b}{|\bs a||\bs b|}
+ =\frac{|\bs a|^2/2}{|\bs a|^2}=\frac12
+\]
+由于向量夹角在 \([0,\pi]\) 内，故 \(\langle\bs a,\bs b\rangle=\frac\pi3\)，选 B.
+\end{solution}
+
 \begin{problem}
 若 \((1-2^x)^9\) 展开式的第 \(3\) 项为 \(288\)，则 \(\displaystyle\lim_{n\to\infty}\left(\frac{1}{x}+\frac{1}{x^2}+\cdots+\frac{1}{x^n}\right)\) 的值是（\(\quad\)）
 
@@ -116,6 +213,19 @@
 \end{problem}
 
 \begin{answer}A\end{answer}
+
+\begin{solution}
+二项式展开式的第 3 项为
+\[
+\mathrm C_9^2(1)^{7}(-2^x)^2=36\cdot2^{2x}=288
+\]
+故 \(2^{2x}=8\)，从而 \(x=\frac32\).  于是 \(\frac1x=\frac23\)，所求极限为等比级数之和
+\[
+\lim_{n\to\infty}\left(\frac1x+\frac1{x^2}+\cdots+\frac1{x^n}\right)
+ =\frac{1/x}{1-1/x}=\frac{1}{x-1}=2
+\]
+故选 A.
+\end{solution}
 
 \begin{problem}
 如图，\(A\)，\(B\)，\(C\) 是表面积为 \(48\pi\) 的球面上三点，\(AB=2\)，\(BC=4\)，\(\angle ABC=60^{\circ}\)，\(O\) 为球心，则直线 \(OA\) 与截面 \(ABC\) 所成的角是（\(\quad\)）
@@ -131,6 +241,26 @@
 
 \begin{answer}D\end{answer}
 
+\begin{solution}
+球的表面积为 \(4\pi R^2=48\pi\)，所以 \(R=2\sqrt3\).  在截面三角形中，余弦定理给出
+\[
+AC^2=AB^2+BC^2-2AB\cdot BC\cos60^{\circ}=4+16-8=12
+\]
+即 \(AC=2\sqrt3\).  设三角形 \(ABC\) 外接圆半径为 \(r\)，则由 \(AC\) 所对的圆周角为 \(60^{\circ}\)，有
+\[
+r=\frac{AC}{2\sin60^{\circ}}=2
+\]
+设球心 \(O\) 到截面 \(ABC\) 的垂足为 \(H\)，则 \(H\) 是外接圆圆心，故
+\[
+OH=\sqrt{R^2-r^2}=\sqrt{12-4}=2\sqrt2
+\]
+直线 \(OA\) 在截面内的射影为 \(HA\)，因此若所成锐角为 \(\theta\)，则
+\[
+\cos\theta=\frac{HA}{OA}=\frac{r}{R}=\frac{\sqrt3}{3}
+\]
+所以 \(\theta=\arccos\frac{\sqrt3}{3}\)，故选 D.
+\end{solution}
+
 \begin{problem}
 定义在 \(\R\) 上的偶函数 \(f(x)\) 满足 \(f(x)=f(x+2)\)，当 \(x\in[3,5]\) 时，\(f(x)=2-|x-4|\)，则（\(\quad\)）
 
@@ -142,6 +272,26 @@
 \end{problem}
 
 \begin{answer}D\end{answer}
+
+\begin{solution}
+由偶性和周期性，对于 \(t\in[0,1]\)，有 \(f(t)=f(t+4)=2-t\).
+
+选项 A 中 \(\sin\frac\pi6=\frac12<\frac{\sqrt3}{2}=\cos\frac\pi6\)，函数在 \([0,1]\) 上递减，所以不等式方向相反，A 错.
+
+因为 \(1>\frac\pi4\)，故 \(\sin1>\cos1\)，而二者都在 \([0,1]\) 内，函数递减，所以 \(f(\sin1)<f(\cos1)\)，B 错.
+
+选项 C 中
+\[
+f\left(\cos\frac{2\pi}{3}\right)=f\left(-\frac12\right)=f\left(\frac12\right)=\frac32
+\]
+而 \(f(\sin\frac{2\pi}{3})=f\left(\frac{\sqrt3}{2}\right)=2-\frac{\sqrt3}{2}<\frac32\)，所以 C 错.
+
+由于 \(\sin2+\cos2>0\) 且 \(\sin2>0\)，有 \(|\cos2|<\sin2\).  因而
+\[
+f(\cos2)=f(|\cos2|)=2-|\cos2|>2-\sin2=f(\sin2)
+\]
+故选 D.
+\end{solution}
 
 \begin{problem}
 如图，\(B\) 地在 \(A\) 地的正东方向 \(4 \mathrm{~km}\) 处，\(C\) 地在 \(B\) 地的北偏东 \(30^{\circ}\) 方向 \(2 \mathrm{~km}\) 处，河流的沿岸 \(PQ\)（曲线）上任意一点到 \(A\) 的距离比到 \(B\) 的距离远 \(2 \mathrm{~km}\). 现要在曲线 \(PQ\) 上选一处 \(M\) 建一座码头，向 \(B\)，\(C\) 两地转运货物. 经测算，从 \(M\) 到 \(B\)，\(C\) 两地修建公路的费用分别是 \(a\text{ 万元}/\mathrm{km}\)，\(2a\text{ 万元}/\mathrm{km}\)，那么修建这两条公路的总费用最低是（\(\quad\)）
@@ -157,12 +307,62 @@
 
 \begin{answer}B\end{answer}
 
+\begin{solution}
+建立直角坐标系，令 \(A=(0,0)\)，\(B=(4,0)\).  由 \(BC=2\) 且 \(C\) 在 \(B\) 的北偏东 \(30^{\circ}\) 方向，得
+\[
+C=(4+2\sin30^{\circ},2\cos30^{\circ})=(5,\sqrt3)
+\]
+设河岸曲线上 \(M=(x,y)\).  条件 \(MA-MB=2\) 给出双曲线
+\((x-2)^2-\frac{y^2}{3}=1\)，\(x\geqslant3\)
+即 \(y=\pm\sqrt{3(x-1)(x-3)}\).  由双曲线定义，
+\(MA=2x-3\)，\(MB=2x-5\).
+又
+\[
+MC^2=(x-5)^2+(y-\sqrt3)^2
+ =4x^2-22x+37-2\sqrt3y
+\]
+总费用除以 \(a\) 为
+\[
+L=MB+2MC=2x-5+2MC
+\]
+当 \(x\geqslant5\) 时，\(L\geqslant MB\geqslant5\).  下设 \(3\leqslant x<5\).  只需证明 \(MC\geqslant5-x\).  计算得
+\[
+MC^2-(5-x)^2=3(x-2)^2-2\sqrt3y
+\]
+当 \(y\leqslant0\) 时上式显然非负.  当 \(y>0\) 时，令 \(u=x-2\geqslant1\)，则 \(y=\sqrt3\sqrt{u^2-1}\)，从而上式非负等价于
+\[
+u^2\geqslant2\sqrt{u^2-1}
+\]
+两边非负，平方后等价于 \((u^2-2)^2\geqslant0\)，恒成立.  当 \(u=\sqrt2\)，即 \(x=2+\sqrt2\)，且 \(y=\sqrt3\) 时取等号.
+
+于是
+\[
+L\geqslant2x-5+2(5-x)=5
+\]
+且等号可以取得.  所以最低总费用为 \(5a\text{ 万元}\)，故选 B.
+\end{solution}
+
 \section{填空题}
 \begin{problem}
 直线 \(x+2y=0\) 被曲线 \(x^2+y^2-6x-2y-15=0\) 所截得的弦长等于\fillinblank{}.
 \end{problem}
 
 \begin{answer}\(4\sqrt{5}\)\end{answer}
+
+\begin{solution}
+圆的方程化为
+\[
+(x-3)^2+(y-1)^2=25
+\]
+所以圆心为 \((3,1)\)，半径为 \(5\).  圆心到直线 \(x+2y=0\) 的距离为
+\[
+d=\frac{|3+2|}{\sqrt{1^2+2^2}}=\sqrt5
+\]
+故弦长为
+\[
+2\sqrt{5^2-d^2}=2\sqrt{25-5}=4\sqrt5
+\]
+\end{solution}
 
 \begin{problem}
 设函数 \(f(x)=\begin{cases}
@@ -172,6 +372,19 @@ a, & x=0,
 \end{problem}
 
 \begin{answer}\(\frac{1}{2}\)\end{answer}
+
+\begin{solution}
+当 \(x\ne0\) 时，有理化得
+\[
+\frac{\sqrt{1+x}-1}{x}
+ =\frac{(\sqrt{1+x}-1)(\sqrt{1+x}+1)}{x(\sqrt{1+x}+1)}
+ =\frac{1}{\sqrt{1+x}+1}
+\]
+因此
+\[
+a=\lim_{x\to0}\frac{\sqrt{1+x}-1}{x}=\frac12
+\]
+\end{solution}
 
 \begin{problem}
 某射手射击 \(1\) 次，击中目标的概率是 \(0.9\). 他连续射击 \(4\) 次，且各次射击是否击中目标相互之间没有影响. 有下列结论：
@@ -187,6 +400,22 @@ a, & x=0,
 
 \begin{answer}\(1\)，\(3\)\end{answer}
 
+\begin{solution}
+每次射击是否命中相互独立，且每次命中概率均为 \(0.9\).  因而第 3 次命中目标的概率仍为 \(0.9\)，结论 1 正确.
+
+恰好命中 3 次还必须指定 4 次中有 1 次未命中，故其概率为
+\[
+\mathrm C_4^3(0.9)^3(0.1)
+\]
+不是题中所写的 \((0.9)^3(0.1)\)，结论 2 错误.
+
+至少命中 1 次的对立事件是 4 次全部未命中，所以其概率为
+\[
+1-(0.1)^4
+\]
+结论 3 正确.  因此正确结论的序号为 1，3.
+\end{solution}
+
 \begin{problem}
 如图，将边长为 \(1\) 的正六边形铁皮的六个角各切去一个全等的四边形，再沿虚线折起，做成一个无盖的正六棱柱容器.
 
@@ -197,6 +426,24 @@ a, & x=0,
 \end{problem}
 
 \begin{answer}\(\frac{2}{3}\)\end{answer}
+
+\begin{solution}
+设正六棱柱的底面边长为 \(x\)，则 \(0<x<1\).  正六边形每边向内切去一个全等四边形后，折起所得棱柱的高为
+\[
+h=\frac{\sqrt3}{2}(1-x)
+\]
+因为边长为 \(s\) 的正六边形的中心到任一边的距离为 \(\frac{\sqrt3}{2}s\)，外层正六边形与底面正六边形对应边之间的距离就是折起后的侧棱高.
+
+正六边形底面积为 \(\frac{3\sqrt3}{2}x^2\)，所以容积
+\[
+V(x)=\frac{3\sqrt3}{2}x^2\cdot\frac{\sqrt3}{2}(1-x)=\frac94x^2(1-x)
+\]
+求导得
+\[
+V'(x)=\frac94x(2-3x)
+\]
+在 \(0<x<1\) 内，\(V\) 在 \(x=\frac23\) 处由增转减，且端点处体积趋于 0，所以容积最大时底面边长为 \(\frac23\).
+\end{solution}
 
 \section{解答题}
 \begin{problem}
@@ -209,7 +456,34 @@ a, & x=0,
 \end{problem}
 
 \begin{solution}
-短答案：\(x=-\frac{\pi}{6}\)；\(m=-\frac{\pi}{6}\)，\(n=1\).
+由向量数量积，
+\[
+f(x)=2\cos^2x+\sqrt3\sin2x
+ =1+\cos2x+\sqrt3\sin2x
+ =1+2\sin\left(2x+\frac\pi6\right)
+\]
+
+\begin{enumerate}
+\item 当 \(f(x)=1-\sqrt3\) 时，
+\[
+\sin\left(2x+\frac\pi6\right)=-\frac{\sqrt3}{2}
+\]
+令 \(u=2x+\frac\pi6\)，由 \(x\in[-\frac\pi3,\frac\pi3]\) 得 \(u\in[-\frac\pi2,\frac{5\pi}{6}]\).  在此区间内满足条件的角只有 \(u=-\frac\pi3\)，所以
+\(2x+\frac\pi6=-\frac\pi3\)，\(x=-\frac\pi4\).
+
+\item 将上式改写为
+\[
+f(x)=2\sin 2\left(x+\frac\pi{12}\right)+1
+\]
+函数 \(y=2\sin2x\) 的图象按向量 \((m,n)\) 平移后为
+\[
+y=2\sin2(x-m)+n
+\]
+要与 \(f(x)\) 的图象重合，周期相同的正弦函数的相位和纵向平移量应满足
+\(-2m=\frac\pi6+2k\pi\)，\(n=1\)，\(k\in\mathbb Z\).
+由 \(|m|<\frac\pi2\) 得只有 \(k=0\) 可取，故
+\(m=-\frac\pi{12}\)，\(n=1\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -222,7 +496,33 @@ a, & x=0,
 \end{problem}
 
 \begin{solution}
-短答案：\(P(\xi=0)=\frac{1}{30}\)，\(P(\xi=1)=\frac{3}{10}\)，\(P(\xi=2)=\frac{1}{2}\)，\(P(\xi=3)=\frac{1}{6}\)，\(E\xi=\frac{9}{5}\)；甲、乙两人至少有一人考试合格的概率为\(\frac{43}{45}\).
+设 \(\xi\) 为甲答对的题数. 从 10 道题中抽取 3 道，所有抽法等可能，共有 \(\mathrm C_{10}^3\) 种.  因而对 \(k=0\)，\(1\)，\(2\)，\(3\)，
+\[
+P(\xi=k)=\frac{\mathrm C_6^k\mathrm C_4^{3-k}}{\mathrm C_{10}^3}
+\]
+逐项计算得
+\(P(\xi=0)=\frac{1}{30}\)，\(P(\xi=1)=\frac{3}{10}\)，\(P(\xi=2)=\frac12\)，\(P(\xi=3)=\frac16\).
+所以
+\[
+E\xi=0\cdot\frac1{30}+1\cdot\frac3{10}+2\cdot\frac12+3\cdot\frac16=\frac95
+\]
+
+甲合格的概率为
+\[
+P(\xi\geqslant2)=\frac12+\frac16=\frac23
+\]
+乙答对 8 道，设乙答对题数为 \(\eta\). 乙不合格只能答对 1 题，因为抽取 3 题而乙只错 2 题，所以
+\[
+P(\eta<2)=P(\eta=1)=\frac{\mathrm C_8^1\mathrm C_2^2}{\mathrm C_{10}^3}=\frac1{15}
+\]
+在两人的考试中分别随机抽题，故两人的抽题结果相互独立. 于是两人都不合格的概率为
+\[
+\left(1-\frac23\right)\frac1{15}=\frac1{45}
+\]
+至少有一人合格的概率为
+\[
+1-\frac1{45}=\frac{44}{45}
+\]
 \end{solution}
 
 \begin{problem}
@@ -238,7 +538,43 @@ a, & x=0,
 \end{problem}
 
 \begin{solution}
-短答案：\(AC\perp SB\)；二面角 \(N-CM-B\) 的大小为 \(\arctan(2\sqrt{2})\)；点 \(B\) 到平面 \(CMN\) 的距离为 \(\frac{4\sqrt{2}}{3}\).
+取空间直角坐标系，使底面 \(ABC\) 在 \(xOy\) 平面内，并令
+\(A=(-2,0,0)\)，\(C=(2,0,0)\)，\(B=(0,2\sqrt3,0)\).
+因为平面 \(SAC\perp\) 平面 \(ABC\)，且 \(SA=SC\)，点 \(S\) 在 \(AC\) 的垂直平分面内，故可设 \(S=(0,0,z)\).  由 \(SA=2\sqrt3\) 得
+\(z^2+2^2=12\)，\(z=2\sqrt2\)
+取 \(S=(0,0,2\sqrt2)\)；若取负值，只是关于平面 \(ABC\) 的对称，以下长度和角度不变.  两中点为
+\(M=(-1,\sqrt3,0)\)，\(N=(0,\sqrt3,\sqrt2)\).
+
+\begin{enumerate}
+\item \(\overrightarrow{AC}=(4,0,0)\)，\(\overrightarrow{SB}=(0,2\sqrt3,-2\sqrt2)\)，所以
+\[
+\overrightarrow{AC}\cdot\overrightarrow{SB}=0
+\]
+因此 \(AC\perp SB\).
+
+\item 在平面 \(CMN\) 内取
+\(\overrightarrow{CM}=(-3,\sqrt3,0)\)，\(\overrightarrow{CN}=(-2,\sqrt3,\sqrt2)\).
+其法向量可取
+\[
+\bs{n}=\overrightarrow{CM}\times\overrightarrow{CN}=(\sqrt6,3\sqrt2,-\sqrt3)
+\]
+且 \(|\bs{n}|=3\sqrt3\).  平面 \(ABC\) 的法向量为 \(\bs{k}=(0,0,1)\).  设二面角的平面角为 \(\theta\)，则
+\[
+\tan\theta=\frac{\sqrt{(\sqrt6)^2+(3\sqrt2)^2}}{|{-\sqrt3}|}=\frac{\sqrt{24}}{\sqrt3}=2\sqrt2
+\]
+故 \(\theta=\arctan(2\sqrt2)\).
+
+\item 点 \(B\) 到平面 \(CMN\) 的距离为
+\(d=\frac{|\bs{n}\cdot\overrightarrow{CB}|}{|\bs{n}|}\)，\(\overrightarrow{CB}=(-2,2\sqrt3,0)\).
+计算得
+\[
+\bs{n}\cdot\overrightarrow{CB}=-2\sqrt6+6\sqrt6=4\sqrt6
+\]
+所以所求距离为
+\[
+\frac{4\sqrt6}{3\sqrt3}=\frac{4\sqrt2}{3}
+\]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -251,7 +587,30 @@ a, & x=0,
 \end{problem}
 
 \begin{solution}
-短答案：\(A_n=490n-10n^2\)，\(B_n=500n-100-\frac{500}{2^n}\)；至少经过 \(4\) 年.
+\begin{enumerate}
+\item 若不进行技术改造，第 \(k\) 年的利润为 \(500-20k\) 万元，因此
+\[
+A_n=\sum_{k=1}^n(500-20k)=500n-10n(n+1)=490n-10n^2
+\]
+进行技术改造时，第 \(k\) 年未扣除改造资金的利润为 \(500(1+2^{-k})\) 万元，故扣除年初一次性投入的 \(600\) 万元后
+\[
+B_n=\sum_{k=1}^n500\left(1+\frac1{2^k}\right)-600
+ =500n+500\left(1-\frac1{2^n}\right)-600
+ =500n-100-\frac{500}{2^n}
+\]
+
+\item 由 \(B_n>A_n\) 得
+\[
+10\left[n(n+1)-10-\frac{50}{2^n}\right]>0
+\]
+记 \(h(n)=n(n+1)-10-\frac{50}{2^n}\).  则
+\[
+h(n+1)-h(n)=2n+2+\frac{25}{2^n}>0
+\]
+所以 \(h(n)\) 严格递增.  又
+\(h(3)=12-10-\frac{50}{8}<0\)，\(h(4)=20-10-\frac{50}{16}>0\).
+故从今年起至少经过 4 年，改造后的累计纯利润才超过未改造时的累计纯利润.
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -264,7 +623,49 @@ a, & x=0,
 \end{problem}
 
 \begin{solution}
-短答案：\(A=[-1,1]\)；存在，\(m\in(-\infty,-2]\cup[2,+\infty)\).
+\begin{enumerate}
+\item 求导得
+\[
+f'(x)=\frac{2(x^2+2)-(2x-a)2x}{(x^2+2)^2}
+ =\frac{-2(x^2-ax-2)}{(x^2+2)^2}
+\]
+因此在 \([-1,1]\) 上为增函数的充要条件是
+\(x^2-ax-2\leqslant0\)，\((-1\leqslant x\leqslant1)\).
+左端关于 \(x\) 是开口向上的二次函数，在闭区间上的最大值取在端点，故只需
+\(1-a-2\leqslant0\)，\(1+a-2\leqslant0\).
+于是 \(a\geqslant-1\) 且 \(a\leqslant1\)，即
+\[
+A=[-1,1]
+\]
+
+\item 方程 \(f(x)=\frac1x\) 的根满足 \(x\ne0\)，且
+\[
+\frac{2x-a}{x^2+2}=\frac1x
+\Longleftrightarrow x^2-ax-2=0
+\]
+故
+\[
+|x_1-x_2|=\sqrt{a^2+8}\leqslant3
+\]
+其中等号在 \(|a|=1\) 时取得.
+
+对任意 \(t\in[-1,1]\)，关于 \(t\) 的式子 \(m^2+tm+1\) 的最小值为
+\[
+m^2+1-|m|
+\]
+所以题中不等式对所有 \(a\in A\) 和 \(t\in[-1,1]\) 恒成立的充要条件是
+\[
+m^2+1-|m|\geqslant3
+\]
+令 \(u=|m|\geqslant0\)，则
+\[
+u^2-u-2\geqslant0\Longleftrightarrow (u-2)(u+1)\geqslant0
+\]
+从而 \(u\geqslant2\).  因此存在这样的实数 \(m\)，且
+\[
+m\in(-\infty,-2]\cup[2,+\infty)
+\]
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -277,5 +678,45 @@ a, & x=0,
 \end{problem}
 
 \begin{solution}
-短答案：\(y=x^2+1+\frac{1}{2x^2}\)，其中 \(x\ne0\)；\((2,+\infty)\).
+\begin{enumerate}
+\item 设 \(P=(p,\frac{p^2}{2})\). 当 \(p=0\) 时，过 \(P\) 的切线为水平线，其垂线 \(x=0\) 只与抛物线交于 \(P\)，不满足存在另一交点 \(Q\)，故 \(p\ne0\). 抛物线在 \(P\) 处的切线斜率为 \(p\)，故过 \(P\) 且垂直于切线的直线为
+\[
+y-\frac{p^2}{2}=-\frac1p(x-p)
+\]
+设其与抛物线的另一交点为 \(Q=(q,\frac{q^2}{2})\).  将直线方程与 \(y=\frac{x^2}{2}\) 联立，得
+\[
+px^2+2x-p^3-2p=0=(x-p)(px+p^2+2)
+\]
+所以 \(q=-p-\frac2p\).  线段 \(PQ\) 中点 \(M=(X,Y)\) 满足
+\[
+X=\frac{p+q}{2}=-\frac1p
+\]
+以及
+\[
+Y=\frac{p^2+q^2}{4}=\frac{p^2}{2}+1+\frac1{p^2}=X^2+1+\frac1{2X^2}
+\]
+由于 \(p\ne0\)，有 \(X\ne0\).  所以轨迹方程为
+\(y=x^2+1+\frac1{2x^2}\)，\(x\ne0\).
+
+\item 设直线 \(l\) 为 \(y=kx+b\)，其中 \(k\ne0\)，\(b\ne0\).  与抛物线交于 \(P(x_1,y_1)\)，\(Q(x_2,y_2)\)，则
+\[
+\frac{x^2}{2}=kx+b\Longleftrightarrow x^2-2kx-2b=0
+\]
+故
+\(x_1+x_2=2k\)，\(x_1x_2=-2b\).
+又 \(y_i=\frac{x_i^2}{2}\)，所以
+\(y_1+y_2=\frac{x_1^2+x_2^2}{2}=2(k^2+b)\)，\(y_1y_2=\frac{(x_1x_2)^2}{4}=b^2\).
+令 \(S=(-b/k,0)\)，\(T=(0,b)\).  由于 \(S\)，\(P\)，\(Q\) 共线，且直线方向向量为 \((k,1)\)，有
+\(\frac{|ST|}{|SP|}=\frac{|b|}{y_1}\)，\(\frac{|ST|}{|SQ|}=\frac{|b|}{y_2}\).
+因此所求为
+\[
+|b|\left(\frac1{y_1}+\frac1{y_2}\right)
+ =|b|\frac{y_1+y_2}{y_1y_2}
+ =\frac{2(k^2+b)}{|b|}
+\]
+两交点为异点的条件为判别式 \(4(k^2+2b)>0\)，即 \(k^2+2b>0\).  若 \(b>0\)，则所求为 \(2+\frac{2k^2}{b}>2\).  若 \(b<0\)，则 \(k^2>-2b=2|b|\)，所求为 \(2(\frac{k^2}{|b|}-1)>2\).  反之，任取 \(r>2\)，取正数 \(b\) 并令 \(k^2=b(r-2)/2\)，即可使所求值为 \(r\).  所以取值范围为
+\[
+(2,+\infty)
+\]
+\end{enumerate}
 \end{solution}

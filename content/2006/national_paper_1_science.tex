@@ -228,9 +228,9 @@ B
 (2+3+4)\mid5\mid6.
 \end{gathered}
 \]
-这里竖线表示不同的三条边；其余分组均有一条边长不小于 \(10\)，不能组成三角形. 去除三边长相同的重复分组后，所有可能的三边为
+这里竖线表示不同的三条边. 上述枚举按含有 \(6\mathrm{~cm}\) 木棒的一组逐一列出，其他分组均有一条边长不小于 \(10\)，不能组成三角形. 去除得到相同三边长的重复分组后，所有可能的三边为
 \[
-\left\{\left(2,9,9\right),\left(3,8,9\right),\left(4,7,9\right),\left(4,8,8\right),\left(5,6,9\right),\left(5,7,8\right),\left(6,6,8\right),\left(6,7,7\right)\right\}.
+\left\{\left(2,9,9\right),\left(3,8,9\right),\left(4,7,9\right),\left(4,8,8\right),\left(5,6,9\right),\left(5,7,8\right),\left(6,6,8\right),\left(6,7,7\right)\right\}
 \]
 令三边为 \(p\)，\(q\)，\(r\)，则半周长 \(s=10\)，由海伦公式 \(\Delta^2=s(s-p)(s-q)(s-r)\). 八组边长对应的面积平方分别为
 \[
@@ -297,7 +297,7 @@ y\geqslant1.
 \end{answer}
 
 \begin{solution}
-三个约束给出 \(y\leq2x+1\)，\(y\leq\dfrac{23-3x}{2}\)，\(y\geq1\). 可行域的三个顶点分别为 \((0,1)\)，\((3,7)\)，\((7,1)\)：其中前两个由 \(y=1\) 与第一条上界、两条上界的交点得到，后一个由 \(y=1\) 与第二条上界的交点得到. 目标函数 \(z=2y-x\) 在这些顶点的值依次为 \(-1\)，\(11\)，\(-5\)，所以 \(z\) 的最大值为 \(11\).
+三个约束给出 \(y\leq2x+1\)，\(y\leq\dfrac{23-3x}{2}\)，\(y\geq1\). 由 \(1\leq2x+1\) 和 \(1\leq\dfrac{23-3x}{2}\)，可得 \(0\leq x\leq7\)，所以可行域是由直线 \(y=1\)、\(y=2x+1\) 和 \(y=\dfrac{23-3x}{2}\) 围成的三角形. 两条上界的交点满足 \(2x+1=\dfrac{23-3x}{2}\)，解得 \((x,y)=(3,7)\)；与 \(y=1\) 的两个交点分别为 \((0,1)\) 和 \((7,1)\). 目标函数 \(z=2y-x\) 在这三个顶点的值依次为 \(-1\)，\(11\)，\(-5\). 由于线性目标函数在有界多边形上的最大值必在顶点取得，所以 \(z\) 的最大值为 \(11\).
 \end{solution}
 
 \begin{problem}
@@ -337,17 +337,17 @@ f(x)+f'(x)=\cos t-\sqrt3\sin t=2\cos\left(\sqrt3x+\varphi+\frac{\pi}{3}\right)
 \begin{solution}
 因为 \(A+B+C=\pi\)，所以
 \[
-\cos A+2\cos\frac{B+C}{2}=\cos A+2\cos\left(\frac{\pi-A}{2}\right)=\cos A+2\sin\frac A2.
+\cos A+2\cos\frac{B+C}{2}=\cos A+2\cos\left(\frac{\pi-A}{2}\right)=\cos A+2\sin\frac A2
 \]
 令 \(u=\sin\dfrac A2\). 由于三角形内角满足 \(0<A<\pi\)，所以 \(0<u<1\)，且 \(\cos A=1-2u^2\). 于是原式
 \[
-1-2u^2+2u=\frac32-2\left(u-\frac12\right)^2\leq\frac32.
+1-2u^2+2u=\frac32-2\left(u-\frac12\right)^2\leq\frac32
 \]
 当且仅当 \(u=\dfrac12\) 时等号成立，即 \(\sin\dfrac A2=\dfrac12\). 由 \(0<\dfrac A2<\dfrac{\pi}{2}\)，得 \(\dfrac A2=\dfrac{\pi}{6}\)，所以 \(A=\dfrac{\pi}{3}\). 此时可取 \(B+C=\dfrac{2\pi}{3}\)，确为三角形内角，故最大值为 \(\dfrac32\).
 \end{solution}
 
 \begin{problem}
-\(A\)，\(B\) 是治疗同一种疾病的两种药，用若干试验组进行对比试验. 每个试验组由 \(4\) 只小白鼠组成，其中 \(2\) 只服用 \(A\)，另 \(2\) 只服用 \(B\)，然后观察疗效. 若在一个试验组中，服用 \(A\) 有效的小白鼠的只数比服用 \(B\) 有效的多，就称该试验组为甲类组. 设每只小白鼠服用 \(A\) 有效的概率为 \(\frac23\)，服用 \(B\) 有效的概率为 \(\frac12\).
+A，B 是治疗同一种疾病的两种药，用若干试验组进行对比试验. 每个试验组由 \(4\) 只小白鼠组成，其中 \(2\) 只服用 A，另 \(2\) 只服用 B，然后观察疗效. 若在一个试验组中，服用 A 有效的小白鼠的只数比服用 B 有效的多，就称该试验组为甲类组. 设每只小白鼠服用 A 有效的概率为 \(\frac23\)，服用 B 有效的概率为 \(\frac12\).
 
 \begin{enumerate}
 \item 求一个试验组为甲类组的概率.
@@ -357,13 +357,13 @@ f(x)+f'(x)=\cos t-\sqrt3\sin t=2\cos\left(\sqrt3x+\varphi+\frac{\pi}{3}\right)
 
 \begin{solution}
 \begin{enumerate}
-\item 设 \(X\) 为服用药物 \(A\) 且有效的小白鼠只数，\(Y\) 为服用药物 \(B\) 且有效的小白鼠只数，则 \(X\sim B\left(2,\dfrac23\right)\)，\(Y\sim B\left(2,\dfrac12\right)\)，且 \(X\)，\(Y\) 相互独立. 甲类组的条件是 \(X>Y\)，所以
+\item 设 \(X\) 为服用药物 A 且有效的小白鼠只数，\(Y\) 为服用药物 B 且有效的小白鼠只数，则 \(X\sim B\left(2,\dfrac23\right)\)，\(Y\sim B\left(2,\dfrac12\right)\)，且 \(X\)，\(Y\) 相互独立. 甲类组的条件是 \(X>Y\)，所以
 \[
-P(X>Y)=P(Y=0)P(X\geq1)+P(Y=1)P(X=2)=\frac14\left(1-\frac19\right)+\frac12\cdot\frac49=\frac49.
+P(X>Y)=P(Y=0)P(X\geq1)+P(Y=1)P(X=2)=\frac14\left(1-\frac19\right)+\frac12\cdot\frac49=\frac49
 \]
 \item 不同试验组之间相互独立，因此 \(\xi\sim B\left(3,\dfrac49\right)\). 当 \(k=0\)，\(1\)，\(2\)，\(3\) 时，
 \[
-P(\xi=k)=\mathrm C_3^k\left(\frac49\right)^k\left(\frac59\right)^{3-k}.
+P(\xi=k)=\mathrm C_3^k\left(\frac49\right)^k\left(\frac59\right)^{3-k}
 \]
 具体地，\(P(\xi=0)=\dfrac{125}{729}\)，\(P(\xi=1)=\dfrac{100}{243}\)，\(P(\xi=2)=\dfrac{80}{243}\)，\(P(\xi=3)=\dfrac{64}{729}\)，这些概率之和为 \(1\). 所以 \(E\xi=3\cdot\dfrac49=\dfrac43\).
 \end{enumerate}
@@ -387,17 +387,17 @@ P(\xi=k)=\mathrm C_3^k\left(\frac49\right)^k\left(\frac59\right)^{3-k}.
 \item \(\overrightarrow{AC}=(1,t,1)\)，\(\overrightarrow{NB}=(1,0,-1)\)，所以 \(\overrightarrow{AC}\cdot\overrightarrow{NB}=1+0-1=0\)，从而 \(AC\perp NB\).
 \item \(\overrightarrow{CA}=(-1,-t,-1)\)，\(\overrightarrow{CB}=(1,-t,-1)\)，于是
 \[
-\cos\angle ACB=\frac{\overrightarrow{CA}\cdot\overrightarrow{CB}}{|\overrightarrow{CA}||\overrightarrow{CB}|}=\frac{t^2}{t^2+2}.
+\cos\angle ACB=\frac{\overrightarrow{CA}\cdot\overrightarrow{CB}}{|\overrightarrow{CA}||\overrightarrow{CB}|}=\frac{t^2}{t^2+2}
 \]
 由 \(\angle ACB=60^\circ\)，得 \(\dfrac{t^2}{t^2+2}=\dfrac12\)，所以 \(t^2=2\).
 
 平面 \(ABC\) 的一个法向量可取
 \[
-\overrightarrow{AB}\times\overrightarrow{AC}=(2,0,0)\times(1,t,1)=(0,-2,2t).
+\overrightarrow{AB}\times\overrightarrow{AC}=(2,0,0)\times(1,t,1)=(0,-2,2t)
 \]
 设 \(NB\) 与平面 \(ABC\) 所成的角为 \(\theta\)，则
 \[
-\sin\theta=\frac{\left|\overrightarrow{NB}\cdot(0,-2,2t)\right|}{|\overrightarrow{NB}|\sqrt{(-2)^2+(2t)^2}}=\frac{|2t|}{\sqrt2\sqrt{4+4t^2}}=\frac1{\sqrt3}.
+\sin\theta=\frac{\left|\overrightarrow{NB}\cdot(0,-2,2t)\right|}{|\overrightarrow{NB}|\sqrt{(-2)^2+(2t)^2}}=\frac{|2t|}{\sqrt2\sqrt{4+4t^2}}=\frac1{\sqrt3}
 \]
 因此 \(\cos\theta=\sqrt{1-\dfrac13}=\dfrac{\sqrt6}{3}\).
 \end{enumerate}
@@ -420,11 +420,11 @@ P(\xi=k)=\mathrm C_3^k\left(\frac49\right)^k\left(\frac59\right)^{3-k}.
 \[
 \frac4{u^2}+\frac1{v^2}=1
 \]
-且 \(u>2\)，\(v>1\). 这就是点 \(M\) 的轨迹.
+且 \(u>2\)，\(v>1\). 反之，若 \(u>2\)，\(v>1\) 且满足该方程，令 \(x_0=\dfrac4u\)，\(y_0=\dfrac1v\)，则 \(0<x_0<2\)，\(0<y_0<1\)，并且 \(\dfrac{x_0^2}{4}+y_0^2=1\)，故 \((x_0,y_0)\) 是曲线 \(C\) 上的点，且相应切线的两个截距之和正是 \((u,v)\). 因此点 \(M\) 的轨迹方程为上述方程.
 
 令 \(p=u^2\)，\(q=v^2\)，则 \(p>4\)，\(q>1\)，且 \(\dfrac4p+\dfrac1q=1\)，从而 \(q=\dfrac p{p-4}\). 于是
 \[
-|\overrightarrow{OM}|^2=p+q=p+\frac p{p-4}=5+(p-4)+\frac4{p-4}\geq5+4=9,
+|\overrightarrow{OM}|^2=p+q=p+\frac p{p-4}=5+(p-4)+\frac4{p-4}\geq5+4=9
 \]
 其中等号当且仅当 \(p-4=2\)，即 \(p=6\)，此时 \(q=3\)，满足 \(u>2\)，\(v>1\). 所以 \(|\overrightarrow{OM}|\) 的最小值为 \(3\).
 \end{solution}
@@ -442,18 +442,18 @@ P(\xi=k)=\mathrm C_3^k\left(\frac49\right)^k\left(\frac59\right)^{3-k}.
 \begin{enumerate}
 \item 函数定义域为 \(x\in\R\) 且 \(x\ne1\). 求导得
 \[
-f'(x)=\e^{-ax}\left[\frac2{(1-x)^2}-\frac{a(1+x)}{1-x}\right]=\frac{\e^{-ax}}{(1-x)^2}\left(2-a+ax^2\right).
+f'(x)=\e^{-ax}\left[\frac2{(1-x)^2}-\frac{a(1+x)}{1-x}\right]=\frac{\e^{-ax}}{(1-x)^2}\left(2-a+ax^2\right)
 \]
 由于 \(\e^{-ax}>0\)，\((1-x)^2>0\)，故 \(f'(x)\) 的符号由 \(2-a+ax^2\) 决定.
 
-当 \(0<a\leq2\) 时，\(2-a+ax^2\geq0\)，且除至多一个点外为正，所以 \(f(x)\) 在 \((-\infty,1)\) 和 \((1,+\infty)\) 上均为增函数.
+当 \(0<a<2\) 时，\(2-a+ax^2>0\)；当 \(a=2\) 时，\(2-a+ax^2=2x^2\)，只在 \(x=0\) 处为零. 因此在任意两个属于同一连通定义区间的不同点之间，导数除至多一个点外均为正，\(f(x)\) 在 \((-\infty,1)\) 和 \((1,+\infty)\) 上均为增函数.
 
 当 \(a>2\) 时，令 \(\alpha=\sqrt{1-\dfrac2a}\)，则 \(0<\alpha<1\)，并且
 \(2-a+ax^2=a(x-\alpha)(x+\alpha)\). 因此 \(f(x)\) 在 \((-\infty,-\alpha)\)，\((\alpha,1)\)，\((1,+\infty)\) 上均为增函数，在 \((-\alpha,\alpha)\) 上为减函数.
 \item 对 \(x\in(0,1)\)，原不等式等价于 \(\ln\frac{1+x}{1-x}-ax>0\).
 令 \(h(x)=\dfrac1x\ln\dfrac{1+x}{1-x}\). 先证 \(h(x)>2\)：令 \(g(x)=\ln\dfrac{1+x}{1-x}-2x\)，则 \(g(0)=0\)，且
 \[
-g'(x)=\frac1{1+x}+\frac1{1-x}-2=\frac{2x^2}{1-x^2}>0,
+g'(x)=\frac1{1+x}+\frac1{1-x}-2=\frac{2x^2}{1-x^2}>0
 \]
 所以 \(g(x)>0\)，即 \(h(x)>2\). 另一方面，\(\displaystyle\lim_{x\to0^+}h(x)=2\). 因此当 \(a\leq2\) 时，\(\ln\dfrac{1+x}{1-x}>2x\geq ax\)，原不等式对所有 \(x\in(0,1)\) 成立；当 \(a>2\) 时，由 \(h(x)\to2\)，可取充分小的正数 \(x\) 使 \(h(x)<a\)，此时原不等式不成立. 故 \(a\) 的取值范围为 \(a\leq2\).
 \end{enumerate}
@@ -472,27 +472,27 @@ g'(x)=\frac1{1+x}+\frac1{1-x}-2=\frac{2x^2}{1-x^2}>0,
 \begin{enumerate}
 \item 取 \(n=1\)，由 \(S_1=a_1\) 得
 \[
-a_1=\frac43a_1-\frac13\cdot2^2+\frac23=\frac43a_1-\frac23,
+a_1=\frac43a_1-\frac13\cdot2^2+\frac23=\frac43a_1-\frac23
 \]
 所以 \(a_1=2\). 当 \(n\geq2\) 时，\(a_n=S_n-S_{n-1}\)，从而
 \[
-a_n=\frac43(a_n-a_{n-1})-\frac13\left(2^{n+1}-2^n\right)=\frac43(a_n-a_{n-1})-\frac{2^n}{3}.
+a_n=\frac43(a_n-a_{n-1})-\frac13\left(2^{n+1}-2^n\right)=\frac43(a_n-a_{n-1})-\frac{2^n}{3}
 \]
 整理得 \(a_n=4a_{n-1}+2^n\). 对应齐次递推式的通项为 \(C4^{n-1}\). 设一个特解为 \(\lambda2^n\)，代入递推式得 \(\lambda2^n=4\lambda2^{n-1}+2^n=(2\lambda+1)2^n\)，所以 \(\lambda=-1\). 因此 \(a_n=C4^{n-1}-2^n\)，再由 \(a_1=2\) 得 \(C=4\)，所以
 \[
-a_n=4^n-2^n.
+a_n=4^n-2^n
 \]
 \item 将 \(a_n=4^n-2^n\) 代入已知关系，得
 \[
-S_n=\frac{4^{n+1}-3\cdot2^{n+1}+2}{3}=\frac23(2^{n+1}-1)(2^n-1).
+S_n=\frac{4^{n+1}-3\cdot2^{n+1}+2}{3}=\frac23(2^{n+1}-1)(2^n-1)>0
 \]
 因此
 \[
-T_n=\frac{2^n}{S_n}=\frac32\left(\frac1{2^n-1}-\frac1{2^{n+1}-1}\right).
+T_n=\frac{2^n}{S_n}=\frac32\left(\frac1{2^n-1}-\frac1{2^{n+1}-1}\right)
 \]
 于是
 \[
-\sum_{i=1}^nT_i=\frac32\left(\frac1{2^1-1}-\frac1{2^{n+1}-1}\right)=\frac32\left(1-\frac1{2^{n+1}-1}\right)<\frac32.
+\sum_{i=1}^nT_i=\frac32\left(\frac1{2^1-1}-\frac1{2^{n+1}-1}\right)=\frac32\left(1-\frac1{2^{n+1}-1}\right)<\frac32
 \]
 \end{enumerate}
 \end{solution}

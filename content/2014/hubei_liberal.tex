@@ -16,6 +16,10 @@
 C
 \end{answer}
 
+\begin{solution}
+全集中的元素只有 \(1\)，\(2\)，\(3\)，\(4\)，\(5\)，\(6\)，\(7\)，去掉集合 \(A\) 中的 \(1\)，\(3\)，\(5\)，\(6\)，得到 \(\complement_U A=\{2,4,7\}\). 因此选择 C.
+\end{solution}
+
 \begin{problem}
 \(\i\) 为虚数单位，则 \(\left(\frac{1-\i}{1+\i}\right)^{2}= \)（\quad）
 
@@ -30,6 +34,14 @@ C
 B
 \end{answer}
 
+\begin{solution}
+分子、分母同乘分母的共轭复数，得
+\[
+\frac{1-\i}{1+\i}=\frac{(1-\i)^2}{(1+\i)(1-\i)}=\frac{-2\i}{2}=-\i
+\]
+所以 \(\left(\frac{1-\i}{1+\i}\right)^2=(-\i)^2=-1\). 因此选择 B.
+\end{solution}
+
 \begin{problem}
 命题“\(\forall x \in \R\)，\(x^2 \neq x\)”的否定是（\quad）
 
@@ -43,6 +55,10 @@ B
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+全称命题“对所有 \(x\in\R\)，\(x^2\neq x\)”的否定，要把“对所有”改为“存在”，并把“不等于”改为“等于”，因此否定为 \(\exists x\in\R\)，\(x^2=x\). 这正是选项 D.
+\end{solution}
 
 \begin{problem}
 若变量 \(x\)，\(y\) 满足约束条件 \(\begin{cases}
@@ -62,6 +78,11 @@ x \geqslant 0,\ y \geqslant 0
 C
 \end{answer}
 
+\begin{solution}
+可行域由 \(x\geqslant0\)、\(y\geqslant0\)、\(x+y\leqslant4\)、\(x-y\leqslant2\) 围成，其顶点为 \((0,0)\)、\((2,0)\)、\((3,1)\)、\((0,4)\). 目标函数 \(2x+y\) 是线性的，所以在多边形可行域上的最大值在顶点处取得. 逐点计算得对应的目标函数值分别为 \(0\)、\(4\)、\(7\)、\(4\).
+故最大值为 \(7\)，选择 C.
+\end{solution}
+
 \begin{problem}
 随机掷两枚质地均匀的骰子，它们向上的点数之和不超过 \(5\) 的概率记为 \(p_{1}\)，点数之和大于 \(5\) 的概率记为 \(p_{2}\)，点数之和为偶数的概率记为 \(p_{3}\). 则（\quad）
 
@@ -75,6 +96,14 @@ C
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+两枚骰子的有序结果共有 \(6\times6=36\) 种，且等可能.
+
+点数和不超过 \(5\) 的结果数为 \(1+2+3+4=10\)，所以 \(p_1=10/36=5/18\). 因而 \(p_2=1-p_1=13/18\).
+
+点数和为偶数，当且仅当两枚骰子的点数同奇偶. 奇数、偶数各有 \(3\) 个，因此结果数为 \(3\times3+3\times3=18\)，从而 \(p_3=18/36=1/2=9/18\). 因此 \(p_1<p_3<p_2\)，选择 C.
+\end{solution}
 
 \begin{problem}
 根据如下样本数据
@@ -102,6 +131,29 @@ C
 A
 \end{answer}
 
+\begin{solution}
+样本中 \(\bar{x}=\frac{3+4+5+6+7+8}{6}=\frac{11}{2}\)，\(\bar{y}=\frac{4.0+2.5-0.5+0.5-2.0-3.0}{6}=\frac14\).
+回归方程 \(\hat y=bx+a\) 中
+\[
+b=\frac{\sum_{i=1}^{6}(x_i-\bar x)(y_i-\bar y)}
+{\sum_{i=1}^{6}(x_i-\bar x)^2}
+\]
+分母为
+\[
+\left(-\frac52\right)^2+\left(-\frac32\right)^2+\left(-\frac12\right)^2+\left(\frac12\right)^2+\left(\frac32\right)^2+\left(\frac52\right)^2=\frac{35}{2}>0
+\]
+分子为
+\[
+\sum_{i=1}^{6}(x_i-\bar x)(y_i-\bar y)
+=\left(-\frac52\right)\frac{15}{4}+\left(-\frac32\right)\frac94+\left(-\frac12\right)\left(-\frac34\right)+\frac12\cdot\frac14+\frac32\left(-\frac94\right)+\frac52\left(-\frac{13}{4}\right)=-\frac{95}{4}<0
+\]
+所以 \(b<0\). 又
+\[
+a=\bar y-b\bar x=\frac14-\left(-\frac{19}{14}\right)\frac{11}{2}=\frac{54}{7}>0
+\]
+因此选择 A.
+\end{solution}
+
 \begin{problem}
 在如图所示的空间直角坐标系 \(O-xyz\) 中，一个四面体的顶点坐标分别是 \((0,0,2)\)，\((2,2,0)\)，\((1,2,1)\)，\((2,2,2)\). 给出编号为\(\circled{1}\)、\(\circled{2}\)、\(\circled{3}\)、\(\circled{4}\)的四个图，则该四面体的正视图和俯视图分别为（\quad）
 
@@ -119,6 +171,14 @@ A
 D
 \end{answer}
 
+\begin{solution}
+正视图是沿 \(x\) 轴方向投影到 \(yOz\) 平面. 四个顶点的投影分别为 \(A'(0,2)\)、\(B'(2,0)\)、\(C'(2,1)\)、\(D'(2,2)\).
+因此外轮廓为由 \(A'\)、\(D'\)、\(B'\) 构成的直角三角形，\(C'\) 在 \(B'D'\) 上，投影后的内部边线与图\(\circled{4}\)相符，所以正视图为图\(\circled{4}\).
+
+俯视图是沿 \(z\) 轴方向投影到 \(xOy\) 平面. 四个顶点的投影分别为 \(A''(0,0)\)、\(B''(2,2)\)、\(C''(1,2)\)、\(D''(2,2)\).
+其中 \(B''\) 与 \(D''\) 重合，外轮廓及重合点产生的边线与图\(\circled{2}\)相符，所以俯视图为图\(\circled{2}\). 因此选择 D.
+\end{solution}
+
 \begin{problem}
 设 \(a\)，\(b\) 是关于 \(t\) 的方程 \(t^2 \cos \theta + t \sin \theta = 0\) 的两个不等实根，则过 \(A(a, a^2)\)，\(B(b, b^2)\) 两点的直线与双曲线 \(\frac{x^2}{\cos^2 \theta} - \frac{y^2}{\sin^2 \theta} = 1\) 的公共点的个数为（\quad）
 
@@ -132,6 +192,15 @@ D
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+方程可因式分解为 \(t\left(t\cos\theta+\sin\theta\right)=0\).
+双曲线方程要求 \(\sin\theta\neq0\) 且 \(\cos\theta\neq0\)；又由于方程有两个不等实根，两个根为 \(0\) 与 \(-\tan\theta\). 不妨设 \(a=0\)，\(b=-\tan\theta\)，于是
+\(A=(0,0)\)，\(B=(-\tan\theta,\tan^2\theta)\).
+直线 \(AB\) 的方程为 \(y=-x\tan\theta\).
+
+双曲线的渐近线由 \(\frac{x^2}{\cos^2\theta}-\frac{y^2}{\sin^2\theta}=0\) 得到，即 \(y=\pm x\tan\theta\). 所以直线 \(AB\) 是双曲线的一条渐近线. 将 \(y=-x\tan\theta\) 代入双曲线左端，得到 \(0\)，不可能等于 \(1\)，故二者没有公共点，选择 A.
+\end{solution}
 
 \begin{problem}
 已知 \( f(x) \) 是定义在 \(\R\) 上的奇函数，当 \( x \geqslant 0 \) 时，\( f(x) = x^2 - 3x \). 则函数 \( g(x) = f(x) - x + 3 \) 的零点的集合为（\quad）
@@ -147,6 +216,21 @@ A
 D
 \end{answer}
 
+\begin{solution}
+当 \(x\geqslant0\) 时，
+\[
+g(x)=x^2-3x-x+3=x^2-4x+3=(x-1)(x-3)
+\]
+所以得到零点 \(x=1\)，\(3\).
+
+当 \(x<0\) 时，由 \(f\) 为奇函数，
+\[
+f(x)=-f(-x)=-\left[(-x)^2-3(-x)\right]=-x^2-3x
+\]
+于是 \(g(x)=-x^2-3x-x+3=-x^2-4x+3\)，即 \(x^2+4x-3=0\). 解得 \(x=-2\pm\sqrt7\)，其中 \(-2+\sqrt7>0\) 不符合 \(x<0\)，只有 \(-2-\sqrt7\) 有效.
+因此零点集合为 \(\{-2-\sqrt7,1,3\}\)，选择 D.
+\end{solution}
+
 \begin{problem}
 《算数书》竹简于上世纪八十年代在湖北省江陵县张家山出土，这是我国现存最早的有系统的数学典籍，其中记载有求“囷盖”的术：置知其周，令相乘也. 又以高乘之，三十六成一. 该术相当于给出了由圆锥的底面周长 \(L\) 与高 \(h\)，计算其体积 \(V\) 的近似公式 \(V \approx \frac{1}{36}L^2h\). 它实际上是将圆锥体积公式中的圆周率 \(\pi\) 近似取为 \(3\). 那么，近似公式 \(V \approx \frac{2}{75}L^2h\) 相当于将圆锥体积公式中的 \(\pi\) 近似取为（\quad）
 
@@ -161,6 +245,11 @@ D
 B
 \end{answer}
 
+\begin{solution}
+圆锥体积公式为 \(V=\frac13\pi r^2h\)，底面周长满足 \(L=2\pi r\)，所以 \(r^2=\frac{L^2}{4\pi^2}\)，\(V=\frac{L^2h}{12\pi}\).
+若把圆周率近似为 \(\pi_0\)，则公式中的系数为 \(1/(12\pi_0)\). 由 \(\frac{1}{12\pi_0}=\frac{2}{75}\) 得 \(75=24\pi_0\)，即 \(\pi_0=\frac{25}{8}\). 因此选择 B.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -171,6 +260,10 @@ B
 \(1800\)
 \end{answer}
 
+\begin{solution}
+分层抽样中各层的抽取比例相同. 甲设备产品在样本中的比例为 \(\frac{50}{80}=\frac58\). 所以甲设备产品总数为 \(4800\times\frac58=3000\) 件，乙设备生产的产品总数为 \(4800-3000=1800\text{ 件}\).
+\end{solution}
+
 \begin{problem}
 若向量 \( \overrightarrow{OA} = (1, -3) \)，\( \left|\overrightarrow{OA}\right| = \left|\overrightarrow{OB}\right| \)，\( \overrightarrow{OA} \cdot \overrightarrow{OB} = 0 \)，则 \( \left|\overrightarrow{AB}\right| =\fillinblank{} \).
 \end{problem}
@@ -179,6 +272,14 @@ B
 \(2\sqrt{5}\)
 \end{answer}
 
+\begin{solution}
+由 \(\overrightarrow{OA}\cdot\overrightarrow{OB}=0\)，知 \(OA\perp OB\)，所以三角形 \(AOB\) 在 \(O\) 处直角. 又 \(|OA|=\sqrt{1^2+(-3)^2}=\sqrt{10}\)，\(|OB|=|OA|=\sqrt{10}\).
+由勾股定理，
+\[
+|AB|=\sqrt{|OA|^2+|OB|^2}=\sqrt{10+10}=2\sqrt5
+\]
+\end{solution}
+
 \begin{problem}
 在 \(\triangle ABC\) 中，角 \(A\)，\(B\)，\(C\) 所对的边分别为 \(a\)，\(b\)，\(c\)，已知 \(A = \frac{\pi}{6}\)，\(a = 1\)，\(b = \sqrt{3}\)，则 \(B =\fillinblank{} \).
 \end{problem}
@@ -186,6 +287,18 @@ B
 \begin{answer}
 \(\frac{\pi}{3}\) 或 \(\frac{2\pi}{3}\)
 \end{answer}
+
+\begin{solution}
+由正弦定理，\(\frac{b}{\sin B}=\frac{a}{\sin A}\).
+所以
+\[
+\sin B=\frac{b\sin A}{a}
+=\frac{\sqrt3\cdot\frac12}{1}
+=\frac{\sqrt3}{2}
+\]
+三角形内角满足 \(0<B<\pi\)，故 \(B=\frac{\pi}{3}\) 或 \(B=\frac{2\pi}{3}\).
+两种取值分别使 \(C=\pi-A-B\) 等于 \(\pi/2\) 或 \(\pi/6\)，均能构成三角形.
+\end{solution}
 
 \begin{problem}
 阅读如图所示的程序框图，运行相应的程序，若输入 \(n\) 的值为 \(9\)，则输出 \(S\) 的值为\fillinblank{}.
@@ -197,17 +310,55 @@ B
 \(1067\)
 \end{answer}
 
+\begin{solution}
+程序开始时 \(k=1\)、\(S=0\). 每次循环先把 \(2^k+k\) 加到 \(S\)，再令 \(k\) 增加 \(1\)，当 \(k>n\) 时输出.
+因此 \(n=9\) 时
+\[S=\sum_{k=1}^{9}(2^k+k)=(2^1+2^2+\cdots+2^9)+(1+2+\cdots+9)\]
+计算得 \(2^1+\cdots+2^9=2^{10}-2=1022\)，\(1+\cdots+9=\frac{9\cdot10}{2}=45\)，
+所以 \(S=1022+45=1067\).
+\end{solution}
+
 \begin{problem}
 如图所示，函数 \( y = f(x) \) 的图象由两条射线和三条线段组成.
 
 若 \(\forall x\in \R\)，\(f(x) > f(x - 1)\)，则正实数 \(a\) 的取值范围为\fillinblank{}.
 
+\problemresetlayout
 \bitmapfigure[max width=0.55\linewidth]{img/2014/hubei_liberal/q15_fig1.png}
 \end{problem}
 
 \begin{answer}
 \(\left(0,\frac{1}{6}\right)\)
 \end{answer}
+
+\begin{solution}
+把横坐标按 \(a\) 缩放，令 \(t=\frac{x}{a}\)，\(h=\frac1a\)，
+并令 \(f(x)=a\varphi(t)\). 由图像可得
+\[
+\varphi(t)=
+\begin{cases}
+t+3,&t\leqslant-2,\\
+1,&-2\leqslant t\leqslant-1,\\
+-t,&-1\leqslant t\leqslant1,\\
+-1,&1\leqslant t\leqslant2,\\
+t-3,&t\geqslant2
+\end{cases}
+\]
+题设 \(f(x)>f(x-1)\) 对任意 \(x\) 成立，等价于 \(\varphi(t)>\varphi(t-h)\) 对任意 \(t\) 成立.
+令 \(q(t)=\varphi(t)-t\). 从上面的分段式可知 \(-3\leqslant q(t)\leqslant3\)，所以当 \(h>6\) 时，
+\[
+\varphi(t)-\varphi(t-h)
+=h+q(t)-q(t-h)\geqslant h-6>0
+\]
+因此 \(h>6\) 时题设不等式对所有 \(t\) 成立.
+
+反之，若 \(0<h\leqslant2\)，取 \(t=-1+h\)，则
+\[
+\varphi(t)=1-h<1=\varphi(t-h)
+\]
+若 \(2<h\leqslant6\)，取 \(t=-2+h\)，则 \(t-h=-2\). 当 \(2<h\leqslant4\) 时 \(\varphi(t)<1\)，当 \(4<h\leqslant6\) 时 \(\varphi(t)=h-5\leqslant1\)，故均有 \(\varphi(t)\leqslant\varphi(t-h)\). 因而必须 \(h>6\).
+于是 \(\frac1a>6\Longleftrightarrow0<a<\frac16\).
+\end{solution}
 
 \begin{problem}
 某项研究表明：在考虑行车安全的情况下，某路段车流量 \(F\)（单位时间内经过测量点的车辆数，单位：\(\text{辆}/\text{小时}\)）与车流速度 \(v\)（假设车辆以相同速度 \(v\) 行驶，单位：\(\text{米}/\text{秒}\)），平均车长 \(l\)（单位：\(\text{米}\)）的值有关，其公式为 \(F = \frac{76000v}{v^2 + 18v + 20l}\).
@@ -221,6 +372,16 @@ B
 \(1900\)；\(100\)
 \end{answer}
 
+\begin{solution}
+把 \(l\) 看作常数，且 \(v>0\). 对 \(F(v)=\frac{76000v}{v^2+18v+20l}\) 求导，得
+\[
+F'(v)=\frac{76000(20l-v^2)}{(v^2+18v+20l)^2}
+\]
+所以 \(F(v)\) 在 \(0<v<\sqrt{20l}\) 时递增，在 \(v>\sqrt{20l}\) 时递减，最大值在 \(v=\sqrt{20l}\) 处取得. 最大值为 \(F_{\max}(l)=\frac{76000}{18+2\sqrt{20l}}\).
+当 \(l=6.05\) 时，\(\sqrt{20l}=\sqrt{121}=11\)，故 \(F_{\max}(6.05)=\frac{76000}{18+22}=1900\text{ 辆}/\text{小时}\). 当 \(l=5\) 时，\(\sqrt{20l}=10\)，故 \(F_{\max}(5)=\frac{76000}{18+20}=2000\text{ 辆}/\text{小时}\).
+增加量为 \(2000-1900=100\text{ 辆}/\text{小时}\).
+\end{solution}
+
 \begin{problem}
 已知圆 \(O: x^{2} + y^{2} = 1\) 和点 \(A(-2,0)\)，若定点 \(B(b,0)\) （\(b \neq -2\)） 和常数 \(\lambda\) 满足：对圆 \(O\) 上任意一点 \(M\)，都有 \(|MB| = \lambda |MA|\)，则
 \begin{enumerate}
@@ -233,10 +394,19 @@ B
 \(-\frac{1}{2}\)；\(\frac{1}{2}\)
 \end{answer}
 
+\begin{solution}
+设圆 \(O\) 上任一点为 \(M(x,y)\)，则 \(x^2+y^2=1\). 由题设 \(|MB|=\lambda|MA|\). 两边平方，得到 \((x-b)^2+y^2=\lambda^2\left((x+2)^2+y^2\right)\). 利用 \(x^2+y^2=1\) 化简为 \(1-2bx+b^2=\lambda^2(5+4x)\).
+因为该等式对圆上任意 \(M\) 都成立，比较 \(x\) 的系数和常数项，得
+\(-2b=4\lambda^2\)，\(1+b^2=5\lambda^2\).
+由第一式 \(b=-2\lambda^2\). 令 \(s=\lambda^2\)，代入第二式得
+\(1+4s^2=5s\)，即 \((4s-1)(s-1)=0\).
+于是 \((b,\lambda^2)=(-2,1)\) 或 \((-1/2,1/4)\). 由题设 \(b\neq-2\)，所以 \(b=-1/2\). 又距离比中的 \(\lambda\) 取非负值，故 \(\lambda=1/2\).
+\end{solution}
+
 \section{解答题}
 
 \begin{problem}
-某实验室一天的温度（单位：\(^{\circ}\mathrm{C}\)）随时间 \(t\)（单位：\(\mathrm{h}\)）的变化近似满足函数关系：\( f(t)=10-\sqrt{3}\cos\frac{\pi}{12}t-\sin\frac{\pi}{12}t,\ t\in[0,24) \).
+某实验室一天的温度（单位：\(^{\circ}\mathrm{C}\)）随时间 \(t\)（单位：\(\mathrm{h}\)）的变化近似满足函数关系：\(f(t)=10-\sqrt{3}\cos\frac{\pi}{12}t-\sin\frac{\pi}{12}t\)，\(\ t\in[0,24)\).
 \begin{enumerate}
 \item 求实验室这一天上午 \(8\) 时的温度；
 \item 求实验室这一天的最大温差.
@@ -245,25 +415,15 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 当 \(t=8\) 时，\(\frac{\pi}{12}t=\frac{2\pi}{3}\)，所以
+\item 当 \(t=8\) 时，\(\frac{\pi}{12}t=\frac{2\pi}{3}\)，因此
 \[
-f(8)=10-\sqrt{3}\cos\frac{2\pi}{3}-\sin\frac{2\pi}{3}
-=10-\sqrt{3}\left(-\frac{1}{2}\right)-\frac{\sqrt{3}}{2}=10.
+f(8)=10-\sqrt3\cos\frac{2\pi}{3}-\sin\frac{2\pi}{3}
+=10-\sqrt3\left(-\frac12\right)-\frac{\sqrt3}{2}=10
 \]
-因此，实验室这一天上午 \(8\) 时的温度为 \(10^{\circ}\mathrm{C}\).
+所以实验室这一天上午 \(8\) 时的温度为 \(10^{\circ}\mathrm{C}\).
 
-\item 令 \(u=\frac{\pi}{12}t\)，则 \(u\in[0,2\pi)\)，且
-\[
-\sqrt{3}\cos u+\sin u=2\cos\left(u-\frac{\pi}{6}\right).
-\]
-因此
-\[
-f(t)=10-2\cos\left(u-\frac{\pi}{6}\right),
-\]
-从而 \(8\leqslant f(t)\leqslant12\). 由于 \(u\) 经过一个完整周期，两个端点值都能取到，所以这一天的最大温差为
-\[
-12-8=4^{\circ}\mathrm{C}.
-\]
+\item 令 \(u=\frac{\pi}{12}t\)，则 \(0\leqslant u<2\pi\). 利用辅助角公式，得 \(\sqrt3\cos u+\sin u=2\cos\left(u-\frac{\pi}{6}\right)\)，从而 \(f(t)=10-2\cos\left(u-\frac{\pi}{6}\right)\).
+当 \(u=\frac{\pi}{6}\) 时，\(\cos\left(u-\frac{\pi}{6}\right)=1\)，温度取得最小值 \(8\)；当 \(u=\frac{7\pi}{6}\) 时，该余弦值为 \(-1\)，温度取得最大值 \(12\). 两个取值都对应 \(t\in[0,24)\)，所以最大温差为 \(12-8=4^{\circ}\mathrm{C}\).
 \end{enumerate}
 \end{solution}
 
@@ -276,42 +436,28 @@ f(t)=10-2\cos\left(u-\frac{\pi}{6}\right),
 \end{problem}
 
 \begin{solution}
-设等差数列 \(\{a_n\}\) 的公差为 \(d\)，则
-\[
-a_2=2+d,\qquad a_5=2+4d.
-\]
-因为 \(a_1\)，\(a_2\)，\(a_5\) 成等比数列，所以中间项的平方等于两边两项的积，即
-\[
-(2+d)^2=2(2+4d).
-\]
-整理得
-\[
-d^2-4d=0,
-\]
-所以 \(d=0\) 或 \(d=4\). 因此数列的通项公式有两种可能：
-\[
-a_n=2
-\]
-或
-\[
-a_n=2+4(n-1)=4n-2.
-\]
+\begin{enumerate}
+\item
+设等差数列 \(\{a_n\}\) 的公差为 \(d\)，则 \(a_2=2+d\)，\(a_5=2+4d\).
+因为 \(a_1\)，\(a_2\)，\(a_5\) 成等比数列，所以中间项的平方等于两边两项的积，即 \((2+d)^2=2(2+4d)\). 整理得 \(d^2-4d=0\).
+所以 \(d=0\) 或 \(d=4\). 因此数列的通项公式有两种可能：\(a_n=2\)，或 \(a_n=2+4(n-1)=4n-2\).
 
-当 \(d=0\) 时，\(S_n=2n\)，而 \(2n>60n+800\) 不可能成立.
+\item 当 \(d=0\) 时，\(S_n=2n\)，而 \(2n>60n+800\) 不可能成立.
 
 当 \(d=4\) 时，
 \[
 S_n=\frac{n\left(a_1+a_n\right)}{2}
-=\frac{n\left(2+4n-2\right)}{2}=2n^2.
+=\frac{n\left(2+4n-2\right)}{2}=2n^2
 \]
 于是
 \[
 S_n>60n+800\Longleftrightarrow 2n^2>60n+800
 \Longleftrightarrow n^2-30n-400>0
-\Longleftrightarrow (n-40)(n+10)>0.
+\Longleftrightarrow (n-40)(n+10)>0
 \]
 由于 \(n\) 是正整数，所以必须有 \(n>40\)，最小值为 \(n=41\). 因而当 \(d=4\)，即 \(a_n=4n-2\) 时满足条件，且 \(n\) 的最小值为 \(41\)；当 \(d=0\) 时不存在这样的正整数 \(n\).
-\end{solution}
+ \end{enumerate}
+ \end{solution}
 
 \begin{problem}
 如图，在正方体 \(ABCD - A_{1}B_{1}C_{1}D_{1}\) 中，\(E\)，\(F\)，\(P\)，\(Q\)，\(M\)，\(N\) 分别是棱 \(AB\)，\(AD\)，\(DD_{1}\)，\(BB_{1}\)，\(A_{1}B_{1}\)，\(A_{1}D_{1}\) 的中点. 求证：
@@ -326,51 +472,21 @@ S_n>60n+800\Longleftrightarrow 2n^2>60n+800
 
 \begin{solution}
 设正方体的棱长为 \(a\)，建立空间直角坐标系，取
-\[
-A(0,0,0),\quad B(a,0,0),\quad D(0,a,0),\quad A_1(0,0,a).
-\]
-于是
-\[
-E\left(\frac{a}{2},0,0\right),\quad F\left(0,\frac{a}{2},0\right),\quad P\left(0,a,\frac{a}{2}\right),\quad Q\left(a,0,\frac{a}{2}\right),
-\]
-\[
-M\left(\frac{a}{2},0,a\right),\quad N\left(0,\frac{a}{2},a\right),\quad C_1(a,a,a).
-\]
+\(A(0,0,0)\)、\(B(a,0,0)\)、\(D(0,a,0)\)、\(A_1(0,0,a)\).
+于是 \(E\left(\frac{a}{2},0,0\right)\)、\(F\left(0,\frac{a}{2},0\right)\)、\(P\left(0,a,\frac{a}{2}\right)\)、\(Q\left(a,0,\frac{a}{2}\right)\)、\(M\left(\frac{a}{2},0,a\right)\)、\(N\left(0,\frac{a}{2},a\right)\)、\(C_1(a,a,a)\).
 
 \begin{enumerate}
 \item 平面 \(EFPQ\) 内两条相交直线的方向向量可取
-\[
-\overrightarrow{EF}=\left(-\frac{a}{2},\frac{a}{2},0\right),\qquad \overrightarrow{EQ}=\left(\frac{a}{2},0,\frac{a}{2}\right).
-\]
-它们的叉积为
-\[
-\overrightarrow{EF}\times\overrightarrow{EQ}=\frac{a^2}{4}(1,1,-1),
-\]
+\(\overrightarrow{EF}=\left(-\frac{a}{2},\frac{a}{2},0\right)\)，\(\overrightarrow{EQ}=\left(\frac{a}{2},0,\frac{a}{2}\right)\).
+它们的叉积为 \(\overrightarrow{EF}\times\overrightarrow{EQ}=\frac{a^2}{4}(1,1,-1)\).
 所以 \((1,1,-1)\) 是平面 \(EFPQ\) 的一个法向量. 又
-\[
-\overrightarrow{BC_1}=(0,a,a),\qquad (1,1,-1)\cdot\overrightarrow{BC_1}=0.
-\]
-因此直线 \(BC_1\) 的方向与平面 \(EFPQ\) 平行. 平面 \(EFPQ\) 的方程为 \(x+y-z=\frac{a}{2}\)，而点 \(B(a,0,0)\) 不在此平面上，所以
-\[
-BC_1\parallel\text{平面 }EFPQ.
-\]
+\(\overrightarrow{BC_1}=(0,a,a)\)，\((1,1,-1)\cdot\overrightarrow{BC_1}=0\).
+因此直线 \(BC_1\) 的方向与平面 \(EFPQ\) 平行. 平面 \(EFPQ\) 的方程为 \(x+y-z=\frac{a}{2}\)，而点 \(B(a,0,0)\) 不在此平面上，所以 \(BC_1\parallel\text{平面 }EFPQ\).
 
 \item 平面 \(PQMN\) 内两条相交直线的方向向量可取
-\[
-\overrightarrow{PQ}=(a,-a,0),\qquad \overrightarrow{PN}=\left(0,-\frac{a}{2},\frac{a}{2}\right).
-\]
-于是
-\[
-\overrightarrow{PQ}\times\overrightarrow{PN}=-\frac{a^2}{2}(1,1,1),
-\]
-所以 \((1,1,1)\) 是平面 \(PQMN\) 的一个法向量. 而
-\[
-\overrightarrow{AC_1}=(a,a,a)
-\]
-与该法向量平行. 另外，平面 \(PQMN\) 的方程为 \(x+y+z=\frac{3a}{2}\)，直线 \(AC_1\) 在点 \(\left(\frac{a}{2},\frac{a}{2},\frac{a}{2}\right)\) 处与该平面相交. 因此
-\[
-AC_1\perp\text{平面 }PQMN.
-\]
+\(\overrightarrow{PQ}=(a,-a,0)\)，\(\overrightarrow{PN}=\left(0,-\frac{a}{2},\frac{a}{2}\right)\).
+于是 \(\overrightarrow{PQ}\times\overrightarrow{PN}=-\frac{a^2}{2}(1,1,1)\).
+所以 \((1,1,1)\) 是平面 \(PQMN\) 的一个法向量. 而 \(\overrightarrow{AC_1}=(a,a,a)\) 与该法向量平行. 另外，平面 \(PQMN\) 的方程为 \(x+y+z=\frac{3a}{2}\)，直线 \(AC_1\) 在点 \(\left(\frac{a}{2},\frac{a}{2},\frac{a}{2}\right)\) 处与该平面相交. 因此 \(AC_1\perp\text{平面 }PQMN\).
 \end{enumerate}
 \end{solution}
 
@@ -384,48 +500,21 @@ AC_1\perp\text{平面 }PQMN.
 
 \begin{solution}
 \begin{enumerate}
-\item 函数的定义域为 \(x>0\)，且
-\[
-f'(x)=\frac{1-\ln x}{x^2}.
-\]
+\item 函数的定义域为 \(x>0\)，且 \(f'(x)=\frac{1-\ln x}{x^2}\).
 因为 \(x^2>0\)，所以当 \(0<x<\e\) 时，\(f'(x)>0\)；当 \(x=\e\) 时，\(f'(x)=0\)；当 \(x>\e\) 时，\(f'(x)<0\). 因此，\(f(x)\) 在 \((0,\e)\) 上单调递增，在 \((\e,+\infty)\) 上单调递减.
 
-\item 记 \(\varphi(x)=\frac{\ln x}{x}\). 由第（1）问，且 \(\e<3<\pi\)，有
-\[
-\varphi(\e)>\varphi(3)>\varphi(\pi).
-\]
-其中 \(\varphi(\e)>\varphi(3)\) 等价于
-\[
-\e\ln3<3.
-\]
-于是
-\[
-\ln\left(3^{\e}\right)=\e\ln3<3=\ln\left(\e^3\right),
-\]
-所以 \(3^{\e}<\e^3\). 又因为 \(3<\pi\)、\(\e<\pi\)，所以
-\[
-3^{\e}<\pi^{\e},\qquad 3^{\e}<3^{\pi}.
-\]
-同时，由 \(\e\ln3<3<\pi\)，有
-\[
-\ln\left(3^{\e}\right)<\pi=\ln\left(\e^{\pi}\right),
-\]
-故 \(3^{\e}<\e^{\pi}\). 还由于 \(\e<3<\pi\)，有
-\[
-3^{\e}<3^3<\pi^3.
-\]
+\item 记 \(\varphi(x)=\frac{\ln x}{x}\). 由第（1）问，且 \(\e<3<\pi\)，有 \(\varphi(\e)>\varphi(3)>\varphi(\pi)\). 其中 \(\varphi(\e)>\varphi(3)\) 等价于 \(\e\ln3<3\)，于是 \(\ln\left(3^{\e}\right)=\e\ln3<3=\ln\left(\e^3\right)\).
+所以 \(3^{\e}<\e^3\). 又因为 \(3<\pi\)、\(\e<\pi\)，所以 \(3^{\e}<\pi^{\e}\)，\(3^{\e}<3^{\pi}\).
+同时，由 \(\e\ln3<3<\pi\)，有 \(\ln\left(3^{\e}\right)<\pi=\ln\left(\e^{\pi}\right)\). 故 \(3^{\e}<\e^{\pi}\). 还由于 \(\e<3<\pi\)，有 \(3^{\e}<3^3<\pi^3\).
 因此 \(3^{\e}\) 小于题目中的另外五个数，是最小数.
 
 由 \(\varphi(3)>\varphi(\pi)\)，得
 \[
 \frac{\ln3}{3}>\frac{\ln\pi}{\pi}
 \Longleftrightarrow \pi\ln3>3\ln\pi
-\Longleftrightarrow 3^{\pi}>\pi^3.
+\Longleftrightarrow 3^{\pi}>\pi^3
 \]
-又因为 \(\e<3<\pi\)，所以
-\[
-\e^3<\pi^3<3^{\pi},\qquad \pi^{\e}<\pi^3<3^{\pi},
-\]
+又因为 \(\e<3<\pi\)，所以 \(\e^3<\pi^3<3^{\pi}\)，\(\pi^{\e}<\pi^3<3^{\pi}\)，
 并且 \(\e^{\pi}<3^{\pi}\)，\(3^{\e}<3^{\pi}\). 所以 \(3^{\pi}\) 大于其余五个数，是最大数.
 \end{enumerate}
 \end{solution}
@@ -439,41 +528,24 @@ f'(x)=\frac{1-\ln x}{x^2}.
 \end{problem}
 
 \begin{solution}
-设点 \(M\) 的坐标为 \((x,y)\). 由题意
-\[
-\sqrt{(x-1)^2+y^2}=|x|+1.
-\]
-两边均非负，平方并整理得
-\[
-(x-1)^2+y^2=(|x|+1)^2
-\Longleftrightarrow y^2=2x+2|x|.
-\]
+设点 \(M\) 的坐标为 \((x,y)\). 由题意 \(\sqrt{(x-1)^2+y^2}=|x|+1\). 两边均非负，平方并整理得 \((x-1)^2+y^2=(|x|+1)^2\Longleftrightarrow y^2=2x+2|x|\).
 当 \(x\geqslant0\) 时，\(y^2=4x\)；当 \(x<0\) 时，\(y=0\). 因此轨迹 \(C\) 的方程可写为
 \[
 C:\begin{cases}
 y^2=4x,&x\geqslant0,\\
-y=0,&x\leqslant0.
+y=0,&x\leqslant0
 \end{cases}
 \]
 
-直线 \(l\) 的方程为
-\[
-y-1=k(x+2).
-\]
-先考察它与抛物线 \(y^2=4x\) 的交点. 当 \(k\ne0\) 时，令 \(x=\frac{y^2}{4}\)，代入直线方程，得
-\[
-ky^2-4y+8k+4=0.
-\]
+直线 \(l\) 的方程为 \(y-1=k(x+2)\).
+先考察它与抛物线 \(y^2=4x\) 的交点. 当 \(k\ne0\) 时，令 \(x=\frac{y^2}{4}\)，代入直线方程，得 \(ky^2-4y+8k+4=0\).
 其判别式为
 \[
-\Delta=16-4k(8k+4)=16(1+k)(1-2k).
+\Delta=16-4k(8k+4)=16(1+k)(1-2k)
 \]
 所以，当 \(k<-1\) 或 \(k>\frac{1}{2}\) 时，抛物线交点数为 \(0\)；当 \(k=-1\) 或 \(k=\frac{1}{2}\) 时，交点数为 \(1\)；当 \(-1<k<\frac{1}{2}\) 且 \(k\ne0\) 时，交点数为 \(2\). 当 \(k=0\) 时，直线为 \(y=1\)，与抛物线只有一个交点.
 
-再考察它与射线 \(y=0, x\leqslant0\) 的交点. 当 \(k\ne0\) 时，令 \(y=0\)，得
-\[
-x=-2-\frac{1}{k}.
-\]
+再考察它与射线 \(y=0\)，\(x\leqslant0\) 的交点. 当 \(k\ne0\) 时，令 \(y=0\)，得 \(x=-2-\frac{1}{k}\).
 该点满足 \(x\leqslant0\) 当且仅当 \(k>0\) 或 \(k\leqslant-\frac{1}{2}\)；当 \(k=0\) 时没有交点. 在 \(k=-\frac{1}{2}\) 时，射线交点为原点，而原点也是抛物线交点，需要只计一次.
 
 综合两部分交点数，得到：
@@ -481,7 +553,7 @@ x=-2-\frac{1}{k}.
 \begin{cases}
 1,&k\in(-\infty,-1)\cup\{0\}\cup\left(\frac{1}{2},+\infty\right),\\
 2,&k\in\{-1\}\cup\left[-\frac{1}{2},0\right)\cup\left\{\frac{1}{2}\right\},\\
-3,&k\in\left(-1,-\frac{1}{2}\right)\cup\left(0,\frac{1}{2}\right).
+3,&k\in\left(-1,-\frac{1}{2}\right)\cup\left(0,\frac{1}{2}\right)
 \end{cases}
 \]
 \end{solution}

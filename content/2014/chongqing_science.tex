@@ -16,6 +16,10 @@
 A
 \end{answer}
 
+\begin{solution}
+\(\i(1-2\i)=\i-2\i^{2}=2+\i\)，对应复平面上的点为 \((2,1)\). 其实部和虚部都为正，因此该点位于第一象限，选 A.
+\end{solution}
+
 \begin{problem}
 对任意等比数列 \(\{a_{n}\}\)，下列说法一定正确的是（\quad）
 
@@ -29,6 +33,11 @@ A
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+设等比数列的首项为 \(a_{1}\)，公比为 \(q\)，则 \(a_{n}=a_{1}q^{n-1}\). 选项 D 中
+\(a_{6}^{2}=a_{1}^{2}q^{10}\)，而 \(a_{3}a_{9}=a_{1}^{2}q^{2+8}=a_{1}^{2}q^{10}\)，所以 \(a_{3}\)，\(a_{6}\)，\(a_{9}\) 成等比数列. 其余选项分别要求 \(a_{3}^{2}=a_{1}a_{9}\)、\(a_{3}^{2}=a_{2}a_{6}\)、\(a_{4}^{2}=a_{2}a_{8}\). 取 \(a_{1}=1\)，\(q=2\)，这三式左、右两边分别为 \(16,256\)、\(16,64\)、\(64,256\)，均不相等，所以 A、B、C 不是对任意等比数列都成立，故选 D.
+\end{solution}
 
 \begin{problem}
 已知变量 \(x\) 与 \(y\) 正相关，且由观测数据算得样本平均数 \(\bar{x} = 3\)，\(\bar{y} = 3.5\)，则由该观测数据算得的线性回归方程可能是（\quad）
@@ -44,6 +53,10 @@ D
 A
 \end{answer}
 
+\begin{solution}
+线性回归方程必经过样本中心点 \((\bar{x},\bar{y})=(3,3.5)\)，且 \(x\) 与 \(y\) 正相关时回归直线斜率为正. 选项 A 的斜率为 \(0.4>0\)，且 \(0.4\times3+2.3=3.5\)，满足这两个条件；选项 B 不经过 \((3,3.5)\)，选项 C、D 的斜率为负，故选 A.
+\end{solution}
+
 \begin{problem}
 已知向量 \(\bs{a} = (k, 3)\)，\(\bs{b} = (1, 4)\)，\(\bs{c} = (2, 1)\)，且 \((2\bs{a} - 3\bs{b}) \perp \bs{c}\)，则实数 \(k =\)（\quad）
 
@@ -57,6 +70,12 @@ A
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+\(2\bs{a}-3\bs{b}=(2k-3,6-12)=(2k-3,-6)\). 由垂直条件，
+\((2\bs{a}-3\bs{b})\cdot\bs{c}=0\)，即
+\(2(2k-3)-6=0\)，解得 \(k=3\)，故选 C.
+\end{solution}
 
 \begin{problem}
 执行如图所示的程序框图，若输出 \(k\) 的值为 6 ，则判断框内可填入的条件是（\quad）
@@ -74,6 +93,14 @@ C
 C
 \end{answer}
 
+\begin{solution}
+判断框中条件为真时沿右侧分支更新，条件为假时向下输出. 初始 \(k=9\)，\(s=1\)，每次更新后先将 \(k\) 减去 1，再按框内公式更新 \(s\)，所以各次判断时的 \((k,s)\) 依次为
+\((9,1)\)、\(\left(8,\frac{8}{9}\right)\)、\(\left(7,\frac{7}{9}\right)\)、\(\left(6,\frac{2}{3}\right)\).
+
+要在 \(k=6\) 时输出，需使前三次判断为真而第四次为假. 对形式 \(s>r\) 的选项，这要求
+\(\frac{7}{9}>r\geqslant\frac{2}{3}\). 四个选项中只有 \(r=\frac{7}{10}\) 满足，故选 C.
+\end{solution}
+
 \begin{problem}
 已知命题 \(p\)：对任意 \(x \in \R\)，总有 \(2^x > 0\)； \(q\)： \(x > 1\) 是“\(x > 2\)”的充分不必要条件. 则下列命题为真命题的是（\quad）
 
@@ -87,6 +114,12 @@ C
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+命题 \(p\) 对任意实数 \(x\) 都成立，因为指数函数值恒为正，所以 \(p\) 为真命题. 命题 \(q\) 为假命题：\(x>1\) 不能推出 \(x>2\)，但 \(x>2\) 能推出 \(x>1\)，因此它是必要不充分条件.
+
+于是 \(\neg p\) 为假命题，\(\neg q\) 为真命题，只有 \(p\wedge\neg q\) 为真，故选 D.
+\end{solution}
 
 \begin{problem}
 某几何体的三视图如图所示，则该几何体的表面积为（\quad）
@@ -104,8 +137,20 @@ D
 B
 \end{answer}
 
+\begin{solution}
+由三视图可知，底面是直角三角形，三边长为 \(3\)、\(4\)、\(5\)；上表面是一个斜面，沿长度为 \(4\) 的方向高度从 \(5\) 降到 \(2\)，另一条底边长为 \(3\).
+
+底面的面积为 \(\frac{1}{2}\times3\times4=6\). 正视图对应的侧面为梯形，面积为 \(\frac{5+2}{2}\times4=14\)；左侧面为矩形，面积为 \(3\times5=15\). 斜边对应的侧面为梯形，其两条平行边长为 \(5,2\)，间距为底面斜边长 \(5\)，面积为 \(\frac{5+2}{2}\times5=\frac{35}{2}\).
+
+斜面在水平面的投影为底面直角三角形，且斜面沿长度为 \(4\) 的方向的高差为 \(3\)，所以斜面与水平面对应的长度比为 \(\frac{5}{4}\)，斜面面积为 \(6\times\frac{5}{4}=\frac{15}{2}\). 故几何体的表面积为
+\[
+6+14+15+\frac{35}{2}+\frac{15}{2}=60
+\]
+故选 B.
+\end{solution}
+
 \begin{problem}
-设 \(F_{1}\)，\(F_{2}\) 分别为双曲线 \(\frac{x^{2}}{a^{2}} - \frac{y^{2}}{b^{2}} = 1\)（\(a > 0, b > 0\)）的左，右焦点，双曲线上存在一点 \(P\) 使得 \(\left|PF_{1}\right| + \left|PF_{2}\right| = 3b\)，\(\left|PF_{1}\right| \cdot \left|PF_{2}\right| = \frac{9}{4} ab\)，则该双曲线的离心率为（\quad）
+设 \(F_{1}\)，\(F_{2}\) 分别为双曲线 \(\frac{x^{2}}{a^{2}} - \frac{y^{2}}{b^{2}} = 1\)（\(a > 0\)，\(b > 0\)）的左，右焦点，双曲线上存在一点 \(P\) 使得 \(\left|PF_{1}\right| + \left|PF_{2}\right| = 3b\)，\(\left|PF_{1}\right| \cdot \left|PF_{2}\right| = \frac{9}{4} ab\)，则该双曲线的离心率为（\quad）
 
 \choices
     {\( \frac{4}{3} \)}
@@ -117,6 +162,20 @@ B
 \begin{answer}
 B
 \end{answer}
+
+\begin{solution}
+设 \(m=|PF_{1}|\)，\(n=|PF_{2}|\). 双曲线的焦距为 \(2c\)，故
+\(|m-n|=2a\)，\(m+n=3b\)，\(mn=\frac{9}{4}ab\).
+平方相减得
+\[
+4a^{2}=(m+n)^{2}-4mn=9b^{2}-9ab
+\]
+令 \(t=\frac{b}{a}>0\)，则 \(9t^{2}-9t-4=0\)，所以 \(t=\frac{4}{3}\). 又 \(c^{2}=a^{2}+b^{2}\)，双曲线的离心率为
+\[
+e=\frac{c}{a}=\sqrt{1+\frac{b^{2}}{a^{2}}}=\sqrt{1+\frac{16}{9}}=\frac{5}{3}
+\]
+故选 B.
+\end{solution}
 
 \begin{problem}
 某次联欢会要安排 3 个歌舞类节目，2 个小品类节目和 1 个相声类节目的演出顺序，则同类节目不相邻的排法种数是（\quad）
@@ -132,6 +191,17 @@ B
 B
 \end{answer}
 
+\begin{solution}
+只按类别排列时，记歌舞、小品、相声三类分别为 \(G\)，\(P\)，\(X\). 枚举三个 \(G\) 互不相邻的位置，得到四种位置组：
+\(\{1,3,5\}\)、\(\{1,3,6\}\)、\(\{1,4,6\}\)、\(\{2,4,6\}\).
+
+对于第一、四种位置组，余下三个位置中小品类不相邻，有 \(3\) 种放置 \(P\)，\(P\)，\(X\) 的方法；对于第二、三种位置组，小品类不相邻，有 \(2\) 种. 因此类别排列共有 \(3+2+2+3=10\) 种. 三类节目各自又可分别排列，故总数为
+\[
+10\times3!\times2!\times1!=120
+\]
+故选 B.
+\end{solution}
+
 \begin{problem}
 已知 \(\triangle ABC\) 的内角 \(A\)，\(B\)，\(C\) 满足 \(\sin 2A + \sin (A - B + C) = \sin (C - A - B) + \frac{1}{2}\)，面积 \(S\) 满足 \(1 \leqslant S \leqslant 2\)，记 \(a\)，\(b\)，\(c\) 分别为 \(A\)，\(B\)，\(C\) 所对的边，则下列不等式一定成立的是（\quad）
 
@@ -146,6 +216,26 @@ B
 A
 \end{answer}
 
+\begin{solution}
+由三角形内角和 \(A+B+C=\pi\)，有
+\(\sin(A-B+C)=\sin(\pi-2B)=\sin2B\)，\(\sin(C-A-B)=\sin(2C-\pi)=-\sin2C\).
+原条件化为 \(\sin2A+\sin2B+\sin2C=\frac{1}{2}\). 利用恒等式
+\(\sin2A+\sin2B+\sin2C=4\sin A\sin B\sin C\)，得
+\[
+\sin A\sin B\sin C=\frac{1}{8}
+\]
+设外接圆半径为 \(R\)，由正弦定理和面积公式，
+\(S=2R^{2}\sin A\sin B\sin C=\frac{R^{2}}{4}\)，\(abc=8R^{3}\sin A\sin B\sin C=R^{3}\).
+因 \(1\leqslant S\leqslant2\)，所以 \(R\geqslant2\)，从而 \(abc\geqslant8\). 又由三角形不等式 \(b+c>a\)，有
+\[
+bc(b+c)>abc\geqslant8
+\]
+因此 A 项一定成立.
+
+为说明其余选项不是必然成立，固定一组满足 \(A=\frac{\pi}{2}\)、\(\sin B\cos B=\frac18\) 的角，再取 \(R=2\) 或 \(R=2\sqrt2\)，均有 \(1\leqslant S\leqslant2\)，而 \(abc=R^{3}\) 分别为 \(8\) 和 \(16\sqrt2\)，故 C、D 不会恒成立. 取 \(R=2\) 且取较小的 \(B\)，由 \(\sin^{2}B=\frac{4-\sqrt{15}}{8}<\frac{1}{32}\) 可得 \(a=4\)、\(b=4\sin B\)，于是
+\(ab(a+b)=64\sin B(1+\sin B)<8\sqrt2+2<16\sqrt2\)，故 B 也不是必然成立. 选 A.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -156,6 +246,13 @@ A
 \(\{7, 9\}\)
 \end{answer}
 
+\begin{solution}
+全集中的元素为 \(1\)，\(2\)，\(\ldots\)，\(10\)，所以 \(\complement_U A=\{4,6,7,9,10\}\). 与 \(B=\{1,3,5,7,9\}\) 取交集，得到
+\[
+(\complement_U A)\cap B=\{7,9\}
+\]
+\end{solution}
+
 \begin{problem}
 函数 \( f(x) = \log_{2}\sqrt{x} \cdot \log_{\sqrt{2}}(2x) \) 的最小值为\fillinblank{}.
 \end{problem}
@@ -163,6 +260,18 @@ A
 \begin{answer}
 \(-\dfrac{1}{4}\)
 \end{answer}
+
+\begin{solution}
+定义域为 \(x>0\). 令 \(t=\log_{2}\sqrt{x}\)，则 \(t\) 可取任意实数，且 \(\log_{2}x=2t\). 因此
+\[
+\log_{\sqrt{2}}(2x)=\frac{\log_{2}(2x)}{\log_{2}\sqrt{2}}=\frac{1+2t}{1/2}=2+4t
+\]
+从而
+\[
+f(x)=t(2+4t)=4t^{2}+2t=4\left(t+\frac{1}{4}\right)^{2}-\frac{1}{4}\geqslant-\frac{1}{4}
+\]
+当 \(t=-\frac14\)，即 \(x=2^{-1/2}>0\) 时取等号，所以最小值为 \(-\frac14\).
+\end{solution}
 
 \begin{problem}
 已知直线 \(ax + y - 2 = 0\) 与圆心为 \(C\) 的圆 \((x - 1)^2 + (y - a)^2 = 4\) 相交于 \(A\)，\(B\) 两点，且 \(\triangle ABC\) 为等边三角形，则实数 \(a = \)\fillinblank{}.
@@ -172,6 +281,17 @@ A
 \(4 \pm \sqrt{15}\)
 \end{answer}
 
+\begin{solution}
+圆的半径为 \(2\). 因 \(\triangle ABC\) 为以 \(C\) 为圆心的等边三角形，弦 \(AB\) 长为 \(2\)，圆心到直线 \(AB\) 的距离为
+\(2\cos\frac{\pi}{6}=\sqrt3\). 圆心为 \(C=(1,a)\)，故点 \(C\) 到直线 \(ax+y-2=0\) 的距离满足
+\[
+\frac{|a+a-2|}{\sqrt{a^{2}+1}}=\sqrt3
+\]
+平方并整理得
+\(4(a-1)^{2}=3(a^{2}+1)\)，\(a^{2}-8a+1=0\).
+所以 \(a=4\pm\sqrt{15}\). 这两个值均使圆心到直线的距离为 \(\sqrt3<2\)，确有长度为 \(2\) 的弦，故均符合条件.
+\end{solution}
+
 \begin{problem}
 过圆外一点 \(P\) 作圆的切线 \(PA\)（\(A\) 为切点），再作割线 \(PBC\) 依次交圆于 \(B\)，\(C\)，若 \(PA = 6\)，\(AC = 8\)，\(BC = 9\)，则 \(AB =\fillinblank{}\).
 \end{problem}
@@ -179,6 +299,18 @@ A
 \begin{answer}
 \(4\)
 \end{answer}
+
+\begin{solution}
+设 \(PB=x\)，则 \(PC=x+BC=x+9\). 由切割线定理，
+\(PA^{2}=PB\cdot PC\)，\(36=x(x+9)\).
+解得 \(x=3\) 或 \(x=-12\)，因长度为正，故 \(PB=3\)，\(PC=12\).
+
+由切线与弦所成的角等于弦所对的圆周角，\(\angle BAP=\angle ACP\)，又 \(\angle BPA=\angle CPA\)，所以 \(\triangle BAP\sim\triangle ACP\). 于是
+\[
+\frac{AB}{AC}=\frac{PA}{PC}=\frac{6}{12}
+\]
+从而 \(AB=8\times\frac12=4\).
+\end{solution}
 
 \begin{problem}
 已知直线 \(l\) 的参数方程为 \( \begin{cases}
@@ -191,6 +323,19 @@ y=3+t,
 \(\sqrt{5}\)
 \end{answer}
 
+\begin{solution}
+由参数方程，交点满足 \(x=2+t\)，\(y=3+t\). 在极坐标中 \(x=\rho\cos\theta\)，\(y=\rho\sin\theta\)，曲线方程化为
+\[
+\rho\frac{y^{2}}{\rho^{2}}-4\frac{x}{\rho}=0
+\]
+即 \(y^{2}=4x\). 代入直线参数方程，得
+\((3+t)^{2}=4(2+t)\)，\((t+1)^{2}=0\).
+因此公共点为 \((1,2)\)，其极径为
+\[
+\rho=\sqrt{1^{2}+2^{2}}=\sqrt5
+\]
+\end{solution}
+
 \begin{problem}
 若不等式 \( \left|2x-1\right|+\left|x+2\right|\geqslant a^{2}+\frac{1}{2}a+2 \) 对任意实数 \(x\) 恒成立，则实数 \(a\) 的取值范围是\fillinblank{}.
 \end{problem}
@@ -199,10 +344,25 @@ y=3+t,
 \(\left[-1, \dfrac{1}{2}\right]\)
 \end{answer}
 
+\begin{solution}
+按绝对值的零点 \(-2\)，\(\frac12\) 分段，有
+\[
+|2x-1|+|x+2|=
+\begin{cases}
+-3x-1,&x<-2,\\
+3-x,&-2\leqslant x\leqslant\frac12,\\
+3x+1,&x\geqslant\frac12.
+\end{cases}
+\]
+三段的最小值均不小于 \(\frac52\)，且在 \(x=\frac12\) 时取到，所以左边的最小值为 \(\frac52\). 原不等式对任意实数 \(x\) 恒成立，当且仅当
+\(a^{2}+\frac12a+2\leqslant\frac52\)，\(2a^{2}+a-1\leqslant0\).
+因 \(2a^{2}+a-1=(2a-1)(a+1)\)，故 \(-1\leqslant a\leqslant\frac12\).
+\end{solution}
+
 \section{解答题}
 
 \begin{problem}
-已知函数 \( f(x) = \sqrt{3}\sin (\omega x + \varphi) \)（\( \omega > 0, -\frac{\pi}{2} \leqslant \varphi < \frac{\pi}{2} \)）的图象关于直线 \( x = \frac{\pi}{3} \) 对称，且图象上相邻两个最高点的距离为 \( \pi \).
+已知函数 \( f(x) = \sqrt{3}\sin (\omega x + \varphi) \)（\(\omega > 0\)，\(-\frac{\pi}{2} \leqslant \varphi < \frac{\pi}{2}\)）的图象关于直线 \( x = \frac{\pi}{3} \) 对称，且图象上相邻两个最高点的距离为 \( \pi \).
 
 \begin{enumerate}
 \item 求 \( \omega \) 和 \( \varphi \) 的值；
@@ -213,23 +373,16 @@ y=3+t,
 \begin{solution}
 \begin{enumerate}
 \item 相邻两个最高点的横坐标相差一个周期，因此
-\[
-T=\frac{2\pi}{\omega}=\pi,\qquad \omega=2.
-\]
+\(T=\frac{2\pi}{\omega}=\pi\)，\(\omega=2\).
 图象关于直线 \(x=\dfrac{\pi}{3}\) 对称，故该直线经过图象的最高点或最低点，即
-\[
-2\cdot\frac{\pi}{3}+\varphi=\frac{\pi}{2}+k\pi\quad\left(k\in\Z\right).
-\]
+\(2\cdot\frac{\pi}{3}+\varphi=\frac{\pi}{2}+k\pi\)，\(\left(k\in\Z\right)\).
 由 \(-\dfrac{\pi}{2}\leqslant\varphi<\dfrac{\pi}{2}\)，得 \(k=0\)，从而 \(\varphi=-\dfrac{\pi}{6}\).
 
 \item 由 \(f\left(\dfrac{\alpha}{2}\right)=\dfrac{\sqrt{3}}{4}\)，得
-\[
-\sqrt{3}\sin\left(\alpha-\frac{\pi}{6}\right)=\frac{\sqrt{3}}{4},
-\qquad \sin\left(\alpha-\frac{\pi}{6}\right)=\frac{1}{4}.
-\]
+\(\sqrt{3}\sin\left(\alpha-\frac{\pi}{6}\right)=\frac{\sqrt{3}}{4}\)，\(\sin\left(\alpha-\frac{\pi}{6}\right)=\frac{1}{4}\).
 因为 \(\dfrac{\pi}{6}<\alpha<\dfrac{2\pi}{3}\)，所以 \(0<\alpha-\dfrac{\pi}{6}<\dfrac{\pi}{2}\)，从而
 \[
-\cos\left(\alpha-\frac{\pi}{6}\right)=\frac{\sqrt{15}}{4}.
+\cos\left(\alpha-\frac{\pi}{6}\right)=\frac{\sqrt{15}}{4}
 \]
 又 \(\cos\left(u+\dfrac{3\pi}{2}\right)=\sin u\)，所以
 \[
@@ -237,7 +390,7 @@ T=\frac{2\pi}{\omega}=\pi,\qquad \omega=2.
  =\sin\alpha
  =\sin\left(\alpha-\frac{\pi}{6}\right)\cos\frac{\pi}{6}
   +\cos\left(\alpha-\frac{\pi}{6}\right)\sin\frac{\pi}{6}
- =\frac{\sqrt{3}+\sqrt{15}}{8}.
+ =\frac{\sqrt{3}+\sqrt{15}}{8}
 \]
 \end{enumerate}
 \end{solution}
@@ -256,17 +409,17 @@ T=\frac{2\pi}{\omega}=\pi,\qquad \omega=2.
 \item 从 9 张卡片中任取 3 张，共有 \(\mathrm C_9^3=84\) 种取法. 3 张卡片上的数字完全相同的取法数为
 \(\mathrm C_4^3+\mathrm C_3^3+\mathrm C_2^3=4+1+0=5\)，所以所求概率为
 \[
-P=\frac{5}{84}.
+P=\frac{5}{84}
 \]
 
 \item 当 \(X=1\) 时，取到的数字组合为 \((1,1,1)\)、\((1,1,2)\)、\((1,1,3)\)，对应的取法数为
 \[
 \mathrm C_4^3+\mathrm C_4^2\mathrm C_3^1+\mathrm C_4^2\mathrm C_2^1
- =4+18+12=34.
+ =4+18+12=34
 \]
 当 \(X=3\) 时，取到的数字组合为 \((1,3,3)\)、\((2,3,3)\)，对应的取法数为
 \[
-\mathrm C_4^1\mathrm C_2^2+\mathrm C_3^1\mathrm C_2^2=4+3=7.
+\mathrm C_4^1\mathrm C_2^2+\mathrm C_3^1\mathrm C_2^2=4+3=7
 \]
 因此 \(X=2\) 的取法数为 \(84-34-7=43\)，故 \(X\) 的分布列为
 
@@ -281,7 +434,7 @@ P=\frac{5}{84}.
 所以
 \[
 E(X)=1\cdot\frac{34}{84}+2\cdot\frac{43}{84}+3\cdot\frac{7}{84}
- =\frac{47}{28}.
+ =\frac{47}{28}
 \]
 \end{enumerate}
 \end{solution}
@@ -304,50 +457,39 @@ E(X)=1\cdot\frac{34}{84}+2\cdot\frac{43}{84}+3\cdot\frac{7}{84}
 由 \(M\in BC\)，且 \(BM=\dfrac{1}{2}=\dfrac{1}{4}BC\)，得
 \[
 M=B+\frac{1}{4}\overrightarrow{BC}
- =\left(\frac{9}{4},\frac{\sqrt{3}}{4},0\right).
+ =\left(\frac{9}{4},\frac{\sqrt{3}}{4},0\right)
 \]
 
 \begin{enumerate}
 \item 设 \(P=\left(\dfrac{3}{2},\dfrac{\sqrt{3}}{2},h\right)\)，则 \(PO=h\). 由 \(MP\perp AP\)，有
-\[
-\overrightarrow{MP}=\left(-\frac{3}{4},\frac{\sqrt{3}}{4},h\right),\qquad
-\overrightarrow{AP}=\left(\frac{3}{2},\frac{\sqrt{3}}{2},h\right),
-\]
+\(\overrightarrow{MP}=\left(-\frac{3}{4},\frac{\sqrt{3}}{4},h\right)\)，\(\overrightarrow{AP}=\left(\frac{3}{2},\frac{\sqrt{3}}{2},h\right)\)
 \[
 \overrightarrow{MP}\cdot\overrightarrow{AP}
- =-\frac{9}{8}+\frac{3}{8}+h^2=0.
+ =-\frac{9}{8}+\frac{3}{8}+h^2=0
 \]
 所以 \(h^2=\dfrac{3}{4}\)，从而
 \[
-PO=\frac{\sqrt{3}}{2}.
+PO=\frac{\sqrt{3}}{2}
 \]
 
 \item 取平面 \(APM\) 和平面 \(CPM\) 的法向量分别为
 \[
 \bs{n}_1=\overrightarrow{MP}\times\overrightarrow{MA}
- =\left(\frac{3}{8},-\frac{9\sqrt{3}}{8},\frac{3\sqrt{3}}{4}\right),
+ =\left(\frac{3}{8},-\frac{9\sqrt{3}}{8},\frac{3\sqrt{3}}{4}\right)
 \]
 \[
 \bs{n}_2=\overrightarrow{MP}\times\overrightarrow{MC}
- =\left(-\frac{9}{8},\frac{3\sqrt{3}}{8},-\frac{3\sqrt{3}}{4}\right).
+ =\left(-\frac{9}{8},\frac{3\sqrt{3}}{8},-\frac{3\sqrt{3}}{4}\right)
 \]
 计算得
-\[
-|\bs{n}_1|^2=\frac{45}{8},\qquad |\bs{n}_2|^2=\frac{27}{8},
-\qquad \bs{n}_1\cdot\bs{n}_2=-\frac{27}{8}.
-\]
+\(|\bs{n}_1|^2=\frac{45}{8}\)，\(|\bs{n}_2|^2=\frac{27}{8}\)，\(\bs{n}_1\cdot\bs{n}_2=-\frac{27}{8}\).
 设二面角 \(A-PM-C\) 为 \(\theta\)，则其正弦值与两法向量夹角的正弦值相同，故
-\[
-\cos\theta=\frac{|\bs{n}_1\cdot\bs{n}_2|}{|\bs{n}_1||\bs{n}_2|}
- =\frac{\sqrt{15}}{5},
-\qquad
-\sin\theta=\sqrt{1-\frac{15}{25}}=\frac{\sqrt{10}}{5}.
-\]
+\(\cos\theta=\frac{|\bs{n}_1\cdot\bs{n}_2|}{|\bs{n}_1||\bs{n}_2|} =\frac{\sqrt{15}}{5}\)，\(\sin\theta=\sqrt{1-\frac{15}{25}}=\frac{\sqrt{10}}{5}\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-已知函数 \( f(x) = a\e^{2x} - b\e^{-2x} - cx \) （\(a,b,c \in \R\)） 的导函数 \( f'(x) \) 为偶函数，且曲线 \( y = f(x) \) 在点 \(\left(0, f(0)\right)\) 处的切线的斜率为 \(4-c\).
+已知函数 \( f(x) = a\e^{2x} - b\e^{-2x} - cx \) （\(a\)，\(b\)，\(c \in \R\)） 的导函数 \( f'(x) \) 为偶函数，且曲线 \( y = f(x) \) 在点 \(\left(0, f(0)\right)\) 处的切线的斜率为 \(4-c\).
 
 \begin{enumerate}
 \item 确定 \(a\)， \(b\) 的值；
@@ -360,15 +502,15 @@ PO=\frac{\sqrt{3}}{2}.
 \begin{enumerate}
 \item
 \[
-f'(x)=2a\e^{2x}+2b\e^{-2x}-c.
+f'(x)=2a\e^{2x}+2b\e^{-2x}-c
 \]
 由 \(f'(x)\) 为偶函数，得
 \[
-f'(x)-f'(-x)=2(a-b)\left(\e^{2x}-\e^{-2x}\right)=0.
+f'(x)-f'(-x)=2(a-b)\left(\e^{2x}-\e^{-2x}\right)=0
 \]
 对任意 \(x\) 恒成立，只能有 \(a=b\). 又切线斜率为
 \[
-f'(0)=2a+2b-c=4a-c=4-c,
+f'(0)=2a+2b-c=4a-c=4-c
 \]
 所以 \(a=b=1\).
 
@@ -377,7 +519,7 @@ f'(0)=2a+2b-c=4a-c=4-c,
 
 \item 此时
 \[
-f'(x)=2\left(\e^{2x}+\e^{-2x}\right)-c=4\cosh 2x-c.
+f'(x)=2\left(\e^{2x}+\e^{-2x}\right)-c=4\cosh 2x-c
 \]
 若 \(c\leqslant4\)，则 \(f'(x)\geqslant4-c\geqslant0\)，且当 \(c=4\) 时仅在 \(x=0\) 处取零，导数不发生由正到负或由负到正的改变，故 \(f(x)\) 无极值.
 若 \(c>4\)，方程 \(f'(x)=0\) 等价于 \(\cosh 2x=\dfrac{c}{4}>1\)，有两个实根；此时 \(f'(x)\) 在两根外为正、两根之间为负，故 \(f(x)\) 有极大值和极小值.
@@ -400,52 +542,39 @@ f'(x)=2\left(\e^{2x}+\e^{-2x}\right)-c=4\cosh 2x-c.
 \begin{enumerate}
 \item 设椭圆半焦距为 \(c\)，则 \(F_1=(-c,0)\)，\(F_2=(c,0)\)，且
 \(c^2=a^2-b^2\). 由 \(DF_1\perp F_1F_2\)，可设 \(D=(-c,y_0)\)，于是
-\[
-|F_1F_2|=2c,\qquad |DF_1|=|y_0|.
-\]
+\(|F_1F_2|=2c\)，\(|DF_1|=|y_0|\).
 由已知比值得 \(|y_0|=\dfrac{c}{\sqrt{2}}\). 又
 \[
-\frac{1}{2}|F_1F_2|\cdot|y_0|=\frac{\sqrt{2}}{2},
+\frac{1}{2}|F_1F_2|\cdot|y_0|=\frac{\sqrt{2}}{2}
 \]
 所以 \(\dfrac{c^2}{\sqrt{2}}=\dfrac{\sqrt{2}}{2}\)，即 \(c^2=1\). 将 \(D\) 代入椭圆方程，得
-\[
-\frac{c^2}{a^2}+\frac{y_0^2}{b^2}=1,\qquad a^2-b^2=1,\qquad y_0^2=\frac{1}{2}.
-\]
+\(\frac{c^2}{a^2}+\frac{y_0^2}{b^2}=1\)，\(a^2-b^2=1\)，\(y_0^2=\frac{1}{2}\).
 令 \(b^2=u>0\)，则 \(a^2=u+1\)，从而
-\[
-\frac{1}{u+1}+\frac{1}{2u}=1,\qquad 2u^2-u-1=0.
-\]
+\(\frac{1}{u+1}+\frac{1}{2u}=1\)，\(2u^2-u-1=0\).
 因为 \(u>0\)，得 \(u=1\)，故 \(a^2=2\)，椭圆的标准方程为
 \[
-\frac{x^2}{2}+y^2=1.
+\frac{x^2}{2}+y^2=1
 \]
 
 \item 设圆心为 \(Q=(0,k)\)，圆与椭圆在 \(x\) 轴上方的两个交点关于 \(y\) 轴对称，记为 \(T_+=(u,v)\)，\(T_-=(-u,v)\)，其中 \(u>0\)，\(v>0\). 由于两条切线分别过不同焦点，交换两交点的记号后，可设 \(T_+\) 处的切线过 \(F_2=(1,0)\)，\(T_-\) 处的切线过 \(F_1=(-1,0)\).
-\[
-\overrightarrow{QT_+}=(u,v-k),\qquad \overrightarrow{F_2T_+}=(1-u,-v).
-\]
+\(\overrightarrow{QT_+}=(u,v-k)\)，\(\overrightarrow{F_2T_+}=(1-u,-v)\).
 切线与半径垂直，故
-\[
-u(1-u)-v(v-k)=0,\qquad kv=u^2+v^2-u.
-\]
+\(u(1-u)-v(v-k)=0\)，\(kv=u^2+v^2-u\).
 两条切线互相垂直，等价于两条对应半径互相垂直，于是
-\[
-\overrightarrow{QT_+}\cdot\overrightarrow{QT_-}
- =-u^2+(v-k)^2=0,\qquad k-v=\pm u.
-\]
+\(\overrightarrow{QT_+}\cdot\overrightarrow{QT_-} =-u^2+(v-k)^2=0\)，\(k-v=\pm u\).
 若 \(k=v+u\)，由切线条件得 \(v=u-1\)；若 \(k=v-u\)，由切线条件得 \(v=1-u\). 两种情形都代入椭圆方程
 \[
-\frac{u^2}{2}+v^2=1.
+\frac{u^2}{2}+v^2=1
 \]
 第一种情形给出 \(u=\dfrac{4}{3}\)，\(v=\dfrac{1}{3}\)；第二种情形给出 \(u=\dfrac{4}{3}\)，\(v=-\dfrac{1}{3}\)，与 \(v>0\) 矛盾. 因此
 \[
-Q=\left(0,v+u\right)=\left(0,\frac{5}{3}\right).
+Q=\left(0,v+u\right)=\left(0,\frac{5}{3}\right)
 \]
 圆的半径为
 \[
 r=|QT_+|=\sqrt{u^2+(v-k)^2}
  =\sqrt{\left(\frac{4}{3}\right)^2+\left(-\frac{4}{3}\right)^2}
- =\frac{4\sqrt{2}}{3}.
+ =\frac{4\sqrt{2}}{3}
 \]
 \end{enumerate}
 \end{solution}
@@ -462,36 +591,29 @@ r=|QT_+|=\sqrt{u^2+(v-k)^2}
 \begin{solution}
 \begin{enumerate}
 \item 当 \(b=1\) 时，
-\[
-a_2=\sqrt{1^2-2\cdot1+2}+1=2,
-\qquad a_3=\sqrt{2^2-2\cdot2+2}+1=1+\sqrt{2}.
-\]
+\(a_2=\sqrt{1^2-2\cdot1+2}+1=2\)，\(a_3=\sqrt{2^2-2\cdot2+2}+1=1+\sqrt{2}\).
 下面用数学归纳法证明 \(a_n=1+\sqrt{n-1}\). 当 \(n=1\) 时结论成立；若 \(a_n=1+\sqrt{n-1}\)，则
 \[
 a_{n+1}=\sqrt{a_n^2-2a_n+2}+1
  =\sqrt{(a_n-1)^2+1}+1
- =\sqrt{n}+1=1+\sqrt{(n+1)-1}.
+ =\sqrt{n}+1=1+\sqrt{(n+1)-1}
 \]
 故对一切 \(n\in\N^*\)，都有 \(a_n=1+\sqrt{n-1}\).
 
 \item 当 \(b=-1\) 时，记
-\[
-g(x)=\sqrt{(x-1)^2+1}-1,\qquad a_{n+1}=g(a_n).
-\]
+\(g(x)=\sqrt{(x-1)^2+1}-1\)，\(a_{n+1}=g(a_n)\).
 先算得 \(a_2=g(1)=0<\dfrac{1}{4}\). 对 \(0\leqslant x\leqslant1\)，有
 \[
-0\leqslant g(x)\leqslant\sqrt{2}-1<1,
+0\leqslant g(x)\leqslant\sqrt{2}-1<1
 \]
 所以 \(a_n\in[0,1]\)（\(n\geqslant2\)），且 \(g(x)\) 在 \([0,1]\) 上严格递减. 另外
 \[
-g\left(\frac{1}{4}\right)=\sqrt{\left(-\frac{3}{4}\right)^2+1}-1=\frac{1}{4}.
+g\left(\frac{1}{4}\right)=\sqrt{\left(-\frac{3}{4}\right)^2+1}-1=\frac{1}{4}
 \]
 因此，若 \(a_{2n}<\dfrac{1}{4}\)，则由 \(g\) 的严格递减性，
 \(a_{2n+1}=g(a_{2n})>g\left(\dfrac{1}{4}\right)=\dfrac{1}{4}\)；再由同样的理由，
 \(a_{2n+2}=g(a_{2n+1})<\dfrac{1}{4}\). 结合 \(a_2<\dfrac{1}{4}\) 归纳可得
-\[
-a_{2n}<\frac{1}{4}<a_{2n+1}\qquad\left(n\in\N^*\right).
-\]
+\(a_{2n}<\frac{1}{4}<a_{2n+1}\)，\(\left(n\in\N^*\right)\).
 所以存在这样的实数，取 \(c=\dfrac{1}{4}\).
 \end{enumerate}
 \end{solution}

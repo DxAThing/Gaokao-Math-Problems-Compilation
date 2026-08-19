@@ -16,6 +16,11 @@
 C
 \end{answer}
 
+\begin{solution}
+由 \(x^{2}-2x=0\) 得 \(x(x-2)=0\)，所以 \(A=\{0,2\}\). 因此
+\(A\cap B=\{0,2\}\)，选择 C.
+\end{solution}
+
 \begin{problem}
 下列函数中，在区间 \((0, +\infty)\) 上为增函数的是（\quad）
 
@@ -29,6 +34,11 @@ C
 \begin{answer}
 A
 \end{answer}
+
+\begin{solution}
+在 \((0,+\infty)\) 上，函数 \(y=\sqrt{x+1}\) 的定义域满足要求，且 \(x+1\) 随 \(x\) 增大而增大，平方根函数在 \([0,+\infty)\) 上递增，所以它在该区间上递增.
+\(y=(x-1)^{2}\) 在 \((0,1)\) 上递减；\(y=2^{-x}\) 因底数 \(2>1\) 而递减；\(y=\log_{0.5}(x+1)\) 因底数 \(0.5\in(0,1)\) 而递减. 因此只有 A 符合.
+\end{solution}
 
 \begin{problem}
 曲线 \(\begin{cases}
@@ -47,21 +57,30 @@ y = 2 + \sin \theta.
 B
 \end{answer}
 
+\begin{solution}
+由参数方程得
+\((x+1)^{2}+(y-2)^{2}=\cos^{2}\theta+\sin^{2}\theta=1\)，故曲线是圆心为 \((-1,2)\) 的圆，其对称中心就是 \((-1,2)\). 代入四条直线，只有 \(2=-2\times(-1)\) 成立，所以选择 B.
+\end{solution}
+
 \begin{problem}
 当 \(m = 7\)，\(n = 3\) 时，执行如图所示的程序框图，输出的 \(S\) 值为（\quad）
 
 \bitmapfigure[width=0.42\linewidth]{img/2014/beijing_science/q4_fig1.png}
 
 \choices
-    {7}
-    {42}
-    {210}
-    {840}
+    {\(7\)}
+    {\(42\)}
+    {\(210\)}
+    {\(840\)}
 \end{problem}
 
 \begin{answer}
 C
 \end{answer}
+
+\begin{solution}
+初始时 \(k=7\)，\(S=1\)，判断条件为 \(k<7-3+1=5\). 第一次判断时 \(7<5\) 不成立，执行 \(S\leftarrow S\cdot k\)，得 \(S=7\)，再令 \(k\leftarrow k-1=6\). 随后同理依次乘以 \(6\) 和 \(5\)，得到 \(S=1\times7\times6\times5=210\)，此时 \(k=4<5\)，程序输出 \(210\)，所以选择 C.
+\end{solution}
 
 \begin{problem}
 设 \(\{a_{n}\}\) 是公比为 \(q\) 的等比数列，则 \(q > 1\) 是“\(\{a_{n}\}\) 为递增数列”的（\quad）
@@ -76,6 +95,11 @@ C
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+若 \(q>1\) 且 \(a_{1}>0\)，则 \(a_{n+1}=qa_n>a_n\)，数列递增；但题目没有给出 \(a_{1}>0\)，例如 \(a_{1}=-1\)，\(q=2\) 时数列递减，所以 \(q>1\) 不是充分条件.
+另一方面，取 \(a_{1}=-1\)，\(q=\frac12\)，则 \(a_{n+1}=\frac12a_n>a_n\)，数列递增而 \(q\not>1\)，所以 \(q>1\) 也不是必要条件. 因此选择 D.
+\end{solution}
 
 \begin{problem}
 若 \(x\)，\(y\) 满足 \(\begin{cases}
@@ -95,6 +119,13 @@ y \geqslant 0,
 D
 \end{answer}
 
+\begin{solution}
+先说明 \(k=-\frac12\) 时确实满足条件. 此时约束为 \(y\geqslant2-x\)、\(y\leqslant2-\frac{x}{2}\)、\(y\geqslant0\). 结合 \(y\geqslant0\) 与 \(y\leqslant2-\frac{x}{2}\)，得 \(x\leqslant4\)，从而
+\(z=y-x\geqslant-x\geqslant-4\). 点 \((4,0)\) 满足三个约束，且 \(z=-4\)，所以最小值为 \(-4\).
+
+再证 \(k\) 唯一. 若 \(k\geqslant0\)，取 \(y=0\) 且任意 \(x>4\)，三个约束均可满足，\(z=-x<-4\). 若 \(-\frac12<k<0\)，则 \(-\frac2k>4\)，取 \(4<x<-\frac2k\)、\(y=0\)，也有 \(kx+2>0\)，因而 \(z=-x<-4\). 若 \(k<-\frac12\)，由 \(y\geqslant0\) 和 \(kx-y+2\geqslant0\) 得 \(x\leqslant-\frac2k<4\)，所以 \(z=y-x>-4\)，不可能以 \(-4\) 为最小值. 故 \(k=-\frac12\)，选择 D.
+\end{solution}
+
 \begin{problem}
 在空间直角坐标系 \(Oxyz\) 中，已知 \(A(2,0,0)\)，\(B(2,2,0)\)，\(C(0,2,0)\)，\(D(1,1,\sqrt{2})\)，若 \(S_{1}\)，\(S_{2}\)，\(S_{3}\) 分别表示三棱锥 \(D-ABC\) 在 \(xOy\)，\(yOz\)，\(zOx\) 坐标平面上的正投影图形的面积，则（\quad）
 
@@ -108,6 +139,13 @@ D
 \begin{answer}
 D
 \end{answer}
+
+\begin{solution}
+在 \(xOy\) 平面上的投影中，\(A\)，\(B\)，\(C\) 不变，\(D\) 投影为 \((1,1,0)\)，且该点在线段 \(AC\) 上，所以投影图形为三角形 \(ABC\)，其面积为
+\(S_{1}=\frac12\times2\times2=2\).
+
+在 \(yOz\) 平面上，\(A\)，\(B\)，\(C\)，\(D\) 的投影分别为 \((0,0)\)，\((2,0)\)，\((2,0)\)，\((1,\sqrt2)\)，故投影图形为底边长 \(2\)、高 \(\sqrt2\) 的三角形，\(S_{2}=\sqrt2\). 在 \(zOx\) 平面上，投影为 \((2,0)\)，\((2,0)\)，\((0,0)\)，\((1,\sqrt2)\)，同理 \(S_{3}=\sqrt2\). 因此 \(S_{2}=S_{3}\ne S_{1}\)，选择 D.
+\end{solution}
 
 \begin{problem}
 学生的语文，数学成绩均被评定为 \(3\text{ 个等级}\)，依次为“优秀”“合格”“不合格”. 若学生甲的语文，数学成绩都不低于学生乙，且其中至少有一门成绩高于乙，则称“学生甲比学生乙成绩好”. 如果一组学生中没有哪位学生比另一位学生成绩好，并且不存在语文成绩相同，数学成绩也相同的两位学生，则这一组学生最多有（\quad）
@@ -123,6 +161,12 @@ D
 B
 \end{answer}
 
+\begin{solution}
+把“优秀”“合格”“不合格”按成绩从高到低排列. 若两位学生语文成绩相同，则数学成绩较高者会比数学成绩较低者成绩好，所以在所给学生组中语文成绩不能相同；同理，数学成绩也不能相同. 因此人数至多为 \(3\).
+
+例如取三位学生的成绩分别为 \((\text{优秀},\text{不合格})\)、\((\text{合格},\text{合格})\)、\((\text{不合格},\text{优秀})\)，任意两位均有一门成绩较高、一门成绩较低，没有谁比另一位成绩好，故最多为 \(3\) 人，选择 B.
+\end{solution}
+
 \section{填空题}
 
 \begin{problem}
@@ -133,6 +177,15 @@ B
 \(-1\)
 \end{answer}
 
+\begin{solution}
+\[
+\left(\frac{1+\i}{1-\i}\right)^{2}
+=\left(\frac{(1+\i)^{2}}{(1-\i)(1+\i)}\right)^{2}
+=\left(\frac{2\i}{2}\right)^{2}
+=\i^{2}=-1
+\]
+\end{solution}
+
 \begin{problem}
 已知向量 \(\bs{a}\)，\(\bs{b}\) 满足 \(|\bs{a}| = 1\)，\(\bs{b} = (2, 1)\)，且 \(\lambda \bs{a} + \bs{b} = 0\)（\(\lambda \in \R\)），则 \(|\lambda| = \)\fillinblank{}.
 \end{problem}
@@ -140,6 +193,14 @@ B
 \begin{answer}
 \(\sqrt{5}\)
 \end{answer}
+
+\begin{solution}
+由 \(\lambda\bs{a}+\bs{b}=0\) 得 \(\lambda\bs{a}=-\bs{b}\). 两边取模，并利用 \(|\bs{a}|=1\)，有
+\[
+|\lambda|\,|\bs{a}|=|\bs{b}|=\sqrt{2^{2}+1^{2}}=\sqrt5
+\]
+所以 \(|\lambda|=\sqrt5\).
+\end{solution}
 
 \begin{problem}
 设双曲线 \(C\) 经过点 \((2,2)\)，且与 \(\frac{y^{2}}{4}-x^{2}=1\) 具有相同渐近线，则 \(C\) 的方程为\fillinblank{}；渐近线方程为\fillinblank{}.
@@ -149,6 +210,14 @@ B
 \(\frac{x^{2}}{3}-\frac{y^{2}}{12}=1\)；\(y=\pm2x\)
 \end{answer}
 
+\begin{solution}
+原双曲线可写为 \(\frac{y^{2}}{4}-x^{2}=1\)，其渐近线为 \(y=\pm2x\). 若所求双曲线的实轴在 \(y\) 轴上，则其方程可写为 \(\frac{y^{2}}{4a^{2}}-\frac{x^{2}}{a^{2}}=1\)，代入 \((2,2)\) 后左端为 \(-\frac{3}{a^{2}}<0\)，不可能等于 \(1\). 因此所求双曲线的实轴在 \(x\) 轴上，与这两条渐近线相同的标准方程为
+\[
+\frac{x^{2}}{a^{2}}-\frac{y^{2}}{4a^{2}}=1
+\]
+代入点 \((2,2)\)，得 \(\frac4{a^{2}}-\frac4{4a^{2}}=1\)，即 \(\frac3{a^{2}}=1\)，所以 \(a^{2}=3\). 因此双曲线方程为 \(\frac{x^{2}}3-\frac{y^{2}}{12}=1\)，渐近线方程为 \(y=\pm2x\).
+\end{solution}
+
 \begin{problem}
 若等差数列 \(\{a_{n}\}\) 满足 \(a_{7} + a_{8} + a_{9} > 0\)，\(a_{7} + a_{10} < 0\)，则当 \(n =\fillinblank{}\) 时，\(\{a_{n}\}\) 的前 \(n\) 项和最大.
 \end{problem}
@@ -156,6 +225,16 @@ B
 \begin{answer}
 \(8\)
 \end{answer}
+
+\begin{solution}
+设等差数列的公差为 \(d\). 由 \(a_{7}+a_{8}+a_{9}=3a_{8}>0\)，得 \(a_{8}>0\). 又
+\[
+a_{7}+a_{10}=(a_{8}-d)+(a_{8}+2d)=2a_{8}+d<0
+\]
+所以 \(d<-2a_{8}<0\)，从而 \(a_{9}=a_{8}+d<-a_{8}<0\).
+
+由于 \(d<0\)，数列递减，且 \(a_{8}>0\)，所以 \(a_{1}\)，\(a_{2}\)，\(\ldots\)，\(a_{8}\) 均为正数；又因 \(a_{9}<0\)，所以 \(a_{9}\)，\(a_{10}\)，\(\ldots\) 均为负数. 前 \(n\) 项和满足 \(S_{n}-S_{n-1}=a_{n}\)，故 \(S_{1}<S_{2}<\cdots<S_{8}\)，且 \(S_{8}>S_{9}>S_{10}>\cdots\). 因此前 \(n\) 项和最大时 \(n=8\).
+\end{solution}
 
 \begin{problem}
 把 \(5\text{ 件}\) 不同产品摆成一排，若产品 \(A\) 与产品 \(B\) 相邻，且产品 \(A\) 与产品 \(C\) 不相邻，则不同的摆法有\fillinblank{} 种.
@@ -165,13 +244,40 @@ B
 \(36\)
 \end{answer}
 
+\begin{solution}
+先只考虑产品 \(A\) 与 \(B\) 相邻. 把 \(A\)，\(B\) 看作一个整体，整体内部有 \(AB\)，\(BA\) 两种顺序，所以摆法数为 \(2\times4!=48\).
+
+其中 \(A\) 同时与 \(B\)，\(C\) 相邻时，\(A\) 不能在两端，只能在中间 \(3\) 个位置；对每个位置，\(B\)，\(C\) 在 \(A\) 两侧有 \(2\) 种排列，其余两件产品有 \(2!\) 种排列，共 \(3\times2\times2=12\) 种. 因此所求摆法数为 \(48-12=36\).
+\end{solution}
+
 \begin{problem}
-设函数 \( f(x) = A \sin (\omega x + \varphi) \) （\(A\)，\(\omega\)，\(\varphi\) 是常数，\( A > 0 \)，\(\omega > 0\)）.若 \( f(x) \) 在区间 \( \left[\frac{\pi}{6}, \frac{\pi}{2}\right] \) 上具有单调性，且 \( f\left(\frac{\pi}{2}\right) = f\left(\frac{2\pi}{3}\right) = -f\left(\frac{\pi}{6}\right) \)，则 \( f(x) \) 的最小正周期为\fillinblank{}.
+设函数 \( f(x) = A \sin (\omega x + \varphi) \) （\(A\)，\(\omega\)，\(\varphi\) 是常数，\( A > 0 \)，\(\omega > 0\)）. 若 \( f(x) \) 在区间 \( \left[\frac{\pi}{6}, \frac{\pi}{2}\right] \) 上具有单调性，且 \( f\left(\frac{\pi}{2}\right) = f\left(\frac{2\pi}{3}\right) = -f\left(\frac{\pi}{6}\right) \)，则 \( f(x) \) 的最小正周期为\fillinblank{}.
 \end{problem}
 
 \begin{answer}
 \(\pi\)
 \end{answer}
+
+\begin{solution}
+令 \(t=\frac{\omega\pi}{6}>0\)，\(u=\frac{\omega\pi}{6}+\varphi\). 题设等式化为
+\[
+\sin(u+2t)=\sin(u+3t)=-\sin u
+\]
+正弦函数在长度超过 \(\pi\) 的区间上不具有单调性，而相位区间的长度为 \(2t\)，故 \(2t\leqslant\pi\)，即 \(0<t\leqslant\frac{\pi}{2}\). 于是 \(\sin\frac t2>0\)，由前两个正弦相等得
+\[
+\cos\left(u+\frac{5t}{2}\right)=0
+\]
+又由 \(\sin(u+2t)=-\sin u\) 得
+\[
+2\sin(u+t)\cos t=0
+\]
+若 \(\cos t=0\)，由 \(0<t\leqslant\frac\pi2\) 得 \(t=\frac\pi2\). 此时前面的余弦条件给出 \(u=-\frac{3\pi}{4}+j\pi\)（\(j\in\Z\)），区间 \([u,u+\pi]\) 内含有极值点 \(j\pi-\frac\pi2\)，且该点两侧正弦函数的单调方向相反，与题设矛盾. 因此 \(\sin(u+t)=0\)，即存在 \(j\in\Z\) 使 \(u+t=j\pi\). 代入余弦条件得
+\[
+\cos\left(j\pi+\frac{3t}{2}\right)=0
+\]
+由此 \(t=\frac{(2r+1)\pi}{3}\)，其中 \(r\in\Z\).
+结合 \(0<t\leqslant\frac\pi2\) 和 \(t>0\)，可知 \(r=0\)，故 \(t=\frac\pi3\). 于是 \(\omega=2\)，所以 \(f(x)\) 的最小正周期为 \(\frac{2\pi}{\omega}=\pi\).
+\end{solution}
 
 \section{解答题}
 
@@ -188,8 +294,33 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item \(\sin \angle BAD=\frac{3\sqrt{3}}{14}\).
-\item \(BD=3\)，\(AC=7\).
+\item 取 \(B\) 为原点，令 \(BC\) 所在直线为 \(x\) 轴正向. 设 \(BD=x\)，则
+\(D=(x,0)\)，\(C=(x+2,0)\). 由 \(AB=8\)、\(\angle B=\frac{\pi}{3}\)，得
+\(A=(4,4\sqrt3)\). 于是
+\(\overrightarrow{DA}=(4-x,4\sqrt3)\)，\(\overrightarrow{DC}=(2,0)\).
+由 \(\cos\angle ADC=\frac17\)，有
+\[
+\frac{\overrightarrow{DA}\cdot\overrightarrow{DC}}
+{|\overrightarrow{DA}|\,|\overrightarrow{DC}|}
+=\frac{4-x}{\sqrt{(4-x)^2+48}}=\frac17
+\]
+因为右端为正，\(4-x>0\). 平方得 \(49(4-x)^2=(4-x)^2+48\)，即
+\((4-x)^2=1\)，从而 \(x=3\)，所以 \(BD=3\).
+
+此时
+\(\overrightarrow{AB}=(-4,-4\sqrt3)\)，\(\overrightarrow{AD}=(-1,-4\sqrt3)\).
+因此
+\[
+\sin\angle BAD
+=\frac{|\det(\overrightarrow{AB},\overrightarrow{AD})|}
+{|\overrightarrow{AB}|\,|\overrightarrow{AD}|}
+=\frac{|16\sqrt3-4\sqrt3|}{8\times7}
+=\frac{3\sqrt3}{14}
+\]
+\item 由上面得到 \(BD=3\)，所以 \(C=(5,0)\)，从而
+\[
+AC=\sqrt{(5-4)^2+(0-4\sqrt3)^2}=7
+\]
 \end{enumerate}
 \end{solution}
 
@@ -219,9 +350,17 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item \(\frac{1}{2}\).
-\item \(\frac{13}{25}\).
-\item \(E(X)=x\).
+\item 各场命中率依次为
+\(\frac{12}{22}\)，\(\frac{12}{15}\)，\(\frac{8}{12}\)，\(\frac{8}{23}\)，\(\frac{20}{24}\)，\(\frac{8}{18}\)，\(\frac{12}{13}\)，\(\frac{7}{21}\)，\(\frac{15}{18}\)，\(\frac{12}{25}\).
+其中超过 \(0.6\) 的是主场 2、主场 3、主场 5、客场 2、客场 4，共 \(5\) 场. 因此所求概率为 \(\frac5{10}=\frac12\).
+\item 主场命中率超过 \(0.6\) 的概率为 \(\frac35\)，不超过 \(0.6\) 的概率为 \(\frac25\)；客场相应两概率为 \(\frac25\)、\(\frac35\). 随机选择一个主场和一个客场时，恰有一场超过 \(0.6\) 的概率为
+\[
+\frac35\cdot\frac35+\frac25\cdot\frac25=\frac{13}{25}
+\]
+\item 设十场命中次数为 \(X_{1}\)，\(\ldots\)，\(X_{10}\). 随机等可能选择一场，所以
+\[
+E(X)=\frac{X_{1}+\cdots+X_{10}}{10}=x
+\]
 \end{enumerate}
 \end{solution}
 
@@ -238,8 +377,34 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item \(AB\parallel FG\).
-\item 直线 \(BC\) 与平面 \(ABF\) 所成的角为 \(\frac{\pi}{6}\)，\(PH=2\).
+\item 建立空间直角坐标系，使底面 \(AMDE\) 在 \(z=0\) 平面内，并取
+\(A=(0,0,0)\)，\(M=(2,0,0)\)，\(D=(2,2,0)\)，\(E=(0,2,0)\).
+因 \(B\)，\(C\) 分别为 \(AM\)，\(MD\) 的中点，有 \(B=(1,0,0)\)、\(C=(2,1,0)\). 设 \(P=(u,v,w)\)，其中 \(w\ne0\)，则
+\[
+F=\left(\frac u2,\frac{v+2}{2},\frac w2\right)
+\]
+平面 \(ABF\) 的方程可写为 \(wy-(v+2)z=0\). 直线 \(PD\) 上的点可写为
+\[
+(u+s(2-u),v+s(2-v),w(1-s))
+\]
+代入平面方程得
+\[
+w\{v+s(2-v)\}-(v+2)w(1-s)=0
+\]
+从而 \(s=\frac12\). 故 \(G\) 是 \(PD\) 的中点. 在三角形 \(PDE\) 中，\(F\)，\(G\) 分别是 \(PE\)，\(PD\) 的中点，所以 \(FG\parallel ED\). 正方形中 \(ED\parallel AM\)，且 \(A\)，\(B\) 在 \(AM\) 上，故 \(ED\parallel AB\)，于是 \(AB\parallel FG\).
+\item 由 \(PA\perp\) 平面 \(ABCDE\)，且底面为 \(z=0\)，可知 \(u=v=0\). 又 \(PA=AE=2\)，将 \(z\) 轴方向取向点 \(P\) 后可设 \(P=(0,0,2)\)，从而平面 \(ABF\) 的方程为 \(y-z=0\)，可取法向量 \(\bs{n}=(0,1,-1)\). 由 \(B=(1,0,0)\)、\(C=(2,1,0)\)，有 \(\overrightarrow{BC}=(1,1,0)\). 设直线 \(BC\) 与平面 \(ABF\) 所成的角为 \(\alpha\)，则
+\[
+\sin\alpha=\frac{|\overrightarrow{BC}\cdot\bs{n}|}
+{|\overrightarrow{BC}|\,|\bs{n}|}
+=\frac1{\sqrt2\cdot\sqrt2}=\frac12
+\]
+所以 \(\alpha=\frac{\pi}{6}\).
+
+直线 \(PC\) 上的点为 \((2t,t,2-2t)\). 令其在平面 \(ABF\) 上，即 \(t=2-2t\)，得交点参数 \(t=\frac23\). 又
+\(|PC|=\sqrt{2^{2}+1^{2}+(-2)^{2}}=3\)，因此
+\[
+PH=\frac23|PC|=2
+\]
 \end{enumerate}
 \end{solution}
 
@@ -254,8 +419,11 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item \(f(x)\leqslant0\).
-\item \(a\) 的最大值为 \(\frac{2}{\pi}\)，\(b\) 的最小值为 \(1\).
+\item \(f'(x)=\cos x-x\sin x-\cos x=-x\sin x\leqslant0\)（\(0\leqslant x\leqslant\frac\pi2\)），且在 \(0<x<\frac\pi2\) 时 \(f'(x)<0\). 所以 \(f(x)\) 在该区间上递减，并且对 \(x>0\) 有 \(f(x)<f(0)=0\)，从而 \(f(x)\leqslant0\).
+\item 令 \(g(x)=\frac{\sin x}{x}\)，则 \(g'(x)=\frac{x\cos x-\sin x}{x^{2}}=\frac{f(x)}{x^{2}}<0\)（\(0<x<\frac\pi2\)），
+所以 \(g(x)\) 在 \(\left(0,\frac\pi2\right)\) 上严格递减. 于是
+又 \(\displaystyle\lim_{x\to0^+}g(x)=1\)，\(\displaystyle\lim_{x\to(\pi/2)^-}g(x)=\frac2\pi\)，
+从而 \(\frac2\pi<\frac{\sin x}{x}<1\). 因此 \(a=\frac2\pi\) 时左侧严格不等式恒成立，且任何更大的 \(a\) 都不可能成立；\(b=1\) 时右侧严格不等式恒成立，且任何更小的 \(b\) 都不可能成立. 故 \(a\) 的最大值为 \(\frac2\pi\)，\(b\) 的最小值为 \(1\).
 \end{enumerate}
 \end{solution}
 
@@ -270,8 +438,35 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 椭圆 \(C\) 的离心率为 \(\frac{\sqrt{2}}{2}\).
-\item 直线 \(AB\) 与圆 \(x^{2}+y^{2}=2\) 相切.
+\item 椭圆方程化为
+\[
+\frac{x^{2}}4+\frac{y^{2}}2=1
+\]
+所以 \(a^{2}=4\)、\(b^{2}=2\)，焦半距满足 \(c^{2}=a^{2}-b^{2}=2\)，故离心率
+\(e=\frac ca=\frac{\sqrt2}{2}\).
+\item 设 \(A=(u,v)\)、\(B=(w,2)\). 由 \(A\) 在椭圆上，\(u^{2}+2v^{2}=4\). 若 \(u=0\)，则 \(v=\pm\sqrt2\)，而 \(OA\cdot OB=2v\ne0\)，与 \(OA\perp OB\) 矛盾，故 \(u\ne0\). 垂直条件给出
+\(uw+2v=0\)，\(w=-\frac{2v}{u}\).
+直线 \(AB\) 的方程为
+\[
+(2-v)x+(u-w)y+(wv-2u)=0
+\]
+代入 \(w=-\frac{2v}{u}\) 并乘以 \(u\)，得
+\[
+u(2-v)x+(u^{2}+2v)y-2(u^{2}+v^{2})=0
+\]
+利用 \(u^{2}+2v^{2}=4\)，记 \(s=u^{2}+v^{2}\)，则
+\[
+\bigl[u(2-v)\bigr]^{2}+(u^{2}+2v)^{2}
+=u^{4}+u^{2}v^{2}+4u^{2}+4v^{2}
+=s(u^{2}+4)=2s^{2}
+\]
+因此圆心 \(O\) 到直线 \(AB\) 的距离为
+\[
+\frac{2(u^{2}+v^{2})}
+{\sqrt{2(u^{2}+v^{2})^{2}}}
+=\sqrt2
+\]
+这正好等于圆 \(x^{2}+y^{2}=2\) 的半径，所以直线 \(AB\) 与该圆相切.
 \end{enumerate}
 \end{solution}
 
@@ -280,15 +475,47 @@ B
 
 \begin{enumerate}
 \item 对于数对序列 \(P\)：\((2,5)\)，\((4,1)\)，求 \(T_{1}(P)\)，\(T_{2}(P)\) 的值.
-\item 记 \(m\) 为 \(a\)，\(b\)，\(c\)，\(d\) 四个数中最小值，对于由两个数对 \((a, b)\)，\((c, d)\) 组成的数对序列 \(P\)：\((a, b)\)，\((c, d)\) 和 \(P'\)：\((c, d)\)，\((a, b)\).试分别对 \(m = a\) 和 \(m = d\) 时两种情况比较 \(T_{2}(P)\) 和 \(T_{2}(P')\) 的大小.
+\item 记 \(m\) 为 \(a\)，\(b\)，\(c\)，\(d\) 四个数中最小值，对于由两个数对 \((a, b)\)，\((c, d)\) 组成的数对序列 \(P\)：\((a, b)\)，\((c, d)\) 和 \(P'\)：\((c, d)\)，\((a, b)\). 试分别对 \(m = a\) 和 \(m = d\) 时两种情况比较 \(T_{2}(P)\) 和 \(T_{2}(P')\) 的大小.
 \item 在由 \(5\text{ 个数对}\) \((11,8)\)，\((5,2)\)，\((16,11)\)，\((11,11)\)，\((4,6)\) 组成的所有数对序列中，写出一个数对序列 \(P\) 使 \(T_{5}(P)\) 最小，并写出 \(T_{5}(P)\) 的值. （只需写出结论）
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item \(T_{1}(P)=7\)，\(T_{2}(P)=8\).
-\item 当 \(m=a\) 或 \(m=d\) 时，均有 \(T_{2}(P)\leqslant T_{2}(P')\).
-\item 例如 \(P\) 为数对序列 \((4,6)\)，\((11,11)\)，\((16,11)\)，\((11,8)\)，\((5,2)\)，此时 \(T_{5}(P)=52\).
+\item
+\(T_{1}(P)=2+5=7\)，\(T_{2}(P)=1+\max\{7,2+4\}=8\).
+\item 对 \(P=(a,b)\)，\((c,d)\)，有
+\[
+T_{2}(P)=d+\max\{a+b,a+c\}=a+d+\max\{b,c\}
+\]
+对 \(P'=(c,d)\)，\((a,b)\)，有
+\[
+T_{2}(P')=b+\max\{c+d,c+a\}=b+c+\max\{d,a\}
+\]
+当 \(m=a\) 时，\(a\leqslant d\)，所以
+\(T_{2}(P')=b+c+d\)，\(T_{2}(P')-T_{2}(P)=b+c-a-\max\{b,c\} =\min\{b,c\}-a\geqslant0\).
+当 \(m=d\) 时，\(d\leqslant a\)，所以
+\(T_{2}(P')=a+b+c\)，\(T_{2}(P')-T_{2}(P)=b+c-d-\max\{b,c\} =\min\{b,c\}-d\geqslant0\).
+故两种情况下均有 \(T_{2}(P)\leqslant T_{2}(P')\).
+\item 记 \(A_j=\sum_{i=1}^{j}a_i\)、\(B=\sum_{i=1}^{5}b_i\). 反复代入递推式可得
+\[
+T_{5}(P)=\max\{A_{1}+b_{1}+b_{2}+b_{3}+b_{4}+b_{5},
+A_{2}+b_{2}+b_{3}+b_{4}+b_{5},
+A_{3}+b_{3}+b_{4}+b_{5},
+A_{4}+b_{4}+b_{5},A_{5}+b_{5}\}
+\]
+因此
+\[
+T_{5}(P)=B+\max_{1\leqslant j\leqslant5}
+\left(A_j-\sum_{i=1}^{j-1}b_i\right)
+\]
+这里 \(B=8+2+11+11+6=38\). 取
+\(P=(4,6)\)，\((11,11)\)，\((16,11)\)，\((11,8)\)，\((5,2)\)
+相应括号内的五个数依次为
+\(4\)，\(11+(4-6)=9\)，\(16+(4-6)+(11-11)=14\)
+\(11+(4-6)+(11-11)+(16-11)=14\)，\(5+(4-6)+(11-11)+(16-11)+(11-8)=11\).
+故 \(T_{5}(P)=38+14=52\).
+
+还需证明这是最小值. 五个数对的 \(a-b\) 分别为 \(3\)，\(3\)，\(5\)，\(0\)，\(-2\). 无论排列如何，在数对 \((16,11)\) 出现之前，已出现数对的 \(a-b\) 之和至少为 \(-2\)，所以该数对对应的括号内数至少为 \(16-2=14\). 因此任意排列都有 \(T_{5}(P)\geqslant38+14=52\)，上述排列达到下界，故最小值为 \(52\).
 \end{enumerate}
 \end{solution}
