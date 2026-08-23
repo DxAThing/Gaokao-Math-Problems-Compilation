@@ -1,6 +1,8 @@
 # 高考数学题库
 
-`main` 是公开发布分支，只包含生成题目版和答案版 PDF 所需的 LaTeX 源文件、索引、题图、重绘图源和布局表。
+本代码库包含生成题目版和答案版 PDF 所需的 LaTeX 源文件、索引、题图、重绘图源和布局表。
+
+代码库不提供成品 PDF，需按以下说明自行编译。
 
 ## 构建
 
@@ -23,7 +25,3 @@ make pdf
 ```bash
 make clean
 ```
-
-原卷 PDF、来源记录、审核工具和队列状态保存在独立私有仓库
-[`DxAThing/Gaokao-Math-Develop`](https://github.com/DxAThing/Gaokao-Math-Develop)，
-不会推送到公开仓库。
