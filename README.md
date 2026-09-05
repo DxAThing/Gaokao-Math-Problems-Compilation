@@ -14,7 +14,7 @@
 
 除另有注明的第三方内容外，本仓库中由本项目整理、编写和制作的内容采用 **Creative Commons Attribution-ShareAlike 4.0 International（CC BY-SA 4.0）** 协议发布：
 
-https://creativecommons.org/licenses/by-sa/4.0/
+<https://creativecommons.org/licenses/by-sa/4.0/>
 
 这意味着你可以复制、转载、分发、修改和再创作本仓库中的受许可内容，也可以将其用于商业用途，但必须遵守以下要求：
 
@@ -34,12 +34,13 @@ https://creativecommons.org/licenses/by-sa/4.0/
 
 - TeX Live（含 XeLaTeX、latexmk 及 `styles.tex` 引用的宏包）
 - `SimSun`、`SimHei`、`KaiTi`、`Times New Roman` 字体
+- `STIX` 字体（用于希腊字母字体）
+
+生成：
 
 ```bash
 make pdf
 ```
-
-生成：
 
 - `Compilation.pdf`
 - `Compilation-answer.pdf`
