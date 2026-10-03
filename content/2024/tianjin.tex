@@ -684,7 +684,7 @@ b_{n-1}=b_{a_k}+(a_{k+1}-a_k-1)\cdot 2k =k+2k(2^{k-1}-1) =k(2^k-1)
 \begin{enumerate}
     \item 求 \(f(x)\) 图象上点 \((1,f(1))\) 处的切线方程；
     \item 若 \(f(x)\ge a(x-\sqrt{x})\) 在 \(x\in(0,+\infty)\) 时恒成立，求 \(a\) 的值；
-    \item 若 \(x_1\)，\(x_2\in(0,1)\)，证明 \(|f(x_1)-f(x_2)|\le |x_1-x_2|^{1/2}\).
+    \item 若 \(x_1\)，\(x_2\in(0,1)\)，证明 \(|f(x_1)-f(x_2)|\le |x_1-x_2|^{\frac{1}{2}}\).
 \end{enumerate}
 \end{problem}
 
@@ -725,7 +725,7 @@ b_{n-1}=b_{a_k}+(a_{k+1}-a_k-1)\cdot 2k =k+2k(2^{k-1}-1) =k(2^k-1)
 \(t=\sqrt{\frac{2}{a}}\)，
 则
 \[
-0\le a\sqrt{\frac{2}{a}}+\frac{2}{\sqrt{2/a}}-a-2=2\sqrt{2a}-a-2=-\left(\sqrt{a}-\sqrt{2}\right)^2
+0\le a\sqrt{\frac{2}{a}}+\frac{2}{\sqrt{\frac{2}{a}}}-a-2=2\sqrt{2a}-a-2=-\left(\sqrt{a}-\sqrt{2}\right)^2
 \]
 故只能有
 \(a=2\).
@@ -741,28 +741,28 @@ b_{n-1}=b_{a_k}+(a_{k+1}-a_k-1)\cdot 2k =k+2k(2^{k-1}-1) =k(2^k-1)
 在 \((0,1)\) 上单调递增，所以由拉格朗日中值定理可得上式成立.
 又由
 \(f'(x)=\ln x+1\)
-知 \(f(x)\) 在 \(\left(0,\frac1e\right]\) 上递减，在 \(\left[\frac1e,+\infty\right)\) 上递增.
+知 \(f(x)\) 在 \(\left(0,\frac1\e\right]\) 上递减，在 \(\left[\frac1\e,+\infty\right)\) 上递增.
 不妨设 \(0<x_1\le x_2<1\).
 
 若
-\(\frac1e\le x_1\le x_2<1\)，
+\(\frac1\e\le x_1\le x_2<1\)，
 则 \(f(x)\) 在该区间上单调递增，所以
 \[
 |f(x_1)-f(x_2)| =f(x_2)-f(x_1) <(\ln x_2+1)(x_2-x_1) <x_2-x_1 <\sqrt{x_2-x_1}
 \]
 
 若
-\(0<x_1\le x_2\le \frac1e\)，
+\(0<x_1\le x_2\le \frac1\e\)，
 则 \(f(x)\) 在该区间上单调递减，所以
 \(|f(x_1)-f(x_2)| =f(x_1)-f(x_2) =x_1\ln x_1-x_2\ln x_2\).
-对任意 \(c\in \left(0,\frac1e\right]\)，设
+对任意 \(c\in \left(0,\frac1\e\right]\)，设
 \(\varphi(x)=x\ln x-c\ln c-\sqrt{c-x}\)（\(0<x\le c\)）.
 则
-\(\varphi''(x)=\frac{1}{x}+\frac{1}{4(c-x)^{3/2}}>0\)，
+\(\varphi''(x)=\frac{1}{x}+\frac{1}{4(c-x)^{\frac{3}{2}}}>0\)，
 所以 \(\varphi(x)\) 在 \((0,c)\) 上是凸函数.
 又
 \(\varphi(c)=0\).
-设 \(u=\sqrt{c}\)，则 \(0<u\le \e^{-1/2}\)，并且
+设 \(u=\sqrt{c}\)，则 \(0<u\le \e^{-\frac{1}{2}}\)，并且
 \[
 -c\ln c=-2u^2\ln u=2u(-u\ln u)\le \frac{2u}{\e}<u=\sqrt{c}
 \]
@@ -776,15 +776,15 @@ b_{n-1}=b_{a_k}+(a_{k+1}-a_k-1)\cdot 2k =k+2k(2^{k-1}-1) =k(2^k-1)
 \(|f(x_1)-f(x_2)| =f(x_1)-f(x_2) \le \sqrt{x_2-x_1}\).
 
 若
-\(0<x_1\le \frac1e\le x_2<1\)，
-则由前两种情形，分别作用于区间 \(\left[x_1,\frac1e\right]\) 与 \(\left[\frac1e,x_2\right]\)，可得
-\(f(x_1)-f\left(\frac1e\right)\le \sqrt{\frac1e-x_1}\le \sqrt{x_2-x_1}\)，
-\(f(x_2)-f\left(\frac1e\right)\le \sqrt{x_2-\frac1e}\le \sqrt{x_2-x_1}\).
-又因为 \(f\left(\frac1e\right)\) 是 \(f(x)\) 在 \((0,1)\) 上的最小值，所以
-\(|f(x_1)-f(x_2)| \le \max\left\{f(x_1)-f\left(\frac1e\right),\,f(x_2)-f\left(\frac1e\right)\right\}\).
+\(0<x_1\le \frac1\e\le x_2<1\)，
+则由前两种情形，分别作用于区间 \(\left[x_1,\frac1\e\right]\) 与 \(\left[\frac1\e,x_2\right]\)，可得
+\(f(x_1)-f\left(\frac1\e\right)\le \sqrt{\frac1\e-x_1}\le \sqrt{x_2-x_1}\)，
+\(f(x_2)-f\left(\frac1\e\right)\le \sqrt{x_2-\frac1\e}\le \sqrt{x_2-x_1}\).
+又因为 \(f\left(\frac1\e\right)\) 是 \(f(x)\) 在 \((0,1)\) 上的最小值，所以
+\(|f(x_1)-f(x_2)| \le \max\left\{f(x_1)-f\left(\frac1\e\right),\,f(x_2)-f\left(\frac1\e\right)\right\}\).
 因此
 \(|f(x_1)-f(x_2)|\le \sqrt{x_2-x_1}\).
 综上，
-\(|f(x_1)-f(x_2)|\le |x_1-x_2|^{1/2}\).
+\(|f(x_1)-f(x_2)|\le |x_1-x_2|^{\frac{1}{2}}\).
 \end{enumerate}
 \end{solution}

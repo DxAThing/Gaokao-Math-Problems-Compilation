@@ -136,7 +136,7 @@ A
 \end{problem}
 
 \begin{problem}
-设 \(a\ne 0\)，若 \(x=a\) 为函数 \(f(x)=a(x-a)^2(x-b)\) 的极大值点，则
+设 \(a\ne 0\)，若 \(x=a\) 为函数 \(f(x)=a(x-a)^2(x-b)\) 的极大值点，则（\quad）
 
 \choices
     {\(a<b\)}
@@ -234,17 +234,33 @@ B
 \begin{enumerate}
 \item 求 \(x\)，\(y\)，\(s_1^2\)，\(s_2^2\)；
 
-\item 判断新设备生产产品的该项指标的均值较旧设备是否有显著提高（如果 \(\dfrac{y-x}{\sqrt{\left( s_1^2+s_2^2 \right)/10}}\ge 2\)，则认为新设备生产产品的该项指标的均值较旧设备有显著提高，否则不认为有显著提高）.
+\item 判断新设备生产产品的该项指标的均值较旧设备是否有显著提高（如果 \(\dfrac{y-x}{\sqrt{\frac{\left( s_1^2+s_2^2 \right)}{10}}}\ge 2\)，则认为新设备生产产品的该项指标的均值较旧设备有显著提高，否则不认为有显著提高）.
 \end{enumerate}
 \end{problem}
 
-\begin{solution}
+\solution{
 \begin{enumerate}
-\item \(x=10\)，\(y=10.3\)，\(s_1^2=0.036\)，\(s_2^2=0.04\).
-
-\item 新设备生产产品的该项指标的均值较旧设备有显著提高.
+\item 旧设备生产产品的该项指标的样本平均数和样本方差分别为
+\[
+x=\frac{1}{10}\sum_{i=1}^{10} x_i=\frac{100.0}{10}=10
+\]
+\[
+s_1^2=\frac{1}{10}\sum_{i=1}^{10}(x_i-x)^2=\frac{0.36}{10}=0.036
+\]
+新设备生产产品的该项指标的样本平均数和样本方差分别为
+\[
+y=\frac{1}{10}\sum_{i=1}^{10} y_i=\frac{103.0}{10}=10.3
+\]
+\[
+s_2^2=\frac{1}{10}\sum_{i=1}^{10}(y_i-y)^2=\frac{0.40}{10}=0.04
+\]
+\item 由（1）知 \(y-x=10.3-10=0.3\). 又
+\[
+\frac{y-x}{\sqrt{\frac{\left(s_1^2+s_2^2\right)}{10}}}=\frac{0.3}{\sqrt{\frac{0.036+0.04}{10}}}=\frac{0.3}{\sqrt{0.0076}}\approx 3.44>2
+\]
+所以认为新设备生产产品的该项指标的均值较旧设备有显著提高.
 \end{enumerate}
-\end{solution}
+}
 
 \begin{problem}
 如图，四棱锥 \(P-ABCD\) 的底面是矩形，\(PD\perp\) 底面 \(ABCD\)，\(PD=DC=1\)，\(M\) 为 \(BC\) 的中点，且 \(PB\perp AM\).
@@ -258,13 +274,40 @@ B
 \bitmapfigure[max width=6.0cm]{img/2021/national_paper_B_science/q18_fig1.png}
 \end{problem}
 
-\begin{solution}
+\solution{
 \begin{enumerate}
-\item \(BC=\sqrt2\).
-
-\item 二面角 \(A-PM-B\) 的正弦值为 \(\dfrac{\sqrt{70}}{14}\).
+\item 因为 \(PD\perp\) 底面 \(ABCD\)，且 \(AM\subset\) 平面 \(ABCD\)，所以 \(PD\perp AM\). 又已知 \(PB\perp AM\)，且 \(PD\cap PB=P\)，所以 \(AM\perp\) 平面 \(PBD\). 因为 \(BD\subset\) 平面 \(PBD\)，所以 \(AM\perp BD\).
+在矩形 \(ABCD\) 中，\(AB=DC=1\). 设 \(BC=b\)，以 \(D\) 为坐标原点，分别以 \(DC\)，\(DA\) 所在射线为 \(x\) 轴、\(y\) 轴正方向建立平面直角坐标系，则 \(D(0,0)\)，\(C(1,0)\)，\(A(0,b)\)，\(B(1,b)\). 因为 \(M\) 为 \(BC\) 的中点，所以 \(M\left(1,\dfrac{b}{2}\right)\). 从而 \(\overrightarrow{AM}=\left(1,-\dfrac{b}{2}\right)\)，\(\overrightarrow{BD}=(-1,-b)\).
+由 \(AM\perp BD\) 得 \(\overrightarrow{AM}\cdot\overrightarrow{BD}=-1+\dfrac{b^2}{2}=0\)，解得 \(b=\sqrt2\). 所以 \(BC=\sqrt2\).
+\item 由（1）知 \(BC=\sqrt2\)，\(AB=1\)，\(PD=1\). 以 \(D\) 为坐标原点，分别以 \(DC\)，\(DA\)，\(DP\) 所在射线为 \(x\) 轴、\(y\) 轴、\(z\) 轴正方向建立空间直角坐标系，则
+\(D(0,0,0)\)，\(A(0,\sqrt2,0)\)，\(B(1,\sqrt2,0)\)，\(C(1,0,0)\)，\(P(0,0,1)\)，\(M\left(1,\dfrac{\sqrt2}{2},0\right)\).
+所以 \(\overrightarrow{PA}=(0,\sqrt2,-1)\)，\(\overrightarrow{PM}=\left(1,\dfrac{\sqrt2}{2},-1\right)\)，\(\overrightarrow{PB}=(1,\sqrt2,-1)\).
+设平面 \(PAM\) 的法向量为 \(\bs{n}_1=(x_1,y_1,z_1)\)，则
+\[
+\begin{cases}
+\bs{n}_1\cdot\overrightarrow{PA}=\sqrt2y_1-z_1=0,\\
+\bs{n}_1\cdot\overrightarrow{PM}=x_1+\dfrac{\sqrt2}{2}y_1-z_1=0.
+\end{cases}
+\]
+取 \(y_1=\sqrt2\)，则 \(z_1=2\)，\(x_1=1\)，故可取 \(\bs{n}_1=(1,\sqrt2,2)\)，此时 \(|\bs{n}_1|=\sqrt7\).
+设平面 \(PBM\) 的法向量为 \(\bs{n}_2=(x_2,y_2,z_2)\)，则
+\[
+\begin{cases}
+\bs{n}_2\cdot\overrightarrow{PB}=x_2+\sqrt2y_2-z_2=0,\\
+\bs{n}_2\cdot\overrightarrow{PM}=x_2+\dfrac{\sqrt2}{2}y_2-z_2=0.
+\end{cases}
+\]
+两式相减得 \(\dfrac{\sqrt2}{2}y_2=0\)，即 \(y_2=0\)，代入得 \(x_2=z_2\). 取 \(x_2=1\)，则 \(z_2=1\)，故可取 \(\bs{n}_2=(1,0,1)\)，此时 \(|\bs{n}_2|=\sqrt2\).
+记二面角 \(A-PM-B\) 为 \(\theta\)，则
+\[
+\cos\theta=\frac{|\bs{n}_1\cdot\bs{n}_2|}{|\bs{n}_1||\bs{n}_2|}=\frac{|1\times1+\sqrt2\times0+2\times1|}{\sqrt7\times\sqrt2}=\frac{3}{\sqrt{14}}=\frac{3\sqrt{14}}{14}
+\]
+所以二面角 \(A-PM-B\) 的正弦值为
+\[
+\sin\theta=\sqrt{1-\cos^2\theta}=\sqrt{1-\frac{9}{14}}=\sqrt{\frac{5}{14}}=\frac{\sqrt{70}}{14}
+\]
 \end{enumerate}
-\end{solution}
+}
 
 \begin{problem}
 记 \(S_n\) 为数列 \(\{a_n\}\) 的前 \(n\) 项和，\(b_n\) 为数列 \(\{S_n\}\) 的前 \(n\) 项积，已知 \(\frac{2}{S_n}+\frac{1}{b_n}=2\).
@@ -276,13 +319,32 @@ B
 \end{enumerate}
 \end{problem}
 
-\begin{solution}
+\solution{
 \begin{enumerate}
-\item 数列 \(\{b_n\}\) 的首项为 \(\dfrac{3}{2}\)，公差为 \(\dfrac{1}{2}\)，故 \(b_n=\dfrac{n+2}{2}\).
-
-\item \(a_1=\dfrac{3}{2}\)，且当 \(n\ge2\) 时，\(a_n=-\dfrac{1}{n(n+1)}\).
+\item 当 \(n=1\) 时，\(b_1=S_1=a_1\). 由 \(\dfrac{2}{S_1}+\dfrac{1}{b_1}=2\)，得 \(\dfrac{3}{b_1}=2\)，解得 \(b_1=\dfrac{3}{2}\).
+当 \(n\ge 2\) 时，因为 \(b_n=S_1 S_2 \dots S_n\)，所以 \(b_n=b_{n-1}S_n\)，即 \(S_n=\dfrac{b_n}{b_{n-1}}\).
+代入已知等式 \(\dfrac{2}{S_n}+\dfrac{1}{b_n}=2\)，得
+\[
+\frac{2b_{n-1}}{b_n}+\frac{1}{b_n}=2
+\]
+两边同乘 \(b_n\)，得 \(2b_{n-1}+1=2b_n\)，即
+\[
+b_n-b_{n-1}=\frac12
+\]
+所以数列 \(\{b_n\}\) 是首项为 \(\dfrac{3}{2}\)、公差为 \(\dfrac{1}{2}\) 的等差数列.
+\item 由（1）可知，\(b_n=\dfrac32+(n-1)\cdot\dfrac12=\dfrac{n+2}{2}\).
+当 \(n=1\) 时，\(a_1=S_1=b_1=\dfrac{3}{2}\).
+当 \(n\ge 2\) 时，
+\[
+S_n=\frac{b_n}{b_{n-1}}=\frac{\frac{n+2}{2}}{\frac{n+1}{2}}=\frac{n+2}{n+1}=1+\frac{1}{n+1}
+\]
+从而
+\[
+a_n=S_n-S_{n-1}=\left(1+\frac{1}{n+1}\right)-\left(1+\frac{1}{n}\right)=\frac{1}{n+1}-\frac{1}{n}=-\frac{1}{n(n+1)}
+\]
+综上，\(\{a_n\}\) 的通项公式为 \(a_1=\dfrac{3}{2}\)，且当 \(n\ge 2\) 时，\(a_n=-\dfrac{1}{n(n+1)}\).
 \end{enumerate}
-\end{solution}
+}
 
 \begin{problem}
 设函数 \(f(x)=\ln(a-x)\)，已知 \(x=0\) 是函数 \(y=xf(x)\) 的极值点.
@@ -294,13 +356,42 @@ B
 \end{enumerate}
 \end{problem}
 
-\begin{solution}
+\solution{
 \begin{enumerate}
-\item \(a=1\).
-
-\item \(g(x)<1\).
+\item 设 \(h(x)=x f(x)=x\ln(a-x)\)，其定义域为 \((-\infty,a)\).
+求导得
+\[
+h'(x)=\ln(a-x)-\frac{x}{a-x}
+\]
+因为 \(x=0\) 是函数 \(h(x)\) 的极值点，所以 \(h'(0)=\ln a=0\)，解得 \(a=1\).
+当 \(a=1\) 时，\(h'(x)=\ln(1-x)-\dfrac{x}{1-x}\)（\(x<1\)）.
+对 \(h'(x)\) 再次求导得
+\[
+h''(x)=-\frac{1}{1-x}-\frac{1\cdot(1-x)-x(-1)}{(1-x)^2}=-\frac{1}{1-x}-\frac{1}{(1-x)^2}<0
+\]
+所以 \(h'(x)\) 在 \((-\infty,1)\) 上单调递减. 又 \(h'(0)=0\)，所以当 \(x<0\) 时 \(h'(x)>0\)，当 \(0<x<1\) 时 \(h'(x)<0\). 故 \(x=0\) 确实是 \(h(x)\) 的极大值点，符合题意. 因此 \(a=1\).
+\item 由（1）知 \(f(x)=\ln(1-x)\)（\(x<1\) 且 \(x\ne 0\)）. 函数 \(g(x)\) 可化为
+\[
+g(x)=\frac{x+f(x)}{xf(x)}=\frac{1}{f(x)}+\frac{1}{x}=\frac{1}{\ln(1-x)}+\frac{1}{x}
+\]
+要证 \(g(x)<1\)，即证 \(\dfrac{1}{\ln(1-x)}+\dfrac{1}{x}<1\).
+设 \(\varphi(x)=\ln(1-x)+\dfrac{x}{1-x}\)（\(x<1\)）. 求导得
+\[
+\varphi'(x)=-\frac{1}{1-x}+\frac{1\cdot(1-x)-x(-1)}{(1-x)^2}=-\frac{1}{1-x}+\frac{1}{(1-x)^2}=\frac{x}{(1-x)^2}
+\]
+当 \(x\in(-\infty,0)\) 时，\(\varphi'(x)<0\)，\(\varphi(x)\) 单调递减；当 \(x\in(0,1)\) 时，\(\varphi'(x)>0\)，\(\varphi(x)\) 单调递增.
+因为 \(\varphi(0)=0\)，所以当 \(x<1\) 且 \(x\ne 0\) 时，恒有 \(\varphi(x)>\varphi(0)=0\)，即 \(\ln(1-x)+\dfrac{x}{1-x}>0\).
+当 \(0<x<1\) 时，\(\ln(1-x)<0\)，两边同乘 \(\dfrac{1-x}{x\ln(1-x)}<0\)，得
+\[
+\frac{1-x}{x}+\frac{1}{\ln(1-x)}<0\Longleftrightarrow\frac{1}{x}-1+\frac{1}{\ln(1-x)}<0\Longleftrightarrow\frac{1}{\ln(1-x)}+\frac{1}{x}<1
+\]
+当 \(x<0\) 时，\(\ln(1-x)>0\)，两边同乘 \(\dfrac{1-x}{x\ln(1-x)}<0\)，同样得
+\[
+\frac{1-x}{x}+\frac{1}{\ln(1-x)}<0\Longleftrightarrow\frac{1}{\ln(1-x)}+\frac{1}{x}<1
+\]
+综上，对一切 \(x<1\) 且 \(x\ne 0\)，都有 \(g(x)<1\).
 \end{enumerate}
-\end{solution}
+}
 
 \begin{problem}
 已知抛物线 \(C:x^2=2py\)（\(p>0\)）的焦点为 \(F\)，且 \(F\) 与圆 \(M:x^2+(y+4)^2=1\) 上点的距离的最小值为 \(4\).
@@ -312,13 +403,50 @@ B
 \end{enumerate}
 \end{problem}
 
-\begin{solution}
+\solution{
 \begin{enumerate}
-\item \(p=2\).
-
-\item \(\triangle PAB\) 面积的最大值为 \(20\sqrt5\).
+\item 抛物线 \(C:x^2=2py\)（\(p>0\)）的焦点为 \(F\left(0,\dfrac{p}{2}\right)\). 圆 \(M:x^2+(y+4)^2=1\) 的圆心为 \(M(0,-4)\)，半径为 \(R=1\).
+因为焦点 \(F\) 与圆心 \(M\) 均在 \(y\) 轴上，且 \(\dfrac{p}{2}>0>-4\)，所以点 \(F\) 到圆 \(M\) 上点的距离的最小值为
+\[
+|FM|-R=\left[\frac{p}{2}-(-4)\right]-1=\frac{p}{2}+3
+\]
+由题设知 \(\dfrac{p}{2}+3=4\)，解得 \(p=2\). 所以 \(p=2\).
+\item 由（1）知抛物线方程为 \(x^2=4y\)，即 \(y=\dfrac{x^2}{4}\). 设点 \(P(x_0,y_0)\) 在圆 \(M\) 上，则 \(x_0^2+(y_0+4)^2=1\)，即 \(x_0^2=1-(y_0+4)^2\)，且 \(y_0\in[-5,-3]\).
+设切点 \(A\left(x_1,\dfrac{x_1^2}{4}\right)\)，\(B\left(x_2,\dfrac{x_2^2}{4}\right)\). 由 \(y'=\dfrac{x}{2}\)，切线 \(PA\) 的方程为 \(y-\dfrac{x_1^2}{4}=\dfrac{x_1}{2}(x-x_1)\)，即 \(x_1 x-2y-2y_1=0\).
+同理切线 \(PB\) 的方程为 \(x_2 x-2y-2y_2=0\).
+因为点 \(P(x_0,y_0)\) 在两条切线上，所以 \(x_1\)，\(x_2\) 满足方程 \(x_0 x-2y_0-2y=0\)，即直线 \(AB\) 的方程为
+\[
+x_0 x-2y-2y_0=0\Longleftrightarrow y=\frac{x_0}{2}x-y_0
+\]
+联立直线 \(AB\) 与抛物线方程 \(x^2=4y\)，得 \(x^2-2x_0 x+4y_0=0\).
+由韦达定理，\(x_1+x_2=2x_0\)，\(x_1 x_2=4y_0\). 从而
+\[
+|x_1-x_2|=\sqrt{(x_1+x_2)^2-4x_1 x_2}=2\sqrt{x_0^2-4y_0}
+\]
+线段 \(AB\) 的长度为
+\[
+|AB|=\sqrt{1+\left(\frac{x_0}{2}\right)^2}|x_1-x_2|=\sqrt{x_0^2+4}\sqrt{x_0^2-4y_0}
+\]
+点 \(P(x_0,y_0)\) 到直线 \(AB:x_0 x-2y-2y_0=0\) 的距离为
+\[
+d=\frac{|x_0^2-2y_0-2y_0|}{\sqrt{x_0^2+(-2)^2}}=\frac{x_0^2-4y_0}{\sqrt{x_0^2+4}}
+\]
+故 \(\triangle PAB\) 的面积为
+\[
+S=\frac12 |AB|\cdot d=\frac12\left(x_0^2-4y_0\right)^{\frac32}
+\]
+将 \(x_0^2=1-(y_0+4)^2\) 代入，得
+\[
+x_0^2-4y_0=1-(y_0^2+8y_0+16)-4y_0=-y_0^2-12y_0-15
+\]
+令 \(u(y_0)=-y_0^2-12y_0-15\)，其对称轴为 \(y_0=-6\). 因为 \(y_0\in[-5,-3]\)，所以 \(u(y_0)\) 在 \([-5,-3]\) 上单调递减.
+当 \(y_0=-5\) 时，\(u(y_0)\) 取得最大值 \(u(-5)=-(-5)^2-12(-5)-15=20\)（此时 \(x_0=0\)，点 \(P(0,-5)\) 在圆上）.
+所以 \(\triangle PAB\) 面积的最大值为
+\[
+S_{\max}=\frac12\times 20^{\frac32}=10\times 2\sqrt5=20\sqrt5
+\]
 \end{enumerate}
-\end{solution}
+}
 
 \section{选考题：解答题}
 
@@ -332,16 +460,28 @@ B
 \end{enumerate}
 \end{problem}
 
-\begin{solution}
+\solution{
 \begin{enumerate}
-\item \(\begin{cases}
+\item 由圆心 \(C(2,1)\)，半径为 \(1\)，可得圆 \(C\) 的一个参数方程为
+\[
+\begin{cases}
 x=2+\cos\theta,\\
 y=1+\sin\theta,
-\end{cases}\quad\theta\in[0,2\pi)\).
-
-\item \(\rho\sin\theta=\pm\dfrac{\sqrt3}{3}\left(\rho\cos\theta-4\right)+1\).
+\end{cases}
+\quad\text{（\(\theta\) 为参数）}
+\]
+\item 点 \(F(4,1)\) 与圆心 \(C(2,1)\) 的连线平行于 \(x\) 轴，且 \(|CF|=2\). 设过点 \(F\) 的切线与直线 \(CF\) 的夹角为 \(\alpha\). 在由圆心、切点和点 \(F\) 构成的直角三角形中，\(\sin\alpha=\dfrac{1}{|CF|}=\dfrac12\)，又 \(\alpha\in\left(0,\dfrac{\pi}{2}\right)\)，所以 \(\alpha=\dfrac{\pi}{6}\). 故切线的倾斜角分别为 \(\dfrac{\pi}{6}\) 和 \(-\dfrac{\pi}{6}\).
+切线方程分别为 \(y-1=\pm\dfrac{\sqrt3}{3}(x-4)\)，即
+\[
+\sqrt3(y-1)=\pm(x-4)
+\]
+将 \(x=\rho\cos\theta\)，\(y=\rho\sin\theta\) 代入，得
+\[
+\rho\sin\theta-1=\pm\frac{\sqrt3}{3}(\rho\cos\theta-4)
+\]
+即 \(\rho\sin\theta=\pm\dfrac{\sqrt3}{3}(\rho\cos\theta-4)+1\).
 \end{enumerate}
-\end{solution}
+}
 
 \begin{problem}
 已知函数 \(f(x)=|x-a|+|x+3|\).
@@ -353,10 +493,21 @@ y=1+\sin\theta,
 \end{enumerate}
 \end{problem}
 
-\begin{solution}
+\solution{
 \begin{enumerate}
-\item \((-\infty,-4]\cup[2,+\infty)\).
-
-\item \(a\in\left(-\dfrac{3}{2},+\infty\right)\).
+\item 当 \(a=1\) 时，\(f(x)=|x-1|+|x+3|\).
+当 \(x\le -3\) 时，不等式化为 \(-(x-1)-(x+3)\ge 6\)，解得 \(x\le -4\)；
+当 \(-3<x<1\) 时，不等式化为 \(-(x-1)+(x+3)\ge 6\)，即 \(4\ge 6\)，无解；
+当 \(x\ge 1\) 时，不等式化为 \((x-1)+(x+3)\ge 6\)，解得 \(x\ge 2\).
+综上，不等式 \(f(x)\ge 6\) 的解集为 \((-\infty,-4]\cup[2,+\infty)\).
+\item 由绝对值三角不等式，对任意 \(x\in\R\)，
+\[
+f(x)=|x-a|+|x+3|=|a-x|+|x+3|\ge |(a-x)+(x+3)|=|a+3|
+\]
+当且仅当 \((a-x)(x+3)\ge 0\) 时等号成立，所以 \(f(x)\) 的最小值为 \(|a+3|\).
+若 \(f(x)>-a\) 恒成立，只需 \(|a+3|>-a\).
+若 \(-a<0\)，即 \(a>0\)，此时 \(|a+3|\ge 0>-a\) 恒成立；
+若 \(-a\ge 0\)，即 \(a\le 0\)，此时 \(|a+3|>-a\) 等价于 \(a+3>-a\)，解得 \(a>-\dfrac32\)，结合 \(a\le 0\) 得 \(-\dfrac32<a\le 0\).
+综合可知，\(a\) 的取值范围为 \(\left(-\dfrac32,+\infty\right)\).
 \end{enumerate}
-\end{solution}
+}

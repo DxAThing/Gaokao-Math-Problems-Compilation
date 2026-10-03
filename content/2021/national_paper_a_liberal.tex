@@ -219,13 +219,38 @@
 \end{center}
 \end{problem}
 
-\solution{短答案：甲机床、乙机床生产的一级品频率分别为 \(\frac{3}{4}\)、\(\frac{3}{5}\)；\(K^2\approx10.256>6.635\)，有 \(99\%\) 的把握认为两台机床的产品质量有差异.}
+\solution{
+\begin{enumerate}
+\item 甲机床生产的产品中一级品的频率为
+\(\dfrac{150}{200}=0.75\)，乙机床生产的产品中一级品的频率为
+\(\dfrac{120}{200}=0.60\).
+\item 设原假设为 \(H_0\)：甲、乙两台机床生产的产品质量相互独立，即两台机床生产一级品的频率没有差异. 在附表公式中取
+\(a=150\)，\(b=50\)，\(c=120\)，\(d=80\)，\(n=400\)，则
+\[
+K^2=\frac{400(150\times80-50\times120)^2}{200\times200\times270\times130}=\frac{400}{39}\approx10.256
+\]
+因为 \(10.256>6.635\)，所以在显著性水平 \(0.01\) 下拒绝原假设，即有 \(99\%\) 的把握认为甲机床的产品质量与乙机床的产品质量有差异.
+\end{enumerate}
+}
 
 \begin{problem}
 记 \(S_n\) 为数列 \(\{a_n\}\) 的前 \(n\) 项和，已知 \(a_n>0\)，\(a_2=3a_1\)，且数列 \(\{\sqrt{S_n}\}\) 是等差数列，证明：\(\{a_n\}\) 是等差数列.
 \end{problem}
 
-\solution{短答案：\(a_n=(2n-1)a_1\)，故 \(\{a_n\}\) 是等差数列.}
+\solution{
+设等差数列 \(\{\sqrt{S_n}\}\) 的公差为 \(d\). 因为各项均为正数，所以
+\(S_1=a_1>0\)，\(S_2=a_1+a_2=4a_1\). 故
+\[
+d=\sqrt{S_2}-\sqrt{S_1}=2\sqrt{a_1}-\sqrt{a_1}=\sqrt{a_1}
+\]
+从而 \(a_1=d^2\). 因而 \(\sqrt{S_n}=\sqrt{S_1}+(n-1)d=nd\)，两边平方得 \(S_n=n^2d^2\).
+当 \(n\ge 2\) 时，
+\[
+a_n=S_n-S_{n-1}=\left[n^2-(n-1)^2\right]d^2=(2n-1)d^2
+\]
+当 \(n=1\) 时，\(a_1=d^2\) 也满足上式.
+所以对任意正整数 \(n\)，\(a_{n+1}-a_n=(2n+1)d^2-(2n-1)d^2=2d^2\) 为常数，故 \(\{a_n\}\) 是等差数列.
+}
 
 \begin{problem}
 已知直三棱柱 \(ABC-A_1B_1C_1\) 中，侧面 \(AA_1B_1B\) 为正方形，\(AB=BC=2\)，\(E\)，\(F\) 分别为 \(AC\) 和 \(CC_1\) 的中点，\(BF\perp A_1B_1\).
@@ -238,7 +263,19 @@
 \bitmapfigure[max width=5.0cm]{img/2021/national_paper_a_liberal/q19_fig1.png}
 \end{problem}
 
-\solution{短答案：第一问体积为 \(\frac{1}{3}\)；第二问 \(BF\perp DE\).}
+\solution{
+\begin{enumerate}
+\item 由 \(A_1B_1\parallel AB\) 以及 \(BF\perp A_1B_1\)，得 \(BF\perp AB\). 在直三棱柱中，\(BB_1\perp\) 平面 \(ABC\)，故 \(BB_1\perp AB\). 又 \(\overrightarrow{BF}=\overrightarrow{BC}+\dfrac12\overrightarrow{CC_1}\)，且 \(\overrightarrow{AB}\cdot\overrightarrow{CC_1}=0\)，所以 \(\overrightarrow{AB}\cdot\overrightarrow{BC}=0\)，即 \(AB\perp BC\). 因为 \(AB=BC=2\)，所以 \(S_{\triangle ABC}=\dfrac12\times2\times2=2\). 又 \(E\) 为 \(AC\) 的中点，所以 \(S_{\triangle EBC}=\dfrac12 S_{\triangle ABC}=1\). 侧面 \(AA_1B_1B\) 为正方形，故 \(CC_1=AA_1=2\)，由 \(F\) 为 \(CC_1\) 的中点得 \(CF=1\). 因为 \(CC_1\perp\) 平面 \(ABC\)，所以点 \(F\) 到平面 \(EBC\) 的距离为 \(CF=1\). 故三棱锥 \(F-EBC\) 的体积为
+\[
+V_{F-EBC}=\frac13 S_{\triangle EBC}\cdot CF=\frac13\times1\times1=\frac13
+\]
+\item 以 \(B\) 为坐标原点，分别以 \(BA\)，\(BC\)，\(BB_1\) 所在直线为 \(x\) 轴、\(y\) 轴、\(z\) 轴建立空间直角坐标系，则
+\(A(2,0,0)\)，\(B(0,0,0)\)，\(C(0,2,0)\)，\(A_1(2,0,2)\)，\(B_1(0,0,2)\). 因为 \(E\)，\(F\) 分别为 \(AC\)，\(CC_1\) 的中点，所以
+\(E(1,1,0)\)，\(F(0,2,1)\). 设 \(D(m,0,2)\)，其中 \(0\le m\le 2\). 则
+\(\overrightarrow{BF}=(0,2,1)\)，\(\overrightarrow{DE}=(1-m,1,-2)\).
+从而 \(\overrightarrow{BF}\cdot\overrightarrow{DE}=0\times(1-m)+2\times1+1\times(-2)=0\)，即 \(BF\perp DE\).
+\end{enumerate}
+}
 
 \begin{problem}
 设函数 \(f(x)=a^2x^2+ax-3\ln x+1\)，其中 \(a>0\).
@@ -249,7 +286,24 @@
 \end{enumerate}
 \end{problem}
 
-\solution{短答案：\(f(x)\) 在 \(\left(0,\frac{1}{a}\right)\) 上单调递减，在 \(\left(\frac{1}{a},+\infty\right)\) 上单调递增；\(a\in\left(\frac{1}{\e},+\infty\right)\).}
+\solution{
+\begin{enumerate}
+\item 函数 \(f(x)\) 的定义域为 \((0,+\infty)\). 求导得
+\[
+f'(x)=2a^2x+a-\frac{3}{x}=\frac{2a^2x^2+ax-3}{x}=\frac{(2ax+3)(ax-1)}{x}
+\]
+因为 \(a>0\)，所以当 \(x>0\) 时 \(2ax+3>0\). 当 \(0<x<\dfrac{1}{a}\) 时，\(ax-1<0\)，\(f'(x)<0\)；当 \(x>\dfrac{1}{a}\) 时，\(ax-1>0\)，\(f'(x)>0\). 故 \(f(x)\) 在 \(\left(0,\dfrac{1}{a}\right)\) 上单调递减，在 \(\left(\dfrac{1}{a},+\infty\right)\) 上单调递增.
+\item 由（1）可知，\(f(x)\) 在 \(x=\dfrac{1}{a}\) 处取得最小值，且
+\[
+f\left(\frac{1}{a}\right)=a^2\cdot\frac{1}{a^2}+a\cdot\frac{1}{a}-3\ln\frac{1}{a}+1=3+3\ln a
+\]
+当 \(x\to 0^+\) 或 \(x\to +\infty\) 时均有 \(f(x)\to +\infty\)，所以 \(y=f(x)\) 的图象与 \(x\) 轴没有公共点等价于 \(f\left(\dfrac{1}{a}\right)>0\)，即
+\[
+3+3\ln a>0\Longleftrightarrow\ln a>-1\Longleftrightarrow a>\frac{1}{\e}
+\]
+故 \(a\) 的取值范围为 \(\left(\dfrac{1}{\e},+\infty\right)\).
+\end{enumerate}
+}
 
 \begin{problem}
 抛物线 \(C\) 的顶点为坐标原点 \(O\)，焦点在 \(x\) 轴上，直线 \(l:x=1\) 交 \(C\) 于 \(P\)，\(Q\) 两点，且 \(OP\perp OQ\). 已知点 \(M(2,0)\)，且 \(\odot M\) 与 \(l\) 相切.
@@ -260,7 +314,34 @@
 \end{enumerate}
 \end{problem}
 
-\solution{短答案：\(C:y^2=x\)，\(\odot M:(x-2)^2+y^2=1\)；直线 \(A_2A_3\) 与 \(\odot M\) 相切.}
+\solution{
+\begin{enumerate}
+\item 设抛物线 \(C\) 的方程为 \(y^2=2px\)，其中 \(p>0\)，因为直线 \(x=1\) 与 \(C\) 有两个交点. 直线 \(x=1\) 与其交于 \(P\)，\(Q\)，故可设 \(P(1,\sqrt{2p})\)，\(Q(1,-\sqrt{2p})\). 由 \(OP\perp OQ\)，得
+\(\overrightarrow{OP}\cdot\overrightarrow{OQ}=1-2p=0\)，所以 \(p=\dfrac12\)，即 \(C:y^2=x\). 圆 \(\odot M\) 的圆心为 \(M(2,0)\)，且与直线 \(x=1\) 相切，故半径等于圆心到直线的距离 \(1\)，从而 \(\odot M:(x-2)^2+y^2=1\).
+\item 将抛物线 \(C\) 上的点参数化为 \(T(t)=(t^2,t)\). 设 \(A_1=T(t_1)\)，\(A_2=T(t_2)\)，\(A_3=T(t_3)\). 对抛物线上参数为 \(u\)，\(v\) 的两个不同点，连接这两点的直线方程为
+\[
+x-(u+v)y+uv=0
+\]
+圆心 \(M(2,0)\) 到该直线的距离为 \(1\) 当且仅当
+\[
+\frac{|2+uv|}{\sqrt{1+(u+v)^2}}=1
+\]
+即
+\[
+(u^2-1)v^2+2uv+3-u^2=0
+\]
+由于直线 \(A_1A_2\)，\(A_1A_3\) 均与圆相切，\(t_2\)，\(t_3\) 是关于 \(v\) 的方程
+\((t_1^2-1)v^2+2t_1v+3-t_1^2=0\) 的两个根. 先说明 \(t_1^2\ne1\)：若 \(t_1=1\)，上式化为 \(2v+2=0\)；若 \(t_1=-1\)，上式化为 \(-2v+2=0\)，两种情形都不可能得到两个不同的根. 因此由韦达定理，记 \(s=t_2+t_3\)，\(r=t_2t_3\)，则
+\(s=-\frac{2t_1}{t_1^2-1}\)，\(r=\frac{3-t_1^2}{t_1^2-1}\).
+直线 \(A_2A_3\) 与圆相切的充要条件为 \((2+r)^2=1+s^2\)，等价于 \(r^2-s^2+4r+3=0\). 代入上式，得
+\[
+r^2-s^2+4r+3
+=\frac{(3-t_1^2)^2-4t_1^2+4(3-t_1^2)(t_1^2-1)+3(t_1^2-1)^2}{(t_1^2-1)^2}
+=\frac{0}{(t_1^2-1)^2}=0
+\]
+所以直线 \(A_2A_3\) 与 \(\odot M\) 相切.
+\end{enumerate}
+}
 
 \section{选考题：解答题}
 
@@ -273,12 +354,33 @@
 \end{enumerate}
 \end{problem}
 
-\solution{短答案：\(C:(x-\sqrt{2})^2+y^2=2\)；\(C_1\) 的参数方程为
-\(\begin{cases}
-x=3-\sqrt{2}+2\cos\theta,\\
-y=2\sin\theta,
-\end{cases}\)
-两曲线没有公共点.}
+\solution{
+\begin{enumerate}
+\item 由 \(\rho^2=x^2+y^2\)，\(x=\rho\cos\theta\)，原方程可得
+\(\rho^2=2\sqrt2\rho\cos\theta=2\sqrt2x\). 因此曲线 \(C\) 的直角坐标方程为
+\[
+x^2+y^2=2\sqrt2x
+\]
+即 \(C:(x-\sqrt2)^2+y^2=2\).
+\item 设 \(M\) 的参数坐标为 \(\left(\sqrt2+\sqrt2\cos\theta,\sqrt2\sin\theta\right)\)，其中 \(0\le\theta<2\pi\). 设 \(P(x,y)\)，由 \(A(1,0)\) 及
+\(\overrightarrow{AP}=\sqrt2\overrightarrow{AM}\)，得
+\[
+\begin{cases}
+x-1=\sqrt2\left(\sqrt2+\sqrt2\cos\theta-1\right),\\
+y=\sqrt2\cdot\sqrt2\sin\theta.
+\end{cases}
+\]
+所以 \(P\) 的轨迹 \(C_1\) 的参数方程为
+\[
+\begin{cases}
+x=3-\sqrt2+2\cos\theta,\\
+y=2\sin\theta.
+\end{cases}
+\]
+故 \(C_1\) 是圆心为 \(O_1(3-\sqrt2,0)\)、半径为 \(2\) 的圆，而 \(C\) 是圆心为 \(O(\sqrt2,0)\)、半径为 \(\sqrt2\) 的圆. 两圆心距离为
+\(OO_1=3-2\sqrt2<2-\sqrt2\)，即小圆半径与大圆半径之差大于两圆心距离，所以两圆内含且没有公共点.
+\end{enumerate}
+}
 
 \begin{problem}
 已知函数 \(f(x)=|x-2|\)，\(g(x)=|2x+3|-|2x-1|\).
@@ -292,14 +394,25 @@ y=2\sin\theta,
 \FloatBarrier
 \end{problem}
 
-\solution{短答案：
+\solution{
+\begin{enumerate}
+\item
 \(f(x)=\begin{cases}
 2-x,&x<2,\\
 x-2,&x\geqslant2,
-\end{cases}\quad
-g(x)=\begin{cases}
--4,&x< -\frac{3}{2},\\
-4x+2,&-\frac{3}{2}\leqslant x<\frac{1}{2},\\
-4,&x\geqslant\frac{1}{2},
-\end{cases}\)
-；\(a\in\left[\frac{11}{2},+\infty\right)\).}
+\end{cases}\)，
+\(g(x)=\begin{cases}
+-4,&x<-\dfrac{3}{2},\\
+4x+2,&-\dfrac{3}{2}\leqslant x<\dfrac{1}{2},\\
+4,&x\geqslant\dfrac{1}{2},
+\end{cases}\).
+由此可知，\(y=f(x)\) 的图像是顶点为 \((2,0)\) 的折线，\(y=g(x)\) 的图像由左侧射线 \(y=-4\)、线段 \(y=4x+2\) 和右侧射线 \(y=4\) 组成，连接点分别为 \(\left(-\dfrac32,-4\right)\) 和 \(\left(\dfrac12,4\right)\).
+\item \(a\) 取何值使不等式成立，指的是对所有 \(x\in\R\) 都有 \(f(x+a)\ge g(x)\). 当 \(x\ge\dfrac12\) 时，\(g(x)=4\)，所以必须有
+\(\lvert x+a-2\rvert\ge4\) 对一切 \(x\ge\dfrac12\) 成立. 若 \(a\le\dfrac32\)，则点 \(x=2-a\) 属于 \(\left[\dfrac12,+\infty\right)\)，此时 \(f(x+a)=0<4\)，不合题意；若 \(a>\dfrac32\)，则 \(x+a-2\) 在该区间上递增且最小值为 \(a-\dfrac32\)，故必须 \(a-\dfrac32\ge4\)，即 \(a\ge\dfrac{11}{2}\).
+反之，若 \(a\ge\dfrac{11}{2}\)，则当 \(x< -\dfrac32\) 时，\(g(x)=-4\le0\le f(x+a)\). 当 \(-\dfrac32\le x<\dfrac12\) 时，\(x+a-2\ge a-\dfrac72\ge2>0\)，从而
+\[
+f(x+a)-(4x+2)=x+a-2-(4x+2)=a-3x-4\ge\frac{11}{2}-3\cdot\frac12-4=0
+\]
+当 \(x\ge\dfrac12\) 时，\(x+a-2\ge a-\dfrac32\ge4\)，所以 \(f(x+a)\ge4=g(x)\). 因此不等式对所有 \(x\) 成立，且 \(a\) 的取值范围为 \(\left[\dfrac{11}{2},+\infty\right)\).
+\end{enumerate}
+}

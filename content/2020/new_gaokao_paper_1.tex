@@ -177,7 +177,7 @@ ABD
 \end{problem}
 
 \begin{answer}
-ACD
+AC
 \end{answer}
 
 \section{填空题}
@@ -214,7 +214,7 @@ ACD
 \end{problem}
 
 \begin{answer}
-\(4\sqrt{2}\pi\)
+\(\dfrac{\sqrt2}{2}\pi\)
 \end{answer}
 
 \section{解答题}
@@ -232,7 +232,10 @@ ACD
 \end{problem}
 
 \begin{solution}
-短答案：选 \(ac=\sqrt{3}\) 时，\(c=1\)；选 \(c\sin A=3\) 时，\(c=2\sqrt{3}\)；选 \(c=\sqrt{3}b\) 时，三角形不存在.
+由 \(\sin A=\sqrt{3}\sin B\) 及正弦定理得 \(a=\sqrt{3}b\). 又 \(C=\dfrac{\pi}{6}\)，由余弦定理得 \(c^2=a^2+b^2-2ab\cos C=3b^2+b^2-2\cdot\sqrt3b\cdot b\cdot\dfrac{\sqrt3}{2}=b^2\)，所以 \(c=b\).
+选择条件\circled{1}\(ac=\sqrt{3}\)：由 \(a=\sqrt{3}b\) 得 \(ac=\sqrt3bc=\sqrt3c^2=\sqrt3\)，所以 \(c=1\)，此时三角形存在.
+选择条件\circled{2}\(c\sin A=3\)：由正弦定理得 \(\sin A=\dfrac{a\sin C}{c}=\dfrac{a}{2c}\)，代入得 \(c\cdot\dfrac{a}{2c}=\dfrac a2=3\)，所以 \(a=6\)，从而 \(b=\dfrac a{\sqrt3}=2\sqrt3\). 由余弦定理 \(c^2=a^2+b^2-2ab\cos C=36+12-36=12\)，所以 \(c=2\sqrt3\)，此时三角形存在.
+选择条件\circled{3}\(c=\sqrt{3}b\)：由 \(c=b\) 得 \(b=\sqrt{3}b\)，即 \(b=0\)，与 \(b>0\) 矛盾，所以三角形不存在.
 \end{solution}
 
 \begin{problem}
@@ -246,8 +249,8 @@ ACD
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(a_n=2^n\).
-\item 短答案：\(S_{100}=480\).
+\item 设等比数列 \(\{a_n\}\) 的首项为 \(a_1\)，公比为 \(q\)（\(q>1\)）. 由 \(a_3=8\) 得 \(a_1q^2=8\)，由 \(a_2+a_4=20\) 得 \(a_1q+a_1q^3=20\). 两式相除得 \(\dfrac{q+q^3}{q^2}=\dfrac{20}{8}=\dfrac52\)，即 \(2q^2-5q+2=0\)，解得 \(q=2\) 或 \(q=\dfrac12\). 因为 \(q>1\)，所以 \(q=2\)，从而 \(a_1=2\)，故 \(a_n=2^n\).
+\item 由 \(a_n=2^n\) 知 \(b_m\) 等于满足 \(2^n\le m\) 的正整数 \(n\) 的个数，即 \(b_m\) 为不超过 \(\log_2m\) 的最大整数. 于是 \(b_1=0\)；当 \(m=2\)，\(3\) 时 \(b_m=1\)；当 \(m=4\)，\(5\)，\(6\)，\(7\) 时 \(b_m=2\)；当 \(m=8\) 至 \(15\) 时 \(b_m=3\)；当 \(m=16\) 至 \(31\) 时 \(b_m=4\)；当 \(m=32\) 至 \(63\) 时 \(b_m=5\)；当 \(m=64\) 至 \(100\) 时 \(b_m=6\). 所以 \(S_{100}=0\times1+1\times2+2\times4+3\times8+4\times16+5\times32+6\times37=2+8+24+64+160+222=480\).
 \end{enumerate}
 \end{solution}
 
@@ -293,8 +296,9 @@ ACD
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(0.64\).
-\item 短答案：
+\item 由表中数据，\(\mathrm{PM}_{2.5}\) 浓度不超过 \(75\) 且 \(\mathrm{SO}_2\) 浓度不超过 \(150\) 的天数为 \(32+18+6+8=64\)，所以所求概率的估计值为 \(\dfrac{64}{100}=0.64\).
+\item 由所给数据，\(2\times2\) 列联表为
+
 \begin{center}
 \begin{tabular}{c|cc}
 \(\mathrm{PM}_{2.5}\backslash\mathrm{SO}_2\) & \([0,150]\) & \((150,475]\) \\
@@ -303,7 +307,8 @@ ACD
 \((75,115]\) & 10 & 10
 \end{tabular}
 \end{center}
-\item 短答案：\(K^2\approx 7.484>6.635\)，有 99\% 的把握认为该市一天空气中 \(\mathrm{PM}_{2.5}\) 浓度与 \(\mathrm{SO}_2\) 浓度有关.
+
+\item 将列联表数据代入公式，得 \(K^2=\dfrac{100\times(64\times10-16\times10)^2}{(64+16)(10+10)(64+10)(16+10)}=\dfrac{100\times480^2}{80\times20\times74\times26}\approx7.484\). 因为 \(7.484>6.635\)，所以有 \(99\%\) 的把握认为该市一天空气中 \(\mathrm{PM}_{2.5}\) 浓度与 \(\mathrm{SO}_2\) 浓度有关.
 \end{enumerate}
 \end{solution}
 
@@ -320,8 +325,8 @@ ACD
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(l\perp\)平面 \(PDC\).
-\item 短答案：正弦值的最大值为 \(\dfrac{\sqrt{6}}{3}\).
+\item 因为四边形 \(ABCD\) 为正方形，所以 \(AD\parallel BC\). 又 \(BC\subset\) 平面 \(PBC\)，\(AD\not\subset\) 平面 \(PBC\)，所以 \(AD\parallel\) 平面 \(PBC\). 因为 \(AD\subset\) 平面 \(PAD\)，且平面 \(PAD\) 与平面 \(PBC\) 的交线为 \(l\)，所以 \(AD\parallel l\). 因为 \(PD\perp\) 底面 \(ABCD\)，所以 \(PD\perp AD\)；又 \(AD\perp CD\)，\(PD\cap CD=D\)，所以 \(AD\perp\) 平面 \(PDC\). 因为 \(l\parallel AD\)，所以 \(l\perp\) 平面 \(PDC\).
+\item 由 \(PD\perp\) 底面 \(ABCD\)，以 \(D\) 为原点，\(\overrightarrow{DA}\)，\(\overrightarrow{DC}\)，\(\overrightarrow{DP}\) 的方向分别为 \(x\)，\(y\)，\(z\) 轴正方向建立空间直角坐标系，则 \(D(0,0,0)\)，\(A(1,0,0)\)，\(C(0,1,0)\)，\(B(1,1,0)\)，\(P(0,0,1)\). 由（1）知 \(l\) 过点 \(P\) 且平行于 \(AD\)，设 \(Q(t,0,1)\). 则 \(\overrightarrow{PB}=(1,1,-1)\)，\(|\overrightarrow{PB}|=\sqrt3\). 设平面 \(QCD\) 的法向量为 \(\bs{n}=(x,y,z)\)，由 \(\overrightarrow{DC}=(0,1,0)\)，\(\overrightarrow{DQ}=(t,0,1)\) 得 \(y=0\)，\(tx+z=0\)，取 \(\bs{n}=(1,0,-t)\). 设 \(PB\) 与平面 \(QCD\) 所成的角为 \(\theta\)，则 \(\sin\theta=\dfrac{|\overrightarrow{PB}\cdot\bs{n}|}{|\overrightarrow{PB}|\,|\bs{n}|}=\dfrac{|1+t|}{\sqrt3\sqrt{1+t^2}}\). 因为 \((1+t)^2\le2(1+t^2)\)，即 \((t-1)^2\ge0\) 恒成立，所以 \(\dfrac{|1+t|}{\sqrt{1+t^2}}\le\sqrt2\)，从而 \(\sin\theta\le\dfrac{\sqrt2}{\sqrt3}=\dfrac{\sqrt6}{3}\)，当 \(t=1\) 时取到等号. 故 \(PB\) 与平面 \(QCD\) 所成角的正弦值的最大值为 \(\dfrac{\sqrt6}{3}\).
 \end{enumerate}
 \end{solution}
 
@@ -336,8 +341,9 @@ ACD
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：三角形面积为 \(\dfrac{2}{\e-1}\).
-\item 短答案：\(a\ge 1\).
+\item 当 \(a=\e\) 时，\(f(x)=\e\cdot\e^{x-1}-\ln x+\ln\e=\e^x-\ln x+1\)，所以 \(f(1)=\e+1\). 又 \(f'(x)=\e^x-\dfrac1x\)，所以 \(f'(1)=\e-1\)，曲线在点 \((1,\e+1)\) 处的切线方程为 \(y-(\e+1)=(\e-1)(x-1)\). 令 \(y=0\) 得 \(x=-\dfrac{2}{\e-1}\)，令 \(x=0\) 得 \(y=2\)，所以该切线与两坐标轴围成的三角形的面积为 \(\dfrac12\times\dfrac{2}{\e-1}\times2=\dfrac{2}{\e-1}\).
+\item 若 \(a\ge1\)，则 \(a\e^{x-1}\ge\e^{x-1}\) 且 \(\ln a\ge0\)，所以 \(f(x)\ge\e^{x-1}-\ln x\). 记 \(h(x)=\e^{x-1}-\ln x\)，则 \(h'(x)=\e^{x-1}-\dfrac1x\)，\(h''(x)=\e^{x-1}+\dfrac1{x^2}>0\)，所以 \(h'(x)\) 在 \((0,+\infty)\) 上单调递增. 又 \(h'(1)=0\)，所以当 \(0<x<1\) 时 \(h'(x)<0\)，当 \(x>1\) 时 \(h'(x)>0\)，即 \(h(x)\) 在 \((0,1)\) 上单调递减，在 \((1,+\infty)\) 上单调递增，故 \(h(x)\ge h(1)=1\). 从而 \(f(x)\ge1\)，即 \(a\ge1\) 满足题意.
+若 \(f(x)\ge1\) 对任意 \(x>0\) 恒成立，取 \(x=1\) 得 \(f(1)=a+\ln a\ge1\). 记 \(\varphi(a)=a+\ln a\)（\(a>0\)），则 \(\varphi'(a)=1+\dfrac1a>0\)，\(\varphi(a)\) 单调递增，且 \(\varphi(1)=1\)，所以 \(a\ge1\). 综上，\(a\) 的取值范围为 \([1,+\infty)\).
 \end{enumerate}
 \end{solution}
 
@@ -352,7 +358,7 @@ ACD
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(C\) 的方程为 \(\dfrac{x^2}{6}+\dfrac{y^2}{3}=1\).
-\item 短答案：定点 \(Q\left(\dfrac{4}{3},\dfrac{1}{3}\right)\)，且 \(|DQ|=\dfrac{2\sqrt{2}}{3}\).
+\item 由离心率 \(\dfrac ca=\dfrac{\sqrt2}{2}\) 得 \(c^2=\dfrac12a^2\)，所以 \(b^2=a^2-c^2=\dfrac12a^2\). 将 \(A(2,1)\) 代入椭圆方程得 \(\dfrac4{a^2}+\dfrac1{b^2}=1\)，即 \(\dfrac4{a^2}+\dfrac2{a^2}=1\)，所以 \(a^2=6\)，\(b^2=3\)，故 \(C\) 的方程为 \(\dfrac{x^2}{6}+\dfrac{y^2}{3}=1\).
+\item 由（1）知 \(C:x^2+2y^2=6\). 设 \(M(x_1,y_1)\)，\(N(x_2,y_2)\)，直线 \(MN\) 的方程为 \(y=kx+m\). 将 \(y=kx+m\) 代入椭圆方程得 \((1+2k^2)x^2+4kmx+2m^2-6=0\)，所以 \(x_1+x_2=-\dfrac{4km}{1+2k^2}\)，\(x_1x_2=\dfrac{2m^2-6}{1+2k^2}\). 由 \(AM\perp AN\) 得 \((x_1-2)(x_2-2)+(y_1-1)(y_2-1)=0\)，即 \((1+k^2)x_1x_2+(k(m-1)-2)(x_1+x_2)+(m-1)^2+4=0\). 将根与系数的关系代入并整理，得 \(3m^2+(8k-2)m+4k^2-1=0\)，即 \((3m+2k+1)(m+2k-1)=0\). 若 \(m=1-2k\)，则直线 \(MN\) 过点 \(A(2,1)\)，此时 \(M\)，\(N\)，\(A\) 中必有两个点重合，与 \(AM\perp AN\) 矛盾，舍去；所以 \(m=-\dfrac{2k+1}{3}\)，即直线 \(MN\) 恒过定点 \(P\left(\dfrac23,-\dfrac13\right)\). 因为 \(AD\perp MN\)，\(D\) 为垂足，所以 \(\angle ADP=90^\circ\)，点 \(D\) 在以 \(AP\) 为直径的圆上. 取 \(Q\) 为 \(AP\) 的中点，则 \(Q\left(\dfrac43,\dfrac13\right)\)，且 \(|DQ|=\dfrac12|AP|=\dfrac12\sqrt{\left(2-\dfrac23\right)^2+\left(1+\dfrac13\right)^2}=\dfrac12\times\dfrac{4\sqrt2}{3}=\dfrac{2\sqrt2}{3}\). 故存在定点 \(Q\left(\dfrac43,\dfrac13\right)\)，使得 \(|DQ|\) 为定值 \(\dfrac{2\sqrt2}{3}\).
 \end{enumerate}
 \end{solution}

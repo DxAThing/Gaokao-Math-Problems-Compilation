@@ -237,7 +237,10 @@ D
 \end{problem}
 
 \begin{solution}
-\(A=60^{\circ}\)；\(\sin C=\dfrac{\sqrt6+\sqrt2}{4}\).
+\begin{enumerate}
+\item 由已知展开得 \(\sin^2B-2\sin B\sin C+\sin^2C=\sin^2A-\sin B\sin C\)，即 \(\sin^2B+\sin^2C-\sin^2A=\sin B\sin C\). 由正弦定理得 \(b^2+c^2-a^2=bc\). 由余弦定理，\(\cos A=\dfrac{b^2+c^2-a^2}{2bc}=\dfrac{bc}{2bc}=\dfrac12\). 因为 \(0<A<\pi\)，所以 \(A=\dfrac\pi3\).
+\item 由正弦定理，已知条件 \(\sqrt2\,a+b=2c\) 可化为 \(\sqrt2\sin A+\sin B=2\sin C\). 因为 \(A=\dfrac\pi3\)，所以 \(\sin B=\sin(A+C)=\sin\dfrac\pi3\cos C+\cos\dfrac\pi3\sin C=\dfrac{\sqrt3}{2}\cos C+\dfrac12\sin C\). 代入得 \(\dfrac{\sqrt6}{2}+\dfrac{\sqrt3}{2}\cos C+\dfrac12\sin C=2\sin C\)，整理得 \(\sqrt3\sin C-\cos C=\sqrt2\)，即 \(\sin\left(C-\dfrac\pi6\right)=\dfrac{\sqrt2}{2}\). 因为 \(0<C<\dfrac{2\pi}{3}\)，所以 \(-\dfrac\pi6<C-\dfrac\pi6<\dfrac\pi2\)，故 \(C-\dfrac\pi6=\dfrac\pi4\)，\(C=\dfrac{5\pi}{12}\). 因此 \(\sin C=\sin\left(\dfrac\pi4+\dfrac\pi6\right)=\dfrac{\sqrt6+\sqrt2}{4}\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -253,7 +256,15 @@ D
 \end{problem}
 
 \begin{solution}
-\(MN\parallel\) 平面 \(C_1DE\)；二面角 \(A-MA_1-N\) 的正弦值为 \(\dfrac{\sqrt{10}}{5}\).
+\begin{enumerate}
+\item 建立空间直角坐标系，以 \(A\) 为原点，\(AB\) 所在直线为 \(x\) 轴，在平面 \(ABCD\) 内垂直于 \(AB\) 的直线为 \(y\) 轴，\(AA_1\) 所在直线为 \(z\) 轴. 由 \(AB=2\)，\(\angle BAD=60^\circ\)，\(AA_1=4\)，得 \(A=(0,0,0)\)，\(B=(2,0,0)\)，\(D=(1,\sqrt3,0)\)，\(C=(3,\sqrt3,0)\)，\(A_1=(0,0,4)\)，\(B_1=(2,0,4)\)，\(C_1=(3,\sqrt3,4)\). 因为 \(E\)，\(M\)，\(N\) 分别是 \(BC\)，\(BB_1\)，\(A_1D\) 的中点，所以 \(E=\left(\dfrac52,\dfrac{\sqrt3}{2},0\right)\)，\(M=(2,0,2)\)，\(N=\left(\dfrac12,\dfrac{\sqrt3}{2},2\right)\). 于是 \(\overrightarrow{MN}=\left(-\dfrac32,\dfrac{\sqrt3}{2},0\right)\)，\(\overrightarrow{DE}=\left(\dfrac32,-\dfrac{\sqrt3}{2},0\right)\). 从而 \(\overrightarrow{MN}=-\overrightarrow{DE}\)，即 \(MN\parallel DE\). 又 \(DE\subset\) 平面 \(C_1DE\)，\(MN\not\subset\) 平面 \(C_1DE\)，所以 \(MN\parallel\) 平面 \(C_1DE\).
+\item 平面 \(ABB_1A_1\)（即平面 \(A-MA_1\)）的一个法向量为 \(\bs{n}_1=(0,1,0)\). 又 \(\overrightarrow{A_1M}=(2,0,-2)\)，\(\overrightarrow{MN}=\left(-\dfrac32,\dfrac{\sqrt3}{2},0\right)\). 设平面 \(MA_1N\) 的法向量为 \(\bs{n}_2=(x,y,z)\)，则
+\examdisplaycases{}{
+\bs{n}_2\cdot\overrightarrow{A_1M}=2x-2z=0,\\
+\bs{n}_2\cdot\overrightarrow{MN}=-\dfrac32x+\dfrac{\sqrt3}{2}y=0
+}
+取 \(x=1\)，得 \(y=\sqrt3\)，\(z=1\)，即 \(\bs{n}_2=(1,\sqrt3,1)\). 从而 \(\cos\langle\bs{n}_1,\bs{n}_2\rangle=\dfrac{\bs{n}_1\cdot\bs{n}_2}{|\bs{n}_1|\,|\bs{n}_2|}=\dfrac{\sqrt3}{1\times\sqrt{1+3+1}}=\dfrac{\sqrt{15}}{5}\). 设二面角 \(A-MA_1-N\) 的平面角为 \(\theta\)，则 \(\sin\theta=\sqrt{1-\cos^2\langle\bs{n}_1,\bs{n}_2\rangle}=\dfrac{\sqrt{10}}{5}\). 所以二面角 \(A-MA_1-N\) 的正弦值为 \(\dfrac{\sqrt{10}}{5}\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -267,7 +278,10 @@ D
 \end{problem}
 
 \begin{solution}
-\(l\) 的方程为 \(y=\dfrac{3}{2}x-\dfrac{7}{8}\)；\(|AB|=\dfrac{4\sqrt{13}}{3}\).
+\begin{enumerate}
+\item 抛物线 \(C:y^2=3x\) 的准线方程为 \(x=-\dfrac34\). 设直线 \(l\) 的方程为 \(x=\dfrac23y+m\)，\(A(x_1,y_1)\)，\(B(x_2,y_2)\). 联立方程得 \(y^2-2y-3m=0\)，判别式 \(\Delta=4+12m>0\). 由韦达定理，\(y_1+y_2=2\)，\(y_1y_2=-3m\). 于是 \(x_1+x_2=\dfrac23(y_1+y_2)+2m=\dfrac43+2m\). 由抛物线定义，\(|AF|+|BF|=x_1+x_2+\dfrac32=\dfrac43+2m+\dfrac32=4\)，解得 \(m=\dfrac{7}{12}\). 此时 \(\Delta=4+7=11>0\)，直线方程化为 \(y=\dfrac32\left(x-\dfrac{7}{12}\right)=\dfrac32x-\dfrac78\).
+\item 由 \(P\) 是直线 \(l\) 与 \(x\) 轴的交点，得 \(P(m,0)\). 由 \(\overrightarrow{AP}=3\overrightarrow{PB}\)，得 \(-y_1=3y_2\)，即 \(y_1=-3y_2\). 结合 \(y_1+y_2=2\)，解得 \(y_2=-1\)，\(y_1=3\). 此时 \(y_1y_2=-3\)，代入 \(y_1y_2=-3m\) 得 \(m=1\)，满足 \(\Delta>0\). 于是 \(|AB|=\sqrt{1+\left(\dfrac23\right)^2}|y_1-y_2|=\dfrac{\sqrt{13}}{3}\times|3-(-1)|=\dfrac{4\sqrt{13}}{3}\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -281,7 +295,10 @@ D
 \end{problem}
 
 \begin{solution}
-\(f'(x)\) 在区间 \(\left(-1,\dfrac{\pi}{2}\right)\) 存在唯一极大值点；\(f(x)\) 有且仅有 \(2\) 个零点.
+\begin{enumerate}
+\item 函数 \(f(x)\) 的定义域为 \((-1,+\infty)\)，求导得 \(f'(x)=\cos x-\dfrac{1}{1+x}\)，\(f''(x)=-\sin x+\dfrac{1}{(1+x)^2}\). 进一步求导得 \(f'''(x)=-\cos x-\dfrac{2}{(1+x)^3}\). 当 \(x\in\left(-1,\dfrac\pi2\right)\) 时，\(\cos x>0\)，\(1+x>0\)，所以 \(f'''(x)<0\)，从而 \(f''(x)\) 在 \(\left(-1,\dfrac\pi2\right)\) 上单调递减. 又 \(f''(0)=1>0\)，\(f''\left(\dfrac\pi2\right)=-1+\dfrac{1}{\left(1+\frac\pi2\right)^2}<0\)，故存在唯一的 \(x_0\in\left(0,\dfrac\pi2\right)\) 使得 \(f''(x_0)=0\). 当 \(x\in(-1,x_0)\) 时 \(f''(x)>0\)，\(f'(x)\) 单调递增；当 \(x\in\left(x_0,\dfrac\pi2\right)\) 时 \(f''(x)<0\)，\(f'(x)\) 单调递减. 因此 \(f'(x)\) 在区间 \(\left(-1,\dfrac\pi2\right)\) 存在唯一极大值点 \(x_0\).
+\item 由 \(f(0)=\sin0-\ln1=0\) 知 \(x=0\) 是 \(f(x)\) 的一个零点. 由（1）可知 \(f'(x)\) 在 \((-1,x_0)\) 上单调递增，且 \(f'(0)=0\)，所以当 \(x\in(-1,0)\) 时 \(f'(x)<f'(0)=0\)，\(f(x)\) 单调递减；因为 \(f(0)=0\)，所以在 \((-1,0)\) 上 \(f(x)>0\)，不存在零点. 当 \(x\in(0,x_0)\) 时 \(f'(x)>f'(0)=0\)，\(f(x)\) 单调递增. 又 \(f'(x)\) 在 \(\left(x_0,\dfrac\pi2\right)\) 上单调递减，且 \(f'\left(\dfrac\pi2\right)=-\dfrac{1}{1+\frac\pi2}<0\)，故存在唯一的 \(x_1\in\left(x_0,\dfrac\pi2\right)\) 使得 \(f'(x_1)=0\). 当 \(x\in\left(x_0,x_1\right)\) 时 \(f'(x)>0\)，\(f(x)\) 单调递增；当 \(x\in\left(x_1,\pi\right]\) 时，因 \(\cos x\le0\)，\(f'(x)<0\)，\(f(x)\) 单调递减. 从而 \(f(x_1)>f(0)=0\)，且 \(f(\pi)=\sin\pi-\ln(1+\pi)=-\ln(1+\pi)<0\)，所以在 \((x_1,\pi)\) 内存在唯一的零点. 当 \(x>\pi\) 时，\(\sin x\le1\)，而 \(\ln(1+x)>\ln(1+\pi)>1\)，所以 \(f(x)<0\)，不存在零点. 综上，\(f(x)\) 有且仅有 \(2\) 个零点.
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -300,7 +317,22 @@ D
 \end{problem}
 
 \begin{solution}
-\(P(X=-1)=(1-\alpha)\beta\)，\(P(X=0)=\alpha\beta+(1-\alpha)(1-\beta)\)，\(P(X=1)=\alpha(1-\beta)\)；\(p_4=\dfrac{1}{257}\).
+\begin{enumerate}
+\item 由题意，\(X\) 的所有可能取值为 \(-1\)，\(0\)，\(1\). 当甲药未治愈且乙药治愈时，\(X=-1\)，其概率为 \(P(X=-1)=(1-\alpha)\beta\)；当两种药都治愈或都未治愈时，\(X=0\)，其概率为 \(P(X=0)=\alpha\beta+(1-\alpha)(1-\beta)\)；当甲药治愈且乙药未治愈时，\(X=1\)，其概率为 \(P(X=1)=\alpha(1-\beta)\). 故 \(X\) 的分布列为
+
+\begin{center}
+\begin{tabular}{c|ccc}
+\(X\) & \(-1\) & \(0\) & \(1\) \\ \hline
+\(P\) & \((1-\alpha)\beta\) & \(\alpha\beta+(1-\alpha)(1-\beta)\) & \(\alpha(1-\beta)\)
+\end{tabular}
+\end{center}
+
+\item
+\begin{enumerate}
+\item 当 \(\alpha=0.5\)，\(\beta=0.8\) 时，\(a=(1-0.5)\times0.8=0.4\)，\(b=0.5\times0.8+0.5\times0.2=0.5\)，\(c=0.5\times(1-0.8)=0.1\). 因为 \(a+b+c=1\)，所以 \(1-b=a+c\). 将已知递推关系改写为 \((a+c)p_i=ap_{i-1}+cp_{i+1}\)，即 \(c(p_{i+1}-p_i)=a(p_i-p_{i-1})\). 于是 \(p_{i+1}-p_i=\dfrac ac(p_i-p_{i-1})=4(p_i-p_{i-1})\)（\(i=1\)，\(2\)，\(\cdots\)，\(7\)）. 又由 \(p_0=0\)，\(p_8=1\) 知 \(p_1-p_0>0\)，所以 \(\{p_{i+1}-p_i\}\)（\(i=0\)，\(1\)，\(2\)，\(\cdots\)，\(7\)）是公比为 \(4\) 的等比数列.
+\item 设 \(p_1-p_0=d_1\)，则 \(p_{i+1}-p_i=d_1\times4^i\). 由 \(p_8-p_0=\displaystyle\sum_{i=0}^7(p_{i+1}-p_i)=d_1\dfrac{4^8-1}{4-1}=1\)，得 \(d_1=\dfrac{3}{4^8-1}\). 从而 \(p_4=p_0+\displaystyle\sum_{i=0}^3(p_{i+1}-p_i)=d_1\dfrac{4^4-1}{4-1}=\dfrac{4^4-1}{4^8-1}=\dfrac{1}{4^4+1}=\dfrac{1}{257}\). 在试验中，乙药的实际治愈率高于甲药（\(0.8>0.5\)），\(p_4\) 表示在双方初始分数相等时误判“甲药比乙药更有效”的概率. 因为 \(p_4=\dfrac{1}{257}\approx0.0039\) 极小，正确认定乙药更有效的概率高达 \(1-p_4=\dfrac{256}{257}\approx99.61\%\)，所以该试验方案能够以极高的把握区分出药效更好的新药，具有良好的合理性.
+\end{enumerate}
+\end{enumerate}
 \end{solution}
 
 \section{选考题：解答题}
@@ -316,7 +348,10 @@ D
 \end{problem}
 
 \begin{solution}
-\(C\) 的直角坐标方程为 \(x^2+\dfrac{y^2}{4}=1\)，\(l\) 的直角坐标方程为 \(2x+\sqrt3y+11=0\)；\(C\) 上的点到 \(l\) 的最小距离为 \(\sqrt7\).
+\begin{enumerate}
+\item 由 \(C\) 的参数方程得 \(x^2+\dfrac{y^2}{4}=\dfrac{(1-t^2)^2}{(1+t^2)^2}+\dfrac{4t^2}{(1+t^2)^2}=\dfrac{(1+t^2)^2}{(1+t^2)^2}=1\). 因为 \(x=\dfrac{1-t^2}{1+t^2}=\dfrac{2}{1+t^2}-1\in(-1,1]\)，所以曲线 \(C\) 的直角坐标方程为 \(x^2+\dfrac{y^2}{4}=1\)（\(x\ne-1\)）. 由极坐标与直角坐标互化公式 \(x=\rho\cos\theta\)，\(y=\rho\sin\theta\)，直线 \(l\) 的直角坐标方程为 \(2x+\sqrt3y+11=0\).
+\item 设 \(C\) 上的点坐标为 \((\cos\varphi,2\sin\varphi)\)（\(\varphi\ne\pi\)）. 该点到直线 \(l\) 的距离为 \(d=\dfrac{|2\cos\varphi+2\sqrt3\sin\varphi+11|}{\sqrt{2^2+(\sqrt3)^2}}=\dfrac{|4\sin\left(\varphi+\frac\pi6\right)+11|}{\sqrt7}\). 因为 \(-1\le\sin\left(\varphi+\dfrac\pi6\right)\le1\)，所以 \(4\sin\left(\varphi+\dfrac\pi6\right)+11\ge7\)，当 \(\varphi+\dfrac\pi6=-\dfrac\pi2\)，即 \(\varphi=-\dfrac{2\pi}{3}\) 时取等号，此时 \(x=\cos\left(-\dfrac{2\pi}{3}\right)=-\dfrac12\ne-1\). 因此 \(C\) 上的点到 \(l\) 的最小距离为 \(\dfrac{7}{\sqrt7}=\sqrt7\).
+\end{enumerate}
 \end{solution}
 
 \begin{problem}
@@ -330,5 +365,8 @@ D
 \end{problem}
 
 \begin{solution}
-两不等式均成立.
+\begin{enumerate}
+\item 因为 \(a\)，\(b\)，\(c\) 为正数且 \(abc=1\)，所以 \(\dfrac1a+\dfrac1b+\dfrac1c=bc+ca+ab\). 又 \(a^2+b^2+c^2-(ab+bc+ca)=\dfrac12\bigl((a-b)^2+(b-c)^2+(c-a)^2\bigr)\ge0\)，即 \(ab+bc+ca\le a^2+b^2+c^2\)，所以 \(\dfrac1a+\dfrac1b+\dfrac1c\le a^2+b^2+c^2\).
+\item 由基本不等式，\((a+b)^3\ge\bigl(2\sqrt{ab}\bigr)^3=8(ab)^{\frac{3}{2}}\). 同理 \((b+c)^3\ge8(bc)^{\frac{3}{2}}\)，\((c+a)^3\ge8(ca)^{\frac{3}{2}}\). 三式相加得 \((a+b)^3+(b+c)^3+(c+a)^3\ge8\bigl((ab)^{\frac{3}{2}}+(bc)^{\frac{3}{2}}+(ca)^{\frac{3}{2}}\bigr)\). 再次使用基本不等式，得 \((ab)^{\frac{3}{2}}+(bc)^{\frac{3}{2}}+(ca)^{\frac{3}{2}}\ge3\sqrt[3]{(ab)^{\frac{3}{2}}(bc)^{\frac{3}{2}}(ca)^{\frac{3}{2}}}=3\sqrt[3]{(abc)^3}=3\). 故 \((a+b)^3+(b+c)^3+(c+a)^3\ge8\times3=24\).
+\end{enumerate}
 \end{solution}

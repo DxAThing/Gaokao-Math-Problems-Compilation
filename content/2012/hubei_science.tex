@@ -144,7 +144,7 @@ C
 \end{answer}
 
 \begin{solution}
-设任意非零等比数列为 \(a_n=Aq^{n-1}\). 对于 \(f(x)=x^2\)，有 \(f(a_n)=A^2(q^2)^{n-1}\)，仍为等比数列. 对于 \(f(x)=\sqrt{|x|}\)，有 \(f(a_n)=\sqrt{|A|}\,|q|^{(n-1)/2}\)，也仍为等比数列.
+设任意非零等比数列为 \(a_n=Aq^{n-1}\). 对于 \(f(x)=x^2\)，有 \(f(a_n)=A^2(q^2)^{n-1}\)，仍为等比数列. 对于 \(f(x)=\sqrt{|x|}\)，有 \(f(a_n)=\sqrt{|A|}\,|q|^{\frac{(n-1)}{2}}\)，也仍为等比数列.
 
 取等比数列 \(a_n=2^{n-1}\)，则 \(2^{a_n}=2\)，\(4\)，\(16\)，\(\ldots\)，前两项之比为 \(2\)，后两项之比为 \(4\)，所以 \(2^x\) 不保等比. 对同一数列，\(\ln|a_n|=(n-1)\ln2\)，其首项为 \(0\) 而第二项为 \(\ln2\neq0\)；若它是等比数列，则第二项应等于首项乘以公比，矛盾，所以 \(\ln|x|\) 也不保等比. 因此只有序号 \(1\)，\(3\) 符合，故选 C.
 \end{solution}
@@ -166,7 +166,7 @@ A
 \end{answer}
 
 \begin{solution}
-设 \(OA=OB=R\). 扇形面积为 \(S_0=\frac14\pi R^2\)，每个半圆的半径为 \(R/2\). 两个半圆的圆心距为 \(R/\sqrt2\)，两圆交叠部分对应的两个圆心角均为 \(\pi/2\)，故交叠面积为 \(S_I=2\left(\frac12\left(\frac R2\right)^2\frac\pi2-\frac12\left(\frac R2\right)^2\right)=\frac{\pi-2}{8}R^2\).
+设 \(OA=OB=R\). 扇形面积为 \(S_0=\frac14\pi R^2\)，每个半圆的半径为 \(\frac{R}{2}\). 两个半圆的圆心距为 \(\frac{R}{\sqrt2}\)，两圆交叠部分对应的两个圆心角均为 \(\frac{\pi}{2}\)，故交叠面积为 \(S_I=2\left(\frac12\left(\frac R2\right)^2\frac\pi2-\frac12\left(\frac R2\right)^2\right)=\frac{\pi-2}{8}R^2\).
 
 阴影部分由两个半圆的交叠部分和扇形中两个半圆以外的部分组成. 由于两个半圆面积之和恰好等于扇形面积，阴影面积为 \(2S_I=\frac{\pi-2}{4}R^2\). 因此所求概率为 \(\displaystyle\frac{2S_I}{S_0}=\frac{\pi-2}{\pi}=1-\frac2\pi\)，故选 A.
 \end{solution}
@@ -402,7 +402,7 @@ S_n=\begin{cases}
 \begin{enumerate}
 \item \(f'(x)=r-rx^{r-1}=r(1-x^{r-1})\). 因为 \(r-1<0\)，当 \(0<x<1\) 时 \(x^{r-1}>1\)，故 \(f'(x)<0\)；当 \(x>1\) 时 \(x^{r-1}<1\)，故 \(f'(x)>0\). 所以 \(f(x)\) 在 \((0,1)\) 上递减，在 \((1,+\infty)\) 上递增，最小值在 \(x=1\) 处取得，且 \(f(1)=r-1+1-r=0\).
 \item 由（1）知对任意 \(x>0\)，有 \(rx-x^r+(1-r)\geqslant0\)，即 \(x^r\leqslant rx+1-r\). 若 \(a_1=0\) 或 \(a_2=0\)，因 \(b_1\)，\(b_2>0\)，左边为 \(0\)，而右边非负，所以不等式成立. 若 \(a_1\)，\(a_2>0\)，令 \(x=\frac{a_1}{a_2}\)，令 \(r=b_1\)，并利用 \(b_2=1-b_1\)，得 \(\left(\frac{a_1}{a_2}\right)^{b_1}\leqslant b_1\frac{a_1}{a_2}+b_2\). 两边乘以 \(a_2>0\)，得到 \(a_1^{b_1}a_2^{b_2}\leqslant a_1b_1+a_2b_2\).
-\item 推广命题为：若 \(a_1\)，\(\ldots\)，\(a_n\geqslant0\)，\(b_1\)，\(\ldots\)，\(b_n\) 为正有理数，且 \(b_1+\cdots+b_n=1\)，则 \(\displaystyle\prod_{i=1}^{n}a_i^{b_i}\leqslant\sum_{i=1}^{n}a_ib_i\). 用数学归纳法证明.\(n=1\) 时，\(b_1=1\)，两边均为 \(a_1\)，命题成立. 假设 \(n=k\) 时命题成立. 对 \(n=k+1\)，令 \(B=1-b_{k+1}\)，则 \(B>0\)，且 \(c_i=b_i/B\)（\(1\leqslant i\leqslant k\)）为正有理数并满足 \(\sum_{i=1}^kc_i=1\). 由归纳假设，\(\displaystyle\prod_{i=1}^{k}a_i^{c_i}\leqslant\frac{\sum_{i=1}^{k}a_ib_i}{B}\). 记 \(A=\frac{\sum_{i=1}^{k}a_ib_i}{B}\)，则 \(A\geqslant0\)，从而 \(\displaystyle\prod_{i=1}^{k+1}a_i^{b_i}=\left(\prod_{i=1}^{k}a_i^{c_i}\right)^B a_{k+1}^{b_{k+1}}\leqslant A^B a_{k+1}^{b_{k+1}}\). 对两个非负数 \(A\)，\(a_{k+1}\) 使用（2），权重为 \(B\)，\(b_{k+1}\)，得到 \(A^B a_{k+1}^{b_{k+1}}\leqslant BA+b_{k+1}a_{k+1}=\sum_{i=1}^{k+1}a_ib_i\). 故 \(n=k+1\) 时命题也成立，归纳可知推广命题对一切正整数 \(n\) 成立.
+\item 推广命题为：若 \(a_1\)，\(\ldots\)，\(a_n\geqslant0\)，\(b_1\)，\(\ldots\)，\(b_n\) 为正有理数，且 \(b_1+\cdots+b_n=1\)，则 \(\displaystyle\prod_{i=1}^{n}a_i^{b_i}\leqslant\sum_{i=1}^{n}a_ib_i\). 用数学归纳法证明.\(n=1\) 时，\(b_1=1\)，两边均为 \(a_1\)，命题成立. 假设 \(n=k\) 时命题成立. 对 \(n=k+1\)，令 \(B=1-b_{k+1}\)，则 \(B>0\)，且 \(c_i=\frac{b_i}{B}\)（\(1\leqslant i\leqslant k\)）为正有理数并满足 \(\sum_{i=1}^kc_i=1\). 由归纳假设，\(\displaystyle\prod_{i=1}^{k}a_i^{c_i}\leqslant\frac{\sum_{i=1}^{k}a_ib_i}{B}\). 记 \(A=\frac{\sum_{i=1}^{k}a_ib_i}{B}\)，则 \(A\geqslant0\)，从而 \(\displaystyle\prod_{i=1}^{k+1}a_i^{b_i}=\left(\prod_{i=1}^{k}a_i^{c_i}\right)^B a_{k+1}^{b_{k+1}}\leqslant A^B a_{k+1}^{b_{k+1}}\). 对两个非负数 \(A\)，\(a_{k+1}\) 使用（2），权重为 \(B\)，\(b_{k+1}\)，得到 \(A^B a_{k+1}^{b_{k+1}}\leqslant BA+b_{k+1}a_{k+1}=\sum_{i=1}^{k+1}a_ib_i\). 故 \(n=k+1\) 时命题也成立，归纳可知推广命题对一切正整数 \(n\) 成立.
 \end{enumerate}
 \end{solution}
 
@@ -423,7 +423,7 @@ S_n=\begin{cases}
 \item 设 \(BD=x\)，则 \(CD=3-x\)，且 \(0<x<3\). 在折起前的直角三角形 \(ADC\) 中，\(\angle ACD=45^{\circ}\)，所以 \(AD=CD=3-x\). 折起后 \(AD\perp BD\)，又 \(AD\perp DC\)，且 \(BD\) 与 \(DC\) 相交于 \(D\)，故 \(AD\perp\) 平面 \(BCD\). 又 \(\angle BDC=90^{\circ}\)，所以 \(S_{\triangle BCD}=\frac12x(3-x)\). 三棱锥体积为 \(\displaystyle V(x)=\frac13AD\cdot S_{\triangle BCD}=\frac16x(3-x)^2\). 求导得 \(V'(x)=\frac12(x-1)(x-3)\). 在 \((0,1)\) 上 \(V'(x)>0\)，在 \((1,3)\) 上 \(V'(x)<0\)，所以体积在 \(x=1\) 时最大，即 \(BD=1\).
 \item 体积最大时 \(BD=1\)，且 \(AD=CD=2\). 以 \(D\) 为原点，分别以 \(DB\)，\(DC\)，\(DA\) 的方向为三个坐标轴，取 \(B=(1,0,0)\)，\(C=(0,2,0)\)，\(A=(0,0,2)\). 于是 \(E=\left(\frac12,1,0\right)\)，\(M=(0,1,1)\). 设 \(N=(0,t,0)\)，则 \(\overrightarrow{EN}=\left(-\frac12,t-1,0\right)\)，\(\overrightarrow{BM}=(-1,1,1)\). 由垂直条件 \(\overrightarrow{EN}\cdot\overrightarrow{BM}=0\)，得 \(\frac12+t-1=0\)，所以 \(t=\frac12\)，即 \(DN=\frac12\).
 
-取平面 \(BMN\) 的法向量 \(\bs n=(1,2,-1)\)，而 \(\overrightarrow{EN}=\left(-\frac12,-\frac12,0\right)\). 设直线 \(EN\) 与平面 \(BMN\) 所成的角为 \(\theta\)，则 \(\displaystyle\sin\theta=\frac{|\overrightarrow{EN}\cdot\bs n|}{|\overrightarrow{EN}|\,|\bs n|}=\frac{3/2}{(1/\sqrt2)\sqrt6}=\frac{\sqrt3}{2}\). 由于 \(0\leqslant\theta\leqslant\frac\pi2\)，故 \(\theta=\frac\pi3=60^{\circ}\).
+取平面 \(BMN\) 的法向量 \(\bs n=(1,2,-1)\)，而 \(\overrightarrow{EN}=\left(-\frac12,-\frac12,0\right)\). 设直线 \(EN\) 与平面 \(BMN\) 所成的角为 \(\theta\)，则 \(\displaystyle\sin\theta=\frac{|\overrightarrow{EN}\cdot\bs n|}{|\overrightarrow{EN}|\,|\bs n|}=\frac{\frac{3}{2}}{(\frac{1}{\sqrt2})\sqrt6}=\frac{\sqrt3}{2}\). 由于 \(0\leqslant\theta\leqslant\frac\pi2\)，故 \(\theta=\frac\pi3=60^{\circ}\).
 \end{enumerate}
 \end{solution}
 
@@ -440,6 +440,6 @@ S_n=\begin{cases}
 \begin{solution}
 \begin{enumerate}
 \item 设 \(A=(x_0,y_0)\)，\(M=(x,y)\). 因 \(l\) 垂直于 \(x\) 轴，故 \(x=x_0\)，而 \(|y|=m|y_0|\). 由 \(x_0^2+y_0^2=1\) 得 \(x^2+\frac{y^2}{m^2}=1\). 因此 \(C\) 是椭圆. 当 \(0<m<1\) 时，半长轴为 \(1\)，焦点为 \(\left(\pm\sqrt{1-m^2},0\right)\)；当 \(m>1\) 时，半长轴为 \(m\)，焦点为 \(\left(0,\pm\sqrt{m^2-1}\right)\).
-\item 设 \(P=(p,kp)\)，其中 \(p>0\)，则由中心对称性 \(Q=(-p,-kp)\)，且 \(N=(0,kp)\). 直线 \(QN\) 的斜率为 \(2k\)，故其方程为 \(y=2kx+kp\). 设该直线与椭圆的另一个交点为 \(H=(h,y_H)\). 将直线方程代入 \(x^2+y^2/m^2=1\)，所得关于 \(x\) 的二次方程的一个根为 \(-p\)，由两根之和可得 \(h=\frac{pm^2}{m^2+4k^2}\). 于是 \(y_H=2kh+kp\). 因此 \(PH\) 的斜率为 \(\displaystyle\frac{y_H-kp}{h-p}=\frac{2kh}{h-p}=-\frac{m^2}{2k}\)，而 \(PQ\) 的斜率为 \(k\). 所以 \(PQ\perp PH\) 的充要条件为 \(k\left(-\frac{m^2}{2k}\right)=-1\)，即 \(m^2=2\). 因为 \(m>0\)，取 \(m=\sqrt2\). 此值与 \(k\) 无关，故对任意 \(k>0\) 均成立，所求 \(m\) 存在且为 \(\sqrt2\).
+\item 设 \(P=(p,kp)\)，其中 \(p>0\)，则由中心对称性 \(Q=(-p,-kp)\)，且 \(N=(0,kp)\). 直线 \(QN\) 的斜率为 \(2k\)，故其方程为 \(y=2kx+kp\). 设该直线与椭圆的另一个交点为 \(H=(h,y_H)\). 将直线方程代入 \(x^2+\frac{y^2}{m^2}=1\)，所得关于 \(x\) 的二次方程的一个根为 \(-p\)，由两根之和可得 \(h=\frac{pm^2}{m^2+4k^2}\). 于是 \(y_H=2kh+kp\). 因此 \(PH\) 的斜率为 \(\displaystyle\frac{y_H-kp}{h-p}=\frac{2kh}{h-p}=-\frac{m^2}{2k}\)，而 \(PQ\) 的斜率为 \(k\). 所以 \(PQ\perp PH\) 的充要条件为 \(k\left(-\frac{m^2}{2k}\right)=-1\)，即 \(m^2=2\). 因为 \(m>0\)，取 \(m=\sqrt2\). 此值与 \(k\) 无关，故对任意 \(k>0\) 均成立，所求 \(m\) 存在且为 \(\sqrt2\).
 \end{enumerate}
 \end{solution}

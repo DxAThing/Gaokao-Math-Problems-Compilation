@@ -55,7 +55,7 @@ A
 \end{problem}
 
 \begin{answer}
-D
+C
 \end{answer}
 
 \begin{problem}
@@ -64,7 +64,7 @@ D
 x+y\ge4,\\
 x-y\le2,\\
 y\le3,
-\end{cases}\)
+\end{cases}\)，
 则 \(z=3x+y\) 的最小值为（\quad）
 
 \choices
@@ -235,13 +235,29 @@ D
 \end{enumerate}
 \end{problem}
 
-\begin{solution}
-短答案：
+\solution{
 \begin{enumerate}
-\item \(\bar{x}=10\)，\(\bar{y}=10.3\)，\(s_1^2=0.036\)，\(s_2^2=0.04\).
-\item 新设备生产产品的该项指标的均值较旧设备有显著提高.
+\item 旧设备生产产品的该项指标的样本平均数和样本方差分别为
+\[
+\bar{x}=\frac{1}{10}\sum_{i=1}^{10} x_i=\frac{100.0}{10}=10
+\]
+\[
+s_1^2=\frac{1}{10}\sum_{i=1}^{10}(x_i-\bar{x})^2=\frac{0.36}{10}=0.036
+\]
+新设备生产产品的该项指标的样本平均数和样本方差分别为
+\[
+\bar{y}=\frac{1}{10}\sum_{i=1}^{10} y_i=\frac{103.0}{10}=10.3
+\]
+\[
+s_2^2=\frac{1}{10}\sum_{i=1}^{10}(y_i-\bar{y})^2=\frac{0.40}{10}=0.04
+\]
+\item 由（1）知 \(\bar{y}-\bar{x}=10.3-10=0.3\). 又
+\[
+2\sqrt{\frac{s_1^2+s_2^2}{10}}=2\sqrt{\frac{0.036+0.04}{10}}=2\sqrt{0.0076}\approx 0.174
+\]
+因为 \(0.3\ge 2\sqrt{0.0076}\)，即 \(\bar{y}-\bar{x}\ge2\sqrt{\dfrac{s_1^2+s_2^2}{10}}\)，所以认为新设备生产产品的该项指标的均值较旧设备有显著提高.
 \end{enumerate}
-\end{solution}
+}
 
 \begin{problem}
 如图，四棱锥 \(P-ABCD\) 的底面是矩形，\(PD\perp\) 底面 \(ABCD\)，\(M\) 为 \(BC\) 的中点，且 \(PB\perp AM\).
@@ -254,13 +270,15 @@ D
 \bitmapfigure[width=0.42\linewidth]{img/2021/national_paper_B_liberal/q18_fig1.png}
 \end{problem}
 
-\begin{solution}
-短答案：
+\solution{
 \begin{enumerate}
-\item 平面 \(PAM\perp\) 平面 \(PBD\).
-\item 四棱锥 \(P-ABCD\) 的体积为 \(\dfrac{\sqrt2}{3}\).
+\item 因为 \(PD\perp\) 底面 \(ABCD\)，且 \(AM\subset\) 平面 \(ABCD\)，所以 \(PD\perp AM\). 又已知 \(PB\perp AM\)，且 \(PD\cap PB=P\)，所以 \(AM\perp\) 平面 \(PBD\). 因为 \(AM\subset\) 平面 \(PAM\)，所以平面 \(PAM\perp\) 平面 \(PBD\).
+\item 由（1）知 \(AM\perp\) 平面 \(PBD\)，又 \(BD\subset\) 平面 \(PBD\)，所以 \(AM\perp BD\). 在矩形 \(ABCD\) 中，\(AB=DC=1\). 设 \(BC=b\)，以 \(D\) 为坐标原点，分别以 \(DC\)，\(DA\) 所在射线为 \(x\) 轴、\(y\) 轴正方向建立平面直角坐标系，则 \(D(0,0)\)，\(C(1,0)\)，\(A(0,b)\)，\(B(1,b)\). 因为 \(M\) 为 \(BC\) 的中点，所以 \(M\left(1,\dfrac{b}{2}\right)\). 则 \(\overrightarrow{AM}=\left(1,-\dfrac{b}{2}\right)\)，\(\overrightarrow{BD}=(-1,-b)\). 由 \(AM\perp BD\) 得 \(\overrightarrow{AM}\cdot\overrightarrow{BD}=-1+\dfrac{b^2}{2}=0\)，解得 \(b=\sqrt2\). 所以 \(BC=\sqrt2\)，底面面积 \(S_{ABCD}=AB\times BC=1\times\sqrt2=\sqrt2\). 故四棱锥 \(P-ABCD\) 的体积为
+\[
+V_{P-ABCD}=\frac13 S_{ABCD}\cdot PD=\frac13\times\sqrt2\times 1=\frac{\sqrt2}{3}
+\]
 \end{enumerate}
-\end{solution}
+}
 
 \begin{problem}
 设 \(\{a_n\}\) 是首项为 \(1\) 的等比数列，数列 \(\{b_n\}\) 满足 \(b_n=\dfrac{na_n}{3}\). 已知 \(a_1\)，\(3a_2\)，\(9a_3\) 成等差数列.
@@ -271,13 +289,37 @@ D
 \end{enumerate}
 \end{problem}
 
-\begin{solution}
-短答案：
+\solution{
 \begin{enumerate}
-\item \(a_n=\left(\dfrac{1}{3}\right)^{n-1}\)，\(b_n=\dfrac{n}{3^n}\).
-\item \(T_n<\dfrac{S_n}{2}\).
+\item 设等比数列 \(\{a_n\}\) 的公比为 \(q\). 因为 \(a_1=1\)，且 \(a_1\)，\(3a_2\)，\(9a_3\) 成等差数列，所以
+\(6a_2=a_1+9a_3\)，即 \(6q=1+9q^2\).
+整理得 \((3q-1)^2=0\)，解得 \(q=\dfrac13\).
+所以 \(a_n=a_1 q^{n-1}=\left(\dfrac13\right)^{n-1}\)，进而 \(b_n=\dfrac{n a_n}{3}=\dfrac{n}{3^n}\).
+\item 等比数列 \(\{a_n\}\) 的前 \(n\) 项和为
+\[
+S_n=\frac{1-\left(\frac13\right)^n}{1-\frac13}=\frac32\left[1-\left(\frac13\right)^n\right]
+\]
+由 \(b_n=\dfrac{n}{3^n}\)，其前 \(n\) 项和为
+\[
+T_n=\frac{1}{3}+\frac{2}{3^2}+\frac{3}{3^3}+\dots+\frac{n}{3^n}
+\]
+两边同乘 \(\dfrac13\)，得
+\[
+\frac13 T_n=\frac{1}{3^2}+\frac{2}{3^3}+\dots+\frac{n-1}{3^n}+\frac{n}{3^{n+1}}
+\]
+两式相减得
+\[
+\frac23 T_n=\frac{1}{3}+\frac{1}{3^2}+\dots+\frac{1}{3^n}-\frac{n}{3^{n+1}}
+=\frac{\frac13\left[1-\left(\frac13\right)^n\right]}{1-\frac13}-\frac{n}{3^{n+1}}
+=\frac12\left[1-\left(\frac13\right)^n\right]-\frac{n}{3^{n+1}}
+\]
+两边乘 \(\dfrac32\)，得
+\[
+T_n=\frac34\left[1-\left(\frac13\right)^n\right]-\frac{n}{2\cdot 3^n}
+\]
+又 \(\dfrac{S_n}{2}=\dfrac34\left[1-\left(\dfrac13\right)^n\right]\)，且对于任意正整数 \(n\) 都有 \(\dfrac{n}{2\cdot 3^n}>0\)，所以 \(T_n<\dfrac{S_n}{2}\).
 \end{enumerate}
-\end{solution}
+}
 
 \begin{problem}
 已知抛物线 \(C:y^2=2px\)（\(p>0\)）的焦点 \(F\) 到准线的距离为 \(2\).
@@ -288,13 +330,26 @@ D
 \end{enumerate}
 \end{problem}
 
-\begin{solution}
-短答案：
+\solution{
 \begin{enumerate}
-\item \(C\) 的方程为 \(y^2=4x\).
-\item 直线 \(OQ\) 斜率的最大值为 \(\dfrac{1}{3}\).
+\item 抛物线 \(C:y^2=2px\)（\(p>0\)）的焦点 \(F\left(\dfrac{p}{2},0\right)\) 到准线 \(x=-\dfrac{p}{2}\) 的距离为 \(p\). 由题设 \(p=2\)，所以 \(C\) 的方程为 \(y^2=4x\).
+\item 由（1）知 \(F(1,0)\). 设点 \(P(x_0,y_0)\) 在抛物线 \(C\) 上，则 \(y_0^2=4x_0\)，即 \(x_0=\dfrac{y_0^2}{4}\). 设点 \(Q(x_Q,y_Q)\)，由 \(\overrightarrow{PQ}=9\overrightarrow{QF}\)，得
+\((x_Q-x_0,y_Q-y_0)=9(1-x_Q,-y_Q)\)，
+解得
+\[
+x_Q=\frac{x_0+9}{10}=\frac{y_0^2+36}{40},\quad y_Q=\frac{y_0}{10}
+\]
+显然 \(x_Q>0\). 当 \(y_0=0\) 时，\(y_Q=0\)，直线 \(OQ\) 的斜率为 \(0\). 当 \(y_0\ne 0\) 时，直线 \(OQ\) 的斜率为
+\[
+k=\frac{y_Q}{x_Q}=\frac{\frac{y_0}{10}}{\frac{y_0^2+36}{40}}=\frac{4y_0}{y_0^2+36}
+\]
+要使斜率取得最大值，必有 \(y_0>0\). 此时
+\[
+k=\frac{4}{y_0+\frac{36}{y_0}}\le\frac{4}{2\sqrt{y_0\cdot\frac{36}{y_0}}}=\frac{4}{12}=\frac13
+\]
+当且仅当 \(y_0=\dfrac{36}{y_0}\)，即 \(y_0=6\) 时等号成立. 此时 \(P(9,6)\) 在抛物线上. 所以直线 \(OQ\) 斜率的最大值为 \(\dfrac13\).
 \end{enumerate}
-\end{solution}
+}
 
 \begin{problem}
 已知函数 \(f(x)=x^3-x^2+ax+1\).
@@ -305,15 +360,36 @@ D
 \end{enumerate}
 \end{problem}
 
-\begin{solution}
-短答案：
+\solution{
 \begin{enumerate}
-\item 当 \(a\ge\dfrac{1}{3}\) 时，\(f(x)\) 在 \(\R\) 上单调递增；当 \(a<\dfrac{1}{3}\) 时，\(f(x)\) 在
-\(\left(-\infty,\dfrac{1-\sqrt{1-3a}}{3}\right)\) 和 \(\left(\dfrac{1+\sqrt{1-3a}}{3},+\infty\right)\) 上单调递增，在
-\(\left(\dfrac{1-\sqrt{1-3a}}{3},\dfrac{1+\sqrt{1-3a}}{3}\right)\) 上单调递减.
-\item 公共点的坐标为 \((1,1+a)\) 和 \((-1,-1-a)\).
+\item 求导得 \(f'(x)=3x^2-2x+a\). 其判别式为 \(\Delta=4-12a=4(1-3a)\).
+当 \(a\ge\dfrac13\) 时，\(\Delta\le0\)，\(f'(x)\ge0\) 恒成立，所以 \(f(x)\) 在 \(\R\) 上单调递增.
+当 \(a<\dfrac13\) 时，\(\Delta>0\)，方程 \(f'(x)=0\) 有两个不相等的实数根
+\[
+x_1=\frac{1-\sqrt{1-3a}}{3},\quad x_2=\frac{1+\sqrt{1-3a}}{3}
+\]
+当 \(x\in(-\infty,x_1)\) 或 \(x\in(x_2,+\infty)\) 时，\(f'(x)>0\)；当 \(x\in(x_1,x_2)\) 时，\(f'(x)<0\). 故 \(f(x)\) 在 \(\left(-\infty,\dfrac{1-\sqrt{1-3a}}{3}\right)\) 和 \(\left(\dfrac{1+\sqrt{1-3a}}{3},+\infty\right)\) 上单调递增，在 \(\left(\dfrac{1-\sqrt{1-3a}}{3},\dfrac{1+\sqrt{1-3a}}{3}\right)\) 上单调递减.
+\item 设切点坐标为 \((x_0,f(x_0))\). 则切线斜率为 \(f'(x_0)=3x_0^2-2x_0+a\)，切线方程为
+\[
+y-(x_0^3-x_0^2+ax_0+1)=(3x_0^2-2x_0+a)(x-x_0)
+\]
+因为切线过坐标原点 \((0,0)\)，所以
+\[
+-(x_0^3-x_0^2+ax_0+1)=(3x_0^2-2x_0+a)(-x_0)
+\]
+化简得 \(2x_0^3-x_0^2-1=0\)，即 \((x_0-1)(2x_0^2+x_0+1)=0\). 因为 \(2x_0^2+x_0+1=2\left(x_0+\dfrac14\right)^2+\dfrac78>0\)，所以该方程只有唯一实根 \(x_0=1\). 故切点为 \((1,1+a)\)，切线斜率为 \(k=1+a\)，切线方程为 \(y=(1+a)x\).
+联立切线与曲线方程：
+\[
+\begin{cases}
+y=(1+a)x,\\
+y=x^3-x^2+ax+1,
+\end{cases}
+\]
+得 \(x^3-x^2-x+1=0\)，即 \((x-1)^2(x+1)=0\)，解得 \(x=1\) 或 \(x=-1\).
+当 \(x=1\) 时，\(y=1+a\)；当 \(x=-1\) 时，\(y=-1-a\).
+所以曲线 \(y=f(x)\) 过坐标原点的切线与曲线 \(y=f(x)\) 的公共点的坐标为 \((1,1+a)\) 和 \((-1,-1-a)\).
 \end{enumerate}
-\end{solution}
+}
 
 \section{选考题：解答题}
 
@@ -326,17 +402,28 @@ D
 \end{enumerate}
 \end{problem}
 
-\begin{solution}
-短答案：
+\solution{
 \begin{enumerate}
-\item \(\begin{cases}
+\item 由圆心 \(C(2,1)\)，半径为 \(1\)，可得 \(\odot C\) 的一个参数方程为
+\[
+\begin{cases}
 x=2+\cos\theta,\\
 y=1+\sin\theta,
-\end{cases}\)（\(\theta\) 为参数）.
-\item 两条切线的极坐标方程为 \(\rho\sin\left(\theta+\dfrac{5\pi}{6}\right)=4-\sqrt3\) 和
-\(\rho\sin\left(\theta+\dfrac{\pi}{6}\right)=4+\sqrt3\).
+\end{cases}
+\quad\text{（\(\theta\) 为参数）}
+\]
+\item 点 \(F(4,1)\) 与圆心 \(C(2,1)\) 的连线平行于 \(x\) 轴，且 \(|CF|=2\). 设过点 \(F\) 的切线与直线 \(CF\) 的夹角为 \(\alpha\). 在由圆心、切点和点 \(F\) 构成的直角三角形中，\(\sin\alpha=\dfrac{1}{|CF|}=\dfrac12\)，又 \(\alpha\in\left(0,\dfrac{\pi}{2}\right)\)，所以 \(\alpha=\dfrac{\pi}{6}\). 故切线的倾斜角分别为 \(\dfrac{\pi}{6}\) 和 \(-\dfrac{\pi}{6}\).
+切线方程分别为 \(y-1=\pm\dfrac{\sqrt3}{3}(x-4)\)，即
+\[
+x-\sqrt3y-4+\sqrt3=0,\quad x+\sqrt3y-4-\sqrt3=0
+\]
+将 \(x=\rho\cos\theta\)，\(y=\rho\sin\theta\) 代入第一式，得
+\(\rho(\cos\theta-\sqrt3\sin\theta)=4-\sqrt3\)，即 \(2\rho\sin\left(\theta+\dfrac{5\pi}{6}\right)=4-\sqrt3\)；
+代入第二式，得
+\(\rho(\cos\theta+\sqrt3\sin\theta)=4+\sqrt3\)，即 \(2\rho\sin\left(\theta+\dfrac{\pi}{6}\right)=4+\sqrt3\).
+所以这两条切线的极坐标方程分别为 \(2\rho\sin\left(\theta+\dfrac{5\pi}{6}\right)=4-\sqrt3\) 与 \(2\rho\sin\left(\theta+\dfrac{\pi}{6}\right)=4+\sqrt3\).
 \end{enumerate}
-\end{solution}
+}
 
 \begin{problem}
 已知函数 \(f(x)=|x-a|+|x+3|\).
@@ -347,10 +434,21 @@ y=1+\sin\theta,
 \end{enumerate}
 \end{problem}
 
-\begin{solution}
-短答案：
+\solution{
 \begin{enumerate}
-\item 不等式的解集为 \((-\infty,-4]\cup[2,+\infty)\).
-\item \(a\in\left(-\dfrac{3}{2},+\infty\right)\).
+\item 当 \(a=1\) 时，\(f(x)=|x-1|+|x+3|\).
+当 \(x\le -3\) 时，不等式化为 \(-(x-1)-(x+3)\ge 6\)，解得 \(x\le -4\)；
+当 \(-3<x<1\) 时，不等式化为 \(-(x-1)+(x+3)\ge 6\)，即 \(4\ge 6\)，无解；
+当 \(x\ge 1\) 时，不等式化为 \((x-1)+(x+3)\ge 6\)，解得 \(x\ge 2\).
+综上，不等式 \(f(x)\ge 6\) 的解集为 \((-\infty,-4]\cup[2,+\infty)\).
+\item 由绝对值三角不等式，对任意 \(x\in\R\)，
+\[
+f(x)=|x-a|+|x+3|=|a-x|+|x+3|\ge |(a-x)+(x+3)|=|a+3|
+\]
+当且仅当 \((a-x)(x+3)\ge 0\) 时等号成立，所以 \(f(x)\) 的最小值为 \(|a+3|\).
+若 \(f(x)>-a\) 恒成立，只需 \(|a+3|>-a\).
+若 \(-a<0\)，即 \(a>0\)，此时 \(|a+3|\ge 0>-a\) 恒成立；
+若 \(-a\ge 0\)，即 \(a\le 0\)，此时 \(|a+3|>-a\) 等价于 \(a+3>-a\)，解得 \(a>-\dfrac32\)，结合 \(a\le 0\) 得 \(-\dfrac32<a\le 0\).
+综合可知，\(a\) 的取值范围为 \(\left(-\dfrac32,+\infty\right)\).
 \end{enumerate}
-\end{solution}
+}

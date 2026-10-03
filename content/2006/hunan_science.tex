@@ -168,7 +168,7 @@ e=\sqrt{1+b^2}=\sqrt{10}
 \end{solution}
 
 \begin{problem}
-设函数 \( f(x) = \frac{x - a}{x - 1} \)，集合 \( M = \{x \mid f(x) < 0\} \)，\( P = \{x \mid f'(x) > 0\} \)，若 \( M\subseteq P \) 不成立，则实数 \( a \) 的取值范围是（\quad）
+设函数 \( f(x) = \frac{x - a}{x - 1} \)，集合 \( M = \{x \mid f(x) < 0\} \)，\( P = \{x \mid f'(x) > 0\} \)，若 \( M \subsetneqq P \)，则实数 \( a \) 的取值范围是（\quad）
 
 \choices
     {\((- \infty, 1)\)}
@@ -178,15 +178,17 @@ e=\sqrt{1+b^2}=\sqrt{10}
 \end{problem}
 
 \begin{answer}
-A
+C
 \end{answer}
 
 \begin{solution}
 先求导：
-\(f'(x)=\frac{(x-1)-(x-a)}{(x-1)^2}=\frac{a-1}{(x-1)^2}\)，\(x\ne1\).
-当 \(a\leqslant1\) 时，\(f'(x)\leqslant0\)，从而 \(P=\varnothing\). 当 \(a>1\) 时，\(f'(x)>0\) 对一切 \(x\ne1\) 成立，从而 \(P=\{x\in\R\mid x\ne1\}\).
+\(f'(x)=\frac{(x-1)-(x-a)}{(x-1)^2}=\frac{a-1}{(x-1)^2}\)（\(x\ne1\)）.
+当 \(a\leqslant1\) 时，对一切 \(x\ne1\) 都有 \(f'(x)\leqslant0\)，从而 \(P=\varnothing\). 此时：若 \(a=1\)，则 \(M=\varnothing=P\)，不满足 \(M\subsetneqq P\)；若 \(a<1\)，则 \(M=(a,1)\ne\varnothing\)，\(M\subseteq P\) 不成立.
 
-另一方面，\(f(x)<0\) 的符号由 \(x-a\) 与 \(x-1\) 决定：当 \(a<1\) 时，\(M=(a,1)\)；当 \(a=1\) 时，\(M=\varnothing\)；当 \(a>1\) 时，\(M=(1,a)\). 因此 \(a<1\) 时 \(M\subseteq P\) 不成立，而 \(a=1\) 时空集是 \(P\) 的子集，\(a>1\) 时 \(M\subset P\). 所以 \(a\in(-\infty,1)\)，选 A.
+当 \(a>1\) 时，对一切 \(x\ne1\) 都有 \(f'(x)>0\)，所以 \(P=\{x\in\R\mid x\ne1\}=(-\infty,1)\cup(1,+\infty)\). 此时由 \(f(x)=\frac{x-a}{x-1}<0\) 得 \(M=(1,a)\). 显然 \(M\subseteq P\) 且 \(M\ne P\)，即 \(M\subsetneqq P\) 成立.
+
+综上，实数 \(a\) 的取值范围是 \((1,+\infty)\)，故选 C.
 \end{solution}
 
 \begin{problem}
@@ -459,7 +461,7 @@ E(X)=5\times0.5=2.5
 \item 对 \(0<x<1\)，令 \(h(x)=x-\sin x\)，则 \(h(0)=0\)，且 \(h'(x)=1-\cos x>0\). 因而 \(x-\sin x>0\)，又因为 \(\sin x>0\)，所以 \(0<x-\sin x<x\). 由 \(0<a_1<1\) 及递推关系，用归纳法可得对任意正整数 \(n\)，都有 \(0<a_{n+1}<a_n<1\).
 
 \item 令 \(g(x)=\sin x-x+\dfrac{x^{3}}{6}\). 有 \(g(0)=g'(0)=0\)，并且
-\(g''(x)=-\sin x+x=x-\sin x>0\)，\((0<x<1)\).
+\(g''(x)=-\sin x+x=x-\sin x>0\)，（\(0<x<1\)）.
 因此 \(g'(x)>0\)，进而 \(g(x)>0\)，即 \(\sin x>x-\dfrac{x^{3}}{6}\). 所以对 \(0<x<1\)，有 \(x-\sin x<\dfrac{x^{3}}{6}\). 取 \(x=a_n\)，便得到 \(a_{n+1}=a_n-\sin a_n<\dfrac{1}{6}a_n^{3}\).
 \end{enumerate}
 \end{solution}
@@ -500,7 +502,7 @@ S(x)=x+\frac{a(19-x)}{x+1}
 S_{\min}=x_0+y_0=2\sqrt{20a}-a-1
 \]
 又
-\(\frac{\mathrm dS_{\min}}{\mathrm da}=\sqrt{\frac{20}{a}}-1>0\)，\((1\leqslant a\leqslant3)\)
+\(\frac{\mathrm dS_{\min}}{\mathrm da}=\sqrt{\frac{20}{a}}-1>0\)，（\(1\leqslant a\leqslant3\)），
 所以 \(a\) 越大，最少总用水量越多. 当 \(a=1\) 时，\(S_{\min}=4\sqrt{5}-2\)；当 \(a=3\) 时，\(S_{\min}=4\sqrt{15}-4\)，故最少总用水量的取值范围为 \([4\sqrt{5}-2,\,4\sqrt{15}-4]\).
 \end{enumerate}
 \end{solution}

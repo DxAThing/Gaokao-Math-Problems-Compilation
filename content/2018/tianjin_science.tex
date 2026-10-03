@@ -70,7 +70,7 @@ B
 \end{answer}
 
 \begin{solution}
-程序开始时 \(i=2\)，\(T=0\).当 \(i=2\) 时，\(20/i=10\) 为整数，故 \(T\) 变为 \(1\)，再令 \(i=3\).当 \(i=3\) 时，\(20/i\) 不是整数，不改变 \(T\)，再令 \(i=4\).当 \(i=4\) 时，\(20/i=5\) 为整数，故 \(T\) 变为 \(2\)，再令 \(i=5\).此时满足 \(i\ge5\)，程序输出 \(T=2\).故选 B.
+程序开始时 \(i=2\)，\(T=0\).当 \(i=2\) 时，\(\frac{20}{i}=10\) 为整数，故 \(T\) 变为 \(1\)，再令 \(i=3\).当 \(i=3\) 时，\(\frac{20}{i}\) 不是整数，不改变 \(T\)，再令 \(i=4\).当 \(i=4\) 时，\(\frac{20}{i}=5\) 为整数，故 \(T\) 变为 \(2\)，再令 \(i=5\).此时满足 \(i\ge5\)，程序输出 \(T=2\).故选 B.
 \end{solution}
 
 \begin{problem}
@@ -119,7 +119,7 @@ a=\log_2\e=\frac1{\ln2}>\ln2=b
 又因为 \(\ln3>1\)，所以
 \[
 c=\log_{\frac12}\frac13
- =\frac{\ln(1/3)}{\ln(1/2)}
+ =\frac{\ln(\frac{1}{3})}{\ln(\frac{1}{2})}
  =\frac{\ln3}{\ln2}>\frac1{\ln2}=a
 \]
 因此 \(c>a>b\)，故选 D.
@@ -471,7 +471,7 @@ P(A)=1-\frac{\mathrm C_4^3+\mathrm C_3^3}{\mathrm C_7^3}
 \(D=(0,0,0)\)，\(A=(2,0,0)\)，\(C=(0,2,0)\)，\(G=(0,0,2)\)
 \(B=(1,2,0)\)，\(E=(2,0,2)\)，\(F=(0,1,2)\).
 于是
-\(M=\left(0,\frac32,1\right)\)，\(N=(1,0,2)\)
+\(M=\left(0,\frac32,1\right)\)，\(N=(1,0,2)\)，
 从而
 \[
 \overrightarrow{MN}=\left(1,-\frac32,1\right)
@@ -670,7 +670,7 @@ k=\frac{50\pm6}{112}
 \begin{enumerate}
 \item 求函数 \(h(x)=f(x)-x\ln a\) 的单调区间；
 \item 若曲线 \(y=f(x)\) 在点 \((x_1,f(x_1))\) 处的切线与曲线 \(y=g(x)\) 在点 \((x_2,g(x_2))\) 处的切线平行，证明 \(x_1+g(x_2)=-\frac{2\ln\ln a}{\ln a}\)；
-\item 证明当 \(a\ge e^{\frac1e}\) 时，存在直线 \(l\)，使 \(l\) 是曲线 \(y=f(x)\) 的切线，也是曲线 \(y=g(x)\) 的切线.
+\item 证明当 \(a\ge \e^{\frac1\e}\) 时，存在直线 \(l\)，使 \(l\) 是曲线 \(y=f(x)\) 的切线，也是曲线 \(y=g(x)\) 的切线.
 \end{enumerate}
 \end{problem}
 
@@ -721,7 +721,7 @@ u(x_1)=a^{x_1}(1-Lx_1)+x_1+\frac1L+\frac{2\ln L}{L}=0
 \[
 u(x)=a^x(1-Lx)+x+\frac1L+\frac{2\ln L}{L}
 \]
-下面证明当 \(L\ge\frac1e\) 时 \(u\) 有零点.其导数为
+下面证明当 \(L\ge\frac1\e\) 时 \(u\) 有零点.其导数为
 \[
 u'(x)=1-L^2xa^x
 \]
@@ -730,7 +730,7 @@ u'(x)=1-L^2xa^x
 u''(x)=-L^2a^x(1+Lx)<0
 \]
 所以 \(u'(x)\) 在 \((0,+\infty)\) 上递减.又
-\(u'(0)=1>0\)，\(u'\left(\frac1{L^2}\right)=1-a^{1/L^2}<0\)
+\(u'(0)=1>0\)，\(u'\left(\frac1{L^2}\right)=1-a^{\frac{1}{L^2}}<0\)，
 故存在唯一的 \(x_0>0\) 使 \(u'(x_0)=0\)，且 \(u\) 在 \(x_0\) 处取得最大值.由 \(u'(x_0)=0\)，得
 \[
 L^2x_0a^{x_0}=1
@@ -741,7 +741,7 @@ u(x_0)=\frac1{L^2x_0}+x_0+\frac{2\ln L}{L}
 \ge\frac2L+\frac{2\ln L}{L}
 =\frac{2(1+\ln L)}{L}\ge0
 \]
-另一方面，由 \(a^x=e^{Lx}\ge1+Lx\)，当 \(x>\frac1L\) 时有
+另一方面，由 \(a^x=\e^{Lx}\ge1+Lx\)，当 \(x>\frac1L\) 时有
 \[
 u(x)\le(1+Lx)(1-Lx)+x+\frac1L+\frac{2\ln L}{L}
 \]
@@ -751,6 +751,6 @@ u(x)\le(1+Lx)(1-Lx)+x+\frac1L+\frac{2\ln L}{L}
 \[
 x_2=\frac1{a^{x_1}L^2}>0
 \]
-则两条切线斜率相等且截距相等，因而重合为同一直线.由 \(L\ge\frac1e\Longleftrightarrow a\ge e^{1/e}\)，结论得证.
+则两条切线斜率相等且截距相等，因而重合为同一直线.由 \(L\ge\frac1\e\Longleftrightarrow a\ge \e^{\frac{1}{\e}}\)，结论得证.
 \end{enumerate}
 \end{solution}

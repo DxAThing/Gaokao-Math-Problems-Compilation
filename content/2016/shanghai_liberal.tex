@@ -23,7 +23,7 @@
 \end{answer}
 
 \begin{solution}
-因为 \(1/\i=-\i\)，所以 \(z=(3+2\i)(-\i)=2-3\i\). 因此 \(z\) 的虚部为 \(-3\).
+因为 \(\frac{1}{\i}=-\i\)，所以 \(z=(3+2\i)(-\i)=2-3\i\). 因此 \(z\) 的虚部为 \(-3\).
 \end{solution}
 
 \begin{problem}
@@ -76,13 +76,11 @@
 
 \begin{problem}
 若 \(x\)，\(y\) 满足
-\(
-\begin{cases}
+\(\begin{cases}
 x\ge0,\\
 y\ge0,\\
-y\ge x+1,
-\end{cases}
-\)
+y\ge x+1
+\end{cases}\)，
 则 \(x-2y\) 的最大值为\fillinblank{}.
 \end{problem}
 
@@ -115,7 +113,7 @@ y\ge x+1,
 \end{answer}
 
 \begin{solution}
-所有二项式系数之和为 \(2^n\)，所以 \(2^n=256=2^8\)，得到 \(n=8\). 展开式通项为 \(T_{r+1}=\mathrm C_8^r\left(\sqrt[3]{x}\right)^{8-r}\left(-\dfrac2x\right)^r=\mathrm C_8^r(-2)^r x^{(8-4r)/3}\). 常数项要求 \((8-4r)/3=0\)，故 \(r=2\)，常数项为 \(\mathrm C_8^2(-2)^2=28\times4=112\).
+所有二项式系数之和为 \(2^n\)，所以 \(2^n=256=2^8\)，得到 \(n=8\). 展开式通项为 \(T_{r+1}=\mathrm C_8^r\left(\sqrt[3]{x}\right)^{8-r}\left(-\dfrac2x\right)^r=\mathrm C_8^r(-2)^r x^{\frac{(8-4r)}{3}}\). 常数项要求 \(\frac{(8-4r)}{3}=0\)，故 \(r=2\)，常数项为 \(\mathrm C_8^2(-2)^2=28\times4=112\).
 \end{solution}
 
 \begin{problem}
@@ -172,7 +170,7 @@ x+by=1
 \end{answer}
 
 \begin{solution}
-方程组的系数行列式为 \(ab-1\). 无解时两直线必须平行且不重合，所以 \(ab=1\)，并且不能有 \(a=b=1\). 由 \(b=1/a\) 及 \(a>0\)，得 \(a+b=a+\dfrac1a\geqslant2\)，等号仅在 \(a=1\) 时成立；此时两方程相同，有无穷多解而不是无解. 因此 \(a+b>2\)，取值范围为 \((2,+\infty)\).
+方程组的系数行列式为 \(ab-1\). 无解时两直线必须平行且不重合，所以 \(ab=1\)，并且不能有 \(a=b=1\). 由 \(b=\frac{1}{a}\) 及 \(a>0\)，得 \(a+b=a+\dfrac1a\geqslant2\)，等号仅在 \(a=1\) 时成立；此时两方程相同，有无穷多解而不是无解. 因此 \(a+b>2\)，取值范围为 \((2,+\infty)\).
 \end{solution}
 
 \begin{problem}
@@ -397,7 +395,7 @@ n, & n\leqslant 5,\\
 \item 当 \(a=1\) 时，定义域要求 \(\dfrac1x+1>0\). 由于底数 \(2>1\)，不等式 \(f(x)>1\) 等价于 \(\dfrac1x+1>2\)，即 \(\dfrac1x>1\). 这只在 \(0<x<1\) 时成立，所以解集为 \((0,1)\).
 \item 方程有意义时 \(x\ne0\)，且 \(\dfrac1x+a>0\). 由对数运算，原方程等价于 \(\log_2\left[\left(\dfrac1x+a\right)x^2\right]=0\)，所以 \(ax^2+x-1=0\). 当 \(a=0\) 时，方程化为 \(x-1=0\)，有唯一解 \(x=1\). 当 \(a\ne0\) 时，判别式为 \(\Delta=1+4a\)：若 \(a<-\dfrac14\)，无实根；若 \(a=-\dfrac14\)，有一个重根 \(x=2\)；若 \(a>-\dfrac14\)，有两个不同实根. 二次方程的根不可能为 \(0\)，且由方程可知 \(\dfrac1x+a=\dfrac1{x^2}>0\)，所以这些根均满足原方程的定义域. 故恰有一个解时 \(a=0\) 或 \(a=-\dfrac14\).
 \item 因为 \(a>0\) 且 \(t\in[\frac12,1]\)，区间 \([t,t+1]\) 上的 \(x\) 始终为正. 求导得 \(f'(x)=-\dfrac{1}{x(ax+1)\ln2}<0\)，所以 \(f(x)\) 在该区间上递减，最大值与最小值之差为
-\(f(t)-f(t+1)=\log_2\dfrac{a+1/t}{a+1/(t+1)}=\log_2\left(1+\dfrac{1}{t\left(a(t+1)+1\right)}\right)\).
+\(f(t)-f(t+1)=\log_2\dfrac{a+\frac{1}{t}}{a+\frac{1}{(t+1)}}=\log_2\left(1+\dfrac{1}{t\left(a(t+1)+1\right)}\right)\).
 条件要求对任意 \(t\in[\frac12,1]\) 该差不超过 \(1\)，等价于 \(t\left(a(t+1)+1\right)\geqslant1\). 设 \(q(t)=t\left(a(t+1)+1\right)=at^2+(a+1)t\)，则 \(q'(t)=2at+a+1>0\)，所以 \(q(t)\) 在给定区间上递增，最小值为 \(q(\frac12)=\frac{3a}{4}+\frac12\). 于是 \(\frac{3a}{4}+\frac12\geqslant1\)，即 \(a\geqslant\frac23\). 故 \(a\) 的取值范围为 \(\left[\frac23,+\infty\right)\).
 \end{enumerate}
 \end{solution}

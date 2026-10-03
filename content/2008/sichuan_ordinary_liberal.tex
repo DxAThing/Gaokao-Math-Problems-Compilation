@@ -333,7 +333,7 @@ B
 \(\begin{cases}
 5+3a+b=0,\\
 80+12a+b=0.
-\end{cases}\)
+\end{cases}\).
 两式相减得 \(9a+75=0\)，所以 \(a=-\frac{25}{3}\)，代回得 \(b=20\).
 \item 由 \(a=-\frac{25}{3}\)，\(b=20\)，得 \(f'(x)=5x^{4}-25x^{2}+20=5(x^{2}-1)(x^{2}-4)\). 当 \(x\in(-\infty,-2)\cup(-1,1)\cup(2,+\infty)\) 时，\(f'(x)>0\)；当 \(x\in(-2,-1)\cup(1,2)\) 时，\(f'(x)<0\). 因此 \(f(x)\) 的单调递增区间为 \((-\infty,-2)\)，\((-1,1)\)，\((2,+\infty)\)，单调递减区间为 \((-2,-1)\)，\((1,2)\).
 \end{enumerate}
@@ -362,18 +362,20 @@ B
 
 \begin{enumerate}
 \item 求 \(a\)，\(b\) 的值；
-\item 设 \(M\)，\(N\) 是右准线 \(l\) 上两个动点，满足 \(\overrightarrow{F_{1}M} \cdot \overrightarrow{F_{2}M} = 0\). 证明：当 \(|MN|\) 取最小值时，\(\overrightarrow{F_{2}F_{1}} + \overrightarrow{F_{2}M} + \overrightarrow{F_{2}N} = 0\).
+\item 设 \(M\)，\(N\) 是右准线 \(l\) 上两个动点，满足 \(\overrightarrow{F_{1}M} \cdot \overrightarrow{F_{2}N} = 0\). 证明：当 \(|MN|\) 取最小值时，\(\overrightarrow{F_{2}F_{1}} + \overrightarrow{F_{2}M} + \overrightarrow{F_{2}N} = 0\).
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
 \item 设椭圆的半焦距为 \(c\). 由离心率定义，\(e=\frac{c}{a}=\frac{\sqrt{2}}{2}\)，所以 \(c=\frac{\sqrt{2}}{2}a\). 右准线方程为 \(x=\frac{a}{e}\)，故 \(F_{2}\) 到右准线的距离为 \(\frac{a}{e}-c=a\left(\frac1e-e\right)=\frac{\sqrt{2}}{2}a\). 由题设 \(\frac{\sqrt{2}}{2}a=\sqrt{2}\)，得 \(a=2\)，\(c=\sqrt{2}\). 再由 \(b^{2}=a^{2}-c^{2}=4-2=2\)，得 \(b=\sqrt{2}\).
-\item 由上问，\(F_{1}(-\sqrt{2},0)\)，\(F_{2}(\sqrt{2},0)\)，右准线 \(l\) 的方程为 \(x=\frac{a}{e}=2\sqrt{2}\). 设 \(M(2\sqrt{2},y)\). 则
-\(\overrightarrow{F_{1}M}=(3\sqrt{2},y)\)，\(\overrightarrow{F_{2}M}=(\sqrt{2},y)\)
+\item 由上问，\(F_{1}(-\sqrt{2},0)\)，\(F_{2}(\sqrt{2},0)\)，右准线 \(l\) 的方程为 \(x=\frac{a}{e}=2\sqrt{2}\). 设 \(M(2\sqrt{2},m)\)，\(N(2\sqrt{2},n)\)，则 \(\overrightarrow{F_{1}M}=(3\sqrt{2},m)\)，\(\overrightarrow{F_{2}N}=(\sqrt{2},n)\). 由题设
+\(\overrightarrow{F_{1}M}\cdot\overrightarrow{F_{2}N}=3\sqrt{2}\times\sqrt{2}+mn=0\)，得 \(mn=-6\)，且 \(m\neq0\)，所以 \(n=-\frac{6}{m}\).
+
+于是 \(|MN|=|m-n|=\left|m+\frac{6}{m}\right|\geqslant2\sqrt{6}\)，当且仅当 \(m^{2}=6\)，即 \(m=\pm\sqrt{6}\) 时取等号；此时 \(n=-\frac{6}{m}=-m\)，所以 \(m+n=0\). 从而
 \[
-\overrightarrow{F_{1}M}\cdot\overrightarrow{F_{2}M}=3\sqrt{2}\cdot\sqrt{2}+y^{2}=6+y^{2}>0
+\overrightarrow{F_{2}F_{1}}+\overrightarrow{F_{2}M}+\overrightarrow{F_{2}N}=(-2\sqrt{2},0)+(\sqrt{2},m)+(\sqrt{2},n)=(0,m+n)=0
 \]
-因此不存在满足题设垂直条件的实点 \(M\)，从而也不存在相应的点 \(N\) 及 \(|MN|\) 的最小值，题目第（2）问按原文件题面无法成立. 这里保留原题条件，不将 \(\overrightarrow{F_{2}M}\) 擅自改写为 \(\overrightarrow{F_{2}N}\).
+故当 \(|MN|\) 取最小值时，\(\overrightarrow{F_{2}F_{1}}+\overrightarrow{F_{2}M}+\overrightarrow{F_{2}N}=0\).
 \end{enumerate}
 \end{solution}

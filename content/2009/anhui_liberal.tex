@@ -329,7 +329,7 @@ B=\pi-A-C=\frac{\pi}{2}-2A
 \]
 \item 设 \(a=BC\)，\(b=CA=\sqrt{6}\)，\(c=AB\). 由正弦定理，
 \[
-\frac{b}{\sin B}=\frac{\sqrt{6}}{1/3}=3\sqrt{6}
+\frac{b}{\sin B}=\frac{\sqrt{6}}{\frac{1}{3}}=3\sqrt{6}
 \]
 又
 \[
@@ -565,14 +565,23 @@ AE=\sqrt{u^2+1+h^2}
 \]
 从而 \(u=1\). 代入 \(AE^2=u^2+1+h^2\)，得
 \(4=1+1+h^2\)，\(h=\sqrt{2}\).
-由第一问，\(E'F'\parallel AB\)，而 \(EF\) 是其在平行平面上的对应线段，所以 \(EF\parallel AB\). 结合原图中 \(E\)，\(F\) 的位置，\(F\) 是将 \(E\) 沿 \(AB\) 方向平移 \(2\) 个单位得到的点；因此 \(ABCDEF\) 是以 \(\triangle ADE\) 为底、以 \(EF\) 为侧棱的三棱柱. 由上面得到 \(AE=2\)，所以
+由第一问，\(E'F'\parallel AB\)，而 \(EF\) 是其在平行平面上的对应线段，所以 \(EF\parallel AB\)，且 \(EF=AB=2\). 结合原图中 \(E\)，\(F\) 的位置，\(F\) 是将 \(E\) 沿 \(AB\) 方向平移 \(2\) 个单位得到的点；因此 \(ABCDEF\) 是以 \(\triangle ADE\) 和 \(\triangle BCF\) 为平行底面的三棱柱，正方形 \(ABCD\) 是它的一个侧面. 由上面得到 \(AE=2\)，所以
 \[
 S_{\triangle ADE}=\frac{1}{2}\cdot AD\cdot AE\cdot\sin\angle EAD
 =\frac{1}{2}\cdot2\cdot2\cdot\sin60^{\circ}=\sqrt{3}
 \]
-故
+两底面所在平面间的距离即棱柱的高. 平面 \(ADE\) 过原点 \(A\)，其法向量为
 \[
-V_{ABCDEF}=S_{\triangle ADE}\cdot EF=\sqrt{3}\cdot2=2\sqrt{3}
+\overrightarrow{AD}\times\overrightarrow{AE}=(0,2,0)\times(1,1,\sqrt{2})=(2\sqrt{2},0,-2)
+\]
+平面 \(BCF\) 过点 \(B\)，所以高为
+\[
+d=\frac{\left|(2\sqrt{2},0,-2)\cdot\overrightarrow{AB}\right|}{\sqrt{(2\sqrt{2})^2+(-2)^2}}
+=\frac{4\sqrt{2}}{2\sqrt{3}}=\frac{2\sqrt{2}}{\sqrt{3}}
+\]
+因此
+\[
+V_{ABCDEF}=S_{\triangle ADE}\cdot d=\sqrt{3}\cdot\frac{2\sqrt{2}}{\sqrt{3}}=2\sqrt{2}
 \]
 \end{enumerate}
 \end{solution}
@@ -587,7 +596,7 @@ V_{ABCDEF}=S_{\triangle ADE}\cdot EF=\sqrt{3}\cdot2=2\sqrt{3}
 
 \begin{solution}
 \begin{enumerate}
-\item 题干原 PDF 将自然对数的底数的近似值印作 \(0.71828\cdots\)，这与自然对数底数的定义矛盾；若照此数值，则 \(e^2<1\)，题中的 \([1,e^2]\) 不能作为通常意义下的非空区间. 以下按数学定义 \(\e=2.71828\cdots\) 计算，并保留这一题面冲突. 函数的定义域为 \(x>0\)，且
+\item 题干原 PDF 将自然对数的底数的近似值印作 \(0.71828\cdots\)，这与自然对数底数的定义矛盾；若照此数值，则 \(\e^2<1\)，题中的 \([1,\e^2]\) 不能作为通常意义下的非空区间. 以下按数学定义 \(\e=2.71828\cdots\) 计算，并保留这一题面冲突. 函数的定义域为 \(x>0\)，且
 \[
 f'(x)=1+\frac{2}{x^2}-\frac{a}{x}
 =\frac{x^2-ax+2}{x^2}
@@ -599,7 +608,7 @@ f'(x)=1+\frac{2}{x^2}-\frac{a}{x}
 当 \(a=2\sqrt{2}\) 时，\(g(x)=(x-\sqrt{2})^2\geqslant0\)，所以 \(f(x)\) 在 \((0,+\infty)\) 上单调递增.
 
 当 \(a>2\sqrt{2}\) 时，令
-\(x_1=\frac{a-\sqrt{a^2-8}}{2}\)，\(x_2=\frac{a+\sqrt{a^2-8}}{2}\)
+\(x_1=\frac{a-\sqrt{a^2-8}}{2}\)，\(x_2=\frac{a+\sqrt{a^2-8}}{2}\)，
 则 \(0<x_1<x_2\)，并且
 \[
 g(x)=(x-x_1)(x-x_2)

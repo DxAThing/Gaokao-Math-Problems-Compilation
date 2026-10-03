@@ -106,7 +106,7 @@ B
 \begin{solution}
 从 \(1\)，\(2\)，\(3\)，\(4\)，\(5\) 中任取两个数共有 \(\mathrm C_5^2=10\) 个等可能结果. 事件 \(A\) 发生时，两个数必须同奇偶：两个奇数的取法有 \(\mathrm C_3^2=3\) 个，两个偶数的取法有 \(\mathrm C_2^2=1\) 个，所以 \(P(A)=\frac4{10}\). 事件 \(B\) 只有取到 \(\{2,4\}\) 这一种结果，且 \(B\subset A\)，故
 \[
-P(B\mid A)=\frac{P(B)}{P(A)}=\frac{1/10}{4/10}=\frac14
+P(B\mid A)=\frac{P(B)}{P(A)}=\frac{\frac{1}{10}}{\frac{4}{10}}=\frac14
 \]
 选 B.
 \end{solution}
@@ -524,7 +524,7 @@ s_{\text{乙}}^{2}=\frac{448}{8}=56
 f'(x)=\frac1x-2ax+2-a
 = -\frac{(2x+1)(ax-1)}{x}
 \]
-当 \(a\leqslant0\) 时，\(2x+1>0\)、\(ax-1<0\)，所以 \(f'(x)>0\)，函数在 \((0,+\infty)\) 上单调增加. 当 \(a>0\) 时，\(f'(x)>0\) 在 \(0<x<1/a\) 成立，\(f'(x)<0\) 在 \(x>1/a\) 成立，故函数在 \((0,1/a)\) 上单调增加，在 \((1/a,+\infty)\) 上单调减少.
+当 \(a\leqslant0\) 时，\(2x+1>0\)、\(ax-1<0\)，所以 \(f'(x)>0\)，函数在 \((0,+\infty)\) 上单调增加. 当 \(a>0\) 时，\(f'(x)>0\) 在 \(0<x<\frac{1}{a}\) 成立，\(f'(x)<0\) 在 \(x>\frac{1}{a}\) 成立，故函数在 \((0,\frac{1}{a})\) 上单调增加，在 \((\frac{1}{a},+\infty)\) 上单调减少.
 \item 令 \(g(x)=f\left(\frac1a+x\right)-f\left(\frac1a-x\right)\)，并取 \(0\leqslant x<\frac1a\).
 直接化简得
 \[
@@ -535,7 +535,7 @@ g(x)=\ln\frac{1+ax}{1-ax}-2ax
 g'(x)=\frac{a}{1+ax}+\frac{a}{1-ax}-2a
 =\frac{2a^{3}x^{2}}{1-a^{2}x^{2}}>0
 \]
-当 \(0<x<1/a\) 时成立. 又 \(g(0)=0\)，所以 \(g(x)>0\)，即
+当 \(0<x<\frac{1}{a}\) 时成立. 又 \(g(0)=0\)，所以 \(g(x)>0\)，即
 \[
 f\left(\frac1a+x\right)>f\left(\frac1a-x\right)
 \]
@@ -547,7 +547,7 @@ f\left(\frac1a+x\right)>f\left(\frac1a-x\right)
 \[
 f\left(\frac2a-x_{1}\right)>f(x_{1})=0
 \]
-其中 \(\frac2a-x_{1}>\frac1a\)，而 \(f\) 在 \((1/a,+\infty)\) 上严格递减，且 \(f(x_{2})=0\)，故
+其中 \(\frac2a-x_{1}>\frac1a\)，而 \(f\) 在 \((\frac{1}{a},+\infty)\) 上严格递减，且 \(f(x_{2})=0\)，故
 \[
 \frac2a-x_{1}<x_{2}
 \]
@@ -575,7 +575,7 @@ x_{0}=\frac{x_{1}+x_{2}}2>\frac1a
 \[
 r=\sqrt{1-e^{2}}
 \]
-因为 \(C_{1}\) 的半短轴为 \(ar\)，而 \(C_{2}\) 的短轴 \(MN\) 长为 \(2a\)，所以 \(C_{2}\) 的半长轴为 \(a/r\). 因而两椭圆方程可写为
+因为 \(C_{1}\) 的半短轴为 \(ar\)，而 \(C_{2}\) 的短轴 \(MN\) 长为 \(2a\)，所以 \(C_{2}\) 的半长轴为 \(\frac{a}{r}\). 因而两椭圆方程可写为
 \[
 C_{1}:\frac{x^{2}}{a^{2}}+\frac{y^{2}}{a^{2}r^{2}}=1
 \]
@@ -586,12 +586,12 @@ C_{2}:\frac{x^{2}}{a^{2}}+\frac{r^{2}y^{2}}{a^{2}}=1
 所以
 \[
 \frac{\lvert BC\rvert}{\lvert AD\rvert}
-=\frac{2ru}{2u/r}=r^{2}=1-e^{2}
+=\frac{2ru}{2\frac{u}{r}}=r^{2}=1-e^{2}
 \]
 当 \(e=\frac12\) 时，该比值为 \(\frac34\).
 \item 仍取上述坐标，设 \(N=(a,0)\). 由 \(BO\parallel AN\)，向量 \(\overrightarrow{BO}=(-t,-ru)\)，\(\overrightarrow{AN}=\left(a-t,-\frac{u}{r}\right)\) 平行，故其行列式为零：
 \[
-\det\begin{pmatrix}-t&-ru\\a-t&-u/r\end{pmatrix}
+\det\begin{pmatrix}-t&-ru\\a-t&-\frac{u}{r}\end{pmatrix}
 =u\left(\frac{t}{r}+r(a-t)\right)=0
 \]
 由于 \(u>0\)，得到

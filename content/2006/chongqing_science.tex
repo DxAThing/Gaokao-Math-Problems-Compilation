@@ -309,16 +309,16 @@ D
 \end{solution}
 
 \begin{problem}
-已知函数 \(f(x) = (x^{2} + bx + c)e^{x}\)，其中 \(b\)，\(c \in \R\) 为常数.
+已知函数 \(f(x) = (x^{2} + bx + c)\e^{x}\)，其中 \(b\)，\(c \in \R\) 为常数.
 \begin{enumerate}
-\item 若 \(b^{2} > 4(a - 1)\)，讨论函数 \(f(x)\) 的单调性；
+\item 若 \(b^{2} > 4(c - 1)\)，讨论函数 \(f(x)\) 的单调性；
 \item 若 \(b^{2} \leqslant 4(c - 1)\)，且 \(\displaystyle\lim_{x\to0}\frac{f(x) - c}{x} = 4\)，试证：\(-6 \leqslant b \leqslant 2\).
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item 先求导得 \(f'(x)=\left[x^{2}+(b+2)x+b+c\right]e^{x}\). 由于 \(e^{x}>0\)，函数的单调性由二次函数 \(q(x)=x^{2}+(b+2)x+b+c\) 的符号决定. 其判别式为 \(\Delta=(b+2)^{2}-4(b+c)=b^{2}-4(c-1)\). 当 \(\Delta<0\) 时，\(q(x)>0\) 对任意 \(x\) 成立，故 \(f(x)\) 在 \(\R\) 上单调递增；当 \(\Delta=0\) 时，\(q(x)\geqslant0\)，且仅在一个点取零，故 \(f(x)\) 在 \(\R\) 上单调递增. 当 \(\Delta>0\) 时，令 \(x_{1}=\frac{-(b+2)-\sqrt{\Delta}}{2}\)、\(x_{2}=\frac{-(b+2)+\sqrt{\Delta}}{2}\)，则 \(x_{1}<x_{2}\)，且 \(q(x)>0\) 在 \((-\infty,x_{1})\cup(x_{2},+\infty)\) 上成立，\(q(x)<0\) 在 \((x_{1},x_{2})\) 上成立，所以 \(f(x)\) 在 \((-\infty,x_{1})\)、\((x_{2},+\infty)\) 上单调递增，在 \((x_{1},x_{2})\) 上单调递减. 但原 PDF 第一问写作 \(b^{2}>4(a-1)\)，题设没有定义 \(a\)，该条件不能确定 \(\Delta\)，所以在忠实原 PDF 的前提下，只能按 \(\Delta\) 的三种情形给出上述完整分类，不能擅自将题面中的 \(a\) 改为 \(c\).
+\item 先求导得 \(f'(x)=\left[x^{2}+(b+2)x+b+c\right]\e^{x}\). 由于 \(\e^{x}>0\)，函数的单调性由 \(q(x)=x^{2}+(b+2)x+b+c\) 决定. 题设 \(b^{2}>4(c-1)\) 即 \(\Delta>0\)，令 \(x_{1}=\frac{-(b+2)-\sqrt{\Delta}}{2}\)、\(x_{2}=\frac{-(b+2)+\sqrt{\Delta}}{2}\)，则 \(f(x)\) 在 \((-\infty,x_{1})\)、\((x_{2},+\infty)\) 上单调递增，在 \((x_{1},x_{2})\) 上单调递减.
 \item 因为 \(f(0)=c\)，且 \(f\) 可导，所以题设极限等于 \(f'(0)=b+c\)，从而 \(b+c=4\)，即 \(c=4-b\). 结合 \(b^{2}\leqslant4(c-1)\)，得 \(b^{2}\leqslant4(3-b)\)，即 \(b^{2}+4b-12\leqslant0\). 因此 \((b+6)(b-2)\leqslant0\)，故 \(-6\leqslant b\leqslant2\).
 \end{enumerate}
 \end{solution}
@@ -353,6 +353,6 @@ D
 \begin{solution}
 \begin{enumerate}
 \item 记 \(e_n=\sqrt{1-b_n^{2}}\)，则椭圆的左右焦点分别为 \(F_n=(-e_n,0)\)、\(G_n=(e_n,0)\)，右准线为 \(l_n\colon x=\frac1{e_n}\). 设 \(P_n=(x_n,y_n)\). 由椭圆定义，\(|P_nF_n|+|P_nG_n|=2\)，所以题设中的等差中项为 \(1\)，即 \(d_n=1\). 又因为 \(-1\leqslant x_n\leqslant1<\frac1{e_n}\)，故 \(d_n=\frac1{e_n}-x_n\)，从而 \(x_n=\frac1{e_n}-1\). 点 \(P_n\) 存在，必须有 \(x_n\leqslant1\)，于是 \(\frac1{e_n}-1\leqslant1\)，即 \(e_n\geqslant\frac12\). 因而 \(1-b_n^{2}=e_n^{2}\geqslant\frac14\)，所以 \(b_n\leqslant\frac{\sqrt3}{2}\).
-\item 由给定的 \(b_n\)，得 \(e_n=\sqrt{1-b_n^{2}}=\sqrt{1-\frac{2n+3}{(n+2)^{2}}}=\frac{n+1}{n+2}\)，所以 \(x_n=\frac1{e_n}-1=\frac1{n+1}\). 再由椭圆方程，\(y_n^{2}=b_n^{2}(1-x_n^{2})=\frac{n(2n+3)}{(n+2)(n+1)^{2}}\). 三角形 \(P_nF_nG_n\) 的底边长为 \(2e_n\)，高为 \(|y_n|\)，故 \(S_n=e_n|y_n|=\frac{\sqrt{n(2n+3)}}{(n+2)^{3/2}}\)，从而 \(S_n^{2}=\frac{n(2n+3)}{(n+2)^{3}}\). 先算得 \(S_1^{2}=\frac5{27}\)、\(S_2^{2}=\frac7{32}\)，且 \(\frac5{27}<\frac7{32}\)，所以 \(S_1<S_2\). 对实数 \(x>0\) 令 \(h(x)=\frac{x(2x+3)}{(x+2)^{3}}\)，则 \(h'(x)=\frac{-2x^{2}+2x+6}{(x+2)^{4}}=-\frac{2(x^{2}-x-3)}{(x+2)^{4}}\). 当 \(x\geqslant3\) 时，\(x^{2}-x-3>0\)，所以 \(h(x)\) 在 \([3,+\infty)\) 上递减. 因而对 \(n\geqslant3\)，有 \(S_n^{2}=h(n)>h(n+1)=S_{n+1}^{2}\). 由于面积为正，故 \(S_n>S_{n+1}\).
+\item 由给定的 \(b_n\)，得 \(e_n=\sqrt{1-b_n^{2}}=\sqrt{1-\frac{2n+3}{(n+2)^{2}}}=\frac{n+1}{n+2}\)，所以 \(x_n=\frac1{e_n}-1=\frac1{n+1}\). 再由椭圆方程，\(y_n^{2}=b_n^{2}(1-x_n^{2})=\frac{n(2n+3)}{(n+2)(n+1)^{2}}\). 三角形 \(P_nF_nG_n\) 的底边长为 \(2e_n\)，高为 \(|y_n|\)，故 \(S_n=e_n|y_n|=\frac{\sqrt{n(2n+3)}}{(n+2)^{\frac{3}{2}}}\)，从而 \(S_n^{2}=\frac{n(2n+3)}{(n+2)^{3}}\). 先算得 \(S_1^{2}=\frac5{27}\)、\(S_2^{2}=\frac7{32}\)，且 \(\frac5{27}<\frac7{32}\)，所以 \(S_1<S_2\). 对实数 \(x>0\) 令 \(h(x)=\frac{x(2x+3)}{(x+2)^{3}}\)，则 \(h'(x)=\frac{-2x^{2}+2x+6}{(x+2)^{4}}=-\frac{2(x^{2}-x-3)}{(x+2)^{4}}\). 当 \(x\geqslant3\) 时，\(x^{2}-x-3>0\)，所以 \(h(x)\) 在 \([3,+\infty)\) 上递减. 因而对 \(n\geqslant3\)，有 \(S_n^{2}=h(n)>h(n+1)=S_{n+1}^{2}\). 由于面积为正，故 \(S_n>S_{n+1}\).
 \end{enumerate}
 \end{solution}

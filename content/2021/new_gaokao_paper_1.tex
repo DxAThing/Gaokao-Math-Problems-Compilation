@@ -228,8 +228,8 @@ a_n+2, & n\text{为偶数}.
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(b_1=2\)，\(b_2=5\)，\(b_n=3n-1\).
-\item 短答案：前 \(20\) 项和为 \(300\).
+    \item 由题意，\(a_1=1\). 因为 \(1\) 为奇数，所以 \(a_2=a_1+1=2\)，即 \(b_1=2\). 因为 \(2\) 为偶数，所以 \(a_3=a_2+2=4\)；因为 \(3\) 为奇数，所以 \(a_4=a_3+1=5\)，即 \(b_2=5\). 对任意 \(n\ge1\)，因为 \(2n+1\) 为奇数，\(2n\) 为偶数，所以 \(a_{2n+2}=a_{2n+1}+1=(a_{2n}+2)+1=a_{2n}+3\)，即 \(b_{n+1}-b_n=3\). 因此数列 \(\{b_n\}\) 是以 \(b_1=2\) 为首项，\(3\) 为公差的等差数列，其通项公式为 \(b_n=2+3(n-1)=3n-1\).
+    \item 记 \(\{a_n\}\) 的前 \(20\) 项和为 \(S_{20}\). 由（1）可知，对任意正整数 \(k\)，\(a_{2k}=b_k=3k-1\)，且 \(a_{2k-1}=a_{2k}-1=b_k-1=3k-2\). 从而 \(a_{2k-1}+a_{2k}=(3k-2)+(3k-1)=6k-3\). 于是 \(S_{20}=\sum_{k=1}^{10}(a_{2k-1}+a_{2k})=\sum_{k=1}^{10}(6k-3)=6\times\dfrac{10\times11}{2}-3\times10=330-30=300\). 所以 \(\{a_n\}\) 的前 \(20\) 项和为 \(300\).
 \end{enumerate}
 \end{solution}
 
@@ -244,15 +244,15 @@ a_n+2, & n\text{为偶数}.
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：
-\begin{center}
-\begin{tabular}{c|ccc}
-\(X\) & \(0\) & \(20\) & \(100\) \\
-\hline
-\(P\) & \(0.2\) & \(0.32\) & \(0.48\)
-\end{tabular}
-\end{center}
-\item 短答案：先回答 \(B\) 类问题.
+    \item 若小明先回答 A 类问题，小明的累计得分 \(X\) 的所有可能取值为 \(0\)，\(20\)，\(100\). 当小明回答 A 类问题错误时，比赛结束，此时 \(X=0\)，概率为 \(P(X=0)=1-0.8=0.2\)；当小明回答 A 类问题正确但回答 B 类问题错误时，比赛结束，此时 \(X=20\)，概率为 \(P(X=20)=0.8\times(1-0.6)=0.8\times0.4=0.32\)；当小明回答 A 类问题和 B 类问题均正确时，此时 \(X=20+80=100\)，概率为 \(P(X=100)=0.8\times0.6=0.48\). 所以 \(X\) 的分布列为
+    \begin{center}
+    \begin{tabular}{c|ccc}
+    \(X\) & \(0\) & \(20\) & \(100\) \\
+    \hline
+    \(P\) & \(0.2\) & \(0.32\) & \(0.48\)
+    \end{tabular}
+    \end{center}
+    \item 小明应选择先回答 B 类问题. 理由如下：由（1）可知，若小明先回答 A 类问题，累计得分的数学期望为 \(E(X)=0\times0.2+20\times0.32+100\times0.48=6.4+48=54.4\). 若小明先回答 B 类问题，记 \(Y\) 为小明的累计得分，则 \(Y\) 的可能取值为 \(0\)，\(80\)，\(100\). 此时 \(P(Y=0)=1-0.6=0.4\)，\(P(Y=80)=0.6\times(1-0.8)=0.12\)，\(P(Y=100)=0.6\times0.8=0.48\). 累计得分的数学期望为 \(E(Y)=0\times0.4+80\times0.12+100\times0.48=9.6+48=57.6\). 因为 \(E(Y)>E(X)\)，所以为使累计得分的期望最大，小明应选择先回答 B 类问题.
 \end{enumerate}
 \end{solution}
 
@@ -267,8 +267,8 @@ a_n+2, & n\text{为偶数}.
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(BD=b\).
-\item 短答案：\(\cos\angle ABC=\dfrac{7}{12}\).
+    \item 在 \(\triangle ABC\) 中，由正弦定理得 \(\dfrac{a}{\sin A}=\dfrac{b}{\sin\angle ABC}=\dfrac{c}{\sin C}\)，故 \(a\sin C=c\sin A\). 又由已知 \(BD\sin\angle ABC=a\sin C\)，得 \(BD=\dfrac{a\sin C}{\sin\angle ABC}=\dfrac{c\sin A}{\sin\angle ABC}=\dfrac{ac}{b}\). 因为 \(b^2=ac\)，所以 \(BD=\dfrac{b^2}{b}=b\).
+    \item 因为 \(D\) 在边 \(AC\) 上，且 \(AD=2DC\)，所以 \(CD=\dfrac13b\)，\(AD=\dfrac23b\). 设 \(\angle BDC=\theta\)，则 \(\angle BDA=\pi-\theta\). 在 \(\triangle BDC\) 中，由余弦定理得 \(\cos\theta=\dfrac{BD^2+CD^2-BC^2}{2BD\cdot CD}=\dfrac{b^2+\frac19b^2-a^2}{2b\cdot\frac13b}=\dfrac{5}{3}-\dfrac{3a^2}{2b^2}\). 在 \(\triangle BDA\) 中，由余弦定理得 \(\cos(\pi-\theta)=\dfrac{BD^2+AD^2-AB^2}{2BD\cdot AD}=\dfrac{b^2+\frac49b^2-c^2}{2b\cdot\frac23b}=\dfrac{13}{12}-\dfrac{3c^2}{4b^2}\). 因为 \(\cos(\pi-\theta)=-\cos\theta\)，所以 \(\left(\dfrac53-\dfrac{3a^2}{2b^2}\right)+\left(\dfrac{13}{12}-\dfrac{3c^2}{4b^2}\right)=0\)，即 \(\dfrac{3a^2}{2b^2}+\dfrac{3c^2}{4b^2}=\dfrac{11}{4}\)，化简得 \(2a^2+c^2=\dfrac{11}{3}b^2\). 将 \(b^2=ac\) 代入，得 \(6a^2-11ac+3c^2=0\)，因式分解得 \((2a-3c)(3a-c)=0\). 若 \(3a-c=0\)，则 \(c=3a\)，\(b=\sqrt{ac}=\sqrt3a\)，在 \(\triangle BDC\) 中，\(BC=a\)，\(BD-CD=\dfrac23b=\dfrac{2\sqrt3}{3}a>a=BC\)，两边之差大于第三边，不满足三角形三边关系，舍去；故必有 \(2a-3c=0\)，即 \(a=\dfrac32c\)，从而 \(b^2=ac=\dfrac32c^2\). 由余弦定理得 \(\cos\angle ABC=\dfrac{a^2+c^2-b^2}{2ac}=\dfrac{\frac94c^2+c^2-\frac32c^2}{2\times\frac32c\times c}=\dfrac{\frac74}{3}=\dfrac{7}{12}\).
 \end{enumerate}
 \end{solution}
 
@@ -285,8 +285,13 @@ a_n+2, & n\text{为偶数}.
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(OA\perp CD\).
-\item 短答案：三棱锥 \(A-BCD\) 的体积为 \(\dfrac{\sqrt{3}}{6}\).
+    \item 在 \(\triangle ABD\) 中，因为 \(AB=AD\)，\(O\) 为 \(BD\) 的中点，所以 \(OA\perp BD\). 又因为平面 \(ABD\perp\) 平面 \(BCD\)，平面 \(ABD\cap\) 平面 \(BCD=BD\)，且 \(OA\subset\) 平面 \(ABD\)，所以 \(OA\perp\) 平面 \(BCD\). 因为 \(CD\subset\) 平面 \(BCD\)，所以 \(OA\perp CD\).
+    \item 由题意，\(\triangle OCD\) 是边长为 \(1\) 的等边三角形，所以 \(OC=OD=CD=1\)，\(\angle COD=60^\circ\). 因为 \(O\) 为 \(BD\) 的中点，所以 \(B\)，\(O\)，\(D\) 三点共线，且 \(OB=OD=1\). 以 \(O\) 为坐标原点，直线 \(BD\) 为 \(x\) 轴，过点 \(O\) 垂直于 \(BD\) 的直线为 \(y\) 轴，射线 \(OA\) 为 \(z\) 轴建立空间直角坐标系. 则 \(D(1,0,0)\)，\(B(-1,0,0)\)，\(C\left(\dfrac12,\dfrac{\sqrt3}{2},0\right)\). 设 \(OA=h\)（\(h>0\)），则 \(A(0,0,h)\). 因为点 \(E\) 在棱 \(AD\) 上且 \(DE=2EA\)，所以 \(\overrightarrow{AE}=\dfrac13\overrightarrow{AD}=\left(\dfrac13,0,-\dfrac13h\right)\)，得 \(E\left(\dfrac13,0,\dfrac23h\right)\). 从而 \(\overrightarrow{BC}=\left(\dfrac32,\dfrac{\sqrt3}{2},0\right)\)，\(\overrightarrow{BE}=\left(\dfrac43,0,\dfrac23h\right)\). 设平面 \(EBC\) 的法向量为 \(\bs n=(x,y,z)\)，由 \(\bs n\cdot\overrightarrow{BC}=0\) 且 \(\bs n\cdot\overrightarrow{BE}=0\)，得
+    \(\begin{cases}
+    \dfrac32x+\dfrac{\sqrt3}{2}y=0,\\
+    \dfrac43x+\dfrac23hz=0,
+    \end{cases}\)
+    取 \(x=1\)，得 \(y=-\sqrt3\)，\(z=-\dfrac{2}{h}\)，所以 \(\bs n=\left(1,-\sqrt3,-\dfrac2h\right)\). 平面 \(BCD\) 的法向量可取 \(\bs m=(0,0,1)\). 因为二面角 \(E-BC-D\) 的大小为 \(45^\circ\)，所以 \(\cos45^\circ=\dfrac{|\bs m\cdot\bs n|}{|\bs m||\bs n|}=\dfrac{\frac2h}{\sqrt{1^2+(-\sqrt3)^2+\left(-\frac2h\right)^2}}=\dfrac{2}{\sqrt{4h^2+4}}=\dfrac{1}{\sqrt{h^2+1}}=\dfrac{\sqrt2}{2}\)，解得 \(h=1\)，即 \(OA=1\). 因为 \(BD=2\)，点 \(C\) 到直线 \(BD\) 的距离为 \(\dfrac{\sqrt3}{2}\)，所以 \(\triangle BCD\) 的面积为 \(S_{\triangle BCD}=\dfrac12\times2\times\dfrac{\sqrt3}{2}=\dfrac{\sqrt3}{2}\). 故三棱锥 \(A-BCD\) 的体积为 \(V=\dfrac13S_{\triangle BCD}\cdot OA=\dfrac13\times\dfrac{\sqrt3}{2}\times1=\dfrac{\sqrt3}{6}\).
 \end{enumerate}
 \end{solution}
 
@@ -301,8 +306,13 @@ a_n+2, & n\text{为偶数}.
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(C\) 的方程为 \(x^2-\dfrac{y^2}{16}=1\)，其中 \(x\geqslant 1\).
-\item 短答案：直线 \(AB\) 的斜率与直线 \(PQ\) 的斜率之和为 \(0\).
+    \item 因为 \(F_1(-\sqrt{17},0)\)，\(F_2(\sqrt{17},0)\)，满足 \(|MF_1|-|MF_2|=2<|F_1F_2|=2\sqrt{17}\)，由双曲线的定义可知，点 \(M\) 的轨迹是以 \(F_1\)，\(F_2\) 为焦点的双曲线的右支. 其中半实轴长 \(a=1\)，半焦距 \(c=\sqrt{17}\)，半虚轴长满足 \(b^2=c^2-a^2=16\). 故 \(C\) 的方程为 \(x^2-\dfrac{y^2}{16}=1\)（\(x\ge1\)）.
+    \item 由题意，设 \(T\left(\dfrac12,t\right)\). 显然过点 \(T\) 且与 \(C\) 相交的直线的斜率存在，设直线 \(AB\) 的倾斜角为 \(\alpha\)，则其参数方程为
+    \(\begin{cases}
+    x=\dfrac12+s\cos\alpha,\\
+    y=t+s\sin\alpha,
+    \end{cases}\)
+    其中 \(s\) 为参数. 代入 \(x^2-\dfrac{y^2}{16}=1\)，得 \(\left(\dfrac12+s\cos\alpha\right)^2-\dfrac{(t+s\sin\alpha)^2}{16}=1\)，整理得 \((16\cos^2\alpha-\sin^2\alpha)s^2+(16\cos\alpha-2t\sin\alpha)s-(12+t^2)=0\). 设 \(A\)，\(B\) 对应的参数分别为 \(s_1\)，\(s_2\)，则 \(s_1s_2=\dfrac{-(12+t^2)}{16\cos^2\alpha-\sin^2\alpha}\). 因为 \(A\)，\(B\) 两点均在双曲线的右支上，所以 \(s_1\)，\(s_2\) 同号，从而 \(s_1s_2>0\). 又 \(12+t^2>0\)，所以 \(16\cos^2\alpha-\sin^2\alpha<0\)，即 \(16-\tan^2\alpha<0\). 设直线 \(AB\) 的斜率为 \(k_1=\tan\alpha\)，则 \(TA\cdot TB=|s_1s_2|=\dfrac{12+t^2}{\sin^2\alpha-16\cos^2\alpha}=\dfrac{(12+t^2)(1+k_1^2)}{k_1^2-16}\). 同理，设直线 \(PQ\) 的斜率为 \(k_2\)，则 \(TP\cdot TQ=\dfrac{(12+t^2)(1+k_2^2)}{k_2^2-16}\). 由 \(TA\cdot TB=TP\cdot TQ\)，得 \(\dfrac{1+k_1^2}{k_1^2-16}=\dfrac{1+k_2^2}{k_2^2-16}\)，即 \(1+\dfrac{17}{k_1^2-16}=1+\dfrac{17}{k_2^2-16}\)，所以 \(k_1^2=k_2^2\). 因为直线 \(AB\) 与 \(PQ\) 是两条不同直线，所以 \(k_1\ne k_2\)，故 \(k_1=-k_2\)，即 \(k_1+k_2=0\). 所以直线 \(AB\) 的斜率与直线 \(PQ\) 的斜率之和为 \(0\).
 \end{enumerate}
 \end{solution}
 
@@ -317,7 +327,11 @@ a_n+2, & n\text{为偶数}.
 
 \begin{solution}
 \begin{enumerate}
-\item 短答案：\(f(x)\) 在 \((0,1)\) 上递增，在 \((1,+\infty)\) 上递减.
-\item 短答案：结论为 \(2<\dfrac{1}{a}+\dfrac{1}{b}<\e\).
+    \item 函数 \(f(x)=x(1-\ln x)\) 的定义域为 \((0,+\infty)\). 求导得 \(f'(x)=1-\ln x-x\cdot\dfrac1x=-\ln x\). 当 \(0<x<1\) 时，\(f'(x)>0\)，\(f(x)\) 单调递增；当 \(x>1\) 时，\(f'(x)<0\)，\(f(x)\) 单调递减. 所以 \(f(x)\) 的单调递增区间为 \((0,1)\)，单调递减区间为 \((1,+\infty)\).
+    \item 由题意，\(a\)，\(b\) 是两个不相等的正数，且 \(b\ln a-a\ln b=a-b\). 两边同除以 \(ab\)，得 \(\dfrac{\ln a}{a}-\dfrac{\ln b}{b}=\dfrac1b-\dfrac1a\)，整理得 \(\dfrac1a\left(1-\ln\dfrac1a\right)=\dfrac1b\left(1-\ln\dfrac1b\right)\). 令 \(u=\dfrac1a\)，\(v=\dfrac1b\)，则 \(u\ne v\) 且 \(u>0\)，\(v>0\)，上式即为 \(f(u)=f(v)\). 不妨设 \(0<u<1<v\).
+
+    先证 \(u+v>2\)：构造函数 \(g(x)=f(x)-f(2-x)\)（\(0<x<1\)）. 则 \(g'(x)=f'(x)+f'(2-x)=-\ln x-\ln(2-x)=-\ln[x(2-x)]\). 当 \(0<x<1\) 时，\(x(2-x)=-(x-1)^2+1<1\)，所以 \(\ln[x(2-x)]<0\)，从而 \(g'(x)>0\)，\(g(x)\) 在 \((0,1)\) 上单调递增. 故当 \(0<x<1\) 时，\(g(x)<g(1)=0\)，即 \(f(x)<f(2-x)\). 取 \(x=u\)，得 \(f(u)<f(2-u)\). 因为 \(f(u)=f(v)\)，所以 \(f(v)<f(2-u)\). 又 \(0<u<1\)，得 \(1<2-u<2\)，由（1）知 \(f(x)\) 在 \((1,+\infty)\) 上单调递减，所以 \(v>2-u\)，即 \(u+v>2\).
+
+    再证 \(u+v<\e\)：令 \(t=\dfrac vu\)，因为 \(0<u<1<v\)，所以 \(t>1\). 由 \(f(u)=f(v)\) 得 \(u(1-\ln u)=tu(1-\ln(tu))\)，化简得 \(1-\ln u=t(1-\ln t-\ln u)\)，解得 \(\ln u=1-\dfrac{t\ln t}{t-1}\)，故 \(u=\e\cdot\e^{-\frac{t\ln t}{t-1}}\). 于是 \(u+v=(1+t)u=\e(1+t)\e^{-\frac{t\ln t}{t-1}}\). 设 \(\varphi(t)=(t-1)\ln(1+t)-t\ln t\)（\(t>1\)），则 \(\varphi'(t)=\ln(1+t)+\dfrac{t-1}{t+1}-\ln t-1=\ln\left(1+\dfrac1t\right)-\dfrac{2}{t+1}\). 令 \(w=\dfrac1t\in(0,1)\)，设 \(\psi(w)=\ln(1+w)-\dfrac{2w}{w+1}\)，则 \(\psi'(w)=\dfrac{1}{1+w}-\dfrac{2}{(w+1)^2}=\dfrac{w-1}{(w+1)^2}<0\)，所以 \(\psi(w)<\psi(0)=0\)，即 \(\varphi'(t)<0\) 恒成立. 从而 \(\varphi(t)\) 在 \((1,+\infty)\) 上单调递减，故当 \(t>1\) 时，\(\varphi(t)<\lim_{t\to1^+}\varphi(t)=0\). 所以 \((t-1)\ln(1+t)-t\ln t<0\)，即 \(\ln(1+t)<\dfrac{t\ln t}{t-1}\)，从而 \((1+t)\e^{-\frac{t\ln t}{t-1}}<1\). 因此 \(u+v<\e\). 综上所述，\(2<\dfrac1a+\dfrac1b<\e\).
 \end{enumerate}
 \end{solution}

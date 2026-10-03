@@ -41,7 +41,7 @@
 \end{problem}
 
 \begin{answer}
-    C
+    A
 \end{answer}
 
 \begin{problem}
@@ -195,7 +195,7 @@
 \end{answer}
 
 \begin{problem}
-斜率为 \(\sqrt3\) 的直线过抛物线 \(C:y^2=4x\) 的焦点，且与 \(C\) 交于 \(A\)，\(B\) 两点，则 \(|AB|=\fillinblank{}\).
+斜率为 \(\sqrt3\) 的直线过抛物线 \(C:y^2=4x\) 的焦点，且与 \(C\) 交于 \(A\)，\(B\) 两点，则 \(|AB|=\)\fillinblank{}.
 \end{problem}
 
 \begin{answer}
@@ -211,7 +211,7 @@
 \end{answer}
 
 \begin{problem}
-某中学开展劳动实习，学生加工制作零件，零件的截面如图所示. \(O\) 为圆孔及轮廓圆弧 \(AB\) 所在圆的圆心，\(A\) 是圆弧 \(AB\) 与直线 \(AG\) 的切点，\(B\) 是圆弧 \(AB\) 与直线 \(BC\) 的切点，四边形 \(DEFG\) 为矩形，\(BC\perp DG\)，垂足为 \(C\)，\(\tan\angle ODC=\dfrac35\)，\(BH\parallel DG\)，\(EF=12\text{ cm}\)，\(DE=2\text{ cm}\)，\(A\) 到直线 \(DE\) 和 \(EF\) 的距离均为 \(7\text{ cm}\)，圆孔半径为 \(1\text{ cm}\)，则图中阴影部分的面积为\fillinblank{}\ \(\text{cm}^2\).
+某中学开展劳动实习，学生加工制作零件，零件的截面如图所示. \(O\) 为圆孔及轮廓圆弧 \(AB\) 所在圆的圆心，\(A\) 是圆弧 \(AB\) 与直线 \(AG\) 的切点，\(B\) 是圆弧 \(AB\) 与直线 \(BC\) 的切点，四边形 \(DEFG\) 为矩形，\(BC\perp DG\)，垂足为 \(C\)，\(\tan\angle ODC=\dfrac35\)，\(BH\parallel DG\)，\(EF=12 \mathrm{~cm}\)，\(DE=2 \mathrm{~cm}\)，\(A\) 到直线 \(DE\) 和 \(EF\) 的距离均为 \(7 \mathrm{~cm}\)，圆孔半径为 \(1 \mathrm{~cm}\)，则图中阴影部分的面积为\fillinblank{}\(\mathrm{cm}^2\).
 
 \begin{center}
 \bitmapfigure[float=inline,max width=0.88\linewidth]{img/2020/new_gaokao_paper_2/q16_fig1.png}
@@ -237,11 +237,10 @@
 \end{problem}
 
 \begin{solution}
-\begin{enumerate}
-\item 选择第 \(1\) 个条件时 \(c=1\).
-\item 选择第 \(2\) 个条件时 \(c=2\sqrt3\).
-\item 选择第 \(3\) 个条件时三角形不存在.
-\end{enumerate}
+由 \(\sin A=\sqrt{3}\sin B\) 及正弦定理得 \(a=\sqrt{3}b\). 又 \(C=\dfrac{\pi}{6}\)，由余弦定理得 \(c^2=a^2+b^2-2ab\cos C=3b^2+b^2-2\cdot\sqrt3b\cdot b\cdot\dfrac{\sqrt3}{2}=b^2\)，所以 \(c=b\).
+若选条件\circled{1}\(ac=\sqrt3\)：由 \(a=\sqrt3b\)，\(c=b\) 得 \(ac=\sqrt3b^2=\sqrt3\)，所以 \(b=1\)，从而 \(c=1\)，此时三角形存在.
+若选条件\circled{2}\(c\sin A=3\)：由正弦定理得 \(\sin A=\dfrac{a\sin C}{c}=\dfrac a{2c}\)，代入得 \(c\cdot\dfrac a{2c}=\dfrac a2=3\)，所以 \(a=6\)，\(b=\dfrac a{\sqrt3}=2\sqrt3\). 由余弦定理 \(c^2=a^2+b^2-2ab\cos C=36+12-36=12\)，所以 \(c=2\sqrt3\)，此时三角形存在.
+若选条件\circled{3}\(c=\sqrt3b\)：由 \(c=b\) 得 \(b=\sqrt3b\)，即 \(b=0\)，与 \(b>0\) 矛盾，所以三角形不存在.
 \end{solution}
 
 \begin{problem}
@@ -255,13 +254,17 @@
 
 \begin{solution}
 \begin{enumerate}
-\item \(a_n=2^n\).
-\item \(\dfrac85-(-1)^n\dfrac{2^{2n+3}}5\).
+\item 设等比数列 \(\{a_n\}\) 的首项为 \(a_1\)，公比为 \(q\)（\(q>1\)）. 由 \(a_3=8\) 得 \(a_1q^2=8\)，由 \(a_2+a_4=20\) 得 \(a_1q+a_1q^3=20\). 两式相除得 \(\dfrac{q+q^3}{q^2}=\dfrac{20}{8}=\dfrac52\)，即 \(2q^2-5q+2=0\)，解得 \(q=2\) 或 \(q=\dfrac12\). 因为 \(q>1\)，所以 \(q=2\)，从而 \(a_1=2\)，故 \(a_n=2^n\).
+\item 因为 \(a_na_{n+1}=2^n\cdot2^{n+1}=2^{2n+1}=2\cdot4^n\)，所以所求之和为
+\examdisplayaligned{
+a_1a_2-a_2a_3+\cdots+(-1)^{n-1}a_na_{n+1} &= 2\left[4-4^2+4^3-\cdots+(-1)^{n-1}4^n\right] \\
+&= 2\cdot\frac{4\left[1-(-4)^n\right]}{1-(-4)}=\frac85-(-1)^n\frac{2^{2n+3}}5
+}
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-为加强环境保护，治理空气污染，环境监测部门对某市空气质量进行调研，随机抽查了 \(100\) 天空气中的 \(\mathrm{PM}_{2.5}\) 和 \(\mathrm{SO}_2\) 浓度（单位：\(\mu\text{g}/\text{m}^3\)），得下表：
+为加强环境保护，治理空气污染，环境监测部门对某市空气质量进行调研，随机抽查了 \(100\) 天空气中的 \(\mathrm{PM}_{2.5}\) 和 \(\mathrm{SO}_2\) 浓度（单位：\(\mu\mathrm{g}/\mathrm{m}^3\)），得下表：
 
 \begin{center}
 \begin{tabular}{c|ccc}
@@ -302,9 +305,9 @@
 
 \begin{solution}
 \begin{enumerate}
-\item \(0.64\).
+\item 由表中数据，\(\mathrm{PM}_{2.5}\) 浓度不超过 \(75\) 且 \(\mathrm{SO}_2\) 浓度不超过 \(150\) 的天数为 \(32+18+6+8=64\)，所以所求概率的估计值为 \(\dfrac{64}{100}=0.64\).
 
-\item
+\item 由所给数据，\(2\times2\) 列联表为
 \begin{center}
 \begin{tabular}{c|ccc}
 \(\mathrm{PM}_{2.5}\backslash\mathrm{SO}_2\) & \([0,150]\) & \((150,475]\) & 合计 \\
@@ -315,7 +318,7 @@
 \end{tabular}
 \end{center}
 
-\item 有.
+\item 将列联表数据代入公式，得 \(K^2=\dfrac{100\times(64\times10-16\times10)^2}{(64+16)(10+10)(64+10)(16+10)}=\dfrac{100\times480^2}{80\times20\times74\times26}\approx7.484\). 因为 \(7.484>6.635\)，所以有 \(99\%\) 的把握认为该市一天空气中 \(\mathrm{PM}_{2.5}\) 浓度与 \(\mathrm{SO}_2\) 浓度有关.
 \end{enumerate}
 \end{solution}
 
@@ -332,8 +335,8 @@
 
 \begin{solution}
 \begin{enumerate}
-\item \(l\perp\) 平面 \(PDC\).
-\item \(\dfrac{\sqrt6}{3}\).
+\item 因为四边形 \(ABCD\) 为正方形，所以 \(AD\parallel BC\). 又 \(BC\subset\) 平面 \(PBC\)，\(AD\not\subset\) 平面 \(PBC\)，所以 \(AD\parallel\) 平面 \(PBC\). 因为 \(AD\subset\) 平面 \(PAD\)，且平面 \(PAD\) 与平面 \(PBC\) 的交线为 \(l\)，所以 \(AD\parallel l\). 因为 \(PD\perp\) 底面 \(ABCD\)，所以 \(PD\perp AD\)；又 \(AD\perp CD\)，\(PD\cap CD=D\)，所以 \(AD\perp\) 平面 \(PDC\). 因为 \(l\parallel AD\)，所以 \(l\perp\) 平面 \(PDC\).
+\item 由 \(PD\perp\) 底面 \(ABCD\)，以 \(D\) 为原点，\(\overrightarrow{DA}\)，\(\overrightarrow{DC}\)，\(\overrightarrow{DP}\) 的方向分别为 \(x\)，\(y\)，\(z\) 轴正方向建立空间直角坐标系，则 \(D(0,0,0)\)，\(A(1,0,0)\)，\(C(0,1,0)\)，\(B(1,1,0)\)，\(P(0,0,1)\). 由（1）知 \(l\) 过点 \(P\) 且平行于 \(AD\)，设 \(Q(t,0,1)\). 由 \(QB=\sqrt2\) 得 \((t-1)^2+1+1=2\)，所以 \(t=1\)，即 \(Q(1,0,1)\). 于是 \(\overrightarrow{PB}=(1,1,-1)\)，\(|\overrightarrow{PB}|=\sqrt3\). 设平面 \(QCD\) 的法向量为 \(\bs{n}=(x,y,z)\)，由 \(\overrightarrow{DC}=(0,1,0)\)，\(\overrightarrow{DQ}=(1,0,1)\) 得 \(y=0\)，\(x+z=0\)，取 \(\bs{n}=(1,0,-1)\). 设 \(PB\) 与平面 \(QCD\) 所成的角为 \(\theta\)，则 \(\sin\theta=\dfrac{|\overrightarrow{PB}\cdot\bs{n}|}{|\overrightarrow{PB}|\,|\bs{n}|}=\dfrac{|1+0+1|}{\sqrt3\cdot\sqrt2}=\dfrac{\sqrt6}{3}\).
 \end{enumerate}
 \end{solution}
 
@@ -348,23 +351,24 @@
 
 \begin{solution}
 \begin{enumerate}
-\item \(\dfrac{x^2}{16}+\dfrac{y^2}{12}=1\).
-\item \(18\).
+\item 由椭圆过 \(M(2,3)\) 得 \(\dfrac4{a^2}+\dfrac9{b^2}=1\). 左顶点为 \(A(-a,0)\)，由 \(AM\) 的斜率为 \(\dfrac12\) 得 \(\dfrac{3-0}{2-(-a)}=\dfrac12\)，所以 \(a=4\)，代入上式得 \(\dfrac4{16}+\dfrac9{b^2}=1\)，解得 \(b^2=12\). 故 \(C\) 的方程为 \(\dfrac{x^2}{16}+\dfrac{y^2}{12}=1\).
+\item 由（1）知 \(A(-4,0)\)，直线 \(AM\) 的方程为 \(y=\dfrac12(x+4)\)，即 \(x-2y+4=0\)，且 \(|AM|=\sqrt{(2+4)^2+3^2}=3\sqrt5\). 设 \(N(x,y)\) 为椭圆上任意一点，则 \(N\) 到直线 \(AM\) 的距离为 \(d=\dfrac{|x-2y+4|}{\sqrt5}\)，所以 \(\triangle AMN\) 的面积 \(S=\dfrac12|AM|\cdot d=\dfrac32|x-2y+4|\). 令 \(x=4\cos\alpha\)，\(y=2\sqrt3\sin\alpha\)，则 \(x-2y=4\cos\alpha-4\sqrt3\sin\alpha=8\cos\left(\alpha+\dfrac{\pi}{3}\right)\)，所以 \(x-2y\in[-8,8]\)，故 \(x-2y+4\le12\). 当 \(x-2y=8\) 时取到等号，此时 \(S\) 取最大值 \(\dfrac32\times12=18\).
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-已知函数 \(f(x)=ae^{x-1}-\ln x+\ln a\).
+已知函数 \(f(x)=a\e^{x-1}-\ln x+\ln a\).
 
 \begin{enumerate}
-\item 当 \(a=e\) 时，求曲线 \(y=f(x)\) 在点 \((1,f(1))\) 处的切线与两坐标轴围成的三角形的面积；
+\item 当 \(a=\e\) 时，求曲线 \(y=f(x)\) 在点 \((1,f(1))\) 处的切线与两坐标轴围成的三角形的面积；
 \item 若 \(f(x)\geqslant1\)，求 \(a\) 的取值范围.
 \end{enumerate}
 \end{problem}
 
 \begin{solution}
 \begin{enumerate}
-\item \(\dfrac{2}{e-1}\).
-\item \([1,+\infty)\).
+\item 当 \(a=\e\) 时，\(f(x)=\e\cdot\e^{x-1}-\ln x+\ln\e=\e^x-\ln x+1\)，所以 \(f(1)=\e+1\). 又 \(f'(x)=\e^x-\dfrac1x\)，所以 \(f'(1)=\e-1\)，曲线在点 \((1,\e+1)\) 处的切线方程为 \(y-(\e+1)=(\e-1)(x-1)\). 令 \(y=0\) 得 \(x=-\dfrac{2}{\e-1}\)，令 \(x=0\) 得 \(y=2\)，所以该切线与两坐标轴围成的三角形的面积为 \(\dfrac12\times\dfrac{2}{\e-1}\times2=\dfrac{2}{\e-1}\).
+\item 若 \(a\ge1\)，则 \(a\e^{x-1}\ge\e^{x-1}\) 且 \(\ln a\ge0\)，所以 \(f(x)\ge\e^{x-1}-\ln x\). 记 \(h(x)=\e^{x-1}-\ln x\)，则 \(h'(x)=\e^{x-1}-\dfrac1x\)，\(h''(x)=\e^{x-1}+\dfrac1{x^2}>0\)，所以 \(h'(x)\) 在 \((0,+\infty)\) 上单调递增. 又 \(h'(1)=0\)，所以当 \(0<x<1\) 时 \(h'(x)<0\)，当 \(x>1\) 时 \(h'(x)>0\)，即 \(h(x)\) 在 \((0,1)\) 上单调递减，在 \((1,+\infty)\) 上单调递增，故 \(h(x)\ge h(1)=1\). 从而 \(f(x)\ge1\)，即 \(a\ge1\) 满足题意.
+若 \(f(x)\ge1\) 对任意 \(x>0\) 恒成立，取 \(x=1\) 得 \(f(1)=a+\ln a\ge1\). 记 \(\varphi(a)=a+\ln a\)（\(a>0\)），则 \(\varphi'(a)=1+\dfrac1a>0\)，\(\varphi(a)\) 单调递增，且 \(\varphi(1)=1\)，所以 \(a\ge1\). 综上，\(a\) 的取值范围为 \([1,+\infty)\).
 \end{enumerate}
 \end{solution}

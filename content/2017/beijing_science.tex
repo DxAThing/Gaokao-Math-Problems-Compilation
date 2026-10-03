@@ -423,17 +423,17 @@ M=\frac{P+B}{2}=\left(-1,2,\frac{\sqrt2}{2}\right)
 P=\frac{15}{50}=\frac3{10}
 \]
 
-\item 由图可知，\(A\)、\(C\) 的指标 \(x>1.7\)，\(B\)、\(D\) 的指标 \(x<1.7\).从四人中任选两人的基本事件数为 \(\binom42=6\).所以
+\item 由图可知，\(A\)、\(C\) 的指标 \(x>1.7\)，\(B\)、\(D\) 的指标 \(x<1.7\).从四人中任选两人的基本事件数为 \(\mathrm C_4^2=6\).所以
 \[
-P(\xi=0)=\frac{\binom22}{\binom42}=\frac16
+P(\xi=0)=\frac{\mathrm C_2^2}{\mathrm C_4^2}=\frac16
 \]
 因为只有选中 \(B\)，\(D\) 时 \(\xi=0\)；
 \[
-P(\xi=2)=\frac{\binom22}{\binom42}=\frac16
+P(\xi=2)=\frac{\mathrm C_2^2}{\mathrm C_4^2}=\frac16
 \]
 因为只有选中 \(A\)，\(C\) 时 \(\xi=2\)；
 \[
-P(\xi=1)=\frac{\binom21\binom21}{\binom42}=\frac46=\frac23
+P(\xi=1)=\frac{\mathrm C_2^1\mathrm C_2^1}{\mathrm C_4^2}=\frac46=\frac23
 \]
 因此 \(\xi\) 的分布列为
 \(P(\xi=0)=\frac16\)，\(P(\xi=1)=\frac23\)，\(P(\xi=2)=\frac16\).
@@ -468,7 +468,7 @@ y=kx+\frac12
 k y^2-y+\frac12=0
 \]
 所以由韦达定理，
-\(y_1+y_2=\frac1k\)，\(y_1y_2=\frac1{2k}\)
+\(y_1+y_2=\frac1k\)，\(y_1y_2=\frac1{2k}\)，
 从而 \(y_1+y_2=2y_1y_2\)，且 \(y_2\ne0\).
 
 直线 \(OP\) 的方程为 \(y=x\)，故过 \(M\) 的竖线与 \(OP\) 的交点为 \(A=(x_1,x_1)\).又直线 \(ON\) 的斜率为 \(\dfrac{y_2}{x_2}=\dfrac1{y_2}\)，所以
@@ -537,11 +537,11 @@ f\left(\frac\pi2\right)=\e^{\frac\pi2}\cos\frac\pi2-\frac\pi2=-\frac\pi2
 b_i-a_in=(2i-1)-in=1-n+(i-1)(2-n)
 \]
 当 \(n=1\) 时，\(c_1=0\)；当 \(n=2\) 时，所有候选值均为 \(-1\)，所以 \(c_2=-1\)；当 \(n\ge2\) 时，\(2-n\le0\)，候选值随 \(i\) 不增，最大值在 \(i=1\) 处取得，故 \(c_n=1-n\).特别地，\(c_3=-2\).于是
-\(c_1=0\)，\(c_2=-1\)，\(c_3=-2\)
+\(c_1=0\)，\(c_2=-1\)，\(c_3=-2\)，
 且对任意正整数 \(n\)，都有 \(c_{n+1}-c_n=-1\)，所以 \(\{c_n\}\) 是等差数列.
 
 \item 设 \(\{a_n\}\)、\(\{b_n\}\) 的公差分别为 \(d_a\)、\(d_b\).对固定的 \(n\)，记
-\(t_{i,n}=b_i-a_in\)，\((1\le i\le n)\).
+\(t_{i,n}=b_i-a_in\)，（\(1\le i\le n\)）.
 由等差数列通项公式，
 \[
 t_{i,n}=b_1-a_1n+(i-1)(d_b-nd_a)
@@ -551,7 +551,7 @@ t_{i,n}=b_1-a_1n+(i-1)(d_b-nd_a)
 若 \(d_a=0\)，则 \(d_b-nd_a=d_b\) 与 \(n\) 无关.如果 \(d_b\le0\)，则对所有 \(n\)，\(c_n=b_1-a_1n\)；如果 \(d_b>0\)，则对所有 \(n\)，\(c_n=b_n-a_1n\).这两种情形中的 \(c_n\) 都是关于 \(n\) 的一次式，所以取 \(m=1\) 即可.
 
 若 \(d_a>0\)，则存在正整数 \(m\)，使得当 \(n\ge m\) 时，\(d_b-nd_a\le0\).此时
-\(c_n=b_1-a_1n\)，\((n\ge m)\)
+\(c_n=b_1-a_1n\)，（\(n\ge m\)），
 所以 \(c_m\)，\(c_{m+1}\)，\(\dots\) 是等差数列.
 
 若 \(d_a<0\)，则存在正整数 \(m_0\)，使得当 \(n\ge m_0\) 时，\(d_b-nd_a>0\).此时
@@ -567,7 +567,7 @@ c_n&=b_n-a_nn\\
 \[
 m=\max\left\{m_0,\left\lfloor\frac{M-B}{A}\right\rfloor+1\right\};
 \]
-当 \(n\ge m\) 时，\(C/n\ge0\)，且
+当 \(n\ge m\) 时，\(\frac{C}{n}\ge0\)，且
 \[
 \frac{c_n}{n}\ge An+B\ge Am+B>M
 \]
@@ -575,7 +575,7 @@ m=\max\left\{m_0,\left\lfloor\frac{M-B}{A}\right\rfloor+1\right\};
 \[
 m=\max\left\{m_0,\left\lfloor\frac{M-B-C}{A}\right\rfloor+1\right\}
 \]
-当 \(n\ge m\) 时，因 \(n\ge1\) 且 \(C<0\)，有 \(C/n\ge C\)，故
+当 \(n\ge m\) 时，因 \(n\ge1\) 且 \(C<0\)，有 \(\frac{C}{n}\ge C\)，故
 \[
 \frac{c_n}{n}\ge An+B+C\ge Am+B+C>M
 \]

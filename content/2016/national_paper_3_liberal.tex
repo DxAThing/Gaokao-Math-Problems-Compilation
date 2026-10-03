@@ -115,7 +115,7 @@ D
 \end{answer}
 
 \begin{solution}
-利用正切的二倍角公式，\(\cos2\theta=\dfrac{1-\tan^2\theta}{1+\tan^2\theta}\). 代入 \(\tan\theta=-\dfrac13\)，得 \(\cos2\theta=\dfrac{1-\frac19}{1+\frac19}=\dfrac{8/9}{10/9}=\dfrac45\)，故选 D.
+利用正切的二倍角公式，\(\cos2\theta=\dfrac{1-\tan^2\theta}{1+\tan^2\theta}\). 代入 \(\tan\theta=-\dfrac13\)，得 \(\cos2\theta=\dfrac{1-\frac19}{1+\frac19}=\dfrac{\frac{8}{9}}{\frac{10}{9}}=\dfrac45\)，故选 D.
 \end{solution}
 
 \begin{problem}
@@ -156,7 +156,7 @@ B
 
 \begin{solution}
 每次循环中的赋值语句按从上到下的顺序执行，不能把三条语句看成同时赋值. 初始时 \((a,b,s,n)=(4,6,0,0)\). 第一次循环后，\(a=6-4=2\)，\(b=6-2=4\)，\(a=4+2=6\)，再得 \(s=0+6=6\)，\(n=1\). 因而状态为 \((6,4,6,1)\). 继续按同样方法计算，四次循环后的状态依次为
-\((a,b,s,n)=(6,4,6,1)\)，\(\ (4,6,10,2)\)，\(\ (6,4,16,3)\)，\(\ (4,6,20,4)\).
+\((a,b,s,n)=(6,4,6,1)\)，\((4,6,10,2)\)，\((6,4,16,3)\)，\((4,6,20,4)\).
 前三次循环后均有 \(s\le16\)，继续循环；第四次循环后 \(s=20>16\)，满足停止条件，所以输出 \(n=4\)，故选 B.
 \end{solution}
 
@@ -229,9 +229,7 @@ B
 \begin{solution}
 三棱柱的底面是直角三角形，斜边
 \(AC=\sqrt{AB^2+BC^2}=\sqrt{6^2+8^2}=10\)，其内切圆半径为
-\(
-r_0=\frac{AB+BC-AC}{2}=\frac{6+8-10}{2}=2.
-\)
+\(r_0=\frac{AB+BC-AC}{2}=\frac{6+8-10}{2}=2\).
 任意内接球的球心到上、下底面的距离之和为 \(3\)，所以球半径 \(r\le\dfrac32\). 同时，球心在底面内的投影到三个侧面对应边的距离都至少要为 \(r\)，而底面内能达到的最大最小边距就是内切圆半径 \(r_0=2\). 因此 \(r\le\min\left(2,\dfrac32\right)=\dfrac32\). 取球心为底面内切圆圆心沿棱柱高方向上升 \(\dfrac32\) 的位置，即位于两底面中间，此时到上、下底面的距离均为 \(\dfrac32\)，到三个侧面的距离均为 \(2\)，确实得到半径 \(\dfrac32\) 的内接球. 所以
 \[
 V_{\max}=\frac43\pi\left(\frac32\right)^3=\frac{9\pi}{2}
@@ -254,21 +252,7 @@ A
 \end{answer}
 
 \begin{solution}
-设椭圆焦距的一半为 \(c\)，则 \(F=(-c,0)\)，\(A=(-a,0)\)，\(B=(a,0)\). 由于 \(PF\perp x\) 轴，点 \(P\) 与 \(F\) 的横坐标相同，所以线段 \(PF\) 在直线 \(x=-c\) 上. 设直线 \(l\) 的斜率为 \(k\)，则其方程为 \(y=k(x+a)\)，从而
-\(
-M=(-c,k(a-c)),\qquad E=(0,ka).
-\)
-先讨论非退化情形 \(M\ne F\). 设 \(OE\) 的中点为 \(N\)，则 \(N=(0,ka/2)\). 因为 \(a>c\)，此时 \(k\ne0\).
-
-由 \(B\)，\(M\)，\(N\) 三点共线，比较直线 \(BM\) 和 \(BN\) 的斜率，得
-\[
--\frac{k(a-c)}{a+c}=-\frac{k}{2}
-\]
-约去 \(-k\) 后有 \(\dfrac{a-c}{a+c}=\dfrac12\)，即 \(2a-2c=a+c\)，所以 \(a=3c\). 因此离心率
-\(
-e=\frac ca=\frac13,
-\)
-故按标准答案所采用的非退化解释，离心率为 \(\dfrac13\)，选 A. 但若严格按题面允许直线 \(l\) 为 \(x\) 轴，则 \(M=F\)，\(E=O\)，且 \(B\)，\(M\)，\(O\) 恒共线，此时条件对任意椭圆都成立，不能唯一确定离心率；因此题面需要排除这一退化情形.
+设 \(c=\sqrt{a^2-b^2}\)，则 \(F(-c,0)\)，\(A(-a,0)\)，\(B(a,0)\)，且 \(0<c<a\). 题面中的 \(OE\) 是有中点的线段，按几何定义其两端点不同，故 \(E\ne O\). 因此 \(l\) 不是 \(x\) 轴；又因 \(l\) 与 \(y\) 轴相交，它不是过 \(A\) 的竖直线. 设 \(l\) 的方程为 \(y=k\left(x+a\right)\)，则 \(k\ne0\). 因为 \(PF\perp x\) 轴，线段 \(PF\) 位于直线 \(x=-c\) 上，故 \(M\left(-c,k\left(a-c\right)\right)\)，\(E(0,ka)\). 设 \(OE\) 的中点为 \(N\left(0,\dfrac{ka}{2}\right)\). 由 \(B\)，\(M\)，\(N\) 共线，比较直线 \(BM\) 和 \(BN\) 的斜率得 \(-\dfrac{k\left(a-c\right)}{a+c}=-\dfrac{k}{2}\). 约去非零的 \(-k\)，可得 \(2\left(a-c\right)=a+c\)，所以 \(a=3c\)，离心率为 \(e=\dfrac ca=\dfrac13\)，故选 A. 若取 \(l\) 为 \(x\) 轴，则 \(E=O\)，线段 \(OE\) 的两个端点重合，不符合原题几何对象的非退化定义，不能作为反例.
 \end{solution}
 
 \section{填空题}
@@ -279,7 +263,7 @@ e=\frac ca=\frac13,
 2x-y+1\ge0,\\
 x-2y-1\le0,\\
 x\le1
-\end{cases}\)
+\end{cases}\)，
 则 \(z=2x+3y-5\) 的最小值为\fillinblank{}.
 \end{problem}
 
@@ -407,7 +391,7 @@ r=\frac{2.89}{\sqrt{28}\times0.55}\approx0.99
 \begin{solution}
 \begin{enumerate}
 \item 在底面内建立直角坐标系，取 \(A=(0,0,0)\)，\(D=(3,0,0)\)，并设 \(B=(u,v,0)\)，\(C=(u+4,v,0)\). 由 \(AB=AC=3\) 得
-\(u^2+v^2=9\)，\((u+4)^2+v^2=9\)
+\(u^2+v^2=9\)，\((u+4)^2+v^2=9\)，
 从而 \(u=-2\)，\(v^2=5\). 取 \(v=\sqrt5\)，则 \(B=(-2,\sqrt5,0)\)，\(C=(2,\sqrt5,0)\). 又 \(P=(0,0,4)\)，由 \(AM=2\) 得 \(M=(2,0,0)\)，而 \(N\) 是 \(PC\) 的中点，所以 \(N=(1,\dfrac{\sqrt5}{2},2)\). 于是
 \[
 \overrightarrow{MN}=\left(-1,\frac{\sqrt5}{2},2\right)=\frac12\overrightarrow{AB}+\frac12\overrightarrow{AP}
@@ -431,7 +415,7 @@ V_{N-BCM}=\frac13S_{\triangle BCM}\times2=\frac{4\sqrt5}{3}
 
 \begin{solution}
 \begin{enumerate}
-\item 抛物线可参数化为 \(X(t)=\left(\dfrac{t^2}{2},t\right)\). 设 \(A=X(t_1)\)，\(B=X(t_2)\)，则准线为 \(x=-\dfrac12\)，故 \(P=\left(-\dfrac12,t_1\right)\)，\(Q=\left(-\dfrac12,t_2\right)\)，焦点为 \(F=\left(\dfrac12,0\right)\). 直线 \(AB\) 的方程为
+\item 设 \(l_1:y=t_1\)，\(l_2:y=t_2\). 平行直线没有公共点，故 \(l_1\)，\(l_2\) 均不与 \(x\) 轴重合，所以 \(t_1\ne0\)，\(t_2\ne0\)；两条直线不同，故 \(t_1\ne t_2\). 于是 \(A\left(\dfrac{t_1^2}{2},t_1\right)\)，\(B\left(\dfrac{t_2^2}{2},t_2\right)\). 准线为 \(x=-\dfrac12\)，故 \(P\left(-\dfrac12,t_1\right)\)，\(Q\left(-\dfrac12,t_2\right)\)，焦点为 \(F\left(\dfrac12,0\right)\). 直线 \(AB\) 的方程为
 \[
 x-\frac{t_1+t_2}{2}y+\frac{t_1t_2}{2}=0
 \]
@@ -443,15 +427,10 @@ x-\frac{t_1+t_2}{2}y+\frac{t_1t_2}{2}=0
 \[
 \overrightarrow{AR}=\frac{1+t_1^2}{2}(-1,t_2)=\frac{1+t_1^2}{2}\overrightarrow{FQ}
 \]
-因此 \(AR\parallel FQ\).
-\item 设 \(t_1\ne t_2\). 因为 \(PQ\) 在准线上，焦点到准线的距离为 \(1\)，所以 \(S_{\triangle PQF}=\dfrac12|t_2-t_1|\). 另一方面，由行列式计算三角形面积，得
-\[
-S_{\triangle ABF}=\frac14|t_2-t_1|\left|1+t_1t_2\right|
-\]
-由题意 \(S_{\triangle PQF}=2S_{\triangle ABF}\)，约去非零因子 \(\dfrac12|t_2-t_1|\)，可得 \(\left|1+t_1t_2\right|=1\)，即
-\(t_1t_2=0\) 或 \(t_1t_2=-2\). 若 \(t_1t_2=0\)，则 \(t_1=0\) 或 \(t_2=0\)，其中一条水平直线为 \(y=0\)，它在抛物线顶点处相切；此时 \(AB\) 中点满足 \(y^2=x\)，且因两直线不同而有 \(x>0\). 若按标准答案将两条直线理解为非切线，即排除该退化分支，则 \(t_1t_2=-2\). 设 \(AB\) 的中点为 \((x,y)\)，则
-\(x=\frac{t_1^2+t_2^2}{4}\)，\(y=\frac{t_1+t_2}{2}\).
-非退化分支中 \(x-y^2=-\dfrac{t_1t_2}{2}=1\)，所以标准答案的轨迹方程为 \(y^2=x-1\). 严格按原题字面若允许切线，还应加上退化分支 \(y^2=x\)（\(x>0\)）；故题面未明确排除切线时，轨迹并非唯一为标准答案所列的一条曲线.
+又 \(R\ne Q\)，而直线 \(FQ\) 与准线仅交于 \(Q\)，故 \(R\) 不在直线 \(FQ\) 上. 因此 \(AR\parallel FQ\).
+\item 沿用上述坐标与参数限制. 因为 \(t_1\ne t_2\)，且焦点到准线的距离为 \(1\)，所以 \(S_{\triangle PQF}=\dfrac12\left|t_2-t_1\right|>0\). 由坐标计算面积，得 \(S_{\triangle ABF}=\dfrac12\left|\dfrac{t_1^2-1}{2}t_2-\dfrac{t_2^2-1}{2}t_1\right|=\dfrac14\left|t_2-t_1\right|\left|1+t_1t_2\right|\). 由 \(S_{\triangle PQF}=2S_{\triangle ABF}\)，约去非零因子 \(\dfrac12\left|t_2-t_1\right|\)，得 \(\left|1+t_1t_2\right|=1\)，即 \(t_1t_2=0\) 或 \(t_1t_2=-2\). 因为 \(t_1\)，\(t_2\) 均非零，所以只能有 \(t_1t_2=-2\). 设 \(AB\) 的中点为 \(H(x,y)\)，则 \(x=\dfrac{t_1^2+t_2^2}{4}\)，\(y=\dfrac{t_1+t_2}{2}\)，故 \(x-y^2=-\dfrac{t_1t_2}{2}=1\)，即 \(y^2=x-1\).
+
+反之，对曲线 \(y^2=x-1\) 上任意一点 \(H(x,y)\)，取 \(t_1=y+\sqrt{y^2+2}\)，\(t_2=y-\sqrt{y^2+2}\). 则 \(t_1>0\)，\(t_2<0\)，故两参数不同且均非零，直线 \(l_1\)，\(l_2\) 均与 \(x\) 轴平行. 又 \(t_1+t_2=2y\)，\(t_1t_2=-2\)，所以 \(\dfrac{t_1^2+t_2^2}{4}=y^2+1=x\)，所得 \(AB\) 的中点恰为 \(H\). 代入面积公式得 \(S_{\triangle ABF}=\dfrac14\left|t_2-t_1\right|>0\)，\(S_{\triangle PQF}=2S_{\triangle ABF}\)，满足全部题设条件. 因此完整轨迹为 \(y^2=x-1\). 参数乘积为零会使某条直线与 \(x\) 轴重合，违反原题的平行条件，不能产生另一轨迹分支.
 \end{enumerate}
 \end{solution}
 
@@ -503,7 +482,7 @@ T(t)=\left(\frac{2t}{1+t^2},\frac{1-t^2}{1+t^2}\right)
 \[
 y_{AB}=\frac{1-u^2}{1+u^2}=:h
 \]
-令 \(C=T(r)\)，\(D=T(s)\)，并记 \(k=\dfrac{2u^2}{1+u^2}\). 直线 \(PC\) 的斜率为 \(-r\)，故方程为 \(y=1-rx\)，与 \(y=h\) 联立得 \(x=k/r\). 同理，直线 \(PD\) 与 \(AB\) 的交点分别为
+令 \(C=T(r)\)，\(D=T(s)\)，并记 \(k=\dfrac{2u^2}{1+u^2}\). 直线 \(PC\) 的斜率为 \(-r\)，故方程为 \(y=1-rx\)，与 \(y=h\) 联立得 \(x=\frac{k}{r}\). 同理，直线 \(PD\) 与 \(AB\) 的交点分别为
 \(E=\left(\frac{k}{r},h\right)\)，\(F=\left(\frac{k}{s},h\right)\).
 设 \(G=(X,Y)\). 由 \(G\) 在 \(EC\) 的垂直平分线上，\(GE^2=GC^2\). 将 \(E\)、\(C\) 的坐标代入并使用 \(h=\dfrac{1-u^2}{1+u^2}\)、\(k=\dfrac{2u^2}{1+u^2}\)，移项并约去公共因子，得
 \[

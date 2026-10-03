@@ -181,7 +181,7 @@ B
 \(m=\dfrac{\sin(\frac\pi3+t)}{\sin(\frac\pi3-t)}\).
 对 \(m\) 求导得
 \(m'(t)=\dfrac{\sin\left(\frac{2\pi}{3}\right)}{\sin^2\left(\frac\pi3-t\right)}>0\).
-当 \(t\to\frac\pi6+\) 时，\(m\to\frac1{1/2}=2\)；当 \(t\to\frac\pi3-\) 时，分母趋于 \(0^+\)，故 \(m\to+\infty\). 因而 \(m\in(2,+\infty)\)，选 B.
+当 \(t\to\frac\pi6+\) 时，\(m\to\frac1{\frac{1}{2}}=2\)；当 \(t\to\frac\pi3-\) 时，分母趋于 \(0^+\)，故 \(m\to+\infty\). 因而 \(m\in(2,+\infty)\)，选 B.
 \end{solution}
 \end{problem}
 
@@ -378,7 +378,7 @@ S_{\omega}=\left\{\frac{\frac{\pi}{2}+k\pi}{\omega}\mid k\in\Z\right\}
 又因为 \(F\) 是正三角形 \(ABC\) 的边 \(AB\) 的中点，所以 \(CF\perp AB\)；题设给出 \(PF\perp AB\). 直线 \(PF\)，\(CF\) 在平面 \(PFC\) 内相交，故 \(AB\perp\) 平面 \(PFC\)，从而 \(PC\perp AB\). 直线 \(AP\)，\(AB\) 是平面 \(PAB\) 内相交的两条直线，且 \(PC\) 同时垂直于它们，所以 \(PC\perp\) 平面 \(PAB\).
 
 \item 因为 \(PF\perp AB\)，\(CF\perp AB\)，所以 \(\angle PFC\) 是二面角 \(P-AB-C\) 的平面角. 又
-\(PF=AF=\frac a2\)，\(PF\perp AF\)
+\(PF=AF=\frac a2\)，\(PF\perp AF\)，
 故在直角三角形 \(PAF\) 中，
 \(PA^2=PF^2+AF^2=\frac{a^2}{2}\).
 由第（1）问，\(\triangle APC\) 在 \(P\) 处直角，所以
@@ -445,7 +445,7 @@ S=\sin2\theta-\cos^2\theta
 已知函数 \(f(x) = \frac{x+3}{x+1}\)（\(x \ne -1\)）. 设数列 \(\{a_n\}\) 满足 \(a_1 = 1\)，\(a_{n+1} = f(a_n)\)，数列 \(\{b_n\}\) 满足 \(b_n = |a_n - \sqrt{3}|\)，\(S_n = b_1 + b_2 + \cdots + b_n\)（\(n \in \mathbf{N}^*\)）.
 
 \begin{enumerate}
-\item 用数学归纳法证明：\(b_n \leqslant \frac{\sqrt{3} - 1}{2^{n-1}}\)；
+\item 用数学归纳法证明：\(b_n \leqslant \frac{(\sqrt{3} - 1)^n}{2^{n-1}}\)；
 \item 证明：\(S_n < \frac{2\sqrt{3}}{3}\).
 \end{enumerate}
 
@@ -462,9 +462,9 @@ a_{n+1}=\frac{a_n+3}{a_n+1}=1+\frac2{a_n+1}
 b_{n+1}=\frac{r-1}{a_n+1}b_n\leqslant\frac{r-1}{2}b_n<\frac12b_n
 \]
 
-下面用数学归纳法证明 \(b_n\leqslant\frac{r-1}{2^{n-1}}\). 当 \(n=1\) 时，\(b_1=|1-r|=r-1\)，结论成立. 假设当 \(n=k\) 时结论成立，则
+下面用数学归纳法证明 \(b_n\leqslant\frac{(r-1)^n}{2^{n-1}}\). 当 \(n=1\) 时，\(b_1=|1-r|=r-1\)，结论成立. 假设当 \(n=k\) 时结论成立，则
 \[
-b_{k+1}<\frac12b_k\leqslant\frac12\cdot\frac{r-1}{2^{k-1}}=\frac{r-1}{2^k}
+b_{k+1}\leqslant\frac{r-1}{2}b_k\leqslant\frac{r-1}{2}\cdot\frac{(r-1)^k}{2^{k-1}}=\frac{(r-1)^{k+1}}{2^k}
 \]
 因此结论对 \(k+1\) 也成立，故对一切正整数 \(n\) 成立.
 
@@ -641,13 +641,13 @@ u^2+v^2=\frac{(X+c)^2+Y^2}{4}=a^2
 \(f(x)-f(x_0)=f'(\xi)(x-x_0)\leqslant f'(x_0)(x-x_0)=g(x)-f(x_0)\).
 因此对任意 \(x>0\)，都有 \(g(x)\geqslant f(x)\).
 
-\item 要使下方不等式对所有 \(x\geqslant0\) 成立，先注意到 \(a\) 必须为正数；否则当 \(x\to+\infty\) 时，\(ax+b\) 不可能始终不小于 \(\frac32x^{2/3}\). 由 \(x=0\) 处的下方不等式还知 \(b\geqslant0\). 对函数 \(h(x)=\frac32x^{2/3}\)（\(x>0\)），有
-\(h'(x)=x^{-1/3}\)，\(h''(x)=-\frac13x^{-4/3}<0\)，所以 \(h'(x)\) 是减函数. 斜率为 \(a>0\) 的切线接触点满足 \(x_0^{-1/3}=a\)，即 \(x_0=a^{-3}\)，该切线的截距为
+\item 要使下方不等式对所有 \(x\geqslant0\) 成立，先注意到 \(a\) 必须为正数；否则当 \(x\to+\infty\) 时，\(ax+b\) 不可能始终不小于 \(\frac32x^{\frac{2}{3}}\). 由 \(x=0\) 处的下方不等式还知 \(b\geqslant0\). 对函数 \(h(x)=\frac32x^{\frac{2}{3}}\)（\(x>0\)），有
+\(h'(x)=x^{-\frac{1}{3}}\)，\(h''(x)=-\frac13x^{-\frac{4}{3}}<0\)，所以 \(h'(x)\) 是减函数. 斜率为 \(a>0\) 的切线接触点满足 \(x_0^{-\frac{1}{3}}=a\)，即 \(x_0=a^{-3}\)，该切线的截距为
 \[
 h(x_0)-ax_0=\frac32a^{-2}-a\cdot a^{-3}=\frac1{2a^2}
 \]
-由第（2）问，切线在曲线 \(y=h(x)\) 的上方；反过来，函数 \(h(x)-ax\) 在 \(x>0\) 上的导数为 \(x^{-1/3}-a\)，先正后负，故其最大值也在 \(x=a^{-3}\) 处取得；并且在 \(x=0\) 处该函数值为 \(0\). 所以
-\(ax+b\geqslant\frac32x^{2/3}\)（\(x\geqslant0\)）当且仅当 \(b\geqslant\frac1{2a^2}\).
+由第（2）问，切线在曲线 \(y=h(x)\) 的上方；反过来，函数 \(h(x)-ax\) 在 \(x>0\) 上的导数为 \(x^{-\frac{1}{3}}-a\)，先正后负，故其最大值也在 \(x=a^{-3}\) 处取得；并且在 \(x=0\) 处该函数值为 \(0\). 所以
+\(ax+b\geqslant\frac32x^{\frac{2}{3}}\)（\(x\geqslant0\)）当且仅当 \(b\geqslant\frac1{2a^2}\).
 
 上方不等式等价于
 \(x^2-ax+1-b\geqslant0\)（\(x\geqslant0\)）.

@@ -17,7 +17,7 @@
 \(x^{5}y-9xy^{5}=xy\left(x^{4}-9y^{4}\right)=xy\left(x^{2}-3y^{2}\right)\left(x^{2}+3y^{2}\right)\).
 
 \begin{enumerate}
-\item 在有理数范围内，若 \(x^{2}-3y^{2}\) 有有理系数的一次因式，则其根应为 \(x=ry\)，其中 \(r\) 为有理数；但代入后得 \(r^{2}=3\)，这不可能，因为 \(\sqrt{3}\) 不是有理数. 类似地，\(x^{2}+3y^{2}=0\) 的根满足 \(x/y=\pm\sqrt{3}\i\)，不属于有理数范围. 因此不能再分解，结果为 \(xy\left(x^{2}-3y^{2}\right)\left(x^{2}+3y^{2}\right)\).
+\item 在有理数范围内，若 \(x^{2}-3y^{2}\) 有有理系数的一次因式，则其根应为 \(x=ry\)，其中 \(r\) 为有理数；但代入后得 \(r^{2}=3\)，这不可能，因为 \(\sqrt{3}\) 不是有理数. 类似地，\(x^{2}+3y^{2}=0\) 的根满足 \(\frac{x}{y}=\pm\sqrt{3}\i\)，不属于有理数范围. 因此不能再分解，结果为 \(xy\left(x^{2}-3y^{2}\right)\left(x^{2}+3y^{2}\right)\).
 \item 在实数范围内，\(x^{2}-3y^{2}=\left(x+\sqrt{3}y\right)\left(x-\sqrt{3}y\right)\). 另一方面，当 \(x\)，\(y\) 不全为零时，\(x^{2}+3y^{2}>0\)，因而它没有实数一次因式，所以结果为 \(xy\left(x^{2}+3y^{2}\right)\left(x+\sqrt{3}y\right)\left(x-\sqrt{3}y\right)\).
 \item 在复数范围内，\(x^{2}+3y^{2}=\left(x+\sqrt{3}\i y\right)\left(x-\sqrt{3}\i y\right)\)，同时 \(x^{2}-3y^{2}=\left(x+\sqrt{3}y\right)\left(x-\sqrt{3}y\right)\). 因此完全分解为 \(xy\left(x+\sqrt{3}\i y\right)\left(x-\sqrt{3}\i y\right)\left(x+\sqrt{3}y\right)\left(x-\sqrt{3}y\right)\).
 \end{enumerate}
@@ -69,7 +69,7 @@
 \end{solution}
 
 \begin{problem}
-设三角函数 \(f(x)=\sin\left(\frac{k\pi}{5}+\frac{\pi}{3}\right)\)，其中 \(k\neq0\).
+设三角函数 \(f(x)=\sin\left(\frac{kx}{5}+\frac{\pi}{3}\right)\)，其中 \(k\neq0\).
 
 \begin{enumerate}
 \item 写出 \(f(x)\) 极大值 \(M\)，极小值 \(m\) 与最小正周期 \(T\)；
@@ -79,8 +79,12 @@
 
 \begin{solution}
 \begin{enumerate}
-\item 右端不含 \(x\)，所以对固定的 \(k\)，函数是常函数. 记 \(c=\sin\left(\frac{k\pi}{5}+\frac{\pi}{3}\right)\)，则对任意 \(x\) 都有 \(f(x)=c\)，从而 \(M=m=c\). 对任意 \(T>0\)，都有 \(f(x+T)=c=f(x)\)，所以所有正数都是它的周期，不存在最小正周期 \(T\).
-\item 按题面字面，函数在任意两个整数所确定的闭区间内恒取值 \(c\)，而 \(M=m=c\)，因此任意正整数 \(k\) 都满足“至少有一个值是 \(M\) 与一个值是 \(m\)”的字面条件，最小值为 \(k=1\). 但第（1）问要求不存在的最小正周期，说明原题扫描字面与可解版本存在冲突，不能据此恢复缺失的自变量项.
+\item 因为 \(k\neq0\)，函数的最小正周期为 \(T=\frac{2\pi}{\lvert k\frac{\rvert}{5}}=\frac{10\pi}{\lvert k\rvert}\)，且极大值 \(M=1\)，极小值 \(m=-1\).
+\item 要使函数在任意两个整数间（包括整数本身）至少取到一次 \(M\) 与一次 \(m\)，等价于它的最小正周期不超过 \(1\)，即 \(T\leqslant1\).
+
+若 \(T\leqslant1\)，任意两个整数间的区间长度不小于 \(1\)，其中必含一个完整周期，从而同时取到 \(M\) 与 \(m\). 若 \(T>1\)，相邻最大值点的距离为 \(T>1\)，在连续的整数单位区间 \([n,n+1]\) 中必存在不含最大值点的区间（同理也存在不含最小值点的区间），不能保证取到 \(M\) 与 \(m\).
+
+因此需使 \(\frac{10\pi}{k}\leqslant1\)（\(k\) 为正整数），即 \(k\geqslant10\pi\approx31.42\)，故最小的正整数为 \(k=32\).
 \end{enumerate}
 \end{solution}
 
@@ -97,13 +101,15 @@
 \end{solution}
 
 \begin{problem}
-已知 \(0 < \alpha < \pi\)，证明：\(2\sin\alpha\leqslant\cot\frac{\alpha}{2}\)；并讨论 \(\alpha\) 为何值时等号成立.
+已知 \(0 < \alpha < \pi\)，证明：\(2\sin 2\alpha\leqslant\cot\frac{\alpha}{2}\)；并讨论 \(\alpha\) 为何值时等号成立.
 \end{problem}
 
 \begin{solution}
-因为 \(0<\alpha<\pi\)，所以 \(\sin\alpha>0\)，且 \(\cot\frac{\alpha}{2}=\frac{1+\cos\alpha}{\sin\alpha}\). 取 \(\alpha=\frac\pi2\)，原不等式变为 \(2\leq1\)，不成立. 因此按本地原始页面的字面，题目中的不等式不能被证明.
+因为 \(0<\alpha<\pi\)，所以 \(\sin\alpha>0\)，且 \(\cot\frac{\alpha}{2}=\frac{1+\cos\alpha}{\sin\alpha}\). 又 \(2\sin 2\alpha=4\sin\alpha\cos\alpha\)，将原不等式两边同乘正数 \(\sin\alpha\)，得 \(4\sin^{2}\alpha\cos\alpha\leqslant1+\cos\alpha\).
 
-若只讨论该字面等式的解，则由 \(2\sin\alpha=\frac{1+\cos\alpha}{\sin\alpha}\)，得 \(2\sin^2\alpha=1+\cos\alpha\). 令 \(c=\cos\alpha\)，利用 \(\sin^2\alpha=1-c^2\)，有 \(2(1-c^2)=1+c\)，即 \(2c^2+c-1=0\)，所以 \(c=\frac12\) 或 \(c=-1\). 由于 \(0<\alpha<\pi\)，不能取 \(c=-1\)，故只能有 \(\alpha=\frac\pi3\). 代入原等式，左端为 \(2\sin\frac\pi3=\sqrt{3}\)，右端为 \(\cot\frac\pi6=\sqrt{3}\)，故 \(\alpha=\frac\pi3\) 确实为等号成立值. 但这不能消除原始页面与公开同题资料在题面上的冲突.
+令 \(c=\cos\alpha\)，利用 \(\sin^{2}\alpha=1-c^{2}\)，得 \(4(1-c^{2})c\leqslant1+c\)，即 \(4c^{3}-3c+1\geqslant0\). 因为 \(4c^{3}-3c=\cos 3\alpha\)，所以该式等价于 \(\cos 3\alpha+1\geqslant0\)，而 \(\cos 3\alpha\geqslant-1\) 恒成立，故原不等式成立.
+
+等式成立当且仅当 \(\cos 3\alpha=-1\)，即 \(3\alpha=\pi+2k\pi\)（\(k\in\Z\)），从而 \(\alpha=\frac{\pi}{3}+\frac{2k\pi}{3}\). 由 \(0<\alpha<\pi\)，只能取 \(\alpha=\frac{\pi}{3}\).
 \end{solution}
 
 \begin{problem}

@@ -6,7 +6,18 @@
 /.superpowers/
 
 # LaTeX 构建产物
-/*.pdf
+*.pdf
+*.xdv
+*.synctex.gz
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.exe
+*.dll
+*.so
+*.dylib
+*.o
 /Compilation.aux
 /Compilation.fdb_latexmk
 /Compilation.fls
@@ -32,6 +43,16 @@
 /img_repaint_pdf/
 
 /source/
+
+# tools 下只发布编译直接读取的排版数据，不发布开发脚本
+/tools/*
+!/tools/typeset/
+!/tools/crop/
+/tools/typeset/*
+!/tools/typeset/generated_image_layout.tex
+/tools/crop/*
+!/tools/crop/manual_image_layout.tex
+/sync-release.sh
 
 # 临时目录、备份和缓存
 /build/

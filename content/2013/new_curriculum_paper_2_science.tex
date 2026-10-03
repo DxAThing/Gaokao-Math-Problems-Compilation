@@ -127,7 +127,7 @@ B
 \end{answer}
 
 \begin{solution}
-按程序框图逐次计算. 初值为 \(k=1\)，\(S=0\)，\(T=1\). 每次循环先令 \(T\leftarrow T/k\)，再令 \(S\leftarrow S+T\)，最后令 \(k\leftarrow k+1\). 因此各次加入 \(S\) 的项依次为
+按程序框图逐次计算. 初值为 \(k=1\)，\(S=0\)，\(T=1\). 每次循环先令 \(T\leftarrow \frac{T}{k}\)，再令 \(S\leftarrow S+T\)，最后令 \(k\leftarrow k+1\). 因此各次加入 \(S\) 的项依次为
 \(1\)，\(\frac1{2!}\)，\(\frac1{3!}\)，\(\ldots\)，\(\frac1{10!}\).
 当第十次循环结束时 \(k=11>10\)，程序停止，故输出
 \[
@@ -260,18 +260,18 @@ C
 \end{answer}
 
 \begin{solution}
-设 \(M=(x,y)\)，抛物线焦点为 \(F=(p/2,0)\). 由 \(M\) 在抛物线上，得 \(y^2=2px\)，从而
+设 \(M=(x,y)\)，抛物线焦点为 \(F=(\frac{p}{2},0)\). 由 \(M\) 在抛物线上，得 \(y^2=2px\)，从而
 \[
 MF^2=\left(x-\frac p2\right)^2+y^2
 =\left(x+\frac p2\right)^2
 \]
-由于 \(x\geqslant0\)，故 \(MF=x+p/2=5\)，即 \(x=5-p/2\).
+由于 \(x\geqslant0\)，故 \(MF=x+\frac{p}{2}=5\)，即 \(x=5-\frac{p}{2}\).
 
 以 \(MF\) 为直径的圆过 \(Q=(0,2)\)，所以 \(\overrightarrow{QM}\perp\overrightarrow{QF}\)，即
 \(\left(x,y-2\right)\cdot\left(\frac p2,-2\right)=0\)，\(y=\frac{px}{4}+2\).
-令 \(R=p(10-p)\)，则 \(x=5-p/2\)，且
+令 \(R=p(10-p)\)，则 \(x=5-\frac{p}{2}\)，且
 \[
-y=\frac{p(5-p/2)}4+2=\frac{R+16}{8}
+y=\frac{p(5-\frac{p}{2})}4+2=\frac{R+16}{8}
 \]
 另一方面，\(y^2=2px=p(10-p)=R\)，故
 \(\frac{(R+16)^2}{64}=R\)，\(\Longrightarrow\)，\((R-16)^2=0\).
@@ -299,7 +299,7 @@ B
 \[
 \frac{(a+b)^2}{2a(a+1)}
 \]
-令其等于 \(1/2\) 得 \((a+b)^2=a(a+1)\)，从而 \(b=\sqrt{a(a+1)}-a>0\)，与 \(b\leqslant0\) 矛盾. 因此此时无解.
+令其等于 \(\frac{1}{2}\) 得 \((a+b)^2=a(a+1)\)，从而 \(b=\sqrt{a(a+1)}-a>0\)，与 \(b\leqslant0\) 矛盾. 因此此时无解.
 
 若 \(0<b<1\) 且 \(a\geqslant b\)，直线与 \(AB\)、\(BC\) 相交. 同样由面积条件得
 \((a+b)^2=a(a+1)\)，\(a=\frac{b^2}{1-2b}\).
@@ -309,12 +309,12 @@ B
 \[
 \frac{(1-b)^2}{1-a^2}
 \]
-令其等于 \(1/2\)，得 \(a^2=1-2(1-b)^2\). 由 \(a>0\) 及 \(a<b\)，得到
+令其等于 \(\frac{1}{2}\)，得 \(a^2=1-2(1-b)^2\). 由 \(a>0\) 及 \(a<b\)，得到
 \[
 1-\frac{\sqrt2}{2}<b<\frac13
 \]
 
-若 \(b\geqslant1\)，有交点时必为 \(a>b>1\)，直线与 \(AB\)、\(AC\) 相交，顶点 \(A\) 一侧的三角形面积为 \(\dfrac{(a-b)^2}{2a(a-1)}\). 令其为 \(1/2\) 得 \((a-b)^2=a(a-1)\)，即 \(b=a-\sqrt{a(a-1)}<1\)，矛盾；其余情形直线不把三角形分成两块正面积区域.
+若 \(b\geqslant1\)，有交点时必为 \(a>b>1\)，直线与 \(AB\)、\(AC\) 相交，顶点 \(A\) 一侧的三角形面积为 \(\dfrac{(a-b)^2}{2a(a-1)}\). 令其为 \(\frac{1}{2}\) 得 \((a-b)^2=a(a-1)\)，即 \(b=a-\sqrt{a(a-1)}<1\)，矛盾；其余情形直线不把三角形分成两块正面积区域.
 
 合并可行范围，得
 \[
@@ -353,7 +353,7 @@ B
 \begin{solution}
 所有取法共有 \(\mathrm C_n^2\) 种. 和为 5 的取法只有 \((1,4)\) 和 \((2,3)\)，所以有两种，且必须有 \(n\geqslant4\). 由题意
 \(\frac{2}{\mathrm C_n^2}=\frac1{14}\)，\(\mathrm C_n^2=28\).
-于是 \(n(n-1)/2=28\)，即 \(n^2-n-56=0\)，解得正整数 \(n=8\).
+于是 \(n\frac{(n-1)}{2}=28\)，即 \(n^2-n-56=0\)，解得正整数 \(n=8\).
 \end{solution}
 
 \begin{problem}
@@ -384,10 +384,10 @@ B
 
 \begin{solution}
 设等差数列首项为 \(a_1\)，公差为 \(d\). 由
-\(S_{10}=5(2a_1+9d)=0\)，\(S_{15}=\frac{15}{2}(2a_1+14d)=25\)
+\(S_{10}=5(2a_1+9d)=0\)，\(S_{15}=\frac{15}{2}(2a_1+14d)=25\)，
 得 \(2a_1+9d=0\)，\(2a_1+14d=\frac{10}{3}\)，从而 \(d=\frac23\)，\(a_1=-3\). 因此
 \(S_n=\frac n2\left(-6+\frac23(n-1)\right)=\frac{n(n-10)}3\)，\(nS_n=\frac{n^2(n-10)}3\).
-对正整数 \(n\)，令 \(G(n)=n^2(n-10)/3\)，则
+对正整数 \(n\)，令 \(G(n)=n^2\frac{(n-10)}{3}\)，则
 \[
 G(n+1)-G(n)=\frac{3n^2-17n-9}{3}
 \]
@@ -420,7 +420,7 @@ G(7)=\frac{49(-3)}3=-49
 三角形内角满足 \(0<C<\pi\)，故 \(\sin C>0\)，从而 \(\sin B=\cos B\)，即 \(B=\frac\pi4\).
 
 \item 此时 \(A+C=\frac{3\pi}{4}\). 由正弦定理和 \(b=2\)，得
-\(a=\frac{2\sin A}{\sin(\pi/4)}=2\sqrt2\sin A\)，\(c=2\sqrt2\sin C\).
+\(a=\frac{2\sin A}{\sin(\frac{\pi}{4})}=2\sqrt2\sin A\)，\(c=2\sqrt2\sin C\).
 三角形面积为
 \[
 S=\frac12ac\sin B=2\sqrt2\sin A\sin C
@@ -431,7 +431,7 @@ S=\frac12ac\sin B=2\sqrt2\sin A\sin C
 =\frac{\cos(A-C)+\frac{\sqrt2}{2}}2
 \leqslant\frac{1+\frac{\sqrt2}{2}}2
 \]
-等号在 \(A=C=3\pi/8\) 时成立. 因此面积最大值为
+等号在 \(A=C=3\frac{\pi}{8}\) 时成立. 因此面积最大值为
 \[
 S_{\max}=2\sqrt2\cdot\frac{1+\frac{\sqrt2}{2}}2=1+\sqrt2
 \]
@@ -450,8 +450,8 @@ S_{\max}=2\sqrt2\cdot\frac{1+\frac{\sqrt2}{2}}2=1+\sqrt2
 
 \begin{solution}
 不妨设 \(AB=2\)，建立空间直角坐标系，取
-\(A=(0,0,0)\)，\(B=(2,0,0)\)，\(C=(1,1,0)\)
-则由直棱柱及长度条件
+\(A=(0,0,0)\)，\(B=(2,0,0)\)，\(C=(1,1,0)\)，
+则由直棱柱及长度条件，得
 \(A_1=(0,0,\sqrt2)\)，\(C_1=(1,1,\sqrt2)\)，\(D=(1,0,0)\)，\(E=(2,0,\tfrac{\sqrt2}{2})\).
 \begin{enumerate}
 \item 有
@@ -474,7 +474,7 @@ S_{\max}=2\sqrt2\cdot\frac{1+\frac{\sqrt2}{2}}2=1+\sqrt2
 \[
 \bs{n}_2=(\sqrt2,3\sqrt2,4)
 \]
-因为它分别垂直于 \(\overrightarrow{A_1C}=(1,1,-\sqrt2)\) 和 \(\overrightarrow{A_1E}=(2,0,-\sqrt2/2)\). 于是
+因为它分别垂直于 \(\overrightarrow{A_1C}=(1,1,-\sqrt2)\) 和 \(\overrightarrow{A_1E}=(2,0,-\frac{\sqrt2}{2})\). 于是
 \(|\bs{n}_1|=\sqrt3\)，\(|\bs{n}_2|=6\)，\(\bs{n}_1\cdot\bs{n}_2=6\).
 设二面角为 \(\theta\)，则
 \[
@@ -554,7 +554,7 @@ a^2-b^2=c^2=3
 \[
 \frac{u}{a^2}-\frac{v}{b^2}=0
 \]
-又 \(OP\) 的斜率为 \(v/u=1/2\)，从而 \(b^2=a^2/2\). 结合 \(a^2-b^2=3\)，得 \(a^2=6\)，\(b^2=3\). 所以
+又 \(OP\) 的斜率为 \(\frac{v}{u}=\frac{1}{2}\)，从而 \(b^2=\frac{a^2}{2}\). 结合 \(a^2-b^2=3\)，得 \(a^2=6\)，\(b^2=3\). 所以
 \[
 M:\frac{x^2}{6}+\frac{y^2}{3}=1
 \]
@@ -565,13 +565,13 @@ M:\frac{x^2}{6}+\frac{y^2}{3}=1
 \quad\Longleftrightarrow\quad
 x(3x-4\sqrt3)=0
 \]
-故弦端点的横坐标为 \(0\) 和 \(4\sqrt3/3\)，于是
+故弦端点的横坐标为 \(0\) 和 \(4\frac{\sqrt3}{3}\)，于是
 \[
 |AB|=\sqrt{\left(\frac{4\sqrt3}{3}\right)^2+\left(-\frac{4\sqrt3}{3}\right)^2}=\frac{4\sqrt6}{3}
 \]
 
 对椭圆中所有方向固定为 \((1,1)\) 的弦，过椭圆中心的弦最长. 取中心弦端点为 \((t,t)\)，代入椭圆方程得
-\(\frac{t^2}{6}+\frac{t^2}{3}=1\)，\(t=\sqrt2\)
+\(\frac{t^2}{6}+\frac{t^2}{3}=1\)，\(t=\sqrt2\)，
 所以最长的 \(CD\) 长度为 \(4\). 四边形 \(ACBD\) 的两条对角线互相垂直，面积等于两条对角线乘积的一半，因此
 \[
 S_{ACBD}\leqslant\frac12\cdot\frac{4\sqrt6}{3}\cdot4=\frac{8\sqrt6}{3}
@@ -595,7 +595,7 @@ S_{ACBD}\leqslant\frac12\cdot\frac{4\sqrt6}{3}\cdot4=\frac{8\sqrt6}{3}
 \[
 f'(x)=\e^x-\frac1{x+m}
 \]
-由极值点的必要条件 \(f'(0)=0\)，得 \(1-1/m=0\)，所以 \(m=1\). 此时定义域为 \((-1,+\infty)\)，并且
+由极值点的必要条件 \(f'(0)=0\)，得 \(1-\frac{1}{m}=0\)，所以 \(m=1\). 此时定义域为 \((-1,+\infty)\)，并且
 \[
 f'(x)=\e^x-\frac1{x+1}=\frac{\e^x(x+1)-1}{x+1}
 \]
@@ -648,7 +648,7 @@ AB\cdot AE=AC\cdot AF
 \[
 \sin(B-A)=\sin(A+B)
 \]
-这里 \(0<B-A<\pi\)，\(0<A+B<\pi\). 若两角相等则推出 \(A=0\)，不可能；故两角互补，即 \(2B=\pi\)，所以 \(B=\pi/2\). 因此 \(\angle ABC=90^\circ\)，由圆的性质，\(CA\) 是外接圆的直径.
+这里 \(0<B-A<\pi\)，\(0<A+B<\pi\). 若两角相等则推出 \(A=0\)，不可能；故两角互补，即 \(2B=\pi\)，所以 \(B=\frac{\pi}{2}\). 因此 \(\angle ABC=90^\circ\)，由圆的性质，\(CA\) 是外接圆的直径.
 
 \item 设 \(DB=BE=EA=t\). 由图中点的顺序，\(AB=2t\)，\(DA=3t\). 由切线与割线的幂定理，
 \(DC^2=DB\cdot DA=3t^2\)，\(DC=\sqrt3t\).
@@ -666,7 +666,7 @@ u(u+4)=12
 \[
 AB\cdot AE=AC\cdot AF
 \]
-所以 \(AF=\sqrt{2/3}t=AC/3\)，从而
+所以 \(AF=\sqrt{\frac{2}{3}}t=A\frac{C}{3}\)，从而
 \[
 F=\left(\frac{4t}{3},\frac{\sqrt2t}{3}\right)
 \]
@@ -674,9 +674,9 @@ F=\left(\frac{4t}{3},\frac{\sqrt2t}{3}\right)
 \[
 x^2+y^2-tx-\sqrt2ty=0
 \]
-代入 \(F\) 可验证其也经过 \(F\). 该圆圆心为 \((t/2,\sqrt2t/2)\)，半径平方为 \(3t^2/4\). 原三角形外接圆以 \(CA\) 为直径，半径平方为 \(AC^2/4=3t^2/2\). 故所求面积比为
+代入 \(F\) 可验证其也经过 \(F\). 该圆圆心为 \((\frac{t}{2},\sqrt2\frac{t}{2})\)，半径平方为 \(3\frac{t^2}{4}\). 原三角形外接圆以 \(CA\) 为直径，半径平方为 \(A\frac{C^2}{4}=3\frac{t^2}{2}\). 故所求面积比为
 \[
-\frac{3t^2/4}{3t^2/2}=\frac12
+\frac{3\frac{t^2}{4}}{3\frac{t^2}{2}}=\frac12
 \]
 \end{enumerate}
 \end{solution}
@@ -741,7 +741,7 @@ d=\sqrt{2+2\cos\alpha}=2\left|\cos\frac\alpha2\right|
 1=(a+b+c)^2=a^2+b^2+c^2+2(ab+bc+ca)
 \geqslant3(ab+bc+ca)
 \]
-所以 \(ab+bc+ca\leqslant1/3\).
+所以 \(ab+bc+ca\leqslant\frac{1}{3}\).
 
 \item 由柯西不等式，
 \[

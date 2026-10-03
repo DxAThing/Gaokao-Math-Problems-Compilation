@@ -59,7 +59,7 @@ B
 \end{answer}
 
 \begin{solution}
-程序初始化 \(S=0\)，每次循环先加上 \(1/[(2i-1)(2i+1)]\)，再令 \(i\) 增加 \(1\). 当输入 \(n=3\) 时，循环中依次取 \(i=1\)，\(2\)，\(3\)，所以
+程序初始化 \(S=0\)，每次循环先加上 \(\frac{1}{[(2i-1)(2i+1)]}\)，再令 \(i\) 增加 \(1\). 当输入 \(n=3\) 时，循环中依次取 \(i=1\)，\(2\)，\(3\)，所以
 \[
 S=\frac{1}{1\cdot3}+\frac{1}{3\cdot5}+\frac{1}{5\cdot7}
 \]
@@ -139,12 +139,12 @@ D
 \end{answer}
 
 \begin{solution}
-因根式及分母有意义，须有 \(x>0\). 设展开式中取 \(k\) 个 \(-a/\sqrt{x}\) 因子，其中 \(k=0\)，\(1\)，\(\ldots\)，\(5\)，则相应项为
+因根式及分母有意义，须有 \(x>0\). 设展开式中取 \(k\) 个 \(-\frac{a}{\sqrt{x}}\) 因子，其中 \(k=0\)，\(1\)，\(\ldots\)，\(5\)，则相应项为
 \[
-\binom{5}{k}(\sqrt{x})^{5-k}\left(-\frac{a}{\sqrt{x}}\right)^k
-=\binom{5}{k}(-a)^k x^{\frac{5-2k}{2}}
+\mathrm C_5^k(\sqrt{x})^{5-k}\left(-\frac{a}{\sqrt{x}}\right)^k
+=\mathrm C_5^k(-a)^k x^{\frac{5-2k}{2}}
 \]
-含 \(x^{3/2}\) 的项满足 \((5-2k)/2=3/2\)，所以 \(k=1\). 该项系数为 \(\binom51(-a)=-5a\)，由 \(-5a=30\) 解得 \(a=-6\)，故选 D.
+含 \(x^{\frac{3}{2}}\) 的项满足 \(\frac{(5-2k)}{2}=\frac{3}{2}\)，所以 \(k=1\). 该项系数为 \(\mathrm C_5^1(-a)=-5a\)，由 \(-5a=30\) 解得 \(a=-6\)，故选 D.
 \end{solution}
 
 \begin{problem}
@@ -224,11 +224,11 @@ D
 \[
 x_2-x_1=\frac\pi2+\varphi+(n-m)\pi
 \]
-由 \(0<\varphi<\pi/2\)，取整数 \(n-m=-1\) 可得最小绝对值 \(\pi/2-\varphi\). 当 \(f(x_1)=-1\)、\(g(x_2)=1\) 时，\(x_1=3\pi/4+m\pi\)，\(x_2=\pi/4+\varphi+n\pi\)，从而 \(x_2-x_1=\varphi-\pi/2+(n-m)\pi\)，最小绝对值仍为 \(\pi/2-\varphi\). 因此
+由 \(0<\varphi<\frac{\pi}{2}\)，取整数 \(n-m=-1\) 可得最小绝对值 \(\frac{\pi}{2}-\varphi\). 当 \(f(x_1)=-1\)、\(g(x_2)=1\) 时，\(x_1=3\frac{\pi}{4}+m\pi\)，\(x_2=\frac{\pi}{4}+\varphi+n\pi\)，从而 \(x_2-x_1=\varphi-\frac{\pi}{2}+(n-m)\pi\)，最小绝对值仍为 \(\frac{\pi}{2}-\varphi\). 因此
 \[
 \frac\pi2-\varphi=\frac\pi3
 \]
-解得 \(\varphi=\pi/6\)，故选 D.
+解得 \(\varphi=\frac{\pi}{6}\)，故选 D.
 \end{solution}
 
 \begin{problem}
@@ -264,7 +264,7 @@ u^2+v^2\leqslant\left(1-\frac h2\right)^2
 \[
 V=4uvh\leqslant2h\left(1-\frac h2\right)^2
 \]
-当 \(u=v=(1-h/2)/\sqrt2\) 时上述两个不等式均取等号，此时上表面为内接正方形，所以只需最大化
+当 \(u=v=\frac{(1-\frac{h}{2})}{\sqrt2}\) 时上述两个不等式均取等号，此时上表面为内接正方形，所以只需最大化
 \[
 V(h)=2h\left(1-\frac h2\right)^2
 \]
@@ -273,9 +273,9 @@ V(h)=2h\left(1-\frac h2\right)^2
 \frac{\mathrm d}{\mathrm dh}\left[2h\left(1-\frac h2\right)^2\right]
 =2\left(1-\frac h2\right)\left(1-\frac{3h}{2}\right)
 \]
-因此当 \(0<h<2/3\) 时 \(V'(h)>0\)，当 \(2/3<h<2\) 时 \(V'(h)<0\)，且两端极限均为 \(0\)，故最大值在 \(h=2/3\) 处取得，且 \(V_{\max}=16/27\). 材料利用率为
+因此当 \(0<h<\frac{2}{3}\) 时 \(V'(h)>0\)，当 \(\frac{2}{3}<h<2\) 时 \(V'(h)<0\)，且两端极限均为 \(0\)，故最大值在 \(h=\frac{2}{3}\) 处取得，且 \(V_{\max}=\frac{16}{27}\). 材料利用率为
 \[
-\frac{V_{\max}}{V_0}=\frac{16/27}{2\pi/3}=\frac{8}{9\pi}
+\frac{V_{\max}}{V_0}=\frac{\frac{16}{27}}{2\frac{\pi}{3}}=\frac{8}{9\pi}
 \]
 故选 A.
 \end{solution}
@@ -316,7 +316,7 @@ V(h)=2h\left(1-\frac h2\right)^2
 \end{answer}
 
 \begin{solution}
-按成绩由好到差排列后，成绩为 \(139\) 的运动员是第 \(11\) 号，成绩为 \(150,151\) 的运动员分别是第 \(29,30\) 号，所以区间 \([139,151]\) 对应第 \(11\) 至第 \(30\) 号，共 \(20\) 人. 系统抽样的间隔为 \(35/7=5\)，随机起始号为 \(r\in\{1,2,3,4,5\}\)，样本编号为
+按成绩由好到差排列后，成绩为 \(139\) 的运动员是第 \(11\) 号，成绩为 \(150,151\) 的运动员分别是第 \(29,30\) 号，所以区间 \([139,151]\) 对应第 \(11\) 至第 \(30\) 号，共 \(20\) 人. 系统抽样的间隔为 \(\frac{35}{7}=5\)，随机起始号为 \(r\in\{1,2,3,4,5\}\)，样本编号为
 \(r\)，\(r+5\)，\(r+10\)，\(\ldots\)，\(r+30\).
 第 \(11\) 至第 \(30\) 号是连续的 \(20\) 个编号，恰好包含模 \(5\) 的每个剩余类中的 \(4\) 个编号. 因此无论随机起始号 \(r\) 为何，样本中落在该区间内的编号均有 \(4\) 个，填 \(4\).
 \end{solution}
@@ -338,7 +338,7 @@ P=2M-F=(-c,2b)
 \[
 \frac{c^2}{a^2}-\frac{(2b)^2}{b^2}=1
 \]
-即 \(c^2=5a^2\). 所以离心率为 \(e=c/a=\sqrt5\).
+即 \(c^2=5a^2\). 所以离心率为 \(e=\frac{c}{a}=\sqrt5\).
 \end{solution}
 
 \begin{problem}
@@ -412,7 +412,7 @@ a\in(-\infty,0)\cup(1,+\infty)
 对于第二问，以 \(OM\) 为横轴建立直角坐标系，设 \(O=(0,0)\)，\(M=(m,0)\)，\(F=(f,0)\). 取沿直线 \(CD\) 从 \(F\) 指向 \(E\) 的单位向量 \(\bs u=(u_1,u_2)\)，用有向参数表示该直线上的点：\(X(t)=F+t\bs u\). 设 \(E=X(t_E)\)，\(N=X(t_N)\).
 
 由于 \(E\) 在弦 \(AB\) 上，而 \(AB\) 的直线方程为 \(x=m\)，有
-\(f+t_Eu_1=m\)，\(qquad t_E=\frac{m-f}{u_1}\).
+\(f+t_Eu_1=m\)，\(t_E=\frac{m-f}{u_1}\).
 这里 \(u_1\neq0\)，否则直线 \(CD\) 与 \(AB\) 不相交. 又因 \(ON\perp CD\)，向量 \(\overrightarrow{ON}=F+t_N\bs u\) 与 \(\bs u\) 垂直，所以
 \[
 (F+t_N\bs u)\cdot\bs u=0
@@ -491,21 +491,21 @@ a+b\geqslant2\sqrt{ab}=2
 \end{problem}
 
 \begin{solution}
-由正弦定理 \(a/b=\sin A/\sin B\)，结合 \(a=b\tan A\)，得
+由正弦定理 \(\frac{a}{b}=\frac{\sin A}{\sin B}\)，结合 \(a=b\tan A\)，得
 \[
 \frac{\sin A}{\sin B}=\tan A=\frac{\sin A}{\cos A}
 \]
-因 \(\sin A>0\)，从而 \(\sin B=\cos A>0\)，并且 \(A<\pi/2\). 又 \(B\) 为钝角，故 \(\pi-B\in(0,\pi/2)\)，而 \(\cos A=\sin(\pi/2-A)\). 于是
+因 \(\sin A>0\)，从而 \(\sin B=\cos A>0\)，并且 \(A<\frac{\pi}{2}\). 又 \(B\) 为钝角，故 \(\pi-B\in(0,\frac{\pi}{2})\)，而 \(\cos A=\sin(\frac{\pi}{2}-A)\). 于是
 \[
-\sin(\pi-B)=\sin(\pi/2-A)
+\sin(\pi-B)=\sin(\frac{\pi}{2}-A)
 \]
-两角均在 \((0,\pi/2)\) 内，正弦函数在该区间上单调递增，所以 \(\pi-B=\pi/2-A\)，即 \(B-A=\pi/2\).
+两角均在 \((0,\frac{\pi}{2})\) 内，正弦函数在该区间上单调递增，所以 \(\pi-B=\frac{\pi}{2}-A\)，即 \(B-A=\frac{\pi}{2}\).
 
-由 \(A+B+C=\pi\)，得到 \(C=\pi/2-2A\). 因为 \(A>0\)、\(C>0\)，所以 \(0<A<\pi/4\). 令 \(t=\sin A\)，则 \(0<t<\sqrt2/2\)，且
+由 \(A+B+C=\pi\)，得到 \(C=\frac{\pi}{2}-2A\). 因为 \(A>0\)、\(C>0\)，所以 \(0<A<\frac{\pi}{4}\). 令 \(t=\sin A\)，则 \(0<t<\frac{\sqrt2}{2}\)，且
 \[
 \sin A+\sin C=t+\sin\left(\frac\pi2-2A\right)=1+t-2t^2
 \]
-记 \(h(t)=1+t-2t^2\)，则 \(h'(t)=1-4t\). 因此 \(h(t)\) 在 \((0,1/4)\) 上递增，在 \((1/4,\sqrt2/2)\) 上递减，最大值在 \(t=1/4\) 处取得，为 \(h(1/4)=9/8\). 当 \(t\) 趋近于 \(\sqrt2/2\) 时，\(h(t)\) 趋近于 \(\sqrt2/2\)，但此端点因 \(C>0\) 不取；在另一端 \(t\to0^+\) 时 \(h(t)\to1>\sqrt2/2\). 故
+记 \(h(t)=1+t-2t^2\)，则 \(h'(t)=1-4t\). 因此 \(h(t)\) 在 \((0,\frac{1}{4})\) 上递增，在 \((\frac{1}{4},\frac{\sqrt2}{2})\) 上递减，最大值在 \(t=\frac{1}{4}\) 处取得，为 \(h(\frac{1}{4})=\frac{9}{8}\). 当 \(t\) 趋近于 \(\frac{\sqrt2}{2}\) 时，\(h(t)\) 趋近于 \(\frac{\sqrt2}{2}\)，但此端点因 \(C>0\) 不取；在另一端 \(t\to0^+\) 时 \(h(t)\to1>\frac{\sqrt2}{2}\). 故
 \[
 \sin A+\sin C\in\left(\frac{\sqrt2}{2},\frac98\right]
 \]
@@ -521,7 +521,7 @@ a+b\geqslant2\sqrt{ab}=2
 \end{problem}
 
 \begin{solution}
-一次抽奖中，从甲箱摸到红球的概率为 \(4/10=2/5\)，从乙箱摸到红球的概率为 \(5/10=1/2\). 获一等奖的概率为
+一次抽奖中，从甲箱摸到红球的概率为 \(\frac{4}{10}=\frac{2}{5}\)，从乙箱摸到红球的概率为 \(\frac{5}{10}=\frac{1}{2}\). 获一等奖的概率为
 \[
 P(\text{一等奖})=\frac25\cdot\frac12=\frac15
 \]
@@ -534,8 +534,8 @@ P(\text{一等奖})=\frac25\cdot\frac12=\frac15
 \frac15+\frac12=\frac7{10}
 \]
 
-三次抽奖相互独立，且每次获一等奖的概率为 \(1/5\)，所以
-\(X\sim B\left(3,\frac15\right)\)，\(P(X=k)=\binom3k\left(\frac15\right)^k\left(\frac45\right)^{3-k}\)，\(k=0\)，\(1\)，\(2\)，\(3\).
+三次抽奖相互独立，且每次获一等奖的概率为 \(\frac{1}{5}\)，所以
+\(X\sim B\left(3,\frac15\right)\)，\(P(X=k)=\mathrm C_3^k\left(\frac15\right)^k\left(\frac45\right)^{3-k}\)，\(k=0\)，\(1\)，\(2\)，\(3\).
 其分布列为
 \begin{center}
 \begin{tabular}{c|cccc}
@@ -555,7 +555,7 @@ E(X)=3\cdot\frac15=\frac35
 
 \begin{enumerate}
 \item 若点 \(P\) 是 \(DD_{1}\) 的中点，证明： \(AB_{1} \perp PQ\)；
-\item 若 \(PQ //\) 平面 \(ABB_{1}A_{1}\)，二面角 \(P - QD - A\) 的余弦值为 \(\frac{3}{7}\)，求四面体 \(ADPQ\) 的体积.
+\item 若 \(PQ \parallel\) 平面 \(ABB_{1}A_{1}\)，二面角 \(P - QD - A\) 的余弦值为 \(\frac{3}{7}\)，求四面体 \(ADPQ\) 的体积.
 \end{enumerate}
 
 \bitmapfigure[max width=0.62\linewidth]{img/2015/hunan_science/q19_fig1.png}
@@ -567,8 +567,8 @@ E(X)=3\cdot\frac15=\frac35
 因上底面边长为 \(3\)，且 \(AA_1\perp\) 底面、\(AA_1=6\)，可取
 \(A_1=(0,0,6)\)，\(B_1=(3,0,6)\)，\(C_1=(3,3,6)\)，\(D_1=(0,3,6)\).
 
-第一问中 \(P\) 为 \(DD_1\) 的中点，故 \(P=(0,9/2,3)\). 设 \(Q=(6,q,0)\)，则
-\(\overrightarrow{AB_1}=(3,0,6)\)，\(\overrightarrow{PQ}=(6,q-9/2,-3)\).
+第一问中 \(P\) 为 \(DD_1\) 的中点，故 \(P=(0,\frac{9}{2},3)\). 设 \(Q=(6,q,0)\)，则
+\(\overrightarrow{AB_1}=(3,0,6)\)，\(\overrightarrow{PQ}=(6,q-\frac{9}{2},-3)\).
 二者的内积为 \(3\cdot6+6\cdot(-3)=0\)，所以 \(AB_1\perp PQ\).
 
 第二问中，设
@@ -584,7 +584,7 @@ E(X)=3\cdot\frac15=\frac35
 \[
 \frac{1}{\sqrt{s^2+5}}=\frac37
 \]
-由 \(0\leqslant s\leqslant1\)，得 \(s=2/3\)，从而 \(Q=(6,4,0)\)、\(P=(0,4,4)\). 故
+由 \(0\leqslant s\leqslant1\)，得 \(s=\frac{2}{3}\)，从而 \(Q=(6,4,0)\)、\(P=(0,4,4)\). 故
 \[
 V_{ADPQ}=\frac16\left|\overrightarrow{AD}\cdot
 \left(\overrightarrow{AP}\times\overrightarrow{AQ}\right)\right|
@@ -610,7 +610,7 @@ V_{ADPQ}=\frac16\left|\overrightarrow{AD}\cdot
 \[
 2\sqrt{4y_0}=4\sqrt{y_0}=2\sqrt6
 \]
-故 \(y_0=3/2\)，公共弦端点的横坐标满足 \(x^2=6\). 又焦点为椭圆焦点，故 \(a^2-b^2=1\). 将 \((\sqrt6,3/2)\) 代入椭圆方程，得
+故 \(y_0=\frac{3}{2}\)，公共弦端点的横坐标满足 \(x^2=6\). 又焦点为椭圆焦点，故 \(a^2-b^2=1\). 将 \((\sqrt6,\frac{3}{2})\) 代入椭圆方程，得
 \[
 \frac{9}{4a^2}+\frac6{b^2}=1
 \]
@@ -651,7 +651,7 @@ t_C-t_A=t_D-t_B=\lambda
 \[
 -\frac{64}{\alpha}=(t_A+\lambda)(t_B+\lambda)=-4+4k\lambda+\lambda^2
 \]
-代入 \(\lambda=-2k(\alpha+4)/\alpha\)，并将上式移项后乘以 \(\alpha^2/4\)，有
+代入 \(\lambda=-2k\frac{(\alpha+4)}{\alpha}\)，并将上式移项后乘以 \(\frac{\alpha^2}{4}\)，有
 \[
 \frac{\alpha^2}{4}\left(
 -4-\frac{8k^2(\alpha+4)}{\alpha}
@@ -668,13 +668,13 @@ k^2=\frac38
 k=\pm\frac{\sqrt6}{4}
 \]
 
-\item 由 \(t_At_B=-4<0\)、\(t_Ct_D=-64/\alpha<0\)，两条曲线在直线 \(l\) 上的交点各有一个参数为负、一个参数为正. 若 \(A\)，\(C\) 的参数异号，则 \(B\)，\(D\) 的参数也异号，因而 \(t_C-t_A\) 与 \(t_D-t_B\) 符号相反，不可能使两向量同向. 所以 \(A\)，\(C\) 同号，\(B\)，\(D\) 同号，特别地 \(t_A t_D<0\).
+\item 由 \(t_At_B=-4<0\)、\(t_Ct_D=-\frac{64}{\alpha}<0\)，两条曲线在直线 \(l\) 上的交点各有一个参数为负、一个参数为正. 若 \(A\)，\(C\) 的参数异号，则 \(B\)，\(D\) 的参数也异号，因而 \(t_C-t_A\) 与 \(t_D-t_B\) 符号相反，不可能使两向量同向. 所以 \(A\)，\(C\) 同号，\(B\)，\(D\) 同号，特别地 \(t_A t_D<0\).
 
-设 \(A=(t_A,1+kt_A)\). 由 \(A\in C_1\)，有 \(1+kt_A=t_A^2/4\). 抛物线在 \(A\) 处的切线斜率为 \(t_A/2\)，其方程为
+设 \(A=(t_A,1+kt_A)\). 由 \(A\in C_1\)，有 \(1+kt_A=\frac{t_A^2}{4}\). 抛物线在 \(A\) 处的切线斜率为 \(\frac{t_A}{2}\)，其方程为
 \[
 y-\frac{t_A^2}{4}=\frac{t_A}{2}(x-t_A)
 \]
-令 \(y=0\)，得切线与 \(x\) 轴交点 \(M=(t_A/2,0)\). 又 \(F=(0,1)\)、\(D=(t_D,1+kt_D)\)，所以
+令 \(y=0\)，得切线与 \(x\) 轴交点 \(M=(\frac{t_A}{2},0)\). 又 \(F=(0,1)\)、\(D=(t_D,1+kt_D)\)，所以
 \(\overrightarrow{FM}=\left(\frac{t_A}{2},-1\right)\)，\(\overrightarrow{FD}=t_D(1,k)\).
 由 \(t_A^2-4kt_A-4=0\)，可得
 \[
@@ -703,7 +703,7 @@ y-\frac{t_A^2}{4}=\frac{t_A}{2}(x-t_A)
 \[
 f'(x)=\e^{ax}(a\sin x+\cos x)
 \]
-令 \(\alpha=\arctan(1/a)\)，则 \(0<\alpha<\pi/2\)，且 \(\tan\alpha=1/a\). 方程 \(a\sin x+\cos x=0\) 等价于 \(\tan x=-1/a=-\tan\alpha\)，其正根依次为
+令 \(\alpha=\arctan(\frac{1}{a})\)，则 \(0<\alpha<\frac{\pi}{2}\)，且 \(\tan\alpha=\frac{1}{a}\). 方程 \(a\sin x+\cos x=0\) 等价于 \(\tan x=-\frac{1}{a}=-\tan\alpha\)，其正根依次为
 \(x_n=n\pi-\alpha\)，\(n\in\N^*\).
 在这些点上 \(\sin(n\pi-\alpha)=(-1)^{n+1}\sin\alpha\)，故
 \[
@@ -715,14 +715,14 @@ f(x_n)=(-1)^{n+1}\e^{a(n\pi-\alpha)}\sin\alpha
 \]
 比值为与 \(n\) 无关的常数，所以 \(\{f(x_n)\}\) 是等比数列.
 
-再证第二问. 由 \(\tan\alpha=1/a\)，有
+再证第二问. 由 \(\tan\alpha=\frac{1}{a}\)，有
 \(\sin\alpha=\frac{1}{\sqrt{a^2+1}}\)，\(\cos\alpha=\frac{a}{\sqrt{a^2+1}}\).
 令 \(t_n=ax_n>0\)，则
 \[
 x_n<|f(x_n)|
 \iff t_n\e^{-t_n}<\frac{a}{\sqrt{a^2+1}}=\cos\alpha
 \]
-对任意正数 \(t\)，函数 \(t\e^{-t}\) 的导数为 \(\e^{-t}(1-t)\)，所以它在 \(t=1\) 处取得最大值 \(1/\e\)，从而 \(t\e^{-t}\leqslant1/\e\). 另一方面，
+对任意正数 \(t\)，函数 \(t\e^{-t}\) 的导数为 \(\e^{-t}(1-t)\)，所以它在 \(t=1\) 处取得最大值 \(\frac{1}{\e}\)，从而 \(t\e^{-t}\leqslant\frac{1}{\e}\). 另一方面，
 \[
 a\geqslant\frac{1}{\sqrt{\e^2-1}}
 \]
@@ -730,9 +730,9 @@ a\geqslant\frac{1}{\sqrt{\e^2-1}}
 \[
 \frac{a}{\sqrt{a^2+1}}\geqslant\frac1\e
 \]
-当原条件严格大于阈值时，右端严格大于 \(1/\e\)，结论立即成立.
+当原条件严格大于阈值时，右端严格大于 \(\frac{1}{\e}\)，结论立即成立.
 
-当 \(a=1/\sqrt{\e^2-1}\) 时，令 \(s=1/a=\sqrt{\e^2-1}\). 由 \(8/3<\e<3\) 得 \(7/3<s<3\)，且 \(s>7/3>\sqrt3=\tan(\pi/3)\)，所以 \(\alpha=\arctan s>\pi/3\). 因此
-\(t_1=\frac{\pi-\alpha}{s}<\frac{2\pi/3}{7/3}<1\)，\(t_2=\frac{2\pi-\alpha}{s}>\frac{3\pi/2}{3}>1\).
-这里用到了 \(2<\pi<22/7\)，故上式中的两个严格不等式成立. 因 \(t_n\) 随 \(n\) 增大，且 \(t_1<1<t_2\)，所有 \(t_n\) 均不等于 \(1\)，故仍有严格不等式 \(t_n\e^{-t_n}<1/\e\). 所以对一切 \(n\in\N^*\)，均有 \(x_n<|f(x_n)|\).
+当 \(a=\frac{1}{\sqrt{\e^2-1}}\) 时，令 \(s=\frac{1}{a}=\sqrt{\e^2-1}\). 由 \(\frac{8}{3}<\e<3\) 得 \(\frac{7}{3}<s<3\)，且 \(s>\frac{7}{3}>\sqrt3=\tan(\frac{\pi}{3})\)，所以 \(\alpha=\arctan s>\frac{\pi}{3}\). 因此
+\(t_1=\frac{\pi-\alpha}{s}<\frac{2\frac{\pi}{3}}{\frac{7}{3}}<1\)，\(t_2=\frac{2\pi-\alpha}{s}>\frac{3\frac{\pi}{2}}{3}>1\).
+这里用到了 \(2<\pi<\frac{22}{7}\)，故上式中的两个严格不等式成立. 因 \(t_n\) 随 \(n\) 增大，且 \(t_1<1<t_2\)，所有 \(t_n\) 均不等于 \(1\)，故仍有严格不等式 \(t_n\e^{-t_n}<\frac{1}{\e}\). 所以对一切 \(n\in\N^*\)，均有 \(x_n<|f(x_n)|\).
 \end{solution}

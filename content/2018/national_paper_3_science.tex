@@ -193,7 +193,7 @@ D(X)=10p(1-p)=2.4
 =\dfrac{\mathrm C_{10}^4p^4(1-p)^6}{\mathrm C_{10}^6p^6(1-p)^4}
 =\left(\dfrac{1-p}{p}\right)^2
 \]
-题设 \(P(X=4)<P(X=6)\)，故 \((1-p)/p<1\)，从而 \(p>\dfrac12\). 因此 \(p=0.6\)，故选 B.
+题设 \(P(X=4)<P(X=6)\)，故 \(\frac{(1-p)}{p}<1\)，从而 \(p>\dfrac12\). 因此 \(p=0.6\)，故选 B.
 \end{solution}
 
 \begin{problem}
@@ -368,7 +368,7 @@ y'=a\e^x+(ax+1)\e^x=(ax+a+1)\e^x
 
 \begin{solution}
 令 \(\cos\left(3x+\dfrac\pi6\right)=0\)，则
-\(3x+\dfrac\pi6=\dfrac\pi2+k\pi\)，\(k\in\Z\)
+\(3x+\dfrac\pi6=\dfrac\pi2+k\pi\)，\(k\in\Z\)，
 从而
 \[
 x=\dfrac\pi9+\dfrac{k\pi}{3}
@@ -428,7 +428,7 @@ kt^2-2t-k=0
 q^4=4q^2
 \]
 由 \(q^2(q^2-4)=0\)，代数上得到 \(q=0\)，\(q=2\) 或 \(q=-2\). 按通常把等比数列公比取为非零数的约定，\(q=0\) 不作为等比数列的公比；即使将它作为递推关系的退化情形一并考察，也有
-\(a_1=1\)，\(a_n=0\)，\((n\ge2)\).
+\(a_1=1\)，\(a_n=0\)，（\(n\ge2\)）.
 当 \(q=2\) 或 \(q=-2\) 时，通项公式分别为
 \(a_n=2^{n-1}\) 或 \(a_n=(-2)^{n-1}\).
 \item 退化情形 \(q=0\) 给出 \(S_m=1\)，不满足 \(S_m=63\). 当 \(q=2\) 时，
@@ -511,7 +511,7 @@ K^2=\dfrac{40(15\times15-5\times5)^2}{(15+5)(5+15)(15+5)(5+15)}
 \end{solution}
 
 \begin{problem}
-如图，矩形 \(ABCD\) 所在的平面与半圆弧 \(\widehat{CD}\) 所在平面垂直，\(M\) 是 \(\widehat{CD}\) 上异于 \(C\)，\(D\) 的点.
+如图，边长为 \(2\) 的正方形 \(ABCD\) 所在的平面与半圆弧 \(\widehat{CD}\) 所在平面垂直，\(M\) 是 \(\widehat{CD}\) 上异于 \(C\)，\(D\) 的点.
 
 \begin{enumerate}
 \item 证明：平面 \(AMD\perp\) 平面 \(BMC\)；
@@ -523,38 +523,36 @@ K^2=\dfrac{40(15\times15-5\times5)^2}{(15+5)(5+15)(15+5)(5+15)}
 
 \begin{solution}
 \begin{enumerate}
-\item 设 \(AB=a\)，\(AD=b\)，其中 \(a\)，\(b>0\). 建立空间直角坐标系，使
-\(A(0,0,0)\)，\(B(a,0,0)\)，\(C(a,b,0)\)，\(D(0,b,0)\).
-半圆弧 \(\widehat{CD}\) 所在平面为 \(y=b\). 设 \(M=(u,b,v)\)，其中 \(v>0\). 由 \(CD\) 为该半圆的直径，得
+\item 设正方形 \(ABCD\) 的边长为 \(2\)，建立空间直角坐标系，使
+\(A(0,0,0)\)，\(B(2,0,0)\)，\(C(2,2,0)\)，\(D(0,2,0)\).
+半圆弧 \(\widehat{CD}\) 所在平面为 \(y=2\). 设 \(M=(u,2,v)\)，其中 \(v>0\). 由 \(CD\) 为该半圆的直径，得
 \[
-\left(u-\dfrac a2\right)^2+v^2=\dfrac{a^2}{4}
+(u-1)^2+v^2=1
 \]
-即 \(u^2-au+v^2=0\). 平面 \(AMD\) 和平面 \(BMC\) 的法向量分别可取
-\(\bs n_1=\overrightarrow{AD}\times\overrightarrow{DM}=(bv,0,-bu)\)，\(\bs n_2=\overrightarrow{BC}\times\overrightarrow{CM}=(bv,0,b(a-u))\).
+即 \(u^2-2u+v^2=0\). 平面 \(AMD\) 和平面 \(BMC\) 的法向量分别可取
+\(\bs n_1=\overrightarrow{AD}\times\overrightarrow{DM}=(2v,0,-2u)\)，\(\bs n_2=\overrightarrow{BC}\times\overrightarrow{CM}=(2v,0,2(2-u))\).
 于是
 \[
-\bs n_1\cdot\bs n_2=b^2\left(v^2-au+u^2\right)=0
+\bs n_1\cdot\bs n_2=4\left(v^2-2u+u^2\right)=0
 \]
 所以 \(\bs n_1\perp\bs n_2\)，从而平面 \(AMD\perp\) 平面 \(BMC\).
-\item 三棱锥 \(M-ABC\) 的底面面积为 \(S_{\triangle ABC}=\dfrac12ab\)，其高为 \(v\)，所以体积
+\item 三棱锥 \(M-ABC\) 的底面面积为 \(S_{\triangle ABC}=\dfrac12\times2\times2=2\)，其高为 \(v\)，所以体积
 \[
-V=\dfrac16abv
+V=\dfrac23v
 \]
-由 \(\left(u-\dfrac a2\right)^2+v^2=\dfrac{a^2}{4}\) 得 \(v\le\dfrac a2\)，当 \(M\) 为半圆弧中点，即 \(M=\left(\dfrac a2,b,\dfrac a2\right)\) 时，体积取得最大值.
+由 \((u-1)^2+v^2=1\) 得 \(v\le1\)，当 \(M\) 为半圆弧中点，即 \(M=(1,2,1)\) 时，体积取得最大值.
 
-此时平面 \(MCD\) 为 \(y=b\)，其法向量可取 \(\bs n_2=(0,1,0)\). 平面 \(MAB\) 的两个方向向量可取
-\(\overrightarrow{AB}=(a,0,0)\)，\(\overrightarrow{AM}=\left(\dfrac a2,b,\dfrac a2\right)\)
+此时平面 \(MCD\) 为 \(y=2\)，其法向量可取 \(\bs n_2=(0,1,0)\). 平面 \(MAB\) 的两个方向向量可取
+\(\overrightarrow{AB}=(2,0,0)\)，\(\overrightarrow{AM}=(1,2,1)\)，
 故其法向量可取
 \[
-\bs n_1=\overrightarrow{AB}\times\overrightarrow{AM}=\left(0,-\dfrac{a^2}{2},ab\right)
+\bs n_1=\overrightarrow{AB}\times\overrightarrow{AM}=(0,-2,4)
 \]
 设两平面的二面角为 \(\varphi\)，则
 \[
 \sin\varphi=\dfrac{|\bs n_1\times\bs n_2|}{|\bs n_1||\bs n_2|}
-=\dfrac{ab}{a\sqrt{\dfrac{a^2}{4}+b^2}}
-=\dfrac{b}{\sqrt{\dfrac{a^2}{4}+b^2}}
+=\dfrac{4}{2\sqrt5}=\dfrac{2\sqrt5}{5}
 \]
-该值随矩形的边长比改变. 例如 \(a=b\) 时为 \(\dfrac2{\sqrt5}\)，而 \(a=2b\) 时为 \(\dfrac1{\sqrt2}\). 题目只给出“矩形”而未给出 \(a\)、\(b\) 或其比值，因此第（2）问不能确定唯一数值；这里保留由原文件题面能够推出的参数表达式，不以公开版本中的其他附加条件替换原题.
 \end{enumerate}
 \end{solution}
 
@@ -603,7 +601,7 @@ k=-\dfrac{3}{4m}< -\dfrac12
 \[
 \dfrac{1^2}{4}+\dfrac{(-2m)^2}{3}=1
 \]
-所以 \(m=\dfrac34\)，从而 \(k=-1\)，且 \(P=(1,-\dfrac32\)).
+所以 \(m=\dfrac34\)，从而 \(k=-1\)，且 \(P=(1,-\dfrac32)\).
 
 令 \(A=(1+u,\dfrac34-u)\)，\(B=(1-u,\dfrac34+u)\). 将 \(A\) 代入椭圆方程，得
 \[

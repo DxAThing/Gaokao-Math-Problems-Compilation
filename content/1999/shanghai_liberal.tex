@@ -114,7 +114,7 @@
 \end{answer}
 
 \begin{solution}
-由换底公式，\(\log_{3}2=\dfrac{\ln2}{\ln3}\)，而 \(\log_{27}64=\dfrac{\ln64}{\ln27}=\dfrac{6\ln2}{3\ln3}=2\dfrac{\ln2}{\ln3}\). 因此原式等于 \(\dfrac{\ln2/\ln3}{2\ln2/\ln3}=\frac12\).
+由换底公式，\(\log_{3}2=\dfrac{\ln2}{\ln3}\)，而 \(\log_{27}64=\dfrac{\ln64}{\ln27}=\dfrac{6\ln2}{3\ln3}=2\dfrac{\ln2}{\ln3}\). 因此原式等于 \(\dfrac{\frac{\ln2}{\ln3}}{2\frac{\ln2}{\ln3}}=\frac12\).
 \end{solution}
 
 \begin{problem}
@@ -207,7 +207,7 @@ D
 \end{answer}
 
 \begin{solution}
-第一种参数方程为了使 \(x=t^{1/2}\) 和 \(y=t^{-1/2}\) 为实数且有定义，必须有 \(t>0\)，只得到第一象限的部分. 第二种参数方程中 \(x=|t|>0\)，同样只得到第一象限的部分. 第三种参数方程虽满足 \(xy=1\)，但 \(|x|=|\cos t|\leq1\)，不能得到双曲线上的全部点. 第四种参数方程在 \(\tan t\) 和 \(\cot t\) 有定义时，\(xy=\tan t\cot t=1\)，且 \(\tan t\) 的值域为全部非零实数，故得到所有 \(x\ne0\) 且 \(y=1/x\) 的点，曲线完全一致，选 D.
+第一种参数方程为了使 \(x=t^{\frac{1}{2}}\) 和 \(y=t^{-\frac{1}{2}}\) 为实数且有定义，必须有 \(t>0\)，只得到第一象限的部分. 第二种参数方程中 \(x=|t|>0\)，同样只得到第一象限的部分. 第三种参数方程虽满足 \(xy=1\)，但 \(|x|=|\cos t|\leq1\)，不能得到双曲线上的全部点. 第四种参数方程在 \(\tan t\) 和 \(\cot t\) 有定义时，\(xy=\tan t\cot t=1\)，且 \(\tan t\) 的值域为全部非零实数，故得到所有 \(x\ne0\) 且 \(y=\frac{1}{x}\) 的点，曲线完全一致，选 D.
 \end{solution}
 
 \begin{problem}
@@ -269,7 +269,7 @@ C
 \end{problem}
 
 \begin{solution}
-设公比为 \(q\). 因为数列各项为正数，\(q>0\)，且 \(q^{2}=\dfrac{a_{4}}{a_{2}}=4\)，所以 \(q=2\). 从而 \(a_{1}=a_{2}/q=2\)，即 \(a_n=2^n\). 因此
+设公比为 \(q\). 因为数列各项为正数，\(q>0\)，且 \(q^{2}=\dfrac{a_{4}}{a_{2}}=4\)，所以 \(q=2\). 从而 \(a_{1}=\frac{a_{2}}{q}=2\)，即 \(a_n=2^n\). 因此
 \[
 \frac{\lg a_{n+1}+\lg a_{n+2}+\cdots+\lg a_{2n}}{n^2}=\frac{(n+1)+(n+2)+\cdots+2n}{n^2}\lg2=\left(\frac32+\frac{1}{2n}\right)\lg2
 \]
@@ -280,19 +280,16 @@ C
 \end{solution}
 
 \begin{problem}
-设复数 \(z\) 满足 \(4z + 2\overline{z} = 3+\sqrt{3} + \i\)，\(w = \sin\theta - \i\cos\theta\)（\(\theta \in \R\)），求 \(z\) 的值和 \(|z - w| \) 的取值范围.
+设复数 \(z\) 满足 \(4z + 2\overline{z} = 3\sqrt{3} + \i\)，\(w = \sin\theta - \i\cos\theta\)（\(\theta \in \R\)），求 \(z\) 的值和 \(|z - w| \) 的取值范围.
 \end{problem}
 
 \begin{solution}
 设 \(z=u+v\i\)，其中 \(u\)，\(v\in\R\)，则 \(\overline z=u-v\i\). 代入题设得
-\(4(u+v\i)+2(u-v\i)=3+\sqrt3+\i\)，即 \(6u+2v\i=3+\sqrt3+\i\). 比较实部和虚部，得 \(u=\frac{3+\sqrt3}{6}\)，\(v=\frac12\)，所以
-\(z=\frac{3+\sqrt3}{6}+\frac12\i\).
+\(4(u+v\i)+2(u-v\i)=3\sqrt3+\i\)，即 \(6u+2v\i=3\sqrt3+\i\). 比较实部和虚部，得 \(u=\frac{\sqrt3}{2}\)，\(v=\frac12\)，所以
+\(z=\frac{\sqrt3}{2}+\frac12\i\)，且 \(|z|=\sqrt{\frac34+\frac14}=1\).
 
-记 \(\rho=|z|\)，则
-\(\rho^2=\left(\frac{3+\sqrt3}{6}\right)^2+\left(\frac12\right)^2=\frac{7+2\sqrt3}{12}\)，即 \(\rho=\sqrt{\frac{7+2\sqrt3}{12}}\). 又 \(|w|=\sqrt{\sin^2\theta+\cos^2\theta}=1\)，并且当 \(\theta\) 取遍 \(\R\) 时，\(w\) 取遍单位圆上的所有点.
-
-由 \(7+2\sqrt3<12\) 可知 \(\rho<1\). 再由三角不等式和逆三角不等式，\(1-\rho\leq|z-w|\leq1+\rho\). 当 \(w=z/\rho\) 时取下界，当 \(w=-z/\rho\) 时取上界，这两个单位复数都可由某个 \(\theta\) 取得. 因此 \(|z-w|\) 的取值范围为
-\(\left[1-\sqrt{\frac{7+2\sqrt3}{12}},1+\sqrt{\frac{7+2\sqrt3}{12}}\right]\).
+又 \(|w|=\sqrt{\sin^2\theta+\cos^2\theta}=1\)，并且当 \(\theta\) 取遍 \(\R\) 时，\(w\) 取遍单位圆上的所有点. 计算得
+\(|z-w|^2=2-2\left(\frac{\sqrt3}{2}\sin\theta-\frac12\cos\theta\right)=2-2\sin\left(\theta-\frac{\pi}{6}\right)\). 因为 \(-1\leqslant\sin\left(\theta-\frac{\pi}{6}\right)\leqslant1\)，所以 \(0\leqslant|z-w|^2\leqslant4\)，从而 \(|z-w|\) 的取值范围为 \([0,2]\).
 \end{solution}
 
 \begin{problem}
@@ -339,7 +336,7 @@ C
 
 \item 水的横截面积为抛物线与直线 \(y=1\) 围成的面积，因此水的体积为
 \[
-V=100\int_{-\sqrt6/3}^{\sqrt6/3}\left(1-\frac32x^2\right)\,\mathrm dx=2\cdot100\int_0^{\sqrt6/3}\left(1-\frac32x^2\right)\,\mathrm dx=\frac{400\sqrt6}{9}
+V=100\int_{-\frac{\sqrt6}{3}}^{\frac{\sqrt6}{3}}\left(1-\frac32x^2\right)\,\mathrm dx=2\cdot100\int_0^{\frac{\sqrt6}{3}}\left(1-\frac32x^2\right)\,\mathrm dx=\frac{400\sqrt6}{9}
 \]
 所以沟中有 \(\frac{400\sqrt6}{9}\text{ 立方米}\) 的水.
 
@@ -368,15 +365,15 @@ S=\frac12\left(\frac12t+\frac12\left(t+\frac1t\right)\right)\cdot\frac32=\frac34
 \begin{enumerate}
 \item 椭圆 \(l\) 的中心为 \((-c,-c)\)，其上焦点为 \((-c,0)\). 中心相对于上焦点的向量为 \((0,-c)\)，逆时针旋转 \(\frac\pi2\) 后变为 \((c,0)\)，所以旋转后的中心为 \((0,0)\). 原椭圆的长轴方向由 \(y\) 轴转到 \(x\) 轴，故长轴长为 \(2a\)，短轴长为 \(2b\)，所得椭圆方程为 \(\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\).
 
-\item 将 \(y=1/x\) 代入椭圆方程，得 \(\frac{x^2}{a^2}+\frac{1}{b^2x^2}=1\). 令 \(u=x^2\)，则 \(u>0\) 且满足
-\(b^2u^2-a^2b^2u+a^2=0\). 该方程的两根乘积为 \(a^2/b^2>0\)，两根和为 \(a^2>0\)，所以只要有实根就有两个正根. 题设第一象限只有一个公共点，故该二次方程必须有重根，判别式为零：
-\(a^4b^4-4a^2b^2=0\). 由于 \(a\)，\(b>0\)，得 \(ab=2\). 于是重根为 \(u=\frac{a^2}{2}\)，第一象限取正根 \(x=\frac{a}{\sqrt2}\)，再由 \(y=1/x\) 得 \(y=\frac{\sqrt2}{a}\). 因此 \(P=\left(\frac{a}{\sqrt2},\frac{\sqrt2}{a}\right)\).
+\item 将 \(y=\frac{1}{x}\) 代入椭圆方程，得 \(\frac{x^2}{a^2}+\frac{1}{b^2x^2}=1\). 令 \(u=x^2\)，则 \(u>0\) 且满足
+\(b^2u^2-a^2b^2u+a^2=0\). 该方程的两根乘积为 \(\frac{a^2}{b^2}>0\)，两根和为 \(a^2>0\)，所以只要有实根就有两个正根. 题设第一象限只有一个公共点，故该二次方程必须有重根，判别式为零：
+\(a^4b^4-4a^2b^2=0\). 由于 \(a\)，\(b>0\)，得 \(ab=2\). 于是重根为 \(u=\frac{a^2}{2}\)，第一象限取正根 \(x=\frac{a}{\sqrt2}\)，再由 \(y=\frac{1}{x}\) 得 \(y=\frac{\sqrt2}{a}\). 因此 \(P=\left(\frac{a}{\sqrt2},\frac{\sqrt2}{a}\right)\).
 
 \item 椭圆 \(L\) 的两个焦点在 \(x\) 轴上，\(|AB|=2\sqrt{a^2-b^2}\). 因为 \(AB\) 在 \(x\) 轴上，三角形 \(ABP\) 的高为 \(y_P=\frac{\sqrt2}{a}\)，所以
 \[
 S(a)=\frac12\cdot2\sqrt{a^2-b^2}\cdot\frac{\sqrt2}{a}=\sqrt{2\left(1-\frac{b^2}{a^2}\right)}
 \]
-由 \(ab=2\) 得 \(b=2/a\)，而 \(a>b>0\) 等价于 \(a>\sqrt2\). 因此
+由 \(ab=2\) 得 \(b=\frac{2}{a}\)，而 \(a>b>0\) 等价于 \(a>\sqrt2\). 因此
 \(S(a)=\sqrt{2\left(1-\frac4{a^4}\right)}\)，且 \(0<S(a)<\sqrt2\). 当 \(a\) 从 \(\sqrt2\) 的右侧趋近于 \(\sqrt2\) 时，\(S(a)\) 趋近于 \(0\)；当 \(a\to+\infty\) 时，\(S(a)\) 趋近于 \(\sqrt2\). 该函数在 \((\sqrt2,+\infty)\) 上连续递增，故值域为 \((0,\sqrt2)\).
 \end{enumerate}
 \end{solution}

@@ -150,10 +150,10 @@ A
 设 \(f(x)\) 是定义域为 \(\R\) 的偶函数，且在 \((0,+\infty)\) 单调递减，则（\quad）
 
 \choices
-    {\(f\!\left(\log_3\frac14\right)>f\!\left(2^{-3/2}\right)>f\!\left(2^{-2/3}\right)\)}
-    {\(f\!\left(\log_3\frac14\right)>f\!\left(2^{-2/3}\right)>f\!\left(2^{-3/2}\right)\)}
-    {\(f\!\left(2^{-3/2}\right)>f\!\left(2^{-2/3}\right)>f\!\left(\log_3\frac14\right)\)}
-    {\(f\!\left(2^{-2/3}\right)>f\!\left(2^{-3/2}\right)>f\!\left(\log_3\frac14\right)\)}
+    {\(f\!\left(\log_3\frac14\right)>f\!\left(2^{-\frac{3}{2}}\right)>f\!\left(2^{-\frac{2}{3}}\right)\)}
+    {\(f\!\left(\log_3\frac14\right)>f\!\left(2^{-\frac{2}{3}}\right)>f\!\left(2^{-\frac{3}{2}}\right)\)}
+    {\(f\!\left(2^{-\frac{3}{2}}\right)>f\!\left(2^{-\frac{2}{3}}\right)>f\!\left(\log_3\frac14\right)\)}
+    {\(f\!\left(2^{-\frac{2}{3}}\right)>f\!\left(2^{-\frac{3}{2}}\right)>f\!\left(\log_3\frac14\right)\)}
 \end{problem}
 
 \begin{answer}
@@ -241,8 +241,24 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item \(a=0.35\)，\(b=0.10\).
-\item 甲、乙两种离子残留百分比的平均值估计分别为 \(4.05\) 和 \(6.00\).
+\item 由乙离子残留百分比直方图，各组组距为 \(1\)，百分比不低于 \(5.5\) 的组为 \([5.5,6.5)\)，\([6.5,7.5)\)，\([7.5,8.5)\). 根据频率等于小矩形面积，有
+\[
+(a+0.20+0.15)\times1=0.70
+\]
+解得 \(a=0.35\). 又所有组的频率之和为 \(1\)，故
+\[
+(0.05+b+0.15+a+0.20+0.15)\times1=1
+\]
+代入 \(a=0.35\)，解得 \(b=0.10\).
+
+\item 甲离子残留百分比的平均值估计为
+\[
+2\times0.15+3\times0.20+4\times0.30+5\times0.20+6\times0.10+7\times0.05=4.05
+\]
+乙离子残留百分比的平均值估计为
+\[
+3\times0.05+4\times0.10+5\times0.15+6\times0.35+7\times0.20+8\times0.15=6.00
+\]
 \end{enumerate}
 \end{solution}
 
@@ -257,8 +273,17 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item \(B=60^{\circ}\).
-\item \(\triangle ABC\) 面积的取值范围为 \(\left(\dfrac{\sqrt3}{8},\dfrac{\sqrt3}{2}\right)\).
+\item 由 \(A+B+C=\pi\)，得 \(\dfrac{A+C}{2}=\dfrac\pi2-\dfrac B2\)，从而 \(\sin\dfrac{A+C}{2}=\cos\dfrac B2\). 由正弦定理，\(a\sin B=b\sin A\)，结合已知 \(a\sin\dfrac{A+C}{2}=b\sin A\)，得
+\[
+a\cos\frac B2=a\sin B=2a\sin\frac B2\cos\frac B2
+\]
+因为 \(a>0\)，且 \(0<B<\pi\)，所以 \(\cos\dfrac B2>0\)，于是 \(\sin\dfrac B2=\dfrac12\). 又 \(0<\dfrac B2<\dfrac\pi2\)，故 \(\dfrac B2=\dfrac\pi6\)，即 \(B=\dfrac\pi3\).
+
+\item 因为 \(\triangle ABC\) 为锐角三角形，且 \(B=\dfrac\pi3\)，所以 \(0<A<\dfrac\pi2\)，\(0<C=\dfrac{2\pi}{3}-A<\dfrac\pi2\)，解得 \(\dfrac\pi6<A<\dfrac\pi2\). 由正弦定理及 \(c=1\)，得 \(a=\dfrac{\sin A}{\sin C}=\dfrac{\sin A}{\sin(\frac{2\pi}{3}-A)}\). 从而 \(\triangle ABC\) 的面积为
+\[
+S=\frac12ac\sin B=\frac{\sqrt3}{4}\cdot\frac{\sin A}{\frac{\sqrt3}{2}\cos A+\frac12\sin A}=\frac{\sqrt3}{4}\cdot\frac{1}{\frac{\sqrt3}{2}\cot A+\frac12}
+\]
+因为 \(A\in\left(\dfrac\pi6,\dfrac\pi2\right)\)，所以 \(\cot A\in(0,\sqrt3)\)，\(\dfrac{\sqrt3}{2}\cot A+\dfrac12\in\left(\dfrac12,2\right)\). 从而 \(S\in\left(\dfrac{\sqrt3}{8},\dfrac{\sqrt3}{2}\right)\)，即 \(\triangle ABC\) 面积的取值范围为 \(\left(\dfrac{\sqrt3}{8},\dfrac{\sqrt3}{2}\right)\).
 \end{enumerate}
 \end{solution}
 
@@ -274,8 +299,17 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item \(A\)，\(C\)，\(G\)，\(D\) 四点共面，且平面 \(ABC\perp\) 平面 \(BCGE\).
-\item 二面角 \(B-CG-A\) 的大小为 \(30^{\circ}\).
+\item 由平面图形知，在矩形 \(ADEB\) 中 \(AD\parallel BE\) 且 \(AD=BE=2\)；在菱形 \(BFGC\) 中 \(CG\parallel BF\) 且 \(CG=BF=2\). 折起后 \(BE\) 与 \(BF\) 重合，因此 \(AD\parallel CG\)，故图 \(2\) 中的 \(A\)，\(C\)，\(G\)，\(D\) 四点共面.
+
+在矩形 \(ADEB\) 中 \(AB\perp BE\)，在 \(\mathrm{Rt}\triangle ABC\) 中 \(AB\perp BC\). 因为 \(BE\cap BC=B\)，且 \(BE\)，\(BC\subset\) 平面 \(BCGE\)，所以 \(AB\perp\) 平面 \(BCGE\). 又 \(AB\subset\) 平面 \(ABC\)，因此平面 \(ABC\perp\) 平面 \(BCGE\).
+
+\item 由（1）知 \(AB\perp\) 平面 \(BCGE\)，菱形 \(BCGE\) 中 \(BC=BE=2\)，\(\angle EBC=60^\circ\). 以 \(B\) 为原点，在平面 \(BCGE\) 内过 \(B\) 作垂直于 \(BC\) 的直线为 \(y\) 轴，直线 \(BC\) 为 \(x\) 轴，直线 \(BA\) 为 \(z\) 轴建立空间直角坐标系. 则 \(B(0,0,0)\)，\(A(0,0,1)\)，\(C(2,0,0)\)，\(E(1,\sqrt3,0)\).
+
+因为 \(\overrightarrow{CG}=\overrightarrow{BE}=(1,\sqrt3,0)\)，所以 \(G(3,\sqrt3,0)\). 平面 \(BCG\)（即平面 \(BCGE\)）的一个法向量为 \(\bs{n}_1=(0,0,1)\). 设平面 \(ACG\) 的法向量为 \(\bs{n}_2=(x,y,z)\)，由 \(\overrightarrow{CA}=(-2,0,1)\)，\(\overrightarrow{CG}=(1,\sqrt3,0)\)，得 \(-2x+z=0\) 且 \(x+\sqrt3y=0\). 取 \(y=-1\)，得 \(x=\sqrt3\)，\(z=2\sqrt3\)，故 \(\bs{n}_2=(\sqrt3,-1,2\sqrt3)\). 设二面角 \(B-CG-A\) 的平面角为 \(\theta\)，则
+\[
+\cos\theta=\frac{|\bs{n}_1\cdot\bs{n}_2|}{|\bs{n}_1||\bs{n}_2|}=\frac{2\sqrt3}{1\times4}=\frac{\sqrt3}{2}
+\]
+由图知二面角为锐角，因此二面角 \(B-CG-A\) 的大小为 \(30^\circ\).
 \end{enumerate}
 \end{solution}
 
@@ -290,8 +324,15 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item 当 \(a>0\) 时，\(f(x)\) 在 \((-\infty,0)\cup\left(\dfrac{a}{3},+\infty\right)\) 上单调递增，在 \(\left(0,\dfrac{a}{3}\right)\) 上单调递减；当 \(a=0\) 时，\(f(x)\) 在 \(\R\) 上单调递增；当 \(a<0\) 时，\(f(x)\) 在 \(\left(-\infty,\dfrac{a}{3}\right)\cup(0,+\infty)\) 上单调递增，在 \(\left(\dfrac{a}{3},0\right)\) 上单调递减.
-\item 满足第（2）问条件的参数为 \((a,b)=(0,-1)\) 或 \((4,1)\).
+\item 函数的导数为 \(f'(x)=6x^2-2ax=2x(3x-a)\)，令 \(f'(x)=0\)，得 \(x_1=0\)，\(x_2=\dfrac a3\).
+当 \(a>0\) 时，\(\dfrac a3>0\)，当 \(x\in(-\infty,0)\) 或 \(x\in\left(\dfrac a3,+\infty\right)\) 时 \(f'(x)>0\)，\(f(x)\) 单调递增；当 \(x\in\left(0,\dfrac a3\right)\) 时 \(f'(x)<0\)，\(f(x)\) 单调递减.
+当 \(a=0\) 时，\(f'(x)=6x^2\ge0\)，\(f(x)\) 在 \(\R\) 上单调递增.
+当 \(a<0\) 时，\(\dfrac a3<0\)，当 \(x\in\left(-\infty,\dfrac a3\right)\) 或 \(x\in(0,+\infty)\) 时 \(f'(x)>0\)，\(f(x)\) 单调递增；当 \(x\in\left(\dfrac a3,0\right)\) 时 \(f'(x)<0\)，\(f(x)\) 单调递减.
+
+\item 若 \(a\le0\)，则当 \(x\in[0,1]\) 时 \(f'(x)\ge0\)，\(f(x)\) 在 \([0,1]\) 上单调递增. 此时最小值为 \(f(0)=b=-1\)，最大值为 \(f(1)=2-a+b=1\)，解得 \(a=0\)，\(b=-1\)，满足 \(a\le0\).
+若 \(a\ge3\)，则当 \(x\in(0,1)\) 时 \(f'(x)\le0\)，\(f(x)\) 在 \([0,1]\) 上单调递减. 此时最大值为 \(f(0)=b=1\)，最小值为 \(f(1)=2-a+b=-1\)，解得 \(a=4\)，\(b=1\)，满足 \(a\ge3\).
+若 \(0<a<3\)，则 \(f(x)\) 在 \(\left[0,\dfrac a3\right]\) 上单调递减，在 \(\left[\dfrac a3,1\right]\) 上单调递增. 此时最小值为 \(f\left(\dfrac a3\right)=-\dfrac{a^3}{27}+b=-1\)，即 \(b=\dfrac{a^3}{27}-1\). 最大值为 \(\max\{f(0),f(1)\}=1\). 因为 \(f(0)=b=\dfrac{a^3}{27}-1\in(-1,0)\)，所以最大值必为 \(f(1)=2-a+b=1\)，即 \(\dfrac{a^3}{27}-a=0\)，又 \(0<a<3\)，此方程无解.
+综上，存在满足条件的 \(a\)，\(b\)，其所有值为 \((a,b)=(0,-1)\) 或 \((4,1)\).
 \end{enumerate}
 \end{solution}
 
@@ -306,8 +347,18 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item 直线 \(AB\) 的方程为 \(2tx-2y+1=0\)，过定点 \(\left(0,\dfrac12\right)\).
-\item 四边形 \(ADBE\) 的面积为 \(3\) 或 \(4\sqrt2\).
+\item 设 \(D\left(t,-\dfrac12\right)\)，切点为 \((x_0,y_0)\)，其中 \(y_0=\dfrac{x_0^2}{2}\). 由 \(y'=x\)，切线方程为 \(y-y_0=x_0(x-x_0)\)，即 \(x_0x-y-\dfrac{x_0^2}{2}=0\).
+因为切线过点 \(D\)，所以 \(x_0t-\left(-\dfrac12\right)-\dfrac{x_0^2}{2}=0\)，即 \(x_0^2-2tx_0-1=0\).
+设 \(A(x_1,y_1)\)，\(B(x_2,y_2)\)，则 \(x_1\)，\(x_2\) 是该方程的两个相异实根，满足 \(x_1+x_2=2t\)，\(x_1x_2=-1\).
+因为切线 \(DA\) 与 \(DB\) 的方程分别为 \(x_1x-y-\dfrac{x_1^2}{2}=0\) 与 \(x_2x-y-\dfrac{x_2^2}{2}=0\)，两式中点 \(D\left(t,-\dfrac12\right)\) 均满足 \(x_it-\left(-\dfrac12\right)-\dfrac{x_i^2}{2}=0\)，故切点弦 \(AB\) 的方程为 \(tx-y+\dfrac12=0\)，即 \(2tx-2y+1=0\). 令 \(x=0\)，得 \(y=\dfrac12\)，因此直线 \(AB\) 过定点 \(\left(0,\dfrac12\right)\).
+
+\item 设线段 \(AB\) 的中点为 \(M(x_M,y_M)\)，由根与系数的关系，\(x_M=\dfrac{x_1+x_2}{2}=t\)，代入直线 \(AB\) 的方程得 \(y_M=t^2+\dfrac12\).
+因为以 \(E\left(0,\dfrac52\right)\) 为圆心的圆与直线 \(AB\) 切于点 \(M\)，所以 \(EM\perp AB\).
+当 \(t=0\) 时，直线 \(AB\) 为 \(y=\dfrac12\)，\(M\left(0,\dfrac12\right)\)，\(EM\) 垂直于 \(AB\)，符合题意. 此时 \(D\left(0,-\dfrac12\right)\)，\(|DE|=3\)，\(x_0^2-1=0\)，\(|x_1-x_2|=2\)，\(|AB|=2\)，四边形 \(ADBE\) 的对角线相互垂直，其面积为 \(S=\dfrac12|DE||AB|=\dfrac12\times3\times2=3\).
+当 \(t\ne0\) 时，直线 \(AB\) 的斜率为 \(t\)，直线 \(EM\) 的斜率为 \(\dfrac{y_M-\frac52}{x_M}=\dfrac{t^2-2}{t}\). 由 \(EM\perp AB\) 得 \(t\cdot\dfrac{t^2-2}{t}=-1\)，即 \(t^2-2=-1\)，解得 \(t^2=1\). 此时 \(|x_1-x_2|=\sqrt{(x_1+x_2)^2-4x_1x_2}=\sqrt{4t^2+4}=2\sqrt2\)，\(|AB|=\sqrt{1+t^2}|x_1-x_2|=\sqrt2\times2\sqrt2=4\).
+点 \(E\left(0,\dfrac52\right)\) 到直线 \(AB\) 的距离为 \(h_1=\dfrac{|\!-\frac52+\frac12|}{\sqrt{t^2+1}}=\dfrac{2}{\sqrt2}=\sqrt2\)，点 \(D\left(t,-\dfrac12\right)\) 到直线 \(AB\) 的距离为 \(h_2=\dfrac{|t^2+\frac12+\frac12|}{\sqrt{t^2+1}}=\dfrac{2}{\sqrt2}=\sqrt2\).
+因为 \(D\)，\(E\) 在直线 \(AB\) 的异侧，所以四边形 \(ADBE\) 的面积为 \(S=\dfrac12|AB|(h_1+h_2)=\dfrac12\times4\times(\sqrt2+\sqrt2)=4\sqrt2\).
+综上，四边形 \(ADBE\) 的面积为 \(3\) 或 \(4\sqrt2\).
 \end{enumerate}
 \end{solution}
 
@@ -326,8 +377,15 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item \(M_1\)：\(\rho=2\cos\theta\)，\(0\leqslant\theta\leqslant\dfrac{\pi}{4}\)；\(M_2\)：\(\rho=2\sin\theta\)，\(\dfrac{\pi}{4}\leqslant\theta\leqslant\dfrac{3\pi}{4}\)；\(M_3\)：\(\rho=-2\cos\theta\)，\(\dfrac{3\pi}{4}\leqslant\theta\leqslant\pi\).
-\item 点 \(P\) 的极坐标为 \(\left(\sqrt3,\dfrac{\pi}{6}\right)\)，\(\left(\sqrt3,\dfrac{\pi}{3}\right)\)，\(\left(\sqrt3,\dfrac{2\pi}{3}\right)\) 或 \(\left(\sqrt3,\dfrac{5\pi}{6}\right)\).
+\item 弧 \(\widehat{AB}\) 所在圆的圆心为 \((1,0)\)，半径为 \(1\)，极坐标方程为 \(\rho=2\cos\theta\). 由点 \(A(2,0)\) 到 \(B\left(\sqrt2,\dfrac\pi4\right)\)，\(\theta\) 的范围为 \(0\le\theta\le\dfrac\pi4\)，故 \(M_1\) 的极坐标方程为 \(\rho=2\cos\theta\)（\(0\le\theta\le\dfrac\pi4\)）.
+弧 \(\widehat{BC}\) 所在圆的圆心为 \(\left(1,\dfrac\pi2\right)\)，直角坐标为 \((0,1)\)，半径为 \(1\)，方程为 \(x^2+(y-1)^2=1\)，即 \(\rho=2\sin\theta\). 由点 \(B\left(\sqrt2,\dfrac\pi4\right)\) 到 \(C\left(\sqrt2,\dfrac{3\pi}{4}\right)\)，\(\theta\) 的范围为 \(\dfrac\pi4\le\theta\le\dfrac{3\pi}{4}\)，故 \(M_2\) 的极坐标方程为 \(\rho=2\sin\theta\)（\(\dfrac\pi4\le\theta\le\dfrac{3\pi}{4}\)）.
+弧 \(\widehat{CD}\) 所在圆的圆心为 \((1,\pi)\)，直角坐标为 \((-1,0)\)，半径为 \(1\)，方程为 \((x+1)^2+y^2=1\)，即 \(\rho=-2\cos\theta\). 由点 \(C\left(\sqrt2,\dfrac{3\pi}{4}\right)\) 到 \(D(2,\pi)\)，\(\theta\) 的范围为 \(\dfrac{3\pi}{4}\le\theta\le\pi\)，故 \(M_3\) 的极坐标方程为 \(\rho=-2\cos\theta\)（\(\dfrac{3\pi}{4}\le\theta\le\pi\)）.
+
+\item 点 \(P\) 在 \(M\) 上，且 \(|OP|=\sqrt3\)，即 \(\rho=\sqrt3\).
+若 \(P\) 在 \(M_1\) 上，则 \(2\cos\theta=\sqrt3\)，\(\cos\theta=\dfrac{\sqrt3}{2}\). 因为 \(0\le\theta\le\dfrac\pi4\)，所以 \(\theta=\dfrac\pi6\)，此时 \(P\left(\sqrt3,\dfrac\pi6\right)\).
+若 \(P\) 在 \(M_2\) 上，则 \(2\sin\theta=\sqrt3\)，\(\sin\theta=\dfrac{\sqrt3}{2}\). 因为 \(\dfrac\pi4\le\theta\le\dfrac{3\pi}{4}\)，所以 \(\theta=\dfrac\pi3\) 或 \(\theta=\dfrac{2\pi}{3}\)，此时 \(P\left(\sqrt3,\dfrac\pi3\right)\) 或 \(P\left(\sqrt3,\dfrac{2\pi}{3}\right)\).
+若 \(P\) 在 \(M_3\) 上，则 \(-2\cos\theta=\sqrt3\)，\(\cos\theta=-\dfrac{\sqrt3}{2}\). 因为 \(\dfrac{3\pi}{4}\le\theta\le\pi\)，所以 \(\theta=\dfrac{5\pi}{6}\)，此时 \(P\left(\sqrt3,\dfrac{5\pi}{6}\right)\).
+综上，点 \(P\) 的极坐标为 \(\left(\sqrt3,\dfrac\pi6\right)\)，\(\left(\sqrt3,\dfrac\pi3\right)\)，\(\left(\sqrt3,\dfrac{2\pi}{3}\right)\) 或 \(\left(\sqrt3,\dfrac{5\pi}{6}\right)\).
 \end{enumerate}
 \end{solution}
 
@@ -342,7 +400,27 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item 最小值为 \(\dfrac43\).
-\item 可得 \(a\leqslant-3\) 或 \(a\geqslant-1\).
+\item 由柯西不等式，有
+\[
+\bigl[(x-1)^2+(y+1)^2+(z+1)^2\bigr](1^2+1^2+1^2)\ge\bigl[(x-1)+(y+1)+(z+1)\bigr]^2
+\]
+因为 \(x+y+z=1\)，所以 \((x-1)+(y+1)+(z+1)=x+y+z+1=2\).
+从而
+\[
+3\bigl[(x-1)^2+(y+1)^2+(z+1)^2\bigr]\ge4
+\]
+即 \((x-1)^2+(y+1)^2+(z+1)^2\ge\dfrac43\). 当且仅当 \(x-1=y+1=z+1=\dfrac23\)，即 \(x=\dfrac53\)，\(y=-\dfrac13\)，\(z=-\dfrac13\) 时等号成立. 因此 \((x-1)^2+(y+1)^2+(z+1)^2\) 的最小值为 \(\dfrac43\).
+
+\item 设 \(u=x-2\)，\(v=y-1\)，\(w=z-a\)，则 \(u+v+w=x+y+z-3-a=1-3-a=-(a+2)\).
+由柯西不等式，
+\[
+(u^2+v^2+w^2)(1^2+1^2+1^2)\ge(u+v+w)^2=(a+2)^2
+\]
+当且仅当 \(u=v=w=-\dfrac{a+2}{3}\) 时取得最小值 \(\dfrac{(a+2)^2}{3}\).
+若对所有满足 \(x+y+z=1\) 的 \(x\)，\(y\)，\(z\)，都有 \((x-2)^2+(y-1)^2+(z-a)^2\ge\dfrac13\) 成立，只需其最小值不小于 \(\dfrac13\)，即
+\[
+\frac{(a+2)^2}{3}\ge\frac13
+\]
+化简得 \((a+2)^2\ge1\)，解得 \(a+2\ge1\) 或 \(a+2\le-1\)，即 \(a\ge-1\) 或 \(a\le-3\).
 \end{enumerate}
 \end{solution}

@@ -326,12 +326,12 @@ V=\pi\int_0^1(3-x)^2\mathrm{d}x+\pi\int_1^2\left((3-x)^2-(x-1)^2\right)\mathrm{d
 \tan\angle ACB=\frac{\frac{a-b}{x}}{1+\frac{ab}{x^2}}=\frac{x(a-b)}{x^2+ab}=(a-b)\frac{x}{x^2+ab}
 \]
 由均值不等式，\(x+\frac{ab}{x}\geq2\sqrt{ab}\)，所以
-\(\frac{x}{x^2+ab}=\frac{1}{x+ab/x}\leq\frac{1}{2\sqrt{ab}}\). 等号当且仅当 \(x=\frac{ab}{x}\)，即 \(x=\sqrt{ab}\). 因而当 \(C=(\sqrt{ab},0)\) 时，\(\angle ACB\) 取得最大值.
+\(\frac{x}{x^2+ab}=\frac{1}{x+a\frac{b}{x}}\leq\frac{1}{2\sqrt{ab}}\). 等号当且仅当 \(x=\frac{ab}{x}\)，即 \(x=\sqrt{ab}\). 因而当 \(C=(\sqrt{ab},0)\) 时，\(\angle ACB\) 取得最大值.
 \end{solution}
 
 \begin{problem}
 
-已知集合 \(A\) 和集合 \(B\) 各含有 \(12\) 个元素，\(A \cup B\) 含有 \(4\) 个元素，试求同时满足下面两个条件的集合 \(C\) 的个数：
+已知集合 \(A\) 和集合 \(B\) 各含有 \(12\) 个元素，\(A \cap B\) 含有 \(4\) 个元素，试求同时满足下面两个条件的集合 \(C\) 的个数：
 
 \begin{circlelist}
 \item \(C \subseteq A \cup B\) 且 \(C\) 中含有 \(3\) 个元素；
@@ -340,7 +340,11 @@ V=\pi\int_0^1(3-x)^2\mathrm{d}x+\pi\int_1^2\left((3-x)^2-(x-1)^2\right)\mathrm{d
 \end{problem}
 
 \begin{solution}
-由 \(A\subseteq A\cup B\)，必有 \(\lvert A\cup B\rvert\geq\lvert A\rvert=12\). 但原始试卷文件同时给出 \(\lvert A\cup B\rvert=4\)，这与上述不等式矛盾. 因此，按原始试卷的并集题面，不存在满足已知条件的集合 \(A\)，\(B\)，也就不存在满足所列两个条件的集合 \(C\)；字面解读只能得到“题设无解”，不能把它当作交集版本的数值答案.
+因为 \(\lvert A\rvert=\lvert B\rvert=12\)，\(\lvert A\cap B\rvert=4\)，所以 \(\lvert A\cup B\rvert=12+12-4=20\).
+
+满足 \(C\subseteq A\cup B\) 且 \(\lvert C\rvert=3\) 的集合 \(C\) 共有 \(\mathrm C_{20}^{3}=1140\) 个. 其中不满足 \(C\cap A\neq\varnothing\) 的，即 \(C\cap A=\varnothing\)，等价于 \(C\subseteq B\setminus A\). 因为 \(\lvert B\setminus A\rvert=12-4=8\)，这样的 \(C\) 有 \(\mathrm C_{8}^{3}=56\) 个.
+
+所以符合条件的集合 \(C\) 的个数为 \(1140-56=1084\).
 \end{solution}
 
 \begin{problem}
@@ -360,7 +364,7 @@ y_P=t_1+t_2=\frac{2}{k}
 \]
 抛物线 \(y^2=4x\) 的焦点为 \(F=(1,0)\)，所以直线 \(L_2=PF\) 的斜率为
 \[
-m_2=\frac{y_P}{x_P-1}=\frac{2/k}{2/k^2-2}=\frac{k}{1-k^2}
+m_2=\frac{y_P}{x_P-1}=\frac{\frac{2}{k}}{\frac{2}{k^2}-2}=\frac{k}{1-k^2}
 \]
 因此所求函数为 \(f(k)=\frac{m_2}{k}=\frac{1}{1-k^2}\)，定义域为 \((-1,0)\cup(0,1)\). 又
 \(f'(k)=\frac{2k}{(1-k^2)^2}\)，故 \(f(k)\) 在 \((-1,0)\) 上为减函数，在 \((0,1)\) 上为增函数.

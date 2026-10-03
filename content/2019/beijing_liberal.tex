@@ -47,7 +47,7 @@ A
 \end{answer}
 
 \begin{problem}
-执行如图所示的程序框图，输出的 \(s\) 值为
+执行如图所示的程序框图，输出的 \(s\) 值为（\quad）.
 
 \bitmapfigure[max width=6.0cm]{img/2019/beijing_liberal/q4_fig1.png}
 
@@ -105,7 +105,7 @@ A
 \end{answer}
 
 \begin{problem}
-如图，\(A\)，\(B\) 是半径为 \(2\) 的圆周上的定点，\(P\) 为圆周上的动点，\(\angle APB\) 是锐角，大小为 \(\beta\). 图中阴影区域的面积的最大值为
+如图，\(A\)，\(B\) 是半径为 \(2\) 的圆周上的定点，\(P\) 为圆周上的动点，\(\angle APB\) 是锐角，大小为 \(\beta\). 图中阴影区域的面积的最大值为（\quad）.
 
 \bitmapfigure[max width=6.0cm]{img/2019/beijing_liberal/q8_fig1.png}
 
@@ -202,8 +202,18 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item \(b=7\)，\(c=5\).
-\item \(\sin(B+C)=\dfrac{3\sqrt3}{14}\).
+\item 由余弦定理，\(b^2=a^2+c^2-2ac\cos B\). 将 \(a=3\)，\(b=c+2\)，\(\cos B=-\dfrac12\) 代入，得
+\[
+(c+2)^2=3^2+c^2-2\times3\times c\times\left(-\frac12\right)
+\]
+整理得 \(c^2+4c+4=c^2+3c+9\)，解得 \(c=5\). 从而 \(b=c+2=7\).
+
+\item 因为 \(\cos B=-\dfrac12\) 且 \(B\in(0,\pi)\)，所以 \(B=\dfrac{2\pi}{3}\)，\(\sin B=\dfrac{\sqrt3}{2}\).
+在 \(\triangle ABC\) 中，由正弦定理 \(\dfrac{a}{\sin A}=\dfrac{b}{\sin B}\)，得
+\[
+\sin A=\frac{a\sin B}{b}=\frac{3\times\frac{\sqrt3}{2}}{7}=\frac{3\sqrt3}{14}
+\]
+又 \(A+B+C=\pi\)，所以 \(\sin(B+C)=\sin(\pi-A)=\sin A=\dfrac{3\sqrt3}{14}\).
 \end{enumerate}
 \end{solution}
 
@@ -219,8 +229,20 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item \(a_n=2n-12\).
-\item \(S_n\) 的最小值为 \(S_6=-30\).
+\item 设等差数列 \(\{a_n\}\) 的公差为 \(d\). 因为 \(a_1=-10\)，所以 \(a_2=-10+d\)，\(a_3=-10+2d\)，\(a_4=-10+3d\).
+由 \(a_2+10\)，\(a_3+8\)，\(a_4+6\) 成等比数列，得
+\[
+(a_3+8)^2=(a_2+10)(a_4+6)
+\]
+即 \((2d-2)^2=d(3d-4)\). 展开整理得 \(d^2-4d+4=0\)，即 \((d-2)^2=0\)，解得 \(d=2\).
+故 \(\{a_n\}\) 的通项公式为 \(a_n=-10+2(n-1)=2n-12\).
+
+\item 由（1）知 \(a_n=2n-12\). 当 \(n\le5\) 时，\(a_n<0\)；当 \(n=6\) 时，\(a_6=0\)；当 \(n\ge7\) 时，\(a_n>0\).
+因此数列的前 \(n\) 项和 \(S_n\) 在 \(n=5\) 或 \(n=6\) 时取得最小值.
+最小值为
+\[
+S_6=\frac{6(a_1+a_6)}{2}=\frac{6\times(-10+0)}{2}=-30
+\]
 \end{enumerate}
 \end{solution}
 
@@ -250,9 +272,19 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 估计该校学生中上个月 \(A\)，\(B\) 两种支付方式都使用的人数为 \(400\) 人.
-\item 该学生上个月支付金额大于 \(2\,000\) 元的概率为 \(\dfrac1{25}\).
-\item 答案不唯一：可以认为有变化，也可以认为无法确定是否变化.
+\item 在抽取的 \(100\) 人样本中，两种支付方式都不使用的有 \(5\) 人，仅使用 \(A\) 的有 \(27+3=30\) 人，仅使用 \(B\) 的有 \(24+1=25\) 人. 因此样本中两种支付方式都使用的学生人数为
+\[
+100-5-30-25=40\text{ 人}
+\]
+样本中两种支付方式都使用的比例为 \(\dfrac{40}{100}=0.4\). 由此估计全校 \(1\,000\) 名学生中两种支付方式都使用的人数为 \(1\,000\times0.4=400\) 人.
+
+\item 在样本中仅使用 \(B\) 的学生共有 \(24+1=25\) 人，其中支付金额大于 \(2\,000\) 元的有 \(1\) 人.
+因此从样本仅使用 \(B\) 的学生中随机抽取 \(1\) 人，该学生上个月支付金额大于 \(2\,000\) 元的概率为
+\[
+P=\frac{1}{25}
+\]
+
+\item 能认为有变化. 理由：由（2）知，上个月样本仅使用 \(B\) 的学生中支付金额大于 \(2\,000\) 元的概率为 \(\dfrac{1}{25}=0.04\)，这是小概率事件. 在本月抽查 \(1\) 人即出现支付金额大于 \(2\,000\) 元，根据小概率事件在一次试验中几乎不可能发生的原理，有充分理由认为本月仅使用 \(B\) 的学生中支付金额大于 \(2\,000\) 元的人数发生了变化（增加）.（注：若说明单次抽样具有随机偶然性，认为不能确定有变化，言之成理亦可）
 \end{enumerate}
 \end{solution}
 
@@ -272,9 +304,25 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 证明 \(BD\perp\) 平面 \(PAC\).
-\item 证明平面 \(PAB\perp\) 平面 \(PAE\).
-\item 存在点 \(F\)，且 \(F\) 为棱 \(PB\) 的中点，使得 \(CF\parallel\) 平面 \(PAE\).
+\item 因为底面 \(ABCD\) 为菱形，所以 \(BD\perp AC\).
+又因为 \(PA\perp\) 平面 \(ABCD\)，且 \(BD\subset\) 平面 \(ABCD\)，所以 \(PA\perp BD\)，即 \(BD\perp PA\).
+又 \(AC\cap PA=A\)，且 \(AC\)，\(PA\subset\) 平面 \(PAC\)，所以 \(BD\perp\) 平面 \(PAC\).
+
+\item 在菱形 \(ABCD\) 中，\(AD=CD\)，\(\angle ADC=\angle ABC=60^\circ\)，所以 \(\triangle ACD\) 为等边三角形.
+因为 \(E\) 为 \(CD\) 的中点，所以 \(AE\perp CD\).
+又 \(AB\parallel CD\)，所以 \(AE\perp AB\).
+因为 \(PA\perp\) 平面 \(ABCD\)，且 \(AE\subset\) 平面 \(ABCD\)，所以 \(PA\perp AE\)，即 \(AE\perp PA\).
+又 \(AB\cap PA=A\)，且 \(AB\)，\(PA\subset\) 平面 \(PAB\)，所以 \(AE\perp\) 平面 \(PAB\).
+因为 \(AE\subset\) 平面 \(PAE\)，所以平面 \(PAB\perp\) 平面 \(PAE\).
+
+\item 存在点 \(F\)，当 \(F\) 为棱 \(PB\) 的中点时，\(CF\parallel\) 平面 \(PAE\). 理由如下：
+连接 \(AC\)，设 \(AC\cap BD=O\)，连接 \(OE\)，\(OF\).
+在 \(\triangle BCD\) 中，\(O\) 为 \(BD\) 的中点，\(E\) 为 \(CD\) 的中点，所以 \(OE\parallel BC\) 且 \(OE=\dfrac12BC\).
+因为 \(ABCD\) 为菱形，所以 \(AD\parallel BC\) 且 \(AD=BC\)，故 \(OE\parallel AD\) 且 \(OE=\dfrac12AD\).
+取 \(PA\) 的中点为 \(M\)，连接 \(FM\)，\(ME\).
+在 \(\triangle PAB\) 中，\(F\)，\(M\) 分别为 \(PB\)，\(PA\) 的中点，所以 \(FM\parallel AB\) 且 \(FM=\dfrac12AB\).
+因为 \(AB\parallel CD\)，所以 \(FM\parallel CD\). 又 \(CE=\dfrac12CD\)，故 \(FM\parallel CE\) 且 \(FM=CE\)，因此四边形 \(CFME\) 为平行四边形，从而 \(CF\parallel ME\).
+因为 \(ME\subset\) 平面 \(PAE\)，且 \(CF\not\subset\) 平面 \(PAE\)，所以 \(CF\parallel\) 平面 \(PAE\).
 \end{enumerate}
 \end{solution}
 
@@ -290,8 +338,34 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 椭圆 \(C\) 的方程为 \(\dfrac{x^2}{2}+y^2=1\).
-\item 直线 \(l\) 经过定点 \((0,0)\).
+\item 因为椭圆 \(C\) 的右焦点为 \((1,0)\)，所以 \(c=1\).
+又椭圆经过点 \(A(0,1)\)，代入方程得 \(\dfrac{0^2}{a^2}+\dfrac{1^2}{b^2}=1\)，解得 \(b^2=1\).
+由 \(a^2=b^2+c^2=1+1=2\)，得椭圆 \(C\) 的方程为 \(\dfrac{x^2}{2}+y^2=1\).
+
+\item 设 \(P(x_1,y_1)\)，\(Q(x_2,y_2)\). 将 \(y=kx+t\) 代入 \(\dfrac{x^2}{2}+y^2=1\)，得
+\[
+(1+2k^2)x^2+4ktx+2t^2-2=0
+\]
+判别式 \(\Delta=(4kt)^2-4(1+2k^2)(2t^2-2)=8(1+2k^2-t^2)>0\).
+由韦达定理，\(x_1+x_2=-\dfrac{4kt}{1+2k^2}\)，\(x_1x_2=\dfrac{2(t^2-1)}{1+2k^2}\).
+直线 \(AP\) 过点 \(A(0,1)\) 与 \(P(x_1,y_1)\)，其方程为 \(y-1=\dfrac{y_1-1}{x_1}x\). 令 \(y=0\)，得点 \(M\) 的横坐标为 \(x_M=\dfrac{x_1}{1-y_1}\). 同理，点 \(N\) 的横坐标为 \(x_N=\dfrac{x_2}{1-y_2}\).
+从而 \(|OM|\cdot|ON|=|x_M x_N|=\left|\dfrac{x_1x_2}{(y_1-1)(y_2-1)}\right|\).
+因为 \(P\)，\(Q\) 在直线 \(y=kx+t\) 上，所以
+\[
+(y_1-1)(y_2-1)=(kx_1+t-1)(kx_2+t-1)=k^2x_1x_2+k(t-1)(x_1+x_2)+(t-1)^2
+\]
+代入韦达定理化简得
+\[
+(y_1-1)(y_2-1)=\frac{(t-1)^2}{1+2k^2}
+\]
+因此
+\[
+\frac{x_1x_2}{(y_1-1)(y_2-1)}=\frac{\frac{2(t^2-1)}{1+2k^2}}{\frac{(t-1)^2}{1+2k^2}}=\frac{2(t+1)}{t-1}
+\]
+由 \(|OM|\cdot|ON|=2\)，得 \(\left|\dfrac{2(t+1)}{t-1}\right|=2\)，即 \(\left|\dfrac{t+1}{t-1}\right|=1\).
+因为 \(t\ne\pm1\)，所以 \(t+1=-(t-1)\)，解得 \(t=0\).
+此时 \(\Delta=8(1+2k^2)>0\) 恒成立，直线 \(l\) 的方程为 \(y=kx\)，恒过原点 \((0,0)\).
+因此直线 \(l\) 经过定点 \((0,0)\).
 \end{enumerate}
 \end{solution}
 
@@ -309,8 +383,26 @@ B
 
 \begin{solution}
 \begin{enumerate}
-\item 切线方程为 \(y=x\) 或 \(y=x-\dfrac{64}{27}\).
-\item 当 \(x\in\left[-2,4\right]\) 时，\(x-6\le f(x)\le x\).
-\item 当 \(M(a)\) 最小时，\(a=-3\).
+\item 函数的导数为 \(f'(x)=\dfrac34x^2-2x+1\). 令 \(f'(x)=1\)，得 \(\dfrac34x^2-2x=0\)，解得 \(x_1=0\)，\(x_2=\dfrac83\).
+当 \(x=0\) 时，\(f(0)=0\)，切线方程为 \(y=x\)；
+当 \(x=\dfrac83\) 时，\(f\left(\dfrac83\right)=\dfrac{8}{27}\)，切线方程为 \(y-\dfrac{8}{27}=x-\dfrac83\)，即 \(y=x-\dfrac{64}{27}\).
+所以曲线 \(y=f(x)\) 的斜率为 \(1\) 的切线方程为 \(y=x\) 或 \(y=x-\dfrac{64}{27}\).
+
+\item 设 \(h(x)=f(x)-x=\dfrac14x^3-x^2=\dfrac14x^2(x-4)\).
+当 \(x\in[-2,4]\) 时，\(x^2\ge0\)，\(x-4\le0\)，所以 \(h(x)\le0\)，即 \(f(x)\le x\).
+又设 \(g(x)=f(x)-(x-6)=\dfrac14x^3-x^2+6\)，其导数为 \(g'(x)=\dfrac34x^2-2x=x\left(\dfrac34x-2\right)\).
+当 \(x\in[-2,0)\) 时 \(g'(x)>0\)，\(g(x)\) 单调递增；当 \(x\in\left(0,\dfrac83\right)\) 时 \(g'(x)<0\)，\(g(x)\) 单调递减；当 \(x\in\left(\dfrac83,4\right]\) 时 \(g'(x)>0\)，\(g(x)\) 单调递增.
+因为 \(g(-2)=0\)，\(g\left(\dfrac83\right)=\dfrac{98}{27}>0\)，所以当 \(x\in[-2,4]\) 时 \(g(x)\ge g(-2)=0\)，即 \(f(x)\ge x-6\).
+综上，当 \(x\in[-2,4]\) 时，\(x-6\le f(x)\le x\).
+
+\item 设 \(h(x)=f(x)-x=\dfrac14x^3-x^2\)，则 \(F(x)=|h(x)-a|\).
+由（2）知，当 \(x\in[-2,4]\) 时，\(h'(x)=x\left(\dfrac34x-2\right)\)，极值点为 \(x=0\)，\(x=\dfrac83\).
+计算端点与极值点处的函数值：\(h(-2)=-6\)，\(h(0)=0\)，\(h\left(\dfrac83\right)=-\dfrac{64}{27}\)，\(h(4)=0\).
+所以 \(h(x)\) 在 \([-2,4]\) 上的最大值为 \(0\)，最小值为 \(-6\)，即对任意 \(x\in[-2,4]\)，有 \(-6\le h(x)\le0\).
+当 \(a=-3\) 时，\(-3\le h(x)+3\le3\)，故 \(M(-3)=\max_{x\in[-2,4]}|h(x)+3|=3\).
+若 \(a>-3\)，则取 \(x=-2\)，有 \(F(-2)=|-6-a|=a+6>3\)；
+若 \(a<-3\)，则取 \(x=0\)，有 \(F(0)=|0-a|=-a>3\).
+所以当且仅当 \(a=-3\) 时，\(M(a)\) 取得最小值 \(3\).
+故当 \(M(a)\) 最小时，\(a=-3\).
 \end{enumerate}
 \end{solution}

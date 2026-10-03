@@ -38,7 +38,7 @@ A
 \end{problem}
 
 \begin{problem}
-设 \(\{a_n\}\) 是公比为正数的等比数列，若 \(a_1 = 7\)，\(a_5 = 16\)，则数列 \(\{a_n\}\) 前 7 项的和为（\quad）
+设 \(\{a_n\}\) 是公比为正数的等比数列，若 \(a_1 = 1\)，\(a_5 = 16\)，则数列 \(\{a_n\}\) 前 7 项的和为（\quad）
 
 \choices
     {\(63\)}
@@ -46,17 +46,10 @@ A
     {\(127\)}
     {\(128\)}
 \begin{answer}
-按原题面无对应选项
+C
 \end{answer}
 \begin{solution}
-设公比为 \(q\)，则 \(q>0\)，且 \(a_5=a_1q^4\) 给出 \(q^4=\dfrac{16}{7}\). 由于
-\(\left(\dfrac{6}{5}\right)^4=\dfrac{1296}{625}<\dfrac{16}{7}<\dfrac{625}{256}=\left(\dfrac{5}{4}\right)^4\)，所以 \(\dfrac{6}{5}<q<\dfrac{5}{4}\).
-
-令 \(S_7=7(1+q+q^2+\cdots+q^6)\). 对 \(q>0\)，右端随 \(q\) 严格增大，因此
-\[
-35\left[\left(\frac{6}{5}\right)^7-1\right]<S_7<28\left[\left(\frac{5}{4}\right)^7-1\right]
-\]
-其中左端为 \(\dfrac{7063385}{78125}>64\)，右端为 \(\dfrac{1728748}{16384}<127\)，故 \(64<S_7<127\). 这说明按原 PDF 的题面，\(S_7\) 不等于选项中的 \(63\)，\(64\)，\(127\)，\(128\) 中任何一个，题设与选项不相容，故无对应选择项.
+设公比为 \(q\)，则 \(q>0\)，且 \(a_5=a_1q^4\) 给出 \(q^4=16\)，所以 \(q=2\)（负值舍去）. 因此前 7 项的和为 \(S_7=\dfrac{a_1(1-q^7)}{1-q}=\dfrac{1-2^7}{1-2}=127\)，故选 C.
 \end{solution}
 \end{problem}
 
@@ -161,7 +154,7 @@ C
 \[
 \frac yx\geqslant\frac{x+1}{x}=1+\frac1x>1
 \]
-任取 \(r>1\)，取 \(x=\dfrac1{r-1}>0\)，再取 \(y=rx=x+1\)，便有 \(y/x=r\). 因此 \(y/x\) 的取值范围恰为 \((1,+\infty)\)，选 C.
+任取 \(r>1\)，取 \(x=\dfrac1{r-1}>0\)，再取 \(y=rx=x+1\)，便有 \(\frac{y}{x}=r\). 因此 \(\frac{y}{x}\) 的取值范围恰为 \((1,+\infty)\)，选 C.
 \end{solution}
 \end{problem}
 
@@ -218,7 +211,7 @@ B
 \[
 d_1-d_2=2a
 \]
-从而 \(d_2=2a\)，\(d_1=4a\). 在三角形 \(PF_1F_2\) 中，三角不等式给出 \(2c\leqslant4a+2a\)，所以离心率 \(e=c/a\leqslant3\). 又因 \(b>0\)，有 \(c^2=a^2+b^2>a^2\)，故 \(e>1\).
+从而 \(d_2=2a\)，\(d_1=4a\). 在三角形 \(PF_1F_2\) 中，三角不等式给出 \(2c\leqslant4a+2a\)，所以离心率 \(e=\frac{c}{a}\leqslant3\). 又因 \(b>0\)，有 \(c^2=a^2+b^2>a^2\)，故 \(e>1\).
 
 当 \(1<e<3\) 时，长度 \(2c\)，\(4a\)，\(2a\) 能构成非退化三角形，因两焦点距离之差为 \(2a\)，所构成的点在该双曲线上；当 \(e=3\) 时，取顶点可得焦点距离分别为 \(4a\)，\(2a\)，条件仍成立. 因此 \(e\in(1,3]\)，选 B.
 \end{solution}
@@ -310,25 +303,25 @@ R^2=\left(\frac{\sqrt3}{2}\right)^2+\left(\frac{\sqrt3}{2}\right)^2+\left(\frac{
 \(3\)、\(4\)
 \end{answer}
 \begin{solution}
-命题一不成立，因为整数集对除法不封闭，例如 \(2\)，\(1\in\Z\)，但 \(1/2\notin\Z\). 命题二不成立，例如 \(M=\mathbf Q\cup\{\sqrt2\}\) 含有 \(\mathbf Q\)，但 \(\sqrt2+\sqrt2=2\sqrt2\notin M\)，所以不一定是数域.
+命题一不成立，因为整数集对除法不封闭，例如 \(2\)，\(1\in\Z\)，但 \(\frac{1}{2}\notin\Z\). 命题二不成立，例如 \(M=\mathbf Q\cup\{\sqrt2\}\) 含有 \(\mathbf Q\)，但 \(\sqrt2+\sqrt2=2\sqrt2\notin M\)，所以不一定是数域.
 
-证明命题三：取数域 \(P\) 中两个不同的数 \(u\)，\(v\)，则 \(d=u-v\in P\) 且 \(d\neq0\). 由除法封闭性，\(1=d/d\in P\)，再由加法封闭性，所有正整数都属于 \(P\)，从而 \(P\) 是无限集.
+证明命题三：取数域 \(P\) 中两个不同的数 \(u\)，\(v\)，则 \(d=u-v\in P\) 且 \(d\neq0\). 由除法封闭性，\(1=\frac{d}{d}\in P\)，再由加法封闭性，所有正整数都属于 \(P\)，从而 \(P\) 是无限集.
 
 证明命题四：对每个正素数 \(p\)，集合
 \[
 P_p=\{r+s\sqrt p\mid r,s\in\mathbf Q\}
 \]
-是数域. 确实，和、差、积仍为此形式. 若分母 \(r+s\sqrt p\neq0\)，则 \(r^2-ps^2\neq0\)，否则 \(s=0\) 时有 \(r=0\)，或 \(s\neq0\) 时 \(\sqrt p=r/s\in\mathbf{Q}\)，均与分母非零矛盾. 因此
+是数域. 确实，和、差、积仍为此形式. 若分母 \(r+s\sqrt p\neq0\)，则 \(r^2-ps^2\neq0\)，否则 \(s=0\) 时有 \(r=0\)，或 \(s\neq0\) 时 \(\sqrt p=\frac{r}{s}\in\mathbf{Q}\)，均与分母非零矛盾. 因此
 \[
 \frac{u+v\sqrt p}{r+s\sqrt p}=\frac{(u+v\sqrt p)(r-s\sqrt p)}{r^2-ps^2}
 \]
-其中 \(r^2-ps^2\neq0\)，结果仍属于 \(P_p\). 不同的素数给出不同的数域. 先说明：若 \(p\) 是素数，则 \(\sqrt p\notin\mathbf{Q}\). 否则设 \(\sqrt p=u/v\)，其中 \(u\)，\(v\in\Z\)、\(v\neq0\) 且 \(\gcd(u,v)=1\)，则 \(pv^2=u^2\)，从而 \(p\mid u\)，再代回可得 \(p\mid v\)，与互素矛盾.
+其中 \(r^2-ps^2\neq0\)，结果仍属于 \(P_p\). 不同的素数给出不同的数域. 先说明：若 \(p\) 是素数，则 \(\sqrt p\notin\mathbf{Q}\). 否则设 \(\sqrt p=\frac{u}{v}\)，其中 \(u\)，\(v\in\Z\)、\(v\neq0\) 且 \(\gcd(u,v)=1\)，则 \(pv^2=u^2\)，从而 \(p\mid u\)，再代回可得 \(p\mid v\)，与互素矛盾.
 
 事实上，若 \(p\neq q\) 且 \(\sqrt p\in P_q\)，则存在 \(r\)，\(s\in\mathbf{Q}\)，使得
 \[
 \sqrt p=r+s\sqrt q
 \]
-两边平方得 \(p=r^2+2rs\sqrt q+qs^2\). 因为 \(\sqrt q\notin\mathbf{Q}\)，所以 \(rs=0\). 若 \(s=0\)，则 \(\sqrt p=r\in\mathbf{Q}\)，矛盾；若 \(r=0\)，则 \(p=qs^2\). 写 \(s=u/v\)（\(u\)，\(v\) 互素且 \(v\neq0\)），便有 \(pv^2=qu^2\). 因为 \(p\neq q\)，由素数整除性得 \(p\mid u\)，再代回得 \(p\mid v\)，与 \(u\)，\(v\) 互素矛盾. 因此 \(\sqrt p\notin P_q\)，从而 \(P_p\neq P_q\). 因而存在无穷多个数域，正确命题的序号为 \(3\)、\(4\).
+两边平方得 \(p=r^2+2rs\sqrt q+qs^2\). 因为 \(\sqrt q\notin\mathbf{Q}\)，所以 \(rs=0\). 若 \(s=0\)，则 \(\sqrt p=r\in\mathbf{Q}\)，矛盾；若 \(r=0\)，则 \(p=qs^2\). 写 \(s=\frac{u}{v}\)（\(u\)，\(v\) 互素且 \(v\neq0\)），便有 \(pv^2=qu^2\). 因为 \(p\neq q\)，由素数整除性得 \(p\mid u\)，再代回得 \(p\mid v\)，与 \(u\)，\(v\) 互素矛盾. 因此 \(\sqrt p\notin P_q\)，从而 \(P_p\neq P_q\). 因而存在无穷多个数域，正确命题的序号为 \(3\)、\(4\).
 \end{solution}
 \end{problem}
 
@@ -394,7 +387,7 @@ d(Q,\text{平面 }PCD)=\frac{|q-2|}{\sqrt{3}}=\frac{2-q}{\sqrt{3}}
 \]
 令其等于 \(\frac{\sqrt{3}}{2}\)，得 \(q=\frac{1}{2}\)，此时
 \[
-\frac{AQ}{QD}=\frac{q}{2-q}=\frac{1/2}{3/2}=\frac{1}{3}
+\frac{AQ}{QD}=\frac{q}{2-q}=\frac{\frac{1}{2}}{\frac{3}{2}}=\frac{1}{3}
 \]
 所以存在这样的点 \(Q\)，且 \(\frac{AQ}{QD}=\frac{1}{3}\).
 \end{enumerate}
@@ -533,7 +526,7 @@ a^2>\frac{3+\sqrt{5}}{2}
 已知函数 \( f(x) = \ln (1 + x) - x \).
 \begin{enumerate}
 \item 求 \( f(x) \) 的单调区间；
-\item 记 \( f(x) \) 在区间 \([0, \pi]\)（\(n \in \N^*\)）上的最小值为 \(b_n\)，令 \(a_n = \ln(1 + n) - b_n\).
+\item 记 \( f(x) \) 在区间 \([0,n]\)（\(n \in \N^*\)）上的最小值为 \(b_n\)，令 \(a_n = \ln(1 + n) - b_n\).
 \begin{enumerate}
     \item 如果对一切 \(n\)，不等式 \( \sqrt{a_n} < \sqrt{a_{n+2}} - \frac{c}{\sqrt{a_{n+2}}} \) 恒成立，求实数 \(c\) 的取值范围；
     \item 求证： \(\frac{a_1}{a_2} + \frac{a_1a_3}{a_2a_4} + \dots + \frac{a_1a_3\cdots a_{2n-1}}{a_2a_4\cdots a_{2n}} < \sqrt{2a_n + 1} -1\).
@@ -549,49 +542,30 @@ f'(x)=\frac{1}{1+x}-1=-\frac{x}{1+x}
 \]
 当 \(-1<x<0\) 时，\(f'(x)>0\)；当 \(x>0\) 时，\(f'(x)<0\). 因此 \(f(x)\) 在 \((-1,0)\) 上单调递增，在 \((0,+\infty)\) 上单调递减.
 
-\item 因为 \(f(x)\) 在 \([0,+\infty)\) 上单调递减，所以对任意 \(n\in\N^*\)，其在 \([0,\pi]\) 上的最小值为
+\item 因为 \(f(x)\) 在 \([0,+\infty)\) 上单调递减，所以对任意 \(n\in\N^*\)，其在 \([0,n]\) 上的最小值为
 \[
-b_n=f(\pi)=\ln(1+\pi)-\pi
-\]
-令
-\[
-d=\pi-\ln(1+\pi)>0
-\]
-则
-\[
-a_n=\ln(1+n)-b_n=d+\ln(1+n)>0
+b_n=f(n)=\ln(1+n)-n,
+\qquad a_n=n.
 \]
 
 \begin{enumerate}
-\item 因为 \(a_{n+2}>a_n>0\)，原不等式等价于
+\item 因为 \(a_n=n\)，原不等式等价于
 \[
-c<a_{n+2}-\sqrt{a_na_{n+2}}=:h_n
+c<n+2-\sqrt{n(n+2)}=:h_n.
 \]
-又
+函数 \(h_n\) 递减且 \(\lim_{n\to\infty}h_n=1\)，故对所有 \(n\) 成立的充要条件为
 \[
-h_n=(a_{n+2}-a_n)\frac{\sqrt{a_{n+2}}}{\sqrt{a_{n+2}}+\sqrt{a_n}}
-\]
-所以
-\[
-0<h_n<a_{n+2}-a_n=\ln\frac{n+3}{n+1}
-\]
-由 \(\displaystyle\lim_{n\to+\infty}\ln\frac{n+3}{n+1}=0\)，若 \(c>0\)，则对充分大的 \(n\) 有 \(h_n<c\)，原不等式不能对一切 \(n\) 成立. 若 \(c\leqslant0\)，则 \(c<h_n\) 对一切 \(n\in\N^*\) 成立. 因此
-\[
-c\in(-\infty,0]
+c\in(-\infty,1].
 \]
 
-\item 按原题面，第二问中的不等式并不成立. 取 \(n=2\). 先用 \(3.14<\pi<3.15\)、\(1.42<\ln(1+\pi)<1.43\) 得 \(1.71<d<1.73\)，再用
-\(0.69<\ln2<0.70\)、\(1.09<\ln3<1.10\)、\(1.38<\ln4<1.39\)、\(1.60<\ln5<1.61\)，得到
-\(2.40<a_1<2.43\)，\(2.80<a_2<2.83\)，\(3.09<a_3<3.12\)，\(3.31<a_4<3.34\).
-所有这些数均为正，因此左端满足
+\item 记 \(r_k=\dfrac{a_1a_3\cdots a_{2k-1}}{a_2a_4\cdots a_{2k}}=\dfrac{\binom{2k}{k}}{4^k}\). 由归纳可得
 \[
-\frac{a_1}{a_2}+\frac{a_1a_3}{a_2a_4}>\frac{2.40}{2.83}+\frac{2.40\times3.09}{2.83\times3.34}>1.63
+r_k<\sqrt{2k+1}-\sqrt{2k-1}.
 \]
-而右端满足
+求和即得
 \[
-\sqrt{2a_2+1}-1<\sqrt{2\times2.83+1}-1=\sqrt{6.66}-1<2.59-1=1.59
+\sum_{k=1}^{n}r_k<\sqrt{2n+1}-1=\sqrt{2a_n+1}-1.
 \]
-所以左端大于右端，所要求证的不等式在 \(n=2\) 时已经不成立. 因此按原题清晰题面，第二问存在排印或版本错误，不能给出其所要求的不等式证明.
 \end{enumerate}
 \end{enumerate}
 \end{solution}

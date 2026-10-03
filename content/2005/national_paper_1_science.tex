@@ -49,27 +49,21 @@
 \end{problem}
 
 \begin{problem}
-已知直线 \(l\) 过点 \((-2,0)\)，当直线 \(l\) 与圆 \(y=1-\sqrt{1-x^{2}}\)（\(-1\leqslant x\leqslant1\)）有两个交点时，其斜率 \(k\) 的取值范围是（\quad）
+已知直线 \(l\) 过点 \((-2,0)\)，当直线 \(l\) 与圆 \(x^{2}+y^{2}=2x\) 有两个交点时，其斜率 \(k\) 的取值范围是（\quad）
 
 \choices
     {\((-2\sqrt{2}, 2\sqrt{2})\)}
     {\((-\sqrt{2}, \sqrt{2})\)}
-    {\(\left(\frac{\sqrt{2}}{4}, \frac{\sqrt{2}}{4}\right)\)}
+    {\(\left(-\frac{\sqrt{2}}{4}, \frac{\sqrt{2}}{4}\right)\)}
     {\(\left(-\frac{1}{8}, \frac{1}{8}\right)\)}
-\answer{\(0<k\leqslant\frac{1}{3}\)（题面与选项不一致）}
+\answer{C}
 
 \begin{solution}
-直线 \(l\) 的方程为 \(y=k(x+2)\). 题面所给曲线的函数值满足 \(0\leqslant y\leqslant1\)，而 \(-1\leqslant x\leqslant1\) 时 \(x+2>0\)，所以若有两个交点，必有 \(k>0\). 令
-\(g(x)=1-\sqrt{1-x^{2}}-k(x+2)\)，\(-1\leqslant x\leqslant1\).
-曲线与直线的交点正好是 \(g(x)=0\) 的根. 在 \(-1<x<1\) 内，
+直线 \(l\) 的方程为 \(y=k(x+2)\)，即 \(kx-y+2k=0\). 圆 \(x^{2}+y^{2}=2x\) 即 \((x-1)^{2}+y^{2}=1\)，圆心为 \((1,0)\)，半径为 \(1\). 直线与圆有两个交点，当且仅当圆心到直线的距离小于半径，即
 \[
-g''(x)=\frac{1}{(1-x^{2})^{3/2}}>0
+\frac{\left|k\cdot1-0+2k\right|}{\sqrt{k^{2}+1}}=\frac{\left|3k\right|}{\sqrt{k^{2}+1}}<1.
 \]
-所以 \(g\) 严格凸，因而至多有两个零点. 又
-\(g(-1)=1-k\)，\(g(0)=-2k\)，\(g(1)=1-3k\).
-当 \(0<k<\frac13\) 时，\(g(-1)>0\)、\(g(0)<0\)、\(g(1)>0\)，由介值定理在 \((-1,0)\) 和 \((0,1)\) 各有一个零点，恰有两个交点. 当 \(k=\frac13\) 时，\(g(-1)>0\)、\(g(0)<0\)、\(g(1)=0\)，交点为一个内点和端点 \((1,1)\)，仍有两个不同交点. 当 \(\frac13<k<1\) 时，\(g(0)<0\)、\(g(1)<0\)，严格凸性说明 \((0,1)\) 内无零点，左侧至多一个交点；当 \(k\geqslant1\) 时，\(g(-1)\leqslant0\)、\(g(1)<0\)，也不可能有两个交点. \(k=0\) 或 \(k<0\) 同样不满足两个交点条件.
-
-因此，按原试卷打印的曲线，斜率范围为 \(0<k\leqslant\frac13\)，与题中四个选项均不一致；该题的原试卷题面、选项与公开标准版本存在冲突，故按题面不能对应合法选项.
+两边平方得 \(9k^{2}<k^{2}+1\)，即 \(8k^{2}<1\)，所以 \(\left|k\right|<\frac{1}{2\sqrt{2}}=\frac{\sqrt{2}}{4}\)，即 \(k\in\left(-\frac{\sqrt{2}}{4},\frac{\sqrt{2}}{4}\right)\). 故选 C.
 \end{solution}
 \end{problem}
 
@@ -135,19 +129,29 @@ g''(x)=\frac{1}{(1-x^{2})^{3/2}}>0
 \end{problem}
 
 \begin{problem}
-设 \(b > 0\)，二次函数 \(y = ax^{2} + bx + a^{2} - 1\) 的图象为下列之一，则 \(a\) 的值为（\quad）
+设 \(b > 0\)，二次函数 \(y = ax^{2} + bx + a^{2} - 1\) 的图象为下列之一：
+
+\bitmapfigure[max width=0.42\linewidth]{img/2005/national_paper_1_science/q8_optA.png}
+
+\bitmapfigure[max width=0.42\linewidth]{img/2005/national_paper_1_science/q8_optB.png}
+
+\bitmapfigure[max width=0.42\linewidth]{img/2005/national_paper_1_science/q8_optC.png}
+
+\bitmapfigure[max width=0.42\linewidth]{img/2005/national_paper_1_science/q8_optD.png}
+
+则 \(a\) 的值为（\quad）
 
 \choices
-    {\choicebitmap[width=0.15\paperwidth]{img/2005/national_paper_1_science/q8_optA.png}}
-    {\choicebitmap[width=0.15\paperwidth]{img/2005/national_paper_1_science/q8_optB.png}}
-    {\choicebitmap[width=0.15\paperwidth]{img/2005/national_paper_1_science/q8_optC.png}}
-    {\choicebitmap[width=0.15\paperwidth]{img/2005/national_paper_1_science/q8_optD.png}}
-\answer{C}
+    {\(1\)}
+    {\(-1\)}
+    {\(\frac{-1-\sqrt{5}}{2}\)}
+    {\(\frac{-1+\sqrt{5}}{2}\)}
+\answer{B}
 
 \begin{solution}
 抛物线与 \(y\) 轴的交点纵坐标为 \(a^{2}-1\)，开口方向由 \(a\) 的符号决定，对称轴为 \(x=-\frac{b}{2a}\). 题图中前两幅图的对称轴为 \(y\) 轴，与 \(b>0\) 矛盾；第四幅图经过原点且在原点处向下穿过 \(x\) 轴，因而其一次项系数应为负，也与 \(b>0\) 矛盾.
 
-第三幅图开口向下且经过原点，所以 \(a^{2}-1=0\) 且 \(a<0\)，从而 \(a=-1\). 这时图象在原点处的斜率为 \(b>0\)，与第三幅图相符，故选 C.
+第三幅图开口向下且经过原点，所以 \(a^{2}-1=0\) 且 \(a<0\)，从而 \(a=-1\). 这时图象在原点处的斜率为 \(b>0\)，与第三幅图相符，故选 B.
 \end{solution}
 \end{problem}
 
@@ -185,7 +189,7 @@ y\leqslant-3|x|+1
 当 \(x\leqslant0\) 时，上界为 \(y=3x+1\)，下界为 \(y=x-1\)，两直线交于 \((-1,-2)\)，并在 \(x=0\) 处分别取 \(1\) 和 \(-1\). 这部分区域是底为 \(1\)、两端高为 \(0\) 和 \(2\) 的梯形，面积为 \(\frac{0+2}{2}\cdot1=1\).
 
 当 \(x\geqslant0\) 时，上界为 \(y=-3x+1\)，与下界 \(y=x-1\) 交于 \((\frac12,-\frac12)\). 这部分区域与左侧合并后应直接按分段积分计算：
-\(\displaystyle S=\int_{-1}^{0}\bigl[(3x+1)-(x-1)\bigr]\,\mathrm dx+\int_{0}^{1/2}\bigl[(-3x+1)-(x-1)\bigr]\,\mathrm dx=1+\frac12=\frac32\).
+\(\displaystyle S=\int_{-1}^{0}\bigl[(3x+1)-(x-1)\bigr]\,\mathrm dx+\int_{0}^{\frac{1}{2}}\bigl[(-3x+1)-(x-1)\bigr]\,\mathrm dx=1+\frac12=\frac32\).
 因此平面区域面积为 \(\frac32\)，故选 B.
 \end{solution}
 \end{problem}
@@ -394,7 +398,7 @@ S_n>T_n,&-\dfrac{1}{2}<q<2.
 
 \begin{solution}
 一个坑内的 \(3\) 粒种子都不发芽的概率为 \(\left(1-0.5\right)^3=\dfrac{1}{8}\)，一个坑需要补种的概率为 \(\dfrac{1}{8}\)，不需要补种的概率为 \(\dfrac{7}{8}\). 设需要补种的坑数为 \(Y\)，则 \(Y\) 服从参数为 \(3\)，\(\dfrac{1}{8}\) 的二项分布，且 \(\xi=10Y\). 因此
-\(P(\xi=10k)=\mathrm C_3^k\left(\frac{1}{8}\right)^k\left(\frac{7}{8}\right)^{3-k}\)，\((k=0,1,2,3)\).
+\(P(\xi=10k)=\mathrm C_3^k\left(\frac{1}{8}\right)^k\left(\frac{7}{8}\right)^{3-k}\)，（\(k=0,1,2,3\)）.
 故 \(\xi\) 的分布列为
 \begin{center}
 \begin{tabular}{c|cccc}
@@ -491,7 +495,7 @@ p_1\log_2p_1+p_2\log_2p_2\geqslant-1
 \sum_{j=1}^{2^{n-1}}q_j\log_2q_j\geqslant-(n-1)
 \]
 成立. 对 \(2^n\) 个正数作分组，令
-\(q_j=p_{2j-1}+p_{2j}\)，\(t_j=\frac{p_{2j-1}}{q_j}\)，\(\left(j=1,2,\cdots,2^{n-1}\right)\).
+\(q_j=p_{2j-1}+p_{2j}\)，\(t_j=\frac{p_{2j-1}}{q_j}\)，（\(j=1,2,\cdots,2^{n-1}\)）.
 则 \(0<t_j<1\)，\(\sum q_j=1\)，并且
 \[
 p_{2j-1}\log_2p_{2j-1}+p_{2j}\log_2p_{2j}=q_j\log_2q_j+q_j\left[t_j\log_2t_j+(1-t_j)\log_2(1-t_j)\right]\geqslant q_j\log_2q_j-q_j

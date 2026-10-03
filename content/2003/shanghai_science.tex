@@ -57,11 +57,11 @@
 \end{answer}
 
 \begin{solution}
-设正方形底面边长为 \(a\)，设 \(M\) 是 \(AB\) 的中点，\(O\) 是底面中心. 在过 \(POM\) 且垂直于 \(AB\) 的截面内，二面角为 \(\angle PMO=60^{\circ}\)，且 \(OM=\frac{a}{2}\). 因此 \(\tan60^{\circ}=\frac{PM}{OM}=\frac{h}{a/2}\)，从而棱锥高 \(h=\frac{\sqrt{3}}{2}a\).
+设正方形底面边长为 \(a\)，设 \(M\) 是 \(AB\) 的中点，\(O\) 是底面中心. 在过 \(POM\) 且垂直于 \(AB\) 的截面内，二面角为 \(\angle PMO=60^{\circ}\)，且 \(OM=\frac{a}{2}\). 因此 \(\tan60^{\circ}=\frac{PM}{OM}=\frac{h}{\frac{a}{2}}\)，从而棱锥高 \(h=\frac{\sqrt{3}}{2}a\).
 
 取坐标系使 \(A\left(-\frac{a}{2},-\frac{a}{2},0\right)\)，\(B\left(\frac{a}{2},-\frac{a}{2},0\right)\)，\(C\left(\frac{a}{2},\frac{a}{2},0\right)\)，\(P\left(0,0,\frac{\sqrt{3}}{2}a\right)\). 则 \(\overrightarrow{AP}=\left(\frac{a}{2},\frac{a}{2},\frac{\sqrt{3}}{2}a\right)\)，\(\overrightarrow{BC}=(0,a,0)\). 于是
 \[
-\cos\varphi=\frac{|\overrightarrow{AP}\cdot\overrightarrow{BC}|}{|\overrightarrow{AP}|\,|\overrightarrow{BC}|}=\frac{a^{2}/2}{(\sqrt{5}a/2)a}=\frac{1}{\sqrt{5}}
+\cos\varphi=\frac{|\overrightarrow{AP}\cdot\overrightarrow{BC}|}{|\overrightarrow{AP}|\,|\overrightarrow{BC}|}=\frac{\frac{a^{2}}{2}}{(\sqrt{5}\frac{a}{2})a}=\frac{1}{\sqrt{5}}
 \]
 所以 \(\tan\varphi=2\)，异面直线所成的锐角为 \(\varphi=\arctan2\).
 \end{solution}
@@ -103,7 +103,7 @@
 \end{answer}
 
 \begin{solution}
-取 \(a_1=1\)，\(q=\frac{1}{2}\)，则该等比数列各项为 \(1\)，\(\frac12\)，\(\frac14\)，\(\ldots\)，其各项和为 \(\frac{1}{1-1/2}=2\). 对任意正整数 \(n\)，前 \(n\) 项和为 \(S_n=\frac{1-(1/2)^n}{1-1/2}=2\left(1-\frac{1}{2^n}\right)<2\). 因此这组取值满足题意，答案可以为 \(\left(1,\frac12\right)\).
+取 \(a_1=1\)，\(q=\frac{1}{2}\)，则该等比数列各项为 \(1\)，\(\frac12\)，\(\frac14\)，\(\ldots\)，其各项和为 \(\frac{1}{1-\frac{1}{2}}=2\). 对任意正整数 \(n\)，前 \(n\) 项和为 \(S_n=\frac{1-(\frac{1}{2})^n}{1-\frac{1}{2}}=2\left(1-\frac{1}{2^n}\right)<2\). 因此这组取值满足题意，答案可以为 \(\left(1,\frac12\right)\).
 \end{solution}
 
 \begin{problem}
@@ -252,7 +252,7 @@ B
 
 选项 B 中，\(a=-1\) 时方程 \(g(x)=0\) 等价于 \(f(x)=b\). 由图象可见 \(f(2)>0\)，且函数在 \(x>2\) 的一段区间内连续下降到小于 \(-2\) 的值. 当 \(-2<b<0\) 时，\(b\) 位于这两个函数值之间，由连续性定理可知存在 \(x>2\) 使 \(f(x)=b\)，所以方程有大于 \(2\) 的实根.
 
-选项 C 不成立. 取 \(a=2\)，\(b=2\)，方程变为 \(f(x)=-1\). 由图象可见，直线 \(y=-1\) 分别与左侧下降段、中间上升段和右侧下降段相交，因而方程有三个实根而不是两个. 选项 D 中 \(b<2\) 没有下界，取固定的 \(a\geqslant1\) 并使 \(b\) 足够小，则方程等价于 \(f(x)=-b/a\)，其右端可大于函数图象的最大值，因而没有实根. 因此正确选项为 B.
+选项 C 不成立. 取 \(a=2\)，\(b=2\)，方程变为 \(f(x)=-1\). 由图象可见，直线 \(y=-1\) 分别与左侧下降段、中间上升段和右侧下降段相交，因而方程有三个实根而不是两个. 选项 D 中 \(b<2\) 没有下界，取固定的 \(a\geqslant1\) 并使 \(b\) 足够小，则方程等价于 \(f(x)=-\frac{b}{a}\)，其右端可大于函数图象的最大值，因而没有实根. 因此正确选项为 B.
 \end{solution}
 
 \section{解答题}
@@ -347,11 +347,11 @@ a_1\sum_{k=0}^{n}\mathrm C_n^k(-q)^k
 \begin{enumerate}
 \item 取隧道横截面的对称轴为坐标轴，半个椭圆所在椭圆的方程为
 \[
-\frac{x^2}{(l/2)^2}+\frac{y^2}{h^2}=1
+\frac{x^2}{(\frac{l}{2})^2}+\frac{y^2}{h^2}=1
 \]
 在高度 \(4.5\text{ 米}\) 处，通道两侧边界点的横坐标为 \(x=\pm11\)，所以点 \((11,4.5)\) 在椭圆上. 当 \(h=6\) 时，
 \[
-\frac{121}{(l/2)^2}+\frac{4.5^2}{6^2}=1
+\frac{121}{(\frac{l}{2})^2}+\frac{4.5^2}{6^2}=1
 \]
 即 \(\frac{484}{l^2}+\frac{20.25}{36}=1\). 整理得 \(l^2=\frac{7744}{7}\)，所以 \(l=\frac{88}{\sqrt7}\approx33.3\text{ 米}\).
 \item 由点 \((11,4.5)\) 在椭圆上，任意满足条件的 \(h\) 和 \(l\) 都满足
@@ -366,7 +366,7 @@ lh=\frac{44t}{\sqrt{4t-81}}
 \]
 令 \(F(t)=\frac{t}{\sqrt{4t-81}}\)，则
 \[
-F'(t)=\frac{2t-81}{(4t-81)^{3/2}}
+F'(t)=\frac{2t-81}{(4t-81)^{\frac{3}{2}}}
 \]
 当 \(36\leqslant t<\frac{81}{2}\) 时，\(F'(t)<0\)；当 \(t>\frac{81}{2}\) 时，\(F'(t)>0\). 所以 \(F(t)\) 在 \(t=\frac{81}{2}\) 处取得最小值. 因而
 \(h=\sqrt{\frac{81}{2}}=\frac{9}{\sqrt2}\approx6.4\text{ 米}\)，\(l=\frac{44}{\sqrt2}=22\sqrt2\approx31.1\text{ 米}\).
