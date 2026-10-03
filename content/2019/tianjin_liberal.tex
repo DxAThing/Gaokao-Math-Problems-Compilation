@@ -17,7 +17,7 @@ D
 \end{answer}
 
 \begin{solution}
-因为 \(C=\{x\in\R\mid 1\le x<3\}\)，所以 \(A\cap C=\{1,2\}\). 于是 \((A\cap C)\cup B=\{1,2,3,4\}\). 故选 D.
+因为 \(C=\{x\in\R\mid 1\le x<3\}\)，所以 \(A\) 中满足 \(1\le x<3\) 的元素为 \(1\)，\(2\)，即 \(A\cap C=\{1,2\}\). 于是 \(\left(A\cap C\right)\cup B=\{1,2\}\cup\{2,3,4\}=\{1,2,3,4\}\). 故选 D.
 \end{solution}
 
 \begin{problem}
@@ -39,7 +39,7 @@ C
 \end{answer}
 
 \begin{solution}
-由图可知可行域的顶点之一为 \(A(-1,1)\). 目标函数 \(z=-4x+y\) 在点 \(A\) 处取得最大值，\(z_{\max}=-4\times(-1)+1=5\). 故选 C.
+因为可行域由直线 \(x+y-2=0\)，\(x-y+2=0\)，\(x=-1\)，\(y=-1\) 围成，所以联立每两条边界直线求交点，并检验是否满足全部约束条件，得可行域的顶点为 \(\left(-1,1\right)\)，\(\left(0,2\right)\)，\(\left(3,-1\right)\)，\(\left(-1,-1\right)\)，可行域是以它们为顶点的四边形. 目标函数 \(z=-4x+y\) 可化为 \(y=4x+z\)，斜率固定为 \(4\)，\(z\) 为该直线在 \(y\) 轴上的截距，所以线性目标函数在顶点处取得最值. 分别计算，在点 \(A\left(-1,1\right)\) 处 \(z=-4\times\left(-1\right)+1=5\)，在点 \(\left(0,2\right)\) 处 \(z=2\)，在点 \(\left(3,-1\right)\) 处 \(z=-13\)，在点 \(\left(-1,-1\right)\) 处 \(z=3\). 比较得最大值是 \(5\)，在点 \(A\left(-1,1\right)\) 处取得. 故选 C.
 \end{solution}
 
 \begin{problem}
@@ -57,7 +57,7 @@ B
 \end{answer}
 
 \begin{solution}
-\(|x-1|<1\) 等价于 \(0<x<2\). 故 \(0<x<5\) 推不出 \(|x-1|<1\)；由 \(|x-1|<1\) 能推出 \(0<x<5\). 故“\(0<x<5\)”是“\(|x-1|<1\)”的必要而不充分条件. 故选 B.
+因为 \(\left|x-1\right|<1\) 等价于 \(-1<x-1<1\)，即 \(0<x<2\). 记 \(P=\{x\in\R\mid 0<x<5\}\)，\(Q=\{x\in\R\mid 0<x<2\}\)，则 \(Q\subsetneq P\). 所以由 \(x\in Q\) 能推出 \(x\in P\)，反之由 \(x\in P\) 推不出 \(x\in Q\)，例如 \(x=3\) 满足 \(0<x<5\) 但 \(\left|3-1\right|=2>1\)，不满足 \(\left|x-1\right|<1\). 故“\(0<x<5\)”是“\(\left|x-1\right|<1\)”的必要而不充分条件. 故选 B.
 \end{solution}
 
 \begin{problem}
@@ -77,7 +77,7 @@ B
 \end{answer}
 
 \begin{solution}
-按程序框图逐步计算：\(S=0\)，\(i=1\) 时 \(S=1\)；\(i=2\) 时 \(j=1\)，\(S=1+2\times 2=5\)；\(i=3\) 时 \(S=8\)，此时 \(i=4\)，满足 \(i\geq4\)，故输出 \(8\). 故选 B.
+初始 \(i=1\)，\(S=0\). 当 \(i=1\) 时，因为 \(1\) 不是偶数，所以 \(S=S+i=0+1=1\)，\(i\) 变为 \(2\)，此时 \(2\ge 4\) 不成立，返回判断. 当 \(i=2\) 时，因为 \(2\) 是偶数，所以 \(j=\dfrac{i}{2}=1\)，\(S=S+i\cdot 2^{j}=1+2\times 2=5\)，\(i\) 变为 \(3\)，此时 \(3\ge 4\) 不成立，返回判断. 当 \(i=3\) 时，因为 \(3\) 不是偶数，所以 \(S=S+i=5+3=8\)，\(i\) 变为 \(4\)，此时 \(4\ge 4\) 成立，输出 \(S=8\). 故选 B.
 \end{solution}
 
 \begin{problem}
@@ -95,7 +95,7 @@ A
 \end{answer}
 
 \begin{solution}
-因为 \(0<0.3<1\)，所以 \(c=0.3^{0.2}<1\). 又 \(1<\log_3 8<\log_3 9=2\)，且 \(\log_2 7> \log_2 4=2\)，所以 \(c<b<a\). 故选 A.
+因为 \(0<0.3<1\) 且指数 \(0.2>0\)，所以 \(c=0.3^{0.2}<0.3^{0}=1\). 又 \(b=\log_{3}8\)，因为 \(3<8<9\) 且 \(y=\log_{3}x\) 在 \(\left(0,+\infty\right)\) 上单调递增，所以 \(1=\log_{3}3<\log_{3}8<\log_{3}9=2\). 又 \(a=\log_{2}7\)，因为 \(7>4\) 且 \(y=\log_{2}x\) 在 \(\left(0,+\infty\right)\) 上单调递增，所以 \(a=\log_{2}7>\log_{2}4=2\). 于是 \(c<1<b<2<a\)，即 \(c<b<a\). 故选 A.
 \end{solution}
 
 \begin{problem}
@@ -113,7 +113,7 @@ D
 \end{answer}
 
 \begin{solution}
-抛物线 \(y^2=4x\) 的焦点 \(F\) 为 \((1,0)\)，故 \(OF=1\)，准线 \(l\) 的方程为 \(x=-1\). 双曲线的渐近线方程为 \(y=\pm \dfrac{b}{a}x\)，故 \(l\) 与两条渐近线的交点为 \(A\!\left(-1,\dfrac{b}{a}\right)\)，\(B\!\left(-1,-\dfrac{b}{a}\right)\)，于是 \(|AB|=\dfrac{2b}{a}=4|OF|=4\)，从而 \(b=2a\). 故离心率 \(e=\sqrt{1+\left(\dfrac{b}{a}\right)^2}=\sqrt5\). 故选 D.
+因为抛物线 \(y^{2}=4x\) 的焦点为 \(F\left(1,0\right)\)，所以 \(\left|OF\right|=1\)，准线 \(l\) 的方程为 \(x=-1\). 双曲线的渐近线方程为 \(y=\pm\dfrac{b}{a}x\)，联立 \(x=-1\) 得交点 \(A\left(-1,\dfrac{b}{a}\right)\)，\(B\left(-1,-\dfrac{b}{a}\right)\). 所以 \(\left|AB\right|=\dfrac{2b}{a}\). 由 \(\left|AB\right|=4\left|OF\right|=4\) 得 \(\dfrac{2b}{a}=4\)，即 \(b=2a\). 所以离心率 \(e=\sqrt{1+\left(\dfrac{b}{a}\right)^{2}}=\sqrt{1+4}=\sqrt{5}\). 故选 D.
 \end{solution}
 
 \begin{problem}
@@ -131,7 +131,7 @@ C
 \end{answer}
 
 \begin{solution}
-因为 \(f(x)\) 是奇函数，所以 \(\varphi=0\)，从而 \(f(x)=A\sin(\omega x)\). 将横坐标伸长到原来的 2 倍后，\(g(x)=A\sin\!\left(\dfrac{\omega x}{2}\right)\). 由 \(g(x)\) 的最小正周期为 \(2\pi\)，得 \(\omega=2\). 又 \(g\!\left(\dfrac{\pi}{4}\right)=A\sin\!\left(\dfrac{\pi}{4}\right)=\sqrt2\)，所以 \(A=2\). 因此 \(f\!\left(\dfrac{3\pi}{8}\right)=2\sin\!\left(\dfrac{3\pi}{4}\right)=\sqrt2\). 故选 C.
+因为 \(f\left(x\right)=A\sin\left(\omega x+\varphi\right)\) 在 \(\R\) 上是奇函数，所以对一切 \(x\in\R\) 有 \(f\left(-x\right)=-f\left(x\right)\)，特别取 \(x=0\) 得 \(f\left(0\right)=0\)，即 \(A\sin\varphi=0\). 因为 \(A>0\)，所以 \(\sin\varphi=0\)，故 \(\varphi=k\pi\)，\(k\in\Z\). 结合 \(\left|\varphi\right|<\pi\) 得 \(\varphi=0\)，若 \(\varphi=\pm\pi\) 则 \(\left|\varphi\right|=\pi\)，不满足严格不等式，所以舍去. 于是 \(f\left(x\right)=A\sin\left(\omega x\right)\). 因为 \(f\left(x\right)\) 的最小正周期为 \(\pi\)，所以 \(\dfrac{2\pi}{\omega}=\pi\)，故 \(\omega=2\). 将横坐标伸长到原来的 \(2\) 倍得 \(g\left(x\right)=f\left(\dfrac{x}{2}\right)=A\sin\left(x\right)\). 因为 \(g\left(\dfrac{\pi}{4}\right)=A\sin\left(\dfrac{\pi}{4}\right)=A\cdot\dfrac{\sqrt{2}}{2}=\sqrt{2}\)，所以 \(A=2\). 因此 \(f\left(x\right)=2\sin\left(2x\right)\)，\(f\left(\dfrac{3\pi}{8}\right)=2\sin\left(\dfrac{3\pi}{4}\right)=2\times\dfrac{\sqrt{2}}{2}=\sqrt{2}\). 故选 C.
 \end{solution}
 
 \begin{problem}
@@ -149,7 +149,7 @@ D
 \end{answer}
 
 \begin{solution}
-作出 \(f(x)\) 的图象与直线 \(y=-\dfrac14x+a\) 的图象，讨论交点个数可知：当直线与左支相交一次，与右支相交一次时，\(a\in\left[\dfrac54,\dfrac94\right]\)；当直线与右支相切时，\(a=1\). 故所求范围为 \(\left[\dfrac54,\dfrac94\right]\cup\{1\}\). 故选 D.
+记直线 \(l\) 的方程为 \(y=-\dfrac{1}{4}x+a\). 先解左段，在 \(0\le x\le 1\) 上方程为 \(2\sqrt{x}=-\dfrac{1}{4}x+a\)，即 \(a=2\sqrt{x}+\dfrac{1}{4}x\). 令 \(h_{1}\left(x\right)=2\sqrt{x}+\dfrac{1}{4}x\)，因为 \(h_{1}\) 在 \(\left[0,1\right]\) 上连续且当 \(x>0\) 时导数为正，所以 \(h_{1}\) 在 \(\left[0,1\right]\) 上单调递增，又 \(h_{1}\left(0\right)=0\)，\(h_{1}\left(1\right)=\dfrac{9}{4}\)，所以左段恰有一个解当且仅当 \(0\le a\le\dfrac{9}{4}\)，否则左段无解，注意左段包含端点 \(x=0\) 与 \(x=1\). 再解右段，在 \(x>1\) 上方程为 \(\dfrac{1}{x}=-\dfrac{1}{4}x+a\)，即 \(a=\dfrac{1}{x}+\dfrac{x}{4}\). 令 \(h_{2}\left(x\right)=\dfrac{1}{x}+\dfrac{x}{4}\)，\(x>1\)，则 \(h_{2}'\left(x\right)=-\dfrac{1}{x^{2}}+\dfrac{1}{4}=\dfrac{x^{2}-4}{4x^{2}}\)，所以 \(h_{2}\) 在 \(\left(1,2\right)\) 上单调递减，在 \(\left(2,+\infty\right)\) 上单调递增，最小值为 \(h_{2}\left(2\right)=1\)，又 \(\displaystyle\lim_{x\to 1^{+}}h_{2}\left(x\right)=\dfrac{5}{4}\)，\(\displaystyle\lim_{x\to+\infty}h_{2}\left(x\right)=+\infty\). 方程 \(\dfrac{1}{x}+\dfrac{x}{4}=a\) 化为 \(x^{2}-4ax+4=0\)，判别式 \(\Delta=16a^{2}-16\). 当 \(a=1\) 时 \(\Delta=0\)，切点为 \(x=2\)，右段恰有一个解；当 \(a=\dfrac{5}{4}\) 时方程的根为 \(x=1\) 与 \(x=4\)，因 \(x>1\) 舍去 \(x=1\)，故右段恰有一个解，对应点 \(\left(4,\dfrac{1}{4}\right)\)；当 \(a=\dfrac{9}{4}\) 时直线过点 \(\left(1,2\right)\)，但 \(x=1\) 不属于右段，右段仍由单调性恰有一个解. 综上右段解的个数为，当 \(a<1\) 时为 \(0\) 个，当 \(a=1\) 时为 \(1\) 个，当 \(1<a<\dfrac{5}{4}\) 时为 \(2\) 个，当 \(a\ge\dfrac{5}{4}\) 时为 \(1\) 个. 将左右两段相加，当 \(0\le a<1\) 时总数为 \(1\) 个，当 \(a=1\) 时总数为 \(2\) 个，当 \(1<a<\dfrac{5}{4}\) 时总数为 \(3\) 个，当 \(\dfrac{5}{4}\le a\le\dfrac{9}{4}\) 时总数为 \(2\) 个，当 \(a>\dfrac{9}{4}\) 或 \(a<0\) 时总数不为 \(2\) 个. 故恰有两个互异实数解当且仅当 \(\dfrac{5}{4}\le a\le\dfrac{9}{4}\) 或 \(a=1\)，即 \(a\in\left[\dfrac{5}{4},\dfrac{9}{4}\right]\cup\{1\}\). 故选 D.
 \end{solution}
 \section{填空题}
 
@@ -162,7 +162,7 @@ D
 \end{answer}
 
 \begin{solution}
-\(\left|\dfrac{5-i}{1+i}\right|=\dfrac{|5-i|}{|1+i|}=\sqrt{\dfrac{26}{2}}=\sqrt{13}\).
+由复数模的性质，对分母不为零的复数有 \(\left|\dfrac{z_{1}}{z_{2}}\right|=\dfrac{|z_{1}|}{|z_{2}|}\)，故 \(\left|\dfrac{5-\i}{1+\i}\right|=\dfrac{|5-\i|}{|1+\i|}\). 又 \(|5-\i|=\sqrt{5^{2}+\left(-1\right)^{2}}=\sqrt{26}\)，\(|1+\i|=\sqrt{1^{2}+1^{2}}=\sqrt{2}\)，所以原式\(=\sqrt{\dfrac{26}{2}}=\sqrt{13}\).
 \end{solution}
 
 \begin{problem}
@@ -170,11 +170,11 @@ D
 \end{problem}
 
 \begin{answer}
-\(\left(-1,\dfrac23\right)\)
+\(\left(-1,\dfrac{2}{3}\right)\)
 \end{answer}
 
 \begin{solution}
-\(3x^2+x-2<0 \iff (x+1)(3x-2)<0\)，故解集为 \(\left(-1,\dfrac23\right)\).
+设 \(x\in\R\). 二次三项式 \(3x^{2}+x-2\) 的二次项系数为正. 将左边因式分解，\(3x^{2}+x-2=\left(x+1\right)\left(3x-2\right)\)，展开验算 \(\left(x+1\right)\left(3x-2\right)=3x^{2}-2x+3x-2=3x^{2}+x-2\)，分解正确. 于是原不等式等价于 \(\left(x+1\right)\left(3x-2\right)<0\)，即两因式异号. 相应二次方程的两根为 \(x=-1\)，\(x=\dfrac{2}{3}\)，开口向上的抛物线在两根之间取负值，故 \(-1<x<\dfrac{2}{3}\)，即取值范围为 \(\left(-1,\dfrac{2}{3}\right)\).
 \end{solution}
 
 \begin{problem}
@@ -186,7 +186,7 @@ D
 \end{answer}
 
 \begin{solution}
-\(y'=-\sin x-\dfrac12\)，故在 \(x=0\) 处切线斜率为 \(-\dfrac12\). 切线方程为 \(y-1=-\dfrac12x\)，即 \(x+2y-2=0\).
+记 \(f\left(x\right)=\cos x-\dfrac{x}{2}\)，则 \(f\left(0\right)=\cos 0-0=1\)，故点 \(\left(0,1\right)\) 在曲线上. 求导得 \(f'\left(x\right)=-\sin x-\dfrac{1}{2}\)，于是切线斜率为 \(f'\left(0\right)=-\sin 0-\dfrac{1}{2}=-\dfrac{1}{2}\). 由点斜式，切线方程为 \(y-1=-\dfrac{1}{2}\left(x-0\right)\)，即 \(y-1=-\dfrac{x}{2}\)，整理得 \(x+2y-2=0\). 将 \(x=0\) 代入得 \(y=1\)，验算通过.
 \end{solution}
 
 \begin{problem}
@@ -198,7 +198,7 @@ D
 \end{answer}
 
 \begin{solution}
-四棱锥的高为 \(\sqrt{5-1}=2\)，故圆柱的高为 \(1\)，圆柱的底面半径为 \(\dfrac12\). 因此 \(V=\pi\left(\dfrac12\right)^2\cdot 1=\dfrac{\pi}{4}\).
+设正方形底面为 \(ABCD\)，中心为 \(O\)，锥顶为 \(P\). 因为四条侧棱长均为 \(\sqrt{5}\)，所以顶点 \(P\) 在底面的投影必为底面中心 \(O\)，即 \(PO\) 为棱锥的高，记为 \(h\). 底面边长为 \(\sqrt{2}\)，故对角线长为 \(\sqrt{2}\times\sqrt{2}=2\)，对角线半长 \(OA=1\). 在直角三角形 \(POA\) 中由勾股定理，\(h=PO=\sqrt{PA^{2}-OA^{2}}=\sqrt{5-1}=2\). 设四条侧棱的中点为 \(A_{1}\)，\(B_{1}\)，\(C_{1}\)，\(D_{1}\)，它们共面且该平面平行于底面. 由三角形中位线，截面 \(A_{1}B_{1}C_{1}D_{1}\) 为边长 \(\dfrac{\sqrt{2}}{2}\) 的正方形，其中心在 \(PO\) 的中点上. 该截面的外接圆即圆柱的一个底面，其半径为截面对角线的一半，即 \(\dfrac{1}{2}\times\dfrac{\sqrt{2}}{2}\times\sqrt{2}=\dfrac{1}{2}\). 圆柱的另一底面圆心为 \(O\)，故圆柱的高为 \(PO\) 的一半，即 \(1\). 于是体积 \(V=\pi\left(\dfrac{1}{2}\right)^{2}\times 1=\dfrac{\pi}{4}\).
 \end{solution}
 
 \begin{problem}
@@ -210,7 +210,7 @@ D
 \end{answer}
 
 \begin{solution}
-\(\dfrac{(x+1)(2y+1)}{xy}=\dfrac{2xy+x+2y+1}{xy}=2+\dfrac6{xy}\). 由 \(x+2y=5\) 可得 \(xy=x\frac{(5-x)}{2}\le \dfrac{25}{8}\)，当 \(x=\dfrac52\)，\(y=\dfrac54\) 时取等号. 故所求最小值为 \(2+\dfrac6{\frac{25}{8}}=\dfrac{98}{25}\).
+按本页现稿，分母为 \(xy\). 分子展开得 \(\left(x+1\right)\left(2y+1\right)=2xy+x+2y+1\). 由 \(x+2y=5\)，分子\(=2xy+6\)，故原式\(=2+\dfrac{6}{xy}\)，其中 \(x>0\)，\(y>0\). 由均值不等式，\(5=x+2y\ge 2\sqrt{\left(x\right)\left(2y\right)}=2\sqrt{2xy}\)，得 \(xy\le\dfrac{25}{8}\)，等号当且仅当 \(x=2y\)，即 \(x=\dfrac{5}{2}\)，\(y=\dfrac{5}{4}\) 时成立，满足 \(x>0\)，\(y>0\) 且 \(x+2y=5\). 因为 \(xy>0\) 且有上界，所以 \(\dfrac{6}{xy}\ge\dfrac{6}{\frac{25}{8}}=\dfrac{48}{25}\)，原式\(\ge 2+\dfrac{48}{25}=\dfrac{98}{25}\)，等号条件同上，故按本页现稿最小值为 \(\dfrac{98}{25}\). 原PDF题面分母为 \(\sqrt{xy}\). 此时分子同样为 \(2xy+6\)，原式\(=\dfrac{2xy+6}{\sqrt{xy}}\). 令 \(s=\sqrt{xy}>0\)，则原式\(=2s+\dfrac{6}{s}\). 由均值不等式，\(2s+\dfrac{6}{s}\ge 2\sqrt{\left(2s\right)\cdot\left(\dfrac{6}{s}\right)}=2\sqrt{12}=4\sqrt{3}\)，等号当且仅当 \(2s=\dfrac{6}{s}\)，即 \(s=\sqrt{3}\)，亦即 \(xy=3\) 时成立. 方程组 \(x+2y=5\)，\(xy=3\) 在 \(x>0\)，\(y>0\) 下有解：由 \(y=\dfrac{5-x}{2}\) 得 \(x\left(\dfrac{5-x}{2}\right)=3\)，即 \(x^{2}-5x+6=0\)，亦即 \(\left(x-2\right)\left(x-3\right)=0\)，得 \(x=2\)，\(y=\dfrac{3}{2}\) 或 \(x=3\)，\(y=1\)，均满足条件，故等号可以取到. 因此按原PDF题面最小值为 \(4\sqrt{3}\).
 \end{solution}
 
 \begin{problem}
@@ -222,7 +222,7 @@ D
 \end{answer}
 
 \begin{solution}
-建立直角坐标系，设 \(A(0,0)\)，\(D(5,0)\). 因为 \(|AB|=2\sqrt3\)，\(\angle A=30^\circ\)，所以 \(B(3,\sqrt3)\). 又因 \(AD//BC\) 且 \(E\) 在线段 \(CB\) 的延长线上，可设 \(E(x,\sqrt3)\). 由 \(AE=BE\) 知 \(E\) 在 \(AB\) 的垂直平分线上，故 \(E(1,\sqrt3)\). 于是 \(\overrightarrow{BD}=(2,-\sqrt3)\)，\(\overrightarrow{AE}=(1,\sqrt3)\)，从而 \(\overrightarrow{BD}\cdot\overrightarrow{AE}=2-3=-1\).
+以 \(A\) 为原点，\(AD\) 所在直线为 \(x\) 轴建立直角坐标系，记 \(A\left(0,0\right)\)，\(D\left(5,0\right)\)，其中 \(D\) 由 \(|AD|=5\) 且 \(D\) 在正半轴上得到. 因为 \(|AB|=2\sqrt{3}\) 且 \(\angle A=30^{\circ}\)，所以 \(B=\left(2\sqrt{3}\cos 30^{\circ},2\sqrt{3}\sin 30^{\circ}\right)=\left(2\sqrt{3}\times\dfrac{\sqrt{3}}{2},2\sqrt{3}\times\dfrac{1}{2}\right)=\left(3,\sqrt{3}\right)\). 由 \(AD//BC\) 知 \(BC\) 为水平直线，故其上的点 \(E\) 纵坐标与 \(B\) 相同，可设 \(E\left(t,\sqrt{3}\right)\). 由 \(AE=BE\) 得 \(|AE|^{2}=|BE|^{2}\)，即 \(t^{2}+\left(\sqrt{3}\right)^{2}=\left(t-3\right)^{2}\)，展开得 \(t^{2}+3=t^{2}-6t+9\)，解得 \(t=1\)，故 \(E\left(1,\sqrt{3}\right)\). 于是 \(\overrightarrow{BD}=\left(5-3,0-\sqrt{3}\right)=\left(2,-\sqrt{3}\right)\)，\(\overrightarrow{AE}=\left(1,\sqrt{3}\right)\)，点积 \(\overrightarrow{BD}\cdot\overrightarrow{AE}=2\times 1+\left(-\sqrt{3}\right)\times\sqrt{3}=2-3=-1\).
 \end{solution}
 \section{解答题}
 
@@ -254,16 +254,11 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item 由已知，老，中，青员工人数之比为 \(72:108:120=6:9:10\). 又样本容量为 \(25\)，所以应从老，中，青员工中分别抽取 \(6\) 人，\(9\) 人，\(10\) 人.
+\item 由已知，老，中，青员工人数之比为 \(72:108:120=6:9:10\)，样本容量为 \(25\)，故应从老，中，青员工中分别抽取 \(6\) 人，\(9\) 人，\(10\) 人.
 \item
 \begin{enumerate}
-\item 从 \(A\)，\(B\)，\(C\)，\(D\)，\(E\)，\(F\) 中随机抽取 \(2\) 人的所有结果为
-\(\{A,B\}\)，\(\{A,C\}\)，\(\{A,D\}\)，\(\{A,E\}\)，\(\{A,F\}\)，\(\{B,C\}\)，\(\{B,D\}\)，\(\{B,E\}\)，\(\{B,F\}\)，\(\{C,D\}\)，\(\{C,E\}\)，\(\{C,F\}\)，\(\{D,E\}\)，\(\{D,F\}\)，\(\{E,F\}\)，
-共 \(15\) 种.
-
-\item 设事件 \(M\) 为“从这 \(6\) 人中随机抽取 \(2\) 人享受的专项附加扣除至少有一项相同”，由表可知，满足“至少有一项相同”的结果有
-\(\{A,B\}\)，\(\{A,D\}\)，\(\{A,E\}\)，\(\{A,F\}\)，\(\{B,D\}\)，\(\{B,E\}\)，\(\{B,F\}\)，\(\{C,E\}\)，\(\{C,F\}\)，\(\{D,F\}\)，\(\{E,F\}\)，
-共 \(11\) 种，所以 \(P(M)=\frac{11}{15}\).
+\item 从 \(A\)，\(B\)，\(C\)，\(D\)，\(E\)，\(F\) 中随机抽取 \(2\) 人的所有结果为 \(\{A,B\}\)，\(\{A,C\}\)，\(\{A,D\}\)，\(\{A,E\}\)，\(\{A,F\}\)，\(\{B,C\}\)，\(\{B,D\}\)，\(\{B,E\}\)，\(\{B,F\}\)，\(\{C,D\}\)，\(\{C,E\}\)，\(\{C,F\}\)，\(\{D,E\}\)，\(\{D,F\}\)，\(\{E,F\}\)，共 \(15\) 种.
+\item 由表可知 \(A\) 享受子女教育、住房贷款利息、赡养老人，\(B\) 与 \(A\) 相同，\(C\) 享受继续教育、住房租金，\(D\) 享受子女教育、大病医疗，\(E\) 享受继续教育、住房贷款利息，\(F\) 享受子女教育、继续教育、住房贷款利息、赡养老人；逐对核对是否有相同项目：\(\{A,B\}\) 共享子女教育、住房贷款利息、赡养老人，符合 \(M\)；\(\{A,C\}\) 互不相交，不符合 \(M\)；\(\{A,D\}\) 共享子女教育，符合 \(M\)；\(\{A,E\}\) 共享住房贷款利息，符合 \(M\)；\(\{A,F\}\) 共享子女教育、住房贷款利息、赡养老人，符合 \(M\)；\(\{B,C\}\) 互不相交，不符合 \(M\)；\(\{B,D\}\) 共享子女教育，符合 \(M\)；\(\{B,E\}\) 共享住房贷款利息，符合 \(M\)；\(\{B,F\}\) 共享子女教育、住房贷款利息、赡养老人，符合 \(M\)；\(\{C,D\}\) 互不相交，不符合 \(M\)；\(\{C,E\}\) 共享继续教育，符合 \(M\)；\(\{C,F\}\) 共享继续教育，符合 \(M\)；\(\{D,E\}\) 互不相交，不符合 \(M\)；\(\{D,F\}\) 共享子女教育，符合 \(M\)；\(\{E,F\}\) 共享继续教育、住房贷款利息，符合 \(M\)；故符合 \(M\) 的有 \(11\) 种，所以 \(P\left(M\right)=\frac{11}{15}\).
 \end{enumerate}
 \end{enumerate}
 \end{solution}
@@ -279,9 +274,8 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item 由正弦定理，\(\dfrac{b}{\sin B}=\dfrac{c}{\sin C}\)，故 \(b\sin C=c\sin B\). 又由 \(3c\sin B=4a\sin C\)，得 \(3b=4a\). 再由 \(b+c=2a\)，可得 \(b=\dfrac{4a}{3}\)，\(c=\dfrac{2a}{3}\). 由余弦定理可得 \(\cos B=\dfrac{a^2+c^2-b^2}{2ac}=-\dfrac14\).
-
-\item 由（1）知 \(\sin B=\sqrt{1-\cos^2 B}=\dfrac{\sqrt{15}}{4}\)，从而 \(\sin 2B=2\sin B\cos B=-\dfrac{\sqrt{15}}{8}\)，\(\cos 2B=\cos^2 B-\sin^2 B=-\dfrac78\). 于是 \(\sin\left(2B+\dfrac{\pi}{6}\right)=\sin2B\cos\dfrac{\pi}{6}+\cos2B\sin\dfrac{\pi}{6}=-\dfrac{3\sqrt5+7}{16}\).
+\item 由正弦定理 \(\frac{b}{\sin B}=\frac{c}{\sin C}\) 得 \(b\sin C=c\sin B\)，代入 \(3c\sin B=4a\sin C\) 得 \(3b\sin C=4a\sin C\)；因为 \(C\) 为三角形内角，\(\sin C>0\)，故 \(3b=4a\)，即 \(b=\frac{4a}{3}\)；再由 \(b+c=2a\) 得 \(c=\frac{2a}{3}\)；由余弦定理 \(\cos B=\frac{a^{2}+c^{2}-b^{2}}{2ac}\)，代入得 \(\cos B=-\frac{1}{4}\).
+\item 由（1）知 \(\cos B=-\frac{1}{4}\)，且 \(B\in\left(0,\pi\right)\)，故 \(\sin B=\sqrt{1-\cos^{2}B}=\frac{\sqrt{15}}{4}\)，从而 \(\sin 2B=2\sin B\cos B=-\frac{\sqrt{15}}{8}\)，\(\cos 2B=\cos^{2}B-\sin^{2}B=-\frac{7}{8}\)，于是 \(\sin\left(2B+\frac{\pi}{6}\right)=\sin 2B\cos\frac{\pi}{6}+\cos 2B\sin\frac{\pi}{6}=-\frac{3\sqrt{5}+7}{16}\).
 \end{enumerate}
 \end{solution}
 
@@ -299,12 +293,9 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item 连接 \(BD\). 因为 \(ABCD\) 是平行四边形，所以 \(AC\) 与 \(BD\) 互相平分，设交点为 \(H\). 又 \(G\) 为 \(PB\) 的中点，所以在三角形 \(PBD\) 中，\(GH\) 是中位线，故 \(GH//PD\). 而 \(PD\subset\) 平面 \(PAD\)，且 \(GH\) 不在平面 \(PAD\) 内，所以 \(GH//\) 平面 \(PAD\).
-
-\item 取 \(PC\) 的中点 \(N\)，连接 \(DN\). 因为 \(\triangle PCD\) 为等边三角形，所以 \(DN\perp PC\). 又平面 \(PAC\perp\) 平面 \(PCD\)，且两平面的交线为 \(PC\)，所以 \(DN\perp\) 平面 \(PAC\). 从而 \(DN\perp PA\). 又 \(PA\perp CD\)，且 \(DN\subset\) 平面 \(PCD\)，所以 \(PA\) 同时垂直于平面 \(PCD\) 内的两条相交直线 \(CD\) 与 \(DN\)，故 \(PA\perp\) 平面 \(PCD\).
-
-\item 连接 \(AN\). 由（2）知 \(DN\perp\) 平面 \(PAC\)，所以 \(\angle DAN\) 是直线 \(AD\) 与平面 \(PAC\) 所成的角. 因为 \(\triangle PCD\) 为等边三角形，\(CD=2\)，且 \(N\) 为 \(PC\) 的中点，所以 \(DN=\sqrt3\). 又 \(AD=3\)，故
-\(\sin\angle DAN=\dfrac{DN}{AD}=\dfrac{\sqrt3}{3}\).
+\item 连接 \(BD\)；因为 \(ABCD\) 为平行四边形，对角线互相平分，故 \(AC\) 与 \(BD\) 的交点即为 \(AC\) 的中点 \(H\)，亦为 \(BD\) 的中点；又 \(G\) 为 \(PB\) 的中点，故在三角形 \(PBD\) 中 \(GH\) 为中位线，得 \(GH\parallel PD\)；而 \(PD\subset\) 平面 \(PAD\)，\(GH\) 不在平面 \(PAD\) 内，故 \(GH\parallel\) 平面 \(PAD\).
+\item 取 \(PC\) 的中点 \(N\)，连接 \(DN\)；因为三角形 \(PCD\) 为等边三角形，故 \(DN\perp PC\)；又平面 \(PAC\perp\) 平面 \(PCD\)，交线为 \(PC\)，且 \(DN\subset\) 平面 \(PCD\)，故 \(DN\perp\) 平面 \(PAC\)，从而 \(DN\perp PA\)；又已知 \(PA\perp CD\)，而 \(CD\) 与 \(DN\) 相交于 \(D\) 且均在平面 \(PCD\) 内，故 \(PA\perp\) 平面 \(PCD\).
+\item 连接 \(AN\)；由（2）知 \(DN\perp\) 平面 \(PAC\)，故 \(AN\) 为 \(AD\) 在平面 \(PAC\) 内的射影，\(\angle DAN\) 即直线 \(AD\) 与平面 \(PAC\) 所成的角；在直角三角形 \(DAN\) 中 \(DN\perp AN\)，等边三角形 \(PCD\) 边长 \(CD=2\) 的中线 \(DN=\sqrt{2^{2}-1^{2}}=\sqrt{3}\)，又 \(AD=3\)，故 \(\sin\angle DAN=\frac{DN}{AD}=\frac{\sqrt{3}}{3}\).
 \end{enumerate}
 \end{solution}
 
@@ -319,24 +310,8 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item 设等差数列 \(\{a_n\}\) 的公差为 \(d\)，等比数列 \(\{b_n\}\) 的公比为 \(q\). 由 \(a_1=b_1=3\)，\(b_2=a_3\)，\(b_3=4a_2+3\)，得 \(3q=3+2d\)，\(3q^2=15+4d\). 解得 \(d=3\)，\(q=3\). 所以 \(a_n=3+3(n-1)=3n\)，\(b_n=3\cdot 3^{n-1}=3^n\).
-
-\item
-\(a_1c_1+a_2c_2+\cdots+a_{2n}c_{2n}=\bigl(a_1+a_3+\cdots+a_{2n-1}\bigr)+\bigl(a_2b_1+a_4b_2+\cdots+a_{2n}b_n\bigr)\).
-其中
-\(a_1+a_3+\cdots+a_{2n-1}=3+9+\cdots+(6n-3)=3n^2\)，
-又
-\(a_2b_1+a_4b_2+\cdots+a_{2n}b_n=6(3+2\cdot 3^2+\cdots+n\cdot 3^n)\).
-设
-\(T_n=1\cdot 3^1+2\cdot 3^2+\cdots+n\cdot 3^n\)，
-则
-\(3T_n=1\cdot 3^2+2\cdot 3^3+\cdots+n\cdot 3^{n+1}\).
-两式相减得
-\(2T_n=-(3+3^2+\cdots+3^n)+n\cdot 3^{n+1}=-\dfrac{3(1-3^n)}{1-3}+n\cdot 3^{n+1}\).
-整理得
-\(T_n=\dfrac{(2n-1)3^{n+1}+3}{2}\).
-故
-\(a_1c_1+a_2c_2+\cdots+a_{2n}c_{2n}=3n^2+6T_n=\dfrac{(2n-1)3^{n+2}+6n^2+9}{2}\).
+\item 设等差数列 \(\left\{a_{n}\right\}\) 的公差为 \(d\)，等比数列 \(\left\{b_{n}\right\}\) 的公比为 \(q\)，\(q>0\)；由 \(a_{1}=b_{1}=3\)，\(b_{2}=a_{3}\)，\(b_{3}=4a_{2}+3\) 得 \(3q=3+2d\)，\(3q^{2}=15+4d\)；由前式得 \(d=\frac{3\left(q-1\right)}{2}\)，代入后式得 \(3q^{2}=9+6q\)，即 \(q^{2}-2q-3=0\)，因式分解得 \(\left(q-3\right)\left(q+1\right)=0\)，故 \(q=3\) 或 \(q=-1\)；因 \(q>0\) 舍去 \(q=-1\)，得 \(q=3\)，\(d=3\)；于是 \(a_{n}=3+3\left(n-1\right)=3n\)，\(b_{n}=3\cdot 3^{n-1}=3^{n}\).
+\item 由 \(c_{n}\) 的定义得 \(a_{1}c_{1}+a_{2}c_{2}+\cdots+a_{2n}c_{2n}=\left(a_{1}+a_{3}+\cdots+a_{2n-1}\right)+\left(a_{2}b_{1}+a_{4}b_{2}+\cdots+a_{2n}b_{n}\right)\)；其中 \(a_{1}+a_{3}+\cdots+a_{2n-1}=3+9+\cdots+\left(6n-3\right)=3n^{2}\)，而 \(a_{2}b_{1}+a_{4}b_{2}+\cdots+a_{2n}b_{n}=6\left(1\cdot 3^{1}+2\cdot 3^{2}+\cdots+n\cdot 3^{n}\right)\)；设 \(T_{n}=1\cdot 3^{1}+2\cdot 3^{2}+\cdots+n\cdot 3^{n}\)，则 \(3T_{n}=1\cdot 3^{2}+2\cdot 3^{3}+\cdots+n\cdot 3^{n+1}\)，两式相减得 \(-2T_{n}=3+3^{2}+\cdots+3^{n}-n\cdot 3^{n+1}=\frac{3\left(1-3^{n}\right)}{1-3}-n\cdot 3^{n+1}\)，整理得 \(T_{n}=\frac{\left(2n-1\right)3^{n+1}+3}{4}\)；故所求和为 \(3n^{2}+6T_{n}=\frac{\left(2n-1\right)3^{n+2}+6n^{2}+9}{2}\)；当 \(n=1\) 时左端为 \(a_{1}+a_{2}b_{1}=3+18=21\)，右端为 \(\frac{3^{3}+15}{2}=21\)，验算一致.
 \end{enumerate}
 \end{solution}
 
@@ -351,9 +326,8 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item 设椭圆的半焦距为 \(c\). 由 \(\sqrt3|OA|=2|OB|\) 可得 \(\sqrt3\,a=2b\). 又 \(c^2=a^2-b^2\)，消去 \(b\) 得 \(a=2c\). 所以椭圆的离心率 \(e=\dfrac ca=\dfrac12\).
-
-\item 由（1）知 \(a=2c\)，\(b=\sqrt3c\)，故椭圆方程为 \(\dfrac{x^2}{4c^2}+\dfrac{y^2}{3c^2}=1\). 又 \(F(-c,0)\)，故直线 \(l\) 的方程为 \(y=\dfrac34(x+c)\). 联立可得点 \(P\) 的横坐标满足 \(7x^2+6cx-13c^2=0\)，于是 \(x_1=c\)，\(x_2=-\dfrac{13c}{7}\). 代入直线 \(l\) 的方程，得 \(y_1=\dfrac32c\)，\(y_2=-\dfrac9{14}c\). 由于 \(P\) 在 \(x\) 轴上方，故取 \(P\left(c,\dfrac32c\right)\). 设圆心 \(C(4,t)\). 由 \(OC//AP\) 得 \(\dfrac t4=\dfrac{\frac32c}{c+2c}=\dfrac12\)，故 \(t=2\). 又圆 \(C\) 与 \(x\) 轴相切，所以半径为 \(2\). 再由圆 \(C\) 与 \(l\) 相切，可得 \(\dfrac{\left|\frac34(4+c)-2\right|}{\sqrt{1+\left(\frac34\right)^2}}=2\)，解得 \(c=2\). 于是椭圆方程为 \(\dfrac{x^2}{16}+\dfrac{y^2}{12}=1\).
+\item 设椭圆半焦距为 \(c\)；由 \(\sqrt{3}\left|OA\right|=2\left|OB\right|\) 得 \(\sqrt{3}a=2b\)，结合 \(c^{2}=a^{2}-b^{2}\) 消去 \(b\) 得 \(a=2c\)，故离心率 \(e=\frac{c}{a}=\frac{1}{2}\).
+\item 由（1）知 \(a=2c\)，\(b=\sqrt{3}c\)，故椭圆方程为 \(\frac{x^{2}}{4c^{2}}+\frac{y^{2}}{3c^{2}}=1\)；又 \(F\left(-c,0\right)\)，故直线 \(l\) 的方程为 \(y=\frac{3}{4}\left(x+c\right)\)；联立得 \(7x^{2}+6cx-13c^{2}=0\)，因式分解为 \(\left(7x+13c\right)\left(x-c\right)=0\)，解得 \(x=c\) 或 \(x=-\frac{13c}{7}\)，对应 \(y=\frac{3c}{2}\) 或 \(y=-\frac{9c}{14}\)；因 \(P\) 在 \(x\) 轴上方，取 \(P\left(c,\frac{3c}{2}\right)\)；设圆心 \(C\left(4,t\right)\)，由 \(OC\parallel AP\) 得 \(\frac{t}{4}=\frac{\frac{3c}{2}}{c+2c}=\frac{1}{2}\)，故 \(t=2\)，圆 \(C\) 与 \(x\) 轴相切得半径为 \(2\)；直线 \(l\) 即 \(3x-4y+3c=0\)，由相切得 \(\frac{\left|3\cdot 4-4\cdot 2+3c\right|}{\sqrt{3^{2}+\left(-4\right)^{2}}}=\frac{\left|4+3c\right|}{5}=2\)，解得 \(c=2\) 或 \(c=-\frac{14}{3}\)；因 \(c>0\) 舍去负值，得 \(c=2\)；于是椭圆方程为 \(\frac{x^{2}}{16}+\frac{y^{2}}{12}=1\).
 \end{enumerate}
 \end{solution}
 
@@ -372,14 +346,11 @@ D
 
 \begin{solution}
 \begin{enumerate}
-\item \(f(x)\) 的定义域为 \((0,+\infty)\)，且 \(f'(x)=\dfrac1x-a x\e^x\). 当 \(a\le0\) 时，\(f'(x)>0\)，故 \(f(x)\) 在 \((0,+\infty)\) 内单调递增.
-
+\item \(f\left(x\right)\) 的定义域为 \(\left(0,+\infty\right)\)，且 \(f'\left(x\right)=\frac{1}{x}-ax\e^{x}\)；当 \(a\le 0\) 时，\(x>0\) 蕴含 \(-ax\e^{x}\ge 0\)，故 \(f'\left(x\right)>0\)，所以 \(f\left(x\right)\) 在 \(\left(0,+\infty\right)\) 内单调递增.
 \item
 \begin{enumerate}
-\item 令 \(g(x)=1-a x^2\e^x\). 则 \(f'(x)=\dfrac{g(x)}{x}\). 由于 \(0<a<\dfrac1\e\)，故 \(g(x)\) 在 \((0,+\infty)\) 内单调递减，且 \(g(1)=1-a\e>0\)，\(g\!\left(\ln\dfrac1a\right)=1-a\left(\ln\dfrac1a\right)^2\cdot\dfrac1a<0\). 所以 \(g(x)=0\) 在 \((0,+\infty)\) 内有唯一解，不妨记为 \(x_0\)，且 \(1<x_0<\ln\dfrac1a\). 于是 \(f(x)\) 在 \((0,x_0)\) 内单调递增，在 \((x_0,+\infty)\) 内单调递减，因此 \(x_0\) 是唯一极值点.
-又令 \(h(x)=\ln x-x+1\)，则当 \(x>1\) 时，\(h'(x)=\dfrac1x-1<0\)，故 \(h(x)\) 在 \((1,+\infty)\) 内单调递减，并且 \(h(1)=0\). 从而当 \(x>1\) 时，\(\ln x<x-1\). 又 \(f\!\left(\ln\dfrac1a\right)=\ln\ln\dfrac1a-a\left(\ln\dfrac1a-1\right)\cdot\dfrac1a=\ln\ln\dfrac1a-\ln\dfrac1a+1=h\!\left(\ln\dfrac1a\right)<0\). 因为 \(f(x_0)>f(1)=0\)，所以 \(f(x)\) 在 \((x_0,+\infty)\) 内有唯一零点. 又 \(1<x_0\)，且 \(f(1)=0\)，所以 \(f(x)\) 在 \((0,x_0)\) 内有唯一零点 \(1\). 因此 \(f(x)\) 恰有两个零点.
-
-\item 设 \(x_0\) 为 \(f(x)\) 的极值点，\(x_1\) 为 \(f(x)\) 的零点，且 \(x_1>x_0\). 由题意，\(f'(x_0)=0\)，\(f(x_1)=0\). 即 \(\dfrac1{x_0}=a x_0\e^{x_0}\)，\(\ln x_1=a(x_1-1)\e^{x_1}\)，从而 \(\ln x_1=\dfrac{x_1-1}{x_0^2}\e^{x_1-x_0}\). 由 \(x_1>x_0>1\) 可得 \(\ln x_1<x_1-1\)，从而 \(\e^{x_1-x_0}<x_0^2\). 两边取对数得 \(x_1-x_0<2\ln x_0<2(x_0-1)\)，于是 \(3x_0-x_1>2\).
+\item 令 \(g\left(x\right)=1-ax^{2}\e^{x}\)，则 \(f'\left(x\right)=\frac{g\left(x\right)}{x}\)；求导得 \(g'\left(x\right)=-ax\left(x+2\right)\e^{x}\)，当 \(a>0\)，\(x>0\) 时 \(g'\left(x\right)<0\)，故 \(g\left(x\right)\) 在 \(\left(0,+\infty\right)\) 内单调递减；又 \(g\left(1\right)=1-a\e>0\)（因 \(0<a<\frac{1}{\e}\)），而 \(\frac{1}{a}>\e\) 故 \(\ln\frac{1}{a}>1\)，且 \(g\left(\ln\frac{1}{a}\right)=1-\left(\ln\frac{1}{a}\right)^{2}<0\)，故 \(g\left(x\right)=0\) 在 \(\left(0,+\infty\right)\) 内有唯一解，记为 \(x_{0}\)，且 \(1<x_{0}<\ln\frac{1}{a}\)，于是 \(f\left(x\right)\) 在 \(\left(0,x_{0}\right)\) 内单调递增，在 \(\left(x_{0},+\infty\right)\) 内单调递减，\(x_{0}\) 为唯一极值点；又 \(f\left(1\right)=0\)，且 \(f\left(x_{0}\right)>f\left(1\right)>0\)，故 \(1\) 为 \(f\left(x\right)\) 在 \(\left(0,x_{0}\right)\) 内的唯一零点；令 \(h\left(x\right)=\ln x-x+1\left(x>1\right)\)，则 \(h'\left(x\right)=\frac{1}{x}-1<0\)，故 \(h\left(x\right)\) 在 \(\left(1,+\infty\right)\) 内单调递减，又 \(h\left(1\right)=0\)，从而 \(x>1\) 时 \(\ln x<x-1\)，于是 \(f\left(\ln\frac{1}{a}\right)=\ln\ln\frac{1}{a}-\ln\frac{1}{a}+1=h\left(\ln\frac{1}{a}\right)<0\)，结合单调性知 \(f\left(x\right)\) 在 \(\left(x_{0},+\infty\right)\) 内有唯一零点；因此 \(f\left(x\right)\) 恰有两个零点.
+\item 由题意 \(f'\left(x_{0}\right)=0\)，\(f\left(x_{1}\right)=0\)，即 \(\frac{1}{x_{0}}=ax_{0}\e^{x_{0}}\)，\(\ln x_{1}=a\left(x_{1}-1\right)\e^{x_{1}}\)，消去 \(a\) 得 \(\ln x_{1}=\frac{x_{1}-1}{x_{0}^{2}}\e^{x_{1}-x_{0}}\)；由上已证 \(x_{0}>1\)，又 \(x_{1}>x_{0}\)，故 \(x_{1}>x_{0}>1\)，从而 \(\ln x_{1}<x_{1}-1\)，代入得 \(\e^{x_{1}-x_{0}}<x_{0}^{2}\)，两边取对数得 \(x_{1}-x_{0}<2\ln x_{0}\)；再对 \(t=x_{0}>1\) 用 \(\ln t<t-1\) 得 \(2\ln x_{0}<2\left(x_{0}-1\right)\)，故 \(x_{1}-x_{0}<2\left(x_{0}-1\right)\)，即 \(3x_{0}-x_{1}>2\).
 \end{enumerate}
 \end{enumerate}
 \end{solution}
