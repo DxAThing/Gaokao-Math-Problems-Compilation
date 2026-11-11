@@ -1,0 +1,17 @@
+\begin{tikzpicture}[line width=0.6pt, >=Stealth, font=\normalsize]
+  % axes
+  \draw[->] (-3.4,0) -- (3.4,0);
+  \draw[->] (0,-2.8) -- (0,2.8);
+  \node[right] at (3.5,0) {$x$};
+  \node[above right] at (0.15,2.5) {$y$};
+  \node[below right] at (0.05,-0.05) {$O$};
+  % ellipse x^2/4 + y^2/3 = 1, param (2cos t, sqrt(3) sin t)
+  \draw[domain=0:360, samples=160, smooth] plot ({2*cos(\x)}, {1.7320508*sin(\x)});
+  % steep symmetric axis y = 4x + m with m = 0.5 (representative, within range)
+  \draw[domain=-0.7:0.45, samples=2] plot ({\x}, {4*\x+0.3});
+  \node[right=2pt] at (0,.3) {$(0,m)$};
+  % shallow chord PQ: y = -x/4 + n with n = -0.5
+  \draw[domain=-2.7:2.7, samples=2] plot ({\x}, {-0.25*\x-0.975});
+  \node[below left=2pt] at (-1.916263497,-0.4959341257) {$P$};
+  \node[below right=2pt] at (1.316263497,-1.304065874) {$Q$};
+\end{tikzpicture}

@@ -1,0 +1,43 @@
+\examstatpanels{%
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,
+  exam statistical template paired dense,
+  xmin=155,xmax=192.5,ymin=0,ymax=14.5,
+  xtick={155,160,165,170,175,180,185,190},
+  xticklabels={0,160,165,170,175,180,185,190},
+  ytick={2,4,5,13,14},
+  title={男生}]
+\addplot[draw=black,fill=white] coordinates
+  {(160,2) (165,5) (170,14) (175,13) (180,4) (185,2) (190,0)};
+\draw[dashed] (axis cs:155,14) -- (axis cs:170,14);
+\draw[dashed] (axis cs:155,13) -- (axis cs:175,13);
+\draw[dashed] (axis cs:155,5) -- (axis cs:165,5);
+\draw[dashed] (axis cs:155,4) -- (axis cs:180,4);
+\draw[dashed] (axis cs:155,2) -- (axis cs:185,2);
+\examstatxbreak{157.5}{0}
+\examstatylabel{频数}
+\examstatxlabel{身高/cm}
+\end{axis}
+\end{tikzpicture}%
+}{%
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,
+  exam statistical template paired dense,
+  xmin=155,xmax=192.5,ymin=0,ymax=14.5,
+  xtick={155,160,165,170,175,180,185,190},
+  xticklabels={0,160,165,170,175,180,185,190},
+  ytick={1,3,6,7,12},
+  title={女生}]
+\addplot[draw=black,fill=white] coordinates
+  {(160,1) (165,7) (170,12) (175,6) (180,3) (185,1) (190,0)};
+\draw[dashed] (axis cs:155,12) -- (axis cs:170,12);
+\draw[dashed] (axis cs:155,7) -- (axis cs:165,7);
+\draw[dashed] (axis cs:155,6) -- (axis cs:175,6);
+\draw[dashed] (axis cs:155,3) -- (axis cs:180,3);
+\draw[dashed] (axis cs:155,1) -- (axis cs:185,1);
+\examstatxbreak{157.5}{0}
+\examstatylabel{频数}
+\examstatxlabel{身高/cm}
+\end{axis}
+\end{tikzpicture}%
+}

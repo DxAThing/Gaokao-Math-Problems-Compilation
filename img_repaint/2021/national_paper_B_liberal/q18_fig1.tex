@@ -1,0 +1,29 @@
+\begin{tikzpicture}[line width=.6pt, font=\normalsize]
+\coordinate (P) at (1.4,4.4);
+\coordinate (D) at (1.4,1.8);
+\coordinate (A) at (0,0);
+\coordinate (B) at (3.2,0);
+\coordinate (C) at (4.6,1.8);
+\coordinate (M) at (3.9,0.9);
+% lateral edges
+\draw (P) -- (A);
+\draw (P) -- (B);
+\draw (P) -- (M);
+\draw (P) -- (C);
+\draw[dashed] (P) -- (D);
+% base visible edges
+\draw (A) -- (B) -- (M) -- (C);
+
+% base hidden edges
+\draw[dashed] (D) -- (C);
+\draw[dashed] (D) -- (A);
+\draw[dashed] (D) -- (B);
+\draw[dashed] (A) -- (M);
+% labels
+\node[above] at (P) {$P$};
+\node[left] at (D) {$D$};
+\node[below left] at (A) {$A$};
+\node[below] at (B) {$B$};
+\node[right] at (C) {$C$};
+\node[right] at (M) {$M$};
+\end{tikzpicture}

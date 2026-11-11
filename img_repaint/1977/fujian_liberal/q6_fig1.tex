@@ -1,0 +1,20 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,
+  geometry edge/.style={solid,line width=.6pt}]
+\coordinate (A) at (-3.1,0);
+\coordinate (P) at (3.1,0);
+\coordinate (C) at (0.2,1.7);
+\coordinate (B) at (0.2,-1.7);
+\draw[geometry edge,fill=gray!25] (-0.15,0) ellipse (1.15 and 0.72);
+% outer quadrilateral A-C-P-B
+\draw[geometry edge] (A)--(C)--(P)--(B)--cycle;
+% dashed diagonals A-P and C-B
+\draw[geometry edge,dashed] (A)--(P);
+\draw[geometry edge,dashed] (C)--(B);
+% central shaded ellipse (obstacle)
+
+% labels
+\node[left] at (A) {$A$};
+\node[right] at (P) {$P$};
+\node[above] at (C) {$C$};
+\node[below] at (B) {$B$};
+\end{tikzpicture}

@@ -1,0 +1,43 @@
+% six cube modules side by side; isometric front-top-right view, side faces light gray
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+\def\s{0.5}\def\dx{0.26}\def\dy{0.20}
+\newcommand{\cube}[3]{%
+  \pgfmathsetmacro{\bx}{#1*\s+#3*\dx}\pgfmathsetmacro{\by}{#2*\s+#3*\dy}%
+  \pgfmathsetmacro{\ex}{\bx+\s}\pgfmathsetmacro{\ey}{\by+\s}%
+  \pgfmathsetmacro{\fx}{\bx+\dx}\pgfmathsetmacro{\fy}{\by+\s+\dy}%
+  \pgfmathsetmacro{\gx}{\bx+\s+\dx}\pgfmathsetmacro{\gy}{\by+\s+\dy}%
+  \pgfmathsetmacro{\hx}{\bx+\s+\dx}\pgfmathsetmacro{\hy}{\by+\dy}%
+  \fill[white] (\bx,\by) rectangle (\ex,\ey);
+  \fill[white] (\bx,\ey) -- (\fx,\fy) -- (\gx,\gy) -- (\ex,\ey) -- cycle;
+  \fill[gray!15] (\ex,\by) -- (\hx,\hy) -- (\gx,\gy) -- (\ex,\ey) -- cycle;
+  \draw (\bx,\by) rectangle (\ex,\ey);
+  \draw (\bx,\ey) -- (\fx,\fy) -- (\gx,\gy) -- (\ex,\ey);
+  \draw (\ex,\by) -- (\hx,\hy) -- (\gx,\gy);
+}
+\begin{scope}[shift={(0,0)}]
+\cube{0}{0}{0}\cube{1}{0}{0}\cube{2}{0}{0}\cube{2}{1}{0}
+\node[below,yshift=-6pt] at (0.95,0) {$\text{模块}\textcircled{1}$};
+\end{scope}
+\begin{scope}[shift={(2.5,0)}]
+\cube{0}{0}{1}\cube{1}{0}{1}\cube{0}{0}{0}\cube{1}{0}{0}
+\node[below,yshift=-6pt] at (0.95,0) {$\text{模块}\textcircled{2}$};
+\end{scope}
+\begin{scope}[shift={(5.1,0)}]
+\cube{0}{0}{0}\cube{1}{0}{0}\cube{2}{0}{0}\cube{1}{1}{0}
+\node[below,yshift=-6pt] at (1.2,0) {$\text{模块}\textcircled{3}$};
+\end{scope}
+\begin{scope}[shift={(0,-3.2)}]
+\cube{1}{0}{1}\cube{2}{0}{1}\cube{0}{0}{0}\cube{1}{0}{0}
+\node[below,yshift=-6pt] at (1.05,0) {$\text{模块}\textcircled{4}$};
+\end{scope}
+\begin{scope}[shift={(2.6,-3.2)}]
+\cube{1}{0}{1}\cube{0}{0}{0}\cube{1}{0}{0}\cube{1}{1}{0}
+\node[below,yshift=-6pt] at (0.95,0) {$\text{模块}\textcircled{5}$};
+\end{scope}
+\begin{scope}[shift={(5.0,-3.2)}]
+\cube{0}{0}{2}\cube{1}{0}{2}\cube{2}{0}{2}\cube{0}{1}{2}\cube{1}{1}{2}\cube{2}{1}{2}
+\cube{0}{0}{1}\cube{1}{0}{1}\cube{2}{0}{1}\cube{0}{1}{1}\cube{1}{1}{1}
+\cube{0}{0}{0}\cube{1}{0}{0}\cube{2}{0}{0}\cube{0}{1}{0}
+\node[below,yshift=-6pt] at (1.1,0) {$\text{模块}\textcircled{6}$};
+\end{scope}
+\end{tikzpicture}

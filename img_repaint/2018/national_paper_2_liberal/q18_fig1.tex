@@ -1,0 +1,33 @@
+% 2000-2016环境基础设施投资额折线图,17点逐值标注,y单位亿元.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template line, exam statistical template wide,
+  xmin=1999.5,xmax=2016.5,ymin=0,
+  xtick={2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016},
+  xticklabel style={/pgf/number format/1000 sep={},rotate=45,anchor=east},
+  ytick={0,20,40,60,80,100,120,140,160,180,200,220,240},
+  ymax=250]
+\addplot[mark=*,mark size=1.6pt] coordinates
+  {(2000,11) (2001,19) (2002,25) (2003,35) (2004,37) (2005,42) (2006,42)
+   (2007,47) (2008,53) (2009,56) (2010,122) (2011,129) (2012,148)
+   (2013,171) (2014,184) (2015,209) (2016,220)};
+\node[anchor=east] at (axis cs:2000,11) {11};
+\node[anchor=south] at (axis cs:2001,19) {19};
+\node[anchor=south] at (axis cs:2002,25) {25};
+\node[anchor=south] at (axis cs:2003,35) {35};
+\node[anchor=south] at (axis cs:2004,37) {37};
+\node[anchor=south] at (axis cs:2005,42) {42};
+\node[anchor=south] at (axis cs:2006,42) {42};
+\node[anchor=south] at (axis cs:2007,47) {47};
+\node[anchor=south] at (axis cs:2008,53) {53};
+\node[anchor=south] at (axis cs:2009,56) {56};
+\node[anchor=east] at (axis cs:2010,122) {122};
+\node[anchor=south] at (axis cs:2011,129) {129};
+\node[anchor=south] at (axis cs:2012,148) {148};
+\node[anchor=south] at (axis cs:2013,171) {171};
+\node[anchor=south] at (axis cs:2014,184) {184};
+\node[anchor=south east] at (axis cs:2015,209) {209};
+\node[anchor=west] at (axis cs:2016,220) {220};
+\examstatylabel{筹资额}
+\examstatxlabel{年份}
+\end{axis}
+\end{tikzpicture}

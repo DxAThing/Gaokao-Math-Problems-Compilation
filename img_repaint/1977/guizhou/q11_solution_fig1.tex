@@ -1,0 +1,36 @@
+% first-quadrant axes, P=(3,4), Q=(0,10), arrow P->Q; linear scales exact
+\begin{tikzpicture}[x=0.8cm,y=0.55cm,line width=0.6pt,>=Stealth]
+  % axes
+  \draw[draw=black,->] (0,0) -- (7.2,0);
+  \draw[draw=black,->] (0,0) -- (0,11.4);
+  % ticks
+  \foreach \x in {2,4,6} {\draw[draw=black] (\x,0.12) -- (\x,-0.12);}
+  \foreach \y in {2,4,6,8,10} {\draw[draw=black] (0.12,\y) -- (-0.12,\y);}
+  \node[font=\normalsize,anchor=north] at (2,-0.35) {$2$};
+  \node[font=\normalsize,anchor=north] at (4,-0.35) {$4$};
+  \node[font=\normalsize,anchor=north] at (6,-0.35) {$6$};
+  \node[font=\normalsize,anchor=east] at (-0.35,2) {$2$};
+  \node[font=\normalsize,anchor=east] at (-0.35,4) {$4$};
+  \node[font=\normalsize,anchor=east] at (-0.35,6) {$6$};
+  \node[font=\normalsize,anchor=east] at (-0.35,8) {$8$};
+  \node[font=\normalsize,anchor=east] at (-0.35,10) {$10$};
+  \node[font=\normalsize,anchor=north east] at (-0.15,-0.35) {$0$};
+  % dashed projections of P
+  \draw[draw=black,dashed] (0,4) -- (3,4) -- (3,0);
+  % points
+  \fill (3,4) circle (1.6pt);
+  \fill (0,10) circle (1.6pt);
+  % direction arrow P -> Q
+  \draw[draw=black,thick,->,shorten >=2pt,shorten <=2pt] (3,4) -- (0,10);
+  % labels offset clear
+  \node[font=\normalsize,anchor=west] at (3.25,4) {$(3,4)$};
+  \node[font=\normalsize,anchor=west] at (0.25,10.3) {$(0,10)$};
+  \node[font=\normalsize,anchor=west] at (1.55,7.4) {$\vec{l}$};
+  \node[font=\normalsize,anchor=west] at (7.3,-0.15) {$x$};
+  \node[font=\normalsize,anchor=south] at (0.35,11.4) {$y$};
+  % unit vectors at origin
+  \draw[draw=black,->] (0,0.15) -- (0,0.9);
+  \node[font=\normalsize,anchor=east] at (-0.3,0.55) {$\vec{\jmath}$};
+  \draw[draw=black,->] (0.15,0) -- (0.9,0);
+  \node[font=\normalsize,anchor=north] at (0.55,-0.35) {$\vec{\imath}$};
+\end{tikzpicture}

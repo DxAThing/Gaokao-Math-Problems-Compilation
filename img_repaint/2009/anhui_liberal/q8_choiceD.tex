@@ -1,0 +1,16 @@
+% 2009_anhui_liberal_q8_choiceD : xOy option graph, cubic family
+\usetikzlibrary{arrows.meta}
+\begingroup
+\def\qa{0.4}\def\qb{2.4}
+\begin{tikzpicture}[line width=.6pt,>=stealth,font=\normalsize]
+\draw[->] (-0.8,0)--(3.2,0) node[below right,inner sep=2pt]{$x$};
+\draw[->] (0,-1.15)--(0,1.65) node[above left,inner sep=2pt]{$y$};
+\node[below left,inner sep=2pt] at (0,0) {$O$};
+\node at (\qa+0.14,-0.34) {$a$};
+\node at (\qb-0.14,-0.34) {$b$};
+\begin{scope}
+\clip (-0.83,-1.12) rectangle (3.18,1.62);
+\draw[domain=0.00:3.25,samples=400] plot (\x,{((\x-\qa))*((\x-\qb)*(\x-\qb))});
+\end{scope}
+\end{tikzpicture}
+\endgroup

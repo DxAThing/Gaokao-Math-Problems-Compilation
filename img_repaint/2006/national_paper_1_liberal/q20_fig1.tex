@@ -1,0 +1,35 @@
+\begin{tikzpicture}[line width=.6pt]
+\coordinate (A) at (-1.6,0.1);
+\coordinate (M) at (-0.5,-1.05);
+\coordinate (B) at (0.6,-2.2);
+\coordinate (N) at (3,-1.05);
+\coordinate (C) at (3.0,2.3);
+\coordinate (L1a) at (-2.7,1.25);
+\coordinate (L1b) at (1.7,-3.35);
+\coordinate (L2a) at (3.0,3.6);
+\coordinate (L2b) at (3.0,-3.1);
+\coordinate (ANm) at (1.25,-0.55);
+\coordinate (MNm) at (1.5,-1.05);
+% l1, l2
+\draw (L1a) -- (L1b);
+\draw (L2a) -- (L2b);
+% triangle ABC
+\draw (A) -- (C);
+\draw (B) -- (C);
+% BN
+\draw (B) -- (N);
+% MN: dashed M to MNmid, solid MNmid to N
+\draw[dashed] (M) -- (MNm);
+\draw (MNm) -- (N);
+% AN: dashed A to ANmid, solid ANmid to N
+\draw[dashed] (A) -- (ANm);
+\draw (ANm) -- (N);
+% labels with clearance
+\node[below left=3pt] at (A) {$A$};
+\node[below left=3pt] at (M) {$M$};
+\node[below=4pt] at (B) {$B$};
+\node[right=3pt] at (N) {$N$};
+\node[right=3pt] at (C) {$C$};
+\node[left=4pt] at (L1a) {$l_{1}$};
+\node[left=4pt] at (L2a) {$l_{2}$};
+\end{tikzpicture}

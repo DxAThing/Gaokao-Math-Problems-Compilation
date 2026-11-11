@@ -1,0 +1,11 @@
+% 心形曲线C:x^2+y^2=1+|x|y，由公式上下支生成，非拟形；y=(|x|+-sqrt(4-3x^2))/2,|x|<=2/sqrt(3)
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,
+  geometry label/.style={font=\normalsize,inner sep=2pt}]
+\draw[->] (-2.0,0)--(2.0,0) node[right] {$x$};
+\draw[->] (0,-1.8)--(0,1.8) node[above] {$y$};
+\node[geometry label,below right] at (0,0) {$O$};
+\draw[solid,line width=.6pt]
+  plot[domain=-1.1547:1.1547,samples=140,smooth] (\x,{(abs(\x)+sqrt(4-3*\x*\x))/2})
+  -- plot[domain=1.1547:-1.1547,samples=140,smooth] (\x,{(abs(\x)-sqrt(4-3*\x*\x))/2})
+  -- cycle;
+\end{tikzpicture}

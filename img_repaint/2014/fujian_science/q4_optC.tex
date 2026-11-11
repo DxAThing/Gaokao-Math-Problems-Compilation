@@ -1,0 +1,11 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-2.00,0) -- (1.85,0) node[below right,inner sep=0pt,xshift=1pt,yshift=-2pt] {$x$};
+\draw[->] (0,-2.55) -- (0,2.40) node[above left,inner sep=0pt,xshift=-1pt,yshift=2pt] {$y$};
+\draw[dashed] (1,0) -- (1,1) -- (0,1);
+\draw[domain=-1.20:1.20,samples=160] plot ({\x*\x*\x},{\x});
+\node[anchor=north east,inner sep=0pt] at (-0.12,-0.12) {$O$};
+\node[anchor=east,inner sep=0pt] at (-0.12,1) {$1$};
+\node[below,inner sep=0pt,yshift=-2pt] at (1,0) {$1$};
+\node[anchor=south,inner sep=0pt,yshift=3pt] at (1.728,1.2) {$y=(-x)^a$};
+\end{tikzpicture}

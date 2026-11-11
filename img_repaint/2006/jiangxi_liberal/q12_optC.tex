@@ -1,0 +1,42 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=0.25cm,y=0.25cm,line width=.6pt,>=Stealth,font=\normalsize]
+\coordinate (C0) at (0,0);
+\coordinate (C4) at (4,-0.6);
+\coordinate (CM) at (5.4,-1.95);
+\coordinate (C8) at (8,0);
+\coordinate (C12) at (12,8);
+\coordinate (C16) at (16,4);
+\coordinate (C20) at (20,9);
+\coordinate (C24) at (24,16);
+\draw[->] (0,0)--(26.5,0);
+\node[right,inner sep=0pt,xshift=2pt] at (26.5,0) {$t$};
+\draw[->] (0,-3)--(0,18.5);
+\node[above,inner sep=0pt,yshift=2pt] at (0,18.5) {$C(t)$};
+\node[below left,inner sep=0pt] at (0,0) {$O$};
+\draw (4,0)--(4,0.6);
+\draw (8,0)--(8,0.6);
+\draw (12,0)--(12,0.6);
+\draw (16,0)--(16,0.6);
+\draw (20,0)--(20,0.6);
+\draw (24,0)--(24,0.6);
+\draw (0,4)--(-0.6,4);
+\draw (0,16)--(-0.6,16);
+\node[above,inner sep=0pt,yshift=7pt] at (4,0) {$4$};
+\node[below,inner sep=0pt,yshift=-4pt] at (8,0) {$8$};
+\node[below,inner sep=0pt,yshift=-4pt] at (12,0) {$12$};
+\node[below,inner sep=0pt,yshift=-4pt] at (16,0) {$16$};
+\node[below,inner sep=0pt,yshift=-4pt] at (20,0) {$20$};
+\node[below,inner sep=0pt,yshift=-4pt] at (24,0) {$24$};
+\node[left,inner sep=1pt,xshift=-4pt] at (0,4) {$4$};
+\node[left,inner sep=1pt,xshift=-4pt] at (0,16) {$16$};
+\draw[dashed] (0,16)--(24,16);
+\draw[dashed] (4,0)--(4,-0.6);
+\draw[dashed] (12,0)--(12,8);
+\draw[dashed] (16,0)--(16,4);
+\draw[dashed] (24,0)--(24,16);
+\draw (C0) .. controls (1.3,-1.5) and (2.8,-1.95) .. (4,-1.95)
+ .. controls (6,-1.95) and (7,-1.5) .. (C8)
+ .. controls (9.5,2.5) and (10.5,8) .. (C12)
+ .. controls (13.5,8) and (14.5,4) .. (C16)
+ .. controls (18,4) and (21,11) .. (C24);
+\end{tikzpicture}

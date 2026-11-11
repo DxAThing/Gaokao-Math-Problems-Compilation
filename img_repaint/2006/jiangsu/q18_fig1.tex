@@ -1,0 +1,42 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% hexagonal tent: top face centre (0,0.3), radius 1.3, y-flatten 0.55
+\coordinate (H0) at (1.3,0.3);
+\coordinate (H1) at (0.65,0.919);
+\coordinate (H2) at (-0.65,0.919);
+\coordinate (H3) at (-1.3,0.3);
+\coordinate (H4) at (-0.65,-0.319);
+\coordinate (H5) at (0.65,-0.319);
+\coordinate (G0) at (1.3,-0.6);
+\coordinate (G1) at (0.65,0.019);
+\coordinate (G2) at (-0.65,0.019);
+\coordinate (G3) at (-1.3,-0.6);
+\coordinate (G4) at (-0.65,-1.219);
+\coordinate (G5) at (0.65,-1.219);
+\coordinate (O) at (0,2.0);
+\coordinate (Oone) at (0,-0.6);
+% top face front solid, back dashed
+\draw[solid] (H3)--(H4)--(H5)--(H0);
+\draw[dashed] (H0)--(H1)--(H2)--(H3);
+% bottom face front solid, back dashed
+\draw[solid] (G3)--(G4)--(G5)--(G0);
+\draw[dashed] (G0)--(G1)--(G2)--(G3);
+% vertical prism edges
+\draw[solid] (H3)--(G3);
+\draw[solid] (H4)--(G4);
+\draw[solid] (H5)--(G5);
+\draw[solid] (H0)--(G0);
+\draw[dashed] (H1)--(G1);
+\draw[dashed] (H2)--(G2);
+% pyramid laterals
+\draw[solid] (O)--(H3);
+\draw[solid] (O)--(H4);
+\draw[solid] (O)--(H5);
+\draw[solid] (O)--(H0);
+\draw[dashed] (O)--(H1);
+\draw[dashed] (O)--(H2);
+% altitude
+\draw[dashed] (O)--(Oone);
+\fill (Oone) circle (1.4pt);
+\node[above right,xshift=3pt,yshift=2pt] at (O) {$O$};
+\node[right,xshift=-1pt,yshift=0pt] at (Oone) {$O_{1}$};
+\end{tikzpicture}

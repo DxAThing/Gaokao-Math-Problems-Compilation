@@ -1,0 +1,16 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=0.72cm,y=13cm,line width=.6pt,font=\normalsize,>=Stealth]
+\def\FL{-ln(abs(\x))/(\x*\x+2)}
+\def\FR{ln(abs(\x))/(\x*\x+2)}
+\draw[->] (-4.2,0)--(4.2,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-0.215)--(0,0.205) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw (-0.06,0.15)--(0.06,0.15);
+\node[left=2pt,inner sep=0pt,yshift=2pt] at (0,0.15) {$0.15$};
+\begin{scope}
+\clip (-4.0,-0.205) rectangle (4.0,0.12);
+\draw[domain=-3.8:-0.76,samples=240] plot (\x,{\FL});
+\draw[domain=0.62:3.8,samples=240] plot (\x,{\FR});
+\end{scope}
+\node[below left=2pt and 1pt,inner sep=0pt] at (0,0) {$O$};
+\node[below right=2pt and 1pt,inner sep=0pt] at (1,0) {$1$};
+\end{tikzpicture}

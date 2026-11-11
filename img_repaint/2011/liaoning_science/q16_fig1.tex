@@ -1,0 +1,23 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (Y1) at (0,1.4);
+\coordinate (A1) at (-1.6493361431,0);
+\coordinate (A2) at (0.5497787144,0);
+\coordinate (A3) at (2.7488935719,0);
+\coordinate (Z1) at (-0.5497787144,0);
+\coordinate (Z2) at (1.6493361431,0);
+\draw[->] (-2.8,0)--(4.9,0);
+\draw[->] (0,-3.5)--(0,3.5);
+\node[right,inner sep=0pt,xshift=2pt] at (4.9,0) {$x$};
+\node[above,inner sep=0pt,yshift=2pt] at (0,3.5) {$y$};
+\draw[dashed] (-1.6493361431,-3.22)--(-1.6493361431,3.22);
+\draw[dashed] (0.5497787144,-3.22)--(0.5497787144,3.22);
+\draw[dashed] (2.7488935719,-3.22)--(2.7488935719,3.22);
+\draw[domain=-0.9558876401:0.1704894767,samples=241] plot ({1.4*\x},{1.4*tan(deg(2*\x+pi/4))});
+\draw[domain=0.6149086866:1.7412858035,samples=241] plot ({1.4*\x},{1.4*tan(deg(2*\x+pi/4))});
+\node[below left,inner sep=1pt] at (-0.06,-0.06) {$O$};
+\node[anchor=east,inner sep=0pt,xshift=-2pt] at (Y1) {$1$};
+\node[anchor=north,inner sep=1pt] at (0.88,-0.14) {$\frac{\pi}{8}$};
+\node[anchor=north west,inner sep=1pt] at (1.76,-0.16) {$\frac{3\pi}{8}$};
+\end{tikzpicture}

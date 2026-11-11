@@ -1,0 +1,33 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  solid edge/.style={solid},
+  hidden edge/.style={dashed}]
+% Schematic perspective; PA perpendicular to base ABCD, E midpoint of AD, F midpoint of PC.
+\coordinate (P) at (-2.6,3.6);
+\coordinate (A) at (-2.6,0.2);
+\coordinate (B) at (-4,-2);
+\coordinate (C) at (1.6,-2);
+\coordinate (D) at (3,0.2);
+\coordinate (E) at (0.2,0.2);
+\coordinate (F) at (-0.5,0.8);
+% base: front BC and right CD visible; back AD and left AB hidden
+\draw[solid edge] (B)--(C);
+\draw[solid edge] (C)--(D);
+\draw[hidden edge] (A)--(E)--(D);
+\draw[hidden edge] (A)--(B);
+% lateral edges: PB, PD, PC visible; PA hidden vertical
+\draw[solid edge] (P)--(B);
+\draw[solid edge] (P)--(D);
+\draw[solid edge] (P)--(F)--(C);
+\draw[hidden edge] (P)--(A);
+% interior segments
+\draw[solid edge] (B)--(F);
+\draw[hidden edge] (B)--(E);
+\draw[hidden edge] (F)--(E);
+\node[above] at (P) {$P$};
+\node[left] at (A) {$A$};
+\node[below left] at (B) {$B$};
+\node[below right] at (C) {$C$};
+\node[right] at (D) {$D$};
+\node[below,xshift=6.00bp,yshift=2.00bp] at (E) {$E$};
+\node[above right] at (F) {$F$};
+\end{tikzpicture}

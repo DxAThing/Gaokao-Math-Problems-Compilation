@@ -1,0 +1,39 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=stealth,
+  solid edge/.style={solid,line width=.6pt},
+  hidden edge/.style={dashed,line width=.6pt,dash pattern=on 3pt off 2.5pt}]
+\coordinate (A) at (1.0,1.0);
+\coordinate (P) at (1.0,5.5);
+\coordinate (D) at (6.5,1.0);
+\coordinate (B) at (0.0,-0.8);
+\coordinate (C) at (2.7500000000,-0.8000000000);
+\coordinate (E) at (2.3750000000,4.3750000000);
+\coordinate (F) at (2.3750000000,1.0000000000);
+\coordinate (Zt) at (1.0,6.4);
+\coordinate (Yt) at (7.4,1.0);
+\coordinate (Xt) at (-0.5000000000,-1.7000000000);
+\draw[hidden edge] (A)--(D);
+\draw[solid edge] (B)--(C);
+\draw[solid edge] (C)--(D);
+\draw[hidden edge] (A)--(B);
+\draw[hidden edge] (P)--(A);
+\draw[solid edge] (P)--(B);
+\draw[solid edge] (P)--(C);
+\draw[solid edge] (P)--(D);
+\draw[hidden edge] (A)--(E);
+\draw[hidden edge] (B)--(E);
+\draw[hidden edge] (E)--(F);
+% axis extensions beyond vertices
+\draw[solid edge,->] (P)--(Zt);
+\draw[solid edge,->] (D)--(Yt);
+\draw[solid edge,->] (B)--(Xt);
+\node[left,xshift=0pt,yshift=0pt] at (P) {$P$};
+\node[left,xshift=-3pt,yshift=3pt] at (A) {$A$};
+\node[above left,xshift=0pt,yshift=0pt] at (B) {$B$};
+\node[below right,xshift=0pt,yshift=0pt] at (C) {$C$};
+\node[right,xshift=-1pt,yshift=7pt] at (D) {$D$};
+\node[above right,xshift=0pt,yshift=0pt] at (E) {$E$};
+\node[above right,xshift=0pt,yshift=0pt] at (F) {$F$};
+\node[above,xshift=0pt,yshift=0pt] at (Zt) {$z$};
+\node[below,xshift=0pt,yshift=0pt] at (Yt) {$y$};
+\node[below,xshift=0pt,yshift=0pt] at (Xt) {$x$};
+\end{tikzpicture}

@@ -1,0 +1,37 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0.6,4.2);
+\coordinate (B) at (-1.2,3.2);
+\coordinate (C) at (1.8,3.2);
+\coordinate (M) at (-0.165,2.175);
+\coordinate (P) at (-1.84,1.44);
+\coordinate (N) at (0.92,0.78);
+\coordinate (Aone) at (-1.1,-0.3);
+\coordinate (Bone) at (-2.8,-1.2);
+\coordinate (Cone) at (0.2,-1.2);
+% top triangle
+\draw[solid] (A) -- (B);
+\draw[solid] (A) -- (C);
+\draw[solid] (B) -- (C);
+% laterals
+\draw[solid] (B) -- (Bone);
+\draw[solid] (C) -- (Cone);
+\draw[solid] (Bone) -- (Cone);
+% hidden base and axis
+\draw[dashed] (Bone) -- (Aone);
+\draw[dashed] (Aone) -- (Cone);
+\draw[dashed] (A) -- (M);
+\draw[dashed] (M) -- (Aone);
+% section triangle PMN
+\draw[dashed] (P) -- (M);
+\draw[dashed] (M) -- (N);
+\draw[solid] (P) -- (N);
+\node[above,yshift=5pt] at (A) {$A$};
+\node[left,xshift=-5pt] at (B) {$B$};
+\node[right,xshift=5pt] at (C) {$C$};
+\node[left,xshift=-5pt] at (P) {$P$};
+\node[above right,xshift=4pt,yshift=3pt] at (M) {$M$};
+\node[right,xshift=5pt] at (N) {$N$};
+\node[below left,xshift=-4pt,yshift=-5pt] at (Bone) {$B_{1}$};
+\node[below right,xshift=4pt,yshift=-5pt] at (Cone) {$C_{1}$};
+\node[right,xshift=4pt,yshift=-2pt] at (Aone) {$A_{1}$};
+\end{tikzpicture}

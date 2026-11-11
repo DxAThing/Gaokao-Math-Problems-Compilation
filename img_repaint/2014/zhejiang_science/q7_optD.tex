@@ -1,0 +1,22 @@
+% Source: inputs/original_03.pdf p.1 (printed 927), Q7 option D.
+% Correct option: representative f=x^{1/2} and g=log_{1/2}x share a=1/2.
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.75cm,y=1.75cm,line width=.6pt,>=Stealth,font=\normalsize]
+\def\zsdF{0.5}
+\def\zsdG{0.5}
+\draw[->] (-0.75,0)--(2.3,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-2.35)--(0,2.65) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\coordinate (O) at (0,0);
+\coordinate (Pone) at (1,1);
+\coordinate (Gone) at (1,0);
+\coordinate (Gneg) at (1,-1);
+\draw[dashed] (0,1)--(1.62,1);
+\draw[dashed] (0,-1)--(1.62,-1);
+\draw[dashed] (1,-2.2)--(1,2.45);
+\draw[domain=0:1.56,samples=160] plot (\x,{pow(\x,\zsdF)});
+\draw[domain=0.29:1.76,samples=160] plot (\x,{ln(\x)/ln(\zsdG)});
+\node[left,inner sep=2pt] at (0,1) {$1$};
+\node[left,inner sep=2pt] at (0,-1) {$-1$};
+\node[below left,inner sep=2pt] at (0.98,-0.03) {$1$};
+\node[below left,inner sep=2pt] at (O) {$O$};
+\end{tikzpicture}

@@ -1,0 +1,16 @@
+\begin{tikzpicture}[x=1.6cm,y=1.1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  opt edge/.style={solid,line width=.6pt}]
+% axes
+\draw[opt edge,->] (-0.45,0)--(1.75,0) node[right] {$x$};
+\draw[opt edge,->] (0,-1.9)--(0,2.1) node[above] {$y$};
+\draw[opt edge] (1,-0.06)--(1,0.06);
+\node[below right,xshift=2pt,yshift=-3pt] at (1,0) {$1$};
+\node[below left,xshift=-2pt,yshift=-1pt] at (0,0) {$O$};
+% tick marks 1 and -1 on y, 1 on x
+\draw[opt edge] (-0.05,1)--(0.08,1) node[left,xshift=-3pt] {$1$};
+\draw[opt edge] (-0.05,-1)--(0.08,-1) node[left,xshift=-3pt] {$-1$};
+% closed region: top curve y=0.45+0.35x+0.70x^2, bottom mirrored, right x=1
+\draw[opt edge,domain=0:1,samples=80] plot (\x,{0.45+0.35*\x+0.70*\x*\x});
+\draw[opt edge,domain=0:1,samples=80] plot (\x,{-(0.45+0.35*\x+0.70*\x*\x)});
+\draw[opt edge] (1,{0.45+0.35+0.70})--(1,{-(0.45+0.35+0.70)});
+\end{tikzpicture}

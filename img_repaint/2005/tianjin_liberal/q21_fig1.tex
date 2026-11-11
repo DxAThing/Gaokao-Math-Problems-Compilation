@@ -1,0 +1,35 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt]
+\coordinate (O) at (0,0);
+\coordinate (A) at (3,0);
+\coordinate (B) at (0,3.3);
+\coordinate (C) at (0,4.5);
+\coordinate (BL) at (-0.18,3.3);
+\coordinate (BR) at (0.18,3.3);
+\coordinate (P) at (6,1.5);
+\coordinate (SLOPE_END) at (9.5,3.25);
+\coordinate (GROUND_END) at (10.2,0);
+% dashed references first
+\draw[dashed,line width=.6pt] (O) -- (B);
+\draw[dashed,line width=.6pt] (O) -- (GROUND_END);
+% slope l
+\draw[solid,line width=.6pt] (A) -- (SLOPE_END);
+% sight segments
+\draw[solid,line width=.6pt] (P) -- (B);
+\draw[solid,line width=.6pt] (P) -- (C);
+% tower triangle
+\draw[solid,line width=.6pt] (C) -- (BL) -- (BR) -- cycle;
+% right-angle tick at O
+\draw[solid,line width=.6pt] (0.3,0) -- (0.3,0.3) -- (0,0.3);
+% point labels
+\node[inner sep=2pt,font=\normalsize,anchor=north east] at (-0.12,-0.12) {$O$};
+\node[inner sep=2pt,font=\normalsize,anchor=north] at (3,-0.14) {$A$};
+\node[inner sep=2pt,font=\normalsize,anchor=east] at (-0.36,3.3) {$B$};
+\node[inner sep=2pt,font=\normalsize,anchor=south] at (-0.05,4.68) {$C$};
+\node[inner sep=2pt,font=\normalsize,anchor=north west] at (6.14,1.28) {$P$};
+% alpha inside wedge with clearance
+\node[inner sep=2pt,font=\normalsize,anchor=west] at (4.55,0.35) {$\alpha$};
+% slope + ground labels outside strokes
+\node[inner sep=2pt,font=\normalsize,anchor=south west] at (9.78,3.55) {$l$（山坡）};
+\node[inner sep=2pt,font=\normalsize,anchor=west] at (8.5,0.32) {水平地面};
+\end{tikzpicture}

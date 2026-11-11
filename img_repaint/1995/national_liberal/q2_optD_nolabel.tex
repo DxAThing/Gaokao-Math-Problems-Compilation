@@ -1,0 +1,10 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-3.2,0)--(3.2,0) node[anchor=west,xshift=2pt] {$x$};
+\draw[->] (0,-2.6)--(0,2.6) node[anchor=south,yshift=2pt] {$y$};
+\draw[dashed] (-1,-2.6)--(-1,2.6);
+\node[anchor=north west,xshift=3pt,yshift=-3pt] at (0,0) {$O$};
+\node[anchor=north east,xshift=-2pt,yshift=-3pt] at (-1,0) {$-1$};
+% y = 1/(x+1): left branch lower, right branch upper (correct option D)
+\draw[domain=-2.9:-1.34,samples=80,smooth] plot (\x,{1/(\x+1)});
+\draw[domain=-0.66:2.9,samples=80,smooth] plot (\x,{1/(\x+1)});
+\end{tikzpicture}

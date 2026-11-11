@@ -1,0 +1,35 @@
+\begin{tikzpicture}[x=1.8cm,y=1.8cm,line width=.6pt]
+\tikzset{pt/.style={circle,fill=black,inner sep=1.1pt}}
+% ellipse x^2/3+y^2=1
+\draw[black] plot[domain=0:360,samples=240] ({sqrt(3)*cos(\x)},{sin(\x)});
+% axes
+\draw[black,-{Stealth}] (-2.1,0)--(2.1,0) node[right=2pt] {$x$};
+\draw[black,-{Stealth}] (0,-1.5)--(0,1.5) node[above=2pt] {$y$};
+% computed: F1,F2,K,A,B,G,I
+\coordinate (F1) at (-1.41421356,0);
+\coordinate (F2) at (1.41421356,0);
+\coordinate (O) at (0,0);
+\coordinate (K) at (0.47140452,0);
+\coordinate (A) at (-0.4880720209,-0.9594765417);
+\coordinate (B) at (1.1951788021,0.7237742813);
+\coordinate (G) at (-0.4714045208,-0.9428090416);
+\coordinate (I) at (0.9428090416,0.4714045208);
+% quadrilateral + chord
+\draw[black] (F1)--(B)--(F2)--(A)--(F1);
+\draw[black] (A)--(G)--(I)--(B);
+% blue(aux gray) : F1F2, F1G, F2I, G-I middle
+\draw[black!55] (F1)--(F2);
+\draw[black!55] (F1)--(G);
+\draw[black!55] (F2)--(I);
+\draw[black!55] (G)--(I);
+\foreach \p in {F1,F2,O,K,A,B,G,I}{\node[pt] at (\p) {};}
+\node[below left=2pt,xshift=-9pt,yshift=-5pt] at (F1) {$F_{1}$};
+\node[below right=2pt,xshift=-7pt,yshift=3pt] at (F2) {$F_{2}$};
+\node[below left=2pt] at (O) {$O$};
+\node[below=2pt] at (K) {$K$};
+\node[below right=2pt] at (A) {$A$};
+\node[above right=2pt] at (B) {$B$};
+\node[above=3pt] at (G) {$G$};
+\node[right=2pt] at (I) {$I$};
+\end{tikzpicture}
+

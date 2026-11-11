@@ -1,0 +1,61 @@
+\usetikzlibrary{patterns}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt]
+\coordinate (CLA) at (0,0);
+\coordinate (CLT) at (-2.8,2.8);
+\coordinate (CRT) at (2.8,2.8);
+\coordinate (AX0) at (0,2.8);
+\coordinate (WL) at (-1.2,1.2);
+\coordinate (WR) at (1.2,1.2);
+\coordinate (RLT) at (5.6,2.8);
+\coordinate (RRT) at (8.4,2.8);
+\coordinate (RLB) at (5.6,0);
+\coordinate (RRB) at (8.4,0);
+\coordinate (AX1) at (7.0,2.8);
+\coordinate (WRL) at (5.6,1.2);
+\coordinate (WRR) at (8.4,1.2);
+% cone + cylinder outlines
+\draw[solid] (CLT) -- (CRT);
+\draw[solid] (CLT) -- (CLA);
+\draw[solid] (CRT) -- (CLA);
+\draw[solid] (RLT) -- (RRT);
+\draw[solid] (RLT) -- (RLB);
+\draw[solid] (RRT) -- (RRB);
+\draw[solid] (RLB) -- (RRB);
+% dashed axes with bottom tips
+\draw[dashed] (0,2.95) -- (0,-0.28);
+\draw[solid] (0,-0.28) -- (0,-0.45);
+\draw[dashed] (7.0,2.95) -- (7.0,-0.28);
+\draw[solid] (7.0,-0.28) -- (7.0,-0.45);
+% water surfaces
+\draw[solid] (WL) -- (WR);
+\draw[solid] (WRL) -- (WRR);
+% tapered waves split around axes (gap 0.15 each side)
+\draw[dashed] (-0.78,0.90) -- (-0.15,0.90);
+\draw[dashed] (0.15,0.90) -- (0.78,0.90);
+\draw[dashed] (-0.48,0.60) -- (-0.15,0.60);
+\draw[dashed] (0.15,0.60) -- (0.48,0.60);
+\draw[dashed] (-0.20,0.32) -- (-0.10,0.32);
+\draw[dashed] (0.10,0.32) -- (0.20,0.32);
+\draw[dashed] (5.75,0.90) -- (6.85,0.90);
+\draw[dashed] (7.15,0.90) -- (8.25,0.90);
+\draw[dashed] (5.75,0.60) -- (6.85,0.60);
+\draw[dashed] (7.15,0.60) -- (8.25,0.60);
+\draw[dashed] (5.75,0.32) -- (6.85,0.32);
+\draw[dashed] (7.15,0.32) -- (8.25,0.32);
+% a vertical total height left of cone
+\draw[dimension extension] (-2.8,2.8) -- (-3.65,2.8);
+\draw[dimension extension] (0,0) -- (-3.65,0);
+\draw[dimension line] (-3.45,0) -- node[dimension label vertical] {$a$} (-3.45,2.8);
+% a horizontal half-width above cone rim
+\draw[dimension extension] (-2.8,2.8) -- (-2.8,3.30);
+\draw[dimension extension] (0,2.8) -- (0,3.30);
+\draw[dimension line] (-2.8,3.10) -- node[dimension label] {$a$} (0,3.10);
+% a/2 above cylinder rim
+\draw[dimension extension] (5.6,2.8) -- (5.6,3.30);
+\draw[dimension extension] (7.0,2.8) -- (7.0,3.30);
+\draw[dimension line] (5.6,3.10) -- node[dimension label] {$\frac{a}{2}$} (7.0,3.10);
+% h adjacent to cone (short extensions, no wall crossing)
+\draw[dimension extension] (0,0) -- (1.90,0);
+\draw[dimension extension] (1.2,1.2) -- (1.90,1.2);
+\draw[dimension line] (1.70,0) -- node[dimension label vertical] {$h$} (1.70,1.2);
+\end{tikzpicture}

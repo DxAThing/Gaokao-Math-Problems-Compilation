@@ -1,54 +1,30 @@
-% Source PDF: source/普通高考/2013/2013四川理.pdf, page 2 (question 18).
-% Node -> directed-edge list: start -> input x -> x even?;
-% no -> y=1 -> merge; yes -> x divisible by 3?;
-% second yes -> y=3 -> merge; second no -> y=2 -> merge;
-% merge -> output y -> finish. The three incoming merge arrows and the
-% independent downward arrow into output are all preserved from the source.
-\begin{tikzpicture}[
-  >=Stealth,
-  line width=0.45pt,
-  line cap=round,
-  line join=round,
-  font=\normalsize,
-  flow/.style={draw,anchor=center,align=center,inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}}},
-  every node/.style={anchor=center,align=center,
-    execute at begin node={\setlength{\parindent}{0pt}}},
-  terminal/.style={flow,rounded corners=0.18cm,minimum width=1.45cm,minimum height=0.70cm},
-  io/.style={flow,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
-    minimum width=2.20cm,minimum height=0.76cm},
-  process/.style={flow,minimum height=0.72cm,minimum width=2.05cm},
-  decision/.style={flow,diamond,aspect=2.6,inner sep=1pt,minimum width=4.25cm,minimum height=1.00cm},
-  branchlabel/.style={inner sep=0pt,anchor=center,align=center,
-    execute at begin node={\setlength{\parindent}{0pt}}},
-]
-  \node[terminal] (start) at (0,11.15) {开始};
-  \node[io] (input) at (0,9.75) {输入 $x$};
-  \node[decision,minimum width=4.55cm] (parity) at (0,8.15) {$x\text{ 为偶数?}$};
-  \node[process,minimum width=1.85cm] (yone) at (4.05,8.15) {$y=1$};
-  \node[decision,minimum width=5.05cm] (div3) at (0,6.45) {$x\text{ 能被 3 整除?}$};
-  \node[process,minimum width=1.85cm] (ytwo) at (-4.05,6.45) {$y=2$};
-  \node[process,minimum width=1.85cm] (ythree) at (0,5.00) {$y=3$};
-  \coordinate (merge) at (0,3.95);
-  \node[io,minimum width=2.30cm] (output) at (0,3.05) {输出 $y$};
-  \node[terminal] (finish) at (0,1.55) {结束};
-
-  \draw[->] (start.south) -- (input.north);
-  \draw[->] (input.south) -- (parity.north);
-  \draw[->] (parity.east) -- (4.05,8.15) -- (yone.west);
-  \draw[->] (parity.south) -- (div3.north);
-  \draw[->] (div3.west) -- (-4.05,6.45) -- (ytwo.east);
-  \draw[->] (div3.south) -- (ythree.north);
-
-  % Three branch outputs converge at the source's explicit merge point.
-  \draw (yone.south) -- (4.05,3.95) -- (0.35,3.95) -- (merge);
-  \draw (ytwo.south) -- (-4.05,3.95) -- (-0.35,3.95) -- (merge);
-  \draw (ythree.south) -- (0,4.30) -- (merge);
-  \draw[->] (merge) -- (output.north);
-  \draw[->] (output.south) -- (finish.north);
-
-  \node[branchlabel,anchor=south] at (3.35,8.78) {否};
-  \node[branchlabel,anchor=west] at (0.20,7.46) {是};
-  \node[branchlabel,anchor=east] at (-3.35,6.95) {否};
-  \node[branchlabel,anchor=west] at (0.20,5.75) {是};
+% 2013_sichuan_science_q18_fig1 first draft (原位图与文科q18同构: x偶数/y分支)
+% nodes/edges 同 2013_sichuan_liberal_q18_fig1
+\begin{tikzpicture}[x=1mm,y=1mm,line width=0.5pt,>=Stealth,
+  every node/.append style={execute at begin node={\setlength{\parindent}{0pt}}},
+  term/.style={draw,shape=rectangle,rounded corners=1.5mm,align=center,inner xsep=3mm,inner ysep=1.5mm,minimum width=26mm,minimum height=10mm},
+  io/.style={draw,trapezium,trapezium left angle=75,trapezium right angle=105,align=center,inner sep=1.8mm,minimum width=28mm,minimum height=8mm},
+  proc/.style={draw,rectangle,align=center,inner sep=1.8mm,minimum width=24mm,minimum height=8mm},
+  dec/.style={draw,diamond,aspect=2,align=center,inner sep=1.8mm},
+  lab/.style={inner sep=0.6mm}]
+  \node[term] (start) at (0,0) {开始};
+  \node[io] (inX) at (0,-21) {输入 $x$};
+  \node[dec,minimum width=52mm] (d1) at (0,-46) {$x$ 为偶数?};
+  \node[proc] (y1) at (52,-46) {$y=1$};
+  \node[dec,minimum width=62mm] (d2) at (0,-82) {$x$ 能被 $3$ 整除?};
+  \node[proc] (y2) at (-52,-82) {$y=2$};
+  \node[proc,minimum width=22mm] (y3) at (0,-110) {$y=3$};
+  \coordinate (JM) at (0,-121);
+  \node[io] (outY) at (0,-132) {输出 $y$};
+  \node[term] (end) at (0,-153) {结束};
+  \draw[->] (start.south) -- (inX.north);
+  \draw[->] (inX.south) -- (d1.north);
+  \draw[->] (d1.east) -- node[midway,above=2mm,lab] {否} (y1.west);
+  \draw[->] (d1.south) -- node[midway,right=2mm,lab] {是} (d2.north);
+  \draw[->] (d2.west) -- node[midway,above=2mm,lab] {否} (y2.east);
+  \draw[->] (d2.south) -- node[midway,right=2mm,lab] {是} (y3.north);
+  \draw[->] (y3.south) -- (outY.north);
+  \draw[-] (y1.south) -- (52,-121) -- (JM);
+  \draw[-] (y2.south) -- (-52,-121) -- (JM);
+  \draw[->] (outY.south) -- (end.north);
 \end{tikzpicture}

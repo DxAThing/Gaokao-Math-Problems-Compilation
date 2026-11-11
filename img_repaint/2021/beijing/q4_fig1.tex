@@ -1,0 +1,30 @@
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% Point-fix: horizontal row; triangle edges and dims unchanged; only scope shifts, plan label moved to same baseline.
+% Front: right angle bottom-left, dims 1/1.
+\begin{scope}[shift={(0,1.6)}]
+\draw (0,0) -- (0,3) -- (3,0) -- cycle;
+\draw (-0.5,0) -- (0,0);
+\draw (-0.5,3) -- (0,3);
+\draw[{Stealth}-{Stealth}] (-0.35,0) -- (-0.35,3);
+\node at (-0.35,1.5) [fill=white,inner sep=2pt] {1};
+\draw (0,0) -- (0,-0.5);
+\draw (3,0) -- (3,-0.5);
+\draw[{Stealth}-{Stealth}] (0,-0.35) -- (3,-0.35);
+\node at (1.5,-0.35) [fill=white,inner sep=2pt] {1};
+\node at (1.5,-1.15) {正视图};
+\end{scope}
+% Side: right angle bottom-left, bottom dim only.
+\begin{scope}[shift={(5.0,1.6)}]
+\draw (0,0) -- (0,3) -- (3,0) -- cycle;
+\draw (0,0) -- (0,-0.5);
+\draw (3,0) -- (3,-0.5);
+\draw[{Stealth}-{Stealth}] (0,-0.35) -- (3,-0.35);
+\node at (1.5,-0.35) [fill=white,inner sep=2pt] {1};
+\node at (1.5,-1.15) {侧视图（左）};
+\end{scope}
+% Plan: right angle top-left.
+\begin{scope}[shift={(10.0,1.6)}]
+\draw (0,0) -- (0,3) -- (3,3) -- cycle;
+\node at (1.5,-1.15) {俯视图};
+\end{scope}
+\end{tikzpicture}

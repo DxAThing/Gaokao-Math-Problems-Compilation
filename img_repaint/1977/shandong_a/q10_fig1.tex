@@ -1,0 +1,32 @@
+\usetikzlibrary{angles,quotes,decorations.pathreplacing}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt},
+ geometry mark/.style={solid,line width=.6pt},
+ geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (T0) at (0.0,2.2);
+\coordinate (B0) at (0.0,0.0);
+\coordinate (T1) at (1.0,2.2);
+\coordinate (B1) at (1.0,0.0);
+\coordinate (T2) at (2.0,2.2);
+\coordinate (B2) at (2.0,0.0);
+\coordinate (T3) at (3.0,2.2);
+\coordinate (B3) at (3.0,0.0);
+\coordinate (T4) at (4.0,2.2);
+\coordinate (B4) at (4.0,0.0);
+\coordinate (T5) at (5.0,2.2);
+\coordinate (B5) at (5.0,0.0);
+\coordinate (T6) at (6.0,2.2);
+\coordinate (B6) at (6.0,0.0);
+\draw[geometry edge] (T0)--(T6);
+\draw[geometry edge] (B0)--(B6);
+\draw[geometry edge] (T0)--(B0);
+\draw[geometry edge] (T6)--(B6);
+\draw[geometry edge] (T1)--(B1);
+\draw[geometry edge] (T2)--(B2);
+\draw[geometry edge] (T5)--(B5);
+\node[font=\normalsize] at (3,2.55) {$x$};
+\node[font=\normalsize] at (7.05,1.1) {$\dfrac{l-2x}{m+1}$};
+\node[font=\normalsize] at (3.5,1.1) {$\cdots\cdots$};
+\draw[geometry mark,decorate,decoration={brace,amplitude=4pt}] (6,-.4)--(0,-.4);
+\node[font=\normalsize] at (3,-.95) {$m\text{间}$};
+\end{tikzpicture}

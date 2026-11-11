@@ -1,0 +1,31 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (5,0);
+\coordinate (D) at (1.6,1.6);
+\coordinate (C) at (-1.3,-3.6);
+\coordinate (An) at (0,1.3);
+\coordinate (Bn) at (5,1.3);
+\coordinate (Bs) at (5,-1.3);
+\draw (A)--(B);
+\draw (A)--(D);
+\draw (B)--(D);
+\draw (A)--(C);
+\draw (B)--(C);
+\draw (C)--(D);
+\draw[->] (A)--(An);
+\draw[->] (B)--(Bn);
+\draw (B)--(Bs);
+\node[above] at (An) {北};
+\node[above] at (Bn) {北};
+\node[left] at (A) {$A$};
+\node[right] at (B) {$B$};
+\node[above] at (D) {$D$};
+\node[left] at (C) {$C$};
+\draw (0.22,0)--(0.22,0.22)--(0,0.22);
+\draw (A) ++(45:0.55cm) arc[start angle=45,end angle=90,radius=0.55cm];
+\node at ($(A)+(67.5:0.92cm)$) {$45^{\circ}$};
+\draw (B) ++(90:0.55cm) arc[start angle=90,end angle=154.8,radius=0.55cm];
+\node at ($(B)+(122:0.95cm)$) {$60^{\circ}$};
+\draw (B) ++(209.7:0.55cm) arc[start angle=209.7,end angle=270,radius=0.55cm];
+\node at ($(B)+(240:0.95cm)$) {$60^{\circ}$};
+\end{tikzpicture}

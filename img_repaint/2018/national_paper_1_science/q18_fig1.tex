@@ -1,0 +1,30 @@
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize, x=1cm, y=1cm]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (5.0,0);
+  \coordinate (F) at (6,1.5);
+  \coordinate (E) at (1.0,1.5);
+  \coordinate (D) at (2.0,3.0);
+  \coordinate (P) at (4.7,4.5);
+  \coordinate (C) at (7,3);
+  % hidden / original-position edges
+  \draw[dashed] (D) -- (C);
+  \draw[dashed] (D) -- (F);
+  \draw[dashed] (F) -- (C);
+  % visible edges
+  \draw (A) -- (B);
+  \draw (B) -- (F);
+  \draw (F) -- (E);
+  \draw (A) -- (E);
+  \draw (E) -- (D);
+  \draw (D) -- (P);
+  \draw (P) -- (F);
+  \draw (E) -- (P);
+  % labels
+  \node[below left, xshift=-2pt] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[right, yshift=-2pt] at (F) {$F$};
+  \node[left, xshift=-2pt] at (E) {$E$};
+  \node[above left, xshift=-2pt] at (D) {$D$};
+  \node[above, yshift=1pt] at (P) {$P$};
+  \node[right] at (C) {$C$};
+\end{tikzpicture}

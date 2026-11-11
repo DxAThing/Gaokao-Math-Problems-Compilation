@@ -1,0 +1,13 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.5cm,y=1.5cm,line width=.6pt,>=Stealth]
+\draw[->] (-1.1,0)--(3.6,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.7)--(0,1.6) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw[domain=-0.85:3.30,samples=240] plot (\x,{sin(deg(2*\x+2.0943951024))});
+\draw (0.5236,0.05)--(0.5236,-0.05);
+\draw (2.0944,0.05)--(2.0944,-0.05);
+\draw (-0.05,1)--(0.05,1);
+\node[below left,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\node[below left,inner sep=0pt,xshift=-6pt,yshift=-3pt] at (0.5236,0) {$\frac{\pi}{6}$};
+\node[below right,inner sep=0pt,xshift=6pt,yshift=-3pt] at (2.0944,0) {$\frac{2\pi}{3}$};
+\node[right,inner sep=0pt,xshift=3pt] at (0,1) {$1$};
+\end{tikzpicture}

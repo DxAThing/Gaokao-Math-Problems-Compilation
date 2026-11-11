@@ -1,0 +1,50 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  solid edge/.style={solid,line width=.6pt},
+  hidden edge/.style={dashed,line width=.6pt}]
+\begin{scope}[shift={(0,0)}]
+\coordinate (A) at (-3,0);
+\coordinate (B) at (3,0);
+\coordinate (O) at (0,0);
+\coordinate (D) at (-1,1.6);
+\coordinate (C) at (1,1.6);
+\coordinate (O1) at (0,1.6);
+\draw[solid edge] (A)--(B);
+\draw[solid edge] (A)--(D);
+\draw[solid edge] (D)--(C);
+\draw[solid edge] (C)--(B);
+\draw[solid edge] (O)--(O1);
+\node[below left] at (A) {$A$};
+\node[below right] at (B) {$B$};
+\node[below] at (O) {$O$};
+\node[above left] at (D) {$D$};
+\node[above right] at (C) {$C$};
+\node[above] at (O1) {$O_{1}$};
+\node at (0,-1.7) {\bitmapinsertcaption[1]};
+\end{scope}
+\begin{scope}[shift={(8.2,0)}]
+\coordinate (A2) at (-2.6,-0.9);
+\coordinate (O2) at (-0.5,-0.1);
+\coordinate (B2) at (2.8,-0.1);
+\coordinate (O12) at (-0.2,2.1);
+\coordinate (C2) at (0.9,2.1);
+\coordinate (D2) at (-0.9,1.833333333);
+\draw[solid edge] (O2)--(B2);
+\draw[solid edge] (O12)--(B2);
+\draw[solid edge] (A2)--(O2);
+\draw[solid edge] (A2)--(O12);
+\draw[solid edge] (A2)--(C2);
+\draw[solid edge] (A2)--(D2);
+\draw[solid edge] (D2)--(O12);
+\draw[solid edge] (O12)--(C2);
+\draw[solid edge] (C2)--(B2);
+\draw[hidden edge] (O12)--(O2);
+\draw[solid edge] (C2)--(O2);
+\node[below left] at (A2) {$A$};
+\node[below] at (O2) {$O$};
+\node[right] at (B2) {$B$};
+\node[above] at (O12) {$O_{1}$};
+\node[above right] at (C2) {$C$};
+\node[left] at (D2) {$D$};
+\node at (0.1,-1.7) {\bitmapinsertcaption[2]};
+\end{scope}
+\end{tikzpicture}

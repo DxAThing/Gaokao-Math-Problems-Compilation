@@ -1,0 +1,12 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-.5,0)--(4.4,0) node[below right,inner sep=1pt] {$x$};
+\draw[->] (0,-.5)--(0,4.6) node[above left,inner sep=1pt] {$y$};
+\node[below left,inner sep=1pt] at (0,0) {$O$};
+\draw[dashed] (1.53,0)--(1.53,2.1);
+% Shared point and tangent; opposite curvatures keep f above g on both sides.
+\draw[domain=.388:3,samples=120] plot (\x,{2.1+.85*(\x-1.53)+.34*(\x-1.53)^2});
+\draw[domain=.388:3,samples=120] plot (\x,{2.1+.85*(\x-1.53)-.28*(\x-1.53)^2});
+\node[below,inner sep=1pt] at (1.53,0) {$x_0$};
+\node[above left,inner sep=2pt] at (3,4.084026) {$y=f(x)$};
+\node[right,inner sep=2pt] at (3,2.744448) {$y=g(x)$};
+\end{tikzpicture}

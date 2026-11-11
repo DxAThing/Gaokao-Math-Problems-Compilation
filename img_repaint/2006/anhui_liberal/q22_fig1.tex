@@ -1,0 +1,20 @@
+\begin{tikzpicture}[x=0.9cm,y=0.9cm,font=\normalsize,line width=.6pt,>=Stealth]
+% hyperbola x^2 - y^2/3 = 1 (a=1, e=2 schematic scale); generated from formula
+\draw[line width=.6pt] plot[domain=-3.5:3.5,samples=80] ({sqrt(1+\x*\x/3)},\x);
+\draw[line width=.6pt] plot[domain=-3.5:3.5,samples=80] ({-sqrt(1+\x*\x/3)},\x);
+% left directrix x=-1/2
+\draw[thin,line width=.6pt] (-0.5,-3.0)--(-0.5,3.0);
+\draw[->] (-2.6,0)--(3.2,0) node[right] {$x$};
+\draw[->] (0,-3.6)--(0,3.6) node[above] {$y$};
+\coordinate (O) at (0,0);
+\coordinate (F) at (2,0);
+\coordinate (M) at (-0.5000000000,1.9364916731);
+\coordinate (P) at (1.5000000000,1.9364916731);
+\draw[line width=.6pt] (M)--(P);
+\draw[line width=.6pt] (M)--(O);
+\draw[line width=.6pt] (P)--(F);
+\node[below right] at (O) {$O$};
+\node[below] at (F) {$F$};
+\node[left] at (M) {$M$};
+\node[above,xshift=-3pt,yshift=1pt] at (P) {$P$};
+\end{tikzpicture}

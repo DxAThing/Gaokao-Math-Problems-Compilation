@@ -1,0 +1,32 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (-3,-2.5);
+\coordinate (B) at (1,-2.5);
+\coordinate (C) at (3,-0.8);
+\coordinate (D) at (-1,-0.5);
+\coordinate (Aone) at (-2,2.2);
+\coordinate (Bone) at (-0.2,2.2);
+\coordinate (Cone) at (1,2.8);
+\coordinate (Done) at (-0.8,2.8);
+\draw[solid] (A)--(B)--(C);
+\draw[solid] (C)--(Cone);
+\draw[solid] (B)--(Bone);
+\draw[solid] (A)--(Aone);
+\draw[solid] (Aone)--(Bone)--(Cone)--(Done)--cycle;
+\draw[solid] (Aone)--(Done);
+\draw[solid] (Done)--(Bone);
+\draw[solid] (Aone)--(Cone);
+\draw[solid] (Done)--(Cone);
+\draw[dashed] (D)--(Done);
+\draw[dashed] (D)--(C);
+\draw[dashed] (A)--(D);
+\draw[dashed] (A)--(C);
+\draw[dashed] (B)--(D);
+\node[below left] at (A) {$A$};
+\node[below right] at (B) {$B$};
+\node[right] at (C) {$C$};
+\node[left] at (D) {$D$};
+\node[left] at (Aone) {$A_{1}$};
+\node[below right] at (Bone) {$B_{1}$};
+\node[above right] at (Cone) {$C_{1}$};
+\node[above left] at (Done) {$D_{1}$};
+\end{tikzpicture}

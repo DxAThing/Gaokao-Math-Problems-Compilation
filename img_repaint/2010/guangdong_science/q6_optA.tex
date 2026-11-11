@@ -1,0 +1,16 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+  geometry edge/.style={solid,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (BL) at (0,0);
+\coordinate (BR) at (3,0);
+\coordinate (LT) at (0,1.8);
+\coordinate (RT) at (3,1.0);
+\coordinate (P) at (1.2,2.9);
+\coordinate (PB) at (1.2,0);
+\draw[geometry edge] (BL)--(BR);
+\draw[geometry edge] (BL)--(LT);
+\draw[geometry edge] (BR)--(RT);
+\draw[geometry edge] (LT)--(P)--(RT);
+\draw[geometry edge] (LT)--(RT);
+\draw[geometry edge,dashed] (P)--(PB);
+\end{tikzpicture}

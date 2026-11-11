@@ -1,0 +1,30 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (D) at (0,2);
+\coordinate (E) at (0,-2);
+\coordinate (C) at (0,-1);
+\coordinate (A) at (-1.7321,-1);
+\coordinate (B) at (1.7321,-1);
+\coordinate (PLout) at (-2.6,-1);
+\coordinate (PLoutBot) at (-2.6,-3.2);
+\coordinate (PLinBot) at (-1.7321,-3.2);
+\coordinate (PRout) at (2.6,-1);
+\coordinate (PRoutBot) at (2.6,-3.2);
+\coordinate (PRinBot) at (1.7321,-3.2);
+\fill[black!12] (PLout) rectangle (PLinBot);
+\fill[black!12] (1.7321,-1) rectangle (PRoutBot);
+\draw (O) circle[radius=2cm];
+\draw[dashed] (D)--(C);
+\draw[dashed] (PLout)--(PRout);
+\draw (PLout)--(PLoutBot)--(PLinBot);
+\draw (PRout)--(PRoutBot)--(PRinBot);
+\draw (A)--(PLinBot);
+\draw (B)--(PRinBot);
+\draw (PLoutBot)--(PRoutBot);
+\fill (O) circle[radius=1.1pt];
+\node[above=2pt,inner sep=0pt] at (D) {$D$};
+\node[right=2pt,inner sep=0pt] at (O) {$O$};
+\node[above left=2pt,inner sep=0pt] at (A) {$A$};
+\node[above right=2pt,inner sep=0pt] at (B) {$B$};
+\node[below=2pt,inner sep=0pt] at (C) {$C$};
+\end{tikzpicture}

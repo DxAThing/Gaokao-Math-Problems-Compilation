@@ -1,0 +1,30 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% spherical octant: OA,OB,OC pairwise perpendicular
+\coordinate (O) at (0,0);
+\coordinate (A) at (0,2.4);
+\coordinate (B) at (-1.7,-0.9);
+\coordinate (Cc) at (1.9,-0.1);
+% arcs AB, AC, BC (great-circle arcs)
+
+
+
+\draw[domain=0:90,samples=80,variable=\t] plot ({-1.7*sin(\t)},{2.4*cos(\t)-.9*sin(\t)});
+\draw[domain=0:90,samples=80,variable=\t] plot ({1.9*sin(\t)},{2.4*cos(\t)-.1*sin(\t)});
+\draw[domain=0:90,samples=80,variable=\t] plot ({-1.7*cos(\t)+1.9*sin(\t)},{-.9*cos(\t)-.1*sin(\t)});
+% radii: AO dashed, OC dashed, OB dashed
+\draw[dashed] (A) -- (O);
+\draw[dashed] (O) -- (Cc);
+\draw[dashed] (O) -- (B);
+% midpoints E on arc AB, F on arc AC
+\coordinate (E) at (-1.202081528,1.060660172);
+\coordinate (F) at (1.343502884,1.626345597);
+\fill (E) circle (1.8pt);
+\fill (F) circle (1.8pt);
+% labels with clearance
+\node[above,yshift=3pt] at (A) {$A$};
+\node[below left,xshift=-3pt,yshift=-3pt] at (B) {$B$};
+\node[right,xshift=4pt] at (Cc) {$C$};
+\node[above right,xshift=3pt,yshift=1pt] at (O) {$O$};
+\node[left,xshift=-5pt] at (E) {$E$};
+\node[above right,xshift=4pt,yshift=2pt] at (F) {$F$};
+\end{tikzpicture}

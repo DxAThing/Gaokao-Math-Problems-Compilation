@@ -1,76 +1,31 @@
-% original_pdf: source/普通高考/2009/2009广东理.pdf
-% page: 1; pdfimages -list found no embedded image objects (the histogram is vector line art)
-% grid evidence: tmp/redraw_2009_gd/page300_grid100.png and tmp/redraw_2009_gd/q17_graph_zoom.png
-% original-side comparison crop: tmp/redraw_2009_gd/q17_orig_full.png, cropped from the no-grid page render
-% elements: frequency-density y-axis with arrow, API x-axis with arrow, six outlined bars,
-%           dashed guides at x, 2/365, 7/1825, 3/1825, and 8/9125, with ticks 0--300 by 50
-% relations: bins [0,50), [50,100), [100,150), [150,200), [200,250), [250,300)
-%            have heights 3/1825, x, 2/365, 7/1825, 3/1825, and 8/9125 respectively;
-%            total frequency gives x=119/18250 from 50*(x+123/9125)=1
-% solid segments: bar outlines and x/y axes; numeric x labels have no downward tick lines.
-% dashed segments: horizontal guides at x, 2/365, 7/1825, 3/1825, and 8/9125
-% labels: 频率/组距 above-left of y-axis, API right of final tick, fractional levels left of y-axis
-\pgfmathsetmacro{\xheight}{0.0065205479}
-\pgfmathsetmacro{\hthree}{0.0016438356}
-\pgfmathsetmacro{\htwo}{0.0054794521}
-\pgfmathsetmacro{\hseven}{0.0038356164}
-\pgfmathsetmacro{\height}{0.0008767123}
-\begin{tikzpicture}[baseline]
-\begin{axis}[exam statistical histogram,
-    width=12.795cm,
-    axis lines=none,
-    clip=false,
-    x tick label as interval=false,
-    xmin=-42,
-    xmax=335,
-    ymin=-0.0009,
-    ymax=0.0076,
-    ticks=none,
-]
-    % Frequency-density guides and bar heights read from the source chart/table.
-    \draw[dashed,line width=0.55pt] (axis cs:0,\xheight) -- (axis cs:50,\xheight);
-    \draw[dashed,line width=0.55pt] (axis cs:0,\htwo) -- (axis cs:100,\htwo);
-    \draw[dashed,line width=0.55pt] (axis cs:0,\hseven) -- (axis cs:150,\hseven);
-    \draw[dashed,line width=0.55pt] (axis cs:0,\hthree) -- (axis cs:200,\hthree);
-    \draw[dashed,line width=0.55pt] (axis cs:0,\height) -- (axis cs:250,\height);
+% First draft: API frequency histogram, bins [0,300) width 50.
+% Bar [50,100) height is the unknown x: geometry kept at the area-implied
+% level, tick label stays x (not replaced by the computed value).
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,
+  xmin=0,ymin=0,
+  xtick={0,50,100,150,200,250,300},
+  ytick={0.0008767,0.0016438,0.0038356,0.0054795,0.0065205},
+  xmax=325,
+  ymax=0.007041,
+  xticklabels={,50,100,150,200,250,300},
+  yticklabels={}]
+\addplot[draw=black,fill=white] coordinates
+  {(0,0.0016438) (50,0.0065205) (100,0.0054795) (150,0.0038356) (200,0.0016438) (250,0.0008767) (300,0)};
+\draw[dashed] (axis cs:0,0.0065205) -- (axis cs:50,0.0065205);
+\draw[dashed] (axis cs:0,0.0054795) -- (axis cs:100,0.0054795);
+\draw[dashed] (axis cs:0,0.0038356) -- (axis cs:150,0.0038356);
+\draw[dashed] (axis cs:0,0.0016438) -- (axis cs:200,0.0016438);
+\draw[dashed] (axis cs:0,0.0008767) -- (axis cs:250,0.0008767);
+\examstatylabel{频率/组距}
+\examstatxlabel{API}
 
-    \addplot[
-        ybar interval,
-        draw=black,
-        fill=white,
-        line width=0.7pt,
-    ] coordinates {
-        (0,\hthree)
-        (50,\xheight)
-        (100,\htwo)
-        (150,\hseven)
-        (200,\hthree)
-        (250,\height)
-        (300,0)
-    };
+\node[anchor=east,inner sep=0pt,xshift=-4pt] at (current axis.left of origin) {$0$};
 
-    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:330,0);
-    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,0.0074);
-
-    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \examstatxlabel{API};
-
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-6.000000,-0.0008) {0};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:50,0.000000) {50};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:100,0.000000) {100};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:150,0.000000) {150};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:200,0.000000) {200};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:250,0.000000) {250};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:300,0.000000) {300};
-    \draw[line width=0.45pt] (axis cs:0,\xheight) -- (axis cs:-4,\xheight);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-6,\xheight) {$x$};
-    \draw[line width=0.45pt] (axis cs:0,\htwo) -- (axis cs:-4,\htwo);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-6,\htwo) {$\dfrac{2}{365}$};
-    \draw[line width=0.45pt] (axis cs:0,\hseven) -- (axis cs:-4,\hseven);
-    \node[anchor=east,inner sep=0pt,font=\normalsize] at (axis cs:-6,\hseven) {$\dfrac{7}{1825}$};
-    \draw[line width=0.45pt] (axis cs:0,\hthree) -- (axis cs:-4,\hthree);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,yshift=4pt] at (axis cs:-6,\hthree) {$\dfrac{3}{1825}$};
-    \draw[line width=0.45pt] (axis cs:0,\height) -- (axis cs:-4,\height);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:-6,\height) {$\dfrac{8}{9125}$};
+\examstatyticklabel{0}{0.0008767}{\raisebox{-4pt}{$\frac{8}{9125}$}}{0.000000}
+\examstatyticklabel{0}{0.0016438}{\raisebox{4pt}{$\frac{3}{1825}$}}{1.566483}
+\examstatyticklabel{0}{0.0038356}{$\frac{7}{1825}$}{0.000000}
+\examstatyticklabel{0}{0.0054795}{$\frac{2}{365}$}{0.000000}
+\examstatyticklabel{0}{0.0065205}{$x$}{0.000000}
 \end{axis}
 \end{tikzpicture}

@@ -1,0 +1,32 @@
+% 三视图:球置于长方体之上;正:圆直径3(半径1.5)与矩形3×2相切,左侧直径3与高2及底宽3标注;侧:同形无标注;俯:正方形3×3内切圆;全实线
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% 正视图
+\begin{scope}[shift={(0,4.8)}]
+\draw (0,0) rectangle (3,2);
+\draw (1.5,3.5) circle (1.5);
+% 左侧标注:圆直径3(2~5),矩形高2(0~2)
+\draw[thin] (0,0) -- (-0.5,0);
+\draw[thin] (0,2) -- (-0.5,2);
+\draw[thin] (0,2) -- (-0.5,2);
+\draw[thin] (0,5) -- (-0.5,5);
+\draw[<->] (-0.35,0) -- node[left,fill=white,inner sep=1pt] {$2$} (-0.35,2);
+\draw[<->] (-0.35,2) -- node[left,fill=white,inner sep=1pt] {$3$} (-0.35,5);
+% 底宽标注 3
+\draw[thin] (0,0) -- (0,-0.35);
+\draw[thin] (3,0) -- (3,-0.35);
+\draw[<->] (0,-0.2) -- node[below,fill=white,inner sep=1pt] {$3$} (3,-0.2);
+\node[below] at (1.5,-0.6) {正视图};
+\end{scope}
+% 侧视图
+\begin{scope}[shift={(4.6,4.8)}]
+\draw (0,0) rectangle (3,2);
+\draw (1.5,3.5) circle (1.5);
+\node[below] at (1.5,-0.6) {侧视图};
+\end{scope}
+% 俯视图(右,与正侧同高横向并排):正方形3×3,内切圆半径1.5
+\begin{scope}[shift={(9.2,4.8)}]
+\draw (0,0) rectangle (3,3);
+\draw (1.5,1.5) circle (1.5);
+\node[below] at (1.5,-0.6) {俯视图};
+\end{scope}
+\end{tikzpicture}

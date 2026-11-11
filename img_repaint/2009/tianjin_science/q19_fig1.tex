@@ -1,0 +1,31 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (D) at (6,0);
+\coordinate (B) at (-1,-1.5);
+\coordinate (C) at (2,-1.5);
+\coordinate (F) at (-0.2,2.5);
+\coordinate (E) at (2.8,2.5);
+\coordinate (M) at (2.4,0.5);
+% top and bottom parallels
+\draw[solid] (F) -- (E);
+\draw[solid] (B) -- (C);
+\draw[dashed] (A) -- (D);
+% left and right faces
+\draw[solid] (F) -- (B);
+\draw[solid] (E) -- (C);
+\draw[solid] (E) -- (D);
+\draw[solid] (C) -- (D);
+\draw[dashed] (F) -- (A);
+\draw[dashed] (A) -- (B);
+% interior segments
+\draw[dashed] (A) -- (M);
+\draw[solid] (M) -- (D);
+% labels offset from strokes
+\node[above left,xshift=-3pt,yshift=3pt] at (F) {$F$};
+\node[above right,xshift=3pt,yshift=3pt] at (E) {$E$};
+\node[left,xshift=-4pt] at (A) {$A$};
+\node[below left,xshift=-3pt,yshift=-3pt] at (B) {$B$};
+\node[below,xshift=0pt,yshift=-4pt] at (C) {$C$};
+\node[right,xshift=4pt] at (D) {$D$};
+\node[above left,xshift=-3pt,yshift=3pt] at (M) {$M$};
+\end{tikzpicture}

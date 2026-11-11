@@ -1,0 +1,29 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=0.6pt,line join=round,line cap=round]
+\coordinate (P) at (0,5.0);
+\coordinate (A) at (0,1.0);
+\coordinate (B) at (-2.0,0.0);
+\coordinate (C) at (1.0,0.0);
+\coordinate (D) at (3.0,1.0);
+\coordinate (E) at (-1.0,2.5);
+% hidden edges
+\draw[densely dashed] (P) -- (A);
+\draw[densely dashed] (A) -- (B);
+\draw[densely dashed] (A) -- (D);
+\draw[densely dashed] (A) -- (C);
+\draw[densely dashed] (E) -- (A);
+\draw[densely dashed] (E) -- (D);
+% solid edges
+\draw (P) -- (B);
+\draw (P) -- (C);
+\draw (P) -- (D);
+\draw (B) -- (C);
+\draw (C) -- (D);
+\draw (E) -- (C);
+% labels
+\node[font=\normalsize,above] at ($(P)+(0,0.12)$) {$P$};
+\node[font=\normalsize,left] at ($(E)+(-0.12,0.05)$) {$E$};
+\node[font=\normalsize,below] at ($(A)+(0,-0.12)$) {$A$};
+\node[font=\normalsize,below left] at ($(B)+(-0.1,-0.1)$) {$B$};
+\node[font=\normalsize,below right] at ($(C)+(0.1,-0.12)$) {$C$};
+\node[font=\normalsize,right] at ($(D)+(0.12,0)$) {$D$};
+\end{tikzpicture}

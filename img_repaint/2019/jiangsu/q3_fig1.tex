@@ -1,0 +1,25 @@
+\begin{tikzpicture}[x=1mm,y=1mm,>=Stealth,line width=0.6pt,font=\normalsize]
+\tikzset{
+  flowchartstart/.style={rectangle,rounded corners=2.5mm,draw,line width=0.6pt,minimum width=30mm,minimum height=11mm,align=center,fill=white},
+  flowchartprocess/.style={rectangle,draw,line width=0.6pt,minimum width=40mm,minimum height=12mm,align=center,fill=white},
+  flowchartprocesswide/.style={rectangle,draw,line width=0.6pt,minimum width=46mm,minimum height=16mm,align=center,fill=white},
+  flowchartdecision/.style={diamond,draw,line width=0.6pt,minimum width=46mm,minimum height=20mm,align=center,fill=white,aspect=2.3},
+  flowchartio/.style={trapezium,trapezium left angle=70,trapezium right angle=110,draw,line width=0.6pt,minimum width=36mm,minimum height=12mm,align=center,fill=white},
+  flowchartside/.style={rectangle,draw,line width=0.6pt,minimum width=30mm,minimum height=12mm,align=center,fill=white},
+  flowlabeledge/.style={draw=none,fill=none,font=\normalsize,inner sep=1pt}
+}
+\node[flowchartstart] (start) at (0,0) {开始};
+\node[flowchartprocess] (init) at (0,-18) {$x\leftarrow 1,S\leftarrow 0$};
+\node[flowchartprocesswide] (calc) at (0,-40) {$S\leftarrow S+\dfrac{x}{2}$};
+\node[flowchartdecision] (cond) at (0,-62) {$x\geqslant 4?$};
+\node[flowchartio] (out) at (0,-87) {输出 $S$};
+\node[flowchartstart] (stop) at (0,-105) {结束};
+\node[flowchartside] (inc) at (45,-40) {$x\leftarrow x+1$};
+\draw[->,line width=0.6pt] (start.south) -- (init.north);
+\draw[->,line width=0.6pt] (init.south) -- (calc.north);
+\draw[->,line width=0.6pt] (calc.south) -- (cond.north);
+\draw[->,line width=0.6pt] (cond.east) -- node[flowlabeledge,above=2.0mm,pos=0.15] {N} (45,-62) -- (inc.south);
+\draw[->,line width=0.6pt] (inc.north) -- (45,-28) -- (0,-28);
+\draw[->,line width=0.6pt] (cond.south) -- node[flowlabeledge,right=2.0mm,pos=0.5] {Y} (out.north);
+\draw[->,line width=0.6pt] (out.south) -- (stop.north);
+\end{tikzpicture}

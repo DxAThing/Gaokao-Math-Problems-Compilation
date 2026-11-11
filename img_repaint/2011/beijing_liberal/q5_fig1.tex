@@ -1,0 +1,29 @@
+% point-fix dims only: shared dimension line/label styles, offsets >=4.5mm; edges/captions unchanged.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% ---- front (left): triangle base 3cm, height 1.5cm ----
+\begin{scope}[shift={(0.6,0)}]
+\draw (0,0) -- (1.5,1.5) -- (3,0) -- cycle;
+\draw[dimension extension] (0,0) -- (-0.6,0);
+\draw[dimension extension] (0,1.5) -- (-0.6,1.5);
+\draw[dimension line] (-0.5,0) -- node[dimension label vertical] {2} (-0.5,1.5);
+\node[below] at (1.5,-1.7) {正视图};
+\end{scope}
+% ---- side (middle): identical triangle, no dims in original ----
+\begin{scope}[shift={(5.2,0)}]
+\draw (0,0) -- (1.5,1.5) -- (3,0) -- cycle;
+\node[below] at (1.5,-1.7) {侧视图（左）};
+\end{scope}
+% ---- plan (right): 3x3 square with X diagonals, dims 4/4 ----
+\begin{scope}[shift={(9.8,0)}]
+\draw (0,0) rectangle (3,3);
+\draw (0,0) -- (3,3);
+\draw (3,0) -- (0,3);
+\draw[dimension extension] (0,0) -- (-0.6,0);
+\draw[dimension extension] (0,3) -- (-0.6,3);
+\draw[dimension line] (-0.5,0) -- node[dimension label vertical] {4} (-0.5,3);
+\draw[dimension extension] (0,0) -- (0,-0.6);
+\draw[dimension extension] (3,0) -- (3,-0.6);
+\draw[dimension line] (0,-0.5) -- node[dimension label] {4} (3,-0.5);
+\node[below] at (1.5,-1.7) {俯视图};
+\end{scope}
+\end{tikzpicture}

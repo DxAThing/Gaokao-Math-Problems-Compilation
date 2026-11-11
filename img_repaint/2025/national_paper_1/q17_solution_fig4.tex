@@ -1,0 +1,29 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (-2.2,-0.9);
+\coordinate (C) at (0.8746133918,-0.9);
+\coordinate (D) at (4.2,0);
+\coordinate (P) at (0,3);
+\coordinate (O1) at (1.537306696,0);
+% solid visible edges
+\draw[solid] (P)--(B);
+\draw[solid] (P)--(C);
+\draw[solid] (P)--(D);
+\draw[solid] (B)--(C);
+\draw[solid] (C)--(D);
+% hidden edges
+\draw[dashed] (P)--(A);
+\draw[dashed] (A)--(B);
+\draw[dashed] (A)--(C);
+\draw[dashed] (A)--(D);
+% interior segments through O1
+\draw[dashed] (P)--(O1);
+\draw[dashed] (O1)--(C);
+\foreach \pt in {A,B,C,D,P,O1}{\fill (\pt) circle (1.2pt);}
+\node[above,inner sep=2pt] at (P) {$P$};
+\node[left,inner sep=2pt,xshift=0.00bp,yshift=4.00bp] at (A) {$A$};
+\node[below left,inner sep=2pt] at (B) {$B$};
+\node[below,inner sep=2pt] at (C) {$C$};
+\node[right,inner sep=2pt] at (D) {$D$};
+\node[above right,inner sep=2pt] at (O1) {$O_{1}$};
+\end{tikzpicture}

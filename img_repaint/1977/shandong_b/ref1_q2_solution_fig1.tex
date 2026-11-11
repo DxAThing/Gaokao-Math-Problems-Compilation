@@ -1,0 +1,20 @@
+\begin{tikzpicture}[x=0.85cm,y=0.85cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-3.8,0) -- (5.6,0) node[right] {$x$};
+\draw[->] (0,-2.6) -- (0,5.6) node[above] {$y$};
+% lens fill (gray block): below y=2sqrt(x), above y=x^2/4, x in [0,4]
+\fill[gray!25] plot[domain=0:4,samples=60] (\x,{2*sqrt(\x)}) -- plot[domain=4:0,samples=60] (\x,{(\x)*(\x)/4}) -- cycle;
+% parabola x^2=4y : y=x^2/4
+\draw[domain=-3.6:4.7,samples=80] plot (\x,{(\x)*(\x)/4});
+% parabola y^2=4x upper : y=2sqrt(x)
+\draw[domain=0:5.3,samples=80] plot (\x,{2*sqrt(\x)});
+% parabola y^2=4x lower : y=-2sqrt(x)
+\draw[domain=0:5.3,samples=80] plot (\x,{-2*sqrt(\x)});
+% dashed drop from (4,4) to (4,0)
+\draw[dashed] (4,4) -- (4,0);
+\node[below] at (4,0) {$4$};
+\node[below left] at (0,0) {$O$};
+% labels placed clear of curves
+\node[above left] at (-2.4,3.2) {$x^{2}=4y$};
+\node[below right] at (2.6,-1.2) {$y^{2}=4x$};
+\end{tikzpicture}

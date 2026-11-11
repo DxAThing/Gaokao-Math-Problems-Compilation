@@ -1,0 +1,50 @@
+% Three orthographic views with dimension lines, all edges solid.
+% Front (left, 3x1 with two inner verticals), side (middle, 2x1 with one
+% inner vertical), plan (right hexagon: top/bottom edges 1, total 3x2).
+% Front width = plan width (3), side width = plan height (2), front/side heights equal (1).
+% layout: horizontal row (point-fix: plan wrapped in shift scope only).
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,
+  dim/.style={line width=.45pt,{Latex[length=1.8mm]}-{Latex[length=1.8mm]}}]
+% --- front view ---
+\draw (0,4.2) rectangle (3.3,5.3);
+\draw (1.1,4.2) -- (1.1,5.3);
+\draw (2.2,4.2) -- (2.2,5.3);
+% front width dimensions: three segments of 1
+\draw[line width=.45pt] (0,4.2) -- (0,3.55);
+\draw[line width=.45pt] (1.1,4.2) -- (1.1,3.55);
+\draw[line width=.45pt] (2.2,4.2) -- (2.2,3.55);
+\draw[line width=.45pt] (3.3,4.2) -- (3.3,3.55);
+\draw[dim] (0,3.7) -- (1.1,3.7) node[midway,above,font=\normalsize] {1};
+\draw[dim] (1.1,3.7) -- (2.2,3.7) node[midway,above,font=\normalsize] {1};
+\draw[dim] (2.2,3.7) -- (3.3,3.7) node[midway,above,font=\normalsize] {1};
+\node at (1.65,3.05) {正视图};
+% --- side view ---
+\draw (4.6,4.2) rectangle (6.8,5.3);
+\draw (5.7,4.2) -- (5.7,5.3);
+% side width dimensions: two segments of 1
+\draw[line width=.45pt] (4.6,4.2) -- (4.6,3.55);
+\draw[line width=.45pt] (5.7,4.2) -- (5.7,3.55);
+\draw[line width=.45pt] (6.8,4.2) -- (6.8,3.55);
+\draw[dim] (4.6,3.7) -- (5.7,3.7) node[midway,above,font=\normalsize] {1};
+\draw[dim] (5.7,3.7) -- (6.8,3.7) node[midway,above,font=\normalsize] {1};
+% side height dimension 1 on the right
+\draw[line width=.45pt] (6.8,4.2) -- (7.35,4.2);
+\draw[line width=.45pt] (6.8,5.3) -- (7.35,5.3);
+\draw[dim] (7.2,4.2) -- (7.2,5.3) node[midway,right,font=\normalsize] {1};
+\node at (5.7,3.05) {侧视图（左）};
+% --- plan view: hexagon (shifted right into the same row; edges unchanged) ---
+\begin{scope}[shift={(8.6,4.2)}]
+\draw (1.1,2.2) -- (2.2,2.2) -- (3.3,1.1) -- (2.2,0) -- (1.1,0) -- (0,1.1) -- cycle;
+% plan bottom width dimension 1
+\draw[line width=.45pt] (1.1,0) -- (1.1,-0.55);
+\draw[line width=.45pt] (2.2,0) -- (2.2,-0.55);
+\draw[dim] (1.1,-0.4) -- (2.2,-0.4) node[midway,below,font=\normalsize] {1};
+% plan height dimensions: two segments of 1 on the right
+\draw[line width=.45pt] (3.3,0) -- (3.85,0);
+\draw[line width=.45pt] (3.3,1.1) -- (3.85,1.1);
+\draw[line width=.45pt] (3.3,2.2) -- (3.85,2.2);
+\draw[dim] (3.7,0) -- (3.7,1.1) node[midway,right,font=\normalsize] {1};
+\draw[dim] (3.7,1.1) -- (3.7,2.2) node[midway,right,font=\normalsize] {1};
+\node at (1.65,-1.15) {俯视图};
+\end{scope}
+\end{tikzpicture}

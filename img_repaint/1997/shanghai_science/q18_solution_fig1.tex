@@ -1,0 +1,14 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+% Axes (origin at (0,0))
+\draw[->] (0,0) -- (3.200000,0);
+\node[anchor=west,inner sep=0pt,xshift=2.000000pt,yshift=-4.000000pt] at (3.200000,0) {$x$};
+\draw[->] (0,0) -- (0,3.000000);
+\node[anchor=south,inner sep=0pt,xshift=4.000000pt,yshift=2.000000pt] at (0,3.000000) {$y$};
+\node[anchor=north east,inner sep=0pt,xshift=-2.000000pt,yshift=-2.000000pt] at (0,0) {$O$};
+% Parabola y=-(x-1)^2+2.25, domain [0,2.5]
+\draw[domain=0:2.500000,samples=101,smooth] plot (\x,{-1*(\x-1.0)*(\x-1.0)+2.25});
+% Point A (0,1.25) solid dot with left label
+\fill (0,1.250000) circle (0.050000);
+\node[anchor=east,inner sep=0pt,xshift=-2.000000pt] at (0,1.250000) {$A$};
+\end{tikzpicture}

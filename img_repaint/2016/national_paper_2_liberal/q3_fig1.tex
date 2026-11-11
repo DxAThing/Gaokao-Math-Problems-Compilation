@@ -1,0 +1,15 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=2.2cm,y=1.1cm,line width=.6pt,>=stealth]
+\draw[->] (-1.1,0)--(1.9,0);
+\draw[->] (0,-3.3)--(0,2.9);
+\draw[dashed] (-0.5236,0)--(-0.5236,-2)--(0,-2);
+\draw[dashed] (1.0472,0)--(1.0472,2)--(0,2);
+\draw[domain=-0.85:1.6,samples=200] plot (\x,{2*sin(2*deg(\x)-30)});
+\node[above,inner sep=0pt,yshift=2pt] at (-0.5236,0) {$-\frac{\pi}{6}$};
+\node[below,inner sep=0pt,yshift=-2pt] at (-0.15,0) {$O$};
+\node[below,inner sep=0pt,yshift=-2pt] at (1.0472,0) {$\frac{\pi}{3}$};
+\node[left,inner sep=0pt,xshift=-2pt] at (0,2) {$2$};
+\node[below,inner sep=0pt,yshift=-2pt] at (-0.26,-2) {$-2$};
+\node[above,inner sep=0pt,yshift=2pt] at (0,2.9) {$y$};
+\node[right,inner sep=0pt,xshift=2pt] at (1.9,0) {$x$};
+\end{tikzpicture}

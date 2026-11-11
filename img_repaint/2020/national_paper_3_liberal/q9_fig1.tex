@@ -1,0 +1,36 @@
+% point-fix: horizontal row front/side/plan; 2x2 right-triangle edges and dims 2 unchanged; view names added below, baselines aligned
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% ---- front (left): right angle at bottom-right, dims 2/2 ----
+\begin{scope}[shift={(0,1.0)}]
+\coordinate (A) at (0,0);
+\coordinate (B) at (2,0);
+\coordinate (C) at (2,2);
+\draw (A) -- (B) -- (C) -- cycle;
+\draw (0,-0.25) -- (0,-0.55);
+\draw (2,-0.25) -- (2,-0.55);
+\draw[arrows={Stealth[scale=0.7]-Stealth[scale=0.7]}] (0.05,-0.45) -- (1.95,-0.45);
+\node[below,inner sep=1pt] at (1,-0.45) {$2$};
+\draw (2.25,0) -- (2.55,0);
+\draw (2.25,2) -- (2.55,2);
+\draw[arrows={Stealth[scale=0.7]-Stealth[scale=0.7]}] (2.45,0.05) -- (2.45,1.95);
+\node[right,inner sep=1pt] at (2.45,1) {$2$};
+\node[below] at (1,-1.1) {正视图};
+\end{scope}
+% ---- side (middle): right angle at bottom-left, no dims ----
+\begin{scope}[shift={(3.8,1.0)}]
+\draw (0,0) -- (0,2) -- (2,0) -- cycle;
+\node[below] at (1,-1.1) {侧视图};
+\end{scope}
+% ---- top (right): right angle at top-right, vertical dim 2 ----
+\begin{scope}[shift={(7.0,1.0)}]
+\coordinate (A) at (0,2);
+\coordinate (B) at (2,2);
+\coordinate (C) at (2,0);
+\draw (A) -- (B) -- (C) -- cycle;
+\draw (2.25,0) -- (2.55,0);
+\draw (2.25,2) -- (2.55,2);
+\draw[arrows={Stealth[scale=0.7]-Stealth[scale=0.7]}] (2.45,0.05) -- (2.45,1.95);
+\node[right,inner sep=1pt] at (2.45,1) {$2$};
+\node[below] at (1,-1.1) {俯视图};
+\end{scope}
+\end{tikzpicture}

@@ -1,0 +1,19 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=0.9cm,y=0.9cm,line width=.6pt,>={Stealth[length=2mm]},font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (P) at (3.1415926536,3.1415926536);
+\coordinate (Q) at (6.2831853072,6.2831853072);
+\draw[->] (-0.15,0)--(7.8539816340,0) node[below right,inner sep=2pt] {$x$};
+\draw[->] (0,-0.15)--(0,7.8539816340) node[left,inner sep=2pt] {$y$};
+\draw[domain=0:6.2831853072,samples=201] plot (\x,{\x-sin(deg(\x))});
+\draw[dashed] (0,0)--(6.2831853072,6.2831853072);
+\draw (3.1415926536,-0.06)--(3.1415926536,0.06);
+\draw (6.2831853072,-0.06)--(6.2831853072,0.06);
+\draw (-0.06,3.1415926536)--(0.06,3.1415926536);
+\draw (-0.06,6.2831853072)--(0.06,6.2831853072);
+\node[below left,inner sep=2pt] at (0,0) {$O$};
+\node[below,inner sep=2pt] at (3.1415926536,-0.04) {$\pi$};
+\node[below,inner sep=2pt] at (6.2831853072,-0.04) {$2\pi$};
+\node[left,inner sep=2pt] at (-0.04,3.1415926536) {$\pi$};
+\node[left,inner sep=2pt] at (-0.04,6.2831853072) {$2\pi$};
+\end{tikzpicture}

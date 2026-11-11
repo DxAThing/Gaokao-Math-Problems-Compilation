@@ -1,0 +1,18 @@
+% y=cos(2x-pi/6)：曲线由公式生成，定义域 [-2pi/3, pi/3]
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-2.9,0)--(1.9,0) node[below right] {$x$};
+\draw[->] (0,-1.8)--(0,1.8) node[above right] {$y$};
+\node[below left] at (0,0) {$O$};
+% 曲线 y=cos(2x-pi/6)，x 为弧度
+\draw[solid,line width=.8pt,samples=220,domain=-2.0944:1.0472] plot (\x,{cos((2*\x-0.5236)*57.2958)});
+% 最大值引导线 x=pi/12
+\draw[dashed] (0.2618,0)--(0.2618,1);
+\draw[dashed] (0,1)--(0.2618,1);
+\node[below] at (0.2618,-0.06) {$\frac{\pi}{12}$};
+\node[left] at (-0.06,1) {$1$};
+% 最小值引导线 y=-1（谷底 x=-5pi/12）
+\draw[dashed] (-1.309,-1)--(0,-1);
+\node[right] at (0.06,-1) {$-1$};
+% 零点标记 x=-pi/6
+\node[above left] at (-0.5236,0) {$-\frac{\pi}{6}$};
+\end{tikzpicture}

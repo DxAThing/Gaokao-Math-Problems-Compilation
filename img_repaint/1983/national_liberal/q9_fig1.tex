@@ -1,0 +1,24 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Latex]
+\coordinate (O) at (0,0);
+\coordinate (L) at (-3.5,0);
+\coordinate (Rd) at (3.5,0);
+\coordinate (RL) at (-2.1,0);
+\coordinate (RR) at (2.1,0);
+\coordinate (TL) at (-2.1,2.8);
+\coordinate (TR) at (2.1,2.8);
+% semicircle of radius 3.5 centered at O
+\draw[black] (L) arc[start angle=180,end angle=0,radius=3.5cm];
+% diameter
+\draw[black] (L)--(Rd);
+% inscribed rectangle (bottom side coincides with diameter)
+\draw[black] (RL)--(TL)--(TR)--(RR);
+% center tick below diameter
+\draw[black] (O)--(0,-0.35);
+% radius dimension below diameter with center gap for label
+\draw[dimension extension] (0,-0.05)--(0,-0.62);
+\draw[dimension extension] (3.5,-0.05)--(3.5,-0.62);
+\draw[dimension line] (0,-0.55)--node[dimension label] {$R$} (3.5,-0.55);
+\node[below left=2pt,inner sep=0pt] at (O) {$O$};
+\fill (O) circle[radius=1.4pt];
+\end{tikzpicture}

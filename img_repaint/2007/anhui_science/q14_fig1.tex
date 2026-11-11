@@ -1,0 +1,31 @@
+\begin{tikzpicture}[x=6cm,y=3cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-0.06,0)--(1.18,0) node[fill=white,inner sep=1.5pt,below=3pt] at (1.18,0) {$x$};
+\draw[->] (0,-0.08)--(0,1.25) node[fill=white,inner sep=1.5pt,above=3pt,left=1pt] at (0,1.25) {$y$};
+\node[fill=white,inner sep=1.5pt,below left=2pt and 3pt] at (0,0) {$O$};
+% shaded first two right triangles
+\fill[gray!20] (0,0)--(0.12,0)--(0.12,0.9856)--cycle;
+\fill[gray!20] (0.12,0)--(0.24,0)--(0.24,0.9424)--cycle;
+\fill[gray!20] (0.68,0)--(0.84,0)--(0.84,0.2944)--cycle;
+% parabola y=-x^2+1, first quadrant
+\draw[thick] plot[domain=0:1,samples=160,smooth] (\x,{-\x*\x+1});
+% verticals and hypotenuses
+\draw[thin] (0.12,0)--(0.12,0.9856);
+\draw[thin] (0.24,0)--(0.24,0.9424);
+\draw[thin] (0.84,0)--(0.84,0.2944);
+\draw[thin] (0,0)--(0.12,0.9856);
+\draw[thin] (0.12,0)--(0.24,0.9424);
+\draw[thin] (0.68,0)--(0.84,0.2944);
+% labels
+\node[fill=white,inner sep=1.5pt,below=5pt] at (0.10,0) {$P_{1}$};
+\node[fill=white,inner sep=1.5pt,below=5pt] at (0.27,0) {$P_{2}$};
+\node[fill=white,inner sep=1.5pt,below=5pt] at (0.68,0) {$P_{n-2}$};
+\node[fill=white,inner sep=1.5pt,below=5pt] at (0.84,0) {$P_{n-1}$};
+\node[fill=white,inner sep=1.5pt,above=4pt] at (0.12,0.9856) {$Q_{1}$};
+\node[fill=white,inner sep=1.5pt,above=4pt] at (0.24,0.9424) {$Q_{2}$};
+\node[fill=white,inner sep=1.5pt,above right=2pt and 3pt] at (0.84,0.2944) {$Q_{n-1}$};
+\node[fill=white,inner sep=1.5pt,above right=2pt and 2pt] at (1.0,0) {$A$};
+\node[fill=white,inner sep=1pt] at (0.45,0.35) {$\cdots\cdots$};
+\node[fill=white,inner sep=1.5pt,right=3pt] at (0.62,0.68) {$y=-x^{2}+1$};
+\end{tikzpicture}
+

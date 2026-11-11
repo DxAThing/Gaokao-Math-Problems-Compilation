@@ -1,0 +1,15 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-3,0)--(2.83,0) node[below right,inner sep=0pt,xshift=2pt,yshift=-2pt] {$x$};
+\draw[->] (0,-1)--(0,2.83) node[above left,inner sep=0pt,xshift=-1pt,yshift=2pt] {$y$};
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\draw (-1,0)--(-1,-0.10);
+\draw (1,0)--(1,-0.10);
+\draw (0,1)--(0.10,1);
+\draw (0,2)--(0.10,2);
+\draw[line width=.6pt,domain=-2:2.5,samples=121] plot (\x,{0.5^(\x+1)});
+\node[below,inner sep=0pt,yshift=-6pt] at (-1,0) {$-1$};
+\node[below,inner sep=0pt,yshift=-6pt] at (1,0) {$1$};
+\node[right,inner sep=0pt,xshift=5pt] at (0,1) {$1$};
+\node[right,inner sep=0pt,xshift=5pt] at (0,2) {$2$};
+\end{tikzpicture}

@@ -1,48 +1,22 @@
-% Source: source/普通高考/2014/2014安徽文.pdf, p.1, question 17.
-% Frequency-density histogram for intervals [0,2], (2,4], ..., (10,12].
-% Elements: axes with ticks 0,2,...,12 and 0.025,0.075,0.100,0.125,0.150;
-% six contiguous white bars with heights .025,.100,.150,.125,.075,.025;
-% dashed guides run from the y-axis to the left edge of the corresponding bar.
-% Relations: each bar width is the stated class width 2 h; its height is frequency/group width;
-% guide segments mark the labelled density levels; arrowed axes and labels identify time and density.
-\begin{tikzpicture}[baseline]
-  \begin{axis}[exam statistical histogram,
-    width=8.6cm,
-    height=5.65cm,
-    xmin=0, xmax=14,
-    ymin=0, ymax=0.17,
-    axis lines=middle,
-    axis line style={-Stealth},
-    xtick={0,2,4,6,8,10,12},
-    ytick={0.025,0.075,0.100,0.125,0.150},
-    yticklabels={0.025,0.075,0.100,0.125,0.150},
-    scaled y ticks=false,
-    yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=3},
-    tick align=outside,
-    tick label style={font=\normalsize},
-    enlarge x limits=false,
-    clip=false,
-  ]
-    % Dashed reference levels are visible only before the bar whose top they mark.
-    \addplot[black,dashed,line width=0.45pt] coordinates {(0,0.025) (10,0.025)};
-    \addplot[black,dashed,line width=0.45pt] coordinates {(0,0.075) (8,0.075)};
-    \addplot[black,dashed,line width=0.45pt] coordinates {(0,0.100) (2,0.100)};
-    \addplot[black,dashed,line width=0.45pt] coordinates {(0,0.125) (6,0.125)};
-    \addplot[black,dashed,line width=0.45pt] coordinates {(0,0.150) (4,0.150)};
-    % Histogram bars: each ybar interval starts at the listed x coordinate.
-    \addplot[
-      ybar interval,
-      draw=black,
-      fill=white,
-      line width=0.55pt,
-      area legend,
-    ] coordinates {
-      (0,0.025) (2,0.100) (4,0.150) (6,0.125)
-      (8,0.075) (10,0.025) (12,0.025)
-    };
-    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \examstatxlabel{时间（小时）};
-    % PGFPlots suppresses the origin tick label at the crossing; keep the source label explicit.
-    \node[anchor=north east,font=\normalsize,inner sep=0pt,yshift=-4pt] at (axis cs:0,0.000000) {0};
-  \end{axis}
+% 2014_anhui_liberal_q17_fig1: histogram from 0, no break, standard profile.
+% Template: templates/statistical/histogram.tex via shared exam statistical template histogram.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,
+  xmin=0,ymin=0,
+  xtick={0,2,4,6,8,10,12},
+  ytick={0.025,0.075,0.100,0.125,0.150},yticklabels={0.025,0.075,0.100,0.125,0.150},
+  xmax=13,
+  ymax=0.1625,
+  xticklabels={,2,4,6,8,10,12}]
+\addplot[draw=black,fill=white] coordinates {(0,0.025) (2,0.100) (4,0.150) (6,0.125) (8,0.075) (10,0.025) (12,0)};
+\draw[dashed] (axis cs:0,0.025) -- (axis cs:12,0.025);
+\draw[dashed] (axis cs:0,0.075) -- (axis cs:10,0.075);
+\draw[dashed] (axis cs:0,0.100) -- (axis cs:4,0.100);
+\draw[dashed] (axis cs:0,0.125) -- (axis cs:8,0.125);
+\draw[dashed] (axis cs:0,0.150) -- (axis cs:6,0.150);
+\examstatylabel{频率/组距}
+\examstatxlabel{时间（小时）}
+
+\node[anchor=east,inner sep=0pt,xshift=-4pt] at (current axis.left of origin) {$0$};
+\end{axis}
 \end{tikzpicture}

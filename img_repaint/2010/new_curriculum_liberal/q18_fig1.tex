@@ -1,0 +1,33 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  solid edge/.style={solid},
+  hidden edge/.style={dashed}]
+% Schematic perspective of square pyramid P-ABCD; base drawn as trapezoid, diagonals perpendicular.
+\coordinate (P) at (0.2222222222,4.4);
+\coordinate (A) at (-4,-1.2);
+\coordinate (B) at (4,-1.2);
+\coordinate (D) at (-1.1,0.7);
+\coordinate (C) at (1.7,0.7);
+\coordinate (H) at (0.2222222222,0.2074074074);
+% base front + right side visible
+\draw[solid edge] (A)--(B);
+\draw[hidden edge] (B)--(C);
+% base back + left side hidden
+\draw[hidden edge] (C)--(D);
+\draw[hidden edge] (D)--(A);
+% diagonals (hidden): A-H-C and B-H-D
+\draw[hidden edge] (A)--(H)--(C);
+\draw[hidden edge] (B)--(H)--(D);
+% lateral edges: PA, PB visible; PD, PC hidden
+\draw[solid edge] (P)--(A);
+\draw[solid edge] (P)--(B);
+\draw[hidden edge] (P)--(D);
+\draw[hidden edge] (P)--(C);
+% height PH hidden vertical
+\draw[hidden edge] (P)--(H);
+\node[above] at (P) {$P$};
+\node[below left] at (A) {$A$};
+\node[below right] at (B) {$B$};
+\node[above left] at (D) {$D$};
+\node[above right] at (C) {$C$};
+\node[below] at (H) {$H$};
+\end{tikzpicture}

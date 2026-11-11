@@ -1,0 +1,37 @@
+% 2006_shanghai_spring_q20_fig1: ellipse x^2/100+y^2/25=1 solid, parabola y=-x^2/7+64/7 dashed, segment CD solid
+% curves generated from formulas in problem/solution; schematic layout from original PNG
+\begin{tikzpicture}[x=0.5cm,y=0.5cm,font=\normalsize,line width=.6pt,>=Stealth]
+% axes
+\draw[->] (-11,0) -- (11,0) node[right=3pt] {$x$};
+\draw[->] (0,-6) -- (0,11) node[above=3pt] {$y$};
+% axis ticks (short marks, not data)
+\foreach \x in {-10,...,10} {\draw (\x,0.12) -- (\x,-0.12);}
+\foreach \y in {-5,...,10} {\draw (0.12,\y) -- (-0.12,\y);}
+% ellipse: x=10cos t, y=5sin t, solid
+\draw[solid,domain=0:360,samples=200] plot ({10*cos(\x)},{5*sin(\x)});
+% parabola: y=-x^2/7+64/7, dashed
+\draw[dashed,domain=-10.2:10.2,samples=200] plot ({\x},{-\x*\x/7+64/7});
+\coordinate (C) at (6,4);
+\coordinate (D) at (8,0);
+% segment CD solid
+\draw[solid] (C) -- (D);
+\coordinate (O) at (0,0);
+\coordinate (A) at (4,0);
+\coordinate (B) at (6,0);
+\coordinate (M) at (0,9.142857142857);
+% points
+\fill (0,0) circle (1.5pt);
+\fill (4,0) circle (1.2pt);
+\fill (6,0) circle (1.2pt);
+\fill (8,0) circle (1.2pt);
+\fill (6,4) circle (1.5pt);
+% labels kept clear of strokes
+\node[below left=3pt] at (0,0) {$O$};
+\node[below=4pt] at (4,0) {$A$};
+\node[below=4pt] at (6,0) {$B$};
+\node[below=4pt,xshift=-1pt,yshift=-3pt] at (8,0) {$D$};
+\node[right=3pt,xshift=-1pt,yshift=3pt] at (6,4) {$C$};
+\node[right=3pt,xshift=-1pt,yshift=5pt] at (0,9.142857142857) {$M$};
+\node[left=3pt] at (0,1) {$1$};
+\node[below=3pt] at (1,0) {$1$};
+\end{tikzpicture}

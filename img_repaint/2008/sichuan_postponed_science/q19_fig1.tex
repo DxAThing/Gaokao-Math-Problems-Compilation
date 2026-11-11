@@ -1,0 +1,32 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+% Schematic folded-parallelogram configuration
+\coordinate (A) at (0,1);
+\coordinate (E) at (2,0);
+\coordinate (B) at (4.5,1);
+\coordinate (D) at (2.8,2);
+\coordinate (C) at (2,5);
+\coordinate (C0) at (7.3000000000,2.0000000000);
+% solid edges
+\draw (C)--(A);
+\draw (C)--(E);
+\draw (C)--(D);
+\draw (C)--(B);
+\draw (C)--(C0);
+\draw (A)--(D);
+\draw (A)--(B);
+\draw (A)--(E);
+\draw (E)--(B);
+\draw (D)--(B);
+\draw (B)--(C0);
+% hidden fold edge
+\draw[dashed] (D)--(C0);
+% points
+\foreach \p in {A,E,B,D,C,C0} {\fill (\p) circle (1.6pt);}
+% labels with clearance
+\node[anchor=east,xshift=-6pt] at (A) {$A$};
+\node[anchor=north,yshift=-6pt] at (E) {$E$};
+\node[anchor=north east,xshift=4pt,yshift=-7pt] at (B) {$B$};
+\node[anchor=west,xshift=5pt,yshift=5pt] at (D) {$D$};
+\node[anchor=south east,xshift=-2pt,yshift=5pt] at (C) {$C$};
+\node[anchor=west,xshift=6pt] at (C0) {$C_{0}$};
+\end{tikzpicture}

@@ -1,0 +1,15 @@
+% rural housing bar: categories 1985/1990/1995/2000, values above bars.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template bar,
+  symbolic x coords={1985年,1990年,1995年,2000年},xtick=data,
+  ymin=0,ymax=27.5,ytick={0,15,20,25},yticklabels={0,15.0,20.0,25.0},
+  enlarge x limits=0.166666666667]
+\addplot[draw=black,fill=white] coordinates {(1985年,14.7) (1990年,17.8) (1995年,21.0) (2000年,24.8)};
+\node[above,yshift=1pt] at (axis cs:1985年,14.7) {14.7};
+\node[above,yshift=1pt] at (axis cs:1990年,17.8) {17.8};
+\node[above,yshift=1pt] at (axis cs:1995年,21.0) {21.0};
+\node[above,yshift=1pt] at (axis cs:2000年,24.8) {24.8};
+\examstatylabel{面积/m$^2$}
+\examstatxlabel{年份}
+\end{axis}
+\end{tikzpicture}

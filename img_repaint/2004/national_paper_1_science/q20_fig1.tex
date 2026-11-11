@@ -1,0 +1,23 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=0.6pt]
+\coordinate (P) at (0,3.6);
+\coordinate (A) at (0.9,0);
+\coordinate (B) at (4.3,0.5);
+\coordinate (C) at (6.6,1.6);
+\coordinate (D) at (3.2000000000,1.1000000000);
+% visible solid edges
+\draw[draw=black,solid] (P) -- (A);
+\draw[draw=black,solid] (P) -- (B);
+\draw[draw=black,solid] (P) -- (C);
+\draw[draw=black,solid] (A) -- (B);
+\draw[draw=black,solid] (B) -- (C);
+% hidden dashed edges
+\draw[draw=black,dashed,dash pattern=on 3pt off 2.5pt] (P) -- (D);
+\draw[draw=black,dashed,dash pattern=on 3pt off 2.5pt] (A) -- (D);
+\draw[draw=black,dashed,dash pattern=on 3pt off 2.5pt] (D) -- (C);
+% labels offset from strokes
+\node[font=\normalsize,anchor=south east,xshift=-2pt,yshift=2pt] at (P) {$P$};
+\node[font=\normalsize,anchor=north,xshift=0pt,yshift=-3pt] at (A) {$A$};
+\node[font=\normalsize,anchor=north,xshift=3pt,yshift=-3pt] at (B) {$B$};
+\node[font=\normalsize,anchor=west,xshift=3pt,yshift=1pt] at (C) {$C$};
+\node[font=\normalsize,anchor=north west,xshift=-1pt,yshift=-4pt] at (D) {$D$};
+\end{tikzpicture}

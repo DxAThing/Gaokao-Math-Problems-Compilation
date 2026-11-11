@@ -1,78 +1,35 @@
-% Source: source/普通高考/2012/2012陕西文.pdf, page 1, question 5.
-% pdfimages -list found no embedded bitmap; the program flowchart is vector artwork.
-% Node -> directed-edge list: 开始 -> 输入成绩 x_1,...,x_500 -> M=0,N=0,i=1
-% -> x_i>=60?; 是 -> M=M+1 -> i=i+1; 否 -> N=N+1 -> the same i=i+1 stem;
-% i=i+1 -> i>500?; 否 -> left return arrow -> the first decision stem;
-% 是 -> blank rectangle -> 输出 q -> 结束. The source has a left-pointing
-% merge arrow from N=N+1 into the main stem and a separate downward arrow.
-% All node text is zero-indented and centered; all connectors are solid.
-
-\begin{tikzpicture}[
-    >=Stealth,
-    x=1cm,
-    y=0.86cm,
-    line width=0.45pt,
-    line cap=round,
-    line join=round,
-    font=\normalsize,
-    every node/.style={anchor=center, align=center,
-        execute at begin node={\setlength{\parindent}{0pt}}},
-    flowbox/.style={draw, anchor=center, align=center, inner xsep=3pt,
-        inner ysep=2pt, execute at begin node={\setlength{\parindent}{0pt}}},
-    terminal/.style={flowbox, rounded corners=0.16cm,
-        minimum width=1.35cm, minimum height=0.68cm},
-    io/.style={flowbox, trapezium, trapezium left angle=72,
-        trapezium right angle=108, minimum height=0.76cm},
-    process/.style={flowbox, minimum height=0.68cm},
-    decision/.style={flowbox, diamond, aspect=3.0, inner sep=0pt,
-        minimum height=1.02cm},
-]
-    \path[use as bounding box] (-3.85,-2.30) rectangle (3.85,10.90);
-
-    \node[terminal] (start) at (0,10.35) {开始};
-    \node[io, minimum width=5.20cm] (input) at (0,9.05)
-        {输入成绩 $x_1,x_2,\ldots,x_{500}$};
-    \node[process, minimum width=4.45cm] (init) at (0,7.65)
-        {$M=0,N=0,i=1$};
-    \node[decision, minimum width=4.20cm] (pass) at (0,6.15)
-        {$x_i\geqslant60$};
-    \node[process, minimum width=2.35cm] (countM) at (0,4.78)
-        {$M=M+1$};
-    \node[process, minimum width=2.35cm] (countN) at (2.40,4.78)
-        {$N=N+1$};
-    \node[process, minimum width=2.55cm] (inc) at (0,3.35)
-        {$i=i+1$};
-    \node[decision, minimum width=3.60cm] (done) at (0,2.00)
-        {$i>500$};
-    \node[process, minimum width=2.35cm] (blank) at (0,0.75) {};
-    \node[io, minimum width=2.10cm] (output) at (0,-0.60) {输出 $q$};
-    \node[terminal] (finish) at (0,-1.85) {结束};
-    \coordinate (loop-entry) at (0,6.95);
-    \coordinate (counter-merge) at (0,4.05);
-
-    % Main chain and the two branches from x_i>=60.
-    \draw[->] (start.south) -- (input.north);
-    \draw[->] (input.south) -- (init.north);
-    \draw (init.south) -- (loop-entry);
-    \draw[->] (loop-entry) -- (pass.north);
-    \draw[->] (pass.south) -- node[right=2pt] {是} (countM.north);
-    \draw[->] (pass.east) -- node[above=1pt] {否} (2.40,6.15)
-        -- (countN.north);
-
-    % N branch merges with the centered M branch before i=i+1.
-    \draw (countM.south) -- (counter-merge);
-    \draw (countN.south) -- (2.40,4.05);
-    \draw[->] (2.40,4.05) -- (counter-merge);
-    \draw[->] (counter-merge) -- (inc.north);
-    \draw[->] (inc.south) -- (done.north);
-
-    % Loopback from i>500? 否 returns to the first-decision stem.
-    \draw (done.west) -- node[above=2pt, inner sep=0pt] {否}
-        (-3.25,2.00) -- (-3.25,6.95);
-    \draw[->] (-3.25,6.95) -- (loop-entry);
-
-    % The terminating path has only one downward arrow into the blank box.
-    \draw[->] (done.south) -- node[right=2pt] {是} (blank.north);
-    \draw[->] (blank.south) -- (output.north);
-    \draw[->] (output.south) -- (finish.north);
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.6pt,
+  execute at begin node={\setlength{\parindent}{0pt}},
+  flownode/.style={draw,align=center,inner sep=6pt},
+  proc/.style={flownode,rectangle,minimum width=2.2cm,minimum height=0.8cm},
+  start/.style={flownode,shape=rectangle,rounded corners=1.5mm,minimum width=26mm,minimum height=10mm,inner xsep=3mm,inner ysep=1.5mm},
+  io/.style={flownode,trapezium,trapezium left angle=70,trapezium right angle=110,minimum width=3.4cm,minimum height=0.9cm},
+  dec/.style={flownode,diamond,aspect=2.4,inner sep=4pt,minimum width=3.2cm,minimum height=1.2cm}]
+\node[start] (start) at (0,0.05) {开始};
+\node[io,minimum width=8.2cm] (input) at (0,-1.7) {输入成绩 $x_{1},x_{2},\cdots,x_{500}$};
+\node[proc,minimum width=6.0cm] (init) at (0,-3.3) {$M=0,N=0,i=1$};
+\node[dec,minimum width=3.6cm] (d1) at (0,-5.4) {$x_{i}\geqslant 60$};
+\node[proc,minimum width=3.0cm] (mm) at (0,-7.3) {$M=M+1$};
+\node[proc,minimum width=3.0cm] (nn) at (4.6,-7.3) {$N=N+1$};
+\node[proc,minimum width=2.6cm] (ii) at (0,-8.9) {$i=i+1$};
+\node[dec,minimum width=3.6cm] (d2) at (0,-10.5) {$i>500$};
+\node[proc,minimum width=3.6cm,minimum height=1.0cm] (blank) at (0,-12.400) {\strut};
+\node[io,minimum width=3.0cm] (output) at (0,-13.900) {输出 $q$};
+\node[start] (end) at (0,-15.400) {结束};
+\coordinate (Jtop) at (0,-4.4);
+\coordinate (Jmid) at (0,-8.05);
+\draw[->] (start.south) -- (input.north);
+\draw[->] (input.south) -- (init.north);
+\draw[->] (init.south) -- (d1.north);
+\draw[->] (d1.south) -- node[pos=0.38,right=2mm,inner sep=0pt,xshift=-0.1054mm,yshift=0.1538mm]{是} (mm.north);
+\draw[->] (d1.east) -- (4.6,-5.4) -- (nn.north);
+\node[above=2mm,inner sep=0pt,xshift=-0.0002mm,yshift=0.0782mm] at ([xshift=5mm]d1.east) {否};
+\draw[->] (mm.south) -- (ii.north);
+\draw[->] (nn.south) -- (4.6,-8.05) -- (Jmid);
+\draw[->] (ii.south) -- (d2.north);
+\draw[->] (d2.west) -- (-5.6,-10.5) -- (-5.6,-4.4) -- (Jtop);
+\node[above=2mm,inner sep=0pt,xshift=0.0002mm,yshift=0.0779mm] at ([xshift=-5mm]d2.west) {否};
+\draw[->] (d2.south) -- node[pos=0.38,right=2mm,inner sep=0pt]{是} (blank.north);
+\draw[->] (blank.south) -- (output.north);
+\draw[->] (output.south) -- (end.north);
 \end{tikzpicture}

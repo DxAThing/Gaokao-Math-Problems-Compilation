@@ -1,0 +1,33 @@
+% 三视图:正为等边三角形边长2√3带中线,侧为等腰三角形底2高3带中线,俯为菱形边长2带两对角线;全实线
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% 正视图:底3.464(=2√3),高3,顶点(0,3)
+\begin{scope}[shift={(2.2,3.4)}]
+\draw (-1.732,0) -- (1.732,0) -- (0,3) -- cycle;
+\draw (0,0) -- (0,3);
+% 左腰标注 2√3 (沿边)
+\draw[thin] (-1.732,0) -- (-2.05,-0.12);
+\draw[thin] (0,3) -- (-0.28,3.22);
+\draw[<->] (-2.05,-0.12) -- node[above,fill=white,inner sep=1pt] {$2\sqrt{3}$} (-0.28,3.22);
+\node[below] at (0,-1.35) {正视图};
+\end{scope}
+% 侧视图:底2,高3
+\begin{scope}[shift={(6.6,3.4)}]
+\draw (-1,0) -- (1,0) -- (0,3) -- cycle;
+\draw (0,0) -- (0,3);
+\draw[thin] (-1,0) -- (-1,-0.35);
+\draw[thin] (1,0) -- (1,-0.35);
+\draw[<->] (-1,-0.2) -- node[below,fill=white,inner sep=1pt] {$2$} (1,-0.2);
+\node[below] at (0,-1.35) {侧视图};
+\end{scope}
+% 俯视图:菱形 横半轴1.732 纵半轴1,两对角线均为实线
+\begin{scope}[shift={(10.4,3.4)}]
+\draw (-1.732,0) -- (0,1) -- (1.732,0) -- (0,-1) -- cycle;
+\draw (-1.732,0) -- (1.732,0);
+\draw (0,1) -- (0,-1);
+% 上左棱边标注 2
+\draw[thin] (-1.732,0) -- (-2.0,-0.18);
+\draw[thin] (0,1) -- (-0.22,1.22);
+\draw[<->] (-2.0,-0.18) -- node[above,fill=white,inner sep=1pt] {$2$} (-0.22,1.22);
+\node[below] at (0,-1.35) {俯视图};
+\end{scope}
+\end{tikzpicture}

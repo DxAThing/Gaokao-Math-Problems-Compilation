@@ -1,0 +1,58 @@
+% 2015_anhui_liberal_q9_fig1: point-fix of inputs/..._current.tex.
+% Only moved plan scope from below-front to the right of side view; all captions
+% placed at one common absolute baseline below the lowest shape point.
+% Projection edges, dimensions, arrow style kept.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% front: A(-1.4,0) B(1.4,0) C(0,1.4)
+\begin{scope}[shift={(0,2.6)}]
+  \draw (-1.4,0) -- (1.4,0) -- (0,1.4) -- cycle;
+  \draw (0,0) -- (0,1.4);
+  % bottom dims 1,1
+  \draw (-1.4,-0.25) -- (-1.4,0.05);
+  \draw (0,-0.25) -- (0,0.05);
+  \draw (1.4,-0.25) -- (1.4,0.05);
+  \draw[<->,>=Stealth] (-1.4,-0.15) -- (0,-0.15) node[midway,below] {$1$};
+  \draw[<->,>=Stealth] (0,-0.15) -- (1.4,-0.15) node[midway,below] {$1$};
+  % slanted dims sqrt2
+  \draw (-1.75,-0.35) -- (-1.45,-0.05);
+  \draw (-0.35,1.55) -- (-0.05,1.85);
+  \draw[<->,>=Stealth] (-1.68,-0.18) -- (-0.18,1.68) node[midway,above left] {$\sqrt{2}$};
+  \draw (1.45,-0.05) -- (1.75,-0.35);
+  \draw (0.05,1.85) -- (0.35,1.55);
+  \draw[<->,>=Stealth] (1.68,-0.18) -- (0.18,1.68) node[midway,above right] {$\sqrt{2}$};
+\end{scope}
+% side: right triangle (0,0)-(0,1.4)-(1.4,0)
+\begin{scope}[shift={(3.6,2.6)}]
+  \draw (0,0) -- (0,1.4) -- (1.4,0) -- cycle;
+  % vertical dim 1
+  \draw (-0.25,0) -- (0.05,0);
+  \draw (-0.25,1.4) -- (0.05,1.4);
+  \draw[<->,>=Stealth] (-0.15,0) -- (-0.15,1.4) node[midway,left] {$1$};
+  % horizontal dim 1
+  \draw (0,-0.25) -- (0,0.05);
+  \draw (1.4,-0.25) -- (1.4,0.05);
+  \draw[<->,>=Stealth] (0,-0.15) -- (1.4,-0.15) node[midway,below] {$1$};
+\end{scope}
+% plan: base on top (-1.4,0)-(1.4,0), apex (0,-1.4)
+\begin{scope}[shift={(7.4,2.6)}]
+  \draw (-1.4,0) -- (1.4,0) -- (0,-1.4) -- cycle;
+  \draw (0,0) -- (0,-1.4);
+  % top dims 1,1
+  \draw (-1.4,0.05) -- (-1.4,0.35);
+  \draw (0,0.05) -- (0,0.35);
+  \draw (1.4,0.05) -- (1.4,0.35);
+  \draw[<->,>=Stealth] (-1.4,0.25) -- (0,0.25) node[midway,above] {$1$};
+  \draw[<->,>=Stealth] (0,0.25) -- (1.4,0.25) node[midway,above] {$1$};
+  % slanted dims sqrt2 (lower sides)
+  \draw (-1.75,0.05) -- (-1.45,-0.25);
+  \draw (-0.35,-1.55) -- (-0.05,-1.85);
+  \draw[<->,>=Stealth] (-1.68,-0.08) -- (-0.18,-1.58) node[midway,below left] {$\sqrt{2}$};
+  \draw (1.45,-0.25) -- (1.75,0.05);
+  \draw (0.05,-1.85) -- (0.35,-1.55);
+  \draw[<->,>=Stealth] (1.68,-0.08) -- (0.18,-1.58) node[midway,below right] {$\sqrt{2}$};
+\end{scope}
+% captions: one common baseline (absolute y=0.1), centred under each view
+\node[below] at (0,0.1) {正视图};
+\node[below] at (4.3,0.1) {侧视图（左）};
+\node[below] at (7.4,0.1) {俯视图};
+\end{tikzpicture}

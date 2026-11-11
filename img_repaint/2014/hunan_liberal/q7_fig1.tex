@@ -1,54 +1,25 @@
-% original_pdf: source/普通高考/2014/2014湖南文.pdf
-% page: 1 (question 7)
-% embedded_bitmap_attempt: pdfimages -list returned no embedded images; redraw from rendered page
-% evidence: tmp/independent_gate_2014_hunan_liberal/page1_grid.png; q7_original.png (no-grid crop)
-% elements: rounded 开始/结束 terminals; input parallelogram 输入 t; condition diamond t<0?;
-% assignment rectangles t=2t^2+1 and S=t-3; output parallelogram 输出 S; solid arrows and 是/否 labels.
-% node-edge list: 开始→输入 t→t<0?; 是→t=2t^2+1→left loop-back to the connector before
-% t<0?; 否→S=t−3→输出 S→结束. No other connecting segments are present.
-% solid segments: all node borders and directed connectors; dashed segments: none.
-% Labels are centered in nodes with local zero paragraph indentation and compact padding.
-
-\begin{tikzpicture}[
-  baseline,
-  >=stealth,
-  x=1cm,
-  y=1.3cm,
-  line width=0.55pt,
-  line cap=round,
-  line join=round,
-  font=\normalsize,
-  every node/.style={anchor=center,align=center,
-    execute at begin node={\setlength{\parindent}{0pt}}},
-  flowbox/.style={draw,minimum height=0.68cm,inner xsep=4pt,inner ysep=2pt,
-    align=center,execute at begin node={\setlength{\parindent}{0pt}}},
-  terminal/.style={flowbox,rounded corners=0.20cm,minimum width=1.24cm},
-  io/.style={flowbox,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
-    minimum height=0.76cm},
-  decision/.style={flowbox,shape=diamond,aspect=2.8,inner xsep=4pt,inner ysep=2pt,
-    minimum height=1.00cm}
-]
-  % Main path and branch nodes.
-  \node[terminal] (start) at (0,9.00) {开始};
-  \node[io,minimum width=2.35cm] (input) at (0,7.55) {输入 $t$};
-  \node[decision,minimum width=3.75cm] (test) at (0,5.90) {$t<0?$};
-  \node[flowbox,minimum width=3.05cm] (leftassign) at (-3.08,4.25) {$t=2t^{2}+1$};
-  \node[flowbox,minimum width=2.85cm] (rightassign) at (3.08,4.25) {$S=t-3$};
-  \node[io,minimum width=2.70cm] (output) at (0,2.35) {输出 $S$};
-  \node[terminal] (finish) at (0,0.88) {结束};
-
-  \draw[->] (start.south) -- (input.north);
-  \draw[->] (input.south) -- (test.north);
-  \draw[->] (test.west) -- (-3.08,5.90) -- (leftassign.north);
-  \draw[->] (test.east) -- (3.08,5.90) -- (rightassign.north);
-  \draw[->] (rightassign.south) -- (3.08,3.45) -- (0,3.45) -- (output.north);
-  \draw[->] (output.south) -- (finish.north);
-
-  % The yes branch loops left and returns to the connector immediately before the test.
-  \draw[->] (leftassign.west) -- (-4.80,4.25) -- (-4.80,7.05) -- (0,7.05);
-
-  \node[anchor=south east,inner sep=1pt] at (-1.55,5.98) {是};
-  \node[anchor=south west,inner sep=1pt] at (1.55,5.98) {否};
-
-  \path[use as bounding box] (-5.05,9.42) rectangle (4.35,0.46);
-\end{tikzpicture}
+\tikzset{
+  flowproc/.style={draw, rectangle, align=center, inner sep=2mm, line width=0.5pt},
+  flowio/.style={draw, trapezium, trapezium left angle=72, trapezium right angle=108, align=center, inner sep=2mm, line width=0.5pt},
+  flowstart/.style={draw, shape=rectangle, rounded corners=1.5mm, align=center, inner xsep=3mm, inner ysep=1.5mm, minimum width=26mm, minimum height=10mm, line width=0.5pt},
+  flowdec/.style={draw, diamond, aspect=2, align=center, inner sep=1.5mm, line width=0.5pt},
+  flowarr/.style={-{Stealth[length=2.6mm]}, line width=0.5pt}
+}
+{\parindent=0pt
+\begin{tikzpicture}
+\node[flowstart] (start) at (0,0) {开始};
+\node[flowio] (in) at (0,-1.7) {输入 $t$};
+\node[flowdec] (dia) at (0,-4.9) {$t<0?$};
+\node[flowio] (out) at (0,-9.65) {输出 $S$};
+\node[flowstart] (end) at (0,-11.35) {结束};
+\node[flowproc] (tt) at (-3.3,-7.0) {$t=2t^{2}+1$};
+\node[flowproc] (ss) at (3.3,-7.0) {$S=t-3$};
+\coordinate (J) at (0,-3.5);
+\draw[flowarr] (start.south) -- (in.north);
+\draw[flowarr] (in.south) -- (dia.north);
+\draw[flowarr] (dia.west) -- node[pos=0.13, above=1.5mm] {是} (-3.3,-4.9) -- (tt.north);
+\draw[flowarr] (tt.west) -- (-5.4,-7.0) -- (-5.4,-3.5) -- (J);
+\draw[flowarr] (dia.east) -- node[pos=0.13, above=1.5mm] {否} (3.3,-4.9) -- (ss.north);
+\draw[flowarr] (ss.south) -- (3.3,-8.4) -- (0,-8.4) -- (out.north);
+\draw[flowarr] (out.south) -- (end.north);
+\end{tikzpicture}}

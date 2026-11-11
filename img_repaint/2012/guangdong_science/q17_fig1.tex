@@ -1,80 +1,33 @@
-% Source PDF: source/普通高考/2012/2012广东理.pdf
-% Page: 1
-% PDF embedded bitmap attempt: no matching image objects; the page is vector text/line art.
-% Grid evidence: tmp/repaint_grid_2012_gd_s/page1_grid100.png and tmp/repaint_grid_2012_gd_s/q17_block_grid50.png
-% Page crop evidence: tmp/repaint_crops_2012_gd_s/q17_orig.png, cropped from the no-grid page render.
-% Elements: x-axis with origin 0 and a break before score 40; y-axis; six histogram bars over [40,50), [50,60), [60,70), [70,80), [80,90), [90,100]; dashed horizontal guides at 0.006, 0.010, x, and 0.054; labels 频率/组距 and 成绩.
-% Relations: bar heights are 0.006, 0.010, x, 0.054, x, 0.006 respectively. Since each score interval has width 10 and the six frequencies sum to 1, 10(0.006+0.010+x+0.054+x+0.006)=1, so x=0.012.
-% solid segments: bar outlines, x/y axis arrows, tick marks, and the x-axis break stroke.
-% dashed segments: horizontal reference lines at y=0.006, 0.010, 0.012, and 0.054.
-% labels: y label sits above-left of the vertical axis; x label sits beyond the 100 tick; score ticks stay below the axis and y labels stay left of the axis.
-\begin{tikzpicture}[baseline]
-\begin{axis}[exam statistical histogram,scaled ticks=false,
-    width=14.7cm,
-    height=6.2cm,
-    axis lines=none,
-    clip=false,
-    xmin=-4.5,
-    xmax=8.15,
-    ymin=-0.008,
-    ymax=0.061,
-    ticks=none,
-]
-    % Dashed guides end at the corresponding source bar boundaries.
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.006) -- (axis cs:7,0.006);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.010) -- (axis cs:4,0.010);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.012) -- (axis cs:6,0.012);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.054) -- (axis cs:4,0.054);
+% 2012广东理科17：频率/组距直方图；x为待定量，仅保留原题标注，不标数值。
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,
+  xmin=30,ymin=0,
+  xtick={30,40,50,60,70,80,90,100},
+  ytick={0.006,0.010,0.018,0.054},
+  xmax=105,
+  ymax=0.072,
+  xticklabels={,40,50,60,70,80,90,100},
+  yticklabels={},
+  exam statistical template dense]
 
-    \addplot[
-        ybar interval,
-        draw=black,
-        fill=white,
-        line width=0.7pt,
-    ] coordinates {
-        (1,0.006)
-        (2,0.010)
-        (3,0.012)
-        (4,0.054)
-        (5,0.012)
-        (6,0.006)
-        (7,0)
-    };
 
-    \draw[->,line width=0.75pt] (axis cs:0,0) -- (axis cs:8.0,0);
-    \draw[->,line width=0.75pt] (axis cs:0,0) -- (axis cs:0,0.059);
 
-    % One-bin compressed origin segment, followed by the source-style break.
-    \examstatxbreak[line width=0.75pt]{0.54}{0};
 
-    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \examstatxlabel{成绩};
+\addplot[draw=black,fill=white] coordinates
+  {(40,0.006) (50,0.006) (60,0.010) (70,0.054) (80,0.018) (90,0.006) (100,0)};
+\draw[densely dashed] (axis cs:30,0.006) -- (axis cs:100,0.006);
+\draw[densely dashed] (axis cs:30,0.010) -- (axis cs:70,0.010);
+\draw[densely dashed] (axis cs:30,0.054) -- (axis cs:80,0.054);
+\draw[densely dashed] (axis cs:30,0.018) -- (axis cs:90,0.018);
+\examstatxbreak{35}{0}
+\examstatylabel{$\frac{\text{频率}}{\text{组距}}$}
+\examstatxlabel{成绩}
 
-    \draw[line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.0010);
-    \node[anchor=north east,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:0,-0.001000) {0};
-    \draw[line width=0.45pt] (axis cs:1,0) -- (axis cs:1,-0.0010);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:1,-0.001000) {40};
-    \draw[line width=0.45pt] (axis cs:2,0) -- (axis cs:2,-0.0010);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:2,-0.001000) {50};
-    \draw[line width=0.45pt] (axis cs:3,0) -- (axis cs:3,-0.0010);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:3,-0.001000) {60};
-    \draw[line width=0.45pt] (axis cs:4,0) -- (axis cs:4,-0.0010);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:4,-0.001000) {70};
-    \draw[line width=0.45pt] (axis cs:5,0) -- (axis cs:5,-0.0010);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:5,-0.001000) {80};
-    \draw[line width=0.45pt] (axis cs:6,0) -- (axis cs:6,-0.0010);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:6,-0.001000) {90};
-    \draw[line width=0.45pt] (axis cs:7,0) -- (axis cs:7,-0.0010);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:7,-0.001000) {100};
+\node[anchor=east,inner sep=0pt,xshift=-4pt] at (current axis.left of origin) {0};
 
-    % Score labels stay horizontal and centered below their group boundaries.
-    \draw[line width=0.45pt] (axis cs:0,0.006) -- (axis cs:-0.20,0.006);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.200000,0.006) {0.006};
-    \draw[line width=0.45pt] (axis cs:0,0.010) -- (axis cs:-1.10,0.010);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-40pt] at (axis cs:-3.300000,0.010) {0.010};
-    \draw[line width=0.45pt] (axis cs:0,0.012) -- (axis cs:-3.30,0.012);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-3.40,0.012) {$x$};
-    \draw[line width=0.45pt] (axis cs:0,0.054) -- (axis cs:-1.10,0.054);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-1.100000,0.054) {0.054};
+\examstatyticklabel{30}{0.006}{0.006}{0.000000}
+\examstatyticklabel{30}{0.01}{0.010}{1.645669}
+\examstatyticklabel{30}{0.018}{$x$}{0.000000}
+\examstatyticklabel{30}{0.054}{0.054}{0.000000}
 \end{axis}
 \end{tikzpicture}

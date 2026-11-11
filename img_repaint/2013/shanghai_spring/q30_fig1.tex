@@ -1,0 +1,28 @@
+% Schematic axes with fan A-P1..P4; positions preserve order only, no numeric scale.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Axes
+\draw[->] (-0.4,0)--(8.5,0) node[below right] {$x$};
+\draw[->] (0,-0.4)--(0,4.6) node[above left] {$y$};
+\node[below left] at (0,0) {$0$};
+% Apex A on y-axis (schematic height)
+\fill (0,3.6) circle (1.5pt);
+\node[left] at (0,3.6) {$A$};
+% Foot points on x-axis preserve P1<P2<P3<P4 order
+\fill (1,0) circle (1.5pt);
+\fill (1.9,0) circle (1.5pt);
+\fill (3.2,0) circle (1.5pt);
+\fill (5.8,0) circle (1.5pt);
+\node[below] at (1,0) {$P_{1}$};
+\node[below] at (1.9,0) {$P_{2}$};
+\node[below] at (3.2,0) {$P_{3}$};
+\node[below] at (5.8,0) {$P_{4}$};
+% Rays from A to each foot point
+\draw (0,3.6)--(1,0);
+\draw (0,3.6)--(1.9,0);
+\draw (0,3.6)--(3.2,0);
+\draw (0,3.6)--(5.8,0);
+% Continuation dots on x-axis beyond P4 (solid dots in original)
+\fill (7.0,0) circle (1.5pt);
+\fill (7.5,0) circle (1.5pt);
+\fill (8.0,0) circle (1.5pt);
+\end{tikzpicture}

@@ -1,0 +1,23 @@
+% hyperbola x^2-y^2=1 schematic + normal line BC through A
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt, font=\normalsize, >=Stealth]
+  \draw[->] (-3,0) -- (4.6,0);
+  \node[below right=4pt] at (4.6,0) {$X$};
+  \draw[->] (0,-2.5) -- (0,3.9);
+  \node[right=5pt] at (0,3.9) {$Y$};
+  \node[below left=5pt] at (0,0) {$O$};
+  % right branch of x^2-y^2=1 : y = +/-sqrt(x^2-1)
+  \draw[domain=1:2.7,samples=80] plot (\x,{sqrt(\x*\x-1)});
+  \draw[domain=1:2.7,samples=80] plot (\x,{-sqrt(\x*\x-1)});
+  % left branch
+  \draw[domain=-2.7:-1,samples=80] plot (\x,{sqrt(\x*\x-1)});
+  \draw[domain=-2.7:-1,samples=80] plot (\x,{-sqrt(\x*\x-1)});
+  % schematic normal line B(0,2.236)-C(3,0) through A(1.5,1.118)
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (1.5,1.118);
+  \coordinate (B) at (0,2.236);
+  \coordinate (C) at (3,0);
+  \draw (B) -- (C);
+  \node[right=5pt] at (A) {$A$};
+  \node[left=5pt] at (B) {$B$};
+  \node[below=5pt] at (C) {$C$};
+\end{tikzpicture}

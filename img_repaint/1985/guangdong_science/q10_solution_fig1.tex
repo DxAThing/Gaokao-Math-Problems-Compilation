@@ -1,0 +1,26 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.15cm,y=1.15cm,line width=.6pt,>=Stealth,font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (P) at (1,2);
+\coordinate (Q) at (4,4);
+\draw[->] (-1.0,0)--(5.3,0) node[right=4pt,inner sep=0pt] {$x$};
+\draw[->] (0,-1.2)--(0,5.0) node[above=4pt,inner sep=0pt] {$y$};
+\draw[domain=0:5,samples=121] plot (\x,{2*sqrt(\x)});
+\draw (1,-1.1)--(1,4.55);
+\draw[dashed] (0,4)--(4,4);
+\draw[dashed] (4,4)--(4,0);
+\draw (1,0)--(1,0.13);
+\draw (2,0)--(2,0.13);
+\draw (3,0)--(3,0.13);
+\draw (4,0)--(4,0.13);
+\draw (0,-1)--(0.13,-1);
+\draw (0,1)--(0.13,1);
+\draw (0,2)--(0.13,2);
+\draw (0,3)--(0.13,3);
+\draw (0,4)--(0.13,4);
+\node[below left=4pt,inner sep=0pt] at (O) {$O$};
+\node[below right=4pt and 4pt,inner sep=0pt] at (1,0) {$1$};
+\node[below=4pt,inner sep=0pt] at (2,0) {$2$};
+\node[below=4pt,inner sep=0pt] at (3,0) {$3$};
+\node[below=4pt,inner sep=0pt] at (4,0) {$4$};
+\end{tikzpicture}

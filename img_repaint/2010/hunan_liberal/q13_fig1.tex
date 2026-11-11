@@ -1,0 +1,34 @@
+% 2010_hunan_liberal_q13_fig1: three orthographic right-triangle views, all solid.
+% Front (left): legs h (vertical) x 5 (horizontal); side (middle): same
+% height x 6 wide; plan (right): 5 wide x 6 tall.
+% layout: horizontal row (point-fix: plan wrapped in shift scope only).
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1mm,y=1mm,>=Latex]
+% front view triangle: A top-left, B bottom-left (right angle), C bottom-right
+\draw (0,30) -- (0,0) -- (30,0) -- cycle;
+% side view triangle: D top-left, E bottom-left (right angle), F bottom-right
+\draw (46,30) -- (46,0) -- (82,0) -- cycle;
+% plan view triangle: G top-left (right angle), H top-right, I bottom-left
+% shifted right into the same row; label baseline aligned with the other two
+\begin{scope}[shift={(92,56)}]
+\draw (0,-26) -- (30,-26) -- (0,-62) -- cycle;
+\node at (15,-70) {俯视图};
+\end{scope}
+% front vertical dimension h with extension ticks
+\draw (0,0) -- (-8,0);
+\draw (0,30) -- (-8,30);
+\draw[<->] (-6,0) -- (-6,30);
+\node[fill=white,inner sep=1pt] at (-6,15) {$h$};
+% front horizontal dimension 5 with extension ticks
+\draw (0,0) -- (0,-8);
+\draw (30,0) -- (30,-8);
+\draw[<->] (0,-6) -- (30,-6);
+\node[fill=white,inner sep=1pt] at (15,-6) {$5$};
+% side horizontal dimension 6 with extension ticks
+\draw (46,0) -- (46,-8);
+\draw (82,0) -- (82,-8);
+\draw[<->] (46,-6) -- (82,-6);
+\node[fill=white,inner sep=1pt] at (64,-6) {$6$};
+% view names
+\node at (15,-14) {正视图};
+\node at (64,-14) {侧视图};
+\end{tikzpicture}

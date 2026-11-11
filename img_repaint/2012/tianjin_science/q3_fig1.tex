@@ -1,60 +1,25 @@
-% Source: source/普通高考/2012/2012天津理.pdf, page 1, question 3.
-% pdfimages -list reports no embedded bitmap; the program flowchart is vector/text artwork.
-% Grid evidence: tmp/redraw_flowchart_2012_tianjin_science/grid/q3_grid.jpg.
-% Comparison crop: tmp/redraw_flowchart_2012_tianjin_science/grid/q3_original_clean.png,
-% taken from the ungridded page render with a safety border.
-% Nodes: 开始; 输入 x; |x|>1?; x=√|x|−1; x=2x+1; 输出 x; 结束.
-% Directed edges: 开始→输入→判定; 判定(是)→平方根更新→左侧回环→判定;
-% 判定(否)→x=2x+1→输出→结束. The loop and output branches are independent.
-\begin{tikzpicture}[
+\tikzset{
   >=Stealth,
-  line width=0.55pt,
-  line cap=round,
-  line join=round,
-  every node/.style={font=\normalsize,anchor=center,align=center,
-    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
-  flowbox/.style={draw,minimum height=.68cm,inner xsep=4pt,inner ysep=2pt,
-    anchor=center,align=center},
-  terminal/.style={flowbox,rounded corners=.18cm,minimum width=1.35cm,
-    minimum height=.72cm},
-  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
-    trapezium right angle=108,minimum height=.78cm},
-  decision/.style={flowbox,shape=diamond,aspect=2.85,inner sep=2pt},
-  flowarrow/.style={->,line width=0.55pt},
-]
-  \node[terminal] (start) at (0,9.15) {开始};
-  \node[io,minimum width=2.35cm] (input) at (0,7.82) {输入 $x$};
-  \coordinate (loopjoin) at (0,6.82);
-  \node[decision,minimum width=3.55cm,minimum height=1.02cm] (test) at (0,5.98)
-    {$|x|>1?$};
-  \node[flowbox,minimum width=3.65cm,minimum height=.98cm] (sqrtupdate) at (0,4.42)
-    {$x=\sqrt{|x|}-1$};
-  \node[flowbox,minimum width=2.70cm] (affine) at (0,2.72)
-    {$x=2x+1$};
-  \node[io,minimum width=1.95cm] (output) at (0,1.36) {输出 $x$};
-  \node[terminal] (finish) at (0,0.06) {结束};
-
-  \draw[flowarrow] (start.south) -- (input.north);
-  \draw (input.south) -- (loopjoin);
-  \draw[flowarrow] (loopjoin) -- (test.north);
-  \draw[flowarrow] (test.south) -- node[right=2pt] {是} (sqrtupdate.north);
-  % Affirmative branch loops left into the stem above the decision.
-  \coordinate (loop-left) at (-2.45,3.92);
-  \coordinate (loop-left-top) at (-2.45,6.82);
-  \draw (sqrtupdate.south) -- (loop-left);
-  \draw (loop-left) -- (loop-left-top);
-  \draw[flowarrow] (loop-left-top) -- (-0.55,6.82) -- (loopjoin);
-
-  % Negative branch bypasses the loop and enters the affine update.
-  \coordinate (out-right) at (3.20,5.98);
-  \coordinate (out-right-bottom) at (3.20,3.42);
-  \coordinate (affine-entry) at (0,3.42);
-  \draw (test.east) -- (out-right) -- (out-right-bottom);
-  \draw (out-right-bottom) -- (affine-entry);
-  \draw[flowarrow] (affine-entry) -- (affine.north);
-  \draw[flowarrow] (affine.south) -- (output.north);
-  \draw[flowarrow] (output.south) -- (finish.north);
-  \node[anchor=south west,inner sep=0pt] at (1.95,6.10) {否};
-
-  \path[use as bounding box] (-2.85,-0.25) rectangle (3.85,9.60);
+  flowstart/.style={draw, shape=rectangle, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, align=center, inner xsep=3mm, inner ysep=1.5mm, font=\normalsize, execute at begin node={\parindent=0pt}},
+  flowproc/.style={draw, rectangle, minimum width=3.2cm, minimum height=0.85cm, align=center, inner sep=4pt, font=\normalsize, execute at begin node={\parindent=0pt}},
+  flowwide/.style={draw, rectangle, minimum width=3.8cm, minimum height=0.85cm, align=center, inner sep=4pt, font=\normalsize, execute at begin node={\parindent=0pt}},
+  flowdec/.style={draw, diamond, aspect=2.6, minimum width=4.0cm, minimum height=1.4cm, align=center, inner sep=2pt, font=\normalsize, execute at begin node={\parindent=0pt}},
+  flowio/.style={draw, trapezium, trapezium left angle=68, trapezium right angle=112, minimum width=3.2cm, minimum height=0.85cm, align=center, inner sep=4pt, font=\normalsize, execute at begin node={\parindent=0pt}}
+}
+\begin{tikzpicture}[x=1cm, y=1cm, line width=0.5pt]
+\node[flowstart] (start) at (0,0) {开始};
+\node[flowio] (input) at (0,-1.7) {输入 $x$};
+\coordinate (Jpre) at (0,-2.7);
+\node[flowdec] (dec) at (0,-4.0) {$|x|>1?$};
+\node[flowwide] (sqrt) at (0,-5.8) {$x=\sqrt{|x|-1}$};
+\node[flowproc] (calc) at (0,-7.9) {$x=2x+1$};
+\node[flowio] (out) at (0,-9.4) {输出 $x$};
+\node[flowstart] (end) at (0,-10.8) {结束};
+\draw[->] (start.south) -- (input.north);
+\draw[->] (input.south) -- (dec.north);
+\draw[->] (dec.south) -- node[midway, right=2mm,inner sep=0pt] {是} (sqrt.north);
+\draw[->] (sqrt.south) -- (0,-6.6) -- (-3.4,-6.6) -- (-3.4,-2.7) -- (Jpre);
+\draw[->] (dec.east) -- node[midway, above=2mm,inner sep=0pt] {否} (3.4,-4.0) -- (3.4,-7.0) -- (0,-7.0) -- (calc.north);
+\draw[->] (calc.south) -- (out.north);
+\draw[->] (out.south) -- (end.north);
 \end{tikzpicture}

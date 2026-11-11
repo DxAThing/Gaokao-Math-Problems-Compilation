@@ -1,0 +1,18 @@
+\begin{tikzpicture}[line width=0.6pt, >=stealth]
+% axes (outside clip so arrowheads and labels survive)
+\draw[->] (-3.8,0) -- (4.9,0);
+\draw[->] (0,-3.6) -- (0,3.9);
+% vertical asymptote x=1
+\draw[dashed, dash pattern=on 4pt off 3pt] (1,-3.6) -- (1,3.9);
+\begin{scope}
+\clip (-3.8,-3.6) rectangle (4.9,3.9);
+% branches of y=1/(1-x), faithful to option C (wrong option kept as-is)
+\draw[solid] plot[domain=-3.8:0.55, samples=120] (\x, {1/(1-\x)});
+\draw[solid] plot[domain=1.45:4.9, samples=120] (\x, {1/(1-\x)});
+\end{scope}
+% labels clear of strokes
+\node[below left, xshift=-3pt, yshift=-2pt] at (0,0) {$O$};
+\node[below right, xshift=3pt, yshift=-4pt] at (4.9,0) {$x$};
+\node[above left, xshift=-4pt, yshift=2pt] at (0,3.9) {$y$};
+\node[below right, xshift=4pt, yshift=-3pt] at (1,0) {$1$};
+\end{tikzpicture}

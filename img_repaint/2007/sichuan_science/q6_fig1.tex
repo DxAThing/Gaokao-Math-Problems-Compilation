@@ -1,0 +1,19 @@
+\begin{tikzpicture}[line width=0.6pt, >=stealth]
+\draw (0,0) circle (2.4);
+\draw (-2.4,0) arc (180:360:2.4 and 0.6);
+\draw[dashed] (2.4,0) arc (0:180:2.4 and 0.6);
+\coordinate (O) at (0.0000000000,0.0000000000);
+\coordinate (A) at (0,2.4);
+\coordinate (B) at (-1.2000000000,-0.5196152423);
+\coordinate (C) at (1.2000000000,-0.5196152423);
+\draw[dashed] (A) -- (O);
+\draw[dashed] (O) -- (B);
+\draw[dashed] (O) -- (C);
+\draw (A) .. controls (-0.95,1.3) and (-1.2,0.5) .. (B);
+\draw (A) .. controls (0.95,1.3) and (1.2,0.5) .. (C);
+
+\node[above=3pt] at (A) {$A$};
+\node[above left=3pt,xshift=-1pt,yshift=-3pt] at (O) {$O$};
+\node[below=3pt,inner sep=1pt] at (B) {$B$};
+\node[below=3pt,inner sep=1pt] at (C) {$C$};
+\end{tikzpicture}

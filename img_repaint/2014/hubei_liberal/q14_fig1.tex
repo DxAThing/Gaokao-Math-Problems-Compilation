@@ -1,33 +1,27 @@
-% Source PDF: source/普通高考/2014/2014湖北文.pdf, page 1.
-% PDF embedded bitmap attempt: pdfimages -list returned no images; the flowchart is vector page content.
-% Grid evidence: tmp/review_2014_hubei_liberal/grids/page-grid100.png,
-% tmp/review_2014_hubei_liberal/grids/q14-grid50.png and q14-local-grid25.png.
-% No-grid source crop: tmp/review_2014_hubei_liberal/crops/q14_original_final.png.
-% Complete directed edges: start -> input -> init(k=1,S=0) -> test(k<=n?);
-% test yes -> sum(S=S+2^k+k) -> increment(k=k+1) -> test;
-% test no -> output -> finish.  The loop merge is on the vertical test-entry line.
-\begin{tikzpicture}[baseline,>=Stealth,font=\normalsize,line width=0.45pt,
-  flowtext/.style={anchor=center,align=center,execute at begin node={\setlength{\parindent}{0pt}\noindent}},
-  flowbox/.style={flowtext,draw,inner xsep=4pt,inner ysep=2pt}]
-  \node[flowbox,rounded corners=5pt,text width=1.30cm,minimum width=1.30cm,minimum height=0.56cm] (start) at (0,0) {开始};
-  \node[flowbox,trapezium,trapezium left angle=75,trapezium right angle=105,
-        font=\normalsize,text width=1.55cm,minimum width=0pt,minimum height=0.58cm] (input) at (0,-1.46) {输入 $n$};
-  \node[flowbox,text width=2.70cm,minimum width=2.70cm,minimum height=0.56cm] (init) at (0,-2.94) {$k=1,S=0$};
-  \node[flowbox,diamond,aspect=3.0,minimum width=3.60cm,minimum height=0.72cm] (test) at (0,-6.27) {$k\le n?$};
-  \node[flowbox,text width=3.90cm,minimum width=3.90cm,minimum height=0.62cm] (sum) at (3.10,-5.07) {$S=S+2^k+k$};
-  \node[flowbox,text width=2.50cm,minimum width=2.50cm,minimum height=0.56cm] (inc) at (3.10,-3.77) {$k=k+1$};
-  \node[flowbox,trapezium,trapezium left angle=75,trapezium right angle=105,
-        font=\normalsize,text width=1.55cm,minimum width=0pt,minimum height=0.58cm] (output) at (0,-7.90) {输出 $S$};
-  \node[flowbox,rounded corners=5pt,text width=1.30cm,minimum width=1.30cm,minimum height=0.56cm] (finish) at (0,-9.36) {结束};
-
-  \draw[->] (start.south) -- (input.north);
-  \draw[->] (input.south) -- (init.north);
-  \draw[->] (init.south) -- (test.north);
-  \draw[->] (test.south) -- (output.north);
-  \draw[->] (output.south) -- (finish.north);
-  \draw[->] (test.east) -- (3.10,-6.27) -- (3.10,-5.39) -- (sum.south);
-  \draw[->] (sum.north) -- (inc.south);
-  \draw[->] (inc.west) -- (0,-3.77);
-  \node[flowtext,inner sep=1pt] at (1.55,-5.70) {是};
-  \node[flowtext,inner sep=1pt] at (-0.60,-6.92) {否};
-\end{tikzpicture}
+\tikzset{
+  flowproc/.style={draw, rectangle, align=center, inner sep=2mm, line width=0.5pt},
+  flowio/.style={draw, trapezium, trapezium left angle=72, trapezium right angle=108, align=center, inner sep=2mm, line width=0.5pt},
+  flowstart/.style={draw, shape=rectangle, rounded corners=1.5mm, align=center, inner xsep=3mm, inner ysep=1.5mm, minimum width=26mm, minimum height=10mm, line width=0.5pt},
+  flowdec/.style={draw, diamond, aspect=2, align=center, inner sep=1.5mm, line width=0.5pt},
+  flowarr/.style={-{Stealth[length=2.6mm]}, line width=0.5pt}
+}
+{\parindent=0pt
+\begin{tikzpicture}
+\node[flowstart] (start) at (0,0) {开始};
+\node[flowio] (in) at (0,-1.7) {输入 $n$};
+\node[flowproc] (init) at (0,-3.2) {$k=1,S=0$};
+\node[flowdec] (dia) at (0,-7.9) {$k\leq n?$};
+\node[flowio] (out) at (0,-10.0) {输出 $S$};
+\node[flowstart] (end) at (0,-11.7) {结束};
+\node[flowproc] (kk) at (3.6,-4.1) {$k=k+1$};
+\node[flowproc] (ss) at (3.6,-5.9) {$S=S+2^{k}+k$};
+\coordinate (J) at (0,-4.1);
+\draw[flowarr] (start.south) -- (in.north);
+\draw[flowarr] (in.south) -- (init.north);
+\draw[flowarr] (init.south) -- (dia.north);
+\draw[flowarr] (dia.south) -- (out.north) node[pos=0.3, right=1.5mm] {否};
+\draw[flowarr] (out.south) -- (end.north);
+\draw[flowarr] (dia.east) -- node[pos=0.14, above=1.5mm] {是} (3.6,-7.9) -- (ss.south);
+\draw[flowarr] (ss.north) -- (kk.south);
+\draw[flowarr] (kk.west) -- (J);
+\end{tikzpicture}}

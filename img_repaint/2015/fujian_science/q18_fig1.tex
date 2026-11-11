@@ -1,0 +1,23 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1.2cm,y=1.2cm,line width=.6pt,font=\normalsize,>=Stealth]
+  \coordinate (O) at (0,0);
+  \coordinate (G) at (-2.25,0);
+  \coordinate (A) at (-0.839553,1.283579);
+  \coordinate (B) at (-1.144944,-1.159548);
+  \coordinate (Ltop) at (-0.785,1.72);
+  \coordinate (Lbot) at (-1.2225,-1.78);
+  % ellipse E: x^2/4+y^2/2=1
+  \draw plot[domain=0:360,samples=241] ({2*cos(\x)},{1.414214*sin(\x)});
+  % line l: x=my-1 with m=1/8
+  \draw (Lbot)--(Ltop);
+  % marked point G
+  \fill (G) circle (1.4pt);
+  % coordinate axes
+  \draw[->] (-2.85,0)--(2.95,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+  \draw[->] (0,-1.85)--(0,1.95) node[above,inner sep=0pt,yshift=2pt] {$y$};
+  \node[below right,inner sep=1pt] at (O) {$O$};
+  \node[below left,inner sep=1pt] at (G) {$G$};
+  \node[above left,inner sep=1pt] at (A) {$A$};
+  \node[below left,inner sep=1pt] at (B) {$B$};
+  \node[above right,inner sep=1pt] at (Ltop) {$l$};
+\end{tikzpicture}

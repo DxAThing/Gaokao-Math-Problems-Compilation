@@ -1,0 +1,51 @@
+\begin{tikzpicture}[line width=.6pt, font=\normalsize, >=Stealth]
+% cuboid ABCD-A1B1C1D1 (oblique)
+\coordinate (A) at (0,0);
+\coordinate (B) at (4.4,0);
+\coordinate (C) at (5.6,1.6);
+\coordinate (D) at (1.2,1.6);
+\coordinate (A1) at (0,3.4);
+\coordinate (B1) at (4.4,3.4);
+\coordinate (C1) at (5.6,5.0);
+\coordinate (D1) at (1.2,5.0);
+\coordinate (O) at (2.8,2.5);
+% E midpoint of bottom-right edge B-?, F midpoint of right edge C-C1, G on C1-B1?/C1-?, H inside
+\coordinate (E) at (5.0000000000,0.8000000000);
+\coordinate (F) at (5.6,3.3);
+\coordinate (G) at (5.0000000000,4.2000000000);
+\coordinate (H) at (4.4000000000,1.7000000000);
+% outer solid
+\draw (A) -- (B) -- (B1) -- (A1) -- cycle;
+\draw (A1) -- (D1) -- (C1);
+\draw (B1) -- (C1);
+\draw (B) -- (C) -- (C1);
+
+% hidden dashed
+\draw[dashed] (A) -- (D) -- (D1);
+\draw[dashed] (D) -- (C);
+% section quadrilateral G-F-E-H
+\draw (G) -- (F) -- (E) -- (H) -- cycle;
+
+
+% dashed from center O
+\draw[dashed] (O) -- (G);
+\draw[dashed] (O) -- (F);
+\draw[dashed] (O) -- (E);
+
+
+% labels offset from strokes
+\node[below left=2pt] at (A) {$A$};
+\node[below=2pt] at (B) {$B$};
+\node[right=2pt] at (C) {$C$};
+\node[left=1pt] at (D) {$D$};
+\node[left=2pt] at (A1) {$A_{1}$};
+\node[above left=3pt] at (B1) {$B_{1}$};
+\node[right=2pt] at (C1) {$C_{1}$};
+\node[above left=2pt] at (D1) {$D_{1}$};
+\node[left=3pt] at (O) {$O$};
+\node[below right=1pt] at (E) {$E$};
+\node[right=2pt] at (F) {$F$};
+\node[above=2pt] at (G) {$G$};
+\node[right=3pt,xshift=-2pt,yshift=4pt] at (H) {$H$};
+\draw[dashed] (O)--(H);
+\end{tikzpicture}

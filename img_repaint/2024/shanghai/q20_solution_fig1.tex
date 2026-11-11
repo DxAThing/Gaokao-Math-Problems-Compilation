@@ -1,0 +1,20 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (M) at (-2.0000000000,0.0000000000);
+\coordinate (A1) at (-1.0000000000,0.0000000000);
+\coordinate (A2) at (1.0000000000,0.0000000000);
+\coordinate (P) at (2.4305008740,3.1328372121);
+\coordinate (Q) at (-1.0971675407,0.6383989542);
+\coordinate (R) at (1.0971675407,-0.6383989542);
+\draw (M)--(P);
+\draw (Q)--(R);
+\draw[->] (A1)--(R);
+\draw[->] (A2)--(P);
+\draw[->] (-2.8,0)--(3,0) node[right=2pt] {$x$};\draw[->] (0,-2)--(0,4.1) node[above=2pt] {$y$};\node[above left=3pt,xshift=1.004pt,yshift=3.011pt] at (0,0) {$O$};
+\draw[domain=-1.6:1.6,samples=150] plot ({cosh(\x)},{sqrt(2)*sinh(\x)});\draw[domain=-1.6:1.6,samples=150] plot ({-cosh(\x)},{sqrt(2)*sinh(\x)});
+\node[below left=2pt] at (M) {$M$};
+\node[below left=2pt] at (A1) {$A_{1}$};
+\node[above left=3pt] at (A2) {$A_{2}$};
+\node[right=3pt] at (P) {$P$};
+\node[above left=2pt,xshift=-3pt,yshift=-3pt] at (Q) {$Q$};
+\node[below right=2pt,xshift=3pt,yshift=1pt] at (R) {$R$};
+\end{tikzpicture}

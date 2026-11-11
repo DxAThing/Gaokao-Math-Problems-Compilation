@@ -1,0 +1,22 @@
+\begin{tikzpicture}[x=1.1cm,y=1.1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-0.7,0) -- (4.0,0) node[below=4pt] at (4.0,0) {$x$};
+\draw[->] (0,-0.5) -- (0,4.3) node[left=4pt] at (0,4.3) {$y$};
+\node[below left=4pt] at (0,0) {$O$};
+% tick labels
+\node[left=4pt] at (0,1) {$1$};
+\node[below=4pt] at (1,0) {$1$};
+% C1: y=x^2
+\draw[domain=0:1.7,smooth,samples=80] plot (\x,{(\x)*(\x)});
+% C2: y=sqrt(x)
+\draw[domain=0:3.2,smooth,samples=80] plot (\x,{sqrt(\x)});
+% C3: y=x^{-1/2}
+\draw[domain=0.25:2.7,smooth,samples=80] plot (\x,{1/sqrt(\x)});
+% C4: y=x^{-2}
+\draw[domain=0.55:2.1,smooth,samples=80] plot (\x,{1/((\x)*(\x))});
+% curve labels with clearance
+\node[above left=5pt] at (1.7,2.89) {$C_{1}$};
+\node[below right=5pt] at (3.2,1.79) {$C_{2}$};
+\node[above right=5pt] at (2.7,0.61) {$C_{3}$};
+\node[right=6pt] at (2.1,0.23) {$C_{4}$};
+\end{tikzpicture}

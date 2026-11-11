@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,
+  geometry edge/.style={solid,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (A) at (0.5,0.5);
+\coordinate (B) at (2.5,0.2);
+\coordinate (C) at (6.0,1.0);
+\coordinate (D) at (2.2500000000,0.9000000000);
+\coordinate (E) at (0.5,5.5);
+\coordinate (F) at (6.0000000000,4.2000000000);
+\draw[geometry edge] (A)--(B)--(C);
+\draw[geometry edge,dashed] (A)--(D)--(C);
+\draw[geometry edge] (A)--(E);
+\draw[geometry edge] (C)--(F);
+\draw[geometry edge] (E)--(B);
+\draw[geometry edge,dashed] (E)--(D);
+\draw[geometry edge,dashed] (E)--(C);
+\draw[geometry edge] (E)--(F);
+\draw[geometry edge] (B)--(F);
+\draw[geometry edge,dashed] (D)--(F);
+\node[geometry label,below left] at (A) {$A$};
+\node[geometry label,below] at (B) {$B$};
+\node[geometry label,right] at (C) {$C$};
+\node[geometry label,above,xshift=4pt,yshift=8pt] at (D) {$D$};
+\node[geometry label,above left] at (E) {$E$};
+\node[geometry label,above right] at (F) {$F$};
+\end{tikzpicture}

@@ -1,0 +1,40 @@
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize]
+% Cone D, base diameter AE, inscribed equilateral ABC, E near B, P on DO
+\coordinate (D) at (0,4.5);
+\coordinate (O) at (0,0);
+\coordinate (P) at (0,1.837117307);
+\coordinate (A) at (-2.364032261,-0.4309630327);
+\coordinate (Ed) at (2.364032261,0.4309630327);
+\coordinate (B) at (2.781551564,-0.2622246154);
+\coordinate (C) at (-0.4175193029,0.6931876481);
+% cone outline to diameter ends
+\draw (D) -- (-3,0);
+\draw (D) -- (3,0);
+\draw (D) -- (A);
+% base ellipse: front solid, back dashed
+\draw (-3.0,0) arc (180:360:3.0 and 0.7);
+\draw[dashed] (3.0,0) arc (0:180:3.0 and 0.7);
+% axis and interior dashed
+\draw[dashed] (D) -- (O);
+
+\draw[dashed] (P) -- (A);
+\draw[dashed] (P) -- (B);
+\draw[dashed] (P) -- (C);
+\draw[dashed] (P) -- (Ed);
+\draw[dashed] (A) -- (B);
+\draw[dashed] (A) -- (Ed);
+\draw[dashed] (A) -- (C);
+
+\draw[dashed] (B) -- (C);
+\draw[dashed] (C) -- (Ed);
+\draw[dashed] (C) -- (O);
+\draw[dashed] (B) -- (Ed);
+% labels with clearance
+\node[inner sep=1pt,above] at (D) {$D$};
+\node[inner sep=1pt,left,xshift=-2.00bp,yshift=2.00bp] at (P) {$P$};
+\node[inner sep=2pt,anchor=east,xshift=-1.0bp,yshift=-0.0bp] at (-.1,.18) {$O$};
+\node[inner sep=1pt,below left] at (A) {$A$};
+\node[inner sep=1pt,below,xshift=0.00bp,yshift=-2.00bp] at (B) {$B$};
+\node[inner sep=2pt,anchor=west,xshift=0.0bp,yshift=0.5bp] at (.15,.85) {$C$};
+\node[inner sep=1pt,right,xshift=6.00bp,yshift=2.00bp,xshift=3.5bp,yshift=2.0bp] at (Ed) {$E$};
+\end{tikzpicture}

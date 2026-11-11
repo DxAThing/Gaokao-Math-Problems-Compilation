@@ -1,0 +1,20 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt},
+ geometry mark/.style={solid,line width=.6pt},
+ geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (A) at (0,0);
+\coordinate (B) at (5,0);
+\coordinate (C) at (3.5,2.5);
+\coordinate (D) at (1.5,2.5);
+\coordinate (E) at (7,0);
+\draw[geometry edge] (A)--(B)--(C)--(D)--cycle;
+\draw[geometry edge] (A)--(C);
+\draw[geometry edge] (D)--(B);
+\draw[geometry edge,dashed] (B)--(E);
+\draw[geometry edge,dashed] (C)--(E);
+\node[geometry label,below left] at (A) {$A$};
+\node[geometry label,below] at (B) {$B$};
+\node[geometry label,above right] at (C) {$C$};
+\node[geometry label,above left] at (D) {$D$};
+\node[geometry label,below right] at (E) {$E$};
+\end{tikzpicture}

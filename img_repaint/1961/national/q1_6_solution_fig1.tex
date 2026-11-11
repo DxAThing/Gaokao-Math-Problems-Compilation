@@ -1,0 +1,25 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,inner sep=2pt]
+\coordinate (C) at (0.000000000,0.000000000);
+\coordinate (B) at (1.600000000,2.700000000);
+\coordinate (D) at (0.640000000,1.080000000);
+\coordinate (Apr) at (4.200000000,1.080000000);
+\coordinate (A) at (4.200000000,4.400000000);
+\coordinate (Q) at (5.400000000,0.000000000);
+\coordinate (R) at (7.000000000,2.700000000);
+\draw (C)--(Q)--(R)--(B)--cycle;
+\draw (A)--(B)--(C)--cycle;
+\draw (A)--(D)--(Apr)--(A);
+\draw (C)--(Apr);
+\draw[dashed] (B)--(Apr);
+\coordinate (rA) at ($(Apr)!0.16cm!(D)$);
+\coordinate (rB) at ($(Apr)!0.16cm!(A)$);
+\draw (rA)--($(rA)+(rB)-(Apr)$)--(rB);
+\draw ($(D)+(0.55,0)$) arc (0:43.002120144:0.55);
+\node at (1.58,1.30) {$a$};
+\node[above right] at (A) {$A$};
+\node[below right,yshift=-3pt] at (Apr) {$A'$};
+\node[above left] at (B) {$B$};
+\node[below left] at (C) {$C$};
+\node[left,xshift=-2pt] at (D) {$D$};
+\node at (5.2,.55) {$N$};
+\end{tikzpicture}

@@ -1,0 +1,45 @@
+% 2010_tianjin_science_q12_fig1: dimension point-fix only.
+% Rect+triangle front/side, outer+dashed+X plan unchanged; dims 1/2/1, 1/2/1, 2/2 unchanged.
+% All dims use shared styles outside outline >=4.5mm, numbers centred in gap.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% ---- front view (left) ----
+\draw (-0.75,0) rectangle (0.75,3);
+\draw (-1.5,3) -- (0,4.5) -- (1.5,3);
+\draw (-1.5,3) -- (1.5,3);
+\draw[dimension extension] (-1.5,4.5) -- (-2.25,4.5);
+\draw[dimension extension] (-1.5,3) -- (-2.25,3);
+\draw[dimension line] (-2.05,3) -- node[dimension label vertical] {$1$} (-2.05,4.5);
+\draw[dimension extension] (-0.75,3) -- (-2.25,3);
+\draw[dimension extension] (-0.75,0) -- (-2.25,0);
+\draw[dimension line] (-2.05,0) -- node[dimension label vertical] {$2$} (-2.05,3);
+\draw[dimension extension] (-0.75,0) -- (-0.75,-0.75);
+\draw[dimension extension] (0.75,0) -- (0.75,-0.75);
+\draw[dimension line] (-0.75,-0.55) -- node[dimension label] {$1$} (0.75,-0.55);
+\node at (0,-1.35) {正视图};
+% ---- side view (middle) ----
+\draw (4.25,0) rectangle (5.75,3);
+\draw (3.5,3) -- (5,4.5) -- (6.5,3);
+\draw (3.5,3) -- (6.5,3);
+\draw[dimension extension] (3.5,4.5) -- (2.75,4.5);
+\draw[dimension extension] (3.5,3) -- (2.75,3);
+\draw[dimension line] (2.95,3) -- node[dimension label vertical] {$1$} (2.95,4.5);
+\draw[dimension extension] (4.25,3) -- (2.75,3);
+\draw[dimension extension] (4.25,0) -- (2.75,0);
+\draw[dimension line] (2.95,0) -- node[dimension label vertical] {$2$} (2.95,3);
+\draw[dimension extension] (4.25,0) -- (4.25,-0.75);
+\draw[dimension extension] (5.75,0) -- (5.75,-0.75);
+\draw[dimension line] (4.25,-0.55) -- node[dimension label] {$1$} (5.75,-0.55);
+\node at (5,-1.35) {侧视图};
+% ---- plan view (right) ----
+\draw (8.5,3.05) rectangle (11.5,0.05);
+\draw (8.5,3.05) -- (11.5,0.05);
+\draw (11.5,3.05) -- (8.5,0.05);
+\draw[dashed] (9.25,2.3) rectangle (10.75,0.8);
+\draw[dimension extension] (8.5,3.05) -- (7.75,3.05);
+\draw[dimension extension] (8.5,0.05) -- (7.75,0.05);
+\draw[dimension line] (7.95,0.05) -- node[dimension label vertical] {$2$} (7.95,3.05);
+\draw[dimension extension] (8.5,0.05) -- (8.5,-0.7);
+\draw[dimension extension] (11.5,0.05) -- (11.5,-0.7);
+\draw[dimension line] (8.5,-0.5) -- node[dimension label] {$2$} (11.5,-0.5);
+\node at (10,-1.35) {俯视图};
+\end{tikzpicture}

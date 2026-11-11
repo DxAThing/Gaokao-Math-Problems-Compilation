@@ -1,0 +1,9 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.15cm,y=0.85cm,line width=.6pt,>=stealth,font=\normalsize]
+\draw[->] (-2.4,0)--(3.8,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-5.2)--(0,1.4) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw[domain=-1.35:3.2,samples=160] plot (\x,{-\x*\x+2.2*\x-1});
+\draw[dashed] (-1,0)--(-1,-4.2);
+\node[above,inner sep=0pt,yshift=3pt] at (-1,0) {$-1$};
+\node[below left,inner sep=0pt,xshift=-3pt,yshift=-3pt] at (0,0) {$O$};
+\end{tikzpicture}

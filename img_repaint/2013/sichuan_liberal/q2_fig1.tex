@@ -1,0 +1,19 @@
+% front/side/plan in one horizontal row; unit 1cm.
+% Front/side: identical isosceles trapezoids, bottom 3.4, top 1.72, height 2.26.
+% Plan: concentric solid circles, outer r1.7, inner r0.86. All lines solid.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% front view
+\draw (-1.7,0) -- (1.7,0) -- (0.86,2.26) -- (-0.86,2.26) -- cycle;
+\node at (0,-0.7) {正视图};
+% side view
+\begin{scope}[shift={(4.4,0)}]
+\draw (-1.7,0) -- (1.7,0) -- (0.86,2.26) -- (-0.86,2.26) -- cycle;
+\node at (0,-0.7) {侧视图};
+\end{scope}
+% plan view
+\begin{scope}[shift={(8.8,1.7)}]
+\draw (0,0) circle (1.7);
+\draw (0,0) circle (0.86);
+\node at (0,-2.4) {俯视图};
+\end{scope}
+\end{tikzpicture}

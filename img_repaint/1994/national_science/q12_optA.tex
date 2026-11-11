@@ -1,0 +1,17 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=2.2cm,y=2.2cm,line width=.6pt,>=Stealth,font=\normalsize]
+  % axes: numeric global coordinates; arrow only on +x and +y
+  \draw[->] (-1.5,0)--(1.5,0);
+  \draw[->] (0,-0.9)--(0,1.5);
+  % exact quarter-circle arc, center (0,1), radius 1
+  \draw[line width=.6pt] (-1,1) arc[start angle=180,end angle=270,radius=1];
+  % dashed bounding guides at the drawn endpoint
+  \draw[dashed,line width=.6pt] (-1,1)--(0,1);
+  \draw[dashed,line width=.6pt] (-1,1)--(-1,0);
+  % complete label nodes: no white backing, inner sep=0, 2pt gaps
+  \node[right=2pt,inner sep=0pt] at (1.5,0) {$x$};
+  \node[above=2pt,inner sep=0pt] at (0,1.5) {$y$};
+  \node[below left=2pt and 2pt,inner sep=0pt] at (0,0) {$O$};
+  \node[below=2pt,inner sep=0pt] at (-1,0) {$-1$};
+  \node[right=2pt,inner sep=0pt] at (0,1) {$1$};
+\end{tikzpicture}

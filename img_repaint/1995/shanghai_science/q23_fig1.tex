@@ -1,0 +1,24 @@
+% 1995_shanghai_science_q23_fig1: pyramid P-ABCD, rectangular base
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt, font=\normalsize, >=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (3.5,0);
+\coordinate (C) at (4.3,0.7);
+\coordinate (D) at (0.8,0.7);
+\coordinate (P) at (1.0,4.6);
+% base front/right solid
+\draw (A) -- (B) -- (C);
+% base hidden
+\draw[dashed] (C) -- (D) -- cycle;
+\draw[dashed] (A) -- (D);
+% lateral edges
+\draw (P) -- (A);
+\draw (P) -- (B);
+\draw (P) -- (C);
+\draw[dashed] (P) -- (D);
+% labels with clearance
+\node[below left=3pt] at (A) {$A$};
+\node[below right=3pt] at (B) {$B$};
+\node[right=3pt] at (C) {$C$};
+\node[left=3pt] at (D) {$D$};
+\node[above=3pt] at (P) {$P$};
+\end{tikzpicture}

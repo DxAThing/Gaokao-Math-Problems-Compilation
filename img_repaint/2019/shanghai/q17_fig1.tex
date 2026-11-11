@@ -1,0 +1,33 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,
+  geometry edge/.style={solid,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (B) at (0.0,0.0);
+\coordinate (C) at (3.0,0.0);
+\coordinate (D) at (4.2,0.9);
+\coordinate (A) at (1.2,0.9);
+\coordinate (B1) at (0.0,3.8);
+\coordinate (C1) at (3.0,3.8);
+\coordinate (D1) at (4.2,4.7);
+\coordinate (A1) at (1.2,4.7);
+\coordinate (M) at (0.0,2.0);
+\draw[geometry edge] (B)--(C)--(C1)--(B1)--cycle;
+\draw[geometry edge] (B1)--(A1)--(D1)--(C1);
+\draw[geometry edge] (B)--(B1);
+\draw[geometry edge] (C)--(C1);
+\draw[geometry edge] (D)--(D1);
+\draw[geometry edge] (C)--(D);
+\draw[geometry edge,dashed] (B)--(A)--(D);
+\draw[geometry edge,dashed] (A1)--(A);
+\draw[geometry edge,dashed] (A1)--(M);
+\draw[geometry edge] (M)--(C);
+\draw[geometry edge,dashed] (A1)--(C);
+\node[geometry label,below left] at (B) {$B$};
+\node[geometry label,below right] at (C) {$C$};
+\node[geometry label,right] at (D) {$D$};
+\node[geometry label,below,xshift=1pt,yshift=-3pt] at (A) {$A$};
+\node[geometry label,left] at (B1) {$B_{1}$};
+\node[geometry label,right,xshift=3pt,yshift=-3pt] at (C1) {$C_{1}$};
+\node[geometry label,above right] at (D1) {$D_{1}$};
+\node[geometry label,above left] at (A1) {$A_{1}$};
+\node[geometry label,left] at (M) {$M$};
+\end{tikzpicture}

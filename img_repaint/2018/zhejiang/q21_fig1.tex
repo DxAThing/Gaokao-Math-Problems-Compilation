@@ -1,0 +1,22 @@
+% 2018 浙江 21 图：抛物线 y^2=4x；P(-1,1)，A(4.3311,4.1623)，B(1.1689,-2.1623)（PA,PB 中点在 C 上），M 为 AB 中点，PM 水平。
+% 全局数值坐标，单位 0.8cm，线宽 .6pt，12pt。
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=0.8cm,y=0.8cm,line width=.6pt,>=Stealth,font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (P) at (-1,1);
+\coordinate (A) at (4.331139,4.162278);
+\coordinate (B) at (1.168861,-2.162278);
+\coordinate (M) at (2.75,1);
+\draw[->] (-3.0,0)--(5.9,0) node[right,inner sep=1pt] {$x$};
+\draw[->] (0,-5.0)--(0,4.8) node[above,inner sep=1pt] {$y$};
+\draw[domain=-4.4:4.4,samples=141,smooth] plot ({\x*\x/4},{\x});
+\draw (P)--(A);
+\draw (P)--(B);
+\draw (A)--(B);
+\draw (P)--(M);
+\node[anchor=east,inner sep=0pt,xshift=-2pt] at (P) {$P$};
+\node[inner sep=1pt] at (3.95,4.55) {$A$};
+\node[inner sep=1pt] at (0.82,-2.52) {$B$};
+\node[inner sep=1pt] at (3.02,0.72) {$M$};
+\node[anchor=north west,inner sep=0pt,xshift=2pt,yshift=-2pt] at (O) {$O$};
+\end{tikzpicture}

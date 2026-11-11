@@ -1,0 +1,40 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (O) at (0,0);
+\coordinate (A) at (0,1.5);
+\coordinate (M) at (0,0.5);
+\coordinate (B) at (2.0,3.0);
+\coordinate (C) at (4.25,0);
+\coordinate (T) at (2.48,2.36);
+\coordinate (N0) at (0,-1.5);
+\coordinate (N1) at (0,4.5);
+\coordinate (E0) at (-1.5,0);
+\coordinate (E1) at (5.5,0);
+% protection circle: center M tangent to BC at T, radius 124m = 3.10cm, dashed as original
+\draw[dashed] (M) circle[radius=3.10cm];
+% axes (north vertical, east horizontal), arrows only at positive ends
+\draw[->] (E0)--(E1);
+\draw[->] (N0)--(N1);
+% short bars: A-level west extension and C foot tick
+\draw (0,1.5)--(-1.0,1.5);
+\draw (C)--(4.25,-0.25);
+% polyline A-B-C (fold preserved, AB perpendicular BC)
+\draw (A)--(B)--(C);
+% center dot only for M
+\fill (M) circle (1.5pt);
+% dimension extensions + lines with central gap (styles from wrapper)
+\draw[dimension extension] (-0.1,0)--(-0.85,0);
+\draw[dimension extension] (-0.1,1.5)--(-0.85,1.5);
+\draw[dimension line] (-0.65,0)--node[dimension label] {$60\mathrm{m}$}(-0.65,1.5);
+\draw[dimension extension] (0,-0.1)--(0,-0.85);
+\draw[dimension extension] (4.25,-0.1)--(4.25,-0.85);
+\draw[dimension line] (0,-0.65)--node[dimension label] {$170\mathrm{m}$}(4.25,-0.65);
+% labels in visible whitespace, off the lines
+\node[below left] at (O) {$O$};
+\node[above left] at (A) {$A$};
+\node[right] at (M) {$M$};
+\node[above right] at (B) {$B$};
+\node[below right] at (C) {$C$};
+\node[above] at (0,4.5) {北};
+\node[right] at (5.5,0) {东};
+\end{tikzpicture}

@@ -1,0 +1,50 @@
+\begin{tikzpicture}[x=1.25cm,y=1.25cm,line width=.6pt,font=\small]
+\foreach \cx/\lbl in {0/1,4.2/2,8.4/3} {
+  \begin{scope}[shift={(\cx,0)}]
+    \draw (0,2.2) ellipse (1.1 and 0.32);
+    \draw (-1.1,2.2) -- (-1.1,0);
+    \draw (1.1,2.2) -- (1.1,0);
+    \draw[densely dashed] (-1.1,0) arc (180:0:1.1 and 0.32);
+    \draw (-1.1,0) arc (180:360:1.1 and 0.32);
+    \draw (-1.1,2.2) -- (1.1,2.2);
+  \end{scope}
+}
+% panel 1
+\begin{scope}[shift={(0,0)}]
+  \node[left,xshift=-2pt] at (-1.1,2.2) {$A$};
+  \node[right,xshift=2pt] at (1.1,2.2) {$B$};
+  \node[above=0pt,inner sep=0pt,yshift=1pt,font=\footnotesize] at (0,2.2) {$O$};
+  \node[above=0pt,inner sep=0pt,yshift=1pt,font=\footnotesize] at (.45,2.2) {$M$};
+  
+  \draw (.30,2.2)--(.30,2.05)--(.45,2.05);
+  \node[left=2pt,font=\footnotesize] at (0,0) {$O'$};
+  \node[below,yshift=-2pt] at (.45,-0.291997962180) {$C$};
+  \draw ( -1.1,2.2) -- (.45,-0.291997962180);
+  \draw (1.1,2.2) -- (.45,-0.291997962180);
+  \draw[densely dashed] (0,2.2)--(0,0)--(.45,-0.291997962180);
+  \draw[densely dashed] (0.45,2.2) -- (.45,-0.291997962180);
+  \node[inner sep=1.5pt,font=\small] at (0,-1.1) {\bitmapinsertcaption[1]};
+\end{scope}
+% panel 2
+\begin{scope}[shift={(4.2,0)}]
+  \node[left,xshift=-2pt] at (-1.1,2.2) {$A$};
+  \node[right,xshift=2pt] at (1.1,2.2) {$B$};
+  \node[above=0pt,inner sep=0pt,yshift=1pt,font=\footnotesize] at (0,2.2) {$O(M)$};
+  \draw[densely dashed] (0,2.2)--(0,-.32);
+  \draw (0.0,1.95) -- (0.2,1.95) -- (0.2,2.1);
+  \node[below,yshift=-2pt] at (0,-.32) {$C$};
+  \draw[densely dashed] (-1.1,2.2) -- (0,-.32);
+  \draw[densely dashed] (1.1,2.2) -- (0,-.32);
+  \node[inner sep=1.5pt,font=\small] at (0,-1.1) {\bitmapinsertcaption[2]};
+\end{scope}
+% panel 3
+\begin{scope}[shift={(8.4,0)}]
+  \node[left,xshift=-2pt] at (-1.1,2.2) {$A$};
+  \node[above=0pt,inner sep=0pt,yshift=1pt,font=\footnotesize] at (0,2.2) {$O$};
+  \draw (.94,2.2)--(.94,2.04)--(1.1,2.04);
+  
+  \node[right,xshift=2pt] at (1.1,0) {$C$};
+  \draw[densely dashed] (-1.1,2.2) -- (1.1,0);
+  \node[inner sep=1.5pt,font=\small] at (0,-1.1) {\bitmapinsertcaption[3]};
+\end{scope}
+\end{tikzpicture}

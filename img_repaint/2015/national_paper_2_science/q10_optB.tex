@@ -1,0 +1,23 @@
+% 2015 national paper 2 science q10 option B
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.9cm,y=1.9cm,line width=.6pt,>=Stealth,font=\normalsize]
+% Option B: f(x)=PA+PB for P on the boundary of the 2x1 rectangle
+\draw[->] (0,0)--(3.60,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,0)--(0,3.95) node[above left,inner sep=0pt,xshift=-1pt,yshift=2pt] {$y$};
+% Ticks at pi/4, pi/2, 3pi/4, pi
+\draw ({pi/4},0)--({pi/4},0.10);
+\draw ({pi/2},0)--({pi/2},0.10);
+\draw ({3*pi/4},0)--({3*pi/4},0.10);
+\draw (pi,0)--(pi,0.10);
+% Exact piecewise graph, with corners at pi/4 and 3pi/4
+\draw[domain=0:{pi/4},samples=90,smooth] plot (\x,{sqrt(4+(tan(deg(\x)))^2)+tan(deg(\x))});
+\draw[domain={pi/4}:{3*pi/4},samples=200,smooth] plot (\x,{sqrt((1+cot(deg(\x)))^2+1)+sqrt((cot(deg(\x))-1)^2+1)});
+\draw[domain={3*pi/4}:pi,samples=90,smooth] plot (\x,{tan(deg(pi-\x))+sqrt(4+(tan(deg(pi-\x)))^2)});
+% Coordinates and labels
+\node[left,inner sep=0pt,xshift=-2pt] at (0,2) {2};
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\node[below,inner sep=0pt,yshift=-2pt] at ({pi/4},0) {$\frac{\pi}{4}$};
+\node[below,inner sep=0pt,yshift=-2pt] at ({pi/2},0) {$\frac{\pi}{2}$};
+\node[below,inner sep=0pt,yshift=-2pt] at ({3*pi/4},0) {$\frac{3\pi}{4}$};
+\node[below,inner sep=0pt,yshift=-2pt] at (pi,0) {$\pi$};
+\end{tikzpicture}

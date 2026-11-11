@@ -1,0 +1,19 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth]
+% cylinder: top centre (0,2), bottom centre (0,-1), rx=1.5, ry=0.45
+% top rim: front (lower) solid, back (upper) solid thin (match hand sketch)
+\draw[solid] (0,2) ellipse [x radius=1.5, y radius=0.45];
+% body sides
+\draw[solid] (-1.5,2)--(-1.5,-1);
+\draw[solid] (1.5,2)--(1.5,-1);
+% bottom rim: front solid, back dashed
+\draw[solid] (-1.5,-1) arc (180:360:1.5 and 0.45);
+\draw[dashed] (1.5,-1) arc (0:180:1.5 and 0.45);
+% height dimension at right
+\draw[solid,<->] (1.9,-1)--(1.9,2);
+\node[right,inner sep=2pt] at (1.9,0.5) {$h$};
+% radius dimension at bottom
+\draw[solid] (0,-1)--(1.5,-1);
+\draw[solid] (0,-1.12)--(0,-0.88);
+\draw[solid] (1.5,-1.12)--(1.5,-0.88);
+\node[above,inner sep=2pt] at (0.75,-1) {$r$};
+\end{tikzpicture}

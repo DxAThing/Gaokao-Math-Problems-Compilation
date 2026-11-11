@@ -1,0 +1,10 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=0.62cm,y=0.24cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-2.5,0) -- (8.5,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-14) -- (0,14) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\node[above left,inner sep=0pt,xshift=-3pt,yshift=2pt] at (0,0) {$O$};
+\node[left,inner sep=0pt,xshift=-4pt] at (0,-12) {$A$};
+\draw[domain=0:7,samples=120] plot (\x,{12/49*\x*\x});
+\draw (0,-12) -- (7,12);
+\node[right,inner sep=0pt,xshift=3pt] at (7,12) {$P$};
+\end{tikzpicture}

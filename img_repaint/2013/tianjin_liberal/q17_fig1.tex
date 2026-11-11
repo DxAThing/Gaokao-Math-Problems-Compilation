@@ -1,0 +1,34 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A1) at (0,0);
+\coordinate (A) at (4,0);
+\coordinate (C1) at (0.6,4.4);
+\coordinate (C) at (4.6000000000,4.4000000000);
+\coordinate (B1) at (2,1.76);
+\coordinate (B) at (6,1.76);
+\coordinate (D) at (5.0000000000,0.8800000000);
+\coordinate (E) at (5.3000000000,3.0800000000);
+\coordinate (F) at (0.3,2.2);
+% solid prism outline and faces
+\draw[solid] (A1) -- (A) -- (D) -- (B) -- (C) -- (C1) -- (A1);
+\draw[solid] (B) -- (C);
+\draw[solid] (A) -- (B);
+\draw[solid] (A1)--(C);
+\draw[solid] (C) -- (A);
+\draw[solid] (C) -- (D);
+% hidden / interior dashed
+\draw[dashed] (A1) -- (B1);
+\draw[dashed] (C1) -- (B1);
+\draw[dashed] (B1) -- (B);
+\draw[dashed] (A1) -- (D);
+\draw[dashed] (F) -- (E);
+% points
+\node[below left] at (A1) {$A_{1}$};
+\node[below right] at (A) {$A$};
+\node[above left] at (C1) {$C_{1}$};
+\node[above right] at (C) {$C$};
+\node[below left,xshift=-4pt,yshift=12pt] at (B1) {$B_{1}$};
+\node[right] at (B) {$B$};
+\node[right,xshift=1pt,yshift=-3pt] at (D) {$D$};
+\node[right] at (E) {$E$};
+\node[left] at (F) {$F$};
+\end{tikzpicture}

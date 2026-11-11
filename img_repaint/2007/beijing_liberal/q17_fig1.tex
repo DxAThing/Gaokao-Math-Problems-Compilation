@@ -1,0 +1,25 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  geometry edge/.style={solid,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=0pt}]
+\coordinate (A) at (0.4,4.6);
+\coordinate (O) at (0,0);
+\coordinate (B) at (3.4,0.15);
+\coordinate (C) at (-1.4,-1.7);
+\coordinate (D) at (1.9,2.375);
+% solid edges
+\draw[geometry edge] (A)--(B);
+\draw[geometry edge] (A)--(C);
+\draw[geometry edge] (B)--(C);
+\draw[geometry edge] (C)--(D);
+% dashed edges
+\draw[geometry edge,dashed] (A)--(O);
+\draw[geometry edge,dashed] (O)--(B);
+\draw[geometry edge,dashed] (O)--(C);
+\draw[geometry edge,dashed] (O)--(D);
+% labels with clearance
+\node[geometry label,above,yshift=4pt] at (A) {$A$};
+\node[geometry label,below right,xshift=2pt,yshift=-3pt] at (O) {$O$};
+\node[geometry label,right,xshift=4pt] at (B) {$B$};
+\node[geometry label,below left,xshift=-4pt,yshift=-3pt] at (C) {$C$};
+\node[geometry label,above right,xshift=4pt,yshift=2pt] at (D) {$D$};
+\end{tikzpicture}

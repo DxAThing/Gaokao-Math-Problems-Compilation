@@ -1,0 +1,44 @@
+% 2015_hubei_science_q21_fig1: panel1 real tool (slot AB, hollow bars M-D-N and O-N), panel2 coordinate polyline.
+\begin{tabular}{@{}c@{\hspace{8mm}}c@{}}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% slot AB hollow rect (0,0)-(6.5,0.28)
+\draw (.3,0) rectangle (6.5,0.28);
+% long hollow bar M(1.0,-1.46)-D(2.2,0.14)-N(2.8,0.94), width .12
+\fill[white,draw=black,line width=.6pt] (.952,-1.424)--(2.752,.976)--(2.848,.904)--(1.048,-1.496)--cycle;
+% short hollow bar O(3.4,0.14)-N(2.8,0.94), width .12
+\fill[white,draw=black,line width=.6pt] (3.448,.176)--(2.848,.976)--(2.752,.904)--(3.352,.104)--cycle;
+% hinge diamond at N
+\draw (2.8,0.94)++(0,0.10)--++(0.10,0)--++(0,-0.10)--++(-0.10,0)--cycle;
+% dots
+\fill (1.0,-1.46) circle (1.5pt);
+\fill (2.2,0.14) circle (1.5pt);
+\fill (3.4,0.14) circle (1.5pt);
+\fill (2.8,0.94) circle (1.5pt);
+% labels panel1 with clearance
+\node[anchor=east,inner sep=0pt,xshift=-3pt] at (.3,0.14) {$A$};
+\node[anchor=west,inner sep=0pt,xshift=3pt] at (6.5,0.14) {$B$};
+\node[anchor=east,inner sep=0pt,xshift=-4pt,yshift=-2pt] at (1.0,-1.46) {$M$};
+\node[anchor=north,inner sep=0pt,yshift=-10pt] at (2.2,0.14) {$D$};
+\node[anchor=north,inner sep=0pt,yshift=-10pt] at (3.4,0.14) {$O$};
+\node[anchor=south,inner sep=0pt,yshift=5pt] at (2.8,0.94) {$N$};
+% circled 1
+\node[anchor=north,inner sep=0pt,yshift=-14pt,draw,circle,minimum size=5mm] at (3.25,-1.9) {1};
+\end{tikzpicture}
+&
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-3.8,0)--(3.5,0);
+\draw[->] (0,-3.2)--(0,3.0);
+% polyline M(-2.4,-1.6)-D(-1.2,0)-N(-0.6,0.8)-O(0,0)
+\draw (-2.4,-1.6)--(-1.2,0)--(-0.6,0.8)--(0,0);
+% labels panel2
+\node[anchor=east,inner sep=0pt,xshift=-4pt] at (-2.4,-1.6) {$M$};
+\node[anchor=north west,inner sep=0pt,xshift=3pt,yshift=-3pt] at (-1.2,0) {$D$};
+\node[anchor=north east,inner sep=0pt,xshift=-3pt,yshift=-3pt] at (0,0) {$O$};
+\node[anchor=south,inner sep=0pt,yshift=4pt] at (-0.6,0.8) {$N$};
+\node[anchor=west,inner sep=0pt,xshift=3pt] at (3.5,0) {$x$};
+\node[anchor=south,inner sep=0pt,yshift=3pt] at (0,3.0) {$y$};
+% circled 2
+\node[anchor=north,inner sep=0pt,yshift=-14pt,draw,circle,minimum size=5mm] at (0,-3.2) {2};
+\end{tikzpicture}
+\end{tabular}

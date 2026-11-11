@@ -1,0 +1,30 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  geometry edge/.style={draw=black,solid,line width=.6pt},
+  geometry hidden/.style={draw=black,dashed,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=1pt}]
+\coordinate (C) at (-0.5,4.0);
+\coordinate (Cone) at (2.5000000000,4.0000000000);
+\coordinate (B) at (2.5,2.0);
+\coordinate (A) at (0.5,0.0);
+\coordinate (Aone) at (3.5,0.0);
+\coordinate (Bone) at (5.5,2.0);
+\coordinate (H) at (3.0,1.0);
+% top / bottom / sides
+\draw[geometry edge] (C)--(Cone);
+\draw[geometry edge] (C)--(A);
+\draw[geometry edge] (A)--(Aone);
+\draw[geometry edge] (Cone)--(Aone);
+\draw[geometry edge] (Cone)--(Bone)--(Aone);
+% hidden interior
+\draw[geometry hidden] (C)--(B);
+\draw[geometry hidden] (A)--(B);
+\draw[geometry hidden] (B)--(Bone);
+\draw[geometry hidden] (Cone)--(H);
+\node[geometry label,above left,xshift=-4pt,yshift=3pt] at (C) {$C$};
+\node[geometry label,above,xshift=1pt,yshift=4pt] at (Cone) {$C_{1}$};
+\node[geometry label,above left,xshift=-6pt,yshift=-6pt] at (B) {$B$};
+\node[geometry label,below left,xshift=-3pt,yshift=-4pt] at (A) {$A$};
+\node[geometry label,below right,xshift=3pt,yshift=-4pt] at (Aone) {$A_{1}$};
+\node[geometry label,right,xshift=4pt] at (Bone) {$B_{1}$};
+\node[geometry label,below left,xshift=-5pt,yshift=-3pt] at (H) {$H$};
+\end{tikzpicture}

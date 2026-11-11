@@ -1,51 +1,30 @@
-% Source: source/普通高考/2008/2008山东文.pdf, page 1, question 14.
-% Complete node -> directed-edge list:
-% 开始→输入p→(n=1,S=0)→S<p?; 是→S=S+1/2^n→n=n+1→left return to the
-% shared stem above (n=1,S=0); 否→输出n→结束. All connectors are solid.
-% The loop return and output branch are independent; every node is centered
-% with local parindent/leftskip/rightskip cleared.
-\begin{tikzpicture}[
-  >=Stealth,
-  line width=0.55pt,
-  line cap=round,
-  line join=round,
-  font=\normalsize,
-  every node/.style={anchor=center,align=center,
-    execute at begin node={\setlength{\parindent}{0pt}\setlength{\leftskip}{0pt}\setlength{\rightskip}{0pt}\everypar{}}},
-  box/.style={draw,minimum height=0.68cm,inner xsep=4pt,inner ysep=2pt,
-    anchor=center,align=center},
-  terminal/.style={box,rounded corners=0.18cm,minimum width=1.25cm},
-  io/.style={box,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
-    minimum height=0.78cm},
-  decision/.style={box,shape=diamond,aspect=2.8,inner sep=0pt,
-    minimum width=3.5cm,minimum height=0.98cm},
-]
-  \path[use as bounding box] (-2.95,0.05) rectangle (4.75,9.20);
-
-  \node[terminal] (start) at (0,8.75) {开始};
-  \node[io,minimum width=2.20cm] (input) at (0,7.45) {输入 $p$};
-  \node[box,minimum width=3.15cm] (init) at (0,6.05) {$n=1,S=0$};
-  \node[decision] (test) at (0,4.45) {$S<p?$};
-  \node[box,minimum width=2.75cm,minimum height=1.00cm] (update) at (0,2.85)
-    {$S=S+\dfrac{1}{2^n}$};
-  \node[box,minimum width=2.35cm] (inc) at (0,1.20) {$n=n+1$};
-  \node[io,minimum width=1.95cm] (output) at (3.45,3.05) {输出 $n$};
-  \node[terminal] (finish) at (3.45,1.50) {结束};
-
-  \draw[->] (start.south) -- (input.north);
-  \draw[->] (input.south) -- (init.north);
-  \draw[->] (init.south) -- (test.north);
-  \draw[->] (test.south) -- node[right] {是} (update.north);
-  \draw[->] (update.south) -- (inc.north);
-  \draw[->] (test.east) -- node[above] {否} (3.45,4.45) -- (3.45,3.55) -- (output.north);
-  \draw[->] (output.south) -- (finish.north);
-
-  % Return joins the input-to-initialization stem above the initialization box;
-  % the slightly raised horizontal segment keeps clearance from that box.
-  \coordinate (loopJoin) at (0,6.70);
-  % Return path merges into the main stem; the arrowhead marks the
-  % leftward flow before the shared stem enters the initialization node.
-  \draw[->] (inc.south) -- (0,0.45) -- (-2.55,0.45) -- (-2.55,6.70)
-    -- (loopJoin);
-  \draw (loopJoin) -- (init.north);
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.6pt,
+  start/.style={draw, shape=rectangle, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm, align=center, execute at begin node={\setlength{\parindent}{0pt}}},
+  proc/.style={draw, rectangle, minimum width=3.6cm, minimum height=0.9cm, align=center, inner sep=4pt, execute at begin node={\setlength{\parindent}{0pt}}},
+  fracbox/.style={draw, rectangle, minimum width=3.8cm, minimum height=1.5cm, align=center, inner sep=4pt, execute at begin node={\setlength{\parindent}{0pt}}},
+  io/.style={draw, trapezium, trapezium left angle=75, trapezium right angle=105, minimum width=3.0cm, minimum height=0.95cm, align=center, inner sep=4pt, execute at begin node={\setlength{\parindent}{0pt}}},
+  dec/.style={draw, diamond, aspect=2.6, minimum width=5.0cm, minimum height=1.6cm, align=center, inner sep=2pt, execute at begin node={\setlength{\parindent}{0pt}}},
+  lbl/.style={font=\normalsize, inner sep=2pt}]
+\node[start] (start) at (0,0) {开始};
+\node[io] (ioIn) at (0,-1.8) {输入 $p$};
+\coordinate (J0) at (0,-2.9);
+\node[proc] (pNS) at (0,-3.9) {$n=1,S=0$};
+\node[dec] (dec) at (0,-5.8) {$S<p?$};
+\node[fracbox] (pS) at (0,-8.1) {$S=S+\dfrac{1}{2^{n}}$};
+\node[proc] (pn) at (0,-10.0) {$n=n+1$};
+\node[io] (ioOut) at (4.4,-8.1) {输出 $n$};
+\node[start] (endR) at (4.4,-10.0) {结束};
+% trunk top with loop junction (continuous)
+\draw[->] (start.south) -- (ioIn.north);
+\draw[->] (ioIn.south) -- (pNS.north);
+\draw[->] (pNS.south) -- (dec.north);
+\draw[->] (dec.south) -- (pS.north);
+\node[lbl,right=2.2mm] at ($(dec.south)!0.5!(pS.north)$) {是};
+\draw[->] (pS.south) -- (pn.north);
+% no branch to output via right channel
+\draw[->] (dec.east) -| (ioOut.north);
+\node[lbl,above=2.2mm] at ($(dec.east)+(5mm,0)$) {否};
+\draw[->] (ioOut.south) -- (endR.north);
+% loop back from n=n+1 via left channel to J0
+\draw[->] (pn.south) -- (0,-10.9) -- (-3.6,-10.9) -- (-3.6,-2.9) -- (J0);
 \end{tikzpicture}

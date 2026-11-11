@@ -1,0 +1,18 @@
+% Exact edge inventory and direction must precede drawing.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize]
+\tikzset{repbox/.style={rectangle,draw,fill=white,minimum width=18mm,minimum height=8mm,inner sep=1pt}}
+\node[repbox] (E1) at (-0.8,1.0) {元件 1};
+\node[repbox] (E2) at (-0.8,-1.0) {元件 2};
+\node[repbox] (E3) at (1.6,0) {元件 3};
+\coordinate (in) at (-3.2,0);
+\coordinate (out) at (3.4,0);
+\coordinate (S) at (-2.2,0);
+\coordinate (M) at (0.6,0);
+\draw (in) -- (S);
+\draw (S) |- (E1.west);
+\draw (S) |- (E2.west);
+\draw (E1.east) -| (M);
+\draw (E2.east) -| (M);
+\draw (M) -- (E3.west);
+\draw (E3.east) -- (out);
+\end{tikzpicture}

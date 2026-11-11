@@ -1,0 +1,32 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% triangular prism ABC-A1B1C1, E mid AB, F on A1C1
+\coordinate (A) at (0,0);
+\coordinate (B) at (3.6,0);
+\coordinate (Cc) at (2.7,0.9);
+\coordinate (A1) at (0,2.9);
+\coordinate (B1) at (3.6,2.9);
+\coordinate (C1) at (3.1,3.9);
+\coordinate (E) at (1.8,0);
+\coordinate (F) at (1.55,3.4);
+% solid visible
+\draw[solid] (A) -- (B);
+\draw[solid] (A) -- (A1);
+\draw[solid] (B) -- (B1);
+\draw[solid] (A1) -- (B1);
+\draw[solid] (A1) -- (C1);
+\draw[solid] (B1) -- (C1);
+% dashed hidden + segment EF
+\draw[dashed] (A) -- (Cc);
+\draw[dashed] (B) -- (Cc);
+\draw[dashed] (Cc) -- (C1);
+\draw[dashed] (E) -- (F);
+% labels with clearance
+\node[left,xshift=-4pt] at (A) {$A$};
+\node[right,xshift=4pt] at (B) {$B$};
+\node[right,xshift=4pt,yshift=1pt] at (Cc) {$C$};
+\node[left,xshift=-4pt] at (A1) {$A_{1}$};
+\node[right,xshift=4pt] at (B1) {$B_{1}$};
+\node[above,yshift=3pt] at (C1) {$C_{1}$};
+\node[below,yshift=-4pt] at (E) {$E$};
+\node[above,xshift=-3pt,yshift=4pt] at (F) {$F$};
+\end{tikzpicture}

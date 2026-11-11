@@ -1,0 +1,30 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% lower box front
+\coordinate (F1) at (0,0);
+\coordinate (F2) at (2.6,0);
+\coordinate (F3) at (2.6,1.0);
+\coordinate (F4) at (0,1.0);
+\draw (F1)--(F2)--(F3)--(F4)--cycle;
+\coordinate (B1) at (0.7,1.45);
+\coordinate (B2) at (3.3,1.45);
+\coordinate (B3) at (3.3,0.45);
+
+\draw (F2)--(B3)--(B2);
+\coordinate (H) at (0.7,0.45);
+\draw[dashed] (H)--(F1);
+\draw[dashed] (H)--(B3);
+\draw[dashed] (H)--(B1);
+
+\coordinate (U1) at (.35,1.225);
+\coordinate (U2) at (2.95,1.225);
+\coordinate (U3) at (2.95,2.825);
+\coordinate (U4) at (.35,2.825);
+\coordinate (UB1) at (.7,3.05);
+\coordinate (UB2) at (3.3,3.05);
+\draw (F4)--(U1);
+\draw (U2)--(F3);
+\draw (U1)--(U2)--(U3)--(U4)--cycle;
+\draw (U4)--(UB1)--(UB2)--(U3);
+\draw (U2)--(B2)--(UB2);
+\draw[dashed] (B1)--(UB1);
+\end{tikzpicture}

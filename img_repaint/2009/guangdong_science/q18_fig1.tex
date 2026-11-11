@@ -1,0 +1,39 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+  solidedge/.style={draw=black,line width=.6pt,solid},
+  hidedge/.style={draw=black,line width=.6pt,dashed,dash pattern=on 3pt off 2.5pt},
+  ptlabel/.style={font=\normalsize,inner sep=2pt}]
+% cube projection: front ABB1A1, back DCC1D1
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (B1) at (4,3.2);
+\coordinate (A1) at (0,3.2);
+\coordinate (D) at (1.1,1.0);
+\coordinate (C) at (5.1,1.0);
+\coordinate (D1) at (1.1,4.2);
+\coordinate (C1) at (5.1,4.2);
+\coordinate (F) at (3.1,4.2);
+\coordinate (G) at (0,1.6);
+\coordinate (E) at (4.55,2.1);
+% visible cube edges
+\draw[solidedge] (A)--(B)--(B1)--(A1)--cycle;
+\draw[solidedge] (A1)--(D1)--(C1)--(B1);
+\draw[solidedge] (B)--(C)--(C1);
+% hidden edges meeting at D
+\draw[hidedge] (A)--(D)--(C);
+\draw[hidedge] (D)--(D1);
+% interior segments from original figure
+\draw[hidedge] (A)--(E);
+\draw[hidedge] (G)--(F)--(E);
+% labels offset from strokes
+\node[ptlabel,below left] at ($(A)+(-0.18,-0.14)$) {$A$};
+\node[ptlabel,below right] at ($(B)+(0.18,-0.14)$) {$B$};
+\node[ptlabel,right] at ($(C)+(0.16,-0.02)$) {$C$};
+\node[ptlabel,left] at ($(D)+(-0.20,0.02)$) {$D$};
+\node[ptlabel,left] at ($(A1)+(-0.22,0.10)$) {$A_{1}$};
+\node[ptlabel,above right,xshift=-5pt,yshift=7pt] at ($(B1)+(0.10,0.14)$) {$B_{1}$};
+\node[ptlabel,above left] at ($(D1)+(-0.16,0.14)$) {$D_{1}$};
+\node[ptlabel,above right] at ($(C1)+(0.16,0.14)$) {$C_{1}$};
+\node[ptlabel,above] at ($(F)+(0,0.16)$) {$F$};
+\node[ptlabel,left] at ($(G)+(-0.20,0)$) {$G$};
+\node[ptlabel,right] at ($(E)+(0.16,0.04)$) {$E$};
+\end{tikzpicture}

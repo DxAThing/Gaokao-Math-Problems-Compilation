@@ -1,0 +1,50 @@
+% 1992 Shanghai Q10: straight parallelepiped, rhombus top ABCD, square sides
+% 12pt, .6pt, grayscale
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,
+  solid edge/.style={solid,line width=.6pt},
+  hidden edge/.style={dashed,line width=.6pt},
+  ptlabel/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (A) at (0,3.6);
+\coordinate (B) at (1.8,2.9);
+\coordinate (C) at (4.8,3.3);
+\coordinate (D) at (3.0,4.0);
+\coordinate (A1) at (0,1.0);
+\coordinate (B1) at (1.8,0.3);
+\coordinate (C1) at (4.8,0.7);
+\coordinate (D1) at (3.0,1.4);
+\coordinate (M) at (2.4,3.45);
+\coordinate (E) at (0.9,0.65);
+\coordinate (F) at (0,2.3);
+% bottom hidden
+\draw[hidden edge] (A1)--(D1)--(C1);
+% bottom front solid
+\draw[solid edge] (A1)--(B1)--(C1);
+% verticals
+\draw[solid edge] (A)--(A1);
+\draw[solid edge] (B)--(B1);
+\draw[solid edge] (C)--(C1);
+\draw[hidden edge] (D)--(D1);
+% top face
+\draw[solid edge] (A)--(B)--(C)--(D)--cycle;
+% top diagonals AC, BD
+\draw[solid edge] (A)--(C);
+\draw[solid edge] (B)--(D);
+% interior diagonal D-B1
+\draw[hidden edge] (M)--(B1);
+% segment F-E on front-left face
+\draw[solid edge] (F)--(E);
+% vertices dots (small, grayscale)
+\foreach \p in {A,B,C,D,A1,B1,C1,D1,M,E,F}{\fill (\p) circle (1.2pt);}
+% labels offset to avoid touching strokes
+\node[ptlabel,above left,xshift=0pt,yshift=0pt] at (A) {$A$};
+\node[ptlabel,left,xshift=-1pt,yshift=-5pt] at (B) {$B$};
+\node[ptlabel,right,xshift=0pt,yshift=0pt] at (C) {$C$};
+\node[ptlabel,above,xshift=0pt,yshift=0pt] at (D) {$D$};
+\node[ptlabel,left,xshift=0pt,yshift=0pt] at (A1) {$A_{1}$};
+\node[ptlabel,below,xshift=0pt,yshift=0pt] at (B1) {$B_{1}$};
+\node[ptlabel,right,xshift=0pt,yshift=0pt] at (C1) {$C_{1}$};
+\node[ptlabel,right,xshift=3pt,yshift=5pt] at (D1) {$D_{1}$};
+\node[ptlabel,below right=3pt,xshift=-1pt,yshift=-11pt] at (M) {$M$};
+\node[ptlabel,below left,xshift=0pt,yshift=0pt] at (E) {$E$};
+\node[ptlabel,left,xshift=0pt,yshift=0pt] at (F) {$F$};
+\end{tikzpicture}

@@ -1,0 +1,41 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  geometry edge/.style={draw=black,solid,line width=.6pt},
+  geometry hidden/.style={draw=black,dashed,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=1pt}]
+\coordinate (A) at (0.8000000000,4.2000000000);
+\coordinate (C) at (4.2000000000,4.2000000000);
+\coordinate (B) at (0.0000000000,3.2000000000);
+\coordinate (D) at (4.2000000000,2.8500000000);
+\coordinate (Aone) at (0.8000000000,1.5000000000);
+\coordinate (Cone) at (4.2000000000,1.5000000000);
+\coordinate (Bone) at (0.0000000000,0.5000000000);
+\coordinate (P) at (7.6000000000,1.5000000000);
+% solid visible edges
+\draw[geometry edge] (A)--(C);
+\draw[geometry edge] (B)--(C);
+\draw[geometry edge] (B)--(D);
+\draw[geometry edge] (B)--(Bone);
+\draw[geometry edge] (A)--(B);
+\draw[geometry edge] (C)--(D);
+\draw[geometry edge] (D)--(P);
+\draw[geometry edge] (Bone)--(P);
+\draw[geometry edge] (Cone)--(P) (Bone)--(Cone);
+% dashed hidden / interior edges
+\draw[geometry hidden] (A)--(Aone);
+\draw[geometry hidden] (A)--(D);
+\draw[geometry hidden] (B)--(Aone);
+\draw[geometry hidden] (Bone)--(Aone);
+\draw[geometry hidden] (Aone)--(Cone);
+\draw[geometry hidden] (Aone)--(D);
+\draw[geometry edge] (D)--(Cone);
+% labels offset from strokes
+\node[geometry label,above left,xshift=-3.0pt,yshift=2.0pt] at (A) {$A$};
+\node[geometry label,above right,xshift=3.0pt,yshift=2.0pt] at (C) {$C$};
+\node[geometry label,left,xshift=-3pt] at (B) {$B$};
+\node[geometry label,right,xshift=3pt,yshift=3.0pt] at (D) {$D$};
+\node[geometry label,left,xshift=-3pt,yshift=-1.0pt] at (Aone) {$A_{1}$};
+\node[geometry label,right,xshift=2pt,yshift=8pt] at (Cone) {$C_{1}$};
+\node[geometry label,below left,xshift=-3.0pt,yshift=-3.0pt] at (Bone) {$B_{1}$};
+\node[geometry label,right,xshift=3pt] at (P) {$P$};
+\end{tikzpicture}
+

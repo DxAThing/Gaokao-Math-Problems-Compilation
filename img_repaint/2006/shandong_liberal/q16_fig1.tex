@@ -1,0 +1,27 @@
+\begin{tikzpicture}[line width=.6pt]
+\coordinate (C1) at (-2.2,2.0);
+\coordinate (B1) at (2.0,2.0);
+\coordinate (A1) at (0.9,1.0);
+\coordinate (C) at (-2.2,-1.0);
+\coordinate (B) at (2.0,-1.0);
+\coordinate (A) at (0.9,-2.4);
+% top face
+\draw (C1) -- (B1);
+\draw (C1) -- (A1);
+\draw (B1) -- (A1);
+% bottom face
+\draw[dashed] (C) -- (B);
+\draw (C) -- (A);
+\draw (B) -- (A);
+% lateral edges
+\draw (C1) -- (C);
+\draw (B1) -- (B);
+\draw (A1) -- (A);
+% labels
+\node[above left=2pt] at (C1) {$C_{1}$};
+\node[above right=2pt] at (B1) {$B_{1}$};
+\node[right=3pt] at (A1) {$A_{1}$};
+\node[below left=2pt] at (C) {$C$};
+\node[below right=2pt] at (B) {$B$};
+\node[below=3pt] at (A) {$A$};
+\end{tikzpicture}

@@ -1,0 +1,43 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (G0) at (-5.5,0);
+\coordinate (G1) at (5.5,0);
+\coordinate (A) at (-4.0,0);
+\coordinate (A_top) at (-4.0,1.2);
+\coordinate (B) at (3.0,1.33);
+\coordinate (B_top) at (3.0,2.53);
+\coordinate (S1) at (5.0,1.71);
+\coordinate (R1a) at (-4.17,2.2);
+\coordinate (R1b) at (-5.05,0);
+\coordinate (R2a) at (-2.42,2.333);
+\coordinate (R2b) at (-3.3,0.133);
+\coordinate (R3a) at (-0.92,2.618);
+\coordinate (R3b) at (-1.8,0.418);
+\coordinate (R4a) at (0.58,2.903);
+\coordinate (R4b) at (-0.3,0.703);
+\coordinate (R5a) at (2.08,3.188);
+\coordinate (R5b) at (1.2,0.988);
+\coordinate (R6a) at (3.08,3.378);
+\coordinate (R6b) at (2.2,1.178);
+\coordinate (R7a) at (3.52,3.83);
+\coordinate (R7b) at (3.0,2.53);
+\draw (G0)--(G1);
+\foreach \x in {-5.5,-5.2,-4.9,-4.6,-4.3,-4.0,-3.7,-3.4,-3.1,-2.8,-2.5,-2.2,-1.9,-1.6,-1.3,-1.0,-0.7,-0.4,-0.1,0.2,0.5,0.8,1.1,1.4,1.7,2.0,2.3,2.6,2.9,3.2,3.5,3.8,4.1,4.4,4.7,5.0,5.3} {\draw (\x,0)--++(-0.12,-0.22);}
+\draw (A)--(S1);
+\draw (A)--(A_top);
+\draw (B)--(B_top);
+\draw[dashed,->] (R1a)--(R1b);
+\draw[dashed,->] (R2a)--(R2b);
+\draw[dashed,->] (R3a)--(R3b);
+\draw[dashed,->] (R4a)--(R4b);
+\draw[dashed,->] (R5a)--(R5b);
+\draw[dashed,->] (R6a)--(R6b);
+\draw[dashed,->] (R7a)--(R7b);
+\draw (A)++(1.35,0) arc (0:10.76:1.35);
+\node[inner sep=0pt] at (-4.0,-0.55) {$A$};
+\node[inner sep=0pt] at (3.45,1.02) {$B$};
+\node[inner sep=0pt] at (-3.68,0.7) {杆};
+\node[inner sep=0pt] at (3.38,2.1) {杆};
+\node[inner sep=0pt] at (-0.5,4.35) {平行阳光};
+\node[inner sep=0pt] at (-1.5,0.225) {$\theta$};
+\end{tikzpicture}

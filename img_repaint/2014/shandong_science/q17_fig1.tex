@@ -1,0 +1,37 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (M) at (2.5,0);
+\coordinate (B) at (5,0);
+\coordinate (D) at (1.5,1.5);
+\coordinate (C) at (4,1.5);
+\coordinate (A1) at (2.5,4.5);
+\coordinate (B1) at (7.5,4.5);
+\coordinate (D1) at (4,6);
+\coordinate (C1) at (6.5,6);
+% solid prism outline
+\draw (A)--(M)--(B);
+\draw (A)--(A1);
+\draw (A1)--(B1);
+\draw (B)--(B1);
+\draw (D1)--(C1);
+\draw (D1)--(A1);
+\draw (C1)--(B1);
+% hidden + auxiliary dashed
+\draw[dashed] (A)--(D);
+\draw[dashed] (D)--(C);
+\draw[dashed] (B)--(C);
+\draw[dashed] (D)--(D1);
+\draw[dashed] (D1)--(M);
+\draw[dashed] (D1)--(C);
+\draw[dashed] (M)--(C1);
+\draw[dashed] (C)--(C1);
+\node[below left=2pt] at (A) {$A$};
+\node[below=2pt] at (M) {$M$};
+\node[below right=2pt] at (B) {$B$};
+\node[left=2pt] at (D) {$D$};
+\node[right=2pt] at (C) {$C$};
+\node[left=2pt] at (A1) {$A_{1}$};
+\node[right=2pt] at (B1) {$B_{1}$};
+\node[above left=2pt] at (D1) {$D_{1}$};
+\node[above right=2pt] at (C1) {$C_{1}$};
+\end{tikzpicture}

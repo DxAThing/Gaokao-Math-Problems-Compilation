@@ -1,0 +1,16 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=0.6pt]
+  % axes
+  \draw[draw=black,->] (-1.6,0) -- (3.2,0);
+  \draw[draw=black,->] (0,-1.4) -- (0,2.6);
+  \node[font=\normalsize,right=3pt] at (3.2,0) {$x$};
+  \node[font=\normalsize,above right=2pt] at (0,2.6) {$y$};
+  \node[font=\normalsize,below left=3pt] at (0,0) {$O$};
+  % line y = x + a with a = 1: intercept 1, slope 1
+  \draw[draw=black] (-1.3,.7) -- (.6,2.6);
+  \node[font=\normalsize,right=3pt] at (.6,2.6) {$y=x+a$};
+  \node[font=\normalsize,left=2pt] at (0,1) {$1$};
+  % curve y = x^a with 0 < a < 1 (concave down), e.g. a = 1/2
+  \draw[draw=black,domain=0:2.8,samples=100,smooth] plot (\x,{sqrt(\x)});
+  \node[font=\normalsize,right=3pt] at (2.8,1.673) {$y=x^{a}$};
+\fill (0,1) circle (1.2pt);
+\end{tikzpicture}

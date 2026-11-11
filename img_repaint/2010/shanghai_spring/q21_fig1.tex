@@ -1,0 +1,33 @@
+% 地球位置示意图:北极/南极/球心O/赤道/39N/31N/经线/三城市点
+% R=3.6; 纬线 cy=R*sin(lat), rx=R*cos(lat)(39N/31N 精确,示意扁率仅压 ry)
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% --- parallels: back dashed first, then front solid ---
+\draw[dashed] (2.79773,2.26555) arc[start angle=0,end angle=180,x radius=2.79773,y radius=0.34];
+\draw[dashed] (3.6,0) arc[start angle=0,end angle=180,x radius=3.6,y radius=0.62];
+\draw[dashed] (3.0862,1.85413) arc[start angle=0,end angle=-180,x radius=3.0862,y radius=0.4];
+\draw[dashed] (0,3.01921) ellipse (1.9607 and 0.26);
+\draw[dashed] (0,0) ellipse (2.62 and 3.6);
+% --- meridians solid ---
+\draw (0,0) ellipse (2.95 and 3.6);
+\draw (0,0) ellipse (2.45 and 3.6);
+\draw (0,0) ellipse (1.0 and 3.6);
+\draw (0,0) ellipse (0.62 and 3.6);
+% --- front arcs solid ---
+\draw (2.79773,2.26555) arc[start angle=0,end angle=-180,x radius=2.79773,y radius=0.45];
+\draw (3.6,0) arc[start angle=0,end angle=-180,x radius=3.6,y radius=0.62];
+% --- outer sphere + axis ---
+\draw (0,0) circle[radius=3.6cm];
+\draw[dashed] (0,3.58)--(0,0.2);
+% --- city dots on curves ---
+\fill (-2.43,2.043) circle (1.6pt);
+\fill (2.06,1.961) circle (1.6pt);
+\fill (2.204,1.574) circle (1.6pt);
+% --- labels (all offset clear of strokes) ---
+\node[anchor=south,inner sep=0pt] at (0,4.05) {北极};
+\node[anchor=north,inner sep=0pt] at (0,-4.05) {南极};
+\node[anchor=west,inner sep=0pt] at (0.12,0.3) {$O$};
+\node[anchor=east,inner sep=0pt] at (-3.05,2.3) {里斯本};
+\node[anchor=south,inner sep=0pt] at (1.32,1.99) {大连};
+\node[anchor=north,inner sep=0pt] at (1.55,1.36) {上海};
+\end{tikzpicture}

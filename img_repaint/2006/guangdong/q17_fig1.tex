@@ -1,0 +1,39 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% top ellipse center (0,4) rx=2 ry=0.5 ; bottom center (0,0) rx=3 ry=1
+\draw (-1.5,4) ellipse (1.5cm and 0.5cm);
+\draw (0,0) ellipse (3cm and 1cm);
+\coordinate (D) at (-3.0000000000,4.0000000000);
+\coordinate (E) at (0.0000000000,4.0000000000);
+\coordinate (Oone) at (-1.5000000000,4.0000000000);
+\coordinate (A) at (-3,0);
+\coordinate (F) at (3,0);
+\coordinate (O) at (0,0);
+\coordinate (B) at (-1.3000000000,-0.9012337223);
+\coordinate (C) at (1.3000000000,0.9012337223);
+% top diameter
+\draw[solid] (D)--(E);
+% verticals
+\draw[solid] (D)--(A);
+\draw[solid] (E)--(F);
+\draw[dashed] (E)--(O);
+% interior diagonal
+\draw[solid] (D)--(B);
+% bottom face outline segments
+\draw[solid] (A)--(B);
+\draw[solid] (B)--(F);
+\draw[dashed] (A)--(F);
+\draw[dashed] (A)--(C);
+\draw[dashed] (C)--(F);
+\draw[dashed] (B)--(O);
+\draw[dashed] (C)--(O);
+\fill (Oone) circle (1.6pt);
+
+\node[left,xshift=-3pt] at (D) {$D$};
+\node[right,xshift=3pt] at (E) {$E$};
+\node[above,yshift=-2pt,xshift=1pt] at (Oone) {$O_{1}$};
+\node[left,xshift=-3pt,yshift=-2pt] at (A) {$A$};
+\node[right,xshift=3pt,yshift=-2pt] at (F) {$F$};
+\node[below,yshift=-4pt] at (O) {$O$};
+\node[below,yshift=-4pt] at (B) {$B$};
+\node[above right,xshift=3pt,yshift=2pt] at (C) {$C$};
+\end{tikzpicture}

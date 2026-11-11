@@ -1,0 +1,27 @@
+% cylinder OO1 with generatrix AA1 and midpoint M
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (O) at (0,0);
+\coordinate (O1) at (0,4);
+\coordinate (A) at (2.5,0);
+\coordinate (A1) at (2.5,4);
+\coordinate (M) at (2.5,2);
+% top rim full ellipse
+\draw[solid] (0,4) ellipse (2.5 and 0.5);
+% bottom rim: front solid, back dashed
+\draw[solid] (-2.5,0) arc (-180:0:2.5 and 0.5);
+\draw[dashed] (-2.5,0) arc (180:0:2.5 and 0.5);
+% side generatrices
+\draw[solid] (-2.5,0)--(-2.5,4);
+\draw[solid] (2.5,0)--(2.5,4);
+% diameters and axis
+\draw[solid] (-2.5,4)--(2.5,4);
+\draw[dashed] (-2.5,0)--(2.5,0);
+\draw[dashed] (0,0)--(0,4);
+\draw[dashed] (0,4)--(2.5,2);
+% labels with clearance
+\node[below,inner sep=2pt,yshift=-2.0pt,xshift=-1.0pt] at (O) {$O$};
+\node[above=2pt,xshift=-1pt,yshift=-5pt] at (O1) {$O_1$};
+\node[below right,inner sep=2pt,xshift=2pt,yshift=-2pt] at (A) {$A$};
+\node[right,inner sep=2pt,xshift=2pt] at (A1) {$A_1$};
+\node[right,inner sep=2pt,xshift=2pt] at (M) {$M$};
+\end{tikzpicture}

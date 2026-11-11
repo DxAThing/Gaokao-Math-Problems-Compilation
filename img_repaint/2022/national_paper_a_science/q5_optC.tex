@@ -1,0 +1,16 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1.8cm,y=1.0cm,line width=.6pt,>=stealth,font=\normalsize]
+% axes extend half grid beyond last ticks (-pi/2, pi/2)
+\draw[->,black] (-2.0708,0)--(2.0708,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->,black] (0,-1.8)--(0,2.2) node[above,inner sep=0pt,yshift=2pt] {$y$};
+% ticks
+\draw[black] (-1.5708,-0.05)--(-1.5708,0.05);
+\node[anchor=north,inner sep=0pt,yshift=-2pt] at (-1.5708,0) {$-\frac{\pi}{2}$};
+\draw[black] (1.5708,-0.05)--(1.5708,0.05);
+\node[anchor=south,inner sep=0pt,yshift=2pt] at (1.5708,0) {$\frac{\pi}{2}$};
+\draw[black] (-0.05,1)--(0.05,1);
+\node[anchor=west,inner sep=0pt,xshift=2pt] at (0,1) {$1$};
+\node[anchor=north east,inner sep=0pt,xshift=-4pt,yshift=-6pt] at (0,0) {$O$};
+% option-C distractor shape (negation of true f): left peak, right valley
+\draw[black,domain=-1.5708:1.5708,samples=220] plot (\x,{(pow(3,-\x)-pow(3,\x))*cos(deg(\x))});
+\end{tikzpicture}

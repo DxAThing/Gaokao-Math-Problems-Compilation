@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,
+  geometry edge/.style={solid,line width=.6pt}]
+\coordinate (BL) at (-1.5,0);
+\coordinate (BR) at (1.5,0);
+\coordinate (TL) at (-1.5,2.5);
+\coordinate (TR) at (1.5,4.0);
+\draw[geometry edge] (BL)--(TL);
+\draw[geometry edge] (BR)--(TR);
+\draw[geometry edge] (-1.5,0) arc (180:360:1.5 and 0.32);
+\draw[geometry edge,dashed] (1.5,0) arc (0:180:1.5 and 0.32);
+\draw[geometry edge,dashed] (BL)--(BR);
+\begin{scope}[shift={(0,3.25)},cm={1,.5,0,1,(0,0)}]
+\draw[geometry edge] (0,0) ellipse (1.5 and 0.36);
+\end{scope}
+\draw[dimension line] (-2.1,0)--(-2.1,2.5) node[dimension label vertical] {$50\,\mathrm{cm}$};
+\draw[dimension line] (2.1,0)--(2.1,4.0) node[dimension label vertical] {$80\,\mathrm{cm}$};
+\draw[dimension line] (-1.5,-0.7)--(1.5,-0.7) node[dimension label] {$40\,\mathrm{cm}$};
+\draw[dimension extension] (-1.5,0)--(-1.5,-0.7);
+\draw[dimension extension] (1.5,0)--(1.5,-0.7);
+\draw[dimension extension] (-1.5,0)--(-2.1,0);
+\draw[dimension extension] (-1.5,2.5)--(-2.1,2.5);
+\draw[dimension extension] (1.5,0)--(2.1,0);
+\draw[dimension extension] (1.5,4.0)--(2.1,4.0);
+\end{tikzpicture}

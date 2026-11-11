@@ -1,0 +1,31 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt]
+\coordinate (A) at (0,0);
+\coordinate (A1) at (4.5,0);
+\coordinate (C) at (0.5,4.2);
+\coordinate (C1) at (5.0,4.2);
+\coordinate (B) at (1.6,1.9);
+\coordinate (B1) at (6.1,1.9);
+\coordinate (D) at (3.85,1.9);
+\coordinate (E) at (4.575,1.425);
+% outer face ACC1A1 solid
+\draw[solid] (C)--(C1)--(A1)--(A)--cycle;
+\draw[solid] (C1)--(B1);
+\draw[solid] (A)--(C1);
+% hidden prism edges
+\draw[dashed] (C)--(B);
+\draw[dashed] (A)--(B);
+\draw[dashed] (B)--(B1);
+\draw (A1)--(B1);
+% interior
+\draw[dashed] (A)--(B1);
+\draw[dashed] (C)--(D);
+\draw[dashed] (D)--(E);
+\node[below left] at (A) {$A$};
+\node[below right] at (A1) {$A_{1}$};
+\node[above left] at (C) {$C$};
+\node[above right] at (C1) {$C_{1}$};
+\node[left] at (B) {$B$};
+\node[right] at (B1) {$B_{1}$};
+\node[above] at (D) {$D$};
+\node[below right] at (E) {$E$};
+\end{tikzpicture}

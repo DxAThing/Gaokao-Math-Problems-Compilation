@@ -1,0 +1,28 @@
+% 2008 shanghai spring q11 fig2: schematic rectangles on x-axis, heights a_i, widths b_i.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-0.6,0)--(11.4,0) node[below] {$x$};
+\draw[->] (0,-0.6)--(0,3.6) node[left] {$y$};
+\node[below left] at (0,0) {$O$};
+% rectangles (schematic widths 1.4, heights increasing)
+\draw (0,0) rectangle (1.4,1.1);
+\draw (1.4,0) rectangle (2.8,1.6);
+\draw (2.8,0) rectangle (4.2,2.0);
+\draw (6.6,0) rectangle (8.0,2.5);
+\draw (8.0,0) rectangle (9.4,3.1);
+% ellipsis gap
+\node at (5.4,1.2) {$\cdots$};
+% vertical double arrows for a_i
+\draw[{Latex[length=1.8mm]}-{Latex[length=1.8mm]}] (0.7,0.1)--(0.7,1.0) node[midway,right] {$a_{1}$};
+\draw[{Latex[length=1.8mm]}-{Latex[length=1.8mm]}] (2.1,0.1)--(2.1,1.5) node[midway,right] {$a_{2}$};
+\draw[{Latex[length=1.8mm]}-{Latex[length=1.8mm]}] (3.5,0.1)--(3.5,1.9) node[midway,right] {$a_{3}$};
+\draw[{Latex[length=1.8mm]}-{Latex[length=1.8mm]}] (7.3,0.1)--(7.3,2.4) node[midway,right] {$a_{n-1}$};
+\draw[{Latex[length=1.8mm]}-{Latex[length=1.8mm]}] (8.7,0.1)--(8.7,3.0) node[midway,right] {$a_{n}$};
+% width double arrows below axis
+\draw[{Latex[length=1.5mm]}-{Latex[length=1.5mm]}] (0,-0.25)--(1.4,-0.25) node[midway,fill=white,inner sep=1pt] {$b_{1}$};
+\draw[{Latex[length=1.5mm]}-{Latex[length=1.5mm]}] (1.4,-0.25)--(2.8,-0.25) node[midway,fill=white,inner sep=1pt] {$b_{2}$};
+\draw[{Latex[length=1.5mm]}-{Latex[length=1.5mm]}] (2.8,-0.25)--(4.2,-0.25) node[midway,fill=white,inner sep=1pt] {$b_{3}$};
+\draw[{Latex[length=1.5mm]}-{Latex[length=1.5mm]}] (6.6,-0.25)--(8.0,-0.25) node[midway,fill=white,inner sep=1pt] {$b_{n-1}$};
+\draw[{Latex[length=1.5mm]}-{Latex[length=1.5mm]}] (8.0,-0.25)--(9.4,-0.25) node[midway,fill=white,inner sep=1pt] {$b_{n}$};
+% baseline ticks at rectangle boundaries
+\foreach \x in {0,1.4,2.8,4.2,6.6,8.0,9.4} {\draw (\x,0.08)--(\x,-0.08);}
+\end{tikzpicture}

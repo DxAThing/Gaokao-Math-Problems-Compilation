@@ -1,0 +1,39 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (1.2,1.2);
+\coordinate (B) at (0,0);
+\coordinate (C) at (3.6,0);
+\coordinate (D) at (4.8,1.2);
+\coordinate (A1) at (1.2,3.6);
+\coordinate (B1) at (0,2.4);
+\coordinate (C1) at (3.6,2.4);
+\coordinate (D1) at (4.8,3.6);
+\coordinate (O) at (2.4,0.6);
+% bottom face: front solid, back dashed
+\draw (B)--(C)--(D);
+\draw[dashed] (D)--(A)--(B);
+% top face solid
+\draw (A1)--(B1)--(C1)--(D1)--cycle;
+% verticals: AA1 dashed, rest solid
+\draw[dashed] (A)--(A1);
+\draw (B)--(B1);
+\draw (C)--(C1);
+\draw (D)--(D1);
+% base diagonals and space diagonal (dashed)
+\draw[dashed] (A)--(O)--(C);
+\draw[dashed] (B)--(O)--(D);
+\draw[dashed] (A1)--(C);
+% alpha: angle between AC and A1C at C; beta: between diagonals at O
+\draw (C) ++(153.4:0.45) arc (153.4:123.7:0.45);
+\node[xshift=1pt,yshift=-5pt] at (2.95,.75) {$\alpha$};
+\draw (O) ++(153:0.4) arc (153:194:0.4);
+\node at (1.65,.68) {$\beta$};
+% labels kept clear of strokes
+\node[above left,xshift=-2pt,yshift=2pt] at (A) {$A$};
+\node[below left,xshift=-2pt,yshift=-2pt] at (B) {$B$};
+\node[below right,xshift=2pt,yshift=-2pt] at (C) {$C$};
+\node[right,xshift=4pt] at (D) {$D$};
+\node[above left,xshift=-2pt,yshift=3pt] at (A1) {$A_1$};
+\node[left,xshift=-4pt] at (B1) {$B_1$};
+\node[right,xshift=4pt] at (C1) {$C_1$};
+\node[right,xshift=4pt] at (D1) {$D_1$};
+\end{tikzpicture}

@@ -1,0 +1,33 @@
+\begin{tikzpicture}[line width=0.6pt, >=Stealth, font=\normalsize, x=1cm, y=1cm]
+% schematic oblique projection; true squares not to metric scale
+\coordinate (A) at (0,0);
+\coordinate (B) at (2,1);
+\coordinate (C) at (2.2,4.9);
+\coordinate (D) at (0.2,3.9);
+\coordinate (E) at (5.6,1.0);
+\coordinate (F) at (3.6,0);
+\coordinate (M) at (1.32,2.94);
+\coordinate (N) at (2.64,0.6);
+% visible solid edges
+\draw (A)--(D)--(C);
+\draw (C)--(B);
+\draw (C)--(M)--(A);
+\draw (A)--(F)--(E);
+\draw (2.7,1.0)--(E);
+\draw (F)--(N);
+\draw (N)--(M);
+% hidden dashed edges
+\draw[dashed] (A)--(B);
+\draw[dashed] (B)--(M);
+\draw[dashed] (B)--(N);
+\draw[dashed] (B)--(2.7,1.0);
+% labels offset from strokes
+\node[anchor=north,inner sep=1.5pt] at (0,-0.28) {$A$};
+\node[anchor=north,inner sep=1.5pt] at (2,0.62) {$B$};
+\node[anchor=south,inner sep=1.5pt] at (2.2,5.18) {$C$};
+\node[anchor=east,inner sep=1.5pt] at (-0.08,3.9) {$D$};
+\node[anchor=west,inner sep=1.5pt] at (5.75,1.0) {$E$};
+\node[anchor=north,inner sep=1.5pt] at (3.6,-0.28) {$F$};
+\node[anchor=east,inner sep=1.5pt] at (1.08,2.94) {$M$};
+\node[anchor=south west,inner sep=1.5pt,xshift=0.00bp,yshift=-4.00bp] at (2.8,.74) {$N$};
+\end{tikzpicture}

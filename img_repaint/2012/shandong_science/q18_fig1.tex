@@ -1,0 +1,29 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt]
+\coordinate (A) at (0,0);
+\coordinate (B) at (7,0);
+\coordinate (D) at (2.2,3);
+\coordinate (C) at (5.2,3);
+\coordinate (E) at (1.1,4.2);
+\coordinate (F) at (6.3000000000,7.0000000000);
+% visible outline and visible lateral / top edges
+\draw[solid] (A) -- (B);
+\draw[solid] (A) -- (E);
+\draw[solid] (E) -- (F);
+\draw[solid] (F) -- (B);
+\draw[solid] (E) -- (B);
+% hidden base and interior edges
+\draw[solid] (A)--(D);
+\draw[dashed] (E) -- (D);
+\draw[dashed] (D) -- (B);
+\draw[dashed] (D) -- (C);
+\draw[dashed] (D) -- (F);
+\draw[dashed] (C) -- (F);
+\draw[dashed] (C) -- (B);
+% labels (offset so text does not touch any stroke)
+\node[anchor=north east,inner sep=2pt] at ($(A)+(-0.14,-0.14)$) {$A$};
+\node[anchor=north west,inner sep=2pt] at ($(B)+(0.14,-0.14)$) {$B$};
+\node[anchor=north,inner sep=2pt,xshift=1pt,yshift=-1pt] at ($(D)+(-0.04,-0.20)$) {$D$};
+\node[anchor=west,inner sep=2pt] at ($(C)+(0.20,0.04)$) {$C$};
+\node[anchor=east,inner sep=2pt] at ($(E)+(-0.22,0.08)$) {$E$};
+\node[anchor=south,inner sep=2pt] at ($(F)+(0.04,0.20)$) {$F$};
+\end{tikzpicture}

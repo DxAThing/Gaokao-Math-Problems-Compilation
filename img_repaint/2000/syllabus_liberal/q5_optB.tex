@@ -1,0 +1,9 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.15cm,y=1.15cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-3,0) -- (3,0);
+\draw[->] (0,-2) -- (0,2);
+\draw[domain=-2.2:2.2,samples=221] plot (\x,{\x*cos(deg(\x))});
+\node[anchor=north west,inner sep=0pt,xshift=2pt,yshift=-2pt] at (3,0) {$x$};
+\node[anchor=east,inner sep=0pt,xshift=-4pt,yshift=1pt] at (0,2) {$y$};
+\node[anchor=south east,inner sep=0pt,xshift=-4pt,yshift=2pt] at (0,0) {$O$};
+\end{tikzpicture}

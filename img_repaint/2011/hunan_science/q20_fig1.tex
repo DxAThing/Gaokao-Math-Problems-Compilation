@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (F1) at (0,0);
+\coordinate (F2) at (4,0);
+\coordinate (F3) at (4,2.5);
+\coordinate (F4) at (0,2.5);
+\coordinate (B1) at (1.4,1.0);
+\coordinate (B2) at (5.4,1.0);
+\coordinate (B3) at (5.4,3.5);
+\coordinate (B4) at (1.4,3.5);
+% front face
+\draw (F1) -- (F2) -- (F3) -- (F4) -- cycle;
+% top and right faces
+\draw (F4) -- (B4) -- (B3) -- (F3);
+\draw (F2) -- (B2) -- (B3);
+% hidden edges
+\draw[dashed] (F1) -- (B1) -- (B2);
+\draw[dashed] (B1) -- (B4);
+\draw[dashed] (B1) -- (B2);
+% motion arrow on face P
+\draw[->] (4.7,2.0) -- (6.5,2.0);
+\node[above,yshift=2pt] at (5.6,2.0) {$v$};
+\node[left,xshift=-4pt,yshift=8pt] at (5.0,1.5) {$P$};
+\node[below,yshift=-4pt] at (2,0) {$E$};
+\end{tikzpicture}

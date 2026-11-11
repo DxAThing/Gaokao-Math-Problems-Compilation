@@ -1,0 +1,8 @@
+% 2007浙江理科8选项C:两条同向上升弧线
+\begin{tikzpicture}[x=1cm,y=1cm,line width=0.6pt]
+\draw[draw=black,-{Stealth}] (-2.6,0)--(2.6,0) node[anchor=west,font=\normalsize] at (2.6,0) {$x$};
+\draw[draw=black,-{Stealth}] (0,-1.6)--(0,2.2) node[anchor=south,font=\normalsize] at (0,2.2) {$y$};
+\node[anchor=north east,font=\normalsize] at (-0.12,-0.08) {$O$};
+\draw[draw=black,domain=-2.0:1.2,samples=100,smooth] plot (\x,{exp(.65*\x)});
+\draw[draw=black,domain=-2.0:1.4,samples=100,smooth] plot (\x,{exp(.65*\x)-1.7});
+\end{tikzpicture}

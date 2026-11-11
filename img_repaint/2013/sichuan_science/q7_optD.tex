@@ -1,0 +1,9 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-1.6,0)--(3.2,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-2.0)--(0,2.2) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\node[below,inner sep=0pt,yshift=-2pt] at (0.15,-0.05) {$O$};
+\draw[domain=-1.1:-0.04,samples=100] plot (\x,{\x*\x*\x/(3^(\x)-1)});
+\draw (0,0)--(0.8,0.8)--(2.0,1.0)--(2.8,1.4);
+\draw[fill=white] (0,0) circle (2pt);
+\end{tikzpicture}

@@ -1,0 +1,38 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (C) at (5.2,1.4);
+\coordinate (D) at (1.2,1.4);
+\coordinate (A1) at (0,3.8);
+\coordinate (B1) at (4,3.8);
+\coordinate (C1) at (5.2,5.2);
+\coordinate (D1) at (1.2,5.2);
+\coordinate (E) at (4,1.9);
+\coordinate (F) at (3.2,1.4);
+% solid cube + AE
+\draw[solid] (A)--(B)--(C)--(C1)--(D1)--(A1)--(A);
+\draw[solid] (A1)--(B1)--(C1);
+\draw[solid] (B1)--(B);
+\draw[solid] (B)--(E)--(B1);
+\draw[solid] (A)--(E);
+% dashed hidden + interior
+\draw[dashed] (D)--(D1);
+\draw[dashed] (D)--(C);
+\draw[dashed] (D)--(A);
+\draw[dashed] (D)--(E);
+\draw[dashed] (A)--(F);
+\draw[dashed] (E)--(F);
+\draw[dashed] (A1)--(F);
+\draw[dashed] (D1)--(F);
+% labels offset to avoid touching strokes
+\node[inner sep=2pt] at (-0.35,-0.35) {$A$};
+\node[inner sep=2pt] at (4.15,-0.35) {$B$};
+\node[inner sep=2pt] at (5.65,1.4) {$C$};
+\node[inner sep=2pt] at (0.7,1.4) {$D$};
+\node[inner sep=2pt] at (-0.45,3.9) {$A_{1}$};
+\node[inner sep=2pt,fill=none] at (4.5,3.8) {$B_{1}$};
+\node[inner sep=2pt] at (5.75,5.35) {$C_{1}$};
+\node[inner sep=2pt] at (0.75,5.55) {$D_{1}$};
+\node[inner sep=2pt] at (4.5,1.9) {$E$};
+\node[inner sep=2pt] at (3.2,0.85) {$F$};
+\end{tikzpicture}

@@ -1,0 +1,62 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1.5cm,y=1.5cm,font=\normalsize,line width=.6pt]
+\coordinate (C) at (0,0);
+\coordinate (D) at (2.4,0);
+\coordinate (B) at (2.4,2.0138);
+\coordinate (A) at (2.4,6.5939);
+\coordinate (H1) at (2.24,2.0138);
+\coordinate (H2) at (1.2,0);
+\coordinate (H3) at (2.56,2.0138);
+\coordinate (H4) at (4.0,0);
+\coordinate (TBL) at (2.26,2.0538);
+\coordinate (TBR) at (2.54,2.0538);
+\coordinate (TTL) at (2.26,5.9);
+\coordinate (TTR) at (2.54,5.9);
+% ground
+\draw[solid,line width=.6pt] (-1.2,0) -- (4.2,0);
+% sights (dashed), drawn first so hill/tower stay on top at crossings
+\draw[dashed,line width=.6pt] (C) -- (A);
+\draw[dashed,line width=.6pt] (C) -- (B);
+% inner vertical DB (dashed, inside hill)
+\draw[dashed,line width=.6pt] (D) -- (2.4,2.0538);
+% Mountain outline and connected rock seams traced from original PDF page 3.
+\draw[line width=.65pt,line join=round,line cap=round] (0.8096,0.0142)--(1.0155,0.2485)--(1.1930,0.5183)--(1.3776,0.6106)--(1.5551,0.9017)--(1.6616,1.2354)--(1.8533,1.4200)--(1.8888,1.6969)--(2.0663,1.8034);
+\draw[line width=.65pt,line join=round,line cap=round] (2.7266,2.0093)--(2.8402,1.9099)--(2.8899,1.6969)--(3.0390,1.5762)--(3.1384,1.3561)--(3.1668,1.1857);
+\draw[line width=.65pt,line join=round,line cap=round] (3.1739,1.1218)--(3.2875,1.0366)--(3.3940,0.7739)--(3.5218,0.6035)--(3.6354,0.4615)--(3.8129,0.2272)--(4.1040,0.0710);
+\draw[line width=.65pt,line join=round,line cap=round] (3.5005,0.6248)--(3.5573,0.7029)--(3.6709,0.6603)--(3.7774,0.5467)--(3.8839,0.3124);
+\draw[line width=.65pt,line join=round,line cap=round] (1.2356,0.2840)--(1.3634,0.5325)--(1.4699,0.6603)--(1.5906,1.0011)--(1.6900,1.2141)--(1.7894,1.4129)--(1.8533,1.6401);
+\draw[line width=.65pt,line join=round,line cap=round] (1.2711,0.1278)--(1.3776,0.1633)--(1.4770,0.4331)--(1.5764,0.6106)--(1.7113,0.9585)--(1.8320,1.0295)--(1.9101,1.2638)--(2.0166,1.3419)--(2.0805,1.5620)--(2.0734,1.7892);
+\draw[line width=.65pt,line join=round,line cap=round] (2.3645,1.9525)--(2.5207,1.9525)--(2.5704,1.8673);
+\draw[line width=.65pt,line join=round,line cap=round] (2.4071,1.7892)--(2.5420,1.7821)--(2.5846,1.6827)--(2.6556,1.6401);
+\draw[line width=.65pt,line join=round,line cap=round] (2.7266,1.8034)--(2.7550,1.6401)--(2.8118,1.5691);
+\draw[line width=.65pt,line join=round,line cap=round] (2.2509,1.2780)--(2.1373,1.1786)--(2.0663,1.0153)--(2.0237,0.8378);
+\draw[line width=.65pt,line join=round,line cap=round] (2.8828,1.4129)--(2.9538,1.2851)--(3.0035,1.1999);
+\draw[line width=.65pt,line join=round,line cap=round] (2.8260,1.2070)--(2.9183,1.1147)--(3.0035,0.9940)--(3.0603,0.8662);
+\draw[line width=.65pt,line join=round,line cap=round] (3.1881,0.5609)--(3.2733,0.4189)--(3.3443,0.3195);
+\draw[line width=.65pt,line join=round,line cap=round] (1.8533,0.5396)--(1.9101,0.6177);
+% tower body
+\draw[solid,line width=.6pt] (TBL) -- (TTL);
+\draw[solid,line width=.6pt] (TBR) -- (TTR);
+\draw[solid,line width=.6pt] (TTL) -- (TTR);
+\draw[solid,line width=.6pt] (TBL) -- (TBR);
+\foreach \j in {0,1,2}{
+ \pgfmathsetmacro{\lo}{2.0538+\j*1.28207}
+ \pgfmathsetmacro{\hi}{\lo+1.28207}
+ \draw[line width=.45pt] (2.26,\lo)--(2.54,\hi)--(2.26,\hi)--(2.54,\lo);
+}
+\draw[solid,line width=.6pt] (2.4,5.9) -- (A);
+% angle arcs at C
+\draw[solid,line width=.6pt] (0.45,0) arc (0:40:0.45);
+\draw[solid,line width=.6pt] (0.9,0) arc (0:70:0.9);
+\node[inner sep=2pt,font=\normalsize] at (0.65,0.25) {$40^{\circ}$};
+\node[inner sep=2pt,font=\normalsize] at (0.83,1.19) {$70^{\circ}$};
+% 50m dimension to the right
+\draw[dimension extension] (2.54,2.0138) -- (3.45,2.0138);
+\draw[dimension extension] (2.4,6.5939) -- (3.45,6.5939);
+\draw[dimension line] (3.3,2.0138) -- node[dimension label vertical] {50米} (3.3,6.5939);
+% point labels with clearance
+\node[inner sep=2pt,font=\normalsize,anchor=north east] at (-0.12,-0.12) {$C$};
+\node[inner sep=2pt,font=\normalsize,anchor=north] at (2.4,-0.14) {$D$};
+\node[inner sep=2pt,font=\normalsize,anchor=west] at (2.72,2.42) {$B$};
+\node[inner sep=2pt,font=\normalsize,anchor=south] at (2.4,6.88) {$A$};
+\end{tikzpicture}

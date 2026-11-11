@@ -1,0 +1,23 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes (schematic, no ticks); arrows extend half a unit past loop
+\draw[->] (-1,0)--(7,0) node[right] {$x$};
+\draw[->] (0,-1.5)--(0,5) node[above] {$y$};
+\node[below left] at (0,0) {$O$};
+% loop vertices (schematic orthogonal layout)
+\coordinate (V_top_left) at (1.5,3.5);
+\coordinate (V_top_right) at (5.5,3.5);
+\coordinate (V_mid_right) at (5.5,2.5);
+\coordinate (V_notch) at (4,2.5);
+\coordinate (V_bottom_mid) at (4,1.5);
+\coordinate (V_bottom_left) at (1.5,1.5);
+% closed orthogonal loop = upper L-path + lower L-path
+\draw (V_top_left)--(V_top_right)--(V_mid_right)--(V_notch)--(V_bottom_mid)--(V_bottom_left)--cycle;
+% labels in visible whitespace, clear of strokes
+\node[above left=3pt] at (V_top_left) {$M$};
+\node[right=3pt] at (V_top_right) {$M_{1}$};
+\node[right=3pt] at (V_mid_right) {$M_{2}$};
+\node[left=3pt] at (V_notch) {$M_{3}$};
+\node[below=3pt] at (V_bottom_mid) {$N$};
+\node[below left=2pt] at (V_bottom_left) {$N_{1}$};
+\end{tikzpicture}

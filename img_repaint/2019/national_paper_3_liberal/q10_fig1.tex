@@ -1,0 +1,19 @@
+\begin{tikzpicture}[line width=.6pt, font=\normalsize, >=Stealth]
+% axes
+\draw[->] (-3.2,0) -- (3.6,0) node[right=2pt] {$x$};
+\draw[->] (0,-2.4) -- (0,2.6) node[above=2pt] {$y$};
+\node[below left=2pt] at (0,0) {$O$};
+% hyperbola x^2/4-y^2/5=1 : x=+-2*sqrt(1+y^2/5)
+\draw[smooth,domain=-2.3:2.3,samples=60,variable=\y]
+  plot ({2*sqrt(1+\y*\y/5)},{\y});
+\draw[smooth,domain=-2.3:2.3,samples=60,variable=\y]
+  plot ({-2*sqrt(1+\y*\y/5)},{\y});
+% points: F=(3,0), P on right branch with |OP|=3 -> y=5/3, x=2*sqrt(1+5/9)/... = 8/3? compute: x^2=4*(1+(25/9)/5)=4*14/9=56/9 -> x=2*sqrt(14)/3 ~ 2.494
+\coordinate (F) at (3,0);
+\coordinate (P) at (2.494438258,1.666666667);
+\draw (0,0) -- (P);
+\draw (P) -- (F);
+\fill (F) circle (1.6pt);
+\node[below=3pt] at (F) {$F$};
+\node[above left=2pt] at (P) {$P$};
+\end{tikzpicture}

@@ -1,0 +1,16 @@
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,>=Stealth,x=0.62cm,y=0.62cm]
+\draw[->] (-5.5,0)--(5.5,0) node[right] {$x$};
+\draw[->] (0,-4.5)--(0,4.5) node[above] {$y$};
+\node[below right] at (0,0) {$O$};
+% hyperbola x^2/2-y^2/8=1 sampled from formula y=+-b*sqrt(x^2/a^2-1), a=sqrt2 b=sqrt8
+\coordinate (F1) at (-3.1622776601,0);
+\coordinate (F2) at (3.1622776601,0);
+\coordinate (P) at (1.8973665961,-2.5298221281);
+\coordinate (O) at (0,0);
+\fill (F1) circle (1.2pt); \fill (F2) circle (1.2pt); \fill (P) circle (1.2pt);
+\node[above left] at (F1) {$F_1$};
+\node[above right] at (F2) {$F_2$};
+\node[below right,xshift=1.0pt,yshift=2pt] at (P) {$P$};
+\draw[domain=-1.15:1.15,samples=150] plot ({sqrt(2)*cosh(\x)},{sqrt(8)*sinh(\x)});\draw[domain=-1.15:1.15,samples=150] plot ({-sqrt(2)*cosh(\x)},{sqrt(8)*sinh(\x)});
+\draw (F1)--(P);\draw (P)--(F2);
+\end{tikzpicture}

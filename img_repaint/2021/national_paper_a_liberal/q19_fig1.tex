@@ -1,0 +1,37 @@
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize, every node/.style={inner sep=1pt}]
+  \coordinate (A1) at (0,6.2);
+  \coordinate (B1) at (5.0,6.2);
+  \coordinate (D) at (3.9,6.2);
+  \coordinate (C1) at (3.1000000000,5.0000000000);
+  \coordinate (A) at (0,1.2);
+  \coordinate (B) at (5.0,1.2);
+  \coordinate (F) at (3.1000000000,2.5000000000);
+  \coordinate (C) at (3.1,0);
+  \coordinate (E) at (1.5500000000,0.6000000000);
+  % outer prism solid
+  \draw (A1) -- (A);
+  \draw (B1) -- (B);
+  \draw (A1) -- (D) -- (B1);
+  \draw (A1) -- (C1) -- (B1);
+  \draw (C1) -- (F) -- (C);
+  \draw (A) -- (E) -- (C);
+  
+  \draw (B) -- (C);
+  \draw (F) -- (E);
+  \draw (F) -- (B);
+  % hidden
+  \draw[dashed] (A) -- (B);
+  \draw[dashed] (E) -- (B);
+  \draw[dashed] (E) -- (D);
+  \draw[dashed] (F) -- (D);
+  % labels
+  \node[above left=3pt] at (A1) {$A_{1}$};
+  \node[above right=3pt] at (B1) {$B_{1}$};
+  \node[above=4pt] at (D) {$D$};
+  \node[above left=4pt,xshift=2pt,yshift=2pt] at (C1) {$C_{1}$};
+  \node[below left=3pt] at (A) {$A$};
+  \node[below right=3pt] at (B) {$B$};
+  \node[below=4pt] at (C) {$C$};
+  \node[below left=4pt] at (E) {$E$};
+  \node[left=5pt] at (F) {$F$};
+\end{tikzpicture}

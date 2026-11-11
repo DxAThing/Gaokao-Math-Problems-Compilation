@@ -1,0 +1,16 @@
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=0.7cm,y=0.7cm]
+% three separate grid patches, one per column in horizontal row
+\draw[step=1,black!25,line width=.3pt] (-1,5) grid (6,9);
+\draw[step=1,black!25,line width=.3pt] (5,5) grid (10,9);
+\draw[step=1,black!25,line width=.3pt] (9,5) grid (16,9);
+% front trapezoid: bottom 4, top 2, height 2
+\draw[line width=.6pt] (0,6) -- (4,6) -- (2,8) -- (0,8) -- cycle;
+% side 2x2 square
+\draw[line width=.6pt] (6,6) rectangle (8,8);
+%俯视 rect 4x2 split middle, moved to right column (shift +10,+6)
+\draw[line width=.6pt] (10,6) rectangle (14,8);
+\draw[line width=.6pt] (12,6) -- (12,8);
+\node at (2,5) {正视图};
+\node at (7,5) {侧视图};
+\node at (12,5) {俯视图};
+\end{tikzpicture}

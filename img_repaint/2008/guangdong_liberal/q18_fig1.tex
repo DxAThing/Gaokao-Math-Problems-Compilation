@@ -1,0 +1,30 @@
+% P-ABCD pyramid: circular base drawn as ellipse, PD vertical above D.
+% Schematic perspective: circle cannot be metric-exact in 2D projection.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  solid edge/.style={solid,line width=.6pt},
+  hidden edge/.style={dashed,line width=.6pt}]
+\coordinate (D) at (2.50,0.00);
+\coordinate (A) at (-2.2325713874,0.45);
+\coordinate (B) at (-2.087911636, -0.55);
+\coordinate (C) at (-0.10,-0.9991996797);
+\coordinate (P) at (2.50,5.00);
+% base circle as ellipse: back (top) half hidden, front (bottom) half solid
+\draw[hidden edge] (A) arc (153.256316:0:2.50 and 1.00);
+\draw[solid edge] (A) arc (153.256316:360:2.50 and 1.00);
+% quadrilateral boundary
+\draw[solid edge] (A) -- (B) -- (C) -- (D);
+\draw[hidden edge] (D) -- (A);
+% diagonals
+\draw[hidden edge] (A) -- (C);
+\draw[hidden edge] (B) -- (D);
+% lateral edges
+\draw[solid edge] (P) -- (A);
+\draw[solid edge] (P) -- (B);
+\draw[solid edge] (P) -- (C);
+\draw[solid edge] (P) -- (D);
+\node[above] at (P) {$P$};
+\node[above left] at (A) {$A$};
+\node[below left] at (B) {$B$};
+\node[below] at (C) {$C$};
+\node[right] at (D) {$D$};
+\end{tikzpicture}

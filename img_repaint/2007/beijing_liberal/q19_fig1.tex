@@ -1,0 +1,30 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-3.2,0)--(5.6,0) node[right,inner sep=0pt,xshift=3pt] {$x$};
+\draw[->] (0,-3.2)--(0,3.0) node[above,inner sep=0pt,yshift=3pt] {$y$};
+\node[below right,inner sep=0pt,xshift=3pt,yshift=-4pt] at (0,0) {$O$};
+% exact rectangle: A(0,-2) C(4,2) B(4.8,-0.4) D(-0.8,0.4), M(2,0), N(-2,0), T(-1,1)
+\coordinate (A) at (0,-2);
+\coordinate (B) at (4.8,-0.4);
+\coordinate (C) at (4,2);
+\coordinate (D) at (-0.8,0.4);
+\coordinate (M) at (2,0);
+\coordinate (N) at (-2,0);
+\coordinate (T) at (-1,1);
+% rectangle
+\draw (A)--(B)--(C)--(D)--cycle;
+% extended AD line beyond both ends
+\draw (-1.4,2.2)--(0.35,-3.05);
+% points
+\fill (M) circle (1.5pt);
+\fill (N) circle (1.5pt);
+\fill (T) circle (1.5pt);
+% labels with clearance
+\node[below left,inner sep=0pt,xshift=-4pt,yshift=-3pt] at (A) {$A$};
+\node[right,inner sep=0pt,xshift=4pt] at (B) {$B$};
+\node[above,inner sep=0pt,yshift=4pt] at (C) {$C$};
+\node[left,inner sep=0pt,xshift=-4pt] at (D) {$D$};
+\node[above,inner sep=0pt,yshift=4pt] at (M) {$M$};
+\node[above left,inner sep=0pt,xshift=-4pt,yshift=4pt] at (N) {$N$};
+\node[left,inner sep=0pt,xshift=-5pt] at (T) {$T$};
+\end{tikzpicture}

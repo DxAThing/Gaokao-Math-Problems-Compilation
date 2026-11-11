@@ -1,0 +1,45 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (B) at (0,0);
+\coordinate (C) at (3.2,0);
+\coordinate (C1) at (3.2000000000,2.4000000000);
+\coordinate (B1) at (0.0000000000,2.4000000000);
+\coordinate (A1) at (1.8,5.2);
+\coordinate (D1) at (5.0000000000,5.2000000000);
+\coordinate (D) at (5.0000000000,2.8000000000);
+\coordinate (A) at (1.8,2.8);
+\coordinate (F) at (0.9000000000,3.8000000000);
+\coordinate (E) at (3.7500000000,2.1000000000);
+% front face
+\draw (B) -- (C) -- (C1) -- (B1) -- cycle;
+% top face
+\draw (B1) -- (C1);
+\draw (C1) -- (D1);
+\draw (D1) -- (A1);
+\draw (A1) -- (B1);
+% bottom face
+\draw (B) -- (C);
+\draw (C) -- (D);
+\draw[dashed] (D) -- (A);
+\draw[dashed] (A) -- (B);
+% verticals
+\draw (B) -- (B1);
+\draw (C) -- (C1);
+\draw (D1) -- (D);
+\draw[dashed] (A1) -- (A);
+% interior segments
+\draw[dashed] (B) -- (D);
+\draw[dashed] (A) -- (E);
+\draw[dashed] (B) -- (F);
+\draw[dashed] (F) -- (D);
+% labels
+\node[above] at (A1) {$A_{1}$};
+\node[above right] at (D1) {$D_{1}$};
+\node[left] at (B1) {$B_{1}$};
+\node[below left=3pt] at (C1) {$C_{1}$};
+\node[left] at (B) {$B$};
+\node[below] at (C) {$C$};
+\node[right] at (D) {$D$};
+\node[above left] at (A) {$A$};
+\node[above left] at (F) {$F$};
+\node[below right] at (E) {$E$};
+\end{tikzpicture}

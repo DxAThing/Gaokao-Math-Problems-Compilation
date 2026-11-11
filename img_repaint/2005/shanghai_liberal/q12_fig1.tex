@@ -1,0 +1,39 @@
+\begin{tikzpicture}[line width=.6pt,>=Stealth]
+% two identical triangular prisms, front rectangular face + slanted top
+% left panel
+\coordinate (L_FLB) at (0,0);
+\coordinate (L_FRB) at (4,0);
+\coordinate (L_FRT) at (4,1.6);
+\coordinate (L_FLT) at (0,1.6);
+\coordinate (L_BB) at (3,1.4);
+\coordinate (L_BT) at (3,3.0);
+% right panel (shift by 6)
+\coordinate (R_FLB) at (6,0);
+\coordinate (R_FRB) at (10,0);
+\coordinate (R_FRT) at (10,1.6);
+\coordinate (R_FLT) at (6,1.6);
+\coordinate (R_BB) at (9,1.4);
+\coordinate (R_BT) at (9,3.0);
+% front rectangles solid
+\draw[solid] (L_FLB)--(L_FRB)--(L_FRT)--(L_FLT)--cycle;
+\draw[solid] (R_FLB)--(R_FRB)--(R_FRT)--(R_FLT)--cycle;
+% top faces solid
+\draw[solid] (L_FLT)--(L_BT)--(L_FRT);
+\draw[solid] (R_FLT)--(R_BT)--(R_FRT);
+% hidden edges dashed
+\draw[dashed] (L_FLB)--(L_BB);
+\draw[dashed] (L_FRB)--(L_BB);
+\draw[dashed] (L_BB)--(L_BT);
+\draw[dashed] (R_FLB)--(R_BB);
+\draw[dashed] (R_FRB)--(R_BB);
+\draw[dashed] (R_BB)--(R_BT);
+% dimension labels with clearance
+\node[left=4pt] at ($(L_FLB)!0.5!(L_FLT)$) {$\dfrac{2}{a}$};
+\node[left=4pt] at ($(R_FLB)!0.5!(R_FLT)$) {$\dfrac{2}{a}$};
+\node[below=4pt] at ($(L_FLB)!0.5!(L_FRB)$) {$5a$};
+\node[below=4pt] at ($(R_FLB)!0.5!(R_FRB)$) {$5a$};
+\node[above=3pt] at ($(L_FLB)!0.55!(L_BB)$) {$4a$};
+\node[above=3pt] at ($(R_FLB)!0.55!(R_BB)$) {$4a$};
+\node[above right=1pt,inner sep=0pt,font=\small,xshift=-1pt] at ($(L_FRB)!0.5!(L_BB)$) {$3a$};
+\node[above right=1pt,inner sep=0pt,font=\small,xshift=-1pt] at ($(R_FRB)!0.5!(R_BB)$) {$3a$};
+\end{tikzpicture}

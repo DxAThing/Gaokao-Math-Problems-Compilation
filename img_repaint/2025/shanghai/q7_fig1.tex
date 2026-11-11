@@ -1,0 +1,35 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (2.2,0);
+\coordinate (C) at (3.0,0.7);
+\coordinate (D) at (0.8,0.7);
+\coordinate (A1) at (0,3.0);
+\coordinate (B1) at (2.2,3.0);
+\coordinate (C1) at (3.0,3.7);
+\coordinate (D1) at (0.8,3.7);
+% visible base edges
+\draw (A) -- (B) -- (C);
+% hidden base edges
+\draw[dashed] (A) -- (D) -- (C);
+\draw[dashed] (A) -- (C);
+% verticals: visible solid, hidden dashed
+\draw (A) -- (A1);
+\draw (B) -- (B1);
+\draw (C) -- (C1);
+\draw[dashed] (D) -- (D1);
+% top face solid
+\draw (A1) -- (B1) -- (C1) -- (D1) -- cycle;
+% right face edge
+% interior space diagonals (dashed)
+\draw[dashed] (A) -- (D1);
+\draw[dashed] (D1) -- (B);
+% labels with clearance (offset outward from strokes)
+\node[below left=2pt] at (A) {$A$};
+\node[below right=2pt] at (B) {$B$};
+\node[right=2pt] at (C) {$C$};
+\node[left=2pt,xshift=2pt,yshift=1.0pt] at (D) {$D$};
+\node[left=2pt] at (A1) {$A_{1}$};
+\node[right=2pt,xshift=1pt,yshift=-1pt] at (B1) {$B_{1}$};
+\node[right=2pt] at (C1) {$C_{1}$};
+\node[above left=2pt] at (D1) {$D_{1}$};
+\end{tikzpicture}

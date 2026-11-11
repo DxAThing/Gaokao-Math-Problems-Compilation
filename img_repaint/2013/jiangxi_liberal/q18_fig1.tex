@@ -1,0 +1,32 @@
+% Axes with A1..A6 at integer corners; four edge segments as drawn.
+\begin{tikzpicture}[x=1.6cm,y=1.6cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Axes (tails half unit past last ticks -1/1)
+\draw[->] (-1.7,0)--(1.7,0) node[below right] {$x$};
+\draw[->] (0,-1.7)--(0,1.7) node[above left] {$y$};
+% Edge segments visible in original
+\draw (-1,1)--(0,1);
+\draw (-1,1)--(-1,0);
+\draw (1,0)--(1,-1);
+\draw (0,-1)--(1,-1);
+% Dots: O plus six labelled points
+\fill (0,0) circle (1.5pt);
+\fill (1,0) circle (1.5pt);
+\fill (1,-1) circle (1.5pt);
+\fill (0,-1) circle (1.5pt);
+\fill (0,1) circle (1.5pt);
+\fill (-1,1) circle (1.5pt);
+\fill (-1,0) circle (1.5pt);
+% Origin and ticks
+\node[below left] at (0,0) {$O$};
+\node[below] at (-1,0) {$-1$};
+\node[below right] at (1,0) {$1$};
+\node[right] at (0,1) {$1$};
+\node[left] at (0,-1) {$-1$};
+% Point labels placed as in original, clear of lines
+\node[above] at (-1,1.22) {$A_{5}(-1,1)$};
+\node[left] at (-0.08,1.28) {$A_{4}$};
+\node[above left] at (-1,0.12) {$A_{6}$};
+\node[above] at (1,0.12) {$A_{1}$};
+\node[below] at (0.25,-1.28) {$A_{3}$};
+\node[below] at (1.35,-1.32) {$A_{2}(1,-1)$};
+\end{tikzpicture}

@@ -1,0 +1,35 @@
+% 2011陕西理科Q8评分程序框图.对象:开始/输入x1,x2/ 菱形|x1-x2|≤2/ 输入x3/
+% 菱形|x3-x1|<|x3-x2|/ x2=x3/ x1=x3/ p=(x1+x2)/2/ 输出p/ 结束.是标签在线上方,否在线右侧.
+\begin{tikzpicture}[line width=0.6pt, >= {Stealth[length=2.2mm,width=1.5mm]},
+  start/.style={draw, rectangle, rounded corners=2mm, minimum width=2.4cm, minimum height=0.8cm, align=center},
+  proc/.style={draw, rectangle, align=center, minimum height=0.8cm},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110, align=center, minimum height=0.9cm},
+  dec/.style={draw, diamond, align=center, inner sep=1mm}]
+  \node[start] (start) at (0,0) {开始};
+  \node[io, minimum width=4.0cm] (io12) at (0,-1.6) {输入 $x_{1},x_{2}$};
+  \node[dec, minimum width=5.4cm, aspect=3] (d1) at (0,-3.5) {$|x_{1}-x_{2}|\leqslant 2$};
+  \node[io, minimum width=3.4cm] (io3) at (0,-5.5) {输入 $x_{3}$};
+  \node[dec, minimum width=6.4cm, aspect=3.2] (d2) at (0,-7.4) {$|x_{3}-x_{1}|<|x_{3}-x_{2}|$};
+  \node[proc, minimum width=2.6cm] (x1b) at (0,-9.5) {$x_{1}=x_{3}$};
+  \node[proc, minimum width=2.6cm] (x2b) at (-4.9,-8.9) {$x_{2}=x_{3}$};
+  \coordinate (Jy2) at (0,-10.35);
+  \coordinate (Jy3) at (0,-10.85);
+  \node[proc, minimum width=3.4cm, minimum height=1.1cm] (pbox) at (0,-11.8) {$p=\dfrac{x_{1}+x_{2}}{2}$};
+  \node[io, minimum width=3.4cm] (outp) at (0,-13.4) {输出 $p$};
+  \node[start] (end) at (0,-14.9) {结束};
+  % 主干
+  \draw[->] (start.south) -- (io12.north);
+  \draw[->] (io12.south) -- (d1.north);
+  \draw[->] (d1.south) -- (io3.north) node[pos=0.45,right=1.2mm]{否};
+  \draw[->] (io3.south) -- (d2.north);
+  \draw[->] (d2.south) -- (x1b.north) node[pos=0.45,right=1.2mm]{否};
+  \draw[->] (x1b.south) -- (pbox.north);
+  \draw[->] (pbox.south) -- (outp.north);
+  \draw[->] (outp.south) -- (end.north);
+  % d1是分支:东出口右行至x=4.4右通道,下行至Jy3高度,左行以单箭头汇入主干
+  \draw[->] (d1.east) -- ++(1.7,0) node[pos=0.3,above=1.2mm]{是} |- (Jy3);
+  % d2是分支:西出口左行至x2b中心线,下行入x2b北,标签在线上方近出口
+  \draw[->] (d2.west) -- (x2b.north |- d2.west) node[pos=0.25,above=1.2mm]{是} -- (x2b.north);
+  % x2b汇入:南出口下行至Jy2高度,右行以单箭头汇入主干,与右通道入口上下错开
+  \draw[->] (x2b.south) |- (Jy2);
+\end{tikzpicture}

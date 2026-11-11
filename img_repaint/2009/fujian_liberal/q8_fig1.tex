@@ -1,0 +1,12 @@
+% 2009 Fujian liberal Q8 figure: right branch of an even function, f(0)=1, increasing & convex on [0,2), dashed guide at x=2 (schematic representative)
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.94cm,y=1.66cm,line width=.6pt,>=Stealth,font=\normalsize,
+    declare function={ff(\x)=1+0.15*\x+0.45*\x*\x;}]
+  \draw[->] (-0.60,0)--(2.90,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+  \draw[->] (0,-0.50)--(0,3.70) node[above,inner sep=0pt,yshift=2pt] {$y$};
+  \node[below left,inner sep=0pt,xshift=-1pt,yshift=-1pt] at (0,0) {$O$};
+  \node[left=1pt,inner sep=0pt] at (0,1) {$1$};
+  \node[below=1.5pt,inner sep=0pt] at (2,0) {$2$};
+  \draw[dashed] (2,0)--(2,{ff(2)});
+  \draw[domain=0:2.2,samples=160] plot (\x,{ff(\x)});
+\end{tikzpicture}

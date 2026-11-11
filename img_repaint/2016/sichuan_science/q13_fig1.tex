@@ -1,0 +1,21 @@
+% Single front view: isosceles triangle, base 2*sqrt(3), height 1, centre vertical.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+\def\hb{1.992}
+\def\h{1.15}
+\draw (0,0) -- (2*\hb,0) -- (\hb,\h) -- cycle;
+\draw (\hb,0) -- (\hb,\h);
+% height dim 1 (left)
+\draw (-0.35,0) -- (-0.55,0);
+\draw (-0.35,\h) -- (-0.55,\h);
+\draw[<->] (-0.45,0) -- (-0.45,\h);
+\node[fill=white,inner sep=1pt] at (-0.45,0.5*\h) {1};
+% base dims sqrt(3) | sqrt(3)
+\draw (0,0) -- (0,-0.4);
+\draw (\hb,0) -- (\hb,-0.4);
+\draw (2*\hb,0) -- (2*\hb,-0.4);
+\draw[<->] (0,-0.3) -- (\hb,-0.3);
+\node[fill=white,inner sep=1pt] at (0.5*\hb,-0.3) {$\sqrt{3}$};
+\draw[<->] (\hb,-0.3) -- (2*\hb,-0.3);
+\node[fill=white,inner sep=1pt] at (1.5*\hb,-0.3) {$\sqrt{3}$};
+\node[below] at (\hb,-0.75) {正视图};
+\end{tikzpicture}

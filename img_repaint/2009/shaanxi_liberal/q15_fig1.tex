@@ -1,0 +1,20 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt, font=\normalsize, >=Stealth]
+\coordinate (O) at (0,0);
+\coordinate (O1) at (0,1.6);
+\coordinate (A) at (-1.0500000000,1.3700343275);
+\coordinate (B) at (1.0500000000,1.3700343275);
+% sphere outline
+\draw[solid] (O) circle (2.2);
+% section circle: front solid arc, back dashed arc
+\draw[solid] (-1.5099668871,1.6) arc (180:360:1.5099668871 and 0.32);
+\draw[dashed] (-1.5099668871,1.6) arc (180:0:1.5099668871 and 0.32);
+% dashed construction segments
+\draw[dashed] (O1) -- (A);
+\draw[dashed] (O1) -- (B);
+\draw[dashed] (O1) -- (O);
+% labels with clearance
+\node[below right=2pt,xshift=-1pt,yshift=-5pt] at (O1) {$O_{1}$};
+\node[below=5pt] at (A) {$A$};
+\node[below=5pt] at (B) {$B$};
+\node[below=2pt] at (O) {$O$};
+\end{tikzpicture}

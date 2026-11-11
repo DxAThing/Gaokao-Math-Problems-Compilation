@@ -1,0 +1,15 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-4.2,0)--(4.2,0) node[below right,xshift=2pt] {$x$};
+\draw (0,-3.2)--(0,4.5);
+% ticks: 1 on x and y
+\draw (1,0)--(1,0.08); \node[below] at (1,-0.08) {$1$};
+\draw (0,1)--(0.08,1); \node[left] at (-0.08,1) {$1$};
+\node[below left,xshift=-2pt,yshift=-1pt] at (0,0) {$O$};
+% curves generated from f(x)=(e^x-e^{-x})/x^2 = 2*sinh(x)/x^2, y scaled by 0.35, clipped
+\begin{scope}
+\clip (-4.2,-3.2) rectangle (4.2,4.5);
+\draw[domain=0.28:3.4,samples=120] plot (\x,{1/\x});
+\draw[domain=-3.4:-0.28,samples=120] plot (\x,{1/\x});
+\end{scope}
+\end{tikzpicture}

@@ -1,48 +1,12 @@
-% Statistics source: 2007湖南文卷原始 PDF 第1页第7题；矢量路径中每 8.5041 pt 对应 0.5% 频率组距。
-% solid segments: contiguous one-metre histogram bin outlines [30,31),...,[50,51).
-% dashed guides: frequency-density reference lines 0.5%, 1%, 2%; labels avoid bars and axes.
-% Relations: each rectangle height is the frequency density for its water-level interval;
-% the original chart's tail-frequency question uses these contiguous bins.
+% Original-image geometry verified; calibrated raster measurements are approximate, not new printed data.
 \begin{tikzpicture}
-  \begin{axis}[exam statistical histogram,
-    width=16.0cm,
-    height=11.665cm,
-    xmin=29.6,
-    xmax=51.8,
-    ymin=0,
-    ymax=8.4,
-    axis lines=left,
-    axis line style={-Stealth},
-    tick style={black},
-    ylabel={},
-    xtick={30,31,32,33,48,49,50,51},
-    ytick={0},
-    yticklabels={0},
-    xticklabel style={font=\normalsize,anchor=north},
-    yticklabel style={font=\normalsize},
-    extra y ticks={0.5,1,2},
-    extra y tick labels={0.5\%,1\%,2\%},
-    extra y tick style={
-      grid=major,
-      grid style={dashed,black!70},
-      tick style={draw=none},
-      yticklabel style={font=\normalsize},
-    },
-    enlarge x limits=false,
-    clip=false,
-  ]
-    \examstatxlabel{水位（米）};
-    \addplot[
-      ybar interval,
-      draw=black,
-      fill=none,
-      line width=0.4pt,
-    ] coordinates {
-      (30,2.5) (31,3.5) (32,4) (33,5) (34,5.5) (35,6.5)
-      (36,5.5) (37,7.5) (38,7) (39,6.5) (40,6) (41,5)
-      (42,5.5) (43,5) (44,6) (45,5) (46,5.5) (47,4.5)
-      (48,2) (49,1) (50,0.5) (51,0)
-    };
-    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
-  \end{axis}
-\end{tikzpicture}
+\begin{axis}[exam statistical template histogram,xmin=29,ymin=0,xmax=52.5,
+xtick={29,30,31,32,33,48,49,50,51},xticklabels={,30,31,32,33,48,49,50,51},ytick={0.005,0.01,0.02},yticklabels={0.5\%,1\%,2\%},
+  ymax=0.079953052,
+  exam statistical template dense]
+\addplot[draw=black,fill=white] coordinates {(30,0.025023474) (31,0.035023474) (32,0.040023474) (33,0.050023474) (34,0.055023474) (35,0.064953052) (36,0.055023474) (37,0.074953052) (38,0.069953052) (39,0.064953052) (40,0.059953052) (41,0.050023474) (42,0.055023474) (43,0.050023474) (44,0.059953052) (45,0.050023474) (46,0.055023474) (47,0.045023474) (48,0.02) (49,0.01) (50,0.005) (51,0.005) (52,0)};
+\draw[dashed,line width=0.6pt] (axis cs:29,0.005)--(axis cs:51,0.005);
+\draw[dashed,line width=0.6pt] (axis cs:29,0.01)--(axis cs:50,0.01);
+\draw[dashed,line width=0.6pt] (axis cs:29,0.02)--(axis cs:49,0.02);
+\examstatxbreak{29.5}{0}\examstatylabel{$\frac{\text{频率}}{\text{组距}}$}\examstatxlabel{水位/米}
+\end{axis}\end{tikzpicture}

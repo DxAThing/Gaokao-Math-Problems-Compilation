@@ -1,0 +1,41 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Vertices of pyramid P-ABCD and midpoints E,F,G,M,N
+\coordinate (P) at (4.2,7.2);
+\coordinate (A) at (4.2,2.6);
+\coordinate (D) at (0,0.6);
+\coordinate (C) at (2.6,0.6);
+\coordinate (B) at (9.4,2.6);
+\coordinate (E) at (6.8,4.9);
+\coordinate (F) at (6.8,2.6);
+\coordinate (G) at (6,1.6);
+\coordinate (M) at (2.1,3.9);
+\coordinate (N) at (3.4,3.9);
+% solid lateral / base-front edges
+\draw (D)--(C)--(B);
+\draw (P)--(D);
+\draw (P)--(C);
+\draw (P)--(B);
+\draw (C)--(E);
+\draw (E)--(G);
+\draw (E)--(N);
+\draw (M)--(N);
+% hidden / mid-segment dashed edges
+\draw[dashed] (P)--(A);
+\draw[dashed] (A)--(D);
+\draw[dashed] (A)--(C);
+\draw[dashed] (A)--(B);
+\draw[dashed] (E)--(F);
+\draw[dashed] (F)--(G);
+\draw[dashed] (M)--(E);
+% labels
+\node[above] at (P) {$P$};
+\node[below left] at (D) {$D$};
+\node[below] at (C) {$C$};
+\node[right] at (B) {$B$};
+\node[above left] at (A) {$A$};
+\node[above right] at (E) {$E$};
+\node[above right] at (F) {$F$};
+\node[below] at (G) {$G$};
+\node[left] at (M) {$M$};
+\node[below left] at (N) {$N$};
+\end{tikzpicture}

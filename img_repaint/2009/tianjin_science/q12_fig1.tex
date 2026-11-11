@@ -1,0 +1,43 @@
+% three_views: front rectangle (3 x a), side triangle (base 2), top split rectangle (3 x 2).
+% Horizontal row: front, side, top; labels below each at same baseline.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm,
+  dim/.style={line width=.6pt,{Latex[length=2mm,width=1.4mm]}-{Latex[length=2mm,width=1.4mm]}}]
+\def\fh{2.4}
+% ---- front view ----
+\begin{scope}[shift={(0,0)}]
+  \draw (0,0) rectangle (3,\fh);
+  % bottom dim 3
+  \draw[line width=.6pt] (0,0) -- (0,-0.35);
+  \draw[line width=.6pt] (3,0) -- (3,-0.35);
+  \draw[dim] (0,-0.2) -- (3,-0.2);
+  \node at (1.5,-0.2) [below] {$3$};
+  % left dim a
+  \draw[line width=.6pt] (0,0) -- (-0.5,0);
+  \draw[line width=.6pt] (0,\fh) -- (-0.5,\fh);
+  \draw[dim] (-0.35,0) -- (-0.35,\fh);
+  \node at (-0.55,1.2) {$a$};
+  \node at (1.5,-1.0) {正视图};
+\end{scope}
+% ---- side view: triangle ----
+\begin{scope}[shift={(4.6,0)}]
+  \draw (0,0) -- (2,0) -- (1,\fh) -- cycle;
+  \draw[line width=.6pt] (0,0) -- (0,-0.35);
+  \draw[line width=.6pt] (2,0) -- (2,-0.35);
+  \draw[dim] (0,-0.2) -- (2,-0.2);
+  \node at (1,-0.2) [below] {$2$};
+  \node at (1,-1.0) {侧视图};
+\end{scope}
+% ---- top view moved right ----
+\begin{scope}[shift={(8.2,0)}]
+  \draw (0,0) rectangle (3,2);
+  \draw (0,1) -- (3,1);
+  \draw[line width=.6pt] (0,0) -- (-0.5,0);
+  \draw[line width=.6pt] (0,1) -- (-0.5,1);
+  \draw[line width=.6pt] (0,2) -- (-0.5,2);
+  \draw[dim] (-0.35,1) -- (-0.35,2);
+  \node at (-0.6,1.5) {$1$};
+  \draw[dim] (-0.35,0) -- (-0.35,1);
+  \node at (-0.6,0.5) {$1$};
+  \node at (1.5,-1.0) {俯视图};
+\end{scope}
+\end{tikzpicture}

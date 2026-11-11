@@ -1,0 +1,28 @@
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% front: left height 5, right height 2, width 4
+\draw (0,0) -- (2.0,0) -- (2.0,1.0) -- (0,2.5) -- cycle;
+\draw[thin] (-0.1,0) -- (-0.45,0);
+\draw[thin] (-0.1,2.5) -- (-0.45,2.5);
+\draw[<->,>=Stealth,thin] (-0.35,0) -- (-0.35,2.5);
+\node[left] at (-0.45,1.25) {5};
+\draw[thin] (0,-0.1) -- (0,-0.4);
+\draw[thin] (2.0,-0.1) -- (2.0,-0.4);
+\draw[<->,>=Stealth,thin] (0,-0.3) -- (2.0,-0.3);
+\node[below] at (1.0,-0.3) {4};
+\draw[thin] (2.1,0) -- (2.45,0);
+\draw[thin] (2.1,1.0) -- (2.45,1.0);
+\draw[<->,>=Stealth,thin] (2.35,0) -- (2.35,1.0);
+\node[right] at (2.45,0.5) {2};
+\node at (1.0,-1.15) {正视图};
+% side (left) view: rectangle width 3, dashed diagonal
+\draw (3.2,0) rectangle (4.7,2.5);
+\draw[dashed] (3.2,2.5) -- (4.7,1.0);
+\draw[thin] (3.2,-0.1) -- (3.2,-0.4);
+\draw[thin] (4.7,-0.1) -- (4.7,-0.4);
+\draw[<->,>=Stealth,thin] (3.2,-0.3) -- (4.7,-0.3);
+\node[below] at (3.95,-0.3) {3};
+\node at (3.95,-1.15) {侧视图（左）};
+% top view: right triangle, legs 4 (bottom) x 3 (left)
+\draw (5.9,0) -- (7.9,0) -- (5.9,1.5) -- cycle;
+\node at (6.9,-1.15) {俯视图};
+\end{tikzpicture}

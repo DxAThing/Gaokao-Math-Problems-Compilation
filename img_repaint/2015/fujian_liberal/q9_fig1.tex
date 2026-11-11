@@ -1,0 +1,27 @@
+% 三视图横向并排点修：投影边线/尺寸/虚实均沿用既有稿，仅平移scope使三幅同行，图名基线一致
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% 正视图：整体(0,0)-(2,2)，中线 x=1
+\begin{scope}[shift={(0.5,0)}]
+\draw (0,0) rectangle (2,2);
+\draw (1,0) -- (1,2);
+\draw[<->] (0,-0.35) -- (1,-0.35);
+\node[anchor=north,font=\normalsize] at (0.5,-0.4) {1};
+\draw[<->] (1,-0.35) -- (2,-0.35);
+\node[anchor=north,font=\normalsize] at (1.5,-0.4) {1};
+\draw[<->] (-0.35,0) -- (-0.35,2);
+\node[anchor=east,font=\normalsize] at (-0.4,1) {2};
+\node[below] at (1,-0.95) {正视图};
+\end{scope}
+% 侧视图：矩形(0,0)-(1,2)，宽=俯视图高
+\begin{scope}[shift={(4.0,0)}]
+\draw (0,0) rectangle (1,2);
+\draw[<->] (0,-0.35) -- (1,-0.35);
+\node[anchor=north,font=\normalsize] at (0.5,-0.4) {1};
+\node[below] at (0.5,-0.95) {侧视图};
+\end{scope}
+% 俯视图：四边形 (0,0)-(0,1)-(2,1)-(1,0)，宽2=正视宽，高1=侧视宽
+\begin{scope}[shift={(6.5,0)}]
+\draw (0,0) -- (0,1) -- (2,1) -- (1,0) -- cycle;
+\node[below] at (1,-0.95) {俯视图};
+\end{scope}
+\end{tikzpicture}

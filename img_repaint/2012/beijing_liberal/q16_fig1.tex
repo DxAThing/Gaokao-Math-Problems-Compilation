@@ -1,0 +1,44 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,
+geometry edge/.style={solid,line width=.6pt},
+geometry label/.style={font=\normalsize,inner sep=2pt}]
+% ---- Fig 1: Rt triangle ABC, C=90 ----
+\coordinate (C1) at (0,0);
+\coordinate (B1) at (3,0);
+\coordinate (A1) at (0,4.5);
+\coordinate (D1) at (0,2.25);
+\coordinate (E1) at (1.5,2.25);
+\coordinate (F1) at (0,1.0);
+\draw[geometry edge] (A1)--(C1)--(B1)--cycle;
+\draw[geometry edge] (D1)--(E1);
+\fill (F1) circle (1.6pt);
+\node[geometry label,above] at ($(A1)+(0,0.18)$) {$A$};
+\node[left=2pt] at (D1) {$D$};
+\node[geometry label,right] at ($(E1)+(0.3,0.1)$) {$E$};
+\node[left=2pt] at (F1) {$F$};
+\node[geometry label,below left] at ($(C1)+(-0.12,-0.14)$) {$C$};
+\node[geometry label,below right] at ($(B1)+(0.12,-0.14)$) {$B$};
+\node[font=\normalsize] at (1.5,-1.1) {\bitmapinsertcaption[1]};
+% ---- Fig 2: folded A1DE pyramid ----
+\coordinate (A2) at (5.6000000000,2.7000000000);
+\coordinate (C2) at (5.2,0.5);
+\coordinate (B2) at (8.7,0.5);
+\coordinate (D2) at (6.2000000000,1.5000000000);
+\coordinate (E2) at (7.9500000000,1.5000000000);
+\coordinate (F2) at (5.7000000000,1.0000000000);
+\draw[geometry edge] (C2)--(B2);
+\draw[geometry edge] (E2)--(B2);
+\draw[geometry edge] (A2)--(C2);
+\draw[geometry edge] (A2)--(B2);\draw[geometry edge] (A2)--(E2);
+
+
+\draw[geometry edge,dashed] (C2)--(D2) (D2)--(E2);
+\draw[geometry edge,dashed] (A2)--(D2);
+\draw[geometry edge,dashed] (A2)--(F2);
+\node[geometry label,above left] at ($(A2)+(-0.2,0.16)$) {$A_{1}$};
+\node[geometry label,below left] at ($(C2)+(-0.14,-0.14)$) {$C$};
+\node[geometry label,below right] at ($(B2)+(0.14,-0.14)$) {$B$};
+\node[below right=2pt] at (D2) {$D$};
+\node[right=2pt] at (E2) {$E$};
+\node[below right=2pt] at (F2) {$F$};
+\node[font=\normalsize] at (6.95,-1.1) {\bitmapinsertcaption[2]};
+\end{tikzpicture}

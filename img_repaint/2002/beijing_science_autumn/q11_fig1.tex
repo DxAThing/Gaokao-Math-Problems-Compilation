@@ -1,0 +1,13 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.6cm,y=1.6cm,line width=.6pt,>=Stealth,font=\normalsize]
+  \draw[->] (-1.0,0)--(3.5,0);
+  \draw[->] (0,-2.0)--(0,2.0);
+  \node[anchor=west,inner sep=0pt,xshift=2pt] at (3.5,0) {$x$};
+  \node[anchor=south,inner sep=0pt,yshift=2pt] at (0,2.0) {$y$};
+  \node[anchor=north east,inner sep=0pt,xshift=-3pt,yshift=-3pt] at (0,0) {$O$};
+  \node[anchor=north,inner sep=0pt,yshift=-2pt] at (1,0) {$1$};
+  \node[anchor=north,inner sep=0pt,yshift=-4pt] at (3,0) {$3$};
+  \draw[domain=0:3,samples=181] plot (\x,{0.0964*(\x-1)*(\x-3)*(\x-5.36)});
+  \draw[fill=white] (0,-1.55) circle (1.6pt);
+  \draw[fill=white] (3,0) circle (1.6pt);
+\end{tikzpicture}

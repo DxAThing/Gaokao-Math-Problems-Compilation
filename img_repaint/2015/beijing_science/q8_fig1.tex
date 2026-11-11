@@ -1,0 +1,21 @@
+% 2015 Beijing science q8: fuel-efficiency lines for 甲 (dashed circles), 丙 (solid squares), 乙 (dotted triangles).
+% Point positions measured from source pixels against axis anchors (origin, ticks 40/80 and 5/10/15); approximations, see report.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template line,
+  xmin=0,xmax=140,ymin=0,ymax=17.5,
+  xtick={0,40,80,120},
+  xticklabels={,40,80,120},
+  ytick={0,5,10,15}]
+\addplot[mark=*,mark size=1.5pt,dashed] coordinates
+  {(9.9,5.0) (20.0,9.0) (33.9,12.5) (40.0,15.0) (60.0,13.0) (80.2,10.0) (90.1,12.0) (100.1,11.5) (110.2,13.0) (132.3,10.0)};
+\addplot[mark=triangle*,mark size=1.5pt,dotted] coordinates
+  {(8.0,1.4) (15.9,1.9) (24.0,2.9) (32.0,3.4) (40.1,4.4) (48.0,4.9) (56.0,5.4) (64.1,5.7) (74.1,5.9) (80.1,6.1) (88.1,6.9) (96.1,7.7) (110.2,7.4) (124.2,6.4) (132.2,6.2)};
+\addplot[mark=square*,mark size=1.5pt] coordinates
+  {(8.0,2.5) (16.0,3.0) (24.0,5.0) (32.0,7.0) (40.0,6.2) (48.0,6.0) (56.0,7.0) (64.1,7.5) (74.1,6.8) (80.1,6.7) (88.1,6.4) (110.2,6.0) (124.2,4.5) (132.2,4.0)};
+\node[anchor=west,xshift=3pt] at (axis cs:132.3,10.0) {甲车};
+\node[anchor=west,xshift=3pt] at (axis cs:132.2,6.2) {乙车};
+\node[anchor=west,xshift=3pt] at (axis cs:132.2,4.0) {丙车};
+\examstatylabel{燃油效率(km/L)}
+\examstatxlabel{速度(km/h)}
+\end{axis}
+\end{tikzpicture}

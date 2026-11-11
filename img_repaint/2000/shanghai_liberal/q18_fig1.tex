@@ -1,0 +1,19 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (B) at (1.5,2);
+\coordinate (A) at (4.5,2);
+\coordinate (C) at (0,0.5);
+\coordinate (D) at (2,7);
+\coordinate (E) at (2.25,1.25);
+% right-angle edges at B (dashed hidden)
+\draw[dashed] (B)--(A);
+\draw[dashed] (B)--(C);
+\draw[dashed] (B)--(D);
+\draw[dashed] (B)--(E);
+% tetrahedron outer edges
+\draw[solid] (D)--(A)--(C)--(D);
+\node[above left=3pt] at (D) {$D$};
+\node[below=4pt] at (B) {$B$};
+\node[right=3pt] at (A) {$A$};
+\node[below left=3pt] at (C) {$C$};
+\node[below right=4pt] at (E) {$E$};
+\end{tikzpicture}

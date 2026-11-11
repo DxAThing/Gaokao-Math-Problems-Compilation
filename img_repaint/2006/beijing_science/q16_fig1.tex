@@ -1,0 +1,11 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=2.1cm,y=0.95cm,line width=.6pt,>=stealth,font=\normalsize]
+\draw[->] (-0.4,0)--(3.0,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-2.6)--(0,3.2) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw (1,0)--(1,-0.08);
+\draw (2,0)--(2,-0.08);
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (1,-0.08) {$1$};
+\node[anchor=north west,inner sep=0pt,xshift=2pt,yshift=-2pt] at (2,-0.08) {$2$};
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\draw[domain=0.55:2.45,samples=101] plot (\x,{6*(\x-1)*(\x-2)});
+\end{tikzpicture}

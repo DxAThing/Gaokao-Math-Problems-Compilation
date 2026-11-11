@@ -1,0 +1,21 @@
+\begin{tikzpicture}[line width=.6pt,>=Stealth]
+% ellipse x^2/36+y^2/20=1, unit 0.5cm: x-radius 3cm, y-radius 2.236cm
+\draw[->] (-3.8,0)--(3.8,0) node[below=3pt] {$x$};
+\draw[->] (0,-2.9)--(0,2.9) node[right=3pt] {$y$};
+\draw[solid] (0,0) ellipse (3 and 2.236067977500);
+% points on x-axis: A(-6,0)->(-3,0), O, M(2,0)->(1,0), F(4,0)->(2,0), B(6,0)->(3,0)
+\coordinate (A) at (-3,0);
+\coordinate (O) at (0,0);
+\coordinate (M) at (1,0);
+\coordinate (F) at (2,0);
+\coordinate (B) at (3,0);
+\coordinate (P) at (0.7500000000,2.1650635095);
+\draw[solid] (A)--(P)--(F);
+\fill (M) circle (1.2pt);
+\node[below=4pt,xshift=-5pt,yshift=1pt] at (A) {$A$};
+\node[below=4pt,xshift=5pt,yshift=1pt] at (O) {$O$};
+\node[below=4pt] at (M) {$M$};
+\node[below=4pt] at (F) {$F$};
+\node[below=4pt,xshift=5pt,yshift=1pt] at (B) {$B$};
+\node[above right=3pt] at (P) {$P$};
+\end{tikzpicture}

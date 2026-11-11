@@ -1,0 +1,27 @@
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize]
+  % Rectangle ABCD (front plane y=0): D=(0,1), C=(5,1), A=(-2.5,-1.5), B=(2.5,-1.5)
+  \coordinate (D) at (0,1);
+  \coordinate (C) at (5,1);
+  \coordinate (A) at (-2.5,-1.5);
+  \coordinate (B) at (2.5,-1.5);
+  % M on semicircle diameter DC: center (2.5,1), r=2.5, angle 65deg
+  \coordinate (M) at (3.556545654,3.265769468);
+  % Semicircle: true half circle with diameter DC (upper half)
+  \draw (D) arc[start angle=180, end angle=0, x radius=2.5, y radius=2.5];
+  % Rectangle edges: DC hidden (dashed), rest solid
+  \draw[dashed] (D) -- (C);
+  \draw (A) -- (B);
+  \draw (B) -- (C);
+  \draw (A) -- (D);
+  % Interior solid segments
+  \draw (A) -- (M);
+  \draw (D) -- (M);
+  \draw (M) -- (B);
+  \draw (M) -- (C);
+  % Labels
+  \node[below left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[left,xshift=-2.00bp,yshift=0.00bp] at (D) {$D$};
+  \node[above right] at (M) {$M$};
+\end{tikzpicture}

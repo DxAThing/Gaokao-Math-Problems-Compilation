@@ -1,0 +1,41 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% schematic oblique projection of quadrangular prism ABCD-A1B1C1D1
+\coordinate (D) at (0,0);
+\coordinate (D1) at (5,0);
+\coordinate (A1) at (5.8,1.9);
+\coordinate (E) at (3.3,1.9);
+\coordinate (A) at (0.8,1.9);
+\coordinate (C) at (0,2.5);
+\coordinate (C1) at (5,2.5);
+\coordinate (B) at (0.8,6.9);
+\coordinate (B1) at (5.8,6.9);
+% solid visible edges
+\draw (B) -- (B1);
+\draw (B) -- (C);
+\draw (C) -- (C1);
+\draw (C) -- (D);
+\draw (D) -- (D1);
+\draw (D1) -- (C1);
+\draw (C1) -- (B1);
+\draw (C) -- (B1);
+\draw (D1)--(A1)--(B1);
+% dashed hidden edges
+\draw[dashed] (B) -- (A);
+\draw[dashed] (A) -- (E) -- (A1);
+\draw[dashed] (A) -- (D);
+\draw[dashed] (E) -- (C);
+\draw[dashed] (E) -- (C1);
+\draw[dashed] (E) -- (B1);
+% vertices
+\foreach \p in {D,D1,A1,E,A,C,C1,B,B1} {\fill (\p) circle (1.2pt);}
+% labels
+\node[below left] at (D) {$D$};
+\node[below right] at (D1) {$D_{1}$};
+\node[right] at (A1) {$A_{1}$};
+\node[below] at (E) {$E$};
+\node[left] at (A) {$A$};
+\node[left] at (C) {$C$};
+\node[right] at (C1) {$C_{1}$};
+\node[above left] at (B) {$B$};
+\node[above right] at (B1) {$B_{1}$};
+\end{tikzpicture}

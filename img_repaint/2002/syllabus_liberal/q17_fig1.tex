@@ -1,0 +1,34 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=0.44cm,y=0.144cm,line width=.6pt,>=stealth,font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (Xl) at (-0.7,0);
+\coordinate (Xr) at (16,0);
+\coordinate (Yb) at (0,-1.8);
+\coordinate (Yt) at (0,35);
+\coordinate (P6) at (6,10);
+\coordinate (P10) at (10,20);
+\coordinate (P14) at (14,30);
+\coordinate (T6) at (6,0);
+\coordinate (T10) at (10,0);
+\coordinate (T14) at (14,0);
+\draw[dashed] (0,10)--(P6)--(T6);
+\draw[dashed] (0,20)--(P10)--(T10);
+\draw[dashed] (0,30)--(P14)--(T14);
+\draw[->] (Xl)--(Xr) node[right=2pt,inner sep=0pt] {$t/\mathrm{h}$};
+\draw[->] (Yb)--(Yt) node[right=2pt,inner sep=0pt] {$T/^{\circ}\mathrm{C}$};
+\draw[domain=4:6,samples=81,dashed] plot (\x,{10*sin(deg(pi/8*\x+3*pi/4))+20});
+\draw[domain=6:14,samples=241] plot (\x,{10*sin(deg(pi/8*\x+3*pi/4))+20});
+\draw[domain=14:16,samples=81,dashed] plot (\x,{10*sin(deg(pi/8*\x+3*pi/4))+20});
+\draw (6,0)--(6,-1.2); \draw (8,0)--(8,-1.2); \draw (10,0)--(10,-1.2);
+\draw (12,0)--(12,-1.2); \draw (14,0)--(14,-1.2);
+\draw (0,10)--(-0.6,10); \draw (0,20)--(-0.6,20); \draw (0,30)--(-0.6,30);
+\node[below=9pt,inner sep=0pt] at (6,0) {$6$};
+\node[below=9pt,inner sep=0pt] at (8,0) {$8$};
+\node[below=9pt,inner sep=0pt] at (10,0) {$10$};
+\node[below=9pt,inner sep=0pt] at (12,0) {$12$};
+\node[below=9pt,inner sep=0pt] at (14,0) {$14$};
+\node[left=5pt,inner sep=0pt] at (0,10) {$10$};
+\node[left=5pt,inner sep=0pt] at (0,20) {$20$};
+\node[left=5pt,inner sep=0pt] at (0,30) {$30$};
+\node[inner sep=0pt] at (-0.7,-1.6) {$O$};
+\end{tikzpicture}

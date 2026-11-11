@@ -1,0 +1,45 @@
+% 点修：三视图横向并排（正/侧/俯左至右），图名居中基线对齐；投影边线/尺寸/虚实原样，仅平移scope。
+% 三视图: 2014上海文7 — 正T形(总宽5,槽宽1深2,底高1), 侧(宽3,底线高1), 俯(宽5,两条虚线槽边)
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% 左: 正视图, 总宽3.0(值5), 总高1.8(2+1), 中央槽宽0.6(值1)
+\begin{scope}[shift={(0,1.8)}]
+  \draw (0,0) -- (0,1.8) -- (1.2,1.8) -- (1.2,0.6) -- (1.8,0.6) -- (1.8,1.8) -- (3.0,1.8) -- (3.0,0) -- (0,0) -- cycle;
+  % 顶部槽宽1
+  \draw[thin] (1.2,1.98) -- (1.2,1.8);
+  \draw[thin] (1.8,1.98) -- (1.8,1.8);
+  \draw[<->,>=Stealth,thin] (1.2,1.92) -- (1.8,1.92);
+  \node[anchor=south,inner sep=2pt] at (1.5,1.94) {1};
+  % 左侧槽深2
+  \draw[thin] (-0.18,0.6) -- (-0.35,0.6);
+  \draw[thin] (-0.18,1.8) -- (-0.35,1.8);
+  \draw[<->,>=Stealth,thin] (-0.28,0.6) -- (-0.28,1.8);
+  \node[anchor=east,inner sep=2pt] at (-0.32,1.2) {2};
+  % 左侧底高1
+  \draw[thin] (-0.18,0) -- (-0.35,0);
+  \draw[<->,>=Stealth,thin] (-0.28,0) -- (-0.28,0.6);
+  \node[anchor=east,inner sep=2pt] at (-0.32,0.3) {1};
+  % 底部总宽5
+  \draw[thin] (0,-0.18) -- (0,-0.35);
+  \draw[thin] (3.0,-0.18) -- (3.0,-0.35);
+  \draw[<->,>=Stealth,thin] (0,-0.28) -- (3.0,-0.28);
+  \node[anchor=north,inner sep=2pt] at (1.5,-0.32) {5};
+  \node at (1.5,-0.95) {正视图};
+\end{scope}
+% 中: 侧视图, 宽1.8(值3), 高1.8, 横线距底0.6
+\begin{scope}[shift={(4.2,1.8)}]
+  \draw (0,0) rectangle (1.8,1.8);
+  \draw (0,0.6) -- (1.8,0.6);
+  \draw[thin] (0,-0.18) -- (0,-0.35);
+  \draw[thin] (1.8,-0.18) -- (1.8,-0.35);
+  \draw[<->,>=Stealth,thin] (0,-0.28) -- (1.8,-0.28);
+  \node[anchor=north,inner sep=2pt] at (0.9,-0.32) {3};
+  \node at (0.9,-0.95) {侧视图};
+\end{scope}
+% 右: 俯视图, 长与正视图对正(宽3.0), 两条竖直虚线为槽侧边投影
+\begin{scope}[shift={(7.2,3.6)}]
+  \draw (0,0) rectangle (3.0,-1.6);
+  \draw[dashed] (1.2,0) -- (1.2,-1.6);
+  \draw[dashed] (1.8,0) -- (1.8,-1.6);
+  \node at (1.5,-2.75) {俯视图};
+\end{scope}
+\end{tikzpicture}

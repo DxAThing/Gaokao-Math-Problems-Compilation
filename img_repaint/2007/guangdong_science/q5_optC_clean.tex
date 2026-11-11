@@ -1,0 +1,12 @@
+% source_constraints: s-t option graph; BROKEN into two disconnected segments (0,0)-(1,60) and (1.5,60)-(2.5,140); gap between t=1 and t=1.5 with no connecting line (pixel gap confirmed: no dark component x 191..237); endpoint (2.5,140); s labels 60..160; t labels 1,2,3; O below-left; grid t step 0.25 / s step 10; axes .6pt arrows; segments thick.
+\begin{tikzpicture}[x=1.6cm,y=0.04cm,line width=.6pt,font=\normalsize,>=Stealth]
+\foreach \t in {0,0.25,...,3.5} {\draw[gray!60,line width=.35pt] (\t,0)--(\t,160);}
+\foreach \s in {0,10,...,160} {\draw[gray!60,line width=.35pt] (0,\s)--(3.5,\s);}
+\draw[->] (0,0)--(3.75,0) node[below right] {$t\,(\mathrm{h})$};
+\draw[->] (0,0)--(0,172) node[above right] {$s\,(\mathrm{km})$};
+\foreach \t in {1,2,3} {\draw[line width=.6pt] (\t,0)--(\t,-3); \node[below] at (\t,-3) {$\t$};}
+\foreach \s in {60,80,100,120,140,160} {\draw[line width=.6pt] (0,\s)--(-0.04,\s); \node[left] at (-0.04,\s) {$\s$};}
+\node[below left] at (0,0) {$O$};
+\draw[line width=1.1pt,line join=round,line cap=round] (0,0)--(1,60);
+\draw[line width=1.1pt,line join=round,line cap=round] (1.5,60)--(2.5,140);
+\end{tikzpicture}

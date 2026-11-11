@@ -1,0 +1,38 @@
+\begin{tikzpicture}[line width=0.6pt,line join=round,line cap=round]
+% front face
+\coordinate (FLB) at (0,0);
+\coordinate (FRB) at (4,0);
+\coordinate (FRT) at (4,3.5);
+\coordinate (FLT) at (0,3.5);
+% back face
+\coordinate (BLB) at (1.5,1.5);
+\coordinate (BRB) at (5.5,1.5);
+\coordinate (BRT) at (5.5,5);
+\coordinate (BLT) at (1.5,5);
+\coordinate (M) at (5.5,5);
+\coordinate (N) at (1.5,1.5);
+\coordinate (P) at (2,3.5);
+\coordinate (O) at (2.75,0.75);
+% front face solid
+\draw (FLB) -- (FRB) -- (FRT) -- (FLT) -- cycle;
+% top face solid
+\draw (FLT) -- (BLT) -- (BRT) -- (FRT);
+
+% right face solid
+\draw (FRB) -- (BRB) -- (BRT);
+
+% hidden edges
+\draw[dashed] (FLB) -- (BLB) -- (BRB);
+\draw[dashed] (BLB) -- (BLT);
+% interior diagonal N-FRT (hidden)
+\draw[dashed] (N) -- (FRT);
+% interior OP (hidden)
+\draw[dashed] (P) -- (O);
+\fill (P) circle (1.6pt);
+\fill (O) circle (1.6pt);
+% labels with clearance
+\node[above right=2pt] at (M) {$M$};
+\node[left=2pt] at (N) {$N$};
+\node[above=2pt] at (P) {$P$};
+\node[right=2pt] at (O) {$O$};
+\end{tikzpicture}

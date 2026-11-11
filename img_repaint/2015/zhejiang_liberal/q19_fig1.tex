@@ -1,0 +1,16 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-4.5,0)--(5,0) node[right=3pt] {$x$};
+\draw[->] (0,-1.5)--(0,4.6) node[above=3pt] {$y$};
+\node[below left=4pt] at (0,0) {$O$};
+\draw[domain=-3.8:4.2,smooth,samples=100] plot (\x,{0.25*\x*\x});
+\draw (0,1) circle (1);
+\coordinate (P) at (1.5,0);
+\coordinate (A) at (3,2.25);
+\coordinate (B) at (0.9231,1.3846);
+\draw[solid] (P)--(A);
+\draw[solid] (P)--(B);
+\draw[solid] (A)--(B);
+\node[below=5pt] at (P) {$P$};
+\node[right=5pt] at (A) {$A$};
+\node[above right=4pt] at (B) {$B$};
+\end{tikzpicture}

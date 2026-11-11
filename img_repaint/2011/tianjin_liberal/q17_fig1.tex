@@ -1,0 +1,35 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  geometry edge/.style={draw=black,solid,line width=.6pt},
+  geometry hidden/.style={draw=black,dashed,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=1pt}]
+\coordinate (P) at (3.0,6.0);
+\coordinate (D) at (0.5,1.5);
+\coordinate (A) at (1.5,1.0);
+\coordinate (B) at (5.5,1.0);
+\coordinate (C) at (4.5000000000,1.5000000000);
+\coordinate (O) at (3.0000000000,1.2500000000);
+\coordinate (M) at (1.75,3.75);
+% base front solid
+\draw[geometry edge] (D)--(A)--(B);
+\draw[geometry edge] (B)--(C);
+% base back / diagonal hidden
+\draw[geometry hidden] (C)--(D);
+\draw[geometry hidden] (A)--(C);
+
+% lateral edges
+\draw[geometry edge] (P)--(D);
+\draw[geometry edge] (P)--(A);
+\draw[geometry edge] (P)--(B);
+\draw[geometry hidden] (P)--(C);
+\draw[geometry hidden] (P)--(O);
+% M segments
+\draw[geometry edge] (M)--(A);
+\draw[geometry hidden] (M)--(C);
+\node[geometry label,above,xshift=1pt,yshift=4pt] at (P) {$P$};
+\node[geometry label,left,xshift=-4pt] at (D) {$D$};
+\node[geometry label,below left,xshift=-3pt,yshift=-4pt] at (A) {$A$};
+\node[geometry label,below right,xshift=3pt,yshift=-4pt] at (B) {$B$};
+\node[geometry label,right,xshift=3pt,yshift=3pt] at (C) {$C$};
+\node[geometry label,below right,xshift=2pt,yshift=-10pt] at (O) {$O$};
+\node[geometry label,left,xshift=-4pt,yshift=1pt] at (M) {$M$};
+\end{tikzpicture}

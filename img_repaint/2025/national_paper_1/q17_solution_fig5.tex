@@ -1,0 +1,42 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (P) at (0,2.8);
+\coordinate (B) at (-1.7,-0.7);
+\coordinate (C) at (0.3497422612,-0.7000000000);
+\coordinate (D) at (2.8,0);
+\coordinate (O) at (0.1748711306,-0.3500000000);
+\coordinate (Xend) at (-2.6000000000,-1.0705882353);
+\coordinate (Yend) at (3.7,0);
+\coordinate (Zend) at (0,3.8);
+% base
+\draw[solid] (B) -- (C);
+\draw[solid] (C) -- (D);
+\draw[dashed] (A) -- (B);
+\draw[dashed] (A) -- (D);
+% lateral
+\draw[dashed] (A) -- (P);
+\draw[solid] (B) -- (P);
+\draw[solid] (C) -- (P);
+\draw[solid] (D) -- (P);
+% solution segments: AC, PO, OC (all lie inside, dashed in original)
+\draw[dashed] (A) -- (C);
+\draw[dashed] (P) -- (O);
+\draw[dashed] (O) -- (C);
+
+% axes extensions
+\draw[->,solid] (B) -- (Xend);
+\draw[->,solid] (D) -- (Yend);
+\draw[->,solid] (P) -- (Zend);
+% dots for O and C emphasis
+\fill (O) circle (1.2pt);
+\fill (C) circle (1.2pt);
+\node[left=2pt] at (P) {$P$};
+\node[below left=2pt,xshift=-1.0pt,yshift=-2pt] at (A) {$A$};
+\node[below left=2pt,xshift=1pt,yshift=-1pt] at (B) {$B$};
+\node[below=2pt] at (C) {$C$};
+\node[above right=2pt] at (D) {$D$};
+\node[above=2pt,xshift=9pt,yshift=6pt] at (O) {$O$};
+\node[below left=2pt] at (Xend) {$x$};
+\node[right=2pt] at (Yend) {$y$};
+\node[above left=2pt] at (Zend) {$z$};
+\end{tikzpicture}

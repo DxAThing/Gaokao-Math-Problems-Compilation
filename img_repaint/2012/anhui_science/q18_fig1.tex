@@ -1,0 +1,65 @@
+% 2012_anhui_science_q18_fig1: left plane figure 1, right space figure 2
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+  solid edge/.style={solid,line width=.6pt},
+  hidden edge/.style={dashed,line width=.6pt,dash pattern=on 4pt off 3pt},
+  geom label/.style={font=\normalsize,inner sep=2pt}]
+% ---- panel 1 (left)
+\coordinate (p1B) at (-4.0,2.5);
+\coordinate (p1C) at (-1.5,2.5);
+\coordinate (p1A) at (-2.75,3.8);
+\coordinate (p1B1) at (-4.0,-0.9);
+\coordinate (p1C1) at (-1.5,-0.9);
+\coordinate (p1A1) at (-2.75,-2.6);
+\draw[solid edge] (p1A) -- (p1B) -- (p1C) -- cycle;
+\draw[solid edge] (p1B) -- (p1B1);
+\draw[solid edge] (p1C) -- (p1C1);
+\draw[solid edge] (p1B1) -- (p1C1);
+\draw[solid edge] (p1B1) -- (p1A1) -- (p1C1);
+\node[geom label,above,yshift=3pt] at (p1A) {$A$};
+\node[geom label,left,xshift=-4pt] at (p1B) {$B$};
+\node[geom label,right,xshift=4pt] at (p1C) {$C$};
+\node[geom label,left,xshift=-4pt] at (p1B1) {$B_{1}$};
+\node[geom label,right,xshift=4pt] at (p1C1) {$C_{1}$};
+\node[geom label,below,yshift=-4pt] at (p1A1) {$A_{1}$};
+\node[geom label,below,yshift=-10pt] at (-2.75,-2.9) {$\text{图}\,1$};
+% ---- panel 2 (right)
+\coordinate (qA) at (0.2,2.7);
+\coordinate (qB) at (2.4,2.7);
+\coordinate (qC) at (0.9,3.7);
+\coordinate (qC1) at (0.9,-0.9);
+\coordinate (qB1) at (2.4,-1.9);
+\coordinate (qA1) at (4.55,-0.4);
+\coordinate (qAm1) at (1.505,1.77);
+\coordinate (qAm2) at (2.81,0.84);
+\coordinate (qCm1) at (1.995,2.47);
+\coordinate (qCm2) at (3.09,1.24);
+% top triangle
+\draw[solid edge] (qA) -- (qB);
+\draw[solid edge] (qA) -- (qC);
+\draw[solid edge] (qB) -- (qC);
+% rectangle sides + bottom
+\draw[solid edge] (qC) -- (qC1);
+\draw[solid edge] (qB) -- (qB1);
+\draw[solid edge] (qC1) -- (qB1);
+\draw[solid edge] (qB1) -- (qA1);
+
+% B-A1 outside solid
+\draw[solid edge] (qB) -- (qA1);
+% C-A1: dashed inside (collinear), solid outside
+\draw[hidden edge] (qC) -- (qCm1) -- (qCm2);
+\draw[solid edge] (qCm2) -- (qA1);
+% A-A1: solid near A, dashed middle, solid near A1 (collinear)
+\draw[solid edge] (qA) -- (qAm1);
+\draw[hidden edge] (qAm1) -- (qAm2);
+\draw[solid edge] (qAm2) -- (qA1);
+% C1-A1 bottom: short dashed near C1 then solid
+\draw[hidden edge] (qC1) -- (1.995,-.75);
+\draw[solid edge] (1.995,-.75) -- (qA1);
+\node[geom label,left,xshift=-5pt] at (qA) {$A$};
+\node[geom label,right,xshift=5pt,yshift=2pt] at (qB) {$B$};
+\node[geom label,above,yshift=4pt] at (qC) {$C$};
+\node[geom label,below,yshift=-4pt] at (qB1) {$B_{1}$};
+\node[geom label,left,xshift=-5pt] at (qC1) {$C_{1}$};
+\node[geom label,right,xshift=5pt] at (qA1) {$A_{1}$};
+\node[geom label,below,yshift=-12pt] at (2.2,-2.9) {$\text{图}\,2$};
+\end{tikzpicture}

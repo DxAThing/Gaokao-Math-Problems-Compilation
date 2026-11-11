@@ -1,0 +1,34 @@
+% point-fix dims only: shared dimension line/label styles, offsets >=4.5mm; edges/captions unchanged.
+% Front 10x4 rect; side trapezoid bases 8/2 h4; plan 10x8 split 3/2/3.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize]
+\begin{scope}[shift={(0,4.0)}]
+\draw (0,0) rectangle (3.2,1.28);
+\draw[dimension extension] (0,0) -- (-0.6,0);
+\draw[dimension extension] (0,1.28) -- (-0.6,1.28);
+\draw[dimension line] (-0.5,0) -- node[dimension label vertical] {4} (-0.5,1.28);
+\draw[dimension extension] (0,0) -- (0,-0.6);
+\draw[dimension extension] (3.2,0) -- (3.2,-0.6);
+\draw[dimension line] (0,-0.5) -- node[dimension label] {10} (3.2,-0.5);
+\end{scope}
+\begin{scope}[shift={(4.4,4.0)}]
+\draw (0,0) -- (2.56,0) -- (1.6,1.28) -- (0.96,1.28) -- cycle;
+\draw[dimension extension] (0,0) -- (0,-0.6);
+\draw[dimension extension] (2.56,0) -- (2.56,-0.6);
+\draw[dimension line] (0,-0.5) -- node[dimension label] {8} (2.56,-0.5);
+\end{scope}
+\begin{scope}[shift={(8.2,4.0)}]
+\draw (0,0) rectangle (3.2,2.56);
+\draw (0,0.96) -- (3.2,0.96);
+\draw (0,1.6) -- (3.2,1.6);
+\draw[dimension extension] (0,0) -- (-0.6,0);
+\draw[dimension extension] (0,0.96) -- (-0.6,0.96);
+\draw[dimension extension] (0,1.6) -- (-0.6,1.6);
+\draw[dimension extension] (0,2.56) -- (-0.6,2.56);
+\draw[dimension line] (-0.5,0) -- node[dimension label vertical] {3} (-0.5,0.96);
+\draw[dimension line] (-0.5,0.96) -- node[dimension label vertical] {2} (-0.5,1.6);
+\draw[dimension line] (-0.5,1.6) -- node[dimension label vertical] {3} (-0.5,2.56);
+\end{scope}
+\node at (1.6,3.1) {正视图};
+\node at (5.68,3.1) {侧视图（左）};
+\node at (9.8,3.1) {俯视图};
+\end{tikzpicture}

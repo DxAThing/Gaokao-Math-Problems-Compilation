@@ -1,0 +1,22 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1.5cm,y=1.5cm,line width=.6pt,>=Stealth,font=\normalsize]
+\coordinate (A1) at (-2,0);
+\coordinate (A2) at (2,0);
+\coordinate (F) at (1,0);
+\coordinate (P) at (0.6667,1.633);
+\coordinate (Q) at (0,2.4495);
+\coordinate (O) at (0,0);
+\draw[domain=0:360,samples=200] plot ({2*cos(\x)},{sqrt(3)*sin(\x)});
+\draw (A1)--(P);
+\draw (A1)--(Q);
+\draw (A2)--(Q);
+\draw (P)--(F);
+\draw[->] (-2.7,0)--(2.9,0) node[right,inner sep=2pt] {$x$};
+\draw[->] (0,-2.3)--(0,3.5) node[above right,inner sep=2pt] {$y$};
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (A1) {$A_1$};
+\node[anchor=north west,inner sep=0pt,xshift=2pt,yshift=-2pt] at (A2) {$A_2$};
+\node[anchor=north,inner sep=0pt,yshift=-2pt] at (F) {$F$};
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (O) {$O$};
+\node[anchor=south west,inner sep=0pt,xshift=2pt,yshift=2pt] at (P) {$P$};
+\node[anchor=south west,inner sep=0pt,xshift=2pt,yshift=2pt] at (Q) {$Q$};
+\end{tikzpicture}

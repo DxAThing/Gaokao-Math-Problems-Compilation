@@ -1,0 +1,13 @@
+\usetikzlibrary{arrows.meta,calc,angles,quotes}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (R1) at (-2,-2.5);
+\coordinate (R2) at (2,-2.5);
+\coordinate (R3) at (2,2.5);
+\coordinate (R4) at (-2,2.5);
+\coordinate (T) at (0,4.5);
+\draw (R1) -- (R2) -- (R3) -- (R4) -- cycle;
+\draw (R4) -- (T) -- (R3);
+\draw pic[draw,line width=.6pt,angle radius=2.8mm] {right angle=R4--T--R3};
+\node[anchor=north,inner sep=0pt] at (0.0,-2.5706) {$x$};
+\node[anchor=east,inner sep=0pt] at (-2.0706,0.0) {$y$};
+\end{tikzpicture}

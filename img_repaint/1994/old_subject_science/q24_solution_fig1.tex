@@ -1,0 +1,19 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-1.8,0)--(3.1,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.8)--(0,2.4) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw (0,0) circle (1);
+\draw[domain=1.6667:2.7,samples=101] plot (\x,{sqrt(3*(\x-4/3)^2-1/3)});
+\draw[domain=1.6667:2.7,samples=101] plot (\x,{-sqrt(3*(\x-4/3)^2-1/3)});
+\draw (0,0)--(-0.2844,0.9587);
+\draw (0,0)--(2.4,1.755);
+\draw (-0.2844,0.9587)--(2.4,1.755);
+\draw (2.4,1.755)--(2,0);
+\draw[line width=.6pt] (1.6667,-0.06)--(1.6667,0.06);
+\fill (0,0) circle (1.4pt) (2.4,1.755) circle (1.4pt) (-0.2844,0.9587) circle (1.4pt) (2,0) circle (1.4pt);
+\node[below left,inner sep=0pt,xshift=-3pt,yshift=-3pt] at (0,0) {$O$};
+\node[above left,inner sep=0pt,xshift=-3pt,yshift=3pt] at (-0.2844,0.9587) {$N$};
+\node[right,inner sep=0pt,xshift=4pt] at (2.4,1.755) {$M$};
+\node[below,inner sep=0pt,xshift=-6pt,yshift=-6pt] at (1.6667,0) {$\frac{5}{3}$};
+\node[below right,inner sep=0pt,xshift=3pt,yshift=-3pt] at (2,0) {$Q$};
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize, >=Stealth]
+\coordinate (A) at (0.5,4.2);
+\coordinate (B) at (-1.5,0.0);
+\coordinate (Cc) at (4.5,0.6);
+\coordinate (D) at (1.5,2.0);
+\coordinate (O) at (0.0000000000,1.0000000000);
+\coordinate (E) at (1.5,0.3);
+% solid faces
+\draw (A) -- (B) -- (E) -- (Cc) -- cycle;
+
+% hidden
+\draw[dashed] (A) -- (O);
+\draw[dashed] (A) -- (D);
+\draw[dashed] (B) -- (D);
+\draw[dashed] (D) -- (Cc);
+% E dot
+\fill (E) circle (1.6pt);
+\node[above, yshift=0pt] at (A) {$A$};
+\node[below left, xshift=0pt, yshift=0pt] at (B) {$B$};
+\node[right, xshift=0pt] at (Cc) {$C$};
+\node[above right, xshift=0pt, yshift=0pt] at (D) {$D$};
+\node[below left, xshift=3pt,yshift=-5pt] at (O) {$O$};
+\node[below, yshift=0pt] at (E) {$E$};
+\end{tikzpicture}

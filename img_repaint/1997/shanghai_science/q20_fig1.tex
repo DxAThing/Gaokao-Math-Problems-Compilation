@@ -1,0 +1,15 @@
+\begin{tikzpicture}[x=1cm,y=0.7cm,font=\normalsize,line width=.6pt,>=Stealth]
+% axes
+\draw[->] (-2.6,0)--(4.4,0) node[right,inner sep=2pt,fill=white] {$x$};
+\draw (0,-6.2)--(0,1.6);
+% shaded lens between O(0,0) and A(2,-4), a=2 illustrative
+\fill[gray!25] (0,0) -- plot[domain=0:2,samples=60] (\x,{-\x*\x}) -- (2,-4) -- plot[domain=2:0,samples=60] (\x,{\x*\x-4*\x}) -- cycle;
+% curves by formula
+\draw[domain=-1.8:2.6,samples=80] plot (\x,{-\x*\x});
+\draw[domain=-0.5:3.8,samples=80] plot (\x,{\x*\x-4*\x});
+% boundary emphasis of lens
+\draw[line width=.9pt,domain=0:2,samples=60] plot (\x,{-\x*\x});
+\draw[line width=.9pt,domain=0:2,samples=60] plot (\x,{\x*\x-4*\x});
+\node[inner sep=2pt] at (0.35,0.7) {$O$};
+\node[inner sep=2pt,xshift=0.00bp,yshift=-4.00bp] at (2.38,-4.0) {$A$};
+\end{tikzpicture}

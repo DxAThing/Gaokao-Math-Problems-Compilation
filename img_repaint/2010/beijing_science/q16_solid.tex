@@ -1,0 +1,31 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=0.6pt,line join=round,line cap=round]
+\coordinate (E) at (0,4.2);
+\coordinate (C) at (0,1.2);
+\coordinate (D) at (-2.2,-0.6);
+\coordinate (A) at (2.0,-0.6);
+\coordinate (B) at (4.2,1.2);
+\coordinate (F) at (1,3.3);
+\coordinate (X) at (1.559440559,0.4573426573);
+% hidden edges first
+\draw[densely dashed] (E) -- (C);
+\draw (E) -- (F);
+\draw[densely dashed] (C) -- (B);
+\draw[densely dashed] (C) -- (D);
+\draw[densely dashed] (C) -- (F);
+\draw[densely dashed] (X) -- (B);
+% solid edges
+\draw (E) -- (D);
+\draw (E) -- (A);
+\draw (F) -- (A);
+\draw (F) -- (B);
+\draw (A) -- (B);
+\draw (A) -- (D);
+\draw (D) -- (X);
+% labels
+\node[font=\normalsize,above] at ($(E)+(0,0.12)$) {$E$};
+\node[font=\normalsize,above right] at ($(F)+(0.1,0.1)$) {$F$};
+\node[font=\normalsize,left] at ($(C)+(-0.12,0)$) {$C$};
+\node[font=\normalsize,below left] at ($(D)+(-0.1,-0.1)$) {$D$};
+\node[font=\normalsize,below right] at ($(A)+(0.1,-0.1)$) {$A$};
+\node[font=\normalsize,right] at ($(B)+(0.12,0)$) {$B$};
+\end{tikzpicture}

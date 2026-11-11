@@ -1,0 +1,32 @@
+\begin{tikzpicture}[line width=0.6pt, line join=round, line cap=round]
+% vertical square ADPQ on top, side s=4
+\coordinate (A) at (0,0);
+\coordinate (D) at (4,0);
+\coordinate (Q) at (0,4);
+\coordinate (P) at (4,4);
+\coordinate (M) at (2.6,4);
+% bottom quadrilateral ABCD (perspective): A-D shared, B-C bottom
+\coordinate (E) at (0.75,-1.0);
+\coordinate (B) at (1.5,-2.0);
+\coordinate (F) at (3.5,-2.0);
+\coordinate (C) at (5.5,-2.0);
+\draw (Q) -- (P) -- (D) -- (A) -- cycle;
+
+
+
+% bottom face solid
+\draw (A) -- (E) -- (B) -- (F) -- (C) -- (D);
+
+% interior lines
+\draw (A) -- (F);
+\draw (E) -- (M);
+\node[left=5pt] at (A) {$A$};
+\node[right=5pt] at (D) {$D$};
+\node[above left=4pt] at (Q) {$Q$};
+\node[above=4pt] at (M) {$M$};
+\node[above right=4pt] at (P) {$P$};
+\node[left=5pt,below=1pt,xshift=-1.0pt,yshift=-1.0pt] at (E) {$E$};
+\node[below left=4pt] at (B) {$B$};
+\node[below=5pt] at (F) {$F$};
+\node[below right=4pt] at (C) {$C$};
+\end{tikzpicture}

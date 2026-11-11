@@ -1,0 +1,18 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=2.0cm,y=1.6cm,line width=.6pt,>=stealth,font=\normalsize]
+% axes with ticks -1,O,1 on x and 1 on y
+\draw[->] (-1.45,0)--(1.35,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-0.55)--(0,2.7) node[above,inner sep=0pt,yshift=2pt] {$y$};
+% x ticks
+\draw[line width=.6pt] (-1,0)--++(0,-2.5pt) node[below,inner sep=0pt,yshift=-2pt] {$-1$};
+\draw[line width=.6pt] (1,0)--++(0,-2.5pt) node[below,inner sep=0pt,yshift=-2pt] {$1$};
+\node[above left,inner sep=0pt,xshift=-2pt,yshift=2pt] at (0,0) {$O$};
+% y=1 tick and intercept dot of exponential
+\draw[line width=.6pt] (0,1)--++(-2.5pt,0);
+\node[below left,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,1) {$1$};
+% representative quadratic y=3x^2+1.5x: zeros 0 and -0.5, open up
+\draw[domain=-1.25:1.05,samples=140] plot (\x,{3*\x*\x+1.5*\x});
+% representative decreasing exponential y=(1/2)^x through (0,1)
+\draw[domain=-1.25:1.25,samples=140] plot (\x,{pow(0.5,\x)});
+\fill (0,1) circle (1.2pt);
+\end{tikzpicture}

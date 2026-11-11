@@ -1,0 +1,24 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1.5cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+% axes: x from -2.2 to 1.8, y from -2.3 to 2.0 (beyond last ticks by > half step)
+\draw[->] (-2.2,0)--(1.8,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-2.3)--(0,2.0) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\node[below right,inner sep=0pt,xshift=2pt,yshift=-2pt] at (0,0) {$O$};
+% ticks at x=+-1/2
+\draw[line width=.6pt] (-0.5,0)--(-0.5,0.07);
+\draw[line width=.6pt] (0.5,0)--(0.5,0.07);
+\node[below,inner sep=0pt,yshift=-2pt] at (-0.5,0) {$-\frac12$};
+\node[below right,inner sep=0pt,xshift=2pt,yshift=-2pt] at (0.5,0) {$\frac12$};
+% upper semicircle radius 1/2
+\draw (-0.5,0) arc[start angle=180,end angle=0,radius=0.5];
+% ray y=x+2, x<-1/2
+\draw (-2.2,-0.2)--(-0.5,1.5);
+% descending curve y=-sqrt(x)-1, x>1/2
+\draw[domain=0.5:1.8,samples=60] plot (\x,{-sqrt(\x)-1});
+% dashed droplines (stop short of open circles by circle radius ~0.08cm)
+\draw[dashed] (-0.5,0)--(-0.5,1.42);
+\draw[dashed] (0.5,0)--(0.5,-1.627);
+% open endpoints
+\draw[fill=white] (-0.5,1.5) circle (2.2pt);
+\draw[fill=white] (0.5,-1.70710678) circle (2.2pt);
+\end{tikzpicture}

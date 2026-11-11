@@ -1,0 +1,46 @@
+\begin{tikzpicture}[x=1cm,y=1cm,
+  every node/.style={align=center},
+  start/.style={draw, line width=0.5pt, shape=rectangle, rounded corners=1.5mm,
+    minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  proc/.style={draw, line width=0.5pt, rectangle,
+    minimum width=28mm, minimum height=9mm, inner sep=3pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  initproc/.style={draw, line width=0.5pt, rectangle,
+    minimum width=40mm, minimum height=9mm, inner sep=3pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  decwide/.style={draw, line width=0.5pt, diamond, aspect=3.4,
+    minimum width=104mm, minimum height=24mm, inner sep=2pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  decnarrow/.style={draw, line width=0.5pt, diamond, aspect=2.2,
+    minimum width=40mm, minimum height=16mm, inner sep=2pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  io/.style={draw, line width=0.5pt, trapezium, trapezium left angle=75,
+    trapezium right angle=105, minimum width=32mm, minimum height=10mm,
+    inner sep=3pt, execute at begin node={\setlength{\parindent}{0pt}}},
+  arr/.style={-{Stealth[length=2.4mm,width=1.8mm]}, line width=0.5pt},
+  lbl/.style={font=\normalsize, inner sep=1.5pt}]
+  \node[start] (start) at (0,0) {开始};
+  \node[initproc] (init) at (0,-1.5) {$T=0,k=1$};
+  \coordinate (Jtop) at (0,-2.6);
+  \node[decwide] (c1) at (0,-4.6) {$\sin\dfrac{k\pi}{2}>\sin\dfrac{(k-1)\pi}{2}?$};
+  \node[proc] (a1) at (0,-7.6) {$a=1$};
+  \coordinate (Jmid) at (0,-9.3);
+  \node[proc] (tbox) at (0,-10.2) {$T=T+a$};
+  \node[proc] (kbox) at (0,-11.5) {$k=k+1$};
+  \node[decnarrow] (c2) at (0,-13.3) {$k<6?$};
+  \node[io] (out) at (0,-15.6) {输出 $T$};
+  \node[start] (stop) at (0,-17.1) {结束};
+  \node[proc] (a0) at (6.8,-8.2) {$a=0$};
+  \draw[arr] (start.south) -- (init.north);
+  \draw[arr] (init.south) -- (Jtop) -- (c1.north);
+  \draw[arr] (c1.south) -- node[lbl,right=1.8mm,pos=0.35] {是} (a1.north);
+  \draw[arr] (a1.south) -- (Jmid) -- (tbox.north);
+  \draw[arr] (tbox.south) -- (kbox.north);
+  \draw[arr] (kbox.south) -- (c2.north);
+  \draw[arr] (c2.south) -- node[lbl,right=1.8mm,pos=0.5] {否} (out.north);
+  \draw[arr] (out.south) -- (stop.north);
+  \draw[arr] (c1.east) -- node[lbl,above=1.8mm,pos=0.3] {否} (6.8,-4.6) -- (a0.north);
+  \draw[arr] (a0.south) -- (6.8,-9.3) -- (Jmid);
+  \draw[arr] (c2.west) -- node[lbl,above=1.8mm,pos=0.12] {是} (-6.0,-13.3) -- (-6.0,-2.6) -- (Jtop);
+\end{tikzpicture}

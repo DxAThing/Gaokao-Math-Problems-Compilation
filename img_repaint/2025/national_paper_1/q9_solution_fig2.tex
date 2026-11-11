@@ -1,0 +1,40 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (C) at (1.6,1.2);
+\coordinate (D) at (2.8,0.6);
+\coordinate (A1) at (0,3.5);
+\coordinate (B1) at (4,3.5);
+\coordinate (C1) at (1.6,4.7);
+\coordinate (XEND) at (-1.12,-0.24);
+\coordinate (YEND) at (4.8,-0.4);
+\coordinate (ZEND) at (2.8,5.2);
+\draw[solid] (A)--(B);
+\draw[solid] (A)--(A1);
+\draw[solid] (B)--(B1);
+\draw[solid] (A1)--(B1);
+\draw[solid] (A1)--(C1);
+\draw[solid] (C1)--(B1);
+\draw[dashed] (C1)--(C);
+\draw[dashed] (A1)--(C);
+\draw[dashed] (A1)--(D);
+\draw[dashed] (A)--(C);
+\draw[dashed] (A)--(D);
+\draw[dashed] (B)--(D);
+\draw[dashed] (C)--(D);
+% axes: x from A, y from B, z from D
+\draw[solid,->] (A)--(XEND);
+\draw[solid,->] (B)--(YEND);
+\draw[dashed,->] (D)--(ZEND);
+\foreach \pt in {A,B,C,D,A1,B1,C1}{\fill (\pt) circle (1.2pt);}
+\node[below left,inner sep=2pt,xshift=0.00bp,yshift=-2.00bp] at (A) {$A$};
+\node[below right,inner sep=2pt,xshift=0.00bp,yshift=-4.00bp] at (B) {$B$};
+\node[left,inner sep=2pt,xshift=-4.00bp,yshift=0.00bp] at (C) {$C$};
+\node[above right,inner sep=2pt] at (D) {$D$};
+\node[left,inner sep=2pt] at (A1) {$A_{1}$};
+\node[right,inner sep=2pt] at (B1) {$B_{1}$};
+\node[above left,inner sep=2pt] at (C1) {$C_{1}$};
+\node[below left,inner sep=2pt] at (XEND) {$x$};
+\node[below right,inner sep=2pt] at (YEND) {$y$};
+\node[right,inner sep=2pt] at (ZEND) {$z$};
+\end{tikzpicture}

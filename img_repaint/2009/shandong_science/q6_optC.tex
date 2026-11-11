@@ -1,0 +1,15 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+  \draw[->] (-1.7,0)--(1.75,0);
+  \node[anchor=north west,inner sep=1pt] at (1.77,-0.02) {$x$};
+  \draw[->] (0,-1.65)--(0,1.65);
+  \node[anchor=south east,inner sep=1pt] at (-0.04,1.66) {$y$};
+  \draw[domain=0.005:1.7,samples=161,smooth] plot (\x,{sqrt(\x)});
+  \draw[domain=-1.7:-0.005,samples=161,smooth] plot (\x,{-sqrt(-\x)});
+  \draw[fill=white,line width=.6pt] (0,0) circle (1.9pt);
+  \draw (-0.06,1)--(0.06,1);
+  \node[anchor=east,inner sep=1.5pt] at (-0.10,1.10) {$1$};
+  \draw (1,-0.06)--(1,0.06);
+  \node[below=2pt,inner sep=1pt] at (1,0) {$1$};
+  \node[anchor=north west,inner sep=1.5pt] at (0.10,-0.12) {$O$};
+\end{tikzpicture}

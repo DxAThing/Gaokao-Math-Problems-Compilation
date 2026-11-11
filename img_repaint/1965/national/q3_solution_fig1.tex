@@ -1,0 +1,27 @@
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+\coordinate (O) at (0,0);
+\coordinate (P) at (0,1.78179985147);
+\coordinate (A) at (1.10780356179,1.21163367431);
+\coordinate (B) at (2.58146330916,1.67255626);
+\coordinate (Ap) at (1.10780356179,-0.570166177157);
+\draw (0,0) circle (3.2cm);
+\draw[dashed] (0,-3.2)--(0,3.2);
+\draw (-3.2,0) arc (180:360:3.2cm and 0.768cm);
+\draw[dashed] (3.2,0) arc (0:180:3.2cm and 0.768cm);
+\draw (-2.62128654172,1.78179985147) arc (180:360:2.62128654172cm and 0.629108770014cm);
+\draw[dashed] (2.62128654172,1.78179985147) arc (0:180:2.62128654172cm and 0.629108770014cm);
+\draw[domain=-90:90,samples=120,variable=\t] plot ({3.2*cos(\t)*cos(10)},{-3.2*cos(\t)*sin(10)*.24+3.2*sin(\t)*0.970772887961});
+\draw[dashed] (P)--(A) (P)--(B) (O)--(Ap);
+\draw (O)--(A) (O)--(B) (A)--(Ap);
+\draw (0.489029515437,-0.251694523245) arc (-27.2340495571:47.5631468321:0.55cm);
+\draw (0.88120634772,0.570942530154) arc (32.9396113917:47.5631468321:1.05cm);
+\draw (0.533486744113,1.50722400793) arc (-27.2340495571:-2.42322417791:0.6cm);
+\node[below left=2pt] at (O) {$O$};
+\node[left=2pt] at (P) {$P$};
+\node[below right=2pt,xshift=10.00bp,yshift=0.00bp] at (A) {$A$};
+\node[above right=2pt] at (B) {$B$};
+\node[inner sep=1pt] at (0.8,0.04) {$a$};
+\node[inner sep=1pt,xshift=-10.00bp,yshift=2.00bp] at (0.58,0.5) {$\theta$};
+\node[inner sep=1pt,xshift=0.00bp,yshift=8.00bp] at (0.72,1.7) {$\beta$};
+\node[inner sep=1pt] at (1.5,1.9017998514650953) {$r$};
+\end{tikzpicture}

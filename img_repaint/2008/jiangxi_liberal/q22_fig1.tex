@@ -1,0 +1,15 @@
+\begin{tikzpicture}[x=.85cm,y=.55cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-4,0)--(4.2,0) node[right=2pt] {$x$};
+\draw[->] (0,-1)--(0,8.2) node[above=2pt] {$y$};
+\draw[domain=-2.8:2.8,samples=160] plot (\x,{\x*\x});
+\coordinate (A) at (-2.5,6.25);\coordinate (B) at (1.5,2.25);
+\coordinate (E) at (1.2,1.44);\coordinate (F) at (-2,4);
+\coordinate (P) at (0,3);\coordinate (M) at (.75,3);\coordinate (N) at (-.75,3);
+\draw (A)--(B) (A)--(E) (F)--(B);
+\draw[dashed] (N)--(M);
+\foreach \p in {N,P,M}{\fill (\p) circle (1pt);}
+\node[left=2pt] at (A) {$A$};\node[right=2pt] at (B) {$B$};
+\node[right=2pt] at (E) {$E$};\node[left=2pt] at (F) {$F$};
+\node[below left=2pt] at (N) {$N$};\node[above right=2pt] at (M) {$M$};
+\node[below left=2pt] at (P) {$P$};\node[below left=2pt] at (0,0) {$O$};
+\end{tikzpicture}

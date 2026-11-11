@@ -1,0 +1,21 @@
+\begin{tikzpicture}[x=1cm,y=1.65cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-2.9,0) -- (2.9,0) node[below,xshift=-2pt] {$x$};
+\draw[->] (0,-2.9) -- (0,2.9) node[right,yshift=-2pt] {$y$};
+\node[below right,xshift=3pt,yshift=-5pt] at (0,0) {$O$};
+% parabolas from statement: C1: y=x^2/4 (up), C2: y=-x^2/4 (down), p=2
+\draw[domain=-2.5:2.5,samples=80,smooth] plot (\x,{\x*\x/4});
+\draw[domain=-2.5:2.5,samples=80,smooth] plot (\x,{-\x*\x/4});
+% points on curves
+\coordinate (A) at (-2.4142135624,1.4571067812);
+\coordinate (M) at (-1.0000000000,-0.2500000000);
+\coordinate (B) at (0.4142135624,0.0428932188);
+% chords / tangent
+\draw (A) -- (M);
+\draw (M) -- (B);
+\draw (B)--(2.3,0.433452377916);
+% labels with clearance
+\node[left,xshift=-2pt,yshift=2pt] at (A) {$A$};
+\node[below left,xshift=-1pt,yshift=-17pt] at (M) {$M$};
+\node[above,xshift=1pt,yshift=4pt] at (B) {$B$};
+\end{tikzpicture}

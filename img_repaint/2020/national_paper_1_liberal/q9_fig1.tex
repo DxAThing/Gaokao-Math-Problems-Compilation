@@ -1,56 +1,24 @@
-% Source: source/普通高考/2020/2020全国1文(河南,河北,山西,江西,湖北,湖南,广东,安徽,福建).pdf, page 1.
-% The source flowchart is vector line art; pdfimages found no matching embedded flowchart.
-% Original comparison crop: tmp/redraw_flowchart_2020_national_paper_1_liberal/q9_orig_source.png,
-% cropped from a no-grid page render after grid100/grid50 localization.
-% Elements: start/end rounded rectangles, input/output parallelograms, two process rectangles,
-% decision diamond S<=100, directed connectors, and the 是/否 branch labels.
-% Node→directed-edge list: 开始→输入(n=1,S=0)→S=S+n→S<=100;
-% S<=100 的 是→n=n+2→S=S+n；S<=100 的 否→输出 n→结束.
-% solid segments: all node borders and connectors; dashed segments: none.
-% labels: every node is locally zero-indented and horizontally/vertically centered;
-% 是 marks the left loop branch and 否 marks the downward output branch.
-\begin{tikzpicture}[>=stealth, line width=0.45pt]
-  % The source is a schematic flowchart; coordinates preserve its topology and labels.
-  \tikzset{flow/.style={draw=black,line width=0.45pt,align=center,inner sep=0.6pt,
-    execute at begin node={\setlength{\parindent}{0pt}}}}
-  \tikzset{every node/.style={font=\normalsize,align=center,inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}}}}
-  \node[flow, rounded corners=2pt, minimum width=1.05cm, minimum height=0.62cm]
-    (start) at (0,7.55) {开始};
-  % Input parallelogram is drawn around a centered text node to keep the source margins.
-  \draw[flow] (-1.80,6.90) -- (1.90,6.90) -- (1.70,6.20) -- (-2.00,6.20) -- (-1.80,6.90);
-  \node (input) at (0,6.55) {输入 \(n=1,S=0\)};
+\begin{tikzpicture}[>=Stealth, line width=0.6pt,
+  every node/.append style={execute at begin node={\parindent=0pt}},
+  start/.style={rectangle, draw, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm, align=center},
+  proc/.style={rectangle, draw, minimum width=30mm, minimum height=11mm, inner sep=4pt, align=center},
+  dec/.style={diamond, draw, aspect=2.2, inner sep=4pt, align=center},
+  io/.style={trapezium, draw, trapezium left angle=70, trapezium right angle=110, minimum width=30mm, minimum height=11mm, inner sep=4pt, align=center}
+]
+\node[start] (start) at (0,0) {开始};
+\node[io,minimum width=56mm] (inNS) at (0,-2.0) {输入$n=1,S=0$};
+\coordinate (Jin) at (0,-3.3);
+\node[proc] (pSum) at (0,-4.4) {$S=S+n$};
+\node[dec] (dec) at (0,-6.5) {$S\leqslant 100$};
+\node[io] (out) at (0,-8.7) {输出$n$};
+\node[start] (end) at (0,-10.7) {结束};
+\node[proc] (pStep) at (-3.8,-4.4) {$n=n+2$};
+\draw[->] (start.south) -- (inNS.north);
+\draw[->] (inNS.south) -- (Jin) -- (pSum.north);
 
-  \node[flow, minimum width=1.85cm, minimum height=0.58cm] (inc)
-        at (-2.55,5.32) {\(n=n+2\)};
-  \node[flow, minimum width=1.95cm, minimum height=0.58cm] (sum)
-        at (0,5.32) {\(S=S+n\)};
-
-  \node[flow, diamond, aspect=2.8, minimum width=3.25cm, minimum height=0.78cm]
-        (test) at (0,4.10) {\(S\leq 100\)};
-  \node[flow, trapezium, trapezium left angle=72, trapezium right angle=108,
-        minimum width=1.50cm, minimum height=0.60cm] (output) at (0,2.85)
-        {输出 \(n\)};
-  \node[flow, rounded corners=2pt, minimum width=1.05cm, minimum height=0.62cm]
-        (finish) at (0,1.65) {结束};
-
-  % Downstream path and loop connectors.
-  \draw[->,flow] (start.south) -- (0,6.90);
-  \draw[flow] (0,6.20) -- (0,5.90);
-  \draw[->,flow] (0,5.90) -- (sum.north);
-  \draw[->,flow] (sum.south) -- (test.north);
-  \draw[->,flow] (test.south) -- (output.north)
-        node[pos=0.50, right=2pt] {否};
-  \draw[->,flow] (output.south) -- (finish.north);
-
-  % Yes branch: diamond left tip -> increment -> return to the sum step.
-  \draw[flow] (test.west) -- (-2.55,4.10) -- (-2.55,4.70)
-        node[pos=0.02, above right=1pt] {是};
-  \draw[->,flow] (-2.55,4.70) -- (inc.south);
-  % Route the return above both process boxes, preserving clearances.
-  \draw[flow] (inc.north) -- (-2.55,5.90);
-  % The return arrow terminates at the visible junction on the main shaft;
-  % the shaft's own arrow continues into the sum box.
-  \draw[flow] (-2.55,5.90) -- (-0.75,5.90);
-  \draw[->,flow] (-0.75,5.90) -- (0,5.90);
+\draw[->] (pSum.south) -- (dec.north);
+\draw[->] (dec.west) -- node[pos=0.22,above=0.7mm] {是} (-3.8,-6.5) -- (pStep.south);
+\draw[->] (pStep.north) -- (-3.8,-3.3) -- (Jin);
+\draw[->] (dec.south) -- node[midway,right=0.7mm] {否} (out.north);
+\draw[->] (out.south) -- (end.north);
 \end{tikzpicture}

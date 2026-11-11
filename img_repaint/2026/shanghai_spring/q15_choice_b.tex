@@ -1,0 +1,14 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=2.8cm,y=2.8cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-0.5,0)--(1.5,0) node[right=2pt,inner sep=0pt] {$x$};
+\draw[->] (0,-1.5)--(0,1.5) node[above=2pt,inner sep=0pt] {$y$};
+\draw (-0.12,1)--(0.12,1);
+\draw (-0.12,-1)--(0.12,-1);
+\draw[domain=0:1,samples=121] plot (\x,{0.6+1.4*\x-0.6*\x*\x});
+\draw[domain=0:1,samples=121] plot (\x,{-0.6-1.4*\x+0.6*\x*\x});
+\draw (1,-1.4)--(1,1.4);
+\node[anchor=north east,inner sep=0pt] at (-0.05,-0.05) {$O$};
+\node[left=2pt,inner sep=0pt] at (-0.12,1) {$1$};
+\node[left=2pt,inner sep=0pt] at (-0.12,-1) {$-1$};
+\node[anchor=north west,inner sep=0pt] at (1.05,-0.07) {$1$};
+\end{tikzpicture}

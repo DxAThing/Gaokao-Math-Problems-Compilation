@@ -1,0 +1,37 @@
+% 正方体示意：A 为前左下顶点，B 为前右下顶点，M 为后右下顶点；
+% C、D 分别为右棱、顶棱中点；截面 ABCD 中 AD、AB 为虚线，DC、CB 为实线
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt, font=\normalsize, >=Stealth]
+  \coordinate (A) at (0.5,0.8);
+  \coordinate (B) at (3.3,0.5);
+  \coordinate (M) at (4.3,1.3);
+  \coordinate (Q) at (1.5,1.6);
+  \coordinate (FTL) at (0.5,3.8);
+  \coordinate (FTR) at (3.3,3.5);
+  \coordinate (BTL) at (1.5,4.6);
+  \coordinate (BTR) at (4.3,4.3);
+  \coordinate (D) at (2.9,4.45);
+  \coordinate (C) at (3.8,3.9);
+  % 正方体可见棱（实线）
+  \draw (A) -- (FTL);
+  \draw (FTL) -- (FTR);
+  \draw (FTR) -- (B);
+  \draw (B) -- (M);
+  \draw (M) -- (BTR);
+  \draw (FTR) -- (BTR);
+  \draw (BTL) -- (BTR);
+  \draw (FTL) -- (BTL);
+  % 遮挡棱（虚线）
+  \draw[dashed] (A) -- (Q);
+  \draw[dashed] (Q) -- (M);
+  \draw[dashed] (Q) -- (BTL);
+  % 截面：A-D、A-B 虚线；D-C、C-B 实线
+  \draw[dashed] (Q) -- (D);
+  \draw (A)--(B);\draw[dashed] (Q)--(B);
+  \draw (D) -- (C);
+  \draw (C) -- (B);
+  \node[left=2pt] at (Q) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (M) {$M$};
+  \node[above] at (D) {$D$};
+  \node[below left=2pt,xshift=0.00bp,yshift=-6.00bp] at (C) {$C$};
+\end{tikzpicture}

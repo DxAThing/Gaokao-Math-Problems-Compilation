@@ -1,0 +1,8 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-4.05,0)--(3.85,0) node[below right,inner sep=0pt,yshift=-1pt] {$x$};
+\draw[->] (0,-1.75)--(0,3.15) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\node[inner sep=0pt] at (-0.46,0.40) {$O$};
+\draw[domain=-2.96:-0.42,samples=80] plot (\x,{ln((\x)*(\x))});
+\draw[domain=0.42:2.96,samples=80] plot (\x,{ln((\x)*(\x))});
+\end{tikzpicture}

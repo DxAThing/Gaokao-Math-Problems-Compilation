@@ -1,0 +1,34 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  geometry edge/.style={solid,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=2pt}]
+% Cylinder, axial square ABCD: A(-2,0) B(2,0) D(-2,4) C(2,4), r=2.
+\coordinate (A) at (-2,0);
+\coordinate (B) at (2,0);
+\coordinate (D) at (-2,4);
+\coordinate (C) at (2,4);
+\coordinate (E) at (-0.3,-0.44);
+\coordinate (F) at (-0.6643,0.5115);
+% Top rim (full ellipse outline, solid)
+\draw[geometry edge] (0,4) ellipse (2 and 0.45);
+% Bottom rim: front solid, back dashed
+\draw[geometry edge] (-2,0) arc (180:360:2 and 0.45);
+\draw[geometry edge,dashed] (-2,0) arc (180:0:2 and 0.45);
+% Sides and top diameter
+\draw[geometry edge] (D)--(A);
+\draw[geometry edge] (C)--(B);
+\draw[geometry edge] (D)--(C);
+% Hidden / interior (dashed): AB, AE, BE, DE (with F), DB, AF
+\draw[geometry edge,dashed] (A)--(B);
+\draw[geometry edge,dashed] (A)--(E);
+\draw[geometry edge,dashed] (B)--(E);
+\draw[geometry edge,dashed] (D)--(E);
+\draw[geometry edge,dashed] (D)--(B);
+\draw[geometry edge,dashed] (A)--(F);
+% Labels
+\node[geometry label,left] at (A) {$A$};
+\node[geometry label,right] at (B) {$B$};
+\node[geometry label,above right] at (C) {$C$};
+\node[geometry label,left] at (D) {$D$};
+\node[geometry label,below] at (E) {$E$};
+\node[geometry label,above right] at (F) {$F$};
+\end{tikzpicture}

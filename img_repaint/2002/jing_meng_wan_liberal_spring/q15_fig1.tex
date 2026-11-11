@@ -1,0 +1,14 @@
+\begin{tikzpicture}[line width=.6pt,line join=round,line cap=round]
+\tikzset{hid/.style={dashed}}
+\coordinate (A) at (0,4.4); \coordinate (D) at (5.4,4.4); \coordinate (E) at (0,1.6); \coordinate (F) at (5.4,1.6);
+\coordinate (Bs) at (1.1,0); \coordinate (Cs) at (6.5,0); \coordinate (Bd) at (0,-2.4); \coordinate (Cd) at (5.4,-2.4);
+\coordinate (M) at (2.6,2.5);
+\draw[solid] (A) -- (D); \draw[solid] (D) -- (F); \draw[solid] (A) -- (E); \draw[solid] (E) -- (F);
+\draw[solid] (E) -- (Bs); \draw[solid] (Bs) -- (Cs); \draw[solid] (F) -- (Cs); \draw[solid] (Bs) -- (M);
+\draw[hid] (E) -- (Bd); \draw[hid] (Bd) -- (Cd); \draw[hid] (Cd) -- (F);
+\node[anchor=south east] at (A) {$A$}; \node[anchor=south west] at (D) {$D$};
+\node[anchor=east] at (E) {$E$}; \node[anchor=west] at (F) {$F$};
+\node[anchor=west] at (M) {$M$};
+\node[anchor=north east] at (Bs) {$B$}; \node[anchor=west] at (Cs) {$C$};
+\node[anchor=north east] at (Bd) {$B$}; \node[anchor=north west] at (Cd) {$C$};
+\end{tikzpicture}

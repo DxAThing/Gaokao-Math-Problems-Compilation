@@ -1,0 +1,40 @@
+\begin{tikzpicture}[line width=0.6pt]
+% Two identical right triangular prisms, side by side; left panel P*, right panel Q*.
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (A2) at (0,1.6);
+\coordinate (B2) at (4,1.6);
+\coordinate (Ci) at (3.2,0.5);
+\coordinate (Pt) at (3.2,2.1);
+\coordinate (Q0) at (6,0);
+\coordinate (QA) at (6,0);
+\coordinate (QB) at (10,0);
+\coordinate (QA2) at (6,1.6);
+\coordinate (QB2) at (10,1.6);
+\coordinate (QCi) at (9.2,0.5);
+\coordinate (QPt) at (9.2,2.1);
+% left panel solid
+\draw[solid] (A) -- (B) -- (B2) -- (A2) -- cycle;
+\draw[solid] (A2) -- (Pt) -- (B2);
+% left panel dashed (hidden depth edges)
+\draw[dashed] (A) -- (Ci);
+\draw[dashed] (B) -- (Ci);
+\draw[dashed] (Ci) -- (Pt);
+% right panel solid
+\draw[solid] (QA) -- (QB) -- (QB2) -- (QA2) -- cycle;
+\draw[solid] (QA2) -- (QPt) -- (QB2);
+% right panel dashed
+\draw[dashed] (QA) -- (QCi);
+\draw[dashed] (QB) -- (QCi);
+\draw[dashed] (QCi) -- (QPt);
+% labels left
+\node[left] at ($(A)!0.5!(A2)$) {$\dfrac{2}{a}$};
+\node[below] at ($(A)!0.5!(B)$) {$5a$};
+\node[above] at ($(A)!0.45!(Ci)$) {$4a$};
+\node[above] at ($(B)!0.5!(Ci)$) {$3a$};
+% labels right
+\node[left] at ($(QA)!0.5!(QA2)$) {$\dfrac{2}{a}$};
+\node[below] at ($(QA)!0.5!(QB)$) {$5a$};
+\node[above] at ($(QA)!0.45!(QCi)$) {$4a$};
+\node[above] at ($(QB)!0.5!(QCi)$) {$3a$};
+\end{tikzpicture}

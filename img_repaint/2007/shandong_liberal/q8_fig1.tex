@@ -1,88 +1,32 @@
-% Source PDF: source/普通高考/2007/2007山东文.pdf
-% Page: 1; PDF embedded bitmap attempt: no image objects were present (pdfimages -list).
-% Grid evidence: tmp/redraw_2007_shandong/page-1_grid100.png and q8_block_grid50.png.
-% Original-side crop: tmp/redraw_2007_shandong/q8_block.png, cropped from the no-grid page render.
-% Elements: frequency-density y-axis with arrow and labels, broken x-axis with ticks 0 and 13--19,
-% six unit-width histogram bars, dashed horizontal guides at 0.02, 0.04, 0.06, 0.18, 0.34, 0.36.
-% Display mapping: source x=0 is displayed at 0, source x=13 at 1, and source
-% group boundaries 13--19 at display coordinates 1--7, so the break is exactly
-% one displayed group width while the tick labels retain their source values.
-% Relations: bins [13,14), [14,15), [15,16), [16,17), [17,18), [18,19) have heights
-% 0.02, 0.18, 0.36, 0.34, 0.06, 0.04 respectively, read from the source graph and question data.
-% solid segments: bar outlines, x/y axes, tick marks, and x-axis break stroke.
-% dashed segments: horizontal reference guides, each ending at the corresponding bar boundary.
-% Labels: 频率/组距 is above the y-axis; 秒 is right of the x-axis arrow; tick labels stay below the axis.
-\begin{tikzpicture}[baseline]
-\begin{axis}[exam statistical histogram,
-    width=13.548cm,
-    height=16cm,
-    axis lines=none,
-    clip=false,
-    xmin=-0.75,
-    xmax=8.3,
-    ymin=-0.045,
-    ymax=0.395,
-    ticks=none,
-    x tick label as interval=false,
-]
-    % Dashed reference levels from the source histogram.
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.02) -- (axis cs:1,0.02);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.04) -- (axis cs:7,0.04);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.06) -- (axis cs:6,0.06);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.18) -- (axis cs:3,0.18);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.34) -- (axis cs:4,0.34);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.36) -- (axis cs:3,0.36);
+% Shandong 2007 liberal: 100m-test density histogram, 6 groups of 1s.
+% Densities equal the stated frequencies since the group width is 1s.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram, exam statistical template wide,
+  xmin=12,ymin=0,
+  xtick={12,13,14,15,16,17,18,19},
+  ytick={0,0.02,0.04,0.06,0.18,0.34,0.36},
+  xmax=19.5,
+  ymax=0.37,
+  xticklabels={,13,14,15,16,17,18,19},
+  yticklabels={}]
+\addplot[draw=black,fill=white] coordinates
+  {(13,0.02) (14,0.18) (15,0.36) (16,0.34) (17,0.06) (18,0.04) (19,0)};
+\draw[semithick,densely dashed] (axis cs:12,0.36) -- (axis cs:16,0.36);
+\draw[semithick,densely dashed] (axis cs:12,0.34) -- (axis cs:17,0.34);
+\draw[semithick,densely dashed] (axis cs:12,0.18) -- (axis cs:15,0.18);
+\draw[semithick,densely dashed] (axis cs:12,0.06) -- (axis cs:18,0.06);
+\draw[semithick,densely dashed] (axis cs:12,0.04) -- (axis cs:19,0.04);
+\draw[semithick,densely dashed] (axis cs:12,0.02) -- (axis cs:14,0.02);
+\examstatxbreak{12.5}{0}
+\examstatylabel{频率/组距}
+\examstatxlabel{秒}
 
-    \addplot[
-        ybar interval,
-        draw=black,
-        fill=white,
-        line width=0.7pt,
-    ] coordinates {
-        (1,0.02)
-        (2,0.18)
-        (3,0.36)
-        (4,0.34)
-        (5,0.06)
-        (6,0.04)
-        (7,0.00)
-    };
-
-    % Axes and the source's broken x-axis between 0 and 13 (one group width).
-    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:8,0);
-    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,0.385);
-    \examstatxbreak[line width=0.8pt]{0.42000000000000004}{0};
-
-    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \examstatxlabel{秒};
-    \node[anchor=north east,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:0,0.000000) {0};
-
-    \draw[line width=0.5pt] (axis cs:1,0) -- (axis cs:1,-0.008);
-    \draw[line width=0.5pt] (axis cs:2,0) -- (axis cs:2,-0.008);
-    \draw[line width=0.5pt] (axis cs:3,0) -- (axis cs:3,-0.008);
-    \draw[line width=0.5pt] (axis cs:4,0) -- (axis cs:4,-0.008);
-    \draw[line width=0.5pt] (axis cs:5,0) -- (axis cs:5,-0.008);
-    \draw[line width=0.5pt] (axis cs:6,0) -- (axis cs:6,-0.008);
-    \draw[line width=0.5pt] (axis cs:7,0) -- (axis cs:7,-0.008);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:1,-0.008000) {13};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:2,-0.008000) {14};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:3,-0.008000) {15};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:4,-0.008000) {16};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:5,-0.008000) {17};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:6,-0.008000) {18};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:7,-0.008000) {19};
-
-    \draw[line width=0.5pt] (axis cs:0,0.02) -- (axis cs:-0.35,0.02);
-    \draw[line width=0.5pt] (axis cs:0,0.04) -- (axis cs:-0.35,0.04);
-    \draw[line width=0.5pt] (axis cs:0,0.06) -- (axis cs:-0.35,0.06);
-    \draw[line width=0.5pt] (axis cs:0,0.18) -- (axis cs:-0.35,0.18);
-    \draw[line width=0.5pt] (axis cs:0,0.34) -- (axis cs:-0.35,0.34);
-    \draw[line width=0.5pt] (axis cs:0,0.36) -- (axis cs:-0.35,0.36);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.350000,0.02) {0.02};
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.350000,0.04) {0.04};
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.350000,0.06) {0.06};
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.350000,0.18) {0.18};
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.350000,0.34) {0.34};
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.350000,0.36) {0.36};
+\examstatyticklabel{12}{0}{0}{0.000000}
+\examstatyticklabel{12}{0.02}{0.02}{1.938285}
+\examstatyticklabel{12}{0.04}{0.04}{3.876569}
+\examstatyticklabel{12}{0.06}{0.06}{5.814854}
+\examstatyticklabel{12}{0.18}{0.18}{0.000000}
+\examstatyticklabel{12}{0.34}{0.34}{0.000000}
+\examstatyticklabel{12}{0.36}{0.36}{1.938285}
 \end{axis}
 \end{tikzpicture}

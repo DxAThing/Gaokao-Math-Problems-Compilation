@@ -1,0 +1,35 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Left panel: flat sheet with four dashed cut squares.
+\draw (0,0) rectangle (8,4);
+% bottom-left cut
+\draw[dashed] (0.9,0) -- (0.9,0.9) -- (0,0.9);
+% bottom-right cut
+\draw[dashed] (7.1,0) -- (7.1,0.9) -- (8,0.9);
+% top-left cut
+\draw[dashed] (0.9,4) -- (0.9,3.1) -- (0,3.1);
+% top-right cut
+\draw[dashed] (7.1,4) -- (7.1,3.1) -- (8,3.1);
+% arrow between panels
+\node at (9.1,2) {$\Longrightarrow$};
+% Right panel: shallow open box in oblique projection.
+\coordinate (P1) at (10.5,0);
+\coordinate (P2) at (13.0,0);
+\coordinate (P3) at (13.0,0.7);
+\coordinate (P4) at (10.5,0.7);
+\coordinate (Q1) at (12.1,1.5);
+\coordinate (Q2) at (14.6,1.5);
+\coordinate (Q3) at (14.6,2.2);
+\coordinate (Q4) at (12.1,2.2);
+% front wall
+\draw (P1) -- (P2) -- (P3) -- (P4) -- cycle;
+% visible depth edges and back rim
+\draw (P4) -- (Q4);
+\draw (Q4) -- (Q3);
+\draw (Q3) -- (Q2);
+\draw (Q2) -- (P2);
+\draw (P3) -- (Q3);
+% hidden bottom edges
+\draw[dashed] (P1) -- (Q1);
+\draw[dashed] (Q1) -- (Q2);
+\draw[dashed] (Q1) -- (Q4);
+\end{tikzpicture}

@@ -1,0 +1,21 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (S) at (0,4);
+\coordinate (O) at (0,0);
+\coordinate (L) at (-2.5,0);
+\coordinate (R) at (2.5,0);
+\coordinate (A) at (1.55,1.52);
+% axis (hidden)
+\draw[dashed] (S) -- (O);
+% base diameter (hidden)
+\draw[dashed] (L) -- (R);
+% base rim: back dashed, front solid
+\draw[dashed] (L) arc (180:0:2.5 and 0.6);
+\draw (L) arc (180:360:2.5 and 0.6);
+% generators (visible)
+\draw (S) -- (L);
+\draw (S) -- (R);
+% OA (hidden, on base plane to generator)
+\draw[dashed] (O) -- (A);
+\node[inner sep=2pt,below] at ([yshift=-2pt]O) {$O$};
+\node[inner sep=2pt,above right] at ([xshift=6pt,yshift=4pt]A) {$A$};
+\end{tikzpicture}

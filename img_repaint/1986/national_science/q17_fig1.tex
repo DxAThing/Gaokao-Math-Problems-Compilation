@@ -1,0 +1,23 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,
+  solid edge/.style={solid,line width=.6pt},
+  hidden edge/.style={dashed,line width=.6pt}]
+\coordinate (A) at (0,0);
+\coordinate (B) at (5,0);
+\coordinate (O) at (2.5,0);
+\coordinate (C) at (1.25,0.866);
+\coordinate (P) at (0,4.5);
+\draw[solid edge] (0,0) arc (180:360:2.5cm and 1.0cm);
+\draw[solid edge] (5,0) arc (0:47.9249779492:2.5cm and 1cm);
+\draw[hidden edge] ({2.5+2.5*cos(47.9249779492)},{sin(47.9249779492)}) arc (47.9249779492:180:2.5cm and 1cm);
+\draw[solid edge] (P)--(A);
+\draw[solid edge] (A)--(B);
+\draw[solid edge] (P)--(B);
+\draw[hidden edge] (P)--(C);
+\draw[hidden edge] (A)--(C);
+\draw[hidden edge] (C)--(B);
+\node[above] at (P) {$P$};
+\node[below left] at (A) {$A$};
+\node[below right] at (B) {$B$};
+\node[below] at (C) {$C$};
+\node[below] at (O) {$O$};
+\end{tikzpicture}

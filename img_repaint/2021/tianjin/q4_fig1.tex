@@ -1,0 +1,17 @@
+% 2021_tianjin_q4_fig1: histogram, 8 bins width 4, density sums to 1.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,exam statistical template wide,
+  xmin=62,ymin=0,
+  xtick={62,66,70,74,78,82,86,90,94,98},
+  ytick={0,0.020,0.025,0.030,0.035,0.040,0.045,0.050},
+  ymajorgrids=true,major grid style={dashed},
+  xmax=100,
+  ymax=0.0525,
+  xticklabels={,66,70,74,78,82,86,90,94,98}]
+\addplot[draw=black,fill=white] coordinates
+  {(66,0.035) (70,0.020) (74,0.030) (78,0.040) (82,0.050) (86,0.025) (90,0.030) (94,0.020) (98,0)};
+\examstatxbreak{64}{0}
+\examstatylabel{频率/组距}
+\examstatxlabel{评分}
+\end{axis}
+\end{tikzpicture}

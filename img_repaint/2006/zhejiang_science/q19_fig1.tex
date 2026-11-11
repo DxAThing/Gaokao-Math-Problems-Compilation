@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-3.6,0)--(4.2,0) node[inner sep=1.5pt,below=3pt] at (4.2,0) {$x$};
+\draw[->] (0,-2.6)--(0,2.6) node[inner sep=1.5pt,above=3pt,right=1pt] at (0,2.6) {$y$};
+\node[inner sep=1.5pt,below left=2pt and 4pt] at (0,0) {$O$};
+% ellipse a=2.2,b=1.1 (ratio 2:1 from x^2/2+2y^2=1)
+\draw[thick] (0,0) ellipse (2.2 and 1.1);
+% key points (scaled by 2.2/sqrt(2)): A(2,0)->(3.111,0), B(0,1)->(0,1.556), T(1,0.5)->(1.556,0.778), M->(2.508,0), F1/F2 c=1.225->1.905
+\coordinate (A) at (3.1112698372,0.0000000000);
+\coordinate (Bpt) at (0.0000000000,1.5556349186);
+\coordinate (T) at (1.5556349186,0.7778174593);
+\coordinate (Mpt) at (2.5082628628,0.0000000000);
+\coordinate (FONE) at (-1.9052558883,0.0000000000);
+\coordinate (FTWO) at (1.9052558883,0.0000000000);
+% thin lines: B-A tangent through T, F1-T
+\draw[thin] (Bpt)--(A);
+\draw[thin] (FONE)--(T);
+\fill (FONE) circle (1.5pt);
+\fill (FTWO) circle (1.5pt);
+% labels with clearance
+\node[inner sep=1.5pt,left=5pt] at (Bpt) {$B$};
+\node[inner sep=1.5pt,above right=3pt and 4pt] at (T) {$T$};
+\node[inner sep=1.5pt,below=3pt,xshift=7pt,yshift=3pt] at (FONE) {$F_{1}$};
+\node[inner sep=1.5pt,below=3pt,xshift=-5pt,yshift=3pt] at (FTWO) {$F_{2}$};
+\node[inner sep=1.5pt,below=3pt] at (Mpt) {$M$};
+\node[inner sep=1.5pt,below=3pt,right=1pt,xshift=-1pt,yshift=7pt] at (A) {$A$};
+\end{tikzpicture}
+

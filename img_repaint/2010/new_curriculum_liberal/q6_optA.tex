@@ -1,0 +1,11 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% d(t)=2|sin t|, zeros at 0, pi, 2pi; peaks 2 (faithful to option A even though it is wrong)
+\draw[->] (-0.6,0)--(7.3,0) node[right=2pt] {$x$};
+\draw[->] (0,-0.5)--(0,2.9) node[above=2pt] {$y$};
+\draw[domain=0:6.2832,samples=220,smooth] plot (\x,{2*abs(sin(\x r))});
+\node[below left=5pt] at (0,0) {$O$};
+\node[left=4pt] at (0,2) {$2$};
+\draw (0,2)--(-0.08,2);
+\node[below=5pt] at (3.1416,0) {$\pi$};
+\draw (3.1416,0)--(3.1416,-0.08);
+\end{tikzpicture}

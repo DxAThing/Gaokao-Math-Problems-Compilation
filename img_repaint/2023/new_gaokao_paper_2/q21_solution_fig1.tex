@@ -1,0 +1,16 @@
+\begin{tikzpicture}[x=1cm,y=.55cm,line width=.6pt,>=Stealth]
+\draw[->] (-5.6,0)--(4,0) node[right=3pt] {$x$};
+\draw[->] (0,-10.5)--(0,8.5) node[above left=3pt] {$y$};
+\node[below left=3pt] at (0,0) {$O$};
+\draw[domain=-10:8,samples=161] plot ({-2*sqrt(1+\x*\x/16)},\x);
+\draw[domain=-10:8,samples=161] plot ({2*sqrt(1+\x*\x/16)},\x);
+\foreach \x in {-4,-2,2}{\draw (\x,.12)--(\x,-.12);}
+\node[below right=4pt,inner sep=0pt] at (-4,0) {$-4$};\node[below left=4pt,inner sep=0pt] at (-2,0) {$-2$};\node[below right=4pt,inner sep=0pt] at (2,0) {$2$};
+\node[above right=3pt] at (-2,0) {$A_1$};
+\node[above left=3pt] at (2,0) {$A_2$};
+\draw (-5.2,-9.600000000000001)--(-3.3333333333333335,5.333333333333332);
+\draw (-3.8333333333333335,7.333333333333331)--(-0.1,-7.599999999999997);
+\draw (-5.2,-9.600000000000001)--(3.6,2.1333333333333337);
+\node[left=3pt] at (-3.3333333333333335,5.333333333333332) {$M$};
+\node[below left=3pt,xshift=3pt,yshift=-5pt] at (-0.9999999999999997,-4.0) {$P$};
+\end{tikzpicture}

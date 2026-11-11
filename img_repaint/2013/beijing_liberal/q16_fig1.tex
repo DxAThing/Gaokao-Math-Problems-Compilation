@@ -1,0 +1,32 @@
+% 2013 Beijing liberal q16: daily AQI line chart, 1-14 March with labeled values.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template line,exam statistical template wide,
+  xmin=0.5,xmax=14.5,ymin=0,ymax=275,
+  xtick={1,2,3,4,5,6,7,8,9,10,11,12,13,14},
+  xticklabels={1日,2日,3日,4日,5日,6日,7日,8日,9日,10日,11日,12日,13日,14日},
+  ytick={0,50,100,150,200,250}]
+\draw[dashed,line width=0.6pt] (axis cs:0.5,50) -- (axis cs:14.5,50);
+\draw[dashed,line width=0.6pt] (axis cs:0.5,100) -- (axis cs:14.5,100);
+\draw[dashed,line width=0.6pt] (axis cs:0.5,150) -- (axis cs:14.5,150);
+\draw[dashed,line width=0.6pt] (axis cs:0.5,200) -- (axis cs:14.5,200);
+\draw[dashed,line width=0.6pt] (axis cs:0.5,250) -- (axis cs:14.5,250);
+\addplot[mark=*,mark size=1.5pt] coordinates
+  {(1,86) (2,25) (3,57) (4,143) (5,220) (6,160) (7,40) (8,217) (9,160) (10,121) (11,158) (12,86) (13,79) (14,37)};
+\node[anchor=west,xshift=3pt] at (axis cs:1,86) {86};
+\node[anchor=west,xshift=3pt] at (axis cs:2,25) {25};
+\node[anchor=west,xshift=3pt] at (axis cs:3,57) {57};
+\node[anchor=west,xshift=3pt] at (axis cs:4,143) {143};
+\node[anchor=west,xshift=3pt] at (axis cs:5,220) {220};
+\node[anchor=west,xshift=3pt] at (axis cs:6,160) {160};
+\node[anchor=west,xshift=3pt] at (axis cs:7,40) {40};
+\node[anchor=west,xshift=3pt] at (axis cs:8,217) {217};
+\node[anchor=west,xshift=3pt] at (axis cs:9,160) {160};
+\node[anchor=west,xshift=3pt] at (axis cs:10,121) {121};
+\node[anchor=west,xshift=3pt] at (axis cs:11,158) {158};
+\node[anchor=north,yshift=-3pt] at (axis cs:12,86) {86};
+\node[anchor=west,xshift=3pt] at (axis cs:13,79) {79};
+\node[anchor=west,xshift=3pt] at (axis cs:14,37) {37};
+\examstatylabel{空气质量指数}
+\examstatxlabel{日期}
+\end{axis}
+\end{tikzpicture}

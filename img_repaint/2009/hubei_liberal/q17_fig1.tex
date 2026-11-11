@@ -1,0 +1,17 @@
+% 2009_hubei_liberal_q17_fig1: schematic application diagram (brick old wall + U new wall + x dimension).
+% Global numeric coordinates, 12pt, .6pt, grayscale.
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+% Old brick wall band: double horizontal lines.
+\draw (0,0) -- (12,0);
+\draw (0,-0.4) -- (12,-0.4);
+% Middle-course joints; exterior short joints are offset by half a brick.
+\foreach \x in {0.3,0.9,...,11.7} {\draw (\x,0)--(\x,-0.4);}
+\foreach \x in {0,0.6,...,12} {\draw (\x,0)--(\x,0.15);\draw (\x,-0.4)--(\x,-0.55);}
+% U-shaped new wall: verticals meet band bottom edge; bottom stubs symmetric about U centre 6.0.
+% U width 9.0 (1.5..10.5); gap 5.29..6.71 width 1.42 (15.8% of U), centred at 6.0.
+\draw (1.5,-0.4) -- (1.5,-4.0) -- (5.29,-4.0);
+\draw (6.71,-4.0) -- (10.5,-4.0) -- (10.5,-0.4);
+% x dimension double-arrow between verticals with central white gap.
+\draw[dimension line] (1.5,-1.5) -- node[dimension label] {$x$} (10.5,-1.5);
+\end{tikzpicture}

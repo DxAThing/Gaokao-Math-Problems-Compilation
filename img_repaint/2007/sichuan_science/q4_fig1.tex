@@ -1,0 +1,41 @@
+% q4 正方体 ABCD-A1B1C1D1 + 三角形CB1D1 + 体对角线AC1
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (2.6,0);
+\coordinate (C) at (4.2,0.8);
+\coordinate (D) at (1.6,0.8);
+\coordinate (A1) at (0,2.6);
+\coordinate (B1) at (2.6,2.6);
+\coordinate (C1) at (4.2,3.4);
+\coordinate (D1) at (1.6,3.4);
+% 前面
+\draw (A)--(B)--(B1)--(A1)--cycle;
+% 顶面
+\draw (A1)--(D1)--(C1);
+\draw (B1)--(C1);
+\draw (A1)--(B1);
+\draw (B1)--(D1);
+% 右面竖棱
+\draw (C1)--(C);
+\draw (B)--(C);
+% 底面(遮挡虚线)
+\draw[dashed] (A)--(D);
+\draw[dashed] (D)--(C);
+\draw[dashed] (B)--(D);
+% 后竖棱
+\draw[dashed] (D)--(D1);
+% 三角形 CB1D1: B1-D1 实, B1-C 实, D1-C 虚
+\draw (B1)--(D1);
+\draw (B1)--(C);
+\draw[dashed] (D1)--(C);
+% 体对角线 AC1(虚)
+\draw[dashed] (A)--(C1);
+\node[below left] at (A) {$A$};
+\node[below] at (B) {$B$};
+\node[right] at (C) {$C$};
+\node[below] at (D) {$D$};
+\node[left] at (A1) {$A_{1}$};
+\node[above] at (B1) {$B_{1}$};
+\node[right] at (C1) {$C_{1}$};
+\node[above left] at (D1) {$D_{1}$};
+\end{tikzpicture}

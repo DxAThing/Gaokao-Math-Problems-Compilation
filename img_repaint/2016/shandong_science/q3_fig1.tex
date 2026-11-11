@@ -1,2 +1,20 @@
-% Canonical statistical figure: img_repaint/2016/shandong_liberal/q3_fig1.tex
-\input{img_repaint/2016/shandong_liberal/q3_fig1.tex}
+% PGFPlots ybar interval: coordinates encode bin LEFT boundary and density.
+% Final coordinate supplies last RIGHT boundary; its height is unused.
+% Bins [17.5,20),[20,22.5),[22.5,25),[25,27.5),[27.5,30], width 2.5.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,
+  xmin=15,ymin=0,
+  xtick={15,17.5,20,22.5,25,27.5,30},
+  ytick={0,0.02,0.04,0.08,0.10,0.16},
+  yticklabels={0,0.02,0.04,0.08,0.10,0.16},
+  ymajorgrids=true,major grid style={dashed,black},
+  xmax=31.25,
+  ymax=0.19,
+  xticklabels={,17.5,20,22.5,25,27.5,30}]
+\addplot[draw=black,fill=white] coordinates
+  {(17.5,0.02) (20,0.10) (22.5,0.16) (25,0.08) (27.5,0.04) (30,0)};
+\examstatxbreak{16.25}{0}
+\examstatylabel{$\frac{\text{频率}}{\text{组距}}$}
+\examstatxlabel{自习时间/小时}
+\end{axis}
+\end{tikzpicture}

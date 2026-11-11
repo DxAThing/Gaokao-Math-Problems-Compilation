@@ -1,0 +1,13 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-4.2,0)--(5.0,0) node[below] {$x$};
+\draw[->] (0,-2.2)--(0,4.5) node[left] {$y$};
+\node[below left] at (0,0) {$O$};
+% parabola C: x^2=4y, i.e. y=x^2/4
+\draw[domain=-3.2:3.4,smooth,samples=100] plot (\x,{\x*\x/4});
+\node[above right] at (3.4,2.89) {$C$};
+% tangent line l: y=x-1 through A(2,1)
+\draw (-1.2,-2.2)--(4.6,3.6);
+\node[right] at (4.6,3.6) {$l$};
+\node[below right] at (2,1) {$A$};
+\end{tikzpicture}

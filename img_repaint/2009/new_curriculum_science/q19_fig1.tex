@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt, font=\normalsize, >=Stealth]
+\coordinate (B) at (0,0);
+\coordinate (C) at (2.6,0);
+\coordinate (D) at (3.5000000000,0.9000000000);
+\coordinate (A) at (0.9,0.9);
+\coordinate (S) at (1.9,3.4);
+\coordinate (P) at (2.7800000000,2.0250000000);
+% base: visible B-C, C-D solid; hidden A-B, A-D dashed; diagonal A-C dashed
+\draw[solid] (B) -- (C) -- (D);
+\draw[dashed] (D) -- (A) -- (B);
+\draw[dashed] (A) -- (C);
+% lateral edges: S-B, S-C, S-D solid; S-A dashed
+\draw[solid] (S) -- (B);
+\draw[solid] (S) -- (C);
+\draw[solid] (S) -- (D);
+\draw[dashed] (S) -- (A);
+% point P on SD with segments P-C solid, P-A dashed
+\draw[solid] (P) -- (C);
+\draw[dashed] (P) -- (A);
+% labels with clearance
+\node[above=4pt] at (S) {$S$};
+\node[left=3pt,xshift=-5pt,yshift=5pt] at (A) {$A$};
+\node[below left=2pt] at (B) {$B$};
+\node[below=4pt] at (C) {$C$};
+\node[right=3pt] at (D) {$D$};
+\node[right=3pt] at (P) {$P$};
+\end{tikzpicture}

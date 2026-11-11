@@ -1,0 +1,18 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Cylinder: top ellipse, bottom front solid / back dashed, axis OA dashed
+\draw (0,2.4) ellipse (2.3 and 0.5);
+\draw (-2.3,2.4)--(-2.3,-1.4);
+\draw (2.3,2.4)--(2.3,-1.4);
+\draw (-2.3,-1.4) arc [start angle=180, end angle=360, x radius=2.3, y radius=0.5];
+\draw[dashed] (2.3,-1.4) arc [start angle=0, end angle=180, x radius=2.3, y radius=0.5];
+\coordinate (O) at (0,2.4);
+\coordinate (A) at (-2.08,-1.613398108);
+\draw[dashed] (O)--(A);
+\fill (O) circle (1.8pt);
+\fill (0,-1.4) circle (1.8pt);
+% labels
+\node[right] at (O) {$O$};
+\node[below left] at (A) {$A$};
+\node[left] at (-2.3,-1.4) {$B$};
+\node[left] at (-2.3,2.4) {$C$};
+\end{tikzpicture}

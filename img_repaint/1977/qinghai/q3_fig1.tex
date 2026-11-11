@@ -1,0 +1,38 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (Bp) at (4,3);
+\coordinate (Ap) at (0,3);
+\coordinate (D) at (1.5,1.0);
+\coordinate (C) at (5.5,1.0);
+\coordinate (Cp) at (5.5,4.0);
+\coordinate (Dp) at (1.5,4.0);
+\coordinate (O) at (2.75,2.0);
+% front face (visible)
+\draw[solid] (A)--(B)--(Bp)--(Ap)--cycle;
+% top face (visible)
+\draw[solid] (Bp)--(Cp)--(Dp)--(Ap);
+% visible depth / right edges
+\draw[solid] (B)--(C);
+\draw[solid] (C)--(Cp);
+% hidden edges
+\draw[solid,dashed] (A)--(D);
+\draw[solid,dashed] (D)--(C);
+\draw[solid,dashed] (D)--(Dp);
+% body diagonals and base diagonal (all hidden, dashed in original)
+\draw[solid,dashed] (A)--(Cp);
+\draw[solid,dashed] (Ap)--(C);
+\draw[solid,dashed] (A)--(C);
+% angle AOC = 120 deg: OA direction 216 deg, OC direction 340 deg
+\draw[solid] (O) ++(216:0.45) arc (216:340:0.45);
+\node[font=\normalsize] at (2.88,1.22) {$120^{\circ}$};
+\node[font=\normalsize,above=5pt] at (O) {$O$};
+\node[font=\normalsize,below left=2pt] at (A) {$A$};
+\node[font=\normalsize,below right=2pt] at (B) {$B$};
+\node[font=\normalsize,right=2pt] at (C) {$C$};
+\node[font=\normalsize,above left=2pt] at (D) {$D$};
+\node[font=\normalsize,left=2pt] at (Ap) {$A'$};
+\node[font=\normalsize,above left=2pt] at (Bp) {$B'$};
+\node[font=\normalsize,above right=1pt] at (Cp) {$C'$};
+\node[font=\normalsize,above left=1pt] at (Dp) {$D'$};
+\end{tikzpicture}

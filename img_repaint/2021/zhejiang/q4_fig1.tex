@@ -1,0 +1,32 @@
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% front 2x1 (3cm x 1.5cm), side 2x1; top moved to right column (shift +10,+5)
+\draw (0,5) rectangle (3,6.5);
+\draw (1.5,5) -- (1.5,6.5);
+\draw (5,5) rectangle (8,6.5);
+% top quadrilateral, shifted: V1(10,8) V2(10,6.5) V3(11.5,5) V4(13,5)
+\draw (10,8) -- (10,6.5) -- (11.5,5) -- (13,5) -- cycle;
+% front bottom dims two 1's
+\draw[line width=.4pt] (0,5) -- (0,4.5);
+\draw[line width=.4pt] (1.5,5) -- (1.5,4.5);
+\draw[line width=.4pt] (3,5) -- (3,4.5);
+\draw[<->,>=Latex] (0,4.7) -- (1.5,4.7);
+\draw[<->,>=Latex] (1.5,4.7) -- (3,4.7);
+\node at (0.75,4.7) [fill=white,inner sep=2pt] {1};
+\node at (2.25,4.7) [fill=white,inner sep=2pt] {1};
+% front left dim 1
+\draw[line width=.4pt] (0,5) -- (-0.5,5);
+\draw[line width=.4pt] (0,6.5) -- (-0.5,6.5);
+\draw[<->,>=Latex] (-0.3,5) -- (-0.3,6.5);
+\node at (-0.3,5.75) [fill=white,inner sep=2pt] {1};
+% side bottom dim two 1's
+\draw[line width=.4pt] (5,5) -- (5,4.5);
+\draw[line width=.4pt] (6.5,5) -- (6.5,4.5);
+\draw[line width=.4pt] (8,5) -- (8,4.5);
+\draw[<->,>=Latex] (5,4.7) -- (6.5,4.7);
+\draw[<->,>=Latex] (6.5,4.7) -- (8,4.7);
+\node at (5.75,4.7) [fill=white,inner sep=2pt] {1};
+\node at (7.25,4.7) [fill=white,inner sep=2pt] {1};
+\node at (1.5,3.9) {正视图};
+\node at (6.5,3.9) {侧视图};
+\node at (11.5,3.9) {俯视图};
+\end{tikzpicture}

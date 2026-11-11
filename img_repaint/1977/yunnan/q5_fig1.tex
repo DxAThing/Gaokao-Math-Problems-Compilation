@@ -1,0 +1,24 @@
+\usetikzlibrary{angles,quotes,decorations.pathreplacing}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt},
+ geometry mark/.style={solid,line width=.6pt},
+ geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (A1) at (1.0,0.0);
+\coordinate (A2) at (1.0,3.0);
+\coordinate (S) at (3.3701,4.1052);
+\coordinate (N) at (1.0,4.6);
+\coordinate (L30) at (1.320000000,1.200000000);
+\coordinate (L65) at (1.550000000,3.900000000);
+\draw[geometry edge] (A1)--(A2);
+\draw[geometry edge,->] (A2)--(N);
+\draw[geometry edge] (A2)--(S);
+\draw[geometry edge] (A1)--(S);
+\pic[draw, geometry mark, angle radius=7mm] {angle=S--A1--A2};
+\pic[draw, geometry mark, angle radius=7mm] {angle=S--A2--N};
+\node[geometry label,below] at (A1) {$A_1$};
+\node[geometry label,left] at (A2) {$A_2$};
+\node[geometry label,right] at (S) {$S$};
+\node[geometry label,left] at (N) {北};
+\node[geometry label] at (L30) {$30$};
+\node[geometry label] at (L65) {$65^\circ$};
+\end{tikzpicture}

@@ -1,0 +1,13 @@
+% 2018_national_paper_3_science_q7_fig3
+% 2018 national paper 3, single-curve function option C
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.4cm,y=1.4cm,line width=.6pt,>={Stealth[length=2mm]},font=\normalsize]
+\draw[->] (-2.5,0)--(2.5,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-2)--(0,3) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw (1,0)--(1,0.1);
+\draw (0,1)--(0.1,1);
+\node[below,inner sep=2pt] at (1,0) {$1$};
+\node[left,inner sep=2pt] at (0,1) {$1$};
+\node[below left,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\draw[domain=-1.37:1.37,samples=201] plot (\x,{-(\x)^4+2});
+\end{tikzpicture}

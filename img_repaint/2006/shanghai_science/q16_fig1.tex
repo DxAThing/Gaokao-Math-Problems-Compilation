@@ -1,0 +1,27 @@
+% 2006 上海理 Q16 图1: 相交直线 l1,l2 及点 M(p,q) 到两直线的两条虚线垂线与直角标记
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,
+  geometry edge/.style={line width=.6pt},
+  geometry label/.style={inner sep=1pt}]
+\coordinate (O) at (0,0);
+\coordinate (M) at (3.30,1.66);
+\coordinate (H2) at (3.30,0);
+\coordinate (H1) at (2.48,2.48);
+% l2 水平直线
+\draw[geometry edge] (-3.30,0) -- (4.15,0);
+% l1 过 O 的 45 度直线
+\draw[geometry edge] (-1.65,-1.65) -- (2.72,2.72);
+% M 到 l2, l1 的虚线垂线
+\draw[geometry edge,dashed] (M) -- (H2);
+\draw[geometry edge,dashed] (M) -- (H1);
+% 点 M
+\fill (M) circle (1pt);
+% 直角标记: H2 处(竖直虚线 + 水平向右), H1 处(l1 向右上 + 虚线向右下)
+\draw[geometry edge] (3.48,0) -- (3.48,0.18) -- (3.30,0.18);
+\draw[geometry edge] (2.610,2.610) -- (2.735,2.485) -- (2.610,2.360);
+% 标签
+\node[anchor=south west,inner sep=0pt,xshift=2pt,yshift=2pt] at (2.72,2.72) {$l_{1}$};
+\node[geometry label,anchor=center] at (-3.55,0.34) {$l_{2}$};
+\node[geometry label,anchor=center] at (0.26,-0.34) {$O$};
+\node[anchor=west,inner sep=0pt,xshift=2pt] at (M) {$M(p,q)$};
+\end{tikzpicture}

@@ -1,0 +1,43 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (3.5,0);
+\coordinate (A1) at (0,4.2);
+\coordinate (B1) at (3.5,4.2);
+\coordinate (D) at (-0.9,0.9);
+\coordinate (C) at (2.6,0.9);
+\coordinate (D1) at (-0.9,5.1);
+\coordinate (C1) at (2.6,5.1);
+\coordinate (E) at (3.5000000000,2.1000000000);
+\coordinate (F) at (-0.9000000000,3.0000000000);
+% front face
+\draw[solid] (A)--(B)--(B1)--(A1)--cycle;
+% back top
+\draw[solid] (D1)--(C1)--(B1);
+\draw[solid] (D1)--(A1);
+% left / right verticals
+
+
+\draw[solid] (D)--(D1);
+\draw[dashed] (C)--(C1);
+% bottom hidden
+\draw (A)--(D);\draw[dashed] (D)--(C)--(B);
+% interior solid
+\draw[solid] (D1)--(B1);
+\draw[solid] (D)--(A1);
+\draw[solid] (F)--(A);
+\draw[solid] (A)--(E);
+
+% interior hidden
+\draw[dashed] (F)--(E);
+\draw[dashed] (A1)--(B);
+\node[below=4pt,left=1pt] at (A) {$A$};
+\node[below=4pt,right=1pt] at (B) {$B$};
+\node[below=3pt,left=1pt] at (D) {$D$};
+\node[below=2pt,right=2pt,xshift=1pt,yshift=3pt] at (C) {$C$};
+\node[above=3pt,left=2pt] at (D1) {$D_{1}$};
+\node[above=3pt] at (C1) {$C_{1}$};
+\node[left=3pt,above=1pt] at (A1) {$A_{1}$};
+\node[right=4pt] at (B1) {$B_{1}$};
+\node[left=4pt] at (F) {$F$};
+\node[right=4pt] at (E) {$E$};
+\end{tikzpicture}

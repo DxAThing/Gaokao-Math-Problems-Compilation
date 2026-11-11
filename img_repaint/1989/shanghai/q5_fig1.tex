@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=0.6pt]
+\tikzset{ptlabel/.style={font=\normalsize,fill=white,inner sep=1pt}}
+% two planes M (lower) and N (upper) sharing edge PQ
+\coordinate (P) at (-3,0);
+\coordinate (Q) at (3,0);
+\coordinate (A) at (1.2,0.9);
+\coordinate (E) at (1.6,0);
+\coordinate (B) at (-2.6,-1.2);
+\coordinate (F) at (-1.8,0);
+% plane outlines
+\draw[draw=black] (P) -- (-4.5,1.5) -- (1.5,1.5) -- (Q) -- cycle;
+\draw[draw=black] (P) -- (-4,-1.8) -- (2,-1.8) -- (Q) -- cycle;
+% edge PQ
+\draw[draw=black] (P) -- (Q);
+% segments
+\draw[draw=black] (A) -- (E);
+\draw[draw=black] (B) -- (F);
+\draw[draw=black] (A) -- (B);
+% labels with clearance
+\node[ptlabel,anchor=east,xshift=-3pt,fill=none,xshift=-2.00bp,yshift=0.00bp] at (P) {$P$};
+\node[ptlabel,anchor=west,xshift=3pt] at (Q) {$Q$};
+\node[ptlabel,anchor=south,yshift=3pt] at (A) {$A$};
+\node[ptlabel,anchor=north,yshift=-4pt,xshift=4pt] at (E) {$E$};
+\node[ptlabel,anchor=north east,xshift=-2pt,yshift=-3pt] at (B) {$B$};
+\node[ptlabel,anchor=south,yshift=4pt] at (F) {$F$};
+\node[ptlabel,anchor=north east,xshift=-2pt,yshift=2pt] at (-4,-1.8) {$M$};
+\node[ptlabel,anchor=south east,xshift=-2pt,yshift=-2pt] at (-4.5,1.5) {$N$};
+\end{tikzpicture}

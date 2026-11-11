@@ -1,0 +1,24 @@
+\begin{tikzpicture}[line width=0.6pt, font=\small]
+\draw[->,>=stealth] (-2.2,0)--(4.5,0) node[,inner sep=1pt,right] {$x$};
+\draw[->,>=stealth] (0,-3.4)--(0,2.6) node[,inner sep=1pt,above right] {$y$};
+% circle (x-2)^2+y^2=5, center (2,0), radius sqrt(5)
+\draw[solid] (2,0) circle (2.236067977500);
+\coordinate (C) at (2,0);
+\coordinate (O) at (0,0);
+\coordinate (P) at (0,-2);
+\coordinate (A) at (1.7182458366,-2.2182458366);
+\coordinate (B) at (-0.2182458366,-0.2817541634);
+\fill (C) circle (0.06);
+\draw[solid] (C)--(P);
+\draw[solid] (C)--(A);
+\node[,inner sep=1pt] at ($(C)+(0,0.38)$) {$C$};
+\node[,inner sep=1pt] at ($(O)+(0.28,-0.30)$) {$O$};
+\node[,inner sep=1pt] at ($(P)+(-0.38,0.02)$) {$P$};
+\node[,inner sep=1pt] at ($(A)+(0,-0.42)$) {$A$};
+\node[,inner sep=1pt,xshift=-1pt,yshift=-3pt] at ($(B)+(-0.52,0.20)$) {$B$};
+\node[,inner sep=1pt] at ($(C)!0.5!(A)+(0.34,0.05)$) {$r$};
+% tangent segments at A and B (short, original blue -> gray)
+\draw[draw=black!55,solid] (P)--(-0.3710179221381522,0.921017922138152);
+\draw[draw=black!55,solid] (P)--(3.4364916731037085,-2.436491673103708);
+% small tangent ticks at points of tangency
+\end{tikzpicture}

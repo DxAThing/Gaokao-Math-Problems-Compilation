@@ -1,0 +1,36 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt]
+\coordinate (A) at (0,0);
+\coordinate (B) at (3,0);
+\coordinate (B1) at (3,3);
+\coordinate (A1) at (0,3);
+\coordinate (D) at (1.1,0.9);
+\coordinate (D1) at (1.1,3.9);
+\coordinate (C) at (4.1,0.9);
+\coordinate (C1) at (4.1,3.9);
+\coordinate (F) at (3,1.5);
+\coordinate (E) at (3.55,0.45);
+% hidden edges first
+\draw[dashed] (A) -- (D);
+\draw[dashed] (D) -- (D1);
+\draw[dashed] (D) -- (C);
+% visible cube edges
+\draw (A) -- (B) -- (B1);
+\draw (A) -- (A1) -- (B1);
+\draw (A1) -- (D1) -- (C1);
+\draw (B1) -- (C1);
+\draw (B) -- (C) -- (C1);
+% points E and F
+\fill (F) circle (1.7pt);
+\fill (E) circle (1.7pt);
+% labels with clearance
+\node[below left=3pt,font=\normalsize] at (A) {$A$};
+\node[below=4pt,font=\normalsize] at (B) {$B$};
+\node[right=3pt,font=\normalsize] at (C) {$C$};
+\node[below=3pt,font=\normalsize] at (D) {$D$};
+\node[left=3pt,font=\normalsize] at (A1) {$A_{1}$};
+\node[right=3pt,font=\normalsize] at (B1) {$B_{1}$};
+\node[above right=3pt,font=\normalsize] at (C1) {$C_{1}$};
+\node[above left=3pt,font=\normalsize] at (D1) {$D_{1}$};
+\node[right=4pt,font=\normalsize] at (F) {$F$};
+\node[below right=3pt,font=\normalsize] at (E) {$E$};
+\end{tikzpicture}

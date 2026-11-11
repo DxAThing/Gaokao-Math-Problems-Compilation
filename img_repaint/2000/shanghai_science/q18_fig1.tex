@@ -1,0 +1,23 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt]
+\coordinate (B) at (0,0);
+\coordinate (A) at (3,0);
+\coordinate (C) at (-2,-1.2);
+\coordinate (D) at (0.2,4);
+\coordinate (E) at (0.5,-0.6);
+% hidden edges (dashed)
+\draw[dashed] (D) -- (B);
+\draw[dashed] (B) -- (A);
+\draw[dashed] (B) -- (C);
+\draw[dashed] (B) -- (E);
+% visible edges (solid)
+\draw (D) -- (A);
+\draw (D) -- (C);
+\draw (A) -- (E);
+\draw (E) -- (C);
+% labels placed clear of strokes
+\node[inner sep=2pt,anchor=south] at ([yshift=2pt]D) {$D$};
+\node[inner sep=2pt,anchor=west] at ([xshift=2pt]A) {$A$};
+\node[inner sep=2pt,anchor=east] at ([xshift=-2pt]C) {$C$};
+\node[inner sep=2pt,anchor=south west] at ([xshift=2pt,yshift=2pt]B) {$B$};
+\node[inner sep=2pt,anchor=north] at ([yshift=-2pt]E) {$E$};
+\end{tikzpicture}

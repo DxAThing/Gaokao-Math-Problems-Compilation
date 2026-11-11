@@ -1,0 +1,17 @@
+% 2016_tianjin_liberal_q3_fig2: point-fix of _current.tex, arrangement only.
+% Only front + plan exist (side view is the question to choose); no view invented.
+% Moved plan from below-front to the right of front; edges/diagonals unchanged.
+% Front: tall rectangle, diagonal top-left to bottom-right.
+% Plan: square, diagonal bottom-left to top-right. Bottoms and captions baseline-aligned.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% front (left, unchanged)
+\draw (0,3.2) rectangle (2.2,7.6);
+\draw (0,7.6) -- (2.2,3.2);
+\node[below] at (1.1,2.85) {正视图};
+% plan (right, shifted +3.6 in x and +3.2 in y; geometry unchanged)
+\begin{scope}[shift={(3.6,3.2)}]
+  \draw (0,0) rectangle (2.2,2.2);
+  \draw (0,0) -- (2.2,2.2);
+  \node[below] at (1.1,-0.35) {俯视图};
+\end{scope}
+\end{tikzpicture}

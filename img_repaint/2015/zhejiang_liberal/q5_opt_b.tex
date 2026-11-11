@@ -1,0 +1,14 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=stealth]
+\draw[->] (-3.8,0)--(3.8,0);
+\draw[->] (0,-3.2)--(0,3.0);
+\draw[dashed] (-3.1415926536,0)--(-3.1415926536,-1.9533498234);
+\draw[dashed] (3.1415926536,0)--(3.1415926536,-1.9533498234);
+\draw[domain=-3.1415926536:-0.35,samples=201] plot (\x,{-1*1.7*(abs(\x)+1.28/abs(\x)-2.4)});
+\draw[domain=0.35:3.1415926536,samples=201] plot (\x,{-1*1.7*(abs(\x)+1.28/abs(\x)-2.4)});
+\node[above,inner sep=0pt,yshift=2pt] at (0,3.0) {$y$};
+\node[right,inner sep=0pt,xshift=2pt] at (3.8,0) {$x$};
+\node[above,inner sep=0pt,xshift=0pt,yshift=2pt] at (-3.1415926536,0) {$-\pi$};
+\node[above,inner sep=0pt,xshift=0pt,yshift=2pt] at (3.1415926536,0) {$\pi$};
+\node[below left,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\end{tikzpicture}

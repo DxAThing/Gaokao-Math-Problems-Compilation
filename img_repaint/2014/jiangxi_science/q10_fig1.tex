@@ -1,0 +1,43 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Schematic oblique projection of cuboid ABCD-A1B1C1D1 with axes; not to metric scale.
+\coordinate (A) at (0,0);
+\coordinate (B) at (5,0);
+\coordinate (B1) at (5,5.2);
+\coordinate (A1) at (0,5.2);
+\coordinate (D) at (1.3,0.9);
+\coordinate (D1) at (1.3,6.1);
+\coordinate (C1) at (6.3,6.1);
+\coordinate (C) at (6.3,0.9);
+\coordinate (E) at (2.2,5.75);
+% solid cuboid edges
+\draw (A)--(B);
+\draw (B)--(B1);
+\draw (A1)--(B1);
+\draw (A)--(A1);
+\draw (B)--(C);
+\draw (C)--(C1);
+\draw (B1)--(C1);
+\draw (C1)--(D1);
+\draw (D1)--(A1);
+% hidden edges (dashed)
+\draw[dashed] (A)--(D);
+\draw[dashed] (D)--(C);
+\draw[dashed] (D)--(D1);
+% ray path A -> E -> interior (dashed with direction)
+\draw[dashed,->] (A)--(E);
+\draw[dashed,->] (E)--(3.4,3.4);
+% axes: x along AB extended, y from D, z from A through A1
+\draw[->] (A)--(6.6,0) node[below right] {$x$};
+\draw[dashed,->] (D)--(2.4,2.0) node[right] {$y$};
+\draw[->] (A)--(0,7.3) node[right] {$z$};
+% labels
+\node[below left] at (A) {$A$};
+\node[below] at (B) {$B$};
+\node[right] at (C) {$C$};
+\node[below] at (D) {$D$};
+\node[left] at (A1) {$A_{1}$};
+\node[above left] at (D1) {$D_{1}$};
+\node[above] at (B1) {$B_{1}$};
+\node[above right] at (C1) {$C_{1}$};
+\node[left] at (E) {$E$};
+\end{tikzpicture}

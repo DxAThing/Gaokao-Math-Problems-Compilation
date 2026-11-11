@@ -1,0 +1,29 @@
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize, x=1cm, y=1cm]
+  \coordinate (P) at (0,4.6);
+  \coordinate (A) at (-2.6,0.5);
+  \coordinate (C) at (2.6,0.3);
+  \coordinate (B) at (-1.4,-0.4);
+  % M on BC with MC = 2MB, i.e. M = B + (C-B)/3
+  \coordinate (M) at ($(B)!0.3333!(C)$);
+  % O is midpoint of AC
+  \coordinate (O) at ($(A)!0.5!(C)$);
+  % hidden edges
+  \draw[dashed] (A) -- (C);
+  \draw[dashed] (P) -- (O);
+  \draw[dashed] (O) -- (M);
+  % visible edges
+  \draw (P) -- (A);
+  \draw (P) -- (B);
+  \draw (P) -- (M);
+  \draw (P) -- (C);
+  \draw (A) -- (B);
+  \draw (B) -- (M);
+  \draw (M) -- (C);
+  % labels
+  \node[above, yshift=1pt] at (P) {$P$};
+  \node[left] at (A) {$A$};
+  \node[right] at (C) {$C$};
+  \node[below, yshift=-1pt] at (B) {$B$};
+  \node[below right, xshift=1pt, yshift=-1pt] at (M) {$M$};
+  \node[above left, xshift=-1pt] at (O) {$O$};
+\end{tikzpicture}

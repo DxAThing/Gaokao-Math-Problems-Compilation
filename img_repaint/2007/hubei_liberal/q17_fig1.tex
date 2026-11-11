@@ -1,0 +1,30 @@
+% Trirectangular tetrahedron V-ABC, right angle at C, D midpoint of AB.
+% Schematic perspective: topology and hidden/visible styles are exact;
+% metric right angles live in 3D and are not preserved in projection.
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+  solidedge/.style={solid,line width=.6pt},
+  hidedge/.style={dashed,line width=.6pt},
+  ptlabel/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (C) at (-0.7,0.15);
+\coordinate (V) at (-0.7000000000,4.0000000000);
+\coordinate (A) at (-3.0,-2.0);
+\coordinate (B) at (3.4,-0.6);
+\coordinate (D) at (0.2,-1.3);
+% hidden edges first
+\draw[hidedge] (V)--(C);
+\draw[hidedge] (C)--(A);
+\draw[hidedge] (C)--(B);
+\draw[hidedge] (C)--(D);
+% visible edges
+\draw[solidedge] (V)--(A);
+\draw[solidedge] (V)--(B);
+\draw[solidedge] (V)--(D);
+\draw[solidedge] (A)--(D);
+\draw[solidedge] (D)--(B);
+% labels placed off the strokes
+\node[ptlabel,above] at ([yshift=3pt]V) {$V$};
+\node[ptlabel,left] at ([xshift=-4pt]C) {$C$};
+\node[ptlabel,below left] at ([xshift=-3pt,yshift=-3pt]A) {$A$};
+\node[ptlabel,right] at ([xshift=4pt]B) {$B$};
+\node[ptlabel,below] at ([yshift=-4pt]D) {$D$};
+\end{tikzpicture}

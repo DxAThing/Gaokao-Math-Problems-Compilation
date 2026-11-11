@@ -1,0 +1,32 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt]
+\coordinate (A) at (0,0);
+\coordinate (E) at (2,0);
+\coordinate (B) at (3.5,0);
+\coordinate (D) at (1.2,1);
+\coordinate (M) at (1.6,0.5);
+\coordinate (Ap) at (1.8,2);
+\coordinate (F) at (3.4,1.5);
+\coordinate (C) at (5,1);
+% bottom edge
+\draw[solid] (A) -- (B);
+% left triangle
+\draw[solid] (A) -- (D);
+\draw[solid] (D) -- (E);
+% folded part
+\draw[solid] (D) -- (Ap);
+\draw[solid] (Ap) -- (E);
+\draw[solid] (Ap) -- (C);
+\draw[solid] (F) -- (B);
+\draw[solid] (B) -- (C);
+% hidden
+\draw[dashed] (D) -- (C);
+\draw[dashed] (M) -- (F);
+\node[below left,inner sep=2pt] at (A) {$A$};
+\node[below,inner sep=2pt] at (E) {$E$};
+\node[below right,inner sep=2pt] at (B) {$B$};
+\node[left,inner sep=2pt,xshift=-3pt,yshift=2pt] at (D) {$D$};
+\node[below left,inner sep=2pt] at (M) {$M$};
+\node[above left,inner sep=2pt] at (Ap) {$A'$};
+\node[above,inner sep=2pt] at (F) {$F$};
+\node[right,inner sep=2pt] at (C) {$C$};
+\end{tikzpicture}

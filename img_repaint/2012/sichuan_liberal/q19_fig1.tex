@@ -1,0 +1,23 @@
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize]
+  \coordinate (A) at (-1.5,0);
+  \coordinate (O) at (-0.25,0);
+  \coordinate (B) at (3.5,0);
+  \coordinate (P) at (-0.25,2.5);
+  \coordinate (C) at (2.3,1.4);
+  % base and altitude
+  \draw (A) -- (B);
+  \draw (P) -- (O);
+  % lateral edges solid
+  \draw (P) -- (A);
+  \draw (P) -- (C);
+  \draw (P) -- (B);
+  \draw (C) -- (B);
+  % hidden base edge
+  \draw[dashed] (A) -- (C);
+  % labels
+  \node[anchor=north, yshift=-3pt] at (A) {$A$};
+  \node[anchor=north, yshift=-3pt] at (O) {$O$};
+  \node[anchor=north, yshift=-3pt] at (B) {$B$};
+  \node[anchor=south, yshift=3pt] at (P) {$P$};
+  \node[anchor=south west, xshift=2pt, yshift=2pt] at (C) {$C$};
+\end{tikzpicture}

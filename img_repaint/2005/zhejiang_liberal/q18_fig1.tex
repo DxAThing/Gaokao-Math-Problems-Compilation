@@ -1,0 +1,25 @@
+\begin{tikzpicture}[line width=.6pt,>=Stealth]
+\coordinate (P) at (0,3.2);
+\coordinate (O) at (0.0000000000,0.3000000000);
+\coordinate (A) at (-2.6,0.3);
+\coordinate (C) at (2.6,0.3);
+\coordinate (B) at (1.0,-0.9);
+\coordinate (D) at (1.3000000000,1.7500000000);
+% base edges
+\draw[dashed] (A)--(C);
+\draw[solid] (A)--(B)--(C);
+% lateral edges solid
+\draw[solid] (P)--(A);
+\draw[solid] (P)--(B);
+\draw[solid] (P)--(C);
+% hidden: PO vertical, OD
+\draw[dashed] (P)--(O);
+\draw[dashed] (O)--(D);
+% labels
+\node[above=3pt] at (P) {$P$};
+\node[left=3pt] at (A) {$A$};
+\node[right=3pt] at (C) {$C$};
+\node[below=3pt] at (B) {$B$};
+\node[left=3pt,xshift=-1pt,yshift=7pt] at (O) {$O$};
+\node[right=3pt] at (D) {$D$};
+\end{tikzpicture}

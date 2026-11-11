@@ -1,0 +1,7 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-4.0,0)--(3.85,0) node[below right,inner sep=0pt,yshift=-1pt] {$x$};
+\draw[->] (0,-1.9)--(0,3.05) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\node[inner sep=0pt] at (-0.52,0.40) {$O$};
+\draw[domain=-2.96:2.96,samples=200] plot (\x,{1.43*(exp(1.0332*\x)-1)/(exp(1.0332*\x)+1)});
+\end{tikzpicture}

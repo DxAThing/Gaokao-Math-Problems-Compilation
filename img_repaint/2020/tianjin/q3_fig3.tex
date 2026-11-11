@@ -1,0 +1,11 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=0.9cm,y=0.9cm,line width=.6pt,>=Stealth]
+\draw[->] (-4.3,0)--(5.0,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-2.8)--(0,3.0) node[left,inner sep=0pt,xshift=-2pt,yshift=2pt] {$y$};
+\draw (1,0)--++(0,3pt);
+\draw (0,2)--++(3pt,0);
+\draw[domain=-4.3:4.3,samples=401] plot (\x,{4*abs(\x)/(\x*\x+1)});
+\node[below left,inner sep=0pt,xshift=-5pt,yshift=-4pt] at (0,0) {$O$};
+\node[below,inner sep=0pt,yshift=-3pt] at (1,0) {$1$};
+\node[left,inner sep=0pt,xshift=-2pt] at (0,2) {$2$};
+\end{tikzpicture}

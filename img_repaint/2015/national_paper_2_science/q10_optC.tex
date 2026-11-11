@@ -1,0 +1,13 @@
+% source_constraints: first-quadrant axes, O below-left; x ticks pi/4,pi/2,3pi/4,pi; y mark 2 at start height; single-peak polyline start (0,2) up to peak at pi/2 then down to end beyond pi; solid .6pt, open endpoints; heights schematic except x nodes and y=2.
+% data: x nodes 0,1,2,3,4, end 4.8; y schematic start 1.0, peak 2.2 at x=2, end 1.1.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (0,0)--(5.3,0) node[below right] {$x$};
+\draw[->] (0,0)--(0,3.2) node[above left] {$y$};
+\node[below left] at (0,0) {$O$};
+\draw (0,1.0)--(2,2.2)--(4.8,1.1);
+\node[left] at (0,1.0) {$2$};
+\foreach \xp/\xl in {1/$\frac{\pi}{4}$,2/$\frac{\pi}{2}$,3/$\frac{3\pi}{4}$,4/$\pi$} {
+\draw (\xp,0)--(\xp,0.08);
+\node[below] at (\xp,0) {\xl};
+}
+\end{tikzpicture}

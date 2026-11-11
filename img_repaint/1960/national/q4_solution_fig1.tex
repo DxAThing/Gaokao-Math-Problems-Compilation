@@ -1,0 +1,23 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.35cm,y=1.35cm,line width=.6pt,>=Stealth,font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (A) at (3,0);
+\coordinate (V) at (1.5,2.25);
+\draw[->] (-0.55,0)--(3.7,0) node[right=4pt,inner sep=0pt] {$x$};
+\draw[->] (0,-0.55)--(0,3.6) node[above=4pt,inner sep=0pt] {$y$};
+\draw[dashed] (1.5,-0.75)--(1.5,2.6);
+\draw[domain=0:3,samples=81] plot (\x,{-\x*\x+3*\x});
+\draw (-0.07,1)--(0.07,1);
+\draw (-0.07,2)--(0.07,2);
+\draw (-0.07,3)--(0.07,3);
+\draw (1,-0.07)--(1,0.07);
+\draw (2,-0.07)--(2,0.07);
+\draw (3,-0.07)--(3,0.07);
+\node[below right=4pt,inner sep=0pt] at (O) {$O$};
+\node[below=4pt,inner sep=0pt] at (1,0) {$1$};
+\node[below=4pt,inner sep=0pt] at (2,0) {$2$};
+\node[below=4pt,inner sep=0pt] at (3,0) {$3$};
+\node[left=4pt,inner sep=0pt] at (0,1) {$1$};
+\node[left=4pt,inner sep=0pt] at (0,2) {$2$};
+\node[left=4pt,inner sep=0pt] at (0,3) {$3$};
+\end{tikzpicture}

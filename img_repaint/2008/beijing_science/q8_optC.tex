@@ -1,0 +1,9 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=42mm,y=42mm,line width=.6pt,>={Latex[length=1.8mm,width=1.6mm]},every node/.style={inner sep=0pt,outer sep=0pt},font=\normalsize]
+\draw[->] (-0.263,0) -- (1.328,0) node[right,xshift=2pt] {$x$};
+\draw[->] (0,-0.263) -- (0,1.197) node[above,yshift=2pt] {$y$};
+\node[below left,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\draw[domain=0:0.3422,samples=81] plot (\x,{7.19*\x*\x});
+\draw (0.3422,0.8420) -- (0.6578,0.8420);
+\draw[domain=0.6578:1.0,samples=81] plot (\x,{7.19*(1-\x)*(1-\x)});
+\end{tikzpicture}

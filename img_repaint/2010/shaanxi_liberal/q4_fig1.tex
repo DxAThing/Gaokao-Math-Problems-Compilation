@@ -1,0 +1,32 @@
+% 样本 A、B 折线图：横轴 n，纵轴 x_A/x_B；网格每 1（横）每 2.5（纵）；实心点直线连接。
+\examstatpanels{%
+\begin{tikzpicture}
+\begin{axis}[exam statistical template line, width=60mm,height=60mm, width=60mm,height=60mm,
+  title={$A$},
+  xmin=0,xmax=7,ymin=0,ymax=17.5,
+  xtick={0,2,4,6},ytick={5,10,15},
+  grid=both,minor x tick num=1,minor y tick num=1,
+  grid style={gray!60},
+  minor grid style={gray!45}]
+\addplot[mark=*,mark size=1.5pt] coordinates
+  {(1,2.5) (2,10) (3,5) (4,7.5) (5,2.5) (6,10)};
+\examstatylabel{$x_{A}$}
+\examstatxlabel{$n$}
+\end{axis}
+\end{tikzpicture}%
+}{%
+\begin{tikzpicture}
+\begin{axis}[exam statistical template line, width=60mm,height=60mm, width=60mm,height=60mm,
+  title={$B$},
+  xmin=0,xmax=7,ymin=0,ymax=17.5,
+  xtick={0,2,4,6},ytick={5,10,15},
+  grid=both,minor x tick num=1,minor y tick num=1,
+  grid style={gray!60},
+  minor grid style={gray!45}]
+\addplot[mark=*,mark size=1.5pt] coordinates
+  {(1,15) (2,10) (3,12.5) (4,10) (5,12.5) (6,10)};
+\examstatylabel{$x_{B}$}
+\examstatxlabel{$n$}
+\end{axis}
+\end{tikzpicture}%
+}

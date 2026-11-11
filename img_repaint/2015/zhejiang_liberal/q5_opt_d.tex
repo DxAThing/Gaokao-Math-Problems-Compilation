@@ -1,0 +1,14 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=stealth]
+\draw[->] (-3.8,0)--(3.8,0);
+\draw[->] (0,-3.2)--(0,3.2);
+\draw[dashed] (-3.1416,0)--(-3.1416,2.82);
+\draw[dashed] (3.1416,0)--(3.1416,-2.82);
+\draw[domain=-3.1416:-0.3,samples=200] plot (\x,{(\x-1/\x)*cos(deg(\x))});
+\draw[domain=0.3:3.1416,samples=200] plot (\x,{(\x-1/\x)*cos(deg(\x))});
+\node[above,inner sep=0pt,yshift=2pt] at (0,3.2) {$y$};
+\node[right,inner sep=0pt,xshift=2pt] at (3.8,0) {$x$};
+\node[below,inner sep=0pt,xshift=0pt,yshift=-2pt] at (-3.1416,0) {$-\pi$};
+\node[above,inner sep=0pt,xshift=0pt,yshift=2pt] at (3.1416,0) {$\pi$};
+\node[below left,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\end{tikzpicture}

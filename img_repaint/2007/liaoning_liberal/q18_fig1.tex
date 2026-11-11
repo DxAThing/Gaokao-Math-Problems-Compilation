@@ -1,0 +1,36 @@
+% 2007_liaoning_liberal_q18 right triangular prism ABC-A1B1C1 with D,E midpoints, M on AA1
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A1) at (0.0,5.2);
+\coordinate (B1) at (3,4.4);
+\coordinate (C1) at (5.4,5.2);
+\coordinate (A) at (0.0,1.2);
+\coordinate (B) at (3.0,0.4);
+\coordinate (C) at (5.4,1.2);
+\coordinate (D) at (1.5,0.8);
+\coordinate (E) at (4.2,0.8);
+\coordinate (M) at (0.0,3.0);
+% top triangle
+\draw[solid] (A1) -- (B1) -- (C1) -- cycle;
+% verticals
+\draw[solid] (A1) -- (M) -- (A);
+\draw[solid] (B1) -- (B);
+\draw[solid] (C1) -- (C);
+% bottom triangle
+\draw[solid] (A) -- (D) -- (B) -- (E) -- (C);
+\draw[dashed] (A) -- (C);
+\draw[dashed] (D) -- (E);
+% plane MDE and C1D as in original
+\draw[solid] (M) -- (D);
+\draw[dashed] (M) -- (E);
+\draw[dashed] (C1) -- (D);
+% labels
+\node[inner sep=1.5pt,above left=2pt] at (A1) {$A_{1}$};
+\node[inner sep=1.5pt,above=2pt] at (B1) {$B_{1}$};
+\node[inner sep=1.5pt,above right=2pt] at (C1) {$C_{1}$};
+\node[inner sep=1.5pt,below left=2pt] at (A) {$A$};
+\node[inner sep=1.5pt,below=3pt] at (B) {$B$};
+\node[inner sep=1.5pt,below right=2pt] at (C) {$C$};
+\node[inner sep=1.5pt,below=3pt] at (D) {$D$};
+\node[inner sep=1.5pt,below=3pt] at (E) {$E$};
+\node[inner sep=1.5pt,left=3pt] at (M) {$M$};
+\end{tikzpicture}

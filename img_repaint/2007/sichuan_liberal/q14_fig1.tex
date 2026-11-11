@@ -1,0 +1,22 @@
+\begin{tikzpicture}[line width=0.6pt, >=stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (2.6,0);
+\coordinate (C) at (1.9,0.9);
+\coordinate (Aone) at (0,2.8);
+\coordinate (Bone) at (2.6,2.8);
+\coordinate (Cone) at (1.9000000000,3.7000000000);
+% solid: front rectangle + top triangle
+\draw (A) -- (B) -- (Bone) -- (Aone) -- cycle;
+\draw (Aone) -- (Cone) -- (Bone);
+% hidden
+\draw[dashed] (A) -- (C) -- (B);
+\draw[dashed] (C) -- (Cone);
+\draw[dashed] (B) -- (Cone);
+% labels
+\node[below left=2pt] at (A) {$A$};
+\node[below right=2pt] at (B) {$B$};
+\node[left=2pt,xshift=-1pt,yshift=3pt] at (C) {$C$};
+\node[left=3pt] at (Aone) {$A_{1}$};
+\node[right=3pt] at (Bone) {$B_{1}$};
+\node[above right=2pt] at (Cone) {$C_{1}$};
+\end{tikzpicture}

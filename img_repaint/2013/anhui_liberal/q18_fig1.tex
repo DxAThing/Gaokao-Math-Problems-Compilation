@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  solid edge/.style={solid},
+  hidden edge/.style={dashed,dash pattern=on 4pt off 3pt}]
+\coordinate (P) at (4.2,6.0);
+\coordinate (A) at (0.0,0.0);
+\coordinate (B) at (4.2,0.0);
+\coordinate (C) at (8.0,1.3);
+\coordinate (D) at (3.5,2.1);
+\coordinate (E) at (2.1,3.0);
+\draw[solid edge] (P)--(A);
+\draw[solid edge] (E)--(B);
+\draw[solid edge] (A)--(B)--(C)--(P);
+\draw[solid edge] (P)--(B);
+\draw[hidden edge] (P)--(D);
+\draw[hidden edge] (A)--(D)--(C);
+\draw[hidden edge] (E)--(C);
+\draw[hidden edge] (D)--(B);
+\node[above] at (P) {$P$};
+\node[left] at (E) {$E$};
+\node[below left] at (A) {$A$};
+\node[below] at (B) {$B$};
+\node[right] at (C) {$C$};
+\node[above left] at (D) {$D$};
+\end{tikzpicture}

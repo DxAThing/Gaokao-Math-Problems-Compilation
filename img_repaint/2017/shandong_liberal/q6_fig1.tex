@@ -1,38 +1,37 @@
-% Source: source/普通高考/2017/2017山东文.pdf, page 1, question 6.
-% Topology: start -> input x -> blank test; 是 -> y=x+2, 否 -> y=log_2 x;
-% both branches merge before 输出 y -> 结束.
-\begin{tikzpicture}[
-  x=1cm, y=0.90cm, >=Stealth,
-  line width=0.45pt, line cap=round, line join=round,
-  every node/.style={anchor=center, align=center,
-    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
-  flowbox/.style={draw, minimum height=0.70cm, inner xsep=4pt, inner ysep=2pt,
-    align=center, execute at begin node={\setlength{\parindent}{0pt}\noindent}},
-  terminal/.style={flowbox, rounded corners=0.16cm, minimum width=1.30cm,
-    minimum height=0.72cm},
-  io/.style={flowbox, trapezium, trapezium left angle=72, trapezium right angle=108,
-    minimum width=2.35cm, minimum height=0.78cm},
-  process/.style={flowbox, minimum width=3.10cm},
-  decision/.style={flowbox, diamond, aspect=3.0, minimum width=3.35cm,
-    minimum height=1.00cm, inner sep=1pt},
-  branchlabel/.style={anchor=center, align=center, inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}\noindent}}
-]
-  \node[terminal] (start) at (0,9.20) {开始};
-  \node[io] (input) at (0,7.75) {输入 $x$};
-  \node[decision] (test) at (0,6.10) {};
-  \node[process, minimum width=3.10cm] (plus) at (0,4.45) {$y=x+2$};
-  \node[process, minimum width=3.55cm] (log) at (3.70,4.45) {$y=\log_{2}x$};
-  \node[io] (output) at (0,2.65) {输出 $y$};
-  \node[terminal] (finish) at (0,1.15) {结束};
-
-  \draw[->] (start.south) -- (input.north);
-  \draw[->] (input.south) -- (test.north);
-  \draw[->] (test.south) -- node[branchlabel, right=2pt] {是} (plus.north);
-  \draw[->] (test.east) -- node[branchlabel, above=2pt] {否} (3.70,6.10) -- (log.north);
-  \coordinate (merge) at (0,3.45);
-  \draw (plus.south) -- (merge);
-  \draw[->] (log.south) -- (3.70,3.45) -- (merge);
-  \draw[->] (merge) -- (output.north);
-  \draw[->] (output.south) -- (finish.north);
+% 2017_shandong_liberal_q6_fig1。
+% 节点清单：开始 / 输入 x / 空白判断菱形(原图空白) / y=x+2 /
+%   y=log_2 x / 输出 y / 结束。
+% 有向边：开始→输入→菱形；菱形是(下)→y=x+2→输出；菱形否(右)→y=log_2 x
+%   顶部；y=log_2 x 底部→(左转)→主干；输出→结束。是/否位置与原图一致。
+% 首轮后修复：空白菱形加 minimum height=1.5cm；y=x+2→输出主干改为单条连续
+%   路径（箭头仍在输出框顶部，汇入点仍在原位置，可见墨迹不变），消除主干
+%   分段在汇入点的零距端点重合。
+\begin{tikzpicture}[x=1cm,y=1cm]
+\tikzset{
+  flownode/.style={draw, line width=0.6pt, align=center, inner sep=3pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  st/.style={flownode, shape=rectangle, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm},
+  io/.style={flownode, trapezium, trapezium left angle=68, trapezium right angle=112,
+    minimum width=3.0cm, minimum height=1.0cm},
+  pr/.style={flownode, minimum width=3.0cm, minimum height=1.0cm},
+  dc/.style={flownode, diamond, aspect=2, minimum width=3.4cm, inner sep=2pt},
+  fe/.style={draw, line width=0.6pt, -{Stealth[length=2.8mm,width=2.2mm]}},
+  fl/.style={draw, line width=0.6pt}
+}
+\node[st] (st0) at (0,0) {开始};
+\node[io] (ioX) at (0,-1.75) {输入 $x$};
+\node[dc,minimum width=4.6cm,minimum height=1.5cm,aspect=2.6] (dcB) at (0,-3.7) {};
+\node[pr,minimum width=3.2cm] (prY) at (0,-5.9) {$y=x+2$};
+\node[pr,minimum width=3.2cm] (prL) at (3.6,-5.9) {$y=\log_{2}x$};
+\node[io] (ioY) at (0,-8.3) {输出 $y$};
+\node[st] (stE) at (0,-10.0) {结束};
+\draw[fe] (st0.south) -- (ioX.north);
+\draw[fe] (ioX.south) -- (dcB.north);
+\draw[fe] (dcB.south) -- (prY.north);
+\node[right=1.5mm] at (0,-4.99) {是};
+\draw[fe] (dcB.east) -- (3.6,-3.7) -- (prL.north);
+\node[above=1.5mm] at (2.95,-3.7) {否};
+\draw[fe] (prY.south) -- (ioY.north);
+\draw[fe] (prL.south) -- (3.6,-7.3) -- (0,-7.3);
+\draw[fe] (ioY.south) -- (stE.north);
 \end{tikzpicture}

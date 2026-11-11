@@ -1,0 +1,31 @@
+\begin{tikzpicture}[line width=.6pt, font=\normalsize]
+\coordinate (D) at (0.0000000000,4.5000000000);
+\coordinate (C) at (0,0);
+\coordinate (A) at (1.5,-1.5);
+\coordinate (B) at (5.5,-1.5);
+\coordinate (M) at (-4.0000000000,0.0000000000);
+\coordinate (Q) at (1.0000000000,0.5000000000);
+\coordinate (P) at (1.8333333333,-0.5000000000);
+% Solid visible
+\draw (D) -- (C);
+\draw (D) -- (Q);
+\draw (Q) -- (A);
+\draw (C) -- (A);
+\draw (A) -- (B);
+\draw (Q) -- (B);
+% Dashed hidden / back
+\draw[dashed] (M) -- (C);
+\draw[dashed] (M) -- (A);
+\draw[dashed] (C) -- (P);
+\draw[dashed] (P) -- (B);
+\draw[dashed] (A) -- (P);
+\draw[dashed] (Q) -- (P);
+% Labels with clearance
+\node[above,yshift=3.0pt] at (D) {$D$};
+\node[above left,xshift=-3.0pt,yshift=2.0pt] at (C) {$C$};
+\node[left,xshift=-3pt] at (M) {$M$};
+\node[below,yshift=-3.0pt] at (A) {$A$};
+\node[right,xshift=3pt] at (B) {$B$};
+\node[left,xshift=-3pt,yshift=2.0pt] at (Q) {$Q$};
+\node[right,xshift=3.0pt,yshift=3pt] at (P) {$P$};
+\end{tikzpicture}

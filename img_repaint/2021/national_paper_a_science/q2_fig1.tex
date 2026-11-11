@@ -1,2 +1,17 @@
-% Canonical statistical figure: img_repaint/2021/national_paper_a_liberal/q2_fig1.tex
-\input{img_repaint/2021/national_paper_a_liberal/q2_fig1.tex}
+% 2021_national_paper_a_science_q2_fig1: histogram, 12 bins width 1.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,exam statistical template wide,
+  xmin=1.5,ymin=0,
+  xtick={1.5,2.5,3.5,4.5,5.5,6.5,7.5,8.5,9.5,10.5,11.5,12.5,13.5,14.5},
+  ytick={0,0.02,0.04,0.10,0.14,0.20},
+  ymajorgrids=true,major grid style={dashed},
+  xmax=15,
+  ymax=0.23,
+  xticklabels={,2.5,3.5,4.5,5.5,6.5,7.5,8.5,9.5,10.5,11.5,12.5,13.5,14.5}]
+\addplot[draw=black,fill=white] coordinates
+  {(2.5,0.02) (3.5,0.04) (4.5,0.10) (5.5,0.14) (6.5,0.20) (7.5,0.20) (8.5,0.10) (9.5,0.10) (10.5,0.04) (11.5,0.02) (12.5,0.02) (13.5,0.02) (14.5,0)};
+\examstatxbreak{2.0}{0}
+\examstatylabel{频率/组距}
+\examstatxlabel{收入/万元}
+\end{axis}
+\end{tikzpicture}

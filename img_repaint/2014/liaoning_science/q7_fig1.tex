@@ -1,0 +1,53 @@
+% 与文科卷同图: 正视图/侧视图(左)/俯视图横向并排; 侧视图无左侧高度尺寸, 点修删去旧稿侧视图多余左高尺寸
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% 正视图
+\draw (0,0) rectangle (2.4,2.4);
+\draw (1.2,0) -- (1.2,2.4);
+\draw (0,2.4) -- (0,2.85);
+\draw (1.2,2.4) -- (1.2,2.85);
+\draw[{Latex[length=2mm]}-{Latex[length=2mm]}] (0,2.7) -- (1.2,2.7);
+\node[above] at (0.6,2.7) {1};
+\draw (0,0) -- (-0.45,0);
+\draw (0,2.4) -- (-0.45,2.4);
+\draw[{Latex[length=2mm]}-{Latex[length=2mm]}] (-0.3,0) -- (-0.3,2.4);
+\node[left] at (-0.45,1.2) {2};
+\draw (0,0) -- (0,-0.45);
+\draw (2.4,0) -- (2.4,-0.45);
+\draw[{Latex[length=2mm]}-{Latex[length=2mm]}] (0,-0.3) -- (2.4,-0.3);
+\node[below] at (1.2,-0.3) {2};
+\node[below] at (1.2,-0.95) {正视图};
+% 侧视图(左): 与正视图同形同尺寸, 仅上方半宽1与下方总宽2, 左侧无高度尺寸
+\begin{scope}[shift={(4.4,0)}]
+\draw (0,0) rectangle (2.4,2.4);
+\draw (1.2,0) -- (1.2,2.4);
+\draw (0,2.4) -- (0,2.85);
+\draw (1.2,2.4) -- (1.2,2.85);
+\draw[{Latex[length=2mm]}-{Latex[length=2mm]}] (0,2.7) -- (1.2,2.7);
+\node[above] at (0.6,2.7) {1};
+\draw (0,0) -- (0,-0.45);
+\draw (2.4,0) -- (2.4,-0.45);
+\draw[{Latex[length=2mm]}-{Latex[length=2mm]}] (0,-0.3) -- (2.4,-0.3);
+\node[below] at (1.2,-0.3) {2};
+\node[below] at (1.2,-0.95) {侧视图（左）};
+\end{scope}
+% 俯视图: 2x2外框, 左上与右下两处半径1四分之一圆内凹缺口, 全部实线
+\begin{scope}[shift={(8.8,0)}]
+\draw (1.2,2.4) -- (2.4,2.4) -- (2.4,1.2);
+\draw (2.4,1.2) arc (90:180:1.2);
+\draw (1.2,0) -- (0,0) -- (0,1.2);
+\draw (0,1.2) arc (270:360:1.2);
+\draw[-{Latex[length=2mm]}] (-0.9,2.9) -- (0.7,1.7);
+\node[left] at (-0.55,2.0) {1};
+\draw[-{Latex[length=2mm]}] (3.3,-0.5) -- (1.7,0.7);
+\node[right] at (2.9,-0.1) {1};
+\draw (0,0) -- (0,-0.45);
+\draw (2.4,0) -- (2.4,-0.45);
+\draw[{Latex[length=2mm]}-{Latex[length=2mm]}] (0,-0.3) -- (2.4,-0.3);
+\node[below] at (1.2,-0.3) {2};
+\draw (2.4,0) -- (2.85,0);
+\draw (2.4,2.4) -- (2.85,2.4);
+\draw[{Latex[length=2mm]}-{Latex[length=2mm]}] (2.7,0) -- (2.7,2.4);
+\node[right] at (2.85,1.2) {2};
+\node[below] at (1.2,-0.95) {俯视图};
+\end{scope}
+\end{tikzpicture}

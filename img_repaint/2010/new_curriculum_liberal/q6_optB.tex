@@ -1,0 +1,14 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Option B (faithful to option image even though incorrect): d(0)=sqrt2 rising, zero at 3pi/4
+\draw[->] (-0.6,0)--(6.9,0) node[right] {$x$};
+\draw[->] (0,-0.6)--(0,3.0) node[above] {$y$};
+\node[below left] at (0,0) {$O$};
+\draw (0.06,2)--(-0.06,2);
+\node[left] at (0,2) {$2$};
+\draw (0.06,1.4142)--(-0.06,1.4142);
+\node[left] at (0,1.4142) {$\sqrt{2}$};
+\draw (2.3562,0.06)--(2.3562,-0.06);
+\node[below] at (2.3562,0) {$\dfrac{3\pi}{4}$};
+% curve 2|sin(x-3pi/4)|: value sqrt2 at 0, zero at 3pi/4, peak 2
+\draw[domain=0:6.4,samples=220] plot (\x,{2*abs(sin(deg(\x)-135))});
+\end{tikzpicture}

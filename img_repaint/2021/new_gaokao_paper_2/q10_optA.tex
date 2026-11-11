@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize]
+% Cube, MN top-face diagonal (solid), OP interior (dashed)
+\coordinate (FBL) at (0,0);
+\coordinate (FBR) at (3,0);
+\coordinate (FTR) at (3,2.6);
+\coordinate (FTL) at (0,2.6);
+\coordinate (BBL) at (0.9,0.8);
+\coordinate (BBR) at (3.9,0.8);
+\coordinate (BTR) at (3.9,3.4);
+\coordinate (BTL) at (0.9,3.4);
+\coordinate (M) at (0,2.6);
+\coordinate (N) at (3.9,3.4);
+\coordinate (O) at (1.95,0.4);
+\coordinate (P) at (3.9,2.1);
+\draw[line width=.6pt] (FBL)--(FBR)--(FTR)--(FTL)--cycle;
+\draw[line width=.6pt] (FTL)--(FTR)--(BTR)--(BTL)--cycle;
+\draw[line width=.6pt] (FTR)--(BTR)--(BBR)--(FBR);
+\draw[line width=.6pt] (M)--(N);
+\draw[line width=.6pt,dashed] (BBL)--(BBR);
+\draw[line width=.6pt,dashed] (FBL)--(BBL)--(BTL);
+\draw[line width=.6pt,dashed] (O)--(P);
+\fill (O) circle (1.4pt);
+\fill (P) circle (1.4pt);
+\node[inner sep=2pt,left] at (M) {$M$};
+\node[inner sep=2pt,above right] at (N) {$N$};
+\node[inner sep=2pt,below left] at (O) {$O$};
+\node[inner sep=2pt,right] at (P) {$P$};
+\end{tikzpicture}

@@ -1,69 +1,18 @@
-% Source PDF: source/普通高考/2014/2014广东理.pdf
-% Page: 1; PDF embedded bitmap attempt: no image objects were present (vector source).
-% Grid evidence: tmp/repaint_2014_guangdong_science/page1_grid100.jpg and q6_block_grid50.jpg.
-% Original-side crop: tmp/repaint_2014_guangdong_science/q6_bar_original.png, from the no-grid page render.
-% Elements: near-sighted-rate y-axis (percent), grade x-axis with arrow, three unit-width bars,
-% dashed horizontal guides at 10%, 30%, and 50%, and the origin/figure labels.
-% Relations: the bars for 小学, 初中, 高中 have heights 10%, 30%, 50%; each dashed guide
-% ends at the corresponding bar's right boundary. The x-axis categories are ordered by school stage.
-% solid segments: bar outlines, x/y axes, axis arrowheads, and category tick marks.
-% dashed segments: horizontal reference guides from the y-axis to the matching bar boundary.
-% labels: 近视率/% above the y-axis, 年级 to the right of the x-axis, O at the origin, 图2 below.
-\begin{tikzpicture}[baseline]
-\begin{axis}[exam statistical bar,
-    width=6.72cm,
-    height=4.032cm,
-    axis lines=none,
-    clip=false,
-    xmin=-0.65,
-    xmax=4.55,
-    ymin=-21,
-    ymax=57,
-    ticks=none,
-]
-    % Dashed percentage guides terminate at the matching bar boundary.
-    \draw[dashed,line width=0.55pt] (axis cs:0,10) -- (axis cs:1,10);
-    \draw[dashed,line width=0.55pt] (axis cs:0,30) -- (axis cs:2,30);
-    \draw[dashed,line width=0.55pt] (axis cs:0,50) -- (axis cs:3,50);
-
-    % Three grade bars: primary, junior high, senior high.
-    \addplot[
-        ybar,
-        bar width=0.62,
-        draw=black,
-        fill=white,
-        line width=0.7pt,
-    ] coordinates {
-        (1,10)
-        (2,30)
-        (3,50)
-    };
-
-    % Axes and arrowheads.
-    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:4.05,0);
-    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,55);
-
-    % Axis labels and origin.
-    \node[anchor=south west,inner sep=0pt,font=\normalsize] at (axis cs:0.12,53.5) {近视率/\%};
-    \examstatxlabel{年级};
-    \node[anchor=north east,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:-0.08,-21.000000) {O};
-
-    % Category ticks and labels.
-    \draw[line width=0.45pt] (axis cs:1,0) -- (axis cs:1,-1.2);
-    \draw[line width=0.45pt] (axis cs:2,0) -- (axis cs:2,-1.2);
-    \draw[line width=0.45pt] (axis cs:3,0) -- (axis cs:3,-1.2);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:1,-1.200000) {小学};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:2,-1.200000) {初中};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:3,-1.200000) {高中};
-
-    % Percentage ticks and labels.
-    \draw[line width=0.45pt] (axis cs:0,10) -- (axis cs:-0.08,10);
-    \draw[line width=0.45pt] (axis cs:0,30) -- (axis cs:-0.08,30);
-    \draw[line width=0.45pt] (axis cs:0,50) -- (axis cs:-0.08,50);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,10) {10};
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,30) {30};
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,50) {50};
-
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:2,-16.5) {图2};
+% 2014_guangdong_science_q6_bar_fig2: bar chart of myopia rates by school level.
+% Categories: 小学 10%, 初中 30%, 高中 50%. Dashed guides drawn under the bars.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template bar,
+  xmin=-0.8,ymin=0,ymax=60,
+  xtick={0,1,2},xticklabels={小学,初中,高中},
+  ytick={10,30,50},
+  xmax=2.5]
+\draw[dashed] (axis cs:-0.8,10) -- (axis cs:0,10);
+\draw[dashed] (axis cs:-0.8,30) -- (axis cs:1,30);
+\draw[dashed] (axis cs:-0.8,50) -- (axis cs:2,50);
+\addplot[draw=black,fill=white] coordinates {(0,10) (1,30) (2,50)};
+\node[anchor=north east] at (axis cs:-0.8,0) {$O$};
+\examstatylabel{近视率/\%}
+\examstatxlabel{年级}
 \end{axis}
+\node[anchor=north] at ([yshift=-12mm]current axis.south) {\bitmapinsertcaption[2]};
 \end{tikzpicture}

@@ -1,0 +1,23 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt},
+ geometry mark/.style={solid,line width=.6pt},
+ geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (P) at (0,0);
+\coordinate (A) at (1.2,0);
+\coordinate (B) at (1.2,1.2);
+\coordinate (C) at (0,1.2);
+\coordinate (O) at (0,0);
+\coordinate (XL) at (-1.5,0);
+\coordinate (XR) at (3,0);
+\coordinate (YB) at (0,-1.8);
+\coordinate (YT) at (0,2);
+\draw[geometry edge] (P)--(A)--(B)--(C)--cycle;
+\draw[geometry edge,->] (XL)--(XR);
+\draw[geometry edge] (YB)--(YT);
+\node[geometry label,below left] at (O) {$O$};
+\node[geometry label,below right] at (P) {$P$};
+\node[geometry label,below] at (A) {$A$};
+\node[geometry label,above right] at (B) {$B$};
+\node[geometry label,left] at (C) {$C$};
+\node[geometry label,below] at (XR) {$x$};
+\end{tikzpicture}

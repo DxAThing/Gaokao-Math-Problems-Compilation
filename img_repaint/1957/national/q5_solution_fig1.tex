@@ -1,0 +1,50 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,line cap=round,line join=round]
+  \tikzset{
+    gedge/.style={line width=.6pt},
+    ghidden/.style={line width=.6pt,dash pattern=on 2.4pt off 1.8pt},
+    gdot/.style={circle,fill=black,draw=none,inner sep=0pt,minimum size=1.8pt},
+    glabel/.style={inner sep=1.5pt,font=\normalsize}
+  }
+  \coordinate (bBL) at (1.30,6.95);
+  \coordinate (bBR) at (6.05,6.95);
+  \coordinate (bFR) at (5.25,5.30);
+  \coordinate (bFL) at (0.50,5.30);
+  \coordinate (aBL) at (1.30,4.50);
+  \coordinate (aBR) at (6.05,4.50);
+  \coordinate (aFR) at (5.25,2.85);
+  \coordinate (aFL) at (0.50,2.85);
+  \coordinate (gBL) at (1.30,1.95);
+  \coordinate (gBR) at (6.05,1.95);
+  \coordinate (gFR) at (5.25,0.30);
+  \coordinate (gFL) at (0.50,0.30);
+  \coordinate (a1) at (1.75,5.654);
+  \coordinate (a2) at (5.50,6.354);
+  \coordinate (M) at (2.80,5.850);
+  \coordinate (E) at (3.55,5.990);
+  \coordinate (b1) at (1.55,1.1973684);
+  \coordinate (b2) at (5.50,0.5736842);
+  \coordinate (N) at (1.85,1.150);
+  \coordinate (F) at (3.75,0.850);
+  \coordinate (Op) at (2.325,3.5);
+  \coordinate (O) at (3.650,3.420);
+  \draw[gedge] (bBL)--(bBR)--(bFR)--(bFL)--cycle;
+  \draw[gedge] (aBL)--(aBR)--(aFR)--(aFL)--cycle;
+  \draw[gedge] (gBL)--(gBR)--(gFR)--(gFL)--cycle;
+  \draw[gedge] (a1)--(a2);
+  \draw[gedge] (b1)--(b2);
+  \draw[ghidden] (M)--(N);
+  \draw[ghidden] (E)--(F);
+  \node[gdot] at (Op) {};
+  \node[gdot] at (O) {};
+  \node[glabel] at (1.02,5.60) {$\beta$};
+  \node[glabel] at (1.12,3.22) {$\alpha$};
+  \node[glabel] at (1.05,0.62) {$\gamma$};
+  \node[glabel,above left=2pt] at (M) {$M$};
+  \node[glabel,above=2pt] at (E) {$E$};
+  \node[glabel] at (5.62,6.52) {$a$};
+  \node[glabel] at (1.58,0.92) {$N$};
+  \node[glabel,above left=2pt] at (F) {$F$};
+  \node[glabel] at (5.62,0.62) {$b$};
+  \node[glabel,right=2pt] at (Op) {$O'$};
+  \node[glabel,right=2pt] at (O) {$O$};
+\end{tikzpicture}

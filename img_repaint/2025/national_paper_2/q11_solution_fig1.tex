@@ -1,0 +1,38 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-3.2,0) -- (3.3,0);
+\node[right=2pt] at (3.3,0) {$x$};
+\draw[->] (0,-2.6) -- (0,2.7);
+\node[above=2pt] at (0,2.7) {$y$};
+% hyperbola branches: x^2/a^2-y^2/b^2=1, a=0.9, b=1.67
+\draw plot[domain=-1.15:1.15,samples=60,smooth] ({0.6*cosh(\x)},{2.078460969083*sinh(\x)});
+\draw plot[domain=-1.15:1.15,samples=60,smooth] ({-0.6*cosh(\x)},{2.078460969083*sinh(\x)});
+% asymptotes = diagonal MN line (single stroke)
+\draw (-.8,-2.771281292110204)--(.8,2.771281292110204);
+\draw (-.8,2.771281292110204)--(.8,-2.771281292110204);
+% points
+\coordinate (F1) at (-2.1633307653,0.0000000000);
+\coordinate (A1) at (-0.6000000000,0.0000000000);
+\coordinate (O) at (0,0);
+\coordinate (A2) at (0.6000000000,0.0000000000);
+\coordinate (F2) at (2.1633307653,0.0000000000);
+\coordinate (M) at (0.6000000000,2.0784609691);
+\coordinate (N) at (-0.6000000000,-2.0784609691);
+% quadrilateral A1-M-A2-N
+\draw (A1) -- (M) -- (A2) -- (N) -- cycle;
+% outer focal segments
+\draw (F1) -- (M);
+\draw (F1) -- (N);
+\draw (F2) -- (M);
+\draw (F2) -- (N);
+% dots
+\foreach \p in {F1,A1,O,A2,F2,M,N}{\fill (\p) circle (1.2pt);}
+% labels with clearance
+\node[below left=2pt] at (F1) {$F_{1}$};
+\node[below left=2pt] at (A1) {$A_{1}$};
+\node[below left=2pt,xshift=-2pt,yshift=-2pt] at (O) {$O$};
+\node[below=2pt,xshift=9pt,yshift=1pt] at (A2) {$A_{2}$};
+\node[below right=2pt] at (F2) {$F_{2}$};
+\node[above=2pt,xshift=-5pt,yshift=1pt] at (M) {$M$};
+\node[below=2pt,xshift=5pt,yshift=1pt] at (N) {$N$};
+\end{tikzpicture}

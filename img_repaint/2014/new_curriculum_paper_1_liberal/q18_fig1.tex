@@ -1,30 +1,43 @@
-% 统计图真值来自 source/普通高考/2014/2014新课标1文(河南,河北,山西).pdf 第 1 页、题 18。
-% 原卷图为待作答的频率分布直方图坐标模板，未绘制任何柱体；此处保留空网格。
-% x 轴标签依次为 0、75、85、95、105、115、125（0 到 75 为原卷断轴后的等距位置）。
-% y 轴刻度为 0.002 至 0.040，轴标题为“频率/组距”；网格覆盖全部刻度位置。
+% 2014_new_curriculum_paper_1_liberal_q18_fig1: blank histogram frame (original has
+% axes, ticks and grid only; the student completes the bars). No bars invented.
+% Template: templates/statistical/histogram.tex via shared exam statistical template histogram.
+% One group width (65-75) kept before the break, origin labelled 0.
 \begin{tikzpicture}
-\begin{axis}[exam statistical histogram,
-  width=10.0cm,
-  height=15.053cm,
-  xmin=0, xmax=6.6,
-  ymin=0, ymax=0.044,
-  axis lines=left,
-  axis line style={-stealth},
-  xtick={0,1,2,3,4,5,6},
-  xticklabels={0,75,85,95,105,115,125},
+\begin{axis}[exam statistical template histogram,
+  xmin=65,ymin=0,
+  xtick={65,75,85,95,105,115,125},
   ytick={0.002,0.004,0.006,0.008,0.010,0.012,0.014,0.016,0.018,0.020,0.022,0.024,0.026,0.028,0.030,0.032,0.034,0.036,0.038,0.040},
-  yticklabels={0.002,0.004,0.006,0.008,0.010,0.012,0.014,0.016,0.018,0.020,0.022,0.024,0.026,0.028,0.030,0.032,0.034,0.036,0.038,0.040},
-  ytick scale label code/.code={},
-  tick style={draw=none},
-  grid=major,
-  major grid style={draw=gray!58,line width=0.3pt},
-  ylabel={},
-  clip=false,
-]
-    \examstatxlabel{质量指标值};
-\examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
-% 原卷在 0 与 75 之间使用断轴锯齿，覆盖连续基线后补回锯齿。
-\draw[white,line width=1.3pt] (axis cs:0.18,0) -- (axis cs:0.80,0);
-\examstatxbreak[line width=0.45pt]{0.49}{0};
+  grid=major,grid style={gray!60},
+  xmax=130,
+  ymax=0.041,
+  exam statistical template dense,
+  yticklabels={},
+  xticklabels={,75,85,95,105,115,125}]
+\examstatxbreak{70}{0}
+\examstatylabel{频率/组距}
+\examstatxlabel{质量指标值}
+
+\examstatyticklabel{65}{0.002}{0.002}{-7.784905}
+\examstatyticklabel{65}{0.004}{0.004}{-7.065873}
+\examstatyticklabel{65}{0.006}{0.006}{-6.346841}
+\examstatyticklabel{65}{0.008}{0.008}{-5.627809}
+\examstatyticklabel{65}{0.01}{0.010}{-4.908777}
+\examstatyticklabel{65}{0.012}{0.012}{-4.189745}
+\examstatyticklabel{65}{0.014}{0.014}{-3.470713}
+\examstatyticklabel{65}{0.016}{0.016}{-2.751680}
+\examstatyticklabel{65}{0.018}{0.018}{-2.032648}
+\examstatyticklabel{65}{0.02}{0.020}{-1.313616}
+\examstatyticklabel{65}{0.022}{0.022}{-0.594584}
+\examstatyticklabel{65}{0.024}{0.024}{0.124448}
+\examstatyticklabel{65}{0.026}{0.026}{0.843480}
+\examstatyticklabel{65}{0.028}{0.028}{1.562512}
+\examstatyticklabel{65}{0.03}{0.030}{2.281544}
+\examstatyticklabel{65}{0.032}{0.032}{3.000576}
+\examstatyticklabel{65}{0.034}{0.034}{3.719608}
+\examstatyticklabel{65}{0.036}{0.036}{4.438640}
+\examstatyticklabel{65}{0.038}{0.038}{5.157672}
+\examstatyticklabel{65}{0.04}{0.040}{5.876704}
+
+\node[anchor=east,inner sep=0pt,xshift=-4pt] at (current axis.left of origin) {0};
 \end{axis}
 \end{tikzpicture}

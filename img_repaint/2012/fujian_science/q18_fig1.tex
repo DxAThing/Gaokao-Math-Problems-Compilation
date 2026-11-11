@@ -1,0 +1,42 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,
+geometry edge/.style={solid,line width=.6pt},
+geometry label/.style={font=\normalsize,inner sep=2pt}]
+% bottom face ABCD: B(0,0) C(3,0) D(5,1) A(2,1); top: B1(0,3) C1(3,3) D1(5,4) A1(2,4)
+\coordinate (B) at (0,0);
+\coordinate (C) at (3,0);
+\coordinate (D) at (5,1);
+\coordinate (A) at (2,1);
+\coordinate (B1) at (0,3);
+\coordinate (C1) at (3,3);
+\coordinate (D1) at (5,4);
+\coordinate (A1) at (2,4);
+\coordinate (E) at (4,0.5);
+% bottom
+\draw[geometry edge] (B)--(C)--(E);
+\draw[geometry edge] (E)--(D);
+\draw[geometry edge,dashed] (A)--(D);
+\draw[geometry edge,dashed] (A)--(B);
+% verticals
+\draw[geometry edge] (B)--(B1);
+\draw[geometry edge] (C)--(C1);
+\draw[geometry edge] (D)--(D1);
+\draw[geometry edge,dashed] (A)--(A1);
+% top
+\draw[geometry edge] (B1)--(C1);
+\draw[geometry edge] (C1)--(D1);
+\draw[geometry edge] (A1)--(D1);
+\draw[geometry edge] (B1)--(A1);
+% diagonals through A / B1E
+\draw[geometry edge,dashed] (A)--(D1);
+\draw[geometry edge,dashed] (B1)--(A);
+\draw[geometry edge,dashed] (B1)--(E);
+\node[geometry label,below left] at ($(B)+(-0.16,-0.14)$) {$B$};
+\node[geometry label,below] at ($(C)+(0,-0.24)$) {$C$};
+\node[geometry label,right] at ($(D)+(0.24,0)$) {$D$};
+\node[geometry label,below] at ($(A)+(0,-0.26)$) {$A$};
+\node[geometry label,left] at ($(B1)+(-0.24,0)$) {$B_{1}$};
+\node[geometry label,above] at ($(A1)+(0,0.24)$) {$A_{1}$};
+\node[geometry label,above right] at ($(D1)+(0.14,0.16)$) {$D_{1}$};
+\node[geometry label,above] at ($(C1)+(0,0.24)$) {$C_{1}$};
+\node[geometry label,below right] at ($(E)+(0.16,-0.12)$) {$E$};
+\end{tikzpicture}

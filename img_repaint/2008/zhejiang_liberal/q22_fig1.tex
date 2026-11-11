@@ -1,0 +1,24 @@
+% 2008_zhejiang_liberal_q22_fig1: schematic xOy axes, line l through Q(-1,0),
+% vertical segment MB and perpendicular segment MA with right-angle mark at A.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-3,0)--(6.5,0) node[right] {$x$};
+\draw[->] (0,-2.5)--(0,5.5) node[above] {$y$};
+\node[below] at (-0.35,0) {$O$};
+% line l through Q(-1,0), slope 1/2 (schematic, slope not given in stem)
+\draw (-2.6,-0.8)--(5.6,2.5);
+\node[above] at (5.0,2.55) {$l$};
+% Q on the x-axis (exact from stem)
+\fill (-1,0) circle (1.5pt);
+\node[above left] at (-1,0) {$Q$};
+% triangle points: B on l, M above B, A foot from M to l
+\coordinate (B) at (2.5,1.75);
+\coordinate (M) at (2.5,3.3);
+\coordinate (A) at (3.12,2.06);
+\draw (B)--(M);
+\draw (M)--(A);
+\node[above] at (M) {$M$};
+\node[below] at (B) {$B$};
+\node[below right,yshift=-2pt] at (A) {$A$};
+% right-angle mark at A between MA and l
+\draw (3.022,2.257)--(3.219,2.355)--(3.317,2.158);
+\end{tikzpicture}

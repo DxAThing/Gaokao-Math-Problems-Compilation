@@ -1,0 +1,9 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-1.4,0)--(2.8,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.6)--(0,1.8) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\node[anchor=north west,inner sep=0pt,xshift=3pt,yshift=-3pt] at (0,0) {$O$};
+% parabola y=-0.7x(x-1.6): opens down, roots 0/1.6 (through origin)
+\draw[domain=-0.6:2.3,samples=130] plot (\x,{-0.7*\x*(\x-1.6)});
+% rising line y=0.45x-0.72 through (1.6,0), intercept<0 (intended mismatch vs parabola b>0)
+\draw (-1.0,-1.17)--(2.0,0.18);
+\end{tikzpicture}

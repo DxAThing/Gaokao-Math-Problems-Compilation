@@ -1,0 +1,27 @@
+\examstatpanels{
+\begin{tabular}{@{}c@{}}
+\begin{tikzpicture}[exam statistical template pie]
+\examstatpie[hide number,text=inside,rotate=65]{3500/\shortstack{小学生\\3500名},4500/\shortstack{初中生\\4500名},2000/\shortstack{高中生\\2000名}}
+\node at (0,-3.2) {\bitmapinsertcaption[1]};
+\end{tikzpicture}
+\end{tabular}
+}{
+\begin{tabular}{@{}c@{}}
+\begin{tikzpicture}
+\begin{axis}[exam statistical template bar,
+  xmin=-0.8,ymin=0,ymax=60,
+  xtick={0,1,2},xticklabels={小学,初中,高中},
+  ytick={10,30,50},
+  xmax=2.5]
+\draw[dashed] (axis cs:-0.8,10) -- (axis cs:0,10);
+\draw[dashed] (axis cs:-0.8,30) -- (axis cs:1,30);
+\draw[dashed] (axis cs:-0.8,50) -- (axis cs:2,50);
+\addplot[draw=black,fill=white] coordinates {(0,10) (1,30) (2,50)};
+\node[anchor=north east] at (axis cs:-0.8,0) {$O$};
+\examstatylabel{近视率/\%}
+\examstatxlabel{年级}
+\end{axis}
+\node[anchor=north] at ([yshift=-12mm]current axis.south) {\bitmapinsertcaption[2]};
+\end{tikzpicture}
+\end{tabular}
+}

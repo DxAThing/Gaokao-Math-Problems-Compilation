@@ -1,0 +1,25 @@
+% 2014_new_curriculum_paper_2_liberal_q6_fig1: point-fix of inputs/..._current.tex.
+% Only rearranged into one horizontal row (front, side, top) with captions below.
+% Projection edges, sizes kept; scopes only translated.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% light grid behind views (step kept 0.5)
+\draw[gray,thin,step=0.5] (-0.5,-0.5) grid (12.0,3.5);
+% ---- front view: stepped profile (was top-left) ----
+\begin{scope}[shift={(0,0)}]
+\draw (2,0) rectangle (3,3);
+\draw (0,0.5) rectangle (2,2.5);
+\node[below] at (1.5,-0.75) {正视图};
+\end{scope}
+% ---- side view: concentric circles (was top-right) ----
+\begin{scope}[shift={(4.2,0)}]
+\draw (1.5,1.5) circle (1.5);
+\draw (1.5,1.5) circle (1.0);
+\node[below] at (1.5,-0.75) {侧视图};
+\end{scope}
+% ---- top view: stepped profile (was bottom-left) ----
+\begin{scope}[shift={(8.6,0)}]
+\draw (2,0) rectangle (3,3);
+\draw (0,0.5) rectangle (2,2.5);
+\node[below] at (1.5,-0.75) {俯视图};
+\end{scope}
+\end{tikzpicture}

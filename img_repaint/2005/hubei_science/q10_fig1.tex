@@ -1,0 +1,47 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+\coordinate (A) at (0,5);
+\coordinate (B) at (6,5);
+\coordinate (C) at (3.8,3.7);
+\coordinate (Ap) at (0,0.5);
+\coordinate (Bp) at (6.0000000000,0.5000000000);
+\coordinate (Cp) at (3.8000000000,-0.8000000000);
+\coordinate (E) at (1.9000000000,2.1000000000);
+\coordinate (F) at (4.9000000000,2.1000000000);
+\coordinate (H) at (3.0000000000,2.7500000000);
+\coordinate (G) at (3.2666666667,4.5666666667);
+\coordinate (K) at (4.9000000000,-0.1500000000);
+% top face
+\draw (A) -- (B);
+\draw (A) -- (C);
+\draw (B) -- (C);
+% lateral edges
+\draw (A) -- (Ap);
+\draw (B) -- (Bp);
+\draw (C) -- (Cp);
+% bottom face
+\draw[dashed] (Ap) -- (Bp);
+\draw (Bp) -- (Cp);
+\draw (Ap) -- (Cp);
+% interior segments
+\draw (A) -- (Cp);
+\draw (C) -- (Bp);
+\draw[dashed] (Ap) -- (B);
+% dots
+\fill (E) circle (1.4pt);
+\fill (F) circle (1.4pt);
+\fill (H) circle (1.4pt);
+\fill (G) circle (1.4pt);
+\fill (K) circle (1.4pt);
+% labels with clearance
+\node[above left,xshift=0pt,yshift=0pt] at (A) {$A$};
+\node[above right,xshift=0pt,yshift=0pt] at (B) {$B$};
+\node[above,xshift=0pt,yshift=0pt] at (C) {$C$};
+\node[below left,xshift=0pt,yshift=0pt] at (Ap) {$A'$};
+\node[below right,xshift=0pt,yshift=0pt] at (Bp) {$B'$};
+\node[below left,xshift=0pt,yshift=0pt] at (Cp) {$C'$};
+\node[left,xshift=0pt] at (E) {$E$};
+\node[right,xshift=0pt] at (F) {$F$};
+\node[above left,xshift=0pt,yshift=0pt] at (H) {$H$};
+\node[right,xshift=0pt] at (G) {$G$};
+\node[below right,xshift=0pt,yshift=0pt] at (K) {$K$};
+\end{tikzpicture}

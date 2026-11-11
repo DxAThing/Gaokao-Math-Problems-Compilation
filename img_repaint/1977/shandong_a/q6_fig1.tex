@@ -1,0 +1,25 @@
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% front (left trapezoid, translated from upper-left, geometry unchanged)
+\begin{scope}[shift={(0,0)}]
+\draw (0,0) -- (3,0) -- (2.25,2) -- (0.75,2) -- cycle;
+\draw[dash pattern=on 8pt off 3pt on 1pt off 3pt] (1.5,-0.7) -- (1.5,2.7);
+\node at (1.5,-1.15) {正视图};
+\end{scope}
+% side (middle trapezoid, translated from upper-right, geometry unchanged)
+\begin{scope}[shift={(4.4,0)}]
+\draw (0,0) -- (3,0) -- (2.25,2) -- (0.75,2) -- cycle;
+\draw[dash pattern=on 8pt off 3pt on 1pt off 3pt] (1.5,-0.7) -- (1.5,2.7);
+\node at (1.5,-1.15) {侧视图};
+\end{scope}
+% plan (right: outer + inner squares with corner links, translated from lower-left, geometry unchanged)
+\begin{scope}[shift={(8.8,0)}]
+\draw (0,0) rectangle (3,3);
+\draw (0.9,0.9) rectangle (2.1,2.1);
+\draw (0,0) -- (0.9,0.9);
+\draw (3,0) -- (2.1,0.9);
+\draw (0,3) -- (0.9,2.1);
+\draw (3,3) -- (2.1,2.1);
+\draw[dash pattern=on 8pt off 3pt on 1pt off 3pt] (1.5,-0.7) -- (1.5,3.7);
+\node at (1.5,-1.15) {俯视图};
+\end{scope}
+\end{tikzpicture}

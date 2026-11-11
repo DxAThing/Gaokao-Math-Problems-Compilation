@@ -1,0 +1,17 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[line width=.6pt, font=\normalsize, x=1cm, y=1cm]
+% axes
+\draw[->] (-0.3,0)--(6.2,0) node[below] {$t$};
+\draw[->] (0,-0.5)--(0,4.2) node[left] {$v(t)$};
+\node[below left] at (0,0) {$O$};
+% curves from formulas: v_jia=sqrt(x), v_yi=0.125*x^2, intersect at x=4 (=t0)
+\draw[solid, domain=0:5.4, samples=80, smooth] plot (\x,{sqrt(\x)});
+\draw[solid, domain=0:5.2, samples=80, smooth] plot (\x,{0.125*\x*\x});
+\node[above] at (2.4,1.95) {$v_{\text{甲}}$};
+\node[below] at (3.0,1.0) {$v_{\text{乙}}$};
+% dashed t0, t1
+\draw[dashed] (4,0)--(4,2);
+\draw[dashed] (4.7,0)--(4.7,2.7606);
+\node[below] at (4,0) {$t_{0}$};
+\node[below] at (4.7,0) {$t_{1}$};
+\end{tikzpicture}

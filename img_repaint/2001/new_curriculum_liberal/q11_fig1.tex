@@ -1,0 +1,46 @@
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+\begin{scope}[shift={(0,0)}]
+\coordinate (FL) at (0,1.2);
+\coordinate (FR) at (2.8,1.2);
+\coordinate (BL) at (-0.8,2.7);
+\coordinate (BR) at (2,2.7);
+\fill[gray!20] (FL)--(FR)--(BR)--(BL)--cycle;\draw (BL)--(FL)--(FR)--(BR)--(BL);
+\draw (FL)--(0,0);
+\draw (FR)--(2.8,0);
+\draw (BL)--(-0.8,0.7);
+\draw[dashed] (BR)--(2,0.7);
+\node[circle,draw,inner sep=1.2pt] at (1,-.45) {1};
+\end{scope}
+\begin{scope}[shift={(4,0)}]
+\coordinate (FL) at (0,1.2);
+\coordinate (FR) at (2.8,1.2);
+\coordinate (BL) at (-0.8,1.9);
+\coordinate (BR) at (2,1.9);
+\coordinate (RL) at (-0.4,2.35);
+\coordinate (RR) at (2.4,2.35);
+\fill[gray!15] (FL)--(FR)--(RR)--(RL)--cycle;\fill[gray!25] (BL)--(FL)--(RL)--cycle;
+\draw (BL)--(FL)--(FR)--(BR);\draw[dashed] (BL)--(BR);\draw (BL)--(RL)--(FL) (RL)--(RR)--(FR);
+\draw (RR)--(BR);
+\draw (FL)--(0,0);
+\draw (FR)--(2.8,0);
+\draw (BL)--(-0.8,0.7);
+\draw[dashed] (BR)--(2,0.7);
+\node[circle,draw,inner sep=1.2pt] at (1,-.45) {2};
+\end{scope}
+\begin{scope}[shift={(8,0)}]
+\coordinate (FL) at (0,1.2);
+\coordinate (FR) at (2.8,1.2);
+\coordinate (BL) at (-0.8,1.9);
+\coordinate (BR) at (2,1.9);
+\coordinate (RL) at (0.2,2.35);
+\coordinate (RR) at (1.8,2.35);
+\fill[gray!15] (FL)--(FR)--(RR)--(RL)--cycle;\fill[gray!25] (BL)--(FL)--(RL)--cycle;
+\draw (BL)--(FL)--(FR)--(BR);\draw[dashed] (BL)--(BR);\draw (BL)--(RL)--(FL) (RL)--(RR)--(FR);
+\draw[dashed] (RR)--(BR);
+\draw (FL)--(0,0);
+\draw (FR)--(2.8,0);
+\draw (BL)--(-0.8,0.7);
+\draw[dashed] (BR)--(2,0.7);
+\node[circle,draw,inner sep=1.2pt] at (1,-.45) {3};
+\end{scope}
+\end{tikzpicture}

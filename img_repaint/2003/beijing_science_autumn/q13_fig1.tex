@@ -1,0 +1,16 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Truncated cylinder: bottom circle, slanted top ellipse, diameter 2r
+% Bottom ellipse center (0,0), rx=2, ry=0.5
+\draw (2,0) arc (0:-180:2 and 0.5);
+\draw[dashed] (2,0) arc (0:180:2 and 0.5);
+\draw[dashed] (-2,0) -- (2,0);
+% Side walls: left short (b), right tall (a)
+\draw ( -2,0) -- (-2,2.8);
+\draw (2,0) -- (2,4.6);
+% Top slanted ellipse, center (0,3.7), rotated ~24deg
+\draw[domain=0:360,samples=180,variable=\t] plot ({2*cos(\t)},{3.7+.9*cos(\t)+.5*sin(\t)});
+\node[left=4pt] at (-2,1.4) {$b$};
+\node[right=4pt] at (2,2.3) {$a$};
+\node at (0,-0.22) {$2r$};
+\end{tikzpicture}
+

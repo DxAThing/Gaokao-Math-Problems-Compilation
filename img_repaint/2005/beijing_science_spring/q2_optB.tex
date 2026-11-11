@@ -1,0 +1,17 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (Xneg) at (-3.2,0);\coordinate (Xpos) at (3.2,0);\coordinate (Ypos) at (0,2.6);\coordinate (Yneg) at (0,-2.6);\coordinate (Vleft) at (-0.9,0);\coordinate (Vright) at (1,0);
+
+
+\draw[-{Stealth}] (-3.2,0)--(3.2,0); \draw[-{Stealth}] (0,-2.6)--(0,2.6);
+
+
+
+
+\draw[domain=-2.8:-.24,samples=100] plot (\x,{abs(ln(-\x)/ln(2))});
+\draw[domain=.24:2.8,samples=100] plot (\x,{abs(ln(\x)/ln(2))});
+\node[below right] at (3.2,0) {$x$}; \node[above left] at (0,2.6) {$y$};
+\node[below left] at (0,0) {$O$}; \node[below] at (1,0) {$1$};
+
+\end{tikzpicture}

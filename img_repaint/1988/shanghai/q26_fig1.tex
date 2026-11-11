@@ -1,0 +1,22 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (2.5,4.5);
+\coordinate (B) at (0.5,2.2);
+\coordinate (D) at (5.0,2.0);
+\coordinate (C) at (2.8,0.0);
+\coordinate (E) at (3.75,3.25);
+\coordinate (F) at (1.65,1.1);
+% solid outline and interior
+\draw (A)--(B)--(C)--cycle;
+\draw (A)--(D)--(C);
+\draw (A)--(F);
+\draw (C)--(E);
+% hidden base edge
+\draw[dashed] (B)--(D);
+% labels
+\node[above] at (A) {$A$};
+\node[left] at (B) {$B$};
+\node[right] at (D) {$D$};
+\node[below] at (C) {$C$};
+\node[right] at (E) {$E$};
+\node[left] at (F) {$F$};
+\end{tikzpicture}

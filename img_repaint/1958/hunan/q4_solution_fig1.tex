@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt},
+ geometry mark/.style={solid,line width=.6pt},
+ geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (V0) at (0,0);
+\coordinate (V1) at (4,0);
+\coordinate (V2) at (2.535898384862245,2.535898384862245);
+\coordinate (LA) at (3.55,1.35);
+\coordinate (LB) at (1.05,1.5);
+\coordinate (LC) at (2,-0.42);
+\coordinate (L45) at (0.62,0.3);
+\coordinate (L60) at (3.3,0.32);
+\coordinate (L75) at (2.45,1.9);
+\draw[geometry edge] (V0)--(V1)--(V2)--cycle;
+\draw[geometry mark] ($(V0)+(0:0.55)$) arc (0:45:0.55);
+\draw[geometry mark] ($(V1)+(180:0.55)$) arc (180:120:0.55);
+\draw[geometry mark] ($(V2)+(-135:0.5)$) arc (-135:-60:0.5);
+\node[geometry label,right] at (LA) {$a$};
+\node[geometry label,left] at (LB) {$b$};
+\node[geometry label,below] at (LC) {$c$};
+\node[geometry label,above right] at (L45) {$45^{\circ}$};
+\node[geometry label,above left] at (L60) {$60^{\circ}$};
+\node[geometry label,below] at (L75) {$75^{\circ}$};
+\end{tikzpicture}

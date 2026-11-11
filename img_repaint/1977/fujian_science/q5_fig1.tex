@@ -1,0 +1,16 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,
+  geometry edge/.style={solid,line width=.6pt}]
+\coordinate (A) at (-3.1,0);
+\coordinate (P) at (3.1,0);
+\coordinate (C) at (0.2,1.7);
+\coordinate (B) at (0.2,-1.7);
+\filldraw[fill=gray!20] (0,0) ellipse (1.15 and .75);
+\draw[geometry edge] (A)--(C)--(P)--(B)--cycle;
+\draw[geometry edge,dashed] (A)--(P);
+\draw[geometry edge,dashed] (C)--(B);
+
+\node[left] at (A) {$A$};
+\node[right] at (P) {$P$};
+\node[above] at (C) {$C$};
+\node[below] at (B) {$B$};
+\end{tikzpicture}

@@ -1,0 +1,23 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-0.6,0)--(6.0,0) node[below=2pt,right=1pt] {$x$};
+\draw[->] (0,-3.0)--(0,2.6) node[above=2pt,left=1pt] {$y$};
+\node[below left=5pt] at (0,0) {$O$};
+\draw[domain=-2.2:1.9,samples=120,smooth,variable=\y] plot ({\y*\y},{\y});
+\coordinate (M) at (1.44,1.2);
+\coordinate (Ept) at (0.49,-0.7);
+\coordinate (Fpt) at (2.89,-1.7);
+\coordinate (Apt) at (0.84,0);
+\coordinate (Bpt) at (2.04,0);
+\draw (M)--(Ept)--(Fpt)--cycle;
+\fill (M) circle (1.2pt);
+\fill (Ept) circle (1.2pt);
+\fill (Fpt) circle (1.2pt);
+\fill (Apt) circle (1.2pt);
+\fill (Bpt) circle (1.2pt);
+\node[above=5pt] at (M) {$M$};
+\node[left=5pt,below=1pt] at (Ept) {$E$};
+\node[below=6pt] at (Fpt) {$F$};
+\node[below=6pt] at (Apt) {$A$};
+\node[below=6pt] at (Bpt) {$B$};
+\end{tikzpicture}

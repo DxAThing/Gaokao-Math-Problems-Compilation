@@ -1,0 +1,25 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (0,0)--(10.8,0) node[right] {$t$};
+\draw[->] (0,0)--(0,6.2) node[above] {$W$};
+\node[below left] at (0,0) {$O$};
+% standard level
+\draw[dashed] (0,1.2382001457064)--(9.5,1.2382001457064);
+\node[anchor=east,inner sep=2pt] at (-.08,1.2382001457064) {$\text{污水达标排放量}$};
+% vertical markers t1,t2,t3
+\draw[dashed] (3,0)--(3,4.62572286577735);
+\draw[dashed] (6.717482091731805,0)--(6.717482091731805,2.1214294749122926);
+\draw[dashed] (9.5,0)--(9.5,1.2382001457064);
+\node[below] at (3,-0.08) {$t_{1}$};
+\node[below] at (6.717482091731805,-.08) {$t_{2}$};
+\node[below] at (9.5,-0.08) {$t_{3}$};
+% Jia curve (upper start, lower end), explicit formula, domain [0.3,10.2]
+\draw[domain=0:10.2,samples=160] plot (\x,{0.5+4.5/(1+exp(.8*(\x-6)))});
+% Yi curve (lower start, upper end), explicit formula
+\draw[domain=0:10.2,samples=160] plot (\x,{.9+3.1/(1+exp(.6*(\x-6)))});
+% labels with clearance from strokes
+\node[above] at (1.2,5.05) {$\text{甲企业}$};
+\node[above] at (1.2,4.05) {$\text{乙企业}$};
+\node[above] at (8.7,1.85) {$\text{乙企业}$};
+\node[below] at (8.6,.65) {$\text{甲企业}$};
+\end{tikzpicture}

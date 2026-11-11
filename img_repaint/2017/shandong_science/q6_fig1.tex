@@ -1,0 +1,36 @@
+% 2017山东理科Q6质数判断程序框图.对象:开始/输入正整数x/ b=2/ 菱形b^2>x/ 菱形x能被b整除/
+% a=0/ a=1/ b=b+1/ 输出a/ 结束.关系:见边表.是否标签均在出口附近线上方或右侧.
+\begin{tikzpicture}[line width=0.6pt, >= {Stealth[length=2.2mm,width=1.5mm]},
+  start/.style={draw, rectangle, rounded corners=2mm, minimum width=2.4cm, minimum height=0.8cm, align=center},
+  proc/.style={draw, rectangle, align=center, minimum height=0.8cm},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110, align=center, minimum height=0.9cm},
+  dec/.style={draw, diamond, align=center, inner sep=1mm}]
+  \node[start] (start) at (0,0) {开始};
+  \node[io, minimum width=4.2cm] (iox) at (0,-1.6) {输入正整数 $x$};
+  \node[proc, minimum width=2.4cm] (b2) at (0,-3.0) {$b=2$};
+  \coordinate (J1) at (0,-4.0);
+  \node[dec, minimum width=3.2cm, aspect=2.4] (d1) at (0,-5.0) {$b^{2}>x$};
+  \node[dec, minimum width=5.2cm, aspect=3] (d2) at (0,-7.2) {$x$能被$b$整除};
+  \node[proc, minimum width=2.4cm] (a0) at (0,-9.3) {$a=0$};
+  \coordinate (J2) at (0,-10.3);
+  \node[io, minimum width=3.4cm] (outa) at (0,-11.3) {输出 $a$};
+  \node[start] (end) at (0,-12.8) {结束};
+  \node[proc, minimum width=2.4cm] (a1) at (4.0,-9.3) {$a=1$};
+  \node[proc, minimum width=2.8cm] (bplus) at (-4.8,-6.0) {$b=b+1$};
+  % 主干
+  \draw[->] (start.south) -- (iox.north);
+  \draw[->] (iox.south) -- (b2.north);
+  \draw[->] (b2.south) -- (J1) -- (d1.north);
+  \draw[->] (d1.south) -- (d2.north) node[pos=0.45,right=1.2mm]{否};
+  \draw[->] (d2.south) -- (a0.north) node[pos=0.45,right=1.2mm]{是};
+  \draw[->] (a0.south) -- (J2) -- (outa.north);
+  \draw[->] (outa.south) -- (end.north);
+  % d1是分支:东出口右行至a1中心线,下行入a1北,标签在线上方近出口
+  \draw[->] (d1.east) -- (a1.north |- d1.east) node[pos=0.25,above=1.2mm]{是} -- (a1.north);
+  % a1汇入:南出口下行至J2高度,左行以单箭头汇入主干J2
+  \draw[->] (a1.south) |- (J2);
+  % d2否分支:西出口左行至bplus中心线,上行入bplus南,标签在线上方近出口
+  \draw[->] (d2.west) -- (bplus.south |- d2.west) node[pos=0.25,above=1.2mm]{否} -- (bplus.south);
+  % b=b+1回路:北出口上行至J1高度,右行以单箭头汇入主干J1
+  \draw[->] (bplus.north) -- (J1 -| bplus.north) -- (J1);
+\end{tikzpicture}

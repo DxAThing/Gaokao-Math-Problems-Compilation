@@ -1,0 +1,30 @@
+% point-fix: horizontal row front/side/plan; projection edges, dims, solid lines unchanged; captions centered below with aligned baselines
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm,>=Stealth]
+% ---- front (left): 4x4 square -> 3x3cm ----
+\begin{scope}[shift={(0,0)}]
+\draw (0,0) rectangle (3,3);
+\draw (0,3.35) -- (0,3.55); \draw (3,3.35) -- (3,3.55);
+\draw[<->] (0.05,3.45) -- (2.95,3.45); \node at (1.5,3.45) [above=2pt] {4};
+\draw (-0.35,0) -- (-0.55,0); \draw (-0.35,3) -- (-0.55,3);
+\draw[<->] (-0.45,0.05) -- (-0.45,2.95); \node at (-0.45,1.5) [left=2pt] {4};
+\node[below] at (1.5,-0.9) {正视图};
+\end{scope}
+% ---- side (middle): isosceles trapezoid, bottom 1.5cm, top 0.75cm, height 3cm ----
+\begin{scope}[shift={(4.6,0)}]
+\draw (0,0) -- (1.5,0) -- (1.125,3) -- (0.375,3) -- cycle;
+\node[below] at (0.75,-0.9) {侧视图（左）};
+\end{scope}
+% ---- plan (right): outer 3x3, strips 1/2/1 -> 0.75/1.5/0.75 from top ----
+\begin{scope}[shift={(7.7,0)}]
+\draw (0,0) rectangle (3,3);
+\draw (0,0.75) -- (3,0.75);
+\draw (0,2.25) -- (3,2.25);
+\draw (-0.35,0) -- (-0.55,0); \draw (-0.35,0.75) -- (-0.55,0.75);
+\draw[<->] (-0.45,0.05) -- (-0.45,0.7); \node at (-0.45,0.375) [left=2pt] {1};
+\draw (-0.35,0.75) -- (-0.55,0.75); \draw (-0.35,2.25) -- (-0.55,2.25);
+\draw[<->] (-0.45,0.8) -- (-0.45,2.2); \node at (-0.45,1.5) [left=2pt] {2};
+\draw (-0.35,2.25) -- (-0.55,2.25); \draw (-0.35,3) -- (-0.55,3);
+\draw[<->] (-0.45,2.3) -- (-0.45,2.95); \node at (-0.45,2.625) [left=2pt] {1};
+\node[below] at (1.5,-0.9) {俯视图};
+\end{scope}
+\end{tikzpicture}

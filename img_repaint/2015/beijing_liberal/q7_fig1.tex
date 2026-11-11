@@ -1,0 +1,25 @@
+% Three views: right-triangle front/side (1x1) and square plan with diagonal; horizontal row.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+\begin{scope}[shift={(0,1.5)}]
+\draw (0,0) -- (3,0) -- (3,3) -- cycle;
+\draw (0,0) -- (0,-0.5);
+\draw (3,0) -- (3,-0.5);
+\draw[<->,>=Latex] (0,-0.35) -- (3,-0.35) node[midway,fill=white,inner sep=2pt]{1};
+\draw (3,0) -- (3.5,0);
+\draw (3,3) -- (3.5,3);
+\draw[<->,>=Latex] (3.35,0) -- (3.35,3) node[midway,fill=white,inner sep=2pt]{1};
+\node at (1.5,-0.95) {正视图};
+\end{scope}
+\begin{scope}[shift={(4.2,1.5)}]
+\draw (0,0) -- (3,0) -- (3,3) -- cycle;
+\draw (0,0) -- (0,-0.5);
+\draw (3,0) -- (3,-0.5);
+\draw[<->,>=Latex] (0,-0.35) -- (3,-0.35) node[midway,fill=white,inner sep=2pt]{1};
+\node at (1.5,-0.95) {侧视图（左）};
+\end{scope}
+\begin{scope}[shift={(8.4,1.5)}]
+\draw (0,0) rectangle (3,3);
+\draw (0,3) -- (3,0);
+\node at (1.5,-0.95) {俯视图};
+\end{scope}
+\end{tikzpicture}

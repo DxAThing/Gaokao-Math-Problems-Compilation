@@ -1,0 +1,37 @@
+% 2016_shandong_science_q5_fig1: point-fix of _current.tex, arrangement only.
+% Front + side + top in one horizontal row (front, side, top left to right);
+% projection edges, R/dims, solid lines unchanged; captions share baseline.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+\def\R{1.4142}\def\HB{1.0}\def\TH{2.0}
+% ---- front (left) ----
+\draw (-\R,0) -- (\R,0);
+\draw (-\R,0) arc (180:360:\R);
+\draw (0,-\R) -- (-\HB,-\R-\TH) -- (\HB,-\R-\TH) -- cycle;
+\draw[thin] (-\R-0.45,-\R) -- (-\HB-0.15,-\R);
+\draw[thin] (-\R-0.45,-\R-\TH) -- (-\HB-0.15,-\R-\TH);
+\draw[thin,<->,>=Latex] (-\R-0.3,-\R) -- (-\R-0.3,-\R-\TH);
+\node[left] at (-\R-0.3,-\R-\TH/2) {$1$};
+\draw[thin] (-\HB,-\R-\TH-0.3) -- (-\HB,-\R-\TH-0.05);
+\draw[thin] (\HB,-\R-\TH-0.3) -- (\HB,-\R-\TH-0.05);
+\draw[thin,<->,>=Latex] (-\HB,-\R-\TH-0.2) -- (\HB,-\R-\TH-0.2);
+\node[below] at (0,-\R-\TH-0.2) {$1$};
+\node at (0,-\R-\TH-1.0) {正视图};
+% ---- side (middle), shifted, no vertical dimension ----
+\def\SX{5.5}
+\draw (\SX-\R,0) -- (\SX+\R,0);
+\draw (\SX-\R,0) arc (180:360:\R);
+\draw (\SX,-\R) -- (\SX-\HB,-\R-\TH) -- (\SX+\HB,-\R-\TH) -- cycle;
+\draw[thin] (\SX-\HB,-\R-\TH-0.3) -- (\SX-\HB,-\R-\TH-0.05);
+\draw[thin] (\SX+\HB,-\R-\TH-0.3) -- (\SX+\HB,-\R-\TH-0.05);
+\draw[thin,<->,>=Latex] (\SX-\HB,-\R-\TH-0.2) -- (\SX+\HB,-\R-\TH-0.2);
+\node[below] at (\SX,-\R-\TH-0.2) {$1$};
+\node at (\SX,-\R-\TH-1.0) {侧视图（左）};
+% ---- top (right): moved from below-front to same row; geometry unchanged ----
+% circle centre y=-2.0 so bottom (-3.4142) matches front bottom; caption baseline matches.
+\def\TX{11.0}\def\TCY{-2.0}\def\HS{1.0}
+\draw (\TX,\TCY) circle (\R);
+\draw[dashed] (\TX-\HS,\TCY-\HS) rectangle (\TX+\HS,\TCY+\HS);
+\draw[dashed] (\TX-\HS,\TCY-\HS) -- (\TX+\HS,\TCY+\HS);
+\draw[dashed] (\TX-\HS,\TCY+\HS) -- (\TX+\HS,\TCY-\HS);
+\node at (\TX,-\R-\TH-1.0) {俯视图};
+\end{tikzpicture}

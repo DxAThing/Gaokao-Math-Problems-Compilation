@@ -1,0 +1,20 @@
+% 2012_fujian_science_q6: square OABC, y=sqrt(x), diagonal, shaded region
+\begin{tikzpicture}[x=2.8cm,y=2.8cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-0.18,0)--(1.55,0) node[right,inner sep=0pt,xshift=4pt] {$x$};
+\draw[->] (0,-0.18)--(0,1.45) node[above,inner sep=0pt,yshift=4pt] {$y$};
+\coordinate (O) at (0,0);
+\coordinate (A) at (1,0);
+\coordinate (B) at (1,1);
+\coordinate (C) at (0,1);
+\draw (O)--(A)--(B)--(C)--cycle;
+\fill[gray!20] (0,0) -- plot[domain=0:1,samples=80] (\x,{sqrt(\x)}) -- cycle;
+\draw[domain=0:1.35,samples=100] plot (\x,{sqrt(\x)});
+\draw (O)--(B);
+\node[below left,inner sep=2pt] at ([xshift=-4pt,yshift=-4pt]O) {$O$};
+\node[right,inner sep=2pt,xshift=-1pt,yshift=-3pt] at ([xshift=8pt,yshift=-4pt]A) {$A$};
+\node[right,inner sep=2pt,xshift=1pt,yshift=-3pt] at ([xshift=9pt,yshift=3pt]B) {$B$};
+\node[above left=2pt] at (C) {$C$};
+\node at (0.60,1.22) {$y=\sqrt{x}$};
+\node[below,inner sep=1pt] at (1,-0.14) {$1$};
+\node[left,inner sep=1pt] at (-0.14,1) {$1$};
+\end{tikzpicture}

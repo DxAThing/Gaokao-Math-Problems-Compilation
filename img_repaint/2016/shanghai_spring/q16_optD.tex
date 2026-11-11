@@ -1,0 +1,10 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.3cm,y=1.3cm,line width=.6pt,>=Stealth]
+\draw[->] (-3.1,0)--(3.1,0);
+\draw[->] (0,-2.5)--(0,3.2);
+\draw[domain=-2.67:-0.37,samples=241] plot (\x,{1/(\x)});
+\draw[domain=0.37:2.67,samples=241] plot (\x,{1/(\x)});
+\node[right,inner sep=0pt,xshift=2pt] at (3.1,0) {$x$};
+\node[above,inner sep=0pt,yshift=2pt] at (0,3.2) {$y$};
+\node[below left,inner sep=0pt,xshift=-4pt,yshift=-4pt] at (0,0) {$O$};
+\end{tikzpicture}

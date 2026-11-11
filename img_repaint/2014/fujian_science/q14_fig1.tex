@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=1.35cm,y=1.35cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Shaded regions (gray blocks, exact formula boundaries).
+\fill[gray!15] (0,2.718281828) -- (1,2.718281828)
+  -- plot[domain=1:0,samples=60] (\x,{exp(\x)}) -- cycle;
+\fill[gray!15] (1,0) -- (2.718281828,0) -- (2.718281828,1)
+  -- plot[domain=2.718281828:1,samples=60] (\x,{ln(\x)}) -- cycle;
+% Axes.
+\draw[->] (-0.9,0) -- (4.4,0);
+\draw[->] (0,-0.9) -- (0,4.2);
+% Square top and right edges (left/bottom coincide with axes).
+\draw (0,2.718281828) -- (2.718281828,2.718281828);
+\draw (2.718281828,0) -- (2.718281828,2.718281828);
+% Diagonal y=x, dashed.
+\draw[dashed] (0,0) -- (3.35,3.35);
+% Curves generated from formulas (not freehand).
+\draw[line width=1.1pt] plot[domain=-0.45:1.08,samples=80] (\x,{exp(\x)});
+\draw[line width=1.1pt] plot[domain=0.55:3.35,samples=80] (\x,{ln(\x)});
+% Labels with clearance (avoid touching strokes).
+\node[below left,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\node[left,xshift=-6pt] at (0,2.718281828) {$\mathrm{e}$};
+\node[below,yshift=-6pt] at (2.718281828,0) {$\mathrm{e}$};
+\node[left,xshift=-4pt] at (0,4.2) {$y$};
+\node[below,yshift=-4pt] at (4.4,0) {$x$};
+\node[right,xshift=4pt] at (1.08,2.95) {$y=\mathrm{e}^{x}$};
+\node[above right,xshift=2pt,yshift=6pt] at (3.05,1.11) {$y=\ln x$};
+\end{tikzpicture}

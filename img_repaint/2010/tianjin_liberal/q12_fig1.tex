@@ -1,0 +1,42 @@
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% front 2x1, side 2x1; top moved to right column (shift +10,+4.5)
+\draw (0,5) rectangle (3,6.5);
+\draw (1.5,5) -- (1.5,6.5);
+\draw (5,5) rectangle (8,6.5);
+% top: A(10,8) B(13,8) C(11.5,5) D(10,5)
+\draw (10,8) -- (13,8) -- (11.5,5) -- (10,5) -- cycle;
+% front bottom dims two 1's
+\draw[line width=.4pt] (0,5) -- (0,4.5);
+\draw[line width=.4pt] (1.5,5) -- (1.5,4.5);
+\draw[line width=.4pt] (3,5) -- (3,4.5);
+\draw[<->,>=Latex] (0,4.7) -- (1.5,4.7);
+\draw[<->,>=Latex] (1.5,4.7) -- (3,4.7);
+\node at (0.75,4.7) [fill=white,inner sep=2pt] {1};
+\node at (2.25,4.7) [fill=white,inner sep=2pt] {1};
+% front left dim 1
+\draw[line width=.4pt] (0,5) -- (-0.5,5);
+\draw[line width=.4pt] (0,6.5) -- (-0.5,6.5);
+\draw[<->,>=Latex] (-0.3,5) -- (-0.3,6.5);
+\node at (-0.3,5.75) [fill=white,inner sep=2pt] {1};
+% side dims: height 1, width 2
+\draw[line width=.4pt] (8,5) -- (8.5,5);
+\draw[line width=.4pt] (8,6.5) -- (8.5,6.5);
+\draw[<->,>=Latex] (8.3,5) -- (8.3,6.5);
+\node at (8.3,5.75) [fill=white,inner sep=2pt] {1};
+\draw[line width=.4pt] (5,5) -- (5,4.5);
+\draw[line width=.4pt] (8,5) -- (8,4.5);
+\draw[<->,>=Latex] (5,4.7) -- (8,4.7);
+\node at (6.5,4.7) [fill=white,inner sep=2pt] {2};
+% top dims, shifted +10,+4.5: bottom 1, left depth 2
+\draw[line width=.4pt] (10,5) -- (10,4.5);
+\draw[line width=.4pt] (11.5,5) -- (11.5,4.5);
+\draw[<->,>=Latex] (10,4.7) -- (11.5,4.7);
+\node at (10.75,4.7) [fill=white,inner sep=2pt] {1};
+\draw[line width=.4pt] (10,5) -- (9.5,5);
+\draw[line width=.4pt] (10,8) -- (9.5,8);
+\draw[<->,>=Latex] (9.7,5) -- (9.7,8);
+\node at (9.7,6.5) [fill=white,inner sep=2pt] {2};
+\node at (1.5,3.9) {正视图};
+\node at (6.5,3.9) {侧视图};
+\node at (11.5,3.9) {俯视图};
+\end{tikzpicture}

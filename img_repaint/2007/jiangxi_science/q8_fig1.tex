@@ -1,0 +1,38 @@
+% four wine glasses: hemisphere, cone, frustum, cylinder
+\begin{tikzpicture}[line width=.6pt, font=\normalsize]
+% glass 1 hemisphere
+\begin{scope}[shift={(0,0)}]
+\draw (0,2.6) ellipse (1 and 0.2);
+\draw (-1,2.6) .. controls (-1,1.9) and (-0.5,1.5) .. (0,1.5) .. controls (0.5,1.5) and (1,1.9) .. (1,2.6);
+\draw (0,1.5) -- (0,0.4);
+\draw (0,0.2) ellipse (0.5 and 0.12);
+\end{scope}
+% glass 2 cone
+\begin{scope}[shift={(3,0)}]
+\draw (0,2.6) ellipse (1 and 0.2);
+\draw (-1,2.6) -- (0,1.4) -- (1,2.6);
+\draw (0,1.4) -- (0,0.4);
+\draw (0,0.2) ellipse (0.5 and 0.12);
+\end{scope}
+% glass 3 frustum
+\begin{scope}[shift={(6,0)}]
+\draw (0,2.6) ellipse (1 and 0.2);
+\draw (-1,2.6) -- (-0.55,1.5);
+\draw (1,2.6) -- (0.55,1.5);
+\draw (-0.55,1.5) arc (180:360:0.55 and 0.12);
+\draw[dashed] (-0.55,1.5) arc (180:0:0.55 and 0.12);
+\draw (0,1.5) -- (0,0.4);
+\draw (0,0.2) ellipse (0.5 and 0.12);
+\end{scope}
+% glass 4 cylinder
+\begin{scope}[shift={(9,0)}]
+\draw (0,2.6) ellipse (1 and 0.2);
+\draw (-1,2.6) -- (-1,1.2);
+\draw (1,2.6) -- (1,1.2);
+\draw (-1,1.2) arc (180:360:1 and 0.2);
+\draw[dashed] (1,1.2) arc (0:180:1 and 0.2);
+\draw (0,1.0) -- (0,0.4);
+\draw (0,0.2) ellipse (0.5 and 0.12);
+\end{scope}
+\end{tikzpicture}
+

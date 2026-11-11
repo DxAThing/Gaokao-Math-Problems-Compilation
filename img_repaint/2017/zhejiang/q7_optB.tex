@@ -1,0 +1,8 @@
+% 2017_zhejiang_q7_optB: schematic representative model; source gives no explicit formula.
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.2cm,y=1.2cm,line width=.6pt,>={Stealth[length=1.8mm]},font=\normalsize]
+  \draw[->] (-2.0,0)--(2.1,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+  \draw[->] (0,-1.5)--(0,1.5) node[above,inner sep=0pt,yshift=2pt] {$y$};
+  \node[below left,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+  \draw[domain=-1.88:1.8,samples=301] plot (\x,{(0.2859)*(\x)*(\x)*(\x)*(\x)+(0.3143)*(\x)*(\x)*(\x)+(-0.9747)*(\x)*(\x)+(-0.8918)*(\x)+(0.1842)});
+\end{tikzpicture}

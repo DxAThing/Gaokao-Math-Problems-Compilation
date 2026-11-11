@@ -1,0 +1,26 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=0.5cm,y=0.5cm,>=Stealth,line width=.6pt]
+\coordinate (O) at (0,0);
+\coordinate (Xleft) at (-1.5,0);
+\coordinate (Xend) at (4.5,0);
+\coordinate (Ylow) at (0,-1.5);
+\coordinate (Yend) at (0,2.5);
+\coordinate (P) at (1,-1);
+\coordinate (Q) at (2,0);
+\coordinate (R) at (1,0);
+\draw[->] (Xleft)--(Xend);
+\draw[->] (Ylow)--(Yend);
+\draw[dashed] (1,-1.5)--(1,2.5);
+\draw[dashed] (0,-1)--(1,-1);
+\draw[domain=0.85:3.7,samples=120] plot (\x,{ln(\x)/ln(2)-1});
+\draw (-0.08,1)--(0,1);
+\draw (-0.08,-1)--(0,-1);
+\draw (2,0)--(2,0.08);
+\node[below left,inner sep=0pt,xshift=-2pt,yshift=-1.5pt] at (O) {$O$};
+\node[below,inner sep=0pt,yshift=-2pt,xshift=-3pt] at (1,0) {$1$};
+\node[below,inner sep=0pt,yshift=-2pt,xshift=4pt] at (2,0) {$2$};
+\node[left,inner sep=0pt,xshift=-2pt] at (0,1) {$1$};
+\node[below left,inner sep=0pt,xshift=-2pt] at (0,-1) {$-1$};
+\node[right,inner sep=0pt,xshift=2pt] at (Xend) {$x$};
+\node[above,inner sep=0pt,yshift=2pt] at (Yend) {$y$};
+\end{tikzpicture}

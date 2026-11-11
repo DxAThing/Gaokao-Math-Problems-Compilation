@@ -1,0 +1,71 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+\tikzset{ptlabel/.style={fill=white,inner sep=1pt,font=\normalsize}}
+% ---- left panel: cube Fig1 ----
+\coordinate (A) at (0,0);
+\coordinate (B) at (2.6,0);
+\coordinate (C) at (3.5000000000,0.9000000000);
+\coordinate (D) at (0.9000000000,0.9000000000);
+\coordinate (A1) at (0,2.4);
+\coordinate (B1) at (2.6,2.4);
+\coordinate (C1) at (3.5000000000,3.3000000000);
+\coordinate (D1) at (0.9000000000,3.3000000000);
+% front square
+\draw (A) -- (B) -- (B1) -- (A1) -- cycle;
+% depth edges
+\draw[dashed] (A)--(D);
+\draw (B) -- (C);
+\draw (A1) -- (D1);
+\draw (B1) -- (C1);
+% back top / back bottom
+\draw (D1) -- (C1);
+\draw[dashed] (D) -- (C);
+% verticals: D1-D dashed, C-C1 solid
+\draw[dashed] (D1) -- (D);
+\draw (C) -- (C1);
+% cut lines on Fig1 per original
+\draw (D1) -- (B1);
+\draw (A) -- (B1);
+\draw (B1) -- (C);
+\draw[dashed] (A) -- (D1);
+\draw[dashed] (D1) -- (C);
+% labels Fig1
+\node[ptlabel,below left=1pt] at (A) {$A$};
+\node[ptlabel,below right=1pt] at (B) {$B$};
+\node[ptlabel,right=2pt] at (C) {$C$};
+\node[ptlabel,below=2pt] at (D) {$D$};
+\node[ptlabel,left=2pt] at (A1) {$A_{1}$};
+\node[ptlabel,right=1pt] at (B1) {$B_{1}$};
+\node[ptlabel,above right=1pt] at (C1) {$C_{1}$};
+\node[ptlabel,above left=1pt] at (D1) {$D_{1}$};
+\node[ptlabel,below=4pt] at (2.0,-0.35) {\bitmapinsertcaption[1]};
+% ---- middle arrow ----
+\draw[-{Stealth}] (4.7,2.0) -- (5.9,2.0);
+\node[font=\normalsize,above=1pt] at (5.3,2.0) {左视};
+% ---- right panel: Fig2 remaining solid (shift +6.6) ----
+\coordinate (A2) at (6.6,0);
+\coordinate (B2) at (9.2,0);
+\coordinate (C2) at (10.1000000000,0.9000000000);
+\coordinate (D2) at (7.5000000000,0.9000000000);
+\coordinate (B12) at (9.2,2.4);
+\coordinate (D12) at (7.5000000000,3.3000000000);
+% base
+\draw (A2) -- (B2);
+\draw (B2) -- (B12);
+\draw[dashed] (D2) -- (C2);
+\draw (C2) -- (B2);
+% main solid edges of remaining body
+\draw[dashed] (A2) -- (D2);
+\draw (A2) -- (B12);
+\draw[dashed] (D12) -- (D2);
+\draw (D12) -- (A2);
+\draw (D12) -- (B12);
+\draw[solid] (B12)--(C2);
+% labels Fig2
+\node[ptlabel,below left=1pt] at (A2) {$A$};
+\node[ptlabel,below right=1pt] at (B2) {$B$};
+\node[ptlabel,right=2pt] at (C2) {$C$};
+\node[ptlabel,below=2pt] at (D2) {$D$};
+\node[ptlabel,right=1pt] at (B12) {$B_{1}$};
+\node[ptlabel,above left=1pt] at (D12) {$D_{1}$};
+\node[ptlabel,below=4pt] at (8.6,-0.35) {\bitmapinsertcaption[2]};
+\end{tikzpicture}

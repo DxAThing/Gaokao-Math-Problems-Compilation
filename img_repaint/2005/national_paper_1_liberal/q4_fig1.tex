@@ -1,0 +1,27 @@
+% 多面体 ABCDEF：ABCD 为正方形，ADE、BCF 为正三角形，EF//AB；
+% ED、AD、DC 为虚线，其余为实线
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt, font=\normalsize, >=Stealth]
+  \coordinate (E) at (-1.6,3.6);
+  \coordinate (F) at (4.6,3.6);
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (3.0,0);
+  \coordinate (D) at (1.6,1.8);
+  \coordinate (C) at (4.2,1.8);
+  % 可见轮廓（实线）
+  \draw (E) -- (F);
+  \draw (E) -- (A);
+  \draw (A) -- (B);
+  \draw (B) -- (F);
+  \draw (B) -- (C);
+  \draw (F) -- (C);
+  % 遮挡线（虚线）
+  \draw[dashed] (E) -- (D);
+  \draw[dashed] (A) -- (D);
+  \draw[dashed] (D) -- (C);
+  \node[left] at (E) {$E$};
+  \node[right] at (F) {$F$};
+  \node[below left] at (A) {$A$};
+  \node[below right] at (B) {$B$};
+  \node[above] at (D) {$D$};
+  \node[right] at (C) {$C$};
+\end{tikzpicture}

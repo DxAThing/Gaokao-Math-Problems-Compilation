@@ -1,0 +1,37 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+% Right triangular prism ABC-A1B1C1, C at bottom centre, D on CC1, E mid A1B, G centroid ABD
+\coordinate (A) at (0,0);
+\coordinate (B) at (5,0);
+\coordinate (C) at (2.9,0.7);
+\coordinate (A1) at (0,3.4);
+\coordinate (B1) at (5.0000000000,3.4000000000);
+\coordinate (C1) at (2.9000000000,4.1000000000);
+\coordinate (D) at (2.9000000000,2.4000000000);
+\coordinate (E) at (2.5000000000,1.7000000000);
+\coordinate (G) at (2.6333333333,0.8000000000);
+% solid outline
+\draw (A) -- (B) -- (B1) -- (A1) -- cycle;
+\draw (A1) -- (B1);
+\draw (A1) -- (C1) -- (B1);
+% solid interior A1B
+\draw (A1) -- (B);
+% hidden dashed
+\draw[dashed] (A) -- (C) -- (B);
+\draw (A) -- (E);
+\draw[dashed] (A) -- (D);
+\draw[dashed] (D) -- (B);
+\draw[dashed] (D) -- (C);
+\draw[dashed] (C) -- (C1);
+\draw[dashed] (E) -- (G);
+\draw[dashed] (G) -- (C);
+% labels with clearance
+\node[anchor=north east,inner sep=1pt] at ([xshift=-4pt,yshift=-3pt]A) {$A$};
+\node[anchor=north west,inner sep=1pt] at ([xshift=4pt,yshift=-3pt]B) {$B$};
+\node[anchor=north,inner sep=1pt] at ([xshift=8pt,yshift=-4pt]C) {$C$};
+\node[anchor=east,inner sep=1pt] at ([xshift=-5pt,yshift=2pt]A1) {$A_{1}$};
+\node[anchor=west,inner sep=1pt] at ([xshift=5pt,yshift=2pt]B1) {$B_{1}$};
+\node[anchor=south,inner sep=1pt] at ([xshift=0pt,yshift=5pt]C1) {$C_{1}$};
+\node[anchor=south east,inner sep=1pt,xshift=-7pt,yshift=1pt] at ([xshift=6pt,yshift=3pt]D) {$D$};
+\node[anchor=south east,inner sep=1pt,xshift=-1pt,yshift=3pt] at ([xshift=-8pt,yshift=10pt]E) {$E$};
+\node[anchor=north east,inner sep=1pt,xshift=-1pt,yshift=-5pt] at ([xshift=-3pt,yshift=-4pt]G) {$G$};
+\end{tikzpicture}

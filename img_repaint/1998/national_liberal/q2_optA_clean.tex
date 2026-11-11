@@ -1,0 +1,10 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-2.800000,0) -- (2.800000,0);
+\node[anchor=west,inner sep=0pt,xshift=2.000000pt,yshift=-4.000000pt] at (2.800000,0) {$x$};
+\draw[->] (0,-0.800000) -- (0,3.000000);
+\node[anchor=south,inner sep=0pt,xshift=4.000000pt,yshift=2.000000pt] at (0,3.000000) {$y$};
+\node[anchor=north east,inner sep=0pt,xshift=-2.000000pt,yshift=-2.000000pt] at (0,0) {$O$};
+% Smooth U through origin (distractor shape): y=x^2
+\draw[domain=-1.700000:1.700000,samples=101,smooth] plot (\x,{pow(2,abs(\x))-1});
+\end{tikzpicture}

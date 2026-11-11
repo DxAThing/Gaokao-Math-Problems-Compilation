@@ -1,0 +1,39 @@
+% 2014_tianjin_science_q10_fig1: point-fix of inputs/..._current.tex.
+% Only moved plan view from bottom-left to the right of side view; captions share baseline.
+% Projection edges, dimensions, solid/dashed kept.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,>=Latex,x=1cm,y=1cm]
+% ---- front view ----
+\begin{scope}[shift={(0,0)}]
+\draw (0,0) rectangle (1.5,3);
+\draw (-0.75,3) -- (2.25,3) -- (0.75,4.5) -- cycle;
+\draw[<->] (0,-0.4) -- (1.5,-0.4);
+\node[fill=white,inner sep=1pt] at (0.75,-0.4) {2};
+\draw[<->] (-0.75,-0.95) -- (2.25,-0.95);
+\node[fill=white,inner sep=1pt] at (0.75,-0.95) {4};
+\draw[<->] (2.65,0) -- (2.65,3);
+\node[fill=white,inner sep=1pt] at (2.65,1.5) {4};
+\draw[<->] (2.65,3) -- (2.65,4.5);
+\node[fill=white,inner sep=1pt] at (2.65,3.75) {2};
+\node at (0.75,-1.65) {正视图};
+\end{scope}
+% ---- side view ----
+\begin{scope}[shift={(4.3,0)}]
+\draw (0,0) rectangle (1.5,3);
+\draw (-0.75,3) -- (2.25,3) -- (0.75,4.5) -- cycle;
+\draw[<->] (0,-0.4) -- (1.5,-0.4);
+\node[fill=white,inner sep=1pt] at (0.75,-0.4) {2};
+\draw[<->] (-0.75,-0.95) -- (2.25,-0.95);
+\node[fill=white,inner sep=1pt] at (0.75,-0.95) {4};
+\draw[<->] (2.65,0) -- (2.65,3);
+\node[fill=white,inner sep=1pt] at (2.65,1.5) {4};
+\draw[<->] (2.65,3) -- (2.65,4.5);
+\node[fill=white,inner sep=1pt] at (2.65,3.75) {2};
+\node at (0.75,-1.65) {侧视图};
+\end{scope}
+% ---- plan view (moved right, vertically centred on cylinder part) ----
+\begin{scope}[shift={(8.6,0)}]
+\draw (0.75,1.5) circle (1.5);
+\draw[dashed] (0.75,1.5) circle (0.75);
+\node at (0.75,-1.65) {俯视图};
+\end{scope}
+\end{tikzpicture}

@@ -1,0 +1,39 @@
+% 三视图：三棱锥，正(主)/侧(左)/俯；主边约3cm档，12pt，.6pt灰度
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm,>=Stealth]
+% 正(主)视图：左上尖的扁三角形，底边为后段
+% 正(主)视图 at (0,0); 侧(左) at (4.4,0); 俯 at (7.8,0): single horizontal row
+\begin{scope}[shift={(0,0)}]
+\draw (0,1.5) -- (1.5,0) -- (3.0,0) -- cycle;
+\node[below] at (1.5,-1.1) {正视图};
+\end{scope}
+% 侧(左)视图：直角三角形，直角在左下，竖直边左、水平边下
+\begin{scope}[shift={(4.4,0)}]
+\draw (0,1.5) -- (0,0) -- (1.5,0) -- cycle;
+% 竖直尺寸 1
+\draw[thin] (-0.35,1.5) -- (-0.05,1.5);
+\draw[thin] (-0.35,0) -- (-0.05,0);
+\draw[thin,<->] (-0.25,1.5) -- (-0.25,0);
+\node[left] at (-0.35,0.75) {1};
+% 水平尺寸 1
+\draw[thin] (0,-0.35) -- (0,-0.05);
+\draw[thin] (1.5,-0.35) -- (1.5,-0.05);
+\draw[thin,<->] (0,-0.25) -- (1.5,-0.25);
+\node[below] at (0.75,-0.3) {1};
+\node[below] at (0.75,-1.1) {侧视图（左）};
+\end{scope}
+% 俯视图：矩形包络，顶边、右边实线，底对角线实线，中到右下虚线
+\begin{scope}[shift={(7.8,0)}]
+\draw (0,1.5) -- (3.0,1.5) -- (3.0,0);
+\draw (0,1.5) -- (3.0,0);
+\draw[dashed] (1.5,1.5) -- (3.0,0);
+% 顶部尺寸 1+1
+\draw[thin] (0,1.5) -- (0,1.95);
+\draw[thin] (1.5,1.5) -- (1.5,1.95);
+\draw[thin] (3.0,1.5) -- (3.0,1.95);
+\draw[thin,<->] (0,1.8) -- (1.5,1.8);
+\draw[thin,<->] (1.5,1.8) -- (3.0,1.8);
+\node[above] at (0.75,1.85) {1};
+\node[above] at (2.25,1.85) {1};
+\node[below] at (1.5,-1.1) {俯视图};
+\end{scope}
+\end{tikzpicture}

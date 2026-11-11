@@ -1,0 +1,23 @@
+% source_constraints: axes x right, y up, O at origin; polyline with 2 rays + 3 segments: vertices (-2a,a),(-a,a),(0,0),(a,-a),(2a,-a); x-intercepts -3a,3a; dashed vertical guides at -2a,-a,a,2a from axis to plateau and dashed horizontal guides from plateau level to y-axis at y=a (left) and y=-a (right); x labels -3a,-2a,-a,O,a,2a,3a below axis; y labels a,-a right of y-axis; label y=f(x) upper right; solid graph .6pt, guides dashed .6pt; arrows only on axes; a=1cm units.
+% data: (a=1): (-5.5,-2.5)--(-2,1)--(-1,1)--(0,0)--(1,-1)--(2,-1)--(4.8,1.8).
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-6,0)--(6.2,0) node[below right] {$x$};
+\draw[->] (0,-2.4)--(0,2.4) node[above left] {$y$};
+\node[below left] at (0,0) {$O$};
+\draw[dashed] (-2,0)--(-2,1);
+\draw[dashed] (-1,0)--(-1,1);
+\draw[dashed] (-1,1)--(0.12,1);
+\draw[dashed] (1,0)--(1,-1);
+\draw[dashed] (2,0)--(2,-1);
+\draw[dashed] (0.12,-1)--(1,-1);
+\draw (-5.5,-2.5)--(-2,1)--(-1,1)--(0,0)--(1,-1)--(2,-1)--(4.8,1.8);
+\node[below] at (-3,0) {$-3a$};
+\node[below] at (-2,0) {$-2a$};
+\node[below] at (-1,0) {$-a$};
+\node[below] at (1,0) {$a$};
+\node[below] at (2,0) {$2a$};
+\node[below] at (3,0) {$3a$};
+\node[right,fill=white,inner sep=1pt] at (0,1) {$a$};
+\node[right,fill=white,inner sep=1pt] at (0,-1) {$-a$};
+\node[above left] at (4.8,1.8) {$y=f(x)$};
+\end{tikzpicture}

@@ -1,0 +1,23 @@
+% 2012 四川卷文 第4题 选项C：函数 y=a^x-a 的图象（正确选项）
+% 坐标系按原图保留 x/y 轴、原点、两轴刻度 1 。
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=0.68cm,y=0.60cm,line width=.6pt,font=\normalsize,>=Stealth]
+\def\scC{pow(0.5,\x)-0.5}
+\coordinate (O) at (0,0);
+\coordinate (X1) at (1,0);
+\coordinate (Y1) at (0,1);
+\coordinate (Xend) at (3.0,0);
+\coordinate (Yend) at (0,4.0);
+\begin{scope}
+  \clip (-4.2,-2.6) rectangle (3.0,4.0);
+  \draw[domain=-2.10:3.40,samples=181] plot (\x,{\scC});
+\end{scope}
+\draw[->] (-4.2,0)--(Xend) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-2.6)--(Yend) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw (1,-0.09)--(1,0.09);
+\draw (-0.09,1)--(0.09,1);
+\node[below,inner sep=2pt,xshift=-1pt] at (X1) {$1$};
+\node[above right,inner sep=3pt] at (Y1) {$1$};
+\node[below left,inner sep=1pt] at (O) {$O$};
+
+\end{tikzpicture}

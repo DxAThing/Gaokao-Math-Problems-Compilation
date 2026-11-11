@@ -1,0 +1,40 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt]
+% capsule: cylinder between x=1 and x=7, radius 1.2
+\def\r{1.2}
+\coordinate (Ltop) at (1,\r);
+\coordinate (Lbot) at (1,-\r);
+\coordinate (Rtop) at (7,\r);
+\coordinate (Rbot) at (7,-\r);
+% cylinder body
+\draw[solid] (Ltop) -- (Rtop);
+\draw[solid] (Lbot) -- (Rbot);
+% left junction ellipse: front solid, back dashed
+\draw[solid] (Ltop) arc (90:270:0.45 and \r);
+\draw[dashed] (Ltop) arc (90:-90:0.45 and \r);
+% right junction ellipse
+\draw[solid] (Rtop) arc (90:270:0.45 and \r);
+\draw[dashed] (Rtop) arc (90:-90:0.45 and \r);
+% left hemisphere outline
+\draw[solid] (Ltop) arc (90:270:1.2 and \r);
+% right hemisphere outline
+\draw[solid] (Rtop) arc (90:-90:1.2 and \r);
+% vertical dashed radii at junctions
+\draw[dashed] (1,0) -- (1,\r);
+\draw[dashed] (1,0) -- (1,-\r);
+\draw[dashed] (7,0) -- (7,\r);
+\draw[dashed] (7,0) -- (7,-\r);
+% horizontal dashed radii to sphere poles
+\draw[dashed] (1,0) -- (-0.2,0);
+\draw[dashed] (7,0) -- (8.2,0);
+% length dimension on top
+\draw[thin,arrows={Stealth-Stealth}] (1,1.65) -- node[above,yshift=2pt] {$l$} (7,1.65);
+\draw[thin] (1,1.3) -- (1,1.75);
+\draw[thin] (7,1.3) -- (7,1.75);
+% r labels placed off the dashed lines
+\node at (1.7,.6) {$r$};
+\node at (1.7,-.6) {$r$};
+\node[above=2pt] at (.4,0) {$r$};
+\node at (6.3,.6) {$r$};
+\node at (6.3,-.6) {$r$};
+\node[above=2pt] at (7.6,0) {$r$};
+\end{tikzpicture}

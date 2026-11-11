@@ -1,0 +1,13 @@
+% 网格纸三视图横向并排: 正视直角三角形(直角边6x6格), 侧视矩形(4x6格), 俯视矩形(6x4格); 原图无尺寸无图名, 图名按要求补于各图下方
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+\draw[gray,thin,step=0.5] (-0.5,-1.5) grid (11.5,3.5);
+% 正视图: 直角边 3cm x 3cm(即6x6格), 直角在左下
+\draw (0,0) -- (0,3) -- (3,0) -- cycle;
+% 侧视图: 2cm x 3cm(即4x6格)
+\draw (4.5,0) rectangle (6.5,3);
+% 俯视图: 3cm x 2cm(即6x4格)
+\draw (8,0) rectangle (11,2);
+\node at (1.5,-0.7) {正视图};
+\node at (5.5,-0.7) {侧视图};
+\node at (9.5,-0.7) {俯视图};
+\end{tikzpicture}

@@ -1,0 +1,19 @@
+\examstatpanels{%
+\begin{tabular}[b]{@{}c@{}}%
+\begin{tikzpicture}[exam statistical template pie]
+\examstatpie[rotate=342,text=pin,hide number,color={white,gray!15,white,gray!15,white,gray!15}]{108/\shortstack{食品开支\\30\%},18/\shortstack{其他\\5\%},108/\shortstack{储蓄\\30\%},18/\shortstack{通讯开支\\5\%},36/\shortstack{娱乐开支\\10\%},72/\shortstack{日常开支\\20\%}}
+\end{tikzpicture}\\\bitmapinsertcaption[1]%
+\end{tabular}%
+}{%
+\begin{tabular}[b]{@{}c@{}}%
+\begin{tikzpicture}
+\begin{axis}[exam statistical template bar,exam statistical template paired bar,
+  symbolic x coords={鸡蛋,牛奶,肉类,蔬菜,其他},xtick=data,
+  ymin=0,ymax=120,ytick={0,20,40,60,80,100,120},yticklabels={0,20,40,60,80,100,120},
+  enlarge x limits=0.125,axis lines=box,xtick pos=bottom,ytick pos=left,nodes near coords]
+\addplot[draw=black,fill=gray!15] coordinates {(鸡蛋,30) (牛奶,40) (肉类,100) (蔬菜,80) (其他,50)};
+\node[anchor=south east,inner sep=0pt,yshift=3pt] at (current axis.north west) {(元)};
+\end{axis}
+\end{tikzpicture}\\\bitmapinsertcaption[2]%
+\end{tabular}%
+}

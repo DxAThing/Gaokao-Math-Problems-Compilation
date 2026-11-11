@@ -1,0 +1,30 @@
+\usetikzlibrary{angles,quotes}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+  app edge/.style={solid,line width=.6pt},
+  app dashed/.style={dashed,line width=.6pt},
+  app label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (O) at (0,0);
+\coordinate (A) at (3,0);
+\coordinate (B) at (0,3.3);
+\coordinate (C) at (0,4.5);
+\coordinate (BL) at (-0.18,3.3);
+\coordinate (BR) at (0.18,3.3);
+\coordinate (P) at (6,1.5);
+\coordinate (SLOPEEND) at (9.5,3.25);
+\coordinate (GNDEND) at (10.2,0);
+\draw[app dashed] (O)--(B);
+\draw[app dashed] (O)--(GNDEND);
+\draw[app edge] (A)--(SLOPEEND);
+\draw[app edge] (P)--(B);
+\draw[app edge] (P)--(C);
+\draw[app edge] (C)--(BL)--(BR)--cycle;
+\draw[app edge] (0.3,0)--(0.3,0.3)--(0,0.3);
+\node[app label,below left] at (-0.10,-0.10) {$O$};
+\node[app label,below] at (3,-0.14) {$A$};
+\node[app label,left] at (-0.34,3.3) {$B$};
+\node[app label,above] at (-0.05,4.66) {$C$};
+\node[app label,below right] at (6.12,1.30) {$P$};
+\node[app label] at (4.10,0.35) {$\alpha$};
+\node[app label,above right] at (9.85,3.55) {$l\,$(山坡)};
+\node[app label,above] at (8.90,0.35) {水平地面};
+\end{tikzpicture}

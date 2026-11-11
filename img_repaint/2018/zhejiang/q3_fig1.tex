@@ -1,0 +1,32 @@
+% 三视图横向并排点修：正视/侧视边线尺寸不动；俯视梯形整体平移至右侧同行，图名基线一致
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% front (2 wide,2 high) at left, side (2 wide,2 high) at right; unit 1.5cm
+% front rect
+\draw (0,5) rectangle (3,8);
+\draw (1.5,5) -- (1.5,8);
+% side rect
+\draw (5,5) rectangle (8,8);
+% top trapezoid moved right and up: original (0,3.5)-(3,3.5)-(3,0.5)-(1.5,0.5) shifted by (10,4.5)
+\draw (10,8) -- (13,8) -- (13,5) -- (11.5,5) -- cycle;
+% front bottom dims: two 1's
+\draw[line width=.4pt] (0,5) -- (0,4.5);
+\draw[line width=.4pt] (1.5,5) -- (1.5,4.5);
+\draw[line width=.4pt] (3,5) -- (3,4.5);
+\draw[<->,>=Latex] (0,4.7) -- (1.5,4.7);
+\draw[<->,>=Latex] (1.5,4.7) -- (3,4.7);
+\node at (0.75,4.7) [fill=white,inner sep=2pt] {1};
+\node at (2.25,4.7) [fill=white,inner sep=2pt] {1};
+% front right dim: 2
+\draw[line width=.4pt] (3,5) -- (3.5,5);
+\draw[line width=.4pt] (3,8) -- (3.5,8);
+\draw[<->,>=Latex] (3.3,5) -- (3.3,8);
+\node at (3.3,6.5) [fill=white,inner sep=2pt] {2};
+% side bottom dim: 2
+\draw[line width=.4pt] (5,5) -- (5,4.5);
+\draw[line width=.4pt] (8,5) -- (8,4.5);
+\draw[<->,>=Latex] (5,4.7) -- (8,4.7);
+\node at (6.5,4.7) [fill=white,inner sep=2pt] {2};
+\node at (1.5,4.0) {正视图};
+\node at (6.5,4.0) {侧视图};
+\node at (11.5,4.0) {俯视图};
+\end{tikzpicture}

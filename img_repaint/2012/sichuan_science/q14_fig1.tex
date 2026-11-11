@@ -1,0 +1,33 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[line width=.6pt, font=\normalsize, x=1cm, y=1cm]
+\coordinate (A) at (0,0);
+\coordinate (B) at (2.8,0);
+\coordinate (C) at (3.7,1.2);
+\coordinate (D) at (0.9,1.2);
+\coordinate (A1) at (0,2.8);
+\coordinate (B1) at (2.8,2.8);
+\coordinate (C1) at (3.7,4.0);
+\coordinate (D1) at (0.9,4.0);
+\coordinate (M) at (2.3,1.2);
+\coordinate (N) at (3.7,2.6);
+\draw (A)--(B)--(B1)--(A1)--cycle;
+\draw (B1)--(C1)--(C)--(B);
+\draw (A1)--(B1);
+\draw (A1)--(D1)--(C1);
+\draw (A1)--(D1);
+\draw[dashed] (A)--(D);
+\draw[dashed] (D)--(C);
+\draw[dashed] (D)--(D1);
+\draw[dashed] (A1)--(M);
+\draw[dashed] (D)--(N);
+\node[below=4pt] at (A) {$A$};
+\node[below=4pt] at (B) {$B$};
+\node[right=3pt] at (C) {$C$};
+\node[left=3pt] at (D) {$D$};
+\node[left=4pt] at (A1) {$A_{1}$};
+\node[right=2pt] at (B1) {$B_{1}$};
+\node[above=4pt] at (C1) {$C_{1}$};
+\node[above=4pt] at (D1) {$D_{1}$};
+\node[below=4pt] at (M) {$M$};
+\node[right=4pt] at (N) {$N$};
+\end{tikzpicture}

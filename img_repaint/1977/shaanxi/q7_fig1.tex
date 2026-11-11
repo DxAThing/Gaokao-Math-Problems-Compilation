@@ -1,0 +1,28 @@
+\begin{tikzpicture}[line width=.6pt, font=\normalsize, >=Stealth]
+% Tetrahedron P-ABC with mid-triangle A'B'C'
+\coordinate (P) at (-2.6,2.4);
+\coordinate (A) at (1.2,2.0);
+\coordinate (B) at (-2.2,-1.4);
+\coordinate (C) at (3.0,-1.2);
+% Midpoints: A' on PA, B' on PB, C' on PC
+\coordinate (Apr) at (-0.7,2.2);
+\coordinate (Bpr) at (-2.4,0.5);
+\coordinate (Cpr) at (0.2,0.6);
+% Outer tetrahedron solid edges
+\draw (P) -- (A);
+\draw (P) -- (B);
+\draw (P) -- (C);
+\draw (A) -- (B);
+\draw (B) -- (C);
+\draw (A) -- (C);
+% Mid-triangle dashed (separately drawn, not new auxiliaries)
+\draw[dashed] (Apr) -- (Bpr) -- (Cpr) -- cycle;
+% Labels
+\node[above left] at (P) [xshift=-2pt,yshift=1pt] {$P$};
+\node[above] at (Apr) [yshift=2pt] {$A'$};
+\node[left] at (Bpr) [xshift=-3pt] {$B'$};
+\node[right] at (Cpr) [xshift=2pt,yshift=1pt] {$C'$};
+\node[right] at (A) [xshift=2pt] {$A$};
+\node[below left] at (B) [xshift=-2pt,yshift=-2pt] {$B$};
+\node[right] at (C) [xshift=2pt] {$C$};
+\end{tikzpicture}

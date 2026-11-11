@@ -1,0 +1,13 @@
+% Both increasing schematic curves share point (1,1) and slope 1.25.
+% exp(1.25*(x-1)) >= 1+1.25*(x-1) >= 1+1.25*ln(x), equality only at x=1.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-0.8,0)--(3.6,0) node[below] {$x$};
+\draw[->] (0,-1.1)--(0,3.8) node[left] {$y$};
+\node[below left] at (0,0) {$O$};
+\node[left] at (0,1) {$1$};
+\node[left] at (0,2) {$2$};
+\node[below] at (1,0) {$1$};
+\node[below] at (2,0) {$2$};
+\draw[domain=-.7:2.0,samples=120] plot (\x,{exp(1.25*(\x-1))});
+\draw[domain=.25:3.2,samples=120] plot (\x,{1+1.25*ln(\x)});
+\end{tikzpicture}

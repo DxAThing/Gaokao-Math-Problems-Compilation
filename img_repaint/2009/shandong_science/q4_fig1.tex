@@ -1,0 +1,39 @@
+% 三视图横向并排: 正(主)/侧(左)/俯视图; 仅点修尺寸标注为共享模板, 轮廓/实虚线/数据未动
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% 正(主)视图轮廓
+\draw (0,3) rectangle (2,5);
+\draw (0,5) -- (2,5) -- (1,6.732) -- cycle;
+\draw (1,5) -- (1,6.732);
+% 正视图尺寸: 底宽2(轮廓外5mm)
+\draw[dimension extension] (0,2.95) -- (0,2.40);
+\draw[dimension extension] (2,2.95) -- (2,2.40);
+\draw[dimension line] (0,2.5) -- node[dimension label] {$2$} (2,2.5);
+% 正视图尺寸: 左高2(轮廓外5mm)
+\draw[dimension extension] (-0.05,3) -- (-0.60,3);
+\draw[dimension extension] (-0.05,5) -- (-0.60,5);
+\draw[dimension line] (-0.5,3) -- node[dimension label vertical] {$2$} (-0.5,5);
+% 正视图尺寸: 左斜边长2(边外侧平行, 法向外移约5mm)
+\draw[dimension extension] (0,5) -- (-0.53,5.30);
+\draw[dimension extension] (1,6.732) -- (0.67,7.08);
+\draw[dimension line] (-0.433,5.25) -- node[dimension label] {$2$} (0.567,6.982);
+\node at (1,1.9) {正(主)视图};
+% 侧(左)视图轮廓
+\draw (4,3) rectangle (6,5);
+\draw (4,5) -- (6,5) -- (5,6.732) -- cycle;
+\draw (5,5) -- (5,6.732);
+% 侧视图尺寸: 底宽2(轮廓外5mm)
+\draw[dimension extension] (4,2.95) -- (4,2.40);
+\draw[dimension extension] (6,2.95) -- (6,2.40);
+\draw[dimension line] (4,2.5) -- node[dimension label] {$2$} (6,2.5);
+% 侧视图尺寸: 左斜边长2(边外侧平行)
+\draw[dimension extension] (4,5) -- (3.47,5.30);
+\draw[dimension extension] (5,6.732) -- (4.67,7.08);
+\draw[dimension line] (3.567,5.25) -- node[dimension label] {$2$} (4.567,6.982);
+\node at (5,1.9) {侧(左)视图};
+% 俯视图: 外圆+内接菱形+十字, 全实线无尺寸
+\draw (9,4) circle (1);
+\draw (9,5) -- (10,4) -- (9,3) -- (8,4) -- cycle;
+\draw (9,3) -- (9,5);
+\draw (8,4) -- (10,4);
+\node at (9,1.9) {俯视图};
+\end{tikzpicture}

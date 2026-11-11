@@ -1,0 +1,24 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=0.75cm,y=0.75cm,line width=.6pt,>={Stealth[length=2.0mm]},font=\normalsize]
+  \coordinate (O) at (0,0);
+  \coordinate (Xstart) at (-5,0);
+  \coordinate (Xend) at (5,0);
+  \coordinate (Ystart) at (0,-3.9);
+  \coordinate (Yend) at (0,4.4);
+  \coordinate (Tx1) at (1,0);
+  \coordinate (Tx2) at (1,0.18);
+  \coordinate (Ty1) at (0,1);
+  \coordinate (Ty2) at (0.15,1);
+  \draw[->] (Xstart)--(Xend);
+  \node[right=2pt,inner sep=0pt,anchor=west] at (Xend) {$x$};
+  \draw[->] (Ystart)--(Yend);
+  \node[above=2pt,inner sep=0pt,anchor=south] at (Yend) {$y$};
+  \draw (Tx1)--(Tx2);
+  \draw (Ty1)--(Ty2);
+  \draw[domain=0:4.05,samples=241,smooth,variable=\x] plot ({\x},{1.1375*\x-0.1375*\x*\x});
+  \draw[domain=-4.05:0,samples=241,smooth,variable=\x] plot ({\x},{-1.1375*\x-0.1375*\x*\x});
+  \draw[fill=white,line width=.6pt] (O) circle (2pt);
+  \node[anchor=north east,inner sep=0pt] at (-0.15,-0.10) {$O$};
+  \node[anchor=south east,inner sep=0pt] at (-0.18,1.08) {$1$};
+  \node[anchor=north,inner sep=0pt] at (1,-0.10) {$1$};
+\end{tikzpicture}

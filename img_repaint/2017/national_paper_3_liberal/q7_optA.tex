@@ -1,0 +1,13 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-3.2,0)--(3.2,0) node[right,xshift=2pt] {$x$};
+\draw[->] (0,-3.2)--(0,3.2) node[above,yshift=2pt] {$y$};
+\node[below left,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\node[below,yshift=-3pt] at (1,0) {$1$};
+\node[right,xshift=4pt] at (0,1) {$1$};
+\draw (1,0.08)--(1,-0.08);
+\draw (0.08,1)--(-0.08,1);
+% Left distractor branch: low-left up to +inf hugging left of y-axis (faithful to wrong option)
+\draw[smooth] plot coordinates {(-3,-2.6) (-2,-1.5) (-1.2,-0.4) (-0.6,0.3) (-0.25,1.2) (-0.12,2.9)};
+% Right distractor branch: -inf near axis up to the right (faithful to wrong option)
+\draw[smooth] plot coordinates {(0.12,-2.9) (0.2,-1.4) (0.45,-0.2) (0.85,0.55) (1.6,1.25) (3,2.4)};
+\end{tikzpicture}

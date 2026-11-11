@@ -1,0 +1,48 @@
+% 2009_new_curriculum_liberal_q11_fig1: two isosceles triangles + one right-triangle top view, all solid.
+% Front/side: base 6, height 4, apex half-width 3. Top: right triangle 6 x 6 with mid lines. Unit cm.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm,>=Latex]
+% front isosceles, base 6 height 4 (2.7 x 1.8)
+\begin{scope}[shift={(0,0)}]
+  \draw (0,0) -- (2.7,0) -- (1.35,1.8) -- cycle;
+  \draw[dimension extension] (0,-0.06) -- (0,-0.65);
+  \draw[dimension extension] (2.7,-0.06) -- (2.7,-0.65);
+  \draw[dimension line] (0,-0.5) -- node[dimension label] {6} (2.7,-0.5);
+  \draw[dimension extension] (2.7,0) -- (3.35,0);
+  \draw[dimension extension] (2.7,1.8) -- (3.35,1.8);
+  \draw[dimension line] (3.2,0) -- node[dimension label vertical] {4} (3.2,1.8);
+  \draw[dimension extension] (1.35,1.8) -- (1.35,2.45);
+  \draw[dimension extension] (2.7,1.8) -- (2.7,2.45);
+  \draw[dimension line] (1.35,2.3) -- node[dimension label] {3} (2.7,2.3);
+  \node at (1.35,-1.1) {正视图};
+\end{scope}
+% side isosceles, same size in middle
+\begin{scope}[shift={(4.5,0)}]
+  \draw (0,0) -- (2.7,0) -- (1.35,1.8) -- cycle;
+  \draw[dimension extension] (0,-0.06) -- (0,-0.65);
+  \draw[dimension extension] (2.7,-0.06) -- (2.7,-0.65);
+  \draw[dimension line] (0,-0.5) -- node[dimension label] {6} (2.7,-0.5);
+  \draw[dimension extension] (2.7,0) -- (3.35,0);
+  \draw[dimension extension] (2.7,1.8) -- (3.35,1.8);
+  \draw[dimension line] (3.2,0) -- node[dimension label vertical] {4} (3.2,1.8);
+  \draw[dimension extension] (1.35,1.8) -- (1.35,2.45);
+  \draw[dimension extension] (2.7,1.8) -- (2.7,2.45);
+  \draw[dimension line] (1.35,2.3) -- node[dimension label] {3} (2.7,2.3);
+  \node at (1.35,-1.1) {侧视图};
+\end{scope}
+% top: right triangle 6 x 6 with diagonals
+\begin{scope}[shift={(9.0,0)}]
+  \draw (0,0) -- (2.7,0) -- (0,2.7) -- cycle;
+  \draw (0,0) -- (1.35,1.35) -- (2.7,1.35);
+  \draw[dimension extension] (0,-0.06) -- (0,-0.65);
+  \draw[dimension extension] (2.7,-0.06) -- (2.7,-0.65);
+  \draw[dimension line] (0,-0.5) -- node[dimension label] {6} (2.7,-0.5);
+  \draw[dimension extension] (-0.06,0) -- (-0.65,0);
+  \draw[dimension extension] (-0.06,2.7) -- (-0.65,2.7);
+  \draw[dimension line] (-0.5,0) -- node[dimension label vertical] {6} (-0.5,2.7);
+  \draw[dimension extension] (2.7,0) -- (3.35,0);
+  \draw[dimension extension] (2.7,1.35) -- (3.35,1.35);
+  \draw[dimension line] (3.2,0) -- node[dimension label vertical] {3} (3.2,1.35);
+  \node at (1.35,-1.1) {俯视图};
+\end{scope}
+\node at (13.9,0.6) {(单位: cm)};
+\end{tikzpicture}

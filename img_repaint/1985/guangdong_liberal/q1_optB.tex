@@ -1,0 +1,17 @@
+% 1985 广东（文）一(1) 选项B：下降曲线（示意，过(1,1)）
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1.5cm,y=1.5cm,line width=.6pt,>={Stealth[length=1.6mm,width=1.1mm]},font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (P) at (1,1);
+% 坐标轴
+\draw[->] (-1.0,0)--(2.9,0);
+\draw[->] (0,-1.6)--(0,2.8);
+\node[right=1pt,inner sep=0pt] at (2.9,0) {$x$};
+\node[above=1pt,inner sep=0pt] at (0,2.8) {$y$};
+% 曲线
+\draw[domain=0.4:2.3,samples=121] plot(\x,{1/(\x)});
+% 标记点与标签
+\fill (P) circle (1.1pt);
+\node[anchor=south west,inner sep=1pt] at (1.12,1.05) {$(1,1)$};
+\node[below left=1pt,inner sep=1pt] at (O) {$O$};
+\end{tikzpicture}

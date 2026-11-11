@@ -1,0 +1,30 @@
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize, x=1cm, y=1cm]
+  \coordinate (P) at (0,5.2);
+  \coordinate (A) at (-3.2,0);
+  \coordinate (C) at (3.2,0);
+  \coordinate (B) at (-1.7,-1.2);
+  % M lies on BC between B and C (BC segment); position follows original bitmap
+  \coordinate (M) at ($(B)!0.45!(C)$);
+  \coordinate (O) at ($(A)!0.5!(C)$);
+  % hidden edges
+  \draw[dashed] (A) -- (C);
+  \draw[dashed] (P) -- (O);
+  \draw[dashed] (A) -- (M);
+  % visible edges
+  \draw (P) -- (A);
+  \draw (P) -- (B);
+  \draw (P) -- (M);
+  \draw (P) -- (C);
+  \draw (A) -- (B);
+  \draw (B) -- (M);
+  \draw (M) -- (C);
+  % right-angle mark at foot O (as in original)
+  \draw (O) ++(-0.16,0) -- ++(0,0.16) -- ++(0.16,0);
+  % labels
+  \node[above, yshift=1pt] at (P) {$P$};
+  \node[left] at (A) {$A$};
+  \node[right] at (C) {$C$};
+  \node[below, yshift=-2pt] at (B) {$B$};
+  \node[below right, xshift=1pt, yshift=-1pt] at (M) {$M$};
+  \node[above left, xshift=-2pt, yshift=1pt] at (O) {$O$};
+\end{tikzpicture}

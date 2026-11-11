@@ -1,0 +1,24 @@
+% Source: inputs/original_04.pdf p.1 (printed 933), Q10.
+% Representative cubic with a>0, b<0, c>0, d>0: f=x^3-3.9x^2+2.64x+1.
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.15cm,y=1.15cm,line width=.6pt,>=Stealth,font=\normalsize]
+\def\anA{1}
+\def\anB{-3.9}
+\def\anC{2.64}
+\def\anD{1}
+\draw[->] (-1.25,0)--(4.55,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-2.65)--(0,4.65) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\coordinate (O) at (0,0);
+\coordinate (P) at (0,1);
+\coordinate (Xone) at (0.4,0);
+\coordinate (Xtwo) at (2.2,0);
+\coordinate (Max) at (0.4,1.496);
+\coordinate (Min) at (2.2,-1.42);
+\draw[domain=-0.62:3.4,samples=200] plot (\x,{\anA*\x*\x*\x+\anB*\x*\x+\anC*\x+\anD});
+\draw[dashed] (Xone)--(Max);
+\draw[dashed] (Xtwo)--(Min);
+\node[left,inner sep=2pt] at (P) {$P$};
+\node[below right,inner sep=3pt] at (0.4,0) {$x_1$};
+\node[above,inner sep=2pt] at (2.2,0.05) {$x_2$};
+\node[below right,inner sep=2pt] at (O) {$O$};
+\end{tikzpicture}

@@ -1,0 +1,79 @@
+% 复合图: 图1标识墩立体示意(正四棱锥P-EFGH + 长方体ABCD-EFGH, 虚线为隐藏线, 含原图侧视/正视观察方向箭头)
+% + 图2正视图(下矩40x20, 上三角形底40高60) + 图3俯视图(40x40正方形带对角线).
+% 缺失的侧(左)视图由考生作答, 不补造; 立体透视仅示意; 横向并排, 图名基线对齐.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm,>=Stealth]
+% 图1 立体(示意, 藏线用虚线)
+\begin{scope}[shift={(0,1.2)}]
+% 长方体前视面
+\draw (0,0) -- (2,0) -- (2,1) -- (0,1) -- cycle;
+% 深度方向
+\draw[dashed] (0,0) -- (0.5,0.5);
+\draw (2,0) -- (2.5,0.5);
+\draw[dashed] (0.5,0.5) -- (2.5,0.5);
+\draw[dashed] (0.5,0.5) -- (0.5,1.5);
+\draw (2.5,0.5) -- (2.5,1.5);
+\draw (0,1) -- (2,1);
+\draw[dashed] (0,1) -- (0.5,1.5);
+\draw (2,1) -- (2.5,1.5);
+\draw[dashed] (0.5,1.5) -- (2.5,1.5);
+% 棱锥
+\draw (0,1) -- (1.25,4.25);
+\draw (2,1) -- (1.25,4.25);
+\draw (2.5,1.5) -- (1.25,4.25);
+\draw[dashed] (0.5,1.5) -- (1.25,4.25);
+% 顶点标签
+\node[above] at (1.25,4.25) {$P$};
+\node[left] at (0,1) {$E$};
+\node[right] at (2,1) {$F$};
+\node[right] at (2.5,1.5) {$G$};
+\node[left] at (0.5,1.5) {$H$};
+\node[below left] at (0,0) {$A$};
+\node[below right] at (2,0) {$B$};
+\node[right] at (2.5,0.5) {$C$};
+\node[left] at (0.5,0.5) {$D$};
+% 观察方向示意(原图所有)
+\draw[->] (-1.2,1) -- (-0.5,1);
+\node[left] at (-1.2,1.3) {侧视};
+\draw[->] (-.2,-.8) -- (.6,-.15);
+\node[below] at (-.5,-1.05) {正视};
+\end{scope}
+\node at (1.25,-0.7) {\bitmapinsertcaption[1]};
+% 图2 正视图: 矩40x20 + 三角底40高60 (1cm=20cm)
+\begin{scope}[shift={(4.2,0.6)}]
+\draw (0,0) rectangle (2,1);
+\draw (0,1) -- (2,1) -- (1,4) -- cycle;
+% 底部尺寸 40
+\draw[thin] (0,0) -- (0,-0.5);
+\draw[thin] (2,0) -- (2,-0.5);
+\draw[<->] (0,-0.3) -- (2,-0.3);
+\node[below] at (1,-0.3) {40};
+% 右侧矩高 20
+\draw[thin] (2,0) -- (2.5,0);
+\draw[thin] (2,1) -- (2.5,1);
+\draw[<->] (2.3,0) -- (2.3,1);
+\node[right] at (2.3,0.5) {20};
+% 右侧锥高 60
+\draw[thin] (1,4) -- (2.5,4);
+\draw[thin] (2,1) -- (2.5,1);
+\draw[<->] (2.3,1) -- (2.3,4);
+\node[right] at (2.3,2.5) {60};
+\end{scope}
+\node at (5.2,-0.7) {\bitmapinsertcaption[2] 正（主）视图};
+% 图3 俯视图: 40x40正方形 + 对角线
+\begin{scope}[shift={(8.0,0.6)}]
+\draw (0,0) rectangle (2,2);
+\draw (0,0) -- (2,2);
+\draw (0,2) -- (2,0);
+% 底部尺寸 40
+\draw[thin] (0,0) -- (0,-0.5);
+\draw[thin] (2,0) -- (2,-0.5);
+\draw[<->] (0,-0.3) -- (2,-0.3);
+\node[below] at (1,-0.3) {40};
+% 右侧尺寸 40
+\draw[thin] (2,0) -- (2.5,0);
+\draw[thin] (2,2) -- (2.5,2);
+\draw[<->] (2.3,0) -- (2.3,2);
+\node[right] at (2.3,1) {40};
+\end{scope}
+\node at (9.0,-0.7) {\bitmapinsertcaption[3] 俯视图};
+\end{tikzpicture}

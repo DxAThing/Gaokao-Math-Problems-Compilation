@@ -1,0 +1,29 @@
+% 12pt, .6pt, grayscale
+\tikzset{exam solid/.style={line width=.6pt,draw=black},exam dashed/.style={line width=.6pt,draw=black,dash pattern=on 3pt off 2.5pt},exam dot/.style={circle,fill=black,inner sep=1.3pt},exam lab/.style={font=\normalsize}}
+\begin{tikzpicture}[x=1cm,y=1cm]
+\coordinate (P) at (3,5.5);
+\coordinate (A) at (2.2,2.0);
+\coordinate (B) at (0,0.8);
+\coordinate (C) at (3.2,0.8);
+\coordinate (D) at (6,1.8);
+\coordinate (E) at (4.5,3.65);
+\draw[exam solid] (P)--(B);
+\draw[exam solid] (P)--(C);
+\draw[exam solid] (P)--(E);
+\draw[exam solid] (E)--(D);
+\draw[exam solid] (E)--(C);
+\draw[exam solid] (B)--(C);
+\draw[exam solid] (C)--(D);
+\draw[exam dashed] (P)--(A);
+\draw[exam dashed] (A)--(B);
+\draw[exam dashed] (A)--(C);
+\draw[exam dashed] (A)--(D);
+\draw[exam dashed] (A)--(E);
+\foreach \p in {P,A,B,C,D,E}{\fill (\p) circle[radius=.35pt];}
+\node[exam lab,above] at ($(P)+(0,.14)$) {$P$};
+\node[exam lab,left] at ($(A)+(-.14,.02)$) {$A$};
+\node[exam lab,below left] at ($(B)+(-.1,-.12)$) {$B$};
+\node[exam lab,below] at ($(C)+(0,-.16)$) {$C$};
+\node[exam lab,right] at ($(D)+(.14,0)$) {$D$};
+\node[exam lab,above right] at ($(E)+(.1,.08)$) {$E$};
+\end{tikzpicture}

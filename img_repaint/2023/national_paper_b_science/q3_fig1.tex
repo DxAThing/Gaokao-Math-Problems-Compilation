@@ -1,0 +1,24 @@
+% point-fix: horizontal row front/side/plan on grid paper; black contours unchanged; view names added below, baselines aligned
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=0.6cm,y=0.6cm]
+\def\gridpanel{\draw[gray,line width=0.3pt,step=1] (0,0) grid (6,5);}
+% ---- front (left): 2x3 rectangle with mid divider ----
+\begin{scope}[shift={(0,0)}]
+\gridpanel
+\draw[black] (2,1) rectangle (4,4);
+\draw[black] (2,3) -- (4,3);
+\node[below,inner sep=2pt] at (3,-0.6) {正视图};
+\end{scope}
+% ---- side (middle): stepped polygon ----
+\begin{scope}[shift={(7.5,0)}]
+\gridpanel
+\draw[black] (2,1) -- (4,1) -- (4,3) -- (3,3) -- (3,4) -- (2,4) -- cycle;
+\node[below,inner sep=2pt] at (3,-0.6) {侧视图};
+\end{scope}
+% ---- plan (right): 2x2 square with mid divider ----
+\begin{scope}[shift={(15,0)}]
+\gridpanel
+\draw[black] (2,1) rectangle (4,3);
+\draw[black] (2,2) -- (4,2);
+\node[below,inner sep=2pt] at (3,-0.6) {俯视图};
+\end{scope}
+\end{tikzpicture}

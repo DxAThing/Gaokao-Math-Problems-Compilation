@@ -1,0 +1,30 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt},
+ geometry mark/.style={solid,line width=.6pt},
+ geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (AV) at (0,2.6);
+\coordinate (H) at (0,0);
+\coordinate (B) at (1.10363,0);
+\coordinate (C) at (4.50333,0);
+\coordinate (HL) at (-1.4,2.6);
+\coordinate (HR) at (1.4,2.6);
+\coordinate (GL) at (-0.7,0);
+\coordinate (GR) at (5.2,0);
+\coordinate (ABulb) at (0,2.88);
+\draw[geometry edge,dashed] (HL)--(AV)--(HR);
+\draw[geometry edge,dashed] (AV)--(H);
+\draw[geometry edge,dashed] (AV)--(B);
+\draw[geometry edge,dashed] (AV)--(C);
+\draw[geometry edge,dashed] (GL)--(GR);
+\draw[geometry mark] (ABulb) circle (0.24);
+\draw[geometry mark] (-0.08,2.6) rectangle (0.08,2.64);
+\draw[geometry mark] (0.18,0)--(0.18,0.18)--(0,0.18);
+\draw[geometry mark] (0.55,2.6) arc (0:-30:0.55);
+\draw[geometry mark] (0.85,2.6) arc (0:-67:0.85);
+\draw[dimension line] (-0.5,0) -- node[dimension label vertical] {$46\mathrm{m}$} (-0.5,2.6);
+\node[font=\normalsize] at (1.014,2.328) {$30^{\circ}$};
+\node[font=\normalsize] at (0.803,1.708) {$67^{\circ}$};
+\node[geometry label] at (ABulb) {$A$};
+\node[geometry label,below] at (B) {$B$};
+\node[geometry label,below] at (C) {$C$};
+\end{tikzpicture}

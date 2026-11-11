@@ -1,0 +1,9 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-1.6,0)--(2.2,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.2)--(0,2.4) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\node[anchor=north east,inner sep=0pt,xshift=-3pt,yshift=-3pt] at (0,0) {$O$};
+% parabola y=1.6x(x-1): opens up, roots 0/1 (through origin)
+\draw[domain=-1.0:1.7,samples=120] plot (\x,{1.6*\x*(\x-1)});
+% falling line y=1-x through (0,1),(1,0); slope<0 vs parabola a>0 (intended mismatch)
+\draw (-1.1,2.1)--(1.6,-0.6);
+\end{tikzpicture}

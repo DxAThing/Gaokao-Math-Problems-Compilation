@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,
+  geometry edge/.style={solid,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (P) at (3.2,4.2);
+\coordinate (B) at (0.0,2.0);
+\coordinate (C) at (1.8,0.6);
+\coordinate (D) at (5.4,1.0);
+\coordinate (A) at (3.6000000000,2.4000000000);
+\coordinate (G) at (1.6000000000,3.1000000000);
+\coordinate (H) at (2.7000000000,1.5000000000);
+\draw[geometry edge] (B)--(C)--(D);
+\draw[geometry edge,dashed] (D)--(A)--(B);
+
+\draw[geometry edge] (P)--(B);
+\draw[geometry edge] (P)--(C);
+\draw[geometry edge] (P)--(D);
+\draw[geometry edge,dashed] (P)--(A);
+\draw[geometry edge,dashed] (A)--(C);
+\draw[geometry edge,dashed] (G)--(H);
+\node[geometry label,above] at (P) {$P$};
+\node[geometry label,left] at (B) {$B$};
+\node[geometry label,below left] at (C) {$C$};
+\node[geometry label,right] at (D) {$D$};
+\node[geometry label,above right] at (A) {$A$};
+\node[geometry label,above left] at (G) {$G$};
+\node[geometry label,below right] at (H) {$H$};
+\end{tikzpicture}

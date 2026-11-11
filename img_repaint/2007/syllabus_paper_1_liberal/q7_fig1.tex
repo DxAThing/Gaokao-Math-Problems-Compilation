@@ -1,0 +1,32 @@
+\begin{tikzpicture}[line width=0.6pt, font=\small]
+\coordinate (A) at (0,0);
+\coordinate (B) at (3,0);
+\coordinate (C) at (4,0.9);
+\coordinate (D) at (1,0.9);
+\coordinate (A1) at (0,4.2);
+\coordinate (B1) at (3,4.2);
+\coordinate (C1) at (4,5.1);
+\coordinate (D1) at (1,5.1);
+% bottom face
+\draw[solid] (A) -- (B) -- (C);
+\draw[densely dashed] (C) -- (D) -- (A);
+% vertical edges
+\draw[solid] (A) -- (A1);
+\draw[solid] (B) -- (B1);
+\draw[solid] (C) -- (C1);
+\draw[densely dashed] (D) -- (D1);
+% top face
+\draw[solid] (A1) -- (B1) -- (C1) -- (D1) -- cycle;
+% diagonals in figure
+\draw[solid] (A1) -- (B);
+\draw[densely dashed] (A) -- (D1);
+% labels offset to avoid touching strokes
+\node[below left=5pt] at (A) {$A$};
+\node[below right=5pt] at (B) {$B$};
+\node[right=5pt] at (C) {$C$};
+\node[left=6pt,above=1pt,xshift=-5pt,yshift=1pt] at (D) {$D$};
+\node[left=5pt,above=1pt] at (A1) {$A_{1}$};
+\node[right=5pt,above=1pt] at (B1) {$B_{1}$};
+\node[right=5pt,above=1pt] at (C1) {$C_{1}$};
+\node[left=5pt,above=4pt] at (D1) {$D_{1}$};
+\end{tikzpicture}

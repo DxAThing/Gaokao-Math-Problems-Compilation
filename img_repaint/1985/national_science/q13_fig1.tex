@@ -1,0 +1,39 @@
+\begin{tikzpicture}[line width=0.6pt, >=Stealth, font=\small]
+  % Upper plane AC (parallelogram): A top-left, B bottom-left, C right, TR top-right
+  \coordinate (B) at (0,0);
+  \coordinate (C) at (4.5,0);
+  \coordinate (A) at (1.35,2.1);
+  \coordinate (TR) at (5.85,2.1);
+  % Lower plane BD: B top, BL bottom-left, D bottom-right, C right
+  \coordinate (BL) at (1.4,-1.2);
+  \coordinate (D) at (5.9,-1.2);
+  \coordinate (M) at (0.9,0);
+  \coordinate (P) at (3.1,1.25);
+  \coordinate (Q) at (4.3,-0.9);
+  % crossing of PQ with BC
+  \coordinate (X) at (3.797674419,0);
+  % upper plane outline
+  \draw (A) -- (TR);
+  \draw (B) -- (A);
+  \draw (C) -- (TR);
+  % lower plane outline
+  \draw (B) -- (BL);
+  \draw (BL) -- (D);
+  \draw (D) -- (C);
+  % intersection BC: B-M solid, M-X dashed (hidden under triangle PMQ), X-C solid
+  \draw (B) -- (M);
+  \draw[densely dashed] (M) -- (X);
+  \draw (X) -- (C);
+  % triangle PMQ, all solid
+  \draw (P) -- (M);
+  \draw (M) -- (Q);
+  \draw (P) -- (Q);
+  % labels tight to points, avoiding collisions
+  \node[above left] at (A) {$A$};
+  \node[left] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[right] at (D) {$D$};
+  \node[below] at (0.9,-0.08) {$M$};
+  \node[above left] at (P) {$P$};
+  \node[right] at (Q) {$Q$};
+\end{tikzpicture}

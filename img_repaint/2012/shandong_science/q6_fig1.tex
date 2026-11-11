@@ -1,71 +1,28 @@
-% Source: source/普通高考/2012/2012山东理.pdf, page 1, question 6.
-% Nodes: start; input a; initialize P=0,Q=1,n=0; decision P<=Q?;
-% yes branch P=P+a^n -> Q=2Q+1 -> n=n+1; no branch output n -> finish.
-% Directed edges: start->input->initialize->decision; decision(是)->P update
-% ->Q update->n update->return to the decision stem; decision(否)->output->finish.
-% The return path is the independent outer left loop and joins the main stem
-% immediately above the decision; no other branches share a segment.
-% All edges are solid black with arrowheads; labels 是/否 sit beside their branch.
-
-\begin{tikzpicture}[
-  >=Stealth,
-  x=1cm,
-  y=0.84cm,
-  line width=0.45pt,
-  line join=round,
-  line cap=round,
-  font=\normalsize,
-  flowtext/.style={anchor=center, align=center,
-    execute at begin node={\setlength{\parindent}{0pt}}},
-  every node/.style={flowtext},
-  flowbox/.style={flowtext, draw, minimum height=0.68cm,
-    inner xsep=4pt, inner ysep=2.5pt},
-  branchlabel/.style={flowtext, inner sep=0pt},
-  terminal/.style={flowbox, rounded corners=0.18cm, minimum width=1.35cm},
-  process/.style={flowbox},
-  decision/.style={flowbox, diamond, aspect=3.0, minimum width=3.55cm,
-    minimum height=0.95cm},
-  io/.style={flowbox, trapezium, trapezium left angle=72,
-    trapezium right angle=108, minimum width=2.25cm, minimum height=0.76cm},
-]
-  \path[use as bounding box] (-2.35,0.25) rectangle (5.65,10.65);
-
-  \node[terminal] (start) at (0,10.00) {开始};
-  \node[io] (input) at (0,8.55) {输入 $a$};
-  \node[process, minimum width=4.35cm] (initialize) at (0,7.05)
-    {$P=0,Q=1,n=0$};
-  \node[decision] (test) at (0,5.20) {$P\leqslant Q$};
-  \node[process, minimum width=3.35cm] (updateP) at (0,3.62)
-    {$P=P+a^n$};
-  \node[process, minimum width=3.35cm] (updateQ) at (0,2.55)
-    {$Q=2Q+1$};
-  \node[process, minimum width=3.35cm] (updateN) at (0,1.12)
-    {$n=n+1$};
-  \node[io] (output) at (4.00,3.62) {输出 $n$};
-  \node[terminal] (finish) at (4.00,2.55) {结束};
-
-  % Main flow and the single downward arrow entering the decision.
-  \draw[->] (start.south) -- (input.north);
-  \draw[->] (input.south) -- (initialize.north);
-  \coordinate (merge) at (0,6.15);
-  \draw (initialize.south) -- (merge);
-  \draw[->] (merge) -- (test.north);
-
-  % Yes branch and its sequential updates.
-  \draw[->] (test.south) --
-    node[branchlabel, anchor=west, xshift=3pt] {是} (updateP.north);
-  \draw[->] (updateP.south) -- (updateQ.north);
-  \draw[->] (updateQ.south) -- (updateN.north);
-
-  % Independent loop-back path to the decision stem; its arrow ends at the
-  % shared merge before the independent downward stem arrow.
-  \draw (updateN.south) -- (updateN.south |- 0,0.55)
-    -- (-2.05,0.55);
-  \draw (-2.05,0.55) -- (-2.05,6.15);
-  \draw[->] (-2.05,6.15) -- (-0.55,6.15) -- (merge);
-
-  % No branch exits right and terminates independently.
-  \draw[->] (test.east) -- node[branchlabel, above] {否}
-    (4.00,5.20) -- (4.00,4.55) -- (output.north);
-  \draw[->] (output.south) -- (finish.north);
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.6pt,
+  execute at begin node={\setlength{\parindent}{0pt}},
+  flownode/.style={draw,align=center,inner sep=6pt},
+  proc/.style={flownode,rectangle,minimum width=2.2cm,minimum height=0.8cm},
+  start/.style={flownode,shape=rectangle,rounded corners=1.5mm,minimum width=26mm,minimum height=10mm,inner xsep=3mm,inner ysep=1.5mm},
+  io/.style={flownode,trapezium,trapezium left angle=70,trapezium right angle=110,minimum width=3.4cm,minimum height=0.9cm},
+  dec/.style={flownode,diamond,aspect=2.4,inner sep=4pt,minimum width=3.2cm,minimum height=1.2cm}]
+\node[start] (start) at (0,0) {开始};
+\node[io,minimum width=3.0cm] (input) at (0,-1.5) {输入 $a$};
+\node[proc,minimum width=6.2cm] (init) at (0,-2.9) {$P=0,Q=1,n=0$};
+\node[dec,minimum width=3.6cm] (d1) at (0,-4.7) {$P\leqslant Q$};
+\node[proc,minimum width=3.4cm] (pp) at (0,-6.4) {$P=P+a^{n}$};
+\node[proc,minimum width=3.4cm] (qq) at (0,-8.0) {$Q=2Q+1$};
+\node[proc,minimum width=3.0cm] (nn) at (0,-9.6) {$n=n+1$};
+\node[io,minimum width=2.8cm] (output) at (4.8,-6.4) {输出 $n$};
+\node[start] (end) at (4.8,-8.0) {结束};
+\coordinate (Jtop) at (0,-3.7);
+\draw[->] (start.south) -- (input.north);
+\draw[->] (input.south) -- (init.north);
+\draw[->] (init.south) -- (d1.north);
+\draw[->] (d1.south) -- node[midway,right=2mm,inner sep=0pt]{是} (pp.north);
+\draw[->] (d1.east) -- (4.8,-4.7) -- (output.north);
+\node[above=2mm,inner sep=0pt] at ([xshift=5mm]d1.east) {否};
+\draw[->] (pp.south) -- (qq.north);
+\draw[->] (qq.south) -- (nn.north);
+\draw[->] (nn.south) -- (0,-10.5) -- (-4.8,-10.5) -- (-4.8,-3.7) -- (Jtop);
+\draw[->] (output.south) -- (end.north);
 \end{tikzpicture}

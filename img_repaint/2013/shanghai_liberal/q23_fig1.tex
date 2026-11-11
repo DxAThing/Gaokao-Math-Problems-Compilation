@@ -1,0 +1,12 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-3.8,0)--(3.8,0) node[right] {$x$};
+\draw[->] (0,-3.5)--(0,3.8) node[above] {$y$};
+\node[below left] at (0,0) {$O$};
+% Parameter y=t passes through both actual vertices without a gap.
+\draw[domain=-2.3:2.3,samples=161,variable=\t] plot ({sqrt(2*(1+\t*\t))},\t);
+\draw[domain=-2.3:2.3,samples=161,variable=\t] plot ({-sqrt(2*(1+\t*\t))},\t);
+% curve C2: |y|=|x|+1, top V y=|x|+1, bottom V y=-|x|-1
+\draw (-2.5,3.5)--(0,1.0)--(2.5,3.5);
+\draw (-2.5,-3.5)--(0,-1.0)--(2.5,-3.5);
+\end{tikzpicture}

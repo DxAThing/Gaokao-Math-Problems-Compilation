@@ -1,0 +1,31 @@
+\usetikzlibrary{arrows.meta}
+\tikzset{
+  gkdimline/.style={line width=.6pt,{Latex[length=1.8mm]}-{Latex[length=1.8mm]}},
+  gkdimlabel/.style={midway,fill=white,draw=none,text=black,font=\normalsize,inner xsep=1.5pt,inner ysep=1.5pt},
+  gkext/.style={line width=.45pt}
+}
+\begin{tikzpicture}[x=0.26cm,y=0.26cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-16,0)--(16.5,0);
+\node[inner sep=0pt,anchor=west] at (16.55,-0.35) {$x$};
+\draw[->] (0,-1.5)--(0,9.5);
+\node[inner sep=0pt,anchor=south] at (0,9.65) {$y$};
+\draw (-13.75,0) arc[start angle=180,end angle=0,x radius=13.75,y radius=7.5];
+\draw[dashed] (-11,4.5)--(11,4.5);
+\draw[dashed] (-11,0)--(-11,4.5);
+\draw[dashed] (11,0)--(11,4.5);
+\draw[dashed] (-5.5,0)--(-5.5,4.5);
+\draw[dashed] (5.5,0)--(5.5,4.5);
+\draw[gkext] (-11,0)--(-11,-3.0);
+\draw[gkext] (11,0)--(11,-3.0);
+\draw[gkext] (-13.75,0)--(-13.75,-5.4);
+\draw[gkext] (13.75,0)--(13.75,-5.4);
+\draw[gkdimline] (-11,-2.4)-- node[gkdimlabel] {$22$} (11,-2.4);
+\draw[gkdimline] (-13.75,-4.8)-- node[gkdimlabel] {$l$} (13.75,-4.8);
+\draw[gkext] (-16,4.5)--(-11,4.5);
+\draw[gkdimline] (-15.1,0)--(-15.1,4.5);
+\node[inner sep=0pt,anchor=east] at (-15.4,2.25) {$4.5$};
+\draw[gkext] (13.75,7.5)--(16,7.5);
+\draw[gkdimline] (15.1,0)--(15.1,7.5);
+\node[inner sep=0pt,anchor=west] at (15.4,3.75) {$h$};
+\node[inner sep=0pt,anchor=west] at (3,8.5) {（单位：米）};
+\end{tikzpicture}

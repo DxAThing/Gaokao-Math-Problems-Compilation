@@ -1,0 +1,31 @@
+% y=2-x^2/2. Water y=0 has width 4 and rise 2. Masonry stays outside arch.
+% Bed joints stop on the parabola; head joints alternate by half a brick each course.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+\foreach \row in {0,...,15} {
+ \pgfmathsetmacro{\yy}{-1.35+\row*.28}
+ \pgfmathsetmacro{\yt}{min(2.85,\yy+.28)}
+ \pgfmathsetmacro{\offset}{mod(\row,2)*.30}
+ \ifdim\yy pt>2pt
+  \draw (-3.45,\yy)--(3.45,\yy);
+ \else
+  \pgfmathsetmacro{\half}{sqrt(2*(2-\yy))}
+  \draw (-3.45,\yy)--(-\half,\yy);\draw (\half,\yy)--(3.45,\yy);
+ \fi
+ \foreach \col in {-5,...,5}{
+  \pgfmathsetmacro{\xx}{\col*.60+\offset}
+  \pgfmathsetmacro{\yb}{max(\yy,2-\xx*\xx/2)}
+  \ifdim\yb pt<\yt pt \draw (\xx,\yb)--(\xx,\yt);\fi
+ }
+}
+\foreach \yy in {-.16,-.42,-.68,-.94,-1.20}{
+ \pgfmathsetmacro{\half}{sqrt(2*(2-\yy))-.025}
+ \draw[line width=.45pt] plot[domain=-\half:\half,samples=180] (\x,{\yy+.022*sin(\x*1800)});
+}
+\draw plot[domain=-2.59:2.59,samples=81] (\x,{2-\x*\x/2});
+\draw (-2,0)--(2,0);
+\draw[dimension line] (0,0)--node[dimension label vertical] {$2\text{ m}$}(0,2);
+\draw[dimension extension] (-2,.04)--(-2,-1.65);
+\draw[dimension extension] (2,.04)--(2,-1.65);
+\draw[dimension line] (-2,-1.55)--node[dimension label] {$4\text{ m}$}(2,-1.55);
+\node[inner sep=0pt] at (-1.1,.65) {$l$};
+\end{tikzpicture}

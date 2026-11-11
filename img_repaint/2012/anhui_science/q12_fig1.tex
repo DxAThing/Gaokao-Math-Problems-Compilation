@@ -1,0 +1,27 @@
+% 三视图点修: 仅横向并排(正/侧/俯左至右)+图名下置居中基线对齐; 投影边线/尺寸/虚实/比例均沿用既有稿
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,>=Latex]
+% 正(主)视图
+\begin{scope}[shift={(0.3,1.0)}]
+\draw (0,0) rectangle (3,2.4);
+\draw (1.2,0) -- (1.2,2.4);
+\node[left] at (-0.15,1.2) {4};
+\end{scope}
+\node at (1.8,0) {正视图};
+% 侧(左)视图
+\begin{scope}[shift={(4.2,1.0)}]
+\draw (0,0) rectangle (2.4,2.4);
+\end{scope}
+\node at (5.4,0) {侧视图（左）};
+% 俯视图
+\begin{scope}[shift={(7.8,1.0)}]
+\draw (0,0) -- (1.2,0) -- (3,2.4) -- (0,2.4) -- cycle;
+\draw (1.2,0) -- (3,2.4);
+% 上边5
+\node[above] at (1.5,2.55) {5};
+% 左边4
+\node[left] at (-0.15,1.2) {4};
+% 下边2
+\node[below] at (0.6,-0.15) {2};
+\end{scope}
+\node at (9.3,0) {俯视图};
+\end{tikzpicture}

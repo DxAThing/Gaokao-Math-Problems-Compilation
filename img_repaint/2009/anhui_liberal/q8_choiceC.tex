@@ -1,0 +1,19 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.4cm,y=0.63cm,line width=.6pt,>={Stealth[length=2.0mm]},font=\normalsize]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (0.4,0);
+  \coordinate (B) at (3.15,0);
+  \coordinate (Xstart) at (-1.35,0);
+  \coordinate (Xend) at (4.0,0);
+  \coordinate (Ystart) at (0,-3.3);
+  \coordinate (Yend) at (0,2.1);
+  \draw[->] (Xstart)--(Xend);
+  \node[right=2pt,inner sep=0pt,anchor=west] at (Xend) {$x$};
+  \draw[->] (Ystart)--(Yend);
+  \node[above=2pt,inner sep=0pt,anchor=south] at (Yend) {$y$};
+  \draw[domain=-0.54:3.38,samples=321,smooth,variable=\x]
+    plot ({\x},{(\x-0.4)^2*(\x-3.15)});
+  \node[anchor=north east,inner sep=0pt] at (-0.28,-0.12) {$O$};
+  \node[anchor=north,inner sep=0pt] at (0.4,-0.15) {$a$};
+  \node[anchor=north west,inner sep=0pt] at (3.23,-0.15) {$b$};
+\end{tikzpicture}

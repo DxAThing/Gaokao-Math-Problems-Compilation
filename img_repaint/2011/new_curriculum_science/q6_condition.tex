@@ -1,0 +1,17 @@
+% 两视图横向并排点修：仅有正视与俯视两幅，不补造侧视图；边线/虚实沿用既有稿，平移scope使同行且图名基线一致
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% 正视图：等腰三角形，底(-1.5,0)-(1.5,0)，顶(0,2.6)，中线全实线
+\begin{scope}[shift={(1.5,0)}]
+\draw (-1.5,0) -- (0,2.6) -- (1.5,0) -- cycle;
+\draw (0,0) -- (0,2.6);
+\node[below] at (0,-0.55) {正视图};
+\end{scope}
+% 俯视图：上半圆(直径3)＋下三角形，中线仅三角形段
+\begin{scope}[shift={(5.5,1.8)}]
+\draw (-1.5,0) -- (1.5,0);
+\draw (-1.5,0) arc (180:0:1.5);
+\draw (-1.5,0) -- (0,-1.8) -- (1.5,0);
+\draw (0,0) -- (0,-1.8);
+\node[below] at (0,-2.35) {俯视图};
+\end{scope}
+\end{tikzpicture}

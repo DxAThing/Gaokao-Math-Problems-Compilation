@@ -1,0 +1,48 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% bottom face ABCD (D back, dashed)
+\coordinate (A) at (0,0);
+\coordinate (B) at (3.5,0);
+\coordinate (C) at (4.5,0.9);
+\coordinate (D) at (1.0,0.9);
+% top face A1B1C1D1
+\coordinate (A1) at (0,4.0);
+\coordinate (B1) at (3.5,4.0);
+\coordinate (C1) at (4.5,4.9);
+\coordinate (D1) at (1,4.9);
+% apex and centres
+\coordinate (P) at (2.25,5.45);
+\coordinate (O1) at (2.25,4.45);
+\coordinate (O) at (2.25,0.45);
+% bottom edges
+\draw (A)--(B)--(C);
+\draw[dashed] (C)--(D)--(A);
+% verticals
+\draw (A)--(A1);
+\draw (B)--(B1);
+\draw (C)--(C1);
+\draw[dashed] (D)--(D1);
+% top face
+\draw (A1)--(B1)--(C1);
+\draw[dashed] (C1)--(D1);
+\draw (D1)--(A1);
+% pyramid edges
+\draw (A1)--(P)--(B1);
+\draw (C1)--(P);
+\draw (D1)--(P);
+% central axis PO1O
+\draw[dashed] (P)--(O);
+\fill (O1) circle (1.4pt);
+\fill (O) circle (1.4pt);
+% labels with clearance
+\node[below left=2pt] at (A) {$A$};
+\node[below right=2pt] at (B) {$B$};
+\node[right=2pt] at (C) {$C$};
+\node[left=2pt] at (D) {$D$};
+\node[left=2pt] at (A1) {$A_{1}$};
+\node[right=2pt,xshift=0.00bp,yshift=-2.00bp] at (B1) {$B_{1}$};
+\node[right=2pt] at (C1) {$C_{1}$};
+\node[above left=2pt] at (D1) {$D_{1}$};
+\node[above=2pt] at (P) {$P$};
+\node[right=2pt] at (O1) {$O_{1}$};
+\node[right=2pt] at (O) {$O$};
+\end{tikzpicture}

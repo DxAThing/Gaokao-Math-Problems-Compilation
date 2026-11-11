@@ -1,0 +1,45 @@
+% 三视图：圆锥，正/侧为全等等腰三角形(腰3底2)，俯为圆；12pt，.6pt灰度
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm,>=Stealth]
+% 正视图 at (0,0); 侧视图 at (4.4,0); 俯视图 at (8.8,0): single horizontal row
+\begin{scope}[shift={(0,0)}]
+\draw (0,0) -- (1.2,3.394) -- (2.4,0) -- cycle;
+% 底边尺寸 2
+\draw[thin] (0,0) -- (0,-0.45);
+\draw[thin] (2.4,0) -- (2.4,-0.45);
+\draw[thin,<->] (0,-0.3) -- (2.4,-0.3);
+\node[below] at (1.2,-0.35) {2};
+% 左腰尺寸 3（外侧平行偏移，端点短横为垂直于腰的示值线）
+\draw[thin,<->] (-0.26,0.09) -- (0.94,3.49);
+\draw[thin] (-0.41,0.04) -- (-0.11,0.14);
+\draw[thin] (0.79,3.44) -- (1.09,3.54);
+\node[left] at (0.05,1.79) {3};
+% 右腰尺寸 3
+\draw[thin,<->] (2.66,0.09) -- (1.46,3.49);
+\draw[thin] (2.81,0.04) -- (2.51,0.14);
+\draw[thin] (1.61,3.44) -- (1.31,3.54);
+\node[right] at (2.35,1.79) {3};
+\node[below] at (1.2,-0.95) {正视图};
+\end{scope}
+% 侧视图
+\begin{scope}[shift={(4.4,0)}]
+\draw (0,0) -- (1.2,3.394) -- (2.4,0) -- cycle;
+\draw[thin] (0,0) -- (0,-0.45);
+\draw[thin] (2.4,0) -- (2.4,-0.45);
+\draw[thin,<->] (0,-0.3) -- (2.4,-0.3);
+\node[below] at (1.2,-0.35) {2};
+\draw[thin,<->] (-0.26,0.09) -- (0.94,3.49);
+\draw[thin] (-0.41,0.04) -- (-0.11,0.14);
+\draw[thin] (0.79,3.44) -- (1.09,3.54);
+\node[left] at (0.05,1.79) {3};
+\draw[thin,<->] (2.66,0.09) -- (1.46,3.49);
+\draw[thin] (2.81,0.04) -- (2.51,0.14);
+\draw[thin] (1.61,3.44) -- (1.31,3.54);
+\node[right] at (2.35,1.79) {3};
+\node[below] at (1.2,-0.95) {侧视图};
+\end{scope}
+% 俯视图：圆，直径与正视底宽对正
+\begin{scope}[shift={(8.8,0)}]
+\draw (1.2,1.2) circle (1.2);
+\node[below] at (1.2,-0.95) {俯视图};
+\end{scope}
+\end{tikzpicture}

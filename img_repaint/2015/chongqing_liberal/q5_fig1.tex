@@ -1,0 +1,39 @@
+% 三视图横向并排: 正视图/侧视图(左)/俯视图; 仅点修尺寸为共享模板, 轮廓/线型未动, 全实线
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% 正视图: 正方形(0,0)-(2,2), 左侧三角形(0,1)-(-1,1)-(0,0)
+\begin{scope}[shift={(1.6,1.6)}]
+\draw (0,0) rectangle (2,2);
+\draw (0,1) -- (-1,1) -- (0,0);
+% 左侧分段竖向尺寸1/1: 整条线在轮廓外, 外移>=5mm
+\draw[dimension extension] (0,2) -- (-1.70,2);
+\draw[dimension extension] (-1,1) -- (-1.70,1);
+\draw[dimension extension] (0,0) -- (-1.70,0);
+\draw[dimension line] (-1.6,1) -- node[dimension label vertical] {$1$} (-1.6,2);
+\draw[dimension line] (-1.6,0) -- node[dimension label vertical] {$1$} (-1.6,1);
+% 左伸宽度1: 三角形顶边外侧5mm
+\draw[dimension extension] (-1,1.05) -- (-1,1.60);
+\draw[dimension extension] (0,1.05) -- (0,1.60);
+\draw[dimension line] (-1,1.5) -- node[dimension label] {$1$} (0,1.5);
+\node[below] at (1,-0.95) {正视图};
+\end{scope}
+% 侧视图(左): 圆+水平直径, 无尺寸
+\begin{scope}[shift={(4.6,1.6)}]
+\draw (1,1) circle (1);
+\draw (0,1) -- (2,1);
+\node[below] at (1,-0.95) {侧视图（左）};
+\end{scope}
+% 俯视图: 正方形+左侧等腰三角形
+\begin{scope}[shift={(8.4,1.6)}]
+\draw (0,0) rectangle (2,2);
+\draw (0,0) -- (-1,1) -- (0,2);
+% 底宽2: 轮廓外5mm
+\draw[dimension extension] (0,-0.05) -- (0,-0.60);
+\draw[dimension extension] (2,-0.05) -- (2,-0.60);
+\draw[dimension line] (0,-0.5) -- node[dimension label] {$2$} (2,-0.5);
+% 右高2: 轮廓外5mm
+\draw[dimension extension] (2.05,0) -- (2.60,0);
+\draw[dimension extension] (2.05,2) -- (2.60,2);
+\draw[dimension line] (2.5,0) -- node[dimension label vertical] {$2$} (2.5,2);
+\node[below] at (1,-0.95) {俯视图};
+\end{scope}
+\end{tikzpicture}

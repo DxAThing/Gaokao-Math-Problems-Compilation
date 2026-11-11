@@ -1,77 +1,24 @@
-% Original PDF: source/普通高考/2014/2014江苏.pdf, page 1.
-% PDF embedded-image attempt: pdfimages -list returned no image objects; this is vector artwork.
-% Grid evidence: tmp/redraw_2014_jiangsu/source_p1_grid100.jpg and
-% tmp/redraw_2014_jiangsu/q6_block_grid50.jpg; comparison uses a no-grid crop
-% rendered directly from the original PDF page.
-% Elements: one frequency-density histogram for tree trunk circumference, with
-% bars [80,90), [90,100), [100,110), [110,120), [120,130), a broken x-axis,
-% arrowed axes, dashed horizontal guide lines, frequency/组距 and 底部周长/cm labels.
-% Relations and data: the 60 sampled trees are partitioned into the five 10-cm
-% classes; heights (frequency density) are .015, .025, .030, .020, .010,
-% giving frequencies 9, 15, 18, 12, 6 and total 60 from the source question.
-% solid segments: bar outlines, axes, arrowheads, tick marks, and zigzag break.
-% dashed segments: horizontal guide lines at .010, .015, .020, .025, .030,
-% each extending from the y-axis to the corresponding bar's left edge.
-% labels: y ticks are 0.010--0.030, x ticks are 0, 80, 90, 100, 110, 120, 130;
-% the axis labels sit above/along their respective axes without covering bars.
-\begin{tikzpicture}[baseline]
-\begin{axis}[exam statistical histogram,
-    width=16cm,
-    height=11.665cm,
-    axis lines=none,
-    clip=false,
-    xmin=-0.75,
-    xmax=7.15,
-    ymin=-0.005,
-    ymax=0.035,
-    ticks=none,
-]
-    % Dashed guides terminate at the left edge of the bar at that height.
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.010) -- (axis cs:5.00,0.010);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.015) -- (axis cs:1.00,0.015);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.020) -- (axis cs:4.00,0.020);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.025) -- (axis cs:2.00,0.025);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.030) -- (axis cs:3.00,0.030);
+% 2014_jiangsu_q6_fig1: histogram, standard profile.
+% Template: templates/statistical/histogram.tex via shared exam statistical template histogram.
+% Non-zero first group: one group width (70-80) kept before the break, origin labelled 0.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,
+  xmin=70,ymin=0,
+  xtick={70,80,90,100,110,120,130},
+  ytick={0.010,0.015,0.020,0.025,0.030},yticklabels={0.010,0.015,0.020,0.025,0.030},
+  xmax=135,
+  ymax=0.0325,
+  xticklabels={,80,90,100,110,120,130}]
+\addplot[draw=black,fill=white] coordinates {(80,0.015) (90,0.025) (100,0.030) (110,0.020) (120,0.010) (130,0)};
+\draw[dashed] (axis cs:70,0.010) -- (axis cs:130,0.010);
+\draw[dashed] (axis cs:70,0.015) -- (axis cs:90,0.015);
+\draw[dashed] (axis cs:70,0.020) -- (axis cs:120,0.020);
+\draw[dashed] (axis cs:70,0.025) -- (axis cs:100,0.025);
+\draw[dashed] (axis cs:70,0.030) -- (axis cs:110,0.030);
+\examstatxbreak{75}{0}
+\examstatylabel{频率/组距}
+\examstatxlabel{底部周长/cm}
 
-    % Frequency-density bars, one 10-cm class per unit of x.
-    \addplot[/tikz/ybar interval,mark=none,fill=white,line width=0.55pt] coordinates {
-      (1.00,0.015)
-      (2.00,0.025)
-      (3.00,0.030)
-      (4.00,0.020)
-      (5.00,0.010)
-      (6.00,0)
-    };
-
-    \draw[->,line width=0.65pt] (axis cs:0,0) -- (axis cs:7.05,0);
-    \draw[->,line width=0.65pt] (axis cs:0,0) -- (axis cs:0,0.034);
-    \examstatxbreak[line width=0.65pt]{0.6499999999999999}{0};
-
-    \draw[line width=0.35pt] (axis cs:-0.08,0.010) -- (axis cs:0,0.010);
-    \draw[line width=0.35pt] (axis cs:-0.08,0.015) -- (axis cs:0,0.015);
-    \draw[line width=0.35pt] (axis cs:-0.08,0.020) -- (axis cs:0,0.020);
-    \draw[line width=0.35pt] (axis cs:-0.08,0.025) -- (axis cs:0,0.025);
-    \draw[line width=0.35pt] (axis cs:-0.08,0.030) -- (axis cs:0,0.030);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.010) {0.010};
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.015) {0.015};
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.020) {0.020};
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.025) {0.025};
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.080000,0.030) {0.030};
-    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \examstatxlabel{底部周长/cm};
-    \node[anchor=north east,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:0,0.000000) {0};
-
-    \draw[line width=0.35pt] (axis cs:1.00,0) -- (axis cs:1.00,-0.006);
-    \draw[line width=0.35pt] (axis cs:2.00,0) -- (axis cs:2.00,-0.006);
-    \draw[line width=0.35pt] (axis cs:3.00,0) -- (axis cs:3.00,-0.006);
-    \draw[line width=0.35pt] (axis cs:4.00,0) -- (axis cs:4.00,-0.006);
-    \draw[line width=0.35pt] (axis cs:5.00,0) -- (axis cs:5.00,-0.006);
-    \draw[line width=0.35pt] (axis cs:6.00,0) -- (axis cs:6.00,-0.006);
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:1.00,-0.0065) {80};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:2.00,-0.0065) {90};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:3.00,-0.0065) {100};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:4.00,-0.0065) {110};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:5.00,-0.0065) {120};
-    \node[anchor=north,inner sep=0pt,font=\normalsize] at (axis cs:6.00,-0.0065) {130};
+\node[anchor=east,inner sep=0pt,xshift=-4pt] at (current axis.left of origin) {0};
 \end{axis}
 \end{tikzpicture}

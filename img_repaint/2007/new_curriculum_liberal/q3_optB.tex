@@ -1,0 +1,17 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1.4cm,y=1.4cm,line width=.6pt,>=stealth,font=\normalsize]
+\draw[->] (-1.95,0)--(3.65,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.65)--(0,1.65) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw (0,1)--(0.055,1);
+\node[right,inner sep=0pt,xshift=2pt] at (0.055,1) {$1$};
+\draw (0,-1)--(-0.055,-1);
+\node[left,inner sep=0pt,xshift=-2pt] at (-0.055,-1) {$-1$};
+\draw[dashed] (-1.5708,-0.8660)--(-1.5708,0);
+\draw[dashed] (3.1416,0.8660)--(3.1416,0);
+\draw[domain=-1.5708:3.1416,samples=220] plot (\x,{sin(deg(2*\x+2*pi/3))});
+\node[above,inner sep=0pt,yshift=3pt] at (-1.5708,0) {$-\dfrac{\pi}{2}$};
+\node[below right,inner sep=0pt,xshift=2pt,yshift=-2pt] at (-1.0472,0) {$-\dfrac{\pi}{3}$};
+\node[below right,inner sep=0pt,xshift=2pt,yshift=-2pt] at (0,0) {$O$};
+\node[above right,inner sep=0pt,xshift=2pt,yshift=2pt] at (0.5236,0) {$\dfrac{\pi}{6}$};
+\node[below,inner sep=0pt,yshift=-3pt] at (3.1416,0) {$\pi$};
+\end{tikzpicture}

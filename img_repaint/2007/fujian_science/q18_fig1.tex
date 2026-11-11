@@ -1,0 +1,32 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,
+  edge/.style={solid,line width=.6pt},
+  hidden/.style={dashed,line width=.6pt},
+  lbl/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (A) at (0,4.5);
+\coordinate (A1) at (5,4.5);
+\coordinate (B) at (-1,0);
+\coordinate (B1) at (4,0);
+\coordinate (C) at (0.6,1.8);
+\coordinate (D) at (3.0,1.8);
+\coordinate (C1) at (5.4,1.8);
+\draw[edge] (A) -- (A1);
+\draw[edge] (B) -- (B1);
+\draw[edge] (A) -- (B);
+\draw[edge] (A1) -- (B1);
+\draw[edge] (A1) -- (C1);
+\draw[edge] (A) -- (B1);
+\draw[edge] (B) -- (A1);
+\draw[hidden] (C) -- (C1);
+\draw[hidden] (A) -- (C);
+\draw[hidden] (B) -- (C);
+\draw[edge] (B1) -- (C1);
+\draw[hidden] (A1) -- (D);
+\draw[hidden] (B) -- (D);
+\node[lbl,above left=3pt] at (A) {$A$};
+\node[lbl,above right=3pt] at (A1) {$A_{1}$};
+\node[lbl,below left=3pt] at (B) {$B$};
+\node[lbl,below right=3pt] at (B1) {$B_{1}$};
+\node[lbl,left=4pt] at (C) {$C$};
+\node[lbl,below right=2pt] at (D) {$D$};
+\node[lbl,right=4pt] at (C1) {$C_{1}$};
+\end{tikzpicture}

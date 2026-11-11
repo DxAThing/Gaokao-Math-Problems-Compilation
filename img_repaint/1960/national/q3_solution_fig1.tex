@@ -1,0 +1,32 @@
+\usetikzlibrary{angles,quotes,decorations.pathreplacing}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt},
+ geometry mark/.style={solid,line width=.6pt},
+ geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (A) at (0.000000000,0.000000000);
+\coordinate (B) at (1.939840000,-3.360000000);
+\coordinate (C) at (3.360000000,-3.360000000);
+\coordinate (AS) at (0.000000000,-1.600000000);
+\coordinate (CS) at (3.360000000,-4.320000000);
+\coordinate (K) at (5.760000000,-0.640000000);
+\coordinate (KN) at (5.760000000,0.160000000);
+\coordinate (KS) at (5.760000000,-1.440000000);
+\coordinate (KE) at (6.560000000,-0.640000000);
+\coordinate (KW) at (4.960000000,-0.640000000);
+\draw[geometry edge] (A)--(B)--(C)--cycle;
+\draw[geometry edge,dashed] (A)--(AS);
+\draw[geometry edge,dashed] (C)--(CS);
+\draw[geometry edge,->] (K)--(KN);
+\draw[geometry edge,->] (K)--(KS);
+\draw[geometry edge,->] (K)--(KE);
+\draw[geometry edge,->] (K)--(KW);
+\pic[draw,geometry mark,angle radius=5mm] {angle=AS--A--B};
+\pic[draw,geometry mark,angle radius=8mm] {angle=AS--A--C};
+\node[font=\normalsize] at (0.4,-1.6) {$30^\circ$};
+\node[font=\normalsize] at (1.55,-2.05) {$45^\circ$};
+\node[geometry label,above left] at (A) {$A$};
+\node[geometry label,below left] at (B) {$B$};
+\node[geometry label,below right] at (C) {$C$};
+\node[geometry label,above] at (KN) {北};
+\node[geometry label,right] at (KE) {东};
+\end{tikzpicture}

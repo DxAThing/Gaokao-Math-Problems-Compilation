@@ -1,73 +1,33 @@
-% Source PDF: source/普通高考/2019/2019天津文.pdf, page 1, question 4.
-% PDF embedded-bitmap check: pdfimages -list found no image objects; the flowchart is vector artwork.
-% Grid evidence: tmp/redraw_flowchart_2019_tianjin_liberal/source_p1_grid100.jpg;
-% comparison original side: tmp/redraw_flowchart_2019_tianjin_liberal/q4_original.png,
-% cropped from the no-grid page render.
-% Elements: 开始/结束 rounded boxes, process rectangles, decision diamonds,
-%          输出 S parallelogram, branch labels, arrows, and loop-back branch.
-% Node→edge list (from source PDF):
-%   开始→i=1,S=0→i为偶数?;
-%   是→j=i/2→S=S+i·2^j→i=i+1;
-%   否→S=S+i→i=i+1;
-%   i=i+1→i≥4?; 否→回到 i为偶数?; 是→输出S→结束.
-% solid segments: all process/decision/output outlines, loop-back and branch lines, arrows.
-% dashed segments: none.
-% labels: branch 否/是 are offset from decision edges and arrows; formulas stay centered.
-
-\begin{tikzpicture}[baseline=(current bounding box.center), x=1cm, y=1.18cm,
-  flowbox/.style={draw, anchor=center, line width=0.45pt, minimum height=0.55cm,
-    inner xsep=4pt, inner ysep=2pt, align=center, font=\normalsize,
-    execute at begin node=\setlength{\parindent}{0pt}},
-  flowarrow/.style={-Stealth, line width=0.45pt},
+\begin{tikzpicture}[>=Stealth, line width=0.6pt,
+  every node/.append style={execute at begin node={\parindent=0pt}},
+  start/.style={rectangle, draw, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm, align=center},
+  proc/.style={rectangle, draw, minimum width=32mm, minimum height=11mm, inner sep=4pt, align=center},
+  dec/.style={diamond, draw, aspect=2.2, inner sep=4pt, align=center},
+  io/.style={trapezium, draw, trapezium left angle=70, trapezium right angle=110, minimum width=28mm, minimum height=11mm, inner sep=4pt, align=center}
 ]
-  % The source is a schematic flowchart; coordinates preserve topology and branch order.
-  \node[flowbox, rounded corners=0.12cm, minimum width=1.10cm] (start) at (0,0) {开始};
-  \node[flowbox, minimum width=2.70cm] (init) at (0,-1.08) {$i=1,S=0$};
-  \node[draw, line width=0.45pt, diamond, aspect=2.75, minimum width=5.10cm,
-    minimum height=1.28cm, inner xsep=4pt, inner ysep=2pt, anchor=center, align=center, font=\normalsize,
-    execute at begin node=\setlength{\parindent}{0pt}] (even) at (0,-2.50)
-    {$i$ 为偶数?};
-  \node[flowbox, minimum width=1.62cm, minimum height=0.90cm] (jcalc) at (0,-4.05)
-    {$j=\dfrac{i}{2}$};
-  \node[flowbox, minimum width=3.25cm] (seven) at (0,-5.42)
-    {$S=S+i\cdot2^j$};
-  \node[flowbox, minimum width=2.40cm] (sodd) at (3.10,-4.05)
-    {$S=S+i$};
-  \node[flowbox, minimum width=1.95cm] (inc) at (0,-6.80)
-    {$i=i+1$};
-  \node[draw, line width=0.45pt, diamond, aspect=2.75, minimum width=4.55cm,
-    minimum height=1.18cm, inner xsep=4pt, inner ysep=2pt, anchor=center, align=center, font=\normalsize,
-    execute at begin node=\setlength{\parindent}{0pt}] (gefour) at (0,-8.25)
-    {$i\geq4?$};
-  \node[flowbox, minimum width=2.20cm, minimum height=0.58cm,
-    trapezium, trapezium left angle=75, trapezium right angle=105] (output) at (0,-9.62)
-    {输出 $S$};
-  \node[flowbox, rounded corners=0.12cm, minimum width=1.10cm] (finish) at (0,-10.82) {结束};
+\node[start] (start) at (0,0) {开始};
+\node[proc] (pInit) at (0,-2.0) {$i=1,S=0$};
+\coordinate (J0) at (0,-3.0);
+\node[dec] (decOdd) at (0,-4.2) {$i$为偶数?};
+\node[proc,minimum height=17mm] (pJ) at (0,-6.5) {$j=\dfrac{i}{2}$};
+\node[proc,minimum width=40mm] (pS2) at (0,-9.0) {$S=S+i\cdot 2^{j}$};
+\coordinate (J1) at (0,-10.1);
+\node[proc] (pInc) at (0,-11.2) {$i=i+1$};
+\node[dec] (decEnd) at (0,-13.3) {$i\geqslant 4?$};
+\node[io] (out) at (0,-15.5) {输出$S$};
+\node[start] (end) at (0,-17.5) {结束};
+\node[proc] (pS1) at (4.1,-6.5) {$S=S+i$};
+\draw[->] (start.south) -- (pInit.north);
+\draw[->] (pInit.south) -- (J0) -- (decOdd.north);
 
-  \draw[flowarrow] (start) -- (init);
-  \draw (init.south) -- (0,-1.60);
-  \draw[flowarrow] (0,-1.60) -- (even.north);
-  \draw[flowarrow] (even) -- node[font=\normalsize, right, xshift=0.05cm] {是} (jcalc);
-  \draw[flowarrow] (jcalc) -- (seven);
-  % Keep the branch stem clear of the odd-case box before attaching to it.
-  \draw[line width=0.45pt] (even.east) -- (3.10,-2.50) -- (3.10,-3.30);
-  \draw[flowarrow] (3.10,-3.30) -- (sodd.north);
-  \node[font=\normalsize, anchor=west, inner sep=0.02cm] at (2.55,-2.13) {否};
-  % Both branches join immediately above i=i+1; the horizontal arrow points left
-  % and the odd-branch arrow terminates at the visible merge point.
-  \draw[line width=0.45pt] (seven.south) -- (0,-6.20);
-  \draw[flowarrow] (sodd.south) -- (3.10,-6.20) -- (0.30,-6.20) -- (0,-6.20);
-  \draw[flowarrow] (0,-6.20) -- (inc.north);
-  \draw[flowarrow] (inc) -- (gefour);
-  % The loop returns into the trunk above the decision; the main trunk carries
-  % the sole downward arrowhead into the decision.
-  \draw[line width=0.45pt] (gefour.west) -- (-3.30,-8.25) -- (-3.30,-1.60);
-  \draw (-3.30,-1.60) -- (-0.75,-1.60);
-  \draw[flowarrow] (-0.75,-1.60) -- (0,-1.60);
-  \node[font=\normalsize, anchor=east, inner sep=0.02cm] at (-2.70,-8.00) {否};
-  \draw[flowarrow] (gefour) -- node[font=\normalsize, right, xshift=0.06cm] {是} (output);
-  \draw[flowarrow] (output) -- (finish);
-  % Preserve the source's safe white margin around the outer loop and end boxes.
-  % Include the full right-hand odd branch and a small even margin around the end box.
-  \path[use as bounding box] (-3.55,0.45) rectangle (4.55,-11.20);
+\draw[->] (decOdd.south) -- node[midway,right=0.7mm] {是} (pJ.north);
+\draw[->] (pJ.south) -- (pS2.north);
+\draw[->] (pS2.south) -- (J1) -- (pInc.north);
+
+\draw[->] (pInc.south) -- (decEnd.north);
+\draw[->] (decOdd.east) -- node[pos=0.22,above=0.7mm] {否} (4.1,-4.2) -- (pS1.north);
+\draw[->] (pS1.south) -- (4.1,-10.1) -- (J1);
+\draw[->] (decEnd.west) -- node[pos=0.18,above=0.7mm] {否} (-4.5,-13.3) -- (-4.5,-3.0) -- (J0);
+\draw[->] (decEnd.south) -- node[midway,right=0.7mm] {是} (out.north);
+\draw[->] (out.south) -- (end.north);
 \end{tikzpicture}

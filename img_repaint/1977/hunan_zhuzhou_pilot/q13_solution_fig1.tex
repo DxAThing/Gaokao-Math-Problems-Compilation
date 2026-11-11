@@ -1,0 +1,21 @@
+\begin{tikzpicture}[x=0.45cm,y=0.45cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes (1 unit = 0.45cm keeps figure compact; proportions exact)
+\draw[->] (-9.5,0)--(11.5,0) node[right,xshift=2pt] {$x$};
+\draw[->] (0,-9.5)--(0,9.5) node[above,yshift=2pt] {$y$};
+\node[below left,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+% hyperbola x^2/36-y^2/13=1 generated from formula, y in [-7,7]
+\draw[domain=-5:5,samples=101] plot ({6*sqrt(1+\x*\x/13)},{\x});
+\draw[domain=-5:5,samples=101] plot ({-6*sqrt(1+\x*\x/13)},{\x});
+% vertices and foci
+\fill (6,0) circle (2pt);
+\fill (-6,0) circle (2pt);
+\fill (7,0) circle (2pt);
+\fill (-7,0) circle (2pt);
+% labels offset clear of strokes
+\node[below right,xshift=3pt,yshift=-3pt] at (6,0) {$A(6,0)$};
+\node[below left,xshift=-3pt,yshift=-3pt] at (-6,0) {$A'$};
+\node[above right,xshift=3pt,yshift=3pt] at (7,0) {$F_2(7,0)$};
+\node[above left,xshift=-3pt,yshift=3pt] at (-7,0) {$F_1$};
+\node[right,xshift=4pt] at (0,3.6055512755) {$B$};
+\node[right,xshift=4pt] at (0,-3.6055512755) {$B'$};
+\end{tikzpicture}

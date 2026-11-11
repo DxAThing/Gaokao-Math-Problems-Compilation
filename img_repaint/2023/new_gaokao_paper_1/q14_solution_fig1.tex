@@ -1,0 +1,41 @@
+\begin{tikzpicture}[line width=0.6pt, font=\small]
+\coordinate (A) at (-3.4,-2);
+\coordinate (B) at (1.6,-2);
+\coordinate (C) at (3.6,-0.9);
+\coordinate (Dd) at (-1.4000000000,-0.9000000000);
+\coordinate (A1) at (-1.6500000000,1.6750000000);
+\coordinate (B1) at (0.8500000000,1.6750000000);
+\coordinate (C1) at (1.8500000000,2.2250000000);
+\coordinate (D1) at (-0.6500000000,2.2250000000);
+\coordinate (E) at (-1.6500000000,-1.7250000000);
+\coordinate (F) at (1.8500000000,-1.1750000000);
+% bottom face
+\draw[solid] (A)--(B);
+\draw[solid] (B)--(C);
+\draw[dashed] (A)--(Dd);
+\draw[dashed] (Dd)--(C);
+% top face
+\draw[solid] (A1)--(B1)--(C1)--(D1)--cycle;
+
+% lateral edges
+\draw[draw=black!55,solid] (A)--(A1);
+\draw[solid] (B)--(B1);
+\draw[draw=black!55,solid] (C)--(C1);
+\draw[dashed] (Dd)--(D1);
+% section A1-C1 and A-C (original blue)
+\draw[draw=black!55,solid] (A1)--(C1);
+\draw[draw=black!55,dashed] (A)--(C);
+% vertical feet
+\draw[draw=black!55,dashed] (A1)--(E);
+\draw[draw=black!55,dashed] (C1)--(F);
+\node[inner sep=1pt] at ($(A)+(-0.34,-0.05)$) {$A$};
+\node[inner sep=1pt] at ($(B)+(0.10,-0.36)$) {$B$};
+\node[inner sep=1pt] at ($(C)+(0.36,0)$) {$C$};
+\node[inner sep=1pt,xshift=1pt,yshift=9pt] at ($(Dd)+(-0.10,0.34)$) {$D$};
+\node[inner sep=1pt] at ($(A1)+(-0.36,0)$) {$A_{1}$};
+\node[below=3pt,inner sep=1pt,xshift=-5pt,yshift=1pt] at (B1) {$B_{1}$};
+\node[inner sep=1pt] at ($(C1)+(0.30,0.28)$) {$C_{1}$};
+\node[inner sep=1pt] at ($(D1)+(0,0.36)$) {$D_{1}$};
+\node[inner sep=1pt,xshift=-1pt,yshift=3pt] at ($(E)+(-0.30,0.05)$) {$E$};
+\node[inner sep=1pt] at ($(F)+(0,-0.36)$) {$F$};
+\end{tikzpicture}

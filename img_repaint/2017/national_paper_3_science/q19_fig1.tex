@@ -1,0 +1,31 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,
+  solid edge/.style={solid,line width=.6pt,draw=black},
+  hidden edge/.style={dashed,line width=.6pt,draw=black},
+  pt/.style={circle,fill=black,inner sep=0pt,minimum size=3pt},
+  lbl/.style={font=\normalsize,inner sep=2pt}]
+% Tetrahedron A-BCD, E midpoint of BD. Solid: AD,AB,AE,DB; dashed: DC,AC,CE,CB
+\coordinate (A) at (0,0);
+\coordinate (B) at (6,0.6);
+\coordinate (D) at (1,4.5);
+\coordinate (C) at (2.2,2.0);
+\coordinate (E) at (3.5,2.55);
+\draw[solid edge] (A)--(D);
+\draw[solid edge] (A)--(B);
+\draw[solid edge] (A)--(E);
+\draw[solid edge] (D)--(E);
+\draw[solid edge] (E)--(B);
+\draw[hidden edge] (D)--(C);
+\draw[hidden edge] (A)--(C);
+\draw[hidden edge] (C)--(E);
+\draw[hidden edge] (C)--(B);
+\node[pt] at (A) {};
+\node[pt] at (B) {};
+\node[pt] at (C) {};
+\node[pt] at (D) {};
+\node[pt] at (E) {};
+\node[lbl,below left=4pt] at (A) {$A$};
+\node[lbl,right=4pt] at (B) {$B$};
+\node[lbl,left=4pt] at (C) {$C$};
+\node[lbl,above=4pt] at (D) {$D$};
+\node[lbl,above right=4pt] at (E) {$E$};
+\end{tikzpicture}

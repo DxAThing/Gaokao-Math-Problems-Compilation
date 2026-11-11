@@ -1,0 +1,34 @@
+\begin{tikzpicture}[line width=.6pt, font=\normalsize]
+  % cone apex S, base centre O, base radius R; inscribed cylinder top centre O1 height h
+  \coordinate (S) at (0,4.4);
+  \coordinate (O) at (0,0);
+  \def\baseRx{2.9} \def\baseRy{0.62}
+  \def\cylRx{1.3511363636} \def\cylRy{0.2888636364}
+  \def\cylTop{2.35}
+  % cone base: front solid, back dashed
+  \draw (-\baseRx,0) arc (180:360:\baseRx\space and \baseRy);
+  \draw[densely dashed] (-\baseRx,0) arc (180:0:\baseRx\space and \baseRy);
+  % cone sides
+  \draw (-\baseRx,0) -- (S);
+  \draw (\baseRx,0) -- (S);
+  % axis dashed
+  
+  % base diameter dashed
+  \draw[densely dashed] (-\baseRx,0) -- (\baseRx,0);
+  % inscribed cylinder: top ellipse full (front solid, back dashed), sides dashed hidden
+  \draw (-\cylRx,\cylTop) arc (180:360:\cylRx\space and \cylRy);
+  \draw[densely dashed] (-\cylRx,\cylTop) arc (180:0:\cylRx\space and \cylRy);
+  \draw[densely dashed] (-\cylRx,\cylTop) -- (-\cylRx,0);
+  \draw[densely dashed] (\cylRx,\cylTop) -- (\cylRx,0);
+  \draw[densely dashed] (-\cylRx,0) arc (180:360:\cylRx\space and \cylRy);
+  \draw[densely dashed] (-\cylRx,0) arc (180:0:\cylRx\space and \cylRy);
+  % dimension: H (apex to base), h (cylinder top to base), 2R (base width)
+  \draw[dimension extension] (S) -- (3.65,4.4);
+  \draw[dimension extension] (\baseRx,0) -- (3.65,0);
+  \draw[dimension line] (3.65,4.4) -- node[dimension label vertical] {$H$} (3.65,0);
+  \draw[dimension extension] (\cylRx,\cylTop) -- (3.15,\cylTop);
+  \draw[dimension line] (3.15,\cylTop) -- node[dimension label vertical] {$h$} (3.15,0);
+  \draw[dimension extension] (-\baseRx,0) -- (-\baseRx,-1.15);
+  \draw[dimension extension] (\baseRx,0) -- (\baseRx,-1.15);
+  \draw[dimension line] (-\baseRx,-1.15) -- node[dimension label] {$2R$} (\baseRx,-1.15);
+\end{tikzpicture}

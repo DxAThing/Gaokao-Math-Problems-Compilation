@@ -1,0 +1,11 @@
+\usetikzlibrary{arrows.meta}
+% 2004 浙江理 q11 选项 D：错误选项，忠实原图（先极小在 x≈0，再极大在 x≈2，峰处虚线标刻度 2）。
+\begin{tikzpicture}[x=1.2cm,y=1.2cm,line width=.6pt,>={Stealth[length=1.5mm,width=1.3mm]},font=\normalsize]
+  \draw[->] (-2.0,0) -- (3.9,0) node[below,inner sep=0pt,xshift=3pt,yshift=-1pt] {$x$};
+  \draw[->] (0,-2.0) -- (0,1.9) node[above left,inner sep=1pt] {$y$};
+  \draw[domain=-1.0:3.0,samples=200] plot (\x,{-0.3465*(\x+0.63)*(\x-0.82)*(\x-2.76)});
+  \draw[dashed] (2,0) -- (2,0.817);
+  \node[below left,inner sep=0pt,xshift=-3pt,yshift=-1pt] at (0,0) {$O$};
+  \node[below,inner sep=0pt,yshift=-2pt] at (1,0) {$1$};
+  \node[below,inner sep=0pt,yshift=-2pt] at (2,0) {$2$};
+\end{tikzpicture}

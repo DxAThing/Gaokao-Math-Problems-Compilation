@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt},
+ geometry mark/.style={solid,line width=.6pt},
+ geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (R00) at (0.000000000,0.000000000);
+\coordinate (R10) at (2.000000000,0.000000000);
+\coordinate (R20) at (4.000000000,0.000000000);
+\coordinate (R01) at (0.000000000,2.000000000);
+\coordinate (R11) at (2.000000000,2.000000000);
+\coordinate (R21) at (4.000000000,2.000000000);
+\draw[geometry edge] (R00)--(R10)--(R20);
+\draw[geometry edge] (R01)--(R11)--(R21);
+\draw[geometry edge] (R00)--(R01);
+\draw[geometry edge] (R20)--(R21);
+\draw[geometry edge] (R10)--(R11);
+\draw[dimension extension] (0,-.1)--(0,-.65);
+\draw[dimension extension] (2,-.1)--(2,-.65);
+\draw[dimension extension] (4,-.1)--(4,-.65);
+\draw[dimension line] (0,-.45)--node[dimension label] {$1$} (2,-.45);
+\draw[dimension line] (2,-.45)--node[dimension label] {$1$} (4,-.45);
+\draw[dimension extension] (4.1,0)--(4.65,0);
+\draw[dimension extension] (4.1,2)--(4.65,2);
+\draw[dimension line] (4.45,0)--node[dimension label vertical] {$1$} (4.45,2);
+\end{tikzpicture}

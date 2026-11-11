@@ -1,0 +1,44 @@
+% 2012_beijing_science_q16_fig1: Rt triangle fold Fig1 + spatial Fig2 with M (schematic)
+\begin{tikzpicture}[line width=0.6pt, font=\small]
+% ---- Fig1 ----
+\coordinate (p1C) at (0,0);
+\coordinate (p1B) at (3.6,0);
+\coordinate (p1A) at (0,5);
+\coordinate (p1D) at (0,1.7);
+\coordinate (p1E) at (2.38,1.7);
+\draw (p1A) -- (p1C);
+\draw (p1C) -- (p1B);
+\draw (p1A) -- (p1B);
+\draw (p1D) -- (p1E);
+\node[above left] at (p1A) {$A$};
+\node[left] at (p1D) {$D$};
+\node[below left] at (p1C) {$C$};
+\node[below right] at (p1B) {$B$};
+\node[above right] at (p1E) {$E$};
+\node at (1.8,-1.2) {\bitmapinsertcaption[1]};
+% ---- Fig2 ----
+\coordinate (p2C) at (6,0);
+\coordinate (p2B) at (10,0);
+\coordinate (p2D) at (7.1,1.1);
+\coordinate (p2E) at (9.3,1.1);
+\coordinate (p2A1) at (6.4,3.6);
+\coordinate (p2M) at (6.75,2.35);
+% solid visible edges
+\draw (p2A1) -- (p2C);
+\draw (p2C) -- (p2B);
+\draw (p2B) -- (p2E);
+\draw (p2E) -- (p2A1);
+\draw (p2A1) -- (p2B);
+% dashed hidden edges
+\draw[dashed] (p2A1) -- (p2D);
+\draw[dashed] (p2C) -- (p2D);
+\draw[dashed] (p2D) -- (p2E);
+\draw[dashed] (p2C)--(p2M);
+\node[above left] at (p2A1) {$A_{1}$};
+\node[below left] at (p2C) {$C$};
+\node[below right] at (p2B) {$B$};
+\node[above right] at (p2D) {$D$};
+\node[right] at (p2E) {$E$};
+\node[right] at (p2M) {$M$};
+\node at (8,-1.2) {\bitmapinsertcaption[2]};
+\end{tikzpicture}

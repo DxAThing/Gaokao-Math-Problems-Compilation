@@ -1,0 +1,15 @@
+\begin{tikzpicture}[x=0.9cm,y=0.9cm,line width=.6pt,font=\normalsize,>=Stealth,
+  lbl/.style={font=\normalsize,inner sep=2pt}]
+\draw[->] (-4.6,0)--(5.6,0) node[right,xshift=2pt] {$x$};
+\draw[->] (0,-2.2)--(0,4.4) node[above,yshift=2pt] {$y$};
+\node[lbl,below left,xshift=-1pt,yshift=-1pt] at (0,0) {$O$};
+\draw[domain=0:360,samples=121] plot ({1.41421356*cos(\x)},{sin(\x)});
+\draw[domain=-5.2:5.2,samples=121] plot (\x,{1+\x*\x/8});
+\draw (-5.0,3)--(5.4,3);
+\draw (-0.7,-1.7)--(4.6,3.6);
+\node[lbl,above right,xshift=3pt,yshift=1pt] at (0,3) {$F$};
+\node[lbl,below right,xshift=3pt,yshift=-4pt] at (4,3) {$G$};
+\node[lbl,above left,xshift=-1pt,yshift=2pt] at (1,0) {$F_{1}$};
+\node[lbl,below left,xshift=-2pt,yshift=-2pt] at (-1.41421356,0) {$A$};
+\node[lbl,below right,xshift=2pt,yshift=-2pt] at (1.41421356,0) {$B$};
+\end{tikzpicture}

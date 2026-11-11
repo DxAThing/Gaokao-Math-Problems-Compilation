@@ -1,0 +1,13 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[line width=1pt,domain=-2:2,samples=140] plot (\x,{4*sqrt(1-\x*\x/4)});
+\draw[thin] (-2,0) -- (2,0) -- (1.1,{4*sqrt(1-1.1*1.1/4)}) -- (-1.1,{4*sqrt(1-1.1*1.1/4)}) -- cycle;
+\draw[thin] (0,4) -- (2.9,4);
+\draw[<->] (-2,-0.45) -- (2,-0.45);
+\draw[<->] (2.9,0) -- (2.9,4);
+\node[below] at (0,-0.45) {$2r$};
+\node[right] at (2.9,2) {$2r$};
+\node[below left] at (-2,0) {$A$};
+\node[below right] at (2,0) {$B$};
+\node[above left] at (-1.1,{4*sqrt(1-1.1*1.1/4)}) {$D$};
+\node[above right] at (1.1,{4*sqrt(1-1.1*1.1/4)}) {$C$};
+\end{tikzpicture}

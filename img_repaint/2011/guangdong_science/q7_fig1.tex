@@ -1,0 +1,47 @@
+% 三视图:正为平行四边形(顶边3,斜边2,水平错位1,高√3),侧为矩形3×√3,俯为矩形4×3带内部实线x=1与虚线x=3;长对正高平齐宽相等
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% 正视图:底(0,0)-(3,0),顶(1,1.732)-(4,1.732)
+\begin{scope}[shift={(0,5.2)}]
+\draw (0,0) -- (3,0) -- (4,1.732) -- (1,1.732) -- cycle;
+% 顶边标注 3
+\draw[thin] (1,1.732) -- (1,2.08);
+\draw[thin] (4,1.732) -- (4,2.08);
+\draw[<->] (1,1.93) -- node[above,fill=white,inner sep=1pt] {$3$} (4,1.93);
+% 斜边标注 2
+\draw[thin] (0,0) -- (-0.3,-0.06);
+\draw[thin] (1,1.732) -- (0.7,1.67);
+\draw[<->] (-0.3,-0.06) -- node[left,fill=white,inner sep=1pt] {$2$} (0.7,1.67);
+\node[below] at (2,-0.65) {正视图};
+\end{scope}
+% 侧视图:矩形 3×1.732
+\begin{scope}[shift={(5.6,5.2)}]
+\draw (0,0) rectangle (3,1.732);
+\draw[thin] (0,1.732) -- (0,2.08);
+\draw[thin] (3,1.732) -- (3,2.08);
+\draw[<->] (0,1.93) -- node[above,fill=white,inner sep=1pt] {$3$} (3,1.93);
+\node[below] at (1.5,-0.65) {侧视图};
+\end{scope}
+% 俯视图(右,与正侧同高横向并排):矩形 4×2.4(深度示意),内部实线x=1,虚线x=3;上方1/2/1,下方1/2/1
+\begin{scope}[shift={(10,5.2)}]
+\draw (0,0) rectangle (4,3);
+\draw (1,0) -- (1,3);
+\draw[dashed] (3,0) -- (3,3);
+% 上方分段标注
+\draw[thin] (0,3) -- (0,3.35);
+\draw[thin] (1,3) -- (1,3.35);
+\draw[thin] (3,3) -- (3,3.35);
+\draw[thin] (4,3) -- (4,3.35);
+\draw[<->] (0,3.2) -- node[above,fill=white,inner sep=1pt] {$1$} (1,3.2);
+\draw[<->] (1,3.2) -- node[above,fill=white,inner sep=1pt] {$2$} (3,3.2);
+\draw[<->] (3,3.2) -- node[above,fill=white,inner sep=1pt] {$1$} (4,3.2);
+% 下方分段标注
+\draw[thin] (0,0) -- (0,-0.35);
+\draw[thin] (1,0) -- (1,-0.35);
+\draw[thin] (3,0) -- (3,-0.35);
+\draw[thin] (4,0) -- (4,-0.35);
+\draw[<->] (0,-0.2) -- node[below,fill=white,inner sep=1pt] {$1$} (1,-0.2);
+\draw[<->] (1,-0.2) -- node[below,fill=white,inner sep=1pt] {$2$} (3,-0.2);
+\draw[<->] (3,-0.2) -- node[below,fill=white,inner sep=1pt] {$1$} (4,-0.2);
+\node[below] at (2,-0.65) {俯视图};
+\end{scope}
+\end{tikzpicture}

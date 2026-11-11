@@ -1,0 +1,28 @@
+% source: inputs/original_02.pdf p.1; raster: inputs/2011_sichuan_science_q7_choice_c.png
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth]
+  \draw[->] (-3.1,0)--(2.95,0);
+  \draw[->] (0,-2.8)--(0,2.8);
+  \draw (-2,-0.08)--(-2,0.08);
+  \draw (-1,-0.08)--(-1,0.08);
+  \draw (1,-0.08)--(1,0.08);
+  \draw (2,-0.08)--(2,0.08);
+  \draw (-0.08,-1)--(0.08,-1);
+  \draw (-0.08,1)--(0.08,1);
+  \draw[domain=-2.5:-0.02,samples=81] plot (\x,{exp(\x*ln(2))+1});
+  \draw[domain=0.02:2.5,samples=81] plot (\x,{-(exp(-\x*ln(2))+1)});
+  \draw[fill=white] (0,2) circle (1.6pt);
+  \draw[fill=white] (0,-2) circle (1.6pt);
+  \fill (0,0) circle (1.5pt);
+  \node[right,inner sep=0pt,xshift=2pt] at (2.95,0) {$x$};
+  \node[above,inner sep=0pt,yshift=2pt] at (0,2.8) {$y$};
+  \node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+  \node[anchor=south,inner sep=1pt] at (-1.72,0.14) {$-2$};
+  \node[anchor=south,inner sep=1pt] at (-0.72,0.14) {$-1$};
+  \node[anchor=north,inner sep=1pt] at (1,-0.14) {$1$};
+  \node[anchor=north,inner sep=1pt] at (2,-0.14) {$2$};
+  \node[anchor=west,inner sep=1pt] at (0.2,2) {$2$};
+  \node[anchor=east,inner sep=1pt] at (-0.2,1) {$1$};
+  \node[anchor=east,inner sep=1pt] at (-0.2,-1) {$-1$};
+  \node[anchor=east,inner sep=1pt] at (-0.2,-2) {$-2$};
+\end{tikzpicture}

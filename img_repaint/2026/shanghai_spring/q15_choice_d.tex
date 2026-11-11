@@ -1,0 +1,16 @@
+\begin{tikzpicture}[x=1.6cm,y=1.1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  opt edge/.style={solid,line width=.6pt}]
+% axes
+\draw[opt edge,->] (-0.45,0)--(1.75,0) node[right] {$x$};
+\draw[opt edge,->] (0,-1.9)--(0,2.1) node[above] {$y$};
+\node[below left,xshift=-2pt,yshift=-1pt] at (0,0) {$O$};
+% tick marks 1 and -1 on y, 1 on x
+\draw[opt edge] (-0.05,1)--(0.08,1) node[left,xshift=-3pt] {$1$};
+\draw[opt edge] (-0.05,-1)--(0.08,-1) node[left,xshift=-3pt] {$-1$};
+\draw[opt edge] (1,-0.06)--(1,0.06);
+\node[below right,xshift=2pt,yshift=-3pt] at (1,0) {$1$};
+% closed region: same endpoints as choice C, gentler mid curvature
+\draw[opt edge,domain=0:1,samples=80] plot (\x,{0.45+1.65*\x-0.60*\x*\x});
+\draw[opt edge,domain=0:1,samples=80] plot (\x,{-(0.45+0.65*\x+0.40*\x*\x)});
+\draw[opt edge] (1,{0.45+0.65+0.40})--(1,{-(0.45+0.65+0.40)});
+\end{tikzpicture}

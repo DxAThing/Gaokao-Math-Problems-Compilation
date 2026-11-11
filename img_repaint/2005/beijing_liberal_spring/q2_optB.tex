@@ -1,0 +1,11 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-2.4,0)--(2.6,0) node[anchor=west,inner sep=2pt] {$x$};
+\draw[->] (0,-3.2)--(0,2.8) node[anchor=south east,inner sep=2pt,xshift=-3pt,yshift=3pt] {$y$};
+% option B wrong figure: two cusps, left near -0.7 and right at 1
+\draw[domain=0.15:0.99,samples=80] plot (\x,{abs(ln(\x)/ln(2))});
+\draw[domain=1.01:2.3,samples=60] plot (\x,{abs(ln(\x)/ln(2))});
+\draw[domain=-2.3:-0.71,samples=60] plot (\x,{abs(ln(-\x/0.7)/ln(2))});
+\draw[domain=-0.69:-0.15,samples=80] plot (\x,{abs(ln(-\x/0.7)/ln(2))});
+\node[inner sep=2pt,anchor=north east] at (-0.18,-0.28) {$O$};
+\node[inner sep=2pt,anchor=north] at (1,-0.28) {$1$};
+\end{tikzpicture}

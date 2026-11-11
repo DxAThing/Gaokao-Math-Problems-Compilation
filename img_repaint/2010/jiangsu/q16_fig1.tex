@@ -1,0 +1,19 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt]
+\coordinate (P) at (-1.6000000000,3.2000000000);
+\coordinate (D) at (-1.6000000000,0.9000000000);
+\coordinate (A) at (-3.0,0);
+\coordinate (B) at (1.2,0);
+\coordinate (C) at (2.6,0.9);
+% solid base and sides
+\draw (A) -- (B) -- (C) -- (P) -- (A);
+\draw (P) -- (B);
+% dashed hidden
+\draw[dashed] (P) -- (D) -- (C);
+\draw[dashed] (A) -- (D);
+% labels offset from strokes
+\node[above=3pt] at (P) {$P$};
+\node[left=3pt,xshift=-1pt,yshift=3pt] at (D) {$D$};
+\node[below left=2pt] at (A) {$A$};
+\node[below right=2pt] at (B) {$B$};
+\node[right=3pt] at (C) {$C$};
+\end{tikzpicture}

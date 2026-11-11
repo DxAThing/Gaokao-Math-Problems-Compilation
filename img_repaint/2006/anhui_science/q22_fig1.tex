@@ -1,0 +1,23 @@
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize, >=Stealth]
+% axes
+\draw[->] (-3.5,0) -- (3.8,0) node[below right, xshift=0pt] {$x$};
+\draw[->] (0,-2.8) -- (0,3.2) node[above left, yshift=0pt] {$y$};
+% left directrix x=-0.5 (thin)
+\draw[line width=0.45pt] (-0.5,-2.2) -- (-0.5,2.2);
+% hyperbola x^2-y^2/3=1 : x= +/-sqrt(1+y^2/3), y in [-2.6,2.6]
+\draw[domain=-2.6:2.6, samples=80, variable=\y]
+  plot ({sqrt(1+\y*\y/3)}, {\y});
+\draw[domain=-2.6:2.6, samples=80, variable=\y]
+  plot ({-sqrt(1+\y*\y/3)}, {\y});
+\coordinate (O) at (0,0);
+\coordinate (F) at (2,0);
+\coordinate (P) at (1.5000000000,1.9364916731);
+\coordinate (M) at (-0.5000000000,1.9364916731);
+\draw (M) -- (P);
+\draw (M) -- (O);
+\draw (P) -- (F);
+\node[below right, xshift=0pt, yshift=0pt] at (O) {$O$};
+\node[below right, xshift=0pt, yshift=0pt] at (F) {$F$};
+\node[above, yshift=1pt,xshift=-3pt] at (P) {$P$};
+\node[left, xshift=0pt] at (M) {$M$};
+\end{tikzpicture}

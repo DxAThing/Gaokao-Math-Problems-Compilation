@@ -1,0 +1,12 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=0.62cm,y=0.62cm,line width=.6pt,>=Stealth,font=\normalsize]
+\def\fx{5*cos(deg(\x))/(\x*\x+1)}
+\def\xmin{-6.0}
+\def\xmax{5.7}
+\def\ymin{-1.2}
+\def\ymax{5.7}
+\draw[->] (\xmin,0)--(\xmax,0) node[anchor=north west,inner sep=0pt,xshift=2pt,yshift=-4pt] {$x$};
+\draw[->] (0,\ymin)--(0,\ymax) node[anchor=south east,inner sep=0pt,xshift=-4pt,yshift=1pt] {$y$};
+\node[anchor=north east,inner sep=0pt,xshift=-4pt,yshift=-4.5pt] at (0,0) {$O$};
+\draw[domain=-5.5:5.5,samples=241] plot (\x,{(\fx)});
+\end{tikzpicture}

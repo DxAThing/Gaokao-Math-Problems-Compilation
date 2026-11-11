@@ -1,0 +1,65 @@
+% 点修：三视图横向并排（正/侧/俯左至右），图名居中基线对齐；投影边线/尺寸/虚实原样，仅平移scope。左侧立体图保留归属上移。
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% ---- stereo pictorial (unchanged edges, shifted up) ----
+\begin{scope}[shift={(2,3.6)}]
+\coordinate (A) at (2.2,5.2);
+\coordinate (B) at (0,0);
+\coordinate (C) at (7,2.2);
+\coordinate (D) at (2.6,2.6);
+\coordinate (E) at (1.31,3.1);
+\coordinate (F) at (1.2,1.0);
+\coordinate (G) at (4.6,2.44);
+\coordinate (H) at (4.84,3.55);
+% solid visible edges
+\draw (A) -- (B);
+\draw (A) -- (C);
+\draw (B) -- (C);
+\draw (E) -- (H);
+% hidden dashed edges
+\draw[dashed] (A) -- (D);
+\draw[dashed] (B) -- (D);
+\draw[dashed] (D) -- (C);
+\draw[dashed] (E) -- (F);
+\draw[dashed] (H) -- (G);
+\draw[dashed] (F) -- (G);
+% vertex labels
+\node[above] at (A) {$A$};
+\node[below left] at (B) {$B$};
+\node[right] at (C) {$C$};
+\node[left] at (D) {$D$};
+\node[left] at (E) {$E$};
+\node[below] at (F) {$F$};
+\node[below] at (G) {$G$};
+\node[above right] at (H) {$H$};
+\end{scope}
+% ---- row: main view ----
+\begin{scope}[shift={(0,0)}]
+\draw (0,0) -- (0,1.5) -- (3,0) -- cycle;
+% vertical dim 1
+\draw (0,0) -- (-0.4,0);
+\draw (0,1.5) -- (-0.4,1.5);
+\draw[{Latex[length=2mm]}-{Latex[length=2mm]}] (-0.28,0) -- (-0.28,1.5);
+\node[left] at (-0.45,0.75) {1};
+% horizontal dim 2
+\draw (0,0) -- (0,-0.4);
+\draw (3,0) -- (3,-0.4);
+\draw[{Latex[length=2mm]}-{Latex[length=2mm]}] (0,-0.28) -- (3,-0.28);
+\node[below] at (1.5,-0.28) {2};
+\node at (1.5,-1.2) {正视图};
+\end{scope}
+% ---- row: side view (left) ----
+\begin{scope}[shift={(4.2,0)}]
+\draw (0,0) -- (0,1.5) -- (3,0) -- cycle;
+\node at (1.5,-1.2) {侧视图（左）};
+\end{scope}
+% ---- row: top view ----
+\begin{scope}[shift={(8.4,0)}]
+\draw (0,0) -- (0,2.2) -- (3,2.2) -- cycle;
+% vertical dim 2
+\draw (0,0) -- (-0.4,0);
+\draw (0,2.2) -- (-0.4,2.2);
+\draw[{Latex[length=2mm]}-{Latex[length=2mm]}] (-0.28,0) -- (-0.28,2.2);
+\node[left] at (-0.45,1.1) {2};
+\node at (1.5,-1.2) {俯视图};
+\end{scope}
+\end{tikzpicture}

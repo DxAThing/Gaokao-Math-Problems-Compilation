@@ -1,0 +1,39 @@
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (-2.5,-1.5);
+\coordinate (C) at (1.0000000000,-1.5000000000);
+\coordinate (D) at (3.5,0);
+\coordinate (A1) at (0,4.5);
+\coordinate (B1) at (-2.5,3.0);
+\coordinate (C1) at (1.0000000000,3.0000000000);
+\coordinate (D1) at (3.5,4.5);
+\coordinate (N) at (-0.7500000000,3.0000000000);
+\coordinate (M) at (3.5,2.25);
+% hidden edges from A
+\draw[dashed] (A)--(A1);
+\draw[dashed] (A)--(B);
+\draw[dashed] (A)--(D);
+% bottom
+\draw (B)--(C); \draw (C)--(D);
+\draw (B)--(B1); \draw (C)--(C1); \draw (D)--(M); \draw (M)--(D1);
+% top
+\draw (A1)--(D1); \draw (A1)--(B1);
+\draw (B1)--(N); \draw (N)--(C1);
+% interior
+\draw (D1)--(N);
+\draw (B1)--(C);
+\draw (C)--(M);
+\draw[dashed] (B1)--(M);
+% labels
+\node[below left,xshift=3pt,yshift=-3pt] at (A) {$A$};
+\node[below left] at (B) {$B$};
+\node[below] at (C) {$C$};
+\node[right] at (D) {$D$};
+\node[above left] at (A1) {$A_1$};
+\node[left] at (B1) {$B_1$};
+\node[right,xshift=3pt,yshift=-3pt] at (C1) {$C_1$};
+\node[above right] at (D1) {$D_1$};
+\node[above left] at (N) {$N$};
+\node[right] at (M) {$M$};
+\draw (C1)--(D1);
+\end{tikzpicture}

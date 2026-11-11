@@ -1,0 +1,11 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.7cm,y=1cm,line width=.6pt,>=stealth]
+\draw[->] (-1.95,0)--(1.95,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.6)--(0,2.5) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw[dashed] (-1.5708,-1.55)--(-1.5708,2.45);
+\draw[dashed] (1.5708,-1.55)--(1.5708,2.45);
+\draw[domain=-1.42:1.42,samples=161] plot (\x,{-ln(cos(deg(\x)))});
+\node[below left,inner sep=0pt,xshift=-2pt,yshift=-3pt] at (0,0) {$O$};
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-3pt] at (-1.5708,0) {$-\frac{\pi}{2}$};
+\node[anchor=north west,inner sep=0pt,xshift=2pt,yshift=-3pt] at (1.5708,0) {$\frac{\pi}{2}$};
+\end{tikzpicture}

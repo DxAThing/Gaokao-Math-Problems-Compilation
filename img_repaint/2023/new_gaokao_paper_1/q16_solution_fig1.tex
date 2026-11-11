@@ -1,0 +1,24 @@
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize]
+% hyperbola x^2/1 - y^2/0.8 = 1, a=1, b=sqrt(0.8), c=1.3416
+\draw[->,>=stealth] (-3.2,0)--(3.6,0) node[inner sep=1pt,right] {$x$};
+\draw[->,>=stealth] (0,-3.4)--(0,3.2) node[inner sep=1pt,above right] {$y$};
+% left and right branches: y = +/-b*sqrt((x/a)^2-1)
+\draw[domain=-2.65:2.65,samples=160,variable=\t] plot ({sqrt(1+\t*\t/.8)},{\t});
+\draw[domain=-2.65:2.65,samples=160,variable=\t] plot ({-sqrt(1+\t*\t/.8)},{\t});
+% exact points from solution: F1=(-c,0), F2=(c,0), A=(3/c,sqrt(3.2)), B=(0,-sqrt(7.2))
+\coordinate (F1) at (-1.341640786,0);
+\coordinate (F2) at (1.341640786,0);
+\coordinate (O) at (0,0);
+\coordinate (A) at (2.236067977,1.788854382);
+\coordinate (B) at (0,-2.683281573);
+\draw[draw=black!55,solid] (F1)--(A)--(B)--cycle;
+\node[inner sep=1pt] at ($(F1)+(-0.15,-0.42)$) {$F_{1}$};
+\node[inner sep=1pt] at ($(F2)+(0.15,-0.42)$) {$F_{2}$};
+\node[inner sep=1pt] at ($(O)+(-0.34,-0.18)$) {$O$};
+\node[inner sep=1pt,xshift=4.00bp,yshift=-4.00bp] at ($(A)+(0.30,0.22)$) {$A$};
+\node[inner sep=1pt] at ($(B)+(-0.36,-0.10)$) {$B$};
+\node[inner sep=1pt,text=black!55] at ($(F1)!0.5!(A)+(0.10,0.34)$) {$4m$};
+\node[inner sep=1pt,text=black!55] at ($(A)!0.78!(B)+(0.48,0.10)$) {$3m$};
+\node[inner sep=1pt,text=black!55] at ($(F1)!0.5!(B)+(-0.50,0.05)$) {$3m$};
+\node[inner sep=1pt,text=black!55] at ($(A)!0.28!(B)+(0.48,-0.05)$) {$2m$};
+\end{tikzpicture}

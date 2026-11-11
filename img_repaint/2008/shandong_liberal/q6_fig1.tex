@@ -1,0 +1,30 @@
+% 三视图: 上圆下矩(正/侧) + 圆形俯视图, 横向并排. 实线为主, 无虚线.
+% 正(主)视图(左): 矩形宽2高3, 上方圆直径2与矩形顶边相切; 右侧竖向尺寸2(圆径)/3(矩高), 下方横向尺寸2(矩宽).
+% 侧(左)视图(中): 与正视图同形同尺寸, 无尺寸标注.
+% 俯视图(右): 圆直径2, 与正视矩宽长对正.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm,>=Stealth]
+% 正(主)视图 (平移为局部坐标, 几何/尺寸/线型不变)
+\begin{scope}[shift={(0,0)}]
+\draw (0,0) rectangle (2,3);
+\draw (1,4) circle (1);
+% 正视图尺寸: 圆径 2, 矩高 3, 矩宽 2
+\draw[<->] (2.35,3) -- (2.35,5);
+\node[right] at (2.45,4) {2};
+\draw[<->] (2.35,0) -- (2.35,3);
+\node[right] at (2.45,1.5) {3};
+\draw[<->] (0,-0.4) -- (2,-0.4);
+\node[below] at (1,-0.4) {2};
+\node at (1,-1.5) {正视图};
+\end{scope}
+% 侧(左)视图 (平移, 与正视图高平齐、宽相等, 几何不变)
+\begin{scope}[shift={(4.2,0)}]
+\draw (0,0) rectangle (2,3);
+\draw (1,4) circle (1);
+\node at (1,-1.5) {侧视图（左）};
+\end{scope}
+% 俯视图 (平移, 直径2, 与正视矩宽长对正)
+\begin{scope}[shift={(8.4,0)}]
+\draw (1,1) circle (1);
+\node at (1,-1.5) {俯视图};
+\end{scope}
+\end{tikzpicture}

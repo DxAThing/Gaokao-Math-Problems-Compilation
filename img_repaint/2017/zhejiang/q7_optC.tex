@@ -1,0 +1,14 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.6cm,y=1.6cm,line width=.6pt,>=Stealth]
+\coordinate (O) at (0,0);
+\coordinate (xL) at (-2.1,0);
+\coordinate (xR) at (2.15,0);
+\coordinate (yB) at (0,-1.55);
+\coordinate (yT) at (0,1.55);
+\draw[->] (xL) -- (xR);
+\draw[->] (yB) -- (yT);
+\draw[domain=-1.94:1.94,samples=401] plot (\x,{-0.251245*(\x)^4+0.095473*(\x)^3+1.135727*(\x)^2-0.389568*\x-0.451079});
+\node[anchor=west,inner sep=0pt] at (2.2,0) {$x$};
+\node[anchor=south east,inner sep=0pt,xshift=-2pt,yshift=2pt] at (yT) {$y$};
+\node[anchor=north west,inner sep=0pt] at (0.1,0.22) {$O$};
+\end{tikzpicture}

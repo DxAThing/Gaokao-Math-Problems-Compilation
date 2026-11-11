@@ -1,0 +1,34 @@
+% 三视图横向并排点修：投影边线/尺寸/虚实均沿用既有稿，仅平移scope使三幅同行，图名基线一致；左视图即侧（左）视图
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% 正视图：矩形(0,0)-(2,1)，左侧直角三角形 (0,0)-(0,1)-(-1,0)
+\begin{scope}[shift={(1.2,0)}]
+\draw (0,0) rectangle (2,1);
+\draw (-1,0) -- (0,0) -- (0,1) -- cycle;
+\draw[<->] (-1,-0.35) -- (0,-0.35);
+\node[anchor=north,font=\normalsize] at (-0.5,-0.4) {1};
+\draw[<->] (0,-0.35) -- (2,-0.35);
+\node[anchor=north,font=\normalsize] at (1,-0.4) {2};
+\draw[<->] (2.35,0) -- (2.35,1);
+\node[anchor=west,font=\normalsize] at (2.4,0.5) {1};
+\node[below] at (0.5,-0.95) {正视图};
+\end{scope}
+% 侧（左）视图：上半圆直径2，内接三角形及中垂线
+\begin{scope}[shift={(5.2,0)}]
+\draw (0,0) -- (2,0);
+\draw (0,0) arc (180:0:1);
+\draw (0,0) -- (1,1) -- (2,0) -- cycle;
+\draw (1,0) -- (1,1);
+\node[below] at (1,-0.95) {侧视图（左）};
+\end{scope}
+% 俯视图：矩形(0,0)-(2,2)，左侧等腰三角形及中线
+\begin{scope}[shift={(9.4,0)}]
+\draw (0,0) rectangle (2,2);
+\draw (0,0) -- (-1,1) -- (0,2);
+\draw (-1,1) -- (0,1);
+\draw[<->] (-1.35,1) -- (-1.35,2);
+\node[anchor=east,font=\normalsize] at (-1.4,1.5) {1};
+\draw[<->] (-1.35,0) -- (-1.35,1);
+\node[anchor=east,font=\normalsize] at (-1.4,0.5) {1};
+\node[below] at (0.5,-0.95) {俯视图};
+\end{scope}
+\end{tikzpicture}

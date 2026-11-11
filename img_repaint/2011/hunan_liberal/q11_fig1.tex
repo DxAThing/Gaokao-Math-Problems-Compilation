@@ -1,56 +1,28 @@
-% Source: source/普通高考/2011/2011湖南文.pdf, question 11.
-% Node-edge list: 开始→输入 x_1,x_2,x_3,x_4→i=1,x=0→x=x+x_i→i<4?;
-%   是→i=i+1→回到 x=x+x_i；否→x=x/4→输出 x→结束。
-\begin{tikzpicture}[
-  >=Stealth,
-  x=1cm,y=0.86cm,
-  line width=0.45pt,
-  line cap=round,
-  line join=round,
-  font=\normalsize,
-  flowtext/.style={anchor=center,align=center,inner sep=0pt,
-    execute at begin node={\everypar{}\setlength{\parindent}{0pt}\noindent}},
-  every node/.style={flowtext},
-  flowbox/.style={flowtext,draw,minimum height=0.72cm,
-    inner xsep=4pt,inner ysep=2pt},
-  terminal/.style={flowbox,rounded corners=0.18cm,minimum width=1.45cm,
-    minimum height=0.78cm},
-  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
-    trapezium right angle=108,minimum height=0.84cm},
-  decision/.style={flowbox,diamond,aspect=2.7,minimum width=4.15cm,
-    minimum height=1.08cm,inner sep=1pt},
-  branchlabel/.style={flowtext,inner sep=0pt},
-]
-  \path[use as bounding box] (-2.65,0.20) rectangle (4.45,13.00);
-
-  \node[terminal] (start) at (0,12.55) {开始};
-  \node[io,minimum width=5.20cm] (input) at (0,11.18)
-    {输入 $x_{1}$，$x_{2}$，$x_{3}$，$x_{4}$};
-  \node[flowbox,minimum width=3.25cm] (init) at (0,9.77)
-    {$i=1$，$x=0$};
-  \node[flowbox,minimum width=3.05cm] (sum) at (0,8.28)
-    {$x=x+x_{i}$};
-  \node[decision] (test) at (0,6.67) {$i<4?$};
-  \node[flowbox,minimum width=2.65cm] (inc) at (3.15,8.28)
-    {$i=i+1$};
-  \node[flowbox,minimum width=2.05cm,minimum height=1.02cm] (divide)
-    at (0,4.90) {$x=\displaystyle\frac{x}{4}$};
-  \node[io,minimum width=2.15cm] (output) at (0,3.35) {输出 $x$};
-  \node[terminal] (finish) at (0,1.95) {结束};
-
-  \draw[->] (start.south) -- (input.north);
-  \draw[->] (input.south) -- (init.north);
-  \draw[->] (init.south) -- (sum.north);
-  \draw[->] (sum.south) -- (test.north);
-  \draw[->] (test.south) -- node[branchlabel,right=3pt] {否} (divide.north);
-  \draw[->] (divide.south) -- (output.north);
-  \draw[->] (output.south) -- (finish.north);
-
-  % The affirmative branch leaves the diamond to the right, increments i,
-  % then returns into the right side of the summation box.  Keep the return
-  % leg above both neighboring boxes so it does not skim a frame.
-  \draw[->] (test.east) -- node[branchlabel,above=2pt] {是} (3.15,6.67)
-    -- (inc.south);
-  \draw[->] (inc.north) -- (3.15,8.90) -- (2.10,8.90)
-    -- (2.10,8.28) -- (sum.east);
+\begin{tikzpicture}[x=1cm, y=1cm]
+\tikzset{
+  fstart/.style={draw, line width=0.6pt, shape=rectangle, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm, align=center, outer sep=0pt, execute at begin node={\parindent=0pt}},
+  fproc/.style={draw, line width=0.6pt, minimum width=38mm, minimum height=10mm, align=center, outer sep=0pt, execute at begin node={\parindent=0pt}},
+  fdec/.style={draw, line width=0.6pt, diamond, aspect=2.7, minimum width=42mm, minimum height=16mm, align=center, outer sep=0pt, execute at begin node={\parindent=0pt}},
+  fio/.style={draw, line width=0.6pt, trapezium, trapezium left angle=72, trapezium right angle=108, minimum width=38mm, minimum height=10mm, align=center, outer sep=0pt, execute at begin node={\parindent=0pt}},
+  farr/.style={line width=0.6pt, ->, >=Latex}
+}
+\node[fstart] (start) at (0,0) {开始};
+\node[fio, minimum width=66mm] (inp) at (0,-2.0) {输入 $x_{1},x_{2},x_{3},x_{4}$};
+\node[fproc] (ix) at (0,-3.9) {$i=1,x=0$};
+\node[fproc] (xx) at (0,-5.9) {$x=x+x_{i}$};
+\node[fdec] (dec) at (0,-8.3) {$i<4?$};
+\node[fproc, minimum width=30mm, minimum height=15mm] (av) at (0,-11.1) {$x=\dfrac{x}{4}$};
+\node[fio, minimum width=30mm] (out) at (0,-13.2) {输出 $x$};
+\node[fstart] (stop) at (0,-15.0) {结束};
+\node[fproc, minimum width=30mm] (ib) at (4.3,-5.9) {$i=i+1$};
+\coordinate (J) at (0,-4.9);
+\draw[farr] (start.south) -- (inp.north);
+\draw[farr] (inp.south) -- (ix.north);
+\draw[farr] (ix.south) -- (xx.north);
+\draw[farr] (xx.south) -- (dec.north);
+\draw[farr] (dec.south) -- (av.north) node[midway, right=1.5mm] {否};
+\draw[farr] (av.south) -- (out.north);
+\draw[farr] (out.south) -- (stop.north);
+\draw[farr] (dec.east) -- node[pos=0.25, above=1.5mm] {是} (4.3,-8.3) -- (ib.south);
+\draw[farr] (ib.north) -- (4.3,-4.9) -- (J);
 \end{tikzpicture}

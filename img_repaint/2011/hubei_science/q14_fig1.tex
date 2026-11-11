@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (O) at (0.0000000000,0.0000000000);
+\coordinate (L) at (-0.6000000000,1.2000000000);
+\coordinate (T) at (2.2000000000,4.0000000000);
+\coordinate (R) at (3.4000000000,1.6000000000);
+\coordinate (B) at (0.6000000000,-1.2000000000);
+\coordinate (AR) at (4.2000000000,-1.2000000000);
+\coordinate (K) at (3.0000000000,1.2000000000);
+\coordinate (X) at (2.6000000000,0.0000000000);
+\coordinate (Xp) at (2.6000000000,2.6000000000);
+\coordinate (Y) at (-1.2000000000,2.4000000000);
+\coordinate (Pp) at (2.0000000000,2.7000000000);
+\draw (O)--(L)--(T)--(R)--(B)--cycle;
+\draw (B)--(AR)--(K);
+\draw[dashed] (L)--(K);
+\draw[dashed] (O)--(1.8,0);
+\draw[->] (1.8,0)--(X);
+\draw[->] (O)--(Xp);
+\draw[->] (L)--(Y);
+\begin{scope}[shift={(1,1)},rotate=45]\draw (0,0) ellipse (1.4142135624 and .65);\end{scope}
+\fill (Pp) circle (1.2pt);
+\node[below left=2pt] at (O) {$O$};
+\node[right=2pt] at (X) {$x$};\node[right=2pt,xshift=5pt,yshift=5pt] at (Xp) {$x'$};
+\node[above left=2pt] at (Y) {$y(y')$};
+\node[above left=2pt] at (.6,1.9) {$C'$};
+\node[right=2pt,xshift=-1pt,yshift=3pt] at (Pp) {$P'$};\node at (3.0,1.8) {$\beta$};\node[above left=2pt] at (AR) {$\alpha$};
+\end{tikzpicture}

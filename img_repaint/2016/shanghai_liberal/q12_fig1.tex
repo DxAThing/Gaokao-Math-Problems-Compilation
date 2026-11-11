@@ -1,0 +1,24 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=2cm,y=2cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (O) at (0,0);
+\coordinate (A) at (1,0);
+\coordinate (B) at (0,-1);
+\coordinate (P) at (-0.5,0.8660254);
+\coordinate (W) at (-1,0);
+\coordinate (XMIN) at (-1.5,0);
+\coordinate (XMAX) at (1.8,0);
+\coordinate (YMIN) at (0,-1.8);
+\coordinate (YMAX) at (0,1.8);
+\draw[->] (XMIN)--(XMAX);
+\draw[->] (YMIN)--(YMAX);
+\node[right] at (XMAX) {$x$};
+\node[above] at (YMAX) {$y$};
+\draw (A) arc[start angle=0,end angle=180,radius=2cm];
+\draw[->] (O)--(P);
+\draw[->] (B)--(A);
+\node[below left=2pt,inner sep=0pt] at (O) {$O$};
+\node[below,yshift=-2pt] at (A) {$A$};
+\node[left,xshift=-2pt] at (B) {$B$};
+\node[above left] at (P) {$P$};
+\fill (O) circle[radius=1.4pt];
+\end{tikzpicture}

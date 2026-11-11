@@ -1,0 +1,12 @@
+% native TikZ fragment (batch_095, kind=single_function_options)
+% 2013 山东文 9 (D)  y=x cos x + sin x
+%% shape D : odd; f(0)=0, f'(0)=2>0 rising through O; max 1.39 at x~1.08; f(pi/2)=1>0; f(pi)=-pi<0; min -3.67 at x~3.5 (max mirrored). true graph of the stem function
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-3.95,0)--(3.95,0) node[right,inner sep=0pt,xshift=2pt]{$x$};
+\draw[->] (0,-3.95)--(0,3.95) node[above,inner sep=0pt,yshift=2pt]{$y$};
+\draw (3.1416,-0.10)--(3.1416,0.10);
+\node[anchor=north,inner sep=0pt] at (3.1416,-0.26) {$\pi$};
+\node[anchor=north west,inner sep=0pt,xshift=2pt,yshift=-2pt] at (0,0) {$O$};
+\draw[domain=-3.60:3.60,samples=281] plot (\x,{\x*cos(deg(\x))+sin(deg(\x))});
+\end{tikzpicture}

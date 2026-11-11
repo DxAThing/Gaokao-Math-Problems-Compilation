@@ -1,0 +1,28 @@
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize, every node/.style={inner sep=1pt}]
+  \coordinate (D) at (1.3500000000,4.4800000000);
+  \coordinate (F) at (4.6500000000,4.4800000000);
+  \coordinate (E) at (3.0000000000,3.9300000000);
+  \coordinate (A) at (0,1.6);
+  \coordinate (B) at (3.0,0.6);
+  \coordinate (C) at (6.0,1.6);
+  % solid edges
+  \draw (D) -- (F);
+  \draw (D) -- (A);
+  \draw (A) -- (B);
+  \draw (B) -- (C);
+  \draw (F) -- (C);
+  \draw (D) -- (B);
+  \draw (E) -- (B);
+  \draw (D) -- (E);
+  \draw (F) -- (E);
+  % hidden edges
+  \draw[dashed] (D) -- (C);
+  \draw[dashed] (A) -- (C);
+  % labels offset from strokes
+  \node[above left=2pt] at (D) {$D$};
+  \node[above right=2pt] at (F) {$F$};
+  \node[right=2pt,xshift=-2pt,yshift=-5pt] at (E) {$E$};
+  \node[below left=2pt] at (A) {$A$};
+  \node[below=2pt] at (B) {$B$};
+  \node[below right=2pt] at (C) {$C$};
+\end{tikzpicture}

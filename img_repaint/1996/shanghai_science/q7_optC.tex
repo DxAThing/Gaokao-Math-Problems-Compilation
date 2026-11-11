@@ -1,0 +1,12 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.3cm,y=1.3cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (Xr) at (-1.41421356,0);
+\coordinate (Yb) at (0,-1);
+\coordinate (O) at (0,0);
+\draw plot[domain=0:90,samples=60] ({-1.41421356*cos(\x)},{-sin(\x)});
+\draw[->] (-1.75,0)--(2.25,0) node[below right,inner sep=1pt] {$x$};
+\draw[->] (0,-1.4)--(0,1.6) node[above,inner sep=1pt] {$y$};
+\node[above,inner sep=2pt] at (Xr) {$-\sqrt{2}$};
+\node[right,inner sep=2pt] at (Yb) {$-1$};
+\node[below left,inner sep=1pt] at (O) {$O$};
+\end{tikzpicture}

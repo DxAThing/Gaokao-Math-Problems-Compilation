@@ -1,0 +1,27 @@
+% PGFPlots only-marks scatter. Replace coordinates only from source evidence.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template scatter,exam statistical template wide,
+  xmin=0,xmax=10.5,ymin=57,ymax=102.5,
+  xtick={1,2,3,4,5,6,7,8,9,10},
+  xticklabels={$1$,$2$,$3$,$4$,$5$,$6$,$7$,$8$,$9$,$10$},
+  ytick={60,65,70,75,80,85,90,95,100},
+  yticklabels={$60$,$65$,$70$,$75$,$80$,$85$,$90$,$95$,$100$}]
+\draw[line width=0.6pt] (axis cs:1,60) -- (axis cs:10,60);
+\draw[line width=0.6pt] (axis cs:1,65) -- (axis cs:10,65);
+\draw[line width=0.6pt] (axis cs:1,70) -- (axis cs:10,70);
+\draw[line width=0.6pt] (axis cs:1,75) -- (axis cs:10,75);
+\draw[line width=0.6pt] (axis cs:1,80) -- (axis cs:10,80);
+\draw[line width=0.6pt] (axis cs:1,85) -- (axis cs:10,85);
+\draw[line width=0.6pt] (axis cs:1,90) -- (axis cs:10,90);
+\draw[line width=0.6pt] (axis cs:1,95) -- (axis cs:10,95);
+\draw[line width=0.6pt] (axis cs:1,100) -- (axis cs:10,100);
+\addplot[only marks,mark=asterisk,mark size=2.5pt] coordinates {(1,65) (2,60) (3,70) (4,60) (5,65) (6,75) (7,90) (8,85) (9,80) (10,95)};
+\addplot[only marks,mark=*,mark size=1.5pt] coordinates {(1,90) (2,85) (3,80) (4,90) (5,85) (6,85) (7,95) (8,100) (9,85) (10,100)};
+\examstatxbreak{0}{58.3}
+\node[anchor=east,inner sep=0pt] at (axis cs:0,57.2) {$0$};
+\node[anchor=west,inner sep=0pt] at (axis description cs:1.02,0.7253) {$*$~讲座前};
+\node[anchor=west,inner sep=0pt] at (axis description cs:1.02,0.6154) {$\bullet$~讲座后};
+\examstatxlabel{居民编号}
+\examstatylabel{正确率}
+\end{axis}
+\end{tikzpicture}

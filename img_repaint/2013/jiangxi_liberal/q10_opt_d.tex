@@ -1,0 +1,15 @@
+% Source: inputs/original_01.pdf p.1, 2013 Jiangxi liberal arts Q10 option D.
+% Exact formula y=2t^2-1 on [0,1]; axis ranges measured from PDF.
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=2.6cm,y=2.6cm,line width=.6pt,>={Stealth[length=2mm,width=1.4mm]},font=\normalsize]
+\draw[dashed,line width=.6pt] (0,1)--(1,1)--(1,0);
+\draw[->,line width=.6pt] (-0.5,0)--(1.36,0);
+\draw[->,line width=.6pt] (0,-1.5)--(0,1.36);
+\draw[domain=0:1,samples=201,line width=.6pt] plot (\x,{2*\x*\x-1});
+\node[anchor=south east,inner sep=0pt,xshift=-1pt,yshift=2pt] at (0,1.36) {$y$};
+\node[anchor=north west,inner sep=0pt,xshift=2pt,yshift=-2pt] at (1.36,0) {$t$};
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-4pt] at (0,0) {$O$};
+\node[anchor=east,inner sep=0pt,xshift=-2pt,yshift=0pt] at (0,1) {$1$};
+\node[anchor=north,inner sep=0pt,xshift=0pt,yshift=-4pt] at (1,0) {$1$};
+\node[anchor=east,inner sep=0pt,xshift=-2pt,yshift=0pt] at (0,-1) {$-1$};
+\end{tikzpicture}

@@ -1,0 +1,23 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+\coordinate (A) at (0,0);
+\coordinate (B) at (5.4,0);
+\coordinate (C) at (6.2,3.0);
+\coordinate (D) at (3.4,2.9);
+\coordinate (E) at (4.2,6.2);
+% base quadrilateral
+\draw (A) -- (B) -- (C);
+\draw[dashed] (C) -- (D);
+\draw[dashed] (D) -- (A);
+\draw[dashed] (D) -- (B);
+% lateral edges
+\draw (A) -- (E);
+\draw (B) -- (E);
+\draw (C) -- (E);
+\draw[dashed] (D) -- (E);
+% labels
+\node[below left] at (A) {$A$};
+\node[below right] at (B) {$B$};
+\node[right] at (C) {$C$};
+\node[above left] at (D) {$D$};
+\node[above] at (E) {$E$};
+\end{tikzpicture}

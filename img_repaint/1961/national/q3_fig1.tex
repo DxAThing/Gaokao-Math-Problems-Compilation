@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,sector edge/.style={draw=black,line width=.6pt},sector hidden/.style={draw=black,line width=.6pt,dashed}]
+\coordinate (CTR) at (0,0);
+\coordinate (IN2) at (-1.8,0.0);
+\coordinate (OUT2) at (-3.0,0.0);
+\coordinate (IN1) at (-0.55623,1.71190);
+\coordinate (OUT1) at (-0.92705,2.85317);
+\begin{scope}
+\clip (IN2)--(OUT2) arc[start angle=180,end angle=108,radius=3.0cm]--(IN1) arc[start angle=108,end angle=180,radius=1.8cm]--cycle;
+\foreach \i in {0,...,16} {\foreach \j in {0,...,16} {\fill ({-3.0+\i*0.18},{\j*0.18}) circle[radius=0.02cm];}}
+\end{scope}
+\draw (CTR) circle[radius=3.0cm];
+\draw (CTR) circle[radius=1.8cm];
+\draw (OUT2) arc[start angle=180,end angle=108,radius=3.0cm];
+\draw (IN1) arc[start angle=108,end angle=180,radius=1.8cm];
+\draw[sector edge] (IN1)--(OUT1);
+\draw[sector edge] (IN2)--(OUT2);
+\draw[sector hidden] (CTR)--(IN1);
+\draw[sector hidden] (CTR)--(IN2);
+\fill (CTR) circle[radius=0.035cm];
+\draw[dimension line] (0,-0.4) -- node[dimension label] {45} (-1.8,-0.4);
+\draw[dimension extension] (0,-0.52)--(0,-0.28);
+\draw[dimension extension] (-1.8,-0.52)--(-1.8,-0.28);
+\draw[dimension line] (0,-0.85) -- node[dimension label] {75} (-3.0,-0.85);
+\draw[dimension extension] (0,-0.97)--(0,-0.73);
+\draw[dimension extension] (-3.0,-0.97)--(-3.0,-0.73);
+\end{tikzpicture}

@@ -1,0 +1,46 @@
+% point-fix dims only: shared dimension line/label styles, offsets >=4.5mm; edges/captions unchanged.
+% Unit u=0.4cm: front slab 8u wide, tower 6u wide; side slab 10u, tower 2u; top outer 8u x 10u.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+\def\u{0.4}
+% ---- front (main) view ----
+\begin{scope}[shift={(0,0)}]
+  \draw (0,0) rectangle (8*\u,2*\u);
+  \draw (\u,2*\u) rectangle (7*\u,10*\u);
+  % top segmented dims 1/6/1, layered above outline
+  \foreach \x in {0,\u,7*\u,8*\u} {\draw[dimension extension] (\x,10*\u+0.1) -- (\x,10*\u+0.65);}
+  \draw[dimension line] (0,10*\u+0.55) -- node[dimension label] {$1$} (\u,10*\u+0.55);
+  \draw[dimension line] (\u,10*\u+0.55) -- node[dimension label] {$6$} (7*\u,10*\u+0.55);
+  \draw[dimension line] (7*\u,10*\u+0.55) -- node[dimension label] {$1$} (8*\u,10*\u+0.55);
+  % left dims 8 (tower) / 2 (slab)
+  \draw[dimension extension] (0,2*\u) -- (-0.65,2*\u);
+  \draw[dimension extension] (0,10*\u) -- (-0.65,10*\u);
+  \draw[dimension extension] (0,0) -- (-0.65,0);
+  \draw[dimension line] (-0.55,2*\u) -- node[dimension label vertical] {$8$} (-0.55,10*\u);
+  \draw[dimension line] (-0.55,0) -- node[dimension label vertical] {$2$} (-0.55,2*\u);
+  \node at (4*\u,-0.6) {正视图};
+\end{scope}
+% ---- side (left) view ----
+\begin{scope}[shift={(5.4,0)}]
+  \draw (0,0) rectangle (10*\u,2*\u);
+  \draw (6*\u,2*\u) rectangle (8*\u,10*\u);
+  \foreach \x in {0,6*\u,8*\u,10*\u} {\draw[dimension extension] (\x,10*\u+0.1) -- (\x,10*\u+0.65);}
+  \draw[dimension line] (0,10*\u+0.55) -- node[dimension label] {$6$} (6*\u,10*\u+0.55);
+  \draw[dimension line] (6*\u,10*\u+0.55) -- node[dimension label] {$2$} (8*\u,10*\u+0.55);
+  \draw[dimension line] (8*\u,10*\u+0.55) -- node[dimension label] {$2$} (10*\u,10*\u+0.55);
+  \node at (5*\u,-0.6) {侧视图（左）};
+\end{scope}
+% ---- top view ----
+\begin{scope}[shift={(11.1,0)}]
+  \draw (0,0) rectangle (8*\u,10*\u);
+  \draw (\u,2*\u) rectangle (7*\u,4*\u);
+  % left depth dims 6/2/2
+  \draw[dimension extension] (0,0) -- (-0.65,0);
+  \draw[dimension extension] (0,2*\u) -- (-0.65,2*\u);
+  \draw[dimension extension] (0,4*\u) -- (-0.65,4*\u);
+  \draw[dimension extension] (0,10*\u) -- (-0.65,10*\u);
+  \draw[dimension line] (-0.55,4*\u) -- node[dimension label vertical] {$6$} (-0.55,10*\u);
+  \draw[dimension line] (-0.55,2*\u) -- node[dimension label vertical] {$2$} (-0.55,4*\u);
+  \draw[dimension line] (-0.55,0) -- node[dimension label vertical] {$2$} (-0.55,2*\u);
+  \node at (4*\u,-0.6) {俯视图};
+\end{scope}
+\end{tikzpicture}

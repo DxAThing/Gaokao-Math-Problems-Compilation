@@ -1,0 +1,30 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+  \coordinate (Xa) at (-3.0,0);
+  \coordinate (Xb) at (5.5,0);
+  \coordinate (Ya) at (0,-2.4);
+  \coordinate (Yb) at (0,5.0);
+  \coordinate (O) at (0,0);
+  \coordinate (F1) at (-1,0);
+  \coordinate (F2) at (1,0);
+  \coordinate (P) at (-1,1.5);
+  \coordinate (Q) at (4,4);
+  \coordinate (Pl) at (-1.4,1.3);
+  \coordinate (A1) at (4,-2.0);
+  \coordinate (A2) at (4,4.6);
+  \draw[->] (Xa)--(Xb);
+  \draw[->] (Ya)--(Yb);
+  \draw (O) ellipse [x radius=2, y radius=1.732050808];
+  \draw (Pl)--(Q);
+  \draw (F1)--(P);
+  \draw (P)--(F2);
+  \draw (F2)--(Q);
+  \draw (A1)--(A2);
+  \node[below left=2pt,inner sep=0pt] at (O) {$O$};
+  \node[below=2pt,inner sep=0pt] at (F1) {$F_1$};
+  \node[below=2pt,inner sep=0pt] at (F2) {$F_2$};
+  \node[above left=4pt,inner sep=0pt] at (P) {$P$};
+  \node[right=2pt,inner sep=0pt] at (Q) {$Q$};
+  \node[right=2pt,inner sep=0pt] at (Xb) {$x$};
+  \node[above=2pt,inner sep=0pt] at (Yb) {$y$};
+\end{tikzpicture}

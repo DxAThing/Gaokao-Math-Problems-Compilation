@@ -1,0 +1,8 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1.8cm,y=1.4cm,line width=.6pt,>=stealth,font=\normalsize]
+\draw[->] (-1.7,0)--(1.7,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-0.5)--(0,2.8) node[above,inner sep=0pt,yshift=2pt] {$y$};
+% representative smooth U with vertex at origin: y=x^2
+\draw[domain=-1.55:1.55,samples=140] plot (\x,{pow(2,abs(\x))-1});
+\node[below left,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\end{tikzpicture}

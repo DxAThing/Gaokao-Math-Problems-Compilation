@@ -1,0 +1,21 @@
+\begin{tikzpicture}[line width=0.6pt, >=Stealth, font=\normalsize, x=1cm, y=1cm]
+\coordinate (P) at (1.5,5.0);
+\coordinate (B) at (1.2,1.5);
+\coordinate (C) at (0,0.8);
+\coordinate (D) at (3.0,0.8);
+\coordinate (A) at (3.8,1.5);
+% visible edges
+\draw (P)--(C);
+\draw (P)--(D);
+\draw (P)--(A);
+\draw (C)--(D)--(A);
+% hidden edges
+\draw[dashed] (P)--(B);
+\draw[dashed] (B)--(C);
+\draw[dashed] (B)--(A);
+\node[anchor=south,fill=white,inner sep=1.5pt] at (1.5,5.28) {$P$};
+\node[anchor=east,fill=white,inner sep=1.5pt,fill=none,xshift=-2.00bp,yshift=0.00bp] at (0.88,1.42) {$B$};
+\node[anchor=east,fill=white,inner sep=1.5pt] at (-0.20,0.80) {$C$};
+\node[anchor=north,fill=white,inner sep=1.5pt] at (3.0,0.52) {$D$};
+\node[anchor=west,fill=white,inner sep=1.5pt] at (4.0,1.50) {$A$};
+\end{tikzpicture}

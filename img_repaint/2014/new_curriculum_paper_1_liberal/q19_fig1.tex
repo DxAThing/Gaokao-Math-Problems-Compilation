@@ -1,0 +1,29 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Triangular prism ABC-A1B1C1 schematic; front solid, interior/back dashed.
+\coordinate (B) at (0,0);
+\coordinate (B1) at (3.4,0);
+\coordinate (A) at (2.6,2.6);
+\coordinate (A1) at (6,2.6);
+\coordinate (C) at (1.8,1.5);
+\coordinate (C1) at (5.2,1.5);
+% solid edges
+\draw (B)--(B1);
+\draw (B)--(A);
+\draw (A)--(B1);
+\draw (A)--(A1);
+\draw (B1)--(A1);
+\draw (B1)--(C1);
+\draw (A1)--(C1);
+% hidden edges dashed
+\draw[dashed] (B)--(C);
+\draw[dashed] (C)--(B1);
+\draw[dashed] (A)--(C);
+\draw[dashed] (C)--(C1);
+% labels
+\node[below left] at (B) {$B$};
+\node[below] at (B1) {$B_{1}$};
+\node[above] at (A) {$A$};
+\node[above right] at (A1) {$A_{1}$};
+\node[above left,xshift=-2.00bp,yshift=0.00bp] at (C) {$C$};
+\node[right] at (C1) {$C_{1}$};
+\end{tikzpicture}

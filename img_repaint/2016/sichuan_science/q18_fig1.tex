@@ -1,0 +1,30 @@
+\begin{tikzpicture}[line width=.6pt, font=\small]
+\coordinate (P) at (0,5.4);
+\coordinate (A) at (0,0);
+\coordinate (E) at (2.5,0);
+\coordinate (D) at (5,0);
+\coordinate (C) at (6.6,1.4);
+\coordinate (B) at (4.1000000000,1.4000000000);
+% solid edges
+\draw (P) -- (A);
+\draw (A) -- (E) -- (D);
+\draw (D) -- (C);
+\draw (P) -- (E);
+\draw (P) -- (D);
+\draw (P) -- (C);
+% dashed hidden edges
+\draw[dashed] (A) -- (B);
+\draw[dashed] (B) -- (C);
+\draw[dashed] (P) -- (B);
+
+\draw[dashed] (E) -- (C);
+
+\draw[dashed] (B) -- (D);
+\node[above left=2pt] at (P) {$P$};
+\node[below left=2pt] at (A) {$A$};
+\node[below=3pt] at (E) {$E$};
+\node[below right=2pt] at (D) {$D$};
+\node[right=3pt] at (C) {$C$};
+\node[above left=2pt,xshift=-12pt,yshift=-8pt] at (B) {$B$};
+\draw[dashed] (E)--(B);
+\end{tikzpicture}

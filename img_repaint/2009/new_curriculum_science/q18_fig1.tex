@@ -1,2 +1,46 @@
-% Canonical statistical figure: img_repaint/2009/new_curriculum_liberal/q19_fig1.tex
-\input{img_repaint/2009/new_curriculum_liberal/q19_fig1.tex}
+\examstatpanels{
+\begin{tabular}{@{}c@{}}
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,exam statistical template dense,exam statistical template paired dense,
+  xmin=90,ymin=0,
+  xtick={90,100,110,120,130,140,150},
+  ytick={0.004,0.008,0.012,0.016,0.02,0.024,0.028,0.032,0.036},
+  grid=major,
+  xmax=155,
+  ymax=0.038,
+  xticklabels={,100,110,120,130,140,150}]
+\addplot[draw=black,fill=white] coordinates
+  {(100,0.016) (110,0.032) (120,0.02) (130,0.02) (140,0.012) (150,0)};
+\examstatxbreak{95}{0}
+\examstatylabel{频率/组距}
+\examstatxlabel{\shortstack{生产\\能力}}
+
+\node[anchor=east,inner sep=0pt,xshift=-4pt] at (current axis.left of origin) {0};
+\end{axis}
+\node[anchor=north] at ([yshift=-24pt]current axis.south) {\shortstack{A类工人生产能力的\\频率分布直方图}};
+\end{tikzpicture}
+\end{tabular}
+}{
+\begin{tabular}{@{}c@{}}
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,exam statistical template dense,exam statistical template paired dense,
+  xmin=90,ymin=0,
+  xtick={90,100,110,120,130,140,150},
+  ytick={0.004,0.008,0.012,0.016,0.02,0.024,0.028,0.032,0.036,0.04,0.044,0.048},
+  grid=major,
+  xmax=155,
+  ymax=0.05,
+  xticklabels={,100,110,120,130,140,150}]
+\addplot[draw=black,fill=white] coordinates
+  {(100,0) (110,0.008) (120,0.02) (130,0.048) (140,0.024) (150,0)};
+\examstatxbreak{95}{0}
+\examstatylabel{频率/组距}
+\examstatxlabel{\shortstack{生产\\能力}}
+
+\node[anchor=east,inner sep=0pt,xshift=-4pt] at (current axis.left of origin) {0};
+
+\end{axis}
+\node[anchor=north] at ([yshift=-24pt]current axis.south) {\shortstack{B类工人生产能力的\\频率分布直方图}};
+\end{tikzpicture}
+\end{tabular}
+}

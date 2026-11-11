@@ -1,0 +1,30 @@
+\begin{tikzpicture}[line width=.6pt, font=\small]
+\coordinate (S) at (2,6);
+\coordinate (E) at (2,3.7);
+\coordinate (D) at (2,1.5);
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (C) at (6,1.5);
+% solid visible edges
+\draw (S) -- (A);
+\draw (S) -- (B);
+\draw (S) -- (C);
+\draw (A) -- (B);
+\draw (B) -- (C);
+% dashed hidden edges
+\draw[dashed] (S) -- (E);
+\draw[dashed] (E) -- (D);
+\draw[dashed] (D) -- (A);
+\draw[dashed] (D) -- (C);
+\draw[dashed] (A) -- (E);
+\draw[dashed] (A) -- (C);
+\draw[dashed] (E) -- (C);
+\draw[dashed] (E) -- (B);
+% labels offset from strokes
+\node[above, yshift=2pt] at (S) {$S$};
+\node[left, xshift=-2pt] at (E) {$E$};
+\node[below, yshift=-2pt] at (D) {$D$};
+\node[below left, xshift=-2pt, yshift=-2pt] at (A) {$A$};
+\node[below right, xshift=2pt, yshift=-2pt] at (B) {$B$};
+\node[right, xshift=2pt] at (C) {$C$};
+\end{tikzpicture}

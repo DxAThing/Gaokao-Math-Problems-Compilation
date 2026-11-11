@@ -1,0 +1,32 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,line cap=round,line join=round]
+  \tikzset{
+    gedge/.style={line width=.6pt},
+    ghidden/.style={line width=.6pt,dash pattern=on 2.4pt off 1.8pt},
+    glabel/.style={inner sep=1.5pt,font=\normalsize}
+  }
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (4.42,0);
+  \coordinate (C) at (5.86,1.00);
+  \coordinate (D) at (1.44,1.00);
+  \coordinate (Ap) at (1.08,2.22);
+  \coordinate (Bp) at (5.50,2.22);
+  \coordinate (Cp) at (6.94,3.22);
+  \coordinate (Dp) at (2.52,3.22);
+  \draw[gedge] (A)--(B)--(C);
+  \draw[gedge] (C)--(Cp);
+  \draw[gedge] (A)--(Ap)--(Bp)--(B);
+  \draw[gedge] (Ap)--(Dp)--(Cp);
+  \draw[gedge] (Bp)--(Cp);
+  \draw[ghidden] (A)--(D)--(C);
+  \draw[ghidden] (D)--(Dp);
+  \draw[ghidden] (A)--(C);
+  \draw[gedge] (Ap)--(Cp);
+  \node[glabel] at (-0.26,-0.08) {$A$};
+  \node[glabel] at (4.55,-0.28) {$B$};
+  \node[glabel] at (6.20,1.00) {$C$};
+  \node[glabel] at (1.22,1.30) {$D$};
+  \node[glabel] at (0.70,2.24) {$A'$};
+  \node[glabel] at (5.73,1.96) {$B'$};
+  \node[glabel] at (7.16,3.36) {$C'$};
+  \node[glabel] at (2.40,3.46) {$D'$};
+\end{tikzpicture}

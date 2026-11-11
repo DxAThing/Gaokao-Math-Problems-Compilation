@@ -1,0 +1,33 @@
+\begin{tikzpicture}[line width=0.6pt]
+\coordinate (C) at (0,0);
+\coordinate (E) at (2.15,0);
+\coordinate (C1) at (4.3,0);
+\coordinate (B) at (1.2,0.7);
+\coordinate (B1) at (5.5,0.7);
+\coordinate (A) at (1.5,5);
+\coordinate (A1) at (5.8,5);
+% solid base and outer frame
+\draw (C)--(E)--(C1);
+\draw (C1)--(B1);
+\draw (A)--(C);
+\draw (A)--(A1);
+\draw (A1)--(B1);
+\draw (A)--(E);
+\draw (A1)--(E);
+\draw (A1)--(C1);
+% dashed hidden / interior
+\draw[dashed] (A)--(B);
+\draw[dashed] (A)--(B1);
+\draw[dashed] (C)--(B);
+\draw[dashed] (B)--(B1);
+\draw[dashed] (B)--(E);
+\draw[dashed] (E)--(B1);
+% labels with clearance (no touch)
+\node[above left=4pt] at (A) {$A$};
+\node[above right=4pt] at (A1) {$A_{1}$};
+\node[left=5pt] at (B) {$B$};
+\node[below left=4pt] at (C) {$C$};
+\node[below=5pt] at (E) {$E$};
+\node[below=5pt] at (C1) {$C_{1}$};
+\node[right=5pt] at (B1) {$B_{1}$};
+\end{tikzpicture}

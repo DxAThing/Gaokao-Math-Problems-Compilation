@@ -1,0 +1,36 @@
+% scatter paired: left (x,y) negative correlation, right (u,v) positive correlation.
+\examstatpanels{%
+\begin{tikzpicture}
+\begin{axis}[exam statistical template scatter,exam statistical template paired,
+  xmin=0,xmax=7.5,ymin=0,ymax=32.5,
+  xtick={0,1,2,3,4,5,6,7},
+  ytick={5,10,15,20,25,30},
+  xticklabels={,1,2,3,4,5,6,7}]
+\addplot[only marks,mark=*] coordinates {
+(0.68,22.4) (1.20,20.1) (1.88,20.5) (2.15,16.3) (3.10,15.0)
+(3.52,10.7) (4.42,11.2) (5.01,7.6) (5.54,5.3) (6.47,4.7)};
+\examstatxlabel{$x$}
+\examstatylabel{$y$}
+\node[anchor=north] at (rel axis cs:0.5,-0.18) {\bitmapinsertcaption[1]};
+
+\node[anchor=east,inner sep=0pt,xshift=-4pt] at (current axis.left of origin) {O};
+\end{axis}
+\end{tikzpicture}%
+}{%
+\begin{tikzpicture}
+\begin{axis}[exam statistical template scatter,exam statistical template paired,
+  xmin=0,xmax=7.5,ymin=0,ymax=65,
+  xtick={0,1,2,3,4,5,6,7},
+  ytick={10,20,30,40,50,60},
+  xticklabels={,1,2,3,4,5,6,7}]
+\addplot[only marks,mark=*] coordinates {
+(1.00,11.6) (1.42,19.9) (2.27,19.1) (2.91,28.4) (3.97,33.2)
+(4.90,31.6) (5.18,38.3) (6.12,43.2) (6.77,42.2) (7.27,49.3)};
+\examstatxlabel{$u$}
+\examstatylabel{$v$}
+\node[anchor=north] at (rel axis cs:0.5,-0.18) {\bitmapinsertcaption[2]};
+
+\node[anchor=east,inner sep=0pt,xshift=-4pt] at (current axis.left of origin) {O};
+\end{axis}
+\end{tikzpicture}%
+}

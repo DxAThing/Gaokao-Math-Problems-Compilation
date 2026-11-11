@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Vertices placed to match original projection: A top-left, B mid-left,
+% C bottom, D mid-right, M interior
+\coordinate (A) at (0.5,6);
+\coordinate (B) at (0.5,2.6);
+\coordinate (C) at (2.6,0);
+\coordinate (D) at (7,2.6);
+\coordinate (M) at (3.9,3.2);
+% hidden edges
+\draw[dashed] (B) -- (D);
+\draw[dashed] (B) -- (M);
+% visible edges from A
+\draw (A) -- (B);
+\draw (A) -- (C);
+\draw (A) -- (M);
+\draw (A) -- (D);
+% base and side faces
+\draw (B) -- (C);
+\draw (C) -- (D);
+\draw (C) -- (M);
+\draw (M) -- (D);
+% labels adjacent to points
+\node[above] at (A) {$A$};
+\node[left] at (B) {$B$};
+\node[below] at (C) {$C$};
+\node[right] at (D) {$D$};
+\node[above right] at (M) {$M$};
+\end{tikzpicture}

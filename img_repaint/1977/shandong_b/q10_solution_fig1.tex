@@ -1,0 +1,32 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt},
+ geometry mark/.style={solid,line width=.6pt},
+ geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (A) at (0,0);
+\coordinate (B) at (0,3.2);
+\coordinate (S) at (2.2,4.6);
+\coordinate (BN) at (0,4.4);
+\coordinate (CO) at (2.6,1.2);
+\coordinate (CN) at (2.6,2.2);
+\coordinate (CS) at (2.6,0.2);
+\coordinate (CW) at (1.6,1.2);
+\coordinate (CE) at (3.6,1.2);
+\draw[geometry edge] (A)--(B);
+\draw[geometry edge] (B)--(S);
+\draw[geometry edge] (A)--(S);
+\draw[geometry edge,dashed] (B)--(BN);
+\draw[geometry edge,->] (CW)--(CE);
+\draw[geometry edge] (CN)--(CS);
+\draw[geometry mark] (S) circle[radius=0.12];
+\draw[geometry mark] (A)+(90:0.7) arc (90:64.4:0.7);
+\draw[geometry mark] (B)+(90:0.55) arc (90:32.5:0.55);
+\node[geometry label,below] at (A) {$A$};
+\node[geometry label,left] at (B) {$B$};
+\node[geometry label,above right] at (S) {$S$};
+\node[geometry label,above] at (CN) {北};
+\node[geometry label,below] at (CS) {南};
+\node[geometry label,left] at (CW) {西};
+\node[geometry label,right] at (CE) {东};
+\node at (0.28,1.0) {$\alpha$};
+\node at (0.45,3.95) {$\beta$};
+\end{tikzpicture}

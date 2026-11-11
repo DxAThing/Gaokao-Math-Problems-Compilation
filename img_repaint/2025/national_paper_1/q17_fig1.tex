@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (-2.2,-0.9);
+\coordinate (C) at (1.6,-0.9);
+\coordinate (D) at (5.0,0.1);
+\coordinate (P) at (-0.7,3.2);
+% solid visible edges
+\draw[solid] (P)--(B);
+\draw[solid] (P)--(C);
+\draw[solid] (P)--(D);
+\draw[solid] (B)--(C);
+\draw[solid] (C)--(D);
+% hidden edges
+\draw[dashed] (P)--(A);
+\draw[dashed] (A)--(B);
+\draw[dashed] (A)--(C);
+\draw[dashed] (A)--(D);
+% dots
+\foreach \pt in {A,B,C,D,P}{\fill (\pt) circle (1.2pt);}
+% labels with clearance
+\node[above,inner sep=2pt,fill=white,yshift=2pt] at (P) {$P$};
+\node[left,inner sep=2pt,fill=white,xshift=-2pt,fill=none,xshift=-2.00bp,yshift=2.00bp] at (A) {$A$};
+\node[below left,inner sep=2pt,fill=white,yshift=-2pt] at (B) {$B$};
+\node[below,inner sep=2pt,fill=white,yshift=-3pt] at (C) {$C$};
+\node[right,inner sep=2pt,fill=white,xshift=2pt] at (D) {$D$};
+\end{tikzpicture}

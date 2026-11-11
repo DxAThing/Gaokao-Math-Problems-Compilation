@@ -1,0 +1,22 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1.1cm,y=1.1cm,line width=.6pt,font=\normalsize,>=Stealth]
+  \coordinate (O) at (0,0);
+  \coordinate (F) at (1,0);
+  \coordinate (G) at (-1,0);
+  \coordinate (A) at (2,2.828427);
+  \coordinate (B) at (0.5,-1.414214);
+  \coordinate (Ae) at (2.6,3.394112);
+  % parabola E: y^2=4x, plotted with x as a function of the parameter
+  \draw plot[domain=-3.55:3.55,samples=201,variable=\t] ({\t*\t/4},{\t});
+  % line GA (extended past A) and line AB through F
+  \draw (G)--(Ae);
+  \draw (A)--(B);
+  % coordinate axes
+  \draw[->] (-2.3,0)--(4.3,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+  \draw[->] (0,-4.2)--(0,4.1) node[above,inner sep=0pt,yshift=2pt] {$y$};
+  \node[below left,inner sep=1pt] at (O) {$O$};
+  \node[below right=3pt,inner sep=1pt] at (F) {$F$};
+  \node[below left,inner sep=1pt] at (G) {$G$};
+  \node[above left,inner sep=1pt] at (A) {$A$};
+  \node[below left,inner sep=1pt] at (B) {$B$};
+\end{tikzpicture}

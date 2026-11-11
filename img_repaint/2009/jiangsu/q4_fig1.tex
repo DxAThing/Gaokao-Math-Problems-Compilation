@@ -1,0 +1,10 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1.7cm,y=1.15cm,line width=.6pt,>=stealth,font=\normalsize]
+\draw[->] (-3.75,0)--(0.6,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.7)--(0,1.9) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw[domain=-3.14159265:0,samples=220] plot (\x,{sin(deg(3*\x))});
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (-3.14159265,0) {$-\pi$};
+\node[anchor=south east,inner sep=0pt,xshift=-2pt,yshift=2pt] at (-2.09439510,0) {$-\frac{2\pi}{3}$};
+\node[anchor=south west,inner sep=0pt,xshift=2pt,yshift=2pt] at (-1.04719755,0) {$-\frac{\pi}{3}$};
+\node[anchor=north west,inner sep=0pt,xshift=2pt,yshift=-2pt] at (0,0) {$O$};
+\end{tikzpicture}

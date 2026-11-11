@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=0.6pt]
+\tikzset{ptlabel/.style={font=\normalsize,fill=white,inner sep=1pt}}
+% axes, origin F
+\draw[draw=black,-{Stealth}] (-2.5,0) -- (3,0);
+\draw[draw=black,-{Stealth}] (0,-2.5) -- (0,2.5);
+\coordinate (F) at (0,0);
+\coordinate (K) at (-1.5,0);
+\coordinate (M) at (-1.5,-1.5);
+\coordinate (N) at (1.2,1.2);
+% fixed line l
+\draw[draw=black] (-1.5,-2.2) -- (-1.5,2.0);
+% line M-F-N
+\draw[draw=black] (M) -- (N);
+\filldraw[draw=black,fill=black] (M) circle (1.2pt);
+\filldraw[draw=black,fill=black] (N) circle (1.2pt);
+\filldraw[draw=black,fill=black] (F) circle (1.0pt);
+\filldraw[draw=black,fill=black] (K) circle (0.8pt);
+% labels with clearance
+\node[ptlabel,anchor=west,xshift=3pt] at (3,0) {$x$};
+\node[ptlabel,anchor=south,yshift=3pt] at (0,2.5) {$y$};
+\node[ptlabel,anchor=east,xshift=-3pt,yshift=4pt] at (-1.5,2.0) {$l$};
+\node[ptlabel,anchor=north,yshift=-4pt,fill=none,xshift=-6.00bp,yshift=0.00bp] at (K) {$K$};
+\node[ptlabel,anchor=north east,xshift=-3pt,yshift=-2pt,fill=none,xshift=-6.00bp,yshift=2.00bp] at (F) {$F$};
+\node[ptlabel,above=2pt,fill=none] at (-0.75,0) {$p$};
+\node[ptlabel,anchor=west,xshift=4pt,fill=none] at (M) {$M$};
+\node[ptlabel,anchor=west,xshift=3pt,yshift=2pt] at (N) {$N(x,y)$};
+\end{tikzpicture}

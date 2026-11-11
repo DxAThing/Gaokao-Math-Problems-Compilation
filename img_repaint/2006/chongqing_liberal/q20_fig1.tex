@@ -1,0 +1,46 @@
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize, >=Stealth]
+\coordinate (A) at (0,7);
+\coordinate (D) at (2,7);
+\coordinate (B) at (-0.6,6.4);
+\coordinate (Cc) at (1.4,6.4);
+\coordinate (E) at (-0.6000000000,2.6595498823);
+\coordinate (F) at (2.0000000000,4.8404501177);
+\coordinate (B1) at (-0.6,0.5);
+\coordinate (C1) at (1.4,0.5);
+\coordinate (A1) at (0.0000000000,1.1000000000);
+\coordinate (D1) at (2.0000000000,1.1000000000);
+\coordinate (G) at (5.4641016151,1.1000000000);
+% top face
+\draw (A) -- (D);
+\draw (A) -- (B);
+
+\draw (B) -- (Cc);
+\draw (Cc) -- (D);
+% verticals of prism
+\draw (B) -- (B1);
+\draw (Cc) -- (C1);
+\draw (D) -- (F);
+\draw[dashed] (F) -- (D1);
+\draw[dashed] (A) -- (C1);
+\draw[dashed] (A) -- (E);
+\draw[dashed] (A) -- (A1);
+
+\draw (E) -- (C1);
+\draw (F)--(G);\draw[dashed] (A)--(F);
+\draw (C1) -- (G);
+\draw (B1) -- (C1);
+\draw[dashed] (A1) -- (D1) -- (G);
+\draw[dashed] (B1) -- (A1);
+\draw[dashed] (C1) -- (D1);
+\node[above left, xshift=0pt, yshift=0pt] at (A) {$A$};
+\node[above right, xshift=0pt, yshift=0pt] at (D) {$D$};
+\node[left, xshift=0pt] at (B) {$B$};
+\node[above, yshift=1pt,xshift=-1pt] at (Cc) {$C$};
+\node[left, xshift=0pt] at (E) {$E$};
+\node[right, xshift=0pt] at (F) {$F$};
+\node[below left, xshift=0pt, yshift=0pt] at (B1) {$B_{1}$};
+\node[below, yshift=0pt] at (C1) {$C_{1}$};
+\node[left, xshift=3pt,yshift=5pt] at (A1) {$A_{1}$};
+\node[above, yshift=1pt,xshift=-7pt] at (D1) {$D_{1}$};
+\node[right, xshift=0pt] at (G) {$G$};
+\end{tikzpicture}

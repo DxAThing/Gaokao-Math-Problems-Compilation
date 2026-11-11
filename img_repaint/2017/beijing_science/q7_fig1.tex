@@ -1,0 +1,32 @@
+% 三视图: 2017北京理7 — 正(主)直角三角形2x2, 侧正方形2x2带实线对角线, 俯直角三角形2x2
+% 点修：三视图改为横向并排（正视图、侧视图、俯视图），图名居中、基线对齐；投影边线/尺寸/虚实未动
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% 主视图: 直角在右下, 竖直右边缘高2.4, 底边宽2.4
+\begin{scope}[shift={(0,0)}]
+  \draw (0,0) -- (2.4,0) -- (2.4,2.4) -- cycle;
+  \draw[thin] (0,-0.18) -- (0,-0.35);
+  \draw[thin] (2.4,-0.18) -- (2.4,-0.35);
+  \draw[<->,>=Stealth,thin] (0,-0.28) -- (2.4,-0.28);
+  \node[anchor=north,inner sep=2pt] at (1.2,-0.32) {2};
+  \draw[thin] (2.58,0) -- (2.75,0);
+  \draw[thin] (2.58,2.4) -- (2.75,2.4);
+  \draw[<->,>=Stealth,thin] (2.68,0) -- (2.68,2.4);
+  \node[anchor=west,inner sep=2pt] at (2.72,1.2) {2};
+  \node[below] at (1.2,-0.75) {正视图（主）};
+\end{scope}
+% 侧(左)视图: 正方形2.4x2.4, 实线对角线左下-右上, 与主视图高平齐
+\begin{scope}[shift={(3.9,0)}]
+  \draw (0,0) rectangle (2.4,2.4);
+  \draw (0,0) -- (2.4,2.4);
+  \draw[thin] (0,-0.18) -- (0,-0.35);
+  \draw[thin] (2.4,-0.18) -- (2.4,-0.35);
+  \draw[<->,>=Stealth,thin] (0,-0.28) -- (2.4,-0.28);
+  \node[anchor=north,inner sep=2pt] at (1.2,-0.32) {2};
+  \node[below] at (1.2,-0.75) {侧视图（左）};
+\end{scope}
+% 俯视图: 与主视图长对正(宽2.4), 直角在右上, 竖直右边缘, 水平上边缘
+\begin{scope}[shift={(7.5,-0.4)}]
+  \draw (0,2.4) -- (2.4,2.4) -- (2.4,0) -- cycle;
+  \node[below] at (1.2,-0.35) {俯视图};
+\end{scope}
+\end{tikzpicture}

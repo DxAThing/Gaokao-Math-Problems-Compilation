@@ -1,0 +1,30 @@
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% Point-fix: horizontal row 正/侧/俯; projection edges, dims, line types unchanged; only scope shifts + added view names.
+% Front (orig top-left): right angle bottom-right, dims 2/2.
+\begin{scope}[shift={(0,1.6)}]
+\draw (0,0) -- (3,0) -- (3,3) -- cycle;
+\draw (0,0) -- (0,-0.5);
+\draw (3,0) -- (3,-0.5);
+\draw[{Stealth}-{Stealth}] (0,-0.35) -- (3,-0.35);
+\node at (1.5,-0.35) [fill=white,inner sep=2pt] {2};
+\draw (3,0) -- (3.5,0);
+\draw (3,3) -- (3.5,3);
+\draw[{Stealth}-{Stealth}] (3.35,0) -- (3.35,3);
+\node at (3.35,1.5) [fill=white,inner sep=2pt] {2};
+\node at (1.5,-1.15) {正视图};
+\end{scope}
+% Side (orig top-right): right angle bottom-left, no dimensions.
+\begin{scope}[shift={(5.0,1.6)}]
+\draw (0,0) -- (0,3) -- (3,0) -- cycle;
+\node at (1.5,-1.15) {侧视图};
+\end{scope}
+% Plan (orig bottom-left): right angle top-right, vertical dim 2.
+\begin{scope}[shift={(10.0,1.6)}]
+\draw (0,3) -- (3,3) -- (3,0) -- cycle;
+\draw (3,0) -- (3.5,0);
+\draw (3,3) -- (3.5,3);
+\draw[{Stealth}-{Stealth}] (3.35,0) -- (3.35,3);
+\node at (3.35,1.5) [fill=white,inner sep=2pt] {2};
+\node at (1.5,-1.15) {俯视图};
+\end{scope}
+\end{tikzpicture}

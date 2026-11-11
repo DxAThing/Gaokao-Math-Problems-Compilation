@@ -1,0 +1,16 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt},
+ geometry mark/.style={solid,line width=.6pt},
+ geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (A) at (-1,0);
+\coordinate (B) at (1,0);
+\coordinate (C) at (0,2);
+\coordinate (H) at (0,0);
+\draw[geometry edge] (A)--(B)--(C)--cycle;
+\draw[dimension extension] (A) -- (-1,-0.65);
+\draw[dimension extension] (B) -- (1,-0.65);
+\draw[dimension line] (-1,-0.45) -- node[dimension label] {$2$} (1,-0.45);
+\draw[dimension extension] (1.1,0) -- (1.65,0);
+\draw[dimension extension] (0.1,2) -- (1.65,2);
+\draw[dimension line] (1.45,0) -- node[dimension label vertical] {$2$} (1.45,2);
+\end{tikzpicture}

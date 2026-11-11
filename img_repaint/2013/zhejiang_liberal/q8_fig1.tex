@@ -1,0 +1,18 @@
+% 2013 年浙江卷（文）第 8 题 导函数图象
+% 约束见 build/first_draft/2013_zhejiang_liberal_q8_fig1_constraints.json（首稿前冻结）
+% 全域数值坐标；x/y 等比 (2cm/单位)；line width .6pt；灰度；12pt（继承 wrapper \zihao{-4}）
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=2cm,y=2cm,line width=.6pt,>=Stealth,font=\normalsize]
+  % 坐标轴：超出末刻度（|x|=1）半格，箭头在外，轴名置于箭头外侧
+  \draw[->] (-1.55,0) -- (1.55,0) node[right,inner sep=1pt] {$x$};
+  \draw[->] (0,-0.55) -- (0,1.55) node[above,inner sep=1pt] {$y$};
+  % 刻度：仅在 x=±1 处的短竖线（轴上方），与原图一致
+  \draw (-1,0) -- (-1,0.16);
+  \draw (1,0) -- (1,0.16);
+  % 曲线
+  \draw[domain=-1.00:1.00,samples=121] plot (\x,{1.0733-0.8012*\x*\x});
+  % 标签（完整节点，紧邻对象，避开线与曲线）
+  \node[below,inner sep=1pt] at (-1,0) {$-1$};
+  \node[below,inner sep=1pt] at (1,0) {$1$};
+  \node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\end{tikzpicture}

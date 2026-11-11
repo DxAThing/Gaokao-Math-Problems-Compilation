@@ -1,0 +1,29 @@
+% 二视图点修:仅横向并排(正左俯右)+各图下方居中图名基线一致;投影边线/尺寸/虚实/比例均未动
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% 主视图:梯形 上半宽0.5(Φ20) 下半宽1.5(Φ60) 高1.2,底短竖线0.3
+\begin{scope}[shift={(0,0)}]
+\draw ( -0.5,0) -- (0.5,0) -- (1.5,-1.2) -- (-1.5,-1.2) -- cycle;
+\draw (-1.5,-1.2) -- (-1.5,-1.5);
+\draw (1.5,-1.2) -- (1.5,-1.5);
+% 垂直中心线(点划)
+\draw[dash pattern=on 8pt off 2pt on 1pt off 2pt] (0,0.9) -- (0,-2.0);
+% Φ20 标注 (上底上方)
+\draw[thin] (-0.5,0) -- (-0.5,0.35);
+\draw[thin] (0.5,0) -- (0.5,0.35);
+\draw[<->] (-0.5,0.2) -- node[above,fill=white,inner sep=1pt] {$\Phi 20$} (0.5,0.2);
+% Φ60 标注 (下底下方)
+\draw[thin] (-1.5,-1.2) -- (-1.5,-1.75);
+\draw[thin] (1.5,-1.2) -- (1.5,-1.75);
+\draw[<->] (-1.5,-1.6) -- node[below,fill=white,inner sep=1pt] {$\Phi 60$} (1.5,-1.6);
+\node[below] at (0,-3.3) {主视图};
+\end{scope}
+% 俯视图:同心圆 外径对应Φ60(半径1.5) 内径对应Φ20(半径0.5),中心(0,-3.8)
+\begin{scope}[shift={(6.4,3.1)}]
+\draw (0,-3.8) circle (1.5);
+\draw (0,-3.8) circle (0.5);
+% 中心线:水平与垂直(点划,伸出圆外)
+\draw[dash pattern=on 8pt off 2pt on 1pt off 2pt] (0,-3.8-2.2) -- (0,-3.8+2.2);
+\draw[dash pattern=on 8pt off 2pt on 1pt off 2pt] (-2.3,-3.8) -- (2.3,-3.8);
+\node[below] at (0,-6.4) {俯视图};
+\end{scope}
+\end{tikzpicture}

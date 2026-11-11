@@ -1,0 +1,20 @@
+\begin{tikzpicture}[line width=.6pt,font=\normalsize]
+\coordinate (FBL) at (0,0);
+\coordinate (FBR) at (2.8,0);
+\coordinate (FTL) at (0,3.0);
+\coordinate (FTM) at (1.2,3.0);
+\coordinate (NIN) at (1.2,1.5);
+\coordinate (FBR2) at (2.8,1.5);
+\coordinate (H) at (1.2,0.9);
+\coordinate (BTL) at (1.2,3.9);
+\coordinate (BTR) at (4,3.9);
+\coordinate (BRB) at (4.0,0.9);
+\coordinate (NBR) at (4,2.4);
+\draw[dashed] (FBL) -- (H) -- (BRB);
+\draw[dashed] (H) -- (BTL);
+\draw (FBL) -- (FTL) -- (FTM) -- (NIN) -- (FBR2) -- (FBR) -- (FBL);
+\draw (FTL) -- (BTL) -- (BTR) -- (NBR) -- (BRB) -- (FBR);
+\draw (FTM) -- (BTR);
+\draw (NIN) -- (NBR);
+\draw (FBR2) -- (NBR);
+\end{tikzpicture}

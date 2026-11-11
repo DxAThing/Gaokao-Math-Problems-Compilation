@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt},
+ geometry mark/.style={solid,line width=.6pt},
+ geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (A) at (0,0);
+\coordinate (B) at (0,4);
+\coordinate (C) at (0,1.5);
+\coordinate (D) at (-2.5981,5.5);
+\coordinate (N) at (0,6);
+\coordinate (T60) at (-0.45,4.74);
+\coordinate (Tjia) at (0.62,1.5);
+\coordinate (Tyi) at (-1.85,5.85);
+\draw[geometry edge] (A)--(B);
+\draw[geometry edge,dashed] (B)--(N);
+\draw[geometry edge] (B)--(D);
+\draw[geometry edge] (C)--(D);
+\draw[geometry mark] (B) ++(90:0.55) arc (90:150:0.55);
+\fill (A) circle (1.4pt);
+\node[geometry label,below] at (A) {$A$};
+\node[geometry label,right] at (B) {$B$};
+\node[geometry label,left=5pt] at (C) {$C$};
+\node[geometry label,above left] at (D) {$D$};
+\node[geometry label] at (T60) {$60^\circ$};
+\node[geometry label] at (Tjia) {甲船};
+\node[geometry label] at (Tyi) {乙船};
+\end{tikzpicture}

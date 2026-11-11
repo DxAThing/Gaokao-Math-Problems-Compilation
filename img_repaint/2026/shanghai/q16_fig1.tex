@@ -1,0 +1,45 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=0.6pt,font=\normalsize,>=Stealth]
+  % --- projected cube vertices (schematic oblique projection, exact topology) ---
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (-1.8,-1.4);
+  \coordinate (C) at (2.6,-1.4);
+  \coordinate (D) at (4.4,0);
+  \coordinate (A1) at (0,3.6);
+  \coordinate (B1) at (-1.8,2.2);
+  \coordinate (C1) at (2.6,2.2);
+  \coordinate (D1) at (4.4,3.6);
+  \coordinate (Xtip) at (-2.6,-2.05);
+  \coordinate (Ytip) at (5.6,0);
+  \coordinate (Ztip) at (0,4.8);
+  % --- hidden edges (dashed) ---
+  \draw[dashed] (A) -- (B);
+  \draw[dashed] (A) -- (D);
+  \draw[dashed] (A) -- (A1);
+  % --- visible cube edges (solid) ---
+  \draw (B) -- (C);
+  \draw (C) -- (D);
+  \draw (B) -- (B1);
+  \draw (C) -- (C1);
+  \draw (D) -- (D1);
+  \draw (B1) -- (C1);
+  \draw (A1) -- (B1);
+  \draw (A1) -- (D1);
+  \draw (C1) -- (D1);
+  \draw (B1) -- (B);
+  % --- coordinate axes ---
+  \draw[->] (B) -- (Xtip);
+  \draw[->] (D) -- (Ytip);
+  \draw[->] (A1) -- (Ztip);
+  % --- labels (offset clear of strokes) ---
+  \node[anchor=east,xshift=-2.5mm,yshift=1mm] at (A) {$A$};
+  \node[anchor=south east,xshift=-2mm,yshift=2.5mm] at (B) {$B$};
+  \node[anchor=north,yshift=-2.5mm] at (C) {$C$};
+  \node[anchor=south west,xshift=1.5mm,yshift=2.5mm] at (D) {$D$};
+  \node[anchor=east,xshift=-2.5mm,yshift=1mm] at (A1) {$A_{1}$};
+  \node[anchor=east,xshift=-2.5mm] at (B1) {$B_{1}$};
+  \node[anchor=west,xshift=2.5mm] at (C1) {$C_{1}$};
+  \node[anchor=west,xshift=2.5mm] at (D1) {$D_{1}$};
+  \node[anchor=north east,xshift=-1mm,yshift=-1.5mm] at (Xtip) {$x$};
+  \node[anchor=north,yshift=-2.5mm] at (Ytip) {$y$};
+  \node[anchor=east,xshift=-2.5mm] at (Ztip) {$z$};
+\end{tikzpicture}

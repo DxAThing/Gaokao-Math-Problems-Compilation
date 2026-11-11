@@ -1,0 +1,31 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=0.85cm,y=0.85cm,font=\normalsize,
+  geometry edge/.style={solid,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=0pt}]
+\coordinate (TL) at (-5,2);
+\coordinate (TR) at (5,2);
+\coordinate (BL) at (-3,0);
+\coordinate (BR) at (3,0);
+\coordinate (BE) at (6,0);
+\coordinate (V) at (0,0);
+\coordinate (D10L) at (-5,2.3);
+\coordinate (D10R) at (5,2.3);
+\coordinate (D2CB) at (0,0);
+\coordinate (D2CT) at (0,2);
+\coordinate (D2RB) at (5.8,0);
+\coordinate (D2RT) at (5.8,2);
+\fill[gray!20] (TL) -- (BL) -- (BR) -- (TR) -- plot[domain=5:-5,samples=201] (\x,{2/25*\x*\x}) -- cycle;
+\draw[geometry edge] (TL) -- (TR);
+\draw[geometry edge] (TL) -- (BL) -- (BR) -- (BE);
+\draw[geometry edge] (BR) -- (TR);
+\draw[geometry edge,dashed] plot[domain=-5:5,samples=201] (\x,{2/25*\x*\x});
+\draw[dimension extension] (TL) -- (D10L);
+\draw[dimension extension] (TR) -- (D10R);
+\draw[dimension line] (D10L) -- (D10R) node[dimension label,pos=0.5] {$10\ \mathrm{m}$};
+\draw[dimension line] (D2CB) -- (D2CT);
+\node[geometry label,anchor=west] at (0.12,1) {$2\ \mathrm{m}$};
+\draw[dimension line] (D2RB) -- (D2RT);
+\node[geometry label,anchor=west] at (5.95,1) {$2\ \mathrm{m}$};
+\draw[geometry edge] (3.5,0) arc[start angle=0,end angle=45,radius=0.5];
+\node[geometry label,anchor=south west] at (3.65,0.08) {$45^\circ$};
+\end{tikzpicture}

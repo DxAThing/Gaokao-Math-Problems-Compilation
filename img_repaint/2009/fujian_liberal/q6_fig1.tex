@@ -1,47 +1,22 @@
-% original_pdf: source/普通高考/2009/2009福建文.pdf
-% page: 1
-% evidence: tmp/review_2009_fujian_liberal/crops/q6_source.png
-% node-edge list: 开始→S=2→n=1→S=1/(1-S)→n=n+1→S=2?;
-% 是→输出 n→结束; 否→左侧回边→S=1/(1-S). No other edges.
-% labels: Chinese labels centered in nodes; 否 on the left loop branch, 是 below the decision.
-\usetikzlibrary{shapes.misc}
-\begin{tikzpicture}[baseline,>=stealth,inner sep=1pt,
-    every node/.style={font=\normalsize,align=center,
-      execute at begin node={%
-        \everypar{}%
-        \setlength{\parindent}{0pt}%
-        \setlength{\leftskip}{0pt}%
-        \setlength{\rightskip}{0pt}%
-        \setlength{\hangindent}{0pt}%
-        \setlength{\parfillskip}{0pt}%
-      }},
-    flowbox/.style={draw,line width=0.55pt,align=center,minimum height=0.62cm,
-      inner xsep=4pt,inner ysep=2pt},
-    io/.style={draw,line width=0.55pt,shape=trapezium,
-      trapezium left angle=75,trapezium right angle=105,
-      minimum width=2.75cm,minimum height=0.76cm,inner xsep=4pt,inner ysep=2pt,align=center},
-    flowarrow/.style={->,line width=0.55pt}]
-  % Main vertical flow.
-  \node[draw,rounded rectangle,line width=0.55pt,minimum width=1.25cm,minimum height=0.65cm] (start) at (0,0) {开始};
-  \node[flowbox,minimum width=2.2cm] (initS) at (0,-1.15) {$S=2$};
-  \node[flowbox,minimum width=2.2cm] (initn) at (0,-2.25) {$n=1$};
-  \node[flowbox,minimum width=2.85cm,minimum height=1.08cm] (updateS) at (0,-3.55) {$S=\displaystyle\frac{1}{1-S}$};
-  \node[flowbox,minimum width=2.55cm] (incn) at (0,-4.95) {$n=n+1$};
-  \node[draw,diamond,line width=0.55pt,aspect=2.85,minimum width=3.55cm,minimum height=0.92cm] (test) at (0,-6.30) {$S=2$};
-  \node[io] (output) at (0,-7.58) {输出 $n$};
-  \node[draw,rounded rectangle,line width=0.55pt,minimum width=1.25cm,minimum height=0.65cm] (end) at (0,-8.72) {结束};
-
-  \draw[flowarrow] (start.south) -- (initS.north);
-  \draw[flowarrow] (initS.south) -- (initn.north);
-  \draw[flowarrow] (initn.south) -- (updateS.north);
-  \draw[flowarrow] (updateS.south) -- (incn.north);
-  \draw[flowarrow] (incn.south) -- (test.north);
-  \draw[flowarrow] (test.south) -- (output.north);
-  \draw[flowarrow] (0,-7.96) -- (end.north);
-
-  % The no branch loops left and re-enters the update node's west side;
-  % routing directly to that side avoids the narrow gap between initn/updateS.
-  \draw[flowarrow] (test.west) -- (-2.30,-6.30) -- (-2.30,-3.55) -- (updateS.west);
-  \node[anchor=east] at (-1.65,-6.05) {否};
-  \node[anchor=west] at (0.32,-6.78) {是};
+\tikzset{flS/.style={draw,shape=rectangle,rounded corners=1.5mm,minimum width=26mm,minimum height=10mm,inner xsep=3mm,inner ysep=1.5mm,align=center,execute at begin node={\setlength{\parindent}{0pt}}},flP/.style={draw,minimum width=30mm,minimum height=9mm,inner sep=2mm,align=center,execute at begin node={\setlength{\parindent}{0pt}}},flW/.style={draw,minimum width=42mm,minimum height=14mm,inner sep=2mm,align=center,execute at begin node={\setlength{\parindent}{0pt}}},flI/.style={draw,trapezium,trapezium left angle=72,trapezium right angle=108,minimum width=32mm,minimum height=10mm,inner sep=2mm,align=center,execute at begin node={\setlength{\parindent}{0pt}}},flD/.style={draw,diamond,aspect=2.4,inner sep=2mm,align=center,execute at begin node={\setlength{\parindent}{0pt}}},flA/.style={-{Stealth[length=2.6mm,width=2.1mm]},line width=0.6pt},flL/.style={line width=0.6pt}}%
+\begin{tikzpicture}[x=1cm,y=1cm]
+\node[flS] (start) at (0,0) {开始};
+\node[flP] (s2) at (0,-1.7) {$S=2$};
+\node[flP] (n1) at (0,-3.0) {$n=1$};
+\coordinate (J1) at (0,-3.9);
+\node[flW] (sfrac) at (0,-5.1) {$S=\dfrac{1}{1-S}$};
+\node[flP] (nn) at (0,-6.9) {$n=n+1$};
+\node[flD] (dec) at (0,-8.4) {$S=2$};
+\node[flI] (out) at (0,-10.5) {输出 $n$};
+\node[flS] (stop) at (0,-12.0) {结束};
+\draw[flA] (start.south) -- (s2.north);
+\draw[flA] (s2.south) -- (n1.north);
+\draw[flA] (n1.south) -- (J1) -- (sfrac.north);
+\draw[flA] (dec.west) -- (-3.2,-8.4) -- (-3.2,-3.9) -- (J1);
+\node at ($(dec.west)+(-5mm,0)$) [above=1.2mm] {否};
+\draw[flA] (sfrac.south) -- (nn.north);
+\draw[flA] (nn.south) -- (dec.north);
+\draw[flA] (dec.south) -- (out.north)
+  node[pos=0.35,right=1.2mm] {是};
+\draw[flA] (out.south) -- (stop.north);
 \end{tikzpicture}

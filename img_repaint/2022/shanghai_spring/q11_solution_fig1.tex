@@ -1,0 +1,23 @@
+% hyperbola x^2-y^2=1 with asymptotes y=+-x and vectors OP1, OP3
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-3.6,0)--(3.6,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-3.6)--(0,3.6) node[above,inner sep=0pt,yshift=2pt] {$y$};
+% asymptotes y=+-x (full lines)
+\draw[solid] (-3.4,-3.4)--(3.4,3.4);
+\draw[solid] (-3.4,3.4)--(3.4,-3.4);
+% hyperbola x^2-y^2=1, parametric in y
+\draw[solid,domain=-2.8:2.8,samples=90] plot ({sqrt(1+\x*\x)},{\x});
+\draw[solid,domain=-2.8:2.8,samples=90] plot ({-sqrt(1+\x*\x)},{\x});
+% vectors OP1, OP3 on right branch
+\draw[->,line width=.6pt] (0,0)--(1.345362404707,0.9);
+\draw[->,line width=.6pt] (0,0)--(1.166190378969,-0.6);
+\fill (1.345362404707,0.9) circle (1.4pt);
+\fill (1.166190378969,-0.6) circle (1.4pt);
+% labels clear of strokes
+\node[below left,inner sep=2pt,xshift=1pt,yshift=-11pt] at (0,0) {$O$};
+\node[right,inner sep=2pt,xshift=2pt,yshift=2.0pt] at (3.4,3.4) {$M$};
+\node[right,inner sep=2pt,xshift=2pt,yshift=-2.0pt] at (3.4,-3.4) {$N$};
+\node[right,inner sep=2pt,xshift=3pt,yshift=-2pt] at (1.345362404707,0.9) {$P_1$};
+\node[right,inner sep=2pt,xshift=2pt,yshift=-1.0pt] at (1.166190378969,-0.6) {$P_3$};
+\end{tikzpicture}

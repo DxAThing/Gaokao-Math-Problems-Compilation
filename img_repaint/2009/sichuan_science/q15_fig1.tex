@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+  geometry edge/.style={solid,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (B) at (0,0);
+\coordinate (C) at (4,0);
+\coordinate (B1) at (0,4);
+\coordinate (C1) at (4,4);
+\coordinate (A) at (2,2);
+\coordinate (A1) at (2,6);
+\coordinate (M) at (4,2.8);
+\draw[geometry edge] (B)--(C);
+\draw[geometry edge] (B)--(B1);
+\draw[geometry edge] (C)--(C1);
+\draw[geometry edge] (B1)--(C1);
+\draw[geometry edge] (B1)--(A1);
+\draw[geometry edge] (C1)--(A1);
+\draw[geometry edge] (B)--(M);
+\draw[geometry edge,dashed] (A1)--(A);
+\draw[geometry edge,dashed] (B1)--(C);
+\draw[geometry edge,dashed] (B)--(A);
+\node[geometry label,below left] at (B) {$B$};
+\node[geometry label,below right] at (C) {$C$};
+\node[geometry label,left] at (B1) {$B_{1}$};
+\node[geometry label,right] at (C1) {$C_{1}$};
+\node[geometry label,above] at (A1) {$A_{1}$};
+\node[geometry label,above right] at (A) {$A$};
+\node[geometry label,right] at (M) {$M$};
+\end{tikzpicture}

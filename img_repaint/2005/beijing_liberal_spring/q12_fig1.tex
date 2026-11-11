@@ -1,0 +1,36 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (C) at (5,1.5);
+\coordinate (D) at (1,1.5);
+\coordinate (A1) at (0,4);
+\coordinate (B1) at (4,4);
+\coordinate (C1) at (5,5.5);
+\coordinate (D1) at (1,5.5);
+% hidden dashed bottom + interior
+\draw[dashed] (A)--(D);
+\draw[dashed] (D)--(C);
+\draw[dashed] (D)--(B);
+\draw[dashed] (D)--(D1);
+% visible solid bottom/sides
+\draw (A)--(B);
+\draw (B)--(C);
+\draw (B)--(B1);
+\draw (A)--(A1);
+\draw (C1)--(C);
+% top face
+\draw (A1)--(B1);
+\draw (B1)--(C1);
+\draw (C1)--(D1);
+\draw (D1)--(A1);
+% top cut diagonal
+\draw (D1)--(B1);
+\node[inner sep=2pt,anchor=north east] at (-0.12,-0.12) {$A$};
+\node[inner sep=2pt,anchor=north west] at (4.08,-0.12) {$B$};
+\node[inner sep=2pt,anchor=west] at (5.18,1.5) {$C$};
+\node[inner sep=2pt,anchor=east] at (0.60,1.70) {$D$};
+\node[inner sep=2pt,anchor=east] at (-0.18,3.95) {$A_{1}$};
+\node[inner sep=2pt,anchor=west] at (4.35,3.65) {$B_{1}$};
+\node[inner sep=2pt,anchor=south west] at (5.12,5.62) {$C_{1}$};
+\node[inner sep=2pt,anchor=south east] at (0.70,5.70) {$D_{1}$};
+\end{tikzpicture}

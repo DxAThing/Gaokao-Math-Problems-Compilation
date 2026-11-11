@@ -1,0 +1,27 @@
+% front left, side middle, plan right; plan shifted +10,+4.6; pure orthographic projection
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm,>=Stealth]
+% front: 4x4 square -> 3x3cm : x -1.5..1.5, y 0..3
+\draw (-1.5,0) rectangle (1.5,3);
+% top width dim 4
+\draw (-1.5,3.35) -- (-1.5,3.55); \draw (1.5,3.35) -- (1.5,3.55);
+\draw[<->] (-1.45,3.45) -- (1.45,3.45); \node at (0,3.45) [above=2pt] {4};
+% left height dim 4
+\draw (-1.85,0) -- (-2.05,0); \draw (-1.85,3) -- (-2.05,3);
+\draw[<->] (-1.95,0.05) -- (-1.95,2.95); \node at (-1.95,1.5) [left=2pt] {4};
+\node at (0,-0.7) {正视图};
+% side: isosceles trapezoid, bottom 3cm, top 1.5cm, height 3cm, centered on x=5
+\draw (4.25,0) -- (5.75,0) -- (5.375,3) -- (4.625,3) -- cycle;
+\node at (5,-0.7) {侧视图（左）};
+% plan right, outer 3x3, strips 1/2/1 -> 0.75/1.5/0.75
+\draw (8.5,3.0) rectangle (11.5,0);
+\draw (8.5,2.25) -- (11.5,2.25);
+\draw (8.5,0.75) -- (11.5,0.75);
+% left depth dims 1/2/1
+\draw (8.15,3.0) -- (7.95,3.0); \draw (8.15,2.25) -- (7.95,2.25);
+\draw[<->] (8.05,2.3) -- (8.05,2.95); \node at (8.05,2.625) [left=2pt] {1};
+\draw (8.15,2.25) -- (7.95,2.25); \draw (8.15,0.75) -- (7.95,0.75);
+\draw[<->] (8.05,0.8) -- (8.05,2.2); \node at (8.05,1.5) [left=2pt] {2};
+\draw (8.15,0.75) -- (7.95,0.75); \draw (8.15,0) -- (7.95,0);
+\draw[<->] (8.05,0.05) -- (8.05,0.7); \node at (8.05,0.375) [left=2pt] {1};
+\node at (10,-0.7) {俯视图};
+\end{tikzpicture}

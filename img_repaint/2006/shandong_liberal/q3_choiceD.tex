@@ -1,0 +1,16 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.5cm,y=1.5cm,line width=.6pt,>=Stealth,font=\normalsize]
+\coordinate (Xmin) at (-0.6,0);
+\coordinate (Xmax) at (3.9,0);
+\coordinate (Ymin) at (0,-2.8);
+\coordinate (Ymax) at (0,2.9);
+\coordinate (O) at (0,0);
+\coordinate (P1) at (1,0);
+\draw[->] (Xmin) -- (Xmax);
+\draw[->] (Ymin) -- (Ymax);
+\draw[domain=0.1:3.55,samples=161] plot (\x,{0.7*ln(\x)/ln(2)});
+\node[right=3pt,inner sep=0pt] at (Xmax) {$x$};
+\node[above left=2pt and 2pt,inner sep=0pt] at (Ymax) {$y$};
+\node[below left=3pt and 3pt,inner sep=0pt] at (O) {$O$};
+\node[below=3pt,inner sep=0pt] at (P1) {$1$};
+\end{tikzpicture}

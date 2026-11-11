@@ -1,0 +1,42 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (B) at (1.2,4.2);
+\coordinate (C) at (8.2,4.2);
+\coordinate (A) at (0.3,3.4);
+\coordinate (D) at (3.8,3.4);
+\coordinate (F) at (0.3,1.7);
+\coordinate (E) at (3.8,1.7);
+\coordinate (Aone) at (0.3,0.0);
+\coordinate (Bone) at (1.2,0.8);
+\coordinate (Done) at (3.8,0);
+\coordinate (Cone) at (8.2,0.8);
+% top face solid
+\draw[solid] (A) -- (B) -- (C) -- (D) -- cycle;
+% verticals
+\draw[solid] (A) -- (F);
+\draw[solid] (D) -- (E);
+\draw[solid] (E) -- (Done);
+\draw[solid] (C) -- (Cone);
+\draw[dashed] (B) -- (Bone);
+\draw (F)--(Aone);
+% middle and lower solid
+\draw[solid] (F) -- (E);
+\draw[solid] (E) -- (Cone);
+\draw[solid] (Aone) -- (Done);
+\draw[solid] (Done) -- (Cone);
+\draw[dashed] (F)--(Bone);
+% F-B and F-Aone and B-Cone diagonals dashed
+\draw[dashed] (B) -- (Aone);
+\draw[dashed] (B) -- (Cone);
+\draw[dashed] (Aone) -- (Bone) -- (Cone);
+% labels with clearance
+\node[above left,inner sep=3pt] at (B) {$B$};
+\node[above right,inner sep=3pt] at (C) {$C$};
+\node[left,inner sep=3pt] at (A) {$A$};
+\node[above,inner sep=3pt] at (D) {$D$};
+\node[left,inner sep=3pt] at (F) {$F$};
+\node[inner sep=3pt] at (4.42,2.02) {$E$};
+\node[below left,inner sep=3pt] at (Aone) {$A_{1}$};
+\node[inner sep=3pt] at (1.68,0.28) {$B_{1}$};
+\node[below,inner sep=3pt] at (Done) {$D_{1}$};
+\node[below right,inner sep=3pt] at (Cone) {$C_{1}$};
+\end{tikzpicture}

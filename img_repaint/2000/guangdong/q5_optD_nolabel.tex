@@ -1,0 +1,10 @@
+\usetikzlibrary{arrows.meta}
+% Option D (correct): exact graph y=-x\cos x
+\begin{tikzpicture}[x=1.2cm,y=1.2cm,line width=.6pt,>=stealth,font=\normalsize]
+\draw[domain=-2.15:2.15,samples=161] plot (\x,{-\x*cos(deg(\x))});
+\draw[->] (-2.9,0)--(2.9,0);
+\draw[->] (0,-1.93)--(0,1.93);
+\node[anchor=north west,inner sep=0pt,xshift=2pt,yshift=-2pt] at (2.9,0.0) {$x$};
+\node[anchor=south east,inner sep=0pt,xshift=-2pt,yshift=2pt] at (0.0,1.93) {$y$};
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\end{tikzpicture}

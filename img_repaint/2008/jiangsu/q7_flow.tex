@@ -1,57 +1,33 @@
-% Source: source/普通高考/2008/2008江苏.pdf, page 1, question 7.
-% Nodes: 开始; S←0; i←1; 输入 G_i,F_i; S←S+G_i×F_i; i≥5;
-% 输出 S; 结束; i←i+1.
-% Directed edges: 开始→S←0→i←1→输入→累加→判定;
-% 判定(Y)→输出 S→结束; 判定(N)→i←i+1→输入.
-\begin{tikzpicture}[
-  >=Stealth,
-  line width=0.55pt,
-  line cap=round,
-  line join=round,
-  every node/.style={font=\normalsize,anchor=center,align=center,
-    execute at begin node={\everypar{}\leftskip=0pt\rightskip=0pt\parindent=0pt
-      \hangindent=0pt\hangafter=1\parshape=0}},
-  flowbox/.style={draw,minimum height=.70cm,inner xsep=4pt,inner ysep=2pt,
-    align=center},
-  terminal/.style={flowbox,rounded corners=.18cm,minimum width=1.55cm,
-    minimum height=.74cm},
-  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
-    trapezium right angle=108,minimum height=.80cm},
-  decision/.style={flowbox,shape=diamond,aspect=2.85,minimum width=3.45cm,
-    minimum height=1.00cm,inner sep=1pt},
-  flowarrow/.style={->,line width=0.55pt},
-]
-  \node[terminal] (start) at (0,10.90) {开始};
-  \node[flowbox,minimum width=2.25cm] (initS) at (0,9.55)
-    {$S\leftarrow 0$};
-  \node[flowbox,minimum width=2.15cm] (initI) at (0,8.20)
-    {$i\leftarrow 1$};
-  \node[io,minimum width=3.85cm] (input) at (0,6.80)
-    {输入 $G_i,F_i$};
-  \node[flowbox,minimum width=4.60cm] (accum) at (0,5.30)
-    {$S\leftarrow S+G_i\times F_i$};
-  \node[decision] (test) at (0,3.72) {$i\geqslant 5$};
-  \node[flowbox,minimum width=2.70cm] (increment) at (-4.05,5.30)
-    {$i\leftarrow i+1$};
-  \node[io,minimum width=2.35cm] (output) at (0,2.02) {输出 $S$};
-  \node[terminal] (finish) at (0,0.68) {结束};
-
-  \draw[flowarrow] (start.south) -- (initS.north);
-  \draw[flowarrow] (initS.south) -- (initI.north);
-  \draw[flowarrow] (initI.south) -- (input.north);
-  \draw[flowarrow] (input.south) -- (accum.north);
-  \draw[flowarrow] (accum.south) -- (test.north);
-
-  % 否分支回到输入框；回线不与输出分支共线。
-  \draw[flowarrow] (test.west) -- (-4.05,3.72) -- (increment.south);
-  \draw[flowarrow] (increment.north) -- (-4.05,6.80) -- (input.west);
-  % Keep the N branch label clear of the horizontal connector and diamond edge.
-  \node[anchor=east] at (-1.70,4.04) {N};
-
-  % 是分支独立通往输出，不与循环回线交汇。
-  \draw[flowarrow] (test.south) -- (output.north);
-  \node[anchor=west] at (0.18,2.86) {Y};
-  \draw[flowarrow] (output.south) -- (finish.north);
-
-  \path[use as bounding box] (-5.45,0.30) rectangle (2.35,11.30);
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.6pt,
+  start/.style={draw, shape=rectangle, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm, align=center, execute at begin node={\setlength{\parindent}{0pt}}},
+  proc/.style={draw, rectangle, minimum width=2.6cm, minimum height=0.9cm, align=center, inner sep=4pt, execute at begin node={\setlength{\parindent}{0pt}}},
+  wide/.style={draw, rectangle, minimum width=5.4cm, minimum height=0.95cm, align=center, inner sep=4pt, execute at begin node={\setlength{\parindent}{0pt}}},
+  loopbox/.style={draw, rectangle, minimum width=2.8cm, minimum height=0.9cm, align=center, inner sep=4pt, execute at begin node={\setlength{\parindent}{0pt}}},
+  io/.style={draw, trapezium, trapezium left angle=75, trapezium right angle=105, minimum width=4.2cm, minimum height=0.95cm, align=center, inner sep=4pt, execute at begin node={\setlength{\parindent}{0pt}}},
+  dec/.style={draw, diamond, aspect=2.2, minimum width=4.0cm, minimum height=1.5cm, align=center, inner sep=2pt, execute at begin node={\setlength{\parindent}{0pt}}},
+  lbl/.style={font=\normalsize, inner sep=2pt}]
+\node[start] (start) at (0,0) {开始};
+\node[proc] (pS0) at (0,-1.8) {$S\leftarrow 0$};
+\node[proc] (pi1) at (0,-3.3) {$i\leftarrow 1$};
+\coordinate (J1) at (0,-4.4);
+\node[io] (ioIn) at (0,-5.5) {输入 $G_{i},F_{i}$};
+\node[wide] (pS) at (0,-7.1) {$S\leftarrow S+G_{i}\times F_{i}$};
+\node[dec] (dec) at (0,-9.0) {$i\geqslant 5$};
+\node[loopbox] (pLoop) at (-4.6,-7.1) {$i\leftarrow i+1$};
+\node[io] (ioOut) at (0,-11.3) {输出 $S$};
+\node[start] (end) at (0,-13.1) {结束};
+% trunk (continuous through loop junction J1)
+\draw[->] (start.south) -- (pS0.north);
+\draw[->] (pS0.south) -- (pi1.north);
+\draw[->] (pi1.south) -- (ioIn.north);
+\draw[->] (ioIn.south) -- (pS.north);
+\draw[->] (pS.south) -- (dec.north);
+\draw[->] (dec.south) -- (ioOut.north);
+\node[lbl,right=2.2mm] at ($(dec.south)!0.4!(ioOut.north)$) {Y};
+\draw[->] (ioOut.south) -- (end.north);
+% N branch: diamond west to loop box west via outer left channel
+\draw[->] (dec.west) -| (pLoop.south);
+\node[lbl,above=2.2mm,xshift=0.0005mm,yshift=-0.0516mm] at ($(dec.west)+(-5mm,0)$) {N};
+% loop return: loop box north up then right into trunk junction J1
+\draw[->] (pLoop.north) -- (-4.6,-4.4) -- (J1);
 \end{tikzpicture}

@@ -1,0 +1,14 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1.3cm,y=1cm,line width=.6pt,>=stealth]
+\draw[->] (-0.8,0)--(4.2,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.8)--(0,2.6) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\draw[domain=-1.0:3.4,samples=200] plot (\x,{sin(deg(1.5*\x)-90)});
+\draw[dashed] (0,1)--(2.0944,1)--(2.0944,0);
+\draw[line width=.6pt] (1.0472,0)--(1.0472,-0.07);
+\node[anchor=north,inner sep=0pt,yshift=-2pt] at (1.0472,-0.07) {$\frac{\pi}{3}$};
+\draw[line width=.6pt] (2.0944,0)--(2.0944,-0.07);
+\node[anchor=north,inner sep=0pt,yshift=-2pt] at (2.0944,-0.07) {$\frac{2\pi}{3}$};
+\draw[line width=.6pt] (0,1)--(-0.07,1);
+\node[anchor=east,inner sep=0pt,xshift=-2pt] at (-0.07,1) {$1$};
+\end{tikzpicture}

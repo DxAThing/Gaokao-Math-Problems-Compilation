@@ -1,0 +1,30 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\fill[gray!20] (-2,2)--(1,2)--(0,1)--cycle;
+% axes
+\draw (0,-0.5)--(0,3.0);
+\draw[->] (0,3.0)--(0,3.3) node[above] {$y$};
+\draw (-3.5,0)--(2.8,0);
+% rectangle ABCD: A(-2,0) B(1,0) C(1,2) D(-2,2), apex V(0,1)
+\coordinate (A) at (-2,0);
+\coordinate (B) at (1,0);
+\coordinate (C) at (1,2);
+\coordinate (D) at (-2,2);
+\coordinate (V) at (0,1);
+\coordinate (O) at (0,0);
+\draw (A)--(B)--(C)--(D)--cycle;
+
+
+% function graphs: left y=-x/2+1, right y=x+1, drawn as in original
+\draw (-3.5,2.75)--(V)--(2.0,3.0);
+% shaded triangle D-C-V
+
+
+
+
+% labels with clearance
+\node[below left] at (A) [yshift=-3.0pt] {$A$};
+\node[below right] at (B) [yshift=-3.0pt] {$B$};
+\node[right] at (C) [xshift=3.0pt] {$C$};
+\node[above left=2pt,xshift=1pt,yshift=3pt] at (D) {$D$};
+\node[below left] at (O) [xshift=-2.0pt,yshift=-2.0pt] {$O$};
+\end{tikzpicture}

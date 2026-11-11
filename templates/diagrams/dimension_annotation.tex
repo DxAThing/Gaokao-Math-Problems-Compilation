@@ -1,0 +1,12 @@
+% Original-style dimension template: outside outline, central gap for text.
+% Shared styles are loaded by styles.tex and the isolated wrapper.
+% Keep actual source lengths/units; labels remain horizontal.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize]
+\draw (0,0) rectangle (3,2);
+\draw[dimension extension] (0,-.1) -- (0,-.65);
+\draw[dimension extension] (3,-.1) -- (3,-.65);
+\draw[dimension line] (0,-.45) -- node[dimension label] {$3$} (3,-.45);
+\draw[dimension extension] (3.1,0) -- (3.65,0);
+\draw[dimension extension] (3.1,2) -- (3.65,2);
+\draw[dimension line] (3.45,0) -- node[dimension label vertical] {$2$} (3.45,2);
+\end{tikzpicture}

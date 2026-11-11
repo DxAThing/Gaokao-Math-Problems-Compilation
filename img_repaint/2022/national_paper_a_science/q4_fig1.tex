@@ -1,0 +1,22 @@
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% Point-fix: horizontal row 正/侧/俯; outlines/grids unchanged; only scope shifts + added view names.
+% Front trapezoid
+\begin{scope}[shift={(0,1.2)}]
+\draw[gray!60,line width=0.3pt,step=0.75cm] (0,0) grid (4.5,3.0);
+\draw (0.75,0.75) -- (3.75,0.75) -- (2.25,2.25) -- (0.75,2.25) -- cycle;
+\node at (2.25,-0.7) {正视图};
+\end{scope}
+% Side square
+\begin{scope}[shift={(5.7,1.2)}]
+\draw[gray!60,line width=0.3pt,step=0.75cm] (0,0) grid (3.0,3.0);
+\draw (0.75,0.75) rectangle (2.25,2.25);
+\node at (1.5,-0.7) {侧视图};
+\end{scope}
+% Plan rectangle with middle line
+\begin{scope}[shift={(10.0,1.2)}]
+\draw[gray!60,line width=0.3pt,step=0.75cm] (0,0) grid (4.5,3.0);
+\draw (0.75,0.75) rectangle (3.75,2.25);
+\draw (2.25,0.75) -- (2.25,2.25);
+\node at (2.25,-0.7) {俯视图};
+\end{scope}
+\end{tikzpicture}

@@ -1,0 +1,22 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt},
+ geometry mark/.style={solid,line width=.6pt},
+ geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (A) at (0,0);
+\coordinate (B) at (2,0);
+\coordinate (C) at (2,2);
+\coordinate (D) at (0,2);
+\coordinate (E) at (-2,0);
+\draw[geometry edge] (E)--(A);
+\draw[geometry edge] (A)--(B);
+\draw[geometry edge] (B)--(C);
+\draw[geometry edge] (C)--(D);
+\draw[geometry edge] (D)--(A);
+\draw[geometry edge] (E)--(D);
+\draw[geometry edge] (E)--(C);
+\node[geometry label,below] at (A) {$A$};
+\node[geometry label,below right] at (B) {$B$};
+\node[geometry label,above right] at (C) {$C$};
+\node[geometry label,above left] at (D) {$D$};
+\node[geometry label,below left] at (E) {$E$};
+\end{tikzpicture}

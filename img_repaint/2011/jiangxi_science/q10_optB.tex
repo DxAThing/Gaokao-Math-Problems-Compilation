@@ -1,0 +1,11 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (N) at (0,1.5);
+\coordinate (S) at (0,-1.5);
+\coordinate (E) at (1.5,0);
+\coordinate (W) at (-1.5,0);
+\draw[dashed] (O) circle[radius=1.5cm];
+\draw (N)--(S);
+\draw (W)--(E);
+\draw[domain=0:360,samples=160,variable=\t] plot ({1.5*cos(\t)*cos(\t)*cos(\t)},{1.5*sin(\t)*sin(\t)*sin(\t)});
+\end{tikzpicture}

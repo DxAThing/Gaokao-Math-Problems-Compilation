@@ -1,0 +1,15 @@
+% network: two paths L1 (upper) and L2 (lower) between A and station.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize]
+\coordinate (A) at (0,0);
+\coordinate (S) at (5,0);
+\fill (A) circle (1.2pt);
+\fill (S) circle (1.2pt);
+\node[left] at (A) {$A$};
+\node[right] at (S) {火车站};
+% upper path L1
+\draw (A) .. controls (1.6,0.8) and (3.4,0.8) .. (S);
+% lower path L2
+\draw (A) .. controls (0.5,-1.2) and (1.6,-1.2) .. (S);
+\node[above] at (2.5,0.65) {$L_{1}$};
+\node[below] at (2.0,-1.0) {$L_{2}$};
+\end{tikzpicture}

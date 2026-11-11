@@ -1,0 +1,33 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=0.6pt,font=\normalsize,>=Stealth]
+  % --- axes ---
+  \draw[->] (-4.6,0) -- (4.6,0);
+  \draw[->] (0,-3.6) -- (0,3.6);
+  % --- hyperbola x^2/2 - y^2/2 = 1 : x = +/- sqrt(2+y^2) ---
+  \draw[domain=-3.2:3.2,samples=80,smooth,variable=\y]
+    plot ({sqrt(2+\y*\y)}, {\y});
+  \draw[domain=-3.2:3.2,samples=80,smooth,variable=\y]
+    plot ({-sqrt(2+\y*\y)}, {\y});
+  % --- points (a = sqrt(2) ~ 1.414, F1/F2 = (-/+2,0)) ---
+  \coordinate (F1) at (-2,0);
+  \coordinate (F2) at (2,0);
+  \coordinate (O) at (0,0);
+  \coordinate (Ap) at (-1.6,-0.7483314774);
+  \coordinate (A) at (1.6,-0.7483314774);
+  \coordinate (B) at (-3.044994432,-2.696662955);
+  \coordinate (M) at (3.384088378,0);
+  % --- segments: F1-A', F2-B, M-B (through A) ---
+  \draw (F1) -- (Ap);
+  \draw (F2) -- (B);
+  \draw (M) -- (B);
+  % --- axis labels ---
+  \node[anchor=west] at (4.6,0) {$x$};
+  \node[anchor=south] at (0,3.6) {$y$};
+  \node[anchor=south east] at (O) {$O$};
+  % --- point labels with clearance ---
+  \node[anchor=south east] at (F1) {$F_{1}$};
+  \node[anchor=south west] at (F2) {$F_{2}$};
+  \node[anchor=east] at (Ap) {$A'$};
+  \node[anchor=north,xshift=-2.00bp,yshift=0.00bp] at (A) {$A$};
+  \node[anchor=east] at (B) {$B$};
+  \node[anchor=south] at (M) {$M$};
+\end{tikzpicture}

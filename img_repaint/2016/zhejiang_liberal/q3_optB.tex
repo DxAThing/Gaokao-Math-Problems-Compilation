@@ -1,0 +1,22 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.5cm,y=1.5cm,line width=.6pt,>=Stealth]
+\coordinate (xL) at (-2.5,0);
+\coordinate (xR) at (2.5,0);
+\coordinate (yB) at (0,-1.5);
+\coordinate (yT) at (0,1.5);
+\coordinate (O) at (0,0);
+\coordinate (tickL) at (-1.5708,0);
+\coordinate (tickR) at (1.5708,0);
+\coordinate (oneY) at (0,1);
+\draw[->] (xL)--(xR) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (yB)--(yT) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\node[below left,inner sep=0pt,xshift=-1.5pt,yshift=-1.5pt] at (O) {$O$};
+\draw (oneY)--(0.13,1);
+\node[anchor=west,inner sep=0pt,xshift=1pt] at (0.13,1) {$1$};
+\draw (tickL)++(0,-0.04)--++(0,0.08);
+\draw (tickR)++(0,-0.04)--++(0,0.08);
+\node[below,inner sep=0pt,yshift=-2pt] at (tickL) {$-\frac{\pi}{2}$};
+\node[below,inner sep=0pt,yshift=-2pt] at (tickR) {$\frac{\pi}{2}$};
+\draw[domain=-2.0:0.0,samples=81] plot (\x,{sin(deg(-\x))});
+\draw[domain=0.0:2.0,samples=81] plot (\x,{sin(deg(\x))});
+\end{tikzpicture}

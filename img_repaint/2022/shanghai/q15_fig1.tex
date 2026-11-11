@@ -1,0 +1,43 @@
+% cube ABCD-A1B1C1D1 with midpoints P,Q,R,S and diagonals A1S,B1D
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (3.5,0);
+\coordinate (B1) at (3.5,3);
+\coordinate (A1) at (0,3);
+\coordinate (D) at (1.6,1.1);
+\coordinate (C) at (5.1,1.1);
+\coordinate (D1) at (1.6,4.1);
+\coordinate (C1) at (5.1,4.1);
+\coordinate (P) at (1.75,0);
+\coordinate (Q) at (4.3,0.55);
+\coordinate (R) at (3.5,1.5);
+\coordinate (S) at (3.35,1.1);
+% solid cube edges
+\draw[solid] (A)--(B)--(B1)--(A1)--cycle;
+\draw[solid] (B)--(C)--(C1)--(B1);
+\draw[solid] (C1)--(D1)--(A1);
+% hidden cube edges
+\draw[dashed] (A)--(D)--(C);
+\draw[dashed] (D)--(D1);
+% interior diagonals
+\draw[dashed] (A1)--(S);
+\draw[dashed] (B1)--(D);
+% midpoint dots
+\fill (P) circle (1.6pt);
+\fill (Q) circle (1.6pt);
+\fill (R) circle (1.6pt);
+\fill (S) circle (1.6pt);
+% labels kept clear of strokes
+\node[below left,xshift=-2pt,yshift=-2pt,inner sep=2pt] at (A) {$A$};
+\node[below,yshift=-2pt,inner sep=2pt] at (P) {$P$};
+\node[below right,xshift=2pt,yshift=-2pt,inner sep=2pt] at (B) {$B$};
+\node[right,xshift=3pt,inner sep=2pt,yshift=-4pt] at (Q) {$Q$};
+\node[right,xshift=2pt,yshift=2pt,inner sep=2pt] at (R) {$R$};
+\node[right,xshift=2pt,yshift=-1.0pt,inner sep=2pt] at (C) {$C$};
+\node[left,xshift=-3pt,yshift=2pt,inner sep=2pt] at (D) {$D$};
+\node[left,xshift=-2pt,inner sep=2pt] at (A1) {$A_1$};
+\node[right,xshift=1pt,inner sep=2pt,yshift=-5pt] at (B1) {$B_1$};
+\node[right,xshift=2pt,inner sep=2pt] at (C1) {$C_1$};
+\node[above left,xshift=-2pt,yshift=2pt,inner sep=2pt] at (D1) {$D_1$};
+\node[below,xshift=-2.0pt,yshift=-2pt,inner sep=2pt] at (S) {$S$};
+\end{tikzpicture}

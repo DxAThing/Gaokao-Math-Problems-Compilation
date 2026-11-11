@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (P) at (0,4.2);
+\coordinate (A) at (0,1.4);
+\coordinate (B) at (-1.9,0.7);
+\coordinate (C) at (-1.2,-0.6);
+\coordinate (D) at (1.7,0.5);
+\coordinate (G) at (-0.8000000000,1.0000000000);
+% solid lateral edges and base
+\draw[solid] (P) -- (B);
+\draw[solid] (P) -- (D);
+\draw[solid] (P) -- (G) -- (C);
+\draw[solid] (B) -- (C) -- (D);
+\draw[solid] (B) -- (G) -- (D);
+\draw[dashed] (A)--(D);
+% hidden
+\draw[dashed] (P) -- (A);
+\draw[dashed] (A) -- (B);
+\draw[dashed] (A) -- (C);
+\draw[dashed] (B) -- (D);
+\node[above] at (P) {$P$};
+\node[right=3pt,xshift=-1pt,yshift=3pt] at (A) {$A$};
+\node[left] at (B) {$B$};
+\node[below left] at (C) {$C$};
+\node[right] at (D) {$D$};
+\node[above left] at (G) {$G$};
+\end{tikzpicture}

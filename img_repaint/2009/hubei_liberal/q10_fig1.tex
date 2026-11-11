@@ -1,0 +1,39 @@
+% 2009 hubei q10 fig1: solid triangular dot arrays 1,3,6,10 + ellipsis.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+% group 1: 1 dot
+\fill (0,0) circle (2.2pt);
+\node[below] at (0,-0.45) {$1$};
+% group 2: 3 dots (1+2)
+\begin{scope}[shift={(2.2,0)}]
+\fill (0.45,0.9) circle (2.2pt);
+\fill (0,0) circle (2.2pt);
+\fill (0.9,0) circle (2.2pt);
+\node[below] at (0.45,-0.45) {$3$};
+\end{scope}
+% group 3: 6 dots (1+2+3)
+\begin{scope}[shift={(5.2,0)}]
+\fill (0.9,1.8) circle (2.2pt);
+\fill (0.45,0.9) circle (2.2pt);
+\fill (1.35,0.9) circle (2.2pt);
+\fill (0,0) circle (2.2pt);
+\fill (0.9,0) circle (2.2pt);
+\fill (1.8,0) circle (2.2pt);
+\node[below] at (0.9,-0.45) {$6$};
+\end{scope}
+% group 4: 10 dots (1+2+3+4)
+\begin{scope}[shift={(9.0,0)}]
+\fill (1.35,2.7) circle (2.2pt);
+\fill (0.9,1.8) circle (2.2pt);
+\fill (1.8,1.8) circle (2.2pt);
+\fill (0.45,0.9) circle (2.2pt);
+\fill (1.35,0.9) circle (2.2pt);
+\fill (2.25,0.9) circle (2.2pt);
+\fill (0,0) circle (2.2pt);
+\fill (0.9,0) circle (2.2pt);
+\fill (1.8,0) circle (2.2pt);
+\fill (2.7,0) circle (2.2pt);
+\node[below] at (1.35,-0.45) {$10$};
+\end{scope}
+% ellipsis
+\node at (13.0,0.9) {$\cdots$};
+\end{tikzpicture}

@@ -1,0 +1,28 @@
+\begin{tikzpicture}[line width=.6pt,line join=round,line cap=round]
+\coordinate (E) at (0,4);
+\coordinate (F) at (5.2000000000,4.0000000000);
+\coordinate (A) at (1.0,1.0);
+\coordinate (B) at (3.6,1.0);
+\coordinate (D) at (2.2,2.2);
+\coordinate (C) at (4.8000000000,2.2000000000);
+% top and bottom
+\draw (E) -- (F);
+\draw (A) -- (B);
+% left triangle ADE
+\draw (E) -- (A);
+\draw[dashed] (E) -- (D);
+\draw[dashed] (A) -- (D);
+% right triangle BCF
+\draw (B) -- (F);
+\draw (B) -- (C);
+\draw (F) -- (C);
+% square ABCD: B-C solid, C-D dashed
+\draw[dashed] (D) -- (C);
+% labels
+\node[left] at (E) {$E$};
+\node[right,xshift=1pt,yshift=3pt] at (F) {$F$};
+\node[below left] at (A) {$A$};
+\node[below] at (B) {$B$};
+\node[left,xshift=-3pt,yshift=-1pt] at (D) {$D$};
+\node[right] at (C) {$C$};
+\end{tikzpicture}

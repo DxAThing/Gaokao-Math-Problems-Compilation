@@ -1,0 +1,37 @@
+% 2007_jiangxi_liberal_q11_fig1: four rotational wine glasses, equal mouth radius and height.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+  % glass 1: hemisphere
+  \begin{scope}[shift={(0,0)}]
+    \draw (0,3) ellipse (1.4 and 0.25);
+    \draw (-1.4,3) arc (180:360:1.4 and 1.8);
+    \draw (0,1.2) -- (0,0);
+    \draw (0,0) ellipse (0.6 and 0.12);
+  \end{scope}
+  % glass 2: cone
+  \begin{scope}[shift={(3.6,0)}]
+    \draw (0,3) ellipse (1.4 and 0.25);
+    \draw (-1.4,3) -- (0,1.2) -- (1.4,3);
+    \draw (0,1.2) -- (0,0);
+    \draw (0,0) ellipse (0.6 and 0.12);
+  \end{scope}
+  % glass 3: frustum
+  \begin{scope}[shift={(7.2,0)}]
+    \draw (0,3) ellipse (1.4 and 0.25);
+    \draw (-1.4,3) -- (-0.7,1.2);
+    \draw (1.4,3) -- (0.7,1.2);
+    \draw (-0.7,1.2) arc (180:360:0.7 and 0.15);
+    \draw[dashed] (-0.7,1.2) arc (180:0:0.7 and 0.15);
+    \draw (0,1.05) -- (0,0);
+    \draw (0,0) ellipse (0.6 and 0.12);
+  \end{scope}
+  % glass 4: cylinder
+  \begin{scope}[shift={(10.8,0)}]
+    \draw (0,3) ellipse (1.4 and 0.25);
+    \draw (-1.4,3) -- (-1.4,1.2);
+    \draw (1.4,3) -- (1.4,1.2);
+    \draw (-1.4,1.2) arc (180:360:1.4 and 0.25);
+    \draw[dashed] (-1.4,1.2) arc (180:0:1.4 and 0.25);
+    \draw (0,0.95) -- (0,0);
+    \draw (0,0) ellipse (0.6 and 0.12);
+  \end{scope}
+\end{tikzpicture}

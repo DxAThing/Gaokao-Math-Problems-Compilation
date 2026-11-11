@@ -1,0 +1,11 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-2,0) -- (5,0);
+\draw[->] (0,-2) -- (0,5.99);
+\draw[dashed] (3,0) -- (3,4.5);
+\draw[domain=0:3,samples=121] plot (\x,{4.5*(2*(\x/3)-(\x/3)*(\x/3))});
+\node[anchor=north west,inner sep=0pt,xshift=2pt,yshift=-2pt] at (5,0) {$h$};
+\node[anchor=east,inner sep=0pt,xshift=-4pt,yshift=1pt] at (0,5.99) {$V$};
+\node[anchor=north east,inner sep=0pt,xshift=-4pt,yshift=-2pt] at (0,0) {$O$};
+\node[anchor=north,inner sep=0pt,yshift=-2pt] at (3,0) {$H$};
+\end{tikzpicture}

@@ -1,0 +1,44 @@
+% Shared figure captions for body figures, solution figures and native panels.
+\ExplSyntaxOn
+\tl_new:N \l__bitmap_caption_question_tl
+\tl_new:N \l__bitmap_caption_number_tl
+\tl_new:N \l__bitmap_caption_base_tl
+\bool_new:N \g__bitmap_panel_caption_bool
+\cs_new_protected:Npn \__bitmap_prepare_caption:n #1
+{
+    \bool_gset_false:N \g__bitmap_panel_caption_bool
+    \cs_if_exist:NTF \theprobnum
+        {\tl_set:Nx \l__bitmap_caption_question_tl {\theprobnum}}
+        {\tl_set:Nn \l__bitmap_caption_question_tl {0}}
+    \tl_set:Nn \l__bitmap_caption_number_tl {1}
+    \regex_extract_once:nnNT
+        {q([0-9]+)_(?:[A-Za-z0-9]+_)*fig([0-9]+)\.(?:tex|png|jpg|jpeg|pdf)$}
+        {#1} \l_tmpa_seq
+    {
+        \tl_set:Nx \l__bitmap_caption_question_tl {\seq_item:Nn \l_tmpa_seq {2}}
+        \tl_set:Nx \l__bitmap_caption_number_tl {\seq_item:Nn \l_tmpa_seq {3}}
+    }
+    \tl_set:Nx \l__bitmap_caption_base_tl
+        {第\tl_use:N \l__bitmap_caption_question_tl 题}
+    \regex_match:nnT {q[0-9]+_solution_} {#1}
+        {\tl_put_right:Nn \l__bitmap_caption_base_tl {解析}}
+    \tl_put_right:Nn \l__bitmap_caption_base_tl {图}
+}
+\NewDocumentCommand{\bitmappreparecaption}{m}
+    {\__bitmap_prepare_caption:n {#1}}
+\NewDocumentCommand{\bitmapinsertcaption}{o}
+{
+    \IfNoValueTF{#1}
+    {
+        \bool_if:NF \g__bitmap_panel_caption_bool
+        {
+            \captionof*{figure}
+                {\tl_use:N \l__bitmap_caption_base_tl\tl_use:N \l__bitmap_caption_number_tl}
+        }
+    }
+    {
+        \bool_gset_true:N \g__bitmap_panel_caption_bool
+        {\small\tl_use:N \l__bitmap_caption_base_tl #1}
+    }
+}
+\ExplSyntaxOff

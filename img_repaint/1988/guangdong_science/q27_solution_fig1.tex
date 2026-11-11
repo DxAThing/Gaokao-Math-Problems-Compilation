@@ -1,0 +1,30 @@
+\begin{tikzpicture}[x=0.6cm,y=0.6cm,line width=.6pt,font=\normalsize,>=Stealth,
+  geometry edge/.style={solid,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=2pt}]
+% axes
+\draw[->,line width=.6pt] (-7.5,0)--(7.5,0) node[right,xshift=0pt] {$x$};
+\draw[->,line width=.6pt] (0,-6.5)--(0,7.5) node[above,yshift=0pt] {$y$};
+% asymptotes y=+-4/3 x
+\draw[geometry edge,domain=-5.2:5.2,samples=2] plot (\x,{1.3333*\x});
+\draw[geometry edge,domain=-5.2:5.2,samples=2] plot (\x,{-1.3333*\x});
+% hyperbola x^2/9-y^2/16=1, both branches
+\draw[geometry edge,domain=-1.25:1.25,samples=80] plot ({3*cosh(\x)},{4*sinh(\x)});
+\draw[geometry edge,domain=-1.25:1.25,samples=80] plot ({-3*cosh(\x)},{4*sinh(\x)});
+% focal triangle
+\coordinate (F1) at (-5,0);
+\coordinate (F2) at (5,0);
+\coordinate (P) at (3.8418745425,3.2000000000);
+\coordinate (A) at (-3,0);
+\coordinate (B) at (3,0);
+\coordinate (O) at (0,0);
+\draw[geometry edge] (F1)--(P)--(F2);
+
+
+
+\node[geometry label,below,xshift=0pt,yshift=0pt] at (F1) {$F_{1}$};
+\node[geometry label,below,xshift=0pt,yshift=0pt] at (F2) {$F_{2}$};
+\node[geometry label,right,xshift=1pt,yshift=-1pt] at (P) {$P$};
+\node[geometry label,below,yshift=1pt,xshift=-5pt] at (A) {$A$};
+\node[geometry label,below,yshift=1pt,xshift=-5pt] at (B) {$B$};
+\node[geometry label,below left,xshift=-7pt,yshift=1pt] at (O) {$O$};
+\end{tikzpicture}

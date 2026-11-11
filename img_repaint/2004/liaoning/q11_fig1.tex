@@ -1,0 +1,12 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=0.55cm,y=1.15cm,line width=.6pt,>=stealth,font=\normalsize]
+\draw[->] (-2.5,0)--(12.5,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.8)--(0,2.0) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw[dashed,line width=.45pt] (0,1)--(2.0944,1);
+\draw[dashed,line width=.45pt] (2.0944,0)--(2.0944,1);
+\draw[domain=-1.0472:11.5192,samples=220] plot (\x,{sin(deg(\x/2+pi/6))});
+\node[below,inner sep=0pt,yshift=-2pt] at (-1.0472,0) {$-\pi/3$};
+\node[below,inner sep=0pt,yshift=-2pt] at (2.0944,0) {$\frac{2\pi}{3}$};
+\node[left,inner sep=0pt,xshift=-2pt] at (0,1) {$1$};
+\node[below right,inner sep=0pt,xshift=3pt,yshift=-2pt] at (0,0) {$O$};
+\end{tikzpicture}

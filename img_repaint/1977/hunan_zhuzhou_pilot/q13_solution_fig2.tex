@@ -1,0 +1,28 @@
+% 1977 湖南株洲试点第13题解答图（焦点在 y 轴）：y^2/36 - x^2/13 = 1
+% 参数 a=6, b=sqrt(13), c=7
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,>=Latex,x=.38cm,y=.38cm]
+  \coordinate (O) at (0,0);
+  \coordinate (F) at (0,7);
+  \coordinate (F1) at (0,-7);
+  \coordinate (Bup) at (0,6);
+  \coordinate (Bdn) at (0,-6);
+  \coordinate (Aleft) at (-3.606,0);
+  \coordinate (Aright) at (3.606,0);
+
+  \draw[->] (-7.8,0) -- (7.8,0) node[below right,inner sep=2pt] {$x$};
+  \draw[->] (0,-11.2) -- (0,11.2) node[left,inner sep=2pt] {$y$};
+
+  \draw[domain=-5.6:5.6,samples=160] plot (\x,{6*sqrt(1+\x*\x/13)});
+  \draw[domain=-5.6:5.6,samples=160] plot (\x,{-6*sqrt(1+\x*\x/13)});
+  \fill (F) circle (1.6pt);
+  \fill (F1) circle (1.6pt);
+
+  \node[right,inner sep=2pt,yshift=1pt] at (F) {$F$};
+  \node[right,inner sep=2pt,yshift=-5pt] at (Bup) {$B$};
+  \node[right,inner sep=2pt,yshift=5pt,xshift=0.00bp,yshift=2.00bp] at (Bdn) {$B'$};
+  \node[right,inner sep=2pt,yshift=-1pt] at (F1) {$F_1$};
+  \node[above left,inner sep=1.5pt] at (O) {$O$};
+  \node[below left,inner sep=1.5pt] at (Aleft) {$A'$};
+  \node[below right,inner sep=1.5pt] at (Aright) {$A$};
+\end{tikzpicture}

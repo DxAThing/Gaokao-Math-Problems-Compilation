@@ -1,0 +1,38 @@
+\begin{tikzpicture}[x=.9cm,y=.9cm,line width=0.6pt,font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (Z) at (0,3.2);
+\coordinate (Y) at (4.2,0);
+\coordinate (X) at (-2.2,-1.9);
+\draw[solid,->,>=stealth] (O)--(Z);
+\draw[solid,->,>=stealth] (O)--(Y);
+\draw[solid,->,>=stealth] (O)--(X);
+\node[above] at (Z) {$z$};
+\node[right] at (Y) {$y$};
+\node[below left] at (X) {$x$};
+\node[below right] at (O) {$O$};
+\draw[solid] (-0.08,1)--(0.08,1); \node[left] at (-0.12,1) {$1$};
+\draw[solid] (-0.08,2)--(0.08,2); \node[left] at (-0.12,2) {$2$};
+\draw[solid] (1,-0.08)--(1,0.08); \node[below] at (1,-0.12) {$1$};
+\draw[solid] (2,-0.08)--(2,0.08); \node[below] at (2,-0.12) {$2$};
+\coordinate (X1) at (-0.73,-0.63);
+\coordinate (X2) at (-1.47,-1.27);
+\draw[solid] (X1)--++(-0.08,0.08); \node[above left] at (X1) {$1$};
+\draw[solid] (X2)--++(-0.08,0.08); \node[above left] at (X2) {$2$};
+\coordinate (A1L) at (5.5,2.0); \coordinate (A1T) at (7.3,2.0); \coordinate (A1B) at (7.3,0.2); \coordinate (A1M) at (7.3,1.1);
+\draw[solid] (A1L)--(A1T)--(A1B)--cycle;
+\draw[solid] (A1L)--(A1M);
+\node[below] at (6.4,-0.25) {图\textcircled{1}};
+\coordinate (A2L) at (8.0,1.8); \coordinate (A2T) at (9.5,1.6); \coordinate (A2B) at (9.5,0.2);
+\draw[solid] (A2L)--(A2T)--(A2B)--cycle;
+\node[below] at (8.75,-0.25) {图\textcircled{2}};
+\coordinate (A3L) at (10.2,2.0); \coordinate (A3T) at (12.0,2.0); \coordinate (A3B) at (12.0,0.2);
+\coordinate (A3M) at (11.1,1.1);
+\draw[solid] (A3L)--(A3T)--(A3B)--cycle;
+\draw[dashed] (A3T)--(A3M);
+
+\node[below] at (11.1,-0.25) {图\textcircled{3}};
+\coordinate (A4L) at (12.7,2.0); \coordinate (A4T) at (14.5,2.0); \coordinate (A4B) at (14.5,0.2); \coordinate (A4M) at (14.5,1.1);
+\draw[solid] (A4L)--(A4T)--(A4B)--cycle;
+\draw[dashed] (A4L)--(A4M);
+\node[below] at (13.6,-0.25) {图\textcircled{4}};
+\end{tikzpicture}

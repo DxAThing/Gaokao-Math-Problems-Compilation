@@ -1,0 +1,21 @@
+% Adapt only source coordinates, ticks, endpoint states and labels.
+% This is a local template used with the upstream constraint-harness workflow.
+% Option C: continuous polyline, second segment ends mid-grid (~2.45 h, ~138).
+\begin{tikzpicture}[x=0.3cm,y=0.3cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Light square grid, 1 cell = 10 km vertically, 4 cells = 1 h horizontally.
+\draw[draw=black!30,line width=0.35pt,step=1] (0,0) grid (12.8,16);
+% Axes with arrows; x-axis is the grid bottom, y-axis the grid left.
+\draw[->] (0,0)--(14,0);
+\draw[->] (0,0)--(0,17.2);
+\node[left] at (0,17.7) {$s$ (km)};
+\node[below right,xshift=4pt,yshift=-1pt] at (14,0) {$t$ (h)};
+\node[below left] at (0,0) {$O$};
+% Horizontal labels t = 1, 2, 3 at gridlines x = 4, 8, 12.
+\node[below] at (4,-0.2) {$1$};
+\node[below] at (8,-0.2) {$2$};
+\node[below] at (12,-0.2) {$3$};
+% Vertical labels s = 60..160 (sibling option B shows the shared scale; this crop cuts them).
+\foreach \s/\v in {60/6,80/8,100/10,120/12,140/14,160/16} {\node[left] at (-0.2,\v) {$\s$};}
+% Journey polyline: (0,0) -> (1 h, 60) -> (1.5 h, 60) -> (~2.45 h, ~138).
+\draw[draw=black,line width=1.1pt,line join=miter,line cap=butt] (0,0)--(4,6)--(6,6)--(9.8,13.8);
+\end{tikzpicture}

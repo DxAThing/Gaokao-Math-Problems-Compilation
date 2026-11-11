@@ -1,0 +1,15 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1.4cm,y=1.0cm,line width=.6pt,>=stealth,font=\normalsize]
+\begin{scope}
+\clip (-2.5,-2.5) rectangle (2.6,2.5);
+\draw[black,domain=-2.5:-1,samples=80] plot (\x,{-abs(\x*\x-1)/\x});
+\draw[black,domain=-1:-0.4,samples=80] plot (\x,{-abs(\x*\x-1)/\x});
+\draw[black,domain=0.4:1,samples=80] plot (\x,{-abs(\x*\x-1)/\x});
+\draw[black,domain=1:2.6,samples=80] plot (\x,{-abs(\x*\x-1)/\x});
+\end{scope}
+\draw[->,black] (-2.5,0)--(2.6,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->,black] (0,-2.5)--(0,2.5) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\node[anchor=south,inner sep=0pt,yshift=2pt] at (1,0) {$1$};
+\draw[black] (1,-0.05)--(1,0.05);
+\end{tikzpicture}

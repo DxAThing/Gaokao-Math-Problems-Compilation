@@ -1,0 +1,33 @@
+% xOy中椭圆C1与抛物线C2及折线（2011 湖南理21）：C1:x^2/4+y^2=1, C2:y=x^2-1
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+  \coordinate (O) at (0,0);
+  \coordinate (x_neg) at (-3.2,0);
+  \coordinate (x_end) at (3.2,0);
+  \coordinate (y_neg) at (0,-1.6);
+  \coordinate (y_end) at (0,3.8);
+  \coordinate (M) at (0,-1);
+  \coordinate (A) at (1.8000000000,2.2400000000);
+  \coordinate (B) at (-0.5555555556,-0.6913580247);
+  \coordinate (D) at (1.0315186246,0.8567335244);
+  \coordinate (E) at (-1.9889502762,0.1049723757);
+  % axes
+  \draw[->] (x_neg) -- (x_end);
+  \draw[->] (y_neg) -- (y_end);
+  % ellipse C1: x^2/4+y^2=1
+  \draw (0,0) ellipse (2 and 1);
+  % parabola C2: y=x^2-1
+  \draw[domain=-1.6:2.15,samples=80,smooth] plot (\x,{\x*\x-1});
+  % lines: AB through O, MA with D, M-B-E, D-E
+  \draw (A) -- (B);
+  \draw (M) -- (A);
+  \draw (M) -- (E);
+  \draw (E)--(A);
+  \node[right,xshift=2pt] at (x_end) {$x$};
+  \node[above,yshift=2pt] at (y_end) {$y$};
+  \node[below left=2pt,xshift=-5pt,yshift=3pt] at (O) {$O$};
+  \node[right,xshift=4pt] at (A) {$A$};
+  \node[below left,xshift=-6pt,yshift=-4pt] at (B) {$B$};
+  \node[below right,xshift=4pt,yshift=-3pt] at (M) {$M$};
+  \node[below right=2pt,xshift=3pt,yshift=-5pt] at (D) {$D$};
+  \node[above left,xshift=-5pt,yshift=3pt] at (E) {$E$};
+\end{tikzpicture}

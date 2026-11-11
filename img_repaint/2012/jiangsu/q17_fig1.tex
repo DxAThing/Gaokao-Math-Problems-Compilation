@@ -1,0 +1,13 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=0.68cm,y=0.84cm,line width=.6pt,>={Latex[length=1.8mm,width=1.3mm]}]
+\def\Lmax{10}
+\def\ca{1}
+\def\cb{0.1}
+\coordinate (O) at (0,0);
+\coordinate (P) at (5,2.5);
+\coordinate (L) at (\Lmax,0);
+\draw[->] (-1.6,0)--(13.2,0) node[anchor=north west,inner sep=0pt,xshift=2pt,yshift=-2pt] {$x$（千米）};
+\draw[->] (0,-0.5)--(0,3.4) node[anchor=south east,inner sep=0pt,xshift=-2pt,yshift=2pt] {$y$（千米）};
+\draw[domain=0:\Lmax,samples=161] plot (\x,{\ca*\x-\cb*\x*\x});
+\node[anchor=north east] at (-0.55,-0.10) {$O$};
+\end{tikzpicture}

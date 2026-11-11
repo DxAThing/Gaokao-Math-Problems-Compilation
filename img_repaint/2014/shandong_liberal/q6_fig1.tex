@@ -1,0 +1,17 @@
+% Source: inputs/original_01.pdf p.1 (printed 909), Q6.
+% Representative model for y=log_a(x+c): a=1/2, c=1/2. Schematic, not given parameters.
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.35cm,y=1.35cm,line width=.6pt,>=Stealth,font=\normalsize]
+\def\sdA{0.5}
+\def\sdC{0.5}
+\draw[->] (-1.0,0)--(3.15,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.7)--(0,3.95) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\coordinate (O) at (0,0);
+\coordinate (Xint) at (0.5,0);
+\coordinate (One) at (1,0);
+\coordinate (Asym) at (-0.5,0);
+\coordinate (CurveAtZero) at (0,1);
+\draw[domain=-0.40:2.65,samples=160] plot (\x,{ln(\x+\sdC)/ln(\sdA)});
+\node[above,inner sep=2pt] at (One) {$1$};
+\node[below left,inner sep=2pt] at (O) {$O$};
+\end{tikzpicture}

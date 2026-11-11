@@ -1,0 +1,45 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  oil edge/.style={solid,line width=.6pt},
+  oil hidden/.style={dashed,line width=.6pt,dash pattern=on 3pt off 2.5pt}]
+% ---- left panel: oil-can body as circular cylinder ----
+\coordinate (LtopC) at (0,3.2);
+% outer top rim (full ellipse) + inner opening
+\draw[oil edge] (0,3.2) ellipse (0.64cm and 0.20cm);
+\draw[oil edge] (0,3.2) ellipse (0.36cm and 0.11cm);
+% side walls
+\draw[oil edge] (-0.64,3.2)--(-0.64,0);
+\draw[oil edge] (0.64,3.2)--(0.64,0);
+% bottom: front solid half, back dashed half (outer)
+\draw[oil edge] (-0.64,0) arc (180:360:0.64cm and 0.20cm);
+\draw[oil hidden] (-0.64,0) arc (180:0:0.64cm and 0.20cm);
+% inner bottom opening (dashed, seen through)
+\draw[oil hidden] (0,0.12) ellipse (0.36cm and 0.11cm);
+% handle curve on left side
+\draw[oil edge] (-0.64,2.5) .. controls (-1.15,2.2) and (-1.15,1.5) .. (-0.64,1.1);
+% arrow between panels
+\draw[oil edge,->,line width=.6pt] (1.9,1.9)--(3.1,1.9);
+% ---- right panel: axial section rectangle ----
+\coordinate (Rbl) at (4.4,0);
+\coordinate (Rbr) at (5.68,0);
+\coordinate (Rtr) at (5.68,3.2);
+\coordinate (Rtl) at (4.4,3.2);
+\draw[oil edge] (Rbl)--(Rbr)--(Rtr)--(Rtl)--cycle;
+% oil surface line
+\draw[oil edge] (4.4,2.42)--(5.68,2.42);
+% spout: lowest point E on right wall, 0.6cm above base (schematic 3cm)
+\coordinate (E) at (5.68,0.6);
+% spout direction ~50deg above horizontal, length 2.0cm (schematic 13.4cm)
+\coordinate (F) at (7.02,2.9209480821422957);
+\draw[oil edge] (E)--(F);
+\draw[oil edge] ([yshift=1.6pt]E)--([yshift=1.6pt]F);
+\draw[oil edge] (E)--([yshift=1.6pt]E);
+\draw[oil edge] (F)--([yshift=1.6pt]F);
+% spout length dimension along spout
+\draw[oil edge,{Latex[length=1.8mm]}-{Latex[length=1.8mm]}] ($(F)+(0.20,-0.12)$)--($(E)+(0.20,-0.12)$) node[midway,sloped,below=3pt] {$13.4\mathrm{cm}$};
+% vertical 3cm dimension (E height above base)
+\draw[oil edge,{Latex[length=1.8mm]}-{Latex[length=1.8mm]}] (6.0,0)--(6.0,0.6) node[midway,right,xshift=2pt] {$3\mathrm{cm}$};
+% width 6.4cm dimension below rectangle
+\draw[oil edge,{Latex[length=1.8mm]}-{Latex[length=1.8mm]}] (4.4,-0.35)--(5.68,-0.35) node[midway,below,yshift=0pt] {$6.4\mathrm{cm}$};
+% height 12.1cm dimension left of rectangle (oil depth)
+\draw[oil edge,{Latex[length=1.8mm]}-{Latex[length=1.8mm]}] (4.05,0)--(4.05,2.42) node[midway,left,xshift=0pt] {$12.1\mathrm{cm}$};
+\end{tikzpicture}

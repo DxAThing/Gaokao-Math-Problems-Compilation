@@ -1,0 +1,60 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=0.6pt,font=\normalsize,>=Stealth]
+  % --- outer frustum (same layout as problem figure) ---
+  \coordinate (A) at (0.0000000000,0.0000000000);
+  \coordinate (B) at (4.0000000000,0.0000000000);
+  \coordinate (C) at (6.0000000000,1.4000000000);
+  \coordinate (D) at (2.0000000000,1.4000000000);
+  \coordinate (A1) at (1.5000000000,2.8500000000);
+  \coordinate (B1) at (3.5000000000,2.8500000000);
+  \coordinate (C1) at (4.5000000000,3.5500000000);
+  \coordinate (D1) at (2.5000000000,3.5500000000);
+  \coordinate (O) at (3.0000000000,0.7000000000);
+  \coordinate (O1) at (3.0000000000,3.2000000000);
+  % --- outer frame ---
+  \draw[dashed] (A) -- (D);
+  \draw[dashed] (D) -- (C);
+  \draw[dashed] (D) -- (D1);
+  \draw (A) -- (B);
+  \draw (B) -- (C);
+  \draw (A) -- (A1);
+  \draw (B) -- (B1);
+  \draw (C) -- (C1);
+  \draw (A1) -- (B1);
+  \draw (B1) -- (C1);
+  \draw (A1) -- (D1);
+  \draw (D1) -- (C1);
+  % --- diagonals of bases through O / O1 ---
+  \draw[dashed] (A) -- (O);
+  \draw[dashed] (O) -- (C);
+  
+  \draw[dashed] (O) -- (D);
+  \draw (A1) -- (O1);
+  \draw (O1) -- (C1);
+  \draw[dashed] (B1) -- (O1);
+  \draw[dashed] (D1) -- (O1);
+  % --- central axis + key inner segments ---
+  \draw[dashed] (O) -- (O1);
+  \draw (A1) -- (B);
+  \draw (B) -- (C1);
+  
+  \draw[dashed] (A1) -- (O);
+  \draw (O) -- (C1);
+  
+  \draw[dashed] (D) -- (C1);
+  \draw[dashed] (A1) -- (D);
+  % --- vertex dots for O, O1 only (others are line junctions) ---
+  \fill (O) circle (0.45pt);
+  \fill (O1) circle (0.45pt);
+  % --- labels with clearance ---
+  \node[anchor=north east,xshift=-2pt,yshift=-2pt] at (A) {$A$};
+  \node[anchor=north,yshift=-2pt] at (B) {$B$};
+  \node[anchor=west,xshift=2pt] at (C) {$C$};
+  \node[anchor=west,xshift=-3pt,yshift=-13pt] at (D) {$D$};
+  \node[anchor=east,xshift=-2pt] at (A1) {$A_{1}$};
+  \node[below=2pt,xshift=-4pt,yshift=-11pt] at (B1) {$B_{1}$};
+  \node[anchor=south,yshift=2pt] at (C1) {$C_{1}$};
+  \node[anchor=south east,xshift=-2pt,yshift=2pt] at (D1) {$D_{1}$};
+  \node[anchor=north,yshift=-2pt,xshift=-1.0pt,yshift=-2pt] at (O) {$O$};
+  \node[above=2pt,xshift=-1pt,yshift=5pt] at (O1) {$O_{1}$};
+\draw (B)--(O);
+\end{tikzpicture}

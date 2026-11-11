@@ -1,0 +1,36 @@
+% 三棱柱 ABC-A1B1C1 截面 EFC1（2011 湖北文18）
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+  % --- 2D projection coordinates (verticals stay vertical) ---
+  \coordinate (A)  at (0,1);
+  \coordinate (B)  at (1.5,0.2);
+  \coordinate (C)  at (5,1);
+  \coordinate (A1) at (0,7);
+  \coordinate (B1) at (1.5,6.2);
+  \coordinate (C1) at (5,7);
+  \coordinate (E)  at (0,5);
+  \coordinate (F)  at (1.5,2.2);
+  % --- prism outline ---
+  \draw (A1) -- (A);
+  \draw (B1) -- (B);
+  \draw (C1) -- (C);
+  \draw (A1) -- (B1) -- (C1);
+  \draw (A1) -- (C1);
+  \draw (A) -- (B) -- (C);
+  \draw[dashed] (A) -- (C);
+  % --- section triangle E-F-C1 plus F-C, E-C ---
+  \draw[dashed] (E) -- (C1);
+  \draw (E) -- (F);
+  \draw (F) -- (C1);
+  \draw (F) -- (C);
+  \draw[dashed] (E) -- (C);
+  % --- vertices ---
+  % --- labels (offset to avoid touching strokes) ---
+  \node[above left] at (A1) {$A_{1}$};
+  \node[above right] at (C1) {$C_{1}$};
+  \node[left,xshift=-2pt] at (B1) {$B_{1}$};
+  \node[left,xshift=-3pt] at (E) {$E$};
+  \node[above left,xshift=-3pt,yshift=-2pt] at (F) {$F$};
+  \node[below left,xshift=-1pt] at (A) {$A$};
+  \node[below,yshift=-2pt] at (B) {$B$};
+  \node[right,xshift=2pt] at (C) {$C$};
+\end{tikzpicture}

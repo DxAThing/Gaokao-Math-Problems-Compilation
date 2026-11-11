@@ -1,0 +1,27 @@
+% network/block: N1 three boxes in series; N2 box A then B/C in parallel; all lines solid, no arrows.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize]
+\tikzset{box/.style={rectangle,draw,fill=white,minimum width=16mm,minimum height=8mm,inner sep=1pt}}
+% N1 row
+\node at (-4.2,2.6) {$(N_{1})$};
+\node[box] (A1) at (-1.2,2.6) {A};
+\node[box] (B1) at (1.8,2.6) {B};
+\node[box] (C1) at (4.8,2.6) {C};
+\draw (-3.2,2.6) -- (A1.west);
+\draw (A1.east) -- (B1.west);
+\draw (B1.east) -- (C1.west);
+\draw (C1.east) -- (7.0,2.6);
+% N2 row
+\node at (-4.2,0) {$(N_{2})$};
+\node[box] (A2) at (-1.2,0) {A};
+\coordinate (J1) at (1.0,0);
+\coordinate (J2) at (5.6,0);
+\node[box] (B2) at (3.3,1.1) {B};
+\node[box] (C2) at (3.3,-1.1) {C};
+\draw (-3.2,0) -- (A2.west);
+\draw (A2.east) -- (J1);
+\draw (J1) -- (J1 |- B2.west) -- (B2.west);
+\draw (J1) -- (J1 |- C2.west) -- (C2.west);
+\draw (B2.east) -- (B2.east -| J2) -- (J2);
+\draw (C2.east) -- (C2.east -| J2) -- (J2);
+\draw (J2) -- (7.0,0);
+\end{tikzpicture}

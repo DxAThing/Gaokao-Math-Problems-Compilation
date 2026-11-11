@@ -1,49 +1,29 @@
-% Source PDF: source/普通高考/2015/2015湖南理.pdf, page 1, question 3.
-% The source flowchart is vector page content; original PNG remains at img/2015/hunan_science/q3_fig1.png.
-% Node -> directed-edge list: 开始 -> 输入 n -> i=1,S=0 ->
-% S=S+1/((2i-1)(2i+1)) -> i=i+1 -> i>n?;
-% 是 -> 输出 S -> 结束; 否 -> right-side return route -> the stem immediately above the update box.
-% All connectors are solid; no dashed segments or other edges. Node text is centered with local parindent=0pt.
-
-\begin{tikzpicture}[
-  >=Stealth,
-  x=1cm, y=1cm,
-  line width=0.45pt,
-  line cap=round,
-  line join=round,
-  font=\normalsize,
-  flowtext/.style={anchor=center,align=center,inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}}},
-  flowbox/.style={flowtext,draw,minimum height=.68cm,inner xsep=3pt,inner ysep=2pt},
-  terminal/.style={flowbox,rounded corners=2pt,minimum width=1.35cm},
-  process/.style={flowbox},
-  io/.style={flowbox,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
-    minimum height=.76cm},
-  decision/.style={flowbox,shape=diamond,aspect=2.8,minimum width=3.20cm,
-    minimum height=1.02cm,inner sep=0pt},
-  branchlabel/.style={flowtext,inner sep=0pt}
-]
-  \node[terminal] (start) at (0,12.20) {开始};
-  \node[io,minimum width=1.80cm] (input) at (0,10.90) {输入 $n$};
-  \node[process,minimum width=2.40cm] (init) at (0,9.55) {$i=1,S=0$};
-  \node[process,minimum width=4.60cm,minimum height=1.02cm] (update) at (0,7.75)
-    {$S=S+\dfrac{1}{(2i-1)(2i+1)}$};
-  \node[process,minimum width=1.85cm] (increment) at (0,6.20) {$i=i+1$};
-  \node[decision] (test) at (0,4.75) {$i>n?$};
-  \node[io,minimum width=2.15cm] (output) at (0,3.25) {输出 $S$};
-  \node[terminal] (finish) at (0,1.85) {结束};
-
-  \draw[->] (start.south) -- (input.north);
-  \draw[->] (input.south) -- (init.north);
-  \draw[->] (init.south) -- (update.north);
-  \draw[->] (update.south) -- (increment.north);
-  \draw[->] (increment.south) -- (test.north);
-  \draw[->] (test.south) -- node[branchlabel,right] {是} (output.north);
-  \draw[->] (output.south) -- (finish.north);
-
-  % 否 returns independently along the right side and re-enters above update.
-  \draw (test.east) -- node[branchlabel,above] {否} (3.20,4.75) -- (3.20,8.55);
-  \draw[->] (3.20,8.55) -- (0,8.55);
-
-  \path[use as bounding box] (-0.35,1.50) rectangle (3.55,12.55);
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth]
+\tikzset{
+  flowStart/.style={rectangle, rounded corners=1.5mm, draw, line width=0.6pt, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm, align=center, execute at begin node={\setlength{\parindent}{0pt}\centering}},
+  flowIO/.style={trapezium, trapezium left angle=75, trapezium right angle=105, draw, line width=0.6pt, minimum width=30mm, minimum height=10mm, inner sep=2mm, align=center, execute at begin node={\setlength{\parindent}{0pt}\centering}},
+  flowProc/.style={rectangle, draw, line width=0.6pt, minimum width=30mm, minimum height=10mm, inner sep=2mm, align=center, execute at begin node={\setlength{\parindent}{0pt}\centering}},
+  flowWide/.style={rectangle, draw, line width=0.6pt, minimum width=62mm, minimum height=16mm, inner sep=2mm, align=center, execute at begin node={\setlength{\parindent}{0pt}\centering}},
+  flowDec/.style={diamond, aspect=2.4, draw, line width=0.6pt, minimum width=34mm, minimum height=15mm, inner sep=1mm, align=center, execute at begin node={\setlength{\parindent}{0pt}\centering}},
+  flowEdge/.style={->, >=Stealth, line width=0.6pt},
+  flowLabel/.style={font=\normalsize, inner sep=1pt}
+}
+\node[flowStart] (start) at (0,0) {开始};
+\node[flowIO] (input) at (0,-1.9) {输入 $n$};
+\node[flowProc] (init) at (0,-3.6) {$i=1,S=0$};
+\coordinate (J) at (0,-4.7);
+\node[flowWide] (Sbox) at (0,-6.2) {$S=S+\dfrac{1}{(2i-1)(2i+1)}$};
+\node[flowProc] (inc) at (0,-8.2) {$i=i+1$};
+\node[flowDec] (dec) at (0,-10.0) {$i>n?$};
+\node[flowIO] (out) at (0,-12.0) {输出 $S$};
+\node[flowStart] (end) at (0,-13.7) {结束};
+\draw[flowEdge] (start.south) -- (input.north);
+\draw[flowEdge] (input.south) -- (init.north);
+\draw[flowEdge] (init.south) -- (Sbox.north);
+\draw[flowEdge] (Sbox.south) -- (inc.north);
+\draw[flowEdge] (inc.south) -- (dec.north);
+\draw[flowEdge] (dec.south) -- (out.north) node[midway, right=2mm, flowLabel] {是};
+\draw[flowEdge] (out.south) -- (end.north);
+% 否回环：从判定框东顶点向右绕过宽分式框与更新框，经外侧通道汇入主干J
+\draw[flowEdge] (dec.east) -- node[flowLabel, above=2mm, pos=0.22] {否} (4.2,-10.0) -- (4.2,-4.7) -- (J);
 \end{tikzpicture}

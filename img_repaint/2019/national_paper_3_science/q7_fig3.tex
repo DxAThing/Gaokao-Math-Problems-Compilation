@@ -1,0 +1,17 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=0.65cm,y=0.5cm,line width=.6pt,>=stealth,font=\normalsize]
+% distractor: even-like double peak, zero valley at origin; representative |true| model
+\draw[->] (-5.7,0) -- (6.2,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.5) -- (0,9.5) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw (4,-0.12) -- (4,0.12);
+\node[below,inner sep=0pt,yshift=-2pt] at (4,0) {$4$};
+\draw (-0.12,8) -- (0.12,8);
+\node[left,inner sep=0pt,xshift=-2pt] at (0,8) {$8$};
+\node[below left,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\begin{scope}
+\clip (-5.7,-1.5) rectangle (6.2,9.5);
+\draw[domain=-5.5:-0.05,samples=120] plot (\x,{2*pow(abs(\x),3)/(pow(2,\x)+pow(2,-\x))});
+\draw[domain=0.05:5.5,samples=120] plot (\x,{2*pow(abs(\x),3)/(pow(2,\x)+pow(2,-\x))});
+% exact zero valley marker (no filled dot in source; curve passes through origin)
+\end{scope}
+\end{tikzpicture}

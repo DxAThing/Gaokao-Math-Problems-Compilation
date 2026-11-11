@@ -1,0 +1,13 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-2.2,0) -- (3.2,0) node[right,xshift=4pt] {$x$};
+\draw[->] (0,-1.4) -- (0,2.8) node[above,yshift=4pt] {$y$};
+\node[below left,xshift=-3pt,yshift=-3pt] at (0,0) {$O$};
+\draw (0,1) -- (-0.09,1);
+\node[left,xshift=-4pt] at (0,1) {$1$};
+% line y=x+0.5
+\draw[solid] (-1.7,-1.2) -- (1.7,2.2);
+\node[above right,xshift=5pt,yshift=5pt] at (1.7,2.2) {$y=x+a$};
+% exponential y=(0.5)^x, decreasing, through (0,1)
+\draw[solid,domain=-1.4:2.2,samples=120] plot (\x,{pow(0.5,\x)});
+\node[above left,xshift=-5pt,yshift=5pt] at (-1.4,{pow(0.5,-1.4)}) {$y=a^{x}$};
+\end{tikzpicture}

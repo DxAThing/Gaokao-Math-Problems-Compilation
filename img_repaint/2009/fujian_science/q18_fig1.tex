@@ -1,0 +1,19 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=stealth]
+\draw[->] (-0.6,0) -- (8.9,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-0.6) -- (0,4.4) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw[dashed] (0,3.4641) -- (3,3.4641);
+\draw[dashed] (3,0) -- (3,3.4641);
+\draw[dashed] (4,0) -- (4,3);
+\draw[domain=0:4,samples=160] plot (\x,{3.4641*sin(30*\x)});
+\draw (4,3) -- (6.9,2) -- (8,0);
+\node[below left,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\node[above,inner sep=0pt,yshift=2pt] at (3,3.4641) {$S$};
+\node[above right,inner sep=0pt,xshift=2pt,yshift=2pt] at (4,3) {$M$};
+\node[above right,inner sep=0pt,xshift=2pt,yshift=2pt] at (6.9,2) {$N$};
+\node[above right,inner sep=0pt,xshift=2pt,yshift=2pt] at (8,0) {$P$};
+\node[below,inner sep=0pt,yshift=-2pt] at (3,0) {$3$};
+\node[below,inner sep=0pt,yshift=-2pt] at (4,0) {$4$};
+\node[below,inner sep=0pt,yshift=-2pt] at (8,0) {$8$};
+\node[left,inner sep=0pt,xshift=-2pt] at (0,3.4641) {$2\sqrt{3}$};
+\end{tikzpicture}

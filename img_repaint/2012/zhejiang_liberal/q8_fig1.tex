@@ -1,0 +1,13 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-4.4,0) -- (4.4,0) node[below right,inner sep=3pt] {$x$};
+\draw[->] (0,-3.2) -- (0,3.2) node[above left,inner sep=3pt] {$y$};
+% ellipse: x^2/10.24 + y^2/3.24 = 1 (A=3.2, B=1.8)
+\draw[solid,domain=0:360,samples=200,variable=\t] plot ({3.2*cos(\t)},{1.8*sin(\t)});
+\draw[domain=-2.7:2.7,samples=160,variable=\t] plot ({1.6*sqrt(1+\t*\t/4.44)},\t);
+\draw[domain=-2.7:2.7,samples=160,variable=\t] plot ({-1.6*sqrt(1+\t*\t/4.44)},\t);
+% labels with clearance (offset sideways so they do not sit on the hyperbola stroke)
+\node[below left,inner sep=3pt] at (0,0) {$O$};
+\node[inner sep=3pt,below left=2pt] at (-1.6,0) {$M$};
+\node[inner sep=3pt,below right=2pt] at (1.6,0) {$N$};
+\end{tikzpicture}

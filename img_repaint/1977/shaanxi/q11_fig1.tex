@@ -1,0 +1,20 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes (formula coordinate system, schematic scale a=3, b=2)
+\draw[->] (-3.8,0)--(4.4,0) node[right] {$x$};
+\draw[->] (0,-2.8)--(0,3.1) node[above] {$y$};
+% ellipse x^2/9+y^2/4=1 generated from its equation
+\draw[solid] plot[domain=0:360,samples=200] ({3*cos(\x)},{2*sin(\x)});
+% inscribed rectangle, half-width 1.8, half-height 1.6 = (2/3)*sqrt(9-1.8^2)
+\draw[solid] (-1.8,1.6)--(1.8,1.6)--(1.8,-1.6)--(-1.8,-1.6)--cycle;
+\node[font=\normalsize,below left=3pt] at (-3,0) {$-a$};
+\node[font=\normalsize,below right=3pt] at (3,0) {$a$};
+\node[font=\normalsize,above left=3pt] at (0,2) {$b$};
+\node[font=\normalsize,below left=3pt] at (0,-2) {$-b$};
+\node[font=\normalsize,below left=3pt] at (0,0) {$O$};
+\node[font=\normalsize,above left=2pt] at (-1.8,1.6) {$A$};
+\node[font=\normalsize,above right=2pt] at (1.8,1.6) {$D$};
+\node[font=\normalsize,below right=2pt] at (1.8,-1.6) {$C$};
+\node[font=\normalsize,below left=2pt] at (-1.8,-1.6) {$B$};
+\node[font=\normalsize] at (-0.9,1.28) {$x$};
+\node[font=\normalsize] at (0.9,1.28) {$x$};
+\end{tikzpicture}

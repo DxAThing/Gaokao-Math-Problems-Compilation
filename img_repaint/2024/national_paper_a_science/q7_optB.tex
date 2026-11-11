@@ -1,0 +1,14 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\def\fB{-1*\x*\x+(exp(\x)-exp(-\x))*sin(\x r)}
+\draw[->] (-3.55,0)--(3.45,0) node[right,inner sep=2pt] {$x$};
+\draw[->] (0,-2.95)--(0,3.25) node[above,inner sep=2pt] {$y$};
+\foreach \t in {-2.8,1,2.8}{\draw (\t,0)--(\t,.09);}
+\draw (-.09,1)--(0,1);
+\node[below left,inner sep=3pt] at (-2.8,0) {$-2.8$};
+\node[below,inner sep=2pt] at (1,-.06) {$1$};
+\node[below right,inner sep=3pt] at (2.8,0) {$2.8$};
+\node[left,inner sep=2pt] at (-.08,1) {$1$};
+\node[below left,inner sep=2pt] at (-.05,-.30) {$O$};
+\draw[domain=-2.8:2.8,samples=700] plot (\x,{\fB});
+\end{tikzpicture}

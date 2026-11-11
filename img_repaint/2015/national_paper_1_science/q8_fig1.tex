@@ -1,0 +1,13 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1.6cm,y=1.6cm,line width=.6pt,>=stealth,font=\normalsize]
+\draw[->] (-1.9,0) -- (3.1,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.7) -- (0,1.7) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw[domain=-1.05:2.1,samples=240] plot (\x,{cos(180*\x+45)});
+\draw (0.25,0) -- (0.25,-0.06);
+\draw (1.25,0) -- (1.25,-0.06);
+\draw (0,1) -- (0.06,1);
+\node[below left,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\node[above right,inner sep=0pt,xshift=2pt,yshift=2pt] at (0.25,0) {$\frac{1}{4}$};
+\node[above left,inner sep=0pt,xshift=-2pt,yshift=2pt] at (1.25,0) {$\frac{5}{4}$};
+\node[right,inner sep=0pt,xshift=2pt] at (0.06,1) {$1$};
+\end{tikzpicture}

@@ -1,0 +1,13 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (H) at (0,2);
+\draw[->] (-4,0)--(4,0);
+\draw[->] (0,-4)--(0,4);
+\node[right,inner sep=0pt,xshift=2pt] at (4,0) {$x$};
+\node[above,inner sep=0pt,yshift=2pt] at (0,4) {$y$};
+\draw[domain=0.012:3.5,samples=181] plot (\x,{2+sqrt(\x)});
+\draw[domain=-3.5:-0.012,samples=181] plot (\x,{2-sqrt(-\x)});
+\draw[fill=white] (H) circle (2.4pt);
+\node[below left,inner sep=1pt] at (O) {$O$};
+\end{tikzpicture}

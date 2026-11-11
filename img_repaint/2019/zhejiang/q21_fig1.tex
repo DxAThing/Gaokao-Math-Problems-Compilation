@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,
+  geometry edge/.style={solid,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=2pt}]
+\draw[->] (-0.6,0)--(6.2,0) node[right] {$x$};
+\draw[->] (0,-4.6)--(0,5.2) node[above left] {$y$};
+\node[geometry label,below left] at (0,0) {$O$};
+\draw[line width=1.0pt,domain=-4.4:5.2,samples=120] plot ({(\x)*(\x)/4},{\x});
+\coordinate (O) at (0,0);
+\coordinate (F) at (1,0);
+\coordinate (G) at (3.2890740741,0.0000000000);
+\coordinate (Q) at (4.7600000000,0.0000000000);
+\coordinate (A) at (5.7600000000,4.8000000000);
+\coordinate (B) at (0.1736111111,-0.8333333333);
+\coordinate (C) at (3.9336111111,-3.9666666667);
+\draw[geometry edge] (A)--(B);
+\draw[geometry edge] (A)--(G);
+\draw[geometry edge] (A)--(C);
+\draw[geometry edge] (B)--(C);
+\draw[geometry edge] (C)--(G);
+\node[geometry label,below,xshift=1pt,yshift=-3pt] at (F) {$F$};
+\node[geometry label,below,xshift=-5pt,yshift=-2pt] at (G) {$G$};
+\node[geometry label,below right=3pt] at (Q) {$Q$};
+\node[geometry label,above left] at (A) {$A$};
+\node[geometry label,below left,xshift=-5pt,yshift=1pt] at (B) {$B$};
+\node[geometry label,below,xshift=-1.0pt,yshift=-2pt] at (C) {$C$};
+\end{tikzpicture}

@@ -1,0 +1,25 @@
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize]
+  \coordinate (A) at (0,0);
+  \coordinate (P) at (0,3.4);
+  \coordinate (B) at (1.6,-0.9);
+  \coordinate (C) at (4.0,0);
+  % solid tetra edges
+  \draw (A) -- (P);
+  \draw (P) -- (B);
+  \draw (P) -- (C);
+  \draw (A) -- (B);
+  \draw (B) -- (C);
+  \draw[dashed] (A) -- (C);
+  % axes: z along PA upward, x toward B, y dashed
+  \draw[-{Stealth}] (A) -- (0,4.2);
+  \draw[-{Stealth}] (A) -- (2.4,-1.35);
+  \draw[-{Stealth}, dashed] (A) -- (0.9,0.7);
+  \node[above left=5pt, fill=white, inner sep=1.5pt] at (0,4.2) {$z$};
+  \node[below right=5pt, fill=white, inner sep=1.5pt] at (2.4,-1.35) {$x$};
+  \node[above right=5pt, fill=white, inner sep=1.5pt] at (0.9,0.7) {$y$};
+  \foreach \p in {A,P,B,C} {\fill (\p) circle (1.1pt);}
+  \node[left=5pt, fill=white, inner sep=1.5pt] at (A) {$A$};
+  \node[left=5pt, fill=white, inner sep=1.5pt] at (P) {$P$};
+  \node[below=5pt, fill=white, inner sep=1.5pt] at (B) {$B$};
+  \node[right=5pt, fill=white, inner sep=1.5pt] at (C) {$C$};
+\end{tikzpicture}

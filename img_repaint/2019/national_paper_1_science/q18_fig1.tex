@@ -1,0 +1,42 @@
+\begin{tikzpicture}[line width=.6pt, font=\normalsize, >=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (2.6,0);
+\coordinate (E) at (3.5000000000,0.4500000000);
+\coordinate (C) at (4.4000000000,0.9000000000);
+\coordinate (D) at (1.8,0.9);
+\coordinate (A1) at (0,4);
+\coordinate (B1) at (2.6,4);
+\coordinate (C1) at (4.4000000000,4.9000000000);
+\coordinate (D1) at (1.8,4.9);
+\coordinate (M) at (2.6,2.0);
+\coordinate (N) at (0.9000000000,2.4500000000);
+% bottom (hidden dashed)
+\draw[dashed] (A) -- (D);
+\draw[dashed] (D) -- (C);
+\draw[dashed] (D) -- (D1);
+% front / sides solid
+\draw (A) -- (B) -- (E) -- (C);
+\draw (B) -- (B1);
+\draw (C) -- (C1);
+\draw (A) -- (A1);
+% top
+\draw (A1) -- (B1) -- (C1) -- (D1) -- cycle;
+% Source interior edges and midpoint construction.
+\draw (A1)--(M)--(A);
+\draw (C1)--(E);
+\draw[dashed] (A1)--(D)--(E);
+\draw[dashed] (D)--(C1);
+\draw[dashed] (N)--(M);
+% labels (offset from strokes)
+\node[below left=2pt] at (A) {$A$};
+\node[below=2pt] at (B) {$B$};
+\node[below=2pt] at (E) {$E$};
+\node[right=2pt] at (C) {$C$};
+\node[below=3pt,inner sep=1pt] at (D) {$D$};
+\node[left=2pt] at (A1) {$A_{1}$};
+\node[below right=3pt,inner sep=1pt] at (B1) {$B_{1}$};
+\node[right=2pt] at (C1) {$C_{1}$};
+\node[above=2pt] at (D1) {$D_{1}$};
+\node[right=3pt] at (M) {$M$};
+\node[left=3pt] at (N) {$N$};
+\end{tikzpicture}

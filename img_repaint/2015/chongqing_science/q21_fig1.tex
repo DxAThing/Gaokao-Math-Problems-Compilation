@@ -1,0 +1,21 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=2.7cm,y=2.7cm,line width=.6pt,font=\normalsize,>=Stealth]
+  \coordinate (O) at (0,0);
+  \coordinate (F1) at (-0.717439,0);
+  \coordinate (F2) at (0.717439,0);
+  \coordinate (P) at (0.239146,0.676408);
+  \coordinate (Q) at (0.915554,-0.280177);
+  % ellipse x^2+y^2/0.485281=1  (a=1, b^2=6 sqrt2-8)
+  \draw plot[domain=0:360,samples=241] ({cos(\x)},{0.696621*sin(\x)});
+  % focal segments and right angle at P
+  \draw (F1)--(P)--(Q);
+  \draw (0.149331,0.612899)--(0.212840,0.523084)--(0.302655,0.586593);
+  % coordinate axes
+  \draw[->] (-1.28,0)--(1.36,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+  \draw[->] (0,-0.98)--(0,1.02) node[above,inner sep=0pt,yshift=2pt] {$y$};
+  \node[below=3pt,inner sep=1pt] at (F1) {$F_1$};
+  \node[below left=3pt,inner sep=1pt] at (F2) {$F_2$};
+  \node[below left,inner sep=1pt] at (O) {$O$};
+  \node[above,inner sep=1pt] at (P) {$P$};
+  \node[below right,inner sep=1pt] at (Q) {$Q$};
+\end{tikzpicture}

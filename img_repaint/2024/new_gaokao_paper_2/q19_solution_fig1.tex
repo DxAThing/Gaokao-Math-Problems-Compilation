@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (P1) at (2.5218047074,2.1609023537);
+\coordinate (Q1) at (-1.3218047074,0.2390976463);
+\coordinate (P2) at (1.3000000000,0.0000000000);
+\coordinate (Q2) at (-2.1666666667,-1.7333333333);
+\coordinate (P3) at (1.4810079668,-0.7094960166);
+\coordinate (Q3) at (-3.4143413001,-3.1571706500);
+\coordinate (P4) at (1.9345909711,-1.4327045144);
+\draw[->] (-4,0)--(4,0) node[right=2pt] {$x$};\draw[->] (0,-3.3)--(0,3.5) node[above=2pt] {$y$};\node[below left=2pt] at (0,0) {$O$};
+\draw[domain=-3.4:3.5,samples=2] plot (\x,{.5*\x+(0.9)});
+\draw[domain=-3.4:3.5,samples=2] plot (\x,{.5*\x+(-0.65)});
+\draw[domain=-3.4:3.5,samples=2] plot (\x,{.5*\x+(-1.45)});
+\draw[domain=-3.4:3.5,samples=2] plot (\x,{.5*\x+(-2.4)});
+\draw[domain=-1.75:1.75,samples=150] plot ({-1.3*cosh(\x)},{1.3*sinh(\x)});
+\draw[domain=-1.75:1.75,samples=150] plot ({1.3*cosh(\x)},{1.3*sinh(\x)});
+\draw[line width=5pt,line cap=butt,domain=-0.9517456311643211:1.281512110089525,samples=150] plot ({1.3*cosh(\x)},{1.3*sinh(\x)});
+\node[right=2pt,xshift=3pt,yshift=-3pt] at (P1) {$P_{1}$};
+\node[above left=2pt] at (Q1) {$Q_{1}$};
+\node[right=2pt,xshift=-1pt,yshift=-7pt] at (P2) {$P_{2}$};
+\node[above left=2pt] at (Q2) {$Q_{2}$};
+\node[right=2pt,xshift=3pt,yshift=-3pt] at (P3) {$P_{3}$};
+\node[above left=2pt] at (Q3) {$Q_{3}$};
+\node[right=2pt,xshift=3pt,yshift=-3pt] at (P4) {$P_{4}$};
+\end{tikzpicture}

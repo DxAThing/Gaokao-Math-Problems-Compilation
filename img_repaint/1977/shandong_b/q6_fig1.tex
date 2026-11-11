@@ -1,0 +1,20 @@
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% front triangle (left; translated down from upper position, geometry unchanged)
+\begin{scope}[shift={(0,0)}]
+\draw (0,0) -- (3.2,0) -- (1.6,3.2) -- cycle;
+% vertical centre line segment through front view
+\draw[dash pattern=on 8pt off 3pt on 1pt off 3pt] (1.6,-0.6) -- (1.6,3.8);
+\node at (1.6,-1.05) {正视图};
+\end{scope}
+% plan square with diagonals (right; translated from lower position, geometry unchanged)
+\begin{scope}[shift={(4.6,0)}]
+\draw (0,0) rectangle (3.2,3.2);
+\draw (0,0) -- (3.2,3.2);
+\draw (0,3.2) -- (3.2,0);
+% vertical centre line segment through plan view
+\draw[dash pattern=on 8pt off 3pt on 1pt off 3pt] (1.6,-0.6) -- (1.6,3.8);
+% horizontal centre line through square
+\draw[dash pattern=on 8pt off 3pt on 1pt off 3pt] (-0.6,1.6) -- (3.8,1.6);
+\node at (1.6,-1.05) {俯视图};
+\end{scope}
+\end{tikzpicture}

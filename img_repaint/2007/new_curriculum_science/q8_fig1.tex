@@ -1,0 +1,42 @@
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% front: right triangle, vertical side right, horizontal bottom, 3x3 (left; translated down, geometry unchanged)
+\begin{scope}[shift={(0,0)}]
+\draw (0,0) -- (3,0) -- (3,3) -- cycle;
+\draw (3,0) -- (3.35,0);
+\draw (3,3) -- (3.35,3);
+\draw[<->,>=Latex] (3.2,0) -- (3.2,3);
+\node[fill=white,inner sep=1pt] at (3.2,1.5) {20};
+\draw (0,-0.05) -- (0,-0.4);
+\draw (3,-0.05) -- (3,-0.4);
+\draw[<->,>=Latex] (0,-0.25) -- (3,-0.25);
+\node[fill=white,inner sep=1pt] at (1.5,-0.25) {20};
+\node at (1.5,-0.95) {正视图};
+\end{scope}
+% side: isosceles triangle base 3 height 3 (middle; translated down, geometry unchanged)
+\begin{scope}[shift={(4.8,0)}]
+\draw (0,0) -- (3,0) -- (1.5,3) -- cycle;
+\draw (0,-0.05) -- (0,-0.4);
+\draw (3,-0.05) -- (3,-0.4);
+\draw[<->,>=Latex] (0,-0.25) -- (3,-0.25);
+\node[fill=white,inner sep=1pt] at (1.5,-0.25) {20};
+\node at (1.5,-0.95) {侧视图};
+\end{scope}
+% plan: 3x3 square with two lines to right-edge midpoint (right; translated from lower-left, geometry unchanged)
+\begin{scope}[shift={(9.6,0)}]
+\draw (0,0) rectangle (3,3);
+\draw (0,3) -- (3,1.5);
+\draw (0,0) -- (3,1.5);
+\draw (0,-0.05) -- (0,-0.4);
+\draw (3,-0.05) -- (3,-0.4);
+\draw[<->,>=Latex] (0,-0.25) -- (3,-0.25);
+\node[fill=white,inner sep=1pt] at (1.5,-0.25) {20};
+\draw (3,3) -- (3.35,3);
+\draw (3,1.5) -- (3.35,1.5);
+\draw (3,0) -- (3.35,0);
+\draw[<->,>=Latex] (3.2,1.5) -- (3.2,3);
+\node[fill=white,inner sep=1pt] at (3.2,2.25) {10};
+\draw[<->,>=Latex] (3.2,0) -- (3.2,1.5);
+\node[fill=white,inner sep=1pt] at (3.2,0.75) {10};
+\node at (1.5,-0.95) {俯视图};
+\end{scope}
+\end{tikzpicture}

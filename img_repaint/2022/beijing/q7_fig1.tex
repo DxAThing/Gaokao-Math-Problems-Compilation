@@ -1,0 +1,30 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes, extend half grid beyond last tick
+\draw[->] (0,0) -- (9.0,0) node[right,inner sep=0pt,xshift=4pt] {$T$};
+\draw[->] (0,0) -- (0,6.3) node[above,inner sep=0pt,yshift=4pt] {$\lg P$};
+% x ticks 200/250/300/350/400
+\foreach \x/\lbl in {0/200,2/250,4/300,6/350,8/400} {
+  \draw (\x,0) -- (\x,-0.14);
+  \node[below,inner sep=0pt,yshift=-4pt] at (\x,-0.14) {\lbl};
+}
+% y ticks 0/1/2/3/4
+\foreach \y/\lbl in {0/0,1.4/1,2.8/2,4.2/3,5.6/4} {
+  \draw (0,\y) -- (-0.14,\y);
+  \node[left,inner sep=0pt,xshift=-4pt] at (-0.14,\y) {\lbl};
+}
+% outer top/right frames
+\draw (0,5.6) -- (8,5.6);
+\draw (8,0) -- (8,5.6);
+% gas-liquid boundary: single smooth cubic
+\draw (0,0.42) .. controls (.20,.49) and (.45,.57) .. (.64,.6422) .. controls (1.5,.98) and (2.8,1.6) .. (4.24,2.478);
+% solid-liquid boundary: single smooth cubic, shares triple point
+\draw (0.64,0.6422) .. controls (0.68,2.45) and (1.9,4.78) .. (5.92,5.6);
+% critical dashed lines
+\draw[dashed,line width=.45pt] (4.24,2.478) -- (4.24,5.1149);
+\draw[dashed,line width=.45pt] (4.24,2.478) -- (8,2.478);
+% region labels in whitespace, offset from lines
+\node[inner sep=0pt] at (1.15,4.9) {固态};
+\node[inner sep=0pt] at (2.2,3.0) {液态};
+\node[inner sep=0pt] at (4.8,1.2) {气态};
+\node[inner sep=0pt] at (6.0,3.9) {超临界状态};
+\end{tikzpicture}

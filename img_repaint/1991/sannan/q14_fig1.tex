@@ -1,0 +1,13 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=0.95cm,y=1.15cm,line width=.6pt,>=stealth,font=\normalsize]
+\draw[->] (-3.2,0)--(5.4,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.8)--(0,1.8) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw[dashed] (0,-1)--(2.5707963267948966,-1);
+\draw (0,1)--(-0.12,1);
+\draw (1,0)--(1,0.08);
+\draw[domain=-2.6:4.9,samples=250] plot (\x,{sin(deg(1-\x))});
+\node[below right,inner sep=0pt,xshift=2pt,yshift=-2pt] at (0,0) {$O$};
+\node[anchor=west,inner sep=0pt,xshift=2pt] at (0,1) {$1$};
+\node[anchor=south west,inner sep=0pt,xshift=2pt,yshift=2pt] at (1,0) {$1$};
+\node[anchor=east,inner sep=0pt,xshift=-2pt] at (0,-1) {$-1$};
+\end{tikzpicture}

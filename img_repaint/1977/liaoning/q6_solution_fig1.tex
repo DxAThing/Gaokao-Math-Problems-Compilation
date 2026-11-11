@@ -1,0 +1,22 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.5cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-1.05,0)--(4.90,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-2.10)--(0,4.30) node[above,inner sep=0pt,yshift=2pt] {$y$};
+% x ticks
+\foreach \xp in {-0.8,-0.4,1,2,3,4} {\draw[line width=.6pt] (\xp,0)--(\xp,0.08);}
+\node[anchor=north east,inner sep=0pt,xshift=-1pt,yshift=-2pt] at (0,0) {$0$};
+\node[anchor=north,inner sep=0pt,yshift=-2pt] at (1,0) {$1$};
+\node[anchor=north,inner sep=0pt,yshift=-2pt] at (2,0) {$2$};
+\node[above left,inner sep=0pt,xshift=-2pt,yshift=2pt] at (3,0) {$3$};
+\node[anchor=north,inner sep=0pt,yshift=-2pt] at (4,0) {$4$};
+% y ticks
+\foreach \yp in {1,2,3,-1} {\draw[line width=.6pt] (0,\yp)--(-0.05,\yp);}
+\node[anchor=east,inner sep=0pt,xshift=-2pt] at (0,3) {$3$};
+\node[anchor=east,inner sep=0pt,xshift=-2pt] at (0,2) {$2$};
+\node[anchor=east,inner sep=0pt,xshift=-2pt] at (0,1) {$1$};
+\node[anchor=east,inner sep=0pt,xshift=-2pt] at (0,-1) {$-1$};
+% parabola y=x^2-4x+3 exact
+\draw[domain=-0.35:4.35,samples=160] plot (\x,{\x*\x-4*\x+3});
+% vertex label below minimum with clearance
+\node[anchor=north,inner sep=0pt,yshift=-4pt] at (2,-1) {$(2,-1)$};
+\end{tikzpicture}

@@ -1,55 +1,26 @@
-% Source PDF: source/普通高考/2016/2016全国1理(河南,河北,山西,江西,湖北,湖南,广东,安徽,福建).pdf, page 1, question 9.
-% pdfimages -list found no embedded bitmap; the program diagram is vector artwork.
-% Grid evidence: tmp/redraw_flowchart_2016_n1s/grids/page1_grid100.jpg and
-% tmp/redraw_flowchart_2016_n1s/grids/q9_block2_grid50.jpg; comparison uses
-% tmp/redraw_flowchart_2016_n1s/crops/q9_original.png from the no-grid page render.
-% Complete node -> directed-edge list from the source:
-%   start -> input -> update -> test; test --是--> output -> finish;
-%   test --否--> n-increment -> input/update entry.  The left return arrow
-%   joins the unique input-to-update vertical stem; no loop-to-output edge exists.
-% solid segments: all node outlines and connectors; dashed segments: none.
-% Labels are centered in nodes; 是/否 sit beside their outgoing branches.
-
-\begin{tikzpicture}[
-  >=Stealth,
-  x=1cm,y=1cm,
-  line width=0.50pt,
-  line join=round,
-  line cap=round,
-  flowtext/.style={font=\normalsize,anchor=center,align=center,
-                   execute at begin node={\setlength{\parindent}{0pt}}},
-  flowbox/.style={flowtext,draw,inner xsep=4pt,inner ysep=2pt},
-  terminator/.style={flowbox,rounded corners=0.18cm,
-                     minimum width=1.22cm,minimum height=0.72cm},
-  io/.style={flowbox,trapezium,trapezium left angle=78,trapezium right angle=78,
-             minimum height=0.72cm},
-  process/.style={flowbox},
-  decision/.style={flowbox,diamond,aspect=4.0,inner xsep=4pt,inner ysep=2pt},
+\parindent=0pt
+\begin{tikzpicture}[x=1cm,y=1cm,
+  every node/.style={font=\normalsize, outer sep=0pt},
+  term/.style={draw, shape=rectangle, rounded corners=1.5mm, line width=0.6pt, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm, align=center},
+  proc/.style={draw, rectangle, line width=0.6pt, minimum width=26mm, minimum height=9mm, inner sep=2.5mm, align=center},
+  procwide/.style={draw, rectangle, line width=0.6pt, minimum width=62mm, minimum height=13mm, inner sep=2.5mm, align=center},
+  io/.style={draw, trapezium, trapezium left angle=72, trapezium right angle=108, line width=0.6pt, minimum width=38mm, minimum height=9mm, inner sep=2.5mm, align=center},
+  dec/.style={draw, diamond, aspect=2.6, line width=0.6pt, minimum width=52mm, inner xsep=3mm, inner ysep=2.5mm, align=center},
+  arr/.style={->, >=Latex, line width=0.6pt}
 ]
-  \path[use as bounding box] (0,0) rectangle (8,9);
-
-  \node[terminator] (start) at (5.50,8.22) {开始};
-  \node[io,minimum width=3.20cm] (input) at (5.50,6.88) {输入 \(x,y,n\)};
-  \node[process,minimum width=4.73cm,minimum height=1.20cm] (update)
-      at (5.50,5.29) {\(x=x+\frac{n-1}{2},y=ny\)};
-  \node[process,minimum width=2.23cm,minimum height=0.63cm] (increment)
-      at (1.42,5.29) {\(n=n+1\)};
-  \node[decision,minimum width=4.92cm,minimum height=1.22cm] (test)
-      at (5.50,3.45) {\(x^2+y^2\geq36\)};
-  \node[io,minimum width=2.66cm] (output) at (5.50,1.85) {输出 \(x,y\)};
-  \node[terminator] (finish) at (5.50,0.49) {结束};
-
-  % Main path and the true branch.
-  \draw[->] (start.south) -- (input.north);
-  \draw[->] (input.south) -- (update.north);
-  \draw[->] (update.south) -- (test.north);
-  \draw[->] (test.south) -- (output.north);
-  \draw[->] (output.south) -- (finish.north);
-
-  % False branch: test -> n increment, then back to the shared input/update stem.
-  \draw[->] (test.west) -- (1.42,3.45) -- (increment.south);
-  \draw[->] (increment.north) -- (1.42,6.20) -- (5.50,6.20);
-
-  \node[flowtext,inner sep=0pt,anchor=north] at (2.83,3.38) {否};
-  \node[flowtext,inner sep=0pt,anchor=west] at (4.86,2.78) {是};
+\node[term] (start) at (1.0,0) {开始};
+\node[io] (inp) at (1.0,-2.2) {输入 $x,y,n$};
+\coordinate (J) at (1.0,-3.6);
+\node[procwide] (wide) at (1.0,-5.4) {$x=x+\dfrac{n-1}{2},\, y=ny$};
+\node[dec] (cond) at (1.0,-8.2) {$x^{2}+y^{2} \geqslant 36$};
+\node[io] (out) at (1.0,-11.0) {输出 $x,y$};
+\node[term] (end) at (1.0,-13.2) {结束};
+\node[proc] (nn) at (-4.4,-5.0) {$n=n+1$};
+\draw[arr] (start.south) -- (inp.north);
+\draw[arr] (inp.south) -- (wide.north);
+\draw[arr] (wide.south) -- (cond.north);
+\draw[arr] (cond.south) -- node[pos=0.4,right=1mm] {是} (out.north);
+\draw[arr] (out.south) -- (end.north);
+\draw[arr] (cond.west) -- node[pos=0.2,above=1mm] {否} (-4.4,-8.2) -- (nn.south);
+\draw[arr] (nn.north) |- (J);
 \end{tikzpicture}

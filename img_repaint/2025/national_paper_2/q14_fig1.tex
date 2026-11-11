@@ -1,0 +1,23 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% cylinder body: width 4, height 3
+\draw (-2,0) -- (-2,4.5);
+\draw (2,0) -- (2,4.5);
+% top rim full ellipse
+\draw (0,4.5) ellipse (2 and 0.3);
+% top diameter chord (visible in original)
+\draw (-2,4.5) -- (2,4.5);
+% bottom rim: front solid, back dashed
+\draw (-2,0) arc (180:360:2 and 0.3);
+\draw[dashed] (-2,0) arc (180:0:2 and 0.3);
+% bottom dashed diameter (visible in original)
+\draw[dashed] (-2,0) -- (2,0);
+% two equal dashed spheres (iron balls)
+\draw[dashed] (-.75,1.25) circle (1.25);
+\draw[dashed] (.75,3.25) circle (1.25);
+% centers
+\fill (-.75,1.25) circle (1.5pt);
+\fill (.75,3.25) circle (1.5pt);
+% labels near centers with clearance from circle strokes
+\node[left=3pt] at (-.75,1.25) {$A$};
+\node[left=3pt] at (.75,3.25) {$B$};
+\end{tikzpicture}

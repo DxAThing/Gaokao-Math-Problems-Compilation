@@ -1,0 +1,16 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-3.2,0)--(5.2,0);
+\node[below right,inner sep=1.5pt] at (5.2,0) {$x$};
+\draw[->] (0,-3.2)--(0,3.2);
+\node[above right,inner sep=1.5pt] at (0,3.2) {$y$};
+% curve C: sqrt((x-2)^2+y^2)*(x+2)=4, x>-2; y=+-sqrt(16/(x+2)^2-(x-2)^2)
+\draw[smooth,samples=200,domain=-1:{sqrt(8)}] plot (\x,{sqrt(max(0,16/(\x+2)^2-(\x-2)^2))}) -- ({sqrt(8)},0);
+\draw[smooth,samples=200,domain=-1:{sqrt(8)}] plot (\x,{-sqrt(max(0,16/(\x+2)^2-(\x-2)^2))}) -- ({sqrt(8)},0);
+% focal tick (no dot: keep crossing clean)
+\draw[line width=.6pt] (2,0.08)--(2,-0.08);
+% labels offset from strokes
+\node[below left,inner sep=1.5pt,xshift=-6.00bp,yshift=0.00bp] at (0,0) {$O$};
+\node[below,inner sep=1.5pt,xshift=0.00bp,yshift=-2.00bp] at (2,0) {$F$};
+\node[above left,inner sep=1.5pt] at (-1.0,2.65) {$C$};
+\end{tikzpicture}

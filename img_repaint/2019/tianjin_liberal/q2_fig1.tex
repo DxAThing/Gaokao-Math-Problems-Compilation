@@ -1,0 +1,29 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,
+  geometry edge/.style={solid,line width=.6pt}]
+\fill[gray!30] (-1,-1)--(-1,1)--(0,2)--(3,-1)--cycle;
+\coordinate (O) at (0,0);
+\coordinate (A) at (-1,1);
+\coordinate (V1) at (0,2);
+\coordinate (V2) at (3,-1);
+\coordinate (V3) at (-1,-1);
+\draw[->] (-2.6,0)--(3.8,0) node[right] {$x$};
+\draw[->] (0,-1.6)--(0,6.0) node[above left] {$y$};
+\node[below left] at (0,0) {$O$};
+\draw (-2,0)--(-2,-.08);\node[below=3pt] at (-2,0) {$-2$};
+\draw (-1,0)--(-1,-.08);\node[above right=3pt] at (-1,0) {$-1$};
+\draw (1,0)--(1,-.08);\node[below=3pt] at (1,0) {$1$};
+\draw (2,0)--(2,-.08);\node[below=3pt] at (2,0) {$2$};
+\draw (3,0)--(3,-.08);\node[below=3pt] at (3,0) {$3$};
+\draw (0,-1)--(-.08,-1);\node[below left=3pt] at (0,-1) {$-1$};
+\draw (0,1)--(-.08,1);\node[right=3pt] at (0,1) {$1$};
+\draw (0,2)--(-.08,2);\node[left=3pt] at (0,2) {$2$};
+\draw (0,3)--(-.08,3);\node[right=3pt] at (0,3) {$3$};
+\draw (0,4)--(-.08,4);\node[left=3pt,xshift=-3pt,yshift=1pt] at (0,4) {$4$};
+\draw (0,5)--(-.08,5);\node[left=3pt] at (0,5) {$5$};
+\draw[geometry edge] (-2.6,-1.0)--(3.8,-1.0);
+\draw[geometry edge] (-1,-1.6)--(-1,5.6);
+\draw[geometry edge,domain=-2.6:3.8,samples=2] plot (\x,{2-\x});
+\draw[geometry edge,domain=-2.4:3.8,samples=2] plot (\x,{\x+2});
+\draw[geometry edge,->,domain=-1.4:0.35,samples=2] plot (\x,{4*\x+5});
+\node[font=\normalsize,above left=2pt] at (-1,1) {$A$};
+\end{tikzpicture}

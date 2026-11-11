@@ -1,0 +1,12 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-0.6,0) -- (5,0) node[below right,inner sep=1pt] {$x$};
+\draw[->] (0,-0.6) -- (0,4.2) node[above left,inner sep=1pt] {$y$};
+\node[below left,inner sep=1pt] at (0,0) {$O$};
+\draw[dashed] (2,0) -- (2,1.4);
+\draw[domain=0.4:3.6,samples=120] plot (\x,{1.0+0.4*(\x-2)-0.06*(\x-2)*(\x-2)});
+\draw[domain=0.4:2,samples=80] plot (\x,{1.4+0.15*(\x-2)-0.02*(\x-2)*(\x-2)});
+\draw[domain=2:3.55,samples=80] plot (\x,{1.4+0.15*(\x-2)+0.42*(\x-2)*(\x-2)});
+\node[below,inner sep=1pt] at (2,0) {$x_{0}$};
+\node[above,inner sep=2pt] at (1.9,3.2) {$y=g(x)$};
+\node[right,inner sep=2pt] at (3.6,1.5) {$y=f(x)$};
+\end{tikzpicture}

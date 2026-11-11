@@ -1,0 +1,15 @@
+% 2010_beijing_science_q3_condition_fixed: point-fix, already horizontal 正(主)/侧(左).
+% No geometry change; only verified order, names baseline, width.
+% Front and side elevations of a cuboid with a small cuboid removed, all solid.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt]
+% front (main) view
+\draw (0,0) rectangle (4,2);
+\draw (2,2) -- (2,1) -- (0,1);
+\node[below,font=\normalsize] at (2,-0.3) {正(主)视图};
+% side (left) view, same height
+\begin{scope}[shift={(5,0)}]
+\draw (0,0) rectangle (2,2);
+\draw (1,2) -- (1,1) -- (2,1);
+\node[below,font=\normalsize] at (1,-0.3) {侧(左)视图};
+\end{scope}
+\end{tikzpicture}

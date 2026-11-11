@@ -1,0 +1,29 @@
+\begin{tikzpicture}[line width=.6pt,line join=round,line cap=round]
+\coordinate (P) at (1.0,5.2);
+\coordinate (A) at (1.0,2.0);
+\coordinate (D) at (0,1.0);
+\coordinate (C) at (2.6,1.0);
+\coordinate (B) at (6.0,1.8);
+\coordinate (M) at (3.5,3.5);
+% base
+\draw (D) -- (C) -- (B);
+\draw[dashed] (A) -- (D);
+\draw[dashed] (A) -- (C);
+\draw[dashed] (A) -- (B);
+% vertical
+\draw[dashed] (P) -- (A);
+% lateral edges
+\draw (P) -- (D);
+\draw (P) -- (C);
+\draw (P) -- (B);
+% M on PB, segments
+\draw[dashed] (A) -- (M);
+\draw (M) -- (C);
+% labels
+\node[above] at (P) {$P$};
+\node[left] at (A) {$A$};
+\node[below left] at (D) {$D$};
+\node[below] at (C) {$C$};
+\node[right] at (B) {$B$};
+\node[above right] at (M) {$M$};
+\end{tikzpicture}

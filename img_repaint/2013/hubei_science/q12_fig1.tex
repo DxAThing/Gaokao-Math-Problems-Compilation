@@ -1,51 +1,38 @@
-% Source: source/普通高考/2013/2013湖北理.pdf, page 1, question 12.
-% Topology: start -> a=10,i=1 -> a=4?; 是 -> 输出 i -> 结束;
-% 否 -> a 是奇数?; 是 -> a=3a+1, 否 -> a=a/2; both -> i=i+1 -> loop to a=4?.
-\begin{tikzpicture}[
-  x=1cm, y=0.92cm, >=Stealth,
-  line width=0.45pt, line cap=round, line join=round,
-  every node/.style={anchor=center, align=center,
-    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
-  flowbox/.style={draw, minimum height=0.70cm, inner xsep=4pt, inner ysep=2pt,
-    align=center, execute at begin node={\setlength{\parindent}{0pt}\noindent}},
-  terminal/.style={flowbox, rounded corners=0.16cm, minimum width=1.30cm,
-    minimum height=0.72cm},
-  process/.style={flowbox, minimum width=2.75cm},
-  decision/.style={flowbox, diamond, aspect=3.0, minimum width=3.75cm,
-    minimum height=1.00cm, inner sep=1pt},
-  io/.style={flowbox, trapezium, trapezium left angle=72, trapezium right angle=108,
-    minimum width=1.95cm, minimum height=0.76cm},
-  branchlabel/.style={anchor=center, align=center, inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}\noindent}}
-]
-  \node[terminal] (start) at (0,10.0) {开始};
-  \node[process, minimum width=3.35cm] (init) at (0,8.65) {$a=10,\ i=1$};
-  \node[decision] (testA4) at (0,7.05) {$a=4?$};
-  \node[decision, minimum width=4.35cm] (testOdd) at (0,5.15) {$a\text{ 是奇数?}$};
-  \node[process, minimum width=3.05cm] (odd) at (-4.45,3.35) {$a=3a+1$};
-  \node[process, minimum width=2.55cm] (half) at (3.95,3.35) {$a=\dfrac{a}{2}$};
-  \node[process, minimum width=2.55cm] (inc) at (0,1.15) {$i=i+1$};
-  \node[io] (output) at (6.15,6.05) {输出 $i$};
-  \node[terminal] (finish) at (6.15,4.55) {结束};
-
-  \draw[->] (start.south) -- (init.north);
-  \coordinate (loopJoin) at (0,7.70);
-  \draw (init.south) -- (loopJoin);
-  \draw[->] (loopJoin) -- (testA4.north);
-  \draw[->] (testA4.south) -- node[branchlabel, right=2pt] {否} (testOdd.north);
-  \draw[->] (testA4.east) -- node[branchlabel, above=2pt] {是} (6.15,7.05) -- (output.north);
-  \draw[->] (output.south) -- (finish.north);
-
-  \draw (testOdd.west) -- node[branchlabel, above=2pt] {是} (-4.45,5.15);
-  \draw[->] (-4.45,5.15) -- (odd.north);
-  \draw (odd.south) -- (-4.45,2.05) -- (0,2.05);
-  \draw[->] (testOdd.east) -- node[branchlabel, above=2pt] {否} (3.95,5.15) -- (half.north);
-  \draw (half.south) -- (3.95,2.05);
-  \draw[->] (3.95,2.05) -- (0,2.05) -- (inc.north);
-
-  \coordinate (loopDrop) at (0,0.35);
-  \coordinate (loopLeft) at (-7.05,0.35);
-  \coordinate (loopTop) at (-7.05,7.70);
-  \draw (inc.south) -- (loopDrop) -- (loopLeft) -- (loopTop);
-  \draw[->] (loopTop) -- (loopJoin);
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth]
+\tikzset{
+  nstart/.style={draw,shape=rectangle,rounded corners=1.5mm,minimum width=26mm,minimum height=10mm,align=center,inner xsep=3mm,inner ysep=1.5mm,line width=0.6pt,execute at begin node={\setlength{\parindent}{0pt}}},
+  nproc/.style={draw,rectangle,minimum width=3.2cm,minimum height=0.95cm,align=center,inner sep=4pt,line width=0.6pt,execute at begin node={\setlength{\parindent}{0pt}}},
+  nproctall/.style={draw,rectangle,minimum width=2.6cm,minimum height=1.5cm,align=center,inner sep=4pt,line width=0.6pt,execute at begin node={\setlength{\parindent}{0pt}}},
+  nio/.style={draw,trapezium,trapezium left angle=70,trapezium right angle=110,minimum width=2.8cm,minimum height=0.95cm,align=center,inner sep=4pt,line width=0.6pt,execute at begin node={\setlength{\parindent}{0pt}}},
+  ndec/.style={draw,diamond,aspect=2.2,minimum width=3.4cm,minimum height=1.6cm,align=center,inner sep=2pt,line width=0.6pt,execute at begin node={\setlength{\parindent}{0pt}}},
+  ndecw/.style={draw,diamond,aspect=2.5,minimum width=4.4cm,minimum height=1.7cm,align=center,inner sep=2pt,line width=0.6pt,execute at begin node={\setlength{\parindent}{0pt}}},
+  flowarr/.style={-{Stealth[length=2.4mm,width=1.8mm]},line width=0.6pt},
+  flowplain/.style={line width=0.6pt},
+  flabel/.style={inner sep=1pt}
+}
+\node[nstart] (ndStart) at (0,0) {开始};
+\node[nproc] (ndP0) at (0,-1.9) {$a=10,i=1$};
+\coordinate (J0) at (0,-2.8);
+\node[ndec] (ndD1) at (0,-4.1) {$a=4?$};
+\node[ndecw] (ndD2) at (0,-6.5) {$a$ 是奇数$?$};
+\node[nproc] (ndPL) at (-3.9,-8.3) {$a=3a+1$};
+\node[nproctall] (ndPR) at (3.9,-8.3) {$a=\dfrac{a}{2}$};
+\coordinate (J1) at (0,-9.6);
+\node[nproc] (ndPI) at (0,-10.6) {$i=i+1$};
+\node[nio] (ndOut) at (6.9,-8.3) {输出 $i$};
+\node[nstart] (ndEnd) at (6.9,-10.6) {结束};
+\draw[flowarr] (ndStart.south) -- (ndP0.north);
+\draw[flowarr] (ndP0.south) -- (ndD1.north);
+\draw[flowarr] (ndD1.south) -- (ndD2.north) node[midway,right=1.5mm,flabel] {否};
+\draw[flowarr] (ndD1.east) -- (6.9,-4.1) -- (ndOut.north);
+\node[flabel,above=1.5mm] at (2.2,-4.1) {是};
+\draw[flowarr] (ndD2.west) -- (-3.9,-6.5) -- (ndPL.north);
+\node[flabel,above=1.5mm] at (-2.7,-6.5) {是};
+\draw[flowarr] (ndD2.east) -- (3.9,-6.5) -- (ndPR.north);
+\node[flabel,above=1.5mm] at (2.7,-6.5) {否};
+\draw[flowplain] (ndPL.south) -- (-3.9,-9.6) -- (J1);
+\draw[flowplain] (ndPR.south) -- (3.9,-9.6) -- (J1);
+\draw[flowarr] (J1) -- (ndPI.north);
+\draw[flowarr] (ndOut.south) -- (ndEnd.north);
+\draw[flowarr] (ndPI.west) -- (-6.0,-10.6) -- (-6.0,-2.8) -- (J0);
 \end{tikzpicture}

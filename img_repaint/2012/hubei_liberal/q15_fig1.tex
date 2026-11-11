@@ -1,0 +1,45 @@
+% 三视图点修: 横向并排(正/侧/俯左至右)+图名下置居中基线对齐; 投影边线/尺寸/虚实/比例均沿用既有稿.
+% 三组投影原宽合计超170mm, 等比取x/y=0.85cm单位压缩空隙, 字体保持12pt, 不用resizebox.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,>=Latex,x=0.85cm,y=0.85cm]
+% 正视图
+\begin{scope}[shift={(0.9,1.2)}]
+\draw (0,0) rectangle (1,4);
+\draw (5,0) rectangle (6,4);
+\draw (1,1) -- (5,1);
+\draw (1,3) -- (5,3);
+% 顶部尺寸 1/4/1
+\draw[thin] (0,4) -- (0,4.6);
+\draw[thin] (1,4) -- (1,4.6);
+\draw[thin] (5,4) -- (5,4.6);
+\draw[thin] (6,4) -- (6,4.6);
+\draw[thin,<->] (0,4.4) -- (1,4.4);
+\draw[thin,<->] (1,4.4) -- (5,4.4);
+\draw[thin,<->] (5,4.4) -- (6,4.4);
+\node[above] at (0.5,4.4) {1};
+\node[above] at (3,4.4) {4};
+\node[above] at (5.5,4.4) {1};
+% 左侧高度4
+\draw[thin] (-0.3,0) -- (-0.7,0);
+\draw[thin] (-0.3,4) -- (-0.7,4);
+\draw[thin,<->] (-0.5,0) -- (-0.5,4);
+\node[left] at (-0.7,2) {4};
+% 中部高度2
+\draw[thin,<->] (3,1) -- (3,3);
+\node[right] at (3,2) {2};
+\end{scope}
+\node at (3.9,0) {正视图};
+% 侧视图: 外实圆直径4,内虚圆直径2,圆心与正视等高
+\begin{scope}[shift={(10.1,3.2)}]
+\draw (0,0) circle (2);
+\draw[dashed] (0,0) circle (1);
+\end{scope}
+\node at (10.1,0) {侧视图};
+% 俯视图: 与正视同宽同形,无尺寸
+\begin{scope}[shift={(13.0,1.2)}]
+\draw (0,0) rectangle (1,4);
+\draw (5,0) rectangle (6,4);
+\draw (1,1) -- (5,1);
+\draw (1,3) -- (5,3);
+\end{scope}
+\node at (15.55,0) {俯视图};
+\end{tikzpicture}

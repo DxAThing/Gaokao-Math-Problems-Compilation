@@ -1,0 +1,26 @@
+% 2013_shaanxi_science_q5_fig1: rectangle 2x1 (x3) with two quarter-circle arcs; core TikZ + dimension styles from wrapper.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+\coordinate (A) at (0,0);
+\coordinate (B) at (6,0);
+\coordinate (C) at (6,3);
+\coordinate (D) at (0,3);
+\coordinate (E) at (3,0);
+\coordinate (F) at (3,3);
+\draw (A)--(B)--(C)--(D)--cycle;
+\draw (D) arc[start angle=90,end angle=0,radius=3cm];
+\draw (F) arc[start angle=180,end angle=270,radius=3cm];
+\draw[dimension extension] (A)--(-0.6,0);
+\draw[dimension extension] (D)--(-0.6,3);
+\draw[dimension line] (-0.6,0)--node[dimension label vertical] {$1$}(-0.6,3);
+\draw[dimension extension] (A)--(0,-0.7);
+\draw[dimension extension] (B)--(6,-0.7);
+\draw[dimension line] (0,-0.7)--node[dimension label] {$2$}(6,-0.7);
+\node[below left=2pt,inner sep=0pt] at (A) {$A$};
+\node[below right] at (B) {$B$};
+\node[above right=2pt,inner sep=0pt] at (C) {$C$};
+\node[above left] at (D) {$D$};
+\node[above right] at (E) {$E$};
+\node[above] at (F) {$F$};
+\fill (A) circle[radius=1.4pt];
+\fill (C) circle[radius=1.4pt];
+\end{tikzpicture}

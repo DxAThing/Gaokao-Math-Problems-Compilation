@@ -1,0 +1,10 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-0.4,0)--(5.6,0) node[right] {$x$};
+\draw[->] (0,-0.4)--(0,4.2) node[above] {$y$};
+\node[below left] at (0,0) {$O$};
+% C1: y=x/(1+0.5x), C2: y=x/(1+0.2x), x>=0; C2 lies above C1
+\draw[domain=0:5,samples=120] plot (\x,{\x/(1+0.5*\x)});
+\draw[domain=0:5,samples=120] plot (\x,{\x/(1+0.2*\x)});
+\node[below right] at (4.6,1.45) {$C_{1}$};
+\node[above] at (4.2,2.6) {$C_{2}$};
+\end{tikzpicture}

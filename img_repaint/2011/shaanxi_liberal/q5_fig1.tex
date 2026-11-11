@@ -1,0 +1,30 @@
+% 三视图横向并排点修：投影边线/尺寸/虚实均沿用既有稿，仅平移scope使三幅同行，图名基线一致；主视图即正视图，左视图即侧（左）视图
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% 正（主）视图：正方形(0,0)-(2,2)，虚线V：顶角到底边中点
+\begin{scope}[shift={(0,0)}]
+\draw (0,0) rectangle (2,2);
+\draw[dashed] (0,2) -- (1,0);
+\draw[dashed] (2,2) -- (1,0);
+\draw[<->] (0,2.35) -- (2,2.35);
+\node[anchor=south,font=\normalsize] at (1,2.4) {2};
+\node[below] at (1,-0.55) {正视图};
+\end{scope}
+% 侧（左）视图：同正视图
+\begin{scope}[shift={(3.2,0)}]
+\draw (0,0) rectangle (2,2);
+\draw[dashed] (0,2) -- (1,0);
+\draw[dashed] (2,2) -- (1,0);
+\draw[<->] (2.35,0) -- (2.35,2);
+\node[anchor=west,font=\normalsize] at (2.4,1) {2};
+\node[below] at (1,-0.55) {侧视图（左）};
+\end{scope}
+% 俯视图：正方形(0,0)-(2,2)，内切圆＋圆心实点
+\begin{scope}[shift={(6.4,0)}]
+\draw (0,0) rectangle (2,2);
+\draw (1,1) circle (1);
+\fill (1,1) circle (1.4pt);
+\draw[<->] (2.35,0) -- (2.35,2);
+\node[anchor=west,font=\normalsize] at (2.4,1) {2};
+\node[below] at (1,-0.55) {俯视图};
+\end{scope}
+\end{tikzpicture}

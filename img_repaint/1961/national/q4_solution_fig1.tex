@@ -1,0 +1,30 @@
+% Source: 1961 全国 第4题解答，原PDF第5页。
+% CD 为山高，∠ACB=45°, ∠CAB=65°, ∠CAD=30°, AB=300 米。
+% 每个三角形按原题角度精确构造：CA=6.6446cm, CD=CA·tan30°=3.8363cm, AB=5cm。
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt]
+\coordinate (C) at (0.0000,0.0000);
+\coordinate (A) at (6.6446,0.0000);
+\coordinate (D) at (0.0000,3.8363);
+\coordinate (B) at (4.5315,-4.5315);
+% 实线：山高 CD、地面 CA、AB
+\draw (C)--(D);
+\draw (C)--(A);
+\draw (A)--(B);
+% 虚线：视线 AD、地面 CB
+\draw[dashed] (A)--(D);
+\draw[dashed] (C)--(B);
+% 角标 ∠CAD=30°, ∠CAB=65°, ∠ACB=45°
+\draw (A) ++(150.000:1.10) arc[start angle=150.000,end angle=180.000,radius=1.10];
+\draw (A) ++(180.000:1.20) arc[start angle=180.000,end angle=245.000,radius=1.20];
+\draw (C) ++(315.000:1.20) arc[start angle=315.000,end angle=360.000,radius=1.20];
+\node at (5.1800,0.3370) {$30^{\circ}$};
+\node at (5.3907,-0.9111) {$65^{\circ}$};
+\node[inner sep=1pt] at (1.46,-0.68) {$45^{\circ}$};
+% 点标签与 300 米
+\node[above left] at (D) {$D$};
+\node[left] at (C) {$C$};
+\node[right] at (A) {$A$};
+\node[below] at (B) {$B$};
+\node[anchor=west] at (6.0500,-2.0000) {300米};
+\end{tikzpicture}

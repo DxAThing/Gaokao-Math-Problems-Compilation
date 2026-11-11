@@ -1,84 +1,24 @@
-% original_pdf: source/普通高考/2013/2013福建理.pdf
-% page: 1; pdfimages -list found no embedded image objects (the chart is vector line art)
-% grid evidence: tmp/q4_fix/source/page-grid100.png and tmp/q4_fix/source/q4_block_wide_grid50.png
-% original-side comparison crop: tmp/q4_fix/source/q4_block_wide.png, cropped from the no-grid page render
-% elements: frequency-density y-axis with arrow, score x-axis with a break, six outlined bars,
-%            dashed horizontal guides, y-axis values 0.005--0.030, and the labels 频率/组距 and 分数
-% relations: equal-width bins [40,50), [50,60), [60,70), [70,80), [80,90), [90,100)
-%            have frequency-density heights 0.005, 0.015, 0.030, 0.025, 0.015, 0.010;
-%            display coordinates remap score 0,40,50,...,100 to 0,10,20,...,70,
-%            so the broken-axis gap 0--40 has exactly one displayed group width.
-% solid segments: bar outlines, axes, ticks, and the x-axis break stroke
-% dashed segments: horizontal guides at each distinct bar height, ending at the rightmost matching bar
-% labels: y-axis title is stacked as 频率/组距; score ticks are 0, 40, 50, 60, 70, 80, 90, 100;
-%         分数 is placed at the right of the x-axis.
-\begin{tikzpicture}[baseline]
-\begin{axis}[exam statistical histogram,
-    width=10.4cm,
-    axis lines=none,
-    clip=false,
-    xmin=-7,
-    xmax=78,
-    ymin=-0.0038,
-    ymax=0.0345,
-    ticks=none,
-    x tick label as interval=false,
-]
-    % Source-chart guide levels and bar heights.
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.005) -- (axis cs:20,0.005);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.010) -- (axis cs:70,0.010);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.015) -- (axis cs:60,0.015);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.025) -- (axis cs:50,0.025);
-    \draw[dashed,line width=0.45pt] (axis cs:0,0.030) -- (axis cs:40,0.030);
+% 2013福建理科Q4频率分布直方图: bins [40,100), width 10; heights 0.005/0.015/0.030/0.025/0.015/0.010.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,exam statistical template wide,
+  xmin=30,ymin=0,
+  xtick={30,40,50,60,70,80,90,100},
+  ytick={0.005,0.010,0.015,0.025,0.030},
+  yticklabels={0.005,0.010,0.015,0.025,0.030},
+  xmax=105,
+  ymax=0.0325,
+  xticklabels={,40,50,60,70,80,90,100}]
+\addplot[draw=black,fill=white] coordinates
+  {(40,0.005) (50,0.015) (60,0.030) (70,0.025) (80,0.015) (90,0.010) (100,0)};
+\examstatxbreak{35}{0}
+\draw[dashed,line width=0.6pt] (axis cs:30,0.030) -- (axis cs:60,0.030);
+\draw[dashed,line width=0.6pt] (axis cs:30,0.025) -- (axis cs:70,0.025);
+\draw[dashed,line width=0.6pt] (axis cs:30,0.015) -- (axis cs:80,0.015);
+\draw[dashed,line width=0.6pt] (axis cs:30,0.010) -- (axis cs:90,0.010);
+\draw[dashed,line width=0.6pt] (axis cs:30,0.005) -- (axis cs:40,0.005);
+\examstatylabel{$\frac{\text{频率}}{\text{组距}}$}
+\examstatxlabel{分数}
 
-    \addplot[
-        ybar interval,
-        draw=black,
-        fill=white,
-        line width=0.65pt,
-    ] coordinates {
-        (10,0.005)
-        (20,0.015)
-        (30,0.030)
-        (40,0.025)
-        (50,0.015)
-        (60,0.010)
-        (70,0.000)
-    };
-
-    % Axes and the source chart's break before score 40.
-    \draw[->,line width=0.75pt] (axis cs:0,0) -- (axis cs:76,0);
-    \draw[->,line width=0.75pt] (axis cs:0,0) -- (axis cs:0,0.034);
-    \examstatxbreak[line width=0.75pt]{5.5}{0};
-
-    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \examstatxlabel{分数};
-
-    \draw[line width=0.4pt] (axis cs:0,0) -- (axis cs:0,-0.0015);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.800000,-0.0020) {0};
-    \draw[line width=0.4pt] (axis cs:10,0) -- (axis cs:10,-0.0015);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:10,-0.001500) {40};
-    \draw[line width=0.4pt] (axis cs:20,0) -- (axis cs:20,-0.0015);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:20,-0.001500) {50};
-    \draw[line width=0.4pt] (axis cs:30,0) -- (axis cs:30,-0.0015);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:30,-0.001500) {60};
-    \draw[line width=0.4pt] (axis cs:40,0) -- (axis cs:40,-0.0015);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:40,-0.001500) {70};
-    \draw[line width=0.4pt] (axis cs:50,0) -- (axis cs:50,-0.0015);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:50,-0.001500) {80};
-    \draw[line width=0.4pt] (axis cs:60,0) -- (axis cs:60,-0.0015);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:60,-0.001500) {90};
-    \draw[line width=0.4pt] (axis cs:70,0) -- (axis cs:70,-0.0015);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:70,-0.001500) {100};
-    \draw[line width=0.4pt] (axis cs:0,0.005) -- (axis cs:-1.4,0.005);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-1.400000,0.005) {0.005};
-    \draw[line width=0.4pt] (axis cs:0,0.010) -- (axis cs:-1.4,0.010);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-1.400000,0.010) {0.010};
-    \draw[line width=0.4pt] (axis cs:0,0.015) -- (axis cs:-1.4,0.015);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-1.400000,0.015) {0.015};
-    \draw[line width=0.4pt] (axis cs:0,0.025) -- (axis cs:-1.4,0.025);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-1.400000,0.025) {0.025};
-    \draw[line width=0.4pt] (axis cs:0,0.030) -- (axis cs:-1.4,0.030);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-1.400000,0.030) {0.030};
+\node[anchor=east,inner sep=0pt,xshift=-4pt] at (current axis.left of origin) {0};
 \end{axis}
 \end{tikzpicture}

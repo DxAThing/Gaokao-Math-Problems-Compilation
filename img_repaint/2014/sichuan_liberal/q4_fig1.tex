@@ -1,0 +1,23 @@
+% 三视图(两幅): 2014四川文4 — 左侧视图等腰三角形(腰2,底1+1,中线虚线), 右俯视图横向三角形(左边缘1+1,斜边2,中线实线)
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% 左: 侧视图, 底边3.0(1+1), 腰对应2, 中线虚线
+\begin{scope}[shift={(0,0)}]
+  \draw (-1.5,0) -- (1.5,0) -- (0,2.6) -- cycle;
+  \draw[dashed] (0,0) -- (0,2.6);
+  \node[anchor=east,inner sep=2pt] at (-0.85,1.35) {2};
+  \node[anchor=west,inner sep=2pt] at (0.85,1.35) {2};
+  \node[anchor=north,inner sep=2pt] at (-0.75,-0.05) {1};
+  \node[anchor=north,inner sep=2pt] at (0.75,-0.05) {1};
+  \node[below] at (0,-0.55) {侧视图};
+\end{scope}
+% 右: 俯视图, 左竖直边总长2.6(1+1), 顶点在右, 中线实线, 斜边2
+\begin{scope}[shift={(4.6,0)}]
+  \draw (0,0) -- (0,2.6) -- (2.9,1.3) -- cycle;
+  \draw (0,1.3) -- (2.9,1.3);
+  \node[anchor=east,inner sep=2pt] at (-0.05,1.95) {1};
+  \node[anchor=east,inner sep=2pt] at (-0.05,0.65) {1};
+  \node[anchor=south,inner sep=2pt] at (1.7,2.0) {2};
+  \node[anchor=north,inner sep=2pt] at (1.7,0.6) {2};
+  \node[below] at (1.2,-0.55) {俯视图};
+\end{scope}
+\end{tikzpicture}

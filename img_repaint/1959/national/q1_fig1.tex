@@ -1,0 +1,27 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  lab/.style={font=\normalsize,inner sep=1.5pt},
+  e/.style={line width=.6pt},
+  d/.style={line width=.6pt,dashed}]
+\coordinate (A) at (4,1.7);
+\coordinate (B) at (1.25,1.7);
+\coordinate (C) at (2.55,3.2);
+\coordinate (D) at (2.55,0.2);
+\draw[e] (-0.35,3.2) -- (5.55,3.2);
+\draw[e] (-0.35,1.7) -- (B);
+\draw[e] (A) -- (5.55,1.7);
+\draw[e] (-0.35,0.2) -- (5.55,0.2);
+\draw[e] (C)--(B);
+\draw[e] (C)--(A);
+\draw[d] (C)--(D);
+\draw[e] (B)--(D);
+\draw[e] (A)--(D);
+\draw[d] (A)--(B);
+\node[lab,right] at (5.55,3.2) {$c$};
+\node[lab,right] at (5.55,1.7) {$a$};
+\node[lab,right] at (5.55,0.2) {$b$};
+\node[lab,above] at (C) {$C$};
+\node[lab,below left] at (B) {$B$};
+\node[lab,below right] at (A) {$A$};
+\node[lab,below] at (D) {$D$};
+\end{tikzpicture}

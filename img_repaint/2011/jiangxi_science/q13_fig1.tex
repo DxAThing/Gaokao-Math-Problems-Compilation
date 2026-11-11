@@ -1,44 +1,26 @@
-\begin{tikzpicture}[
-    >=Stealth,
-    flowbox/.style={
-        draw,
-        rectangle,
-        inner xsep=4pt,
-        inner ysep=2pt,
-        execute at begin node={\setlength{\parindent}{0pt}},
-        anchor=center,
-        align=center
-    },
-    terminal/.style={flowbox, rounded corners=3pt},
-    decision/.style={flowbox, diamond, aspect=2.2, inner sep=1.5pt},
-    output/.style={
-        flowbox,
-        trapezium,
-        trapezium left angle=70,
-        trapezium right angle=110
-    },
-    flowline/.style={->, line width=0.4pt}
+% 2011_jiangxi_science_q13_fig1: 开始->s=0,n=1->s=s+(-1)^n+n->diamond s>9 -是->输出s->结束; 否->n=n+1 回路至 s 更新框南侧
+\begin{tikzpicture}[>=Stealth, line width=0.6pt,
+  startstop/.style={shape=rectangle, rounded corners=1.5mm, draw, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm, align=center},
+  proc/.style={rectangle, draw, minimum height=8mm, inner sep=2mm, align=center},
+  dec/.style={diamond, draw, aspect=2.6, inner sep=1.5mm, align=center},
+  io/.style={trapezium, trapezium left angle=75, trapezium right angle=105, draw, minimum height=8mm, inner sep=2mm, align=center},
+  lbl/.style={fill=white, inner sep=1pt}
 ]
-% Node→directed-edge list:
-% 开始→s=0,n=1→s=s+(-1)^n+n→s>9；s>9(是)→输出 s→结束；
-% s>9(否)→n=n+1→s=s+(-1)^n+n。
-\node[terminal] (start) at (0,0) {开始};
-\node[flowbox] (init) at (2.1,0) {$s=0,n=1$};
-\node[flowbox] (update) at (5.5,0) {$s=s+(-1)^n+n$};
-\node[decision] (test) at (8.8,0) {$s>9$};
-\node[output] (print) at (11.3,0) {输出 $s$};
-\node[terminal] (finish) at (13.6,0) {结束};
-\node[flowbox] (increment) at (7.0,-1.55) {$n=n+1$};
+{\parindent=0pt
+\node[startstop] (start) at (0,0) {开始};
+\node[proc, minimum width=26mm] (init) at (0,-1.8) {$s=0,n=1$};
+\node[proc, minimum width=42mm] (calc) at (0,-3.6) {$s=s+(-1)^{n}+n$};
+\node[dec, minimum width=28mm] (cond) at (0,-5.6) {$s>9$};
+\node[io, minimum width=22mm] (out) at (0,-7.6) {输出 $s$};
+\node[startstop] (stop) at (0,-9.4) {结束};
+\node[proc, minimum width=26mm] (inc) at (5,-5.6) {$n=n+1$};
+\draw[->] (start.south) -- (init.north);
+\draw[->] (init.south) -- (calc.north);
+\draw[->] (calc.south) -- (cond.north);
+\draw[->] (cond.south) -- node[pos=0.4,right=1mm,lbl] {是} (out.north);
+\draw[->] (out.south) -- (stop.north);
+\draw[->] (cond.east) -- node[pos=0.18,above=1mm,lbl] {否} (inc.west);
+\draw[->] (inc.north) -- (5,-3.6) -- (calc.east);
 
-\draw[flowline] (start.east) -- (init.west);
-\coordinate (join) at (3.65,0);
-    \coordinate (join-pre) at (3.05,0);
-\draw (init.east) -- (join);
-\draw[flowline] (join) -- (update.west);
-\draw[flowline] (update.east) -- (test.west);
-\draw[flowline] (test.east) -- node[above=2pt] {是} (print.west);
-\draw[flowline] (print.east) -- (finish.west);
-\draw[flowline] (test.south) -- node[right=2pt,pos=0.45] {否}
-    (test.south |- increment.east) -- (increment.east);
-\draw[flowline] (increment.west) -- (join-pre |- increment.west) -- (join-pre) -- (join);
+}
 \end{tikzpicture}

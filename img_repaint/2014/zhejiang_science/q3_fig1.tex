@@ -1,0 +1,47 @@
+% 2014_zhejiang_science_q3_fig1: point-fix of inputs/..._current.tex.
+% Only moved plan scope from below-front to the right of side view; captions share baseline.
+% Projection edges, dimensions, arrow style kept.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% front (combined triangle + rectangle), origin at front bottom
+\begin{scope}[shift={(0,3.6)}]
+  % rectangle 4x3 -> 1.6x1.2cm
+  \draw (0,0) rectangle (1.6,1.2);
+  % left triangle: (-1.6,0)-(0,0)-(0,1.2)
+  \draw (-1.6,0) -- (0,0);
+  \draw (0,0) -- (0,1.2);
+  \draw (-1.6,0) -- (0,1.2);
+  % top dims 4,4
+  \draw (-1.6,1.45) -- (-1.6,1.70);
+  \draw (0,1.45) -- (0,1.70);
+  \draw (1.6,1.45) -- (1.6,1.70);
+  \draw[<->,>=Stealth] (-1.6,1.60) -- (0,1.60) node[midway,above] {$4$};
+  \draw[<->,>=Stealth] (0,1.60) -- (1.6,1.60) node[midway,above] {$4$};
+  % right vertical dim 3
+  \draw (1.75,0) -- (2.0,0);
+  \draw (1.75,1.2) -- (2.0,1.2);
+  \draw[<->,>=Stealth] (1.90,0) -- (1.90,1.2) node[midway,right] {$3$};
+  \node[below] at (0,-0.35) {正视图};
+\end{scope}
+% side view, same height baseline
+\begin{scope}[shift={(2.6,3.6)}]
+  \draw (0,0) rectangle (2.4,1.2);
+  \draw (1.2,0) -- (1.2,1.2);
+  \draw (0,1.45) -- (0,1.70);
+  \draw (1.2,1.45) -- (1.2,1.70);
+  \draw (2.4,1.45) -- (2.4,1.70);
+  \draw[<->,>=Stealth] (0,1.60) -- (1.2,1.60) node[midway,above] {$3$};
+  \draw[<->,>=Stealth] (1.2,1.60) -- (2.4,1.60) node[midway,above] {$3$};
+  \node[below] at (1.2,-0.35) {侧视图};
+\end{scope}
+% plan view (L shape) moved right of side view, bottom aligned with front/side
+\begin{scope}[shift={(6.2,3.6)}]
+  \draw (0,1.2) -- (0,2.4) -- (3.2,2.4) -- (3.2,0) -- (1.6,0) -- (1.6,1.2) -- cycle;
+  % right vertical dims 3,3
+  \draw (3.35,0) -- (3.60,0);
+  \draw (3.35,1.2) -- (3.60,1.2);
+  \draw (3.35,2.4) -- (3.60,2.4);
+  \draw[<->,>=Stealth] (3.50,0) -- (3.50,1.2) node[midway,right] {$3$};
+  \draw[<->,>=Stealth] (3.50,1.2) -- (3.50,2.4) node[midway,right] {$3$};
+  \node[below] at (1.6,-0.35) {俯视图};
+\end{scope}
+\end{tikzpicture}

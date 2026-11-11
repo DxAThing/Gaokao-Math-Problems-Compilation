@@ -1,0 +1,24 @@
+\usetikzlibrary{arrows.meta,calc}
+% Source: 2006 Zhejiang science Q20, original_04.pdf p.2 (printed p.341).
+% f(x)=x^3+x^2.  The secant through O and (x_n,f(x_n)) has slope
+% x_n^2+x_n; the tangent at (x_{n+1},f(x_{n+1})) is parallel to it.
+% Representative x_n=3/4, with x_{n+1} the positive solution of
+% 3t^2+2t=x_n^2+x_n; the relation is exact for this representative.
+\begin{tikzpicture}[x=4.8cm,y=4.8cm,line width=.6pt,font=\normalsize,>=Stealth]
+  \coordinate (O) at (0,0);
+  \coordinate (Xn) at (0.75,0.984375);
+  \coordinate (Qn) at (0.75,0);
+  \coordinate (Xnp1) at (0.40735,0.233527);
+  \coordinate (Qnp1) at (0.40735,0);
+  \coordinate (T1) at (0.03,-0.261745);
+  \coordinate (T2) at (0.88,0.853880);
+  \draw[->] (-0.22,0) -- (1.18,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+  \draw[->] (0,-0.52) -- (0,1.92) node[above,inner sep=0pt,yshift=2pt] {$y$};
+  \draw[domain=0:0.94,samples=200] plot (\x,{\x*\x*\x+\x*\x});
+  \draw (O)--(Xn);
+  \draw (T1)--(T2);
+  \draw[dashed] (Qnp1)--(Xnp1) (Qn)--(Xn);
+  \node[below left,inner sep=3pt] at (O) {$O$};
+  \node[below right,inner sep=0pt,xshift=1pt,yshift=-2pt] at (Qnp1) {$x_{n+1}$};
+  \node[below,inner sep=0pt,yshift=-2pt] at (Qn) {$x_{n}$};
+\end{tikzpicture}

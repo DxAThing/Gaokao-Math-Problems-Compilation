@@ -1,0 +1,29 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt, font=\normalsize, >=Stealth]
+\coordinate (A) at (0.3,0.6);
+\coordinate (B) at (-0.9,-0.6);
+\coordinate (C) at (4.6,0.4);
+\coordinate (A1) at (0.3,4.2);
+\coordinate (B1) at (-0.9,3);
+\coordinate (C1) at (4.6,4.0);
+% bottom
+\draw[dashed] (A) -- (B);
+\draw (B) -- (C);
+\draw[dashed] (A) -- (C);
+% top
+\draw (A1) -- (C1);
+\draw (A1) -- (B1);
+\draw (B1) -- (C1);
+% verticals
+\draw (B) -- (B1);
+\draw[dashed] (A) -- (A1);
+\draw (C) -- (C1);
+% interior diagonal
+\draw[dashed] (A1) -- (C);
+% labels
+\node[above] at (A) [xshift=-6pt,yshift=2pt] {$A$};
+\node[below left] at (B) {$B$};
+\node[right] at (C) {$C$};
+\node[above left] at (A1) {$A_{1}$};
+\node[left] at (B1) {$B_{1}$};
+\node[above right] at (C1) {$C_{1}$};
+\end{tikzpicture}

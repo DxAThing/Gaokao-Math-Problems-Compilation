@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=0.6pt,font=\normalsize]
+% plane alpha parallelogram
+\coordinate (TL) at (-3.5,1.2);
+\coordinate (TR) at (3.5,1.2);
+\coordinate (BR) at (1.8,-1.6);
+\coordinate (BL) at (-5.2,-1.6);
+\coordinate (B) at (0.3,3.0);
+\coordinate (A) at (-2.0,0.0);
+\coordinate (P) at (0.8,-0.8);
+\coordinate (X1) at (-1.08,1.2);
+\coordinate (X2) at (0.537,1.2);
+% plane outline: top edge split solid-dashed-solid (hidden part inside triangle)
+\draw (TL) -- (X1);
+\draw[dashed] (X1) -- (X2);
+\draw (X2) -- (TR);
+\draw (TR) -- (BR);
+\draw (BR) -- (BL);
+\draw (BL) -- (TL);
+% triangle ABP
+\draw (B) -- (A);
+\draw (B) -- (P);
+\draw (A) -- (P);
+% labels
+\node[above] at (0.3,3.15) {$B$};
+\node[left] at (-2.0,0.0) {$A$};
+\node[right] at (0.8,-0.8) {$P$};
+\node at (-4.2,-1.0) {$\alpha$};
+\end{tikzpicture}

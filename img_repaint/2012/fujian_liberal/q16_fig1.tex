@@ -1,0 +1,41 @@
+% 2012 Fujian liberal Q16: three undirected weighted panels (Fig1 example, Fig2 optimal, Fig3 target).
+% Solid segments only, no arrows; filled dot vertices; one numeric weight per edge.
+\begin{tikzpicture}[line width=.6pt, font=\normalsize]
+\tikzset{d/.style={circle, fill, inner sep=0pt, minimum size=2.8pt}}
+% --- Fig 1 ---
+\node[d] (A1) at (2.5,0) {}; \node[above=1pt] at (A1) {$A$};
+\node[d] (B1) at (0,-1.2) {}; \node[below left=1pt] at (B1) {$B$};
+\node[d] (C1) at (7,-1.5) {}; \node[right=1pt] at (C1) {$C$};
+\draw (A1) -- (B1) node[pos=0.5, left=1pt] {$4$};
+\draw (A1) -- (C1) node[pos=0.5, above=2pt] {$6$};
+\draw (B1) -- (C1) node[pos=0.35, above=2pt] {$8$};
+\node at (3.2,-2.4) {\bitmapinsertcaption[1]};
+% --- Fig 2 ---
+\node[d] (A2) at (11.5,0) {}; \node[above=1pt] at (A2) {$A$};
+\node[d] (B2) at (9.5,-1.2) {}; \node[below left=1pt] at (B2) {$B$};
+\node[d] (C2) at (16,-1.5) {}; \node[right=1pt] at (C2) {$C$};
+\draw (A2) -- (B2) node[pos=0.5, left=1pt] {$4$};
+\draw (A2) -- (C2) node[pos=0.5, above=2pt] {$6$};
+\node at (12.7,-2.4) {\bitmapinsertcaption[2]};
+% --- Fig 3 ---
+\node[d] (A3) at (6,-4.7) {}; \node[below left=1pt] at (A3) {$A$};
+\node[d] (B3) at (10,-3.5) {}; \node[above=1pt] at (B3) {$B$};
+\node[d] (C3) at (12.5,-4.9) {}; \node[right=1pt] at (C3) {$C$};
+\node[d] (F3) at (7.5,-5.3) {}; \node[below left=1pt] at (F3) {$F$};
+\node[d] (G3) at (9.3,-5.8) {}; \node at (9.75,-6.1) {$G$};
+\node[d] (E3) at (6.8,-7.6) {}; \node[below left=1pt] at (E3) {$E$};
+\node[d] (D3) at (11.3,-7.2) {}; \node[below right=1pt] at (D3) {$D$};
+\draw (A3) -- (B3) node[pos=0.4, above=4pt] {$9$};
+\draw (A3) -- (F3) node[pos=0.4, above=4pt] {$3$};
+\draw (A3) -- (E3) node[pos=0.29, left=5pt] {$2$};
+\draw (E3) -- (F3) node[pos=0.61, right=5pt] {$3$};
+\draw (B3) -- (F3) node[pos=0.64, below right=2pt] {$7$};
+\draw (F3) -- (G3) node[pos=0.5, above=4pt] {$1$};
+\draw (B3) -- (C3) node[pos=0.5, above=5pt] {$5$};
+\draw (G3) -- (C3) node[pos=0.5, below=5pt] {$3$};
+\draw (E3) -- (G3) node[pos=0.48, below=3pt] {$6$};
+\draw (C3) -- (D3) node[pos=0.52, right=4pt] {$6$};
+\draw (E3) -- (D3) node[pos=0.5, below=5pt] {$6$};
+\draw (G3) -- (D3) node[pos=0.35, above=4pt] {$2$};
+\node at (9.2,-8.5) {\bitmapinsertcaption[3]};
+\end{tikzpicture}

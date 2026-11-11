@@ -1,0 +1,28 @@
+% 2015_shanghai_liberal_q20: cone with base ellipse, diameter AB, points C/E on front arc
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize]
+\coordinate (P) at (0,6.5);
+\coordinate (O) at (0,0);
+\coordinate (A) at (-3.5,0);
+\coordinate (B) at (3.5,0);
+\coordinate (C) at (-1.2,-0.94);
+\coordinate (E) at (1.75,-0.87);
+% base ellipse: back half dashed, front half solid
+\draw[dashed] (B) arc[start angle=0, end angle=180, x radius=3.5, y radius=1.0];
+\draw (A) arc[start angle=180, end angle=360, x radius=3.5, y radius=1.0];
+% generators and interior
+\draw (P)--(A);
+\draw (P)--(B);
+\draw (P)--(C);
+\draw[dashed] (P)--(O);
+\draw[dashed] (A)--(B);
+\draw[dashed] (A)--(C);
+\draw[dashed] (C)--(O);
+\draw[dashed] (O)--(E);
+% labels with clearance
+\node[above=3pt] at (P) {$P$};
+\node[above right=3pt] at (O) {$O$};
+\node[left=3pt] at (A) {$A$};
+\node[right=3pt] at (B) {$B$};
+\node[below left=2pt] at (C) {$C$};
+\node[below right=2pt] at (E) {$E$};
+\end{tikzpicture}

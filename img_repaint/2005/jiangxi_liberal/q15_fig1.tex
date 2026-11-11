@@ -1,0 +1,18 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  solid edge/.style={solid,line width=.6pt},
+  hidden edge/.style={dashed,line width=.6pt}]
+\coordinate (P) at (0,3.2);
+\coordinate (B) at (-2.2,0.6);
+\coordinate (A) at (2.2,0.6);
+\coordinate (C) at (0,-1.2);
+\draw[solid edge] (P)--(B);
+\draw[solid edge] (P)--(A);
+\draw[solid edge] (P)--(C);
+\draw[solid edge] (B)--(C);
+\draw[solid edge] (A)--(C);
+\draw[hidden edge] (B)--(A);
+\node[above] at (P) {$P$};
+\node[left] at (B) {$B$};
+\node[right] at (A) {$A$};
+\node[below] at (C) {$C$};
+\end{tikzpicture}

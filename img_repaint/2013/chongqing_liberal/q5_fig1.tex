@@ -1,52 +1,25 @@
-% Source PDF: source/普通高考/2013/2013重庆文.pdf, page 1; vector program flowchart.
-% Grid evidence: tmp/review_2013_chongqing_liberal/grid/page-1-grid100.jpg and
-%   q5_original_clean4.png (no-grid crop from the source page).
-% Elements: rounded 开始/结束 terminals; initialization rectangle k=1,s=1;
-% update rectangle s=s+(k-1)^2; increment rectangle k=k+1; condition diamond
-% s>15?; output parallelogram 输出 k; solid arrows and 是/否 labels.
-% Complete node -> directed-edge list from the source:
-%   start -> init -> sum -> test; test --是--> output -> finish;
-%   test --否--> increment -> return to the connector above sum. The return
-%   arrow, main downward arrows, and output branch are independent; no other
-%   edges or dashed segments are present. Node text uses local zero indentation,
-%   centered alignment, and compact padding.
-
-\begin{tikzpicture}[
-  >=stealth,
-  x=1cm,
-  y=1.3cm,
-  line width=0.55pt,
-  line cap=round,
-  line join=round,
-  font=\normalsize,
-  flowtext/.style={anchor=center,align=center,inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}}},
-  every node/.style={flowtext},
-  flowbox/.style={flowtext,draw,minimum height=0.68cm,inner xsep=4pt,inner ysep=2pt},
-  terminal/.style={flowbox,rounded corners=0.20cm,minimum width=1.24cm},
-  io/.style={flowbox,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
-    minimum height=0.76cm},
-  decision/.style={flowbox,shape=diamond,aspect=2.8,inner xsep=4pt,inner ysep=2pt,
-    minimum height=1.00cm}
-]
-  % Main vertical path.
-  \node[terminal] (start) at (0,9.20) {开始};
-  \node[flowbox,minimum width=3.55cm] (init) at (0,7.70) {$k=1,s=1$};
-  \node[flowbox,minimum width=4.15cm] (sum) at (0,6.25) {$s=s+(k-1)^2$};
-  \node[decision,minimum width=3.70cm] (test) at (0,4.78) {$s>15?$};
-  \node[io,minimum width=2.55cm] (output) at (0,3.28) {输出 $k$};
-  \node[terminal] (finish) at (0,1.84) {结束};
-  \node[flowbox,minimum width=2.70cm] (inc) at (4.00,6.25) {$k=k+1$};
-
-  \draw[->] (start.south) -- (init.north);
-  \draw[->] (init.south) -- (sum.north);
-  \draw[->] (sum.south) -- (test.north);
-  \draw[->] (output.south) -- (finish.north);
-
-  % The no branch goes right, up through k=k+1, then returns to the connector before the sum update.
-  \draw[->] (test.east) -- node[flowtext,above] {否} (4.00,4.78) -- (inc.south);
-  \draw[->] (inc.north) -- (4.00,7.00) -- (0,7.00);
-
-  % The 是 label is attached to the terminating edge, not manually offset.
-  \draw[->] (test.south) -- node[flowtext,right] {是} (output.north);
-\end{tikzpicture}
+{\parindent=0pt
+\begin{tikzpicture}[>=Stealth]
+\tikzset{
+		flowstart/.style={draw, shape=rectangle, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm, align=center},
+		flowproc/.style={draw, rectangle, minimum width=3.0cm, minimum height=0.9cm, align=center},
+		flowdec/.style={draw, diamond, aspect=2.2, minimum width=4.0cm, minimum height=1.4cm, align=center},
+		flowio/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3.0cm, minimum height=0.9cm, align=center},
+		flowarrow/.style={->, >=Stealth, line width=0.6pt}
+	}
+	\node[flowstart] (start) at (0,0) {开始};
+	\node[flowproc] (init) at (0,-1.8) {$k=1,s=1$};
+	\node[flowproc] (sum) at (0,-3.8) {$s=s+(k-1)^{2}$};
+	\node[flowdec] (dec) at (0,-5.8) {$s>15?$};
+	\node[flowproc] (inc) at (3.9,-3.8) {$k=k+1$};
+	\node[flowio] (out) at (0,-7.9) {输出$k$};
+	\node[flowstart] (stop) at (0,-9.5) {结束};
+	\coordinate (J) at (0,-2.8);
+	\draw[flowarrow] (start.south) -- (init.north);
+	\draw[flowarrow] (init.south) -- (sum.north);
+	\draw[flowarrow] (sum.south) -- (dec.north);
+	\draw[flowarrow] (dec.east) -- node[pos=0.28, above=1mm]{否} (3.9,-5.8) -- (inc.south);
+	\draw[flowarrow] (inc.north) -- (3.9,-2.8) -- (J);
+	\draw[flowarrow] (dec.south) -- node[midway,right=1mm]{是} (out.north);
+	\draw[flowarrow] (out.south) -- (stop.north);
+\end{tikzpicture}}

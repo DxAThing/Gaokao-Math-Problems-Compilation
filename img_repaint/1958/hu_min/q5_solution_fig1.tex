@@ -1,0 +1,32 @@
+% Source: 1958 华东(上海,福建) 第5题解答，原PDF原书第96页，图102。
+% 基线 CD 与四个测量角 a, β, γ, θ；A, B 在河对岸。坐标均为 cm。
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt]
+\coordinate (A) at (0.0000,3.6000);
+\coordinate (B) at (4.6000,3.2000);
+\coordinate (C) at (0.3000,0.2000);
+\coordinate (D) at (3.1000,0.0000);
+% 河的两岸（原图为横贯图形的波浪线）
+\draw plot[smooth] coordinates {(-0.70,1.72) (-0.35,1.79) (0.00,1.76) (0.35,1.82) (0.75,1.77) (1.15,1.83) (1.55,1.78) (1.95,1.84) (2.35,1.78) (2.75,1.83) (3.15,1.77) (3.55,1.82) (3.95,1.76) (4.35,1.81) (4.75,1.75) (5.20,1.79)};
+\draw plot[smooth] coordinates {(-0.70,1.05) (-0.30,1.01) (0.10,1.04) (0.50,1.00) (0.90,1.03) (1.30,1.00) (1.70,1.04) (2.10,0.99) (2.50,1.03) (2.90,0.99) (3.30,1.02) (3.70,0.98) (4.10,1.02) (4.50,0.98) (4.90,1.01) (5.30,0.99)};
+% 四边形 ABDC 的四边与两条对角线
+\draw (A)--(B)--(D)--(C)--cycle;
+\draw (A)--(D);
+\draw (B)--(C);
+% 角标：a = ∠ACD, β = ∠BCD, θ = ∠ADC, γ = ∠BDC
+\draw (C) ++(-4.086:1.00) arc[start angle=-4.086,end angle=95.042,radius=1.00];
+\draw (C) ++(-4.086:0.30) arc[start angle=-4.086,end angle=34.902,radius=0.30];
+\draw (D) ++(130.732:0.30) arc[start angle=130.732,end angle=175.914,radius=0.30];
+\draw (D) ++(64.885:0.95) arc[start angle=64.885,end angle=175.914,radius=0.95];
+\node[inner sep=1pt] at (0.57,0.77) {$a$};
+\node[inner sep=1pt] at (1.04,0.36) {$\beta$};
+\node[inner sep=1pt] at (2.53,0.28) {$\theta$};
+\node[inner sep=1pt] at (3.01,0.64) {$\gamma$};
+% 点标签
+\node[above left] at (A) {$A$};
+\node[above right] at (B) {$B$};
+\node[below left] at (C) {$C$};
+\node[below right] at (D) {$D$};
+% 河名
+\node at (-0.55,1.30) {河};
+\end{tikzpicture}

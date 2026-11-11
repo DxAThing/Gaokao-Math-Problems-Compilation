@@ -1,0 +1,25 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Sphere with inscribed cylinder (schematic projection, exact circles/ellipses)
+% Outer sphere
+\draw (0,0) circle (2.5);
+% Equator: back dashed, front solid
+\draw[dashed] (2.5,0) arc (0:180:2.5 and 0.5);
+\draw (-2.5,0) arc (180:360:2.5 and 0.5);
+% Top cap of cylinder
+\draw[dashed] (1.767766953,1.767766953) arc (0:180:1.767766953 and 0.35);
+\draw (-1.767766953,1.767766953) arc (180:360:1.767766953 and 0.35);
+% Bottom cap of cylinder
+\draw (-1.767766953,-1.767766953) arc (180:360:1.767766953 and 0.35);
+\draw[dashed] (1.767766953,-1.767766953) arc (0:180:1.767766953 and 0.35);
+% Cylinder lateral edges (hidden, dashed per original)
+\draw[dashed] (-1.767766953,1.767766953) -- (-1.767766953,-1.767766953);
+\draw[dashed] (1.767766953,1.767766953) -- (1.767766953,-1.767766953);
+% Centre and radius
+\coordinate (O) at (0,0);
+\coordinate (Rim) at (1.767766953,1.767766953);
+\fill (O) circle (1.8pt);
+\draw[dashed] (O) -- (Rim);
+% Labels with clearance from strokes
+\node[anchor=east,xshift=-6pt,yshift=3pt] at (O) {$O$};
+\node[anchor=south east,inner sep=2pt] at ($(O)!0.55!(Rim)$) {$R$};
+\end{tikzpicture}

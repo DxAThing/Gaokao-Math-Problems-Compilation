@@ -1,0 +1,19 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\coordinate (P) at (0,3.2);
+\coordinate (C) at (0,0);
+\coordinate (A) at (-2.4,1.0);
+\coordinate (B) at (2.4,1.0);
+% solid visible edges
+\draw (P)--(A);
+\draw (P)--(B);
+\draw (P)--(C);
+\draw (A)--(C);
+\draw (B)--(C);
+% hidden base edge
+\draw[dashed] (A)--(B);
+% labels
+\node[above] at (P) {$P$};
+\node[left] at (A) {$A$};
+\node[right] at (B) {$B$};
+\node[below] at (C) {$C$};
+\end{tikzpicture}

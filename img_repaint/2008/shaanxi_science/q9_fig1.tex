@@ -1,0 +1,33 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Two perpendicular planes alpha (left, vertical) and beta (right, horizontal), meet in l.
+\coordinate (O) at (0,0);
+\coordinate (LL) at (-3.6,-2.6);
+\coordinate (AT) at (0,3.2);
+\coordinate (AL) at ($(AT)+(LL)-(O)$);
+\coordinate (BR) at (3.0,0);
+\coordinate (BC) at ($(BR)+(LL)-(O)$);
+% plane alpha outline (left parallelogram), l is edge O--LL
+\draw (O) -- (AT) -- (AL) -- (LL) -- cycle;
+% plane beta outline (right parallelogram), shares edge O--LL
+\draw (O) -- (BR) -- (BC) -- (LL);
+\draw (O) -- (LL);
+% feet on l
+\coordinate (A0) at ($(O)!0.5555555556!(LL)$);
+\coordinate (B0) at ($(O)!0.3333333333!(LL)$);
+% points A in alpha, B in beta
+\coordinate (A) at (-2.0,0.9);
+\coordinate (B) at (0.9,-0.8666666667);
+% segments: AA0 (distance a), BB0 (distance b), AB
+\draw (A) -- (A0);
+\draw (B) -- (B0);
+\draw (A) -- (B);
+% labels
+\node[above left,inner sep=1pt] at (A) {$A$};
+\node[right,inner sep=1pt] at (B) {$B$};
+\node[right,inner sep=1pt] at (-2.0,-0.3) {$a$};
+\node[below,inner sep=1pt] at (-0.15,-0.8666666667) {$b$};
+\node[inner sep=1pt] at (-0.45,2.55) {$\alpha$};
+\node[inner sep=1pt] at (2.05,-0.4) {$\beta$};
+\node[inner sep=1pt] at (-3.28,-2.13) {$l$};
+\end{tikzpicture}

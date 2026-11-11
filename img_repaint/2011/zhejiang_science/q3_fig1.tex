@@ -1,0 +1,22 @@
+% 2011_zhejiang_science_q3_fig1: L front + square side with mid dashed + square top with diagonal.
+% layout: horizontal row front / side / plan (point-fix: plan scope moved right only)
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% front (L-shape 2x2 missing upper right 1x1), dashed step segment
+\begin{scope}[shift={(0,3.2)}]
+\draw (0,2) -- (1,2) -- (1,1) -- (2,1) -- (2,0) -- (0,0) -- cycle;
+\draw[dashed] (0,1) -- (1,1);
+\node[below] at (1,-0.6) {正视图};
+\end{scope}
+% side (2x2 square, full-width mid dashed), same height/baseline as front
+\begin{scope}[shift={(3.4,3.2)}]
+\draw (0,0) rectangle (2,2);
+\draw[dashed] (0,1) -- (2,1);
+\node[below] at (1,-0.6) {侧视图};
+\end{scope}
+% top (2x2 square, diagonal from NW corner to bottom edge), moved right, labels aligned
+\begin{scope}[shift={(6.8,3.2)}]
+\draw (0,0) rectangle (2,2);
+\draw (0,2) -- (1.3,0);
+\node[below] at (1,-0.6) {俯视图};
+\end{scope}
+\end{tikzpicture}

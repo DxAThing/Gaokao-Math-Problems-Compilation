@@ -1,0 +1,18 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\def\gx{-(\x*\x)+(exp(\x)-exp(-\x))*sin(deg(\x))}
+\def\xmin{-4.0}
+\def\xmax{3.78}
+\def\ymin{-3.2}
+\def\ymax{3.0}
+\draw[->] (\xmin,0)--(\xmax,0) node[anchor=north west,inner sep=0pt,xshift=1.5pt,yshift=-4pt] {$x$};
+\draw[->] (0,\ymin)--(0,\ymax) node[anchor=south east,inner sep=0pt,xshift=-4pt,yshift=1pt] {$y$};
+\foreach \t in {-2.8,1,2.8} \draw (\t,0)--(\t,-0.11);
+\draw (0,1)--(0.11,1);
+\node[anchor=south east,inner sep=0pt,xshift=-4pt,yshift=4.5pt] at (0,0) {$O$};
+\node[anchor=east,inner sep=0pt,xshift=-3pt] at (0,1) {$1$};
+\node[anchor=north east,inner sep=0pt,xshift=2pt,yshift=-3.5pt] at (-2.8,0) {$-2.8$};
+\node[anchor=north,inner sep=0pt,yshift=-3.5pt] at (1,0) {$1$};
+\node[anchor=north west,inner sep=0pt,xshift=-0.5pt,yshift=-3.5pt] at (2.8,0) {$2.8$};
+\draw[domain=-2.8:2.8,samples=241] plot (\x,{-(\gx)});
+\end{tikzpicture}

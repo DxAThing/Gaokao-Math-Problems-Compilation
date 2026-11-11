@@ -1,2 +1,24 @@
-% Canonical statistical figure: img_repaint/2014/shandong_liberal/q8_fig1.tex
-\input{img_repaint/2014/shandong_liberal/q8_fig1.tex}
+% 2014山东理Q7: frequency histogram, bins [12,13)..[16,17], width 1.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,
+  xmin=11,ymin=0,ymax=0.42,
+  xtick={11,12,13,14,15,16,17},
+  ytick={0,0.08,0.16,0.24,0.36},
+  yticklabels={0,0.08,0.16,0.24,0.36},
+  xmax=17.5,
+  xticklabels={,12,13,14,15,16,17}]
+
+
+
+
+\addplot[draw=black,fill=white] coordinates
+  {(12,0.24) (13,0.16) (14,0.36) (15,0.16) (16,0.08) (17,0)};
+\draw[dashed] (axis cs:11,0.36) -- (axis cs:14,0.36);
+\draw[dashed] (axis cs:11,0.24) -- (axis cs:12,0.24);
+\draw[dashed] (axis cs:11,0.16) -- (axis cs:15,0.16);
+\draw[dashed] (axis cs:11,0.08) -- (axis cs:16,0.08);
+\examstatxbreak{11.5}{0}
+\examstatylabel{$\frac{\text{频率}}{\text{组距}}$}
+\examstatxlabel{舒张压/kPa}
+\end{axis}
+\end{tikzpicture}

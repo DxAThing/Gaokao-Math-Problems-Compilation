@@ -1,0 +1,20 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1.35cm,y=1.25cm,line width=.6pt,>={Latex[length=1.8mm,width=1.3mm]}]
+\def\OA{2}
+\def\OB{1}
+\def\ANG{30}
+\def\VA{1}
+\def\VC{3}
+\def\tC{2.126250846602}
+\def\SC{2.593667113389}
+\coordinate (O) at (0,0);
+\coordinate (K) at (1,0.5);
+\coordinate (C) at (\tC,\SC);
+\coordinate (P) at (3.02,\SC);
+\draw[->] (-0.28,0)--(3.12,0) node[anchor=north west,inner sep=0pt,xshift=2pt,yshift=-2pt] {$x$};
+\draw[->] (0,-0.4)--(0,3.0) node[anchor=south east,inner sep=0pt,xshift=-2pt,yshift=2pt] {$y$};
+\draw[domain=0:1,samples=61] plot (\x,{0.5*\x*\x});
+\draw (K)--(C);
+\draw (C)--(P);
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\end{tikzpicture}

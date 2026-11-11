@@ -1,0 +1,30 @@
+% 2014_sichuan_liberal_q8_fig1: balloon depression-angle schematic (application_diagram).
+% Exact: sights at -30 and -75 deg from horizontal; B=(6/tan75,0), C=(6/tan30,0) with h=6.
+\usetikzlibrary{arrows.meta,angles,quotes}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+  % ground and eye-level dashed lines
+  \draw[dash pattern=on 3pt off 3pt] (-1.5,0) -- (11.4,0);
+  \draw[dash pattern=on 3pt off 3pt] (-1.5,6) -- (2.8,6);
+  % vertical dashed + right-angle mark at foot
+  \draw[dash pattern=on 3pt off 3pt] (0,0) -- (0,6);
+  \draw (0.28,0) -- (0.28,0.28) -- (0,0.28);
+  % sights (dashed): A->B steep, A->C shallow
+  \draw[dash pattern=on 3pt off 3pt] (0,6) -- (1.6077,0);
+  \draw[dash pattern=on 3pt off 3pt] (0,6) -- (10.3923,0);
+  % 60m dimension with central white gap
+  \draw[{Latex[length=1.8mm]}-{Latex[length=1.8mm]}] (-0.9,0.05) -- (-0.9,5.95);
+  \node[fill=white,draw=none,inner xsep=1.5pt,inner ysep=3pt] at (-0.9,3.0) {$60\mathrm{m}$};
+  % balloon icon above eye
+  \fill[gray!25,draw=black] (0,6.55) circle (0.35);
+  \fill[gray!25,draw=black] (-0.12,6.05) rectangle (0.12,6.28);
+  \node[inner sep=0pt] at (0,6.6) {$A$};
+  % exact angle arcs from horizontal
+  \draw (0,6) ++(0:0.9) arc (0:-30:0.9);
+  \draw (0,6) ++(0:1.7) arc (0:-75:1.7);
+  % angle labels in whitespace (positions adjustable, meanings fixed)
+  \node[inner sep=0pt] at (1.2071,5.6761) {$30^{\circ}$};
+  \node[inner sep=0pt] at (1.2328,4.2394) {$75^{\circ}$};
+  % ground point labels below line
+  \node[inner sep=0pt] at (1.6077,-0.4) {$B$};
+  \node[inner sep=0pt] at (10.3923,-0.4) {$C$};
+\end{tikzpicture}

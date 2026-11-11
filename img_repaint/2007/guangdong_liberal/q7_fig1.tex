@@ -1,0 +1,19 @@
+% 2007 Guangdong liberal Q7 Fig1: histogram: original contiguous 5cm classes.
+% Ten 5cm classes [145,150)..[190,195]; heights calibrated from source pixels: y=569.5 -> 0, y=73 -> 600; rounded to 5, uncertainty up to 3.1 people.
+% Wide profile (10 classes). Numeric axis with one class-width gap and break.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram, exam statistical template wide,
+  xmin=140,ymin=0,
+  xtick={140,145,150,155,160,165,170,175,180,185,190,195},
+  ytick={0,50,100,150,200,250,300,350,400,450,500,550,600},
+  xmax=197.5,
+  ymax=625,
+  xticklabels={,145,150,155,160,165,170,175,180,185,190,195}]
+\addplot[draw=black,fill=white] coordinates
+  {(145,100) (150,195) (155,320) (160,450) (165,545) (170,490) (175,365) (180,225) (185,60) (190,35) (195,0)};
+\examstatxbreak{142.5}{0}
+\examstatylabel{人数/人}
+\examstatxlabel{身高/cm}
+\node at (axis description cs:0.5,-0.24) {\bitmapinsertcaption[1]};
+\end{axis}
+\end{tikzpicture}

@@ -1,53 +1,23 @@
-% Source PDF: source/普通高考/2009/2009浙江理.pdf, page 1 (question 6).
-% Node-edge list: 开始 -> k=0 -> S=0 -> S<100?;
-% 是 -> S=S+2^S -> k=k+1 -> loop to the decision; 否 -> 输出 k -> 结束.
-% The loop is a single orthogonal return path with one arrow entering the decision stem.
-\begin{tikzpicture}[
-    >=Stealth,
-    x=1cm,
-    y=0.86cm,
-    line width=0.45pt,
-    line cap=round,
-    line join=round,
-    flowtext/.style={anchor=center,align=center,
-        execute at begin node={\setlength{\parindent}{0pt}}},
-    every node/.style={flowtext,font=\normalsize},
-    flowbox/.style={draw,flowtext,minimum height=0.68cm,inner xsep=4pt,inner ysep=2pt},
-    terminal/.style={flowbox,rounded corners=0.18cm,minimum width=1.30cm},
-    process/.style={flowbox,minimum width=1.85cm},
-    decision/.style={draw,diamond,flowtext,aspect=2.9,minimum width=3.90cm,
-        minimum height=1.05cm,inner sep=0pt},
-    io/.style={draw,trapezium,flowtext,trapezium left angle=72,
-        trapezium right angle=108,minimum width=1.95cm,minimum height=0.76cm,
-        inner xsep=4pt,inner ysep=2pt},
-    branchlabel/.style={flowtext,inner sep=0pt},
-]
-    \path[use as bounding box] (-3.55,-0.55) rectangle (4.70,10.55);
-
-    \node[terminal] (start) at (0,10.05) {开始};
-    \node[process] (setk) at (0,8.72) {$k=0$};
-    \node[process] (sets) at (0,7.42) {$S=0$};
-    \node[decision] (check) at (0,6.00) {$S<100?$};
-    \node[process,minimum width=2.80cm] (update) at (0,4.35) {$S=S+2^S$};
-    \node[process,minimum width=2.35cm] (inc) at (0,2.82) {$k=k+1$};
-    \node[io,minimum width=1.95cm] (output) at (3.45,4.55) {输出 $k$};
-    \node[terminal] (finish) at (3.45,2.95) {结束};
-
-    \draw[->] (start.south) -- (setk.north);
-    \draw[->] (setk.south) -- (sets.north);
-    % Main stem and return edge share one merge point above the decision.
-    \coordinate (merge) at (0,6.90);
-    \draw[-] (sets.south) -- (merge);
-    \draw[->] (merge) -- (check.north);
-    \draw[->] (check.south) -- node[branchlabel,left=3pt] {是} (update.north);
-    \draw[->] (update.south) -- (inc.north);
-    % Keep a visible downward shaft before the arrowhead enters 输出 k.
-    \draw[-] (check.east) -- node[branchlabel,above=2pt] {否} (3.45,6.00)
-        -- (3.45,5.35);
-    \draw[->] (3.45,5.35) -- (output.north);
-    \draw[->] (output.south) -- (finish.north);
-
-    % Return path from k=k+1 enters the main stem above the decision.
-    \draw (inc.south) -- (0,1.85) -- (-2.75,1.85) -- (-2.75,6.90);
-    \draw[->] (-2.75,6.90) -- (merge);
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.5pt]
+\tikzset{flowstart/.style={draw,shape=rectangle,rounded corners=1.5mm,minimum width=26mm,minimum height=10mm,inner xsep=3mm,inner ysep=1.5mm,align=center},
+flowproc/.style={rectangle,draw,minimum width=2.6cm,minimum height=0.75cm,align=center},
+flowprocw/.style={rectangle,draw,minimum width=3.4cm,minimum height=0.8cm,align=center},
+flowdec/.style={diamond,aspect=2.6,draw,minimum width=4.6cm,minimum height=1.2cm,align=center},
+flowout/.style={trapezium,trapezium left angle=70,trapezium right angle=110,draw,minimum width=2.6cm,minimum height=0.9cm,align=center}}
+\node[flowstart] (start) at (0,0) {\parindent=0pt\centering 开始};
+\node[flowproc] (bk) at (0,-1.5) {\parindent=0pt\centering $k=0$};
+\node[flowproc] (bs) at (0,-2.7) {\parindent=0pt\centering $S=0$};
+\node[flowdec] (dec) at (0,-4.6) {\parindent=0pt\centering $S<100?$};
+\node[flowprocw] (bSS) at (0,-6.3) {\parindent=0pt\centering $S=S+2^{S}$};
+\node[flowproc] (bkk) at (0,-7.9) {\parindent=0pt\centering $k=k+1$};
+\node[flowout] (outK) at (3.4,-6.3) {\parindent=0pt\centering 输出 $k$};
+\node[flowstart] (ends) at (3.4,-7.9) {\parindent=0pt\centering 结束};
+\draw[->] (start.south) -- (bk.north);
+\draw[->] (bk.south) -- (bs.north);
+\draw[->] (bs.south) -- (dec.north);
+\draw[->] (dec.south) -- (bSS.north) node[midway,anchor=west,xshift=2mm,xshift=-0.9988mm,yshift=0.2007mm] {是};
+\draw[->] (dec.east) -- node[pos=0.4,anchor=south,yshift=2mm,xshift=0.1354mm,yshift=-0.8152mm] {否} (3.4,-4.6) -- (outK.north);
+\draw[->] (bSS.south) -- (bkk.north);
+\draw[->] (outK.south) -- (ends.north);
+\draw[->] (bkk.south) -- (0,-9.0) -- (-3.2,-9.0) -- (-3.2,-3.55) -- (0,-3.55);
 \end{tikzpicture}

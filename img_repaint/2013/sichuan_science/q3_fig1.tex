@@ -1,0 +1,24 @@
+% front/side/plan in one horizontal row; unit 1cm.
+% Front/side: funnel mouth (top 3.4 wide, 0.85 tall, throat 1.72)
+% over rectangle 1.72 wide, 0.83 tall. All lines solid.
+% Plan: outer solid circle r1.7, inner dashed circle r0.86, concentric.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% front view
+\draw (-1.7,1.68) -- (1.7,1.68);
+\draw (-1.7,1.68) -- (-0.86,0.83) (1.7,1.68) -- (0.86,0.83);
+\draw (-0.86,0) -- (-0.86,0.83) (0.86,0) -- (0.86,0.83) (-0.86,0) -- (0.86,0);
+\node at (0,-0.7) {正视图};
+% side view
+\begin{scope}[shift={(4.4,0)}]
+\draw (-1.7,1.68) -- (1.7,1.68);
+\draw (-1.7,1.68) -- (-0.86,0.83) (1.7,1.68) -- (0.86,0.83);
+\draw (-0.86,0) -- (-0.86,0.83) (0.86,0) -- (0.86,0.83) (-0.86,0) -- (0.86,0);
+\node at (0,-0.7) {侧视图};
+\end{scope}
+% plan view
+\begin{scope}[shift={(8.8,1.7)}]
+\draw (0,0) circle (1.7);
+\draw[dashed] (0,0) circle (0.86);
+\node at (0,-2.4) {俯视图};
+\end{scope}
+\end{tikzpicture}

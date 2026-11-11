@@ -1,0 +1,10 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=0.66cm,y=0.66cm,line width=.6pt,>=Stealth,font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (L) at (-1.5,-1.875);
+\coordinate (R) at (1.7,2.3426);
+\draw[->] (-2.1,0)--(2.5,0) node[right=4pt,inner sep=0pt] {$x$};
+\draw[->] (0,-2.0)--(0,2.7) node[above=4pt,inner sep=0pt] {$y$};
+\draw[domain=-1.5:1.7,samples=121] plot (\x,{0.8*\x+0.2*\x*\x*\x});
+\node[below right=4pt,inner sep=0pt] at (O) {$O$};
+\end{tikzpicture}

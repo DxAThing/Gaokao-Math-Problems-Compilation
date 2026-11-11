@@ -1,0 +1,22 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=6mm,y=6mm,line width=.6pt,font=\normalsize,>=Stealth]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (4,4);
+  \coordinate (B) at (-2,1);
+  \coordinate (M) at (0,2);
+  \coordinate (D) at (-2,-2);
+  % parabola C: x^2=4y
+  \draw[domain=-6.1:6.1,samples=181] plot (\x,{\x*\x/4});
+  % chord AB through M, line AO through O to D, vertical through B to D
+  \draw (B)--(A);
+  \draw (A)--(D);
+  \draw (B)--(D);
+  % coordinate axes
+  \draw[->] (-6.7,0)--(7.1,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+  \draw[->] (0,-5.3)--(0,9.8) node[above,inner sep=0pt,yshift=2pt] {$y$};
+  \node[below right,inner sep=1pt] at (O) {$O$};
+  \node[above left,inner sep=1pt] at (M) {$M$};
+  \node[below right=2pt,inner sep=1pt] at (A) {$A$};
+  \node[below left=2pt,inner sep=1pt] at (B) {$B$};
+  \node[below left,inner sep=1pt] at (D) {$D$};
+\end{tikzpicture}

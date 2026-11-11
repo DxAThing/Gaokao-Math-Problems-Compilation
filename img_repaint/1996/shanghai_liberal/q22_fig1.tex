@@ -1,0 +1,19 @@
+% 1996_shanghai_liberal_q22_fig1: hyperbola y^2/2-x^2/2=1, asymptotes y=+-x, circle (x-sqrt2)^2+y^2=1
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-3.2,0) -- (3.6,0) node[right,xshift=2pt] {$x$};
+\draw[->] (0,-3.2) -- (0,3.4) node[above,yshift=2pt] {$y$};
+% asymptotes y=x and y=-x
+\draw[solid] (-2.6,-2.6) -- (2.6,2.6);
+\draw[solid] (-2.6,2.6) -- (2.6,-2.6);
+% hyperbola y^2-x^2=2: upper y=sqrt(x^2+2), lower y=-sqrt(x^2+2)
+\draw[solid,domain=-2.2:2.2,samples=80] plot (\x,{sqrt(\x*\x+2)});
+\draw[solid,domain=-2.2:2.2,samples=80] plot (\x,{-sqrt(\x*\x+2)});
+% circle centered at (sqrt2,0) radius 1
+\draw[solid] ({sqrt(2)},0) circle (1);
+\fill ({sqrt(2)},0) circle (1.2pt);
+% labels with clearance from strokes
+\node[xshift=-1pt,yshift=-7pt] at (-0.18,-0.38) {$O$};
+\node[below,yshift=-4pt] at ({sqrt(2)},0) {$A$};
+\node[above left=2pt] at (0,{sqrt(2)}) {$A'$};
+\end{tikzpicture}

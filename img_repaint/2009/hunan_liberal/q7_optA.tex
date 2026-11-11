@@ -1,0 +1,13 @@
+% 2009 Hunan liberal Q7 option A (correct): increasing and convex on [a,b] i.e. f' increasing
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.71cm,y=2.48cm,line width=.6pt,>=Stealth,font=\normalsize,
+    declare function={fhA(\x)=0.3*(\x-1)*(\x-1)+0.4;}]
+  \draw[->] (-0.40,0)--(3.80,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+  \draw[->] (0,-0.40)--(0,2.60) node[above,inner sep=0pt,yshift=2pt] {$y$};
+  \node[below left,inner sep=0pt,xshift=-1pt,yshift=-1pt] at (0,0) {$O$};
+  \node[below=1.5pt,inner sep=0pt] at (1,0) {$a$};
+  \node[below=1.5pt,inner sep=0pt] at (3,0) {$b$};
+  \draw[dashed] (1,0)--(1,{fhA(1)});
+  \draw[dashed] (3,0)--(3,{fhA(3)});
+  \draw[domain=1:3,samples=160] plot (\x,{fhA(\x)});
+\end{tikzpicture}

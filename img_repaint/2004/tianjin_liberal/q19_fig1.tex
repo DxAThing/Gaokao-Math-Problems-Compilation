@@ -1,0 +1,30 @@
+\usetikzlibrary{calc,positioning}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt,draw=black},
+ geometry label/.style={font=\normalsize,inner sep=1.5pt,outer sep=4pt,fill=white,draw=none}]
+
+\coordinate (P) at (2,5.5);
+\coordinate (D) at (2,1.5);
+\coordinate (A) at (0.3,0);
+\coordinate (B) at (4.5,0);
+\coordinate (C) at (6,1.5);
+\coordinate (E) at (4.0,3.5);
+\draw[geometry edge] (P)--(A);
+\draw[geometry edge] (P)--(E);
+\draw[geometry edge] (E)--(C);
+\draw[geometry edge] (P)--(B);
+\draw[geometry edge] (A)--(B);
+\draw[geometry edge] (B)--(C);
+\draw[geometry edge] (E)--(B);
+\draw[geometry edge,dashed] (P)--(D);
+\draw[geometry edge,dashed] (A)--(D);
+\draw[geometry edge,dashed] (D)--(B);
+\draw[geometry edge,dashed] (D)--(E);
+\draw[geometry edge,dashed] (D)--(C);
+\node[geometry label,above] at (P) {$P$};
+\node[geometry label,left,fill=none] at (D) {$D$};
+\node[geometry label,below left] at (A) {$A$};
+\node[geometry label,below right] at (B) {$B$};
+\node[geometry label,right] at (C) {$C$};
+\node[geometry label,above right] at (E) {$E$};
+\end{tikzpicture}

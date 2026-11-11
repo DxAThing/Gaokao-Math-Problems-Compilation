@@ -1,0 +1,44 @@
+% 2013_new_curriculum_paper_1_liberal_q11_fig1: dimension point-fix only.
+% Rect+semicircle front, L side, rect top unchanged; dims 2/4, 2/4/2, 4/2 unchanged.
+% All linear dims use shared styles, outside outline >=4.5mm, numbers centred in gap.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% ---- front ----
+\begin{scope}[shift={(0,0)}]
+  \draw (0,1.5) rectangle (3,3);
+  \draw (0,1.5) -- (3,1.5);
+  \draw (0,1.5) arc (180:360:1.5);
+  \draw[dimension extension] (0,3) -- (-0.75,3);
+  \draw[dimension extension] (0,1.5) -- (-0.75,1.5);
+  \draw[dimension line] (-0.55,1.5) -- node[dimension label vertical] {$2$} (-0.55,3);
+  \draw[dimension extension] (0,1.5) -- (0,-0.75);
+  \draw[dimension extension] (3,1.5) -- (3,-0.75);
+  \draw[dimension line] (0,-0.55) -- node[dimension label] {$4$} (3,-0.55);
+  \node at (1.5,-1.25) {正视图};
+\end{scope}
+% ---- side: L polygon ----
+\begin{scope}[shift={(4.3,0)}]
+  \draw (0,0) -- (0,3) -- (1.5,3) -- (1.5,1.5) -- (3,1.5) -- (3,0) -- cycle;
+  \draw[dimension extension] (0,3) -- (0,3.75);
+  \draw[dimension extension] (1.5,3) -- (1.5,3.75);
+  \draw[dimension line] (0,3.55) -- node[dimension label] {$2$} (1.5,3.55);
+  \draw[dimension extension] (0,0) -- (-0.75,0);
+  \draw[dimension extension] (0,3) -- (-0.75,3);
+  \draw[dimension line] (-0.55,0) -- node[dimension label vertical] {$4$} (-0.55,3);
+  \draw[dimension extension] (3,0) -- (3.75,0);
+  \draw[dimension extension] (3,1.5) -- (3.75,1.5);
+  \draw[dimension line] (3.55,0) -- node[dimension label vertical] {$2$} (3.55,1.5);
+  \node at (1.5,-1.25) {侧视图};
+\end{scope}
+% ---- top ----
+\begin{scope}[shift={(9.6,0)}]
+  \draw (0,0) rectangle (3,3);
+  \draw (0,1.5) -- (3,1.5);
+  \draw[dimension extension] (0,0) -- (-0.75,0);
+  \draw[dimension extension] (0,3) -- (-0.75,3);
+  \draw[dimension line] (-0.55,0) -- node[dimension label vertical] {$4$} (-0.55,3);
+  \draw[dimension extension] (3,0) -- (3.75,0);
+  \draw[dimension extension] (3,1.5) -- (3.75,1.5);
+  \draw[dimension line] (3.55,0) -- node[dimension label vertical] {$2$} (3.55,1.5);
+  \node at (1.5,-1.25) {俯视图};
+\end{scope}
+\end{tikzpicture}

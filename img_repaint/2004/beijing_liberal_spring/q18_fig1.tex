@@ -1,0 +1,23 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (O) at (0,0);
+\coordinate (F1) at (-0.6,0);
+\coordinate (F2) at (0.6,0);
+\coordinate (A) at (2.9,0);
+\coordinate (B) at (-2.9,0);
+\coordinate (XMIN) at (-3.6,0);
+\coordinate (XMAX) at (3.6,0);
+\coordinate (YMIN) at (0,-3.7);
+\coordinate (YMAX) at (0,3.7);
+\draw[->] (XMIN) -- (XMAX);
+\node[right,xshift=2pt,inner sep=0pt] at (XMAX) {$x$};
+\draw[->] (YMIN) -- (YMAX);
+\node[above,yshift=2pt,inner sep=0pt] at (YMAX) {$y$};
+\draw (O) ellipse [x radius=2.9cm,y radius=3.0cm];
+\draw (F2) circle [radius=1.5cm];
+\node[above right,xshift=2pt,yshift=2pt,inner sep=0pt] at (O) {$O$};
+\node[below,yshift=-2pt,inner sep=0pt] at (F1) {$F_{1}$};
+\node[below,yshift=-2pt,inner sep=0pt] at (F2) {$F_{2}$};
+\node[below right,xshift=2pt,yshift=-2pt,inner sep=0pt] at (A) {$A$};
+\node[below left,xshift=-2pt,yshift=-2pt,inner sep=0pt] at (B) {$B$};
+\end{tikzpicture}

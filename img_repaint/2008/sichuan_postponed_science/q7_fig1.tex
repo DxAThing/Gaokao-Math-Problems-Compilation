@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Axes
+\draw[->] (-1.6,0)--(3.2,0) node[anchor=west,xshift=2pt] {};
+\draw[->] (0,-1.6)--(0,2.6) node[anchor=south,yshift=2pt] {};
+% ticks
+\draw (1,0.08)--(1,-0.08);
+\draw (2,0.08)--(2,-0.08);
+\draw (0.08,1)--(-0.08,1);
+\draw (0.08,-1)--(-0.08,-1);
+\node[anchor=north,yshift=-4pt] at (1,0) {};
+\node[anchor=north,yshift=-4pt] at (2,0) {$2$};
+\node[anchor=east,xshift=-4pt] at (0,1) {$1$};
+% asymptote y=x (thin)
+\draw[thin] (-1.4,-1.4)--(2.6,2.6);
+% hyperbola x^2-y^2=2, right branch x=sqrt(2+y^2) (thin)
+\draw[thin,domain=-1.5:2.2,samples=80,variable=\y] plot ({sqrt(2+\y*\y)},{\y});
+% thick segment P-(2,0)
+\coordinate (O) at (0,0);
+\coordinate (P) at (1,1);
+\coordinate (Q) at (2,0);
+\draw[line width=1.6pt] (P)--(Q);
+\fill (O) circle (1.8pt);
+\fill (P) circle (1.8pt);
+\fill (Q) circle (1.8pt);
+% labels with clearance
+\node[anchor=north west,xshift=4pt,yshift=-4pt] at (O) {$O$};
+\node[anchor=south east,xshift=-4pt,yshift=4pt] at (P) {$P$};
+\end{tikzpicture}

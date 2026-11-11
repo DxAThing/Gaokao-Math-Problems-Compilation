@@ -1,0 +1,36 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (B1) at (4,3);
+\coordinate (A1) at (0,3);
+\coordinate (D) at (1.4,1.4);
+\coordinate (C) at (5.4,1.4);
+\coordinate (C1) at (5.4,4.4);
+\coordinate (D1) at (1.4,4.4);
+\coordinate (E) at (4.7,2.2);
+% front face
+\draw[solid] (A)--(B)--(B1)--(A1)--cycle;
+% top / right visible edges
+\draw[solid] (A1)--(D1);
+\draw[solid] (D1)--(C1);
+\draw[solid] (B1)--(C1);
+\draw[solid] (B)--(C);
+\draw[solid] (C)--(C1);
+\draw[solid] (B)--(C1);
+
+% hidden dashed edges
+\draw[dashed] (A)--(D);
+\draw[dashed] (D)--(D1);
+\draw[dashed] (D)--(C);
+\draw[dashed] (D)--(E);
+% labels
+\node[below left] at (A) {$A$};
+\node[below] at (B) {$B$};
+\node[right] at (C) {$C$};
+\node[left] at (D) {$D$};
+\node[left] at (A1) {$A_{1}$};
+\node[right,xshift=1pt,yshift=-3pt] at (B1) {$B_{1}$};
+\node[right] at (C1) {$C_{1}$};
+\node[above left] at (D1) {$D_{1}$};
+\node[right,xshift=3pt] at (E) {$E$};
+\end{tikzpicture}

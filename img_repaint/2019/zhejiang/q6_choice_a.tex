@@ -1,0 +1,13 @@
+% 2019 Zhejiang Q6 option A: schematic pair of curves, x=1 tick.
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.95cm,y=1.95cm,line width=.6pt,>=Stealth]
+\draw[->] (-1.05,0) -- (2.60,0);
+\node[anchor=west,inner sep=0pt,xshift=3pt] at (2.60,0) {$x$};
+\draw[->] (0,-0.95) -- (0,2.55);
+\node[anchor=south,inner sep=0pt,yshift=3pt] at (0,2.55) {$y$};
+\node[anchor=north east,inner sep=0pt,xshift=-3pt,yshift=-3pt] at (0,0) {$O$};
+\draw (1,-0.055) -- (1,0.055);
+\node[anchor=north,inner sep=0pt,yshift=-5pt] at (1,0) {$1$};
+\draw[domain=-1.0:1.0,samples=160] plot (\x,{1.1*exp(0.8*\x)});
+\draw[domain=0.64:2.2,samples=180] plot (\x,{ln(\x-0.58)/ln(0.33)});
+\end{tikzpicture}

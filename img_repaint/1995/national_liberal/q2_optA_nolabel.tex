@@ -1,0 +1,14 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% y = 1/(x-1), asymptote x=1 (faithful wrong option A).
+\draw[->] (-2.6,0)--(3.4,0) node[right] {$x$};
+\draw[->] (0,-2.4)--(0,2.6) node[above] {$y$};
+\node[below left] at (0,0) {$O$};
+\draw[dashed] (1,-2.4)--(1,2.6);
+\node[below] at (1,0) {\phantom{$1$}};
+\node[below right] at (1,0) {$1$};
+\begin{scope}
+\clip (-2.6,-2.4) rectangle (3.4,2.6);
+\draw[domain=-2.6:0.6,samples=120] plot (\x,{1/(\x-1)});
+\draw[domain=1.4:3.4,samples=120] plot (\x,{1/(\x-1)});
+\end{scope}
+\end{tikzpicture}

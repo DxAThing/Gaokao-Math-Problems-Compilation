@@ -1,0 +1,53 @@
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize]
+\coordinate (C) at (0,1);
+\coordinate (B) at (3,1);
+\coordinate (A) at (2.2,0);
+\coordinate (Dd) at (-0.8,0);
+\coordinate (C1) at (0,6);
+\coordinate (B1) at (3,6);
+\coordinate (A1) at (2.2,5);
+\coordinate (D1) at (-0.8,5);
+\coordinate (C2) at (0,4.75);
+\coordinate (P) at (3,4.5);
+\coordinate (B2) at (3,3.5);
+\coordinate (A2) at (2.2,1.25);
+\coordinate (D2) at (-0.8,2.5);
+% outer cuboid: solid visible, dashed hidden
+\draw[solid] (Dd)--(A)--(B)--(B1)--(A1)--(D1)--cycle;
+\draw[solid] (A)--(A1);
+
+
+\draw[solid] (C1)--(B1);
+\draw[solid] (D1)--(C1);
+\draw[dashed] (C)--(Dd);
+\draw[dashed] (C)--(B);
+\draw[dashed] (C)--(C1);
+
+% inner planes
+\draw[dashed] (C2)--(P);
+\draw[dashed] (C2)--(B2);
+\draw[dashed] (C2)--(A2);
+\draw[dashed] (C2)--(D2);
+\draw[solid] (D2)--(A2);
+\draw[solid] (A2)--(P);
+% axes
+\draw[->,>=stealth] (C1)--(0,6.9);
+\draw[->,>=stealth] (B)--(4.0,1);
+\draw[->,>=stealth] (Dd)--(-1.5,-0.7);
+\node[inner sep=1pt] at (0,7.15) {$z$};
+\node[inner sep=1pt] at (4.25,1) {$y$};
+\node[inner sep=1pt] at (-1.7,-0.85) {$x$};
+\node[inner sep=1pt] at ($(C)+(-0.42,0.28)$) {$C$};
+\node[inner sep=1pt] at ($(B)+(0.30,-0.28)$) {$B$};
+\node[inner sep=1pt] at ($(A)+(0.30,-0.28)$) {$A$};
+\node[inner sep=1pt,xshift=-2.00bp,yshift=0.00bp] at ($(Dd)+(-0.36,-0.10)$) {$D$};
+\node[inner sep=1pt] at ($(C1)+(-0.42,0.10)$) {$C_{1}$};
+\node[inner sep=1pt] at ($(B1)+(0.36,0)$) {$B_{1}$};
+\node[inner sep=1pt,xshift=-4.00bp,yshift=2.00bp] at ($(A1)+(0.10,0.34)$) {$A_{1}$};
+\node[inner sep=1pt] at ($(D1)+(-0.38,0.10)$) {$D_{1}$};
+\node[inner sep=1pt] at ($(C2)+(-0.36,0)$) {$C_{2}$};
+\node[inner sep=1pt] at ($(P)+(0.32,0.10)$) {$P$};
+\node[inner sep=1pt] at ($(B2)+(0.38,0)$) {$B_{2}$};
+\node[inner sep=1pt,xshift=0.00bp,yshift=2.00bp] at ($(A2)+(0.36,-0.05)$) {$A_{2}$};
+\node[inner sep=1pt] at ($(D2)+(-0.40,0)$) {$D_{2}$};
+\end{tikzpicture}

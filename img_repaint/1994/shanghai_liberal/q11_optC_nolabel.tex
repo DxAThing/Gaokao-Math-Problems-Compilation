@@ -1,0 +1,22 @@
+% single_function_options: 1994_shanghai_liberal_q11_optC_nolabel (schematic option panel)
+% source: source/普通高考/1994/1994上海试点教材文.pdf, PDF page 1, question 11 option C
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.4cm,y=1.4cm,line width=.6pt,>=Stealth,font=\normalsize]
+  \coordinate (O) at (0,0);
+  \coordinate (Xmin) at (-2.2,0);
+  \coordinate (Xmax) at (2.8,0);
+  \coordinate (Ymin) at (0,-2.6);
+  \coordinate (Ymax) at (0,2.5);
+  \coordinate (Lleft) at (-1.9,-1.9);
+  \coordinate (Lright) at (2.3,2.3);
+
+  \draw[->] (Xmin)--(Xmax);
+  \draw[->] (Ymin)--(Ymax);
+  \draw (Lleft)--(Lright);
+  \draw[domain=0.28:2.4,samples=140] plot (\x,{-ln(\x)/ln(2.0)});
+
+  \node[anchor=north west,inner sep=0pt] at (0.1,-0.16) {$O$};
+  \node[anchor=north east,inner sep=0pt] at (0.94,-0.16) {$1$};
+  \node[right,inner sep=0pt,xshift=2pt] at (2.8,0) {$x$};
+  \node[above,inner sep=0pt,yshift=2pt] at (0,2.5) {$y$};
+\end{tikzpicture}

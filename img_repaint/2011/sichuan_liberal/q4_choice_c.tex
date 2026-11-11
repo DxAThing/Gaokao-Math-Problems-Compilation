@@ -1,0 +1,16 @@
+% source: inputs/original_01.pdf p.1; raster: inputs/2011_sichuan_liberal_q4_choice_c.png
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth]
+  \draw[->] (-3.2,0)--(3.1,0);
+  \draw[->] (0,-1.1)--(0,4.5);
+  \draw (1,-0.08)--(1,0.08);
+  \draw (-0.08,1)--(0.08,1);
+  \draw (-0.08,2)--(0.08,2);
+  \draw[domain=-2:1.55,samples=141] plot (\x,{exp(\x*ln(2))+1});
+  \node[right,inner sep=0pt,xshift=2pt] at (3.1,0) {$x$};
+  \node[above,inner sep=0pt,yshift=2pt] at (0,4.5) {$y$};
+  \node[anchor=north east,inner sep=1pt] at (0,0) {$O$};
+  \node[anchor=north,inner sep=1pt] at (1,-0.14) {$1$};
+  \node[anchor=east,inner sep=1pt] at (-0.2,1) {$1$};
+  \node[anchor=east,inner sep=1pt] at (-0.35,2.08) {$2$};
+\end{tikzpicture}

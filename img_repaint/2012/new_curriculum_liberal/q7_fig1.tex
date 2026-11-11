@@ -1,0 +1,21 @@
+% 2012_new_curriculum_liberal_q7_fig1: grid + three thick triangles. No dims or view names.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=0.6cm,y=0.6cm]
+% light grid
+\draw[step=1,gray!50,line width=0.3pt] (-1,-1) grid (11,8);
+% front isosceles on grid: base 4, height 2 with median
+\begin{scope}[shift={(-0.5,3)}]
+  \draw (0,0) -- (4,0) -- (2,2) -- cycle;
+  \draw (2,0) -- (2,2);
+  \node at (2,-0.8) {正视图};
+\end{scope}
+% side right triangle 2x2
+\begin{scope}[shift={(4.2,3)}]
+  \draw (0,0) -- (2,0) -- (2,2) -- cycle;
+  \node at (1,-0.8) {侧视图};
+\end{scope}
+% top downward isosceles: base 4 aligned, apex down 2
+\begin{scope}[shift={(6.7,3)}]
+  \draw (0,2) -- (4,2) -- (2,0) -- cycle;
+  \node at (2,-0.8) {俯视图};
+\end{scope}
+\end{tikzpicture}

@@ -1,0 +1,16 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=0.66cm,y=0.66cm,line width=.6pt,>=Stealth]
+\draw[->] (-3.65,0) -- (3.65,0);
+\draw[->] (0,-3.65) -- (0,3.60);
+\draw[dashed] (-3.14159,3.14159) -- (3.14159,3.14159);
+\draw[dashed] (-3.14159,3.14159) -- (-3.14159,-1.10);
+\draw[dashed] (3.14159,3.14159) -- (3.14159,-0.65);
+\draw[domain=0:3.14159,samples=120] plot (\x,{\x+sin(deg(\x))});
+\draw[domain=-3.14159:0,samples=120] plot (\x,{-\x-sin(deg(\x))});
+\node[anchor=south east,inner sep=0pt,xshift=-2pt,yshift=2pt] at (0,3.14159) {$\pi$};
+\node[anchor=south west,inner sep=0pt,xshift=2pt,yshift=2pt] at (0,3.6) {$y$};
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (-3.14159,0) {$-\pi$};
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (3.14159,0) {$\pi$};
+\node[anchor=north west,inner sep=0pt,xshift=2pt,yshift=-2pt] at (3.65,0) {$x$};
+\end{tikzpicture}

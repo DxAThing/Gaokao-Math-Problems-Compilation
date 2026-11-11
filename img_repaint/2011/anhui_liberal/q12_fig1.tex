@@ -1,60 +1,24 @@
-% Source PDF: source/普通高考/2011/2011安徽文.pdf, page 1, question 12.
-% PDF embedded bitmap attempt: pdfimages -list returned no image objects; the flowchart is vector artwork.
-% Grid evidence: tmp/review_flowchart_2011_anhui_liberal/grid/page-1-grid100.png
-% (100px coarse + 50px fine) and q12-block-grid50.png (50px coarse + 25px fine).
-% Original-side comparison crop: tmp/review_flowchart_2011_anhui_liberal/crop/q12_original_final.png,
-% taken from the ungridded page render with a safety border.
-% Elements: rounded start/end terminals, process boxes, two decision/output branches,
-% one T>105? decision diamond, output parallelogram, and directed loop connectors.
-% Node-edge list: start->(T=0,k=0)->(T=T+k)->(T>105?); yes->输出k->结束;
-% no->(k=k+1)->loop-back to the stem before T=T+k. No other edges or dashed segments.
-% The loop arrow enters the main stem from the right with one horizontal arrowhead;
-% the output path remains a separate downward branch.
-\begin{tikzpicture}[
-  >=Stealth,
-  x=1cm,y=1cm,
-  line width=0.45pt,
-  line cap=round,line join=round,
-  font=\normalsize,
-  flowtext/.style={anchor=center,align=center,inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
-  flowbox/.style={flowtext,draw,minimum height=.68cm,inner xsep=4pt,inner ysep=2pt},
-  terminal/.style={flowbox,rounded corners=.16cm,minimum width=1.25cm},
-  process/.style={flowbox},
-  io/.style={flowbox,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
-    minimum height=.74cm},
-  decision/.style={flowbox,diamond,aspect=2.8,minimum width=3.10cm,minimum height=.90cm,
-    inner sep=0pt}
-]
-  % Keep a small right margin so the k=k+1 frame is not clipped.
-  \path[use as bounding box] (-3.55,-6.25) rectangle (4.85,0.42);
-
-  \node[terminal] (start) at (0,0) {开始};
-  \node[process,minimum width=3.10cm] (init) at (0,-1.00) {$T=0,k=0$};
-  \node[process,minimum width=2.40cm] (sum) at (0,-2.30) {$T=T+k$};
-  \node[decision] (test) at (0,-3.45) {$T>105?$};
-  \node[process,minimum width=2.20cm] (inc) at (3.50,-3.45) {$k=k+1$};
-  \node[io,minimum width=1.80cm] (output) at (0,-4.85) {输出 $k$};
-  \node[terminal] (finish) at (0,-5.97) {结束};
-  % Leave at least 2.5 mm around the shared stem and the neighboring boxes.
-  \coordinate (merge-level) at (0,-1.65);
-  \coordinate (return-entry) at (0.60,-1.65);
-
-  % Main chain and terminating true branch.
-  \draw[->] (start.south) -- (init.north);
-  \draw (init.south) -- (merge-level);
-  \draw[->] (merge-level) -- (sum.north);
-  \draw[->] (sum.south) -- (test.north);
-  \draw[->] (test.south) -- node[right=2pt] {是} (output.north);
-  \draw[->] (output.south) -- (finish.north);
-
-  % False branch updates k, then returns up to the stem before T=T+k.
-  \draw[->] (test.east) -- node[above=2pt,pos=.38] {否} (inc.west);
-  \coordinate (loop-right) at (3.50,-1.78);
-  % The return leg leaves the top of the update box, avoiding a line through
-  % the node interior before turning left into the shared stem.
-  \draw (inc.north) -- (loop-right);
-  % The directed return path ends at the shared stem entry.
-  \draw[->] (loop-right) -- (return-entry) -- (merge-level);
-  
+\begin{tikzpicture}[x=1cm, y=1cm]
+\tikzset{
+  fstart/.style={draw, line width=0.6pt, shape=rectangle, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm, align=center, outer sep=0pt, execute at begin node={\parindent=0pt}},
+  fproc/.style={draw, line width=0.6pt, minimum width=38mm, minimum height=10mm, align=center, outer sep=0pt, execute at begin node={\parindent=0pt}},
+  fdec/.style={draw, line width=0.6pt, diamond, aspect=2.7, minimum width=40mm, minimum height=16mm, align=center, outer sep=0pt, execute at begin node={\parindent=0pt}},
+  fio/.style={draw, line width=0.6pt, trapezium, trapezium left angle=72, trapezium right angle=108, minimum width=34mm, minimum height=10mm, align=center, outer sep=0pt, execute at begin node={\parindent=0pt}},
+  farr/.style={line width=0.6pt, ->, >=Latex}
+}
+\node[fstart] (start) at (0,0) {开始};
+\node[fproc] (a1) at (0,-2.0) {$T=0,k=0$};
+\node[fproc] (tb) at (0,-4.0) {$T=T+k$};
+\node[fdec] (dec) at (0,-6.2) {$T>105?$};
+\node[fio] (out) at (0,-8.4) {输出 $k$};
+\node[fstart] (stop) at (0,-10.2) {结束};
+\node[fproc, minimum width=30mm] (kk) at (5.0,-6.2) {$k=k+1$};
+\coordinate (J) at (0,-3.0);
+\draw[farr] (start.south) -- (a1.north);
+\draw[farr] (a1.south) -- (tb.north);
+\draw[farr] (tb.south) -- (dec.north);
+\draw[farr] (dec.south) -- (out.north) node[midway, right=1.5mm] {是};
+\draw[farr] (out.south) -- (stop.north);
+\draw[farr] (dec.east) -- node[pos=0.32, above=1.5mm] {否} (kk.west);
+\draw[farr] (kk.north) -- (5.0,-3.0) -- (J);
 \end{tikzpicture}

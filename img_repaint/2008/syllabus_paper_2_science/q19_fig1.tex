@@ -1,0 +1,41 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (C) at (5.2,1.8);
+\coordinate (D) at (1.2,1.8);
+\coordinate (A1) at (0,7);
+\coordinate (B1) at (4,7);
+\coordinate (C1) at (5.2,8.8);
+\coordinate (D1) at (1.2,8.8);
+\coordinate (E) at (5.2,3.55);
+% prism solid frame
+\draw[solid] (A) -- (A1);
+\draw[solid] (A) -- (B);
+\draw[solid] (B) -- (B1);
+\draw[solid] (C) -- (C1);
+\draw[solid] (A1) -- (B1);
+\draw[solid] (A1) -- (D1);
+\draw[solid] (D1) -- (C1);
+\draw[solid] (B1) -- (C1);
+\draw[solid] (B) -- (E);
+\draw (B)--(C);
+% prism hidden + interior dashed
+\draw[dashed] (D) -- (D1);
+\draw[dashed] (A) -- (D);
+\draw[dashed] (D) -- (C);
+\draw[dashed] (D) -- (B);
+\draw[dashed] (D) -- (E);
+\draw[dashed] (A1) -- (D);
+\draw[dashed] (A1) -- (E);
+\draw[dashed] (A1) -- (C);
+% labels
+\node[below left] at (A) {$A$};
+\node[below] at (B) {$B$};
+\node[right] at (C) {$C$};
+\node[left] at (D) {$D$};
+\node[left] at (A1) {$A_{1}$};
+\node[right,xshift=0.00bp,yshift=-2.00bp] at (B1) {$B_{1}$};
+\node[above right] at (C1) {$C_{1}$};
+\node[above] at (D1) {$D_{1}$};
+\node[right] at (E) {$E$};
+\end{tikzpicture}

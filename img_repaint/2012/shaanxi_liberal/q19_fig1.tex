@@ -1,0 +1,43 @@
+\examstatpanels{%
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,
+  exam statistical template paired,
+  xmin=50,xmax=375,ymin=0,ymax=47.5,
+  xtick={50,100,150,200,250,300,350},
+  xticklabels={0,100,150,200,250,300,350},
+  ytick={5,10,20,25,40},
+  title={甲品牌}]
+\addplot[draw=black,fill=white] coordinates
+  {(100,5) (150,20) (200,40) (250,25) (300,10) (350,0)};
+\draw[dashed] (axis cs:50,40) -- (axis cs:200,40);
+\draw[dashed] (axis cs:50,25) -- (axis cs:250,25);
+\draw[dashed] (axis cs:50,20) -- (axis cs:150,20);
+\draw[dashed] (axis cs:50,10) -- (axis cs:300,10);
+\draw[dashed] (axis cs:50,5) -- (axis cs:100,5);
+\examstatxbreak{75}{0}
+\examstatylabel{频数}
+\examstatxlabel{寿命/小时}
+\end{axis}
+\end{tikzpicture}%
+}{%
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,
+  exam statistical template paired,
+  xmin=50,xmax=375,ymin=0,ymax=32.5,
+  xtick={50,100,150,200,250,300,350},
+  xticklabels={0,100,150,200,250,300,350},
+  ytick={10,15,20,25,30},
+  title={乙品牌}]
+\addplot[draw=black,fill=white] coordinates
+  {(100,10) (150,20) (200,30) (250,25) (300,15) (350,0)};
+\draw[dashed] (axis cs:50,30) -- (axis cs:200,30);
+\draw[dashed] (axis cs:50,25) -- (axis cs:250,25);
+\draw[dashed] (axis cs:50,20) -- (axis cs:150,20);
+\draw[dashed] (axis cs:50,15) -- (axis cs:300,15);
+\draw[dashed] (axis cs:50,10) -- (axis cs:100,10);
+\examstatxbreak{75}{0}
+\examstatylabel{频数}
+\examstatxlabel{寿命/小时}
+\end{axis}
+\end{tikzpicture}%
+}

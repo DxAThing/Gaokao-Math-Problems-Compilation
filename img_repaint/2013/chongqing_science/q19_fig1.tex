@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt},
+ geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (P) at (0.5,7.0);
+\coordinate (A) at (0.5,3.0);
+\coordinate (B) at (4.5,0.5);
+\coordinate (C) at (7.5,2.0);
+\coordinate (D) at (6.8,3.8);
+\coordinate (F) at (4.0,4.5);
+\draw[geometry edge] (P)--(A);
+\draw[geometry edge] (P)--(B);
+\draw[geometry edge] (P)--(C);
+\draw[geometry edge] (P)--(D);
+\draw[geometry edge] (A)--(B);
+\draw[geometry edge] (B)--(C);
+\draw[geometry edge] (C)--(D);
+\draw[geometry edge] (F)--(B);
+\draw[geometry edge] (F)--(D);
+\draw[geometry edge,dashed] (A)--(D);
+\draw[geometry edge,dashed] (A)--(C);
+\draw[geometry edge,dashed] (A)--(F);
+\node[geometry label,above] at (P) {$P$};
+\node[geometry label,left] at (A) {$A$};
+\node[geometry label,below] at (B) {$B$};
+\node[geometry label,right] at (C) {$C$};
+\node[geometry label,right] at (D) {$D$};
+\node[geometry label,above right] at (F) {$F$};
+\end{tikzpicture}

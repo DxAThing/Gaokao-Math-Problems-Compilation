@@ -1,0 +1,37 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% PA vertical, base circle in horizontal plane (schematic ellipse)
+\coordinate (A) at (0,0);
+\coordinate (P) at (0,4);
+\coordinate (Q) at (0,2);
+\coordinate (B) at (6,0);
+\coordinate (O) at (3,0);
+\coordinate (C) at (2.2,-1.011978261);
+\coordinate (G) at (1.733333333,-0.3373260869);
+% base circle: back half dashed (upper), front half solid (lower)
+\draw (B) arc (0:55.3989456161:3 and 1.05);
+\draw[dashed] ({3+3*cos(55.3989456161)},{1.05*sin(55.3989456161)}) arc (55.3989456161:180:3 and 1.05);
+\draw (A) arc (180:360:3 and 1.05);
+% diameter AB dashed
+\draw[dashed] (A) -- (B);
+% vertical PA
+\draw (A) -- (P);
+% chords and edges
+\draw (A) -- (C);
+\draw (B) -- (C);
+\draw (P) -- (C);
+\draw (P) -- (B);
+\draw[dashed] (O) -- (C);
+\draw[dashed] (Q) -- (G);
+% dots
+\fill (Q) circle (1.4pt);
+\fill (O) circle (1.4pt);
+\fill (G) circle (1.4pt);
+% labels with clearance
+\node[above] at (0,4.18) {$P$};
+\node[left,xshift=-3pt] at (Q) {$Q$};
+\node[left,xshift=-3pt,yshift=-2pt] at (A) {$A$};
+\node[right,xshift=3pt] at (B) {$B$};
+\node[above,yshift=3pt] at (O) {$O$};
+\node[below,yshift=-2pt] at (C) {$C$};
+\node[left,xshift=-3pt,yshift=-1pt] at (G) {$G$};
+\end{tikzpicture}

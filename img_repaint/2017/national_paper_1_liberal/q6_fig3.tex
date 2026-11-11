@@ -1,0 +1,19 @@
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize]
+\tikzset{hid/.style={dashed}, lbl/.style={font=\normalsize, fill=white, inner sep=1.5pt}}
+\coordinate (F1) at (0,0); \coordinate (F2) at (2.7,0); \coordinate (F3) at (2.7,2.7); \coordinate (F4) at (0,2.7);
+\coordinate (K1) at (0.95,0.95); \coordinate (K2) at (3.65,0.95); \coordinate (K3) at (3.65,3.65); \coordinate (K4) at (0.95,3.65);
+\draw (F1)--(F2)--(F3)--(F4)--cycle;
+\draw (F2)--(K2) (F3)--(K3) (F4)--(K4) (K2)--(K3)--(K4);
+\draw[hid] (F1)--(K1) (K1)--(K2) (K1)--(K4);
+\coordinate (A) at (F4); \coordinate (B) at (K1);
+\coordinate (M) at ($(F2)!0.5!(F3)$); \coordinate (N) at ($(F1)!0.5!(K1)$); \coordinate (Q) at ($(F2)!0.5!(K2)$);
+\draw[hid] (A)--(B);
+\draw[hid] (N)--(M);
+\draw[hid] (N)--(Q);
+\draw (M)--(Q);
+\node[lbl, left=4pt] at (A) {$A$};
+\node[lbl, above=2pt] at (B) {$B$};
+\node[lbl,right=3pt] at (M) {$M$};
+\node[lbl,below right=2pt] at (N) {$N$};
+\node[lbl, below right=2pt] at (Q) {$Q$};
+\end{tikzpicture}

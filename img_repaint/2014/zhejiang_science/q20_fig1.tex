@@ -1,0 +1,26 @@
+% 2014_zhejiang_science_q20_fig1: pyramid A-BCDE, AC vertical, with D-B dashed diagonal.
+% Visible/hidden inventory from inputs/2014_zhejiang_science_q20_fig1.png.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (E) at (0.0,0.0);
+\coordinate (B) at (2.6,0.0);
+\coordinate (C) at (4.2,1.0);
+\coordinate (D) at (0.4,1);
+\coordinate (A) at (4.2,4.6);
+% Solid visible edges
+\draw[solid] (A)--(C);
+\draw[solid] (A)--(D);
+\draw[solid] (A)--(E);
+\draw[solid] (A)--(B);
+\draw[solid] (C)--(B);
+\draw[solid] (B)--(E);
+\draw[solid] (E)--(D);
+% Hidden / interior edges (dashed in original)
+\draw[dashed] (D)--(C);
+\draw[dashed] (D)--(B);
+% Labels adjacent to points
+\node[below left] at (E) {$E$};
+\node[below] at (B) {$B$};
+\node[right] at (C) {$C$};
+\node[left] at (D) {$D$};
+\node[above right] at (A) {$A$};
+\end{tikzpicture}

@@ -1,0 +1,39 @@
+% 2005_liaoning_q18_fig1: diameter-1 circle (R=3.5cm); stepped cross from theta*=60deg (x=1.75cm,y=3.031089cm); dashed diameters+diagonal; x/y dimensions; theta arc at V6.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (O) at (0,0);
+\coordinate (V0) at (-1.75,3.031089);
+\coordinate (V1) at (1.75,3.031089);
+\coordinate (V2) at (1.75,1.75);
+\coordinate (V3) at (3.031089,1.75);
+\coordinate (V4) at (3.031089,-1.75);
+\coordinate (V5) at (1.75,-1.75);
+\coordinate (V6) at (1.75,-3.031089);
+\coordinate (V7) at (-1.75,-3.031089);
+\coordinate (V8) at (-1.75,-1.75);
+\coordinate (V9) at (-3.031089,-1.75);
+\coordinate (V10) at (-3.031089,1.75);
+\coordinate (V11) at (-1.75,1.75);
+\draw (O) circle[radius=3.5cm];
+\draw (V0)--(V1)--(V2)--(V3)--(V4)--(V5)--(V6)--(V7)--(V8)--(V9)--(V10)--(V11)--cycle;
+\draw[dashed] (-3.5,0)--(3.5,0);
+\draw[dashed] (0,3.5)--(0,-3.5);
+\draw[dashed] (V0)--(V6);
+\draw (V6) ++(120:0.55cm) arc[start angle=120,end angle=180,radius=0.55cm];
+\node[below left=2pt,inner sep=0pt] at (O) {$O$};
+\node at (1.06,-2.63) {$\theta$};
+\draw[dimension extension] (1.75,3.031089)--(4.55,3.031089);
+\draw[dimension extension] (1.75,-3.031089)--(4.55,-3.031089);
+\draw[dimension extension] (3.031089,1.75)--(3.95,1.75);
+\draw[dimension extension] (3.031089,-1.75)--(3.95,-1.75);
+\draw[dimension line] (3.8,-1.75)--node[dimension label vertical] {$x$} (3.8,1.75);
+\draw[dimension line] (4.4,-3.031089)--node[dimension label vertical] {$y$} (4.4,3.031089);
+\draw[dimension extension] (-1.75,-3.031089)--(-1.75,-3.95);
+\draw[dimension extension] (1.75,-3.031089)--(1.75,-3.95);
+\draw[dimension line] (-1.75,-3.8)--node[dimension label] {$x$} (1.75,-3.8);
+\draw[dimension extension] (-3.031089,-3.031089)--(-3.031089,-4.55);
+\draw[dimension extension] (3.031089,-3.031089)--(3.031089,-4.55);
+\draw[dimension line] (-3.031089,-4.4)--node[dimension label] {$y$} (3.031089,-4.4);
+
+% Explicit named circle-center points, painted after all region fills.
+\fill (O) circle[radius=1.4pt];
+\end{tikzpicture}

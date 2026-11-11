@@ -1,0 +1,20 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (P) at (0,4.2);
+\coordinate (A) at (-2.2,0);
+\coordinate (B) at (2.2,0);
+% base rim: front solid, back dashed
+\draw (-2.2,0) arc (180:360:2.2 and 0.35);
+\draw[dashed] (-2.2,0) arc (180:0:2.2 and 0.35);
+% diameter AB dashed
+\draw[dashed] (A) -- (B);
+% generators
+\draw (P) -- (A);
+\draw (P) -- (B);
+% center dot
+\fill (0,0) circle (1.5pt);
+% labels with clearance
+\node[above=5pt] at (P) {$P$};
+\node[left=5pt] at (A) {$A$};
+\node[right=5pt] at (B) {$B$};
+\node[below=6pt] at (0,0) {$O$};
+\end{tikzpicture}

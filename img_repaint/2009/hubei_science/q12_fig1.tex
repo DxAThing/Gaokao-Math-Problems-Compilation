@@ -1,2 +1,21 @@
-% Canonical statistical figure: img_repaint/2009/hubei_liberal/q15_fig1.tex
-\input{img_repaint/2009/hubei_liberal/q15_fig1.tex}
+% First draft: sample-data frequency histogram, bins [2,22) width 4.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,
+  xmin=-2,xmax=24,ymin=0,
+  xtick={-2,2,6,10,14,18,22},
+  ytick={0.02,0.03,0.08,0.09},
+  ymax=0.095,
+  xticklabels={,2,6,10,14,18,22}]
+\addplot[draw=black,fill=white] coordinates
+  {(2,0.02) (6,0.08) (10,0.09) (14,0.03) (18,0.03) (22,0)};
+\examstatxbreak{0}{0}
+\draw[dashed] (axis cs:-2,0.02) -- (axis cs:2,0.02);
+\draw[dashed] (axis cs:-2,0.08) -- (axis cs:6,0.08);
+\draw[dashed] (axis cs:-2,0.09) -- (axis cs:10,0.09);
+\draw[dashed] (axis cs:-2,0.03) -- (axis cs:14,0.03);
+\examstatylabel{频率/组距}
+\examstatxlabel{样本数据}
+
+\node[anchor=east,inner sep=0pt,xshift=-4pt] at (current axis.left of origin) {0};
+\end{axis}
+\end{tikzpicture}

@@ -1,0 +1,19 @@
+% Guangdong 2007 science: height frequency chart (10 groups of 5cm).
+% Eye-read bar heights off the printed axis; no numeric labels in source.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram, exam statistical template wide,
+  xmin=140,ymin=0,
+  xtick={140,145,150,155,160,165,170,175,180,185,190,195},
+  ytick={0,50,100,150,200,250,300,350,400,450,500,550,600},
+  yticklabels={0,50,100,150,200,250,300,350,400,450,500,550,600},
+  xmax=197.5,
+  ymax=625,
+  xticklabels={,145,150,155,160,165,170,175,180,185,190,195}]
+\addplot[draw=black,fill=white] coordinates
+  {(145,100) (150,195) (155,320) (160,450) (165,540) (170,490)
+   (175,365) (180,225) (185,60) (190,35) (195,0)};
+\examstatxbreak{142.5}{0}
+\examstatylabel{人数/人}
+\examstatxlabel{身高/cm}
+\end{axis}
+\end{tikzpicture}

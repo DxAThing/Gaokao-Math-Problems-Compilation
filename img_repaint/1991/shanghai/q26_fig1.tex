@@ -1,0 +1,21 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1cm,y=0.75cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-3.2,0)--(3.3,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.0)--(0,6.6) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw[domain=-2.4:2.4,samples=101] plot (\x,{(\x)^2+2});
+\draw (-2.3,6.45)--(2.0,0);
+\draw[densely dashed] (0.5,2.25)--(0.5,0);
+\draw[densely dashed] (-2,6)--(-2,0);
+\draw (0,0)--(-0.1818,3.2727);
+\fill (0,0) circle (1.4pt) (2,0) circle (1.4pt) (0.5,2.25) circle (1.4pt) (-2,6) circle (1.4pt) (-0.1818,3.2727) circle (1.4pt) (0.6061,1.0909) circle (1.4pt);
+\node[above left,inner sep=0pt,xshift=-3pt,yshift=3pt] at (-2.3,6.45) {$L$};
+\node[right,inner sep=0pt,xshift=4pt] at (2.02,5.5) {$y=x^{2}+2$};
+\node[below,inner sep=0pt,yshift=-3pt] at (2,0) {$A(2,0)$};
+\node[below left,inner sep=0pt,xshift=-3pt,yshift=-3pt] at (0,0) {$O$};
+\node[right,inner sep=0pt,xshift=6pt,yshift=0pt] at (0.5,2.25) {$B$};
+\node[below left,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (-2,6) {$C$};
+\node[below left,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (-0.1818,3.2727) {$P$};
+\node[below,inner sep=0pt,yshift=-3pt] at (0.5,0) {$B'$};
+\node[below,inner sep=0pt,yshift=-3pt] at (-2,0) {$C'$};
+\node[right,inner sep=0pt,xshift=4pt] at (0.6061,1.0909) {$Q$};
+\end{tikzpicture}

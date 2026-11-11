@@ -1,0 +1,48 @@
+% 2004_guangdong_q15_fig1: area/volume analogy, two panels: triangle PAB / tetrahedron P-ABC.
+% Panel 1: all solid. Panel 2: P-C, B'-C', A'-C' dashed; rest solid. Captions kept.
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+  solidedge/.style={solid,line width=.6pt},
+  dashedege/.style={dashed,line width=.6pt,dash pattern=on 4pt off 3pt},
+  geomlabel/.style={font=\normalsize,inner sep=2pt}]
+% ---- panel 1: triangle PAB with A' on PA, B' on PB ----
+\coordinate (P1) at (0,0);
+\coordinate (A1) at (5.4,0);
+\coordinate (B1) at (4.2,4.2);
+\coordinate (Ap1) at (2.15,0);
+\coordinate (Bp1) at (2.65,2.65);
+\draw[solidedge] (P1)--(A1)--(B1)--cycle;
+\draw[solidedge] (Ap1)--(Bp1);
+\node[geomlabel,below left] at (P1) {$P$};
+\node[geomlabel,below] at (2.15,-0.12) {$A'$};
+\node[geomlabel,below right] at (A1) {$A$};
+\node[geomlabel,above left] at (Bp1) {$B'$};
+\node[geomlabel,above] at (4.2,4.55) {$B$};
+\node[geomlabel] at (2.7,-1.35) {图(1)};
+% ---- panel 2: tetrahedron P-ABC with A' on PA, B' on PB, C' on PC ----
+\coordinate (P2) at (7,0);
+\coordinate (A2) at (12.4,0);
+\coordinate (Ap2) at (9.4,0);
+\coordinate (B2) at (10.6,4.4);
+\coordinate (C2) at (12.2,3.2);
+\coordinate (Bp2) at (8.62,1.98);
+\coordinate (Cp2) at (9.6,1.6);
+% hidden: P-C (through C'), B'-C', A'-C'
+\draw[dashedege] (P2)--(C2);
+\draw[dashedege] (Bp2)--(Cp2);
+\draw[dashedege] (Cp2)--(Ap2);
+% visible
+\draw[solidedge] (P2)--(B2);
+\draw[solidedge] (P2)--(A2);
+\draw[solidedge] (B2)--(A2);
+\draw[solidedge] (B2)--(C2);
+\draw[solidedge] (C2)--(A2);
+\draw[solidedge] (Bp2)--(Ap2);
+\node[geomlabel,below left] at (P2) {$P$};
+\node[geomlabel,below] at (9.4,-0.32) {$A'$};
+\node[geomlabel,below right] at (A2) {$A$};
+\node[geomlabel,left] at (Bp2) {$B'$};
+\node[geomlabel,above] at (10.6,4.75) {$B$};
+\node[geomlabel,above] at (9.6,1.8) {$C'$};
+\node[geomlabel,right] at (12.45,3.2) {$C$};
+\node[geomlabel] at (9.7,-1.35) {图(2)};
+\end{tikzpicture}

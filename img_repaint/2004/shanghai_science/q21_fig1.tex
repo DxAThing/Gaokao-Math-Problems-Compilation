@@ -1,0 +1,34 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (P) at (0,3.8);
+\coordinate (D) at (-1.37,2.0);
+\coordinate (F) at (1.18,2.0);
+\coordinate (E) at (-0.55,1.15);
+\coordinate (A) at (-2.9,0.0);
+\coordinate (B) at (-1.1,-1.5);
+\coordinate (C) at (2.5,0.0);
+% lateral edges split at section points
+\draw[solid] (P) -- (D);
+\draw[solid] (D) -- (A);
+\draw[solid] (P) -- (E);
+\draw[solid] (E) -- (B);
+\draw[solid] (P) -- (F);
+\draw[solid] (F) -- (C);
+% base
+\draw[solid] (A) -- (B);
+\draw[solid] (B) -- (C);
+\draw[dashed] (A) -- (C);
+% section DEF
+\draw[dashed] (D) -- (F);
+\draw[solid] (D) -- (E);
+\draw[solid] (E) -- (F);
+% interior auxiliaries in original
+\draw[solid] (D) -- (B);
+\draw[dashed] (D) -- (C);
+\node[above,yshift=5pt] at (P) {$P$};
+\node[left,xshift=-5pt] at (D) {$D$};
+\node[above right,xshift=4pt,yshift=4pt] at (F) {$F$};
+\node[below right,xshift=5pt,yshift=-5pt] at (E) {$E$};
+\node[left,xshift=-5pt] at (A) {$A$};
+\node[below,yshift=-6pt] at (B) {$B$};
+\node[right,xshift=5pt] at (C) {$C$};
+\end{tikzpicture}

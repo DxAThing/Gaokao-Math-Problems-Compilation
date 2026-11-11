@@ -1,0 +1,9 @@
+% Continuous-at-0 representative model: left curve meets right segment at J=(0,1.2), no dots.
+% Left: y=1.2+0.35x^2 on [-3,0] (horizontal tangent at J); right: y=1.2-0.8x on [0,3.5] (x-intercept 1.5).
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=stealth]
+\draw[->] (-3.8,0) -- (4.3,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-2.5) -- (0,5.2) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\node[below left,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\draw[domain=-3:0,samples=80] plot (\x,{1.2+0.35*\x*\x});
+\draw[domain=0:3.5,samples=40] plot (\x,{1.2-0.8*\x});
+\end{tikzpicture}

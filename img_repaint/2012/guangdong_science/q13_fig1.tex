@@ -1,69 +1,31 @@
-% Source: source/普通高考/2012/2012广东理.pdf, page 1, question 13.
-% pdfimages -list reports no embedded bitmap; the program flowchart is vector/text artwork.
-% Grid evidence: tmp/redraw_flowchart_2012_guangdong_science/grid/q13_grid.jpg.
-% Comparison crop: tmp/redraw_flowchart_2012_guangdong_science/grid/q13_original_clean.png,
-% taken from the ungridded page render with a safety border.
-% Nodes: 开始; 输入 n; i=2,k=1,s=1; i<n?; s=(1/k)(s×i); i=i+2;
-% k=k+1; 输出 s; 结束.
-% Directed edges: 开始→输入→初始化→判定; 判定(是)→s更新→i更新→k更新→loop entry→判定;
-% 判定(否)→输出 s→结束. The loop return is independent of the output branch.
-\begin{tikzpicture}[
-  >=Stealth,
-  line width=0.55pt,
-  line cap=round,
-  line join=round,
-  every node/.style={font=\normalsize,anchor=center,align=center,inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}}},
-  flowbox/.style={draw,minimum height=.68cm,inner xsep=4pt,inner ysep=2pt,
-    anchor=center,align=center,
-    execute at begin node={\setlength{\parindent}{0pt}}},
-  terminal/.style={flowbox,rounded corners=.18cm,minimum width=1.35cm,
-    minimum height=.72cm},
-  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
-    trapezium right angle=108,minimum height=.78cm},
-  decision/.style={flowbox,shape=diamond,aspect=2.75,inner xsep=4pt,inner ysep=2pt},
-  branchlabel/.style={anchor=center,align=center,inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}}},
-  flowarrow/.style={->,line width=0.55pt},
-]
-  \node[terminal] (start) at (0,9.25) {开始};
-  \node[io,minimum width=2.35cm] (input) at (0,7.92) {输入 $n$};
-  \node[flowbox,minimum width=4.25cm] (init) at (0,6.58)
-    {$i=2,k=1,s=1$};
-  \node[decision,minimum width=3.35cm,minimum height=.98cm] (test) at (0,4.92)
-    {$i<n$};
-  \node[flowbox,minimum width=3.75cm,minimum height=1.02cm] (update) at (0,3.57)
-    {$s=\dfrac{1}{k}(s\times i)$};
-  \node[flowbox,minimum width=2.35cm] (inc) at (0,2.16)
-    {$i=i+2$};
-  \node[flowbox,minimum width=2.35cm] (kinc) at (0,0.84)
-    {$k=k+1$};
-  \node[io,minimum width=1.95cm] (output) at (4.15,4.05) {输出 $s$};
-  \node[terminal] (finish) at (4.15,2.72) {结束};
-  \coordinate (loop-entry) at (0,5.72);
-
-  \draw[flowarrow] (start.south) -- (input.north);
-  \draw[flowarrow] (input.south) -- (init.north);
-  % Keep the loop arrow tip on the main stem interior, not at a 3-way
-  % endpoint junction; the stem itself remains one directed edge.
-  \draw (init.south) -- (loop-entry);
-  \draw[flowarrow] (loop-entry) -- (test.north);
-  \draw[flowarrow] (test.south) -- node[branchlabel,left,pos=0.28] {是} (update.north);
-  \draw[flowarrow] (update.south) -- (inc.north);
-  \draw[flowarrow] (inc.south) -- (kinc.north);
-
-  % The affirmative branch updates state, then returns through an independent
-  % left-side loop to the shared stem above the decision.
-  \coordinate (loop-left) at (-2.45,0.47);
-  \coordinate (loop-left-top) at (-2.45,5.72);
-  \draw (kinc.south) -- (loop-left) -- (loop-left-top);
-  \draw[flowarrow] (loop-left-top) -- (loop-entry);
-
-  % The negative branch goes directly to output and never joins the loop.
-  \coordinate (out-right) at (4.15,4.92);
-  \draw (test.east) -- node[branchlabel,above,pos=0.20] {否} (out-right);
-  \draw[flowarrow] (out-right) -- (output.north);
-  \draw[flowarrow] (output.south) -- (finish.north);
-
-  \path[use as bounding box] (-2.85,0.10) rectangle (5.25,9.70);
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.6pt]
+\tikzset{
+flowstart/.style={draw,shape=rectangle,rectangle,rounded corners=1.5mm,align=center,minimum width=26mm,minimum height=10mm,inner xsep=3mm,inner ysep=1.5mm},
+flowproc/.style={draw,rectangle,align=center,minimum width=2.9cm,minimum height=0.9cm,inner sep=4pt},
+flowwide/.style={draw,rectangle,align=center,minimum width=4.4cm,minimum height=0.9cm,inner sep=4pt},
+flowtall/.style={draw,rectangle,align=center,minimum width=3.4cm,minimum height=1.7cm,inner sep=5pt},
+flowio/.style={draw,trapezium,trapezium left angle=72,trapezium right angle=108,align=center,minimum width=2.7cm,minimum height=0.9cm,inner sep=4pt},
+flowdec/.style={draw,diamond,aspect=2.4,align=center,minimum width=3.1cm,minimum height=1.3cm,inner sep=3pt},
+flowlab/.style={font=\normalsize,inner sep=2pt}
+}
+\node[flowstart] (start) at (0,0) {\parindent=0pt 开始};
+\node[flowio] (input) at (0,-1.6) {\parindent=0pt 输入 $n$};
+\node[flowwide] (init) at (0,-2.9) {\parindent=0pt $i=2,k=1,s=1$};
+\coordinate (J) at (0,-3.85);
+\node[flowdec] (dec) at (0,-5.0) {\parindent=0pt $i<n$};
+\node[flowtall] (sbox) at (0,-7.7) {\parindent=0pt $\displaystyle s=\frac{1}{k}(s\times i)$};
+\node[flowproc] (ibox) at (0,-9.5) {\parindent=0pt $i=i+2$};
+\node[flowproc] (kbox) at (0,-10.8) {\parindent=0pt $k=k+1$};
+\node[flowio] (out) at (4.6,-6.5) {\parindent=0pt 输出 $s$};
+\node[flowstart] (end) at (4.6,-8.1) {\parindent=0pt 结束};
+\draw[->] (start.south) -- (input.north);
+\draw[->] (input.south) -- (init.north);
+\draw[->] (init.south) -- (dec.north);
+\draw[->] (dec.south) -- (sbox.north) node[midway,right,xshift=4pt,flowlab] {是};
+\draw[->] (sbox.south) -- (ibox.north);
+\draw[->] (ibox.south) -- (kbox.north);
+\draw[->] (kbox.south) -- (0,-11.9) -- (-3.6,-11.9) -- (-3.6,-3.85) -- (J);
+\draw[->] (dec.east) -- (4.6,-5.0) -- (out.north);
+\node[flowlab] at ($(dec.east)+(5mm,4mm)$) {否};
+\draw[->] (out.south) -- (end.north);
 \end{tikzpicture}

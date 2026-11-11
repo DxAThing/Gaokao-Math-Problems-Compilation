@@ -1,4 +1,23 @@
-\begin{tikzpicture}[>=Stealth,line width=.55pt,line cap=round,line join=round,every node/.style={font=\normalsize,anchor=center,align=center,execute at begin node={\setlength{\parindent}{0pt}\noindent}},flowbox/.style={draw,minimum height=.70cm,inner xsep=4pt,inner ysep=2pt},terminal/.style={flowbox,rounded corners=.18cm,minimum width=1.5cm,minimum height=.76cm},io/.style={flowbox,shape=trapezium,trapezium left angle=72,trapezium right angle=108,minimum height=.82cm},decision/.style={flowbox,shape=diamond,aspect=2.75,inner sep=2pt},flowarrow/.style={->,line width=.55pt}]
-\node[terminal](start)at(0,10.9){开始};\node[io,minimum width=3.5cm](input)at(0,9.35){输入 $x$};\coordinate(loopjoin)at(0,8.1);\node[flowbox,minimum width=4.2cm,minimum height=1.15cm](line)at(0,7.0){$y=\dfrac12x-1$};\node[decision,minimum width=5.0cm,minimum height=1.1cm](test)at(0,4.9){$|y-x|<1$};\node[flowbox,minimum width=2.75cm](set)at(3.6,6.85){$x=y$};\node[io,minimum width=3.3cm](out)at(0,3.05){输出 $y$};\node[terminal](finish)at(0,1.45){结束};
-\draw[flowarrow](start.south)--(input.north);\draw(input.south)--(loopjoin);\draw[flowarrow](loopjoin)--(line.north);\draw[flowarrow](line.south)--(test.north);\draw[flowarrow](test.south)--node[right=3pt]{是}(out.north);\draw[flowarrow](out.south)--(finish.north);\draw[flowarrow](test.east)--node[above=2pt]{否}(3.6,4.9)--(3.6,6.85)--(set.south);\draw[flowarrow](set.north)--(3.6,8.1)--(loopjoin);
-\path[use as bounding box](-2.9,1.0)rectangle(5.1,11.25);\end{tikzpicture}
+\begin{tikzpicture}[x=1cm,y=1cm,
+  flownode/.style={draw,line width=0.6pt,align=center,execute at begin node={\setlength{\parindent}{0pt}}},
+  flowproc/.style={flownode,rectangle,minimum width=3.2cm,minimum height=1.0cm,inner sep=4pt},
+  flowio/.style={flownode,trapezium,trapezium left angle=75,trapezium right angle=105,minimum width=3.4cm,minimum height=1.0cm,inner sep=4pt},
+  flowterm/.style={flownode,shape=rectangle,rounded corners=1.5mm,minimum width=26mm,minimum height=10mm,inner xsep=3mm,inner ysep=1.5mm},
+  flowdec/.style={flownode,diamond,minimum width=5.0cm,minimum height=2.0cm,inner sep=2pt},
+  flowedge/.style={draw,line width=0.6pt,-{Stealth[length=2.6mm,width=1.9mm]}},
+  flowlab/.style={inner sep=2pt}]
+  \node[flowterm] (start) at (0,0) {开始};
+  \node[flowio] (inputx) at (0,-2.1) {输入 $x$};
+  \node[flowproc] (proc) at (0,-4.3) {$y=\dfrac{1}{2}x-1$};
+  \node[flowdec] (dec) at (0,-7.2) {$|y-x|<1$};
+  \node[flowio] (outy) at (0,-9.9) {输出 $y$};
+  \node[flowterm] (end) at (0,-11.7) {结束};
+  \node[flowproc] (xbox) at (4.4,-4.3) {$x=y$};
+  \draw[flowedge] (start.south) -- (inputx.north);
+  \draw[flowedge] (inputx.south) -- (proc.north);
+  \draw[flowedge] (proc.south) -- (dec.north);
+  \draw[flowedge] (dec.south) -- node[flowlab,right=2mm] {是} (outy.north);
+  \draw[flowedge] (outy.south) -- (end.north);
+  \draw[flowedge] (dec.east) -- node[flowlab,above=2mm,pos=0.25] {否} (4.4,-7.2) -- (xbox.south);
+  \draw[flowedge] (xbox.north) -- (4.4,-3.1) -- (0,-3.1);
+\end{tikzpicture}

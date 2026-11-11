@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% ellipse x^2/4+y^2/2=1 drawn from formula (scale 1.6)
+\draw[domain=0:360,samples=200,smooth] plot ({1.6*2*cos(\x)},{1.6*1.41421356*sin(\x)});
+% axes
+\draw[->] (-3.8,0)--(3.8,0) node[right,xshift=2.0pt] {$x$};
+\draw[->] (0,-2.8)--(0,0)--(0,3.0) node[above,yshift=3.0pt] {$y$};
+\coordinate (O) at (0,0);
+\coordinate (N) at (-1.9200000000,0.0000000000);
+\coordinate (M) at (0.0000000000,0.9050966799);
+\coordinate (P) at (1.9200000000,1.8101933598);
+\coordinate (Q) at (1.9200000000,-1.8101933598);
+\coordinate (A) at (-3.1015384615,-0.5569825723);
+\coordinate (B) at (-0.8960000000,2.1722320318);
+% straight lines: A-P (extended), A-B, B-Q, P-Q vertical
+\draw (A)--(P);
+\draw (A)--($ (A)!-.1!(P) $);
+\draw (P)--($ (P)!-.2!(A) $);
+\draw (A)--(B);
+\draw (B)--(Q);
+\draw (P)--(Q);
+\node[below left,xshift=-3.0pt,yshift=-3.0pt] at (O) {$O$};
+\node[left,xshift=4pt,yshift=6pt] at (N) {$N$};
+\node[right,xshift=4pt,yshift=-2pt] at (M) {$M$};
+\node[above right,xshift=1.0pt,yshift=3pt] at (P) {$P$};
+\node[below right,xshift=3pt,yshift=-3.0pt] at (Q) {$Q$};
+\node[below left,xshift=-3pt,yshift=-3pt] at (A) {$A$};
+\node[above left,xshift=-3pt,yshift=3.0pt] at (B) {$B$};
+\end{tikzpicture}

@@ -1,0 +1,10 @@
+% source_constraints: blank answer grid, NO data curve (original empty); theta axis horizontal at d=0 from -5.6 to 5.6 arrow right, label theta below-right; d axis vertical at theta=0 from -4.6 to 4.6 arrow up, label d above; grid step 0.5 gray over theta -5..5 / d -4..4; theta integer labels -4..4 below axis; d integer labels 3,2,1,-1,-2,-3 left of axis; O' below-left of origin (problem uses O for circle center).
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\foreach \t in {-5,-4.5,...,5} {\draw[gray!60,line width=.35pt] (\t,-4)--(\t,4);}
+\foreach \d in {-4,-3.5,...,4} {\draw[gray!60,line width=.35pt] (-5,\d)--(5,\d);}
+\draw[->] (-5.6,0)--(5.6,0) node[below right] {$\theta$};
+\draw[->] (0,-4.6)--(0,4.6) node[above] {$d$};
+\foreach \t in {-4,-3,-2,-1,1,2,3,4} {\draw[line width=.6pt] (\t,0)--(\t,-0.08); \node[below] at (\t,-0.08) {$\t$};}
+\foreach \d in {-3,-2,-1,1,2,3} {\draw[line width=.6pt] (0,\d)--(-0.08,\d); \node[left] at (-0.08,\d) {$\d$};}
+\node[below left] at (0,0) {$O'$};
+\end{tikzpicture}

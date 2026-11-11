@@ -1,0 +1,31 @@
+% 2010_hunan_science_q13_fig1: point-fix of inputs/2010_hunan_science_q13_fig1_current.tex.
+% Only layout changed: plan view moved from bottom-left to right of side view,
+% single horizontal row 正/侧/俯. All edge coordinates, dimensions h/5/6,
+% solid line type, arrows preserved; only translation of plan scope.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1mm,y=1mm,>=Latex]
+% front view triangle: right angle at bottom-left (legs h vertical, 5 horizontal)
+\draw (0,30) -- (0,0) -- (30,0) -- cycle;
+% side view triangle: right angle at bottom-left (legs h vertical, 6 horizontal)
+\draw (46,30) -- (46,0) -- (82,0) -- cycle;
+% plan view triangle: right angle at top-left (5 wide, 6 tall), translated right, bottom-aligned at y=0
+\draw (98,36) -- (128,36) -- (98,0) -- cycle;
+% front vertical dimension h with extension ticks
+\draw (0,0) -- (-8,0);
+\draw (0,30) -- (-8,30);
+\draw[<->] (-6,0) -- (-6,30);
+\node[fill=white,inner sep=1pt] at (-6,15) {$h$};
+% front horizontal dimension 5 with extension ticks
+\draw (0,0) -- (0,-8);
+\draw (30,0) -- (30,-8);
+\draw[<->] (0,-6) -- (30,-6);
+\node[fill=white,inner sep=1pt] at (15,-6) {$5$};
+% side horizontal dimension 6 with extension ticks
+\draw (46,0) -- (46,-8);
+\draw (82,0) -- (82,-8);
+\draw[<->] (46,-6) -- (82,-6);
+\node[fill=white,inner sep=1pt] at (64,-6) {$6$};
+% view names: single row, centered under each view, same baseline
+\node at (15,-14) {正视图};
+\node at (64,-14) {侧视图};
+\node at (113,-14) {俯视图};
+\end{tikzpicture}

@@ -1,0 +1,9 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-2.2,0)--(3.0,0) node[right,xshift=3pt] {$x$};
+\draw[->] (0,-2.2)--(0,2.5) node[above,yshift=3pt] {$y$};
+\draw[dashed] (1,-2.2)--(1,2.5);
+\draw[domain=-2.0:0.6,samples=120] plot (\x,{-1/(\x-1)});
+\draw[domain=1.4:3.0,samples=120] plot (\x,{-1/(\x-1)});
+\node[below left,xshift=-3pt,yshift=-3pt] at (0,0) {$O$};
+\node[below right=2pt] at (1,0) {$1$};
+\end{tikzpicture}

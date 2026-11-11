@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt]
+\tikzset{hidden/.style={dash pattern=on 4pt off 3pt}}
+\coordinate (A) at (0,0);
+\coordinate (B) at (3.5,0);
+\coordinate (D) at (5,1);
+\coordinate (C) at (9,1);
+\coordinate (E) at (5,6);
+% solid edges
+\draw[draw=black] (A) -- (B);
+\draw[draw=black] (B) -- (C);
+\draw[draw=black] (D) -- (C);
+\draw[draw=black] (B) -- (D);
+\draw[draw=black] (E) -- (D);
+\draw[draw=black] (E) -- (B);
+\draw[draw=black] (A) -- (E);
+% hidden edge
+\draw[draw=black,hidden] (A) -- (D);
+% labels with clearance
+\node[font=\normalsize,below left=3pt] at (A) {$A$};
+\node[font=\normalsize,below=4pt] at (B) {$B$};
+\node[font=\normalsize,above right=2pt] at (D) {$D$};
+\node[font=\normalsize,right=4pt] at (C) {$C$};
+\node[font=\normalsize,above=4pt] at (E) {$E$};
+\end{tikzpicture}

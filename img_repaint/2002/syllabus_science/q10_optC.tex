@@ -1,0 +1,15 @@
+\begin{tikzpicture}[line width=0.6pt, >=Stealth, font=\normalsize, x=1.1cm, y=0.9cm]
+\draw[->] (-3.2,0) -- (2.6,0);
+\draw[->] (0,-1.6) -- (0,3.9);
+% asymptotes for option C as seen: x=-1, y=1
+\draw[dashed] (-1,-1.6) -- (-1,3.9);
+\draw[dashed] (-3.4,1) -- (3.0,1);
+% option-C branches (incorrect option, faithfully kept): y = 1+1/(x+1)
+\draw[domain=-3.0:-1.45,samples=120,smooth] plot (\x,{1+1/(\x+1)});
+\draw[domain=-0.55:2.4,samples=120,smooth] plot (\x,{1+1/(\x+1)});
+\node[anchor=west] at (2.6,-0.45) {$x$};
+\node[anchor=south] at (0.45,3.9) {$y$};
+\node[anchor=north west,fill=none,inner sep=1.5pt] at (0.18,-0.30) {$O$};
+\node[anchor=north west,fill=none,inner sep=1.5pt] at (-0.72,-0.38) {$-1$};
+\node[below right=2pt,fill=none,inner sep=1pt] at (0,1) {$1$};
+\end{tikzpicture}

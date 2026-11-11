@@ -1,0 +1,12 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-1.6,0)--(2.6,0) node[right] {$x$};
+\draw[->] (0,-1.2)--(0,2.4) node[above] {$y$};
+\node[below left] at (0,0) {$O$};
+% straight line y = x + 1.2 (schematic: intercept above 1 as in original option A)
+\draw[domain=-1.4:1.3,samples=2] plot (\x,{\x+1.2});
+% logarithmic curve y = log_{0.5}(x), decreasing through (1,0), asymptote x = 0
+\draw[domain=0.12:2.6,samples=101] plot (\x,{ln(\x)/ln(0.5)});
+% unit marks
+\draw (0,1)--(0.08,1) node[right] {$1$};
+\draw (1,0)--(1,-0.08) node[below] {$1$};
+\end{tikzpicture}

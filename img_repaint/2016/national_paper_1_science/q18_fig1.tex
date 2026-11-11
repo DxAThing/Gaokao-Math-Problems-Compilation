@@ -1,0 +1,22 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (D) at (1.5,4.0);
+\coordinate (C) at (3.6,4.2);
+\coordinate (F) at (0,1.5);
+\coordinate (E) at (4.2,2.5);
+\coordinate (B) at (7.2,1.0);
+\coordinate (A) at (3.5,0.2);
+% solid faces
+\draw (D)--(C)--(B)--(A)--cycle;
+\draw (D)--(F)--(A);
+\draw (D)--(A);
+% hidden
+\draw[dashed] (C)--(E)--(F);
+\draw[dashed] (E)--(B);
+% labels with clearance
+\node[above left=7pt] at (D) {$D$};
+\node[above=8pt] at (C) {$C$};
+\node[left=7pt] at (F) {$F$};
+\node[right=7pt] at (E) {$E$};
+\node[right=7pt] at (B) {$B$};
+\node[below=8pt] at (A) {$A$};
+\end{tikzpicture}

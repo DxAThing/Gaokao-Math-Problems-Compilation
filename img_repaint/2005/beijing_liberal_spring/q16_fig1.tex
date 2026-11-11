@@ -1,0 +1,25 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,
+  geometry edge/.style={solid,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (S) at (3,4);
+\coordinate (A) at (0,1);
+\coordinate (B) at (3.5,0);
+\coordinate (C) at (7,2);
+\coordinate (M) at (5.25,1);
+% lateral edges
+\draw[geometry edge] (S)--(A);
+\draw[geometry edge] (S)--(B);
+\draw[geometry edge] (S)--(C);
+\draw[geometry edge] (S)--(M);
+% base: AB solid, BC solid via M, AC/AM hidden
+\draw[geometry edge] (A)--(B);
+\draw[geometry edge] (B)--(M);
+\draw[geometry edge] (M)--(C);
+\draw[geometry edge,dashed] (A)--(C);
+\draw[geometry edge,dashed] (A)--(M);
+\node[geometry label,above] at (S) {$S$};
+\node[geometry label,left] at (A) {$A$};
+\node[geometry label,below] at (B) {$B$};
+\node[geometry label,right] at (C) {$C$};
+\node[geometry label,below right] at (M) {$M$};
+\end{tikzpicture}

@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-4.5,0)--(4.5,0) node[right] {$x$};
+\draw[->] (0,-3.2)--(0,3.2) node[above] {$y$};
+\coordinate (O) at (0,0);
+\node[below left=2pt,xshift=2.00bp,yshift=-2.00bp] at (O) {$O$};
+% asymptotes y=+-x/sqrt(3), thin
+\draw (-4,-2.3094)--(4,2.3094);
+\draw (-4,2.3094)--(4,-2.3094);
+% hyperbola x^2/3-y^2=1, thick, from formula
+\draw[domain=-2.1:2.1,samples=140,variable=\t] plot ({sqrt(3)*sqrt(1+\t*\t)},\t);
+\draw[domain=-2.1:2.1,samples=140,variable=\t] plot ({-sqrt(3)*sqrt(1+\t*\t)},\t);
+% vertical line x=2 (AF)
+\draw (2,-2.6)--(2,2.6);
+% triangle ABF
+\coordinate (A) at (2,1.1547);
+\coordinate (B) at (1,-0.5774);
+\coordinate (F) at (2,0);
+\draw (A)--(B)--(F)--cycle;
+\fill (A) circle (1.2pt);
+\fill (B) circle (1.2pt);
+\fill (F) circle (1.2pt);
+\node[above right=2pt,xshift=-2.00bp,yshift=2.00bp] at (A) {$A$};
+\node[below left=4pt] at (B) {$B$};
+\node[above right=2pt] at (F) {$F$};
+\end{tikzpicture}

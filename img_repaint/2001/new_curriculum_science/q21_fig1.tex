@@ -1,0 +1,28 @@
+\usetikzlibrary{arrows.meta,calc,positioning}
+\begin{tikzpicture}[x=0.32cm,y=0.32cm,line width=.6pt,font=\normalsize]
+% Cooling-tower cross section: one hyperbola x^2/49 - y^2/98 = 1 (two branches),
+% top diameter C'C at y=8, bottom diameter B'B at y=-12, vertices A'( -7,0), A(7,0).
+\coordinate (Ap) at (-7,0);
+\coordinate (A)  at (7,0);
+\coordinate (Bp) at (-11,-12);
+\coordinate (B)  at (11,-12);
+\coordinate (Cp) at (-9,8);
+\coordinate (C)  at (9,8);
+\draw[line width=.6pt,domain=-12:8,samples=140,smooth,variable=\y] plot ({7*sqrt(1+\y*\y/98)},\y);
+\draw[line width=.6pt,domain=-12:8,samples=140,smooth,variable=\y] plot ({-7*sqrt(1+\y*\y/98)},\y);
+% top and bottom diameters, extended right to host the 20 m dimension
+\draw[line width=.6pt] (Cp) -- (13.2,8);
+\draw[line width=.6pt] (Bp) -- (13.2,-12);
+% dimensions
+\draw[dimension line] (Ap) -- node[dimension label] {$14\mathrm{m}$} (A);
+\draw[dimension line] (12.5,-12) -- node[dimension label vertical] {$20\mathrm{m}$} (12.5,8);
+% labels
+\node[inner sep=2pt] at (-10.10,8.85) {$C'$};
+\node[inner sep=2pt] at (9.30,8.90) {$C$};
+\node[inner sep=2pt] at (-8.30,0.75) {$A'$};
+\node[anchor=south west,inner sep=0pt,xshift=2pt,yshift=2pt] at (A) {$A$};
+\node[inner sep=2pt] at (-12.10,-13.05) {$B'$};
+\node[inner sep=2pt] at (11.55,-13.20) {$B$};
+\node[inner sep=2pt] at (0,8.95) {$18\mathrm{m}$};
+\node[inner sep=2pt] at (0,-10.80) {$22\mathrm{m}$};
+\end{tikzpicture}

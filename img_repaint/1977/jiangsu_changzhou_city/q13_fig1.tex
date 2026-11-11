@@ -1,0 +1,44 @@
+% 1977 figure: 12 rays at 30-degree steps + polyline A0-A4 (OA0=1, each step +30deg, right angle at Ak).
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes (X long, Y long)
+\draw[->] (-3.6,0)--(4.2,0) node[right] {$X$};
+\draw[->] (0,-2.6)--(0,3.2) node[right] {$Y$};
+\node[below left] at (0,0) {$O$};
+% 12 rays from origin (axes already cover 0,90,180,270 directions; draw the 8 diagonal rays + short axis stubs to ray length)
+\foreach \a in {30,60,120,150,210,240,300,330} {
+  \draw (0,0)--(\a:2.7);
+}
+% short stubs along axes to same ray length (axes arrows extend further)
+\draw (0,0)--(2.7,0);
+\draw (0,0)--(-2.7,0);
+\draw (0,0)--(0,2.7);
+\draw (0,0)--(0,-2.4);
+\draw (0,0)--(150:2.7);
+% polyline A0->A4, OA0=1, angle step 30deg, OA_{k+1}=OA_k/cos30
+% A0=(1,0) A1=(1,0.5774) A2=(0.6667,1.1547) A3=(0,1.5396) A4=(-0.8889,1.5396)
+\draw[line width=.6pt] (1,0)--(1,0.5774)--(0.6667,1.1547)--(0,1.5396)--(-0.8889,1.5396);
+\fill (0,0) circle (1.5pt);
+\fill (1,0) circle (1.5pt);
+\fill (1,0.5774) circle (1.5pt);
+\fill (0.6667,1.1547) circle (1.5pt);
+\fill (0,1.5396) circle (1.5pt);
+\fill (-0.8889,1.5396) circle (1.5pt);
+% point labels
+\node[below] at (1,-0.08) {$A_{0}$};
+\node[right] at (1.06,0.5774) {$A_{1}$};
+\node[right] at (0.74,1.1547) {$A_{2}$};
+\node[right] at (0.06,1.5396) {$A_{3}$};
+\node[above] at (-0.8889,1.60) {$A_{4}$};
+% angle labels at ray ends
+\node[above right] at (30:2.95) {$\frac{\pi}{6}$};
+\node[above right] at (60:2.95) {$\frac{\pi}{3}$};
+\node[above left] at (90:2.95) {$\frac{\pi}{2}$};
+\node[above left] at (120:2.95) {$\frac{2}{3}\pi$};
+\node[above left] at (150:2.95) {$\frac{5}{6}\pi$};
+\node[above] at (-2.7,0.1) {$\pi$};
+\node[below left] at (210:2.95) {$\frac{7}{6}\pi$};
+\node[below left] at (240:2.95) {$\frac{4}{3}\pi$};
+\node[below] at (0,-2.65) {$\frac{3}{2}\pi$};
+\node[below right] at (300:2.95) {$\frac{5}{3}\pi$};
+\node[below right] at (330:2.95) {$\frac{11}{6}\pi$};
+\end{tikzpicture}

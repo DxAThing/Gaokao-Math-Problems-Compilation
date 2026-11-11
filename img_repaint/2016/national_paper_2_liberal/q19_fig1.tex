@@ -1,0 +1,42 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (B) at (-5.5,0);
+\coordinate (C) at (1.0,0);
+\coordinate (F) at (1.6750000000,0.4750000000);
+\coordinate (O) at (-0.9000000000,0.9500000000);
+\coordinate (H) at (0.2500000000,1.1875000000);
+\coordinate (A) at (-2.8,1.9);
+\coordinate (E) at (-1.1750000000,1.9000000000);
+\coordinate (D) at (3.7000000000,1.9000000000);
+\coordinate (Dp) at (0.2500000000,7.0000000000);
+% base solid
+\draw (B)--(C);
+\draw (B)--(A);
+\draw (B)--(O);
+\draw (B)--(Dp);
+\draw (A)--(O);
+\draw (O)--(C);
+\draw (H)--(F);
+\draw (C)--(F);
+% apex solid
+\draw (Dp)--(A);
+\draw (Dp)--(O);
+\draw (Dp)--(C);
+\draw (Dp)--(F);
+% hidden dashed
+\draw[dashed] (A)--(D);
+\draw[dashed] (O)--(D);
+\draw[dashed] (F)--(D);
+\draw[dashed] (Dp)--(H);
+\draw[dashed] (Dp)--(E);
+% labels with clearance
+\node[below left=7pt] at (B) {$B$};
+\node[below right=8pt] at (C) {$C$};
+\node[below right=7pt] at (F) {$F$};
+\node[below left=8pt] at (O) {$O$};
+\node[below left=2pt] at (H) {$H$};
+\node[above=10pt,xshift=1.0pt,yshift=-3.0pt] at (A) {$A$};
+\node[above=10pt] at (E) {$E$};
+\node[right=7pt] at (D) {$D$};
+\node[above=8pt] at (Dp) {$D'$};
+\draw[dashed] (E)--(H);
+\end{tikzpicture}

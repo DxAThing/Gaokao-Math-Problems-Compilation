@@ -1,0 +1,36 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-3.1,0) -- (3.2,0);
+\node[right=2pt] at (3.2,0) {$x$};
+\draw[->] (0,-2.6) -- (0,2.7);
+\node[above=2pt] at (0,2.7) {$y$};
+% circle x^2+y^2=c^2, c=2.2
+\draw (0,0) circle (2.163330765278);
+% hyperbola branches a=0.9,b=2.0 schematic of x^2/a^2-y^2/b^2=1
+\draw plot[domain=-0.95:0.95,samples=50,smooth] ({0.6*cosh(\x)},{2.078460969083*sinh(\x)});
+\draw plot[domain=-0.95:0.95,samples=50,smooth] ({-0.6*cosh(\x)},{2.078460969083*sinh(\x)});
+% asymptote MN dashed (single stroke)
+\draw[dashed] (-.75,-2.598076211353316)--(.75,2.598076211353316);
+% points
+\coordinate (F1) at (-2.1633307653,0.0000000000);
+\coordinate (A1) at (-0.6000000000,0.0000000000);
+\coordinate (A2) at (0.6000000000,0.0000000000);
+\coordinate (F2) at (2.1633307653,0.0000000000);
+\coordinate (M) at (0.6000000000,2.0784609691);
+\coordinate (N) at (-0.6000000000,-2.0784609691);
+% solid segments: triangle A1-M-A2 and A1-N-A2
+\draw (A1) -- (M) -- (A2);
+\draw (A1) -- (N) -- (A2);
+
+% dots
+\foreach \p in {F1,A1,A2,F2,M,N}{\fill (\p) circle (1.2pt);}
+\fill (0,0) circle (1.2pt);
+% labels with clearance
+\node[below left=2pt] at (F1) {$F_{1}$};
+\node[above left=2pt] at (A1) {$A_{1}$};
+\node[below left=2pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\node[below right=2pt] at (A2) {$A_{2}(H)$};
+\node[below right=2pt] at (F2) {$F_{2}$};
+\node[above=2pt,xshift=-5pt,yshift=1pt] at (M) {$M$};
+\node[below=2pt,xshift=5pt,yshift=1pt] at (N) {$N$};
+\end{tikzpicture}

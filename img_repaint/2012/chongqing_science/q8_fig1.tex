@@ -1,0 +1,14 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.15cm,y=0.7cm,line width=.6pt,>=Stealth,font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (Zm2) at (-2,0);
+\coordinate (Z1) at (1,0);
+\coordinate (Z2) at (2,0);
+\draw[->] (-3.0,0)--(2.9,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-2.7)--(0,3.7) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw[domain=-2.5:2.5,samples=201] plot (\x,{-0.4*(\x+2)*(\x-1)*(\x-2)});
+\node[above right,inner sep=3pt] at (Zm2) {$-2$};
+\node[below,inner sep=0pt,yshift=-3pt] at (Z1) {$1$};
+\node[above right,inner sep=3pt] at (Z2) {$2$};
+\node[below left,inner sep=0pt,xshift=-2pt,yshift=-3pt] at (O) {$O$};
+\end{tikzpicture}

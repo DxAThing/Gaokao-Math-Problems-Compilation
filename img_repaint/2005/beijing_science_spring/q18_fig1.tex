@@ -1,0 +1,28 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (A) at (1,0);
+\coordinate (B) at (0,-2);
+\coordinate (M) at (2,2);
+\coordinate (N) at (0.5,-1);
+\coordinate (L0) at (0.2,-1.6);
+\coordinate (L1) at (2.55,3.1);
+\coordinate (X0) at (-0.5,0);
+\coordinate (X1) at (5.5,0);
+\coordinate (Y0) at (0,-3.75);
+\coordinate (Y1) at (0,3.95);
+\coordinate (NL) at (0.7,-1.0);
+\coordinate (LL) at (2.35,2.95);
+\draw[->] (X0) -- (X1);
+\draw[->] (Y0) -- (Y1);
+\draw[domain=-3.0:3.0,samples=151,smooth,variable=\t] plot ({\t*\t/2},{\t});
+\draw (L0) -- (L1);
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (O) {$O$};
+\node[anchor=north west,inner sep=0pt,xshift=2pt,yshift=-2pt] at (A) {$a$};
+\node[anchor=east,inner sep=0pt,xshift=-2pt] at (B) {$b$};
+\node[anchor=north west,inner sep=0pt,xshift=2pt,yshift=-2pt] at (M) {$M$};
+\node[anchor=south west,inner sep=0pt,xshift=2pt] at (NL) {$N$};
+\node[anchor=east,inner sep=0pt,xshift=-2pt] at (LL) {$l$};
+\node[anchor=west,inner sep=0pt,xshift=2pt] at (X1) {$x$};
+\node[anchor=south,inner sep=0pt,yshift=2pt] at (Y1) {$y$};
+\end{tikzpicture}

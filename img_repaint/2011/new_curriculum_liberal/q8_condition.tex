@@ -1,0 +1,19 @@
+% 2011_new_curriculum_liberal_q8_condition: front triangle / top semicircle+triangle.
+% layout: horizontal row, only the two existing views (no side view invented).
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% front: isosceles triangle base 4, full-height midline
+\begin{scope}[shift={(0,0)}]
+\draw (-2,0) -- (2,0) -- (0,3) -- cycle;
+\draw (0,0) -- (0,3);
+\node[below] at (0,-0.6) {正视图};
+\end{scope}
+% top: semicircle r=2 on diameter, triangle below sharing base, midline to apex;
+% shifted right/up so its label baseline matches the front label
+\begin{scope}[shift={(5.5,1.8)}]
+\draw (-2,0) -- (2,0);
+\draw (2,0) arc (0:180:2);
+\draw (-2,0) -- (0,-1.8) -- (2,0);
+\draw (0,0) -- (0,-1.8);
+\node[below] at (0,-2.4) {俯视图};
+\end{scope}
+\end{tikzpicture}

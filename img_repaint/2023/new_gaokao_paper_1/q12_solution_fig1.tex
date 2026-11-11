@@ -1,0 +1,105 @@
+\begin{tikzpicture}[line width=0.6pt, font=\small]
+% ---- Fig1 cube with tetrahedron (top-left) ----
+\coordinate (A) at (-5.5,-1.2);
+\coordinate (B) at (-2.5,-1.2);
+\coordinate (Cc) at (-1.7,-0.2);
+\coordinate (Dc) at (-4.7,-0.2);
+\coordinate (A1) at (-5.5,1.8);
+\coordinate (B1) at (-2.5,1.8);
+\coordinate (C1) at (-1.7,2.8);
+\coordinate (D1) at (-4.7,2.8);
+% cube: solid front/top/right, dashed hidden
+\draw[solid] (A)--(B)--(B1)--(A1)--cycle;
+\draw[solid] (A1)--(D1)--(C1)--(B1);
+\draw[solid] (B1)--(Cc);
+\draw[solid] (C1)--(Cc);
+\draw[dashed] (Dc)--(D1);
+\draw[dashed] (Dc)--(A);
+\draw[dashed] (Dc)--(Cc);
+\draw[dashed] (D1)--(B);
+% tetrahedron A-D1-B1-C (gray = original blue)
+\draw[draw=black!55,solid] (A)--(B1);
+\draw[draw=black!55,solid] (B1)--(Cc);
+\draw[draw=black!55,solid] (D1)--(B1);
+\draw[draw=black!55,dashed] (A)--(D1);
+\draw[draw=black!55,dashed] (A)--(Cc);
+\draw[draw=black!55,dashed] (D1)--(Cc);
+\node[,inner sep=1pt] at ($(A)+(-0.32,-0.10)$) {$A$};
+\node[,inner sep=1pt] at ($(B)+(0.10,-0.34)$) {$B$};
+\node[,inner sep=1pt] at ($(Cc)+(0.34,0)$) {$C$};
+\node[,inner sep=1pt] at ($(Dc)+(-0.30,0.28)$) {$D$};
+\node[,inner sep=1pt] at ($(A1)+(-0.38,0.10)$) {$A_{1}$};
+\node[above=3pt,xshift=-4pt,inner sep=1pt] at (B1) {$B_{1}$};
+\node[,inner sep=1pt] at ($(C1)+(0.38,0.10)$) {$C_{1}$};
+\node[,inner sep=1pt] at ($(D1)+(-0.15,0.36)$) {$D_{1}$};
+\node at (-3.6,-2.4) {\bitmapinsertcaption[1]};
+% ---- Fig2 cube with hexagon (top-right), shifted ----
+\coordinate (Aii) at (0.5,-1.2);
+\coordinate (Bii) at (3.5,-1.2);
+\coordinate (Cii) at (4.3,-0.2);
+\coordinate (Dii) at (1.3,-0.2);
+\coordinate (A1ii) at (0.5,1.8);
+\coordinate (B1ii) at (3.5,1.8);
+\coordinate (C1ii) at (4.3,2.8);
+\coordinate (D1ii) at (1.3,2.8);
+\draw[solid] (Aii)--(Bii)--(B1ii)--(A1ii)--cycle;
+\draw[solid] (A1ii)--(D1ii)--(C1ii)--(B1ii);
+
+\draw[solid] (C1ii)--(Cii);
+\draw[dashed] (Dii)--(D1ii);
+\draw[dashed] (Dii)--(Aii);
+\draw[dashed] (Dii)--(Cii);
+% hexagon E F G H I J on edges
+\coordinate (E) at (2.8000000000,2.8000000000);
+\coordinate (F) at (0.9000000000,2.3000000000);
+\coordinate (G) at (0.5000000000,0.3000000000);
+\coordinate (H) at (2.0000000000,-1.2000000000);
+\coordinate (I) at (3.9000000000,-0.7000000000);
+\coordinate (J) at (4.3000000000,1.3000000000);
+\draw[draw=black!55,solid] (E)--(F);
+\draw[draw=black!55] (F)--(G);
+\draw[draw=black!55,solid] (G)--(H);
+\draw[draw=black!55,dashed] (H)--(I);
+\draw[draw=black!55,solid] (I)--(J);
+\draw[draw=black!55,dashed] (E)--(J);
+\node[,inner sep=1pt] at ($(Aii)+(-0.32,-0.10)$) {$A$};
+\node[,inner sep=1pt] at ($(Bii)+(0.10,-0.34)$) {$B$};
+\node[,inner sep=1pt] at ($(Cii)+(0.34,0)$) {$C$};
+\node[below right=2pt,inner sep=1pt] at (Dii) {$D$};
+\node[,inner sep=1pt] at ($(A1ii)+(-0.38,0.10)$) {$A_{1}$};
+\node[below left=2pt,inner sep=1pt] at (B1ii) {$B_{1}$};
+\node[,inner sep=1pt] at ($(C1ii)+(0.38,0.10)$) {$C_{1}$};
+\node[,inner sep=1pt] at ($(D1ii)+(-0.30,0.30)$) {$D_{1}$};
+\node[,inner sep=1pt,text=black!55] at ($(E)+(0.30,0.28)$) {$E$};
+\node[,inner sep=1pt,text=black!55] at ($(F)+(-0.30,0.28)$) {$F$};
+\node[,inner sep=1pt,text=black!55] at ($(G)+(-0.36,0)$) {$G$};
+\node[,inner sep=1pt,text=black!55] at ($(H)+(0,-0.38)$) {$H$};
+\node[,inner sep=1pt,text=black!55] at ($(I)+(0.36,-0.05)$) {$I$};
+\node[,inner sep=1pt,text=black!55] at ($(J)+(0.36,0)$) {$J$};
+\node at (2.4,-2.4) {\bitmapinsertcaption[2]};
+% ---- Fig3 hexagon + circle (bottom center) ----
+\coordinate (O) at (-0.6,-5.2);
+\coordinate (F3) at (-1.7547005384,-3.2000000000);
+\coordinate (E3) at (0.5547005384,-3.2000000000);
+\coordinate (G3) at (-2.9094010768,-5.2000000000);
+\coordinate (J3) at (1.7094010768,-5.2000000000);
+\coordinate (H3) at (-1.7547005384,-7.2000000000);
+\coordinate (I3) at (0.5547005384,-7.2000000000);
+\coordinate (K) at (-0.6,-7.2);
+\draw[solid] (O) circle (2);
+\draw[draw=black!55,solid] (F3)--(E3)--(J3)--(I3)--(H3)--(G3)--cycle;
+\draw[solid] (H3)--(K);
+\draw[solid] (O)--(H3);
+\draw[solid] (O)--(I3);
+\draw[solid] (O)--(K);
+\node[,inner sep=1pt] at ($(O)+(0,0.34)$) {$O$};
+\node[,inner sep=1pt,text=black!55] at ($(F3)+(-0.32,0.22)$) {$F$};
+\node[,inner sep=1pt,text=black!55] at ($(E3)+(0.32,0.22)$) {$E$};
+\node[,inner sep=1pt,text=black!55] at ($(G3)+(-0.36,0)$) {$G$};
+\node[,inner sep=1pt,text=black!55] at ($(J3)+(0.36,0)$) {$J$};
+\node[,inner sep=1pt,text=black!55] at ($(H3)+(-0.34,-0.10)$) {$H$};
+\node[,inner sep=1pt,text=black!55] at ($(I3)+(0.34,-0.10)$) {$I$};
+\node[,inner sep=1pt] at ($(K)+(0,-0.38)$) {$K$};
+\node at (-0.6,-8.4) {\bitmapinsertcaption[3]};
+\draw (B)--(Cc);\draw (Bii)--(Cii);
+\end{tikzpicture}

@@ -1,0 +1,27 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.2cm,y=0.9cm,line width=.6pt,>=stealth,font=\normalsize]
+% ranges: x in [-2.2,4.4], y in [-1.2,5.0]
+\begin{scope}
+\clip (-2.2,-1.2) rectangle (4.4,5.0);
+\draw[domain=-1.55:3.55,samples=121] plot (\x,{3+2*\x-\x*\x});
+\end{scope}
+% symmetry axis x=1 (solid as in original), drawn first so axes cross on top
+\draw (1,-1.2) -- (1,4.75);
+% axes (drawn after curve ends so arrowheads stay visible)
+\draw[->] (-2.2,0) -- (4.4,0) node[right,inner sep=0pt,xshift=3pt] {$x$};
+\draw[->] (0,-1.2) -- (0,5.0) node[anchor=west,inner sep=0pt,xshift=4pt] at (0,5.0) {$y$};
+% x tick marks
+\draw ( -1,-0.09) -- (-1,0.09);
+\draw (0,-0.09) -- (0,0.09);
+\draw (1,-0.09) -- (1,0.09);
+\draw (3,-0.09) -- (3,0.09);
+% tick labels below axis: offset sideways to avoid curve crossings and vertical strokes
+\node[anchor=north east,inner sep=0pt,xshift=-3pt,yshift=-5pt] at (-1,0) {$-1$};
+\node[anchor=north west,inner sep=0pt,xshift=3pt,yshift=-5pt] at (0,0) {$0$};
+\node[anchor=north east,inner sep=0pt,xshift=-3pt,yshift=-5pt] at (1,0) {$1$};
+\node[above right,inner sep=0pt,xshift=2pt,yshift=2pt] at (3,0) {$3$};
+% vertex label to the upper right of (1,4) with clear gap
+\node[anchor=south west,inner sep=0pt,xshift=4pt,yshift=2pt] at (1,4) {$(1,4)$};
+% symmetry-axis label below x-axis with gap
+\node[anchor=north,inner sep=0pt,yshift=-12pt] at (1,-1.2) {$x=1$};
+\end{tikzpicture}

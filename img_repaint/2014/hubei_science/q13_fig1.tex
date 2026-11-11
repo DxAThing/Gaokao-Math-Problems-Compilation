@@ -1,57 +1,25 @@
-% Source PDF: source/普通高考/2014/2014湖北理.pdf, page 1; vector flowchart.
-% Grid evidence: tmp/review_2014_hubei_science/grid/page-1-grid100.jpg and
-%   q13_original_final.png (no-grid crop from the source page).
-% Elements: rounded start/end terminals; input parallelogram; subtraction
-% rectangle b=D(a)-I(a); decision diamond b=a?; assignment rectangle a=b;
-% output parallelogram; directed connectors and 是/否 labels.
-% Complete node -> directed-edge list from the source:
-%   start -> input -> calc -> test; test --是--> output -> finish;
-%   test --否--> assign -> main entry above calc. The loop return joins the
-%   main stem without a duplicate arrowhead; the downward main arrow into calc
-%   remains independent. All borders/connectors are solid.
-
-\begin{tikzpicture}[
-  >=Stealth,
-  line width=0.45pt,
-  line join=round,
-  line cap=round,
-  font=\normalsize,
-  flowtext/.style={anchor=center, text centered,
-    execute at begin node={\setlength{\parindent}{0pt}}},
-  every node/.style={flowtext},
-  flowbox/.style={flowtext, draw, minimum height=0.68cm,
-    inner xsep=4pt, inner ysep=2.5pt},
-  branchlabel/.style={flowtext, inner xsep=1pt, inner ysep=1pt},
-  terminal/.style={flowbox, rounded corners=0.18cm, minimum width=1.45cm},
-  process/.style={flowbox},
-  decision/.style={flowbox, diamond, aspect=2.7, minimum width=3.45cm,
-    minimum height=0.95cm},
-  io/.style={flowbox, trapezium, trapezium left angle=72,
-    trapezium right angle=72, minimum width=2.35cm, minimum height=0.76cm},
-]
-  \node[terminal] (start) at (0,9.55) {开始};
-  \node[io] (input) at (0,8.05) {输入 $a$};
-  \node[process, minimum width=3.75cm, minimum height=0.86cm]
-    (calc) at (0,6.50) {$b=D(a)-I(a)$};
-  \node[decision] (test) at (0,4.70) {$b=a?$};
-  \node[process, minimum width=1.85cm] (assign) at (3.45,4.70) {$a=b$};
-  \node[io] (output) at (0,3.10) {输出 $b$};
-  \node[terminal] (finish) at (0,1.70) {结束};
-
-  % Main trunk and the terminating branch.
-  \draw[->] (start.south) -- (input.north);
-  % Split the trunk at the loop-entry level so the return arrow merges into
-  % the stem without sharing a directed segment or creating a second arrow.
-  \coordinate (merge-level) at (0,7.40);
-  \draw (input.south) -- (merge-level);
-  \draw[->] (merge-level) -- (calc.north);
-  \draw[->] (calc.south) -- (test.north);
-  \draw[->] (test.south) -- node[branchlabel, left=2pt] {是} (output.north);
-  \draw[->] (output.south) -- (finish.north);
-
-  % 否 branch updates a and returns to the main stem above calc. The return
-  % arrow is horizontal and points left; it does not create a second vertical
-  % arrow at the calc box.
-  \draw[->] (test.east) -- node[branchlabel, above=2pt] {否} (assign.west);
-  \draw (assign.north) -- (3.45,7.40) -- (merge-level);
-\end{tikzpicture}
+\tikzset{
+  flowproc/.style={draw, rectangle, align=center, inner sep=2mm, line width=0.5pt},
+  flowio/.style={draw, trapezium, trapezium left angle=72, trapezium right angle=108, align=center, inner sep=2mm, line width=0.5pt},
+  flowstart/.style={draw, shape=rectangle, rounded corners=1.5mm, align=center, inner xsep=3mm, inner ysep=1.5mm, minimum width=26mm, minimum height=10mm, line width=0.5pt},
+  flowdec/.style={draw, diamond, aspect=2, align=center, inner sep=1.5mm, line width=0.5pt},
+  flowarr/.style={-{Stealth[length=2.6mm]}, line width=0.5pt}
+}
+{\parindent=0pt
+\begin{tikzpicture}
+\node[flowstart] (start) at (0,0) {开始};
+\node[flowio] (in) at (0,-1.8) {输入 $a$};
+\node[flowproc] (bb) at (0,-4.5) {$b=D(a)-I(a)$};
+\node[flowdec] (dia) at (0,-6.8) {$b=a?$};
+\node[flowio] (out) at (0,-8.9) {输出 $b$};
+\node[flowstart] (end) at (0,-10.6) {结束};
+\node[flowproc] (ab) at (3.9,-6.8) {$a=b$};
+\coordinate (J) at (0,-3.6);
+\draw[flowarr] (start.south) -- (in.north);
+\draw[flowarr] (in.south) -- (bb.north);
+\draw[flowarr] (bb.south) -- (dia.north);
+\draw[flowarr] (dia.south) -- (out.north) node[pos=0.3, right=1.5mm] {是};
+\draw[flowarr] (out.south) -- (end.north);
+\draw[flowarr] (dia.east) -- node[pos=0.2, above=1.5mm] {否} (ab.west);
+\draw[flowarr] (ab.north) -- (3.9,-3.6) -- (J);
+\end{tikzpicture}}

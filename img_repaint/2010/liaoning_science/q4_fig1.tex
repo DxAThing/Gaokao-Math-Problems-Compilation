@@ -1,60 +1,25 @@
-% Source: source/普通高考/2010/2010辽宁理.pdf, page 1, question 4.
-% Complete node -> directed-edge list:
-%   开始 -> 输入 n,m -> k=1,p=1 -> p=p(n-m+k) -> k<m;
-%   是 -> k=k+1 -> left return to the shared stem above the update;
-%   否 -> 输出 p -> 结束.
-% The return edge is independent; the shared stem has one downward arrow into
-% the update node and no duplicate arrow at the loop junction.
-
-\begin{tikzpicture}[
-  >=Stealth,
-  x=1cm,
-  y=0.82cm,
-  line width=0.45pt,
-  line cap=round,
-  line join=round,
-  font=\normalsize,
-  flowtext/.style={anchor=center, align=center,
-    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
-  every node/.style={flowtext},
-  flowbox/.style={flowtext, draw, minimum height=0.68cm,
-    inner xsep=4pt, inner ysep=2.5pt},
-  branchlabel/.style={flowtext, inner sep=0pt},
-  terminal/.style={flowbox, rounded corners=0.18cm, minimum width=1.35cm},
-  process/.style={flowbox},
-  decision/.style={flowbox, diamond, aspect=3.0, minimum width=3.45cm,
-    minimum height=0.95cm},
-  io/.style={flowbox, trapezium, trapezium left angle=72,
-    trapezium right angle=108, minimum width=2.10cm, minimum height=0.76cm},
-]
-  \path[use as bounding box] (-2.10,0.05) rectangle (5.10,9.65);
-
-  \node[terminal] (start) at (0,9.30) {开始};
-  \node[io, minimum width=2.45cm] (input) at (0,8.00) {输入 $n,m$};
-  \node[process, minimum width=2.60cm] (init) at (0,6.80)
-    {$k=1,p=1$};
-  \node[process, minimum width=3.55cm] (updateP) at (0,5.27)
-    {$p=p(n-m+k)$};
-  \node[decision] (test) at (0,3.85) {$k<m$};
-  \node[process, minimum width=2.25cm] (inc) at (3.80,5.35)
-    {$k=k+1$};
-  \node[io] (output) at (0,1.95) {输出 $p$};
-  \node[terminal] (finish) at (0,0.55) {结束};
-
-  \draw[->] (start.south) -- (input.north);
-  \draw[->] (input.south) -- (init.north);
-  \coordinate (merge) at (0,6.00);
-  \coordinate (branchright) at (3.80,3.85);
-  \draw[->] (init.south) -- (updateP.north);
-  \draw[->] (updateP.south) -- (test.north);
-
-  % Yes branch: right, then upward into the increment node.
-  \draw (test.east) --
-    node[branchlabel, pos=.65, above=1pt] {是} (branchright);
-  \draw[->] (branchright) -- (inc.south);
-  \draw[->] (inc.north) -- (3.80,6.00) -- (merge);
-
-  % No branch exits directly to output and termination.
-  \draw[->] (test.south) -- node[branchlabel, right=3pt] {否} (output.north);
-  \draw[->] (output.south) -- (finish.north);
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=0.6pt]
+\tikzset{
+start/.style={shape=rectangle,draw,rounded corners=1.5mm,minimum width=26mm,minimum height=10mm,inner xsep=3mm,inner ysep=1.5mm,align=center,execute at begin node={\setlength{\parindent}{0pt}}},
+proc/.style={draw,rectangle,minimum height=9mm,inner xsep=7pt,align=center,execute at begin node={\setlength{\parindent}{0pt}}},
+dec/.style={draw,diamond,aspect=2.4,inner xsep=5pt,align=center,execute at begin node={\setlength{\parindent}{0pt}}},
+io/.style={draw,trapezium,trapezium left angle=70,trapezium right angle=110,minimum height=9mm,inner xsep=9pt,align=center,execute at begin node={\setlength{\parindent}{0pt}}}
+}
+\node[start] (start) at (0,0) {开始};
+\node[io,minimum width=45mm] (inm) at (0,-1.8) {输入 $n,m$};
+\node[proc,minimum width=40mm] (kp) at (0,-3.3) {$k=1,p=1$};
+\node[proc,minimum width=55mm] (pp) at (0,-5.1) {$p=p(n-m+k)$};
+\node[proc,minimum width=30mm] (kbox) at (4.9,-5.5) {$k=k+1$};
+\node[dec,minimum width=44mm] (dia) at (0,-6.9) {$k<m$};
+\node[io,minimum width=30mm] (out) at (0,-8.9) {输出 $p$};
+\node[start] (end) at (0,-10.6) {结束};
+\coordinate (J) at (0,-4.2);
+\draw[->] (start.south) -- (inm.north);
+\draw[->] (inm.south) -- (kp.north);
+\draw[->] (kp.south) -- (pp.north);
+\draw[->] (pp.south) -- (dia.north);
+\draw[->] (dia.east) -- (4.9,-6.9) node[pos=0.2,above=1mm]{是} -- (kbox.south);
+\draw[->] (kbox.north) -- (4.9,-4.2) -- (J);
+\draw[->] (dia.south) -- (out.north) node[midway,right=1mm]{否};
+\draw[->] (out.south) -- (end.north);
 \end{tikzpicture}

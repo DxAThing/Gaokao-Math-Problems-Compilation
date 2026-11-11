@@ -1,0 +1,18 @@
+% PGFPlots only-marks scatter. Replace coordinates only from source evidence.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template scatter,
+  xmin=0,xmax=5.5,ymin=0,ymax=0.85,
+  xtick={3,4,5},xticklabels={$3$,$4$,$5$},
+  ytick={0.5,0.7,0.8},yticklabels={$0.5$,$0.7$,$0.8$}]
+\draw[line width=0.6pt,dashed] (axis cs:0,0.5) -- (axis cs:5,0.5);
+\draw[line width=0.6pt,dashed] (axis cs:0,0.7) -- (axis cs:3,0.7);
+\draw[line width=0.6pt,dashed] (axis cs:0,0.8) -- (axis cs:4,0.8);
+\draw[line width=0.6pt,dashed] (axis cs:3,0) -- (axis cs:3,0.7);
+\draw[line width=0.6pt,dashed] (axis cs:4,0) -- (axis cs:4,0.8);
+\draw[line width=0.6pt,dashed] (axis cs:5,0) -- (axis cs:5,0.5);
+\addplot[only marks,mark=*,mark size=1.5pt] coordinates {(3,0.7) (4,0.8) (5,0.5)};
+\examstatxlabel{$t$}
+\examstatylabel{$p$}
+\node[anchor=north east,inner sep=0pt] at (current axis.left of origin) {$O$};
+\end{axis}
+\end{tikzpicture}

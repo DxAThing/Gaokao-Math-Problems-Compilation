@@ -1,0 +1,27 @@
+% 三视图:主矩形宽√2高1,左直角三角形高1宽√2,俯正方形边长√2;长对正高平齐宽相等,全实线
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% 主视图 (前上,宽2.828=√2*2,高2=1*2)
+\begin{scope}[shift={(0,4.4)}]
+\draw (0,0) rectangle (2.828,2);
+\draw[thin] (0,2) -- (0,2.5);
+\draw[thin] (2.828,2) -- (2.828,2.5);
+\draw[<->] (0,2.3) -- node[above,fill=white,inner sep=1pt] {$\sqrt{2}$} (2.828,2.3);
+\draw[thin] (2.828,0) -- (3.328,0);
+\draw[thin] (2.828,2) -- (3.328,2);
+\draw[<->] (3.128,0) -- node[right,fill=white,inner sep=1pt] {$1$} (3.128,2);
+\node[below] at (1.414,-0.3) {正视图};
+\end{scope}
+% 左视图 (前右,直角三角形:竖直边高2,底边宽2.828)
+\begin{scope}[shift={(4.6,4.4)}]
+\draw (0,0) -- (0,2) -- (2.828,0) -- cycle;
+\node[below] at (1.414,-0.3) {侧视图（左）};
+\end{scope}
+% 俯视图 (右,与主视图同高横向并排,正方形边长2.828)
+\begin{scope}[shift={(8.4,4.4)}]
+\draw (0,0) rectangle (2.828,2.828);
+\draw[thin] (2.828,0) -- (3.328,0);
+\draw[thin] (2.828,2.828) -- (3.328,2.828);
+\draw[<->] (3.128,0) -- node[right,fill=white,inner sep=1pt] {$\sqrt{2}$} (3.128,2.828);
+\node[below] at (1.414,-0.3) {俯视图};
+\end{scope}
+\end{tikzpicture}

@@ -1,0 +1,19 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% sphere outline (radius 4 schematic)
+\draw (0,0) circle[radius=2.5cm];
+% equatorial great circle: back dashed (upper), front solid (lower)
+\draw[dashed] (-2.5,0) arc[start angle=180,end angle=0,x radius=2.5cm,y radius=0.55cm];
+\draw (-2.5,0) arc[start angle=180,end angle=360,x radius=2.5cm,y radius=0.55cm];
+% inscribed cylinder top base at y=1.55
+\draw[dashed] (-1.767766953,1.767766953) arc[start angle=180,end angle=0,x radius=1.767766953cm,y radius=0.32cm];
+\draw (-1.767766953,1.767766953) arc[start angle=180,end angle=360,x radius=1.767766953cm,y radius=0.32cm];
+% inscribed cylinder bottom base at y=-1.55
+\draw[dashed] (-1.767766953,-1.767766953) arc[start angle=180,end angle=0,x radius=1.767766953cm,y radius=0.32cm];
+\draw (-1.767766953,-1.767766953) arc[start angle=180,end angle=360,x radius=1.767766953cm,y radius=0.32cm];
+% cylinder lateral edges (hidden inside sphere)
+\draw[dashed] (-1.767766953,-1.767766953) -- (-1.767766953,1.767766953);
+\draw[dashed] (1.767766953,-1.767766953) -- (1.767766953,1.767766953);
+% centre
+\fill (0,0) circle (1.5pt);
+\node[left=4pt] at (0,0) {$O$};
+\end{tikzpicture}

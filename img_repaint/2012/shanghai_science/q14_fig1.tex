@@ -1,0 +1,18 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+  geometry edge/.style={solid,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (A) at (0,0);
+\coordinate (B) at (2.2,0.4);
+\coordinate (C) at (3.6,1.4);
+\coordinate (D) at (0,3.4);
+\draw[geometry edge] (D) -- (A);
+\draw[geometry edge] (D) -- (B);
+\draw[geometry edge] (D) -- (C);
+\draw[geometry edge] (A) -- (B);
+\draw[geometry edge] (B) -- (C);
+\draw[geometry edge,dashed] (A) -- (C);
+\node[geometry label,below left] at (A) {$A$};
+\node[geometry label,below right] at (B) {$B$};
+\node[geometry label,right] at (C) {$C$};
+\node[geometry label,above left] at (D) {$D$};
+\end{tikzpicture}

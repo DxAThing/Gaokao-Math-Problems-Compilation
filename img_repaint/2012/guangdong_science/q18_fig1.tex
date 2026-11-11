@@ -1,0 +1,30 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,
+geometry edge/.style={solid,line width=.6pt},
+geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (P) at (2,5);
+\coordinate (A) at (2,2);
+\coordinate (B) at (0,0);
+\coordinate (C) at (6,0);
+\coordinate (D) at (8,2);
+\coordinate (E) at (2.444444444,4.444444444);
+% base rectangle
+\draw[geometry edge] (B)--(C)--(D);
+\draw[geometry edge,dashed] (A)--(D);
+\draw[geometry edge,dashed] (A)--(B);
+\draw[geometry edge,dashed] (A)--(C);
+% apex
+\draw[geometry edge] (P)--(B);
+\draw[geometry edge] (P)--(C);
+\draw[geometry edge] (P)--(D);
+\draw[geometry edge,dashed] (P)--(A);
+% plane BDE
+\draw[geometry edge] (B)--(E);
+\draw[geometry edge] (D)--(E);
+\draw[geometry edge,dashed] (B)--(D);
+\node[geometry label,above] at ($(P)+(0,0.24)$) {$P$};
+\node[geometry label,left] at ($(A)+(-0.26,0)$) {$A$};
+\node[geometry label,below left] at ($(B)+(-0.16,-0.14)$) {$B$};
+\node[geometry label,below] at ($(C)+(0,-0.24)$) {$C$};
+\node[geometry label,right] at ($(D)+(0.24,0)$) {$D$};
+\node[geometry label,above,xshift=0.00bp,yshift=4.00bp] at ($(E)+(0,0.24)$) {$E$};
+\end{tikzpicture}

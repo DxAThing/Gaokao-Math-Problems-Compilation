@@ -1,0 +1,25 @@
+\begin{tikzpicture}[line width=.6pt, font=\normalsize]
+\coordinate (P) at (0,5.5);
+\coordinate (O) at (0,0);
+\coordinate (B) at (3,0);
+\coordinate (A) at (-1.8000000000,-0.6000000000);
+\coordinate (M) at (0.6000000000,-0.3000000000);
+\coordinate (T) at (-3,0);
+% Base ellipse: front solid, back dashed (rx=3, ry=0.75)
+\draw (T) arc (180:360:3 and 0.75);
+\draw[dashed] (B) arc (0:180:3 and 0.75);
+% Generators and axis
+\draw (P) -- (T);
+\draw (P) -- (B);
+\draw[dashed] (P) -- (O);
+\draw[dashed] (P) -- (M);
+\draw[dashed] (O) -- (B);
+\draw[dashed] (O) -- (A);
+\draw[dashed] (A) -- (B);
+% Labels with clearance
+\node[above,yshift=3.0pt] at (P) {$P$};
+\node[above left=3pt] at (O) {$O$};
+\node[right,xshift=3pt] at (B) {$B$};
+\node[below,yshift=-3pt] at (A) {$A$};
+\node[below=2pt,xshift=-5pt,yshift=3pt] at (M) {$M$};
+\end{tikzpicture}

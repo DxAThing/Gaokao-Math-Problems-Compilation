@@ -1,0 +1,27 @@
+% First draft: rectangular storage yard beside warehouse (schematic, no point names in original).
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt},
+ geometry mark/.style={solid,line width=.6pt},
+ geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (S1) at (0,1.2);
+\coordinate (S2) at (3.6,1.2);
+\coordinate (S3) at (3.6,-1.2);
+\coordinate (S4) at (0,-1.2);
+\coordinate (WA) at (-1.8,2.2);
+\coordinate (WB) at (0,2.2);
+\coordinate (WC) at (0.000000000,0.700000000);
+\coordinate (WD) at (0.000000000,-0.700000000);
+\coordinate (WE) at (0,-2.2);
+\coordinate (WF) at (-1.8,-2.2);
+\draw[geometry edge] (S1)--(S2);
+\draw[geometry edge] (S2)--(S3);
+\draw[geometry edge] (S4)--(S3);
+\draw[geometry edge,line width=2.4pt] (WA)--(WB);
+\draw[geometry edge,line width=2.4pt] (WB)--(WC);
+\draw[geometry edge,line width=2.4pt] (WD)--(WE);
+\draw[geometry edge,line width=2.4pt] (WE)--(WF);
+\node[font=\normalsize] at (1.8,-1.62) {$x$};
+\node[font=\normalsize] at (4.05,0) {$y$};
+\node[font=\normalsize] at (-1.05,0) {仓库};
+\node[font=\normalsize] at (1.8,0) {储料场};
+\end{tikzpicture}

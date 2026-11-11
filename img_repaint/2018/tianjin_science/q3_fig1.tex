@@ -1,0 +1,32 @@
+% 2018天津理科Q3约数计数程序框图.对象:开始/ 输入N/ i=2,T=0/ 菱形N/i是整数/
+% T=T+1/ 菱形i=i+1/ 菱形i≥5/ 输出T/ 结束.是否标签在出口附近线上方或右侧.
+\begin{tikzpicture}[line width=0.6pt, >= {Stealth[length=2.2mm,width=1.5mm]},
+  start/.style={draw, rectangle, rounded corners=2mm, minimum width=2.4cm, minimum height=0.8cm, align=center},
+  proc/.style={draw, rectangle, align=center, minimum height=0.8cm},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110, align=center, minimum height=0.9cm},
+  dec/.style={draw, diamond, align=center, inner sep=1mm}]
+  \node[start] (start) at (0,0) {开始};
+  \node[io, minimum width=3.2cm] (ion) at (0,-1.6) {输入 $N$};
+  \node[proc, minimum width=3.2cm] (it) at (0,-3.0) {$i=2,T=0$};
+  \coordinate (J1) at (0,-3.85);
+  \node[dec, minimum width=4.6cm, aspect=2.6] (d1) at (0,-5.3) {$\dfrac{N}{i}$是整数?};
+  \node[proc, minimum width=2.8cm] (tbox) at (0,-7.3) {$T=T+1$};
+  \coordinate (J2) at (0,-8.3);
+  \node[dec, minimum width=3.4cm, aspect=2.6] (di) at (0,-9.3) {$i=i+1$};
+  \node[dec, minimum width=3.4cm, aspect=2.6] (d5) at (0,-11.2) {$i\geqslant 5$};
+  \node[io, minimum width=3.4cm] (outt) at (0,-12.9) {输出 $T$};
+  \node[start] (end) at (0,-14.4) {结束};
+  % 主干
+  \draw[->] (start.south) -- (ion.north);
+  \draw[->] (ion.south) -- (it.north);
+  \draw[->] (it.south) -- (J1) -- (d1.north);
+  \draw[->] (d1.south) -- (tbox.north) node[pos=0.45,right=1.2mm]{是};
+  \draw[->] (tbox.south) -- (J2) -- (di.north);
+  \draw[->] (di.south) -- (d5.north);
+  \draw[->] (d5.south) -- (outt.north) node[pos=0.45,right=1.2mm]{是};
+  \draw[->] (outt.south) -- (end.north);
+  % d1否分支:东出口右行至x=3.8右通道,下行至J2高度,左行以单箭头汇入主干
+  \draw[->] (d1.east) -- ++(1.5,0) node[pos=0.3,above=1.2mm]{否} |- (J2);
+  % d5否回路:西出口左行至x=-3.4左通道,上行至J1高度,右行以单箭头汇入主干
+  \draw[->] (d5.west) -- ++(-1.7,0) node[pos=0.25,above=1.2mm]{否} |- (J1);
+\end{tikzpicture}

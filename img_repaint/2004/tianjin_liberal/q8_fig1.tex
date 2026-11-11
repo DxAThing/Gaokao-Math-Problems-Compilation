@@ -1,0 +1,26 @@
+\usetikzlibrary{calc,positioning}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt,draw=black},
+ geometry label/.style={font=\normalsize,inner sep=1.5pt,outer sep=1pt,draw=none}]
+
+\coordinate (A) at (1.5,1.5);
+\coordinate (C) at (2.8,0.8);
+\coordinate (B) at (5.5,1.4);
+\coordinate (P) at (5.5,4);
+\coordinate (P1) at (1,2.2);
+\coordinate (P2) at (8,2.2);
+\coordinate (P3) at (7,0);
+\coordinate (P4) at (0,0);
+\draw[geometry edge] (P1)--(P2);
+\draw[geometry edge] (P2)--(P3);
+\draw[geometry edge] (P3)--(P4);
+\draw[geometry edge] (P4)--(P1);
+\draw[geometry edge] (B)--(P);
+\draw[geometry edge] (C)--(P);
+\draw[geometry edge] (A)--(C);
+\node[geometry label,left] at (A) {$A$};
+\node[geometry label,below] at (C) {$C$};
+\node[geometry label,below] at (B) {$B$};
+\node[geometry label,above] at (P) {$P$};
+\node[font=\normalsize,inner sep=1.5pt] at (0.7,0.45) {$\alpha$};
+\end{tikzpicture}

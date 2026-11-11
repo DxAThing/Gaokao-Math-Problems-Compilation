@@ -1,0 +1,42 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Right quadrangular prism ABCD-A1B1C1D1, AA1 perp base; base trapezoid AD || BC.
+% Front face B-C-C1-B1 is a rectangle; back face A-D-D1-A1 offset in depth.
+\coordinate (A) at (0,0.8);
+\coordinate (B) at (1.2,0);
+\coordinate (C) at (3.6,0);
+\coordinate (D) at (4.8,0.8);
+\coordinate (A1) at (0,5.0);
+\coordinate (B1) at (1.2,4.2);
+\coordinate (C1) at (3.6,4.2);
+\coordinate (D1) at (4.8,5.0);
+\coordinate (Q) at (1.2,2.1);
+% bottom face: front B-C solid, back A-D dashed, sides solid
+\draw (B)--(C);
+\draw[densely dashed] (A)--(D);
+\draw (A)--(B);
+\draw (C)--(D);
+% top face: front B1-C1 solid, back A1-D1 solid, sides solid
+\draw (B1)--(C1);
+\draw (A1)--(D1);
+\draw (A1)--(B1);
+\draw (D1)--(C1);
+% vertical edges solid
+\draw (A)--(A1);
+\draw (B)--(B1);
+\draw (C)--(C1);
+\draw (D)--(D1);
+% plane alpha (A1,Q,C,D): A1-Q and Q-C solid, A1-D dashed
+\draw (A1)--(Q);
+\draw (Q)--(C);
+\draw[densely dashed] (A1)--(D);
+\node[left] at (A1) {$A_{1}$};
+\node[above right] at (1.22,4.28) {$B_{1}$};
+\node[right] at (3.68,3.95) {$C_{1}$};
+\node[right] at (D1) {$D_{1}$};
+\node[left] at (A) {$A$};
+\node[below] at (B) {$B$};
+\node[below] at (C) {$C$};
+\node[right] at (D) {$D$};
+\node[left] at (Q) {$Q$};
+\node at (2.5,1.9) {$\alpha$};
+\end{tikzpicture}

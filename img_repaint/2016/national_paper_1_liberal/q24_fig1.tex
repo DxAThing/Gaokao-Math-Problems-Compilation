@@ -1,0 +1,12 @@
+% source_constraints: blank answer grid with xOy axes, no curve; light 1cm grid measured from PNG: 15 vertical lines x=-7..7, 16 horizontal lines y=-7..8, axes coincide with grid lines; axes solid .6pt with arrows extending half cell beyond grid; ticks at (1,0),(0,1) labeled 1; O below-left of origin; labels x,y,O; whole grid retained as original blank area.
+% data: grid step 1cm, xgrid -7..7, ygrid -7..8; x-axis -7.5..7.5, y-axis -7.5..8.5; ticks 1 at (1,0),(0,1).
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[step=1cm,gray!60,line width=.3pt] (-7,-7) grid (7,8);
+\draw[->] (-7.5,0)--(7.5,0) node[below right] {$x$};
+\draw[->] (0,-7.5)--(0,8.5) node[above left] {$y$};
+\node[below left] at (0,0) {$O$};
+\draw (1,0)--(1,0.12);
+\node[below right] at (1,0) {$1$};
+\draw (0,1)--(0.12,1);
+\node[above left] at (0,1) {$1$};
+\end{tikzpicture}

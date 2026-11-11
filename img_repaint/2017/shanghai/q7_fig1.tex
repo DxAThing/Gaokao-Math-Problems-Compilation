@@ -1,0 +1,37 @@
+% 2017_shanghai_q7_fig1: cuboid ABCD-A1B1C1D1 with axes x,y,z from D.
+% D interior; x toward SW, y toward east, z upward.
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth]
+\coordinate (D) at (2,1.5);
+\coordinate (A) at (0.4,0);
+\coordinate (C) at (5,1.5);
+\coordinate (B) at (3.4,0);
+\coordinate (D1) at (2,3.7);
+\coordinate (A1) at (0.4,2.2);
+\coordinate (C1) at (5,3.7);
+\coordinate (B1) at (3.4,2.2);
+% hidden edges from D
+\draw[dashed,line width=.6pt] (D)--(A);
+\draw[dashed,line width=.6pt] (D)--(C);
+\draw[dashed,line width=.6pt] (D)--(D1);
+% bottom and sides solid
+\draw[solid,line width=.6pt] (A)--(B)--(C)--(C1)--(B1)--(A1)--cycle;
+\draw[solid,line width=.6pt] (B)--(B1);
+
+\draw[solid,line width=.6pt] (D1)--(A1);
+\draw[solid,line width=.6pt] (D1)--(C1);
+% axes (extend beyond vertices)
+\draw[->,line width=.6pt] (A)--(-.4,-.75);
+\draw[->,line width=.6pt] (C)--(6.2,1.5);
+\draw[->,line width=.6pt] (D1)--(2,4.8);
+\node[anchor=north east,xshift=-3pt,yshift=-2.0pt] at (-.4,-.75) {$x$};
+\node[anchor=west,xshift=3pt] at (6.2,1.5) {$y$};
+\node[anchor=west,xshift=3pt,yshift=1.0pt] at (2,4.8) {$z$};
+\node[anchor=north east,xshift=-6pt,yshift=5pt] at (A) {$A$};
+\node[anchor=north,yshift=-3pt] at (B) {$B$};
+\node[anchor=north,yshift=-3pt,xshift=3.0pt] at (C) {$C$};
+\node[anchor=east,xshift=-3pt,yshift=-2.0pt] at (D) {$D$};
+\node[anchor=east,xshift=-3pt] at (A1) {$A_{1}$};
+\node[anchor=south east,xshift=2.0pt,yshift=3pt] at (B1) {$B_{1}$};
+\node[anchor=south,yshift=3pt] at (C1) {$C_{1}$};
+\node[anchor=east,xshift=-3pt] at (D1) {$D_{1}$};
+\end{tikzpicture}

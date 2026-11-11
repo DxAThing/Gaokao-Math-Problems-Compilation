@@ -1,0 +1,46 @@
+% Three orthographic views of a composite solid, all edges solid.
+% Front (left): lower 4x1 rectangle, upper centered 2x1 rectangle.
+% Side (middle): lower 3x1 rectangle, upper centered 2x1 rectangle.
+% Plan (right): 4x3 rectangle with centered circle of diameter 2.
+% Front width = plan width (4), side width = plan height (3), both elevations height 2.
+% layout: horizontal row (point-fix: plan wrapped in shift scope only).
+% 根据仓库规范标注已有三幅投影，不新增投影。
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,
+  dim/.style={line width=.45pt,{Latex[length=1.8mm]}-{Latex[length=1.8mm]}}]
+% --- front view ---
+\draw (0,4) rectangle (4,5);
+\draw (1,5) rectangle (3,6);
+% front top width dimensions: 1 / 2 / 1
+\draw[line width=.45pt] (0,5) -- (0,6.55);
+\draw[line width=.45pt] (1,6) -- (1,6.55);
+\draw[line width=.45pt] (3,6) -- (3,6.55);
+\draw[line width=.45pt] (4,5) -- (4,6.55);
+\draw[dim] (0,6.35) -- (1,6.35) node[midway,above,font=\normalsize] {1};
+\draw[dim] (1,6.35) -- (3,6.35) node[midway,above,font=\normalsize] {2};
+\draw[dim] (3,6.35) -- (4,6.35) node[midway,above,font=\normalsize] {1};
+% --- side view ---
+\draw (5.5,4) rectangle (8.5,5);
+\draw (6,5) rectangle (8,6);
+% side top width dimensions: 0.5 / 2 / 0.5
+\draw[line width=.45pt] (5.5,5) -- (5.5,6.55);
+\draw[line width=.45pt] (6,6) -- (6,6.55);
+\draw[line width=.45pt] (8,6) -- (8,6.55);
+\draw[line width=.45pt] (8.5,5) -- (8.5,6.55);
+\draw[dim] (5.5,6.35) -- (6,6.35) node[midway,above,font=\normalsize] {0.5};
+\draw[dim] (6,6.35) -- (8,6.35) node[midway,above,font=\normalsize] {2};
+\draw[dim] (8,6.35) -- (8.5,6.35) node[midway,above,font=\normalsize] {0.5};
+% side height dimensions: 1 / 1 on the right
+\draw[line width=.45pt] (8.5,4) -- (9.05,4);
+\draw[line width=.45pt] (8.5,5) -- (9.05,5);
+\draw[line width=.45pt] (8.5,6) -- (9.05,6);
+\draw[dim] (8.9,4) -- (8.9,5) node[midway,right,font=\normalsize] {1};
+\draw[dim] (8.9,5) -- (8.9,6) node[midway,right,font=\normalsize] {1};
+% --- plan view (shifted right into the same row; edges unchanged) ---
+\begin{scope}[shift={(10,4)}]
+\draw (0,0) rectangle (4,3);
+\draw (2,1.5) circle (1);
+\end{scope}
+\node at (2,3.35) {正视图};
+\node at (7,3.35) {侧视图};
+\node at (12,3.35) {俯视图};
+\end{tikzpicture}

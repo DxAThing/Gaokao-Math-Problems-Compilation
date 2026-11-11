@@ -1,0 +1,52 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,
+  wire/.style={solid,line width=.6pt},
+  endpoint/.style={fill=black,circle,inner sep=0pt,minimum size=1.6pt}]
+\coordinate (L0) at (0,0);
+\coordinate (L1) at (0,-1.2);
+\coordinate (L2) at (0,-2.4);
+\coordinate (L3) at (0,-3.6);
+\coordinate (L4) at (0,-4.8);
+\coordinate (L5) at (0,-6.0);
+\coordinate (R0) at (8,0);
+\coordinate (R1) at (8,-1.2);
+\coordinate (R2) at (8,-2.4);
+\coordinate (R3) at (8,-3.6);
+\coordinate (R4) at (8,-4.8);
+\coordinate (R5) at (8,-6.0);
+\coordinate (SRC) at (4,0);
+\coordinate (SIG) at (4,0.85);
+\draw[wire] (0,0)--(3.58,0);
+\draw[wire] (4.42,0)--(8,0);
+\draw[wire] (0,-1.2)--(3.3,-1.2);
+\draw[wire] (4.7,-1.2)--(8,-1.2);
+\draw[wire] (0,-2.4)--(3.3,-2.4);
+\draw[wire] (4.7,-2.4)--(8,-2.4);
+\draw[wire] (0,-3.6)--(3.3,-3.6);
+\draw[wire] (4.7,-3.6)--(8,-3.6);
+\draw[wire] (0,-4.8)--(3.3,-4.8);
+\draw[wire] (4.7,-4.8)--(8,-4.8);
+\draw[wire] (0,-6.0)--(3.3,-6.0);
+\draw[wire] (4.7,-6.0)--(8,-6.0);
+\draw (4,0) circle (0.42);
+\draw (4,0) circle (0.2);
+\node[endpoint] at (4,0) {};
+\draw (3.3,-1.45) rectangle (4.7,-0.95);
+\draw (3.3,-2.65) rectangle (4.7,-2.15);
+\draw (3.3,-3.85) rectangle (4.7,-3.35);
+\draw (3.3,-5.05) rectangle (4.7,-4.55);
+\draw (3.3,-6.25) rectangle (4.7,-5.75);
+\node[endpoint] at (L0) {};
+\node[endpoint] at (R0) {};
+\node[endpoint] at (L1) {};
+\node[endpoint] at (R1) {};
+\node[endpoint] at (L2) {};
+\node[endpoint] at (R2) {};
+\node[endpoint] at (L3) {};
+\node[endpoint] at (R3) {};
+\node[endpoint] at (L4) {};
+\node[endpoint] at (R4) {};
+\node[endpoint] at (L5) {};
+\node[endpoint] at (R5) {};
+\node[anchor=south,inner sep=2pt] at (SIG) {信号源};
+\end{tikzpicture}

@@ -1,0 +1,31 @@
+\begin{tikzpicture}[line width=0.6pt, >=Stealth, font=\normalsize, x=1cm, y=1cm]
+\coordinate (C1) at (0,5.0);
+\coordinate (B1) at (4,5.0);
+\coordinate (A1) at (3.2,4);
+\coordinate (C) at (0,1.0);
+\coordinate (B) at (4,1.0);
+\coordinate (A) at (3.2,0.0);
+\coordinate (D) at (2,1.0);
+% outer prism visible
+\draw (C1)--(B1)--(B);
+\draw (C1)--(C);
+\draw (A1)--(A);
+\draw (C)--(A)--(B);
+\draw (C1)--(B1);
+\draw (C1)--(A1);
+\draw (B1)--(A1);
+\draw (C1)--(A);
+% hidden base edge split at D
+\draw[dashed] (C)--(D)--(B);
+% interior dashed
+\draw[dashed] (C1)--(D);
+\draw[dashed] (A1)--(D);
+\draw[dashed] (D)--(A);
+\node[anchor=east,inner sep=1.5pt] at (-0.22,5.0) {$C_1$};
+\node[anchor=west,inner sep=1.5pt] at (4.22,5.0) {$B_1$};
+\node[anchor=west,inner sep=1.5pt] at (3.45,4) {$A_1$};
+\node[anchor=east,inner sep=1.5pt] at (-0.22,1.0) {$C$};
+\node[anchor=west,inner sep=1.5pt] at (4.22,1.0) {$B$};
+\node[anchor=north,inner sep=1.5pt] at (3.2,-0.30) {$A$};
+\node[anchor=north east,inner sep=1.5pt,xshift=0.00bp,yshift=-6.00bp] at (1.72,0.72) {$D$};
+\end{tikzpicture}

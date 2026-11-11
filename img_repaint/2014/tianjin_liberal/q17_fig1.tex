@@ -1,0 +1,31 @@
+% 2014_tianjin_liberal_q17_fig1: pyramid P-ABCD, parallelogram base, E mid AD, F mid PC.
+% 12pt, .6pt, grayscale. Coordinates in cm from original PDF vector extraction (original_01.pdf p2).
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (C) at (0,0.633);
+\coordinate (D) at (1.232,0);
+\coordinate (A) at (5.082,0);
+\coordinate (B) at (3.85,0.633);
+\coordinate (P) at (3.85,3.917);
+\coordinate (E) at (3.157,0);
+\coordinate (F) at (1.925,2.275);
+% solid lateral + front base edges
+\draw[solid] (P)--(C);
+\draw[solid] (P)--(D);
+\draw[solid] (P)--(A);
+\draw[solid] (C)--(D);
+\draw[solid] (D)--(A);
+% hidden / interior dashed edges
+\draw[dashed] (P)--(B);
+\draw[dashed] (C)--(B);
+\draw[dashed] (D)--(B);
+\draw[dashed] (B)--(A);
+\draw[dashed] (F)--(E);
+% labels offset from strokes (previous failure: label touches stroke)
+\node[inner sep=2pt,above] at (P) {$P$};
+\node[inner sep=2pt,left] at (C) {$C$};
+\node[inner sep=2pt,below left] at (D) {$D$};
+\node[inner sep=2pt,below] at (E) {$E$};
+\node[inner sep=2pt,below right] at (A) {$A$};
+\node[inner sep=2pt,above right] at (B) {$B$};
+\node[inner sep=2pt,above left] at (F) {$F$};
+\end{tikzpicture}

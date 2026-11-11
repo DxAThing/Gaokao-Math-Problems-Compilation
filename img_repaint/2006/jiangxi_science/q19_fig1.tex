@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt},
+ geometry mark/.style={solid,line width=.6pt},
+ geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (A) at (2,3.4641);
+\coordinate (B) at (0,0);
+\coordinate (C) at (4,0);
+\coordinate (D) at (2,0);
+\coordinate (G) at (2,1.1547);
+\coordinate (M) at (0.4226,0.7321);
+\coordinate (N) at (3.1547,1.4641);
+\draw[geometry edge] (A)--(B)--(C)--cycle;
+\draw[geometry edge] (A)--(D);
+\draw[geometry edge] (M)--(N);
+\draw[geometry mark] (G) ++(90:0.4) arc (90:195:0.4);
+\node[font=\normalsize,inner sep=2pt] at ($(G)+(142.5:0.7)$) {$\alpha$};
+\node[geometry label,above] at (A) {$A$};
+\node[geometry label,below left] at (B) {$B$};
+\node[geometry label,below right] at (C) {$C$};
+\node[geometry label,below] at (D) {$D$};
+\node[geometry label,below right] at (G) {$G$};
+\node[geometry label,left] at (M) {$M$};
+\node[geometry label,above right] at (N) {$N$};
+\end{tikzpicture}

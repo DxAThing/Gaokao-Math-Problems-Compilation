@@ -1,0 +1,36 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% dashed grid (vertical at x ticks, horizontal at y ticks)
+\foreach \x in {-6.5,-5.2,-3.9,-2.6,-1.3,1.3,2.6,3.9,5.2,6.5} {
+  \draw[dashed,black!55] (\x,-5.25)--(\x,-1.0);\draw[dashed,black!55] (\x,.12)--(\x,5.25);
+}
+\foreach \y in {5.25,4.2,3.15,2.1,1.05,-1.05,-2.1,-3.15,-4.2,-5.25} {
+  \draw[dashed,black!55] (-6.5,\y)--(-1.05,\y);\draw[dashed,black!55] (.12,\y)--(6.5,\y);
+}
+% solid axes extending half-cell beyond last tick
+\draw[->,black] (-7.15,0)--(7.15,0) node[right,xshift=2pt] {$x$};
+\draw[->,black] (0,-5.775)--(0,5.775) node[above,yshift=2pt] {$y$};
+% x tick labels (below axis, clear of grid)
+\node[below,yshift=-3pt] at (-6.5,0) {$-\frac{5\pi}{8}$};
+\node[below,yshift=-3pt] at (-5.2,0) {$-\frac{\pi}{2}$};
+\node[below,yshift=-3pt] at (-3.9,0) {$-\frac{3\pi}{8}$};
+\node[below,yshift=-3pt] at (-2.6,0) {$-\frac{\pi}{4}$};
+\node[below,yshift=-3pt] at (-1.3,0) {$-\frac{\pi}{8}$};
+\node[below,yshift=-3pt] at (1.3,0) {$\frac{\pi}{8}$};
+\node[below,yshift=-3pt] at (2.6,0) {$\frac{\pi}{4}$};
+\node[below,yshift=-3pt] at (3.9,0) {$\frac{3\pi}{8}$};
+\node[below,yshift=-3pt] at (5.2,0) {$\frac{\pi}{2}$};
+\node[below,yshift=-3pt] at (6.5,0) {$\frac{5\pi}{8}$};
+% y tick labels (left of axis, clear of grid)
+\node[left,xshift=-3pt] at (0,5.25) {$\frac{5}{2}$};
+\node[left,xshift=-3pt] at (0,4.2) {$2$};
+\node[left,xshift=-3pt] at (0,3.15) {$\frac{3}{2}$};
+\node[left,xshift=-3pt] at (0,2.1) {$1$};
+\node[left,xshift=-3pt] at (0,1.05) {$\frac{1}{2}$};
+\node[left,xshift=-3pt] at (0,-1.05) {$-\frac{1}{2}$};
+\node[left,xshift=-3pt] at (0,-2.1) {$-1$};
+\node[left,xshift=-3pt] at (0,-3.15) {$-\frac{3}{2}$};
+\node[left,xshift=-3pt] at (0,-4.2) {$-2$};
+\node[left,xshift=-3pt] at (0,-5.25) {$-\frac{5}{2}$};
+\node[below left,xshift=-3pt,yshift=-3pt] at (0,0) {$O$};
+\end{tikzpicture}

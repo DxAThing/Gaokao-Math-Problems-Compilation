@@ -1,0 +1,18 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,
+geometry edge/.style={solid,line width=.6pt},
+geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (A1) at (0.6,3.0);
+\coordinate (A4) at (-2.0,-0.8);
+\coordinate (A3) at (1.8,-0.8);
+\coordinate (A2) at (2.6,0.6);
+\draw[geometry edge] (A1)--(A4);
+\draw[geometry edge] (A4)--(A3);
+\draw[geometry edge] (A3)--(A2);
+\draw[geometry edge] (A1)--(A2);
+\draw[geometry edge] (A1)--(A3);
+\draw[geometry edge,dashed] (A4)--(A2);
+\node[geometry label,above] at (A1) {$A_{1}$};
+\node[geometry label,below left] at (A4) {$A_{4}$};
+\node[geometry label,below right] at (A3) {$A_{3}$};
+\node[geometry label,right] at (A2) {$A_{2}$};
+\end{tikzpicture}

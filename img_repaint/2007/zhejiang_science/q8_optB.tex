@@ -1,0 +1,11 @@
+% 2007 zhejiang science q8 option B: one rising and one falling curve in xy-axes
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[solid,->] (-2.2,0)--(2.2,0) node[right,xshift=2pt,inner sep=2pt] {$x$};
+\draw[solid,->] (0,-1.2)--(0,2.2) node[above,yshift=2pt,inner sep=2pt] {$y$};
+\node[below left,xshift=-2pt,yshift=-2pt,inner sep=2pt] at (0,0) {$O$};
+% rising curve: y = 0.44x + 0.541 - 0.103x^2, crosses x-axis near x=-1.0
+\draw[solid,domain=-1.25:1.9,samples=120] plot (\x,{0.8*ln(\x+1.8)});
+% falling curve: y = 0.3 + 0.06 exp(-1.6x), stays above x-axis, meets rising near x=-0.3
+\draw[solid,domain=-1.1:1.9,samples=120] plot (\x,{0.35*exp(-\x)});
+\end{tikzpicture}

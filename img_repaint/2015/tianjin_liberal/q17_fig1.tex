@@ -1,0 +1,32 @@
+% 2015_tianjin_liberal_q17_fig1: prism-like solid, B-B1/AA1 vertical, dashed hidden base
+\begin{tikzpicture}[line width=0.6pt, >=stealth]
+\coordinate (B) at (0,0);
+\coordinate (A) at (5,0);
+\coordinate (C) at (3.5,-1.8);
+\coordinate (E) at (1.75,-0.9);
+\coordinate (B1) at (0,6);
+\coordinate (A1) at (5,3);
+\coordinate (F) at (4.25,0.6);
+% solid visible edges
+\draw (B) -- (B1);
+\draw (B1) -- (A1);
+\draw (B1) -- (C);
+\draw (B) -- (E);
+\draw (E) -- (C);
+\draw (A) -- (C);
+\draw (A) -- (A1);
+\draw (C) -- (A1);
+% dashed hidden edges
+\draw[dashed] (B) -- (A);
+\draw[dashed] (E) -- (A);
+\draw[dashed] (E) -- (A1);
+\draw[dashed] (E) -- (F);
+% labels
+\node[below left] at (B) {$B$};
+\node[right] at (A) {$A$};
+\node[below] at (C) {$C$};
+\node[below left] at (E) {$E$};
+\node[above left] at (B1) {$B_{1}$};
+\node[right] at (A1) {$A_{1}$};
+\node[right] at (F) {$F$};
+\end{tikzpicture}

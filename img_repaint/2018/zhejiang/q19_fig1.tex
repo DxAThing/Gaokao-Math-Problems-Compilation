@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt]
+% Prism ABC-A1B1C1: base ABC (angle B 120), top A1B1C1, verticals
+\coordinate (A) at (0,0.6);
+\coordinate (B) at (1.6,0);
+\coordinate (C) at (3.8,0.6);
+\coordinate (B1) at (1.6,2.6);
+\coordinate (A1) at (0,5.8);
+\coordinate (C1) at (3.8,1.9);
+% solid base sides + verticals + top
+\draw (A) -- (B) -- (C);
+\draw (A) -- (A1);
+\draw (B) -- (B1);
+\draw (C) -- (C1);
+\draw (A1) -- (B1) -- (C1);
+\draw (A1) -- (C1);
+\draw (A) -- (B1);
+% dashed base AC + diagonal AC1
+\draw[dashed] (A) -- (C);
+\draw[dashed] (A) -- (C1);
+% labels
+\node[left=2pt] at (A) {$A$};
+\node[below=2pt] at (B) {$B$};
+\node[right=2pt] at (C) {$C$};
+\node[left=2pt] at (A1) {$A_{1}$};
+\node[above right=1pt] at (B1) {$B_{1}$};
+\node[right=2pt] at (C1) {$C_{1}$};
+\end{tikzpicture}

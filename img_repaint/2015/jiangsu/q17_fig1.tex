@@ -1,0 +1,28 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=2.4mm,y=2.4mm,line width=.6pt,>=Stealth,font=\normalsize]
+\coordinate (M17) at (5,40);
+\coordinate (N17) at (20,2.5);
+\coordinate (P17) at (10,10);
+\coordinate (T1) at (0,30);
+\coordinate (T2) at (15,0);
+% Roads l1 (y-axis) and l2 (x-axis)
+\draw[->] (-1.8,0)--(23.3,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,0)--(0,45.5) node[above left,inner sep=0pt,xshift=-1pt,yshift=2pt] {$y$};
+% Mountain boundary C: y=1000/x^2, 5<=x<=20
+\draw[domain=5:20,samples=240,smooth] plot (\x,{1000/(\x*\x)});
+% Tangent l at P=(10,10)
+\draw (T1)--(T2);
+% Endpoints of C are the only marked points in the source
+\fill (M17) circle (1.5pt);
+\fill (N17) circle (1.5pt);
+% Complete labels
+\node[anchor=south east,inner sep=0pt,xshift=-2pt,yshift=2pt] at (M17) {$M$};
+\node[anchor=west,inner sep=0pt,xshift=2pt] at (N17) {$N$};
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\node[anchor=east,inner sep=0pt,xshift=-2pt] at (0,35) {$l_1$};
+\node[anchor=north,inner sep=0pt,yshift=-2pt] at (5,0) {$l_2$};
+\node[anchor=west,inner sep=0pt,xshift=2pt] at (5.8,29.726516) {$C$};
+\node[anchor=east,inner sep=0pt,xshift=-2pt] at (6.2,17.6) {$l$};
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (P17) {$P$};
+\node[align=center,inner sep=0pt] at (11.8,20) {山\\区};
+\end{tikzpicture}

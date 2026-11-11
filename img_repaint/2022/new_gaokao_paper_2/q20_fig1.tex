@@ -1,0 +1,29 @@
+% q20 tetrahedron P-ABC, PO altitude, E midpoint of PB
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (P) at (3,4.5);
+\coordinate (A) at (1.5,0);
+\coordinate (B) at (5.5,0);
+\coordinate (O) at (3,0.4666666667);
+\coordinate (C) at (-1.5,2.8);
+\coordinate (E) at (4.25,2.25);
+% solid visible edges
+\draw[solid] (C)--(P);
+\draw[solid] (P)--(A);
+\draw[solid] (P)--(E);
+\draw[solid] (E)--(B);
+\draw[solid] (A)--(B);
+\draw[solid] (C)--(A);
+\draw[solid] (A)--(E);
+% hidden edges
+\draw[dashed] (P)--(O);
+\draw[dashed] (C)--(E);
+\draw[dashed] (C)--(B);
+\draw[dashed] (E)--(O);
+% labels with clearance from strokes
+\node[above,inner sep=2pt] at (P) {$P$};
+\node[below left,inner sep=2pt] at (A) {$A$};
+\node[below right,inner sep=2pt] at (B) {$B$};
+\node[left,inner sep=2pt] at (C) {$C$};
+\node[below,inner sep=2pt] at (O) {$O$};
+\node[right,inner sep=2pt,xshift=0.00bp,yshift=2.00bp] at (E) {$E$};
+\end{tikzpicture}

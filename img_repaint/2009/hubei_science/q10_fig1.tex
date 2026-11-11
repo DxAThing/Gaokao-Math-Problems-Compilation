@@ -1,0 +1,27 @@
+% 三角形数点阵：1,3,6,10；底边对齐，自左至右组序不变。
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+% group 1: 1 dot
+\fill (0,0) circle (1.5pt);
+% group 2: rows 2+1 = 3 dots
+\fill (1.5,0) circle (1.5pt);
+\fill (2.05,0) circle (1.5pt);
+\fill (1.775,0.55) circle (1.5pt);
+% group 3: rows 3+2+1 = 6 dots
+\foreach \ix in {0,1,2} \fill ({3.4+\ix*0.55},0) circle (1.5pt);
+\foreach \ix in {0,1} \fill ({3.675+\ix*0.55},0.55) circle (1.5pt);
+\fill (3.95,1.1) circle (1.5pt);
+% group 4: rows 4+3+2+1 = 10 dots
+\foreach \ix in {0,1,2,3} \fill ({5.9+\ix*0.55},0) circle (1.5pt);
+\foreach \ix in {0,1,2} \fill ({6.175+\ix*0.55},0.55) circle (1.5pt);
+\foreach \ix in {0,1} \fill ({6.45+\ix*0.55},1.1) circle (1.5pt);
+\fill (6.725,1.65) circle (1.5pt);
+% group value labels
+\node[below=6pt] at (0,0) {$1$};
+\node[below=6pt] at (1.775,0) {$3$};
+\node[below=6pt] at (3.95,0) {$6$};
+\node[below=6pt] at (6.725,0) {$10$};
+% trailing ellipsis at mid height
+\node at (8.6,0.55) {$\cdots\cdots$};
+% figure caption
+\node at (4.3,-1.3) {\bitmapinsertcaption[1]};
+\end{tikzpicture}

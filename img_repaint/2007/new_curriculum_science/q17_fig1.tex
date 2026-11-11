@@ -1,0 +1,48 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+  app edge/.style={draw=black,solid,line width=.6pt},
+  app dashed/.style={draw=black,dashed,line width=.6pt}]
+% gray river first (behind sight lines)
+\filldraw[fill=gray!60,draw=black,line width=.6pt]
+  (-3.5500,0.4500)--(-2.9000,0.6500)--(-2.3000,0.3000)--(-1.2000,0.1500)--(0.2000,-0.1500)--(1.8000,-0.4500)--(3.2000,-0.7000)--(4.8000,-1.1000)--(4.3000,-2.6000)--(3.5000,-2.7500)--(2.7000,-2.4500)--(1.5000,-2.2000)--(0.0000,-1.8500)--(-1.2000,-1.3000)--(-2.4000,-0.9000)--(-3.3000,-0.4500)--cycle;
+% tower outline + base + central vertical
+\draw[app edge] (2.5000,6.0000)--(0.8000,0.0000)--(4.2000,0.0000)--cycle;
+\draw[app edge] (2.5000,6.0000)--(2.5000,0.0000);
+% lattice X bands (side interpolation, numeric endpoints)
+\draw[app edge] (0.8000,0.0000)--(2.5000,1.5000);
+\draw[app edge] (2.5000,0.0000)--(1.2250,1.5000);
+\draw[app edge] (4.2000,0.0000)--(2.5000,1.5000);
+\draw[app edge] (2.5000,0.0000)--(3.7750,1.5000);
+\draw[app edge] (1.2250,1.5000)--(2.5000,2.6000);
+\draw[app edge] (2.5000,1.5000)--(1.5370,2.6000);
+\draw[app edge] (3.7750,1.5000)--(2.5000,2.6000);
+\draw[app edge] (2.5000,1.5000)--(3.4630,2.6000);
+\draw[app edge] (1.5370,2.6000)--(2.5000,3.5000);
+\draw[app edge] (2.5000,2.6000)--(1.7920,3.5000);
+\draw[app edge] (3.4630,2.6000)--(2.5000,3.5000);
+\draw[app edge] (2.5000,2.6000)--(3.2080,3.5000);
+\draw[app edge] (1.7920,3.5000)--(2.5000,4.2000);
+\draw[app edge] (2.5000,3.5000)--(1.9900,4.2000);
+\draw[app edge] (3.2080,3.5000)--(2.5000,4.2000);
+\draw[app edge] (2.5000,3.5000)--(3.0100,4.2000);
+\draw[app edge] (1.9900,4.2000)--(2.5000,4.8000);
+\draw[app edge] (2.5000,4.2000)--(2.1600,4.8000);
+\draw[app edge] (3.0100,4.2000)--(2.5000,4.8000);
+\draw[app edge] (2.5000,4.2000)--(2.8400,4.8000);
+\draw[app edge] (2.1600,4.8000)--(2.5000,5.4000);
+\draw[app edge] (2.5000,4.8000)--(2.3300,5.4000);
+\draw[app edge] (2.8400,4.8000)--(2.5000,5.4000);
+\draw[app edge] (2.5000,4.8000)--(2.6700,5.4000);
+\draw[app edge] (2.3300,5.4000)--(2.5850,5.7000);
+\draw[app edge] (2.6700,5.4000)--(2.4150,5.7000);
+% sight / ground lines
+\draw[app dashed] (2.5000,6.0000)--(-4.0000,0.0000);
+\draw[app dashed] (-4.0000,0.0000)--(2.5000,0.0000);
+\draw[app dashed] (2.5000,0.0000)--(-2.5000,-2.5000);
+\draw[app edge] (-4.0000,0.0000)--(-2.5000,-2.5000);
+% labels with clearance (no white fill over strokes)
+\node[inner sep=0pt,font=\normalsize,anchor=south] at (2.5000,6.2200) {$A$};
+\node[inner sep=0pt,font=\normalsize,anchor=north] at (2.7800,-0.2200) {$B$};
+\node[inner sep=0pt,font=\normalsize,anchor=east] at (-4.2200,0.0000) {$C$};
+\node[inner sep=0pt,font=\normalsize,anchor=north] at (-2.7200,-2.7200) {$D$};
+\end{tikzpicture}

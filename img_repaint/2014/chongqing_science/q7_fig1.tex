@@ -1,0 +1,36 @@
+% row front/side/plan; units in cm, u=0.7; only scope shifts changed
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+\def\u{0.7}
+% plan (top view): right triangle, width 4u, depth 3u
+% row: front, side, plan left to right; only scope shifts changed
+\begin{scope}[shift={(7.7,0.6)}]
+\draw (0,0) -- (0,2.1) -- (2.8,0) -- cycle;
+\node[below] at (1.4,-0.55) {俯视图};
+\end{scope}
+% front
+\begin{scope}[shift={(0,0.6)}]
+\draw (0,0) -- (0,3.5) -- (2.8,1.4) -- (2.8,0) -- cycle;
+% bottom width dim 4
+\draw (0,-0.12) -- (0,-0.45);
+\draw (2.8,-0.12) -- (2.8,-0.45);
+\draw[<->,>=Stealth] (0,-0.32) -- (2.8,-0.32) node[midway,fill=white,inner sep=1pt] {4};
+% left height dim 5
+\draw (-0.12,0) -- (-0.45,0);
+\draw (-0.12,3.5) -- (-0.45,3.5);
+\draw[<->,>=Stealth] (-0.32,0) -- (-0.32,3.5) node[midway,fill=white,inner sep=1pt] {5};
+% right height dim 2
+\draw (2.92,0) -- (3.25,0);
+\draw (2.92,1.4) -- (3.25,1.4);
+\draw[<->,>=Stealth] (3.12,0) -- (3.12,1.4) node[midway,fill=white,inner sep=1pt] {2};
+\node[below] at (1.4,-0.55) {正视图};
+\end{scope}
+% side (left view): rect 3u x 5u, dashed diagonal
+\begin{scope}[shift={(4.4,0.6)}]
+\draw (0,0) rectangle (2.1,3.5);
+\draw[dashed] (0,3.5) -- (2.1,1.4);
+\draw (0,-0.12) -- (0,-0.45);
+\draw (2.1,-0.12) -- (2.1,-0.45);
+\draw[<->,>=Stealth] (0,-0.32) -- (2.1,-0.32) node[midway,fill=white,inner sep=1pt] {3};
+\node[below] at (1.05,-0.55) {侧视图（左）};
+\end{scope}
+\end{tikzpicture}

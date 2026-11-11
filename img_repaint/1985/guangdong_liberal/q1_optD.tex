@@ -1,0 +1,17 @@
+% 1985 广东（文）一(1) 选项D：上升曲线（示意，过(1,0)）
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1.5cm,y=1.5cm,line width=.6pt,>={Stealth[length=1.6mm,width=1.1mm]},font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (P) at (1,0);
+% 坐标轴
+\draw[->] (-1.0,0)--(3.0,0);
+\draw[->] (0,-1.6)--(0,1.9);
+\node[right=1pt,inner sep=0pt] at (3.0,0) {$x$};
+\node[above=1pt,inner sep=0pt] at (0,1.9) {$y$};
+% 曲线
+\draw[domain=0.42:2.7,samples=141] plot(\x,{ln(\x)/ln(2)});
+% 标记点与标签
+\fill (P) circle (1.1pt);
+\node[anchor=north west,inner sep=1pt] at (1.1,-0.1) {$(1,0)$};
+\node[below left=1pt,inner sep=1pt] at (O) {$O$};
+\end{tikzpicture}

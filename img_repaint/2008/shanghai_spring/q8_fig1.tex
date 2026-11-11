@@ -1,0 +1,13 @@
+% Net: four unit squares in a row, equilateral triangle on each, one square below first.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+% squares: row y=0..1, x=0..4
+\foreach \i in {0,1,2,3} {
+  \draw ( \i,0) rectangle (\i+1,1);
+}
+% lower square under first
+\draw (0,-1) rectangle (1,0);
+% four equilateral triangles on top, side 1
+\foreach \i in {0,1,2,3} {
+  \draw (\i,1)--(\i+0.5,1.866)--(\i+1,1);
+}
+\end{tikzpicture}

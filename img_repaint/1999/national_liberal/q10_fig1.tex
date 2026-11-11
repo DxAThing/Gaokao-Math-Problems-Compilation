@@ -1,0 +1,25 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+\tikzset{ptlabel/.style={font=\normalsize,fill=white,inner sep=1.2pt}}
+\coordinate (A) at (0,0);
+\coordinate (B) at (3,0);
+\coordinate (C) at (4.5,1);
+\coordinate (D) at (0.9,0.85);
+\coordinate (E) at (1.2,2);
+\coordinate (F) at (2.9,2);
+\draw (A) -- (B);
+\draw (B) -- (C);
+\draw (F) -- (C);
+\draw (F) -- (B);
+\draw (F) -- (E);
+\draw (E) -- (A);
+\draw[dashed] (A) -- (D);
+\draw[dashed] (D) -- (E);
+\draw[dashed] (D) -- (C);
+\node[ptlabel,below left,xshift=-2pt,yshift=-2pt] at (A) {$A$};
+\node[ptlabel,below,yshift=-3pt] at (B) {$B$};
+\node[ptlabel,right,xshift=2pt] at (C) {$C$};
+\node[ptlabel,left,xshift=-3pt,yshift=1pt,fill=none,xshift=-8.00bp,yshift=2.00bp] at (D) {$D$};
+\node[ptlabel,above,xshift=-2pt,yshift=2pt] at (E) {$E$};
+\node[ptlabel,above,xshift=2pt,yshift=2pt] at (F) {$F$};
+\end{tikzpicture}

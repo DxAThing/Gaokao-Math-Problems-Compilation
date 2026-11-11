@@ -1,0 +1,10 @@
+% S_n 与 n 关系散点：横轴刻度 1..11，纵轴无数值刻度不补；
+% 纵向点位为像素标定示意值（见 measurement JSON），保持原图顺序与相对间距。
+\begin{tikzpicture}[x=0.8cm,y=0.8cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-0.5,0)--(11.9,0) node[right] {$n$};
+\draw[->] (0,-0.35)--(0,6.6) node[above] {$S_{n}$};
+\node[below left] at (0,0) {$O$};
+\foreach \n in {1,...,11} \draw (\n,0.06)--(\n,-0.06);
+\foreach \n in {1,...,11} \node[below=4pt] at (\n,0) {$\n$};
+\foreach \p in {(1,0),(2,0),(3,0.56),(4,1.22),(5,2.07),(6,2.54),(7,3.93),(8,4.6),(9,5.26),(10,5.58),(11,5.91)} \fill \p circle (1.5pt);
+\end{tikzpicture}

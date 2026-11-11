@@ -1,0 +1,11 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-3.6,0)--(4.0,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.0)--(0,3.8) node[above,inner sep=0pt,yshift=2pt] {$y$};
+% exact parabola y=3-0.75x^2, vertex (0,3), zeros +-2
+\draw[domain=-2.4:2.4,samples=140] plot (\x,{3-0.75*\x*\x});
+% point labels offset to avoid curve and axes (gap >=3pt)
+\node[anchor=south east,inner sep=0pt,xshift=-3pt,yshift=4pt] at (-2,0) {$(-2,0)$};
+\node[anchor=south west,inner sep=0pt,xshift=3pt,yshift=4pt] at (2,0) {$(2,0)$};
+\node[anchor=south west,inner sep=0pt,xshift=5pt,yshift=5pt] at (0,3) {$(0,3)$};
+\node[anchor=north east,inner sep=0pt,xshift=-3pt,yshift=-4pt] at (0,0) {$O$};
+\end{tikzpicture}

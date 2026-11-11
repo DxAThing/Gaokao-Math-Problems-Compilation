@@ -1,0 +1,32 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+\coordinate (A) at (0,0);
+\coordinate (B) at (5.0,0);
+\coordinate (C) at (5.8,0.6);
+\coordinate (D) at (0.8000000000,0.6000000000);
+\coordinate (F) at (0.8000000000,3.6666666667);
+\coordinate (C1) at (5.8,5.2);
+\coordinate (E) at (5.0000000000,1.5333333333);
+% solid outline and section
+\draw (A) -- (B);
+\draw (A) -- (F);
+\draw (F) -- (C1);
+\draw (C1) -- (C);
+\draw (C1)--(E);
+
+\draw (A) -- (E);
+\draw (B) -- (E);
+\draw (B) -- (C);
+
+% hidden dashed
+\draw[dashed] (F)--(D);
+\draw[dashed] (A) -- (D);
+\draw[dashed] (D) -- (C);
+\draw[dashed] (F) -- (B);
+\node[below left,xshift=-3pt,yshift=-3pt] at (A) {$A$};
+\node[below,xshift=2pt,yshift=-4pt] at (B) {$B$};
+\node[right,xshift=3pt] at (C) {$C$};
+\node[left,xshift=-4pt] at (D) {$D$};
+\node[above left,xshift=-3pt,yshift=2pt] at (F) {$F$};
+\node[above right,xshift=3pt,yshift=2pt] at (C1) {$C_{1}$};
+\node[right,xshift=4pt,yshift=1pt] at (E) {$E$};
+\end{tikzpicture}

@@ -1,0 +1,58 @@
+% point-fix: horizontal row front/side/plan; frustum/rectangle/semicircle edges and dims 2/2/1, 1/2/1 unchanged; captions aligned
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% ---- front (left) ----
+\begin{scope}[shift={(0,1.7)}]
+\draw (0,0) -- (4,0) -- (3,2) -- (1,2) -- cycle;
+\draw (1,2) rectangle (3,4);
+\draw (1,4) -- (3,4);
+\draw (1,4) arc (180:0:1);
+\draw (4.6,0) -- (4.6,2);
+\draw[arrows={Stealth[scale=0.7]-Stealth[scale=0.7]}] (4.6,0.1) -- (4.6,1.9);
+\node[right,inner sep=2pt] at (4.6,1) {$2$};
+\draw (4.6,2) -- (4.6,4);
+\draw[arrows={Stealth[scale=0.7]-Stealth[scale=0.7]}] (4.6,2.1) -- (4.6,3.9);
+\node[right,inner sep=2pt] at (4.6,3) {$2$};
+\draw (4.6,4) -- (4.6,5);
+\draw[arrows={Stealth[scale=0.7]-Stealth[scale=0.7]}] (4.6,4.1) -- (4.6,4.9);
+\node[right,inner sep=2pt] at (4.6,4.5) {$1$};
+\draw (4.35,0) -- (4.85,0);
+\draw (4.35,2) -- (4.85,2);
+\draw (4.35,4) -- (4.85,4);
+\draw (4.35,5) -- (4.85,5);
+\draw (0,-0.6) -- (0,-1.0);
+\draw (1,-0.6) -- (1,-1.0);
+\draw (3,-0.6) -- (3,-1.0);
+\draw (4,-0.6) -- (4,-1.0);
+\draw[arrows={Stealth[scale=0.7]-Stealth[scale=0.7]}] (0.05,-0.85) -- (0.95,-0.85);
+\draw[arrows={Stealth[scale=0.7]-Stealth[scale=0.7]}] (1.05,-0.85) -- (2.95,-0.85);
+\draw[arrows={Stealth[scale=0.7]-Stealth[scale=0.7]}] (3.05,-0.85) -- (3.95,-0.85);
+\node[below,inner sep=1pt] at (0.5,-0.85) {$1$};
+\node[below,inner sep=1pt] at (2,-0.85) {$2$};
+\node[below,inner sep=1pt] at (3.5,-0.85) {$1$};
+\node[below,inner sep=2pt] at (2,-1.55) {正视图};
+\end{scope}
+% ---- side (middle): same geometry, bottom dims only ----
+\begin{scope}[shift={(6.0,1.7)}]
+\draw (0,0) -- (4,0) -- (3,2) -- (1,2) -- cycle;
+\draw (1,2) rectangle (3,4);
+\draw (1,4) -- (3,4);
+\draw (1,4) arc (180:0:1);
+\draw (0,-0.6) -- (0,-1.0);
+\draw (1,-0.6) -- (1,-1.0);
+\draw (3,-0.6) -- (3,-1.0);
+\draw (4,-0.6) -- (4,-1.0);
+\draw[arrows={Stealth[scale=0.7]-Stealth[scale=0.7]}] (0.05,-0.85) -- (0.95,-0.85);
+\draw[arrows={Stealth[scale=0.7]-Stealth[scale=0.7]}] (1.05,-0.85) -- (2.95,-0.85);
+\draw[arrows={Stealth[scale=0.7]-Stealth[scale=0.7]}] (3.05,-0.85) -- (3.95,-0.85);
+\node[below,inner sep=1pt] at (0.5,-0.85) {$1$};
+\node[below,inner sep=1pt] at (2,-0.85) {$2$};
+\node[below,inner sep=1pt] at (3.5,-0.85) {$1$};
+\node[below,inner sep=2pt] at (2,-1.55) {侧视图};
+\end{scope}
+% ---- plan (right): concentric circles d=4/d=2; caption baseline aligned with front/side ----
+\begin{scope}[shift={(12.5,4.2)}]
+\draw (0,0) circle (2);
+\draw (0,0) circle (1);
+\node[below,inner sep=2pt] at (0,-4.05) {俯视图};
+\end{scope}
+\end{tikzpicture}

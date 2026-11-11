@@ -1,0 +1,34 @@
+% 2014_shaanxi_science_q10_fig1: xOy coordinate, aircraft at (-5,2), dashed cubic to runway A.
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->,line width=.6pt] (-6.8,0)--(7.6,0);
+\draw[->,line width=.6pt] (0,-3.0)--(0,3.2);
+% guide dashed lines (.45pt gray-black)
+\draw[dashed,line width=.45pt] (-5,2)--(0,2);
+\draw[dashed,line width=.45pt] (-5,0.06)--(-5,1.88);
+\draw[dashed,line width=.45pt] (0.06,-2)--(3.55,-2);
+\draw[dashed,line width=.45pt] (5,0.06-0.06)--(5,-1.60);
+% cubic trajectory y=x^3/125-0.6x, x in [-5,5]
+\draw[dashed,line width=.45pt,domain=-5:5,samples=120] plot (\x,{\x*\x*\x/125-0.6*\x});
+% runway thick
+\draw[line width=2.5pt] (3.55,-2)--(7.0,-2);
+% aircraft silhouette pointing +x, nose adjacent to (-5,2)
+\fill[black] (-5.95,1.97) rectangle (-5.10,2.07);
+\fill[black] (-5.10,1.97)--(-4.82,2.02)--(-5.10,2.07)--cycle;
+\fill[black] (-5.75,1.90)--(-5.55,1.97)--(-5.65,1.90)--cycle;
+\fill[black] (-5.75,2.14)--(-5.55,2.07)--(-5.65,2.14)--cycle;
+% tick labels with clearance (no white fill)
+\node[anchor=north,inner sep=0pt,yshift=-3pt] at (-5,0) {$-5$};
+\node[anchor=south,inner sep=0pt,yshift=3pt] at (5,0) {$5$};
+\node[anchor=west,inner sep=0pt,xshift=4pt] at (0,2) {$2$};
+\node[anchor=east,inner sep=0pt,xshift=-4pt] at (0,-2) {$-2$};
+\node[anchor=north east,inner sep=0pt,xshift=-3pt,yshift=-3pt] at (0,0) {$O$};
+% A above runway right of x=5 guide
+\node[anchor=south,inner sep=0pt,yshift=4pt] at (5.35,-2) {$A$};
+% Chinese runway label below runway
+\node[anchor=north,inner sep=0pt,yshift=-5pt] at (5.35,-2) {地面跑道};
+% axis names outside arrow tips
+\node[anchor=west,inner sep=0pt,xshift=3pt] at (7.6,0) {$x$};
+\node[anchor=south,inner sep=0pt,yshift=3pt] at (0,3.2) {$y$};
+\end{tikzpicture}

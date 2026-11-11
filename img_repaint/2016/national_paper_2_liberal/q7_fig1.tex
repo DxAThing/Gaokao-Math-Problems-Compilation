@@ -1,0 +1,28 @@
+% 2016_national_paper_2_liberal_q7_fig1: house front/side (4 wide, rect 4 high, roof 2√3), circle plan with centre dot.
+% Only dimension point-fix; outlines unchanged.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm,>=Latex]
+\def\W{2.8}\def\RH{2.8}\def\TH{2.4249}
+\draw (0,0) rectangle (\W,\RH);
+\draw (0,\RH) -- (\W/2,\RH+\TH) -- (\W,\RH);
+\draw (4.3,0) rectangle (4.3+\W,\RH);
+\draw (4.3,\RH) -- (4.3+\W/2,\RH+\TH) -- (4.3+\W,\RH);
+\draw (10.0,1.4) circle (1.4);
+\fill (10.0,1.4) circle (0.06);
+% left vertical dims outside outline
+\draw[dimension extension] (0,0) -- (-0.85,0);
+\draw[dimension extension] (0,\RH) -- (-0.85,\RH);
+\draw[dimension extension] (0,\RH+\TH) -- (-0.85,\RH+\TH);
+\draw[dimension line] (-0.7,0) -- node[dimension label vertical] {4} (-0.7,\RH);
+\draw[dimension line] (-0.7,\RH) -- node[dimension label vertical] {$2\sqrt{3}$} (-0.7,\RH+\TH);
+% bottom dims outside outline
+\draw[dimension extension] (0,0) -- (0,-0.7);
+\draw[dimension extension] (\W,0) -- (\W,-0.7);
+\draw[dimension line] (0,-0.55) -- node[dimension label] {4} (\W,-0.55);
+\draw[dimension extension] (4.3,0) -- (4.3,-0.7);
+\draw[dimension extension] (4.3+\W,0) -- (4.3+\W,-0.7);
+\draw[dimension line] (4.3,-0.55) -- node[dimension label] {4} (4.3+\W,-0.55);
+% view names: single row, centered, same baseline
+\node at (1.4,-1.4) {正视图};
+\node at (5.7,-1.4) {侧视图};
+\node at (10.0,-1.4) {俯视图};
+\end{tikzpicture}

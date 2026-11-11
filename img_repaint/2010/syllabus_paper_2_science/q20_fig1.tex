@@ -1,0 +1,27 @@
+% network: M-N circuit, T1//T2 in series with T3, all in parallel with T4.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize]
+% terminals
+\coordinate (M) at (-5.5,0);
+\coordinate (N) at (5.5,0);
+\coordinate (JL) at (-4.2,0);
+\coordinate (J1) at (-0.85,0);
+\coordinate (J2) at (3.2,0);
+% boxes (2.2cm x 0.9cm)
+\node[draw,rectangle,minimum width=2.2cm,minimum height=0.9cm,fill=white] (T1) at (-2.5,2) {$T_{1}$};
+\node[draw,rectangle,minimum width=2.2cm,minimum height=0.9cm,fill=white] (T2) at (-2.5,0) {$T_{2}$};
+\node[draw,rectangle,minimum width=2.2cm,minimum height=0.9cm,fill=white] (T3) at (0.8,0) {$T_{3}$};
+\node[draw,rectangle,minimum width=2.2cm,minimum height=0.9cm,fill=white] (T4) at (-0.5,-2) {$T_{4}$};
+% middle spine M -> N
+\draw (M) -- (JL) -- (T2.west);
+\draw (T2.east) -- (J1) -- (T3.west);
+\draw (T3.east) -- (N);
+% upper branch M -> T1 -> J1
+\draw (JL) -- (-4.2,2) -- (T1.west);
+\draw (T1.east) -- (J1 |- T1.east) -- (J1);
+% lower branch M -> T4 -> N
+\draw (JL) -- (-4.2,-2) -- (T4.west);
+\draw (T4.east) -- (3.2,-2) -- (J2);
+% terminal labels
+\node[left] at (M) {$M$};
+\node[right] at (N) {$N$};
+\end{tikzpicture}

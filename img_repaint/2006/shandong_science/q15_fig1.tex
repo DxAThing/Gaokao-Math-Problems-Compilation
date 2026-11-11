@@ -1,0 +1,29 @@
+\begin{tikzpicture}[line width=.6pt]
+\coordinate (A1) at (-3.0,0);
+\coordinate (B1) at (2.0,0);
+\coordinate (C1) at (1.2,1.2);
+\coordinate (D) at (-0.9,0.6);
+\coordinate (A) at (-3.0,-6.0);
+\coordinate (B) at (2.0,-6.0);
+\coordinate (C) at (1.2000000000,-4.8000000000);
+% top face
+\draw (A1) -- (B1);
+\draw (A1) -- (C1);
+\draw (B1) -- (C1);
+% lateral edges
+\draw (A1) -- (A);
+\draw (B1) -- (B);
+\draw[dashed] (C1) -- (C);
+% bottom face
+\draw (A) -- (B);
+\draw[dashed] (A) -- (C);
+\draw[dashed] (B) -- (C);
+% D dot on A1C1
+\fill (D) circle (1.1pt);
+% labels
+\node[left=4pt] at (A1) {$A_{1}$};
+\node[right=4pt] at (B1) {$B_{1}$};
+\node[above=4pt] at (C1) {$C_{1}$};
+\node[above left=4pt] at (D) {$D$};
+\node[left=4pt,xshift=-1pt,yshift=3pt] at (C) {$C$};
+\end{tikzpicture}

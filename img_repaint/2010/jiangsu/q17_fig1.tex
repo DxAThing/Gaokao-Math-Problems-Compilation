@@ -1,0 +1,28 @@
+% 2010 江苏 第17题 测高示意图；线段/竖直杆/视线 + 角度与尺寸（数值坐标，单位 cm）
+\usetikzlibrary{calc,arrows.meta,angles,quotes}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+% D,B,A 共线且 B 在 D 与 A 之间；BC 为标杆（B 处竖直），AE 为塔（A 处竖直）；D,C,E 共线
+\coordinate (D) at (-1.5044,0);
+\coordinate (B) at (0,0);
+\coordinate (A) at (4.5,0);
+\coordinate (C) at (0,0.8192);
+\coordinate (E) at (4.5,3.2691);
+\draw (D)--(A);
+\draw (B)--(C);
+\draw (A)--(E);
+\draw[dashed] (D)--(E);
+\draw[dashed] (B)--(E);
+\pic[draw,angle radius=6mm]{angle=A--D--E};
+\pic[draw,"$\alpha$",angle eccentricity=1.4,angle radius=6mm]{angle=A--B--E};
+\node at (-0.40,0.31) {$\beta$};
+% 尺寸 d：B 到 A
+\draw[dimension extension] (0,-0.08)--(0,-0.78);
+\draw[dimension extension] (4.5,-0.08)--(4.5,-0.78);
+\draw[dimension line] (0,-0.5)-- node[dimension label] {$d$} (4.5,-0.5);
+% 点名
+\node[below left]  at (D) {$D$};
+\node[below left]  at (B) {$B$};
+\node[below right] at (A) {$A$};
+\node[above left]  at (C) {$C$};
+\node[above right] at (E) {$E$};
+\end{tikzpicture}

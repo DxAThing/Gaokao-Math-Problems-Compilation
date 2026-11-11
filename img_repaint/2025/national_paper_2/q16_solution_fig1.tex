@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-2.9,0) -- (2.9,0);
+\node[right=2pt] at (2.9,0) {$x$};
+\draw[->] (0,-2.6) -- (0,2.2);
+\node[above=2pt] at (0,2.2) {$y$};
+% ellipse x^2/4+y^2/2=1
+\draw plot[domain=0:360,samples=120,smooth] ({2*cos(\x)},{sqrt(2)*sin(\x)});
+% points: O, A(0.517,-1.366), B(1.931,0.366), P0(0,-2) on line x=t(y+2)
+\coordinate (O) at (0,0);
+\coordinate (A) at (0.5176380902,-1.366025404);
+\coordinate (B) at (1.931851653,0.3660254038);
+\coordinate (P0) at (0,-2);
+% line l through B-A-P0 with short extension below P0
+\draw (B) -- (A) -- (P0) -- (-0.2041241452319315,-2.25);
+% triangle OAB
+\draw (O) -- (A);
+\draw (O) -- (B);
+\fill (O) circle (1.2pt);
+\fill (A) circle (1.2pt);
+\fill (B) circle (1.2pt);
+% labels with clearance
+\node[below left=2pt] at (O) {$O$};
+\node[below right=2pt] at (A) {$A$};
+\node[right=2pt] at (B) {$B$};
+\end{tikzpicture}

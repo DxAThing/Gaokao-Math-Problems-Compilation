@@ -1,0 +1,16 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+% cold rolling mill schematic with mid ellipsis; plain bars
+\foreach \cx in {0,1.2,2.4} {
+  \draw (\cx,0.60) circle[radius=0.45];
+  \draw (\cx,-0.60) circle[radius=0.45];
+}
+\draw[fill=white] (-1.0,-0.15) rectangle (3.6,0.15);
+\foreach \cx in {6.2,7.4} {
+  \draw (\cx,0.60) circle[radius=0.45];
+  \draw (\cx,-0.60) circle[radius=0.45];
+}
+\draw[fill=white] (5.4,-0.15) rectangle (8.4,0.15);
+\node[anchor=center,inner sep=0pt] at (4.5,0) {$\cdots\cdots$};
+\draw[-{Stealth}] (-1.9,0) -- (-1.15,0);
+\draw[-{Stealth}] (8.55,0) -- (9.35,0);
+\end{tikzpicture}

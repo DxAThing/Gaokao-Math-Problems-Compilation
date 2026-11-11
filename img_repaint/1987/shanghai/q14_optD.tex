@@ -1,0 +1,11 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=0.55cm,y=0.55cm,line width=.6pt,>=Stealth,font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (L) at (-2.4,1.7926);
+\coordinate (R) at (2.4,1.7926);
+\draw[->] (-3.0,0)--(3.1,0) node[right=4pt,inner sep=0pt] {$x$};
+\draw[->] (0,-0.8)--(0,2.4) node[above=4pt,inner sep=0pt] {$y$};
+\draw[domain=0:2.4,samples=81] plot (\x,{pow(\x,2/3)});
+\draw[domain=-2.4:0,samples=81] plot (\x,{pow(-\x,2/3)});
+\node[below right=4pt,inner sep=0pt] at (O) {$O$};
+\end{tikzpicture}

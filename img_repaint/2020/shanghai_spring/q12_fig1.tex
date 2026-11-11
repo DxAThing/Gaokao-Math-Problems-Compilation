@@ -1,0 +1,11 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-.7,0)--(3.7,0) node[right=2pt] {$x$};
+\draw[->] (0,-.6)--(0,4.1) node[above=2pt] {$y$};
+\node[below left=2pt,xshift=3pt,yshift=-9pt] at (0,0) {$O$};
+\draw[dashed] (-.5,-.5)--(3.3,3.3);
+\draw[dashed,domain=0:1.65,samples=100] plot (\x,{\x^2+1}) node[above=2pt] {$f^{-1}(x)$};
+\draw[dashed,domain=0:1.6,samples=100] plot ({\x^2+1},\x) node[right=2pt] {$f(x)$};
+\draw[domain=0:1.7,samples=100] plot (\x,{(\x)^2+.25});
+\draw[domain=0:1.8,samples=100] plot ({(\x)^2+.25},\x);
+
+\end{tikzpicture}

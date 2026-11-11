@@ -1,0 +1,20 @@
+\begin{tikzpicture}[x=.9cm,y=.9cm,line width=.6pt,>=Stealth]
+\draw[->] (-4,0)--(3.6,0) node[right=3pt] {$x$};
+\draw[->] (0,-5.5)--(0,2.5) node[above left=3pt] {$y$};
+\node[above left=3pt] at (0,0) {$O$};
+\draw (0,-2) circle (3);\draw (0,-2) circle (1);
+\coordinate (E) at (0,-2);
+\coordinate (A) at (-0.8660254037844386,-1.5);
+\coordinate (D) at (-2.598076211353316,-0.5);
+\coordinate (B) at (0.5481881585886565,0.9494897427831783);
+\coordinate (C) at (-2.2802389661575337,-3.949489742783178);
+\draw[domain=-3.05:1.4,samples=2] plot (\x,{sqrt(3)*\x});
+\draw[domain=-4: -1,samples=2] plot (\x,{sqrt(3)*\x+4});
+\draw (D)--(A);
+\fill (E) circle (1.5pt);
+\node[right=3pt] at (E) {$E$};
+\node[below right=2pt] at (A) {$A$};
+\node[above right=3pt,xshift=3pt,yshift=-3pt] at (B) {$B$};
+\node[below right=3pt,xshift=-3pt,yshift=-7pt] at (C) {$C$};
+\node[left=3pt] at (D) {$D$};
+\end{tikzpicture}

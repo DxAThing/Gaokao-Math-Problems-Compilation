@@ -1,0 +1,34 @@
+% house: bottom square 2x2, top triangle h2; plan square 2x2 with X; u=1.0
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% plan at (7.3,0): single horizontal row front/side/plan
+\begin{scope}[shift={(7.3,0)}]
+\draw (0,0) rectangle (2,2);
+\draw (0,0) -- (2,2);
+\draw (0,2) -- (2,0);
+\draw (0,-0.12) -- (0,-0.45);
+\draw (2,-0.12) -- (2,-0.45);
+\draw[<->,>=Stealth] (0,-0.32) -- (2,-0.32) node[midway,fill=white,inner sep=1pt] {2};
+\draw (2.12,0) -- (2.45,0);
+\draw (2.12,2) -- (2.45,2);
+\draw[<->,>=Stealth] (2.32,0) -- (2.32,2) node[midway,fill=white,inner sep=1pt] {2};
+\node[below] at (1,-0.6) {俯视图};
+\end{scope}
+% front at (0,0)
+\begin{scope}[shift={(0,0)}]
+\draw (0,0) rectangle (2,2);
+\draw (0,2) -- (1,4) -- (2,2);
+\draw (2.12,0) -- (2.45,0);
+\draw (2.12,2) -- (2.45,2);
+\draw[<->,>=Stealth] (2.32,0) -- (2.32,2) node[midway,fill=white,inner sep=1pt] {2};
+\draw (2.12,2) -- (2.45,2);
+\draw (2.12,4) -- (2.45,4);
+\draw[<->,>=Stealth] (2.32,2) -- (2.32,4) node[midway,fill=white,inner sep=1pt] {2};
+\node[below] at (1,-0.6) {正视图};
+\end{scope}
+% side at (3.9,0): same, no dims
+\begin{scope}[shift={(3.9,0)}]
+\draw (0,0) rectangle (2,2);
+\draw (0,2) -- (1,4) -- (2,2);
+\node[below] at (1,-0.6) {侧视图};
+\end{scope}
+\end{tikzpicture}

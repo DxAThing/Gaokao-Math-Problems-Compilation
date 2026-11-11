@@ -1,0 +1,33 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,
+  geometry edge/.style={solid,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (B) at (0,0);
+\coordinate (C) at (3,0);
+\coordinate (D) at (4,1.2);
+\coordinate (A) at (1,1.2);
+\coordinate (B1) at (0,4);
+\coordinate (C1) at (3,4);
+\coordinate (D1) at (4,5.2);
+\coordinate (A1) at (1,5.2);
+\coordinate (M) at (4,3.0);
+% front face
+\draw[geometry edge] (B)--(C)--(C1)--(B1)--cycle;
+% top face
+\draw[geometry edge] (B1)--(C1)--(D1)--(A1)--cycle;
+% right face
+\draw[geometry edge] (C)--(D)--(D1)--(C1);
+% hidden edges
+\draw[geometry edge,dashed] (A)--(B);
+\draw[geometry edge,dashed] (A)--(D);
+\draw[geometry edge,dashed] (A)--(A1);
+\fill (M) circle (1.6pt);
+\node[geometry label,above] at ([yshift=4pt]A1) {$A_{1}$};
+\node[geometry label,above] at ([yshift=4pt]D1) {$D_{1}$};
+\node[geometry label,left] at ([xshift=-4pt,yshift=2pt]B1) {$B_{1}$};
+\node[geometry label,right] at ([xshift=4pt,yshift=-2pt]C1) {$C_{1}$};
+\node[geometry label,left] at ([xshift=-4pt]A) {$A$};
+\node[geometry label,below left] at ([xshift=-3pt,yshift=-3pt]B) {$B$};
+\node[geometry label,below right] at ([xshift=3pt,yshift=-3pt]C) {$C$};
+\node[geometry label,right] at ([xshift=3pt]D) {$D$};
+\node[geometry label,right] at ([xshift=5pt]M) {$M$};
+\end{tikzpicture}

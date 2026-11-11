@@ -1,0 +1,17 @@
+% 2013_jiangxi_science_q10_opt_d  (2013 Jiangxi science Q10 option D)
+% standalone single-function graph option; source: inputs/original_01.pdf p.1
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.5cm,y=1.5cm,line width=.6pt,>=Stealth,font=\normalsize]
+  \draw[->] (-0.75,0) -- (3.79159265,0) node[anchor=west,inner sep=0pt,xshift=2pt] {$x$};
+  \draw[->] (0,-0.75) -- (0,4.29) node[anchor=south,inner sep=0pt,yshift=2pt] {$y$};
+  \draw (-0.5,1.15470054) -- (-0.2,1.15470054);
+  \draw (-0.5,3.46410162) -- (-0.2,3.46410162);
+  \draw[domain=0:3.14159265,samples=160] plot (\x,{2*sqrt(3)/3+4/sqrt(3)*(1-cos(deg(\x/2)))});
+  \draw[dashed] (0,3.46410162) -- (3.14159265,3.46410162) -- (3.14159265,0);
+  \draw[fill=white] (0,1.15470054) circle (1.6pt);
+  \draw[fill=white] (3.14159265,3.46410162) circle (1.6pt);
+  \node[anchor=north,inner sep=0pt,yshift=-1pt] at (3.14159265,0) {$\pi$};
+  \node[anchor=east,inner sep=0pt,xshift=-2pt] at (-0.52,3.46410162) {$2\sqrt3$};
+  \node[anchor=east,inner sep=0pt,xshift=-2pt] at (-0.52,1.15470054) {$\frac{2\sqrt3}{3}$};
+  \node[anchor=north east,inner sep=0pt,xshift=-1pt,yshift=-1pt] at (0,0) {$O$};
+\end{tikzpicture}

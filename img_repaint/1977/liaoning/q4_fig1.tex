@@ -1,0 +1,27 @@
+\begin{tikzpicture}[line width=.6pt, font=\normalsize, >=Stealth]
+% Ground plane M
+\coordinate (M1) at (-3.6,-2.0);
+\coordinate (M2) at (2.6,-2.0);
+\coordinate (M3) at (3.4,0.6);
+\coordinate (M4) at (-2.8,0.6);
+\draw (M1)--(M2)--(M3)--(1.238709677,0.6);
+\draw[dashed] (1.238709677,0.6)--(0.753153153,0.6);
+\draw (0.753153153,0.6)--(M4)--(M1);
+\node[above right, inner sep=1pt] at (-3.4,-2.0) {$M$};
+% Pole PC (vertical-ish), C on plane, P top
+\coordinate (C) at (0.9,-0.9);
+\coordinate (P) at (1.6,2.2);
+\draw (C) -- (P);
+\node[above] at (P) [yshift=2pt] {$P$};
+% Point A on pole
+\coordinate (A) at (1.366666667,1.166666667);
+\node[right] at (A) [xshift=2pt] {$A$};
+% Point B on plane
+\coordinate (B) at (-1.3,-1.3);
+\node[below left] at (B) [xshift=-2pt,yshift=-1pt] {$B$};
+% Triangle ABC: AC along pole, BC on plane, AB guy wire
+\draw (A) -- (C);
+\draw (C) -- (B);
+\draw (A) -- (B);
+\node[below right] at (C) [xshift=2pt,yshift=-1pt] {$C$};
+\end{tikzpicture}

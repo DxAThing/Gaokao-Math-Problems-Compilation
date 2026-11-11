@@ -1,0 +1,29 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Tetrahedron D-ABC, liberal version with G on AD; solid outer + EF, GC; rest dashed.
+\coordinate (A) at (0.6,5.2);
+\coordinate (C) at (6.4,2.0);
+\coordinate (D) at (0,0);
+\coordinate (B) at (2.3,2.0);
+\coordinate (E) at (3.5,3.6);
+\coordinate (F) at (3.2,1.0);
+\coordinate (G) at (0.4,3.0);
+% solid edges
+\draw (A)--(G)--(D);
+\draw (A)--(E)--(C);
+\draw (D)--(F)--(C);
+\draw (E)--(F);
+\draw (G)--(C);
+% hidden edges dashed
+\draw[dashed] (A)--(B);
+\draw[dashed] (D)--(B);
+\draw[dashed] (G)--(B);
+\draw[dashed] (B)--(C);
+% labels
+\node[above] at (A) {$A$};
+\node[right] at (C) {$C$};
+\node[below left] at (D) {$D$};
+\node[below] at (B) {$B$};
+\node[above right] at (E) {$E$};
+\node[below] at (F) {$F$};
+\node[left] at (G) {$G$};
+\end{tikzpicture}

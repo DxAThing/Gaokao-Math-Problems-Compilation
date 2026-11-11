@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=0.32cm,y=0.32cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-9.5,0) -- (11,0) node[right,xshift=3pt] {$x$};
+\draw[->] (0,-6.8) -- (0,7) node[above,yshift=3pt] {$y$};
+% horizontal y=-5
+\draw[solid] (-8.5,-5) -- (10,-5);
+% parabola y=x^2/8-4 from formula
+\draw[solid,domain=-8.8:9.8,samples=120] plot (\x,{\x*\x/8-4});
+% line AB y=x/2 extended
+\draw[solid] (-5.5,-2.75) -- (9.5,4.75);
+% perpendicular bisector y=-2x+5
+\draw[solid] (-0.8,6.6) -- (6.2,-7.4);
+% right-angle mark at M(2,1): AB direction (2,1)/sqrt5, perp direction (1,-2)/sqrt5
+\draw[solid] (2.626099,1.31305)--(2.939149,.686951)--(2.31305,.373901);
+\fill (0,0) circle (1.2pt);
+\fill (-4,-2) circle (1.2pt);
+\fill (8,4) circle (1.2pt);
+\fill (5,-5) circle (1.2pt);
+\node[above left,xshift=-5pt,yshift=4pt] at (0,0) {$O$};
+\node[below left,xshift=-6pt,yshift=-6pt] at (-4,-2) {$A$};
+\node[above,xshift=-4pt,yshift=7pt] at (8,4) {$B$};
+\node[below left,xshift=-5pt,yshift=-6pt] at (5,-5) {$Q$};
+\node[below left=2pt] at (0,-5) {$-5$};
+\end{tikzpicture}

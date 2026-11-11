@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-1.2,0) -- (6,0) node[below right] {$x$};
+\draw[->] (0,-3.8) -- (0,3.5) node[above left] {$y$};
+\node[below left,xshift=2pt,yshift=-8pt] at (0,0) {$O$};
+% parabolas y^2=2px, drawn as x=y^2/(2p)
+\draw[solid,domain=-2.8:2.8,samples=80,variable=\t] plot ({\t*\t/(2*0.6)},{\t});
+\draw[solid,domain=-3.7:3.7,samples=90,variable=\t] plot ({\t*\t/(2*1.1)},{\t});
+\node[right=2pt] at ({2.8*2.8/1.2},2.8) {$E_{1}$};
+\node[right=2pt] at ({3.7*3.7/2.2},3.7) {$E_{2}$};
+% lines l1 (upper, k=1) and l2 (lower, k=-0.8) through origin
+\draw[thin] (-0.7,-0.7) -- (3.1,3.1);
+\draw[thin] (-0.7,0.56) -- (4.4,-3.52);
+\node[left] at (-0.7,0.9) {$l_{2}$};
+\node[left] at (-0.7,-0.9) {$l_{1}$};
+% points A1,A2,B1,B2 on parabolas at line intersections
+\coordinate (A1) at (1.2,1.2);
+\coordinate (A2) at (2.2,2.2);
+\coordinate (B1) at (1.875,-1.5);
+\coordinate (B2) at (3.4375,-2.75);
+% segments A1B1 and A2B2
+\draw[thin] (A1) -- (B1);
+\draw[thin] (A2) -- (B2);
+\node[above left] at (A2) {$A_{2}$};
+\node[right,xshift=2pt,yshift=-6pt] at (A1) {$A_{1}$};
+\node[above right] at (B1) {$B_{1}$};
+\node[below] at (B2) {$B_{2}$};
+\end{tikzpicture}

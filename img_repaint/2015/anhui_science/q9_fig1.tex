@@ -1,0 +1,20 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.5cm,y=1.5cm,line width=.6pt,>=Stealth,font=\normalsize]
+\coordinate (O9) at (0,0);
+\coordinate (N9) at (0.75,0);
+\coordinate (A9) at (1,0);
+\coordinate (Q9) at (0.5,1);
+% Axes
+\draw[->] (-1.55,0)--(3.75,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-2.6)--(0,2.15) node[above left,inner sep=0pt,xshift=-1pt,yshift=2pt] {$y$};
+% Vertical asymptote x=-c with c<0
+\draw[dash pattern=on 3pt off 2pt] (1,2.05)--(1,-2.52);
+% Function f(x)=(ax+b)/(x+c)^2, representative a=-1,b=3/4,c=-1
+\draw[domain=-1.28:0.82,samples=220,smooth] plot (\x,{(-1*\x+0.75)/((\x-1)^2)});
+\draw[domain=1.60:3.45,samples=220,smooth] plot (\x,{(-1*\x+0.75)/((\x-1)^2)});
+% Labels O, N, P, M are complete nodes; no dots in the source figure
+\node[inner sep=0pt] at (-0.22,-0.30) {$O$};
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (N9) {$N$};
+\node[inner sep=0pt] at (1.22,-0.30) {$P$};
+\node[anchor=south east,inner sep=0pt,xshift=-2pt,yshift=2pt] at (0,.75) {$M$};
+\end{tikzpicture}

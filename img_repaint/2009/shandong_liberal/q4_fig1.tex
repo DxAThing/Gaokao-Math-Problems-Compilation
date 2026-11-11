@@ -1,0 +1,39 @@
+% point-fix dims only: shared dimension line/label styles, offsets >=4.5mm; edges/captions unchanged.
+% Front: bottom 2, left height 2, left slant 2 (parallel outside roof edge).
+% Side: bottom 2, left slant 2; no vertical dim in original. Plan: circle+diamond, no dims.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% 正(主)视图
+\draw (0,3) rectangle (2,5);
+\draw (0,5) -- (2,5) -- (1,6.732) -- cycle;
+\draw (1,5) -- (1,6.732);
+% bottom 2 outside below
+\draw[dimension extension] (0,2.9) -- (0,2.3);
+\draw[dimension extension] (2,2.9) -- (2,2.3);
+\draw[dimension line] (0,2.4) -- node[dimension label] {2} (2,2.4);
+% left height 2 outside left
+\draw[dimension extension] (-0.1,3) -- (-0.7,3);
+\draw[dimension extension] (-0.1,5) -- (-0.7,5);
+\draw[dimension line] (-0.6,3) -- node[dimension label vertical] {2} (-0.6,5);
+% left slant 2 parallel outside roof edge (0,5)-(1,6.732), normal offset 5.5mm
+\draw[dimension extension] (0,5) -- (-0.58,5.32);
+\draw[dimension extension] (1,6.732) -- (0.42,7.05);
+\draw[dimension line] (-0.48,5.27) -- node[dimension label] {2} (0.52,7.0);
+\node at (1,1.5) {正视图};
+% 侧(左)视图
+\draw (4,3) rectangle (6,5);
+\draw (4,5) -- (6,5) -- (5,6.732) -- cycle;
+\draw (5,5) -- (5,6.732);
+\draw[dimension extension] (4,2.9) -- (4,2.3);
+\draw[dimension extension] (6,2.9) -- (6,2.3);
+\draw[dimension line] (4,2.4) -- node[dimension label] {2} (6,2.4);
+\draw[dimension extension] (4,5) -- (3.42,5.32);
+\draw[dimension extension] (5,6.732) -- (4.42,7.05);
+\draw[dimension line] (3.52,5.27) -- node[dimension label] {2} (4.52,7.0);
+\node at (5,1.5) {侧视图（左）};
+% 俯视图 (circle r1 + diamond + cross), no dims
+\draw (9,4) circle (1);
+\draw (9,5) -- (10,4) -- (9,3) -- (8,4) -- cycle;
+\draw (9,3) -- (9,5);
+\draw (8,4) -- (10,4);
+\node at (9,1.5) {俯视图};
+\end{tikzpicture}

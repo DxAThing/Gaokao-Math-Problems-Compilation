@@ -1,0 +1,21 @@
+% 2001上海理科Q23数列发生器流程示意.对象:顶端输入线/ f框/打印框/x1∈D判断框/结束文本;
+% 关系:顶端竖线下行经f,打印,x1∈D;YES由判断框东出口右行上行后左行汇入顶端竖线;
+% NO由判断框南出口下行至结束.原图输入/输出为线左侧文字,YES在横线下方,NO在线左侧;
+% 按本批规则YES/NO及是/否一律置线上方或右侧,与原图方位差异已在报告changes记录.
+\begin{tikzpicture}[line width=0.6pt, >= {Stealth[length=2.2mm,width=1.5mm]},
+  box/.style={draw, rectangle, minimum width=2.4cm, minimum height=0.8cm, align=center}]
+  \coordinate (top) at (0,0);
+  \coordinate (J) at (0,-1.4);
+  \node[box] (f) at (0,-2.6) {$f$};
+  \node[box] (prt) at (0,-4.4) {打印};
+  \node[box, minimum width=2.8cm] (dec) at (0,-6.2) {$x_{1}\in D$};
+  \node (endtxt) at (0,-8.2) {结束};
+  % 主干:顶端输入线经汇合点J下行入f,整条为主干单箭头
+  \draw[->] (top) -- (J) node[midway,left=1.2mm]{输入} -- (f.north);
+  \draw[->] (f.south) -- (prt.north) node[midway,left=1.2mm]{输出};
+  \draw[->] (prt.south) -- (dec.north);
+  % NO分支:判断框南出口下行至结束文本,NO在线右侧
+  \draw[->] (dec.south) -- (endtxt.north) node[pos=0.25,right=1.2mm]{NO};
+  % YES回路:判断框东出口右行15mm,上行至J高度,左行以单箭头汇入主干J点
+  \draw[->] (dec.east) -- ++(1.5,0) node[midway,above=1.2mm]{YES} |- (J);
+\end{tikzpicture}

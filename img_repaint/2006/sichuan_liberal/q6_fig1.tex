@@ -1,0 +1,13 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.8cm,y=1.3cm,line width=.6pt,>=stealth,font=\normalsize]
+\draw[->] (-2.6,0)--(1.9,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.7)--(0,1.7) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\node[below left,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\draw[densely dashed,line width=.45pt] ({pi/12},0)--({pi/12},1);
+\draw[densely dashed,line width=.45pt] ({-5*pi/12},-1)--(0,-1);
+\draw[domain=-2.0943951024:1.0471975512,samples=200] plot (\x,{cos(deg(2*\x - pi/6))});
+\node[above,inner sep=0pt,yshift=2pt,xshift=-6pt] at ({-pi/6},0) {$-\frac{\pi}{6}$};
+\node[below,inner sep=0pt,yshift=-2pt] at ({pi/12},0) {$\frac{\pi}{12}$};
+\node[left,inner sep=0pt,xshift=-2pt] at (0,1) {$1$};
+\node[right,inner sep=0pt,xshift=2pt] at (0,-1) {$-1$};
+\end{tikzpicture}

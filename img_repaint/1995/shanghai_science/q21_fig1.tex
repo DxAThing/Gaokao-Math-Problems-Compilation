@@ -1,0 +1,21 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  geometry edge/.style={solid,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (O) at (0,0);
+\coordinate (B) at (-2.6,0);
+\coordinate (C) at (2.6,0);
+\coordinate (A) at (0.5,-1.4);
+\coordinate (D) at (-1.4,1.6);
+\draw[->,geometry edge] (-3.3,0)--(3.6,0);
+\draw[->,geometry edge] (0,0)--(0,2.8);
+\draw[->,geometry edge] (0,0)--(-1.8,-2.4);
+\draw[geometry edge] (B)--(D)--(C)--(A)--cycle;
+\node[geometry label,above left,xshift=-3pt,yshift=2pt] at (B) {$B$};
+\node[geometry label,above left,xshift=-3pt,yshift=3pt] at (D) {$D$};
+\node[geometry label,above right,xshift=3pt,yshift=2pt] at (C) {$C$};
+\node[geometry label,below,yshift=-3pt] at (A) {$A$};
+\node[geometry label,below right,xshift=3pt,yshift=-3pt] at (O) {$O$};
+\node[geometry label,right,xshift=4pt,yshift=-2pt] at (3.6,0) {$y$};
+\node[geometry label,above,yshift=4pt] at (0,2.8) {$z$};
+\node[geometry label,below left,xshift=-3pt,yshift=-3pt] at (-1.8,-2.4) {$x$};
+\end{tikzpicture}

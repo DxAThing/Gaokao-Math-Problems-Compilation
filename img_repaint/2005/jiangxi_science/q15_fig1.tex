@@ -1,0 +1,34 @@
+% 右三棱柱 ABC-A1B1C1 示意：底面 ABC（角B直角），顶面 A1B1C1；E 为 AA1 中点，F 为 C1B1 中点
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt, font=\normalsize, >=Stealth]
+  \coordinate (A1) at (0,5);
+  \coordinate (C1) at (4.6,5);
+  \coordinate (B1) at (1.6,4.2);
+  \coordinate (A) at (0,0.6);
+  \coordinate (B) at (1.6,-0.2);
+  \coordinate (C) at (4.6,0.6);
+  \coordinate (E) at (0,2.8);
+  \coordinate (F) at (3.1,4.6);
+  % 可见棱（实线）
+  \draw (A1) -- (C1);
+  \draw (A1) -- (A);
+  \draw (A1) -- (B1);
+  \draw (B1) -- (C1);
+  \draw (B1) -- (B);
+  \draw (C1) -- (C);
+  \draw (A) -- (B);
+  \draw (B) -- (C);
+  % 遮挡棱（虚线）
+  \draw[dashed] (A) -- (C);
+  % 中点标记
+  \fill (E) circle (1.6pt);
+  \fill (F) circle (1.6pt);
+  % 标签
+  \node[above left] at (A1) {$A_{1}$};
+  \node[above right] at (C1) {$C_{1}$};
+  \node[below left] at (B1) {$B_{1}$};
+  \node[below left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[right] at (C) {$C$};
+  \node[left] at (E) {$E$};
+  \node[below right] at (F) {$F$};
+\end{tikzpicture}

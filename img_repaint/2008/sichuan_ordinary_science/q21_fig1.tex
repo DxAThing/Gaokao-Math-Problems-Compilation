@@ -1,0 +1,22 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,scale=1.35,line width=.6pt,>=Stealth]
+\coordinate (O) at (0,0);
+\coordinate (F1) at (-1.4142136,0);
+\coordinate (F2) at (1.4142136,0);
+\coordinate (M) at (2.8284271,2.5);
+\coordinate (N) at (2.8284271,-2.4);
+\coordinate (Ltop) at (2.8284271,2.9);
+\coordinate (Lbot) at (2.8284271,-2.8);
+\draw (O) ellipse [x radius=2cm, y radius=1.4142136cm];
+\draw[->] (-2.3,0)--(3.35,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-3.0)--(0,3.1) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw (Lbot)--(Ltop);
+\draw (F1)--(M);
+\draw (F2)--(N);
+\node[below left,inner sep=2pt] at (O) {$O$};
+\node[below left,inner sep=2pt] at (F1) {$F_1$};
+\node[below left,inner sep=2pt] at (F2) {$F_2$};
+\node[above right,inner sep=2pt] at (M) {$M$};
+\node[below right,inner sep=2pt] at (N) {$N$};
+\node[right,inner sep=2pt] at (2.88,0.55) {$l$};
+\end{tikzpicture}

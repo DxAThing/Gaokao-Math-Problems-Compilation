@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=0.6pt]
+  \coordinate (S) at (2,5.5);
+  \coordinate (B) at (2,2);
+  \coordinate (A) at (5.5,2.2);
+  \coordinate (D) at (3.7,1.0);
+  \coordinate (C) at (0.2,0.8);
+  % base face
+  \draw[draw=black,dashed] (B) -- (A);
+  \draw[draw=black] (A) -- (D);
+  \draw[draw=black] (D) -- (C);
+  \draw[draw=black,dashed] (C) -- (B);
+  % apex edges
+  \draw[draw=black,dashed] (S) -- (B);
+  \draw[draw=black] (S) -- (A);
+  \draw[draw=black] (S) -- (D);
+  \draw[draw=black] (S) -- (C);
+  % right-angle mark at B (SB vertical, BA near-horizontal)
+  
+  % angle alpha at S between SA and SD
+  \draw[draw=black] (S) ++(290.6954507341:.7) arc (290.6954507341:316.6846843179:.7);
+  \node[font=\normalsize] at (2.5824352060,4.6263471909) {$\alpha$};
+  % labels with clearance
+  \node[font=\normalsize,above=4pt] at (S) {$S$};
+  \node[font=\normalsize,below right=4pt] at (B) {$B$};
+  \node[font=\normalsize,right=4pt] at (A) {$A$};
+  \node[font=\normalsize,below right=3pt] at (D) {$D$};
+  \node[font=\normalsize,below left=3pt] at (C) {$C$};
+\end{tikzpicture}

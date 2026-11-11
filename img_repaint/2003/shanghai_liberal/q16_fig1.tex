@@ -1,0 +1,23 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-4.6,0)--(3.8,0);
+\node[inner sep=0pt,anchor=west] at (3.86,-0.21) {$x$};
+\draw[->] (0,-3.6)--(0,4.0);
+\node[anchor=south east,inner sep=0pt,xshift=-2pt,yshift=2pt] at (0.0,4.0) {$y$};
+\draw[dashed] (-3,0)--(-3,3);
+\draw[dashed] (3,0)--(3,-3);
+\draw[dashed] (0,2)--(2,2);
+\draw[dashed] (-2,-2)--(0,-2);
+\draw[domain=-3:3,samples=241,smooth] plot (\x,{(124*\x+63*\x*\x*\x-11*\x*\x*\x*\x*\x)/200});
+\node[inner sep=0pt,anchor=east] at (-3.15,3.1) {$y=f(x)$};
+\node[inner sep=0pt] at (-0.65,-0.8) {$O$};
+\node[inner sep=0pt,anchor=north] at (-3,-0.35) {$-c$};
+\node[inner sep=0pt,anchor=south] at (3,0.35) {$c$};
+\node[inner sep=0pt,anchor=south] at (-2,0.35) {$-2$};
+
+
+
+\node[below=3pt,inner sep=1pt] at (2,0) {$2$};
+\node[left=3pt,inner sep=1pt] at (0,2) {$2$};
+\node[right=3pt,inner sep=1pt] at (0,-2) {$-2$};
+\end{tikzpicture}

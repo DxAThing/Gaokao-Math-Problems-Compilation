@@ -1,0 +1,39 @@
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize]
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (C) at (5.2,1.4);
+\coordinate (D) at (1.2,1.4);
+\coordinate (A1) at (1.5,2.2);
+\coordinate (B1) at (5.5,2.2);
+\coordinate (C1) at (6.7,3.6);
+\coordinate (D1) at (2.7,3.6);
+\coordinate (O) at (1.5,0.55);
+% bottom face
+\draw (A) -- (B);
+\draw (B) -- (C);
+\draw[densely dashed] (C) -- (D);
+\draw[densely dashed] (D) -- (A);
+% top face
+\draw (A1) -- (B1);
+\draw (B1) -- (C1);
+\draw (C1) -- (D1);
+\draw (D1) -- (A1);
+% lateral edges
+\draw (A) -- (A1);
+\draw (B) -- (B1);
+\draw (C) -- (C1);
+\draw[densely dashed] (D) -- (D1);
+% interior height
+\draw[densely dashed] (A1) -- (O);
+\fill (O) circle (1.2pt);
+% labels with white background and clearance
+\node[inner sep=1pt,anchor=north east] at ([shift={(-2pt,-2pt)}]A) {$A$};
+\node[inner sep=1pt,anchor=north west] at ([shift={(2pt,-2pt)}]B) {$B$};
+\node[inner sep=2pt,anchor=west] at ([shift={(6pt,0pt)}]C) {$C$};
+\node[inner sep=2pt,anchor=east,xshift=-2.00bp,yshift=0.00bp] at ([shift={(-6pt,2pt)}]D) {$D$};
+\node[inner sep=2pt,anchor=east] at ([shift={(-6pt,3pt)}]A1) {$A_{1}$};
+\node[inner sep=2pt,anchor=west,xshift=2.00bp,yshift=-4.00bp] at ([shift={(6pt,2pt)}]B1) {$B_{1}$};
+\node[inner sep=1pt,anchor=west] at ([shift={(3pt,2pt)}]C1) {$C_{1}$};
+\node[inner sep=1pt,anchor=south east] at ([shift={(-2pt,2pt)}]D1) {$D_{1}$};
+\node[inner sep=1pt,anchor=west] at ([shift={(4pt,-1pt)}]O) {$O$};
+\end{tikzpicture}

@@ -1,0 +1,39 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+  solidedge/.style={draw=black,line width=.6pt,solid},
+  hidedge/.style={draw=black,line width=.6pt,dashed,dash pattern=on 3pt off 2.5pt},
+  ptlabel/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (A) at (0,1);
+\coordinate (B) at (4,0);
+\coordinate (C) at (6,1);
+\coordinate (A1) at (0,5);
+\coordinate (E) at (1.5000000000,5.0000000000);
+\coordinate (C1) at (6.0000000000,5.0000000000);
+\coordinate (D) at (2.0000000000,4.5000000000);
+\coordinate (B1) at (4.0000000000,4.0000000000);
+% bottom base
+\draw[hidedge] (A)--(C);
+\draw[solidedge] (A)--(B)--(C);
+% top base A1B1C1
+\draw[solidedge] (A1)--(C1);
+\draw[solidedge] (A1)--(B1);
+\draw[solidedge] (B1)--(C1);
+% lateral edges
+\draw[solidedge] (A)--(A1);
+\draw[solidedge] (B)--(B1);
+\draw[solidedge] (C)--(C1);
+% interior segments seen in original
+\draw[solidedge] (A)--(D);
+\draw[hidedge] (A)--(E);
+\draw[hidedge] (A)--(C1);
+\draw[solidedge] (E)--(D);
+\draw[solidedge] (B)--(C1);
+% labels
+\node[ptlabel,below left] at ($(A)+(-0.20,-0.12)$) {$A$};
+\node[ptlabel,below] at ($(B)+(0,-0.20)$) {$B$};
+\node[ptlabel,right] at ($(C)+(0.18,0)$) {$C$};
+\node[ptlabel,left] at ($(A1)+(-0.22,0.06)$) {$A_{1}$};
+\node[ptlabel,above] at ($(E)+(0,0.16)$) {$E$};
+\node[ptlabel,above right] at ($(C1)+(0.16,0.12)$) {$C_{1}$};
+\node[ptlabel,left,xshift=-14pt,yshift=0pt] at ($(D)+(-0.22,-0.02)$) {$D$};
+\node[ptlabel,right,xshift=5pt,yshift=-7pt] at ($(B1)+(0.20,-0.04)$) {$B_{1}$};
+\end{tikzpicture}

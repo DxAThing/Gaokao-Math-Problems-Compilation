@@ -1,0 +1,19 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  geometry edge/.style={solid,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=2pt}]
+\draw[->] (-4.5,0)--(4.5,0) node[right,xshift=3pt] {$x$};
+\draw[->] (0,-2.2)--(0,2.8) node[above,yshift=3pt] {$y$};
+\node[geometry label,below left,xshift=-4pt,yshift=-2pt] at (0,0) {$O$};
+\node[geometry label,above right,xshift=3pt,yshift=4pt] at (1.6,2.2) {$y=f'(x)$};
+% schematic smooth derivative curve through observed zeros
+\draw[geometry edge] (-3.8,2) .. controls (-3.3,.8) and (-3,-1.2) .. (-2.35,-1.2) .. controls (-1.75,-1.2) and (-1.35,.8) .. (-.85,.8) .. controls (-.45,.8) and (-.45,0) .. (0,0) .. controls (.45,0) and (1.2,2.1) .. (1.95,2.1) .. controls (2.65,2.1) and (3.5,-.45) .. (3.8,-1.4);
+% dashed endpoint guides at x=a and x=b
+\draw[geometry edge,dashed,thin] (-3.8,2.0)--(-3.8,0);
+\draw[geometry edge,dashed,thin] (3.8,-1.4)--(3.8,0);
+\draw[fill=white,draw=black] (-3.8,2.0) circle (2pt);
+\draw[fill=white,draw=black] (-3.8,0) circle (2pt);
+\draw[fill=white,draw=black] (3.8,0) circle (2pt);
+\draw[fill=white,draw=black] (3.8,-1.4) circle (2pt);
+\node[geometry label,below,yshift=-6pt] at (-3.8,0) {$a$};
+\node[geometry label,above,yshift=5pt] at (3.8,0) {$b$};
+\end{tikzpicture}

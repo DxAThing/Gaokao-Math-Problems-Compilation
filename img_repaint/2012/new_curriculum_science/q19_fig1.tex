@@ -1,0 +1,33 @@
+\begin{tikzpicture}[line width=.6pt,line join=round,line cap=round]
+\coordinate (A) at (0.5,0.3);
+\coordinate (C) at (2.0,1.6);
+\coordinate (B) at (6.8,1.6);
+\coordinate (A1) at (0.5,6.4);
+\coordinate (C1) at (2.0,7.6);
+\coordinate (B1) at (6.8,7.6);
+\coordinate (D) at (0.5,3.35);
+% prism edges
+\draw (A) -- (D);
+\draw (D) -- (A1);
+\draw[densely dashed] (C) -- (C1);
+\draw (B) -- (B1);
+\draw[densely dashed] (A) -- (C);
+\draw[densely dashed] (C) -- (B);
+\draw (A) -- (B);
+\draw (A1) -- (C1);
+\draw (C1) -- (B1);
+\draw (A1) -- (B1);
+% auxiliary / section edges
+\draw[densely dashed] (D) -- (C1);
+\draw[densely dashed] (D) -- (C);
+\draw (D) -- (B);
+\draw[densely dashed] (C1) -- (B);
+% labels
+\node[below left,font=\large] at (A) {$A$};
+\node[above right,font=\large] at (C) {$C$};
+\node[below right,font=\large] at (B) {$B$};
+\node[left,font=\large] at (A1) {$A_{1}$};
+\node[above,font=\large] at (C1) {$C_{1}$};
+\node[right,font=\large] at (B1) {$B_{1}$};
+\node[left,font=\large] at (D) {$D$};
+\end{tikzpicture}

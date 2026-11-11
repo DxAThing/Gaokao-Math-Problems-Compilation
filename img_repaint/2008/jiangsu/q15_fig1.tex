@@ -1,0 +1,25 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% unit circle, axes, rays OA OB; A angle ~81.87deg, B angle ~26.57deg
+\coordinate (O) at (0,0);
+\draw[->] (-3,0) -- (3.1,0);
+\draw[->] (0,-3) -- (0,3.1);
+\draw (O) circle[radius=2.5cm];
+% rays
+\draw (O) -- (0.3536,2.4749);
+\draw (O) -- (2.2361,1.1180);
+% x intercept tick
+\draw (2.5,0.06) -- (2.5,-0.06);
+% angle arcs: beta 0..26.57 r=0.8, alpha 26.57..81.87 r=0.55
+\draw (0.8,0) arc[start angle=0,end angle=26.57,radius=0.8cm];
+\draw (0.55,0) arc[start angle=0,end angle=81.87,radius=0.55cm];
+% arc separation: redraw beta slightly outside to distinguish
+% labels with clearance
+\node[below left,xshift=-2pt,yshift=-2pt] at (O) {$O$};
+\node[right,xshift=2pt] at (3.1,0) {$x$};
+\node[above,inner sep=2pt] at (0,3.1) {$y$};
+\node[below,xshift=0pt,yshift=-2pt,xshift=2.00bp,yshift=0.00bp] at (2.5,0) {$1$};
+\node[above right,inner sep=2pt] at (0.3536,2.4749) {$A$};
+\node[right,inner sep=2pt,xshift=0.00bp,yshift=2.00bp] at (2.2361,1.1180) {$B$};
+\node at (1.12,0.26) {$\beta$};
+\node at (0.56,0.77) {$\alpha$};
+\end{tikzpicture}

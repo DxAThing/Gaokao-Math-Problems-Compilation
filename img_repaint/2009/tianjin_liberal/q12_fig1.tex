@@ -1,0 +1,31 @@
+% Prism views; front height unknown a. Front 3 wide; side triangle base 2;
+% plan 3 by 2 split into two 3 by 1 strips. All edges solid.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,>=Latex]
+\begin{scope}[shift={(0,3.8)}]
+\draw (0,0) rectangle (2.4,1.6);
+\draw[dimension extension] (0,-0.06) -- (0,-0.65);
+\draw[dimension extension] (2.4,-0.06) -- (2.4,-0.65);
+\draw[dimension line] (0,-0.5) -- node[dimension label] {3} (2.4,-0.5);
+\draw[dimension extension] (-0.06,0) -- (-0.65,0);
+\draw[dimension extension] (-0.06,1.6) -- (-0.65,1.6);
+\draw[dimension line] (-0.5,0) -- node[dimension label vertical] {$a$} (-0.5,1.6);
+\end{scope}
+\begin{scope}[shift={(3.9,3.8)}]
+\draw (0,0) -- (1.6,0) -- (0.8,1.6) -- cycle;
+\draw[dimension extension] (0,-0.06) -- (0,-0.65);
+\draw[dimension extension] (1.6,-0.06) -- (1.6,-0.65);
+\draw[dimension line] (0,-0.5) -- node[dimension label] {2} (1.6,-0.5);
+\end{scope}
+\begin{scope}[shift={(7.0,3.8)}]
+\draw (0,0) rectangle (2.4,1.6);
+\draw (0,0.8) -- (2.4,0.8);
+\draw[dimension extension] (-0.06,0) -- (-0.65,0);
+\draw[dimension extension] (-0.06,0.8) -- (-0.65,0.8);
+\draw[dimension extension] (-0.06,1.6) -- (-0.65,1.6);
+\draw[dimension line] (-0.5,0) -- node[dimension label vertical] {1} (-0.5,0.8);
+\draw[dimension line] (-0.5,0.8) -- node[dimension label vertical] {1} (-0.5,1.6);
+\end{scope}
+\node at (1.2,2.9) {正视图};
+\node at (4.7,2.9) {侧视图};
+\node at (8.2,2.9) {俯视图};
+\end{tikzpicture}

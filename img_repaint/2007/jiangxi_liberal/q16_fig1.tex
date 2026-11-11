@@ -1,0 +1,44 @@
+% 2007_jiangxi_liberal_q16 cube, H foot from A to plane A1BD
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (1.0,5.6);
+\coordinate (D) at (4.8,5.6);
+\coordinate (B) at (0.0,4.6);
+\coordinate (C) at (3.8,4.6);
+\coordinate (A1) at (1,2.2);
+\coordinate (B1) at (0.0,1.2);
+\coordinate (C1) at (3.8,1.2);
+\coordinate (D1) at (4.8,2.2);
+\coordinate (H) at (1.933333333,4.133333333);
+% top face
+\draw[solid] (A) -- (D) -- (C) -- (B) -- cycle;
+% triangle B-D on top (part of plane A1BD trace)
+\draw[solid] (B) -- (D);
+% verticals
+\draw[solid] (B) -- (B1);
+\draw[solid] (C) -- (C1);
+\draw[solid] (D) -- (D1);
+\draw[dashed] (A) -- (A1);
+% bottom face
+\draw[solid] (B1) -- (C1) -- (D1);
+\draw[dashed] (D1) -- (A1) -- (B1);
+% diagonals seen in original
+\draw[solid] (C) -- (B1);
+\draw[solid] (C) -- (D1);
+\draw[solid] (B) -- (C);
+\draw[dashed] (B) -- (A1);
+\draw[dashed] (D) -- (A1);
+\draw[dashed] (B1) -- (D1);
+% AH dashed with dot H
+\draw[dashed] (A) -- (H);
+\fill (H) circle (1.6pt);
+% labels
+\node[inner sep=1.5pt,above left=2pt] at (A) {$A$};
+\node[inner sep=1.5pt,above right=2pt] at (D) {$D$};
+\node[inner sep=1.5pt,left=3pt] at (B) {$B$};
+\node[inner sep=1.5pt,above=3pt,xshift=-2.00bp,yshift=2.00bp] at (C) {$C$};
+\node[inner sep=1.5pt,below left=2pt,xshift=-6.00bp,yshift=4.00bp] at (A1) {$A_{1}$};
+\node[inner sep=1.5pt,below left=2pt] at (B1) {$B_{1}$};
+\node[inner sep=1.5pt,below=3pt] at (C1) {$C_{1}$};
+\node[inner sep=1.5pt,right=3pt] at (D1) {$D_{1}$};
+\node[inner sep=1.5pt,right=4pt] at (H) {$H$};
+\end{tikzpicture}

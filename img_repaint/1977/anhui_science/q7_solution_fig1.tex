@@ -1,0 +1,30 @@
+% 1977 q7 solution: ellipse x'^2/16+y'^2/9=1 with rotated axes
+\begin{tikzpicture}[x=0.62cm,y=0.62cm,font=\normalsize,line width=.6pt,>=Stealth,
+  geom/.style={solid,line width=.6pt},
+  lbl/.style={font=\normalsize,inner sep=2pt}]
+% axes
+\draw[geom,->] (-5.5,0)--(5.5,0) node[right,xshift=3pt] {$x$};
+\draw[geom,->] (0,-5.5)--(0,5.5) node[above,yshift=3pt] {$y$};
+% rotated axes
+\draw[geom,->] (-3.4,-3.4)--(3.4,3.4) node[right,xshift=3pt,yshift=2pt] {$x'$};
+\draw[geom,->] (3.0,-3.0)--(-3.0,3.0) node[above left,xshift=-3pt,yshift=2pt] {$y'$};
+% ticks x
+\foreach \x in {-4,-3,-2,-1,1,2,3,4} {\draw[geom] (\x,0.12)--(\x,-0.12);}
+\foreach \y in {-4,-3,-2,-1,1,2,3,4} {\draw[geom] (0.12,\y)--(-0.12,\y);}
+\node[lbl,below left,xshift=-1pt,yshift=-12pt] at (0,0) {$O$};
+\node[lbl,below,yshift=-3pt] at (-4,0) {$-4$};
+\node[lbl,below,yshift=-3pt] at (-3,0) {$-3$};
+\node[lbl,below,yshift=-2pt,xshift=-3pt] at (3,0) {$3$};
+\node[lbl,below,yshift=-3pt] at (4,0) {$4$};
+\node[lbl,right,xshift=2pt] at (0,4) {$4$};
+\node[lbl,right,xshift=2pt] at (0,3) {$3$};
+\node[lbl,above right,xshift=1pt,yshift=3pt] at (0,-3) {$-3$};
+\node[lbl,right,xshift=2pt] at (0,-4) {$-4$};
+% angle pi/4 arc between x axis and x' axis
+\draw[geom] (1.1,0) arc (0:45:1.1);
+\node[lbl,right,xshift=2pt] at (1.3,.7) {$\frac{\pi}{4}$};
+% ellipse: semi 4 along 45deg, semi 3 along 135deg
+\draw[geom] plot[variable=\t,domain=0:360,samples=160]
+  ({4*cos(\t)*(sqrt(2)/2) - 3*sin(\t)*(sqrt(2)/2)},{4*cos(\t)*(sqrt(2)/2) + 3*sin(\t)*(sqrt(2)/2)});
+\end{tikzpicture}
+

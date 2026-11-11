@@ -1,0 +1,36 @@
+\usetikzlibrary{arrows.meta,calc,angles,quotes}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+  app edge/.style={line width=.6pt,draw=black},
+  app dash/.style={line width=.6pt,draw=black,dashed,dash pattern=on 3pt off 3pt}]
+% global numeric coords; unit 1cm
+\coordinate (A) at (0,0);
+\coordinate (B) at (6,0);
+\coordinate (C) at (-1.5,-2.5980762114);
+\coordinate (Ntop) at (0,2.0);
+\coordinate (Sbot) at (0,-3.4);
+\coordinate (Wleft) at (-1.9,0);
+% dashed reference rays through A
+\draw[app dash] (A) -- (Ntop);
+\draw[app dash] (A) -- (Sbot);
+\draw[app dash] (A) -- (Wleft);
+% solid rescue segments
+\draw[app edge] (A) -- (B);
+\draw[app edge] (A) -- (C);
+% 30-degree arc between AC (240deg) and due south (270deg)
+\draw[app edge] (A) ++(240:0.8) arc (240:270:0.8);
+% dots on top
+\fill[black] (A) circle (1.6pt);
+\fill[black] (B) circle (1.6pt);
+\fill[black] (C) circle (1.6pt);
+% north arrow
+\draw[app edge,-{Stealth[length=2.2mm]}] (1.6,1.0) -- (1.6,2.2);
+\node[inner sep=0pt,anchor=west] at (1.85,2.2) {北};
+% point labels with clearance
+\node[inner sep=0pt,anchor=south east] at (-0.14,0.14) {$A$};
+\node[inner sep=0pt,anchor=south] at (6,0.24) {$B$};
+\node[inner sep=0pt,anchor=north east] at (-1.68,-2.78) {$C$};
+% measurement annotations with clearance (no white fill)
+\node[inner sep=0pt,anchor=south] at (3,0.42) {20};
+\node[inner sep=0pt,anchor=east] at (-1.55,-1.30) {10};
+\node[inner sep=0pt,anchor=center] at (-0.55,-1.95) {$30^{\circ}$};
+\end{tikzpicture}

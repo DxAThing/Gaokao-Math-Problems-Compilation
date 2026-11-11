@@ -1,0 +1,38 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+  edge/.style={draw=black,solid,line width=.6pt},
+  tet/.style={draw=black,solid,line width=.6pt},
+  lbl/.style={font=\normalsize,inner sep=1.5pt}]
+% Tetrahedron corners and axis ends (schematic projection).
+\coordinate (D) at (1.5,2.2);
+\coordinate (A) at (-2.8,0.6);
+\coordinate (B) at (1.0,0.2);
+\coordinate (C) at (-0.6,3.6);
+\coordinate (C0) at (5.3,1.8);
+\coordinate (Xend) at ($(D)!1.24!(A)$);
+\coordinate (Yend) at ($(D)!1.4!(B)$);
+\coordinate (Zend) at (1.5,4.4);
+% Coordinate axes with arrowheads.
+\draw[dashed,line width=.6pt] (D)--(A);
+\draw[edge,-{Stealth}] (A)--(Xend);
+\draw[dashed,line width=.6pt] (D)--(B);
+\draw[edge,-{Stealth}] (B)--(Yend);
+\draw[edge,-{Stealth}] (D)--(Zend);
+% Visible edges are continuous; DC0 is the dashed construction.
+\draw[tet] (A)--(B);
+\draw[tet] (A)--(C);
+\draw[tet] (B)--(C);
+\draw[tet] (C)--(D);
+\draw[tet] (C)--(C0);
+\draw[tet] (B)--(C0);
+\draw[tet,dashed] (D)--(C0);
+% Labels placed clear of all strokes.
+\node[lbl,anchor=north] at (-2.95,0.02) {$A$};
+\node[lbl,anchor=north west] at (1.14,-0.06) {$B$};
+\node[lbl,anchor=south] at (-0.78,3.86) {$C$};
+\node[lbl] at (1.05,1.7) {$D$};
+\node[lbl,anchor=west] at (5.46,1.8) {$C_{0}$};
+\node[lbl,anchor=east] at (-4.02,0.12) {$x$};
+\node[lbl,anchor=north] at (0.82,-0.94) {$y$};
+\node[lbl,anchor=south west] at (1.58,4.5) {$z$};
+\end{tikzpicture}

@@ -1,0 +1,8 @@
+% Original viewport measured from PNG; C preserves the source erroneous high-frequency phase.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+\draw (0,0) rectangle (8,3);
+\draw (0,1.5)--(8.15,1.5);
+\draw[domain=3.1415926536:9.4247779608,samples=321] plot ({(\x-3.1415926536)/6.2831853072*8},{1.5+1.5*-1*sin(2*deg(\x))});
+\draw[domain=3.1415926536:9.4247779608,samples=321] plot ({(\x-3.1415926536)/6.2831853072*8},{1.5+1.5*sin(deg(\x)+30)});
+\draw[domain=3.1415926536:9.4247779608,samples=321] plot ({(\x-3.1415926536)/6.2831853072*8},{1.5+1.5*sin(deg(\x)-60)});
+\end{tikzpicture}

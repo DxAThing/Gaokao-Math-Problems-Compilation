@@ -1,0 +1,25 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt]
+\coordinate (FLB) at (0,0);
+\coordinate (FRB) at (4.4,0);
+\coordinate (FRT) at (4.4,2.4);
+\coordinate (FLT) at (0,2.4);
+\coordinate (BLB) at (1.0,0.9);
+\coordinate (BRB) at (5.4,0.9);
+\coordinate (BRT) at (5.4,3.3);
+\coordinate (BLT) at (1.0,3.3);
+\draw[solid] (FLB)--(FRB)--(FRT)--(FLT)--cycle;
+\draw[solid] (FLT)--(BLT)--(BRT);
+\draw[solid] (FRT)--(BRT);
+\draw[solid] (FRB)--(BRB);
+\draw[solid] (BRB)--(BRT);
+\draw[dashed,dash pattern=on 4pt off 3pt] (BLB)--(BRB);
+\draw[dashed,dash pattern=on 4pt off 3pt] (BLT)--(BLB);
+\draw[dashed,dash pattern=on 4pt off 3pt] (FLB)--(BLB);
+\fill[white,draw=black] (0.45,2.0) circle [radius=0.13];
+\node[font=\normalsize,inner sep=2pt] at (0.45,1.62) {$A$};
+\fill[white,draw=black] (4.9,2.55) circle [radius=0.13];
+\node[font=\normalsize,inner sep=2pt] at (4.9,2.17) {$B$};
+\node[font=\normalsize,inner sep=2pt] at (2.2,-0.6) {$a$};
+\node[font=\normalsize,inner sep=2pt] at (3.85,1.25) {$b$};
+\node[font=\normalsize,inner sep=2pt] at (5.85,0.3) {$2$};
+\end{tikzpicture}

@@ -1,0 +1,19 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.8cm,y=1.0cm,line width=.6pt,>=stealth,font=\normalsize]
+% ranges: x in [-0.9,2.7], y in [-1.7,3.0]; y=2(x-1)^2-1, vertex (1,-1)
+\begin{scope}
+\clip (-0.9,-1.7) rectangle (2.7,3.0);
+\draw[domain=-0.45:2.45,samples=121] plot (\x,{2*(\x-1)*(\x-1)-1});
+\end{scope}
+% symmetry axis x=1 dashed (as in original)
+\draw[dashed] (1,-1.7) -- (1,2.6);
+% axes
+\draw[->] (-0.9,0) -- (2.7,0) node[right,inner sep=0pt,xshift=3pt] {$x$};
+\draw[->] (0,-1.7) -- (0,3.0) node[right,inner sep=0pt,xshift=3pt] {$y$};
+% origin label below-left with clearance
+\node[anchor=north east,inner sep=0pt,xshift=-3pt,yshift=-3pt] at (0,0) {$0$};
+% vertex label to the lower right of (1,-1) with clear gap
+\node[anchor=north west,inner sep=0pt,xshift=5pt,yshift=-3pt] at (1,-1) {$(1,-1)$};
+% symmetry-axis label to the right of dashed line with gap
+\node[anchor=west,inner sep=0pt,xshift=5pt] at (1,1.2) {$x=1$};
+\end{tikzpicture}

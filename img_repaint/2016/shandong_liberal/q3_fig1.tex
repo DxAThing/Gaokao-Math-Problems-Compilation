@@ -1,83 +1,20 @@
-% Source PDF: source/普通高考/2016/2016山东文.pdf
-% Page: 1 (question 3)
-% PDF embedded bitmap attempt: pdfimages -list found no image objects; the source page is vector text/line art.
-% Grid evidence: tmp/repaint_2016_shandong_liberal/source_pages/page-1-grid.png and q3_grid_crop_tight.png.
-% Original comparison crop: tmp/repaint_2016_shandong_liberal/q3_orig_crop.png, cropped from the no-grid source-page render.
-% Elements: self-study-time axis with origin 0, an axis break before 17.5, ticks 17.5--30, frequency-density axis,
-% five contiguous bins [17.5,20), [20,22.5), [22.5,25), [25,27.5), [27.5,30), and dashed guides at 0.02, 0.04, 0.08, 0.10, 0.16.
-% Relations: the bar heights are (0.02, 0.10, 0.16, 0.08, 0.04), each class width is 2.5 hours, and the density-area sum is 1.
-% Display mapping: the omitted source interval 0--17.5 is 7.00 source group-widths;
-% it is mapped to exactly 1.00 displayed group width before the first boundary.
-% solid segments: bar outlines, x/y axis arrows, tick marks, and the x-axis break stroke.
-% dashed segments: horizontal reference lines at the five source-labelled heights.
-% labels: 频率/组距 sits above the y-axis, 自习时间/小时 follows the x-axis arrow, and source tick labels stay below/left of axes.
-\begin{tikzpicture}[baseline]
-\begin{axis}[exam statistical histogram,
-    width=15.053cm,
-    axis lines=none,
-    clip=false,
-    xmin=-0.8,
-    xmax=7.5,
-    ymin=-0.008,
-    ymax=0.18,
-    ticks=none,
-    x tick label as interval=false,
-]
-    % Source dashed guides terminate at the corresponding histogram boundary.
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.02) -- (axis cs:2,0.02);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.04) -- (axis cs:6,0.04);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.08) -- (axis cs:5,0.08);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.10) -- (axis cs:3,0.10);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.16) -- (axis cs:4,0.16);
-
-    % Frequency-density bars read from the source histogram.
-    \addplot[
-        ybar interval,
-        draw=black,
-        fill=white,
-        line width=0.7pt,
-    ] coordinates {
-        (1,0.02)
-        (2,0.10)
-        (3,0.16)
-        (4,0.08)
-        (5,0.04)
-        (6,0)
-    };
-
-    % Source x/y axes and the short break before the time bins.
-    \draw[->,line width=0.75pt] (axis cs:0,0) -- (axis cs:7.2,0);
-    \draw[->,line width=0.75pt] (axis cs:0,0) -- (axis cs:0,0.175);
-    \examstatxbreak[line width=0.75pt]{0.45999999999999996}{0};
-
-    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \examstatxlabel{自习时间/小时};
-
-    % Tick marks and labels reproduced from the source chart.
-    \draw[line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.004);
-    \node[anchor=north east,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:0,-0.004000) {0};
-    \draw[line width=0.45pt] (axis cs:1,0) -- (axis cs:1,-0.004);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:1,-0.004000) {17.5};
-    \draw[line width=0.45pt] (axis cs:2,0) -- (axis cs:2,-0.004);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:2,-0.004000) {20};
-    \draw[line width=0.45pt] (axis cs:3,0) -- (axis cs:3,-0.004);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:3,-0.004000) {22.5};
-    \draw[line width=0.45pt] (axis cs:4,0) -- (axis cs:4,-0.004);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:4,-0.004000) {25};
-    \draw[line width=0.45pt] (axis cs:5,0) -- (axis cs:5,-0.004);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:5,-0.004000) {27.5};
-    \draw[line width=0.45pt] (axis cs:6,0) -- (axis cs:6,-0.004);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:6,-0.004000) {30};
-
-    \draw[line width=0.45pt] (axis cs:0,0.02) -- (axis cs:-0.18,0.02);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.180000,0.02) {0.02};
-    \draw[line width=0.45pt] (axis cs:0,0.04) -- (axis cs:-0.18,0.04);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.180000,0.04) {0.04};
-    \draw[line width=0.45pt] (axis cs:0,0.08) -- (axis cs:-0.18,0.08);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.180000,0.08) {0.08};
-    \draw[line width=0.45pt] (axis cs:0,0.10) -- (axis cs:-0.18,0.10);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.180000,0.10) {0.10};
-    \draw[line width=0.45pt] (axis cs:0,0.16) -- (axis cs:-0.18,0.16);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.180000,0.16) {0.16};
+% PGFPlots ybar interval: coordinates encode bin LEFT boundary and density.
+% Final coordinate supplies last RIGHT boundary; its height is unused.
+% Bins [17.5,20),[20,22.5),[22.5,25),[25,27.5),[27.5,30], width 2.5.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,
+  xmin=15,ymin=0,
+  xtick={15,17.5,20,22.5,25,27.5,30},
+  ytick={0,0.02,0.04,0.08,0.10,0.16},
+  yticklabels={0,0.02,0.04,0.08,0.10,0.16},
+  ymajorgrids=true,major grid style={dashed,black},
+  xmax=31.25,
+  ymax=0.19,
+  xticklabels={,17.5,20,22.5,25,27.5,30}]
+\addplot[draw=black,fill=white] coordinates
+  {(17.5,0.02) (20,0.10) (22.5,0.16) (25,0.08) (27.5,0.04) (30,0)};
+\examstatxbreak{16.25}{0}
+\examstatylabel{$\frac{\text{频率}}{\text{组距}}$}
+\examstatxlabel{自习时间/小时}
 \end{axis}
 \end{tikzpicture}

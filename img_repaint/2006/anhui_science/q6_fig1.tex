@@ -1,0 +1,15 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.5cm,y=1.5cm,line width=.6pt,>={Stealth[length=2mm]},font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (Pmax) at (0.2617993878,1);
+\coordinate (Pmin) at (1.8325957146,-1);
+\draw[->] (-0.95,0)--(2.95,0) node[below right,inner sep=2pt] {$x$};
+\draw[->] (0,-2.0)--(0,2.0) node[left,inner sep=2pt] {$y$};
+\draw[domain=-0.75:2.68,samples=201] plot (\x,{sin(deg(2*\x+pi/3))});
+\draw[dashed] (1.8325957146,-1)--(1.8325957146,0);
+\draw[dashed] (0,-1)--(1.8325957146,-1);
+\node[below right,inner sep=2pt] at (0,0) {$O$};
+\node[left,inner sep=2pt] at (0,1) {$1$};
+\node[left,inner sep=2pt] at (0,-1) {$-1$};
+\node[above,inner sep=2pt] at (1.8325957146,0.06) {$\dfrac{7\pi}{12}$};
+\end{tikzpicture}

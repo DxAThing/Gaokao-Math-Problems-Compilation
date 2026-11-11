@@ -1,0 +1,33 @@
+% 2016_national_paper_2_science_q6_fig1: dimension point-fix only.
+% Projection outlines, 4/4/2sqrt3 values, circle r and centre dot unchanged.
+% All dimensions use shared dimension line/label styles, placed outside outline >=4.5mm.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+\def\W{2.8}\def\RH{2.8}\def\TH{2.4249}
+% front (left)
+\draw (0,0) rectangle (\W,\RH);
+\draw (0,\RH) -- (\W/2,\RH+\TH) -- (\W,\RH);
+% side (middle)
+\draw (4.3,0) rectangle (4.3+\W,\RH);
+\draw (4.3,\RH) -- (4.3+\W/2,\RH+\TH) -- (4.3+\W,\RH);
+% plan (right): circle with centre dot
+\draw (10.0,1.4) circle (1.4);
+\fill (10.0,1.4) circle (0.06);
+% left vertical dims of front view (outside, offset 7mm)
+\draw[dimension extension] (0,\RH) -- (-0.85,\RH);
+\draw[dimension extension] (\W/2,\RH+\TH) -- (-0.85,\RH+\TH);
+\draw[dimension line] (-0.7,\RH) -- node[dimension label vertical] {$2\sqrt{3}$} (-0.7,\RH+\TH);
+\draw[dimension extension] (0,0) -- (-0.85,0);
+\draw[dimension extension] (0,\RH) -- (-0.85,\RH);
+\draw[dimension line] (-0.7,0) -- node[dimension label vertical] {$4$} (-0.7,\RH);
+% bottom width dims (outside below, offset 5.5mm)
+\draw[dimension extension] (0,0) -- (0,-0.75);
+\draw[dimension extension] (\W,0) -- (\W,-0.75);
+\draw[dimension line] (0,-0.55) -- node[dimension label] {$4$} (\W,-0.55);
+\draw[dimension extension] (4.3,0) -- (4.3,-0.75);
+\draw[dimension extension] (4.3+\W,0) -- (4.3+\W,-0.75);
+\draw[dimension line] (4.3,-0.55) -- node[dimension label] {$4$} (4.3+\W,-0.55);
+% view names
+\node at (1.4,-1.4) {正视图};
+\node at (5.7,-1.4) {侧视图};
+\node at (10.0,-1.4) {俯视图};
+\end{tikzpicture}

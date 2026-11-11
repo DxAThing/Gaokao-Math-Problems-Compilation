@@ -1,0 +1,38 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  geom/.style={solid,line width=.6pt},
+  lbl/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (A) at (0.00,0.00);
+\coordinate (B) at (3.00,0.00);
+\coordinate (B1) at (3.00,2.00);
+\coordinate (A1) at (0.00,2.00);
+\coordinate (D) at (1.10,1.05);
+\coordinate (C) at (4.10,1.05);
+\coordinate (D1) at (1.10,3.05);
+\coordinate (C1) at (4.10,3.05);
+% cuboid frame
+\draw[geom] (A)--(B);
+\draw[geom] (A)--(A1);
+\draw[geom] (B)--(B1);
+\draw[geom] (A1)--(B1);
+\draw[geom] (A1)--(D1);
+\draw[geom] (B1)--(C1);
+\draw[geom] (D1)--(C1);
+\draw[geom] (B)--(C);
+\draw[geom] (C)--(C1);
+\draw[geom,dashed] (A)--(D);
+\draw[geom,dashed] (D)--(C);
+\draw[geom,dashed] (D)--(D1);
+% triangle D1B1C1
+\draw[geom] (D1)--(B1);
+% fold D-B-C1
+\draw[geom,dashed] (D)--(B);
+\draw[geom] (B)--(C1);
+\node[lbl,below left] at (A) {$A$};
+\node[lbl,below right] at (B) {$B$};
+\node[lbl,right,xshift=2pt] at (C) {$C$};
+\node[lbl,left,xshift=-2pt,yshift=3pt] at (D) {$D$};
+\node[lbl,left,xshift=-2pt] at (A1) {$A_{1}$};
+\node[lbl,right,xshift=2pt,yshift=-4pt] at (B1) {$B_{1}$};
+\node[lbl,right,xshift=2pt,yshift=1pt] at (C1) {$C_{1}$};
+\node[lbl,above left] at (D1) {$D_{1}$};
+\end{tikzpicture}

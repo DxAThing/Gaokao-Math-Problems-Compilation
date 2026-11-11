@@ -1,0 +1,19 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt},
+ geometry mark/.style={solid,line width=.6pt},
+ geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (TL) at (1.0,2.0);
+\coordinate (TR) at (3.0,2.0);
+\coordinate (BR) at (4.0,0);
+\coordinate (BL) at (0,0);
+\draw[geometry edge] (TL)--(TR)--(BR)--(BL)--cycle;
+\draw[dimension extension] (TL)--(1.0,2.55);
+\draw[dimension extension] (TR)--(3.0,2.55);
+\draw[dimension line] (1.0,2.45)--node[dimension label] {$1$}(3.0,2.45);
+\draw[dimension extension] (BL)--(0,-0.55);
+\draw[dimension extension] (BR)--(4.0,-0.55);
+\draw[dimension line] (0,-0.45)--node[dimension label] {$2$}(4.0,-0.45);
+\draw[dimension extension] (TR)--(4.55,2.0);
+\draw[dimension extension] (BR)--(4.55,0);
+\draw[dimension line] (4.45,2.0)--node[dimension label vertical] {$1$}(4.45,0);
+\end{tikzpicture}

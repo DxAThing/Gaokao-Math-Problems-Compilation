@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-3.4,0)--(3.4,0) node[fill=white,inner sep=1.5pt,below=3pt] at (3.4,0) {$x$};
+\draw[->] (0,-3.2)--(0,3.2) node[fill=white,inner sep=1.5pt,above=3pt,left=1pt] at (0,3.2) {$y$};
+\node[fill=white,inner sep=1.5pt,below left=2pt and 4pt] at (0,0) {$O$};
+% circle radius c=2.2 and hyperbola a=0.805,b=2.047 (e=1+sqrt3)
+\draw[thick] (0,0) circle (2.2);
+\draw[thick] plot[domain=-3:3,samples=120,smooth] ({-0.805*sqrt(1+(\x/2.047)*(\x/2.047))},\x);
+\draw[thick] plot[domain=-3:3,samples=120,smooth] ({0.805*sqrt(1+(\x/2.047)*(\x/2.047))},\x);
+% points
+\coordinate (A) at (-1.1,1.905);
+\coordinate (B) at (-1.1,-1.905);
+\coordinate (FONE) at (-2.2,0);
+\coordinate (FTWO) at (2.2,0);
+\draw[thin] (A)--(B);
+\draw[thin] (A)--(FTWO);
+\draw[thin] (B)--(FTWO);
+% labels
+\node[fill=white,inner sep=1.5pt,above left=2pt and 5pt] at (A) {$A$};
+\node[fill=white,inner sep=1.5pt,below left=2pt and 5pt] at (B) {$B$};
+\node[fill=white,inner sep=1.5pt,below left=2pt and 2pt] at (FONE) {$F_{1}$};
+\node[fill=white,inner sep=1.5pt,below right=2pt and 2pt] at (FTWO) {$F_{2}$};
+\end{tikzpicture}
+

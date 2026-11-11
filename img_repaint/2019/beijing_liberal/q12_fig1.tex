@@ -1,0 +1,15 @@
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=0.7cm,y=0.7cm]
+% background grid (light), extended to cover horizontal row
+\draw[step=1,black!25,line width=.3pt] (-1,5) grid (17,11);
+% front 4x4 split at mid
+\draw[line width=.6pt] (0,6) rectangle (4,10);
+\draw[line width=.6pt] (0,8) -- (4,8);
+% side: (6,6)-(10,6)-(10,8)-(8,8)-(6,10)-cycle
+\draw[line width=.6pt] (6,6) -- (10,6) -- (10,8) -- (8,8) -- (6,10) -- cycle;
+% top 4x4 split at mid, moved to right column (shift +12,+6)
+\draw[line width=.6pt] (12,6) rectangle (16,10);
+\draw[line width=.6pt] (12,8) -- (16,8);
+\node at (2,5) {正视图};
+\node at (8,5) {侧视图（左）};
+\node at (14,5) {俯视图};
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Mountain measurement schematic: MN, AB, CB vertical; ground N-A-B; sight lines.
+\coordinate (M) at (0,6);
+\coordinate (N) at (0,0.5);
+\coordinate (A) at (3,0);
+\coordinate (B) at (5.5,0);
+\coordinate (C) at (5.5,2.5);
+% solid
+\draw (M)--(N);
+\draw (M)--(A);
+\draw (M)--(C);
+\draw (N)--(A);
+\draw (A)--(C);
+\draw (C)--(B);
+\draw (A)--(B);
+% hidden ground dashed
+\draw[dashed] (N)--(B);
+% labels
+\node[above left] at (M) {$M$};
+\node[left] at (N) {$N$};
+\node[below] at (A) {$A$};
+\node[below right] at (B) {$B$};
+\node[right] at (C) {$C$};
+\end{tikzpicture}

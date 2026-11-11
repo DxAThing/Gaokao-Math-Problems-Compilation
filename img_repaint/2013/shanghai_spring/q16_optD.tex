@@ -1,0 +1,9 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-4.10,0)--(4.10,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-0.30)--(0,3.60) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw[domain=-3.80:-0.10,samples=100] plot (\x,{pow(abs(\x),-0.5)});
+\draw[domain=0.10:3.80,samples=100] plot (\x,{pow(abs(\x),-0.5)});
+\node[inner sep=0pt] at (-0.22,-0.42) {$0$};
+
+\end{tikzpicture}

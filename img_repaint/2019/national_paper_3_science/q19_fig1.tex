@@ -1,0 +1,45 @@
+\begin{tikzpicture}[line width=.6pt, font=\normalsize, >=Stealth]
+% ---- Fig 1 (left): planar net ----
+\coordinate (D) at (0,2.2);
+\coordinate (A) at (2.4,2.2);
+\coordinate (E) at (0,1.0);
+\coordinate (B) at (2.4,1.0);
+\coordinate (C) at (4.6,1.0);
+\coordinate (F) at (3.1,-0.9);
+\coordinate (G) at (5.3000000000,-0.9000000000);
+\draw (D) -- (A) -- (B) -- (E) -- cycle;
+\draw (A) -- (C);
+\draw (B) -- (C);
+\draw (B) -- (F) -- (G) -- (C);
+\node[above=2pt] at (A) {$A$};
+\node[above left=2pt] at (D) {$D$};
+\node[below left=2pt] at (E) {$E$};
+\node[below left=4pt] at (B) {$B$};
+\node[right=1pt] at (C) {$C$};
+\node[below left=2pt] at (F) {$F$};
+\node[below right=2pt] at (G) {$G$};
+\node at (4.1,-2.0) {\bitmapinsertcaption[1]};
+% ---- Fig 2 (right): folded triangular prism ----
+\coordinate (B2) at (8.2500000000,0.2000000000);
+\coordinate (C2) at (11.4000000000,0.2000000000);
+\coordinate (G2) at (12.4000000000,2.6000000000);
+\coordinate (E2) at (9.2500000000,2.6000000000);
+\coordinate (D2) at (8.7000000000,3.2000000000);
+\coordinate (A2) at (7.7000000000,0.8000000000);
+% top triangle D-E-G
+\draw (D2) -- (E2) -- (G2) -- cycle;
+% lower quadrilateral E-B-C-G
+\draw (E2) -- (B2) -- (C2) -- (G2);
+% left face A-D-E
+\draw (A2) -- (D2);
+\draw (A2) -- (E2);
+% hidden dashed A-B-C
+\draw (A2)--(B2);\draw[dashed] (A2)--(C2);
+\node[below=2pt] at (B2) {$B$};
+\node[below=2pt] at (C2) {$C$};
+\node[right=2pt] at (G2) {$G$};
+\node[below right=3pt] at (E2) {$E(F)$};
+\node[above=2pt] at (D2) {$D$};
+\node[left=2pt] at (A2) {$A$};
+\node at (10.5,-2.0) {\bitmapinsertcaption[2]};
+\end{tikzpicture}

@@ -1,0 +1,17 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1.35cm,y=1.25cm,line width=.6pt,>={Latex[length=1.8mm,width=1.3mm]}]
+\def\Xs{1.45}
+\def\Ys{0.9}
+\def\Xp{2.0}
+\def\H{2.6}
+\coordinate (O) at (0,0);
+\coordinate (K) at (\Xs,\Ys);
+\coordinate (P) at (\Xp,\H);
+\coordinate (Q) at (3.0,\H);
+\draw[->] (-0.28,0)--(3.12,0) node[anchor=north west,inner sep=0pt,xshift=2pt,yshift=-2pt] {$x$};
+\draw[->] (0,-0.4)--(0,3.0) node[anchor=south east,inner sep=0pt,xshift=-2pt,yshift=2pt] {$y$};
+\draw[domain=0:\Xs,samples=61] plot (\x,{\Ys*(2*(\x/\Xs)-(\x/\Xs)*(\x/\Xs))});
+\draw[domain=\Xs:\Xp,samples=81] plot (\x,{\Ys+(\H-\Ys)*((\x-\Xs)/(\Xp-\Xs))*((\x-\Xs)/(\Xp-\Xs))*((\x-\Xs)/(\Xp-\Xs))});
+\draw (P)--(Q);
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\end{tikzpicture}

@@ -1,64 +1,49 @@
-% Source: source/普通高考/2011/2011山东文.pdf, page 1, question 14.
-% pdfimages -list returned no embedded images; redraw from the rendered vector chart.
-% Evidence: tmp/review_2011_shandong_liberal/grid/page1_grid100.jpg,
-%   tmp/review_2011_shandong_liberal/grid/page1_grid50.jpg,
-%   tmp/review_2011_shandong_liberal/crops/q14_full.png (no-grid crop).
-% Elements: rounded terminals 开始/结束; input parallelogram 输入非负整数 l,m,n;
-% decision l^2+m^2+n^2=0; process y=105; process y=70l+21m+15n;
-% decision y>105; process y=y-105; output parallelogram 输出 y.
-% Complete node -> directed-edge list:
-% 开始 -> 输入非负整数 l,m,n -> l^2+m^2+n^2=0;
-% 是 -> y=105 -> 输出 y -> 结束;
-% 否 -> y=70l+21m+15n -> y>105;
-% y>105 是 -> y=y-105 -> loop-back arrow entering the y=70l+21m+15n→y>105 line;
-% y>105 否 -> 输出 y -> 结束. All connectors and borders are solid; no dashed edges.
-% Node text is centered with local zero paragraph indentation and compact padding.
+\tikzset{
+  gflowproc/.style={draw, rectangle, minimum width=30mm, minimum height=9mm, inner sep=1.5mm, align=center, font=\normalsize, execute at begin node={\setlength{\parindent}{0pt}}},
+  gflowterm/.style={draw, shape=rectangle, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm, align=center, font=\normalsize, execute at begin node={\setlength{\parindent}{0pt}}},
+  gflowio/.style={draw, trapezium, trapezium left angle=72, trapezium right angle=108, minimum width=40mm, minimum height=10mm, inner sep=1.5mm, align=center, font=\normalsize, execute at begin node={\setlength{\parindent}{0pt}}},
+  gflowdec/.style={draw, diamond, aspect=2.6, minimum width=56mm, minimum height=20mm, inner sep=1mm, align=center, font=\normalsize, execute at begin node={\setlength{\parindent}{0pt}}},
+  gflowarr/.style={->, >=Stealth, line width=0.6pt}
+}
+\begin{tikzpicture}[gflowarr, x=1mm, y=1mm]
+\parindent=0pt
+% main column x=0
+\node[gflowterm] (start) at (0,0) {开始};
+\node[gflowio, minimum width=72mm] (input) at (0,-20) {输入非负整数 $l,m,n$};
+\node[gflowdec] (dec1) at (0,-44) {$l^{2}+m^{2}+n^{2}=0$};
+\node[gflowproc, minimum width=58mm] (calc) at (0,-70) {$y=70l+21m+15n$};
+\coordinate (J1) at (0,-84);
+\node[gflowdec, minimum width=48mm] (dec2) at (0,-102) {$y>105$};
+\coordinate (Jout) at (0,-120);
+\node[gflowio, minimum width=32mm] (out) at (0,-132) {输出 $y$};
+\node[gflowterm] (stop) at (0,-152) {结束};
+% left box
+\node[gflowproc, minimum width=24mm] (y105) at (-52,-70) {$y=105$};
+% right box
+\node[gflowproc, minimum width=32mm] (sub) at (52,-84) {$y=y-105$};
+% dec1 south (no) to calc
+\draw (start.south) -- (input.north);
+\draw (input.south) -- (dec1.north);
+\draw[->] (dec1.south) -- node[midway, right=1mm] {否} (calc.north);
+\draw[->] (calc.south) -- (J1) -- (dec2.north);
 
-\begin{tikzpicture}[
-  baseline,
-  >=Stealth,
-  x=1cm,
-  y=1cm,
-  line width=0.5pt,
-  line cap=round,
-  line join=round,
-  font=\normalsize,
-  every node/.style={anchor=center,align=center,
-    execute at begin node={\setlength{\parindent}{0pt}}},
-  flowbox/.style={draw,minimum height=0.72cm,inner xsep=3pt,inner ysep=2pt,
-    align=center,execute at begin node={\setlength{\parindent}{0pt}}},
-  terminal/.style={flowbox,rounded corners=0.20cm,minimum width=1.10cm},
-  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
-    trapezium right angle=108,minimum height=0.82cm},
-  decision/.style={flowbox,shape=diamond,aspect=2.5,inner sep=1pt,
-    minimum height=1.10cm},
-  branchlabel/.style={anchor=center,align=center,inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}}}
-]
-  \node[terminal] (start) at (0,11.1) {开始};
-  \node[io,minimum width=3.80cm] (input) at (0,9.75) {输入非负整数 $l,m,n$};
-  \node[decision,minimum width=4.30cm] (zero) at (0,8.15) {$l^2+m^2+n^2=0$};
-  \node[flowbox,minimum width=1.80cm] (const) at (-3.55,6.45) {$y=105$};
-  \node[flowbox,minimum width=3.70cm] (calc) at (0,6.45) {$y=70l+21m+15n$};
-  \node[decision,minimum width=3.00cm] (test) at (0,4.55) {$y>105$};
-  \node[flowbox,minimum width=2.70cm] (subtract) at (3.85,4.55) {$y=y-105$};
-  \node[io,minimum width=1.70cm] (output) at (0,2.35) {输出 $y$};
-  \node[terminal] (finish) at (0,1.28) {结束};
-
-  \draw[->] (start.south) -- (input.north);
-  \draw[->] (input.south) -- (zero.north);
-  \draw[->] (zero.west) -- node[branchlabel,above=2pt] {是} (-3.55,8.15)
-    -- (const.north);
-  \draw[->] (zero.south) -- node[branchlabel,right=2pt] {否} (calc.north);
-  \coordinate (outjoin) at (0,3.35);
-  \draw[->] (const.south) -- (-3.55,3.35) -- (outjoin);
-  \draw[->] (calc.south) -- (test.north);
-  \draw[->] (test.east) -- node[branchlabel,above=2pt] {是} (subtract.west);
-  % Keep the loop return at least 2.5 mm below the formula box.
-  \draw[->] (subtract.north) -- (3.85,5.80) -- (0,5.80);
-  \draw (test.south) -- node[branchlabel,right=2pt] {否} (outjoin);
-  \draw[->] (outjoin) -- (output.north);
-  \draw[->] (output.south) -- (finish.north);
-
-  \path[use as bounding box] (-4.65,0.90) rectangle (5.55,11.55);
+% dec1 west (yes): west 12mm then down into y105 north
+\draw[->] (dec1.west) -| (y105.north);
+\node[above=1mm] at ([xshift=-5mm]dec1.west) {是};
+% left outer channel down to output junction
+\coordinate (lw) at (-64,-70);
+\coordinate (lj) at (-64,-120);
+\draw (y105.south) -- ++(0,-4) -| (lj);
+\draw (lj) -- (Jout);
+% dec2 south (no) to output junction: plain wire into Jout, single trunk arrow below (no same-line duplicate arrows)
+\draw (dec2.south) -- node[midway, right=1mm] {否} (Jout);
+\draw[->] (Jout) -- (out.north);
+\draw[->] (out.south) -- (stop.north);
+% dec2 east (yes): east then up into sub south (orthogonal, single bend)
+\draw[->] (dec2.east) -| (sub.south);
+\node[above=1mm] at ([xshift=5mm]dec2.east) {是};
+% return: sub west to J1 via offset channel (no overshoot of J1)
+\coordinate (sw) at (28,-84);
+\draw (sub.west) -- (sw);
+\draw[->] (sw) -- (J1);
 \end{tikzpicture}

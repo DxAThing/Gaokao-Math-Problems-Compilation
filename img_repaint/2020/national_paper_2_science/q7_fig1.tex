@@ -1,0 +1,27 @@
+% point-fix: horizontal row front/side/plan; stepped/M/EF/GH/split-N contours unchanged; view names added below, baselines aligned
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% ---- front (left): stepped octagon with M ----
+\begin{scope}[shift={(0,0)}]
+\draw (0,0.3) -- (0,2.4) -- (1.2,2.4) -- (1.2,1.8) -- (2.8,1.8) -- (2.8,0) -- (1.2,0) -- (1.2,0.3) -- cycle;
+\node at (1.5,1.45) {$M$};
+\node[below] at (1.4,-0.6) {正视图};
+\end{scope}
+% ---- side (middle): narrow rectangle with EF/GH dividers ----
+\begin{scope}[shift={(3.8,0)}]
+\draw (0,0) rectangle (1.4,2.4);
+\draw (0,1.9) -- (1.4,1.9);
+\draw (0,0.7) -- (1.4,0.7);
+\node[left,inner sep=1pt] at (0,1.7) {$E$};
+\node[right,inner sep=1pt] at (1.4,1.7) {$F$};
+\node[left,inner sep=1pt] at (0,0.5) {$G$};
+\node[right,inner sep=1pt] at (1.4,0.5) {$H$};
+\node[below] at (0.7,-0.6) {侧视图};
+\end{scope}
+% ---- top (right): wide rectangle split vertically, N near divider top ----
+\begin{scope}[shift={(6.4,0)}]
+\draw (0,0) rectangle (2.8,1.2);
+\draw (1.4,0) -- (1.4,1.2);
+\node[left,inner sep=1pt] at (1.4,1.0) {$N$};
+\node[below] at (1.4,-0.6) {俯视图};
+\end{scope}
+\end{tikzpicture}

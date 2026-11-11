@@ -1,0 +1,14 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1.9cm,y=2.2cm,line width=.6pt,>=stealth,font=\normalsize]
+\draw[->] (-0.35,0) -- (3.75,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.1) -- (0,1.5) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\node[below left,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\draw[dashed] (1.5707963,0) -- (1.5707963,-0.6666667);
+\draw[dashed] (0,-0.6666667) -- (1.5707963,-0.6666667);
+\draw (0,-0.6666667) -- (-0.03,-0.6666667);
+\draw[domain=1.5707963268:3.2,samples=200] plot (\x,{2*sqrt(2)/3*sin(deg(3*\x)-315)});
+\node[above,inner sep=0pt,yshift=2pt] at (1.5707963,0) {$\frac{\pi}{2}$};
+\node[below right,inner sep=0pt,xshift=2pt,yshift=-2pt] at (1.8325957,0) {$\frac{7\pi}{12}$};
+\node[above right,inner sep=0pt,xshift=2pt,yshift=2pt] at (2.8797933,0) {$\frac{11\pi}{12}$};
+\node[left,inner sep=0pt,xshift=-2pt] at (0,-0.6666667) {$-\frac{2}{3}$};
+\end{tikzpicture}

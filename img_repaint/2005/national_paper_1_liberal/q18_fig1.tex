@@ -1,0 +1,29 @@
+% 四棱锥 P-ABCD：底面为直角梯形（AB//DC，角DAB 为直角），PA 垂直底面；
+% M 为 PB 中点；PA、AM、AD、AC、AB 为虚线，其余为实线
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt, font=\normalsize, >=Stealth]
+  \coordinate (P) at (0,5.2);
+  \coordinate (A) at (0,2.0);
+  \coordinate (B) at (5.6,2.0);
+  \coordinate (D) at (-1.2,0.6);
+  \coordinate (C) at (1.8,0.6);
+  \coordinate (M) at (2.8,3.6);
+  % 棱（实线）
+  \draw (P) -- (D);
+  \draw (P) -- (C);
+  \draw (P) -- (B);
+  \draw (D) -- (C);
+  \draw (C) -- (B);
+  \draw (M) -- (C);
+  % 遮挡线（虚线）
+  \draw[dashed] (P) -- (A);
+  \draw[dashed] (A) -- (D);
+  \draw[dashed] (A) -- (C);
+  \draw[dashed] (A) -- (M);
+  \draw[dashed] (A) -- (B);
+  \node[above] at (P) {$P$};
+  \node[left] at (A) {$A$};
+  \node[right] at (B) {$B$};
+  \node[below left] at (D) {$D$};
+  \node[below] at (C) {$C$};
+  \node[above right] at (M) {$M$};
+\end{tikzpicture}

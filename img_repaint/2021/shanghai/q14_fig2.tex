@@ -1,0 +1,17 @@
+\begin{tikzpicture}[x=1.7cm,y=1.7cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-1.7,0)--(1.4,0) node[below right] {$x$};
+\draw[->] (0,-1.35)--(0,1.45) node[above left] {$y$};
+% ticks
+\draw (-1,0.04)--(-1,-0.04);
+\node[below] at (-1,-0.06) {$-1$};
+\draw (1,0.04)--(1,-0.04);
+\node[above] at (1,0.10) {$1$};
+\draw (0.04,1)--(-0.04,1);
+\node[left] at (-0.06,1) {$1$};
+\draw (0.04,-1)--(-0.04,-1);
+\node[right] at (0.06,-1) {$-1$};
+\node[below right] at (0.02,-0.06) {$O$};
+% exact parametric curve x=3t-4t^3, y=2t*sqrt(1-t^2), t in [-1,1]
+\draw[smooth,samples=240,domain=-90:90] plot ({3*sin(\x)-4*sin(\x)^3},{2*sin(\x)*cos(\x)});
+\end{tikzpicture}

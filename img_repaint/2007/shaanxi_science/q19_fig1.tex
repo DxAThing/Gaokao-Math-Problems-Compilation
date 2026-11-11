@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=0.6pt,font=\normalsize]
+% Base trapezoid + pyramid P-ABCD, PA vertical (dashed), diagonals AC/BD meeting at E
+\coordinate (P) at (2.2,6.0);
+\coordinate (A) at (1.5,2.2);
+\coordinate (B) at (0,0.4);
+\coordinate (C) at (6.5,0.4);
+\coordinate (D) at (3.4,2.2);
+\coordinate (E) at (2.63,1.79);
+% solid visible edges
+\draw[black] (P) -- (B);
+\draw[black] (P) -- (C);
+\draw[black] (B) -- (C);
+% dashed hidden / interior edges
+\draw[black,dashed] (P) -- (A);
+\draw[black,dashed] (P) -- (D);
+\draw[black,dashed] (A) -- (B);
+\draw[black,dashed] (A) -- (D);
+\draw[black,dashed] (D) -- (C);
+\draw[black,dashed] (B) -- (D);
+\draw[black,dashed] (A) -- (C);
+% labels offset to avoid strokes
+\node[above=2pt] at (P) {$P$};
+\node[left=2pt] at (A) {$A$};
+\node[below left=1pt] at (B) {$B$};
+\node[below right=1pt] at (C) {$C$};
+\node[above right=1pt] at (D) {$D$};
+\node[below=1pt] at (E) {$E$};
+\end{tikzpicture}

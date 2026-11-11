@@ -1,0 +1,32 @@
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize, >=Stealth]
+% axes
+\draw[->] (-4.5,0) -- (4.8,0) node[below right, xshift=0pt] {$x$};
+\draw[->] (0,-2.2) -- (0,5.2) node[above left, yshift=0pt] {$y$};
+% parabola x^2=4y, y=x^2/4, x in [-4.2,4.5]
+\draw[domain=-4.2:4.5, samples=100] plot (\x, {\x*\x/4});
+\coordinate (F) at (0,1);
+\coordinate (B1) at (-2,1);
+\coordinate (A1) at (2,1);
+\coordinate (B2) at (-1.6000000000,0.6400000000);
+\coordinate (Bn) at (-1,0.25);
+\coordinate (A2) at (2.5,1.5625);
+\coordinate (An) at (4,4);
+\coordinate (Cn) at (1.5000000000,-1.0000000000);
+\coordinate (O) at (0,0);
+% lines through F
+\draw[line width=0.45pt] (B1) -- (A1);
+\draw[line width=0.45pt] (B2) -- (A2);
+\draw[line width=0.45pt] (Bn) -- (An);
+% tangents at An and Bn meeting at Cn
+\draw[line width=0.45pt] (4.6,5.2) -- (Cn);
+\draw[line width=0.45pt] (-2.6,1.05) -- (Cn) -- (2.6,-1.55);
+\node[above, yshift=3pt,xshift=3pt] at (B1) {$B_{1}$};
+\node[above, yshift=11pt,xshift=-1pt] at (A1) {$A_{1}$};
+\node[left, xshift=-1pt,yshift=-7pt] at (B2) {$B_{2}$};
+\node[below=8pt,inner sep=1pt] at (Bn) {$B_{n}$};
+\node[above right, xshift=11pt,yshift=-5pt] at (A2) {$A_{2}$};
+\node[right, xshift=0pt] at (An) {$A_{n}$};
+\node[below, yshift=0pt] at (Cn) {$C_{n}$};
+\node[above left, xshift=0pt, yshift=0pt] at (F) {$F$};
+\node[below left, xshift=-1pt, yshift=-3pt] at (O) {$O$};
+\end{tikzpicture}

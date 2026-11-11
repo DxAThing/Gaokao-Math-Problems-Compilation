@@ -1,0 +1,17 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=0.9cm,y=0.9cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (T) at (0,2);
+\coordinate (L) at (-1,0.267949);
+\coordinate (R) at (1,0.267949);
+\coordinate (M) at (0,0.845299);
+\coordinate (O) at (0,0);
+\draw (L) arc[start angle=240,end angle=300,radius=2];
+\draw (T) arc[start angle=120,end angle=180,radius=2];
+\draw (T) arc[start angle=60,end angle=0,radius=2];
+\draw[dashed] (T)--(L)--(R)--cycle;
+\draw[->] (O)--(8.0,0) node[right,inner sep=0pt,xshift=1pt] {$x$};
+\fill (M) circle (1.2pt);
+\node[left=2pt,inner sep=0pt] at (M) {$M$};
+\node[below=1pt,inner sep=0pt] at (O) {$O$};
+\draw[->] (0.72,2.20) .. controls (1.22,2.26) and (1.42,2.02) .. (1.33,1.66);
+\end{tikzpicture}

@@ -1,0 +1,19 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (P) at (1.6,4.2);
+\coordinate (B) at (0,0);
+\coordinate (C) at (3.2,0);
+\coordinate (D) at (5.8,1.6);
+\coordinate (A) at (2.1,1.3);
+% solid outline
+\draw (P)--(B); \draw (P)--(C); \draw (P)--(D);
+\draw (B)--(C); \draw (C)--(D);
+% dashed hidden
+\draw[dashed] (P)--(A);
+\draw[dashed] (B)--(A); \draw[dashed] (A)--(D); \draw[dashed] (B)--(D);
+\node[anchor=south,inner sep=2pt,yshift=3pt] at (P) {$P$};
+\node[anchor=north east,inner sep=2pt,xshift=-3pt,yshift=-2pt] at (B) {$B$};
+\node[anchor=north,inner sep=2pt,yshift=-3pt] at (C) {$C$};
+\node[anchor=west,inner sep=2pt,xshift=4pt] at (D) {$D$};
+\node[anchor=north west,inner sep=2pt,xshift=-1pt,yshift=-1pt] at (A) {$A$};
+\end{tikzpicture}
+

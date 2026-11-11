@@ -1,0 +1,36 @@
+% 三视图点修: 仅横向并排(主/左/俯左至右)+图名下置居中基线对齐; 投影边线/尺寸/虚实/比例均沿用既有稿
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,>=Latex]
+% 主视图
+\begin{scope}[shift={(0.6,1.2)}]
+\draw (0,0) -- (1,0) -- (0,2) -- cycle;
+% 底部宽1
+\draw[thin] (0,0) -- (0,-0.5);
+\draw[thin] (1,0) -- (1,-0.5);
+\draw[thin,<->] (0,-0.3) -- (1,-0.3);
+\node[below] at (0.5,-0.3) {1};
+% 左侧高2
+\draw[thin] (0,0) -- (-0.5,0);
+\draw[thin] (0,2) -- (-0.5,2);
+\draw[thin,<->] (-0.3,0) -- (-0.3,2);
+\node[left] at (-0.3,1) {2};
+\end{scope}
+\node at (1.1,0) {正视图};
+% 左视图
+\begin{scope}[shift={(3.4,1.2)}]
+\draw (-1,0) -- (1,0) -- (0,2) -- cycle;
+\draw[thin] (-1,0) -- (-1,-0.5);
+\draw[thin] (0,0) -- (0,-0.5);
+\draw[thin] (1,0) -- (1,-0.5);
+\draw[thin,<->] (-1,-0.3) -- (0,-0.3);
+\draw[thin,<->] (0,-0.3) -- (1,-0.3);
+\node[below] at (-0.5,-0.3) {1};
+\node[below] at (0.5,-0.3) {1};
+\end{scope}
+\node at (3.4,0) {侧视图（左）};
+% 俯视图: 左侧直径竖直,右侧半圆
+\begin{scope}[shift={(5.2,2.2)}]
+\draw (0,-1) -- (0,1);
+\draw (0,1) arc (90:-90:1);
+\end{scope}
+\node at (5.7,0) {俯视图};
+\end{tikzpicture}

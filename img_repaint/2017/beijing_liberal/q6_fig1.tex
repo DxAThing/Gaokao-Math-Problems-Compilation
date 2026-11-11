@@ -1,0 +1,34 @@
+% 三视图: 2017北京文6 — 正(主)直角三角形5x4, 侧(左)直角三角形3x4, 俯矩形5x3带一实一虚对角线
+% 点修：三视图改为横向并排（正视图、侧视图、俯视图），图名居中、基线对齐；投影边线/尺寸/虚实未动
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% 主视图: 直角在左下, 竖直左边缘高4, 水平底边宽5
+\begin{scope}[shift={(0.4,0)}]
+  \draw (0,0) -- (3.0,0) -- (0,2.4) -- cycle;
+  % 尺寸: 高4 (左侧竖直), 宽5 (下方水平)
+  \draw[thin] (-0.18,0) -- (-0.35,0);
+  \draw[thin] (-0.18,2.4) -- (-0.35,2.4);
+  \draw[<->,>=Stealth,thin] (-0.28,0) -- (-0.28,2.4);
+  \node[anchor=east,inner sep=2pt] at (-0.32,1.2) {4};
+  \draw[thin] (0,-0.18) -- (0,-0.35);
+  \draw[thin] (3.0,-0.18) -- (3.0,-0.35);
+  \draw[<->,>=Stealth,thin] (0,-0.28) -- (3.0,-0.28);
+  \node[anchor=north,inner sep=2pt] at (1.5,-0.32) {5};
+  \node[below] at (1.5,-0.75) {正视图（主）};
+\end{scope}
+% 侧(左)视图: 直角在右下, 高与主视图平齐2.4, 宽1.8
+\begin{scope}[shift={(4.6,0)}]
+  \draw (0,0) -- (1.8,0) -- (1.8,2.4) -- cycle;
+  \draw[thin] (0,-0.18) -- (0,-0.35);
+  \draw[thin] (1.8,-0.18) -- (1.8,-0.35);
+  \draw[<->,>=Stealth,thin] (0,-0.28) -- (1.8,-0.28);
+  \node[anchor=north,inner sep=2pt] at (0.9,-0.32) {3};
+  \node[below] at (0.9,-0.75) {侧视图（左）};
+\end{scope}
+% 俯视图: 与主视图长对正(宽3.0), 矩形3.0x1.8, 实线对角线左下-右上, 虚线对角线左上-右下
+\begin{scope}[shift={(7.6,-0.4)}]
+  \draw (0,0) rectangle (3.0,1.8);
+  \draw (0,0) -- (3.0,1.8);
+  \draw[dashed] (0,1.8) -- (3.0,0);
+  \node[below] at (1.5,-0.35) {俯视图};
+\end{scope}
+\end{tikzpicture}

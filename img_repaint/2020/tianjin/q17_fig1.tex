@@ -1,0 +1,38 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (C) at (1.5,1.2);
+\coordinate (B) at (4.5,1.2);
+\coordinate (D) at (0,2.5);
+\coordinate (Aone) at (0,5.5);
+\coordinate (Cone) at (1.5,6.7);
+\coordinate (Bone) at (4.5,6.7);
+\coordinate (E) at (1.5,4.9);
+\coordinate (M) at (2.25,6.1);
+% bottom triangle
+\draw (A)--(B);
+\draw[dashed] (C)--(B);
+\draw[dashed] (A)--(C);
+% verticals
+\draw (A)--(Aone);
+\draw[dashed] (C)--(Cone);
+\draw (B)--(Bone);
+% top triangle
+\draw (Aone)--(Cone);
+\draw (Cone)--(Bone);
+\draw (Aone)--(Bone);
+% interior segments
+\draw (Cone)--(M);
+\draw (D)--(Bone);
+\draw[dashed] (D)--(E);
+\draw[dashed] (E)--(Bone);
+% labels
+\node[below left] at (A) {$A$};
+\node[below right] at (C) {$C$};
+\node[right] at (B) {$B$};
+\node[left] at (D) {$D$};
+\node[left] at (Aone) {$A_{1}$};
+\node[above left] at (Cone) {$C_{1}$};
+\node[right] at (Bone) {$B_{1}$};
+\node[left] at (E) {$E$};
+\node[above right] at (M) {$M$};
+\end{tikzpicture}

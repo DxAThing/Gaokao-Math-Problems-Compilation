@@ -1,62 +1,32 @@
-% Source PDF: source/普通高考/2023/2023全国甲理(广西,贵州,西藏,四川).pdf, page 1.
-% PDF embedded-bitmap attempt: no image objects were present (pdfimages -list); comparison is from the no-grid page render.
-% Elements: start/end rounded terminals, input/output parallelograms, decision diamond, three process rectangles,
-% and directed connectors. Values and labels are read directly from the source flowchart.
-% Node-edge list (checked against the source PDF): start -> input -> test;
-% test --是--> A=A+B -> B=A+B -> k=k+1 -> test; test --否--> output B -> finish.
-% solid segments: all flowchart borders and connectors; no dashed segments.
-% labels: 是 is right of the downward decision connector, 否 is above the right exit connector; node text is centered.
-
-\begin{tikzpicture}[
-    >=Stealth,
-    line width=0.45pt,
-    line cap=round,
-    line join=round,
-    font=\normalsize,
-    flowtext/.style={anchor=center, align=center,
-        execute at begin node={\setlength{\parindent}{0pt}}},
-    every node/.style={flowtext},
-    node distance=0pt,
-    flowbox/.style={flowtext, draw, minimum height=0.62cm,
-        inner xsep=4pt, inner ysep=2pt},
-    terminal/.style={flowbox, rounded corners=2pt, minimum width=1.35cm},
-    io/.style={flowbox, trapezium, trapezium left angle=72, trapezium right angle=108,
-        minimum width=5.7cm},
-    process/.style={flowbox, minimum width=2.65cm},
-    decision/.style={flowbox, diamond, aspect=2.5, inner sep=0pt,
-        minimum width=3.45cm, minimum height=1.0cm},
-]
-    \node[terminal] (start) {开始};
-    \node[io, below=0.48cm of start] (input) {输入 $n=3,A=1,B=2,k=1$};
-    \node[decision, below=0.48cm of input] (test) {$k\le n$};
-    \node[process, below=0.60cm of test] (addA) {$A=A+B$};
-    \node[process, below=0.52cm of addA] (addB) {$B=A+B$};
-    \node[process, below=0.52cm of addB] (inc) {$k=k+1$};
-    \node[io, below=0.62cm of inc, minimum width=1.80cm] (output) {输出 $B$};
-    \node[terminal, below=0.48cm of output] (finish) {结束};
-    % Keep the horizontal loop arrow visibly above the independent downward
-    % main-flow arrow, as in the source apex geometry.
-    % Separate the right-pointing loop arrowhead from the independent
-    % downward arrowhead on the input-to-test stem.
-    \coordinate (loopjoin) at ([yshift=0.56cm]test.north);
-
-    \draw[->] (start) -- (input);
-    % The source has two distinct apex arrows: a downward main-flow arrow
-    % into the decision and a horizontal right-pointing loop-return arrow
-    % entering the stem above it.
-    \draw[->] (input) -- (test.north);
-    \draw[->] (test) -- node[flowtext, right] {是} (addA);
-    \draw[->] (addA) -- (addB);
-    \draw[->] (addB) -- (inc);
-    \draw[->] (output) -- (finish);
-
-    % 否 branch exits around the loop body and enters 输出 B independently.
-    % The no-branch runs right, down, then left; its final short segment enters
-    % the output box vertically, without sharing the loop body's update edge.
-    \draw[-] (test.east) -- node[flowtext, above] {否} ++(1.55cm,0)
-        |- ([yshift=0.36cm]output.north);
-    \draw[->] ([yshift=0.36cm]output.north) -- (output.north);
-
-    % Loopback from k=k+1 to the decision; the arrow enters the decision from above.
-    \draw[->] (inc.west) -- ++(-1.55cm,0) |- (loopjoin);
+\begin{tikzpicture}[x=1cm, y=1cm]
+\tikzset{
+  fzstart/.style={shape=rectangle, rounded corners=1.5mm, draw=black, line width=0.6pt, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm, align=center, execute at begin node={\parindent=0pt}},
+  fzio/.style={trapezium, trapezium left angle=70, trapezium right angle=110, draw=black, line width=0.6pt, inner sep=1.5mm, align=center, execute at begin node={\parindent=0pt}},
+  fzproc/.style={rectangle, draw=black, line width=0.6pt, inner sep=1.5mm, align=center, execute at begin node={\parindent=0pt}},
+  fzdia/.style={diamond, draw=black, line width=0.6pt, inner sep=1.5mm, align=center, execute at begin node={\parindent=0pt}},
+  fzedge/.style={draw=black, line width=0.6pt, -{Stealth[length=2.4mm]}},
+  fzlab/.style={font=\normalsize, inner sep=1mm}
+}
+% 节点清单: 开始 / 输入 n=3,A=1,B=2,k=1 / 菱形 k<=n /
+% A=A+B / B=A+B / k=k+1 / 输出 B / 结束. 共8节点.
+% 有向边: 开始->输入, 输入->菱形(途经汇合J1), 菱形南->A(是),
+% A->B, B->k, k西->回环->J1(箭头在J1),
+% 菱形东->右下外侧->输出(否, 整条完整路径, 仅末端箭头), 输出->结束. 共8边.
+\node[fzstart] (start) at (0,0) {开始};
+\node[fzio, minimum width=92mm, minimum height=10mm] (input) at (0,-1.7) {输入 $n=3$, $A=1$, $B=2$, $k=1$};
+\coordinate (J1) at (0,-3.05);
+\node[fzdia, minimum width=46mm, minimum height=20mm] (dia) at (0,-4.5) {$k\leqslant n$};
+\node[fzproc, minimum width=34mm, minimum height=9mm] (procA) at (0,-6.9) {$A=A+B$};
+\node[fzproc, minimum width=34mm, minimum height=9mm] (procB) at (0,-8.5) {$B=A+B$};
+\node[fzproc, minimum width=34mm, minimum height=9mm] (prock) at (0,-10.0) {$k=k+1$};
+\node[fzio, minimum width=30mm, minimum height=10mm] (output) at (0,-12.05) {输出 $B$};
+\node[fzstart] (endnode) at (0,-13.75) {结束};
+\draw[fzedge] (start.south) -- (input.north);
+\draw[fzedge] (input.south) -- (dia.north);
+\draw[fzedge] (dia.south) -- node[fzlab, right=1.5mm]{是} (procA.north);
+\draw[fzedge] (procA.south) -- (procB.north);
+\draw[fzedge] (procB.south) -- (prock.north);
+\draw[fzedge] (prock.west) -- (-4.3,-10.0) -- (-4.3,-3.05) -- (J1);
+\draw[fzedge] (dia.east) -- node[fzlab, above=1.5mm, pos=0.25]{否} (4.3,-4.5) -- (4.3,-11.0) -- (0,-11.0) -- (output.north);
+\draw[fzedge] (output.south) -- (endnode.north);
 \end{tikzpicture}

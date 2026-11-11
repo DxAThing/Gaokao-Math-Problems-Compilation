@@ -1,0 +1,11 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth]
+\draw[->] (-1.6,0)--(2.6,0) node[right] {$x$};
+\draw[->] (0,-0.6)--(0,2.6) node[above left] {$y$};
+\coordinate (O) at (0,0);
+\coordinate (T1) at (1,0);
+\node[below left] at (0,0) {$O$};
+\node[below] at (1,0) {$1$};
+\draw (1,0)--(1,0.08);
+\draw[line width=.8pt,domain=-1.5:1.4,samples=80] plot (\x,{2^\x});
+\draw[line width=.8pt,domain=0.08:2.5,samples=80] plot (\x,{ln(\x+0.5)/ln(2)});
+\end{tikzpicture}

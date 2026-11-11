@@ -1,0 +1,36 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0.00,2.50);
+\coordinate (B) at (4.00,2.50);
+\coordinate (C) at (5.00,3.50);
+\coordinate (D) at (1.00,3.50);
+\coordinate (A') at (0.00,0.50);
+\coordinate (B') at (4.00,0.50);
+\coordinate (C') at (5.00,1.50);
+\coordinate (D') at (1.00,1.50);
+% solid cuboid front/top/right + plane D'AC + BC'
+\draw[solid] (D)--(C);
+\draw[solid] (A)--(D);
+\draw[solid] (A)--(B);
+\draw[solid] (A)--(C);
+\draw[solid] (A)--(A');
+\draw[solid] (A')--(B');
+\draw[solid] (B)--(B');
+\draw[solid] (B)--(C');
+\draw[solid] (C)--(C');
+\draw[solid] (B')--(C');
+% dashed hidden cuboid edges + D'C
+\draw[dashed] (D)--(D');
+\draw[dashed] (A')--(D');
+\draw[dashed] (D')--(C');
+\draw[dashed] (A)--(D');
+
+\draw[dashed] (D')--(C);
+\node[left] at (A) {$A$};
+\node[right,xshift=1pt,yshift=1pt] at (B) {$B$};
+\node[right] at (C) {$C$};
+\node[above left] at (D) {$D$};
+\node[below left] at (A') {$A'$};
+\node[below right] at (B') {$B'$};
+\node[right] at (C') {$C'$};
+\node[left] at (D') {$D'$};
+\end{tikzpicture}

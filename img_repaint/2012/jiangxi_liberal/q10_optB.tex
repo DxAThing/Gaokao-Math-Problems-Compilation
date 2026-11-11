@@ -1,0 +1,13 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=stealth]
+\coordinate (O) at (0,0);
+\coordinate (K1) at (1,0.5);
+\coordinate (K2) at (2.4,2.3);
+\coordinate (HEND) at (3.6,2.3);
+\draw[->] (-0.3,0)--(4.1,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-0.3)--(0,2.7) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw[domain=0:1,samples=60] plot (\x,{\x-0.5*\x*\x});
+\draw (K1)--(K2);
+\draw (K2)--(HEND);
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (O) {$O$};
+\end{tikzpicture}

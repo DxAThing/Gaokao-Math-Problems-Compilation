@@ -1,0 +1,12 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=2cm,y=1.5cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-0.35,0)--(3.75,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.7)--(0,1.6) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\node[below left,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\draw[densely dashed] (1.0472,0)--(1.0472,1);
+\draw[densely dashed] (0,1)--(1.0472,1);
+\draw[domain=-0.15:3.3,samples=201] plot (\x,{sin(deg(2*\x-0.5235988))});
+\node[left,inner sep=0pt,xshift=-2pt] at (0,1) {$1$};
+\node[below,inner sep=0pt,yshift=-2pt] at (1.0472,0) {$\frac{\pi}{3}$};
+\node[above right,inner sep=0pt,xshift=2pt,yshift=2pt] at (1.833,0) {$\frac{7\pi}{12}$};
+\end{tikzpicture}

@@ -1,0 +1,17 @@
+\usetikzlibrary{arrows.meta}
+% 2005 福建文 q6：f(x)=a^{x-b} 的图象。代表模型取 a=1/2, b=-1（0<a<1，与 y=1 的交点在 y 轴左侧），
+% 仅复现原图这条递减曲线与刻度，不声称 a,b 为答案。
+\begin{tikzpicture}[x=1.2cm,y=1.2cm,line width=.6pt,>={Stealth[length=1.5mm,width=1.3mm]},font=\normalsize]
+  \draw[->] (-3.0,0) -- (3.0,0) node[below,inner sep=0pt,xshift=3pt,yshift=-1pt] {$x$};
+  \draw[->] (0,-1.0) -- (0,3.0) node[above left,inner sep=1pt] {$y$};
+  \draw[domain=-2.0:2.8,samples=200] plot (\x,{(1/2)^(\x+1)});
+  \draw (1,0) -- (1,0.12);
+  \draw (-1,0) -- (-1,0.12);
+  \draw (0,1) -- (0.12,1);
+  \draw (0,2) -- (0.12,2);
+  \node[below left,inner sep=0pt,xshift=-2pt,yshift=-1pt] at (0,0) {$O$};
+  \node[below,inner sep=0pt,yshift=-2pt] at (-1,0) {$-1$};
+  \node[below,inner sep=0pt,yshift=-2pt] at (1,0) {$1$};
+  \node[right=2pt,inner sep=0pt] at (0.12,1) {$1$};
+  \node[right=2pt,inner sep=0pt] at (0.12,2) {$2$};
+\end{tikzpicture}

@@ -1,0 +1,32 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (C) at (-2,3);
+\coordinate (D) at (3,3);
+\coordinate (A) at (0,-1.5);
+\coordinate (B) at (0.2,0.3);
+\coordinate (P1) at (-5,-2.5);
+\coordinate (P2) at (2.5,-2.5);
+\coordinate (P3) at (6,0.8);
+\coordinate (P4) at (-1.5,0.8);
+\coordinate (L) at (-1.022,0.8);
+\coordinate (R) at (1.533,0.8);
+% tetrahedron
+\draw[solid] (C)--(D);
+\draw[solid] (C)--(A);
+\draw[solid] (D)--(A);
+\draw[dashed] (C)--(B);
+\draw[dashed] (D)--(B);
+\draw[dashed] (A)--(B);
+% plane alpha
+\draw[solid] (P1)--(P2)--(P3);
+\draw[solid] (P3)--(R);
+\draw[dashed] (R)--(L);
+\draw[solid] (L)--(P4);
+\draw[solid] (P4)--(P1);
+\draw[solid] (P1)--(P2);
+\node[above left] at (C) {$C$};
+\node[above right] at (D) {$D$};
+\node[below] at (A) {$A$};
+\node[below left] at (B) {$B$};
+\node[below left] at (-4.3,-2.1) {$\alpha$};
+\end{tikzpicture}

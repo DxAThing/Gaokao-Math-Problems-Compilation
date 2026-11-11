@@ -1,47 +1,25 @@
-% Source truth: source/普通高考/2010/2010广东理.pdf, p.1, q17 histogram.
-% Data: intervals (490,495], (495,500], (500,505], (505,510], (510,515]
-% have frequency-density heights 0.03, 0.04, 0.07, 0.05, 0.01 (from the source graph).
-% solid segments: five unfilled bar outlines; dashed segments: horizontal guides at
-% 0.01, 0.03, 0.04, 0.05, 0.07; labels: fraction on the y-axis, weight/unit on x-axis.
-\begin{tikzpicture}[baseline=(current bounding box.center)]
-\begin{axis}[exam statistical histogram,
-  width=9.2cm,
-  height=5.6cm,
-  xmin=487,
-  xmax=518,
-  ymin=0,
-  ymax=0.08,
-  scaled y ticks=false,
-  axis lines=left,
-  axis line style={-Stealth},
-  tick align=outside,
-  xtick={487,490,495,500,505,510,515},
-  xticklabels={0,490,495,500,505,510,515},
+% Histogram redrawn from inputs/2010_guangdong_science_q17_fig1.png (Reference Image Replication).
+% Constraint IR: ybar interval, bins [490,495)..[510,515] width 5, densities
+% 0.03/0.04/0.07/0.05/0.01, break 0->490, x label 重量/克.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,
+  xmin=485,ymin=0,ymax=0.08,
+  xtick={485,490,495,500,505,510,515},
   ytick={0.01,0.03,0.04,0.05,0.07},
-  yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=2},
-  tick label style={font=\normalsize},
-  label style={font=\normalsize},
-  clip=false,
-]
-    \examstatxlabel{重量/克};
-  % Source dashed guides terminate at the corresponding bar boundary.
-  \addplot[black, dashed, line width=0.45pt, forget plot]
-    coordinates {(487,0.01) (515,0.01)};
-  \addplot[black, dashed, line width=0.45pt, forget plot]
-    coordinates {(487,0.03) (495,0.03)};
-  \addplot[black, dashed, line width=0.45pt, forget plot]
-    coordinates {(487,0.04) (500,0.04)};
-  \addplot[black, dashed, line width=0.45pt, forget plot]
-    coordinates {(487,0.05) (505,0.05)};
-  \addplot[black, dashed, line width=0.45pt, forget plot]
-    coordinates {(487,0.07) (500,0.07)};
-  % Frequency-density bars, drawn as unfilled outlines to preserve visible guides.
-  \addplot[black, ybar interval, draw=black, fill=none, line width=0.55pt]
-    coordinates {(490,0.03) (495,0.04) (500,0.07) (505,0.05) (510,0.01) (515,0)};
-  % The source x-axis uses a short break immediately after the origin.
-  \draw[white, line width=2.2pt] (axis cs:487.5,0) -- (axis cs:489.2,0);
-  \examstatxbreak[black, line width=0.55pt]{488.4}{0};
-  % Upright source-style fraction label above the y-axis.
-  \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
+  yticklabels={0.01,0.03,0.04,0.05,0.07},
+  xmax=517.5,
+  xticklabels={,490,495,500,505,510,515}]
+\addplot[draw=black,fill=white] coordinates
+  {(490,0.03) (495,0.04) (500,0.07) (505,0.05) (510,0.01) (515,0)};
+\draw[dashed] (485,0.03) -- (490,0.03);
+\draw[dashed] (485,0.04) -- (495,0.04);
+\draw[dashed] (485,0.07) -- (500,0.07);
+\draw[dashed] (485,0.05) -- (505,0.05);
+\draw[dashed] (485,0.01) -- (510,0.01);
+\examstatxbreak{487.5}{0}
+\examstatylabel{\begin{tabular}{@{}c@{}}频率\\\hline 组距\end{tabular}}
+\examstatxlabel{重量/克}
+
+\node[anchor=east,inner sep=0pt,xshift=-4pt] at (current axis.left of origin) {0};
 \end{axis}
 \end{tikzpicture}

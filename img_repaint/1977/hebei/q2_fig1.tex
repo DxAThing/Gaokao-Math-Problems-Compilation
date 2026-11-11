@@ -1,0 +1,22 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (O) at (0,0);
+\coordinate (A) at (-2,0);
+\coordinate (B) at (2,0);
+\coordinate (C) at (2,3);
+\coordinate (D) at (-0.7692,1.8462);
+\draw (O) circle[radius=2cm];
+\draw (A)--(B);
+\draw (B)--(C);
+\draw (O)--(C);
+\draw (A)--(D);
+\draw (D)--(C);
+\node[left=2pt,inner sep=0pt] at (A) {$A$};
+\node[below=2pt,inner sep=0pt] at (O) {$O$};
+\node[right=2pt,inner sep=0pt] at (B) {$B$};
+\node[above right=2pt,inner sep=0pt] at (C) {$C$};
+\node[above left=2pt,inner sep=0pt] at (D) {$D$};
+
+% Explicit named circle-center points, painted after all region fills.
+\fill (O) circle[radius=1.4pt];
+\end{tikzpicture}

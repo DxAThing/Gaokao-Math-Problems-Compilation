@@ -1,0 +1,16 @@
+\begin{tikzpicture}[x=1.5cm,y=1.5cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-1.45,0) -- (1.5,0) node[below right=2pt] {$x$};
+\draw[->] (0,-1.4) -- (0,1.45) node[above left=2pt] {$y$};
+\draw (-1,0.06) -- (-1,-0.06);
+\draw (1,0.06) -- (1,-0.06);
+\draw (0.06,1) -- (-0.06,1);
+\draw (0.06,-1) -- (-0.06,-1);
+\node[below,yshift=-4pt] at (-1,0) {$-1$};
+\node[below,yshift=-4pt] at (1,0) {$1$};
+\node[left,xshift=-5pt] at (0,1) {$1$};
+\node[left,xshift=-5pt] at (0,-1) {$-1$};
+\node[below left=3pt] at (0,0) {$O$};
+% This is the distractor's two sideways parabolas, not the stem's parametric locus.
+\draw[domain=-1:1,samples=121,variable=\t] plot ({\t*\t},\t);
+\draw[domain=-1:1,samples=121,variable=\t] plot ({-\t*\t},\t);
+\end{tikzpicture}

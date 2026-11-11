@@ -1,0 +1,28 @@
+% 2007_jiangxi_liberal_q22 hyperbola x^2/(1-lambda)-y^2/lambda=1 schematic with triangle F1AB
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->,thin] (-3.6,0) -- (3.6,0) node[inner sep=1.5pt,right=2pt] {$x$};
+\draw[->,thin] (0,-3.4) -- (0,3.4) node[inner sep=1.5pt,above=2pt] {$y$};
+\node[inner sep=1.5pt,below right=2pt,xshift=-1pt,yshift=-7pt] at (0,0) {$O$};
+% hyperbola branches: a=1,b=1.4 (lambda~0.66 shape), formula x=+-a*cosh(t), y=b*sinh(t)
+\draw[solid,domain=-2.0:2.0,samples=60,variable=\t] plot ({0.72*cosh(\t)},{0.693974062916*sinh(\t)});
+\draw[solid,domain=-2.0:2.0,samples=60,variable=\t] plot ({-0.72*cosh(\t)},{0.693974062916*sinh(\t)});
+% foci and points (F1 at vertex region, F2 right of origin)
+\coordinate (F1) at (-1,0);
+\coordinate (F2) at (1,0);
+\coordinate (A) at (1.7895483941,1.5790967881);
+\coordinate (B) at (0.8154767316,-0.3690465369);
+\coordinate (P) at (1.0987737049,0.8000000000);
+% triangle F1-A-B-F1 (thin, as original)
+\draw[solid,thin] (F1) -- (A);
+\draw[solid,thin] (F1) -- (B);
+\draw[solid,thin] (A) -- (B);
+
+\fill (P) circle (1.6pt);
+% labels
+\node[inner sep=1.5pt,below=4pt,xshift=-3pt,yshift=3pt] at (F1) {$F_{1}$};
+\node[inner sep=1.5pt,below right=2pt] at (F2) {$F_{2}$};
+\node[inner sep=1.5pt,above=2pt,xshift=-1pt,yshift=1pt] at (A) {$A$};
+\node[inner sep=1.5pt,below left=2pt] at (B) {$B$};
+\node[inner sep=1.5pt,left=4pt,xshift=-1pt,yshift=-3pt] at (P) {$P$};
+\end{tikzpicture}

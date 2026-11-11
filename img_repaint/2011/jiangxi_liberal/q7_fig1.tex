@@ -1,69 +1,26 @@
-% Source PDF: source/普通高考/2011/2011江西文.pdf, page 1.
-% PDF embedded-bitmap check: no image objects; graph is vector content in the page.
-% Data read from the original frequency chart: scores 3--10 have frequencies
-% 2, 3, 10, 6, 3, 2, 2, 2 (total 30 students), as stated in the question.
-% solid segments: histogram bars and coordinate axes; dashed segments: guides y=2,3,6,10.
-% Labels: score ticks 0,3--10, frequency ticks 2,3,6,10, and Chinese axis labels;
-% the x-axis break is drawn between 0 and the first score bar.
-
+% 2011江西文科7：离散得分频数直方图，柱间无缝，刻度位于柱中心（忠实原图）。
 \begin{tikzpicture}
-\begin{axis}[exam statistical histogram,
-    width=9.0cm,
-    height=4.9cm,
-    xmin=0,
-    xmax=9.8,
-    ymin=0,
-    ymax=11.25,
-    axis lines=none,
-    xtick=\empty,
-    x tick label as interval=false,
-    ytick=\empty,
-    clip=false,
-    enlargelimits=false,
-    scale only axis,
-]
-    % Frequency guide lines read from the original chart.
-    \draw[dashed,line width=0.35pt] (axis cs:0,2) -- (axis cs:8.5,2);
-    \draw[dashed,line width=0.35pt] (axis cs:0,3) -- (axis cs:5.5,3);
-    \draw[dashed,line width=0.35pt] (axis cs:0,6) -- (axis cs:4.5,6);
-    \draw[dashed,line width=0.35pt] (axis cs:0,10) -- (axis cs:3.5,10);
+\begin{axis}[exam statistical template histogram,exam statistical template wide,
+  xmin=1.5,ymin=0,
+  xtick={1.5,3,4,5,6,7,8,9,10},
+  ytick={2,3,6,10},
+  ymax=12,
+  xticklabels={,3,4,5,6,7,8,9,10},
+  xmax=10.5]
 
-    % The eight unit-width bars are centred at scores 3--10 and encode
-    % frequencies 2,3,10,6,3,2,2,2.  The x coordinates are shifted so
-    % that the broken-axis gap from 0 to the first group boundary is one
-    % group width, as in the source chart.
-    \addplot[/tikz/ybar interval,mark=none,draw=black,fill=white,line width=0.45pt] coordinates {
-      (1,2)
-      (2,3)
-      (3,10)
-      (4,6)
-      (5,3)
-      (6,2)
-      (7,2)
-      (8,2)
-      (9,0)
-    };
 
-    % Axes, with the original x-axis break near the origin.
-    \draw[->,black,line width=0.45pt] (axis cs:0,0) -- (axis cs:9.6,0);
-    \draw[->,black,line width=0.45pt] (axis cs:0,0) -- (axis cs:0,11.0);
-    \examstatxbreak[black,line width=0.45pt]{0.5}{0};
 
-    % Tick labels and axis labels.
-    \node[anchor=north east,inner sep=0pt,yshift=-4pt] at (axis cs:0,0.000000) {0};
-    \node[anchor=north,inner sep=0pt,yshift=-4pt] at (axis cs:1.5,0.000000) {3};
-    \node[anchor=north,inner sep=0pt,yshift=-4pt] at (axis cs:2.5,0.000000) {4};
-    \node[anchor=north,inner sep=0pt,yshift=-4pt] at (axis cs:3.5,0.000000) {5};
-    \node[anchor=north,inner sep=0pt,yshift=-4pt] at (axis cs:4.5,0.000000) {6};
-    \node[anchor=north,inner sep=0pt,yshift=-4pt] at (axis cs:5.5,0.000000) {7};
-    \node[anchor=north,inner sep=0pt,yshift=-4pt] at (axis cs:6.5,0.000000) {8};
-    \node[anchor=north,inner sep=0pt,yshift=-4pt] at (axis cs:7.5,0.000000) {9};
-    \node[anchor=north,inner sep=0pt,yshift=-4pt] at (axis cs:8.5,0.000000) {10};
-    \node[anchor=east,inner sep=1pt,xshift=-4pt] at (axis cs:0.000000,2) {2};
-    \node[anchor=east,inner sep=1pt,xshift=-4pt] at (axis cs:0.000000,3) {3};
-    \node[anchor=east,inner sep=1pt,xshift=-4pt] at (axis cs:0.000000,6) {6};
-    \node[anchor=east,inner sep=1pt,xshift=-4pt] at (axis cs:0.000000,10) {10};
-    \node[anchor=south west,inner sep=0pt] at (axis cs:0.12,10.95) {频数};
-    \examstatxlabel{得分};
+
+\addplot[draw=black,fill=white] coordinates
+  {(2.5,2) (3.5,3) (4.5,10) (5.5,6) (6.5,3) (7.5,2) (8.5,2) (9.5,2) (10.5,0)};
+\draw[densely dashed] (axis cs:1.5,10) -- (axis cs:5.5,10);
+\draw[densely dashed] (axis cs:1.5,6) -- (axis cs:6.5,6);
+\draw[densely dashed] (axis cs:1.5,3) -- (axis cs:7.5,3);
+\draw[densely dashed] (axis cs:1.5,2) -- (axis cs:10.5,2);
+\examstatxbreak{2}{0}
+\examstatylabel{频数}
+\examstatxlabel{得分}
+
+\node[anchor=east,inner sep=0pt,xshift=-4pt] at (current axis.left of origin) {0};
 \end{axis}
 \end{tikzpicture}

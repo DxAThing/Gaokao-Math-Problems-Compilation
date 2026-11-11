@@ -1,0 +1,16 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=0.85cm,y=0.85cm,line width=.6pt,>=stealth]
+  \draw[->] (-2,0)--(3.35,0);
+  \draw[->] (0,-2.5)--(0,2.35);
+  \draw[dashed] (-3*pi/8,-2.3)--(-3*pi/8,2.3);
+  \draw[dashed] (pi/8,-2.3)--(pi/8,2.3);
+  \draw[dashed] (5*pi/8,-2.3)--(5*pi/8,2.3);
+  \draw[domain=-0.949:0.177,samples=300] plot (\x,{tan(deg(2*\x+pi/4))});
+  \draw[domain=0.620:1.746,samples=300] plot (\x,{tan(deg(2*\x+pi/4))});
+  \node[below left=4pt and 2pt,inner sep=0pt] at (0,0) {$O$};
+  \node[left=3pt,inner sep=0pt] at (0,1) {$1$};
+  \node[below right=2pt and 2pt,inner sep=0pt] at (pi/8,0) {$\frac{\pi}{8}$};
+  \node[below right=2pt and 2pt,inner sep=0pt] at (3*pi/8,0) {$\frac{3\pi}{8}$};
+  \node[below right=2pt and 2pt,inner sep=0pt] at (3.35,0) {$x$};
+  \node[above left=2pt and 2pt,inner sep=0pt] at (0,2.35) {$y$};
+\end{tikzpicture}

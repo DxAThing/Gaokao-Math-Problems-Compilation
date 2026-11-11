@@ -1,0 +1,15 @@
+\begin{tikzpicture}[line width=.6pt, font=\normalsize, >=Stealth, x=0.9cm, y=0.9cm]
+\draw[->] (-3.5,0) -- (3.2,0) node[below right] {$x$};
+\draw[->] (0,-1.8) -- (0,2.8) node[above right] {$y$};
+\node[below right] at (0,0) {$O$};
+% vertical asymptote x=-1
+\draw[dashed] (-1,-1.8) -- (-1,2.8);
+\node[below left] at (-1,0) {$-1$};
+% y = -1/(x+1): left branch upper, right branch lower
+\begin{scope}
+\clip (-3.5,-1.8) rectangle (3.2,2.8);
+\draw[solid, domain=-3.5:-1.25, samples=120] plot (\x, {-1/(\x+1)});
+
+\draw[solid, domain=-0.75:3.2, samples=120] plot (\x, {-1/(\x+1)});
+\end{scope}
+\end{tikzpicture}

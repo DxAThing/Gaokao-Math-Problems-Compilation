@@ -1,0 +1,21 @@
+\begin{tikzpicture}[x=3cm,y=3cm,font=\normalsize,line width=.6pt,>=Stealth]
+% shaded triangles first (gray blocks)
+\fill[gray!25] (0,0.5)--(0.5,0.5)--(0.5,1)--cycle;
+\fill[gray!25] (0.5,0)--(1,0.5)--(0.5,0.5)--cycle;
+\draw[->] (-0.7,0)--(1.6,0) node[right] {$x$};
+\draw[->] (0,-0.7)--(0,1.5) node[above] {$y$};
+% reference dashed lines x=1/2, y=1/2 (both extend past axes as in original)
+\draw[dashed] (0.5,-0.5)--(0.5,1.35);
+\draw[dashed] (-0.35,0.5)--(1.45,0.5);
+% two ascending dashed lines slope +1: y=x+1/2 and y=x-1/2
+\draw[dashed] (-0.45,0.05)--(0.85,1.35);
+\draw[dashed] (0.2,-0.3)--(1.35,0.85);
+% ticks at 1
+\draw[solid] (-0.05,1)--(0.05,1);
+\draw[solid] (1,-0.05)--(1,0.05);
+\node[left=7pt] at (0,1) {$1$};
+\node[above left,xshift=-2pt,yshift=1pt] at (0,0.5) {$\frac12$};
+\node[below right,xshift=2pt,yshift=-2pt] at (0.5,0) {$\frac12$};
+\node[below=4pt] at (1,0) {$1$};
+\node[below left,inner sep=2pt] at (0,0) {$O$};
+\end{tikzpicture}

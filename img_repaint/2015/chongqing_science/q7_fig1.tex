@@ -1,49 +1,25 @@
-% Source: source/普通高考/2015/2015重庆理.pdf, page 1.
-% Type: program flowchart; pdfimages -list reports no embedded bitmap (vector line art).
-% Grid evidence: original page rendered at 180 dpi; grid preview step=100, fine_step=50.
-% Node-edge list: 开始→s=0,k=0→判断；判断(是)→k=k+2→s=s+1/k→loop merge→判断；
-% 判断(否)→输出k→结束. Solid segments: all borders and directed connectors;
-% dashed segments: none. Labels 是/否 are adjacent to their corresponding exits.
-% Every node has local parindent=0pt and centered text; the loop arrow ends at
-% the incoming main vertical edge and does not add a second arrow to that edge.
-% Branch labels are attached directly to their outgoing edges with natural
-% anchors; no hand-tuned coordinates or shifts are used for text placement.
-\begin{tikzpicture}[
-  x=1cm,
-  y=0.9cm,
-  >=Stealth,
-  line width=0.45pt,
-  every node/.style={font=\normalsize, inner sep=1pt, align=center, anchor=center,
-    execute at begin node={\setlength{\parindent}{0pt}}},
-  flow/.style={draw, line width=0.45pt},
-  startstop/.style={flow, rounded corners=3pt, minimum width=1.2cm, minimum height=0.70cm},
-  process/.style={flow, minimum height=0.72cm, align=center},
-  io/.style={flow, trapezium, trapezium left angle=74, trapezium right angle=106,
-    minimum height=0.72cm, align=center},
-  decision/.style={flow, diamond, aspect=2.8, minimum width=3.35cm,
-    minimum height=1.0cm, inner sep=1pt, align=center}
-]
-  \node[startstop] (start) at (0,10.2) {开始};
-  \node[process, minimum width=2.30cm] (init) at (0,8.85) {$s=0, k=0$};
-  \node[decision] (check) at (0,5.65) {};
-  \node[io, minimum width=1.78cm] (output) at (0,3.95) {输出 $k$};
-  \node[startstop] (finish) at (0,2.55) {结束};
-
-  \node[process, minimum width=2.05cm] (increment) at (2.55,6.45) {$k=k+2$};
-  \node[process, minimum width=2.55cm, minimum height=0.95cm] (sum) at (2.55,7.75)
-    {$s=s+\dfrac{1}{k}$};
-  % Keep the return edge centered in the clear gap below the init box.
-  \coordinate (loopJoin) at (0,8.00);
-  \coordinate (branchRight) at (2.55,5.65);
-
-  % Main path.
-  \draw[->] (start.south) -- (init.north);
-  \draw[->] (init.south) -- (check.north);
-  \draw[->] (output.south) -- (finish.north);
-
-  % Decision branches and loop.
-  \draw[->] (check.east) -- node[above] {是} (branchRight) -- (increment.south);
-  \draw[->] (increment.north) -- (sum.south);
-  \draw[->] (sum.north) -- (2.55,8.00) -- (loopJoin);
-  \draw[->] (check.south) -- node[right] {否} (output.north);
+\begin{tikzpicture}[x=1mm,y=1mm]
+\tikzset{
+  flowstart/.style={draw, shape=rectangle, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, align=center, inner xsep=3mm, inner ysep=1.5mm, line width=0.45pt},
+  flowproc/.style={draw, rectangle, minimum width=26mm, minimum height=9mm, align=center, inner xsep=3mm, inner ysep=2.5mm, line width=0.45pt},
+  flowio/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=24mm, minimum height=10mm, align=center, inner xsep=3mm, inner ysep=2.5mm, line width=0.45pt},
+  flowdec/.style={draw, diamond, aspect=2.2, minimum width=38mm, minimum height=16mm, align=center, inner xsep=4mm, inner ysep=2mm, line width=0.45pt},
+  flowarr/.style={line width=0.45pt, -{Stealth[length=2.4mm,width=1.8mm]}},
+  flowlbl/.style={font=\normalsize, inner sep=1.2mm}
+}
+\node[flowdec] (D) at (0,-72) {\parindent=0pt\centering \phantom{$k<8$}};
+\node[flowstart] (start) at (0,0) {\parindent=0pt\centering 开始};
+\node[flowproc] (init) at (0,-20) {\parindent=0pt\centering $s=0,k=0$};
+\coordinate (J) at (0,-29);
+\node[flowio] (O) at (0,-92) {\parindent=0pt\centering 输出 $k$};
+\node[flowstart] (E) at (0,-106) {\parindent=0pt\centering 结束};
+\node[flowproc] (K) at (42,-59) {\parindent=0pt\centering $k=k+2$};
+\node[flowproc] (Sv) at (42,-42) {\parindent=0pt\centering $s=s+\dfrac{1}{k}$};
+\draw[flowarr] (start.south) -- (init.north);
+\draw[flowarr] (init.south) -- (D.north);
+\draw[flowarr] (D.east) -- node[above=1mm, pos=0.18, flowlbl] {是} (42,-72) -- (K.south);
+\draw[flowarr] (K.north) -- (Sv.south);
+\draw[flowarr] (Sv.north) -- (42,-29) -- (J);
+\draw[flowarr] (D.south) -- node[right=1mm, pos=0.55, flowlbl] {否} (O.north);
+\draw[flowarr] (O.south) -- (E.north);
 \end{tikzpicture}

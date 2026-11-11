@@ -1,0 +1,34 @@
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% front triangle (left; base 3 (=24), height 2 (=16), translated down, geometry unchanged)
+\begin{scope}[shift={(0,0)}]
+\draw (0,0) -- (3,0) -- (1.5,2) -- cycle;
+% centre line segment through front view
+\draw[dash pattern=on 8pt off 3pt on 1pt off 3pt] (1.5,-0.5) -- (1.5,2.5);
+% dimension 16 (triangle height, right side)
+\draw (3.15,0) -- (3.55,0);
+\draw (1.65,2) -- (3.55,2);
+\draw[<->,>=Latex] (3.35,0) -- (3.35,2);
+\node[right] at (3.45,1) {16};
+\node at (1.5,-1.05) {正视图};
+\end{scope}
+% plan square 3x3 (=24x24) (right; translated from lower position, geometry unchanged)
+\begin{scope}[shift={(4.4,0)}]
+\draw (0,0) rectangle (3,3);
+\draw (0,0) -- (3,3);
+\draw (0,3) -- (3,0);
+% centre lines
+\draw[dash pattern=on 8pt off 3pt on 1pt off 3pt] (1.5,-0.5) -- (1.5,3.5);
+\draw[dash pattern=on 8pt off 3pt on 1pt off 3pt] (-0.5,1.5) -- (3.5,1.5);
+% dimension 24 vertical (square right side)
+\draw (3.0,0) -- (3.55,0);
+\draw (3.0,3) -- (3.55,3);
+\draw[<->,>=Latex] (3.35,0) -- (3.35,3);
+\node[right] at (3.45,1.5) {24};
+% dimension 24 horizontal (square bottom)
+\draw (0,-0.15) -- (0,-0.55);
+\draw (3,-0.15) -- (3,-0.55);
+\draw[<->,>=Latex] (0,-0.35) -- (3,-0.35);
+\node[below] at (1.5,-0.35) {24};
+\node at (1.5,-1.05) {俯视图};
+\end{scope}
+\end{tikzpicture}

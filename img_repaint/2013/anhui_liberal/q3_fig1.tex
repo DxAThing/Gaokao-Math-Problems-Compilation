@@ -1,55 +1,25 @@
-% Source PDF: source/普通高考/2013/2013安徽文.pdf, page 1; vector program flowchart.
-% Grid evidence: tmp/review_2013_anhui_liberal/grid/page-1-grid100.jpg and
-%   q3_original_clean.png (no-grid crop from the source page).
-% Elements: rounded start/end terminals; initialization rectangle s=0,n=2;
-% decision diamond n<8?; update rectangles s=s+1/n and n=n+2;
-% output parallelogram; directed connectors and 是/否 labels.
-% Complete node -> directed-edge list from the source:
-%   start -> init -> test; test --是--> update_s -> increment -> left loop
-%   -> main entry above test; test --否--> output -> finish. The loop return
-% has one right-pointing arrow into the main vertical stem and remains separate
-% from the terminating branch; all borders/connectors are solid.
-
-\begin{tikzpicture}[
+\tikzset{
   >=Stealth,
-  line width=0.45pt,
-  line join=round,
-  line cap=round,
-  font=\normalsize,
-  flowtext/.style={anchor=center, align=center, inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}}},
-  every node/.style={flowtext},
-  flowbox/.style={flowtext, draw, minimum height=0.68cm,
-    inner xsep=3pt, inner ysep=2pt},
-  terminal/.style={flowbox, rounded corners=0.18cm, minimum width=1.45cm},
-  process/.style={flowbox},
-  decision/.style={flowbox, diamond, aspect=2.7, minimum width=3.50cm,
-    minimum height=0.95cm},
-  io/.style={flowbox, trapezium, trapezium left angle=72,
-    trapezium right angle=72, minimum width=2.35cm, minimum height=0.76cm},
-]
-  \node[terminal] (start) at (0,8.45) {开始};
-  \node[process, minimum width=2.65cm] (init) at (0,6.95) {$s=0,n=2$};
-  \node[decision] (test) at (0,5.10) {$n<8?$};
-  \node[process, minimum width=3.05cm, minimum height=0.95cm]
-    (update_s) at (0,3.40) {$s=s+\dfrac{1}{n}$};
-  \node[process, minimum width=2.65cm] (increment) at (0,1.75)
-    {$n=n+2$};
-  \node[io] (output) at (3.30,3.35) {输出 $s$};
-  \node[terminal] (finish) at (3.30,1.80) {结束};
-
-  % Main trunk and terminating branch.
-  \draw[->] (start.south) -- (init.north);
-  \draw[->] (init.south) -- (test.north);
-  \draw[->] (test.south) -- node[flowtext, right] {是} (update_s.north);
-  \draw[->] (update_s.south) -- (increment.north);
-  \draw[->] (test.east) -- node[flowtext, above] {否}
-    (3.30,5.10) -- (3.30,3.78) -- (output.north);
-  \draw[->] (output.south) -- (finish.north);
-
-  % The 是 branch loops left and returns with a single horizontal
-  % right-pointing arrow into the main stem above the decision diamond.
-  \coordinate (loopjoin) at (0,5.95);
-  \draw[->] (increment.south) -- (0,0.55) -- (-2.55,0.55)
-    -- (-2.55,5.95) -- (loopjoin);
+  flowstart/.style={draw, shape=rectangle, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm, align=center, font=\normalsize, execute at begin node={\parindent=0pt}},
+  flowproc/.style={draw, rectangle, minimum width=3.0cm, minimum height=0.85cm, align=center, inner sep=4pt, font=\normalsize, execute at begin node={\parindent=0pt}},
+  flowtall/.style={draw, rectangle, minimum width=3.2cm, minimum height=1.5cm, align=center, inner sep=4pt, font=\normalsize, execute at begin node={\parindent=0pt}},
+  flowdec/.style={draw, diamond, aspect=2.4, minimum width=3.6cm, minimum height=1.4cm, align=center, inner sep=2pt, font=\normalsize, execute at begin node={\parindent=0pt}},
+  flowio/.style={draw, trapezium, trapezium left angle=68, trapezium right angle=112, minimum width=3.0cm, minimum height=0.85cm, align=center, inner sep=4pt, font=\normalsize, execute at begin node={\parindent=0pt}}
+}
+\begin{tikzpicture}[x=1cm, y=1cm, line width=0.5pt]
+\node[flowstart] (start) at (0,0) {开始};
+\node[flowproc] (init) at (0,-1.8) {$s=0$, $n=2$};
+\coordinate (Jpre) at (0,-2.75);
+\node[flowdec] (dec) at (0,-4.1) {$n<8?$};
+\node[flowtall] (sbox) at (0,-6.5) {$s=s+\dfrac{1}{n}$};
+\node[flowproc] (nbox) at (0,-8.2) {$n=n+2$};
+\node[flowio] (out) at (3.9,-6.5) {输出 $s$};
+\node[flowstart] (end) at (3.9,-8.2) {结束};
+\draw[->] (start.south) -- (init.north);
+\draw[->] (init.south) -- (dec.north);
+\draw[->] (dec.south) -- node[midway, right=1mm] {是} (sbox.north);
+\draw[->] (sbox.south) -- (nbox.north);
+\draw[->] (nbox.south) -- (0,-9.2) -- (-3.2,-9.2) -- (-3.2,-2.75) -- (Jpre);
+\draw[->] (dec.east) -- node[pos=0.25, above=1mm] {否} (3.9,-4.1) -- (out.north);
+\draw[->] (out.south) -- (end.north);
 \end{tikzpicture}

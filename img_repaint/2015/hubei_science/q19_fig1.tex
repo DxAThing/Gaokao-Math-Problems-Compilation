@@ -1,0 +1,33 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (P) at (0.5,4.5);
+\coordinate (D) at (0.5,0);
+\coordinate (A) at (-1.2,-2);
+\coordinate (B) at (1.3,-2);
+\coordinate (C) at (3,0);
+\coordinate (E) at (1.75,2.25);
+\coordinate (F) at (0.7,2.875);
+% solid visible base and lateral edges
+\draw (P)--(A);
+\draw (P)--(B);
+\draw (P)--(C);
+\draw (A)--(B);
+\draw (B)--(C);
+\draw (B)--(E);
+\draw (E)--(F);
+
+% dashed hidden edges
+\draw[dashed] (P)--(D);
+\draw[dashed] (A)--(D);
+\draw[dashed] (D)--(B);
+\draw[dashed] (D)--(C);
+\draw[dashed] (D)--(E);
+\draw[dashed] (D)--(F);
+% labels with clearance
+\node[above] at (P) [yshift=3pt] {$P$};
+\node[below left] at (A) [xshift=-3pt,yshift=-2pt] {$A$};
+\node[below] at (B) [yshift=-2pt] {$B$};
+\node[right] at (C) [xshift=2pt] {$C$};
+\node[left] at (D) [xshift=-3pt] {$D$};
+\node[right] at (E) [xshift=2pt] {$E$};
+\node[left] at (F) [xshift=-2pt,yshift=1pt] {$F$};
+\end{tikzpicture}

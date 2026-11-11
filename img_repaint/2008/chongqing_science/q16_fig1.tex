@@ -1,0 +1,22 @@
+% triangular prism wireframe: top ABC solid, bottom A1B1 solid, C-C1 dashed
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+\coordinate (A) at (0.6,3.4);
+\coordinate (B) at (4.6,3.4);
+\coordinate (C) at (2.9,4.4);
+\coordinate (Aone) at (-0.9,0.6);
+\coordinate (Bone) at (6.1,0.6);
+\coordinate (Cone) at (3.1250000000,2.3500000000);
+\draw (A) -- (B) -- (C) -- cycle;
+\draw (A) -- (Aone);
+\draw (B) -- (Bone);
+\draw[dashed] (C) -- (Cone);
+\draw (Aone) -- (Bone);
+\draw[dashed] (Aone) -- (Cone);
+\draw[dashed] (Bone) -- (Cone);
+\node[left,xshift=-3pt] at (A) {$A$};
+\node[right,xshift=3pt] at (B) {$B$};
+\node[above,yshift=3pt] at (C) {$C$};
+\node[below left,xshift=-2pt,yshift=-2pt] at (Aone) {$A_{1}$};
+\node[below right,xshift=2pt,yshift=-2pt] at (Bone) {$B_{1}$};
+\node[below,yshift=-4pt] at (Cone) {$C_{1}$};
+\end{tikzpicture}

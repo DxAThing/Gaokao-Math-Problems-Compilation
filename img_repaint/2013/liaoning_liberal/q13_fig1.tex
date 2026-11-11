@@ -1,0 +1,51 @@
+% three_views: left/middle rectangles with hidden dashed lines, right circle with inscribed square.
+% Horizontal row: front, side, top; labels below each at same baseline.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm,
+  dim/.style={line width=.6pt,{Latex[length=2mm,width=1.4mm]}-{Latex[length=2mm,width=1.4mm]}}]
+% ---- top-left view: front ----
+\begin{scope}[shift={(0,0)}]
+  \draw (0,0) rectangle (3,3);
+  \draw[dashed] (0.75,0) -- (0.75,3);
+  \draw[dashed] (2.25,0) -- (2.25,3);
+  % top width dims 1/2/1
+  \draw[line width=.6pt] (0,3) -- (0,3.55);
+  \draw[line width=.6pt] (0.75,3) -- (0.75,3.55);
+  \draw[line width=.6pt] (2.25,3) -- (2.25,3.55);
+  \draw[line width=.6pt] (3,3) -- (3,3.55);
+  \draw[line width=.6pt] (0,3.4) -- (0.75,3.4);
+  \node at (0.375,3.62) {$1$};
+  \draw[dim] (0.75,3.25) -- (2.25,3.25);
+  \node at (1.5,3.32) [above] {$2$};
+  \draw[line width=.6pt] (2.25,3.4) -- (3,3.4);
+  \node at (2.625,3.62) {$1$};
+  % left height dim 4
+  \draw[line width=.6pt] (0,0) -- (-0.55,0);
+  \draw[line width=.6pt] (0,3) -- (-0.55,3);
+  \draw[dim] (-0.4,0) -- (-0.4,3);
+  \node at (-0.62,1.5) {$4$};
+  \node at (1.5,-1.0) {正视图};
+\end{scope}
+% ---- top-right view: side ----
+\begin{scope}[shift={(4.1,0)}]
+  \draw (0,0) rectangle (3,3);
+  \draw[dashed] (0.75,0) -- (0.75,3);
+  \draw[dashed] (2.25,0) -- (2.25,3);
+  \draw[line width=.6pt] (0,3) -- (0,3.55);
+  \draw[line width=.6pt] (0.75,3) -- (0.75,3.55);
+  \draw[line width=.6pt] (2.25,3) -- (2.25,3.55);
+  \draw[line width=.6pt] (3,3) -- (3,3.55);
+  \draw[line width=.6pt] (0,3.4) -- (0.75,3.4);
+  \node at (0.375,3.62) {$1$};
+  \draw[dim] (0.75,3.25) -- (2.25,3.25);
+  \node at (1.5,3.32) [above] {$2$};
+  \draw[line width=.6pt] (2.25,3.4) -- (3,3.4);
+  \node at (2.625,3.62) {$1$};
+  \node at (1.5,-1.0) {侧视图};
+\end{scope}
+% ---- bottom view moved right: top view (circle with inscribed square) ----
+\begin{scope}[shift={(9.7,1.5)}]
+  \draw (0,0) circle (1.5);
+  \draw (-0.75,-0.75) rectangle (0.75,0.75);
+  \node at (0,-2.5) {俯视图};
+\end{scope}
+\end{tikzpicture}

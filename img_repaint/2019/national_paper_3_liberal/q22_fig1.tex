@@ -1,0 +1,23 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.5cm,y=1.5cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (D) at (-2,0);
+\coordinate (O) at (0,0);
+\coordinate (A) at (2,0);
+\coordinate (B) at (1,1);
+\coordinate (C) at (-1,1);
+\coordinate (O1) at (1,0);
+\coordinate (O2) at (0,1);
+\coordinate (O3) at (-1,0);
+\coordinate (Xtip) at (3,0);
+\draw[->] (D)--(Xtip);
+\draw (A) arc[start angle=0,end angle=90,radius=1]; % M1
+\draw (B) arc[start angle=0,end angle=180,radius=1]; % M2
+\draw (C) arc[start angle=90,end angle=180,radius=1]; % M3
+\fill (O) circle (1.5pt);
+\node[below] at (D) {$D$};
+\node[below] at (O) {$O$};
+\node[below] at (A) {$A$};
+\node[above right] at (B) {$B$};
+\node[above left] at (C) {$C$};
+\node[below] at (Xtip) {$x$};
+\end{tikzpicture}

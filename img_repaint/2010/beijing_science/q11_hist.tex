@@ -1,2 +1,26 @@
-% Canonical statistical figure: img_repaint/2010/beijing_liberal/q12_fig1.tex
-\input{img_repaint/2010/beijing_liberal/q12_fig1.tex}
+% Histogram redrawn from inputs/2010_beijing_science_q11_hist.png (Reference Image Replication).
+% Constraint IR: ybar interval, bins [100,110)..[140,150] width 10, densities
+% 0.005/0.035/a/0.020/0.010; the [120,130) bar is drawn at its PNG dashed-line
+% height 0.03 while the tick stays $a$ (unknown preserved, not solved).
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,
+  xmin=90,xmax=155,ymin=0,
+  xtick={90,100,110,120,130,140,150},
+  ytick={0.005,0.01,0.02,0.03,0.035},
+  yticklabels={0.005,0.010,0.020,$a$,0.035},
+  ymax=0.0375,
+  xticklabels={,100,110,120,130,140,150}]
+\addplot[draw=black,fill=white] coordinates
+  {(100,0.005) (110,0.035) (120,0.03) (130,0.02) (140,0.01) (150,0)};
+\draw[dashed] (90,0.005) -- (100,0.005);
+\draw[dashed] (90,0.035) -- (110,0.035);
+\draw[dashed] (90,0.03) -- (120,0.03);
+\draw[dashed] (90,0.02) -- (130,0.02);
+\draw[dashed] (90,0.01) -- (140,0.01);
+\examstatxbreak{95}{0}
+\examstatylabel{\begin{tabular}{@{}c@{}}频率\\\hline 组距\end{tabular}}
+\examstatxlabel{身高}
+
+\node[anchor=east,inner sep=0pt,xshift=-4pt] at (current axis.left of origin) {0};
+\end{axis}
+\end{tikzpicture}

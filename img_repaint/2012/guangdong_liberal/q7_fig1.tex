@@ -1,0 +1,44 @@
+% Hemisphere-cone views. Front and side are identical: a semicircular top
+% of diameter 6 (radius 3) joined on its diameter to an inverted
+% isosceles triangle with base 6 and equal sides 5 (height 4).
+% Plan is a circle of diameter 6. All edges solid.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,>=Stealth]
+\begin{scope}[shift={(0,4.0)}]
+\draw (0,1.8) -- (2.7,1.8) -- (1.35,0) -- cycle;
+\draw (0,1.8) arc (180:0:1.35);
+\draw (0,3.44) -- (0,3.62);
+\draw (2.7,3.44) -- (2.7,3.62);
+\draw[<->] (0,3.5) -- (2.7,3.5);
+\node[above] at (1.35,3.5) {6};
+\draw (2.79,1.8) -- (2.97,1.8);
+\draw (2.79,3.15) -- (2.97,3.15);
+\draw[<->] (2.85,1.8) -- (2.85,3.15);
+\node[right] at (2.97,2.475) {3};
+\draw[<->] (-0.05,1.36) -- (0.92,0.08);
+\node at (0.02,0.55) {5};
+\draw[<->] (2.75,1.36) -- (1.78,0.08);
+\node at (2.68,0.55) {5};
+\end{scope}
+\begin{scope}[shift={(4.2,4.0)}]
+\draw (0,1.8) -- (2.7,1.8) -- (1.35,0) -- cycle;
+\draw (0,1.8) arc (180:0:1.35);
+\draw (0,3.44) -- (0,3.62);
+\draw (2.7,3.44) -- (2.7,3.62);
+\draw[<->] (0,3.5) -- (2.7,3.5);
+\node[above] at (1.35,3.5) {6};
+\draw (2.79,1.8) -- (2.97,1.8);
+\draw (2.79,3.15) -- (2.97,3.15);
+\draw[<->] (2.85,1.8) -- (2.85,3.15);
+\node[right] at (2.97,2.475) {3};
+\draw[<->] (-0.05,1.36) -- (0.92,0.08);
+\node at (0.02,0.55) {5};
+\draw[<->] (2.75,1.36) -- (1.78,0.08);
+\node at (2.68,0.55) {5};
+\end{scope}
+\begin{scope}[shift={(8.4,4.0)}]
+\draw (1.35,1.35) circle (1.35);
+\end{scope}
+\node at (1.35,3.3) {正视图};
+\node at (5.55,3.3) {侧视图};
+\node at (9.75,3.3) {俯视图};
+\end{tikzpicture}

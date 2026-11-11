@@ -1,0 +1,47 @@
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+\begin{scope}[shift={(0,0)},x=.8cm,y=.8cm]
+\coordinate (A) at (0.7,4.0);
+\coordinate (B) at (0,0);
+\coordinate (C) at (5.0,0.6);
+\coordinate (D) at (1.9,1.3);
+\coordinate (N) at (0.35,2.0);
+\coordinate (M) at (1.3,2.65);
+\coordinate (P) at (2.05,0.246);
+\draw (A) -- (B);
+\draw (B) -- (C);
+\draw (A) -- (C);
+\draw[dashed] (A) -- (D);
+\draw[dashed] (B) -- (D);
+\draw[dashed] (D) -- (C);
+\draw[dashed] (N) -- (M);
+\draw[dashed] (M) -- (P);
+\draw (N) -- (P);
+\node[above] at (A) {$A$};
+\node[below left] at (B) {$B$};
+\node[right] at (C) {$C$};
+\node[above right] at (D) {$D$};
+\node[left] at (N) {$N$};
+\node[right] at (M) {$M$};
+\node[below] at (P) {$P$};
+\end{scope}
+\begin{scope}[shift={(5.2,.5)}]
+\draw (0,0) -- (2.6,0) -- (1.3,2.251666) -- cycle;
+\draw[dashed] (1.3,0) -- (1.3,2.251666);
+\node at (-0.35,1.5) {$2$};
+\node at (2.95,1.5) {$2$};
+\node at (0.65,-0.35) {$1$};
+\node at (1.95,-0.35) {$1$};
+
+\end{scope}
+\begin{scope}[shift={(9.1,1.625833)}]
+\draw (0,-1.3) -- (0,1.3) -- (2.251666,0) -- cycle;
+\draw (0,0) -- (2.251666,0);
+\node at (-0.35,0.75) {$1$};
+\node at (-0.35,-0.75) {$1$};
+\node at (1.55,0.95) {$2$};
+\node at (1.55,-0.95) {$2$};
+
+\end{scope}
+\node at (6.5,-.65) {侧视图};
+\node at (10.225833,-.65) {俯视图};
+\end{tikzpicture}

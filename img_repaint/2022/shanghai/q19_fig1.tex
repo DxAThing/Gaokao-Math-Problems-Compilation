@@ -1,0 +1,27 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (A) at (-2.8,0);
+\coordinate (B) at (2.8,0);
+\coordinate (D) at (-3.64,1.4549);
+\coordinate (C) at (3.64,1.4549);
+\coordinate (M) at (0,3.92);
+\coordinate (P) at (1.96,3.3948);
+\coordinate (Q) at (-1.96,3.3948);
+\draw (A)--(O)--(B);
+\draw (A)--(D);
+\draw (B)--(C);
+\draw[dashed] (D)--(C);
+\draw[dashed] (O)--(M);
+\draw (C) arc[start angle=21.7868,end angle=158.2132,radius=3.92cm];
+\draw[dashed] (D)--(Q)--(M)--(P)--(C);
+\node[below left] at (A) {$A$};
+\node[below=2pt,inner sep=0pt] at (O) {$O$};
+\node[below right] at (B) {$B$};
+\node[left] at (D) {$D$};
+\node[right] at (C) {$C$};
+\node[above] at (M) {$M$};
+\node[above right] at (P) {$P$};
+\node[above left] at (Q) {$Q$};
+\fill (O) circle[radius=1.4pt];
+\end{tikzpicture}

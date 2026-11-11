@@ -1,46 +1,29 @@
-% Source: source/普通高考/2026/2026全国2(辽宁,重庆,海南,吉林,黑龙江,山西,云南,广西,甘肃,贵州,新疆,四川,内蒙古,陕西,青海,宁夏,西藏).pdf, page 2.
-% pdfimages -list reports an embedded 1060x522 raster (page 2 image 1),
-% extracted to tmp/repaint_2026_national_paper_2/pdfimages/img-001.png.
-% A 100-pixel grid inspection of that extraction records eight adjacent
-% intervals of width 10: [345,355), [355,365), ..., [415,425), with
-% frequency densities 0.005, 0.010, 0.020, 0.025, 0.015, 0.015, 0.005,
-% 0.005.  Bars share vertical boundaries and are white-filled black outlines;
-% horizontal dashed guides mark 0.005, 0.010, 0.015, 0.020 and 0.025.  The
-% source has a broken x-axis before 345, arrowheads, and labels “频率/组距”
-% and “时间/天”.
-% Dashed guide segments: y=.005 ends at x=345; y=.010 at x=355;
-% y=.015 at x=385; y=.020 at x=365; y=.025 at x=375 (each bar's left edge).
+% 2026_national_paper_2_q15_fig1: frequency histogram, bins [345,355)..[415,425), width 10.
+% Densities: 0.005,0.01,0.02,0.025,0.015,0.015,0.005,0.005; area = 0.1*10 = 1.
 \begin{tikzpicture}
-  \begin{axis}[exam statistical histogram,
-    width=8.55cm,height=4.15cm,
-    xmin=342,xmax=429,ymin=0,ymax=0.029,
-    axis lines=left, axis line style={->},
-    xtick={345,355,365,375,385,395,405,415,425},
-    ytick={0.005,0.010,0.015,0.020,0.025},
-    yticklabels={0.005,0.01,0.015,0.02,0.025},
-    scaled y ticks=false,
-    tick style={black}, tick label style={font=\normalsize},
-    xlabel={}, ylabel={},
-    tick align=outside, clip=false,
-  ]
-    \addplot[ybar interval,draw=black,fill=white,mark=none] coordinates {
-      (345,0.005) (355,0.010) (365,0.020) (375,0.025)
-      (385,0.015) (395,0.015) (405,0.005) (415,0.005) (425,0)
-    };
-    % The source draws each horizontal guide only up to the corresponding
-    % bar's left boundary, rather than across the full plotting region.
-    \draw[dashed,black,line width=.4pt] (axis cs:342,0.005) -- (axis cs:345,0.005);
-    \draw[dashed,black,line width=.4pt] (axis cs:342,0.010) -- (axis cs:355,0.010);
-    \draw[dashed,black,line width=.4pt] (axis cs:342,0.015) -- (axis cs:385,0.015);
-    \draw[dashed,black,line width=.4pt] (axis cs:342,0.020) -- (axis cs:365,0.020);
-    \draw[dashed,black,line width=.4pt] (axis cs:342,0.025) -- (axis cs:375,0.025);
-    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \examstatxlabel{时间/天};
-    % The source marks the axis origin with O.
-    \node[font=\normalsize,anchor=north east] at (axis description cs:0,-0.055) {O};
-    % Broken-axis mark before the first labelled interval.
-    \draw[white,line width=2pt] (axis cs:343.0,0) -- (axis cs:345.0,0);
-    \draw[black,line width=.55pt] (axis cs:343.2,0) -- (axis cs:343.8,0.0018)
-      -- (axis cs:344.4,0) -- (axis cs:345.0,0.0018);
-  \end{axis}
+\begin{axis}[exam statistical template histogram, exam statistical template wide,
+  xmin=335,ymin=0,
+  xtick={335,345,355,365,375,385,395,405,415,425},
+  ytick={0.005,0.01,0.015,0.02,0.025},
+  xmax=430,
+  ymax=0.0275,
+  xticklabels={,345,355,365,375,385,395,405,415,425}]
+
+
+
+
+
+\addplot[draw=black,fill=white] coordinates
+  {(345,0.005) (355,0.01) (365,0.02) (375,0.025) (385,0.015) (395,0.015) (405,0.005) (415,0.005) (425,0)};
+\draw[dashed] (axis cs:335,0.005) -- (axis cs:425,0.005);
+\draw[dashed] (axis cs:335,0.01) -- (axis cs:365,0.01);
+\draw[dashed] (axis cs:335,0.015) -- (axis cs:405,0.015);
+\draw[dashed] (axis cs:335,0.02) -- (axis cs:375,0.02);
+\draw[dashed] (axis cs:335,0.025) -- (axis cs:375,0.025);
+\examstatxbreak{340}{0}
+\examstatylabel{$\frac{\text{频率}}{\text{组距}}$}
+\examstatxlabel{时间/天}
+
+\node[anchor=east,inner sep=0pt,xshift=-4pt] at (current axis.left of origin) {O};
+\end{axis}
 \end{tikzpicture}

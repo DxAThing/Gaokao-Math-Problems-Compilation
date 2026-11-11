@@ -1,0 +1,11 @@
+\begin{tikzpicture}[x=1.85cm,y=1.4cm,line width=.6pt,>=stealth]
+\draw[->] (-1.8,0)--(2.5,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.5)--(0,2.2) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw (-1,0.05)--(-1,-0.05);
+\node[below,inner sep=0pt,yshift=-2pt] at (-1,0) {$-1$};
+\draw (1,0.05)--(1,-0.05);
+\node[above left,inner sep=0pt,xshift=-2pt,yshift=2pt] at (1,0) {$1$};
+\node[above left,inner sep=0pt,xshift=-2pt,yshift=2pt] at (0,0) {$O$};
+\draw[domain=-1.1:1.55,samples=101] plot (\x,{-0.8*\x*(\x-0.8)});
+\draw[domain=0.45:2.3,samples=101] plot (\x,{ln(\x)/ln(2)});
+\end{tikzpicture}

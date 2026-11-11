@@ -1,0 +1,22 @@
+\begin{tikzpicture}[x=0.85cm,y=0.85cm,line width=.6pt,font=\normalsize,>=Stealth,
+  geometry edge/.style={solid,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=0pt}]
+\coordinate (A) at (0.4,4.2);
+\coordinate (O) at (0,0.4);
+\coordinate (B) at (2.6,0.3);
+\coordinate (C) at (-1.1,-0.9);
+\coordinate (D) at (1.5,2.25);
+\draw[geometry edge] (A)--(B);
+\draw[geometry edge] (A)--(C);
+\draw[geometry edge] (B)--(C);
+\draw[geometry edge] (C)--(D);
+\draw[geometry edge,dashed] (A)--(O);
+\draw[geometry edge,dashed] (O)--(B);
+\draw[geometry edge,dashed] (O)--(C);
+\draw[geometry edge,dashed] (O)--(D);
+\node[geometry label,above,yshift=4pt] at (A) {$A$};
+\node[geometry label,below right,xshift=2pt,yshift=-2pt] at (O) {$O$};
+\node[geometry label,right,xshift=4pt] at (B) {$B$};
+\node[geometry label,below left,xshift=-4pt,yshift=-3pt] at (C) {$C$};
+\node[geometry label,above right,xshift=4pt,yshift=2pt] at (D) {$D$};
+\end{tikzpicture}

@@ -1,0 +1,69 @@
+% 复合图: 直观立体图+正视图+侧视图; 仅点修两投影尺寸为共享模板, 立体轮廓/虚实/点名未动, 不补俯视图
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% 直观图: 长方体截一角
+\begin{scope}[shift={(0,3.4)}]
+\coordinate (A) at (0,0);
+\coordinate (B) at (3,0);
+\coordinate (Bp) at (3,2);
+\coordinate (F) at (1,2);
+\coordinate (E) at (0,1);
+\coordinate (G) at (.4,2.35);
+\coordinate (Dp) at (.8,2.7);
+\coordinate (Cp) at (3.8,2.7);
+\coordinate (C) at (3.8,.7);
+\coordinate (D) at (.8,.7);
+\draw (A) -- (B) -- (Bp) -- (F) -- (E) -- cycle;
+\draw (E) -- (G) -- (F);
+\draw (G) -- (Dp) -- (Cp) -- (Bp);
+\draw (Cp) -- (C);
+\draw (B) -- (C);
+\draw[dashed] (A) -- (D) -- (C);
+\draw[dashed] (D) -- (Dp);
+\node[below left] at (A) {$A$};
+\node[below] at (B) {$B$};
+\node[right] at (C) {$C$};
+\node[left] at (D) {$D$};
+\node[above left] at (Dp) {$D'$};
+\node[above right] at (Cp) {$C'$};
+\node[right] at (Bp) {$B'$};
+\node[above] at (F) {$F$};
+\node[left] at (E) {$E$};
+\node[left] at (G) {$G$};
+\end{scope}
+% 正视图: 矩形6x4(绘图x0.5:3x2), 左上截角斜线(0,1)-(1,2)
+\begin{scope}[shift={(6.2,3.4)}]
+\draw (0,0) rectangle (3,2);
+\draw (0,1) -- (1,2);
+% 分段宽2: 内层, 轮廓外5mm
+\draw[dimension extension] (0,2.05) -- (0,2.60);
+\draw[dimension extension] (1,2.05) -- (1,2.60);
+\draw[dimension line] (0,2.5) -- node[dimension label] {$2$} (1,2.5);
+% 总宽6: 外层, 与内层错开
+\draw[dimension extension] (0,2.05) -- (0,2.95);
+\draw[dimension extension] (3,2.05) -- (3,2.95);
+\draw[dimension line] (0,2.85) -- node[dimension label] {$6$} (3,2.85);
+% 右高4: 轮廓外5mm
+\draw[dimension extension] (3.05,0) -- (3.60,0);
+\draw[dimension extension] (3.05,2) -- (3.60,2);
+\draw[dimension line] (3.5,0) -- node[dimension label vertical] {$4$} (3.5,2);
+\node[below] at (1.5,-0.9) {正视图};
+\end{scope}
+% 侧视图: 正方形4x4(绘图x0.5:2x2), 斜线(1,2)-(2,1)
+\begin{scope}[shift={(11.2,3.4)}]
+\draw (0,0) rectangle (2,2);
+\draw (1,2) -- (2,1);
+% 顶宽2: 轮廓外5mm
+\draw[dimension extension] (1,2.05) -- (1,2.60);
+\draw[dimension extension] (2,2.05) -- (2,2.60);
+\draw[dimension line] (1,2.5) -- node[dimension label] {$2$} (2,2.5);
+% 右分段高2: 轮廓外5mm
+\draw[dimension extension] (2.05,1) -- (2.60,1);
+\draw[dimension extension] (2.05,2) -- (2.60,2);
+\draw[dimension line] (2.5,1) -- node[dimension label vertical] {$2$} (2.5,2);
+% 底总宽4: 轮廓外5mm
+\draw[dimension extension] (0,-0.05) -- (0,-0.60);
+\draw[dimension extension] (2,-0.05) -- (2,-0.60);
+\draw[dimension line] (0,-0.5) -- node[dimension label] {$4$} (2,-0.5);
+\node[below] at (1,-0.9) {侧视图};
+\end{scope}
+\end{tikzpicture}

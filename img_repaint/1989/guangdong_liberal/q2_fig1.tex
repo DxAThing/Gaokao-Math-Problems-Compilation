@@ -1,0 +1,29 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% plane beta outline
+\coordinate (P1) at (-3.0,-0.5);
+\coordinate (P2) at (3.2,-0.2);
+\coordinate (P3) at (4.5,1.8);
+\coordinate (P4) at (-1.8,1.5);
+\draw (P1)--(P2)--(P3)--(1.11,1.638571429);
+\draw[dashed] (1.11,1.638571429)--(-0.6763636364,1.553506494);
+\draw (-0.6763636364,1.553506494)--(P4)--(P1);
+\node at (-2.45,-0.25) {$\beta$};
+% points
+\coordinate (S) at (-0.2,2.2);
+\coordinate (A) at (-1.6,0.3);
+\coordinate (C) at (0.8,0.2);
+\coordinate (B) at (2.6,1.0);
+% solid edges
+\draw (S)--(A);
+\draw (S)--(B);
+\draw (S)--(C);
+\draw (A)--(C);
+\draw (B)--(C);
+% hidden edge AB
+\draw[dashed] (A)--(B);
+% labels
+\node[above] at (S) {$S$};
+\node[left] at (A) {$A$};
+\node[below right] at (C) {$C$};
+\node[right] at (B) {$B$};
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+  geometry edge/.style={solid,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=0pt}]
+  \coordinate (M) at (-2,0);
+  \coordinate (N) at (2,0);
+  \coordinate (A) at (1,2.8284271);
+  \coordinate (B) at (4,5.6568542);
+  \coordinate (L1A) at (-2.9,0);
+  \coordinate (L1B) at (5,0);
+  \coordinate (L2A) at (-2,-1);
+  \coordinate (L2B) at (-2,6.2);
+  \draw[geometry edge] (L1A)--(L1B);
+  \draw[geometry edge] (L2A)--(L2B);
+  \draw[geometry edge] (M)--(A);
+  \draw[geometry edge] (A)--(N);
+  \draw[geometry edge] (N)--(B);
+  \draw[geometry edge,domain=1:4,samples=80] plot (\x,{sqrt(8*\x)});
+  \node[geometry label,anchor=north east] at (-2.12,-0.12) {$M$};
+  \node[geometry label,anchor=north] at (1.97,-0.12) {$N$};
+  \node[geometry label,anchor=south east] at (0.82,3) {$A$};
+  \node[geometry label,anchor=south west] at (4.1,5.8) {$B$};
+  \node[geometry label,anchor=west] at (5.08,0.1) {$l_1$};
+  \node[geometry label,anchor=east] at (-2.12,5.95) {$l_2$};
+\end{tikzpicture}

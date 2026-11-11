@@ -1,0 +1,11 @@
+% 2009 Anhui science Q6 option C (correct): y=(x-a)^2(x-b); tangent(double root) at a from below, crosses UP at b, leading coefficient positive
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.37cm,y=0.48cm,line width=.6pt,>=Stealth,font=\normalsize,
+    declare function={fC(\x)=(\x-1)*(\x-1)*(\x-4);}]
+  \draw[->] (-1.00,0)--(4.75,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+  \draw[->] (0,-6.90)--(0,7.40) node[above,inner sep=0pt,yshift=2pt] {$y$};
+  \node[below left,inner sep=0pt,xshift=-1pt,yshift=-1pt] at (0,0) {$O$};
+  \node[below=1.5pt,inner sep=0pt] at (1,0) {$a$};
+  \node[below right,inner sep=0pt,yshift=-1pt] at (4,0) {$b$};
+  \draw[domain=-0.25:4.5,samples=200] plot (\x,{fC(\x)});
+\end{tikzpicture}

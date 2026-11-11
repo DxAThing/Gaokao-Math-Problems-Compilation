@@ -1,93 +1,17 @@
-% Original PDF: source/普通高考/2021/2021全国甲文(云南,广西,贵州,西藏,四川).pdf, page 1.
-% PDF embedded-image attempt: pdfimages -list found no page image objects; source is vector text/paths.
-% Grid evidence: tmp/redraw_2021_national_paper_a_liberal/page_grid100.jpg; final comparison crop from the ungridded page render.
-% Statistical data read from the original frequency-density histogram: unit-width groups
-% [2.5,3.5),...,[13.5,14.5) with heights .02,.04,.10,.14,.20,.20,.10,.10,.04,.02,.02,.02.
-% solid segments: x/y axes, histogram rectangle boundaries, and x-axis break; dashed segments:
-% horizontal reference guides at .02 (to 14.5), .04 (to 11.5), .10 (to 10.5), .14 (to 6.5), .20 (to 8.5).
-% Display mapping compresses the omitted 0--2.5 range to one unit: source
-% boundaries 2.5,...,14.5 are displayed at x=1,...,13; the final ybar point
-% is the right boundary at x=13 with height 0.
-% labels: y tick values left of the y-axis; income ticks below the x-axis; axis titles kept clear of arrows.
-% Relations: each rectangle spans one income interval and its height is frequency/组距; guides meet
-% the corresponding rectangle tops, while the axis break denotes the omitted 0--2.5 income range.
-
+% 2021_national_paper_a_liberal_q2_fig1: histogram, 12 bins width 1.
 \begin{tikzpicture}
-  \begin{axis}[exam statistical histogram,
-    width=16cm,
-    xmin=-0.78, xmax=14.15,
-    ymin=-0.032, ymax=0.235,
-    axis lines=none,
-    ticks=none,
-    x tick label as interval=false,
-    clip=false,
-    every axis plot/.append style={line join=round},
-  ]
-    % Dashed reference guides are behind the white-filled rectangles.
-    \addplot[black, dashed, line width=0.45pt] coordinates {(0,0.02) (13,0.02)};
-    \addplot[black, dashed, line width=0.45pt] coordinates {(0,0.04) (10,0.04)};
-    \addplot[black, dashed, line width=0.45pt] coordinates {(0,0.10) (9,0.10)};
-    \addplot[black, dashed, line width=0.45pt] coordinates {(0,0.14) (5,0.14)};
-    \addplot[black, dashed, line width=0.45pt] coordinates {(0,0.20) (7,0.20)};
-
-    % Twelve unit-width histogram bars, with the final point closing the last interval.
-    \addplot[ybar interval, draw=black, fill=white, line width=0.55pt]
-      coordinates {(1,0.02) (2,0.04) (3,0.10) (4,0.14)
-                   (5,0.20) (6,0.20) (7,0.10) (8,0.10)
-                   (9,0.04) (10,0.02) (11,0.02) (12,0.02)
-                   (13,0)};
-
-    % Coordinate axes and arrowheads.
-    \draw[black, line width=0.65pt, -{Latex[length=2.4pt]}]
-      (axis cs:0,0) -- (axis cs:13.95,0);
-    \draw[black, line width=0.65pt, -{Latex[length=2.4pt]}]
-      (axis cs:0,0) -- (axis cs:0,0.228);
-
-    % The source uses a zig-zag break before the first income interval.
-    \examstatxbreak[black, line width=0.55pt]{0.5}{0};
-
-    % Tick marks and numeric labels.
-    \draw[black, line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.0045);
-    \draw[black, line width=0.45pt] (axis cs:1,0) -- (axis cs:1,-0.0045);
-    \draw[black, line width=0.45pt] (axis cs:2,0) -- (axis cs:2,-0.0045);
-    \draw[black, line width=0.45pt] (axis cs:3,0) -- (axis cs:3,-0.0045);
-    \draw[black, line width=0.45pt] (axis cs:4,0) -- (axis cs:4,-0.0045);
-    \draw[black, line width=0.45pt] (axis cs:5,0) -- (axis cs:5,-0.0045);
-    \draw[black, line width=0.45pt] (axis cs:6,0) -- (axis cs:6,-0.0045);
-    \draw[black, line width=0.45pt] (axis cs:7,0) -- (axis cs:7,-0.0045);
-    \draw[black, line width=0.45pt] (axis cs:8,0) -- (axis cs:8,-0.0045);
-    \draw[black, line width=0.45pt] (axis cs:9,0) -- (axis cs:9,-0.0045);
-    \draw[black, line width=0.45pt] (axis cs:10,0) -- (axis cs:10,-0.0045);
-    \draw[black, line width=0.45pt] (axis cs:11,0) -- (axis cs:11,-0.0045);
-    \draw[black, line width=0.45pt] (axis cs:12,0) -- (axis cs:12,-0.0045);
-    \draw[black, line width=0.45pt] (axis cs:13,0) -- (axis cs:13,-0.0045);
-    \node[font=\normalsize, anchor=east,xshift=-4pt] at (axis cs:-0.130000,-0.006) {0};
-    \node[font=\normalsize, anchor=north,yshift=-2pt] at (axis cs:1,-0.004500) {\text{2.5}};
-    \node[font=\normalsize, anchor=north,yshift=-2pt] at (axis cs:2,-0.004500) {\text{3.5}};
-    \node[font=\normalsize, anchor=north,yshift=-2pt] at (axis cs:3,-0.004500) {\text{4.5}};
-    \node[font=\normalsize, anchor=north,yshift=-2pt] at (axis cs:4,-0.004500) {\text{5.5}};
-    \node[font=\normalsize, anchor=north,yshift=-2pt] at (axis cs:5,-0.004500) {\text{6.5}};
-    \node[font=\normalsize, anchor=north,yshift=-2pt] at (axis cs:6,-0.004500) {\text{7.5}};
-    \node[font=\normalsize, anchor=north,yshift=-2pt] at (axis cs:7,-0.004500) {\text{8.5}};
-    \node[font=\normalsize, anchor=north,yshift=-2pt] at (axis cs:8,-0.004500) {\text{9.5}};
-    \node[font=\normalsize, anchor=north,yshift=-2pt] at (axis cs:9,-0.004500) {\text{10.5}};
-    \node[font=\normalsize, anchor=north,yshift=-2pt] at (axis cs:10,-0.004500) {\text{11.5}};
-    \node[font=\normalsize, anchor=north,yshift=-2pt] at (axis cs:11,-0.004500) {\text{12.5}};
-    \node[font=\normalsize, anchor=north,yshift=-2pt] at (axis cs:12,-0.004500) {\text{13.5}};
-    \node[font=\normalsize, anchor=north,yshift=-2pt] at (axis cs:13,-0.004500) {\text{14.5}};
-
-    \draw[black, line width=0.45pt] (axis cs:0,0.02) -- (axis cs:-0.10,0.02);
-    \draw[black, line width=0.45pt] (axis cs:0,0.04) -- (axis cs:-0.10,0.04);
-    \draw[black, line width=0.45pt] (axis cs:0,0.10) -- (axis cs:-0.10,0.10);
-    \draw[black, line width=0.45pt] (axis cs:0,0.14) -- (axis cs:-0.10,0.14);
-    \draw[black, line width=0.45pt] (axis cs:0,0.20) -- (axis cs:-0.10,0.20);
-    \node[font=\normalsize, anchor=east,xshift=-4pt] at (axis cs:-0.100000,0.02) {0.02};
-    \node[font=\normalsize, anchor=east,xshift=-4pt] at (axis cs:-0.100000,0.04) {0.04};
-    \node[font=\normalsize, anchor=east,xshift=-4pt] at (axis cs:-0.100000,0.10) {0.10};
-    \node[font=\normalsize, anchor=east,xshift=-4pt] at (axis cs:-0.100000,0.14) {0.14};
-    \node[font=\normalsize, anchor=east,xshift=-4pt] at (axis cs:-0.100000,0.20) {0.20};
-
-    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \examstatxlabel{收入/万元};
-  \end{axis}
+\begin{axis}[exam statistical template histogram,exam statistical template wide,
+  xmin=1.5,ymin=0,
+  xtick={1.5,2.5,3.5,4.5,5.5,6.5,7.5,8.5,9.5,10.5,11.5,12.5,13.5,14.5},
+  ytick={0,0.02,0.04,0.10,0.14,0.20},
+  ymajorgrids=true,major grid style={dashed},
+  xmax=15,
+  ymax=0.23,
+  xticklabels={,2.5,3.5,4.5,5.5,6.5,7.5,8.5,9.5,10.5,11.5,12.5,13.5,14.5}]
+\addplot[draw=black,fill=white] coordinates
+  {(2.5,0.02) (3.5,0.04) (4.5,0.10) (5.5,0.14) (6.5,0.20) (7.5,0.20) (8.5,0.10) (9.5,0.10) (10.5,0.04) (11.5,0.02) (12.5,0.02) (13.5,0.02) (14.5,0)};
+\examstatxbreak{2.0}{0}
+\examstatylabel{频率/组距}
+\examstatxlabel{收入/万元}
+\end{axis}
 \end{tikzpicture}

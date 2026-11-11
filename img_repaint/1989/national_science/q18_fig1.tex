@@ -1,0 +1,25 @@
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize]
+\coordinate (O) at (0,2);
+\coordinate (Op) at (0,-1);
+\coordinate (Atop) at (-1.5556349186,2.3181980515);
+\coordinate (Bbot) at (-2.1250368178,-1.1164685703);
+% top rim fully visible
+\draw (0,2) ellipse (2.2 and 0.45);
+% lateral sides
+\draw (-2.2,2) -- (-2.2,-1);
+\draw (2.2,2) -- (2.2,-1);
+% bottom rim: front solid, back dashed
+\draw (-2.2,-1) arc (180:360:2.2 and 0.45);
+\draw[densely dashed] (2.2,-1) arc (0:180:2.2 and 0.45);
+% axis
+\draw[densely dashed] (O) -- (Op);
+\fill (O) circle (1.2pt);
+\fill (Op) circle (1.2pt);
+% skew segment AB
+\draw[densely dashed] (Atop) -- (Bbot);
+% labels
+\node[fill=white,inner sep=1pt,anchor=south east] at ([shift={(-2pt,3pt)}]Atop) {$A$};
+\node[fill=white,inner sep=1pt,anchor=north east] at ([shift={(-2pt,-3pt)}]Bbot) {$B$};
+\node[right=3pt] at (O) {$O$};
+\node[right=3pt] at (Op) {$O'$};
+\end{tikzpicture}

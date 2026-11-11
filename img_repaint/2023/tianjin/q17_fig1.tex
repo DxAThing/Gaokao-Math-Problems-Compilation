@@ -1,0 +1,35 @@
+\begin{tikzpicture}[x=1.3cm,y=1.3cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (-1.6,-1.4);
+\coordinate (C) at (4.0,0);
+\coordinate (M) at (1.2,-0.7);
+\coordinate (N) at (-0.8,-0.7);
+\coordinate (A1) at (0,4);
+\coordinate (C1) at (2,4);
+\coordinate (B1) at (-0.8,3.3);
+% bottom
+\draw (B)--(M)--(C);
+\draw[dashed] (B)--(A);
+\draw[dashed] (A)--(M);
+\draw[dashed] (A)--(C);
+% verticals / sides
+\draw[dashed] (A1)--(A);
+\draw (B)--(B1);
+\draw (C)--(C1);
+% top
+\draw (A1)--(C1);
+\draw (B1)--(C1);
+\draw (B1)--(A1);
+% plane C1MA
+\draw (C1)--(M);
+\draw[dashed] (C1)--(A);
+\node[above left=3pt,inner sep=1pt] at (A) {$A$};
+\node[below left=3pt,inner sep=1pt] at (B) {$B$};
+\node[right=3pt,inner sep=1pt] at (C) {$C$};
+\node[below=3pt,inner sep=1pt] at (M) {$M$};
+\node[left=3pt,inner sep=1pt,xshift=-1pt,yshift=3pt] at (N) {$N$};
+\node[above left=3pt,inner sep=1pt] at (A1) {$A_{1}$};
+\node[left=3pt,inner sep=1pt] at (B1) {$B_{1}$};
+\node[above right=3pt,inner sep=1pt] at (C1) {$C_{1}$};
+\draw[dashed] (A1)--(N);
+\end{tikzpicture}

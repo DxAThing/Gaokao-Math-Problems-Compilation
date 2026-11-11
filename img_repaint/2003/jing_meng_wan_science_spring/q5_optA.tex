@@ -1,0 +1,10 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-3.3,0)--(3.3,0) node[below right] {$x$};
+\draw[->] (0,-2.5)--(0,2.9) node[above left] {$y$};
+\node[above right] at (0.06,0.06) {$O$};
+% horizontal ellipse centred at origin: a>b>0 so 1/a<1/b is NOT this option;
+% this option figure is faithfully the horizontal one from the original PNG
+\draw (0,0) ellipse (1.9 and 0.95);
+% left-opening parabola with vertex at origin: x = -0.45 y^2
+\draw[domain=-2.15:2.15,samples=80] plot ({-0.45*\x*\x},{\x});
+\end{tikzpicture}

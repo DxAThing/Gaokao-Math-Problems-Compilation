@@ -1,0 +1,16 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+  % axes (extend half-unit beyond last marks; labels outside arrow tips)
+  \draw[->] (-3.6,0) -- (4.1,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+  \draw[->] (0,-2.9) -- (0,3.1) node[above,inner sep=0pt,yshift=2pt] {$y$};
+  % dashed asymptotes x = -1 and x = 1
+  \draw[dash pattern=on 3pt off 2.5pt] (-1,-2.9) -- (-1,2.9);
+  \draw[dash pattern=on 3pt off 2.5pt] (1,-2.9) -- (1,2.9);
+  % f(x)=|x|/(x^2-1): three branches from the actual formula
+  \draw[domain=-3.5:-1.19,samples=120] plot (\x,{abs(\x)/((\x)^2-1)});
+  \draw[domain=1.19:3.5,samples=120] plot (\x,{abs(\x)/((\x)^2-1)});
+  \draw[domain=-0.84:0.84,samples=200] plot (\x,{abs(\x)/((\x)^2-1)});
+  % labels (offset from strokes)
+  \node[above left,inner sep=0pt,xshift=-4pt,yshift=3pt] at (0,0) {$O$};
+  \node[below right,inner sep=0pt,xshift=4pt,yshift=-3pt] at (1,0) {$1$};
+\end{tikzpicture}

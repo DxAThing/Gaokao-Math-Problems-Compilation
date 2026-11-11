@@ -1,0 +1,17 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=.36cm,y=4.4cm,line width=.6pt,>=Stealth,font=\normalsize]
+\def\fG{(ln(\x))*(ln(\x))/\x}
+\draw[->] (-.55,0)--(30,0) node[right,inner sep=2pt] {$x$};
+\draw[->] (0,-.16)--(0,1.72) node[above,inner sep=2pt] {$y$};
+\node[below left,inner sep=2pt] at (-.12,-.05) {$O$};
+\draw (1,0)--(1,-.055);
+\node[below,inner sep=2pt] at (1,-.045) {$1$};
+\draw[domain=.45:28,samples=1600] plot (\x,{\fG});
+\draw[dashed] (0,.5413411329)--(7.389,.5413411329);
+\draw[dashed] (7.389,0)--(7.389,.5413411329);
+\draw (.1,.43)--(28,.43);
+\node[left,inner sep=2pt] at (-.08,.5413) {$\dfrac{4}{\mathrm{e}^2}$};
+\node[anchor=north,inner sep=0pt,yshift=-2pt] at (7.389,0) {$\mathrm{e}^2$};
+\node[anchor=west,inner sep=0pt,xshift=3pt] at (.5,.960906028) {$y=g(x)$};
+\node[above,inner sep=2pt] at (24,.43) {$y=a$};
+\end{tikzpicture}

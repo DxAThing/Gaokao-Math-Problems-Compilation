@@ -1,0 +1,44 @@
+% 1992 Shanghai Q24 solution figure: single cone with M,O,H,C,Q,P
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,
+  solid edge/.style={solid,line width=.6pt},
+  hidden edge/.style={dashed,line width=.6pt},
+  ptlabel/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (S) at (0.0000000000,3.0000000000);
+\coordinate (O) at (0,0.6);
+\coordinate (A) at (-2.4,0.6);
+\coordinate (B) at (2.4,0.6);
+\coordinate (Q) at (-1.2000000000,-0.2660254038);
+\coordinate (M) at (-1.2000000000,0.6000000000);
+\coordinate (C) at (0.6000000000,0.1669872981);
+\coordinate (H) at (0.4800000000,0.7335898385);
+\coordinate (P) at (0.6000000000,2.4000000000);
+% base
+\coordinate (TL) at (-2.1817424229,1.0166666667);
+\coordinate (TR) at (2.1817424229,1.0166666667);
+\draw[solid edge] (TL) arc (155.3756816478:384.6243183522:2.4 and 1.0);
+\draw[hidden edge] (TL) arc (155.3756816478:24.6243183522:2.4 and 1.0);
+\draw[hidden edge] (A)--(B);
+\draw[hidden edge] (S)--(O);
+\draw[solid edge] (S)--(TL) (S)--(TR);
+\draw[solid edge] (S)--(B);
+\draw[solid edge] (S)--(Q);
+\draw[hidden edge] (O)--(Q);
+\draw[hidden edge] (Q)--(B);
+\draw[hidden edge] (M)--(Q);
+\draw[hidden edge] (S)--(C);
+\draw[hidden edge] (O)--(C);
+\draw[hidden edge] (O)--(H);
+\draw[hidden edge] (M)--(P);
+\draw[hidden edge] (Q)--(P);
+
+\node[ptlabel,above,yshift=4pt] at (S) {$S$};
+\node[ptlabel,left,xshift=-5pt] at (A) {$A$};
+\node[ptlabel,right,xshift=5pt] at (B) {$B$};
+\node[ptlabel,below left,xshift=6pt,yshift=-3pt] at (O) {$O$};
+\node[ptlabel,below,yshift=-4pt] at (Q) {$Q$};
+\node[ptlabel,above left,xshift=-3pt,yshift=3pt] at (M) {$M$};
+\node[ptlabel,below,xshift=1pt,yshift=-1pt] at (C) {$C$};
+\node[ptlabel,above right,xshift=4pt,yshift=3pt] at (H) {$H$};
+\node[ptlabel,right,xshift=9pt,yshift=3pt] at (P) {$P$};
+% H lies on SC; O-H segment visible off AB
+\end{tikzpicture}

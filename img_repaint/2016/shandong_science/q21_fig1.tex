@@ -1,0 +1,33 @@
+\begin{tikzpicture}[x=2.8cm,y=2.8cm,line width=.6pt,font=\normalsize,>=Stealth]
+% ellipse x^2+4y^2=1 from formula (exact)
+\draw[domain=0:360,samples=240,smooth] plot ({cos(\x)},{0.5*sin(\x)});
+% parabola x^2=2y, i.e. y=x^2/2 (exact)
+\draw[domain=-1.5:1.5,samples=160,smooth] plot ({\x},{\x*\x/2});
+% axes
+\draw[->] (-1.6,0)--(1.6,0) node[right,xshift=2.0pt] {$x$};
+\draw[->] (0,-1.1)--(0,1.15) node[above,yshift=3.0pt] {$y$};
+\coordinate (O) at (0,0);
+\coordinate (F) at (0,0.5);
+\coordinate (P) at (0.7,0.245);
+\coordinate (A) at (0.7889229503,0.3072460652);
+\coordinate (B) at (-0.3254094368,-0.4727866058);
+\coordinate (D) at (0.2317567568,-0.0827702703);
+\coordinate (G) at (0,-0.245);
+\coordinate (M) at (0.7000000000,-0.2500000000);
+% tangent line l: y=t x-t^2/2, t=0.7 (exact)
+\draw (-.85,-.84)--(1.35,.70);
+% vertical line x=t through P and M
+\draw (.7,1.1)--(.7,-.95);
+% segments F-P and O-D-M
+\draw (F)--(P);
+\draw (O)--(M);
+\node[left,xshift=-4pt,yshift=6pt] at (F) {$F$};
+\node[left,xshift=-4pt,yshift=8pt] at (O) {$O$};
+\node[left,xshift=-3pt] at (G) {$G$};
+\node[below right=2pt] at (P) {$P$};
+\node[below=2pt] at (D) {$D$};
+\node[right,xshift=6pt,yshift=0pt] at (A) {$A$};
+\node[right,xshift=4pt,yshift=-10pt] at (M) {$M$};
+\node[below left,xshift=0pt,yshift=-6pt] at (B) {$B$};
+\node[right,xshift=3pt] at (1.35,0.70) {$l$};
+\end{tikzpicture}

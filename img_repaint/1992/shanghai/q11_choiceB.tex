@@ -1,0 +1,12 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-1.6,0)--(1.9,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-0.6)--(0,2.3) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw[line width=.6pt] (-0.06,1)--(0.06,1);
+\draw[line width=.6pt] (1,-0.06)--(1,0.06);
+\draw[domain=-1.6:1.6,samples=151] plot (\x,{pow(0.6,\x)});
+\draw[domain=-1.2:1.5,samples=101] plot (\x,{1.2*\x*\x});
+\node[below left,inner sep=0pt,xshift=-3pt,yshift=-3pt] at (0,0) {$O$};
+\node[left,inner sep=0pt,xshift=-6pt] at (0,1) {$1$};
+\node[below,inner sep=0pt,yshift=-4pt] at (1,0) {$1$};
+\end{tikzpicture}

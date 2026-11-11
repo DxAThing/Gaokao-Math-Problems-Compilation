@@ -1,0 +1,55 @@
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize]
+\tikzset{hid/.style={dashed}, rod/.style={line width=1.1pt, dashed}, wtr/.style={fill=gray!18, draw=black, line width=0.6pt}, lbl/.style={font=\normalsize, fill=white, inner sep=1.5pt}}
+% container I (left)
+\begin{scope}[shift={(0,0)}]
+\coordinate (A) at (0,0); \coordinate (B) at (2.1,0); \coordinate (C) at (2.9,0.7); \coordinate (D) at (0.8,0.7);
+\coordinate (A1) at (0,3.6); \coordinate (B1) at (2.1,3.6); \coordinate (C1) at (2.9,4.3); \coordinate (D1) at (0.8,4.3);
+\coordinate (W1) at (0.0000000000,1.3500000000); \coordinate (W2) at (2.1000000000,1.3500000000); \coordinate (W3) at (2.9000000000,2.0500000000); \coordinate (W4) at (0.8000000000,2.0500000000);
+\fill[gray!18] (W1)--(W2)--(W3)--(W4)--cycle;
+\draw (W1)--(W2)--(W3) (W1)--(W4);
+\draw[hid] (W4)--(W3);
+\draw (A)--(B)--(C) (A)--(A1) (B)--(B1) (C)--(C1);
+\draw[hid] (A)--(D) (C)--(D) (D)--(D1);
+\draw[hid] (A)--(C);
+\draw (A1)--(B1)--(C1)--(D1)--cycle;
+\draw[rod] (A)--(C1);
+\node[lbl, below left=3pt] at (A) {$A$};
+\node[lbl, below=3pt] at (B) {$B$};
+\node[lbl, right=3pt] at (C) {$C$};
+\node[lbl, below=2pt] at (D) {$D$};
+\node[lbl, left=3pt] at (A1) {$A_{1}$};
+\node[lbl, above=1pt] at (B1) {$B_{1}$};
+\node[lbl, above right=2pt] at (C1) {$C_{1}$};
+\node[lbl, above left=2pt] at (D1) {$D_{1}$};
+\node[lbl] at (1.45,-0.85) {容器 I};
+\end{scope}
+% container II (right)
+\begin{scope}[shift={(7.0,0)}]
+\coordinate (E) at (0,0); \coordinate (F) at (1.3,0); \coordinate (G) at (2.0,0.45); \coordinate (H) at (0.7,0.45);
+\coordinate (E1) at (-3.4285714286,2.3285714286); \coordinate (F1) at (2.3285714286,2.3285714286); \coordinate (G1) at (5.4285714286,4.3214285714); \coordinate (H1) at (-0.3285714286,4.3214285714);
+\coordinate (O) at (1.0000000000,0.2250000000); \coordinate (O1) at (1.0000000000,3.3250000000);
+\coordinate (X1) at (-1.2857142857,0.8732142857); \coordinate (X2) at (1.6857142857,0.8732142857); \coordinate (X3) at (3.2857142857,1.9017857143); \coordinate (X4) at (0.3142857143,1.9017857143);
+\fill[gray!18] (X1)--(X2)--(X3)--(X4)--cycle;
+\draw (X1)--(X2)--(X3) (X1)--(X4);
+\draw[hid] (X4)--(X3);
+\draw (E)--(F)--(G) (E)--(E1) (F)--(F1) (G)--(G1);
+\draw[hid] (E)--(H) (G)--(H) (H)--(H1);
+\draw[hid] (E)--(G);
+\draw (E1)--(F1)--(G1)--(H1)--cycle;
+\draw (E1)--(G1);
+
+\draw[hid] (O)--(O1);
+\draw[rod] (E)--(G1);
+\node[lbl, below left=3pt] at (E) {$E$};
+\node[lbl, below=3pt] at (F) {$F$};
+\node[lbl, right=3pt] at (G) {$G$};
+\node[lbl, below=2pt] at (H) {$H$};
+\node[lbl, left=3pt] at (E1) {$E_{1}$};
+\node[lbl, above=1pt] at (F1) {$F_{1}$};
+\node[lbl, above right=2pt] at (G1) {$G_{1}$};
+\node[lbl, above left=2pt] at (H1) {$H_{1}$};
+\node[lbl, right=3pt] at (O) {$O$};
+\node[lbl, left=3pt] at (O1) {$O_{1}$};
+\node[lbl] at (1.5,-0.85) {容器 II};
+\end{scope}
+\end{tikzpicture}

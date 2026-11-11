@@ -1,0 +1,13 @@
+% 1994 旧科目组 Q12 option (D): fourth-quadrant arc of circle x^{2}+(y+1)^{2}=1, from (0,0) to (1,-1)
+% source: 1994_old_subject_liberal_q12_optD ; 12pt / 0.6pt / grayscale, global numeric coordinates
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.4cm,y=1.4cm,line width=.6pt]
+\draw[-{Stealth}] (-1.7,0)--(1.7,0) node[right,inner sep=2pt] {$x$};
+\draw[-{Stealth}] (0,-1.7)--(0,1.7) node[above,inner sep=2pt] {$y$};
+\node[below left,inner sep=2pt] at (0,0) {$O$};
+\draw[line width=.9pt,domain=0:1,samples=121] plot (\x,{-1+sqrt(1-\x*\x)});
+\draw[dashed] (0,-1)--(1,-1);
+\draw[dashed] (1,0)--(1,-1);
+\node[above,inner sep=2pt] at (1,0) {$1$};
+\node[left,inner sep=2pt] at (0,-1) {$-1$};
+\end{tikzpicture}

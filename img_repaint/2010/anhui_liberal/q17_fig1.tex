@@ -1,0 +1,19 @@
+% 2010 安徽文 17题 图1 : 椭圆 x^2/16+y^2/12=1, 焦点 F1(-2,0), F2(2,0), 点 A(2,3)
+% AF1, AF2(=竖直线) 及 ∠F1AF2 角平分线所在直线 y=2x-1 交椭圆于 A 与下左点
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth]
+\draw[->] (-5,0)--(4.85,0) node[below right,inner sep=2pt] {$x$};
+\draw[->] (0,-4)--(0,3.8) node[above left,inner sep=2pt] {$y$};
+\node[below left,inner sep=1.5pt] at (0,0) {$O$};
+\draw[line width=1pt] (0,0) ellipse [x radius=4.0, y radius=3.464102];
+\coordinate (A) at (2,3);
+\coordinate (F1) at (-2,0);
+\coordinate (F2) at (2,0);
+\coordinate (Q) at (-1.157895,-3.315789);
+\draw (A)--(F1);
+\draw (A)--(F2);
+\draw (A)--(Q);
+\node[above right,inner sep=1.5pt] at (A) {$A$};
+\node[below,inner sep=1.5pt] at (F1) {$F_1$};
+\node[below,inner sep=1.5pt] at (F2) {$F_2$};
+\end{tikzpicture}

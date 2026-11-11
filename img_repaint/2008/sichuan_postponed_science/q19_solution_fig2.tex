@@ -1,0 +1,25 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (D) at (1.8,1.6);
+\coordinate (A) at (0,1);
+\coordinate (B) at (3,0.8);
+\coordinate (C) at (1.6,3.4);
+\coordinate (C0) at (4.8,1.4);
+% axes D-xyz
+\draw[->] (A)--($(D)!1.35!(A)$) node[anchor=north east,inner sep=2pt,xshift=-2pt] {$x$};
+\draw[->] (B)--($(D)!1.65!(B)$) node[anchor=north west,inner sep=2pt] {$y$};
+\draw[->] (D)--(1.8,4.6) node[anchor=west,inner sep=2pt,xshift=3pt] {$z$};
+% tetra edges
+\draw[dashed] (D)--(A); \draw[dashed] (D)--(B);
+\draw (A)--(B);
+\draw (C)--(A); \draw (C)--(B); \draw (C)--(D);
+\draw (B)--(C0); \draw (C)--(C0);
+\draw[dashed] (D)--(C0);
+\foreach \p in {A,B,D,C,C0} {\fill (\p) circle (1.6pt);}
+\node[anchor=north east,inner sep=2pt,yshift=-4pt] at (A) {$A$};
+\node[anchor=north,inner sep=2pt,yshift=-3pt] at (B) {$B$};
+\node[anchor=south east,inner sep=2pt,xshift=-4pt,yshift=3pt] at (D) {$D$};
+\node[anchor=east,inner sep=2pt,xshift=-5pt] at (C) {$C$};
+\node[anchor=west,inner sep=2pt,xshift=4pt] at (C0) {$C_{0}$};
+\end{tikzpicture}
+

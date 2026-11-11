@@ -1,0 +1,28 @@
+\usetikzlibrary{calc,arrows.meta,patterns,angles,quotes}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (O) at (0.0000000000,0.0000000000);
+\coordinate (P) at (0.8909545443,-6.2366818101);
+\coordinate (Pp) at (-0.2969848481,-5.0487424177);
+\draw[->] (-2.8,0)--(2,0) node[right=2pt] {$x$};
+\draw[->] (0,-1.5)--(0,2.3) node[above=2pt] {$y$};
+\draw (-3.8,-1.8)..controls(-2.2,-1.2) and(-.8,-.5)..(0,0)..controls(.5,.8) and(1.1,1.6)..(1.4,2.3);
+\node[above=2pt,inner sep=0pt] at (-2.3,-.75) {海岸线};
+\draw (O)--(P);
+\draw[dashed] (P) circle[radius=1.2600000000cm];
+\draw (Pp) circle[radius=2.1000000000cm];
+\draw (P)--(Pp);
+\draw (-0.5090454557,-6.2366818101)--(P);
+\draw (-2.3969848481,-5.0487424177)--(Pp) node[midway,below=2pt,inner sep=0pt] {$r(t)$};
+\node[above left=2pt,inner sep=0pt] at (O) {$O$};
+\node[below right=2pt,inner sep=0pt] at (P) {$P$};
+\node[above=2pt,inner sep=0pt] at (Pp) {$P'$};
+\draw (0.0777817459,-0.5444722215) arc[start angle=-81.8698976458,end angle=0.0000000000,radius=0.5500000000cm];
+\node at (0.6421358617,-0.5569214802) {$\theta$};
+\draw (0.5020458146,-5.8477730804) arc[start angle=135.0000000000,end angle=180.0000000000,radius=0.5500000000cm];
+\node at (0.1056569417,-5.9114008926) {$45^{\circ}$};
+\draw[->] (2.9,2)--(2.9,2.55) node[above=2pt] {北};\draw[->] (2.9,2)--(3.45,2) node[right=2pt] {东};
+
+% Explicit named circle-center points, painted after all region fills.
+\fill (P) circle[radius=1.4pt];
+\fill (Pp) circle[radius=1.4pt];
+\end{tikzpicture}

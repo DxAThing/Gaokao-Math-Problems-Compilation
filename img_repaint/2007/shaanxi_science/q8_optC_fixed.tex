@@ -1,0 +1,23 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth]
+\coordinate (O) at (0,0);
+\coordinate (X1) at (1,0);
+\coordinate (X2) at (2,0);
+\coordinate (Y1) at (0,1);
+\coordinate (Y2) at (0,2);
+\draw[->] (-1.5,0)--(4.5,0);
+\draw[->] (0,-1.5)--(0,4.0);
+\draw[domain=-0.5:1.5,samples=121] plot (\x,{pow(2,\x)});
+\draw[domain=1.5:3.82,samples=161] plot (\x,{ln(\x-1)/ln(2)});
+\draw (1,0)--(1,0.08);
+\draw (2,0)--(2,0.08);
+\draw (-0.08,1)--(0,1);
+\draw (-0.08,2)--(0,2);
+\node[below left,inner sep=0pt,xshift=-1pt,yshift=-3pt] at (O) {$O$};
+\node[below,inner sep=0pt,yshift=-3pt] at (X1) {$1$};
+\node[below,inner sep=0pt,xshift=3pt,yshift=-3pt] at (X2) {$2$};
+\node[left,inner sep=0pt,xshift=-3pt,yshift=4pt] at (Y1) {$1$};
+\node[left,inner sep=0pt,xshift=-3pt] at (Y2) {$2$};
+\node[anchor=west,inner sep=0pt,xshift=4pt] at (4.5,0) {$x$};
+\node[anchor=south,inner sep=0pt,yshift=3pt] at (0,4.0) {$y$};
+\end{tikzpicture}

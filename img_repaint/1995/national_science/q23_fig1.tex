@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,
+  geometry edge/.style={solid,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (D) at (0,4);
+\coordinate (C) at (4,4);
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (E) at (2,-0.35);
+\coordinate (F) at (1.16,1.48);
+\draw[geometry edge] (D)--(C);
+\draw[geometry edge] (D)--(A);
+\draw[geometry edge] (C)--(B);
+\draw[geometry edge] (2,4) ellipse (2 and 0.35);
+\draw[geometry edge] (2,0) ++(-2,0) arc (180:360:2 and 0.35);
+\draw[geometry edge,dashed] (2,0) ++(2,0) arc (0:180:2 and 0.35);
+\draw[geometry edge,dashed] (A)--(B);
+\draw[geometry edge,dashed] (D)--(B);
+\draw[geometry edge,dashed] (D)--(F)--(E);
+\draw[geometry edge,dashed] (A)--(F);
+\draw[geometry edge,dashed] (A)--(E)--(B);
+\node[geometry label,left] at (D) {$D$};
+\node[geometry label,right] at (C) {$C$};
+\node[geometry label,left] at (A) {$A$};
+\node[geometry label,right] at (B) {$B$};
+\node[geometry label,below] at (E) {$E$};
+\node[geometry label,above right] at (F) {$F$};
+\end{tikzpicture}

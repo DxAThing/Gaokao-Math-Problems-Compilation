@@ -1,0 +1,20 @@
+\begin{tikzpicture}[x=0.85cm,y=0.85cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-1.6,0) -- (6.8,0) node[right] {$x$};
+\draw[->] (0,-0.3) -- (0,4.6) node[above] {$y$};
+\node[below left=2pt] at (0,0) {$O$};
+% vertical reference x=m (exact vertical, schematic position m=1.5)
+\draw[dashed] (1.5,-0.3) -- (1.5,4.4);
+\node[below=3pt] at (1.5,-0.3) {$x=m$};
+% curves generated from true formulas, clipped to panel
+\begin{scope}
+\clip (-1.6,-0.3) rectangle (6.4,4.4);
+\draw[domain=-1.6:4.34861457149766837503523749935,samples=120] plot (\x,{pow(2,\x-2)});
+\draw[domain=-1.6:4.348614571497668,samples=120] plot (\x,{pow(3,\x-3)});
+\draw[domain=-1.6:5.9205726604783715,samples=120] plot (\x,{pow(5,\x-5)});
+\end{scope}
+% labels near curve tops, offset from strokes (west of curve, clear of x=m)
+\node[above left=3pt,font=\small] at (3.8,{pow(2,1.8)}) {$y=2^{x-2}$};
+\node[right=3pt,font=\small] at (3,1) {$y=3^{x-3}$};
+\node[right=3pt,font=\small] at ({5+ln(2)/ln(5)},2) {$y=5^{x-5}$};
+\end{tikzpicture}

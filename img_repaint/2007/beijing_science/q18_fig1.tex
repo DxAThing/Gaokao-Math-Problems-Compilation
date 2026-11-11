@@ -1,0 +1,14 @@
+% activity counts bar with auxiliary dashed guides from y-axis to bar tops.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template bar,
+  xtick={1,2,3},xticklabels={1,2,3},xmin=0,xmax=3.5,
+  ymin=0,ymax=55,ytick={0,10,20,30,40,50},
+  enlarge x limits=0.25]
+\addplot[draw=black,fill=gray!20] coordinates {(1,10) (2,50) (3,40)};
+\draw[dashed] (axis cs:0,10) -- (axis cs:1,10);
+\draw[dashed] (axis cs:0,50) -- (axis cs:2,50);
+\draw[dashed] (axis cs:0,40) -- (axis cs:3,40);
+\examstatylabel{参加人数}
+\examstatxlabel{活动次数}
+\end{axis}
+\end{tikzpicture}

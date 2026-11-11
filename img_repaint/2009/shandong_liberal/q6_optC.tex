@@ -1,0 +1,13 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=0.85cm,y=0.85cm,line width=.6pt,>=Stealth]
+\draw[->] (-4.90,0)--(4.90,0) node[right=2pt,inner sep=0pt] {$x$};
+\draw[->] (0,-3.90)--(0,4.50) node[above=2pt,inner sep=0pt] {$y$};
+\draw plot[domain=0.001:4.00,samples=101] (\x,{sqrt(\x)});
+\draw plot[domain=-4.00:-0.001,samples=101] (\x,{-sqrt(-\x)});
+\draw[fill=white] (0,0) circle (2pt);
+\draw (1,0)--(1,0.18);
+\draw (0,1)--(0.15,1);
+\node[below=3pt,inner sep=0pt] at (1,0) {$1$};
+\node[left=3pt,inner sep=0pt] at (0,1) {$1$};
+\node[anchor=north east,inner sep=0pt] at (-0.45,-0.15) {$O$};
+\end{tikzpicture}

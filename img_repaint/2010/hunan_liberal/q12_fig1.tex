@@ -1,20 +1,22 @@
-\begin{tikzpicture}[>=Stealth,line width=.55pt,line cap=round,line join=round,
-  every node/.style={font=\normalsize,anchor=center,align=center,execute at begin node={\setlength{\parindent}{0pt}\noindent}},
-  flowbox/.style={draw,minimum height=.70cm,inner xsep=4pt,inner ysep=2pt},
-  terminal/.style={flowbox,rounded corners=.18cm,minimum width=1.5cm,minimum height=.76cm},
-  io/.style={flowbox,shape=trapezium,trapezium left angle=72,trapezium right angle=108,minimum height=.82cm},
-  decision/.style={flowbox,shape=diamond,aspect=2.75,inner sep=2pt},flowarrow/.style={->,line width=.55pt}]
-  \node[terminal] (start) at (0,8.8) {开始};
-  \node[io,minimum width=3.1cm] (input) at (0,7.25) {输入 $x$};
-  \node[decision,minimum width=4.5cm,minimum height=1.05cm] (test) at (0,5.55) {\textcircled{1}};
-  \node[io,minimum width=3.1cm] (outx) at (0,3.75) {输出 $x$};
-  \node[io,minimum width=3.6cm] (outneg) at (4.6,3.75) {输出 $-x$};
-  \node[terminal] (finish) at (0,1.95) {结束};
-  \draw[flowarrow] (start.south)--(input.north);
-  \draw[flowarrow] (input.south)--(test.north);
-  \draw[flowarrow] (test.south)--node[right=3pt]{是}(outx.north);
-  \draw[flowarrow] (outx.south)--(finish.north);
-  \draw[flowarrow] (test.east)--node[above=2pt]{否} (4.6,5.55)--(outneg.north);
-  \draw[flowarrow] (outneg.south)--(4.6,2.65)--(0,2.65);
-  \path[use as bounding box] (-2.5,1.5) rectangle (6.7,9.2);
+\begin{tikzpicture}[x=1cm,y=1cm,
+  every node/.append style={align=center},
+  execute at begin node={\setlength{\parindent}{0pt}},
+  flowterm/.style={draw,line width=0.6pt,shape=rectangle,rounded corners=1.5mm,minimum width=26mm,minimum height=10mm,inner xsep=3mm,inner ysep=1.5mm},
+  flowdec/.style={draw,line width=0.6pt,diamond,aspect=2.6,minimum width=40mm,minimum height=15mm,inner sep=1mm},
+  flowio/.style={draw,line width=0.6pt,trapezium,trapezium left angle=68,trapezium right angle=112,minimum width=36mm,minimum height=10mm,inner sep=2mm},
+  flowarr/.style={->,line width=0.6pt,>=Stealth},
+  flowlab/.style={font=\normalsize,fill=white,inner sep=1.5pt}]
+  \node[flowterm] (start) at (0,0) {开始};
+  \node[flowio] (n_in) at (0,-1.9) {输入 $x$};
+  \node[flowdec] (d1) at (0,-3.9) {\textcircled{1}};
+  \node[flowio] (n_y) at (0,-6.0) {输出 $x$};
+  \node[flowterm] (end) at (0,-8.1) {结束};
+  \node[flowio] (n_b) at (4.6,-6.0) {输出 $-x$};
+  \coordinate (J1) at (0,-7.05);
+  \draw[flowarr] (start.south) -- (n_in.north);
+  \draw[flowarr] (n_in.south) -- (d1.north);
+  \draw[flowarr] (d1.south) -- node[flowlab,right=2mm] {是} (n_y.north);
+  \draw[flowarr] (n_y.south) -- (end.north);
+  \draw[flowarr] (d1.east) -- node[flowlab,above=2mm,pos=0.2] {否} (4.6,-3.9) -- (n_b.north);
+  \draw[flowarr] (n_b.south) |- (J1);
 \end{tikzpicture}

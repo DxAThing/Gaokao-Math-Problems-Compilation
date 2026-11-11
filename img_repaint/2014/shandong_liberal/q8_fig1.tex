@@ -1,53 +1,24 @@
-% 统计图数据来自 2014 山东文科卷第 8 题题干及原始 PDF：
-% 五个组距均为 1，频率/组距依次为 0.24, 0.16, 0.36, 0.16, 0.08。
-% solid bars: [12,13), [13,14), [14,15), [15,16), [16,17].
-% dashed guides: y=0.08, 0.16, 0.24, 0.36; x-axis is broken between 0 and 12.
+% 2014山东文Q8: frequency histogram, bins [12,13)..[16,17], width 1.
 \begin{tikzpicture}
-    \begin{axis}[exam statistical histogram,
-        width=8.4cm,
-        height=5.4cm,
-        xmin=0,
-        xmax=7.35,
-        ymin=0,
-        ymax=0.42,
-        axis lines=left,
-        axis line style={-Stealth, line width=0.45pt},
-        xtick=\empty,
-        clip=false,
-        ytick={0.08,0.16,0.24,0.36},
-        yticklabels={0.08,0.16,0.24,0.36},
-        ytick style={draw=none},
-        yticklabel style={font=\normalsize, anchor=east, xshift=-2pt},
-        x axis line style={-Stealth},
-        y axis line style={-Stealth},
-    ]
-    \examstatxlabel{舒张压/kPa};
-        % Source horizontal guides terminate at the matching bar boundary.
-        \draw[dashed, line width=0.35pt] (axis cs:0,0.08) -- (axis cs:5,0.08);
-        \draw[dashed, line width=0.35pt] (axis cs:0,0.16) -- (axis cs:3,0.16);
-        \draw[dashed, line width=0.35pt] (axis cs:0,0.24) -- (axis cs:1,0.24);
-        \draw[dashed, line width=0.35pt] (axis cs:0,0.36) -- (axis cs:3,0.36);
+\begin{axis}[exam statistical template histogram,
+  xmin=11,ymin=0,ymax=0.42,
+  xtick={11,12,13,14,15,16,17},
+  ytick={0,0.08,0.16,0.24,0.36},
+  yticklabels={0,0.08,0.16,0.24,0.36},
+  xmax=17.5,
+  xticklabels={,12,13,14,15,16,17}]
 
-        % Broken x-axis leaves the long interval from 0 to 12 implicit.
-        \examstatxbreak[black, line width=0.6pt]{0.43000000000000005}{0};
 
-        % Histogram bars use the five frequencies read from the source chart.
-        \addplot[/tikz/ybar interval,mark=none,black, line width=0.45pt, fill=white] coordinates {
-          (1,0.24)
-          (2,0.16)
-          (3,0.36)
-          (4,0.16)
-          (5,0.08)
-          (6,0)
-        };
 
-        \node[font=\normalsize, anchor=north,yshift=-4pt] at (axis cs:0,0.000000) {0};
-        \node[font=\normalsize, anchor=north,yshift=-4pt] at (axis cs:1,0.000000) {12};
-        \node[font=\normalsize, anchor=north,yshift=-4pt] at (axis cs:2,0.000000) {13};
-        \node[font=\normalsize, anchor=north,yshift=-4pt] at (axis cs:3,0.000000) {14};
-        \node[font=\normalsize, anchor=north,yshift=-4pt] at (axis cs:4,0.000000) {15};
-        \node[font=\normalsize, anchor=north,yshift=-4pt] at (axis cs:5,0.000000) {16};
-        \node[font=\normalsize, anchor=north,yshift=-4pt] at (axis cs:6,0.000000) {17};
-        \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \end{axis}
+
+\addplot[draw=black,fill=white] coordinates
+  {(12,0.24) (13,0.16) (14,0.36) (15,0.16) (16,0.08) (17,0)};
+\draw[dashed] (axis cs:11,0.36) -- (axis cs:14,0.36);
+\draw[dashed] (axis cs:11,0.24) -- (axis cs:12,0.24);
+\draw[dashed] (axis cs:11,0.16) -- (axis cs:15,0.16);
+\draw[dashed] (axis cs:11,0.08) -- (axis cs:16,0.08);
+\examstatxbreak{11.5}{0}
+\examstatylabel{$\frac{\text{频率}}{\text{组距}}$}
+\examstatxlabel{舒张压/kPa}
+\end{axis}
 \end{tikzpicture}

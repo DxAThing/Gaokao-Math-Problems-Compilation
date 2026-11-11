@@ -1,0 +1,13 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-1.8,0)--(2.1,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.7)--(0,2.2) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw[line width=.6pt] (-0.06,1)--(0.06,1);
+\draw[line width=.6pt] (1,-0.06)--(1,0.06);
+\draw (-1.6,-0.6)--(1.0,2.0);
+\draw[domain=0.35:1.8,samples=101] plot (\x,{ln(\x)/ln(2)});
+\fill (1.0,2.0) circle (1.4pt);
+\node[below left,inner sep=0pt,xshift=-3pt,yshift=-3pt] at (0,0) {$O$};
+\node[left,inner sep=0pt,xshift=-6pt] at (0,1) {$1$};
+\node[below,inner sep=0pt,yshift=-4pt] at (1,0) {$1$};
+\end{tikzpicture}

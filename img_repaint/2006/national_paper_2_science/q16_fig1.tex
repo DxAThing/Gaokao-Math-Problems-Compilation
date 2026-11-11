@@ -1,2 +1,27 @@
-% Canonical statistical figure: img_repaint/2006/national_paper_2_liberal/q16_fig1.tex
-\input{img_repaint/2006/national_paper_2_liberal/q16_fig1.tex}
+% 2006 National Paper 2 science Q16: frequency/width histogram of月收入(元).
+% Bins of width 500 from 1000 to 4000; all densities labeled in original.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,
+  xmin=500,ymin=0,
+  xtick={500,1000,1500,2000,2500,3000,3500,4000},
+  ytick={0,0.0001,0.0002,0.0003,0.0004,0.0005},
+  xmax=4250,
+  ymax=0.00055,
+  xticklabels={,1000,1500,2000,2500,3000,3500,4000}]
+
+
+
+
+
+\addplot[draw=black,fill=white] coordinates
+  {(1000,0.0002) (1500,0.0004) (2000,0.0005) (2500,0.0005) (3000,0.0003) (3500,0.0001) (4000,0)};
+\draw[densely dashed] (axis cs:500,0.0002) -- (axis cs:1000,0.0002);
+\draw[densely dashed] (axis cs:500,0.0004) -- (axis cs:1500,0.0004);
+\draw[densely dashed] (axis cs:500,0.0005) -- (axis cs:2000,0.0005);
+\draw[densely dashed] (axis cs:500,0.0003) -- (axis cs:3000,0.0003);
+\draw[densely dashed] (axis cs:500,0.0001) -- (axis cs:3500,0.0001);
+\examstatxbreak{750}{0}
+\examstatylabel{频率/组距}
+\examstatxlabel{月收入(元)}
+\end{axis}
+\end{tikzpicture}

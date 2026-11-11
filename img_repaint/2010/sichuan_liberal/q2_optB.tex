@@ -1,0 +1,14 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (Xtip) at (4,0);
+\coordinate (Ytip) at (0,4);
+\coordinate (Y1) at (0,1);
+\draw[->] (-4,0)--(Xtip);
+\draw[->] (0,-4)--(Ytip);
+\node[right,inner sep=0pt,xshift=2pt] at (Xtip) {$x$};
+\node[above,inner sep=0pt,yshift=2pt] at (Ytip) {$y$};
+\draw[domain=-1.8:1.8,samples=181] plot (\x,{exp(-\x*ln(2))});
+\node[below left,inner sep=1pt] at (O) {$O$};
+\node[anchor=north east,inner sep=1pt] at (-0.04,0.95) {$1$};
+\end{tikzpicture}

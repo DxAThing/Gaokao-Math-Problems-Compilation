@@ -1,0 +1,24 @@
+\begin{tikzpicture}[line width=0.6pt, >=stealth]
+% sphere outline
+\draw (0,0) circle (2.2);
+% equator: front solid, back dashed
+\draw ( -2.2,0) arc (180:360:2.2 and 0.55);
+\draw[dashed] (2.2,0) arc (0:180:2.2 and 0.55);
+% center and vertical axis
+\coordinate (O) at (0.0000000000,0.0000000000);
+\coordinate (A) at (0,2.2);
+\coordinate (B) at (-1.1000000000,-0.4763139721);
+\coordinate (C) at (1.1000000000,-0.4763139721);
+\draw[dashed] (A) -- (O);
+\draw[dashed] (O) -- (B);
+\draw[dashed] (O) -- (C);
+% meridians through A-B and A-C
+\draw (A) .. controls (-0.9,1.2) and (-1.1,0.4) .. (B);
+\draw (A) .. controls (0.9,1.2) and (1.1,0.4) .. (C);
+
+% labels
+\node[above=3pt] at (A) {$A$};
+\node[below left=3pt,xshift=7pt,yshift=1pt] at (O) {$O$};
+\node[below=3pt,inner sep=1pt] at (B) {$B$};
+\node[below=3pt,inner sep=1pt] at (C) {$C$};
+\end{tikzpicture}

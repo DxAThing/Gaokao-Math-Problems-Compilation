@@ -1,0 +1,39 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1.2cm,y=1.2cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (O) at (0,0);
+\coordinate (C) at (-1,1);
+\coordinate (Ptwo) at (-1,3);
+\coordinate (Pone) at (0.33333333,1.66666667);
+\coordinate (P) at (4,-2);
+\coordinate (XaxisStart) at (-2.8,0);
+\coordinate (XaxisEnd) at (6.15,0);
+\coordinate (YaxisStart) at (0,-3.4);
+\coordinate (YaxisEnd) at (0,3.95);
+\coordinate (XpStart) at (-2.8,1);
+\coordinate (XpEnd) at (6.15,1);
+\coordinate (YpStart) at (-1,-3.4);
+\coordinate (YpEnd) at (-1,3.95);
+\coordinate (lStart) at (1.6,-3.4);
+\coordinate (lEnd) at (6,1);
+\coordinate (lpStart) at (-1,3);
+\coordinate (lpEnd) at (5.4,-3.4);
+% coordinate axes and translated axes
+\draw[->] (XaxisStart)--(XaxisEnd) node[below right,inner sep=0pt,xshift=1pt,yshift=-1pt] {$x$};
+\draw[->] (YaxisStart)--(YaxisEnd) node[above right,inner sep=0pt,xshift=1pt,yshift=1pt] {$y$};
+\draw[->,dashed] (XpStart)--(XpEnd) node[above right,inner sep=0pt,xshift=1pt,yshift=1pt] {$x'$};
+\draw[->,dashed] (YpStart)--(YpEnd) node[above left,inner sep=0pt,xshift=-1pt,yshift=1pt] {$y'$};
+% ellipse and the two lines
+\draw (C) ellipse [x radius=1.41421356,y radius=2];
+\draw (lpStart)--(lpEnd);
+\draw (lStart)--(lEnd);
+% given and constructed points
+\fill (Ptwo) circle (1.5pt);
+\fill (Pone) circle (1.5pt);
+\fill (P) circle (1.5pt);
+% labels
+\node[below left,inner sep=0pt,xshift=-3pt,yshift=-2pt] at (O) {$O$};
+\node[below left,inner sep=0pt,xshift=-3pt,yshift=-2pt] at (C) {$O'$};
+\node[above left,inner sep=0pt,xshift=-2pt,yshift=1pt] at (Ptwo) {$P_2(-1,3)$};
+\node[above right,inner sep=0pt,xshift=1pt,yshift=1pt] at (Pone) {$P_1(\frac13,\frac53)$};
+\node[above right,inner sep=0pt,xshift=2pt,yshift=1pt] at (P) {$P(4,-2)$};
+\end{tikzpicture}

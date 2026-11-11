@@ -1,0 +1,29 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0.5);
+\coordinate (C) at (1.4,0.9);
+\coordinate (D) at (1.4,2.2);
+\coordinate (E) at (4,3.1);
+\coordinate (Q) at (2,0.25);
+\coordinate (P) at (2,1.55);
+% base
+\draw[solid] (A) -- (B);
+\draw[dashed] (A) -- (C);
+\draw[dashed] (C) -- (B);
+% vertical parallels
+\draw[dashed] (C) -- (D);
+\draw[solid] (E) -- (B);
+\draw[solid] (P) -- (Q);
+% upper tetra
+\draw[solid] (A) -- (D);
+\draw[solid] (D) -- (E);
+\draw[solid] (A) -- (E);
+% labels offset from strokes
+\node[left,xshift=-4pt] at (A) {$A$};
+\node[below right,xshift=3pt,yshift=-3pt] at (B) {$B$};
+\node[above left=2pt] at (C) {$C$};
+\node[left,xshift=-4pt] at (D) {$D$};
+\node[above right,xshift=3pt,yshift=3pt] at (E) {$E$};
+\node[left,xshift=-4pt] at (P) {$P$};
+\node[below,xshift=0pt,yshift=-4pt] at (Q) {$Q$};
+\end{tikzpicture}

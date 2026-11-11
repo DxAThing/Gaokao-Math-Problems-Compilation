@@ -1,0 +1,33 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Schematic house-like block: lower box + hip roof; front solid, back hidden dashed.
+\coordinate (A) at (0,1.6);
+\coordinate (B) at (2.6,0);
+\coordinate (C) at (8,1.6);
+\coordinate (D) at (8,3.6);
+\coordinate (E) at (2.6,2.0);
+\coordinate (F) at (0,3.6);
+\coordinate (Cb) at (5.4,3.2);
+\coordinate (RL) at (2.65,5);
+\coordinate (RR) at (5.35,5.8);
+\coordinate (Gb) at (5.4,5.2);
+\coordinate (Hb) at (5.4,5.2);
+% lower box solid
+\draw (A)--(B)--(C)--(D)--(E)--(F)--cycle;
+\draw (A)--(F)--(E);
+\draw (B)--(E);
+% roof front solid
+\draw (F)--(RL)--(RR)--(D);
+\draw (E)--(RL);
+% hidden box bottom dashed
+\draw[dashed] (A)--(Cb)--(C);
+% hidden roof back dashed
+\draw[dashed] (F)--(Gb)--(D);
+\draw[dashed] (Gb)--(RR);
+% view arrows with original labels
+\draw[->,line width=.8pt] (4.0,7.0)--(4.0,6.3);
+\node[right] at (4.0,6.65) {俯视};
+\draw[->,line width=.8pt] (0.2,0.5)--(1.0,0.9);
+\node[below left] at (0.2,0.5) {左（侧）视};
+\draw[->,line width=.8pt] (6.2,-0.6)--(5.6,0.1);
+\node[right] at (6.2,-0.6) {主（侧）视};
+\end{tikzpicture}

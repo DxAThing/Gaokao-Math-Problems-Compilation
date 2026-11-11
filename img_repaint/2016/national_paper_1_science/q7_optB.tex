@@ -1,0 +1,18 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.25cm,y=1.25cm,line width=.6pt,>=Stealth,font=\normalsize,
+  axis/.style={line width=.6pt},
+  tick/.style={line width=.6pt},
+  edge/.style={line width=.6pt}]
+\draw[axis,->] (-2.9,0)--(3.0,0);
+\draw[axis,->] (0,-2.0)--(0,2.0);
+\draw[tick] (-2,-0.13)--(-2,0.13);
+\draw[tick] (2,-0.13)--(2,0.13);
+\draw[tick] (0,1)--(0.13,1);
+\node[right,inner sep=0pt,xshift=2pt] at (3.0,0) {$x$};
+\node[above,inner sep=0pt,yshift=2pt] at (0,2.0) {$y$};
+\node[below,inner sep=0pt,xshift=-8pt,yshift=-6pt] at (-2,0) {$-2$};
+\node[below,inner sep=0pt,xshift=8pt,yshift=-6pt] at (2,0) {$2$};
+\node[left,inner sep=0pt,xshift=-2pt] at (0,1) {$1$};
+\node[below left,inner sep=0pt,xshift=-3pt,yshift=-5pt] at (0,0) {$O$};
+\draw[edge] plot[domain=-2.05:2.05,samples=165] (\x,{-0.595176*abs(\x)*abs(\x)*abs(\x)+2.369189*\x*\x-1.184879*abs(\x)-1});
+\end{tikzpicture}

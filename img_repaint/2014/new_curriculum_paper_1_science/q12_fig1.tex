@@ -1,0 +1,24 @@
+% 2014_new_curriculum_paper_1_science_q12_fig1: point-fix of inputs/..._current.tex.
+% Only rearranged into one horizontal row (front, side, top) with captions below.
+% Projection edges, sizes, solid/dashed kept; scopes only translated.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% light grid behind views (step kept 0.7)
+\draw[gray,thin,step=0.7] (-0.7,-3.5) grid (11.5,0.7);
+% ---- front view (was top-left) ----
+\begin{scope}[shift={(0,0)}]
+\draw (0,0) -- (2.8,0) -- (2.8,-2.8) -- cycle;
+\draw (0,0) -- (2.8,-1.4);
+\node[below] at (1.4,-3.15) {正视图};
+\end{scope}
+% ---- side view (was top-right) ----
+\begin{scope}[shift={(4.0,0)}]
+\draw (0,0) -- (0,-2.8) -- (2.8,-1.4) -- cycle;
+\node[below] at (1.4,-3.15) {侧视图};
+\end{scope}
+% ---- top view (was bottom-left) ----
+\begin{scope}[shift={(8.0,0)}]
+\draw (0,0) -- (2.8,0) -- (2.8,-2.8) -- cycle;
+\draw (0,0) -- (2.8,-2.8);
+\node[below] at (1.4,-3.15) {俯视图};
+\end{scope}
+\end{tikzpicture}

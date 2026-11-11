@@ -1,0 +1,41 @@
+% front above plan, side at front right; u=1.2, front W2 H2 top1
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% plan origin (0,0): 2.4x2.4 square with inner lines
+% row: front, side, plan; only scope shifts changed
+\begin{scope}[shift={(8.0,0.6)}]
+\draw (0,0) rectangle (2.4,2.4);
+\draw (1.2,2.4) -- (1.2,1.2) -- (0,1.2);
+\draw (1.2,1.2) -- (2.4,0);
+% left dims 1/1
+\draw (-0.12,1.2) -- (-0.45,1.2);
+\draw (-0.12,2.4) -- (-0.45,2.4);
+\draw[<->,>=Stealth] (-0.32,1.2) -- (-0.32,2.4) node[midway,fill=white,inner sep=1pt] {1};
+\draw (-0.12,0) -- (-0.45,0);
+\draw[<->,>=Stealth] (-0.32,0) -- (-0.32,1.2) node[midway,fill=white,inner sep=1pt] {1};
+\node[below] at (1.2,-0.6) {俯视图};
+\end{scope}
+% front
+\begin{scope}[shift={(0,0.6)}]
+\draw (0,0) -- (0,2.4) -- (1.2,2.4) -- (2.4,0) -- cycle;
+\draw (0,0) -- (2.4,0);
+% bottom dim 2
+\draw (0,-0.12) -- (0,-0.45);
+\draw (2.4,-0.12) -- (2.4,-0.45);
+\draw[<->,>=Stealth] (0,-0.32) -- (2.4,-0.32) node[midway,fill=white,inner sep=1pt] {2};
+% top dim 1
+\draw (0,2.52) -- (0,2.85);
+\draw (1.2,2.52) -- (1.2,2.85);
+\draw[<->,>=Stealth] (0,2.72) -- (1.2,2.72) node[midway,fill=white,inner sep=1pt] {1};
+% left height dim 2
+\draw (-0.12,0) -- (-0.45,0);
+\draw (-0.12,2.4) -- (-0.45,2.4);
+\draw[<->,>=Stealth] (-0.32,0) -- (-0.32,2.4) node[midway,fill=white,inner sep=1pt] {2};
+\node[below] at (1.2,-0.6) {正视图};
+\end{scope}
+% side: same trapezoid, no dims
+\begin{scope}[shift={(4.0,0.6)}]
+\draw (0,0) -- (0,2.4) -- (1.2,2.4) -- (2.4,0) -- cycle;
+\draw (0,0) -- (2.4,0);
+\node[below] at (1.2,-0.6) {侧视图};
+\end{scope}
+\end{tikzpicture}

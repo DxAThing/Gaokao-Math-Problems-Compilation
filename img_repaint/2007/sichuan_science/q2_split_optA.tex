@@ -1,0 +1,12 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=12mm,y=12mm,line width=.6pt,>={Latex[length=1.8mm,width=1.6mm]},every node/.style={inner sep=0pt,outer sep=0pt},font=\normalsize]
+\draw[->] (-1.5,0) -- (4.0,0) node[right,xshift=2pt] {$x$};
+\draw[->] (0,-1.0) -- (0,3.5) node[above,yshift=2pt] {$y$};
+\node[below left,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\node[below,yshift=-4pt] at (1,0) {$1$};
+\node[below,yshift=-4pt] at (2,0) {$2$};
+\node[left,xshift=-5pt,yshift=-2pt] at (0,1) {$1$};
+\node[left,xshift=-5pt,yshift=-2pt] at (0,2) {$2$};
+\draw[domain=-0.5015:2.9995,samples=161] plot (\x,{2^(1-\x)});
+\draw[domain=0.6147:3.9897,samples=161] plot (\x,{ln(\x)/ln(2)});
+\end{tikzpicture}

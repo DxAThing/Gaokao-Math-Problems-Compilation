@@ -1,0 +1,31 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=0.6pt,font=\normalsize,>=Stealth]
+  % --- pyramid vertices ---
+  \coordinate (P) at (-1.3800000000,5.4500000000);
+  \coordinate (B) at (-4.2,0);
+  \coordinate (C) at (2.6,0);
+  \coordinate (D) at (4.0600000000,1.5500000000);
+  \coordinate (A) at (-2.7400000000,1.5500000000);
+  \coordinate (H) at (-1.3800000000,1.5500000000);
+  % --- base edges ---
+  \draw (B) -- (C);            % front, visible
+  \draw (C) -- (D);            % right, visible
+  \draw[dashed] (A) -- (D);    % back, hidden (passes through H)
+  \draw[dashed] (A) -- (B);    % left back, hidden
+  % --- lateral edges ---
+  \draw (P) -- (B);            % visible
+  \draw (P) -- (C);            % visible
+  \draw (P) -- (D);            % visible
+  \draw[dashed] (P) -- (A);    % hidden
+  \draw[dashed] (P) -- (H);    % altitude PH, hidden
+  % --- base interior segments ---
+  \draw[dashed] (B) -- (H);
+  \draw[dashed] (H) -- (C);
+  
+  % --- labels with clearance ---
+  \node[anchor=south,yshift=2.5mm] at (P) {$P$};
+  \node[anchor=east,xshift=-2.5mm,yshift=1.5mm,xshift=5.019pt,yshift=-3.011pt] at (A) {$A$};
+  \node[anchor=east,xshift=-2.5mm,yshift=-1mm] at (B) {$B$};
+  \node[anchor=north,yshift=-2.5mm,xshift=1mm] at (C) {$C$};
+  \node[anchor=west,xshift=2.5mm] at (D) {$D$};
+  \node[above right=3pt,inner sep=1pt,xshift=5pt,yshift=-1pt] at (H) {$H$};
+\end{tikzpicture}

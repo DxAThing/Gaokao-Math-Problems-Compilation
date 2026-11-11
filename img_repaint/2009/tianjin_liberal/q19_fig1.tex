@@ -1,0 +1,31 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (D) at (0,0);
+\coordinate (C) at (2.5,0);
+\coordinate (B) at (6,0.8);
+\coordinate (A) at (1.2,0.6);
+\coordinate (P) at (0,4.5);
+\coordinate (E) at (1.25,2.25);
+% base quadrilateral
+\draw[solid] (D) -- (C);
+\draw[solid] (C) -- (B);
+\draw[dashed] (B) -- (A);
+\draw[dashed] (A) -- (D);
+\draw[dashed] (D) -- (B);
+\draw[dashed] (A) -- (C);
+% pyramid lateral edges
+\draw[solid] (P) -- (D);
+\draw[solid] (P) -- (B);
+\draw[solid] (P) -- (E);
+\draw[solid] (E) -- (C);
+\draw[dashed] (P) -- (A);
+% interior segments from E
+\draw[solid] (D) -- (E);
+\draw[solid] (E) -- (B);
+% labels offset from strokes
+\node[above left,xshift=-4pt,yshift=4pt] at (P) {$P$};
+\node[below left,xshift=-3pt,yshift=-3pt] at (D) {$D$};
+\node[below,xshift=0pt,yshift=-4pt] at (C) {$C$};
+\node[right,xshift=4pt] at (B) {$B$};
+\node[left,xshift=-8pt,yshift=2pt] at (A) {$A$};
+\node[above right,xshift=7pt,yshift=7pt] at (E) {$E$};
+\end{tikzpicture}

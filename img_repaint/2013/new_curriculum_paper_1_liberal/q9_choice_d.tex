@@ -1,0 +1,15 @@
+% 2013_new_curriculum_paper_1_liberal_q9_choice_d  (2013 New-Curriculum-I liberal Q9 option D)
+% standalone single-function graph option; source: inputs/original_02.pdf p.1
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+  \draw[->] (-3.50,0) -- (3.79159265,0) node[anchor=west,inner sep=0pt,xshift=2pt] {$x$};
+  \draw[->] (0,-2.0) -- (0,2.29) node[anchor=south,inner sep=0pt,yshift=2pt] {$y$};
+  \draw (-3.14159265,0) -- (-3.14159265,0.12);
+  \draw (3.14159265,0) -- (3.14159265,0.12);
+  \draw (0,1) -- (0.12,1);
+  \draw[domain=-3.14159265:3.14159265,samples=240] plot (\x,{(1+cos(deg(\x)))*sin(deg(\x))});
+  \node[anchor=north,inner sep=0pt,yshift=-1pt] at (-3.14159265,0) {$-\pi$};
+  \node[anchor=north,inner sep=0pt,yshift=-1pt] at (3.14159265,0) {$\pi$};
+  \node[anchor=east,inner sep=0pt,xshift=-2pt] at (0,1) {$1$};
+  \node[anchor=north west,inner sep=0pt,xshift=1pt,yshift=-1pt] at (0,0) {$O$};
+\end{tikzpicture}

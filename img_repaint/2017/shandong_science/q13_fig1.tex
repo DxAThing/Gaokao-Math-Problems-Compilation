@@ -1,0 +1,51 @@
+% 点修：三视图横向并排（正/侧/俯左至右），图名居中基线对齐；投影边线/尺寸/虚实原样，仅平移scope。
+% front above plan, side at front's right in original; unit u = 1.5cm.
+% Identical construction to the science counterpart. Front: 4u x 1u rectangle, dividers at x=1,3; bottom dims 1/2/1, right dim 1.
+% Side: 1u square; bottom dim 1, right dim 1.
+% Plan: middle 2u x 1u rectangle + quarter-disk r1 at lower left and upper right;
+% inner edges at x=1,3; top dim 1, bottom dims 2/1. All lines solid.
+% RISK: 横排总宽约180mm，超出170mm（u=1.5cm下投影本体宽度固定，仅留最小间隙）。
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1.5cm,y=1.5cm]
+% front view
+\draw (0,0) rectangle (4,1);
+\draw (1,0) -- (1,1) (3,0) -- (3,1);
+\foreach \x in {0,1,3,4} \draw (\x,-0.12) -- (\x,-0.38);
+\draw[{Latex[length=2.2mm]}-{Latex[length=2.2mm]}] (0,-0.28) -- (1,-0.28);
+\draw[{Latex[length=2.2mm]}-{Latex[length=2.2mm]}] (1,-0.28) -- (3,-0.28);
+\draw[{Latex[length=2.2mm]}-{Latex[length=2.2mm]}] (3,-0.28) -- (4,-0.28);
+\node[fill=white,inner sep=1pt] at (0.5,-0.28) {1};
+\node[fill=white,inner sep=1pt] at (2,-0.28) {2};
+\node[fill=white,inner sep=1pt] at (3.5,-0.28) {1};
+\draw (4.08,0) -- (4.42,0) (4.08,1) -- (4.42,1);
+\draw[{Latex[length=2.2mm]}-{Latex[length=2.2mm]}] (4.3,0) -- (4.3,1);
+\node[fill=white,inner sep=1pt] at (4.3,0.5) {1};
+\node at (2,-0.85) {正视图（主视图）};
+% side view (shifted to row, edges unchanged)
+\begin{scope}[shift={(4.5,0)}]
+\draw (0,0) rectangle (1,1);
+\draw (0,-0.12) -- (0,-0.38) (1,-0.12) -- (1,-0.38);
+\draw[{Latex[length=2.2mm]}-{Latex[length=2.2mm]}] (0,-0.28) -- (1,-0.28);
+\node[fill=white,inner sep=1pt] at (0.5,-0.28) {1};
+\draw (1.08,0) -- (1.42,0) (1.08,1) -- (1.42,1);
+\draw[{Latex[length=2.2mm]}-{Latex[length=2.2mm]}] (1.3,0) -- (1.3,1);
+\node[fill=white,inner sep=1pt] at (1.3,0.5) {1};
+\node at (0.5,-0.85) {侧视图（左视图）};
+\end{scope}
+% plan view (shifted to row, edges unchanged)
+\begin{scope}[shift={(7.0,2.9)}]
+\draw (0,-1.9) -- (3,-1.9);
+\draw (1,-2.9) -- (4,-2.9);
+\draw (1,-1.9) -- (1,-2.9) (3,-1.9) -- (3,-2.9);
+\draw (0,-1.9) arc (180:270:1);
+\draw (4,-2.9) arc (0:90:1);
+\draw (0,-1.62) -- (0,-1.48) (1,-1.62) -- (1,-1.48);
+\draw[{Latex[length=2.2mm]}-{Latex[length=2.2mm]}] (0,-1.55) -- (1,-1.55);
+\node[fill=white,inner sep=1pt] at (0.5,-1.55) {1};
+\foreach \x in {1,3,4} \draw (\x,-3.02) -- (\x,-3.28);
+\draw[{Latex[length=2.2mm]}-{Latex[length=2.2mm]}] (1,-3.18) -- (3,-3.18);
+\draw[{Latex[length=2.2mm]}-{Latex[length=2.2mm]}] (3,-3.18) -- (4,-3.18);
+\node[fill=white,inner sep=1pt] at (2,-3.18) {2};
+\node[fill=white,inner sep=1pt] at (3.5,-3.18) {1};
+\node at (2,-3.75) {俯视图};
+\end{scope}
+\end{tikzpicture}

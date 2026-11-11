@@ -1,0 +1,22 @@
+% 2016_zhejiang_science_q14_fig1: tetrahedron PBCD on triangle ABC, D on AC, CD dashed
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize]
+\tikzset{solid edge/.style={solid,line width=.6pt},dashed edge/.style={dashed,dash pattern=on 4pt off 3pt,line width=.6pt},ptlabel/.style={fill=white,draw=none,inner sep=2pt,font=\normalsize}}
+\coordinate (A) at (0,0);
+\coordinate (B) at (5.0,0);
+\coordinate (D) at (2.2,1.8);
+\coordinate (P) at (1.6,4.5);
+\coordinate (C) at (7.5,5.5);
+\draw[solid edge] (A)--(B);
+\draw[solid edge] (B)--(C);
+\draw[solid edge] (P)--(C);
+\draw[solid edge] (A)--(D);
+\draw[solid edge] (D)--(B);
+\draw[solid edge] (P)--(D);
+\draw[solid edge] (P)--(B);
+\draw[dashed edge] (D)--(C);
+\node[ptlabel,anchor=north east] at ([xshift=-3mm,yshift=-2mm]A) {$A$};
+\node[ptlabel,anchor=north] at ([yshift=-3mm]B) {$B$};
+\node[ptlabel,anchor=east] at ([xshift=-3mm]D) {$D$};
+\node[ptlabel,anchor=south east] at ([xshift=-2mm,yshift=2mm]P) {$P$};
+\node[ptlabel,anchor=south west] at ([xshift=2mm,yshift=2mm]C) {$C$};
+\end{tikzpicture}

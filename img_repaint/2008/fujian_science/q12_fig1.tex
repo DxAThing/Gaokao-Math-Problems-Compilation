@@ -1,0 +1,18 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  lbl/.style={font=\normalsize,inner sep=2pt}]
+% axes
+\draw[->] (-0.6,0)--(5.2,0) node[right,xshift=2pt] {$x$};
+\draw[->] (0,-0.6)--(0,5.0) node[above,yshift=2pt] {$y$};
+\node[lbl,below left] at (0,0) {$O$};
+% g' : straight rising line y = x - 0.1
+\draw[domain=0.55:3.9,samples=2] plot (\x,{\x-0.1});
+% f' : decreasing convex curve y = 0.4 + 2.1/(0.45*\x+0.5)
+\draw[domain=0.55:4.6,samples=101] plot (\x,{0.4+2.1/(0.45*\x+0.5)});
+% intersection near x0=2.0: line y=1.9, curve y~1.55+? tuned to meet ~1.9
+% vertical dashed to x0
+\draw[dashed] (2.0,0)--(2.0,1.90);
+\node[lbl,below,yshift=-1pt] at (2.0,0) {$x_{0}$};
+% curve labels with clearance above strokes
+\node[lbl,above,xshift=-4pt] at (1.05,3.15) {$y=f'(x)$};
+\node[lbl,above,xshift=10pt] at (3.9,3.95) {$y=g'(x)$};
+\end{tikzpicture}

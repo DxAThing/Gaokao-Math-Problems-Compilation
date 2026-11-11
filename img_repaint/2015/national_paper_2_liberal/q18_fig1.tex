@@ -1,64 +1,29 @@
-% Source PDF: source/普通高考/2015/2015全国2文(贵州,甘肃,青海,西藏,黑龙江,吉林,海南,宁夏,内蒙古,新疆,云南,广西,辽宁).pdf, page 1.
-% PDF embedded-bitmap check: no image objects; the frequency histogram is vector content.
-% Source bars (score groups 40--50 through 90--100) have frequency densities
-% 0.010, 0.020, 0.030, 0.020, 0.015, 0.005 respectively.
-% solid segments: six histogram bars and coordinate axes; dashed segments: guides
-% at 0.005, 0.010, 0.015, 0.020 and 0.030. Labels avoid the bars and axes.
-
+% 2015全国II文Q18: frequency histogram titled, bins [40,50)..[90,100], width 10.
+% Source shows no axis break; origin labelled $O$ with one group-width lead gap.
 \begin{tikzpicture}
-\begin{axis}[exam statistical histogram,scaled ticks=false,
-    width=12.6cm,
-    height=4.8cm,
-    xmin=35,
-    xmax=105,
-    ymin=0,
-    ymax=0.046,
-    axis lines=none,
-    xtick=\empty,
-    ytick=\empty,
-    clip=false,
-    enlargelimits=false,
-    scale only axis,
-]
-    % Frequency-density guide lines read from the original histogram.
-    \draw[dashed,line width=0.35pt] (axis cs:35,0.005) -- (axis cs:100,0.005);
-    \draw[dashed,line width=0.35pt] (axis cs:35,0.010) -- (axis cs:100,0.010);
-    \draw[dashed,line width=0.35pt] (axis cs:35,0.015) -- (axis cs:100,0.015);
-    \draw[dashed,line width=0.35pt] (axis cs:35,0.020) -- (axis cs:100,0.020);
-    \draw[dashed,line width=0.35pt] (axis cs:35,0.030) -- (axis cs:100,0.030);
+\begin{axis}[exam statistical template histogram,
+  title={A地区用户满意度评分的频率分布直方图},
+  title style={yshift=12pt},
+  xmin=30,ymin=0,
+  xtick={30,40,50,60,70,80,90,100},
+  ytick={0,0.005,0.010,0.015,0.020,0.025,0.030,0.035,0.040},
+  yticklabels={0,0.005,0.010,0.015,0.020,0.025,0.030,0.035,0.040},
+  xmax=105,
+  ymax=0.0425,
+  xticklabels={,40,50,60,70,80,90,100}]
 
-    % Six equal-width score groups and their frequency densities.
-    \addplot[/tikz/ybar interval,mark=none,draw=black,fill=white,line width=0.45pt] coordinates {
-      (40,0.010)
-      (50,0.020)
-      (60,0.030)
-      (70,0.020)
-      (80,0.015)
-      (90,0.005)
-      (100,0)
-    };
 
-    % Axes and labels.
-    \draw[->,black,line width=0.45pt] (axis cs:35,0) -- (axis cs:104,0);
-    \draw[->,black,line width=0.45pt] (axis cs:35,0) -- (axis cs:35,0.042);
-    \node[anchor=south,inner sep=0pt] at (axis cs:67.5,0.046) {A 地区用户满意度评分的频率分布直方图};
-    \node[anchor=north east,inner sep=0pt] at (axis cs:34.3,-0.0004) {$O$};
-    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \examstatxlabel{满意度评分};
-    \node[anchor=east,inner sep=1pt,xshift=-4pt] at (axis cs:35.000000,0.005) {0.005};
-    \node[anchor=east,inner sep=1pt,xshift=-4pt] at (axis cs:35.000000,0.010) {0.010};
-    \node[anchor=east,inner sep=1pt,xshift=-4pt] at (axis cs:35.000000,0.015) {0.015};
-    \node[anchor=east,inner sep=1pt,xshift=-4pt] at (axis cs:35.000000,0.020) {0.020};
-    \node[anchor=east,inner sep=1pt,xshift=-4pt] at (axis cs:34.500000,0.025) {0.025};
-    \node[anchor=east,inner sep=1pt,xshift=-4pt] at (axis cs:35.000000,0.030) {0.030};
-    \node[anchor=east,inner sep=1pt,xshift=-4pt] at (axis cs:34.500000,0.035) {0.035};
-    \node[anchor=east,inner sep=1pt,xshift=-4pt] at (axis cs:34.500000,0.040) {0.040};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:40,0.000000) {40};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:50,0.000000) {50};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:60,0.000000) {60};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:70,0.000000) {70};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:80,0.000000) {80};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:90,0.000000) {90};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:100,0.000000) {100};
+
+
+
+\addplot[draw=black,fill=white] coordinates
+  {(40,0.010) (50,0.020) (60,0.030) (70,0.020) (80,0.015) (90,0.005) (100,0)};
+\draw[dashed] (axis cs:30,0.030) -- (axis cs:60,0.030);
+\draw[dashed] (axis cs:30,0.020) -- (axis cs:70,0.020);
+\draw[dashed] (axis cs:30,0.015) -- (axis cs:80,0.015);
+\draw[dashed] (axis cs:30,0.010) -- (axis cs:40,0.010);
+\draw[dashed] (axis cs:30,0.005) -- (axis cs:90,0.005);
+\examstatylabel{频率/组距}
+\examstatxlabel{满意度评分}
 \end{axis}
 \end{tikzpicture}

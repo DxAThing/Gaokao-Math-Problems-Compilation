@@ -1,2 +1,32 @@
-% Canonical statistical figure: img_repaint/2007/shandong_liberal/q8_fig1.tex
-\input{img_repaint/2007/shandong_liberal/q8_fig1.tex}
+% Shandong 2007 science: 100m-test density histogram, 6 groups of 1s.
+% Group frequencies 0.02,0.18,0.36,0.34,0.06,0.04 from the item solution.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram, exam statistical template wide,
+  xmin=12,ymin=0,
+  xtick={12,13,14,15,16,17,18,19},
+  ytick={0,0.02,0.04,0.06,0.18,0.34,0.36},
+  xmax=19.5,
+  ymax=0.37,
+  xticklabels={,13,14,15,16,17,18,19},
+  yticklabels={}]
+\addplot[draw=black,fill=white] coordinates
+  {(13,0.02) (14,0.18) (15,0.36) (16,0.34) (17,0.06) (18,0.04) (19,0)};
+\draw[semithick,densely dashed] (axis cs:12,0.36) -- (axis cs:16,0.36);
+\draw[semithick,densely dashed] (axis cs:12,0.34) -- (axis cs:17,0.34);
+\draw[semithick,densely dashed] (axis cs:12,0.18) -- (axis cs:15,0.18);
+\draw[semithick,densely dashed] (axis cs:12,0.06) -- (axis cs:18,0.06);
+\draw[semithick,densely dashed] (axis cs:12,0.04) -- (axis cs:19,0.04);
+\draw[semithick,densely dashed] (axis cs:12,0.02) -- (axis cs:14,0.02);
+\examstatxbreak{12.5}{0}
+\examstatylabel{频率/组距}
+\examstatxlabel{秒}
+
+\examstatyticklabel{12}{0}{0}{0.000000}
+\examstatyticklabel{12}{0.02}{0.02}{1.938285}
+\examstatyticklabel{12}{0.04}{0.04}{3.876569}
+\examstatyticklabel{12}{0.06}{0.06}{5.814854}
+\examstatyticklabel{12}{0.18}{0.18}{0.000000}
+\examstatyticklabel{12}{0.34}{0.34}{0.000000}
+\examstatyticklabel{12}{0.36}{0.36}{1.938285}
+\end{axis}
+\end{tikzpicture}

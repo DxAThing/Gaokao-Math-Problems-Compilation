@@ -1,0 +1,25 @@
+% 点修：三视图横向并排（正/侧/俯左至右），图名居中基线对齐；投影边线/网格单位原样，仅平移为分块scope。
+% front above plan, side at front's right in original; grid unit = 1 (5mm), y up.
+% Main: rectangle 6x7 + full circle c(3,7) r3 on top edge. Side: (0,0)-(0,10)-(6,4)-(6,0).
+% Plan: circle c(3,4) r3. All outlines solid; light grid kept per view as size reference.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=5mm,y=5mm]
+% 正视图
+\begin{scope}[shift={(0,0)}]
+\draw[gray!60,line width=.3pt] (-1,-3) grid (7,11);
+\draw (0,0) -- (0,7) (6,0) -- (6,7) (0,0) -- (6,0);
+\draw (3,7) circle (3);
+\node[fill=white,inner sep=2pt] at (3,-2) {正视图};
+\end{scope}
+% 侧视图
+\begin{scope}[shift={(9,0)}]
+\draw[gray!60,line width=.3pt] (-1,-3) grid (7,11);
+\draw (0,0) -- (0,10) (0,0) -- (6,0) (6,0) -- (6,4) (0,10) -- (6,4);
+\node[fill=white,inner sep=2pt] at (3,-2) {侧视图};
+\end{scope}
+% 俯视图
+\begin{scope}[shift={(18,0)}]
+\draw[gray!60,line width=.3pt] (-1,-3) grid (7,11);
+\draw (3,4) circle (3);
+\node[fill=white,inner sep=2pt] at (3,-2) {俯视图};
+\end{scope}
+\end{tikzpicture}

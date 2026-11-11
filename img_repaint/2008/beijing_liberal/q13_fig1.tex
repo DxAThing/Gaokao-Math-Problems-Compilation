@@ -1,0 +1,14 @@
+% source_constraints: exact题干坐标 A(0,4),B(2,0),C(6,4); two-segment polyline A-B-C, all solid, closed endpoints at axis points (no markers); grid 1-unit gray over x 0..6 / y 0..4; x labels 1..6 below, y labels 1..4 left; O below-left; axes .6pt arrows; polyline thick; A label above-right of (0,4), B label above-right of (2,0), C label right of (6,4).
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\foreach \i in {0,...,6} {\draw[gray!60,line width=.35pt] (\i,0)--(\i,4);}
+\foreach \j in {0,...,4} {\draw[gray!60,line width=.35pt] (0,\j)--(6,\j);}
+\draw[->] (-0.6,0)--(6.7,0) node[below right] {$x$};
+\draw[->] (0,-0.6)--(0,4.6) node[above] {$y$};
+\foreach \i in {1,2,3,4,5,6} {\draw[line width=.6pt] (\i,0)--(\i,-0.08); \node[below] at (\i,-0.08) {$\i$};}
+\foreach \j in {1,2,3,4} {\draw[line width=.6pt] (0,\j)--(-0.08,\j); \node[left] at (-0.08,\j) {$\j$};}
+\node[below left] at (0,0) {$O$};
+\draw[line width=1.1pt,line join=round,line cap=round] (0,4)--(2,0)--(6,4);
+\node[above right] at (0,4) {$A$};
+\node[above right,xshift=3pt,yshift=1pt] at (2,0) {$B$};
+\node[right] at (6,4) {$C$};
+\end{tikzpicture}

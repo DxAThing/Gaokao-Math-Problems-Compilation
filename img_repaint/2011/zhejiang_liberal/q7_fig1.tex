@@ -1,0 +1,22 @@
+% three_views: no dimensions; front/top squares split by midline, side notched pentagon
+% layout: horizontal row front / side / plan (point-fix: plan scope moved right only)
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+\def\S{2.4}
+% front at (0,3.4)
+\begin{scope}[shift={(0,3.4)}]
+\draw (0,0) rectangle (\S,\S);
+\draw (0,\S/2) -- (\S,\S/2);
+\node[below] at (\S/2,-0.3) {正视图};
+\end{scope}
+% side at (3.8,3.4): full left edge, top stub, diagonal to mid, step right
+\begin{scope}[shift={(3.8,3.4)}]
+\draw (0,0) -- (0,\S) -- (0.8,\S) -- (1.3,\S/2) -- (\S,\S/2) -- (\S,0) -- cycle;
+\node[below] at (\S/2,-0.3) {侧视图};
+\end{scope}
+% plan moved to (7.6,3.4): same shape, label baseline aligned with others
+\begin{scope}[shift={(7.6,3.4)}]
+\draw (0,0) rectangle (\S,\S);
+\draw (0,\S/2) -- (\S,\S/2);
+\node[below] at (\S/2,-0.3) {俯视图};
+\end{scope}
+\end{tikzpicture}

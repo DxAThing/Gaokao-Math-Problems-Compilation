@@ -1,0 +1,10 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.45cm,y=1.45cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-2.5,0)--(2.6,0) node[right=2pt,inner sep=0pt] {$x$};
+\draw[->] (0,-2.6)--(0,2.9) node[above=2pt,inner sep=0pt] {$y$};
+\draw[domain=-1.52:2.35,samples=241] plot (\x,{2^(-\x)});
+\draw[domain=0.165:1.9,samples=241] plot (\x,{ln(\x)/ln(2)});
+\node[below left=2pt,inner sep=0pt] at (0,0) {$O$};
+\node[anchor=south west,inner sep=0pt] at (0.10,1.03) {$1$};
+\node[anchor=north west,inner sep=0pt] at (1.08,-0.05) {$1$};
+\end{tikzpicture}

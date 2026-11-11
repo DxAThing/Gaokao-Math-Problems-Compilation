@@ -1,0 +1,11 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-2.00,0) -- (1.85,0) node[below right,inner sep=0pt,xshift=1pt,yshift=-2pt] {$x$};
+\draw[->] (0,-1.00) -- (0,3.90) node[above left,inner sep=0pt,xshift=-1pt,yshift=2pt] {$y$};
+\draw[dashed] (1,0) -- (1,3) -- (0,3);
+\draw[domain=-1.50:1.10,samples=160] plot (\x,{pow(3,\x)});
+\node[anchor=north east,inner sep=0pt] at (-0.12,-0.12) {$O$};
+\node[anchor=east,inner sep=0pt] at (-0.12,3) {$3$};
+\node[below,inner sep=0pt,yshift=-2pt] at (1,0) {$1$};
+\node[anchor=south,inner sep=0pt,yshift=3pt] at (1.1,3.34837) {$y=a^{-x}$};
+\end{tikzpicture}

@@ -1,0 +1,64 @@
+\begin{tikzpicture}[line width=0.6pt, >=stealth]
+% 1 cube
+\begin{scope}[shift={(0,0)}]
+\coordinate (cF1) at (0,0);
+\coordinate (cF2) at (2,0);
+\coordinate (cF3) at (2,2);
+\coordinate (cF4) at (0,2);
+\coordinate (cB1) at (0.7,0.7);
+\coordinate (cB2) at (2.7,0.7);
+\coordinate (cB3) at (2.7,2.7);
+\coordinate (cB4) at (0.7,2.7);
+\draw (cF1) -- (cF2) -- (cF3) -- (cF4) -- cycle;
+\draw (cF3) -- (cB3);
+\draw (cF2) -- (cB2);
+\draw (cB4) -- (cB3) -- (cB2);
+\draw (cF4) -- (cB4);
+\draw[dashed] (cF1) -- (cB1);
+\draw[dashed] (cB1) -- (cB2);
+\draw[dashed] (cB1) -- (cB4);
+\node at (1.35,-0.55) {\textcircled{1} 正方体};
+\end{scope}
+% 2 cone
+\begin{scope}[shift={(4,0)}]
+\coordinate (apex2) at (1,2.7);
+\draw (apex2) -- (-0.1,0.3);
+\draw (apex2) -- (2.1,0.3);
+\draw (-0.1,0.3) arc (180:360:1.1 and 0.28);
+\draw[dashed] (-0.1,0.3) arc (180:0:1.1 and 0.28);
+\node at (1,-0.55) {\textcircled{2} 圆锥};
+\end{scope}
+% 3 triangular frustum
+\begin{scope}[shift={(7.2,0)}]
+\coordinate (t1) at (0.2,2.4);
+\coordinate (t2) at (1.8,2.4);
+\coordinate (t3) at (1.0000000000,2.2000000000);
+\coordinate (b1) at (-0.2,0.3);
+\coordinate (b2) at (2.2,0.3);
+\coordinate (b3) at (1,0);
+\draw (t1) -- (t2) -- (t3) -- cycle;
+\draw (t1) -- (b1);
+\draw (t2) -- (b2);
+\draw (t3) -- (b3);
+\draw (b1) -- (b3) -- (b2);
+\draw[dashed] (b1) -- (b2);
+\node at (1,-0.55) {\textcircled{3} 三棱台};
+\end{scope}
+% 4 square pyramid
+\begin{scope}[shift={(10.4,0)}]
+\coordinate (p4) at (1,2.7);
+\coordinate (q1) at (-0.4,0);
+\coordinate (q2) at (1.6,0);
+\coordinate (q3) at (2.4,0.5);
+\coordinate (q4) at (0.6,0.5);
+\draw (q1)--(q2)--(q3);
+\draw[dashed] (q3)--(q4);
+\draw[dashed] (q1) -- (q4);
+
+\draw (p4) -- (q1);
+\draw (p4) -- (q2);
+\draw (p4) -- (q3);
+\draw[dashed] (p4) -- (q4);
+\node at (1,-0.55) {\textcircled{4} 正四棱锥};
+\end{scope}
+\end{tikzpicture}

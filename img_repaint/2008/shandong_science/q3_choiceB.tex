@@ -1,0 +1,24 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.6cm,y=0.5cm,line width=.6pt,>={Stealth[length=2.0mm]},font=\normalsize]
+  \coordinate (O) at (0,0);
+  \coordinate (Xstart) at (-2.13,0);
+  \coordinate (Xend) at (2.46,0);
+  \coordinate (Ystart) at (0,-6);
+  \coordinate (Yend) at (0,6);
+  \coordinate (AL) at (-1.5707963267948966,0);
+  \coordinate (AR) at (1.5707963267948966,0);
+  \coordinate (ALdown) at (-1.5707963267948966,-6);
+  \coordinate (ALup) at (-1.5707963267948966,6);
+  \coordinate (ARdown) at (1.5707963267948966,-6);
+  \coordinate (ARup) at (1.5707963267948966,6);
+  \draw[->] (Xstart)--(Xend);
+  \node[right=2pt,inner sep=0pt,anchor=west] at (Xend) {$x$};
+  \draw[->] (Ystart)--(Yend);
+  \node[above=2pt,inner sep=0pt,anchor=south] at (Yend) {$y$};
+  \draw[dashed] (ALdown)--(ALup);
+  \draw[dashed] (ARdown)--(ARup);
+  \draw[domain=-1.405:1.405,samples=241,smooth,variable=\x] plot ({\x},{tan(deg(\x))});
+  \node[anchor=north east,inner sep=0pt] at (-0.02,-0.56) {$O$};
+  \node[anchor=north east,inner sep=0pt] at (-1.65,-0.30) {$-\frac{\pi}{2}$};
+  \node[anchor=north west,inner sep=0pt] at (1.65,-0.30) {$\frac{\pi}{2}$};
+\end{tikzpicture}

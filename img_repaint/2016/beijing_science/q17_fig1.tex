@@ -1,0 +1,25 @@
+\begin{tikzpicture}[x=0.7cm,y=0.7cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-4.5,0)--(5.5,0) node[below right=6pt] {$x$};
+\draw[->] (0,-4.5)--(0,4.8) node[left=6pt,above=2pt] {$y$};
+% asymptotes / square sides OA, OC extended (y=+-x)
+\draw (-3.8,-3.8)--(5.0,5.0);
+\draw (-3.8,3.8)--(5.0,-5.0);
+% hyperbola x^2/4-y^2/4=1 : y=+-sqrt(x^2-4)
+\draw[domain=2:4.9,samples=80] plot (\x,{sqrt(\x*\x-4)});
+\draw[domain=2:4.9,samples=80] plot (\x,{-sqrt(\x*\x-4)});
+\draw[domain=-4.2:-2,samples=60] plot (\x,{sqrt(\x*\x-4)});
+\draw[domain=-4.2:-2,samples=60] plot (\x,{-sqrt(\x*\x-4)});
+% square O-A-B-C : OA,OC coincide with diagonals, draw closing sides
+\coordinate (O) at (0,0);
+\coordinate (A) at (1.4142,1.4142);
+\coordinate (B) at (2.8284,0);
+\coordinate (C) at (1.4142,-1.4142);
+\draw (A)--(B)--(C);
+% dots
+% labels with clearance
+\node[below left=2pt,xshift=4pt,yshift=-8pt] at (O) {$O$};
+\node[above left=2pt] at (A) {$A$};
+\node[right=2pt,xshift=-1pt,yshift=7pt] at (B) {$B$};
+\node[below left=2pt] at (C) {$C$};
+\end{tikzpicture}

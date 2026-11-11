@@ -1,2 +1,30 @@
-% Canonical statistical figure: img_repaint/2012/liaoning_liberal/q19_fig1.tex
-\input{img_repaint/2012/liaoning_liberal/q19_fig1.tex}
+% 2012辽宁理科Q19频率分布直方图: bins [0,60), width 10; heights 0.010/0.018/0.022/0.025/0.020/0.005.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,
+  xmin=0,ymin=0,
+  xtick={0,10,20,30,40,50,60},
+  ytick={0.005,0.010,0.018,0.020,0.022,0.025},
+  xmax=65,
+  ymax=0.0265,
+  xticklabels={,10,20,30,40,50,60},
+  yticklabels={}]
+\addplot[draw=black,fill=white] coordinates
+  {(0,0.010) (10,0.018) (20,0.022) (30,0.025) (40,0.020) (50,0.005) (60,0)};
+\draw[dashed] (axis cs:0,0.018) -- (axis cs:10,0.018);
+\draw[dashed] (axis cs:0,0.022) -- (axis cs:20,0.022);
+\draw[dashed] (axis cs:0,0.025) -- (axis cs:30,0.025);
+\draw[dashed] (axis cs:0,0.020) -- (axis cs:40,0.020);
+\draw[dashed] (axis cs:0,0.005) -- (axis cs:50,0.005);
+\examstatylabel{$\frac{\text{频率}}{\text{组距}}$}
+\examstatxlabel{分钟}
+
+\node[anchor=east,inner sep=0pt,xshift=-4pt] at (current axis.left of origin) {$0$};
+
+\examstatyticklabel{0}{0.005}{0.005}{0.000000}
+\examstatyticklabel{0}{0.01}{0.010}{0.000000}
+\examstatyticklabel{0}{0.018}{0.018}{0.000000}
+\examstatyticklabel{0}{0.02}{0.020}{1.775665}
+\examstatyticklabel{0}{0.022}{0.022}{3.551330}
+\examstatyticklabel{0}{0.025}{0.025}{0.000000}
+\end{axis}
+\end{tikzpicture}

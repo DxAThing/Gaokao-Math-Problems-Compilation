@@ -1,75 +1,40 @@
-% original_pdf: source/普通高考/2017/2017全国3理(云南,广西,贵州,四川,西藏).pdf, page 1, question 7.
-% evidence: pdfimages -list found no embedded bitmap; the source flowchart is vector line art.
-% The original page was rendered at 300 dpi; 100px coarse and 50px fine grids locate the
-% comparison crop in tmp/redraw_flowchart_2017_national_paper_3_science/.
-% Type: program flowchart (schematic; topology and labels are the mathematical content).
-% elements: rounded start/end terminals, input/output trapezoids, three assignment rectangles,
-%           the t<=N decision diamond, vertical arrows, the 否 output branch, and the left loop.
-% relations: 开始 -> 输入 N -> t=1,M=100,S=0 -> t<=N; 是 -> S=S+M -> M=-M/10 -> t=t+1,
-%            then return to the decision; 否 -> 输出 S -> 结束.
-% solid segments: every node outline, vertical connector, branch connector, and arrowhead.
-% dashed segments: none.
-% labels: formulas are centered in process nodes; 是 is below the diamond, 否 is above/right
-% of the output branch; the return path stays left of the process column and re-enters at the top.
-% The initial stem and return path meet before the decision; only one downward arrow enters t<=N,
-% while the loop's horizontal segment retains its right-pointing arrowhead.
+% 2017_national_paper_3_science_q7_fig1 首稿（与文科 q8 同构）。
+% 节点清单：开始 / 输入 N / t=1,M=100,S=0 / t≤N 菱形 / S=S+M /
+%   M=-M/10(分式) / t=t+1 / 输出 S / 结束。
+% 有向边：开始→输入→初值→J→菱形；菱形是(下)→S=S+M→M→t=t+1；
+%   t=t+1→(左侧大回环)→J；菱形否(右)→输出 S 顶部；输出→结束。
+\begin{tikzpicture}[x=1cm,y=1cm]
+\tikzset{
+  flownode/.style={draw, line width=0.6pt, align=center, inner sep=3pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  st/.style={flownode, shape=rectangle, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm},
+  io/.style={flownode, trapezium, trapezium left angle=68, trapezium right angle=112,
+    minimum width=3.0cm, minimum height=1.0cm},
+  pr/.style={flownode, minimum width=3.0cm, minimum height=1.0cm},
+  dc/.style={flownode, diamond, aspect=2, minimum width=3.4cm, inner sep=2pt},
+  fe/.style={draw, line width=0.6pt, -{Stealth[length=2.8mm,width=2.2mm]}},
+  fl/.style={draw, line width=0.6pt}
+}
+\node[st] (st0) at (0,0) {开始};
+\node[io] (ioN) at (0,-1.75) {输入 $N$};
+\node[pr,minimum width=6.0cm] (prT) at (0,-3.4) {$t=1,M=100,S=0$};
+\coordinate (J) at (0,-4.5);
+\node[dc,minimum width=3.6cm] (dcT) at (0,-5.9) {$t\leqslant N$};
+\node[pr,minimum width=3.4cm] (prSM) at (0,-8.05) {$S=S+M$};
+\node[pr,minimum width=3.4cm,minimum height=1.7cm] (prM) at (0,-9.9) {$M=-\dfrac{M}{10}$};
+\node[pr,minimum width=2.8cm] (prT1) at (0,-12.0) {$t=t+1$};
+\node[io,minimum width=3.0cm] (ioS) at (4.0,-7.9) {输出 $S$};
+\node[st] (stE) at (4.0,-9.4) {结束};
+\draw[fe] (st0.south) -- (ioN.north);
+\draw[fe] (ioN.south) -- (prT.north);
+\draw[fe] (prT.south) -- (J) -- (dcT.north);
 
-\begin{tikzpicture}[
-    x=0.9cm,
-    y=1.2cm,
-    >=Stealth,
-    line width=0.45pt,
-    line cap=butt,
-    line join=miter,
-    flowtext/.style={font=\normalsize,anchor=center,align=center,
-                     execute at begin node={\setlength{\parindent}{0pt}\noindent}},
-    every node/.style={flowtext},
-    flowbox/.style={draw,flowtext,inner xsep=4pt,inner ysep=2.5pt},
-    terminal/.style={flowbox,rounded corners=0.18cm,minimum width=1.40cm,minimum height=0.68cm},
-    process/.style={flowbox,minimum height=0.68cm},
-    io/.style={flowbox,trapezium,trapezium left angle=72,trapezium right angle=108,
-               minimum height=0.74cm},
-    decision/.style={flowbox,diamond,aspect=2.75,inner xsep=4pt,inner ysep=2.5pt,
-                     minimum height=0.96cm},
-]
-    % Keep a narrow, even safety margin around the outer loop and output branch.
-    \path[use as bounding box] (-4.80,0.35) rectangle (5.85,10.40);
-
-    % The clean schematic coordinates preserve the source's relative layout.
-    \node[terminal] (start) at (0,9.85) {开始};
-    \node[io,minimum width=2.20cm] (input) at (0,8.52) {输入\(N\)};
-    \node[process,minimum width=4.75cm] (init) at (0,7.18)
-        {\(t=1,M=100,S=0\)};
-    \node[decision,minimum width=4.00cm] (test) at (0,5.70) {\(t\leq N\)};
-    \node[process,minimum width=2.90cm] (sum) at (0,4.18) {\(S=S+M\)};
-    \node[process,minimum width=2.80cm,minimum height=1.45cm] (scale) at (0,2.54)
-        {\(M=-\dfrac{M}{10}\)};
-    \node[process,minimum width=2.50cm] (increment) at (0,0.91) {\(t=t+1\)};
-    \node[io,minimum width=2.70cm] (output) at (4.02,4.18) {输出\(S\)};
-    \node[terminal] (finish) at (4.02,2.84) {结束};
-
-    % Main vertical path and the affirmative branch.
-    \draw[->] (start.south) -- (input.north);
-    \draw[->] (input.south) -- (init.north);
-    % The initial stem joins the loop junction without an extra arrowhead;
-    % one downward arrow is shared by both paths into the decision node.
-    \draw (init.south) -- (0,6.55);
-    \draw[->] (test.south) -- node[right=2pt] {是} (sum.north);
-    \draw[->] (sum.south) -- (scale.north);
-    \draw[->] (scale.south) -- (increment.north);
-
-    % The negative branch bypasses the loop body and reaches 输出 S.
-    \coordinate (output-turn) at (4.02,5.70);
-    \draw[->] (test.east) -- node[flowtext,above=2pt] {否} (output-turn)
-        -- (output.north);
-    \draw[->] (output.south) -- (finish.north);
-
-    % Return path from t=t+1 to the top of the decision diamond.
-    \coordinate (loop-left) at (-4.28,0.91);
-    \coordinate (loop-top) at (-4.28,6.55);
-    \draw (increment.west) -- (loop-left) -- (loop-top);
-    % The source shows a right-pointing arrow terminating at the loop junction
-    % and a separate downward arrow into the decision node.
-    \draw[->] (loop-top) -- (0,6.55);
-    \draw[->] (0,6.55) -- (test.north);
+\draw[fe] (dcT.south) -- (prSM.north);
+\node[right=1.5mm,xshift=-0.4813mm,yshift=0.0238mm] at (0,-7.17) {是};
+\draw[fe] (prSM.south) -- (prM.north);
+\draw[fe] (prM.south) -- (prT1.north);
+\draw[fe] (dcT.east) -- (4.0,-5.9) -- (ioS.north);
+\node[above=2mm,xshift=0.1053mm,yshift=-0.7978mm] at (2.3,-5.9) {否};
+\draw[fe] (ioS.south) -- (stE.north);
+\draw[fe] (prT1.west) -- (-4.9,-12.0) -- (-4.9,-4.5) -- (J);
 \end{tikzpicture}

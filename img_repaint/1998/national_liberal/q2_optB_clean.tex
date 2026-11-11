@@ -1,0 +1,14 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-2.800000,0) -- (2.800000,0);
+\node[anchor=west,inner sep=0pt,xshift=2.000000pt,yshift=-4.000000pt] at (2.800000,0) {$x$};
+\draw[->] (0,-0.500000) -- (0,3.200000);
+\node[anchor=south,inner sep=0pt,xshift=4.000000pt,yshift=2.000000pt] at (0,3.200000) {$y$};
+\node[anchor=north east,inner sep=0pt,xshift=-2.000000pt,yshift=-2.000000pt] at (0,0) {$O$};
+% y=1 tick + label (cusp point (0,1))
+\draw (0.060000,1.000000) -- (-0.060000,1.000000);
+\node[anchor=east,inner sep=0pt,xshift=-5.000000pt] at (0,1.000000) {$1$};
+% y=2^{|x|}: left branch 2^{-x}, right branch 2^{x}; cusp at (0,1)
+\draw[domain=-1.700000:0,samples=80,smooth] plot (\x,{pow(2.0,-1*\x)});
+\draw[domain=0:1.700000,samples=80,smooth] plot (\x,{pow(2.0,\x)});
+\end{tikzpicture}

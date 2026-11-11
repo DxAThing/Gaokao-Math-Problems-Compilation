@@ -1,0 +1,18 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% right circular cylinder: top centre (0,3), bottom centre (0,0), rx=2, ry=0.5
+% top rim fully visible
+\draw[solid] (0,3) ellipse (2 and 0.5);
+% side walls
+\draw[solid] (-2,3)--(-2,0);
+\draw[solid] (2,3)--(2,0);
+% bottom rim: front half visible, back half hidden
+\draw[solid] (2,0) arc (0:-180:2 and 0.5);
+\draw[solid,dashed] (2,0) arc (0:180:2 and 0.5);
+% central axis (hidden)
+\draw[solid,dashed] (0,3)--(0,0);
+% radius segments shown in original at top and bottom
+\draw[solid] (0,3)--(2,3);
+\draw[solid] (0,0)--(2,0);
+\node[font=\normalsize,right=5pt] at (0,1.5) {$h$};
+\node[font=\normalsize,above=3pt] at (0.55,0) {$r$};
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% hyperbola x^2/2-y^2/4=1 : a=sqrt(2), b=2, c=sqrt(6)
+\coordinate (O) at (0,0);
+\coordinate (F1) at (-2.449489742783,0);
+\coordinate (F2) at (2.449489742783,0);
+\coordinate (P) at (0.816496580928,1.154700538379);
+\draw[->] (-3.2,0)--(3.2,0) node[right=2pt] {$x$};
+\draw[->] (0,-3.2)--(0,3.2) node[above=2pt] {$y$};
+\node[below right=2pt] at (0,0) {$O$};
+% branches from formula x=+-a*sqrt(1+y^2/b^2), y in [-3,3]
+\draw[domain=-3:3,samples=80,smooth] plot ({sqrt(2)*sqrt(1+\x*\x/4)},{\x});
+\draw[domain=-3:3,samples=80,smooth] plot ({-sqrt(2)*sqrt(1+\x*\x/4)},{\x});
+% asymptote y=(b/a)x = sqrt(2)x through O and P
+\draw[domain=-2.1:2.1,samples=2] plot ({\x},{sqrt(2)*\x});
+% points F1,F2,P
+\fill (-2.449489742783,0) circle (1pt);
+\fill (2.449489742783,0) circle (1pt);
+\fill (0.816496580928,1.154700538379) circle (1pt);
+\draw (0.816496580928,1.154700538379)--(-2.449489742783,0);
+\draw (0.816496580928,1.154700538379)--(2.449489742783,0);
+\node[below=2pt] at (-2.449489742783,0) {$F_{1}$};
+\node[below=2pt] at (2.449489742783,0) {$F_{2}$};
+\node[above right=2pt,xshift=3pt,yshift=-4pt] at (0.816496580928,1.154700538379) {$P$};
+\end{tikzpicture}

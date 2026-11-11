@@ -1,0 +1,9 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (-1.0,0)--(3.2,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.2)--(0,2.2) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\node[anchor=north west,inner sep=0pt,xshift=3pt,yshift=-3pt] at (0,0) {$O$};
+% parabola y=-0.5x^2+1.25x: opens down, roots 0/2.5, vertex (1.25,0.78)
+\draw[domain=-0.5:3.1,samples=140] plot (\x,{-0.5*\x*\x+1.25*\x});
+% falling line y=-0.5x+1.25 through (0,1.25),(1,0.75),(2.5,0)
+\draw (-0.7,1.60)--(3.0,-0.25);
+\end{tikzpicture}

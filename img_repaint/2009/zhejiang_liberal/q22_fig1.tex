@@ -1,0 +1,21 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-2.6,0) -- (2.9,0) node[right,xshift=2pt] {$x$};
+\draw[->] (0,-0.5) -- (0,9.2) node[above,yshift=3pt] {$y$};
+\node[below left,xshift=-3pt,yshift=-3pt] at (0,0) {$O$};
+% parabola y=x^2 from formula
+\draw[thick,line width=.6pt] plot[domain=-2.8:3.0,samples=120] (\x,{\x*\x});
+% points on parabola
+\coordinate (Q) at (-1.5,2.25);
+\coordinate (P) at (0.7222222222,0.5216049383);
+\coordinate (N) at (2.785714286,7.760204082);
+\coordinate (M) at (1.392857143,0);
+\draw ($(Q)!-.15!(M)$)--($(Q)!1.12!(M)$);
+\draw ($(Q)!-.06!(N)$)--($(Q)!1.04!(N)$);
+\draw ($(M)!-.08!(N)$)--($(M)!1.04!(N)$);
+% labels offset from strokes
+\node[above left,inner sep=2pt,xshift=-8.00bp,yshift=-6.00bp] at (Q) {$Q$};
+\node[above left,inner sep=2pt,xshift=4.00bp,yshift=4.00bp] at (P) {$P$};
+\node[below right,inner sep=2pt,xshift=0.00bp,yshift=-6.00bp] at (M) {$M$};
+\node[above right,xshift=3pt,yshift=1pt] at (N) {$N$};
+\end{tikzpicture}

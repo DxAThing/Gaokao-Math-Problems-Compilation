@@ -1,0 +1,12 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=0.720cm,y=0.720cm,line width=.6pt,>=stealth]
+\draw[->,line width=.6pt] (-2.2,0)--(8.8,0) node[right,inner sep=0pt,xshift=2pt]{$x$};
+\draw[->,line width=.6pt] (0,-5.5)--(0,5.5) node[above,inner sep=0pt,yshift=2pt]{$y$};
+\draw[line width=.6pt] plot[domain=0.001:0.493,samples=140] (\x,{1/(ln(\x)-\x+1)});
+\draw[line width=.6pt] plot[domain=1.773:8.8,samples=140] (\x,{1/(ln(\x)-\x+1)});
+\draw[line width=.6pt] (1,-0.25)--(1,0.25);
+\draw[line width=.6pt] (-0.25,1)--(0.25,1);
+\node[inner sep=0pt] at (1,-0.72) {$1$};
+\node[inner sep=0pt] at (-0.62,1) {$1$};
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\end{tikzpicture}

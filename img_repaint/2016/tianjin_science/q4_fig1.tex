@@ -1,64 +1,35 @@
-% Source PDF: source/普通高考/2016/2016天津理.pdf, page 1.
-% PDF embedded bitmap attempt: pdfimages -list returned no image objects; the flowchart is vector art.
-% Grid evidence: tmp/redraw_flowchart_2016_tianjin_science/grid/page1_grid100.png and q4_block_grid50.png.
-% Comparison source: tmp/redraw_flowchart_2016_tianjin_science/crops/q4_orig_final.png,
-% cropped from the ungridded page render with a safety border.
-% Elements: rounded start/end terminals; S=4 and n=1 initialization boxes; two
-% decision diamonds S>=6? and n>3?; branch updates S=2S and S=S-6; n=n+1;
-% output parallelogram; yes/no labels and loop-back connectors.
-% Relations: start -> S=4 -> n=1 -> S>=6?; no -> S=2S, yes -> S=S-6;
-% both update branches merge into n=n+1 -> n>3?; no loops to S>=6?, yes -> output S -> end.
-% Directed edges: start->S=4, S=4->n=1, n=1->S>=6; S>=6-(否)->S=2S;
-% S>=6-(是)->S=S-6; both updates->n=n+1; n=n+1->n>3;
-% n>3-(否)->S>=6; n>3-(是)->output; output->end.
-% solid segments: all node borders and directed connectors; dashed segments: none.
-% labels: formulas centered in nodes; branch labels sit beside the corresponding
-% diamond edges without hand-spacing or overlap.
-\begin{tikzpicture}[x=1cm,y=1cm,baseline,
-  flowarrow/.style={-{Latex[length=2.1mm,width=1.5mm]},line width=0.45pt},
-  nodebox/.style={draw,line width=0.45pt,inner sep=2pt,minimum height=0.62cm,anchor=center,align=center,
-    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
-  branchlabel/.style={anchor=center,align=center,inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
-  term/.style={nodebox,rounded corners=2.5pt,minimum width=1.15cm,text width=1.15cm},
-  io/.style={nodebox,shape=trapezium,trapezium left angle=70,trapezium right angle=110,
-    minimum width=1.95cm,text width=1.65cm,minimum height=0.72cm},
-  decision/.style={nodebox,diamond,aspect=2.9,minimum width=3.15cm,minimum height=0.92cm,inner sep=1pt}
-]
-  % Main top-to-bottom program flow.
-  \node[term] (start) at (0,0) {开始};
-  \node[nodebox,text width=1.65cm,minimum width=1.65cm] (sinit) at (0,-1.20) {$S=4$};
-  \node[nodebox,text width=1.65cm,minimum width=1.65cm] (ninit) at (0,-2.40) {$n=1$};
-  \node[decision] (testS) at (0,-3.70) {$S\geq 6?$};
-  \node[nodebox,text width=2.00cm,minimum width=2.00cm] (doubleS) at (-2.55,-5.15) {$S=2S$};
-  \node[nodebox,text width=2.35cm,minimum width=2.35cm] (subtract) at (0,-5.15) {$S=S-6$};
-  \node[nodebox,text width=2.35cm,minimum width=2.35cm] (inc) at (0,-6.60) {$n=n+1$};
-  \node[decision] (testN) at (0,-8.00) {$n>3?$};
-  \node[io] (output) at (0,-9.35) {输出 $S$};
-  \node[term] (finish) at (0,-10.55) {结束};
-
-  \draw[flowarrow] (start.south) -- (sinit.north);
-  \draw[flowarrow] (sinit.south) -- (ninit.north);
-  \draw[flowarrow] (ninit.south) -- (testS.north);
-  \draw[flowarrow] (testS.south) -- (subtract.north);
-  \draw[flowarrow] (inc.south) -- (testN.north);
-  \draw[flowarrow] (testN.south) -- (output.north);
-  \draw[flowarrow] (output.south) -- (finish.north);
-
-  % 否 branch to S=2S, then merge with the 是 branch before n=n+1.
-  \draw (testS.west) -- (-2.55,-3.70);
-  \draw[flowarrow] (-2.55,-3.70) -- (doubleS.north);
-  % Keep the branch arrow at the three-way merge; the merged path has its own
-  % arrow at the actual increment-node endpoint below.
-  \draw[flowarrow] (doubleS.south) -- (-2.55,-5.85) -- (-0.45,-5.85) -- (0,-5.85);
-  \draw (subtract.south) -- (0,-5.85);
-  \draw[flowarrow] (0,-5.85) -- (inc.north);
-
-  % n>3 否 returns to the first decision; the output route stays independent.
-  \draw[flowarrow] (testN.east) -- (3.05,-8.00) -- (3.05,-2.85) -- (0,-2.85);
-
-  \node[branchlabel] at (-2.22,-3.12) {否};
-  \node[branchlabel] at (0.42,-4.28) {是};
-  \node[branchlabel] at (2.15,-7.54) {否};
-  \node[branchlabel] at (0.42,-8.72) {是};
+\parindent=0pt
+\tikzset{
+  gkstart/.style={draw, shape=rectangle, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm, align=center},
+  gkio/.style={draw, trapezium, trapezium left angle=75, trapezium right angle=105, minimum width=2.8cm, minimum height=0.9cm, align=center, inner sep=3pt},
+  gkproc/.style={draw, rectangle, minimum width=2.2cm, minimum height=0.85cm, align=center, inner sep=3pt},
+  gkprocw/.style={draw, rectangle, minimum width=2.6cm, minimum height=0.85cm, align=center, inner sep=3pt},
+  gkdec/.style={draw, diamond, aspect=2.6, minimum width=3.6cm, minimum height=1.3cm, align=center, inner sep=3pt},
+  gkarr/.style={->, >=Stealth, line width=0.6pt}
+}
+\begin{tikzpicture}[x=1cm, y=1cm]
+\node[gkstart] (ndStart) at (0,0) {开始};
+\node[gkproc] (ndS4) at (0,-1.5) {$S=4$};
+\node[gkproc] (ndN1) at (0,-2.7) {$n=1$};
+\coordinate (Jtop) at (0,-3.6);
+\node[gkdec] (ndD1) at (0,-4.6) {$S\geqslant 6?$};
+\node[gkproc] (ndL) at (-3.6,-6.4) {$S=2S$};
+\node[gkproc] (ndM) at (0,-6.4) {$S=S-6$};
+\coordinate (Jmid) at (0,-7.7);
+\coordinate (Cno1) at (-3.6,-4.6);
+\node[gkprocw] (ndN) at (0,-8.6) {$n=n+1$};
+\node[gkdec] (ndD2) at (0,-10.2) {$n>3?$};
+\node[gkio] (ndOut) at (0,-12.0) {输出 $S$};
+\node[gkstart] (ndEnd) at (0,-13.4) {结束};
+\draw[gkarr] (ndStart.south) -- (ndS4.north);
+\draw[gkarr] (ndS4.south) -- (ndN1.north);
+\draw[gkarr] (ndN1.south) -- (ndD1.north);
+\draw[gkarr] (ndD1.south) -- node[midway, right=1mm] {是} (ndM.north);
+\draw[gkarr] (ndM.south) -- (ndN.north);
+\draw[gkarr] (ndN.south) -- (ndD2.north);
+\draw[gkarr] (ndD2.south) -- node[midway, right=1mm] {是} (ndOut.north);
+\draw[gkarr] (ndOut.south) -- (ndEnd.north);
+\draw[gkarr] (ndD1.west) -- node[pos=0.28, above=1mm] {否} (Cno1) -- (ndL.north);
+\draw[gkarr] (ndL.south) |- (Jmid);
+\draw[gkarr] (ndD2.east) -- node[pos=0.3, above=1mm] {否} (3.4,-10.2) -- (3.4,-3.6) -- (Jtop);
 \end{tikzpicture}

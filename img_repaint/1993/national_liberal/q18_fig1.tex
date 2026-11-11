@@ -1,0 +1,42 @@
+% 1993 national liberal Q18: cube A1B1C1D1-ABCD, M on A1A, N on B1B, lines CM and D1N
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,
+  solid edge/.style={solid,line width=.6pt},
+  hidden edge/.style={dashed,line width=.6pt},
+  ptlabel/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (A) at (0,0);
+\coordinate (B) at (3,0);
+\coordinate (C) at (4.2,1.2);
+\coordinate (D) at (1.2,1.2);
+\coordinate (A1) at (0,3.2);
+\coordinate (B1) at (3,3.2);
+\coordinate (C1) at (4.2,4.4);
+\coordinate (D1) at (1.2,4.4);
+\coordinate (M) at (0,1.6);
+\coordinate (N) at (3.0000000000,1.6000000000);
+% front face solid
+\draw[solid edge] (A)--(B)--(B1)--(A1)--cycle;
+% back top solid
+\draw[solid edge] (D1)--(C1);
+\draw[solid edge] (A1)--(D1);
+\draw[solid edge] (B1)--(C1);
+% depth edges
+\draw[hidden edge] (A)--(D);
+\draw[solid edge] (B)--(C);
+\draw[hidden edge] (D)--(C);
+\draw[hidden edge] (D)--(D1);
+\draw[solid edge] (C)--(C1);
+% diagonal lines in figure
+\draw[hidden edge] (M)--(C);
+\draw[hidden edge] (D1)--(N);
+
+\node[ptlabel,below left,xshift=-4pt,yshift=-3pt] at (A) {$A$};
+\node[ptlabel,below right,xshift=4pt,yshift=-3pt] at (B) {$B$};
+\node[ptlabel,right,xshift=5pt] at (C) {$C$};
+\node[ptlabel,below,xshift=1pt,yshift=-4pt] at (D) {$D$};
+\node[ptlabel,left,xshift=-5pt] at (A1) {$A_{1}$};
+\node[ptlabel,right,xshift=5pt,yshift=-2pt] at (B1) {$B_{1}$};
+\node[ptlabel,right,xshift=4pt,yshift=2pt] at (C1) {$C_{1}$};
+\node[ptlabel,above left,xshift=-3pt,yshift=3pt] at (D1) {$D_{1}$};
+\node[ptlabel,left,xshift=-5pt] at (M) {$M$};
+\node[ptlabel,right,xshift=4pt,yshift=1pt] at (N) {$N$};
+\end{tikzpicture}

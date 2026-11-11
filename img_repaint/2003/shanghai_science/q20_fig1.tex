@@ -1,0 +1,23 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=0.282cm,y=0.282cm,line width=.6pt,>=Stealth]
+\draw[->] (-17.5,0)--(17.5,0) node[right,inner sep=0pt,xshift=2pt]{$x$};
+\draw[->] (0,-1.2)--(0,8.6) node[above,inner sep=0pt,yshift=2pt]{$y$};
+\draw[domain=0:180,samples=140,smooth] plot({14.443*cos(\x)},{6.944*sin(\x)});
+\draw[dashed] (-11,0)--(-11,4.5);
+\draw[dashed] (-5.5,0)--(-5.5,4.5);
+\draw[dashed] (5.5,0)--(5.5,4.5);
+\draw[dashed] (11,0)--(11,4.5);
+\draw[dashed] (-11,4.5)--(11,4.5);
+\draw[dimension line] (-11,-2.2)--(11,-2.2) node[midway,dimension label]{$22$};
+\draw[dimension line] (-14.443,-4.3)--(14.443,-4.3) node[midway,dimension label]{$l$};
+\draw (-14.443,0)--(-14.443,-5.0);
+\draw (14.443,0)--(14.443,-5.0);
+\draw (-11,0)--(-11,-2.7);
+\draw (11,0)--(11,-2.7);
+\draw[dimension line] (15,0)--(15,6.944) node[midway,dimension label vertical]{$h$};
+\draw (0,6.944)--(15.8,6.944);
+\draw[dimension line] (-15,0)--(-15,4.5);
+\node[left,inner sep=0pt,xshift=-2pt] at (-15,2.25) {$4.5$};
+\draw (-18.5,4.5)--(-11,4.5);
+\node[anchor=west,inner sep=0pt] at (9.5,9.0) {（单位：米）};
+\end{tikzpicture}

@@ -1,0 +1,29 @@
+% Triangular-pyramid views. Front: right triangle, vertical leg 2 on the
+% left, horizontal leg 1 at the bottom. Side: right triangle, vertical
+% leg 2 on the right, horizontal leg 1 at the bottom. Plan: right
+% triangle with legs 1 (bottom) by 1 (right). Front width equals plan
+% width; front/side heights equal; side width equals plan height.
+% All edges solid.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,>=Stealth]
+\begin{scope}[shift={(0,2.9)}]
+\draw (0,0) -- (0.9,0) -- (0,1.8) -- cycle;
+\draw[dimension extension] (-.1,0) -- (-.65,0);
+\draw[dimension extension] (-.1,1.8) -- (-.65,1.8);
+\draw[dimension line] (-.45,0) -- node[dimension label vertical] {2} (-.45,1.8);
+\draw[dimension extension] (0,-.1) -- (0,-.65);
+\draw[dimension extension] (.9,-.1) -- (.9,-.65);
+\draw[dimension line] (0,-.45) -- node[dimension label] {1} (.9,-.45);
+\end{scope}
+\begin{scope}[shift={(2.4,2.9)}]
+\draw (0,0) -- (0.9,0) -- (0.9,1.8) -- cycle;
+\draw[dimension extension] (0,-.1) -- (0,-.65);
+\draw[dimension extension] (.9,-.1) -- (.9,-.65);
+\draw[dimension line] (0,-.45) -- node[dimension label] {1} (.9,-.45);
+\end{scope}
+\begin{scope}[shift={(4.8,2.9)}]
+\draw (0,0) -- (0.9,0) -- (0.9,0.9) -- cycle;
+\end{scope}
+\node at (0.45,1.9) {正视图};
+\node at (2.85,1.9) {侧视图};
+\node at (5.25,1.9) {俯视图};
+\end{tikzpicture}

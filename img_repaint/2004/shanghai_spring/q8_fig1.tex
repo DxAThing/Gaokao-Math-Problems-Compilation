@@ -1,0 +1,33 @@
+% 2004 shanghai spring q8: 4 hollow-dot groups left to right: 4, 7, 13, 21 dots.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+\tikzset{hdot/.style={draw,circle,minimum size=6pt,inner sep=0pt,line width=.6pt}}
+% group 1: 4 dots on baseline (1 isolated + 3 clustered, same y)
+\node[hdot] (g1a) at (0,0) {};
+\node[hdot] (g1b) at (2.2,0) {};
+\node[hdot] (g1c) at (2.7,0) {};
+\node[hdot] (g1d) at (3.2,0) {};
+% group 2: V with stem, 7 dots (center, 2 up-left, 2 up-right, 2 down)
+\begin{scope}[shift={(5.5,0)}]
+\node[hdot] (g2c) at (0,0) {};
+\node[hdot] at (-0.5,0.5) {};
+\node[hdot] at (-1.0,1.0) {};
+\node[hdot] at (0.5,0.5) {};
+\node[hdot] at (1.0,1.0) {};
+\node[hdot] at (0,-0.55) {};
+\node[hdot] at (0,-1.1) {};
+\end{scope}
+% group 3: cross, 13 dots (7 horizontal + 7 vertical sharing center)
+\begin{scope}[shift={(9.6,0)}]
+\foreach \x in {-1.5,-1.0,-0.5,0,0.5,1.0,1.5} {\node[hdot] at (\x,0) {};}
+\foreach \y in {-1.5,-1.0,-0.5,0.5,1.0,1.5} {\node[hdot] at (0,\y) {};}
+\end{scope}
+% group 4: five-arm star, 21 dots (center + 4 per arm)
+\begin{scope}[shift={(13.8,0)}]
+\node[hdot] (g4c) at (0,0) {};
+\foreach \r in {0.55,1.1,1.65,2.2} {\node[hdot] at (0,\r) {};}
+\foreach \r in {0.55,1.1,1.65,2.2} {\node[hdot] at ({-\r*0.95},{0.31*\r}) {};}
+\foreach \r in {0.55,1.1,1.65,2.2} {\node[hdot] at ({\r*0.95},{0.31*\r}) {};}
+\foreach \r in {0.55,1.1,1.65,2.2} {\node[hdot] at ({-\r*0.55},{-\r*0.83}) {};}
+\foreach \r in {0.55,1.1,1.65,2.2} {\node[hdot] at ({\r*0.55},{-\r*0.83}) {};}
+\end{scope}
+\end{tikzpicture}

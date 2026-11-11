@@ -1,0 +1,16 @@
+% 2020 New Gaokao I Q10: y=sin(2x+2pi/3), zeros pi/6 and 2pi/3.
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.7cm,y=1.7cm,line width=.6pt,>=Stealth]
+\draw[->] (-0.72,0) -- (3.45,0);
+\node[anchor=west,inner sep=0pt,xshift=3pt] at (3.45,0) {$x$};
+\draw[->] (0,-1.25) -- (0,1.42);
+\node[anchor=south,inner sep=0pt,yshift=3pt] at (0,1.42) {$y$};
+\node[anchor=north east,inner sep=0pt,xshift=-3pt,yshift=-3pt] at (0,0) {$O$};
+\draw (-0.09,1) -- (0,1);
+\node[anchor=west,inner sep=0pt,xshift=4pt,yshift=4pt] at (0,1) {$1$};
+\draw (0.5235987756,0) -- (0.5235987756,-0.11);
+\node[anchor=north east,inner sep=0pt,xshift=-3pt,yshift=-7pt] at (0.5235987756,0) {$\dfrac{\pi}{6}$};
+\draw (2.0943951024,0) -- (2.0943951024,-0.11);
+\node[anchor=north west,inner sep=0pt,xshift=3pt,yshift=-7pt] at (2.0943951024,0) {$\dfrac{2\pi}{3}$};
+\draw[domain=-0.58:3.14,samples=240] plot (\x,{sin(deg(2*\x+2*pi/3))});
+\end{tikzpicture}

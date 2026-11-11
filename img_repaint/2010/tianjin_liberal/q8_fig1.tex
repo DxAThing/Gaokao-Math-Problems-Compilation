@@ -1,0 +1,18 @@
+% y=sin(2x+pi/3) on [-pi/6,5pi/6]: y=sin(2*deg(x)+60). Zeros at -pi/6, pi/3, 5pi/6;
+% max (pi/12,1), min (7pi/12,-1); dashed y=-1 guide from (0,-1) to trough.
+\begin{tikzpicture}[x=1.9cm,y=1.5cm,line width=.6pt,>=stealth]
+\draw[->] (-1.05,0) -- (3.15,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.55) -- (0,1.55) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw (-0.5236,-0.035) -- (-0.5236,0.035);
+\node[below,inner sep=0pt,yshift=-2pt] at (-0.5236,0) {$-\frac{\pi}{6}$};
+\node[below left,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\draw (1.0472,-0.035) -- (1.0472,0.035);
+\node[below left,inner sep=0pt,xshift=-3pt,yshift=-2pt] at (1.0472,0) {$\frac{\pi}{3}$};
+\draw (2.618,-0.035) -- (2.618,0.035);
+\node[below right,inner sep=0pt,xshift=3pt,yshift=-2pt] at (2.618,0) {$\frac{5\pi}{6}$};
+\draw (-0.03,1) -- (0.03,1);
+\node[left,inner sep=0pt,xshift=-2pt] at (0,1) {$1$};
+\node[left,inner sep=0pt,xshift=-2pt] at (0,-1) {$-1$};
+\draw[dashed] (0,-1) -- (1.8326,-1);
+\draw[domain=-0.5236:2.618,samples=220] plot (\x,{sin(2*deg(\x)+60)});
+\end{tikzpicture}

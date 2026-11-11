@@ -1,0 +1,10 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=0.85cm,y=0.85cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-4.167,0) -- (4.167,0);
+\draw[->] (0,-1.666) -- (0,3.328);
+\draw[domain=-3:3,samples=241] plot (\x,{2-exp(-0.6*abs(\x))});
+\node[anchor=north west,inner sep=0pt,xshift=2pt,yshift=-2pt] at (4.167,0) {$x$};
+\node[anchor=east,inner sep=0pt,xshift=-4pt,yshift=1pt] at (0,3.328) {$y$};
+\node[anchor=north east,inner sep=0pt,xshift=-4pt,yshift=-2pt] at (0,0) {$O$};
+\node[anchor=north east,inner sep=0pt,xshift=-4pt,yshift=-2pt] at (0,1) {$1$};
+\end{tikzpicture}

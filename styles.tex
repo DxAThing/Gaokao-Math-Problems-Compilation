@@ -236,7 +236,12 @@
 
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta, calc, intersections, positioning, shapes.geometric, shapes.misc}
+% Load shared fragment libraries before figure measurement groups: TikZ caches
+% library loading, but keys first defined inside a group disappear on exit.
+\usetikzlibrary{angles,quotes,patterns,decorations.pathreplacing,decorations.pathmorphing,shadings}
+\input{templates/diagrams/dimension_styles.tex}
 \usepackage{pgfplots}
+\usepackage{pgf-pie}
 \pgfplotsset{compat=1.18}
 \pgfplotsset{
     ybar interval/.append style={
@@ -251,7 +256,7 @@
 \setlength{\textfloatsep}{0.45\baselineskip}
 \setlength{\floatsep}{0.45\baselineskip}
 % \columnsep（横向：图片与侧边文字的间距）已在上方 multicol 区域统一设为 1.5em
-\usepackage{array, tabularray, multirow}
+\usepackage{array, tabularray, multirow, booktabs}
 % 正文依靠 \lineskip 在含显示样式分式的相邻行之间自动避让。array/tabular
 % 内部会把 \lineskip 清零，故进入表格前保存正文间距的一半，由分式上下各承担
 % 一半；相邻两个高行合计仍是一个正文 \lineskip，普通文本行不被无谓拉高。
@@ -295,32 +300,7 @@
     }%
 }
 
-\ExplSyntaxOn
-\bool_new:N \l__bitmap_solution_caption_bool
-\tl_new:N \l__bitmap_solution_caption_tl
-
-\cs_new_protected:Npn \__bitmap_prepare_caption:n #1
-{
-    \bool_set_false:N \l__bitmap_solution_caption_bool
-    \tl_clear:N \l__bitmap_solution_caption_tl
-    \regex_extract_once:nnNT { q([0-9]+)_solution_fig([0-9]+)\.(?:tex|png|jpg|jpeg)$ } {#1} \l_tmpa_seq
-    {
-        \bool_set_true:N \l__bitmap_solution_caption_bool
-        \tl_set:Nx \l__bitmap_solution_caption_tl
-        {第\seq_item:Nn \l_tmpa_seq {2}题解析图\seq_item:Nn \l_tmpa_seq {3}}
-    }
-}
-\NewDocumentCommand{\bitmappreparecaption}{m}
-{
-    \__bitmap_prepare_caption:n {#1}
-}
-\NewDocumentCommand{\bitmapinsertcaption}{}
-{
-    \bool_if:NTF \l__bitmap_solution_caption_bool
-        {\captionof*{figure}{\tl_use:N \l__bitmap_solution_caption_tl}}
-        {\captionof{figure}{}}
-}
-\ExplSyntaxOff
+\input{templates/diagrams/figure_captions.tex}
 
 \makeatletter
 \newcommand{\FigureLayoutDeclare}[3]{%
@@ -608,8 +588,8 @@
 \examfigure@tcbreadyfalse
 \def\examfigure@opts{}
 \def\examfigure@float{auto}
-\def\examfigure@modeinline{inline}
-\def\examfigure@modetop{top}
+\edef\examfigure@modeinline{\detokenize{inline}}
+\edef\examfigure@modetop{\detokenize{top}}
 \ExplSyntaxOn
 \tl_new:N \l__exam_figure_raw_tl
 \tl_new:N \l__exam_figure_float_tl
@@ -621,10 +601,10 @@
     \tl_set:Nn \l__exam_figure_float_tl {auto}
     \tl_if_in:VnT \l__exam_figure_raw_tl {float}
       {
-        \regex_extract_once:nnNT
+        \exp_args:Nne \regex_extract_once:nnNT
           { (?:\A|,)\s*float\s*=\s*(auto|inline|top)\s*(?:,|\Z) }
           { \tl_to_str:V \l__exam_figure_raw_tl } \l_tmpa_seq
-          { \tl_set:Nx \l__exam_figure_float_tl { \seq_item:Nn \l_tmpa_seq {1} } }
+          { \tl_set:Nx \l__exam_figure_float_tl { \seq_item:Nn \l_tmpa_seq {2} } }
         \regex_replace_once:nnN
           { \A\s*float\s*=\s*(?:auto|inline|top)\s*,\s* }
           { }
@@ -662,6 +642,7 @@
 \def\examfigure@buildbox#1{%
     \setbox\examfigurebox=\vbox{%
         \hsize=\linewidth
+        \texboxparagraphreset
         \begin{minipage}{\linewidth}
             \centering
             \begingroup
@@ -913,6 +894,7 @@
 \def\examfiguregroup@body{}
 \newcommand{\examfiguregroup@render}[2][]{%
     \texboxparagraphreset
+    \centering
     \examfiguregroup@body
 }
 \NewDocumentCommand{\examfiguregroup}{O{} m +m}{%
@@ -1248,7 +1230,7 @@
 \newdimen\examchoicewidthE
 \newdimen\examchoicemaxwidth
 
-\newcommand{\choices}[4]{%
+\newcommand{\choices}[5][fixed]{%
     \problembodyend
     % Keep the transition mildly preferred but breakable; do not lock the
     % entire question to the current page when only the stem's first line fits.
@@ -1257,48 +1239,55 @@
     \begingroup
     \setlength{\leftskip}{\problembodyindent}
     \examchoicewidth=\dimexpr\linewidth-\problembodyindent\relax
+    \def\examchoicetwocolratio{0.47}%
     \examchoicegraphiccount=0
     \global\examchoicegraphicfalse
-    \settowidth{\examchoicewidthA}{\textbf{A.}~#1}
+    \settowidth{\examchoicewidthA}{\textbf{A.}~#2}
     \ifexamchoicegraphic\advance\examchoicegraphiccount by 1\relax\fi
     \global\examchoicegraphicfalse
-    \settowidth{\examchoicewidthB}{\textbf{B.}~#2}
+    \settowidth{\examchoicewidthB}{\textbf{B.}~#3}
     \ifexamchoicegraphic\advance\examchoicegraphiccount by 1\relax\fi
     \global\examchoicegraphicfalse
-    \settowidth{\examchoicewidthC}{\textbf{C.}~#3}
+    \settowidth{\examchoicewidthC}{\textbf{C.}~#4}
     \ifexamchoicegraphic\advance\examchoicegraphiccount by 1\relax\fi
     \global\examchoicegraphicfalse
-    \settowidth{\examchoicewidthD}{\textbf{D.}~#4}
+    \settowidth{\examchoicewidthD}{\textbf{D.}~#5}
     \ifexamchoicegraphic\advance\examchoicegraphiccount by 1\relax\fi
     \examchoicemaxwidth=\examchoicewidthA
     \ifdim\examchoicewidthB>\examchoicemaxwidth \examchoicemaxwidth=\examchoicewidthB \fi
     \ifdim\examchoicewidthC>\examchoicemaxwidth \examchoicemaxwidth=\examchoicewidthC \fi
     \ifdim\examchoicewidthD>\examchoicemaxwidth \examchoicemaxwidth=\examchoicewidthD \fi
-    \addtolength{\examchoicemaxwidth}{2em}
+    % Native statistical drawings retain their font size and wrap by measured width.
+    \ifstrequal{#1}{natural}{%
+        \examchoicegraphiccount=0\relax
+        \def\examchoicetwocolratio{0.49}%
+    }{%
+        \addtolength{\examchoicemaxwidth}{2em}%
+    }
 
     \vspace{-0.2em}\noindent
     \ifnum\examchoicegraphiccount=4
-        \choicegraphiccell{\dimexpr0.22\examchoicewidth\relax}{A}{#1}\hfill
-        \choicegraphiccell{\dimexpr0.22\examchoicewidth\relax}{B}{#2}\hfill
-        \choicegraphiccell{\dimexpr0.22\examchoicewidth\relax}{C}{#3}\hfill
-        \choicegraphiccell{\dimexpr0.22\examchoicewidth\relax}{D}{#4}%
+        \choicegraphiccell{\dimexpr0.22\examchoicewidth\relax}{A}{#2}\hfill
+        \choicegraphiccell{\dimexpr0.22\examchoicewidth\relax}{B}{#3}\hfill
+        \choicegraphiccell{\dimexpr0.22\examchoicewidth\relax}{C}{#4}\hfill
+        \choicegraphiccell{\dimexpr0.22\examchoicewidth\relax}{D}{#5}%
     \else\ifdim\examchoicemaxwidth<0.22\examchoicewidth
-        \choicecell{\dimexpr0.22\examchoicewidth\relax}{A}{#1}\hfill
-        \choicecell{\dimexpr0.22\examchoicewidth\relax}{B}{#2}\hfill
-        \choicecell{\dimexpr0.22\examchoicewidth\relax}{C}{#3}\hfill
-        \choicecell{\dimexpr0.22\examchoicewidth\relax}{D}{#4}%
+        \choicecell{\dimexpr0.22\examchoicewidth\relax}{A}{#2}\hfill
+        \choicecell{\dimexpr0.22\examchoicewidth\relax}{B}{#3}\hfill
+        \choicecell{\dimexpr0.22\examchoicewidth\relax}{C}{#4}\hfill
+        \choicecell{\dimexpr0.22\examchoicewidth\relax}{D}{#5}%
     \else
-        \ifdim\examchoicemaxwidth<0.47\examchoicewidth
-            \choicecell{\dimexpr0.47\examchoicewidth\relax}{A}{#1}\hfill
-            \choicecell{\dimexpr0.47\examchoicewidth\relax}{B}{#2}\par
+        \ifdim\examchoicemaxwidth<\examchoicetwocolratio\examchoicewidth
+            \choicecell{\dimexpr\examchoicetwocolratio\examchoicewidth\relax}{A}{#2}\hfill
+            \choicecell{\dimexpr\examchoicetwocolratio\examchoicewidth\relax}{B}{#3}\par
             \vspace{0.2em}
-            \choicecell{\dimexpr0.47\examchoicewidth\relax}{C}{#3}\hfill
-            \choicecell{\dimexpr0.47\examchoicewidth\relax}{D}{#4}%
+            \choicecell{\dimexpr\examchoicetwocolratio\examchoicewidth\relax}{C}{#4}\hfill
+            \choicecell{\dimexpr\examchoicetwocolratio\examchoicewidth\relax}{D}{#5}%
         \else
-            \choiceentry{A}{#1}\par
-            \choiceentry{B}{#2}\par
-            \choiceentry{C}{#3}\par
-            \choiceentry{D}{#4}%
+            \choiceentry{A}{#2}\par
+            \choiceentry{B}{#3}\par
+            \choiceentry{C}{#4}\par
+            \choiceentry{D}{#5}%
         \fi
     \fi\fi
     \global\examchoicegraphicfalse
@@ -1653,7 +1642,7 @@
     \global\exam@marker@floatcontextfalse
 }
 \long\def\exam@marker@parse#1\solutionfigure#2#3\exam@marker@end{%
-    \ifx#2\exam@marker@stop
+    \tl_if_eq:nnTF {#2} {\exam@marker@stop} {
         \ifexam@marker@hasmarker
             % The final slice follows the last float.  Its top edge is a
             % continuation edge; only its bottom edge closes the container.
@@ -1661,7 +1650,7 @@
         \else
             \exam@marker@rendersegment{\exam@marker@heading}{#1}{examanswer}%
         \fi
-    \else
+    }{
         \global\exam@marker@hasmarkertrue
         \ifexam@marker@first
             \global\exam@marker@forcefirsttrue
@@ -1677,7 +1666,7 @@
         % it, the final segment would scan forward to a later solutionfigure
         % in the document and be rendered a second time.
         \exam@marker@parse#3\solutionfigure{\exam@marker@stop}\exam@marker@end
-    \fi
+    }
 }
 \long\def\exam@marker@rendersliced#1#2{%
     \def\exam@marker@heading{#1}%
@@ -1690,11 +1679,18 @@
         \exam@marker@endfloatglue
     \fi
 }
-% A source enumerate may span one or more solutionfigure markers.  Splitting
-% such a body into physical tcolorbox slices would close a slice while the
-% environment group is still open.  Keep that body in one breakable box and
-% let its marked figures use bitmapfigure/texfigure's existing inner-mode
-% block rendering.  Marker bodies without enumerate retain real-float slices.
+% A marker can float between complete lists.  A marker inside an open list
+% must remain in the breakable box, otherwise slicing closes an open group.
+\bool_new:N \l__exam_marker_closed_lists_bool
+\long\def\exam@marker@checklists#1\solutionfigure#2#3\exam@marker@end{%
+    \exp_args:Nne \regex_count:nnN { \\begin\s*\{enumerate\} } {\tl_to_str:n {#1}} \l_tmpa_int
+    \exp_args:Nne \regex_count:nnN { \\end\s*\{enumerate\} } {\tl_to_str:n {#1}} \l_tmpb_int
+    \int_compare:nNnF {\l_tmpa_int} = {\l_tmpb_int}
+        {\bool_set_false:N \l__exam_marker_closed_lists_bool}%
+    \tl_if_eq:nnF {#2} {\exam@marker@stop} {
+        \exam@marker@checklists#3\solutionfigure{\exam@marker@stop}\exam@marker@end
+    }
+}
 \long\def\exam@marker@renderenumerated#1#2{%
     \begin{tcolorbox}[examanswer]%
         \textbf{#1}\ignorespaces
@@ -1711,11 +1707,11 @@
     \ifshowanswer
         \problembodyend
         \examallownextpagebreak
-        \tl_if_in:nnTF {#2} {\begin{enumerate}}%
-            {\tl_if_in:nnTF {#2} {\solutionfigure}%
-                {\exam@marker@renderenumerated{#1}{#2}}%
-                {\exam@marker@rendersliced{#1}{#2}}}%
+        \bool_set_true:N \l__exam_marker_closed_lists_bool
+        \exam@marker@checklists#2\solutionfigure{\exam@marker@stop}\exam@marker@end
+        \bool_if:NTF \l__exam_marker_closed_lists_bool
             {\exam@marker@rendersliced{#1}{#2}}%
+            {\exam@marker@renderenumerated{#1}{#2}}%
     \fi
 }
 \long\def\exam@collectsolution#1{\exam@marker@render{\textbf{【解析】}}{#1}}

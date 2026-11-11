@@ -1,0 +1,15 @@
+% source_constraints: axes x right, y up, O below-left of origin; three solid straight lines: l1 slope +2 through O, l2 slope -2 through O, l near-vertical on right side intersecting l1 at A (first quadrant) and l2 at B (fourth quadrant); all solid .6pt, arrows only on axes; labels l,l1,l2,A,B,O,x,y; no ticks, no dots, no grid; schematic slopes from stem y=2x/-2x, l/A/B positions schematic.
+% data: O=(0,0); l1: (-1.4,-2.8)--(1.4,2.8); l2: (-1.4,2.8)--(1.4,-2.8); l: (0.75,-2.6)--(1.25,2.9); A=(1.08,2.16) label right; B=(0.98,-1.96) label right.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-3.2,0)--(3.4,0) node[below right] {$x$};
+\draw[->] (0,-3.2)--(0,3.4) node[above left] {$y$};
+\node[below left] at (0,0) {$O$};
+\draw ( -1.4,-2.8)--(1.4,2.8);
+\node[right] at (1.4,2.8) {$l_{1}$};
+\draw (-1.4,2.8)--(1.4,-2.8);
+\node[right] at (1.4,-2.8) {$l_{2}$};
+\draw (0.75,-2.6)--(1.25,2.9);
+\node[left] at (1.22,2.75) {$l$};
+\node[right] at (1.25,2.05) {$A$};
+\node[right] at (1.05,-1.96) {$B$};
+\end{tikzpicture}

@@ -1,0 +1,50 @@
+% 2011_tianjin_science_q10_fig1: dimension point-fix only.
+% Cone-on-cuboid projections unchanged; dims 3/1/3, 2/1/3, plan 3/2, radius 1 unchanged.
+% Linear dims use shared styles outside outline >=4.5mm; radius keeps single arrow + centre dot.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% front at (0,4.6)
+\begin{scope}[shift={(0,4.6)}]
+\draw (0,0) rectangle (3,1);
+\draw (0.5,1) -- (1.5,4) -- (2.5,1);
+\draw[dimension extension] (0,0) -- (0,-0.75);
+\draw[dimension extension] (3,0) -- (3,-0.75);
+\draw[dimension line] (0,-0.55) -- node[dimension label] {$3$} (3,-0.55);
+\draw[dimension extension] (3,0) -- (3.75,0);
+\draw[dimension extension] (3,1) -- (3.75,1);
+\draw[dimension line] (3.55,0) -- node[dimension label vertical] {$1$} (3.55,1);
+\draw[dimension extension] (1.5,4) -- (3.75,4);
+\draw[dimension extension] (3,1) -- (3.75,1);
+\draw[dimension line] (3.55,1) -- node[dimension label vertical] {$3$} (3.55,4);
+\node[below] at (1.5,-1.15) {正视图};
+\end{scope}
+% side at (5.6,4.6)
+\begin{scope}[shift={(5.6,4.6)}]
+\draw (0,0) rectangle (2,1);
+\draw (0,1) -- (1,4) -- (2,1);
+\draw[dimension extension] (0,0) -- (0,-0.75);
+\draw[dimension extension] (2,0) -- (2,-0.75);
+\draw[dimension line] (0,-0.55) -- node[dimension label] {$2$} (2,-0.55);
+\draw[dimension extension] (2,0) -- (2.75,0);
+\draw[dimension extension] (2,1) -- (2.75,1);
+\draw[dimension line] (2.55,0) -- node[dimension label vertical] {$1$} (2.55,1);
+\draw[dimension extension] (1,4) -- (2.75,4);
+\draw[dimension extension] (2,1) -- (2.75,1);
+\draw[dimension line] (2.55,1) -- node[dimension label vertical] {$3$} (2.55,4);
+\node[below] at (1,-1.15) {侧视图};
+\end{scope}
+% plan at (9.6,4.6)
+\begin{scope}[shift={(9.6,4.6)}]
+\draw (0,0) rectangle (3,2);
+\draw (1.5,1) circle (1);
+\fill (1.5,1) circle (1.6pt);
+% radius: single arrow from centre to circumference, label with white gap (per original inside)
+\draw[-{Latex[length=1.8mm]}] (1.5,1) -- node[dimension label] {$1$} (2.2,1.7);
+\draw[dimension extension] (0,0) -- (0,-0.75);
+\draw[dimension extension] (3,0) -- (3,-0.75);
+\draw[dimension line] (0,-0.55) -- node[dimension label] {$3$} (3,-0.55);
+\draw[dimension extension] (3,0) -- (3.75,0);
+\draw[dimension extension] (3,2) -- (3.75,2);
+\draw[dimension line] (3.55,0) -- node[dimension label vertical] {$2$} (3.55,2);
+\node[below] at (1.5,-1.15) {俯视图};
+\end{scope}
+\end{tikzpicture}

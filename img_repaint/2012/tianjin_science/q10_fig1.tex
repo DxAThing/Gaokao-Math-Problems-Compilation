@@ -1,0 +1,35 @@
+% 2012_tianjin_science_q10_fig1: bar on two tangent circles (r=3/2); dashed circles in top.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=0.55cm,y=0.55cm,>=Latex]
+% front (left): bar 6x1 on circles r=1.5
+\begin{scope}[shift={(0,0)}]
+  \draw (0,3) rectangle (6,4);
+  \draw (1.5,1.5) circle (1.5); \draw (4.5,1.5) circle (1.5);
+  \draw[-{Latex}] (1.5,1.5) -- node[dimension label] {$\frac{3}{2}$} (2.56,2.56);
+  \draw[-{Latex}] (4.5,1.5) -- node[dimension label] {$\frac{3}{2}$} (5.56,2.56);
+  \draw[dimension extension] (0,4) -- (0,5.0);
+  \draw[dimension extension] (6,4) -- (6,5.0);
+  \draw[dimension line] (0,4.85) -- node[dimension label] {6} (6,4.85);
+  \node at (3,-1.4) {正视图};
+\end{scope}
+% side (middle)
+\begin{scope}[shift={(8.5,0)}]
+  \draw (0,3) rectangle (3,4);
+  \draw (1.5,1.5) circle (1.5);
+  \draw[dimension extension] (0,4) -- (0,5.0);
+  \draw[dimension extension] (3,4) -- (3,5.0);
+  \draw[dimension line] (0,4.85) -- node[dimension label] {3} (3,4.85);
+  \draw[dimension extension] (3,3) -- (4.0,3);
+  \draw[dimension extension] (3,4) -- (4.0,4);
+  \draw[dimension line] (3.85,3) -- node[dimension label vertical] {1} (3.85,4);
+  \node at (1.5,-1.4) {侧视图};
+\end{scope}
+% top (right): rectangle 6x3 with two dashed circles r=1.5
+\begin{scope}[shift={(14.0,0)}]
+  \draw (0,0) rectangle (6,3);
+  \draw[dashed] (1.5,1.5) circle (1.5); \draw[dashed] (4.5,1.5) circle (1.5);
+  \draw[dimension extension] (6,0) -- (7.0,0);
+  \draw[dimension extension] (6,3) -- (7.0,3);
+  \draw[dimension line] (6.85,0) -- node[dimension label vertical] {3} (6.85,3);
+  \node at (3,-1.4) {俯视图};
+\end{scope}
+\end{tikzpicture}

@@ -1,0 +1,93 @@
+% Radar chart redrawn from original PNG (polar grid, monthly max solid / min dashed).
+% Radial scale: 5/10/15/20/25 rings, outer ring 25\textdegree C; monthly vertices measured
+% from the original bitmap (liberal and science copies agree within 0.1\textdegree C).
+\begin{tikzpicture}[line width=.6pt,font=\normalsize]
+% fills: max polygon light, min polygon darker
+\fill[gray!10] (90:14.30mm)--(60:16.50mm)--(30:22.00mm)--(0:33.00mm)--(-30:40.70mm)--(-60:44.00mm)--(-90:48.40mm)--(-120:50.38mm)--(-150:40.70mm)--(180:33.00mm)--(-210:22.00mm)--(-240:15.40mm)--cycle;
+\fill[gray!20] (90:5.50mm)--(60:3.52mm)--(30:4.62mm)--(0:10.78mm)--(-30:16.50mm)--(-60:22.00mm)--(-90:27.50mm)--(-120:28.38mm)--(-150:25.08mm)--(180:22.00mm)--(-210:11.00mm)--(-240:7.70mm)--cycle;
+% concentric temperature rings 5..25 and center marker
+\foreach \r in {11mm,22mm,33mm,44mm,55mm} \draw (0,0) circle (\r);
+\draw (0,0) circle (1.3mm);
+% twelve monthly radial axes
+\foreach \a in {0,30,60,90,120,150,180,210,240,270,300,330} \draw (0,0)--(\a:55mm);
+% minor ticks every 1\textdegree C on the left of the January axis
+\draw (90:2.20mm)--++(180:1mm);
+\draw (90:4.40mm)--++(180:1mm);
+\draw (90:6.60mm)--++(180:1mm);
+\draw (90:8.80mm)--++(180:1mm);
+\draw (90:11.00mm)--++(180:1mm);
+\draw (90:13.20mm)--++(180:1mm);
+\draw (90:15.40mm)--++(180:1mm);
+\draw (90:17.60mm)--++(180:1mm);
+\draw (90:19.80mm)--++(180:1mm);
+\draw (90:22.00mm)--++(180:1mm);
+\draw (90:24.20mm)--++(180:1mm);
+\draw (90:26.40mm)--++(180:1mm);
+\draw (90:28.60mm)--++(180:1mm);
+\draw (90:30.80mm)--++(180:1mm);
+\draw (90:33.00mm)--++(180:1mm);
+\draw (90:35.20mm)--++(180:1mm);
+\draw (90:37.40mm)--++(180:1mm);
+\draw (90:39.60mm)--++(180:1mm);
+\draw (90:41.80mm)--++(180:1mm);
+\draw (90:44.00mm)--++(180:1mm);
+\draw (90:46.20mm)--++(180:1mm);
+\draw (90:48.40mm)--++(180:1mm);
+\draw (90:50.60mm)--++(180:1mm);
+\draw (90:52.80mm)--++(180:1mm);
+\draw (90:55.00mm)--++(180:1mm);
+% ring labels
+\node[anchor=east,xshift=-1.5mm] at (90:44mm) {$20^{\circ}\mathrm{C}$};
+\node[anchor=east,xshift=-1.5mm] at (90:33mm) {$15^{\circ}\mathrm{C}$};
+\node[anchor=east,xshift=-1.5mm] at (90:22mm) {$10^{\circ}\mathrm{C}$};
+\node[anchor=east,xshift=-1.5mm] at (90:11mm) {$5^{\circ}\mathrm{C}$};
+% month labels
+\node at (90:61mm) {一月};
+\node at (60:61mm) {二月};
+\node at (30:61mm) {三月};
+\node at (0:61mm) {四月};
+\node at (-30:61mm) {五月};
+\node at (-60:61mm) {六月};
+\node at (-90:61mm) {七月};
+\node at (-120:61mm) {八月};
+\node at (-150:61mm) {九月};
+\node at (180:61mm) {十月};
+\node at (-210:61mm) {十一月};
+\node at (-240:61mm) {十二月};
+% data polygons
+\draw (90:14.30mm)--(60:16.50mm)--(30:22.00mm)--(0:33.00mm)--(-30:40.70mm)--(-60:44.00mm)--(-90:48.40mm)--(-120:50.38mm)--(-150:40.70mm)--(180:33.00mm)--(-210:22.00mm)--(-240:15.40mm)--cycle;
+\draw[dash pattern=on 2mm off 1.2mm] (90:5.50mm)--(60:3.52mm)--(30:4.62mm)--(0:10.78mm)--(-30:16.50mm)--(-60:22.00mm)--(-90:27.50mm)--(-120:28.38mm)--(-150:25.08mm)--(180:22.00mm)--(-210:11.00mm)--(-240:7.70mm)--cycle;
+% vertex dots
+\fill (90:14.30mm) circle (1.7pt);
+\fill (60:16.50mm) circle (1.7pt);
+\fill (30:22.00mm) circle (1.7pt);
+\fill (0:33.00mm) circle (1.7pt);
+\fill (-30:40.70mm) circle (1.7pt);
+\fill (-60:44.00mm) circle (1.7pt);
+\fill (-90:48.40mm) circle (1.7pt);
+\fill (-120:50.38mm) circle (1.7pt);
+\fill (-150:40.70mm) circle (1.7pt);
+\fill (180:33.00mm) circle (1.7pt);
+\fill (-210:22.00mm) circle (1.7pt);
+\fill (-240:15.40mm) circle (1.7pt);
+\fill (90:5.50mm) circle (1.7pt);
+\fill (60:3.52mm) circle (1.7pt);
+\fill (30:4.62mm) circle (1.7pt);
+\fill (0:10.78mm) circle (1.7pt);
+\fill (-30:16.50mm) circle (1.7pt);
+\fill (-60:22.00mm) circle (1.7pt);
+\fill (-90:27.50mm) circle (1.7pt);
+\fill (-120:28.38mm) circle (1.7pt);
+\fill (-150:25.08mm) circle (1.7pt);
+\fill (180:22.00mm) circle (1.7pt);
+\fill (-210:11.00mm) circle (1.7pt);
+\fill (-240:7.70mm) circle (1.7pt);
+% point labels A (October max) and B (April min)
+\node[xshift=-3.7mm,yshift=4.2mm] at (180:33.00mm) {$A$};
+\node[xshift=5mm,yshift=4.2mm] at (0:10.78mm) {$B$};
+% legend
+\draw[dash pattern=on 2mm off 1.2mm] (-32mm,-69mm)--(-17mm,-69mm);
+\node[anchor=west] at (-16mm,-69mm) {平均最低气温};
+\draw (12mm,-69mm)--(27mm,-69mm);
+\node[anchor=west] at (28mm,-69mm) {平均最高气温};
+\end{tikzpicture}

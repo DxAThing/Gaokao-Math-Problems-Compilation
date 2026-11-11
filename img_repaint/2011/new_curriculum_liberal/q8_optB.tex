@@ -1,0 +1,18 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+% Left rectangle (0,0)-(2.2,4.5); right triangle (2.2,4.5)-(2.2,0)-(4.0,0).
+\coordinate (TL) at (0,4.5);
+\coordinate (TM) at (2.2,4.5);
+\coordinate (BL) at (0,0);
+\coordinate (BM) at (2.2,0);
+\coordinate (BR) at (4.0,0);
+% Top and bottom outlines.
+\draw (TL) -- (TM);
+\draw (BL) -- (BR);
+% Left outline.
+\draw (TL) -- (BL);
+% Slanted right edge (solid, visible).
+\draw (TM) -- (BR);
+% Middle hidden edge (dashed, visible).
+\draw[dashed] (TM) -- (BM);
+\end{tikzpicture}

@@ -1,0 +1,9 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-3.3,0)--(3.3,0) node[below right] {$x$};
+\draw[->] (0,-2.7)--(0,2.3) node[above left] {$y$};
+\node[above right] at (0.06,0.06) {$O$};
+% horizontal ellipse centred at origin (faithful to original option PNG)
+\draw (0,0) ellipse (1.9 and 0.95);
+% downward-opening parabola with vertex at origin: y = -0.45 x^2
+\draw[domain=-2.3:2.3,samples=80] plot ({\x},{-0.45*\x*\x});
+\end{tikzpicture}

@@ -1,2 +1,24 @@
-% Canonical statistical figure: img_repaint/2013/new_curriculum_paper_2_liberal/q19_fig1.tex
-\input{img_repaint/2013/new_curriculum_paper_2_liberal/q19_fig1.tex}
+% Candidate redrawn from inputs/2013_new_curriculum_paper_2_science_q19_fig1.png.
+% Constraint IR: histogram, bins [100,110),[110,120),[120,130),[130,140),[140,150],
+% width 10; densities 0.010,0.020,0.030,0.025,0.015 (y dashed helpers);
+% x 市场需求量, y 频率/组距; axis starts at 90 labelled 0, one group-width gap + break.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,
+  xmin=90,ymin=0,
+  xtick={90,100,110,120,130,140,150},
+  ytick={0,0.01,0.015,0.02,0.025,0.03},
+  xmax=155,
+  ymax=0.0325,
+  xticklabels={,100,110,120,130,140,150}]
+\addplot[draw=black,fill=white] coordinates
+  {(100,0.01) (110,0.02) (120,0.03) (130,0.025) (140,0.015) (150,0)};
+\draw[densely dashed] (axis cs:90,0.01) -- (axis cs:100,0.01);
+\draw[densely dashed] (axis cs:90,0.015) -- (axis cs:140,0.015);
+\draw[densely dashed] (axis cs:90,0.02) -- (axis cs:110,0.02);
+\draw[densely dashed] (axis cs:90,0.025) -- (axis cs:130,0.025);
+\draw[densely dashed] (axis cs:90,0.03) -- (axis cs:120,0.03);
+\examstatylabel{频率/组距}
+\examstatxlabel{市场需求量}
+\examstatxbreak{95}{0}
+\end{axis}
+\end{tikzpicture}

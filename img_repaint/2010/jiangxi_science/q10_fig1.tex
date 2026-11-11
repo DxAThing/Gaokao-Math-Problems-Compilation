@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt]
+\coordinate (A) at (0,2.6);
+\coordinate (D) at (2.6,2.6);
+\coordinate (B) at (-0.9,2.0);
+\coordinate (C) at (1.7,2.0);
+\coordinate (A1) at (0,0.4);
+\coordinate (D1) at (2.6,0.4);
+\coordinate (B1) at (-0.9,-0.2);
+\coordinate (C1) at (1.7,-0.2);
+\draw (A) -- (D) -- (C) -- (B) -- cycle;
+\draw (A) -- (B);
+\draw (B) -- (C);
+\draw (B) -- (B1) -- (C1) -- (C);
+\draw (C1) -- (D1) -- (D);
+
+\draw[dashed] (A) -- (A1) -- (B1);
+\draw[dashed] (A1) -- (D1);
+\node[above=3pt] at (A) {$A$};
+\node[above=3pt] at (D) {$D$};
+\node[left=3pt] at (B) {$B$};
+\node[right=2pt,above=1pt] at (C) {$C$};
+\node[left=3pt,xshift=-2.00bp,yshift=0.00bp] at (A1) {$A_{1}$};
+\node[right=3pt] at (D1) {$D_{1}$};
+\node[below left=2pt] at (B1) {$B_{1}$};
+\node[below right=2pt] at (C1) {$C_{1}$};
+\end{tikzpicture}

@@ -1,0 +1,13 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth]
+\draw[->] (-3.7,0)--(3.7,0) node[right,inner sep=0pt] {$x$};
+\draw[->] (0,-1.8)--(0,1.8) node[above,inner sep=0pt] {$y$};
+\draw (-3.1416,-0.09)--(-3.1416,0.09);
+\draw (3.1416,-0.09)--(3.1416,0.09);
+\draw (-0.09,1)--(0.09,1);
+\node[below left,inner sep=1pt] at (-3.1416,-0.06) {$-\pi$};
+\node[below right,inner sep=1pt] at (3.1416,-0.06) {$\pi$};
+\node[left,inner sep=1pt] at (-0.09,1) {$1$};
+\node[below right,inner sep=1pt] at (0,0) {$O$};
+\draw[domain=-3.1416:3.1416,samples=241] plot (\x,{(sin(deg(\x))+\x)/(cos(deg(\x))+\x*\x)});
+\end{tikzpicture}

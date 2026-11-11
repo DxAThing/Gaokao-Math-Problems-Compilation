@@ -1,0 +1,20 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,
+  geometry edge/.style={solid,line width=.6pt},
+  geometry mark/.style={solid,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=2pt},
+  vector/.style={-{Stealth[length=2.6mm,width=1.7mm]},line width=.6pt}]
+\coordinate (O) at (0,0);
+\coordinate (A) at (3.2,0);
+\coordinate (B) at (-1.92,2.56);
+\coordinate (C) at (0.64,4.48);
+\draw[vector] (O)--(A);
+\draw[vector] (O)--(B);
+\draw[vector] (O)--(C);
+\draw[geometry mark] (O) ++(0:0.55) arc[start angle=0,end angle=81.869898,radius=0.55];
+\node[geometry label] at ($(O)+(40.934949:0.95)$) {$\alpha$};
+\node[geometry label,below left] at (O) {$O$};
+\node[geometry label,right] at (A) {$A$};
+\node[geometry label,above left] at (B) {$B$};
+\node[geometry label,above right] at (C) {$C$};
+\end{tikzpicture}

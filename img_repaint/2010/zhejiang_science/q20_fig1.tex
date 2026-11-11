@@ -1,0 +1,30 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt},
+ geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (D) at (0,0);
+\coordinate (C) at (5.5,0);
+\coordinate (B) at (7,4);
+\coordinate (A) at (1.5,4);
+\coordinate (E) at (4.25,4);
+\coordinate (F) at (0.9,2.4);
+\coordinate (Ap) at (2.9,5.3);
+\coordinate (M) at (0.36,0.96);
+\coordinate (N) at (6.4,2.4);
+\draw[geometry edge] (D)--(C)--(B)--(E);
+\draw[geometry edge] (D)--(F);
+\draw[geometry edge] (F)--(E);
+\draw[geometry edge] (Ap)--(E);
+\draw[geometry edge] (Ap)--(F);
+\draw[geometry edge] (M)--(N);
+\draw[geometry edge,dashed] (A)--(E);
+\draw[geometry edge,dashed] (A)--(F);
+\node[geometry label,below left] at (D) {$D$};
+\node[geometry label,below right] at (C) {$C$};
+\node[geometry label,right] at (B) {$B$};
+\node[geometry label,above right] at (E) {$E$};
+\node[geometry label,left] at (F) {$F$};
+\node[geometry label,left] at (A) {$A$};
+\node[geometry label,above] at (Ap) {$A'$};
+\node[geometry label,left] at (M) {$M$};
+\node[geometry label,right] at (N) {$N$};
+\end{tikzpicture}

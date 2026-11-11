@@ -1,0 +1,44 @@
+\begin{tikzpicture}[line width=.6pt, font=\small, >=stealth]
+% left: plane isosceles right triangle
+\coordinate (C) at (-5.5,2.5);
+\coordinate (B) at (0.5,2.5);
+\coordinate (A) at (-2.5,-0.8);
+\coordinate (O) at (-2.5,2.5);
+\coordinate (D) at (-4.5000000000,1.4000000000);
+\coordinate (E) at (-0.5000000000,1.4000000000);
+\draw (C)--(B);
+\draw (C)--(A)--(B);
+\draw (D)--(E);
+\fill (O) circle (1.6pt);
+\node[above left] at (C) {$C$};
+\node[above] at (O) {$O$};
+\node[above right] at (B) {$B$};
+\node[left] at (D) {$D$};
+\node[right] at (E) {$E$};
+\node[below] at (A) {$A$};
+\node at (-2.5,-1.8) {图\textcircled{1}};
+% right: pyramid A'-BCDE
+\coordinate (Cp) at (2.2,0.6);
+\coordinate (Bp) at (8.2,0.6);
+\coordinate (Dp) at (3.2000000000,-0.4000000000);
+\coordinate (Ep) at (7.2000000000,-0.4000000000);
+\coordinate (Ap) at (5.2,2.2);
+\coordinate (Op) at (5.2,0.6);
+\draw[dashed] (Cp)--(Bp);
+\draw (Cp)--(Dp)--(Ep)--(Bp);
+\draw (Cp)--(Dp);
+\draw (Ep)--(Bp);
+\draw (Dp)--(Ep);
+\draw (Ap)--(Cp);
+\draw (Ap)--(Dp);
+\draw (Ap)--(Ep);
+\draw (Ap)--(Bp);
+\draw[dashed] (Ap)--(Op);
+\node[above] at (Ap) {$A'$};
+\node[left] at (Cp) {$C$};
+\node[right] at (Bp) {$B$};
+\node[left] at (Dp) {$D$};
+\node[right] at (Ep) {$E$};
+\node[below] at (Op) {$O$};
+\node at (5.2,-1.8) {图\textcircled{2}};
+\end{tikzpicture}

@@ -1,0 +1,37 @@
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize, inner sep=1pt]
+\coordinate (A) at (0,0);
+\coordinate (B) at (3,0);
+\coordinate (C) at (4.5000000000,1.3000000000);
+\coordinate (D) at (1.5000000000,1.3000000000);
+\coordinate (A1) at (0,4);
+\coordinate (B1) at (3,4);
+\coordinate (C1) at (4.5000000000,5.3000000000);
+\coordinate (D1) at (1.5000000000,5.3000000000);
+% solid bottom and lateral edges
+\draw (A) -- (B);
+\draw (B) -- (C);
+\draw (A) -- (A1);
+\draw (B) -- (B1);
+\draw (C) -- (C1);
+\draw (A1) -- (B1);
+\draw (A1) -- (D1);
+\draw (D1) -- (C1);
+\draw (B1) -- (C1);
+% solid face diagonals of triangle AB1C
+\draw (A) -- (B1);
+\draw (B1) -- (C);
+% hidden edges
+\draw[dashed] (D1) -- (D);
+\draw[dashed] (D) -- (A);
+\draw[dashed] (D) -- (C);
+\draw[dashed] (A) -- (C);
+% labels placed clear of strokes
+\node[below left=4pt] at (A) {$A$};
+\node[below=5pt] at (B) {$B$};
+\node[right=5pt] at (C) {$C$};
+\node[above right=3pt] at (D) {$D$};
+\node[left=5pt] at (A1) {$A_{1}$};
+\node[above=5pt] at (B1) {$B_{1}$};
+\node[above right=4pt] at (C1) {$C_{1}$};
+\node[above left=4pt] at (D1) {$D_{1}$};
+\end{tikzpicture}

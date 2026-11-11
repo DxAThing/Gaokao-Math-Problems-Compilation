@@ -1,0 +1,20 @@
+\begin{tikzpicture}[line width=0.6pt, >=stealth]
+% axes
+\draw[->] (-3.2,0) -- (3.6,0) node[below=2pt] {$x$};
+\draw[->] (0,-3.0) -- (0,3.0) node[left=2pt] {$y$};
+% fruit circle: right half a=2.6, left half c=1.8, b=2.0
+\draw[domain=-90:90, samples=80] plot ({2.690724809415*cos(\x)}, {2.0*sin(\x)});
+\draw[domain=90:270, samples=80] plot ({1.8*cos(\x)}, {2.0*sin(\x)});
+% points
+\fill (1.8,0) circle (1.3pt);
+\fill (0,0.871779788708) circle (1.3pt);
+\fill (0,-0.871779788708) circle (1.3pt);
+\node[below left=2pt] at (0,0) {$O$};
+\node[below=3pt] at (1.8,0) {$F_{0}$};
+\node[right=3pt] at (0,0.871779788708) {$F_{2}$};
+\node[right=3pt] at (0,-0.871779788708) {$F_{1}$};
+\node[below left=2pt] at (-1.8,0) {$A_{1}$};
+\node[below right=2pt] at (2.690724809415,0) {$A_{2}$};
+\node[above right=1pt] at (0,2.0) {$B_{2}$};
+\node[below right=1pt] at (0,-2.0) {$B_{1}$};
+\end{tikzpicture}

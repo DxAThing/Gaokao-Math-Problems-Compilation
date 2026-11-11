@@ -1,0 +1,8 @@
+% q16 polar dimpled loop rho=6-5 sin theta, x-axis from O
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (O) at (0,0);
+% dimpled limacon by formula: scale 0.27cm per unit -> height ~3.2cm
+\draw[solid] plot[domain=0:360,samples=360,smooth] ({(6-5*sin(\x))*cos(\x)*0.27},{(6-5*sin(\x))*sin(\x)*0.27});
+\draw[->] (O) -- (2.6,0) node[below right,inner sep=2pt] {$x$};
+\node[below left,inner sep=2pt] at (O) {$O$};
+\end{tikzpicture}

@@ -1,0 +1,19 @@
+% 2015 national paper 2 science q10 option D: distractor upper semicircle
+% Option D is a distractor: upper semicircle, not the graph of f
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.9cm,y=1.9cm,line width=.6pt,>=Stealth,font=\normalsize]
+\draw[->] (0,0)--(3.60,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,0)--(0,3.95) node[above left,inner sep=0pt,xshift=-1pt,yshift=2pt] {$y$};
+\draw ({pi/4},0)--({pi/4},0.10);
+\draw ({pi/2},0)--({pi/2},0.10);
+\draw ({3*pi/4},0)--({3*pi/4},0.10);
+\draw (pi,0)--(pi,0.10);
+% Upper semicircle centred at (pi/2,2) with radius pi/2
+\draw[domain=0:pi,samples=400,smooth] plot (\x,{2+sqrt((pi/2)^2-(\x-pi/2)^2)});
+\node[left,inner sep=0pt,xshift=-2pt] at (0,2) {2};
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\node[below,inner sep=0pt,yshift=-2pt] at ({pi/4},0) {$\frac{\pi}{4}$};
+\node[below,inner sep=0pt,yshift=-2pt] at ({pi/2},0) {$\frac{\pi}{2}$};
+\node[below,inner sep=0pt,yshift=-2pt] at ({3*pi/4},0) {$\frac{3\pi}{4}$};
+\node[below,inner sep=0pt,yshift=-2pt] at (pi,0) {$\pi$};
+\end{tikzpicture}

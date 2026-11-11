@@ -1,0 +1,19 @@
+% Scatter: schematic positions measured from original PNG (no numeric ticks in source).
+\begin{tikzpicture}
+\begin{axis}[exam statistical template scatter,
+  xmin=0,xmax=7.5,ymin=0,ymax=6,
+  xtick=\empty,ytick=\empty]
+\addplot[only marks,mark=*] coordinates {
+  (2.796,5.356) (0.816,2.357) (2.297,0.547)
+  (4.995,2.889) (5.982,1.25) (7.185,3.776)
+};
+\node[anchor=south west] at (axis cs:2.796,5.356) {$A_{1}$};
+\node[anchor=south] at (axis cs:0.816,2.357) {$A_{2}$};
+\node[anchor=east] at (axis cs:2.297,0.547) {$A_{3}$};
+\node[anchor=north] at (axis cs:4.995,2.889) {$B_{2}$};
+\node[anchor=west] at (axis cs:5.982,1.25) {$B_{1}$};
+\node[anchor=west] at (axis cs:7.185,3.776) {$B_{3}$};
+\examstatxlabel{工作时间 (小时)}
+\examstatylabel{零件数 (件)}
+\end{axis}
+\end{tikzpicture}

@@ -1,0 +1,9 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>={Stealth[length=2.2mm,width=1.6mm]},font=\normalsize]
+  \draw[->] (-2,0)--(5.8,0);
+  \draw[->] (0,-3)--(0,3);
+  \draw[domain=-1.5:4.5,samples=181] plot (\x,{pow(2,\x)-\x*\x});
+  \node[anchor=north west,inner sep=0pt,xshift=2pt,yshift=-1pt] at (5.8,0) {$x$};
+  \node[anchor=south east,inner sep=0pt,xshift=-2pt,yshift=2pt] at (0,3) {$y$};
+  \node[anchor=north east,inner sep=0pt,xshift=-3pt,yshift=-2pt] at (0,0) {$O$};
+\end{tikzpicture}

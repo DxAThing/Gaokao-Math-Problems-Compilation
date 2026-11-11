@@ -1,73 +1,21 @@
-% original_pdf: source/普通高考/2017/2017北京文.pdf
-% page: 2
-% embedded_bitmap_attempt: pdfimages -list returned no embedded images; redraw from rendered page
-% evidence: tmp/repaint_2017_beijing_liberal/original/page2_grid100.jpg (100px grid); tmp/repaint_2017_beijing_liberal/crops/q17_broad_grid50.jpg (50px major, 25px fine grid); original comparison crop: tmp/repaint_2017_beijing_liberal/crops/q17_original.png
-% elements: frequency-density histogram, x/y axes with arrowheads, seven outlined bins, horizontal dashed reference lines, tick labels
-% relations/data: score bins [0,20), [20,30), [30,40), [40,50), [50,60), [60,70), [70,80), [80,90]; heights 0, 0.002, 0.003, 0.005, 0.010, 0.020, 0.040, 0.020
-% solid segments: bar outlines, axes and arrowheads; dashed segments: 0.01 guide to bar-left x=50, 0.02 to x=60, 0.04 to x=70
-% labels: 频率/组距 above-left of the y-axis, 分数 to the right of the x-axis, numeric ticks outside the axes
-\begin{tikzpicture}[baseline]
-\begin{axis}[exam statistical histogram,
-    width=14.676cm,
-    height=7.997cm,
-    axis lines=none,
-    clip=false,
-    xmin=-17,
-    xmax=106,
-    ymin=-0.0055,
-    ymax=0.0455,
-    ticks=none,
-]
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.010) -- (axis cs:50,0.010);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.020) -- (axis cs:60,0.020);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.040) -- (axis cs:70,0.040);
+% Original-image geometry verified; calibrated raster measurements are approximate, not new printed data.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,
+  xmin=0,ymin=0,
+  xtick={0,20,30,40,50,60,70,80,90},
+  ytick={0.01,0.02,0.04},
+  xmax=95,
+  ymax=0.05,
+  xticklabels={,20,30,40,50,60,70,80,90}]
+\addplot[draw=black,fill=white] coordinates
+  {(20,0.0019771242) (30,0.0030065359) (40,0.0050163399) (50,0.01) (60,0.02) (70,0.04) (80,0.02) (90,0)};
+\draw[dashed] (axis cs:0,0.04) -- (axis cs:70,0.04);
+\draw[dashed] (axis cs:0,0.02) -- (axis cs:90,0.02);
+\draw[dashed] (axis cs:0,0.01) -- (axis cs:60,0.01);
+\examstatxbreak{10}{0}
+\examstatylabel{$\frac{\text{频率}}{\text{组距}}$}
+\examstatxlabel{分数}
 
-    \addplot[
-        ybar interval,
-        draw=black,
-        fill=white,
-        line width=0.65pt,
-    ] coordinates {
-        (0,0.000)
-        (20,0.002)
-        (30,0.003)
-        (40,0.005)
-        (50,0.010)
-        (60,0.020)
-        (70,0.040)
-        (80,0.020)
-        (90,0.000)
-    };
-
-    \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:101,0);
-    \draw[->,line width=0.7pt] (axis cs:0,0) -- (axis cs:0,0.044);
-
-    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \examstatxlabel{分数};
-    \node[anchor=north east,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:0,0.000000) {0};
-
-    \draw[line width=0.45pt] (axis cs:20,0) -- (axis cs:20,-0.00065);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:20,-0.000650) {20};
-    \draw[line width=0.45pt] (axis cs:30,0) -- (axis cs:30,-0.00065);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:30,-0.000650) {30};
-    \draw[line width=0.45pt] (axis cs:40,0) -- (axis cs:40,-0.00065);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:40,-0.000650) {40};
-    \draw[line width=0.45pt] (axis cs:50,0) -- (axis cs:50,-0.00065);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:50,-0.000650) {50};
-    \draw[line width=0.45pt] (axis cs:60,0) -- (axis cs:60,-0.00065);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:60,-0.000650) {60};
-    \draw[line width=0.45pt] (axis cs:70,0) -- (axis cs:70,-0.00065);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:70,-0.000650) {70};
-    \draw[line width=0.45pt] (axis cs:80,0) -- (axis cs:80,-0.00065);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:80,-0.000650) {80};
-    \draw[line width=0.45pt] (axis cs:90,0) -- (axis cs:90,-0.00065);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:90,-0.000650) {90};
-
-    \draw[line width=0.45pt] (axis cs:0,0.010) -- (axis cs:-1.8,0.010);
-    \frequencyylabel[-4pt]{0}{0.010}{0.01}
-    \draw[line width=0.45pt] (axis cs:0,0.020) -- (axis cs:-1.8,0.020);
-    \frequencyylabel[-4pt]{0}{0.020}{0.02}
-    \draw[line width=0.45pt] (axis cs:0,0.040) -- (axis cs:-1.8,0.040);
-    \frequencyylabel[-4pt]{0}{0.040}{0.04}
+\node[anchor=east,inner sep=0pt,xshift=-4pt] at (current axis.left of origin) {0};
 \end{axis}
 \end{tikzpicture}

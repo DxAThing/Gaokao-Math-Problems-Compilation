@@ -1,0 +1,20 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt},
+ geometry mark/.style={solid,line width=.6pt},
+ geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (A) at (0,0);
+\coordinate (B) at (4.5,0);
+\coordinate (C) at (0,3.2);
+\coordinate (D) at (0.9,0);
+\coordinate (E) at (0,2.0);
+\draw[geometry edge] (A)--(B);
+\draw[geometry edge] (A)--(C);
+\draw[geometry edge] (C)--(B);
+\fill (D) circle (1.4pt);
+\fill (E) circle (1.4pt);
+\node[geometry label,below left] at (A) {$A$};
+\node[geometry label,below right] at (B) {$B$};
+\node[geometry label,above left] at (C) {$C$};
+\node[geometry label,below] at (D) {$D$};
+\node[geometry label,left] at (E) {$E$};
+\end{tikzpicture}

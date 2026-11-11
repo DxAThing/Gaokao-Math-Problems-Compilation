@@ -1,0 +1,14 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth,font=\normalsize]
+\def\fC{-2.707355*(\x/2.8)^2+39.28965*(\x/2.8)^3+43.32534*(\x/2.8)^4-115.1621*(\x/2.8)^5-163.6221*(\x/2.8)^6+120.2466*(\x/2.8)^7+209.4524*(\x/2.8)^8-46.87405*(\x/2.8)^9-86.55681*(\x/2.8)^10}
+\draw[->] (-3.55,0)--(3.45,0) node[right,inner sep=2pt] {$x$};
+\draw[->] (0,-2.95)--(0,3.25) node[above,inner sep=2pt] {$y$};
+\foreach \t in {-2.8,1,2.8}{\draw (\t,0)--(\t,.09);}
+\draw (-.09,1)--(0,1);
+\node[below left,inner sep=3pt] at (-2.8,0) {$-2.8$};
+\node[below,inner sep=2pt] at (1,-.06) {$1$};
+\node[below right,inner sep=3pt] at (2.8,0) {$2.8$};
+\node[left,inner sep=2pt] at (-.08,1) {$1$};
+\node[below left,inner sep=2pt] at (-.05,-.30) {$O$};
+\draw[domain=-2.8:2.8,samples=700] plot (\x,{\fC});
+\end{tikzpicture}

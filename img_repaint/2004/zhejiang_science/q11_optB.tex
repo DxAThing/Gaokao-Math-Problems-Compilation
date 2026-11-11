@@ -1,0 +1,10 @@
+\usetikzlibrary{arrows.meta}
+% 2004 浙江理 q11 选项 B：错误选项，忠实原图（减-增-减，先极小后极大）。
+\begin{tikzpicture}[x=1.2cm,y=1.2cm,line width=.6pt,>={Stealth[length=1.5mm,width=1.3mm]},font=\normalsize]
+  \draw[->] (-2.0,0) -- (3.9,0) node[below,inner sep=0pt,xshift=3pt,yshift=-1pt] {$x$};
+  \draw[->] (0,-2.0) -- (0,1.9) node[above left,inner sep=1pt] {$y$};
+  \draw[domain=-0.7:2.55,samples=200] plot (\x,{-(\x)*(\x-1)*(\x-2)});
+  \node[below left,inner sep=0pt,xshift=-2pt,yshift=-1pt] at (0,0) {$O$};
+  \node[below,inner sep=0pt,xshift=5pt,yshift=-2pt] at (1,0) {$1$};
+  \node[below,inner sep=0pt,xshift=-5pt,yshift=-2pt] at (2,0) {$2$};
+\end{tikzpicture}

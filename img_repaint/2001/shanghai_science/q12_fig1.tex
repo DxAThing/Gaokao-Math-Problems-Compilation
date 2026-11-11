@@ -1,0 +1,37 @@
+% 2001 Shanghai science q12: same figure as liberal version (identical source image content).
+\examstatpanels{%
+\begin{tikzpicture}
+\begin{axis}[exam statistical template line,exam statistical template paired,
+  xmin=1950,xmax=2005,ymin=250.1,ymax=261.25,
+  xtick={1950,1960,1970,1980,1990,2000},
+  ytick={250.1,253.3,257.5,260},
+  xticklabel style={/pgf/number format/1000 sep={}},
+  title={土地沙化总面积\\(万平方公里)},
+  title style={align=center}]
+\draw[dashed,line width=0.6pt] (axis cs:1950,253.3) -- (axis cs:1970,253.3);
+\draw[dashed,line width=0.6pt] (axis cs:1950,257.5) -- (axis cs:1990,257.5);
+\draw[dashed,line width=0.6pt] (axis cs:1950,260) -- (axis cs:2000,260);
+\draw[dashed,line width=0.6pt] (axis cs:1970,250.1) -- (axis cs:1970,253.3);
+\draw[dashed,line width=0.6pt] (axis cs:1990,250.1) -- (axis cs:1990,257.5);
+\draw[dashed,line width=0.6pt] (axis cs:2000,250.1) -- (axis cs:2000,260);
+\addplot[mark=*,mark size=1.5pt] coordinates
+  {(1950,250.1) (1970,253.3) (1990,257.5) (2000,260)};
+\examstatylabel{}
+\examstatxlabel{年份}
+\end{axis}
+\end{tikzpicture}%
+}{%
+\begin{tikzpicture}
+\begin{axis}[exam statistical template line,exam statistical template paired,
+  xmin=1950,xmax=2005,ymin=10,ymax=28,
+  xtick={1950,1960,1970,1980,1990,2000},
+  ytick={10,14,18,22,26},
+  minor x tick num=0,minor y tick num=1,grid=both,
+  xticklabel style={/pgf/number format/1000 sep={}},
+  title={年平均土地沙化总面积\\(百平方公里)},
+  title style={align=center}]
+\examstatylabel{}
+\examstatxlabel{年份}
+\end{axis}
+\end{tikzpicture}%
+}

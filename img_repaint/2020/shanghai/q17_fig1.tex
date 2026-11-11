@@ -1,0 +1,29 @@
+\begin{tikzpicture}[line width=0.6pt, font=\small, >=Stealth]
+% top and bottom ellipse centers
+\draw (0,2) ellipse (3 and 0.7);
+% bottom front solid, back dashed
+\draw ( -3,-1) arc (180:360:3 and 0.7);
+\draw[dashed] (-3,-1) arc (180:0:3 and 0.7);
+\coordinate (A) at (-3,2);
+\coordinate (B) at (0.0000000000,2.0000000000);
+\coordinate (A1) at (-1.5000000000,1.3937822174);
+\coordinate (D1) at (-1.5000000000,-1.6062177826);
+\coordinate (C) at (0.0000000000,-1.0000000000);
+\coordinate (D) at (-3.0000000000,-1.0000000000);
+\draw (3,2)--(3,-1);
+% axis and radii
+\draw (A) -- (B);
+\draw (B) -- (A1);
+\draw (A1) -- (D1);
+\draw (A) -- (D);
+\draw[dashed] (B) -- (C);
+\draw[dashed] (D) -- (C);
+\draw[dashed] (D1) -- (C);
+% labels
+\node[left] at (A) {$A$};
+\node[above right] at (B) {$B$};
+\node[left,xshift=1pt,yshift=9pt] at (A1) {$A_{1}$};
+\node[below,xshift=-1.0pt,yshift=-2pt] at (D1) {$D_{1}$};
+\node[left] at (D) {$D$};
+\node[right] at (C) {$C$};
+\end{tikzpicture}

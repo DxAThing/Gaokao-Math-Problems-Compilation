@@ -1,0 +1,21 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt},
+ geometry mark/.style={solid,line width=.6pt},
+ geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (A) at (0,2);
+\coordinate (B) at (0,0);
+\coordinate (C) at (2,0);
+\coordinate (D) at (4,2);
+\coordinate (E) at (2,2);
+\coordinate (O) at (1,1);
+\draw[geometry edge] (A)--(B)--(C)--(D)--cycle;
+\draw[geometry edge] (A)--(C);
+\draw[geometry edge] (B)--(E);
+\node[geometry label,above left] at (A) {$A$};
+\node[geometry label,below left] at (B) {$B$};
+\node[geometry label,below right] at (C) {$C$};
+\node[geometry label,above right] at (D) {$D$};
+\node[geometry label,above] at (E) {$E$};
+\node[geometry label,left,xshift=-4pt] at (O) {$O$};
+\node[font=\normalsize,inner sep=0pt] at (2,-.65) {\bitmapinsertcaption[1]};
+\end{tikzpicture}

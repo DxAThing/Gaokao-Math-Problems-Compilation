@@ -1,0 +1,53 @@
+% 2013_zhejiang_liberal_q5_fig1: point-fix of _current.tex, arrangement only.
+% Front, side, plan in one horizontal row (left to right); edges/dims/diagonals unchanged.
+% Plan scope moved from (0,0) to (6.25,2.4) so bottoms and captions share baselines.
+% Front 6x6, side 3x6, plan 6x3 (unit 0.45): long dui zheng, gao ping qi, kuan xiang deng.
+% Front diag: left edge (2 above bottom) to top edge (2 from right). Side diag:
+% top-left corner to right edge (2 above bottom). Plan diag: top-left corner
+% to bottom edge (2 from right). All solid.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% ---- front (left), (0,0)-(2.7,2.7) ----
+\begin{scope}[shift={(0,2.4)}]
+  \draw (0,0) rectangle (2.7,2.7);
+  \draw (0,0.9) -- (1.8,2.7);
+  % top dims 4 | 2
+  \draw (0,2.7) -- (0,3.1);
+  \draw (1.8,2.7) -- (1.8,3.1);
+  \draw (2.7,2.7) -- (2.7,3.1);
+  \draw[<->] (0,3.0) -- (1.8,3.0);
+  \node[fill=white,inner sep=1pt] at (0.9,3.0) {4};
+  \draw[<->] (1.8,3.0) -- (2.7,3.0);
+  \node[fill=white,inner sep=1pt] at (2.25,3.0) {2};
+  % right dims 4 (upper) | 2 (lower)
+  \draw (2.7,0) -- (3.1,0);
+  \draw (2.7,0.9) -- (3.1,0.9);
+  \draw (2.7,2.7) -- (3.1,2.7);
+  \draw[<->] (3.0,0.9) -- (3.0,2.7);
+  \node[fill=white,inner sep=1pt] at (3.0,1.8) {4};
+  \draw[<->] (3.0,0) -- (3.0,0.9);
+  \node[fill=white,inner sep=1pt] at (3.0,0.45) {2};
+  \node[below] at (1.35,-0.45) {正视图};
+\end{scope}
+% ---- side (middle), width 1.35, height 2.7 ----
+\begin{scope}[shift={(4.1,2.4)}]
+  \draw (0,0) rectangle (1.35,2.7);
+  \draw (0,2.7) -- (1.35,0.9);
+  % top dim 3
+  \draw (0,2.7) -- (0,3.1);
+  \draw (1.35,2.7) -- (1.35,3.1);
+  \draw[<->] (0,3.0) -- (1.35,3.0);
+  \node[fill=white,inner sep=1pt] at (0.675,3.0) {3};
+  \node[below] at (0.675,-0.45) {侧视图};
+\end{scope}
+% ---- plan (right): moved from below-front to same row; geometry unchanged ----
+\begin{scope}[shift={(6.25,2.4)}]
+  \draw (0,0) rectangle (2.7,1.35);
+  \draw (0,1.35) -- (1.8,0);
+  % right dim 3
+  \draw (2.7,0) -- (3.1,0);
+  \draw (2.7,1.35) -- (3.1,1.35);
+  \draw[<->] (3.0,0) -- (3.0,1.35);
+  \node[fill=white,inner sep=1pt] at (3.0,0.675) {3};
+  \node[below] at (1.35,-0.45) {俯视图};
+\end{scope}
+\end{tikzpicture}

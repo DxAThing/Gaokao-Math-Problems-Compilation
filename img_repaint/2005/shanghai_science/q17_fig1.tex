@@ -1,0 +1,36 @@
+% 2005 Shanghai science q17: straight quadrangular prism ABCD-A1B1C1D1
+% Schematic oblique projection; hidden edges dashed. Labels offset to avoid strokes.
+\begin{tikzpicture}[line width=.6pt, font=\normalsize, >=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (6,0);
+\coordinate (Aone) at (0,2.4);
+\coordinate (Bone) at (6,2.4);
+\coordinate (D) at (1.2,1.15);
+\coordinate (C) at (2.8,1.15);
+\coordinate (Done) at (1.2,3.0);
+\coordinate (Cone) at (2.8,3.0);
+% visible solid edges
+\draw (A) -- (B);
+\draw (A) -- (Aone);
+\draw (B) -- (Bone);
+\draw (Aone) -- (Bone);
+\draw (Aone) -- (Done);
+\draw (Done) -- (Cone);
+\draw (Cone) -- (Bone);
+% hidden dashed edges
+\draw[dashed] (Done) -- (D);
+\draw[dashed] (Cone) -- (C);
+\draw[dashed] (D) -- (C);
+\draw[dashed] (A) -- (D);
+\draw[dashed] (C) -- (B);
+\draw[dashed] (Cone) -- (B);
+% labels with clearance from strokes
+\node[below left=4pt] at (A) {$A$};
+\node[below right=4pt] at (B) {$B$};
+\node[left=4pt] at (Aone) {$A_{1}$};
+\node[right=4pt] at (Bone) {$B_{1}$};
+\node[above left=4pt] at (Done) {$D_{1}$};
+\node[above=4pt] at (Cone) {$C_{1}$};
+\node[left=4pt] at (D) {$D$};
+\node[above right=4pt] at (C) {$C$};
+\end{tikzpicture}

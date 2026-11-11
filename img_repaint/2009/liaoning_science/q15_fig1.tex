@@ -1,0 +1,43 @@
+% 2009 辽宁理 第15题 三视图；简单多边形线段 + 尺寸标注（数值坐标，单位 cm）
+\usetikzlibrary{calc,arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+% ---- 正视图（上左）：底边 4，高 2，顶点在中线右侧 1 处，内部连线至底边中点 ----
+\coordinate (F0) at (0,0);
+\coordinate (F1) at (4,0);
+\coordinate (F2) at (3,2);
+\coordinate (FM) at (2,0);
+\draw (F0)--(F1)--(F2)--cycle;
+\draw (F2)--(FM);
+% ---- 侧视图（右上）：直角在左下，水平 3，竖直 2 ----
+\coordinate (S0) at (6,0);
+\coordinate (S1) at (6,2);
+\coordinate (S2) at (9,0);
+\draw (S0)--(S1)--(S2)--cycle;
+% ---- 俯视图（下左）：上边 4，向下高 3，顶点在上边中点，内部连线至距右端 1 处 ----
+\coordinate (T0) at (0,-2);
+\coordinate (T1) at (4,-2);
+\coordinate (T2) at (2,-5);
+\coordinate (TR) at (3,-2);
+\draw (T0)--(T1)--(T2)--cycle;
+\draw (T2)--(TR);
+% ---- 正视图尺寸：2 + 2 ----
+\draw[dimension extension] (0,-0.08)--(0,-0.78);
+\draw[dimension extension] (2,-0.08)--(2,-0.78);
+\draw[dimension extension] (4,-0.08)--(4,-0.78);
+\draw[dimension line] (0,-0.5)-- node[dimension label] {$2$} (2,-0.5);
+\draw[dimension line] (2,-0.5)-- node[dimension label] {$2$} (4,-0.5);
+% ---- 俯视图尺寸：3 + 1 ----
+\draw[dimension extension] (0,-1.92)--(0,-1.22);
+\draw[dimension extension] (3,-1.92)--(3,-1.22);
+\draw[dimension extension] (4,-1.92)--(4,-1.22);
+\draw[dimension line] (0,-1.5)-- node[dimension label] {$3$} (3,-1.5);
+\draw[dimension line] (3,-1.5)-- node[dimension label] {$1$} (4,-1.5);
+% ---- 侧视图尺寸：横 3 ----
+\draw[dimension extension] (6,-0.08)--(6,-0.78);
+\draw[dimension extension] (9,-0.08)--(9,-0.78);
+\draw[dimension line] (6,-0.5)-- node[dimension label] {$3$} (9,-0.5);
+% ---- 侧视图尺寸：竖 2 ----
+\draw[dimension extension] (5.55,0)--(6.05,0);
+\draw[dimension extension] (5.55,2)--(6.05,2);
+\draw[dimension line] (5.7,0)-- node[dimension label vertical] {$2$} (5.7,2);
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+% 2010 Zhejiang science q21 fig1: ellipse x^2/4+y^2/1.96=1 with secant line l, intersections A (upper right) and B (lower left).
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.5cm,y=1.5cm,line width=.6pt,>=Stealth,font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (A) at (1.6820275,0.7574193);
+\coordinate (B) at (-1.0820275,-1.1774193);
+\coordinate (Xl) at (-2.5,0);
+\coordinate (Xr) at (2.55,0);
+\coordinate (Yd) at (0,-2.0);
+\coordinate (Yu) at (0,2.1);
+\coordinate (Aext) at (1.9277971,0.9294580);
+\coordinate (Bext) at (-1.3277971,-1.3494580);
+% ellipse C: x^2/4 + y^2/1.96 = 1
+\draw (O) ellipse [x radius=2, y radius=1.4];
+% axes
+\draw[->] (Xl)--(Xr) node[right,inner sep=1pt] {$x$};
+\draw[->] (Yd)--(Yu) node[above,inner sep=1pt] {$y$};
+% line l through A and B, extended slightly beyond
+\draw (Bext)--(Aext);
+% labels
+\node[below right,inner sep=1.5pt] at (O) {$O$};
+\node[anchor=south west,inner sep=1pt] at (1.67,0.89) {$A$};
+\node[anchor=north,inner sep=1pt] at (-1.13,-1.30) {$B$};
+\end{tikzpicture}

@@ -1,0 +1,23 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% trapezoid A(-2,0) B(2,0) D(-1,2) C(1,2); |AB|=2|CD|
+\coordinate (A) at (-2,0);
+\coordinate (B) at (2,0);
+\coordinate (D) at (-1,2);
+\coordinate (C) at (1,2);
+% hyperbola foci A,B through C,D: a^2=(9-sqrt(65))/2, b^2=4-a^2
+% E division AE/EC=lambda~0.7 -> t=lambda/(1+lambda)
+\coordinate (E) at (-0.7647,0.8235);
+\draw[solid] (D)--(C)--(B)--(A)--(D);
+\draw[solid] (A)--(C);
+% hyperbola branches: x^2/a2 - y^2/b2 = 1, a2=0.4690, b2=3.531128874149
+\draw[solid,line width=1.0pt] plot[domain=-1.55:2.5,samples=80] ({-0.684741648982*sqrt(1+\x*\x/3.531128874149)},{\x});
+\draw[solid,line width=1.0pt] plot[domain=-1.55:2.5,samples=80] ({0.684741648982*sqrt(1+\x*\x/3.531128874149)},{\x});
+% lower extensions
+\draw[solid,line width=1.0pt] plot[domain=-3.2:-1.55,samples=40] ({-0.684741648982*sqrt(1+\x*\x/3.531128874149)},{\x});
+\draw[solid,line width=1.0pt] plot[domain=-3.2:-1.55,samples=40] ({0.684741648982*sqrt(1+\x*\x/3.531128874149)},{\x});
+\node[below left=3pt] at (A) {$A$};
+\node[below right=3pt] at (B) {$B$};
+\node[above left=3pt] at (D) {$D$};
+\node[above right=3pt] at (C) {$C$};
+\node[below left=4pt,xshift=3pt,yshift=-3pt] at (E) {$E$};
+\end{tikzpicture}

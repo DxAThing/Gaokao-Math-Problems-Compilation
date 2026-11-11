@@ -1,0 +1,46 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[line width=0.6pt, >=Stealth, line join=round]
+  % Right square prism, no axes (question figure)
+  \coordinate (D) at (0,0);
+  \coordinate (A) at (3,0);
+  \coordinate (B) at (3.9,0.7);
+  \coordinate (Cc) at (0.9,0.7);
+  \coordinate (D1) at (0,5);
+  \coordinate (A1) at (3,5);
+  \coordinate (B1) at (3.9,5.7);
+  \coordinate (C1) at (0.9,5.7);
+  \coordinate (A2) at (3,1.25);
+  \coordinate (B2) at (3.9,3.2);
+  \coordinate (C2) at (0.9,4.45);
+  \coordinate (D2) at (0,2.5);
+  \coordinate (P) at (3.9,4.45);
+  % prism frame
+  \draw (D) -- (A) -- (A1) -- (D1) -- cycle;
+  \draw (A) -- (B) -- (B1) -- (A1);
+  \draw (D1) -- (C1) -- (B1);
+  \draw (D1) -- (D);
+  \draw[dashed] (D) -- (Cc) -- (B);
+  \draw[dashed] (Cc) -- (C1);
+  
+  % tetrahedron C2-D2-A2 + P-A2 and C2-P, C2-B2
+  \draw (D2) -- (A2);
+  \draw (A2) -- (P);
+  \draw[dashed] (C2) -- (D2);
+  \draw[dashed] (C2) -- (A2);
+  \draw[dashed] (C2) -- (P);
+  \draw[dashed] (C2) -- (B2);
+  \foreach \p in {D,A,B,Cc,D1,A1,B1,C1,A2,B2,C2,D2,P} {\fill (\p) circle (0.9pt);}
+  \node[below left] at (D) {$D$};
+  \node[below] at (A) {$A$};
+  \node[right] at (B) {$B$};
+  \node[below] at (Cc) {$C$};
+  \node[left] at (D1) {$D_{1}$};
+  \node[above,xshift=-2.00bp,yshift=0.00bp] at (A1) {$A_{1}$};
+  \node[above] at (B1) {$B_{1}$};
+  \node[above] at (C1) {$C_{1}$};
+  \node[right] at (A2) {$A_{2}$};
+  \node[right] at (B2) {$B_{2}$};
+  \node[left] at (C2) {$C_{2}$};
+  \node[left] at (D2) {$D_{2}$};
+  \node[right] at (P) {$P$};
+\end{tikzpicture}

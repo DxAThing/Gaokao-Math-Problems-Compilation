@@ -1,0 +1,33 @@
+\usetikzlibrary{calc,arrows.meta}
+\begin{tikzpicture}[x=1.7cm,y=1.7cm,line width=.6pt,font=\normalsize,>=Latex]
+\coordinate (Lbase) at (-3.2,0);
+\coordinate (Ltop) at (-3.2,3);
+\coordinate (Rtop) at (3.2,3);
+\coordinate (Rbase) at (3.2,0);
+\coordinate (NL) at (-2.7,0);
+\coordinate (NLu) at (-2.7,0.5);
+\coordinate (NRu) at (2.7,0.5);
+\coordinate (NR) at (2.7,0);
+\coordinate (Ctr) at (0,3);
+\coordinate (ARC45) at (2.2627416998,5.2627416998);
+\draw (Lbase)--(Ltop);
+\draw (Rtop)--(Rbase);
+\draw (Lbase)--(NL);
+\draw (NR)--(Rbase);
+\draw (NL)--(NLu);
+\draw (NRu)--(NR);
+\draw (NLu)--(NRu);
+\draw (Ltop) arc[start angle=180,end angle=0,radius=3.2];
+\draw[dashed] (Ltop)--(Rtop);
+\draw[->] (Ctr)--(ARC45) node[midway,above left=2pt,inner sep=0pt] {$x$};
+
+\draw[dimension extension] (-3.2,0)--(-4.1,0) (-3.2,3)--(-4.1,3);
+\draw[dimension line] (-3.9,0)--(-3.9,3) node[dimension label vertical] {$y$};
+\draw[dimension extension] (-3.2,0)--(-3.2,-.65) (-2.7,0)--(-2.7,-.65) (2.7,0)--(2.7,-.65) (3.2,0)--(3.2,-.65);
+\draw[dimension line] (-3.2,-.55)--(-2.7,-.55) node[dimension label] {$0.5$};
+
+\draw[dimension line] (2.7,-.55)--(3.2,-.55) node[dimension label] {$0.5$};
+
+\draw[dimension line] (.35,0)--(.35,.5) node[dimension label vertical] {$0.5$};
+
+\end{tikzpicture}

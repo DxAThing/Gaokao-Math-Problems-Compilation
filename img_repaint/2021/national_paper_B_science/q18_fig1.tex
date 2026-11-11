@@ -1,0 +1,27 @@
+\begin{tikzpicture}[line width=0.6pt,line join=round,line cap=round]
+\coordinate (P) at (-0.4000000000,5.0000000000);
+\coordinate (D) at (-0.4000000000,1.8000000000);
+\coordinate (C) at (4,1.8);
+\coordinate (A) at (-3.2,-0.5);
+\coordinate (B) at (1.2,-0.5);
+\coordinate (M) at (2.6,0.65);
+% hidden base edges
+\draw[dashed] (P) -- (D);
+\draw[dashed] (D) -- (C);
+\draw[dashed] (D) -- (A);
+\draw[dashed] (A) -- (M);
+% front base
+\draw (A) -- (B) -- (C);
+% lateral edges
+\draw (P) -- (A);
+\draw (P) -- (B);
+\draw (P) -- (M);
+\draw (P) -- (C);
+% labels with clearance
+\node[above=4pt] at (P) {$P$};
+\node[above left=2pt] at (D) {$D$};
+\node[right=5pt] at (C) {$C$};
+\node[below left=4pt] at (A) {$A$};
+\node[below=5pt] at (B) {$B$};
+\node[below right=5pt] at (M) {$M$};
+\end{tikzpicture}

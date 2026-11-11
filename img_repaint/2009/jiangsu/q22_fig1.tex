@@ -1,0 +1,15 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>={Stealth},font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (A) at (2,2);
+\draw[->] (-1.2,0) -- (7.6,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-4.2) -- (0,4.4) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw[domain=-3.6:3.6,samples=161,smooth] plot ({(\x*\x)/2},{\x});
+\draw (O) -- (A);
+\draw (1,-0.06) -- (1,0.06);
+\draw (-0.06,1) -- (0.06,1);
+\node[below,inner sep=0pt,yshift=-2pt] at (1,0) {$1$};
+\node[left,inner sep=0pt,xshift=-2pt] at (0,1) {$1$};
+\node[above left,inner sep=0pt] at (A) {$A$};
+\node[below left,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (O) {$O$};
+\end{tikzpicture}

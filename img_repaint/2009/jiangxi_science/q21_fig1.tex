@@ -1,0 +1,27 @@
+\begin{tikzpicture}[line width=.6pt,>=Stealth]
+\def\aa{2.828}
+\draw[->] (-6.2,0) -- (6.2,0) node[below left=2pt] {$x$};
+\draw[->] (0,-5.5) -- (0,5.8) node[above left=2pt] {$y$};
+\node[below left=3pt] at (0,0) {$O$};
+\draw[thin] (2.666666666667,-5.5) -- (2.666666666667,5.8);
+\draw[domain=-1.9:1.9,samples=160] plot ({sqrt(8)*sqrt(1+\x*\x)},\x);
+\draw[domain=-1.9:1.9,samples=160] plot ({-sqrt(8)*sqrt(1+\x*\x)},\x);
+\coordinate (F1) at (-3,0);
+\coordinate (F2) at (3,0);
+\coordinate (Pone) at (-3.1622776602,0.5000000000);
+\coordinate (Apt) at (2.6666666667,0.5000000000);
+\coordinate (Ptwo) at (0.0000000000,4.5000000000);
+\coordinate (Pmid) at (-1.5811388301,2.5000000000);
+\fill (F1) circle (1.6pt);
+\fill (F2) circle (1.6pt);
+\fill (Pmid) circle (1.6pt);
+\draw[thin] (Pone) -- (Apt);
+\draw[thin] (Pone) -- (Ptwo);
+\draw[thin] (Ptwo) -- (F2);
+\node[below=5pt,xshift=5pt,yshift=-5pt] at (F1) {$F_{1}$};
+\node[below=5pt,xshift=-1pt,yshift=-7pt] at (F2) {$F_{2}$};
+\node[left=4pt] at (Pone) {$P_{1}$};
+\node[right=4pt,xshift=-3pt,yshift=5pt] at (Apt) {$A$};
+\node[right=4pt] at (Ptwo) {$P_{2}$};
+\node[left=4pt] at (Pmid) {$P$};
+\end{tikzpicture}

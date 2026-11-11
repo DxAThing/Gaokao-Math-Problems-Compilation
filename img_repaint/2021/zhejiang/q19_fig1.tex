@@ -1,0 +1,34 @@
+% 2021_zhejiang_q19_fig1: pyramid P-ABCD, base parallelogram A-B-C-D,
+% M on BC, N on PC; solid visible, dashed hidden.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  solid edge/.style={solid}, hidden edge/.style={dashed}]
+  % base parallelogram (2D projection)
+  \coordinate (A) at (0,0.6);
+  \coordinate (B) at (1.6,0);
+  \coordinate (M) at (3.6,0.85);
+  \coordinate (C) at (5.6,1.7);
+  \coordinate (D) at (4.0,2.3);
+  \coordinate (P) at (3.0,5.6);
+  \coordinate (N) at (4.3,3.65);
+  % base edges
+  \draw[solid edge] (A)--(B)--(M)--(C);
+  \draw[hidden edge] (C)--(D)--(A);
+  \draw[hidden edge] (M)--(D);
+  % lateral edges
+  \draw[solid edge] (P)--(A);
+  \draw[solid edge] (P)--(B);
+  \draw[solid edge] (P)--(M);
+  \draw[solid edge] (P)--(C);
+  \draw[hidden edge] (P)--(D);
+  % interior segments AN
+  \draw[hidden edge] (A)--(N);
+  % labels
+  \node[left] at (A) {$A$};
+  \node[below] at (B) {$B$};
+  \node[below] at (M) {$M$};
+  \node[right] at (C) {$C$};
+  \node[above right] at (D) {$D$};
+  \node[above] at (P) {$P$};
+  \node[right] at (N) {$N$};
+  \fill (M) circle (1pt); \fill (N) circle (1pt); \fill (D) circle (1pt);
+\end{tikzpicture}

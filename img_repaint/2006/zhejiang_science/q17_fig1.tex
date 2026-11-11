@@ -1,0 +1,31 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (P) at (0,4.2);
+\coordinate (A) at (0,0.8);
+\coordinate (B) at (-1.9,-0.3);
+\coordinate (C) at (-0.2,-0.3);
+\coordinate (D) at (3.0,0.8);
+\coordinate (N) at (-0.95,1.95);
+\coordinate (M) at (-0.1,1.95);
+% dashed hidden
+\draw[dashed] (P)--(A);
+\draw[dashed] (A)--(B);
+\draw[dashed] (A)--(D);
+\draw[dashed] (A)--(N);
+% solid
+\draw (P)--(N)--(B);
+\draw (P)--(M)--(C);
+\draw (P)--(D);
+\draw (B)--(C);
+\draw (C)--(D);
+\draw (N)--(M);
+\draw (M)--(D);
+% labels
+\node[fill=white,inner sep=1.5pt,above=4pt] at (P) {$P$};
+\node[fill=white,inner sep=1.5pt,left=6pt,below=1pt,fill=none,xshift=2.00bp,yshift=0.00bp] at (A) {$A$};
+\node[fill=white,inner sep=1.5pt,below left=2pt and 3pt] at (B) {$B$};
+\node[fill=white,inner sep=1.5pt,below right=2pt and 3pt] at (C) {$C$};
+\node[fill=white,inner sep=1.5pt,right=5pt] at (D) {$D$};
+\node[fill=white,inner sep=1.5pt,left=5pt] at (N) {$N$};
+\node[fill=white,inner sep=2pt,above right=5pt and 6pt] at (M) {$M$};
+\end{tikzpicture}
+

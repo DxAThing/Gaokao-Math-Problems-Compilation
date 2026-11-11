@@ -1,0 +1,6 @@
+% Exact edge inventory and direction must precede drawing.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize]
+\coordinate (A) at (0,0);\coordinate (B) at (3,0);\coordinate (C) at (1.5,2);
+\draw (A)--(B)--(C)--cycle;
+\foreach \p/\pos in {A/below left,B/below right,C/above}{\fill (\p) circle (1.2pt);\node[\pos] at (\p) {$\p$};}
+\end{tikzpicture}

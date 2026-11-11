@@ -1,0 +1,33 @@
+% Square [-1,1]x[-1,1] with axes; A1..A8 on its boundary plus origin dot.
+\begin{tikzpicture}[x=1.6cm,y=1.6cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Axes
+\draw[->] (-1.7,0)--(1.7,0) node[below right] {$x$};
+\draw[->] (0,-1.7)--(0,1.7);
+% Square boundary
+\draw (-1,1)--(1,1)--(1,-1)--(-1,-1)--cycle;
+% Dots: origin plus eight boundary points
+\fill (0,0) circle (1.5pt);
+\fill (1,0) circle (1.5pt);
+\fill (1,1) circle (1.5pt);
+\fill (0,1) circle (1.5pt);
+\fill (-1,1) circle (1.5pt);
+\fill (-1,0) circle (1.5pt);
+\fill (-1,-1) circle (1.5pt);
+\fill (0,-1) circle (1.5pt);
+\fill (1,-1) circle (1.5pt);
+% Ticks and origin
+\node[below left] at (0,0) {$O$};
+\node[below] at (-1,0) {$-1$};
+\node[below right] at (1,0) {$1$};
+\node[above right] at (0,1) {$1$};
+\node[below right] at (0,-1) {$-1$};
+% Point labels
+\node[above] at (1.35,1.12) {$A_{2}(1,1)$};
+\node[above left] at (-0.08,1.18) {$A_{3}$};
+\node[above] at (-1.35,1.18) {$A_{4}(-1,1)$};
+\node[above left] at (-1,0.12) {$A_{5}$};
+\node[above] at (1.12,0.14) {$A_{1}$};
+\node[below] at (-1.4,-1.22) {$A_{6}(-1,-1)$};
+\node[below left] at (-0.08,-1.2) {$A_{7}$};
+\node[below] at (1.4,-1.24) {$A_{8}(1,-1)$};
+\end{tikzpicture}

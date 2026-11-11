@@ -1,0 +1,33 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (P) at (-0.3500000000,5.0000000000);
+\coordinate (A) at (-4.5,0);
+\coordinate (B) at (1,0);
+\coordinate (E) at (-0.3750000000,0.0000000000);
+\coordinate (C) at (3.8,2);
+\coordinate (D) at (-1.7000000000,2.0000000000);
+\coordinate (F) at (2.4250000000,2.0000000000);
+\coordinate (G) at (0.3250000000,2.5000000000);
+\coordinate (H) at (1.7250000000,3.5000000000);
+% solid pyramid outline
+\draw[solid] (P) -- (A);
+\draw[solid] (A) -- (E) -- (B) -- (C);
+\draw[solid] (P) -- (G) -- (B);
+\draw[solid] (P) -- (H) -- (C);
+\draw[dashed] (F)--(C);
+\draw[solid] (E) -- (G) -- (H);
+% hidden / section dashed
+\draw[dashed] (P) -- (D);
+\draw[dashed] (A) -- (D);
+\draw[dashed] (D) -- (F);
+\draw[dashed] (H) -- (F);
+\draw[dashed] (E) -- (F);
+\node[above] at (P) {$P$};
+\node[below left] at (A) {$A$};
+\node[below right] at (B) {$B$};
+\node[below] at (E) {$E$};
+\node[right] at (C) {$C$};
+\node[left,xshift=-5pt,yshift=7pt] at (D) {$D$};
+\node[below right] at (F) {$F$};
+\node[left] at (G) {$G$};
+\node[above right] at (H) {$H$};
+\end{tikzpicture}

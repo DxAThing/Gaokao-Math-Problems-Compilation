@@ -1,0 +1,34 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,inner sep=2pt]
+\coordinate (B) at (-3.400000000,-1.550000000);
+\coordinate (F) at (-1.400000000,-0.850000000);
+\coordinate (C) at (1.300000000,0.095000000);
+\coordinate (D) at (-1.850000000,0.450000000);
+\coordinate (E) at (-0.050000000,-0.950000000);
+\coordinate (A) at (-0.680000000,0.110000000);
+\coordinate (U) at (-4.300000000,1.050000000);
+\coordinate (V) at (0.400000000,2.695000000);
+\coordinate (Q) at (-0.700000000,-1.750000000);
+\coordinate (R) at (4.000000000,-0.105000000);
+\coordinate (T) at (0.130000000,1.190000000);
+\draw (B)--(U)--(V)--(C)--cycle;
+\draw (B)--(Q)--(R)--(C);
+\draw (B)--(T)--(C);
+\draw (A)--(D);
+\draw[dashed] (D)--(F)--(A);
+\draw (F)--(E)--(A);
+\coordinate (rA) at ($(D)!0.16cm!(A)$);
+\coordinate (rB) at ($(D)!0.16cm!(F)$);
+\draw (rA)--($(rA)+(rB)-(D)$)--(rB);
+\coordinate (rA) at ($(E)!0.16cm!(A)$);
+\coordinate (rB) at ($(E)!0.16cm!(F)$);
+\draw (rA)--($(rA)+(rB)-(E)$)--(rB);
+\node[below left] at (B) {$B$};
+\node[above right,xshift=4pt,yshift=2pt] at (A) {$A$};
+\node[above left] at (D) {$D$};
+\node[below right] at (E) {$E$};
+\node[below left,xshift=-4pt,yshift=-5pt] at (F) {$F$};
+\node[above right] at (C) {$C$};
+\node[xshift=3pt,yshift=-5pt] at (-1.3,2.05) {$M$};
+\node[xshift=-1pt,yshift=-5pt] at (1.7,-1.0) {$N$};
+\node at (.25,.76) {$P$};
+\end{tikzpicture}

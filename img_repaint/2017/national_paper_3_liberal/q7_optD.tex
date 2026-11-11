@@ -1,0 +1,20 @@
+% fragment for 2017_national_paper_3_liberal_q7_optD (family: single_function_options)
+% auto-generated from measured source points; unit 1 = 0.7 cm
+\usetikzlibrary{arrows.meta}
+\tikzset{curve/.style={line width=.6pt}}
+\begin{tikzpicture}[x=0.7cm,y=0.7cm,line width=.6pt,>=Stealth,font=\normalsize]
+  \draw[->] (-4.8,0)--(4.8,0);
+  \node[right,inner sep=0pt,xshift=2pt] at (4.8,0) {$x$};
+  \draw[->] (0,-3.8)--(0,5.8);
+  \node[above,inner sep=0pt,yshift=2pt] at (0,5.8) {$y$};
+  \draw (1,-0.07)--(1,0.07);
+  \node[below,inner sep=1pt] at (1,-0.11) {$1$};
+  \draw (-0.07,1)--(0.07,1);
+  \node[left,inner sep=1pt] at (-0.13,1) {$1$};
+  \node[inner sep=1pt] at (-0.75,-0.55) {$O$};
+  \begin{scope}
+    \clip (-4.8,-3.8) rectangle (4.8,5.8);
+    \draw[curve] plot[domain=-4.8:-0.22,samples=600,variable=\x] (\x,{1+\x+sin(deg(\x))/(\x*\x)});
+    \draw[curve] plot[domain=0.22:4.8,samples=600,variable=\x] (\x,{1+\x+sin(deg(\x))/(\x*\x)});
+  \end{scope}
+\end{tikzpicture}

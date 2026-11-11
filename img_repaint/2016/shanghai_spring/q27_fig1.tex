@@ -1,0 +1,29 @@
+% q27 reflector axial section: parabola y^2=14.4x (scale k=0.2), mouth ellipse, dims
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (O) at (0,0);
+\coordinate (Fpt) at (0.72,0);
+\coordinate (TOP) at (2.0,2.4);
+\coordinate (BOT) at (2.0,-2.4);
+% mounting vertical through O
+\draw[solid] (0,0) -- (0,-3.05);
+% parabola branches by formula X=Y^2/2.88
+\draw[solid] plot[domain=0:2.4,samples=80,smooth] ({(\x*\x)/2.88},{\x});
+\draw[solid] plot[domain=0:2.4,samples=80,smooth] ({(\x*\x)/2.88},{-\x});
+% mouth rim thin ellipse + dashed diameter
+\draw[solid] (2.0,0) ellipse (0.22 and 2.4);
+\draw[dashed] (2.0,-2.1) -- (2.0,2.1);
+% focus dot
+\fill (Fpt) circle (1.4pt);
+\node[left,inner sep=3pt] at (O) {$O$};
+\node[right,inner sep=3pt] at (Fpt) {$F$};
+% 24cm vertical dimension on right
+\draw[<->] (2.75,2.4) -- (2.75,-2.4);
+\draw[solid] (2.2,2.4) -- (2.95,2.4);
+\draw[solid] (2.2,-2.4) -- (2.95,-2.4);
+\node[right,inner sep=2pt] at (2.75,0) {$24$ cm};
+% 10cm horizontal dimension at bottom
+\draw[<->] (0,-2.85) -- (2.0,-2.85);
+\draw[solid] (0,-2.6) -- (0,-3.05);
+\draw[solid] (2.0,-2.6) -- (2.0,-3.05);
+\node[below,inner sep=2pt] at (1.0,-2.85) {$10$ cm};
+\end{tikzpicture}

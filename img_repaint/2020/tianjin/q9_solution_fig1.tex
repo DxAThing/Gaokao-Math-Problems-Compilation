@@ -1,0 +1,14 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=.9cm,y=.9cm,line width=.6pt,>=Stealth]
+\draw[->] (-2.95,0)--(4.65,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-2.05)--(0,4.75) node[left,inner sep=0pt,xshift=-2pt,yshift=2pt] {$y$};
+\draw (-3.85,1)--(0,1);
+\draw (-3.05,2)--(4.1,2);
+\draw[domain=0:2.12,samples=101] plot (\x,{\x*\x});
+\draw[fill=white] (0,1) circle (2.5pt);
+\draw[fill=white] (0,0) circle (2.5pt);
+\node[below left,inner sep=0pt,xshift=-5pt,yshift=-5pt] at (0,0) {$O$};
+\node[anchor=west,inner sep=0pt,xshift=2pt] at (4.1,2) {$y=2$};
+\node[anchor=west,inner sep=0pt,xshift=2pt] at (2.02,3.92) {$y=h(x)$};
+\node[below,inner sep=0pt,yshift=-2pt] at (2.35,-0.75) {\bitmapinsertcaption[1]};
+\end{tikzpicture}

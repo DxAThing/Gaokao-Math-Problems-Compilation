@@ -1,40 +1,33 @@
-% Source: source/普通高考/1998/1998上海文.pdf, page 1, question 6.
-% Direct node -> directed-edge list from the original process network:
-% 1->2 (a,2), 1->3 (m,0), 2->5 (c,3), 3->4 (b,3), 4->5 (n,0, dashed),
-% 4->6 (d,1), 5->6 (p,0, dashed), 5->7 (e,3), 6->7 (f,4), 7->8 (g,2).
-% Solid edges are the eight numbered activities; dashed edges are the two
-% zero-duration dummy activities 4->5 and 5->6. All node text is centered
-% with local zero indentation.
-\begin{tikzpicture}[
-  >=Stealth,
-  line width=0.55pt,
-  line cap=round,
-  line join=round,
-  font=\normalsize,
-  every node/.style={anchor=center,align=center,
-    execute at begin node={\setlength{\parindent}{0pt}}},
-  activity/.style={inner sep=0pt,align=center},
-  event/.style={circle,draw,minimum size=0.62cm,inner sep=0pt},
-]
-  \path[use as bounding box] (-0.45,-1.75) rectangle (9.05,1.75);
-
-  \node[event] (n1) at (0,0) {1};
-  \node[event] (n2) at (1.70,1.25) {2};
-  \node[event] (n3) at (1.70,-1.25) {3};
-  \node[event] (n4) at (3.45,-1.25) {4};
-  \node[event] (n5) at (5.05,1.25) {5};
-  \node[event] (n6) at (5.35,-1.25) {6};
-  \node[event] (n7) at (6.95,0) {7};
-  \node[event] (n8) at (8.55,0) {8};
-
-  \draw[->] (n1) -- node[activity,above,sloped] {\shortstack{$a$\\2}} (n2);
-  \draw[->] (n1) -- node[activity,below,sloped] {\shortstack{$m$\\0}} (n3);
-  \draw[->] (n2) -- node[activity,above] {\shortstack{$c$\\3}} (n5);
-  \draw[->] (n3) -- node[activity,above] {\shortstack{$b$\\3}} (n4);
-  \draw[->,dashed] (n4) -- node[activity,left,sloped] {\shortstack{$n$\\0}} (n5);
-  \draw[->] (n4) -- node[activity,below] {\shortstack{$d$\\1}} (n6);
-  \draw[->,dashed] (n5) -- node[activity,right,sloped] {\shortstack{$p$\\0}} (n6);
-  \draw[->] (n5) -- node[activity,above,sloped] {\shortstack{$e$\\3}} (n7);
-  \draw[->] (n6) -- node[activity,above,sloped] {\shortstack{$f$\\4}} (n7);
-  \draw[->] (n7) -- node[activity,above] {\shortstack{$g$\\2}} (n8);
+% 1998 Shanghai liberal Q6: project network, 8 circle nodes, 8 solid + 3 dashed directed edges.
+% Letters above/near each edge, durations below/near each edge. Dashed = zero-duration links.
+\begin{tikzpicture}[line width=.6pt, font=\normalsize, >=Stealth]
+\tikzset{v/.style={circle, draw, minimum size=7mm, inner sep=0pt, fill=white}}
+\node[v] (n1) at (0,2) {1};
+\node[v] (n2) at (3.5,3.6) {2};
+\node[v] (n5) at (7.5,3.6) {5};
+\node[v] (n7) at (11,2) {7};
+\node[v] (n8) at (14,2) {8};
+\node[v] (n3) at (2,0) {3};
+\node[v] (n4) at (4.7,0) {4};
+\node[v] (n6) at (7.5,0) {6};
+\draw[->] (n1) -- (n2)
+  node[pos=0.5, above=2pt] {$a$} node[pos=0.5, below=2pt] {$2$};
+\draw[->] (n2) -- (n5)
+  node[pos=0.5, above=2pt] {$c$} node[pos=0.5, below=2pt] {$3$};
+\draw[->] (n5) -- (n7)
+  node[pos=0.55, above=2pt] {$e$} node[pos=0.55, below=2pt] {$3$};
+\draw[->] (n7) -- (n8)
+  node[pos=0.5, above=2pt] {$g$} node[pos=0.5, below=2pt] {$2$};
+\draw[->] (n3) -- (n4)
+  node[pos=0.5, above=2pt] {$b$} node[pos=0.5, below=2pt] {$3$};
+\draw[->] (n4) -- (n6)
+  node[pos=0.5, above=2pt] {$d$} node[pos=0.5, below=2pt] {$1$};
+\draw[->] (n6) -- (n7)
+  node[pos=0.5, above=2pt] {$f$} node[pos=0.5, below=2pt] {$4$};
+\draw[->, dashed] (n1) -- (n3)
+  node[pos=0.3, right=1pt] {$m$} node[pos=0.3, left=1pt] {$0$};
+\draw[->, dashed] (n4) -- (n5)
+  node[pos=0.5, left=1pt] {$n$} node[pos=0.5, right=1pt] {$0$};
+\draw[->, dashed] (n5) -- (n6)
+  node[pos=0.5, left=1pt] {$0$} node[pos=0.5, right=1pt] {$p$};
 \end{tikzpicture}

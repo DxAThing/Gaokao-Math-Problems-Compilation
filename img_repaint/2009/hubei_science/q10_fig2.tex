@@ -1,0 +1,20 @@
+% 正方形数点阵：1,4,9,16；底边对齐，自左至右组序不变。
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+% group 1: 1 dot
+\fill (0,0) circle (1.5pt);
+% group 2: 2x2 = 4 dots
+\foreach \ix in {0,1} \foreach \iy in {0,1} \fill ({1.5+\ix*0.5},{0+\iy*0.5}) circle (1.5pt);
+% group 3: 3x3 = 9 dots
+\foreach \ix in {0,1,2} \foreach \iy in {0,1,2} \fill ({3.2+\ix*0.5},{0+\iy*0.5}) circle (1.5pt);
+% group 4: 4x4 = 16 dots
+\foreach \ix in {0,1,2,3} \foreach \iy in {0,1,2,3} \fill ({5.4+\ix*0.5},{0+\iy*0.5}) circle (1.5pt);
+% group value labels
+\node[below=6pt] at (0,0) {$1$};
+\node[below=6pt] at (1.75,0) {$4$};
+\node[below=6pt] at (3.7,0) {$9$};
+\node[below=6pt] at (6.15,0) {$16$};
+% trailing ellipsis at mid height
+\node at (8.0,0.75) {$\cdots\cdots$};
+% figure caption
+\node at (4.0,-1.3) {\bitmapinsertcaption[2]};
+\end{tikzpicture}

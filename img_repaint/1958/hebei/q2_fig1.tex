@@ -1,0 +1,22 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=2.0cm,y=1.2cm,line width=.6pt,>=stealth,font=\normalsize]
+% ranges: x in [-0.35,3.55] rad, y in [-1.6,1.6]
+% curve y=sin(2x), period pi; key points 0, pi/4 (max 1), pi/2 (0), 3pi/4 (min -1), pi (0)
+\draw[domain=0:3.14159265,samples=151] plot (\x,{sin(deg(2*\x))});
+% axes
+\draw[->] (-0.35,0) -- (3.55,0) node[right,inner sep=0pt,xshift=3pt] {$x$};
+\draw[->] (0,-1.6) -- (0,1.6) node[above,inner sep=0pt,yshift=0pt] at (0,1.62) {};
+\node[anchor=east,inner sep=0pt,xshift=-4pt,yshift=2pt] at (0,1.6) {$y$};
+% x ticks: small marks at pi/4, pi/2, 3pi/4, pi
+\draw ({3.14159265/4},-0.05) -- ({3.14159265/4},0.05);
+\draw ({3.14159265/2},-0.05) -- ({3.14159265/2},0.05);
+\draw ({3*3.14159265/4},-0.05) -- ({3*3.14159265/4},0.05);
+\draw (3.14159265,-0.05) -- (3.14159265,0.05);
+% x labels offset sideways to avoid sine crossings at zeros
+\node[anchor=north east,inner sep=0pt,xshift=-3pt,yshift=-5pt] at ({3.14159265/2},0) {$\frac{\pi}{2}$};
+\node[anchor=north west,inner sep=0pt,xshift=3pt,yshift=-5pt] at (3.14159265,0) {$\pi$};
+\node[anchor=north east,inner sep=0pt,xshift=-3pt,yshift=-4pt] at (0,0) {$0$};
+% y labels with clearance left of axis
+\node[anchor=east,inner sep=0pt,xshift=-5pt] at (0,1) {$1$};
+\node[anchor=east,inner sep=0pt,xshift=-5pt] at (0,-1) {$-1$};
+\end{tikzpicture}

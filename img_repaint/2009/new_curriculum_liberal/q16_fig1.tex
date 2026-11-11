@@ -1,0 +1,15 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1.6cm,y=1.1cm,line width=.6pt,>=stealth]
+\draw[->] (-0.5,0)--(4.8,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-2.9)--(0,2.9) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+\draw[domain=0.7854:3.927,samples=250] plot (\x,{2*sin(deg(3*\x)-135)});
+\draw[line width=.6pt] (0.7854,0)--(0.7854,-0.07);
+\node[anchor=north,inner sep=0pt,yshift=-2pt] at (0.7854,-0.07) {$\frac{\pi}{4}$};
+\draw[line width=.6pt] (3.927,0)--(3.927,-0.07);
+\node[anchor=north,inner sep=0pt,yshift=-2pt] at (3.927,-0.07) {$\frac{5\pi}{4}$};
+\foreach \yv/\yt in {2/{$2$},1/{$1$},-1/{$-1$},-2/{$-2$}} {
+  \draw[line width=.6pt] (0,\yv)--(-0.05,\yv);
+  \node[anchor=east,inner sep=0pt,xshift=-2pt] at (-0.05,\yv) {\yt};
+}
+\end{tikzpicture}

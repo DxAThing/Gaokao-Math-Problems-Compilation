@@ -1,0 +1,12 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Option D (faithful to option image even though incorrect): d(0)=2, zero at pi/4, fast oscillation
+\draw[->] (-0.6,0)--(6.9,0) node[right] {$x$};
+\draw[->] (0,-0.6)--(0,3.0) node[above] {$y$};
+\node[below left] at (0,0) {$O$};
+\draw (0.06,2)--(-0.06,2);
+\node[left] at (0,2) {$2$};
+\draw (0.7854,0.06)--(0.7854,-0.06);
+\node[below] at (0.7854,0) {$\dfrac{\pi}{4}$};
+% curve 2|cos 2x|: value 2 at 0, zeros at pi/4, 3pi/4, 5pi/4, 7pi/4
+\draw[domain=0:6.6,samples=260] plot (\x,{2*abs(cos(2*deg(\x)))});
+\end{tikzpicture}

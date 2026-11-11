@@ -1,0 +1,20 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (2,0);
+\coordinate (C) at (2,1);
+\coordinate (D) at (0,1);
+\coordinate (XaxisL) at (-0.8,0);
+\coordinate (XaxisR) at (3.0,0);
+\coordinate (YaxisB) at (0,-0.8);
+\coordinate (YaxisT) at (0,2.0);
+\draw[->] (XaxisL) -- (XaxisR);
+\draw[->] (YaxisB) -- (YaxisT);
+\draw (A) -- (B) -- (C) -- (D) -- cycle;
+\node[below left=3pt] at (A) {$A$};
+\node[below=3pt] at (B) {$B$};
+\node[above right=3pt] at (C) {$C$};
+\node[left=3pt] at (D) {$D$};
+\node[below right=2pt] at (XaxisR) {$x$};
+\node[above left=2pt] at (YaxisT) {$y$};
+\end{tikzpicture}

@@ -1,0 +1,23 @@
+\begin{tikzpicture}[line width=.6pt,line join=round,line cap=round]
+\coordinate (P) at (1.5,4.5);
+\coordinate (A) at (1.5,1.2);
+\coordinate (B) at (0,0);
+\coordinate (C) at (3.0,0);
+\coordinate (D) at (6.0,0.9);
+% laterals
+\draw[dashed] (P) -- (A);
+\draw[solid] (P) -- (B);
+\draw[solid] (P) -- (C);
+\draw[solid] (P) -- (D);
+% base
+\draw[dashed] (A) -- (B);
+\draw[solid] (B) -- (C);
+\draw[solid] (C) -- (D);
+\draw[dashed] (A) -- (D);
+% labels
+\node[above,xshift=-1pt,yshift=3pt] at (P) {$P$};
+\node[left,xshift=-5pt,yshift=1pt] at (A) {$A$};
+\node[below left,xshift=-4pt,yshift=-3pt] at (B) {$B$};
+\node[below,xshift=1pt,yshift=-4pt] at (C) {$C$};
+\node[right,xshift=4pt] at (D) {$D$};
+\end{tikzpicture}

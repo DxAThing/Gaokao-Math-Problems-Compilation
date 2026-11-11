@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+  edge/.style={draw=black,solid,line width=.6pt},
+  hid/.style={draw=black,dashed,line width=.6pt},
+  lbl/.style={font=\normalsize,inner sep=1.5pt}]
+% Folded parallelogram: A,B in the base plane, C lifted, C0 original position.
+\coordinate (A) at (0,0.6);
+\coordinate (B) at (4.8,0.6);
+\coordinate (D) at (3.0,2.6);
+\coordinate (C) at (2.0,6.4);
+\coordinate (C0) at (7.8,2.6);
+% Visible edges.
+\draw[edge] (A)--(B);
+\draw[edge] (A)--(C);
+\draw[hid] (A)--(D);
+\draw[edge] (C)--(D);
+\draw[edge] (C)--(B);
+\draw[edge] (C)--(C0);
+\draw[edge] (B)--(C0);
+\draw[hid] (D)--(B);
+% Fold crease remnant (hidden).
+\draw[hid] (D)--(C0);
+% Labels placed clear of all strokes.
+\node[lbl,anchor=north east] at (-0.12,0.42) {$A$};
+\node[lbl,anchor=north] at (4.8,0.26) {$B$};
+\node[lbl,anchor=north] at (2.9,2.2) {$D$};
+\node[lbl,anchor=south] at (2.0,6.66) {$C$};
+\node[lbl,anchor=west] at (7.98,2.6) {$C_{0}$};
+\end{tikzpicture}

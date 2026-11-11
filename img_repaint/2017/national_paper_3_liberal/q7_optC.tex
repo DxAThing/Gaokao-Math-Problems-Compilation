@@ -1,0 +1,25 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=0.85cm,y=0.85cm,line width=.6pt,>=Stealth]
+\coordinate (O) at (0,0);
+\coordinate (xL) at (-5.2,0);
+\coordinate (xR) at (5.6,0);
+\coordinate (yB) at (0,-5);
+\coordinate (yT) at (0,4.8);
+\coordinate (tOne) at (1,0);
+\coordinate (yOne) at (0,1);
+\coordinate (tOneA) at (1,-0.1);
+\coordinate (tOneB) at (1,0.1);
+\coordinate (tyA) at (-0.12,1);
+\coordinate (tyB) at (0,1);
+\draw[->] (xL) -- (xR);
+\draw[->] (yB) -- (yT);
+\draw (1,-0.1) -- (1,0.1);
+\draw (-0.12,1) -- (0,1);
+\draw[domain=-5:-0.14,samples=401] plot (\x,{-1.94-0.095/abs(\x)^1.6});
+\draw[domain=0.14:5.5,samples=401] plot (\x,{1.94+0.022/\x^2.35});
+\node[anchor=west,inner sep=0pt] at (5.72,0) {$x$};
+\node[anchor=south,inner sep=0pt] at (0,4.92) {$y$};
+\node[anchor=north east,inner sep=0pt] at (-0.1,-0.3) {$O$};
+\node[anchor=east,inner sep=0pt] at (-0.18,1) {$1$};
+\node[anchor=north,inner sep=0pt] at (1,-0.28) {$1$};
+\end{tikzpicture}

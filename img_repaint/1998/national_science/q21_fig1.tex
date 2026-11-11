@@ -1,0 +1,23 @@
+\usetikzlibrary{arrows.meta,calc,positioning}
+\begin{tikzpicture}[x=1.0cm,y=1.0cm,line width=.6pt,font=\normalsize]
+% l1: horizontal line, l2: vertical line, meeting at M (no coordinate axes in the source figure)
+\coordinate (M) at (0,0);
+\coordinate (N) at (4,0);
+\coordinate (A) at (3,2.8284271247461903);
+\coordinate (B) at (6,5.656854249492381);
+\draw[line width=.6pt] (-1.0,0) -- (7.4,0);
+\draw[line width=.6pt] (0,-1.0) -- (0,6.0);
+% sides of triangle AMN and segment BN
+\draw[line width=.6pt] (M) -- (A);
+\draw[line width=.6pt] (A) -- (N);
+\draw[line width=.6pt] (B) -- (N);
+% curve segment C: parabola y^2 = 8(x-2), upper branch, from A to B
+\draw[line width=.6pt,domain=3:6,samples=140,smooth] plot (\x,{sqrt(8*(\x-2))});
+% labels (complete nodes, anchored next to their objects)
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (M) {$M$};
+\node[anchor=north,inner sep=0pt,yshift=-2pt] at (N) {$N$};
+\node[anchor=south east,inner sep=0pt,xshift=-2pt,yshift=2pt] at (A) {$A$};
+\node[anchor=south west,inner sep=0pt,xshift=2pt,yshift=2pt] at (B) {$B$};
+\node[anchor=south east,inner sep=0pt,xshift=-2pt,yshift=2pt] at (0,6) {$l_2$};
+\node[anchor=south,inner sep=0pt,yshift=2pt] at (7.4,0) {$l_1$};
+\end{tikzpicture}

@@ -1,0 +1,37 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (C) at (0,0);
+\coordinate (D) at (3,0);
+\coordinate (A) at (4.6,1.2);
+\coordinate (B) at (1.6,1.2);
+\coordinate (C1) at (1.2,3.2);
+\coordinate (D1) at (4.2,3.2);
+\coordinate (A1) at (5.8,4.4);
+\coordinate (B1) at (2.8,4.4);
+% base rhombus ABCD
+\draw[solid] (C)--(D)--(A);
+\draw[dashed] (A)--(B)--(C);
+\draw[dashed] (B)--(D);
+% top A1B1C1D1
+\draw[solid] (C1)--(D1);
+\draw[solid] (B1)--(A1);
+\draw[solid] (C1)--(B1);
+\draw[solid] (D1)--(A1);
+\draw[solid] (A)--(A1);
+\draw[solid] (C)--(C1);
+\draw[solid] (D)--(D1);
+\draw[dashed] (B)--(B1);
+% required diagonals for proof
+\draw[dashed] (B)--(C1);
+\draw[solid] (C1)--(D);
+\draw[dashed] (C)--(A1);
+
+% labels
+\node[below left=3pt] at (C) {$C$};
+\node[below=3pt] at (D) {$D$};
+\node[right=3pt] at (A) {$A$};
+\node[left=4pt] at (B) {$B$};
+\node[left=3pt] at (C1) {$C_{1}$};
+\node[right=3pt,xshift=-1pt,yshift=-3pt] at (D1) {$D_{1}$};
+\node[above right=3pt] at (A1) {$A_{1}$};
+\node[above left=3pt] at (B1) {$B_{1}$};
+\end{tikzpicture}

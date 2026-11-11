@@ -1,0 +1,32 @@
+% 2017_shandong_science_q19_fig1: xOy coordinate, P1..P4 polyline with dashed drops.
+% Adapted from templates/diagrams/simple_coordinate.tex structure only.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-0.5,0)--(9.5,0) node[right] {$x$};
+\draw[->] (0,-0.5)--(0,4.8) node[above] {$y$};
+\node[below left] at (0,0) {$O$};
+% dashed vertical drops from Pn to x-axis
+\draw[dashed] (1,1)--(1,0);
+\draw[dashed] (2,2)--(2,0);
+\draw[dashed] (4,3)--(4,0);
+\draw[dashed] (8,4)--(8,0);
+% polyline P1-P2-P3-P4 with short extension beyond P4
+\draw (1,1)--(2,2)--(4,3)--(8,4)--(9,4.25);
+% foot points on x-axis
+\fill (1,0) circle (1.5pt);
+\fill (2,0) circle (1.5pt);
+\fill (4,0) circle (1.5pt);
+\fill (8,0) circle (1.5pt);
+\node[below] at (1,0) {$x_{1}$};
+\node[below] at (2,0) {$x_{2}$};
+\node[below] at (4,0) {$x_{3}$};
+\node[below] at (8,0) {$x_{4}$};
+% sequence points
+\fill (1,1) circle (1.5pt);
+\fill (2,2) circle (1.5pt);
+\fill (4,3) circle (1.5pt);
+\fill (8,4) circle (1.5pt);
+\node[above left] at (1,1) {$P_{1}$};
+\node[above left] at (2,2) {$P_{2}$};
+\node[above left] at (4,3) {$P_{3}$};
+\node[above left] at (8,4) {$P_{4}$};
+\end{tikzpicture}

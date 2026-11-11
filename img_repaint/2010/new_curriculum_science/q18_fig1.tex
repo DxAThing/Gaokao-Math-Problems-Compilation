@@ -1,0 +1,35 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% P-ABCD, base trapezoid AB front, CD back; H diagonal intersection, PH altitude, E mid AD
+\coordinate (P) at (0.5384615385,5.0000000000);
+\coordinate (A) at (-3,0);
+\coordinate (B) at (3,0);
+\coordinate (D) at (-0.2,2.0);
+\coordinate (C) at (1.6,2.0);
+\coordinate (H) at (0.5384615385,1.5384615385);
+\coordinate (E) at (-1.6,1.0);
+% solid visible edges
+\draw (P)--(A);
+\draw (P)--(B);
+\draw (A)--(B);
+% hidden / interior edges
+
+\draw[dashed] (P)--(D);
+\draw[dashed] (P)--(H);
+\draw[dashed] (P)--(C);
+\draw[dashed] (A)--(E)--(D);
+\draw[dashed] (D)--(C);
+\draw[dashed] (B)--(C);
+\draw[dashed] (A)--(H)--(C);
+\draw[dashed] (B)--(H)--(D);
+\draw[dashed] (E)--(H);
+
+% labels with clearance
+\node[above=3pt] at (P) {$P$};
+\node[below left=3pt] at (A) {$A$};
+\node[below right=3pt] at (B) {$B$};
+\node[above left=3pt] at (D) {$D$};
+\node[above right=3pt,xshift=3pt,yshift=1pt] at (C) {$C$};
+\node[below right=4pt,xshift=-3pt,yshift=-3pt] at (H) {$H$};
+\node[left=4pt] at (E) {$E$};
+\draw[dashed] (P)--(E);
+\end{tikzpicture}

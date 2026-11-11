@@ -1,0 +1,15 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Exact construction: F=(0,1.8), P=(0,2.6), d=PF=0.8;
+% I: a1=2.6,c1=1.8,center (0,0), b1=sqrt(a1^2-c1^2)=1.876;
+% II: a2=1.7,c2=0.9,center (0,0.9), b2=1.442; III: circle(F,0.8).
+\draw[dashed] (0,-3.3)--(0,3.5);
+\draw (0,0) ellipse (1.876 and 2.6);
+\draw (0,0.9) ellipse (1.442 and 1.7);
+\draw (0,1.8) circle (0.8);
+\fill (0,1.8) circle (1.5pt);
+\node[above right,inner sep=2pt] at (0,2.6) {$P$};
+\node[right,inner sep=2pt] at (0.08,1.8) {$F$};
+\node[inner sep=2pt] at (.58,.85) {III};
+\node[inner sep=2pt] at (.85,-.98) {II};
+\node[inner sep=2pt] at (1.08,-2.64) {I};
+\end{tikzpicture}

@@ -1,65 +1,31 @@
-% Source PDF: source/春季高考/2023/2023春季上海.pdf
-% Page: 1; embedded-image extraction succeeded (pdfimages object 872x444).
-% Original image for comparison: tmp/repaint_2023_shanghai/extract-001.png.
-% Elements: stacked bars for 2018--2021, y-axis ticks 10,20,30,40, origin O,
-% title, year labels, segment values, and the import/export legend.
-% Relations: each bar's light segment is imports (14.09,14.33,14.29,17.37),
-% dark segment is exports (16.41,17.24,17.93,21.73); bar totals are their sums.
-% solid segments: axes, ticks, stacked bar outlines and legend swatches; dashed segments: none.
-% labels: values are centered in their segments; years below x-axis; legend at right.
-\begin{tikzpicture}[baseline, line cap=round, line join=round]
-\begin{axis}[exam statistical line,
-    width=16cm,
-    height=11.289cm,
-    axis lines=none,
-    clip=false,
-    xmin=-0.55,
-    xmax=5.0,
-    ymin=-6.5,
-    ymax=47,
-    ticks=none,
-]
-    % Stacked import/export bars; values are read directly from the embedded source chart.
-    % Export is the dark lower segment; import is the light upper segment.
-    \addplot[ybar stacked, bar width=0.55, draw=black, fill=gray!65, line width=0.65pt]
-        coordinates {(1,16.41) (2,17.24) (3,17.93) (4,21.73)};
-    \addplot[ybar stacked, bar width=0.55, draw=black, fill=gray!35, line width=0.65pt]
-        coordinates {(1,14.09) (2,14.33) (3,14.29) (4,17.37)};
-
-    % Axes, tick marks and labels.
-    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:4.65,0);
-    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,44.5);
-    \node[anchor=north east,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:-0.08,0.000000) {$O$};
-    \node[anchor=south east,inner sep=0pt,font=\normalsize] at (axis cs:-0.12,44.7) {万亿元};
-    \node[anchor=north west,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:4.52,0.000000) {年份};
-    \node[anchor=south,inner sep=0pt,font=\normalsize] at (axis cs:2.35,46.0) {2018-2021年中国货物进出口总额统计图};
-    \draw[line width=0.45pt] (axis cs:0,10) -- (axis cs:0.16,10);
-    \draw[line width=0.45pt] (axis cs:0,20) -- (axis cs:0.16,20);
-    \draw[line width=0.45pt] (axis cs:0,30) -- (axis cs:0.16,30);
-    \draw[line width=0.45pt] (axis cs:0,40) -- (axis cs:0.16,40);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:0.000000,10) {10};
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:0.000000,20) {20};
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:0.000000,30) {30};
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:0.000000,40) {40};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:1,0.000000) {2018};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:2,0.000000) {2019};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:3,0.000000) {2020};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:4,0.000000) {2021};
-
-    % Segment values centered at their mathematically defined mid-heights.
-    \node[inner sep=0pt,font=\normalsize] at (axis cs:1,7.045) {16.41};
-    \node[inner sep=0pt,font=\normalsize] at (axis cs:2,7.165) {17.24};
-    \node[inner sep=0pt,font=\normalsize] at (axis cs:3,7.965) {17.93};
-    \node[inner sep=0pt,font=\normalsize] at (axis cs:4,10.865) {21.73};
-    \node[inner sep=0pt,font=\normalsize] at (axis cs:1,23.455) {14.09};
-    \node[inner sep=0pt,font=\normalsize] at (axis cs:2,24.575) {14.33};
-    \node[inner sep=0pt,font=\normalsize] at (axis cs:3,25.075) {14.29};
-    \node[inner sep=0pt,font=\normalsize] at (axis cs:4,30.545) {17.37};
-
-    % Legend swatches and labels from the source chart.
-    \draw[fill=gray!35,draw=black,line width=0.65pt] (axis cs:4.48,22.8) rectangle (axis cs:4.92,29.0);
-    \node[exam statistical legend label] at (axis cs:4.92,25.900000) {进口};
-    \draw[fill=gray!65,draw=black,line width=0.65pt] (axis cs:4.48,14.0) rectangle (axis cs:4.92,20.2);
-    \node[exam statistical legend label] at (axis cs:4.92,17.100000) {出口};
+% 2023_shanghai_spring_q14_fig1: stacked bar chart of import/export totals (unit: 万亿).
+% Bottom segment 出口 (darker), top segment 进口 (lighter); values shown inside segments.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template bar, exam statistical template stacked, bar shift=0pt,
+  ymin=0,ymax=45,ytick={10,20,30,40},
+  symbolic x coords={2018,2019,2020,2021},xtick=data,
+  title={2018-2021年中国货物进出口总额统计图},
+  enlarge x limits=0.166666666667]
+\addplot[draw=black,fill=gray!50] coordinates
+  {(2018,16.41) (2019,17.24) (2020,17.93) (2021,21.73)};
+\addplot[draw=black,fill=gray!15] coordinates
+  {(2018,14.09) (2019,14.33) (2020,14.29) (2021,17.37)};
+\node[anchor=north east] at (rel axis cs:0,0) {$O$};
+\examstatylabel{万亿}
+\examstatxlabel{年份}
 \end{axis}
+\node at ($(current axis.south west)!0.125!(current axis.south east)+(current axis.south west)!0.18233333333333335!(current axis.north west)-(current axis.south west)$) {16.41};
+\node at ($(current axis.south west)!0.375!(current axis.south east)+(current axis.south west)!0.19155555555555553!(current axis.north west)-(current axis.south west)$) {17.24};
+\node at ($(current axis.south west)!0.625!(current axis.south east)+(current axis.south west)!0.19922222222222222!(current axis.north west)-(current axis.south west)$) {17.93};
+\node at ($(current axis.south west)!0.875!(current axis.south east)+(current axis.south west)!0.24144444444444446!(current axis.north west)-(current axis.south west)$) {21.73};
+\node at ($(current axis.south west)!0.125!(current axis.south east)+(current axis.south west)!0.5212222222222221!(current axis.north west)-(current axis.south west)$) {14.09};
+\node at ($(current axis.south west)!0.375!(current axis.south east)+(current axis.south west)!0.5423333333333333!(current axis.north west)-(current axis.south west)$) {14.33};
+\node at ($(current axis.south west)!0.625!(current axis.south east)+(current axis.south west)!0.5572222222222222!(current axis.north west)-(current axis.south west)$) {14.29};
+\node at ($(current axis.south west)!0.875!(current axis.south east)+(current axis.south west)!0.6758888888888889!(current axis.north west)-(current axis.south west)$) {17.37};
+\node[draw=black,fill=gray!15,minimum size=4mm,anchor=west] (impBox)
+  at ([xshift=5mm,yshift=8mm]current axis.east) {};
+\node[exam statistical legend label] at ([xshift=2mm]impBox.east) {进口};
+\node[draw=black,fill=gray!50,minimum size=4mm,anchor=west] (expBox)
+  at ([xshift=5mm,yshift=0mm]current axis.east) {};
+\node[exam statistical legend label] at ([xshift=2mm]expBox.east) {出口};
 \end{tikzpicture}

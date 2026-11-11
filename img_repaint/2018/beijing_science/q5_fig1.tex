@@ -1,0 +1,37 @@
+% front/side/plan in one horizontal row.
+% front view: right triangle, vertical leg 2 left, base split 1+1, inner line top to midpoint
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% main triangle
+\draw (0,0) -- (0,2.4) -- (2.4,0) -- cycle;
+% inner line from top vertex to base midpoint
+\draw (0,2.4) -- (1.2,0);
+% vertical dimension 2 (left)
+\draw (0,0) -- (-0.35,0);
+\draw (0,2.4) -- (-0.35,2.4);
+\draw[{Latex[length=2mm]}-{Latex[length=2mm]}] (-0.25,0) -- (-0.25,2.4);
+\node[left] at (-0.35,1.2) {2};
+% base dimension segments 1 | 1
+\draw (0,0) -- (0,-0.35);
+\draw (1.2,0) -- (1.2,-0.35);
+\draw (2.4,0) -- (2.4,-0.35);
+\draw[{Latex[length=2mm]}-{Latex[length=2mm]}] (0,-0.25) -- (1.2,-0.25);
+\draw[{Latex[length=2mm]}-{Latex[length=2mm]}] (1.2,-0.25) -- (2.4,-0.25);
+\node[below] at (0.6,-0.25) {1};
+\node[below] at (1.8,-0.25) {1};
+% caption
+\node[below] at (1.2,-0.9) {正视图};
+\begin{scope}[shift={(4.2,0)}]
+\draw (0,0) -- (0,2.4) -- (2.4,0) -- cycle;
+\draw (0,0) -- (0,-0.35);
+\draw (2.4,0) -- (2.4,-0.35);
+\draw[{Latex[length=2mm]}-{Latex[length=2mm]}] (0,-0.25) -- (2.4,-0.25);
+\node[below] at (1.2,-0.25) {2};
+\node[below] at (1.2,-0.9) {侧视图（左）};
+\end{scope}
+\begin{scope}[shift={(8.4,2.4)}]
+% top view: outer quadrilateral + diagonal top-left to mid-bottom
+\draw (0,0) -- (2.4,0) -- (1.2,-2.4) -- (0,-2.4) -- cycle;
+\draw (0,0) -- (1.2,-2.4);
+\node[below] at (1.2,-3.3) {俯视图};
+\end{scope}
+\end{tikzpicture}

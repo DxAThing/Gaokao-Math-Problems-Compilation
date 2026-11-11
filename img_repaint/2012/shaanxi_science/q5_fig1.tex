@@ -1,0 +1,37 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+\tikzset{ptlabel/.style={fill=none,inner sep=1pt,font=\normalsize}}
+% axes origin near C
+\coordinate (O) at (1.6,1.4);
+\coordinate (A) at (0.0,0.4);
+\coordinate (A1) at (3.0,0.4);
+\coordinate (C1) at (4.6,1.4);
+\coordinate (B) at (1.6,3.0);
+\coordinate (B1) at (4.6,3.0);
+% bottom face C-A-A1-C1
+\draw[dashed] (O)--(A);
+\draw (A) -- (A1);
+\draw (A1) -- (C1);
+\draw[dashed] (O) -- (C1);
+% top edge B-B1
+\draw (B) -- (B1);
+% verticals: B-O dashed (z), B1-C1 solid, A-A? side
+\draw[dashed] (B) -- (O);
+\draw (B1) -- (C1);
+\draw (A) -- (B);
+\draw (A1) -- (B1);
+\draw[dashed] (B) -- (C1);
+\draw (A) -- (B1);
+% axes arrows
+\draw[-{Stealth}] (A) -- (-0.7,-0.15);
+\draw[-{Stealth}] (C1) -- (5.6,1.4);
+\draw[-{Stealth},dashed] (B) -- (1.6,3.9);
+% labels
+\node[ptlabel,below=3pt] at (A) {$A$};
+\node[ptlabel,below right=1pt] at (A1) {$A_{1}$};
+\node[ptlabel,below right=1pt] at (C1) {$C_{1}$};
+\node[ptlabel,left=2pt] at (B) {$B$};
+\node[ptlabel,above right=1pt] at (B1) {$B_{1}$};
+\node[ptlabel,below right=3pt,yshift=-3pt] at (O) {$O(C)$};
+\node[ptlabel,below left=1pt] at (-0.7,-0.15) {$x$};
+\node[ptlabel,above=1pt] at (5.6,1.4) {$y$};
+\end{tikzpicture}

@@ -1,0 +1,46 @@
+% 1977 湖南株洲试点第18题解答图：抛物线拱窗，x^2=-120y
+% 单位 cm，图中坐标按 0.03 cm/单位 缩放
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,>=Latex,x=.03cm,y=.03cm]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (60,-30);
+  \coordinate (Wbl) at (-60,-180);
+  \coordinate (Wbr) at (60,-180);
+  \coordinate (Wlt) at (-60,-30);
+  \coordinate (Wrt) at (60,-30);
+
+  % 右半边阴影：曲线与 x 轴之间
+  \fill[gray!28] (0,0) -- (60,0) -- (60,-30) -- plot[domain=60:0,samples=140] (\x,{-\x*\x/120}) -- cycle;
+
+  % 坐标轴
+  \draw[->] (-100,0) -- (95,0) node[below right,inner sep=2pt] {$x$};
+  \draw[->] (0,-182) -- (0,38) node[left,inner sep=2pt] {$y$};
+  \node[above right,inner sep=2pt] at (O) {$O$};
+
+  % 窗框
+  \draw (-60,-180) -- (60,-180);
+  \draw (-60,-180) -- (-60,-30);
+  \draw (60,-180) -- (60,-30);
+  \draw (60,-30) -- (60,0);
+  \draw[domain=-60:0,samples=140,smooth] plot (\x,{-\x*\x/120});
+  \draw[domain=0:60,samples=140,smooth] plot (\x,{-\x*\x/120});
+
+  % 边高虚线
+  \draw[dashed] (-60,-30) -- (60,-30);
+
+  % 尺寸线与引出线
+  \draw[dimension extension] (-62,0) -- (-93,0);
+  \draw[dimension extension] (-62,-180) -- (-93,-180);
+  \draw[dimension line] (-90,0) -- node[dimension label,rotate=90] {180} (-90,-180);
+
+  \draw[dimension extension] (-63,-30) -- (-77,-30);
+  \draw[dimension extension] (-63,-180) -- (-77,-180);
+  \draw[dimension line] (-74,-30) -- node[dimension label,rotate=90] {150} (-74,-180);
+
+  \draw[dimension extension] (-60,-183) -- (-60,-197);
+  \draw[dimension extension] (60,-183) -- (60,-197);
+  \draw[dimension line] (-60,-194) -- node[dimension label] {120} (60,-194);
+
+  \fill (A) circle (1.5pt);
+  \node[right,inner sep=3pt] at (A) {$A(60,-30)$};
+\end{tikzpicture}

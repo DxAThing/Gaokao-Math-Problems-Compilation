@@ -1,0 +1,30 @@
+% 1993 Shanghai Q26: xOy, ellipse x^2/a^2+y^2=1, hyperbola x^2/a^2-y^2=1, triangle F1PF2
+% curves generated from formulas with a=1.6 (satisfies a>=sqrt(2) range illustration)
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,
+  ptlabel/.style={font=\normalsize,inner sep=2pt}]
+\def\aa{1.6}
+\pgfmathsetmacro{\cc}{sqrt(\aa*\aa+1)}
+% axes
+\draw[->] (-4.2,0)--(4.2,0) node[right,xshift=3pt] {$x$};
+\draw[->] (0,-3.0)--(0,3.0) node[above,yshift=3pt] {$y$};
+\node[ptlabel,below left,xshift=-4pt,yshift=-3pt] at (0,0) {$O$};
+% ellipse: parametric x=a*cos t, y=sin t
+\draw[solid] plot[domain=0:360,samples=160] ({\aa*cos(\x)},{sin(\x)});
+% hyperbola branches: y=+-sqrt(x^2/a^2-1), |x|>=a
+\draw[solid] plot[domain=1.6:4.0,samples=80] ({\x},{sqrt(\x*\x/(\aa*\aa)-1)});
+\draw[solid] plot[domain=1.6:4.0,samples=80] ({\x},{-sqrt(\x*\x/(\aa*\aa)-1)});
+\draw[solid] plot[domain=1.6:4.0,samples=80] ({-\x},{sqrt(\x*\x/(\aa*\aa)-1)});
+\draw[solid] plot[domain=1.6:4.0,samples=80] ({-\x},{-sqrt(\x*\x/(\aa*\aa)-1)});
+% foci and point P on ellipse
+\coordinate (F1) at (-\cc,0);
+\coordinate (F2) at (\cc,0);
+\coordinate (P) at (0.8,0.8660254);
+\draw (F1)--(P)--(F2);
+% angle arc at P
+\draw (P) ++(197.8655023464:0.35) arc (197.8655023464:321.4500293084:0.35);
+\foreach \p in {F1,F2,P}{\fill (\p) circle (1.4pt);}
+\node[ptlabel,below,xshift=-3pt,yshift=0pt] at (F1) {$F_{1}$};
+\node[ptlabel,below,xshift=5pt,yshift=0pt] at (F2) {$F_{2}$};
+\node[ptlabel,above right,xshift=4pt,yshift=3pt] at (P) {$P$};
+\node[ptlabel] at (0.6958741004,0.2954486806) {$\varphi$};
+\end{tikzpicture}

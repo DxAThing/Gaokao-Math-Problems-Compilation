@@ -1,0 +1,13 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=0.95cm,y=0.95cm,line width=.6pt,>=Stealth,font=\normalsize]
+  \draw[->] (-1.9,0)--(1.78,0);
+  \node[anchor=south west,inner sep=1pt] at (1.80,0.16) {$x$};
+  \draw[->] (0,-2.55)--(0,1.13);
+  \node[anchor=south east,inner sep=1pt] at (-0.04,1.14) {$y$};
+  \draw[dashed] (-1.5708,-2.5)--(-1.5708,1.05);
+  \draw[dashed] (1.5708,-2.5)--(1.5708,1.05);
+  \draw[domain=-1.49:1.49,samples=201,smooth] plot (\x,{ln(cos(deg(\x)))});
+  \node[anchor=north east,inner sep=1.5pt] at (-0.06,-0.12) {$O$};
+  \node[anchor=east,inner sep=2pt] at (-1.64,-0.70) {$-\frac{\pi}{2}$};
+  \node[anchor=west,inner sep=2pt] at (1.62,-0.70) {$\frac{\pi}{2}$};
+\end{tikzpicture}

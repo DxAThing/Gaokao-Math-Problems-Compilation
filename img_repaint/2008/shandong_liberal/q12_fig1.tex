@@ -1,0 +1,11 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.6cm,y=1.2cm,line width=.6pt,>=Stealth,font=\normalsize]
+  \draw[->] (-1.5,0)--(1.62,0);
+  \node[anchor=north west,inner sep=1pt] at (1.64,-0.02) {$x$};
+  \draw[->] (0,-3.05)--(0,1.12);
+  \node[anchor=south east,inner sep=1pt] at (-0.04,1.13) {$y$};
+  \node[below left,inner sep=1.5pt] at (0,0) {$O$};
+  \draw (-0.05,-1)--(0.05,-1);
+  \node[right,inner sep=2pt] at (0,-1) {$-1$};
+  \draw[domain=-1.4:1.26,samples=161,smooth] plot (\x,{ln(2^\x-0.25)/ln(2)});
+\end{tikzpicture}

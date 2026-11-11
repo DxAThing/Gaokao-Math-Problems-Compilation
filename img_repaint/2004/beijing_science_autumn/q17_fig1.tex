@@ -1,0 +1,17 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt, font=\normalsize, >=Stealth]
+\draw[->] (-1.2,0) -- (5.6,0) node[fill=white,inner sep=2pt,right=1pt] {$x$};
+\draw[->] (0,-4.6) -- (0,3.8) node[fill=white,inner sep=2pt,above=1pt] {$y$};
+\node[fill=white,inner sep=2pt,below left=1pt] at (0,0) {$O$};
+% parabola y^2=4x, i.e. x=y^2/4
+\draw[line width=1pt,domain=-4.3:3.4,samples=120,variable=\y] plot ({\y*\y/4},{\y});
+\coordinate (P) at (1,2);
+\coordinate (A) at (0.25,-1);
+\coordinate (B) at (4,-4);
+\draw (P) -- (A) -- (B) -- cycle;
+\fill (P) circle (1.4pt);
+\fill (A) circle (1.4pt);
+\fill (B) circle (1.4pt);
+\node[fill=white,inner sep=2pt,above left=2pt] at (P) {$P$};
+\node[fill=white,inner sep=2pt,below left=2pt,fill=none,xshift=-4.00bp,yshift=0.00bp] at (A) {$A$};
+\node[fill=white,inner sep=2pt,above right=2pt] at (B) {$B$};
+\end{tikzpicture}

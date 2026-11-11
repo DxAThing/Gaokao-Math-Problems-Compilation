@@ -1,0 +1,41 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (3.5,0);
+\coordinate (C) at (7,2);
+\coordinate (D) at (1.2,1.8);
+\coordinate (A1) at (0,5);
+\coordinate (B1) at (3.5,5);
+\coordinate (C1) at (7,7);
+\coordinate (D1) at (1.2,6.8);
+\coordinate (E) at (2.563953488,0.7325581395);
+% hidden base + interior
+\draw[dashed] (A)--(D);
+\draw[dashed] (D)--(C);
+\draw[dashed] (D)--(D1);
+\draw[dashed] (A)--(C);
+\draw[dashed] (D)--(B);
+\draw[dashed] (A1)--(C);
+\draw[dashed] (C1)--(D);
+% visible prism
+\draw (A)--(B);
+\draw (B)--(C);
+\draw (A)--(A1);
+\draw (B)--(B1);
+\draw (C)--(C1);
+\draw (A1)--(D1);
+\draw (D1)--(C1);
+\draw (C1)--(B1);
+\draw (B1)--(A1);
+% added solid diagonals
+\draw (A1)--(B);
+\draw (B)--(C1);
+\node[inner sep=2pt,anchor=north east] at (-0.14,-0.14) {$A$};
+\node[inner sep=2pt,anchor=north] at (3.5,-0.3) {$B$};
+\node[inner sep=2pt,anchor=west] at (7.18,1.95) {$C$};
+\node[inner sep=2pt,anchor=east] at (0.9,1.95) {$D$};
+\node[inner sep=2pt,anchor=east] at (-0.2,5.05) {$A_{1}$};
+\node[inner sep=2pt,anchor=south] at (3.5,5.25) {$B_{1}$};
+\node[inner sep=2pt,anchor=south west] at (7.12,7.05) {$C_{1}$};
+\node[inner sep=2pt,anchor=south east] at (1.0,6.92) {$D_{1}$};
+\node[below left=2pt] at (E) {$E$};
+\end{tikzpicture}

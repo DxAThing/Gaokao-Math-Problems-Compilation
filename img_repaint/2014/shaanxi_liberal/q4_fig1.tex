@@ -1,49 +1,30 @@
-% Source: source/普通高考/2014/2014陕西文.pdf, page 1, question 4.
-% Flowchart topology: 开始 -> 输入 N -> S=1,i=1 -> a_i=2*S -> S=a_i
-% -> i=i+1 -> i>N?; 否 loops to the entry above a_i, 是 -> 输出 -> 结束.
-\begin{tikzpicture}[
-  x=1cm, y=0.84cm, >=Stealth,
-  line width=0.45pt, line cap=round, line join=round,
-  every node/.style={anchor=center, align=center,
-    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
-  flowbox/.style={draw, minimum height=0.70cm, inner xsep=4pt, inner ysep=2pt,
-    align=center, execute at begin node={\setlength{\parindent}{0pt}\noindent}},
-  terminal/.style={flowbox, rounded corners=0.16cm, minimum width=1.30cm,
-    minimum height=0.72cm},
-  io/.style={flowbox, trapezium, trapezium left angle=72, trapezium right angle=108,
-    minimum width=2.55cm, minimum height=0.78cm},
-  process/.style={flowbox, minimum width=2.85cm},
-  decision/.style={flowbox, diamond, aspect=3.0, minimum width=3.55cm,
-    minimum height=1.00cm, inner sep=1pt},
-  branchlabel/.style={anchor=center, align=center, inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}\noindent}}
-]
-  \node[terminal] (start) at (0,12.00) {开始};
-  \node[io] (input) at (0,10.55) {输入 $N$};
-  \node[process, minimum width=3.25cm] (init) at (0,9.15) {$S=1,\ i=1$};
-  \node[process, minimum width=2.95cm] (double) at (0,7.70) {$a_i=2*S$};
-  \node[process, minimum width=2.45cm] (assign) at (0,6.30) {$S=a_i$};
-  \node[process, minimum width=2.65cm] (inc) at (0,4.90) {$i=i+1$};
-  \node[decision] (test) at (0,3.35) {$i>N$};
-  \node[io, minimum width=4.10cm] (output) at (0,1.75) {输出 $a_1,a_2,\cdots,a_N$};
-  \node[terminal] (finish) at (0,0.30) {结束};
-
-  \draw[->] (start.south) -- (input.north);
-  \draw[->] (input.south) -- (init.north);
-  % The initialization shaft and the return edge meet at one junction;
-  % the return joins an unarrowed segment; the downward edge carries the arrow.
-  \coordinate (loopJoin) at (0,8.55);
-  \draw (init.south) -- (loopJoin);
-  \draw[->] (loopJoin) -- (double.north);
-  \draw[->] (double.south) -- (assign.north);
-  \draw[->] (assign.south) -- (inc.north);
-  \draw[->] (inc.south) -- (test.north);
-  \draw[->] (test.south) -- node[branchlabel, right=2pt] {是} (output.north);
-  \draw[->] (output.south) -- (finish.north);
-
-  % The negative branch returns to the single vertical entry above a_i.
-  \coordinate (loopLeft) at (-3.25,3.35);
-  \coordinate (loopTop) at (-3.25,8.55);
-  \draw (test.west) -- node[branchlabel, above=2pt] {否} (loopLeft) -- (loopTop);
-  \draw (loopTop) -- (loopJoin);
+\tikzset{
+  flownode/.style={draw, line width=0.6pt, align=center, execute at begin node={\parindent=0pt}},
+  flowstart/.style={flownode, shape=rectangle, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm},
+  flowio/.style={flownode, trapezium, trapezium left angle=72, trapezium right angle=108, minimum width=34mm, minimum height=9mm, inner xsep=3mm},
+  flowproc/.style={flownode, rectangle, minimum width=30mm, minimum height=9mm, inner xsep=3mm},
+  flowdec/.style={flownode, diamond, aspect=2.5, minimum width=36mm, minimum height=15mm, inner xsep=3mm},
+  flowedge/.style={-{Stealth[length=2.4mm,width=2.1mm]}, line width=0.6pt},
+  flowlab/.style={font=\normalsize, inner sep=1pt}
+}
+\begin{tikzpicture}[x=1cm, y=1cm]
+\node[flowstart] (st) at (0,0) {开始};
+\node[flowio] (in1) at (0,-1.8) {输入 $N$};
+\node[flowproc] (s1) at (0,-3.5) {$S=1,i=1$};
+\coordinate (J1) at (0,-4.4);
+\node[flowproc] (pa) at (0,-5.5) {$a_{i}=2*S$};
+\node[flowproc] (s2) at (0,-7.2) {$S=a_{i}$};
+\node[flowproc] (pi) at (0,-8.8) {$i=i+1$};
+\node[flowdec] (dec) at (0,-10.6) {$i>N$};
+\node[flowio] (out) at (0,-12.6) {输出 $a_{1},a_{2},\cdots,a_{N}$};
+\node[flowstart] (en) at (0,-14.3) {结束};
+\draw[flowedge] (st.south) -- (in1.north);
+\draw[flowedge] (in1.south) -- (s1.north);
+\draw[flowedge] (s1.south) -- (pa.north);
+\draw[flowedge] (pa.south) -- (s2.north);
+\draw[flowedge] (s2.south) -- (pi.north);
+\draw[flowedge] (pi.south) -- (dec.north);
+\draw[flowedge] (dec.south) -- (out.north) node[midway,right=2mm,flowlab] {是};
+\draw[flowedge] (out.south) -- (en.north);
+\draw[flowedge] (dec.west) -- ++(-2.2,0) node[pos=0.23,above=1.5mm,flowlab] {否} |- (J1);
 \end{tikzpicture}

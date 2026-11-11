@@ -1,0 +1,16 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.3cm,y=0.6cm,line width=.6pt,>=stealth,font=\normalsize]
+% axes ranges: x in [-1.8,3.4], y in [-6,2.5]; axes extend half-unit beyond curve ends
+\begin{scope}
+\clip (-1.8,-6) rectangle (3.4,2.5);
+\draw[domain=-0.4:2.74,samples=121] plot (\x,{3*\x*\x-7*\x-1});
+\end{scope}
+% x-axis
+\draw[->] (-1.8,0) -- (3.4,0) node[right,inner sep=0pt,xshift=3pt] {$x$};
+% y-axis
+\draw[->] (0,-6) -- (0,2.5) node[right,inner sep=0pt,xshift=3pt,yshift=-1pt] {$y$};
+% x-intercepts M, N and origin O: offset sideways to avoid curve strokes and M/O collision
+\node[anchor=north east,inner sep=0pt,xshift=-3pt,yshift=-4pt] at ({(7-sqrt(61))/6},0) {$M$};
+\node[anchor=north west,inner sep=0pt,xshift=3pt,yshift=-4pt] at (0,0) {$O$};
+\node[anchor=north west,inner sep=0pt,xshift=3pt,yshift=-4pt] at ({(7+sqrt(61))/6},0) {$N$};
+\end{tikzpicture}

@@ -1,0 +1,32 @@
+\begin{tikzpicture}[line width=.6pt, font=\normalsize]
+% cone body: top rim ellipse rx=3, apex below
+\coordinate (rimL) at (-3,0);
+\coordinate (rimR) at (3,0);
+\coordinate (apex) at (0,-6);
+\coordinate (wL) at (-1.5,-3);
+\coordinate (wR) at (1.5,-3);
+% water region (gray block with boundary and no hole issue)
+\fill[gray!15] (wL) -- (apex) -- (wR) -- cycle;
+\fill[gray!15] (wL) arc [x radius=1.5, y radius=0.28, start angle=180, end angle=360] -- cycle;
+% cone outline
+\draw (rimL) -- (apex) -- (rimR);
+\draw (rimL) arc [x radius=3, y radius=0.55, start angle=180, end angle=360];
+\draw (rimL) arc [x radius=3, y radius=0.55, start angle=180, end angle=0];
+% water surface: solid front arc, dashed back arc
+\draw (wL) arc [x radius=1.5, y radius=0.28, start angle=180, end angle=360];
+\draw[dashed] (wL) arc [x radius=1.5, y radius=0.28, start angle=180, end angle=0];
+% water label inside region
+\node at (0,-3.9) {\begin{tabular}{c}雨\\水\end{tabular}};
+% dimensions: top diameter 200mm
+\draw[dimension line] (-3,1.1) -- node[dimension label] {200 mm} (3,1.1);
+\draw[dimension extension] (-3,0.55) -- (-3,1.1);
+\draw[dimension extension] (3,0.55) -- (3,1.1);
+% left total height 300mm
+\draw[dimension line] (-4.4,0) -- node[dimension label vertical] {300 mm} (-4.4,-6);
+\draw[dimension extension] (-3,0) -- (-4.4,0);
+\draw[dimension extension] (0,-6) -- (-4.4,-6);
+% right water height 150mm
+\draw[dimension line] (4.0,-3) -- node[dimension label vertical] {150 mm} (4.0,-6);
+\draw[dimension extension] (1.5,-3) -- (4.0,-3);
+\draw[dimension extension] (0,-6) -- (4.0,-6);
+\end{tikzpicture}

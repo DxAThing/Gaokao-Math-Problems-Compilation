@@ -1,48 +1,25 @@
-% Source: source/普通高考/2014/2014安徽文.pdf, p.1, question 4.
-% Flowchart nodes and directed edges transcribed from the source diagram.
-% Nodes: 开始, x=1,y=1, z=x+y, z<=50?, x=y, y=z, 输出 z, 结束.
-% Directed edges: 开始→x=1,y=1→z=x+y→判定；判定(是)→x=y→y=z→左侧回路→z=x+y入口；
-% 判定(否)→输出 z→结束。回路与输出支路独立，不共享线段。
-% solid segments: every node boundary, all straight connectors, and the left loop-back route;
-% dashed segments: none. Labels: 是 sits beside the downward true branch, 否 above the right
-% false branch; all node text is centered in its own box with no manual horizontal offset.
-\begin{tikzpicture}[
-  x=1cm,
-  y=0.8cm,
-  >=Stealth,
-  line width=0.45pt,
-  every node/.style={font=\normalsize,anchor=center,align=center,inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}}},
-  flowbox/.style={draw,minimum height=0.62cm,inner xsep=4pt,inner ysep=2pt,
-    anchor=center,align=center,execute at begin node={\setlength{\parindent}{0pt}}},
-  startstop/.style={flowbox,rounded corners=0.22cm,minimum height=0.62cm},
-  decision/.style={flowbox,diamond,aspect=2.8,minimum width=3.4cm,minimum height=0.92cm},
-  io/.style={flowbox,trapezium,trapezium left angle=72,trapezium right angle=108,
-    minimum width=1.80cm,minimum height=0.68cm},
-  branchlabel/.style={anchor=center,align=center,inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}}},
-  flowline/.style={-{Stealth[length=2.1mm,width=1.35mm]},line width=0.45pt}
-]
-  \node[startstop,minimum width=1.25cm] (start) at (0,8.05) {开始};
-  \node[flowbox,minimum width=2.55cm] (init) at (0,6.90) {$x=1,y=1$};
-  \node[flowbox,minimum width=2.45cm] (sum) at (0,5.35) {$z=x+y$};
-  \node[decision] (test) at (0,3.95) {$z\leq 50?$};
-  \node[flowbox,minimum width=1.55cm] (setxy) at (0,2.63) {$x=y$};
-  \node[flowbox,minimum width=1.55cm] (setyz) at (0,1.30) {$y=z$};
-  \node[io] (output) at (3.55,2.65) {输出 $z$};
-  \node[startstop,minimum width=1.25cm] (finish) at (3.55,1.08) {结束};
-
-  % Straight-through path to the decision and the terminating branch.
-  \draw[flowline] (start.south) -- (init.north);
-  \draw[flowline] (init.south) -- (sum.north);
-  \draw[flowline] (sum.south) -- (test.north);
-  \draw[flowline] (test.east) -- node[branchlabel,above,pos=0.40] {否} (3.55,3.95) -- (output.north);
-  \draw[flowline] (output.south) -- (finish.north);
-
-  % The affirmative branch updates x and y, then returns independently to the sum entry.
-  \draw[flowline] (test.south) -- node[branchlabel,anchor=west,pos=0.48] {是} (setxy.north);
-  \draw[flowline] (setxy.south) -- (setyz.north);
-  \draw (setyz.south) -- (0,0.20) -- (-3.20,0.20)
-    -- (-3.20,6.15) -- (-1.45,6.15);
-  \draw[flowline] (-1.45,6.15) -- (0,6.15);
+\begin{tikzpicture}[x=1mm,y=1mm,
+  base/.style={draw, line width=0.5pt, align=center, font={\parindent=0pt}, inner sep=1.5mm},
+  start/.style={base, shape=rectangle, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm},
+  proc/.style={base, rectangle, minimum width=28mm, minimum height=9mm},
+  dec/.style={base, diamond, aspect=2.4, minimum width=34mm, minimum height=15mm, inner sep=1mm},
+  io/.style={base, trapezium, trapezium left angle=72, trapezium right angle=108, minimum width=30mm, minimum height=10mm},
+  arr/.style={->, >=Stealth, line width=0.5pt}]
+\node[start] (start) at (0,0) {开始};
+\node[proc] (pinit) at (0,-17) {$x=1,y=1$};
+\coordinate (J) at (0,-27.5);
+\node[proc] (pz) at (0,-37) {$z=x+y$};
+\node[dec] (dia) at (0,-56) {$z\leqslant 50?$};
+\node[proc] (px) at (0,-76) {$x=y$};
+\node[proc] (py) at (0,-92) {$y=z$};
+\node[io] (outz) at (32,-72) {输出 $z$};
+\node[start] (endz) at (32,-90) {结束};
+\draw[arr] (start.south) -- (pinit.north);
+\draw[arr] (pinit.south) -- (pz.north);
+\draw[arr] (pz.south) -- (dia.north);
+\draw[arr] (dia.south) -- (px.north) node[midway,right,xshift=1.5mm]{是};
+\draw[arr] (px.south) -- (py.north);
+\draw[arr] (outz.south) -- (endz.north);
+\draw[arr] (dia.east) -- ++(10mm,0) coordinate (br) node[midway,above,yshift=1.2mm]{否} -- (br |- outz.north);
+\draw[arr] (py.west) -- ++(-14mm,0) |- (J);
 \end{tikzpicture}

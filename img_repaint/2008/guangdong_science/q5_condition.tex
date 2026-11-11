@@ -1,0 +1,77 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  geom/.style={solid,line width=.6pt},
+  lbl/.style={font=\normalsize,inner sep=2pt}]
+% ---- left panel: 图1 ----
+\coordinate (H) at (0.00,4.60);
+\coordinate (G) at (4.00,4.60);
+\coordinate (E) at (0.00,1.20);
+\coordinate (D) at (4.00,1.20);
+\coordinate (F) at (2.00,0.00);
+\coordinate (A) at (2.00,4.60);
+\coordinate (B) at (1.25,3.80);
+\coordinate (C) at (2.75,3.80);
+\coordinate (I) at (2.00,3.15);
+\draw[geom] (H)--(G);
+\draw[geom] (H)--(E);
+\draw[geom] (G)--(D);
+\draw[geom,dashed] (E)--(D);
+\draw[geom] (H)--(B);
+\draw[geom] (G)--(C);
+\draw[geom] (A)--(B);
+\draw[geom] (A)--(C);
+\draw[geom] (B)--(C);
+\draw[geom] (B)--(I);
+\draw[geom] (C)--(I);
+\draw[geom] (I)--(F);
+\draw[geom] (B)--(F);
+\draw[geom] (C)--(F);
+\draw[geom] (E)--(F);
+\draw[geom] (D)--(F);
+\draw[geom] (E)--(B);
+\draw[geom] (C)--(D);
+\draw[geom,dashed] (A)--(E);
+\draw[geom,dashed] (A)--(D);
+\node[lbl,left,xshift=-2pt] at (H) {$H$};
+\node[lbl,right,xshift=2pt] at (G) {$G$};
+\node[lbl,above,yshift=1pt] at (A) {$A$};
+\node[lbl,left=7pt] at (B) {$B$};
+\node[lbl,right=7pt] at (C) {$C$};
+\node[lbl,left,xshift=-2pt,yshift=-1pt] at (I) {$I$};
+\node[lbl,left,xshift=-2pt] at (E) {$E$};
+\node[lbl,right,xshift=2pt] at (D) {$D$};
+\node[lbl,below,yshift=-1pt] at (F) {$F$};
+\node[lbl] at (2.00,-0.75) {\bitmapinsertcaption[1]};
+% arrow
+\draw[->] (4.80,2.60)--(5.90,2.60);
+\node[lbl,above] at (5.35,2.60) {侧视};
+% ---- right panel: 图2 (shift +7) ----
+\coordinate (E2) at (7.00,1.20);
+\coordinate (D2) at (11.00,1.20);
+\coordinate (F2) at (9.00,0.00);
+\coordinate (A2) at (9.00,4.60);
+\coordinate (B2) at (8.25,3.80);
+\coordinate (C2) at (9.75,3.80);
+\coordinate (I2) at (9.00,3.15);
+\draw[geom,dashed] (E2)--(D2);
+\draw[geom] (A2)--(B2);
+\draw[geom] (A2)--(C2);
+\draw[geom] (B2)--(C2);
+
+
+
+\draw[geom] (B2)--(F2);
+\draw[geom] (C2)--(F2);
+\draw[geom] (E2)--(F2);
+\draw[geom] (D2)--(F2);
+\draw[geom] (E2)--(B2);
+\draw[geom] (C2)--(D2);
+\draw[geom,dashed] (A2)--(E2);
+\draw[geom,dashed] (A2)--(D2);
+\node[lbl,above,yshift=1pt] at (A2) {$A$};
+\node[lbl,left,xshift=-2pt] at (B2) {$B$};
+\node[lbl,right,xshift=2pt] at (C2) {$C$};
+\node[lbl,left,xshift=-2pt] at (E2) {$E$};
+\node[lbl,right,xshift=2pt] at (D2) {$D$};
+\node[lbl,below,yshift=-1pt] at (F2) {$F$};
+\node[lbl] at (9.00,-0.75) {\bitmapinsertcaption[2]};
+\end{tikzpicture}

@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (C) at (5.2,1.6);
+\coordinate (D) at (1.2,1.6);
+\coordinate (O) at (2.6,0.8);
+\coordinate (V) at (2.6,4.2);
+% base: front solid, back dashed
+\draw (A)--(B)--(C);
+\draw[dashed] (C)--(D)--(A);
+% laterals: front solid, back dashed
+\draw (V)--(B);
+\draw (V)--(C);
+\draw (V)--(A);
+\draw[dashed] (V)--(D);
+% height and base diagonals (dashed)
+\draw[dashed] (V)--(O);
+\draw[dashed] (A)--(O);
+\draw[dashed] (D)--(O);
+% labels kept clear of strokes
+\node[above,yshift=3pt] at (V) {$V$};
+\node[below left,xshift=-2pt,yshift=-2pt] at (A) {$A$};
+\node[below right,xshift=2pt,yshift=-2pt] at (B) {$B$};
+\node[right,xshift=4pt] at (C) {$C$};
+\node[above left,xshift=-3pt,yshift=2pt] at (D) {$D$};
+\node[below right,xshift=2pt,yshift=-1pt] at (O) {$O$};
+\end{tikzpicture}

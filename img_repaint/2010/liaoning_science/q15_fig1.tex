@@ -1,0 +1,18 @@
+% Three orthographic projections on grid paper (cell side 1).
+% Front (left) and side (middle) right triangles, plan (right) square with diagonal.
+% All projection edges solid; light gray grid is paper background only.
+% layout: horizontal row (point-fix: scopes moved into one row, edges unchanged).
+% 根据仓库规范标注已有三幅投影，不新增投影。
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+\draw[gray!55,line width=.3pt] (0,0) grid[step=.72cm] (7.92,2.88);
+% front view: right angle at bottom-right of its 2x2 cell block
+\draw (0.72,0.72) -- (2.16,0.72) -- (2.16,2.16) -- cycle;
+% side view: right angle at bottom-left of its 2x2 cell block
+\draw (3.6,0.72) -- (5.04,0.72) -- (3.6,2.16) -- cycle;
+% plan view: 2x2 square with diagonal from bottom-left to top-right
+\draw (5.76,0.72) rectangle (7.2,2.16);
+\draw (5.76,0.72) -- (7.2,2.16);
+\node at (1.44,-.5) {正视图};
+\node at (4.32,-.5) {侧视图};
+\node at (6.48,-.5) {俯视图};
+\end{tikzpicture}

@@ -1,0 +1,27 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes from origin through dots to tips
+\draw[->] (0,0) -- (0,5.0);
+\draw[->] (0,0) -- (5.0,0);
+\draw[->] (0,0) -- (-2.8,-2.8);
+% filled dots r=1.6pt
+\fill (0,0) circle (1.6pt);
+\fill (-1.0,-1.0) circle (1.6pt);
+\fill (-2.0,-2.0) circle (1.6pt);
+\fill (2.0,0) circle (1.6pt);
+\fill (4.0,0) circle (1.6pt);
+\fill (0,2.0) circle (1.6pt);
+\fill (0,4.0) circle (1.6pt);
+% dot labels kept on original sides with 4-6pt clearance
+\node[anchor=north west,inner sep=0pt,xshift=3.5pt,yshift=-4.5pt] at (0,0) {$O$};
+\node[anchor=south east,inner sep=0pt,xshift=-4.0pt,yshift=4.0pt] at (-1.0,-1.0) {$A_{1}$};
+\node[anchor=south east,inner sep=0pt,xshift=-5.0pt,yshift=4.0pt] at (-2.0,-2.0) {$A_{2}$};
+\node[anchor=north,inner sep=0pt,yshift=-5.0pt] at (2.0,0) {$B_{1}$};
+\node[anchor=north,inner sep=0pt,yshift=-5.0pt] at (4.0,0) {$B_{2}$};
+\node[anchor=east,inner sep=0pt,xshift=-5.0pt] at (0,2.0) {$C_{1}$};
+\node[anchor=east,inner sep=0pt,xshift=-5.0pt] at (0,4.0) {$C_{2}$};
+% axis names outside arrow tips
+\node[anchor=south,inner sep=0pt,yshift=5.0pt] at (0,5.0) {$z$};
+\node[anchor=west,inner sep=0pt,xshift=6.0pt,yshift=1.0pt] at (5.0,0) {$y$};
+\node[anchor=north east,inner sep=0pt,xshift=-1.0pt,yshift=-6.0pt] at (-2.8,-2.8) {$x$};
+\end{tikzpicture}

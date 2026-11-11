@@ -1,0 +1,13 @@
+% Three-segment polyline on xOy grid (2020 national paper 1 science q23 solution).
+% Vertices measured from original pixels (grid unit = O-to-1):
+% S(-5.04,3.95) V(-0.43,-0.68) K(0.92,6.01) E(1.84,6.87); slopes about -1, 5, 1.
+% Grid x in [-5,5], y in [-2,7]; segment order S->V->K->E, solid, no arrows, no dots.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[step=1cm,color=gray!60,line width=.3pt] (-5,-2) grid (5,7);
+\draw[->] (-5.5,0)--(5.5,0) node[right] {$x$};
+\draw[->] (0,-2.5)--(0,7.5) node[above] {$y$};
+\node[below left] at (0,0) {$O$};
+\node[below] at (1,0) {$1$};
+\node[left] at (0,1) {$1$};
+\draw (-5.04,3.95)--(-0.43,-0.68)--(0.92,6.01)--(1.84,6.87);
+\end{tikzpicture}

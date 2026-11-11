@@ -1,2 +1,23 @@
-% Canonical statistical figure: img_repaint/2013/liaoning_liberal/q5_fig1.tex
-\input{img_repaint/2013/liaoning_liberal/q5_fig1.tex}
+% Candidate redrawn from inputs/2013_liaoning_science_q5_fig1.png (no prior version).
+% Constraint IR: histogram, groups [20,40),[40,60),[60,80),[80,100] per stem;
+% densities 0.005,0.010,0.020,0.015 (y dashed helpers in original);
+% x 成绩/分, y 频率/组距; gap 0-20 keeps one group width with unified break.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,
+  xmin=0,ymin=0,
+  xtick={0,20,40,60,80,100},
+  ytick={0,0.005,0.01,0.015,0.02},
+  xmax=110,
+  ymax=0.0225,
+  xticklabels={,20,40,60,80,100}]
+\addplot[draw=black,fill=white] coordinates
+  {(20,0.005) (40,0.01) (60,0.02) (80,0.015) (100,0)};
+\draw[densely dashed] (axis cs:0,0.005) -- (axis cs:20,0.005);
+\draw[densely dashed] (axis cs:0,0.01) -- (axis cs:40,0.01);
+\draw[densely dashed] (axis cs:0,0.015) -- (axis cs:80,0.015);
+\draw[densely dashed] (axis cs:0,0.02) -- (axis cs:60,0.02);
+\examstatylabel{频率/组距}
+\examstatxlabel{成绩/分}
+\examstatxbreak{10}{0}
+\end{axis}
+\end{tikzpicture}

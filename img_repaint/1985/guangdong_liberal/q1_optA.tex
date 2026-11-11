@@ -1,0 +1,17 @@
+% 1985 广东（文）一(1) 选项A：上升曲线（示意，代表 y=2^x 形状，过(0,1)）
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1.5cm,y=1.5cm,line width=.6pt,>={Stealth[length=1.6mm,width=1.1mm]},font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (P) at (0,1);
+% 坐标轴
+\draw[->] (-1.7,0)--(2.1,0);
+\draw[->] (0,-1.5)--(0,3.0);
+\node[right=1pt,inner sep=0pt] at (2.1,0) {$x$};
+\node[above=1pt,inner sep=0pt] at (0,3.0) {$y$};
+% 曲线
+\draw[domain=-1.45:1.55,samples=121] plot(\x,{pow(2,\x)});
+% 标记点与标签
+\fill (P) circle (1.1pt);
+\node[anchor=west,inner sep=1pt] at (0.2,0.9) {$(0,1)$};
+\node[below left=1pt,inner sep=1pt] at (O) {$O$};
+\end{tikzpicture}

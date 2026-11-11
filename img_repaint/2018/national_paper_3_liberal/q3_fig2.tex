@@ -1,0 +1,33 @@
+\begin{tikzpicture}[line width=0.6pt, font=\normalsize]
+  % Large wooden block: front face + depth offset (0.8,0.6)
+  \coordinate (FBL) at (0,0);
+  \coordinate (FBR) at (4,0);
+  \coordinate (FTR) at (4,2);
+  \coordinate (FTL) at (0,2);
+  \coordinate (BBL) at (0.8,0.6);
+  \coordinate (BBR) at (4.8,0.6);
+  \coordinate (BTR) at (4.8,2.6);
+  \coordinate (BTL) at (0.8,2.6);
+  % Front face solid
+  \draw (FBL) -- (FBR) -- (FTR) -- (FTL) -- cycle;
+  % Visible top and right faces
+  \draw (FTL) -- (BTL) -- (BTR) -- (FTR);
+  \draw (FBR) -- (BBR) -- (BTR);
+  % Hidden edges dashed
+  \draw[dashed] (BBL) -- (BBR);
+  \draw[dashed] (FBL) -- (BBL);
+  \draw[dashed] (BBL) -- (BTL);
+  % Tenon (small block) on right face, middle-lower; offset (0.4,0.3)
+  \coordinate (TFL) at (4.2,0.15); \coordinate (TFR) at (5.8,0.15);
+  \coordinate (TTL) at (4.2,1.05); \coordinate (TTR) at (5.8,1.05);
+  \coordinate (TBBL) at (4.6,0.45); \coordinate (TBR) at (6.2,0.45);
+  \coordinate (TBTL) at (4.6,1.35); \coordinate (TBTR) at (6.2,1.35);
+  \fill[white] (TFL)--(TFR)--(TBR)--(TBTR)--(TBTL)--(TTL)--cycle;
+  \draw (TFL)--(TFR)--(TBR)--(TBTR)--(TBTL)--(TTL)--cycle;
+  \draw (TTL)--(TTR)--(TFR) (TTR)--(TBTR);
+  \draw[dashed] (TFL)--(TBBL)--(TBR) (TBBL)--(TBTL);
+  \draw (FBR)--(TFL);
+% Top-view arrow and label (keep original Chinese text)
+  \draw[-{Stealth}] (6.4,3.1) -- (6.4,1.7);
+  \node[anchor=west, font=\normalsize] at (6.55,2.4) {\shortstack{俯\\视\\方\\向}};
+\end{tikzpicture}

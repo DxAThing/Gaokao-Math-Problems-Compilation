@@ -1,58 +1,32 @@
-% Source PDF: source/普通高考/2015/2015全国1理(河南,河北,山西,江西).pdf, page 1.
-% PDF embedded-image attempt: pdfimages -list found no image objects; the flowchart is vector/text artwork.
-% Node→directed-edge list: 开始→输入t→初始化(S=1,n=0,m=1/2)→S=S−m→m=m/2,n=n+1→判定S>t;
-% 判定“是”→左侧回边→S=S−m；判定“否”→输出n→结束。
-% solid segments: all node borders and connector lines; dashed segments: none.
-% labels: all node text is locally zero-indented and centered; 是 labels the left loop branch,
-% 否 labels the downward output branch.
-
-\begin{tikzpicture}[
-  baseline,
-  x=1cm,
-  y=0.89cm,
-  >=Stealth,
-  line cap=butt,
-  line join=miter,
-  every node/.style={font=\normalsize,anchor=center,align=center,inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}}},
-  flow/.style={draw=black,line width=0.45pt,anchor=center,align=center,inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}}},
-  io/.style={flow,shape=trapezium,trapezium left angle=72,
-    trapezium right angle=108,minimum height=0.78cm},
-]
-  % Start, input, and initialisation.
-  \node[flow,rounded corners=0.16cm,minimum width=1.20cm,minimum height=0.68cm]
-    (start) at (0,9.45) {开始};
-  \node[io,minimum width=2.00cm] (input) at (0,8.24) {输入 $t$};
-  \node[flow,minimum width=3.60cm,minimum height=1.10cm]
-    (init) at (0,6.95) {$S=1,n=0,m=\dfrac12$};
-
-  % Loop update nodes and decision.
-  \node[flow,minimum width=2.00cm,minimum height=0.82cm]
-    (sub) at (0,5.22) {$S=S-m$};
-  \node[flow,minimum width=3.55cm,minimum height=1.10cm]
-    (halve) at (0,4.05) {$m=\dfrac{m}{2},n=n+1$};
-  \node[flow,diamond,aspect=2.65,minimum width=2.65cm,minimum height=0.82cm]
-    (check) at (0,2.68) {$S>t$};
-
-  % Output and end.
-  \node[io,minimum width=2.00cm] (output) at (0,1.24) {输出 $n$};
-  \node[flow,rounded corners=0.16cm,minimum width=1.20cm,minimum height=0.68cm]
-    (finish) at (0,0.12) {结束};
-
-  % Main path and false/output branch.
-  \draw[->,flow] (start.south) -- (input.north);
-  \draw[->,flow] (input.south) -- (init.north);
-  \draw[->,flow] (init.south) -- (sub.north);
-  \draw[->,flow] (sub.south) -- (halve.north);
-  \draw[->,flow] (halve.south) -- (check.north);
-  \draw[->,flow] (check.south) -- node[right=2pt,inner sep=0pt] {否} (output.north);
-  \draw[->,flow] (output.south) -- (finish.north);
-
-  % True branch loop: return to the first update node.
-  \coordinate (loop-left) at (-2.10,2.68);
-  % Center the return edge in the clear gap between the init and update boxes.
-  \coordinate (loop-top) at (-2.10,6.01);
-  \draw[flow] (check.west) -- node[above=2pt,inner sep=0pt] {是} (loop-left) -- (loop-top);
-  \draw[->,flow] (loop-top) -- (0,6.01);
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth]
+\tikzset{
+  flowStart/.style={rectangle, rounded corners=1.5mm, draw, line width=0.6pt, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm, align=center, execute at begin node={\setlength{\parindent}{0pt}\centering}},
+  flowIO/.style={trapezium, trapezium left angle=75, trapezium right angle=105, draw, line width=0.6pt, minimum width=28mm, minimum height=10mm, inner sep=2mm, align=center, execute at begin node={\setlength{\parindent}{0pt}\centering}},
+  flowProc/.style={rectangle, draw, line width=0.6pt, minimum width=32mm, minimum height=10mm, inner sep=2mm, align=center, execute at begin node={\setlength{\parindent}{0pt}\centering}},
+  flowWideA/.style={rectangle, draw, line width=0.6pt, minimum width=58mm, minimum height=13mm, inner sep=2mm, align=center, execute at begin node={\setlength{\parindent}{0pt}\centering}},
+  flowWideB/.style={rectangle, draw, line width=0.6pt, minimum width=58mm, minimum height=13mm, inner sep=2mm, align=center, execute at begin node={\setlength{\parindent}{0pt}\centering}},
+  flowDec/.style={diamond, aspect=2.6, draw, line width=0.6pt, minimum width=36mm, minimum height=15mm, inner sep=1mm, align=center, execute at begin node={\setlength{\parindent}{0pt}\centering}},
+  flowEdge/.style={->, >=Stealth, line width=0.6pt},
+  flowPlain/.style={-, line width=0.6pt},
+  flowLabel/.style={font=\normalsize, inner sep=1pt}
+}
+\node[flowStart] (start) at (0,0) {开始};
+\node[flowIO] (input) at (0,-1.9) {输入 $t$};
+\node[flowWideA] (init) at (0,-3.7) {$S=1,n=0,m=\dfrac{1}{2}$};
+\coordinate (J) at (0,-5.0);
+\node[flowProc] (sub) at (0,-6.2) {$S=S-m$};
+\node[flowWideB] (upd) at (0,-7.9) {$m=\dfrac{m}{2},n=n+1$};
+\node[flowDec] (dec) at (0,-9.9) {$S>t$};
+\node[flowIO] (out) at (0,-11.9) {输出 $n$};
+\node[flowStart] (end) at (0,-13.6) {结束};
+\draw[flowEdge] (start.south) -- (input.north);
+\draw[flowEdge] (input.south) -- (init.north);
+\draw[flowEdge] (init.south) -- (sub.north);
+\draw[flowEdge] (sub.south) -- (upd.north);
+\draw[flowEdge] (upd.south) -- (dec.north);
+\draw[flowEdge] (dec.south) -- (out.north) node[midway, right=2mm, flowLabel] {否};
+\draw[flowEdge] (out.south) -- (end.north);
+% 是回环：从判定框西顶点向左绕过两处理框，经外侧通道汇入主干J；标签置于外侧垂直段左侧以避开宽框
+\draw[flowEdge] (dec.west) -- node[flowLabel, above=2mm, pos=0.22] {是} (-4.2,-9.9) -- (-4.2,-5.0) -- (J);
+% label moved to first horizontal segment above (see draw above)
 \end{tikzpicture}

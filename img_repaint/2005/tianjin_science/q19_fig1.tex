@@ -1,0 +1,37 @@
+% 2005 Tianjin science q19: oblique triangular prism ABC-A1B1C1, E on B1C1, F on AA1
+% Schematic projection (same figure as Tianjin liberal q20). Solid = visible, dashed = hidden.
+\begin{tikzpicture}[line width=.6pt, font=\normalsize, >=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (C) at (3,1.2);
+\coordinate (Aone) at (2,4);
+\coordinate (Bone) at (6,4);
+\coordinate (Cone) at (5,5.2);
+\coordinate (Ept) at (5.5,4.6);
+\coordinate (Fpt) at (1,2);
+% visible solid edges
+\draw (A) -- (B);
+\draw (A) -- (Fpt) -- (Aone);
+\draw (B) -- (Bone);
+\draw (Aone) -- (Bone);
+\draw (Aone) -- (Cone);
+\draw (Cone) -- (Ept) -- (Bone);
+\draw (Aone) -- (Ept);
+\draw (Aone) -- (B);
+\draw (Fpt) -- (Bone);
+% hidden dashed edges through C
+\draw[dashed] (A) -- (C);
+\draw[dashed] (B) -- (C);
+\draw[dashed] (Fpt) -- (C);
+\draw[dashed] (C) -- (Cone);
+\draw[dashed] (C) -- (Bone);
+% labels with clearance
+\node[below left=4pt] at (A) {$A$};
+\node[below right=4pt] at (B) {$B$};
+\node[below=4pt] at (C) {$C$};
+\node[left=4pt] at (Aone) {$A_{1}$};
+\node[right=4pt] at (Bone) {$B_{1}$};
+\node[above=4pt] at (Cone) {$C_{1}$};
+\node[right=4pt] at (Ept) {$E$};
+\node[left=4pt] at (Fpt) {$F$};
+\end{tikzpicture}

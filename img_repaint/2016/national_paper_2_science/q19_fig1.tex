@@ -1,0 +1,43 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+\coordinate (Dprime) at (1.0000000000,5.2000000000);
+\coordinate (B) at (-4.0,0.0);
+\coordinate (A) at (-1.5,1.6);
+\coordinate (E) at (-0.1250000000,1.6000000000);
+\coordinate (D) at (4.0000000000,1.6000000000);
+\coordinate (O) at (0.0000000000,0.8000000000);
+\coordinate (H) at (1.0000000000,1.0000000000);
+\coordinate (C) at (1.5,0.0);
+\coordinate (F) at (2.1250000000,0.4000000000);
+% solid visible edges
+\draw[solid] (B)--(Dprime);
+\draw[solid] (A)--(Dprime);
+\draw[solid] (C)--(Dprime);
+\draw[solid] (F)--(Dprime);
+\draw[solid] (B)--(A);
+\draw[solid] (B)--(C);
+\draw[solid] (B)--(O);
+\draw[solid] (A)--(O);
+\draw[solid] (O)--(C);
+
+
+\draw[solid] (C)--(F);
+% dashed hidden edges
+\draw[dashed] (A)--(E)--(D);
+\draw[dashed] (O)--(D);
+\draw[dashed] (D)--(F);
+\draw[dashed] (Dprime)--(H);\draw[dashed] (Dprime)--(E);\draw (H)--(F);
+\draw[solid] (Dprime)--(O);
+
+% points
+% labels offset from strokes
+\node[above,yshift=3.0pt] at (Dprime) {$D'$};
+\node[below left,xshift=-3.0pt,yshift=-3.0pt] at (B) {$B$};
+\node[left,xshift=-3pt] at (A) {$A$};
+\node[above,yshift=4pt,xshift=-3pt] at (E) {$E$};
+\node[right,xshift=3pt] at (D) {$D$};
+\node[below,yshift=-1.0pt,xshift=-1.0pt] at (O) {$O$};
+\node[below=2pt] at (H) {$H$};
+\node[below,yshift=-3pt] at (C) {$C$};
+\node[below right,xshift=3pt,yshift=-3.0pt] at (F) {$F$};
+\draw[dashed] (E)--(H);
+\end{tikzpicture}

@@ -1,0 +1,15 @@
+\begin{tikzpicture}[x=0.5cm,y=0.12cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-2,0) -- (11,0) node[right] {$x$};
+\draw[->] (0,-32) -- (0,30) node[above right] {$Y$};
+\node[below left] at (0,0) {$0$};
+% parabola y^2=80x, x in [0,5]: y=±sqrt(80x)
+\draw[solid,domain=0:5,samples=80] plot ({\x},{sqrt(80*\x)});
+\draw[solid,domain=0:5,samples=80] plot ({\x},{-sqrt(80*\x)});
+% mouth line x=5 with dimension arrows (diameter 40)
+\draw[{Latex[length=1.8mm]}-{Latex[length=1.8mm]}] (5,-20) -- (5,20) node[midway,fill=white,inner xsep=2pt,right=2pt] {$40$};
+% depth dimension 5 below axis
+\draw[{Latex[length=1.8mm]}-{Latex[length=1.8mm]}] (0,-30) -- (5,-30) node[midway,below=2pt] {$5$};
+\draw[solid,line width=.45pt] (0,-28.5) -- (0,-31.5);
+\draw[solid,line width=.45pt] (5,-28.5) -- (5,-31.5);
+\end{tikzpicture}

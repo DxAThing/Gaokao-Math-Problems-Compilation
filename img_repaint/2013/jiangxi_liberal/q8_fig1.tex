@@ -1,0 +1,43 @@
+% front W10 rect H + semicircle d6; side lower W4 H5 upper W2 H3; plan 10x4 outer, 6x2 inner; u=0.45
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% row: front, side, plan; only scope shifts changed
+\begin{scope}[shift={(9.1,0.6)}]
+\draw (0,0) rectangle (4.5,1.8);
+\draw (0.9,0.45) rectangle (3.6,1.35);
+\node[below] at (2.25,-0.6) {俯视图};
+\end{scope}
+% front: rect 4.5 x 2.25, semicircle radius 1.35 centered
+\begin{scope}[shift={(0,0.6)}]
+\draw (0,0) rectangle (4.5,2.25);
+\draw (0.9,2.25) arc (180:0:1.35);
+% bottom dims 2/6/2
+\draw (0,-0.12) -- (0,-0.45);
+\draw (0.9,-0.12) -- (0.9,-0.45);
+\draw[<->,>=Stealth] (0,-0.32) -- (0.9,-0.32) node[midway,fill=white,inner sep=1pt] {2};
+\draw (3.6,-0.12) -- (3.6,-0.45);
+\draw[<->,>=Stealth] (0.9,-0.32) -- (3.6,-0.32) node[midway,fill=white,inner sep=1pt] {6};
+\draw (4.5,-0.12) -- (4.5,-0.45);
+\draw[<->,>=Stealth] (3.6,-0.32) -- (4.5,-0.32) node[midway,fill=white,inner sep=1pt] {2};
+\node[below] at (2.25,-0.6) {正视图};
+\end{scope}
+% side: lower 1.8x2.25, upper 0.9x1.35 centered
+\begin{scope}[shift={(5.7,0.6)}]
+\draw (0,0) rectangle (1.8,2.25);
+\draw (0.45,2.25) rectangle (1.35,3.6);
+% bottom dims 1/2/1
+\draw (0,-0.12) -- (0,-0.45);
+\draw (0.45,-0.12) -- (0.45,-0.45);
+\draw[<->,>=Stealth] (0,-0.32) -- (0.45,-0.32) node[midway,fill=white,inner sep=1pt] {1};
+\draw (1.35,-0.12) -- (1.35,-0.45);
+\draw[<->,>=Stealth] (0.45,-0.32) -- (1.35,-0.32) node[midway,fill=white,inner sep=1pt] {2};
+\draw (1.8,-0.12) -- (1.8,-0.45);
+\draw[<->,>=Stealth] (1.35,-0.32) -- (1.8,-0.32) node[midway,fill=white,inner sep=1pt] {1};
+% right heights 5 and 3
+\draw (1.92,0) -- (2.25,0);
+\draw (1.92,2.25) -- (2.25,2.25);
+\draw[<->,>=Stealth] (2.12,0) -- (2.12,2.25) node[midway,fill=white,inner sep=1pt] {5};
+\draw (1.92,3.6) -- (2.25,3.6);
+\draw[<->,>=Stealth] (2.12,2.25) -- (2.12,3.6) node[midway,fill=white,inner sep=1pt] {3};
+\node[below] at (0.9,-0.6) {侧视图（左）};
+\end{scope}
+\end{tikzpicture}

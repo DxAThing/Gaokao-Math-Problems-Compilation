@@ -1,0 +1,64 @@
+% 2013_hubei_science_q8_fig1: dimension point-fix only.
+% Stacked-body projections unchanged; dims top 4, bottom 4, middle 2, right 1/2/2/1 unchanged.
+% Outer dims use shared styles outside outline >=4.5mm; middle 2 keeps original inner
+% position (between inner verticals) with shared gap style per source.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+\def\W{2.4}
+% plan
+\begin{scope}[shift={(7.6,0.6)}]
+\draw (0,0) rectangle (2.4,2.4);
+\draw (1.2,1.2) circle (1.2);
+\draw[dashed] (0.6,0.6) rectangle (1.8,1.8);
+\draw[dashed] (1.2,1.2) circle (0.6);
+\draw (0,0) -- (0.35,0.35);
+\draw (2.4,0) -- (2.05,0.35);
+\draw (0,2.4) -- (0.35,2.05);
+\draw (2.4,2.4) -- (2.05,2.05);
+\draw[dashed] (0.35,0.35) -- (0.6,0.6);
+\draw[dashed] (2.05,0.35) -- (1.8,0.6);
+\draw[dashed] (0.35,2.05) -- (0.6,1.8);
+\draw[dashed] (2.05,2.05) -- (1.8,1.8);
+\node[below] at (1.2,-0.9) {俯视图};
+\end{scope}
+% front
+\begin{scope}[shift={(0,0.6)}]
+\draw (0,3.6) -- (0.6,3.0) -- (0.6,0.6) -- (0,0) -- (2.4,0) -- (1.8,0.6) -- (1.8,3.0) -- (2.4,3.6) -- cycle;
+\draw (0,3.6) -- (2.4,3.6);
+\draw (0,0) -- (2.4,0);
+\draw (0.6,3.0) -- (1.8,3.0);
+\draw (0.6,1.8) -- (1.8,1.8);
+\draw (0.6,0.6) -- (1.8,0.6);
+% top width 4 (above)
+\draw[dimension extension] (0,3.6) -- (0,4.35);
+\draw[dimension extension] (2.4,3.6) -- (2.4,4.35);
+\draw[dimension line] (0,4.15) -- node[dimension label] {$4$} (2.4,4.15);
+% bottom width 4 (below)
+\draw[dimension extension] (0,0) -- (0,-0.75);
+\draw[dimension extension] (2.4,0) -- (2.4,-0.75);
+\draw[dimension line] (0,-0.55) -- node[dimension label] {$4$} (2.4,-0.55);
+% middle width 2 keeps inner position per original, shared gap style
+\draw[dimension line] (0.6,1.35) -- node[dimension label] {$2$} (1.8,1.35);
+% right heights 1/2/2/1 (one layer to the right)
+\draw[dimension extension] (2.4,3.0) -- (3.15,3.0);
+\draw[dimension extension] (2.4,3.6) -- (3.15,3.6);
+\draw[dimension line] (2.95,3.0) -- node[dimension label vertical] {$1$} (2.95,3.6);
+\draw[dimension extension] (1.8,1.8) -- (3.15,1.8);
+\draw[dimension extension] (1.8,3.0) -- (3.15,3.0);
+\draw[dimension line] (2.95,1.8) -- node[dimension label vertical] {$2$} (2.95,3.0);
+\draw[dimension extension] (1.8,0.6) -- (3.15,0.6);
+\draw[dimension extension] (1.8,1.8) -- (3.15,1.8);
+\draw[dimension line] (2.95,0.6) -- node[dimension label vertical] {$2$} (2.95,1.8);
+\draw[dimension extension] (2.4,0) -- (3.15,0);
+\draw[dimension extension] (2.4,0.6) -- (3.15,0.6);
+\draw[dimension line] (2.95,0) -- node[dimension label vertical] {$1$} (2.95,0.6);
+\node[below] at (1.2,-0.9) {正视图};
+\end{scope}
+% side
+\begin{scope}[shift={(4.0,0.6)}]
+\draw (0,3.6) -- (0.6,3.0) -- (0.6,0.6) -- (0,0) -- (2.4,0) -- (1.8,0.6) -- (1.8,3.0) -- (2.4,3.6) -- cycle;
+\draw (0,3.6) -- (2.4,3.6);
+\draw (0,0) -- (2.4,0);
+\draw (0.6,1.8) -- (1.8,1.8);
+\node[below] at (1.2,-0.9) {侧视图};
+\end{scope}
+\end{tikzpicture}

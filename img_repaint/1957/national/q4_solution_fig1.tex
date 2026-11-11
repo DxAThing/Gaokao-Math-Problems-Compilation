@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,line cap=round,line join=round]
+  \tikzset{
+    gedge/.style={line width=.6pt},
+    ghidden/.style={line width=.6pt,dash pattern=on 2.4pt off 1.8pt},
+    glabel/.style={inner sep=1.5pt,font=\normalsize}
+  }
+  \coordinate (A) at (4.04,5.60);
+  \coordinate (B) at (0.32,2.48);
+  \coordinate (C) at (1.92,0.64);
+  \coordinate (D) at (5.12,2.60);
+  \coordinate (P) at (2.18,4.04);
+  \coordinate (Q) at (1.12,1.56);
+  \coordinate (R) at (3.52,1.62);
+  \coordinate (S) at (4.58,4.10);
+  \draw[gedge] (A)--(B)--(C)--(D)--cycle;
+  \draw[gedge] (A)--(C);
+  \draw[ghidden] (B)--(D);
+  \draw[ghidden] (P)--(S) (Q)--(R);
+\draw[gedge] (P)--(Q) (S)--(R);
+  \node[glabel] at (3.98,5.92) {$A$};
+  \node[glabel] at (0.02,2.20) {$B$};
+  \node[glabel] at (1.96,0.34) {$C$};
+  \node[glabel] at (5.40,2.62) {$D$};
+  \node[glabel] at (1.93,4.28) {$P$};
+  \node[glabel] at (0.82,1.28) {$Q$};
+  \node[glabel] at (3.55,1.26) {$R$};
+  \node[glabel] at (4.80,4.32) {$S$};
+\end{tikzpicture}

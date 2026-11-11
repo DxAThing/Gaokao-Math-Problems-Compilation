@@ -1,0 +1,32 @@
+\begin{tikzpicture}[line width=.6pt]
+\coordinate (P) at (1.1000000000,3.6000000000);
+\coordinate (A) at (-2.6,0);
+\coordinate (B) at (1.6,0);
+\coordinate (C) at (4.8000000000,2.2000000000);
+\coordinate (D) at (0.6000000000,2.2000000000);
+\coordinate (O) at (1.1000000000,1.1000000000);
+\coordinate (M) at (3.2000000000,1.1000000000);
+% solid visible edges
+\draw (P) -- (A);
+\draw (P) -- (B);
+\draw (P) -- (M);
+\draw (P) -- (C);
+\draw (A) -- (B);
+\draw (B) -- (M);
+\draw (M) -- (C);
+% hidden dashed edges
+\draw[dashed] (P) -- (D);
+\draw[dashed] (P) -- (O);
+\draw[dashed] (A) -- (D);
+\draw[dashed] (D) -- (C);
+\draw[dashed] (A)--(O)--(M);
+
+% labels offset from strokes
+\node[fill=white,inner sep=1pt,above=4pt] at (P) {$P$};
+\node[fill=white,inner sep=1pt,left=3pt] at (A) {$A$};
+\node[fill=white,inner sep=1pt,below=4pt] at (B) {$B$};
+\node[fill=white,inner sep=1pt,right=3pt] at (C) {$C$};
+\node[fill=white,inner sep=1pt,above left=3pt] at (D) {$D$};
+\node[fill=white,inner sep=1pt,left=3pt] at (O) {$O$};
+\node[fill=white,inner sep=1pt,below right=3pt] at (M) {$M$};
+\end{tikzpicture}

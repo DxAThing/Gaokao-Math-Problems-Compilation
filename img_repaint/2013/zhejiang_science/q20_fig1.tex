@@ -1,0 +1,31 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Tetrahedron A-BCD: AD vertical (AD perp plane BCD), base triangle BCD.
+% Coordinates chosen to match original PNG layout.
+\coordinate (A) at (2.6,4.4);
+\coordinate (D) at (2.6,-0.6);
+\coordinate (B) at (-3.2,-0.4);
+\coordinate (C) at (-0.2,-1.5);
+\coordinate (M) at (2.6,1.9);
+% P midpoint of B-M, Q divides A-C with AQ:QC=3:1
+\coordinate (P) at (-0.3,0.75);
+\coordinate (Q) at (0.5,-0.025);
+% solid visible edges
+\draw (A)--(B);
+\draw (A)--(C);
+\draw (A)--(D);
+\draw (B)--(C);
+\draw (C)--(D);
+\draw (M)--(C);
+% hidden edges (dashed)
+\draw[densely dashed] (B)--(D);
+\draw[densely dashed] (B)--(M);
+\draw[densely dashed] (P)--(Q);
+% labels placed off the strokes
+\node[above] at (A) {$A$};
+\node[right] at (2.78,1.9) {$M$};
+\node[left] at (B) {$B$};
+\node[right] at (D) {$D$};
+\node[below] at (C) {$C$};
+\node[above left] at (P) {$P$};
+\node[above left=2pt,xshift=4.00bp,yshift=6.00bp] at (Q) {$Q$};
+\end{tikzpicture}

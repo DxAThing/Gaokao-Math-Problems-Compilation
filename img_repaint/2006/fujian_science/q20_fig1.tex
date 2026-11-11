@@ -1,0 +1,20 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-3.2,0)--(2.6,0) node[right,xshift=2pt] {$x$};
+\draw[->] (0,-1.7)--(0,1.8) node[above,yshift=2pt] {$y$};
+\node[below right,xshift=5pt,yshift=1pt] at (0,0) {$O$};
+% ellipse x^2/2+y^2=1, a=sqrt(2), b=1
+\draw (0,0) ellipse (1.414cm and 1cm);
+% directrix l: x=-2
+\draw[solid] (-2,-1.7)--(-2,1.7);
+\node[below left,xshift=-2pt,yshift=-2pt] at (-2,-1.7) {$l$};
+% line AB through A(-1.2817290467,-0.4225935700) and B(-0.3546345897,0.9680481155), extended
+\draw[domain=-1.6:0.15] plot (\x,{1.5*(\x+1)});
+% second slanted line through (-1.5,0.9) to (2.2,-1.1)
+\draw[domain=-1.9:2.0] plot (\x,{0.272727272727-(\x-(-0.818181818182))/1.5});
+% points
+\node[below,yshift=-5pt,xshift=5pt] at (-1,0) {$F$};
+\node[below,yshift=-4pt] at (-0.4090909091,0.0000000000) {$G$};
+\node[below left,xshift=-6pt,yshift=-1pt] at (-1.2817290467,-0.4225935700) {$A$};
+\node[above left,xshift=-3pt,yshift=2pt] at (-0.3546345897,0.9680481155) {$B$};
+\end{tikzpicture}

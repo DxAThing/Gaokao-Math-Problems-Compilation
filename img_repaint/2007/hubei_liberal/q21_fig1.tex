@@ -1,0 +1,25 @@
+% 2007 湖北文 Q21 图 (与湖北理 Q19 同图)
+% 抛物线 x^2=2py, 取 p=1 -> y=x^2/2; 过 C(0,1) 的直线 y=x/2+1 交抛物线于 A(-1,1/2), B(2,2);
+% N(0,-1) 为 C 关于原点 O 的对称点; 连 NA, NB。
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1.4cm,y=1.4cm,line width=.6pt,font=\normalsize,>=Stealth,
+  lbl/.style={inner sep=1pt}]
+\coordinate (O) at (0,0);
+\coordinate (C) at (0,1);
+\coordinate (N) at (0,-1);
+\coordinate (A) at (-1,0.5);
+\coordinate (B) at (2,2);
+% 抛物线 y=x^2/2 (p=1)
+\draw[domain=-2.6:2.6,samples=121] plot (\x,{\x*\x/2});
+% 直线 AB: y=x/2+1, 两端越过 A, B
+\draw (-2.5,-0.25)--(2.85,2.425);
+% 三角形 ANB 的边
+\draw (A)--(N)--(B);
+\draw[->] (-2.9,0)--(3.2,0) node[lbl,right,xshift=2pt] {$x$};
+\draw[->] (0,-1.85)--(0,3.75) node[lbl,above,yshift=2pt] {$y$};
+\node[lbl] at (-0.20,-0.23) {$O$};
+\node[lbl] at (0.22,1.42) {$C$};
+\node[lbl] at (-1.42,0.60) {$A$};
+\node[lbl] at (1.78,2.20) {$B$};
+\node[lbl] at (0.24,-1.24) {$N$};
+\end{tikzpicture}

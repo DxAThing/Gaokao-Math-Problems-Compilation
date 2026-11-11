@@ -1,51 +1,26 @@
-% Source PDF: source/普通高考/2016/2016全国1文(河南,河北,山西,江西,湖北,湖南,广东,安徽,福建).pdf, page 1.
-% PDF embedded bitmap attempt: pdfimages -list found no embedded bitmap objects; the flowchart is vector line art.
-% Grid evidence: tmp/redraw_flowchart_2016_national_paper_1_liberal/grid/page1_grid100.png,
-% with q10 positioned from the ungridded page render.
-% Elements: rounded start/end terminals, input/output parallelograms, computation and increment boxes,
-% decision diamond, directed connectors, loop-back branch, and 是/否 labels.
-% Relations: 开始 -> 输入(x,y,n) -> (x,y update) -> x^2+y^2>=36; 是 -> 输出(x,y) -> 结束;
-% 否 -> n=n+1 -> back to the computation step.
-% solid segments: all box outlines and connector lines; dashed segments: none.
-% labels: branch labels are placed beside the corresponding diamond exits; all math text is centered
-% with zero paragraph indentation and compact node padding.
-\begin{tikzpicture}[
-  >=Stealth,
-  line width=0.45pt,
-  line join=round,
-  line cap=round,
-  font=\normalsize,
-  flow/.style={draw, align=center,
-               execute at begin node={\setlength{\parindent}{0pt}},
-               inner xsep=5pt, inner ysep=3pt},
-  terminal/.style={flow, rounded corners=0.18cm, minimum width=1.18cm, minimum height=0.58cm},
-  io/.style={flow, trapezium, trapezium left angle=72, trapezium right angle=108,
-             minimum width=2.45cm, minimum height=0.70cm},
-  process/.style={flow, minimum width=4.15cm, minimum height=0.78cm},
-  increment/.style={flow, minimum width=1.78cm, minimum height=0.70cm},
-  decision/.style={flow, diamond, aspect=2.7, minimum width=3.75cm, minimum height=1.05cm,
-                  inner xsep=1pt, inner ysep=1pt},
-  branch label/.style={execute at begin node={\setlength{\parindent}{0pt}}},
+\parindent=0pt
+\begin{tikzpicture}[x=1cm,y=1cm,
+  every node/.style={font=\normalsize, outer sep=0pt},
+  term/.style={draw, shape=rectangle, rounded corners=1.5mm, line width=0.6pt, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm, align=center},
+  proc/.style={draw, rectangle, line width=0.6pt, minimum width=26mm, minimum height=9mm, inner sep=2.5mm, align=center},
+  procwide/.style={draw, rectangle, line width=0.6pt, minimum width=62mm, minimum height=13mm, inner sep=2.5mm, align=center},
+  io/.style={draw, trapezium, trapezium left angle=72, trapezium right angle=108, line width=0.6pt, minimum width=38mm, minimum height=9mm, inner sep=2.5mm, align=center},
+  dec/.style={draw, diamond, aspect=2.6, line width=0.6pt, minimum width=52mm, inner xsep=3mm, inner ysep=2.5mm, align=center},
+  arr/.style={->, >=Latex, line width=0.6pt}
 ]
-  \node[terminal] (start) at (0,7.15) {开始};
-  \node[io] (input) at (0,6.02) {输入 $x,y,n$};
-  \node[process] (update) at (0,4.75) {$x=x+\dfrac{n-1}{2},y=ny$};
-  \node[decision] (test) at (0,3.35) {$x^2+y^2\geqslant36$};
-  \node[io] (output) at (0,2.03) {输出 $x,y$};
-  \node[terminal] (finish) at (0,0.92) {结束};
-  \node[increment] (inc) at (-3.20,4.75) {$n=n+1$};
-
-  \draw[->] (start.south) -- (input.north);
-  \draw[->] (input.south) -- (update.north);
-  \draw[->] (update.south) -- (test.north);
-  \draw[->] (test.south) -- node[branch label, right=2pt] {是} (output.north);
-  \draw[->] (output.south) -- (finish.north);
-
-  % 否 branch: decision -> increment, then return to the computation step.
-  \draw[->] (test.west) -- (-3.20,3.35) -- (inc.south);
-  % Keep the return line centered in the narrow gap between input and update;
-  % its arrow ends at the junction with the independent main stem.
-  % Keep a visible stem between the loop arrowhead and the computation box.
-  \draw[->] (inc.north) -- (-3.20,5.50) -- (0,5.50);
-  \node[branch label, anchor=east, inner sep=1pt] at (-1.96,3.15) {否};
+\node[term] (start) at (1.0,0) {开始};
+\node[io] (inp) at (1.0,-2.2) {输入 $x,y,n$};
+\coordinate (J) at (1.0,-3.6);
+\node[procwide] (wide) at (1.0,-5.4) {$x=x+\dfrac{n-1}{2},\, y=ny$};
+\node[dec] (cond) at (1.0,-8.2) {$x^{2}+y^{2} \geqslant 36$};
+\node[io] (out) at (1.0,-11.0) {输出 $x,y$};
+\node[term] (end) at (1.0,-13.2) {结束};
+\node[proc] (nn) at (-4.4,-5.0) {$n=n+1$};
+\draw[arr] (start.south) -- (inp.north);
+\draw[arr] (inp.south) -- (wide.north);
+\draw[arr] (wide.south) -- (cond.north);
+\draw[arr] (cond.south) -- node[pos=0.4,right=1mm] {是} (out.north);
+\draw[arr] (out.south) -- (end.north);
+\draw[arr] (cond.west) -- node[pos=0.2,above=1mm] {否} (-4.4,-8.2) -- (nn.south);
+\draw[arr] (nn.north) |- (J);
 \end{tikzpicture}

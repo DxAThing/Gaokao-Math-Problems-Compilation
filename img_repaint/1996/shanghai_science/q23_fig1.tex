@@ -1,0 +1,14 @@
+% 1996_shanghai_science_q23_fig1: same hyperbola/circle as liberal q22
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[->] (-3.2,0) -- (3.6,0) node[right,xshift=2pt] {$x$};
+\draw[->] (0,-3.2) -- (0,3.4) node[above,yshift=2pt] {$y$};
+\draw[solid] (-2.6,-2.6) -- (2.6,2.6);
+\draw[solid] (-2.6,2.6) -- (2.6,-2.6);
+\draw[solid,domain=-2.2:2.2,samples=80] plot (\x,{sqrt(\x*\x+2)});
+\draw[solid,domain=-2.2:2.2,samples=80] plot (\x,{-sqrt(\x*\x+2)});
+\draw[solid] ({sqrt(2)},0) circle (1);
+\fill ({sqrt(2)},0) circle (1.2pt);
+\node[xshift=-1pt,yshift=-7pt] at (-0.18,-0.38) {$O$};
+\node[below,yshift=-4pt] at ({sqrt(2)},0) {$A$};
+\node[above left=2pt] at (0,{sqrt(2)}) {$A'$};
+\end{tikzpicture}

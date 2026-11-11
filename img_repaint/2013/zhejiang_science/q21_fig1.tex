@@ -1,0 +1,30 @@
+\begin{tikzpicture}[x=1.25cm,y=1.25cm,line width=.6pt,font=\normalsize,>=Stealth]
+% Ellipse x^2/4+y^2=1 (a=2,b=1), circle x^2+y^2=4, P=(0,-1).
+% l1: y=x-1 (slope 1) meets circle at A,B; l2: y=-x-1 (slope -1) meets ellipse at D.
+\coordinate (O) at (0,0);
+\coordinate (Ppt) at (0,-1);
+\coordinate (A) at (-0.8228756555,-1.8228756555);
+\coordinate (B) at (1.8228756555,0.8228756555);
+\coordinate (D) at (-1.6,0.6);
+% axes
+\draw[->] (-2.6,0)--(2.9,0) node[below right] {$x$};
+\draw[->] (0,-2.9)--(0,2.9) node[above left] {$y$};
+% circle and ellipse from the stated equations
+\draw (0,0) circle (2);
+\draw (0,0) ellipse (2 and 1);
+% lines l1, l2 through P
+\draw (-1.7,-2.7)--(2.5,1.5);
+\draw (-2.4,1.4)--(1.4,-2.4);
+% triangle ABD sides (segments of / parallel to the two lines)
+\draw[thin] (A)--(B);
+\draw[thin] (D)--(A);
+\draw[thin] (D)--(B);
+\draw[thin] (D)--(Ppt);
+\node[below left] at (O) {$O$};
+\node[below left=2pt,xshift=-6.00bp,yshift=4.00bp] at (Ppt) {$P$};
+\node[below left=2pt,xshift=-6.00bp,yshift=4.00bp] at (A) {$A$};
+\node[above right=2pt,xshift=-4.00bp,yshift=4.00bp] at (B) {$B$};
+\node[above left=2pt,xshift=-6.00bp,yshift=-4.00bp] at (D) {$D$};
+\node[above right] at (2.5,1.5) {$l_{1}$};
+\node[below right] at (1.4,-2.4) {$l_{2}$};
+\end{tikzpicture}

@@ -1,0 +1,20 @@
+% Upright cylinder with 4 rectangular frames = 8 equal divisions, no labels.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+  % top rim
+  \draw[solid] (0,3.2) ellipse (2.6 and 0.55);
+  % top radii (8 spokes, all visible)
+  \foreach \a in {15,60,105,150,195,240,285,330} {
+    \draw[solid] (0,3.2) -- ({2.6*cos(\a)},{3.2+0.55*sin(\a)});
+  }
+  % bottom rim: front solid, back dashed
+  \draw[solid] (0,-2.6) ++(180:2.6 and 0.55) arc (180:360:2.6 and 0.55);
+  \draw[dashed] (0,-2.6) ++(0:2.6 and 0.55) arc (0:180:2.6 and 0.55);
+
+\foreach \a in {15,60,105,150} {
+ \draw[dashed] ({2.6*cos(\a)},{-2.6+.55*sin(\a)})--({-2.6*cos(\a)},{-2.6-.55*sin(\a)});
+}
+\draw (-2.6,3.2)--(-2.6,-2.6);
+\draw (2.6,3.2)--(2.6,-2.6);
+\foreach \a in {195,240,285,330} {\draw ({2.6*cos(\a)},{3.2+.55*sin(\a)})--({2.6*cos(\a)},{-2.6+.55*sin(\a)});}
+\foreach \a in {15,60,105,150} {\draw[dashed] ({2.6*cos(\a)},{3.2+.55*sin(\a)})--({2.6*cos(\a)},{-2.6+.55*sin(\a)});}
+\end{tikzpicture}

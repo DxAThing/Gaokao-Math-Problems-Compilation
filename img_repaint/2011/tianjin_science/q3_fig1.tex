@@ -1,52 +1,28 @@
-% Source: source/普通高考/2011/2011天津理.pdf, page 1, question 3.
-% The source PDF is vector line art; the original PNG is retained for reference.
-% Nodes: 开始; a=1,i=0; i=i+1; a=i×a+1; decision a>50?; 输出 i; 结束.
-% Directed edges: 开始→a=1,i=0→i=i+1→a=i×a+1→a>50?;
-% 是→输出 i→结束; 否→left loop→shared stem above i=i+1→i=i+1.
-\begin{tikzpicture}[
-  >=Stealth,
-  line width=0.55pt,
-  line cap=round,
-  line join=round,
-  every node/.style={font=\normalsize,anchor=center,align=center,
-    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
-  flowbox/.style={draw,minimum height=.68cm,inner xsep=4pt,inner ysep=2pt,
-    anchor=center,align=center,
-    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
-  terminal/.style={flowbox,rounded corners=.18cm,minimum width=1.35cm,
-    minimum height=.72cm},
-  io/.style={flowbox,shape=trapezium,trapezium left angle=72,
-    trapezium right angle=108,minimum width=2.40cm,minimum height=.80cm},
-  decision/.style={flowbox,shape=diamond,aspect=2.7,minimum width=4.30cm,
-    minimum height=1.02cm,inner sep=1pt},
-  flowarrow/.style={->,line width=0.55pt},
-]
-  \node[terminal] (start) at (0,10.55) {开始};
-  \node[flowbox,minimum width=3.95cm] (init) at (0,9.15) {$a=1,i=0$};
-  \node[flowbox,minimum width=2.75cm] (inc) at (0,7.65) {$i=i+1$};
-  \node[flowbox,minimum width=4.35cm] (update) at (0,6.05)
-    {$a=i\times a+1$};
-  \node[decision] (test) at (0,4.25) {$a>50?$};
-  \node[io] (output) at (0,2.65) {输出 $i$};
-  \node[terminal] (finish) at (0,1.05) {结束};
-  % Keep the shared stem clear of the init box.
-  \coordinate (loopjoin) at (0,8.35);
-
-  \draw[flowarrow] (start.south) -- (init.north);
-  \draw (init.south) -- (loopjoin);
-  \draw[flowarrow] (inc.south) -- (update.north);
-  \draw[flowarrow] (update.south) -- (test.north);
-  \draw[flowarrow] (test.south) -- node[right=2pt] {是} (output.north);
-  \draw[flowarrow] (output.south) -- (finish.north);
-
-  % 否 branch returns left and enters the shared stem above i=i+1.
-  \coordinate (loop-left) at (-3.25,4.25);
-  \coordinate (loop-entry) at (-3.25,8.35);
-  \coordinate (loop-tip) at (-0.60,8.35);
-  \draw (test.west) -- node[above=2pt] {否} (loop-left);
-  \draw (loop-left) -- (loop-entry);
-  \draw[flowarrow] (loop-entry) -- (loop-tip) -- (loopjoin);
-  \draw[flowarrow] (loopjoin) -- (inc.north);
-
-  \path[use as bounding box] (-3.55,0.65) rectangle (2.35,10.95);
+\begin{tikzpicture}[x=1cm, y=1cm, >=Stealth, line width=0.6pt]
+\tikzset{
+  flowchart node/.style={align=center, execute at begin node={\parindent=0pt}},
+  startstop/.style={flowchart node, draw, shape=rectangle, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm},
+  process/.style={flowchart node, draw, rectangle, minimum height=0.95cm, inner sep=5pt},
+  decision/.style={flowchart node, draw, diamond, aspect=2.4, inner sep=4pt},
+  io/.style={flowchart node, draw, trapezium, trapezium left angle=70, trapezium right angle=110, inner sep=5pt, minimum height=0.95cm}
+}
+\node[startstop] (start) at (0,0) {开始};
+\node[process, minimum width=3.6cm] (init) at (0,-1.7) {$a=1,i=0$};
+\node[process, minimum width=2.8cm] (inc) at (0,-3.5) {$i=i+1$};
+\node[process, minimum width=3.6cm] (upd) at (0,-5.1) {$a=i\times a+1$};
+\node[decision, minimum width=3.6cm, minimum height=1.6cm] (cond) at (0,-7.0) {$a>50?$};
+\node[io, minimum width=2.6cm] (output) at (0,-9.100) {输出 $i$};
+\node[startstop] (end) at (0,-10.700) {结束};
+\coordinate (J) at (0,-2.6);
+\coordinate (retW) at (-3.6,-7.0);
+\coordinate (retWN) at (-3.6,-2.6);
+\draw[->] (start.south) -- (init.north);
+\draw[->] (init.south) -- (inc.north);
+\draw[->] (inc.south) -- (upd.north);
+\draw[->] (upd.south) -- (cond.north);
+\draw[->] (cond.south) -- (output.north) node[pos=0.3, right=1.0mm] {是};
+\draw[->] (output.south) -- (end.north);
+% west 否 loop back around three process boxes (2 bends)
+\draw[->] (cond.west) -- (retW) -- (retWN) -- (J);
+\node[above=1.0mm,xshift=-0.1053mm,yshift=-0.0328mm] at (-2.3,-7.0) {否};
 \end{tikzpicture}

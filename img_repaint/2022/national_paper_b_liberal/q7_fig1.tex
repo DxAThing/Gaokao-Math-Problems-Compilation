@@ -1,55 +1,25 @@
-% 2022 全国乙卷（文）第 7 题程序框图，内容依据原始 PDF 第 1 页。
-% Source PDF: source/普通高考/2022/2022全国乙文(河南,山西,江西,安徽,陕西,甘肃,青海,内蒙古,黑龙江,吉林,.宁夏,新疆).pdf.
-% Grid evidence: tmp/repaint_2022_national_b_liberal/grid/page_grid100.png and page_grid50.png.
-% No-grid source crop: tmp/repaint_2022_national_b_liberal/crop/q7_source_tight.png.
-% Node-edge list: 开始→输入→b=b+2a→a=b-a,n=n+1→判定;
-% 判定“是”→输出n→结束；判定“否”→左侧回边→输入后、b更新前的主干汇合点。
-% solid segments: all node boundaries and connector shafts; dashed segments: none.
-% Labels are attached to their branch edges; every node clears problem paragraph state and is centered.
-
-\begin{tikzpicture}[
-  x=1cm,
-  y=0.8cm,
-  >=Stealth,
-  line width=0.45pt,
-  line cap=round,
-  line join=round,
-  every node/.style={font=\normalsize,anchor=center,align=center,inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}\setlength{\leftskip}{0pt}\setlength{\rightskip}{0pt}\everypar{}}},
-  flow/.style={draw,anchor=center,align=center,inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}\setlength{\leftskip}{0pt}\setlength{\rightskip}{0pt}\everypar{}}},
-  startstop/.style={flow,rounded corners=0.18cm,minimum width=1.00cm,minimum height=0.54cm},
-  process/.style={flow,minimum width=1.95cm,minimum height=0.56cm,inner xsep=4pt,inner ysep=2pt},
-  inputoutput/.style={flow,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
-    minimum width=3.30cm,minimum height=0.58cm,inner xsep=4pt,inner ysep=2pt},
-  decision/.style={flow,shape=diamond,aspect=2.8,minimum width=5.35cm,minimum height=1.34cm,
-    inner xsep=4pt,inner ysep=2pt},
-  branchlabel/.style={anchor=center,align=center,inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}\setlength{\leftskip}{0pt}\setlength{\rightskip}{0pt}\everypar{}}},
+\begin{tikzpicture}[>=Stealth, line width=0.6pt,
+  every node/.append style={execute at begin node={\parindent=0pt}},
+  start/.style={rectangle, draw, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm, align=center},
+  proc/.style={rectangle, draw, minimum width=34mm, minimum height=11mm, inner sep=4pt, align=center},
+  dec/.style={diamond, draw, aspect=2.6, inner sep=4pt, align=center},
+  io/.style={trapezium, draw, trapezium left angle=70, trapezium right angle=110, minimum width=30mm, minimum height=11mm, inner sep=4pt, align=center}
 ]
-  \node[startstop] (start) at (0,8.95) {开始};
-  \node[inputoutput] (input) at (0,7.72) {输入 $a=1,b=1,n=1$};
-  \node[process] (updateb) at (0,6.03) {$b=b+2a$};
-  \node[process,minimum width=2.90cm] (updatean) at (0,4.80) {$a=b-a,n=n+1$};
-  \node[decision] (check) at (0,3.28) {$\left|\dfrac{b^2}{a^2}-2\right|<0.01$};
-  \node[inputoutput,minimum width=1.80cm] (output) at (0,1.44) {输出 $n$};
-  \node[startstop] (finish) at (0,0.14) {结束};
+\node[start] (start) at (0,0) {开始};
+\node[io,minimum width=62mm] (inABN) at (0,-2.2) {输入$a=1,b=1,n=1$};
+\coordinate (Jin) at (0,-3.6);
+\node[proc] (pB) at (0,-4.7) {$b=b+2a$};
+\node[proc,minimum width=48mm] (pA) at (0,-6.7) {$a=b-a,n=n+1$};
+\node[dec] (dec) at (0,-9.4) {$\left|\dfrac{b^{2}}{a^{2}}-2\right|<0.01$};
+\node[io] (out) at (0,-12.0) {输出$n$};
+\node[start] (end) at (0,-14.0) {结束};
+\draw[->] (start.south) -- (inABN.north);
+\draw[->] (inABN.south) -- (Jin) -- (pB.north);
 
-  \draw[->] (start.south) -- (input.north);
-  \draw[->] (input.south) -- (updateb.north);
-  \draw[->] (updateb.south) -- (updatean.north);
-  \draw[->] (updatean.south) -- (check.north);
-  \draw[->] (check.south) -- node[branchlabel,anchor=west,pos=0.10,xshift=0.08cm] {是} (output.north);
-  \draw[->] (output.south) -- (finish.north);
-
-  % 否分支左回，箭头在输入后、b 更新前的共享入口，和主干下行箭头独立。
-  % The return arrow ends at the shared entrance; no plain shaft follows its tip.
-  \coordinate (loopJoin) at (0,6.87);
-  \coordinate (loopBottom) at (-3.15,3.72);
-  \coordinate (loopTop) at (-3.15,6.87);
-  \draw (check.west) -- node[branchlabel,below,pos=0.24] {否} (loopBottom)
-    -- (loopTop);
-  \draw[->] (loopTop) -- (loopJoin);
-
-  \path[use as bounding box] (-3.45,-0.20) rectangle (3.45,9.28);
+\draw[->] (pB.south) -- (pA.north);
+\draw[->] (pA.south) -- (dec.north);
+\draw[->] (dec.west) -- node[pos=0.18,above=0.7mm] {否} (-5.4,-9.4) -- (-5.4,-3.6) -- (Jin);
+% label merged into draw above
+\draw[->] (dec.south) -- node[midway,right=0.7mm] {是} (out.north);
+\draw[->] (out.south) -- (end.north);
 \end{tikzpicture}

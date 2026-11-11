@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=1cm,y=0.9cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-3.6,0)--(3.6,0) node[below right] {$x$};
+\draw[->] (0,-2.6)--(0,4.6) node[above right] {$y$};
+\node[below left,xshift=-2pt,yshift=-2pt] at (0,0) {$O$};
+% directrix-like line y=-2p
+\draw[solid] (-3.6,-2)--(3.6,-2);
+% parabola x^2=2py with p=1 (schematic scale, true formula)
+\draw[line width=.9pt,domain=-2.8:2.8,samples=120,smooth] plot (\x,{\x*\x/2});
+% tangent points from M=(0.5,-2): t satisfies t^2-2mt-4=0
+\coordinate (A) at (-1.8099751242,1.6380049752);
+\coordinate (B) at (2.2099751242,2.4419950248);
+\coordinate (M) at (0.2,-2);
+% chord AB (thin)
+\draw[solid] (A)--(B);
+% two tangents MA, MB extended slightly beyond A and B
+\draw[solid] (-2.6,3.067930347828)--(M);
+\draw[solid] (M)--(2.8,3.745935322983);
+% labels with clearance from strokes
+\node[left] at (A) {$A$};
+\node[right] at (B) {$B$};
+\node[below right] at (M) {$M$};
+\node[below] at (-0.55,-2) {$-2p$};
+\end{tikzpicture}

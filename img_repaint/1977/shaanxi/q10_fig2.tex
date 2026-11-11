@@ -1,0 +1,37 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (A) at (0,6);
+\coordinate (B) at (0,0);
+\coordinate (C) at (6,0);
+\coordinate (D) at (6,6);
+\coordinate (O) at (0.8,0.8);
+\coordinate (E) at (0,0.8);
+\coordinate (F) at (0.8,0);
+\coordinate (Ap) at (0,3.8245);
+\coordinate (Bp) at (2.1755,0);
+\coordinate (Cp) at (6,2.1755);
+\coordinate (Dp) at (3.8245,6);
+\coordinate (G) at (1.4953,1.1957);
+\draw (A)--(B)--(C)--(D)--cycle;
+\draw (Ap)--(Bp)--(Cp)--(Dp)--cycle;
+\draw (O) circle[radius=0.8cm];
+\draw[dashed] (E)--(O);
+\draw[dashed] (O)--(F);
+\draw (O)--(G);
+\node[above left=2pt,inner sep=0pt] at (A) {$A$};
+\node[below left=2pt,inner sep=0pt] at (B) {$B$};
+\node[below right=2pt,inner sep=0pt] at (C) {$C$};
+\node[above right=2pt,inner sep=0pt] at (D) {$D$};
+\node[anchor=east] at (-0.28,3.8245) {$A'$};
+\node[anchor=north] at (2.1755,-0.28) {$B'$};
+\node[anchor=west] at (6.28,2.1755) {$C'$};
+\node[anchor=south] at (3.8245,6.28) {$D'$};
+\node[left=2pt,inner sep=0pt] at (E) {$E$};
+\node[below=2pt,inner sep=0pt] at (F) {$F$};
+\node[above left=2pt,inner sep=0pt] at (O) {$O$};
+\node[above right=2pt,inner sep=0pt] at (G) {$G$};
+\node at (0.95,1.28) {$r$};
+
+% Explicit named circle-center points, painted after all region fills.
+\fill (O) circle[radius=1.4pt];
+\end{tikzpicture}

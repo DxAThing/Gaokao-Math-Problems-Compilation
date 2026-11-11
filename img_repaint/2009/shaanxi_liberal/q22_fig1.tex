@@ -1,0 +1,22 @@
+\begin{tikzpicture}[x=0.68cm,y=0.82cm,line width=.6pt, font=\normalsize, >=Stealth]
+% axes
+\draw[->,solid] (-3.2,0) -- (3.2,0) node[below right=1pt] {$x$};
+\draw[->,solid] (0,-5.2) -- (0,5.2) node[above left=1pt] {$y$};
+\node[below left=2pt,xshift=-5pt,yshift=3pt] at (0,0) {$O$};
+% asymptotes y = 2x and y = -2x (thin, same width, grayscale)
+\draw[solid] (-2.2,-4.4) -- (2.2,4.4);
+\draw[solid] (-2.2,4.4) -- (2.2,-4.4);
+% hyperbola y^2/4 - x^2 = 1, i.e. y = +/-2*sqrt(1+x^2)
+\draw[solid,line width=.9pt] plot[domain=-2:2,samples=80] (\x,{2*sqrt(1+\x*\x)});
+\draw[solid,line width=.9pt] plot[domain=-2:2,samples=80] (\x,{-2*sqrt(1+\x*\x)});
+% points: A on y=2x (first quadrant), B on y=-2x (second quadrant), P on upper right branch
+\coordinate (A) at (1.6,3.2);
+\coordinate (B) at (-1.9,3.8);
+\coordinate (P) at (0.9,2.6907);
+\fill (A) circle (1.6pt);
+\fill (B) circle (1.6pt);
+\fill (P) circle (1.6pt);
+\node[right=4pt] at (A) {$A$};
+\node[left=4pt] at (B) {$B$};
+\node[above left=3pt] at (P) {$P$};
+\end{tikzpicture}

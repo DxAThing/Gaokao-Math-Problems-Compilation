@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=0.6pt,font=\normalsize]
+\coordinate (A) at (0,0);
+\coordinate (B) at (3,0);
+\coordinate (C) at (2.1,0.9);
+\coordinate (Ap) at (0,1.1);
+\coordinate (Bp) at (3,2.1);
+\coordinate (Cp) at (2.1,4.0);
+% bottom face
+\draw[solid] (A)--(B);
+\draw[dashed] (A)--(C);
+\draw[dashed] (B)--(C);
+% verticals
+\draw[solid] (A)--(Ap);
+\draw[solid] (B)--(Bp);
+\draw[dashed] (C)--(Cp);
+% top
+\draw[solid] (Ap)--(Bp);
+\draw[solid] (Ap)--(Cp);
+\draw[solid] (Bp)--(Cp);
+% labels with clearance
+\node[below left,xshift=-3pt,yshift=-3pt] at (A) {$A$};
+\node[below right,xshift=3pt,yshift=-3pt] at (B) {$B$};
+\node[below,xshift=1pt,yshift=-5pt] at (C) {$C$};
+\node[left,xshift=-4pt,yshift=1pt] at (Ap) {$A'$};
+\node[right,xshift=4pt,yshift=1pt] at (Bp) {$B'$};
+\node[above,yshift=4pt] at (Cp) {$C'$};
+\end{tikzpicture}

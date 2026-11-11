@@ -1,0 +1,22 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt},
+ geometry mark/.style={solid,line width=.6pt},
+ geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (A) at (0,0);
+\coordinate (C) at (2.12132,2.12132);
+\coordinate (B) at (3.859987,1.655446);
+\coordinate (NA) at (0,1.4);
+\coordinate (NC) at (2.12132,3.52132);
+\draw[geometry edge] (A)--(C)--(B)--cycle;
+\draw[geometry edge,->] (A)--(NA);
+\draw[geometry edge,->] (C)--(NC);
+\draw[geometry mark] ($(A)+(45:0.55)$) arc (45:90:0.55);
+\draw[geometry mark] ($(C)+(-15:0.55)$) arc (-15:90:0.55);
+\node[font=\normalsize,inner sep=2pt] at (0.364,0.878) {$45^\circ$};
+\node[font=\normalsize,inner sep=2pt] at (2.915,2.729) {$105^\circ$};
+\node[font=\normalsize,inner sep=2pt] at (0,1.72) {北};
+\node[font=\normalsize,inner sep=2pt] at (2.12132,3.84) {北};
+\node[geometry label,below] at (A) {$A$};
+\node[geometry label,left,xshift=-5pt,yshift=3pt] at (C) {$C$};
+\node[geometry label,right] at (B) {$B$};
+\end{tikzpicture}

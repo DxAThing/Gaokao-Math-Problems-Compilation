@@ -1,0 +1,35 @@
+% 2019天津理科Q4求和程序框图.对象:开始/ i=1,S=0/ 菱形i为偶数/ j=i/2/ S=S+i·2^j/
+% S=S+i/ i=i+1/ 菱形i≥4/ 输出S/ 结束.是否标签在出口附近线上方或右侧.
+\begin{tikzpicture}[line width=0.6pt, >= {Stealth[length=2.2mm,width=1.5mm]},
+  start/.style={draw, rectangle, rounded corners=2mm, minimum width=2.4cm, minimum height=0.8cm, align=center},
+  proc/.style={draw, rectangle, align=center, minimum height=0.8cm},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110, align=center, minimum height=0.9cm},
+  dec/.style={draw, diamond, align=center, inner sep=1mm}]
+  \node[start] (start) at (0,0) {开始};
+  \node[proc, minimum width=3.4cm] (is) at (0,-1.5) {$i=1,S=0$};
+  \coordinate (Jloop) at (0,-2.35);
+  \node[dec, minimum width=4.4cm, aspect=3] (d1) at (0,-3.5) {$i$为偶数?};
+  \node[proc, minimum width=2.4cm, minimum height=1.1cm] (jbox) at (0,-5.5) {$j=\dfrac{i}{2}$};
+  \node[proc, minimum width=4.0cm] (s2) at (0,-7.3) {$S=S+i\cdot 2^{j}$};
+  \coordinate (J2) at (0,-8.15);
+  \node[proc, minimum width=2.6cm] (ib) at (0,-9.1) {$i=i+1$};
+  \node[dec, minimum width=3.6cm, aspect=2.8] (d4) at (0,-10.6) {$i\geqslant 4$?};
+  \node[io, minimum width=3.4cm] (outs) at (0,-12.3) {输出 $S$};
+  \node[start] (end) at (0,-13.8) {结束};
+  \node[proc, minimum width=2.8cm] (sbox) at (3.6,-5.6) {$S=S+i$};
+  % 主干
+  \draw[->] (start.south) -- (is.north);
+  \draw[->] (is.south) -- (Jloop) -- (d1.north);
+  \draw[->] (d1.south) -- (jbox.north) node[pos=0.45,right=1.2mm]{是};
+  \draw[->] (jbox.south) -- (s2.north);
+  \draw[->] (s2.south) -- (J2) -- (ib.north);
+  \draw[->] (ib.south) -- (d4.north);
+  \draw[->] (d4.south) -- (outs.north) node[pos=0.45,right=1.2mm]{是};
+  \draw[->] (outs.south) -- (end.north);
+  % d1否分支:东出口右行至sbox中心线,下行入sbox北,标签在线上方近出口
+  \draw[->] (d1.east) -- (sbox.north |- d1.east) node[pos=0.3,above=1.2mm]{否} -- (sbox.north);
+  % sbox汇入:南出口下行至J2高度,左行以单箭头汇入主干J2
+  \draw[->] (sbox.south) |- (J2);
+  % d4否回路:西出口左行至x=-3.2左通道,上行至Jloop高度,右行以单箭头汇入主干
+  \draw[->] (d4.west) -- ++(-1.4,0) node[pos=0.3,above=1.2mm]{否} |- (Jloop);
+\end{tikzpicture}

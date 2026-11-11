@@ -1,0 +1,32 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (P) at (0,5.2);
+\coordinate (A) at (0,1.5);
+\coordinate (B) at (-2.6,0.4);
+\coordinate (C) at (1.6,0.4);
+\coordinate (D) at (4.2000000000,1.5000000000);
+\coordinate (E) at (-0.5,0.4);
+\coordinate (F) at (0.8,2.8);
+% solid visible edges
+\draw[solid] (P)--(B);
+\draw[solid] (P)--(D);
+\draw[solid] (P)--(F)--(C);
+\draw[solid] (F)--(E);
+
+\draw[solid] (B)--(E)--(C);
+\draw[solid] (C)--(D);
+% dashed hidden / interior edges
+\draw[dashed] (P)--(A);
+\draw[dashed] (A)--(B);
+\draw[dashed] (A)--(D);
+\draw[dashed] (A)--(C);
+\draw[dashed] (A)--(E);
+\draw[dashed] (A)--(F);
+% labels
+\node[above] at (P) {$P$};
+\node[left,xshift=-7pt,yshift=1pt] at (A) {$A$};
+\node[below left] at (B) {$B$};
+\node[below] at (E) {$E$};
+\node[below right] at (C) {$C$};
+\node[right] at (D) {$D$};
+\node[above right] at (F) {$F$};
+\end{tikzpicture}

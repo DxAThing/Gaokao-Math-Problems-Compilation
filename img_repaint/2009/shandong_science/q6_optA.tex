@@ -1,0 +1,15 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=0.62cm,line width=.6pt,>=Stealth,font=\normalsize]
+  \draw[->] (-1.7,0)--(1.72,0);
+  \node[anchor=north west,inner sep=1pt] at (1.74,-0.04) {$x$};
+  \draw[->] (0,-4.15)--(0,4.1);
+  \node[anchor=south east,inner sep=1pt] at (-0.04,4.12) {$y$};
+  \draw[dashed] (-1.55,1)--(1.62,1);
+  \draw[dashed] (-1.55,-1)--(1.62,-1);
+  \draw[domain=0.27:1.5,samples=161,smooth] plot (\x,{(exp(\x)+exp(-\x))/(exp(\x)-exp(-\x))});
+  \draw[domain=-1.5:-0.27,samples=161,smooth] plot (\x,{(exp(\x)+exp(-\x))/(exp(\x)-exp(-\x))});
+  \draw (1,-0.08)--(1,0.08);
+  \node[below=2pt,inner sep=1pt] at (1,0) {$1$};
+  \node[anchor=south east,inner sep=1.5pt] at (-0.04,1.16) {$1$};
+  \node[anchor=north east,inner sep=1.5pt] at (-0.06,-0.18) {$O$};
+\end{tikzpicture}

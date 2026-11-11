@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,inner sep=2pt]
+\coordinate (A) at (0.000000000,0.000000000);
+\coordinate (B) at (2.880000000,2.160000000);
+\coordinate (Q) at (1.680000000,1.260000000);
+\coordinate (C) at (4.380000000,1.260000000);
+\coordinate (P) at (4.380000000,2.820000000);
+\coordinate (D) at (2.170120400,3.180871828);
+\coordinate (MR) at (7.980000000,2.160000000);
+\coordinate (MF) at (5.100000000,0.000000000);
+\coordinate (NT) at (3.960000000,6.392718276);
+\draw (A)--(MF)--(MR)--(B)--cycle;
+\coordinate (NU) at ($(A)+(NT)-(B)$);
+\draw (A)--(NU)--(NT)--(B);
+\draw (Q)--(D)--(P)--(C)--cycle;
+\coordinate (rA) at ($(D)!0.16cm!(P)$);
+\coordinate (rB) at ($(D)!0.16cm!(Q)$);
+\draw (rA)--($(rA)+(rB)-(D)$)--(rB);
+\coordinate (rA) at ($(C)!0.16cm!(P)$);
+\coordinate (rB) at ($(C)!0.16cm!(Q)$);
+\draw (rA)--($(rA)+(rB)-(C)$)--(rB);
+\node[below left] at (A) {$A$};
+\node[above left] at (B) {$B$};
+\node[below right] at (C) {$C$};
+\node[above right,yshift=0pt,xshift=1pt] at (D) {$D$};
+\node[above right] at (P) {$P$};
+\node at (3.8,.35) {$M$};
+\node[xshift=1pt,yshift=-3pt] at (3.2,4.8) {$N$};
+\end{tikzpicture}

@@ -1,0 +1,36 @@
+\begin{tikzpicture}[line width=0.6pt, font=\small, >=Stealth]
+\coordinate (A) at (0,0);
+\coordinate (C) at (2,1.2);
+\coordinate (B) at (5.5,1.2);
+\coordinate (A1) at (0.0000000000,5.0000000000);
+\coordinate (C1) at (2.0000000000,6.2000000000);
+\coordinate (B1) at (5.5000000000,6.2000000000);
+\coordinate (D) at (0.0000000000,1.6666666667);
+\coordinate (E) at (2.0000000000,4.5333333333);
+\coordinate (M) at (2.7500000000,5.6000000000);
+\draw (A) -- (B);
+\draw[dashed] (A) -- (C);
+\draw[dashed] (C) -- (B);
+\draw (A) -- (A1);
+\draw[dashed] (C) -- (C1);
+\draw (B) -- (B1);
+\draw (A1) -- (C1) -- (B1);
+\draw (A1) -- (B1);
+\draw (C1) -- (M);
+\draw (D) -- (B1);
+\draw[dashed] (D) -- (E);
+\draw[dashed] (E) -- (B1);
+% coordinate axes from C / C1 / A
+\draw[->] (C) -- (7.2,1.2) node[right] {$y$};
+\draw[->] (C) -- (2,7.2) node[above] {$z$};
+\draw[->] (A) -- (-1.2,-0.8) node[below] {$x$};
+\node[below left,xshift=2pt,yshift=-5pt] at (A) {$A$};
+\node[below] at (C) {$C$};
+\node[right,xshift=-2pt,yshift=5pt] at (B) {$B$};
+\node[left] at (A1) {$A_{1}$};
+\node[left,xshift=-2pt,yshift=2pt] at (C1) {$C_{1}$};
+\node[right] at (B1) {$B_{1}$};
+\node[left] at (D) {$D$};
+\node[left,xshift=-1.0pt,yshift=1.0pt] at (E) {$E$};
+\node[above,xshift=1pt,yshift=1pt] at (M) {$M$};
+\end{tikzpicture}

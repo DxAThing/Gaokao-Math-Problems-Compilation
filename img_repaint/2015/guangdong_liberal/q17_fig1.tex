@@ -1,93 +1,42 @@
-% Source PDF: source/普通高考/2015/2015广东文.pdf
-% Page: 1; embedded-image extraction: no raster image listed (vector chart).
-% Grid evidence: tmp/crop_grid/redraw_2015_guangdong_liberal/p1_grid100.jpg,
-% q17_block_grid50.jpg; comparison crop from the no-grid page render.
-% Elements: frequency-density y-axis, monthly-electricity x-axis with a break,
-% seven outlined histogram bars, dashed guides at .002, .0025, .005, x, .0095,
-% .011, and .0125.
-% Relations: bars cover [160,180), [180,200), [200,220), [220,240), [240,260),
-% [260,280), [280,300); heights are .002, .0095, .011, .0125, x=.0075,
-% .005, and .0025, respectively. The 100-household normalization gives
-% 20*(.002+.0095+.011+.0125+x+.005+.0025)=1, hence x=.0075.
-% Solid segments: x/y axes, arrowheads, bar outlines, tick marks, and x-axis break.
-% Dashed segments: horizontal frequency guides terminating at the corresponding
-% bar edge. Labels: 频率/组距, x, and 月平均用电量/度 with all source tick values.
-\begin{tikzpicture}[baseline]
-\begin{axis}[exam statistical histogram,
-    width=11.76cm,
-    height=11.665cm,
-    axis lines=none,
-    clip=false,
-    xmin=-12,
-    xmax=180,
-    ymin=-0.0018,
-    ymax=0.0145,
-    ticks=none,
-]
-    % Frequency-density guides from the source chart.
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.0125) -- (axis cs:100,0.0125);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.0110) -- (axis cs:80,0.0110);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.0095) -- (axis cs:60,0.0095);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.0075) -- (axis cs:120,0.0075);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.0050) -- (axis cs:140,0.0050);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.0025) -- (axis cs:160,0.0025);
-    \draw[dashed,line width=0.55pt] (axis cs:0,0.0020) -- (axis cs:20,0.0020);
+% 2015广东文Q17: frequency histogram, bins [160,180)..[280,300], width 20.
+% Fifth bar height keeps original symbol $x$; geometry follows source visual.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template histogram,
+  xmin=140,ymin=0,
+  xtick={140,160,180,200,220,240,260,280,300},
+  ytick={0,0.002,0.0025,0.005,0.0075,0.0095,0.011,0.0125},
+  xmax=310,
+  ymax=0.01325,
+  yticklabels={},
+  xticklabels={,160,180,200,220,240,260,280,300},
+  exam statistical template dense]
 
-    % Histogram bars. The source break maps 0,160,180,...,300 to
-    % 0,20,40,...,160 so the equal-width groups remain legible.
-    \addplot[/tikz/ybar interval,mark=none,fill=white,line width=0.7pt] coordinates {
-      (20,0.0020)
-      (40,0.0095)
-      (60,0.0110)
-      (80,0.0125)
-      (100,0.0075)
-      (120,0.0050)
-      (140,0.0025)
-      (160,0)
-    };
 
-    % Axes and the source x-axis break before the 160-unit group.
-    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:174,0);
-    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,0.0141);
-    \examstatxbreak[line width=0.8pt]{9}{0};
 
-    \examstatylabel{\(\dfrac{\text{频率}}{\text{组距}}\)};
-    \examstatxlabel{月平均用电量/度};
 
-    % x-axis tick marks and labels.
-    \draw[line width=0.45pt] (axis cs:0,0) -- (axis cs:0,-0.00045);
-    \node[anchor=north east,inner sep=0pt,yshift=-4pt] at (axis cs:-0.8,0.000000) {0};
-    \draw[line width=0.45pt] (axis cs:20,0) -- (axis cs:20,-0.00045);
-    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:20,-0.000450) {160};
-    \draw[line width=0.45pt] (axis cs:40,0) -- (axis cs:40,-0.00045);
-    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:40,-0.000450) {180};
-    \draw[line width=0.45pt] (axis cs:60,0) -- (axis cs:60,-0.00045);
-    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:60,-0.000450) {200};
-    \draw[line width=0.45pt] (axis cs:80,0) -- (axis cs:80,-0.00045);
-    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:80,-0.000450) {220};
-    \draw[line width=0.45pt] (axis cs:100,0) -- (axis cs:100,-0.00045);
-    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:100,-0.000450) {240};
-    \draw[line width=0.45pt] (axis cs:120,0) -- (axis cs:120,-0.00045);
-    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:120,-0.000450) {260};
-    \draw[line width=0.45pt] (axis cs:140,0) -- (axis cs:140,-0.00045);
-    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:140,-0.000450) {280};
-    \draw[line width=0.45pt] (axis cs:160,0) -- (axis cs:160,-0.00045);
-    \node[anchor=north,inner sep=0pt,yshift=-2pt] at (axis cs:160,-0.000450) {300};
 
-    % y-axis guides and labels.
-    \draw[line width=0.45pt] (axis cs:0,0.0020) -- (axis cs:-3,0.0020);
-    \node[font=\normalsize,anchor=east,inner sep=0pt,yshift=-2pt,xshift=-4pt] at (axis cs:-3.000000,0.0020) {0.002};
-    \draw[line width=0.45pt] (axis cs:0,0.0025) -- (axis cs:-3,0.0025);
-    \node[font=\normalsize,anchor=east,inner sep=0pt,yshift=2pt,xshift=-40pt] at (axis cs:-3.000000,0.0025) {0.0025};
-    \draw[line width=0.45pt] (axis cs:0,0.0050) -- (axis cs:-3,0.0050);
-    \node[anchor=east,inner sep=0pt,xshift=-4pt] at (axis cs:-3.000000,0.0050) {0.005};
-    \draw[line width=0.45pt] (axis cs:0,0.0075) -- (axis cs:-3,0.0075);
-    \node[anchor=east,inner sep=0pt,xshift=-4pt] at (axis cs:-4,0.0075) {$x$};
-    \draw[line width=0.45pt] (axis cs:0,0.0095) -- (axis cs:-3,0.0095);
-    \node[anchor=east,inner sep=0pt,xshift=-4pt] at (axis cs:-3.000000,0.0095) {0.0095};
-    \draw[line width=0.45pt] (axis cs:0,0.0110) -- (axis cs:-3,0.0110);
-    \node[anchor=east,inner sep=0pt,xshift=-4pt] at (axis cs:-3.000000,0.0110) {0.011};
-    \draw[line width=0.45pt] (axis cs:0,0.0125) -- (axis cs:-3,0.0125);
-    \node[anchor=east,inner sep=0pt,xshift=-4pt] at (axis cs:-3.000000,0.0125) {0.0125};
+
+
+\addplot[draw=black,fill=white] coordinates
+  {(160,0.002) (180,0.0095) (200,0.011) (220,0.0125) (240,0.0075) (260,0.005) (280,0.0025) (300,0)};
+\draw[dashed] (axis cs:140,0.0125) -- (axis cs:220,0.0125);
+\draw[dashed] (axis cs:140,0.011) -- (axis cs:200,0.011);
+\draw[dashed] (axis cs:140,0.0095) -- (axis cs:180,0.0095);
+\draw[dashed] (axis cs:140,0.0075) -- (axis cs:240,0.0075);
+\draw[dashed] (axis cs:140,0.005) -- (axis cs:260,0.005);
+\draw[dashed] (axis cs:140,0.0025) -- (axis cs:280,0.0025);
+\draw[dashed] (axis cs:140,0.002) -- (axis cs:160,0.002);
+\examstatxbreak{150}{0}
+\examstatylabel{$\frac{\text{频率}}{\text{组距}}$}
+\examstatxlabel{月平均用电量/度}
+
+\examstatyticklabel{140}{0}{0}{0.000000}
+\examstatyticklabel{140}{0.002}{0.002}{0.000000}
+\examstatyticklabel{140}{0.0025}{0.0025}{5.118407}
+\examstatyticklabel{140}{0.005}{0.005}{0.000000}
+\examstatyticklabel{140}{0.0075}{$x$}{0.000000}
+\examstatyticklabel{140}{0.0095}{0.0095}{0.000000}
+\examstatyticklabel{140}{0.011}{0.011}{0.000000}
+\examstatyticklabel{140}{0.0125}{0.0125}{0.000000}
 \end{axis}
 \end{tikzpicture}

@@ -1,0 +1,21 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth]
+\coordinate (O) at (0,0);
+\coordinate (C1) at (1,1);
+\coordinate (X1) at (1,0);
+\coordinate (X2) at (2,0);
+\coordinate (Y1) at (0,1);
+\draw[->] (-1.5,0)--(4.5,0);
+\draw[->] (0,-1.0)--(0,2.5);
+\draw[dashed] (1,-1.0)--(1,2.5);
+\draw[dashed] (0,1)--(1,1);
+\draw[domain=0.35:2.0,samples=161] plot (\x,{ln(\x)/ln(2)+1});
+\draw (2,0)--(2,0.08);
+\draw (-0.08,1)--(0,1);
+\node[below left,inner sep=0pt,xshift=-1pt,yshift=-3pt] at (O) {$O$};
+\node[below left,inner sep=0pt,xshift=-1pt,yshift=-3pt] at (X1) {$1$};
+\node[below,inner sep=0pt,xshift=2pt,yshift=-3pt] at (X2) {$2$};
+\node[left,inner sep=0pt,xshift=-3pt] at (Y1) {$1$};
+\node[anchor=west,inner sep=0pt,xshift=4pt] at (4.5,0) {$x$};
+\node[anchor=south,inner sep=0pt,yshift=3pt] at (0,2.5) {$y$};
+\end{tikzpicture}

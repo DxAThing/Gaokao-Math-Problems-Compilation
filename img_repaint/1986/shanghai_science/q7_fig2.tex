@@ -1,0 +1,17 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  geometry edge/.style={solid,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (C) at (0,0);
+\coordinate (B) at (6,0);
+\coordinate (P) at (3,1.2);
+\coordinate (A) at (2.8,3.5);
+\draw[geometry edge] (C)--(A)--(B)--cycle;
+\draw[geometry edge] (A)--(P);
+\draw[geometry edge] (C)--(P);
+\draw[geometry edge] (B)--(P);
+\fill (P) circle (1.2pt);
+\node[geometry label,above,yshift=3pt] at (A) {$A$};
+\node[geometry label,below left,xshift=-3pt,yshift=-3pt] at (C) {$C$};
+\node[geometry label,below right,xshift=3pt,yshift=-3pt] at (B) {$B$};
+\node[geometry label,right,xshift=5pt,yshift=3pt] at (P) {$P$};
+\end{tikzpicture}

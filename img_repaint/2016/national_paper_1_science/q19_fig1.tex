@@ -1,63 +1,18 @@
-% Source PDF: source/普通高考/2016/2016全国1理(河南,河北,山西,江西,湖北,湖南,广东,安徽,福建).pdf
-% Page: 2; PDF embedded bitmap attempt: no image objects were present (pdfimages -list).
-% Grid evidence: tmp/redraw_2016_national1/page-2_grid100.png and q19_block_grid50.png.
-% Original-side crop: tmp/redraw_2016_national1/q19_orig_crop.png, cropped from the no-grid page render.
-% Elements: frequency y-axis, broken x-axis, four bars centered at 8, 9, 10, 11, and dashed guides at 20 and 40.
-% Relations: the source graph gives frequencies 20, 40, 20, 20 for replacement counts 8, 9, 10, 11.
-% solid segments: bar outlines, x/y axes, tick marks, and x-axis break stroke.
-% dashed segments: horizontal reference guides at frequencies 20 and 40.
-% Labels: 频数 is above the y-axis; 更换的易损零件数 is right of the x-axis arrow; tick labels stay below the axis.
-\begin{tikzpicture}[baseline]
-\begin{axis}[exam statistical histogram,scaled ticks=false,
-    width=7.4cm,
-    axis lines=none,
-    clip=false,
-    % Internal display coordinates compress the broken 0-to-8 segment to
-    % exactly one class width; the four unit-width bars occupy [1,5).
-    xmin=-0.8,
-    xmax=6.8,
-    ymin=-5.5,
-    ymax=53,
-    ticks=none,
-    x tick label as interval=false,
-]
-    \draw[dashed,line width=0.55pt] (axis cs:0,20) -- (axis cs:5,20);
-    \draw[dashed,line width=0.55pt] (axis cs:0,40) -- (axis cs:3,40);
-
-    \addplot[
-        ybar interval,
-        draw=black,
-        fill=white,
-        line width=0.7pt,
-    ] coordinates {
-        (1,20)
-        (2,40)
-        (3,20)
-        (4,20)
-        (5,0)
-    };
-
-    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:6.0,0);
-    \draw[->,line width=0.8pt] (axis cs:0,0) -- (axis cs:0,50.5);
-    \examstatxbreak[line width=0.8pt]{0.64}{0};
-
-    \node[anchor=south west,inner sep=0pt,font=\normalsize] at (axis cs:0.25,48.0) {频数};
-    \examstatxlabel{更换的易损零件数};
-    \node[anchor=north east,inner sep=0pt,font=\normalsize,yshift=-4pt] at (axis cs:0,0.000000) {0};
-
-    % The source chart labels the discrete values at bar centers.
-    \draw[line width=0.5pt] (axis cs:1.5,0) -- (axis cs:1.5,-1.5);
-    \draw[line width=0.5pt] (axis cs:2.5,0) -- (axis cs:2.5,-1.5);
-    \draw[line width=0.5pt] (axis cs:3.5,0) -- (axis cs:3.5,-1.5);
-    \draw[line width=0.5pt] (axis cs:4.5,0) -- (axis cs:4.5,-1.5);
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:1.5,-1.500000) {8};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:2.5,-1.500000) {9};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:3.5,-1.500000) {10};
-    \node[anchor=north,inner sep=0pt,font=\normalsize,yshift=-2pt] at (axis cs:4.5,-1.500000) {11};
-
-    \draw[line width=0.5pt] (axis cs:0,20) -- (axis cs:-0.35,20);
-    \draw[line width=0.5pt] (axis cs:0,40) -- (axis cs:-0.35,40);
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.350000,20) {20};
-    \node[anchor=east,inner sep=0pt,font=\normalsize,xshift=-4pt] at (axis cs:-0.350000,40) {40};
+% Bar chart: discrete counts 8..11 mapped to positions 1..4; position 0
+% carries the original 0 tick with a fixed axis break between 0 and 8.
+\begin{tikzpicture}
+\begin{axis}[exam statistical template bar,
+  xmin=-0.7,ymin=0,
+  xtick={0,1,2,3,4},
+  ytick={0,20,40},
+  ymajorgrids=true,major grid style={dashed,black},
+  xmax=4.5,
+  ymax=50,
+  xticklabels={,8,9,10,11}]
+\addplot[draw=black,fill=white] coordinates
+  {(1,20) (2,40) (3,20) (4,20)};
+\examstatxbreak{0.5}{0}
+\examstatylabel{频数}
+\examstatxlabel{更换的易损零件数}
 \end{axis}
 \end{tikzpicture}

@@ -1,0 +1,13 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,>=Stealth]
+\draw[->] (-3.9,0)--(3.9,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.8)--(0,1.8) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw[domain=-3.1416:3.1416,samples=220] plot (\x,{cos(deg(1.5*\x+0.5235987756))});
+\draw (-3.1416,0.06)--(-3.1416,-0.06);
+\draw (-1.3963,0.06)--(-1.3963,-0.06);
+\draw (3.1416,0.06)--(3.1416,-0.06);
+\node[above,inner sep=0pt,yshift=3pt] at (-3.1416,0) {$-\pi$};
+\node[above left,inner sep=0pt,xshift=-2pt,yshift=2pt] at (-1.3963,0) {$-\frac{4\pi}{9}$};
+\node[below right,inner sep=0pt,xshift=2pt,yshift=-2pt] at (0,0) {$O$};
+\node[below,inner sep=0pt,yshift=-3pt] at (3.1416,0) {$\pi$};
+\end{tikzpicture}

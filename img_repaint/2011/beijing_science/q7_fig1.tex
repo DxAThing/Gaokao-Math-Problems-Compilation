@@ -1,0 +1,27 @@
+% point-fix dims only: shared dimension line/label styles, offsets >=4.5mm; edges/captions unchanged.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% ---- front (left): right triangle, dims 4/4 ----
+\begin{scope}[shift={(0.6,0)}]
+\draw (0,0) -- (3,0) -- (0,3) -- cycle;
+\draw[dimension extension] (0,0) -- (-0.6,0);
+\draw[dimension extension] (0,3) -- (-0.6,3);
+\draw[dimension line] (-0.5,0) -- node[dimension label vertical] {4} (-0.5,3);
+\draw[dimension extension] (0,0) -- (0,-0.6);
+\draw[dimension extension] (3,0) -- (3,-0.6);
+\draw[dimension line] (0,-0.5) -- node[dimension label] {4} (3,-0.5);
+\node[below] at (1.5,-1.5) {正视图};
+\end{scope}
+% ---- side (middle): right triangle, bottom dim 3 ----
+\begin{scope}[shift={(5.4,0)}]
+\draw (0,0) -- (2.25,0) -- (2.25,3) -- cycle;
+\draw[dimension extension] (0,0) -- (0,-0.6);
+\draw[dimension extension] (2.25,0) -- (2.25,-0.6);
+\draw[dimension line] (0,-0.5) -- node[dimension label] {3} (2.25,-0.5);
+\node[below] at (1.125,-1.5) {侧视图（左）};
+\end{scope}
+% ---- plan (right): right triangle, no dims in original ----
+\begin{scope}[shift={(9.4,0)}]
+\draw (0,0) -- (3,0) -- (3,2.25) -- cycle;
+\node[below] at (1.5,-1.5) {俯视图};
+\end{scope}
+\end{tikzpicture}

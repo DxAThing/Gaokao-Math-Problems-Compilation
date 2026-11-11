@@ -1,0 +1,13 @@
+% 2019 Zhejiang Q6 option D: exact curves for a=0.4.
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.95cm,y=1.95cm,line width=.6pt,>=Stealth]
+\draw[->] (-1.05,0) -- (2.45,0);
+\node[anchor=west,inner sep=0pt,xshift=3pt] at (2.45,0) {$x$};
+\draw[->] (0,-1.0) -- (0,2.60);
+\node[anchor=south,inner sep=0pt,yshift=3pt] at (0,2.60) {$y$};
+\node[anchor=north east,inner sep=0pt,xshift=-3pt,yshift=-3pt] at (0,0) {$O$};
+\draw (1,-0.055) -- (1,0.055);
+\node[anchor=north west,inner sep=0pt,xshift=12pt,yshift=-5pt] at (1,0) {$1$};
+\draw[domain=-0.98:1.0,samples=180] plot (\x,{exp(ln(2.5)*\x)});
+\draw[domain=-0.38:1.05,samples=180] plot (\x,{ln(\x+0.5)/ln(0.4)});
+\end{tikzpicture}

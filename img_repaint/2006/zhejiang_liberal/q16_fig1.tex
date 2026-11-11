@@ -1,0 +1,20 @@
+\begin{tikzpicture}[x=3.2cm,y=0.9cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-.6,0)--(2.5,0) node[fill=white,inner sep=1.5pt,below=3pt] at (2.5,0) {$x$};
+\draw[->] (0,-2.9)--(0,2.8) node[fill=white,inner sep=1.5pt,left=7pt,above=1pt] at (0,2.8) {$y$};
+\node[inner sep=1.5pt,below left=2pt and 3pt] at (0,0) {$O$};
+% sine curve y=2 sin(pi x+pi/6), zeros at -1/6,5/6,11/6; peak (1/3,2), trough (4/3,-2)
+\draw[thick] plot[domain=-0.1667:1.8333,samples=220,smooth] (\x,{2*sin(180*\x+30)});
+% thin triangle M-P-N
+\coordinate (M) at (-0.1667,0);
+\coordinate (P) at (0.3333,2);
+\coordinate (N) at (0.8333,0);
+\draw[thin] (M)--(P)--(N);
+% labels with clearance
+\node[inner sep=2pt,below left=2pt and 2pt] at (M) {$M$};
+\node[inner sep=2pt,above=2pt] at (P) {$P$};
+\node[inner sep=2pt,below=2pt,xshift=-2.00bp,yshift=-2.00bp] at (N) {$N$};
+\node[inner sep=1.5pt,left=2pt] at (0,1) {$1$};
+\draw (-.035,1)--(.035,1);
+\end{tikzpicture}
+

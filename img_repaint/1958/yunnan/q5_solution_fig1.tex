@@ -1,0 +1,27 @@
+\begin{tikzpicture}[line width=.6pt]
+\coordinate (A) at (0,3.4);
+\coordinate (C) at (0,-2.0);
+\coordinate (B) at (-2.6,-0.4);
+\coordinate (D) at (2.6,-0.4);
+\coordinate (E) at (-1.3,1.5);
+\coordinate (F) at (0,0.7);
+\coordinate (G) at (1.3,-1.2);
+\coordinate (H) at (0,-0.4);
+% tetrahedron edges
+\draw (A)--(B)--(C)--(A);
+\draw (A)--(D)--(C);
+\draw[dashed] (B)--(D);
+\draw (A)--(C);
+% section EFGH: EF,FG solid; GH,HE dashed
+\draw (E)--(F)--(G);
+\draw[dashed] (G)--(H)--(E);
+% labels
+\node[above=3pt] at (A) {$A$};
+\node[left=3pt] at (E) {$E$};
+\node[above right=3pt] at (F) {$F$};
+\node[below right=2pt] at (G) {$G$};
+\node[left=3pt,yshift=-6pt,xshift=-1pt] at (H) {$H$};
+\node[left=2pt] at (B) {$B$};
+\node[below=3pt] at (C) {$C$};
+\node[right=2pt] at (D) {$D$};
+\end{tikzpicture}

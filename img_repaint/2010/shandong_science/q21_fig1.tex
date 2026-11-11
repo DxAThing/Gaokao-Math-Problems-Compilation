@@ -1,0 +1,25 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (O) at (0.0000000000,0.0000000000);
+\coordinate (F1) at (-2.0000000000,0.0000000000);
+\coordinate (F2) at (2.0000000000,0.0000000000);
+\coordinate (P) at (3.0000000000,2.2360679775);
+\coordinate (B) at (-2.7845619121,-0.3508667536);
+\coordinate (A) at (1.6417047693,1.6286198836);
+\coordinate (D) at (1.1883451609,-1.8149153945);
+\coordinate (C) at (2.4480184755,1.0017997663);
+\draw (B)--(P);
+\draw (D)--(P);
+\draw[->] (-4.4,0)--(4.4,0) node[right=2pt] {$x$};
+\draw[->] (0,-3)--(0,3.2) node[above=2pt] {$y$};
+\draw (0,0) ellipse (2.8284271247 and 2);
+\draw[domain=-3:3,samples=150] plot ({sqrt(4+\x*\x)},\x);
+\draw[domain=-3:3,samples=150] plot ({-sqrt(4+\x*\x)},\x);
+\node[below left=2pt] at (O) {$O$};
+\node[below right=2pt] at (F1) {$F_{1}$};
+\node[above left=2pt] at (F2) {$F_{2}$};
+\node[right=2pt] at (P) {$P$};
+\node[below left=2pt] at (B) {$B$};
+\node[above left=2pt,xshift=1pt,yshift=1pt] at (A) {$A$};
+\node[below right=2pt] at (D) {$D$};
+\node[right=2pt] at (C) {$C$};
+\end{tikzpicture}

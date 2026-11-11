@@ -1,0 +1,26 @@
+\usetikzlibrary{arrows.meta,calc}
+% Source: 1987 Guangdong science PDF, page 8 (printed page 272).
+% Faithful schematic tracing of the source, not a metric construction.
+% Source has OD, no F label. The placement/identity of C is ambiguous.
+\begin{tikzpicture}[x=.95cm,y=.95cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (O) at (0,0);
+\coordinate (A) at (1.16,-1.34);
+\coordinate (B) at (3,2.46);
+\coordinate (D) at (3.03,-2.14);
+\draw[->] (-1.6,0)--(6.5,0) node[anchor=north west,inner sep=0pt,xshift=2pt,yshift=-2pt] {$x$};
+\draw[->] (0,-3.4)--(0,4.4) node[anchor=south west,inner sep=0pt,xshift=2pt,yshift=2pt] {$y$};
+\draw (O) .. controls (0,1.16) and (1.56,1.98) .. (B)
+          .. controls (3.66,2.68) and (4.36,2.89) .. (5,3.10);
+\draw (O) .. controls (0,-.64) and (.58,-1.01) .. (A)
+          .. controls (1.69,-1.67) and (2.47,-1.99) .. (D)
+          .. controls (3.63,-2.31) and (4.40,-2.51) .. (5,-2.65);
+\draw ($(A)!-.20!(B)$)--($(B)!-.30!(A)$);
+\draw (O)--(D);
+\node[anchor=north east,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (O) {$O$};
+\node[anchor=north,inner sep=0pt,xshift=3pt,yshift=-6pt] at (A) {$A$};
+\node[anchor=south east,inner sep=0pt,xshift=-2pt,yshift=2pt] at (B) {$B$};
+\node[anchor=north,inner sep=0pt,yshift=-2pt] at (D) {$D$};
+% C is preserved at its source-image location; no invented C point/segment.
+\node[anchor=east,inner sep=0pt,xshift=-2pt] at (.84,-1.48) {$C$};
+\node[anchor=south,inner sep=0pt,yshift=2pt] at ($(B)!-.30!(A)$) {$l$};
+\end{tikzpicture}

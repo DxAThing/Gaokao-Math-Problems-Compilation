@@ -12,6 +12,53 @@
   exam statistical bar/.style={exam statistical common},
   exam statistical line/.style={exam statistical common},
   exam statistical scatter/.style={exam statistical common},
+  % Fixed plot-area size; labels do not change the data rectangle's aspect.
+  exam statistical template axis/.style={
+    exam statistical common,
+    scale only axis, width=80mm, height=50mm,
+    axis lines=left, axis line style={line width=0.6pt,-{Stealth}},
+    tick style={line width=0.6pt}, tick align=outside,
+    yticklabel style={/pgf/number format/fixed,/pgf/number format/precision=4},
+    clip=false, enlargelimits=false,
+    every axis plot/.append style={black,line width=0.6pt},
+    legend style={font=\normalsize,draw=none},
+    title style={yshift=14pt},
+  },
+  exam statistical template bar/.style={
+    exam statistical template axis,ybar,bar width=8mm,
+  },
+  exam statistical template histogram/.style={
+    exam statistical template axis,ybar interval,
+    x tick label as interval=false,grid=none,
+  },
+  exam statistical template line/.style={
+    exam statistical template axis,sharp plot,
+  },
+  exam statistical template scatter/.style={
+    exam statistical template axis,only marks,mark=*,mark size=1.5pt,
+  },
+  exam statistical template wide/.style={width=110mm,height=68.75mm},
+  exam statistical template paired/.style={width=52mm,height=50mm},
+  % Narrow categorical columns retain visible gaps in a paired 52mm axis.
+  exam statistical template paired bar/.style={exam statistical template paired,bar width=4mm},
+  % Twelve monthly categories need a visible gap in the paired plot area.
+  exam statistical template paired monthly bar/.style={exam statistical template paired,bar width=3mm},
+  exam statistical template dense/.style={width=136mm,height=85mm},
+  % Dense paired histograms keep vertical tick clearance without excess width.
+  exam statistical template paired dense/.style={width=56mm,height=85mm},
+  exam statistical template paired dense compact/.style={width=50mm,height=85mm},
+  exam statistical template stacked/.style={ybar stacked,bar width=14mm},
+  exam statistical template option/.style={width=24mm,height=15mm},
+}
+% Dense tick labels retain their true tick positions; leaders disambiguate shifts.
+\newcommand{\examstatyticklabel}[4]{%
+  \ifdim #4pt=0pt\relax\else
+    \draw[line width=0.6pt]
+      ([xshift=-1.5mm]axis cs:#1,#2) --
+      ([xshift=-4mm,yshift=#4pt]axis cs:#1,#2);%
+  \fi
+  \node[anchor=east,inner sep=0pt,font=\normalsize]
+    at ([xshift=-4mm,yshift=#4pt]axis cs:#1,#2) {#3};%
 }
 \tikzset{
   exam statistical xlabel/.style={
@@ -34,6 +81,22 @@
     font=\normalsize,
     xshift=2pt,
   },
+  exam statistical template pie/.style={
+    x=1cm,y=1cm,font=\normalsize,line width=0.6pt,
+    every node/.append style={font=\normalsize,execute at begin node={\parindent=0pt}},
+  },
+  exam statistical pie slice/.style={draw=black,line width=0.6pt},
+}
+% pgf-pie is loaded by the chart wrapper only when needed. Shared radius is 25mm.
+\newcommand{\examstatpie}[2][]{%
+  \pie[sum=auto,radius=2.5,scale font=false,
+    color={white,gray!15,gray!30,gray!45,gray!60,gray!75},
+    style={exam statistical pie slice},#1]{#2}%
+}
+\newcommand{\examstatoptionpie}[2][]{%
+  \pie[sum=auto,radius=1,scale font=false,
+    color={white,gray!15,gray!30,gray!45,gray!60,gray!75},
+    style={exam statistical pie slice},#1]{#2}%
 }
 \newcommand{\examstatxlabel}[2][]{%
   \node[exam statistical xlabel,#1] at (current axis.right of origin) {#2};%
@@ -55,4 +118,22 @@
     -- ++(3pt,2.8pt)
     -- ++(3pt,-1.4pt)
     -- ++(3pt,0pt);%
+}
+
+% Natural-size panels: horizontal when both fit the 170mm body, else vertical.
+\newsavebox{\examstatleftpanel}
+\newsavebox{\examstatrightpanel}
+\newlength{\examstatpanelwidth}
+\newcommand{\examstatpanels}[2]{%
+  \begingroup
+  \sbox{\examstatleftpanel}{#1}%
+  \sbox{\examstatrightpanel}{#2}%
+  \setlength{\examstatpanelwidth}{\linewidth}%
+  \ifdim\examstatpanelwidth>170mm\setlength{\examstatpanelwidth}{170mm}\fi
+  \ifdim\dimexpr\wd\examstatleftpanel+\wd\examstatrightpanel+6mm\relax>\examstatpanelwidth
+    \begin{tabular}{@{}c@{}}\usebox{\examstatleftpanel}\\[6mm]\usebox{\examstatrightpanel}\end{tabular}%
+  \else
+    \begin{tabular}{@{}c@{\hspace{6mm}}c@{}}\usebox{\examstatleftpanel}&\usebox{\examstatrightpanel}\end{tabular}%
+  \fi
+  \endgroup
 }

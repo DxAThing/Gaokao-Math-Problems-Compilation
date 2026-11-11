@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt]
+\coordinate (P) at (2,6);
+\coordinate (A) at (1.8,2);
+\coordinate (B) at (0,0.5);
+\coordinate (C) at (5,0.5);
+\coordinate (D) at (7,2);
+\coordinate (E) at (3.5,3.25);
+% visible faces and base
+\draw[solid] (P) -- (B);
+\draw[solid] (P) -- (C);
+\draw[solid] (P) -- (D);
+\draw[solid] (B) -- (C);
+\draw[solid] (C) -- (D);
+% hidden edges
+\draw[dashed] (P) -- (A);
+\draw[dashed] (A) -- (B);
+\draw[dashed] (A) -- (D);
+\draw[dashed] (A) -- (E);
+% labels (offset so text does not touch any stroke)
+\node[anchor=south,inner sep=2pt] at ($(P)+(0.00,0.22)$) {$P$};
+\node[anchor=east,inner sep=2pt] at ($(A)+(-0.20,-0.04)$) {$A$};
+\node[anchor=north east,inner sep=2pt] at ($(B)+(-0.16,-0.14)$) {$B$};
+\node[anchor=north,inner sep=2pt] at ($(C)+(0.06,-0.20)$) {$C$};
+\node[anchor=west,inner sep=2pt] at ($(D)+(0.20,0.02)$) {$D$};
+\node[anchor=west,inner sep=2pt] at ($(E)+(0.22,0.14)$) {$E$};
+\end{tikzpicture}

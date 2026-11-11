@@ -1,0 +1,17 @@
+% 2012 山东卷理 第9题 选项D：函数图象（正确选项）
+% 由 PGFMath 直接绘制；f(x)=cos6x/(2^x-2^(-x))，弧度经 deg() 转换。
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.7cm,y=0.71cm,line width=.6pt,font=\normalsize,>=Stealth]
+\def\sdD{cos(deg(6*\x))/(pow(2,\x)-pow(2,-\x))}
+\coordinate (O) at (0,0);
+\coordinate (Xend) at (2.5,0);
+\coordinate (Yend) at (0,4.5);
+\begin{scope}
+  \clip (-2.2,-4.2) rectangle (2.5,4.2);
+  \draw[domain=-1.84:-0.10,samples=241] plot (\x,{\sdD});
+  \draw[domain=0.10:1.85,samples=241] plot (\x,{\sdD});
+\end{scope}
+\draw[->] (-2.2,0)--(Xend) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-4.5)--(Yend) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\node[below left,inner sep=1pt] at (O) {$O$};
+\end{tikzpicture}

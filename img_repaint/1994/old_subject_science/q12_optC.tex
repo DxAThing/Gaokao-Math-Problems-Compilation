@@ -1,0 +1,19 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.15cm,y=1.15cm,line width=.6pt,>=Stealth,font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (Xstart) at (-1.55,0);
+\coordinate (Xend) at (1.80,0);
+\coordinate (Ystart) at (0,-1.45);
+\coordinate (Yend) at (0,1.20);
+\coordinate (Ux) at (1,0);
+\coordinate (Uy) at (0,1);
+\coordinate (Q) at (1,1);
+\draw[->] (Xstart)--(Xend) node[right,inner sep=1.5pt] {$x$};
+\draw[->] (Ystart)--(Yend) node[above,inner sep=1.5pt] {$y$};
+\draw[dashed] (Uy)--(Q);
+\draw[dashed] (Ux)--(Q);
+\draw[domain=0:1,samples=120] plot (\x,{1-sqrt(1-\x*\x)});
+\node[below left,inner sep=1.5pt] at (O) {$O$};
+\node[below,inner sep=1.5pt] at (Ux) {$1$};
+\node[left,inner sep=1.5pt] at (Uy) {$1$};
+\end{tikzpicture}

@@ -1,0 +1,32 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize]
+\coordinate (O) at (0,0);
+\coordinate (P) at (0,3.0);
+\coordinate (M) at (-2.9047,-0.75);
+\coordinate (N) at (2.9047,-0.75);
+\coordinate (WL) at (-3.0,0);
+\coordinate (WR) at (3.0,0);
+\coordinate (A) at (-1.9284,-0.75);
+\coordinate (B) at (1.9284,-0.75);
+\coordinate (D) at (-1.9284,2.2981);
+\coordinate (C) at (1.9284,2.2981);
+\draw (M) arc[start angle=194.4775,end angle=-14.4775,radius=3cm];
+\draw (M)--(N);
+\draw (A)--(D);
+\draw (B)--(C);
+\draw (D)--(C);
+\draw (D)--(P);
+\draw (P)--(C);
+\draw (O)--(C);
+\draw[dashed] (P)--(O);
+\draw[dashed] (WL)--(WR);
+\node[below left] at (M) {$M$};
+\node[below] at (A) {$A$};
+\node[below] at (B) {$B$};
+\node[below right] at (N) {$N$};
+\node[above] at (P) {$P$};
+\node[left] at (D) {$D$};
+\node[right] at (C) {$C$};
+\node[below left=2pt,inner sep=0pt] at (O) {$O$};
+\fill (O) circle[radius=1.4pt];
+\end{tikzpicture}

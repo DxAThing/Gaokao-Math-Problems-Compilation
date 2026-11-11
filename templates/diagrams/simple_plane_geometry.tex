@@ -1,0 +1,17 @@
+% Local numeric construction example, not source data. Replace every object.
+% Compute derived coordinates first; preserve the actual original relations.
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+ geometry edge/.style={solid,line width=.6pt},
+ geometry mark/.style={solid,line width=.6pt},
+ geometry label/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (A) at (0,0);
+\coordinate (B) at (4,0);
+\coordinate (C) at (1,3);
+\coordinate (M) at (2,0);
+\draw[geometry edge] (A)--(B)--(C)--cycle;
+\draw[geometry edge,dashed] (C)--(M);
+\node[geometry label,below left] at (A) {$A$};
+\node[geometry label,below right] at (B) {$B$};
+\node[geometry label,above] at (C) {$C$};
+\node[geometry label,below] at (M) {$M$};
+\end{tikzpicture}

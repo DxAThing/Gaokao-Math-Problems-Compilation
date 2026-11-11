@@ -1,2 +1,32 @@
-\begin{tikzpicture}[>=Stealth,line width=.55pt,line cap=round,line join=round,every node/.style={font=\normalsize,anchor=center,align=center,execute at begin node={\setlength{\parindent}{0pt}\noindent}},flowbox/.style={draw,minimum height=.70cm,inner xsep=4pt,inner ysep=2pt},terminal/.style={flowbox,rounded corners=.18cm,minimum width=1.5cm,minimum height=.76cm},io/.style={flowbox,shape=trapezium,trapezium left angle=72,trapezium right angle=108,minimum height=.82cm},decision/.style={flowbox,shape=diamond,aspect=2.75,inner sep=2pt},flowarrow/.style={->,line width=.55pt}]
-\node[terminal](start)at(0,11.7){开始};\node[flowbox,minimum width=5.2cm](init)at(0,10.2){$a\leftarrow\sqrt5,\ b\leftarrow\sqrt7,\ n\leftarrow1$};\coordinate(loopjoin)at(0,8.85);\node[decision,minimum width=4.4cm,minimum height=1.0cm](test)at(0,7.25){$n(b-a)>1$};\node[flowbox,minimum width=2.45cm](m)at(0,5.55){$m\leftarrow[na]$};\node[flowbox,minimum width=3.3cm](r)at(0,4.0){$r\leftarrow\dfrac{m+1}{n}$};\node[io,minimum width=2.65cm](out)at(0,2.45){输出 $r$};\node[terminal](finish)at(0,.95){结束};\node[flowbox,minimum width=3.0cm](inc)at(3.7,7.25){$n\leftarrow n+1$};\draw[flowarrow](start.south)--(init.north);\draw(init.south)--(loopjoin);\draw[flowarrow](loopjoin)--(test.north);\draw[flowarrow](test.south)--node[right=3pt]{是}(m.north);\draw[flowarrow](m.south)--(r.north);\draw[flowarrow](r.south)--(out.north);\draw[flowarrow](out.south)--(finish.north);\draw[flowarrow](test.east)--node[above=2pt]{否}(inc.west);\draw[flowarrow](inc.north)--(3.7,8.85)--(loopjoin);\path[use as bounding box](-2.9,.55)rectangle(5.3,12.05);\end{tikzpicture}
+\tikzset{
+  gflowproc/.style={draw, rectangle, minimum width=40mm, minimum height=9mm, inner sep=1.5mm, align=center, font=\normalsize, execute at begin node={\setlength{\parindent}{0pt}}},
+  gflowterm/.style={draw, shape=rectangle, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm, align=center, font=\normalsize, execute at begin node={\setlength{\parindent}{0pt}}},
+  gflowio/.style={draw, trapezium, trapezium left angle=72, trapezium right angle=108, minimum width=34mm, minimum height=10mm, inner sep=1.5mm, align=center, font=\normalsize, execute at begin node={\setlength{\parindent}{0pt}}},
+  gflowdec/.style={draw, diamond, aspect=2.2, minimum width=42mm, minimum height=20mm, inner sep=1mm, align=center, font=\normalsize, execute at begin node={\setlength{\parindent}{0pt}}},
+  gflowarr/.style={->, >=Stealth, line width=0.6pt}
+}
+\begin{tikzpicture}[gflowarr, x=1mm, y=1mm]
+\parindent=0pt
+\node[gflowterm] (start) at (0,0) {开始};
+\node[gflowproc, minimum width=62mm] (init) at (0,-20) {$a\gets\sqrt{5},b\gets\sqrt{7},n\gets 1$};
+\coordinate (J) at (0,-34);
+\node[gflowdec] (dec) at (0,-52) {$n(b-a)>1$};
+\node[gflowproc, minimum width=30mm] (m) at (0,-74) {$m\gets[na]$};
+\node[gflowproc, minimum width=42mm] (r) at (0,-94) {$r\gets(m+1)/n$};
+\node[gflowio] (out) at (0,-114) {输出 $r$};
+\node[gflowterm] (stop) at (0,-134) {结束};
+\node[gflowproc, minimum width=30mm] (inc) at (48,-52) {$n\gets n+1$};
+\draw (start.south) -- (init.north);
+\draw[->] (init.south) -- (J) -- (dec.north);
+
+\draw[->] (dec.south) -- node[midway, right=1mm] {是} (m.north);
+\draw[->] (m.south) -- (r.north);
+\draw[->] (r.south) -- (out.north);
+\draw[->] (out.south) -- (stop.north);
+% no-branch: east then up via offset channel, single junction J (no overshoot)
+\draw[->] (dec.east) -- node[midway, above=1mm] {否} (inc.west);
+% return: exit from north, up 12mm, then left to main point J (2 long segments)
+\coordinate (up) at (48,-34);
+\draw (inc.north) -- (up);
+\draw[->] (up) -- (J);
+\end{tikzpicture}

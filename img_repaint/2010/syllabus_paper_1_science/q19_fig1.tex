@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt]
+\coordinate (A) at (0.00,0.00);
+\coordinate (B) at (2.50,0.00);
+\coordinate (C) at (5.50,0.80);
+\coordinate (D) at (1.50,0.80);
+\coordinate (S) at (1.20,4.50);
+\coordinate (E) at (2.07,1.50);
+% base front edges
+\draw[solid] (A) -- (B) -- (C);
+% base hidden back edges
+\draw[dashed] (A) -- (D) -- (C);
+% lateral edges
+\draw[solid] (S) -- (A);
+\draw[solid] (S) -- (E) -- (B);
+\draw[solid] (S) -- (C);
+\draw[dashed] (S) -- (D);
+% interior segments
+\draw[solid] (A) -- (E) -- (C);
+\draw[solid] (E) -- (B);
+\draw[dashed] (D) -- (E);
+\node[inner sep=2pt,above=3pt] at (S) {$S$};
+\node[inner sep=2pt,below=3pt,left=1pt] at (A) {$A$};
+\node[inner sep=2pt,below=4pt] at (B) {$B$};
+\node[inner sep=2pt,right=5pt] at (C) {$C$};
+\node[inner sep=2pt,below=2pt] at (D) {$D$};
+\node[inner sep=2pt,anchor=west] at (2.55,1.62) {$E$};
+\end{tikzpicture}

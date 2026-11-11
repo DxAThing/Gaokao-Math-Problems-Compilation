@@ -1,0 +1,26 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.5cm,y=1.0cm,line width=.6pt,>=Stealth]
+\tikzset{
+  axis/.style={->},
+  curve/.style={},
+  xlab/.style={anchor=west,inner sep=0pt},
+  ylab/.style={anchor=east,inner sep=0pt},
+  olab/.style={anchor=north east,inner sep=0pt},
+  yticklab/.style={anchor=east,inner sep=0pt}
+}
+\coordinate (xmin) at (-1.8,0);
+\coordinate (xmax) at (1.85,0);
+\coordinate (ymin) at (0,-0.55);
+\coordinate (ymax) at (0,1.95);
+\coordinate (O) at (0,0);
+\coordinate (cusp) at (0,1);
+\coordinate (left) at (-1.45,0.7499);
+\coordinate (right) at (1.45,0.7499);
+\draw[axis] (xmin)--(xmax);
+\draw[axis] (ymin)--(ymax);
+\draw[curve,domain=-1.45:1.45,samples=181] plot (\x,{exp(-1.8*abs(\x))});
+\node[anchor=north west,inner sep=0pt,xshift=2pt,yshift=-2pt] at (xmax) {$x$};
+\node[ylab] at (-0.12,1.88) {$y$};
+\node[olab] at (-0.14,-0.15) {$O$};
+\node[anchor=south east,inner sep=0pt,xshift=-2pt,yshift=2pt] at (0,1) {$1$};
+\end{tikzpicture}

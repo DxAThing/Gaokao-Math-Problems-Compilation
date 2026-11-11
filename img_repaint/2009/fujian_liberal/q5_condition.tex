@@ -1,0 +1,29 @@
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+% front square 2.6cm, side square 2.6cm, side by side
+\begin{scope}[shift={(0,0)}]
+\draw (0,0) rectangle (2.6,2.6);
+% bottom dimension 1
+\draw (0,-0.05) -- (0,-0.35);
+\draw (2.6,-0.05) -- (2.6,-0.35);
+\draw[<->,>=Latex] (0,-0.2) -- (2.6,-0.2);
+\node[fill=white,inner sep=1pt] at (1.3,-0.2) {1};
+% right dimension 1
+\draw (2.6,0) -- (2.95,0);
+\draw (2.6,2.6) -- (2.95,2.6);
+\draw[<->,>=Latex] (2.8,0) -- (2.8,2.6);
+\node[fill=white,inner sep=1pt] at (2.8,1.3) {1};
+\node at (1.3,-0.85) {正视图};
+\end{scope}
+\begin{scope}[shift={(4.4,0)}]
+\draw (0,0) rectangle (2.6,2.6);
+\draw (0,-0.05) -- (0,-0.35);
+\draw (2.6,-0.05) -- (2.6,-0.35);
+\draw[<->,>=Latex] (0,-0.2) -- (2.6,-0.2);
+\node[fill=white,inner sep=1pt] at (1.3,-0.2) {1};
+\draw (2.6,0) -- (2.95,0);
+\draw (2.6,2.6) -- (2.95,2.6);
+\draw[<->,>=Latex] (2.8,0) -- (2.8,2.6);
+\node[fill=white,inner sep=1pt] at (2.8,1.3) {1};
+\node at (1.3,-0.85) {侧视图};
+\end{scope}
+\end{tikzpicture}

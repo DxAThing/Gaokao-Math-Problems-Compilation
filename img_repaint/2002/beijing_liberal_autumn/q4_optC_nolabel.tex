@@ -1,0 +1,22 @@
+\begin{tikzpicture}[line width=.6pt,line join=round,line cap=round]
+\tikzset{hid/.style={dashed}}
+\coordinate (FBL) at (0,0); \coordinate (FBR) at (2,0); \coordinate (FTR) at (2,2); \coordinate (FTL) at (0,2);
+\coordinate (BBL) at (0.9,0.9); \coordinate (BBR) at (2.9,0.9); \coordinate (BTR) at (2.9,2.9); \coordinate (BTL) at (0.9,2.9);
+\draw[solid] (FBL) -- (FBR);
+\draw[solid] (FBL) -- (FTL);
+\draw[solid] (FBR) -- (FTR);
+\draw[solid] (FTL) -- (FTR);
+\draw[solid] (BTL) -- (BTR);
+\draw[solid] (BTR) -- (BBR);
+\draw[solid] (BTR) -- (FTR);
+\draw[solid] (BBR) -- (FBR);
+\draw[solid] (BTL) -- (FTL);
+\draw[hid] (BTL) -- (BBL);
+\draw[hid] (BBL) -- (BBR);
+\draw[hid] (BBL) -- (FBL);
+\draw[hid] (FTL) -- (BBL);
+\node[above left=2pt] at (FTL) {$A$};
+\node[below right=2pt] at (BBL) {$B$};
+\node[above right=2pt] at (BTR) {$C$};
+\node[right=2pt] at (BBR) {$D$};
+\end{tikzpicture}

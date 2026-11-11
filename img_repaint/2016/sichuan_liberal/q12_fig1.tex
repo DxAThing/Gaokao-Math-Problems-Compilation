@@ -1,0 +1,63 @@
+% 2016_sichuan_liberal_q12_fig1: point-fix of _current.tex, arrangement only.
+% Front, side, plan in one horizontal row (left to right); edges/dims unchanged.
+% Scope shifts only: front (0,0.75), side (5.6,0.75), plan (7.6,1.9) so that
+% front base / plan apex share y and all three captions share baseline y=0.
+% Front: isosceles triangle, base 2*sqrt(3), height 1, centre vertical.
+% Side: right triangle legs 1 x 1. Plan: mirrored diamond, width 2*sqrt(3), depth 1.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+\def\hb{1.992}
+\def\h{1.15}
+% ---- front view (left) ----
+\begin{scope}[shift={(0,0.75)}]
+  \draw (0,0) -- (2*\hb,0) -- (\hb,\h) -- cycle;
+  \draw (\hb,0) -- (\hb,\h);
+  % height dim 1 (left)
+  \draw (-0.35,0) -- (-0.55,0);
+  \draw (-0.35,\h) -- (-0.55,\h);
+  \draw[<->] (-0.45,0) -- (-0.45,\h);
+  \node[fill=white,inner sep=1pt] at (-0.45,0.5*\h) {1};
+  % base dims sqrt(3) | sqrt(3)
+  \draw (0,0) -- (0,-0.4);
+  \draw (\hb,0) -- (\hb,-0.4);
+  \draw (2*\hb,0) -- (2*\hb,-0.4);
+  \draw[<->] (0,-0.3) -- (\hb,-0.3);
+  \node[fill=white,inner sep=1pt] at (0.5*\hb,-0.3) {$\sqrt{3}$};
+  \draw[<->] (\hb,-0.3) -- (2*\hb,-0.3);
+  \node[fill=white,inner sep=1pt] at (1.5*\hb,-0.3) {$\sqrt{3}$};
+  \node[below] at (\hb,-0.75) {正视图};
+\end{scope}
+% ---- side view (middle) ----
+\begin{scope}[shift={(5.6,0.75)}]
+  \draw (0,0) -- (0,\h) -- (\h,0) -- cycle;
+  % height dim 1 (left)
+  \draw (-0.1,0) -- (-0.3,0);
+  \draw (-0.1,\h) -- (-0.3,\h);
+  \draw[<->] (-0.2,0) -- (-0.2,\h);
+  \node[fill=white,inner sep=1pt] at (-0.2,0.5*\h) {1};
+  % width dim 1 (below)
+  \draw (0,0) -- (0,-0.4);
+  \draw (\h,0) -- (\h,-0.4);
+  \draw[<->] (0,-0.3) -- (\h,-0.3);
+  \node[fill=white,inner sep=1pt] at (0.5*\h,-0.3) {1};
+  \node[below] at (0.5*\h,-0.75) {侧视图};
+\end{scope}
+% ---- plan view (right): moved from below-front to same row; geometry unchanged ----
+\begin{scope}[shift={(7.6,1.9)}]
+  \draw (0,0) -- (2*\hb,0) -- (\hb,-\h) -- cycle;
+  \draw (\hb,0) -- (\hb,-\h);
+  % top width dims sqrt(3) | sqrt(3)
+  \draw (0,0) -- (0,0.4);
+  \draw (\hb,0) -- (\hb,0.4);
+  \draw (2*\hb,0) -- (2*\hb,0.4);
+  \draw[<->] (0,0.3) -- (\hb,0.3);
+  \node[fill=white,inner sep=1pt] at (0.5*\hb,0.3) {$\sqrt{3}$};
+  \draw[<->] (\hb,0.3) -- (2*\hb,0.3);
+  \node[fill=white,inner sep=1pt] at (1.5*\hb,0.3) {$\sqrt{3}$};
+  % depth dim 1 (left)
+  \draw (-0.35,0) -- (-0.55,0);
+  \draw (-0.35,-\h) -- (-0.55,-\h);
+  \draw[<->] (-0.45,0) -- (-0.45,-\h);
+  \node[fill=white,inner sep=1pt] at (-0.45,-0.5*\h) {1};
+  \node[below] at (\hb,-\h-0.75) {俯视图};
+\end{scope}
+\end{tikzpicture}

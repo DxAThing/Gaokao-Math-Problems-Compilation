@@ -1,77 +1,27 @@
-% Source: source/普通高考/2018/2018全国2理(甘肃,青海,内蒙古,黑龙江,吉林,辽宁,海南.宁夏,新疆,陕西,重庆).pdf, page 1.
-% The source flowchart is vector line art; pdfimages -list found no embedded bitmap.
-% Elements: start/end rounded rectangles, assignment rectangles, decision diamond,
-% arithmetic process rectangles, output parallelogram, directed connectors, and branch labels.
-% Relations: 开始 -> N=0,T=0 -> i=1 -> i<100; 是 -> N update -> T update -> blank increment
-% -> loop back to the decision; 否 -> S=N-T -> 输出 S -> 结束.
-% solid segments: all box outlines and connectors; dashed segments: none.
-% labels: 是 at the left decision branch and 否 at the right branch; math labels centered
-% in boxes, with the left return path outside the process column to avoid overlap.
-% Node-edge list from the PDF: start→init, init→seti, seti→check; check(是)→addn,
-% check(否)→sub; addn→addt, addt→increment, increment→check; sub→out, out→finish.
-\begin{tikzpicture}[
-  >=Stealth,
-  line width=0.45pt,
-  line join=round,
-  line cap=round,
-  font=\normalsize,
-  flowtext/.style={anchor=center, align=center,
-                   execute at begin node={%
-                     \everypar{}%
-                     \setlength{\parindent}{0pt}%
-                     \setlength{\leftskip}{0pt}%
-                     \setlength{\rightskip}{0pt}%
-                     \setlength{\parfillskip}{0pt}%
-                   }},
-  every node/.style={flowtext},
-  flowbox/.style={draw, flowtext, minimum height=0.72cm, inner xsep=5pt, inner ysep=3pt},
-  process/.style={flowbox, minimum width=3.05cm},
-  smallprocess/.style={flowbox, minimum width=1.55cm},
-  startstop/.style={flowbox, rounded corners=0.18cm, minimum width=1.60cm},
-  output/.style={flowbox, trapezium, trapezium left angle=75, trapezium right angle=105,
-                minimum width=3.00cm},
-  decision/.style={flowbox, diamond, aspect=2.8, minimum width=3.80cm, minimum height=1.18cm},
-]
-  % Preserve the source's clear white margin around the outer return path.
-  \path[use as bounding box] (-5.15,-0.12) rectangle (4.05,8.82);
-
-  % Coordinates preserve the schematic topology and the source's two-column flow.
-  \node[startstop] (start) at (0,8.40) {开始};
-  \node[process] (init) at (0,7.20) {$N=0, T=0$};
-  \node[smallprocess] (seti) at (0,5.98) {$i=1$};
-  \node[decision] (check) at (0,4.65) {$i<100$};
-
-  \node[process] (addn) at (-2.35,3.25) {$N=N+\dfrac{1}{i}$};
-  \node[process, minimum width=3.55cm] (addt) at (-2.35,1.78) {$T=T+\dfrac{1}{i+1}$};
-  \node[smallprocess, minimum width=2.45cm] (increment) at (-2.35,0.35) {};
-
-  \node[process, minimum width=3.30cm] (sub) at (2.25,3.25) {$S=N-T$};
-  \node[output] (out) at (2.25,1.86) {输出 $S$};
-  \node[startstop] (finish) at (2.25,0.55) {结束};
-
-  % Main vertical path.
-  \draw[->] (start.south) -- (init.north);
-  \draw[->] (init.south) -- (seti.north);
-  % The loop return traverses the horizontal re-entry to its visible endpoint;
-  % the separate arrow after the turn then enters the decision diamond.
-  \coordinate (loopjoin) at (0,5.45);
-  \coordinate (testentry) at (0,5.45);
-  \draw (seti.south) -- (loopjoin);
-
-  % Branches from the decision diamond.
-  \draw[->] (check.west) -- (-2.35,4.65) -- (addn.north)
-    node[pos=0.20, above=1pt] {是};
-  \draw[->] (check.east) -- (2.25,4.65) -- (sub.north)
-    node[pos=0.20, above=1pt] {否};
-
-  % Left loop body and return path.
-  \draw[->] (addn.south) -- (addt.north);
-  \draw[->] (addt.south) -- (increment.north);
-  \draw (increment.west) -- (-4.85,0.35) -- (-4.85,5.10);
-  \draw[->] (-4.85,5.10) -- (testentry);
-  \draw[->] (testentry) -- (check.north);
-
-  % False branch output path.
-  \draw[->] (sub.south) -- (out.north);
-  \draw[->] (out.south) -- (finish.north);
+\begin{tikzpicture}[x=1cm, y=1cm, >=Stealth, line width=0.6pt,
+  st/.style={draw, shape=rectangle, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm, align=center},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2.2cm, minimum height=0.85cm, inner sep=4pt, align=center},
+  pr/.style={draw, minimum width=2.4cm, minimum height=0.85cm, inner sep=4pt, align=center},
+  de/.style={draw, diamond, aspect=2, inner sep=4pt, align=center}]
+\node[st] (start) at (0,0) {\parindent=0pt 开始};
+\node[pr, minimum width=3.6cm] (nt) at (0,-1.6) {\parindent=0pt $N=0,T=0$};
+\node[pr, minimum width=1.8cm] (i1) at (0,-2.8) {\parindent=0pt $i=1$};
+\coordinate (J) at (0,-3.7);
+\node[de, minimum width=3.4cm] (dia) at (0,-5.0) {\parindent=0pt $i<100$};
+\node[pr, minimum width=3.0cm, minimum height=1.3cm] (na) at (-3.1,-6.7) {\parindent=0pt $N=N+\dfrac{1}{i}$};
+\node[pr, minimum width=3.2cm, minimum height=1.4cm] (tb) at (-3.1,-8.65) {\parindent=0pt $T=T+\dfrac{1}{i+1}$};
+\node[pr, minimum width=3.2cm, minimum height=0.9cm] (blank) at (-3.1,-10.35) {};
+\node[pr, minimum width=2.6cm] (ss) at (3.5,-6.7) {\parindent=0pt $S=N-T$};
+\node[io, minimum width=2.4cm] (outs) at (3.5,-8.2) {\parindent=0pt 输出 $S$};
+\node[st] (end) at (3.5,-9.7) {\parindent=0pt 结束};
+\draw[->] (start.south) -- (nt.north);
+\draw[->] (nt.south) -- (i1.north);
+\draw[->] (i1.south) -- (dia.north);
+\draw[->] (dia.west) -- (-3.1,-5.0) node[pos=0.35, above=4pt] {是} -- (na.north);
+\draw[->] (na.south) -- (tb.north);
+\draw[->] (tb.south) -- (blank.north);
+\draw[->] (blank.west) -- (-5.9,-10.35) -- (-5.9,-3.7) -- (J);
+\draw[->] (dia.east) -- (3.5,-5.0) node[pos=0.28, above=4pt] {否} -- (ss.north);
+\draw[->] (ss.south) -- (outs.north);
+\draw[->] (outs.south) -- (end.north);
 \end{tikzpicture}

@@ -1,0 +1,30 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+  solidedge/.style={solid,line width=.6pt},
+  dashededge/.style={dashed,line width=.6pt},
+  pointlabel/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (A) at (0,2.0);
+\coordinate (B) at (2.2,0.5);
+\coordinate (C) at (8.0,0.3);
+\coordinate (D) at (5.8,1.8);
+\coordinate (E) at (2.2,5.2);
+\coordinate (F) at (5.8,4.15);
+\draw[solidedge] (A) -- (E);
+\draw[solidedge] (A) -- (B);
+\draw[solidedge] (E) -- (B);
+\draw[solidedge] (E) -- (C);
+\draw[solidedge] (B) -- (C);
+\draw[solidedge] (F) -- (D);
+\draw[solidedge] (F) -- (C);
+\draw[dashededge] (A) -- (D);
+\coordinate (X) at (4.161702128,3.542699927);
+\draw[dashededge] (A)--(X);
+\draw[solidedge] (X)--(F);
+\draw[dashededge] (A) -- (C);
+\draw[dashededge] (C) -- (D);
+\node[pointlabel,left=2pt] at (A) {$A$};
+\node[pointlabel,below=2pt] at (B) {$B$};
+\node[pointlabel,below right=2pt] at (C) {$C$};
+\node[pointlabel,below=2pt] at (D) {$D$};
+\node[pointlabel,above=2pt] at (E) {$E$};
+\node[pointlabel,above=2pt] at (F) {$F$};
+\end{tikzpicture}

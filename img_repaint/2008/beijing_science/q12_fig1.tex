@@ -1,0 +1,17 @@
+% source_constraints: exact data from stem: A(0,4), B(2,0), C(6,4);
+% light-gray 1-unit grid over [0,6]x[0,4]; x ticks 1..6 below axis,
+% y ticks 1..4 left of axis; O below-left of origin; labels A above-right
+% of (0,4), B above-right of (2,0), C right of (6,4); solid polyline
+% A-B-C drawn in order; axes arrows pass half unit beyond last tick.
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\draw[step=1cm,gray!55,line width=.35pt] (0,0) grid (6,4);
+\draw[->] (-0.5,0)--(6.5,0) node[below right] {$x$};
+\draw[->] (0,-0.5)--(0,4.5) node[left] {$y$};
+\node[below left] at (0,0) {$O$};
+\foreach \x in {1,2,3,4,5,6} \node[below] at (\x,0) {$\x$};
+\foreach \y in {1,2,3,4} \node[left] at (0,\y) {$\y$};
+\draw (0,4)--(2,0)--(6,4);
+\node[above right] at (0,4) {$A$};
+\node[above right] at (2,0) {$B$};
+\node[right] at (6,4) {$C$};
+\end{tikzpicture}

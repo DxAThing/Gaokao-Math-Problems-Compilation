@@ -1,59 +1,40 @@
-% original_pdf: source/普通高考/2017/2017全国3文(云南,广西,贵州,四川,西藏).pdf
-% page: 1; embedded bitmap attempt: pdfimages/mutool extraction found no image objects (vector flowchart)
-% evidence: tmp/redraw_flowchart_2017_national_paper_3_liberal/source/page1.png (180 dpi, no grid)
-% elements: rounded start/end terminals; input/output parallelograms; initialization,
-% accumulation, M-update and t-update process rectangles; t<=N decision diamond;
-% loop-back connector and branch labels 是/否.
-% relations: top-to-bottom main flow; 是 continues through S=S+M, M=-M/10,
-% t=t+1; the loop returns from t=t+1 to the decision test; 否 goes to 输出S then 结束.
-% node -> directed edge list from the source: 开始->输入N, 输入N->(t=1,M=100,S=0),
-% init->(t<=N), (t<=N)-是->(S=S+M), (S=S+M)->(M=-M/10),
-% (M=-M/10)->(t=t+1), (t=t+1)->(t<=N), (t<=N)-否->输出S, 输出S->结束.
-% solid segments: every box outline and connector; dashed segments: none.
-% labels: formulas centered in boxes; 是 below the decision, 否 on the upper-right
-% branch; loop connector stays left of the main column to preserve the source topology.
-\begin{tikzpicture}[x=1cm,y=1cm,>=stealth,line width=0.55pt,
-  line cap=round,line join=round,
-  every node/.append style={anchor=center,align=center,
-    execute at begin node=\setlength{\parindent}{0pt}}]
-  % Main vertical flow.
-  \node[draw,rounded corners=0.16cm,minimum width=1.30cm,minimum height=0.64cm,
-    inner sep=0pt] (start) at (0,10.80) {开始};
-  \node[draw,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
-    minimum width=1.76cm,minimum height=0.70cm,inner sep=0pt] (input) at (0,9.48)
-    {输入 $N$};
-  \node[draw,minimum width=2.80cm,minimum height=0.70cm,inner xsep=2pt,inner ysep=0pt] (init)
-    at (0,8.18) {$t=1,M=100,S=0$};
-  \node[draw,diamond,aspect=2.65,minimum width=2.68cm,minimum height=0.82cm,
-    inner sep=0pt] (test) at (0,6.73) {$t\leq N$};
-  \node[draw,minimum width=1.98cm,minimum height=0.70cm,inner sep=0pt] (sum)
-    at (0,5.40) {$S=S+M$};
-  \node[draw,minimum width=1.82cm,minimum height=1.00cm,inner sep=0pt] (update)
-    at (0,3.96) {$M=-\dfrac{M}{10}$};
-  \node[draw,minimum width=1.82cm,minimum height=0.70cm,inner sep=0pt] (increment)
-    at (0,2.57) {$t=t+1$};
-  \node[draw,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
-    minimum width=1.82cm,minimum height=0.70cm,inner sep=0pt] (output) at (2.52,5.40)
-    {输出 $S$};
-  \node[draw,rounded corners=0.16cm,minimum width=1.30cm,minimum height=0.64cm,
-    inner sep=0pt] (finish) at (2.52,4.06) {结束};
+% 2017_national_paper_3_liberal_q8_fig1 首稿（与理科 q7 同构）。
+% 节点清单：开始 / 输入 N / t=1,M=100,S=0 / t≤N 菱形 / S=S+M /
+%   M=-M/10(分式) / t=t+1 / 输出 S / 结束。
+% 有向边：开始→输入→初值→J→菱形；菱形是(下)→S=S+M→M→t=t+1；
+%   t=t+1→(左侧大回环)→J；菱形否(右)→输出 S 顶部；输出→结束。
+\begin{tikzpicture}[x=1cm,y=1cm]
+\tikzset{
+  flownode/.style={draw, line width=0.6pt, align=center, inner sep=3pt,
+    execute at begin node={\setlength{\parindent}{0pt}}},
+  st/.style={flownode, shape=rectangle, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm},
+  io/.style={flownode, trapezium, trapezium left angle=68, trapezium right angle=112,
+    minimum width=3.0cm, minimum height=1.0cm},
+  pr/.style={flownode, minimum width=3.0cm, minimum height=1.0cm},
+  dc/.style={flownode, diamond, aspect=2, minimum width=3.4cm, inner sep=2pt},
+  fe/.style={draw, line width=0.6pt, -{Stealth[length=2.8mm,width=2.2mm]}},
+  fl/.style={draw, line width=0.6pt}
+}
+\node[st] (st0) at (0,0) {开始};
+\node[io] (ioN) at (0,-1.75) {输入 $N$};
+\node[pr,minimum width=6.0cm] (prT) at (0,-3.4) {$t=1,M=100,S=0$};
+\coordinate (J) at (0,-4.5);
+\node[dc,minimum width=3.6cm] (dcT) at (0,-5.9) {$t\leqslant N$};
+\node[pr,minimum width=3.4cm] (prSM) at (0,-8.05) {$S=S+M$};
+\node[pr,minimum width=3.4cm,minimum height=1.7cm] (prM) at (0,-9.9) {$M=-\dfrac{M}{10}$};
+\node[pr,minimum width=2.8cm] (prT1) at (0,-12.0) {$t=t+1$};
+\node[io,minimum width=3.0cm] (ioS) at (4.0,-7.9) {输出 $S$};
+\node[st] (stE) at (4.0,-9.4) {结束};
+\draw[fe] (st0.south) -- (ioN.north);
+\draw[fe] (ioN.south) -- (prT.north);
+\draw[fe] (prT.south) -- (J) -- (dcT.north);
 
-  \draw[->] (start.south) -- (input.north);
-  \draw[->] (input.south) -- (init.north);
-  \draw[->] (init.south) -- (test.north);
-  \draw[->] (test.south) -- (sum.north);
-  \draw[->] (sum.south) -- (update.north);
-  \draw[->] (update.south) -- (increment.north);
-    % Split the final vertical leg far enough before the arrowhead to leave
-    % a visible shaft after the turn into 输出 S.
-    \draw[->] (test.east) -- (2.52,6.73) -- (2.52,6.10) -- (output.north);
-  \draw[->] (output.south) -- (finish.north);
-
-  % Loop-back arrow from t=t+1 to the decision test.
-  % Keep the loop entry below the initialization box (>=2.5 mm clear).
-  \draw[->] (increment.west) -- (-2.55,2.57) -- (-2.55,7.48) -- (0,7.48);
-  \node[anchor=west,inner sep=0pt] at (0.20,6.10) {是};
-  \node[anchor=west,inner sep=0pt] at (1.55,7.10) {否};
-  % Preserve a small, even white margin around the outer loop and terminals.
-  \path[use as bounding box] (-2.80,11.20) rectangle (3.00,3.50);
+\draw[fe] (dcT.south) -- (prSM.north);
+\node[right=1.5mm,xshift=-0.4813mm,yshift=0.0238mm] at (0,-7.17) {是};
+\draw[fe] (prSM.south) -- (prM.north);
+\draw[fe] (prM.south) -- (prT1.north);
+\draw[fe] (dcT.east) -- (4.0,-5.9) -- (ioS.north);
+\node[above=2mm,xshift=0.1053mm,yshift=-0.7978mm] at (2.3,-5.9) {否};
+\draw[fe] (ioS.south) -- (stE.north);
+\draw[fe] (prT1.west) -- (-4.9,-12.0) -- (-4.9,-4.5) -- (J);
 \end{tikzpicture}

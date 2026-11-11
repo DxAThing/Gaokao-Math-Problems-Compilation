@@ -1,0 +1,56 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,
+  geometry edge/.style={solid,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=2pt}]
+% left panel: planar right-trapezoid + rectangle BCDE, triangle ADE
+\coordinate (A) at (-2.2,0);
+\coordinate (E) at (0,0);
+\coordinate (B) at (2,0);
+\coordinate (D) at (0,1.6);
+\coordinate (C) at (2,1.6);
+\coordinate (M) at (-1.1,0.8);
+\coordinate (N) at (2,0.8);
+\draw[geometry edge] (A)--(B);
+\draw[geometry edge] (B)--(C);
+\draw[geometry edge] (C)--(D);
+\draw[geometry edge] (D)--(E);
+\draw[geometry edge] (E)--(B);
+\draw[geometry edge] (A)--(D);
+\fill (M) circle (1.5pt);
+\fill (N) circle (1.5pt);
+\node[geometry label,below left=2pt] at (A) {$A$};
+\node[geometry label,below=4pt] at (E) {$E$};
+\node[geometry label,below right=2pt] at (B) {$B$};
+\node[geometry label,above left=2pt] at (D) {$D$};
+\node[geometry label,above right=2pt] at (C) {$C$};
+\node[geometry label,above left=3pt] at (M) {$M$};
+\node[geometry label,right=4pt] at (N) {$N$};
+% right panel: folded schematic (shifted +6 in x)
+\coordinate (RE) at (5.2,0);
+\coordinate (RB) at (7.2,0);
+\coordinate (RD) at (6.0,0.6);
+\coordinate (RC) at (8.0,0.6);
+\coordinate (RA) at (7.8,2.6);
+\coordinate (RM) at (6.9,1.6);
+\coordinate (RN) at (7.6,0.3);
+\draw[geometry edge] (RE)--(RB);
+\draw[geometry edge] (RE)--(RD);
+\draw[geometry edge] (RD)--(RC);
+\draw[geometry edge] (RC)--(RB);
+\draw[geometry edge] (RA)--(RE);
+\draw[geometry edge] (RA)--(RD);
+\draw[geometry edge] (RE)--(RM);
+\draw[geometry edge] (RM)--(RN);
+\fill (RM) circle (1.2pt);
+\fill (RN) circle (1.2pt);
+\fill (RE) circle (1pt);
+\fill (RD) circle (1pt);
+\fill (RB) circle (1pt);
+\fill (RC) circle (1pt);
+\node[geometry label,below left=2pt] at (RE) {$E$};
+\node[geometry label,below right=2pt] at (RB) {$B$};
+\node[geometry label,above left=2pt] at (RD) {$D$};
+\node[geometry label,right=4pt] at (RC) {$C$};
+\node[geometry label,above right=2pt] at (RA) {$A$};
+\node[geometry label,above left=3pt] at (RM) {$M$};
+\node[geometry label,below right=2pt] at (RN) {$N$};
+\end{tikzpicture}

@@ -1,48 +1,38 @@
-% Source: source/普通高考/2017/2017天津理.pdf, page 1, question 3.
-% Topology: start -> 输入 N -> N能被3整除?; 是 -> N=N/3, 否 -> N=N-1;
-% both -> N<=3?; 否 loops to the first test, 是 -> 输出 N -> 结束.
-\begin{tikzpicture}[
-  x=1cm, y=0.88cm, >=Stealth,
-  line width=0.45pt, line cap=round, line join=round,
-  every node/.style={anchor=center, align=center,
-    execute at begin node={\setlength{\parindent}{0pt}\noindent}},
-  flowbox/.style={draw, minimum height=0.70cm, inner xsep=4pt, inner ysep=2pt,
-    align=center, execute at begin node={\setlength{\parindent}{0pt}\noindent}},
-  terminal/.style={flowbox, rounded corners=0.16cm, minimum width=1.30cm,
-    minimum height=0.72cm},
-  io/.style={flowbox, trapezium, trapezium left angle=72, trapezium right angle=108,
-    minimum width=2.45cm, minimum height=0.78cm},
-  process/.style={flowbox, minimum width=3.05cm},
-  decision/.style={flowbox, diamond, aspect=3.0, minimum width=4.35cm,
-    minimum height=1.00cm, inner sep=1pt},
-  branchlabel/.style={anchor=center, align=center, inner sep=0pt,
-    execute at begin node={\setlength{\parindent}{0pt}\noindent}}
-]
-  \node[terminal] (start) at (0,12.0) {开始};
-  \node[io] (input) at (0,10.55) {输入 $N$};
-  \node[decision, minimum width=5.10cm] (test1) at (0,8.80) {$N\text{ 能被 }3\text{ 整除?}$};
-  \node[process, minimum width=2.55cm] (divide) at (0,6.55) {$N=\dfrac{N}{3}$};
-  \node[process, minimum width=3.35cm] (minus) at (4.00,6.55) {$N=N-1$};
-  \node[decision, minimum width=3.95cm] (test2) at (0,4.25) {$N\leqslant 3?$};
-  \node[io] (output) at (0,2.65) {输出 $N$};
-  \node[terminal] (finish) at (0,1.20) {结束};
-
-  \draw[->] (start.south) -- (input.north);
-  \coordinate (join1) at (0,9.35);
-  \draw (input.south) -- (join1);
-  \draw[->] (join1) -- (test1.north);
-  \draw[->] (test1.south) -- node[branchlabel, right=2pt] {是} (divide.north);
-  \draw (divide.south) -- (0,5.55);
-  \draw[->] (test1.east) -- node[branchlabel, above=2pt] {否} (4.00,8.80) -- (minus.north);
-  \draw (minus.south) -- (4.00,5.55);
-  \coordinate (join2) at (0,5.55);
-  \draw[->] (4.00,5.55) -- (join2);
-  \draw[->] (join2) -- (test2.north);
-  \draw[->] (test2.south) -- node[branchlabel, right=2pt] {是} (output.north);
-  \draw[->] (output.south) -- (finish.north);
-
-  \coordinate (loopLeft) at (-4.20,4.25);
-  \coordinate (loopTop) at (-4.20,9.35);
-  \draw (test2.west) -- node[branchlabel, above=2pt] {否} (loopLeft) -- (loopTop);
-  \draw[->] (loopTop) -- (join1);
+\parindent=0pt
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth]
+\tikzset{
+		flowstart/.style={draw, shape=rectangle, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm, align=center, line width=0.5pt},
+		flowproc/.style={draw, rectangle, minimum height=0.9cm, align=center, inner sep=3pt, line width=0.5pt},
+		flowdec/.style={draw, diamond, aspect=2.6, align=center, inner sep=3pt, line width=0.5pt},
+		flowio/.style={draw, trapezium, trapezium left angle=75, trapezium right angle=105, minimum height=0.9cm, align=center, inner sep=3pt, line width=0.5pt},
+		flowarrow/.style={-{Stealth[length=2.2mm]}, line width=0.5pt},
+		flowline/.style={line width=0.5pt}
+	}
+	\node[flowstart] (nStart) at (0,0) {开始};
+	\node[flowio, minimum width=3.2cm] (nInput) at (0,-1.6) {输入~$N$};
+	\node[flowdec, minimum width=6.0cm, minimum height=1.8cm] (nDiv) at (0,-3.9) {$N$能被$3$整除$?$};
+	\node[flowproc, minimum width=3.0cm, minimum height=1.3cm] (nDiv3) at (0,-6.3) {$N=\dfrac{N}{3}$};
+	\node[flowproc, minimum width=3.0cm] (nMinus) at (4.2,-6.3) {$N=N-1$};
+	\node[flowdec, minimum width=4.6cm, minimum height=1.8cm] (nLe) at (0,-8.8) {$N\leqslant 3?$};
+	\node[flowio, minimum width=3.2cm] (nOut) at (0,-10.9) {输出~$N$};
+	\node[flowstart] (nEnd) at (0,-12.4) {结束};
+	\coordinate (Jlow) at (0,-7.4);
+	\coordinate (Jup) at (0,-2.52);
+	\coordinate (TurnNo1) at (4.2,-3.9);
+	\coordinate (TurnLow) at (4.2,-7.4);
+	\coordinate (TurnFarL1) at (-4.8,-8.8);
+	\coordinate (TurnFarL2) at (-4.8,-2.52);
+	\draw[flowarrow] (nStart.south) -- (nInput.north);
+	\draw[flowarrow] (nInput.south) -- (nDiv.north);
+	\draw[flowarrow] (nDiv.south) -- (nDiv3.north);
+	\path (nDiv.south) -- (nDiv3.north) node[pos=0.5,right=4pt]{是};
+	\draw[flowarrow] (nDiv.east) -- (TurnNo1) -- (nMinus.north);
+	\path (nDiv.east) -- (TurnNo1) node[pos=0.4,above=4pt]{否};
+	\draw[flowarrow] (nDiv3.south) -- (Jlow) -- (nLe.north);
+	\draw[flowarrow] (nMinus.south) -- (TurnLow) -- (Jlow);
+	\draw[flowarrow] (nLe.west) -- (TurnFarL1) -- (TurnFarL2) -- (Jup);
+	\path (nLe.west) -- (TurnFarL1) node[pos=0.2,above=4pt]{否};
+	\draw[flowarrow] (nLe.south) -- (nOut.north);
+	\path (nLe.south) -- (nOut.north) node[pos=0.5,right=4pt]{是};
+	\draw[flowarrow] (nOut.south) -- (nEnd.north);
 \end{tikzpicture}

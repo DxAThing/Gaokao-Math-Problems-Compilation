@@ -1,53 +1,38 @@
-% Source: source/普通高考/2009/2009辽宁理.pdf, question 10.
-% Topology: 开始→输入→k=1,S=0,T=0→A=a_k→空白判断；否→T=T+A；是→S=S+A；两支汇合→k<N?；是→k=k+1→回到 A=a_k；否→空白处理→输出S,V→结束。
-\begin{tikzpicture}[
-  >=Stealth,
-  x=1cm,y=0.82cm,
-  line width=0.45pt,line cap=round,line join=round,
-  font=\normalsize,
-  flowtext/.style={anchor=center,align=center,inner sep=0pt,
-    execute at begin node={\everypar{}\setlength{\parindent}{0pt}\noindent}},
-  every node/.style={flowtext},
-  flowbox/.style={flowtext,draw,minimum height=0.70cm,inner xsep=4pt,inner ysep=2pt},
-  terminal/.style={flowbox,rounded corners=0.18cm,minimum width=1.40cm,minimum height=0.78cm},
-  io/.style={flowbox,shape=trapezium,trapezium left angle=72,trapezium right angle=108,
-    minimum height=0.84cm},
-  decision/.style={flowbox,diamond,aspect=2.9,minimum width=4.25cm,minimum height=1.08cm,inner sep=1pt},
-  branchlabel/.style={flowtext,inner sep=0pt},
-]
-  \path[use as bounding box] (-4.60,-0.70) rectangle (6.50,13.10);
-  \node[terminal] (start) at (0,12.65) {开始};
-  \node[io,minimum width=5.80cm] (input) at (0,11.25)
-    {输入 $N$，$a_{1}$，$a_{2}$，$\cdots$，$a_{N}$};
-  \node[flowbox,minimum width=4.70cm] (init) at (0,10.00)
-    {$k=1$，$S=0$，$T=0$};
-  \node[flowbox,minimum width=1.95cm] (assign) at (0,8.15) {$A=a_{k}$};
-  \node[decision] (testA) at (0,6.70) {};
-  \node[flowbox,minimum width=2.70cm] (addT) at (-2.85,5.25) {$T=T+A$};
-  \node[flowbox,minimum width=2.70cm] (addS) at (2.85,5.25) {$S=S+A$};
-  \node[decision] (testK) at (0,3.65) {$k<N$};
-  \node[flowbox,minimum width=2.80cm] (blank) at (0,2.35) {};
-  \node[io,minimum width=3.20cm] (output) at (0,1.10) {输出 $S$，$V$};
-  \node[terminal] (finish) at (0,-0.20) {结束};
-  \node[flowbox,minimum width=2.85cm] (inc) at (4.90,7.05) {$k=k+1$};
-  \coordinate (assignin) at (0,8.90);
-
-  \draw[->] (start.south) -- (input.north);
-  \draw[->] (input.south) -- (init.north);
-  \draw (init.south) -- (assignin);
-  \draw[->] (assign.south) -- (testA.north);
-  \draw[->] (testA.west) -- node[pos=0.25,branchlabel,above=4pt] {否}
-    (-2.85,6.70) -- (addT.north);
-  \draw[->] (testA.east) -- node[pos=0.25,branchlabel,above=5pt] {是}
-    (2.85,6.70) -- (addS.north);
-  \draw (addT.south) -- (-2.85,4.65) -- (0,4.65);
-  \draw (addS.south) -- (2.85,4.65) -- (0,4.65);
-  \draw[->] (0,4.65) -- (testK.north);
-  \draw[->] (testK.south) -- node[branchlabel,right=3pt] {否} (blank.north);
-  \draw[->] (blank.south) -- (output.north);
-  \draw[->] (output.south) -- (finish.north);
-  \draw (testK.east) -- node[branchlabel,above=5pt] {是} (4.90,3.65);
-  \draw[->] (4.90,3.65) -- (4.90,6.70);
-  \draw (inc.north) -- (4.90,9.20) -- (0,9.20) -- (assignin);
-  \draw[->] (assignin) -- (assign.north);
+\begin{tikzpicture}[x=1cm,y=1cm,
+  proc/.style={draw, rectangle, line width=0.6pt, inner sep=6pt, minimum height=0.9cm, minimum width=2.6cm, align=center, fill=white, execute at begin node={\parindent=0pt\centering}},
+  pempty/.style={draw, rectangle, line width=0.6pt, inner sep=6pt, minimum height=0.9cm, minimum width=4.2cm, align=center, fill=white, execute at begin node={\parindent=0pt\centering}},
+  start/.style={draw, shape=rectangle, rounded corners=1.5mm, minimum width=26mm, minimum height=10mm, inner xsep=3mm, inner ysep=1.5mm, line width=0.6pt, align=center, fill=white, execute at begin node={\parindent=0pt\centering}},
+  io/.style={draw, trapezium, trapezium left angle=70, trapezium right angle=110, line width=0.6pt, inner sep=6pt, minimum height=0.9cm, minimum width=2.8cm, align=center, fill=white, execute at begin node={\parindent=0pt\centering}},
+  dec/.style={draw, diamond, line width=0.6pt, inner sep=6pt, align=center, fill=white, aspect=2.4, execute at begin node={\parindent=0pt\centering}},
+  arr/.style={-{Stealth[length=2.6mm,width=2mm]}, line width=0.6pt}]
+  \node[start] (nStart) at (0,0) {开始};
+  \node[io, minimum width=6.6cm] (nIn) at (0,-1.6) {输入 $N,a_{1},a_{2},\cdots,a_{N}$};
+  \node[proc, minimum width=5.0cm] (nInit) at (0,-3.2) {$k=1,S=0,T=0$};
+  \coordinate (J1) at (0,-4.0);
+  \node[proc] (nA) at (0,-5.0) {$A=a_{k}$};
+  \node[dec, minimum width=4.6cm, minimum height=1.4cm] (nD1) at (0,-6.6) {};
+  \node[proc] (nT) at (-4.4,-8.4) {$T=T+A$};
+  \node[proc] (nS) at (4.4,-8.4) {$S=S+A$};
+  \coordinate (JM) at (0,-9.6);
+  \node[dec, minimum width=4.0cm, minimum height=1.4cm] (nD2) at (0,-10.9) {$k<N$};
+  \node[pempty] (nBlank) at (0,-13.0) {};
+  \node[io] (nOut) at (0,-14.5) {输出 $S,V$};
+  \node[start] (nEnd) at (0,-16.1) {结束};
+  \node[proc] (nK) at (6.6,-5.2) {$k=k+1$};
+  \draw[arr] (nStart.south) -- (nIn.north);
+  \draw[arr] (nIn.south) -- (nInit.north);
+  \draw[arr] (nInit.south) -- (nA.north);
+  \draw[arr] (nA.south) -- (nD1.north);
+  % 上菱形左右分支(条件在原裁图中不可辨读,留空并记remaining)
+  \draw[arr] (nD1.west) -- node[pos=0.18,above=1mm] {否} (-4.4,-6.6) -- (nT.north);
+  \draw[arr] (nD1.east) -- node[pos=0.18,above=1mm] {是} (4.4,-6.6) -- (nS.north);
+  % 左右汇入:左支带主干继续向下,右支以水平箭头汇入
+  \draw[arr] (nT.south) -- (-4.4,-9.6) -- (JM) -- (nD2.north);
+  \draw[arr,-] (nS.south) -- (4.4,-9.6) -- (JM);
+  \draw[arr] (nD2.south) -- node[pos=0.3,right=1mm] {否} (nBlank.north);
+  \draw[arr] (nBlank.south) -- (nOut.north);
+  \draw[arr] (nOut.south) -- (nEnd.north);
+  % k<N 是分支经 k=k+1 回环
+  \draw[arr] (nD2.east) -- node[pos=0.06,above=1mm] {是} (6.6,-10.9) -- (nK.south);
+  \draw[arr] (nK.north) -- (6.6,-4.0) -- (J1);
 \end{tikzpicture}

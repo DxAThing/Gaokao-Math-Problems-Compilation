@@ -1,0 +1,36 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  geometry edge/.style={solid,line width=.6pt},
+  geometry label/.style={font=\normalsize,inner sep=2pt}]
+% axes
+\draw[->,line width=.6pt] (-1.5,0)--(4.2,0) node[right,xshift=0pt] {$x$};
+\draw[->,line width=.6pt] (0,-2.4)--(0,2.9) node[above,yshift=0pt] {$y$};
+\foreach \x in {-1,1,2,3} {\draw[line width=.6pt] (\x,0.06)--(\x,-0.06);}
+\foreach \y in {-2,-1,1,2} {\draw[line width=.6pt] (0.06,\y)--(-0.06,\y);}
+\node[geometry label,below,yshift=0pt] at (-1,0) {$-1$};
+\node[geometry label,below,yshift=0pt] at (1,0) {$1$};
+\node[geometry label,below,yshift=0pt] at (2,0) {$2$};
+\node[geometry label,below,yshift=0pt] at (3,0) {$3$};
+\node[geometry label,left,xshift=0pt] at (0,1) {$1$};
+\node[geometry label,left,xshift=0pt] at (0,2) {$2$};
+\node[geometry label,left,xshift=0pt] at (0,-1) {$-1$};
+\node[geometry label,left,xshift=0pt] at (0,-2) {$-2$};
+\node[geometry label,below left,xshift=1pt,yshift=-11pt] at (0,0) {$O$};
+% circle (x-2)^2+y^2=3
+\draw[geometry edge] (2,0) circle (1.732cm);
+% parabola y^2=p x, p=(7-sqrt(17))/2, upper and lower branches
+\draw[geometry edge,domain=0:3.4,samples=80] plot (\x,{sqrt(1.438447187191*\x)});
+\draw[geometry edge,domain=0:3.4,samples=80] plot (\x,{-sqrt(1.438447187191*\x)});
+% line y=x
+\draw[geometry edge,domain=-1:2.7,samples=2] plot (\x,{\x});
+% chord AB
+\coordinate (A) at (0.4805338162,0.8313979289);
+\coordinate (B) at (2.0810189966,1.7301548839);
+\coordinate (M) at (1.2807764064,1.2807764064);
+\draw[geometry edge] (A)--(B);
+\fill (A) circle (1.5pt);
+\fill (B) circle (1.5pt);
+\fill (M) circle (1.5pt);
+\node[geometry label,left,xshift=1pt,yshift=5pt] at (A) {$A$};
+\node[geometry label,above right,xshift=9pt,yshift=7pt] at (B) {$B$};
+\node[geometry label,below right,xshift=0pt,yshift=0pt] at (M) {$M$};
+\end{tikzpicture}

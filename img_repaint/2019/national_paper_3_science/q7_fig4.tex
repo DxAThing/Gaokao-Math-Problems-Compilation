@@ -1,0 +1,11 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=0.6cm,y=0.6cm,line width=.6pt,>=Stealth]
+\draw[->] (-6.6,0)--(6.6,0) node[right,inner sep=0pt] {$x$};
+\draw[->] (0,-8.8)--(0,8.8) node[above,inner sep=0pt] {$y$};
+\draw (4,-0.6)--(4,0.6);
+\draw (-0.6,8)--(0.6,8);
+\node[below,inner sep=1pt] at (4,-0.7) {$4$};
+\node[left,inner sep=1pt] at (-0.6,8) {$8$};
+\node[below left,inner sep=1pt] at (0,0) {$O$};
+\draw[domain=-6:6,samples=241] plot (\x,{-2*pow(\x,3)/(pow(2,\x)+pow(2,-\x))});
+\end{tikzpicture}

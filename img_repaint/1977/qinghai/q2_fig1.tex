@@ -1,0 +1,21 @@
+\usetikzlibrary{angles,quotes}
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+\coordinate (O) at (0,0);
+\coordinate (A) at (-2,0);
+\coordinate (B) at (2,0);
+\coordinate (C) at (-2,4);
+\coordinate (D) at (0,2);
+\draw (O) circle[radius=2cm];
+\draw (A)--(B)--(C)--cycle;
+\draw[dashed] (A)--(D);
+\draw (B)+(180:7mm) arc[start angle=180,end angle=135,radius=7mm];
+\node at (0.98,0.42) {$45^\circ$};
+\node[below left=2pt,inner sep=0pt] at (A) {$A$};
+\node[below=2pt,inner sep=0pt] at (O) {$O$};
+\node[right=2pt,inner sep=0pt] at (B) {$B$};
+\node[above=2pt,inner sep=0pt] at (C) {$C$};
+\node[above right=2pt,inner sep=0pt] at (D) {$D$};
+
+% Explicit named circle-center points, painted after all region fills.
+\fill (O) circle[radius=1.4pt];
+\end{tikzpicture}

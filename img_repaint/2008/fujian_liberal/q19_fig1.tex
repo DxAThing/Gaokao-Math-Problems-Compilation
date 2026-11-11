@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth,
+  geom/.style={solid,line width=.6pt},
+  lbl/.style={font=\normalsize,inner sep=2pt}]
+\coordinate (P) at (3.6000000000,5.0000000000);
+\coordinate (O) at (3.6000000000,2.0000000000);
+\coordinate (A) at (0.60,2.00);
+\coordinate (D) at (6.60,2.00);
+\coordinate (B) at (0.00,0.00);
+\coordinate (C) at (3.0000000000,0.0000000000);
+% base
+\draw[geom,dashed] (A)--(D);
+\draw[geom] (A)--(B)--(C)--(D);
+% lateral edges
+\draw[geom] (P)--(A);
+\draw[geom] (P)--(B);
+\draw[geom] (P)--(C);
+\draw[geom] (P)--(D);
+\draw[geom,dashed] (P)--(O);
+% labels with clearance
+\node[lbl,above] at (P) {$P$};
+\node[lbl,left] at (A) {$A$};
+\node[lbl,below left] at (B) {$B$};
+\node[lbl,below] at (C) {$C$};
+\node[lbl,right] at (D) {$D$};
+\node[lbl,below right,xshift=1pt,yshift=-1pt] at (O) {$O$};
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+% 三视图: 2014新课标2理6 — 网格纸(小格边长1)上主/左/俯; 左主=左4x4矩形+右2x6矩形, 中左=同心圆R3/R2, 右俯同主
+% 点修：三视图改为横向并排（正视图、侧视图、俯视图），图名居中、基线对齐；投影边线/网格步长/线宽未动
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=0.5cm,y=0.5cm]
+% 背景方格: 浅灰细线, 覆盖横向并排后的三视图范围
+\draw[step=1,very thin,gray!60] (0,-2) grid (23,7);
+% 正视图(左): 左矩形4x4 + 右矩形2x6, 相邻拼接
+\begin{scope}[shift={(1,2)}]
+  \draw[line width=.9pt] (0,-1) rectangle (4,3);
+  \draw[line width=.9pt] (4,-2) rectangle (6,4);
+  \node[below,fill=white,inner sep=2pt] at (3,-2.8) {正视图};
+\end{scope}
+% 侧视图(中, 左视图): 同心圆, 外半径3, 内半径2, 圆心与两侧视图竖向居中对齐
+\begin{scope}[shift={(11,3)}]
+  \draw[line width=.9pt] (0,0) circle (3);
+  \draw[line width=.9pt] (0,0) circle (2);
+  \node[below,fill=white,inner sep=2pt] at (0,-3.8) {侧视图};
+\end{scope}
+% 俯视图(右): 与正视图同形同尺寸
+\begin{scope}[shift={(16,2)}]
+  \draw[line width=.9pt] (0,-1) rectangle (4,3);
+  \draw[line width=.9pt] (4,-2) rectangle (6,4);
+  \node[below,fill=white,inner sep=2pt] at (3,-2.8) {俯视图};
+\end{scope}
+\end{tikzpicture}

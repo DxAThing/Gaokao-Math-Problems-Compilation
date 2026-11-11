@@ -1,0 +1,17 @@
+\usetikzlibrary{arrows.meta,calc}
+\begin{tikzpicture}[x=0.9cm,y=0.9cm,line width=.6pt,>=stealth]
+\draw[->] (-0.9,0)--(7.9,0) node[right,inner sep=0pt,xshift=2pt] {$x$};
+\draw[->] (0,-1.7)--(0,2.1) node[above,inner sep=0pt,yshift=2pt] {$y$};
+\draw[domain=-0.8:6.6,samples=600] plot (\x,{cos(deg(4*\x-4))});
+\draw (3.1415927,-0.07)--(3.1415927,0.07);
+\draw (6.2831853,-0.07)--(6.2831853,0.07);
+\draw (-0.07,1)--(0.07,1);
+\draw (-0.07,-1)--(0.07,-1);
+\node[above right,inner sep=0pt,xshift=2pt,yshift=2pt] at (0,0) {$O$};
+\node[above left,inner sep=0pt,xshift=-2pt,yshift=2pt] at (0.07,1) {$1$};
+\node[below left,inner sep=0pt,xshift=-2pt,yshift=-2pt] at (0.07,-1) {$-1$};
+\node[above right,inner sep=0pt,xshift=2pt,yshift=2pt] at (3.1415927,0) {$\pi$};
+\node[above right,inner sep=0pt,xshift=2pt,yshift=2pt] at (6.2831853,0) {$2\pi$};
+\node[anchor=west,inner sep=0pt] (LEADERLABEL) at (1.9,1.7) {$1-\frac{\pi}{8}$};
+\draw[->,line width=.45pt] (LEADERLABEL)--(0.6073009,0.02);
+\end{tikzpicture}

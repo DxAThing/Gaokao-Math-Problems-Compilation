@@ -1,0 +1,14 @@
+\usetikzlibrary{arrows.meta}
+\begin{tikzpicture}[x=1.8cm,y=1.55cm,line width=.6pt,>=Stealth,font=\normalsize]
+\def\fQ{-2*\x*(\x+1)*(\x-0.9)}
+\draw[->] (-1.55,0)--(1.55,0) node[right,inner sep=2pt] {$x$};
+\draw[->] (0,-2.0)--(0,2.2) node[above,inner sep=2pt] {$y$};
+\draw (-1,0)--(-1,.06);
+\draw (1,0)--(1,.06);
+\draw (-.06,1)--(0,1);
+\node[below left,inner sep=2pt,yshift=-4pt] at (-1,-.06) {$-1$};
+\node[above right,inner sep=3pt] at (1,0) {$1$};
+\node[left=4pt,inner sep=1pt] at (-.06,1) {$1$};
+\node[above left,inner sep=3pt] at (0,0) {$O$};
+\draw[domain=-1.33:1.25,samples=700] plot (\x,{\fQ});
+\end{tikzpicture}

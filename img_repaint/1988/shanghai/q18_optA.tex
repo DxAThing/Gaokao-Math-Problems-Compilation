@@ -1,0 +1,15 @@
+\begin{tikzpicture}[x=1cm,y=1cm,line width=.6pt,font=\normalsize,>=Stealth]
+% axes
+\draw[->] (-2.2,0) -- (3.2,0) node[right,xshift=4pt] {$x$};
+\draw[->] (0,-1.6) -- (0,2.8) node[above,yshift=4pt] {$y$};
+\node[below left,xshift=-3pt,yshift=-3pt] at (0,0) {$O$};
+% y tick at 1
+\draw (0,1) -- (-0.09,1);
+\node[left,xshift=-4pt] at (0,1) {$1$};
+% line with intercept below the unit mark
+\draw[solid] (-1.7,-1) -- (1.5,2.2);
+\node[above right,xshift=5pt,yshift=5pt] at (1.5,2.2) {$y=x+a$};
+% log curve y=log_{2.2}(x), crosses (1,0), concave down
+\draw[solid,domain=0.18:2.9,samples=120] plot (\x,{ln(\x)/ln(2.2)});
+\node[right,xshift=5pt,yshift=4pt] at (2.9,{ln(2.9)/ln(2.2)}) {$y=\log_{a}x$};
+\end{tikzpicture}

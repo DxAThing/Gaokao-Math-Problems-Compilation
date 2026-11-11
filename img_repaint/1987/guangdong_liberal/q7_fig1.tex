@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=1cm,y=1cm,font=\normalsize,line width=.6pt,>=Stealth,
+  solid edge/.style={solid,line width=.6pt},
+  hidden edge/.style={dashed,line width=.6pt}]
+\coordinate (C) at (0,0);
+\coordinate (A) at (4.5,0);
+\coordinate (B) at (2.8,1.1);
+\coordinate (C1) at (1.484,2.59);
+\coordinate (A1) at (3.6,2.59);
+\coordinate (B1) at (2.8,3.107);
+\draw[solid edge] (C)--(A);
+\draw[hidden edge] (C)--(B)--(A);
+\draw[solid edge] (C1)--(A1)--(B1)--cycle;
+\draw[solid edge] (C)--(C1);
+\draw[solid edge] (A)--(A1);
+\draw[hidden edge] (B)--(B1);
+\draw[solid edge] (C)--(A1);
+\draw[hidden edge] (A1)--(B);
+\node[below left] at (C) {$C$};
+\node[below right] at (A) {$A$};
+\node[below] at (B) {$B$};
+\node[above left] at (C1) {$C_{1}$};
+\node[right] at (A1) {$A_{1}$};
+\node[above] at (B1) {$B_{1}$};
+\end{tikzpicture}

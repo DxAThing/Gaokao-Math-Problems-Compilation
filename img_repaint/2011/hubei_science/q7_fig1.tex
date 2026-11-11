@@ -1,0 +1,18 @@
+% Exact edge inventory and direction must precede drawing.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize]
+\tikzset{repbox/.style={rectangle,draw,fill=white,minimum width=12mm,minimum height=6mm,inner sep=1pt}}
+\node[repbox] (K) at (0,0) {$K$};
+\node[repbox] (A1) at (2.6,0.7) {$A_{1}$};
+\node[repbox] (A2) at (2.6,-0.7) {$A_{2}$};
+\coordinate (in) at (-2,0);
+\coordinate (out) at (5,0);
+\coordinate (S) at (1.1,0);
+\coordinate (M) at (4.1,0);
+\draw (in) -- (K.west);
+\draw (K.east) -- (S);
+\draw (S) |- (A1.west);
+\draw (S) |- (A2.west);
+\draw (A1.east) -| (M);
+\draw (A2.east) -| (M);
+\draw (M) -- (out);
+\end{tikzpicture}

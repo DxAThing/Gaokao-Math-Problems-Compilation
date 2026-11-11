@@ -1,0 +1,25 @@
+% Three views: square front (2x2), narrow side, semicircular plan; horizontal row.
+\begin{tikzpicture}[line width=.6pt,font=\normalsize,x=1cm,y=1cm]
+\begin{scope}[shift={(0,1.5)}]
+\draw (0,0) rectangle (3,3);
+\draw (0,0) -- (0,-0.5);
+\draw (3,0) -- (3,-0.5);
+\draw[<->,>=Latex] (0,-0.35) -- (3,-0.35) node[midway,fill=white,inner sep=2pt]{2};
+\draw (3,0) -- (3.5,0);
+\draw (3,3) -- (3.5,3);
+\draw[<->,>=Latex] (3.35,0) -- (3.35,3) node[midway,fill=white,inner sep=2pt]{2};
+\node at (1.5,-0.95) {正视图};
+\end{scope}
+\begin{scope}[shift={(4.7,1.5)}]
+\draw (0,0) rectangle (1.5,3);
+\node at (0.75,-0.95) {侧视图（左）};
+\end{scope}
+\begin{scope}[shift={(7.6,1.5)}]
+\draw (0,0) -- (3,0);
+\draw (0,0) arc (180:0:1.5);
+\draw (1.5,1.5) -- (3.7,1.5);
+\draw (3,0) -- (3.7,0);
+\draw[<->,>=Latex] (3.5,0) -- (3.5,1.5) node[midway,fill=white,inner sep=2pt]{1};
+\node at (1.5,-0.95) {俯视图};
+\end{scope}
+\end{tikzpicture}
