@@ -607,7 +607,7 @@ E(X)=0\cdot\frac{1}{25}+1\cdot\frac{21}{50}+2\cdot\frac{27}{50}=\frac{75}{50}=\f
 \begin{enumerate}
 \item 求 \(g(x)\) 的单调区间和最小值；
 \item 讨论 \(g(x)\) 与 \(g\left(\frac{1}{x}\right)\) 的大小关系；
-\item 是否存在 \(x_0 > 0\)，使得 \(|g(x) - g(x_0)| < \frac{1}{2}\) 对任意 \(x > 0\) 成立？若存在，求出 \(x_0\) 的取值范围；若不存在，请说明理由.
+\item 是否存在 \(x_0 > 0\)，使得 \(|g(x) - g(x_0)| < \frac{1}{x}\) 对任意 \(x > 0\) 成立？若存在，求出 \(x_0\) 的取值范围；若不存在，请说明理由.
 \end{enumerate}
 \end{problem}
 
@@ -629,6 +629,6 @@ h(x)=2\ln x+\frac{1}{x}-x
 h'(x)=\frac{2}{x}-\frac{1}{x^{2}}-1=-\frac{(x-1)^{2}}{x^{2}}\leqslant0
 \]
 由于除 \(x=1\) 外均有 \(h'(x)<0\)，所以 \(h(x)\) 在 \((0,+\infty)\) 上严格递减，且 \(h(1)=0\). 所以当 \(0<x<1\) 时 \(h(x)>0\)，当 \(x=1\) 时 \(h(x)=0\)，当 \(x>1\) 时 \(h(x)<0\). 即当 \(0<x<1\) 时 \(g(x)>g\left(\frac{1}{x}\right)\)，当 \(x=1\) 时 \(g(x)=g\left(\frac{1}{x}\right)\)，当 \(x>1\) 时 \(g(x)<g\left(\frac{1}{x}\right)\).
-\item 由 \(g(x)=\ln x+\frac{1}{x}\)，有 \(\lim_{x\to0^{+}}g(x)=+\infty\). 对任意固定的 \(x_0>0\)，总可取充分接近 \(0\) 的 \(x>0\)，使 \(g(x)>g(x_0)+\frac{1}{2}\)，从而 \(\left|g(x)-g(x_0)\right|>\frac{1}{2}\). 因此不存在满足条件的 \(x_0\).
+\item 对任意固定的 \(x_0>0\)，当 \(x\to+\infty\) 时，\(g(x)-g(x_0)=\ln x+\frac1x-g(x_0)\to+\infty\)，而 \(\frac1x\to0\). 因此取充分大的 \(x\) 即有 \(\lvert g(x)-g(x_0)\rvert>\frac1x\)，故不存在满足条件的 \(x_0\).
 \end{enumerate}
 \end{solution}

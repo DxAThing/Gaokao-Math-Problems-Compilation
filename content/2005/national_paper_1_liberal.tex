@@ -322,7 +322,7 @@ C
 
 \section{解答题}
 \begin{problem}
-设函数 \(f(x)=\sin(2\pi+\varphi)\)（\(-\pi<\varphi<0\)），\(y=f(x)\) 图象的一条对称轴是直线 \(x=\frac{\pi}{8}\).
+设函数 \(f(x)=\sin(2x+\varphi)\)（\(-\pi<\varphi<0\)），\(y=f(x)\) 图象的一条对称轴是直线 \(x=\frac{\pi}{8}\).
 
 \begin{enumerate}
 \item 求 \(\varphi\)；
@@ -333,14 +333,30 @@ C
 
 \begin{solution}
 \begin{enumerate}
-\item 按原 PDF 字面，\(f(x)=\sin(2\pi+\varphi)=\sin\varphi\)，与 \(x\) 无关，所以它的图象是水平直线. 水平直线关于任意竖直直线 \(x=c\) 对称，故题设的 \(x=\frac{\pi}{8}\) 不能限制 \(\varphi\)；在 \(-\pi<\varphi<0\) 内的任意值都满足这条对称性条件，\(\varphi\) 不能唯一确定.
-\item 由上问，\(f(x)\) 为常数函数. 对任意 \(x_{1}<x_{2}\)，都有 \(f(x_{1})=f(x_{2})\)，所以按严格单调递增的定义不存在单调增区间；若“单调增”采用非严格单调不减的约定，则整个 \(\R\) 都是单调不减区间.
-\item 图象为直线 \(y=\sin\varphi\)，但 \(\varphi\) 未被唯一确定，故该题按原 PDF 字面不能唯一画出在 \([0,\pi]\) 上的图象.
+\item 对称轴满足 \(2\cdot\frac{\pi}{8}+\varphi=\frac{\pi}{2}+k\pi\)，其中 \(k\in\Z\). 由 \(-\pi<\varphi<0\)，得 \(\varphi=-\frac{3\pi}{4}\).
+\item 当 \(-\frac{\pi}{2}+2k\pi\leqslant 2x-\frac{3\pi}{4}\leqslant\frac{\pi}{2}+2k\pi\) 时，正弦函数单调增加. 因此单调增区间为 \(\left[k\pi+\frac\pi8,k\pi+\frac{5\pi}8\right]\)，其中 \(k\in\Z\).
+\item 在 \([0,\pi]\) 上，取端点、零点及极值点，依次连接成正弦曲线，如图.
+\begin{center}
+\begin{tikzpicture}[x=0.6cm,y=0.8cm]
+\draw[->] (-0.3,0)--(9,0) node[right] {$x$};
+\draw[->] (0,-1.4)--(0,1.4) node[above] {$y$};
+\node[above left] at (0,0) {$O$};
+\draw[domain=0:8,samples=100,thick] plot(\x,{sin(45*\x-135)});
+\foreach \x/\y/\ticktext in {1/-1/\frac{\pi}{8},3/0/\frac{3\pi}{8},5/1/\frac{5\pi}{8},7/0/\frac{7\pi}{8},8/-0.7071/\pi}{
+\fill (\x,\y) circle (1.3pt);
+\ifnum\x=5
+  \node[below=2pt] at (\x,0) {$\ticktext$};
+\else
+  \node[above=2pt] at (\x,0) {$\ticktext$};
+\fi
+}
+\end{tikzpicture}
+\end{center}
 \end{enumerate}
 \end{solution}
 
 \begin{problem}
-已知四棱锥 \(P-ABCD\) 的底面为直角梯形，\(AB\parallel DC\)，\(\angle DAB=90^{\circ}\)，\(PA\perp\) 底面 \(ABCD\)，且 \(PA=AD=DE=\frac{1}{2}AB=1\)，\(M\) 是 \(PB\) 的中点.
+已知四棱锥 \(P-ABCD\) 的底面为直角梯形，\(AB\parallel DC\)，\(\angle DAB=90^{\circ}\)，\(PA\perp\) 底面 \(ABCD\)，且 \(PA=AD=DC=\frac{1}{2}AB=1\)，\(M\) 是 \(PB\) 的中点.
 
 \begin{enumerate}
 \item 证明：面 \(PAD\perp\) 面 \(PCD\)；
@@ -356,14 +372,8 @@ C
 \begin{solution}
 \begin{enumerate}
 \item 因为 \(AB\parallel DC\)，\(\angle DAB=90^{\circ}\)，所以 \(AD\perp DC\). 又因为 \(PA\perp\) 底面 \(ABCD\)，所以 \(PA\perp DC\). 直线 \(AD\)，\(PA\) 是平面 \(PAD\) 内相交的两条直线，故由直线与平面垂直的判定定理，得 \(DC\perp\) 平面 \(PAD\). 又 \(DC\subset\) 平面 \(PCD\)，所以平面 \(PAD\perp\) 平面 \(PCD\).
-\item 题干把长度条件写成 \(DE=1\)，但题干和题图均没有定义点 \(E\)，因此该条件不能确定点 \(C\) 的位置，也不能确定 \(DC\) 的长度. 对任意 \(d>0\) 且 \(d\ne2\)，取 \(A=(0,0,0)\)，\(B=(2,0,0)\)，\(D=(0,1,0)\)，\(C=(d,1,0)\)，\(P=(0,0,1)\)，并在点 \(D\) 为圆心、半径为 \(1\) 的球面上任取未定义的点 \(E\)，均可满足字面上的 \(DE=1\). 此时 \(\overrightarrow{AC}=(d,1,0)\)，\(\overrightarrow{PB}=(2,0,-1)\)，从而 \(\cos\theta=\frac{2d}{\sqrt{d^{2}+1}\sqrt{5}}\)，它随 \(d\) 改变，故 \(AC\) 与 \(PB\) 所成的角不能唯一确定.
-\item 仍设 \(C=(d,1,0)\)，\(M=(1,0,\frac{1}{2})\). 取平面 \(AMC\)、\(BMC\) 的法向量分别为 \(\bs n_{1}=(1,-d,-2)\)，\(\bs n_{2}=(1,2-d,2)\)，因为 \(\bs n_{1}\cdot\overrightarrow{AC}=\bs n_{1}\cdot\overrightarrow{AM}=0\)，\(\bs n_{2}\cdot\overrightarrow{BC}=\bs n_{2}\cdot\overrightarrow{BM}=0\)，这两个向量确实分别垂直于相应平面. 为了比较由射线 \(MA\)、\(MB\) 确定的二面角，取各平面内垂直于 \(MC\) 且分别指向 \(A\)、\(B\) 的向量.
-
-当 \(d=\frac{1}{2}\) 时，可取 \(\bs p=(-3,-2,-1)\)，\(\bs q=(11,2,-7)\). 两者都垂直于 \(MC\)，且分别属于平面 \(AMC\)、\(BMC\)，所以二面角余弦为
-\[
-\frac{\bs p\cdot\bs q}{|\bs p|\,|\bs q|}=\frac{-33-4+7}{\sqrt{14}\sqrt{174}}=-\frac{15}{\sqrt{609}}
-\]
-当 \(d=3\) 时，可取 \(\bs p=(-\frac{1}{3},\frac{1}{3},-\frac{2}{3})\)，\(\bs q=(\frac{1}{7},-\frac{3}{7},-\frac{2}{7})\). 同样有 \(\bs p\perp MC\)、\(\bs q\perp MC\)，且分别属于平面 \(AMC\)、\(BMC\)，并且 \(\bs p\cdot\bs q=0\)，故二面角余弦为 \(0\). 两个取值不同，且 \(d=\frac{1}{2}\)，\(3\) 均给出非平行四边形的直角梯形底面，说明该问同样不能由原卷题面唯一确定.
+\item 取 \(A=(0,0,0)\)，\(B=(2,0,0)\)，\(D=(0,1,0)\)，\(C=(1,1,0)\)，\(P=(0,0,1)\)，则 \(M=(1,0,\frac12)\). 因为 \(\overrightarrow{AC}=(1,1,0)\)，\(\overrightarrow{PB}=(2,0,-1)\)，所以两直线夹角的余弦为 \(\frac{2}{\sqrt2\sqrt5}=\frac{\sqrt{10}}5\). 因此两直线的夹角为 \(\arccos\frac{\sqrt{10}}5\).
+\item 令 \(\mathbf{d}=\overrightarrow{MC}=(0,1,-\frac12)\). 将 \(\overrightarrow{MA}=(-1,0,-\frac12)\)，\(\overrightarrow{MB}=(1,0,-\frac12)\) 分别正交投影到 \(\mathbf{d}\) 的垂直平面，得 \(\mathbf{u}=(-1,-\frac15,-\frac25)\) 和 \(\mathbf{v}=(1,-\frac15,-\frac25)\). 二者分别指向含 \(A\)、\(B\) 的半平面，其夹角是所求二面角. 由 \(\mathbf{u}\cdot\mathbf{v}=-\frac45\)，\(\lvert\mathbf{u}\rvert^2=\lvert\mathbf{v}\rvert^2=\frac65\)，得二面角为 \(\arccos(-\frac23)\).
 \end{enumerate}
 \end{solution}
 
@@ -443,7 +453,7 @@ C
 
 \begin{enumerate}
 \item 求椭圆的离心率；
-\item 设 \(M\) 为椭圆上任意一点，且 \(\overrightarrow{OM}=\lambda\overrightarrow{OA}+\lambda\overrightarrow{OB}\)（\(\lambda\)，\(\mu\in\R\)），证明 \(\lambda^{2}+\mu^{2}\) 为定值.
+\item 设 \(M\) 为椭圆上任意一点，且 \(\overrightarrow{OM}=\lambda\overrightarrow{OA}+\mu\overrightarrow{OB}\)（\(\lambda\)，\(\mu\in\R\)），证明 \(\lambda^{2}+\mu^{2}\) 为定值.
 \end{enumerate}
 \end{problem}
 
@@ -451,6 +461,6 @@ C
 \begin{enumerate}
 \item 设椭圆方程为 \(\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}=1\)，其中 \(a>b>0\)，焦半距为 \(c\)，则 \(c^{2}=a^{2}-b^{2}\).  右焦点为 \(F=(c,0)\)，所给直线方程为 \(y=x-c\). 将其代入椭圆方程，设交点 \(A\)，\(B\) 的横坐标为 \(x_{1}\)，\(x_{2}\)，由韦达定理得 \(x_{1}+x_{2}=\frac{2a^{2}c}{a^{2}+b^{2}}\). 因为 \(y_{i}=x_{i}-c\)，所以
 \(\overrightarrow{OA}+\overrightarrow{OB}=\left(\frac{2a^{2}c}{a^{2}+b^{2}},-\frac{2b^{2}c}{a^{2}+b^{2}}\right)\). 它与 \((3,-1)\) 共线，故 \(\frac{b^{2}}{a^{2}}=\frac{1}{3}\). 因而 \(e^{2}=1-\frac{b^{2}}{a^{2}}=\frac{2}{3}\)，所以椭圆的离心率为 \(e=\frac{\sqrt{6}}{3}\).
-\item 按原 PDF 字面，\(\overrightarrow{OM}=\lambda(\overrightarrow{OA}+\overrightarrow{OB})\)，其中的 \(\mu\) 没有出现在向量等式中. 记 \(\bs v=\overrightarrow{OA}+\overrightarrow{OB}\)，则题面等式只是 \(\overrightarrow{OM}=\lambda\bs v\)，完全没有给出 \(\mu\) 的限制. 因而只要某个 \((\lambda,\mu)\) 满足等式，对任意 \(t\in\R\)，\((\lambda,\mu+t)\) 仍满足同一等式，而 \(\lambda^{2}+(\mu+t)^{2}\) 随 \(t\) 不可能保持不变. 例如取两个不同的 \(t\) 即可得到不同的平方和，故 \(\lambda^{2}+\mu^{2}\) 不可能由题设确定为定值；并且当 \(\overrightarrow{OM}\) 不与 \(\bs v\) 共线时，题面等式本身也无解. 该问按原 PDF 字面不能唯一作答.
+\item 作线性变换 \((x,y)=(au,bv)\)，椭圆化为单位圆，焦点弦化为 \(v=\sqrt3u-\sqrt2\). 弦所在直线到原点距离为 \(1/\sqrt2\). 设弦的中点为 \(H\)，则 \(OH=HA'=HB'=1/\sqrt2\)，所以变换后的两个单位向量 \(\overrightarrow{OA'}\)、\(\overrightarrow{OB'}\) 的内积为 \(OH^2-HA'^2=0\). 线性变换保留线性组合的系数，故 \(\overrightarrow{OM'}=\lambda\overrightarrow{OA'}+\mu\overrightarrow{OB'}\). 取模长平方，由 \(M'\) 在单位圆上得 \(1=\lambda^2+\mu^2\).
 \end{enumerate}
 \end{solution}

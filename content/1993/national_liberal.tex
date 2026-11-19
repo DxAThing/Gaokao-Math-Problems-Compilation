@@ -476,15 +476,20 @@ D
 \end{solution}
 
 \begin{problem}
-设复数 \(z = \cos \theta + \i\sin \theta\)（\(0 < \theta < \pi\)），\(\omega = \frac{1 - \left( \overline{z} \right)^4}{1 + z^4}\)，已知 \(|\omega| = \frac{\sqrt{3}}{3}\)，\(\arg \omega = \frac{\pi}{2}\)，求 \(\theta\).
+设复数 \(z = \cos \theta + \i\sin \theta\)（\(0 < \theta < \pi\)），\(\omega = \frac{1 - \left( \overline{z} \right)^4}{1 + z^4}\)，已知 \(|\omega| = \frac{\sqrt{3}}{3}\)，\(\arg \omega < \frac{\pi}{2}\)（辐角取值范围为 \([0,2\pi)\)），求 \(\theta\).
 \end{problem}
 
 \begin{solution}
-由 \(z=\cos\theta+\i\sin\theta\) 得 \(z=\e^{\i\theta}\)、\(\overline{z}=\e^{-\i\theta}\). 原式有意义要求 \(1+z^4\ne0\)，即 \(\cos2\theta\ne0\). 因而
-\(\displaystyle\omega=\frac{1-\e^{-4\i\theta}}{1+\e^{4\i\theta}}=\frac{2\i\e^{-2\i\theta}\sin2\theta}{2\e^{2\i\theta}\cos2\theta}=\i\e^{-4\i\theta}\tan2\theta=\tan2\theta\left(\sin4\theta+\i\cos4\theta\right)\).
-
-由 \(|\omega|=\frac{\sqrt{3}}{3}>0\)，得 \(\tan2\theta\ne0\). 又 \(\arg\omega=\frac{\pi}{2}\) 且 \(|\omega|>0\)，所以 \(\omega\) 是正纯虚数，实部必须为零. 因此
-\(\tan2\theta\sin4\theta=0\)，从而 \(\sin4\theta=0\). 结合 \(0<\theta<\pi\)，候选值只有 \(\theta=\frac{\pi}{4}\)、\(\frac{\pi}{2}\)、\(\frac{3\pi}{4}\).
-
-当 \(\theta=\frac{\pi}{4}\) 或 \(\frac{3\pi}{4}\) 时，\(\cos2\theta=0\)，即 \(1+z^4=0\)，原式无意义；当 \(\theta=\frac{\pi}{2}\) 时，\(\tan2\theta=0\)，从而 \(\omega=0\)，与 \(|\omega|=\frac{\sqrt{3}}{3}\) 矛盾. 因此按原始题面不存在满足全部条件的 \(\theta\)，现题条件彼此不相容.
+由 \(z=\e^{\i\theta}\) 且 \(\cos2\theta\ne0\)，得
+\[
+\omega=\frac{1-\e^{-4\i\theta}}{1+\e^{4\i\theta}}
+=\i\e^{-4\i\theta}\tan2\theta
+=\tan2\theta\left(\sin4\theta+\i\cos4\theta\right).
+\]
+因此 \(\lvert\tan2\theta\rvert=\frac{\sqrt3}{3}\). 由 \(0<2\theta<2\pi\)，若
+\(\tan2\theta=\frac{\sqrt3}{3}\)，则 \(\theta=\frac{\pi}{12}\) 或 \(\frac{7\pi}{12}\)，此时
+\(\omega=\frac12+\frac{\sqrt3}{6}\i\)，辐角为 \(\frac\pi6\)，符合条件.
+若 \(\tan2\theta=-\frac{\sqrt3}{3}\)，则 \(\theta=\frac{5\pi}{12}\) 或 \(\frac{11\pi}{12}\)，此时
+\(\omega=\frac12-\frac{\sqrt3}{6}\i\)，在 \([0,2\pi)\) 内的辐角为 \(\frac{11\pi}{6}\)，不符合条件.
+故 \(\theta=\frac{\pi}{12}\) 或 \(\frac{7\pi}{12}\).
 \end{solution}

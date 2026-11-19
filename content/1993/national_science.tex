@@ -614,28 +614,22 @@ b^2=a^2-c^2=\frac{15}{4}-\frac{3}{4}=3
 \end{solution}
 
 \begin{problem}
-设复数 \(z = \cos \theta + \i\sin \theta\)（\(0 < \theta < \pi\)），\(\omega = \frac{1 - \left( \overline{z} \right)^4}{1 + z^4}\)，已知 \(|\omega| = \frac{\sqrt{3}}{3}\)，\(\arg \omega = \frac{\pi}{2}\)，求 \(\theta\).
+设复数 \(z = \cos \theta + \i\sin \theta\)（\(0 < \theta < \pi\)），\(\omega = \frac{1 - \left( \overline{z} \right)^4}{1 + z^4}\)，已知 \(|\omega| = \frac{\sqrt{3}}{3}\)，\(\arg \omega < \frac{\pi}{2}\)（辐角取值范围为 \([0,2\pi)\)），求 \(\theta\).
 \end{problem}
 
 \begin{solution}
-由 \(z=\e^{\i\theta}\)，有
+由 \(z=\e^{\i\theta}\) 且 \(\cos2\theta\ne0\)，得
 \[
-1-\left(\overline z\right)^4=1-\e^{-4\i\theta}=2\i\e^{-2\i\theta}\sin 2\theta
+\omega=\frac{1-\e^{-4\i\theta}}{1+\e^{4\i\theta}}
+=\i\e^{-4\i\theta}\tan2\theta
+=\tan2\theta\left(\sin4\theta+\i\cos4\theta\right).
 \]
-以及
-\[
-1+z^4=1+\e^{4\i\theta}=2\e^{2\i\theta}\cos 2\theta
-\]
-题设要求 \(\omega\) 有意义，所以 \(\cos 2\theta\ne0\). 因而
-\[
-\omega=\i\e^{-4\i\theta}\tan 2\theta
-=\tan 2\theta\sin 4\theta+\i\tan 2\theta\cos 4\theta
-\]
-由 \(|\omega|=\frac{\sqrt{3}}{3}>0\)，知 \(\tan 2\theta\ne0\). 又 \(\arg\omega=\frac{\pi}{2}\) 意味着 \(\omega\) 为正纯虚数，所以其实部为零，从而
-\(\tan 2\theta\sin 4\theta=0\)，即 \(\sin 4\theta=0\).
-于是 \(\theta=\frac{k\pi}{4}\). 结合 \(0<\theta<\pi\)，只有 \(k=1\)，\(2\)，\(3\) 需要讨论. 当 \(k=1\)，\(3\) 时，\(\cos 2\theta=0\)，原式分母为零；当 \(k=2\) 时，\(\tan 2\theta=0\)，从而 \(\omega=0\)，与 \(|\omega|=\frac{\sqrt{3}}{3}\) 矛盾.
-
-所以按原题面条件，不存在满足条件的 \(\theta\).
+因此 \(\lvert\tan2\theta\rvert=\frac{\sqrt3}{3}\). 由 \(0<2\theta<2\pi\)，若
+\(\tan2\theta=\frac{\sqrt3}{3}\)，则 \(\theta=\frac{\pi}{12}\) 或 \(\frac{7\pi}{12}\)，此时
+\(\omega=\frac12+\frac{\sqrt3}{6}\i\)，辐角为 \(\frac\pi6\)，符合条件.
+若 \(\tan2\theta=-\frac{\sqrt3}{3}\)，则 \(\theta=\frac{5\pi}{12}\) 或 \(\frac{11\pi}{12}\)，此时
+\(\omega=\frac12-\frac{\sqrt3}{6}\i\)，在 \([0,2\pi)\) 内的辐角为 \(\frac{11\pi}{6}\)，不符合条件.
+故 \(\theta=\frac{\pi}{12}\) 或 \(\frac{7\pi}{12}\).
 \end{solution}
 
 \begin{problem}

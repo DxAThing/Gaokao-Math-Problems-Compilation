@@ -200,38 +200,24 @@ y^2=c^2-\frac{a^4}{c^2}=\frac{(c^2-a^2)(c^2+a^2)}{c^2}=\frac{b^2(c^2+a^2)}{c^2}
 设 \( f(x) = \begin{cases}
 x^2, & |x| \geqslant 1,\\
 x, & |x| < 1,
-\end{cases} \) 若 \( f(g(x)) \) 的值域是 \([0, +\infty)\)，则函数 \( g(x) \) 的值域是（\quad）
+\end{cases} \) 设 \(g\) 为定义在 \(\mathbb R\) 上的连续函数. 若 \( f(g(x)) \) 的值域是 \([0, +\infty)\)，则函数 \( g(x) \) 的值域是（\quad）
 
 \choices
     {\((-\infty, -1] \cup [1, +\infty)\)}
     {\((-\infty, -1] \cup [0, +\infty)\)}
     {\([0, +\infty)\)}
     {\([1, +\infty)\)}
+\end{problem}
+
 \begin{answer}
-条件不足，无法唯一确定
+C
 \end{answer}
 
 \begin{solution}
-令 \(G\) 为函数 \(g(x)\) 的值域. 由
-\[
-f(u)=\begin{cases}
-u^2,&\lvert u\rvert\geqslant1,\\
-u,&\lvert u\rvert<1,
-\end{cases}
-\]
-可知当 \(-1<u<0\) 时 \(f(u)<0\)，而 \(f(u)\geqslant0\) 的必要条件是 \(u\) 不属于 \((-1,0)\). 另一方面，为得到复合函数值域中的每个 \(y\in[0,1)\)，必须取到 \(u=y\in[0,1)\)；对于 \(y\geqslant1\)，既可以取 \(u=\sqrt y\)，也可以取 \(u=-\sqrt y\).
+设 \(G\) 为 \(g\) 的值域. 由 \(f(g(x))\) 的值域是 \([0,+\infty)\) 可知，\(G\) 不含 \((-1,0)\) 中的数. 又因为 \(f(u)=0\) 仅在 \(u=0\) 时成立，所以 \(0\in G\). 函数 \(g\) 连续，故 \(G\) 是区间；若 \(G\) 包含负数，则它也包含 \((-1,0)\) 中的一些数，矛盾. 所以 \(G\subseteq[0,+\infty)\).
 
-因此，仅由 \(f(g(x))\) 的值域为 \([0,+\infty)\)，不能唯一确定 \(G\). 例如函数 \(g_1(x)=\lvert x\rvert\) 的值域为 \(G_1=[0,+\infty)\)，且 \(f(G_1)=[0,+\infty)\). 再定义
-\[
-g_2(x)=\begin{cases}
-x, & x\leqslant-1,\\
-0, & -1<x<0,\\
-x, & x\geqslant0,
-\end{cases}
-\]
-则其值域为 \(G_2=(-\infty,-1]\cup[0,+\infty)\)，同样有 \(f(G_2)=[0,+\infty)\). 所以按原题面条件，函数 \(g(x)\) 的值域不唯一；若另加 \(G\) 为区间（例如 \(g\) 连续）的条件，才可得到 \(G=[0,+\infty)\)，对应选项 C.
+函数 \(f\) 在 \([0,+\infty)\) 上严格递增，且在这个区间上的值域为 \([0,+\infty)\). 若 \(G\) 少了某个非负数 \(u\)，则 \(f(u)\) 不属于复合函数的值域，矛盾. 所以 \(G=[0,+\infty)\)，故选 C.
 \end{solution}
-\end{problem}
 
 \section{填空题}
 
@@ -601,29 +587,23 @@ T_n\geqslant T_2-\sum_{k=3}^{\infty}\frac1{3k2^k}
 \item 求函数 \(y = f(x) - g_8(x)\) 的单调区间；
 \item 求证：
 \begin{circlelist}
-\item 当 \(x > 0\) 时，\(f(x) \geqslant g_t(x)\) 对任意实数 \(t\) 成立；
-\item 有且仅有一个正实数 \(x_0\)，使得 \(g_8(x_0) \geqslant g_t(x_0)\) 对任意实数 \(t\) 成立.
+\item 当 \(x > 0\) 时，\(f(x) \geqslant g_t(x)\) 对任意正实数 \(t\) 成立；
+\item 有且仅有一个正实数 \(x_0\)，使得 \(g_8(x_0) \geqslant g_t(x_0)\) 对任意正实数 \(t\) 成立.
 \end{circlelist}
 \end{enumerate}
+\end{problem}
 
 \begin{solution}
 \begin{enumerate}
 \item 令 \(h(x)=f(x)-g_8(x)\). 因为 \(8^{\frac{2}{3}}=4\)，所以
 \(h(x)=\frac{x^3}{3}-4x+\frac{16}{3}\)，\(h'(x)=x^2-4=(x-2)(x+2)\).
 当 \(x<-2\) 或 \(x>2\) 时，\(h'(x)>0\)；当 \(-2<x<2\) 时，\(h'(x)<0\). 因此，\(y=f(x)-g_8(x)\) 在 \((-\infty,-2]\) 和 \([2,+\infty)\) 上单调递增，在 \([-2,2]\) 上单调递减.
-\item 题设中参数 \(t\) 取任意实数. 在实数范围内，若 \(t=-s\) 且 \(s>0\)，则
+\item 令 \(u=\sqrt[3]{t}>0\)，则
 \[
-(-s)^{\frac{2}{3}}=\left(\sqrt[3]{-s}\right)^2=s^{\frac{2}{3}}
+3\bigl(f(x)-g_t(x)\bigr)=x^3-3u^2x+2u^3=(x-u)^2(x+2u)
 \]
-\begin{enumerate}
-\item 取 \(x=1\)，\(t=-1\)，则
-\(f(1)=\frac13\)，\(g_{-1}(1)=1+\frac23=\frac53\)，
-所以 \(f(1)<g_{-1}(1)\)，题面所述的“不论 \(t\) 为何实数”命题不成立.
-\item 对任意正实数 \(x_0\)，令 \(t=-s\)，则
-\(g_{-s}(x_0)=s^{\frac{2}{3}}x_0+\frac23s\longrightarrow+\infty\)，\((s\longrightarrow+\infty)\)
-而 \(g_8(x_0)=4x_0-\dfrac{16}{3}\) 是定值. 因此不存在正实数 \(x_0\)，使 \(g_8(x_0)\geqslant g_t(x_0)\) 对任意实数 \(t\) 成立.
-\end{enumerate}
-因此，按题设“任意实数 \(t\)”理解，第二问的两个待证命题均不成立；若题面原意是“任意正实数 \(t\)”，则需另行讨论.
+当 \(x>0\) 时，右侧非负，且等号当且仅当 \(u=x\)，即 \(t=x^3\) 时成立. 这就证明了第一个结论.
+
+对给定的 \(x_0>0\)，\(g_t(x_0)\) 在 \(t=x_0^3\) 时唯一取得最大值 \(f(x_0)\). 因而 \(g_8(x_0)\) 对所有正实数 \(t\) 都不小于 \(g_t(x_0)\)，当且仅当 \(x_0^3=8\)，即 \(x_0=2\).
 \end{enumerate}
 \end{solution}
-\end{problem}

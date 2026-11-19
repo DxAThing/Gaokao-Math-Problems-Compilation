@@ -124,8 +124,8 @@
 某农机厂开展“工业学大庆”运动，在十月份生产拖拉机 \( 1000\text{ 台}\). 这样，一月至十月的产量恰好完成全年生产任务. 工人同志为了加速农业机械化，计划在年底前再生产 \( 2310\text{ 台}\).
 
 \begin{enumerate}
-    \item 求十一月、十二月份每月增长率；
-    \item 原计划年产拖拉机多少台？
+    \item 若十一月、十二月的月增长率相同，求这个月增长率；
+    \item 这些条件能否确定原计划年产拖拉机的台数？说明理由.
 \end{enumerate}
 \end{problem}
 
@@ -164,53 +164,26 @@ y'=\frac{9}{2y}=\frac{9}{6\sqrt3}=\frac{\sqrt3}{2}
 \[
     y-3\sqrt3=\frac{\sqrt3}{2}\left(x-3\right)\Longrightarrow 3x-2\sqrt3y+9=0
 \]
+
+圆在该点处的半径方向为 \((3,3\sqrt3)\)，所以圆的切线方程为 \(3(x-3)+3\sqrt3(y-3\sqrt3)=0\)，即 \(x+\sqrt3y-12=0\).
 \end{solution}
 
 \begin{problem}
-已知双曲线 \( \frac{x^2}{24\alpha}-\frac{y^2}{16\cot\alpha}=1\)（\( \alpha\) 为锐角）和圆 \( \left(x-m\right)^2+y^2=r^2\) 相切于点 \( A\left(4\sqrt3,4\right)\)，求 \( \alpha\)，\(m\)，\(r\) 的值.
+已知双曲线 \( \frac{x^2}{24\tan\alpha}-\frac{y^2}{16\cot\alpha}=1\)（\( \alpha\) 为锐角）和圆 \( \left(x-m\right)^2+y^2=r^2\) 相切于点 \( A\left(4\sqrt3,4\right)\)，求 \( \alpha\)，\(m\)，\(r\) 的值.
 \end{problem}
 
 \begin{solution}
-将点 \( A\left(4\sqrt3,4\right)\) 代入双曲线方程，得
+设 \(t=\tan\alpha>0\)，则 \(\cot\alpha=1/t\). 将 \(A(4\sqrt3,4)\) 代入双曲线，得
 \[
-\frac{48}{24\alpha}-\frac{16}{16\cot\alpha}=1\Longrightarrow \frac{2}{\alpha}-\tan\alpha=1
+\frac{2}{t}-t=1\Longrightarrow(t-1)(t+2)=0.
 \]
-令 \(F(t)=\frac{2}{t}-\tan t-1\). 因为 \(0<t<\frac{\pi}{2}\)，所以
+故 \(t=1\)，\(\alpha=\frac{\pi}{4}\). 此时双曲线为 \(\frac{x^2}{24}-\frac{y^2}{16}=1\).
+对两边关于 \(x\) 求导，得 \(y'=\frac{2x}{3y}\)，故在 \(A\) 点的切线斜率为 \(\frac{2\sqrt3}{3}\).
+圆在 \(A\) 点的切线斜率为 \(\frac{m-4\sqrt3}{4}\). 由相切得
 \[
-F'(t)=-\frac{2}{t^2}-\sec^2t<0
+m=\frac{20\sqrt3}{3}.
 \]
-又 \(\displaystyle\lim_{t\to0^+}F(t)=+\infty\)，\(\displaystyle\lim_{t\to(\frac{\pi}{2})^-}F(t)=-\infty\)，故方程 \(F(t)=0\) 在 \(\left(0,\frac{\pi}{2}\right)\) 内有且只有一个根. 用二分法逐步缩小区间，例如
-\(F(0.8924934185)\approx3.81\times10^{-11}>0\)，
-\(F(0.89249341851)\approx-1.24\times10^{-11}<0\). 由于 \(F\) 严格递减，故
-\(0.8924934185<\alpha<0.89249341851\)，从而 \(\alpha\approx0.89249342\)（弧度），代入正切函数得 \(\tan\alpha\approx1.24091288\).
-
-对双曲线方程两边关于 \(x\) 求导，得
-\[
-\frac{x}{12\alpha}-\frac{yy'}{8\cot\alpha}=0
-\]
-所以在点 \(A\) 处的切线斜率为
-\[
-k=y'=\frac{2x\cot\alpha}{3\alpha y}=\frac{2\sqrt3\cot\alpha}{3\alpha}
-\]
-圆心为 \(C\left(m,0\right)\)，圆在点 \(A\) 处的半径垂直于切线，故半径 \(CA\) 的斜率为 \(-\frac{1}{k}\). 因而
-\[
-\frac{4}{4\sqrt3-m}=-\frac{1}{k}=-\frac{\sqrt3\alpha\tan\alpha}{2}
-\]
-由此 \(4k=m-4\sqrt3\)，所以
-\[
-m=4\sqrt3+4k=4\sqrt3+\frac{8}{\sqrt3\alpha\tan\alpha}\approx11.09865443
-\]
-又因为 \(4\sqrt3-m=-4k\)，故
-\[
-r^2=CA^2=\left(4\sqrt3-m\right)^2+4^2
-=16k^2+16
-=16\left(\frac{2\sqrt3}{3\alpha\tan\alpha}\right)^2+16
-=\frac{64}{3\alpha^2\tan^2\alpha}+16
-\]
-所以
-\[
-r=\sqrt{16+\frac{64}{3\alpha^2\tan^2\alpha}}\approx5.77863853
-\]
+再将 \(A\) 代入圆方程，得 \(r=\sqrt{(4\sqrt3-m)^2+16}=\frac{4\sqrt{21}}3\).
 \end{solution}
 
 \begin{problem}

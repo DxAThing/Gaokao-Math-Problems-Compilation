@@ -235,49 +235,29 @@ AP=25\sqrt{10+4\sqrt{3}}\mathrm{~m}
 \end{solution}
 
 \begin{problem}
-已知双曲线 \(\frac{x^2}{24\alpha}-\frac{y^2}{16\cot\alpha}=1\)（\(\alpha\) 为锐角）和圆 \(\left(x-m\right)^2+y^2=r^2\) 相切于点 \(A\left(4\sqrt{3},4\right)\)，求 \(\alpha\)，\(m\)，\(r\) 的值.
+已知双曲线 \(\frac{x^2}{24\tan\alpha}-\frac{y^2}{16\cot\alpha}=1\)（\(\alpha\) 为锐角）和圆 \(\left(x-m\right)^2+y^2=r^2\) 相切于点 \(A\left(4\sqrt{3},4\right)\)，求 \(\alpha\)，\(m\)，\(r\) 的值.
 \end{problem}
 
 \begin{solution}
-题面只说明 \(\alpha\) 为锐角而未说明角度单位，以下按解析中实变量角的通常弧度约定求解；若采用其他角度数值单位，数值结果会相应改变. 将点 \(A\) 代入双曲线方程，得
+设 \(t=\tan\alpha>0\)，则 \(\cot\alpha=1/t\). 将 \(A(4\sqrt3,4)\) 代入双曲线，得
 \[
-\frac{48}{24\alpha}-\frac{16}{16\cot\alpha}=1
+\frac{2}{t}-t=1\Longrightarrow(t-1)(t+2)=0.
 \]
-即
+故 \(t=1\)，\(\alpha=\frac{\pi}{4}\). 此时双曲线为 \(\frac{x^2}{24}-\frac{y^2}{16}=1\).
+对两边关于 \(x\) 求导，得 \(y'=\frac{2x}{3y}\)，故在 \(A\) 点的切线斜率为 \(\frac{2\sqrt3}{3}\).
+圆在 \(A\) 点的切线斜率为 \(\frac{m-4\sqrt3}{4}\). 由相切得
 \[
-\frac{2}{\alpha}-\tan\alpha=1
+m=\frac{20\sqrt3}{3}.
 \]
-    令 \(f(\alpha)=\frac{2}{\alpha}-\tan\alpha-1\). 在 \(\left(0,\frac{\pi}{2}\right)\) 内，\(f'(\alpha)=-\frac{2}{\alpha^2}-\sec^2\alpha<0\)，且 \(f(\alpha)\) 从正无穷减至负无穷，所以该方程有唯一的锐角解. 例如 \(f(0.8924934)>0\)，\(f(0.8924935)<0\)，用二分法逐次逼近得
-\[
-\alpha\approx0.8924934185
-\]
-
-对双曲线方程作隐式求导，得
-\[
-\frac{x}{12\alpha}-\frac{yy'}{8\cot\alpha}=0
-\]
-所以 \(y'=\frac{2x\cot\alpha}{3\alpha y}\).
-故双曲线在 \(A\) 点的切线斜率为
-\[
-k=\frac{2\sqrt{3}\cot\alpha}{3\alpha}
-\]
-圆的方程求导得 \(y'= -\frac{x-m}{y}=\frac{m-x}{y}\)，所以圆在 \(A\) 点的切线斜率为 \(\frac{m-4\sqrt{3}}{4}\). 相切意味着两斜率相等，因而
-\[
-m=4\sqrt{3}+\frac{8\sqrt{3}\cot\alpha}{3\alpha}\approx11.09865443
-\]
-最后由点 \(A\) 在圆上，得
-\[
-r^2=\left(4\sqrt{3}-m\right)^2+4^2
-\]
-从而
-\[
-r=\sqrt{\left(4\sqrt{3}-m\right)^2+16}\approx5.77863853
-\]
-因此，在上述弧度约定下，\(\alpha\approx0.8924934185\)，\(m\approx11.09865443\)，\(r\approx5.77863853\).
+再将 \(A\) 代入圆方程，得 \(r=\sqrt{(4\sqrt3-m)^2+16}=\frac{4\sqrt{21}}3\).
 \end{solution}
 
 \begin{problem}
-设数列 \(1\)，\(2\)，\(4\)，\(\cdots\) 前 \(n\) 项和是 \(S_n=a+bn+cn^2+dn^3\)，求这数列的通项 \(a_n\) 的公式，并确定 \(a\)，\(b\)，\(c\)，\(d\) 的值.
+已知数列 \(\{a_n\}\) 的前三项依次为 \(1\)，\(2\)，\(4\). 设 \(S_n\) 为其前 \(n\) 项和，规定 \(S_0=0\). 若对所有非负整数 \(n\) 都有
+\[
+S_n=a+bn+cn^2+dn^3,
+\]
+求数列的通项公式，并确定 \(a\)，\(b\)，\(c\)，\(d\) 的值.
 \end{problem}
 
 \begin{solution}

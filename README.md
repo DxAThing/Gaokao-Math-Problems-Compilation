@@ -1,33 +1,57 @@
 # 高考数学题库
 
-本仓库收录历年高考数学试卷的 LaTeX 源码、分类索引、题图及 TikZ 重绘图源，用于构建试题版（`Compilation.pdf`）与答案解析版（`Compilation-answer.pdf`）。
+本仓库收录 1952–2026 年历年高考数学真题的 LaTeX 源码、分类索引与配套题图，目前共 **777 份试卷、16,321 道试题**，可分别编译为试题版（`Compilation.pdf`）与答案解析版（`Compilation-answer.pdf`）。
 
-成品 PDF 可直接从 [Releases](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/releases) 下载，也可按文末说明在本地编译。
+正文中的几何、函数、框图与统计图已基本重绘为 TikZ 矢量图（共 3,599 份图源），仅 13 处实景、实物或装饰类插图保留位图；全书试题均配有答案与解析。
 
-## 当前版本：题图矢量化与排版升级（2026-11-11）
+由于题量与图量较大，其中三千余幅矢量图是集中转写完成的，部分图形在比例、细节或标注位置上仍不够理想；早期试卷中也偶有原卷印刷错漏或条件残缺之处。这些问题会在发现后陆续订正。如果在阅读、做题或排版时遇到错字、存疑解答或图形瑕疵，欢迎通过 Issue 或 Pull Request 告知，注明年份、卷别与题号即可。
 
-全书共收录 **777 份试卷、16,321 道试题**（试题版 3,003 页，答案解析版 7,392 页）。相比 [20261004](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/releases/tag/20261004) 版本，本次更新主要集中在题图矢量化、排版升级与内容校订：
+## 获取成品 PDF
 
-- **题图全面矢量化**：原生 TikZ 图源由 320 份扩充至 3,599 份，正文中的数学几何图、函数图、框图与统计图已全部接入矢量绘制，仅保留 13 处实景、实物或装饰类位图。
-- **图表样式与题注统一**：全书统一采用“第xx题图x”题注格式；新增统计图、尺寸标注等共享模板，并集中修正了图形标签、虚实线及多图组合排版。
-- **解析与题面校订**：增补十份试卷的完整答案与解析，并对多处题干、选项、答案及数学符号进行了订正。
+如果不打算在本地配置编译环境，可以直接前往 [Releases](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/releases) 下载成品 PDF：
 
-由于本次集中转写了三千余幅题图，部分图形目前还比较简陋，或在比例、标注位置等细节上仍有不足，非常欢迎大家在阅读和使用过程中通过 Issue 或 Pull Request 反馈问题、提供改进建议。
+- 当前最新公开的成品 PDF 为 **`20261120`**，随 Release 附带试题版（`Compilation.pdf`）与答案解析版（`Compilation-answer.pdf`）。
+- 各次更新说明与历史版本均见 Releases 页面；如需自行构建或获取后续源码修订，可拉取最新源码后按下方步骤本地编译。
 
-## 仓库结构
+## 本地构建
 
-- `content/`：各年份与卷别的试题及解析正文
+编译环境需要：
+
+- TeX Live（含 XeLaTeX、latexmk 及 `styles.tex` 引用的宏包）
+- `SimSun`、`SimHei`、`KaiTi`、`Times New Roman` 字体
+- `STIX` 字体（用于希腊字母）
+
+在仓库根目录执行：
+
+```bash
+make pdf
+```
+
+生成的 PDF 文件：
+
+- `Compilation.pdf`（试题版）
+- `Compilation-answer.pdf`（答案解析版）
+
+清理构建产物：
+
+```bash
+make clean
+```
+
+## 仓库目录
+
+- `content/`：按年份与卷别整理的试题及解析正文
 - `index/`：试卷与题目索引
 - `img_repaint/`、`templates/`、`statistical-charts.tex`：TikZ 矢量题图源码与共享绘图模板
-- `img/`：保留的实景、实物等必要位图素材
-- `tools/`：编译直接读取的图片尺寸与布局表
+- `img/`：保留的实景、实物等位图素材
+- `tools/`：编译时直接读取的图片尺寸与布局表
 - `Compilation.tex`、`Compilation-answer.tex`、`styles.tex`：主文档与全局样式配置
 
 ## 试题来源与致谢
 
-本仓库中**大部分试题的源头来自 [deekur/gaokaomath](https://github.com/deekur/gaokaomath)**，在此向原仓库作者及贡献者表示感谢。
+本仓库中**大部分试题的源头来自 [deekur/gaokaomath](https://github.com/deekur/gaokaomath)**，谨向原仓库作者及各位贡献者致谢。
 
-本项目在其基础上进行了重新整理、排版、校订、索引、题图处理、重绘以及答案整理等工作。对于来源于其他资料或由本项目进一步整理、补充的内容，其权利仍归相应权利人所有。
+本项目在其基础上进行了重新整理、排版、校订、索引、题图重绘以及答案解析整理等工作。来源于其他资料或由本项目进一步整理、补充的内容，其权利仍归相应权利人所有。
 
 ## 【特别提醒】许可与转载要求
 
@@ -35,7 +59,7 @@
 
 <https://creativecommons.org/licenses/by-sa/4.0/>
 
-这意味着你可以复制、转载、分发、修改和再创作本仓库中的受许可内容，也可以将其用于商业用途，但必须遵守以下要求：
+你可以复制、转载、分发、修改和再创作本仓库中的受许可内容，也可以将其用于商业用途，但必须遵守以下要求：
 
 1. **署名（BY）**：转载、分发或改编时必须给予适当署名，保留本项目名称及仓库链接，并保留适用的原作者、贡献者和来源信息。
 2. **注明修改**：如果对内容进行了修改、整理、删减或再创作，应明确说明内容已经被修改。
@@ -46,26 +70,3 @@
 简而言之：**可以转载、修改、再发布，甚至商业使用，但必须署名；改编后继续公开发布时，也必须允许后来者按照相同规则继续使用。**
 
 完整许可说明见仓库根目录的 [`LICENSE`](./LICENSE) 文件及 Creative Commons 官方页面。
-
-## 构建
-
-环境需要：
-
-- TeX Live（含 XeLaTeX、latexmk 及 `styles.tex` 引用的宏包）
-- `SimSun`、`SimHei`、`KaiTi`、`Times New Roman` 字体
-- `STIX` 字体（用于希腊字母字体）
-
-生成：
-
-```bash
-make pdf
-```
-
-- `Compilation.pdf`
-- `Compilation-answer.pdf`
-
-清理构建产物：
-
-```bash
-make clean
-```
