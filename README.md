@@ -10,7 +10,7 @@
 
 如果不打算在本地配置编译环境，可以直接前往 [Releases](https://github.com/DxAThing/Gaokao-Math-Problems-Compilation/releases) 下载成品 PDF：
 
-- 当前最新公开的成品 PDF 为 **`20261120`**，随 Release 附带试题版（`Compilation.pdf`）与答案解析版（`Compilation-answer.pdf`）。
+- 当前最新公开的成品 PDF 为 **`20261123`**，随 Release 附带试题版（`Compilation.pdf`）与答案解析版（`Compilation-answer.pdf`）。
 - 各次更新说明与历史版本均见 Releases 页面；如需自行构建或获取后续源码修订，可拉取最新源码后按下方步骤本地编译。
 
 ## 本地构建
